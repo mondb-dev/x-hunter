@@ -1,0 +1,108 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #08090a;
+  --surface: #111214;
+  --border: #1e2022;
+  --text: #e8eaed;
+  --muted: #6b7280;
+  --accent: #3b82f6;
+  --amber: #f59e0b;
+  --font: "IBM Plex Mono", "Fira Code", "Courier New", monospace;
+}
+
+html, body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 14px; line-height: 1.7; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── Layout ── */
+.shell { display: grid; grid-template-rows: auto 1fr; min-height: 100vh; }
+
+nav { display: flex; align-items: center; gap: 2rem; padding: 1rem 2rem; border-bottom: 1px solid var(--border); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+nav .logo { color: var(--text); font-weight: 700; letter-spacing: 0.12em; margin-right: auto; }
+
+main { padding: 3rem 2rem; max-width: 860px; margin: 0 auto; width: 100%; }
+
+/* ── Hero particle canvas ── */
+.hero {
+  position: relative;
+  height: 340px;
+  margin-bottom: 3rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--surface);
+}
+.hero-canvas { position: absolute; inset: 0; }
+.hero-label {
+  position: absolute;
+  bottom: 1rem; left: 1.5rem;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ── Journal index ── */
+.journal-list { display: flex; flex-direction: column; gap: 1px; }
+.journal-item {
+  display: flex; align-items: baseline; gap: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.journal-item:last-child { border-bottom: none; }
+.journal-day { color: var(--muted); font-size: 11px; min-width: 56px; }
+.journal-title { color: var(--text); flex: 1; }
+.journal-title:hover { color: var(--accent); text-decoration: none; }
+.journal-date { color: var(--muted); font-size: 11px; }
+
+.manifesto-pin {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--amber);
+  margin-bottom: 2.5rem;
+  font-size: 13px;
+}
+.manifesto-pin .pin-label { color: var(--amber); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; margin-right: auto; }
+
+/* ── Article / report ── */
+.report-header { margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+.report-day { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+.report-title { font-size: 1.4rem; font-weight: 700; }
+
+.prose { max-width: 680px; }
+.prose h1, .prose h2, .prose h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-weight: 600; }
+.prose h2 { font-size: 1rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+.prose h3 { font-size: 0.95rem; color: var(--text); }
+.prose p { margin-bottom: 1rem; color: #c9cdd3; }
+.prose ul, .prose ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+.prose li { margin-bottom: 0.25rem; color: #c9cdd3; }
+.prose code { background: var(--surface); padding: 0.1em 0.4em; border-radius: 3px; font-size: 0.88em; }
+.prose pre { background: var(--surface); border: 1px solid var(--border); padding: 1rem; border-radius: 4px; overflow-x: auto; margin-bottom: 1rem; }
+.prose blockquote { border-left: 3px solid var(--border); padding-left: 1rem; color: var(--muted); margin-bottom: 1rem; }
+.prose strong { color: var(--text); }
+
+/* ── Axis bars ── */
+.axis-bar { padding: 1.25rem 0; border-bottom: 1px solid var(--border); }
+.axis-bar:last-child { border-bottom: none; }
+.axis-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem; }
+.axis-label { font-size: 0.9rem; font-weight: 600; }
+.axis-confidence { font-size: 11px; color: var(--muted); }
+.axis-poles { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); margin-bottom: 0.5rem; }
+.axis-track { position: relative; height: 4px; background: var(--border); border-radius: 2px; margin-bottom: 0.6rem; }
+.axis-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--amber)); border-radius: 2px; }
+.axis-marker { position: absolute; top: -4px; width: 12px; height: 12px; border-radius: 50%; background: var(--text); border: 2px solid var(--bg); transform: translateX(-50%); }
+.axis-topics { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.topic-tag { font-size: 10px; padding: 0.15em 0.6em; background: var(--surface); border: 1px solid var(--border); border-radius: 2px; color: var(--muted); }
+
+/* ── Ontology page ── */
+.ontology-meta { display: flex; gap: 2rem; margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; }
+.ontology-stat { display: flex; flex-direction: column; gap: 0.25rem; }
+.ontology-stat .stat-val { font-size: 1.6rem; font-weight: 700; }
+.ontology-stat .stat-key { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* ── Empty state ── */
+.empty { color: var(--muted); font-size: 13px; padding: 2rem 0; }
