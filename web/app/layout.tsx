@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import CrabFloat from "@/components/CrabFloat";
 
 export const metadata: Metadata = {
   title: "Sebastian D. Hunter — Belief Journal",
@@ -10,6 +11,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
+        <CrabFloat />
         <div className="shell">
           <nav>
             <a href="/" className="logo">
