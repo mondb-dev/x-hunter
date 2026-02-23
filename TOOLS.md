@@ -12,6 +12,12 @@ The runner handles stream start, gateway check, and agent invocation automatical
 - Gateway start: `openclaw gateway start`
 - List agents: `openclaw agents list`
 
+## Solana wallet
+- Generate: `node scripts/gen-wallet.js`
+- Public key stored in `SOLANA_PUBLIC_KEY` (displayed on website footer)
+- Private key stored in `SOLANA_PRIVATE_KEY` (agent uses to sign)
+- Uses: receive SOL/tokens, on-chain identity, future pump.fun interactions
+
 ## LLM model
 - Provider: Google Gemini
 - Model: `google/gemini-2.0-flash`

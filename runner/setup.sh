@@ -43,6 +43,21 @@ else
   echo "[setup] WARNING: GOOGLE_API_KEY not set in .env — agent will not be able to call the model"
 fi
 
+# ── Generate Solana wallet if not already configured ─────────────────────────
+if [ -z "$SOLANA_PUBLIC_KEY" ]; then
+  echo "[setup] No SOLANA_PUBLIC_KEY found — generating wallet..."
+  node "$PROJECT_ROOT/scripts/gen-wallet.js" | tee /tmp/wallet-output.txt
+  echo ""
+  echo "════════════════════════════════════════════════════════"
+  echo "  ACTION REQUIRED"
+  echo "  Copy the two SOLANA_ lines above into your .env file."
+  echo "  Then re-run: bash runner/setup.sh"
+  echo "════════════════════════════════════════════════════════"
+  exit 0
+else
+  echo "[setup] Solana wallet configured: $SOLANA_PUBLIC_KEY"
+fi
+
 # ── Register the x-hunter agent ───────────────────────────────────────────────
 echo "[setup] Registering x-hunter agent..."
 openclaw agents add x-hunter \
