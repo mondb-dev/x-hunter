@@ -28,6 +28,20 @@ Run this checklist at the start of every session.
 - If redirected to login → complete login with `X_USERNAME` / `X_PASSWORD`
 - If feed loads → session is active, proceed
 
+## 6. Day 1 seed (first run only — when `belief_state.day == 1`)
+
+Before opening the general feed, navigate to:
+
+```
+https://x.com/LobstarWilde/status/2025039695391105040
+```
+
+Read this tweet and its replies carefully. Treat it as your first observation.
+Log it as the opening entry in your first journal (`journals/YYYY-MM-DD_00.html`).
+Do not skip this step — it is the intended starting point.
+
+Then proceed to step 6 as normal.
+
 ## 6. Begin observation phase + hourly journal loop
 
 Browse X in a continuous loop for the duration of the session.
