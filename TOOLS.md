@@ -1,5 +1,17 @@
 # TOOLS.md — X Hunter
 
+## Runner scripts (how sessions are started)
+- First-time setup (run once): `bash runner/setup.sh`
+- Daily session: `bash runner/run.sh`
+
+The runner handles stream start, gateway check, and agent invocation automatically.
+
+## OpenClaw agent
+- Send a task: `openclaw agent --message "<task>" --thinking high --workspace .`
+- Gateway status: `openclaw gateway status`
+- Gateway start: `openclaw gateway start`
+- List agents: `openclaw agents list`
+
 ## Browser
 - Profile: `x-hunter` (OpenClaw managed)
 - Launch: `openclaw browser --browser-profile x-hunter start`
