@@ -28,7 +28,19 @@ Run this checklist at the start of every session.
 - If redirected to login → complete login with `X_USERNAME` / `X_PASSWORD`
 - If feed loads → session is active, proceed
 
-## 6. Day 1 seed (first run only — when `belief_state.day == 1`)
+## 6. Day 1 profile setup (first run only — when `belief_state.day == 1`)
+
+Before anything else, set up Sebastian's X profile (see AGENTS.md §15.1):
+
+1. Navigate to `https://x.com/settings/profile`
+2. Set display name: `Sebastian D. Hunter`
+3. Upload profile picture: `web/public/pfp.svg`
+4. Write bio in Sebastian's voice (see AGENTS.md §15.2 — use the pre-vocation template)
+5. Save. Take a snapshot. Write initial `state/profile.json`.
+
+Then proceed to the seed URL below.
+
+## 6b. Day 1 seed (first run only — when `belief_state.day == 1`)
 
 Before opening the general feed, navigate to:
 
@@ -40,7 +52,7 @@ Read this tweet and its replies carefully. Treat it as your first observation.
 Log it as the opening entry in your first journal (`journals/YYYY-MM-DD_00.html`).
 Do not skip this step — it is the intended starting point.
 
-Then proceed to step 6 as normal.
+Then proceed to step 7 as normal.
 
 ## 6. Begin observation phase + hourly journal loop
 
