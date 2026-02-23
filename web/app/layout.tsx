@@ -25,6 +25,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <a href="/checkpoints">Checkpoints</a>
           </nav>
           <main>{children}</main>
+          {process.env.SOLANA_PUBLIC_KEY && (
+            <footer className="site-footer">
+              <span className="footer-label">sol</span>
+              <span className="footer-wallet">{process.env.SOLANA_PUBLIC_KEY}</span>
+            </footer>
+          )}
         </div>
       </body>
     </html>
