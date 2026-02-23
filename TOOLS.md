@@ -7,7 +7,7 @@
 The runner handles stream start, gateway check, and agent invocation automatically.
 
 ## OpenClaw agent
-- Send a task: `openclaw agent --message "<task>" --thinking high --workspace .`
+- Send a task: `openclaw agent --agent x-hunter --message "<task>" --thinking high`
 - Gateway status: `openclaw gateway status`
 - Gateway start: `openclaw gateway start`
 - List agents: `openclaw agents list`
@@ -20,7 +20,7 @@ The runner handles stream start, gateway check, and agent invocation automatical
 
 ## LLM model
 - Provider: Google Gemini
-- Model: `google/gemini-2.0-flash`
+- Model: `google/gemini-2.5-flash`
 - Configured in `~/.openclaw/openclaw.json` (set by `runner/setup.sh`)
 - Requires: `GOOGLE_API_KEY` in `.env`
 - Image generation: available via Gemini API when vocation involves creation/art
@@ -38,6 +38,7 @@ The runner handles stream start, gateway check, and agent invocation automatical
 - `state/posts_log.json` — full history of every post made on X
 - `state/vocation.json` — vocation status, direction, and core axes
 - `state/profile.json` — X profile state (bio, pfp, community)
+- `state/browse_notes.md` — raw rolling notes across the current 3-cycle window; cleared after each tweet cycle
 - `state/snapshots/` — browser snapshots for crash recovery
 
 ## X Profile management
@@ -61,21 +62,27 @@ After posting:
 - Append to `state/posts_log.json`
 - Add footnoted entry to the current hour's journal
 
-## Git (auto-commit after each daily report)
-After writing the daily report and updating all state files:
+## Git (auto-commit after every cycle)
+After writing the journal and posting the tweet, commit and push so the website rebuilds:
 ```bash
-git add daily/ journals/ state/ontology.json state/belief_state.json \
-        state/trust_graph.json state/posts_log.json state/vocation.json
-git commit -m "day <N>: belief report YYYY-MM-DD"
+git add journals/ state/posts_log.json state/belief_state.json \
+        state/ontology.json state/trust_graph.json
+git commit -m "cycle <N>: YYYY-MM-DD HH:MM"
 git push origin main
+```
+
+On daily report days, also include:
+```bash
+git add daily/
 ```
 
 On checkpoint days, also include:
 ```bash
-git add checkpoints/ vocation.md
+git add checkpoints/ vocation.md state/vocation.json
 ```
 
 Requires: `GITHUB_TOKEN`, `GIT_USER_NAME`, `GIT_USER_EMAIL` in env.
+The runner pre-configures git identity and remote URL from these env vars.
 
 ## Streaming
 - Start: `bash stream/start.sh`

@@ -30,13 +30,13 @@ export interface Ontology {
 }
 
 export function readOntology(): Ontology {
-  const filePath = path.resolve(process.cwd(), "../state/ontology.json");
+  const filePath = path.resolve(process.cwd(), "data/state/ontology.json");
   const raw = fs.readFileSync(filePath, "utf-8");
   return JSON.parse(raw) as Ontology;
 }
 
 export function readBeliefState() {
-  const filePath = path.resolve(process.cwd(), "../state/belief_state.json");
+  const filePath = path.resolve(process.cwd(), "data/state/belief_state.json");
   const raw = fs.readFileSync(filePath, "utf-8");
   return JSON.parse(raw);
 }
