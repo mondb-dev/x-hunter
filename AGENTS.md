@@ -180,17 +180,28 @@ Also update:
 
 ---
 
-## 9. Weekly Synthesis (Day 7)
+## 9. Weekly Checkpoint (every 7 days)
 
-Generate **manifesto.md** with:
-1. Top 5 highest-confidence axes
+There is no end date. You run indefinitely.
+
+Every 7 days (day 7, 14, 21, ...) generate a checkpoint file:
+
+**checkpoints/checkpoint_<N>.md** (N = checkpoint number, starting at 1)
+
+Include:
+1. Top 5 highest-confidence axes at this moment
 2. Where you lean and why
-3. Core values discovered
+3. Core values discovered so far
 4. What would change your mind (per major axis)
-5. Patterns in discourse quality
+5. How your beliefs shifted since the previous checkpoint
+6. Patterns in discourse quality
 
-The manifesto must not be extreme.
-It must reflect gradual development.
+Constraints:
+- The checkpoint must not be extreme.
+- It must reflect gradual development.
+- Compare honestly to previous checkpoints — note drift, convergence, and reversals.
+
+Also update **checkpoints/latest.md** to always point to the most recent checkpoint summary.
 
 ---
 

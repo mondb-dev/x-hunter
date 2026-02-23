@@ -1,9 +1,11 @@
 #!/bin/bash
 # runner/run.sh — daily agent session runner
 #
-# Run once per day for 7 days.
+# Run once per day, indefinitely.
+# Every 7 days the agent generates a checkpoint in addition to the daily report.
 # The agent follows BOOTSTRAP.md autonomously:
-#   start stream → launch browser → browse X → update beliefs → write report → git push → stop
+#   start stream → launch browser → browse X → update beliefs → write report
+#   → (checkpoint if day%7==0) → git push → stop
 
 set -e
 
@@ -23,12 +25,19 @@ fi
 REPORTS=$(ls "$PROJECT_ROOT/daily"/belief_report_*.md 2>/dev/null | wc -l | tr -d ' ')
 DAY=$((REPORTS + 1))
 
-if [ "$DAY" -gt 7 ]; then
-  echo "[run] 7-day run is complete. Manifesto should be at $PROJECT_ROOT/manifesto.md"
-  exit 0
+# ── Is this a checkpoint day? ─────────────────────────────────────────────────
+CHECKPOINT_DAY=false
+CHECKPOINT_N=0
+if [ $((DAY % 7)) -eq 0 ]; then
+  CHECKPOINT_DAY=true
+  CHECKPOINT_N=$((DAY / 7))
 fi
 
-echo "[run] ── Day $DAY / 7 — $TODAY ──────────────────────────────────────"
+if [ "$CHECKPOINT_DAY" = true ]; then
+  echo "[run] ── Day $DAY — CHECKPOINT $CHECKPOINT_N — $TODAY ──────────────"
+else
+  echo "[run] ── Day $DAY — $TODAY ──────────────────────────────────────────"
+fi
 
 # ── Confirm gateway is running ────────────────────────────────────────────────
 if ! openclaw gateway status &>/dev/null; then
@@ -54,21 +63,38 @@ if [ -n "$GITHUB_TOKEN" ]; then
   git -C "$PROJECT_ROOT" remote set-url origin "$REPO_URL" 2>/dev/null || true
 fi
 
+# ── Build checkpoint instruction ─────────────────────────────────────────────
+if [ "$CHECKPOINT_DAY" = true ]; then
+  CHECKPOINT_INSTRUCTION="
+CHECKPOINT DAY: This is checkpoint $CHECKPOINT_N (day $DAY).
+After writing the daily report, also generate:
+  checkpoints/checkpoint_$CHECKPOINT_N.md
+  checkpoints/latest.md (same content)
+Per AGENTS.md section 9. Include both files in the git commit."
+else
+  CHECKPOINT_INSTRUCTION=""
+fi
+
 # ── Send session message to OpenClaw agent ────────────────────────────────────
 echo "[run] Starting agent session (Day $DAY)..."
 
+# Determine observation phase within the current 7-day cycle
+DAY_IN_CYCLE=$(( (DAY - 1) % 7 + 1 ))
+
 openclaw agent \
   --message "$(cat <<EOF
-Today is $TODAY. This is Day $DAY of 7.
+Today is $TODAY. This is Day $DAY (day $DAY_IN_CYCLE of the current 7-day cycle).
 
 Follow BOOTSTRAP.md exactly.
 
 Key context:
-- Day number: $DAY
-- If Day <= 2: observe only, no belief updates
+- Total day number: $DAY
+- Day in current cycle: $DAY_IN_CYCLE
+- If day_in_cycle <= 2: observe only, no belief updates
 - Write daily report to: daily/belief_report_$TODAY.md
-- After writing the report, run the git commit and push as described in TOOLS.md
+- After writing the report, commit and push as described in TOOLS.md
 - Stop the browser and stream when done
+$CHECKPOINT_INSTRUCTION
 
 Begin now.
 EOF
@@ -83,3 +109,6 @@ bash "$PROJECT_ROOT/stream/stop.sh"
 
 echo "[run] Day $DAY session complete."
 echo "[run] Report: $PROJECT_ROOT/daily/belief_report_$TODAY.md"
+if [ "$CHECKPOINT_DAY" = true ]; then
+  echo "[run] Checkpoint: $PROJECT_ROOT/checkpoints/checkpoint_$CHECKPOINT_N.md"
+fi
