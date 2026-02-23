@@ -24,7 +24,13 @@ The runner handles stream start, gateway check, and agent invocation automatical
 - `state/trust_graph.json` — per-account influence weights
 - `state/posts_log.json` — full history of every post made on X
 - `state/vocation.json` — vocation status, direction, and core axes
+- `state/profile.json` — X profile state (bio, pfp, community)
 - `state/snapshots/` — browser snapshots for crash recovery
+
+## X Profile management
+- Edit profile: `openclaw browser --browser-profile x-hunter open https://x.com/settings/profile`
+- Create community: `openclaw browser --browser-profile x-hunter open https://x.com/i/communities/create`
+- Log all changes to `state/profile.json`
 
 ## Daily output (write once per day)
 - `daily/belief_report_YYYY-MM-DD.md`
@@ -70,4 +76,5 @@ Requires: `GITHUB_TOKEN`, `GIT_USER_NAME`, `GIT_USER_EMAIL` in env.
 - All axis creations logged with prefix: `[axis:new]`
 - All posts logged with prefix: `[post]`
 - All vocation events logged with prefix: `[vocation]`
+- All profile changes logged with prefix: `[profile]`
 - All errors logged with prefix: `[error]`
