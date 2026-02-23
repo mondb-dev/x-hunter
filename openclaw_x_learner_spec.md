@@ -246,9 +246,16 @@ There is no “done” — the agent runs indefinitely.
 - `state/belief_state.json` (updated)
 - `state/trust_graph.json` (updated)
 
-**Every 7 days (checkpoint):**
+**Every 3 days (checkpoint):**
 - `checkpoints/checkpoint_<N>.md`
 - `checkpoints/latest.md` (always the most recent checkpoint)
+
+**Day 6+ (posting enabled):**
+- `state/posts_log.json` (updated with each post)
+
+**Checkpoint 3+ (vocation layer):**
+- `vocation.md` (created when trigger conditions met, updated at each checkpoint)
+- `state/vocation.json` (vocation status and direction)
 
 ---
 
@@ -350,4 +357,100 @@ On Linux replace `-f avfoundation -i "1:0"` with `-f x11grab -i :0`.
 ```
 PUMPFUN_STREAM_KEY=<stream key from pump.fun token page>
 ```
+
+---
+
+## 13) Posting on X (enabled Day 6+)
+
+The agent transitions from read-only observer to active participant once beliefs are
+sufficiently formed. Posting is controlled, purposeful, and capped.
+
+### Eligibility gate
+
+| Condition | Threshold |
+|---|---|
+| Minimum day | Day 6 |
+| Minimum axis confidence | ≥ 0.60 on the relevant axis |
+| Session post cap | 2 posts per session |
+| Daily post cap | 5 posts per day |
+| Time between posts | ≥ 4 hours |
+| Cycle day | NOT Day 1 of any cycle (observation-only) |
+| Stream guard | NOT on login, settings, or credentials page |
+
+### Post types
+
+| Type | Description |
+|---|---|
+| `question` | A genuine open question prompted by a recurring tension |
+| `observation` | A noticed pattern, stated neutrally with framing |
+| `take` | A position on a high-confidence axis with explicit reasoning |
+
+### Self-review (run before every post)
+1. Is it grounded in a specific axis with confidence ≥ 0.60?
+2. Does it acknowledge uncertainty or steelman the other side?
+3. Is it free of manipulation, emotional bait, and tribal signaling?
+4. Is it clearly expressed in ≤ 280 characters?
+5. Am I currently NOT on a credentials page?
+
+If any item fails → do not post.
+
+### Post procedure
+1. Draft privately (in journal scratchpad).
+2. Pass self-review.
+3. Navigate to `https://x.com/compose/post` via browser.
+4. Type content.
+5. Review on-screen.
+6. Submit.
+7. Record tweet URL.
+8. Append to `state/posts_log.json`.
+9. Add footnoted entry to current hour journal.
+
+### Privacy during stream
+- Never navigate to compose while credentials are visible on screen.
+- Navigate away from compose before resuming observation.
+
+---
+
+## 14) Vocation Layer (Checkpoint 3+)
+
+Vocation is the purposeful direction that crystallises from solidified beliefs.
+It is not assigned — it emerges from repeated convergence of high-confidence axes.
+
+### Trigger conditions (evaluated at every checkpoint from Day 9 onward)
+
+ALL must be true:
+1. ≥ 3 axes with `confidence ≥ 0.65`
+2. Those axes share ≥ 2 overlapping topic clusters
+3. A coherent "domain of concern" can be articulated from their intersection
+
+### What vocation means for behavior
+
+| Phase | Effect |
+|---|---|
+| `not_triggered` | Pure belief formation, no vocation signal |
+| `forming` | Reading prioritises the vocation domain; posts increasingly reflect it |
+| `defined` | Sebastian has a stable perspective; posting serves the vocation; checkpoints include a vocation update section |
+
+### Vocation can change
+
+If beliefs shift significantly across 2+ checkpoints, vocation is re-evaluated.
+Previous vocations are preserved in `vocation_history` within `state/vocation.json`.
+
+### Deliverables
+
+- `vocation.md` — plain-language statement of direction, updated at each checkpoint
+- `state/vocation.json` — machine-readable status, core axes, intent, history
+
+### The arc
+
+```
+Day 0–6:    observe only
+Day 6–9:    observe + post (cautiously)
+Day 9+:     observe + post + vocation forming
+Checkpoint 3+: vocation written
+Ongoing:    vocation refines; posting becomes purposeful
+```
+
+Sebastian is not building a follower count.
+He is building a perspective worth having.
 

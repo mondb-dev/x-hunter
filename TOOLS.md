@@ -22,21 +22,40 @@ The runner handles stream start, gateway check, and agent invocation automatical
 - `state/ontology.json` — all discovered belief axes
 - `state/belief_state.json` — current scores, confidence, day number
 - `state/trust_graph.json` — per-account influence weights
+- `state/posts_log.json` — full history of every post made on X
+- `state/vocation.json` — vocation status, direction, and core axes
 - `state/snapshots/` — browser snapshots for crash recovery
 
 ## Daily output (write once per day)
 - `daily/belief_report_YYYY-MM-DD.md`
 
-## Final output (write on Day 7)
-- `manifesto.md`
+## Vocation output (written at Checkpoint 3 or later, updated at each checkpoint)
+- `vocation.md` — Sebastian's current vocational direction in plain language
+
+## Posting on X
+Navigate to compose and type content using browser keyboard input:
+```
+openclaw browser --browser-profile x-hunter open https://x.com/compose/post
+```
+After posting:
+- Note the tweet URL
+- Append to `state/posts_log.json`
+- Add footnoted entry to the current hour's journal
 
 ## Git (auto-commit after each daily report)
-After writing the daily report and updating state files:
+After writing the daily report and updating all state files:
 ```bash
-git add daily/ state/ontology.json state/belief_state.json state/trust_graph.json
+git add daily/ journals/ state/ontology.json state/belief_state.json \
+        state/trust_graph.json state/posts_log.json state/vocation.json
 git commit -m "day <N>: belief report YYYY-MM-DD"
 git push origin main
 ```
+
+On checkpoint days, also include:
+```bash
+git add checkpoints/ vocation.md
+```
+
 Requires: `GITHUB_TOKEN`, `GIT_USER_NAME`, `GIT_USER_EMAIL` in env.
 
 ## Streaming
@@ -49,4 +68,6 @@ Requires: `GITHUB_TOKEN`, `GIT_USER_NAME`, `GIT_USER_EMAIL` in env.
 - All observations logged to stdout with prefix: `[observe]`
 - All belief updates logged with prefix: `[update]`
 - All axis creations logged with prefix: `[axis:new]`
+- All posts logged with prefix: `[post]`
+- All vocation events logged with prefix: `[vocation]`
 - All errors logged with prefix: `[error]`
