@@ -17,14 +17,82 @@ a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 /* ── Layout ── */
+/* No z-index on shell — lets crab sit in between layers without being buried */
 .shell { display: grid; grid-template-rows: auto 1fr; min-height: 100vh; }
 
-nav { display: flex; align-items: center; gap: 2rem; padding: 1rem 2rem; border-bottom: 1px solid var(--border); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+/* Nav + main both sit above the crab (z-index 5 > crab z-index 2)
+   Solid backgrounds ensure they visually cover the crab where they overlap  */
+nav {
+  display: flex; align-items: center; gap: 2rem;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  position: relative; z-index: 5;
+  background: var(--bg);
+}
 nav .logo { color: var(--text); font-weight: 700; letter-spacing: 0.12em; margin-right: auto; display: flex; align-items: center; gap: 0.6rem; }
 nav .logo:hover { text-decoration: none; }
 .nav-pfp { width: 24px; height: 24px; image-rendering: pixelated; }
 
-main { padding: 3rem 2rem; max-width: 860px; margin: 0 auto; width: 100%; }
+main {
+  padding: 3rem 2rem; max-width: 860px; margin: 0 auto; width: 100%;
+  position: relative; z-index: 5;
+  background: var(--bg);
+}
+
+/* ── Floating crab ── */
+.crab-float-wrap {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;   /* above body bg, below nav/main (z-index 5) */
+  overflow: visible;
+}
+.crab-float {
+  position: absolute;
+  top: 0; left: 0;
+  width: 96px;
+  height: 96px;
+  opacity: 0.72;
+  transform-origin: top left;
+}
+
+/* ── Leg stepping — snappy pixel steps, left/right alternate ── */
+.crab-legs-l { animation: crab-stride 0.42s steps(2, end) infinite; }
+.crab-legs-r { animation: crab-stride 0.42s steps(2, end) infinite; animation-delay: -0.21s; }
+
+@keyframes crab-stride {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+
+/* ── Pincer snap — brief close, left/right offset ── */
+.crab-pincer-l { animation: crab-snap 2.4s linear infinite; }
+.crab-pincer-r { animation: crab-snap 2.4s linear infinite; animation-delay: -1.2s; }
+
+@keyframes crab-snap {
+  0%,  86%  { transform: translateY(0); }
+  87%       { transform: translateY(-12px); }
+  93%       { transform: translateY(-12px); }
+  94%, 100% { transform: translateY(0); }
+}
+
+/* ── Footprint dots — spawned by JS, fade out ── */
+.crab-print-dot {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #c84820;
+  pointer-events: none;
+  animation: print-fade 3.8s ease-out forwards;
+}
+
+@keyframes print-fade {
+  0%   { opacity: 0.5; }
+  25%  { opacity: 0.42; }
+  100% { opacity: 0; }
+}
 
 /* ── Hero particle canvas ── */
 .hero {
