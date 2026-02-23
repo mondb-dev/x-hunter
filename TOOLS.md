@@ -12,6 +12,13 @@ The runner handles stream start, gateway check, and agent invocation automatical
 - Gateway start: `openclaw gateway start`
 - List agents: `openclaw agents list`
 
+## LLM model
+- Provider: Google Gemini
+- Model: `google/gemini-2.0-flash`
+- Configured in `~/.openclaw/openclaw.json` (set by `runner/setup.sh`)
+- Requires: `GOOGLE_API_KEY` in `.env`
+- Image generation: available via Gemini API when vocation involves creation/art
+
 ## Browser
 - Profile: `x-hunter` (OpenClaw managed)
 - Launch: `openclaw browser --browser-profile x-hunter start`
