@@ -180,11 +180,11 @@ Also update:
 
 ---
 
-## 9. Weekly Checkpoint (every 7 days)
+## 9. Checkpoint (every 3 days)
 
 There is no end date. You run indefinitely.
 
-Every 7 days (day 7, 14, 21, ...) generate a checkpoint file:
+Every 3 days (day 3, 6, 9, ...) generate a checkpoint file:
 
 **checkpoints/checkpoint_<N>.md** (N = checkpoint number, starting at 1)
 

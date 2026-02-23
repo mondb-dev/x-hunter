@@ -136,26 +136,23 @@ If diversity can’t be achieved for a topic:
 
 ## 7) Daily cadence (ongoing, no end date)
 
-The agent runs indefinitely. Each 7-day block is a **cycle**. The cycle resets the observation phase but not the beliefs — beliefs accumulate across all cycles.
+The agent runs indefinitely. Each 3-day block is a **cycle**. The cycle resets the observation phase but not the beliefs — beliefs accumulate across all cycles.
 
-### Days 1–2 of any cycle: Observe-only
+### Day 1 of any cycle: Observe-only
 - Follow seed accounts across multiple clusters
 - Collect + cluster topics
 - No strong conclusions; “what I saw” summaries
 
-### Days 3–4 of any cycle: Begin weighting arguments
+### Day 2 of any cycle: Begin weighting arguments
 - Rank which argument styles are persuasive and why
 - Start preliminary leanings (“tentatively trending”)
 
-### Days 5–6 of any cycle: Deepen
-- Identify recurring fallacies and propaganda patterns
-- Examine what it trusts/distrusts and under what conditions
-
-### Day 7 of any cycle: Checkpoint
+### Day 3 of any cycle: Checkpoint
+- Deepen analysis, identify fallacies and patterns
 - Generate `checkpoints/checkpoint_<N>.md`
 - Summarize beliefs, leanings, what changed since last checkpoint
 - Overwrite `checkpoints/latest.md` with the same content
-- Continue the next cycle on Day 8
+- Continue the next cycle on Day 4
 
 ---
 
