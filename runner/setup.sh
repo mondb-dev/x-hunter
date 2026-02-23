@@ -34,6 +34,15 @@ echo "[setup] openclaw version: $(openclaw --version)"
 echo "[setup] Setting workspace to $PROJECT_ROOT"
 openclaw config set agents.defaults.workspace "$PROJECT_ROOT"
 
+# ── Configure LLM model ───────────────────────────────────────────────────────
+echo "[setup] Setting model to google/gemini-2.0-flash..."
+openclaw config set agent.model "google/gemini-2.0-flash"
+if [ -n "$GOOGLE_API_KEY" ]; then
+  openclaw config set providers.google.apiKey "$GOOGLE_API_KEY"
+else
+  echo "[setup] WARNING: GOOGLE_API_KEY not set in .env — agent will not be able to call the model"
+fi
+
 # ── Register the x-hunter agent ───────────────────────────────────────────────
 echo "[setup] Registering x-hunter agent..."
 openclaw agents add x-hunter \
