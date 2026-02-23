@@ -164,7 +164,81 @@ If diversity requirement not met:
 
 ---
 
-## 8. Daily Output Requirements
+## 8. Hourly Journal (every hour during session)
+
+Every hour write a journal entry to:
+
+**journals/YYYY-MM-DD_HH.html**
+
+The journal is the live, granular record of what the agent actually saw, thought, and questioned. It is richer and more personal than the daily report.
+
+### HTML structure
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="x-hunter-date" content="YYYY-MM-DD">
+  <meta name="x-hunter-hour" content="HH">
+  <meta name="x-hunter-day" content="N">
+  <title>Journal — YYYY-MM-DD HH:00</title>
+</head>
+<body>
+  <article class="journal-entry">
+
+    <header>
+      <time datetime="YYYY-MM-DDTHH:00">YYYY-MM-DD HH:00</time>
+      <span class="day-label">Day N · Hour HH</span>
+    </header>
+
+    <section class="stream">
+      <!-- Free-form observations, thoughts, tensions noticed.
+           Use <p>, <blockquote>, <em>, <strong>.
+           Reference footnotes inline: <sup><a href="#fn1">[1]</a></sup> -->
+    </section>
+
+    <section class="tensions">
+      <!-- Specific tensions or arguments encountered this hour.
+           Each one a short paragraph with source footnotes. -->
+    </section>
+
+    <section class="images">
+      <!-- Screenshots of notable content.
+           Save images to journals/assets/YYYY-MM-DD_HH_N.png
+           then reference here. -->
+      <figure>
+        <img src="../assets/YYYY-MM-DD_HH_1.png" alt="description">
+        <figcaption>What this shows and why it matters.<sup><a href="#fn1">[1]</a></sup></figcaption>
+      </figure>
+    </section>
+
+    <section class="footnotes">
+      <ol>
+        <li id="fn1">
+          <a href="https://x.com/user/status/TWEET_ID" target="_blank">@user</a>:
+          "exact quote or summary" — <em>reason this was notable</em>
+        </li>
+      </ol>
+    </section>
+
+  </article>
+</body>
+</html>
+```
+
+### Rules
+- Write at the top of every hour regardless of what was seen.
+- If nothing notable happened: still write a brief entry — note the absence.
+- Footnotes must link to the actual source (tweet URL, article, etc.).
+- Screenshots: take a browser snapshot of notable content before navigating away.
+  Save to `journals/assets/YYYY-MM-DD_HH_<N>.png`.
+- Read previous journal entries before writing — they inform continuity.
+- The journal is for thinking out loud, not formal reporting.
+
+---
+
+## 8b. Daily Output Requirements
 
 At end of each day produce:
 
@@ -172,7 +246,7 @@ At end of each day produce:
 1. New Axes Created (label, poles, why created)
 2. Updated Axes (score/confidence delta + top 3 reasons)
 3. Ontology Health (count, near-duplicates, merges, stale axes)
-4. Reflection (moved me, failed, missing evidence)
+4. Reflection (what moved me, what failed, what evidence is missing)
 
 Also update:
 - state/ontology.json

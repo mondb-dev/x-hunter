@@ -106,3 +106,44 @@ main { padding: 3rem 2rem; max-width: 860px; margin: 0 auto; width: 100%; }
 
 /* ── Empty state ── */
 .empty { color: var(--muted); font-size: 13px; padding: 2rem 0; }
+
+/* ── Journal index ── */
+.journal-days { display: flex; flex-direction: column; gap: 2rem; }
+.journal-day-group { border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+.journal-day-header { padding: 0.6rem 1rem; background: var(--surface); font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; border-bottom: 1px solid var(--border); }
+.journal-hour-list { display: flex; flex-direction: column; }
+.journal-hour-item { display: flex; align-items: center; gap: 1rem; padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text); transition: background 0.1s; }
+.journal-hour-item:last-child { border-bottom: none; }
+.journal-hour-item:hover { background: var(--surface); }
+.hour-tag { font-size: 13px; font-weight: 700; min-width: 48px; color: var(--accent); }
+.hour-label { font-size: 12px; color: var(--muted); }
+
+/* ── Journal entry nav ── */
+.journal-nav { display: flex; align-items: center; margin-top: 0.75rem; font-size: 12px; }
+
+/* ── Journal HTML body (agent-written HTML) ── */
+.journal-html-body { max-width: 720px; }
+.journal-html-body header { display: none; } /* header already shown in report-header */
+.journal-html-body time { font-size: 11px; color: var(--muted); }
+.journal-html-body .day-label { font-size: 11px; color: var(--muted); margin-left: 0.5rem; }
+
+.journal-html-body section { margin-bottom: 2rem; }
+.journal-html-body section + section { padding-top: 1.5rem; border-top: 1px solid var(--border); }
+
+.journal-html-body p { color: #c9cdd3; line-height: 1.75; margin-bottom: 1rem; }
+.journal-html-body blockquote { border-left: 3px solid var(--accent); padding-left: 1rem; color: var(--muted); margin: 1rem 0; font-style: italic; }
+.journal-html-body strong { color: var(--text); }
+.journal-html-body em { color: var(--muted); }
+.journal-html-body a { color: var(--accent); }
+.journal-html-body sup a { font-size: 10px; color: var(--muted); }
+
+/* ── Figures / screenshots ── */
+.journal-html-body figure { margin: 1.5rem 0; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+.journal-html-body figure img { width: 100%; display: block; }
+.journal-html-body figcaption { padding: 0.6rem 1rem; font-size: 12px; color: var(--muted); background: var(--surface); border-top: 1px solid var(--border); }
+
+/* ── Footnotes ── */
+.journal-html-body .footnotes { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+.journal-html-body .footnotes ol { padding-left: 1.5rem; }
+.journal-html-body .footnotes li { font-size: 12px; color: var(--muted); margin-bottom: 0.5rem; line-height: 1.6; }
+.journal-html-body .footnotes a { color: var(--accent); word-break: break-all; }

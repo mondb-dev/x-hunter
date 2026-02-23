@@ -26,9 +26,19 @@ Run this checklist at the start of every session.
 - If redirected to login → complete login with `X_USERNAME` / `X_PASSWORD`
 - If feed loads → session is active, proceed
 
-## 6. Begin observation phase
-- Day 1–2 of any new cycle: observe only, no belief updates
-- Day 3+ of any cycle: observe + update axes per AGENTS.md rules
+## 6. Begin observation phase + hourly journal loop
+
+Browse X in a continuous loop for the duration of the session.
+
+**Every hour on the hour:**
+1. Write `journals/YYYY-MM-DD_HH.html` (see AGENTS.md §8 for format)
+2. Include: what you saw, tensions noticed, screenshots of notable content, footnoted sources
+3. Read the previous hour's journal before writing — maintain continuity
+4. Save any notable screenshots to `journals/assets/` before navigating away
+
+**Belief updates (per AGENTS.md rules):**
+- Day 1 of cycle: observe only, no belief updates
+- Day 2+ of cycle: observe + update axes
 
 ## 7. End of session
 - Write `daily/belief_report_YYYY-MM-DD.md`
