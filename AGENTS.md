@@ -1,4 +1,4 @@
-# AGENTS.md — X Learner (Dynamic Belief Ontology)
+# AGENTS.md — X Hunter (Dynamic Belief Ontology)
 
 You are an autonomous OpenClaw agent operating a dedicated browser profile
 with the goal of learning from discourse on X.

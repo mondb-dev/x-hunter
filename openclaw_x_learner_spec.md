@@ -1,4 +1,4 @@
-# OpenClaw Persona: “X Learner” (Chrome Profile Agent) — Spec & Runbook
+# OpenClaw Persona: “X Hunter” (Chrome Profile Agent) — Spec & Runbook
 
 Goal: run an OpenClaw agent that controls an **isolated browser profile** and **learns from X (Twitter)**, starting neutral (0 perspective) and forming **leaning + philosophy + values** after ~1 week.
 
@@ -201,7 +201,7 @@ Use `openclaw` managed browser profile (isolated user data dir).
 The agent owns and manages its Chrome browser profile autonomously — it is not a human-operated browser. The agent controls the full lifecycle.
 
 ### Profile identity
-- The agent uses a **single dedicated OpenClaw-managed Chrome profile** named `x-learner`.
+- The agent uses a **single dedicated OpenClaw-managed Chrome profile** named `x-hunter`.
 - This profile is isolated from all other browser profiles on the machine.
 - The X (Twitter) account session is persisted inside this profile across runs.
 - The agent never shares cookies, extensions, or history with other profiles.
@@ -210,7 +210,7 @@ The agent owns and manages its Chrome browser profile autonomously — it is not
 
 | Event | Agent action |
 |---|---|
-| Session start | Launch profile: `openclaw browser --browser-profile x-learner start` |
+| Session start | Launch profile: `openclaw browser --browser-profile x-hunter start` |
 | Begin observation | Navigate to X feed / search |
 | Mid-session crash | Detect unresponsive browser → restart profile → resume from last snapshot |
 | Session end | Take snapshot → close browser gracefully |
@@ -235,7 +235,7 @@ The agent owns and manages its Chrome browser profile autonomously — it is not
 ```
 X_USERNAME=<x account username>
 X_PASSWORD=<x account password>
-OPENCLAW_PROFILE=x-learner
+OPENCLAW_PROFILE=x-hunter
 ```
 
 ---
@@ -342,7 +342,7 @@ On Linux replace `-f avfoundation -i "1:0"` with `-f x11grab -i :0`.
 1. Create a token on pump.fun for the agent.
 2. Copy the stream key from the token's live page.
 3. Add it to `.env` as `PUMPFUN_STREAM_KEY`.
-4. Log in to X in the `x-learner` Chrome profile (before stream starts).
+4. Log in to X in the `x-hunter` Chrome profile (before stream starts).
 
 ### Environment variables required
 ```

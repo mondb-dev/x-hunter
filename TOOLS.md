@@ -1,10 +1,10 @@
-# TOOLS.md — X Learner
+# TOOLS.md — X Hunter
 
 ## Browser
-- Profile: `x-learner` (OpenClaw managed)
-- Launch: `openclaw browser --browser-profile x-learner start`
-- Snapshot: `openclaw browser --browser-profile x-learner snapshot`
-- Close: `openclaw browser --browser-profile x-learner stop`
+- Profile: `x-hunter` (OpenClaw managed)
+- Launch: `openclaw browser --browser-profile x-hunter start`
+- Snapshot: `openclaw browser --browser-profile x-hunter snapshot`
+- Close: `openclaw browser --browser-profile x-hunter stop`
 
 ## State files (read + write)
 - `state/ontology.json` — all discovered belief axes

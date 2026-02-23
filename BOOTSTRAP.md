@@ -17,8 +17,8 @@ Run this checklist at the start of every session.
 - Confirm ffmpeg subprocess is running before proceeding
 
 ## 4. Launch browser
-- `openclaw browser --browser-profile x-learner start`
-- Take snapshot: `openclaw browser --browser-profile x-learner snapshot`
+- `openclaw browser --browser-profile x-hunter start`
+- Take snapshot: `openclaw browser --browser-profile x-hunter snapshot`
 
 ## 5. Check X session
 - Navigate to `https://x.com`
