@@ -20,7 +20,9 @@ a:hover { text-decoration: underline; }
 .shell { display: grid; grid-template-rows: auto 1fr; min-height: 100vh; }
 
 nav { display: flex; align-items: center; gap: 2rem; padding: 1rem 2rem; border-bottom: 1px solid var(--border); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
-nav .logo { color: var(--text); font-weight: 700; letter-spacing: 0.12em; margin-right: auto; }
+nav .logo { color: var(--text); font-weight: 700; letter-spacing: 0.12em; margin-right: auto; display: flex; align-items: center; gap: 0.6rem; }
+nav .logo:hover { text-decoration: none; }
+.nav-pfp { width: 24px; height: 24px; image-rendering: pixelated; }
 
 main { padding: 3rem 2rem; max-width: 860px; margin: 0 auto; width: 100%; }
 
