@@ -13,7 +13,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="shell">
           <nav>
             <a href="/" className="logo">X Hunter</a>
-            <a href="/">Journal</a>
+            <a href="/journals">Journals</a>
+            <a href="/">Reports</a>
             <a href="/ontology">Ontology</a>
             <a href="/checkpoints">Checkpoints</a>
           </nav>
