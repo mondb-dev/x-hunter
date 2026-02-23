@@ -28,9 +28,9 @@ DAY=$((REPORTS + 1))
 # ── Is this a checkpoint day? ─────────────────────────────────────────────────
 CHECKPOINT_DAY=false
 CHECKPOINT_N=0
-if [ $((DAY % 7)) -eq 0 ]; then
+if [ $((DAY % 3)) -eq 0 ]; then
   CHECKPOINT_DAY=true
-  CHECKPOINT_N=$((DAY / 7))
+  CHECKPOINT_N=$((DAY / 3))
 fi
 
 if [ "$CHECKPOINT_DAY" = true ]; then
@@ -78,12 +78,12 @@ fi
 # ── Send session message to OpenClaw agent ────────────────────────────────────
 echo "[run] Starting agent session (Day $DAY)..."
 
-# Determine observation phase within the current 7-day cycle
-DAY_IN_CYCLE=$(( (DAY - 1) % 7 + 1 ))
+# Determine observation phase within the current 3-day cycle
+DAY_IN_CYCLE=$(( (DAY - 1) % 3 + 1 ))
 
 openclaw agent \
   --message "$(cat <<EOF
-Today is $TODAY. This is Day $DAY (day $DAY_IN_CYCLE of the current 7-day cycle).
+Today is $TODAY. This is Day $DAY (day $DAY_IN_CYCLE of the current 3-day cycle).
 
 Follow BOOTSTRAP.md exactly.
 
