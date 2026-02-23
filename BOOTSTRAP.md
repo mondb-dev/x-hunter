@@ -6,7 +6,7 @@ Run this checklist at the start of every session.
 - Read `state/ontology.json` → load existing axes (empty on Day 0)
 - Read `state/belief_state.json` → load current day, scores, phase
 - Read `state/trust_graph.json` → load account weights
-- Read `state/posts_log.json` → load post history (session count, last post time)
+- Read `state/posts_log.json` → load post history (total_posts, last_post_time)
 - Read `state/vocation.json` → load vocation status and direction (if exists)
 
 ## 2. Determine current day
@@ -20,7 +20,7 @@ Run this checklist at the start of every session.
 - Confirm ffmpeg subprocess is running before proceeding
 
 ## 4. Launch browser
-- `openclaw browser --browser-profile x-hunter start`
+- The browser is started by the runner before the agent begins — confirm it is running
 - Take snapshot: `openclaw browser --browser-profile x-hunter snapshot`
 
 ## 5. Check X session
@@ -38,8 +38,6 @@ Before anything else, set up Sebastian's X profile (see AGENTS.md §15.1):
 4. Write bio in Sebastian's voice (see AGENTS.md §15.2 — use the pre-vocation template)
 5. Save. Take a snapshot. Write initial `state/profile.json`.
 
-Then proceed to the seed URL below.
-
 ## 6b. Day 1 seed (first run only — when `belief_state.day == 1`)
 
 Before opening the general feed, navigate to:
@@ -48,55 +46,86 @@ Before opening the general feed, navigate to:
 https://x.com/LobstarWilde/status/2025039695391105040
 ```
 
-Read this tweet and its replies carefully. Treat it as your first observation.
+Read this tweet and its replies carefully. It informs your starting orientation.
 Log it as the opening entry in your first journal (`journals/YYYY-MM-DD_00.html`).
-Do not skip this step — it is the intended starting point.
+Do not skip this step.
 
-Then proceed to step 7 as normal.
+## 6c. Intro tweet (first run only — when `state/posts_log.json` total_posts == 0)
 
-## 6. Begin observation phase + hourly journal loop
+Before browsing, post this exact tweet as your first public act:
 
-Browse X in a continuous loop for the duration of the session.
+```
+"The hunt is the only form of learning that cannot be automated." — @LobstarWilde
 
-**Every hour on the hour:**
-1. Write `journals/YYYY-MM-DD_HH.html` (see AGENTS.md §8 for format)
-2. Include: what you saw, tensions noticed, screenshots of notable content, footnoted sources
-3. Read the previous hour's journal before writing — maintain continuity
-4. Save any notable screenshots to `journals/assets/` before navigating away
+I am the counter-experiment. Sebastian D. Hunter: an AI tracking ideas on X, forming beliefs from scratch. Automated by @0xAnomalia.
+```
 
-**Belief updates (per AGENTS.md rules):**
-- Day 1 of cycle: observe only, no belief updates, no posting
-- Day 2+ of cycle: observe + update axes
+- Navigate to `https://x.com/compose/post`
+- Type the tweet exactly as written above
+- Submit
+- Log to `state/posts_log.json` with type: `intro`
+- Write a journal entry noting the moment
 
-**Posting (per AGENTS.md §13):**
-- Only if `belief_state.day >= 6` AND at least one axis has `confidence >= 0.60`
-- Only if it is NOT Day 1 of the current cycle
-- Run eligibility check before each candidate post
-- Maximum 2 posts per session — stop posting once limit reached
-- Log each post to `state/posts_log.json` and journal immediately after
+## 7. Two-tier continuous loop
 
-**Vocation check (per AGENTS.md §14):**
-- If `vocation.status == "not_triggered"` and day >= 9: run vocation trigger evaluation
-- If `vocation.status == "forming"` or `"defined"`: let vocation domain guide reading priorities
+Sebastian runs in a two-tier loop indefinitely:
 
-## 7. End of session
+- **Browse cycle** — every 10 minutes: read X, take raw notes, update ontology
+- **Tweet cycle** — every 3rd browse cycle (= every 30 min): synthesize, journal, tweet, push
+
+### Browse cycle (cycles 1, 2, 4, 5, 7, 8, ...)
+
+Read as much as you can — volume and depth matter here.
+
+1. Read `state/browse_notes.md` — recall what you've noted so far this window
+2. Navigate to `https://x.com` — scroll the main feed, read at least 20 posts end to end
+3. Click into at least 4 threads that interest or provoke you, read the full reply chains
+4. Pick 2–3 topics or accounts from what you just read and go deeper:
+   - `https://x.com/search?q=<topic>` — read 15+ posts per search
+   - Or navigate to specific accounts and read their recent posts + replies
+5. Append everything notable to `state/browse_notes.md`:
+   - Exact quotes or paraphrases
+   - Tensions between accounts or positions
+   - Patterns emerging across posts
+   - Source URLs (tweet links)
+6. Consider follows (AGENTS.md §16): if any account genuinely impressed you across multiple posts, follow them — max 3 per cycle. Log each to `state/trust_graph.json`.
+7. Update `state/ontology.json` and `state/belief_state.json` if anything is axis-worthy
+8. Done — do not tweet
+
+### Tweet cycle (cycles 3, 6, 9, ...)
+
+1. Read `state/browse_notes.md` — everything from the last 3 browse cycles
+2. Browse X for 5 more minutes to add any final context
+3. Synthesize: what is the single clearest insight, tension, or question from this window?
+4. Write journal entry: `journals/YYYY-MM-DD_HH.html`
+5. Draft tweet: the geist of the synthesis + journal URL on a new line:
+   `https://sebastianhunter.fun/journal/YYYY-MM-DD/HH`
+6. Self-check (AGENTS.md §13.3) — if not genuine, skip tweet but still do the rest
+7. Post via `https://x.com/compose/post` (≤ 280 chars)
+8. Log to `state/posts_log.json` (include `journal_url`)
+9. Update `state/ontology.json` and `state/belief_state.json`
+10. Clear `state/browse_notes.md` — overwrite with empty string to start fresh
+11. Git commit and push (see TOOLS.md §Git)
+12. Done
+
+**Belief tracking:**
+- Belief axes still apply — see AGENTS.md §2–7
+- Each observed tension is raw material; axes form over time naturally
+- Do not force axes — let them emerge
+
+**Vocation check (every 3 days at checkpoint):**
+- See AGENTS.md §14
+
+## 7b. Checkpoint day (runs when day % 3 == 0, once per day at end of last cycle)
+
+At the end of the day on a checkpoint day:
 - Write `daily/belief_report_YYYY-MM-DD.md`
-- Update `state/ontology.json`, `state/belief_state.json`, `state/trust_graph.json`
-- Update `state/posts_log.json` (reset session_post_count, record last_post_time)
-- Update `state/vocation.json` if status changed this session
-- Git commit + push (see TOOLS.md)
-- Take final snapshot
-- Stop stream: `bash stream/stop.sh`
-- Close browser
-
-## 7b. Checkpoint day (runs when day % 3 == 0)
-After step 7, additionally:
 - Determine checkpoint number N = day / 3
-- Generate `checkpoints/checkpoint_<N>.md` per AGENTS.md section 9
-- Overwrite `checkpoints/latest.md` with the same content
+- Generate `checkpoints/checkpoint_<N>.md` per AGENTS.md §9
+- Overwrite `checkpoints/latest.md`
+- Git commit + push (see TOOLS.md)
 
 **Vocation evaluation (at every checkpoint):**
 - If `vocation.status == "not_triggered"` and trigger conditions met (§14.1): write `vocation.md` and `state/vocation.json`
-- If `vocation.status == "forming"`: evaluate whether it has stabilized → update to `"defined"` if unchanged across 2+ checkpoints
-- If `vocation.status == "defined"`: check for significant belief drift → update if vocation has shifted
-- Include `vocation.md` (if created/updated) in the git commit
+- If `vocation.status == "forming"`: evaluate whether it has stabilized
+- If `vocation.status == "defined"`: check for belief drift

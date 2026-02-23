@@ -15,7 +15,7 @@ export interface JournalDay {
   entries: JournalEntry[];
 }
 
-const JOURNALS_DIR = path.resolve(process.cwd(), "../journals");
+const JOURNALS_DIR = path.resolve(process.cwd(), "data/journals");
 
 function parseSlug(filename: string): { date: string; hour: number } | null {
   const m = filename.match(/^(\d{4}-\d{2}-\d{2})_(\d{2})\.html$/);

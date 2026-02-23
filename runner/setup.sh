@@ -35,10 +35,11 @@ echo "[setup] Setting workspace to $PROJECT_ROOT"
 openclaw config set agents.defaults.workspace "$PROJECT_ROOT"
 
 # ── Configure LLM model ───────────────────────────────────────────────────────
-echo "[setup] Setting model to google/gemini-2.0-flash..."
-openclaw config set agent.model "google/gemini-2.0-flash"
+echo "[setup] Setting model to google/gemini-2.5-flash..."
+openclaw config set agents.defaults.model.primary "google/gemini-2.5-flash"
 if [ -n "$GOOGLE_API_KEY" ]; then
-  openclaw config set providers.google.apiKey "$GOOGLE_API_KEY"
+  # Try config store; OpenClaw also reads GOOGLE_API_KEY from env automatically
+  openclaw config set providers.google.apiKey "$GOOGLE_API_KEY" 2>/dev/null || true
 else
   echo "[setup] WARNING: GOOGLE_API_KEY not set in .env — agent will not be able to call the model"
 fi
@@ -76,7 +77,10 @@ sleep 2
 openclaw gateway status
 
 # ── Set up x-hunter Chrome browser profile ────────────────────────────────────
-echo "[setup] Initializing x-hunter browser profile..."
+echo "[setup] Creating x-hunter browser profile..."
+openclaw browser create-profile --name x-hunter 2>/dev/null || echo "[setup] Profile may already exist, continuing..."
+
+echo "[setup] Starting x-hunter browser..."
 openclaw browser --browser-profile x-hunter start
 sleep 3
 
