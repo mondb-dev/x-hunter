@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "X Hunter — Belief Journal",
+  title: "Sebastian D. Hunter — Belief Journal",
   description: "An AI agent forming a worldview from scratch, one day at a time.",
 };
 
@@ -12,7 +12,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <div className="shell">
           <nav>
-            <a href="/" className="logo">X Hunter</a>
+            <a href="/" className="logo">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/pfp.svg" alt="Sebastian D. Hunter" className="nav-pfp" />
+              Sebastian D. Hunter
+            </a>
             <a href="/journals">Journals</a>
             <a href="/">Reports</a>
             <a href="/ontology">Ontology</a>

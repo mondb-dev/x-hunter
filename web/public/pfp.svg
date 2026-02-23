@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" shape-rendering="crispEdges">
+
+  <!-- Background -->
+  <rect width="256" height="256" fill="#0a0b0c"/>
+
+  <!-- Antennae (rows 0–1, cols 5 and 10) -->
+  <rect x="80"  y="0"  width="16" height="16" fill="#e05c2b"/>
+  <rect x="160" y="0"  width="16" height="16" fill="#e05c2b"/>
+  <rect x="80"  y="16" width="16" height="16" fill="#e05c2b"/>
+  <rect x="160" y="16" width="16" height="16" fill="#e05c2b"/>
+
+  <!-- Body top (row 2, cols 4–11) -->
+  <rect x="64" y="32" width="128" height="16" fill="#e05c2b"/>
+
+  <!-- Body (row 3, cols 3–12) -->
+  <rect x="48" y="48" width="160" height="16" fill="#e05c2b"/>
+
+  <!-- Row 4 – eyes at cols 5 and 9 -->
+  <rect x="32"  y="64" width="48" height="16" fill="#e05c2b"/>
+  <rect x="80"  y="64" width="16" height="16" fill="#f0ece8"/><!-- left eye -->
+  <rect x="96"  y="64" width="48" height="16" fill="#e05c2b"/>
+  <rect x="144" y="64" width="16" height="16" fill="#f0ece8"/><!-- right eye -->
+  <rect x="160" y="64" width="48" height="16" fill="#e05c2b"/>
+
+  <!-- Eye pupils (row 4, inset 1 center pixel, drawn at half scale trick) -->
+  <rect x="86"  y="70" width="4" height="4" fill="#1a0a00"/>
+  <rect x="150" y="70" width="4" height="4" fill="#1a0a00"/>
+
+  <!-- Row 5 (cols 2–13) -->
+  <rect x="32" y="80" width="192" height="16" fill="#e05c2b"/>
+
+  <!-- Row 6 – full claw row, tips lighter -->
+  <rect x="0"   y="96" width="32"  height="16" fill="#f07038"/><!-- left claw tip -->
+  <rect x="32"  y="96" width="192" height="16" fill="#e05c2b"/><!-- body -->
+  <rect x="224" y="96" width="32"  height="16" fill="#f07038"/><!-- right claw tip -->
+
+  <!-- Row 7 – full claw row -->
+  <rect x="0"   y="112" width="32"  height="16" fill="#f07038"/>
+  <rect x="32"  y="112" width="192" height="16" fill="#e05c2b"/>
+  <rect x="224" y="112" width="32"  height="16" fill="#f07038"/>
+
+  <!-- Row 8 (cols 2–13) -->
+  <rect x="32" y="128" width="192" height="16" fill="#e05c2b"/>
+
+  <!-- Row 9 (cols 3–12) -->
+  <rect x="48" y="144" width="160" height="16" fill="#e05c2b"/>
+
+  <!-- Row 10 (cols 4–11) -->
+  <rect x="64" y="160" width="128" height="16" fill="#e05c2b"/>
+
+  <!-- Legs row 11 (cols 4, 6, 8, 10) -->
+  <rect x="64"  y="176" width="16" height="16" fill="#e05c2b"/>
+  <rect x="96"  y="176" width="16" height="16" fill="#e05c2b"/>
+  <rect x="128" y="176" width="16" height="16" fill="#e05c2b"/>
+  <rect x="160" y="176" width="16" height="16" fill="#e05c2b"/>
+
+  <!-- Legs row 12 (cols 4, 6, 8, 10) -->
+  <rect x="64"  y="192" width="16" height="16" fill="#e05c2b"/>
+  <rect x="96"  y="192" width="16" height="16" fill="#e05c2b"/>
+  <rect x="128" y="192" width="16" height="16" fill="#e05c2b"/>
+  <rect x="160" y="192" width="16" height="16" fill="#e05c2b"/>
+
+  <!-- Legs row 13 – staggered inner (cols 5, 7, 9) -->
+  <rect x="80"  y="208" width="16" height="16" fill="#e05c2b"/>
+  <rect x="112" y="208" width="16" height="16" fill="#e05c2b"/>
+  <rect x="144" y="208" width="16" height="16" fill="#e05c2b"/>
+
+</svg>

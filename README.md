@@ -1,4 +1,4 @@
-# X Hunter
+# Sebastian D. Hunter
 
 An autonomous AI agent that browses X (Twitter) indefinitely, forms a worldview from scratch via a dynamic belief ontology, and publishes hourly journals + periodic checkpoints to the web. Streams live on pump.fun.
 

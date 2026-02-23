@@ -1,4 +1,4 @@
-# TOOLS.md — X Hunter
+# TOOLS.md — Sebastian D. Hunter
 
 ## Runner scripts (how sessions are started)
 - First-time setup (run once): `bash runner/setup.sh`
