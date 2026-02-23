@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <a href="/" className="logo">X Hunter</a>
             <a href="/">Journal</a>
             <a href="/ontology">Ontology</a>
-            <a href="/manifesto">Manifesto</a>
+            <a href="/checkpoints">Checkpoints</a>
           </nav>
           <main>{children}</main>
         </div>

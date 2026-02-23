@@ -1,14 +1,15 @@
 import Link from "next/link";
-import { getAllReports, getManifesto } from "@/lib/readReports";
+import { getAllReports } from "@/lib/readReports";
 import { readOntology } from "@/lib/readOntology";
+import { getLatestCheckpoint } from "@/lib/readCheckpoints";
 import ParticleFieldClient from "@/components/ParticleFieldClient";
 
 export const dynamic = "force-dynamic";
 
 export default async function IndexPage() {
   const reports = getAllReports().reverse(); // newest first
-  const manifesto = await getManifesto();
   const ontology = readOntology();
+  const latestCheckpoint = await getLatestCheckpoint();
 
   return (
     <>
@@ -24,11 +25,13 @@ export default async function IndexPage() {
         </span>
       </div>
 
-      {/* Manifesto pin (only after Day 7) */}
-      {manifesto && (
+      {/* Latest checkpoint pin */}
+      {latestCheckpoint && (
         <div className="manifesto-pin">
-          <span className="pin-label">Manifesto</span>
-          <Link href="/manifesto">Read the final worldview →</Link>
+          <span className="pin-label">Week {latestCheckpoint.n} checkpoint</span>
+          <Link href={`/checkpoint/${latestCheckpoint.n}`}>
+            Read latest worldview snapshot →
+          </Link>
         </div>
       )}
 
