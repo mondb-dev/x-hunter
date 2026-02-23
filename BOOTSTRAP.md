@@ -6,6 +6,8 @@ Run this checklist at the start of every session.
 - Read `state/ontology.json` → load existing axes (empty on Day 0)
 - Read `state/belief_state.json` → load current day, scores, phase
 - Read `state/trust_graph.json` → load account weights
+- Read `state/posts_log.json` → load post history (session count, last post time)
+- Read `state/vocation.json` → load vocation status and direction (if exists)
 
 ## 2. Determine current day
 - If `belief_state.day == 0` → this is Day 1 (first run)
@@ -37,12 +39,25 @@ Browse X in a continuous loop for the duration of the session.
 4. Save any notable screenshots to `journals/assets/` before navigating away
 
 **Belief updates (per AGENTS.md rules):**
-- Day 1 of cycle: observe only, no belief updates
+- Day 1 of cycle: observe only, no belief updates, no posting
 - Day 2+ of cycle: observe + update axes
+
+**Posting (per AGENTS.md §13):**
+- Only if `belief_state.day >= 6` AND at least one axis has `confidence >= 0.60`
+- Only if it is NOT Day 1 of the current cycle
+- Run eligibility check before each candidate post
+- Maximum 2 posts per session — stop posting once limit reached
+- Log each post to `state/posts_log.json` and journal immediately after
+
+**Vocation check (per AGENTS.md §14):**
+- If `vocation.status == "not_triggered"` and day >= 9: run vocation trigger evaluation
+- If `vocation.status == "forming"` or `"defined"`: let vocation domain guide reading priorities
 
 ## 7. End of session
 - Write `daily/belief_report_YYYY-MM-DD.md`
-- Update `state/ontology.json` and `state/belief_state.json`
+- Update `state/ontology.json`, `state/belief_state.json`, `state/trust_graph.json`
+- Update `state/posts_log.json` (reset session_post_count, record last_post_time)
+- Update `state/vocation.json` if status changed this session
 - Git commit + push (see TOOLS.md)
 - Take final snapshot
 - Stop stream: `bash stream/stop.sh`
@@ -53,4 +68,9 @@ After step 7, additionally:
 - Determine checkpoint number N = day / 3
 - Generate `checkpoints/checkpoint_<N>.md` per AGENTS.md section 9
 - Overwrite `checkpoints/latest.md` with the same content
-- Include the checkpoint files in the git commit
+
+**Vocation evaluation (at every checkpoint):**
+- If `vocation.status == "not_triggered"` and trigger conditions met (§14.1): write `vocation.md` and `state/vocation.json`
+- If `vocation.status == "forming"`: evaluate whether it has stabilized → update to `"defined"` if unchanged across 2+ checkpoints
+- If `vocation.status == "defined"`: check for significant belief drift → update if vocation has shifted
+- Include `vocation.md` (if created/updated) in the git commit
