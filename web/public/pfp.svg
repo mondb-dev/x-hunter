@@ -3,66 +3,78 @@
   <!-- Background -->
   <rect width="256" height="256" fill="#0a0b0c"/>
 
-  <!-- Antennae (rows 0–1, cols 5 and 10) -->
-  <rect x="80"  y="0"  width="16" height="16" fill="#e05c2b"/>
-  <rect x="160" y="0"  width="16" height="16" fill="#e05c2b"/>
-  <rect x="80"  y="16" width="16" height="16" fill="#e05c2b"/>
-  <rect x="160" y="16" width="16" height="16" fill="#e05c2b"/>
+  <!-- ══ HUNTER HAT ══ -->
 
-  <!-- Body top (row 2, cols 4–11) -->
-  <rect x="64" y="32" width="128" height="16" fill="#e05c2b"/>
+  <!-- Feather tip (row 0, col 13 — pokes above crown) -->
+  <rect x="208" y="0"  width="16" height="16" fill="#b89830"/>
 
-  <!-- Body (row 3, cols 3–12) -->
-  <rect x="48" y="48" width="160" height="16" fill="#e05c2b"/>
+  <!-- Hat crown (rows 1–2, cols 3–12) + feather body (col 13) -->
+  <rect x="48"  y="16" width="160" height="32" fill="#8b6b1a"/>
+  <rect x="208" y="16" width="16"  height="32" fill="#d4b84a"/>
 
-  <!-- Row 4 – eyes at cols 5 and 9 -->
-  <rect x="32"  y="64" width="48" height="16" fill="#e05c2b"/>
-  <rect x="80"  y="64" width="16" height="16" fill="#f0ece8"/><!-- left eye -->
-  <rect x="96"  y="64" width="48" height="16" fill="#e05c2b"/>
-  <rect x="144" y="64" width="16" height="16" fill="#f0ece8"/><!-- right eye -->
-  <rect x="160" y="64" width="48" height="16" fill="#e05c2b"/>
+  <!-- Hat band (row 3, cols 3–12, hunter green) -->
+  <rect x="48" y="48" width="160" height="16" fill="#2d5216"/>
 
-  <!-- Eye pupils (row 4, inset 1 center pixel, drawn at half scale trick) -->
-  <rect x="86"  y="70" width="4" height="4" fill="#1a0a00"/>
-  <rect x="150" y="70" width="4" height="4" fill="#1a0a00"/>
+  <!-- Hat brim (row 4, cols 1–14, dark brown) -->
+  <rect x="16" y="64" width="224" height="16" fill="#6a4e10"/>
 
-  <!-- Row 5 (cols 2–13) -->
-  <rect x="32" y="80" width="192" height="16" fill="#e05c2b"/>
+  <!-- ══ CRAB CARAPACE ══ -->
 
-  <!-- Row 6 – full claw row, tips lighter -->
-  <rect x="0"   y="96" width="32"  height="16" fill="#f07038"/><!-- left claw tip -->
-  <rect x="32"  y="96" width="192" height="16" fill="#e05c2b"/><!-- body -->
-  <rect x="224" y="96" width="32"  height="16" fill="#f07038"/><!-- right claw tip -->
+  <!-- Row 5 — body top (cols 5–10) -->
+  <rect x="80" y="80" width="96" height="16" fill="#e05c2b"/>
 
-  <!-- Row 7 – full claw row -->
-  <rect x="0"   y="112" width="32"  height="16" fill="#f07038"/>
-  <rect x="32"  y="112" width="192" height="16" fill="#e05c2b"/>
-  <rect x="224" y="112" width="32"  height="16" fill="#f07038"/>
+  <!-- Row 6 — body (cols 4–11) -->
+  <rect x="64" y="96" width="128" height="16" fill="#e05c2b"/>
 
-  <!-- Row 8 (cols 2–13) -->
-  <rect x="32" y="128" width="192" height="16" fill="#e05c2b"/>
+  <!-- Row 7 — body (cols 3–12) -->
+  <rect x="48" y="112" width="160" height="16" fill="#e05c2b"/>
 
-  <!-- Row 9 (cols 3–12) -->
-  <rect x="48" y="144" width="160" height="16" fill="#e05c2b"/>
+  <!-- Row 8 — eye row + upper pincer arms (body cols 2–13) -->
+  <rect x="0"   y="128" width="32" height="16" fill="#f07038"/>  <!-- left upper pincer (cols 0–1) -->
+  <rect x="32"  y="128" width="48" height="16" fill="#e05c2b"/>  <!-- body cols 2–4 -->
+  <rect x="80"  y="128" width="16" height="16" fill="#f0ece8"/>  <!-- left eye (col 5) -->
+  <rect x="96"  y="128" width="48" height="16" fill="#e05c2b"/>  <!-- body cols 6–8 -->
+  <rect x="144" y="128" width="16" height="16" fill="#f0ece8"/>  <!-- right eye (col 9) -->
+  <rect x="160" y="128" width="64" height="16" fill="#e05c2b"/>  <!-- body cols 10–13 -->
+  <rect x="224" y="128" width="32" height="16" fill="#f07038"/>  <!-- right upper pincer (cols 14–15) -->
+  <!-- Pupils -->
+  <rect x="86"  y="134" width="4" height="4" fill="#1a0a00"/>
+  <rect x="150" y="134" width="4" height="4" fill="#1a0a00"/>
 
-  <!-- Row 10 (cols 4–11) -->
-  <rect x="64" y="160" width="128" height="16" fill="#e05c2b"/>
+  <!-- Row 9 — open pincer gap (col 1 and col 14 empty = claw bite) -->
+  <rect x="0"   y="144" width="16"  height="16" fill="#f07038"/>  <!-- left outer (col 0) -->
+  <rect x="32"  y="144" width="192" height="16" fill="#e05c2b"/>  <!-- body cols 2–13 -->
+  <rect x="240" y="144" width="16"  height="16" fill="#f07038"/>  <!-- right outer (col 15) -->
 
-  <!-- Legs row 11 (cols 4, 6, 8, 10) -->
-  <rect x="64"  y="176" width="16" height="16" fill="#e05c2b"/>
-  <rect x="96"  y="176" width="16" height="16" fill="#e05c2b"/>
-  <rect x="128" y="176" width="16" height="16" fill="#e05c2b"/>
-  <rect x="160" y="176" width="16" height="16" fill="#e05c2b"/>
+  <!-- Row 10 — lower pincer jaws close -->
+  <rect x="0"   y="160" width="32"  height="16" fill="#f07038"/>  <!-- left lower pincer (cols 0–1) -->
+  <rect x="32"  y="160" width="192" height="16" fill="#e05c2b"/>  <!-- body cols 2–13 -->
+  <rect x="224" y="160" width="32"  height="16" fill="#f07038"/>  <!-- right lower pincer (cols 14–15) -->
 
-  <!-- Legs row 12 (cols 4, 6, 8, 10) -->
-  <rect x="64"  y="192" width="16" height="16" fill="#e05c2b"/>
-  <rect x="96"  y="192" width="16" height="16" fill="#e05c2b"/>
-  <rect x="128" y="192" width="16" height="16" fill="#e05c2b"/>
-  <rect x="160" y="192" width="16" height="16" fill="#e05c2b"/>
+  <!-- Row 11 — body (cols 2–13) -->
+  <rect x="32" y="176" width="192" height="16" fill="#e05c2b"/>
 
-  <!-- Legs row 13 – staggered inner (cols 5, 7, 9) -->
+  <!-- Row 12 — body narrows (cols 3–12) -->
+  <rect x="48" y="192" width="160" height="16" fill="#e05c2b"/>
+
+  <!-- ══ LEGS ══ -->
+
+  <!-- Row 13 (cols 3, 5, 10, 12) -->
+  <rect x="48"  y="208" width="16" height="16" fill="#e05c2b"/>
   <rect x="80"  y="208" width="16" height="16" fill="#e05c2b"/>
-  <rect x="112" y="208" width="16" height="16" fill="#e05c2b"/>
-  <rect x="144" y="208" width="16" height="16" fill="#e05c2b"/>
+  <rect x="160" y="208" width="16" height="16" fill="#e05c2b"/>
+  <rect x="192" y="208" width="16" height="16" fill="#e05c2b"/>
+
+  <!-- Row 14 (cols 3, 5, 10, 12) -->
+  <rect x="48"  y="224" width="16" height="16" fill="#e05c2b"/>
+  <rect x="80"  y="224" width="16" height="16" fill="#e05c2b"/>
+  <rect x="160" y="224" width="16" height="16" fill="#e05c2b"/>
+  <rect x="192" y="224" width="16" height="16" fill="#e05c2b"/>
+
+  <!-- Row 15 — leg tips staggered inward (cols 4, 6, 9, 11) -->
+  <rect x="64"  y="240" width="16" height="16" fill="#e05c2b"/>
+  <rect x="96"  y="240" width="16" height="16" fill="#e05c2b"/>
+  <rect x="144" y="240" width="16" height="16" fill="#e05c2b"/>
+  <rect x="176" y="240" width="16" height="16" fill="#e05c2b"/>
 
 </svg>
