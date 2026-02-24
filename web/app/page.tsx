@@ -4,7 +4,6 @@ import { readOntology } from "@/lib/readOntology";
 import { getLatestCheckpoint } from "@/lib/readCheckpoints";
 import ParticleFieldClient from "@/components/ParticleFieldClient";
 
-export const dynamic = "force-dynamic";
 
 export default async function IndexPage() {
   const reports = getAllReports().reverse(); // newest first

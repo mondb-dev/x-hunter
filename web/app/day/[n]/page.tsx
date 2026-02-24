@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import { getAllReports, getReportByDay } from "@/lib/readReports";
 
-export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
   const reports = getAllReports();
