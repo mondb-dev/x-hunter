@@ -44,6 +44,17 @@ export default async function JournalEntryPage({
           {nextHour && (
             <Link href={`/journal/${date}/${nextHour}`}>{nextHour}:00 →</Link>
           )}
+          {entry.arweaveUrl && (
+            <a
+              href={entry.arweaveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ marginLeft: "auto", fontSize: "11px", color: "var(--muted)", fontFamily: "monospace" }}
+              title="Permanent copy on Arweave"
+            >
+              ∞ arweave
+            </a>
+          )}
         </div>
       </div>
 
