@@ -28,10 +28,42 @@ const BROWSE_NOTES = path.join(ROOT, "state", "browse_notes.md");
 const ONTOLOGY     = path.join(ROOT, "state", "ontology.json");
 const CRITIQUE_OUT = path.join(ROOT, "state", "critique.md");
 
-const OLLAMA_URL   = process.env.OLLAMA_URL  || "http://localhost:11434/api/generate";
-const OLLAMA_MODEL = process.env.OLLAMA_MODEL || "qwen2.5:7b";
+const OLLAMA_URL    = process.env.OLLAMA_URL  || "http://localhost:11434/api/generate";
+const OLLAMA_MODEL  = process.env.OLLAMA_MODEL || "qwen2.5:7b";
+const HISTORY_OUT   = path.join(ROOT, "state", "critique_history.jsonl");
 
-const isQuoteMode  = process.argv.includes("--quote");
+const isQuoteMode   = process.argv.includes("--quote");
+const isHistoryMode = process.argv.includes("--history");
+
+// ── History mode ─────────────────────────────────────────────────────────────
+// node critique.js --history   → print coherence trend table
+
+if (isHistoryMode) {
+  if (!fs.existsSync(HISTORY_OUT)) {
+    console.log("No critique history yet.");
+    process.exit(0);
+  }
+  const entries = fs.readFileSync(HISTORY_OUT, "utf-8")
+    .trim().split("\n").filter(Boolean)
+    .map(l => { try { return JSON.parse(l); } catch { return null; } })
+    .filter(Boolean);
+
+  const COL = { Strong: "✓", Adequate: "~", Weak: "✗", null: "?" };
+  console.log("\n  Cycle  Mode    Coherence   Watch");
+  console.log("  " + "─".repeat(72));
+  for (const e of entries) {
+    const icon  = COL[e.coherence] || "?";
+    const ts    = (e.timestamp || "").slice(0, 16).replace("T", " ");
+    const watch = (e.watch || "").slice(0, 55);
+    const pad   = (s, n) => String(s || "?").padEnd(n);
+    console.log(`  ${pad(e.cycle, 6)} ${pad(e.mode, 8)} ${icon} ${pad(e.coherence, 10)} ${watch}`);
+  }
+  const total = entries.length;
+  const counts = entries.reduce((a, e) => { a[e.coherence] = (a[e.coherence] || 0) + 1; return a; }, {});
+  console.log("  " + "─".repeat(72));
+  console.log(`  ${total} critiques — Strong: ${counts.Strong || 0}  Adequate: ${counts.Adequate || 0}  Weak: ${counts.Weak || 0}\n`);
+  process.exit(0);
+}
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -76,6 +108,12 @@ function getAxesSummary() {
   return (data.axes || []).slice(0, 6)
     .map(a => `- ${a.label}: ${a.left_pole} <-> ${a.right_pole}`)
     .join("\n") || "(no axes yet)";
+}
+
+// Extract a named field from the model output (e.g. "COHERENCE: Strong")
+function parseField(text, field) {
+  const m = text.match(new RegExp(`${field}:\\s*(.+?)(?:\\n|$)`, "i"));
+  return m ? m[1].trim() : null;
 }
 
 // ── Prompts ───────────────────────────────────────────────────────────────────
@@ -167,21 +205,22 @@ async function main() {
   let prompt;
   let cycleLabel;
   let postRef;
+  let currentPost;  // captured for history logging
 
   if (isQuoteMode) {
-    const post = getLatestPost("quote");
-    if (!post) { console.log("[critique] no quote post found — skipping"); return; }
+    currentPost = getLatestPost("quote");
+    if (!currentPost) { console.log("[critique] no quote post found — skipping"); return; }
     const notes = getBrowseNotes();
-    prompt     = buildQuotePrompt(notes, post, axes);
-    cycleLabel = `quote cycle ${post.cycle || "?"}`;
-    postRef    = post.tweet_url || post.id || "?";
+    prompt     = buildQuotePrompt(notes, currentPost, axes);
+    cycleLabel = `quote cycle ${currentPost.cycle || "?"}`;
+    postRef    = currentPost.tweet_url || currentPost.id || "?";
   } else {
     const journal = getLatestJournal();
-    const post    = getLatestPost();
-    if (!journal || !post) { console.log("[critique] nothing to critique yet — skipping"); return; }
-    prompt     = buildTweetPrompt(journal, post, axes);
-    cycleLabel = `tweet cycle ${post.cycle || "?"}`;
-    postRef    = `journal: ${journal.name} | tweet: ${post.tweet_url || post.id || "?"}`;
+    currentPost   = getLatestPost();
+    if (!journal || !currentPost) { console.log("[critique] nothing to critique yet — skipping"); return; }
+    prompt     = buildTweetPrompt(journal, currentPost, axes);
+    cycleLabel = `tweet cycle ${currentPost.cycle || "?"}`;
+    postRef    = `journal: ${journal.name} | tweet: ${currentPost.tweet_url || currentPost.id || "?"}`;
   }
 
   console.log(`[critique] evaluating coherence (${OLLAMA_MODEL}) — ${cycleLabel}...`);
@@ -200,7 +239,14 @@ async function main() {
 
   if (!result) { console.log("[critique] empty response — skipping"); return; }
 
+  // Parse structured fields
+  const coherence = parseField(result, "COHERENCE");
+  const watch     = parseField(result, "WATCH");
+  const gaps      = parseField(result, "GAPS");
+
   const timestamp = new Date().toISOString().slice(0, 16).replace("T", " ");
+
+  // Write state/critique.md (read by next browse cycle)
   const output = [
     `# Critique · ${timestamp} · ${cycleLabel}`,
     "",
@@ -210,10 +256,28 @@ async function main() {
     `*${postRef}*`,
     "",
   ].join("\n");
-
   fs.writeFileSync(CRITIQUE_OUT, output);
-  console.log("[critique] wrote state/critique.md");
+
+  // Append one JSON line to critique_history.jsonl
+  const historyEntry = {
+    timestamp: new Date().toISOString(),
+    cycle:     currentPost ? (currentPost.cycle || null) : null,
+    mode:      isQuoteMode ? "quote" : "tweet",
+    coherence: coherence || null,
+    gaps:      gaps      || null,
+    watch:     watch     || null,
+    post_url:  currentPost ? (currentPost.tweet_url || currentPost.id || null) : null,
+  };
+  fs.appendFileSync(HISTORY_OUT, JSON.stringify(historyEntry) + "\n");
+
+  // Log with clear delimiters so it stands out in runner.log
+  const line = "─".repeat(60);
+  console.log(`[critique] ${line}`);
+  console.log(`[critique] ${cycleLabel.toUpperCase()} · coherence: ${coherence || "?"}`);
+  console.log(`[critique] ${line}`);
   console.log(result);
+  console.log(`[critique] ${line}`);
+  console.log(`[critique] wrote state/critique.md + appended critique_history.jsonl`);
 }
 
 main().catch(err => {
