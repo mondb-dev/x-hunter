@@ -27,6 +27,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main>{children}</main>
           <footer className="site-footer">
             <a href="https://x.com/sebastianhunts" target="_blank" rel="noopener noreferrer" className="footer-x-link">@sebastianhunts</a>
+            <span className="footer-sep">·</span>
+            <span className="footer-label">automated by</span>
+            <a href="https://x.com/0xAnomalia" target="_blank" rel="noopener noreferrer" className="footer-x-link">@0xAnomalia</a>
             {process.env.SOLANA_PUBLIC_KEY && (
               <>
                 <span className="footer-sep">·</span>
