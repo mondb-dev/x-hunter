@@ -47,11 +47,11 @@ else
 fi
 
 # ── Two-tier cycle loop ────────────────────────────────────────────────────────
-# Browse cycle: every 10 minutes
-# Tweet cycle:  every 3rd browse cycle (= every 30 minutes)
+# Browse cycle: every 20 minutes
+# Tweet cycle:  every 3rd browse cycle (= every 60 minutes)
 CYCLE=0
-BROWSE_INTERVAL=600   # 10 minutes in seconds
-TWEET_EVERY=3         # tweet on cycles 3, 6, 9, ...
+BROWSE_INTERVAL=1200  # 20 minutes in seconds
+TWEET_EVERY=6         # tweet on cycles 6, 12, 18, ... (every 2 hours)
 
 trap 'echo "[run] Stopping..."; bash "$PROJECT_ROOT/stream/stop.sh" 2>/dev/null; exit 0' INT TERM
 
@@ -69,13 +69,20 @@ while true; do
     CYCLE_TYPE="BROWSE"
   fi
 
-  echo "[run] ── Cycle $CYCLE ($CYCLE_TYPE) — $TODAY $NOW ──────────────────────"
+  # Detect first-ever run by absence of journal files (more reliable than posts_log)
+  JOURNAL_COUNT=$(ls "$PROJECT_ROOT/journals/"*.html 2>/dev/null | wc -l | tr -d ' ')
+
+  echo "[run] ── Cycle $CYCLE ($CYCLE_TYPE) — $TODAY $NOW (journals=$JOURNAL_COUNT) ──"
+
+  # ── Ensure browser is alive before each cycle (prevents CDP timeout) ──────
+  openclaw browser --browser-profile x-hunter start 2>/dev/null || true
+  sleep 1
 
   # ── First-ever cycle: intro tweet + profile setup ─────────────────────────
-  if [ "$CYCLE" -eq 1 ]; then
+  if [ "$JOURNAL_COUNT" -eq 0 ]; then
     openclaw agent --agent x-hunter \
       --message "$(cat <<EOF
-Today is $TODAY $NOW. This is cycle 1 — the very first run.
+Today is $TODAY $NOW. This is the very first run — total_posts is 0.
 
 Follow BOOTSTRAP.md §6 (profile setup) and §6b (seed tweet) and §6c (intro tweet) first.
 
@@ -117,7 +124,7 @@ Your task — read as much as you can, go deep:
 
 EOF
 )" \
-      --thinking high \
+      --thinking low \
       --verbose on
 
   # ── Tweet cycle: synthesize, journal, tweet, push ─────────────────────────
@@ -142,8 +149,6 @@ Your task:
 11. Git commit and push:
     git add journals/ state/ && git commit -m "cycle ${CYCLE}: ${TODAY} ${NOW}" && git push origin main
 12. Done — do not start another cycle.
-
-If state/posts_log.json total_posts == 0: post the intro tweet first (BOOTSTRAP.md §6c).
 
 EOF
 )" \
