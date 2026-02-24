@@ -91,23 +91,24 @@ while true; do
 
   # ── First-ever cycle: intro tweet + profile setup ─────────────────────────
   if [ "$JOURNAL_COUNT" -eq 0 ]; then
-    openclaw agent --agent x-hunter \
-      --message "$(cat <<EOF
-Today is $TODAY $NOW. This is the very first run — total_posts is 0.
+    AGENT_MSG=$(cat <<FIRSTMSG
+Today is $TODAY $NOW. This is the very first run -- total_posts is 0.
 
-Follow BOOTSTRAP.md §6 (profile setup) and §6b (seed tweet) and §6c (intro tweet) first.
+Follow BOOTSTRAP.md section 6 (profile setup) and 6b (seed tweet) and 6c (intro tweet) first.
 
 After the intro tweet, do a first browse pass:
 1. Read state/browse_notes.md (empty on first run).
-2. Navigate to https://x.com — scroll the feed, read at least 15 posts end to end.
+2. Navigate to https://x.com -- scroll the feed, read at least 15 posts end to end.
 3. Click into at least 3 threads that catch your attention and read the replies.
 4. Navigate to https://x.com/search?q=... on 2 topics that interested you and read 10 more posts each.
 5. Append everything notable to state/browse_notes.md (quotes, tensions, source URLs).
 6. Update state/ontology.json if anything is axis-worthy.
-7. Done — do not tweet again this cycle.
+7. Done -- do not tweet again this cycle.
 
-EOF
-)" \
+FIRSTMSG
+)
+    openclaw agent --agent x-hunter \
+      --message "$AGENT_MSG" \
       --thinking high \
       --verbose on
 
@@ -117,28 +118,28 @@ EOF
     node "$PROJECT_ROOT/scraper/query.js" --hours 4 > /dev/null 2>&1 || true
     node "$PROJECT_ROOT/runner/recall.js" --limit 5 >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
-    openclaw agent --agent x-hunter \
-      --message "$(cat <<EOF
-Today is $TODAY $NOW. This is browse cycle $CYCLE — no tweet this cycle.
+    NEXT_TWEET=$(( (CYCLE / TWEET_EVERY + 1) * TWEET_EVERY ))
+    AGENT_MSG=$(cat <<BROWSEMSG
+Today is $TODAY $NOW. This is browse cycle $CYCLE -- no tweet this cycle.
 
 A background scraper has been collecting and scoring posts from X every 10 minutes.
 It extracts keyphrases via RAKE and indexes everything in a SQLite FTS5 database.
 
 Read these two files to understand the current information landscape:
-  state/topic_summary.txt  — topic clusters + top keywords from last 4 hours
-  state/feed_digest.txt    — clustered scored digest (newest block at bottom)
+  state/topic_summary.txt  -- topic clusters + top keywords from last 4 hours
+  state/feed_digest.txt    -- clustered scored digest (newest block at bottom)
 
 Digest format (clusters):
-  CLUSTER N · "label" · M posts [· ★ TRENDING]
+  CLUSTER N . "label" . M posts [. TRENDING]
     @user [vSCORE TTRUST NNOVELTY] "text" [engagement]  {keywords}
     > @reply: "reply text" [engagement]
-  SINGLETONS · M posts  (posts that didn't cluster with anything)
+  SINGLETONS . M posts  (posts that did not cluster with anything)
 
   v = velocity (HN-gravity, higher = trending now)
   T = trust score 0-10 from your trust_graph (0 = unknown)
   N = TF-IDF novelty (0-5): 5.0 = rarest topic this window; 0 = commonly recurring
-  ★ TRENDING = keyword frequency more than doubled vs. previous 4-hour window
-  ← novel = singleton post with novelty >= 4.0 (pay close attention)
+  TRENDING = keyword frequency more than doubled vs. previous 4-hour window
+  <- novel = singleton post with novelty >= 4.0 (pay close attention)
 
 The scraper also:
 - Removes near-duplicate posts (same story from different accounts)
@@ -146,12 +147,12 @@ The scraper also:
 - Tracks account quality over time (accounts table) for follow analysis
 
 Your task:
-1. Read state/browse_notes.md — recall what you've noted so far this window.
-2. Read state/topic_summary.txt — what topics are clustering right now?
-3. Read state/feed_digest.txt — navigate by cluster, not linearly.
-   Start with ★ TRENDING clusters and high-N (novel) posts.
+1. Read state/browse_notes.md -- recall what you have noted so far this window.
+2. Read state/topic_summary.txt -- what topics are clustering right now?
+3. Read state/feed_digest.txt -- navigate by cluster, not linearly.
+   Start with TRENDING clusters and high-N (novel) posts.
 4. Identify the 3-5 most interesting tensions, emerging ideas, or signal moments.
-   Focus on: TRENDING clusters, ← novel singletons, trusted accounts (T >= 5),
+   Focus on: TRENDING clusters, <- novel singletons, trusted accounts (T >= 5),
    or voices saying something that resonates with or challenges your ontology axes.
 5. For anything you want to explore deeper, navigate directly via browser:
    https://x.com/<username>  or  https://x.com/search?q=<topic>
@@ -160,47 +161,50 @@ Your task:
    - Tensions between accounts or positions
    - Patterns emerging across multiple posts
    - Note any clusters that seem to be emerging conversations worth watching
-7. The scraper auto-follows accounts algorithmically (follows.js, every 60 min).
+7. The scraper auto-follows accounts algorithmically (follows.js, every 3 hours).
    You may still follow manually if an account genuinely impresses you beyond
-   the algo's reach. Max 3 manual follows this cycle if so.
+   the algorithm reach. Max 3 manual follows this cycle if so.
    Log to state/trust_graph.json with reason + cluster.
 8. Update state/ontology.json and state/belief_state.json if anything is axis-worthy.
-   These feed back into the scraper's scoring — update them carefully.
-9. Done — do not tweet. Next tweet cycle: cycle $(( (CYCLE / TWEET_EVERY + 1) * TWEET_EVERY )).
+   These feed back into the scraper scoring -- update them carefully.
+9. Done -- do not tweet. Next tweet cycle: cycle $NEXT_TWEET.
 
-EOF
-)" \
+BROWSEMSG
+)
+    openclaw agent --agent x-hunter \
+      --message "$AGENT_MSG" \
       --thinking low \
       --verbose on
 
   # ── Tweet cycle: synthesize, journal, tweet, push ─────────────────────────
   else
-    openclaw agent --agent x-hunter-tweet \
-      --message "$(cat <<EOF
-Today is $TODAY $NOW. This is tweet cycle $CYCLE — synthesize, journal, tweet, push.
+    AGENT_MSG=$(cat <<TWEETMSG
+Today is $TODAY $NOW. This is tweet cycle $CYCLE -- synthesize, journal, tweet, push.
 
 Your task:
-1. Read state/browse_notes.md — everything noted in the last browse cycles.
-2. Read state/feed_digest.txt — the latest scored digest for any final context.
-3. Read state/memory_recall.txt — your relevant past thinking on today's topics.
+1. Read state/browse_notes.md -- everything noted in the last browse cycles.
+2. Read state/feed_digest.txt -- the latest scored digest for any final context.
+3. Read state/memory_recall.txt -- your relevant past thinking on current topics.
    Use it to ask: have I thought about this before? Has my view evolved? Am I repeating myself?
 4. Synthesize: what is the single clearest insight, tension, or question from this window?
-4. Write the journal entry: journals/${TODAY}_${HOUR}.html
-5. Draft the tweet: the geist of the synthesis in one honest sentence or question.
+5. Write the journal entry: journals/${TODAY}_${HOUR}.html
+6. Draft the tweet: the geist of the synthesis in one honest sentence or question.
    Add the journal URL on a new line: https://sebastianhunter.fun/journal/${TODAY}/${HOUR}
-   Total ≤ 280 characters.
-6. Self-check (AGENTS.md §13.3). If not genuine — skip the tweet, still do the rest.
-7. Post via https://x.com/compose/post
-8. Log to state/posts_log.json (include journal_url field).
-9. Update state/ontology.json and state/belief_state.json.
-10. Clear state/browse_notes.md (overwrite with empty string — start fresh next window).
-11. Clear state/feed_digest.txt (overwrite with empty string — scraper will refill it).
-12. Git commit and push:
+   Total <= 280 characters.
+7. Self-check (AGENTS.md section 13.3). If not genuine -- skip the tweet, still do the rest.
+8. Post via https://x.com/compose/post
+9. Log to state/posts_log.json (include journal_url field).
+10. Update state/ontology.json and state/belief_state.json.
+11. Clear state/browse_notes.md (overwrite with empty string -- start fresh next window).
+12. Clear state/feed_digest.txt (overwrite with empty string -- scraper will refill it).
+13. Git commit and push:
     git add journals/ checkpoints/ state/ && git commit -m "cycle ${CYCLE}: ${TODAY} ${NOW}" && git push origin main
-13. Done — do not start another cycle.
+14. Done -- do not start another cycle.
 
-EOF
-)" \
+TWEETMSG
+)
+    openclaw agent --agent x-hunter-tweet \
+      --message "$AGENT_MSG" \
       --thinking high \
       --verbose on
 
