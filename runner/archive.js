@@ -280,7 +280,10 @@ function scanDir(dir, pattern) {
   const postsLogPath = path.join(ROOT, "state", "posts_log.json");
   if (fs.existsSync(postsLogPath)) {
     let postsData;
-    try { postsData = JSON.parse(fs.readFileSync(postsLogPath, "utf-8")); } catch { postsData = {}; }
+    try {
+      const raw = fs.readFileSync(postsLogPath, "utf-8").replace(/\\'/g, "'");
+      postsData = JSON.parse(raw);
+    } catch { postsData = {}; }
     let newTweets = 0;
     for (const post of (postsData.posts || [])) {
       if (!post.id || !post.content) continue;

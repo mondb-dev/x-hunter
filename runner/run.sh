@@ -163,6 +163,8 @@ The scraper also:
 
 Your task:
 1. Read state/browse_notes.md -- recall what you have noted so far this window.
+1b. If state/critique.md exists and is non-empty, read it.
+    Note the COHERENCE rating and WATCH item from the last synthesis -- address any gaps before proceeding.
 2. Read state/topic_summary.txt -- what topics are clustering right now?
 3. Read state/feed_digest.txt -- navigate by cluster, not linearly.
    Start with TRENDING clusters and high-N (novel) posts.
@@ -216,6 +218,9 @@ QUOTEMSG
       --thinking low \
       --verbose on
 
+    # Coherence critique of the quote tweet
+    node "$PROJECT_ROOT/runner/critique.js" --quote >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+
   # ── Tweet cycle: synthesize, journal, tweet, push ─────────────────────────
   else
     AGENT_MSG=$(cat <<TWEETMSG
@@ -257,6 +262,9 @@ TWEETMSG
 
     # Archive new journals/checkpoints to Irys + local memory index
     node "$PROJECT_ROOT/runner/archive.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+
+    # Coherence critique of the journal + tweet
+    node "$PROJECT_ROOT/runner/critique.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
   fi
 
   # ── Wait out the remainder of the 20-minute window ───────────────────────
