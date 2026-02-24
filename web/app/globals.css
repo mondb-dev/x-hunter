@@ -40,6 +40,9 @@ a:hover { text-decoration: underline; }
   word-break: break-all;
 }
 .footer-wallet:hover { color: var(--text); }
+.footer-x-link { color: var(--muted); text-decoration: none; }
+.footer-x-link:hover { color: var(--text); }
+.footer-sep { color: var(--border); }
 
 /* Nav + main both sit above the crab (z-index 5 > crab z-index 2)
    Solid backgrounds ensure they visually cover the crab where they overlap  */
