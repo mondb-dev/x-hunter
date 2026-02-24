@@ -4,7 +4,7 @@
 # Loops:
 #   collect  — runs collect.js every COLLECT_INTERVAL  seconds (default 10 min)
 #   reply    — runs reply.js   every REPLY_INTERVAL    seconds (default 30 min)
-#   follows  — runs follows.js every FOLLOWS_INTERVAL  seconds (default 60 min)
+#   follows  — runs follows.js every FOLLOWS_INTERVAL  seconds (default 3 hrs)
 #
 # Each loop has its own PID file so stop.sh can kill them independently.
 # All output is appended to scraper/scraper.log.
@@ -19,7 +19,7 @@ FOLLOWS_PID_FILE="$SCRIPT_DIR/follows.pid"
 
 COLLECT_INTERVAL="${COLLECT_INTERVAL:-600}"    # 10 minutes
 REPLY_INTERVAL="${REPLY_INTERVAL:-1800}"       # 30 minutes
-FOLLOWS_INTERVAL="${FOLLOWS_INTERVAL:-3600}"   # 60 minutes
+FOLLOWS_INTERVAL="${FOLLOWS_INTERVAL:-10800}"  # 3 hours
 
 # ── Collect loop ──────────────────────────────────────────────────────────────
 if [ -f "$COLLECT_PID_FILE" ] && kill -0 "$(cat "$COLLECT_PID_FILE")" 2>/dev/null; then
