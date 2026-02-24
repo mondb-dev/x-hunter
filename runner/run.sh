@@ -111,36 +111,46 @@ EOF
       --thinking high \
       --verbose on
 
-  # ── Browse cycle: read digest, take notes, update ontology ────────────────
+  # ── Browse cycle: read digest + topic summary, take notes ───────────────
   elif [ "$CYCLE_TYPE" = "BROWSE" ]; then
+    # Generate topic summary from SQLite index before invoking AI
+    node "$PROJECT_ROOT/scraper/query.js" --hours 4 > /dev/null 2>&1 || true
+
     openclaw agent --agent x-hunter \
       --message "$(cat <<EOF
 Today is $TODAY $NOW. This is browse cycle $CYCLE — no tweet this cycle.
 
 A background scraper has been collecting and scoring posts from X every 10 minutes.
-The pre-ranked digest is in state/feed_digest.txt.
-Format: @user [vSCORE TTRUST] "text" [engagement]
-  vSCORE = velocity (HN-gravity score, higher = trending now)
-  TTRUST = trust score 0-10 from your trust_graph (0 = unknown account)
-  indented > lines = top replies to that post
+It extracts keyphrases via RAKE and indexes everything in a SQLite FTS5 database.
+
+Read these two files to understand the current information landscape:
+  state/topic_summary.txt  — topic clusters + top keywords from last 4 hours
+  state/feed_digest.txt    — full scored post digest (newest at bottom)
+
+Digest format: @user [vSCORE TTRUST] "text" [engagement]  {keywords}
+  vSCORE  = velocity (HN-gravity, higher = trending now)
+  TTRUST  = trust score 0-10 from your trust_graph (0 = unknown)
+  {}      = RAKE keyphrases extracted from post text
+  indented > lines = top 5 replies scored by engagement
 
 Your task:
 1. Read state/browse_notes.md — recall what you've noted so far this window.
-2. Read state/feed_digest.txt — the full scored digest of recent posts.
-3. From the digest, identify the 3-5 most interesting posts/tensions.
-   Focus on high-velocity posts from trusted accounts, or striking unknowns.
-4. For posts you want to explore deeper, navigate directly:
-   https://x.com/<username>/status/<id>
-   (IDs are not in the digest — navigate to the user's profile or search if needed)
-5. Append everything notable to state/browse_notes.md:
+2. Read state/topic_summary.txt — what topics are clustering right now?
+3. Read state/feed_digest.txt — scan for posts that connect to those clusters.
+4. Identify the 3-5 most interesting posts, tensions, or emerging ideas.
+   Focus on: high-velocity from trusted accounts, or unexpected voices saying
+   something that resonates with your ontology axes.
+5. For anything you want to explore deeper, navigate directly via browser:
+   https://x.com/<username>  or  https://x.com/search?q=<topic>
+6. Append everything notable to state/browse_notes.md:
    - Exact quotes or paraphrases with source @username
    - Tensions between accounts or positions
-   - Patterns you're noticing across multiple posts
-6. Consider follows (AGENTS.md §16): if an account genuinely impressed you, follow them
-   via browser — max 3 this cycle. Log to state/trust_graph.json with reason + cluster.
-7. Update state/ontology.json and state/belief_state.json if anything is axis-worthy.
-   These files feed back into the scraper's scoring — update them carefully.
-8. Done — do not tweet. Next tweet cycle: cycle $(( (CYCLE / TWEET_EVERY + 1) * TWEET_EVERY )).
+   - Patterns emerging across multiple posts
+7. Consider follows (AGENTS.md §16): if an account genuinely impressed you,
+   follow them — max 3 this cycle. Log to state/trust_graph.json with reason + cluster.
+8. Update state/ontology.json and state/belief_state.json if anything is axis-worthy.
+   These feed back into the scraper's scoring — update them carefully.
+9. Done — do not tweet. Next tweet cycle: cycle $(( (CYCLE / TWEET_EVERY + 1) * TWEET_EVERY )).
 
 EOF
 )" \
