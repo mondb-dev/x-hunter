@@ -68,64 +68,8 @@ function saveJson(filePath, data) {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 }
 
-// ── RAKE keyword extractor ────────────────────────────────────────────────────
-// Rapid Automatic Keyword Extraction — extracts scored multi-word keyphrases.
-// No external deps. Works by splitting on stop words, scoring by degree/freq.
-
-const STOP_WORDS = new Set([
-  "a","an","the","and","or","but","in","on","at","to","for","of","with","by",
-  "from","is","are","was","were","be","been","being","have","has","had","do",
-  "does","did","will","would","could","should","may","might","this","that",
-  "these","those","it","its","he","she","they","we","you","i","my","your",
-  "our","their","not","no","so","if","as","up","out","about","just","also",
-  "than","then","when","where","who","what","how","all","more","most","some",
-  "can","into","over","after","before","between","such","even","very","only",
-  "well","still","here","there","now","get","got","like","been","never","one",
-  "two","its","re","s","t","ve","ll","d","m","don","isn","aren","wasn","weren",
-  "because","them","him","her","us","which","while","through","down","each",
-]);
-
-function extractKeywords(text, topN = 8) {
-  const words = text
-    .toLowerCase()
-    .replace(/https?:\/\/\S+/g, "")
-    .replace(/[@#]\w+/g, "")
-    .replace(/[^\w\s]/g, " ")
-    .split(/\s+/)
-    .filter(w => w.length > 2);
-
-  const phrases = [];
-  let current = [];
-  for (const word of words) {
-    if (STOP_WORDS.has(word) || /^\d+$/.test(word)) {
-      if (current.length > 0) { phrases.push(current.slice()); current = []; }
-    } else {
-      current.push(word);
-    }
-  }
-  if (current.length > 0) phrases.push(current);
-
-  const freq = {}, degree = {};
-  for (const phrase of phrases) {
-    for (const word of phrase) {
-      freq[word]   = (freq[word]   || 0) + 1;
-      degree[word] = (degree[word] || 0) + phrase.length - 1;
-    }
-  }
-
-  const wordScore = {};
-  for (const word of Object.keys(freq)) {
-    wordScore[word] = (degree[word] + freq[word]) / freq[word];
-  }
-
-  const seen = new Set();
-  return phrases
-    .map(phrase => ({ phrase: phrase.join(" "), score: phrase.reduce((s, w) => s + wordScore[w], 0) }))
-    .filter(p => { if (seen.has(p.phrase)) return false; seen.add(p.phrase); return p.phrase.length > 2; })
-    .sort((a, b) => b.score - a.score)
-    .slice(0, topN)
-    .map(p => p.phrase);
-}
+// extractKeywords is defined in analytics.js and re-exported here for use below
+const { extractKeywords } = analytics;
 
 // ── Scoring helpers ───────────────────────────────────────────────────────────
 function gravityScore(engagement, tsMs) {
