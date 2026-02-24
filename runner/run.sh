@@ -104,6 +104,18 @@ while true; do
   openclaw browser --browser-profile x-hunter start 2>/dev/null || true
   sleep 1
 
+  # ── Reset x-hunter session once per day (every 72 cycles = 24h) to prevent
+  #    Gemini token-per-minute quota exhaustion from accumulated context ────
+  if [ $(( CYCLE % 72 )) -eq 0 ]; then
+    SESSION_DIR="$HOME/.openclaw/agents/x-hunter/sessions"
+    OLD_JSONL=$(ls "$SESSION_DIR"/*.jsonl 2>/dev/null | head -1)
+    if [ -n "$OLD_JSONL" ]; then
+      mv "$OLD_JSONL" "${OLD_JSONL}.bak" 2>/dev/null || true
+      echo "{}" > "$SESSION_DIR/sessions.json"
+      echo "[run] x-hunter session reset (daily context flush)"
+    fi
+  fi
+
   # ── First-ever cycle: intro tweet + profile setup ─────────────────────────
   if [ "$JOURNAL_COUNT" -eq 0 ]; then
     AGENT_MSG=$(cat <<FIRSTMSG
