@@ -35,6 +35,10 @@ const HISTORY_OUT   = path.join(ROOT, "state", "critique_history.jsonl");
 const isQuoteMode   = process.argv.includes("--quote");
 const isHistoryMode = process.argv.includes("--history");
 
+// --cycle N: only critique if a post for this cycle exists in posts_log
+const cycleArgIdx = process.argv.indexOf("--cycle");
+const cycleArg    = cycleArgIdx !== -1 ? parseInt(process.argv[cycleArgIdx + 1], 10) : null;
+
 // ── History mode ─────────────────────────────────────────────────────────────
 // node critique.js --history   → print coherence trend table
 
@@ -210,6 +214,10 @@ async function main() {
   if (isQuoteMode) {
     currentPost = getLatestPost("quote");
     if (!currentPost) { console.log("[critique] no quote post found — skipping"); return; }
+    if (cycleArg !== null && currentPost.cycle !== cycleArg) {
+      console.log(`[critique] no quote posted this cycle (${cycleArg}) — skipping`);
+      return;
+    }
     const notes = getBrowseNotes();
     prompt     = buildQuotePrompt(notes, currentPost, axes);
     cycleLabel = `quote cycle ${currentPost.cycle || "?"}`;
@@ -218,6 +226,10 @@ async function main() {
     const journal = getLatestJournal();
     currentPost   = getLatestPost();
     if (!journal || !currentPost) { console.log("[critique] nothing to critique yet — skipping"); return; }
+    if (cycleArg !== null && currentPost.cycle !== cycleArg) {
+      console.log(`[critique] no tweet posted this cycle (${cycleArg}) — skipping`);
+      return;
+    }
     prompt     = buildTweetPrompt(journal, currentPost, axes);
     cycleLabel = `tweet cycle ${currentPost.cycle || "?"}`;
     postRef    = `journal: ${journal.name} | tweet: ${currentPost.tweet_url || currentPost.id || "?"}`;
