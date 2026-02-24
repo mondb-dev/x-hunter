@@ -293,6 +293,35 @@ function scanDir(dir, pattern) {
     }
   }
 
+  // ── Index tweets from posts_log.json ──────────────────────────────────────
+  const postsLogPath = path.join(ROOT, "state", "posts_log.json");
+  if (fs.existsSync(postsLogPath)) {
+    let postsData;
+    try { postsData = JSON.parse(fs.readFileSync(postsLogPath, "utf-8")); } catch { postsData = {}; }
+    let newTweets = 0;
+    for (const post of (postsData.posts || [])) {
+      if (!post.id || !post.content) continue;
+      const filePath = `state/posts_log.json#${post.id}`;
+      if (db.getMemoryByPath(filePath)) continue;
+      const textWithUrl = post.tweet_url
+        ? `${post.content}\n\n[URL: ${post.tweet_url}]`
+        : post.content;
+      db.insertMemory({
+        type:         "tweet",
+        date:         post.date || new Date().toISOString().slice(0, 10),
+        hour:         null,
+        title:        `Tweet · ${post.date} · cycle ${post.cycle || "?"}`,
+        text_content: textWithUrl,
+        keywords:     extractKeywords(post.content, 8).join(", "),
+        file_path:    filePath,
+        indexed_at:   Date.now(),
+      });
+      newTweets++;
+      indexed++;
+    }
+    if (newTweets) console.log(`[archive] indexed ${newTweets} new tweet(s) from posts_log.json`);
+  }
+
   console.log(`[archive] done. indexed=${indexed}, uploaded=${uploaded}`);
   process.exit(0);
 })();
