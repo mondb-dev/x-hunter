@@ -198,10 +198,11 @@ Today is $TODAY $NOW. This is quote cycle $CYCLE -- find one post worth quoting 
 
 Your task:
 1. Read state/feed_digest.txt -- scan TRENDING clusters and high-novelty singletons.
+   Each post line ends with its full URL: https://x.com/<username>/status/<id>
 2. Pick the single most interesting post worth engaging with publicly.
    Criteria: genuine tension with your ontology, strong claim you can sharpen or challenge,
    or a signal moment others have not yet framed correctly.
-3. Navigate to https://x.com/<username>/status/<id>
+3. Navigate to the post URL (it is on the digest line -- copy it exactly).
 4. Click the Quote button. Write one sentence of sharp commentary -- your actual view.
    No hedging. No agreement for the sake of it. Max 240 chars (leave room for the quoted tweet).
 5. Post the quote tweet.

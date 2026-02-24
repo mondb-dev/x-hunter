@@ -172,11 +172,12 @@ function fmtPost(post) {
   const v  = post.velocity.toFixed(1);
   const n  = post.novelty.toFixed(1);
   const kw = post.keywords.length ? `  {${post.keywords.slice(0, 4).join(", ")}}` : "";
-  const novel = (post.novelty >= 4.0 && !post._inCluster) ? "  ← novel" : "";
+  const novel = (post.novelty >= 4.0 && !post._inCluster) ? "  <- novel" : "";
+  const url = post.id ? `  https://x.com/${post.username}/status/${post.id}` : "";
   return (
     `  @${post.username} [v${v} T${post.trust} N${n}]` +
     ` "${post.text.replace(/\n+/g, " ").slice(0, 200)}"` +
-    ` ${fmtEngagement(post.likes, post.rts)}${kw}${novel}`
+    ` ${fmtEngagement(post.likes, post.rts)}${kw}${novel}${url}`
   );
 }
 
