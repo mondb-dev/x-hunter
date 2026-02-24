@@ -205,92 +205,75 @@ function scanDir(dir, pattern) {
 
   let indexed = 0, uploaded = 0;
 
+  // Helper: attempt Irys upload for a file and update db + log on success
+  async function tryUpload(irys, filePath, relPath, parsed) {
+    const txId = await uploadToIrys(irys, filePath, parsed);
+    if (txId) {
+      db.updateMemoryTxId(relPath, txId);
+      appendArweaveLog({
+        tx_id:       txId,
+        type:        parsed.type,
+        date:        parsed.date,
+        hour:        parsed.hour ?? null,
+        file:        relPath,
+        gateway:     `https://arweave.net/${txId}`,
+        uploaded_at: new Date().toISOString(),
+      });
+      uploaded++;
+      console.log(`[archive] uploaded to Arweave: https://arweave.net/${txId}`);
+    }
+  }
+
   // ── Process journals ───────────────────────────────────────────────────────
   const journalFiles = scanDir(JOURNALS_DIR, /^\d{4}-\d{2}-\d{2}_\d{2}\.html$/);
   for (const filePath of journalFiles) {
     const relPath = path.relative(ROOT, filePath);
-    if (db.getMemoryByPath(relPath)) continue;
-
+    const existing = db.getMemoryByPath(relPath);
+    if (existing) {
+      // Already indexed — retry upload if tx_id still null and Irys is funded
+      if (!existing.tx_id && irys) await tryUpload(irys, filePath, relPath, existing);
+      continue;
+    }
     const parsed = parseJournal(filePath, relPath);
     const keywords = extractKeywords(parsed.text_content, 10).join(", ");
-
     db.insertMemory({ ...parsed, keywords, indexed_at: Date.now() });
     indexed++;
     console.log(`[archive] indexed journal: ${parsed.title}`);
-
-    if (irys) {
-      const txId = await uploadToIrys(irys, filePath, parsed);
-      if (txId) {
-        db.updateMemoryTxId(relPath, txId);
-        appendArweaveLog({
-          tx_id:       txId,
-          type:        parsed.type,
-          date:        parsed.date,
-          hour:        parsed.hour,
-          file:        relPath,
-          gateway:     `https://arweave.net/${txId}`,
-          uploaded_at: new Date().toISOString(),
-        });
-        uploaded++;
-        console.log(`[archive] uploaded to Arweave: https://arweave.net/${txId}`);
-      }
-    }
+    if (irys) await tryUpload(irys, filePath, relPath, parsed);
   }
 
   // ── Process checkpoints ────────────────────────────────────────────────────
   const checkpointFiles = scanDir(CHECKPOINTS_DIR, /^checkpoint[_-]\d+\.md$/i);
   for (const filePath of checkpointFiles) {
     const relPath = path.relative(ROOT, filePath);
-    if (db.getMemoryByPath(relPath)) continue;
-
+    const existing = db.getMemoryByPath(relPath);
+    if (existing) {
+      if (!existing.tx_id && irys) await tryUpload(irys, filePath, relPath, existing);
+      continue;
+    }
     const parsed = parseMarkdown(filePath, relPath, "checkpoint");
     const keywords = extractKeywords(parsed.text_content, 10).join(", ");
-
     db.insertMemory({ ...parsed, keywords, indexed_at: Date.now() });
     indexed++;
     console.log(`[archive] indexed checkpoint: ${parsed.title}`);
-
-    if (irys) {
-      const txId = await uploadToIrys(irys, filePath, parsed);
-      if (txId) {
-        db.updateMemoryTxId(relPath, txId);
-        appendArweaveLog({
-          tx_id: txId, type: parsed.type, date: parsed.date,
-          file: relPath, gateway: `https://arweave.net/${txId}`,
-          uploaded_at: new Date().toISOString(),
-        });
-        uploaded++;
-        console.log(`[archive] uploaded to Arweave: https://arweave.net/${txId}`);
-      }
-    }
+    if (irys) await tryUpload(irys, filePath, relPath, parsed);
   }
 
   // ── Process belief reports ─────────────────────────────────────────────────
   const reportFiles = scanDir(DAILY_DIR, /^belief_report_\d{4}-\d{2}-\d{2}\.md$/);
   for (const filePath of reportFiles) {
     const relPath = path.relative(ROOT, filePath);
-    if (db.getMemoryByPath(relPath)) continue;
-
+    const existing = db.getMemoryByPath(relPath);
+    if (existing) {
+      if (!existing.tx_id && irys) await tryUpload(irys, filePath, relPath, existing);
+      continue;
+    }
     const parsed = parseMarkdown(filePath, relPath, "belief_report");
     const keywords = extractKeywords(parsed.text_content, 10).join(", ");
-
     db.insertMemory({ ...parsed, keywords, indexed_at: Date.now() });
     indexed++;
     console.log(`[archive] indexed belief report: ${parsed.title}`);
-
-    if (irys) {
-      const txId = await uploadToIrys(irys, filePath, parsed);
-      if (txId) {
-        db.updateMemoryTxId(relPath, txId);
-        appendArweaveLog({
-          tx_id: txId, type: parsed.type, date: parsed.date,
-          file: relPath, gateway: `https://arweave.net/${txId}`,
-          uploaded_at: new Date().toISOString(),
-        });
-        uploaded++;
-        console.log(`[archive] uploaded to Arweave: https://arweave.net/${txId}`);
-      }
-    }
+    if (irys) await tryUpload(irys, filePath, relPath, parsed);
   }
 
   // ── Index tweets from posts_log.json ──────────────────────────────────────
