@@ -30,6 +30,8 @@ const SEEN_IDS     = path.join(ROOT, "state", "seen_ids.json");
 const FEED_BUFFER  = path.join(ROOT, "state", "feed_buffer.jsonl");
 const FEED_DIGEST  = path.join(ROOT, "state", "feed_digest.txt");
 
+const REPLY_QUEUE  = path.join(ROOT, "state", "reply_queue.jsonl");
+
 const CDP_URL      = "http://127.0.0.1:18801";
 const MAX_SEEN     = 10000;
 const TOP_POSTS    = 25;
@@ -207,6 +209,68 @@ function formatPost(post, trustVal, velocityVal, keywords) {
          ` [${eng} ${rtStr}]${kwStr}`;
 }
 
+// ── Notifications / mentions scraper ─────────────────────────────────────────
+// Navigates to x.com/notifications (Mentions tab), extracts reply/mention
+// tweets not already in reply_queue.jsonl, and appends them as pending items.
+async function scrapeNotifications(page) {
+  console.log("[scraper] checking notifications/mentions...");
+
+  // Load IDs already queued to avoid duplicates
+  const existingIds = new Set();
+  try {
+    const raw = fs.readFileSync(REPLY_QUEUE, "utf-8").trim().split("\n").filter(Boolean);
+    for (const line of raw) {
+      try { existingIds.add(JSON.parse(line).id); } catch {}
+    }
+  } catch {}
+
+  try {
+    await page.goto("https://x.com/notifications", { waitUntil: "domcontentloaded", timeout: 20_000 });
+    await page.waitForTimeout(2_000);
+
+    // Click the Mentions tab if it exists
+    try {
+      const tabs = await page.$$('[role="tab"]');
+      for (const tab of tabs) {
+        const label = await tab.innerText().catch(() => "");
+        if (/mentions/i.test(label)) { await tab.click(); await page.waitForTimeout(1_500); break; }
+      }
+    } catch {}
+
+    // Scroll once to load more
+    await page.evaluate(() => window.scrollBy(0, 800));
+    await page.waitForTimeout(1_000);
+
+    const mentions = await extractPosts(page);
+    const newItems = [];
+
+    for (const m of mentions) {
+      if (!m.text || !m.id || existingIds.has(m.id)) continue;
+      // Skip posts with essentially no text content (just handles/URLs)
+      const stripped = m.text.replace(/@\w+/g, "").replace(/https?:\/\/\S+/g, "").trim();
+      if (stripped.length < 8) continue;
+
+      newItems.push(JSON.stringify({
+        id:            m.id,
+        ts:            m.ts,
+        ts_iso:        new Date(m.ts).toISOString(),
+        from_username: m.username,
+        text:          m.text,
+        queued_at:     new Date().toISOString(),
+        status:        "pending",
+      }));
+      existingIds.add(m.id);
+    }
+
+    if (newItems.length > 0) {
+      fs.appendFileSync(REPLY_QUEUE, newItems.join("\n") + "\n");
+    }
+    console.log(`[scraper] notifications: queued ${newItems.length} new mention(s)`);
+  } catch (err) {
+    console.error(`[scraper] notifications scrape failed: ${err.message}`);
+  }
+}
+
 // ── Main ──────────────────────────────────────────────────────────────────────
 (async () => {
   console.log("[scraper] starting collect run...");
@@ -369,6 +433,10 @@ function formatPost(post, trustVal, velocityVal, keywords) {
   fs.appendFileSync(FEED_DIGEST, digestLines.join("\n") + "\n");
 
   console.log(`[scraper] wrote ${withReplies.length} posts to index+buffer+digest`);
+
+  // ── Scrape notifications / mentions → reply queue ─────────────────────────
+  await scrapeNotifications(page);
+
   await browser.close();
   process.exit(0);
 })();
