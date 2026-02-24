@@ -205,17 +205,21 @@ Your task:
    Criteria: genuine tension with your ontology, strong claim you can sharpen or challenge,
    or a signal moment others have not yet framed correctly.
 3. Navigate to the post URL (it is on the digest line -- copy it exactly).
-4. Click the Quote button. Write one sentence of sharp commentary -- your actual view.
+4. Find and click the Quote button (not Reply). A compose modal will open showing the quoted tweet.
+5. Click inside the text area at the top of the compose modal.
+   Type one sentence of sharp commentary -- your actual view.
    No hedging. No agreement for the sake of it. Max 240 chars (leave room for the quoted tweet).
-5. Post the quote tweet.
-6. Log to state/posts_log.json with type="quote" and tweet_url.
-7. Done -- do not browse further, do not post separately.
+6. Click the blue Post button to submit. Wait for the page to update.
+   The URL in the address bar will change to your new tweet permalink (https://x.com/SebastianHunts/status/XXXXXXX).
+   If the button is greyed out, the text area may be empty -- click the text area and type again.
+7. Copy the tweet URL from the address bar. Log to state/posts_log.json with type="quote" and tweet_url.
+8. Done -- do not browse further, do not post separately.
 
 QUOTEMSG
 )
     openclaw agent --agent x-hunter-tweet \
       --message "$AGENT_MSG" \
-      --thinking low \
+      --thinking high \
       --verbose on
 
     # Coherence critique of the quote tweet (only if agent actually posted this cycle)
