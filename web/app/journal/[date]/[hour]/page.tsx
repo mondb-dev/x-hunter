@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getAllJournalDays, getJournalEntry } from "@/lib/readJournals";
 
-export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
   const days = getAllJournalDays();

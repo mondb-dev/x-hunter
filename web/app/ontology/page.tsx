@@ -2,7 +2,6 @@ import { readOntology } from "@/lib/readOntology";
 import ParticleFieldClient from "@/components/ParticleFieldClient";
 import AxisBar from "@/components/AxisBar";
 
-export const dynamic = "force-dynamic";
 
 export default async function OntologyPage() {
   const ontology = readOntology();

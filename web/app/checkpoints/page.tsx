@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { getAllCheckpoints } from "@/lib/readCheckpoints";
 
-export const dynamic = "force-dynamic";
 
 export default function CheckpointsPage() {
   const checkpoints = getAllCheckpoints().reverse(); // newest first
