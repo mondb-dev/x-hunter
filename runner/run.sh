@@ -218,8 +218,8 @@ QUOTEMSG
       --thinking low \
       --verbose on
 
-    # Coherence critique of the quote tweet
-    node "$PROJECT_ROOT/runner/critique.js" --quote >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # Coherence critique of the quote tweet (only if agent actually posted this cycle)
+    node "$PROJECT_ROOT/runner/critique.js" --quote --cycle "$CYCLE" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
   # ── Tweet cycle: synthesize, journal, tweet, push ─────────────────────────
   else
@@ -263,8 +263,8 @@ TWEETMSG
     # Archive new journals/checkpoints to Irys + local memory index
     node "$PROJECT_ROOT/runner/archive.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
-    # Coherence critique of the journal + tweet
-    node "$PROJECT_ROOT/runner/critique.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # Coherence critique of the journal + tweet (only if agent actually posted this cycle)
+    node "$PROJECT_ROOT/runner/critique.js" --cycle "$CYCLE" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
   fi
 
   # ── Wait out the remainder of the 20-minute window ───────────────────────
