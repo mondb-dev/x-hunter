@@ -1,14 +1,15 @@
 import Link from "next/link";
-import { getAllReports } from "@/lib/readReports";
+import { getAllJournalDays } from "@/lib/readJournals";
 import { readOntology } from "@/lib/readOntology";
 import { getLatestCheckpoint } from "@/lib/readCheckpoints";
 import ParticleFieldClient from "@/components/ParticleFieldClient";
 
 
 export default async function IndexPage() {
-  const reports = getAllReports().reverse(); // newest first
+  const days = getAllJournalDays(); // newest date first
   const ontology = readOntology();
   const latestCheckpoint = await getLatestCheckpoint();
+  const totalEntries = days.reduce((n, d) => n + d.entries.length, 0);
 
   return (
     <>
@@ -35,17 +36,23 @@ export default async function IndexPage() {
       )}
 
       {/* Journal entries */}
-      {reports.length === 0 ? (
+      {totalEntries === 0 ? (
         <p className="empty">No journal entries yet. The agent starts on Day 1.</p>
       ) : (
         <div className="journal-list">
-          {reports.map((r) => (
-            <Link key={r.slug} href={`/day/${r.day}`} className="journal-item" style={{ textDecoration: "none" }}>
-              <span className="journal-day">Day {r.day}</span>
-              <span className="journal-title">{r.title}</span>
-              <span className="journal-date">{r.date}</span>
-            </Link>
-          ))}
+          {days.flatMap((day) =>
+            day.entries.map((entry) => (
+              <Link
+                key={entry.slug}
+                href={`/journal/${entry.date}/${String(entry.hour).padStart(2, "0")}`}
+                className="journal-item"
+                style={{ textDecoration: "none" }}
+              >
+                <span className="journal-day">Day {entry.day} · {String(entry.hour).padStart(2, "0")}:00</span>
+                <span className="journal-date">{entry.date}</span>
+              </Link>
+            ))
+          )}
         </div>
       )}
     </>
