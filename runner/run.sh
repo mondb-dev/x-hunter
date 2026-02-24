@@ -104,6 +104,16 @@ while true; do
   openclaw browser --browser-profile x-hunter start 2>/dev/null || true
   sleep 1
 
+  # ── Before tweet/quote cycles, restart gateway to clear stale browser
+  #    control service state (prevents 20s timeout errors) ──────────────
+  if [ "$CYCLE_TYPE" = "TWEET" ] || [ "$CYCLE_TYPE" = "QUOTE" ]; then
+    openclaw gateway restart 2>/dev/null || true
+    sleep 4
+    openclaw browser --browser-profile x-hunter start 2>/dev/null || true
+    sleep 2
+    echo "[run] gateway + browser refreshed before $CYCLE_TYPE cycle"
+  fi
+
   # ── Reset agent sessions periodically to prevent Gemini token-per-minute
   #    quota exhaustion from accumulated context ──────────────────────────
   #    x-hunter (browse): every 72 cycles = 24h
