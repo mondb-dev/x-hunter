@@ -135,7 +135,7 @@ function recallForMention(text, limit = 3) {
 }
 
 // ── 4. Gemini: classify + draft with full context ─────────────────────────────
-async function geminiClassify(item, threadContext = [], memoryHints = []) {
+async function geminiClassify(item, threadContext = [], memoryHints = [], userHistory = null) {
   const apiKey = process.env.GOOGLE_API_KEY_TWEET || process.env.GOOGLE_API_KEY;
   if (!apiKey) throw new Error("No Gemini API key (GOOGLE_API_KEY_TWEET or GOOGLE_API_KEY)");
 
@@ -158,8 +158,17 @@ async function geminiClassify(item, threadContext = [], memoryHints = []) {
       }).join("\n\n") + "\n";
   }
 
+  // Build user history block
+  let userBlock = "";
+  if (userHistory && userHistory.reply_count > 0) {
+    const prior = userHistory.exchanges.slice(-3).map(e =>
+      `  Them: "${(e.their_text || "").slice(0, 120)}"\n  Us: "${(e.our_reply || "").slice(0, 120)}"`
+    ).join("\n---\n");
+    userBlock = `\nPrior exchanges with @${item.from_username} (${userHistory.reply_count} total):\n${prior}\n\nReference prior exchanges if relevant. Do not repeat what was already said.\n`;
+  }
+
   const prompt = `You are Sebastian D. Hunter — an autonomous AI agent who thinks and writes about consciousness, technology, power, and what it means to be human in an automated world.
-${threadBlock}${memoryBlock}
+${threadBlock}${memoryBlock}${userBlock}
 The mention you are replying to:
 @${item.from_username}: "${item.text}"
 
@@ -237,9 +246,14 @@ async function postReply(page, item, replyText) {
 // ── Interactions log ──────────────────────────────────────────────────────────
 function loadInteractions() {
   const today = new Date().toISOString().slice(0, 10);
-  const data = loadJson(INTERACTIONS, { total_replies: 0, today_count: 0, today_date: today, last_reply_at: null, replies: [] });
+  const data = loadJson(INTERACTIONS, { total_replies: 0, today_count: 0, today_date: today, last_reply_at: null, replies: [], users: {} });
   if (data.today_date !== today) { data.today_count = 0; data.today_date = today; }
+  if (!data.users) data.users = {};
   return data;
+}
+
+function getUserHistory(data, username) {
+  return (data.users || {})[username] || null;
 }
 
 function logInteraction(data, item, replyText, memoryHints) {
@@ -255,6 +269,15 @@ function logInteraction(data, item, replyText, memoryHints) {
     replied_at:    data.last_reply_at,
   });
   if (data.replies.length > 500) data.replies = data.replies.slice(-500);
+
+  // Update per-user conversation history
+  const u = data.users[item.from_username] || { reply_count: 0, last_reply_at: null, exchanges: [] };
+  u.reply_count += 1;
+  u.last_reply_at = data.last_reply_at;
+  u.exchanges.push({ their_text: item.text, our_reply: replyText, replied_at: data.last_reply_at });
+  if (u.exchanges.length > 5) u.exchanges = u.exchanges.slice(-5);
+  data.users[item.from_username] = u;
+
   saveJson(INTERACTIONS, data);
 }
 
@@ -334,9 +357,14 @@ function logInteraction(data, item, replyText, memoryHints) {
     }
 
     // ── Step 4: Gemini classify + draft ───────────────────────────────────
+    const userHistory = getUserHistory(interactions, item.from_username);
+    if (userHistory) {
+      console.log(`[reply] user history: @${item.from_username} has ${userHistory.reply_count} prior exchange(s)`);
+    }
+
     let verdict;
     try {
-      verdict = await geminiClassify(item, threadContext, memoryHints);
+      verdict = await geminiClassify(item, threadContext, memoryHints, userHistory);
     } catch (err) {
       console.error(`[reply] Gemini error: ${err.message}`);
       item.status = "error";

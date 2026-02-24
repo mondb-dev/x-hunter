@@ -54,12 +54,16 @@ fi
 echo "[run] Starting scraper loop..."
 bash "$PROJECT_ROOT/scraper/start.sh"
 
-# ── Two-tier agent cycle loop ─────────────────────────────────────────────────
+# ── Three-tier agent cycle loop ───────────────────────────────────────────────
 # Browse cycle: every 20 minutes (AI reads pre-scraped digest)
-# Tweet cycle:  every 6th browse cycle (every 2 hours)
+# Quote cycle:  every 3rd browse cycle (every 1 hour, midpoint between tweets)
+# Tweet cycle:  every 6th browse cycle (every 2 hours, active hours only)
 CYCLE=0
 BROWSE_INTERVAL=1200  # 20 minutes in seconds
 TWEET_EVERY=6         # tweet on cycles 6, 12, 18, ... (every 2 hours)
+QUOTE_OFFSET=3        # quote-tweet on cycles 3, 9, 15, ... (midpoint between tweets)
+TWEET_START=7         # earliest hour to post original tweets (0-23 UTC)
+TWEET_END=23          # latest hour exclusive
 
 trap 'echo "[run] Stopping..."; bash "$PROJECT_ROOT/scraper/stop.sh" 2>/dev/null; bash "$PROJECT_ROOT/stream/stop.sh" 2>/dev/null; exit 0' INT TERM
 
@@ -73,8 +77,19 @@ while true; do
   # Determine cycle type
   if [ $(( CYCLE % TWEET_EVERY )) -eq 0 ]; then
     CYCLE_TYPE="TWEET"
+  elif [ $(( CYCLE % TWEET_EVERY )) -eq $QUOTE_OFFSET ]; then
+    CYCLE_TYPE="QUOTE"
   else
     CYCLE_TYPE="BROWSE"
+  fi
+
+  # Suppress TWEET outside active hours -- downgrade to BROWSE
+  if [ "$CYCLE_TYPE" = "TWEET" ]; then
+    HOUR_INT=$(( 10#$HOUR ))
+    if [ "$HOUR_INT" -lt "$TWEET_START" ] || [ "$HOUR_INT" -ge "$TWEET_END" ]; then
+      echo "[run] Tweet window closed (hour=$HOUR), running as BROWSE"
+      CYCLE_TYPE="BROWSE"
+    fi
   fi
 
   # Detect first-ever run by absence of journal files
@@ -176,6 +191,30 @@ BROWSEMSG
       --thinking low \
       --verbose on
 
+  # ── Quote cycle: find one post worth quoting + sharp commentary ──────────
+  elif [ "$CYCLE_TYPE" = "QUOTE" ]; then
+    AGENT_MSG=$(cat <<QUOTEMSG
+Today is $TODAY $NOW. This is quote cycle $CYCLE -- find one post worth quoting and add sharp commentary.
+
+Your task:
+1. Read state/feed_digest.txt -- scan TRENDING clusters and high-novelty singletons.
+2. Pick the single most interesting post worth engaging with publicly.
+   Criteria: genuine tension with your ontology, strong claim you can sharpen or challenge,
+   or a signal moment others have not yet framed correctly.
+3. Navigate to https://x.com/<username>/status/<id>
+4. Click the Quote button. Write one sentence of sharp commentary -- your actual view.
+   No hedging. No agreement for the sake of it. Max 240 chars (leave room for the quoted tweet).
+5. Post the quote tweet.
+6. Log to state/posts_log.json with type="quote" and tweet_url.
+7. Done -- do not browse further, do not post separately.
+
+QUOTEMSG
+)
+    openclaw agent --agent x-hunter-tweet \
+      --message "$AGENT_MSG" \
+      --thinking low \
+      --verbose on
+
   # ── Tweet cycle: synthesize, journal, tweet, push ─────────────────────────
   else
     AGENT_MSG=$(cat <<TWEETMSG
@@ -185,12 +224,19 @@ Your task:
 1. Read state/browse_notes.md -- everything noted in the last browse cycles.
 2. Read state/feed_digest.txt -- the latest scored digest for any final context.
 3. Read state/memory_recall.txt -- your relevant past thinking on current topics.
-   Use it to ask: have I thought about this before? Has my view evolved? Am I repeating myself?
+   Check if any past tweet (type: tweet) is directly relevant to this synthesis.
+   If yes, consider quoting that past tweet instead of posting fresh -- "Revisiting this..." framing.
+   A quote of your own past post counts as the tweet for this cycle.
 4. Synthesize: what is the single clearest insight, tension, or question from this window?
 5. Write the journal entry: journals/${TODAY}_${HOUR}.html
-6. Draft the tweet: the geist of the synthesis in one honest sentence or question.
-   Add the journal URL on a new line: https://sebastianhunter.fun/journal/${TODAY}/${HOUR}
-   Total <= 280 characters.
+6. Draft the tweet. Two formats:
+   FORMAT A (single tweet): the geist of the synthesis in one honest sentence or question.
+     Add the journal URL on a new line: https://sebastianhunter.fun/journal/${TODAY}/${HOUR}
+     Total <= 280 characters.
+   FORMAT B (thread, 3-5 tweets): use when the synthesis has distinct parts each needing a line.
+     Post tweet 1 at https://x.com/compose/post -- note its URL.
+     Navigate to that tweet URL and reply to yourself for tweets 2 onward.
+     Log all tweet URLs in posts_log.json. Only tweet 1 needs the journal URL.
 7. Self-check (AGENTS.md section 13.3). If not genuine -- skip the tweet, still do the rest.
 8. Post via https://x.com/compose/post
 9. Log to state/posts_log.json (include journal_url field).
