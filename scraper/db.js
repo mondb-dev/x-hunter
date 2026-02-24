@@ -93,6 +93,32 @@ _db.exec(`
 
   CREATE INDEX IF NOT EXISTS idx_accounts_follow_score ON accounts(follow_score DESC);
   CREATE INDEX IF NOT EXISTS idx_accounts_last_seen    ON accounts(last_seen DESC);
+
+  CREATE TABLE IF NOT EXISTS memory (
+    id           INTEGER PRIMARY KEY AUTOINCREMENT,
+    type         TEXT    NOT NULL,
+    date         TEXT    NOT NULL,
+    hour         INTEGER DEFAULT NULL,
+    title        TEXT    NOT NULL,
+    text_content TEXT    NOT NULL,
+    keywords     TEXT    DEFAULT '',
+    tx_id        TEXT    DEFAULT NULL,
+    file_path    TEXT    NOT NULL UNIQUE,
+    indexed_at   INTEGER NOT NULL
+  );
+
+  CREATE INDEX IF NOT EXISTS idx_memory_type ON memory(type);
+  CREATE INDEX IF NOT EXISTS idx_memory_date ON memory(date DESC);
+
+  CREATE VIRTUAL TABLE IF NOT EXISTS memory_fts USING fts5(
+    id           UNINDEXED,
+    type,
+    title,
+    text_content,
+    keywords,
+    content  = 'memory',
+    tokenize = 'unicode61 remove_diacritics 1'
+  );
 `);
 
 // ── FTS5 sync triggers ────────────────────────────────────────────────────────
@@ -113,6 +139,26 @@ _db.exec(`
   CREATE TRIGGER IF NOT EXISTS posts_ad AFTER DELETE ON posts BEGIN
     INSERT INTO posts_fts(posts_fts, id, username, text, keywords)
     VALUES ('delete', old.id, old.username, old.text, old.keywords);
+  END;
+`);
+
+// Memory FTS5 sync triggers
+_db.exec(`
+  CREATE TRIGGER IF NOT EXISTS memory_ai AFTER INSERT ON memory BEGIN
+    INSERT INTO memory_fts(id, type, title, text_content, keywords)
+    VALUES (new.id, new.type, new.title, new.text_content, new.keywords);
+  END;
+
+  CREATE TRIGGER IF NOT EXISTS memory_au AFTER UPDATE ON memory BEGIN
+    INSERT INTO memory_fts(memory_fts, id, type, title, text_content, keywords)
+    VALUES ('delete', old.id, old.type, old.title, old.text_content, old.keywords);
+    INSERT INTO memory_fts(id, type, title, text_content, keywords)
+    VALUES (new.id, new.type, new.title, new.text_content, new.keywords);
+  END;
+
+  CREATE TRIGGER IF NOT EXISTS memory_ad AFTER DELETE ON memory BEGIN
+    INSERT INTO memory_fts(memory_fts, id, type, title, text_content, keywords)
+    VALUES ('delete', old.id, old.type, old.title, old.text_content, old.keywords);
   END;
 `);
 
@@ -212,6 +258,37 @@ const stmtGetAccount = _db.prepare(`
 const stmtPostsInWindow = _db.prepare(`
   SELECT keywords FROM posts
   WHERE  ts > @from_ts AND ts <= @to_ts AND parent_id IS NULL
+`);
+
+const stmtInsertMemory = _db.prepare(`
+  INSERT OR IGNORE INTO memory
+    (type, date, hour, title, text_content, keywords, file_path, indexed_at)
+  VALUES
+    (@type, @date, @hour, @title, @text_content, @keywords, @file_path, @indexed_at)
+`);
+
+const stmtUpdateMemoryTxId = _db.prepare(`
+  UPDATE memory SET tx_id = @tx_id WHERE file_path = @file_path
+`);
+
+const stmtSearchMemory = _db.prepare(`
+  SELECT m.*, bm25(memory_fts) AS rank
+  FROM   memory_fts
+  JOIN   memory m ON m.id = memory_fts.id
+  WHERE  memory_fts MATCH ?
+  ORDER  BY rank
+  LIMIT  ?
+`);
+
+const stmtGetMemoryByPath = _db.prepare(`
+  SELECT * FROM memory WHERE file_path = @file_path
+`);
+
+const stmtRecentMemory = _db.prepare(`
+  SELECT * FROM memory
+  WHERE  (@type IS NULL OR type = @type)
+  ORDER  BY date DESC, hour DESC
+  LIMIT  @limit
 `);
 
 // ── Public API ────────────────────────────────────────────────────────────────
@@ -327,11 +404,59 @@ function postsInWindow(fromMs, toMs) {
   return stmtPostsInWindow.all({ from_ts: fromMs, to_ts: toMs });
 }
 
+/**
+ * Insert a memory entry (idempotent on file_path — INSERT OR IGNORE).
+ * Called by archive.js for each new journal/checkpoint/report file.
+ */
+function insertMemory(row) {
+  stmtInsertMemory.run({
+    type:         row.type,
+    date:         row.date,
+    hour:         row.hour ?? null,
+    title:        row.title,
+    text_content: row.text_content,
+    keywords:     row.keywords || "",
+    file_path:    row.file_path,
+    indexed_at:   row.indexed_at || Date.now(),
+  });
+}
+
+/** Set the Arweave TX ID on a memory entry after successful upload. */
+function updateMemoryTxId(filePath, txId) {
+  stmtUpdateMemoryTxId.run({ tx_id: txId, file_path: filePath });
+}
+
+/**
+ * FTS5 full-text search over memory entries.
+ * Returns ranked results (best match first).
+ */
+function recallMemory(query, limit = 5) {
+  // Sanitize FTS5 special chars
+  const safe = query.replace(/["*()\-]/g, " ").trim();
+  if (!safe) return [];
+  return stmtSearchMemory.all(safe, limit);
+}
+
+/** Get a single memory row by file path (used for dedup check). */
+function getMemoryByPath(filePath) {
+  return stmtGetMemoryByPath.get({ file_path: filePath });
+}
+
+/**
+ * Recent memory entries, optionally filtered by type.
+ * @param {string|null} type - null = all types
+ * @param {number} limit
+ */
+function recentMemory(type = null, limit = 10) {
+  return stmtRecentMemory.all({ type: type ?? null, limit });
+}
+
 /** Raw db handle for advanced queries. */
 function raw() { return _db; }
 
 module.exports = {
   insertPost, insertKeyword, search, topKeywords, recentPosts, postsByKeyword, prune,
   upsertAccount, followCandidates, markFollowed, getAccount, postsInWindow,
+  insertMemory, updateMemoryTxId, recallMemory, getMemoryByPath, recentMemory,
   raw,
 };

@@ -113,8 +113,9 @@ EOF
 
   # ── Browse cycle: read digest + topic summary, take notes ───────────────
   elif [ "$CYCLE_TYPE" = "BROWSE" ]; then
-    # Generate topic summary from SQLite index before invoking AI
+    # Generate topic summary + memory recall from SQLite index before invoking AI
     node "$PROJECT_ROOT/scraper/query.js" --hours 4 > /dev/null 2>&1 || true
+    node "$PROJECT_ROOT/runner/recall.js" --limit 5 >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
     openclaw agent --agent x-hunter \
       --message "$(cat <<EOF
@@ -181,7 +182,9 @@ Today is $TODAY $NOW. This is tweet cycle $CYCLE — synthesize, journal, tweet,
 Your task:
 1. Read state/browse_notes.md — everything noted in the last browse cycles.
 2. Read state/feed_digest.txt — the latest scored digest for any final context.
-3. Synthesize: what is the single clearest insight, tension, or question from this window?
+3. Read state/memory_recall.txt — your relevant past thinking on today's topics.
+   Use it to ask: have I thought about this before? Has my view evolved? Am I repeating myself?
+4. Synthesize: what is the single clearest insight, tension, or question from this window?
 4. Write the journal entry: journals/${TODAY}_${HOUR}.html
 5. Draft the tweet: the geist of the synthesis in one honest sentence or question.
    Add the journal URL on a new line: https://sebastianhunter.fun/journal/${TODAY}/${HOUR}
@@ -193,13 +196,16 @@ Your task:
 10. Clear state/browse_notes.md (overwrite with empty string — start fresh next window).
 11. Clear state/feed_digest.txt (overwrite with empty string — scraper will refill it).
 12. Git commit and push:
-    git add journals/ state/ && git commit -m "cycle ${CYCLE}: ${TODAY} ${NOW}" && git push origin main
+    git add journals/ checkpoints/ state/ && git commit -m "cycle ${CYCLE}: ${TODAY} ${NOW}" && git push origin main
 13. Done — do not start another cycle.
 
 EOF
 )" \
       --thinking high \
       --verbose on
+
+    # Archive new journals/checkpoints to Irys + local memory index
+    node "$PROJECT_ROOT/runner/archive.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
   fi
 
   # ── Wait out the remainder of the 20-minute window ───────────────────────
