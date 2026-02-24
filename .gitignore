@@ -8,6 +8,7 @@ web/data/
 scraper/node_modules/
 scraper/scraper.pid
 scraper/reply.pid
+scraper/follows.pid
 scraper/scraper.log
 state/feed_buffer.jsonl
 state/feed_digest.txt
@@ -15,3 +16,6 @@ state/seen_ids.json
 state/index.db
 state/topic_summary.txt
 state/reply_queue.jsonl
+state/follow_queue.jsonl
+state/index.db-shm
+state/index.db-wal
