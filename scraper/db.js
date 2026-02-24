@@ -6,12 +6,16 @@
  *   posts       — every post with metadata + RAKE keywords
  *   posts_fts   — FTS5 virtual table over (username, text, keywords)
  *   keywords    — inverted index: keyword → post_ids with scores
+ *   accounts    — per-account aggregate stats (for follow analysis)
  *
  * The FTS5 table enables full-text queries like:
  *   db.search("automation AI") → ranked post rows
  *
  * The keywords table enables aggregate queries like:
  *   db.topKeywords(24) → [{keyword, count, avg_score}]
+ *
+ * The accounts table enables follow analysis:
+ *   db.followCandidates(minPosts, minScore) → sorted by follow_score
  */
 
 const Database = require("better-sqlite3");
@@ -73,6 +77,22 @@ _db.exec(`
 
   CREATE INDEX IF NOT EXISTS idx_kw_keyword ON keywords(keyword);
   CREATE INDEX IF NOT EXISTS idx_kw_ts      ON keywords(ts DESC);
+
+  CREATE TABLE IF NOT EXISTS accounts (
+    username      TEXT    NOT NULL PRIMARY KEY,
+    post_count    INTEGER DEFAULT 0,
+    avg_score     REAL    DEFAULT 0,
+    avg_velocity  REAL    DEFAULT 0,
+    top_keywords  TEXT    DEFAULT '',
+    first_seen    INTEGER NOT NULL,
+    last_seen     INTEGER NOT NULL,
+    follow_score  REAL    DEFAULT 0,
+    followed      INTEGER DEFAULT 0,
+    followed_at   INTEGER DEFAULT NULL
+  );
+
+  CREATE INDEX IF NOT EXISTS idx_accounts_follow_score ON accounts(follow_score DESC);
+  CREATE INDEX IF NOT EXISTS idx_accounts_last_seen    ON accounts(last_seen DESC);
 `);
 
 // ── FTS5 sync triggers ────────────────────────────────────────────────────────
@@ -156,6 +176,44 @@ const stmtPruneKeywords = _db.prepare(`
   DELETE FROM keywords WHERE ts < ?
 `);
 
+const stmtUpsertAccount = _db.prepare(`
+  INSERT INTO accounts
+    (username, post_count, avg_score, avg_velocity, top_keywords, first_seen, last_seen, follow_score, followed)
+  VALUES
+    (@username, @post_count, @avg_score, @avg_velocity, @top_keywords, @first_seen, @last_seen, @follow_score, 0)
+  ON CONFLICT(username) DO UPDATE SET
+    post_count   = @post_count,
+    avg_score    = @avg_score,
+    avg_velocity = @avg_velocity,
+    top_keywords = @top_keywords,
+    last_seen    = @last_seen,
+    follow_score = @follow_score
+`);
+
+const stmtFollowCandidates = _db.prepare(`
+  SELECT * FROM accounts
+  WHERE  post_count >= @min_posts
+    AND  avg_score  >= @min_score
+    AND  followed   = 0
+  ORDER  BY follow_score DESC
+  LIMIT  @limit
+`);
+
+const stmtMarkFollowed = _db.prepare(`
+  UPDATE accounts
+  SET    followed = 1, followed_at = @followed_at
+  WHERE  username = @username
+`);
+
+const stmtGetAccount = _db.prepare(`
+  SELECT * FROM accounts WHERE username = @username
+`);
+
+const stmtPostsInWindow = _db.prepare(`
+  SELECT keywords FROM posts
+  WHERE  ts > @from_ts AND ts <= @to_ts AND parent_id IS NULL
+`);
+
 // ── Public API ────────────────────────────────────────────────────────────────
 
 /** Insert or replace a post (upsert). */
@@ -226,7 +284,54 @@ function prune() {
   return { posts: r1.changes, keywords: r2.changes };
 }
 
+/**
+ * Upsert per-account stats (rolling averages, top keywords, follow_score).
+ * Called by collect.js after each collect run.
+ */
+function upsertAccount(row) {
+  stmtUpsertAccount.run({
+    username:     row.username,
+    post_count:   row.post_count   || 0,
+    avg_score:    row.avg_score    || 0,
+    avg_velocity: row.avg_velocity || 0,
+    top_keywords: row.top_keywords || "",
+    first_seen:   row.first_seen   || Date.now(),
+    last_seen:    row.last_seen    || Date.now(),
+    follow_score: row.follow_score || 0,
+  });
+}
+
+/**
+ * Return follow candidates: accounts seen ≥ minPosts times,
+ * avg_score ≥ minScore, not yet followed, sorted by follow_score DESC.
+ */
+function followCandidates(minPosts = 2, minScore = 5.0, limit = 20) {
+  return stmtFollowCandidates.all({ min_posts: minPosts, min_score: minScore, limit });
+}
+
+/** Mark an account as followed (sets followed=1, followed_at=now). */
+function markFollowed(username) {
+  stmtMarkFollowed.run({ username, followed_at: Date.now() });
+}
+
+/** Fetch a single account row, or undefined if not found. */
+function getAccount(username) {
+  return stmtGetAccount.get({ username });
+}
+
+/**
+ * Return keywords fields for all non-reply posts within a time window.
+ * Used by analytics.detectBursts() to compare two windows.
+ */
+function postsInWindow(fromMs, toMs) {
+  return stmtPostsInWindow.all({ from_ts: fromMs, to_ts: toMs });
+}
+
 /** Raw db handle for advanced queries. */
 function raw() { return _db; }
 
-module.exports = { insertPost, insertKeyword, search, topKeywords, recentPosts, postsByKeyword, prune, raw };
+module.exports = {
+  insertPost, insertKeyword, search, topKeywords, recentPosts, postsByKeyword, prune,
+  upsertAccount, followCandidates, markFollowed, getAccount, postsInWindow,
+  raw,
+};

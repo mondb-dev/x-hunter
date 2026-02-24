@@ -1,16 +1,29 @@
 #!/usr/bin/env node
 /**
- * scraper/collect.js — AI-free X feed collector
+ * scraper/collect.js — AI-free X feed collector (analytics-enhanced)
  *
- * Connects to the existing x-hunter Chrome instance via CDP (port 18801),
- * scrapes the timeline, scores posts with HN-gravity + trust + ontology
- * alignment, deduplicates against seen_ids, extracts keyphrases via RAKE,
- * then writes:
+ * Pipeline:
+ *   1. CDP → extract raw posts via DOM
+ *   2. sanitizePost()          — filter ads, short, emoji-spam, non-English
+ *   3. seenSet dedup           — skip already-indexed post IDs
+ *   4. RAKE keyword extraction + base scoring (velocity + trust + alignment)
+ *   5. deduplicateByJaccard()  — remove near-duplicate stories (threshold 0.65)
+ *   6. computeIDF() + noveltyBoost() — TF-IDF novelty signal from 4h corpus
+ *   7. Re-score: total += novelty × NOVELTY_WEIGHT; re-sort; select TOP_POSTS
+ *   8. Fetch top 5 replies for the 8 highest-scoring posts
+ *   9. Write SQLite (posts + keywords tables)
+ *  10. Upsert per-account stats (rolling averages → accounts table)
+ *  11. clusterPosts() + detectBursts() → tagClusterBursts()
+ *  12. formatClusteredDigest() → append to feed_digest.txt
+ *  13. Append raw JSONL to feed_buffer.jsonl
+ *  14. scrapeNotifications() → append new mentions to reply_queue.jsonl
  *
- *   state/index.db           — SQLite FTS5 index (posts + keywords)
+ * Writes:
+ *   state/index.db           — SQLite FTS5 index (posts + keywords + accounts)
  *   state/feed_buffer.jsonl  — raw JSONL records (append)
- *   state/feed_digest.txt    — compact scored+keyword digest (append)
+ *   state/feed_digest.txt    — clustered scored+keyword digest (append)
  *   state/seen_ids.json      — dedup set (rolling 10k window)
+ *   state/reply_queue.jsonl  — new mentions from notifications tab
  *
  * Usage:  node scraper/collect.js
  */
@@ -18,26 +31,34 @@
 "use strict";
 
 const { chromium } = require("playwright");
-const fs   = require("fs");
-const path = require("path");
-const db   = require("./db");
+const fs        = require("fs");
+const path      = require("path");
+const db        = require("./db");
+const analytics = require("./analytics");
 
 // ── Paths ─────────────────────────────────────────────────────────────────────
-const ROOT         = path.resolve(__dirname, "..");
-const ONTOLOGY     = path.join(ROOT, "state", "ontology.json");
-const TRUST_GRAPH  = path.join(ROOT, "state", "trust_graph.json");
-const SEEN_IDS     = path.join(ROOT, "state", "seen_ids.json");
-const FEED_BUFFER  = path.join(ROOT, "state", "feed_buffer.jsonl");
-const FEED_DIGEST  = path.join(ROOT, "state", "feed_digest.txt");
+const ROOT        = path.resolve(__dirname, "..");
+const ONTOLOGY    = path.join(ROOT, "state", "ontology.json");
+const TRUST_GRAPH = path.join(ROOT, "state", "trust_graph.json");
+const SEEN_IDS    = path.join(ROOT, "state", "seen_ids.json");
+const FEED_BUFFER = path.join(ROOT, "state", "feed_buffer.jsonl");
+const FEED_DIGEST = path.join(ROOT, "state", "feed_digest.txt");
+const REPLY_QUEUE = path.join(ROOT, "state", "reply_queue.jsonl");
 
-const REPLY_QUEUE  = path.join(ROOT, "state", "reply_queue.jsonl");
+// ── Constants ─────────────────────────────────────────────────────────────────
+const CDP_URL               = "http://127.0.0.1:18801";
+const MAX_SEEN              = 10000;
+const TOP_POSTS             = 25;
+const TOP_REPLIES           = 5;
+const REPLY_FETCH_COUNT     = 8;   // fetch replies for top N posts
+const JACCARD_DEDUP_THRESHOLD    = 0.65;
+const JACCARD_CLUSTER_THRESHOLD  = 0.25;
+const NOVELTY_WEIGHT        = 0.4;
+const CORPUS_WINDOW_HOURS   = 4;
+const BURST_CURRENT_HOURS   = 4;
+const BURST_PREV_HOURS      = 8;   // look at 4-8h ago as "previous window"
 
-const CDP_URL      = "http://127.0.0.1:18801";
-const MAX_SEEN     = 10000;
-const TOP_POSTS    = 25;
-const TOP_REPLIES  = 5;
-
-// ── Load state ────────────────────────────────────────────────────────────────
+// ── State helpers ─────────────────────────────────────────────────────────────
 function loadJson(filePath, fallback) {
   try { return JSON.parse(fs.readFileSync(filePath, "utf-8")); }
   catch { return fallback; }
@@ -67,13 +88,12 @@ const STOP_WORDS = new Set([
 function extractKeywords(text, topN = 8) {
   const words = text
     .toLowerCase()
-    .replace(/https?:\/\/\S+/g, "")      // strip URLs
-    .replace(/[@#]\w+/g, "")             // strip @handles and #tags
+    .replace(/https?:\/\/\S+/g, "")
+    .replace(/[@#]\w+/g, "")
     .replace(/[^\w\s]/g, " ")
     .split(/\s+/)
     .filter(w => w.length > 2);
 
-  // Build candidate phrases: consecutive non-stop-word runs
   const phrases = [];
   let current = [];
   for (const word of words) {
@@ -85,7 +105,6 @@ function extractKeywords(text, topN = 8) {
   }
   if (current.length > 0) phrases.push(current);
 
-  // Word frequency and co-occurrence degree
   const freq = {}, degree = {};
   for (const phrase of phrases) {
     for (const word of phrase) {
@@ -94,13 +113,11 @@ function extractKeywords(text, topN = 8) {
     }
   }
 
-  // RAKE word score: (degree + freq) / freq
   const wordScore = {};
   for (const word of Object.keys(freq)) {
     wordScore[word] = (degree[word] + freq[word]) / freq[word];
   }
 
-  // Phrase score = sum of member word scores
   const seen = new Set();
   return phrases
     .map(phrase => ({ phrase: phrase.join(" "), score: phrase.reduce((s, w) => s + wordScore[w], 0) }))
@@ -197,25 +214,92 @@ async function fetchReplies(page, tweetUrl, topN) {
   }
 }
 
-// ── Compact digest formatting ─────────────────────────────────────────────────
-function formatPost(post, trustVal, velocityVal, keywords) {
-  const v   = velocityVal.toFixed(1);
-  const likes = parseCount(post.likes);
-  const rts   = parseCount(post.rts);
-  const eng   = likes >= 1000 ? `${(likes/1000).toFixed(1)}k❤` : `${likes}❤`;
-  const rtStr = rts   >= 1000 ? `${(rts/1000).toFixed(1)}k🔁`  : `${rts}🔁`;
-  const kwStr = keywords.length ? `  {${keywords.slice(0,4).join(", ")}}` : "";
-  return `@${post.username} [v${v} T${trustVal}] "${post.text.replace(/\n+/g, " ").slice(0, 200)}"` +
-         ` [${eng} ${rtStr}]${kwStr}`;
+// ── Clustered digest formatting ───────────────────────────────────────────────
+
+function fmtEngagement(likesStr, rtsStr) {
+  const likes = parseCount(likesStr);
+  const rts   = parseCount(rtsStr);
+  const l = likes >= 1000 ? `${(likes/1000).toFixed(1)}k❤` : `${likes}❤`;
+  const r = rts   >= 1000 ? `${(rts/1000).toFixed(1)}k🔁`  : `${rts}🔁`;
+  return `[${l} ${r}]`;
+}
+
+function fmtPost(post) {
+  const v  = post.velocity.toFixed(1);
+  const n  = post.novelty.toFixed(1);
+  const kw = post.keywords.length ? `  {${post.keywords.slice(0, 4).join(", ")}}` : "";
+  const novel = (post.novelty >= 4.0 && !post._inCluster) ? "  ← novel" : "";
+  return (
+    `  @${post.username} [v${v} T${post.trust} N${n}]` +
+    ` "${post.text.replace(/\n+/g, " ").slice(0, 200)}"` +
+    ` ${fmtEngagement(post.likes, post.rts)}${kw}${novel}`
+  );
+}
+
+function fmtReply(r) {
+  const eng = parseCount(r.likes);
+  const engStr = eng >= 1000 ? `${(eng/1000).toFixed(1)}k❤` : `${eng}❤`;
+  return `  > @${r.username}: "${r.text.replace(/\n+/g, " ").slice(0, 150)}" [${engStr}]`;
+}
+
+/**
+ * Format the clustered digest block for a single collect run.
+ * @param {ScoredPost[]} selected - all TOP_POSTS selected posts
+ * @param {Cluster[]} clusters - from analytics.clusterPosts()
+ * @param {string} now - formatted timestamp
+ * @returns {string}
+ */
+function formatClusteredDigest(selected, clusters, now) {
+  const clusterCount   = clusters.length;
+  const singletonCount = clusters.filter(c => c.posts.length === 1).length;
+  const multiCount     = clusterCount - singletonCount;
+
+  const lines = [
+    ``,
+    `── ${now} ── (${selected.length} posts, ${multiCount} clusters, ${singletonCount} singletons) ${"─".repeat(20)}`,
+  ];
+
+  // Legend (only on first block of the day — always include for AI readability)
+  lines.push(
+    `    v=velocity(HN) T=trust(0-10) N=novelty(TF-IDF,0-5)` +
+    `  ★=burst  ←novel=rare-this-window`
+  );
+  lines.push("");
+
+  // Multi-post clusters first
+  let clusterIdx = 0;
+  for (const cluster of clusters) {
+    if (cluster.posts.length === 1) continue;
+    clusterIdx++;
+    const burst = cluster.isBurst ? "  ★ TRENDING" : "";
+    lines.push(`CLUSTER ${clusterIdx} · "${cluster.label}" · ${cluster.posts.length} posts${burst}`);
+    for (const post of cluster.posts) {
+      post._inCluster = true;
+      lines.push(fmtPost(post));
+      for (const r of (post.topReplies || [])) lines.push(fmtReply(r));
+    }
+    lines.push("");
+  }
+
+  // Singletons section
+  const singletons = clusters.filter(c => c.posts.length === 1).map(c => c.posts[0]);
+  if (singletons.length > 0) {
+    lines.push(`SINGLETONS · ${singletons.length} posts`);
+    for (const post of singletons) {
+      lines.push(fmtPost(post));
+      for (const r of (post.topReplies || [])) lines.push(fmtReply(r));
+    }
+    lines.push("");
+  }
+
+  lines.push(`── end digest ${"─".repeat(60)}`);
+  return lines.join("\n");
 }
 
 // ── Notifications / mentions scraper ─────────────────────────────────────────
-// Navigates to x.com/notifications (Mentions tab), extracts reply/mention
-// tweets not already in reply_queue.jsonl, and appends them as pending items.
 async function scrapeNotifications(page) {
   console.log("[scraper] checking notifications/mentions...");
 
-  // Load IDs already queued to avoid duplicates
   const existingIds = new Set();
   try {
     const raw = fs.readFileSync(REPLY_QUEUE, "utf-8").trim().split("\n").filter(Boolean);
@@ -228,7 +312,6 @@ async function scrapeNotifications(page) {
     await page.goto("https://x.com/notifications", { waitUntil: "domcontentloaded", timeout: 20_000 });
     await page.waitForTimeout(2_000);
 
-    // Click the Mentions tab if it exists
     try {
       const tabs = await page.$$('[role="tab"]');
       for (const tab of tabs) {
@@ -237,7 +320,6 @@ async function scrapeNotifications(page) {
       }
     } catch {}
 
-    // Scroll once to load more
     await page.evaluate(() => window.scrollBy(0, 800));
     await page.waitForTimeout(1_000);
 
@@ -246,7 +328,6 @@ async function scrapeNotifications(page) {
 
     for (const m of mentions) {
       if (!m.text || !m.id || existingIds.has(m.id)) continue;
-      // Skip posts with essentially no text content (just handles/URLs)
       const stripped = m.text.replace(/@\w+/g, "").replace(/https?:\/\/\S+/g, "").trim();
       if (stripped.length < 8) continue;
 
@@ -318,62 +399,90 @@ async function scrapeNotifications(page) {
     await page.waitForTimeout(1_200);
   }
 
-  // Extract and score
+  // ── Phase 1: Extract raw posts ────────────────────────────────────────────
   const raw = await extractPosts(page);
   console.log(`[scraper] extracted ${raw.length} raw posts`);
 
-  const scored = [];
+  // ── Phase 2: Sanitize ─────────────────────────────────────────────────────
+  const sanitized = [];
   for (const post of raw) {
     if (!post.text || seenSet.has(post.id)) continue;
+    const { keep } = analytics.sanitizePost(post);
+    if (!keep) continue;
+    sanitized.push(post);
+  }
+  console.log(`[scraper] ${sanitized.length} posts after sanitize+dedup`);
+
+  // ── Phase 3: RAKE + base scoring ──────────────────────────────────────────
+  const initialScored = [];
+  for (const post of sanitized) {
     const engagement = parseCount(post.likes) + parseCount(post.rts) * 2 + parseCount(post.replies);
     const velocity   = gravityScore(engagement, post.ts);
     const trust      = trustScore(post.username, trustGraph);
     const alignment  = ontologyScore(post.text, ontology.axes);
     const keywords   = extractKeywords(post.text);
-    const total      = velocity + trust * 0.5 + alignment * 0.3;
-    scored.push({ ...post, velocity, trust, alignment, keywords, total });
+    initialScored.push({
+      ...post,
+      velocity, trust, alignment, keywords,
+      total: velocity + trust * 0.5 + alignment * 0.3,
+      novelty: 0,
+    });
   }
+  initialScored.sort((a, b) => b.total - a.total);
 
+  // ── Phase 4: Jaccard near-duplicate dedup ─────────────────────────────────
+  const deduped = analytics.deduplicateByJaccard(initialScored, JACCARD_DEDUP_THRESHOLD);
+  console.log(`[scraper] ${deduped.length} posts after Jaccard dedup (${initialScored.length - deduped.length} near-dups removed)`);
+
+  // ── Phase 5: TF-IDF novelty scoring ──────────────────────────────────────
+  const corpusPosts = db.recentPosts(CORPUS_WINDOW_HOURS, 200);
+  const idfMap = analytics.computeIDF(corpusPosts);
+  const corpusN = corpusPosts.length;
+
+  const scored = deduped.map(post => {
+    const novelty = analytics.noveltyBoost(post, idfMap, corpusN);
+    return { ...post, novelty, total: post.total + novelty * NOVELTY_WEIGHT };
+  });
   scored.sort((a, b) => b.total - a.total);
   const selected = scored.slice(0, TOP_POSTS);
-  console.log(`[scraper] selected ${selected.length} posts after dedup+scoring`);
+  console.log(`[scraper] selected ${selected.length} posts (top by velocity+trust+alignment+novelty)`);
 
-  // Fetch top replies for highest-scoring posts
+  // ── Phase 6: Fetch top replies for highest-scoring posts ──────────────────
   const withReplies = [];
-  for (const post of selected.slice(0, 8)) {
+  for (const post of selected.slice(0, REPLY_FETCH_COUNT)) {
     const url = `https://x.com/${post.username}/status/${post.id}`;
     const replies = await fetchReplies(page, url, TOP_REPLIES);
     withReplies.push({ ...post, topReplies: replies });
     for (const r of replies) seenSet.add(r.id);
   }
-  for (const post of selected.slice(8)) {
+  for (const post of selected.slice(REPLY_FETCH_COUNT)) {
     withReplies.push({ ...post, topReplies: [] });
   }
 
-  // Mark seen
+  // Mark feed posts as seen
   for (const post of withReplies) seenSet.add(post.id);
   const seenArr = Array.from(seenSet);
   const trimmed = seenArr.length > MAX_SEEN ? seenArr.slice(seenArr.length - MAX_SEEN) : seenArr;
   saveJson(SEEN_IDS, { ids: trimmed, updated_at: new Date().toISOString() });
 
-  // ── Write SQLite index ────────────────────────────────────────────────────
+  // ── Phase 7: Write SQLite index ───────────────────────────────────────────
   const scrapedAt = Date.now();
   for (const post of withReplies) {
     db.insertPost({
-      id:          post.id,
-      ts:          post.ts,
-      ts_iso:      new Date(post.ts).toISOString(),
-      username:    post.username,
+      id:           post.id,
+      ts:           post.ts,
+      ts_iso:       new Date(post.ts).toISOString(),
+      username:     post.username,
       display_name: post.displayName,
-      text:        post.text,
-      likes:       parseCount(post.likes),
-      rts:         parseCount(post.rts),
-      replies:     parseCount(post.replies),
-      velocity:    post.velocity,
-      trust:       post.trust,
-      score:       post.total,
-      keywords:    post.keywords.join(", "),
-      scraped_at:  scrapedAt,
+      text:         post.text,
+      likes:        parseCount(post.likes),
+      rts:          parseCount(post.rts),
+      replies:      parseCount(post.replies),
+      velocity:     post.velocity,
+      trust:        post.trust,
+      score:        post.total,
+      keywords:     post.keywords.join(", "),
+      scraped_at:   scrapedAt,
     });
     for (const kw of post.keywords) {
       db.insertKeyword({ post_id: post.id, keyword: kw, score: post.total });
@@ -381,21 +490,21 @@ async function scrapeNotifications(page) {
     for (const r of post.topReplies) {
       const rkw = extractKeywords(r.text);
       db.insertPost({
-        id:          r.id,
-        ts:          r.ts,
-        ts_iso:      new Date(r.ts).toISOString(),
-        username:    r.username,
+        id:           r.id,
+        ts:           r.ts,
+        ts_iso:       new Date(r.ts).toISOString(),
+        username:     r.username,
         display_name: r.displayName || r.username,
-        text:        r.text,
-        likes:       parseCount(r.likes),
-        rts:         parseCount(r.rts),
-        replies:     0,
-        velocity:    gravityScore(parseCount(r.likes), r.ts),
-        trust:       trustScore(r.username, trustGraph),
-        score:       parseCount(r.likes) * 0.1,
-        keywords:    rkw.join(", "),
-        scraped_at:  scrapedAt,
-        parent_id:   post.id,
+        text:         r.text,
+        likes:        parseCount(r.likes),
+        rts:          parseCount(r.rts),
+        replies:      0,
+        velocity:     gravityScore(parseCount(r.likes), r.ts),
+        trust:        trustScore(r.username, trustGraph),
+        score:        parseCount(r.likes) * 0.1,
+        keywords:     rkw.join(", "),
+        scraped_at:   scrapedAt,
+        parent_id:    post.id,
       });
       for (const kw of rkw) {
         db.insertKeyword({ post_id: r.id, keyword: kw, score: parseCount(r.likes) * 0.1 });
@@ -403,13 +512,58 @@ async function scrapeNotifications(page) {
     }
   }
 
-  // ── Write JSONL buffer ────────────────────────────────────────────────────
+  // ── Phase 8: Upsert per-account stats ────────────────────────────────────
+  const accountMap = new Map();
+  for (const post of withReplies) {
+    if (!accountMap.has(post.username)) accountMap.set(post.username, []);
+    accountMap.get(post.username).push(post);
+  }
+  for (const [username, posts] of accountMap.entries()) {
+    const existing   = db.getAccount(username);
+    const prevCount  = existing?.post_count ?? 0;
+    const newCount   = prevCount + posts.length;
+    const newAvgScore    = ((existing?.avg_score    ?? 0) * prevCount + posts.reduce((s, p) => s + p.total, 0))    / newCount;
+    const newAvgVelocity = ((existing?.avg_velocity ?? 0) * prevCount + posts.reduce((s, p) => s + p.velocity, 0)) / newCount;
+    const kwFreq = {};
+    for (const p of posts) for (const kw of p.keywords) kwFreq[kw] = (kwFreq[kw] || 0) + 1;
+    const topKw = Object.entries(kwFreq).sort((a, b) => b[1] - a[1]).slice(0, 5).map(e => e[0]).join(", ");
+    db.upsertAccount({
+      username,
+      post_count:   newCount,
+      avg_score:    newAvgScore,
+      avg_velocity: newAvgVelocity,
+      top_keywords: topKw,
+      first_seen:   existing?.first_seen ?? scrapedAt,
+      last_seen:    scrapedAt,
+      follow_score: 0,
+    });
+  }
+
+  // ── Phase 9: Cluster + burst detection ───────────────────────────────────
+  const clusters = analytics.clusterPosts(withReplies, JACCARD_CLUSTER_THRESHOLD);
+  const nowMs    = Date.now();
+  const curWin   = db.postsInWindow(nowMs - BURST_CURRENT_HOURS * 3_600_000, nowMs);
+  const prevWin  = db.postsInWindow(nowMs - BURST_PREV_HOURS * 3_600_000, nowMs - BURST_CURRENT_HOURS * 3_600_000);
+  const burstSet = analytics.detectBursts(curWin, prevWin);
+  analytics.tagClusterBursts(clusters, burstSet);
+
+  const burstKwCount = burstSet.size;
+  const clusterCount = clusters.filter(c => c.posts.length > 1).length;
+  console.log(`[scraper] ${clusterCount} multi-post clusters, ${burstKwCount} bursting keyword(s)`);
+
+  // ── Phase 10: Write clustered digest ──────────────────────────────────────
+  const now = new Date().toISOString().slice(0, 16).replace("T", " ");
+  const digestBlock = formatClusteredDigest(withReplies, clusters, now);
+  fs.appendFileSync(FEED_DIGEST, digestBlock + "\n");
+
+  // ── Phase 11: Write raw JSONL buffer ──────────────────────────────────────
   const bufferLines = withReplies.map(post => JSON.stringify({
     id: post.id, ts: post.ts, ts_iso: new Date(post.ts).toISOString(),
     u: post.username, dn: post.displayName, text: post.text,
     likes: parseCount(post.likes), rts: parseCount(post.rts),
     replies: parseCount(post.replies),
     velocity: parseFloat(post.velocity.toFixed(2)),
+    novelty:  parseFloat(post.novelty.toFixed(2)),
     trust: post.trust, score: parseFloat(post.total.toFixed(2)),
     keywords: post.keywords,
     top_replies: post.topReplies.map(r => ({
@@ -419,22 +573,9 @@ async function scrapeNotifications(page) {
   }));
   fs.appendFileSync(FEED_BUFFER, bufferLines.join("\n") + "\n");
 
-  // ── Write compact digest ──────────────────────────────────────────────────
-  const now = new Date().toISOString().slice(0, 16).replace("T", " ");
-  const digestLines = [`\n── ${now} ──────────────────────────────────`];
-  for (const post of withReplies) {
-    digestLines.push(formatPost(post, post.trust, post.velocity, post.keywords));
-    for (const r of post.topReplies) {
-      const rEng = parseCount(r.likes);
-      const rEngStr = rEng >= 1000 ? `${(rEng/1000).toFixed(1)}k❤` : `${rEng}❤`;
-      digestLines.push(`  > @${r.username}: "${r.text.replace(/\n+/g, " ").slice(0, 150)}" [${rEngStr}]`);
-    }
-  }
-  fs.appendFileSync(FEED_DIGEST, digestLines.join("\n") + "\n");
+  console.log(`[scraper] wrote ${withReplies.length} posts (${clusterCount} clusters) to index+digest+buffer`);
 
-  console.log(`[scraper] wrote ${withReplies.length} posts to index+buffer+digest`);
-
-  // ── Scrape notifications / mentions → reply queue ─────────────────────────
+  // ── Phase 12: Scrape notifications / mentions ─────────────────────────────
   await scrapeNotifications(page);
 
   await browser.close();

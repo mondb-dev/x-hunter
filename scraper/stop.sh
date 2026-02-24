@@ -1,5 +1,5 @@
 #!/bin/bash
-# scraper/stop.sh — stop the collect loop and reply loop
+# scraper/stop.sh — stop the collect, reply, and follows loops
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
@@ -24,3 +24,4 @@ stop_pid() {
 
 stop_pid "scraper" "$SCRIPT_DIR/scraper.pid"
 stop_pid "reply"   "$SCRIPT_DIR/reply.pid"
+stop_pid "follows" "$SCRIPT_DIR/follows.pid"

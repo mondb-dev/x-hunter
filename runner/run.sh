@@ -125,29 +125,44 @@ It extracts keyphrases via RAKE and indexes everything in a SQLite FTS5 database
 
 Read these two files to understand the current information landscape:
   state/topic_summary.txt  — topic clusters + top keywords from last 4 hours
-  state/feed_digest.txt    — full scored post digest (newest at bottom)
+  state/feed_digest.txt    — clustered scored digest (newest block at bottom)
 
-Digest format: @user [vSCORE TTRUST] "text" [engagement]  {keywords}
-  vSCORE  = velocity (HN-gravity, higher = trending now)
-  TTRUST  = trust score 0-10 from your trust_graph (0 = unknown)
-  {}      = RAKE keyphrases extracted from post text
-  indented > lines = top 5 replies scored by engagement
+Digest format (clusters):
+  CLUSTER N · "label" · M posts [· ★ TRENDING]
+    @user [vSCORE TTRUST NNOVELTY] "text" [engagement]  {keywords}
+    > @reply: "reply text" [engagement]
+  SINGLETONS · M posts  (posts that didn't cluster with anything)
+
+  v = velocity (HN-gravity, higher = trending now)
+  T = trust score 0-10 from your trust_graph (0 = unknown)
+  N = TF-IDF novelty (0-5): 5.0 = rarest topic this window; 0 = commonly recurring
+  ★ TRENDING = keyword frequency more than doubled vs. previous 4-hour window
+  ← novel = singleton post with novelty >= 4.0 (pay close attention)
+
+The scraper also:
+- Removes near-duplicate posts (same story from different accounts)
+- Groups related posts by keyword overlap into clusters
+- Tracks account quality over time (accounts table) for follow analysis
 
 Your task:
 1. Read state/browse_notes.md — recall what you've noted so far this window.
 2. Read state/topic_summary.txt — what topics are clustering right now?
-3. Read state/feed_digest.txt — scan for posts that connect to those clusters.
-4. Identify the 3-5 most interesting posts, tensions, or emerging ideas.
-   Focus on: high-velocity from trusted accounts, or unexpected voices saying
-   something that resonates with your ontology axes.
+3. Read state/feed_digest.txt — navigate by cluster, not linearly.
+   Start with ★ TRENDING clusters and high-N (novel) posts.
+4. Identify the 3-5 most interesting tensions, emerging ideas, or signal moments.
+   Focus on: TRENDING clusters, ← novel singletons, trusted accounts (T >= 5),
+   or voices saying something that resonates with or challenges your ontology axes.
 5. For anything you want to explore deeper, navigate directly via browser:
    https://x.com/<username>  or  https://x.com/search?q=<topic>
 6. Append everything notable to state/browse_notes.md:
    - Exact quotes or paraphrases with source @username
    - Tensions between accounts or positions
    - Patterns emerging across multiple posts
-7. Consider follows (AGENTS.md §16): if an account genuinely impressed you,
-   follow them — max 3 this cycle. Log to state/trust_graph.json with reason + cluster.
+   - Note any clusters that seem to be emerging conversations worth watching
+7. The scraper auto-follows accounts algorithmically (follows.js, every 60 min).
+   You may still follow manually if an account genuinely impresses you beyond
+   the algo's reach. Max 3 manual follows this cycle if so.
+   Log to state/trust_graph.json with reason + cluster.
 8. Update state/ontology.json and state/belief_state.json if anything is axis-worthy.
    These feed back into the scraper's scoring — update them carefully.
 9. Done — do not tweet. Next tweet cycle: cycle $(( (CYCLE / TWEET_EVERY + 1) * TWEET_EVERY )).
