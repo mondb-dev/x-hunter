@@ -5,7 +5,7 @@
   --surface: #111214;
   --border: #1e2022;
   --text: #e8eaed;
-  --muted: #6b7280;
+  --muted: #8b99aa;
   --accent: #3b82f6;
   --amber: #f59e0b;
   --font:      var(--font-mono, "IBM Plex Mono", "Fira Code", monospace);
@@ -50,13 +50,15 @@ a:hover { text-decoration: underline; }
 nav {
   display: flex; align-items: center; gap: 2rem;
   padding: 1rem 2rem;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid #2a2d30;
   font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
   position: relative; z-index: 5;
-  background: var(--bg);
+  background: #0d0f10;
 }
+nav a { color: #9baab8; }
+nav a:hover { color: var(--text); text-decoration: none; }
 nav .logo { color: var(--text); font-weight: 700; letter-spacing: 0.12em; margin-right: auto; display: flex; align-items: center; gap: 0.6rem; }
-nav .logo:hover { text-decoration: none; }
+nav .logo:hover { text-decoration: none; color: var(--text); }
 .nav-pfp { width: 24px; height: 24px; image-rendering: pixelated; }
 
 main {
@@ -143,13 +145,14 @@ main {
 .journal-list { display: flex; flex-direction: column; gap: 1px; }
 .journal-item {
   display: flex; align-items: baseline; gap: 1.5rem;
-  padding: 1rem 0;
+  padding: 1.1rem 0;
   border-bottom: 1px solid var(--border);
+  color: var(--text);
 }
+.journal-item:hover .journal-title { color: var(--accent); }
 .journal-item:last-child { border-bottom: none; }
-.journal-day { color: var(--muted); font-size: 11px; min-width: 56px; }
-.journal-title { color: var(--text); flex: 1; }
-.journal-title:hover { color: var(--accent); text-decoration: none; }
+.journal-day { color: var(--muted); font-size: 12px; min-width: 120px; white-space: nowrap; }
+.journal-title { color: #dde2e8; flex: 1; font-size: 0.95rem; font-family: var(--font-prose); line-height: 1.4; }
 .journal-date { color: var(--muted); font-size: 11px; }
 
 .manifesto-pin {

@@ -49,7 +49,7 @@ export default async function IndexPage() {
                 style={{ textDecoration: "none" }}
               >
                 <span className="journal-day">Day {entry.day} · {String(entry.hour).padStart(2, "0")}:00</span>
-                <span className="journal-date">{entry.date}</span>
+                <span className="journal-title">{entry.title || entry.date}</span>
               </Link>
             ))
           )}

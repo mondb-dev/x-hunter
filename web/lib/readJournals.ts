@@ -7,6 +7,7 @@ export interface JournalEntry {
   hour: number;      // 0–23
   day: number;       // agent day number
   slug: string;      // YYYY-MM-DD_HH
+  title: string;     // first sentence of first paragraph (index preview)
   contentHtml: string; // sanitized body content
   arweaveUrl?: string; // permanent Arweave link, if uploaded
 }
@@ -40,12 +41,16 @@ function parseSlug(filename: string): { date: string; hour: number } | null {
   return { date: m[1], hour: parseInt(m[2], 10) };
 }
 
-function extractBody(html: string): { body: string; day: number } {
+function extractBody(html: string): { body: string; day: number; title: string } {
   const dom = new JSDOM(html);
   const doc = dom.window.document;
   const day = parseInt(doc.querySelector("meta[name='x-hunter-day']")?.getAttribute("content") ?? "0", 10);
   const body = doc.querySelector("article")?.innerHTML ?? doc.body?.innerHTML ?? "";
-  return { body, day };
+  // Pull first sentence of first paragraph as the index preview title
+  const firstP = doc.querySelector("article p, body p")?.textContent?.trim() ?? "";
+  const sentence = firstP.split(/(?<=[.!?])\s+/)[0] ?? firstP;
+  const title = sentence.length > 120 ? sentence.slice(0, 117) + "…" : sentence;
+  return { body, day, title };
 }
 
 export function getAllJournalDays(): JournalDay[] {
@@ -65,13 +70,14 @@ export function getAllJournalDays(): JournalDay[] {
     if (!parsed) continue;
 
     const raw = fs.readFileSync(path.join(JOURNALS_DIR, filename), "utf-8");
-    const { body, day } = extractBody(raw);
+    const { body, day, title } = extractBody(raw);
 
     const entry: JournalEntry = {
       date: parsed.date,
       hour: parsed.hour,
       day,
       slug: `${parsed.date}_${String(parsed.hour).padStart(2, "0")}`,
+      title,
       contentHtml: body,
       arweaveUrl: arweave.get(filename),
     };
@@ -94,7 +100,7 @@ export function getJournalEntry(date: string, hour: number): JournalEntry | null
   if (!fs.existsSync(filePath)) return null;
 
   const raw = fs.readFileSync(filePath, "utf-8");
-  const { body, day } = extractBody(raw);
+  const { body, day, title } = extractBody(raw);
   const arweaveUrl = loadArweaveIndex().get(filename);
 
   return {
@@ -102,6 +108,7 @@ export function getJournalEntry(date: string, hour: number): JournalEntry | null
     hour,
     day,
     slug: `${date}_${String(hour).padStart(2, "0")}`,
+    title,
     contentHtml: body,
     arweaveUrl,
   };
