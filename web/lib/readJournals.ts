@@ -41,16 +41,21 @@ function parseSlug(filename: string): { date: string; hour: number } | null {
   return { date: m[1], hour: parseInt(m[2], 10) };
 }
 
-function extractBody(html: string): { body: string; day: number; title: string } {
+function extractBody(html: string): { body: string; title: string } {
   const dom = new JSDOM(html);
   const doc = dom.window.document;
-  const day = parseInt(doc.querySelector("meta[name='x-hunter-day']")?.getAttribute("content") ?? "0", 10);
   const body = doc.querySelector("article")?.innerHTML ?? doc.body?.innerHTML ?? "";
   // Pull first sentence of first paragraph as the index preview title
   const firstP = doc.querySelector("article p, body p")?.textContent?.trim() ?? "";
   const sentence = firstP.split(/(?<=[.!?])\s+/)[0] ?? firstP;
   const title = sentence.length > 120 ? sentence.slice(0, 117) + "…" : sentence;
-  return { body, day, title };
+  return { body, title };
+}
+
+// Compute day number from date relative to the earliest journal date (Day 1 = first date)
+function computeDay(date: string, earliestDate: string): number {
+  const ms = new Date(date).getTime() - new Date(earliestDate).getTime();
+  return Math.floor(ms / 86_400_000) + 1;
 }
 
 export function getAllJournalDays(): JournalDay[] {
@@ -63,6 +68,9 @@ export function getAllJournalDays(): JournalDay[] {
     .filter((f) => /^\d{4}-\d{2}-\d{2}_\d{2}\.html$/.test(f))
     .sort();
 
+  // Earliest date = first filename after sort (YYYY-MM-DD sorts lexicographically)
+  const earliestDate = files.length > 0 ? parseSlug(files[0])?.date ?? "" : "";
+
   const byDate = new Map<string, JournalEntry[]>();
 
   for (const filename of files) {
@@ -70,12 +78,12 @@ export function getAllJournalDays(): JournalDay[] {
     if (!parsed) continue;
 
     const raw = fs.readFileSync(path.join(JOURNALS_DIR, filename), "utf-8");
-    const { body, day, title } = extractBody(raw);
+    const { body, title } = extractBody(raw);
 
     const entry: JournalEntry = {
       date: parsed.date,
       hour: parsed.hour,
-      day,
+      day: computeDay(parsed.date, earliestDate),
       slug: `${parsed.date}_${String(parsed.hour).padStart(2, "0")}`,
       title,
       contentHtml: body,
@@ -100,13 +108,19 @@ export function getJournalEntry(date: string, hour: number): JournalEntry | null
   if (!fs.existsSync(filePath)) return null;
 
   const raw = fs.readFileSync(filePath, "utf-8");
-  const { body, day, title } = extractBody(raw);
+  const { body, title } = extractBody(raw);
   const arweaveUrl = loadArweaveIndex().get(filename);
+
+  // Compute day from earliest journal date on disk
+  const allFiles = fs.existsSync(JOURNALS_DIR)
+    ? fs.readdirSync(JOURNALS_DIR).filter((f) => /^\d{4}-\d{2}-\d{2}_\d{2}\.html$/.test(f)).sort()
+    : [];
+  const earliestDate = allFiles.length > 0 ? parseSlug(allFiles[0])?.date ?? date : date;
 
   return {
     date,
     hour,
-    day,
+    day: computeDay(date, earliestDate),
     slug: `${date}_${String(hour).padStart(2, "0")}`,
     title,
     contentHtml: body,
