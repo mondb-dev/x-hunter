@@ -67,6 +67,17 @@ TWEET_END=23          # latest hour exclusive
 
 trap 'echo "[run] Stopping..."; bash "$PROJECT_ROOT/scraper/stop.sh" 2>/dev/null; bash "$PROJECT_ROOT/stream/stop.sh" 2>/dev/null; exit 0' INT TERM
 
+# ── Session reset helper ──────────────────────────────────────────────────────
+reset_session() {
+  local DIR="$HOME/.openclaw/agents/$1/sessions"
+  local OLD; OLD=$(ls "$DIR"/*.jsonl 2>/dev/null | grep -v '\.bak$' | head -1)
+  if [ -n "$OLD" ]; then
+    mv "$OLD" "${OLD}.bak" 2>/dev/null || true
+    echo "{}" > "$DIR/sessions.json"
+    echo "[run] $1 session reset (context flush)"
+  fi
+}
+
 while true; do
   CYCLE=$((CYCLE + 1))
   TODAY=$(date +%Y-%m-%d)
@@ -104,31 +115,22 @@ while true; do
   openclaw browser --browser-profile x-hunter start 2>/dev/null || true
   sleep 1
 
-  # ── Before tweet/quote cycles, restart gateway to clear stale browser
-  #    control service state (prevents 20s timeout errors) ──────────────
+  # ── Before tweet/quote cycles, hard-restart browser + gateway to clear
+  #    stale browser control service state (prevents 20s timeout errors) ──
+  #    Also reset x-hunter-tweet session -- it fills fast (373KB digest/cycle)
   if [ "$CYCLE_TYPE" = "TWEET" ] || [ "$CYCLE_TYPE" = "QUOTE" ]; then
-    openclaw gateway restart 2>/dev/null || true
-    sleep 4
-    openclaw browser --browser-profile x-hunter start 2>/dev/null || true
+    openclaw browser --browser-profile x-hunter stop 2>/dev/null || true
     sleep 2
-    echo "[run] gateway + browser refreshed before $CYCLE_TYPE cycle"
+    reset_session x-hunter-tweet  # flush BEFORE gateway restart so gateway loads clean state
+    openclaw gateway restart 2>/dev/null || true
+    sleep 5
+    openclaw browser --browser-profile x-hunter start 2>/dev/null || true
+    sleep 6
+    echo "[run] gateway + browser hard-restarted before $CYCLE_TYPE cycle"
   fi
 
-  # ── Reset agent sessions periodically to prevent Gemini token-per-minute
-  #    quota exhaustion from accumulated context ──────────────────────────
-  #    x-hunter (browse): every 72 cycles = 24h
-  #    x-hunter-tweet:    every 18 cycles = 6h (runs every 2-3 cycles, fills faster)
-  reset_session() {
-    local DIR="$HOME/.openclaw/agents/$1/sessions"
-    local OLD; OLD=$(ls "$DIR"/*.jsonl 2>/dev/null | grep -v '\.bak$' | head -1)
-    if [ -n "$OLD" ]; then
-      mv "$OLD" "${OLD}.bak" 2>/dev/null || true
-      echo "{}" > "$DIR/sessions.json"
-      echo "[run] $1 session reset (context flush)"
-    fi
-  }
-  if [ $(( CYCLE % 72 )) -eq 0 ]; then reset_session x-hunter; fi
-  if [ $(( CYCLE % 18 )) -eq 0 ]; then reset_session x-hunter-tweet; fi
+  # ── Reset browse session periodically (every 12 cycles = 4h) ─────────────
+  if [ $(( CYCLE % 12 )) -eq 0 ]; then reset_session x-hunter; fi
 
   # ── First-ever cycle: intro tweet + profile setup ─────────────────────────
   if [ "$JOURNAL_COUNT" -eq 0 ]; then
@@ -254,7 +256,7 @@ QUOTEMSG
   # ── Tweet cycle: synthesize, journal, tweet, push ─────────────────────────
   else
     AGENT_MSG=$(cat <<TWEETMSG
-Today is $TODAY $NOW. This is tweet cycle $CYCLE -- synthesize, journal, tweet, push.
+Today is $TODAY $NOW. This is tweet cycle $CYCLE -- synthesize, journal, draft tweet.
 
 Your task:
 1. Read state/browse_notes.md -- everything noted in the last browse cycles.
@@ -265,30 +267,59 @@ Your task:
    A quote of your own past post counts as the tweet for this cycle.
 4. Synthesize: what is the single clearest insight, tension, or question from this window?
 5. Write the journal entry: journals/${TODAY}_${HOUR}.html
-6. Draft the tweet. Two formats:
-   FORMAT A (single tweet): the geist of the synthesis in one honest sentence or question.
-     Add the journal URL on a new line: https://sebastianhunter.fun/journal/${TODAY}/${HOUR}
-     Total <= 280 characters.
-   FORMAT B (thread, 3-5 tweets): use when the synthesis has distinct parts each needing a line.
-     Post tweet 1 at https://x.com/compose/post -- note its URL.
-     Navigate to that tweet URL and reply to yourself for tweets 2 onward.
-     Log all tweet URLs in posts_log.json. Only tweet 1 needs the journal URL.
-7. Self-check (AGENTS.md section 13.3). If not genuine -- skip the tweet, still do the rest.
-8. Post via https://x.com/compose/post
-9. Log to state/posts_log.json (include journal_url field).
+6. Draft the tweet. One sentence -- the geist of the synthesis, honest and direct.
+   Add the journal URL on a new line: https://sebastianhunter.fun/journal/${TODAY}/${HOUR}
+   Total <= 280 characters.
+7. Self-check (AGENTS.md section 13.3). If not genuine -- write SKIP to state/tweet_draft.txt, still do the rest.
+8. Write the final tweet text to state/tweet_draft.txt (overwrite).
+   DO NOT use the browser -- the runner will post it automatically.
+9. Log to state/posts_log.json (tweet_url will be filled in by runner after posting; use "" for now).
 10. Update state/ontology.json and state/belief_state.json.
 11. Clear state/browse_notes.md (overwrite with empty string -- start fresh next window).
 12. Clear state/feed_digest.txt (overwrite with empty string -- scraper will refill it).
-13. Git commit and push:
-    git add journals/ checkpoints/ state/ && git commit -m "cycle ${CYCLE}: ${TODAY} ${NOW}" && git push origin main
-14. Done -- do not start another cycle.
+13. Done -- do not use browser, do not git push. The runner handles posting and git.
 
 TWEETMSG
 )
+    rm -f "$PROJECT_ROOT/state/tweet_draft.txt" "$PROJECT_ROOT/state/tweet_result.txt"
     openclaw agent --agent x-hunter-tweet \
       --message "$AGENT_MSG" \
       --thinking high \
       --verbose on
+
+    # ── Post tweet via CDP (no browser tool needed from agent) ──────────────
+    if [ -f "$PROJECT_ROOT/state/tweet_draft.txt" ]; then
+      DRAFT=$(cat "$PROJECT_ROOT/state/tweet_draft.txt")
+      if [ "$DRAFT" = "SKIP" ]; then
+        echo "[run] Agent chose to skip tweet this cycle (self-check failed)"
+      else
+        echo "[run] Posting tweet via CDP..."
+        node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1
+        TWEET_URL=$(cat "$PROJECT_ROOT/state/tweet_result.txt" 2>/dev/null | tr -d '\n')
+        if [ -n "$TWEET_URL" ] && [ "$TWEET_URL" != "posted" ]; then
+          echo "[run] Tweet posted: $TWEET_URL"
+          # Patch posts_log.json with the real tweet URL
+          node -e "
+            const fs=require('fs'), p='$PROJECT_ROOT/state/posts_log.json';
+            const log=JSON.parse(fs.readFileSync(p,'utf-8'));
+            const last=log.posts[log.posts.length-1];
+            if(last && !last.tweet_url) { last.tweet_url='$TWEET_URL'; last.posted_at=new Date().toISOString(); }
+            fs.writeFileSync(p,JSON.stringify(log,null,2));
+            console.log('[run] posts_log.json updated with tweet_url');
+          " 2>&1 || true
+        else
+          echo "[run] Tweet posted (URL not captured or post_tweet.js failed)"
+        fi
+      fi
+    else
+      echo "[run] No tweet_draft.txt — agent did not produce a draft"
+    fi
+
+    # ── Git commit and push ─────────────────────────────────────────────────
+    git -C "$PROJECT_ROOT" add journals/ checkpoints/ state/ 2>/dev/null || true
+    git -C "$PROJECT_ROOT" commit -m "cycle ${CYCLE}: ${TODAY} ${NOW}" 2>/dev/null || true
+    git -C "$PROJECT_ROOT" push origin main 2>/dev/null || true
+    echo "[run] git push done"
 
     # Archive new journals/checkpoints to Irys + local memory index
     node "$PROJECT_ROOT/runner/archive.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
