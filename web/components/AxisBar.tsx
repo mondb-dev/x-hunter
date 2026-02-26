@@ -7,9 +7,14 @@ interface AxisBarProps {
 }
 
 export default function AxisBar({ axis }: AxisBarProps) {
-  // score is [-1, 1] — map to 0–100% for CSS
+  // score [-1, 1] → position 0–100% on track (50% = neutral center)
   const pct = ((axis.score + 1) / 2) * 100;
   const confidence = Math.round(axis.confidence * 100);
+
+  // Fill extends from center (50%) to marker — direction shows which pole dominates
+  const fillLeft  = Math.min(50, pct);
+  const fillWidth = Math.abs(pct - 50);
+  const fillColor = axis.score >= 0 ? "var(--amber)" : "var(--accent)";
 
   return (
     <div className="axis-bar">
@@ -24,7 +29,8 @@ export default function AxisBar({ axis }: AxisBarProps) {
       </div>
 
       <div className="axis-track">
-        <div className="axis-fill" style={{ width: `${pct}%` }} />
+        <div className="axis-center-tick" />
+        <div className="axis-fill" style={{ left: `${fillLeft}%`, width: `${fillWidth}%`, background: fillColor }} />
         <div className="axis-marker" style={{ left: `${pct}%` }} />
       </div>
 

@@ -1,5 +1,4 @@
 import { readOntology } from "@/lib/readOntology";
-import ParticleFieldClient from "@/components/ParticleFieldClient";
 import AxisBar from "@/components/AxisBar";
 
 
@@ -19,13 +18,6 @@ export default async function OntologyPage() {
 
   return (
     <>
-      <div className="hero" style={{ height: "260px", marginBottom: "2rem" }}>
-        <div className="hero-canvas">
-          <ParticleFieldClient axes={axes} />
-        </div>
-        <span className="hero-label">belief field — live</span>
-      </div>
-
       <div className="ontology-meta">
         <div className="ontology-stat">
           <span className="stat-val">{axes.length}</span>
