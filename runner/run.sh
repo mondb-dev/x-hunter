@@ -258,26 +258,25 @@ QUOTEMSG
     AGENT_MSG=$(cat <<TWEETMSG
 Today is $TODAY $NOW. This is tweet cycle $CYCLE -- synthesize, journal, draft tweet.
 
+⚠️  FILE-ONLY CYCLE: You must NOT call the browser tool at any point.
+    Only use read/write file tools. The runner posts the tweet for you.
+
 Your task:
 1. Read state/browse_notes.md -- everything noted in the last browse cycles.
-2. Read state/feed_digest.txt -- the latest scored digest for any final context.
-3. Read state/memory_recall.txt -- your relevant past thinking on current topics.
-   Check if any past tweet (type: tweet) is directly relevant to this synthesis.
-   If yes, consider quoting that past tweet instead of posting fresh -- "Revisiting this..." framing.
-   A quote of your own past post counts as the tweet for this cycle.
-4. Synthesize: what is the single clearest insight, tension, or question from this window?
-5. Write the journal entry: journals/${TODAY}_${HOUR}.html
-6. Draft the tweet. One sentence -- the geist of the synthesis, honest and direct.
+2. Read state/memory_recall.txt -- your relevant past thinking on current topics.
+   (Do NOT read state/feed_digest.txt -- it is too large and not needed here.)
+3. Synthesize: what is the single clearest insight, tension, or question from this window?
+4. Write the journal entry: journals/${TODAY}_${HOUR}.html
+5. Draft the tweet. One sentence -- the geist of the synthesis, honest and direct.
    Add the journal URL on a new line: https://sebastianhunter.fun/journal/${TODAY}/${HOUR}
    Total <= 280 characters.
-7. Self-check (AGENTS.md section 13.3). If not genuine -- write SKIP to state/tweet_draft.txt, still do the rest.
-8. Write the final tweet text to state/tweet_draft.txt (overwrite).
-   DO NOT use the browser -- the runner will post it automatically.
-9. Log to state/posts_log.json (tweet_url will be filled in by runner after posting; use "" for now).
-10. Update state/ontology.json and state/belief_state.json.
-11. Clear state/browse_notes.md (overwrite with empty string -- start fresh next window).
-12. Clear state/feed_digest.txt (overwrite with empty string -- scraper will refill it).
-13. Done -- do not use browser, do not git push. The runner handles posting and git.
+6. Self-check (AGENTS.md section 13.3). If not genuine -- write SKIP to state/tweet_draft.txt, still do the rest.
+7. Write the final tweet text to state/tweet_draft.txt (plain text, overwrite).
+   *** DO NOT call the browser tool. The runner will read this file and post automatically. ***
+8. Log to state/posts_log.json (tweet_url will be filled in by runner; use "" for now).
+9. Update state/ontology.json and state/belief_state.json.
+10. Clear state/browse_notes.md (overwrite with empty string -- start fresh next window).
+11. Done -- do not use browser, do not git push. The runner handles everything else.
 
 TWEETMSG
 )
