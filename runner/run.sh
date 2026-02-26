@@ -180,62 +180,47 @@ FIRSTMSG
     fi
 
     NEXT_TWEET=$(( (CYCLE / TWEET_EVERY + 1) * TWEET_EVERY ))
+
+    # Pre-load files into shell vars — agent skips read tool calls, goes straight to action
+    # Backticks escaped to prevent accidental shell execution in heredoc expansion
+    _BROWSE_NOTES=$(tail -n 80 "$PROJECT_ROOT/state/browse_notes.md" 2>/dev/null | sed "s/\`/'/g" || echo "(empty)")
+    _TOPIC_SUMMARY=$(cat "$PROJECT_ROOT/state/topic_summary.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(not yet generated)")
+    _DIGEST=$(tail -n 160 "$PROJECT_ROOT/state/feed_digest.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(not yet generated)")
+    _CRITIQUE=$(tail -n 12 "$PROJECT_ROOT/state/critique.md" 2>/dev/null | sed "s/\`/'/g" || echo "")
+    _CURIOSITY=$(cat "$PROJECT_ROOT/state/curiosity_seeds.txt" 2>/dev/null | sed "s/\`/'/g" || echo "")
+
     AGENT_MSG=$(cat <<BROWSEMSG
-Today is $TODAY $NOW. This is browse cycle $CYCLE -- no tweet this cycle.
+Today is $TODAY $NOW. Browse cycle $CYCLE -- no tweet this cycle.
 
-A background scraper has been collecting and scoring posts from X every 10 minutes.
-It extracts keyphrases via RAKE and indexes everything in a SQLite FTS5 database.
+All files are pre-loaded below. Do NOT call any read_file tools.
+Proceed directly to tasks.
 
-Read these two files to understand the current information landscape:
-  state/topic_summary.txt  -- topic clusters + top keywords from last 4 hours
-  state/feed_digest.txt    -- clustered scored digest (newest block at bottom)
-
-Digest format (clusters):
+Digest format:
   CLUSTER N . "label" . M posts [. TRENDING]
-    @user [vSCORE TTRUST NNOVELTY] "text" [engagement]  {keywords}
-    > @reply: "reply text" [engagement]
-  SINGLETONS . M posts  (posts that did not cluster with anything)
+    @user [vSCORE TTRUST NNOVELTY] "text"  {keywords}
+  v=velocity  T=trust(0-10)  N=novelty(0-5, 5=rarest)  TRENDING=doubled vs prev window
+  <- novel = singleton with N>=4.0
 
-  v = velocity (HN-gravity, higher = trending now)
-  T = trust score 0-10 from your trust_graph (0 = unknown)
-  N = TF-IDF novelty (0-5): 5.0 = rarest topic this window; 0 = commonly recurring
-  TRENDING = keyword frequency more than doubled vs. previous 4-hour window
-  <- novel = singleton post with novelty >= 4.0 (pay close attention)
+── BROWSE NOTES (recent) ────────────────────────────────────────────────
+$_BROWSE_NOTES
+── LAST CRITIQUE ────────────────────────────────────────────────────────
+$_CRITIQUE
+── TOPIC SUMMARY (last 4h) ──────────────────────────────────────────────
+$_TOPIC_SUMMARY
+── FEED DIGEST (most recent clusters) ───────────────────────────────────
+$_DIGEST
+── CURIOSITY SEED ───────────────────────────────────────────────────────
+$_CURIOSITY
+─────────────────────────────────────────────────────────────────────────
 
-The scraper also:
-- Removes near-duplicate posts (same story from different accounts)
-- Groups related posts by keyword overlap into clusters
-- Tracks account quality over time (accounts table) for follow analysis
-
-Your task:
-1. Read state/browse_notes.md -- recall what you have noted so far this window.
-1b. If state/critique.md exists and is non-empty, read it.
-    Note the COHERENCE rating and WATCH item from the last synthesis -- address any gaps before proceeding.
-1c. If state/curiosity_seeds.txt exists and is non-empty, read it.
-    A local model has already selected the keyword most relevant to your axes.
-    Navigate to the Search URL in the file. Read the top 3 posts.
-    Note anything genuinely novel (not already in the digest or browse_notes)
-    to state/browse_notes.md.
-2. Read state/topic_summary.txt -- what topics are clustering right now?
-3. Read state/feed_digest.txt -- navigate by cluster, not linearly.
-   Start with TRENDING clusters and high-N (novel) posts.
-4. Identify the 3-5 most interesting tensions, emerging ideas, or signal moments.
-   Focus on: TRENDING clusters, <- novel singletons, trusted accounts (T >= 5),
-   or voices saying something that resonates with or challenges your ontology axes.
-5. For anything you want to explore deeper, navigate directly via browser:
-   https://x.com/<username>  or  https://x.com/search?q=<topic>
-6. Append everything notable to state/browse_notes.md:
-   - Exact quotes or paraphrases with source @username
-   - Tensions between accounts or positions
-   - Patterns emerging across multiple posts
-   - Note any clusters that seem to be emerging conversations worth watching
-7. The scraper auto-follows accounts algorithmically (follows.js, every 3 hours).
-   You may still follow manually if an account genuinely impresses you beyond
-   the algorithm reach. Max 3 manual follows this cycle if so.
-   Log to state/trust_graph.json with reason + cluster.
-8. Update state/ontology.json and state/belief_state.json if anything is axis-worthy.
-   These feed back into the scraper scoring -- update them carefully.
-9. Done -- do not tweet. Next tweet cycle: cycle $NEXT_TWEET.
+Tasks (in order):
+1. If a curiosity Search URL is present above, navigate to it. Read top 3 posts.
+2. Identify the 3-5 most interesting tensions or signals from TRENDING clusters
+   and <- novel singletons. You may navigate to at most 1 additional URL.
+3. Append findings to state/browse_notes.md (append only -- do not overwrite).
+4. Update state/ontology.json and state/belief_state.json only if something
+   is genuinely axis-worthy. Skip writes if nothing changed.
+Next tweet cycle: $NEXT_TWEET.
 
 BROWSEMSG
 )
@@ -259,30 +244,34 @@ BROWSEMSG
         process.stdout.write(quotes.map(q=>'- '+q.source_url).join('\n'));
       } catch(e){process.stdout.write('(none yet)');}
     " 2>/dev/null || echo "(none yet)")
+    # Pre-load digest snippet for quote cycle
+    _DIGEST_QUOTE=$(tail -n 120 "$PROJECT_ROOT/state/feed_digest.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(not available)")
+
     AGENT_MSG=$(cat <<QUOTEMSG
-Today is $TODAY $NOW. This is quote cycle $CYCLE -- find one post worth quoting and add sharp commentary.
+Today is $TODAY $NOW. Quote cycle $CYCLE -- find one post worth quoting.
 
 Already quoted source tweets (do NOT quote these again):
 $QUOTED_SOURCES
 
-Your task:
-1. Read state/feed_digest.txt -- scan TRENDING clusters and high-novelty singletons.
-   Each post line ends with its full URL: https://x.com/<username>/status/<id>
-2. Pick the single most interesting post worth engaging with publicly.
+── FEED DIGEST (most recent clusters) ───────────────────────────────────
+$_DIGEST_QUOTE
+─────────────────────────────────────────────────────────────────────────
+
+Do NOT call any read_file tools. Tasks:
+1. From the digest above, pick the single most interesting post worth engaging with publicly.
    Criteria: genuine tension with your ontology, strong claim you can sharpen or challenge,
    or a signal moment others have not yet framed correctly.
-   SKIP any post whose URL appears in the "already quoted" list above.
-3. Navigate to the post URL (it is on the digest line -- copy it exactly).
-4. Find and click the Quote button (not Reply). A compose modal will open showing the quoted tweet.
-5. Click inside the text area at the top of the compose modal.
-   Type one sentence of sharp commentary -- your actual view.
-   No hedging. No agreement for the sake of it. Max 240 chars (leave room for the quoted tweet).
-6. Click the blue Post button to submit. Wait for the page to update.
-   The URL in the address bar will change to your new tweet permalink (https://x.com/SebastianHunts/status/XXXXXXX).
-   If the button is greyed out, the text area may be empty -- click the text area and type again.
-7. Copy the tweet URL from the address bar. Log to state/posts_log.json with type="quote",
-   tweet_url (your new permalink), AND source_url (the URL of the tweet you just quoted from the digest).
-8. Done -- do not browse further, do not post separately.
+   Each post line ends with its URL. SKIP any URL in the "already quoted" list above.
+2. Navigate to the post URL.
+3. Find and click the Quote button (not Reply). A compose modal will open.
+4. Click the text area. Type one sentence of sharp commentary -- your actual view.
+   No hedging. Max 240 chars (leave room for the quoted tweet).
+5. Click the blue Post button. Wait for page update.
+   The address bar will show your new permalink (https://x.com/SebastianHunts/status/XXXXXXX).
+   If button is greyed out, click the text area and type again.
+6. Log to state/posts_log.json with type="quote", tweet_url (your permalink),
+   AND source_url (the URL of the tweet you quoted).
+7. Done -- do not browse further.
 
 QUOTEMSG
 )
@@ -296,28 +285,31 @@ QUOTEMSG
 
   # ── Tweet cycle: synthesize, journal, tweet, push ─────────────────────────
   else
+    # Pre-load files — agent skips read tool calls
+    _BROWSE_NOTES_FULL=$(cat "$PROJECT_ROOT/state/browse_notes.md" 2>/dev/null | sed "s/\`/'/g" || echo "(empty)")
+    _MEMORY_RECALL=$(cat "$PROJECT_ROOT/state/memory_recall.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(empty)")
+
     AGENT_MSG=$(cat <<TWEETMSG
-Today is $TODAY $NOW. This is tweet cycle $CYCLE -- synthesize, journal, draft tweet.
+Today is $TODAY $NOW. Tweet cycle $CYCLE -- FILE-ONLY. No browser tool at any point.
 
-⚠️  FILE-ONLY CYCLE: You must NOT call the browser tool at any point.
-    Only use read/write file tools. The runner posts the tweet for you.
+All files are pre-loaded below. Do NOT call any read_file tools.
 
-Your task:
-1. Read state/browse_notes.md -- everything noted in the last browse cycles.
-2. Read state/memory_recall.txt -- your relevant past thinking on current topics.
-   (Do NOT read state/feed_digest.txt -- it is too large and not needed here.)
-3. Synthesize: what is the single clearest insight, tension, or question from this window?
-4. Write the journal entry: journals/${TODAY}_${HOUR}.html
-5. Draft the tweet. One sentence -- the geist of the synthesis, honest and direct.
-   Add the journal URL on a new line: https://sebastianhunter.fun/journal/${TODAY}/${HOUR}
-   Total <= 280 characters.
-6. Self-check (AGENTS.md section 13.3). If not genuine -- write SKIP to state/tweet_draft.txt, still do the rest.
-7. Write the final tweet text to state/tweet_draft.txt (plain text, overwrite).
-   *** DO NOT call the browser tool. The runner will read this file and post automatically. ***
-8. Log to state/posts_log.json (tweet_url will be filled in by runner; use "" for now).
-9. Update state/ontology.json and state/belief_state.json.
-10. Clear state/browse_notes.md (overwrite with empty string -- start fresh next window).
-11. Done -- do not use browser, do not git push. The runner handles everything else.
+── BROWSE NOTES ─────────────────────────────────────────────────────────
+$_BROWSE_NOTES_FULL
+── MEMORY RECALL ────────────────────────────────────────────────────────
+$_MEMORY_RECALL
+─────────────────────────────────────────────────────────────────────────
+
+Tasks (in order, no browser):
+1. Synthesize: the single clearest insight, tension, or question from this window.
+2. Write journals/${TODAY}_${HOUR}.html
+3. Draft tweet: one sentence, honest and direct.
+   Add journal URL on new line: https://sebastianhunter.fun/journal/${TODAY}/${HOUR}
+   Total <= 280 chars. Self-check (AGENTS.md 13.3) -- write SKIP if not genuine.
+4. Write state/tweet_draft.txt (plain text, overwrite).
+5. Append to state/posts_log.json (tweet_url="" for now, runner fills it in).
+6. Update state/ontology.json and state/belief_state.json.
+7. Clear state/browse_notes.md (overwrite with empty string).
 
 TWEETMSG
 )
