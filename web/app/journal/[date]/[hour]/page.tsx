@@ -25,9 +25,17 @@ export default async function JournalEntryPage({
   const entry = getJournalEntry(date, hourNum);
   if (!entry) notFound();
 
-  // Adjacent hours for prev/next navigation
-  const prevHour = hourNum > 0 ? String(hourNum - 1).padStart(2, "0") : null;
-  const nextHour = hourNum < 23 ? String(hourNum + 1).padStart(2, "0") : null;
+  // Find actual adjacent entries (not just ±1 hour — those files may not exist)
+  const allEntries = getAllJournalDays()
+    .flatMap((d) => d.entries)
+    .sort((a, b) => a.date.localeCompare(b.date) || a.hour - b.hour);
+  const idx = allEntries.findIndex((e) => e.date === date && e.hour === hourNum);
+  const prevEntry = idx > 0 ? allEntries[idx - 1] : null;
+  const nextEntry = idx < allEntries.length - 1 ? allEntries[idx + 1] : null;
+  const prevHref = prevEntry ? `/journal/${prevEntry.date}/${String(prevEntry.hour).padStart(2, "0")}` : null;
+  const nextHref = nextEntry ? `/journal/${nextEntry.date}/${String(nextEntry.hour).padStart(2, "0")}` : null;
+  const prevLabel = prevEntry ? `← ${String(prevEntry.hour).padStart(2, "0")}:00` : null;
+  const nextLabel = nextEntry ? `${String(nextEntry.hour).padStart(2, "0")}:00 →` : null;
 
   return (
     <>
@@ -35,15 +43,11 @@ export default async function JournalEntryPage({
         <div className="report-day">Day {entry.day} · {date}</div>
         <h1 className="report-title">{String(hourNum).padStart(2, "0")}:00 Field Notes</h1>
         <div className="journal-nav">
-          {prevHour && (
-            <Link href={`/journal/${date}/${prevHour}`}>← {prevHour}:00</Link>
-          )}
+          {prevHref && <Link href={prevHref}>{prevLabel}</Link>}
           <Link href="/journals" style={{ margin: "0 1rem", color: "var(--muted)" }}>
             all entries
           </Link>
-          {nextHour && (
-            <Link href={`/journal/${date}/${nextHour}`}>{nextHour}:00 →</Link>
-          )}
+          {nextHref && <Link href={nextHref}>{nextLabel}</Link>}
           {entry.arweaveUrl && (
             <a
               href={entry.arweaveUrl}
