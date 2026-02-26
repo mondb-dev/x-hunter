@@ -191,13 +191,13 @@ or
 {"verdict":"SKIP","reason":"brief reason"}`;
 
   const res = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         contents: [{ role: "user", parts: [{ text: prompt }] }],
-        generationConfig: { temperature: 0.7, maxOutputTokens: 400 },
+        generationConfig: { temperature: 0.7, maxOutputTokens: 1024 },
       }),
     }
   );
@@ -209,7 +209,9 @@ or
 
   const data = await res.json();
   const text = data.candidates?.[0]?.content?.parts?.[0]?.text || "";
-  const match = text.match(/\{[\s\S]*?\}/);
+  // Strip optional markdown fences, then extract the JSON object (greedy match)
+  const stripped = text.replace(/```(?:json)?\s*/gi, "").replace(/```\s*/g, "").trim();
+  const match = stripped.match(/\{[\s\S]*\}/);
   if (!match) throw new Error(`Gemini returned no JSON. Raw: ${text.slice(0, 300)}`);
   return JSON.parse(match[0]);
 }

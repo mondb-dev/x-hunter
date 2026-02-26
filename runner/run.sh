@@ -221,6 +221,9 @@ BROWSEMSG
       --thinking low \
       --verbose on
 
+    # ── Process pending replies after each browse cycle ───────────────────
+    node "$PROJECT_ROOT/scraper/reply.js" 2>&1 || true
+
   # ── Quote cycle: find one post worth quoting + sharp commentary ──────────
   elif [ "$CYCLE_TYPE" = "QUOTE" ]; then
     AGENT_MSG=$(cat <<QUOTEMSG
