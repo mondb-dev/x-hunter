@@ -70,12 +70,13 @@ trap 'echo "[run] Stopping..."; bash "$PROJECT_ROOT/scraper/stop.sh" 2>/dev/null
 # ── Session reset helper ──────────────────────────────────────────────────────
 reset_session() {
   local DIR="$HOME/.openclaw/agents/$1/sessions"
-  local OLD; OLD=$(ls "$DIR"/*.jsonl 2>/dev/null | grep -v '\.bak$' | head -1)
-  if [ -n "$OLD" ]; then
-    mv "$OLD" "${OLD}.bak" 2>/dev/null || true
-    echo "{}" > "$DIR/sessions.json"
-    echo "[run] $1 session reset (context flush)"
-  fi
+  # Delete all JSONL files (not .bak) and wipe sessions.json so gateway starts truly fresh
+  local FOUND=0
+  for f in "$DIR"/*.jsonl; do
+    [ -f "$f" ] && rm -f "$f" && FOUND=1
+  done
+  echo "{}" > "$DIR/sessions.json"
+  [ "$FOUND" -eq 1 ] && echo "[run] $1 session reset (context flush)"
 }
 
 while true; do
@@ -250,7 +251,7 @@ QUOTEMSG
 )
     openclaw agent --agent x-hunter-tweet \
       --message "$AGENT_MSG" \
-      --thinking high \
+      --thinking low \
       --verbose on
 
     # Coherence critique of the quote tweet (only if agent actually posted this cycle)
@@ -286,7 +287,7 @@ TWEETMSG
     rm -f "$PROJECT_ROOT/state/tweet_draft.txt" "$PROJECT_ROOT/state/tweet_result.txt"
     openclaw agent --agent x-hunter-tweet \
       --message "$AGENT_MSG" \
-      --thinking high \
+      --thinking low \
       --verbose on
 
     # ── Post tweet via CDP (no browser tool needed from agent) ──────────────
