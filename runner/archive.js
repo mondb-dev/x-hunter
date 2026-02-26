@@ -216,11 +216,11 @@ function scanDir(dir, pattern) {
         date:        parsed.date,
         hour:        parsed.hour ?? null,
         file:        relPath,
-        gateway:     `https://arweave.net/${txId}`,
+        gateway:     `https://gateway.irys.xyz/${txId}`,
         uploaded_at: new Date().toISOString(),
       });
       uploaded++;
-      console.log(`[archive] uploaded to Arweave: https://arweave.net/${txId}`);
+      console.log(`[archive] uploaded to Arweave: https://gateway.irys.xyz/${txId}`);
     }
   }
 
