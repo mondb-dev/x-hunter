@@ -58,12 +58,16 @@ bash "$PROJECT_ROOT/scraper/start.sh"
 # Browse cycle: every 20 minutes (AI reads pre-scraped digest)
 # Quote cycle:  every 3rd browse cycle (every 1 hour, midpoint between tweets)
 # Tweet cycle:  every 6th browse cycle (every 2 hours, active hours only)
+# Clear stale curiosity file from any previous run so the agent never acts on old data
+rm -f "$PROJECT_ROOT/state/curiosity_seeds.txt"
+
 CYCLE=0
 BROWSE_INTERVAL=1200  # 20 minutes in seconds
 TWEET_EVERY=6         # tweet on cycles 6, 12, 18, ... (every 2 hours)
 QUOTE_OFFSET=3        # quote-tweet on cycles 3, 9, 15, ... (midpoint between tweets)
 TWEET_START=7         # earliest hour to post original tweets (0-23 UTC)
 TWEET_END=23          # latest hour exclusive
+CURIOSITY_EVERY=4     # curiosity search on browse cycles 4, 8, 16, ...
 
 trap 'echo "[run] Stopping..."; bash "$PROJECT_ROOT/scraper/stop.sh" 2>/dev/null; bash "$PROJECT_ROOT/stream/stop.sh" 2>/dev/null; exit 0' INT TERM
 
@@ -131,7 +135,15 @@ while true; do
   fi
 
   # ── Reset browse session periodically (every 12 cycles = 4h) ─────────────
-  if [ $(( CYCLE % 12 )) -eq 0 ]; then reset_session x-hunter; fi
+  # Must restart gateway (not just wipe files) -- gateway caches session in memory.
+  if [ $(( CYCLE % 12 )) -eq 0 ]; then
+    reset_session x-hunter
+    openclaw gateway restart 2>/dev/null || true
+    sleep 3
+    openclaw browser --browser-profile x-hunter start 2>/dev/null || true
+    sleep 3
+    echo "[run] x-hunter session + gateway restarted (context flush cycle $CYCLE)"
+  fi
 
   # ── First-ever cycle: intro tweet + profile setup ─────────────────────────
   if [ "$JOURNAL_COUNT" -eq 0 ]; then
@@ -161,6 +173,11 @@ FIRSTMSG
     # Generate topic summary + memory recall from SQLite index before invoking AI
     node "$PROJECT_ROOT/scraper/query.js" --hours 4 > /dev/null 2>&1 || true
     node "$PROJECT_ROOT/runner/recall.js" --limit 5 >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+
+    # Curiosity seeds: LLM picks best keyword (from top scraped) every 4th browse cycle
+    if [ $(( CYCLE % CURIOSITY_EVERY )) -eq 0 ]; then
+      node "$PROJECT_ROOT/runner/curiosity.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    fi
 
     NEXT_TWEET=$(( (CYCLE / TWEET_EVERY + 1) * TWEET_EVERY ))
     AGENT_MSG=$(cat <<BROWSEMSG
@@ -194,6 +211,11 @@ Your task:
 1. Read state/browse_notes.md -- recall what you have noted so far this window.
 1b. If state/critique.md exists and is non-empty, read it.
     Note the COHERENCE rating and WATCH item from the last synthesis -- address any gaps before proceeding.
+1c. If state/curiosity_seeds.txt exists and is non-empty, read it.
+    A local model has already selected the keyword most relevant to your axes.
+    Navigate to the Search URL in the file. Read the top 3 posts.
+    Note anything genuinely novel (not already in the digest or browse_notes)
+    to state/browse_notes.md.
 2. Read state/topic_summary.txt -- what topics are clustering right now?
 3. Read state/feed_digest.txt -- navigate by cluster, not linearly.
    Start with TRENDING clusters and high-N (novel) posts.

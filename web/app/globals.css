@@ -141,6 +141,21 @@ main {
   text-transform: uppercase;
 }
 
+/* ── Belief state hero ── */
+.belief-hero { padding: 1.5rem 2rem; margin-bottom: 3rem; border: 1px solid var(--border); border-radius: 4px; background: var(--surface); }
+.belief-hero-header { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.25rem; }
+.belief-axes-mini { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.25rem; }
+.belief-axis-mini { display: flex; flex-direction: column; gap: 0.4rem; }
+.belief-axis-mini-header { display: flex; justify-content: space-between; align-items: baseline; }
+.belief-axis-mini-label { font-size: 13px; font-weight: 600; }
+.belief-axis-mini-meta { font-size: 11px; color: var(--muted); }
+.belief-mini-track { position: relative; height: 3px; background: var(--border); border-radius: 2px; }
+.belief-mini-fill { position: absolute; top: 0; height: 100%; border-radius: 2px; }
+.belief-mini-tick { position: absolute; left: 50%; top: -2px; width: 1px; height: 7px; background: var(--muted); transform: translateX(-50%); opacity: 0.4; }
+.belief-mini-marker { position: absolute; top: -3px; width: 9px; height: 9px; border-radius: 50%; background: var(--text); border: 2px solid var(--surface); transform: translateX(-50%); }
+.belief-hero-link { font-size: 11px; color: var(--muted); text-decoration: none; letter-spacing: 0.05em; }
+.belief-hero-link:hover { color: var(--text); text-decoration: none; }
+
 /* ── Journal index ── */
 .journal-list { display: flex; flex-direction: column; gap: 1px; }
 .journal-item {
@@ -191,7 +206,8 @@ main {
 .axis-confidence { font-size: 11px; color: var(--muted); }
 .axis-poles { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); margin-bottom: 0.5rem; }
 .axis-track { position: relative; height: 4px; background: var(--border); border-radius: 2px; margin-bottom: 0.6rem; }
-.axis-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--amber)); border-radius: 2px; }
+.axis-fill { position: absolute; top: 0; height: 100%; border-radius: 2px; }
+.axis-center-tick { position: absolute; left: 50%; top: -3px; width: 1px; height: 10px; background: var(--muted); transform: translateX(-50%); opacity: 0.4; }
 .axis-marker { position: absolute; top: -4px; width: 12px; height: 12px; border-radius: 50%; background: var(--text); border: 2px solid var(--bg); transform: translateX(-50%); }
 .axis-topics { display: flex; gap: 0.4rem; flex-wrap: wrap; }
 .topic-tag { font-size: 10px; padding: 0.15em 0.6em; background: var(--surface); border: 1px solid var(--border); border-radius: 2px; color: var(--muted); }
