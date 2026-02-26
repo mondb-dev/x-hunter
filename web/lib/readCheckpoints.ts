@@ -12,7 +12,7 @@ export interface Checkpoint {
   contentHtml: string;
 }
 
-const CHECKPOINTS_DIR = path.resolve(process.cwd(), "data/checkpoints");
+const CHECKPOINTS_DIR = path.resolve(process.cwd(), "../checkpoints");
 
 export function getAllCheckpoints(): Checkpoint[] {
   if (!fs.existsSync(CHECKPOINTS_DIR)) return [];

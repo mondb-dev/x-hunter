@@ -17,8 +17,8 @@ export interface JournalDay {
   entries: JournalEntry[];
 }
 
-const JOURNALS_DIR  = path.resolve(process.cwd(), "data/journals");
-const ARWEAVE_LOG   = path.resolve(process.cwd(), "data/state/arweave_log.json");
+const JOURNALS_DIR  = path.resolve(process.cwd(), "../journals");
+const ARWEAVE_LOG   = path.resolve(process.cwd(), "../state/arweave_log.json");
 
 // Build a map of journal file path → Arweave gateway URL
 function loadArweaveIndex(): Map<string, string> {
