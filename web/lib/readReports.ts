@@ -13,7 +13,7 @@ export interface Report {
   contentHtml: string;
 }
 
-const DAILY_DIR = path.resolve(process.cwd(), "data/daily");
+const DAILY_DIR = path.resolve(process.cwd(), "../daily");
 
 function parseDayFromFilename(filename: string): number {
   // Expect filenames like belief_report_YYYY-MM-DD.md
@@ -56,7 +56,7 @@ export async function getReportByDay(day: number): Promise<Report | null> {
 }
 
 export async function getManifesto(): Promise<{ contentHtml: string } | null> {
-  const manifestoPath = path.resolve(process.cwd(), "data/manifesto.md");
+  const manifestoPath = path.resolve(process.cwd(), "../manifesto.md");
   if (!fs.existsSync(manifestoPath)) return null;
 
   const raw = fs.readFileSync(manifestoPath, "utf-8");
