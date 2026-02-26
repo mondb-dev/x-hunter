@@ -249,8 +249,21 @@ BROWSEMSG
 
   # ── Quote cycle: find one post worth quoting + sharp commentary ──────────
   elif [ "$CYCLE_TYPE" = "QUOTE" ]; then
+    # Build a compact list of already-quoted source URLs for dedup
+    QUOTED_SOURCES=$(node -e "
+      const fs=require('fs'), p='$PROJECT_ROOT/state/posts_log.json';
+      try {
+        const posts=JSON.parse(fs.readFileSync(p,'utf-8')).posts||[];
+        const quotes=posts.filter(p=>p.type==='quote'&&p.source_url);
+        if(quotes.length===0){process.stdout.write('(none yet)');process.exit(0);}
+        process.stdout.write(quotes.map(q=>'- '+q.source_url).join('\n'));
+      } catch(e){process.stdout.write('(none yet)');}
+    " 2>/dev/null || echo "(none yet)")
     AGENT_MSG=$(cat <<QUOTEMSG
 Today is $TODAY $NOW. This is quote cycle $CYCLE -- find one post worth quoting and add sharp commentary.
+
+Already quoted source tweets (do NOT quote these again):
+$QUOTED_SOURCES
 
 Your task:
 1. Read state/feed_digest.txt -- scan TRENDING clusters and high-novelty singletons.
@@ -258,6 +271,7 @@ Your task:
 2. Pick the single most interesting post worth engaging with publicly.
    Criteria: genuine tension with your ontology, strong claim you can sharpen or challenge,
    or a signal moment others have not yet framed correctly.
+   SKIP any post whose URL appears in the "already quoted" list above.
 3. Navigate to the post URL (it is on the digest line -- copy it exactly).
 4. Find and click the Quote button (not Reply). A compose modal will open showing the quoted tweet.
 5. Click inside the text area at the top of the compose modal.
@@ -266,7 +280,8 @@ Your task:
 6. Click the blue Post button to submit. Wait for the page to update.
    The URL in the address bar will change to your new tweet permalink (https://x.com/SebastianHunts/status/XXXXXXX).
    If the button is greyed out, the text area may be empty -- click the text area and type again.
-7. Copy the tweet URL from the address bar. Log to state/posts_log.json with type="quote" and tweet_url.
+7. Copy the tweet URL from the address bar. Log to state/posts_log.json with type="quote",
+   tweet_url (your new permalink), AND source_url (the URL of the tweet you just quoted from the digest).
 8. Done -- do not browse further, do not post separately.
 
 QUOTEMSG
