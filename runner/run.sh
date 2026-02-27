@@ -361,7 +361,7 @@ $_DISCOURSE_DIGEST
 ─────────────────────────────────────────────────────────────────────────
 
 Tasks (in order):
-1. CURIOSITY: If the directive above has an ACTIVE SEARCH URL and you haven't searched
+1. CURIOSITY: If the directive above has an ACTIVE SEARCH URL and you have not searched
    it this directive window, navigate to it now and read top 3-5 posts.
    For ALL browse cycles while the directive is active: follow the AMBIENT FOCUS —
    tag relevant browse_notes entries with [CURIOSITY: <axis_or_topic_id>].
