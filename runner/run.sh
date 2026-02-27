@@ -407,6 +407,12 @@ QUOTEMSG
       fi
     fi
 
+    # Snapshot critical JSON state before agent runs — restore if agent corrupts them
+    for _sf in posts_log ontology belief_state; do
+      _fp="$PROJECT_ROOT/state/${_sf}.json"
+      [ -f "$_fp" ] && cp "$_fp" "${_fp}.bak" 2>/dev/null || true
+    done
+
     # Pre-load files — agent skips read tool calls
     _BROWSE_NOTES_FULL=$(cat "$PROJECT_ROOT/state/browse_notes.md" 2>/dev/null | sed "s/\`/'/g" || echo "(empty)")
     _MEMORY_RECALL=$(cat "$PROJECT_ROOT/state/memory_recall.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(empty)")
@@ -454,12 +460,14 @@ TWEETMSG
           echo "[run] Tweet posted: $TWEET_URL"
           # Patch posts_log.json with the real tweet URL
           node -e "
-            const fs=require('fs'), p='$PROJECT_ROOT/state/posts_log.json';
-            const log=JSON.parse(fs.readFileSync(p,'utf-8'));
-            const last=log.posts[log.posts.length-1];
-            if(last && !last.tweet_url) { last.tweet_url='$TWEET_URL'; last.posted_at=new Date().toISOString(); }
-            fs.writeFileSync(p,JSON.stringify(log,null,2));
-            console.log('[run] posts_log.json updated with tweet_url');
+            try {
+              const fs=require('fs'), p='$PROJECT_ROOT/state/posts_log.json';
+              const log=JSON.parse(fs.readFileSync(p,'utf-8'));
+              const last=log.posts[log.posts.length-1];
+              if(last && !last.tweet_url) { last.tweet_url='$TWEET_URL'; last.posted_at=new Date().toISOString(); }
+              fs.writeFileSync(p,JSON.stringify(log,null,2));
+              console.log('[run] posts_log.json updated with tweet_url');
+            } catch(e) { console.error('[run] posts_log patch failed:', e.message); }
           " 2>&1 || true
         else
           echo "[run] Tweet posted (URL not captured or post_tweet.js failed)"
@@ -468,6 +476,17 @@ TWEETMSG
     else
       echo "[run] No tweet_draft.txt — agent did not produce a draft"
     fi
+
+    # ── Validate + restore state files if agent wrote malformed JSON ──────────
+    for _sf in posts_log ontology belief_state; do
+      _fp="$PROJECT_ROOT/state/${_sf}.json"
+      if [ -f "$_fp" ]; then
+        if ! node -e "JSON.parse(require('fs').readFileSync('$_fp','utf-8'))" 2>/dev/null; then
+          echo "[run] WARNING: ${_sf}.json is malformed — restoring from .bak"
+          [ -f "${_fp}.bak" ] && cp "${_fp}.bak" "$_fp" || true
+        fi
+      fi
+    done
 
     # ── Git commit and push ─────────────────────────────────────────────────
     git -C "$PROJECT_ROOT" add journals/ checkpoints/ state/ 2>/dev/null || true
