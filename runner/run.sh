@@ -244,7 +244,13 @@ FIRSTMSG
   elif [ "$CYCLE_TYPE" = "BROWSE" ]; then
     # Generate topic summary + memory recall from SQLite index before invoking AI
     node "$PROJECT_ROOT/scraper/query.js" --hours 4 > /dev/null 2>&1 || true
-    node "$PROJECT_ROOT/runner/recall.js" --limit 5 >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # Extract top 3 keywords from topic_summary.txt to make recall topic-relevant
+    RECALL_QUERY=$(grep -oP '\d+x\s+\K.+' "$PROJECT_ROOT/state/topic_summary.txt" 2>/dev/null | head -3 | tr '\n' ' ' | xargs)
+    if [ -n "$RECALL_QUERY" ]; then
+      node "$PROJECT_ROOT/runner/recall.js" --query "$RECALL_QUERY" --limit 5 >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    else
+      node "$PROJECT_ROOT/runner/recall.js" --limit 5 >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    fi
 
     # Curiosity seeds: LLM picks best keyword (from top scraped) every 4th browse cycle
     if [ $(( CYCLE % CURIOSITY_EVERY )) -eq 0 ]; then

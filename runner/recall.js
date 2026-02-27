@@ -69,7 +69,7 @@ function formatEntry(row) {
     : null;
 
   const arweave = row.tx_id
-    ? `Arweave: https://arweave.net/${row.tx_id}`
+    ? `Arweave: https://gateway.irys.xyz/${row.tx_id}`
     : "(not yet uploaded to Arweave)";
 
   return [header, `"${excerpt}..."`, tags, arweave]

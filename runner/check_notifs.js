@@ -1,4 +1,4 @@
-const { chromium } = require('playwright');
+const { chromium } = require('playwright-core');
 (async () => {
   const browser = await chromium.connectOverCDP('http://127.0.0.1:18801');
   const ctx = browser.contexts()[0];
