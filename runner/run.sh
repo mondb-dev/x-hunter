@@ -317,6 +317,9 @@ FIRSTMSG
     # Writes discourse_anchors.jsonl; curiosity.js treats these as highest-priority triggers
     node "$PROJECT_ROOT/runner/discourse_scan.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
+    # Discourse digest: format recent exchanges for agent context (browse + tweet prompts)
+    node "$PROJECT_ROOT/runner/discourse_digest.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+
     NEXT_TWEET=$(( (CYCLE / TWEET_EVERY + 1) * TWEET_EVERY ))
 
     # Pre-load files into shell vars — agent skips read tool calls, goes straight to action
@@ -327,6 +330,7 @@ FIRSTMSG
     _CRITIQUE=$(tail -n 12 "$PROJECT_ROOT/state/critique.md" 2>/dev/null | sed "s/\`/'/g" || echo "")
     _CURIOSITY_DIRECTIVE=$(cat "$PROJECT_ROOT/state/curiosity_directive.txt" 2>/dev/null | sed "s/\`/'/g" || echo "")
     _COMMENT_CANDIDATES=$(cat "$PROJECT_ROOT/state/comment_candidates.txt" 2>/dev/null | sed "s/\`/'/g" || echo "")
+    _DISCOURSE_DIGEST=$(cat "$PROJECT_ROOT/state/discourse_digest.txt" 2>/dev/null | sed "s/\`/'/g" || echo "")
 
     AGENT_MSG=$(cat <<BROWSEMSG
 Today is $TODAY $NOW. Browse cycle $CYCLE -- no tweet this cycle.
@@ -352,6 +356,8 @@ $_DIGEST
 $_CURIOSITY_DIRECTIVE
 ── COMMENT CANDIDATES ───────────────────────────────────────────────────
 $_COMMENT_CANDIDATES
+── RECENT DISCOURSE (reply exchanges) ───────────────────────────────────
+$_DISCOURSE_DIGEST
 ─────────────────────────────────────────────────────────────────────────
 
 Tasks (in order):
@@ -460,6 +466,7 @@ QUOTEMSG
     # Pre-load files — agent skips read tool calls
     _BROWSE_NOTES_FULL=$(cat "$PROJECT_ROOT/state/browse_notes.md" 2>/dev/null | sed "s/\`/'/g" || echo "(empty)")
     _MEMORY_RECALL=$(cat "$PROJECT_ROOT/state/memory_recall.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(empty)")
+    _DISCOURSE_DIGEST_TWEET=$(cat "$PROJECT_ROOT/state/discourse_digest.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(no discourse yet)")
 
     AGENT_MSG=$(cat <<TWEETMSG
 Today is $TODAY $NOW. Tweet cycle $CYCLE -- FILE-ONLY. No browser tool at any point.
@@ -470,6 +477,8 @@ All files are pre-loaded below. Do NOT call any read_file tools.
 $_BROWSE_NOTES_FULL
 ── MEMORY RECALL ────────────────────────────────────────────────────────
 $_MEMORY_RECALL
+── RECENT DISCOURSE (reply exchanges) ───────────────────────────────────
+$_DISCOURSE_DIGEST_TWEET
 ─────────────────────────────────────────────────────────────────────────
 
 Tasks (in order, no browser):
