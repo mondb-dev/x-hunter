@@ -212,15 +212,22 @@ while true; do
   openclaw browser --browser-profile x-hunter start 2>/dev/null || true
   sleep 1
 
-  # ── Before tweet/quote cycles: restart gateway + browser to get a clean
-  #    browser control service state. Uses health polling instead of fixed sleeps.
-  #    Also reset x-hunter-tweet session -- it fills fast (373KB digest/cycle)
+  # ── Before tweet/quote cycles: ensure clean session + healthy browser ────────
+  #    Only hard-restart gateway+browser if CDP is not responding.
+  #    If browser is already healthy, session reset is sufficient — a hard restart
+  #    triggers a LaunchAgent cycle that leaves the browser control service
+  #    temporarily unavailable (causes "browser control service timed out").
   if [ "$CYCLE_TYPE" = "TWEET" ] || [ "$CYCLE_TYPE" = "QUOTE" ]; then
-    reset_session x-hunter-tweet  # flush BEFORE gateway restart so gateway loads clean state
-    restart_gateway               # kill + start + poll health (~10s vs 60s)
-    start_browser                 # stop + start + poll CDP port for readiness
-    sleep 5                       # let gateway register browser control service
-    echo "[run] gateway + browser hard-restarted before $CYCLE_TYPE cycle"
+    reset_session x-hunter-tweet  # always flush tweet agent session
+    if curl -sf "http://127.0.0.1:${CDP_PORT}/json/version" -o /dev/null 2>&1; then
+      echo "[run] browser healthy — session reset only for $CYCLE_TYPE cycle"
+    else
+      echo "[run] browser not responding — hard restart before $CYCLE_TYPE cycle"
+      restart_gateway
+      start_browser
+      sleep 15  # browser control service needs ~15s to reconnect after LaunchAgent restart
+      echo "[run] gateway + browser restarted"
+    fi
   fi
 
   # ── Reset browse session periodically (every 6 cycles = 2h) ──────────────
@@ -228,8 +235,8 @@ while true; do
   if [ $(( CYCLE % 6 )) -eq 0 ]; then
     reset_session x-hunter
     restart_gateway
-    openclaw browser --browser-profile x-hunter start 2>/dev/null || true
-    sleep 3
+    start_browser
+    sleep 15  # browser control service needs ~15s after LaunchAgent restart
     echo "[run] x-hunter session + gateway restarted (context flush cycle $CYCLE)"
   fi
 
