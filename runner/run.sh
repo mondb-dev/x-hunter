@@ -313,6 +313,10 @@ FIRSTMSG
     # Comment candidates: posts where memory has something specific to say
     node "$PROJECT_ROOT/runner/comment_candidates.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
+    # Discourse scan: assess recent reply exchanges for substantive counter-reasoning
+    # Writes discourse_anchors.jsonl; curiosity.js treats these as highest-priority triggers
+    node "$PROJECT_ROOT/runner/discourse_scan.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+
     NEXT_TWEET=$(( (CYCLE / TWEET_EVERY + 1) * TWEET_EVERY ))
 
     # Pre-load files into shell vars — agent skips read tool calls, goes straight to action
