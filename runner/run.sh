@@ -195,6 +195,19 @@ while true; do
   # ── Clean stale lock files from any interrupted previous cycle ────────────
   clean_stale_locks
 
+  # ── Scraper liveness: restart collect/reply loops if they died ────────────
+  for _loop in scraper reply follows; do
+    _pid_file="$PROJECT_ROOT/scraper/${_loop}.pid"
+    if [ -f "$_pid_file" ]; then
+      _pid=$(cat "$_pid_file" 2>/dev/null || echo "0")
+      if ! kill -0 "$_pid" 2>/dev/null; then
+        echo "[run] ${_loop} loop dead (pid ${_pid}) — restarting scraper..."
+        bash "$PROJECT_ROOT/scraper/start.sh" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+        break  # start.sh restarts all loops at once
+      fi
+    fi
+  done
+
   # ── Ensure browser is alive before each cycle ────────────────────────────
   openclaw browser --browser-profile x-hunter start 2>/dev/null || true
   sleep 1
@@ -477,6 +490,14 @@ TWEETMSG
       # Delete local journal HTML files older than 7 days (already on Arweave)
       find "$PROJECT_ROOT/journals/" -name "*.html" -mtime +7 -delete 2>/dev/null \
         && echo "[run] pruned local journals older than 7 days" || true
+      # Rotate logs: keep last 5000 lines of runner.log, 3000 of scraper.log
+      for _log_pair in "$PROJECT_ROOT/runner/runner.log:5000" "$PROJECT_ROOT/scraper/scraper.log:3000"; do
+        _lf="${_log_pair%%:*}"; _lk="${_log_pair##*:}"
+        if [ -f "$_lf" ]; then
+          tail -n "$_lk" "$_lf" > "${_lf}.tmp" && mv "${_lf}.tmp" "$_lf"
+          echo "[run] rotated $(basename "$_lf") to last ${_lk} lines"
+        fi
+      done
     fi
 
     # Coherence critique of the journal + tweet (only if agent actually posted this cycle)
