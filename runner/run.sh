@@ -189,6 +189,9 @@ while true; do
 
   echo "[run] ── Cycle $CYCLE ($CYCLE_TYPE) — $TODAY $NOW (journals=$JOURNAL_COUNT, digest=${DIGEST_SIZE}b) ──"
 
+  # ── Heartbeat: external liveness signal ───────────────────────────────────
+  printf "cycle: %s | type: %s | %s %s\n" "$CYCLE" "$CYCLE_TYPE" "$TODAY" "$NOW" > "$PROJECT_ROOT/HEARTBEAT.md"
+
   # ── Clean stale lock files from any interrupted previous cycle ────────────
   clean_stale_locks
 
@@ -374,6 +377,23 @@ QUOTEMSG
 
   # ── Tweet cycle: synthesize, journal, tweet, push ─────────────────────────
   else
+    # Archive browse_notes.md before the agent clears it (task 7)
+    # Keeps a rolling 48h window in state/browse_archive.md
+    if [ -s "$PROJECT_ROOT/state/browse_notes.md" ]; then
+      {
+        echo ""
+        echo "── $TODAY $NOW · cycle $CYCLE ──────────────────────────────────────────"
+        cat "$PROJECT_ROOT/state/browse_notes.md"
+      } >> "$PROJECT_ROOT/state/browse_archive.md"
+      # Keep browse_archive.md under 6000 lines (~48h of 2h windows)
+      ARCH_LINES=$(wc -l < "$PROJECT_ROOT/state/browse_archive.md" 2>/dev/null || echo 0)
+      if [ "$ARCH_LINES" -gt 6000 ]; then
+        tail -n 5000 "$PROJECT_ROOT/state/browse_archive.md" > /tmp/hunter_arch_trim \
+          && mv /tmp/hunter_arch_trim "$PROJECT_ROOT/state/browse_archive.md"
+        echo "[run] trimmed browse_archive.md to 5000 lines"
+      fi
+    fi
+
     # Pre-load files — agent skips read tool calls
     _BROWSE_NOTES_FULL=$(cat "$PROJECT_ROOT/state/browse_notes.md" 2>/dev/null | sed "s/\`/'/g" || echo "(empty)")
     _MEMORY_RECALL=$(cat "$PROJECT_ROOT/state/memory_recall.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(empty)")
@@ -444,6 +464,20 @@ TWEETMSG
 
     # Archive new journals/checkpoints to Irys + local memory index
     node "$PROJECT_ROOT/runner/archive.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+
+    # Daily maintenance (every 24h = 72 cycles)
+    if [ $(( CYCLE % (TWEET_EVERY * 12) )) -eq 0 ]; then
+      # Trim feed_digest.txt to last 3000 lines (~2-3 days of data)
+      DLINES=$(wc -l < "$PROJECT_ROOT/state/feed_digest.txt" 2>/dev/null || echo 0)
+      if [ "$DLINES" -gt 3000 ]; then
+        tail -n 3000 "$PROJECT_ROOT/state/feed_digest.txt" > /tmp/hunter_digest_trim \
+          && mv /tmp/hunter_digest_trim "$PROJECT_ROOT/state/feed_digest.txt"
+        echo "[run] trimmed feed_digest.txt: ${DLINES} → 3000 lines"
+      fi
+      # Delete local journal HTML files older than 7 days (already on Arweave)
+      find "$PROJECT_ROOT/journals/" -name "*.html" -mtime +7 -delete 2>/dev/null \
+        && echo "[run] pruned local journals older than 7 days" || true
+    fi
 
     # Coherence critique of the journal + tweet (only if agent actually posted this cycle)
     node "$PROJECT_ROOT/runner/critique.js" --cycle "$CYCLE" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
