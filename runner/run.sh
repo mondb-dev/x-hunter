@@ -58,8 +58,8 @@ bash "$PROJECT_ROOT/scraper/start.sh"
 # Browse cycle: every 20 minutes (AI reads pre-scraped digest)
 # Quote cycle:  every 3rd browse cycle (every 1 hour, midpoint between tweets)
 # Tweet cycle:  every 6th browse cycle (every 2 hours, active hours only)
-# Clear stale curiosity file from any previous run so the agent never acts on old data
-rm -f "$PROJECT_ROOT/state/curiosity_seeds.txt"
+# Clear stale curiosity directive from any previous run so the agent never acts on old data
+rm -f "$PROJECT_ROOT/state/curiosity_directive.txt"
 
 CYCLE=0
 BROWSE_INTERVAL=1200  # 20 minutes in seconds
@@ -67,7 +67,7 @@ TWEET_EVERY=6         # tweet on cycles 6, 12, 18, ... (every 2 hours)
 QUOTE_OFFSET=3        # quote-tweet on cycles 3, 9, 15, ... (midpoint between tweets)
 TWEET_START=7         # earliest hour to post original tweets (0-23 UTC)
 TWEET_END=23          # latest hour exclusive
-CURIOSITY_EVERY=4     # curiosity search on browse cycles 4, 8, 16, ...
+CURIOSITY_EVERY=12    # refresh curiosity directive every ~4h (was 4)
 GATEWAY_PORT=18789    # openclaw gateway WebSocket/HTTP port
 CDP_PORT=18801        # Chrome DevTools Protocol port
 
@@ -303,9 +303,11 @@ FIRSTMSG
       node "$PROJECT_ROOT/runner/recall.js" --limit 5 >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     fi
 
-    # Curiosity seeds: LLM picks best keyword (from top scraped) every 4th browse cycle
+    # Curiosity directive: refresh every 12th browse cycle (~4h)
+    # Pass CURIOSITY_CYCLE + CURIOSITY_EVERY so curiosity.js can compute expiry
     if [ $(( CYCLE % CURIOSITY_EVERY )) -eq 0 ]; then
-      node "$PROJECT_ROOT/runner/curiosity.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+      CURIOSITY_CYCLE=$CYCLE CURIOSITY_EVERY=$CURIOSITY_EVERY \
+        node "$PROJECT_ROOT/runner/curiosity.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     fi
 
     # Comment candidates: posts where memory has something specific to say
@@ -319,7 +321,7 @@ FIRSTMSG
     _TOPIC_SUMMARY=$(cat "$PROJECT_ROOT/state/topic_summary.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(not yet generated)")
     _DIGEST=$(tail -n 160 "$PROJECT_ROOT/state/feed_digest.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(not yet generated)")
     _CRITIQUE=$(tail -n 12 "$PROJECT_ROOT/state/critique.md" 2>/dev/null | sed "s/\`/'/g" || echo "")
-    _CURIOSITY=$(cat "$PROJECT_ROOT/state/curiosity_seeds.txt" 2>/dev/null | sed "s/\`/'/g" || echo "")
+    _CURIOSITY_DIRECTIVE=$(cat "$PROJECT_ROOT/state/curiosity_directive.txt" 2>/dev/null | sed "s/\`/'/g" || echo "")
     _COMMENT_CANDIDATES=$(cat "$PROJECT_ROOT/state/comment_candidates.txt" 2>/dev/null | sed "s/\`/'/g" || echo "")
 
     AGENT_MSG=$(cat <<BROWSEMSG
@@ -342,14 +344,17 @@ $_CRITIQUE
 $_TOPIC_SUMMARY
 ── FEED DIGEST (most recent clusters) ───────────────────────────────────
 $_DIGEST
-── CURIOSITY SEED ───────────────────────────────────────────────────────
-$_CURIOSITY
+── CURIOSITY DIRECTIVE ──────────────────────────────────────────────────
+$_CURIOSITY_DIRECTIVE
 ── COMMENT CANDIDATES ───────────────────────────────────────────────────
 $_COMMENT_CANDIDATES
 ─────────────────────────────────────────────────────────────────────────
 
 Tasks (in order):
-1. If a curiosity Search URL is present above, navigate to it. Read top 3 posts.
+1. CURIOSITY: If the directive above has an ACTIVE SEARCH URL and you haven't searched
+   it this directive window, navigate to it now and read top 3-5 posts.
+   For ALL browse cycles while the directive is active: follow the AMBIENT FOCUS —
+   tag relevant browse_notes entries with [CURIOSITY: <axis_or_topic_id>].
 2. Identify the 3-5 most interesting tensions or signals from TRENDING clusters
    and <- novel singletons. You may navigate to at most 1 additional URL.
 3. Append findings to state/browse_notes.md (append only -- do not overwrite).
