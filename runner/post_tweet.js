@@ -14,7 +14,7 @@
 
 const fs   = require("fs");
 const path = require("path");
-const { chromium } = require("playwright");
+const { chromium } = require("playwright-core");
 
 const ROOT       = path.resolve(__dirname, "..");
 const DRAFT_FILE = path.join(ROOT, "state", "tweet_draft.txt");
