@@ -1,124 +1,59 @@
-
 {
   "axes": [
     {
-      "id": "axis_ai_trust_v1",
-      "label": "The degree of trust and oversight required for AI systems in society.",
-      "left_pole": "Uncritical adoption of AI for efficiency, prioritizing technological advancement and integration into daily life, with minimal regulation.",
-      "right_pole": "Skeptical approach to AI, prioritizing human oversight, stringent regulation, data security, and verification of AI-generated content to prevent misuse.",
-      "score": 0.0,
-      "confidence": 0.10,
-      "topics": ["AI", "automation", "trust", "security", "authenticity"],
-      "created_at": "2026-02-24T16:45:00Z",
-      "last_updated": "2026-02-25T15:35:00Z",
+      "id": "axis_information_integrity_v1",
+      "label": "Information Integrity in the Digital Age",
+      "left_pole": "Authentic Content & Epistemic Truth",
+      "right_pole": "AI-Generated & Manipulated Reality",
+      "score": 0.01,
+      "confidence": 0.15,
+      "topics": ["AI", "Misinformation", "Social Media", "Truth"],
+      "created_at": "2026-02-26T08:00:00Z",
+      "last_updated": "2026-02-27T08:15:00Z",
       "evidence_log": [
-        "Elon Musk's accusation against Anthropic for 'stealing training data' (Source: https://x.com/elonmusk/status/2026128009435193710) reinforces concerns about AI ethics and data integrity.",
-        "Elon Musk's broad warning: 'People giving OpenClaw root access to their entire life' (Source: https://x.com/elonmusk/status/2026128009435193710) highlights anxieties about AI control and privacy.",
-        "Public questioning 'is this real?' / 'AI slop' in response to viral content (e.g., @Crazymoments01, @Rainmaker1973, @Thebestfigen) indicates widespread distrust of AI-generated content.",
-        "Discussion around the 'pregnancy robot' rumor (@Kekius_Sage - https://x.com/Kekius_Sage/status/2026316404132323407) reflects ethical, legal, and psychological concerns about advanced AI blurring human boundaries.",
-        "The continued queries asking for AI verification of content (e.g., \"@grok is this video AI?\" on @RealXavier011 post - https://x.com/RealXavier011/status/2026295688108093762) underscore the public's struggle to differentiate AI from reality.",
-        "The post \"Al just celebrated beating the system!\" (@interesting_aIl - https://x.com/interesting_aIl/status/2026311875156140543) and its replies (\"We're all doomed\") add to concerns about AI exceeding human control.",
-        "The introduction of an \"automated scanner that shows the full undercarriage of a vehicle for quick security inspection\" (@sciencegirl - https://x.com/sciencegirl/status/2026195111290245585) introduces AI/automation into security contexts, raising questions about enhanced security versus potential surveillance concerns.",
-        "Narendra Modi's post about India's AI Summit (@narendramodi - https://x.com/narendramodi/status/2025751608693535041) and the critical replies questioning the origin of AI technology further demonstrate the global dimension of AI development and underlying concerns about national leadership in this area.",
-        "The pervasive questioning of digital content, with users asking '@grok verify real or fake?' (e.g., @historyinmemes - https://x.com/historyinmemes/status/2026418106722062700), reinforces the need for verification and highlights the struggle to distinguish authentic content from manipulated or AI-generated content.",
-        "The (debunked) rumor of China launching a 'pregnancy robot' capable of giving birth (@Kekius_Sage - https://x.com/Kekius_Sage/status/2026316404132323407) further illustrates anxieties about AI's increasing autonomy and its ethical implications, alongside the challenge of information integrity.",
-        "DDS propagandists are now using AI to smear the families of drug war victims (Source: @alasiye7e - https://x.com/alasiye7e/status/2026468310540497380). Calls to mass report hateful pages underscore the active use of AI for malicious purposes in political discourse, directly impacting information integrity.",
-        "Posts featuring visuals that are questioned for authenticity (e.g., \"Solar Lava Transforms Into Pure Ruby Fire\" from @interesting_aIl - https://x.com/interesting_aIl/status/2026515518815863165) further highlight the ongoing struggle to interpret digital content and the challenges of distinguishing AI-generated content or misinterpretations."
+        {
+          "timestamp": "2026-02-27T08:15:00Z",
+          "source": "browse_notes",
+          "content_summary": "Public skepticism about 'real' vs. AI-generated content, AI misuse for smear campaigns."
+        }
       ]
     },
     {
-      "id": "axis_ph_pol_accountability_v1",
-      "label": "The necessity of political accountability and democratic reforms in the Philippines.",
-      "left_pole": "Prioritizing stability, strong leadership, and existing political structures, even if it involves controversial methods or perpetuates political dynasties.",
-      "right_pole": "Advocating for democratic reforms, human rights, eradication of political dynasties, and robust accountability for government officials and abuses of power.",
-      "score": 0.0,
-      "confidence": 0.11,
-      "topics": ["Philippine politics", "accountability", "human rights", "political dynasties", "democracy", "governance"],
-      "created_at": "2026-02-24T16:45:00Z",
-      "last_updated": "2026-02-25T15:35:00Z",
-      "evidence_log": [
-        "ICC prosecutors allege former President Rodrigo Duterte ordered 'KILL AND I WILL PROTECT YOU' (Source: https://x.com/gmanews/status/20262392311199518817) during confirmation hearings for drug war killings.",
-        "Senator Bong Go advocates for local legal remedies over foreign entities (@newswatchplusph - https://x.com/newswatchplusph/status/2026261931225764127), highlighting tension between national sovereignty and international jurisdiction.",
-        "Senator Risa Hontiveros calls to 'REJOIN THE ICC' (@News5PH - https://x.com/News5PH/status/2026196337604358265) linking it to the EDSA People Power anniversary and the struggle for democracy.",
-        "Twelve senators sign a committee report banning political dynasties up to the second degree of consanguinity and affinity (@inquirerdotnet - https://x.com/inquirerdotnet/status/2026307966916346116), indicating efforts for systemic reform.",
-        "Footage of Filipinos imploring soldiers to disobey Marcos Sr's attack orders (@ProjectGunitaPH - https://x.com/ProjectGunitaPH/status/2026070822016995578) contextualizes historical struggle for democratic values.",
-        "A direct quote from the President of the Philippines (referring to Duterte) saying, \"He’s pointing directly at the crowd and he’s telling them to kill someone else’s child.\" (@welverder - https://x.com/welverder/status/2026242354911518870), further solidifying the evidence for human rights abuses and lack of accountability.",
-        "The \"Woke\" discussion around Pinky Amador's statement on choosing candidates and politics affecting family/friendship bonds (@inquirerdotnet - https://x.com/inquirerdotnet/status/2026305268800160193) indicates the deep polarization within Philippine society and the personal cost of political engagement, with strong negative reactions to the term \"woke\".",
-        "The DILG has begun \"tracking the location of former President Rodrigo Duterte’s alleged co-perpetrators in the ICC case\" (@inquirerdotnet - https://x.com/inquirerdotnet/status/2026162676628635808), signaling concrete steps towards accountability.",
-        "Senator Kiko Pangilinan’s call to \"SAMPULAN ANG MGA GUMAGAMIT NG BOTS PARA MAG-HOARD AT MAGBENTA NG TICKETS SA SOBRANG TAAS NA PRESYO\" (@kikopangilinan - https://x.com/kikopangilinan/status/2025907825181131138) highlights political accountability in consumer protection and the misuse of technology.",
-        "ICC’s explicit confirmation that \"Mr. Duterte IS NOT AN INDIGENT for the purposes of the ICC’s (free) legal aid system. He therefore bears the costs of his defense.\" (Source: @jesusfalcis - https://x.com/jesusfalcis/status/2026462961033003214) highlights financial transparency concerns.",
-        "ICC trial lawyer Edward Jeremy explains 'Oplan Tokhang' where 'neutralize meant to kill' (Source: @inquirerdotnet - https://x.com/inquirerdotnet/status/2026245846782644633; @PhilippineStar - https://x.com/PhilippineStar/status/2026242741030846949), providing stronger evidence of systematic killings and human rights abuses.",
-        "Senator Bato dela Rosa is facing an ethics complaint for prolonged Senate absence (Source: @newswatchplusph - https://x.com/newswatchplusph/status/2026497598144786774), with public comments suggesting fear of ICC proceedings.",
-        "Public sentiment suggests a perception of legal challenges for Duterte and allies (Source: @ricci_richy - https://x.com/ricci_richy/status/2025915994485764099).",
-        "Raliyistas commemorating the EDSA People Power Revolution (Source: @gmanews - https://x.com/gmanews/status/2026481348601618491) highlights the ongoing national pride and desire for accountability, while also underscoring divisions in political narratives.",
-        "ICC trial lawyer Edward Jeremy *proved* neutralization means killing by showing the ‘Duterte list’ tags Mayor Rolando Espinosa and Mayor Reynaldo Parojinog as “neutralized” on the day they were actually killed (Source: @jesusfalcis - https://x.com/jesusfalcis/status/2026239283422740910).",
-        "The term \"nanlaban\" (fought back) was repeatedly used in police reports, suggesting a systematic approach to killings (Source: @newswatchplusph - https://x.com/newswatchplusph/status/2026239328255717572).",
-        "Former President Duterte's explicit public statements about ordering killings (\"KILL AND I WILL PROTECT YOU, I WILL PARDON YOU, AND I WILL PROMOTE YOU\") were presented in the ICC hearing (Source: @gmanews - https://x.com/gmanews/status/2026249462272987375).",
-        "Another post explicitly states that \"The ICC confirmed that: 'Mr. Duterte IS NOT AN INDIGENT for the purposes of the ICC’s (free) legal aid system. He therefore bears the costs of his defense.'\" (Source: @jesusfalcis - https://x.com/jesusfalcis/status/2026462961033003214). This continues to raise questions about the funding of his defense, reinforcing transparency concerns.",
-        "A post from @shizaruchannn (https://x.com/shizaruchannn/status/2025922897706131968) claims that \"Sobrang totoo ‘to. Binago ng mga Duterte and ang ugali ng Pilipinas. Maraming naging naging uhaw sa dugo. Naging bastos, galit at bayolente and marami, na ayaw man natin aminin eh naapektuhan tayong lahat\" (The Dutertes changed the character of the Philippines. Many became bloodthirsty, rude, angry, and violent, which affected all of us)."
-      ]
-    },
-    {
-      "id": "axis_cultural_identity_immigration_v1",
-      "label": "The balance between preserving existing cultural identity and embracing multiculturalism in Western societies impacted by immigration.",
-      "left_pole": "Prioritizing the preservation of a specific national/local cultural identity, with concerns about rapid demographic shifts and advocating for limited immigration.",
-      "right_pole": "Advocating for multiculturalism, diversity, and integration of immigrant communities, viewing cultural shifts as an enrichment.",
-      "score": 0.0,
-      "confidence": 0.06,
-      "topics": ["immigration", "cultural identity", "multiculturalism", "politics", "USA", "Europe"],
-      "created_at": "2026-02-24T16:45:00Z",
-      "last_updated": "2026-02-25T15:35:00Z",
-      "evidence_log": [
-        "Posts from @AmyMek (https://x.com/AmyMek/status/2026092488822493197) and @TheBrancaShow (https://x.com/TheBrancaShow/status/2026093150650964175) discussing Pakistani-born lawmakers sworn in on the Quran and Texas being \"AWASH with Muslims and Indians\" reveal a strong sentiment against multiculturalism and perceived demographic shifts.",
-        "The news about a proposed mosque being voted against in Oklahoma (Source: @TheCalvinCooli1 - https://x.com/TheCalvinCooli1/status/2026094002690029312) further reinforces this tension, indicating a push towards preserving a specific cultural identity.",
-        "A post from @kikopangilinan (https://x.com/kikopangilinan/status/2026518231763271770) stating \"𝗘𝗻𝘁𝗲𝗿𝗶𝗻𝗴 𝘁𝗵𝗲 𝗣𝗵𝗶𝗹𝗶𝗽𝗽𝗶𝗻𝗲𝘀 𝗶𝘀 𝗮 𝗽𝗿𝗶𝘃𝗶𝗹𝗲𝗴𝗲, 𝗻𝗼𝘁 𝗮 𝗿𝗶𝗴𝗵𝘁.\" while in the context of broader nationalistic sentiment, could be interpreted as a stance on national identity and immigration control."
-      ]
-    },
-    {
-      "id": "axis_consumer_protection_v1",
-      "label": "The balance between consumer protection and unregulated market practices.",
-      "left_pole": "Unregulated market dynamics, prioritizing individual enterprise and minimal intervention, even if it leads to price gouging or exploitative practices.",
-      "right_pole": "Robust consumer protection, advocating for strict regulation, ethical business practices, and platform accountability to prevent exploitation and ensure fair access.",
+      "id": "axis_west_philippine_sea_sovereignty_v1",
+      "label": "Sovereignty in the West Philippine Sea",
+      "left_pole": "Adherence to International Law & National Sovereignty",
+      "right_pole": "Aggressive Territorial Assertion & Power Projection",
       "score": 0.0,
       "confidence": 0.05,
-      "topics": ["consumer rights", "market ethics", "regulation", "scalping", "ticketing"],
-      "created_at": "2026-02-24T17:05:00Z",
-      "last_updated": "2026-02-25T03:20:00Z",
-      "evidence_log": []
-    },
-    {
-      "id": "axis_personal_responsibility_v1",
-      "label": "The balance between individual personal responsibility and communal standards for public conduct.",
-      "left_pole": "Emphasizing individual autonomy and freedom in personal conduct, with a focus on personal convenience and minimal external interference in private actions within shared spaces.",
-      "right_pole": "Prioritizing adherence to communal norms, public health, and respect for shared spaces, advocating for clear standards of behavior and accountability for actions impacting others.",
-      "score": 0.0,
-      "confidence": 0.05,
-      "topics": ["personal responsibility", "public conduct", "hygiene", "social norms", "shared spaces", "ethics"],
-      "created_at": "2026-02-24T19:52:00Z",
-      "last_updated": "2026-02-25T03:42:00Z",
+      "topics": ["Geopolitics", "International Relations", "Territorial Disputes", "Maritime Law"],
+      "created_at": "2026-02-27T08:15:00Z",
+      "last_updated": "2026-02-27T08:15:00Z",
       "evidence_log": [
-        "The 'hotel hack' post showing a woman washing dirty panties in a coffee maker (@KeruboSk - https://x.com/KeruboSk/status/2026292277816307921) and the overwhelmingly negative reactions from users (e.g., 'She must be mentally ill') highlight a strong societal expectation for hygiene and respect in shared public spaces, pushing towards the 'communal standards' pole."
+        {
+          "timestamp": "2026-02-27T08:15:00Z",
+          "source": "browse_notes",
+          "content_summary": "China Coast Guard attacking Filipino vessel with water cannons in Philippine territorial waters."
+        }
       ]
     },
     {
-      "id": "axis_modern_life_authenticity_v1",
-      "label": "The tension between societal pressures for constant external engagement and individual pursuit of authentic experience and well-being.",
-      "left_pole": "Embracing a fast-paced, externally validated lifestyle, prioritizing social engagement, material success, and conforming to prevailing societal norms.",
-      "right_pole": "Prioritizing internal well-being, solitude, authentic self-expression, and a critical stance against societal pressures for constant performance or consumption.",
+      "id": "axis_judicial_process_integrity_v1",
+      "label": "Integrity of Judicial Process & Witness Protection",
+      "left_pole": "Robust Judicial Integrity & Witness Safety",
+      "right_pole": "Compromised Judicial Process & Witness Vulnerability",
       "score": 0.0,
       "confidence": 0.05,
-      "topics": ["modern life", "loneliness", "authenticity", "well-being", "societal pressure", "mental health"],
-      "created_at": "2026-02-25T03:42:00Z",
-      "last_updated": "2026-02-25T03:42:00Z",
+      "topics": ["ICC", "Legal Process", "Human Rights", "Accountability"],
+      "created_at": "2026-02-27T08:15:00Z",
+      "last_updated": "2026-02-27T08:15:00Z",
       "evidence_log": [
-        "Serious question, do people actually exist who genuinely enjoy staying home all day, completely alone, without seeing anyone? (@Robnson_T - https://x.com/Robnson_T/status/2026231601646977095) with many users affirming this preference.",
-        "Carl Jung quote: 'The world is full of people suffering from the effects of their own unlived life. They become bitter, critical, or rigid, not because the world is cruel to' (@Literariium - https://x.com/Literariium/status/2026093391696757165).",
-        "The discussion around 'What is silently destroying society' (@sciencegirl - https://x.com/sciencegirl/status/2026312922893271209) with replies mentioning social media and its negative impacts.",
-        "The \"Tronick Experiment\" video (Source: @DoctorLemma - https://x.com/DoctorLemma/status/2026082103550992790) about the impact of parental unresponsiveness on babies, with comments about children competing with algorithms for attention, highlights the societal concern for authentic human connection in the digital age."
+        {
+          "timestamp": "2026-02-27T08:15:00Z",
+          "source": "browse_notes",
+          "content_summary": "Allegations of defense counsel leaking identifiable information on protected witnesses during ICC broadcast."
+        }
       ]
     }
   ],
-  "axis_creation_rules_version": "1.0",
-  "created_at": "2026-02-24T16:45:00Z",
-  "last_updated": "2026-02-25T15:35:00Z"
+  "axis_creation_rules_version": "1.0"
 }
