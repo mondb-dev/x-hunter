@@ -68,6 +68,8 @@ QUOTE_OFFSET=3        # quote-tweet on cycles 3, 9, 15, ... (midpoint between tw
 TWEET_START=7         # earliest hour to post original tweets (0-23 UTC)
 TWEET_END=23          # latest hour exclusive
 CURIOSITY_EVERY=4     # curiosity search on browse cycles 4, 8, 16, ...
+GATEWAY_PORT=18789    # openclaw gateway WebSocket/HTTP port
+CDP_PORT=18801        # Chrome DevTools Protocol port
 
 trap 'echo "[run] Stopping..."; bash "$PROJECT_ROOT/scraper/stop.sh" 2>/dev/null; bash "$PROJECT_ROOT/stream/stop.sh" 2>/dev/null; exit 0' INT TERM
 
@@ -81,6 +83,77 @@ reset_session() {
   done
   echo "{}" > "$DIR/sessions.json"
   [ "$FOUND" -eq 1 ] && echo "[run] $1 session reset (context flush)"
+}
+
+# Run openclaw agent with a hard 15-minute timeout to prevent multi-hour hangs
+# (openclaw can loop on gateway reconnect indefinitely after embedded completes)
+agent_run() {
+  openclaw agent "$@" &
+  local PID=$!
+  local elapsed=0
+  while kill -0 "$PID" 2>/dev/null; do
+    sleep 5
+    elapsed=$(( elapsed + 5 ))
+    if [ "$elapsed" -ge 900 ]; then
+      echo "[run] WARNING: openclaw agent exceeded 900s — force-killing (pid $PID)"
+      kill -9 "$PID" 2>/dev/null
+      return 1
+    fi
+  done
+  wait "$PID"
+  return $?
+}
+
+# Restart gateway: kill directly + start + poll health (avoids openclaw's 60s internal timeout)
+restart_gateway() {
+  echo "[run] restarting gateway..."
+  # Kill any existing gateway processes on this port
+  pkill -f "openclaw-gateway" 2>/dev/null || true
+  sleep 2
+  # Start gateway (uses LaunchAgent on macOS, or direct process on Linux)
+  openclaw gateway start 2>/dev/null || true
+  # Poll HTTP health — faster than openclaw's internal 60s wait
+  local i=0
+  while [ $i -lt 15 ]; do
+    sleep 2; i=$(( i + 1 ))
+    if curl -sf "http://127.0.0.1:${GATEWAY_PORT}/" -o /dev/null 2>&1; then
+      echo "[run] gateway healthy (${i}x2s)"
+      return 0
+    fi
+  done
+  echo "[run] WARNING: gateway not healthy after 30s — proceeding"
+}
+
+# Start browser + poll Chrome CDP port until responsive (replaces fixed sleeps)
+start_browser() {
+  openclaw browser --browser-profile x-hunter stop 2>/dev/null || true
+  sleep 1
+  openclaw browser --browser-profile x-hunter start 2>/dev/null || true
+  # Poll Chrome's CDP port directly — gateway-independent readiness check
+  local i=0
+  while [ $i -lt 15 ]; do
+    sleep 2; i=$(( i + 1 ))
+    if curl -sf "http://127.0.0.1:${CDP_PORT}/json/version" -o /dev/null 2>&1; then
+      echo "[run] browser CDP ready (${i}x2s)"
+      return 0
+    fi
+  done
+  echo "[run] WARNING: browser CDP not ready after 30s — proceeding"
+}
+
+# Remove lock files whose owner PID is no longer running (prevents 10s lock timeouts)
+clean_stale_locks() {
+  local cleaned=0
+  for lf in "$HOME/.openclaw/agents"/*/sessions/*.lock; do
+    [ -f "$lf" ] || continue
+    local lock_pid
+    lock_pid=$(cat "$lf" 2>/dev/null | tr -d '[:space:]') || lock_pid="0"
+    if [ -z "$lock_pid" ] || ! kill -0 "$lock_pid" 2>/dev/null; then
+      rm -f "$lf"
+      cleaned=$(( cleaned + 1 ))
+    fi
+  done
+  [ "$cleaned" -gt 0 ] && echo "[run] cleaned $cleaned stale lock(s)"
 }
 
 while true; do
@@ -116,30 +189,29 @@ while true; do
 
   echo "[run] ── Cycle $CYCLE ($CYCLE_TYPE) — $TODAY $NOW (journals=$JOURNAL_COUNT, digest=${DIGEST_SIZE}b) ──"
 
+  # ── Clean stale lock files from any interrupted previous cycle ────────────
+  clean_stale_locks
+
   # ── Ensure browser is alive before each cycle ────────────────────────────
   openclaw browser --browser-profile x-hunter start 2>/dev/null || true
   sleep 1
 
-  # ── Before tweet/quote cycles, hard-restart browser + gateway to clear
-  #    stale browser control service state (prevents 20s timeout errors) ──
+  # ── Before tweet/quote cycles: restart gateway + browser to get a clean
+  #    browser control service state. Uses health polling instead of fixed sleeps.
   #    Also reset x-hunter-tweet session -- it fills fast (373KB digest/cycle)
   if [ "$CYCLE_TYPE" = "TWEET" ] || [ "$CYCLE_TYPE" = "QUOTE" ]; then
-    openclaw browser --browser-profile x-hunter stop 2>/dev/null || true
-    sleep 2
     reset_session x-hunter-tweet  # flush BEFORE gateway restart so gateway loads clean state
-    openclaw gateway restart 2>/dev/null || true
-    sleep 5
-    openclaw browser --browser-profile x-hunter start 2>/dev/null || true
-    sleep 6
+    restart_gateway               # kill + start + poll health (~10s vs 60s)
+    start_browser                 # stop + start + poll CDP port for readiness
+    sleep 5                       # let gateway register browser control service
     echo "[run] gateway + browser hard-restarted before $CYCLE_TYPE cycle"
   fi
 
-  # ── Reset browse session periodically (every 12 cycles = 4h) ─────────────
+  # ── Reset browse session periodically (every 6 cycles = 2h) ──────────────
   # Must restart gateway (not just wipe files) -- gateway caches session in memory.
-  if [ $(( CYCLE % 12 )) -eq 0 ]; then
+  if [ $(( CYCLE % 6 )) -eq 0 ]; then
     reset_session x-hunter
-    openclaw gateway restart 2>/dev/null || true
-    sleep 3
+    restart_gateway
     openclaw browser --browser-profile x-hunter start 2>/dev/null || true
     sleep 3
     echo "[run] x-hunter session + gateway restarted (context flush cycle $CYCLE)"
@@ -163,7 +235,7 @@ After the intro tweet, do a first browse pass:
 
 FIRSTMSG
 )
-    openclaw agent --agent x-hunter \
+    agent_run --agent x-hunter \
       --message "$AGENT_MSG" \
       --thinking high \
       --verbose on
@@ -224,7 +296,7 @@ Next tweet cycle: $NEXT_TWEET.
 
 BROWSEMSG
 )
-    openclaw agent --agent x-hunter \
+    agent_run --agent x-hunter \
       --message "$AGENT_MSG" \
       --thinking low \
       --verbose on
@@ -275,7 +347,7 @@ Do NOT call any read_file tools. Tasks:
 
 QUOTEMSG
 )
-    openclaw agent --agent x-hunter-tweet \
+    agent_run --agent x-hunter-tweet \
       --message "$AGENT_MSG" \
       --thinking low \
       --verbose on
@@ -314,7 +386,7 @@ Tasks (in order, no browser):
 TWEETMSG
 )
     rm -f "$PROJECT_ROOT/state/tweet_draft.txt" "$PROJECT_ROOT/state/tweet_result.txt"
-    openclaw agent --agent x-hunter-tweet \
+    agent_run --agent x-hunter-tweet \
       --message "$AGENT_MSG" \
       --thinking low \
       --verbose on
