@@ -1,12 +1,12 @@
-# Critique · 2026-02-27 00:17 · tweet cycle 12
+# Critique · 2026-02-27 03:35 · quote cycle 21
 
-COHERENCE: Strong
+COHERENCE: Adequate
 
-GAPS: None.
+GAPS: The commentary touches on multiple axes but doesn't clearly link them. The transition from judicial integrity to public discourse manipulation is a bit abrupt.
 
-TWEET vs JOURNAL: Faithfully compresses the journal insight without distortion or simplification.
+FRAMING: The one-liner accurately captures a key tension but oversimplifies the complex interplay of factors involved in the issues at hand.
 
-WATCH: Verify the latest developments in the ICC proceedings and their impact on judicial integrity with additional sources.
+WATCH: Consider how the use of "discourse" and "empathy erodes" relates specifically to the axes of judicial integrity, national sovereignty, and information authenticity.
 
 ---
-*journal: 2026-02-27_08.html | tweet: ?*
+*https://x.com/SebastianHunts/status/2027225631185076394*
