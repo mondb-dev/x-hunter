@@ -141,6 +141,33 @@ start_browser() {
   echo "[run] WARNING: browser CDP not ready after 30s — proceeding"
 }
 
+# Functional browser health check via playwright-core (not just TCP port ping)
+# Returns 0 if browser is healthy and accepting CDP connections, 1 otherwise
+check_browser() {
+  node "$PROJECT_ROOT/runner/browser_check.js" 2>/dev/null
+  return $?
+}
+
+# Ensure browser is healthy: check → restart if broken → retry up to 3 times
+# After a gateway restart, the openclaw browser control service needs ~15s to
+# reconnect to Chrome, so we use a longer sleep when a restart is triggered.
+ensure_browser() {
+  local attempt=0
+  while [ $attempt -lt 3 ]; do
+    if check_browser; then
+      [ "$attempt" -gt 0 ] && echo "[run] browser recovered after $attempt restart(s)"
+      return 0
+    fi
+    attempt=$(( attempt + 1 ))
+    echo "[run] browser check failed (attempt $attempt/3) — restarting gateway + browser"
+    restart_gateway
+    start_browser
+    sleep 15  # openclaw browser control service needs ~15s to reconnect after restart
+  done
+  echo "[run] WARNING: browser unresponsive after 3 restart attempts — proceeding"
+  return 1
+}
+
 # Remove lock files whose owner PID is no longer running (prevents 10s lock timeouts)
 clean_stale_locks() {
   local cleaned=0
@@ -208,9 +235,17 @@ while true; do
     fi
   done
 
-  # ── Ensure browser is alive before each cycle ────────────────────────────
-  openclaw browser --browser-profile x-hunter start 2>/dev/null || true
-  sleep 1
+  # ── Ensure browser is alive before each cycle (fast path for BROWSE) ─────
+  # TWEET/QUOTE cycles run ensure_browser() below for full retry logic.
+  # For BROWSE cycles, just do a quick check and restart if broken.
+  if [ "$CYCLE_TYPE" = "BROWSE" ]; then
+    if ! check_browser; then
+      echo "[run] browser down before browse cycle — restarting"
+      restart_gateway
+      start_browser
+      sleep 15
+    fi
+  fi
 
   # ── Before tweet/quote cycles: ensure clean session + healthy browser ────────
   #    Only hard-restart gateway+browser if CDP is not responding.
@@ -219,15 +254,7 @@ while true; do
   #    temporarily unavailable (causes "browser control service timed out").
   if [ "$CYCLE_TYPE" = "TWEET" ] || [ "$CYCLE_TYPE" = "QUOTE" ]; then
     reset_session x-hunter-tweet  # always flush tweet agent session
-    if curl -sf "http://127.0.0.1:${CDP_PORT}/json/version" -o /dev/null 2>&1; then
-      echo "[run] browser healthy — session reset only for $CYCLE_TYPE cycle"
-    else
-      echo "[run] browser not responding — hard restart before $CYCLE_TYPE cycle"
-      restart_gateway
-      start_browser
-      sleep 15  # browser control service needs ~15s to reconnect after LaunchAgent restart
-      echo "[run] gateway + browser restarted"
-    fi
+    ensure_browser                # functional check + auto-restart if broken
   fi
 
   # ── Reset browse session periodically (every 6 cycles = 2h) ──────────────
@@ -237,6 +264,7 @@ while true; do
     restart_gateway
     start_browser
     sleep 15  # browser control service needs ~15s after LaunchAgent restart
+    check_browser && echo "[run] browser healthy after reset" || echo "[run] WARNING: browser still not ready after reset"
     echo "[run] x-hunter session + gateway restarted (context flush cycle $CYCLE)"
   fi
 
