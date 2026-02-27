@@ -2,14 +2,14 @@
 /**
  * runner/curiosity.js — epistemic curiosity directive generator
  *
- * Primary driver: if any belief axis has partial evidence but low confidence,
- * target it with an active search + ambient focus for the next ~12 cycles.
- * Fallback driver: trending — local Ollama picks the most interesting keyword
- * from the top 5 scraped in the last 4h (same as previous behavior).
+ * Driver priority (highest first):
+ *   1. discourse  — someone provided substantive counter-reasoning in a reply exchange
+ *   2. uncertainty_axis — a belief axis has partial evidence but low confidence
+ *   3. trending   — local Ollama picks the most interesting keyword from top 5 scraped
  *
  * Writes state/curiosity_directive.txt — a persistent research focus read by
- * every browse cycle. Also appends one line to state/curiosity_log.jsonl for
- * later analysis of curiosity decision behavior.
+ * every browse cycle for ~12 cycles (~4h). Also appends one line to
+ * state/curiosity_log.jsonl for later analysis of curiosity decision behavior.
  *
  * Usage: node runner/curiosity.js
  * Called by run.sh every 12th BROWSE cycle (CURIOSITY_EVERY=12).
@@ -28,6 +28,7 @@ const LOG          = path.join(ROOT, "state", "curiosity_log.jsonl");
 const ONTOLOGY     = path.join(ROOT, "state", "ontology.json");
 const BELIEF       = path.join(ROOT, "state", "belief_state.json");
 const BROWSE_NOTES = path.join(ROOT, "state", "browse_notes.md");
+const ANCHORS      = path.join(ROOT, "state", "discourse_anchors.jsonl");
 
 const OLLAMA_URL   = process.env.OLLAMA_URL   || "http://localhost:11434/api/generate";
 const OLLAMA_MODEL = process.env.OLLAMA_MODEL || "qwen2.5:7b";
@@ -124,6 +125,40 @@ function appendLog(entry) {
   fs.appendFileSync(LOG, line, "utf-8");
 }
 
+// ── Discourse anchor reader ───────────────────────────────────────────────────
+
+function getUnprocessedDiscourseAnchor() {
+  if (!fs.existsSync(ANCHORS)) return null;
+  const lines = fs.readFileSync(ANCHORS, "utf-8")
+    .split("\n")
+    .filter(l => l.trim());
+
+  const processedIds = new Set();
+  const anchors      = [];
+
+  for (const line of lines) {
+    try {
+      const entry = JSON.parse(line);
+      if (entry.processed_at && entry.post_id) {
+        processedIds.add(entry.post_id);
+      } else if (entry.post_id && entry.summary) {
+        anchors.push(entry);
+      }
+    } catch { /* skip malformed lines */ }
+  }
+
+  // Return most recent unprocessed anchor (anchors are appended chronologically)
+  for (let i = anchors.length - 1; i >= 0; i--) {
+    if (!processedIds.has(anchors[i].post_id)) return anchors[i];
+  }
+  return null;
+}
+
+function markAnchorProcessed(postId) {
+  const marker = JSON.stringify({ post_id: postId, processed_at: new Date().toISOString() });
+  fs.appendFileSync(ANCHORS, marker + "\n", "utf-8");
+}
+
 // ── Main ──────────────────────────────────────────────────────────────────────
 
 (async () => {
@@ -133,7 +168,62 @@ function appendLog(entry) {
   const stateDir = path.join(ROOT, "state");
   if (!fs.existsSync(stateDir)) fs.mkdirSync(stateDir, { recursive: true });
 
-  // ── Path 1: uncertainty-driven ──────────────────────────────────────────────
+  // ── Path 1: discourse-triggered — someone challenged Hunter's thinking ───────
+  const discourseAnchor = getUnprocessedDiscourseAnchor();
+
+  if (discourseAnchor) {
+    const searchTerms = (discourseAnchor.topic || discourseAnchor.summary.split(" ").slice(0, 3).join(" "));
+    const searchUrl   = `https://x.com/search?q=${encodeURIComponent(searchTerms)}&f=live`;
+    const topicSlug   = toSlug(discourseAnchor.topic || searchTerms);
+    const expireLine  = CURRENT_CYCLE > 0
+      ? `refreshes at cycle ${EXPIRES_CYCLE}`
+      : `refreshes in ~${CURIOSITY_EVERY} cycles`;
+
+    const theirExcerpt = (discourseAnchor.their_text || "").slice(0, 180).replace(/\n/g, " ");
+
+    const lines = [
+      `── curiosity directive · ${tsHuman} ${HR.slice(tsHuman.length + 25)}`,
+      `RESEARCH FOCUS: Discourse challenge — "${discourseAnchor.topic || "see below"}"`,
+      `  @${discourseAnchor.username} raised a counter-argument worth sitting with:`,
+      `  "${theirExcerpt}"`,
+      ``,
+      `  Summary: ${discourseAnchor.summary}`,
+      `  This is an invitation to reconsider, not just defend.`,
+      ``,
+      `ACTIVE SEARCH (do this once on the current cycle):`,
+      `  Navigate: ${searchUrl}`,
+      `  Read 3-5 posts. Look for evidence on BOTH sides of this question.`,
+      `  Are you finding anything that shifts your view?`,
+      ``,
+      `AMBIENT FOCUS (all browse cycles until directive refreshes):`,
+      `  Stay alert to posts that speak to this tension.`,
+      `  Be genuinely open to revising your position.`,
+      `  Tag: [CURIOSITY: discourse_${topicSlug}]`,
+      ``,
+      `── end directive (${expireLine}) ${HR.slice(expireLine.length + 22)}`,
+    ];
+
+    fs.writeFileSync(DIRECTIVE, lines.join("\n"), "utf-8");
+    markAnchorProcessed(discourseAnchor.post_id);
+
+    appendLog({
+      cycle:            CURRENT_CYCLE,
+      ts,
+      driver:           "discourse",
+      post_id:          discourseAnchor.post_id,
+      username:         discourseAnchor.username,
+      summary:          discourseAnchor.summary,
+      topic:            discourseAnchor.topic,
+      expires_at_cycle: EXPIRES_CYCLE,
+    });
+
+    console.log(
+      `[curiosity] driver: discourse — @${discourseAnchor.username}: "${(discourseAnchor.summary || "").slice(0, 80)}"`
+    );
+    process.exit(0);
+  }
+
+  // ── Path 2: uncertainty-driven ──────────────────────────────────────────────
   const uncertainAxes = getUncertainAxes();
 
   if (uncertainAxes.length > 0) {
