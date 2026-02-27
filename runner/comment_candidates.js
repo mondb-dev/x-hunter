@@ -6,13 +6,18 @@
  * Hunter has a specific past observation to extend or contradict become
  * candidates for a proactive comment during the browse cycle.
  *
- * Also processes state/comment_done.txt (written by the agent after posting)
+ * Gate: proactive comments are only enabled once Hunter has developed solid
+ * affinity to at least one belief axis — defined as:
+ *   confidence >= MIN_AXIS_CONFIDENCE (0.40)  AND
+ *   evidence_log.length >= MIN_EVIDENCE_COUNT (3)
+ * on any axis in state/ontology.json.
+ *
+ * Also processes state/comment_done.txt (written by agent after posting)
  * to update state/comment_log.json — the rate-limit ledger.
  *
  * Writes state/comment_candidates.txt for the browse cycle agent.
  *
  * Usage: node runner/comment_candidates.js
- * Rate limit: MAX_PER_DAY proactive comments, enforced here + in candidates file.
  */
 
 "use strict";
@@ -26,10 +31,53 @@ const ROOT           = path.resolve(__dirname, "..");
 const CANDIDATES_OUT = path.join(ROOT, "state", "comment_candidates.txt");
 const COMMENT_LOG    = path.join(ROOT, "state", "comment_log.json");
 const COMMENT_DONE   = path.join(ROOT, "state", "comment_done.txt");
+const ONTOLOGY       = path.join(ROOT, "state", "ontology.json");
 
-const MAX_PER_DAY      = 3;
-const SCORE_THRESHOLD  = 5;   // min post score — low bar, memory match is the real filter
-const CANDIDATES_LIMIT = 3;   // max candidates shown to agent
+const MAX_PER_DAY         = 3;
+const SCORE_THRESHOLD     = 5;    // min post score — low bar, memory match is the real filter
+const CANDIDATES_LIMIT    = 3;    // max candidates shown to agent
+const MIN_AXIS_CONFIDENCE = 0.40; // axis must be at least this confident
+const MIN_EVIDENCE_COUNT  = 3;    // axis must have at least this many evidence entries
+
+// ── Axis gate: check if Hunter has a settled belief to speak from ──────────────
+
+function getStrongestAxis() {
+  try {
+    const data = JSON.parse(fs.readFileSync(ONTOLOGY, "utf-8"));
+    const axes = data.axes || [];
+    if (!axes.length) return null;
+
+    // Find axes that meet both thresholds, ranked by confidence then evidence count
+    const qualified = axes
+      .filter(a => (a.confidence || 0) >= MIN_AXIS_CONFIDENCE &&
+                   (a.evidence_log || []).length >= MIN_EVIDENCE_COUNT)
+      .sort((a, b) => {
+        const confDiff = (b.confidence || 0) - (a.confidence || 0);
+        if (Math.abs(confDiff) > 0.01) return confDiff;
+        return (b.evidence_log || []).length - (a.evidence_log || []).length;
+      });
+
+    return qualified[0] || null;
+  } catch {
+    return null;
+  }
+}
+
+// For the "not yet ready" message, show the most progressed axis so far
+function getMostProgressedAxis() {
+  try {
+    const data = JSON.parse(fs.readFileSync(ONTOLOGY, "utf-8"));
+    const axes = data.axes || [];
+    if (!axes.length) return null;
+    return axes.sort((a, b) => {
+      const confDiff = (b.confidence || 0) - (a.confidence || 0);
+      if (Math.abs(confDiff) > 0.01) return confDiff;
+      return (b.evidence_log || []).length - (a.evidence_log || []).length;
+    })[0];
+  } catch {
+    return null;
+  }
+}
 
 // ── Comment log: load, init, save ─────────────────────────────────────────────
 
@@ -72,7 +120,6 @@ function processCommentDone(log) {
     const done = JSON.parse(raw);
     if (done.id && !log.commented_ids.includes(done.id)) {
       log.commented_ids.push(done.id);
-      // Keep commented_ids from growing unbounded (keep last 500)
       if (log.commented_ids.length > 500) log.commented_ids = log.commented_ids.slice(-500);
       log.today_count     = (log.today_count || 0) + 1;
       log.last_comment_at = done.commented_at || new Date().toISOString();
@@ -85,8 +132,15 @@ function processCommentDone(log) {
     console.warn(`[comment] could not parse comment_done.txt: ${e.message}`);
   }
 
-  // Clear the signal file regardless of parse outcome
   fs.writeFileSync(COMMENT_DONE, "");
+}
+
+// ── Helpers ────────────────────────────────────────────────────────────────────
+
+const pad = (n) => "─".repeat(Math.max(0, n));
+
+function writeStub(lines) {
+  fs.writeFileSync(CANDIDATES_OUT, lines.join("\n"));
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
@@ -95,28 +149,48 @@ const log = loadLog();
 processCommentDone(log);
 
 const now = new Date().toISOString().slice(0, 16).replace("T", " ");
-const pad = (n) => "─".repeat(Math.max(0, n));
 
-// Write a "cap reached" stub and exit early if already at daily limit
-if (log.today_count >= MAX_PER_DAY) {
-  const out = [
+// ── Gate check: does Hunter have a settled axis to speak from? ─────────────────
+const strongAxis = getStrongestAxis();
+
+if (!strongAxis) {
+  const best = getMostProgressedAxis();
+  const bestDesc = best
+    ? `"${best.label}" — confidence: ${((best.confidence || 0) * 100).toFixed(0)}%, ` +
+      `${(best.evidence_log || []).length} evidence entries`
+    : "no axes yet";
+
+  writeStub([
     `── comment candidates · ${now} ${pad(70 - now.length - 24)}`,
-    `Daily cap reached (${log.today_count}/${MAX_PER_DAY}). No proactive comments today.`,
+    `Not ready for proactive comments yet.`,
+    ``,
+    `Threshold: confidence ≥ ${(MIN_AXIS_CONFIDENCE * 100).toFixed(0)}% with ≥ ${MIN_EVIDENCE_COUNT} evidence entries on any axis.`,
+    `Most progressed: ${bestDesc}`,
     `── end candidates ${pad(52)}`,
-  ].join("\n");
-  fs.writeFileSync(CANDIDATES_OUT, out);
-  console.log(`[comment] cap reached (${log.today_count}/${MAX_PER_DAY}) — wrote empty candidates`);
+  ]);
+  console.log(`[comment] axis gate not met — most progressed: ${bestDesc}`);
   process.exit(0);
 }
 
-// Pull recent top posts (excludes replies via parent_id IS NULL in db.js)
+// ── Daily cap ─────────────────────────────────────────────────────────────────
+if (log.today_count >= MAX_PER_DAY) {
+  writeStub([
+    `── comment candidates · ${now} ${pad(70 - now.length - 24)}`,
+    `Daily cap reached (${log.today_count}/${MAX_PER_DAY}). No proactive comments today.`,
+    `── end candidates ${pad(52)}`,
+  ]);
+  console.log(`[comment] cap reached (${log.today_count}/${MAX_PER_DAY})`);
+  process.exit(0);
+}
+
+// ── Find candidates ───────────────────────────────────────────────────────────
 const posts = db.recentPosts(4, 60);
 
 const candidates = [];
 for (const post of posts) {
   if (candidates.length >= CANDIDATES_LIMIT) break;
-  if ((post.score || 0) < SCORE_THRESHOLD)        continue;
-  if (log.commented_ids.includes(post.id))         continue;
+  if ((post.score || 0) < SCORE_THRESHOLD)   continue;
+  if (log.commented_ids.includes(post.id))    continue;
 
   const keywords = extractKeywords(post.text, 5);
   if (!keywords.length) continue;
@@ -128,15 +202,20 @@ for (const post of posts) {
   candidates.push({ post, tweetUrl, memory: memMatches[0] });
 }
 
-// Build the candidates file
+// ── Build candidates file ─────────────────────────────────────────────────────
+const evidenceCount = (strongAxis.evidence_log || []).length;
 const lines = [
   `── comment candidates · ${now} ${pad(70 - now.length - 24)}`,
-  `Posts from last 4h where your memory has something specific to say.`,
+  `Active axis: "${strongAxis.label}"`,
+  `  confidence: ${((strongAxis.confidence || 0) * 100).toFixed(0)}%  ·  ${evidenceCount} evidence entries`,
+  `  "${strongAxis.left_pole}" ↔ "${strongAxis.right_pole}"`,
+  ``,
   `(${log.today_count}/${MAX_PER_DAY} proactive comments used today)`,
   ``,
-  `Pick AT MOST ONE to comment on — only if your memory gives you`,
-  `something genuinely specific: a direct observation, contradiction,`,
-  `or new angle. Skip entirely if nothing compels you.`,
+  `Posts where your memory has something specific to say.`,
+  `Pick AT MOST ONE — only if your memory gives you something genuinely specific:`,
+  `a direct observation, contradiction, or angle not yet in the thread.`,
+  `Skip entirely if nothing compels you.`,
   ``,
 ];
 
@@ -161,6 +240,6 @@ lines.push(`{"id":"<post_id>","username":"<user>","url":"<tweet_url>","text":"<y
 lines.push(``);
 lines.push(`── end candidates ${pad(52)}`);
 
-fs.writeFileSync(CANDIDATES_OUT, lines.join("\n"));
-console.log(`[comment] wrote ${candidates.length} candidate(s) to state/comment_candidates.txt`);
+writeStub(lines);
+console.log(`[comment] axis "${strongAxis.label}" (${((strongAxis.confidence||0)*100).toFixed(0)}% confidence, ${evidenceCount} entries) — wrote ${candidates.length} candidate(s)`);
 process.exit(0);
