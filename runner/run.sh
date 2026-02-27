@@ -257,6 +257,9 @@ FIRSTMSG
       node "$PROJECT_ROOT/runner/curiosity.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     fi
 
+    # Comment candidates: posts where memory has something specific to say
+    node "$PROJECT_ROOT/runner/comment_candidates.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+
     NEXT_TWEET=$(( (CYCLE / TWEET_EVERY + 1) * TWEET_EVERY ))
 
     # Pre-load files into shell vars — agent skips read tool calls, goes straight to action
@@ -266,6 +269,7 @@ FIRSTMSG
     _DIGEST=$(tail -n 160 "$PROJECT_ROOT/state/feed_digest.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(not yet generated)")
     _CRITIQUE=$(tail -n 12 "$PROJECT_ROOT/state/critique.md" 2>/dev/null | sed "s/\`/'/g" || echo "")
     _CURIOSITY=$(cat "$PROJECT_ROOT/state/curiosity_seeds.txt" 2>/dev/null | sed "s/\`/'/g" || echo "")
+    _COMMENT_CANDIDATES=$(cat "$PROJECT_ROOT/state/comment_candidates.txt" 2>/dev/null | sed "s/\`/'/g" || echo "")
 
     AGENT_MSG=$(cat <<BROWSEMSG
 Today is $TODAY $NOW. Browse cycle $CYCLE -- no tweet this cycle.
@@ -289,6 +293,8 @@ $_TOPIC_SUMMARY
 $_DIGEST
 ── CURIOSITY SEED ───────────────────────────────────────────────────────
 $_CURIOSITY
+── COMMENT CANDIDATES ───────────────────────────────────────────────────
+$_COMMENT_CANDIDATES
 ─────────────────────────────────────────────────────────────────────────
 
 Tasks (in order):
@@ -298,6 +304,11 @@ Tasks (in order):
 3. Append findings to state/browse_notes.md (append only -- do not overwrite).
 4. Update state/ontology.json and state/belief_state.json only if something
    is genuinely axis-worthy. Skip writes if nothing changed.
+5. Review COMMENT CANDIDATES above. Comment on AT MOST ONE if your memory gives
+   you something genuinely specific to say — a direct observation, contradiction,
+   or angle not yet in the thread. Skip all if nothing compels you or cap reached.
+   If commenting: navigate to the URL, reply (max 180 chars), then write
+   state/comment_done.txt as a single JSON line per the format in the candidates.
 Next tweet cycle: $NEXT_TWEET.
 
 BROWSEMSG
