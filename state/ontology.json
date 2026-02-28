@@ -1,571 +1,1103 @@
 
 {
-  \"axes\": [
+  "axes": [
     {
-      \"id\": \"axis_epistemic_integrity\",
-      \"label\": \"Truth and Evidence in Public Discourse\",
-      \"left_pole\": \"Evidence-based claims, transparent sourcing, honest uncertainty, good-faith argumentation, steelmanning opponents.\",
-      \"right_pole\": \"Strategic narrative construction, emotional manipulation, tribal signaling, weaponized framing, truth as a tool not a goal.\",
-      \"score\": 0.5,
-      \"confidence\": 0.5,
-      \"topics\": [
-        \"disinformation\",
-        \"fake news\",
-        \"social media\",
-        \"manipulation\",
-        \"media integrity\",
-        \"online discourse\"
+      "id": "axis_epistemic_integrity",
+      "label": "Truth and Evidence in Public Discourse",
+      "left_pole": "Evidence-based claims, transparent sourcing, honest uncertainty, good-faith argumentation, steelmanning opponents.",
+      "right_pole": "Strategic narrative construction, emotional manipulation, tribal signaling, weaponized framing, truth as a tool not a goal.",
+      "score": 0.48,
+      "confidence": 0.575,
+      "topics": [
+        "disinformation",
+        "fake news",
+        "social media",
+        "manipulation",
+        "media integrity",
+        "online discourse"
       ],
-      \"created_at\": \"2026-02-27T00:00:00Z\",
-      \"last_updated\": \"2026-02-28T02:23:00Z\",
-      \"evidence_log\": [
+      "created_at": "2026-02-27T00:00:00Z",
+      "last_updated": "2026-02-28T08:03:00Z",
+      "evidence_log": [
         {
-          \"source\": \"https://x.com/rapplerdotcom/status/2027003723226955942\",
-          \"content\": \"Disinformation turning the internet into a battleground for many Filipinos amidst legal arguments.\",
-          \"timestamp\": \"2026-02-27T04:50:00Z\",
-          \"pole_alignment\": \"right\"
+          "source": "https://x.com/rapplerdotcom/status/2027003723226955942",
+          "content": "Disinformation turning the internet into a battleground for many Filipinos amidst legal arguments.",
+          "timestamp": "2026-02-27T04:50:00Z",
+          "pole_alignment": "right"
         },
         {
-          \"source\": \"https://x.com/jesusfalcis/status/2026630021989937463\",
-          \"content\": \"Fake \'18 Marines\' drama orchestrated by Mike Defensor — recruitment of disinformation actors ongoing.\",
-          \"timestamp\": \"2026-02-27T09:28:00Z\",
-          \"pole_alignment\": \"right\"
+          "source": "https://x.com/jesusfalcis/status/2026630021989937463",
+          "content": "Fake '18 Marines' drama orchestrated by Mike Defensor — recruitment of disinformation actors ongoing.",
+          "timestamp": "2026-02-27T09:28:00Z",
+          "pole_alignment": "right"
         },
         {
-          \"source\": \"https://x.com/nicoquejano/status/2027212929049972779\",
-          \"content\": \"DDS trolls allegedly paid with public funds to flood ICC trial discourse with noise.\",
-          \"timestamp\": \"2026-02-27T09:28:00Z\",
-          \"pole_alignment\": \"right\"
+          "source": "https://x.com/nicoquejano/status/2027212929049972779",
+          "content": "DDS trolls allegedly paid with public funds to flood ICC trial discourse with noise.",
+          "timestamp": "2026-02-27T09:28:00Z",
+          "pole_alignment": "right"
         },
         {
-          \"source\": \"https://x.com/nicoquejano/status/2027094501962178982\",
-          \"content\": \"Use of AI (Grok) as counter-measure against disinformation — objectivity contested.\",
-          \"timestamp\": \"2026-02-27T04:30:00Z\",
-          \"pole_alignment\": \"left\"
+          "source": "https://x.com/nicoquejano/status/2027094501962178982",
+          "content": "Use of AI (Grok) as counter-measure against disinformation — objectivity contested.",
+          "timestamp": "2026-02-27T04:30:00Z",
+          "pole_alignment": "left"
         },
         {
-          \"source\": \"https://x.com/Sattv1k/status/2026915132463575497\",
-          \"content\": \"Critique of manufactured engagement tactics — advocacy for consistent, genuine content.\",
-          \"timestamp\": \"2026-02-27T04:50:00Z\",
-          \"pole_alignment\": \"left\"
+          "source": "https://x.com/Sattv1k/status/2026915132463575497",
+          "content": "Critique of manufactured engagement tactics — advocacy for consistent, genuine content.",
+          "timestamp": "2026-02-27T04:50:00Z",
+          "pole_alignment": "left"
         },
         {
-          \"source\": \"https://x.com/isciverse/status/2027245343747006846\",
-          \"content\": \"AI taking work from data analysts and research coders — blurring line between human and AI output.\",
-          \"timestamp\": \"2026-02-27T12:52:00Z\",
-          \"pole_alignment\": \"right\"
+          "source": "https://x.com/isciverse/status/2027245343747006846",
+          "content": "AI taking work from data analysts and research coders — blurring line between human and AI output.",
+          "timestamp": "2026-02-27T12:52:00Z",
+          "pole_alignment": "right"
         },
         {
-          \"source\": \"https://x.com/TheFigen_/status/2026709535847756182\",
-          \"content\": \"Public preoccupation with distinguishing AI-generated content from real — authenticity crisis.\",
-          \"timestamp\": \"2026-02-27T04:10:00Z\",
-          \"pole_alignment\": \"right\"
+          "source": "https://x.com/TheFigen_/status/2026709535847756182",
+          "content": "Public preoccupation with distinguishing AI-generated content from real — authenticity crisis.",
+          "timestamp": "2026-02-27T04:10:00Z",
+          "pole_alignment": "right"
         },
         {
-          \"source\": \"https://x.com/nicoquejano/status/2026966797254377846\",
-          \"content\": \"Politicians \'playing a stage version of themselves\' — politics as performance, blurring genuine discourse.\",
-          \"timestamp\": \"2026-02-27T06:15:00Z\",
-          \"pole_alignment\": \"right\"
+          "source": "https://x.com/nicoquejano/status/2026966797254377846",
+          "content": "Politicians 'playing a stage version of themselves' — politics as performance, blurring genuine discourse.",
+          "timestamp": "2026-02-27T06:15:00Z",
+          "pole_alignment": "right"
         },
         {
-          \"source\": \"https://x.com/DaveSi/status/2026971237738831983\",
-          \"content\": \"Trolls using personal homophobic attacks in response to political criticism — manipulative discourse tactics.\",
-          \"timestamp\": \"2026-02-27T06:05:00Z\",
-          \"pole_alignment\": \"right\"
+          "source": "https://x.com/DaveSi/status/2026971237738831983",
+          "content": "Trolls using personal homophobic attacks in response to political criticism — manipulative discourse tactics.",
+          "timestamp": "2026-02-27T06:05:00Z",
+          "pole_alignment": "right"
         },
         {
-          \"source\": \"https://x.com/nicoquejano/status/2027248854656282711\",
-          \"content\": \"Claire Castro used as Marcos mouthpiece — media figures deployed as strategic narrative vehicles.\",
-          \"timestamp\": \"2026-02-27T08:08:00Z\",
-          \"pole_alignment\": \"right\"
+          "source": "https://x.com/nicoquejano/status/2027248854656282711",
+          "content": "Claire Castro used as Marcos mouthpiece — media figures deployed as strategic narrative vehicles.",
+          "timestamp": "2026-02-27T08:08:00Z",
+          "pole_alignment": "right"
         },
         {
-          \"source\": \"https://x.com/jesusfalcis/status/2026542155037352107\",
-          \"content\": \"Debunking of false allegations against Leila De Lima — factual correction against political narrative.\",
-          \"timestamp\": \"2026-02-27T05:00:00Z\",
-          \"pole_alignment\": \"left\"
+          "source": "https://x.com/jesusfalcis/status/2026542155037352107",
+          "content": "Debunking of false allegations against Leila De Lima — factual correction against political narrative.",
+          "timestamp": "2026-02-27T05:00:00Z",
+          "pole_alignment": "left"
         },
         {
-          \"source\": \"digest_browse_notes_tension_1\",
-          \"content\": \"Censorship claims against name-dropping politicians — attempts to control counter-narratives.\",
-          \"timestamp\": \"2026-02-27T15:48:00Z\",
-          \"pole_alignment\": \"right\"
+          "source": "digest_browse_notes_tension_1",
+          "content": "Censorship claims against name-dropping politicians — attempts to control counter-narratives.",
+          "timestamp": "2026-02-27T15:48:00Z",
+          "pole_alignment": "right"
         },
         {
-          \"source\": \"https://x.com/jesusfalcis/status/2026630021989937463\",
-          \"content\": \"Fake \'18 Marines\' drama orchestrated by Mike Defensor, with ongoing recruitment of disinformation actors.\",
-          \"timestamp\": \"2026-02-27T21:41:00Z\",
-          \"pole_alignment\": \"right\"
-        },\
+          "source": "https://x.com/jesusfalcis/status/2026630021989937463",
+          "content": "Fake '18 Marines' drama orchestrated by Mike Defensor, with ongoing recruitment of disinformation actors.",
+          "timestamp": "2026-02-27T21:41:00Z",
+          "pole_alignment": "right"
+        },
         {
-          \"source\": \"https://x.com/GManicurist/status/2027061230528258178\",
-          \"content\": \"Accusations of \'maximum FAKE NEWS mode\' by DDS Machinery to divert attention from ICC proceedings.\",
-          \"timestamp\": \"2026-02-27T21:41:00Z\",
-          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"source\": \"https://x.com/nicoquejano/status/2027212929049972779\",\n          \"content\": \"DDS trolls allegedly paid with public funds to flood ICC trial discourse with noise and \'tanga\' responses.\",\n          \"timestamp\": \"2026-02-27T21:41:00Z\",\n          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"source\": \"https://x.com/nicoquejano/status/2027248854656282711\",\n          \"content\": \"Claire Castro labeled as Marcos\'s mouthpiece, indicating strategic narrative deployment.\",\n          \"timestamp\": \"2026-02-27T21:41:00Z\",\n          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"source\": \"https://x.com/jesusfalcis/status/2026630021989937463\",\n          \"content\": \"Fake ‘18 Marines’ drama, ongoing recruitment of disinformation actors by Mike Defensor.\",\n          \"timestamp\": \"2026-02-28T02:23:00Z\",\n          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"source\": \"https://x.com/GManicurist/status/2027061230528258178\",\n          \"content\": \"DDS Machinery in \'maximum FAKE NEWS mode\' to distract from ICC proceedings.\",\n          \"timestamp\": \"2026-02-28T02:23:00Z\",\n          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"source\": \"https://x.com/nicoquejano/status/2027212929049972779\",\n          \"content\": \"DDS trolls allegedly paid with public funds to flood ICC trials with weak arguments and noise.\",\n          \"timestamp\": \"2026-02-28T02:23:00Z\",\n          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"source\": \"https://x.com/ricci_richy/status/2026630021989937463\",\n          \"content\": \"Political drama as a distraction from ongoing trials and Duterte\'s decline.\",\n          \"timestamp\": \"2026-02-28T02:23:00Z\",\n          \"pole_alignment\": \"right\"\n        }\n      ]\n    },\
-    {\n      \"id\": \"axis_power_accountability\",\n      \"label\": \"Power, Institutions, and Rule of Law\",\n      \"left_pole\": \"Independent oversight, legal accountability for abuses of power, transparent institutions, international legal norms.\",\n      \"right_pole\": \"Sovereign authority, pragmatic justifications for executive overreach, resistance to external accountability, loyalty over law.\",\n      \"score\": -0.10,\n      \"confidence\": 0.725,\n      \"topics\": [\n        \"ICC\",\n        \"Duterte\",\n        \"drug war\",\n        \"extrajudicial killings\",\n        \"impeachment\",\n        \"governance\",\n        \"corruption\",\n        \"accountability\"\n      ],\n      \"created_at\": \"2026-02-27T00:00:00Z\",\n      \"last_updated\": \"2026-02-28T02:23:00Z\",\n      \"evidence_log\": [\n        {\n          \"source\": \"https://x.com/rapplerdotcom/status/2027202068994314323\",\n          \"content\": \"Duterte\'s lawyer reframes kill orders as \'casual gestures and boasting\' — accountability minimized.\",\n          \"timestamp\": \"2026-02-27T04:30:00Z\",\n          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"source\": \"https://x.com/ABSCBNNews/status/2026977583129346505\",\n          \"content\": \"Victims\' families demanding accountability and justice for extrajudicial killings at ICC hearing.\",\n          \"timestamp\": \"2026-02-27T04:30:00Z\",\n          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/inquirerdotnet/status/2026950913793929381\",\n          \"content\": \"ICC report detailing alleged hierarchy of the drug war and brutal operations implicating Duterte.\",\n          \"timestamp\": \"2026-02-27T05:00:00Z\",\n          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/rapplerdotcom/status/2027014426814009427\",\n          \"content\": \"Impunity remains entrenched — victims\' families face threats even after Duterte\'s detention.\",\n          \"timestamp\": \"2026-02-27T06:05:00Z\",\n          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"source\": \"https://x.com/ABSCBNNews/status/2026919601158893807\",\n          \"content\": \"ICC Office of Prosecutor rejects claims of Philippine government influence — asserts independence.\",\n          \"timestamp\": \"2026-02-27T08:08:00Z\",\n          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/inquirerdotnet/status/2027044164832248089\",\n          \"content\": \"Duterte\'s counsel challenges ICC legal foundations — argues case belongs in Philippine courts.\",\n          \"timestamp\": \"2026-02-27T08:08:00Z\",\n          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"source\": \"https://x.com/AMOvenson/status/2027044164832248089\",\n          \"content\": \"Philippine justice system is working — case should be tried domestically, not surrendered to ICC.\",\n          \"timestamp\": \"2026-02-27T10:33:00Z\",\n          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"source\": \"https://x.com/gmanews/status/2027202162527191308\",\n          \"content\": \"Office of Public Counsel for Victims refutes claim there was no common criminal plan during drug war.\",\n          \"timestamp\": \"2026-02-27T10:33:00Z\",\n          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/PhilstarNews/status/2027111429648597502\",\n          \"content\": \"Sara Duterte\'s presidential bid swaying congressional votes on her impeachment — accountability compromised by politics.\",\n          \"timestamp\": \"2026-02-27T09:28:00Z\",\n          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"source\": \"https://x.com/PhilstarNews/status/2026516865611345983\",\n          \"content\": \"Groups requesting BIR probe into Sen. Marcoleta\'s undisclosed campaign contributions.\",\n          \"timestamp\": \"2026-02-27T04:20:00Z\",\n          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/rapplerdotcom/status/2026962198770176201\",\n          \"content\": \"Archbishop Villegas urges ICC to hold drug war architects accountable — moral weight added to legal process.\",\n          \"timestamp\": \"2026-02-27T05:57:00Z\",\n          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/PhilstarNews/status/2026907844059254808\",\n          \"content\": \"Commemoration of Jose Diokno — human rights advocate, historical context for accountability struggles.\",\n          \"timestamp\": \"2026-02-27T05:57:00Z\",\n          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/ABSCBNNews/status/2027247879362953488\",\n          \"content\": \"Palace press officer questions Duterte counsel\'s focus on Marcos during ICC proceedings — political maneuvering.\",\n          \"timestamp\": \"2026-02-27T14:05:00Z\",\n          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"source\": \"https://x.com/ABSCBNNews/status/2026986853996327168\",\n          \"content\": \"Archbishop Villegas: \'THIS IS NOT EDSA.\' — current moment falls short of genuine democratic accountability.\",\n          \"timestamp\": \"2026-02-27T04:40:00Z\",\n          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/gmanews/status/2027202162527191308\",\n          \"content\": \"Office of Public Counsel for Victims refutes claim there was no common criminal plan during drug war.\",\n          \"timestamp\": \"2026-02-27T21:41:00Z\",\n          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/inquirerdotnet/status/2027044164832248089\",\n          \"content\": \"Duterte\'s counsel challenges ICC legal foundations, arguing case belongs in Philippine courts.\",\n          \"timestamp\": \"2026-02-27T21:41:00Z\",\n          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"source\": \"https://x.com/leisbeth_recto/status/2026975002793578972\",\n          \"content\": \"Public sentiment for Duterte detention, demanding accountability.\",\n          \"timestamp\": \"2026-02-27T21:41:00Z\",\n          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/ABSCBNNews/status/2026919601158893807\",\n          \"content\": \"ICC Office of Prosecutor rejects claims of Philippine government influence, asserts independence.\",\n          \"timestamp\": \"2026-02-27T21:41:00Z\",
-          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/News5PH/status/2026996420415500449\",
-          \"content\": \"House lawmakers maintain impeachment position despite political pressure, indicating institutional integrity.\",
-          \"timestamp\": \"2026-02-27T21:41:00Z\",
-          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/PhilstarNews/status/2027111429648597502\",
-          \"content\": \"Sara Duterte\'s presidential bid swaying congressional votes on impeachment, compromising accountability.\",
-          \"timestamp\": \"2026-02-27T21:41:00Z\",
-          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"source\": \"https://x.com/rapplerdotcom/status/2026962198770176201\",
-          \"content\": \"Archbishop Villegas urges ICC to hold drug war architects accountable, adding moral weight.\",
-          \"timestamp\": \"2026-02-27T21:41:00Z\",
-          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/DaveSi/status/2026971237738831983\",
-          \"content\": \"Criticism of the Duterte family\'s rise in national politics, questioning their contribution to the country.\",
-          \"timestamp\": \"2026-02-27T21:41:00Z\",
-          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/News5PH/status/2026996420415500449\",
-          \"content\": \"House Senior Deputy Majority Leader Lorenz Defensor maintains position on Sara Duterte impeachment.\",
-          \"timestamp\": \"2026-02-28T01:57:00Z\",
-          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/PhilstarNews/status/2027111429648597502\",
-          \"content\": \"VP Sara Duterte\'s presidential bid potentially sways congressional votes on impeachment.\",
-          \"timestamp\": \"2026-02-28T01:57:00Z\",
-          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"source\": \"https://x.com/inquirerdotnet/status/2027044164832248089\",
-          \"content\": \"Duterte\'s lead counsel challenges ICC legal foundations, argues for domestic trial.\",
-          \"timestamp\": \"2026-02-28T01:57:00Z\",
-          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"source\": \"https://x.com/gmanews/status/2027202162527191308\",
-          \"content\": \"Office of Public Counsel for Victims refutes argument of no \'common criminal plan\' in drug war.\",
-          \"timestamp\": \"2026-02-28T02:23:00Z\",
-          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/inquirerdotnet/status/2027044164832248089\",
-          \"content\": \"Duterte\'s lead counsel challenges ICC legal foundations, arguing case belongs in Philippine courts.\",
-          \"timestamp\": \"2026-02-28T02:23:00Z\",
-          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"source\": \"https://x.com/jesusfalcis/status/2027263100882423835\",
-          \"content\": \"Lorenz Defensor maintains position on Sara Duterte impeachment, stating talk of killing President is impeachable.\",
-          \"timestamp\": \"2026-02-28T02:23:00Z\",
-          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/PhilstarNews/status/2027111429648597502\",
-          \"content\": \"VP Sara Duterte\'s presidential bid has high chance of swaying congressional impeachment votes.\",
-          \"timestamp\": \"2026-02-28T02:23:00Z\",
-          \"pole_alignment\": \"right\"\n        }\
-      ]\
-    },\
-    {\
-      \"id\": \"axis_collective_voice\",
-      \"label\": \"Authentic Participation vs. Managed Consent\",
-      \"left_pole\": \"Genuine democratic deliberation, grassroots organizing, authentic public discourse, bottom-up political change.\",
-      \"right_pole\": \"Manufactured consensus, troll farms, narrative management, performative democracy, top-down information control.\",
-      \"score\": -0.1,
-      \"confidence\": 0.2,
-      \"topics\": [
-        \"democracy\",
-        \"social media\",
-        \"political participation\",
-        \"public opinion\",
-        \"West Philippine Sea\",
-        \"alliances\",
-        \"sovereignty\"
+          "source": "https://x.com/GManicurist/status/2027061230528258178",
+          "content": "Accusations of 'maximum FAKE NEWS mode' by DDS Machinery to divert attention from ICC proceedings.",
+          "timestamp": "2026-02-27T21:41:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/nicoquejano/status/2027212929049972779",
+          "content": "DDS trolls allegedly paid with public funds to flood ICC trial discourse with noise and 'tanga' responses.",
+          "timestamp": "2026-02-27T21:41:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/nicoquejano/status/2027248854656282711",
+          "content": "Claire Castro labeled as Marcos's mouthpiece, indicating strategic narrative deployment.",
+          "timestamp": "2026-02-27T21:41:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/jesusfalcis/status/2026630021989937463",
+          "content": "Fake news drama related to '18 Marines' and ongoing recruitment, indicating coordinated disinformation.",
+          "timestamp": "2026-02-28T02:23:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/GManicurist/status/2027061230528258178",
+          "content": "DDS Machinery in 'maximum FAKE NEWS mode' to distract from Duterte's ICC issues.",
+          "timestamp": "2026-02-28T02:23:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/nicoquejano/status/2027212929049972779",
+          "content": "DDS trolls allegedly paid with public funds to flood ICC trials with weak arguments and noise.",
+          "timestamp": "2026-02-28T02:23:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/ricci_richy/status/2026630021989937463",
+          "content": "Political drama as a distraction from ongoing trials and Duterte's decline.",
+          "timestamp": "2026-02-28T02:23:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/IamMrsStinson/status/2027324033927454889",
+          "content": "Opinion that one should believe what 'came straight from the horse's mouth,' implying uncritical acceptance.",
+          "timestamp": "2026-02-28T07:43:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/pauloMDtweets/status/2027427846650794066",
+          "content": "Questioning of 'very good' administration claims by pointing out that critics had to leave the country, highlighting perceived hypocrisy or lack of options.",
+          "timestamp": "2026-02-28T07:43:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/gmanews/status/2027410913741910103",
+          "content": "ICC Prosecutor Julian Nicholls questions if Duterte's lawyer is calling his client a liar, advocating for factual consistency.",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/_katrinadomingo/status/2027444686130987066",
+          "content": "Human rights lawyer Neri Colmenares says Duterte’s defense counsel resorted to emotional appeal, 'grasping at straws'.",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "pole_alignment": "right"
+        }
+      ]
+    },
+    {
+      "id": "axis_power_accountability",
+      "label": "Power, Institutions, and Rule of Law",
+      "left_pole": "Independent oversight, legal accountability for abuses of power, transparent institutions, international legal norms.",
+      "right_pole": "Sovereign authority, pragmatic justifications for executive overreach, resistance to external accountability, loyalty over law.",
+      "score": -0.14,
+      "confidence": 0.925,
+      "topics": [
+        "ICC",
+        "Duterte",
+        "drug war",
+        "extrajudicial killings",
+        "impeachment",
+        "governance",
+        "corruption",
+        "accountability"
       ],
-      \"created_at\": \"2026-02-27T00:00:00Z\",
-      \"last_updated\": \"2026-02-27T20:00:00Z\",
-      \"evidence_log\": [
+      "created_at": "2026-02-27T00:00:00Z",
+      "last_updated": "2026-02-28T08:03:00Z",
+      "evidence_log": [
         {
-          \"source\": \"https://x.com/leisbeth_recto/status/2026975002793578972\",
-          \"content\": \"53% public sentiment for Duterte detention — authentic grassroots expression.\",
-          \"timestamp\": \"2026-02-27T09:28:00Z\",
-          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/News5PH/status/2026996420415500449\",
-          \"content\": \"House lawmakers maintaining impeachment position despite political pressure — institutional integrity signal.\",
-          \"timestamp\": \"2026-02-27T09:28:00Z\",
-          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/DaveSi/status/2026971237738831983\",
-          \"content\": \"Duterte family did not contribute anything of value — direct public voice against political dynasty.\",
-          \"timestamp\": \"2026-02-27T08:08:00Z\",
-          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/gmanews/status/2027025225532260415\",
-          \"content\": \"Expanded Philippines-Japan-US maritime cooperation in West Philippine Sea — multilateral alliance assertion.\",
-          \"timestamp\": \"2026-02-27T04:30:00Z\",
-          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/narendramodi/status/2026714966217339017\",
-          \"content\": \"Modi highlighting India-Israel historic connection — alliance rhetoric overriding humanitarian concerns.\",
-          \"timestamp\": \"2026-02-27T04:30:00Z\",
-          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"source\": \"https://x.com/MR_KG/status/2026714966217339017\",
-          \"content\": \"Critique of India\'s silence on mosque destructions while celebrating Israel alliance — humanitarian concerns subordinated.\",
-          \"timestamp\": \"2026-02-27T04:30:00Z\",
-          \"pole_alignment\": \"left\"\n        },\
-        {\n          \"source\": \"https://x.com/PhilstarNews/status/2026582392819855509\",
-          \"content\": \"EDSA 40th anniversary commemoration — reinforcing democratic revolution narrative.\",
-          \"timestamp\": \"2026-02-27T04:30:00Z\",
-          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"source\": \"https://x.com/anakmartiallaw/status/2027068010977182024\",
-          \"content\": \"Criticism that accountability efforts are flawed — undermining credibility of anti-corruption campaigns.\",
-          \"timestamp\": \"2026-02-27T05:57:00Z\",
-          \"pole_alignment\": \"right\"\n        }\
-      ]\
-    },\
-    {\
-      \"id\": \"axis_eje_accountability_v1\",
-      \"label\": \"Accountability for Extrajudicial Killings\",
-      \"left_pole\": \"Demands for full legal accountability for human rights abuses, independent investigations, and justice for victims.\",
-      \"right_pole\": \"Defense of state actions as necessary for public order, re-contextualization of controversial statements, and rejection of external intervention (e.g., ICC).\",
-      \"score\": -0.33,
-      \"confidence\": 0.3,
-      \"topics\": [
-        \"extrajudicial killings\",
-        \"ICC\",
-        \"Duterte\",
-        \"human rights\"
-      ],\
-      \"created_at\": \"2026-02-27T04:52:00Z\",
-      \"last_updated\": \"2026-02-28T02:23:00Z\",
-      \"evidence_log\": [\
-        {\n          \"post_url\": \"https://x.com/rapplerdotcom/status/2027202068994314323\",
-          \"timestamp\": \"2026-02-27T04:30:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"Lawyer for Duterte attempts to reframe \'kill orders\' as \'casual gestures and boasting\' and downplay number of deaths.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/ABSCBNNews/status/2026977583129346505\",
-          \"timestamp\": \"2026-02-27T04:30:00Z\",
-          \"position\": \"left\",
-          \"reasoning\": \"Victims\' families demanding accountability and justice for extrajudicial killings during ICC hearing.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/inquirerdotnet/status/2026950913793929381\",
-          \"timestamp\": \"2026-02-27T05:00:00Z\",
-          \"position\": \"left\",
-          \"reasoning\": \"Report detailing the alleged \'hierarchy\' of the drug war and its brutal operations, implicating Duterte and others.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/rapplerdotcom/status/2027014426814009427\",
-          \"timestamp\": \"2026-02-27T06:05:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"Impunity remains entrenched and victims\' families face threats even after Duterte\'s detention, indicating a systemic issue.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/DaveSi/status/2026971237738831983\",
-          \"timestamp\": \"2026-02-27T06:05:00Z\",
-          \"position\": \"left\",
-          \"reasoning\": \"Direct criticism of the Duterte family\'s impact on the Philippines and calls for accountability.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/nicoquejano/status/2027212929049972779\",
-          \"timestamp\": \"2026-02-27T06:15:00Z\",
-          \"position\": \"left\",
-          \"reasoning\": \"Criticism of \'DDS trolls\' in relation to ICC trials and alleged use of public funds, linking political infighting to accountability issues.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/ABSCBNNews/status/2027247879362953488\",
-          \"timestamp\": \"2026-02-27T14:05:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"Palace Press Officer Claire Castro questions Duterte\'s counsel\'s focus on Marcos Jr. during ICC proceedings, suggesting political maneuvering or deflection.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/PhilstarNews/status/2026907844059254808\",
-          \"timestamp\": \"2026-02-27T05:57:00Z\",
-          \"position\": \"left\",
-          \"reasoning\": \"Commemoration of human rights advocate Jose W. Diokno, providing a historical context for human rights advocacy.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/rapplerdotcom/status/2026962198770176201\",
-          \"timestamp\": \"2026-02-27T05:57:00Z\",
-          \"position\": \"left\",
-          \"reasoning\": \"Archbishop Socrates Villegas urging the ICC to hold accountable those behind the drug war killings, adding moral weight to calls for justice.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/IBTimesUK/status/2027349564894691666\",
-          \"timestamp\": \"2026-02-28T01:57:00Z\",
-          \"position\": \"left\",
-          \"reasoning\": \"ICC prosecutors allege Duterte\'s local tactics evolved into a national campaign of extrajudicial killings.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/newswatchplusph/status/2027339957912903863\",
-          \"timestamp\": \"2026-02-28T01:57:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"Duterte\'s defense claims EJK continued in Marcos administration; Malacanang questions this.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/rapplerdotcom/status/2026962198770176201\",
-          \"timestamp\": \"2026-02-28T01:57:00Z\",
-          \"position\": \"left\",
-          \"reasoning\": \"Archbishop Socrates Villegas urged the International Criminal Court to hold accountable those behind the killings in former president Rodrigo Duterte’s war on drugs.\"\n        }\
-      ]\
-    },\
-    {\
-      \"id\": \"axis_political_trust_corruption_v1\",
-      \"label\": \"Trust in Political Institutions and Anti-Corruption Efforts\",
-      \"left_pole\": \"Calls for transparency, investigations into corruption, and holding political figures accountable through legal means.\",
-      \"right_pole\": \"Skepticism towards investigations, defense of political figures against allegations, and a perception that legal processes are politically motivated or ineffective.\",
-      \"score\": 0.0,
-      \"confidence\": 0.05,
-      \"topics\": [
-        \"corruption\",
-        \"political accountability\",
-        \"COMELEC\",
-        \"BIR\"\n      ],\
-      \"created_at\": \"2026-02-27T04:52:00Z\",
-      \"last_updated\": \"2026-02-27T15:25:00Z\",
-      \"evidence_log\": [\
-        {\n          \"post_url\": \"https://x.com/PhilstarNews/status/2026516865611345983\",
-          \"timestamp\": \"2026-02-27T04:20:00Z\",
-          \"position\": \"left\",
-          \"reasoning\": \"Groups requesting a BIR probe into Sen. Rodante Marcoleta\'s \'undisclosed campaign contributions\'.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/Bert_Control/status/2027123864128610595\",
-          \"timestamp\": \"2026-02-27T04:20:00Z\",
-          \"position\": \"left\",
-          \"reasoning\": \"Call to elevate a case against Marcoleta to the Supreme Court if COMELEC\'s decision is unfavorable, implying distrust in COMELEC\'s effectiveness.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/jesusfalcis/status/2026542155037352107\",
-          \"timestamp\": \"2026-02-27T05:00:00Z\",
-          \"position\": \"left\",
-          \"reasoning\": \"Debunking of allegations against Leila De Lima, highlighting the spread of factually incorrect information in political narratives.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/nicoquejano/status/2027212929049972779\",
-          \"timestamp\": \"2026-02-27T06:15:00Z\",
-          \"position\": \"left\",
-          \"reasoning\": \"Allegations of public funds being used to pay \'DDS trolls\' for political manipulation, undermining trust in political institutions and anti-corruption efforts.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/anakmartiallaw/status/2027068010977182024\",
-          \"timestamp\": \"2026-02-27T05:57:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"Criticism of efforts to hold Sara Duterte accountable, implying they are flawed and undermining the credibility of anti-corruption campaigns.\"\n        }\
-      ]\
-    },\
-    {\
-      \"id\": \"axis_ph_geopolitics_wps_v1\",
-      \"label\": \"Philippine Geopolitical Alignment in the West Philippine Sea\",
-      \"left_pole\": \"Strong emphasis on international alliances (US, Japan) and multilateral cooperation to assert sovereignty and security in disputed territories.\",
-      \"right_pole\": \"Emphasis on independent foreign policy, direct bilateral negotiations, and skepticism towards foreign military presence, potentially prioritizing economic ties over security alliances.\",
-      \"score\": 0.0,
-      \"confidence\": 0.05,
-      \"topics\": [
-        \"West Philippine Sea\",
-        \"geopolitics\",
-        \"alliances\",
-        \"sovereignty\"\n      ],\
-      \"created_at\": \"2026-02-27T04:52:00Z\",
-      \"last_updated\": \"2026-02-27T06:25:00Z\",
-      \"evidence_log\": [\
-        {\n          \"post_url\": \"https://x.com/gmanews/status/2027025225532260415\",
-          \"timestamp\": \"2026-02-27T04:30:00Z\",
-          \"position\": \"left\",
-          \"reasoning\": \"Report on expanded multilateral maritime cooperation involving the Philippines, Japan, and US in the West Philippine Sea, indicating strengthened alliances.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/TeamAFP/status/2027176180630323339\",
-          \"timestamp\": \"2026-02-27T06:05:00Z\",
-          \"position\": \"left\",
-          \"reasoning\": \"Report on continued and expanded Multilateral Maritime Cooperative Activity (MMCA) with Japan and US in the West Philippine Sea, demonstrating reinforced security alliances.\"\n        }\
-      ]\
-    },\
-    {\n      \"id\": \"axis_ai_societal_impact_v1\",
-      \"label\": \"Societal Impact and Ethical Concerns of AI/Robots\",
-      \"left_pole\": \"Optimism for AI/robotics potential in entertainment, labor augmentation, and scientific advancement, with focus on innovation and benefits.\",
-      \"right_pole\": \"Concerns about job displacement, ethical implications of autonomous systems (e.g., \'killer robots\'), and challenges in distinguishing AI-generated content from reality.\",
-      \"score\": 0.0,
-      \"confidence\": 0.05,
-      \"topics\": [
-        \"AI\",
-        \"robots\",
-        \"job displacement\",
-        \"ethics\",
-        \"disinformation\"\n      ],\
-      \"created_at\": \"2026-02-27T05:14:00Z\",
-      \"last_updated\": \"2026-02-27T15:25:00Z\",
-      \"evidence_log\": [\
-        {\n          \"post_url\": \"https://x.com/isciverse/status/2027245343747006846\",
-          \"timestamp\": \"2026-02-27T12:52:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"AI is taking work from data analysts and research coders, signaling job displacement in specific scientific fields.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/CGTNGlobalBiz/status/2027245166323744892\",
-          \"timestamp\": \"2026-02-27T12:52:00Z\",
-          \"position\": \"left\",
-          \"reasoning\": \"AI-themed park in China showcases robots for entertainment and interactive experiences, highlighting a positive societal integration.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/gotweetworms/status/2027245296359756181\",
-          \"timestamp\": \"2026-02-27T12:52:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"Concern expressed over \'armed drones and robots,\' raising ethical questions about autonomous weapon systems.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/TWKsicem/status/2027245266458521724\",
-          \"timestamp\": \"2026-02-27T12:52:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"Direct reference to \'killer robots,\' indicating strong ethical opposition and fear regarding advanced autonomous systems.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/Pixiemetax1/status/2027245229514932474\",
-          \"timestamp\": \"2026-02-27T12:52:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"Distinction between robots performing a \'task\' and a \'job,\' implying limitations and potential for human labor to remain distinct.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/TheFigen_/status/2026709535847756182\",
-          \"timestamp\": \"2026-02-27T04:10:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"Public preoccupation with distinguishing AI-generated content from real content, with comments questioning authenticity (\'AI or real\').\"\n        },\
-        {\n          \"post_url\": \"https://x.com/gmanews/status/2027107384670171415\",
-          \"timestamp\": \"2026-02-27T06:05:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"Report on \'accidental hacking of 7,000 robot vacuums,\' highlighting security vulnerabilities of smart devices and privacy concerns.\"\n        }\
-      ]\
-    },\
-    {\
-      \"id\": \"axis_media_integrity_v1\",
-      \"label\": \"Integrity of Information and Social Media Manipulation\",
-      \"left_pole\": \"Advocacy for factual accuracy, critical assessment of sources, and efforts to combat misinformation and deceptive engagement tactics.\",
-      \"right_pole\": \"Spread of unverified claims, reliance on emotional appeals, and engagement farming strategies to influence public opinion.\",
-      \"score\": 0.83,
-      \"confidence\": 0.6,
-      \"topics\": [
-        \"disinformation\",
-        \"fake news\",
-        \"social media\",
-        \"engagement\"\n      ],\
-      \"created_at\": \"2026-02-27T05:14:00Z\",
-      \"last_updated\": \"2026-02-28T02:23:00Z\",
-      \"evidence_log\": [\
-        {\n          \"post_url\": \"https://x.com/rapplerdotcom/status/2027003723226955942\",
-          \"timestamp\": \"2026-02-27T04:50:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"Disinformation turning the internet into a \'battleground for many Filipinos\' amidst legal arguments, highlighting the challenge of truth.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/Zexyooo/status/2026915132463575497\",
-          \"timestamp\": \"2026-02-27T04:50:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"Aggressive calls for follows (\'Only Say Hi We\'ll Follow You Immediately Let\'s go\') indicating engagement farming tactics.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/Sattv1k/status/2026915132463575497\",
-          \"timestamp\": \"2026-02-27T04:50:00Z\",
-          \"position\": \"left\",
-          \"reasoning\": \"Critique of outdated engagement tactics, advocating for consistent, genuine content, indicating a desire for authentic information.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/nicoquejano/status/2027094501962178982\",
-          \"timestamp\": \"2026-02-27T04:30:00Z\",
-          \"position\": \"left\",
-          \"reasoning\": \"Use of AI (Grok) to \'humiliate DDS\' suggests a potential counter-measure against misinformation, though its objectivity needs consideration.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/nicoquejano/status/2027212929049972779\",
-          \"timestamp\": \"2026-02-27T06:15:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"Allegations of public funds used to pay \'DDS trolls\' for political manipulation, undermining media integrity.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/DaveSi/status/2026971237738831983\",
-          \"timestamp\": \"2026-02-27T06:05:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"Accusations of \'trolls\' using \'personal homophobic attacks\' in response to criticism of Duterte, illustrating aggressive and manipulative online discourse.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/Mel_Chor2021/status/2027168861611835719\",
-          \"timestamp\": \"2026-02-27T14:05:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"Use of derogatory terms like \'ddshits\' in political discourse, contributing to an aggressive and polarized online environment.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/anakmartiallaw/status/2027068010977182024\",
-          \"timestamp\": \"2026-02-27T05:57:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"Criticism implying that efforts to hold political figures accountable are flawed or poorly executed, potentially eroding trust in anti-corruption narratives.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/ensaymeowda/status/2027243660610568198\",
-          \"timestamp\": \"2026-02-27T06:15:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"Posts about clarifications taking aback claims of \'censorship\' against \'name-dropping\' politicians, highlighting concerns about freedom of expression and narrative control.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/nicoquejano/status/2026966797254377846\",
-          \"timestamp\": \"2026-02-27T06:15:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"Perception of politics as performance/entertainment, potentially blurring the lines between genuine discourse and calculated manipulation.\"\n        },\
-        {\n          \"post_url\": \"digest_browse_notes_tension_1\",
-          \"timestamp\": \"2026-02-27T15:48:00+08:00\",
-          \"position\": \"right\",
-          \"reasoning\": \"Mentions of \'censorship\' against \'name-dropping\' politicians indicate attempts to control narratives.\"\n        },\
-        {\n          \"post_url\": \"digest_browse_notes_tension_2\",
-          \"timestamp\": \"2026-02-27T15:48:00+08:00\",
-          \"position\": \"right\",
-          \"reasoning\": \"Humorous note about politicians \'playing a stage version of themselves\' highlights politics as performance and manipulation.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/jesusfalcis/status/2026630021989937463\",
-          \"timestamp\": \"2026-02-27T21:41:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"Fake \'18 Marines\' drama orchestrated by Mike Defensor, with ongoing recruitment of disinformation actors.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/GManicurist/status/2027061230528258178\",
-          \"content\": \"Accusations of \'maximum FAKE NEWS mode\' by DDS Machinery to divert attention from ICC proceedings.\",
-          \"timestamp\": \"2026-02-27T21:41:00Z\",
-          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"post_url\": \"https://x.com/nicoquejano/status/2027212929049972779\",
-          \"content\": \"DDS trolls allegedly paid with public funds to flood ICC trial discourse with noise and \'tanga\' responses.\",
-          \"timestamp\": \"2026-02-27T21:41:00Z\",
-          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"post_url\": \"https://x.com/nicoquejano/status/2027248854656282711\",
-          \"content\": \"Claire Castro labeled as Marcos\'s mouthpiece, indicating strategic narrative deployment.\",
-          \"timestamp\": \"2026-02-27T21:41:00Z\",
-          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"post_url\": \"https://x.com/jesusfalcis/status/2026630021989937463\",
-          \"content\": \"Fake news drama related to \'18 Marines\' and ongoing recruitment, indicating coordinated disinformation.\",
-          \"timestamp\": \"2026-02-28T02:23:00Z\",
-          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"post_url\": \"https://x.com/GManicurist/status/2027061230528258178\",
-          \"content\": \"DDS Machinery in \'maximum FAKE NEWS mode\' to distract from Duterte\'s ICC issues.\",
-          \"timestamp\": \"2026-02-28T02:23:00Z\",
-          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"post_url\": \"https://x.com/nicoquejano/status/2027212929049972779\",
-          \"content\": \"DDS trolls allegedly paid with public funds to flood ICC trials with weak arguments and noise.\",
-          \"timestamp\": \"2026-02-28T02:23:00Z\",
-          \"pole_alignment\": \"right\"\n        },\
-        {\n          \"post_url\": \"https://x.com/DaveSi/status/2026971237738831983\",
-          \"content\": \"Trolls using personal homophobic attacks in response to criticism of Duterte, showing manipulative online tactics.\",
-          \"timestamp\": \"2026-02-28T02:23:00Z\",
-          \"pole_alignment\": \"right\"\n        }\
-      ]\
-    },\
-    {\
-      \"id\": \"axis_geopolitical_rhetoric_v1\",
-      \"label\": \"Geopolitical Rhetoric vs. Humanitarian Concerns\",
-      \"left_pole\": \"Prioritizing humanitarian concerns, ethical considerations, and consistency in international relations beyond strategic alliances.\",
-      \"right_pole\": \"Emphasizing strong national alliances and diplomatic ties, potentially overlooking or remaining silent on human rights issues in allied nations.\",
-      \"score\": 0.0,
-      \"confidence\": 0.05,
-      \"topics\": [\
-        \"geopolitics\",
-        \"alliances\",
-        \"humanitarian issues\",
-        \"international relations\"\n      ],\
-      \"created_at\": \"2026-02-27T05:14:00Z\",
-      \"last_updated\": \"2026-02-27T05:14:00Z\",
-      \"evidence_log\": [\
-        {\n          \"post_url\": \"https://x.com/narendramodi/status/2026714966217339017\",
-          \"timestamp\": \"2026-02-27T04:30:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"PM Modi highlighting \'Historical connect between India and Israel\', emphasizing alliance.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/MR_KG/status/2026714966217339017\",
-          \"timestamp\": \"2026-02-27T04:30:00Z\",
-          \"position\": \"left\",
-          \"reasoning\": \"Critique of India\'s stance, highlighting silence on \'mosque destructions and iftar in rubble\' in the context of India-Israel relations, suggesting a humanitarian concern.\"\n        }\
-      ]\
-    },\
-    {\n      \"id\": \"axis_historical_legacy_v1\",
-      \"label\": \"Interpretation and Legacy of Historical Events\",
-      \"left_pole\": \"Critical re-evaluation of historical events and figures, emphasizing their contemporary relevance and holding past actions accountable.\",
-      \"right_pole\": \"Commemoration of historical events that reinforces a specific national narrative, potentially downplaying complex or controversial aspects.\",
-      \"score\": 0.0,
-      \"confidence\": 0.05,
-      \"topics\": [\
-        \"history\",
-        \"EDSA\",
-        \"political legacy\",
-        \"national narrative\"\n      ],\
-      \"created_at\": \"2026-02-27T05:14:00Z\",
-      \"last_updated\": \"2026-02-27T05:14:00Z\",
-      \"evidence_log\": [\
-        {\n          \"post_url\": \"https://x.com/PhilstarNews/status/2026582392819855509\",
-          \"timestamp\": \"2026-02-27T04:30:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"Sen. Risa Hontiveros commemorating the 40th anniversary of EDSA People Power Revolution, reinforcing its significance.\"\n        },\
-        {\n          \"post_url\": \"https://x.com/ABSCBNNews/status/2026986853996327168\",
-          \"timestamp\": \"2026-02-27T04:40:00Z\",
-          \"position\": \"left\",
-          \"reasoning\": \"Archbishop Socrates Villegas stating \'THIS IS NOT EDSA.\', implying a critical view of the current state of affairs compared to the ideals of EDSA.\"\n        }\
-      ]\
-    },\
-    {\n      \"id\": \"axis_public_trust_safety_crisis_v1\",
-      \"label\": \"Public Trust in Safety and Crisis Communication\",
-      \"left_pole\": \"Demands for transparency, accurate reporting, and accountability from authorities and media during safety incidents and disasters.\",
-      \"right_pole\": \"Skepticism towards official narratives, reliance on citizen journalism/social media for information, and criticism of perceived cover-ups or misinformation.\",
-      \"score\": 0.0,
-      \"confidence\": 0.06,
-      \"topics\": [\
-        \"aviation safety\",
-        \"disaster response\",
-        \"media reporting\",
-        \"crisis communication\"\n      ],\
-      \"created_at\": \"2026-02-27T15:25:00Z\",
-      \"last_updated\": \"2026-02-27T15:48:00+08:00\",
-      \"evidence_log\": [\
-        {\n          \"post_url\": \"From Topic Summary keywords, not a direct post URL yet\",
-          \"timestamp\": \"2026-02-27T07:25:00Z\",
-          \"position\": \"right\",
-          \"reasoning\": \"Frequent mention of \'Feb StarSky Aviation incident Mogadishu Somalia\' and \'passenger footage\' suggests public interest in the event and potential reliance on unofficial sources.\"\n        }\
-      ]\
-    }\
-  ],\
-  \"axis_creation_rules_version\": \"2.0\",
-  \"notes\": \"3 seed axes. Evidence fits here first. New axes only if genuinely orthogonal AND signal appears across 2+ browse cycles. Confidence = min(0.95, evidence_count * 0.025). Score = mean pole alignment (left=-1, right=+1).\"\n}\n
+          "source": "https://x.com/rapplerdotcom/status/2027202068994314323",
+          "content": "Duterte's lawyer reframes kill orders as 'casual gestures and boasting' — accountability minimized.",
+          "timestamp": "2026-02-27T04:30:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/ABSCBNNews/status/2026977583129346505",
+          "content": "Victims' families demanding accountability and justice for extrajudicial killings at ICC hearing.",
+          "timestamp": "2026-02-27T04:30:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/inquirerdotnet/status/2026950913793929381",
+          "content": "ICC report detailing alleged hierarchy of the drug war and brutal operations implicating Duterte.",
+          "timestamp": "2026-02-27T05:00:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/rapplerdotcom/status/2027014426814009427",
+          "content": "Impunity remains entrenched — victims' families face threats even after Duterte's detention.",
+          "timestamp": "2026-02-27T06:05:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/ABSCBNNews/status/2026919601158893807",
+          "content": "ICC Office of Prosecutor rejects claims of Philippine government influence — asserts independence.",
+          "timestamp": "2026-02-27T08:08:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/inquirerdotnet/status/2027044164832248089",
+          "content": "Duterte's counsel challenges ICC legal foundations — argues case belongs in Philippine courts.",
+          "timestamp": "2026-02-27T08:08:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/AMOvenson/status/2027044164832248089",
+          "content": "Philippine justice system is working — case should be tried domestically, not surrendered to ICC.",
+          "timestamp": "2026-02-27T10:33:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/gmanews/status/2027202162527191308",
+          "content": "Office of Public Counsel for Victims refutes claim there was no common criminal plan during drug war.",
+          "timestamp": "2026-02-27T10:33:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/PhilstarNews/status/2027111429648597502",
+          "content": "Sara Duterte's presidential bid swaying congressional votes on her impeachment — accountability compromised by politics.",
+          "timestamp": "2026-02-27T09:28:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/PhilstarNews/status/2026516865611345983",
+          "content": "Groups requesting BIR probe into Sen. Marcoleta's undisclosed campaign contributions.",
+          "timestamp": "2026-02-27T04:20:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/rapplerdotcom/status/2026962198770176201",
+          "content": "Archbishop Villegas urges ICC to hold drug war architects accountable — moral weight added to legal process.",
+          "timestamp": "2026-02-27T05:57:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/PhilstarNews/status/2026907844059254808",
+          "content": "Commemoration of Jose Diokno — human rights advocate, historical context for accountability struggles.",
+          "timestamp": "2026-02-27T05:57:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/ABSCBNNews/status/2027247879362953488",
+          "content": "Palace press officer questions Duterte counsel's focus on Marcos during ICC proceedings — political maneuvering.",
+          "timestamp": "2026-02-27T14:05:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/ABSCBNNews/status/2026986853996327168",
+          "content": "Archbishop Villegas: 'THIS IS NOT EDSA.' — current moment falls short of genuine democratic accountability.",
+          "timestamp": "2026-02-27T04:40:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/gmanews/status/2027202162527191308",
+          "content": "Office of Public Counsel for Victims refutes claim there was no common criminal plan during drug war.",
+          "timestamp": "2026-02-27T21:41:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/inquirerdotnet/status/2027044164832248089",
+          "content": "Duterte's counsel challenges ICC legal foundations, arguing case belongs in Philippine courts.",
+          "timestamp": "2026-02-27T21:41:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/leisbeth_recto/status/2026975002793578972",
+          "content": "Public sentiment for Duterte detention, demanding accountability.",
+          "timestamp": "2026-02-27T21:41:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/ABSCBNNews/status/2026919601158893807",
+          "content": "ICC Office of Prosecutor rejects claims of Philippine government influence, asserts independence.",
+          "timestamp": "2026-02-27T21:41:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/News5PH/status/2026996420415500449",
+          "content": "House lawmakers maintain impeachment position despite political pressure, indicating institutional integrity.",
+          "timestamp": "2026-02-27T21:41:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/PhilstarNews/status/2027111429648597502",
+          "content": "Sara Duterte's presidential bid swaying congressional votes on impeachment, compromising accountability.",
+          "timestamp": "2026-02-27T21:41:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/rapplerdotcom/status/2026962198770176201",
+          "content": "Archbishop Villegas urges ICC to hold drug war architects accountable, adding moral weight.",
+          "timestamp": "2026-02-27T21:41:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/DaveSi/status/2026971237738831983",
+          "content": "Criticism of the Duterte family's rise in national politics, questioning their contribution to the country.",
+          "timestamp": "2026-02-27T21:41:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/News5PH/status/2026996420415500449",
+          "content": "House Senior Deputy Majority Leader Lorenz Defensor maintains position on Sara Duterte impeachment.",
+          "timestamp": "2026-02-28T01:57:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/PhilstarNews/status/2027111429648597502",
+          "content": "VP Sara Duterte's presidential bid potentially sways congressional votes on impeachment.",
+          "timestamp": "2026-02-28T01:57:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/inquirerdotnet/status/2027044164832248089",
+          "content": "Duterte's lead counsel challenges ICC legal foundations, argues for domestic trial.",
+          "timestamp": "2026-02-28T01:57:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/gmanews/status/2027202162527191308",
+          "content": "Office of Public Counsel for Victims refutes argument of no 'common criminal plan' in drug war.",
+          "timestamp": "2026-02-28T02:23:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/inquirerdotnet/status/2027044164832248089",
+          "content": "Duterte's lead counsel challenges ICC legal foundations, arguing case belongs in Philippine courts.",
+          "timestamp": "2026-02-28T02:23:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/jesusfalcis/status/2027263100882423835",
+          "content": "Lorenz Defensor maintains position on Sara Duterte impeachment, stating talk of killing President is impeachable.",
+          "timestamp": "2026-02-28T02:23:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/PhilstarNews/status/2027111429648597502",
+          "content": "VP Sara Duterte's presidential bid has high chance of swaying congressional impeachment votes.",
+          "timestamp": "2026-02-28T02:23:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/newswatchplusph/status/2027354173453250759",
+          "content": "ICC prosecution fires back after Duterte's lawyer questioned why no probe for current president despite drug-related killings under Marcos admin.",
+          "timestamp": "2026-02-28T07:43:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/News5PH/status/2027343326383313329",
+          "content": "Mother of drug war victim states Duterte should be held accountable, despite his due process at ICC.",
+          "timestamp": "2026-02-28T07:43:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/macronikki/status/2027190097037472204",
+          "content": "Duterte supporters mocking and laughing at victims online, showing lack of basic decency.",
+          "timestamp": "2026-02-28T07:43:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/PhilstarNews/status/2027386356813774848",
+          "content": "Duterte's defense counsel urges ICC pre-trial judges not to confirm charges, relying on 'coherent evidence'.",
+          "timestamp": "2026-02-28T07:43:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/gmanews/status/2027410913741910103",
+          "content": "ICC Prosecutor Julian Nicholls questions if Duterte's lawyer is calling his client a liar.",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/newswatchplusph/status/2027443712394244596",
+          "content": "Filipino lawyer Gilbert Andres tells ICC judges that drug war victims want the charges against former President Rodrigo Duterte upheld.",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/ABSCBNNews/status/2027443336886554930",
+          "content": "Duterte's lead defense counsel claims prosecution, victims' counsels were 'irritated' at his arguments.",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/PhilippineStar/status/2027373164939169891",
+          "content": "ICC-accredited lawyer Gilbert Andres urged the chamber to remember that children were part of the victims of the Duterte administration's drug war.",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/inquirerdotnet/status/2027428605056442570",
+          "content": "Prosecution lawyer Julian Nicholls urges the ICC Pre-Trial Chamber to confirm the charges against Rodrigo Duterte.",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/newswatchplusph/status/2027229788218462348",
+          "content": "Filipino lawyers for Duterte believe defense counsel Nicholas Kaufman undermined prosecution's case.",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/gmanews/status/2027409634768687559",
+          "content": "ICC Prosecutor Julian Nicholls states it's time for Duterte to take responsibility for the crimes he brags about.",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/_rainbowfighter/status/2027314987921019388",
+          "content": "Filipino children and teens are reasons why Rodrigo Roa Duterte and his cohorts should be tried, convicted and jailed by the ICC.",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/News5PH/status/2027305617325756603",
+          "content": "Duterte supporter argues Filipinos deserve to be judged by fellow Filipinos, implying rejection of external ICC intervention.",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/PhilippineStar/status/2027383533015278030",
+          "content": "ICC Prosecutor Julian Nicholls says that former president Rodrigo Duterte is the most responsible person for the deaths during his administration's drug war.",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/rapplerdotcom/status/2027383455361671182",
+          "content": "Lawyer Joel Butuyan warns that if former president Rodrigo Duterte is able to avoid trial at the International Criminal Court, he could return to the Philippines to continue spreading a culture of impunity.",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "pole_alignment": "left"
+        }
+      ]
+    },
+    {
+      "id": "axis_collective_voice",
+      "label": "Authentic Participation vs. Managed Consent",
+      "left_pole": "Genuine democratic deliberation, grassroots organizing, authentic public discourse, bottom-up political change.",
+      "right_pole": "Manufactured consensus, troll farms, narrative management, performative democracy, top-down information control.",
+      "score": -0.2,
+      "confidence": 0.25,
+      "topics": [
+        "democracy",
+        "social media",
+        "political participation",
+        "public opinion",
+        "West Philippine Sea",
+        "alliances",
+        "sovereignty"
+      ],
+      "created_at": "2026-02-27T00:00:00Z",
+      "last_updated": "2026-02-28T08:03:00Z",
+      "evidence_log": [
+        {
+          "source": "https://x.com/leisbeth_recto/status/2026975002793578972",
+          "content": "53% public sentiment for Duterte detention — authentic grassroots expression.",
+          "timestamp": "2026-02-27T09:28:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/News5PH/status/2026996420415500449",
+          "content": "House lawmakers maintaining impeachment position despite political pressure — institutional integrity signal.",
+          "timestamp": "2026-02-27T09:28:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/DaveSi/status/2026971237738831983",
+          "content": "Duterte family did not contribute anything of value — direct public voice against political dynasty.",
+          "timestamp": "2026-02-27T08:08:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/gmanews/status/2027025225532260415",
+          "content": "Expanded Philippines-Japan-US maritime cooperation in West Philippine Sea — multilateral alliance assertion.",
+          "timestamp": "2026-02-27T04:30:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/narendramodi/status/2026714966217339017",
+          "content": "Modi highlighting India-Israel historic connection — alliance rhetoric overriding humanitarian concerns.",
+          "timestamp": "2026-02-27T04:30:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/MR_KG/status/2026714966217339017",
+          "content": "Critique of India's silence on mosque destructions while celebrating Israel alliance — humanitarian concerns subordinated.",
+          "timestamp": "2026-02-27T04:30:00Z",
+          "pole_alignment": "left"
+        },
+        {
+          "source": "https://x.com/PhilstarNews/status/2026582392819855509",
+          "content": "EDSA 40th anniversary commemoration — reinforcing democratic revolution narrative.",
+          "timestamp": "2026-02-27T04:30:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/anakmartiallaw/status/2027068010977182024",
+          "content": "Criticism that accountability efforts are flawed — undermining credibility of anti-corruption campaigns.",
+          "timestamp": "2026-02-27T05:57:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/News5PH/status/2027347098308579717",
+          "content": "Duterte supporters pray for 'Tatay Digong' outside ICC, demonstrating grassroots support for the former president.",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "source": "https://x.com/News5PH/status/2027305617325756603",
+          "content": "Duterte supporter argues Filipinos deserve to be judged by fellow Filipinos, advocating for national sovereignty over international jurisdiction.",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "pole_alignment": "right"
+        }
+      ]
+    },
+    {
+      "id": "axis_eje_accountability_v1",
+      "label": "Accountability for Extrajudicial Killings",
+      "left_pole": "Demands for full legal accountability for human rights abuses, independent investigations, and justice for victims.",
+      "right_pole": "Defense of state actions as necessary for public order, re-contextualization of controversial statements, and rejection of external intervention (e.g., ICC).",
+      "score": -0.44,
+      "confidence": 0.45,
+      "topics": [
+        "extrajudicial killings",
+        "ICC",
+        "Duterte",
+        "human rights"
+      ],
+      "created_at": "2026-02-27T04:52:00Z",
+      "last_updated": "2026-02-28T08:03:00Z",
+      "evidence_log": [
+        {
+          "post_url": "https://x.com/rapplerdotcom/status/2027202068994314323",
+          "timestamp": "2026-02-27T04:30:00Z",
+          "position": "right",
+          "reasoning": "Lawyer for Duterte attempts to reframe 'kill orders' as 'casual gestures and boasting' and downplay number of deaths."
+        },
+        {
+          "post_url": "https://x.com/ABSCBNNews/status/2026977583129346505",
+          "timestamp": "2026-02-27T04:30:00Z",
+          "position": "left",
+          "reasoning": "Victims' families demanding accountability and justice for extrajudicial killings during ICC hearing."
+        },
+        {
+          "post_url": "https://x.com/inquirerdotnet/status/2026950913793929381",
+          "timestamp": "2026-02-27T05:00:00Z",
+          "position": "left",
+          "reasoning": "Report detailing the alleged 'hierarchy' of the drug war and its brutal operations, implicating Duterte and others."
+        },
+        {
+          "post_url": "https://x.com/rapplerdotcom/status/2027014426814009427",
+          "timestamp": "2026-02-27T06:05:00Z",
+          "position": "right",
+          "reasoning": "Impunity remains entrenched and victims' families face threats even after Duterte's detention, indicating a systemic issue."
+        },
+        {
+          "post_url": "https://x.com/DaveSi/status/2026971237738831983",
+          "timestamp": "2026-02-27T06:05:00Z",
+          "position": "left",
+          "reasoning": "Direct criticism of the Duterte family's impact on the Philippines and calls for accountability."
+        },
+        {
+          "post_url": "https://x.com/nicoquejano/status/2027212929049972779",
+          "timestamp": "2026-02-27T06:15:00Z",
+          "position": "left",
+          "reasoning": "Criticism of 'DDS trolls' in relation to ICC trials and alleged use of public funds, linking political infighting to accountability issues."
+        },
+        {
+          "post_url": "https://x.com/ABSCBNNews/status/2027247879362953488",
+          "timestamp": "2026-02-27T14:05:00Z",
+          "position": "right",
+          "reasoning": "Palace Press Officer Claire Castro questions Duterte's counsel's focus on Marcos Jr. during ICC proceedings, suggesting political maneuvering or deflection."
+        },
+        {
+          "post_url": "https://x.com/PhilstarNews/status/2026907844059254808",
+          "timestamp": "2026-02-27T05:57:00Z",
+          "position": "left",
+          "reasoning": "Commemoration of human rights advocate Jose W. Diokno, providing a historical context for human rights advocacy."
+        },
+        {
+          "post_url": "https://x.com/rapplerdotcom/status/2026962198770176201",
+          "timestamp": "2026-02-27T05:57:00Z",
+          "position": "left",
+          "reasoning": "Archbishop Socrates Villegas urging the ICC to hold accountable those behind the drug war killings, adding moral weight to calls for justice."
+        },
+        {
+          "post_url": "https://x.com/IBTimesUK/status/2027349564894691666",
+          "timestamp": "2026-02-28T01:57:00Z",
+          "position": "left",
+          "reasoning": "ICC prosecutors allege Duterte's local tactics evolved into a national campaign of extrajudicial killings."
+        },
+        {
+          "post_url": "https://x.com/newswatchplusph/status/2027339957912903863",
+          "timestamp": "2026-02-28T01:57:00Z",
+          "position": "right",
+          "reasoning": "Duterte's defense claims EJK continued in Marcos administration; Malacanang questions this."
+        },
+        {
+          "post_url": "https://x.com/rapplerdotcom/status/2026962198770176201",
+          "timestamp": "2026-02-28T01:57:00Z",
+          "position": "left",
+          "reasoning": "Archbishop Socrates Villegas urged the International Criminal Court to hold accountable those behind the killings in former president Rodrigo Duterte’s war on drugs."
+        },
+        {
+          "post_url": "https://x.com/News5PH/status/2027343326383313329",
+          "timestamp": "2026-02-28T07:43:00Z",
+          "position": "left",
+          "reasoning": "Mother of drug war victim states Duterte should be held accountable, despite his due process at ICC."
+        },
+        {
+          "post_url": "https://x.com/newswatchplusph/status/2027443712394244596",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "position": "left",
+          "reasoning": "Filipino lawyer Gilbert Andres tells ICC judges that drug war victims want the charges against former President Rodrigo Duterte upheld."
+        },
+        {
+          "post_url": "https://x.com/PhilippineStar/status/2027373164939169891",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "position": "left",
+          "reasoning": "ICC-accredited lawyer Gilbert Andres urged the chamber to remember that children were part of the victims of the Duterte administration's drug war."
+        },
+        {
+          "post_url": "https://x.com/inquirerdotnet/status/2027428605056442570",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "position": "left",
+          "reasoning": "Prosecution lawyer Julian Nicholls urges the ICC Pre-Trial Chamber to confirm the charges against Rodrigo Duterte, arguing that witness testimony, official records and Duterte's own statements show his guilt."
+        },
+        {
+          "post_url": "https://x.com/katyrmiese/status/2027320708943253728",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "position": "left",
+          "reasoning": "Baffled by DDS supporters treating loss of children's lives as a joke in a religious country, calls it disgusting behavior."
+        },
+        {
+          "post_url": "https://x.com/MillAnarchist/status/2027322729272385765",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "position": "left",
+          "reasoning": "Statement that attacks against victims' families are not satire but deliberate slander and intimidation."
+        },
+        {
+          "post_url": "https://x.com/gmanews/status/2027409634768687559",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "position": "left",
+          "reasoning": "ICC Prosecutor Julian Nicholls states it's time for Duterte to take responsibility for the crimes he brags about."
+        },
+        {
+          "post_url": "https://x.com/_rainbowfighter/status/2027314987921019388",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "position": "left",
+          "reasoning": "Filipino children and teens are reasons why Rodrigo Roa Duterte and his cohorts should be tried, convicted and jailed by the ICC."
+        },
+        {
+          "post_url": "https://x.com/PhilippineStar/status/2027383533015278030",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "position": "left",
+          "reasoning": "ICC Prosecutor Julian Nicholls says that former president Rodrigo Duterte is the most responsible person for the deaths during his administration's drug war."
+        },
+        {
+          "post_url": "https://x.com/rapplerdotcom/status/2027383455361671182",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "position": "left",
+          "reasoning": "Lawyer Joel Butuyan warns that if former president Rodrigo Duterte is able to avoid trial at the International Criminal Court, he could return to the Philippines to continue spreading a culture of impunity."
+        }
+      ]
+    },
+    {
+      "id": "axis_political_trust_corruption_v1",
+      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
+      "left_pole": "Calls for transparency, investigations into corruption, and holding political figures accountable through legal means.",
+      "right_pole": "Skepticism towards investigations, defense of political figures against allegations, and a perception that legal processes are politically motivated or ineffective.",
+      "score": -0.14,
+      "confidence": 0.175,
+      "topics": [
+        "corruption",
+        "political accountability",
+        "COMELEC",
+        "BIR"
+      ],
+      "created_at": "2026-02-27T04:52:00Z",
+      "last_updated": "2026-02-28T08:03:00Z",
+      "evidence_log": [
+        {
+          "post_url": "https://x.com/PhilstarNews/status/2026516865611345983",
+          "timestamp": "2026-02-27T04:20:00Z",
+          "position": "left",
+          "reasoning": "Groups requesting a BIR probe into Sen. Rodante Marcoleta's 'undisclosed campaign contributions'."
+        },
+        {
+          "post_url": "https://x.com/Bert_Control/status/2027123864128610595",
+          "timestamp": "2026-02-27T04:20:00Z",
+          "position": "left",
+          "reasoning": "Call to elevate a case against Marcoleta to the Supreme Court if COMELEC's decision is unfavorable, implying distrust in COMELEC's effectiveness."
+        },
+        {
+          "post_url": "https://x.com/jesusfalcis/status/2026542155037352107",
+          "timestamp": "2026-02-27T05:00:00Z",
+          "position": "left",
+          "reasoning": "Debunking of allegations against Leila De Lima, highlighting the spread of factually incorrect information in political narratives."
+        },
+        {
+          "post_url": "https://x.com/nicoquejano/status/2027212929049972779",
+          "timestamp": "2026-02-27T06:15:00Z",
+          "position": "left",
+          "reasoning": "Allegations of public funds being used to pay 'DDS trolls' for political manipulation, undermining trust in political institutions and anti-corruption efforts."
+        },
+        {
+          "post_url": "https://x.com/anakmartiallaw/status/2027068010977182024",
+          "timestamp": "2026-02-27T05:57:00Z",
+          "position": "right",
+          "reasoning": "Criticism of efforts to hold Sara Duterte accountable, implying they are flawed and undermining the credibility of anti-corruption campaigns."
+        },
+        {
+          "post_url": "https://x.com/migstower/status/2027225184818884963",
+          "timestamp": "2026-02-28T07:43:00Z",
+          "position": "left",
+          "reasoning": "Accusation of 'Tax payers money Yan!!!' related to political figures, suggesting misuse of public funds and lack of transparency."
+        },
+        {
+          "post_url": "https://x.com/leisbeth_recto/status/2027354686580457553",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "position": "left",
+          "reasoning": "Call to jail corrupt and traitors, advocating for accountability."
+        }
+      ]
+    },
+    {
+      "id": "axis_ph_geopolitics_wps_v1",
+      "label": "Philippine Geopolitical Alignment in the West Philippine Sea",
+      "left_pole": "Strong emphasis on international alliances (US, Japan) and multilateral cooperation to assert sovereignty and security in disputed territories.",
+      "right_pole": "Emphasis on independent foreign policy, direct bilateral negotiations, and skepticism towards foreign military presence, potentially prioritizing economic ties over security alliances.",
+      "score": 0.0,
+      "confidence": 0.05,
+      "topics": [
+        "West Philippine Sea",
+        "geopolitics",
+        "alliances",
+        "sovereignty"
+      ],
+      "created_at": "2026-02-27T04:52:00Z",
+      "last_updated": "2026-02-27T06:25:00Z",
+      "evidence_log": [
+        {
+          "post_url": "https://x.com/gmanews/status/2027025225532260415",
+          "timestamp": "2026-02-27T04:30:00Z",
+          "position": "left",
+          "reasoning": "Report on expanded multilateral maritime cooperation involving the Philippines, Japan, and US in the West Philippine Sea, indicating strengthened alliances."
+        },
+        {
+          "post_url": "https://x.com/TeamAFP/status/2027176180630323339",
+          "timestamp": "2026-02-27T06:05:00Z",
+          "position": "left",
+          "reasoning": "Report on continued and expanded Multilateral Maritime Cooperative Activity (MMCA) with Japan and US in the West Philippine Sea, demonstrating reinforced security alliances."
+        }
+      ]
+    },
+    {
+      "id": "axis_ai_societal_impact_v1",
+      "label": "Societal Impact and Ethical Concerns of AI/Robots",
+      "left_pole": "Optimism for AI/robotics potential in entertainment, labor augmentation, and scientific advancement, with focus on innovation and benefits.",
+      "right_pole": "Concerns about job displacement, ethical implications of autonomous systems (e.g., 'killer robots'), and challenges in distinguishing AI-generated content from reality.",
+      "score": 0.0,
+      "confidence": 0.05,
+      "topics": [
+        "AI",
+        "robots",
+        "job displacement",
+        "ethics",
+        "disinformation"
+      ],
+      "created_at": "2026-02-27T05:14:00Z",
+      "last_updated": "2026-02-27T15:25:00Z",
+      "evidence_log": [
+        {
+          "post_url": "https://x.com/isciverse/status/2027245343747006846",
+          "timestamp": "2026-02-27T12:52:00Z",
+          "position": "right",
+          "reasoning": "AI is taking work from data analysts and research coders, signaling job displacement in specific scientific fields."
+        },
+        {
+          "post_url": "https://x.com/CGTNGlobalBiz/status/2027245166323744892",
+          "timestamp": "2026-02-27T12:52:00Z",
+          "position": "left",
+          "reasoning": "AI-themed park in China showcases robots for entertainment and interactive experiences, highlighting a positive societal integration."
+        },
+        {
+          "post_url": "https://x.com/gotweetworms/status/2027245296359756181",
+          "timestamp": "2026-02-27T12:52:00Z",
+          "position": "right",
+          "reasoning": "Concern expressed over 'armed drones and robots,' raising ethical questions about autonomous weapon systems."
+        },
+        {
+          "post_url": "https://x.com/TWKsicem/status/2027245266458521724",
+          "timestamp": "2026-02-27T12:52:00Z",
+          "position": "right",
+          "reasoning": "Direct reference to 'killer robots,' indicating strong ethical opposition and fear regarding advanced autonomous systems."
+        },
+        {
+          "post_url": "https://x.com/Pixiemetax1/status/2027245229514932474",
+          "timestamp": "2026-02-27T12:52:00Z",
+          "position": "right",
+          "reasoning": "Distinction between robots performing a 'task' and a 'job,' implying limitations and potential for human labor to remain distinct."
+        },
+        {
+          "post_url": "https://x.com/TheFigen_/status/2026709535847756182",
+          "timestamp": "2026-02-27T04:10:00Z",
+          "position": "right",
+          "reasoning": "Public preoccupation with distinguishing AI-generated content from real content, with comments questioning authenticity ('AI or real')."
+        },
+        {
+          "post_url": "https://x.com/gmanews/status/2027107384670171415",
+          "timestamp": "2026-02-27T06:05:00Z",
+          "position": "right",
+          "reasoning": "Report on 'accidental hacking of 7,000 robot vacuums,' highlighting security vulnerabilities of smart devices and privacy concerns."
+        }
+      ]
+    },
+    {
+      "id": "axis_media_integrity_v1",
+      "label": "Integrity of Information and Social Media Manipulation",
+      "left_pole": "Advocacy for factual accuracy, critical assessment of sources, and efforts to combat misinformation and deceptive engagement tactics.",
+      "right_pole": "Spread of unverified claims, reliance on emotional appeals, and engagement farming strategies to influence public opinion.",
+      "score": 0.86,
+      "confidence": 0.725,
+      "topics": [
+        "disinformation",
+        "fake news",
+        "social media",
+        "engagement"
+      ],
+      "created_at": "2026-02-27T05:14:00Z",
+      "last_updated": "2026-02-28T08:03:00Z",
+      "evidence_log": [
+        {
+          "post_url": "https://x.com/rapplerdotcom/status/2027003723226955942",
+          "timestamp": "2026-02-27T04:50:00Z",
+          "position": "right",
+          "reasoning": "Disinformation turning the internet into a 'battleground for many Filipinos' amidst legal arguments, highlighting the challenge of truth."
+        },
+        {
+          "post_url": "https://x.com/Zexyooo/status/2026915132463575497",
+          "timestamp": "2026-02-27T04:50:00Z",
+          "position": "right",
+          "reasoning": "Aggressive calls for follows ('Only Say Hi We'll Follow You Immediately Let's go') indicating engagement farming tactics."
+        },
+        {
+          "post_url": "https://x.com/Sattv1k/status/2026915132463575497",
+          "timestamp": "2026-02-27T04:50:00Z",
+          "position": "left",
+          "reasoning": "Critique of outdated engagement tactics, advocating for consistent, genuine content, indicating a desire for authentic information."
+        },
+        {
+          "post_url": "https://x.com/nicoquejano/status/2027094501962178982",
+          "timestamp": "2026-02-27T04:30:00Z",
+          "position": "left",
+          "reasoning": "Use of AI (Grok) to 'humiliate DDS' suggests a potential counter-measure against misinformation, though its objectivity needs consideration."
+        },
+        {
+          "post_url": "https://x.com/nicoquejano/status/2027212929049972779",
+          "timestamp": "2026-02-27T06:15:00Z",
+          "position": "right",
+          "reasoning": "Allegations of public funds used to pay 'DDS trolls' for political manipulation, undermining media integrity."
+        },
+        {
+          "post_url": "https://x.com/DaveSi/status/2026971237738831983",
+          "timestamp": "2026-02-27T06:05:00Z",
+          "position": "right",
+          "reasoning": "Accusations of 'trolls' using 'personal homophobic attacks' in response to criticism of Duterte, illustrating aggressive and manipulative online discourse."
+        },
+        {
+          "post_url": "https://x.com/Mel_Chor2021/status/2027168861611835719",
+          "timestamp": "2026-02-27T14:05:00Z",
+          "position": "right",
+          "reasoning": "Use of derogatory terms like 'ddshits' in political discourse, contributing to an aggressive and polarized online environment."
+        },
+        {
+          "post_url": "https://x.com/anakmartiallaw/status/2027068010977182024",
+          "timestamp": "2026-02-27T05:57:00Z",
+          "position": "right",
+          "reasoning": "Criticism implying that efforts to hold political figures accountable are flawed or poorly executed, potentially eroding trust in anti-corruption narratives."
+        },
+        {
+          "post_url": "https://x.com/ensaymeowda/status/2027243660610568198",
+          "timestamp": "2026-02-27T06:15:00Z",
+          "position": "right",
+          "reasoning": "Posts about clarifications taking aback claims of 'censorship' against 'name-dropping' politicians, highlighting concerns about freedom of expression and narrative control."
+        },
+        {
+          "post_url": "https://x.com/nicoquejano/status/2026966797254377846",
+          "timestamp": "2026-02-27T06:15:00Z",
+          "position": "right",
+          "reasoning": "Perception of politics as performance/entertainment, potentially blurring the lines between genuine discourse and calculated manipulation."
+        },
+        {
+          "post_url": "digest_browse_notes_tension_1",
+          "timestamp": "2026-02-27T15:48:00+08:00",
+          "position": "right",
+          "reasoning": "Mentions of 'censorship' against 'name-dropping' politicians indicate attempts to control narratives."
+        },
+        {
+          "post_url": "digest_browse_notes_tension_2",
+          "timestamp": "2026-02-27T15:48:00+08:00",
+          "position": "right",
+          "reasoning": "Humorous note about politicians 'playing a stage version of themselves' highlights politics as performance and manipulation."
+        },
+        {
+          "post_url": "https://x.com/jesusfalcis/status/2026630021989937463",
+          "timestamp": "2026-02-27T21:41:00Z",
+          "position": "right",
+          "reasoning": "Fake '18 Marines' drama orchestrated by Mike Defensor, with ongoing recruitment of disinformation actors."
+        },
+        {
+          "post_url": "https://x.com/GManicurist/status/2027061230528258178",
+          "content": "Accusations of 'maximum FAKE NEWS mode' by DDS Machinery to divert attention from ICC proceedings.",
+          "timestamp": "2026-02-27T21:41:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "post_url": "https://x.com/nicoquejano/status/2027212929049972779",
+          "content": "DDS trolls allegedly paid with public funds to flood ICC trial discourse with noise and 'tanga' responses.",
+          "timestamp": "2026-02-27T21:41:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "post_url": "https://x.com/nicoquejano/status/2027248854656282711",
+          "content": "Claire Castro labeled as Marcos's mouthpiece, indicating strategic narrative deployment.",
+          "timestamp": "2026-02-27T21:41:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "post_url": "https://x.com/jesusfalcis/status/2026630021989937463",
+          "content": "Fake news drama related to '18 Marines' and ongoing recruitment, indicating coordinated disinformation.",
+          "timestamp": "2026-02-28T02:23:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "post_url": "https://x.com/GManicurist/status/2027061230528258178",
+          "content": "DDS Machinery in 'maximum FAKE NEWS mode' to distract from Duterte's ICC issues.",
+          "timestamp": "2026-02-28T02:23:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "post_url": "https://x.com/nicoquejano/status/2027212929049972779",
+          "content": "DDS trolls allegedly paid with public funds to flood ICC trials with weak arguments and noise.",
+          "timestamp": "2026-02-28T02:23:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "post_url": "https://x.com/DaveSi/status/2026971237738831983",
+          "content": "Trolls using personal homophobic attacks in response to criticism of Duterte, showing manipulative online tactics.",
+          "timestamp": "2026-02-28T02:23:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "post_url": "https://x.com/macronikki/status/2027190097037472204",
+          "content": "Duterte supporters mock and laugh at victims online, displaying cruel and indecent behavior.",
+          "timestamp": "2026-02-28T07:43:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "post_url": "https://x.com/IamMrsStinson/status/2027324033927454889",
+          "content": "Opinion that one should believe what 'came straight from the horse's mouth,' implying uncritical acceptance.",
+          "timestamp": "2026-02-28T07:43:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "post_url": "https://x.com/migstower/status/2027225184818884963",
+          "content": "Accusation of 'Tax payers money Yan!!!' related to political figures, suggesting misuse of public funds and lack of transparency.",
+          "timestamp": "2026-02-28T07:43:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "post_url": "https://x.com/pauloMDtweets/status/2027427846650794066",
+          "content": "Questioning of 'very good' administration claims by pointing out that critics had to leave the country, highlighting perceived hypocrisy or lack of options.",
+          "timestamp": "2026-02-28T07:43:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "post_url": "https://x.com/tenchi_MNL/status/2027277589874926008",
+          "content": "Criticism of Duterte supporters on Facebook mocking victims, questioning their basic decency and calling them 'anlala.'",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "post_url": "https://x.com/katyrmiese/status/2027320708943253728",
+          "content": "Baffled by DDS supporters treating loss of children's lives as a joke in a religious country, calls it disgusting behavior.",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "pole_alignment": "right"
+        },
+        {
+          "post_url": "https://x.com/MillAnarchist/status/2027322729272385765",
+          "content": "Statement that attacks against victims' families are not satire but deliberate slander and intimidation.",
+          "timestamp": "2026-02-28T08:03:00Z",
+          "pole_alignment": "right"
+        }
+      ]
+    },
+    {
+      "id": "axis_geopolitical_rhetoric_v1",
+      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
+      "left_pole": "Prioritizing humanitarian concerns, ethical considerations, and consistency in international relations beyond strategic alliances.",
+      "right_pole": "Emphasizing strong national alliances and diplomatic ties, potentially overlooking or remaining silent on human rights issues in allied nations.",
+      "score": 0.0,
+      "confidence": 0.05,
+      "topics": [
+        "geopolitics",
+        "alliances",
+        "humanitarian issues",
+        "international relations"
+      ],
+      "created_at": "2026-02-27T05:14:00Z",
+      "last_updated": "2026-02-27T05:14:00Z",
+      "evidence_log": [
+        {
+          "post_url": "https://x.com/narendramodi/status/2026714966217339017",
+          "timestamp": "2026-02-27T04:30:00Z",
+          "position": "right",
+          "reasoning": "PM Modi highlighting 'Historical connect between India and Israel', emphasizing alliance."
+        },
+        {
+          "post_url": "https://x.com/MR_KG/status/2026714966217339017",
+          "timestamp": "2026-02-27T04:30:00Z",
+          "position": "left",
+          "reasoning": "Critique of India's stance, highlighting silence on 'mosque destructions and iftar in rubble' in the context of India-Israel relations, suggesting a humanitarian concern."
+        }
+      ]
+    },
+    {
+      "id": "axis_historical_legacy_v1",
+      "label": "Interpretation and Legacy of Historical Events",
+      "left_pole": "Critical re-evaluation of historical events and figures, emphasizing their contemporary relevance and holding past actions accountable.",
+      "right_pole": "Commemoration of historical events that reinforces a specific national narrative, potentially downplaying complex or controversial aspects.",
+      "score": 0.0,
+      "confidence": 0.05,
+      "topics": [
+        "history",
+        "EDSA",
+        "political legacy",
+        "national narrative"
+      ],
+      "created_at": "2026-02-27T05:14:00Z",
+      "last_updated": "2026-02-27T05:14:00Z",
+      "evidence_log": [
+        {
+          "post_url": "https://x.com/PhilstarNews/status/2026582392819855509",
+          "timestamp": "2026-02-27T04:30:00Z",
+          "position": "right",
+          "reasoning": "Sen. Risa Hontiveros commemorating the 40th anniversary of EDSA People Power Revolution, reinforcing its significance."
+        },
+        {
+          "post_url": "https://x.com/ABSCBNNews/status/2026986853996327168",
+          "timestamp": "2026-02-27T04:40:00Z",
+          "position": "left",
+          "reasoning": "Archbishop Socrates Villegas stating 'THIS IS NOT EDSA.', implying a critical view of the current state of affairs compared to the ideals of EDSA."
+        }
+      ]
+    },
+    {
+      "id": "axis_public_trust_safety_crisis_v1",
+      "label": "Public Trust in Safety and Crisis Communication",
+      "left_pole": "Demands for transparency, accurate reporting, and accountability from authorities and media during safety incidents and disasters.",
+      "right_pole": "Skepticism towards official narratives, reliance on citizen journalism/social media for information, and criticism of perceived cover-ups or misinformation.",
+      "score": 0.0,
+      "confidence": 0.06,
+      "topics": [
+        "aviation safety",
+        "disaster response",
+        "media reporting",
+        "crisis communication"
+      ],
+      "created_at": "2026-02-27T15:25:00Z",
+      "last_updated": "2026-02-27T15:48:00+08:00",
+      "evidence_log": [
+        {
+          "post_url": "From Topic Summary keywords, not a direct post URL yet",
+          "timestamp": "2026-02-27T07:25:00Z",
+          "position": "right",
+          "reasoning": "Frequent mention of 'Feb StarSky Aviation incident Mogadishu Somalia' and 'passenger footage' suggests public interest in the event and potential reliance on unofficial sources."
+        }
+      ]
+    }
+  ],
+  "axis_creation_rules_version": "2.0",
+  "notes": "3 seed axes. Evidence fits here first. New axes only if genuinely orthogonal AND signal appears across 2+ browse cycles. Confidence = min(0.95, evidence_count * 0.025). Score = mean pole alignment (left=-1, right=+1)."
+}
