@@ -14,6 +14,20 @@
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
+# ── Singleton guard — kill any prior runner before starting ───────────────────
+PIDFILE="$PROJECT_ROOT/runner/run.pid"
+if [ -f "$PIDFILE" ]; then
+  OLD_PID=$(cat "$PIDFILE" 2>/dev/null || echo "")
+  if [ -n "$OLD_PID" ] && kill -0 "$OLD_PID" 2>/dev/null; then
+    echo "[run] killing prior runner (pid $OLD_PID)..."
+    kill "$OLD_PID" 2>/dev/null
+    sleep 2
+    kill -9 "$OLD_PID" 2>/dev/null || true
+  fi
+fi
+echo $$ > "$PIDFILE"
+trap 'rm -f "$PIDFILE"' EXIT
+
 # ── Load env ──────────────────────────────────────────────────────────────────
 if [ -f "$PROJECT_ROOT/.env" ]; then
   set -a && source "$PROJECT_ROOT/.env" && set +a
@@ -222,18 +236,25 @@ while true; do
   # ── Clean stale lock files from any interrupted previous cycle ────────────
   clean_stale_locks
 
-  # ── Scraper liveness: restart collect/reply loops if they died ────────────
+  # ── Scraper liveness: restart collect/reply loops if they died or pid missing ─
+  _scraper_needs_restart=0
   for _loop in scraper reply follows; do
     _pid_file="$PROJECT_ROOT/scraper/${_loop}.pid"
-    if [ -f "$_pid_file" ]; then
-      _pid=$(cat "$_pid_file" 2>/dev/null || echo "0")
-      if ! kill -0 "$_pid" 2>/dev/null; then
-        echo "[run] ${_loop} loop dead (pid ${_pid}) — restarting scraper..."
-        bash "$PROJECT_ROOT/scraper/start.sh" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
-        break  # start.sh restarts all loops at once
-      fi
+    if [ ! -f "$_pid_file" ]; then
+      echo "[run] ${_loop} pid file missing — restarting scraper..."
+      _scraper_needs_restart=1
+      break
+    fi
+    _pid=$(cat "$_pid_file" 2>/dev/null || echo "0")
+    if ! kill -0 "$_pid" 2>/dev/null; then
+      echo "[run] ${_loop} loop dead (pid ${_pid}) — restarting scraper..."
+      _scraper_needs_restart=1
+      break
     fi
   done
+  if [ "$_scraper_needs_restart" -eq 1 ]; then
+    bash "$PROJECT_ROOT/scraper/start.sh" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+  fi
 
   # ── Ensure browser is alive before each cycle (fast path for BROWSE) ─────
   # TWEET/QUOTE cycles run ensure_browser() below for full retry logic.
@@ -254,7 +275,10 @@ while true; do
   #    temporarily unavailable (causes "browser control service timed out").
   if [ "$CYCLE_TYPE" = "TWEET" ] || [ "$CYCLE_TYPE" = "QUOTE" ]; then
     reset_session x-hunter-tweet  # always flush tweet agent session
-    ensure_browser                # functional check + auto-restart if broken
+  fi
+  # ensure_browser only needed for TWEET (runner posts via CDP, not openclaw browser tool)
+  if [ "$CYCLE_TYPE" = "TWEET" ]; then
+    ensure_browser
   fi
 
   # ── Reset browse session periodically (every 6 cycles = 2h) ──────────────
@@ -267,6 +291,9 @@ while true; do
     check_browser && echo "[run] browser healthy after reset" || echo "[run] WARNING: browser still not ready after reset"
     echo "[run] x-hunter session + gateway restarted (context flush cycle $CYCLE)"
   fi
+
+  # ── Second lock sweep: gateway/browser restarts may have orphaned new locks ─
+  clean_stale_locks
 
   # ── First-ever cycle: intro tweet + profile setup ─────────────────────────
   if [ "$JOURNAL_COUNT" -eq 0 ]; then
@@ -331,6 +358,18 @@ FIRSTMSG
     _CURIOSITY_DIRECTIVE=$(cat "$PROJECT_ROOT/state/curiosity_directive.txt" 2>/dev/null | sed "s/\`/'/g" || echo "")
     _COMMENT_CANDIDATES=$(cat "$PROJECT_ROOT/state/comment_candidates.txt" 2>/dev/null | sed "s/\`/'/g" || echo "")
     _DISCOURSE_DIGEST=$(cat "$PROJECT_ROOT/state/discourse_digest.txt" 2>/dev/null | sed "s/\`/'/g" || echo "")
+    _CURRENT_AXES=$(node -e "
+      try {
+        const d=JSON.parse(require('fs').readFileSync('$PROJECT_ROOT/state/ontology.json','utf-8'));
+        (d.axes||[]).forEach(a=>{
+          const ev=(a.evidence_log||[]).length;
+          const conf=((a.confidence||0)*100).toFixed(0);
+          console.log('  ['+a.id+'] '+a.label+' (conf:'+conf+'%, ev:'+ev+')');
+          console.log('    L: '+a.left_pole.slice(0,80));
+          console.log('    R: '+a.right_pole.slice(0,80));
+        });
+      } catch(e){ console.log('  (could not read ontology.json: '+e.message+')'); }
+    " 2>/dev/null || echo "  (none yet)")
 
     AGENT_MSG=$(cat <<BROWSEMSG
 Today is $TODAY $NOW. Browse cycle $CYCLE -- no tweet this cycle.
@@ -356,6 +395,8 @@ $_DIGEST
 $_CURIOSITY_DIRECTIVE
 ── COMMENT CANDIDATES ───────────────────────────────────────────────────
 $_COMMENT_CANDIDATES
+── CURRENT BELIEF AXES (read before updating ontology) ──────────────────
+$_CURRENT_AXES
 ── RECENT DISCOURSE (reply exchanges) ───────────────────────────────────
 $_DISCOURSE_DIGEST
 ─────────────────────────────────────────────────────────────────────────
@@ -368,8 +409,33 @@ Tasks (in order):
 2. Identify the 3-5 most interesting tensions or signals from TRENDING clusters
    and <- novel singletons. You may navigate to at most 1 additional URL.
 3. Append findings to state/browse_notes.md (append only -- do not overwrite).
-4. Update state/ontology.json and state/belief_state.json only if something
-   is genuinely axis-worthy. Skip writes if nothing changed.
+4. Write state/ontology_delta.json if anything is genuinely axis-worthy.
+   DO NOT write or modify state/ontology.json directly — the runner merges your delta.
+   ONTOLOGY RULES (CURRENT BELIEF AXES shown above — do not alter existing data):
+   a. Fit new evidence to an existing axis before creating a new one.
+      Use the axis_id shown in the CURRENT BELIEF AXES list.
+   b. Create a new axis ONLY if the topic is genuinely orthogonal to all
+      existing axes AND the pattern appeared in at least 2 browse cycles.
+   c. NEVER touch or rewrite state/ontology.json — your job is delta only.
+   d. Merge proposals: if two axes cover the same ground, append one JSON line to
+      state/ontology_merge_proposals.txt (axis_a, axis_b, reason, proposed_surviving_id).
+      Do NOT merge directly.
+
+   Delta format — write state/ontology_delta.json as:
+   {
+     "evidence": [
+       { "axis_id": "<existing_axis_id>", "source": "<url>",
+         "content": "<one sentence>", "timestamp": "<ISO>",
+         "pole_alignment": "left" | "right" }
+     ],
+     "new_axes": [
+       { "id": "<snake_case_id>", "label": "<label>",
+         "left_pole": "<description>", "right_pole": "<description>" }
+     ]
+   }
+   Omit "evidence" or "new_axes" if nothing to add. Skip writing the file entirely
+   if nothing is axis-worthy this cycle.
+
 5. Review COMMENT CANDIDATES above. Comment on AT MOST ONE if your memory gives
    you something genuinely specific to say — a direct observation, contradiction,
    or angle not yet in the thread. Skip all if nothing compels you or cap reached.
@@ -383,6 +449,12 @@ BROWSEMSG
       --message "$AGENT_MSG" \
       --thinking low \
       --verbose on
+
+    # ── Merge ontology delta written by the browse agent ──────────────────
+    node "$PROJECT_ROOT/runner/apply_ontology_delta.js" 2>&1 || true
+
+    # ── Detect drift / change points in belief axes ────────────────────────
+    node "$PROJECT_ROOT/runner/detect_drift.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
     # ── Process pending replies after each browse cycle ───────────────────
     node "$PROJECT_ROOT/scraper/reply.js" 2>&1 || true
@@ -412,30 +484,53 @@ $QUOTED_SOURCES
 $_DIGEST_QUOTE
 ─────────────────────────────────────────────────────────────────────────
 
-Do NOT call any read_file tools. Tasks:
+Do NOT use any browser tools. Tasks:
 1. From the digest above, pick the single most interesting post worth engaging with publicly.
    Criteria: genuine tension with your ontology, strong claim you can sharpen or challenge,
    or a signal moment others have not yet framed correctly.
    Each post line ends with its URL. SKIP any URL in the "already quoted" list above.
-2. Navigate to the post URL.
-3. Find and click the Quote button (not Reply). A compose modal will open.
-4. Click the text area. Type one sentence of sharp commentary -- your actual view.
-   No hedging. Max 240 chars (leave room for the quoted tweet).
-5. Click the blue Post button. Wait for page update.
-   The address bar will show your new permalink (https://x.com/SebastianHunts/status/XXXXXXX).
-   If button is greyed out, click the text area and type again.
-6. Log to state/posts_log.json with type="quote", tweet_url (your permalink),
-   AND source_url (the URL of the tweet you quoted).
-7. Done -- do not browse further.
+2. Write state/quote_draft.txt (overwrite):
+   Line 1: the source tweet URL (exact URL from the digest, e.g. https://x.com/user/status/ID)
+   Lines 2+: your one-sentence quote commentary. Direct, honest, max 240 chars.
+   No hedging. This is your actual view.
+3. Append to state/posts_log.json: type="quote", tweet_url="" (runner fills it in),
+   source_url (the source tweet URL), text (your commentary), posted_at (ISO now).
+4. Done -- the runner posts the quote. Do not use the browser.
 
 QUOTEMSG
 )
+    rm -f "$PROJECT_ROOT/state/quote_draft.txt" "$PROJECT_ROOT/state/quote_result.txt"
     agent_run --agent x-hunter-tweet \
       --message "$AGENT_MSG" \
       --thinking low \
       --verbose on
 
-    # Coherence critique of the quote tweet (only if agent actually posted this cycle)
+    # ── Post quote-tweet via CDP (runner handles, no browser tool needed) ──────
+    if [ -f "$PROJECT_ROOT/state/quote_draft.txt" ]; then
+      echo "[run] Posting quote-tweet via CDP..."
+      node "$PROJECT_ROOT/runner/post_quote.js" 2>&1
+      QUOTE_URL=$(cat "$PROJECT_ROOT/state/quote_result.txt" 2>/dev/null | tr -d '\n')
+      if [ -n "$QUOTE_URL" ] && [ "$QUOTE_URL" != "posted" ]; then
+        node -e "
+          const fs=require('fs'),p='$PROJECT_ROOT/state/posts_log.json';
+          try {
+            const d=JSON.parse(fs.readFileSync(p,'utf-8'));
+            const posts=d.posts||[];
+            for(let i=posts.length-1;i>=0;i--){
+              if(posts[i].type==='quote'&&!posts[i].tweet_url){
+                posts[i].tweet_url='$QUOTE_URL'; break;
+              }
+            }
+            fs.writeFileSync(p,JSON.stringify(d,null,2));
+          } catch(e){}
+        " 2>/dev/null
+        echo "[run] Quote posted: $QUOTE_URL"
+      fi
+    else
+      echo "[run] No quote_draft.txt — agent did not produce a quote"
+    fi
+
+    # Coherence critique of the quote tweet
     node "$PROJECT_ROOT/runner/critique.js" --quote --cycle "$CYCLE" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
   # ── Tweet cycle: synthesize, journal, tweet, push ─────────────────────────
@@ -467,6 +562,18 @@ QUOTEMSG
     _BROWSE_NOTES_FULL=$(cat "$PROJECT_ROOT/state/browse_notes.md" 2>/dev/null | sed "s/\`/'/g" || echo "(empty)")
     _MEMORY_RECALL=$(cat "$PROJECT_ROOT/state/memory_recall.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(empty)")
     _DISCOURSE_DIGEST_TWEET=$(cat "$PROJECT_ROOT/state/discourse_digest.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(no discourse yet)")
+    _CURRENT_AXES_TWEET=$(node -e "
+      try {
+        const d=JSON.parse(require('fs').readFileSync('$PROJECT_ROOT/state/ontology.json','utf-8'));
+        (d.axes||[]).forEach(a=>{
+          const ev=(a.evidence_log||[]).length;
+          const conf=((a.confidence||0)*100).toFixed(0);
+          console.log('  ['+a.id+'] '+a.label+' (conf:'+conf+'%, ev:'+ev+')');
+          console.log('    L: '+a.left_pole.slice(0,80));
+          console.log('    R: '+a.right_pole.slice(0,80));
+        });
+      } catch(e){ console.log('  (could not read ontology.json: '+e.message+')'); }
+    " 2>/dev/null || echo "  (none yet)")
 
     AGENT_MSG=$(cat <<TWEETMSG
 Today is $TODAY $NOW. Tweet cycle $CYCLE -- FILE-ONLY. No browser tool at any point.
@@ -477,6 +584,8 @@ All files are pre-loaded below. Do NOT call any read_file tools.
 $_BROWSE_NOTES_FULL
 ── MEMORY RECALL ────────────────────────────────────────────────────────
 $_MEMORY_RECALL
+── CURRENT BELIEF AXES (read before updating ontology) ──────────────────
+$_CURRENT_AXES_TWEET
 ── RECENT DISCOURSE (reply exchanges) ───────────────────────────────────
 $_DISCOURSE_DIGEST_TWEET
 ─────────────────────────────────────────────────────────────────────────
@@ -489,7 +598,19 @@ Tasks (in order, no browser):
    Total <= 280 chars. Self-check (AGENTS.md 13.3) -- write SKIP if not genuine.
 4. Write state/tweet_draft.txt (plain text, overwrite).
 5. Append to state/posts_log.json (tweet_url="" for now, runner fills it in).
-6. Update state/ontology.json and state/belief_state.json.
+6. Write state/ontology_delta.json if the synthesis adds new evidence.
+   Also update state/belief_state.json.
+   DO NOT write or modify state/ontology.json directly — the runner merges your delta.
+   ONTOLOGY RULES (CURRENT BELIEF AXES shown above — do not alter existing data):
+   a. Fit new evidence to an existing axis using the axis_id from the list above.
+   b. Create a new axis ONLY if genuinely orthogonal AND seen in 2+ browse cycles.
+   c. Merge proposals only: append to state/ontology_merge_proposals.txt if two axes
+      overlap (axis_a, axis_b, reason, proposed_surviving_id). Never merge directly.
+   Delta format — write state/ontology_delta.json as:
+   { "evidence": [{ "axis_id":"...", "source":"...", "content":"...",
+                    "timestamp":"...", "pole_alignment":"left"|"right" }],
+     "new_axes": [{ "id":"...", "label":"...", "left_pole":"...", "right_pole":"..." }] }
+   Omit keys you don't need. Skip writing the file if nothing axis-worthy.
 7. Clear state/browse_notes.md (overwrite with empty string).
 
 TWEETMSG
@@ -499,6 +620,12 @@ TWEETMSG
       --message "$AGENT_MSG" \
       --thinking low \
       --verbose on
+
+    # ── Merge ontology delta written by the tweet agent ───────────────────
+    node "$PROJECT_ROOT/runner/apply_ontology_delta.js" 2>&1 || true
+
+    # ── Detect drift / change points in belief axes ────────────────────────
+    node "$PROJECT_ROOT/runner/detect_drift.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
     # ── Post tweet via CDP (no browser tool needed from agent) ──────────────
     if [ -f "$PROJECT_ROOT/state/tweet_draft.txt" ]; then
