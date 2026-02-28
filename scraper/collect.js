@@ -237,6 +237,19 @@ function formatClusteredDigest(selected, clusters, now) {
     lines.push("");
   }
 
+  // Top novel posts — standalone signal for agent to notice genuinely rare frames
+  const topNovel = [...selected]
+    .filter(p => p.novelty >= 3.0)
+    .sort((a, b) => b.novelty - a.novelty)
+    .slice(0, 3);
+  if (topNovel.length > 0) {
+    lines.push(`NOVEL FRAMES · top ${topNovel.length} by TF-IDF rarity`);
+    for (const post of topNovel) {
+      lines.push(fmtPost(post));
+    }
+    lines.push("");
+  }
+
   lines.push(`── end digest ${"─".repeat(60)}`);
   return lines.join("\n");
 }
@@ -426,6 +439,7 @@ async function scrapeNotifications(page) {
       velocity:     post.velocity,
       trust:        post.trust,
       score:        post.total,
+      novelty:      post.novelty || 0,
       keywords:     post.keywords.join(", "),
       scraped_at:   scrapedAt,
     });

@@ -47,6 +47,7 @@ _db.exec(`
     velocity     REAL    DEFAULT 0,
     trust        INTEGER DEFAULT 0,
     score        REAL    DEFAULT 0,
+    novelty      REAL    DEFAULT 0,
     keywords     TEXT    DEFAULT '',
     parent_id    TEXT    DEFAULT NULL,
     scraped_at   INTEGER NOT NULL,
@@ -131,6 +132,11 @@ _db.exec(`
   CREATE INDEX IF NOT EXISTS idx_embeddings_type ON embeddings(entity_type);
 `);
 
+// ── Schema migrations (idempotent) ────────────────────────────────────────────
+// Add novelty column to existing databases that predate this column.
+try { _db.exec("ALTER TABLE posts ADD COLUMN novelty REAL DEFAULT 0"); } catch { /* already exists */ }
+try { _db.exec("CREATE INDEX IF NOT EXISTS idx_posts_novelty ON posts(novelty DESC)"); } catch { /* already exists */ }
+
 // ── FTS5 sync triggers ────────────────────────────────────────────────────────
 // Keep posts_fts in sync with posts table automatically
 _db.exec(`
@@ -176,10 +182,10 @@ _db.exec(`
 const stmtInsertPost = _db.prepare(`
   INSERT OR REPLACE INTO posts
     (id, ts, ts_iso, username, display_name, text, likes, rts, replies,
-     velocity, trust, score, keywords, parent_id, scraped_at)
+     velocity, trust, score, novelty, keywords, parent_id, scraped_at)
   VALUES
     (@id, @ts, @ts_iso, @username, @display_name, @text, @likes, @rts, @replies,
-     @velocity, @trust, @score, @keywords, @parent_id, @scraped_at)
+     @velocity, @trust, @score, @novelty, @keywords, @parent_id, @scraped_at)
 `);
 
 const stmtInsertKeyword = _db.prepare(`
@@ -318,6 +324,7 @@ function insertPost(row) {
     velocity:     row.velocity || 0,
     trust:        row.trust    || 0,
     score:        row.score    || 0,
+    novelty:      row.novelty  || 0,
     keywords:     row.keywords || "",
     parent_id:    row.parent_id || null,
     scraped_at:   row.scraped_at || Date.now(),
@@ -359,6 +366,15 @@ function recentPosts(hours = 24, limit = 50) {
  */
 function postsByKeyword(keyword, limit = 20) {
   return stmtPostsByKeyword.all(keyword, limit);
+}
+
+/**
+ * Top novel posts (by TF-IDF novelty score) in the last N hours.
+ * Returns rows sorted by novelty DESC.
+ */
+function topNovelPosts(hours = 4, limit = 10) {
+  const since = Date.now() - hours * 3_600_000;
+  return stmtTopNovel.all(since, limit);
 }
 
 /**
@@ -461,6 +477,13 @@ function recentMemory(type = null, limit = 10) {
   return stmtRecentMemory.all({ type: type ?? null, limit });
 }
 
+const stmtTopNovel = _db.prepare(`
+  SELECT * FROM posts
+  WHERE  ts > ? AND parent_id IS NULL AND novelty > 0
+  ORDER  BY novelty DESC
+  LIMIT  ?
+`);
+
 // ── Embedding statements ───────────────────────────────────────────────────────
 const stmtStoreEmbedding = _db.prepare(`
   INSERT OR REPLACE INTO embeddings (entity_type, entity_id, vector, embedded_at)
@@ -523,6 +546,7 @@ function raw() { return _db; }
 
 module.exports = {
   insertPost, insertKeyword, search, topKeywords, recentPosts, postsByKeyword, prune,
+  topNovelPosts,
   upsertAccount, followCandidates, markFollowed, getAccount, postsInWindow,
   insertMemory, updateMemoryTxId, recallMemory, getMemoryByPath, recentMemory,
   storeEmbedding, getEmbedding, allEmbeddings, embeddedIds,
