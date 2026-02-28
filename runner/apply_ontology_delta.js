@@ -41,6 +41,7 @@ const path = require("path");
 const ROOT    = path.resolve(__dirname, "..");
 const ONTO    = path.join(ROOT, "state", "ontology.json");
 const DELTA   = path.join(ROOT, "state", "ontology_delta.json");
+const TRUST   = path.join(ROOT, "state", "trust_graph.json");
 
 const OLLAMA_URL   = process.env.OLLAMA_URL   || "http://localhost:11434/api/generate";
 const OLLAMA_MODEL = process.env.OLLAMA_MODEL || "qwen2.5:7b";
@@ -49,6 +50,40 @@ const OLLAMA_MODEL = process.env.OLLAMA_MODEL || "qwen2.5:7b";
 const STANCE_MIN_CHARS = 30;
 // Minimum Ollama-reported confidence to accept the alignment
 const STANCE_MIN_CONF  = 0.50;
+
+// Default trust score for unknown accounts (neutral prior)
+const DEFAULT_TRUST = 3;
+// Trust score of 3 = weight 1.0 (normalised to mean)
+const TRUST_NORM    = DEFAULT_TRUST;
+
+// ── Trust graph loader ────────────────────────────────────────────────────────
+
+function loadTrustMap() {
+  try {
+    const data = JSON.parse(fs.readFileSync(TRUST, "utf-8"));
+    const map  = new Map();
+    for (const [username, acct] of Object.entries(data.accounts || {})) {
+      map.set(username.toLowerCase(), acct.trust_score ?? DEFAULT_TRUST);
+    }
+    return map;
+  } catch {
+    return new Map();
+  }
+}
+
+/** Extract @username from an x.com/status URL, or null. */
+function usernameFromUrl(url) {
+  if (!url) return null;
+  const m = String(url).match(/x\.com\/([^\/?\s]+)\/status\//i);
+  return m ? m[1].toLowerCase() : null;
+}
+
+/** Return trust weight [0.5, 2.0] normalised so default trust = 1.0. */
+function trustWeight(username, trustMap) {
+  const score = username ? (trustMap.get(username) ?? DEFAULT_TRUST) : DEFAULT_TRUST;
+  // Clamp to [1, 5], normalise, clamp weight to [0.5, 2.0]
+  return Math.min(2.0, Math.max(0.5, score / TRUST_NORM));
+}
 
 if (!fs.existsSync(DELTA)) {
   // Nothing to do — agent chose not to update ontology this cycle
@@ -113,6 +148,9 @@ confidence is 0.0–1.0 (1.0 = clearly supports the claimed alignment).`;
 // ── Main ──────────────────────────────────────────────────────────────────────
 
 (async () => {
+
+// ── Load trust graph ──────────────────────────────────────────────────────────
+const trustMap = loadTrustMap();
 
 // ── Load files ────────────────────────────────────────────────────────────────
 
@@ -180,11 +218,16 @@ for (const entry of (delta.evidence || [])) {
 
   if (!Array.isArray(axis.evidence_log)) axis.evidence_log = [];
 
+  // Compute trust weight from source URL account
+  const sourceUser = usernameFromUrl(source);
+  const weight     = trustWeight(sourceUser, trustMap);
+
   const logEntry = {
     source:         source    || "",
     content:        content   || "",
     timestamp:      timestamp || now,
     pole_alignment: pole_alignment,
+    trust_weight:   parseFloat(weight.toFixed(3)),
   };
   if (stanceConf !== null) logEntry.stance_confidence = parseFloat(stanceConf.toFixed(3));
 
@@ -193,15 +236,25 @@ for (const entry of (delta.evidence || [])) {
   axis.last_updated = now;
 }
 
-// Recompute confidence and score for any axis that received new evidence
+// Recompute confidence and score using trust-weighted Bayesian update.
+// Each evidence entry carries trust_weight (default 1.0 = trust_score/3).
+// score      = Σ(w_i × ±1) / Σ(w_i)     — trust-weighted mean
+// confidence = min(0.95, Σ(w_i) × 0.025) — effective evidence count drives confidence
 for (const axis of onto.axes) {
   const log = axis.evidence_log || [];
   if (!log.length) continue;
 
-  const n     = log.length;
-  const sum   = log.reduce((acc, e) => acc + (e.pole_alignment === "right" ? 1 : -1), 0);
-  axis.score      = parseFloat((sum / n).toFixed(4));
-  axis.confidence = parseFloat(Math.min(0.95, n * 0.025).toFixed(4));
+  let weightedSum = 0;
+  let totalWeight = 0;
+  for (const e of log) {
+    const w    = e.trust_weight ?? 1.0; // legacy entries without weight get 1.0
+    const sign = e.pole_alignment === "right" ? 1 : -1;
+    weightedSum += w * sign;
+    totalWeight += w;
+  }
+
+  axis.score      = parseFloat((weightedSum / totalWeight).toFixed(4));
+  axis.confidence = parseFloat(Math.min(0.95, totalWeight * 0.025).toFixed(4));
 }
 
 // ── Apply new axes ────────────────────────────────────────────────────────────
