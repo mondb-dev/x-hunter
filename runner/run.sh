@@ -352,6 +352,9 @@ FIRSTMSG
 
     NEXT_TWEET=$(( (CYCLE / TWEET_EVERY + 1) * TWEET_EVERY ))
 
+    # Pre-fetch curiosity search URL in browser (non-blocking — page ready when agent starts)
+    node "$PROJECT_ROOT/runner/prefetch_url.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+
     # Pre-load files into shell vars — agent skips read tool calls, goes straight to action
     # Backticks escaped to prevent accidental shell execution in heredoc expansion
     _BROWSE_NOTES=$(tail -n 80 "$PROJECT_ROOT/state/browse_notes.md" 2>/dev/null | sed "s/\`/'/g" || echo "(empty)")
