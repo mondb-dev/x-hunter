@@ -38,9 +38,26 @@ const CURRENT_CYCLE  = parseInt(process.env.CURIOSITY_CYCLE  || "0",  10);
 const CURIOSITY_EVERY = parseInt(process.env.CURIOSITY_EVERY || "12", 10);
 const EXPIRES_CYCLE  = CURRENT_CYCLE + CURIOSITY_EVERY;
 
-// Uncertainty thresholds — axis must have started forming but not settled
-const UNCERTAINTY_CONFIDENCE_MAX = 0.35;
-const UNCERTAINTY_EVIDENCE_MIN   = 2;
+// Axis must have at least this many evidence entries to qualify for curiosity
+const UNCERTAINTY_EVIDENCE_MIN = 2;
+
+// ── Active learning gain formula ──────────────────────────────────────────────
+// gain = (1 - confidence) × polarization × recency_decay
+// polarization = 0.3 + 0.7 × |score|  (neutral axes still get 30% weight)
+// recency_decay = exp(-age_days / 14)  (14-day half-life; recently updated = higher gain)
+// This prioritises axes that are: uncertain, have strong existing beliefs, and are current.
+
+function computeGain(axis) {
+  const confidence    = axis.confidence || 0;
+  const absscore      = Math.abs(axis.score || 0);
+  const polarization  = 0.3 + 0.7 * absscore;
+
+  const lastUpdated   = axis.last_updated ? new Date(axis.last_updated) : new Date(0);
+  const ageDays       = (Date.now() - lastUpdated.getTime()) / 86_400_000;
+  const recencyDecay  = Math.exp(-ageDays / 14);
+
+  return (1 - confidence) * polarization * recencyDecay;
+}
 
 // ── Ontology readers ──────────────────────────────────────────────────────────
 
@@ -49,11 +66,9 @@ function getUncertainAxes() {
   try {
     const data = JSON.parse(fs.readFileSync(ONTOLOGY, "utf-8"));
     return (data.axes || [])
-      .filter(a =>
-        (a.confidence || 0) < UNCERTAINTY_CONFIDENCE_MAX &&
-        (a.evidence_log || []).length >= UNCERTAINTY_EVIDENCE_MIN
-      )
-      .sort((a, b) => (a.confidence || 0) - (b.confidence || 0)); // least confident first
+      .filter(a => (a.evidence_log || []).length >= UNCERTAINTY_EVIDENCE_MIN)
+      .map(a => ({ ...a, _gain: computeGain(a) }))
+      .sort((a, b) => b._gain - a._gain); // highest gain first
   } catch { return []; }
 }
 
@@ -230,6 +245,7 @@ function markAnchorProcessed(postId) {
     const axis          = uncertainAxes[0];
     const confidence    = axis.confidence || 0;
     const evidenceCount = (axis.evidence_log || []).length;
+    const gain          = axis._gain || 0;
 
     // Build search terms: prefer axis.topics, fall back to left/right poles
     const topicWords = (axis.topics || []).slice(0, 3);
@@ -272,13 +288,14 @@ function markAnchorProcessed(postId) {
       axis_label:     axis.label,
       confidence,
       evidence_count: evidenceCount,
+      gain:           parseFloat(gain.toFixed(4)),
       search_terms:   searchTerms,
       expires_at_cycle: EXPIRES_CYCLE,
     });
 
     console.log(
       `[curiosity] driver: uncertainty_axis — "${axis.label}" ` +
-      `(${(confidence * 100).toFixed(0)}% confidence, ${evidenceCount} entries)`
+      `(${(confidence * 100).toFixed(0)}% confidence, ${evidenceCount} entries, gain=${gain.toFixed(3)})`
     );
     process.exit(0);
   }
