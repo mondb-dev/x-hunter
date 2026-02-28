@@ -30,7 +30,7 @@
 
 "use strict";
 
-const { chromium } = require("playwright");
+const { connectBrowser, getXPage } = require("../runner/cdp");
 const fs        = require("fs");
 const path      = require("path");
 const db        = require("./db");
@@ -143,7 +143,7 @@ async function fetchReplies(page, tweetUrl, topN) {
   try {
     await page.goto(tweetUrl, { waitUntil: "domcontentloaded", timeout: 15_000 });
     await page.waitForSelector('article[data-testid="tweet"]', { timeout: 8_000 });
-    await page.waitForTimeout(1_500);
+    await new Promise(r => setTimeout(r, 1_500));
     const all = await extractPosts(page);
     return all
       .slice(1)
@@ -268,18 +268,18 @@ async function scrapeNotifications(page) {
 
   try {
     await page.goto("https://x.com/notifications", { waitUntil: "domcontentloaded", timeout: 20_000 });
-    await page.waitForTimeout(2_000);
+    await new Promise(r => setTimeout(r, 2_000));
 
     try {
       const tabs = await page.$$('[role="tab"]');
       for (const tab of tabs) {
-        const label = await tab.innerText().catch(() => "");
-        if (/mentions/i.test(label)) { await tab.click(); await page.waitForTimeout(1_500); break; }
+        const label = await tab.evaluate(el => el.innerText).catch(() => "");
+        if (/mentions/i.test(label)) { await tab.click(); await new Promise(r => setTimeout(r, 1_500)); break; }
       }
     } catch {}
 
     await page.evaluate(() => window.scrollBy(0, 800));
-    await page.waitForTimeout(1_000);
+    await new Promise(r => setTimeout(r, 1_000));
 
     const mentions = await extractPosts(page);
     const newItems = [];
@@ -321,22 +321,13 @@ async function scrapeNotifications(page) {
 
   let browser;
   try {
-    browser = await chromium.connectOverCDP(CDP_URL);
+    browser = await connectBrowser();
   } catch (err) {
-    console.error(`[scraper] could not connect to CDP at ${CDP_URL}: ${err.message}`);
+    console.error(`[scraper] could not connect to Chrome: ${err.message}`);
     process.exit(1);
   }
 
-  const contexts = browser.contexts();
-  if (!contexts.length) {
-    console.error("[scraper] no browser context found");
-    await browser.close();
-    process.exit(1);
-  }
-
-  const context = contexts[0];
-  let page = context.pages().find(p => p.url().includes("x.com")) || context.pages()[0];
-  if (!page) page = await context.newPage();
+  let page = await getXPage(browser);
 
   // Navigate to home feed
   try {
@@ -344,17 +335,17 @@ async function scrapeNotifications(page) {
       await page.goto("https://x.com/home", { waitUntil: "domcontentloaded", timeout: 20_000 });
     }
     await page.waitForSelector('article[data-testid="tweet"]', { timeout: 12_000 });
-    await page.waitForTimeout(2_000);
+    await new Promise(r => setTimeout(r, 2_000));
   } catch (err) {
     console.error(`[scraper] failed to load feed: ${err.message}`);
-    await browser.close();
+    browser.disconnect();
     process.exit(1);
   }
 
   // Scroll to load more posts
   for (let i = 0; i < 3; i++) {
     await page.evaluate(() => window.scrollBy(0, 1200));
-    await page.waitForTimeout(1_200);
+    await new Promise(r => setTimeout(r, 1_200));
   }
 
   // ── Phase 1: Extract raw posts ────────────────────────────────────────────

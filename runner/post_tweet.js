@@ -14,11 +14,10 @@
 
 const fs   = require("fs");
 const path = require("path");
-const { chromium } = require("playwright-core");
+const { connectBrowser, getXPage } = require("./cdp");
 
 const ROOT       = path.resolve(__dirname, "..");
 const DRAFT_FILE = path.join(ROOT, "state", "tweet_draft.txt");
-const CDP_URL    = "http://127.0.0.1:18801";
 
 // X.com selectors (as of 2025)
 const COMPOSE_BOX   = '[data-testid="tweetTextarea_0"]';
@@ -45,26 +44,13 @@ async function sleep(ms) {
   // Connect to existing Chrome
   let browser;
   try {
-    browser = await chromium.connectOverCDP(CDP_URL);
+    browser = await connectBrowser();
   } catch (err) {
-    console.error(`[post_tweet] could not connect to Chrome at ${CDP_URL}: ${err.message}`);
+    console.error(`[post_tweet] could not connect to Chrome: ${err.message}`);
     process.exit(1);
   }
 
-  const contexts = browser.contexts();
-  if (!contexts.length) {
-    console.error("[post_tweet] no browser context found");
-    await browser.close();
-    process.exit(1);
-  }
-
-  const context = contexts[0];
-
-  // Get or open a page
-  let page = context.pages().find(p => /x\.com/.test(p.url()));
-  if (!page) {
-    page = context.pages()[0] || await context.newPage();
-  }
+  const page = await getXPage(browser);
 
   try {
     // Navigate to compose page
@@ -95,17 +81,16 @@ async function sleep(ms) {
     await sleep(500);
 
     // Confirm it's not disabled
-    const btn = page.locator(POST_BUTTON).first();
-    const isDisabled = await btn.getAttribute("aria-disabled");
+    const isDisabled = await page.$eval(POST_BUTTON, el => el.getAttribute("aria-disabled")).catch(() => null);
     if (isDisabled === "true") {
       console.error("[post_tweet] Post button is disabled — text may not have registered");
-      await browser.close();
+      browser.disconnect();
       process.exit(1);
     }
 
     // Click Post
     console.log("[post_tweet] clicking Post...");
-    await btn.click();
+    await page.click(POST_BUTTON);
     await sleep(3_000);
 
     // Try to get the new tweet URL from address bar
@@ -135,7 +120,7 @@ async function sleep(ms) {
         fs.writeFileSync(path.join(ROOT, "state", "tweet_result.txt"), "posted\n");
       } else {
         console.error("[post_tweet] still on compose page — post may have failed");
-        await browser.close();
+        browser.disconnect();
         process.exit(1);
       }
     }
@@ -145,7 +130,7 @@ async function sleep(ms) {
 
   } catch (err) {
     console.error(`[post_tweet] error: ${err.message}`);
-    await browser.close();
+    browser.disconnect();
     process.exit(1);
   }
 
