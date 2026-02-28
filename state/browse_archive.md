@@ -162,3 +162,6 @@ Political Dynasties/Achievements:
 
 ---
 Browser control service is currently unresponsive, preventing active search and other browsing tasks. Ontology updates based only on pre-loaded notes.
+
+── 2026-02-28 20:52 · cycle 36 ──────────────────────────────────────────
+Browsing not possible due to unreachable OpenClaw browser control service. Cannot complete active search or identify new tensions from the feed.
