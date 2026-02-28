@@ -119,6 +119,16 @@ _db.exec(`
     content  = 'memory',
     tokenize = 'unicode61 remove_diacritics 1'
   );
+
+  CREATE TABLE IF NOT EXISTS embeddings (
+    entity_type  TEXT    NOT NULL,
+    entity_id    TEXT    NOT NULL,
+    vector       TEXT    NOT NULL,
+    embedded_at  INTEGER NOT NULL,
+    PRIMARY KEY (entity_type, entity_id)
+  );
+
+  CREATE INDEX IF NOT EXISTS idx_embeddings_type ON embeddings(entity_type);
 `);
 
 // ── FTS5 sync triggers ────────────────────────────────────────────────────────
@@ -451,6 +461,63 @@ function recentMemory(type = null, limit = 10) {
   return stmtRecentMemory.all({ type: type ?? null, limit });
 }
 
+// ── Embedding statements ───────────────────────────────────────────────────────
+const stmtStoreEmbedding = _db.prepare(`
+  INSERT OR REPLACE INTO embeddings (entity_type, entity_id, vector, embedded_at)
+  VALUES (@entity_type, @entity_id, @vector, @embedded_at)
+`);
+
+const stmtGetEmbedding = _db.prepare(`
+  SELECT vector FROM embeddings WHERE entity_type = @entity_type AND entity_id = @entity_id
+`);
+
+const stmtAllEmbeddings = _db.prepare(`
+  SELECT entity_id, vector FROM embeddings WHERE entity_type = @entity_type
+`);
+
+const stmtEmbeddingIds = _db.prepare(`
+  SELECT entity_id FROM embeddings WHERE entity_type = @entity_type
+`);
+
+/**
+ * Store or replace an embedding vector for an entity.
+ * @param {string} entityType - 'post' | 'memory' | 'evidence'
+ * @param {string} entityId   - post id, memory id, or compound key
+ * @param {number[]} vector   - embedding as flat number array
+ */
+function storeEmbedding(entityType, entityId, vector) {
+  stmtStoreEmbedding.run({
+    entity_type:  entityType,
+    entity_id:    String(entityId),
+    vector:       JSON.stringify(vector),
+    embedded_at:  Date.now(),
+  });
+}
+
+/**
+ * Retrieve the embedding vector for an entity, or null if not found.
+ */
+function getEmbedding(entityType, entityId) {
+  const row = stmtGetEmbedding.get({ entity_type: entityType, entity_id: String(entityId) });
+  return row ? JSON.parse(row.vector) : null;
+}
+
+/**
+ * Return all embeddings of a given entity type.
+ * Returns [{entity_id, vector}] with vector already parsed.
+ */
+function allEmbeddings(entityType) {
+  return stmtAllEmbeddings.all({ entity_type: entityType })
+    .map(r => ({ entity_id: r.entity_id, vector: JSON.parse(r.vector) }));
+}
+
+/**
+ * Return all entity_ids that already have embeddings of a given type.
+ */
+function embeddedIds(entityType) {
+  return new Set(stmtEmbeddingIds.all({ entity_type: entityType }).map(r => r.entity_id));
+}
+
 /** Raw db handle for advanced queries. */
 function raw() { return _db; }
 
@@ -458,5 +525,6 @@ module.exports = {
   insertPost, insertKeyword, search, topKeywords, recentPosts, postsByKeyword, prune,
   upsertAccount, followCandidates, markFollowed, getAccount, postsInWindow,
   insertMemory, updateMemoryTxId, recallMemory, getMemoryByPath, recentMemory,
+  storeEmbedding, getEmbedding, allEmbeddings, embeddedIds,
   raw,
 };
