@@ -335,6 +335,9 @@ FIRSTMSG
     if [ $(( CYCLE % CURIOSITY_EVERY )) -eq 0 ]; then
       CURIOSITY_CYCLE=$CYCLE CURIOSITY_EVERY=$CURIOSITY_EVERY \
         node "$PROJECT_ROOT/runner/curiosity.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+
+      # Axis clustering: detect semantically redundant belief axes, propose merges
+      node "$PROJECT_ROOT/runner/cluster_axes.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     fi
 
     # Comment candidates: posts where memory has something specific to say
