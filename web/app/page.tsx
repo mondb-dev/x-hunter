@@ -1,3 +1,5 @@
+import { readOntology } from "@/lib/readOntology";
+
 export default async function IndexPage({
   searchParams,
 }: {
@@ -5,5 +7,6 @@ export default async function IndexPage({
 }) {
   const params = await searchParams;
   const page = params?.page ?? "1";
-  return <p>ok — page {page}</p>;
+  const ontology = readOntology();
+  return <p>ok — page {page} — {ontology.axes.length} axes</p>;
 }
