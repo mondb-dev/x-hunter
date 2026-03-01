@@ -48,23 +48,28 @@ export async function getCheckpointByN(n: number): Promise<Checkpoint | null> {
 }
 
 export async function getLatestCheckpoint(): Promise<Checkpoint | null> {
-  const latestPath = path.join(CHECKPOINTS_DIR, "latest.md");
-  if (!fs.existsSync(latestPath)) return null;
+  try {
+    const latestPath = path.join(CHECKPOINTS_DIR, "latest.md");
+    if (!fs.existsSync(latestPath)) return null;
 
-  // Read latest.md directly — it is always overwritten with the most recent checkpoint content
-  const raw = fs.readFileSync(latestPath, "utf-8");
-  const { data, content } = matter(raw);
+    // Read latest.md directly — it is always overwritten with the most recent checkpoint content
+    const raw = fs.readFileSync(latestPath, "utf-8");
+    if (!raw.trim()) return null;
+    const { data, content } = matter(raw);
 
-  // Derive checkpoint number from the highest-numbered numbered file
-  const all = getAllCheckpoints();
-  const n = all.length > 0 ? all[all.length - 1].n : 1;
+    // Derive checkpoint number from the highest-numbered numbered file
+    const all = getAllCheckpoints();
+    const n = all.length > 0 ? all[all.length - 1].n : 1;
 
-  const processed = await remark().use(remarkHtml).process(content);
-  return {
-    n,
-    date: data.date ?? "",
-    title: data.title ?? `Checkpoint ${n}`,
-    content,
-    contentHtml: processed.toString(),
-  };
+    const processed = await remark().use(remarkHtml).process(content);
+    return {
+      n,
+      date: data.date ?? "",
+      title: data.title ?? `Checkpoint ${n}`,
+      content,
+      contentHtml: processed.toString(),
+    };
+  } catch {
+    return null;
+  }
 }
