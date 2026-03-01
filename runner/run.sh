@@ -151,6 +151,18 @@ start_browser() {
     sleep 2; i=$(( i + 1 ))
     if curl -sf "http://127.0.0.1:${CDP_PORT}/json/version" -o /dev/null 2>&1; then
       echo "[run] browser CDP ready (${i}x2s)"
+      # Ensure at least one page tab exists — openclaw browser tool requires one to attach to.
+      # When Chrome restarts fresh (after gateway crash/restart) it may have zero tabs,
+      # causing the agent to get "tab not found" even though CDP is responding.
+      local tab_count
+      tab_count=$(curl -sf "http://127.0.0.1:${CDP_PORT}/json/list" 2>/dev/null \
+        | grep -c '"type":"page"' || echo 0)
+      if [ "$tab_count" -eq 0 ]; then
+        echo "[run] no page tabs found — opening x.com tab via CDP"
+        curl -sf -X PUT "http://127.0.0.1:${CDP_PORT}/json/new?https://x.com" \
+          -o /dev/null 2>/dev/null || true
+        sleep 4  # give tab time to initialise before openclaw attaches
+      fi
       return 0
     fi
   done
@@ -260,13 +272,19 @@ while true; do
 
   # ── Ensure browser is alive before each cycle (fast path for BROWSE) ─────
   # TWEET/QUOTE cycles run ensure_browser() below for full retry logic.
-  # For BROWSE cycles, just do a quick check and restart if broken.
+  # For BROWSE cycles, check CDP *and* gateway port before starting the agent.
+  # check_browser() only verifies CDP (18801); gateway (18789) can be down separately
+  # (e.g., mid-cycle crash of a previous cycle) causing "tab not found" errors.
   if [ "$CYCLE_TYPE" = "BROWSE" ]; then
     if ! check_browser; then
-      echo "[run] browser down before browse cycle — restarting"
+      echo "[run] browser CDP down before browse cycle — restarting gateway + browser"
       restart_gateway
       start_browser
       sleep 15
+    elif ! curl -sf "http://127.0.0.1:${GATEWAY_PORT}/" -o /dev/null 2>&1; then
+      echo "[run] gateway port ${GATEWAY_PORT} not responding — restarting gateway"
+      restart_gateway
+      sleep 10
     fi
   fi
 
