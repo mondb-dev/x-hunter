@@ -57,9 +57,10 @@ function appendQueue(line) {
   fs.appendFileSync(QUEUE_FILE, JSON.stringify(line) + "\n", "utf-8");
 }
 
-/** URLs to skip — bare tweet/profile links add no reading value */
-function isSkippableUrl(url) {
-  return /https?:\/\/(www\.)?(x\.com|twitter\.com|t\.co)\//i.test(url);
+/** Only allow x.com URLs — keeps the agent on-platform and avoids external navigation risks.
+ *  t.co is excluded even though it's Twitter's shortener (it redirects to arbitrary external sites). */
+function isAllowedUrl(url) {
+  return /https?:\/\/(www\.)?(x\.com|twitter\.com)\//i.test(url);
 }
 
 // --- scan mode ---------------------------------------------------------------
@@ -91,7 +92,7 @@ function scanInteractions(lastScannedId) {
     const text = reply.their_text || "";
     const urls = (text.match(/https?:\/\/\S+/g) || [])
       .map(u => u.replace(/[.,;:!?)]+$/, "")) // strip trailing punctuation
-      .filter(u => !isSkippableUrl(u));
+      .filter(u => isAllowedUrl(u));
 
     for (const url of urls) {
       const context = text.length > 120 ? text.slice(0, 117) + "..." : text;
