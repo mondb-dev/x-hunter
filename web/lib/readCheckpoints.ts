@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import remarkHtml from "remark-html";
+import { DATA_ROOT } from "./dataRoot";
 
 export interface Checkpoint {
   n: number;
@@ -12,7 +13,7 @@ export interface Checkpoint {
   contentHtml: string;
 }
 
-const CHECKPOINTS_DIR = path.resolve(process.cwd(), "../checkpoints");
+const CHECKPOINTS_DIR = path.join(DATA_ROOT, "checkpoints");
 
 export function getAllCheckpoints(): Checkpoint[] {
   if (!fs.existsSync(CHECKPOINTS_DIR)) return [];

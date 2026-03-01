@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { DATA_ROOT } from "./dataRoot";
 
 export interface EvidenceEntry {
   source: string;
@@ -37,7 +38,7 @@ const EMPTY_ONTOLOGY: Ontology = {
 };
 
 export function readOntology(): Ontology {
-  const filePath = path.resolve(process.cwd(), "../state/ontology.json");
+  const filePath = path.join(DATA_ROOT, "state/ontology.json");
   try {
     const raw = fs.readFileSync(filePath, "utf-8");
     if (!raw.trim()) return EMPTY_ONTOLOGY;
@@ -49,7 +50,7 @@ export function readOntology(): Ontology {
 }
 
 export function readBeliefState() {
-  const filePath = path.resolve(process.cwd(), "../state/belief_state.json");
+  const filePath = path.join(DATA_ROOT, "state/belief_state.json");
   try {
     const raw = fs.readFileSync(filePath, "utf-8");
     if (!raw.trim()) return null;
