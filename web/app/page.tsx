@@ -1,5 +1,4 @@
 import { readOntology } from "@/lib/readOntology";
-import { getAllJournalDays } from "@/lib/readJournals";
 
 export default async function IndexPage({
   searchParams,
@@ -9,6 +8,15 @@ export default async function IndexPage({
   const params = await searchParams;
   const page = params?.page ?? "1";
   const ontology = readOntology();
-  const days = getAllJournalDays();
-  return <p>ok — page {page} — {ontology.axes.length} axes — {days.length} days</p>;
+
+  let daysLen = -1;
+  let importErr = "";
+  try {
+    const { getAllJournalDays } = await import("@/lib/readJournals");
+    daysLen = getAllJournalDays().length;
+  } catch (err: unknown) {
+    importErr = String(err);
+  }
+
+  return <p>ok — {page} — {ontology.axes.length} axes — days:{daysLen} err:{importErr}</p>;
 }
