@@ -76,6 +76,7 @@ function computeDay(date: string, earliestDate: string): number {
 }
 
 export function getAllJournalDays(): JournalDay[] {
+  try {
   if (!fs.existsSync(JOURNALS_DIR)) return [];
 
   const arweave = loadArweaveIndex();
@@ -117,6 +118,9 @@ export function getAllJournalDays(): JournalDay[] {
       date,
       entries: entries.sort((a, b) => b.hour - a.hour), // newest hour first
     }));
+  } catch {
+    return [];
+  }
 }
 
 export function getJournalEntry(date: string, hour: number): JournalEntry | null {

@@ -29,14 +29,31 @@ export interface Ontology {
   last_updated: string | null;
 }
 
+const EMPTY_ONTOLOGY: Ontology = {
+  axes: [],
+  axis_creation_rules_version: "",
+  created_at: null,
+  last_updated: null,
+};
+
 export function readOntology(): Ontology {
   const filePath = path.resolve(process.cwd(), "../state/ontology.json");
-  const raw = fs.readFileSync(filePath, "utf-8");
-  return JSON.parse(raw) as Ontology;
+  try {
+    const raw = fs.readFileSync(filePath, "utf-8");
+    if (!raw.trim()) return EMPTY_ONTOLOGY;
+    return JSON.parse(raw) as Ontology;
+  } catch {
+    return EMPTY_ONTOLOGY;
+  }
 }
 
 export function readBeliefState() {
   const filePath = path.resolve(process.cwd(), "../state/belief_state.json");
-  const raw = fs.readFileSync(filePath, "utf-8");
-  return JSON.parse(raw);
+  try {
+    const raw = fs.readFileSync(filePath, "utf-8");
+    if (!raw.trim()) return null;
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
 }

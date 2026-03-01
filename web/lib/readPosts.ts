@@ -20,10 +20,15 @@ interface PostsLog {
 
 export function readPostsLog(): PostLogEntry[] {
   const filePath = path.resolve(process.cwd(), "../state/posts_log.json");
-  if (!fs.existsSync(filePath)) return [];
-  const raw = fs.readFileSync(filePath, "utf-8");
-  const data = JSON.parse(raw) as PostsLog | PostLogEntry[];
-  return Array.isArray(data) ? data : (data.posts ?? []);
+  try {
+    if (!fs.existsSync(filePath)) return [];
+    const raw = fs.readFileSync(filePath, "utf-8");
+    if (!raw.trim()) return [];
+    const data = JSON.parse(raw) as PostsLog | PostLogEntry[];
+    return Array.isArray(data) ? data : (data.posts ?? []);
+  } catch {
+    return [];
+  }
 }
 
 export function getLatestPost(): PostLogEntry | null {
