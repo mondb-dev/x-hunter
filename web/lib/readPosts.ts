@@ -26,7 +26,8 @@ export function readPostsLog(): PostLogEntry[] {
     if (!raw.trim()) return [];
     const data = JSON.parse(raw) as PostsLog | PostLogEntry[];
     return Array.isArray(data) ? data : (data.posts ?? []);
-  } catch {
+  } catch (err) {
+    console.error("[readPostsLog] failed to read/parse posts_log.json:", err);
     return [];
   }
 }

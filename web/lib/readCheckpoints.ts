@@ -69,7 +69,8 @@ export async function getLatestCheckpoint(): Promise<Checkpoint | null> {
       content,
       contentHtml: processed.toString(),
     };
-  } catch {
+  } catch (err) {
+    console.error("[getLatestCheckpoint] failed:", err);
     return null;
   }
 }

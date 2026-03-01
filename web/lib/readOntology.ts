@@ -42,7 +42,8 @@ export function readOntology(): Ontology {
     const raw = fs.readFileSync(filePath, "utf-8");
     if (!raw.trim()) return EMPTY_ONTOLOGY;
     return JSON.parse(raw) as Ontology;
-  } catch {
+  } catch (err) {
+    console.error("[readOntology] failed to read/parse ontology.json:", err);
     return EMPTY_ONTOLOGY;
   }
 }
@@ -53,7 +54,8 @@ export function readBeliefState() {
     const raw = fs.readFileSync(filePath, "utf-8");
     if (!raw.trim()) return null;
     return JSON.parse(raw);
-  } catch {
+  } catch (err) {
+    console.error("[readBeliefState] failed to read/parse belief_state.json:", err);
     return null;
   }
 }
