@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { DATA_ROOT } from "./dataRoot";
 
 export interface PostLogEntry {
   id: string | null;
@@ -19,7 +20,7 @@ interface PostsLog {
 }
 
 export function readPostsLog(): PostLogEntry[] {
-  const filePath = path.resolve(process.cwd(), "../state/posts_log.json");
+  const filePath = path.join(DATA_ROOT, "state/posts_log.json");
   try {
     if (!fs.existsSync(filePath)) return [];
     const raw = fs.readFileSync(filePath, "utf-8");

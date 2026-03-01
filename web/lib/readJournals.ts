@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { JSDOM } from "jsdom";
+import { DATA_ROOT } from "./dataRoot";
 
 export interface JournalEntry {
   date: string;      // YYYY-MM-DD
@@ -17,8 +18,8 @@ export interface JournalDay {
   entries: JournalEntry[];
 }
 
-const JOURNALS_DIR  = path.resolve(process.cwd(), "../journals");
-const ARWEAVE_LOG   = path.resolve(process.cwd(), "../state/arweave_log.json");
+const JOURNALS_DIR = path.join(DATA_ROOT, "journals");
+const ARWEAVE_LOG  = path.join(DATA_ROOT, "state/arweave_log.json");
 
 // Build a map of journal file path → Arweave gateway URL
 function loadArweaveIndex(): Map<string, string> {
