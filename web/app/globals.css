@@ -231,10 +231,15 @@ main {
 
 /* ── About page ── */
 .about-page { max-width: 720px; }
-.about-stats { display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 2.5rem; padding: 1rem 1.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; }
+.about-stats { display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; }
 .about-stat { display: flex; flex-direction: column; gap: 0.2rem; }
 .about-stat-val { font-size: 1.5rem; font-weight: 700; }
 .about-stat-key { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+.about-tldr { margin-bottom: 2.5rem; padding: 1.1rem 1.5rem; background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 4px; }
+.about-tldr-label { font-size: 10px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 0.75rem; }
+.about-tldr-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.55rem; }
+.about-tldr-list li { font-size: 13px; color: #d4d8de; line-height: 1.6; padding-left: 1rem; position: relative; font-family: var(--font-prose); }
+.about-tldr-list li::before { content: "–"; position: absolute; left: 0; color: var(--muted); }
 
 /* ── Empty state ── */
 .empty { color: var(--muted); font-size: 13px; padding: 2rem 0; }
