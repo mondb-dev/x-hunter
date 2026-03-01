@@ -229,6 +229,13 @@ main {
 .ontology-seeded { margin-top: 2.5rem; }
 .ontology-section-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
 
+/* ── About page ── */
+.about-page { max-width: 720px; }
+.about-stats { display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 2.5rem; padding: 1rem 1.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; }
+.about-stat { display: flex; flex-direction: column; gap: 0.2rem; }
+.about-stat-val { font-size: 1.5rem; font-weight: 700; }
+.about-stat-key { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+
 /* ── Empty state ── */
 .empty { color: var(--muted); font-size: 13px; padding: 2rem 0; }
 

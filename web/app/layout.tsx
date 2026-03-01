@@ -34,9 +34,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               Sebastian D. Hunter
             </a>
             <a href="/journals">Journals</a>
-            <a href="/">Reports</a>
             <a href="/ontology">Ontology</a>
             <a href="/checkpoints">Checkpoints</a>
+            <a href="/about">About</a>
           </nav>
           <main>{children}</main>
           <footer className="site-footer">
