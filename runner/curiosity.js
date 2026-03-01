@@ -250,11 +250,22 @@ function markAnchorProcessed(postId) {
     const evidenceCount = (axis.evidence_log || []).length;
     const gain          = axis._gain || 0;
 
-    // Build search terms: prefer axis.topics, fall back to left/right poles
-    const topicWords = (axis.topics || []).slice(0, 3);
-    const searchTerms = topicWords.length >= 2
-      ? topicWords.join(" ")
-      : `${axis.left_pole} ${axis.right_pole}`.replace(/[^a-zA-Z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
+    // Build search terms: prefer axis.topics (clean keywords set by agent),
+    // then axis label (short, readable), never the full pole strings (too long).
+    const topicWords = (axis.topics || []).filter(t => t && t.trim());
+    let searchTerms;
+    if (topicWords.length >= 1) {
+      searchTerms = topicWords.slice(0, 2).join(" ");
+    } else {
+      // Use axis label, capped at 5 words
+      searchTerms = (axis.label || "")
+        .replace(/[^a-zA-Z0-9 ]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim()
+        .split(" ")
+        .slice(0, 5)
+        .join(" ");
+    }
 
     const searchUrl  = `https://x.com/search?q=${encodeURIComponent(searchTerms)}&f=live`;
     const axisSlug   = toSlug(axis.id || axis.label);
