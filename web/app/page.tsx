@@ -27,9 +27,7 @@ export default async function IndexPage({
     : 0;
 
   // Flatten all entries for pagination
-  const allEntries = days.flatMap((day) =>
-    day.entries.map((entry) => ({ ...entry, dayN: day.day }))
-  );
+  const allEntries = days.flatMap((day) => day.entries);
   const totalEntries = allEntries.length;
   const totalPages = Math.max(1, Math.ceil(totalEntries / PAGE_SIZE));
   const page = Math.min(currentPage, totalPages);
@@ -101,7 +99,7 @@ export default async function IndexPage({
                 className="journal-item"
                 style={{ textDecoration: "none" }}
               >
-                <span className="journal-day">Day {entry.dayN} · {String(entry.hour).padStart(2, "0")}:00</span>
+                <span className="journal-day">Day {entry.day} · {String(entry.hour).padStart(2, "0")}:00</span>
                 <span className="journal-title">{entry.title || entry.date}</span>
               </Link>
             ))}
