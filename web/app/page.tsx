@@ -28,18 +28,20 @@ export default async function IndexPage() {
           </div>
           <div className="belief-axes-mini">
             {top3.map((axis) => {
-              const pct       = ((axis.score + 1) / 2) * 100;
-              const fillLeft  = Math.min(50, pct);
-              const fillWidth = Math.abs(pct - 50);
-              const fillColor = axis.score >= 0 ? "var(--amber)" : "var(--accent)";
-              const leanPole  = axis.score >= 0 ? axis.right_pole : axis.left_pole;
+              const pct        = ((axis.score + 1) / 2) * 100;
+              // Fill from pole edge to marker: left-lean → 0→pct, right-lean → pct→100
+              const fillLeft   = axis.score >= 0 ? pct : 0;
+              const fillWidth  = axis.score === 0 ? 0 : (axis.score >= 0 ? 100 - pct : pct);
+              const fillColor  = axis.score >= 0 ? "var(--amber)" : "var(--accent)";
+              const leanPole   = axis.score >= 0 ? axis.right_pole : axis.left_pole;
+              const poleShort  = leanPole.length > 38 ? leanPole.slice(0, 38) + "…" : leanPole;
               const confidence = Math.round(axis.confidence * 100);
               return (
                 <div key={axis.id} className="belief-axis-mini">
                   <div className="belief-axis-mini-header">
                     <span className="belief-axis-mini-label">{axis.label}</span>
                     <span className="belief-axis-mini-meta">
-                      {axis.score === 0 ? "neutral" : `${axis.score > 0 ? "→" : "←"} ${leanPole}`}
+                      {axis.score === 0 ? "neutral" : `${axis.score > 0 ? "→" : "←"} ${poleShort}`}
                       {" · "}{confidence}%
                     </span>
                   </div>
@@ -59,7 +61,7 @@ export default async function IndexPage() {
       {/* Latest checkpoint pin */}
       {latestCheckpoint && (
         <div className="manifesto-pin">
-          <span className="pin-label">Week {latestCheckpoint.n} checkpoint</span>
+          <span className="pin-label">Checkpoint {latestCheckpoint.n}</span>
           <Link href={`/checkpoint/${latestCheckpoint.n}`}>
             Read latest worldview snapshot →
           </Link>
