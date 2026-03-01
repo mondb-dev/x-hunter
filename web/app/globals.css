@@ -241,6 +241,12 @@ main {
 .about-tldr-list li { font-size: 13px; color: #d4d8de; line-height: 1.6; padding-left: 1rem; position: relative; font-family: var(--font-prose); }
 .about-tldr-list li::before { content: "–"; position: absolute; left: 0; color: var(--muted); }
 
+/* ── Latest tweet embed ── */
+.tweet-latest-wrap { margin-bottom: 2rem; }
+.tweet-latest-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+/* Twitter iframe inherits bg — force dark surface so it blends */
+.tweet-latest-wrap iframe { border-radius: 4px; max-width: 100% !important; }
+
 /* ── Empty state ── */
 .empty { color: var(--muted); font-size: 13px; padding: 2rem 0; }
 
