@@ -118,7 +118,8 @@ export function getAllJournalDays(): JournalDay[] {
       date,
       entries: entries.sort((a, b) => b.hour - a.hour), // newest hour first
     }));
-  } catch {
+  } catch (err) {
+    console.error("[getAllJournalDays] failed:", err);
     return [];
   }
 }
