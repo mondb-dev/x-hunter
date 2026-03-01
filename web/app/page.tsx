@@ -2,7 +2,6 @@ import Link from "next/link";
 import { getAllJournalDays } from "@/lib/readJournals";
 import { readOntology } from "@/lib/readOntology";
 import { getLatestCheckpoint } from "@/lib/readCheckpoints";
-import LatestPost from "@/components/LatestPost";
 
 const PAGE_SIZE = 15;
 
@@ -36,9 +35,6 @@ export default async function IndexPage({
 
     return (
       <>
-        {/* Latest post from X */}
-        <LatestPost />
-
         {/* Belief state hero — top 3 axes by confidence */}
         {ontology.axes.length > 0 && (
           <div className="belief-hero">
