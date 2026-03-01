@@ -79,7 +79,11 @@ async function sleep(ms) {
     console.log("[post_quote] clicking Retweet icon...");
     await page.waitForSelector(RETWEET_BTN, { timeout: 15_000 });
     await sleep(500);
-    await page.click(RETWEET_BTN);
+    // evaluate-based click avoids Runtime.callFunctionOn timeout on slow pages
+    await page.evaluate((sel) => {
+      const el = document.querySelector(sel);
+      if (el) el.click();
+    }, RETWEET_BTN);
     await sleep(1_200);
 
     // ── Click "Quote" in the dropdown ─────────────────────────────────────────
