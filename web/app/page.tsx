@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getAllJournalDays } from "@/lib/readJournals";
 import { readOntology } from "@/lib/readOntology";
 import { getLatestCheckpoint } from "@/lib/readCheckpoints";
+import TweetLatest from "@/components/TweetLatest";
 
 
 export default async function IndexPage() {
@@ -20,6 +21,9 @@ export default async function IndexPage() {
 
   return (
     <>
+      {/* Latest tweet */}
+      <TweetLatest />
+
       {/* Belief state hero — top 3 axes by confidence */}
       {ontology.axes.length > 0 && (
         <div className="belief-hero">
