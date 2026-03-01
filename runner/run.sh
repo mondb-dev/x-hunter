@@ -370,6 +370,10 @@ FIRSTMSG
     # Discourse digest: format recent exchanges for agent context (browse + tweet prompts)
     node "$PROJECT_ROOT/runner/discourse_digest.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
+    # Reading queue: scan interactions for user-recommended URLs, emit top item
+    READING_CYCLE=$CYCLE node "$PROJECT_ROOT/runner/reading_queue.js" \
+      >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+
     NEXT_TWEET=$(( (CYCLE / TWEET_EVERY + 1) * TWEET_EVERY ))
 
     # Pre-fetch curiosity search URL in browser (non-blocking — page ready when agent starts)
@@ -384,6 +388,22 @@ FIRSTMSG
     _CURIOSITY_DIRECTIVE=$(cat "$PROJECT_ROOT/state/curiosity_directive.txt" 2>/dev/null | sed "s/\`/'/g" || echo "")
     _COMMENT_CANDIDATES=$(cat "$PROJECT_ROOT/state/comment_candidates.txt" 2>/dev/null | sed "s/\`/'/g" || echo "")
     _DISCOURSE_DIGEST=$(cat "$PROJECT_ROOT/state/discourse_digest.txt" 2>/dev/null | sed "s/\`/'/g" || echo "")
+    _READING_URL=""
+    _READING_FROM=""
+    _READING_CONTEXT=""
+    if [ -s "$PROJECT_ROOT/state/reading_url.txt" ]; then
+      _READING_URL=$(grep "^URL:" "$PROJECT_ROOT/state/reading_url.txt" 2>/dev/null | sed 's/^URL: //' | sed "s/\`/'/g")
+      _READING_FROM=$(grep "^FROM:" "$PROJECT_ROOT/state/reading_url.txt" 2>/dev/null | sed 's/^FROM: //' | sed "s/\`/'/g")
+      _READING_CONTEXT=$(grep "^CONTEXT:" "$PROJECT_ROOT/state/reading_url.txt" 2>/dev/null | sed 's/^CONTEXT: //' | sed "s/\`/'/g")
+    fi
+    if [ -n "$_READING_URL" ]; then
+      _READING_BLOCK="${_READING_FROM} recommended a link. Navigate to it as your FIRST task:
+  ${_READING_URL}
+  Context: ${_READING_CONTEXT}
+  Read it. Note key claims in browse_notes.md. Integrate into belief notes."
+    else
+      _READING_BLOCK="(no reading queue item this cycle)"
+    fi
     _CURRENT_AXES=$(node -e "
       try {
         const d=JSON.parse(require('fs').readFileSync('$PROJECT_ROOT/state/ontology.json','utf-8'));
@@ -425,9 +445,14 @@ $_COMMENT_CANDIDATES
 $_CURRENT_AXES
 ── RECENT DISCOURSE (reply exchanges) ───────────────────────────────────
 $_DISCOURSE_DIGEST
+── READING QUEUE ────────────────────────────────────────────────────────
+$_READING_BLOCK
 ─────────────────────────────────────────────────────────────────────────
 
 Tasks (in order):
+0. READING QUEUE: If there is a reading queue URL above (not "no reading queue item"),
+   navigate to it FIRST. Read it carefully. Note key claims in browse_notes.md.
+   Then proceed with the tasks below.
 1. CURIOSITY: If the directive above has an ACTIVE SEARCH URL and you have not searched
    it this directive window, navigate to it now and read top 3-5 posts.
    For ALL browse cycles while the directive is active: follow the AMBIENT FOCUS —
@@ -475,6 +500,12 @@ BROWSEMSG
       --message "$AGENT_MSG" \
       --thinking low \
       --verbose on
+
+    # ── Mark reading queue item as done (agent has read it) ───────────────
+    if [ -s "$PROJECT_ROOT/state/reading_url.txt" ]; then
+      READING_CYCLE=$CYCLE node "$PROJECT_ROOT/runner/reading_queue.js" --mark-done \
+        >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    fi
 
     # ── Merge ontology delta written by the browse agent ──────────────────
     node "$PROJECT_ROOT/runner/apply_ontology_delta.js" 2>&1 || true
