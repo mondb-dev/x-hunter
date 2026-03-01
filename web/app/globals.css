@@ -201,22 +201,33 @@ main {
 /* ── Axis bars ── */
 .axis-bar { padding: 1.25rem 0; border-bottom: 1px solid var(--border); }
 .axis-bar:last-child { border-bottom: none; }
-.axis-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem; }
-.axis-label { font-size: 0.9rem; font-weight: 600; }
+.axis-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem; gap: 1rem; }
+.axis-label { font-size: 0.9rem; font-weight: 600; flex: 1; min-width: 0; }
+.axis-meta-right { display: flex; align-items: center; gap: 0.6rem; flex-shrink: 0; }
+.axis-score { font-size: 11px; font-weight: 700; font-family: var(--font); }
+.axis-score-pos { color: var(--amber); }
+.axis-score-neg { color: var(--accent); }
+.axis-score-zero { color: var(--muted); }
 .axis-confidence { font-size: 11px; color: var(--muted); }
-.axis-poles { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); margin-bottom: 0.5rem; }
+.axis-obs { font-size: 11px; color: var(--muted); opacity: 0.7; }
+.axis-poles { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); margin-bottom: 0.5rem; gap: 1rem; }
+.axis-poles .pole { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 45%; }
 .axis-track { position: relative; height: 4px; background: var(--border); border-radius: 2px; margin-bottom: 0.6rem; }
 .axis-fill { position: absolute; top: 0; height: 100%; border-radius: 2px; }
 .axis-center-tick { position: absolute; left: 50%; top: -3px; width: 1px; height: 10px; background: var(--muted); transform: translateX(-50%); opacity: 0.4; }
 .axis-marker { position: absolute; top: -4px; width: 12px; height: 12px; border-radius: 50%; background: var(--text); border: 2px solid var(--bg); transform: translateX(-50%); }
+.axis-marker-seed { background: var(--border); border-color: var(--surface); }
+.axis-inactive { opacity: 0.45; }
 .axis-topics { display: flex; gap: 0.4rem; flex-wrap: wrap; }
 .topic-tag { font-size: 10px; padding: 0.15em 0.6em; background: var(--surface); border: 1px solid var(--border); border-radius: 2px; color: var(--muted); }
 
 /* ── Ontology page ── */
-.ontology-meta { display: flex; gap: 2rem; margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; }
+.ontology-meta { display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; }
 .ontology-stat { display: flex; flex-direction: column; gap: 0.25rem; }
 .ontology-stat .stat-val { font-size: 1.6rem; font-weight: 700; }
 .ontology-stat .stat-key { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+.ontology-seeded { margin-top: 2.5rem; }
+.ontology-section-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
 
 /* ── Empty state ── */
 .empty { color: var(--muted); font-size: 13px; padding: 2rem 0; }

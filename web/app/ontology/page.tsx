@@ -6,15 +6,15 @@ export default async function OntologyPage() {
   const ontology = readOntology();
   const axes = ontology.axes;
 
+  const activeAxes   = axes.filter(a => a.confidence > 0).sort((a, b) => b.confidence - a.confidence);
+  const inactiveAxes = axes.filter(a => a.confidence <= 0);
+
   const avgConfidence =
-    axes.length > 0
-      ? axes.reduce((s, a) => s + a.confidence, 0) / axes.length
+    activeAxes.length > 0
+      ? activeAxes.reduce((s, a) => s + a.confidence, 0) / activeAxes.length
       : 0;
 
-  const avgScore =
-    axes.length > 0
-      ? axes.reduce((s, a) => s + Math.abs(a.score), 0) / axes.length
-      : 0;
+  const totalEvidence = axes.reduce((s, a) => s + (a.evidence_log?.length ?? 0), 0);
 
   return (
     <>
@@ -24,12 +24,16 @@ export default async function OntologyPage() {
           <span className="stat-key">Axes</span>
         </div>
         <div className="ontology-stat">
-          <span className="stat-val">{Math.round(avgConfidence * 100)}%</span>
-          <span className="stat-key">Avg Confidence</span>
+          <span className="stat-val">{activeAxes.length}</span>
+          <span className="stat-key">Active</span>
         </div>
         <div className="ontology-stat">
-          <span className="stat-val">{avgScore.toFixed(2)}</span>
-          <span className="stat-key">Avg |Score|</span>
+          <span className="stat-val">{totalEvidence}</span>
+          <span className="stat-key">Observations</span>
+        </div>
+        <div className="ontology-stat">
+          <span className="stat-val">{Math.round(avgConfidence * 100)}%</span>
+          <span className="stat-key">Avg Confidence</span>
         </div>
         <div className="ontology-stat">
           <span className="stat-val">{ontology.last_updated ?? "—"}</span>
@@ -40,14 +44,22 @@ export default async function OntologyPage() {
       {axes.length === 0 ? (
         <p className="empty">No belief axes discovered yet. Check back after Day 3.</p>
       ) : (
-        <div>
-          {axes
-            .slice()
-            .sort((a, b) => b.confidence - a.confidence)
-            .map((axis) => (
+        <>
+          <div>
+            {activeAxes.map((axis) => (
               <AxisBar key={axis.id} axis={axis} />
             ))}
-        </div>
+          </div>
+
+          {inactiveAxes.length > 0 && (
+            <div className="ontology-seeded">
+              <div className="ontology-section-label">Seeded — no observations yet</div>
+              {inactiveAxes.map((axis) => (
+                <AxisBar key={axis.id} axis={axis} />
+              ))}
+            </div>
+          )}
+        </>
       )}
     </>
   );

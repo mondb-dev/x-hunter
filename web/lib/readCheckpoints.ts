@@ -32,7 +32,7 @@ export function getAllCheckpoints(): Checkpoint[] {
       return {
         n,
         date: data.date ?? "",
-        title: data.title ?? `Checkpoint ${n} — Week ${n}`,
+        title: data.title ?? `Checkpoint ${n}`,
         content,
         contentHtml: "",
       };
@@ -51,10 +51,20 @@ export async function getLatestCheckpoint(): Promise<Checkpoint | null> {
   const latestPath = path.join(CHECKPOINTS_DIR, "latest.md");
   if (!fs.existsSync(latestPath)) return null;
 
-  const all = getAllCheckpoints();
-  if (all.length === 0) return null;
+  // Read latest.md directly — it is always overwritten with the most recent checkpoint content
+  const raw = fs.readFileSync(latestPath, "utf-8");
+  const { data, content } = matter(raw);
 
-  const latest = all[all.length - 1];
-  const processed = await remark().use(remarkHtml).process(latest.content);
-  return { ...latest, contentHtml: processed.toString() };
+  // Derive checkpoint number from the highest-numbered numbered file
+  const all = getAllCheckpoints();
+  const n = all.length > 0 ? all[all.length - 1].n : 1;
+
+  const processed = await remark().use(remarkHtml).process(content);
+  return {
+    n,
+    date: data.date ?? "",
+    title: data.title ?? `Checkpoint ${n}`,
+    content,
+    contentHtml: processed.toString(),
+  };
 }

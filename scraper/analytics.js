@@ -269,8 +269,8 @@ function clusterPosts(posts, threshold = 0.25) {
     }
   }
 
-  // Sort clusters by their best post's score DESC
-  clusters.sort((a, b) => b.posts[0].score - a.posts[0].score);
+  // Sort clusters by their best post's total ranking score DESC
+  clusters.sort((a, b) => (b.posts[0].total || 0) - (a.posts[0].total || 0));
   return clusters;
 }
 
