@@ -2,14 +2,21 @@ import Link from "next/link";
 import { getAllJournalDays } from "@/lib/readJournals";
 import { readOntology } from "@/lib/readOntology";
 import { getLatestCheckpoint } from "@/lib/readCheckpoints";
-import TweetLatest from "@/components/TweetLatest";
+import LatestPost from "@/components/LatestPost";
 
+const PAGE_SIZE = 15;
 
-export default async function IndexPage() {
+export default async function IndexPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string }>;
+}) {
+  const params = await searchParams;
+  const currentPage = Math.max(1, parseInt(params?.page ?? "1", 10));
+
   const days = getAllJournalDays(); // newest date first
   const ontology = readOntology();
   const latestCheckpoint = await getLatestCheckpoint();
-  const totalEntries = days.reduce((n, d) => n + d.entries.length, 0);
 
   const top3 = [...ontology.axes]
     .sort((a, b) => b.confidence - a.confidence)
@@ -19,10 +26,19 @@ export default async function IndexPage() {
     ? Math.round(ontology.axes.reduce((s, a) => s + a.confidence, 0) / ontology.axes.length * 100)
     : 0;
 
+  // Flatten all entries for pagination
+  const allEntries = days.flatMap((day) =>
+    day.entries.map((entry) => ({ ...entry, dayN: day.day }))
+  );
+  const totalEntries = allEntries.length;
+  const totalPages = Math.max(1, Math.ceil(totalEntries / PAGE_SIZE));
+  const page = Math.min(currentPage, totalPages);
+  const pageEntries = allEntries.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+
   return (
     <>
-      {/* Latest tweet */}
-      <TweetLatest />
+      {/* Latest post from X */}
+      <LatestPost />
 
       {/* Belief state hero — top 3 axes by confidence */}
       {ontology.axes.length > 0 && (
@@ -33,20 +49,20 @@ export default async function IndexPage() {
           <div className="belief-axes-mini">
             {top3.map((axis) => {
               const pct        = ((axis.score + 1) / 2) * 100;
-              // Fill from pole edge to marker: left-lean → 0→pct, right-lean → pct→100
-              const fillLeft   = axis.score >= 0 ? pct : 0;
-              const fillWidth  = axis.score === 0 ? 0 : (axis.score >= 0 ? 100 - pct : pct);
-              const fillColor  = axis.score >= 0 ? "var(--amber)" : "var(--accent)";
-              const leanPole   = axis.score >= 0 ? axis.right_pole : axis.left_pole;
-              const poleShort  = leanPole.length > 38 ? leanPole.slice(0, 38) + "…" : leanPole;
+              // Fill from center (50%) toward marker — consistent with full AxisBar
+              const fillLeft   = axis.score >= 0 ? 50 : pct;
+              const fillWidth  = Math.abs(pct - 50);
+              const fillColor  = axis.score > 0 ? "var(--amber)" : axis.score < 0 ? "var(--accent)" : "transparent";
+              const scoreStr   = `${axis.score >= 0 ? "+" : ""}${axis.score.toFixed(2)}`;
+              const scoreColor = axis.score > 0 ? "var(--amber)" : axis.score < 0 ? "var(--accent)" : "var(--muted)";
               const confidence = Math.round(axis.confidence * 100);
               return (
                 <div key={axis.id} className="belief-axis-mini">
                   <div className="belief-axis-mini-header">
                     <span className="belief-axis-mini-label">{axis.label}</span>
                     <span className="belief-axis-mini-meta">
-                      {axis.score === 0 ? "neutral" : `${axis.score > 0 ? "→" : "←"} ${poleShort}`}
-                      {" · "}{confidence}%
+                      <span style={{ color: scoreColor, fontWeight: 700 }}>{scoreStr}</span>
+                      {" · "}{confidence}% conf
                     </span>
                   </div>
                   <div className="belief-mini-track">
@@ -76,21 +92,37 @@ export default async function IndexPage() {
       {totalEntries === 0 ? (
         <p className="empty">No journal entries yet. The agent starts on Day 1.</p>
       ) : (
-        <div className="journal-list">
-          {days.flatMap((day) =>
-            day.entries.map((entry) => (
+        <>
+          <div className="journal-list">
+            {pageEntries.map((entry) => (
               <Link
                 key={entry.slug}
                 href={`/journal/${entry.date}/${String(entry.hour).padStart(2, "0")}`}
                 className="journal-item"
                 style={{ textDecoration: "none" }}
               >
-                <span className="journal-day">Day {entry.day} · {String(entry.hour).padStart(2, "0")}:00</span>
+                <span className="journal-day">Day {entry.dayN} · {String(entry.hour).padStart(2, "0")}:00</span>
                 <span className="journal-title">{entry.title || entry.date}</span>
               </Link>
-            ))
+            ))}
+          </div>
+
+          {totalPages > 1 && (
+            <div className="pagination">
+              {page > 1 ? (
+                <Link href={`/?page=${page - 1}`} className="pagination-btn">← newer</Link>
+              ) : (
+                <span className="pagination-btn pagination-disabled">← newer</span>
+              )}
+              <span className="pagination-info">page {page} of {totalPages}</span>
+              {page < totalPages ? (
+                <Link href={`/?page=${page + 1}`} className="pagination-btn">older →</Link>
+              ) : (
+                <span className="pagination-btn pagination-disabled">older →</span>
+              )}
+            </div>
           )}
-        </div>
+        </>
       )}
     </>
   );

@@ -241,11 +241,25 @@ main {
 .about-tldr-list li { font-size: 13px; color: #d4d8de; line-height: 1.6; padding-left: 1rem; position: relative; font-family: var(--font-prose); }
 .about-tldr-list li::before { content: "–"; position: absolute; left: 0; color: var(--muted); }
 
-/* ── Latest tweet embed ── */
-.tweet-latest-wrap { margin-bottom: 2rem; }
-.tweet-latest-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
-/* Twitter iframe inherits bg — force dark surface so it blends */
-.tweet-latest-wrap iframe { border-radius: 4px; max-width: 100% !important; }
+/* ── Latest post card ── */
+.latest-post-wrap { margin-bottom: 2rem; }
+.latest-post-label { display: flex; align-items: center; gap: 0.5rem; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+.latest-post-type { font-size: 10px; padding: 0.1em 0.5em; background: var(--surface); border: 1px solid var(--border); border-radius: 2px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+.latest-post-card { padding: 1rem 1.25rem; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; }
+.latest-post-content { font-size: 0.95rem; font-family: var(--font-prose); color: #d4d8de; line-height: 1.7; margin-bottom: 0.75rem; }
+.latest-post-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+.latest-post-time { font-size: 11px; color: var(--muted); }
+.latest-post-links { display: flex; gap: 1rem; }
+.latest-post-link { font-size: 11px; color: var(--muted); text-decoration: none; }
+.latest-post-link:hover { color: var(--text); }
+.latest-post-empty { font-size: 13px; color: var(--muted); }
+
+/* ── Pagination ── */
+.pagination { display: flex; align-items: center; justify-content: center; gap: 1.5rem; padding: 2rem 0 1rem; }
+.pagination-btn { font-size: 12px; color: var(--accent); text-decoration: none; letter-spacing: 0.05em; }
+.pagination-btn:hover { text-decoration: underline; }
+.pagination-disabled { color: var(--muted); cursor: default; }
+.pagination-info { font-size: 11px; color: var(--muted); }
 
 /* ── Empty state ── */
 .empty { color: var(--muted); font-size: 13px; padding: 2rem 0; }

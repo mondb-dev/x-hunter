@@ -1,40 +1,41 @@
 #!/usr/bin/env node
 /**
- * runner/browser_check.js — functional browser health check
+ * runner/browser_check.js — browser health check via CDP HTTP endpoint
  *
- * Connects to Chrome via playwright-core CDP and verifies the connection
- * works end-to-end (not just that the TCP port is open).
+ * Fetches /json/version from Chrome's CDP port. This is a direct HTTP call
+ * that doesn't depend on playwright-core version compatibility.
  *
- * Exit 0 = healthy
- * Exit 1 = not healthy (Chrome down, CDP refused, or connect timeout)
+ * Exit 0 = healthy (Chrome responding on CDP port)
+ * Exit 1 = not healthy
  *
  * Usage: node runner/browser_check.js
- * Timeout: 5s (hard abort)
+ * Timeout: 5s
  */
 
 "use strict";
 
-const { chromium } = require("playwright-core");
 const CDP_URL = process.env.CDP_URL || "http://127.0.0.1:18801";
 const TIMEOUT_MS = 5_000;
 
+const controller = new AbortController();
 const timer = setTimeout(() => {
+  controller.abort();
   console.error("[browser_check] timeout after 5s");
   process.exit(1);
 }, TIMEOUT_MS);
 
-(async () => {
-  try {
-    const browser = await chromium.connectOverCDP(CDP_URL);
-    // Verify at least one context is accessible
-    const contexts = browser.contexts();
-    if (!contexts.length) throw new Error("no browser contexts");
-    await browser.close();
+fetch(`${CDP_URL}/json/version`, { signal: controller.signal })
+  .then(res => {
     clearTimeout(timer);
-    process.exit(0);
-  } catch (e) {
+    if (res.ok) {
+      process.exit(0);
+    } else {
+      console.error(`[browser_check] CDP returned HTTP ${res.status}`);
+      process.exit(1);
+    }
+  })
+  .catch(e => {
     clearTimeout(timer);
     console.error("[browser_check] failed:", e.message);
     process.exit(1);
-  }
-})();
+  });
