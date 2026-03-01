@@ -51,9 +51,11 @@ sleep 2
 # ── Configure git identity ────────────────────────────────────────────────────
 git -C "$PROJECT_ROOT" config user.name "${GIT_USER_NAME:-x-hunter-agent}"
 git -C "$PROJECT_ROOT" config user.email "${GIT_USER_EMAIL:-agent@x-hunter.local}"
-if [ -n "$GITHUB_TOKEN" ]; then
-  REPO_URL="https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git"
-  git -C "$PROJECT_ROOT" remote set-url origin "$REPO_URL" 2>/dev/null || true
+if [ -n "$GITHUB_TOKEN" ] && [ -n "$GITHUB_REPO" ]; then
+  # Use credential helper so the token is never written into the git remote URL
+  git -C "$PROJECT_ROOT" config credential.helper \
+    '!f() { echo "username=x-token"; echo "password='"$GITHUB_TOKEN"'"; }; f'
+  git -C "$PROJECT_ROOT" remote set-url origin "https://github.com/${GITHUB_REPO}.git" 2>/dev/null || true
 fi
 
 # ── Start pump.fun stream (if key is configured) ──────────────────────────────
@@ -323,7 +325,7 @@ FIRSTMSG
     # Generate topic summary + memory recall from SQLite index before invoking AI
     node "$PROJECT_ROOT/scraper/query.js" --hours 4 > /dev/null 2>&1 || true
     # Extract top 3 keywords from topic_summary.txt to make recall topic-relevant
-    RECALL_QUERY=$(grep -oP '\d+x\s+\K.+' "$PROJECT_ROOT/state/topic_summary.txt" 2>/dev/null | head -3 | tr '\n' ' ' | xargs)
+    RECALL_QUERY=$(grep -E '^[0-9]+x[[:space:]]' "$PROJECT_ROOT/state/topic_summary.txt" 2>/dev/null | sed 's/^[0-9][0-9]*x[[:space:]]*//' | head -3 | tr '\n' ' ' | xargs)
     if [ -n "$RECALL_QUERY" ]; then
       node "$PROJECT_ROOT/runner/recall.js" --query "$RECALL_QUERY" --limit 5 >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     else
@@ -616,7 +618,7 @@ Tasks (in order, no browser):
    { "evidence": [{ "axis_id":"...", "source":"...", "content":"...",
                     "timestamp":"...", "pole_alignment":"left"|"right" }],
      "new_axes": [{ "id":"...", "label":"...", "left_pole":"...", "right_pole":"..." }] }
-   Omit keys you don't need. Skip writing the file if nothing axis-worthy.
+   Omit keys you do not need. Skip writing the file if nothing axis-worthy.
 7. Clear state/browse_notes.md (overwrite with empty string).
 
 TWEETMSG
@@ -685,6 +687,10 @@ TWEETMSG
 
     # Daily maintenance (every 24h = 72 cycles)
     if [ $(( CYCLE % (TWEET_EVERY * 12) )) -eq 0 ]; then
+      # ── Daily belief report ──────────────────────────────────────────────────
+      node "$PROJECT_ROOT/runner/generate_daily_report.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+      # ── Checkpoint (every 3 days — generate_checkpoint.js self-gates) ───────
+      node "$PROJECT_ROOT/runner/generate_checkpoint.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
       # Trim feed_digest.txt to last 3000 lines (~2-3 days of data)
       DLINES=$(wc -l < "$PROJECT_ROOT/state/feed_digest.txt" 2>/dev/null || echo 0)
       if [ "$DLINES" -gt 3000 ]; then

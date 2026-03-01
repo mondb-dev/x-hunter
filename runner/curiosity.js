@@ -86,12 +86,15 @@ function getBeliefSummary() {
   if (!fs.existsSync(BELIEF)) return "";
   try {
     const data = JSON.parse(fs.readFileSync(BELIEF, "utf-8"));
-    const active = (data.active_axes || []).slice(0, 3).join(", ");
-    const watch  = (data.watch_list  || []).slice(0, 3).join(", ");
-    const parts  = [];
-    if (active) parts.push(`Active axes: ${active}`);
-    if (watch)  parts.push(`Watching: ${watch}`);
-    return parts.join(" | ");
+    // belief_state schema: { created_at, axes: [{id, score, confidence}] }
+    const axes = (data.axes || [])
+      .filter(a => (a.confidence || 0) > 0)
+      .sort((a, b) => (b.confidence || 0) - (a.confidence || 0))
+      .slice(0, 3);
+    if (!axes.length) return "";
+    return "Highest-confidence axes: " + axes.map(a =>
+      `${a.id} (conf:${((a.confidence || 0) * 100).toFixed(0)}%, score:${(a.score || 0) >= 0 ? "+" : ""}${(a.score || 0).toFixed(2)})`
+    ).join(", ");
   } catch { return ""; }
 }
 

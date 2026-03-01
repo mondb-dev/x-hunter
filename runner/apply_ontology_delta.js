@@ -38,10 +38,12 @@
 const fs   = require("fs");
 const path = require("path");
 
-const ROOT    = path.resolve(__dirname, "..");
-const ONTO    = path.join(ROOT, "state", "ontology.json");
-const DELTA   = path.join(ROOT, "state", "ontology_delta.json");
-const TRUST   = path.join(ROOT, "state", "trust_graph.json");
+const ROOT       = path.resolve(__dirname, "..");
+const ONTO       = path.join(ROOT, "state", "ontology.json");
+const DELTA      = path.join(ROOT, "state", "ontology_delta.json");
+const TRUST      = path.join(ROOT, "state", "trust_graph.json");
+const DRIFT_CAP  = path.join(ROOT, "state", "drift_cap_state.json");
+const AXIS_GUARD = path.join(ROOT, "state", "axis_creation_state.json");
 
 const OLLAMA_URL   = process.env.OLLAMA_URL   || "http://localhost:11434/api/generate";
 const OLLAMA_MODEL = process.env.OLLAMA_MODEL || "qwen2.5:7b";
@@ -83,6 +85,101 @@ function trustWeight(username, trustMap) {
   const score = username ? (trustMap.get(username) ?? DEFAULT_TRUST) : DEFAULT_TRUST;
   // Clamp to [1, 5], normalise, clamp weight to [0.5, 2.0]
   return Math.min(2.0, Math.max(0.5, score / TRUST_NORM));
+}
+
+// ── Daily drift cap state ─────────────────────────────────────────────────────
+// Tracks the score of each axis at the start of the current day.
+// Prevents axis scores from moving more than ±0.05 per axis per day.
+
+const DRIFT_CAP_PER_DAY = 0.05;
+const TODAY_DATE = new Date().toISOString().slice(0, 10); // "YYYY-MM-DD"
+
+function loadDriftCapState(axes) {
+  let state = { date: TODAY_DATE, scores: {} };
+  try {
+    const raw = JSON.parse(fs.readFileSync(DRIFT_CAP, "utf-8"));
+    if (raw.date === TODAY_DATE) {
+      state = raw;
+    } else {
+      // New day — seed from current axis scores
+      for (const a of axes) state.scores[a.id] = a.score ?? 0;
+      fs.writeFileSync(DRIFT_CAP, JSON.stringify(state, null, 2), "utf-8");
+    }
+  } catch {
+    // File missing — seed from current axis scores
+    for (const a of axes) state.scores[a.id] = a.score ?? 0;
+    fs.writeFileSync(DRIFT_CAP, JSON.stringify(state, null, 2), "utf-8");
+  }
+  return state;
+}
+
+function saveDriftCapState(state) {
+  fs.writeFileSync(DRIFT_CAP, JSON.stringify(state, null, 2), "utf-8");
+}
+
+/** Clamp newScore so it does not move more than DRIFT_CAP_PER_DAY from baseScore. */
+function applyDriftCap(axisId, newScore, driftState) {
+  const base = driftState.scores[axisId] ?? 0;
+  const clamped = Math.min(base + DRIFT_CAP_PER_DAY, Math.max(base - DRIFT_CAP_PER_DAY, newScore));
+  if (clamped !== newScore) {
+    console.log(
+      `[apply_delta] drift cap hit on ${axisId}: ${newScore.toFixed(4)} → ${clamped.toFixed(4)}` +
+      ` (base ${base.toFixed(4)} ±${DRIFT_CAP_PER_DAY})`
+    );
+  }
+  return clamped;
+}
+
+// ── Axis creation guard ───────────────────────────────────────────────────────
+// Enforces: max 3 new axes per day, semantic dedup (similarity > 0.86 → skip).
+
+const MAX_AXES_PER_DAY = 3;
+
+function loadAxisGuardState() {
+  try {
+    const raw = JSON.parse(fs.readFileSync(AXIS_GUARD, "utf-8"));
+    if (raw.date === TODAY_DATE) return raw;
+  } catch { /* ignore */ }
+  // New day or missing file — reset
+  const state = { date: TODAY_DATE, count: 0 };
+  fs.writeFileSync(AXIS_GUARD, JSON.stringify(state, null, 2), "utf-8");
+  return state;
+}
+
+function saveAxisGuardState(state) {
+  fs.writeFileSync(AXIS_GUARD, JSON.stringify(state, null, 2), "utf-8");
+}
+
+/**
+ * Tokenize a string into a set of lowercase words (stop-words stripped).
+ * Used for Jaccard-based similarity as a proxy for cosine similarity on embeddings.
+ */
+const STOP = new Set(["the","a","an","and","or","of","in","is","are","that","to","for","with","on","by","at","from","as","this","it","its","which","vs","versus"]);
+function tokenSet(str) {
+  return new Set(
+    (str || "").toLowerCase().replace(/[^a-z0-9 ]/g, " ").split(/\s+/)
+      .filter(w => w.length > 2 && !STOP.has(w))
+  );
+}
+
+/** Jaccard similarity between two token sets. */
+function jaccardSim(setA, setB) {
+  if (!setA.size && !setB.size) return 1;
+  let intersection = 0;
+  for (const t of setA) if (setB.has(t)) intersection++;
+  return intersection / (setA.size + setB.size - intersection);
+}
+
+/**
+ * Compute combined text similarity between two axes based on label + left_pole + right_pole.
+ * Returns a value in [0, 1]. Threshold 0.35 approximates cosine 0.86 on normalized text.
+ */
+const AXIS_SIMILARITY_THRESHOLD = 0.35;
+
+function axisSimilarity(axisA, axisB) {
+  const textA = `${axisA.label} ${axisA.left_pole} ${axisA.right_pole}`;
+  const textB = `${axisB.label} ${axisB.left_pole} ${axisB.right_pole}`;
+  return jaccardSim(tokenSet(textA), tokenSet(textB));
 }
 
 if (!fs.existsSync(DELTA)) {
@@ -178,6 +275,12 @@ const now = new Date().toISOString();
 let evidenceAdded    = 0;
 let evidenceRejected = 0;
 let axesAdded        = 0;
+let axesCapped       = 0;
+const axesUpdated    = new Set(); // tracks which axes got new evidence this run
+
+// ── Load daily drift cap + axis creation guard ────────────────────────────────
+const driftState    = loadDriftCapState(onto.axes);
+const axisGuardState = loadAxisGuardState();
 
 // ── Apply evidence entries ────────────────────────────────────────────────────
 
@@ -234,30 +337,40 @@ for (const entry of (delta.evidence || [])) {
   axis.evidence_log.push(logEntry);
   evidenceAdded++;
   axis.last_updated = now;
+  axesUpdated.add(axis.id);
 }
 
 // Recompute confidence and score using trust-weighted Bayesian update.
-// Each evidence entry carries trust_weight (default 1.0 = trust_score/3).
+// Only run on axes that received new evidence this call — axes with no new entries
+// retain their accumulated score/confidence (the log may not contain the full history).
 // score      = Σ(w_i × ±1) / Σ(w_i)     — trust-weighted mean
 // confidence = min(0.95, Σ(w_i) × 0.025) — effective evidence count drives confidence
 for (const axis of onto.axes) {
+  if (!axesUpdated.has(axis.id)) continue;
   const log = axis.evidence_log || [];
   if (!log.length) continue;
 
   let weightedSum = 0;
   let totalWeight = 0;
   for (const e of log) {
-    const w    = e.trust_weight ?? 1.0; // legacy entries without weight get 1.0
-    const sign = e.pole_alignment === "right" ? 1 : -1;
+    const w    = typeof e === "object" ? (e.trust_weight ?? 1.0) : 1.0;
+    const sign = typeof e === "object" ? (e.pole_alignment === "right" ? 1 : -1)
+                                       : (e >= 0 ? 1 : -1);
     weightedSum += w * sign;
     totalWeight += w;
   }
 
-  axis.score      = parseFloat((weightedSum / totalWeight).toFixed(4));
+  const rawScore = parseFloat((weightedSum / totalWeight).toFixed(4));
+  // Apply daily drift cap — score cannot move more than ±0.05 from start-of-day value
+  axis.score      = parseFloat(applyDriftCap(axis.id, rawScore, driftState).toFixed(4));
   axis.confidence = parseFloat(Math.min(0.95, totalWeight * 0.025).toFixed(4));
+  if (axis.score !== rawScore) axesCapped++;
 }
 
-// ── Apply new axes ────────────────────────────────────────────────────────────
+// Persist updated drift cap state (scores reflect the clamped values for today)
+saveDriftCapState(driftState);
+
+// ── Apply new axes (with creation guard) ──────────────────────────────────────
 
 for (const raw of (delta.new_axes || [])) {
   if (!raw.id || !raw.label || !raw.left_pole || !raw.right_pole) {
@@ -267,6 +380,26 @@ for (const raw of (delta.new_axes || [])) {
 
   if (axisById[raw.id]) {
     console.log(`[apply_delta] axis "${raw.id}" already exists — skipping new_axis`);
+    continue;
+  }
+
+  // ── Guard: max 3 new axes per day ─────────────────────────────────────────
+  if (axisGuardState.count >= MAX_AXES_PER_DAY) {
+    console.log(
+      `[apply_delta] axis creation guard: daily limit (${MAX_AXES_PER_DAY}) reached — ` +
+      `skipping new axis "${raw.id}"`
+    );
+    continue;
+  }
+
+  // ── Guard: semantic dedup — similarity > threshold → skip creation ─────────
+  const nearDuplicate = onto.axes.find(existing => axisSimilarity(existing, raw) >= AXIS_SIMILARITY_THRESHOLD);
+  if (nearDuplicate) {
+    console.log(
+      `[apply_delta] axis creation guard: "${raw.id}" is semantically similar to ` +
+      `"${nearDuplicate.id}" (Jaccard >= ${AXIS_SIMILARITY_THRESHOLD}) — ` +
+      `attach evidence to existing axis instead of creating a new one`
+    );
     continue;
   }
 
@@ -286,7 +419,11 @@ for (const raw of (delta.new_axes || [])) {
   onto.axes.push(newAxis);
   axisById[newAxis.id] = newAxis;
   axesAdded++;
+  axisGuardState.count++;
 }
+
+// Persist updated axis creation guard state
+saveAxisGuardState(axisGuardState);
 
 // ── Write back + cleanup ──────────────────────────────────────────────────────
 
@@ -295,10 +432,11 @@ onto.last_updated = now;
 fs.writeFileSync(ONTO, JSON.stringify(onto, null, 2), "utf-8");
 fs.unlinkSync(DELTA);
 
-const rejMsg = evidenceRejected ? `, ${evidenceRejected} rejected by stance check` : "";
+const rejMsg    = evidenceRejected ? `, ${evidenceRejected} rejected by stance check` : "";
+const cappedMsg = axesCapped ? `, ${axesCapped} drift-capped` : "";
 console.log(
-  `[apply_delta] applied: ${evidenceAdded} evidence entry(ies)${rejMsg}, ${axesAdded} new axis(es)` +
-  ` — total axes: ${onto.axes.length}`
+  `[apply_delta] applied: ${evidenceAdded} evidence entry(ies)${rejMsg}${cappedMsg}, ${axesAdded} new axis(es)` +
+  ` — total axes: ${onto.axes.length} (axes created today: ${axisGuardState.count}/${MAX_AXES_PER_DAY})`
 );
 
 })().catch(err => {

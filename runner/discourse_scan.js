@@ -164,10 +164,8 @@ or
     try {
       result = await assessExchange(theirText, ourReply);
     } catch (e) {
-      // Ollama unavailable or parse error — mark as scanned anyway to avoid re-trying
-      console.log(`[discourse_scan] assessment failed for ${reply.id}: ${e.message}`);
-      state.scanned_ids.push(reply.id);
-      scanned++;
+      // Ollama unavailable or parse error — skip without marking as scanned (allow retry next cycle)
+      console.log(`[discourse_scan] assessment failed for ${reply.id}: ${e.message} — will retry`);
       continue;
     }
 
