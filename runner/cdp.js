@@ -41,7 +41,8 @@ async function connectBrowser(timeout = 10_000) {
   }
 
   // 2. Connect via WS endpoint (avoids browserURL hang on large target counts)
-  return puppeteer.connect({ browserWSEndpoint: wsUrl });
+  // protocolTimeout: ms allowed for any single CDP call (default 30s is too low for slow pages)
+  return puppeteer.connect({ browserWSEndpoint: wsUrl, protocolTimeout: 60_000 });
 }
 
 /**
