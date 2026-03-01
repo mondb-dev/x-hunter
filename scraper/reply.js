@@ -19,7 +19,7 @@
 
 "use strict";
 
-const { chromium } = require("playwright");
+const { connectBrowser, getXPage } = require("../runner/cdp");
 const fs   = require("fs");
 const path = require("path");
 const db   = require("./db");
@@ -30,7 +30,6 @@ const ROOT         = path.resolve(__dirname, "..");
 const REPLY_QUEUE  = path.join(ROOT, "state", "reply_queue.jsonl");
 const INTERACTIONS = path.join(ROOT, "state", "interactions.json");
 
-const CDP_URL    = "http://127.0.0.1:18801";
 const MAX_PER_RUN = 3;
 const MIN_GAP_MS  = 5 * 60 * 1000;  // 5 minutes between replies
 const MAX_PER_DAY = 10;
@@ -97,7 +96,7 @@ async function fetchThreadContext(page, item) {
   try {
     await page.goto(tweetUrl, { waitUntil: "domcontentloaded", timeout: 20_000 });
     await page.waitForSelector('article[data-testid="tweet"]', { timeout: 12_000 });
-    await page.waitForTimeout(1_500);
+    await new Promise(r => setTimeout(r, 1_500));
 
     const articles = await page.$$eval('article[data-testid="tweet"]', els =>
       els.slice(0, 6).map(a => {
@@ -222,25 +221,25 @@ async function postReply(page, item, replyText) {
 
   // Page is already on the tweet URL from fetchThreadContext — wait for it
   await page.waitForSelector('article[data-testid="tweet"]', { timeout: 12_000 });
-  await page.waitForTimeout(1_000);
+  await new Promise(r => setTimeout(r, 1_000));
 
   // Click the reply button on the first article
   const replyBtn = await page.$('article[data-testid="tweet"] [data-testid="reply"]');
   if (!replyBtn) throw new Error("reply button not found on tweet page");
   await replyBtn.click();
-  await page.waitForTimeout(1_500);
+  await new Promise(r => setTimeout(r, 1_500));
 
   // Find the reply compose box
   const compose = await page.waitForSelector('[data-testid="tweetTextarea_0"]', { timeout: 8_000 });
   await compose.click();
-  await page.waitForTimeout(500);
+  await new Promise(r => setTimeout(r, 500));
   await compose.fill(replyText);
-  await page.waitForTimeout(1_000);
+  await new Promise(r => setTimeout(r, 1_000));
 
   // Post
   const postBtn = await page.waitForSelector('[data-testid="tweetButton"]:not([disabled])', { timeout: 6_000 });
   await postBtn.click();
-  await page.waitForTimeout(3_000);
+  await new Promise(r => setTimeout(r, 3_000));
 
   console.log(`[reply] posted reply to @${item.from_username}`);
 }
@@ -315,18 +314,20 @@ function logInteraction(data, item, replyText, memoryHints) {
   // Connect to browser
   let browser;
   try {
-    browser = await chromium.connectOverCDP(CDP_URL);
+    browser = await connectBrowser();
   } catch (err) {
     console.error(`[reply] could not connect to CDP: ${err.message}`);
     process.exit(1);
   }
 
-  const contexts = browser.contexts();
-  if (!contexts.length) { console.error("[reply] no browser context"); await browser.close(); process.exit(1); }
-
-  const context = contexts[0];
-  let page = context.pages().find(p => p.url().includes("x.com")) || context.pages()[0];
-  if (!page) page = await context.newPage();
+  let page;
+  try {
+    page = await getXPage(browser);
+  } catch (err) {
+    console.error(`[reply] could not get page: ${err.message}`);
+    browser.disconnect();
+    process.exit(1);
+  }
 
   let repliedThisRun = 0;
 
@@ -395,14 +396,13 @@ function logInteraction(data, item, replyText, memoryHints) {
       item.status    = "done";
       item.our_reply = replyText;
       item.replied_at = new Date().toISOString();
-      logInteraction(interactions, item, replyText, memoryHints);
+      logInteraction(interactions, item, replyText, memoryHints); // increments today_count
       repliedThisRun++;
-      interactions.today_count++;
       interactions.last_reply_at = item.replied_at;
 
       if (repliedThisRun < MAX_PER_RUN && pending.indexOf(item) < pending.length - 1) {
         console.log(`[reply] waiting 5 min before next reply...`);
-        await page.waitForTimeout(MIN_GAP_MS);
+        await new Promise(r => setTimeout(r, MIN_GAP_MS));
       }
     } catch (err) {
       console.error(`[reply] failed to post: ${err.message}`);
@@ -414,6 +414,6 @@ function logInteraction(data, item, replyText, memoryHints) {
   writeQueue(queue);
 
   console.log(`[reply] done. replied ${repliedThisRun} time(s) this run.`);
-  await browser.close();
+  browser.disconnect();
   process.exit(0);
 })();

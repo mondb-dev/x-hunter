@@ -23,7 +23,7 @@
 
 "use strict";
 
-const { chromium } = require("playwright");
+const { connectBrowser, getXPage } = require("../runner/cdp");
 const fs   = require("fs");
 const path = require("path");
 const db   = require("./db");
@@ -33,8 +33,6 @@ const ROOT          = path.resolve(__dirname, "..");
 const FOLLOW_QUEUE  = path.join(ROOT, "state", "follow_queue.jsonl");
 const TRUST_GRAPH   = path.join(ROOT, "state", "trust_graph.json");
 const ONTOLOGY      = path.join(ROOT, "state", "ontology.json");
-
-const CDP_URL       = "http://127.0.0.1:18801";
 
 // ── Rate limits ───────────────────────────────────────────────────────────────
 const MAX_PER_RUN         = 3;
@@ -169,7 +167,7 @@ async function followUser(page, username) {
 
   await page.goto(profileUrl, { waitUntil: "domcontentloaded", timeout: 20_000 });
   await page.waitForSelector('[data-testid="primaryColumn"]', { timeout: 12_000 });
-  await page.waitForTimeout(2_000);
+  await new Promise(r => setTimeout(r, 2_000));
 
   // X renders the follow button with aria-label="Follow @username"
   // Try multiple selectors for robustness
@@ -186,7 +184,7 @@ async function followUser(page, username) {
   }
 
   await followBtn.click();
-  await page.waitForTimeout(2_000);
+  await new Promise(r => setTimeout(r, 2_000));
   console.log(`[follows] followed @${username}`);
 }
 
@@ -252,22 +250,20 @@ function logFollow(trustGraph, username, item) {
   // 5. Connect to browser via CDP
   let browser;
   try {
-    browser = await chromium.connectOverCDP(CDP_URL);
+    browser = await connectBrowser();
   } catch (err) {
-    console.error(`[follows] could not connect to CDP at ${CDP_URL}: ${err.message}`);
+    console.error(`[follows] could not connect to CDP: ${err.message}`);
     process.exit(1);
   }
 
-  const contexts = browser.contexts();
-  if (!contexts.length) {
-    console.error("[follows] no browser context found");
-    await browser.close();
+  let page;
+  try {
+    page = await getXPage(browser);
+  } catch (err) {
+    console.error(`[follows] could not get page: ${err.message}`);
+    browser.disconnect();
     process.exit(1);
   }
-
-  const context = contexts[0];
-  let page = context.pages().find(p => p.url().includes("x.com")) || context.pages()[0];
-  if (!page) page = await context.newPage();
 
   let followedThisRun = 0;
 
@@ -290,7 +286,7 @@ function logFollow(trustGraph, username, item) {
       // Wait between follows to avoid looking automated
       if (followedThisRun < MAX_PER_RUN && pending.indexOf(item) < pending.length - 1) {
         console.log(`[follows] waiting 1 min before next follow...`);
-        await page.waitForTimeout(MIN_GAP_MS);
+        await new Promise(r => setTimeout(r, MIN_GAP_MS));
       }
     } catch (err) {
       console.error(`[follows] failed @${item.username}: ${err.message}`);
@@ -304,6 +300,6 @@ function logFollow(trustGraph, username, item) {
   saveJson(TRUST_GRAPH, trustGraph);
 
   console.log(`[follows] done. followed ${followedThisRun} account(s) this run (today: ${countTodayFollows(queue)}/${MAX_PER_DAY}).`);
-  await browser.close();
+  browser.disconnect();
   process.exit(0);
 })();

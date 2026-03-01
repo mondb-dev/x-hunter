@@ -41,10 +41,27 @@ function parseSlug(filename: string): { date: string; hour: number } | null {
   return { date: m[1], hour: parseInt(m[2], 10) };
 }
 
+/** Remove script-capable elements and event-handler attributes from a JSDOM subtree. */
+function sanitizeNode(root: Element): void {
+  // Remove dangerous elements
+  root.querySelectorAll("script, iframe, object, embed, form, link[rel='import']")
+    .forEach(el => el.remove());
+  // Strip inline event handlers and javascript: hrefs from every element
+  root.querySelectorAll("*").forEach(el => {
+    Array.from(el.attributes).forEach(attr => {
+      if (/^on/i.test(attr.name)) el.removeAttribute(attr.name);
+      if (attr.name === "href" && /^\s*javascript:/i.test(attr.value)) el.removeAttribute(attr.name);
+      if (attr.name === "src"  && /^\s*javascript:/i.test(attr.value)) el.removeAttribute(attr.name);
+    });
+  });
+}
+
 function extractBody(html: string): { body: string; title: string } {
   const dom = new JSDOM(html);
   const doc = dom.window.document;
-  const body = doc.querySelector("article")?.innerHTML ?? doc.body?.innerHTML ?? "";
+  const container = doc.querySelector("article") ?? doc.body;
+  if (container) sanitizeNode(container as Element);
+  const body = container?.innerHTML ?? "";
   // Pull first sentence of first paragraph as the index preview title
   const firstP = doc.querySelector("article p, body p")?.textContent?.trim() ?? "";
   const sentence = firstP.split(/(?<=[.!?])\s+/)[0] ?? firstP;

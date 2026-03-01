@@ -158,6 +158,6 @@ async function sleep(ms) {
     process.exit(1);
   }
 
-  await browser.close();
+  browser.disconnect();
   process.exit(0);
 })();

@@ -528,6 +528,6 @@ async function scrapeNotifications(page) {
   // ── Phase 12: Scrape notifications / mentions ─────────────────────────────
   await scrapeNotifications(page);
 
-  await browser.close();
+  browser.disconnect();
   process.exit(0);
 })();
