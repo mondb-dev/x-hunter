@@ -1,6 +1,5 @@
 import fs from "fs";
 import path from "path";
-import { JSDOM } from "jsdom";
 import { DATA_ROOT } from "./dataRoot";
 
 export interface JournalEntry {
@@ -9,7 +8,7 @@ export interface JournalEntry {
   day: number;       // agent day number
   slug: string;      // YYYY-MM-DD_HH
   title: string;     // first sentence of first paragraph (index preview)
-  contentHtml: string; // sanitized body content
+  contentHtml: string; // body content
   arweaveUrl?: string; // permanent Arweave link, if uploaded
 }
 
@@ -42,31 +41,18 @@ function parseSlug(filename: string): { date: string; hour: number } | null {
   return { date: m[1], hour: parseInt(m[2], 10) };
 }
 
-/** Remove script-capable elements and event-handler attributes from a JSDOM subtree. */
-function sanitizeNode(root: Element): void {
-  // Remove dangerous elements
-  root.querySelectorAll("script, iframe, object, embed, form, link[rel='import']")
-    .forEach(el => el.remove());
-  // Strip inline event handlers and javascript: hrefs from every element
-  root.querySelectorAll("*").forEach(el => {
-    Array.from(el.attributes).forEach(attr => {
-      if (/^on/i.test(attr.name)) el.removeAttribute(attr.name);
-      if (attr.name === "href" && /^\s*javascript:/i.test(attr.value)) el.removeAttribute(attr.name);
-      if (attr.name === "src"  && /^\s*javascript:/i.test(attr.value)) el.removeAttribute(attr.name);
-    });
-  });
-}
-
 function extractBody(html: string): { body: string; title: string } {
-  const dom = new JSDOM(html);
-  const doc = dom.window.document;
-  const container = doc.querySelector("article") ?? doc.body;
-  if (container) sanitizeNode(container as Element);
-  const body = container?.innerHTML ?? "";
+  // Extract article or body content; journals are agent-generated so no sanitization needed
+  const articleMatch = html.match(/<article[^>]*>([\s\S]*?)<\/article>/i);
+  const bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+  const body = (articleMatch?.[1] ?? bodyMatch?.[1] ?? html).trim();
+
   // Pull first sentence of first paragraph as the index preview title
-  const firstP = doc.querySelector("article p, body p")?.textContent?.trim() ?? "";
-  const sentence = firstP.split(/(?<=[.!?])\s+/)[0] ?? firstP;
+  const firstPMatch = body.match(/<p[^>]*>([\s\S]*?)<\/p>/i);
+  const rawText = (firstPMatch?.[1] ?? "").replace(/<[^>]+>/g, "").trim();
+  const sentence = rawText.split(/(?<=[.!?])\s+/)[0] ?? rawText;
   const title = sentence.length > 120 ? sentence.slice(0, 117) + "…" : sentence;
+
   return { body, title };
 }
 
@@ -78,47 +64,47 @@ function computeDay(date: string, earliestDate: string): number {
 
 export function getAllJournalDays(): JournalDay[] {
   try {
-  if (!fs.existsSync(JOURNALS_DIR)) return [];
+    if (!fs.existsSync(JOURNALS_DIR)) return [];
 
-  const arweave = loadArweaveIndex();
+    const arweave = loadArweaveIndex();
 
-  const files = fs
-    .readdirSync(JOURNALS_DIR)
-    .filter((f) => /^\d{4}-\d{2}-\d{2}_\d{2}\.html$/.test(f))
-    .sort();
+    const files = fs
+      .readdirSync(JOURNALS_DIR)
+      .filter((f) => /^\d{4}-\d{2}-\d{2}_\d{2}\.html$/.test(f))
+      .sort();
 
-  // Earliest date = first filename after sort (YYYY-MM-DD sorts lexicographically)
-  const earliestDate = files.length > 0 ? parseSlug(files[0])?.date ?? "" : "";
+    // Earliest date = first filename after sort (YYYY-MM-DD sorts lexicographically)
+    const earliestDate = files.length > 0 ? parseSlug(files[0])?.date ?? "" : "";
 
-  const byDate = new Map<string, JournalEntry[]>();
+    const byDate = new Map<string, JournalEntry[]>();
 
-  for (const filename of files) {
-    const parsed = parseSlug(filename);
-    if (!parsed) continue;
+    for (const filename of files) {
+      const parsed = parseSlug(filename);
+      if (!parsed) continue;
 
-    const raw = fs.readFileSync(path.join(JOURNALS_DIR, filename), "utf-8");
-    const { body, title } = extractBody(raw);
+      const raw = fs.readFileSync(path.join(JOURNALS_DIR, filename), "utf-8");
+      const { body, title } = extractBody(raw);
 
-    const entry: JournalEntry = {
-      date: parsed.date,
-      hour: parsed.hour,
-      day: computeDay(parsed.date, earliestDate),
-      slug: `${parsed.date}_${String(parsed.hour).padStart(2, "0")}`,
-      title,
-      contentHtml: body,
-      arweaveUrl: arweave.get(filename),
-    };
+      const entry: JournalEntry = {
+        date: parsed.date,
+        hour: parsed.hour,
+        day: computeDay(parsed.date, earliestDate),
+        slug: `${parsed.date}_${String(parsed.hour).padStart(2, "0")}`,
+        title,
+        contentHtml: body,
+        arweaveUrl: arweave.get(filename),
+      };
 
-    if (!byDate.has(parsed.date)) byDate.set(parsed.date, []);
-    byDate.get(parsed.date)!.push(entry);
-  }
+      if (!byDate.has(parsed.date)) byDate.set(parsed.date, []);
+      byDate.get(parsed.date)!.push(entry);
+    }
 
-  return Array.from(byDate.entries())
-    .sort(([a], [b]) => b.localeCompare(a)) // newest date first
-    .map(([date, entries]) => ({
-      date,
-      entries: entries.sort((a, b) => b.hour - a.hour), // newest hour first
-    }));
+    return Array.from(byDate.entries())
+      .sort(([a], [b]) => b.localeCompare(a)) // newest date first
+      .map(([date, entries]) => ({
+        date,
+        entries: entries.sort((a, b) => b.hour - a.hour), // newest hour first
+      }));
   } catch (err) {
     console.error("[getAllJournalDays] failed:", err);
     return [];
