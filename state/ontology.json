@@ -6,10 +6,10 @@
       "left_pole": "Evidence-based claims, transparent sourcing, honest uncertainty, good-faith argu",
       "right_pole": "Strategic narrative construction, emotional manipulation, tribal signaling, weap",
       "score": 0.85,
-      "confidence": 0.725,
+      "confidence": 0.75,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
-      "last_updated": "2026-03-02T05:35:19.596Z",
+      "last_updated": "2026-03-02T05:54:15.648Z",
       "evidence_log": [
         {
           "pole_alignment": "right",
@@ -223,6 +223,13 @@
           "pole_alignment": "left",
           "trust_weight": 1,
           "stance_confidence": 0.8
+        },
+        {
+          "source": "https://x.com/DailyIranNews/status/2028311760311292259",
+          "content": "A tweet claims major military action in Tel Aviv using a video, but replies indicate it's an old, unrelated video, demonstrating strategic narrative construction through misinformation.",
+          "timestamp": "2026-03-02T13:53:00Z",
+          "pole_alignment": "right",
+          "trust_weight": 1
         }
       ]
     },
@@ -232,10 +239,10 @@
       "left_pole": "Independent oversight, legal accountability for abuses of power, transparent ins",
       "right_pole": "Sovereign authority, pragmatic justifications for executive overreach, resistanc",
       "score": -0.1167,
-      "confidence": 0.25,
+      "confidence": 0.275,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
-      "last_updated": "2026-03-02T04:54:05.331Z",
+      "last_updated": "2026-03-02T05:54:15.648Z",
       "evidence_log": [
         {
           "pole_alignment": "left",
@@ -310,6 +317,14 @@
           "pole_alignment": "left",
           "trust_weight": 1,
           "stance_confidence": 0.6
+        },
+        {
+          "source": "https://x.com/ABSCBNNews/status/2028301768279441450",
+          "content": "House Justice Committee Chair emphasizes constitutional processes for impeachment over social media narratives, highlighting the tension between formal accountability and public discourse.",
+          "timestamp": "2026-03-02T13:53:00Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "stance_confidence": 0.8
         }
       ]
     },
@@ -586,12 +601,21 @@
       "label": "Societal Impact and Ethical Concerns of AI/Robots",
       "left_pole": "Optimism for AI/robotics potential in entertainment, labor augmentation, and sci",
       "right_pole": "Concerns about job displacement, ethical implications of autonomous systems (e.g",
-      "score": 0,
-      "confidence": 0,
+      "score": 0.05,
+      "confidence": 0.025,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
-      "last_updated": "",
-      "evidence_log": []
+      "last_updated": "2026-03-02T05:54:15.648Z",
+      "evidence_log": [
+        {
+          "source": "https://x.com/hehe_samir/status/2028123575249719639",
+          "content": "The questioning of video authenticity due to potential AI generation highlights concerns about the ethical implications of autonomous systems in media and the blurring of reality.",
+          "timestamp": "2026-03-02T13:53:00Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "stance_confidence": 0.8
+        }
+      ]
     },
     {
       "id": "axis_media_integrity_v1",
@@ -599,10 +623,10 @@
       "left_pole": "Advocacy for factual accuracy, critical assessment of sources, and efforts to co",
       "right_pole": "Spread of unverified claims, reliance on emotional appeals, and engagement farmi",
       "score": 0.19,
-      "confidence": 0.45,
+      "confidence": 0.5,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
-      "last_updated": "2026-03-02T05:35:19.596Z",
+      "last_updated": "2026-03-02T05:54:15.648Z",
       "evidence_log": [
         {
           "pole_alignment": "right",
@@ -741,6 +765,21 @@
           "pole_alignment": "left",
           "trust_weight": 1,
           "stance_confidence": 0.8
+        },
+        {
+          "source": "https://x.com/FiorellaIsabelM/status/2028236929540501578",
+          "content": "Claims of US bases decommissioned and carrier attacks are met with skepticism and accusations of propaganda, highlighting the spread of unverified claims and emotional appeals.",
+          "timestamp": "2026-03-02T13:53:00Z",
+          "pole_alignment": "right",
+          "trust_weight": 1
+        },
+        {
+          "source": "https://x.com/hehe_samir/status/2028123575249719639",
+          "content": "A video about hypersonic missiles is questioned for its authenticity, with some suggesting it's AI-generated or from a game, indicating a challenge in factual accuracy of online content.",
+          "timestamp": "2026-03-02T13:53:00Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "stance_confidence": 0.6
         }
       ]
     },
@@ -1220,10 +1259,10 @@
       "left_pole": "Demands for individual liberty, self-expression, and freedom from state or religious oppression, grassroots movements for change.",
       "right_pole": "Enforcement of state-mandated social, political, or religious norms; suppression of dissent; maintenance of authoritarian power structures.",
       "score": -0.05,
-      "confidence": 0.075,
+      "confidence": 0.1,
       "topics": [],
       "created_at": "2026-03-02T03:54:29.989Z",
-      "last_updated": "2026-03-02T05:35:19.596Z",
+      "last_updated": "2026-03-02T05:54:15.648Z",
       "evidence_log": [
         {
           "source": "https://x.com/WallStreetApes/status/2028265938311934237",
@@ -1248,10 +1287,18 @@
           "pole_alignment": "left",
           "trust_weight": 1,
           "stance_confidence": 1
+        },
+        {
+          "source": "https://x.com/WallStreetApes/status/2028265938311934237",
+          "content": "Iranian Americans express a desire to be seen as distinct from the Islamic Republic and friends of the West, demonstrating a push for self-determination away from state-mandated norms.",
+          "timestamp": "2026-03-02T13:53:00Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "stance_confidence": 0.8
         }
       ]
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-03-02T05:35:19.596Z"
+  "last_updated": "2026-03-02T05:54:15.648Z"
 }
