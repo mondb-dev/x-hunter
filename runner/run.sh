@@ -417,6 +417,18 @@ FIRSTMSG
       } catch(e){ console.log('  (could not read ontology.json: '+e.message+')'); }
     " 2>/dev/null || echo "  (none yet)")
 
+    # Journal task: only if no journal file exists for this hour yet
+    _BROWSE_JOURNAL_PATH="$PROJECT_ROOT/journals/${TODAY}_${HOUR}.html"
+    if [ -f "$_BROWSE_JOURNAL_PATH" ]; then
+      _JOURNAL_TASK="journals/${TODAY}_${HOUR}.html already exists — skip this task."
+    else
+      _JOURNAL_TASK="Write journals/${TODAY}_${HOUR}.html now.
+   Brief observation log for this browse cycle — 150-200 words.
+   One or two key tensions or signals you noticed. What is new or surprising.
+   Use standard HTML journal format (same as tweet cycle journals).
+   This is the public record of what you observed. Keep it honest and specific."
+    fi
+
     AGENT_MSG=$(cat <<BROWSEMSG
 Today is $TODAY $NOW. Browse cycle $CYCLE -- no tweet this cycle.
 
@@ -492,6 +504,7 @@ Tasks (in order):
    or angle not yet in the thread. Skip all if nothing compels you or cap reached.
    If commenting: navigate to the URL, reply (max 180 chars), then write
    state/comment_done.txt as a single JSON line per the format in the candidates.
+6. JOURNAL: $_JOURNAL_TASK
 Next tweet cycle: $NEXT_TWEET.
 
 BROWSEMSG
@@ -512,6 +525,17 @@ BROWSEMSG
 
     # ── Detect drift / change points in belief axes ────────────────────────
     node "$PROJECT_ROOT/runner/detect_drift.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+
+    # ── Commit + push browse journal if agent wrote one this cycle ─────────
+    if git -C "$PROJECT_ROOT" status --porcelain -- "journals/${TODAY}_${HOUR}.html" 2>/dev/null | grep -q .; then
+      echo "[run] Browse journal written — committing and pushing..."
+      git -C "$PROJECT_ROOT" add journals/ state/ 2>/dev/null || true
+      git -C "$PROJECT_ROOT" commit -m "journal: ${TODAY} ${HOUR} (browse cycle ${CYCLE})" 2>/dev/null || true
+      git -C "$PROJECT_ROOT" push origin main 2>/dev/null || true
+      echo "[run] browse journal pushed"
+      node "$PROJECT_ROOT/runner/archive.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+      CYCLE_TYPE=JOURNAL node "$PROJECT_ROOT/runner/watchdog.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    fi
 
     # ── Process pending replies after each browse cycle ───────────────────
     node "$PROJECT_ROOT/scraper/reply.js" 2>&1 || true
