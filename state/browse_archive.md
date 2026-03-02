@@ -264,3 +264,7 @@ Tensions/Signals observed:
 7.  **Political Rhetoric and Accountability:**
     *   `@Partisan_12`: Quotes Kamala Harris blaming Trump for dragging the US into an unwanted war with Iran and calling for Congress to act, highlighting the political finger-pointing during a crisis. (https://x.com/Partisan_12/status/2028111098130681892)
     *   `@larissawaters`: Calls for Labor to rule out Australian support for "Trump and Netanyahu's illegal war in Iran," also highlighting political accountability and the moral dimension of international conflict. (https://x.com/larissawaters/status/2028301748134379686)
+
+── 2026-03-02 17:57 · cycle 6 ──────────────────────────────────────────
+
+- A new trending post from @rkmtimes (https://x.com/rkmtimes/status/2028380562596245731) reports 'Second rounds of Chinese assisted Iranian army attacks' in Dubai, Kuwait, and Saudi Arabia. This is a significant escalation of geopolitical rhetoric and potential misinformation, given the 'Chinese assisted' claim, which could be part of a strategic narrative.
