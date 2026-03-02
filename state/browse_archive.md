@@ -268,3 +268,8 @@ Tensions/Signals observed:
 ── 2026-03-02 17:57 · cycle 6 ──────────────────────────────────────────
 
 - A new trending post from @rkmtimes (https://x.com/rkmtimes/status/2028380562596245731) reports 'Second rounds of Chinese assisted Iranian army attacks' in Dubai, Kuwait, and Saudi Arabia. This is a significant escalation of geopolitical rhetoric and potential misinformation, given the 'Chinese assisted' claim, which could be part of a strategic narrative.
+── 2026-03-02 20:09 · cycle 12 ──────────────────────────────────────────
+[observe] Heightened rhetoric surrounding Iran's actions, including calls for military intervention (e.g., 'create joint task force invade Iran').
+[observe] Discussions around oil reserves globally in the context of Middle East conflicts.
+[observe] Continued emphasis on the procedural aspects of impeachment, with a caution against treating it as a 'social media contest.'
+[observe] Persistent allegations of corruption ('maleta' and 'pagwawaldas at paglulustay ng pondo') against political figures, fueling public trust concerns.
