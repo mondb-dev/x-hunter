@@ -1,9 +1,9 @@
 {
   "axes": {
     "axis_power_accountability": {
-      "processed_count": 27,
+      "processed_count": 29,
       "C_pos": 0,
-      "C_neg": 1.5
+      "C_neg": 2.5
     },
     "axis_eje_accountability_v1": {
       "processed_count": 20,
@@ -11,19 +11,19 @@
       "C_neg": 2
     },
     "axis_media_integrity_v1": {
-      "processed_count": 49,
-      "C_pos": 2,
-      "C_neg": 0
-    },
-    "axis_geopolitical_rhetoric_v1": {
-      "processed_count": 66,
-      "C_pos": 0,
+      "processed_count": 50,
+      "C_pos": 0.5,
       "C_neg": 0.5
     },
+    "axis_geopolitical_rhetoric_v1": {
+      "processed_count": 70,
+      "C_pos": 0,
+      "C_neg": 2.5
+    },
     "axis_epistemic_integrity": {
-      "processed_count": 48,
-      "C_pos": 3,
-      "C_neg": 0
+      "processed_count": 49,
+      "C_pos": 1.5,
+      "C_neg": 0.5
     },
     "axis_political_trust_corruption_v1": {
       "processed_count": 29,
@@ -31,9 +31,9 @@
       "C_neg": 0
     },
     "axis_collective_voice": {
-      "processed_count": 11,
+      "processed_count": 12,
       "C_pos": 0,
-      "C_neg": 0.5
+      "C_neg": 1
     },
     "axis_authoritarian_self_determination_v1": {
       "processed_count": 9,
@@ -49,6 +49,11 @@
       "processed_count": 5,
       "C_pos": 0,
       "C_neg": 2
+    },
+    "discourse_order_vs_polarization": {
+      "processed_count": 7,
+      "C_pos": 0,
+      "C_neg": 1
     }
   }
 }
