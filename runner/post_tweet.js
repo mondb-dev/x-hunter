@@ -66,8 +66,11 @@ async function sleep(ms) {
     await page.waitForSelector(COMPOSE_BOX, { timeout: 15_000 });
     await sleep(500);
 
-    // Click to focus
-    await page.click(COMPOSE_BOX);
+    // Click to focus (evaluate-based avoids Runtime.callFunctionOn timeout)
+    await page.evaluate((sel) => {
+      const el = document.querySelector(sel);
+      if (el) el.click();
+    }, COMPOSE_BOX);
     await sleep(300);
 
     // Type tweet text character by character (triggers React onChange)
@@ -88,9 +91,12 @@ async function sleep(ms) {
       process.exit(1);
     }
 
-    // Click Post
+    // Click Post (evaluate-based avoids Runtime.callFunctionOn timeout)
     console.log("[post_tweet] clicking Post...");
-    await page.click(POST_BUTTON);
+    await page.evaluate((sel) => {
+      const el = document.querySelector(sel);
+      if (el) el.click();
+    }, POST_BUTTON);
     await sleep(3_000);
 
     // Try to get the new tweet URL from address bar
