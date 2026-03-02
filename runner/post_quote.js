@@ -107,7 +107,10 @@ async function sleep(ms) {
     console.log("[post_quote] waiting for compose box...");
     await page.waitForSelector(COMPOSE_BOX, { timeout: 15_000 });
     await sleep(500);
-    await page.click(COMPOSE_BOX);
+    await page.evaluate((sel) => {
+      const el = document.querySelector(sel);
+      if (el) el.click();
+    }, COMPOSE_BOX);
     await sleep(300);
 
     console.log("[post_quote] typing quote text...");
@@ -127,7 +130,10 @@ async function sleep(ms) {
     }
 
     console.log("[post_quote] clicking Post...");
-    await page.click(POST_BUTTON);
+    await page.evaluate((sel) => {
+      const el = document.querySelector(sel);
+      if (el) el.click();
+    }, POST_BUTTON);
     await sleep(3_500);
 
     // ── Capture URL ───────────────────────────────────────────────────────────
