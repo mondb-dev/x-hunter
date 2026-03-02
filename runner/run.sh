@@ -587,6 +587,9 @@ QUOTEMSG
       echo "[run] No quote_draft.txt — agent did not produce a quote"
     fi
 
+    # Watchdog: verify quote was posted, retry once if result is missing
+    CYCLE_TYPE=QUOTE node "$PROJECT_ROOT/runner/watchdog.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+
     # Coherence critique of the quote tweet
     node "$PROJECT_ROOT/runner/critique.js" --quote --cycle "$CYCLE" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
@@ -713,6 +716,9 @@ TWEETMSG
     else
       echo "[run] No tweet_draft.txt — agent did not produce a draft"
     fi
+
+    # Watchdog: verify tweet was posted, retry once if result is missing
+    CYCLE_TYPE=TWEET node "$PROJECT_ROOT/runner/watchdog.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
     # ── Validate + restore state files if agent wrote malformed JSON ──────────
     for _sf in posts_log ontology belief_state; do
