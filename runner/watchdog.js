@@ -263,8 +263,134 @@ function runScript(scriptName) {
       console.log("[watchdog] JOURNAL: Arweave upload confirmed");
     }
 
+  // ── HEALTH check ──────────────────────────────────────────────────────────
+  } else if (TYPE === "HEALTH") {
+
+    const LOG_FILE    = path.join(ROOT, "runner", "runner.log");
+    const STATE_FILE  = path.join(ROOT, "state", "health_state.json");
+
+    // Known error patterns — checked against new log lines only
+    const PATTERNS = [
+      {
+        name:     "run.sh heredoc syntax error",
+        re:       /unexpected EOF while looking for matching|syntax error: unexpected end of file/,
+        severity: "CRITICAL",
+        hint:     "Apostrophe inside heredoc $() — check recent run.sh edits",
+      },
+      {
+        name:     "agent run failed",
+        re:       /An unknown error occurred/,
+        severity: "ERROR",
+        hint:     "Openclaw agent returned a generic error — check gateway/model logs",
+      },
+      {
+        name:     "all model fallbacks exhausted",
+        re:       /All models failed/,
+        severity: "ERROR",
+        hint:     "Every model provider failed — check API keys, billing, and quotas",
+      },
+      {
+        name:     "Anthropic credit balance low",
+        re:       /credit balance is too low to access the Anthropic API/,
+        severity: "WARN",
+        hint:     "Top up Anthropic API credits",
+      },
+      {
+        name:     "LLM request timed out",
+        re:       /LLM request timed out/,
+        severity: "WARN",
+        hint:     "Model API timeout — transient network issue or overloaded provider",
+      },
+      {
+        name:     "Google auth profile unavailable",
+        re:       /No available auth profile for google/,
+        severity: "WARN",
+        hint:     "Google quota exhausted or all profiles in cooldown",
+      },
+      {
+        name:     "CDP timeout",
+        re:       /Runtime\.callFunctionOn timed out/,
+        severity: "WARN",
+        hint:     "Chrome DevTools Protocol call timed out — consider evaluate-based clicks",
+      },
+      {
+        name:     "CDP execution context destroyed",
+        re:       /Execution context was destroyed/,
+        severity: "WARN",
+        hint:     "Page navigated away during a CDP call",
+      },
+      {
+        name:     "Irys balance too low",
+        re:       /Irys balance too low/,
+        severity: "WARN",
+        hint:     "Fund the Solana wallet — Arweave uploads are being skipped",
+      },
+      {
+        name:     "port conflict",
+        re:       /EADDRINUSE|address already in use/,
+        severity: "WARN",
+        hint:     "Port already in use — a process may be stuck holding the port",
+      },
+      {
+        name:     "git push failed",
+        re:       /error: failed to push|push.*rejected/,
+        severity: "WARN",
+        hint:     "Git push to remote failed — check connectivity and branch protection",
+      },
+    ];
+
+    // Load last-scanned position
+    let lastLine = 0;
+    try {
+      const s = JSON.parse(fs.readFileSync(STATE_FILE, "utf-8"));
+      lastLine = s.last_line || 0;
+    } catch { /* first run */ }
+
+    // Read log and slice to new lines only
+    let newLines = [];
+    let totalLines = 0;
+    try {
+      const lines = fs.readFileSync(LOG_FILE, "utf-8").split("\n");
+      totalLines = lines.length;
+      newLines   = lines.slice(lastLine);
+    } catch (e) {
+      console.error(`[watchdog] HEALTH: could not read runner.log: ${e.message}`);
+      process.exit(0);
+    }
+
+    if (newLines.length === 0) {
+      console.log("[watchdog] HEALTH: no new log lines to scan");
+      process.exit(0);
+    }
+
+    const text = newLines.join("\n");
+
+    // Scan for patterns and collect hits
+    const hits = [];
+    for (const p of PATTERNS) {
+      const match = text.match(new RegExp(p.re.source, "g"));
+      if (match) hits.push({ ...p, count: match.length });
+    }
+
+    // Save updated position
+    try {
+      fs.writeFileSync(STATE_FILE, JSON.stringify({ last_line: totalLines, checked_at: new Date().toISOString() }));
+    } catch (e) {
+      console.error(`[watchdog] HEALTH: could not save state: ${e.message}`);
+    }
+
+    // Report
+    if (hits.length === 0) {
+      console.log(`[watchdog] HEALTH: OK — ${newLines.length} new log line(s) checked, no issues`);
+    } else {
+      console.log(`[watchdog] HEALTH: ${hits.length} issue type(s) in last ${newLines.length} line(s):`);
+      for (const h of hits) {
+        console.error(`[watchdog] HEALTH [${h.severity}] ${h.name} (x${h.count}): ${h.hint}`);
+      }
+    }
+
   } else {
-    console.error(`[watchdog] unknown CYCLE_TYPE: "${TYPE}" — must be QUOTE, TWEET, or JOURNAL`);
+    console.error(`[watchdog] unknown CYCLE_TYPE: "${TYPE}" — must be QUOTE, TWEET, JOURNAL, or HEALTH`);
   }
 
   process.exit(0);

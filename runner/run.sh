@@ -797,6 +797,9 @@ TWEETMSG
     node "$PROJECT_ROOT/runner/critique.js" --cycle "$CYCLE" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
   fi
 
+  # ── Health check: scan new log lines for known error patterns ────────────
+  CYCLE_TYPE=HEALTH node "$PROJECT_ROOT/runner/watchdog.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+
   # ── Wait out the remainder of the 20-minute window ───────────────────────
   ELAPSED=$(( $(date +%s) - CYCLE_START ))
   WAIT=$(( BROWSE_INTERVAL - ELAPSED ))
