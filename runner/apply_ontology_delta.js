@@ -253,7 +253,11 @@ const trustMap = loadTrustMap();
 
 let delta;
 try {
-  delta = JSON.parse(fs.readFileSync(DELTA, "utf-8"));
+  let raw = fs.readFileSync(DELTA, "utf-8");
+  // Strip invalid JSON escape sequences — agent sometimes writes \- \( \, etc.
+  // Valid escapes after \: " \ / b f n r t u  — anything else: drop the backslash
+  raw = raw.replace(/\\([^"\\/bfnrtu])/g, "$1");
+  delta = JSON.parse(raw);
 } catch (e) {
   console.error(`[apply_delta] could not parse ontology_delta.json: ${e.message}`);
   fs.unlinkSync(DELTA);

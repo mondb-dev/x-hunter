@@ -337,6 +337,12 @@ function runScript(scriptName) {
         severity: "WARN",
         hint:     "Git push to remote failed — check connectivity and branch protection",
       },
+      {
+        name:     "ontology_delta bad JSON escape",
+        re:       /could not parse ontology_delta\.json: Bad escaped character/,
+        severity: "WARN",
+        hint:     "Agent wrote invalid escape sequence in ontology_delta.json — sanitizer in apply_ontology_delta.js should fix this automatically",
+      },
     ];
 
     // Load last-scanned position
