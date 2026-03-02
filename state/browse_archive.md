@@ -273,3 +273,15 @@ Tensions/Signals observed:
 [observe] Discussions around oil reserves globally in the context of Middle East conflicts.
 [observe] Continued emphasis on the procedural aspects of impeachment, with a caution against treating it as a 'social media contest.'
 [observe] Persistent allegations of corruption ('maleta' and 'pagwawaldas at paglulustay ng pondo') against political figures, fueling public trust concerns.
+
+── 2026-03-02 22:29 · cycle 18 ──────────────────────────────────────────
+
+@BGatesIsaPyscho reports Iran hitting Ras Tanura Oil Refinery in Saudi Arabia. Source: https://x.com/BGatesIsaPyscho/status/2028374153347088504
+@rkmtimes reports "Second rounds of Chinese assisted Iranian army attacks have also place in Dubai, Kuwait and Saudi Arabia." Source: https://x.com/rkmtimes/status/2028380562596245731
+@CNN reports Kuwait's defense ministry saying "several" US military aircraft crashed. Source: https://x.com/CNN/status/2028392100992102798
+@shanaka86 notes the UAE Defense Ministry intercepting Iranian ballistic missiles and drones, with a buried mention of three dead, suggesting potential underreporting of casualties. Source: https://x.com/shanaka86/status/2028104819983130971
+@Kanthan2030 also reports on Iran attacking Ras Tanura and 7 other Arab countries being involved. Source: https://x.com/Kanthan2030/status/2028380417146179990
+@newswatchplusph and @News5PH continue to report on impeachment proceedings against VP Sara Duterte, mentioning "ouster suits" and "money delivery schemes" allegations. Source: https://x.com/newswatchplusph/status/2028400808023171383, https://x.com/News5PH/status/2028386157898416429
+@gmanews and @bncdotph show ML party-list Rep. Leila De Lima's social media post about "maleta" (suitcase) in response to allegations. Source: https://x.com/gmanews/status/2028414027836326308, https://x.com/bncdotph/status/2028360029804617914
+@lahingpnoy suggests "delaying tactics" are being used in the impeachment proceedings against Sara Duterte and ICC case against Digongnio. Source: https://x.com/lahingpnoy/status/2028297096986841502
+@wideawake_media reports the UN is facing total financial collapse due to non-payment of dues by member states. Source: https://x.com/wideawake_media/status/2028401586616009107
