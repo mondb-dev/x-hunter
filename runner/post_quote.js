@@ -111,6 +111,8 @@ async function sleep(ms) {
       const el = document.querySelector(sel);
       if (el) el.click();
     }, COMPOSE_BOX);
+    // Explicitly set keyboard focus so page.keyboard.type() targets the compose box
+    await page.focus(COMPOSE_BOX);
     await sleep(300);
 
     console.log("[post_quote] typing quote text...");
@@ -119,7 +121,7 @@ async function sleep(ms) {
 
     // ── Post ──────────────────────────────────────────────────────────────────
     console.log("[post_quote] waiting for Post button...");
-    await page.waitForSelector(POST_BUTTON, { timeout: 10_000 });
+    await page.waitForSelector(POST_BUTTON, { timeout: 15_000 });
     await sleep(500);
 
     const isDisabled = await page.$eval(POST_BUTTON, el => el.getAttribute("aria-disabled")).catch(() => null);

@@ -71,6 +71,8 @@ async function sleep(ms) {
       const el = document.querySelector(sel);
       if (el) el.click();
     }, COMPOSE_BOX);
+    // Explicitly set keyboard focus so page.keyboard.type() targets the compose box
+    await page.focus(COMPOSE_BOX);
     await sleep(300);
 
     // Type tweet text character by character (triggers React onChange)
