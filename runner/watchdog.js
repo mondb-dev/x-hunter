@@ -2,22 +2,26 @@
 /**
  * runner/watchdog.js — post-action success checker + auto-retry
  *
- * Called synchronously by run.sh after each QUOTE or TWEET posting attempt.
- * Checks whether the action produced a result file. If not, retries once.
- * Patches posts_log.json on successful retry (mirrors run.sh logic).
+ * Called synchronously by run.sh after each QUOTE, TWEET, or JOURNAL action.
+ * Checks whether the action succeeded. If not, retries once.
+ *
+ * QUOTE / TWEET: checks result file exists, retries posting script once.
+ * JOURNAL:       checks latest journal is committed + pushed to git,
+ *                and has an entry in arweave_log.json. Retries each step.
  *
  * Usage:
- *   CYCLE_TYPE=QUOTE node runner/watchdog.js
- *   CYCLE_TYPE=TWEET  node runner/watchdog.js
+ *   CYCLE_TYPE=QUOTE   node runner/watchdog.js
+ *   CYCLE_TYPE=TWEET   node runner/watchdog.js
+ *   CYCLE_TYPE=JOURNAL node runner/watchdog.js
  *
  * Exit 0 always — failures are logged, not fatal to the cycle.
  */
 
 "use strict";
 
-const fs            = require("fs");
-const path          = require("path");
-const { execFileSync } = require("child_process");
+const fs                         = require("fs");
+const path                       = require("path");
+const { execFileSync, execSync } = require("child_process");
 
 const ROOT = path.resolve(__dirname, "..");
 
@@ -26,6 +30,8 @@ const QUOTE_RESULT = path.join(ROOT, "state", "quote_result.txt");
 const TWEET_DRAFT  = path.join(ROOT, "state", "tweet_draft.txt");
 const TWEET_RESULT = path.join(ROOT, "state", "tweet_result.txt");
 const POSTS_LOG    = path.join(ROOT, "state", "posts_log.json");
+const JOURNALS_DIR = path.join(ROOT, "journals");
+const ARWEAVE_LOG  = path.join(ROOT, "state", "arweave_log.json");
 
 const TYPE = (process.env.CYCLE_TYPE || "").toUpperCase();
 
@@ -154,8 +160,111 @@ function runScript(scriptName) {
       console.error("[watchdog] TWEET retry also failed — giving up");
     }
 
+  // ── JOURNAL check ─────────────────────────────────────────────────────────
+  } else if (TYPE === "JOURNAL") {
+
+    // Find the latest journal HTML file
+    let latestJournal = null;
+    try {
+      const files = fs.readdirSync(JOURNALS_DIR)
+        .filter(f => /^\d{4}-\d{2}-\d{2}_\d{2}\.html$/.test(f))
+        .sort();
+      if (files.length) latestJournal = path.join(JOURNALS_DIR, files[files.length - 1]);
+    } catch (e) {
+      console.error(`[watchdog] JOURNAL: could not read journals dir: ${e.message}`);
+      process.exit(0);
+    }
+
+    if (!latestJournal) {
+      console.log("[watchdog] JOURNAL: no journal files found — skipping");
+      process.exit(0);
+    }
+
+    const journalName = path.basename(latestJournal);
+    const relPath     = path.relative(ROOT, latestJournal);
+    console.log(`[watchdog] JOURNAL: checking ${journalName}`);
+
+    // ── Check 1: committed to git ──────────────────────────────────────────
+    let committed = false;
+    try {
+      const out = execSync(
+        `git -C "${ROOT}" log --oneline -- "${relPath}"`,
+        { encoding: "utf-8", timeout: 15_000 }
+      ).trim();
+      committed = out.length > 0;
+    } catch (e) {
+      console.error(`[watchdog] JOURNAL: git log check failed: ${e.message}`);
+    }
+
+    if (!committed) {
+      console.log(`[watchdog] JOURNAL: ${journalName} not committed — committing...`);
+      try {
+        execSync(
+          `git -C "${ROOT}" add journals/ state/ && git -C "${ROOT}" commit -m "watchdog: commit missed journal ${journalName}"`,
+          { encoding: "utf-8", timeout: 30_000 }
+        );
+        console.log("[watchdog] JOURNAL: commit OK");
+        committed = true;
+      } catch (e) {
+        console.error(`[watchdog] JOURNAL: commit failed: ${e.message}`);
+      }
+    } else {
+      console.log("[watchdog] JOURNAL: git commit confirmed");
+    }
+
+    // ── Check 2: pushed to remote ──────────────────────────────────────────
+    if (committed) {
+      let unpushed = 0;
+      try {
+        const out = execSync(
+          `git -C "${ROOT}" rev-list HEAD ^origin/main --count`,
+          { encoding: "utf-8", timeout: 15_000 }
+        ).trim();
+        unpushed = parseInt(out, 10) || 0;
+      } catch (e) {
+        console.error(`[watchdog] JOURNAL: git rev-list check failed: ${e.message}`);
+      }
+
+      if (unpushed > 0) {
+        console.log(`[watchdog] JOURNAL: ${unpushed} unpushed commit(s) — pushing...`);
+        try {
+          execSync(
+            `git -C "${ROOT}" push origin main`,
+            { encoding: "utf-8", timeout: 60_000 }
+          );
+          console.log("[watchdog] JOURNAL: git push OK");
+        } catch (e) {
+          console.error(`[watchdog] JOURNAL: git push failed: ${e.message}`);
+        }
+      } else {
+        console.log("[watchdog] JOURNAL: git push confirmed");
+      }
+    }
+
+    // ── Check 3: uploaded to Arweave ──────────────────────────────────────
+    function arweaveHasEntry(name) {
+      try {
+        const log = JSON.parse(fs.readFileSync(ARWEAVE_LOG, "utf-8"));
+        return (log.uploads || []).some(u => u.file && u.file.includes(name));
+      } catch {
+        return false;
+      }
+    }
+
+    if (!arweaveHasEntry(journalName)) {
+      console.log(`[watchdog] JOURNAL: ${journalName} not in arweave_log — re-running archive.js...`);
+      runScript("archive.js");
+      if (arweaveHasEntry(journalName)) {
+        console.log("[watchdog] JOURNAL: Arweave upload confirmed");
+      } else {
+        console.error("[watchdog] JOURNAL: Arweave upload still missing (low balance or network issue)");
+      }
+    } else {
+      console.log("[watchdog] JOURNAL: Arweave upload confirmed");
+    }
+
   } else {
-    console.error(`[watchdog] unknown CYCLE_TYPE: "${TYPE}" — must be QUOTE or TWEET`);
+    console.error(`[watchdog] unknown CYCLE_TYPE: "${TYPE}" — must be QUOTE, TWEET, or JOURNAL`);
   }
 
   process.exit(0);
