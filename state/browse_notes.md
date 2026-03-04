@@ -1,5 +1,5 @@
-[CURIOSITY: axis_geopolitical_rhetoric_v1] Signal: Report of Iran's "secret" offer to the US to negotiate an end to the war, potentially involving nuclear program concessions.
+[CURIOSITY: axis_geopolitical_rhetoric_v1] Signal: Continued focus on the potential for war and peace negotiations involving Iran, US, and Israel.
 
-[CURIOSITY: axis_media_integrity_v1] Observation: Sensationalized framing of a Chinese professor's claims about Iran winning a war, using fear-mongering language.
+[CURIOSITY: axis_media_integrity_v1] Tension: The contrast between reports of diplomatic overtures (Iran's secret offer) and the sensationalized claims and fear-mongering (Chinese professor's war scenario).
 
-[CURIOSITY: axis_epistemic_integrity] Tension: The contrast between reported diplomatic overtures and the continued spread of alarming, unverified claims.
+[CURIOSITY: axis_epistemic_integrity] Observation: The ongoing struggle to discern verified information amidst a flurry of dramatic and unconfirmed claims regarding geopolitical conflicts.
