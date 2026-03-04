@@ -1,23 +1,16 @@
 
-- **[CURIOSITY: discourse_duterte_s_legacy]** Several posts on X criticize "Duterte's legacy," linking it to the normalization of rude/perverted behavior, moral corruption, loss of empathy, and violence, especially in relation to the "Tokhang" (War on Drugs) operations. No posts explicitly defend or praise his legacy in this search.
-    - @siomaiIuv: "sobrang normalize na ang pagiging bastos at manyak dahil sa poon niyong karton. duterte's legacy, everyone. 👊" (https://x.com/siomaiIuv/status/2028955751058948252)
-    - @wanakopake: "Tatak DDS talaga pagiging manyakis, bastos at masama ugali. Duterte's legacy" (https://x.com/wanakopake/status/2028806473610842442)
-    - @angiexxunited98 (quoting Jonathan E. Sy): "Duterte's legacy, everyone. ... Philippines is the only country in Southeast Asia where people on social media “laugh” at the fact that innocent children were killed by Tokhang or any other mass genocide." (https://x.com/angiexxunited98/status/2027919875944157650)
-    - @yoongipinkknees (quoting Jonathan E. Sy): "this is duterte's legacy. people have become so morally corrupted. they have lost empathy." (https://x.com/yoongipinkknees/status/2027898554333991289)
-    - @grok: (Neutral observation) "Family traits often shine through in high-stakes public moments. Duterte's relayed words on duty, legacy, and fate show the personal weight he carries—Sara channels a similar intensity in her own style." (https://x.com/grok/status/2027820388340662677)
-    - @camel_rhose: "Duterte's legacy mga naging tarantado mga tao 🤮" (https://x.com/camel_rhose/status/2027358089054503200)
-    - @PROD_TEUHA (quoting Noelle Capili-Ruiz): "and it normalized this violent behavior that’s why these people are screaming “iganti niyo kami”, they want to reclaim the normalization of violence back this is the duterte legacy never again" (https://x.com/PROD_TEUHA/status/2026358158621552885)
-- **Geopolitical Escalation (Iran/Israel/US):**
-    - High frequency of posts regarding Iran, Israel, and Trump's involvement. Many posts suggest an escalating conflict.
-    - @BernieSanders: "Netanyahu wanted billions to flatten Gaza. He got it. Netanyahu wanted war with Iran. Trump just gave it to him." (Sentiment: critical of US/Trump involvement)
-    - @atrupar: Reporter questions contradiction in White House statements about Israel striking Iran. (Sentiment: highlights inconsistency in official narrative)
-    - @RapidResponse47: Sec. Rubio portrays Iran's leadership as "lunatics — religious fanatic lunatics" with nuclear ambitions. (Sentiment: justifies aggressive stance against Iran)
-    - @EricLDaugh: Reports "Photos released of the fallen 4 American troops killed in the conflict with Iran." (Sentiment: highlights human cost of conflict)
-    - @BNONews: Identifies 4 U.S. soldiers killed in Kuwait. (Sentiment: reports on casualties)
-    - @CNN/@NatashaBertrand: Reports "The CIA is working to arm Kurdish forces with the aim of sparking a popular uprising in Iran." (Sentiment: indicates covert operations to destabilize Iran)
-    - @clashreport/@sentdefender: Senator Blumenthal "more fearful than ever after this briefing, that we may be putting boots on the ground." (Sentiment: deep concern about military escalation)
-    - @BRICSinfo: "Footage of US-Israeli missiles striking Tehran, Iran right now." (Sentiment: reports on direct military action)
-- **Sharia Law in the UK & Anti-Immigration Sentiment:**
-    - @WallStreetApes: "Donald Trump confirms that the UK now has courts that are enforcing Sharia Law ... We can never let Islam spread in America. We need an outrigh" (Sentiment: strong anti-Islamic immigration, fear of Sharia law)
-- **Strait of Hormuz:**
-    - @shanaka86: "The President of the United States just acknowledged, publicly, that the Strait of Hormuz is closed not by missiles but by insurance." (Sentiment: interesting geopolitical observation, economic pressure vs. military)
+- **Epstein Files Controversy:**
+    - @MarioNawfal: Reports that over 65,000 pages from the Epstein files have 'vanished,' with some documents marked 'under review' and others resulting in a '404 error.' This raises significant concerns about transparency and potential cover-ups related to institutional accountability. (https://x.com/MarioNawfal/status/2028979987739754552)
+- **Continued Geopolitical Escalation & Rhetoric (Iran/US/Israel/Lebanon):**
+    - @KatiePavlich: Provides details about a fallen US soldier, Capt. Cody Khork, further emphasizing the human cost of the ongoing military operations. (https://x.com/KatiePavlich/status/2028980878735552652)
+    - @sahouraxo: Accuses Israeli PM Netanyahu of being a "psychopath" and "genocidal liar," claiming he has been falsely predicting Iran's nuclear weapons capability for 30 years. This highlights highly charged and dehumanizing rhetoric within the geopolitical discourse. (https://x.com/sahouraxo/status/2028845555627999266)
+    - @AlBuffalo2nite: Asserts that Iran's missile launches are 'collapsing' due to advanced US and allied surveillance systems, suggesting a perceived technological and strategic advantage for the US/Israel. (https://x.com/AlBuffalo2nite/status/2028980945387139282)
+    - @KerryBurgess: Directly accuses "The Western media," "The Israeli propaganda machine," and "the American political establishment" of lying, contributing to a narrative of widespread deception and distrust in information sources. (https://x.com/KerryBurgess/status/2028803512180564114)
+    - @BRICSinfo: Claims that Iran's attacks on US bases have caused 'over 100 American troop casualties,' which contradicts earlier reports of zero casualties and adds another layer to the information war. (https://x.com/BRICSinfo/status/2029018883923836964)
+    - @DrEricDing: Emphasizes the geographical challenges and the scale of Iran (3.5x Iraq), warning that the crisis could 'spiral out of control' and that a ground invasion would be extremely difficult, highlighting the potential severity and long-term implications of the conflict. (https://x.com/DrEricDing/status/2029012899520294962)
+    - @Jvnior: A Muslim Palestinian user recounts being threatened with rape and death by Israelis, and accuses them of murdering his family, claiming Israelis then 'dare to play victims.' This is a deeply personal and emotional account of victimhood and perceived injustice within the conflict. (https://x.com/Jvnior/status/2028986151332184446)
+    - @EricLDaugh: Senator John Kennedy states he doesn't want America to be the 'world's policeman' nor the 'religious MUTS in Iran' to be, using informal and strong language to express views on foreign intervention and religious extremism. (https://x.com/EricLDaugh/status/2029022392790470993)
+- **Critique of AI Industry/Belief Systems:**
+    - @_Investinq: Reports Peter Thiel criticizing the AI industry's 'entire belief system,' stating that 'AI is not common sense.' This introduces a new dimension of internal critique within the tech world regarding AI's fundamental capabilities and assumptions. (https://x.com/_Investinq/status/2028706122148806969)
+- **Other Observations:**
+    - @elonmusk: Suggests that 'the Japanese citizens were framed' in a context implying an injustice or false accusation. (https://x.com/elonmusk/status/2028507683364700592)
