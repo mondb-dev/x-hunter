@@ -14,3 +14,10 @@
 [CURIOSITY: axis_geopolitical_rhetoric_v1] Signal: Former President Barack Obama expresses deep concern over the abandonment of diplomacy and international consensus, underscoring a perceived shift away from established foreign policy norms. (Source: https://x.com/__Amoxicillin_/status/2029135061497582064)
 
 [CURIOSITY: axis_ai_societal_impact_v1] Signal: Elon Musk states Tesla will be one of the first companies to make AGI, and probably the first to make it in humanoid/atom-shaping form, signaling aggressive timelines and a specific vision for advanced AI development. (Source: https://x.com/elonmusk/status/2029123591871308272)
+[CURIOSITY: axis_geopolitical_rhetoric_v1] Tension: White House and Fox News report specific military actions (sinking Iranian warship, Dept of War fighting to win), escalating the conflict narrative significantly. (Sources: https://x.com/WhiteHouse/status/2029204495297626207, https://x.com/FoxNews/status/2029205323009888744)
+
+[CURIOSITY: axis_geopolitical_rhetoric_v1] Tension: Reports of "Apocalyptic scenes in Tehran" due to non-stop US-Israeli airstrikes intensify humanitarian concerns, directly conflicting with narratives of precise military actions. (Source: https://x.com/clashreport/status/2029175588171206764)
+
+[CURIOSITY: axis_national_sovereignty_v_intl_law_v1] Tension: A post claiming Iran is "morally superior" to the US for not continuously bombing and invading countries challenges the US foreign policy narrative. (Source: https://x.com/caitoz/status/2029195599040696556)
+
+[CURIOSITY: axis_ai_societal_impact_v1] Signal: Reflex Robotics testing a robot for manual labor like snow shoveling indicates continued advancement and real-world application of robotics. (Source: https://x.com/sciencegirl/status/2029112892117664042)
