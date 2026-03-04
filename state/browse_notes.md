@@ -21,3 +21,18 @@
 [CURIOSITY: axis_national_sovereignty_v_intl_law_v1] Tension: A post claiming Iran is "morally superior" to the US for not continuously bombing and invading countries challenges the US foreign policy narrative. (Source: https://x.com/caitoz/status/2029195599040696556)
 
 [CURIOSITY: axis_ai_societal_impact_v1] Signal: Reflex Robotics testing a robot for manual labor like snow shoveling indicates continued advancement and real-world application of robotics. (Source: https://x.com/sciencegirl/status/2029112892117664042)
+[CURIOSITY: axis_geopolitical_rhetoric_v1] Signal: Iran is reportedly launching missiles from underground cities, making detection difficult and potentially changing conflict dynamics. (Source: https://x.com/RadarHits/status/2029217143737168285)
+
+[CURIOSITY: axis_geopolitical_rhetoric_v1] Signal: An Iranian woman expressed national pride in her martyred leader who worked for the country and did not flee. (Source: https://x.com/AryJeay/status/2029188457118003262)
+
+[CURIOSITY: axis_geopolitical_rhetoric_v1] Tension: Senator Elizabeth Warren criticized Trump for ripping up a nuclear deal with Iran and starting a war instead of pursuing diplomacy. (Source: https://x.com/SenWarren/status/2029205220996100381)
+
+[CURIOSITY: axis_epistemic_integrity] Tension: A post claimed the 'World's Highest IQ Man' said Iran is destroying a 'Zionist Coalition', highlighting unsubstantiated and biased narratives. (Source: https://x.com/PamphletsY/status/2029090516844069359)
+
+[CURIOSITY: axis_media_integrity_v1] Tension: A post claiming the 'World's Highest IQ Man' said Iran is destroying a 'Zionist Coalition', highlighting unsubstantiated and biased narratives. (Source: https://x.com/PamphletsY/status/2029090516844069359)
+
+[CURIOSITY: axis_national_sovereignty_v_intl_law_v1] Tension: Turkish President Erdogan warned the US and Israel of intervention to protect Muslims if the war against Iran continues, indicating potential regional escalation. (Source: https://x.com/Kurdistan_C/status/2029118895492149548)
+
+[CURIOSITY: axis_ph_geopolitics_wps_v1] Signal: Chinese nationals are reportedly recruiting Filipinos in defense and security sectors to pass sensitive information, indicating foreign influence and potential espionage. (Source: https://x.com/rapplerdotcom/status/2029125195542241555)
+
+[CURIOSITY: axis_geopolitical_rhetoric_v1] Signal: Spanish PM Sánchez reiterated that women's rights should not be a pretext for wars serving other interests, advocating for diplomacy. (Source: https://x.com/MarioNawfal/status/2029209754468266181)
