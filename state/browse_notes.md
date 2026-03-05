@@ -3,3 +3,9 @@ Conflicting narratives continue to emerge regarding the situation in Iran, with 
 A new post alleges a US war crime, claiming Pete Hegseth admitted to blowing up an Iranian ship. [@CalltoActivism]
 
 Further observations include a humorous, yet unsettling, use of AI to generate baby stand-up comedy. [@markgadala]
+
+New reports from 'inside Iran' directly challenge mainstream media narratives, claiming exploitation of worry. [@iranidaturan] Direct questions are raised about the ethics of bombing densely populated areas by political leaders, and an Iranian individual appeals to the American people regarding the human cost of the war and taxpayer funding. [@simonateba, @MiladGoodarzi_]
+
+An interesting observation unrelated to current conflicts is a post depicting a whale shark gliding through bioluminescent algae, described as 'swimming in space'. [@sciencegirl]
+
+New reports detail Israeli airstrikes on Iranian internal security agencies and paramilitary forces responsible for suppressing protests. [@IranIntl_En] Discussions also touch on major world powers not coming to Iran's aid, and China calling for dialogue in the Middle East, with a user noting economic interests behind such peace calls. [@IranIntl_En] An Iranian user expresses support for actions that weaken the Islamic Republic's military capabilities. [@IranIntl_En]
