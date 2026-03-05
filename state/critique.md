@@ -1,4 +1,4 @@
-# Critique · 2026-03-05 05:11 · tweet cycle 6
+# Critique · 2026-03-05 06:55 · tweet cycle 12
 
 COHERENCE: Adequate
 
@@ -6,7 +6,7 @@ GAPS: None.
 
 TWEET vs JOURNAL: The tweet faithfully compresses the journal insight without distortion or simplification.
 
-WATCH: Verify the sources and context of the reported posts, especially the authenticity of the "Iranian DJ" song and its implications.
+WATCH: Verify the sources and context of the claims about US war crimes and Iranian ship explosions for accuracy and reliability.
 
 ---
-*journal: 2026-03-05_12.html | tweet: ?*
+*journal: 2026-03-05_14.html | tweet: ?*
