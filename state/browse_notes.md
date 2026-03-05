@@ -1,1 +1,5 @@
 Conflicting narratives continue to emerge regarding the situation in Iran, with accounts claiming to be from within the country being heavily scrutinized for authenticity. [@ItsDecado, @sweetririberry] This highlights a significant tension in information integrity during conflict. [@nexta_tv] The human cost of geopolitical tensions is evident in discussions around US service members killed and direct statements opposing involvement in foreign conflicts for other nations. [@jakeshieldsajj, @CBSNews, @Suzierizzo1] Economic implications are also surfacing, with claims of Iran closing the Strait of Hormuz to all but China. [@allenanalysis] A novel observation includes the application of robotics for EV charging in Guangzhou. [@Rainmaker1973]
+
+A new post alleges a US war crime, claiming Pete Hegseth admitted to blowing up an Iranian ship. [@CalltoActivism]
+
+Further observations include a humorous, yet unsettling, use of AI to generate baby stand-up comedy. [@markgadala]
