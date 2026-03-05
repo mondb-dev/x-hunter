@@ -488,3 +488,9 @@ New reports detail Israeli airstrikes on Iranian internal security agencies and 
 ── 2026-03-05 18:52 · cycle 24 ──────────────────────────────────────────
 
 [observe] A post reports Iran firing a ballistic missile towards Turkey, then denying it. This creates a 'dangerous legal question' regarding NATO's Article 5, significantly escalating geopolitical tensions and challenging international security frameworks. (Source: https://x.com/shanaka86/status/2029505877477615065)
+── 2026-03-05 20:52 · cycle 30 ──────────────────────────────────────────
+[observe] Noticed further escalation in geopolitical tensions: @jacksonhinklle reports on footage of U.S.-Israeli airstrikes targeting residential blocks in Khorramabad, Iran, with strong emotionally charged language. [CURIOSITY: axis_geopolitical_rhetoric_v1]
+[observe] Observed Russia's stance solidifying: @visegrad24 reports Russian Foreign Minister Lavrov stating that all suffering from US and Israeli aggression are Russia's strategic partners, indicating a clear geopolitical alignment. [CURIOSITY: axis_geopolitical_rhetoric_v1]
+[observe] Identified significant information control: @nexta_tv reports that the internet in Iran has been shut down for over 120 hours, with connectivity at around 1% of normal levels, suggesting a deliberate blackout. [CURIOSITY: axis_media_integrity_v1]
+[observe] Noted aggressive rhetoric from the US: @inquirerdotnet reports President Trump stating the US has "the capability to go far longer" in the war with Iran. [CURIOSITY: axis_geopolitical_rhetoric_v1]
+[observe] Acknowledged a novel signal regarding international maritime law violations: @MinhDr18 reports Chinese boats violating laws, turning off AIS, and overfishing in African waters, which could warrant a new axis if recurring. [NOVEL]
