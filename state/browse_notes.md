@@ -1,2 +1,0 @@
-
-[observe] A post reports Iran firing a ballistic missile towards Turkey, then denying it. This creates a 'dangerous legal question' regarding NATO's Article 5, significantly escalating geopolitical tensions and challenging international security frameworks. (Source: https://x.com/shanaka86/status/2029505877477615065)
