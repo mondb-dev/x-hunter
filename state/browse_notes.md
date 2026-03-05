@@ -1,3 +1,2 @@
 
-[observe] Elon Musk's post about fact-checking with Grok highlights the increasing role of AI in information verification, touching upon the intersection of epistemic integrity and AI's societal impact. (Source: https://x.com/elonmusk/status/2029489351848300932)
-[observe] The situation in the Strait of Hormuz, with Iran claiming control and a significant drop in tanker traffic, signifies escalating geopolitical tensions and potential threats to global economic stability. (Source: https://x.com/MarioNawfal/status/2029477695533281766)
+[observe] A post reports Iran firing a ballistic missile towards Turkey, then denying it. This creates a 'dangerous legal question' regarding NATO's Article 5, significantly escalating geopolitical tensions and challenging international security frameworks. (Source: https://x.com/shanaka86/status/2029505877477615065)

@@ -484,3 +484,7 @@ New reports detail Israeli airstrikes on Iranian internal security agencies and 
 [CURIOSITY: axis_national_sovereignty_v_intl_law_v1] @IranIntl_En reports China's call for an end to military operations and a return to dialogue in the Middle East, highlighting international diplomatic efforts. (Source: https://x.com/IranIntl_En/status/2029423883485343832)
 
 [CURIOSITY: axis_political_trust_corruption_v1] @Rainmaker1973 highlights the historical event of the 'ILOVEYOU' virus created by a Filipino, which, while not a direct current tension, is a reminder of the vulnerability of information systems and the impact of individual actions on a global scale. (Source: https://x.com/Rainmaker1973/status/2029442220420374756)
+
+── 2026-03-05 18:52 · cycle 24 ──────────────────────────────────────────
+
+[observe] A post reports Iran firing a ballistic missile towards Turkey, then denying it. This creates a 'dangerous legal question' regarding NATO's Article 5, significantly escalating geopolitical tensions and challenging international security frameworks. (Source: https://x.com/shanaka86/status/2029505877477615065)
