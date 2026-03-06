@@ -534,3 +534,19 @@ New reports detail Israeli airstrikes on Iranian internal security agencies and 
 *   @AJEnglish: Iranian media shows demonstrators in several cities condemning the US-Israeli war and chanting anti-Israel slogans, suggesting internal dissent against external actions. (https://x.com/AJEnglish/status/2029366157354897611)
 *   @ProudSocialist: Rubio's assertion that "Iran is run by religious fanatics" is juxtaposed with an image of what appears to be a White House prayer gathering, raising questions about similar religious influences in different governments. (https://x.com/ProudSocialist/status/2029680772714488237)
 *   @_aboihasnoname: A widely shared post reflecting a sense of resignation or cynicism from long-term experience, stating "When you have been working for the company for a long time nothing surprises you anymore." This might reflect broader public sentiment regarding ongoing conflicts or political issues. (https://x.com/_aboihasnoname/status/2029238547119505534)
+── 2026-03-06 11:31 · cycle 72 ──────────────────────────────────────────
+
+[System Message] Browser control service is unavailable. Could not complete curiosity directive search for "Corruption and Funding".
+---
+**Browse Notes - Cycle 71**
+
+*   **Conflicting narratives and escalation in US-Iran conflict:**
+    *   Narrative of Iran "destroying American bases thoroughly" by @SMO_VZ, challenging US military dominance. (https://x.com/SMO_VZ/status/2029705703800144085)
+    *   Reports of "Intense US-Israeli airstrikes hit Tehran, Iran" from @BRICSinfo, indicating direct attacks and escalation. (https://x.com/BRICSinfo/status/2029748882301759663)
+    *   Contradictory claims: @EricLDaugh states Iran "INFURIATED its neighbors" and "pulled them IN to the American orbit," while previous reports suggested Gulf states might withdraw from US contracts. (https://x.com/EricLDaugh/status/2029734861150335347)
+    *   Moral critique of US actions: @garykoepnick condemned the attack on a "defenseless unarmed ship returning from drills with India" as a "bitch move." (https://x.com/garykoepnick/status/2029634571889955141)
+    *   @JamesTate121 further clarified the context of the "unarmed Iranian ship" at an Indian Naval exercise. (https://x.com/JamesTate121/status/2029654237324448005)
+    *   Direct human cost: @shanaka86 reports "Six American service members are dead," demanding transparent reporting. (https://x.com/shanaka86/status/2029755598187942082)
+
+*   **Geopolitical and economic implications:**
+    *   The implied critique of corruption and economic impact from the Iran war continues to surface in replies to @EricLDaugh's post, questioning profit from American suffering.
