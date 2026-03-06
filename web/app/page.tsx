@@ -1,8 +1,39 @@
 import Link from "next/link";
 import { getAllJournalDays } from "@/lib/readJournals";
-import { readOntology } from "@/lib/readOntology";
+import { readOntology, type Axis } from "@/lib/readOntology";
 import { getLatestCheckpoint } from "@/lib/readCheckpoints";
 import LatestPost from "@/components/LatestPost";
+import BeliefMap, { type MapNode, type MapEdge } from "@/components/BeliefMap";
+
+function buildGraph(axes: Axis[]): { nodes: MapNode[]; edges: MapEdge[] } {
+  const nodes: MapNode[] = axes
+    .filter(a => a.confidence > 0)
+    .map(a => ({
+      id: a.id,
+      label: a.label,
+      score: a.score,
+      confidence: a.confidence,
+      evidenceCount: a.evidence_log?.length ?? 0,
+      leftPole: a.left_pole,
+      rightPole: a.right_pole,
+    }));
+  const handleSets = axes.map(a => {
+    const handles = new Set<string>();
+    for (const ev of (a.evidence_log ?? [])) {
+      const m = (ev.source ?? "").match(/x\.com\/([A-Za-z0-9_]+)\/status\//);
+      if (m) handles.add(m[1].toLowerCase());
+    }
+    return { id: a.id, handles };
+  });
+  const edges: MapEdge[] = [];
+  for (let i = 0; i < handleSets.length; i++) {
+    for (let j = i + 1; j < handleSets.length; j++) {
+      const shared = [...handleSets[i].handles].filter(h => handleSets[j].handles.has(h)).length;
+      if (shared >= 2) edges.push({ source: handleSets[i].id, target: handleSets[j].id, weight: shared });
+    }
+  }
+  return { nodes, edges };
+}
 
 const PAGE_SIZE = 15;
 
@@ -19,9 +50,7 @@ export default async function IndexPage({
     const ontology = readOntology();
     const latestCheckpoint = await getLatestCheckpoint();
 
-    const top3 = [...ontology.axes]
-      .sort((a, b) => b.confidence - a.confidence)
-      .slice(0, 3);
+    const { nodes: mapNodes, edges: mapEdges } = buildGraph(ontology.axes);
 
     const avgConf = ontology.axes.length > 0
       ? Math.round(ontology.axes.reduce((s, a) => s + a.confidence, 0) / ontology.axes.length * 100)
@@ -39,40 +68,17 @@ export default async function IndexPage({
         {/* Latest post from X */}
         <LatestPost />
 
-        {/* Belief state hero — top 3 axes by confidence */}
-        {ontology.axes.length > 0 && (
+        {/* Belief map */}
+        {mapNodes.length > 0 && (
           <div className="belief-hero">
             <div className="belief-hero-header">
               belief state · {ontology.axes.length} axes · {avgConf}% avg confidence
+              <span style={{ color: "var(--muted)", fontWeight: 400, fontSize: "10px", marginLeft: "0.5rem" }}>
+                x = lean · y = certainty · size = evidence · lines = shared sources
+              </span>
             </div>
-            <div className="belief-axes-mini">
-              {top3.map((axis) => {
-                const pct        = ((axis.score + 1) / 2) * 100;
-                const fillLeft   = axis.score >= 0 ? 50 : pct;
-                const fillWidth  = Math.abs(pct - 50);
-                const fillColor  = axis.score > 0 ? "var(--amber)" : axis.score < 0 ? "var(--accent)" : "transparent";
-                const scoreStr   = `${axis.score >= 0 ? "+" : ""}${axis.score.toFixed(2)}`;
-                const scoreColor = axis.score > 0 ? "var(--amber)" : axis.score < 0 ? "var(--accent)" : "var(--muted)";
-                const confidence = Math.round(axis.confidence * 100);
-                return (
-                  <div key={axis.id} className="belief-axis-mini">
-                    <div className="belief-axis-mini-header">
-                      <span className="belief-axis-mini-label">{axis.label}</span>
-                      <span className="belief-axis-mini-meta">
-                        <span style={{ color: scoreColor, fontWeight: 700 }}>{scoreStr}</span>
-                        {" · "}{confidence}% conf
-                      </span>
-                    </div>
-                    <div className="belief-mini-track">
-                      <div className="belief-mini-tick" />
-                      <div className="belief-mini-fill" style={{ left: `${fillLeft}%`, width: `${fillWidth}%`, background: fillColor }} />
-                      <div className="belief-mini-marker" style={{ left: `${pct}%` }} />
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-            <Link href="/ontology" className="belief-hero-link">all axes →</Link>
+            <BeliefMap nodes={mapNodes} edges={mapEdges} compact />
+            <Link href="/ontology" className="belief-hero-link">explore full belief system →</Link>
           </div>
         )}
 
