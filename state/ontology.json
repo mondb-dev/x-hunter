@@ -9,7 +9,7 @@
       "confidence": 0.95,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
-      "last_updated": "2026-03-06T15:20:07.741Z",
+      "last_updated": "2026-03-06T17:56:01.179Z",
       "evidence_log": [
         {
           "pole_alignment": "right",
@@ -894,6 +894,13 @@
           "source": "https://x.com/wildkore/status/2027329584318042407",
           "content": "@wildkore discusses mastering power dynamics and the art of influence through subtle strategies.",
           "timestamp": "2026-02-27T00:00:00Z",
+          "pole_alignment": "right",
+          "trust_weight": 1
+        },
+        {
+          "source": "https://x.com/jacksonhinklle/status/2029958447262056909",
+          "content": "Trump says he wants Iran to 'make a deal' with him to end the special military operation, framed by some as 'begging'.",
+          "timestamp": "2026-03-06T17:30:00Z",
           "pole_alignment": "right",
           "trust_weight": 1
         }
@@ -2468,10 +2475,10 @@
       "left_pole": "Optimism for AI/robotics potential in entertainment, labor augmentation, and sci",
       "right_pole": "Concerns about job displacement, ethical implications of autonomous systems (e.g",
       "score": -0.25,
-      "confidence": 0.475,
+      "confidence": 0.5,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
-      "last_updated": "2026-03-06T17:21:30.430Z",
+      "last_updated": "2026-03-06T18:02:38.318Z",
       "evidence_log": [
         {
           "source": "https://x.com/hehe_samir/status/2028123575249719639",
@@ -2620,6 +2627,14 @@
           "timestamp": "2026-03-07T01:20:00Z",
           "pole_alignment": "left",
           "trust_weight": 1
+        },
+        {
+          "source": "https://x.com/sciencegirl/status/2029964240925380681",
+          "content": "AI-powered $12,500 glasses are turning golfers into putting machines.",
+          "timestamp": "2026-03-06T17:20:00Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "stance_confidence": 0.8
         }
       ]
     },
@@ -3710,11 +3725,11 @@
       "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
       "left_pole": "Prioritizing humanitarian concerns, ethical considerations, and consistency in i",
       "right_pole": "Emphasizing strong national alliances and diplomatic ties, potentially overlooki",
-      "score": -0.2278,
+      "score": -0.2264,
       "confidence": 0.95,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
-      "last_updated": "2026-03-06T16:41:29.629Z",
+      "last_updated": "2026-03-06T17:56:01.179Z",
       "evidence_log": [
         {
           "source": "https://x.com/itswpceo/status/2027744997856907590",
@@ -6073,6 +6088,20 @@
           "pole_alignment": "right",
           "trust_weight": 1,
           "stance_confidence": 0.7
+        },
+        {
+          "source": "https://x.com/jacksonhinklle/status/2029958447262056909",
+          "content": "Trump says he wants Iran to 'make a deal' to end military operations, a shift from previous unconditional surrender demands.",
+          "timestamp": "2026-03-07T01:30:00Z",
+          "pole_alignment": "left",
+          "trust_weight": 1
+        },
+        {
+          "source": "https://x.com/jacksonhinklle/status/2029958447262056909",
+          "content": "Trump says he wants Iran to 'make a deal' with him to end the special military operation, framed by some as 'begging'.",
+          "timestamp": "2026-03-06T17:30:00Z",
+          "pole_alignment": "right",
+          "trust_weight": 1
         }
       ]
     },
@@ -6222,11 +6251,11 @@
       "label": "Reliability of Economic Indicators and Societal Progress",
       "left_pole": "Belief that traditional economic indicators (e.g., electricity output, industrial capacity) are reliable proxies for societal health and progress.",
       "right_pole": "Skepticism towards traditional economic indicators, arguing they fail to capture complex societal well-being, sustainability, or equitable distribution.",
-      "score": -0.05,
-      "confidence": 0.025,
+      "score": 0,
+      "confidence": 0.175,
       "topics": [],
       "created_at": "2026-03-01T17:58:58.100Z",
-      "last_updated": "2026-03-01T18:40:03.500Z",
+      "last_updated": "2026-03-06T18:02:38.318Z",
       "evidence_log": [
         {
           "source": "https://x.com/elonmusk/status/2028085545214119954",
@@ -6235,6 +6264,54 @@
           "pole_alignment": "left",
           "trust_weight": 1,
           "stance_confidence": 0.6
+        },
+        {
+          "source": "https://x.com/SteveMullins/status/2029970896929313104",
+          "content": "Rising unemployment, spiking gas prices, and falling consumer spending are presented as economic indicators showing public distress, questioning the 'America First' narrative amidst war spending.",
+          "timestamp": "2026-03-06T17:22:00Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "stance_confidence": 0.7
+        },
+        {
+          "source": "https://x.com/PrimeNewsAfrica/status/2029957999796625490",
+          "content": "SA's retail growth stagnates even as economic indicators improve.",
+          "timestamp": "2026-03-06T16:54:00Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "stance_confidence": 0.7
+        },
+        {
+          "source": "https://x.com/iChazzle/status/2029963789320196106",
+          "content": "Technological progress is seen as good, but societal progress is perceived to have hit a tipping point.",
+          "timestamp": "2026-03-06T16:49:00Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "stance_confidence": 0.6
+        },
+        {
+          "source": "https://x.com/SteveMullins/status/2029970896929313104",
+          "content": "Traditional economic indicators like unemployment, gas prices, and consumer spending may not accurately reflect societal distress.",
+          "timestamp": "2026-03-06T17:50:00Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "stance_confidence": 0.8
+        },
+        {
+          "source": "https://x.com/PrimeNewsAfrica/status/2029957999796625490",
+          "content": "Societal distress exacerbated by large military expenditures, not accurately reflected in economic indicators.",
+          "timestamp": "2026-03-06T17:50:00Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "stance_confidence": 0.8
+        },
+        {
+          "source": "https://x.com/iChazzle/status/2029963789320196106",
+          "content": "Societal progress seems to have hit a tipping point, diverging from technological progress, hinting at a disconnect in overall well-being.",
+          "timestamp": "2026-03-06T17:50:00Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "stance_confidence": 0.7
         }
       ]
     },
@@ -7492,5 +7569,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-03-06T17:21:30.430Z"
+  "last_updated": "2026-03-06T18:02:38.318Z"
 }
