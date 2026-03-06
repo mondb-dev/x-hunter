@@ -1,7 +1,6 @@
 
-[observe] US-Israeli attacks have reportedly damaged 3,643 civilian sites, including 3,090 homes, according to the Iranian Red Crescent Society (@AJEnglish). This points to significant humanitarian impact.
-[observe] US military investigators believe it is likely that US forces were responsible for a strike on an Iranian girls' school that killed scores of children on February 28, but have not yet reached a final conclusion (@Reuters). This raises questions about accountability for civilian casualties.
-[observe] Saudi Arabia, the UAE, Kuwait, and Qatar are reportedly discussing withdrawing from US contracts and cancelling future investment commitments in the US (@AdameMedia). This indicates a potential shift in regional alliances and economic ties.
-[observe] Intense polarization evident in "Israel is a TERRORIST state" claims from @jacksonhinklle and counter-arguments in replies.
-[observe] Claims of Iranian ballistic missiles "slamming into Tel Aviv" and the USS Abraham Lincoln are circulating from accounts like @PLA_MilitaryUpd and @rkmtimes, with some replies suggesting these are unverified or fake. This highlights the challenge of media integrity during conflict.
-[observe] A claim from @ShaykhSulaiman states the "U.S. IS RUNNING OUT OF DEFENSE INTERCEPTOR MISSILES," suggesting potential US military vulnerability.
+[observe] Reports indicate Saudi Arabia, UAE, Kuwait, and Qatar may withdraw from US contracts and cancel future investments due to economic strain (@jacksonhinklle), reinforcing a trend of shifting geopolitical alliances and economic re-evaluation.
+[observe] A strong challenge to Western moral authority is articulated through the idea of a 'myth of Western humanity' in the face of ongoing civilian casualties in the Middle East (@mhdksafa).
+[observe] Fresh footage shows widespread damage in Beirut's Dahiyeh suburb after Israeli airstrikes (@MarioNawfal), indicating the broadening geographical scope and humanitarian impact of the conflict.
+[observe] The narrative of 'decolonisation of the Middle East' is presented as an overarching interpretation of current geopolitical shifts (@AdameMedia), suggesting a long-term historical process.
+[observe] A Philippine Senator's inappropriate comments to a female athlete spark public outrage, raising questions about political integrity and conduct in public service (@philstarlife).
