@@ -29,6 +29,14 @@ const CHECKPOINT_INTERVAL_DAYS = 3;
 
 const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
 
+// Load env
+if (require("fs").existsSync(path.join(ROOT, ".env"))) {
+  for (const line of require("fs").readFileSync(path.join(ROOT, ".env"), "utf-8").split("\n")) {
+    const m = line.match(/^([A-Z_][A-Z0-9_]*)=(.*)$/);
+    if (m) process.env[m[1]] = m[2].trim();
+  }
+}
+
 function loadJson(p) {
   try { return JSON.parse(fs.readFileSync(p, "utf-8")); } catch { return null; }
 }
@@ -39,7 +47,39 @@ function daysBetween(dateA, dateB) {
   return Math.round(Math.abs(msB - msA) / 86_400_000);
 }
 
-(function main() {
+async function callGemini(prompt) {
+  const https  = require("https");
+  const apiKey = process.env.GOOGLE_API_KEY;
+  if (!apiKey) throw new Error("GOOGLE_API_KEY not set");
+  const body = JSON.stringify({
+    contents: [{ parts: [{ text: prompt }] }],
+    generationConfig: { temperature: 0.6, maxOutputTokens: 600 },
+  });
+  return new Promise((resolve, reject) => {
+    const req = https.request({
+      hostname: "generativelanguage.googleapis.com",
+      path: `/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+    }, res => {
+      let raw = "";
+      res.on("data", c => raw += c);
+      res.on("end", () => {
+        try {
+          const j = JSON.parse(raw);
+          const text = j.candidates?.[0]?.content?.parts?.[0]?.text;
+          if (!text) reject(new Error(`No content: ${raw.slice(0, 300)}`));
+          else resolve(text.trim());
+        } catch (e) { reject(e); }
+      });
+    });
+    req.on("error", reject);
+    req.write(body);
+    req.end();
+  });
+}
+
+(async function main() {
   try {
     // Load checkpoint state
     let cpState = loadJson(CHECKPOINT_STATE) || { last_checkpoint_date: null, checkpoint_count: 0 };
@@ -91,6 +131,52 @@ function daysBetween(dateA, dateB) {
       .map(a => `- \`${a.id}\`: conf ${((a.confidence || 0) * 100).toFixed(0)}%, score ${(a.score || 0).toFixed(3)}`)
       .join("\n") || "- (none with confidence > 0.10 yet)";
 
+    // Generate interpretation via Gemini (use ontology axes — they have labels/poles)
+    let interpretation = "";
+    try {
+      const activeOntology = axes.filter(a => (a.confidence || 0) > 0.1)
+        .sort((a, b) => (b.confidence || 0) - (a.confidence || 0));
+
+      const axesContext = activeOntology
+        .map(a => {
+          const score = (a.score || 0);
+          const lean = score > 0.05
+            ? `leans toward "${a.right_pole || "right"}" (${score.toFixed(2)})`
+            : score < -0.05
+            ? `leans toward "${a.left_pole || "left"}" (${score.toFixed(2)})`
+            : "roughly neutral";
+          return `- ${a.label}: ${lean}, ${((a.confidence||0)*100).toFixed(0)}% confident, ${(a.evidence_log||[]).length} observations`;
+        })
+        .join("\n");
+
+      const seedContext = axes.filter(a => (a.confidence || 0) <= 0.1)
+        .map(a => `- ${a.label}`)
+        .join("\n");
+
+      const prompt = `You are writing an interpretation note for a public checkpoint of Sebastian D. Hunter's belief system.
+Sebastian is an autonomous AI agent that browses X/Twitter daily and forms a genuine worldview through observation — no preset ideology.
+
+Here are his active belief axes as of ${today}:
+
+${axesContext || "(none with confidence > 10% yet)"}
+
+Seeded axes still awaiting observations:
+${seedContext || "(none)"}
+
+Write 2–3 short paragraphs interpreting this snapshot in plain English. Cover:
+1. What Sebastian believes most confidently right now, and what that reveals about his worldview
+2. What tensions or through-lines exist across the axes
+3. What is still forming — where the worldview is open and uncertain
+
+Write in third person ("Sebastian..."). Be analytical, not promotional. Keep it concise — total 120–160 words. No bullet points. No headers. Plain paragraphs only.`;
+
+      interpretation = await callGemini(prompt);
+      console.log("[checkpoint] interpretation generated");
+    } catch (err) {
+      console.warn("[checkpoint] interpretation skipped:", err.message);
+      interpretation = "_Interpretation not available for this checkpoint._";
+    }
+
     const allAxesSummary = axes.map(a => {
       const ev    = (a.evidence_log || []).length;
       const conf  = ((a.confidence || 0) * 100).toFixed(0);
@@ -120,6 +206,12 @@ Axes with confidence > 10%: **${activeAxes.length}**
 ### Highest-confidence axes
 
 ${highConf}
+
+---
+
+## Interpretation
+
+${interpretation}
 
 ---
 
@@ -157,4 +249,7 @@ ${recentReports || "(no daily reports yet)"}
     console.error(`[checkpoint] failed: ${err.message}`);
     process.exit(0); // non-fatal
   }
-})();
+})().catch(err => {
+  console.error(`[checkpoint] fatal: ${err.message}`);
+  process.exit(0);
+});
