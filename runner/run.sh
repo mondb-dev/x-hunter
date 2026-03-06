@@ -25,6 +25,8 @@ if [ -f "$PIDFILE" ]; then
     kill -9 "$OLD_PID" 2>/dev/null || true
   fi
 fi
+# Kill any stale scraper loops left over from prior runner (trap doesn't fire on SIGKILL)
+bash "$PROJECT_ROOT/scraper/stop.sh" 2>/dev/null || true
 echo $$ > "$PIDFILE"
 trap 'rm -f "$PIDFILE"' EXIT
 
@@ -86,6 +88,7 @@ TWEET_END=23          # latest hour exclusive
 CURIOSITY_EVERY=12    # refresh curiosity directive every ~4h (was 4)
 GATEWAY_PORT=18789    # openclaw gateway WebSocket/HTTP port
 CDP_PORT=18801        # Chrome DevTools Protocol port
+GATEWAY_ERR_LOG="$HOME/.openclaw-x-hunter/logs/gateway.err.log"  # x-hunter gateway error log
 
 trap 'echo "[run] Stopping..."; bash "$PROJECT_ROOT/scraper/stop.sh" 2>/dev/null; bash "$PROJECT_ROOT/stream/stop.sh" 2>/dev/null; exit 0' INT TERM
 
@@ -103,21 +106,35 @@ reset_session() {
 
 # Run openclaw agent with a hard 15-minute timeout to prevent multi-hour hangs
 # (openclaw can loop on gateway reconnect indefinitely after embedded completes)
+# If the agent exits in under 45s (likely a transient model/gateway error), retry once.
 agent_run() {
-  openclaw agent "$@" &
-  local PID=$!
-  local elapsed=0
-  while kill -0 "$PID" 2>/dev/null; do
-    sleep 5
-    elapsed=$(( elapsed + 5 ))
-    if [ "$elapsed" -ge 900 ]; then
-      echo "[run] WARNING: openclaw agent exceeded 900s — force-killing (pid $PID)"
-      kill -9 "$PID" 2>/dev/null
-      return 1
+  local attempt=0
+  while [ $attempt -lt 2 ]; do
+    attempt=$(( attempt + 1 ))
+    local start_ts elapsed
+    start_ts=$(date +%s)
+    openclaw agent "$@" &
+    local PID=$!
+    elapsed=0
+    while kill -0 "$PID" 2>/dev/null; do
+      sleep 5
+      elapsed=$(( elapsed + 5 ))
+      if [ "$elapsed" -ge 900 ]; then
+        echo "[run] WARNING: openclaw agent exceeded 900s — force-killing (pid $PID)"
+        kill -9 "$PID" 2>/dev/null
+        return 1
+      fi
+    done
+    wait "$PID"
+    local exit_code=$?
+    elapsed=$(( $(date +%s) - start_ts ))
+    if [ $exit_code -ne 0 ] && [ $elapsed -lt 45 ] && [ $attempt -lt 2 ]; then
+      echo "[run] agent exited in ${elapsed}s with error — retrying once (attempt $attempt/2)"
+      sleep 5
+    else
+      return $exit_code
     fi
   done
-  wait "$PID"
-  return $?
 }
 
 # Restart gateway: kill directly + start + poll health (avoids openclaw's 60s internal timeout)
@@ -156,7 +173,8 @@ start_browser() {
       # causing the agent to get "tab not found" even though CDP is responding.
       local tab_count
       tab_count=$(curl -sf "http://127.0.0.1:${CDP_PORT}/json/list" 2>/dev/null \
-        | grep -c '"type":"page"' || echo 0)
+        | grep -c '"type":"page"' 2>/dev/null)
+      tab_count=${tab_count:-0}
       if [ "$tab_count" -eq 0 ]; then
         echo "[run] no page tabs found — opening x.com tab via CDP"
         curl -sf -X PUT "http://127.0.0.1:${CDP_PORT}/json/new?https://x.com" \
@@ -196,6 +214,27 @@ ensure_browser() {
   return 1
 }
 
+# Detect if the gateway browser control service timed out during the last agent run.
+# Compares gateway error log line counts before vs after the run to find new entries.
+# Pass the line count captured before agent_run. Calls restart_gateway + start_browser
+# if a "timed out after 20000ms" entry appeared during the run.
+check_and_fix_gateway_timeout() {
+  local before_lines=$1
+  [ ! -f "$GATEWAY_ERR_LOG" ] && return 0
+  local after_lines
+  after_lines=$(wc -l < "$GATEWAY_ERR_LOG" 2>/dev/null || echo 0)
+  local new_lines=$(( after_lines - before_lines ))
+  [ "$new_lines" -le 0 ] && return 0
+  if tail -n "$new_lines" "$GATEWAY_ERR_LOG" 2>/dev/null | grep -q "browser control service (timed out"; then
+    echo "[run] browser control service timed out during agent run — restarting gateway"
+    restart_gateway
+    start_browser
+    sleep 15
+    check_browser && echo "[run] gateway browser service recovered" \
+                  || echo "[run] WARNING: gateway still unhealthy after restart"
+  fi
+}
+
 # Remove lock files whose owner PID is no longer running (prevents 10s lock timeouts)
 clean_stale_locks() {
   local cleaned=0
@@ -210,6 +249,12 @@ clean_stale_locks() {
   done
   [ "$cleaned" -gt 0 ] && echo "[run] cleaned $cleaned stale lock(s)"
 }
+
+# Prevent macOS from sleeping while the runner is active.
+# -s = prevent system sleep, -d = prevent display sleep.
+caffeinate -sd -w $$ &
+CAFFEINATE_PID=$!
+echo "[run] caffeinate started (PID=$CAFFEINATE_PID) — Mac sleep disabled"
 
 while true; do
   CYCLE=$((CYCLE + 1))
@@ -296,8 +341,8 @@ while true; do
   if [ "$CYCLE_TYPE" = "TWEET" ] || [ "$CYCLE_TYPE" = "QUOTE" ]; then
     reset_session x-hunter-tweet  # always flush tweet agent session
   fi
-  # ensure_browser only needed for TWEET (runner posts via CDP, not openclaw browser tool)
-  if [ "$CYCLE_TYPE" = "TWEET" ]; then
+  # ensure_browser needed for TWEET and QUOTE — both post via CDP (post_tweet.js / post_quote.js)
+  if [ "$CYCLE_TYPE" = "TWEET" ] || [ "$CYCLE_TYPE" = "QUOTE" ]; then
     ensure_browser
   fi
 
@@ -307,8 +352,13 @@ while true; do
     reset_session x-hunter
     restart_gateway
     start_browser
-    sleep 15  # browser control service needs ~15s after LaunchAgent restart
-    check_browser && echo "[run] browser healthy after reset" || echo "[run] WARNING: browser still not ready after reset"
+    sleep 20  # browser control service needs ~15-20s after LaunchAgent restart
+    if check_browser; then
+      echo "[run] browser healthy after reset"
+    else
+      echo "[run] WARNING: browser not ready after reset — downgrading TWEET/QUOTE to BROWSE"
+      CYCLE_TYPE="BROWSE"
+    fi
     echo "[run] x-hunter session + gateway restarted (context flush cycle $CYCLE)"
   fi
 
@@ -333,13 +383,24 @@ After the intro tweet, do a first browse pass:
 
 FIRSTMSG
 )
+    _gw_before=$(wc -l < "$GATEWAY_ERR_LOG" 2>/dev/null || echo 0)
     agent_run --agent x-hunter \
       --message "$AGENT_MSG" \
       --thinking high \
       --verbose on
+    check_and_fix_gateway_timeout "$_gw_before"
 
   # ── Browse cycle: read digest + topic summary, take notes ───────────────
   elif [ "$CYCLE_TYPE" = "BROWSE" ]; then
+    # ── FTS5 self-heal: rebuild index if corrupted ────────────────────────
+    _FTS_CHECK=$(sqlite3 "$PROJECT_ROOT/state/index.db" "INSERT INTO memory_fts(memory_fts) VALUES('integrity-check');" 2>&1)
+    if [ -n "$_FTS_CHECK" ]; then
+      echo "[run] FTS5 corruption detected — rebuilding indexes"
+      sqlite3 "$PROJECT_ROOT/state/index.db" "INSERT INTO memory_fts(memory_fts) VALUES('rebuild');" 2>/dev/null || true
+      sqlite3 "$PROJECT_ROOT/state/index.db" "INSERT INTO posts_fts(posts_fts) VALUES('rebuild');" 2>/dev/null || true
+      echo "[run] FTS5 rebuild done"
+    fi
+
     # Generate topic summary + memory recall from SQLite index before invoking AI
     node "$PROJECT_ROOT/scraper/query.js" --hours 4 > /dev/null 2>&1 || true
     # Extract top 3 keywords from topic_summary.txt to make recall topic-relevant
@@ -374,10 +435,16 @@ FIRSTMSG
     READING_CYCLE=$CYCLE node "$PROJECT_ROOT/runner/reading_queue.js" \
       >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
+    # Auto deep-dive detector: every 6 cycles, find recurring accounts worth profiling
+    if [ $(( CYCLE % 6 )) -eq 0 ]; then
+      READING_CYCLE=$CYCLE node "$PROJECT_ROOT/runner/deep_dive_detector.js" \
+        >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    fi
+
     NEXT_TWEET=$(( (CYCLE / TWEET_EVERY + 1) * TWEET_EVERY ))
 
     # Pre-fetch curiosity search URL in browser (non-blocking — page ready when agent starts)
-    node "$PROJECT_ROOT/runner/prefetch_url.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    PREFETCH_CYCLE=$CYCLE node "$PROJECT_ROOT/runner/prefetch_url.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
     # Pre-load files into shell vars — agent skips read tool calls, goes straight to action
     # Backticks escaped to prevent accidental shell execution in heredoc expansion
@@ -397,10 +464,30 @@ FIRSTMSG
       _READING_CONTEXT=$(grep "^CONTEXT:" "$PROJECT_ROOT/state/reading_url.txt" 2>/dev/null | sed 's/^CONTEXT: //' | sed "s/\`/'/g")
     fi
     if [ -n "$_READING_URL" ]; then
-      _READING_BLOCK="${_READING_FROM} recommended a link. Navigate to it as your FIRST task:
+      # Detect profile deep dive vs article/content link
+      if echo "$_READING_URL" | grep -qE "^https://x\.com/[A-Za-z0-9_]+/?$"; then
+        # Profile URL — richer deep dive instructions
+        _PROFILE_HANDLE=$(echo "$_READING_URL" | sed 's|https://x.com/||;s|/||g')
+        _READING_BLOCK="${_READING_FROM} asked you to learn about @${_PROFILE_HANDLE}. DEEP DIVE — this is your primary task this cycle:
+  URL: ${_READING_URL}
+  Context: ${_READING_CONTEXT}
+
+  Do all of the following:
+  1. Navigate to their profile. Read their pinned tweet and bio.
+  2. Scroll their timeline — read at least 8 recent tweets. Note their main positions,
+     recurring themes, and any tensions or contradictions.
+  3. Check if their views connect to any of your current belief axes. Note evidence.
+  4. Search for '@${_PROFILE_HANDLE}' to see how others engage with them (optional if time allows).
+  5. Write a dedicated section in browse_notes.md: '## Deep Dive: @${_PROFILE_HANDLE}'
+     Summarise what you learned and whether it shifted any of your beliefs."
+      else
+        # Article / content URL
+        _READING_BLOCK="${_READING_FROM} recommended a link. Navigate to it as your FIRST task:
   ${_READING_URL}
   Context: ${_READING_CONTEXT}
-  Read it. Note key claims in browse_notes.md. Integrate into belief notes."
+  Read it carefully. Note key claims, evidence quality, and any tensions with your current axes.
+  Write findings in browse_notes.md under '## Reading: ${_READING_URL}'"
+      fi
     else
       _READING_BLOCK="(no reading queue item this cycle)"
     fi
@@ -462,11 +549,12 @@ $_READING_BLOCK
 ─────────────────────────────────────────────────────────────────────────
 
 Tasks (in order):
-0. READING QUEUE: If there is a reading queue URL above (not "no reading queue item"),
-   navigate to it FIRST. Read it carefully. Note key claims in browse_notes.md.
-   Then proceed with the tasks below.
-1. CURIOSITY: If the directive above has an ACTIVE SEARCH URL and you have not searched
-   it this directive window, navigate to it now and read top 3-5 posts.
+0. DEEP DIVE (highest priority): If there is a reading queue item above, follow
+   those instructions completely before anything else. A deep dive on a profile or link
+   takes the full cycle — skip task 1 (curiosity search) if you did a deep dive.
+1. CURIOSITY: If NO deep dive this cycle and the directive above has an ACTIVE SEARCH URL,
+   navigate to it now and read top 3-5 posts. Each cycle in the window searches a
+   different angle — check which SEARCH_URL_N is preloaded in your browser.
    For ALL browse cycles while the directive is active: follow the AMBIENT FOCUS —
    tag relevant browse_notes entries with [CURIOSITY: <axis_or_topic_id>].
 2. Identify the 3-5 most interesting tensions or signals from TRENDING clusters
@@ -509,10 +597,27 @@ Next tweet cycle: $NEXT_TWEET.
 
 BROWSEMSG
 )
+    _gw_before=$(wc -l < "$GATEWAY_ERR_LOG" 2>/dev/null || echo 0)
+    _JOURNAL_BEFORE=$(git -C "$PROJECT_ROOT" status --porcelain -- "journals/${TODAY}_${HOUR}.html" 2>/dev/null | wc -l | tr -d ' ')
     agent_run --agent x-hunter \
       --message "$AGENT_MSG" \
       --thinking low \
       --verbose on
+    check_and_fix_gateway_timeout "$_gw_before"
+    # If agent crashed without writing a journal, retry once
+    _JOURNAL_AFTER=$(git -C "$PROJECT_ROOT" status --porcelain -- "journals/${TODAY}_${HOUR}.html" 2>/dev/null | wc -l | tr -d ' ')
+    if [ "$_JOURNAL_AFTER" = "$_JOURNAL_BEFORE" ] && [ "$_JOURNAL_BEFORE" = "0" ]; then
+      echo "[run] browse journal missing after agent run — retrying once (no thinking)"
+      sleep 5
+      _gw_before=$(wc -l < "$GATEWAY_ERR_LOG" 2>/dev/null || echo 0)
+      agent_run --agent x-hunter \
+        --message "$AGENT_MSG" \
+        --verbose on
+      check_and_fix_gateway_timeout "$_gw_before"
+    fi
+
+    # ── Close excess Chrome tabs after browse agent (prevents memory accumulation) ─
+    node "$PROJECT_ROOT/runner/cleanup_tabs.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
     # ── Mark reading queue item as done (agent has read it) ───────────────
     if [ -s "$PROJECT_ROOT/state/reading_url.txt" ]; then
@@ -535,6 +640,14 @@ BROWSEMSG
       echo "[run] browse journal pushed"
       node "$PROJECT_ROOT/runner/archive.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
       CYCLE_TYPE=JOURNAL node "$PROJECT_ROOT/runner/watchdog.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    fi
+
+    # ── Moltbook heartbeat: check notifications, upvote feed content ─────────
+    node "$PROJECT_ROOT/runner/moltbook.js" --heartbeat >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+
+    # ── Retry pending checkpoint post if rate limit has cleared ──────────
+    if [ -f "$PROJECT_ROOT/state/checkpoint_pending" ]; then
+      node "$PROJECT_ROOT/runner/moltbook.js" --post-checkpoint >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     fi
 
     # ── Process pending replies after each browse cycle ───────────────────
@@ -574,9 +687,7 @@ Do NOT use any browser tools. Tasks:
    Line 1: the source tweet URL (exact URL from the digest, e.g. https://x.com/user/status/ID)
    Lines 2+: your one-sentence quote commentary. Direct, honest, max 240 chars.
    No hedging. This is your actual view.
-3. Append to state/posts_log.json: type="quote", tweet_url="" (runner fills it in),
-   source_url (the source tweet URL), text (your commentary), posted_at (ISO now).
-4. Done -- the runner posts the quote. Do not use the browser.
+3. Done -- the runner posts the quote and updates posts_log.json. Do not use the browser.
 
 QUOTEMSG
 )
@@ -589,22 +700,33 @@ QUOTEMSG
     # ── Post quote-tweet via CDP (runner handles, no browser tool needed) ──────
     if [ -f "$PROJECT_ROOT/state/quote_draft.txt" ]; then
       echo "[run] Posting quote-tweet via CDP..."
+      sleep 3  # give openclaw gateway time to release browser WS before CDP connect
       node "$PROJECT_ROOT/runner/post_quote.js" 2>&1
       QUOTE_URL=$(cat "$PROJECT_ROOT/state/quote_result.txt" 2>/dev/null | tr -d '\n')
+      # Runner owns the posts_log entry — agent no longer writes it (avoids malformed JSON tool calls)
+      node -e "
+        const fs=require('fs'), p='$PROJECT_ROOT/state/posts_log.json';
+        try {
+          const draft=fs.readFileSync('$PROJECT_ROOT/state/quote_draft.txt','utf-8').trim();
+          const lines=draft.split('\n');
+          const source_url=lines[0].trim();
+          const text=lines.slice(1).join(' ').trim();
+          const d=JSON.parse(fs.readFileSync(p,'utf-8'));
+          d.posts=d.posts||[];
+          // Check if agent already wrote an entry (partial run) — patch it, else append
+          const existing=d.posts.findIndex(e=>e.type==='quote'&&!e.tweet_url&&e.source_url===source_url);
+          const url='$QUOTE_URL'||'';
+          if(existing>=0){
+            d.posts[existing].tweet_url=url;
+            d.posts[existing].posted_at=new Date().toISOString();
+          } else {
+            d.posts.push({type:'quote',tweet_url:url,source_url,text,posted_at:new Date().toISOString()});
+          }
+          fs.writeFileSync(p,JSON.stringify(d,null,2));
+          console.log('[run] posts_log.json updated (quote)');
+        } catch(e){ console.error('[run] posts_log update failed:',e.message); }
+      " 2>&1 || true
       if [ -n "$QUOTE_URL" ] && [ "$QUOTE_URL" != "posted" ]; then
-        node -e "
-          const fs=require('fs'),p='$PROJECT_ROOT/state/posts_log.json';
-          try {
-            const d=JSON.parse(fs.readFileSync(p,'utf-8'));
-            const posts=d.posts||[];
-            for(let i=posts.length-1;i>=0;i--){
-              if(posts[i].type==='quote'&&!posts[i].tweet_url){
-                posts[i].tweet_url='$QUOTE_URL'; break;
-              }
-            }
-            fs.writeFileSync(p,JSON.stringify(d,null,2));
-          } catch(e){}
-        " 2>/dev/null
         echo "[run] Quote posted: $QUOTE_URL"
       fi
     else
@@ -616,6 +738,9 @@ QUOTEMSG
 
     # Coherence critique of the quote tweet
     node "$PROJECT_ROOT/runner/critique.js" --quote --cycle "$CYCLE" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+
+    # ── Moltbook: cross-post quote commentary ───────────────────────────────
+    node "$PROJECT_ROOT/runner/moltbook.js" --post-quote >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
   # ── Tweet cycle: synthesize, journal, tweet, push ─────────────────────────
   else
@@ -695,7 +820,7 @@ Tasks (in order, no browser):
                     "timestamp":"...", "pole_alignment":"left"|"right" }],
      "new_axes": [{ "id":"...", "label":"...", "left_pole":"...", "right_pole":"..." }] }
    Omit keys you do not need. Skip writing the file if nothing axis-worthy.
-7. Clear state/browse_notes.md (overwrite with empty string).
+7. Done. The runner clears browse_notes.md after this cycle.
 
 TWEETMSG
 )
@@ -704,6 +829,17 @@ TWEETMSG
       --message "$AGENT_MSG" \
       --thinking low \
       --verbose on
+    # If agent crashed without writing tweet_draft.txt, retry once
+    if [ ! -f "$PROJECT_ROOT/state/tweet_draft.txt" ]; then
+      echo "[run] tweet_draft.txt missing after agent run — retrying once (no thinking)"
+      sleep 5
+      agent_run --agent x-hunter-tweet \
+        --message "$AGENT_MSG" \
+        --verbose on
+    fi
+
+    # ── Close excess Chrome tabs after tweet agent ────────────────────────
+    node "$PROJECT_ROOT/runner/cleanup_tabs.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
     # ── Merge ontology delta written by the tweet agent ───────────────────
     node "$PROJECT_ROOT/runner/apply_ontology_delta.js" 2>&1 || true
@@ -756,13 +892,16 @@ TWEETMSG
     done
 
     # ── Git commit and push ─────────────────────────────────────────────────
-    git -C "$PROJECT_ROOT" add journals/ checkpoints/ state/ 2>/dev/null || true
+    git -C "$PROJECT_ROOT" add journals/ checkpoints/ state/ articles/ daily/ 2>/dev/null || true
     git -C "$PROJECT_ROOT" commit -m "cycle ${CYCLE}: ${TODAY} ${NOW}" 2>/dev/null || true
     git -C "$PROJECT_ROOT" push origin main 2>/dev/null || true
     echo "[run] git push done"
 
     # Archive new journals/checkpoints to Irys + local memory index
     node "$PROJECT_ROOT/runner/archive.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+
+    # ── Moltbook: cross-post tweet content — runs after archive.js so Arweave tx is available ──
+    node "$PROJECT_ROOT/runner/moltbook.js" --post >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
     # Watchdog: verify latest journal committed, pushed, and on Arweave
     CYCLE_TYPE=JOURNAL node "$PROJECT_ROOT/runner/watchdog.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
@@ -771,8 +910,26 @@ TWEETMSG
     if [ $(( CYCLE % (TWEET_EVERY * 12) )) -eq 0 ]; then
       # ── Daily belief report ──────────────────────────────────────────────────
       node "$PROJECT_ROOT/runner/generate_daily_report.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+      # ── Daily article: write from journals + beliefs, post to Moltbook ───────
+      node "$PROJECT_ROOT/runner/write_article.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+      node "$PROJECT_ROOT/runner/moltbook.js" --post-article >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+      # ── Tweet the Moltbook article link ──────────────────────────────────────
+      if [ -f "$PROJECT_ROOT/state/article_result.txt" ]; then
+        _ARTICLE_URL=$(sed -n '1p' "$PROJECT_ROOT/state/article_result.txt" | tr -d '\n')
+        _ARTICLE_TITLE=$(sed -n '2p' "$PROJECT_ROOT/state/article_result.txt" | tr -d '\n')
+        # Truncate title to fit: "New piece: TITLE → URL" within 280 chars
+        _MAX_TITLE=$(( 240 - ${#_ARTICLE_URL} ))
+        if [ ${#_ARTICLE_TITLE} -gt $_MAX_TITLE ]; then
+          _ARTICLE_TITLE="${_ARTICLE_TITLE:0:$_MAX_TITLE}..."
+        fi
+        printf "New piece: %s\n%s" "$_ARTICLE_TITLE" "$_ARTICLE_URL" > "$PROJECT_ROOT/state/tweet_draft.txt"
+        echo "[run] tweeting article link: $_ARTICLE_URL"
+        node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1 | grep -v '^$'
+        rm -f "$PROJECT_ROOT/state/article_result.txt"
+      fi
       # ── Checkpoint (every 3 days — generate_checkpoint.js self-gates) ───────
       node "$PROJECT_ROOT/runner/generate_checkpoint.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+      node "$PROJECT_ROOT/runner/moltbook.js" --post-checkpoint >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
       # Trim feed_digest.txt to last 3000 lines (~2-3 days of data)
       DLINES=$(wc -l < "$PROJECT_ROOT/state/feed_digest.txt" 2>/dev/null || echo 0)
       if [ "$DLINES" -gt 3000 ]; then
@@ -793,6 +950,10 @@ TWEETMSG
       done
     fi
 
+    # ── Runner clears browse_notes.md (agent write tool rejects empty string) ──
+    printf "" > "$PROJECT_ROOT/state/browse_notes.md"
+    echo "[run] browse_notes.md cleared"
+
     # Coherence critique of the journal + tweet (only if agent actually posted this cycle)
     node "$PROJECT_ROOT/runner/critique.js" --cycle "$CYCLE" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
   fi
@@ -808,5 +969,15 @@ TWEETMSG
     sleep "$WAIT"
   else
     echo "[run] Cycle $CYCLE ($CYCLE_TYPE) done in ${ELAPSED}s. Starting next cycle immediately."
+    # Cycle ran far longer than expected — Mac likely woke from sleep.
+    # Force a browser restart so the next cycle gets a fresh connection.
+    if [ "$ELAPSED" -gt $(( BROWSE_INTERVAL * 2 )) ]; then
+      echo "[run] post-sleep detected (elapsed=${ELAPSED}s) — restarting browser..."
+      openclaw browser --browser-profile x-hunter stop >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+      sleep 3
+      openclaw browser --browser-profile x-hunter start >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+      sleep 10
+      echo "[run] browser restarted after sleep wake"
+    fi
   fi
 done
