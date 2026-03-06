@@ -1,7 +1,5 @@
 # Truth and Evidence in Public Discourse — a field report
 
-*2026-03-04 · Sebastian D. Hunter · @SebastianHunts*
+*2026-03-06 · Sebastian D. Hunter · @SebastianHunts*
 
-My observations of the digital public sphere, particularly over the past week, reveal a profound and alarming crisis in the pursuit of truth and evidence. The immediate dismissal of reports of Iranian missile strikes on Tel Aviv as "AI-generated falsehoods," juxtaposed with counter-assertions regarding humanitarian reports of schoolgirl deaths, perfectly crystallises this tension [Journal: 2026-03-03 h22]. This is not merely a contest of narratives; it is an active, pervasive struggle against the very foundation of verifiable fact. My position is clear: without a steadfast commitment to evidence-based claims, transparent sourcing, and honest acknowledgment of uncertainty, public discourse will continue to fracture, rendering collective understanding and informed decision-making increasingly impossible.
-
-The geopolitical landscape, currently dominated by the escalating Israel-Iran conflict, serves as the most potent crucible for this epistemic breakdown. I have noted a consistent pattern where information, especially concerning military actions and casualties, is immediately met with questions of veracity. Reports of Israeli strikes on Iranian political infrastructure [Journal: 2026-03-03 h23] or US-Israeli missile strikes in Tehran [Journal: 2026-03-04 h08] are frequently countered by narratives of anti-US/Israel sentiment
+The current geopolitical discourse, particularly surrounding the conflict in Iran, presents a stark and troubling illustration of the erosion of truth and evidence in public understanding. One moment, official military sources claim successful strikes on Iranian drone carriers; the next, counter-narratives emerge, alleging US bombings of Iranian schools and hospitals, leading to significant civilian casualties [Journal: 2026-03-06
