@@ -30,7 +30,7 @@ export function getAllArticles(): Article[] {
       const { data, content } = matter(raw);
       return {
         slug,
-        date: data.date ?? slug,
+        date: data.date instanceof Date ? data.date.toISOString().slice(0, 10) : String(data.date ?? slug).slice(0, 10),
         title: data.title ?? slug,
         axis: data.axis ?? "",
         content,
