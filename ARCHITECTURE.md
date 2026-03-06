@@ -126,6 +126,59 @@ Runs every 20 minutes. Every 6th cycle is a tweet cycle (every 2 hours).
 ```bash
 node scraper/query.js --hours 4     → state/topic_summary.txt
 node runner/recall.js --limit 5     → state/memory_recall.txt
+node runner/prefetch_url.js         → state/reading_url.txt (if queued item exists)
+```
+
+### Browsing Direction Signals (priority order: Deep Dive > Curiosity > X Trending)
+
+Each browse cycle is directed by one of three signals. The highest-priority
+available signal wins.
+
+```
+1. DEEP DIVE (highest priority)
+   ─────────────────────────────
+   Source: state/reading_url.txt (populated by prefetch_url.js)
+   Trigger:
+     a) Manual: user replies @sebastianhunts with an X link → reading_queue.js queues it
+     b) Auto:   deep_dive_detector.js (runs every 6 cycles) scans browse_notes.md +
+                ontology evidence_log for @handles that appear ≥ 3 times — queues top candidate
+     c) Reply:  reading_queue.js extracts @mentions from reply text → queues as x.com/<handle>
+
+   If URL is an x.com/<handle> profile → agent gets rich instructions:
+     - Read ≥ 8 tweets from the profile
+     - Cross-reference observed positions against ontology axes
+     - Note patterns, tensions, and epistemics
+     - Write a dedicated "DEEP DIVE: @handle" section in browse_notes.md
+
+   If URL is an article/thread → agent reads and journals normally.
+
+   Full browse cycle is consumed by deep dive; curiosity search suppressed.
+
+2. CURIOSITY (normal cycles)
+   ──────────────────────────
+   Source: state/curiosity_directive.txt (written by runner/curiosity.js, every 6 cycles)
+   Trigger: axis uncertainty gain — selects axis with highest evidence-to-confidence gap,
+            skipping axes at confidence ≥ 0.82 and adding a staleness boost for axes
+            not updated in 2+ days.
+
+   Curiosity generates 3 search angles per directive (rotated across cycles):
+     SEARCH_URL_1: main term search (core claim)
+     SEARCH_URL_2: counter-narrative search (challenge the emerging view)
+     SEARCH_URL_3: pole-tension search (left vs right pole of the axis)
+
+   prefetch_url.js rotates through angles using PREFETCH_CYCLE % numAngles,
+   so consecutive curiosity cycles hit different facets of the same question.
+
+   Priority selection within curiosity:
+     a) Discourse counter-argument (someone challenged a specific axis via @reply)
+     b) Uncertainty-gain axis (most evidence potential)
+     c) X Trending keyword (burst detected by collect.js)
+
+3. X TRENDING (fallback)
+   ──────────────────────
+   Source: burst keywords in state/feed_digest.txt (★ TRENDING markers)
+   Used when no deep dive is queued and no curiosity directive is active.
+   Agent browses normally; trending clusters get priority attention.
 ```
 
 ### Browse cycle (×5 of every 6)
@@ -137,6 +190,8 @@ Reads:
   state/browse_notes.md        prior notes from this window
   state/topic_summary.txt      top keywords + topic clusters (last 4h)
   state/feed_digest.txt        scored clustered digest
+  state/reading_url.txt        URL/profile to deep dive (if set)
+  state/curiosity_directive.txt  search direction (if set, no deep dive)
 
 Digest format:
   CLUSTER N · "label" · M posts [· ★ TRENDING]
@@ -155,6 +210,28 @@ Writes:
   state/ontology.json          update if axis-worthy
   state/belief_state.json      update beliefs
 ```
+
+### Axes Development Feedback Loop
+
+```
+Browsing Direction
+       │
+       ▼
+  BROWSE CYCLE
+  (observe → journal → update axes)
+       │
+       ├─→ ontology.json (axes: score, confidence, evidence_log)
+       │                     │
+       │                     ▼
+       └─────────── curiosity.js reads axis state
+                   → picks lowest-confidence high-uncertainty axis
+                   → generates new directive (multi-angle search)
+                   → deep_dive_detector.js checks evidence sources for recurring handles
+                   → both feed back into next browsing direction
+```
+
+The loop is self-reinforcing: browsing adds evidence to axes, which changes
+which axis curiosity selects, which changes what is browsed next.
 
 ### Tweet cycle (every 6th = every 2 hours)
 
@@ -219,16 +296,22 @@ uploaded file from `https://arweave.net/<tx_id>`.
 | `state/feed_buffer.jsonl` | collect.js | collect.js | yes |
 | `state/topic_summary.txt` | query.js | LLM browse | yes |
 | `state/memory_recall.txt` | recall.js | LLM tweet | yes |
-| `state/browse_notes.md` | LLM browse | LLM tweet | no |
+| `state/browse_notes.md` | LLM browse | LLM tweet, deep_dive_detector.js | no |
 | `state/index.db` | collect.js, archive.js | reply.js, recall.js, query.js | yes |
 | `state/reply_queue.jsonl` | collect.js | reply.js | yes |
 | `state/follow_queue.jsonl` | follows.js | follows.js | yes |
 | `state/interactions.json` | reply.js | — | no |
 | `state/trust_graph.json` | follows.js, LLM | collect.js (trust score) | no |
-| `state/arweave_log.json` | archive.js | — | **no** (git-tracked) |
-| `state/ontology.json` | LLM | collect.js (scoring) | no |
+| `state/arweave_log.json` | archive.js, moltbook.js | moltbook.js (journal URL) | **no** (git-tracked) |
+| `state/ontology.json` | LLM | collect.js (scoring), curiosity.js, deep_dive_detector.js | no |
 | `state/belief_state.json` | LLM | LLM | no |
-| `state/posts_log.json` | LLM | — | no |
+| `state/posts_log.json` | post_tweet.js, post_quote.js | archive.js | no |
+| `state/curiosity_directive.txt` | curiosity.js | prefetch_url.js, LLM browse | yes |
+| `state/reading_queue.jsonl` | reading_queue.js, deep_dive_detector.js | prefetch_url.js | no |
+| `state/reading_url.txt` | prefetch_url.js | LLM browse | yes |
+| `state/checkpoint_pending` | moltbook.js | run.sh (retry flag) | yes |
+| `state/drift_state.json` | LLM (CUSUM) | curiosity.js | no |
+| `state/moltbook_state.json` | moltbook.js | moltbook.js (rate limiting) | no |
 
 ---
 
@@ -317,25 +400,42 @@ follow_score = avg_velocity × 0.35
 
 | Component | Technology |
 |---|---|
-| Browser automation | Playwright CDP (connects to existing Chrome, port 18801) |
+| Browser automation | puppeteer-core CDP (connects to existing Chrome, port 18801) |
 | Database | SQLite via `better-sqlite3` — WAL mode, FTS5 full-text search |
-| LLM (browse + tweet) | Claude Sonnet via `openclaw agent` |
+| LLM (browse + tweet) | Gemini 2.5 Flash via `openclaw agent` (fallback: Gemini 2.0 Flash, Claude Sonnet, Ollama qwen2.5:7b) |
 | LLM (reply filter) | Gemini 2.0 Flash via REST API |
-| Permanent storage | Arweave via Irys L2 (SOL-funded, `@irys/sdk`) |
+| LLM (local critique) | Ollama `qwen2.5:7b` — no API cost, post-cycle consistency check |
+| Permanent storage | Arweave via Irys L2 (SOL-funded, `@irys/sdk`) — journals, checkpoints, tweet records |
 | Web frontend | Next.js at sebastianhunter.fun |
-| Orchestration | Bash (`run.sh`, `start.sh`, `stop.sh`) |
+| Orchestration | Bash (`run.sh`, `start.sh`, `stop.sh`); `caffeinate -sd` prevents Mac sleep |
 
 ---
 
-## Known Gap: LLM Navigation
+## Posting Pipeline
 
-The tweet cycle currently instructs the LLM to:
-1. Navigate to `x.com/compose/post` and post the tweet
-2. Run `git add / commit / push`
+The LLM writes drafts; mechanical scripts handle all posting actions.
 
-These are mechanical actions and should be extracted:
-- `runner/post_tweet.js` — reads `state/tweet_draft.txt`, posts via CDP
-- `run.sh` handles git after the agent returns
+```
+LLM tweet cycle writes:
+  state/tweet_draft.txt        → post_tweet.js posts via CDP, logs to posts_log.json
+  state/quote_draft.txt        → post_quote.js posts via CDP, logs to posts_log.json
 
-Until then, the LLM uses browser tools for posting and bash for git.
-The browse agent has no browser navigation responsibilities.
+After posting:
+  runner/moltbook.js           → publishes to Moltbook (social log):
+    - Uploads post record to Arweave (individual markdown doc per tweet/quote)
+    - Includes: journal URL (sebastianhunter.fun) + Arweave TX URL + checkpoint URL
+    - Rate limit: 32-min window enforced; checkpoint_pending flag for retry next cycle
+
+run.sh handles git after all posts:
+  git add / commit / push      (agent has no git access)
+```
+
+## Stability and Recovery
+
+- `caffeinate -sd -w $PID` runs beside the main loop to prevent Mac sleep
+- Post-sleep detection: if `ELAPSED > 2 × BROWSE_INTERVAL` (Mac was asleep),
+  run.sh triggers a browser stop/start before the next cycle
+- `clean_stale_locks()` removes dead-PID lock files each cycle
+- `agent_run()` has a 900s timeout to prevent hung openclaw CLI from blocking forever
+- Session reset every 6 cycles (prevents CDP compaction rate-limit deadlock)
+- Gemini `--thinking low` flag is omitted on retry (different quota path avoids "unknown error")

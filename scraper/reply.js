@@ -133,6 +133,19 @@ function recallForMention(text, limit = 3) {
   }
 }
 
+// ── Helpers ───────────────────────────────────────────────────────────────────
+
+/**
+ * Convert a memory file_path to its public web URL on sebastianhunter.fun.
+ * journals/YYYY-MM-DD_HH.html → https://sebastianhunter.fun/journal/YYYY-MM-DD/HH
+ * Anything else returns null (checkpoints/tweets have no dedicated public page yet).
+ */
+function memoryWebUrl(filePath) {
+  const m = filePath && filePath.match(/^journals\/(\d{4}-\d{2}-\d{2})_(\d{2})\.html$/);
+  if (!m) return null;
+  return `https://sebastianhunter.fun/journal/${m[1]}/${parseInt(m[2], 10)}`;
+}
+
 // ── 4. Gemini: classify + draft with full context ─────────────────────────────
 async function geminiClassify(item, threadContext = [], memoryHints = [], userHistory = null) {
   const apiKey = process.env.GOOGLE_API_KEY_TWEET || process.env.GOOGLE_API_KEY;
@@ -153,7 +166,9 @@ async function geminiClassify(item, threadContext = [], memoryHints = [], userHi
     memoryBlock = "\nYour relevant past thinking (from journals/checkpoints):\n" +
       memoryHints.map(m => {
         const excerpt = (m.text_content || "").replace(/\s+/g, " ").trim().slice(0, 200);
-        return `  [${m.type} · ${m.title} · ${m.date}]\n  "${excerpt}..."`;
+        const webUrl  = memoryWebUrl(m.file_path);
+        const urlLine = webUrl ? `\n  URL: ${webUrl}` : "";
+        return `  [${m.type} · ${m.title} · ${m.date}]${urlLine}\n  "${excerpt}..."`;
       }).join("\n\n") + "\n";
   }
 
@@ -183,6 +198,7 @@ Instructions:
    - No filler phrases ("great question!", "thanks for sharing!", "love this!")
    - Can be a sharp question back, a one-sentence observation, or a brief counterpoint
    - If your memory shows you've said something similar before, push further or reconsider
+   - If the question asks where to find your journals on a topic, include the URL from the memory block (e.g. "sebastianhunter.fun/journal/…")
 
 Respond ONLY with valid JSON, no markdown fences:
 {"verdict":"WORTHY","reply":"your reply text here"}
@@ -196,7 +212,7 @@ or
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         contents: [{ role: "user", parts: [{ text: prompt }] }],
-        generationConfig: { temperature: 0.7, maxOutputTokens: 1024 },
+        generationConfig: { temperature: 0.7, maxOutputTokens: 2048 },
       }),
     }
   );
@@ -224,21 +240,51 @@ async function postReply(page, item, replyText) {
   await new Promise(r => setTimeout(r, 1_000));
 
   // Click the reply button on the first article
-  const replyBtn = await page.$('article[data-testid="tweet"] [data-testid="reply"]');
-  if (!replyBtn) throw new Error("reply button not found on tweet page");
-  await replyBtn.click();
+  // Use evaluate-based click — ElementHandle.click() uses Runtime.callFunctionOn which times out
+  const replyBtnExists = await page.evaluate(() => {
+    const el = document.querySelector('article[data-testid="tweet"] [data-testid="reply"]');
+    if (el) { el.click(); return true; }
+    return false;
+  });
+  if (!replyBtnExists) throw new Error("reply button not found on tweet page");
   await new Promise(r => setTimeout(r, 1_500));
 
-  // Find the reply compose box
-  const compose = await page.waitForSelector('[data-testid="tweetTextarea_0"]', { timeout: 8_000 });
-  await compose.click();
+  // Wait for reply compose box, then click+focus via evaluate
+  const COMPOSE = '[data-testid="tweetTextarea_0"]';
+  await page.waitForSelector(COMPOSE, { timeout: 8_000 });
   await new Promise(r => setTimeout(r, 500));
-  await compose.fill(replyText);
+  await page.evaluate((sel) => {
+    const el = document.querySelector(sel);
+    if (el) el.click();
+  }, COMPOSE);
+  await page.evaluate((sel) => {
+    document.querySelector(sel)?.focus();
+  }, COMPOSE);
+  await new Promise(r => setTimeout(r, 300));
+
+  // Type reply text via keyboard (evaluate-based focus + keyboard.type works for compose boxes)
+  await page.keyboard.type(replyText, { delay: 25 });
+  await new Promise(r => setTimeout(r, 500));
+
+  // Dispatch input/keyup so React registers the typed text and enables Post button
+  await page.evaluate((sel) => {
+    const el = document.querySelector(sel);
+    if (el) {
+      el.dispatchEvent(new Event("input", { bubbles: true }));
+      el.dispatchEvent(new KeyboardEvent("keyup", { bubbles: true }));
+    }
+  }, COMPOSE);
   await new Promise(r => setTimeout(r, 1_000));
 
-  // Post
-  const postBtn = await page.waitForSelector('[data-testid="tweetButton"]:not([disabled])', { timeout: 6_000 });
-  await postBtn.click();
+  // Post — wait for button enabled then click via evaluate
+  const POST_BTN = '[data-testid="tweetButton"], [data-testid="tweetButtonInline"]';
+  await page.waitForSelector(POST_BTN, { timeout: 12_000 });
+  const isDisabled = await page.$eval(POST_BTN, el => el.getAttribute("aria-disabled")).catch(() => null);
+  if (isDisabled === "true") throw new Error("Post button disabled — reply text may not have registered");
+  await page.evaluate((sel) => {
+    const el = document.querySelector(sel);
+    if (el) el.click();
+  }, POST_BTN);
   await new Promise(r => setTimeout(r, 3_000));
 
   console.log(`[reply] posted reply to @${item.from_username}`);
@@ -306,7 +352,7 @@ function logInteraction(data, item, replyText, memoryHints) {
 
   // Load queue — oldest first (FIFO), only pending items
   const queue = readQueue();
-  const pending = queue.filter(i => i.status === "pending").sort((a, b) => a.ts - b.ts);
+  const pending = queue.filter(i => i.status === "pending" || i.status === "error").sort((a, b) => a.ts - b.ts);
   console.log(`[reply] queue: ${pending.length} pending item(s)`);
 
   if (pending.length === 0) { console.log("[reply] nothing to process."); process.exit(0); }

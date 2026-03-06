@@ -39,7 +39,8 @@ const CURIOSITY_EVERY = parseInt(process.env.CURIOSITY_EVERY || "12", 10);
 const EXPIRES_CYCLE  = CURRENT_CYCLE + CURIOSITY_EVERY;
 
 // Axis must have at least this many evidence entries to qualify for curiosity
-const UNCERTAINTY_EVIDENCE_MIN = 2;
+const UNCERTAINTY_EVIDENCE_MIN = 1;
+const CONFIDENCE_CEILING = 0.82; // skip axes already well understood
 
 // ── Active learning gain formula ──────────────────────────────────────────────
 // gain = (1 - confidence) × polarization × recency_decay
@@ -49,6 +50,9 @@ const UNCERTAINTY_EVIDENCE_MIN = 2;
 
 function computeGain(axis) {
   const confidence    = axis.confidence || 0;
+  // Skip axes that are already well-understood — no curiosity value
+  if (confidence >= CONFIDENCE_CEILING) return -1;
+
   const absscore      = Math.abs(axis.score || 0);
   const polarization  = 0.3 + 0.7 * absscore;
 
@@ -56,7 +60,10 @@ function computeGain(axis) {
   const ageDays       = (Date.now() - lastUpdated.getTime()) / 86_400_000;
   const recencyDecay  = Math.exp(-ageDays / 14);
 
-  return (1 - confidence) * polarization * recencyDecay;
+  // Staleness boost: axes not updated in 2+ days get extra weight (revisit neglected questions)
+  const stalenessBoost = ageDays > 2 ? 1 + Math.min(ageDays / 7, 1.0) : 1;
+
+  return (1 - confidence) * polarization * recencyDecay * stalenessBoost;
 }
 
 // ── Ontology readers ──────────────────────────────────────────────────────────
@@ -135,6 +142,46 @@ async function callOllama(prompt) {
 function toSlug(str) {
   return str.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "").slice(0, 40);
 }
+const STOP_POLE = new Set(["of","and","in","the","a","an","for","to","vs","or","with","at","by","from","on","is","are","was","were","be","been","has","have","that","this","it","but","not","more","less","over","their","its","will","can","do","does"]);
+
+function poleKeywords(poleText, max = 2) {
+  return (poleText || "")
+    .replace(/[^a-zA-Z0-9 ]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .split(" ")
+    .filter(w => w.length > 3 && !STOP_POLE.has(w.toLowerCase()))
+    .slice(0, max)
+    .join(" ");
+}
+
+// Build search angles for a topic: main + counter-pole + pole-tension
+function buildSearchAngles(mainTerms, leftPole, rightPole) {
+  const angles = [];
+
+  // Angle 1: main terms (already clean)
+  angles.push(`https://x.com/search?q=${encodeURIComponent(mainTerms)}&f=live`);
+
+  // Angle 2: counter angle — use left pole keywords (skeptical / critical perspective)
+  if (leftPole) {
+    const counterTerms = poleKeywords(leftPole, 3) || `${mainTerms.split(" ")[0]} criticism`;
+    angles.push(`https://x.com/search?q=${encodeURIComponent(counterTerms)}&f=live`);
+  } else {
+    // No pole available — prefix main terms with "not" for opposition
+    const counterTerms = `${mainTerms.split(" ").slice(0, 2).join(" ")} NOT`;
+    angles.push(`https://x.com/search?q=${encodeURIComponent(mainTerms + " debate")}&f=live`);
+  }
+
+  // Angle 3: right pole keywords (affirmative perspective)
+  if (rightPole) {
+    const poleTension = poleKeywords(rightPole, 3) || mainTerms;
+    angles.push(`https://x.com/search?q=${encodeURIComponent(poleTension)}&f=live`);
+  }
+
+  return angles;
+}
+
+
 
 // ── Log ───────────────────────────────────────────────────────────────────────
 
@@ -199,6 +246,8 @@ function markAnchorProcessed(postId) {
 
     const theirExcerpt = (discourseAnchor.their_text || "").slice(0, 180).replace(/\n/g, " ");
 
+    const discourseAngles = buildSearchAngles(searchTerms, null, null);
+    const allAngleLines = discourseAngles.map((u, i) => `  SEARCH_URL_${i + 1}: ${u}`).join("\n");
     const lines = [
       `── curiosity directive · ${tsHuman} ${HR.slice(tsHuman.length + 25)}`,
       `RESEARCH FOCUS: Discourse challenge — "${discourseAnchor.topic || "see below"}"`,
@@ -208,9 +257,9 @@ function markAnchorProcessed(postId) {
       `  Summary: ${discourseAnchor.summary}`,
       `  This is an invitation to reconsider, not just defend.`,
       ``,
-      `ACTIVE SEARCH (do this once on the current cycle):`,
-      `  Navigate: ${searchUrl}`,
-      `  Read 3-5 posts. Look for evidence on BOTH sides of this question.`,
+      `ACTIVE SEARCH (rotates each cycle — prefetch picks automatically):`,
+      allAngleLines,
+      `  Read 3-5 posts per cycle. Look for evidence on BOTH sides of this question.`,
       `  Are you finding anything that shifts your view?`,
       ``,
       `AMBIENT FOCUS (all browse cycles until directive refreshes):`,
@@ -251,20 +300,26 @@ function markAnchorProcessed(postId) {
     const gain          = axis._gain || 0;
 
     // Build search terms: prefer axis.topics (clean keywords set by agent),
-    // then axis label (short, readable), never the full pole strings (too long).
+    // then axis label — strip stop words and take at most 3 significant words.
+    const STOP = new Set(["of","and","in","the","a","an","for","to","vs","or","with","at","by","from","on","its","their","our","is","are","was","were","be","been","has","have","had","that","this","it","as","but","not","so","if","then","than","over","under","via","per","vs."]);
     const topicWords = (axis.topics || []).filter(t => t && t.trim());
     let searchTerms;
     if (topicWords.length >= 1) {
       searchTerms = topicWords.slice(0, 2).join(" ");
     } else {
-      // Use axis label, capped at 5 words
+      // Extract significant words from axis label (skip stop words, max 3)
       searchTerms = (axis.label || "")
         .replace(/[^a-zA-Z0-9 ]/g, " ")
         .replace(/\s+/g, " ")
         .trim()
         .split(" ")
-        .slice(0, 5)
+        .filter(w => w.length > 2 && !STOP.has(w.toLowerCase()))
+        .slice(0, 3)
         .join(" ");
+      // Final fallback: first 3 raw words if filtering left nothing
+      if (!searchTerms.trim()) {
+        searchTerms = (axis.label || "").split(" ").slice(0, 3).join(" ");
+      }
     }
 
     const searchUrl  = `https://x.com/search?q=${encodeURIComponent(searchTerms)}&f=live`;
@@ -273,14 +328,16 @@ function markAnchorProcessed(postId) {
       ? `refreshes at cycle ${EXPIRES_CYCLE}`
       : `refreshes in ~${CURIOSITY_EVERY} cycles`;
 
+    const axisAngles = buildSearchAngles(searchTerms, axis.left_pole, axis.right_pole);
+    const axisAngleLines = axisAngles.map((u, i) => `  SEARCH_URL_${i + 1}: ${u}`).join("\n");
     const lines = [
       `── curiosity directive · ${tsHuman} ${HR.slice(tsHuman.length + 25)}`,
       `RESEARCH FOCUS: "${axis.label}"`,
       `  Why: Uncertain belief axis — ${(confidence * 100).toFixed(0)}% confidence, ${evidenceCount} evidence entries`,
       `  Axis: "${axis.left_pole}" ↔ "${axis.right_pole}"`,
       ``,
-      `ACTIVE SEARCH (do this once on the current cycle):`,
-      `  Navigate: ${searchUrl}`,
+      `ACTIVE SEARCH (rotates each cycle — prefetch picks automatically):`,
+      axisAngleLines,
       `  Read top 3-5 posts. Note anything that confirms or contradicts your current`,
       `  position on this axis. Be open to evidence that shifts you either direction.`,
       ``,
@@ -375,13 +432,15 @@ Reply with ONLY the number (1-${top.length}) of your choice. Nothing else.`;
     ? `refreshes at cycle ${EXPIRES_CYCLE}`
     : `refreshes in ~${CURIOSITY_EVERY} cycles`;
 
+  const trendAngles = buildSearchAngles(chosen.keyword, null, null);
+  const trendAngleLines = trendAngles.slice(0, 2).map((u, i) => `  SEARCH_URL_${i + 1}: ${u}`).join("\n");
   const lines = [
     `── curiosity directive · ${tsHuman} ${HR.slice(tsHuman.length + 25)}`,
     `RESEARCH FOCUS: "${chosen.keyword}"`,
     `  Why: Trending topic — ${chosen.count} posts in last 4h, avg score ${chosen.avg_score?.toFixed(1) ?? "?"}`,
     ``,
-    `ACTIVE SEARCH (do this once on the current cycle):`,
-    `  Navigate: ${searchUrl}`,
+    `ACTIVE SEARCH (rotates each cycle — prefetch picks automatically):`,
+    trendAngleLines,
     `  Read top 3-5 posts. Note the different angles and positions people are taking.`,
     ``,
     `AMBIENT FOCUS (all browse cycles until directive refreshes):`,
