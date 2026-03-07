@@ -222,7 +222,9 @@ function scanDir(dir, pattern) {
       });
       uploaded++;
       console.log(`[archive] uploaded to Arweave: https://gateway.irys.xyz/${txId}`);
+      return true;
     }
+    return false;
   }
 
   // ── Process journals ───────────────────────────────────────────────────────
@@ -231,8 +233,29 @@ function scanDir(dir, pattern) {
     const relPath = path.relative(ROOT, filePath);
     const existing = db.getMemoryByPath(relPath);
     if (existing) {
-      // Already indexed — retry upload if tx_id still null and Irys is funded
-      if (!existing.tx_id && irys) await tryUpload(irys, filePath, relPath, existing);
+      if (!existing.tx_id && irys) {
+        // No tx_id yet — attempt upload
+        const ok = await tryUpload(irys, filePath, relPath, existing);
+        if (ok) try { fs.chmodSync(filePath, 0o444); } catch { /* ignore */ }
+      } else if (existing.tx_id) {
+        // Already uploaded — check for post-upload modification (duplicate-process overwrite)
+        const fileMtime = fs.statSync(filePath).mtimeMs;
+        const driftMs = fileMtime - existing.indexed_at;
+        if (driftMs > 30_000) {
+          console.warn(`[archive] mtime drift on ${path.basename(filePath)} (+${Math.round(driftMs/1000)}s) — file modified after indexing, re-uploading`);
+          const parsed = parseJournal(filePath, relPath);
+          const keywords = extractKeywords(parsed.text_content, 10).join(", ");
+          db.raw().prepare("UPDATE memory SET text_content=?, keywords=?, indexed_at=? WHERE file_path=?")
+            .run(parsed.text_content, keywords, Date.now(), relPath);
+          if (irys) {
+            const ok = await tryUpload(irys, filePath, relPath, parsed);
+            if (ok) try { fs.chmodSync(filePath, 0o444); } catch { /* ignore */ }
+          }
+        } else {
+          // Content is consistent with upload — lock the file down
+          try { fs.chmodSync(filePath, 0o444); } catch { /* ignore */ }
+        }
+      }
       continue;
     }
     const parsed = parseJournal(filePath, relPath);
@@ -240,7 +263,10 @@ function scanDir(dir, pattern) {
     db.insertMemory({ ...parsed, keywords, indexed_at: Date.now() });
     indexed++;
     console.log(`[archive] indexed journal: ${parsed.title}`);
-    if (irys) await tryUpload(irys, filePath, relPath, parsed);
+    if (irys) {
+      const ok = await tryUpload(irys, filePath, relPath, parsed);
+      if (ok) try { fs.chmodSync(filePath, 0o444); } catch { /* ignore */ }
+    }
   }
 
   // ── Process checkpoints ────────────────────────────────────────────────────

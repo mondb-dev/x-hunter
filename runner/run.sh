@@ -14,21 +14,31 @@
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
-# ── Singleton guard — kill any prior runner before starting ───────────────────
+# ── Singleton guard — atomic lock directory (mkdir is POSIX-atomic) ───────────
+# mkdir succeeds only once even under concurrent starts, preventing duplicate runners.
+LOCKDIR="$PROJECT_ROOT/runner/run.lock"
 PIDFILE="$PROJECT_ROOT/runner/run.pid"
-if [ -f "$PIDFILE" ]; then
-  OLD_PID=$(cat "$PIDFILE" 2>/dev/null || echo "")
+
+if mkdir "$LOCKDIR" 2>/dev/null; then
+  echo $$ > "$LOCKDIR/pid"
+else
+  OLD_PID=$(cat "$LOCKDIR/pid" 2>/dev/null || echo "")
   if [ -n "$OLD_PID" ] && kill -0 "$OLD_PID" 2>/dev/null; then
-    echo "[run] killing prior runner (pid $OLD_PID)..."
-    kill "$OLD_PID" 2>/dev/null
-    sleep 2
-    kill -9 "$OLD_PID" 2>/dev/null || true
+    echo "[run] Another instance is already running (pid $OLD_PID). Exiting."
+    exit 1
   fi
+  # Stale lock (process died without cleanup) — reclaim it
+  echo "[run] Removing stale lock (pid ${OLD_PID:-unknown} is dead)..."
+  rm -rf "$LOCKDIR"
+  mkdir "$LOCKDIR" || { echo "[run] Failed to acquire lock. Exiting."; exit 1; }
+  echo $$ > "$LOCKDIR/pid"
 fi
-# Kill any stale scraper loops left over from prior runner (trap doesn't fire on SIGKILL)
-bash "$PROJECT_ROOT/scraper/stop.sh" 2>/dev/null || true
+# Keep run.pid for external monitoring compatibility
 echo $$ > "$PIDFILE"
-trap 'rm -f "$PIDFILE"' EXIT
+trap 'rm -rf "$LOCKDIR"; rm -f "$PIDFILE"' EXIT
+
+# Kill any stale scraper loops left over from prior runner (trap does not fire on SIGKILL)
+bash "$PROJECT_ROOT/scraper/stop.sh" 2>/dev/null || true
 
 # ── Load env ──────────────────────────────────────────────────────────────────
 if [ -f "$PROJECT_ROOT/.env" ]; then
