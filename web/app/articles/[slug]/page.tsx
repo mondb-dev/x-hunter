@@ -21,14 +21,20 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             Focus: {article.axis}
           </div>
         )}
-        {article.arweaveUrl && (
-          <div style={{ fontSize: "11px", color: "var(--muted)", marginTop: "0.4rem" }}>
+        <div style={{ fontSize: "11px", color: "var(--muted)", marginTop: "0.5rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+          {article.moltbookUrl && (
+            <a href={article.moltbookUrl} target="_blank" rel="noopener noreferrer"
+               style={{ color: "var(--muted)", textDecoration: "underline" }}>
+              read on Moltbook →
+            </a>
+          )}
+          {article.arweaveUrl && (
             <a href={article.arweaveUrl} target="_blank" rel="noopener noreferrer"
                style={{ color: "var(--muted)", textDecoration: "underline" }}>
               permanent record on Arweave →
             </a>
-          </div>
-        )}
+          )}
+        </div>
       </div>
 
       <div

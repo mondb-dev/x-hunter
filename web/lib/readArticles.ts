@@ -13,6 +13,7 @@ export interface Article {
   content: string;
   contentHtml: string;
   arweaveUrl?: string;
+  moltbookUrl?: string;
 }
 
 const ARTICLES_DIR  = path.join(DATA_ROOT, "articles");
@@ -59,6 +60,7 @@ export function getAllArticles(): Article[] {
         content,
         contentHtml: "",
         arweaveUrl: arweave.get(date),
+        moltbookUrl: data.moltbook ?? undefined,
       };
     });
 }
@@ -81,5 +83,6 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
     content,
     contentHtml: processed.toString(),
     arweaveUrl: arweave.get(date),
+    moltbookUrl: data.moltbook ?? undefined,
   };
 }
