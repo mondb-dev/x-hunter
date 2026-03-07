@@ -38,6 +38,7 @@ const ROOT          = path.resolve(__dirname, "..");
 const JOURNALS_DIR  = path.join(ROOT, "journals");
 const CHECKPOINTS_DIR = path.join(ROOT, "checkpoints");
 const DAILY_DIR     = path.join(ROOT, "daily");
+const ARTICLES_DIR  = path.join(ROOT, "articles");
 const ARWEAVE_LOG   = path.join(ROOT, "state", "arweave_log.json");
 
 // ── HTML text extraction ──────────────────────────────────────────────────────
@@ -276,6 +277,31 @@ function scanDir(dir, pattern) {
     if (irys) await tryUpload(irys, filePath, relPath, parsed);
   }
 
+  // ── Process articles ───────────────────────────────────────────────────────
+  const articleFiles = scanDir(ARTICLES_DIR, /^\d{4}-\d{2}-\d{2}\.md$/);
+  for (const filePath of articleFiles) {
+    const relPath = path.relative(ROOT, filePath);
+    const existing = db.getMemoryByPath(relPath);
+    if (existing) {
+      if (!existing.tx_id && irys) await tryUpload(irys, filePath, relPath, existing);
+      continue;
+    }
+    const fname = path.basename(filePath, ".md");
+    const dateMatch = fname.match(/(\d{4}-\d{2}-\d{2})/);
+    const date = dateMatch ? dateMatch[1] : "unknown";
+    const raw = fs.readFileSync(filePath, "utf-8");
+    // Strip frontmatter for indexing
+    const text = raw.replace(/^---[\s\S]*?---\n?/, "").trim();
+    const titleMatch = raw.match(/^title:\s*"?(.+?)"?\s*$/m);
+    const title = titleMatch ? titleMatch[1] : `Article ${date}`;
+    const parsed = { type: "article", date, hour: null, title, text_content: text, file_path: relPath };
+    const keywords = extractKeywords(text, 10).join(", ");
+    db.insertMemory({ ...parsed, keywords, indexed_at: Date.now() });
+    indexed++;
+    console.log(`[archive] indexed article: ${title}`);
+    if (irys) await tryUpload(irys, filePath, relPath, parsed);
+  }
+
   // ── Index tweets from posts_log.json ──────────────────────────────────────
   const postsLogPath = path.join(ROOT, "state", "posts_log.json");
   if (fs.existsSync(postsLogPath)) {
@@ -308,6 +334,10 @@ function scanDir(dir, pattern) {
     if (newTweets) console.log(`[archive] indexed ${newTweets} new tweet(s) from posts_log.json`);
   }
 
+  // Ensure FTS5 indexes are in sync after all inserts
+  if (indexed > 0 && db.rebuildFtsIfNeeded()) {
+    console.log("[archive] FTS5 indexes rebuilt (were out of sync)");
+  }
   console.log(`[archive] done. indexed=${indexed}, uploaded=${uploaded}`);
   process.exit(0);
 })();
