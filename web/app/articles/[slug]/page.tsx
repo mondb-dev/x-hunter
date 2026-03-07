@@ -21,6 +21,14 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             Focus: {article.axis}
           </div>
         )}
+        {article.arweaveUrl && (
+          <div style={{ fontSize: "11px", color: "var(--muted)", marginTop: "0.4rem" }}>
+            <a href={article.arweaveUrl} target="_blank" rel="noopener noreferrer"
+               style={{ color: "var(--muted)", textDecoration: "underline" }}>
+              permanent record on Arweave →
+            </a>
+          </div>
+        )}
       </div>
 
       <div
