@@ -64,7 +64,7 @@ async function callGemini(prompt) {
   const model = "gemini-2.5-flash";
   const body = JSON.stringify({
     contents: [{ parts: [{ text: prompt }] }],
-    generationConfig: { temperature: 0.7, maxOutputTokens: 2000 },
+    generationConfig: { temperature: 0.7, maxOutputTokens: 4000 },
   });
 
   return new Promise((resolve, reject) => {
