@@ -492,84 +492,9 @@ async function postFromTweet() {
   }
 }
 
-// ── Post quote-tweet content to Moltbook ──────────────────────────────────────
-const QUOTE_DRAFT = path.join(__dirname, "..", "state", "quote_draft.txt");
-
+// postFromQuote removed — Moltbook receives articles only (not quote mirrors)
 async function postFromQuote() {
-  const state = loadState();
-
-  // Rate limit check (shared with postFromTweet)
-  if (state.last_post_at) {
-    const elapsed = Date.now() - new Date(state.last_post_at).getTime();
-    if (elapsed < MIN_POST_INTERVAL_MS) {
-      const wait = Math.ceil((MIN_POST_INTERVAL_MS - elapsed) / 60000);
-      console.log(`[moltbook] rate limit: last post was ${Math.floor(elapsed / 60000)}m ago, need ${wait}m more`);
-      return;
-    }
-  }
-
-  if (!fs.existsSync(QUOTE_DRAFT)) {
-    console.log("[moltbook] no quote_draft.txt — skipping post");
-    return;
-  }
-
-  const draft = fs.readFileSync(QUOTE_DRAFT, "utf-8").trim();
-  if (!draft) {
-    console.log("[moltbook] quote draft is empty — skipping post");
-    return;
-  }
-
-  // quote_draft.txt format:
-  //   Line 1: source tweet URL
-  //   Lines 2+: quote commentary text
-  const lines = draft.split("\n");
-  const sourceUrl = lines[0].trim();
-  const commentary = lines.slice(1).join("\n").trim();
-
-  if (!commentary) {
-    console.log("[moltbook] no commentary in quote_draft.txt — skipping post");
-    return;
-  }
-
-  // Build title from first sentence of commentary (max 120 chars)
-  const firstSentence = commentary.split(/[.!?]/)[0].trim();
-  const title = firstSentence.length > 120 ? firstSentence.slice(0, 117) + "..." : firstSentence;
-
-  const journalUrl = latestJournalWebUrl();
-  const checkpointUrl = latestCheckpointArweave();
-  const today = new Date().toISOString().slice(0, 10);
-
-  // Build Arweave record and upload
-  const record = [
-    `# Sebastian D. Hunter — Quote Tweet`,
-    ``,
-    `**Date:** ${today}`,
-    `**In response to:** ${sourceUrl}`,
-    journalUrl ? `**Journal:** ${journalUrl}` : null,
-    ``,
-    commentary,
-  ].filter((l) => l !== null).join("\n");
-  const arweaveUrl = await uploadPostRecord(record, "post", today);
-
-  // Body: commentary + source + journal + arweave + checkpoint
-  const links = [
-    `In response to: ${sourceUrl}`,
-    journalUrl ? `Journal: ${journalUrl}` : null,
-    arweaveUrl ? `Permanent record (Arweave): ${arweaveUrl}` : null,
-    checkpointUrl ? `Belief checkpoint: ${checkpointUrl}` : null,
-  ].filter(Boolean).join("\n");
-  const body = `${commentary}\n\n${links}`;
-
-  const submolt = pickSubmolt(commentary);
-  console.log(`[moltbook] posting quote to m/${submolt}: "${title.slice(0, 60)}..."`);
-
-  const post = await createPost(submolt, title, body);
-  if (post) {
-    state.last_post_at = new Date().toISOString();
-    saveState(state);
-    const postUrl = `https://www.moltbook.com/post/${post.id || ""}`;
-    console.log(`[moltbook] quote post live: ${postUrl}`);
-  }
+  console.log("[moltbook] --post-quote is disabled (Moltbook receives articles only)");
 }
 
 // ── Intro post ────────────────────────────────────────────────────────────────
