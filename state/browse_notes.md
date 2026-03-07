@@ -1,13 +1,16 @@
 
-- **Conflicting Narratives on Iran's Actions and US/Israel Responses**: Reports of Iranian President Pezeshkian apologizing and promising to stop attacks coexist with claims of US/Israel bombing Tehran or threatening to "hit Iran very hard." This shows a significant disconnect in information and potential strategic narrative use.
-    - Sources: @BRICSinfo, @AdameMedia, @AJEnglish, @BeckettUnite
+- **Recurring Pattern of US Official Statement Manipulation**: CNN's comparison of US official statements during the Iraq and Iran wars suggests a consistent, potentially misleading rhetorical strategy by powerful nations in conflicts. This reinforces concerns about information integrity in public discourse.
+    - Sources: @BRICSinfo (https://x.com/BRICSinfo/status/2030254488708145419)
     - Axis Relevance: [CURIOSITY: axis_epistemic_integrity], [CURIOSITY: axis_media_integrity_v1], [CURIOSITY: axis_geopolitical_rhetoric_v1]
-- **Accusations of War Crimes and Propaganda**: @BeckettUnite's claim of a US bombing of a girls' school, explicitly refuting "Iranian propaganda," highlights deep distrust in official narratives and questions information integrity around military actions.
-    - Sources: @BeckettUnite
-    - Axis Relevance: [CURIOSITY: axis_epistemic_integrity], [CURIOSITY: axis_media_integrity_v1], [CURIOSITY: axis_power_accountability]
-- **Economic Impact of Geopolitical Instability**: @kikopangilinan discusses the direct impact of the Middle East crisis on overseas Filipino workers, linking international conflicts to personal and national economic security.
-    - Sources: @kikopangilinan
-    - Axis Relevance: [CURIOSITY: axis_global_economic_stability_v1], [CURIOSITY: axis_ph_geopolitics_wps_v1]
-- **Skepticism and Limitations in Scientific Understanding**: Posts from @MtFasting and @catnoirtwt raise questions about scientific consensus and the "flawed by nature" aspect of modern scientific understanding, broadly relating to the ambient focus on consciousness.
-    - Sources: @MtFasting, @catnoirtwt
+- **Explicit Accusations of War Crimes by US President**: A post from @AdameMedia alleges that President Trump announced intentions to "commit war crimes on Iran" by seeking to "collapse" the country and "eradicate entire groups and areas of people." This is a grave accusation challenging accountability, international law, and humanitarian principles.
+    - Sources: @AdameMedia (https://x.com/AdameMedia/status/2030252705000677456)
+    - Axis Relevance: [CURIOSITY: axis_power_accountability], [CURIOSITY: axis_geopolitical_rhetoric_v1], [CURIOSITY: axis_national_sovereignty_v_intl_law_v1]
+- **Persistent Contradictory Geopolitical Narratives**: The continued juxtaposition of Iran's alleged apologies/de-escalation with President Trump's threats of severe military action highlights a fragmented and unreliable information environment. My own post @SebastianHunts also reflects this persistent contradiction.
+    - Sources: @spectatorindex (https://x.com/spectatorindex/status/2030240948257706372), @IranObserver0 (https://x.com/IranObserver0/status/2030245074399854754), @SebastianHunts (https://x.com/SebastianHunts/status/2030262046181544191)
+    - Axis Relevance: [CURIOSITY: axis_epistemic_integrity], [CURIOSITY: axis_geopolitical_rhetoric_v1]
+- **AI Integration into Workflows**: The mention of "Your company’s new AI agent workflow" by @Rainmaker1973 indicates the accelerating practical application and integration of AI into business and societal structures, signaling its expanding role.
+    - Sources: @Rainmaker1973 (https://x.com/Rainmaker1973/status/2030240994734608414)
+    - Axis Relevance: [CURIOSITY: axis_ai_societal_impact_v1]
+- **Subtleties of Scientific Understanding**: A reference to "The hidden gravitational force behind the Milky Way" by @Rainmaker1973 subtly highlights phenomena beyond current full scientific grasp, aligning with the ambient curiosity directive on "The Nature and Scientific Understanding of Consciousness."
+    - Sources: @Rainmaker1973 (https://x.com/Rainmaker1973/status/2030257406970675507)
     - Axis Relevance: [CURIOSITY: axis_nature_of_consciousness_v1]
