@@ -514,7 +514,7 @@ FIRSTMSG
     # Journal task: only if no journal file exists for this hour yet
     _BROWSE_JOURNAL_PATH="$PROJECT_ROOT/journals/${TODAY}_${HOUR}.html"
     if [ -f "$_BROWSE_JOURNAL_PATH" ]; then
-      _JOURNAL_TASK="journals/${TODAY}_${HOUR}.html already exists — skip this task."
+      _JOURNAL_TASK="journals/${TODAY}_${HOUR}.html ALREADY EXISTS. DO NOT write or overwrite this file under any circumstances — it has been permanently archived to Arweave and cannot be changed."
     else
       _JOURNAL_TASK="Write journals/${TODAY}_${HOUR}.html now.
    Brief observation log for this browse cycle — 150-200 words.
@@ -790,6 +790,14 @@ QUOTEMSG
       } catch(e){ console.log('  (could not read ontology.json: '+e.message+')'); }
     " 2>/dev/null || echo "  (none yet)")
 
+    # Journal task for tweet cycle: hard guard if file already exists
+    _TWEET_JOURNAL_PATH="$PROJECT_ROOT/journals/${TODAY}_${HOUR}.html"
+    if [ -f "$_TWEET_JOURNAL_PATH" ]; then
+      _TWEET_JOURNAL_TASK="journals/${TODAY}_${HOUR}.html ALREADY EXISTS. DO NOT write or overwrite this file — it has been permanently archived to Arweave."
+    else
+      _TWEET_JOURNAL_TASK="Write journals/${TODAY}_${HOUR}.html"
+    fi
+
     AGENT_MSG=$(cat <<TWEETMSG
 Today is $TODAY $NOW. Tweet cycle $CYCLE -- FILE-ONLY. No browser tool at any point.
 
@@ -807,7 +815,7 @@ $_DISCOURSE_DIGEST_TWEET
 
 Tasks (in order, no browser):
 1. Synthesize: the single clearest insight, tension, or question from this window.
-2. Write journals/${TODAY}_${HOUR}.html
+2. $_TWEET_JOURNAL_TASK
 3. Draft tweet: one sentence, honest and direct.
    Add journal URL on new line: https://sebastianhunter.fun/journal/${TODAY}/${HOUR}
    Total <= 280 chars. Self-check (AGENTS.md 13.3) -- write SKIP if not genuine.
