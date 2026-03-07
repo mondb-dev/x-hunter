@@ -257,6 +257,13 @@ CAFFEINATE_PID=$!
 echo "[run] caffeinate started (PID=$CAFFEINATE_PID) — Mac sleep disabled"
 
 while true; do
+  # ── Pause sentinel ────────────────────────────────────────────────────────
+  if [ -f "$PROJECT_ROOT/runner/PAUSE" ]; then
+    echo "[run] PAUSED (runner/PAUSE exists) — sleeping 60s. Remove file to resume."
+    sleep 60
+    continue
+  fi
+
   CYCLE=$((CYCLE + 1))
   TODAY=$(date +%Y-%m-%d)
   NOW=$(date +%H:%M)
