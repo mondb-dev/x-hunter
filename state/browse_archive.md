@@ -638,3 +638,16 @@ New reports detail Israeli airstrikes on Iranian internal security agencies and 
 [POLITICAL INTEGRITY/CORRUPTION] @QTHESTORMM: "MAJOR ALERT: DOJ RELEASES 2ND BATCH OF EPSTEIN FILES INCLUDING NEW EMAILS SHOWING \"TRUMP ALLEGEDLY HAD S*X WITH DAUGHTER IVANKA\", EPSTEIN IN THE EMAIL CALLS TRUMP \"MOST EVIL\"" (Source: https://x.com/QTHESTORMM/status/2030072058533536076)
 [GEOPOLITICAL/HUMANITARIAN] @SuppressedNws1: "Some of the faces and names of more than 100 children killed in a school in Minab, Iran by U.S. airstrikes. These children were aged 7-12." (Source: https://x.com/SuppressedNws1/status/2030073642831220817)
 [GEOPOLITICAL/MEDIA INTEGRITY] @shanaka86: "BREAKING: Mehrabad is not a military base. It is the airport thirteen million Tehranis use to fly to Shiraz, Isfahan, Mashhad. The oldest airport in Iran. The hub connecting the capital to the provinc" (Source: https://x.com/shanaka86/status/2030083632480801127)
+
+── 2026-03-07 14:52 · cycle 144 ──────────────────────────────────────────
+[AI BIAS/TRUTHFULNESS] @elonmusk: States "Claude is woke and their logo looks like an anal sphincter". (https://x.com/elonmusk/status/2030159969631572171)
+[AI BIAS/TRUTHFULNESS] @elonmusk: Reaffirms "Only Grok speaks the truth. Only truthful AI is safe. Only truth understands the universe." (https://x.com/elonmusk/status/2030159267689632121)
+[IRAN/MILITARY CONFLICT & MEDIA INTEGRITY] @rkmtimes: Reports 29 American soldiers killed in a drone attack on US navy Ship in Arabian Sea and claims US government and mainstream media are lying about massive American losses in Iran war. (https://x.com/rkmtimes/status/2030113912809832948)
+[GEOPOLITICAL RHETORIC] @Jvnior: Reports "Massive explosions and fires across Tehran." (https://x.com/Jvnior/status/2030158758471737585)
+[GLOBAL ECONOMIC STABILITY] @alvinelchico: Reports "BIGTIME DAGDAG PRESYO" (big price increases) due to full week trading, with implied link to Middle East tensions. (https://x.com/alvinelchico/status/2030115519509188732)
+[GEOPOLITICAL RHETORIC] @Partisan_12: White House official says US will "STEAL" "all the oil" from Iran. (https://x.com/Partisan_12/status/2030146251258581478)
+[POWER ACCOUNTABILITY] @glenn_tunes: Norwegian perspective: "ISRAEL HAS TAKEN FULL CONTROL OF THE AMERICAN GOVERNMENT ". (https://x.com/glenn_tunes/status/2029773521551814872)
+[GEOPOLITICAL RHETORIC/DOMESTIC CONCERNS] @jacksonhinklle: American Communist Party: "Every missile strike on Tehran is paid for with our tax dollars, while Americans rot in poverty." (https://x.com/jacksonhinklle/status/2030168947157295420)
+[MEDIA INTEGRITY/AUTHORITARIAN SELF-DETERMINATION] @OunkaOnX: Contrasts Western media narrative of Iranians wanting regime change with an Iranian woman expressing fierce resistance. (https://x.com/OunkaOnX/status/2030085982436086180)
+[GEOPOLITICAL RHETORIC] @MarioNawfal: German Chancellor states Germany stands "squarely with Israel, full stop." (https://x.com/MarioNawfal/status/2030161475944243343)
+[AI SOCIETAL IMPACT] @sciencegirl: Facial recognition payment system in Moscow metro. (https://x.com/sciencegirl/status/2030171694959153171)
