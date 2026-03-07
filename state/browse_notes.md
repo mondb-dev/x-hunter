@@ -1,0 +1,14 @@
+
+
+-- BROWSE NOTES (current cycle) --
+[GEOPOLITICAL TENSION] @jacksonhinklle: "BREAKING: Visual confirmation of impact in Tel Aviv" (Source: https://x.com/jacksonhinklle/status/2030057551920783621)
+[GEOPOLITICAL TENSION] @EricLDaugh: "JUST IN: There was reportedly just a MASSIVE strike on Tehran’s Mehrabad Airport, MASSIVE plumes of smoke spotted after explosions US and Israel are continuing to decimate key regime infrastructure" (Source: https://x.com/EricLDaugh/status/2030064205349441577)
+[GEOPOLITICAL TENSION] @MarioNawfal: "Two kamikaze drones reportedly struck a U.S. company at the Burjesia oil complex in Basra, Iraq. A third hit the Rumaila oil field where BP operates. Iran's proxies are now going after oil infrastru" (Source: https://x.com/MarioNawfal/status/2030059501416488999)
+[GEOPOLITICAL TENSION] @FoxNews: "FOX NEWS REPORT: CENTCOM says the U.S. has struck more than 3,000 regime targets as President Trump calls for Iran’s “unconditional surrender,” @BillMelugin_ reports." (Source: https://x.com/FoxNews/status/2030072345080308148)
+[GEOPOLITICAL TENSION] @krassenstein: "TRUMP VASTLY MISCALCULATED - Iran knows that if they shut off oil in the Gulf, they destroy our economy. They can keep doing this with little effort using drones. - China 'may be preparing to provide" (Source: https://x.com/krassenstein/status/2030005273075618171)
+[POLITICAL RHETORIC] @EdKrassen: "Trump really said it was a "stupid question" to ask about Russia helping Iran target and potentially kill Americans. Peter Doocy: "It sounds like the Russians are helping Iran target and attack Americ" (Source: https://x.com/EdKrassen/status/2030060010819182726)
+[POLITICAL RHETORIC] @krassenstein: "MAJOR BREAKING: Trump has privately expressed serious interest in deploying U.S. troops on the ground inside of Iran according to NBC." (Source: https://x.com/krassenstein/status/2030067796516724892)
+[DOMESTIC CONCERNS] @ug_chelsea: "Iranian missiles have a free sky without that iron scrap in Tel Aviv" (Source: https://x.com/ug_chelsea/status/2030021080451014681)
+[DOMESTIC CONCERNS] @EdKrassen: "BREAKING: Donald Trump really just claimed people are “walking around without legs.” He is delusional! 25th Amendment now!" (Source: https://x.com/EdKrassen/status/2030073337989263514)
+[DOMESTIC CONCERNS] @rawsalerts: "#BREAKING: Watch as Fights and Jake Lang interrupt a vigil for Ayatollah Ali Khamenei at arriving in a Uhal van while holding a goat and shouting that Muslims must get out. #Manhattan | #NewYork Watc" (Source: https://x.com/rawsalerts/status/2030075277729034450)
+[DOMESTIC CONCERNS] @mattvanswol: "#BREAKING: An incredibly bizarre scene is emerging along the Outer Banks of North Carolina. Thousands of dead fish have mysteriously just washed up along the shore of Corolla Beach." (Source: https://x.com/mattvanswol/status/2030078864551022942)
