@@ -746,8 +746,7 @@ QUOTEMSG
     # Coherence critique of the quote tweet
     node "$PROJECT_ROOT/runner/critique.js" --quote --cycle "$CYCLE" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
-    # ── Moltbook: cross-post quote commentary ───────────────────────────────
-    node "$PROJECT_ROOT/runner/moltbook.js" --post-quote >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # (Moltbook: quote cross-posting removed — Moltbook receives articles only)
 
   # ── Tweet cycle: synthesize, journal, tweet, push ─────────────────────────
   else
@@ -907,14 +906,11 @@ TWEETMSG
     # Archive new journals/checkpoints to Irys + local memory index
     node "$PROJECT_ROOT/runner/archive.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
-    # ── Moltbook: cross-post tweet content — runs after archive.js so Arweave tx is available ──
-    node "$PROJECT_ROOT/runner/moltbook.js" --post >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
-
     # Watchdog: verify latest journal committed, pushed, and on Arweave
     CYCLE_TYPE=JOURNAL node "$PROJECT_ROOT/runner/watchdog.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
-    # Daily maintenance (every 24h = 72 cycles)
-    if [ $(( CYCLE % (TWEET_EVERY * 12) )) -eq 0 ]; then
+    # Article maintenance (every 12h = 36 cycles)
+    if [ $(( CYCLE % (TWEET_EVERY * 6) )) -eq 0 ]; then
       # ── Daily belief report ──────────────────────────────────────────────────
       node "$PROJECT_ROOT/runner/generate_daily_report.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
       # ── Daily article: write from journals + beliefs, post to Moltbook ───────
