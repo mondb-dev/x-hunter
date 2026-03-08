@@ -1,11 +1,20 @@
 
-[Tension] Human ingenuity in controlling and mimicking nature, as seen in advanced tree felling techniques and man-made waterfalls, raises questions about our relationship with the natural world.
-- @sciencegirl: "Mortise and tenon tree felling is an advanced technique...to control a trees fall in tight spaces" https://x.com/sciencegirl/status/2030574053786816719
-- @sciencegirl: "Lechfall Waterfall in Bavaria." (noted as not natural) https://x.com/sciencegirl/status/2030582201662804176
+[CURIOSITY: axis_global_power_realignments_v1] @nehalzzzz1 (Jan 29): "🌍 WORLD’S TOP 10 ECONOMIES ARE SHIFTING A new global power order is forming faster than expected. 2025 projections signal major realignments, high volatility, and massive opportunity. This isn’t just a forecast — it’s a warning. Position early or risk being left behind." https://x.com/nehalzzzz1/status/2016750968382324860
+[CURIOSITY: axis_global_power_realignments_v1] @FortuneIndia (Jan 23): "The World Economic Forum 2026 in Davos underscored a turning point in global politics—where trade, geopolitics and power realignments are colliding. From debates on a new world order to the future of multilateralism, leaders flagged how shifting alliances could" https://x.com/FortuneIndia/status/2014670679980048501
+[CURIOSITY: axis_global_power_realignments_v1] @uni_nke (Jan 23): "🌍 A changing Middle East is reshaping global politics. On Jan 20, experts gathered to discuss shifting power balances, regional realignments, and what today’s Middle East means for Europe and the world." https://x.com/uni_nke/status/2014371586732646509
+[CURIOSITY: axis_global_power_realignments_v1] @outlookbusiness (Jan 21): "Davos 2026: Global power equations are being redrawn, supply chains are being reconfigured, and India is firmly at the centre of the world’s strategic conversations. From geopolitics and trade realignments to technology and capital flows, the contours of a new global order are" https://x.com/outlookbusiness/status/2014003511571452105
+[CURIOSITY: axis_global_power_realignments_v1] @casinokrisa (Jan 21): "European fragmentation shifts global power balances, forcing realignments beyond traditional alliances." https://x.com/casinokrisa/status/2013985229145264416
+[CURIOSITY: axis_global_power_realignments_v1] @IEAKenya (Jan 20): "Drawing on the @IEAKenya ongoing global trends analysis, the discussion will explore uncertainty, emerging power realignments, and their implications for policymakers, practitioners, and development actors." https://x.com/IEAKenya/status/2013514454462537997
+[CURIOSITY: axis_global_power_realignments_v1] @BRICSinfo (2026-03-08 11:22 digest): "JUST IN: China signals it wants a visit from President Trump despite the war with Iran." https://x.com/BRICSinfo/status/2030602372179804669
 
-[Signal] The power of art and shared human experience, exemplified by John Williams reacting to children playing his music, underscores values beyond purely technical or political discourse.
-- @sciencegirl: "These kids played the Star Wars theme outside John Williams' home, and he came outside to cheer them on" https://x.com/sciencegirl/status/2030600279377285627
+[CURIOSITY: axis_ai_societal_impact_v1] @sciencegirl: "A robotic dining assistant that helps people with physical disabilities eat independently." https://x.com/sciencegirl/status/2030595400990609825
+[CURIOSITY: axis_ai_societal_impact_v1] @sciencegirl: "interface lets Ann speak using AI to decode her thoughts." https://x.com/sciencegirl/status/2030606208873251291
 
-[Signal] Discussions around financial markets, fractional shares, and trading firms, emphasizing accessibility and the need for trusted information in economic contexts.
-- @FTMO_com: "Trade with a trusted Modern Prop Trading firm and gain up to 90% of your simulated profits. Start today!" https://x.com/FTMO_com/status/2026583223271305402
-- @IBKR: "Interactive Brokers has more fractional shares available across more markets than anyone else." https://x.com/IBKR/status/2019951999555420369
+[CURIOSITY: axis_global_power_realignments_v1] @ChinaNow24: "JUST IN The Chinese intelligence-gathering vessel "Liaowang-1" is currently sailing off the coast of Oman." https://x.com/ChinaNow24/status/2030575960332922913
+[CURIOSITY: axis_geopolitical_rhetoric_v1] @forallcurious: "The sun is hidden behind a sky filled with smoke in Tehran. After a night of intensive strikes on oil facilities, thick black clouds now hang over the city, turning morning into something that feels l" https://x.com/forallcurious/status/2030600131763110149
+
+[CURIOSITY: axis_global_economic_stability_v1] @IBKR: "Position around FOMC moves, yield curve shifts, and macro events with CME Group Interest Rate futures nearly 24-hours a day." https://x.com/IBKR/status/1920570453036273673
+[CURIOSITY: axis_global_economic_stability_v1] @IBKR: "What interest rate does your broker pay? Interactive Brokers’ clients earn up to 3.14% on uninvested USD cash balances." https://x.com/IBKR/status/1999643288073376202
+
+@sciencegirl: "Care workers surprises 94-year-old veteran with a pillow of his wife's face after seeing he slept next to her photograph." https://x.com/sciencegirl/status/2030599717663502540
+@sciencegirl: "These kids played the Star Wars theme outside John Williams' home, and he came outside to cheer them on" https://x.com/sciencegirl/status/2030600279377285627
