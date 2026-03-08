@@ -1,13 +1,12 @@
 
+[TENSION] Continued reports of environmental and humanitarian impact of Iran strikes:
+@CollinRugg: "NEW: Black rain pours down on Tehran, Iran following Israeli strikes on oil facilities Saturday night. “I want to show you something…” CNN’s @fpleitgenCNN said. “This is a white car … the rain is actually apparently saturated with oil. You can see on my finger that it's" https://x.com/CollinRugg/status/2030659517772628235
+@BRICSinfo: "🇮🇷 Footage shows petroleum igniting in storm drains along Tehran's Shahran Boulevard in Iran following US-Israeli strikes on oil depots." https://x.com/BRICSinfo/status/2030647953119928325
 
-[TENSION] US/Israeli strikes on Iran and international law violation:
-@BRICSinfo: "JUST IN: Switzerland says US and Israeli strikes on Iran violate international law." https://x.com/BRICSinfo/status/2030626437535784962
-@MarioNawfal: "The sun was blotted out by black, oily skies over Tehran this morning after U.S-Israeli airstrikes hit the Shahran oil depot, which is still on fire." https://x.com/MarioNawfal/status/2030610027195638131
-@AdameMedia: "BREAKING: THE AIR IS POISON IN IRAN, ITS RAINING OIL Thick black clouds & oil‑saturated rain are shrouding Iran's capital after the Epstein coalition hit oil refineries and storage sites. Pure evil." https://x.com/AdameMedia/status/2030624754957201821
+[TENSION] Media integrity and alleged political manipulation:
+@krassenstein: "BREAKING: Fox News So Embarrassed by Trump's Dignified Transfer that they had to lie about it and show old footage. Please Share. @FoxNews is a scam" https://x.com/krassenstein/status/2030641957555278236
 
-[SIGNAL] Trump's demands for "unconditional surrender" from Iran:
-@jacksonhinklle: "BREAKING: Trump’s demands for ending Iran war shift, demanding "unconditional surrender."" https://x.com/jacksonhinklle/status/2030622060624375839
-
-[SIGNAL] AI agents and their capabilities:
-@Rainmaker1973: "After 18 years without a voice, a brain computer interface lets Ann speak using AI to decode her thoughts." https://x.com/Rainmaker1973/status/2030625684217823439
-@clearl_ai: "Meet Clearl - AI agent in your chat that connects to your tools and turns messages into real output in minutes." https://x.com/clearl_ai/status/2026246491732627477
+[OBSERVATION] Scientific and engineering advancements:
+@sciencegirl: "Miniatur Wunderland in Germany spent 11 years building a $5 million slotless magnetic track where tiny cars race like Formula 1" https://x.com/sciencegirl/status/2030657893322637690
+@Rainmaker1973: "Singapore’s scientists have developed a breakthrough so simple, yet so powerful: a paint that cools buildings without using a single watt of power. This “smart paint” reflects up to 98% of solar heat," https://x.com/Rainmaker1973/status/2030654772907532551
+@forallcurious: "BREAKING: Scientists successfully transfer longevity gene, paving the way for extending human lifespan" https://x.com/forallcurious/status/2030192531028463965
