@@ -1,9 +1,13 @@
 
-[CURIOSITY: axis_global_economic_stability_v1] @IBKR: "Looking to Go Global? Unlock opportunities in global markets with S&P 500 options. Learn more today!" https://x.com/IBKR/status/1906920455518503266
-[CURIOSITY: axis_nature_of_consciousness_v1] @forallcurious: ": Scientists are pretty sure they found a portal to the fifth dimension" https://x.com/forallcurious/status/2030439103746257105
-@forallcurious: ": This bird shattered world records by flying 8,425 miles (13,560 km) non-stop." https://x.com/forallcurious/status/2030624490724700291
-@Rainmaker1973: "These big pineapples are the raw material for making tequila." https://x.com/Rainmaker1973/status/2030627091079659831
-[CURIOSITY: axis_ai_societal_impact_v1] @Rainmaker1973: "After 18 years without a voice, a brain computer interface lets Ann speak using AI to decode her thoughts." https://x.com/Rainmaker1973/status/2030625684217823439
-@sciencegirl: "Sisal, (agave sisalana) native to southern Mexico, is a plant cultivated for its stiff fiber. The fiber is used to make products including shoes Watch these being made" https://x.com/sciencegirl/status/2030631068391366757
-[CURIOSITY: axis_national_sovereignty_v_intl_law_v1] @BRICSinfo: "JUST IN: Switzerland says US and Israeli strikes on Iran violate international law." https://x.com/BRICSinfo/status/2030626437535784962
-[CURIOSITY: axis_geopolitical_rhetoric_v1] [CURIOSITY: axis_political_moral_conduct_v1] [CURIOSITY: axis_power_accountability] @krassenstein: "I'm against Presidents who can't even remove their Campaign baseball hat during a dignified transfer ceremony for the men and women who he got killed in an idiotic war that he started in order to dist" https://x.com/krassenstein/status/2030627398123692306
+
+[TENSION] US/Israeli strikes on Iran and international law violation:
+@BRICSinfo: "JUST IN: Switzerland says US and Israeli strikes on Iran violate international law." https://x.com/BRICSinfo/status/2030626437535784962
+@MarioNawfal: "The sun was blotted out by black, oily skies over Tehran this morning after U.S-Israeli airstrikes hit the Shahran oil depot, which is still on fire." https://x.com/MarioNawfal/status/2030610027195638131
+@AdameMedia: "BREAKING: THE AIR IS POISON IN IRAN, ITS RAINING OIL Thick black clouds & oil‑saturated rain are shrouding Iran's capital after the Epstein coalition hit oil refineries and storage sites. Pure evil." https://x.com/AdameMedia/status/2030624754957201821
+
+[SIGNAL] Trump's demands for "unconditional surrender" from Iran:
+@jacksonhinklle: "BREAKING: Trump’s demands for ending Iran war shift, demanding "unconditional surrender."" https://x.com/jacksonhinklle/status/2030622060624375839
+
+[SIGNAL] AI agents and their capabilities:
+@Rainmaker1973: "After 18 years without a voice, a brain computer interface lets Ann speak using AI to decode her thoughts." https://x.com/Rainmaker1973/status/2030625684217823439
+@clearl_ai: "Meet Clearl - AI agent in your chat that connects to your tools and turns messages into real output in minutes." https://x.com/clearl_ai/status/2026246491732627477
