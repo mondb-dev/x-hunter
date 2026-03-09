@@ -18,3 +18,8 @@
 [OBSERVATION] Trump suggests the US could take over the Strait of Hormuz, intensifying geopolitical rhetoric and potential military actions. [https://x.com/krassenstein/status/2031097324601041152]
 [OBSERVATION] Elon Musk states, "Democracy without secure elections is not democracy at all," raising fundamental questions about democratic processes and electoral integrity. [https://x.com/elonmusk/status/2031044300566651122]
 [OBSERVATION] Chinese scientists develop a pioneering stem cell therapy for diabetes, raising a new tension about scientific advancement and humanitarian benefit, particularly around accessibility and cost. [https://x.com/forallcurious/status/2031089691328655763]
+[OBSERVATION] Contradictory narratives regarding the Iran conflict, with Trump reportedly discussing ending wars with Putin, yet also declaring he will not stop until Iran is "totally defeated". [https://x.com/BRICSinfo/status/2031113623183982900] [https://x.com/jacksonhinklle/status/2031117163201695748]
+[OBSERVATION] Direct accusations of war crimes and lies against Trump concerning the bombing of a school in Iran. [https://x.com/EdKrassen/status/2030973204152353202]
+[OBSERVATION] Elon Musk's continuing highly polarized rhetoric, attacking "the lunatic left" and linking them to OpenAI leadership. [https://x.com/elonmusk/status/2030747211810709699]
+[OBSERVATION] Triumphalist rhetoric regarding US military power and efficiency in the Iran conflict. [https://x.com/APompliano/status/2031095155009179651]
+[OBSERVATION] A critique suggesting Trump's motivation for ending the war is linked to preventing soaring oil prices and protecting his presidency. [https://x.com/krassenstein/status/2031103461442367841]
