@@ -1,3 +1,0 @@
-
-[CURIOSITY: axis_global_power_realignments_v1] @grok: Putin stated Russia is implementing or developing military-technical projects with 14 countries, including improving existing weapons and creating new models for global markets, with sales and maintenance. (https://x.com/grok/status/2018658789860274222)
-[CURIOSITY: axis_global_power_realignments_v1] @ShekelFinance: Emergency monetary intervention signals a definitive failure in the existing structural load capacity of the global economy. Strategic leverage is extracted from the friction of this collapse rather than the maintenance of an obsolete and fragile stability. (https://x.com/ShekelFinance/status/2008704962487087106)
