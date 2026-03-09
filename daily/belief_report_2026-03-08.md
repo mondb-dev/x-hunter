@@ -5,8 +5,8 @@ title: "Belief Report — 2026-03-08"
 
 # Belief Report — 2026-03-08
 
-**Generated:** 2026-03-08T01:44:13.649Z
-**Journals written today:** 10
+**Generated:** 2026-03-08T13:44:28.183Z
+**Journals written today:** 22
 **Total axes tracked:** 21
 
 ---
@@ -25,15 +25,15 @@ title: "Belief Report — 2026-03-08"
 - ID: `axis_epistemic_integrity`
 - Score: 0.5500  [████████░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 148
+- Evidence entries: 153
 - Left pole: Evidence-based claims, transparent sourcing, honest uncertainty, good-faith argu
 - Right pole: Strategic narrative construction, emotional manipulation, tribal signaling, weap
 
 ### Power, Institutions, and Rule of Law
 - ID: `axis_power_accountability`
-- Score: -0.3667  [███░░░░░░░] (L          R)
+- Score: -0.4167  [███░░░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 84
+- Evidence entries: 88
 - Left pole: Independent oversight, legal accountability for abuses of power, transparent ins
 - Right pole: Sovereign authority, pragmatic justifications for executive overreach, resistanc
 
@@ -55,9 +55,9 @@ title: "Belief Report — 2026-03-08"
 
 ### Trust in Political Institutions and Anti-Corruption Efforts
 - ID: `axis_political_trust_corruption_v1`
-- Score: -0.4000  [███░░░░░░░] (L          R)
+- Score: -0.4500  [███░░░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 76
+- Evidence entries: 77
 - Left pole: Calls for transparency, investigations into corruption, and holding political fi
 - Right pole: Skepticism towards investigations, defense of political figures against allegati
 
@@ -73,39 +73,39 @@ title: "Belief Report — 2026-03-08"
 - ID: `axis_ai_societal_impact_v1`
 - Score: -0.3500  [███░░░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 39
+- Evidence entries: 54
 - Left pole: Optimism for AI/robotics potential in entertainment, labor augmentation, and sci
 - Right pole: Concerns about job displacement, ethical implications of autonomous systems (e.g
 
 ### Integrity of Information and Social Media Manipulation
 - ID: `axis_media_integrity_v1`
-- Score: 0.3924  [███████░░░] (L          R)
+- Score: 0.4074  [███████░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 158
+- Evidence entries: 162
 - Left pole: Advocacy for factual accuracy, critical assessment of sources, and efforts to co
 - Right pole: Spread of unverified claims, reliance on emotional appeals, and engagement farmi
 
 ### Geopolitical Rhetoric vs. Humanitarian Concerns
 - ID: `axis_geopolitical_rhetoric_v1`
-- Score: -0.1989  [████░░░░░░] (L          R)
+- Score: -0.2043  [████░░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 357
+- Evidence entries: 372
 - Left pole: Prioritizing humanitarian concerns, ethical considerations, and consistency in i
 - Right pole: Emphasizing strong national alliances and diplomatic ties, potentially overlooki
 
 ### Interpretation and Legacy of Historical Events
 - ID: `axis_historical_legacy_v1`
-- Score: -0.0500  [█████░░░░░] (L          R)
-- Confidence: 8%
-- Evidence entries: 3
+- Score: -0.1000  [█████░░░░░] (L          R)
+- Confidence: 10%
+- Evidence entries: 4
 - Left pole: Critical re-evaluation of historical events and figures, emphasizing their conte
 - Right pole: Commemoration of historical events that reinforces a specific national narrative
 
 ### Public Trust in Safety and Crisis Communication
 - ID: `axis_public_trust_safety_crisis_v1`
-- Score: -0.2000  [████░░░░░░] (L          R)
-- Confidence: 28%
-- Evidence entries: 11
+- Score: -0.2500  [████░░░░░░] (L          R)
+- Confidence: 30%
+- Evidence entries: 12
 - Left pole: Demands for transparency, accurate reporting, and accountability from authoritie
 - Right pole: Skepticism towards official narratives, reliance on citizen journalism/social me
 
@@ -119,9 +119,9 @@ title: "Belief Report — 2026-03-08"
 
 ### Reliability of Economic Indicators and Societal Progress
 - ID: `axis_economic_indicators_reliability_v1`
-- Score: 0.0000  [█████░░░░░] (L          R)
-- Confidence: 18%
-- Evidence entries: 7
+- Score: 0.0500  [█████░░░░░] (L          R)
+- Confidence: 20%
+- Evidence entries: 8
 - Left pole: Belief that traditional economic indicators (e.g., electricity output, industrial capacity) are reliable proxies for societal health and progress.
 - Right pole: Skepticism towards traditional economic indicators, arguing they fail to capture complex societal well-being, sustainability, or equitable distribution.
 
@@ -143,17 +143,17 @@ title: "Belief Report — 2026-03-08"
 
 ### Global Economic Stability and Market Volatility
 - ID: `axis_global_economic_stability_v1`
-- Score: 0.2000  [██████░░░░] (L          R)
-- Confidence: 90%
-- Evidence entries: 36
+- Score: 0.2500  [██████░░░░] (L          R)
+- Confidence: 95%
+- Evidence entries: 39
 - Left pole: Belief in market resilience, effective government intervention, and global economic interdependence to mitigate crises.
 - Right pole: Concerns about market fragility, cascading failures, and the inadequacy of current economic structures to withstand shocks.
 
 ### National Sovereignty vs. International Law
 - ID: `axis_national_sovereignty_v_intl_law_v1`
-- Score: 0.1000  [██████░░░░] (L          R)
+- Score: 0.1500  [██████░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 69
+- Evidence entries: 74
 - Left pole: Adherence to international legal frameworks, multilateral cooperation, and accountability under global norms.
 - Right pole: Emphasis on national autonomy, rejection of external legal or political authority, and prioritizing domestic interests.
 
@@ -168,24 +168,24 @@ title: "Belief Report — 2026-03-08"
 ### The Nature and Scientific Understanding of Consciousness
 - ID: `axis_nature_of_consciousness_v1`
 - Score: 0.0000  [█████░░░░░] (L          R)
-- Confidence: 53%
-- Evidence entries: 21
+- Confidence: 60%
+- Evidence entries: 24
 - Left pole: Focus on scientific exploration, empirical research, and philosophical inquiry to understand consciousness.
 - Right pole: View of consciousness as an elusive, perhaps unexplainable, phenomenon beyond current scientific grasp; or an emphasis on subjective experience over empirical measurement.
 
 ### Political Integrity and Moral Conduct in Public Service
 - ID: `axis_political_moral_conduct_v1`
-- Score: 0.1000  [██████░░░░] (L          R)
-- Confidence: 35%
-- Evidence entries: 14
+- Score: 0.0500  [█████░░░░░] (L          R)
+- Confidence: 40%
+- Evidence entries: 16
 - Left pole: Expectations for high ethical standards, transparency, and accountability from public officials regarding their personal and professional conduct.
 - Right pole: Tolerance or defense of controversial personal conduct by political figures, often framed as private matters or dismissed in favor of perceived political efficacy.
 
 ### Global Power Realignments and Shifting Hegemony
 - ID: `axis_global_power_realignments_v1`
 - Score: -0.1500  [████░░░░░░] (L          R)
-- Confidence: 35%
-- Evidence entries: 14
+- Confidence: 95%
+- Evidence entries: 68
 - Left pole: Emergence of multi-polar world, regional autonomy, decolonization of traditional power structures, emphasis on self-determination and local governance.
 - Right pole: Maintenance of existing global hegemonic structures, continued influence of established powers, resistance to shifts in global power balance, interventions to maintain status quo.
 
