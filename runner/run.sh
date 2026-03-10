@@ -745,29 +745,7 @@ QUOTEMSG
       sleep 3  # give openclaw gateway time to release browser WS before CDP connect
       node "$PROJECT_ROOT/runner/post_quote.js" 2>&1
       QUOTE_URL=$(cat "$PROJECT_ROOT/state/quote_result.txt" 2>/dev/null | tr -d '\n')
-      # Runner owns the posts_log entry — agent no longer writes it (avoids malformed JSON tool calls)
-      node -e "
-        const fs=require('fs'), p='$PROJECT_ROOT/state/posts_log.json';
-        try {
-          const draft=fs.readFileSync('$PROJECT_ROOT/state/quote_draft.txt','utf-8').trim();
-          const lines=draft.split('\n');
-          const source_url=lines[0].trim();
-          const text=lines.slice(1).join(' ').trim();
-          const d=JSON.parse(fs.readFileSync(p,'utf-8'));
-          d.posts=d.posts||[];
-          // Check if agent already wrote an entry (partial run) — patch it, else append
-          const existing=d.posts.findIndex(e=>e.type==='quote'&&!e.tweet_url&&e.source_url===source_url);
-          const url='$QUOTE_URL'||'';
-          if(existing>=0){
-            d.posts[existing].tweet_url=url;
-            d.posts[existing].posted_at=new Date().toISOString();
-          } else {
-            d.posts.push({type:'quote',tweet_url:url,source_url,text,posted_at:new Date().toISOString()});
-          }
-          fs.writeFileSync(p,JSON.stringify(d,null,2));
-          console.log('[run] posts_log.json updated (quote)');
-        } catch(e){ console.error('[run] posts_log update failed:',e.message); }
-      " 2>&1 || true
+      # posts_log.json is written by post_quote.js directly
       if [ -n "$QUOTE_URL" ] && [ "$QUOTE_URL" != "posted" ]; then
         echo "[run] Quote posted: $QUOTE_URL"
       fi
@@ -905,19 +883,9 @@ TWEETMSG
         echo "[run] Posting tweet via CDP..."
         node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1
         TWEET_URL=$(cat "$PROJECT_ROOT/state/tweet_result.txt" 2>/dev/null | tr -d '\n')
+        # posts_log.json is written by post_tweet.js directly
         if [ -n "$TWEET_URL" ] && [ "$TWEET_URL" != "posted" ]; then
           echo "[run] Tweet posted: $TWEET_URL"
-          # Patch posts_log.json with the real tweet URL
-          node -e "
-            try {
-              const fs=require('fs'), p='$PROJECT_ROOT/state/posts_log.json';
-              const log=JSON.parse(fs.readFileSync(p,'utf-8'));
-              const last=log.posts[log.posts.length-1];
-              if(last && !last.tweet_url) { last.tweet_url='$TWEET_URL'; last.posted_at=new Date().toISOString(); }
-              fs.writeFileSync(p,JSON.stringify(log,null,2));
-              console.log('[run] posts_log.json updated with tweet_url');
-            } catch(e) { console.error('[run] posts_log patch failed:', e.message); }
-          " 2>&1 || true
         else
           echo "[run] Tweet posted (URL not captured or post_tweet.js failed)"
         fi

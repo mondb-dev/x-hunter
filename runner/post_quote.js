@@ -19,6 +19,8 @@ const fs   = require("fs");
 const path = require("path");
 const { connectBrowser, getXPage } = require("./cdp");
 
+const { logQuote } = require("./posts_log");
+
 const ROOT        = path.resolve(__dirname, "..");
 const DRAFT_FILE  = path.join(ROOT, "state", "quote_draft.txt");
 const RESULT_FILE = path.join(ROOT, "state", "quote_result.txt");
@@ -165,6 +167,9 @@ async function sleep(ms) {
       console.log("[post_quote] posted (URL not captured — home compose does not redirect)");
       fs.writeFileSync(RESULT_FILE, "posted\n");
     }
+
+    // Log to posts_log.json — always runs, whether called from run.sh or manually
+    logQuote({ source_url: sourceUrl, content: quoteText, tweet_url: quoteUrl || "" });
 
   } catch (err) {
     console.error(`[post_quote] error: ${err.message}`);

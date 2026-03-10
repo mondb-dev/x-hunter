@@ -16,6 +16,8 @@ const fs   = require("fs");
 const path = require("path");
 const { connectBrowser, getXPage } = require("./cdp");
 
+const { logTweet } = require("./posts_log");
+
 const ROOT       = path.resolve(__dirname, "..");
 const DRAFT_FILE = path.join(ROOT, "state", "tweet_draft.txt");
 
@@ -53,9 +55,9 @@ async function sleep(ms) {
   const page = await getXPage(browser);
 
   try {
-    // Navigate to compose page
-    console.log("[post_tweet] navigating to x.com/compose/post...");
-    await page.goto("https://x.com/compose/post", {
+    // Navigate to home (inline compose box — more stable than /compose/post modal)
+    console.log("[post_tweet] navigating to x.com/home...");
+    await page.goto("https://x.com/home", {
       waitUntil: "domcontentloaded",
       timeout: 20_000,
     });
@@ -66,19 +68,23 @@ async function sleep(ms) {
     await page.waitForSelector(COMPOSE_BOX, { timeout: 15_000 });
     await sleep(500);
 
-    // Click to focus (evaluate-based avoids Runtime.callFunctionOn timeout)
+    // Click + focus via evaluate (page.focus() and page.click() hang on this Chrome/puppeteer combo)
     await page.evaluate((sel) => {
       const el = document.querySelector(sel);
       if (el) el.click();
     }, COMPOSE_BOX);
-    // Explicitly set keyboard focus so page.keyboard.type() targets the compose box
-    await page.focus(COMPOSE_BOX);
-    await sleep(300);
+    await page.evaluate((sel) => {
+      document.querySelector(sel)?.focus();
+    }, COMPOSE_BOX);
+    await sleep(2_000); // wait for React editor to fully initialise before inserting text
 
-    // Type tweet text character by character (triggers React onChange)
-    console.log("[post_tweet] typing tweet...");
-    await page.keyboard.type(tweetText, { delay: 30 });
-    await sleep(1_000);
+    // Insert via execCommand — most reliable for React contenteditable (no clipboard perms needed)
+    console.log("[post_tweet] inserting tweet via execCommand...");
+    await page.evaluate((text, sel) => {
+      const el = document.querySelector(sel);
+      if (el) { el.focus(); document.execCommand("insertText", false, text); }
+    }, tweetText, COMPOSE_BOX);
+    await sleep(1_500);
 
     // Wait for Post button to be enabled
     console.log("[post_tweet] waiting for Post button...");
@@ -119,10 +125,8 @@ async function sleep(ms) {
 
     if (tweetUrl) {
       console.log(`[post_tweet] SUCCESS: ${tweetUrl}`);
-      // Write URL to a result file for run.sh to read
       fs.writeFileSync(path.join(ROOT, "state", "tweet_result.txt"), tweetUrl + "\n");
     } else {
-      // Posted but URL not captured — still a success if page moved away from compose
       if (!finalUrl.includes("compose")) {
         console.log("[post_tweet] posted (URL not captured — no status redirect)");
         fs.writeFileSync(path.join(ROOT, "state", "tweet_result.txt"), "posted\n");
@@ -132,6 +136,9 @@ async function sleep(ms) {
         process.exit(1);
       }
     }
+
+    // Log to posts_log.json — always runs, whether called from run.sh or manually
+    logTweet({ content: tweetText, tweet_url: tweetUrl || "" });
 
     // Navigate back to home feed so Chrome is clean for next cycle
     await page.goto("https://x.com/home", { waitUntil: "domcontentloaded", timeout: 20_000 }).catch(() => {});
