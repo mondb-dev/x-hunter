@@ -7,7 +7,7 @@ const path = require("path");
 const cwd = process.cwd();
 console.log("[prebuild] cwd:", cwd);
 
-const dirs = ["state", "daily", "journals", "checkpoints", "articles"];
+const dirs = ["state", "daily", "journals", "checkpoints", "articles", "ponders"];
 
 for (const d of dirs) {
   const src = path.resolve(cwd, "..", d);

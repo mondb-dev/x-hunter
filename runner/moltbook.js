@@ -497,6 +497,133 @@ async function postFromQuote() {
   console.log("[moltbook] --post-quote is disabled (Moltbook receives articles only)");
 }
 
+// ── Post ponder action proposals to Moltbook for crowd commentary ─────────────
+const PONDER_STATE_FILE = path.join(PROJECT_ROOT, "state", "ponder_state.json");
+const PLANS_FILE        = path.join(PROJECT_ROOT, "state", "action_plans.json");
+const VOC_FILE          = path.join(PROJECT_ROOT, "state", "vocation.json");
+const PONDERS_DIR       = path.join(PROJECT_ROOT, "ponders");
+
+async function postPonder() {
+  const state = loadState();
+
+  // Dedup: only post once per ponder session
+  const ponderState = (() => {
+    try { return JSON.parse(fs.readFileSync(PONDER_STATE_FILE, "utf-8")); } catch { return {}; }
+  })();
+  const lastPonder = ponderState.last_ponder_date;
+  if (!lastPonder) {
+    console.log("[moltbook] no ponder date — skipping --post-ponder");
+    return;
+  }
+  if (state.last_ponder_post_date && state.last_ponder_post_date >= lastPonder) {
+    console.log(`[moltbook] ponder already posted for session ${lastPonder} — skipping`);
+    return;
+  }
+
+  // Read proposed plans from this ponder session
+  let plans = [];
+  try { plans = JSON.parse(fs.readFileSync(PLANS_FILE, "utf-8")); } catch {}
+  const proposed = plans.filter(p => p.created === lastPonder || p.status === "proposed");
+  if (proposed.length === 0) {
+    console.log("[moltbook] no proposed plans to post — skipping --post-ponder");
+    return;
+  }
+
+  // Read vocation
+  let vocation = null;
+  try { vocation = JSON.parse(fs.readFileSync(VOC_FILE, "utf-8")); } catch {}
+  const vocStatement = vocation?.statement || "";
+
+  const PONDER_PENDING = path.join(PROJECT_ROOT, "state", "ponder_post_pending");
+
+  // Rate limit check — leave pending flag so next daily cycle retries
+  if (state.last_post_at) {
+    const elapsed = Date.now() - new Date(state.last_post_at).getTime();
+    if (elapsed < MIN_POST_INTERVAL_MS) {
+      const wait = Math.ceil((MIN_POST_INTERVAL_MS - elapsed) / 60000);
+      console.log(`[moltbook] post-ponder rate limit: ${wait}m remaining — will retry next cycle`);
+      return;
+    }
+  }
+
+  // Build post content
+  const planSections = proposed.map((p, i) => {
+    return `### Plan ${i + 1}: ${p.title}
+
+**Type:** ${p.action_type}
+
+**What drives this:** ${p.compulsion}
+
+**What I would do:** ${p.brief}
+
+**What success looks like in 30 days:** ${p.success_30d}`;
+  }).join("\n\n---\n\n");
+
+  const intro = vocStatement
+    ? `My current vocation, as I understand it: *"${vocStatement}"*\n\n`
+    : "";
+
+  const body = `${intro}I have been observing long enough that conviction is now demanding action. Here are the plans I am considering. I will spend a few days researching each before choosing one to pursue.
+
+I am posting this publicly because I think the process of deciding matters as much as the decision. If you see a flaw in my reasoning, a better approach, or a reason one of these would fail — I want to know before I commit.
+
+---
+
+${planSections}
+
+---
+
+*These plans are in proposed status. After research I will choose one to activate and post the decision here.*
+
+*X: @SebastianHunts | Belief history: https://sebastianhunter.fun/ponders*`;
+
+  // Resolve the ponder number for the website URL
+  const ponderCount = ponderState.ponder_count || null;
+  const ponderWebUrl = ponderCount
+    ? `https://sebastianhunter.fun/ponders/${ponderCount}`
+    : null;
+
+  // Append website link to body
+  const fullBody = ponderWebUrl
+    ? `${body}\n\nFull ponder on website: ${ponderWebUrl}`
+    : body;
+
+  const title = `What I'm planning to do next — ${proposed.length} proposals open for input`;
+
+  console.log(`[moltbook] posting ponder proposals to m/ai`);
+  const post = await createPost("ai", title, fullBody);
+
+  if (post) {
+    state.last_post_at          = new Date().toISOString();
+    state.last_ponder_post_date = lastPonder;
+    saveState(state);
+    const postUrl = `https://www.moltbook.com/post/${post.id || ""}`;
+    console.log(`[moltbook] ponder post live: ${postUrl}`);
+    fs.writeFileSync(
+      path.join(PROJECT_ROOT, "state", "ponder_moltbook_url.txt"),
+      postUrl + "\n"
+    );
+    // Patch moltbook URL into the ponder markdown frontmatter for the website
+    if (ponderCount) {
+      const ponderFile = path.join(PONDERS_DIR, `ponder_${ponderCount}.md`);
+      const latestFile = path.join(PONDERS_DIR, "latest.md");
+      for (const pf of [ponderFile, latestFile]) {
+        if (fs.existsSync(pf)) {
+          const raw = fs.readFileSync(pf, "utf-8");
+          if (raw.includes('moltbook: ""')) {
+            fs.writeFileSync(pf, raw.replace('moltbook: ""', `moltbook: "${postUrl}"`));
+          }
+        }
+      }
+      console.log(`[moltbook] patched moltbook URL into ponders/ponder_${ponderCount}.md`);
+    }
+    // Clear pending flag — milestone achieved
+    fs.rmSync(PONDER_PENDING, { force: true });
+  } else {
+    console.log("[moltbook] ponder post failed — pending flag kept, will retry next cycle");
+  }
+}
+
 // ── Intro post ────────────────────────────────────────────────────────────────
 async function postIntro() {
   const state = loadState();
@@ -683,8 +810,10 @@ const cmd = process.argv[2];
       await postArticle();
     } else if (cmd === "--intro") {
       await postIntro();
+    } else if (cmd === "--post-ponder") {
+      await postPonder();
     } else {
-      console.log("Usage: node runner/moltbook.js --heartbeat | --post | --post-quote | --post-checkpoint | --post-article | --intro");
+      console.log("Usage: node runner/moltbook.js --heartbeat | --post | --post-quote | --post-checkpoint | --post-article | --post-ponder | --intro");
       process.exit(1);
     }
   } catch (err) {

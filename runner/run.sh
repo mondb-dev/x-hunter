@@ -90,7 +90,7 @@ bash "$PROJECT_ROOT/scraper/start.sh"
 rm -f "$PROJECT_ROOT/state/curiosity_directive.txt"
 
 CYCLE=0
-BROWSE_INTERVAL=1200  # 20 minutes in seconds
+BROWSE_INTERVAL=1800  # 30 minutes in seconds
 TWEET_EVERY=6         # tweet on cycles 6, 12, 18, ... (every 2 hours)
 QUOTE_OFFSET=3        # quote-tweet on cycles 3, 9, 15, ... (midpoint between tweets)
 TWEET_START=7         # earliest hour to post original tweets (0-23 UTC)
@@ -684,9 +684,31 @@ BROWSEMSG
     " 2>/dev/null || echo "(none yet)")
     # Pre-load digest snippet for quote cycle
     _DIGEST_QUOTE=$(tail -n 120 "$PROJECT_ROOT/state/feed_digest.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(not available)")
+    # Pre-load top belief axes for grounding the quote (full poles + recent evidence)
+    _TOP_AXES=$(node -e "
+      try {
+        const o=JSON.parse(require('fs').readFileSync('$PROJECT_ROOT/state/ontology.json','utf-8'));
+        const raw=Array.isArray(o.axes)?o.axes:Object.values(o.axes||{});
+        const axes=raw
+          .filter(a=>a.confidence>=0.65)
+          .sort((a,b)=>b.confidence-a.confidence)
+          .slice(0,6);
+        const out=axes.map(a=>{
+          const ev=(a.evidence_log||[]).slice(-2).map(e=>'    * '+e.content.slice(0,120)).join('\n');
+          return '- '+a.label+' (conf: '+(a.confidence*100).toFixed(0)+'%)\n'+
+                 '  LEFT: '+a.left_pole+'\n'+
+                 '  RIGHT: '+a.right_pole+
+                 (ev?'\n  Recent evidence:\n'+ev:'');
+        });
+        process.stdout.write(out.join('\n\n'));
+      } catch(e){process.stdout.write('(unavailable)');}
+    " 2>/dev/null || echo "(unavailable)")
 
     AGENT_MSG=$(cat <<QUOTEMSG
 Today is $TODAY $NOW. Quote cycle $CYCLE -- find one post worth quoting.
+
+Your strongest belief axes (what you actually think matters):
+$_TOP_AXES
 
 Already quoted source tweets (do NOT quote these again):
 $QUOTED_SOURCES
@@ -696,14 +718,17 @@ $_DIGEST_QUOTE
 ─────────────────────────────────────────────────────────────────────────
 
 Do NOT use any browser tools. Tasks:
-1. From the digest above, pick the single most interesting post worth engaging with publicly.
-   Criteria: genuine tension with your ontology, strong claim you can sharpen or challenge,
-   or a signal moment others have not yet framed correctly.
+1. From the digest above, pick the post that most directly touches one of your belief axes above.
+   Use the full axis definition -- poles and recent evidence -- to locate where this post sits.
+   Is it pushing left or right on the axis? Does it fit the pattern in the evidence, or cut against it?
+   That tension is your angle. Quote from that specific place on the axis, not in general terms.
    Each post line ends with its URL. SKIP any URL in the "already quoted" list above.
 2. Write state/quote_draft.txt (overwrite):
    Line 1: the source tweet URL (exact URL from the digest, e.g. https://x.com/user/status/ID)
    Lines 2+: your one-sentence quote commentary. Direct, honest, max 240 chars.
-   No hedging. This is your actual view.
+   NOT acceptable: "this claim conflates X", "demands scrutiny", "risks premature judgment" -- that is not a view, it is a press release.
+   ACCEPTABLE: what you actually see happening here, stated from your actual position on the axis. Say the thing.
+   If you have no real angle on this post, pick a different one.
 3. Done -- the runner posts the quote and updates posts_log.json. Do not use the browser.
 
 QUOTEMSG
@@ -916,10 +941,15 @@ TWEETMSG
     done
 
     # ── Git commit and push ─────────────────────────────────────────────────
-    git -C "$PROJECT_ROOT" add journals/ checkpoints/ state/ articles/ daily/ 2>/dev/null || true
+    git -C "$PROJECT_ROOT" add journals/ checkpoints/ state/ articles/ daily/ ponders/ 2>/dev/null || true
     git -C "$PROJECT_ROOT" commit -m "cycle ${CYCLE}: ${TODAY} ${NOW}" 2>/dev/null || true
     git -C "$PROJECT_ROOT" push origin main 2>/dev/null || true
     echo "[run] git push done"
+    # Trigger Vercel redeploy if a deploy hook URL is configured
+    if [ -n "${VERCEL_DEPLOY_HOOK:-}" ]; then
+      curl -s -X POST "$VERCEL_DEPLOY_HOOK" > /dev/null 2>&1 || true
+      echo "[run] Vercel deploy hook triggered"
+    fi
 
     # Archive new journals/checkpoints to Irys + local memory index
     node "$PROJECT_ROOT/runner/archive.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
@@ -927,8 +957,8 @@ TWEETMSG
     # Watchdog: verify latest journal committed, pushed, and on Arweave
     CYCLE_TYPE=JOURNAL node "$PROJECT_ROOT/runner/watchdog.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
-    # Article maintenance (every 12h = 36 cycles)
-    if [ $(( CYCLE % (TWEET_EVERY * 6) )) -eq 0 ]; then
+    # Article maintenance (every 24h = 72 cycles)
+    if [ $(( CYCLE % (TWEET_EVERY * 12) )) -eq 0 ]; then
       # ── Daily belief report ──────────────────────────────────────────────────
       node "$PROJECT_ROOT/runner/generate_daily_report.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
       # ── Daily article: write from journals + beliefs, post to Moltbook ───────
@@ -951,6 +981,25 @@ TWEETMSG
       # ── Checkpoint (every 3 days — generate_checkpoint.js self-gates) ───────
       node "$PROJECT_ROOT/runner/generate_checkpoint.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
       node "$PROJECT_ROOT/runner/moltbook.js" --post-checkpoint >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+      # ── Ponder (fires after checkpoint if conviction threshold met) ───────────
+      node "$PROJECT_ROOT/runner/ponder.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+      # Post ponder declaration tweet if ponder fired and wrote a draft
+      if [ -f "$PROJECT_ROOT/state/ponder_tweet.txt" ] && [ "$_POST_X" != "false" ]; then
+        cp "$PROJECT_ROOT/state/ponder_tweet.txt" "$PROJECT_ROOT/state/tweet_draft.txt"
+        node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1 | grep -v '^$'
+        rm -f "$PROJECT_ROOT/state/ponder_tweet.txt"
+        echo "[run] ponder declaration tweet posted"
+        # Flag Moltbook ponder post as pending — will retry each daily cycle until success
+        touch "$PROJECT_ROOT/state/ponder_post_pending"
+      fi
+      # Moltbook ponder post — retries every daily cycle until it succeeds and clears the flag
+      if [ -f "$PROJECT_ROOT/state/ponder_post_pending" ]; then
+        node "$PROJECT_ROOT/runner/moltbook.js" --post-ponder >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+      fi
+      # ── Ponder pipeline: deep_dive (fires 1d after ponder, self-gating) ──────
+      node "$PROJECT_ROOT/runner/deep_dive.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+      # ── Ponder pipeline: decision (fires after deep_dive completes, self-gating) ─
+      node "$PROJECT_ROOT/runner/decision.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
       # Trim feed_digest.txt to last 3000 lines (~2-3 days of data)
       DLINES=$(wc -l < "$PROJECT_ROOT/state/feed_digest.txt" 2>/dev/null || echo 0)
       if [ "$DLINES" -gt 3000 ]; then

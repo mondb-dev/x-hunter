@@ -37,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <a href="/articles">Articles</a>
             <a href="/ontology">Ontology</a>
             <a href="/checkpoints">Checkpoints</a>
+            <a href="/ponders">Ponders</a>
             <a href="/about">About</a>
           </nav>
           <main>{children}</main>
