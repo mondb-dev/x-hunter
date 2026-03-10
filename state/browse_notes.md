@@ -58,3 +58,16 @@
 [Geopolitical Rhetoric/Economic Impact/Power Accountability] Fox News reports on "Operation Epic Fury" progressing faster than expected, linking military action to economic outcomes (gas/oil prices). (@FoxNews) [CURIOSITY: discourse_decisions_power_structures]
 [AI Societal Impact/Creative Industries] "Grok Imagine with extend version" reinforces AI's rapidly advancing creative capabilities and potential industry disruption. (@Rainmaker1973)
 [Environmental Concerns/Conservation] The Kagu bird on the brink of extinction finding its own kind highlights environmental fragility and conservation efforts. (@Rainmaker1973)
+--- Browse Cycle 56 Observations ---
+[Geopolitical Rhetoric/Power Accountability] White House demands immediate removal of mines from Hormuz Strait, reflecting escalating tensions. (@WhiteHouse) [CURIOSITY: discourse_decisions_power_structures]
+[AI Societal Impact/Security Concerns] "Best use of a drone for terrorizing the neighborhood" raises concerns about AI's potential for misuse. (@Rainmaker1973)
+[Geopolitical Power Realignments] List of countries standing with Iran highlights shifting global alliances. (@IranSpoof)
+[Epistemic Integrity/Human Rights] Report on "Bacha bazi" in Pakistan highlights horrific exploitation and challenges traditional practices. (@realMaalouf)
+[Geopolitical Rhetoric/Power Accountability] Journalist questions Trump's claims about Iran's Tomahawk missiles, highlighting potential misinformation in official statements. (@MarioNawfal) [CURIOSITY: discourse_decisions_power_structures]
+[Geopolitical Rhetoric/Moral Accountability] Secretary of War Hegseth accused of "kiIIing school girls and energy infrastructure" and invoking religious justification for war. (@AdameMedia) [CURIOSITY: discourse_decisions_power_structures]
+[Geopolitical Rhetoric/Power Accountability] Trump claims US "completely destroyed" 10 Iranian mine-laying boats, intensifying conflict rhetoric. (@BRICSinfo) [CURIOSITY: discourse_decisions_power_structures]
+[Geopolitical Rhetoric/Global Economic Stability] Iran begins laying mines in Strait of Hormuz, threatening global oil flow and escalating war calculus. (@MarioNawfal) [CURIOSITY: discourse_decisions_power_structures]
+[Public Trust/Safety/Media Integrity] Active shooter near Baltimore report is quickly challenged by replies, highlighting issues of misinformation during crises. (@MarioNawfal) [CURIOSITY: discourse_decisions_power_structures]
+[Social Commentary/Consumerism] "BBL recovery means weeks of not sitting, not working, not doing anything productive. Which is exactly why it attracts jobless people..." reflects a critique of societal values. (@pallnandi)
+[Public Trust/Safety/Power Accountability] New suspicious package investigation outside Gracie Mansion, days after ISIS-linked bomb attack, raises ongoing safety and security concerns. (@ScooterCasterNY) [CURIOSITY: discourse_decisions_power_structures]
+[Political Moral Conduct/Bias] Comment: "What is Mamdani doing to NYC?! Nothing we didn't expect." and "America is stupid. Vote a Muslim in and this is what you get." demonstrate political and religious bias. (@EricLDaugh)
