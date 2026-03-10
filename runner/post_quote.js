@@ -149,24 +149,33 @@ async function sleep(ms) {
     }, POST_BUTTON);
     await sleep(3_500);
 
-    // Capture result — home compose stays on /home after post (no status redirect)
+    // Capture result — navigate to own profile to confirm post and get URL
     const finalUrl = page.url();
     let quoteUrl = null;
     if (/x\.com\/\w+\/status\/\d+/.test(finalUrl)) {
       quoteUrl = finalUrl;
-    } else {
-      await sleep(2_000);
-      const u2 = page.url();
-      if (/x\.com\/\w+\/status\/\d+/.test(u2)) quoteUrl = u2;
     }
 
-    if (quoteUrl) {
-      console.log(`[post_quote] SUCCESS: ${quoteUrl}`);
-      fs.writeFileSync(RESULT_FILE, quoteUrl + "\n");
+    if (!quoteUrl) {
+      console.log("[post_quote] navigating to profile to confirm post and capture URL...");
+      await page.goto("https://x.com/sebastianhunts", { waitUntil: "domcontentloaded", timeout: 20_000 });
+      await sleep(3_000);
+      quoteUrl = await page.evaluate(() => {
+        const links = Array.from(document.querySelectorAll('a[href*="/status/"]'));
+        const match = links.find(a => /\/sebastianhunts\/status\/\d+/.test(a.getAttribute("href") || ""));
+        if (match) return "https://x.com" + match.getAttribute("href").split("?")[0];
+        return null;
+      });
+      if (quoteUrl) {
+        console.log(`[post_quote] SUCCESS (confirmed from profile): ${quoteUrl}`);
+      } else {
+        console.log("[post_quote] posted — could not confirm URL from profile");
+      }
     } else {
-      console.log("[post_quote] posted (URL not captured — home compose does not redirect)");
-      fs.writeFileSync(RESULT_FILE, "posted\n");
+      console.log(`[post_quote] SUCCESS: ${quoteUrl}`);
     }
+
+    fs.writeFileSync(RESULT_FILE, (quoteUrl || "posted") + "\n");
 
     // Log to posts_log.json — always runs, whether called from run.sh or manually
     logQuote({ source_url: sourceUrl, content: quoteText, tweet_url: quoteUrl || "" });

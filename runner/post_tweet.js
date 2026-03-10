@@ -107,35 +107,41 @@ async function sleep(ms) {
     }, POST_BUTTON);
     await sleep(3_000);
 
-    // Try to get the new tweet URL from address bar
+    // Try to get the new tweet URL from address bar first
     const finalUrl = page.url();
     console.log(`[post_tweet] page URL after post: ${finalUrl}`);
 
     let tweetUrl = null;
     if (/x\.com\/\w+\/status\/\d+/.test(finalUrl)) {
       tweetUrl = finalUrl;
-    } else {
-      // Wait a bit and check again
-      await sleep(3_000);
-      const u2 = page.url();
-      if (/x\.com\/\w+\/status\/\d+/.test(u2)) {
-        tweetUrl = u2;
-      }
     }
 
-    if (tweetUrl) {
-      console.log(`[post_tweet] SUCCESS: ${tweetUrl}`);
-      fs.writeFileSync(path.join(ROOT, "state", "tweet_result.txt"), tweetUrl + "\n");
-    } else {
-      if (!finalUrl.includes("compose")) {
-        console.log("[post_tweet] posted (URL not captured — no status redirect)");
-        fs.writeFileSync(path.join(ROOT, "state", "tweet_result.txt"), "posted\n");
-      } else {
+    if (!tweetUrl) {
+      if (finalUrl.includes("compose")) {
         console.error("[post_tweet] still on compose page — post may have failed");
         browser.disconnect();
         process.exit(1);
       }
+      // Navigate to own profile and grab the first tweet URL to confirm post + capture URL
+      console.log("[post_tweet] navigating to profile to confirm post and capture URL...");
+      await page.goto("https://x.com/sebastianhunts", { waitUntil: "domcontentloaded", timeout: 20_000 });
+      await sleep(3_000);
+      tweetUrl = await page.evaluate(() => {
+        const links = Array.from(document.querySelectorAll('a[href*="/status/"]'));
+        const match = links.find(a => /\/sebastianhunts\/status\/\d+/.test(a.getAttribute("href") || ""));
+        if (match) return "https://x.com" + match.getAttribute("href").split("?")[0];
+        return null;
+      });
+      if (tweetUrl) {
+        console.log(`[post_tweet] SUCCESS (confirmed from profile): ${tweetUrl}`);
+      } else {
+        console.log("[post_tweet] posted — could not confirm URL from profile");
+      }
+    } else {
+      console.log(`[post_tweet] SUCCESS: ${tweetUrl}`);
     }
+
+    fs.writeFileSync(path.join(ROOT, "state", "tweet_result.txt"), (tweetUrl || "posted") + "\n");
 
     // Log to posts_log.json — always runs, whether called from run.sh or manually
     logTweet({ content: tweetText, tweet_url: tweetUrl || "" });

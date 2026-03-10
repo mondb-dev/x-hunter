@@ -35,6 +35,9 @@ export function readPostsLog(): PostLogEntry[] {
 
 export function getLatestPost(): PostLogEntry | null {
   const posts = readPostsLog();
-  const xPosts = posts.filter(p => p.type === "quote" || p.type === "tweet");
+  // Only show posts that were actually sent (tweet_url set — real URL or "posted" placeholder)
+  const xPosts = posts.filter(
+    p => (p.type === "quote" || p.type === "tweet") && !!p.tweet_url
+  );
   return xPosts.length > 0 ? xPosts[xPosts.length - 1] : null;
 }
