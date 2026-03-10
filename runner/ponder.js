@@ -212,7 +212,7 @@ Generate 2–3 action proposals. For each:
 
 Also:
 - Write a one-sentence updated vocation statement that reflects what you now understand yourself to be for.
-- Write a tweet (max 260 chars) announcing this ponder moment publicly: what you now know you are for, what you are going to do first, and @mention 1–2 accounts from the observed list that you think are genuinely aligned with your axes and worth working with. Be direct — this is a public declaration, not a press release.
+- Write a tweet (max 260 chars) announcing this ponder moment publicly: what you now know you are for, briefly name all proposed actions (one phrase each), and @mention 1–2 accounts from the observed list that you think are genuinely aligned with your axes and worth working with. Be direct — this is a public declaration, not a press release.
 
 Respond in this exact JSON format:
 {
@@ -282,13 +282,7 @@ async function main() {
   const raw      = await callLLM(prompt, 4000);
   const parsed   = parseResponse(raw);
 
-  // Write ponder tweet draft
-  if (parsed.tweet) {
-    let tweet = parsed.tweet.trim();
-    if (tweet.length > 280) tweet = tweet.slice(0, 277) + "...";
-    fs.writeFileSync(PONDER_TWEET, tweet);
-    console.log(`[ponder] tweet draft (${tweet.length} chars): ${tweet}`);
-  }
+  // Tweet draft written below after ponderCount is known (URL needs the count)
 
   // Update vocation
   const newVocation = {
@@ -325,6 +319,16 @@ async function main() {
     plans_generated: newPlans.map(p => p.id),
     ponder_count: ponderCount,
   });
+
+  // Write ponder tweet draft — append website URL so readers can explore the full ponder
+  if (parsed.tweet) {
+    const ponderUrl = `https://sebastianhunter.fun/ponders/${ponderCount}`;
+    let tweet = parsed.tweet.trim();
+    const withUrl = `${tweet}\n${ponderUrl}`;
+    const final = withUrl.length <= 280 ? withUrl : `${tweet.slice(0, 280 - ponderUrl.length - 2)}…\n${ponderUrl}`;
+    fs.writeFileSync(PONDER_TWEET, final);
+    console.log(`[ponder] tweet draft (${final.length} chars): ${final}`);
+  }
 
   // Write ponder snapshot file for website
   if (!fs.existsSync(PONDERS_DIR)) fs.mkdirSync(PONDERS_DIR, { recursive: true });
