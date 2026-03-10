@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
+import remarkGfm from "remark-gfm";
 import remarkHtml from "remark-html";
 
 export interface Report {
@@ -51,7 +52,7 @@ export async function getReportByDay(day: number): Promise<Report | null> {
   const report = all.find((r) => r.day === day);
   if (!report) return null;
 
-  const processed = await remark().use(remarkHtml).process(report.content);
+  const processed = await remark().use(remarkGfm).use(remarkHtml, { sanitize: false }).process(report.content);
   return { ...report, contentHtml: processed.toString() };
 }
 
@@ -61,6 +62,6 @@ export async function getManifesto(): Promise<{ contentHtml: string } | null> {
 
   const raw = fs.readFileSync(manifestoPath, "utf-8");
   const { content } = matter(raw);
-  const processed = await remark().use(remarkHtml).process(content);
+  const processed = await remark().use(remarkGfm).use(remarkHtml, { sanitize: false }).process(content);
   return { contentHtml: processed.toString() };
 }

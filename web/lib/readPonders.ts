@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
+import remarkGfm from "remark-gfm";
 import remarkHtml from "remark-html";
 import { DATA_ROOT } from "./dataRoot";
 
@@ -50,7 +51,7 @@ export async function getPonderByN(n: number): Promise<Ponder | null> {
   const all = getAllPonders();
   const p = all.find((x) => x.n === n);
   if (!p) return null;
-  const processed = await remark().use(remarkHtml).process(p.content);
+  const processed = await remark().use(remarkGfm).use(remarkHtml, { sanitize: false }).process(p.content);
   return { ...p, contentHtml: processed.toString() };
 }
 
@@ -63,7 +64,7 @@ export async function getLatestPonder(): Promise<Ponder | null> {
     const { data, content } = matter(raw);
     const all = getAllPonders();
     const n = all.length > 0 ? all[all.length - 1].n : 1;
-    const processed = await remark().use(remarkHtml).process(content);
+    const processed = await remark().use(remarkGfm).use(remarkHtml, { sanitize: false }).process(content);
     return {
       n,
       date: data.date ?? "",

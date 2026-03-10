@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
+import remarkGfm from "remark-gfm";
 import remarkHtml from "remark-html";
 import { DATA_ROOT } from "./dataRoot";
 
@@ -44,7 +45,7 @@ export async function getCheckpointByN(n: number): Promise<Checkpoint | null> {
   const all = getAllCheckpoints();
   const cp = all.find((c) => c.n === n);
   if (!cp) return null;
-  const processed = await remark().use(remarkHtml).process(cp.content);
+  const processed = await remark().use(remarkGfm).use(remarkHtml, { sanitize: false }).process(cp.content);
   return { ...cp, contentHtml: processed.toString() };
 }
 
@@ -62,7 +63,7 @@ export async function getLatestCheckpoint(): Promise<Checkpoint | null> {
     const all = getAllCheckpoints();
     const n = all.length > 0 ? all[all.length - 1].n : 1;
 
-    const processed = await remark().use(remarkHtml).process(content);
+    const processed = await remark().use(remarkGfm).use(remarkHtml, { sanitize: false }).process(content);
     return {
       n,
       date: data.date ?? "",

@@ -47,37 +47,8 @@ function daysBetween(dateA, dateB) {
   return Math.round(Math.abs(msB - msA) / 86_400_000);
 }
 
-async function callGemini(prompt) {
-  const https  = require("https");
-  const apiKey = process.env.GOOGLE_API_KEY;
-  if (!apiKey) throw new Error("GOOGLE_API_KEY not set");
-  const body = JSON.stringify({
-    contents: [{ parts: [{ text: prompt }] }],
-    generationConfig: { temperature: 0.6, maxOutputTokens: 600 },
-  });
-  return new Promise((resolve, reject) => {
-    const req = https.request({
-      hostname: "generativelanguage.googleapis.com",
-      path: `/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-    }, res => {
-      let raw = "";
-      res.on("data", c => raw += c);
-      res.on("end", () => {
-        try {
-          const j = JSON.parse(raw);
-          const text = j.candidates?.[0]?.content?.parts?.[0]?.text;
-          if (!text) reject(new Error(`No content: ${raw.slice(0, 300)}`));
-          else resolve(text.trim());
-        } catch (e) { reject(e); }
-      });
-    });
-    req.on("error", reject);
-    req.write(body);
-    req.end();
-  });
-}
+const { callVertex } = require("./vertex.js");
+async function callLLM(prompt) { return callVertex(prompt, 600); }
 
 (async function main() {
   try {
@@ -104,20 +75,21 @@ async function callGemini(prompt) {
         .sort()
         .slice(-3);
       recentReports = reportFiles.map(f => {
-        const content = fs.readFileSync(path.join(DAILY_DIR, f), "utf-8");
+        const raw = fs.readFileSync(path.join(DAILY_DIR, f), "utf-8");
+        // Strip YAML frontmatter before embedding
+        const content = raw.replace(/^---[\s\S]*?---\n/, "");
         // Extract just the summary sections (skip heavy full-ontology dump)
         const lines = content.split("\n");
         const summaryEnd = lines.findIndex((l, i) => i > 5 && l.startsWith("## Full ontology"));
-        const snippet = lines.slice(0, summaryEnd > 0 ? summaryEnd : 30).join("\n");
-        return `### From ${f.replace("belief_report_", "").replace(".md", "")}\n${snippet}`;
+        const snippet = lines.slice(0, summaryEnd > 0 ? summaryEnd : 30).join("\n").trim();
+        return `### From ${f.replace("belief_report_", "").replace(".md", "")}\n\n${snippet}`;
       }).join("\n\n---\n\n");
     }
 
     // Load current belief state
     const onto   = loadJson(ONTO);
-    const belief = loadJson(BELIEF);
     const axes   = onto?.axes || [];
-    const activeAxes = (belief?.axes || []).filter(a => (a.confidence || 0) > 0.1);
+    const activeAxes = axes.filter(a => (a.confidence || 0) > 0.1);
 
     // Determine checkpoint number
     const n = (cpState.checkpoint_count || 0) + 1;
@@ -170,7 +142,7 @@ Write 2–3 short paragraphs interpreting this snapshot in plain English. Cover:
 
 Write in third person ("Sebastian..."). Be analytical, not promotional. Keep it concise — total 120–160 words. No bullet points. No headers. Plain paragraphs only.`;
 
-      interpretation = await callGemini(prompt);
+      interpretation = await callLLM(prompt);
       console.log("[checkpoint] interpretation generated");
     } catch (err) {
       console.warn("[checkpoint] interpretation skipped:", err.message);

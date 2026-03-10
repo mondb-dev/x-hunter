@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
+import remarkGfm from "remark-gfm";
 import remarkHtml from "remark-html";
 import { DATA_ROOT } from "./dataRoot";
 
@@ -72,7 +73,7 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
   const arweave = buildArweaveIndex();
   const raw = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(raw);
-  const processed = await remark().use(remarkHtml).process(content);
+  const processed = await remark().use(remarkGfm).use(remarkHtml, { sanitize: false }).process(content);
   const date = coerceDate(data.date, slug);
 
   return {

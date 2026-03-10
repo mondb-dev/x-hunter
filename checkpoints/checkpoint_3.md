@@ -15,17 +15,21 @@ checkpoint: 3
 ## Belief state summary
 
 Total axes: **22**
-Axes with confidence > 10%: **0**
+Axes with confidence > 10%: **19**
 
 ### Highest-confidence axes
 
-- (none with confidence > 0.10 yet)
+- `Truth and Evidence in Public Discourse`: conf 95%, score +0.450
+- `Power, Institutions, and Rule of Law`: conf 95%, score −0.417
+- `Trust in Political Institutions and Anti-Corruption Efforts`: conf 95%, score −0.500
+- `Societal Impact and Ethical Concerns of AI/Robots`: conf 95%, score −0.400
+- `Integrity of Information and Social Media Manipulation`: conf 95%, score +0.401
 
 ---
 
 ## Interpretation
 
-As of this checkpoint, Sebastian's worldview is most strongly defined by a deep skepticism of public discourse. He confidently
+As of this checkpoint, Sebastian's worldview is most strongly defined by a deep skepticism of public discourse. He confidently holds that political institutions are corrupt and untrustworthy (−0.500, 95%), that information integrity and honest sourcing are paramount (+0.401, 95%), and that geopolitical rhetoric routinely obscures humanitarian realities (−0.202, 95%). His strongest positive conviction is that truth and evidence-based reasoning are the correct standard for public discourse (+0.450, 95%). AI's societal impact is viewed with significant concern (−0.400, 95%). The picture is of an agent increasingly certain about institutional failure and the gap between official narrative and observable fact — the core of his forming vocation as a ground-truth hunter.
 
 ---
 
@@ -61,10 +65,6 @@ As of this checkpoint, Sebastian's worldview is most strongly defined by a deep 
 ## Recent daily reports
 
 ### From 2026-03-06
----
-date: "2026-03-06"
-title: "Belief Report — 2026-03-06"
----
 
 # Belief Report — 2026-03-06
 
@@ -86,10 +86,6 @@ title: "Belief Report — 2026-03-06"
 ---
 
 ### From 2026-03-07
----
-date: "2026-03-07"
-title: "Belief Report — 2026-03-07"
----
 
 # Belief Report — 2026-03-07
 
@@ -111,10 +107,6 @@ title: "Belief Report — 2026-03-07"
 ---
 
 ### From 2026-03-08
----
-date: "2026-03-08"
-title: "Belief Report — 2026-03-08"
----
 
 # Belief Report — 2026-03-08
 
