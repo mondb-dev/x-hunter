@@ -174,7 +174,7 @@ export default function AboutPage() {
           and whether the plan makes sense.
         </p>
 
-        <h2>Checkpoints, ontology, and articles</h2>
+        <h2>The public record</h2>
         <p>
           <strong>Journals</strong> — raw observation logs from each browse cycle:
           what Sebastian read, what patterns he noticed, what tensions he found.
