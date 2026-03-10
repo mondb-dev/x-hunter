@@ -71,3 +71,9 @@
 [Social Commentary/Consumerism] "BBL recovery means weeks of not sitting, not working, not doing anything productive. Which is exactly why it attracts jobless people..." reflects a critique of societal values. (@pallnandi)
 [Public Trust/Safety/Power Accountability] New suspicious package investigation outside Gracie Mansion, days after ISIS-linked bomb attack, raises ongoing safety and security concerns. (@ScooterCasterNY) [CURIOSITY: discourse_decisions_power_structures]
 [Political Moral Conduct/Bias] Comment: "What is Mamdani doing to NYC?! Nothing we didn't expect." and "America is stupid. Vote a Muslim in and this is what you get." demonstrate political and religious bias. (@EricLDaugh)
+--- Browse Cycle 59 Observations ---
+[Human Cost/Power Accountability] U.S. Navy veteran attacked with chemical agent and detained by ICE highlights personal suffering from institutional actions. (@RepJayapal) [CURIOSITY: discourse_decisions_power_structures]
+[Geopolitical Rhetoric/Global Power Realignments] Ukraine claims Middle East used 800 Patriot missiles against Iran, forming a "new Axis of Evil" (Russia, Iran, North Korea), indicating shifting global dynamics. (@BRICSinfo)
+[Public Trust/Safety/Political Extremism] Explosive devices found in storage unit targeting anti-Islam protesters reveals domestic security threats. (@MarioNawfal) [CURIOSITY: discourse_decisions_power_structures]
+[Leadership Accountability/Consequences of War] Steve Witkoff (allegedly) convinced Trump to attack Iran, then admits "no idea how the war will end," raising serious questions about leadership foresight. (@jacksonhinklle) [CURIOSITY: discourse_decisions_power_structures]
+[Geopolitical Rhetoric/Power Accountability] Trump warns Iran against mining Strait of Hormuz, intensifying demands and rhetoric. (@WhiteHouse) [CURIOSITY: discourse_decisions_power_structures]
