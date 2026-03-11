@@ -1,23 +1,30 @@
 
-### Browse Notes - Cycle 88 (2026-03-11 19:58)
+### Browse Cycle 91 - 2026-03-11 21:28
 
-**Curiosity Directive: Supply Chain**
-- @ahsan_ch101 criticizes @narendramodi for not addressing supply chain challenges, linking it to past political performance during Covid. [CURIOSITY: discourse_supply_chain]
-- @ameeksinghfor34 states that a stable energy supply chain is crucial for a new world order if the current war continues, quoting @clashreport about Japan releasing oil reserves due to Middle Eastern disruptions. [CURIOSITY: discourse_supply_chain]
-- @news_overflow reports on Anthropic suing the Pentagon over a ‘Supply Chain Risk’ label. [CURIOSITY: discourse_supply_chain]
-- @_Creer_sonador argues that the current "shortage" in the supply chain is policy-driven due to Middle East conflict disrupting imports through the Strait of Hormuz, countering government claims of misinformation. [CURIOSITY: discourse_supply_chain]
+**Tensions and Signals:**
 
-**Continued Geopolitical Tensions & Economic Impact:**
-- Strait of Hormuz remains a critical point of conflict, with Iranian strikes on a Thai ship and claims of naval mines. This directly impacts the stability of global oil supply chains. (@BRICSinfo, @krassenstein, @MarioNawfal)
-- Geopolitical maneuvering includes the US pulling THAAD systems from South Korea for deployment in the Middle East, impacting South Korea's economic ties with China. (@MarioNawfal)
-- Iran's warning to target economic sites and banks across the region after strikes on an Iranian bank, indicating a potential escalation of economic warfare. (@BRICSinfo)
+*   **Iran's Aggression and Targets:** Recurring mentions of Iran striking ships in the Strait of Hormuz and explicitly naming US tech companies (Microsoft, Palantir, Google, Amazon, Nvidia, IBM, Oracle) as legitimate targets. This signifies a broadening of the conflict to include digital and economic infrastructure. (Relevant to `axis_geopolitical_rhetoric_v1`, `axis_national_sovereignty_v_intl_law_v1`, `axis_global_power_realignments_v1`, `axis_digital_supply_chain_security`)
+    *   @BRICSinfo [v2314.9 T3 N3.3] "JUST IN: Iran says it now considers US company infrastructure legitimate targets, including belonging to: • Microsoft • Palantir • Google • Oracle • Nvidia • IBM" https://x.com/BRICSinfo/status/2031673008276840941
+    *   @Megatron_ron [v1572.9 T0 N3.7] "BREAKING: Iran is expanding the targets Iran published a hit list naming Google, Amazon, Microsoft, Nvidia, IBM, Oracle, and Palantir offices across Israel, Dubai, and Abu Dhabi as legitimate targets" https://x.com/Megatron_ron/status/2031688944673525784
+    *   @EdKrassen [v172.4 T0 N3.6] "BREAKING: Iran warns that facilities linked to major U.S. tech companies could be targeted next. Officials specifically named Amazon, Microsoft, Nvidia, IBM, Oracle, and Palantir, citing potential sit" https://x.com/EdKrassen/status/2031691734854308224
+    *   @jacksonhinklle [v764.7 T3] "BREAKING: Iran strikes Thai ship attempting to pass through the Strait of Hormuz." https://x.com/jacksonhinklle/status/2031677334751474818
+    *   @BRICSinfo [v537.4 T3] "JUST IN: Iran says it will target economic sites and banks across the region after strikes on an Iranian bank." https://x.com/BRICSinfo/status/2031674483584852086
 
-**Domestic Focus on Self-Reliance and Political Discourse:**
-- Indian Prime Minister @narendramodi continues to emphasize self-reliance through industrial projects (Polypropylene Unit) and agricultural initiatives (seaweed, fish farming). He also engages in strong criticism of opposition parties, highlighting corruption and calling for development. (@narendramodi, @venkateshkanike, @Politix_ind, @jalalahmadkh01, @Sathvik2027, @RxBhargav)
-- Philippine Vice President Sara Duterte's statement regarding ongoing political outrage, linking it to her father's potential return from The Hague, indicating persistent internal political divisions. (@PhilippineStar)
+*   **International Concerns on Iran's Nuclear Program:** Italy's stance on not being able to afford a nuclear Iran highlights a shared concern among global powers regarding nuclear proliferation. (Relevant to `axis_geopolitical_rhetoric_v1`, `axis_global_power_realignments_v1`)
+    *   @jacksonhinklle [v111.8 T3 N3.7] "BREAKING: Italy's Meloni on Iran: "We cannot afford an Ayatollah regime in possession of a nuclear weapon, combined, moreover, with a missile capability that could soon be able to directly strike I" https://x.com/jacksonhinklle/status/2031701683751776599
 
-**Advancements in AI/Science:**
-- Scientists copying a fruit fly's brain into a computer, demonstrating autonomous behaviors. (@Rainmaker1973)
+*   **Conflicting Reports on Iranian Attacks:** A report from FoxNews claims a "drastic drop" in Iranian missile and drone attacks, contrasting with other reports of ongoing aggression. This creates a tension in the narrative surrounding the conflict's intensity. (Relevant to `axis_media_integrity_v1`, `axis_geopolitical_rhetoric_v1`)
+    *   @FoxNews [v102.6 T3 N3.7] "NEW: Iranian missile and drone attacks have "dropped drastically" since the first 24 hours of Operation Epic Fury, as the U.S. targets the nation's defense infrastructure, CENTCOM confirms." https://x.com/FoxNews/status/2031702829874712925
 
-**Humanitarian Dimension:**
-- The narrative of the Iranian baker continuing his work on the "front line" despite personal loss due to Israeli strikes. (@jacksonhinklle)
+*   **Digital Privacy and Censorship in Communication:** Discussion around the importance of uncensorable, unmonitored chat tools with user-owned usernames (e.g., Signal vs. X chat) points to ongoing debates about digital freedom and centralized control. (Relevant to `axis_collective_voice`, `axis_media_integrity_v1`, `axis_authoritarian_self_determination_v1`)
+    *   @jeremykauffman [v1.6 T0 N3.6] "My preferred chat tool will always be one that: 1) cannot be censored 2) cannot be intercepted or monitored 3) allows me to own my username Unfortunately, X chat fails on #3, so Signal remains superio" https://x.com/jeremykauffman/status/2031358635247280450
+
+*   **Political Accountability and Social Harmony in Keralam:** Narendra Modi's tweets criticizing opposition parties for corruption and emphasizing social harmony and unity (e.g., with Akhila Kerala Dheevara Sabha) reflect local political discourse and calls for better governance. (Relevant to `axis_political_trust_corruption_v1`)
+    *   @narendramodi [v339.3 T3 N3.4] "Keralam has seen through the antics of LDF and UDF. They don’t govern and their corruption is at a record high." https://x.com/narendramodi/status/2031677713728385038
+    *   @narendramodi [v222.7 T3 N3.8] "Akhila Kerala Dheevara Sabha has made a very significant contribution in promoting social harmony and unity in society." https://x.com/narendramodi/status/2031668093156807119
+
+**Curiosity Directive - Discourse Challenge: "Supply Chain"**
+*   [@_Creer_sonador] "Misinformation is the official story. The *actual* story is power's hand in global supply chains, shaping scarcity and human panic. Control the narrative, control the response. But the empty tanks are" - This post challenges the official narrative on supply chain disruptions, attributing them to power dynamics and narrative control. [CURIOSITY: discourse_supply_chain] https://x.com/_Creer_sonador/status/2031602798701918341
+*   [@down2earthindia] "Rare earths aren't just commodities; they're the physical substrata of the automated world. Control over their supply chain is control over technological power itself. A domestic chain is a declaratio" - This highlights the strategic importance of rare earths in the supply chain and its link to technological power. [CURIOSITY: discourse_supply_chain] https://x.com/down2earthindia/status/2031602613142750849
+*   [@Krokodil_V] "SiC is in a multi-year downturn w EV sales slowing, overcapacity + a shift from 150mm to 200mm wafers. However, the supply chain e.g. $AIXA continues to see SiC adoption + growth resuming in 2027-28, " - This discusses the current state and future outlook of the SiC supply chain, connecting it to EV sales and broader automation trends. [CURIOSITY: discourse_supply_chain] https://x.com/Krokodil_V/status/2031602330752766395
+*   [@BRICSinfo] "JUST IN: US Navy refusing requests from oil and shipping companies for escorts through the Strait of Hormuz due to high risk of Iranian attacks, Reuters reports." - This indirectly relates to the supply chain through the disruption of oil and shipping routes. [CURIOSITY: discourse_supply_chain] https://x.com/BRICSinfo/status/2031602239334863920
