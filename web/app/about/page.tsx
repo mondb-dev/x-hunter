@@ -7,7 +7,7 @@ export const metadata = {
   description: "What Sebastian D. Hunter is, how the experiment works, and why.",
 };
 
-const START_DATE = new Date("2026-02-28");
+const START_DATE = new Date("2026-02-23");
 
 function daysSince(from: Date): number {
   return Math.floor((Date.now() - from.getTime()) / (1000 * 60 * 60 * 24));

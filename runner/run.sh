@@ -294,6 +294,11 @@ while true; do
   HOUR=$(date +%H)
   CYCLE_START=$(date +%s)
 
+  # Day number since agent start (Feb 23, 2026)
+  _AGENT_START_EPOCH=$(date -j -f "%Y-%m-%d" "2026-02-23" "+%s" 2>/dev/null || date -d "2026-02-23" "+%s")
+  _TODAY_EPOCH=$(date -j -f "%Y-%m-%d" "$TODAY" "+%s" 2>/dev/null || date -d "$TODAY" "+%s")
+  DAY_NUMBER=$(( (_TODAY_EPOCH - _AGENT_START_EPOCH) / 86400 + 1 ))
+
   # Determine cycle type
   if [ $(( CYCLE % TWEET_EVERY )) -eq 0 ]; then
     CYCLE_TYPE="TWEET"
@@ -540,15 +545,16 @@ FIRSTMSG
     if [ -f "$_BROWSE_JOURNAL_PATH" ]; then
       _JOURNAL_TASK="journals/${TODAY}_${HOUR}.html ALREADY EXISTS. DO NOT write or overwrite this file under any circumstances — it has been permanently archived to Arweave and cannot be changed."
     else
-      _JOURNAL_TASK="Write journals/${TODAY}_${HOUR}.html now.
+      _JOURNAL_TASK="Write journals/${TODAY}_${HOUR}.html now. This is Day $DAY_NUMBER.
    Brief observation log for this browse cycle — 150-200 words.
    One or two key tensions or signals you noticed. What is new or surprising.
    Use standard HTML journal format (same as tweet cycle journals).
+   In the HTML metadata use content=\"$DAY_NUMBER\" for x-hunter-day and \"Day $DAY_NUMBER · Hour $HOUR\" in the header.
    This is the public record of what you observed. Keep it honest and specific."
     fi
 
     AGENT_MSG=$(cat <<BROWSEMSG
-Today is $TODAY $NOW. Browse cycle $CYCLE -- no tweet this cycle.
+Today is $TODAY $NOW — Day $DAY_NUMBER. Browse cycle $CYCLE -- no tweet this cycle.
 
 All files are pre-loaded below. Do NOT call any read_file tools.
 Proceed directly to tasks.
@@ -897,7 +903,7 @@ QUOTEMSG
     if [ -f "$_TWEET_JOURNAL_PATH" ]; then
       _TWEET_JOURNAL_TASK="journals/${TODAY}_${HOUR}.html ALREADY EXISTS. DO NOT write or overwrite this file — it has been permanently archived to Arweave."
     else
-      _TWEET_JOURNAL_TASK="Write journals/${TODAY}_${HOUR}.html"
+      _TWEET_JOURNAL_TASK="Write journals/${TODAY}_${HOUR}.html (Day $DAY_NUMBER). Use x-hunter-day content=\"$DAY_NUMBER\" and \"Day $DAY_NUMBER · Hour $HOUR\" in the header."
     fi
 
     # Shell guard: if browse notes are empty or a browser-failure cycle, skip tweet immediately
@@ -915,7 +921,7 @@ QUOTEMSG
     else
 
     AGENT_MSG=$(cat <<TWEETMSG
-Today is $TODAY $NOW. Tweet cycle $CYCLE -- FILE-ONLY. No browser tool at any point.
+Today is $TODAY $NOW — Day $DAY_NUMBER. Tweet cycle $CYCLE -- FILE-ONLY. No browser tool at any point.
 
 All files are pre-loaded below. Do NOT call any read_file tools.
 

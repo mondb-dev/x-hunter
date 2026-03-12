@@ -56,9 +56,11 @@ function extractBody(html: string): { body: string; title: string } {
   return { body, title };
 }
 
-// Compute day number from date relative to the earliest journal date (Day 1 = first date)
-function computeDay(date: string, earliestDate: string): number {
-  const ms = new Date(date).getTime() - new Date(earliestDate).getTime();
+// Agent start date — Day 1 = Feb 23 2026 (confirmed by Arweave uploads)
+const AGENT_START_DATE = "2026-02-23";
+
+function computeDay(date: string): number {
+  const ms = new Date(date).getTime() - new Date(AGENT_START_DATE).getTime();
   return Math.floor(ms / 86_400_000) + 1;
 }
 
@@ -73,9 +75,6 @@ export function getAllJournalDays(): JournalDay[] {
       .filter((f) => /^\d{4}-\d{2}-\d{2}_\d{2}\.html$/.test(f))
       .sort();
 
-    // Earliest date = first filename after sort (YYYY-MM-DD sorts lexicographically)
-    const earliestDate = files.length > 0 ? parseSlug(files[0])?.date ?? "" : "";
-
     const byDate = new Map<string, JournalEntry[]>();
 
     for (const filename of files) {
@@ -88,7 +87,7 @@ export function getAllJournalDays(): JournalDay[] {
       const entry: JournalEntry = {
         date: parsed.date,
         hour: parsed.hour,
-        day: computeDay(parsed.date, earliestDate),
+        day: computeDay(parsed.date),
         slug: `${parsed.date}_${String(parsed.hour).padStart(2, "0")}`,
         title,
         contentHtml: body,
@@ -120,16 +119,10 @@ export function getJournalEntry(date: string, hour: number): JournalEntry | null
   const { body, title } = extractBody(raw);
   const arweaveUrl = loadArweaveIndex().get(filename);
 
-  // Compute day from earliest journal date on disk
-  const allFiles = fs.existsSync(JOURNALS_DIR)
-    ? fs.readdirSync(JOURNALS_DIR).filter((f) => /^\d{4}-\d{2}-\d{2}_\d{2}\.html$/.test(f)).sort()
-    : [];
-  const earliestDate = allFiles.length > 0 ? parseSlug(allFiles[0])?.date ?? date : date;
-
   return {
     date,
     hour,
-    day: computeDay(date, earliestDate),
+    day: computeDay(date),
     slug: `${date}_${String(hour).padStart(2, "0")}`,
     title,
     contentHtml: body,
