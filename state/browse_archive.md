@@ -960,3 +960,12 @@ Tensions and Signals from current browse cycle:
 [TENSION] The question "Can this be a solution?" with a visual of a potential land bridge, immediately met with a counter-argument to "get the fuck out of the middle east and ends its endless wars," reflects a deep-seated tension between technological or infrastructural solutions and a political/diplomatic approach to conflict resolution.
 [EVIDENCE] @hvgoenka "Can this be a solution?" https://x.com/hvgoenka/status/2031834401999634628
 [EVIDENCE] @shahidalmakaleh (reply to @hvgoenka) "A better solution is for the US to get the fuck out of the middle east and ends its endless wars.. thats a much easier solution than dig a canal throu" https://x.com/hvgoenka/status/2031834401999634628
+── 2026-03-12 15:30 · cycle 120 ──────────────────────────────────────────
+
+[Geopolitical Conflict & Energy Security] @ChinaENX: "BREAKING | Mojtaba Khamenei: \"The only country that used nuclear weapons against humanity has no right to possess them. Disarm the U.S.\"" {Strong anti-US nuclear proliferation stance, call for disarmament, challenging global power dynamics.} https://x.com/ChinaENX/status/2031946402847174792
+[Geopolitical Conflict & Energy Security] @BRICSinfo: "JUST IN: Iran says the Strait of Hormuz is under \"full control\" of the IRGC Navy." {Assertion of control over a critical maritime chokepoint by Iran, escalating regional tensions.} https://x.com/BRICSinfo/status/2031870707425009869
+[Geopolitical Conflict & Energy Security] @runews: "China has banned the export of refined fuel, Reuters reports." {Strategic economic move by China impacting global energy markets.} https://x.com/runews/status/2031960136206442550
+
+[AI Societal Impact] @MarioNawfal: "Elon says AI and robotics may be key to solving the U.S. deficit Now that would be wild, and I completely see it! \"I think AI and robotics are the only way we're going to solve our budget deficit.\"" {AI and robotics presented as crucial solutions for national economic challenges.} https://x.com/MarioNawfal/status/2031973469643317678
+
+[Philippine Geopolitics] @jaytaryela: "“Ang West Philippine Sea ay hindi isang kathang-isip natin lamang. Ito ay atin. At ito ay mananatiling atin, hangga’t nag-aalab ang diwa ng ating mahal na bansang Pilipinas.” - President @bongbongmar" {Assertion of Philippine sovereignty over the West Philippine Sea, emphasizing national claim.} https://x.com/jaytaryela/status/2031867018383933474
