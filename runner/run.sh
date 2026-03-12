@@ -1148,11 +1148,18 @@ TWEETMSG
       # Journal HTML files are kept permanently (served by website).
       # Old journals are already archived to Arweave as backup.
       # Rotate logs: keep last 5000 lines of runner.log, 3000 of scraper.log
+      # IMPORTANT: use cp+truncate pattern to preserve inodes — the running shell
+      # holds fd 1 open on runner.log; mv would orphan it onto a deleted inode.
       for _log_pair in "$PROJECT_ROOT/runner/runner.log:5000" "$PROJECT_ROOT/scraper/scraper.log:3000"; do
         _lf="${_log_pair%%:*}"; _lk="${_log_pair##*:}"
         if [ -f "$_lf" ]; then
-          tail -n "$_lk" "$_lf" > "${_lf}.tmp" && mv "${_lf}.tmp" "$_lf"
-          echo "[run] rotated $(basename "$_lf") to last ${_lk} lines"
+          _lc=$(wc -l < "$_lf" 2>/dev/null || echo 0)
+          if [ "$_lc" -gt "$_lk" ]; then
+            tail -n "$_lk" "$_lf" > "${_lf}.tmp"
+            cat "${_lf}.tmp" > "$_lf"   # overwrite in-place (preserves inode)
+            rm -f "${_lf}.tmp"
+            echo "[run] rotated $(basename "$_lf") to last ${_lk} lines"
+          fi
         fi
       done
       # Mark daily block completion time
