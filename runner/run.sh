@@ -1104,7 +1104,7 @@ TWEETMSG
         fi
         printf "New piece: %s\n%s" "$_ARTICLE_TITLE" "$_ARTICLE_URL" > "$PROJECT_ROOT/state/tweet_draft.txt"
         echo "[run] tweeting article link: $_ARTICLE_URL"
-        node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1 | grep -v '^$'
+        node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1 | grep -v '^$' || true
         rm -f "$PROJECT_ROOT/state/article_result.txt"
       fi
       # ── Checkpoint (every 3 days — generate_checkpoint.js self-gates) ───────
@@ -1115,14 +1115,14 @@ TWEETMSG
       # Post plan announcement tweet if decision.js activated a plan
       if [ -f "$PROJECT_ROOT/state/plan_tweet.txt" ]; then
         cp "$PROJECT_ROOT/state/plan_tweet.txt" "$PROJECT_ROOT/state/tweet_draft.txt"
-        node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1 | grep -v '^$'
+        node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1 | grep -v '^$' || true
         rm -f "$PROJECT_ROOT/state/plan_tweet.txt"
         echo "[run] plan announcement tweet posted"
       fi
       # Post ponder declaration tweet if ponder fired and wrote a draft
       if [ -f "$PROJECT_ROOT/state/ponder_tweet.txt" ]; then
         cp "$PROJECT_ROOT/state/ponder_tweet.txt" "$PROJECT_ROOT/state/tweet_draft.txt"
-        node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1 | grep -v '^$'
+        node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1 | grep -v '^$' || true
         rm -f "$PROJECT_ROOT/state/ponder_tweet.txt"
         echo "[run] ponder declaration tweet posted"
         # Flag Moltbook ponder post as pending — will retry each daily cycle until success

@@ -63,6 +63,16 @@ async function callGemini(prompt) { return callVertex(prompt, 4000); }
 (async () => {
   console.log("[article] starting daily article writer...");
 
+  // 24h cooldown — skip if already written today
+  const artState = loadArticleState();
+  if (artState.last_written_at) {
+    const elapsed = Date.now() - new Date(artState.last_written_at).getTime();
+    if (elapsed < 22 * 3600 * 1000) { // 22h grace window
+      console.log(`[article] cooldown: last article written ${(elapsed/3600000).toFixed(1)}h ago — skipping`);
+      process.exit(0);
+    }
+  }
+
   // Load ontology
   let ontology;
   try {
