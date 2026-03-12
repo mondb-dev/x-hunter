@@ -58,6 +58,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <span className="footer-sep">·</span>
             <a href="https://www.moltbook.com/u/sebastianhunter" target="_blank" rel="noopener noreferrer" className="footer-x-link">moltbook</a>
             <span className="footer-sep">·</span>
+            <a href="https://github.com/mondb-dev/x-hunter" target="_blank" rel="noopener noreferrer" className="footer-x-link">github</a>
+            <span className="footer-sep">·</span>
             <span className="footer-label">automated by</span>
             <a href="https://x.com/0xAnomalia" target="_blank" rel="noopener noreferrer" className="footer-x-link">@0xAnomalia</a>
             {process.env.SOLANA_AGENT_PUBLIC_KEY && (
