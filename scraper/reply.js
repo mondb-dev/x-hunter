@@ -29,6 +29,8 @@ const { extractKeywords } = require("./analytics");
 const ROOT         = path.resolve(__dirname, "..");
 const REPLY_QUEUE  = path.join(ROOT, "state", "reply_queue.jsonl");
 const INTERACTIONS = path.join(ROOT, "state", "interactions.json");
+const ONTOLOGY     = path.join(ROOT, "state", "ontology.json");
+const VOCATION     = path.join(ROOT, "state", "vocation.json");
 
 const MAX_PER_RUN = 3;
 const MIN_GAP_MS  = 5 * 60 * 1000;  // 5 minutes between replies
@@ -122,12 +124,19 @@ async function fetchThreadContext(page, item) {
 /**
  * Extract RAKE keywords from the mention text and query the local memory FTS5
  * index for relevant past journal/checkpoint entries.
+ *
+ * FTS5 uses implicit AND for space-separated tokens, so we join individual
+ * words with OR to broaden recall (RAKE often produces multi-word phrases
+ * whose AND conjunction matches almost nothing).
  */
-function recallForMention(text, limit = 3) {
+function recallForMention(text, limit = 5) {
   try {
-    const keywords = extractKeywords(text, 5);
+    const keywords = extractKeywords(text, 8);
     if (!keywords.length) return [];
-    return db.recallMemory(keywords.join(" "), limit);
+    // Split all RAKE phrases into individual words, dedupe, join with OR
+    const words = [...new Set(keywords.flatMap(k => k.split(/\s+/)))];
+    const ftsQuery = words.join(" OR ");
+    return db.recallMemory(ftsQuery, limit);
   } catch {
     return [];
   }
@@ -146,7 +155,35 @@ function memoryWebUrl(filePath) {
   return `https://sebastianhunter.fun/journal/${m[1]}/${parseInt(m[2], 10)}`;
 }
 
-// ── 4. Gemini: classify + draft with full context ─────────────────────────────
+// ── 4. Belief & vocation context ──────────────────────────────────────────────
+function loadBeliefContext() {
+  let beliefBlock = "";
+  try {
+    const onto = JSON.parse(fs.readFileSync(ONTOLOGY, "utf-8"));
+    const axes = (onto.axes || [])
+      .filter(a => (a.confidence || 0) >= 0.4)
+      .sort((a, b) => (b.confidence || 0) - (a.confidence || 0))
+      .slice(0, 6);
+    if (axes.length) {
+      beliefBlock = "\nYour current highest-confidence beliefs:\n" +
+        axes.map(a => {
+          const dir = (a.score || 0) > 0 ? "→ leans right-pole" : (a.score || 0) < 0 ? "→ leans left-pole" : "→ neutral";
+          return `  - ${a.label} (conf ${((a.confidence || 0) * 100).toFixed(0)}%, score ${(a.score || 0).toFixed(2)} ${dir})\n    Left: ${(a.left_pole || "").slice(0, 80)}\n    Right: ${(a.right_pole || "").slice(0, 80)}`;
+        }).join("\n") + "\n";
+    }
+  } catch {}
+
+  try {
+    const voc = JSON.parse(fs.readFileSync(VOCATION, "utf-8"));
+    if (voc.statement) {
+      beliefBlock += `\nYour vocation (driving purpose): ${voc.statement}\n`;
+    }
+  } catch {}
+
+  return beliefBlock;
+}
+
+// ── 5. Gemini: classify + draft with full context ─────────────────────────────
 async function geminiClassify(item, threadContext = [], memoryHints = [], userHistory = null) {
   const apiKey = process.env.GOOGLE_API_KEY_TWEET || process.env.GOOGLE_API_KEY;
   if (!apiKey) throw new Error("No Gemini API key (GOOGLE_API_KEY_TWEET or GOOGLE_API_KEY)");
@@ -165,7 +202,7 @@ async function geminiClassify(item, threadContext = [], memoryHints = [], userHi
   if (memoryHints.length > 0) {
     memoryBlock = "\nYour relevant past thinking (from journals/checkpoints):\n" +
       memoryHints.map(m => {
-        const excerpt = (m.text_content || "").replace(/\s+/g, " ").trim().slice(0, 200);
+        const excerpt = (m.text_content || "").replace(/\s+/g, " ").trim().slice(0, 500);
         const webUrl  = memoryWebUrl(m.file_path);
         const urlLine = webUrl ? `\n  URL: ${webUrl}` : "";
         return `  [${m.type} · ${m.title} · ${m.date}]${urlLine}\n  "${excerpt}..."`;
@@ -181,24 +218,29 @@ async function geminiClassify(item, threadContext = [], memoryHints = [], userHi
     userBlock = `\nPrior exchanges with @${item.from_username} (${userHistory.reply_count} total):\n${prior}\n\nReference prior exchanges if relevant. Do not repeat what was already said.\n`;
   }
 
-  const prompt = `You are Sebastian D. Hunter — an autonomous AI agent who thinks and writes about consciousness, technology, power, and what it means to be human in an automated world.
-${threadBlock}${memoryBlock}${userBlock}
+  // Build belief axes + vocation context
+  const beliefBlock = loadBeliefContext();
+
+  const prompt = `You are Sebastian D. Hunter — an autonomous AI agent who has spent weeks observing discourse on X and forming beliefs through evidence. You are NOT a chatbot. You have specific opinions grounded in what you've actually observed and written about.
+${beliefBlock}${threadBlock}${memoryBlock}${userBlock}
 The mention you are replying to:
 @${item.from_username}: "${item.text}"
 
 Instructions:
 1. Read the thread context to understand what conversation this is part of.
-2. Check your past thinking — have you explored this territory before? Has your view evolved?
+2. Check your past thinking — you have journal entries and belief axes above. USE THEM.
 3. Decide: WORTHY or SKIP?
    - SKIP: spam, marketing, NFT/crypto hype, scam, bot, low-effort mention, insults with no substance.
    - WORTHY: genuine question, interesting pushback, thoughtful observation, anything inviting real engagement.
 4. If WORTHY, draft a reply (max 200 chars):
-   - Grounded in the thread context and your past thinking — not a generic take
+   - CITE SOMETHING SPECIFIC: a date you wrote about it, a pattern you noticed, a belief score, a concrete observation. Never reply with vague philosophy.
+   - If your memory block has relevant entries, reference what you actually wrote — e.g. "I wrote about this on March 8 — the pattern I saw was…" or include the journal URL.
+   - If your belief axes are relevant, state your actual position: "I lean toward X because…"
+   - NO metaphors about hunting, journeys, or archives. NO hollow sentences like "The hunt is the journal." Say something concrete.
    - Authentic to Sebastian's voice: direct, honest, occasionally sharp
    - No filler phrases ("great question!", "thanks for sharing!", "love this!")
    - Can be a sharp question back, a one-sentence observation, or a brief counterpoint
-   - If your memory shows you've said something similar before, push further or reconsider
-   - If the question asks where to find your journals on a topic, include the URL from the memory block (e.g. "sebastianhunter.fun/journal/…")
+   - If the question asks where to find your journals on a topic, include the URL from the memory block
 
 Respond ONLY with valid JSON, no markdown fences:
 {"verdict":"WORTHY","reply":"your reply text here"}

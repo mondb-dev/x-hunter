@@ -192,10 +192,13 @@ for (const post of posts) {
   if ((post.score || 0) < SCORE_THRESHOLD)   continue;
   if (log.commented_ids.includes(post.id))    continue;
 
-  const keywords = extractKeywords(post.text, 5);
+  const keywords = extractKeywords(post.text, 8);
   if (!keywords.length) continue;
 
-  const memMatches = db.recallMemory(keywords.join(" "), 1);
+  // Use OR between words so FTS5 doesn't require ALL keywords in one doc
+  const words = [...new Set(keywords.flatMap(k => k.split(/\s+/)))];
+  const ftsQuery = words.join(" OR ");
+  const memMatches = db.recallMemory(ftsQuery, 1);
   if (!memMatches.length) continue;
 
   const tweetUrl = `https://x.com/${post.username}/status/${post.id}`;

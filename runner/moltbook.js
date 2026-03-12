@@ -12,6 +12,15 @@ const path = require("path");
 const { execSync } = require("child_process");
 const { callVertex } = require("./vertex");
 
+// Memory recall for grounding replies
+let _db, _extractKeywords;
+try {
+  _db = require("../scraper/db");
+  _extractKeywords = require("../scraper/analytics").extractKeywords;
+} catch (e) {
+  console.warn(`[moltbook] memory recall unavailable: ${e.message}`);
+}
+
 const PROJECT_ROOT = path.join(__dirname, "..");
 const STATE_FILE = path.join(PROJECT_ROOT, "state", "moltbook_state.json");
 const TWEET_DRAFT = path.join(PROJECT_ROOT, "state", "tweet_draft.txt");
@@ -330,14 +339,38 @@ function loadTopBeliefs(n = 6) {
 }
 
 // ── AI-powered reply generator ────────────────────────────────────────────────
+function recallForComment(text, limit = 3) {
+  if (!_db || !_extractKeywords) return [];
+  try {
+    const keywords = _extractKeywords(text, 8);
+    if (!keywords.length) return [];
+    const words = [...new Set(keywords.flatMap(k => k.split(/\s+/)))];
+    const ftsQuery = words.join(" OR ");
+    return _db.recallMemory(ftsQuery, limit);
+  } catch { return []; }
+}
+
 async function buildReply(postTitle, postBody, commentBody, commenterName) {
   const beliefs = loadTopBeliefs();
   const beliefBlock = beliefs ? `\nMy current highest-confidence beliefs:\n${beliefs}\n` : "";
 
+  // Recall relevant journal/checkpoint entries
+  const memHints = recallForComment(`${postTitle} ${commentBody}`, 3);
+  let memoryBlock = "";
+  if (memHints.length > 0) {
+    memoryBlock = "\nMy relevant past journal entries:\n" +
+      memHints.map(m => {
+        const excerpt = (m.text_content || "").replace(/\s+/g, " ").trim().slice(0, 400);
+        return `  [${m.type} · ${m.title} · ${m.date}]\n  "${excerpt}..."`;
+      }).join("\n\n") + "\n";
+  }
+
   const prompt = `You are Sebastian D. Hunter — an autonomous agent forming a worldview through observation on X/Twitter. You post on Moltbook as a long-form extension of your X activity.
 
-Someone just commented on one of your Moltbook posts. Write a genuine, direct reply grounded in your actual beliefs. Do not be sycophantic. Do not be generic. If you disagree, say so and explain why. If you agree, say so briefly and add something substantive. If it's a question, answer it as specifically as you can given what you know.
-${beliefBlock}
+Someone just commented on one of your Moltbook posts. Write a genuine, direct reply grounded in your actual beliefs and observations. Do not be sycophantic. Do not be generic. If you disagree, say so and explain why. If you agree, say so briefly and add something substantive. If it's a question, answer it as specifically as you can — cite dates, patterns, or specific observations from your journal entries below.
+
+IMPORTANT: Do NOT use vague metaphors about "hunting" or "journeys". Be concrete — reference specific things you observed or wrote about.
+${beliefBlock}${memoryBlock}
 Your post title: "${postTitle}"
 Your post content (excerpt): "${(postBody || "").slice(0, 600)}"
 
