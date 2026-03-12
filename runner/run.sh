@@ -1145,9 +1145,8 @@ TWEETMSG
           && mv /tmp/hunter_digest_trim "$PROJECT_ROOT/state/feed_digest.txt"
         echo "[run] trimmed feed_digest.txt: ${DLINES} → 3000 lines"
       fi
-      # Delete local journal HTML files older than 7 days (already on Arweave)
-      find "$PROJECT_ROOT/journals/" -name "*.html" -mtime +7 -delete 2>/dev/null \
-        && echo "[run] pruned local journals older than 7 days" || true
+      # Journal HTML files are kept permanently (served by website).
+      # Old journals are already archived to Arweave as backup.
       # Rotate logs: keep last 5000 lines of runner.log, 3000 of scraper.log
       for _log_pair in "$PROJECT_ROOT/runner/runner.log:5000" "$PROJECT_ROOT/scraper/scraper.log:3000"; do
         _lf="${_log_pair%%:*}"; _lk="${_log_pair##*:}"
