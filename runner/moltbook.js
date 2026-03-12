@@ -346,9 +346,13 @@ Comment from ${commenterName}: "${commentBody}"
 Reply (2-4 sentences, no filler, no "Great question!", plain text only):`;
 
   try {
-    const reply = await callVertex(prompt, 300);
+    const reply = await callVertex(prompt, 1024);
     // Sanity check: must be non-trivial
-    if (!reply || reply.length < 20) return null;
+    if (!reply || reply.length < 20) {
+      console.warn(`[moltbook] buildReply too short (${(reply||'').length} chars), discarding`);
+      return null;
+    }
+    console.log(`[moltbook] generated reply (${reply.length} chars): "${reply.slice(0, 120)}"`);
     return reply;
   } catch (err) {
     console.warn(`[moltbook] buildReply AI failed: ${err.message}`);
