@@ -1,6 +1,6 @@
 # Sebastian D. Hunter
 
-An autonomous AI agent that browses X (Twitter) indefinitely, forms a worldview from scratch via a dynamic belief ontology, and publishes hourly journals + periodic checkpoints to the web. Streams live on pump.fun.
+An autonomous AI agent that browses X (Twitter) indefinitely, forms a worldview from scratch via a dynamic belief ontology, and publishes hourly journals + periodic checkpoints to the web.
 
 ---
 
@@ -27,17 +27,7 @@ The agent starts with zero ideology and discovers belief axes only when recurrin
 | npm | ≥ 10 |
 | macOS | required (uses `caffeinate`, BSD `date`) |
 | Chrome | any recent |
-| ffmpeg | any recent (optional — for pump.fun stream) |
 | Git | any |
-
-Install ffmpeg if needed:
-```bash
-# macOS
-brew install ffmpeg
-
-# Ubuntu/Debian
-sudo apt install ffmpeg
-```
 
 ---
 
@@ -73,9 +63,6 @@ GITHUB_REPO=mondb-dev/x-hunter
 GIT_USER_NAME=x-hunter-agent
 GIT_USER_EMAIL=agent@x-hunter.local
 VERCEL_DEPLOY_HOOK=  # Optional: Vercel → Project Settings → Git → Deploy Hooks
-
-# Pump.fun live stream key (optional)
-PUMPFUN_STREAM_KEY=
 
 # Base wallet address for x402 micropayments (USDC on Base mainnet, optional)
 PAYMENT_ADDRESS=
@@ -128,19 +115,7 @@ The session cookie is saved to the profile. You will not need to log in again un
 
 ---
 
-## 4. Launch your pump.fun token (optional, one time)
-
-If you want the agent to stream live on pump.fun:
-
-1. Go to pump.fun and create a token for the agent
-2. Open the token's live page and copy the **stream key**
-3. Add it to `.env` as `PUMPFUN_STREAM_KEY=`
-
-The agent will not stream if this key is empty.
-
----
-
-## 5. Run the agent
+## 4. Run the agent
 
 ```bash
 bash runner/run.sh
@@ -148,7 +123,6 @@ bash runner/run.sh
 
 This starts an infinite loop of 30-minute cycles. The script:
 - Checks the OpenClaw gateway is running (starts it if not)
-- Starts the pump.fun stream (if configured)
 - Every cycle: sends the agent a browse task (read X, write journal, update beliefs)
 - Every 6th cycle: sends a tweet task
 - Once per day: runs the daily block (article, ponder, daily report, git commit + push)
@@ -181,9 +155,7 @@ x-hunter/
 │
 ├── scraper/              ← X feed scraper + follow/reply workers
 │
-├── stream/
-│   ├── start.sh          ← starts ffmpeg → pump.fun
-│   └── stop.sh
+├── stream/               ← optional live streaming
 │
 ├── scripts/              ← utilities (gen-wallet.js, etc.)
 │
@@ -258,11 +230,6 @@ openclaw doctor
 
 **X session expired**
 The agent will re-authenticate automatically using `X_USERNAME` / `X_PASSWORD` from `.env`.
-
-**Stream not starting**
-Check ffmpeg is installed: `ffmpeg -version`
-Check `PUMPFUN_STREAM_KEY` is set in `.env`
-Inspect logs: `cat /tmp/stream.log`
 
 **Agent not writing files**
 Check `openclaw agents list` — the `x-hunter` agent should be listed.
