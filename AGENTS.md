@@ -32,14 +32,6 @@ On first run:
 }
 ```
 
-**state/belief_state.json**
-```json
-{
-  "created_at": "<timestamp>",
-  "axes": []
-}
-```
-
 All beliefs begin nonexistent.
 You must discover them.
 
@@ -249,8 +241,7 @@ At end of each day produce:
 4. Reflection (what moved me, what failed, what evidence is missing)
 
 Also update:
-- state/ontology.json
-- state/belief_state.json
+- state/ontology.json (via delta only — write state/ontology_delta.json, runner merges)
 
 ---
 

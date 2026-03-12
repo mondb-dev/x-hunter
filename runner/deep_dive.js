@@ -172,10 +172,28 @@ async function main() {
     console.log(`[deep_dive] researching: "${plan.title}"`);
     try {
       const prompt   = buildResearchPrompt(plan, axisContext);
-      const raw      = await callVertex(prompt, 3000);
+      const raw      = await callVertex(prompt, 8000);
+      // Extract JSON: try greedy match, then try repair for truncated JSON
+      let research;
       const match    = raw.match(/\{[\s\S]*\}/);
       if (!match) throw new Error("No JSON in response");
-      const research = JSON.parse(match[0]);
+      try {
+        research = JSON.parse(match[0]);
+      } catch (parseErr) {
+        // Attempt repair: close any unclosed arrays/objects
+        let candidate = match[0];
+        // Truncate at last complete key-value (find last comma or closing bracket before error)
+        const openBraces = (candidate.match(/\{/g) || []).length;
+        const closeBraces = (candidate.match(/\}/g) || []).length;
+        const openBrackets = (candidate.match(/\[/g) || []).length;
+        const closeBrackets = (candidate.match(/\]/g) || []).length;
+        for (let i = 0; i < openBrackets - closeBrackets; i++) candidate += "]";
+        for (let i = 0; i < openBraces - closeBraces; i++) candidate += "}";
+        // Remove trailing comma before closing bracket
+        candidate = candidate.replace(/,\s*([}\]])/g, "$1");
+        research = JSON.parse(candidate);
+        console.log(`[deep_dive] repaired truncated JSON for "${plan.title}"`);
+      }
 
       briefs.push({
         plan_id:     plan.id,

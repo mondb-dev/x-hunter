@@ -94,6 +94,15 @@ function scanInteractions(lastScannedId) {
       .map(u => u.replace(/[.,;:!?)]+$/, "")) // strip trailing punctuation
       .filter(u => isAllowedUrl(u));
 
+    // Also extract @mentions (excluding the agent itself) and queue as profile URLs
+    const mentionedAccounts = (text.match(/@(\w+)/g) || [])
+      .map(m => m.slice(1).toLowerCase())
+      .filter(u => u !== "sebastianhunts" && u.length > 1);
+    for (const account of mentionedAccounts) {
+      const profileUrl = `https://x.com/${account}`;
+      if (!urls.includes(profileUrl)) urls.push(profileUrl);
+    }
+
     for (const url of urls) {
       const context = text.length > 120 ? text.slice(0, 117) + "..." : text;
       appendQueue({

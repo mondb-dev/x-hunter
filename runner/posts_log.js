@@ -38,14 +38,20 @@ function writeLog(log) {
  */
 function logTweet({ content, tweet_url, date, cycle }) {
   const log = readLog();
-  // Avoid duplicate: same content already logged as a tweet
-  const dup = log.posts.find(p => p.type === "tweet" && p.content === content);
+  // Avoid duplicate: same content already logged (agent may write with type "observation"/"question")
+  const dup = log.posts.find(p => p.content === content);
   if (dup) {
     // Patch URL if it was missing
     if (!dup.tweet_url && tweet_url) {
       dup.tweet_url = tweet_url;
       writeLog(log);
-      console.log("[posts_log] patched existing tweet entry with URL");
+      console.log("[posts_log] patched existing entry with URL");
+    }
+    // Normalize type to "tweet" if runner is calling logTweet
+    if (dup.type !== "tweet") {
+      dup.type = "tweet";
+      writeLog(log);
+      console.log("[posts_log] normalized entry type to tweet");
     }
     return;
   }
@@ -66,12 +72,12 @@ function logTweet({ content, tweet_url, date, cycle }) {
  */
 function logQuote({ source_url, content, tweet_url, date, cycle }) {
   const log = readLog();
-  // Upsert: if agent pre-wrote an entry with same source_url, patch it
-  const existing = log.posts.find(p =>
-    (p.type === "quote" || p.type === "question") &&
+  // Upsert: if a quote entry with same source_url exists without a tweet_url, patch it
+  const existing = source_url ? log.posts.find(p =>
+    p.type === "quote" &&
     p.source_url === source_url &&
     !p.tweet_url
-  );
+  ) : null;
   if (existing) {
     existing.type = "quote";
     existing.tweet_url = tweet_url || "";

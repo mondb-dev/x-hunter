@@ -36,6 +36,7 @@ const NOTES_PATH    = path.join(STATE, "browse_notes.md");
 const PLANS_PATH    = path.join(STATE, "action_plans.json");
 const PONDER_STATE  = path.join(STATE, "ponder_state.json");
 const PONDER_TWEET  = path.join(STATE, "ponder_tweet.txt");
+const ACTIVE_PLAN   = path.join(STATE, "active_plan.json");
 const CHECKPOINT    = path.join(ROOT, "checkpoints", "latest.md");
 
 const CONF_THRESHOLD  = 0.72;
@@ -96,6 +97,15 @@ function loadAxes() {
 
 // ── Check trigger conditions ──────────────────────────────────────────────────
 function checkTrigger(axes, ponderState) {
+  // Suppress while an active plan is in progress — let Sebastian focus
+  const activePlan = loadJson(ACTIVE_PLAN);
+  if (activePlan && activePlan.status === "active") {
+    const activated = activePlan.activated_date;
+    const daysSince = activated ? daysBetween(activated, today()) : 0;
+    console.log(`[ponder] active plan "${activePlan.title}" in progress (${daysSince}d) — suppressing ponder`);
+    return { fire: false, reason: "active_plan_in_progress", qualifying: [] };
+  }
+
   const qualifying = axes.filter(
     a => a.confidence >= CONF_THRESHOLD && Math.abs(a.score) >= SCORE_THRESHOLD
   );

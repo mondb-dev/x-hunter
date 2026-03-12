@@ -158,25 +158,36 @@ _db.exec(`
   END;
 `);
 
-// Memory FTS5 sync triggers
+// Memory FTS5 sync triggers — must include rowid so FTS5 external content lookup
+// matches the memory table rowid. Without rowid, FTS5 assigns its own sequential
+// rowids that diverge from memory's rowids → SQLITE_CORRUPT_VTAB on every read.
 _db.exec(`
-  CREATE TRIGGER IF NOT EXISTS memory_ai AFTER INSERT ON memory BEGIN
-    INSERT INTO memory_fts(id, type, title, text_content, keywords)
-    VALUES (new.id, new.type, new.title, new.text_content, new.keywords);
+  DROP TRIGGER IF EXISTS memory_ai;
+  DROP TRIGGER IF EXISTS memory_au;
+  DROP TRIGGER IF EXISTS memory_ad;
+
+  CREATE TRIGGER memory_ai AFTER INSERT ON memory BEGIN
+    INSERT INTO memory_fts(rowid, id, type, title, text_content, keywords)
+    VALUES (new.rowid, new.id, new.type, new.title, new.text_content, new.keywords);
   END;
 
-  CREATE TRIGGER IF NOT EXISTS memory_au AFTER UPDATE ON memory BEGIN
-    INSERT INTO memory_fts(memory_fts, id, type, title, text_content, keywords)
-    VALUES ('delete', old.id, old.type, old.title, old.text_content, old.keywords);
-    INSERT INTO memory_fts(id, type, title, text_content, keywords)
-    VALUES (new.id, new.type, new.title, new.text_content, new.keywords);
+  CREATE TRIGGER memory_au AFTER UPDATE ON memory BEGIN
+    INSERT INTO memory_fts(memory_fts, rowid, id, type, title, text_content, keywords)
+    VALUES ('delete', old.rowid, old.id, old.type, old.title, old.text_content, old.keywords);
+    INSERT INTO memory_fts(rowid, id, type, title, text_content, keywords)
+    VALUES (new.rowid, new.id, new.type, new.title, new.text_content, new.keywords);
   END;
 
-  CREATE TRIGGER IF NOT EXISTS memory_ad AFTER DELETE ON memory BEGIN
-    INSERT INTO memory_fts(memory_fts, id, type, title, text_content, keywords)
-    VALUES ('delete', old.id, old.type, old.title, old.text_content, old.keywords);
+  CREATE TRIGGER memory_ad AFTER DELETE ON memory BEGIN
+    INSERT INTO memory_fts(memory_fts, rowid, id, type, title, text_content, keywords)
+    VALUES ('delete', old.rowid, old.id, old.type, old.title, old.text_content, old.keywords);
   END;
 `);
+
+// Rebuild FTS5 index now so existing rowids align correctly
+try {
+  _db.prepare("INSERT INTO memory_fts(memory_fts) VALUES('rebuild')").run();
+} catch { /* already consistent */ }
 
 // ── Prepared statements ───────────────────────────────────────────────────────
 const stmtInsertPost = _db.prepare(`
@@ -460,7 +471,15 @@ function recallMemory(query, limit = 5) {
   // Sanitize FTS5 special chars
   const safe = query.replace(/["*()\-]/g, " ").trim();
   if (!safe) return [];
-  return stmtSearchMemory.all(safe, limit);
+  try {
+    return stmtSearchMemory.all(safe, limit);
+  } catch (e) {
+    if (e.code === "SQLITE_CORRUPT_VTAB") {
+      rebuildFtsIfNeeded();
+      try { return stmtSearchMemory.all(safe, limit); } catch { return []; }
+    }
+    return [];
+  }
 }
 
 /** Get a single memory row by file path (used for dedup check). */
@@ -474,7 +493,15 @@ function getMemoryByPath(filePath) {
  * @param {number} limit
  */
 function recentMemory(type = null, limit = 10) {
-  return stmtRecentMemory.all({ type: type ?? null, limit });
+  try {
+    return stmtRecentMemory.all({ type: type ?? null, limit });
+  } catch (e) {
+    if (e.code === "SQLITE_CORRUPT_VTAB") {
+      rebuildFtsIfNeeded();
+      try { return stmtRecentMemory.all({ type: type ?? null, limit }); } catch { return []; }
+    }
+    return [];
+  }
 }
 
 const stmtTopNovel = _db.prepare(`
@@ -544,11 +571,27 @@ function embeddedIds(entityType) {
 /** Raw db handle for advanced queries. */
 function raw() { return _db; }
 
+/**
+ * Rebuild FTS5 indexes if corrupted.
+ * Safe to call at any time — no-op if indexes are healthy.
+ */
+function rebuildFtsIfNeeded() {
+  try {
+    _db.prepare("INSERT INTO memory_fts(memory_fts) VALUES('integrity-check')").run();
+  } catch {
+    _db.prepare("INSERT INTO memory_fts(memory_fts) VALUES('rebuild')").run();
+    _db.prepare("INSERT INTO posts_fts(posts_fts) VALUES('rebuild')").run();
+    return true; // rebuilt
+  }
+  return false;
+}
+
 module.exports = {
   insertPost, insertKeyword, search, topKeywords, recentPosts, postsByKeyword, prune,
   topNovelPosts,
   upsertAccount, followCandidates, markFollowed, getAccount, postsInWindow,
   insertMemory, updateMemoryTxId, recallMemory, getMemoryByPath, recentMemory,
   storeEmbedding, getEmbedding, allEmbeddings, embeddedIds,
+  rebuildFtsIfNeeded,
   raw,
 };

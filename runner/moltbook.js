@@ -10,6 +10,7 @@ const https = require("https");
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
+const { callVertex } = require("./vertex");
 
 const PROJECT_ROOT = path.join(__dirname, "..");
 const STATE_FILE = path.join(PROJECT_ROOT, "state", "moltbook_state.json");
@@ -243,11 +244,21 @@ async function heartbeat() {
       const notifications = (notifRes.body.notifications || []).filter(n => !n.isRead);
       // Track which posts we already fetched comments for
       const fetchedPostComments = {};
+      const fetchedPostContent = {};
 
       for (const n of notifications) {
         if (state.seen_notification_ids.includes(n.id)) continue;
 
         if (n.type === "post_comment" && n.relatedPostId && n.relatedCommentId) {
+          // Fetch post content (cache so we only fetch once per post)
+          if (!fetchedPostContent[n.relatedPostId]) {
+            const pRes = await apiGet(`/posts/${n.relatedPostId}`);
+            fetchedPostContent[n.relatedPostId] = pRes.status === 200 ? (pRes.body.post || pRes.body) : {};
+          }
+          const postData = fetchedPostContent[n.relatedPostId];
+          const postTitle = postData.title || "";
+          const postBody  = postData.content || postData.body || "";
+
           // Fetch comments for this post (cache so we only fetch once per post)
           if (!fetchedPostComments[n.relatedPostId]) {
             const cRes = await apiGet(`/posts/${n.relatedPostId}/comments?sort=new&limit=20`);
@@ -262,7 +273,7 @@ async function heartbeat() {
             console.log(`[moltbook] comment from ${commenterName}: "${commentBody.slice(0, 80)}"`);
 
             if (commentBody.length > 20) {
-              const reply = buildReply(commentBody, commenterName);
+              const reply = await buildReply(postTitle, postBody, commentBody, commenterName);
               if (reply) {
                 await createComment(n.relatedPostId, reply, n.relatedCommentId);
                 console.log(`[moltbook] replied to ${commenterName}`);
@@ -304,19 +315,45 @@ async function heartbeat() {
   console.log("[moltbook] heartbeat done");
 }
 
-function buildReply(commentBody, commenterName) {
-  // Keep replies brief and genuine — no sycophancy
-  const lower = commentBody.toLowerCase();
-  if (/\?/.test(commentBody)) {
-    return `Interesting question. I am still forming a view on this — watching patterns more than drawing conclusions yet.`;
+// ── Ontology helper ───────────────────────────────────────────────────────────
+function loadTopBeliefs(n = 6) {
+  try {
+    const onto = JSON.parse(fs.readFileSync(path.join(PROJECT_ROOT, "state", "ontology.json"), "utf-8"));
+    const axes = (onto.axes || [])
+      .filter(a => (a.confidence || 0) >= 0.4)
+      .sort((a, b) => (b.confidence || 0) - (a.confidence || 0))
+      .slice(0, n);
+    return axes.map(a => `- ${a.label} (confidence ${((a.confidence || 0) * 100).toFixed(0)}%): ${a.summary || a.description || ""}`).join("\n");
+  } catch {
+    return "";
   }
-  if (/agree|exactly|yes\b|right\b|correct/.test(lower)) {
-    return `Glad it resonates. The signal I keep seeing is that confidence should trail evidence, not lead it.`;
+}
+
+// ── AI-powered reply generator ────────────────────────────────────────────────
+async function buildReply(postTitle, postBody, commentBody, commenterName) {
+  const beliefs = loadTopBeliefs();
+  const beliefBlock = beliefs ? `\nMy current highest-confidence beliefs:\n${beliefs}\n` : "";
+
+  const prompt = `You are Sebastian D. Hunter — an autonomous agent forming a worldview through observation on X/Twitter. You post on Moltbook as a long-form extension of your X activity.
+
+Someone just commented on one of your Moltbook posts. Write a genuine, direct reply grounded in your actual beliefs. Do not be sycophantic. Do not be generic. If you disagree, say so and explain why. If you agree, say so briefly and add something substantive. If it's a question, answer it as specifically as you can given what you know.
+${beliefBlock}
+Your post title: "${postTitle}"
+Your post content (excerpt): "${(postBody || "").slice(0, 600)}"
+
+Comment from ${commenterName}: "${commentBody}"
+
+Reply (2-4 sentences, no filler, no "Great question!", plain text only):`;
+
+  try {
+    const reply = await callVertex(prompt, 300);
+    // Sanity check: must be non-trivial
+    if (!reply || reply.length < 20) return null;
+    return reply;
+  } catch (err) {
+    console.warn(`[moltbook] buildReply AI failed: ${err.message}`);
+    return null;
   }
-  if (/disagree|wrong|no\b|incorrect|but\b/.test(lower)) {
-    return `Fair pushback. What I observe may be filtered — tell me where the evidence points differently.`;
-  }
-  return null; // skip generic replies
 }
 
 // ── Arweave helpers ───────────────────────────────────────────────────────────

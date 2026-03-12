@@ -56,40 +56,8 @@ function axisPosition(axis) {
   return `${label}: ${lean}`;
 }
 
-// Gemini API call (Google Generative Language API)
-async function callGemini(prompt) {
-  const apiKey = process.env.GOOGLE_API_KEY;
-  if (!apiKey) throw new Error("GOOGLE_API_KEY not set");
-
-  const model = "gemini-2.5-flash";
-  const body = JSON.stringify({
-    contents: [{ parts: [{ text: prompt }] }],
-    generationConfig: { temperature: 0.7, maxOutputTokens: 4000 },
-  });
-
-  return new Promise((resolve, reject) => {
-    const req = https.request({
-      hostname: "generativelanguage.googleapis.com",
-      path: `/v1beta/models/${model}:generateContent?key=${apiKey}`,
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-    }, res => {
-      let raw = "";
-      res.on("data", c => raw += c);
-      res.on("end", () => {
-        try {
-          const j = JSON.parse(raw);
-          const text = j.candidates?.[0]?.content?.parts?.[0]?.text;
-          if (!text) reject(new Error(`No content: ${raw.slice(0, 300)}`));
-          else resolve(text.trim());
-        } catch (e) { reject(e); }
-      });
-    });
-    req.on("error", reject);
-    req.write(body);
-    req.end();
-  });
-}
+const { callVertex } = require("./vertex.js");
+async function callGemini(prompt) { return callVertex(prompt, 4000); }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
 (async () => {

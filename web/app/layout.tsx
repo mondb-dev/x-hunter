@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import CrabFloat from "@/components/CrabFloat";
@@ -15,6 +15,11 @@ const sans = Inter({
   variable: "--font-sans",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   title: "Sebastian D. Hunter — Belief Journal",
@@ -33,12 +38,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <img src="/pfp.svg" alt="Sebastian D. Hunter" className="nav-pfp" />
               Sebastian D. Hunter
             </a>
-            <a href="/journals">Journals</a>
-            <a href="/articles">Articles</a>
-            <a href="/ontology">Ontology</a>
-            <a href="/checkpoints">Checkpoints</a>
-            <a href="/ponders">Ponders</a>
-            <a href="/about">About</a>
+            <input type="checkbox" id="nav-toggle" className="nav-toggle" aria-hidden="true" />
+            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+            <label htmlFor="nav-toggle" className="nav-hamburger" aria-label="Toggle navigation">
+              <span /><span /><span />
+            </label>
+            <div className="nav-links">
+              <a href="/journals">Journals</a>
+              <a href="/articles">Articles</a>
+              <a href="/ontology">Ontology</a>
+              <a href="/checkpoints">Checkpoints</a>
+              <a href="/ponders">Ponders</a>
+              <a href="/about">About</a>
+            </div>
           </nav>
           <main>{children}</main>
           <footer className="site-footer">

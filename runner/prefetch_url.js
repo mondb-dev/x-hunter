@@ -21,34 +21,60 @@ const fs   = require("fs");
 const path = require("path");
 const { connectBrowser, getXPage, CDP_URL } = require("./cdp");
 
-const ROOT      = path.resolve(__dirname, "..");
-const DIRECTIVE = path.join(ROOT, "state", "curiosity_directive.txt");
-const HOME_URL  = "https://x.com/home";
-const TIMEOUT   = 20_000;
+const ROOT         = path.resolve(__dirname, "..");
+const DIRECTIVE    = path.join(ROOT, "state", "curiosity_directive.txt");
+const READING_URL  = path.join(ROOT, "state", "reading_url.txt");
+const HOME_URL     = "https://x.com/home";
+const TIMEOUT      = 20_000;
 
 async function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-/** Extract the ACTIVE SEARCH Navigate: URL from the curiosity directive. */
-function extractSearchUrl(text) {
+/** Extract all SEARCH_URL_N: lines from curiosity directive; rotate by cycle. */
+function extractSearchUrl(text, cycle) {
   if (!text) return null;
-  const m = text.match(/Navigate:\s*(https?:\/\/\S+)/);
-  return m ? m[1].trim() : null;
+  // New multi-angle format: SEARCH_URL_1:, SEARCH_URL_2:, SEARCH_URL_3:
+  const angles = [];
+  const re = /SEARCH_URL_\d+:\s*(https?:\/\/\S+)/g;
+  let m;
+  while ((m = re.exec(text)) !== null) angles.push(m[1].trim());
+  if (angles.length > 0) {
+    const idx = (cycle || 0) % angles.length;
+    return angles[idx];
+  }
+  // Legacy fallback: single Navigate: line
+  const legacy = text.match(/Navigate:\s*(https?:\/\/\S+)/);
+  return legacy ? legacy[1].trim() : null;
 }
 
 (async () => {
-  // Read directive
+  // Read target URL — deep dive takes priority over curiosity
   let targetUrl = HOME_URL;
+  let targetType = "home";
   try {
-    if (fs.existsSync(DIRECTIVE)) {
+    // 1. Deep dive (reading queue) takes priority
+    if (fs.existsSync(READING_URL)) {
+      const rtext = fs.readFileSync(READING_URL, "utf-8").trim();
+      const rm = rtext.match(/^URL:\s*(.+)$/m);
+      if (rm && rm[1].trim()) {
+        targetUrl = rm[1].trim();
+        targetType = "deep_dive";
+        console.log(`[prefetch] deep dive URL: ${targetUrl}`);
+      }
+    }
+    // 2. Curiosity search if no deep dive active
+    if (targetType === "home" && fs.existsSync(DIRECTIVE)) {
       const text = fs.readFileSync(DIRECTIVE, "utf-8");
-      const searchUrl = extractSearchUrl(text);
+      const cycle = parseInt(process.env.PREFETCH_CYCLE || "0", 10);
+      const searchUrl = extractSearchUrl(text, cycle);
       if (searchUrl) {
         targetUrl = searchUrl;
+        targetType = "curiosity";
         console.log(`[prefetch] curiosity URL: ${targetUrl}`);
       } else {
         console.log("[prefetch] no ACTIVE SEARCH URL in directive — navigating to home");
       }
-    } else {
+    }
+    if (targetType === "home") {
       console.log("[prefetch] no curiosity directive — navigating to home");
     }
   } catch (e) {

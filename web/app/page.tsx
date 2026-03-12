@@ -35,6 +35,8 @@ function buildGraph(axes: Axis[]): { nodes: MapNode[]; edges: MapEdge[] } {
   return { nodes, edges };
 }
 
+export const dynamic = "force-dynamic";
+
 const PAGE_SIZE = 15;
 
 export default async function IndexPage({

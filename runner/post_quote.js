@@ -32,6 +32,28 @@ async function sleep(ms) {
   return new Promise(r => setTimeout(r, ms));
 }
 
+/**
+ * Poll for a DOM condition every `interval` ms, up to `attempts` times.
+ * selectorOrFn: CSS selector string OR a serialisable function returning bool.
+ * Throws if all attempts exhausted.
+ */
+async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000 } = {}) {
+  for (let i = 1; i <= attempts; i++) {
+    const found = typeof selectorOrFn === "string"
+      ? await page.evaluate(sel => !!document.querySelector(sel), selectorOrFn)
+      : await page.evaluate(selectorOrFn).catch(() => false);
+    if (found) {
+      console.log(`[post_quote] ${label} ready (attempt ${i}/${attempts})`);
+      return;
+    }
+    if (i < attempts) {
+      console.log(`[post_quote] ${label} not ready — retry ${i}/${attempts} in ${interval}ms`);
+      await sleep(interval);
+    }
+  }
+  throw new Error(`${label} not found after ${attempts} attempts`);
+}
+
 (async () => {
   // ── Read draft ──────────────────────────────────────────────────────────────
   if (!fs.existsSync(DRAFT_FILE)) {
@@ -52,6 +74,12 @@ async function sleep(ms) {
     console.error(`[post_quote] invalid source URL: ${sourceUrl}`);
     process.exit(1);
   }
+  // Reject quoting own tweets
+  const sourceHandle = (sourceUrl.match(/x\.com\/([^/]+)/) || [])[1] || "";
+  if (sourceHandle.toLowerCase() === "sebastianhunts") {
+    console.error("[post_quote] cannot quote own tweet — skipping");
+    process.exit(1);
+  }
   if (!quoteText) {
     console.error("[post_quote] quote text is empty");
     process.exit(1);
@@ -65,6 +93,12 @@ async function sleep(ms) {
     console.error(`[post_quote] commentary too long (${quoteText.length} > 280 chars)`);
     process.exit(1);
   }
+
+  // ── Pre-post guard: reject quotes of tweets that mention @SebastianHunts ──
+  // Fetches the source tweet page and checks for Sebastian mentions to prevent
+  // quoting replies/questions directed at the agent (AGENTS.md §13.6 / HARD SKIP rule)
+  const OWN_HANDLES = ["sebastianhunts", "sebastian_hunts"];
+  const _guardNeedsCheck = true; // always check — agent prompt is not enough
 
   // ── Connect to Chrome ───────────────────────────────────────────────────────
   let browser;
@@ -81,24 +115,41 @@ async function sleep(ms) {
     // Navigate directly to the source tweet
     console.log(`[post_quote] navigating to source tweet: ${sourceUrl}`);
     await page.goto(sourceUrl, { waitUntil: "domcontentloaded", timeout: 20_000 });
-    // Wait for retweet button to appear (up to 10s) rather than fixed sleep
-    try {
-      await page.waitForSelector("[data-testid='retweet']", { timeout: 10_000 });
-    } catch {
-      await sleep(3_000); // fallback
+
+    // Poll for retweet button (up to 15s)
+    await poll(page, "retweet button", "[data-testid='retweet']", { attempts: 15, interval: 1_000 });
+
+    // ── Guard: check if source tweet mentions @SebastianHunts ──────────────
+    // Scrape the visible tweet text + any "Replying to" header for own-handle mentions
+    const mentionsSelf = await page.evaluate((handles) => {
+      // Get the main tweet text
+      const tweetEl = document.querySelector('[data-testid="tweetText"]');
+      const tweetText = (tweetEl?.innerText || "").toLowerCase();
+      // Get "Replying to" context if present
+      const replyEls = document.querySelectorAll('[data-testid="tweet"] a[href^="/"]');
+      const replyText = Array.from(replyEls).map(a => (a.getAttribute("href") || "").toLowerCase()).join(" ");
+      // Check both areas for @SebastianHunts mention
+      const full = tweetText + " " + replyText;
+      return handles.some(h => full.includes(h) || full.includes("@" + h));
+    }, OWN_HANDLES).catch(() => false);
+
+    if (mentionsSelf) {
+      console.error("[post_quote] source tweet mentions @SebastianHunts — HARD SKIP (never quote mentions of self)");
+      browser.disconnect();
+      process.exit(1);
     }
 
-    // Click the Retweet button on the tweet
+    // Click the Retweet button
     console.log("[post_quote] clicking Retweet button...");
-    const retweeted = await page.evaluate(() => {
-      const btn = document.querySelector("[data-testid='retweet']");
-      if (btn) { btn.click(); return true; }
-      return false;
-    });
-    if (!retweeted) throw new Error("Retweet button not found");
-    await sleep(800);
+    await page.evaluate(() => document.querySelector("[data-testid='retweet']")?.click());
 
-    // Click "Quote" in the retweet menu
+    // Poll for the Quote menu item to appear
+    await poll(page, "quote menu item", () => {
+      const items = Array.from(document.querySelectorAll("[role='menuitem']"));
+      return items.some(i => i.innerText?.trim().toLowerCase() === "quote");
+    }, { attempts: 8, interval: 1_000 });
+
+    // Click "Quote"
     console.log("[post_quote] clicking Quote option...");
     const quoted = await page.evaluate(() => {
       const items = Array.from(document.querySelectorAll("[role='menuitem']"));
@@ -106,22 +157,23 @@ async function sleep(ms) {
       if (q) { q.click(); return true; }
       return false;
     });
-    if (!quoted) throw new Error("Quote menu item not found");
-    await sleep(1_200);
+    if (!quoted) throw new Error("Quote menu item click failed");
 
-    // Wait for the quote compose box to appear
-    console.log("[post_quote] waiting for compose box...");
-    await page.waitForSelector(COMPOSE_BOX, { timeout: 10_000 });
-    await sleep(600);
+    // Poll for compose box to appear
+    await poll(page, "compose box", COMPOSE_BOX, { attempts: 10, interval: 1_000 });
 
-    // Focus the compose box
+    // Click + focus via evaluate (more reliable for React contenteditable)
     await page.evaluate((sel) => {
-      document.querySelector(sel)?.click();
+      const el = document.querySelector(sel);
+      if (el) el.click();
+    }, COMPOSE_BOX);
+    await page.evaluate((sel) => {
       document.querySelector(sel)?.focus();
     }, COMPOSE_BOX);
     await sleep(2_000); // wait for React editor to fully initialise before inserting text
 
-    // Insert via execCommand — most reliable for React contenteditable (no clipboard perms needed)
+    // Insert via execCommand — atomic insert, prevents character truncation
+    // (keyboard.type with delay: 15 was dropping initial characters)
     console.log("[post_quote] inserting commentary via execCommand...");
     await page.evaluate((text, sel) => {
       const el = document.querySelector(sel);
@@ -129,17 +181,30 @@ async function sleep(ms) {
     }, quoteText, COMPOSE_BOX);
     await sleep(1_500);
 
-    // Wait for Post button to be enabled
-    console.log("[post_quote] waiting for Post button...");
-    await page.waitForSelector(POST_BUTTON, { timeout: 10_000 });
-    await sleep(500);
-
-    const isDisabled = await page.$eval(POST_BUTTON, el => el.getAttribute("aria-disabled")).catch(() => null);
-    if (isDisabled === "true") {
-      console.error("[post_quote] Post button disabled — text may not have registered");
-      browser.disconnect();
-      process.exit(1);
+    // Verify text was inserted correctly — retry once with keyboard fallback if not
+    const insertedText = await page.evaluate((sel) => {
+      const el = document.querySelector(sel);
+      return el ? el.innerText.trim() : "";
+    }, COMPOSE_BOX);
+    if (!insertedText || insertedText.length < quoteText.length * 0.8) {
+      console.log(`[post_quote] text verification: got ${insertedText.length}/${quoteText.length} chars — retrying with keyboard`);
+      // Clear and retry with keyboard
+      await page.evaluate((sel) => {
+        const el = document.querySelector(sel);
+        if (el) { el.focus(); document.execCommand("selectAll"); document.execCommand("delete"); }
+      }, COMPOSE_BOX);
+      await sleep(500);
+      await page.keyboard.type(quoteText, { delay: 30 });
+      await sleep(1_000);
+    } else {
+      console.log(`[post_quote] text verified: ${insertedText.length}/${quoteText.length} chars`);
     }
+
+    // Poll for Post button to be enabled (not aria-disabled)
+    await poll(page, "post button enabled", () => {
+      const el = document.querySelector('[data-testid="tweetButton"],[data-testid="tweetButtonInline"]');
+      return el != null && el.getAttribute("aria-disabled") !== "true";
+    }, { attempts: 30, interval: 1_000 });
 
     // Click Post
     console.log("[post_quote] clicking Post...");

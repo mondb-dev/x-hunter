@@ -233,6 +233,80 @@ Browsing Direction
 The loop is self-reinforcing: browsing adds evidence to axes, which changes
 which axis curiosity selects, which changes what is browsed next.
 
+### Checkpoint cycle (every 3 days — `generate_checkpoint.js` self-gates)
+
+Runs inside the daily-report block. Produces a structured worldview snapshot.
+
+```
+Reads:
+  state/ontology.json          all belief axes + confidence scores
+  state/belief_state.json      directional scores
+  daily/belief_report_*.md     last 3 reports
+
+Writes:
+  checkpoints/checkpoint_N.md  numbered worldview snapshot
+  checkpoints/latest.md        always overwritten (alias for current checkpoint)
+  state/checkpoint_state.json  last date + file reference
+```
+
+After checkpoint writes, `ponder.js` runs immediately.
+
+---
+
+### Ponder cycle (tied to checkpoint, fires when conviction threshold met)
+
+The compulsion engine. Asks: *given what I now believe, what am I called to do?*
+
+**Trigger conditions (all must pass):**
+```
+1. axes where (confidence ≥ 0.72 AND |score| ≥ 0.15) ≥ 2   — real conviction, not just attention
+2. days_since_last_ponder ≥ 7                               — cooldown
+3. max axis shift ≥ 0.08 since last ponder, OR first ponder — worldview has actually moved
+```
+
+The `|score| ≥ 0.15` requirement is critical: it ensures Sebastian has formed a *directional* view,
+not just identified a topic as important. High confidence alone (0.95) without a lean means
+Sebastian is watching — not yet compelled.
+
+**What ponder does:**
+
+```
+Reads:
+  state/belief_state.json      qualifying axes (confidence + score)
+  state/ontology.json          axis names
+  state/vocation.json          current vocation status
+  state/browse_notes.md        recent tensions + observed @handles
+  checkpoints/latest.md        worldview snapshot
+
+Writes:
+  state/action_plans.json      2–3 new action proposals grounded in belief axes
+  state/vocation.json          updated vocation statement + aligned_accounts
+  state/ponder_tweet.txt       public declaration tweet (auto-posted by run.sh)
+  state/ponder_state.json      last date + axis snapshots for next delta check
+```
+
+**Action types Sebastian can propose:**
+
+| Type | What it means |
+|---|---|
+| `follow_campaign` | Systematically engage 10–15 high-trust accounts aligned with an axis |
+| `thread` | A multi-part post stating a position grounded in evidence |
+| `weekly_digest` | Curated round-up from aligned accounts, posted every Sunday |
+| `position_paper` | Long-form article (Moltbook + website) on a hardened belief |
+| `discourse_prompt` | A tweet designed to start a conversation, not just broadcast |
+| `build` | Brief for a builder agent — a tool, site, community, or newsletter |
+
+**The ponder tweet:**
+When ponder fires, Sebastian posts a declaration: vocation statement + first action + @mentions
+of 1–2 accounts observed in browse notes that align with the action axes. This is a public
+announcement and an invitation in one shot.
+
+**Expected first ponder:** when 2+ axes break `|score| ≥ 0.15`. Currently (day 9) all
+directional scores are near 0.0 — Sebastian has high confidence in the *topics* but has not
+yet committed to a lean. First ponder likely ~day 14–18.
+
+---
+
 ### Tweet cycle (every 6th = every 2 hours)
 
 ```
@@ -312,6 +386,10 @@ uploaded file from `https://arweave.net/<tx_id>`.
 | `state/checkpoint_pending` | moltbook.js | run.sh (retry flag) | yes |
 | `state/drift_state.json` | LLM (CUSUM) | curiosity.js | no |
 | `state/moltbook_state.json` | moltbook.js | moltbook.js (rate limiting) | no |
+| `state/vocation.json` | ponder.js | ponder.js, run.sh | no |
+| `state/action_plans.json` | ponder.js | ponder.js (context), act.js | no |
+| `state/ponder_state.json` | ponder.js | ponder.js (cooldown + delta) | yes |
+| `state/ponder_tweet.txt` | ponder.js | run.sh → post_tweet.js | yes |
 
 ---
 
@@ -428,6 +506,10 @@ After posting:
 
 run.sh handles git after all posts:
   git add / commit / push      (agent has no git access)
+
+Ponder tweet (when ponder fires):
+  state/ponder_tweet.txt       → copied to tweet_draft.txt → post_tweet.js
+                               → announces vocation + first action + @mentions aligned accounts
 ```
 
 ## Stability and Recovery

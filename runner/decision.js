@@ -29,6 +29,7 @@ const PLANS_PATH    = path.join(STATE, "action_plans.json");
 const PONDER_PATH   = path.join(STATE, "ponder_state.json");
 const VOC_PATH      = path.join(STATE, "vocation.json");
 const ACTIVE_PATH   = path.join(STATE, "active_plan.json");
+const PLAN_TWEET    = path.join(STATE, "plan_tweet.txt");
 
 // Load .env
 if (fs.existsSync(path.join(ROOT, ".env"))) {
@@ -145,10 +146,24 @@ async function main() {
   let parsed;
   try {
     const prompt = buildDecisionPrompt(briefs, vocation);
-    const raw    = await callVertex(prompt, 2000);
+    const raw    = await callVertex(prompt, 4000);
     const match  = raw.match(/\{[\s\S]*\}/);
     if (!match) throw new Error("No JSON in response");
-    parsed = JSON.parse(match[0]);
+    try {
+      parsed = JSON.parse(match[0]);
+    } catch (parseErr) {
+      // Attempt repair: close any unclosed arrays/objects
+      let candidate = match[0];
+      const openBraces = (candidate.match(/\{/g) || []).length;
+      const closeBraces = (candidate.match(/\}/g) || []).length;
+      const openBrackets = (candidate.match(/\[/g) || []).length;
+      const closeBrackets = (candidate.match(/\]/g) || []).length;
+      for (let i = 0; i < openBrackets - closeBrackets; i++) candidate += "]";
+      for (let i = 0; i < openBraces - closeBraces; i++) candidate += "}";
+      candidate = candidate.replace(/,\s*([}\]])/g, "$1");
+      parsed = JSON.parse(candidate);
+      console.log("[decision] repaired truncated JSON from LLM response");
+    }
   } catch (err) {
     console.error(`[decision] LLM call failed: ${err.message}`);
     process.exit(0);
@@ -208,6 +223,19 @@ async function main() {
     for (const a of (sprint.first_actions || [])) {
       console.log(`  - ${a}`);
     }
+
+    // Write announcement tweet for the activated plan
+    const planUrl = `https://sebastianhunter.fun/ponders/latest`;
+    let tweetText = `New commitment: ${activePlan.title}. ${sprint.week_1_goal || "Details soon."}`.trim();
+    const withUrl = `${tweetText}\n${planUrl}`;
+    if (withUrl.length <= 280) {
+      fs.writeFileSync(PLAN_TWEET, withUrl);
+    } else {
+      // Truncate the text to fit with URL
+      const maxText = 280 - planUrl.length - 2; // newline + ellipsis
+      fs.writeFileSync(PLAN_TWEET, `${tweetText.slice(0, maxText)}\u2026\n${planUrl}`);
+    }
+    console.log(`[decision] plan_tweet.txt written (${fs.readFileSync(PLAN_TWEET, "utf-8").length} chars)`);
   }
 
   ponderState.last_decision_date = today();

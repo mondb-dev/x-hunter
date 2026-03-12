@@ -4,7 +4,7 @@
 # Three-tier architecture:
 #   Scraper loop (every 10 min, background): collect.js scrapes X feed via CDP,
 #                                            scores posts, writes feed_digest.txt
-#   Browse cycle (every 20 min, AI):        reads feed_digest.txt, takes notes,
+#   Browse cycle (every 30 min, AI):        reads feed_digest.txt, takes notes,
 #                                            updates ontology + trust_graph
 #   Tweet cycle  (every 6th = 2 hrs, AI):  synthesizes notes, journals, tweets,
 #                                            git push
@@ -204,9 +204,23 @@ check_browser() {
   return $?
 }
 
+# Poll check_browser() every 2s until ready or timeout (seconds).
+# Replaces blind sleep after gateway/browser restarts.
+wait_for_browser_service() {
+  local timeout="${1:-30}"
+  local elapsed=0
+  while [ "$elapsed" -lt "$timeout" ]; do
+    if check_browser; then
+      echo "[run] browser service ready (${elapsed}s)"
+      return 0
+    fi
+    sleep 2; elapsed=$(( elapsed + 2 ))
+  done
+  echo "[run] WARNING: browser service not ready after ${timeout}s"
+  return 1
+}
+
 # Ensure browser is healthy: check → restart if broken → retry up to 3 times
-# After a gateway restart, the openclaw browser control service needs ~15s to
-# reconnect to Chrome, so we use a longer sleep when a restart is triggered.
 ensure_browser() {
   local attempt=0
   while [ $attempt -lt 3 ]; do
@@ -218,7 +232,7 @@ ensure_browser() {
     echo "[run] browser check failed (attempt $attempt/3) — restarting gateway + browser"
     restart_gateway
     start_browser
-    sleep 15  # openclaw browser control service needs ~15s to reconnect after restart
+    wait_for_browser_service 30  # poll until openclaw control service reconnects (was sleep 15)
   done
   echo "[run] WARNING: browser unresponsive after 3 restart attempts — proceeding"
   return 1
@@ -369,8 +383,7 @@ while true; do
     reset_session x-hunter
     restart_gateway
     start_browser
-    sleep 20  # browser control service needs ~15-20s after LaunchAgent restart
-    if check_browser; then
+    if wait_for_browser_service 30; then
       echo "[run] browser healthy after reset"
     else
       echo "[run] WARNING: browser not ready after reset — downgrading TWEET/QUOTE to BROWSE"
@@ -472,6 +485,7 @@ FIRSTMSG
     _CURIOSITY_DIRECTIVE=$(cat "$PROJECT_ROOT/state/curiosity_directive.txt" 2>/dev/null | sed "s/\`/'/g" || echo "")
     _COMMENT_CANDIDATES=$(cat "$PROJECT_ROOT/state/comment_candidates.txt" 2>/dev/null | sed "s/\`/'/g" || echo "")
     _DISCOURSE_DIGEST=$(cat "$PROJECT_ROOT/state/discourse_digest.txt" 2>/dev/null | sed "s/\`/'/g" || echo "")
+    _SPRINT_CONTEXT=$(cat "$PROJECT_ROOT/state/sprint_context.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(no active plan)")
     _READING_URL=""
     _READING_FROM=""
     _READING_CONTEXT=""
@@ -559,6 +573,8 @@ $_CURIOSITY_DIRECTIVE
 $_COMMENT_CANDIDATES
 ── CURRENT BELIEF AXES (read before updating ontology) ──────────────────
 $_CURRENT_AXES
+── SPRINT PLAN (your active tasks — focus browsing here) ─────────────────
+$_SPRINT_CONTEXT
 ── RECENT DISCOURSE (reply exchanges) ───────────────────────────────────
 $_DISCOURSE_DIGEST
 ── READING QUEUE ────────────────────────────────────────────────────────
@@ -649,14 +665,28 @@ BROWSEMSG
     node "$PROJECT_ROOT/runner/detect_drift.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
     # ── Commit + push browse journal if agent wrote one this cycle ─────────
-    if git -C "$PROJECT_ROOT" status --porcelain -- "journals/${TODAY}_${HOUR}.html" 2>/dev/null | grep -q .; then
-      echo "[run] Browse journal written — committing and pushing..."
-      git -C "$PROJECT_ROOT" add journals/ state/ 2>/dev/null || true
-      git -C "$PROJECT_ROOT" commit -m "journal: ${TODAY} ${HOUR} (browse cycle ${CYCLE})" 2>/dev/null || true
-      git -C "$PROJECT_ROOT" push origin main 2>/dev/null || true
-      echo "[run] browse journal pushed"
-      node "$PROJECT_ROOT/runner/archive.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
-      CYCLE_TYPE=JOURNAL node "$PROJECT_ROOT/runner/watchdog.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    _JOURNAL_FILE="$PROJECT_ROOT/journals/${TODAY}_${HOUR}.html"
+    if git -C "$PROJECT_ROOT" status --porcelain -- "${TODAY}_${HOUR}.html" journals/ 2>/dev/null | grep -q "journals/${TODAY}_${HOUR}.html"; then
+      # Suppress failure journals — do not publish browser-unavailable cycles
+      _IS_FAILURE=false
+      if [ -f "$_JOURNAL_FILE" ]; then
+        if grep -qi "browser control service\|browser.*unavailable\|unable to perform its core function\|no new observations" "$_JOURNAL_FILE" 2>/dev/null; then
+          _IS_FAILURE=true
+        fi
+      fi
+      if [ "$_IS_FAILURE" = "true" ]; then
+        echo "[run] Browse journal is a failure cycle — suppressing commit/push/archive"
+        git -C "$PROJECT_ROOT" checkout -- "journals/${TODAY}_${HOUR}.html" 2>/dev/null || \
+          rm -f "$_JOURNAL_FILE"
+      else
+        echo "[run] Browse journal written — committing and pushing..."
+        git -C "$PROJECT_ROOT" add journals/ state/ 2>/dev/null || true
+        git -C "$PROJECT_ROOT" commit -m "journal: ${TODAY} ${HOUR} (browse cycle ${CYCLE})" 2>/dev/null || true
+        git -C "$PROJECT_ROOT" push origin main 2>/dev/null || true
+        echo "[run] browse journal pushed"
+        node "$PROJECT_ROOT/runner/archive.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+        CYCLE_TYPE=JOURNAL node "$PROJECT_ROOT/runner/watchdog.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+      fi
     fi
 
     # ── Moltbook heartbeat: check notifications, upvote feed content ─────────
@@ -717,27 +747,67 @@ $QUOTED_SOURCES
 $_DIGEST_QUOTE
 ─────────────────────────────────────────────────────────────────────────
 
-Do NOT use any browser tools. Tasks:
-1. From the digest above, pick the post that most directly touches one of your belief axes above.
-   Use the full axis definition -- poles and recent evidence -- to locate where this post sits.
-   Is it pushing left or right on the axis? Does it fit the pattern in the evidence, or cut against it?
-   That tension is your angle. Quote from that specific place on the axis, not in general terms.
-   Each post line ends with its URL. SKIP any URL in the "already quoted" list above.
-2. Write state/quote_draft.txt (overwrite):
-   Line 1: the source tweet URL (exact URL from the digest, e.g. https://x.com/user/status/ID)
-   Lines 2+: your one-sentence quote commentary. Direct, honest, max 240 chars.
-   NOT acceptable: "this claim conflates X", "demands scrutiny", "risks premature judgment" -- that is not a view, it is a press release.
-   ACCEPTABLE: what you actually see happening here, stated from your actual position on the axis. Say the thing.
-   If you have no real angle on this post, pick a different one.
-3. Done -- the runner posts the quote and updates posts_log.json. Do not use the browser.
+Tasks:
+1. From the digest above, identify 2-3 candidate posts that touch your belief axes.
+   HARD SKIP (never quote these): questions or replies directed AT you (@SebastianHunts),
+   retweets with no original text, posts that are only a URL, posts shorter than 15 words.
+   Candidates must be making a real substantive claim you can engage with.
+
+2. Navigate to the best candidate URL in your browser. Read the actual tweet and its visible replies.
+   Do not rely on the digest summary — you need to see what the tweet actually says in full.
+   While reading, ask: does this push left or right on one of my axes? Does it confirm my prior,
+   challenge it, or reveal a nuance I had not seen? That specific tension is your angle.
+   If after reading it is not interesting enough to quote, navigate to your second candidate.
+
+3. Write your quote commentary ONLY after you have read the tweet in the browser.
+   NOT acceptable: generic belief statement that could apply to any tweet.
+   NOT acceptable: "this claim conflates X", "demands scrutiny", "risks premature judgment" — press release language.
+   ACCEPTABLE: a direct response to what this specific tweet actually says, from your position on the axis.
+   The reader must be able to see why THIS tweet provoked THIS response. Max 240 chars.
+
+4. Write state/quote_draft.txt (overwrite):
+   Line 1: the source tweet URL
+   Lines 2+: your quote commentary (max 240 chars).
+   Do NOT write to state/posts_log.json — the runner owns that file.
+
+5. Done — do not navigate further. The runner posts the quote.
 
 QUOTEMSG
 )
+    # Snapshot critical JSON state before quote agent runs
+    for _sf in posts_log ontology belief_state; do
+      _fp="$PROJECT_ROOT/state/${_sf}.json"
+      [ -f "$_fp" ] && cp "$_fp" "${_fp}.bak" 2>/dev/null || true
+    done
+    chmod 444 "$PROJECT_ROOT/state/posts_log.json" 2>/dev/null || true
+
     rm -f "$PROJECT_ROOT/state/quote_draft.txt" "$PROJECT_ROOT/state/quote_result.txt"
-    agent_run --agent x-hunter-tweet \
+    agent_run --agent x-hunter \
       --message "$AGENT_MSG" \
       --thinking low \
       --verbose on
+
+    # Restore write permission + validate state files after quote agent
+    chmod 644 "$PROJECT_ROOT/state/posts_log.json" 2>/dev/null || true
+    for _sf in posts_log ontology belief_state; do
+      _fp="$PROJECT_ROOT/state/${_sf}.json"
+      if [ -f "$_fp" ] && [ -f "${_fp}.bak" ]; then
+        if ! node -e "JSON.parse(require('fs').readFileSync('$_fp','utf-8'))" 2>/dev/null; then
+          echo "[run] WARNING: ${_sf}.json is malformed after quote — restoring from .bak"
+          cp "${_fp}.bak" "$_fp" || true
+        elif [ "$_sf" = "posts_log" ]; then
+          _cur_count=$(node -e "try{console.log(JSON.parse(require('fs').readFileSync('$_fp','utf-8')).posts.length)}catch(e){console.log(0)}" 2>/dev/null)
+          _bak_count=$(node -e "try{console.log(JSON.parse(require('fs').readFileSync('${_fp}.bak','utf-8')).posts.length)}catch(e){console.log(0)}" 2>/dev/null)
+          if [ "$_cur_count" -lt "$_bak_count" ]; then
+            echo "[run] WARNING: posts_log.json lost entries after quote (${_bak_count} → ${_cur_count}) — restoring from .bak"
+            cp "${_fp}.bak" "$_fp"
+          fi
+        fi
+      fi
+    done
+
+    # ── Close excess Chrome tabs after quote agent ────────────────────────
+    node "$PROJECT_ROOT/runner/cleanup_tabs.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
     # ── Post quote-tweet via CDP (runner handles, no browser tool needed) ──────
     if [ -f "$PROJECT_ROOT/state/quote_draft.txt" ]; then
@@ -786,10 +856,29 @@ QUOTEMSG
       [ -f "$_fp" ] && cp "$_fp" "${_fp}.bak" 2>/dev/null || true
     done
 
+    # Make posts_log.json read-only so the agent cannot overwrite it
+    chmod 444 "$PROJECT_ROOT/state/posts_log.json" 2>/dev/null || true
+
     # Pre-load files — agent skips read tool calls
     _BROWSE_NOTES_FULL=$(cat "$PROJECT_ROOT/state/browse_notes.md" 2>/dev/null | sed "s/\`/'/g" || echo "(empty)")
     _MEMORY_RECALL=$(cat "$PROJECT_ROOT/state/memory_recall.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(empty)")
     _DISCOURSE_DIGEST_TWEET=$(cat "$PROJECT_ROOT/state/discourse_digest.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(no discourse yet)")
+    # Load sprint context (written by sprint_manager.js, or fallback to active_plan.json)
+    if [ -f "$PROJECT_ROOT/state/sprint_context.txt" ]; then
+      _ACTIVE_PLAN_CONTEXT=$(cat "$PROJECT_ROOT/state/sprint_context.txt" 2>/dev/null | sed "s/\`/'/g")
+    else
+      _ACTIVE_PLAN_CONTEXT=$(node -e "
+        try {
+          const a=JSON.parse(require('fs').readFileSync('$PROJECT_ROOT/state/active_plan.json','utf-8'));
+          if (a && a.status==='active') {
+            console.log('ACTIVE PLAN: ' + a.title);
+            console.log('Goal: ' + (a.first_sprint?.week_1_goal || '(none)'));
+            const days = Math.floor((Date.now()-new Date(a.activated_date).getTime())/86400000);
+            console.log('Day ' + days + ' of 30');
+          } else { console.log('(no active plan)'); }
+        } catch(e){ console.log('(no active plan)'); }
+      " 2>/dev/null || echo "(no active plan)")
+    fi
     _CURRENT_AXES_TWEET=$(node -e "
       try {
         const d=JSON.parse(require('fs').readFileSync('$PROJECT_ROOT/state/ontology.json','utf-8'));
@@ -811,6 +900,20 @@ QUOTEMSG
       _TWEET_JOURNAL_TASK="Write journals/${TODAY}_${HOUR}.html"
     fi
 
+    # Shell guard: if browse notes are empty or a browser-failure cycle, skip tweet immediately
+    _BROWSE_NOTES_RAW=$(cat "$PROJECT_ROOT/state/browse_notes.md" 2>/dev/null || echo "")
+    _BROWSE_NOTES_LEN=${#_BROWSE_NOTES_RAW}
+    _BROWSE_FAILED=false
+    if [ "$_BROWSE_NOTES_LEN" -lt 80 ]; then
+      _BROWSE_FAILED=true
+    elif echo "$_BROWSE_NOTES_RAW" | grep -qi "browser control service\|browser.*unavailable\|no new observations\|unable to perform"; then
+      _BROWSE_FAILED=true
+    fi
+    if [ "$_BROWSE_FAILED" = "true" ]; then
+      echo "[run] Browse notes empty or browser-failure cycle — skipping tweet (writing SKIP)"
+      printf "SKIP\n" > "$PROJECT_ROOT/state/tweet_draft.txt"
+    else
+
     AGENT_MSG=$(cat <<TWEETMSG
 Today is $TODAY $NOW. Tweet cycle $CYCLE -- FILE-ONLY. No browser tool at any point.
 
@@ -822,19 +925,39 @@ $_BROWSE_NOTES_FULL
 $_MEMORY_RECALL
 ── CURRENT BELIEF AXES (read before updating ontology) ──────────────────
 $_CURRENT_AXES_TWEET
+── SPRINT PLAN (your current 30-day commitment + weekly tasks) ────────────
+$_ACTIVE_PLAN_CONTEXT
 ── RECENT DISCOURSE (reply exchanges) ───────────────────────────────────
 $_DISCOURSE_DIGEST_TWEET
 ─────────────────────────────────────────────────────────────────────────
 
 Tasks (in order, no browser):
-1. Synthesize: the single clearest insight, tension, or question from this window.
+1. Axis prediction check — for each of your top 3 belief axes, state in one phrase what you
+   expected to see today based on your current score and direction. Then check: did the browse
+   notes confirm it, challenge it, or show something orthogonal? The most interesting tweet
+   lives at that gap — where a prior was updated, reversed, or sharpened by something concrete.
 2. $_TWEET_JOURNAL_TASK
-3. Draft tweet: one sentence, honest and direct.
-   Add journal URL on new line: https://sebastianhunter.fun/journal/${TODAY}/${HOUR}
-   Total <= 280 chars. Self-check (AGENTS.md 13.3) -- write SKIP if not genuine.
-4. Write state/tweet_draft.txt (plain text, overwrite).
-5. Append to state/posts_log.json (tweet_url="" for now, runner fills it in).
-6. Write state/ontology_delta.json if the synthesis adds new evidence.
+3. Draft tweet from the most interesting gap found in task 1.
+   Requirements (ALL must be met — if you cannot satisfy them, write SKIP):
+   a. Concrete reference: must name something specific observed in the browse notes —
+      a specific account, a claim someone actually made, a statistic, or a named event.
+      No abstract observations about "AI" or "institutions" in general.
+   b. Falsifiable: a thoughtful person should be able to disagree with it.
+      If it reads as obviously true to everyone, it is not a real position — reframe or SKIP.
+   c. Self-check (AGENTS.md 13.3) — if not genuine, SKIP.
+   d. If browse notes indicate the browser was unavailable, no feed was loaded, or no
+      specific observations were made this cycle — write SKIP. Do NOT invent insights
+      from prior memory or general knowledge. The tweet must be grounded in THIS cycle.
+   Better no tweet than a weak one.
+   e. If you have an active plan, you may reference it when relevant — connecting what
+      you observed to your plan's domain is encouraged, but only if the link is genuine.
+      Do NOT force every tweet to be about the plan. Authenticity first.
+4. Write state/tweet_draft.txt (plain text, overwrite):
+   Line 1: your insight sentence (REQUIRED — must not be empty)
+   Line 2: https://sebastianhunter.fun/journal/${TODAY}/${HOUR}
+   Total length <= 280 chars. Do NOT write only the URL — if line 1 is empty the tweet is worthless.
+   Do NOT write to state/posts_log.json — the runner owns that file.
+5. Write state/ontology_delta.json if the synthesis adds new evidence.
    Also update state/belief_state.json.
    DO NOT write or modify state/ontology.json directly — the runner merges your delta.
    ONTOLOGY RULES (CURRENT BELIEF AXES shown above — do not alter existing data):
@@ -847,7 +970,7 @@ Tasks (in order, no browser):
                     "timestamp":"...", "pole_alignment":"left"|"right" }],
      "new_axes": [{ "id":"...", "label":"...", "left_pole":"...", "right_pole":"..." }] }
    Omit keys you do not need. Skip writing the file if nothing axis-worthy.
-7. Done. The runner clears browse_notes.md after this cycle.
+6. Done. The runner clears browse_notes.md after this cycle.
 
 TWEETMSG
 )
@@ -864,6 +987,7 @@ TWEETMSG
         --message "$AGENT_MSG" \
         --verbose on
     fi
+    fi  # end: browse notes guard
 
     # ── Close excess Chrome tabs after tweet agent ────────────────────────
     node "$PROJECT_ROOT/runner/cleanup_tabs.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
@@ -873,6 +997,19 @@ TWEETMSG
 
     # ── Detect drift / change points in belief axes ────────────────────────
     node "$PROJECT_ROOT/runner/detect_drift.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+
+    # ── Critique gate: Ollama specificity + falsifiability check ─────────────
+    if [ -f "$PROJECT_ROOT/state/tweet_draft.txt" ]; then
+      _DRAFT_LINE1=$(head -n1 "$PROJECT_ROOT/state/tweet_draft.txt")
+      if [ "$_DRAFT_LINE1" != "SKIP" ] && [ -n "$_DRAFT_LINE1" ]; then
+        _CRITIQUE=$(node "$PROJECT_ROOT/runner/critique_tweet.js" 2>/dev/null)
+        echo "[run] tweet critique: $_CRITIQUE"
+        if echo "$_CRITIQUE" | grep -q "^REJECT"; then
+          echo "[run] Tweet rejected by critique gate — skipping post this cycle"
+          rm -f "$PROJECT_ROOT/state/tweet_draft.txt"
+        fi
+      fi
+    fi
 
     # ── Post tweet via CDP (no browser tool needed from agent) ──────────────
     if [ -f "$PROJECT_ROOT/state/tweet_draft.txt" ]; then
@@ -897,13 +1034,24 @@ TWEETMSG
     # Watchdog: verify tweet was posted, retry once if result is missing
     CYCLE_TYPE=TWEET node "$PROJECT_ROOT/runner/watchdog.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
-    # ── Validate + restore state files if agent wrote malformed JSON ──────────
+    # Restore write permission on posts_log.json (was read-only during agent run)
+    chmod 644 "$PROJECT_ROOT/state/posts_log.json" 2>/dev/null || true
+
+    # ── Validate + restore state files if agent wrote malformed or truncated JSON ─
     for _sf in posts_log ontology belief_state; do
       _fp="$PROJECT_ROOT/state/${_sf}.json"
       if [ -f "$_fp" ]; then
         if ! node -e "JSON.parse(require('fs').readFileSync('$_fp','utf-8'))" 2>/dev/null; then
           echo "[run] WARNING: ${_sf}.json is malformed — restoring from .bak"
           [ -f "${_fp}.bak" ] && cp "${_fp}.bak" "$_fp" || true
+        elif [ -f "${_fp}.bak" ] && [ "$_sf" = "posts_log" ]; then
+          # Guard against agent overwriting posts_log.json with fewer entries
+          _cur_count=$(node -e "try{console.log(JSON.parse(require('fs').readFileSync('$_fp','utf-8')).posts.length)}catch(e){console.log(0)}" 2>/dev/null)
+          _bak_count=$(node -e "try{console.log(JSON.parse(require('fs').readFileSync('${_fp}.bak','utf-8')).posts.length)}catch(e){console.log(0)}" 2>/dev/null)
+          if [ "$_cur_count" -lt "$_bak_count" ]; then
+            echo "[run] WARNING: posts_log.json lost entries (${_bak_count} → ${_cur_count}) — restoring from .bak"
+            cp "${_fp}.bak" "$_fp"
+          fi
         fi
       fi
     done
@@ -925,8 +1073,15 @@ TWEETMSG
     # Watchdog: verify latest journal committed, pushed, and on Arweave
     CYCLE_TYPE=JOURNAL node "$PROJECT_ROOT/runner/watchdog.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
-    # Article maintenance (every 24h = 72 cycles)
-    if [ $(( CYCLE % (TWEET_EVERY * 12) )) -eq 0 ]; then
+    # Article maintenance (time-based: fire if >24h since last run, or on first run)
+    _LAST_DAILY_FILE="$PROJECT_ROOT/state/last_daily_at.txt"
+    _NOW_EPOCH=$(date +%s)
+    _LAST_DAILY_EPOCH=0
+    if [ -f "$_LAST_DAILY_FILE" ]; then
+      _LAST_DAILY_EPOCH=$(cat "$_LAST_DAILY_FILE" 2>/dev/null || echo 0)
+    fi
+    _DAILY_ELAPSED=$(( _NOW_EPOCH - _LAST_DAILY_EPOCH ))
+    if [ "$_DAILY_ELAPSED" -ge 86400 ]; then
       # ── Daily belief report ──────────────────────────────────────────────────
       node "$PROJECT_ROOT/runner/generate_daily_report.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
       # ── Daily article: write from journals + beliefs, post to Moltbook ───────
@@ -951,8 +1106,15 @@ TWEETMSG
       node "$PROJECT_ROOT/runner/moltbook.js" --post-checkpoint >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
       # ── Ponder (fires after checkpoint if conviction threshold met) ───────────
       node "$PROJECT_ROOT/runner/ponder.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+      # Post plan announcement tweet if decision.js activated a plan
+      if [ -f "$PROJECT_ROOT/state/plan_tweet.txt" ]; then
+        cp "$PROJECT_ROOT/state/plan_tweet.txt" "$PROJECT_ROOT/state/tweet_draft.txt"
+        node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1 | grep -v '^$'
+        rm -f "$PROJECT_ROOT/state/plan_tweet.txt"
+        echo "[run] plan announcement tweet posted"
+      fi
       # Post ponder declaration tweet if ponder fired and wrote a draft
-      if [ -f "$PROJECT_ROOT/state/ponder_tweet.txt" ] && [ "$_POST_X" != "false" ]; then
+      if [ -f "$PROJECT_ROOT/state/ponder_tweet.txt" ]; then
         cp "$PROJECT_ROOT/state/ponder_tweet.txt" "$PROJECT_ROOT/state/tweet_draft.txt"
         node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1 | grep -v '^$'
         rm -f "$PROJECT_ROOT/state/ponder_tweet.txt"
@@ -968,6 +1130,8 @@ TWEETMSG
       node "$PROJECT_ROOT/runner/deep_dive.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
       # ── Ponder pipeline: decision (fires after deep_dive completes, self-gating) ─
       node "$PROJECT_ROOT/runner/decision.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+      # ── Sprint manager (daily: sync plan → track progress → plan next sprint) ──
+      node "$PROJECT_ROOT/runner/sprint_manager.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
       # Trim feed_digest.txt to last 3000 lines (~2-3 days of data)
       DLINES=$(wc -l < "$PROJECT_ROOT/state/feed_digest.txt" 2>/dev/null || echo 0)
       if [ "$DLINES" -gt 3000 ]; then
@@ -986,6 +1150,9 @@ TWEETMSG
           echo "[run] rotated $(basename "$_lf") to last ${_lk} lines"
         fi
       done
+      # Mark daily block completion time
+      echo "$_NOW_EPOCH" > "$_LAST_DAILY_FILE"
+      echo "[run] daily block complete, next in ~24h"
     fi
 
     # ── Runner clears browse_notes.md (agent write tool rejects empty string) ──

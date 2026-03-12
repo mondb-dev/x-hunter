@@ -26,23 +26,35 @@ const CDP_URL = process.env.CDP_URL || "http://127.0.0.1:18801";
  * @returns {Promise<import("puppeteer-core").Browser>}
  */
 async function connectBrowser(timeout = 10_000) {
-  // 1. Fetch WS endpoint (fast HTTP call, respects timeout)
-  const ctrl = new AbortController();
-  const t    = setTimeout(() => ctrl.abort(), timeout);
-  let wsUrl;
-  try {
-    const res  = await fetch(`${CDP_URL}/json/version`, { signal: ctrl.signal });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    wsUrl = data.webSocketDebuggerUrl;
-    if (!wsUrl) throw new Error("webSocketDebuggerUrl missing from /json/version");
-  } finally {
-    clearTimeout(t);
-  }
+  // Retry once: Chrome aborts new WS connections if the OpenClaw gateway is still
+  // holding its browser-level debugger socket immediately after an agent run.
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    try {
+      // 1. Fetch WS endpoint (fast HTTP call, respects timeout)
+      const ctrl = new AbortController();
+      const t    = setTimeout(() => ctrl.abort(), timeout);
+      let wsUrl;
+      try {
+        const res  = await fetch(`${CDP_URL}/json/version`, { signal: ctrl.signal });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        wsUrl = data.webSocketDebuggerUrl;
+        if (!wsUrl) throw new Error("webSocketDebuggerUrl missing from /json/version");
+      } finally {
+        clearTimeout(t);
+      }
 
-  // 2. Connect via WS endpoint (avoids browserURL hang on large target counts)
-  // protocolTimeout: ms allowed for any single CDP call (default 30s is too low for slow pages)
-  return puppeteer.connect({ browserWSEndpoint: wsUrl, protocolTimeout: 60_000 });
+      // 2. Connect via WS endpoint (avoids browserURL hang on large target counts)
+      // protocolTimeout: ms allowed for any single CDP call (default 30s is too low for slow pages)
+      return await puppeteer.connect({ browserWSEndpoint: wsUrl, protocolTimeout: 60_000 });
+    } catch (err) {
+      if (attempt < 2) {
+        await new Promise(r => setTimeout(r, 4_000)); // wait for gateway to release WS
+        continue;
+      }
+      throw err;
+    }
+  }
 }
 
 /**

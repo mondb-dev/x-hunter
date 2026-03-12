@@ -429,6 +429,28 @@ for (const raw of (delta.new_axes || [])) {
 // Persist updated axis creation guard state
 saveAxisGuardState(axisGuardState);
 
+// ── Reap dead axes: 0 evidence after 48h since creation ───────────────────────
+const REAP_HOURS = 48;
+const GRAVEYARD = path.join(ROOT, "state", "axes_graveyard.json");
+const nowMs = Date.now();
+const reaped = [];
+onto.axes = onto.axes.filter(a => {
+  const age = nowMs - new Date(a.created_at || now).getTime();
+  const ageHours = age / (1000 * 60 * 60);
+  if (ageHours >= REAP_HOURS && (a.evidence_log || []).length === 0) {
+    reaped.push(a);
+    return false;
+  }
+  return true;
+});
+if (reaped.length > 0) {
+  let graveyard = [];
+  try { graveyard = JSON.parse(fs.readFileSync(GRAVEYARD, "utf-8")); } catch {}
+  graveyard.push(...reaped.map(a => ({ ...a, reaped_at: now })));
+  fs.writeFileSync(GRAVEYARD, JSON.stringify(graveyard, null, 2), "utf-8");
+  console.log(`[apply_delta] reaped ${reaped.length} dead axis(es): ${reaped.map(a => a.id).join(", ")}`);
+}
+
 // ── Write back + cleanup ──────────────────────────────────────────────────────
 
 onto.last_updated = now;
@@ -438,8 +460,9 @@ fs.unlinkSync(DELTA);
 
 const rejMsg    = evidenceRejected ? `, ${evidenceRejected} rejected by stance check` : "";
 const cappedMsg = axesCapped ? `, ${axesCapped} drift-capped` : "";
+const reapMsg   = reaped.length ? `, ${reaped.length} reaped` : "";
 console.log(
-  `[apply_delta] applied: ${evidenceAdded} evidence entry(ies)${rejMsg}${cappedMsg}, ${axesAdded} new axis(es)` +
+  `[apply_delta] applied: ${evidenceAdded} evidence entry(ies)${rejMsg}${cappedMsg}${reapMsg}, ${axesAdded} new axis(es)` +
   ` — total axes: ${onto.axes.length} (axes created today: ${axisGuardState.count}/${MAX_AXES_PER_DAY})`
 );
 
