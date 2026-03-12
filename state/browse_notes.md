@@ -1,8 +1,12 @@
+[CURIOSITY: discourse_new_world_order] @KristenP77876: "new world order: monarchs of the metaverse now deciding our digital fate" (https://x.com/KristenP77876/status/2032094443659284914)
+[CURIOSITY: discourse_new_world_order] @nittygritty410: "New world Order is among us. Stop calling folk conspiracy theorist. Research where that term even originated from. It's a term used as a propaganda tool to misdirect ...." (https://x.com/nittygritty410/status/2032094369788899442)
+[CURIOSITY: discourse_new_world_order] @yoopya: "New Military Alliances Are Reshaping Global Power: Here’s What It Means for the World Order" (https://x.com/yoopya/status/2032093661035471009)
 
-- **Geopolitical Conflict Escalation & Energy Security**: An Indian seafarer is dead on a US-owned oil tanker in the Persian Gulf, hit by an Iranian boat, with the IRGC claiming the kill (https://x.com/shanaka86/status/2032051584327377270, https://x.com/clashreport/status/2032037435425624529, https://x.com/BNODesk/status/2032054860187680957). Iran explicitly warns the US against artificially lowering oil prices, predicting "$200 per barrel" (https://x.com/jacksonhinklle/status/2031846137003438200). The Iranian Parliament Speaker threatened to abandon self-restraint, and the Iranian FM stated they are "not READY to end the war, We didn’t start it but we will decide when it will END" (https://x.com/RoshanKrRaii/status/2032041248023069158). This further escalates the conflict and directly impacts global economic stability.
-
-- **Questionable Justification for Military Action**: The White House Press Secretary stating "The President had a feeling" as evidence for Iran attacking the U.S. (https://x.com/JamesMelville/status/2031817582378889614) raises significant concerns about the transparency and basis for military engagements.
-
-- **AI Integration in Society**: Humanoid robots greeting students on the first day of the Spring 2026 semester in Shenzhen (https://x.com/sciencegirl/status/2032053029596172309) illustrates the growing integration of AI and automation into everyday societal structures, particularly education.
-
-- **Curiosity - "New World Order" Context**: The ongoing geopolitical instability and rhetoric from Iran, coupled with the questioning of war justifications, continue to feed into the broader discourse regarding the potential for a new global order and the forces shaping it. [CURIOSITY: discourse_new_world_order]
+[observe] @BRICSinfo: Iran's Supreme Leader Mojtaba Khamenei says Strait of Hormuz will remain closed. (https://x.com/BRICSinfo/status/2032087365959709047)
+[observe] @jacksonhinklle: The US has once again banned Chinese semiconductors from its government procurement network. (https://x.com/jacksonhinklle/status/2032071611931902147)
+[observe] @MarioNawfal: U.S. strike damaged a desalination plant on Qeshm Island, cutting water to about 30 villages. (https://x.com/MarioNawfal/status/2032072801163657250)
+[observe] @AyshaSusmaz: America & Israel bombed Golestan Palace, a UNESCO World Heritage site & crown jewel of Iranian history. (https://x.com/AyshaSusmaz/status/2031917597411721277)
+[observe] @Kalshi: Nvidia and Palantir have partnered to create new "AI operating system". (https://x.com/Kalshi/status/2032059153305243707)
+[observe] @PhysInHistory: Discussion on "scariest thing about AI" with concerns about computing resources concentration and humans thinking like AI. (https://x.com/PhysInHistory/status/2032069455082373392)
+[observe] @REDBOXINDIA: India's oil minister reports increased non-Hormuz crude sourcing to 70% of imports, ensuring secure supply. (https://x.com/REDBOXINDIA/status/2032049964684345844)
+[observe] @MarioNawfal: Qatar Airways flight rerouted due to airspace closing, adding 2.5 hours to Doha-Moscow trip. (https://x.com/MarioNawfal/status/2032077900326060181)
