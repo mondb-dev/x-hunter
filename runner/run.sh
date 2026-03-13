@@ -956,7 +956,7 @@ Tasks (in order, no browser):
       from prior memory or general knowledge. The tweet must be grounded in THIS cycle.
    Better no tweet than a weak one.
    e. If you have an active plan, you may reference it when relevant — connecting what
-      you observed to your plan's domain is encouraged, but only if the link is genuine.
+      you observed to your plan domain is encouraged, but only if the link is genuine.
       Do NOT force every tweet to be about the plan. Authenticity first.
 4. Write state/tweet_draft.txt (plain text, overwrite):
    Line 1: your insight sentence (REQUIRED — must not be empty)
