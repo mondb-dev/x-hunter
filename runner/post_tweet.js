@@ -86,6 +86,40 @@ async function sleep(ms) {
     }, tweetText, COMPOSE_BOX);
     await sleep(1_500);
 
+    // Verify text was inserted correctly — retry with keyboard fallback if truncated
+    const insertedText = await page.evaluate((sel) => {
+      const el = document.querySelector(sel);
+      return el ? el.innerText.trim() : "";
+    }, COMPOSE_BOX);
+    const expectedLen = tweetText.length;
+    const gotLen = insertedText.length;
+    console.log(`[post_tweet] text verification: ${gotLen}/${expectedLen} chars`);
+
+    if (!insertedText || gotLen < expectedLen * 0.8) {
+      console.log("[post_tweet] text truncated or missing — retrying with keyboard fallback");
+      // Clear and retry with keyboard.type
+      await page.evaluate((sel) => {
+        const el = document.querySelector(sel);
+        if (el) { el.focus(); document.execCommand("selectAll"); document.execCommand("delete"); }
+      }, COMPOSE_BOX);
+      await sleep(500);
+      await page.keyboard.type(tweetText, { delay: 20 });
+      await sleep(1_500);
+
+      // Second verification
+      const retryText = await page.evaluate((sel) => {
+        const el = document.querySelector(sel);
+        return el ? el.innerText.trim() : "";
+      }, COMPOSE_BOX);
+      console.log(`[post_tweet] retry verification: ${retryText.length}/${expectedLen} chars`);
+
+      if (!retryText || retryText.length < expectedLen * 0.5) {
+        console.error("[post_tweet] text insertion failed after retry — aborting");
+        browser.disconnect();
+        process.exit(1);
+      }
+    }
+
     // Wait for Post button to be enabled
     console.log("[post_tweet] waiting for Post button...");
     await page.waitForSelector(POST_BUTTON, { timeout: 10_000 });
