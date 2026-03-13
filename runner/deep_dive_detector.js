@@ -92,17 +92,38 @@ function extractEvidenceAccounts(ontologyPath) {
     counts.set(handle, (counts.get(handle) || 0) + 1);
   }
 
-  // 4. Load existing queue — find consumed + pending
+  // 4. Load existing queue — aggregate status per URL
+  //    JSONL stores state updates as separate lines (add → in_progress → consumed).
+  //    We must correlate by URL to get the true status of each item.
   const queue = loadQueue();
-  const consumed = new Set(
-    queue.filter(e => e.consumed_at).map(e => {
-      const m = (e.url || "").match(/x\.com\/([A-Za-z0-9_]+)\/?$/);
-      return m ? m[1].toLowerCase() : null;
-    }).filter(Boolean)
-  );
-  const pendingCount = queue.filter(
-    e => e.from_user === "auto_detected" && !e.consumed_at && !e.in_progress_cycle
-  ).length;
+  const urlStatus = new Map(); // url → { added, consumed, in_progress, from_user }
+  for (const entry of queue) {
+    const url = entry.url;
+    if (!url) continue;
+    if (!urlStatus.has(url)) urlStatus.set(url, {});
+    const st = urlStatus.get(url);
+    if (entry.from_user)         st.from_user = entry.from_user;
+    if (entry.consumed_at)       st.consumed = true;
+    if (entry.in_progress_cycle) st.in_progress = true;
+    if (entry.added_at)          st.added = true;
+  }
+
+  const consumed = new Set();
+  let pendingCount = 0;
+  const alreadyQueued = new Set();
+
+  for (const [url, st] of urlStatus) {
+    const m = url.match(/x\.com\/([A-Za-z0-9_]+)\/?$/);
+    const handle = m ? m[1].toLowerCase() : null;
+    if (st.consumed) {
+      if (handle) consumed.add(handle);
+    } else if (st.from_user === "auto_detected") {
+      pendingCount++;
+      if (handle) alreadyQueued.add(handle);
+    } else {
+      if (handle) alreadyQueued.add(handle);
+    }
+  }
 
   if (pendingCount >= MAX_QUEUE_DEPTH) {
     console.log(`[deep_dive] queue has ${pendingCount} pending auto-detected items — skipping`);
@@ -110,12 +131,6 @@ function extractEvidenceAccounts(ontologyPath) {
   }
 
   // 5. Find candidates above threshold not already consumed/queued
-  const alreadyQueued = new Set(
-    queue.filter(e => !e.consumed_at).map(e => {
-      const m = (e.url || "").match(/x\.com\/([A-Za-z0-9_]+)\/?$/);
-      return m ? m[1].toLowerCase() : null;
-    }).filter(Boolean)
-  );
 
   const candidates = [...counts.entries()]
     .filter(([handle, count]) =>
