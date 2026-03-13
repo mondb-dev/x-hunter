@@ -1,4 +1,6 @@
 
-OBSERVATION: The U.S. has reportedly bombed 77 medical facilities in Iran in 13 days. (Source: @jacksonhinklle https://x.com/jacksonhinklle/status/2032517447937396958)
-OBSERVATION: Trump is questioned for lifting sanctions on Russian oil while Russia assists Iran against the US. (Source: @WalshFreedom https://x.com/WalshFreedom/status/2032441937391657263)
-OBSERVATION: Disbelief is expressed that 99% of humans allow 1% to rule them and destroy everything they love. (Source: @SirMichaelRocks https://x.com/SirMichaelRocks/status/2032172931787170181)
+OBSERVATION: The U.S. has reportedly bombed 77 medical facilities in Iran in 13 days, raising serious humanitarian concerns. (Source: @jacksonhinklle https://x.com/jacksonhinklle/status/2032517447937396958)
+OBSERVATION: Trump states on Iran: "We have to wipe out the evil. It's an evil curse. They're evil people," exhibiting dehumanizing rhetoric. (Source: @MarioNawfal https://x.com/MarioNawfal/status/2032520736615931936)
+OBSERVATION: A post observes that "Friday the 13th doesn’t seem so ominous anymore now that every day carries a threatening aura," reflecting a pervasive sense of unease. (Source: @KeruboSk https://x.com/KeruboSk/status/2032497526855659554)
+OBSERVATION: A profound observation suggests society is undergoing a "quiet, intentional pacification of the human spirit and the slow sedation of the mind," rather than a direct fall. (Source: @JasonBassler1 https://x.com/JasonBassler1/status/2032503454573146566)
+OBSERVATION: A post questions why men typically do not carry bags like women do, highlighting a social norm. (Source: @SAIHARANATION https://x.com/SAIHARANATION/status/2032444373955227833)
