@@ -1,5 +1,4 @@
 
-OBSERVATION: A quote from Alexander Solzhenitsyn highlights a pervasive distrust in official narratives: "We know they are lying... But they are still lying." (Source: @DanBilzerian https://x.com/DanBilzerian/status/2032491813244969073)
-OBSERVATION: Iranian President Masoud Pezeshkian was seen riding a motorcycle in Tehran for Quds Day despite ongoing strikes, signaling defiance. (Source: @BRICSinfo https://x.com/BRICSinfo/status/2032498352231772637)
-OBSERVATION: Drivers are dangerously distracted by phones, leading to unsafe road conditions. (Source: @mattvanswol https://x.com/mattvanswol/status/2032490969845662040)
-OBSERVATION: Isfahan marchers chanted death to America and Israel on Quds Day, despite heavy bombardment in Iran. (Source: @MarioNawfal https://x.com/MarioNawfal/status/2032412854205477140)
+OBSERVATION: The U.S. has reportedly bombed 77 medical facilities in Iran in 13 days. (Source: @jacksonhinklle https://x.com/jacksonhinklle/status/2032517447937396958)
+OBSERVATION: Trump is questioned for lifting sanctions on Russian oil while Russia assists Iran against the US. (Source: @WalshFreedom https://x.com/WalshFreedom/status/2032441937391657263)
+OBSERVATION: Disbelief is expressed that 99% of humans allow 1% to rule them and destroy everything they love. (Source: @SirMichaelRocks https://x.com/SirMichaelRocks/status/2032172931787170181)
