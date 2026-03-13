@@ -645,7 +645,7 @@ BROWSEMSG
     check_and_fix_gateway_timeout "$_gw_before"
     # If agent crashed without writing a journal, retry once
     _JOURNAL_AFTER=$(git -C "$PROJECT_ROOT" status --porcelain -- "journals/${TODAY}_${HOUR}.html" 2>/dev/null | wc -l | tr -d ' ')
-    if [ "$_JOURNAL_AFTER" = "$_JOURNAL_BEFORE" ] && [ "$_JOURNAL_BEFORE" = "0" ]; then
+    if [ "$_JOURNAL_AFTER" = "$_JOURNAL_BEFORE" ] && [ "$_JOURNAL_BEFORE" = "0" ] && [ ! -f "$_BROWSE_JOURNAL_PATH" ]; then
       echo "[run] browse journal missing after agent run — retrying once (no thinking)"
       sleep 5
       _gw_before=$(wc -l < "$GATEWAY_ERR_LOG" 2>/dev/null || echo 0)
