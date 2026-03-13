@@ -49,6 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <a href="/ontology">Ontology</a>
               <a href="/checkpoints">Checkpoints</a>
               <a href="/ponders">Ponders</a>
+              <a href="/plan">Plan</a>
               <a href="/about">About</a>
             </div>
           </nav>

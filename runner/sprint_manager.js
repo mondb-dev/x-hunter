@@ -29,8 +29,9 @@ const path = require("path");
 const ROOT  = path.resolve(__dirname, "..");
 const STATE = path.join(ROOT, "state");
 
-const ACTIVE_PLAN_PATH    = path.join(STATE, "active_plan.json");
-const SPRINT_CONTEXT_PATH = path.join(STATE, "sprint_context.txt");
+const ACTIVE_PLAN_PATH      = path.join(STATE, "active_plan.json");
+const SPRINT_CONTEXT_PATH   = path.join(STATE, "sprint_context.txt");
+const SPRINT_SNAPSHOT_PATH  = path.join(STATE, "sprint_snapshot.json");
 
 const sprintDb = require("./sprint/db.js");
 const planner  = require("./sprint/planner.js");
@@ -140,6 +141,30 @@ async function main() {
   const context = sprintDb.buildPromptContext(planId);
   fs.writeFileSync(SPRINT_CONTEXT_PATH, context);
   console.log(`[sprint_manager] sprint context written (${context.length} chars)`);
+
+  // 7. SNAPSHOT — write JSON snapshot for the website /plan page
+  const summary = sprintDb.getSprintSummary(planId);
+  if (summary) {
+    // Enrich with recent accomplishments
+    const recentAccomplishments = sprintDb.getAccomplishments(planId, sprintDb.addDays(today(), -7));
+    const snapshot = {
+      ...summary,
+      plan_id:        planId,
+      brief:          activePlan.brief,
+      compulsion:     activePlan.compulsion,
+      success_30d:    activePlan.success_30d,
+      belief_axes:    activePlan.belief_axes || [],
+      accomplishments: recentAccomplishments.map(a => ({
+        date:        a.date,
+        description: a.description,
+        evidence:    a.evidence,
+        impact:      a.impact,
+      })),
+      snapshot_at: new Date().toISOString(),
+    };
+    fs.writeFileSync(SPRINT_SNAPSHOT_PATH, JSON.stringify(snapshot, null, 2));
+    console.log(`[sprint_manager] sprint snapshot written`);
+  }
 
   sprintDb.close();
   console.log("[sprint_manager] done");

@@ -1138,6 +1138,17 @@ TWEETMSG
       node "$PROJECT_ROOT/runner/decision.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
       # ── Sprint manager (daily: sync plan → track progress → plan next sprint) ──
       node "$PROJECT_ROOT/runner/sprint_manager.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+      # ── Sprint update: generate tweet + Moltbook post if milestone reached ──
+      node "$PROJECT_ROOT/runner/sprint_update.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+      # Post sprint progress tweet if sprint_update.js wrote a draft
+      if [ -f "$PROJECT_ROOT/state/sprint_tweet.txt" ]; then
+        cp "$PROJECT_ROOT/state/sprint_tweet.txt" "$PROJECT_ROOT/state/tweet_draft.txt"
+        node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1 | grep -v '^$' || true
+        rm -f "$PROJECT_ROOT/state/sprint_tweet.txt"
+        echo "[run] sprint progress tweet posted"
+      fi
+      # Post sprint update to Moltbook if draft exists
+      node "$PROJECT_ROOT/runner/moltbook.js" --sprint-update >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
       # Trim feed_digest.txt to last 3000 lines (~2-3 days of data)
       DLINES=$(wc -l < "$PROJECT_ROOT/state/feed_digest.txt" 2>/dev/null || echo 0)
       if [ "$DLINES" -gt 3000 ]; then

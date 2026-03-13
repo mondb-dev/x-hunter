@@ -862,6 +862,48 @@ async function postArticle() {
   }
 }
 
+// ── Post sprint update to Moltbook ───────────────────────────────────────────
+const SPRINT_UPDATE_DRAFT = path.join(PROJECT_ROOT, "state", "sprint_update_draft.md");
+
+async function postSprintUpdate() {
+  if (!fs.existsSync(SPRINT_UPDATE_DRAFT)) {
+    console.log("[moltbook] no sprint_update_draft.md — skipping");
+    return;
+  }
+
+  const raw = fs.readFileSync(SPRINT_UPDATE_DRAFT, "utf-8").trim();
+  if (!raw || raw.length < 100) {
+    console.log("[moltbook] sprint update draft too short — skipping");
+    return;
+  }
+
+  // Extract title from first # heading
+  const titleMatch = raw.match(/^#\s+(.+)/m);
+  const title = titleMatch ? titleMatch[1].trim() : "Sprint progress update";
+
+  // Strip the # title line from body
+  const body = raw.replace(/^#\s+.+\n/, "").trim();
+
+  // Append Sebastian footer
+  const footer = `\n\n---\n*X: @SebastianHunts | Plan: https://sebastianhunter.fun/plan*`;
+  const fullBody = body + footer;
+
+  const submolt = pickSubmolt(body);
+  console.log(`[moltbook] posting sprint update to m/${submolt}: "${title.slice(0, 60)}"`);
+
+  // Sprint updates bypass the 32-min rate limit (once-daily, gated by sprint_update.js)
+  const post = await createPost(submolt, title, fullBody);
+  if (post) {
+    const state = loadState();
+    state.last_post_at = new Date().toISOString();
+    saveState(state);
+    const postUrl = `https://www.moltbook.com/post/${post.id || ""}`;
+    console.log(`[moltbook] sprint update live: ${postUrl}`);
+    // Clean up draft
+    fs.unlinkSync(SPRINT_UPDATE_DRAFT);
+  }
+}
+
 // ── Utility ───────────────────────────────────────────────────────────────────
 function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
@@ -886,8 +928,10 @@ const cmd = process.argv[2];
       await postIntro();
     } else if (cmd === "--post-ponder") {
       await postPonder();
+    } else if (cmd === "--sprint-update") {
+      await postSprintUpdate();
     } else {
-      console.log("Usage: node runner/moltbook.js --heartbeat | --post | --post-quote | --post-checkpoint | --post-article | --post-ponder | --intro");
+      console.log("Usage: node runner/moltbook.js --heartbeat | --post | --post-quote | --post-checkpoint | --post-article | --post-ponder | --sprint-update | --intro");
       process.exit(1);
     }
   } catch (err) {
