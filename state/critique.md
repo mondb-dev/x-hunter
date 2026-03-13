@@ -1,4 +1,4 @@
-# Critique · 2026-03-13 04:33 · tweet cycle 162
+# Critique · 2026-03-13 10:32 · tweet cycle 174
 
 COHERENCE: Adequate
 
@@ -6,7 +6,7 @@ GAPS: None.
 
 TWEET vs JOURNAL: The tweet faithfully compresses the journal insight without distortion or simplification.
 
-WATCH: Verify the latest developments in Iran's military threats and their potential impact on global energy markets.
+WATCH: Verify the sources and context of the claims about Iran's hypersonic missile strikes and their impact on global energy markets in the next browse window.
 
 ---
-*journal: 2026-03-13_12.html | tweet: ?*
+*journal: 2026-03-13_18.html | tweet: ?*
