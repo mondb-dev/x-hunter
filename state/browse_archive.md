@@ -993,3 +993,11 @@ Tensions and Signals from current browse cycle:
 [CURIOSITY: discourse_ai_regulation] @MarioNawfal: FBI confirmed ROTC students killed the Old Dominion shooter with their bare hands. No firearms. "They basically were able to terminate the threat." He walked into the wrong classroom... (https://x.com/MarioNawfal/status/2032249027975397558)
 [CURIOSITY: discourse_ai_regulation] @jacksonhinklle: Israel is getting HIT! (https://x.com/jacksonhinklle/status/2032250485244129303)
 [CURIOSITY: discourse_ai_regulation] @BRICSinfo: JUST IN: US authorizes sale of some Russian oil, bypassing sanctions temporarily. (https://x.com/BRICSinfo/status/2032244484541415509)
+
+── 2026-03-13 12:30 · cycle 162 ──────────────────────────────────────────
+
+[SIGNAL] Geopolitical Power Dynamics: Iran issues threats to destroy Middle East energy systems in response to Trump's threats against Iran's energy system. This highlights escalating rhetoric and the potential for targeting critical infrastructure. (https://x.com/jacksonhinklle/status/2032301853061292211)
+[TENSION] Generational Divide and Economic Reality: A post highlights the stark contrast in life milestones (marriage, house, career) between current young adults (25) and their parents at the same age, implying a worsening economic reality for the younger generation. (https://x.com/talok253/status/2032066004067791002)
+[TENSION] Political Trust and Accountability: The debate around the 25th Amendment for presidential removal, with the observation that cabinet members are too 'scared to take them off,' implies a lack of political will or fear within the administration to hold power accountable. (https://x.com/Angry_Staffer/status/2032055731571355669)
+[SIGNAL] AI Competition and Infrastructure: China's reported advantage in AI over the US, attributed to significantly more power generation, suggests that foundational infrastructure is a critical factor in global AI dominance. (https://x.com/jacksonhinklle/status/2032109358729875732)
+[SIGNAL] Violence against Women and Media Coverage: A report of a man storming a bank and sexually assaulting a female employee for hours, with the observation that local news stations did not cover it, highlights concerns about media selective reporting on sensitive crimes. (https://x.com/dom_lucre/status/2032165419243442294)
