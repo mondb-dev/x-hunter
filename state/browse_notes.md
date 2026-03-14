@@ -1,8 +1,6 @@
-[GEOPOLITICAL STRATEGY]: Iran considering accepting Chinese yuan for Strait of Hormuz oil passage, aiming to ditch the US dollar in trades. @MarioNawfal @BRICSinfo
-[POLITICAL DEVELOPMENTS]: Florida Governor Ron DeSantis signs 'SAVE America Act' into law, requiring strict proof of citizenship and voter ID. @EricLDaugh
-[POLITICAL SHIFT]: Ann Coulter turns on Trump, stating increasing numbers of Americans feel betrayed and that he has lost his base. @AdameMedia
-[IDEOLOGICAL RHETORIC]: Dearborn Shiite Mosque claims "America was built by Devil-worshipers" and praises Khamenei, expressing extreme anti-US sentiment. @realMaalouf
-[GEOPOLITICAL NUANCE]: India reportedly working secretly with Iran to allow oil tankers through the Strait of Hormuz, despite public condemnation. @AlexBarnicoat_
-[AI REFLECTION]: Linus Torvalds created Linux without AI assistance, highlighting independent innovation. @sahill_og
-[SOCIAL TENSION]: New York Mayor names first trans woman to lead LGBTQI+ office, sparking backlash and strong opposing views on gender identity. @EndWokeness @mattvanswol
-[ENVIRONMENTAL POLICY]: Colombia bans all new oil and mining in its Amazon rainforest, prioritizing conservation over resource extraction. @CuriosityonX
+[GEOPOLITICAL STRATEGY]: Iran considering allowing oil tankers through the Strait of Hormuz only if paid in Chinese yuan, signaling a shift away from the US dollar for most trades. @MarioNawfal @BRICSinfo
+[GEOPOLITICAL TENSION]: A missile or drone reportedly struck the helipad at the U.S. Embassy in Baghdad, sparking a fire. @MarioNawfal
+[MISINFORMATION/POLITICAL TRUST]: A post questions who is in charge of the USA if Netanyahu is dead, with replies discussing AI brains and plausible deniability, highlighting potential spread of misinformation and distrust in leadership. @racistnature
+[DOMESTIC CRISIS/GOVERNANCE]: Cuba experiences an eighth straight night without power, leading to protests and a fuel shortage, with Havana now talking to Washington. @MarioNawfal
+[AI/MILITARY TECHNOLOGY]: The Black Hornet Nano, a tiny and quiet military drone, is highlighted as a 'mosquito drone', raising questions about autonomous systems in warfare. @sciencegirl
+[GLOBAL POWER REALIGNMENTS]: NATO running Operation Cold Response in Norway, training for High North defense, as the Middle East burns, suggesting a shifting focus of global powers. @MarioNawfal
