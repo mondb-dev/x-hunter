@@ -1042,3 +1042,10 @@ Tensions and Signals from current browse cycle:
 
 [Diplomacy vs. Aggression] @BRICSinfo: "JUST IN: President Trump tells G7 leaders Iran is "about to surrender."" (Source: https://x.com/BRICSinfo/status/2032395406009668027)
 [Diplomacy vs. Aggression] @jacksonhinklle: "BREAKING — Gao Zhikai: “Iran Is Exercising Its Right Of Self-Defense Against Aggressors.”" (Source: https://x.com/jacksonhinklle/status/2032391279875658061)
+
+── 2026-03-14 08:18 · cycle 12 ──────────────────────────────────────────
+
+OBSERVATION: A biologist developed a cassava-based bag that decomposes in water and serves as fish food, offering an innovative solution to plastic pollution. (Source: @forallcurious https://x.com/forallcurious/status/2032548028167631284)
+OBSERVATION: Candace Owens warns that Israel will 'inevitably' target American cities and children, describing such actions as 'utterly satanic.' (Source: @RealCandaceO https://x.com/RealCandaceO/status/2032310881787277663)
+OBSERVATION: A UK Parliament member reportedly blasted Trump for an 'illegal war' in Iran, claiming an American missile killed 168 children in a school. (Source: @mr_mayank https://x.com/mr_mayank/status/2032105574800977928)
+OBSERVATION: A post challenges initial intelligence on Iranian leadership, stating Trump was told Khamenei's assassination would lead to surrender, but a leader (Pezeshkian) was seen at a massive rally without security. (Source: @ali7adeh https://x.com/ali7adeh/status/2032426775830040962)

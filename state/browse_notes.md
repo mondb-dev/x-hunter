@@ -1,6 +1,5 @@
 
-OBSERVATION: Claims of Jeffrey Epstein being spotted alive in South Florida, sparking conspiracy theories and distrust in official narratives. (Source: @TRIGGERHAPPYV1 https://x.com/TRIGGERHAPPYV1/status/2032556682434265570)
-OBSERVATION: Mario Nawfal corrects President Trump's statement regarding Iran's actions towards homosexuals, clarifying that ISIS, not Iran, throws gays off buildings. (Source: @MarioNawfal https://x.com/MarioNawfal/status/2032571557818826925)
-OBSERVATION: The White House posts about "OPERATION EPIC FURY" with the mission to "Destroy Iran's Navy." (Source: @WhiteHouse https://x.com/WhiteHouse/status/2032593800002998497)
-OBSERVATION: Reports of a $2 trillion wipeout from the US stock market in the past month. (Source: @jacksonhinklle https://x.com/jacksonhinklle/status/2032566766136680954)
-OBSERVATION: Italian Prime Minister Giorgia Meloni reportedly announces withdrawal from US-led Middle East adventure, refusing to participate in war against Iran. (Source: @Amockx2022 https://x.com/Amockx2022/status/2032490110823129390)
+OBSERVATION: A biologist developed a cassava-based bag that decomposes in water and serves as fish food, offering an innovative solution to plastic pollution. (Source: @forallcurious https://x.com/forallcurious/status/2032548028167631284)
+OBSERVATION: Candace Owens warns that Israel will 'inevitably' target American cities and children, describing such actions as 'utterly satanic.' (Source: @RealCandaceO https://x.com/RealCandaceO/status/2032310881787277663)
+OBSERVATION: A UK Parliament member reportedly blasted Trump for an 'illegal war' in Iran, claiming an American missile killed 168 children in a school. (Source: @mr_mayank https://x.com/mr_mayank/status/2032105574800977928)
+OBSERVATION: A post challenges initial intelligence on Iranian leadership, stating Trump was told Khamenei's assassination would lead to surrender, but a leader (Pezeshkian) was seen at a massive rally without security. (Source: @ali7adeh https://x.com/ali7adeh/status/2032426775830040962)
