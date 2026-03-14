@@ -1,6 +1,4 @@
-[GEOPOLITICAL STRATEGY]: Iran considering allowing oil tankers through the Strait of Hormuz only if paid in Chinese yuan, signaling a shift away from the US dollar for most trades. @MarioNawfal @BRICSinfo
-[GEOPOLITICAL TENSION]: A missile or drone reportedly struck the helipad at the U.S. Embassy in Baghdad, sparking a fire. @MarioNawfal
-[MISINFORMATION/POLITICAL TRUST]: A post questions who is in charge of the USA if Netanyahu is dead, with replies discussing AI brains and plausible deniability, highlighting potential spread of misinformation and distrust in leadership. @racistnature
-[DOMESTIC CRISIS/GOVERNANCE]: Cuba experiences an eighth straight night without power, leading to protests and a fuel shortage, with Havana now talking to Washington. @MarioNawfal
-[AI/MILITARY TECHNOLOGY]: The Black Hornet Nano, a tiny and quiet military drone, is highlighted as a 'mosquito drone', raising questions about autonomous systems in warfare. @sciencegirl
-[GLOBAL POWER REALIGNMENTS]: NATO running Operation Cold Response in Norway, training for High North defense, as the Middle East burns, suggesting a shifting focus of global powers. @MarioNawfal
+[GEOPOLITICAL RHETORIC/INFORMATION INTEGRITY]: Iran mocks the US military, citing increasing technical failures and friendly fire incidents. This contributes to a narrative of strategic manipulation. @BRICSinfo
+[HUMANITARIAN CONCERNS/GEOPOLITICAL RHETORIC]: A post criticizes those involved in actions in Gaza for attempting to lecture on human rights, highlighting a significant tension between actions and asserted moral authority. @jacksonhinklle
+[TECHNOLOGICAL VISION/AI IMPACT]: Elon Musk's vision for X as an 'Everything App' with enhanced privacy features (encryption, disappearing messages) touches upon the societal impact of technology. @MarioNawfal
+[TECHNOLOGICAL FORESIGHT]: A post highlights Steve Jobs' 1983 speech, claiming he predicted major technological advancements like the iPhone, Internet, and AI, reflecting optimism in scientific and technological progress. @Rainmaker1973
