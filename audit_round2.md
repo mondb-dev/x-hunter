@@ -1,45 +1,90 @@
-# Hunter Codebase Audit — Round 2 (2026-02-28)
+# Hunter Codebase Audit — Round 2
 
-This round focuses on findings not covered in `audit.md`: ontology-policy compliance, orchestration gaps, clustering correctness, and checkpoint/journal lifecycle fidelity.
+Original findings (2026-02-28) below, plus a full deep-read pass of every script.
 
-## Findings (new, ordered by severity)
+---
 
-1. **Critical: belief update engine does not enforce AGENTS daily drift cap or gradual updates**
-   - Spec requires `daily_cap per axis: ±0.05` and gradual drift ([AGENTS.md](/Users/mondb/Documents/Projects/hunter/AGENTS.md:127)).
-   - Implementation recomputes full axis score from all evidence each run with no per-day cap ([apply_ontology_delta.js](/Users/mondb/Documents/Projects/hunter/runner/apply_ontology_delta.js:239)).
-   - Score can jump to extremes quickly (current state has `axis_epistemic_integrity` at `1.0` with a single evidence entry, violating gradualism intent) ([ontology.json](/Users/mondb/Documents/Projects/hunter/state/ontology.json:8), [ontology.json](/Users/mondb/Documents/Projects/hunter/state/ontology.json:13)).
+## Original Findings — ALL RESOLVED
 
-2. **Critical: axis creation safeguards from AGENTS are not enforced by merge layer**
-   - Required controls include max 3 new axes/day and semantic dedup (`similarity > 0.86` -> attach evidence, don’t create new axis) ([AGENTS.md](/Users/mondb/Documents/Projects/hunter/AGENTS.md:88), [AGENTS.md](/Users/mondb/Documents/Projects/hunter/AGENTS.md:96)).
-   - `apply_ontology_delta.js` only checks required fields + duplicate ID; no per-day cap, no similarity gate, no duplicate-meaning prevention ([apply_ontology_delta.js](/Users/mondb/Documents/Projects/hunter/runner/apply_ontology_delta.js:262)).
+| # | Severity | Finding | Status |
+|---|----------|---------|--------|
+| 1 | Critical | Belief engine has no daily drift cap (±0.05) | ✅ Fixed in `apply_ontology_delta.js` |
+| 2 | Critical | No axis creation guard (3/day max, dedup) | ✅ Fixed — Jaccard 0.35 + 3/day limit |
+| 3 | High | Journaling/report/checkpoint cadence not orchestrated | ✅ Fixed — daily block fires every cycle |
+| 4 | High | Cluster sort uses `.score` but field is `.total` | ✅ Fixed in `analytics.js` |
+| 5 | Medium | Discourse scanner marks exchanges scanned on failure | ✅ Fixed — `continue` on failure |
+| 6 | Medium | `curiosity.js` reads `.active_axes` (doesn't exist) | ✅ Fixed — reads `.axes` |
+| 7 | Medium | Checkpoint UX says "weekly" but spec says 3-day | ✅ Fixed — UI cop# Hunter Codebase Audit — Round 2
 
-3. **High: required journaling/report/checkpoint cadence is not orchestrated**
-   - Spec requires hourly journals, daily report output, and checkpoints every 3 days ([AGENTS.md](/Users/mondb/Documents/Projects/hunter/AGENTS.md:167), [AGENTS.md](/Users/mondb/Documents/Projects/hunter/AGENTS.md:241), [AGENTS.md](/Users/mondb/Documents/Projects/hunter/AGENTS.md:257)).
-   - Runner writes journal only on tweet cycles (every 2 hours) and has no daily/checkpoint generation stage ([run.sh](/Users/mondb/Documents/Projects/hunter/runner/run.sh:76), [run.sh](/Users/mondb/Documents/Projects/hunter/runner/run.sh:603)).
-   - Repository state reflects this gap: no produced daily reports/checkpoints (only `.gitkeep`) (`daily/`, `checkpoints/`).
+Original findings (2026-02-28) below,  s
+Original findings (2026-02-28) beAud
+---
 
-4. **High: cluster ordering logic uses a non-existent field**
-   - Clusters are sorted by `posts[0].score` in analytics ([analytics.js](/Users/mondb/Documents/Projects/hunter/scraper/analytics.js:273)).
-   - Collect pipeline populates post ranking in `total`, not `score` ([collect.js](/Users/mondb/Documents/Projects/hunter/scraper/collect.js:376), [collect.js](/Users/mondb/Documents/Projects/hunter/scraper/collect.js:393)).
-   - Impact: cluster sort comparator frequently evaluates `undefined - undefined` (`NaN`), leading to unstable/non-deterministic cluster ordering in digest.
+## Original Findings — ALL RESOLVED
 
-5. **Medium: discourse scanner permanently drops exchanges when assessment fails**
-   - On Ollama/parse failure, reply IDs are still marked scanned ([discourse_scan.js](/Users/mondb/Documents/Projects/hunter/runner/discourse_scan.js:167)).
-   - This prevents retries after transient local model failures and can silently lose high-value discourse anchors.
+| # | Severity | Finding | Status |twe
+#.js
+| # | Severity | Finding | Status |se:|---|----------|---------|-------- `| 1 | Critical | Belief engine hasag| 2 | Critical | No axis creation guard (3/day max, dedup) | ✅ Fixed — Jaccard 0.35 + 3/day limit |
+d | 3 | High | Journaling/report/checkpoint cadence not orchestrated | ✅ Fixed — daily block fires etw| 4 | High | Cluster sort uses `.score` but field is `.total` | ✅ Fixed in `analytics.js` |
+| 5 | Medium | Disc b| 5 | Medium | Discourse scanner marks exchanges scanned on failure | ✅ Fixed — `continu Q| 6 | Medium | `curiosity.js` reads `.active_axes` (doesn't exist) | ✅ Fixed — reads `.axes` |
+| 7 | M +| 7 | Medium | Checkpoint UX says "weekly" but spec says 3-day | ✅ Fixed — UI cop# Hunter Cod a
+Original findings (2026-02-28) below,  s
+Original # LOW: `follow_score` always 0 in SQLite accounts table
 
-6. **Medium: curiosity context reads belief fields that do not exist**
-   - `curiosity.js` expects `belief_state.active_axes` / `watch_list` ([curiosity.js](/Users/mondb/Documents/Projects/hunter/runner/curiosity.js:89)).
-   - Actual schema stores `created_at` + `axes` array only ([belief_state.json](/Users/mondb/Documents/Projects/hunter/state/belief_state.json:2)).
-   - Effect: belief-summary context is consistently blank in trending prompt path (reduced guidance quality).
+`collect.js` hOriginal findings (2026-02-28) beAud
+--fo---
 
-7. **Medium: checkpoint UX/logic diverges from AGENTS semantics**
-   - AGENTS says checkpoints are every 3 days ([AGENTS.md](/Users/mondb/Documents/Projects/hunter/AGENTS.md:257)), while UI copy says weekly ([checkpoints page](/Users/mondb/Documents/Projects/hunter/web/app/checkpoints/page.tsx:14)).
-   - `getLatestCheckpoint()` checks `latest.md` existence but ignores its contents and simply returns highest-numbered checkpoint file ([readCheckpoints.ts](/Users/mondb/Documents/Projects/hunter/web/lib/readCheckpoints.ts:51), [readCheckpoints.ts](/Users/mondb/Documents/Projects/hunter/web/lib/readCheckpoints.ts:57)).
+## Original Findings — ALL R r
+# da
+| # | Severity | Finding | Status |fun#.js
+| # | Severity | Finding | Statuia| #
+#d | 3 | High | Journaling/report/checkpoint cadence not orchestrated | ✅ Fixed — daily block fires etw| 4 | High | Cluster sort uses `.score` but field is `.total` | ✅ Fixed in `analytics.js` |
+| 5 | Mediumer| 5 | Medium | Disc b| 5 | Medium | Discourse scanner marks exchanges scanned on failure | ✅ Fixed — `continu Q| 6 | Medium | `curiosity.js` reads `.active_axes` (doesn't exist) | ✅ Fixed — ? | 7 | M +| 7 | Medium | Checkpoint UX says "weekly" but spec says 3-day | ✅ Fixed — UI cop#e drift detection, FTS5 rebuild |
+| `detect_drift.js` | 188 | Clean — CUSUM K=0.5 H=4.0, per-axis state |
+| `critique.js` | 299 | Clean — Ollama fallback, tweet/quote modes |
+| `ponder.js` | 408 | Clean — 7-day cooldown, cOriginal # LOW: `follow_score` always 0do
+`collect.js` hOriginal findings (2026-02-28) beAud
+--fo---
 
-8. **Low: ontology records violate own schema completeness (`created_at` empty)**
-   - Axis schema requires timestamps ([AGENTS.md](/Users/mondb/Documents/Projects/hunter/AGENTS.md:76)).
-   - Current state has empty `created_at` across axes ([ontology.json](/Users/mondb/Documents/Projects/hunter/state/ontology.json:11)).
+##js`--fo---
 
-## Verification notes
-- Syntax check still passes: `node --check runner/*.js scraper/*.js`.
-- This round did not rerun browser/CDP flows or live posting actions.
+## Original Findings — ALL R r
+# da
+| |
+
+## Or.js# da
+| # | Severity | Finding | r| #y,| # | Severity | Finding | Statuia| #
+#d n #d | 3 | High | Journaling/report/ch || 5 | Mediumer| 5 | Medium | Disc b| 5 | Medium | Discourse scanner marks exchanges scanned on failure | ✅ Fixed — `continu Q| 6 | Medium | `curiosity.js` reads `.active_axes` (doesn't exist) | ?.| `detect_drift.js` | 188 | Clean — CUSUM K=0.5 H=4.0, per-axis state |
+| `critique.js` | 299 | Clean — Ollama fallback, tweet/quote modes |
+| `ponder.js` | 408 | Clean — 7-day cooldown, cOriginal # LOW: `follow_score` always 0do
+`collect.js` hOriginal findings (2026-02-28) beAud
+--fo---
+
+##js`--fo---
+
+## Original Findings — ALL R RR| `critique.js` | 299 | Clean — Ollama fallback, tweet/quote modes |
+|3/| `ponder.js` | 408 | Clean — 7-day cooldown, cOriginal # LOW: `fol L`collect.js` hOriginal findings (2026-02-28) beAud
+--fo---
+
+##js`--fo---
+
+## Original FinSp--fo---
+
+##js`--fo---
+
+## Original Findings — A8 
+##js`n |
+## Originarna# da
+| |
+
+## Or.js# da
+| # | Seos| |ts
+#| 4| # | Sever
+|#d n #d | 3 | High | Journaling/report/ch || 5 | Mediumer| 5 | findings| `critique.js` | 299 | Clean — Ollama fallback, tweet/quote modes |
+| `ponder.js` | 408 | Clean — 7-day cooldown, cOriginal # LOW: `follow_score` always 0do
+`collect.js` hOriginal findings (2026-02-28) beAud
+--fo---
+
+##js`--fo---
+
+## Original Fner, scraper, and web — all clean
