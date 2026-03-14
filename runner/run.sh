@@ -998,6 +998,28 @@ TWEETMSG
     # ── Close excess Chrome tabs after tweet agent ────────────────────────
     node "$PROJECT_ROOT/runner/cleanup_tabs.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
+    # Restore write permission on posts_log.json BEFORE post scripts run
+    # (was read-only during agent run to prevent agent from overwriting it)
+    chmod 644 "$PROJECT_ROOT/state/posts_log.json" 2>/dev/null || true
+
+    # ── Validate + restore state files if agent wrote malformed JSON ────────
+    for _sf in posts_log ontology belief_state; do
+      _fp="$PROJECT_ROOT/state/${_sf}.json"
+      if [ -f "$_fp" ] && [ -f "${_fp}.bak" ]; then
+        if ! node -e "JSON.parse(require('fs').readFileSync('$_fp','utf-8'))" 2>/dev/null; then
+          echo "[run] WARNING: ${_sf}.json is malformed — restoring from .bak"
+          cp "${_fp}.bak" "$_fp" || true
+        elif [ "$_sf" = "posts_log" ]; then
+          _cur_count=$(node -e "try{console.log(JSON.parse(require('fs').readFileSync('$_fp','utf-8')).posts.length)}catch(e){console.log(0)}" 2>/dev/null)
+          _bak_count=$(node -e "try{console.log(JSON.parse(require('fs').readFileSync('${_fp}.bak','utf-8')).posts.length)}catch(e){console.log(0)}" 2>/dev/null)
+          if [ "$_cur_count" -lt "$_bak_count" ]; then
+            echo "[run] WARNING: posts_log.json lost entries (${_bak_count} → ${_cur_count}) — restoring from .bak"
+            cp "${_fp}.bak" "$_fp"
+          fi
+        fi
+      fi
+    done
+
     # ── Merge ontology delta written by the tweet agent ───────────────────
     node "$PROJECT_ROOT/runner/apply_ontology_delta.js" 2>&1 || true
 
@@ -1039,28 +1061,6 @@ TWEETMSG
 
     # Watchdog: verify tweet was posted, retry once if result is missing
     CYCLE_TYPE=TWEET node "$PROJECT_ROOT/runner/watchdog.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
-
-    # Restore write permission on posts_log.json (was read-only during agent run)
-    chmod 644 "$PROJECT_ROOT/state/posts_log.json" 2>/dev/null || true
-
-    # ── Validate + restore state files if agent wrote malformed or truncated JSON ─
-    for _sf in posts_log ontology belief_state; do
-      _fp="$PROJECT_ROOT/state/${_sf}.json"
-      if [ -f "$_fp" ]; then
-        if ! node -e "JSON.parse(require('fs').readFileSync('$_fp','utf-8'))" 2>/dev/null; then
-          echo "[run] WARNING: ${_sf}.json is malformed — restoring from .bak"
-          [ -f "${_fp}.bak" ] && cp "${_fp}.bak" "$_fp" || true
-        elif [ -f "${_fp}.bak" ] && [ "$_sf" = "posts_log" ]; then
-          # Guard against agent overwriting posts_log.json with fewer entries
-          _cur_count=$(node -e "try{console.log(JSON.parse(require('fs').readFileSync('$_fp','utf-8')).posts.length)}catch(e){console.log(0)}" 2>/dev/null)
-          _bak_count=$(node -e "try{console.log(JSON.parse(require('fs').readFileSync('${_fp}.bak','utf-8')).posts.length)}catch(e){console.log(0)}" 2>/dev/null)
-          if [ "$_cur_count" -lt "$_bak_count" ]; then
-            echo "[run] WARNING: posts_log.json lost entries (${_bak_count} → ${_cur_count}) — restoring from .bak"
-            cp "${_fp}.bak" "$_fp"
-          fi
-        fi
-      fi
-    done
 
     # ── Git commit and push ─────────────────────────────────────────────────
     git -C "$PROJECT_ROOT" add journals/ checkpoints/ state/ articles/ daily/ ponders/ 2>/dev/null || true
