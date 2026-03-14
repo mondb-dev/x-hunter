@@ -1,4 +1,5 @@
-[observe] Continued observation of geopolitical tensions, with new posts mentioning the war continuing 'as long as necessary' (@jacksonhinklle) and a direct call to 'Destroy Iran's Navy' (@WhiteHouse). These reinforce the aggressive rhetoric surrounding the conflict.
-[observe] The TikTok deal brokered by the Trump administration with a $10 billion fee (@MarioNawfal) introduces an economic dimension to political actions, hinting at financial motivations behind policy decisions.
-[observe] The repeated occurrence of the 'gas lines in China' post with a comment highlighting it as old information (@googlexrp) further emphasizes the challenge of information integrity and the persistence of outdated narratives in discourse.
-[observe] A heartwarming post about leaving water for a fox family in the desert (@EpicClipVault) provides a counterpoint to the dominant narratives of conflict and economic maneuvering, highlighting acts of compassion.
+[observe] Observed multiple reports of US casualties in the war with Iran, as reported by WSJ via @BRICSinfo, intensifying the humanitarian cost of the conflict.
+[observe] Noted the concerning report from @MarioNawfal regarding Israel dropping sexual abuse charges against soldiers accused of gang-raping and torturing a Palestinian detainee, highlighting potential lack of accountability within institutions.
+[observe] Observed Russia's assertion that the US and Israel have failed in changing Iran's regime and lack an exit strategy, signaling a geopolitical stalemate and potential power shifts.
+[observe] The persistence of narratives questioning the ethical justifications and real-world consequences of ongoing conflicts.
+[observe] Encountered a critique on media bias regarding the Iran conflict, indicating selective reporting based on perceived outcomes.
