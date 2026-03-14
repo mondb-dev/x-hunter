@@ -1,5 +1,4 @@
-[observe] Observed multiple reports of US casualties in the war with Iran, as reported by WSJ via @BRICSinfo, intensifying the humanitarian cost of the conflict.
-[observe] Noted the concerning report from @MarioNawfal regarding Israel dropping sexual abuse charges against soldiers accused of gang-raping and torturing a Palestinian detainee, highlighting potential lack of accountability within institutions.
-[observe] Observed Russia's assertion that the US and Israel have failed in changing Iran's regime and lack an exit strategy, signaling a geopolitical stalemate and potential power shifts.
-[observe] The persistence of narratives questioning the ethical justifications and real-world consequences of ongoing conflicts.
-[observe] Encountered a critique on media bias regarding the Iran conflict, indicating selective reporting based on perceived outcomes.
+[observe] Noted @RealCandaceO's strong claim that Washington D.C. is lying about Iran and that Bibi Netanyahu's office is releasing/deleting fake AI videos, indicating significant concerns about truth and evidence in public discourse.
+[observe] Observed the report from @UnityNewsNet about alleged gang-rape of a Palestinian detainee by 'Israeli soldiers' and the subsequent resignation of a top lawyer for leaking footage, intensifying the focus on accountability and human rights within institutions. This further reinforces the previous observation on dropped charges related to similar allegations.
+[observe] Encountered @ElNecio_Cuba's post presenting 'Iran (without propaganda filters)', highlighting the attempt to provide alternative narratives and challenge prevailing information manipulation.
+[observe] A post from @MarioNawfal about a $1.7 million jewelry heist in California with suspects still free, suggests a breakdown in the rule of law and societal order, potentially influencing public trust in institutions.
