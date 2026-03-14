@@ -44,9 +44,21 @@ const DELTA      = path.join(ROOT, "state", "ontology_delta.json");
 const TRUST      = path.join(ROOT, "state", "trust_graph.json");
 const DRIFT_CAP  = path.join(ROOT, "state", "drift_cap_state.json");
 const AXIS_GUARD = path.join(ROOT, "state", "axis_creation_state.json");
+const DIVERSITY  = path.join(ROOT, "state", "diversity_state.json");
 
 const OLLAMA_URL   = process.env.OLLAMA_URL   || "http://localhost:11434/api/generate";
 const OLLAMA_MODEL = process.env.OLLAMA_MODEL || "qwen2.5:7b";
+
+// ── Diversity constraint (AGENTS.md §7) ───────────────────────────────────────
+// Per 24h rolling window per axis:
+//   dominant pole ≤ 70%  → diversity_weight = 1.0 (healthy)
+//   dominant pole > 70%  → diversity_weight = 0.5 (dampen)
+//   dominant pole > 90%  → pause updates entirely for that axis
+// "Dominant" = whichever pole (left/right) has more evidence entries today.
+const DIVERSITY_DAMPEN_THRESHOLD = 0.70;  // dominant > 70% → weight 0.5
+const DIVERSITY_PAUSE_THRESHOLD  = 0.90;  // dominant > 90% → skip entry
+const DIVERSITY_DAMPEN_WEIGHT    = 0.5;
+const DIVERSITY_MIN_ENTRIES      = 4;     // need ≥4 entries to evaluate ratio
 
 // Minimum evidence content length to warrant stance validation
 const STANCE_MIN_CHARS = 30;
@@ -182,6 +194,91 @@ function axisSimilarity(axisA, axisB) {
   return jaccardSim(tokenSet(textA), tokenSet(textB));
 }
 
+// ── Diversity constraint state ────────────────────────────────────────────────
+// Tracks per-axis pole counts for the rolling 24h window.
+// Loaded once per run; updated as evidence entries are accepted.
+
+function loadDiversityState() {
+  try {
+    const raw = JSON.parse(fs.readFileSync(DIVERSITY, "utf-8"));
+    if (raw.date === TODAY_DATE) return raw;
+  } catch { /* ignore */ }
+  // New day or missing — reset
+  return { date: TODAY_DATE, axes: {} };
+}
+
+function saveDiversityState(state) {
+  fs.writeFileSync(DIVERSITY, JSON.stringify(state, null, 2), "utf-8");
+}
+
+/**
+ * Seed diversity state from existing evidence_log entries timestamped today.
+ * Called once after loading ontology so the first run of the day starts with
+ * accurate counts (evidence may have been added in earlier cycles today).
+ */
+function seedDiversityFromLogs(diversityState, axes) {
+  for (const axis of axes) {
+    if (diversityState.axes[axis.id]) continue; // already seeded
+    const log = axis.evidence_log || [];
+    let left = 0, right = 0;
+    for (const e of log) {
+      if (e.timestamp && String(e.timestamp).startsWith(TODAY_DATE)) {
+        if (e.pole_alignment === "left") left++;
+        else if (e.pole_alignment === "right") right++;
+      }
+    }
+    if (left + right > 0) {
+      diversityState.axes[axis.id] = { left, right };
+    }
+  }
+}
+
+/**
+ * Check the diversity constraint for a given axis and incoming pole_alignment.
+ * Returns: { action: "accept"|"dampen"|"pause", weight: number, reason: string }
+ */
+function checkDiversity(axisId, poleAlignment, diversityState) {
+  const counts = diversityState.axes[axisId] || { left: 0, right: 0 };
+  const total  = counts.left + counts.right;
+
+  // Not enough data to evaluate — accept at full weight
+  if (total < DIVERSITY_MIN_ENTRIES) {
+    return { action: "accept", weight: 1.0, reason: null };
+  }
+
+  const dominant    = Math.max(counts.left, counts.right);
+  const dominantPole = counts.left >= counts.right ? "left" : "right";
+  const ratio       = dominant / total;
+
+  // If the incoming entry is on the dominant side AND ratio is skewed, act
+  if (poleAlignment === dominantPole) {
+    if (ratio >= DIVERSITY_PAUSE_THRESHOLD) {
+      return {
+        action: "pause",
+        weight: 0,
+        reason: `${dominantPole} pole at ${(ratio * 100).toFixed(0)}% (${dominant}/${total}) — paused`,
+      };
+    }
+    if (ratio >= DIVERSITY_DAMPEN_THRESHOLD) {
+      return {
+        action: "dampen",
+        weight: DIVERSITY_DAMPEN_WEIGHT,
+        reason: `${dominantPole} pole at ${(ratio * 100).toFixed(0)}% (${dominant}/${total}) — dampened to ${DIVERSITY_DAMPEN_WEIGHT}`,
+      };
+    }
+  }
+
+  // Opposing pole or ratio is healthy — accept at full weight
+  return { action: "accept", weight: 1.0, reason: null };
+}
+
+/** Record an accepted evidence entry in the diversity state. */
+function recordDiversity(axisId, poleAlignment, diversityState) {
+  if (!diversityState.axes[axisId]) diversityState.axes[axisId] = { left: 0, right: 0 };
+  if (poleAlignment === "left") diversityState.axes[axisId].left++;
+  else if (poleAlignment === "right") diversityState.axes[axisId].right++;
+}
+
 if (!fs.existsSync(DELTA)) {
   // Nothing to do — agent chose not to update ontology this cycle
   process.exit(0);
@@ -278,13 +375,17 @@ if (!Array.isArray(onto.axes)) onto.axes = [];
 const now = new Date().toISOString();
 let evidenceAdded    = 0;
 let evidenceRejected = 0;
+let evidencePaused   = 0;
+let evidenceDampened = 0;
 let axesAdded        = 0;
 let axesCapped       = 0;
 const axesUpdated    = new Set(); // tracks which axes got new evidence this run
 
-// ── Load daily drift cap + axis creation guard ────────────────────────────────
-const driftState    = loadDriftCapState(onto.axes);
+// ── Load daily drift cap + axis creation guard + diversity state ───────────────
+const driftState     = loadDriftCapState(onto.axes);
 const axisGuardState = loadAxisGuardState();
+const diversityState = loadDiversityState();
+seedDiversityFromLogs(diversityState, onto.axes);
 
 // ── Apply evidence entries ────────────────────────────────────────────────────
 
@@ -325,9 +426,27 @@ for (const entry of (delta.evidence || [])) {
 
   if (!Array.isArray(axis.evidence_log)) axis.evidence_log = [];
 
+  // ── Diversity constraint (AGENTS.md §7) ───────────────────────────────────
+  const divCheck = checkDiversity(axis_id, pole_alignment, diversityState);
+  if (divCheck.action === "pause") {
+    console.log(
+      `[apply_delta] diversity PAUSED on ${axis_id}: ${divCheck.reason} — ` +
+      `"${(content || "").slice(0, 50)}"`
+    );
+    evidencePaused++;
+    continue;
+  }
+  if (divCheck.action === "dampen") {
+    console.log(
+      `[apply_delta] diversity DAMPENED on ${axis_id}: ${divCheck.reason}`
+    );
+    evidenceDampened++;
+  }
+
   // Compute trust weight from source URL account
   const sourceUser = usernameFromUrl(source);
-  const weight     = trustWeight(sourceUser, trustMap);
+  const rawWeight  = trustWeight(sourceUser, trustMap);
+  const weight     = parseFloat((rawWeight * divCheck.weight).toFixed(3));
 
   const logEntry = {
     source:         source    || "",
@@ -342,6 +461,7 @@ for (const entry of (delta.evidence || [])) {
   evidenceAdded++;
   axis.last_updated = now;
   axesUpdated.add(axis.id);
+  recordDiversity(axis.id, pole_alignment, diversityState);
 }
 
 // Recompute confidence and score using trust-weighted Bayesian update.
@@ -373,6 +493,9 @@ for (const axis of onto.axes) {
 
 // Persist updated drift cap state (scores reflect the clamped values for today)
 saveDriftCapState(driftState);
+
+// Persist diversity state (pole counts for today's rolling window)
+saveDiversityState(diversityState);
 
 // ── Apply new axes (with creation guard) ──────────────────────────────────────
 
@@ -461,8 +584,10 @@ fs.unlinkSync(DELTA);
 const rejMsg    = evidenceRejected ? `, ${evidenceRejected} rejected by stance check` : "";
 const cappedMsg = axesCapped ? `, ${axesCapped} drift-capped` : "";
 const reapMsg   = reaped.length ? `, ${reaped.length} reaped` : "";
+const pausedMsg = evidencePaused ? `, ${evidencePaused} paused by diversity` : "";
+const dampenMsg = evidenceDampened ? `, ${evidenceDampened} dampened by diversity` : "";
 console.log(
-  `[apply_delta] applied: ${evidenceAdded} evidence entry(ies)${rejMsg}${cappedMsg}${reapMsg}, ${axesAdded} new axis(es)` +
+  `[apply_delta] applied: ${evidenceAdded} evidence entry(ies)${rejMsg}${pausedMsg}${dampenMsg}${cappedMsg}${reapMsg}, ${axesAdded} new axis(es)` +
   ` — total axes: ${onto.axes.length} (axes created today: ${axisGuardState.count}/${MAX_AXES_PER_DAY})`
 );
 
