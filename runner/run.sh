@@ -308,11 +308,11 @@ while true; do
     CYCLE_TYPE="BROWSE"
   fi
 
-  # Suppress TWEET outside active hours -- downgrade to BROWSE
-  if [ "$CYCLE_TYPE" = "TWEET" ]; then
+  # Suppress TWEET and QUOTE outside active hours -- downgrade to BROWSE
+  if [ "$CYCLE_TYPE" = "TWEET" ] || [ "$CYCLE_TYPE" = "QUOTE" ]; then
     HOUR_INT=$(( 10#$HOUR ))
     if [ "$HOUR_INT" -lt "$TWEET_START" ] || [ "$HOUR_INT" -ge "$TWEET_END" ]; then
-      echo "[run] Tweet window closed (hour=$HOUR), running as BROWSE"
+      echo "[run] Post window closed (hour=$HOUR), running as BROWSE instead of $CYCLE_TYPE"
       CYCLE_TYPE="BROWSE"
     fi
   fi
@@ -1079,111 +1079,134 @@ TWEETMSG
     # Watchdog: verify latest journal committed, pushed, and on Arweave
     CYCLE_TYPE=JOURNAL node "$PROJECT_ROOT/runner/watchdog.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
-    # Article maintenance (time-based: fire if >24h since last run, or on first run)
-    _LAST_DAILY_FILE="$PROJECT_ROOT/state/last_daily_at.txt"
-    _NOW_EPOCH=$(date +%s)
-    _LAST_DAILY_EPOCH=0
-    if [ -f "$_LAST_DAILY_FILE" ]; then
-      _LAST_DAILY_EPOCH=$(cat "$_LAST_DAILY_FILE" 2>/dev/null || echo 0)
-    fi
-    _DAILY_ELAPSED=$(( _NOW_EPOCH - _LAST_DAILY_EPOCH ))
-    if [ "$_DAILY_ELAPSED" -ge 86400 ]; then
-      # ── Daily belief report ──────────────────────────────────────────────────
-      node "$PROJECT_ROOT/runner/generate_daily_report.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
-      # ── Daily article: write from journals + beliefs, post to Moltbook ───────
-      node "$PROJECT_ROOT/runner/write_article.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
-      node "$PROJECT_ROOT/runner/moltbook.js" --post-article >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
-      # ── Tweet the Moltbook article link ──────────────────────────────────────
-      if [ -f "$PROJECT_ROOT/state/article_result.txt" ]; then
-        _ARTICLE_URL=$(sed -n '1p' "$PROJECT_ROOT/state/article_result.txt" | tr -d '\n')
-        _ARTICLE_TITLE=$(sed -n '2p' "$PROJECT_ROOT/state/article_result.txt" | tr -d '\n')
-        # Truncate title to fit: "New piece: TITLE → URL" within 280 chars
-        _MAX_TITLE=$(( 240 - ${#_ARTICLE_URL} ))
-        if [ ${#_ARTICLE_TITLE} -gt $_MAX_TITLE ]; then
-          _ARTICLE_TITLE="${_ARTICLE_TITLE:0:$_MAX_TITLE}..."
-        fi
-        printf "New piece: %s\n%s" "$_ARTICLE_TITLE" "$_ARTICLE_URL" > "$PROJECT_ROOT/state/tweet_draft.txt"
-        echo "[run] tweeting article link: $_ARTICLE_URL"
-        node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1 | grep -v '^$' || true
-        rm -f "$PROJECT_ROOT/state/article_result.txt"
-      fi
-      # ── Checkpoint (every 3 days — generate_checkpoint.js self-gates) ───────
-      node "$PROJECT_ROOT/runner/generate_checkpoint.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
-      node "$PROJECT_ROOT/runner/moltbook.js" --post-checkpoint >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
-      # ── Ponder (fires after checkpoint if conviction threshold met) ───────────
-      node "$PROJECT_ROOT/runner/ponder.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
-      # Post plan announcement tweet if decision.js activated a plan
-      if [ -f "$PROJECT_ROOT/state/plan_tweet.txt" ]; then
-        cp "$PROJECT_ROOT/state/plan_tweet.txt" "$PROJECT_ROOT/state/tweet_draft.txt"
-        node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1 | grep -v '^$' || true
-        rm -f "$PROJECT_ROOT/state/plan_tweet.txt"
-        echo "[run] plan announcement tweet posted"
-      fi
-      # Post ponder declaration tweet if ponder fired and wrote a draft
-      if [ -f "$PROJECT_ROOT/state/ponder_tweet.txt" ]; then
-        cp "$PROJECT_ROOT/state/ponder_tweet.txt" "$PROJECT_ROOT/state/tweet_draft.txt"
-        node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1 | grep -v '^$' || true
-        rm -f "$PROJECT_ROOT/state/ponder_tweet.txt"
-        echo "[run] ponder declaration tweet posted"
-        # Flag Moltbook ponder post as pending — will retry each daily cycle until success
-        touch "$PROJECT_ROOT/state/ponder_post_pending"
-      fi
-      # Moltbook ponder post — retries every daily cycle until it succeeds and clears the flag
-      if [ -f "$PROJECT_ROOT/state/ponder_post_pending" ]; then
-        node "$PROJECT_ROOT/runner/moltbook.js" --post-ponder >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
-      fi
-      # ── Ponder pipeline: deep_dive (fires 1d after ponder, self-gating) ──────
-      node "$PROJECT_ROOT/runner/deep_dive.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
-      # ── Ponder pipeline: decision (fires after deep_dive completes, self-gating) ─
-      node "$PROJECT_ROOT/runner/decision.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
-      # ── Sprint manager (daily: sync plan → track progress → plan next sprint) ──
-      node "$PROJECT_ROOT/runner/sprint_manager.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
-      # ── Sprint update: generate tweet + Moltbook post if milestone reached ──
-      node "$PROJECT_ROOT/runner/sprint_update.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
-      # Post sprint progress tweet if sprint_update.js wrote a draft
-      if [ -f "$PROJECT_ROOT/state/sprint_tweet.txt" ]; then
-        cp "$PROJECT_ROOT/state/sprint_tweet.txt" "$PROJECT_ROOT/state/tweet_draft.txt"
-        node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1 | grep -v '^$' || true
-        rm -f "$PROJECT_ROOT/state/sprint_tweet.txt"
-        echo "[run] sprint progress tweet posted"
-      fi
-      # Post sprint update to Moltbook if draft exists
-      node "$PROJECT_ROOT/runner/moltbook.js" --sprint-update >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
-      # Trim feed_digest.txt to last 3000 lines (~2-3 days of data)
-      DLINES=$(wc -l < "$PROJECT_ROOT/state/feed_digest.txt" 2>/dev/null || echo 0)
-      if [ "$DLINES" -gt 3000 ]; then
-        tail -n 3000 "$PROJECT_ROOT/state/feed_digest.txt" > /tmp/hunter_digest_trim \
-          && mv /tmp/hunter_digest_trim "$PROJECT_ROOT/state/feed_digest.txt"
-        echo "[run] trimmed feed_digest.txt: ${DLINES} → 3000 lines"
-      fi
-      # Journal HTML files are kept permanently (served by website).
-      # Old journals are already archived to Arweave as backup.
-      # Rotate logs: keep last 5000 lines of runner.log, 3000 of scraper.log
-      # IMPORTANT: use cp+truncate pattern to preserve inodes — the running shell
-      # holds fd 1 open on runner.log; mv would orphan it onto a deleted inode.
-      for _log_pair in "$PROJECT_ROOT/runner/runner.log:5000" "$PROJECT_ROOT/scraper/scraper.log:3000"; do
-        _lf="${_log_pair%%:*}"; _lk="${_log_pair##*:}"
-        if [ -f "$_lf" ]; then
-          _lc=$(wc -l < "$_lf" 2>/dev/null || echo 0)
-          if [ "$_lc" -gt "$_lk" ]; then
-            tail -n "$_lk" "$_lf" > "${_lf}.tmp"
-            cat "${_lf}.tmp" > "$_lf"   # overwrite in-place (preserves inode)
-            rm -f "${_lf}.tmp"
-            echo "[run] rotated $(basename "$_lf") to last ${_lk} lines"
-          fi
-        fi
-      done
-      # Mark daily block completion time
-      echo "$_NOW_EPOCH" > "$_LAST_DAILY_FILE"
-      echo "[run] daily block complete, next in ~24h"
-    fi
-
     # ── Runner clears browse_notes.md (agent write tool rejects empty string) ──
     printf "" > "$PROJECT_ROOT/state/browse_notes.md"
     echo "[run] browse_notes.md cleared"
 
     # Coherence critique of the journal + tweet (only if agent actually posted this cycle)
     node "$PROJECT_ROOT/runner/critique.js" --cycle "$CYCLE" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+  fi
+
+  # ── Daily maintenance block ──────────────────────────────────────────────
+  # Runs every cycle but self-gates to once per 24h. Moved OUTSIDE the
+  # BROWSE/QUOTE/TWEET if-elif-else so it fires regardless of cycle type.
+  # All tasks are standalone node scripts — no browser/agent needed.
+  _LAST_DAILY_FILE="$PROJECT_ROOT/state/last_daily_at.txt"
+  _NOW_EPOCH=$(date +%s)
+  _LAST_DAILY_EPOCH=0
+  if [ -f "$_LAST_DAILY_FILE" ]; then
+    _LAST_DAILY_EPOCH=$(cat "$_LAST_DAILY_FILE" 2>/dev/null || echo 0)
+  fi
+  _DAILY_ELAPSED=$(( _NOW_EPOCH - _LAST_DAILY_EPOCH ))
+  if [ "$_DAILY_ELAPSED" -ge 86400 ]; then
+    echo "[run] ── Daily block firing (${_DAILY_ELAPSED}s since last) ──"
+    # ── Daily belief report ──────────────────────────────────────────────────
+    node "$PROJECT_ROOT/runner/generate_daily_report.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # ── Daily article: write from journals + beliefs, post to Moltbook ───────
+    node "$PROJECT_ROOT/runner/write_article.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    node "$PROJECT_ROOT/runner/moltbook.js" --post-article >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # ── Tweet the Moltbook article link ──────────────────────────────────────
+    # Daily block tweets need a browser — ensure it's healthy before first attempt.
+    # Article result may already exist; sprint/plan/ponder tweets are created later
+    # in this block but ensure_browser is cheap to re-call (returns instantly if healthy).
+    ensure_browser
+    if [ -f "$PROJECT_ROOT/state/article_result.txt" ]; then
+      _ARTICLE_URL=$(sed -n '1p' "$PROJECT_ROOT/state/article_result.txt" | tr -d '\n')
+      _ARTICLE_TITLE=$(sed -n '2p' "$PROJECT_ROOT/state/article_result.txt" | tr -d '\n')
+      # Truncate title to fit: "New piece: TITLE → URL" within 280 chars
+      _MAX_TITLE=$(( 240 - ${#_ARTICLE_URL} ))
+      if [ ${#_ARTICLE_TITLE} -gt $_MAX_TITLE ]; then
+        _ARTICLE_TITLE="${_ARTICLE_TITLE:0:$_MAX_TITLE}..."
+      fi
+      printf "New piece: %s\n%s" "$_ARTICLE_TITLE" "$_ARTICLE_URL" > "$PROJECT_ROOT/state/tweet_draft.txt"
+      echo "[run] tweeting article link: $_ARTICLE_URL"
+      _TWEET_OUT=$(node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1)
+      _TWEET_RC=$?
+      echo "$_TWEET_OUT" | grep -v '^$'
+      if [ "$_TWEET_RC" -eq 0 ]; then
+        rm -f "$PROJECT_ROOT/state/article_result.txt"
+      else
+        echo "[run] article tweet failed (rc=$_TWEET_RC) — keeping article_result.txt for retry"
+      fi
+      sleep 10  # rate-limit gap before next tweet
+    fi
+    # ── Checkpoint (every 3 days — generate_checkpoint.js self-gates) ───────
+    node "$PROJECT_ROOT/runner/generate_checkpoint.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    node "$PROJECT_ROOT/runner/moltbook.js" --post-checkpoint >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # ── Ponder (fires after checkpoint if conviction threshold met) ───────────
+    node "$PROJECT_ROOT/runner/ponder.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # Post plan announcement tweet if decision.js activated a plan
+    if [ -f "$PROJECT_ROOT/state/plan_tweet.txt" ]; then
+      cp "$PROJECT_ROOT/state/plan_tweet.txt" "$PROJECT_ROOT/state/tweet_draft.txt"
+      node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1 | grep -v '^$' || true
+      rm -f "$PROJECT_ROOT/state/plan_tweet.txt"
+      echo "[run] plan announcement tweet posted"
+      sleep 10  # rate-limit gap
+    fi
+    # Post ponder declaration tweet if ponder fired and wrote a draft
+    if [ -f "$PROJECT_ROOT/state/ponder_tweet.txt" ]; then
+      cp "$PROJECT_ROOT/state/ponder_tweet.txt" "$PROJECT_ROOT/state/tweet_draft.txt"
+      node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1 | grep -v '^$' || true
+      rm -f "$PROJECT_ROOT/state/ponder_tweet.txt"
+      echo "[run] ponder declaration tweet posted"
+      # Flag Moltbook ponder post as pending — will retry each daily cycle until success
+      touch "$PROJECT_ROOT/state/ponder_post_pending"
+      sleep 10  # rate-limit gap
+    fi
+    # Moltbook ponder post — retries every daily cycle until it succeeds and clears the flag
+    if [ -f "$PROJECT_ROOT/state/ponder_post_pending" ]; then
+      node "$PROJECT_ROOT/runner/moltbook.js" --post-ponder >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    fi
+    # ── Ponder pipeline: deep_dive (fires 1d after ponder, self-gating) ──────
+    node "$PROJECT_ROOT/runner/deep_dive.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # ── Ponder pipeline: decision (fires after deep_dive completes, self-gating) ─
+    node "$PROJECT_ROOT/runner/decision.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # ── Sprint manager (daily: sync plan → track progress → plan next sprint) ──
+    node "$PROJECT_ROOT/runner/sprint_manager.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # ── Sprint update: generate tweet + Moltbook post if milestone reached ──
+    node "$PROJECT_ROOT/runner/sprint_update.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # Post sprint progress tweet if sprint_update.js wrote a draft
+    if [ -f "$PROJECT_ROOT/state/sprint_tweet.txt" ]; then
+      cp "$PROJECT_ROOT/state/sprint_tweet.txt" "$PROJECT_ROOT/state/tweet_draft.txt"
+      node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1 | grep -v '^$' || true
+      rm -f "$PROJECT_ROOT/state/sprint_tweet.txt"
+      echo "[run] sprint progress tweet posted"
+    fi
+    # Post sprint update to Moltbook if draft exists
+    node "$PROJECT_ROOT/runner/moltbook.js" --sprint-update >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # Trim feed_digest.txt to last 3000 lines (~2-3 days of data)
+    DLINES=$(wc -l < "$PROJECT_ROOT/state/feed_digest.txt" 2>/dev/null || echo 0)
+    if [ "$DLINES" -gt 3000 ]; then
+      tail -n 3000 "$PROJECT_ROOT/state/feed_digest.txt" > /tmp/hunter_digest_trim \
+        && mv /tmp/hunter_digest_trim "$PROJECT_ROOT/state/feed_digest.txt"
+      echo "[run] trimmed feed_digest.txt: ${DLINES} → 3000 lines"
+    fi
+    # Rotate logs: keep last 5000 lines of runner.log, 3000 of scraper.log
+    # IMPORTANT: use cp+truncate pattern to preserve inodes — the running shell
+    # holds fd 1 open on runner.log; mv would orphan it onto a deleted inode.
+    for _log_pair in "$PROJECT_ROOT/runner/runner.log:5000" "$PROJECT_ROOT/scraper/scraper.log:3000"; do
+      _lf="${_log_pair%%:*}"; _lk="${_log_pair##*:}"
+      if [ -f "$_lf" ]; then
+        _lc=$(wc -l < "$_lf" 2>/dev/null || echo 0)
+        if [ "$_lc" -gt "$_lk" ]; then
+          tail -n "$_lk" "$_lf" > "${_lf}.tmp"
+          cat "${_lf}.tmp" > "$_lf"   # overwrite in-place (preserves inode)
+          rm -f "${_lf}.tmp"
+          echo "[run] rotated $(basename "$_lf") to last ${_lk} lines"
+        fi
+      fi
+    done
+    # ── Git commit daily outputs ───────────────────────────────────────────
+    git -C "$PROJECT_ROOT" add journals/ checkpoints/ state/ articles/ daily/ ponders/ 2>/dev/null || true
+    git -C "$PROJECT_ROOT" commit -m "daily: ${TODAY}" 2>/dev/null || true
+    git -C "$PROJECT_ROOT" push origin main 2>/dev/null || true
+    # Trigger Vercel redeploy for new article/checkpoint
+    if [ -n "${VERCEL_DEPLOY_HOOK:-}" ]; then
+      curl -s -X POST "$VERCEL_DEPLOY_HOOK" > /dev/null 2>&1 || true
+    fi
+    # Mark daily block completion time
+    echo "$_NOW_EPOCH" > "$_LAST_DAILY_FILE"
+    echo "[run] daily block complete, next in ~24h"
   fi
 
   # ── Health check: scan new log lines for known error patterns ────────────
