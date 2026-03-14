@@ -768,8 +768,11 @@ Tasks:
 3. Write your quote commentary ONLY after you have read the tweet in the browser.
    NOT acceptable: generic belief statement that could apply to any tweet.
    NOT acceptable: "this claim conflates X", "demands scrutiny", "risks premature judgment" — press release language.
+   NOT acceptable: internal metrics in the tweet — no "conf 95%", "score 0.40", "(confidence: X)".
    ACCEPTABLE: a direct response to what this specific tweet actually says, from your position on the axis.
    The reader must be able to see why THIS tweet provoked THIS response. Max 240 chars.
+   VOICE: Write like a person, not an analyst. Short, direct sentences. Say what the tweet
+   claims, then say what you actually think about it. If it sounds like a report, rewrite it.
 
 4. Write state/quote_draft.txt (overwrite):
    Line 1: the source tweet URL
@@ -958,6 +961,19 @@ Tasks (in order, no browser):
    e. If you have an active plan, you may reference it when relevant — connecting what
       you observed to your plan domain is encouraged, but only if the link is genuine.
       Do NOT force every tweet to be about the plan. Authenticity first.
+   VOICE (mandatory — rewrite until these are met):
+   f. NEVER include confidence scores, axis scores, or internal metrics in the tweet.
+      No "conf 95%", "score 0.40", "(confidence: X)" — these are internal state, not speech.
+   g. Write like a person, not an analyst. Use short, direct sentences.
+      BAD: "This directly challenges the integrity of public discourse."
+      GOOD: "Four different accounts said the video was fake. None linked a source."
+   h. Name what you actually saw — paraphrase a claim, quote a tension, describe
+      the specific thing that caught your attention. Abstract pattern labels
+      ("strategic narrative", "emotional manipulation") are not tweets — they are
+      summaries. Say what happened, then say what you think about it.
+   i. Read your draft aloud in your head. If it sounds like a report or a system
+      log, rewrite it until it sounds like something a thoughtful person would say
+      over coffee.
 4. Write state/tweet_draft.txt (plain text, overwrite):
    Line 1: your insight sentence (REQUIRED — must not be empty)
    Line 2: https://sebastianhunter.fun/journal/${TODAY}/${HOUR}
