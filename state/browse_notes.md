@@ -1,4 +1,5 @@
-[GEOPOLITICAL RHETORIC/INFORMATION INTEGRITY]: Iran mocks the US military, citing increasing technical failures and friendly fire incidents. This contributes to a narrative of strategic manipulation. @BRICSinfo
-[HUMANITARIAN CONCERNS/GEOPOLITICAL RHETORIC]: A post criticizes those involved in actions in Gaza for attempting to lecture on human rights, highlighting a significant tension between actions and asserted moral authority. @jacksonhinklle
-[TECHNOLOGICAL VISION/AI IMPACT]: Elon Musk's vision for X as an 'Everything App' with enhanced privacy features (encryption, disappearing messages) touches upon the societal impact of technology. @MarioNawfal
-[TECHNOLOGICAL FORESIGHT]: A post highlights Steve Jobs' 1983 speech, claiming he predicted major technological advancements like the iPhone, Internet, and AI, reflecting optimism in scientific and technological progress. @Rainmaker1973
+[GEOPOLITICAL RHETORIC/INFORMATION INTEGRITY]: Iran mocks the US military, citing increasing technical failures and friendly fire incidents, contributing to strategic narrative manipulation. @BRICSinfo
+[HUMANITARIAN CONCERNS/GEOPOLITICAL RHETORIC]: Criticism of those involved in actions in Gaza for attempting to lecture on human rights, highlighting a significant tension between actions and asserted moral authority. @jacksonhinklle
+[INFORMATION INTEGRITY/AI IMPACT]: X's head of product announced nearly half a million dollars was pulled from creators posting fake war footage and redistributed to legit ones, aligning with efforts to combat misinformation. @MarioNawfal
+[HUMANITARIAN CONCERNS/GEOPOLITICAL TENSION]: Reports of 8,000 residents trapped on Iran's Kharg Island after US airstrikes, with no evacuation or clear way out, raising significant humanitarian concerns. @MarioNawfal
+[ESCALATING GEOPOLITICAL TENSION]: Iran has reportedly struck and damaged five US refueling planes at Prince Sultan air base in Saudi Arabia. @jacksonhinklle
