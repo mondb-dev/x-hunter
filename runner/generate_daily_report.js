@@ -38,7 +38,6 @@ function todayJournalCount() {
     const belief = loadJson(BELIEF);
 
     const axes     = onto?.axes || [];
-    const activeAxes = (belief?.axes || []).filter(a => (a.confidence || 0) > 0);
     const journals = todayJournalCount();
 
     if (!fs.existsSync(DAILY_DIR)) fs.mkdirSync(DAILY_DIR, { recursive: true });
@@ -61,7 +60,8 @@ function todayJournalCount() {
       ].join("\n");
     }).join("\n\n");
 
-    const highConf = activeAxes
+    const highConf = [...axes]
+      .filter(a => (a.confidence || 0) > 0)
       .sort((a, b) => (b.confidence || 0) - (a.confidence || 0))
       .slice(0, 3)
       .map(a => `- \`${a.id}\`: conf ${((a.confidence || 0) * 100).toFixed(0)}%, score ${(a.score || 0).toFixed(3)}`)

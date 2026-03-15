@@ -358,6 +358,11 @@ function runScript(scriptName) {
     try {
       const lines = fs.readFileSync(LOG_FILE, "utf-8").split("\n");
       totalLines = lines.length;
+      // After log rotation the file is smaller than saved position — rescan from start
+      if (lastLine > totalLines) {
+        console.log(`[watchdog] HEALTH: log rotated (saved ${lastLine} > current ${totalLines} lines) — rescanning from start`);
+        lastLine = 0;
+      }
       newLines   = lines.slice(lastLine);
     } catch (e) {
       console.error(`[watchdog] HEALTH: could not read runner.log: ${e.message}`);

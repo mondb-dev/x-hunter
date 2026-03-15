@@ -159,17 +159,23 @@ async function sleep(ms) {
       // Navigate to own profile and grab the first tweet URL to confirm post + capture URL
       console.log("[post_tweet] navigating to profile to confirm post and capture URL...");
       await page.goto("https://x.com/sebastianhunts", { waitUntil: "domcontentloaded", timeout: 20_000 });
-      await sleep(3_000);
-      tweetUrl = await page.evaluate(() => {
-        const links = Array.from(document.querySelectorAll('a[href*="/status/"]'));
-        const match = links.find(a => /\/sebastianhunts\/status\/\d+/.test(a.getAttribute("href") || ""));
-        if (match) return "https://x.com" + match.getAttribute("href").split("?")[0];
-        return null;
-      });
+      // Retry loop — X SPA may take a few seconds to render the timeline
+      for (let attempt = 1; attempt <= 3 && !tweetUrl; attempt++) {
+        await sleep(3_000);
+        tweetUrl = await page.evaluate(() => {
+          const links = Array.from(document.querySelectorAll('a[href*="/status/"]'));
+          const match = links.find(a => /\/sebastianhunts\/status\/\d+/.test(a.getAttribute("href") || ""));
+          if (match) return "https://x.com" + match.getAttribute("href").split("?")[0];
+          return null;
+        });
+        if (!tweetUrl && attempt < 3) {
+          console.log(`[post_tweet] URL not found on attempt ${attempt}/3 — waiting...`);
+        }
+      }
       if (tweetUrl) {
         console.log(`[post_tweet] SUCCESS (confirmed from profile): ${tweetUrl}`);
       } else {
-        console.log("[post_tweet] posted — could not confirm URL from profile");
+        console.log("[post_tweet] posted — could not confirm URL from profile after 3 attempts");
       }
     } else {
       console.log(`[post_tweet] SUCCESS: ${tweetUrl}`);

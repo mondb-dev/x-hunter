@@ -236,17 +236,23 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
     if (!quoteUrl) {
       console.log("[post_quote] navigating to profile to confirm post and capture URL...");
       await page.goto("https://x.com/sebastianhunts", { waitUntil: "domcontentloaded", timeout: 20_000 });
-      await sleep(3_000);
-      quoteUrl = await page.evaluate(() => {
-        const links = Array.from(document.querySelectorAll('a[href*="/status/"]'));
-        const match = links.find(a => /\/sebastianhunts\/status\/\d+/.test(a.getAttribute("href") || ""));
-        if (match) return "https://x.com" + match.getAttribute("href").split("?")[0];
-        return null;
-      });
+      // Retry loop — X SPA may take a few seconds to render the timeline
+      for (let attempt = 1; attempt <= 3 && !quoteUrl; attempt++) {
+        await sleep(3_000);
+        quoteUrl = await page.evaluate(() => {
+          const links = Array.from(document.querySelectorAll('a[href*="/status/"]'));
+          const match = links.find(a => /\/sebastianhunts\/status\/\d+/.test(a.getAttribute("href") || ""));
+          if (match) return "https://x.com" + match.getAttribute("href").split("?")[0];
+          return null;
+        });
+        if (!quoteUrl && attempt < 3) {
+          console.log(`[post_quote] URL not found on attempt ${attempt}/3 — waiting...`);
+        }
+      }
       if (quoteUrl) {
         console.log(`[post_quote] SUCCESS (confirmed from profile): ${quoteUrl}`);
       } else {
-        console.log("[post_quote] posted — could not confirm URL from profile");
+        console.log("[post_quote] posted — could not confirm URL from profile after 3 attempts");
       }
     } else {
       console.log(`[post_quote] SUCCESS: ${quoteUrl}`);

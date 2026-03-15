@@ -1158,7 +1158,7 @@ TWEETMSG
       else
         echo "[run] article tweet failed (rc=$_TWEET_RC) — keeping article_result.txt for retry"
       fi
-      sleep 10  # rate-limit gap before next tweet
+      sleep 60  # rate-limit gap before next tweet (avoid X spam detection)
     fi
     # ── Checkpoint (every 3 days — generate_checkpoint.js self-gates) ───────
     node "$PROJECT_ROOT/runner/generate_checkpoint.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
@@ -1181,7 +1181,7 @@ TWEETMSG
       else
         echo "[run] checkpoint tweet failed (rc=$_CP_TWEET_RC) — keeping checkpoint_result.txt for retry"
       fi
-      sleep 10  # rate-limit gap
+      sleep 60  # rate-limit gap
     fi
     # ── Ponder (fires after checkpoint if conviction threshold met) ───────────
     node "$PROJECT_ROOT/runner/ponder.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
@@ -1191,7 +1191,7 @@ TWEETMSG
       node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1 | grep -v '^$' || true
       rm -f "$PROJECT_ROOT/state/plan_tweet.txt"
       echo "[run] plan announcement tweet posted"
-      sleep 10  # rate-limit gap
+      sleep 60  # rate-limit gap
     fi
     # Post ponder declaration tweet if ponder fired and wrote a draft
     if [ -f "$PROJECT_ROOT/state/ponder_tweet.txt" ]; then
