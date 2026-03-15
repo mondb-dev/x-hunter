@@ -119,7 +119,7 @@ Write a single, honest tweet about this progress. Rules:
 
 Tweet text only, no quotes:`;
 
-  const raw = await callVertex(prompt, 300);
+  const raw = await callVertex(prompt, 2048);
   // Clean: strip quotes, trim, ensure length
   let tweet = raw.replace(/^["']|["']$/g, "").trim();
   if (tweet.length > 250) tweet = tweet.slice(0, 247) + "...";
@@ -160,7 +160,7 @@ Write a Moltbook post (markdown) updating your community on this progress. Rules
 
 Output markdown only:`;
 
-  return callVertex(prompt, 1500);
+  return callVertex(prompt, 4096);
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────

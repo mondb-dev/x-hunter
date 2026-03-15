@@ -379,7 +379,7 @@ Comment from ${commenterName}: "${commentBody}"
 Reply (2-4 sentences, no filler, no "Great question!", plain text only):`;
 
   try {
-    const reply = await callVertex(prompt, 1024);
+    const reply = await callVertex(prompt, 4096);
     // Sanity check: must be non-trivial
     if (!reply || reply.length < 20) {
       console.warn(`[moltbook] buildReply too short (${(reply||'').length} chars), discarding`);
@@ -797,6 +797,10 @@ async function postCheckpoint() {
     fs.rmSync(CHECKPOINT_PENDING, { force: true });
     const postUrl = `https://www.moltbook.com/post/${post.id || ""}`;
     console.log(`[moltbook] checkpoint post live: ${postUrl}`);
+
+    // Write result file for run.sh to tweet the checkpoint link
+    const CHECKPOINT_RESULT = path.join(PROJECT_ROOT, "state", "checkpoint_result.txt");
+    fs.writeFileSync(CHECKPOINT_RESULT, `${postUrl}\n${title}`);
   } else {
     // Rate limited or failed — flag for retry next cycle
     fs.writeFileSync(CHECKPOINT_PENDING, "1");

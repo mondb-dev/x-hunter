@@ -48,7 +48,7 @@ function daysBetween(dateA, dateB) {
 }
 
 const { callVertex } = require("./vertex.js");
-async function callLLM(prompt) { return callVertex(prompt, 600); }
+async function callLLM(prompt) { return callVertex(prompt, 4096); }
 
 (async function main() {
   try {

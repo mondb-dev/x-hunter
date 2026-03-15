@@ -703,6 +703,20 @@ BROWSEMSG
       node "$PROJECT_ROOT/runner/moltbook.js" --post-checkpoint >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     fi
 
+    # ── Retry pending checkpoint tweet if previous attempt failed ─────────
+    if [ -f "$PROJECT_ROOT/state/checkpoint_result.txt" ]; then
+      _CP_URL=$(sed -n '1p' "$PROJECT_ROOT/state/checkpoint_result.txt" | tr -d '\n')
+      _CP_TITLE=$(sed -n '2p' "$PROJECT_ROOT/state/checkpoint_result.txt" | tr -d '\n')
+      _MAX_CP=$(( 240 - ${#_CP_URL} ))
+      if [ ${#_CP_TITLE} -gt $_MAX_CP ]; then _CP_TITLE="${_CP_TITLE:0:$_MAX_CP}..."; fi
+      printf "%s\n%s" "$_CP_TITLE" "$_CP_URL" > "$PROJECT_ROOT/state/tweet_draft.txt"
+      echo "[run] retrying checkpoint tweet: $_CP_URL"
+      _CP_OUT=$(node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1)
+      _CP_RC=$?
+      echo "$_CP_OUT" | grep -v '^$'
+      if [ "$_CP_RC" -eq 0 ]; then rm -f "$PROJECT_ROOT/state/checkpoint_result.txt"; fi
+    fi
+
     # ── Process pending replies after each browse cycle ───────────────────
     node "$PROJECT_ROOT/scraper/reply.js" 2>&1 || true
 
@@ -1149,6 +1163,26 @@ TWEETMSG
     # ── Checkpoint (every 3 days — generate_checkpoint.js self-gates) ───────
     node "$PROJECT_ROOT/runner/generate_checkpoint.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     node "$PROJECT_ROOT/runner/moltbook.js" --post-checkpoint >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # ── Tweet the checkpoint link ────────────────────────────────────────────
+    if [ -f "$PROJECT_ROOT/state/checkpoint_result.txt" ]; then
+      _CP_URL=$(sed -n '1p' "$PROJECT_ROOT/state/checkpoint_result.txt" | tr -d '\n')
+      _CP_TITLE=$(sed -n '2p' "$PROJECT_ROOT/state/checkpoint_result.txt" | tr -d '\n')
+      _MAX_CP=$(( 240 - ${#_CP_URL} ))
+      if [ ${#_CP_TITLE} -gt $_MAX_CP ]; then
+        _CP_TITLE="${_CP_TITLE:0:$_MAX_CP}..."
+      fi
+      printf "%s\n%s" "$_CP_TITLE" "$_CP_URL" > "$PROJECT_ROOT/state/tweet_draft.txt"
+      echo "[run] tweeting checkpoint link: $_CP_URL"
+      _CP_TWEET_OUT=$(node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1)
+      _CP_TWEET_RC=$?
+      echo "$_CP_TWEET_OUT" | grep -v '^$'
+      if [ "$_CP_TWEET_RC" -eq 0 ]; then
+        rm -f "$PROJECT_ROOT/state/checkpoint_result.txt"
+      else
+        echo "[run] checkpoint tweet failed (rc=$_CP_TWEET_RC) — keeping checkpoint_result.txt for retry"
+      fi
+      sleep 10  # rate-limit gap
+    fi
     # ── Ponder (fires after checkpoint if conviction threshold met) ───────────
     node "$PROJECT_ROOT/runner/ponder.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     # Post plan announcement tweet if decision.js activated a plan
