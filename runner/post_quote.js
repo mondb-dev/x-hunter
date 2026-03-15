@@ -196,6 +196,18 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
       await sleep(500);
       await page.keyboard.type(quoteText, { delay: 30 });
       await sleep(1_000);
+
+      // Second verification — abort if still truncated
+      const retryText = await page.evaluate((sel) => {
+        const el = document.querySelector(sel);
+        return el ? el.innerText.trim() : "";
+      }, COMPOSE_BOX);
+      console.log(`[post_quote] retry verification: ${retryText.length}/${quoteText.length} chars`);
+      if (!retryText || retryText.length < quoteText.length * 0.5) {
+        console.error(`[post_quote] text insertion failed after retry — aborting`);
+        browser.disconnect();
+        process.exit(1);
+      }
     } else {
       console.log(`[post_quote] text verified: ${insertedText.length}/${quoteText.length} chars`);
     }

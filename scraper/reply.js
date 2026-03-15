@@ -302,11 +302,46 @@ async function postReply(page, item, replyText) {
   await page.evaluate((sel) => {
     document.querySelector(sel)?.focus();
   }, COMPOSE);
-  await new Promise(r => setTimeout(r, 300));
-
-  // Type reply text via keyboard (evaluate-based focus + keyboard.type works for compose boxes)
-  await page.keyboard.type(replyText, { delay: 25 });
   await new Promise(r => setTimeout(r, 500));
+
+  // Insert via execCommand (most reliable for React contenteditable)
+  await page.evaluate((text, sel) => {
+    const el = document.querySelector(sel);
+    if (el) { el.focus(); document.execCommand("insertText", false, text); }
+  }, replyText, COMPOSE);
+  await new Promise(r => setTimeout(r, 1_000));
+
+  // Verify text was inserted correctly
+  const insertedText = await page.evaluate((sel) => {
+    const el = document.querySelector(sel);
+    return el ? el.innerText.trim() : "";
+  }, COMPOSE);
+  const expectedLen = replyText.length;
+  const gotLen = insertedText.length;
+  console.log(`[reply] text verification: ${gotLen}/${expectedLen} chars`);
+
+  if (!insertedText || gotLen < expectedLen * 0.8) {
+    console.log("[reply] text truncated or missing — retrying with keyboard fallback");
+    // Clear and retry with keyboard.type
+    await page.evaluate((sel) => {
+      const el = document.querySelector(sel);
+      if (el) { el.focus(); document.execCommand("selectAll"); document.execCommand("delete"); }
+    }, COMPOSE);
+    await new Promise(r => setTimeout(r, 500));
+    await page.keyboard.type(replyText, { delay: 30 });
+    await new Promise(r => setTimeout(r, 1_000));
+
+    // Second verification
+    const retryText = await page.evaluate((sel) => {
+      const el = document.querySelector(sel);
+      return el ? el.innerText.trim() : "";
+    }, COMPOSE);
+    console.log(`[reply] retry verification: ${retryText.length}/${expectedLen} chars`);
+
+    if (!retryText || retryText.length < expectedLen * 0.5) {
+      throw new Error(`reply text insertion failed after retry (${retryText.length}/${expectedLen} chars) — aborting`);
+    }
+  }
 
   // Dispatch input/keyup so React registers the typed text and enables Post button
   await page.evaluate((sel) => {
