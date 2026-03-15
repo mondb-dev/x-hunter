@@ -832,6 +832,12 @@ QUOTEMSG
     # ── Close excess Chrome tabs after quote agent ────────────────────────
     node "$PROJECT_ROOT/runner/cleanup_tabs.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
+    # ── Voice filter: Ollama revises quote tone/personality based on belief stance ──
+    if [ -f "$PROJECT_ROOT/state/quote_draft.txt" ]; then
+      _QVF_OUT=$(node "$PROJECT_ROOT/runner/voice_filter.js" --quote 2>&1)
+      echo "[run] voice filter (quote): $_QVF_OUT"
+    fi
+
     # ── Post quote-tweet via CDP (runner handles, no browser tool needed) ──────
     if [ -f "$PROJECT_ROOT/state/quote_draft.txt" ]; then
       echo "[run] Posting quote-tweet via CDP..."
@@ -1066,6 +1072,15 @@ TWEETMSG
           echo "[run] Tweet rejected by critique gate — skipping post this cycle"
           rm -f "$PROJECT_ROOT/state/tweet_draft.txt"
         fi
+      fi
+    fi
+
+    # ── Voice filter: Ollama revises tone/personality based on belief stance ──
+    if [ -f "$PROJECT_ROOT/state/tweet_draft.txt" ]; then
+      _DRAFT_LINE1_VF=$(head -n1 "$PROJECT_ROOT/state/tweet_draft.txt")
+      if [ "$_DRAFT_LINE1_VF" != "SKIP" ] && [ -n "$_DRAFT_LINE1_VF" ]; then
+        _VF_OUT=$(node "$PROJECT_ROOT/runner/voice_filter.js" 2>&1)
+        echo "[run] voice filter: $_VF_OUT"
       fi
     fi
 
