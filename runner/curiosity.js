@@ -30,8 +30,7 @@ const BELIEF       = path.join(ROOT, "state", "belief_state.json");
 const BROWSE_NOTES = path.join(ROOT, "state", "browse_notes.md");
 const ANCHORS      = path.join(ROOT, "state", "discourse_anchors.jsonl");
 
-const OLLAMA_URL   = process.env.OLLAMA_URL   || "http://localhost:11434/api/generate";
-const OLLAMA_MODEL = process.env.OLLAMA_MODEL || "qwen2.5:7b";
+const { generate: llmGenerate } = require("./llm.js");
 
 // Env vars passed by run.sh so curiosity.js can compute directive expiry
 const CURRENT_CYCLE  = parseInt(process.env.CURIOSITY_CYCLE  || "0",  10);
@@ -112,29 +111,10 @@ function getBrowseNotesSummary() {
   return text.slice(0, 400).replace(/\s+/g, " ");
 }
 
-// ── Ollama (trending fallback) ─────────────────────────────────────────────────
+// ── LLM call (trending fallback) ─────────────────────────────────────────────
 
 async function callOllama(prompt) {
-  const controller = new AbortController();
-  const timeout    = setTimeout(() => controller.abort(), 60_000);
-  try {
-    const res = await fetch(OLLAMA_URL, {
-      method:  "POST",
-      headers: { "Content-Type": "application/json" },
-      signal:  controller.signal,
-      body: JSON.stringify({
-        model:   OLLAMA_MODEL,
-        prompt,
-        stream:  false,
-        options: { temperature: 0.1, num_predict: 60 },
-      }),
-    });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    return (data.response || "").trim();
-  } finally {
-    clearTimeout(timeout);
-  }
+  return llmGenerate(prompt, { temperature: 0.1, maxTokens: 60, timeoutMs: 60_000 });
 }
 
 // ── Slug helper (for ambient focus tag) ───────────────────────────────────────

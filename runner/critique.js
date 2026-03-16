@@ -28,8 +28,7 @@ const BROWSE_NOTES = path.join(ROOT, "state", "browse_notes.md");
 const ONTOLOGY     = path.join(ROOT, "state", "ontology.json");
 const CRITIQUE_OUT = path.join(ROOT, "state", "critique.md");
 
-const OLLAMA_URL    = process.env.OLLAMA_URL  || "http://localhost:11434/api/generate";
-const OLLAMA_MODEL  = process.env.OLLAMA_MODEL || "qwen2.5:7b";
+const { generate: llmGenerate } = require("./llm.js");
 const HISTORY_OUT   = path.join(ROOT, "state", "critique_history.jsonl");
 
 const isQuoteMode   = process.argv.includes("--quote");
@@ -170,35 +169,10 @@ FRAMING: [Is the one-liner accurate to the tension being called out, or does it 
 WATCH: [One thing to probe further in the next browse window. One sentence.]`;
 }
 
-// ── Ollama call ───────────────────────────────────────────────────────────────
+// ── LLM call ──────────────────────────────────────────────────────────────────
 
 async function callOllama(prompt) {
-  const controller = new AbortController();
-  const timeout    = setTimeout(() => controller.abort(), 90_000);
-
-  try {
-    const res = await fetch(OLLAMA_URL, {
-      method:  "POST",
-      headers: { "Content-Type": "application/json" },
-      signal:  controller.signal,
-      body: JSON.stringify({
-        model:   OLLAMA_MODEL,
-        prompt,
-        stream:  false,
-        options: { temperature: 0.2, num_predict: 350 },
-      }),
-    });
-
-    if (!res.ok) {
-      const body = await res.text().catch(() => "");
-      throw new Error(`HTTP ${res.status}: ${body.slice(0, 120)}`);
-    }
-
-    const data = await res.json();
-    return (data.response || "").trim();
-  } finally {
-    clearTimeout(timeout);
-  }
+  return llmGenerate(prompt, { temperature: 0.2, maxTokens: 350, timeoutMs: 90_000 });
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
@@ -235,7 +209,7 @@ async function main() {
     postRef    = `journal: ${journal.name} | tweet: ${currentPost.tweet_url || currentPost.id || "?"}`;
   }
 
-  console.log(`[critique] evaluating coherence (${OLLAMA_MODEL}) — ${cycleLabel}...`);
+  console.log(`[critique] evaluating coherence (gemini-flash) — ${cycleLabel}...`);
 
   let result;
   try {

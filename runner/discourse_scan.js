@@ -27,8 +27,7 @@ const INTERACTIONS = path.join(ROOT, "state", "interactions.json");
 const ANCHORS_OUT  = path.join(ROOT, "state", "discourse_anchors.jsonl");
 const SCAN_STATE   = path.join(ROOT, "state", "discourse_scan_state.json");
 
-const OLLAMA_URL   = process.env.OLLAMA_URL   || "http://localhost:11434/api/generate";
-const OLLAMA_MODEL = process.env.OLLAMA_MODEL || "qwen2.5:7b";
+const { generate: llmGenerate } = require("./llm.js");
 
 const MIN_TEXT_LEN  = 60;   // shorter messages are rarely substantive arguments
 const MAX_SCAN_IDS  = 300;  // rolling buffer cap for scanned_ids
@@ -53,29 +52,10 @@ function saveScanState(state) {
   fs.writeFileSync(SCAN_STATE, JSON.stringify(state, null, 2), "utf-8");
 }
 
-// ── Ollama call ───────────────────────────────────────────────────────────────
+// ── LLM call ──────────────────────────────────────────────────────────────────
 
 async function callOllama(prompt) {
-  const controller = new AbortController();
-  const timeout    = setTimeout(() => controller.abort(), 15_000);
-  try {
-    const res = await fetch(OLLAMA_URL, {
-      method:  "POST",
-      headers: { "Content-Type": "application/json" },
-      signal:  controller.signal,
-      body: JSON.stringify({
-        model:   OLLAMA_MODEL,
-        prompt,
-        stream:  false,
-        options: { temperature: 0.0, num_predict: 80 },
-      }),
-    });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    return (data.response || "").trim();
-  } finally {
-    clearTimeout(timeout);
-  }
+  return llmGenerate(prompt, { temperature: 0.0, maxTokens: 80, timeoutMs: 15_000 });
 }
 
 // ── Discourse quality assessment ─────────────────────────────────────────────

@@ -20,30 +20,10 @@ const path = require("path");
 const ROOT       = path.resolve(__dirname, "..");
 const DRAFT_FILE = path.join(ROOT, "state", "tweet_draft.txt");
 
-const OLLAMA_URL   = process.env.OLLAMA_URL   || "http://localhost:11434/api/generate";
-const OLLAMA_MODEL = process.env.OLLAMA_MODEL || "qwen2.5:7b";
+const { generate: llmGenerate } = require("./llm.js");
 
 async function callOllama(prompt) {
-  const controller = new AbortController();
-  const timeout    = setTimeout(() => controller.abort(), 20_000);
-  try {
-    const res = await fetch(OLLAMA_URL, {
-      method:  "POST",
-      headers: { "Content-Type": "application/json" },
-      signal:  controller.signal,
-      body: JSON.stringify({
-        model:   OLLAMA_MODEL,
-        prompt,
-        stream:  false,
-        options: { temperature: 0.0, num_predict: 120 },
-      }),
-    });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    return (data.response || "").trim();
-  } finally {
-    clearTimeout(timeout);
-  }
+  return llmGenerate(prompt, { temperature: 0.0, maxTokens: 120, timeoutMs: 20_000 });
 }
 
 (async () => {

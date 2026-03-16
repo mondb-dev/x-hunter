@@ -46,8 +46,7 @@ const DRIFT_CAP  = path.join(ROOT, "state", "drift_cap_state.json");
 const AXIS_GUARD = path.join(ROOT, "state", "axis_creation_state.json");
 const DIVERSITY  = path.join(ROOT, "state", "diversity_state.json");
 
-const OLLAMA_URL   = process.env.OLLAMA_URL   || "http://localhost:11434/api/generate";
-const OLLAMA_MODEL = process.env.OLLAMA_MODEL || "qwen2.5:7b";
+const { generate: llmGenerate } = require("./llm.js");
 
 // ── Diversity constraint (AGENTS.md §7) ───────────────────────────────────────
 // Per 24h rolling window per axis:
@@ -303,24 +302,8 @@ Reply with JSON only, no other text:
 
 confidence is 0.0–1.0 (1.0 = clearly supports the claimed alignment).`;
 
-  const controller = new AbortController();
-  const timer      = setTimeout(() => controller.abort(), 10_000);
-
   try {
-    const res = await fetch(OLLAMA_URL, {
-      method:  "POST",
-      headers: { "Content-Type": "application/json" },
-      signal:  controller.signal,
-      body:    JSON.stringify({
-        model:   OLLAMA_MODEL,
-        prompt,
-        stream:  false,
-        options: { temperature: 0.0, num_predict: 80 },
-      }),
-    });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    const text = (data.response || "").trim();
+    const text = await llmGenerate(prompt, { temperature: 0.0, maxTokens: 80, timeoutMs: 10_000 });
 
     // Extract JSON from response (may have markdown fences)
     const jsonMatch = text.match(/\{[\s\S]*\}/);
@@ -332,10 +315,8 @@ confidence is 0.0–1.0 (1.0 = clearly supports the claimed alignment).`;
 
     return { confidence: conf, reasoning: parsed.reasoning || "" };
   } catch (err) {
-    // Ollama error → accept entry (non-fatal)
+    // LLM error → accept entry (non-fatal)
     return null;
-  } finally {
-    clearTimeout(timer);
   }
 }
 

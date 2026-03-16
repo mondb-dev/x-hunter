@@ -11,6 +11,7 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 const { callVertex } = require("./vertex");
+const { generate: llmGenerate } = require("./llm.js");
 
 // Memory recall for grounding replies
 let _db, _extractKeywords;
@@ -122,13 +123,10 @@ function solveWithRegex(problem) {
   return (a + b).toFixed(2);
 }
 
-function solveWithOllama(problem) {
+async function solveWithLLM(problem) {
   try {
     const prompt = `Solve this math word problem. Reply with only the numeric answer to 2 decimal places, nothing else.\n\n${problem}`;
-    const result = execSync(
-      `ollama run qwen2.5:7b ${JSON.stringify(prompt)}`,
-      { timeout: 15000, encoding: "utf-8" }
-    ).trim();
+    const result = await llmGenerate(prompt, { temperature: 0.0, maxTokens: 30, timeoutMs: 15_000 });
     const match = result.match(/[\d]+(?:\.\d+)?/);
     if (match) return parseFloat(match[0]).toFixed(2);
     return null;
@@ -143,10 +141,10 @@ async function solveChallenge(problem) {
     console.log(`[moltbook] challenge solved (regex): "${problem}" → ${regex}`);
     return regex;
   }
-  const ollama = solveWithOllama(problem);
-  if (ollama !== null) {
-    console.log(`[moltbook] challenge solved (ollama): "${problem}" → ${ollama}`);
-    return ollama;
+  const llm = await solveWithLLM(problem);
+  if (llm !== null) {
+    console.log(`[moltbook] challenge solved (llm): "${problem}" → ${llm}`);
+    return llm;
   }
   // Last resort: return 0
   console.warn(`[moltbook] could not solve challenge: "${problem}" — submitting 0.00`);

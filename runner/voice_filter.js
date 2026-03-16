@@ -35,8 +35,7 @@ const isQuote = process.argv.includes("--quote");
 const DRAFT_FILE = path.join(ROOT, "state", isQuote ? "quote_draft.txt" : "tweet_draft.txt");
 const ONTO_FILE  = path.join(ROOT, "state", "ontology.json");
 
-const OLLAMA_URL   = process.env.OLLAMA_URL   || "http://localhost:11434/api/generate";
-const OLLAMA_MODEL = process.env.OLLAMA_MODEL || "qwen2.5:7b";
+const { generate: llmGenerate } = require("./llm.js");
 
 // ── Voice persona (from SOUL.md) ──────────────────────────────────────────────
 const PERSONA = `Sebastian D. Hunter is a curious, skeptical observer of public discourse.
@@ -64,26 +63,7 @@ What he never sounds like:
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
 async function callOllama(prompt) {
-  const controller = new AbortController();
-  const timeout    = setTimeout(() => controller.abort(), 30_000);
-  try {
-    const res = await fetch(OLLAMA_URL, {
-      method:  "POST",
-      headers: { "Content-Type": "application/json" },
-      signal:  controller.signal,
-      body: JSON.stringify({
-        model:   OLLAMA_MODEL,
-        prompt,
-        stream:  false,
-        options: { temperature: 0.4, num_predict: 200 },
-      }),
-    });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    return (data.response || "").trim();
-  } finally {
-    clearTimeout(timeout);
-  }
+  return llmGenerate(prompt, { temperature: 0.4, maxTokens: 200, timeoutMs: 30_000 });
 }
 
 /**
