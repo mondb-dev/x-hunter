@@ -32,9 +32,11 @@ const INTERACTIONS = path.join(ROOT, "state", "interactions.json");
 const ONTOLOGY     = path.join(ROOT, "state", "ontology.json");
 const VOCATION     = path.join(ROOT, "state", "vocation.json");
 
-const MAX_PER_RUN = 3;
-const MIN_GAP_MS  = 5 * 60 * 1000;  // 5 minutes between replies
-const MAX_PER_DAY = 10;
+const MAX_PER_RUN  = 3;
+const MIN_GAP_MS   = 5 * 60 * 1000;  // 5 minutes between replies
+const MAX_PER_DAY  = 10;
+const MAX_AGE_MS   = 48 * 60 * 60 * 1000;  // ignore mentions older than 48h
+const OWN_USERNAME = "sebastianhunts";  // skip self-mentions
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 function loadJson(filePath, fallback) {
@@ -436,9 +438,43 @@ function logInteraction(data, item, replyText, memoryHints) {
     }
   }
 
+  // Build set of tweet IDs we already replied to (from interactions.json)
+  const repliedIds = new Set(
+    (interactions.replies || []).map(r => r.id).filter(Boolean)
+  );
+
   // Load queue — oldest first (FIFO), only pending items
   const queue = readQueue();
-  const pending = queue.filter(i => i.status === "pending" || i.status === "error").sort((a, b) => a.ts - b.ts);
+  const now = Date.now();
+  let skippedStale = 0, skippedDupe = 0, skippedSelf = 0;
+
+  const pending = queue.filter(i => {
+    if (i.status !== "pending" && i.status !== "error") return false;
+
+    // Skip self-mentions
+    if ((i.from_username || "").toLowerCase() === OWN_USERNAME) {
+      i.status = "skipped"; i.skip_reason = "self-mention";
+      skippedSelf++; return false;
+    }
+
+    // Skip already-replied tweets (dedup against interactions.json)
+    if (repliedIds.has(i.id)) {
+      i.status = "skipped"; i.skip_reason = "already replied (interactions dedup)";
+      skippedDupe++; return false;
+    }
+
+    // Skip stale mentions (older than 48h)
+    if (i.ts && (now - i.ts) > MAX_AGE_MS) {
+      i.status = "skipped"; i.skip_reason = `stale (${Math.round((now - i.ts) / 3600000)}h old)`;
+      skippedStale++; return false;
+    }
+
+    return true;
+  }).sort((a, b) => a.ts - b.ts);
+
+  if (skippedStale || skippedDupe || skippedSelf) {
+    console.log(`[reply] filtered: ${skippedDupe} already-replied, ${skippedStale} stale, ${skippedSelf} self`);
+  }
   console.log(`[reply] queue: ${pending.length} pending item(s)`);
 
   if (pending.length === 0) { console.log("[reply] nothing to process."); process.exit(0); }

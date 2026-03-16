@@ -265,6 +265,13 @@ async function scrapeNotifications(page) {
       try { existingIds.add(JSON.parse(line).id); } catch {}
     }
   } catch {}
+  // Also exclude tweets we already replied to (from interactions.json)
+  try {
+    const inter = JSON.parse(fs.readFileSync(path.join(ROOT, "state", "interactions.json"), "utf-8"));
+    for (const r of (inter.replies || [])) {
+      if (r.id) existingIds.add(r.id);
+    }
+  } catch {}
 
   try {
     await page.goto("https://x.com/notifications", { waitUntil: "domcontentloaded", timeout: 20_000 });
