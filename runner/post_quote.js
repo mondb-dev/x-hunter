@@ -63,15 +63,30 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
 
   const raw   = fs.readFileSync(DRAFT_FILE, "utf-8").trim();
   const lines = raw.split("\n").map(l => l.trim()).filter(Boolean);
-  if (lines.length < 2) {
-    console.error("[post_quote] quote_draft.txt needs at least 2 lines (source URL + text)");
-    process.exit(1);
+
+  // ── Extract source URL: try line 1 first, then scan all text for x.com/*/status/* ──
+  const URL_RE = /https:\/\/(?:x\.com|twitter\.com)\/[A-Za-z0-9_]+\/status\/\d+/;
+  let sourceUrl = "";
+  let quoteText = "";
+
+  if (lines.length > 0 && URL_RE.test(lines[0]) && lines[0].match(URL_RE)[0] === lines[0]) {
+    // Line 1 is a clean URL — standard format
+    sourceUrl = lines[0];
+    quoteText = lines.slice(1).join(" ").trim();
+  } else {
+    // Agent embedded URL somewhere in the text — extract it
+    const fullText = lines.join(" ");
+    const urlMatch = fullText.match(URL_RE);
+    if (urlMatch) {
+      sourceUrl = urlMatch[0];
+      quoteText = fullText.replace(sourceUrl, "").replace(/\s{2,}/g, " ").trim();
+      console.log(`[post_quote] extracted URL from mixed text: ${sourceUrl}`);
+    }
   }
 
-  const sourceUrl = lines[0];
-  const quoteText = lines.slice(1).join(" ").trim();
-  if (!sourceUrl.startsWith("https://x.com/") && !sourceUrl.startsWith("https://twitter.com/")) {
-    console.error(`[post_quote] invalid source URL: ${sourceUrl}`);
+  if (!sourceUrl) {
+    console.error(`[post_quote] no valid x.com/twitter.com status URL found in quote_draft.txt`);
+    console.error(`[post_quote] content: ${lines.join(" ").slice(0, 120)}...`);
     process.exit(1);
   }
   // Reject quoting own tweets

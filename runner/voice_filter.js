@@ -124,8 +124,37 @@ function stanceSummary(axes) {
   }
 
   const lines = raw.split("\n").map(l => l.trim()).filter(Boolean);
-  const tweetText = lines[0] || "";
-  const journalUrl = lines.length > 1 ? lines.slice(1).join("\n") : "";
+
+  // ── Quote mode: line 1 is the source URL (or text with embedded URL), lines 2+ are commentary
+  // ── Tweet mode: line 1 is tweet text, lines 2+ are journal URL
+  let tweetText, preservedPrefix;
+  const URL_RE = /https:\/\/(?:x\.com|twitter\.com)\/[A-Za-z0-9_]+\/status\/\d+/;
+
+  if (isQuote) {
+    // In quote mode, find and preserve the source URL, revise only the commentary
+    if (lines.length > 0 && URL_RE.test(lines[0]) && lines[0].match(URL_RE)[0] === lines[0]) {
+      // Standard format: line 1 is clean URL
+      preservedPrefix = lines[0];
+      tweetText = lines.slice(1).join(" ").trim();
+    } else {
+      // URL embedded in text — extract it, revise the rest
+      const fullText = lines.join(" ");
+      const urlMatch = fullText.match(URL_RE);
+      if (urlMatch) {
+        preservedPrefix = urlMatch[0];
+        tweetText = fullText.replace(urlMatch[0], "").replace(/\s{2,}/g, " ").trim();
+      } else {
+        // No URL found — can't process quote, pass through
+        console.log("[voice_filter] quote mode but no source URL found — passing through");
+        process.exit(0);
+      }
+    }
+  } else {
+    // Tweet mode: line 1 = tweet text, lines 2+ = journal URL
+    tweetText = lines[0] || "";
+    preservedPrefix = null;
+  }
+  const journalUrl = !isQuote && lines.length > 1 ? lines.slice(1).join("\n") : "";
 
   if (!tweetText || tweetText.length < 10) {
     console.log("[voice_filter] tweet too short — passing through");
@@ -208,7 +237,15 @@ Rules:
   }
 
   // Write revised draft
-  const newDraft = journalUrl ? `${revised}\n${journalUrl}` : revised;
+  let newDraft;
+  if (isQuote && preservedPrefix) {
+    // Quote mode: URL on line 1, revised commentary on line 2+
+    newDraft = `${preservedPrefix}\n${revised}`;
+  } else if (journalUrl) {
+    newDraft = `${revised}\n${journalUrl}`;
+  } else {
+    newDraft = revised;
+  }
   fs.writeFileSync(DRAFT_FILE, newDraft, "utf-8");
 
   const changed = revised !== tweetText;
