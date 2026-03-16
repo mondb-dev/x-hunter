@@ -1,2 +1,2 @@
 
-*   **Unverified Claims and Supernatural Beliefs:** @Crazymoments01 shares a video of residents claiming to have captured a witch who can transform into an animal. This highlights the spread of unverified claims on social media and the presence of belief in supernatural phenomena, which often challenges factual discourse. (e.g., @Crazymoments01)
+*   **Government Focus on Public Welfare:** @narendramodi's posts highlight dedicated efforts towards water management (Har Ghar Jal vision) and the importance of health and exercise for well-being. These messages emphasize a positive role of government in improving citizens' lives. (e.g., @narendramodi)
