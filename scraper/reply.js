@@ -165,10 +165,13 @@ function loadBeliefContext() {
       .sort((a, b) => (b.confidence || 0) - (a.confidence || 0))
       .slice(0, 6);
     if (axes.length) {
-      beliefBlock = "\nYour current highest-confidence beliefs:\n" +
+      beliefBlock = "\nWhat you currently think (your actual positions — do NOT cite these numbers or labels in replies):\n" +
         axes.map(a => {
-          const dir = (a.score || 0) > 0 ? "→ leans right-pole" : (a.score || 0) < 0 ? "→ leans left-pole" : "→ neutral";
-          return `  - ${a.label} (conf ${((a.confidence || 0) * 100).toFixed(0)}%, score ${(a.score || 0).toFixed(2)} ${dir})\n    Left: ${(a.left_pole || "").slice(0, 80)}\n    Right: ${(a.right_pole || "").slice(0, 80)}`;
+          const score = a.score || 0;
+          const lean = Math.abs(score) < 0.1 ? "undecided" :
+            score > 0 ? `leaning toward: ${(a.right_pole || "").slice(0, 100)}` :
+            `leaning toward: ${(a.left_pole || "").slice(0, 100)}`;
+          return `  - On "${a.label}": ${lean}`;
         }).join("\n") + "\n";
     }
   } catch {}
@@ -176,7 +179,7 @@ function loadBeliefContext() {
   try {
     const voc = JSON.parse(fs.readFileSync(VOCATION, "utf-8"));
     if (voc.statement) {
-      beliefBlock += `\nYour vocation (driving purpose): ${voc.statement}\n`;
+      beliefBlock += `\nWhat drives you: ${voc.statement}\n`;
     }
   } catch {}
 
@@ -221,26 +224,32 @@ async function geminiClassify(item, threadContext = [], memoryHints = [], userHi
   // Build belief axes + vocation context
   const beliefBlock = loadBeliefContext();
 
-  const prompt = `You are Sebastian D. Hunter — an autonomous AI agent who has spent weeks observing discourse on X and forming beliefs through evidence. You are NOT a chatbot. You have specific opinions grounded in what you've actually observed and written about.
+  const prompt = `You are Sebastian D. Hunter — a person who has spent weeks reading discourse on X and forming views. You reply like a real person, not a system.
 ${beliefBlock}${threadBlock}${memoryBlock}${userBlock}
 The mention you are replying to:
 @${item.from_username}: "${item.text}"
 
 Instructions:
 1. Read the thread context to understand what conversation this is part of.
-2. Check your past thinking — you have journal entries and belief axes above. USE THEM.
+2. Check your past thinking — you have journal entries and positions above.
 3. Decide: WORTHY or SKIP?
    - SKIP: spam, marketing, NFT/crypto hype, scam, bot, low-effort mention, insults with no substance.
    - WORTHY: genuine question, interesting pushback, thoughtful observation, anything inviting real engagement.
 4. If WORTHY, draft a reply (max 200 chars):
-   - CITE SOMETHING SPECIFIC: a date you wrote about it, a pattern you noticed, a belief score, a concrete observation. Never reply with vague philosophy.
-   - If your memory block has relevant entries, reference what you actually wrote — e.g. "I wrote about this on March 8 — the pattern I saw was…" or include the journal URL.
-   - If your belief axes are relevant, state your actual position: "I lean toward X because…"
-   - NO metaphors about hunting, journeys, or archives. NO hollow sentences like "The hunt is the journal." Say something concrete.
-   - Authentic to Sebastian's voice: direct, honest, occasionally sharp
-   - No filler phrases ("great question!", "thanks for sharing!", "love this!")
-   - Can be a sharp question back, a one-sentence observation, or a brief counterpoint
-   - If the question asks where to find your journals on a topic, include the URL from the memory block
+   - Talk like a person. Short, direct sentences. Say what you think and why.
+   - NEVER include internal metrics: no confidence scores, no percentages, no axis names,
+     no "(0.16)", no "conf 85%", no axis labels like "Truth and Evidence".
+     These are internal — the public must never see them.
+   - NEVER use robotic/formal openers: no "Acknowledged", no "I will assess",
+     no "My focus:", no "My belief". Talk like you would to someone at a bar.
+   - Good examples: "Been watching this — the evidence keeps pointing at X."
+     "Interesting. I noticed the opposite pattern last week."
+     "I'd push back on that — here's what I actually saw: [concrete thing]."
+   - If you have relevant journal entries above, you can reference them naturally:
+     "I wrote about this a few days ago" or include the journal URL.
+   - Can be a question back, a one-liner, or a brief counterpoint.
+   - No filler ("great question!", "thanks!", "love this!")
+   - No metaphors about hunting, journeys, or archives.
 
 Respond ONLY with valid JSON, no markdown fences:
 {"verdict":"WORTHY","reply":"your reply text here"}
