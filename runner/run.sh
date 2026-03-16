@@ -276,9 +276,14 @@ clean_stale_locks() {
 
 # Prevent macOS from sleeping while the runner is active.
 # -s = prevent system sleep, -d = prevent display sleep.
-caffeinate -sd -w $$ &
-CAFFEINATE_PID=$!
-echo "[run] caffeinate started (PID=$CAFFEINATE_PID) — Mac sleep disabled"
+# On Linux (GCP VM) caffeinate doesn't exist — skip silently.
+if command -v caffeinate &>/dev/null; then
+  caffeinate -sd -w $$ &
+  CAFFEINATE_PID=$!
+  echo "[run] caffeinate started (PID=$CAFFEINATE_PID) — Mac sleep disabled"
+else
+  echo "[run] caffeinate not available (Linux) — skipping"
+fi
 
 while true; do
   # ── Pause sentinel ────────────────────────────────────────────────────────
