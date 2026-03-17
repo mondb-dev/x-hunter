@@ -126,7 +126,9 @@ for (const axis of ontology.axes) {
 // ── 6. Compute rolling averages and detect anomalies ──────────────────────
 
 const windowList = Array.from(windows.values()).sort((a, b) => a.ts - b.ts);
-const ROLLING_WINDOWS = 84; // 7 days * 12 windows/day
+// Adaptive rolling window: use min(84, half of available data) to work with limited history
+const ROLLING_WINDOWS = Math.min(84, Math.max(6, Math.floor(windowList.length / 3)));
+console.log(`Rolling window: ${ROLLING_WINDOWS} windows (${(ROLLING_WINDOWS * 2).toFixed(0)}h baseline)\n`);
 
 const events = [];
 
@@ -157,7 +159,7 @@ for (let i = ROLLING_WINDOWS; i < windowList.length; i++) {
     for (const u of users) {
       if (accountCluster[u]) clusters.add(accountCluster[u]);
     }
-    if (clusters.size >= 3) {
+    if (clusters.size >= 2) {
       crossClusterTopics.push({ keyword: kw, clusters: clusters.size, users: users.size });
     }
   }
@@ -220,7 +222,7 @@ for (let i = ROLLING_WINDOWS; i < windowList.length; i++) {
   ];
   const signalCount = signals.filter(Boolean).length;
   
-  if (signalCount >= 3) {
+  if (signalCount >= 2) {
     const date = new Date(win.ts);
     events.push({
       date: date.toISOString(),
@@ -266,7 +268,7 @@ for (const evt of events) {
 
 // ── 8. Output ─────────────────────────────────────────────────────────────
 
-console.log(`\n=== DETECTED EVENTS (≥3/6 signals, deduped 12h) ===\n`);
+console.log(`\n=== DETECTED EVENTS (≥2/6 signals, deduped 12h) ===\n`);
 console.log(`Found: ${deduped.length} potential landmark events\n`);
 
 for (const evt of deduped) {
