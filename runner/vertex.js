@@ -89,21 +89,29 @@ async function getAccessToken() {
 }
 
 /**
- * callVertex(prompt, maxTokens)
+ * callVertex(prompt, maxTokens, options)
  *
  * Calls Vertex AI gemini-2.5-pro with the given prompt.
  * Returns the text content string.
+ *
+ * options.thinkingBudget - if set, limits thinking tokens (0 = disable thinking)
  */
-async function callVertex(prompt, maxTokens = 2000) {
+async function callVertex(prompt, maxTokens = 2000, options = {}) {
   const token    = await getAccessToken();
   const project  = process.env.VERTEX_PROJECT_ID || "sebastian-hunter";
   const location = process.env.VERTEX_LOCATION   || "us-central1";
   const model    = "gemini-2.5-pro";
 
   const apiPath  = `/v1/projects/${project}/locations/${location}/publishers/google/models/${model}:generateContent`;
+
+  const generationConfig = { temperature: 0.7, maxOutputTokens: maxTokens };
+  if (options.thinkingBudget !== undefined) {
+    generationConfig.thinkingConfig = { thinkingBudget: options.thinkingBudget };
+  }
+
   const body     = JSON.stringify({
     contents: [{ role: "user", parts: [{ text: prompt }] }],
-    generationConfig: { temperature: 0.7, maxOutputTokens: maxTokens },
+    generationConfig,
   });
 
   return new Promise((resolve, reject) => {

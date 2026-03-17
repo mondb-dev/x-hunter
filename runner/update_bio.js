@@ -91,7 +91,7 @@ async function generateBio(vocation) {
   const MAX_ATTEMPTS = 3;
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
     try {
-      const result = await callVertex(prompt, 200);
+      const result = await callVertex(prompt, 1024, { thinkingBudget: 0 });
       let bio = result.trim().replace(/^["']|["']$/g, "");
       // Strip any "Bio:" prefix the LLM might add
       bio = bio.replace(/^bio:\s*/i, "");
