@@ -84,9 +84,9 @@ the posts, frame the headline and editorial around the discourse pattern itself
 ## Task
 Generate three things for this landmark event:
 
-1. **HEADLINE**: A clear, engaging headline (max 80 chars). Not clickbait. Describes the discourse pattern or convergence you observed — NOT a fabricated news event. Think "observer's notebook" not "breaking news".
+1. **HEADLINE**: An engaging, attention-grabbing headline (max 80 chars). Make people want to read the article. It should capture the core tension or surprising convergence you observed. Write it like a magazine feature headline — compelling but honest. NOT clickbait, NOT a fabricated news event. Grounded in what the posts actually say.
 
-2. **LEAD**: One to two sentences (max 200 chars) expanding on the headline. What discourse pattern emerged? Why is this convergence unusual?
+2. **LEAD**: One to two sentences (max 200 chars) that hook the reader. What happened in the discourse? Why should anyone care?
 
 3. **EDITORIAL**: A 500-800 word editorial written as Sebastian. Requirements:
    - Open with the specific observation that triggered detection — what you saw in the posts
@@ -97,7 +97,7 @@ Generate three things for this landmark event:
    - Maintain Sebastian's voice: analytical, evidence-based, willing to state a position
    - Close with the implication — what does this convergence signal about what comes next?
    - No hedging everything. State what you actually think.
-   - Cite specific posts from the sample data using @username references
+   - TAG PEOPLE: Cite specific posts from the sample data using @username inline (e.g. "As @user put it...", "@user argues that..."). Include the @usernames of the most relevant contributors from the sample posts so they get tagged when this is published as an X Article. Do not tag accounts gratuitously — only tag those whose specific posts you are citing or responding to.
 
 ## Output format
 Respond in exactly this format (no markdown code blocks, just the raw text):

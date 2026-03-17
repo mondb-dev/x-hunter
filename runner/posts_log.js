@@ -100,4 +100,32 @@ function logQuote({ source_url, content, tweet_url, date, cycle }) {
   console.log(`[posts_log] logged quote (source: ${source_url})`);
 }
 
-module.exports = { logTweet, logQuote };
+/**
+ * Append an article entry (X Articles long-form).
+ */
+function logArticle({ title, content, article_url, date, landmark_number }) {
+  const log = readLog();
+  // Dedupe on title
+  const dup = log.posts.find(p => p.type === "article" && p.title === title);
+  if (dup) {
+    if (!dup.article_url && article_url) {
+      dup.article_url = article_url;
+      writeLog(log);
+      console.log("[posts_log] patched existing article entry with URL");
+    }
+    return;
+  }
+  log.posts.push({
+    type: "article",
+    title: title || "",
+    content: (content || "").slice(0, 500),
+    article_url: article_url || "",
+    landmark_number: landmark_number || null,
+    date: date || new Date().toISOString().slice(0, 10),
+    posted_at: new Date().toISOString(),
+  });
+  writeLog(log);
+  console.log(`[posts_log] logged article: "${(title || "").slice(0, 60)}"`);
+}
+
+module.exports = { logTweet, logQuote, logArticle };

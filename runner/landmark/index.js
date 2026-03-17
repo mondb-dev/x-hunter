@@ -5,18 +5,20 @@
  * This is the top-level entry point for the landmark pipeline.
  * It ties together all modules in sequence:
  *
- *   1. detect   — scan DB for landmark events
- *   2. filter   — cooldown + dedup checks
- *   3. editorial — generate headline + lead + full article
- *   4. art      — generate hero art (Imagen 3)
- *   5. render   — composite card SVG → PNG
- *   6. mint     — upload to Arweave → create Metaplex Master Edition
- *   7. record   — persist state + log
+ *   1. detect     — scan DB for landmark events
+ *   2. filter     — cooldown + dedup checks
+ *   3. editorial  — generate headline + lead + full article
+ *   4. art        — generate hero art (Imagen) for article cover
+ *   5. publish    — post as X Article (long-form) with cover image
+ *   6. record     — persist state + log
+ *
+ * NFT minting is disabled — card rendering and Arweave/Metaplex
+ * modules are preserved but not invoked.
  *
  * Usage: node runner/landmark/index.js [--dry-run] [--force]
  *
  * Flags:
- *   --dry-run   Run detection + editorial but skip art/render/mint
+ *   --dry-run   Run detection + editorial but skip art/publish
  *   --force     Ignore cooldown and enabled checks
  *
  * Exit codes:
@@ -36,8 +38,12 @@ const { loadState, saveState, isCooldownClear, isDuplicate, recordLandmark } = r
 const { detect } = require("./detect");
 const { generateEditorial, buildArweaveHtml } = require("./editorial");
 const { generateHeroArt } = require("./art");
-const { renderAndSave } = require("./render");
-const { mintLandmark } = require("./mint");
+// Card rendering + minting preserved but not invoked (NFT pipeline disabled)
+// const { renderAndSave } = require("./render");
+// const { mintLandmark } = require("./mint");
+const { postArticle } = require("../post_article");
+const { logArticle } = require("../posts_log");
+const { connectBrowser, getXPage } = require("../cdp");
 
 // ── CLI flags ─────────────────────────────────────────────────────────────────
 
@@ -60,7 +66,7 @@ async function main() {
   console.log("║   LANDMARK EVENT PIPELINE                 ║");
   console.log("╚═══════════════════════════════════════════╝");
   console.log(`[landmark] ${new Date().toISOString()}`);
-  if (DRY_RUN) console.log("[landmark] DRY RUN — no art/render/mint");
+  if (DRY_RUN) console.log("[landmark] DRY RUN — no art/publish");
   if (FORCE)   console.log("[landmark] FORCE — ignoring cooldown/enabled checks");
 
   // ── Pre-flight checks ───────────────────────────────────────────────────
@@ -133,7 +139,6 @@ async function main() {
       landmarkNumber,
       signalCount: event.signalCount,
       tier: tier.name,
-      supply,
       headline: content.headline,
       lead: content.lead,
       topKeywords: event.topKeywords,
@@ -150,98 +155,73 @@ async function main() {
     return;
   }
 
-  // ── 4. Hero Art Generation ──────────────────────────────────────────────
+  // ── 4. Hero Art Generation (cover image for X Article) ──────────────────
 
   console.log("\n── STEP 4: Hero Art Generation ──");
   let artBuf = null;
   let artPrompt = null;
+  let artPath = null;
   try {
     const artDir = path.join(PATHS.LANDMARKS_DIR, `landmark_${landmarkNumber}`);
     if (!fs.existsSync(artDir)) fs.mkdirSync(artDir, { recursive: true });
 
-    const result = await generateHeroArt(event, {
-      outputPath: path.join(artDir, `landmark_${landmarkNumber}_hero.png`),
-    });
+    artPath = path.join(artDir, `landmark_${landmarkNumber}_hero.png`);
+    const result = await generateHeroArt(event, { outputPath: artPath });
     artBuf = result.buffer;
     artPrompt = result.prompt;
-    console.log("[landmark] Hero art generated successfully");
+    console.log(`[landmark] Hero art generated: ${artPath}`);
   } catch (err) {
     console.warn(`[landmark] Hero art generation failed: ${err.message}`);
-    console.warn("[landmark] Proceeding with placeholder art");
+    console.warn("[landmark] Will publish article without cover image");
+    artPath = null;
   }
 
-  // ── 5. Card Rendering ──────────────────────────────────────────────────
+  // ── 5. Publish as X Article ─────────────────────────────────────────────
 
-  console.log("\n── STEP 5: Card Rendering ──");
-  let cardPaths;
+  console.log("\n── STEP 5: X Article Publication ──");
+  let articleUrl = null;
   try {
-    cardPaths = await renderAndSave(event, content, artBuf, {
-      landmarkNumber,
-      editionSupply: supply,
-      png: true,
+    const browser = await connectBrowser();
+    const page    = await getXPage(browser);
+
+    articleUrl = await postArticle(page, {
+      title: content.headline,
+      body:  content.editorial,
+      imagePath: artPath,    // cover image (null = no image)
     });
-    console.log(`[landmark] Card rendered: SVG=${!!cardPaths.svgPath}, PNG=${!!cardPaths.pngPath}`);
+
+    if (articleUrl) {
+      console.log(`[landmark] X Article published: ${articleUrl}`);
+    } else {
+      console.log("[landmark] X Article published (URL not captured)");
+    }
+
+    browser.disconnect();
   } catch (err) {
-    console.error(`[landmark] Card rendering failed: ${err.message}`);
+    console.error(`[landmark] X Article publication failed: ${err.message}`);
     throw err;
   }
 
-  // ── 6. Mint ─────────────────────────────────────────────────────────────
+  // ── 6. Record ───────────────────────────────────────────────────────────
 
-  console.log("\n── STEP 6: Arweave Upload + Metaplex Mint ──");
+  console.log("\n── STEP 6: Recording ──");
+  recordLandmark(event, null);  // no mint result
 
-  // Prefer PNG for NFT; fall back to SVG
-  const cardImagePath = cardPaths.pngPath || cardPaths.svgPath;
-  if (!cardImagePath || !fs.existsSync(cardImagePath)) {
-    throw new Error("[landmark] No card image found — cannot mint");
-  }
-
-  const editorialHtml = buildArweaveHtml(event, content);
-  let mintResult;
-  try {
-    mintResult = await mintLandmark(event, content, editorialHtml, cardImagePath, {
-      landmarkNumber,
-    });
-    console.log(`[landmark] Minted! Address: ${mintResult.mintAddress}`);
-    console.log(`[landmark] Metadata: ${mintResult.metadataUri}`);
-  } catch (err) {
-    console.error(`[landmark] Mint failed: ${err.message}`);
-    // Record the detection even if mint fails
-    recordLandmark(event, null);
-    throw err;
-  }
-
-  // ── 7. Record ───────────────────────────────────────────────────────────
-
-  console.log("\n── STEP 7: Recording ──");
-  recordLandmark(event, {
-    arweaveTx:    mintResult.imageUri,
-    mintAddress:  mintResult.mintAddress,
-    editionSupply: supply,
-  });
-
-  // Save full manifest for this landmark
+  // Save manifest
   const manifestDir = path.join(PATHS.LANDMARKS_DIR, `landmark_${landmarkNumber}`);
+  if (!fs.existsSync(manifestDir)) fs.mkdirSync(manifestDir, { recursive: true });
+
   const manifest = {
     landmark_number: landmarkNumber,
     detected_at:     new Date().toISOString(),
     signal_count:    event.signalCount,
     signals:         event.signals,
     tier:            tier.name,
-    edition_supply:  supply,
     headline:        content.headline,
     lead:            content.lead,
     top_keywords:    event.topKeywords || [],
     art_prompt:      artPrompt,
-    arweave: {
-      image:     mintResult.imageUri,
-      editorial: mintResult.editorialUri,
-      metadata:  mintResult.metadataUri,
-    },
-    solana: {
-      mint_address: mintResult.mintAddress,
-      signature:    mintResult.signature,
-    },
+    x_article_url:   articleUrl,
   };
 
   fs.writeFileSync(
@@ -249,14 +229,22 @@ async function main() {
     JSON.stringify(manifest, null, 2),
   );
 
-  // Also save editorial and event data
+  // Save editorial and event data for reference
+  const editorialHtml = buildArweaveHtml(event, content);
   fs.writeFileSync(path.join(manifestDir, "editorial.html"), editorialHtml);
   fs.writeFileSync(path.join(manifestDir, "event.json"), JSON.stringify(event, null, 2));
 
+  logArticle({
+    title: content.headline,
+    content: content.editorial,
+    article_url: articleUrl || "",
+    landmark_number: landmarkNumber,
+  });
+
   console.log("\n╔═══════════════════════════════════════════╗");
-  console.log(`║  LANDMARK #${String(landmarkNumber).padEnd(4)} COMPLETE                  ║`);
-  console.log(`║  Tier: ${tier.name.padEnd(12)} Supply: ${String(supply).padEnd(13)}║`);
-  console.log(`║  Mint: ${mintResult.mintAddress.slice(0, 33)}… ║`);
+  console.log(`║  LANDMARK #${String(landmarkNumber).padEnd(4)} PUBLISHED                 ║`);
+  console.log(`║  Tier: ${tier.name.padEnd(36)}║`);
+  console.log(`║  Art:  ${artBuf ? "yes" : "none".padEnd(36)}║`);
   console.log("╚═══════════════════════════════════════════╝");
 }
 
