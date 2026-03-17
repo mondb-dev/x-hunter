@@ -27,6 +27,7 @@ const { connectBrowser, getXPage } = require("../runner/cdp");
 const fs   = require("fs");
 const path = require("path");
 const db   = require("./db");
+const { callVertex } = require("../runner/vertex.js");
 
 // ── Paths ─────────────────────────────────────────────────────────────────────
 const ROOT          = path.resolve(__dirname, "..");
@@ -188,17 +189,66 @@ async function followUser(page, username) {
   console.log(`[follows] followed @${username}`);
 }
 
+// ── LLM-based cluster + reason generation ────────────────────────────────────
+
+/**
+ * Use the LLM to produce a short topic cluster label (2-3 words) and a
+ * one-sentence follow reason from the account's recent posts + ontology.
+ * Falls back to heuristic values if the LLM call fails.
+ */
+async function classifyFollow(username, item, ontologyAxes) {
+  const samplePosts = db.postsByUser(username, 5)
+    .map(p => p.text?.slice(0, 200))
+    .filter(Boolean);
+
+  const axisLabels = (ontologyAxes || []).map(a => a.label).join(", ");
+
+  const prompt = [
+    "You are classifying an X (Twitter) account for a belief-tracking agent's trust graph.",
+    "",
+    `Account: @${username}`,
+    `Keywords from their posts: ${item.top_keywords || "(none)"}`,
+    samplePosts.length ? `Sample posts:\n${samplePosts.map((t, i) => `${i + 1}. ${t}`).join("\n")}` : "",
+    "",
+    `The agent tracks these belief axes: ${axisLabels || "(none yet)"}`,
+    "",
+    "Respond with EXACTLY two lines, nothing else:",
+    "Line 1: A 2-4 word topic cluster label for this account (e.g. \"US Foreign Policy\", \"AI Ethics\", \"Middle East Conflict\", \"Crypto Governance\")",
+    "Line 2: One sentence explaining why this account is worth following (what perspective or information they provide)",
+  ].filter(Boolean).join("\n");
+
+  try {
+    const result = await callVertex(prompt, 256);
+    const lines = result.trim().split("\n").filter(Boolean);
+    if (lines.length >= 2) {
+      return {
+        cluster: lines[0].replace(/^(cluster|label|line ?1)[:\s]*/i, "").trim().slice(0, 50),
+        reason:  lines[1].replace(/^(reason|line ?2)[:\s]*/i, "").trim().slice(0, 200),
+      };
+    }
+  } catch (err) {
+    console.error(`[follows] LLM classify failed for @${username}: ${err.message}`);
+  }
+
+  // Fallback: extract first meaningful keyword phrase
+  const kws = (item.top_keywords || "").split(", ").filter(Boolean);
+  return {
+    cluster: kws[0]?.split(" ").slice(0, 3).join(" ") || "unknown",
+    reason:  `Data-driven follow: avg_score=${item.avg_score?.toFixed(1)}, ${kws.length} topic keywords`,
+  };
+}
+
 // ── Trust graph update ────────────────────────────────────────────────────────
 
-function logFollow(trustGraph, username, item) {
+function logFollow(trustGraph, username, item, classification) {
   if (!trustGraph.accounts) trustGraph.accounts = {};
   const key = username.toLowerCase();
   trustGraph.accounts[key] = {
     ...(trustGraph.accounts[key] || {}),
     followed:      true,
     followed_at:   new Date().toISOString(),
-    follow_reason: `data-driven: avg_score=${item.avg_score?.toFixed(1)}, follow_score=${item.follow_score?.toFixed(1)}, topics=[${item.top_keywords}]`,
-    cluster:       item.top_keywords?.split(", ")[0] || "unknown",
+    follow_reason: classification.reason,
+    cluster:       classification.cluster,
     weight:        1.0,
     trust_score:   3,  // neutral-positive start; AI adjusts during browse cycles
   };
@@ -279,7 +329,9 @@ function logFollow(trustGraph, username, item) {
 
       item.status      = "done";
       item.followed_at = new Date().toISOString();
-      logFollow(trustGraph, item.username, item);
+      const classification = await classifyFollow(item.username, item, ontology.axes);
+      console.log(`[follows] classified @${item.username}: cluster="${classification.cluster}", reason="${classification.reason}"`);
+      logFollow(trustGraph, item.username, item, classification);
       db.markFollowed(item.username);
       followedThisRun++;
 

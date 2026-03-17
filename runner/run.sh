@@ -1184,6 +1184,8 @@ TWEETMSG
     node "$PROJECT_ROOT/runner/generate_checkpoint.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     # ── Vocation evaluation (runs after checkpoint, self-gates on checkpoint count) ──
     node "$PROJECT_ROOT/runner/evaluate_vocation.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # ── Bio update (runs after vocation eval, self-gates on status change) ───
+    node "$PROJECT_ROOT/runner/update_bio.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     node "$PROJECT_ROOT/runner/moltbook.js" --post-checkpoint >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     # ── Tweet the checkpoint link ────────────────────────────────────────────
     if [ -f "$PROJECT_ROOT/state/checkpoint_result.txt" ]; then

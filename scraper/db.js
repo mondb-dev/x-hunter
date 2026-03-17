@@ -282,6 +282,12 @@ const stmtGetAccount = _db.prepare(`
   SELECT * FROM accounts WHERE username = @username
 `);
 
+const stmtPostsByUser = _db.prepare(`
+  SELECT text, keywords FROM posts
+  WHERE  username = @username AND parent_id IS NULL
+  ORDER BY ts DESC LIMIT @limit
+`);
+
 const stmtPostsInWindow = _db.prepare(`
   SELECT keywords FROM posts
   WHERE  ts > @from_ts AND ts <= @to_ts AND parent_id IS NULL
@@ -431,6 +437,11 @@ function markFollowed(username) {
 /** Fetch a single account row, or undefined if not found. */
 function getAccount(username) {
   return stmtGetAccount.get({ username });
+}
+
+/** Return recent non-reply posts by a specific user (for LLM context). */
+function postsByUser(username, limit = 5) {
+  return stmtPostsByUser.all({ username, limit });
 }
 
 /**
@@ -589,7 +600,7 @@ function rebuildFtsIfNeeded() {
 module.exports = {
   insertPost, insertKeyword, search, topKeywords, recentPosts, postsByKeyword, prune,
   topNovelPosts,
-  upsertAccount, followCandidates, markFollowed, getAccount, postsInWindow,
+  upsertAccount, followCandidates, markFollowed, getAccount, postsByUser, postsInWindow,
   insertMemory, updateMemoryTxId, recallMemory, getMemoryByPath, recentMemory,
   storeEmbedding, getEmbedding, allEmbeddings, embeddedIds,
   rebuildFtsIfNeeded,
