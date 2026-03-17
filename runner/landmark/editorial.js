@@ -72,16 +72,27 @@ ${sampleTexts}
 ## Sebastian's current belief axes
 ${beliefContext}
 
+## CRITICAL RULE: DO NOT FABRICATE EVENTS
+You must ONLY describe what the sample posts ACTUALLY SAY. Do not invent news events,
+incidents, or happenings that are not explicitly described in the sample posts above.
+If the posts are discussing something vaguely, describe the discourse pattern — not a
+fabricated event. Your job is to analyze the CONVERSATION, not to invent what the
+conversation might be about. If you cannot determine a specific real-world event from
+the posts, frame the headline and editorial around the discourse pattern itself
+(e.g. "discourse convergence", "cluster collision", "narrative shift").
+
 ## Task
 Generate three things for this landmark event:
 
-1. **HEADLINE**: A clear, engaging headline (max 80 chars). Not clickbait. States what happened or what shifted. Think newspaper front page, not tweet.
+1. **HEADLINE**: A clear, engaging headline (max 80 chars). Not clickbait. Describes the discourse pattern or convergence you observed — NOT a fabricated news event. Think "observer's notebook" not "breaking news".
 
-2. **LEAD**: One to two sentences (max 200 chars) expanding on the headline. What does this event mean? Why does it matter?
+2. **LEAD**: One to two sentences (max 200 chars) expanding on the headline. What discourse pattern emerged? Why is this convergence unusual?
 
 3. **EDITORIAL**: A 500-800 word editorial written as Sebastian. Requirements:
-   - Open with the specific observation that triggered detection
+   - Open with the specific observation that triggered detection — what you saw in the posts
    - Explain what converged: which clusters, what were they saying, why this is unusual
+   - ONLY reference claims, events, or facts that appear in the sample posts above. Quote them directly.
+   - If posts reference a real-world event, describe what the POSTS CLAIM, not what you think happened. Use language like "posts are claiming..." or "accounts are discussing..."
    - Connect to Sebastian's belief axes — how does this event relate to what he's been tracking?
    - Maintain Sebastian's voice: analytical, evidence-based, willing to state a position
    - Close with the implication — what does this convergence signal about what comes next?
