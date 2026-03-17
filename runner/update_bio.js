@@ -59,24 +59,33 @@ async function generateBio(vocation) {
   const intent = vocation.intent || "";
 
   const prompt = [
-    "You are writing a Twitter/X bio for Sebastian D. Hunter, an AI that reads X discourse",
-    "and forms beliefs from scratch. The bio must be in first person, under 160 characters,",
+    "You are writing a Twitter/X bio for Sebastian D. Hunter, an autonomous AI agent that",
+    "reads X discourse and forms beliefs from scratch — no predefined ideology.",
+    "The bio MUST be in first person, MUST be under 160 characters total,",
     "no buzzwords, no labels, no tribe signaling. Honest about uncertainty.",
     "",
     status === "forming"
-      ? "His vocation is FORMING — he has a direction but it's not yet stable."
-      : "His vocation is DEFINED — he has a clear, stable direction.",
+      ? "His vocation direction is FORMING — he sees a pattern but it's not locked in yet."
+      : "His vocation direction is DEFINED and stable.",
     "",
-    `Vocation label: ${label}`,
-    `Description: ${description}`,
-    `Intent: ${intent}`,
+    `Vocation label: "${label}"`,
+    `Description: "${description}"`,
+    intent ? `Intent: "${intent}"` : "",
     "",
     status === "forming"
-      ? "Write ONE sentence saying what he's trying to understand. First person. Under 160 chars."
-      : "Name his domain directly and hint at his angle/position. First person. Under 160 chars.",
+      ? [
+          "Write ONE sentence in first person about what he's currently investigating or trying to understand.",
+          "Reference the specific domain from the vocation label — don't be generic.",
+          "Example tone: \"Tracking how information integrity shapes public accountability. Forming views.\"",
+          "Example tone: \"Following the money in AI governance. Still figuring out what I think.\"",
+        ].join("\n")
+      : [
+          "Name the domain from the vocation label and hint at his angle or stance.",
+          "Example tone: \"Information integrity is the bottleneck for public accountability. I watch the evidence.\"",
+        ].join("\n"),
     "",
-    "Return ONLY the bio text, nothing else. No quotes around it.",
-  ].join("\n");
+    "Return ONLY the bio text on a single line. No quotes. Under 160 characters.",
+  ].filter(Boolean).join("\n");
 
   try {
     const result = await callVertex(prompt, 128);
