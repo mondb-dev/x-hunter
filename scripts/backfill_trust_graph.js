@@ -57,7 +57,7 @@ async function classifyAccount(username, ontologyAxes) {
   ].filter(Boolean).join("\n");
 
   try {
-    const result = await callVertex(prompt, 1024, { thinkingBudget: 0 });
+    const result = await callVertex(prompt, 4096);
     const lines = result.trim().split("\n").filter(Boolean);
     if (lines.length >= 2) {
       return {
