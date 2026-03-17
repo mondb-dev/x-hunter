@@ -1182,6 +1182,8 @@ TWEETMSG
     fi
     # ── Checkpoint (every 3 days — generate_checkpoint.js self-gates) ───────
     node "$PROJECT_ROOT/runner/generate_checkpoint.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # ── Vocation evaluation (runs after checkpoint, self-gates on checkpoint count) ──
+    node "$PROJECT_ROOT/runner/evaluate_vocation.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     node "$PROJECT_ROOT/runner/moltbook.js" --post-checkpoint >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     # ── Tweet the checkpoint link ────────────────────────────────────────────
     if [ -f "$PROJECT_ROOT/state/checkpoint_result.txt" ]; then
