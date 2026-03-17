@@ -84,26 +84,40 @@ async function generateBio(vocation) {
           "Example tone: \"Information integrity is the bottleneck for public accountability. I watch the evidence.\"",
         ].join("\n"),
     "",
-    "Return ONLY the bio text on a single line. No quotes. Under 160 characters.",
+    "Return ONLY the bio text on a single line. No quotes, no prefix.",
+    "Must be a COMPLETE sentence ending with a period. Target 80-140 characters. Never under 60.",
   ].filter(Boolean).join("\n");
 
-  try {
-    const result = await callVertex(prompt, 128);
-    const bio = result.trim().replace(/^["']|["']$/g, "");
-    if (bio.length > 160) return bio.slice(0, 157) + "...";
-    return bio;
-  } catch (err) {
-    console.error(`[update_bio] LLM failed: ${err.message}`);
-    // Sensible fallback
-    if (status === "forming") {
-      return label
-        ? `Trying to understand ${label.toLowerCase()}. Work in progress.`
-        : "Forming a worldview from first principles. Work in progress.";
+  const MAX_ATTEMPTS = 3;
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    try {
+      const result = await callVertex(prompt, 200);
+      let bio = result.trim().replace(/^["']|["']$/g, "");
+      // Strip any "Bio:" prefix the LLM might add
+      bio = bio.replace(/^bio:\s*/i, "");
+      if (bio.length > 160) bio = bio.slice(0, 157) + "...";
+
+      // Validate: must be a complete sentence (ends with . ! or ?) and at least 60 chars
+      const endsClean = /[.!?]$/.test(bio);
+      const longEnough = bio.length >= 60;
+      if (endsClean && longEnough) return bio;
+
+      console.log(`[update_bio] attempt ${attempt}/${MAX_ATTEMPTS} rejected (${bio.length} chars, ends="${bio.slice(-1)}"): ${bio}`);
+    } catch (err) {
+      console.error(`[update_bio] LLM attempt ${attempt} failed: ${err.message}`);
     }
-    return label
-      ? `Focused on ${label.toLowerCase()}. Beliefs formed from reading, not ideology.`
-      : "Beliefs formed from reading, not ideology.";
   }
+
+  // Fallback after all retries
+  console.log("[update_bio] all LLM attempts failed validation, using fallback");
+  if (status === "forming") {
+    return label
+      ? `Tracking how ${label.toLowerCase()} plays out in public discourse. Forming views.`
+      : "Forming a worldview from first principles. Work in progress.";
+  }
+  return label
+    ? `Focused on ${label.toLowerCase()}. Beliefs formed from reading, not ideology.`
+    : "Beliefs formed from reading, not ideology.";
 }
 
 /**
