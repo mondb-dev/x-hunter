@@ -154,14 +154,22 @@ function computeSentiment(posts, rollingAvgEng) {
 /**
  * Detect landmark events from the posts database.
  *
+ * Uses the full lookback window (default 7d) to build rolling baselines,
+ * but only emits events from the recent candidate window (default 6h)
+ * to avoid re-detecting old events every run.
+ *
  * @param {object} dbRaw - better-sqlite3 database handle (db.raw())
  * @param {object} [opts] - options
- * @param {number} [opts.lookbackMs] - how far back to scan (default: 24h)
+ * @param {number} [opts.lookbackMs] - how far back to scan for baseline stats (default: 7d)
+ * @param {number} [opts.candidateMs] - only emit events within this recent window (default: 6h)
+ * @param {number} [opts.signalGateOverride] - override the adaptive signal gate
  * @returns {Array<object>} detected events, sorted by signal count desc
  */
 function detect(dbRaw, opts = {}) {
-  const lookbackMs = opts.lookbackMs || 24 * 60 * 60 * 1000;
+  const lookbackMs  = opts.lookbackMs  || 7 * 24 * 60 * 60 * 1000;  // 7 days for baseline
+  const candidateMs = opts.candidateMs || 6 * 60 * 60 * 1000;        // 6h candidate window
   const since = Date.now() - lookbackMs;
+  const candidateSince = Date.now() - candidateMs;
 
   // 1. Fetch posts
   const posts = dbRaw.prepare(`
@@ -264,7 +272,8 @@ function detect(dbRaw, opts = {}) {
     };
     const signalCount = Object.values(signalFlags).filter(Boolean).length;
 
-    if (signalCount >= signalGate) {
+    // Only emit events from the recent candidate window (skip old baseline windows)
+    if (signalCount >= signalGate && win.ts >= candidateSince) {
       const date = new Date(win.ts);
       events.push({
         date: date.toISOString(),

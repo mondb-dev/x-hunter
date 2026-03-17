@@ -81,7 +81,9 @@ async function main() {
 
   console.log("\n── STEP 1: Event Detection ──");
   const dbRaw = getDb();
-  const events = detect(dbRaw);
+  // When forced, widen candidate window to match full lookback (scan everything)
+  const detectOpts = FORCE ? { candidateMs: 7 * 24 * 60 * 60 * 1000 } : {};
+  const events = detect(dbRaw, detectOpts);
 
   if (events.length === 0) {
     console.log("[landmark] No landmark events detected in current data.");
