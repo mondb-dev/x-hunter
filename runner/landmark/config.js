@@ -50,11 +50,15 @@ const COOLDOWN_MS = 4 * 60 * 60 * 1000;
 /**
  * Edition supply based on signal strength.
  * More signals → rarer edition → fewer copies.
+ *
+ * Tier 3 (Bronze, 3/6) → 100 editions
+ * Tier 2 (Silver, 4/6) → 50 editions
+ * Tier 1 (Gold, 5-6/6) → 25 editions
  */
 const EDITION_SUPPLY = {
-  3: 1000,
-  4: 500,
-  5: 100,
+  3: 100,
+  4: 50,
+  5: 25,
   6: 25,
 };
 
@@ -64,10 +68,10 @@ const COLLECT_PRICE_SOL = 0.01;
 // ── Card tier colors ──────────────────────────────────────────────────────────
 
 const CARD_TIERS = {
-  3: { name: "Silver",      frame: "#C0C0C0", accent: "#8A8A8A", bg: "#1A1A2E" },
-  4: { name: "Gold",        frame: "#FFD700", accent: "#B8860B", bg: "#1A1A2E" },
-  5: { name: "Prismatic",   frame: "#E040FB", accent: "#7C4DFF", bg: "#0D0D1A" },
-  6: { name: "Obsidian",    frame: "#FFD700", accent: "#1A1A1A", bg: "#000000" },
+  3: { name: "Bronze", tier: 3, frame: "#B87333", accent: "#8B5A2B", bg: "#1C1410", glow: false },
+  4: { name: "Silver", tier: 2, frame: "#C0C0C0", accent: "#8A8A9A", bg: "#16161E", glow: false },
+  5: { name: "Gold",   tier: 1, frame: "#FFD700", accent: "#DAA520", bg: "#1A1508", glow: true  },
+  6: { name: "Gold",   tier: 1, frame: "#FFD700", accent: "#DAA520", bg: "#1A1508", glow: true  },
 };
 
 // ── Stopwords ─────────────────────────────────────────────────────────────────

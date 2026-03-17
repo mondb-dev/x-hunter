@@ -89,7 +89,7 @@ async function uploadToArweave(data, contentType, tags = {}) {
  * @param {string} params.imageUri       - Arweave URI for card image
  * @param {string} params.editorialUri   - Arweave URI for full editorial
  * @param {number} params.signalCount    - detection signal count
- * @param {string} params.tierName       - Silver/Gold/Prismatic/Obsidian
+ * @param {string} params.tierName       - Gold/Silver/Bronze
  * @param {number} params.landmarkNumber - sequential ID
  * @param {string} params.date           - event date
  * @param {string[]} params.topKeywords  - event keywords
@@ -210,7 +210,7 @@ async function createMasterEdition(metadataUri, opts = {}) {
 async function mintLandmark(event, content, editorialHtml, cardImagePath, opts = {}) {
   const lnum = opts.landmarkNumber || 1;
   const tier = CARD_TIERS[Math.min(Math.max(event.signalCount, 3), 6)];
-  const maxSupply = EDITION_SUPPLY[event.signalCount] || 1000;
+  const maxSupply = EDITION_SUPPLY[event.signalCount] || 100;
 
   console.log(`[mint] Starting mint for Landmark #${lnum} (${tier.name}, supply: ${maxSupply})`);
 

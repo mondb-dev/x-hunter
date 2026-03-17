@@ -4,11 +4,12 @@
  * Generates a hero image for a landmark event card using Google's
  * Imagen 3 model via the Vertex AI predict endpoint.
  *
- * The prompt is constructed from the event data (headline, topics,
- * tier) and a house style directive. The final prompt template
- * is a placeholder — user will finalize before enabling.
+ * Style: Vintage 1960s movie poster, painted illustration.
+ * Any human figures are rendered as faceless silhouettes.
+ * No text/lettering in the image — all titling is composited
+ * by the card SVG template.
  *
- * Returns a Buffer of PNG image data (1024×1024).
+ * Returns a Buffer of PNG image data (1024×1024 @ 16:9).
  */
 
 "use strict";
@@ -99,15 +100,18 @@ async function getAccessToken() {
 /**
  * Build the Imagen prompt from event data.
  *
- * IMPORTANT: This prompt template is a PLACEHOLDER.
- * The user wants to finalize the artwork style before enabling.
- * Update STYLE_DIRECTIVE and PROMPT_TEMPLATE when ready.
+ * Style: Vintage movie poster illustration (1960s–70s cinematic).
+ * Figures are faceless when present. No text/lettering in the image —
+ * all titling is composited by the card SVG template.
  */
 const STYLE_DIRECTIVE = [
-  "Digital illustration, dark moody atmosphere, cinematic lighting,",
-  "abstract data visualization aesthetic, dark navy and deep purple tones,",
-  "subtle geometric patterns, glowing accents, no text, no words,",
-  "no letters, no numbers, suitable as trading card hero art.",
+  "Vintage 1960s movie poster illustration, dramatic painted artwork,",
+  "bold cinematic composition, rich saturated colors with film grain texture,",
+  "warm halftone dot pattern visible on close inspection,",
+  "slightly weathered paper feel, retro screen-print aesthetic,",
+  "any human figures MUST be faceless silhouettes with no facial features,",
+  "absolutely no text, no lettering, no words, no numbers, no logos,",
+  "no title cards, no credits — the image is pure illustration only.",
 ].join(" ");
 
 /**
@@ -121,20 +125,19 @@ function buildArtPrompt(event) {
   const tier = CARD_TIERS[Math.min(Math.max(event.signalCount, 3), 6)];
   const keywords = (event.topKeywords || []).slice(0, 5).join(", ");
   const tierMood = {
-    Silver: "calm, distant, analytical",
-    Gold: "warm, significant, resonant",
-    Prismatic: "intense, prismatic light refractions, electric",
-    Obsidian: "overwhelming, monumental, golden cracks in obsidian darkness",
+    Bronze: "gritty, understated, contemplative, muted earth tones",
+    Silver: "cool, metallic atmosphere, moonlit, steely blue-silver tones",
+    Gold:   "luminous, epic, golden hour light, dramatic contrasts, triumphant",
   };
 
   return [
     STYLE_DIRECTIVE,
-    `Theme: ${event.headline}.`,
-    keywords ? `Visual motifs inspired by: ${keywords}.` : "",
-    `Mood: ${tierMood[tier.name] || "contemplative"}.`,
-    `Color palette emphasizing ${tier.frame} accents on dark background.`,
-    "Wide composition suitable for cropping to 560×340 card art area.",
-    "High detail, 4K quality.",
+    `Scene depicting: ${event.headline}.`,
+    keywords ? `Visual motifs drawn from: ${keywords}.` : "",
+    `Mood and palette: ${tierMood[tier.name] || "contemplative"}.`,
+    "Wide cinematic composition (16:9 aspect ratio).",
+    "Painterly brushwork, depth of field, dramatic lighting from a single source.",
+    "High detail, 4K quality, suitable as a collectible print.",
   ].filter(Boolean).join(" ");
 }
 
