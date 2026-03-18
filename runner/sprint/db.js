@@ -207,6 +207,30 @@ function bulkInsertTasks(sprint_id, tasks) {
   run(tasks);
 }
 
+/**
+ * Roll over incomplete tasks from a completed sprint to the next sprint.
+ * Only carries tasks that are not "done". Resets their status to "in_progress".
+ * Returns the number of tasks carried forward.
+ */
+function rolloverTasks(fromSprintId, toSprintId) {
+  const incomplete = db.prepare(
+    "SELECT * FROM tasks WHERE sprint_id = ? AND status != 'done'"
+  ).all(fromSprintId);
+  if (incomplete.length === 0) return 0;
+
+  const insert = db.prepare(`
+    INSERT INTO tasks (sprint_id, title, description, task_type, priority, estimated_hours)
+    VALUES (?, ?, ?, ?, ?, ?)
+  `);
+  const run = db.transaction((tasks) => {
+    for (const t of tasks) {
+      insert.run(toSprintId, `[carried] ${t.title}`, t.description || null, t.task_type, Math.max(1, (t.priority || 2) - 1), t.estimated_hours || null);
+    }
+  });
+  run(incomplete);
+  return incomplete.length;
+}
+
 // ── Accomplishment helpers ────────────────────────────────────────────────────
 
 function addAccomplishment({ plan_id, task_id, date, description, evidence, impact }) {
@@ -338,7 +362,7 @@ module.exports = {
   // Sprint
   getSprints, getCurrentSprint, upsertSprint, activateSprint, completeSprint,
   // Task
-  getTasks, getTasksByStatus, addTask, updateTaskStatus, bulkInsertTasks,
+  getTasks, getTasksByStatus, addTask, updateTaskStatus, bulkInsertTasks, rolloverTasks,
   // Accomplishment
   addAccomplishment, getAccomplishments,
   // Daily log

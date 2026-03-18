@@ -108,6 +108,37 @@ function gatherTodaySignals() {
     }
   }
 
+  // Check for sprint_tweet_flag.txt (written by TWEET agent when choosing Option A)
+  const sprintFlagPath = path.join(STATE, "sprint_tweet_flag.txt");
+  if (fs.existsSync(sprintFlagPath)) {
+    const flagContent = fs.readFileSync(sprintFlagPath, "utf-8").trim();
+    if (flagContent) {
+      const [taskId, actionType, ...rest] = flagContent.split("|");
+      signals.push({
+        source: `sprint_action:${actionType || "unknown"}`,
+        description: `Sprint-driven tweet: task ${taskId} (${actionType}) — ${rest.join("|") || "no details"}`,
+        task_id: parseInt(taskId, 10) || null,
+      });
+    }
+    // Clean up the flag so it's not double-counted tomorrow
+    fs.unlinkSync(sprintFlagPath);
+  }
+
+  // Check browse_notes for [SPRINT: task_id] tags
+  const browseNotesPath = path.join(STATE, "browse_notes.md");
+  if (fs.existsSync(browseNotesPath)) {
+    const browseContent = fs.readFileSync(browseNotesPath, "utf-8");
+    const sprintTags = browseContent.match(/\[SPRINT:\s*(\d+)\]/g);
+    if (sprintTags && sprintTags.length > 0) {
+      const uniqueIds = [...new Set(sprintTags.map(t => t.match(/\d+/)?.[0]).filter(Boolean))];
+      signals.push({
+        source: "browse_sprint_tags",
+        description: `Browse notes tagged ${sprintTags.length} sprint-relevant findings for task(s): ${uniqueIds.join(", ")}`,
+        task_ids: uniqueIds.map(id => parseInt(id, 10)),
+      });
+    }
+  }
+
   // Check for ponder output
   const activePlan = loadJson(path.join(STATE, "active_plan.json"));
   if (activePlan?.execution_log) {
@@ -276,6 +307,19 @@ async function runDailyTracking(planId) {
     const retro = await generateRetro(currentSprint, refreshedTasks, accomplishments);
     sprintDb.completeSprint(currentSprint.id, retro);
     console.log(`[sprint/tracker] retro: ${retro.slice(0, 150)}...`);
+
+    // Carry forward incomplete tasks to the next sprint
+    const incompleteTasks = refreshedTasks.filter(t => t.status !== "done");
+    if (incompleteTasks.length > 0 && !allDone) {
+      const nextSprint = sprintDb.getSprints(planId).find(s => s.status === "not_started");
+      if (nextSprint) {
+        const carried = sprintDb.rolloverTasks(currentSprint.id, nextSprint.id);
+        console.log(`[sprint/tracker] carried ${carried} incomplete task(s) to week ${nextSprint.week}`);
+      } else {
+        console.log(`[sprint/tracker] ${incompleteTasks.length} incomplete task(s) but no next sprint to carry forward to`);
+      }
+    }
+
     sprintCompleted = true;
   }
 
