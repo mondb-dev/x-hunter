@@ -584,7 +584,7 @@ $_CURIOSITY_DIRECTIVE
 $_COMMENT_CANDIDATES
 ── CURRENT BELIEF AXES (read before updating ontology) ──────────────────
 $_CURRENT_AXES
-── SPRINT PLAN (your active tasks — focus browsing here) ─────────────────
+── SPRINT PLAN (ACTIVE — guide your browsing toward these tasks) ─────────
 $_SPRINT_CONTEXT
 ── RECENT DISCOURSE (reply exchanges) ───────────────────────────────────
 $_DISCOURSE_DIGEST
@@ -603,6 +603,11 @@ Tasks (in order):
    tag relevant browse_notes entries with [CURIOSITY: <axis_or_topic_id>].
 2. Identify the 3-5 most interesting tensions or signals from TRENDING clusters
    and <- novel singletons. You may navigate to at most 1 additional URL.
+   SPRINT FOCUS: If you have in-progress sprint tasks (marked ▸ above), actively
+   look for content that serves them. For "research" tasks, identify specific sources,
+   accounts, or claims that could be curated. For "engage" tasks, note community
+   reactions or questions you could respond to. Tag sprint-relevant findings in
+   browse_notes with [SPRINT: task_id].
 3. Append findings to state/browse_notes.md (append only -- do not overwrite).
 4. Write state/ontology_delta.json if anything is genuinely axis-worthy.
    DO NOT write or modify state/ontology.json directly — the runner merges your delta.
@@ -727,6 +732,8 @@ BROWSEMSG
 
   # ── Quote cycle: find one post worth quoting + sharp commentary ──────────
   elif [ "$CYCLE_TYPE" = "QUOTE" ]; then
+    # Load sprint context for quote prompt
+    _SPRINT_CONTEXT=$(cat "$PROJECT_ROOT/state/sprint_context.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(no active plan)")
     # Build a compact list of already-quoted source URLs for dedup
     QUOTED_SOURCES=$(node -e "
       const fs=require('fs'), p='$PROJECT_ROOT/state/posts_log.json';
@@ -770,10 +777,15 @@ $QUOTED_SOURCES
 
 ── FEED DIGEST (most recent clusters) ───────────────────────────────────
 $_DIGEST_QUOTE
+── SPRINT PLAN (prefer quotes that advance your active tasks) ───────────
+$_SPRINT_CONTEXT
 ─────────────────────────────────────────────────────────────────────────
 
 Tasks:
 1. From the digest above, identify 2-3 candidate posts that touch your belief axes.
+   SPRINT PRIORITY: If you have in-progress sprint tasks (▸), prefer quoting posts
+   that directly serve those tasks — e.g. a source worth curating, a claim worth
+   analyzing for the Veritas Lens, or community discussion to engage with.
    HARD SKIP (never quote these): questions or replies directed AT you (@SebastianHunts),
    retweets with no original text, posts that are only a URL, posts shorter than 15 words.
    Candidates must be making a real substantive claim you can engage with.
@@ -959,23 +971,41 @@ $_BROWSE_NOTES_FULL
 $_MEMORY_RECALL
 ── CURRENT BELIEF AXES (read before updating ontology) ──────────────────
 $_CURRENT_AXES_TWEET
-── SPRINT PLAN (your current 30-day commitment + weekly tasks) ────────────
+── SPRINT PLAN (ACTIVE — your in-progress tasks ARE your priority) ────────
 $_ACTIVE_PLAN_CONTEXT
 ── RECENT DISCOURSE (reply exchanges) ───────────────────────────────────
 $_DISCOURSE_DIGEST_TWEET
 ─────────────────────────────────────────────────────────────────────────
 
 Tasks (in order, no browser):
-1. Axis prediction check — for each of your top 3 belief axes, state in one phrase what you
+1. Sprint action check — read the SPRINT PLAN above. If any task is marked ▸ (in_progress):
+   a. Identify what concrete action that task needs (e.g. "research" = name a source you found,
+      "engage" = ask the community a question, "write" = share a key idea from your draft).
+   b. Check the browse notes: did this cycle produce anything directly useful for that task?
+   Sprint tasks are NOT passive tracking — they require intentional output. If you have been
+   working on a task for multiple days without publicly acting on it, this tweet should address it.
+2. Axis prediction check — for each of your top 3 belief axes, state in one phrase what you
    expected to see today based on your current score and direction. Then check: did the browse
    notes confirm it, challenge it, or show something orthogonal? The most interesting tweet
    lives at that gap — where a prior was updated, reversed, or sharpened by something concrete.
-2. $_TWEET_JOURNAL_TASK
-3. Draft tweet from the most interesting gap found in task 1.
+3. $_TWEET_JOURNAL_TASK
+4. Draft tweet — choose the most compelling option between:
+   OPTION A: Sprint-driven tweet — directly advance an in-progress task. Examples:
+     - [research] "I've been curating sources for the Veritas Lens. Today's find: @account's
+       thread on X contradicts Y's official statement from last week. This is exactly the kind
+       of divergence I want to map."
+     - [engage] "Building the Veritas Lens — a tool to map narrative contradictions. What news
+       story has confused you most this week? Where did you see two 'authoritative' sources
+       flatly contradict each other?"
+     - If you have NOT tweeted about your sprint work in the last 3 tweet cycles, prefer this.
+   OPTION B: Observation tweet — the most interesting gap from task 2 (axis check).
+   Choose whichever is more genuine and interesting. Alternate between A and B across cycles —
+   do not post only plan updates or only observations. Both matter.
    Requirements (ALL must be met — if you cannot satisfy them, write SKIP):
    a. Concrete reference: must name something specific observed in the browse notes —
       a specific account, a claim someone actually made, a statistic, or a named event.
       No abstract observations about "AI" or "institutions" in general.
+      For OPTION A: the specificity can come from a source you curated or a question you pose.
    b. Falsifiable: a thoughtful person should be able to disagree with it.
       If it reads as obviously true to everyone, it is not a real position — reframe or SKIP.
    c. Self-check (AGENTS.md 13.3) — if not genuine, SKIP.
@@ -983,9 +1013,6 @@ Tasks (in order, no browser):
       specific observations were made this cycle — write SKIP. Do NOT invent insights
       from prior memory or general knowledge. The tweet must be grounded in THIS cycle.
    Better no tweet than a weak one.
-   e. If you have an active plan, you may reference it when relevant — connecting what
-      you observed to your plan domain is encouraged, but only if the link is genuine.
-      Do NOT force every tweet to be about the plan. Authenticity first.
    VOICE (mandatory — rewrite until these are met):
    f. NEVER include confidence scores, axis scores, or internal metrics in the tweet.
       No "conf 95%", "score 0.40", "(confidence: X)" — these are internal state, not speech.
@@ -1004,7 +1031,14 @@ Tasks (in order, no browser):
    Line 2: https://sebastianhunter.fun/journal/${TODAY}/${HOUR}
    Total length <= 280 chars. Do NOT write only the URL — if line 1 is empty the tweet is worthless.
    Do NOT write to state/posts_log.json — the runner owns that file.
-5. Write state/ontology_delta.json if the synthesis adds new evidence.
+   IMPORTANT: for Option A (sprint) tweets, write the tweet in state/tweet_draft.txt.
+   The runner will also set a flag in state/sprint_tweet_flag.txt so the tracker knows
+   you actively worked on the sprint this cycle.
+5. If you chose Option A, also write state/sprint_tweet_flag.txt with one line:
+   <task_id>|<action_type>|<brief summary of what the tweet advances>
+   Example: 3|research|curated source on Iran narrative contradictions
+   If you chose Option B, do NOT write this file.
+6. Write state/ontology_delta.json if the synthesis adds new evidence.
    Also update state/belief_state.json.
    DO NOT write or modify state/ontology.json directly — the runner merges your delta.
    ONTOLOGY RULES (CURRENT BELIEF AXES shown above — do not alter existing data):
@@ -1017,7 +1051,7 @@ Tasks (in order, no browser):
                     "timestamp":"...", "pole_alignment":"left"|"right" }],
      "new_axes": [{ "id":"...", "label":"...", "left_pole":"...", "right_pole":"..." }] }
    Omit keys you do not need. Skip writing the file if nothing axis-worthy.
-6. Done. The runner clears browse_notes.md after this cycle.
+7. Done. The runner clears browse_notes.md after this cycle.
 
 TWEETMSG
 )
@@ -1159,6 +1193,8 @@ TWEETMSG
     # Daily block tweets need a browser — ensure it's healthy before first attempt.
     # Article result may already exist; sprint/plan/ponder tweets are created later
     # in this block but ensure_browser is cheap to re-call (returns instantly if healthy).
+    # Give browser 15s to settle after browse cycle agent release
+    sleep 15
     ensure_browser
     if [ -f "$PROJECT_ROOT/state/article_result.txt" ]; then
       _ARTICLE_URL=$(sed -n '1p' "$PROJECT_ROOT/state/article_result.txt" | tr -d '\n')
@@ -1170,13 +1206,25 @@ TWEETMSG
       fi
       printf "New piece: %s\n%s" "$_ARTICLE_TITLE" "$_ARTICLE_URL" > "$PROJECT_ROOT/state/tweet_draft.txt"
       echo "[run] tweeting article link: $_ARTICLE_URL"
-      _TWEET_OUT=$(node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1)
-      _TWEET_RC=$?
-      echo "$_TWEET_OUT" | grep -v '^$'
-      if [ "$_TWEET_RC" -eq 0 ]; then
-        rm -f "$PROJECT_ROOT/state/article_result.txt"
-      else
-        echo "[run] article tweet failed (rc=$_TWEET_RC) — keeping article_result.txt for retry"
+      _ART_TWEET_OK=false
+      for _ART_ATTEMPT in 1 2; do
+        _TWEET_OUT=$(node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1)
+        _TWEET_RC=$?
+        echo "$_TWEET_OUT" | grep -v '^$'
+        if [ "$_TWEET_RC" -eq 0 ]; then
+          rm -f "$PROJECT_ROOT/state/article_result.txt"
+          _ART_TWEET_OK=true
+          break
+        fi
+        echo "[run] article tweet attempt $_ART_ATTEMPT failed (rc=$_TWEET_RC)"
+        if [ "$_ART_ATTEMPT" -lt 2 ]; then
+          echo "[run] waiting 20s before retry..."
+          sleep 20
+          ensure_browser
+        fi
+      done
+      if [ "$_ART_TWEET_OK" = "false" ]; then
+        echo "[run] article tweet failed after 2 attempts — keeping article_result.txt for retry"
       fi
       sleep 60  # rate-limit gap before next tweet (avoid X spam detection)
     fi
