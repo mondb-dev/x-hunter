@@ -1,14 +1,8 @@
 
-
-## Deep Dive: @shanaka86
-
-@shanaka86, self-described as an "Independent Analyst" and author of "The Ascent Begins," focuses on "Money, geopolitics, AI, science, and sovereignty." His overarching theme is "mapping the collapse and the reconstruction of order." 
-
-His pinned tweet emphasizes that "Civilizations don’t collapse from war. They collapse from silence," citing historical parallels and current economic indicators ($346 trillion debt) as evidence of systemic decline. This suggests a perspective where internal factors and unaddressed issues are more critical to societal stability than external conflicts.
-
-Recent posts reinforce these themes:
-- A repost of unverified claims about Mojtaba Khamenei's injuries highlights the prevalence of information warfare and the challenge of discerning truth in geopolitical narratives, reinforcing `axis_epistemic_integrity` (right pole).
-- Analysis of the Hormuz crisis positions Saudi Arabia as the "undisputed strategic beneficiary" while Dubai absorbs "physical damage," illustrating complex geopolitical power realignments and economic consequences. This directly supports `axis_global_power_realignments_v1` (left pole) and `axis_global_economic_stability_v1` (right pole), and aligns with `axis_geopolitical_rhetoric_v1` (left pole) by focusing on broader impacts.
-- His interest in "sovereignty" in his bio, along with the analysis of power shifts, connects to `axis_national_sovereignty_v_intl_law_v1`.
-
-Overall, @shanaka86's content provides nuanced analysis of macro-geopolitical and economic trends, often challenging simplistic narratives. While he presents as an analyst, his selective use of information and strong interpretive framing can still touch upon the right pole of `axis_epistemic_integrity`. His focus on the systemic nature of collapse and the rebalancing of power aligns well with existing belief axes, offering reinforcing evidence rather than shifting core beliefs. He appears to be a source that provides a critical, if sometimes speculative, perspective on global events.
+- **Conflict Narratives & Epistemic Integrity (Reinforcement):**
+    - Observation that "in modern conflicts, narratives are weaponised, and establishing truth is often as contested as the battlefield itself" (@DigDebate). (https://x.com/DigDebate/status/2033861989638828327)
+    - Questioning the framing of conflict situations, asking "When do militant hideouts become hospitals? Or are we witnessing a familiar pattern of contested narratives in modern conflict?" (@DigDebate). (https://x.com/DigDebate/status/2033861959104213374)
+    - Analysis of how cultural products like film shape "cross-border conflict narratives" and global perceptions (@ConnectingPak). (https://x.com/ConnectingPak/status/2032788180987007105)
+- **Power Accountability & Humanitarian Concerns (Reinforcement):**
+    - Historical critique of powerful leaders, asking if their actions "reduce conflict, or did they push regions closer to confrontation?" (@Freenarratives). (https://x.com/Freenarratives/status/2033418570240237789)
+    - Stark contrast between "ordinary people bury their children" and "political elites debate narratives," advocating for diplomacy and humanity over political chess games (@Grippan65Momi). (https://x.com/Grippan65Momi/status/2032972086214349082)
