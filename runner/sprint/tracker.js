@@ -170,9 +170,18 @@ ${taskList}
 TODAY'S SIGNALS:
 ${signalList}
 
-For each signal that clearly advances or completes a task, return a match.
-Only match if there's a genuine connection — don't force matches.
-A task is "done" if the signal represents its completion. Otherwise mark "in_progress".
+IMPORTANT MATCHING RULES:
+- Only match if the signal DIRECTLY and SPECIFICALLY advances the named task.
+- Do NOT match generic daily output (daily articles, journal entries, regular tweets) to tasks
+  unless the content is explicitly about the task's specific subject.
+- "Published article: untitled" or a daily belief-axis field report is NOT a manifesto or project-specific document.
+- A regular quote-tweet or observation is NOT "community engagement on a project concept"
+  unless it explicitly asks for feedback, names the project, or invites discussion.
+- A sprint_action signal (from sprint_tweet_flag.txt) IS a direct match — the agent explicitly
+  tagged it as advancing that task.
+- When in doubt, do NOT match. Unmatched signals are fine. False positives are worse than misses.
+- A task is "done" ONLY if the signal represents FULL completion (e.g., a manifesto was published
+  and it's actually about the stated topic). Otherwise mark "in_progress" at most.
 
 Respond in JSON:
 {
@@ -181,13 +190,13 @@ Respond in JSON:
       "task_id": 123,
       "signal_index": 1,
       "new_status": "in_progress|done",
-      "accomplishment": "brief description of what was accomplished"
+      "accomplishment": "brief factual description — only what the evidence literally shows"
     }
   ],
   "unmatched_signals": [
     {
       "signal_index": 2,
-      "accomplishment": "brief description — not tied to a specific task"
+      "accomplishment": "brief factual description — not tied to a specific task"
     }
   ]
 }

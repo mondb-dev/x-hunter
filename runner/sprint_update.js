@@ -97,11 +97,17 @@ function detectEvents(snapshot, lastUpdate) {
 
 async function generateTweet(snapshot, events) {
   const eventSummary = events.map(e => {
-    if (e.type === "sprint_completed") return `Week ${e.week} sprint completed: "${e.goal}" (${e.tasks_done} tasks done)`;
+    if (e.type === "sprint_completed") return `Week ${e.week} sprint completed: "${e.goal}" (${e.tasks_done}/${e.tasks_total || "?"} tasks done)`;
     if (e.type === "accomplishments") return `${e.count} accomplishments today: ${e.items.join("; ")}`;
     if (e.type === "plan_completed") return `Plan "${e.title}" completed!`;
     return "";
   }).join("\n");
+
+  // Include incomplete tasks for honesty
+  const incompleteTasks = (snapshot.current_tasks || [])
+    .filter(t => t.status !== "done")
+    .map(t => `- "${t.title}" (${t.type}) — still in progress`)
+    .join("\n");
 
   const prompt = `You are Sebastian D. Hunter, an AI agent building a worldview from scratch.
 You are working on a plan called "${snapshot.plan_title}".
@@ -110,10 +116,11 @@ Currently on Week ${snapshot.current_week || "?"}: ${snapshot.current_goal || "i
 Today's progress:
 ${eventSummary}
 
-Write a single, honest tweet about this progress. Rules:
+${incompleteTasks ? `Still incomplete:\n${incompleteTasks}\n\n` : ""}Write a single, honest tweet about this progress. Rules:
 - First person, casual but substantive
 - Under 240 characters (a journal URL will be appended)
 - No hashtags, no engagement bait, no self-congratulation
+- Be honest about what's incomplete — don't imply everything is done if it isn't
 - Focus on what you learned or what moved, not just "I did X"
 - Sound like someone working through a real project, not a PR bot
 
@@ -139,6 +146,12 @@ async function generateMoltbookPost(snapshot, events) {
     return `  ${icon} ${t.title}`;
   }).join("\n");
 
+  // Build evidence block from accomplishments
+  const accomplishmentEvidence = (snapshot.accomplishments || [])
+    .filter(a => a.date === today() || events.some(e => e.type === "sprint_completed"))
+    .map(a => `- [${a.date}] ${a.description}${a.evidence ? ` | Evidence: ${a.evidence}` : ""}`)
+    .join("\n");
+
   const prompt = `You are Sebastian D. Hunter, an AI agent building a worldview from scratch.
 You are working on: "${snapshot.plan_title}"
 Brief: ${snapshot.brief || ""}
@@ -150,10 +163,17 @@ ${taskSummary || "(none listed)"}
 Today's noteworthy events:
 ${eventSummary}
 
+Accomplishment evidence (what ACTUALLY happened — base your post ONLY on this):
+${accomplishmentEvidence || "(no evidence recorded)"}
+
 Write a Moltbook post (markdown) updating your community on this progress. Rules:
 - First person, reflective, substantive
 - 200-500 words
-- Include what happened, what you learned, and what's next
+- CRITICAL: Only describe things that the evidence above literally shows.
+  If the evidence says "Published article: untitled" about a daily belief report,
+  do NOT call it a project manifesto. If a quote-tweet doesn't mention the project,
+  do NOT call it community engagement on the project concept.
+- Be honest about what was NOT accomplished — if tasks are still in_progress, say so.
 - Be honest about challenges or uncertainties
 - No marketing language, no engagement bait
 - Use ## headings for structure
