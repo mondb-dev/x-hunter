@@ -35,9 +35,9 @@ export function readPostsLog(): PostLogEntry[] {
 
 export function getLatestPost(): PostLogEntry | null {
   const posts = readPostsLog();
-  // Only show posts that were actually sent (tweet_url set — real URL or "posted" placeholder)
+  // Show the most recent tweet or quote — tweet_url is nice-to-have, not required
   const xPosts = posts.filter(
-    p => (p.type === "quote" || p.type === "tweet") && !!p.tweet_url
+    p => (p.type === "quote" || p.type === "tweet")
   );
   return xPosts.length > 0 ? xPosts[xPosts.length - 1] : null;
 }

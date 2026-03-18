@@ -276,7 +276,7 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
     fs.writeFileSync(RESULT_FILE, (quoteUrl || "posted") + "\n");
 
     // Log to posts_log.json — always runs, whether called from run.sh or manually
-    logQuote({ source_url: sourceUrl, content: quoteText, tweet_url: quoteUrl || "" });
+    logQuote({ source_url: sourceUrl, content: quoteText, tweet_url: quoteUrl || "posted" });
 
   } catch (err) {
     console.error(`[post_quote] error: ${err.message}`);

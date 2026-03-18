@@ -184,7 +184,7 @@ async function sleep(ms) {
     fs.writeFileSync(path.join(ROOT, "state", "tweet_result.txt"), (tweetUrl || "posted") + "\n");
 
     // Log to posts_log.json — always runs, whether called from run.sh or manually
-    logTweet({ content: tweetText, tweet_url: tweetUrl || "" });
+    logTweet({ content: tweetText, tweet_url: tweetUrl || "posted" });
 
     // Navigate back to home feed so Chrome is clean for next cycle
     await page.goto("https://x.com/home", { waitUntil: "domcontentloaded", timeout: 20_000 }).catch(() => {});
