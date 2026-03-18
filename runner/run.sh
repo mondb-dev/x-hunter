@@ -1199,12 +1199,12 @@ TWEETMSG
     if [ -f "$PROJECT_ROOT/state/article_result.txt" ]; then
       _ARTICLE_URL=$(sed -n '1p' "$PROJECT_ROOT/state/article_result.txt" | tr -d '\n')
       _ARTICLE_TITLE=$(sed -n '2p' "$PROJECT_ROOT/state/article_result.txt" | tr -d '\n')
-      # Truncate title to fit: "New piece: TITLE → URL" within 280 chars
-      _MAX_TITLE=$(( 240 - ${#_ARTICLE_URL} ))
+      # Truncate title to fit within 280 chars (title + newline + URL)
+      _MAX_TITLE=$(( 255 - ${#_ARTICLE_URL} ))
       if [ ${#_ARTICLE_TITLE} -gt $_MAX_TITLE ]; then
         _ARTICLE_TITLE="${_ARTICLE_TITLE:0:$_MAX_TITLE}..."
       fi
-      printf "New piece: %s\n%s" "$_ARTICLE_TITLE" "$_ARTICLE_URL" > "$PROJECT_ROOT/state/tweet_draft.txt"
+      printf "%s\n%s" "$_ARTICLE_TITLE" "$_ARTICLE_URL" > "$PROJECT_ROOT/state/tweet_draft.txt"
       echo "[run] tweeting article link: $_ARTICLE_URL"
       _ART_TWEET_OK=false
       for _ART_ATTEMPT in 1 2; do

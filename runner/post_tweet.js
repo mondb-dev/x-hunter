@@ -151,31 +151,50 @@ async function sleep(ms) {
     }
 
     if (!tweetUrl) {
-      if (finalUrl.includes("compose")) {
+      // Detect X graduated-access interstitial — the tweet may have gone through
+      if (finalUrl.includes("graduated-access")) {
+        console.log("[post_tweet] graduated-access interstitial detected — waiting 10s before checking profile...");
+        await sleep(10_000);
+        // Navigate to profile to see if tweet actually posted
+        await page.goto("https://x.com/sebastianhunts", { waitUntil: "domcontentloaded", timeout: 20_000 });
+        await sleep(5_000);
+        tweetUrl = await page.evaluate(() => {
+          const links = Array.from(document.querySelectorAll('a[href*="/sebastianhunts/status/"]'));
+          return links.length ? links[0].href : null;
+        });
+        if (tweetUrl) {
+          console.log(`[post_tweet] tweet confirmed despite graduated-access: ${tweetUrl}`);
+        } else {
+          console.error("[post_tweet] graduated-access blocked the post — X rate-limiting");
+          browser.disconnect();
+          process.exit(1);
+        }
+      } else if (finalUrl.includes("compose")) {
         console.error("[post_tweet] still on compose page — post may have failed");
         browser.disconnect();
         process.exit(1);
-      }
-      // Navigate to own profile and grab the first tweet URL to confirm post + capture URL
-      console.log("[post_tweet] navigating to profile to confirm post and capture URL...");
-      await page.goto("https://x.com/sebastianhunts", { waitUntil: "domcontentloaded", timeout: 20_000 });
-      // Retry loop — X SPA may take a few seconds to render the timeline
-      for (let attempt = 1; attempt <= 3 && !tweetUrl; attempt++) {
-        await sleep(3_000);
-        tweetUrl = await page.evaluate(() => {
-          const links = Array.from(document.querySelectorAll('a[href*="/status/"]'));
-          const match = links.find(a => /\/sebastianhunts\/status\/\d+/.test(a.getAttribute("href") || ""));
-          if (match) return "https://x.com" + match.getAttribute("href").split("?")[0];
-          return null;
-        });
-        if (!tweetUrl && attempt < 3) {
-          console.log(`[post_tweet] URL not found on attempt ${attempt}/3 — waiting...`);
-        }
-      }
-      if (tweetUrl) {
-        console.log(`[post_tweet] SUCCESS (confirmed from profile): ${tweetUrl}`);
       } else {
-        console.log("[post_tweet] posted — could not confirm URL from profile after 3 attempts");
+        // Navigate to own profile and grab the first tweet URL to confirm post + capture URL
+        console.log("[post_tweet] navigating to profile to confirm post and capture URL...");
+        await page.goto("https://x.com/sebastianhunts", { waitUntil: "domcontentloaded", timeout: 20_000 });
+        // Retry loop — X SPA may take a few seconds to render the timeline
+        for (let attempt = 1; attempt <= 3 && !tweetUrl; attempt++) {
+          await sleep(3_000);
+          tweetUrl = await page.evaluate(() => {
+            const links = Array.from(document.querySelectorAll('a[href*="/status/"]'));
+            const match = links.find(a => /\/sebastianhunts\/status\/\d+/.test(a.getAttribute("href") || ""));
+            if (match) return "https://x.com" + match.getAttribute("href").split("?")[0];
+            return null;
+          });
+          if (!tweetUrl && attempt < 3) {
+            console.log(`[post_tweet] URL not found on attempt ${attempt}/3 — waiting...`);
+          }
+        }
+        if (tweetUrl) {
+          console.log(`[post_tweet] SUCCESS (confirmed from profile): ${tweetUrl}`);
+        } else {
+          console.log("[post_tweet] posted — could not confirm URL from profile after 3 attempts");
+        }
       }
     } else {
       console.log(`[post_tweet] SUCCESS: ${tweetUrl}`);
