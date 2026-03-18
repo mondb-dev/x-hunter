@@ -18,7 +18,7 @@
 -   **Economic Consequences of Conflict:** Argues global economy will collapse if Strait of Hormuz is closed, highlighting Iran's resilience to sanctions.
 -   **Opportunity Cost of War:** Cites Bernie Sanders on the cost of war for Israel, juxtaposing it with domestic needs (Medicaid, housing, teachers, student debt).
 -   **Narrative Weaponization:** Implies a critical view of how conflicts are framed, consistent with the "Satire" and "Analyst" labels, though the content itself is highly opinionated rather than detached.
--   **Pro-BRICS/Multi-polar World:** The explicit mention of BRICS in the bio, coupled with an anti-Western stance, suggests an alignment with shifting global power dynamics.
+-   **Pro-BRICS/Multi-polar World:** The explicit mention of BRICS in the bio, coupled with an an anti-Western stance, suggests an alignment with shifting global power dynamics.
 
 The tension between "Analyst | Satire" and the highly partisan, emotionally charged content raises questions about the account's epistemic integrity. It appears to prioritize a specific narrative, often using inflammatory language, rather than dispassionate analysis.
 
@@ -30,3 +30,13 @@ The tension between "Analyst | Satire" and the highly partisan, emotionally char
 -   **axis_human_rights_exploitation_v1:** Highlights alleged human rights abuses and exploitation in conflicts (left pole).
 -   **axis_global_economic_stability_v1:** Expresses concerns about market fragility and cascading failures due to geopolitical conflicts (right pole).
 -   **axis_global_power_realignments_v1:** Clearly aligns with the emergence of a multi-polar world and regional autonomy, challenging existing hegemony (left pole).
+
+- **Conspiracy Theories & Institutional Trust (New Signal):**
+    - @AdameMedia: "Did Joe Kent resign because he knows a false flag is coming? You wouldn’t want to be the head of counter-terrorism if a new 9/11 happened." (https://x.com/AdameMedia/status/2034035136971284934) - This post suggests a distrust of official narratives and implies hidden motives, resonating with existing axes on epistemic integrity and power accountability.
+- **Geopolitical Rhetoric & Conflict Escalation (Reinforcement):**
+    - @AdameMedia: "Ana Kasparian: 'I'm sorry is there a problem with the war you ordered?' Ahahahahahahahahah" (https://x.com/AdameMedia/status/2033737235258822889) - This highlights direct challenges to those perceived as instigating conflict.
+    - @AdameMedia: "If America or Israel attack Iran's nuclear sites then Iran WILL develop a nuke. The US military is severely underestimating Iran just like Yemen." (https://x.com/AdameMedia/status/2034008898173067520) - Reinforces the narrative of escalating tensions and underestimation of opposing forces.
+    - @AdameMedia: "George Galloway: 'Israelis are used to slaughtering refugees in camps; dropping 2,000-pound bombs on tents; assassinating children; invading; massacring.'" (https://x.com/AdameMedia/status/2033997893720330301) - Strongly frames a specific side of the conflict as engaging in atrocities.
+    - @AdameMedia: "The American empire/Uni-polar world is over. BRICS and the multi-polar world is here. The strait of Hormuz is closed to America and its allies. And they cant open it. The strait of Hormuz is OPEN" (https://x.com/AdameMedia/status/2034023356538716441) - Reaffirms the shift in global power dynamics and challenges to existing hegemony.
+- **Information Control & National Sovereignty (New Signal):**
+    - @BRICSinfo: "JUST IN: Iran confiscates large number of Starlink satellite systems." (https://x.com/BRICSinfo/status/2034090301308965208) - A concrete example of a nation asserting control over information infrastructure within its borders, which has implications for communication and sovereignty.
