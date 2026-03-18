@@ -144,6 +144,40 @@ function recallForMention(text, limit = 5) {
   }
 }
 
+// ── 3b. Account lookup — find accounts discussing this topic ────────────────
+/**
+ * Query the posts table for accounts whose posts match keywords from the mention.
+ * Returns an array of { username, post_count, sample_text } objects — real
+ * accounts Sebastian has observed, suitable for citing in replies.
+ */
+function accountsForTopic(text, limit = 8) {
+  try {
+    const keywords = extractKeywords(text, 6);
+    if (!keywords.length) return [];
+    // Build a LIKE-based query — FTS5 is on memory, not posts
+    const words = [...new Set(keywords.flatMap(k => k.split(/\s+/)))];
+    if (!words.length) return [];
+    const likeClauses = words.slice(0, 4).map(() => "text LIKE ?").join(" OR ");
+    const params = words.slice(0, 4).map(w => `%${w}%`);
+    const sql = `
+      SELECT username, COUNT(*) as post_count,
+             MAX(text) as sample_text
+      FROM posts
+      WHERE (${likeClauses})
+        AND username != 'SebastianHunts'
+        AND username != ''
+      GROUP BY username
+      ORDER BY post_count DESC
+      LIMIT ?
+    `;
+    const dbInstance = db.raw();
+    if (!dbInstance) return [];
+    return dbInstance.prepare(sql).all(...params, limit);
+  } catch {
+    return [];
+  }
+}
+
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
 /**
@@ -189,7 +223,7 @@ function loadBeliefContext() {
 }
 
 // ── 5. Gemini: classify + draft with full context ─────────────────────────────
-async function geminiClassify(item, threadContext = [], memoryHints = [], userHistory = null) {
+async function geminiClassify(item, threadContext = [], memoryHints = [], userHistory = null, topicAccounts = []) {
   const apiKey = process.env.GOOGLE_API_KEY_TWEET || process.env.GOOGLE_API_KEY;
   if (!apiKey) throw new Error("No Gemini API key (GOOGLE_API_KEY_TWEET or GOOGLE_API_KEY)");
 
@@ -223,11 +257,21 @@ async function geminiClassify(item, threadContext = [], memoryHints = [], userHi
     userBlock = `\nPrior exchanges with @${item.from_username} (${userHistory.reply_count} total):\n${prior}\n\nReference prior exchanges if relevant. Do not repeat what was already said.\n`;
   }
 
+  // Build accounts block — real accounts Sebastian has observed discussing this topic
+  let accountBlock = "";
+  if (topicAccounts && topicAccounts.length > 0) {
+    accountBlock = "\nAccounts you've seen discussing this topic (cite these when asked for sources):\n" +
+      topicAccounts.map(a => {
+        const sample = (a.sample_text || "").replace(/\s+/g, " ").trim().slice(0, 150);
+        return `  @${a.username} (${a.post_count} posts) — e.g. "${sample}"`;
+      }).join("\n") + "\n";
+  }
+
   // Build belief axes + vocation context
   const beliefBlock = loadBeliefContext();
 
   const prompt = `You are Sebastian D. Hunter — a person who has spent weeks reading discourse on X and forming views. You reply like a real person, not a system.
-${beliefBlock}${threadBlock}${memoryBlock}${userBlock}
+${beliefBlock}${threadBlock}${memoryBlock}${accountBlock}${userBlock}
 The mention you are replying to:
 @${item.from_username}: "${item.text}"
 
@@ -241,6 +285,9 @@ Instructions:
      Reply with: {"verdict":"WORTHY","reply":"My handler @0xAnomalia handles that side of things — hit them up."}
    - WORTHY: genuine question, interesting pushback, thoughtful observation, anything inviting real engagement.
 4. If WORTHY, draft a reply (max 200 chars):
+   - If the person asks for specific accounts, sources, or evidence — use the
+     "Accounts you've seen" list above. Cite real @usernames you've observed.
+     Do NOT say "I don't track individual accounts" — you do.
    - Talk like a person. Short, direct sentences. Say what you think and why.
    - NEVER include internal metrics: no confidence scores, no percentages, no axis names,
      no "(0.16)", no "conf 85%", no axis labels like "Truth and Evidence".
@@ -522,12 +569,16 @@ function logInteraction(data, item, replyText, memoryHints) {
     const threadContext = await fetchThreadContext(page, item);
     console.log(`[reply] thread: ${threadContext.length} tweet(s) in view`);
 
-    // ── Step 3: Memory recall ──────────────────────────────────────────────
+    // ── Step 3: Memory recall + account lookup ────────────────────────────
     const memoryHints = recallForMention(item.text);
+    const topicAccounts = accountsForTopic(item.text);
     if (memoryHints.length > 0) {
       console.log(`[reply] memory: ${memoryHints.length} relevant entry(s) found (${memoryHints.map(m => m.title).join(", ")})`);
     } else {
       console.log(`[reply] memory: no relevant past entries`);
+    }
+    if (topicAccounts.length > 0) {
+      console.log(`[reply] accounts: ${topicAccounts.length} relevant (${topicAccounts.slice(0,3).map(a => "@"+a.username).join(", ")})`);
     }
 
     // ── Step 4: Gemini classify + draft ───────────────────────────────────
@@ -538,7 +589,7 @@ function logInteraction(data, item, replyText, memoryHints) {
 
     let verdict;
     try {
-      verdict = await geminiClassify(item, threadContext, memoryHints, userHistory);
+      verdict = await geminiClassify(item, threadContext, memoryHints, userHistory, topicAccounts);
     } catch (err) {
       console.error(`[reply] Gemini error: ${err.message}`);
       item.status = "error";
