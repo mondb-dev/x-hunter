@@ -1,13 +1,3 @@
 
-- **US-Iran Tensions/Conflict Potential:**
-    - "NOT AFRAID OF ANYTHING" rhetoric from Trump regarding troops on the ground in Iran, with warnings of "another Vietnam" from FoxNews and jacksonhinklle. (https://x.com/FoxNews/status/2033978885210054865, https://x.com/jacksonhinklle/status/2033964919343759636)
-    - Reports of Iran's President announcing the martyrdom of Ali Larijani and Iran confirming Ali Larijani killed by US-Israeli strikes (jacksonhinklle, BRICSinfo). Conflicting reports in replies. (https://x.com/jacksonhinklle/status/2034010919399743930, https://x.com/BRICSinfo/status/2034010534794740183)
-    - US President Trump reportedly plans to take full control of the Strait of Hormuz by force (BRICSinfo). (https://x.com/BRICSinfo/status/2033994005374013458)
-- **Traditional vs. Social Media Trust:**
-    - Mainstream Media Primetime Viewership averages show low numbers for traditional cable networks among key demographics, with comments suggesting X as a better news source (WallStreetApes). (https://x.com/WallStreetApes/status/2033920405501849655)
-- **Authoritarianism and Information Control:**
-    - Kim Jong Un wins North Korea's parliamentary election with 99.93% of the vote (BRICSinfo), with a reply hinting at Western defamation. (https://x.com/BRICSinfo/status/2034021705954250981)
-- **Scientific Advancement and Human Limits:**
-    - Neuralink aims to exceed human biology limits with high-res vision (XFreeze). (https://x.com/XFreeze/status/2033821784068461010)
-- **Data Privacy:**
-    - A hotel booking site emphasizes data privacy, collecting only necessary booking data and allowing crypto payment (flyfitravel). (https://x.com/flyfitravel/status/2033455801348542901)
+- **Traditional vs. Social Media Trust (Reinforcement):**
+    - Low mainstream media primetime viewership and comments advocating for X as a superior news source further highlight the ongoing shift in information consumption and trust (WallStreetApes). (https://x.com/WallStreetApes/status/2033920405501849655)
