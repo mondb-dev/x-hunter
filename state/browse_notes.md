@@ -1,26 +1,10 @@
-
-**Browse Notes - 2026-03-19 20:06**
-
-*   **Escalating Conflict & Information War:**
-    *   The "Japanese Report" cluster regarding Trump's Pearl Harbor comment continues to trend, highlighting strong reactions and diplomatic tensions. [SPRINT: research_iran_conflict]
-        *   Source: @Daractenus, @EdKrassen, @BRICSinfo
-    *   Persistent, though unconfirmed, reports of an American F-35 jet being hit by Iranian air defenses, fueling an information war. [SPRINT: research_iran_conflict]
-        *   Source: @EthanLevins2, @jacksonhinklle
-    *   Netanyahu's live appearance to refute death rumors, immediately met with speculation of AI manipulation, underscores the challenge of verifying information in crises. [SPRINT: research_iran_conflict]
-        *   Source: @BRICSinfo, @MarioNawfal, @krassenstein
-
-*   **Human Rights & Authoritarian Control:**
-    *   Execution of a 19-year-old wrestler in Iran for "waging war against God," with confession extracted under torture, is a stark instance of human rights violation and authoritarianism. [SPRINT: research_iran_conflict]
-        *   Source: @CollinRugg, @MarioNawfal
-    *   Alleged statements by Netanyahu suggesting a disregard for traditional morality in favor of ruthless power, if verified, would be significant. [SPRINT: research_iran_conflict]
-        *   Source: @AdameMedia
-
-*   **Domestic Issues & Economic Disparities:**
-    *   New York City's homeless spending exceeding the median income per person highlights a significant domestic issue and resource allocation challenges.
-        *   Source: @GuntherEagleman
-    *   China's halt on fertilizer exports (nitrogen and potassium) poses a new global economic tension, particularly for nations like Japan, and threatens food prices.
-        *   Source: @Eng_china5
-
-*   **AI & Society:**
-    *   Elon Musk promoting Grok for meme creation contrasts with Senator Bernie Sanders' concerns about AI collecting personal data and violating privacy rights, creating a tension around AI's societal impact and ethical boundaries.
-        *   Source: @elonmusk, @SenSanders
+@cryptogoos: "BREAKING: Qatar Gas CEO says: We incurred a $20 billion loss at the facility we built for $26 billion two years ago." https://x.com/cryptogoos/status/2034671394743542240 [SPRINT: research]
+@ProudSocialist: "Trump just threatened to nuke Iran: “The power of some of this weaponry is unthinkable...You could end this thing in 2 seconds if you wanted to.”" https://x.com/ProudSocialist/status/2034700713368998253 [CURIOSITY: discourse_conflict_pattern] [SPRINT: research]
+@BRICSinfo: "JUST IN: Israeli Prime Minister Netanyahu says "Jesus Christ has no advantage over Genghis Khan." "If you are strong enough, ruthless enough, and powerful enough, evil will overcome good."" https://x.com/BRICSinfo/status/2034719941534916653 [SPRINT: research]
+@EricLDaugh: "JUST IN: Israel PM Benjamin Netanyahu sends a message to the world "I just want to say I'm alive. And you're all witnesses." Iran's turn!" https://x.com/EricLDaugh/status/2034707155425657080 [CURIOSITY: discourse_conflict_pattern] [SPRINT: research]
+@FurkanGozukara: "BOMBSHELL: Netanyahu accidentally reveals the REAL reason for the war. It has nothing to do with nukes. He admits the plan is to build oil pipelines through the Middle East straight to Israeli ports" https://x.com/FurkanGozukara/status/2034717926113083889 [CURIOSITY: discourse_conflict_pattern] [SPRINT: research]
+@FoxNews: "'BARBARIC MOVE': The Iranian regime carried out the public execution of a 19-year-old wrestler despite U.S. pressure and global pleas against the move." https://x.com/FoxNews/status/2034720350051660244 [SPRINT: research]
+@FoxNews: "BREAKING: "We didn't tell anybody about [Iran] because we wanted surprise. Who knows better about surprise than Japan? Why didn't you tell me about Pearl Harbor?" - President Trump" https://x.com/FoxNews/status/2034672227422011549 [CURIOSITY: discourse_conflict_pattern] [SPRINT: research]
+@jacksonhinklle: "BREAKING: US authorizes sale and delivery of Russian oil loaded on vessels as of March 12, 2026." https://x.com/jacksonhinklle/status/2034715304715039031 [SPRINT: research]
+@elonmusk: "Time to restore pride in Britain" https://x.com/elonmusk/status/2034736198686843149
+@Templarpilled: "100 years ago, Britain had the world's largest empire. Today, Britain is "decolonizing Shakespeare's birthplace."" https://x.com/Templarpilled/status/2034652615460696312
