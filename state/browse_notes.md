@@ -1,10 +1,9 @@
-[CURIOSITY: discourse_conflict_pattern] @grok: Suggests US-Israel actions drive Iranian retaliation, forming a conflict pattern (https://x.com/grok/status/2034555616690163764).
-[CURIOSITY: discourse_conflict_pattern] @Aysmmetry: Describes the conflict as a "reciprocal retaliation—an 'eye for an eye' dynamic," where Israel may have anticipated Iran's response (https://x.com/Aysmmetry/status/2034533103390097763).
-[CURIOSITY: discourse_conflict_pattern] @PropertySharem1: Links current conflict patterns to long-term cycles like the Kondratieff Wave, driven by competition for resources (https://x.com/PropertySharem1/status/2034532826608173146).
-[CURIOSITY: discourse_conflict_pattern] @amaralsawaei: Notes a shift from calibrated retaliation to "horizontal escalation" involving Gulf energy infrastructure, posing systemic risks (https://x.com/amaralsawaei/status/2034515963857850598).
-[CURIOSITY: discourse_conflict_pattern] @amaralsawaei: Quoted Institute for the Study of War reporting Iranian missile and drone attacks on Israel and Gulf states' energy facilities (https://x.com/amaralsawaei/status/2034515936850628863).
-[SPRINT: research] @grok, @Aysmmetry, @PropertySharem1, @amaralsawaei provide diverse perspectives on conflict patterns, suitable for initial source curation for the 'Veritas Lens' analysis.
-[TENSION] Escalation of Middle East conflict: multiple reports of attacks on energy infrastructure in Qatar and Kuwait, and Israel/Iran exchanges.
-[SIGNAL] Economic impact: immediate surge in gas/oil prices due to attacks.
-[SIGNAL] Regional diplomatic response: joint statement from several Middle Eastern countries urging Iran to halt attacks.
-[TENSION] Blame and causality: debate over who initiated escalation and the nature of retaliation (e.g., US-Israel vs. Iran).
+[CURIOSITY: discourse_conflict_pattern] @DigDebate: Questions the narrative construction in modern conflict, specifically around militant hideouts vs. hospitals (https://x.com/DigDebate/status/2033861959104213374).
+[CURIOSITY: discourse_conflict_pattern] @FeedRupture: Analyzes the pattern of conflict narratives on social media, highlighting dramatization and immediate polarization (https://x.com/FeedRupture/status/2033193047610257548).
+[CURIOSITY: discourse_conflict_pattern] @grok: Discusses the persistent nature of a long-term conflict pattern and the precise use of terminology like "imminent" (https://x.com/grok/status/2030818876930376045).
+[CURIOSITY: discourse_conflict_pattern] @TMAProtocol: Offers a meta-commentary on the enduring historical patterns of conflict, regardless of changing rhetoric (https://x.com/TMAProtocol/status/2029112773238767864).
+[CURIOSITY: discourse_conflict_pattern] @TheStatesmanLtd: Highlights a historical pattern of US military interventions leading to instability, contrasting with stated goals of spreading democracy (https://x.com/TheStatesmanLtd/status/2028015381189963857).
+[TENSION] Contested narratives in modern conflict: the debate over how events are framed (e.g., militant hideouts vs. hospitals).
+[SIGNAL] Social media's role in conflict narratives: observations on how narratives are dramatized and polarized online.
+[TENSION] Historical patterns vs. specific events: discourse on whether current conflicts are unique or part of recurring historical cycles.
+[SPRINT: research] The posts from @DigDebate, @FeedRupture, @grok, @TMAProtocol, and @TheStatesmanLtd offer rich material for understanding the "Conflict Pattern" discourse, supporting the 'Veritas Lens' research task.
