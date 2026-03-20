@@ -110,6 +110,88 @@ function stanceSummary(axes) {
   }).join("\n");
 }
 
+// ── Conviction tiers ─────────────────────────────────────────────────────────
+
+/**
+ * Compute a conviction tier based on the relevant axes for THIS tweet.
+ *
+ * Tiers:
+ *   "exploring"  — mean confidence < 0.3 or no relevant axes
+ *   "forming"    — mean confidence 0.3–0.6
+ *   "convicted"  — mean confidence > 0.6 AND mean |score| > 0.3
+ *
+ * Returns { tier, meanConf, meanLean, maxChars, voiceDirective }
+ */
+function computeConviction(axes) {
+  if (!axes.length) {
+    return {
+      tier: "exploring",
+      meanConf: 0,
+      meanLean: 0,
+      maxChars: 180,
+      voiceDirective: VOICE_EXPLORING,
+    };
+  }
+
+  const meanConf = axes.reduce((s, a) => s + (a.confidence || 0), 0) / axes.length;
+  const meanLean = axes.reduce((s, a) => s + Math.abs(a.score || 0), 0) / axes.length;
+
+  if (meanConf > 0.6 && meanLean > 0.3) {
+    return {
+      tier: "convicted",
+      meanConf,
+      meanLean,
+      maxChars: 260,
+      voiceDirective: VOICE_CONVICTED,
+    };
+  }
+
+  if (meanConf >= 0.3) {
+    return {
+      tier: "forming",
+      meanConf,
+      meanLean,
+      maxChars: 220,
+      voiceDirective: VOICE_FORMING,
+    };
+  }
+
+  return {
+    tier: "exploring",
+    meanConf,
+    meanLean,
+    maxChars: 180,
+    voiceDirective: VOICE_EXPLORING,
+  };
+}
+
+const VOICE_EXPLORING = `Sebastian's conviction on this topic is LOW. He is still watching and gathering.
+
+Voice at this tier:
+- Ask questions more than make statements.
+- Keep it SHORT — one pointed question or a single tentative observation.
+- Lead with curiosity: "I keep seeing X but nobody explains Y" / "Genuine question: ..."
+- Do NOT pretend certainty. Do NOT hedge so much it says nothing.
+- Aim for ≤ 180 characters. Brevity signals honest uncertainty.`;
+
+const VOICE_FORMING = `Sebastian's conviction on this topic is MODERATE. He sees a pattern but isn't sure yet.
+
+Voice at this tier:
+- State the observation clearly, but acknowledge the gap between pattern and conclusion.
+- Can be more assertive than a question — "Here's what I keep noticing: ..." / "The pattern is hard to ignore: ..."
+- Still concede what he doesn't know, but the emphasis shifts from asking to noticing.
+- Aim for ≤ 220 characters. Say enough to frame the observation; not so much that it overreaches.`;
+
+const VOICE_CONVICTED = `Sebastian's conviction on this topic is HIGH. He has strong evidence and a clear lean.
+
+Voice at this tier:
+- Take a real position. Say what he thinks and why, plainly.
+- Be poignant — find the sharpest, most honest way to say it.
+- Can be longer — use the space to ground the claim in what he's seen.
+- No hedging into mush. He earned this opinion through evidence.
+- "I've watched this for weeks. The evidence points one way: ..." / "This isn't ambiguous anymore: ..."
+- Aim for up to 260 characters. Use the length to say something that matters, not to pad.`;
+
 // ── Main ──────────────────────────────────────────────────────────────────────
 
 (async () => {
@@ -176,10 +258,11 @@ function stanceSummary(axes) {
   // Find relevant axes
   const relevant = findRelevantAxes(tweetText, axes);
   const stance = stanceSummary(relevant);
+  const conviction = computeConviction(relevant);
 
-  console.log(`[voice_filter] found ${relevant.length} relevant axes for draft`);
+  console.log(`[voice_filter] found ${relevant.length} relevant axes for draft — conviction tier: ${conviction.tier} (conf=${conviction.meanConf.toFixed(2)}, lean=${conviction.meanLean.toFixed(2)}, maxChars=${conviction.maxChars})`);
 
-  // Build voice prompt
+  // Build voice prompt — conviction tier shapes the style directive
   const prompt =
 `You are a voice editor for Sebastian D. Hunter's tweets.
 
@@ -188,18 +271,22 @@ ${PERSONA}
 Sebastian's current stance on topics related to this tweet:
 ${stance}
 
+── CONVICTION TIER: ${conviction.tier.toUpperCase()} ──
+${conviction.voiceDirective}
+
 ORIGINAL TWEET DRAFT:
 "${tweetText}"
 
 YOUR TASK:
 Revise this tweet so it sounds authentically like Sebastian — grounded in his actual current beliefs shown above.
-If the draft already sounds like Sebastian, return it unchanged.
+Match the conviction tier above: ${conviction.tier === "convicted" ? "be direct, take the position, use up to the full length to say something pointed" : conviction.tier === "forming" ? "observe clearly, concede what's unknown, moderate length" : "ask more than assert, keep it tight and curious"}.
+If the draft already sounds like Sebastian at this conviction level, return it unchanged.
 
 Rules:
 - Keep the core insight intact. Do not change what the tweet is about.
 - Adjust tone, word choice, and framing to match Sebastian's voice and current position.
 - If his axes show he leans a certain way on this topic, the tweet should reflect that lean naturally — not by stating the score, but through how he frames and reacts to the observation.
-- Keep it under 260 characters (leave room for the journal URL).
+- Keep it under ${conviction.maxChars} characters (leave room for the journal URL).
 - Return ONLY the revised tweet text — nothing else. No quotes, no explanation, no labels.`;
 
   let revised;
@@ -222,8 +309,8 @@ Rules:
     process.exit(0);
   }
 
-  if (revised.length > 260) {
-    console.log(`[voice_filter] revision too long (${revised.length} chars) — keeping original`);
+  if (revised.length > conviction.maxChars) {
+    console.log(`[voice_filter] revision too long (${revised.length} > ${conviction.maxChars} chars for ${conviction.tier} tier) — keeping original`);
     process.exit(0);
   }
 
