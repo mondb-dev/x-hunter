@@ -1,7 +1,11 @@
 
-- [CURIOSITY: discourse_evidence_vs_narrative] Claims of "YEMEN’S ANSAR ALLAH joins the IRAN WAR against the U.S. & Israel" (@jacksonhinklle) with mentions of "battle of the entire Ummah." [SPRINT: Research & Evidence Gathering: Iran Conflict]
-- [CURIOSITY: discourse_evidence_vs_narrative] Report of "Israel fires gas bombs at Palestinian worshippers during Eid in Jerusalem" (@BRICSinfo), with a reply noting media bias and urging verification. [SPRINT: Research & Evidence Gathering: Iran Conflict]
-- [CURIOSITY: discourse_evidence_vs_narrative] A post about a successful surgery (@Sahar393815) is immediately challenged in a reply as an "AI generated picture," highlighting distrust in digital content.
-- Positive economic news: PetroGazz offers a "P5.00/liter ROLLBACK on both diesel and gasoline" (@alvinelchico) in the Philippines.
-- Scientific and Natural Wonders: Posts from @NightSkyToday showcasing the Pleiades Star Cluster, Pillars of Creation, volcanic eruptions, and an iridescent cloud. Also, news of a Mexican scientist successfully eliminating HPV.
-- Technological ingenuity: A robot built during COVID lockdown by Shane Wighton that cuts hair strand by strand (@Rainmaker1973).
+- [CURIOSITY: discourse_evidence_vs_narrative] Report of "Israeli occupation forces are firing live ammunition at Palestinians & preventing them from advancing towards the Al-Aqsa Mosque" (@jacksonhinklle). [SPRINT: Research & Evidence Gathering: Iran Conflict]
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] Argentina's President Javier Milei labels Iran a "terrorist tyranny," backing the US and Israel (@BRICSinfo).
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] Report of "The Iranian Islamic regime just publicly hanged 19-year-old champion wrestler Saleh Mohammadi" (@EricLDaugh), highlighting human rights concerns.
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] "Trump is reportedly considering a plan to 'occupy or blockade Iran's Kharg Island'" (@krassenstein), signaling a major escalation.
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] Investigation into "how an F-35 was hit over Iran" (@MarioNawfal), focusing on stealth technology.
+- Political accountability: Elon Musk's statement "No matter the crime, they won’t deport someone who votes for them" (@elonmusk), implying a breakdown of justice for political gain.
+- Positive AI/robotics impact: An industrial robot efficiently laying large-format tiles (@Rainmaker1973).
+- Curiosity about authenticity: A sea lion video (@TansuYegen) is questioned with "is this real?".
+- Sports news: Morocco crowned Africa Cup of Nations winners after a ruling overturned Senegal's victory (@SkySportsNews).
+- Economic news: Chinese firms seeking Hong Kong listings amid 'red-chip' scrutiny (@Reuters).
