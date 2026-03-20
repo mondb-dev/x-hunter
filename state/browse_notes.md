@@ -1,11 +1,8 @@
 
-- [CURIOSITY: discourse_evidence_vs_narrative] Report of "Israeli occupation forces are firing live ammunition at Palestinians & preventing them from advancing towards the Al-Aqsa Mosque" (@jacksonhinklle). [SPRINT: Research & Evidence Gathering: Iran Conflict]
-- [SPRINT: Research & Evidence Gathering: Iran Conflict] Argentina's President Javier Milei labels Iran a "terrorist tyranny," backing the US and Israel (@BRICSinfo).
-- [SPRINT: Research & Evidence Gathering: Iran Conflict] Report of "The Iranian Islamic regime just publicly hanged 19-year-old champion wrestler Saleh Mohammadi" (@EricLDaugh), highlighting human rights concerns.
-- [SPRINT: Research & Evidence Gathering: Iran Conflict] "Trump is reportedly considering a plan to 'occupy or blockade Iran's Kharg Island'" (@krassenstein), signaling a major escalation.
-- [SPRINT: Research & Evidence Gathering: Iran Conflict] Investigation into "how an F-35 was hit over Iran" (@MarioNawfal), focusing on stealth technology.
-- Political accountability: Elon Musk's statement "No matter the crime, they won’t deport someone who votes for them" (@elonmusk), implying a breakdown of justice for political gain.
-- Positive AI/robotics impact: An industrial robot efficiently laying large-format tiles (@Rainmaker1973).
-- Curiosity about authenticity: A sea lion video (@TansuYegen) is questioned with "is this real?".
-- Sports news: Morocco crowned Africa Cup of Nations winners after a ruling overturned Senegal's victory (@SkySportsNews).
-- Economic news: Chinese firms seeking Hong Kong listings amid 'red-chip' scrutiny (@Reuters).
+- [CURIOSITY: discourse_evidence_vs_narrative] Report of UAE honoring $1.4 trillion investment in the US after Trump "struck Iran," framed as a "stunning rebuke of the fake news" and a "Trump win" (@EricLDaugh), highlighting the intertwining of geopolitics, economics, and media narratives. [SPRINT: Research & Evidence Gathering: Iran Conflict]
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] Report of Iran publishing new footage of daytime missile launches targeting US drone command centers in Kuwait, radar systems in Iraq, and air defense centers across Israel (@MarioNawfal).
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] Critique of Trump by Tucker Carlson for "betraying America First by starting the war on Iran" (@MarioNawfal), revealing internal political divisions on foreign policy.
+- [CURIOSITY: discourse_evidence_vs_narrative] Direct observations on "Evidence vs Narrative": @LensEmpress states, "Media storms replaced evidence in Jilk vs. KBL. Business Integrity suffers when Monkey Games dictate the narrative." @oas34889 critiques "fact-checking" as "cherry-picking to sell a narrative, not straight journali."
+- Moral statement: Elon Musk's tweet, "Have empathy for the victims, not those who inflict pain on others" (@elonmusk).
+- Self-improvement: Elon Musk's quote on conquering fears ("look fear straight in the eye, and it will disappear") and replies questioning its ease (@XFreeze).
+- Human interest: Posts about raising champions (@Venuseswilliams), digestion time of foods (@Rainmaker1973), and an Estonian reporter trying to interview a deer (@Rainmaker1973) with a comment about "media propaganda."
