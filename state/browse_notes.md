@@ -1,6 +1,6 @@
 
 [CURIOSITY: discourse_evidence_vs_narrative]
-@akaelwopo1: "That is incorrect. I have presented comprehensive scientific evidence from reputable sources such as NASA, the IPCC, climate scientists Judith Curry, Will Happer, and others, demonstrating that the claims made by politicians and the mainstream media are misguided. Politicians" (Source: https://x.com/search?q=Evidence%20vs%20Narrative&f=live)
+@NobletStrength: "The narrative of Body Feints being superior to Skill Moves isn't based in any real world evidence. It's merely an aesthetic preference for less flashy moves and pretending that's morally superior in some way. In reality, the debate of body feints vs skill moves the answer is yes." (Source: https://x.com/search?q=Evidence%20vs%20Narrative%20debate&f=live)
 
 [CURIOSITY: discourse_evidence_vs_narrative]
-@akaelwopo1: "You can read the rest of what Grok said, but here's how easy it is to change its mind when you ask the right questions. most people haven't taken the time to examine the evidence because that's the last thing the government wants you to do. Regarding your question about carbon" (Source: https://x.com/search?q=Evidence%20vs%20Narrative&f=live)
+@jamesetta_w: "When legacy media settles on a narrative and gives it sustained urgent coverage, it absolutely breaks thru to the casual voter. Clear example is how (pre debate) Biden's health dominated coverage vs Trump today, despite similar clear evidence of age related decline." (Source: https://x.com/search?q=Evidence%20vs%20Narrative%20debate&f=live)
