@@ -801,7 +801,11 @@ Tasks:
    NOT acceptable: "this claim conflates X", "demands scrutiny", "risks premature judgment" — press release language.
    NOT acceptable: internal metrics in the tweet — no "conf 95%", "score 0.40", "(confidence: X)".
    ACCEPTABLE: a direct response to what this specific tweet actually says, from your position on the axis.
-   The reader must be able to see why THIS tweet provoked THIS response. Max 240 chars.
+   The reader must be able to see why THIS tweet provoked THIS response.
+   HARD LIMIT: Max 240 characters. Count them. If it is over 240 when you re-read, CUT WORDS
+   until it fits. Example of 240 chars: "Iran claims Kharg Island is off-limits. But three
+   analysts I follow say the US has already mapped extraction routes. The gap between rhetoric
+   and operational reality keeps widening." — that is exactly 228 chars. Aim for that density.
    VOICE: Write like a person, not an analyst. Short, direct sentences. Say what the tweet
    claims, then say what you actually think about it. If it sounds like a report, rewrite it.
 
@@ -1027,8 +1031,9 @@ Tasks (in order, no browser):
       log, rewrite it until it sounds like something a thoughtful person would say
       over coffee.
 4. Write state/tweet_draft.txt (plain text, overwrite):
-   Line 1: your insight sentence (REQUIRED — must not be empty)
+   Line 1: your insight sentence (REQUIRED — must not be empty, max ~230 chars)
    Line 2: https://sebastianhunter.fun/journal/${TODAY}/${HOUR}
+   BOTH LINES ARE REQUIRED. Line 2 is always the journal URL — never omit it.
    Total length <= 280 chars. Do NOT write only the URL — if line 1 is empty the tweet is worthless.
    Do NOT write to state/posts_log.json — the runner owns that file.
    IMPORTANT: for Option A (sprint) tweets, write the tweet in state/tweet_draft.txt.
@@ -1100,6 +1105,20 @@ TWEETMSG
 
     # ── Detect drift / change points in belief axes ────────────────────────
     node "$PROJECT_ROOT/runner/detect_drift.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+
+    # ── Auto-append journal URL if agent forgot it ──────────────────────────
+    if [ -f "$PROJECT_ROOT/state/tweet_draft.txt" ]; then
+      _DRAFT_CONTENT=$(cat "$PROJECT_ROOT/state/tweet_draft.txt")
+      _DRAFT_LINE1_FIX=$(echo "$_DRAFT_CONTENT" | head -n1)
+      _DRAFT_LINE2_FIX=$(echo "$_DRAFT_CONTENT" | sed -n '2p')
+      _EXPECTED_URL="https://sebastianhunter.fun/journal/${TODAY}/${HOUR}"
+      if [ "$_DRAFT_LINE1_FIX" != "SKIP" ] && [ -n "$_DRAFT_LINE1_FIX" ]; then
+        if [ -z "$_DRAFT_LINE2_FIX" ] || ! echo "$_DRAFT_LINE2_FIX" | grep -q "^https://"; then
+          echo "[run] tweet_draft.txt missing journal URL on line 2 — auto-appending"
+          printf "%s\n%s\n" "$_DRAFT_LINE1_FIX" "$_EXPECTED_URL" > "$PROJECT_ROOT/state/tweet_draft.txt"
+        fi
+      fi
+    fi
 
     # ── Critique gate: Ollama specificity + falsifiability check ─────────────
     if [ -f "$PROJECT_ROOT/state/tweet_draft.txt" ]; then

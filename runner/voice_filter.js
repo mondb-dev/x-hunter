@@ -389,8 +389,38 @@ Rules:
   }
 
   if (revised.length > conviction.maxChars) {
-    console.log(`[voice_filter] revision too long (${revised.length} > ${conviction.maxChars} chars for ${conviction.tier} tier) — keeping original`);
-    process.exit(0);
+    console.log(`[voice_filter] revision too long (${revised.length} > ${conviction.maxChars} chars for ${conviction.tier} tier)`);
+
+    // If original is ALSO over 280 (the hard posting limit), retry with an explicit
+    // "shorten" prompt instead of falling back to a still-too-long original.
+    const HARD_LIMIT = 280;
+    if (tweetText.length > HARD_LIMIT) {
+      console.log(`[voice_filter] original also over ${HARD_LIMIT} (${tweetText.length}) — retrying with shorten prompt`);
+      const shortenPrompt = `Shorten this tweet to UNDER ${Math.min(conviction.maxChars, HARD_LIMIT - 10)} characters. Keep the core point. Cut adjectives and qualifiers ruthlessly. Return ONLY the shortened text, nothing else.\n\n"${tweetText}"`;
+      try {
+        let shortened = (await callOllama(shortenPrompt))
+          .replace(/^["']|["']$/g, "")
+          .replace(/^(Revised|Tweet|Output|Result|Here|Shortened)[:.]?\s*/i, "")
+          .replace(/\n.*/s, "")
+          .trim();
+        if (shortened && shortened.length >= 10 && shortened.length <= HARD_LIMIT) {
+          console.log(`[voice_filter] shortened to ${shortened.length} chars: "${shortened.slice(0, 60)}..."`);
+          revised = shortened;
+        } else {
+          // Last resort: hard truncate at sentence boundary
+          const truncated = tweetText.slice(0, HARD_LIMIT - 3).replace(/\s\S*$/, "") + "...";
+          console.log(`[voice_filter] shorten retry failed (${shortened?.length || 0} chars) — hard truncating to ${truncated.length}`);
+          revised = truncated;
+        }
+      } catch (retryErr) {
+        const truncated = tweetText.slice(0, HARD_LIMIT - 3).replace(/\s\S*$/, "") + "...";
+        console.log(`[voice_filter] shorten retry error: ${retryErr.message} — hard truncating`);
+        revised = truncated;
+      }
+    } else {
+      console.log(`[voice_filter] keeping original (${tweetText.length} chars, under ${HARD_LIMIT})`);
+      process.exit(0);
+    }
   }
 
   // Don't accept if it's radically different (cosine similarity proxy)
