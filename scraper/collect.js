@@ -452,6 +452,26 @@ async function scrapeNotifications(page) {
   const selected = scored.slice(0, TOP_POSTS);
   console.log(`[scraper] selected ${selected.length} posts (top by velocity+trust+alignment+novelty)`);
 
+  // ── Phase 5b: Capture media screenshots (before reply-fetch navigates away) ─
+  const mediaPosts = selected.filter(p => p.mediaType && p.mediaType !== "none");
+  const capturedMedia = [];  // {postId, base64, mimeType, context, mediaType}
+  if (mediaPosts.length > 0) {
+    console.log(`[scraper] ${mediaPosts.length} posts with media — capturing screenshots...`);
+    for (const post of mediaPosts.slice(0, 10)) {
+      const shot = await captureMediaScreenshot(page, post.id);
+      if (shot) {
+        capturedMedia.push({
+          postId:    post.id,
+          base64:    shot.base64,
+          mimeType:  shot.mimeType,
+          context:   post.text,
+          mediaType: post.mediaType,
+        });
+      }
+    }
+    console.log(`[scraper] captured ${capturedMedia.length}/${mediaPosts.slice(0, 10).length} media screenshots`);
+  }
+
   // ── Phase 6: Fetch top replies for highest-scoring posts ──────────────────
   const withReplies = [];
   for (const post of selected.slice(0, REPLY_FETCH_COUNT)) {
@@ -470,52 +490,18 @@ async function scrapeNotifications(page) {
   const trimmed = seenArr.length > MAX_SEEN ? seenArr.slice(seenArr.length - MAX_SEEN) : seenArr;
   saveJson(SEEN_IDS, { ids: trimmed, updated_at: new Date().toISOString() });
 
-  // ── Phase 6b: Vision — describe images & video thumbnails ─────────────────
-  const mediaPosts = withReplies.filter(p => p.mediaType && p.mediaType !== "none");
+  // ── Phase 6b: Vision — send captured screenshots to Gemini for description ─
   const mediaDescriptions = new Map();  // postId → description
-  if (mediaPosts.length > 0) {
-    console.log(`[scraper] ${mediaPosts.length} posts with media — capturing screenshots for vision...`);
-
-    // Navigate back to home feed so we can screenshot the media elements
+  if (capturedMedia.length > 0) {
+    console.log(`[scraper] sending ${capturedMedia.length} media items to Gemini vision...`);
     try {
-      await page.goto("https://x.com/home", { waitUntil: "domcontentloaded", timeout: 20_000 });
-      await page.waitForSelector('article[data-testid="tweet"]', { timeout: 12_000 });
-      await new Promise(r => setTimeout(r, 2_000));
-      // Scroll to load more (same as initial load)
-      for (let i = 0; i < 3; i++) {
-        await page.evaluate(() => window.scrollBy(0, 1200));
-        await new Promise(r => setTimeout(r, 1_200));
+      const descriptions = await describeMedia(capturedMedia);
+      for (const [postId, desc] of descriptions) {
+        mediaDescriptions.set(postId, desc);
       }
+      console.log(`[scraper] vision described ${descriptions.size}/${capturedMedia.length} media items`);
     } catch (err) {
-      console.warn(`[scraper] could not re-load feed for vision: ${err.message}`);
-    }
-
-    // Capture screenshots of media elements (limit to top 10 to control costs)
-    const mediaItems = [];
-    for (const post of mediaPosts.slice(0, 10)) {
-      const shot = await captureMediaScreenshot(page, post.id);
-      if (shot) {
-        mediaItems.push({
-          postId:    post.id,
-          base64:    shot.base64,
-          mimeType:  shot.mimeType,
-          context:   post.text,
-          mediaType: post.mediaType,
-        });
-      }
-    }
-
-    if (mediaItems.length > 0) {
-      console.log(`[scraper] sending ${mediaItems.length} media items to Gemini vision...`);
-      try {
-        const descriptions = await describeMedia(mediaItems);
-        for (const [postId, desc] of descriptions) {
-          mediaDescriptions.set(postId, desc);
-        }
-        console.log(`[scraper] vision described ${descriptions.size}/${mediaItems.length} media items`);
-      } catch (err) {
-        console.warn(`[scraper] vision batch failed: ${err.message}`);
-      }
+      console.warn(`[scraper] vision batch failed: ${err.message}`);
     }
   }
   // Attach descriptions to posts for digest formatting
