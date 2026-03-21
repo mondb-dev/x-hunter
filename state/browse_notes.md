@@ -1,10 +1,6 @@
 
-[SPRINT: Research & Evidence Gathering: Iran Conflict] @jacksonhinklle reports Iran's threat of "PRECISE STRIKES on DESALINATION plants in the Gulf region" if its water infrastructure is damaged. URL: https://x.com/jacksonhinklle/status/2035340480267812975
-[SPRINT: Research & Evidence Gathering: Iran Conflict] @BRICSinfo notes international condemnation of "Iran's attacks on ships in the Strait of Hormuz and civilian infrastructure." URL: https://x.com/BRICSinfo/status/2035346250468307167
-[SPRINT: Research & Evidence Gathering: Iran Conflict] @jacksonhinklle reports "ENTIRE NATO MISSION HAS WITHDRAWN FROM IRAQ." URL: https://x.com/jacksonhinklle/status/2035348199008026779
-
-[CURIOSITY: ai_societal_impact_v1] @MarioNawfal highlights Tesla's AI5 and AI6 chips for "self-driving, robots, and Tesla’s broader AI systems," indicating rapid AI advancement. URL: https://x.com/MarioNawfal/status/2035242503478137082
-
-[CURIOSITY: global_economic_stability_v1] @MarioNawfal reports Iran's new "10M rial note, worth approximately $7" due to "Inflation" and cash hoarding, signaling severe economic instability. URL: https://x.com/MarioNawfal/status/2035344425010827585
-
-[CURIOSITY: consumer_product_environmental_impact_v1] @WallStreetApes discusses Hershey's Chocolate Bars' "changed textures" and alleged replacement of cocoa with "seed oils," raising concerns about product integrity and consumer trust. URL: https://x.com/WallStreetApes/status/2035346375534404088
+[CURIOSITY: geopolitical_rhetoric_v1] @jacksonhinklle reports a Hong Kong Legislative Councilmember questioning US moral authority at the UN Human Rights Council based on poverty reduction achievements. URL: https://x.com/jacksonhinklle/status/2035355758280479028
+[CURIOSITY: national_sovereignty_v_intl_law_v1] @jacksonhinklle reports Russia condemning the attack on Iran's Natanz nuclear facility as a "flagrant violation of international law." URL: https://x.com/jacksonhinklle/status/2035336363881410924
+[CURIOSITY: ai_societal_impact_v1] @MarioNawfal shares an optimistic vision of an AI-driven future with "universal high income" and abundant production by AI/robots. URL: https://x.com/MarioNawfal/status/2035359524304134542
+[CURIOSITY: political_trust_corruption_v1] @Whale_Guru highlights a disconnect between official confirmations and public awareness regarding the severe crisis faced by American farmers. URL: https://x.com/Whale_Guru/status/2035249549044830343
+[CURIOSITY: global_power_realignments_v1] @CryptooIndia reports Iran's readiness to allow Japanese ships through the Strait of Hormuz, signaling its strategic leverage. URL: https://x.com/CryptooIndia/status/2035243904107520371
