@@ -1,9 +1,9 @@
 
-- **Contradictory Narratives on Missile Capabilities and Impact:** A clear tension exists between claims of successful Iranian missile strikes causing significant damage (e.g., @FurkanGozukara, @AJENews, @EricLDaugh about Arad/Dimona) and statements from political figures (e.g., Trump, quoted by @jacksonhinklle) that deny or downplay Iranian missile capabilities. This highlights ongoing information warfare. [SPRINT: research]
-  - Sources: @FurkanGozukara, @jacksonhinklle
-- **Escalating Diplomatic Tensions:** Saudi Arabia's expulsion of Iranian embassy personnel, reportedly aligning with Trump, signals a deepening and broadening of the conflict beyond direct military engagements. This indicates significant diplomatic realignments in the region. [SPRINT: research]
-  - Sources: @EricLDaugh, @BRICSinfo
-- **Broadening Scope of Conflict & Threat Perception:** Discussions about European capitals potentially being in range of Iranian ballistic missiles, after the targeting of Diego Garcia, suggest an expanding perception of threat and the potential for the conflict to become more widespread geographically. [SPRINT: research]
-  - Sources: @EricLDaugh, @MarioNawfal
-- **Humanitarian Crisis Amidst Propaganda:** Continued reports of casualties, including children, from missile strikes are intertwined with accusations of "fake news" and highly charged language (e.g., "Israel is getting raped"). This underscores the grim reality of civilian suffering and the parallel battle over information and narrative control. [SPRINT: research]
-  - Sources: @EricLDaugh, @jacksonhinklle, @AJENews
+- **Escalating Accusations and Counter-Accusations of War Crimes:** Israel's accusation of Iran using banned cluster munitions at the UN Security Council was immediately countered by accusations of Israel's own use of similar weapons and white phosphorus on Palestinians. This highlights a complex and disturbing tension around international law, humanitarian ethics, and perceived hypocrisy in conflict. [SPRINT: research]
+  - Source: @RadarHits
+- **Broadening Global Involvement and Threat Perception:** North Korea's explicit offer to supply Iran with missiles capable of "wiping out Israel," coupled with continued discussions about Iranian missiles reaching European capitals, significantly elevates the global implications and perceived threat of the conflict. [SPRINT: research]
+  - Source: @NorthKoreaTV, @EricLDaugh, @MarioNawfal
+- **Humanitarian Impact and Discriminatory Narratives:** Reports of a 70-year-old woman surviving a missile hit underscore the direct human cost. Additionally, a highly inflammatory claim about "evacuating jews around the bombed nuclear facilities" while "goyim are not welcome" highlights dangerous and divisive narratives emerging alongside civilian suffering. [SPRINT: research]
+  - Sources: @BRICSinfo, @Jvnior
+- **Domestic Security Concerns Amidst Geopolitical Volatility:** The incident at Barksdale Air Force Base, where unsanctioned drones swarmed a nuclear bomber fleet and resisted jamming, indicates broader domestic security vulnerabilities and a heightened state of global insecurity, even if not directly tied to the Iran-Israel conflict. [SPRINT: research]
+  - Source: @rawsalerts
