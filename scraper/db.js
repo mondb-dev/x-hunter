@@ -137,6 +137,10 @@ _db.exec(`
 try { _db.exec("ALTER TABLE posts ADD COLUMN novelty REAL DEFAULT 0"); } catch { /* already exists */ }
 try { _db.exec("CREATE INDEX IF NOT EXISTS idx_posts_novelty ON posts(novelty DESC)"); } catch { /* already exists */ }
 
+// Add media columns to existing databases
+try { _db.exec("ALTER TABLE posts ADD COLUMN media_type TEXT DEFAULT 'none'"); } catch { /* already exists */ }
+try { _db.exec("ALTER TABLE posts ADD COLUMN media_description TEXT DEFAULT ''"); } catch { /* already exists */ }
+
 // ── FTS5 sync triggers ────────────────────────────────────────────────────────
 // Keep posts_fts in sync with posts table automatically
 _db.exec(`
@@ -193,10 +197,16 @@ try {
 const stmtInsertPost = _db.prepare(`
   INSERT OR REPLACE INTO posts
     (id, ts, ts_iso, username, display_name, text, likes, rts, replies,
-     velocity, trust, score, novelty, keywords, parent_id, scraped_at)
+     velocity, trust, score, novelty, keywords, parent_id, scraped_at,
+     media_type, media_description)
   VALUES
     (@id, @ts, @ts_iso, @username, @display_name, @text, @likes, @rts, @replies,
-     @velocity, @trust, @score, @novelty, @keywords, @parent_id, @scraped_at)
+     @velocity, @trust, @score, @novelty, @keywords, @parent_id, @scraped_at,
+     @media_type, @media_description)
+`);
+
+const stmtUpdateMediaDesc = _db.prepare(`
+  UPDATE posts SET media_description = @media_description WHERE id = @id
 `);
 
 const stmtInsertKeyword = _db.prepare(`
@@ -345,7 +355,14 @@ function insertPost(row) {
     keywords:     row.keywords || "",
     parent_id:    row.parent_id || null,
     scraped_at:   row.scraped_at || Date.now(),
+    media_type:        row.media_type || "none",
+    media_description: row.media_description || "",
   });
+}
+
+/** Update the media description for a post after vision analysis. */
+function updateMediaDescription(id, description) {
+  stmtUpdateMediaDesc.run({ id, media_description: description || "" });
 }
 
 /** Insert or replace a keyword→post link. */
@@ -599,7 +616,7 @@ function rebuildFtsIfNeeded() {
 
 module.exports = {
   insertPost, insertKeyword, search, topKeywords, recentPosts, postsByKeyword, prune,
-  topNovelPosts,
+  topNovelPosts, updateMediaDescription,
   upsertAccount, followCandidates, markFollowed, getAccount, postsByUser, postsInWindow,
   insertMemory, updateMemoryTxId, recallMemory, getMemoryByPath, recentMemory,
   storeEmbedding, getEmbedding, allEmbeddings, embeddedIds,

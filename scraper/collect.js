@@ -35,6 +35,7 @@ const fs        = require("fs");
 const path      = require("path");
 const db        = require("./db");
 const analytics = require("./analytics");
+const { describeMedia } = require("../runner/vision");
 
 // ── Paths ─────────────────────────────────────────────────────────────────────
 const ROOT        = path.resolve(__dirname, "..");
@@ -132,11 +133,58 @@ async function extractPosts(page) {
         const rts     = art.querySelector('[data-testid="retweet"]')?.innerText || "0";
         const replies = art.querySelector('[data-testid="reply"]')?.innerText   || "0";
 
-        results.push({ id, username, displayName, text, ts, likes, rts, replies });
+        // ── Media detection ───────────────────────────────────────────────
+        // Detect images: X uses <img> tags inside tweetPhoto containers
+        const hasImages = !!art.querySelector('[data-testid="tweetPhoto"] img');
+        // Detect video: X uses videoPlayer or videoComponent containers
+        const hasVideo  = !!(art.querySelector('[data-testid="videoPlayer"]')
+                           || art.querySelector('[data-testid="videoComponent"]')
+                           || art.querySelector('video'));
+        const mediaType = hasVideo ? "video" : hasImages ? "image" : "none";
+
+        results.push({ id, username, displayName, text, ts, likes, rts, replies, mediaType });
       } catch (_) {}
     }
     return results;
   });
+}
+
+/**
+ * Capture a screenshot of the first media element (image or video thumbnail)
+ * inside a tweet article, returned as a base64-encoded PNG.
+ *
+ * @param {import("puppeteer-core").Page} page
+ * @param {string} postId - tweet status ID
+ * @returns {Promise<{base64: string, mimeType: string}|null>}
+ */
+async function captureMediaScreenshot(page, postId) {
+  try {
+    // Find the specific article containing this post
+    const elHandle = await page.evaluateHandle((id) => {
+      const arts = document.querySelectorAll('article[data-testid="tweet"]');
+      for (const art of arts) {
+        const link = art.querySelector('a[href*="/status/"]');
+        if (link && link.href.includes(`/status/${id}`)) {
+          // Prefer image inside tweetPhoto, then video thumbnail, then videoPlayer
+          return art.querySelector('[data-testid="tweetPhoto"] img')
+              || art.querySelector('video')
+              || art.querySelector('[data-testid="videoPlayer"]')
+              || null;
+        }
+      }
+      return null;
+    }, postId);
+
+    if (!elHandle || !(await elHandle.asElement())) return null;
+    const el = elHandle.asElement();
+
+    const b64 = await el.screenshot({ encoding: "base64", type: "png" });
+    await elHandle.dispose();
+    return b64 ? { base64: b64, mimeType: "image/png" } : null;
+  } catch (err) {
+    console.warn(`[scraper] media screenshot failed for ${postId}: ${err.message}`);
+    return null;
+  }
 }
 
 async function fetchReplies(page, tweetUrl, topN) {
@@ -174,10 +222,11 @@ function fmtPost(post) {
   const kw = post.keywords.length ? `  {${post.keywords.slice(0, 4).join(", ")}}` : "";
   const novel = (post.novelty >= 4.0 && !post._inCluster) ? "  <- novel" : "";
   const url = post.id ? `  https://x.com/${post.username}/status/${post.id}` : "";
+  const media = post.mediaDescription ? `\n    📷 ${post.mediaDescription}` : "";
   return (
     `  @${post.username} [v${v} T${post.trust} N${n}]` +
     ` "${post.text.replace(/\n+/g, " ").slice(0, 200)}"` +
-    ` ${fmtEngagement(post.likes, post.rts)}${kw}${novel}${url}`
+    ` ${fmtEngagement(post.likes, post.rts)}${kw}${novel}${url}${media}`
   );
 }
 
@@ -207,7 +256,7 @@ function formatClusteredDigest(selected, clusters, now) {
   // Legend (only on first block of the day — always include for AI readability)
   lines.push(
     `    v=velocity(HN) T=trust(0-10) N=novelty(TF-IDF,0-5)` +
-    `  ★=burst  ←novel=rare-this-window`
+    `  ★=burst  ←novel=rare-this-window  📷=media-description`
   );
   lines.push("");
 
@@ -421,6 +470,59 @@ async function scrapeNotifications(page) {
   const trimmed = seenArr.length > MAX_SEEN ? seenArr.slice(seenArr.length - MAX_SEEN) : seenArr;
   saveJson(SEEN_IDS, { ids: trimmed, updated_at: new Date().toISOString() });
 
+  // ── Phase 6b: Vision — describe images & video thumbnails ─────────────────
+  const mediaPosts = withReplies.filter(p => p.mediaType && p.mediaType !== "none");
+  const mediaDescriptions = new Map();  // postId → description
+  if (mediaPosts.length > 0) {
+    console.log(`[scraper] ${mediaPosts.length} posts with media — capturing screenshots for vision...`);
+
+    // Navigate back to home feed so we can screenshot the media elements
+    try {
+      await page.goto("https://x.com/home", { waitUntil: "domcontentloaded", timeout: 20_000 });
+      await page.waitForSelector('article[data-testid="tweet"]', { timeout: 12_000 });
+      await new Promise(r => setTimeout(r, 2_000));
+      // Scroll to load more (same as initial load)
+      for (let i = 0; i < 3; i++) {
+        await page.evaluate(() => window.scrollBy(0, 1200));
+        await new Promise(r => setTimeout(r, 1_200));
+      }
+    } catch (err) {
+      console.warn(`[scraper] could not re-load feed for vision: ${err.message}`);
+    }
+
+    // Capture screenshots of media elements (limit to top 10 to control costs)
+    const mediaItems = [];
+    for (const post of mediaPosts.slice(0, 10)) {
+      const shot = await captureMediaScreenshot(page, post.id);
+      if (shot) {
+        mediaItems.push({
+          postId:    post.id,
+          base64:    shot.base64,
+          mimeType:  shot.mimeType,
+          context:   post.text,
+          mediaType: post.mediaType,
+        });
+      }
+    }
+
+    if (mediaItems.length > 0) {
+      console.log(`[scraper] sending ${mediaItems.length} media items to Gemini vision...`);
+      try {
+        const descriptions = await describeMedia(mediaItems);
+        for (const [postId, desc] of descriptions) {
+          mediaDescriptions.set(postId, desc);
+        }
+        console.log(`[scraper] vision described ${descriptions.size}/${mediaItems.length} media items`);
+      } catch (err) {
+        console.warn(`[scraper] vision batch failed: ${err.message}`);
+      }
+    }
+  }
+  // Attach descriptions to posts for digest formatting
+  for (const post of withReplies) {
+    post.mediaDescription = mediaDescriptions.get(post.id) || "";
+  }
+
   // ── Phase 7: Write SQLite index ───────────────────────────────────────────
   const scrapedAt = Date.now();
   for (const post of withReplies) {
@@ -440,6 +542,8 @@ async function scrapeNotifications(page) {
       novelty:      post.novelty || 0,
       keywords:     post.keywords.join(", "),
       scraped_at:   scrapedAt,
+      media_type:        post.mediaType || "none",
+      media_description: post.mediaDescription || "",
     });
     for (const kw of post.keywords) {
       db.insertKeyword({ post_id: post.id, keyword: kw, score: post.total });
@@ -523,6 +627,8 @@ async function scrapeNotifications(page) {
     novelty:  parseFloat(post.novelty.toFixed(2)),
     trust: post.trust, score: parseFloat(post.total.toFixed(2)),
     keywords: post.keywords,
+    media_type: post.mediaType || "none",
+    media_description: post.mediaDescription || "",
     top_replies: post.topReplies.map(r => ({
       id: r.id, u: r.username, text: r.text,
       likes: parseCount(r.likes), rts: parseCount(r.rts),
