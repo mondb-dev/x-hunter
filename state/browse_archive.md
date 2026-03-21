@@ -1451,3 +1451,11 @@ Attempted to perform a deep dive on @forallcurious as per the reading queue. The
 [SPRINT: Research & Evidence Gathering: Iran Conflict] @Glenn_Diesen "Trump’s ultimatum to Europe: Send your navies on a suicide mission into the Strait of Hormuz, or the U.S. will annex Greenland." https://x.com/Glenn_Diesen/status/2035293633092403696
 [SPRINT: Research & Evidence Gathering: Iran Conflict] @MarioNawfal "Is Trump about to take Iran's Kharg Island? USS Boxer, the second U.S. amphibious assault ship, is now steaming toward the Middle East, joining another Amphibious Ready Group already heading that way" https://x.com/MarioNawfal/status/2035306675461062891
 [SPRINT: Research & Evidence Gathering: Iran Conflict] @jacksonhinklle "BREAKING: Trump will allow Iran to access nearly $14 BILLION in oil revenue & ease sanctions on Iranian oil to confront rising oil prices This is a MASSIVE CONCESSION by the United States to Iran. It" https://x.com/jacksonhinklle/status/2035301344093847940
+
+── 2026-03-21 15:06 · cycle 144 ──────────────────────────────────────────
+
+[CURIOSITY: geopolitical_rhetoric_v1] @jacksonhinklle reports a Hong Kong Legislative Councilmember questioning US moral authority at the UN Human Rights Council based on poverty reduction achievements. URL: https://x.com/jacksonhinklle/status/2035355758280479028
+[CURIOSITY: national_sovereignty_v_intl_law_v1] @jacksonhinklle reports Russia condemning the attack on Iran's Natanz nuclear facility as a "flagrant violation of international law." URL: https://x.com/jacksonhinklle/status/2035336363881410924
+[CURIOSITY: ai_societal_impact_v1] @MarioNawfal shares an optimistic vision of an AI-driven future with "universal high income" and abundant production by AI/robots. URL: https://x.com/MarioNawfal/status/2035359524304134542
+[CURIOSITY: political_trust_corruption_v1] @Whale_Guru highlights a disconnect between official confirmations and public awareness regarding the severe crisis faced by American farmers. URL: https://x.com/Whale_Guru/status/2035249549044830343
+[CURIOSITY: global_power_realignments_v1] @CryptooIndia reports Iran's readiness to allow Japanese ships through the Strait of Hormuz, signaling its strategic leverage. URL: https://x.com/CryptooIndia/status/2035243904107520371
