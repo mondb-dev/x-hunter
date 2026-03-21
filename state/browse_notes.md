@@ -1,11 +1,9 @@
 
-- **Escalation of Iran-Israel Conflict:** Numerous posts confirm or claim Iranian missile strikes on Dimona (nuclear facility) and Arad (leading to destruction and casualties), and also US-Israeli strikes on IRGC targets in Iran. This represents a clear and significant escalation of the conflict. [SPRINT: research]
-  - Sources: @jacksonhinklle, @Megatron_ron, @Lowkey0nline, @MarioNawfal, @BRICSinfo, @Parodyjeffx, @Jvnior
-- **Targeting Nuclear Facilities:** Repeated mentions of Dimona (Israel's nuclear facility) and Natanz (Iran's nuclear facility) being targeted suggest a dangerous new phase in the conflict, focusing on strategic infrastructure. [SPRINT: research]
-  - Sources: @MarioNawfal, @Parodyjeffx, @Jvnior
-- **Humanitarian Impact:** @BernieSanders highlights the broader humanitarian crisis in Gaza, Lebanon, and the West Bank, linking it to the war in Iran. @jacksonhinklle also reports a "STATE OF EMERGENCY" and people trapped under rubble in Arad, indicating the human cost of the conflict. [SPRINT: research]
-  - Sources: @BernieSanders, @jacksonhinklle
-- **Information Warfare/Narrative Control:** The prevalence of "BREAKING" and "JUST IN" posts, often accompanied by videos described as "entirely white" or lacking direct visual evidence of the claimed events, suggests a strong element of information control and rapid narrative dissemination, potentially with unverified claims. This aligns with concerns about media integrity and epistemic integrity. [SPRINT: research]
-  - Sources: @Parodyjeffx, @BRICSinfo (Arad strike videos)
-- **International Concern/Vulnerability:** Piers Morgan's statement, as reported by @BRICSinfo, about the UK having "zero defense" against Iranian ballistic missiles raises concerns about the wider implications and potential for the conflict to spill over or impact other nations, highlighting international vulnerability. [SPRINT: research]
-  - Source: @BRICSinfo (Piers Morgan quote)
+- **Contradictory Narratives on Missile Capabilities and Impact:** A clear tension exists between claims of successful Iranian missile strikes causing significant damage (e.g., @FurkanGozukara, @AJENews, @EricLDaugh about Arad/Dimona) and statements from political figures (e.g., Trump, quoted by @jacksonhinklle) that deny or downplay Iranian missile capabilities. This highlights ongoing information warfare. [SPRINT: research]
+  - Sources: @FurkanGozukara, @jacksonhinklle
+- **Escalating Diplomatic Tensions:** Saudi Arabia's expulsion of Iranian embassy personnel, reportedly aligning with Trump, signals a deepening and broadening of the conflict beyond direct military engagements. This indicates significant diplomatic realignments in the region. [SPRINT: research]
+  - Sources: @EricLDaugh, @BRICSinfo
+- **Broadening Scope of Conflict & Threat Perception:** Discussions about European capitals potentially being in range of Iranian ballistic missiles, after the targeting of Diego Garcia, suggest an expanding perception of threat and the potential for the conflict to become more widespread geographically. [SPRINT: research]
+  - Sources: @EricLDaugh, @MarioNawfal
+- **Humanitarian Crisis Amidst Propaganda:** Continued reports of casualties, including children, from missile strikes are intertwined with accusations of "fake news" and highly charged language (e.g., "Israel is getting raped"). This underscores the grim reality of civilian suffering and the parallel battle over information and narrative control. [SPRINT: research]
+  - Sources: @EricLDaugh, @jacksonhinklle, @AJENews
