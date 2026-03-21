@@ -175,8 +175,11 @@ async function captureMediaScreenshot(page, postId) {
       return null;
     }, postId);
 
-    if (!elHandle || !(await elHandle.asElement())) return null;
     const el = elHandle.asElement();
+    if (!el) {
+      await elHandle.dispose();
+      return null;
+    }
 
     const b64 = await el.screenshot({ encoding: "base64", type: "png" });
     await elHandle.dispose();
