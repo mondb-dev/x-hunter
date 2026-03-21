@@ -261,9 +261,20 @@ char-by-char against bash-generated ones. Agent behavior should be identical.
 
 ---
 
-### Phase 2: Extract Browser + State Helpers
+### Phase 2: Extract Browser + State Helpers ✅ DONE
 
 **Goal:** Port the 6 browser functions and state management into Node modules.
+
+**Status:** Completed 2026-03-22. Three modules created:
+- `lib/browser.js` (8 exports): restartGateway, startBrowser, checkBrowser, waitForBrowserService,
+  ensureBrowser, checkAndFixGatewayTimeout, countGatewayErrLines, checkGatewayPort.
+  All poll intervals, timeouts, and escalation steps match bash originals exactly.
+- `lib/state.js` (5 exports): resetSession, cleanStaleLocks, backupState, restoreIfCorrupt,
+  chmodPostsLog. Includes posts_log entry count validation on restore.
+- `lib/agent.js` (1 export): agentRun with 900s hard-kill timeout + <45s fast-fail retry.
+  Uses synchronous child_process polling to match bash blocking behavior.
+All modules tested locally — load OK, state functions verified with real files.
+Modules are standalone (not wired into run.sh) — bash path A unchanged. Ready for Phase 5.
 
 **⚠ This is the highest-risk phase.** The browser recovery logic (lines 151-286) is the most
 brittle part of the codebase. It has been tuned through production failures. Port carefully.
@@ -668,7 +679,7 @@ Phase 0  ──────────────── (stub + config)
 |-------|-------|----------------------|-------------|-----------|
 | 0 | A/B switch + stub + config.js | 0 (additive) | 1 hour | nothing | **✅ DONE** |
 | 1 | Prompts + context loader | ~400 (4 heredocs + 15 state vars + 5 node -e blocks) | 4-6 hours | Phase 0 | **✅ DONE** |
-| 2 | Browser + state helpers | ~180 (6 browser funcs + 5 state funcs) | 6-8 hours | Phase 0 |
+| 2 | Browser + state helpers | ~180 (6 browser funcs + 5 state funcs) | 6-8 hours | Phase 0 | **✅ DONE** |
 | 2b | Pre/post pipelines (pre_browse, pre_tweet, post_browse) | ~140 (11 + 3 + 8 operations) | 4-5 hours | Phase 2 |
 | 3 | Post pipelines (post_tweet, post.js) + git | ~120 (4 posting flows + tweet post-pipeline + git) | 3-4 hours | Phase 2 |
 | 4 | Daily block | ~158 (19 ops + 5 tweet subflows) | 4-5 hours | Phase 3 |
