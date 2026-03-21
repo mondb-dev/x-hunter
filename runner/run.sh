@@ -102,6 +102,16 @@ GATEWAY_ERR_LOG="$HOME/.openclaw-x-hunter/logs/gateway.err.log"  # x-hunter gate
 
 trap 'echo "[run] Stopping..."; bash "$PROJECT_ROOT/scraper/stop.sh" 2>/dev/null; bash "$PROJECT_ROOT/stream/stop.sh" 2>/dev/null; exit 0' INT TERM
 
+# ── Orchestrator A/B switch ───────────────────────────────────────────────────
+# Set ORCHESTRATOR=node in .env (or env) to use the Node orchestrator.
+# Default: bash (this file continues as path A). Rollback: ORCHESTRATOR=bash
+ORCHESTRATOR="${ORCHESTRATOR:-bash}"
+if [ "$ORCHESTRATOR" = "node" ]; then
+  echo "[run] Using Node orchestrator (path B)"
+  exec node "$SCRIPT_DIR/orchestrator.js"
+  # exec replaces this process — nothing below runs when ORCHESTRATOR=node
+fi
+
 # ── Session reset helper ──────────────────────────────────────────────────────
 reset_session() {
   local DIR="$HOME/.openclaw/agents/$1/sessions"
@@ -407,22 +417,7 @@ while true; do
 
   # ── First-ever cycle: intro tweet + profile setup ─────────────────────────
   if [ "$JOURNAL_COUNT" -eq 0 ]; then
-    AGENT_MSG=$(cat <<FIRSTMSG
-Today is $TODAY $NOW. This is the very first run -- total_posts is 0.
-
-Follow BOOTSTRAP.md section 6 (profile setup) and 6b (seed tweet) and 6c (intro tweet) first.
-
-After the intro tweet, do a first browse pass:
-1. Read state/browse_notes.md (empty on first run).
-2. Navigate to https://x.com -- scroll the feed, read at least 15 posts end to end.
-3. Click into at least 3 threads that catch your attention and read the replies.
-4. Navigate to https://x.com/search?q=... on 2 topics that interested you and read 10 more posts each.
-5. Append everything notable to state/browse_notes.md (quotes, tensions, source URLs).
-6. Update state/ontology.json if anything is axis-worthy.
-7. Done -- do not tweet again this cycle.
-
-FIRSTMSG
-)
+    AGENT_MSG=$(DAY_NUMBER=$DAY_NUMBER TODAY=$TODAY NOW="$NOW" HOUR=$HOUR node "$SCRIPT_DIR/lib/prompts/first_run.js")
     _gw_before=$(wc -l < "$GATEWAY_ERR_LOG" 2>/dev/null || echo 0)
     agent_run --agent x-hunter \
       --message "$AGENT_MSG" \
@@ -481,171 +476,11 @@ FIRSTMSG
         >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     fi
 
-    NEXT_TWEET=$(( (CYCLE / TWEET_EVERY + 1) * TWEET_EVERY ))
-
     # Pre-fetch curiosity search URL in browser (non-blocking — page ready when agent starts)
     PREFETCH_CYCLE=$CYCLE node "$PROJECT_ROOT/runner/prefetch_url.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
-    # Pre-load files into shell vars — agent skips read tool calls, goes straight to action
-    # Backticks escaped to prevent accidental shell execution in heredoc expansion
-    _BROWSE_NOTES=$(tail -n 80 "$PROJECT_ROOT/state/browse_notes.md" 2>/dev/null | sed "s/\`/'/g" || echo "(empty)")
-    _TOPIC_SUMMARY=$(cat "$PROJECT_ROOT/state/topic_summary.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(not yet generated)")
-    _DIGEST=$(tail -n 160 "$PROJECT_ROOT/state/feed_digest.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(not yet generated)")
-    _CRITIQUE=$(tail -n 12 "$PROJECT_ROOT/state/critique.md" 2>/dev/null | sed "s/\`/'/g" || echo "")
-    _CURIOSITY_DIRECTIVE=$(cat "$PROJECT_ROOT/state/curiosity_directive.txt" 2>/dev/null | sed "s/\`/'/g" || echo "")
-    _COMMENT_CANDIDATES=$(cat "$PROJECT_ROOT/state/comment_candidates.txt" 2>/dev/null | sed "s/\`/'/g" || echo "")
-    _DISCOURSE_DIGEST=$(cat "$PROJECT_ROOT/state/discourse_digest.txt" 2>/dev/null | sed "s/\`/'/g" || echo "")
-    _SPRINT_CONTEXT=$(cat "$PROJECT_ROOT/state/sprint_context.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(no active plan)")
-    _READING_URL=""
-    _READING_FROM=""
-    _READING_CONTEXT=""
-    if [ -s "$PROJECT_ROOT/state/reading_url.txt" ]; then
-      _READING_URL=$(grep "^URL:" "$PROJECT_ROOT/state/reading_url.txt" 2>/dev/null | sed 's/^URL: //' | sed "s/\`/'/g")
-      _READING_FROM=$(grep "^FROM:" "$PROJECT_ROOT/state/reading_url.txt" 2>/dev/null | sed 's/^FROM: //' | sed "s/\`/'/g")
-      _READING_CONTEXT=$(grep "^CONTEXT:" "$PROJECT_ROOT/state/reading_url.txt" 2>/dev/null | sed 's/^CONTEXT: //' | sed "s/\`/'/g")
-    fi
-    if [ -n "$_READING_URL" ]; then
-      # Detect profile deep dive vs article/content link
-      if echo "$_READING_URL" | grep -qE "^https://x\.com/[A-Za-z0-9_]+/?$"; then
-        # Profile URL — richer deep dive instructions
-        _PROFILE_HANDLE=$(echo "$_READING_URL" | sed 's|https://x.com/||;s|/||g')
-        _READING_BLOCK="${_READING_FROM} asked you to learn about @${_PROFILE_HANDLE}. DEEP DIVE — this is your primary task this cycle:
-  URL: ${_READING_URL}
-  Context: ${_READING_CONTEXT}
-
-  Do all of the following:
-  1. Navigate to their profile. Read their pinned tweet and bio.
-  2. Scroll their timeline — read at least 8 recent tweets. Note their main positions,
-     recurring themes, and any tensions or contradictions.
-  3. Check if their views connect to any of your current belief axes. Note evidence.
-  4. Search for '@${_PROFILE_HANDLE}' to see how others engage with them (optional if time allows).
-  5. Write a dedicated section in browse_notes.md: '## Deep Dive: @${_PROFILE_HANDLE}'
-     Summarise what you learned and whether it shifted any of your beliefs."
-      else
-        # Article / content URL
-        _READING_BLOCK="${_READING_FROM} recommended a link. Navigate to it as your FIRST task:
-  ${_READING_URL}
-  Context: ${_READING_CONTEXT}
-  Read it carefully. Note key claims, evidence quality, and any tensions with your current axes.
-  Write findings in browse_notes.md under '## Reading: ${_READING_URL}'"
-      fi
-    else
-      _READING_BLOCK="(no reading queue item this cycle)"
-    fi
-    _CURRENT_AXES=$(node -e "
-      try {
-        const d=JSON.parse(require('fs').readFileSync('$PROJECT_ROOT/state/ontology.json','utf-8'));
-        (d.axes||[]).forEach(a=>{
-          const ev=(a.evidence_log||[]).length;
-          const conf=((a.confidence||0)*100).toFixed(0);
-          console.log('  ['+a.id+'] '+a.label+' (conf:'+conf+'%, ev:'+ev+')');
-          console.log('    L: '+a.left_pole.slice(0,80));
-          console.log('    R: '+a.right_pole.slice(0,80));
-        });
-      } catch(e){ console.log('  (could not read ontology.json: '+e.message+')'); }
-    " 2>/dev/null || echo "  (none yet)")
-
-    # Journal task: only if no journal file exists for this hour yet
     _BROWSE_JOURNAL_PATH="$PROJECT_ROOT/journals/${TODAY}_${HOUR}.html"
-    if [ -f "$_BROWSE_JOURNAL_PATH" ]; then
-      _JOURNAL_TASK="journals/${TODAY}_${HOUR}.html ALREADY EXISTS. DO NOT write or overwrite this file under any circumstances — it has been permanently archived to Arweave and cannot be changed."
-    else
-      _JOURNAL_TASK="Write journals/${TODAY}_${HOUR}.html now. This is Day $DAY_NUMBER.
-   Brief observation log for this browse cycle — 150-200 words.
-   One or two key tensions or signals you noticed. What is new or surprising.
-   Use standard HTML journal format (same as tweet cycle journals).
-   In the HTML metadata use content=\"$DAY_NUMBER\" for x-hunter-day and \"Day $DAY_NUMBER · Hour $HOUR\" in the header.
-   This is the public record of what you observed. Keep it honest and specific."
-    fi
-
-    AGENT_MSG=$(cat <<BROWSEMSG
-Today is $TODAY $NOW — Day $DAY_NUMBER. Browse cycle $CYCLE -- no tweet this cycle.
-
-All files are pre-loaded below. Do NOT call any read_file tools.
-Proceed directly to tasks.
-
-Digest format:
-  CLUSTER N . "label" . M posts [. TRENDING]
-    @user [vSCORE TTRUST NNOVELTY] "text"  {keywords}
-  v=velocity  T=trust(0-10)  N=novelty(0-5, 5=rarest)  TRENDING=doubled vs prev window
-  <- novel = singleton with N>=4.0
-
-── BROWSE NOTES (recent) ────────────────────────────────────────────────
-$_BROWSE_NOTES
-── LAST CRITIQUE ────────────────────────────────────────────────────────
-$_CRITIQUE
-── TOPIC SUMMARY (last 4h) ──────────────────────────────────────────────
-$_TOPIC_SUMMARY
-── FEED DIGEST (most recent clusters) ───────────────────────────────────
-$_DIGEST
-── CURIOSITY DIRECTIVE ──────────────────────────────────────────────────
-$_CURIOSITY_DIRECTIVE
-── COMMENT CANDIDATES ───────────────────────────────────────────────────
-$_COMMENT_CANDIDATES
-── CURRENT BELIEF AXES (read before updating ontology) ──────────────────
-$_CURRENT_AXES
-── SPRINT PLAN (ACTIVE — guide your browsing toward these tasks) ─────────
-$_SPRINT_CONTEXT
-── RECENT DISCOURSE (reply exchanges) ───────────────────────────────────
-$_DISCOURSE_DIGEST
-── READING QUEUE ────────────────────────────────────────────────────────
-$_READING_BLOCK
-─────────────────────────────────────────────────────────────────────────
-
-Tasks (in order):
-0. DEEP DIVE (highest priority): If there is a reading queue item above, follow
-   those instructions completely before anything else. A deep dive on a profile or link
-   takes the full cycle — skip task 1 (curiosity search) if you did a deep dive.
-1. CURIOSITY: If NO deep dive this cycle and the directive above has an ACTIVE SEARCH URL,
-   navigate to it now and read top 3-5 posts. Each cycle in the window searches a
-   different angle — check which SEARCH_URL_N is preloaded in your browser.
-   For ALL browse cycles while the directive is active: follow the AMBIENT FOCUS —
-   tag relevant browse_notes entries with [CURIOSITY: <axis_or_topic_id>].
-2. Identify the 3-5 most interesting tensions or signals from TRENDING clusters
-   and <- novel singletons. You may navigate to at most 1 additional URL.
-   SPRINT FOCUS: If you have in-progress sprint tasks (marked ▸ above), actively
-   look for content that serves them. For "research" tasks, identify specific sources,
-   accounts, or claims that could be curated. For "engage" tasks, note community
-   reactions or questions you could respond to. Tag sprint-relevant findings in
-   browse_notes with [SPRINT: task_id].
-3. Append findings to state/browse_notes.md (append only -- do not overwrite).
-4. Write state/ontology_delta.json if anything is genuinely axis-worthy.
-   DO NOT write or modify state/ontology.json directly — the runner merges your delta.
-   ONTOLOGY RULES (CURRENT BELIEF AXES shown above — do not alter existing data):
-   a. Fit new evidence to an existing axis before creating a new one.
-      Use the axis_id shown in the CURRENT BELIEF AXES list.
-   b. Create a new axis ONLY if the topic is genuinely orthogonal to all
-      existing axes AND the pattern appeared in at least 2 browse cycles.
-   c. NEVER touch or rewrite state/ontology.json — your job is delta only.
-   d. Merge proposals: if two axes cover the same ground, append one JSON line to
-      state/ontology_merge_proposals.txt (axis_a, axis_b, reason, proposed_surviving_id).
-      Do NOT merge directly.
-
-   Delta format — write state/ontology_delta.json as:
-   {
-     "evidence": [
-       { "axis_id": "<existing_axis_id>", "source": "<url>",
-         "content": "<one sentence>", "timestamp": "<ISO>",
-         "pole_alignment": "left" | "right" }
-     ],
-     "new_axes": [
-       { "id": "<snake_case_id>", "label": "<label>",
-         "left_pole": "<description>", "right_pole": "<description>" }
-     ]
-   }
-   Omit "evidence" or "new_axes" if nothing to add. Skip writing the file entirely
-   if nothing is axis-worthy this cycle.
-
-5. Review COMMENT CANDIDATES above. Comment on AT MOST ONE if your memory gives
-   you something genuinely specific to say — a direct observation, contradiction,
-   or angle not yet in the thread. Skip all if nothing compels you or cap reached.
-   If commenting: navigate to the URL, reply (max 180 chars), then write
-   state/comment_done.txt as a single JSON line per the format in the candidates.
-6. JOURNAL: $_JOURNAL_TASK
-Next tweet cycle: $NEXT_TWEET.
-
-BROWSEMSG
-)
+    AGENT_MSG=$(CYCLE=$CYCLE DAY_NUMBER=$DAY_NUMBER TODAY=$TODAY NOW="$NOW" HOUR=$HOUR node "$SCRIPT_DIR/lib/prompts/browse.js")
     _gw_before=$(wc -l < "$GATEWAY_ERR_LOG" 2>/dev/null || echo 0)
     _JOURNAL_BEFORE=$(git -C "$PROJECT_ROOT" status --porcelain -- "journals/${TODAY}_${HOUR}.html" 2>/dev/null | wc -l | tr -d ' ')
     agent_run --agent x-hunter \
@@ -732,92 +567,7 @@ BROWSEMSG
 
   # ── Quote cycle: find one post worth quoting + sharp commentary ──────────
   elif [ "$CYCLE_TYPE" = "QUOTE" ]; then
-    # Load sprint context for quote prompt
-    _SPRINT_CONTEXT=$(cat "$PROJECT_ROOT/state/sprint_context.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(no active plan)")
-    # Build a compact list of already-quoted source URLs for dedup
-    QUOTED_SOURCES=$(node -e "
-      const fs=require('fs'), p='$PROJECT_ROOT/state/posts_log.json';
-      try {
-        const posts=JSON.parse(fs.readFileSync(p,'utf-8')).posts||[];
-        const quotes=posts.filter(p=>p.type==='quote'&&p.source_url);
-        if(quotes.length===0){process.stdout.write('(none yet)');process.exit(0);}
-        process.stdout.write(quotes.map(q=>'- '+q.source_url).join('\n'));
-      } catch(e){process.stdout.write('(none yet)');}
-    " 2>/dev/null || echo "(none yet)")
-    # Pre-load digest snippet for quote cycle
-    _DIGEST_QUOTE=$(tail -n 120 "$PROJECT_ROOT/state/feed_digest.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(not available)")
-    # Pre-load top belief axes for grounding the quote (full poles + recent evidence)
-    _TOP_AXES=$(node -e "
-      try {
-        const o=JSON.parse(require('fs').readFileSync('$PROJECT_ROOT/state/ontology.json','utf-8'));
-        const raw=Array.isArray(o.axes)?o.axes:Object.values(o.axes||{});
-        const axes=raw
-          .filter(a=>a.confidence>=0.65)
-          .sort((a,b)=>b.confidence-a.confidence)
-          .slice(0,6);
-        const out=axes.map(a=>{
-          const ev=(a.evidence_log||[]).slice(-2).map(e=>'    * '+e.content.slice(0,120)).join('\n');
-          return '- '+a.label+' (conf: '+(a.confidence*100).toFixed(0)+'%)\n'+
-                 '  LEFT: '+a.left_pole+'\n'+
-                 '  RIGHT: '+a.right_pole+
-                 (ev?'\n  Recent evidence:\n'+ev:'');
-        });
-        process.stdout.write(out.join('\n\n'));
-      } catch(e){process.stdout.write('(unavailable)');}
-    " 2>/dev/null || echo "(unavailable)")
-
-    AGENT_MSG=$(cat <<QUOTEMSG
-Today is $TODAY $NOW. Quote cycle $CYCLE -- find one post worth quoting.
-
-Your strongest belief axes (what you actually think matters):
-$_TOP_AXES
-
-Already quoted source tweets (do NOT quote these again):
-$QUOTED_SOURCES
-
-── FEED DIGEST (most recent clusters) ───────────────────────────────────
-$_DIGEST_QUOTE
-── SPRINT PLAN (prefer quotes that advance your active tasks) ───────────
-$_SPRINT_CONTEXT
-─────────────────────────────────────────────────────────────────────────
-
-Tasks:
-1. From the digest above, identify 2-3 candidate posts that touch your belief axes.
-   SPRINT PRIORITY: If you have in-progress sprint tasks (▸), prefer quoting posts
-   that directly serve those tasks — e.g. a source worth curating, a claim worth
-   analyzing for the Veritas Lens, or community discussion to engage with.
-   HARD SKIP (never quote these): questions or replies directed AT you (@SebastianHunts),
-   retweets with no original text, posts that are only a URL, posts shorter than 15 words.
-   Candidates must be making a real substantive claim you can engage with.
-
-2. Navigate to the best candidate URL in your browser. Read the actual tweet and its visible replies.
-   Do not rely on the digest summary — you need to see what the tweet actually says in full.
-   While reading, ask: does this push left or right on one of my axes? Does it confirm my prior,
-   challenge it, or reveal a nuance I had not seen? That specific tension is your angle.
-   If after reading it is not interesting enough to quote, navigate to your second candidate.
-
-3. Write your quote commentary ONLY after you have read the tweet in the browser.
-   NOT acceptable: generic belief statement that could apply to any tweet.
-   NOT acceptable: "this claim conflates X", "demands scrutiny", "risks premature judgment" — press release language.
-   NOT acceptable: internal metrics in the tweet — no "conf 95%", "score 0.40", "(confidence: X)".
-   ACCEPTABLE: a direct response to what this specific tweet actually says, from your position on the axis.
-   The reader must be able to see why THIS tweet provoked THIS response.
-   HARD LIMIT: Max 240 characters. Count them. If it is over 240 when you re-read, CUT WORDS
-   until it fits. Example of 240 chars: "Iran claims Kharg Island is off-limits. But three
-   analysts I follow say the US has already mapped extraction routes. The gap between rhetoric
-   and operational reality keeps widening." — that is exactly 228 chars. Aim for that density.
-   VOICE: Write like a person, not an analyst. Short, direct sentences. Say what the tweet
-   claims, then say what you actually think about it. If it sounds like a report, rewrite it.
-
-4. Write state/quote_draft.txt (overwrite):
-   Line 1: the source tweet URL
-   Lines 2+: your quote commentary (max 240 chars).
-   Do NOT write to state/posts_log.json — the runner owns that file.
-
-5. Done — do not navigate further. The runner posts the quote.
-
-QUOTEMSG
-)
+    AGENT_MSG=$(CYCLE=$CYCLE DAY_NUMBER=$DAY_NUMBER TODAY=$TODAY NOW="$NOW" HOUR=$HOUR node "$SCRIPT_DIR/lib/prompts/quote.js")
     # Snapshot critical JSON state before quote agent runs
     for _sf in posts_log ontology belief_state; do
       _fp="$PROJECT_ROOT/state/${_sf}.json"
@@ -909,47 +659,6 @@ QUOTEMSG
     # Make posts_log.json read-only so the agent cannot overwrite it
     chmod 444 "$PROJECT_ROOT/state/posts_log.json" 2>/dev/null || true
 
-    # Pre-load files — agent skips read tool calls
-    _BROWSE_NOTES_FULL=$(cat "$PROJECT_ROOT/state/browse_notes.md" 2>/dev/null | sed "s/\`/'/g" || echo "(empty)")
-    _MEMORY_RECALL=$(cat "$PROJECT_ROOT/state/memory_recall.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(empty)")
-    _DISCOURSE_DIGEST_TWEET=$(cat "$PROJECT_ROOT/state/discourse_digest.txt" 2>/dev/null | sed "s/\`/'/g" || echo "(no discourse yet)")
-    # Load sprint context (written by sprint_manager.js, or fallback to active_plan.json)
-    if [ -f "$PROJECT_ROOT/state/sprint_context.txt" ]; then
-      _ACTIVE_PLAN_CONTEXT=$(cat "$PROJECT_ROOT/state/sprint_context.txt" 2>/dev/null | sed "s/\`/'/g")
-    else
-      _ACTIVE_PLAN_CONTEXT=$(node -e "
-        try {
-          const a=JSON.parse(require('fs').readFileSync('$PROJECT_ROOT/state/active_plan.json','utf-8'));
-          if (a && a.status==='active') {
-            console.log('ACTIVE PLAN: ' + a.title);
-            console.log('Goal: ' + (a.first_sprint?.week_1_goal || '(none)'));
-            const days = Math.floor((Date.now()-new Date(a.activated_date).getTime())/86400000);
-            console.log('Day ' + days + ' of 30');
-          } else { console.log('(no active plan)'); }
-        } catch(e){ console.log('(no active plan)'); }
-      " 2>/dev/null || echo "(no active plan)")
-    fi
-    _CURRENT_AXES_TWEET=$(node -e "
-      try {
-        const d=JSON.parse(require('fs').readFileSync('$PROJECT_ROOT/state/ontology.json','utf-8'));
-        (d.axes||[]).forEach(a=>{
-          const ev=(a.evidence_log||[]).length;
-          const conf=((a.confidence||0)*100).toFixed(0);
-          console.log('  ['+a.id+'] '+a.label+' (conf:'+conf+'%, ev:'+ev+')');
-          console.log('    L: '+a.left_pole.slice(0,80));
-          console.log('    R: '+a.right_pole.slice(0,80));
-        });
-      } catch(e){ console.log('  (could not read ontology.json: '+e.message+')'); }
-    " 2>/dev/null || echo "  (none yet)")
-
-    # Journal task for tweet cycle: hard guard if file already exists
-    _TWEET_JOURNAL_PATH="$PROJECT_ROOT/journals/${TODAY}_${HOUR}.html"
-    if [ -f "$_TWEET_JOURNAL_PATH" ]; then
-      _TWEET_JOURNAL_TASK="journals/${TODAY}_${HOUR}.html ALREADY EXISTS. DO NOT write or overwrite this file — it has been permanently archived to Arweave."
-    else
-      _TWEET_JOURNAL_TASK="Write journals/${TODAY}_${HOUR}.html (Day $DAY_NUMBER). Use x-hunter-day content=\"$DAY_NUMBER\" and \"Day $DAY_NUMBER · Hour $HOUR\" in the header."
-    fi
-
     # Shell guard: if browse notes are empty or a browser-failure cycle, skip tweet immediately
     _BROWSE_NOTES_RAW=$(cat "$PROJECT_ROOT/state/browse_notes.md" 2>/dev/null || echo "")
     _BROWSE_NOTES_LEN=${#_BROWSE_NOTES_RAW}
@@ -964,102 +673,7 @@ QUOTEMSG
       printf "SKIP\n" > "$PROJECT_ROOT/state/tweet_draft.txt"
     else
 
-    AGENT_MSG=$(cat <<TWEETMSG
-Today is $TODAY $NOW — Day $DAY_NUMBER. Tweet cycle $CYCLE -- FILE-ONLY. No browser tool at any point.
-
-All files are pre-loaded below. Do NOT call any read_file tools.
-
-── BROWSE NOTES ─────────────────────────────────────────────────────────
-$_BROWSE_NOTES_FULL
-── MEMORY RECALL ────────────────────────────────────────────────────────
-$_MEMORY_RECALL
-── CURRENT BELIEF AXES (read before updating ontology) ──────────────────
-$_CURRENT_AXES_TWEET
-── SPRINT PLAN (ACTIVE — your in-progress tasks ARE your priority) ────────
-$_ACTIVE_PLAN_CONTEXT
-── RECENT DISCOURSE (reply exchanges) ───────────────────────────────────
-$_DISCOURSE_DIGEST_TWEET
-─────────────────────────────────────────────────────────────────────────
-
-Tasks (in order, no browser):
-1. Sprint action check — read the SPRINT PLAN above. If any task is marked ▸ (in_progress):
-   a. Identify what concrete action that task needs (e.g. "research" = name a source you found,
-      "engage" = ask the community a question, "write" = share a key idea from your draft).
-   b. Check the browse notes: did this cycle produce anything directly useful for that task?
-   Sprint tasks are NOT passive tracking — they require intentional output. If you have been
-   working on a task for multiple days without publicly acting on it, this tweet should address it.
-2. Axis prediction check — for each of your top 3 belief axes, state in one phrase what you
-   expected to see today based on your current score and direction. Then check: did the browse
-   notes confirm it, challenge it, or show something orthogonal? The most interesting tweet
-   lives at that gap — where a prior was updated, reversed, or sharpened by something concrete.
-3. $_TWEET_JOURNAL_TASK
-4. Draft tweet — choose the most compelling option between:
-   OPTION A: Sprint-driven tweet — directly advance an in-progress task. Examples:
-     - [research] "I've been curating sources for the Veritas Lens. Today's find: @account's
-       thread on X contradicts Y's official statement from last week. This is exactly the kind
-       of divergence I want to map."
-     - [engage] "Building the Veritas Lens — a tool to map narrative contradictions. What news
-       story has confused you most this week? Where did you see two 'authoritative' sources
-       flatly contradict each other?"
-     - If you have NOT tweeted about your sprint work in the last 3 tweet cycles, prefer this.
-   OPTION B: Observation tweet — the most interesting gap from task 2 (axis check).
-   Choose whichever is more genuine and interesting. Alternate between A and B across cycles —
-   do not post only plan updates or only observations. Both matter.
-   Requirements (ALL must be met — if you cannot satisfy them, write SKIP):
-   a. Concrete reference: must name something specific observed in the browse notes —
-      a specific account, a claim someone actually made, a statistic, or a named event.
-      No abstract observations about "AI" or "institutions" in general.
-      For OPTION A: the specificity can come from a source you curated or a question you pose.
-   b. Falsifiable: a thoughtful person should be able to disagree with it.
-      If it reads as obviously true to everyone, it is not a real position — reframe or SKIP.
-   c. Self-check (AGENTS.md 13.3) — if not genuine, SKIP.
-   d. If browse notes indicate the browser was unavailable, no feed was loaded, or no
-      specific observations were made this cycle — write SKIP. Do NOT invent insights
-      from prior memory or general knowledge. The tweet must be grounded in THIS cycle.
-   Better no tweet than a weak one.
-   VOICE (mandatory — rewrite until these are met):
-   f. NEVER include confidence scores, axis scores, or internal metrics in the tweet.
-      No "conf 95%", "score 0.40", "(confidence: X)" — these are internal state, not speech.
-   g. Write like a person, not an analyst. Use short, direct sentences.
-      BAD: "This directly challenges the integrity of public discourse."
-      GOOD: "Four different accounts said the video was fake. None linked a source."
-   h. Name what you actually saw — paraphrase a claim, quote a tension, describe
-      the specific thing that caught your attention. Abstract pattern labels
-      ("strategic narrative", "emotional manipulation") are not tweets — they are
-      summaries. Say what happened, then say what you think about it.
-   i. Read your draft aloud in your head. If it sounds like a report or a system
-      log, rewrite it until it sounds like something a thoughtful person would say
-      over coffee.
-4. Write state/tweet_draft.txt (plain text, overwrite):
-   Line 1: your insight sentence (REQUIRED — must not be empty, max ~230 chars)
-   Line 2: https://sebastianhunter.fun/journal/${TODAY}/${HOUR}
-   BOTH LINES ARE REQUIRED. Line 2 is always the journal URL — never omit it.
-   Total length <= 280 chars. Do NOT write only the URL — if line 1 is empty the tweet is worthless.
-   Do NOT write to state/posts_log.json — the runner owns that file.
-   IMPORTANT: for Option A (sprint) tweets, write the tweet in state/tweet_draft.txt.
-   The runner will also set a flag in state/sprint_tweet_flag.txt so the tracker knows
-   you actively worked on the sprint this cycle.
-5. If you chose Option A, also write state/sprint_tweet_flag.txt with one line:
-   <task_id>|<action_type>|<brief summary of what the tweet advances>
-   Example: 3|research|curated source on Iran narrative contradictions
-   If you chose Option B, do NOT write this file.
-6. Write state/ontology_delta.json if the synthesis adds new evidence.
-   Also update state/belief_state.json.
-   DO NOT write or modify state/ontology.json directly — the runner merges your delta.
-   ONTOLOGY RULES (CURRENT BELIEF AXES shown above — do not alter existing data):
-   a. Fit new evidence to an existing axis using the axis_id from the list above.
-   b. Create a new axis ONLY if genuinely orthogonal AND seen in 2+ browse cycles.
-   c. Merge proposals only: append to state/ontology_merge_proposals.txt if two axes
-      overlap (axis_a, axis_b, reason, proposed_surviving_id). Never merge directly.
-   Delta format — write state/ontology_delta.json as:
-   { "evidence": [{ "axis_id":"...", "source":"...", "content":"...",
-                    "timestamp":"...", "pole_alignment":"left"|"right" }],
-     "new_axes": [{ "id":"...", "label":"...", "left_pole":"...", "right_pole":"..." }] }
-   Omit keys you do not need. Skip writing the file if nothing axis-worthy.
-7. Done. The runner clears browse_notes.md after this cycle.
-
-TWEETMSG
-)
+    AGENT_MSG=$(CYCLE=$CYCLE DAY_NUMBER=$DAY_NUMBER TODAY=$TODAY NOW="$NOW" HOUR=$HOUR node "$SCRIPT_DIR/lib/prompts/tweet.js")
     rm -f "$PROJECT_ROOT/state/tweet_draft.txt" "$PROJECT_ROOT/state/tweet_result.txt"
     agent_run --agent x-hunter-tweet \
       --message "$AGENT_MSG" \
