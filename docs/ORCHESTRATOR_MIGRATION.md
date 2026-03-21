@@ -303,9 +303,12 @@ Deliberately corrupt state/ontology.json. Verify restore works.
 
 ---
 
-### Phase 2b: Extract Pre/Post Pipelines
+### Phase 2b: Extract Pre/Post Pipelines ✅ DONE
 
 **Goal:** Move the pre-browse, pre-tweet, and post-browse sequences into modules.
+
+**Status:** Completed 2026-03-22. Three pipeline modules created, all tests passing (9/9).
+Standalone modules — not wired into run.sh. Ready for Phase 5 orchestrator.
 
 These are the "missing middle" — the orchestration logic between prompt construction and
 agent invocation that the prompts alone don't cover.
@@ -680,7 +683,7 @@ Phase 0  ──────────────── (stub + config)
 | 0 | A/B switch + stub + config.js | 0 (additive) | 1 hour | nothing | **✅ DONE** |
 | 1 | Prompts + context loader | ~400 (4 heredocs + 15 state vars + 5 node -e blocks) | 4-6 hours | Phase 0 | **✅ DONE** |
 | 2 | Browser + state helpers | ~180 (6 browser funcs + 5 state funcs) | 6-8 hours | Phase 0 | **✅ DONE** |
-| 2b | Pre/post pipelines (pre_browse, pre_tweet, post_browse) | ~140 (11 + 3 + 8 operations) | 4-5 hours | Phase 2 |
+| 2b | Pre/post pipelines (pre_browse, pre_tweet, post_browse) | ~140 (11 + 3 + 8 operations) | 4-5 hours | Phase 2 | **✅ DONE** |
 | 3 | Post pipelines (post_tweet, post.js) + git | ~120 (4 posting flows + tweet post-pipeline + git) | 3-4 hours | Phase 2 |
 | 4 | Daily block | ~158 (19 ops + 5 tweet subflows) | 4-5 hours | Phase 3 |
 | 5 | Orchestrator loop + signal handlers | ~90 (main loop + cleanup + caffeinate + post-sleep) | 3-4 hours | Phases 1-4 |
