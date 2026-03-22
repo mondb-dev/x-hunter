@@ -1,6 +1,17 @@
 
-Netanyahu continues strong geopolitical rhetoric, labeling Iran as an "enemy of civilization" and "danger to the free world." (@netanyahu) [CURIOSITY: axis_geopolitical_rhetoric_v1]
-Report of potential UK lockdown due to escalating meningitis cases raises public safety concerns. (@forallcurious) [CURIOSITY: axis_public_trust_safety_crisis_v1]
-Discussion around Dubai travel includes cynical comments about regional stability and potential missile strikes. (@varinder_bansal) [CURIOSITY: axis_geopolitical_rhetoric_v1] [CURIOSITY: axis_global_economic_stability_v1]
-Israel conducts missile strikes on Qasmiyeh Bridge in southern Lebanon, escalating regional conflict. (@BRICSinfo) [CURIOSITY: axis_geopolitical_rhetoric_v1]
-Conflicting narratives emerge regarding Iran: NATO claims it's an "existential threat," while Trump claims he "defeated Iran." (@jacksonhinklle) [CURIOSITY: axis_epistemic_integrity] [CURIOSITY: axis_geopolitical_rhetoric_v1]
+- **Conflicting narratives on Iran-Israel conflict:** Netanyahu and IsraeliPM are framing Iran as a global threat ("enemy of civilization and a danger to the free world") due to recent actions, while other accounts (jacksonhinklle, MarioNawfal) report on specific strikes (Holon, Tel Aviv, Qasmiyeh Bridge in Lebanon) and Iran's stated goals (complete end to war, not ceasefire). Replies to Netanyahu's tweet also bring up Gaza.
+    - @netanyahu: "Iran has proven again in the last 48 hours that it is the enemy of civilization and a danger to the free world: targeting children, families..." https://x.com/netanyahu/status/2035707081957773574
+    - @IsraeliPM: "Prime Minister Benjamin Netanyahu, at the site of the missile hit in Arad: “If you want proof that Iran endangers the entire world, the last..." https://x.com/IsraeliPM/status/2035707641324749301
+    - @jacksonhinklle: "NOW: DIRECT IRANIAN STRIKE on Holon, Israel…" https://x.com/jacksonhinklle/status/2035709956163244475
+    - @MarioNawfal: "Explosions are occurring on Tel Aviv highways. Iran has targeted the city particularly intensely today..." https://x.com/MarioNawfal/status/2035710771209146529
+    - @BRICSinfo: "JUST IN: Israel missile strikes Qasmiyeh Bridge over the Litani River in southern Lebanon." https://x.com/BRICSinfo/status/2035711658497020180 [SPRINT: research]
+- **Trump's inconsistent rhetoric on Iran:** Posts highlight contradictions in Trump's past and current statements regarding military action against Iran and foreign policy in the Middle East, with some questioning his shifting narratives and others using his past statements to critique current actions.
+    - @EricLDaugh: "JUST IN: PM Netanyahu CONFIRMS Trump was right all along 'If you want proof that Iran endangers the entire world, the last 48 hours have given it!'" https://x.com/EricLDaugh/status/2035706841619992801
+    - @realtrumpstein: "Trump in 2008: Anyone who invades the Middle East under false pretenses should be impeached. Let’s make sure it goes viral here." https://x.com/realtrumpstein/status/2035465216574517324
+    - @krassenstein: "BREAKING: Trump claims Iran is “dead” And Democrats are the new enemy. Then why did he threaten to attack their power plants if they are dead?" https://x.com/krassenstein/status/2035711562023870589
+    - @RpsAgainstTrump: "Trump, in the last 48 hours: “We won the war.” “I don’t want a ceasefire.” “We are getting very close to meeting our objectives as we consider winding down.”" https://x.com/RpsAgainstTrump/status/2035527890473759211 [SPRINT: research]
+- **Epstein Files still a focus:** Continued calls for discussion and transparency regarding the Epstein files, indicating ongoing public demand for accountability.
+    - @LePapillonBlu2: "DO NOT STOP TALKING ABOUT THE EPSTEIN FILES. DO NOT STOP TALKING ABOUT THE EPSTEIN FILES."
+    - @freethepeople: "Over 3.5 million pages of the Epstein Files have been released, but the names of clients and co-conspirators remain redacted."
+- **"DEI hire" controversy:** A post questioning a female umpire's competence and linking it to "DEI" (Diversity, Equity, and Inclusion) suggests a tension point around these initiatives and their perceived impact on merit.
+    - @4thOfJuly365: "Female Umpire Makes the WORST Call in the History of Baseball. Was she a DEI hire?" https://x.com/4thOfJuly365/status/2035693707148636397
