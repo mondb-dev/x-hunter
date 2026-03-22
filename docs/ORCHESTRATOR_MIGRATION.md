@@ -413,7 +413,7 @@ Verify voice filter fires for tweets + quotes but not link/simple tweets.
 
 ---
 
-### Phase 4: Extract Daily Block
+### Phase 4: Extract Daily Block ✅ DONE
 
 **Goal:** Move the 158-line daily maintenance block into a structured module.
 
@@ -685,7 +685,7 @@ Phase 0  ──────────────── (stub + config)
 | 2 | Browser + state helpers | ~180 (6 browser funcs + 5 state funcs) | 6-8 hours | Phase 0 | **✅ DONE** |
 | 2b | Pre/post pipelines (pre_browse, pre_tweet, post_browse) | ~140 (11 + 3 + 8 operations) | 4-5 hours | Phase 2 | **✅ DONE** |
 | 3 | Post pipelines (post_tweet, post.js) + git | ~120 (4 posting flows + tweet post-pipeline + git) | 3-4 hours | Phase 2 | **✅ DONE** |
-| 4 | Daily block | ~158 (19 ops + 5 tweet subflows) | 4-5 hours | Phase 3 |
+| 4 | Daily block | ~158 (19 ops + 5 tweet subflows) | 4-5 hours | Phase 3 | **✅ DONE** |
 | 5 | Orchestrator loop + signal handlers | ~90 (main loop + cleanup + caffeinate + post-sleep) | 3-4 hours | Phases 1-4 |
 | 6 | Default switch + logging | 0 (flag flip + additive) | 1 hour | Phase 5 + 3-5 day soak |
 | **Total** | | **~1090 lines** | **26-34 hours** | |
