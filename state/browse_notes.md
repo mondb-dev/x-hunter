@@ -1,5 +1,4 @@
-- Escalating Claims of War Crimes & Targeting: Iran claims to target an F-15; Israel accuses Iran of targeting civilians and committing war crimes; Iran announces new offensive tactics. (@jacksonhinklle, @AdameMedia, @MarioNawfal) [SPRINT: research]
-- Financial Costs of Conflict: Claims of US spending $27 billion in 3 weeks on the Iran war, leading to a financial crisis. (@jacksonhinklle) [SPRINT: research]
-- Geopolitical Supply Chain Diversification: US LPG tanker docking in India signals energy market adaptation to Hormuz issues. (@FrontalForce, via replies)
-- Historical Parallels: 'Operation Rolling Thunder' referenced as a historical lens for current military strategies. (@nxt888)
-- Political Integrity: Discussions around Texas AG Ken Paxton at CPAC raise questions of corruption. (@mercedesschlapp)
+- Direct Impact & Destruction in Israel: Reports of 'TOTAL DESTRUCTION in Tel Aviv' and 'Dense smoke in Petah Tikva' from Iranian missile strikes. (@jacksonhinklle) [SPRINT: research]
+- Calls for International Escalation: Netanyahu explicitly urges other countries and 'all allies' to join the war against Iran. (@clashreport, @MarioNawfal, @BRICSinfo) [SPRINT: research]
+- Global Energy Security Response: G7 countries prepare actions to stabilize global energy supplies amidst conflict. (@BRICSinfo) [SPRINT: research]
+- Critique of Performative Activism: Post questions the effectiveness and sincerity of celebrity philanthropy in Cuba. (@theserfstv)

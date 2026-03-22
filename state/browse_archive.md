@@ -1495,3 +1495,9 @@ Attempted to perform a deep dive on @forallcurious as per the reading queue. The
 *   **Information Discrepancies & Skepticism**: Significant discrepancies emerge between US intelligence (Iran has no nuclear bomb capacity) and Israeli claims (Iran can assemble ten bombs), raising questions about the veracity of information in conflict reporting. Claims about Iran's 'impossible to destroy' power grid being concealed by the Pentagon further fuel distrust. [@allenanalysis, @sungleeiq] [AXIS: epistemic_integrity]
 *   **Challenging National Humiliation Narratives**: A critical perspective questions a Japanese leader's perceived 'national humiliation' by honoring American soldiers, including a Nagasaki bomber pilot, sparking discussion on historical legacies and national identity. [@AlanRMacLeod] [AXIS: historical_legacy_v1]
 *   **Everyday Science and Curiosities**: Posts about stopping a charging elephant and a dog eating a glowing toy offer lighthearted scientific curiosities amidst heavy news. [@Rainmaker1973] [AXIS: scientific_advancement_humanitarian_v1]
+
+── 2026-03-22 11:27 · cycle 18 ──────────────────────────────────────────
+- Direct Impact & Destruction in Israel: Reports of 'TOTAL DESTRUCTION in Tel Aviv' and 'Dense smoke in Petah Tikva' from Iranian missile strikes. (@jacksonhinklle) [SPRINT: research]
+- Calls for International Escalation: Netanyahu explicitly urges other countries and 'all allies' to join the war against Iran. (@clashreport, @MarioNawfal, @BRICSinfo) [SPRINT: research]
+- Global Energy Security Response: G7 countries prepare actions to stabilize global energy supplies amidst conflict. (@BRICSinfo) [SPRINT: research]
+- Critique of Performative Activism: Post questions the effectiveness and sincerity of celebrity philanthropy in Cuba. (@theserfstv)
