@@ -6,11 +6,11 @@ Three scripts run in order:
 
 | Script | Where it runs | What it does |
 |---|---|---|
-| `01-create-vm.sh` | Local (Mac) | Creates GCP project + e2-medium VM |
+| `01-create-vm.sh` | Local (Mac) | Creates GCP project + VM |
 | `02-migrate-data.sh` | Local (Mac) | Transfers code, secrets, Chrome profile, databases |
 | `03-install.sh` | Remote (VM) | Installs Node.js, Chrome, OpenClaw, systemd services |
 
-**Estimated cost:** ~$24/mo (e2-medium, us-central1, 30 GB SSD)
+**Estimated cost:** Check GCP pricing for your chosen VM tier.
 
 ## Prerequisites
 
@@ -32,8 +32,8 @@ bash deploy/01-create-vm.sh
 ```
 
 This creates:
-- GCP project `sebastian-hunter` (or uses existing)
-- e2-medium VM named `sebastian` in us-central1-a
+- GCP project (or uses existing)
+- VM in your configured zone
 - SSH firewall rule
 
 ### 2. Migrate data
@@ -54,7 +54,7 @@ This transfers:
 ### 3. SSH into VM and install
 
 ```bash
-gcloud compute ssh sebastian --zone=us-central1-a
+gcloud compute ssh <vm-name> --zone=<zone>
 cd ~/hunter
 bash deploy/03-install.sh
 ```
@@ -83,7 +83,7 @@ tail -30 ~/hunter/runner/runner.log
 
 | Service | Description | Depends on |
 |---|---|---|
-| `openclaw-gateway` | OpenClaw gateway (port 18789) | network |
+| `openclaw-gateway` | OpenClaw gateway | network |
 | `sebastian-runner` | Main agent loop (run.sh) | openclaw-gateway |
 
 **Commands:**
@@ -99,7 +99,7 @@ tail -f ~/hunter/runner/runner.log       # Runner's own log
 ### Updating code
 
 ```bash
-gcloud compute ssh sebastian --zone=us-central1-a
+gcloud compute ssh <vm-name> --zone=<zone>
 cd ~/hunter && git pull
 sudo systemctl restart sebastian-runner
 ```
@@ -142,25 +142,19 @@ sudo systemctl start sebastian-runner
 
 ```
 systemd
-  ├── openclaw-gateway.service  (port 18789, restarts on crash)
+  ├── openclaw-gateway.service  (restarts on crash)
   └── sebastian-runner.service  (run.sh, restarts on crash)
         ├── scraper/collect.js  (background, every 10 min)
         ├── scraper/reply.js    (background, every 30 min)
         ├── scraper/follows.js  (background, every 3 hours)
-        └── agent cycle         (every 30 min via openclaw agent)
+        └── agent cycle         (every ~20 min via orchestrator.js)
               ├── BROWSE ×5     (observe, read, update ontology)
               └── TWEET ×1      (synthesize, journal, tweet, git push)
 ```
 
 ## Cost breakdown
 
-| Resource | Monthly cost |
-|---|---|
-| e2-medium VM (2 vCPU, 4 GB) | ~$24 |
-| 30 GB SSD | ~$2.40 |
-| Egress (minimal — git push, API calls) | ~$0.50 |
-| **Total** | **~$27** |
-
+Costs depend on your chosen VM tier and region. Check GCP pricing calculator.
 Gemini API costs are separate (billed to your Google AI API keys).
 
 ## Environment variables

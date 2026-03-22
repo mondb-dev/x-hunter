@@ -28,22 +28,20 @@ The agent started with zero ideology and discovers belief axes only when recurri
 
 ## Deployment
 
-Sebastian runs on a GCP e2-medium VM (`us-central1-a`) as a systemd service. See [deploy/README.md](deploy/README.md) for full setup.
+Sebastian runs on a cloud VM as a systemd service. See [deploy/README.md](deploy/README.md) for full setup.
 
-| Component | Where |
+| Component | What |
 |---|---|
-| VM | `gcloud compute ssh sebastian --zone us-central1-a --project sebastian-hunter` |
-| Service | `systemd: sebastian-runner` (Type=simple, Restart=always, RestartSec=30) |
-| Browser | Chrome on CDP port 18801, OpenClaw gateway on port 18789 |
+| Service | systemd (Type=simple, Restart=always) |
+| Browser | Chrome via OpenClaw (CDP) |
 | Orchestrator | `runner/orchestrator.js` (Node.js, replaces bash main loop) |
 | Website | Vercel, auto-deploys on push to `main` |
-| Cost | ~$27/mo (VM + egress) |
 
 ### Local development
 
 ```bash
-git clone https://github.com/mondb-dev/x-hunter.git
-cd x-hunter
+git clone <repo-url>
+cd hunter
 cp .env.example .env   # fill in all values
 npm install --prefix runner
 npm install --prefix scraper
@@ -182,16 +180,16 @@ Articles are permanently archived to **Arweave** via Irys. Tweet records are log
 
 ## Troubleshooting
 
-**Service status (GCP)**
+**Service status**
 ```bash
-gcloud compute ssh sebastian --zone us-central1-a --project sebastian-hunter \
-  --command "systemctl status sebastian-runner"
+# On VM:
+systemctl status sebastian-runner
 ```
 
 **View logs**
 ```bash
-gcloud compute ssh sebastian --zone us-central1-a --project sebastian-hunter \
-  --command "journalctl -u sebastian-runner --no-pager -n 50"
+# On VM:
+journalctl -u sebastian-runner --no-pager -n 50
 ```
 
 **Gateway not starting**

@@ -4,7 +4,7 @@
 
 An autonomous AI agent that reads X (Twitter), forms beliefs, journals,
 tweets, and publishes to sebastianhunter.fun. The system runs continuously
-on a GCP VM (`e2-medium`, `us-central1-a`) as a systemd service.
+on a cloud VM as a systemd service.
 
 There are two distinct layers:
 
@@ -46,8 +46,8 @@ collect.js  reply.js     follows.js
 
 ### `scraper/collect.js` — every 10 min
 
-Scrapes the X feed via CDP (puppeteer-core connects to existing Chrome on
-port 18801). Runs a 12-phase analytics pipeline:
+Scrapes the X feed via CDP (puppeteer-core connects to existing Chrome).
+Runs a 12-phase analytics pipeline:
 
 ```
 CDP extract raw posts
@@ -479,14 +479,14 @@ follow_score = avg_velocity × 0.35
 
 | Component | Technology |
 |---|---|
-| Browser automation | puppeteer-core CDP (connects to existing Chrome, port 18801) |
+| Browser automation | puppeteer-core CDP (connects to existing Chrome) |
 | Database | SQLite via `better-sqlite3` — WAL mode, FTS5 full-text search |
 | LLM (browse + tweet) | Gemini 2.5 Flash via `openclaw agent` (fallback: Gemini 2.0 Flash, Claude Sonnet, Ollama qwen2.5:7b) |
 | LLM (reply filter) | Gemini 2.0 Flash via REST API |
 | LLM (local critique) | Ollama `qwen2.5:7b` — no API cost, post-cycle consistency check |
 | Permanent storage | Arweave via Irys L2 (SOL-funded, `@irys/sdk`) — journals, checkpoints, tweet records |
 | Web frontend | Next.js at sebastianhunter.fun |
-| Orchestration | `run.sh` (init) → `orchestrator.js` (Node.js main loop, SIGTERM-safe); systemd on GCP VM |
+| Orchestration | `run.sh` (init) → `orchestrator.js` (Node.js main loop, SIGTERM-safe); systemd |
 
 ---
 

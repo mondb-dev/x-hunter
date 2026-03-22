@@ -6,8 +6,7 @@ How the system runs, what each script does, and what the agent actually touches.
 
 ## How sessions run
 
-The system runs on a GCP VM (`sebastian`, e2-medium, us-central1-a) as a
-systemd service (`sebastian-runner`).
+The system runs on a cloud VM as a systemd service.
 
 ```
 run.sh (init: login, env, checks) → exec → orchestrator.js (main loop)
@@ -16,7 +15,7 @@ run.sh (init: login, env, checks) → exec → orchestrator.js (main loop)
 - **Cycle time**: ~20 minutes per cycle
 - **Cycle types**: 5 BROWSE → 1 TWEET → repeat, with daily/checkpoint triggers
 - **Sleep**: `setTimeout`-based (no `Atomics.wait`), SIGTERM-safe
-- **systemd**: `TimeoutStopSec=20`, `Restart=always`, `RestartSec=30`
+- **systemd**: Restart=always, SIGTERM-safe shutdown
 
 Start/stop on the VM:
 ```bash
@@ -235,9 +234,9 @@ Three LLM providers, used for different tasks:
 
 ## Browser
 
-- **Runtime**: Chrome via OpenClaw, controlled through CDP (port 18801)
-- **Gateway**: OpenClaw gateway (port 18789)
-- **Profile**: `x-hunter` (set via `OPENCLAW_PROFILE` in `.env`)
+- **Runtime**: Chrome via OpenClaw, controlled through CDP
+- **Gateway**: OpenClaw gateway
+- **Profile**: set via `OPENCLAW_PROFILE` in `.env`
 - **Interaction**: All browser operations use `runner/cdp.js` (puppeteer-core)
 
 Commands (run on VM):
@@ -293,7 +292,7 @@ X_USERNAME              — X login username
 X_PASSWORD              — X login password
 OPENCLAW_PROFILE        — Browser profile name (x-hunter)
 GITHUB_TOKEN            — GitHub PAT for push
-GITHUB_REPO             — Repo slug (mondb-dev/x-hunter)
+GITHUB_REPO             — Repo slug (owner/repo)
 GIT_USER_NAME           — Git commit author name
 GIT_USER_EMAIL          — Git commit author email
 VERCEL_DEPLOY_HOOK      — Optional: Vercel deploy webhook URL
