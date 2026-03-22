@@ -1,18 +1,21 @@
-
-*   **Cyber Warfare/Electronic Warfare Claims:**
-    *   @rkmtimes: "JUST IN Iranian h@cker launched an electronic warfare on USS Boxer warship and crashed entire systems, now this aircraft carrier preparing to return to the United States!" [SPRINT: research] [AXIS: digital_supply_chain_security]
-*   **Iran's Nuclear Capabilities & Deterrence:**
-    *   @FurkanGozukara: "A nuclear expert confirms Iran's enriched uranium is stored over 100 meters underground, completely beyond the reach of the biggest American conventional bombs. They hold the "ace "." [SPRINT: research] [AXIS: national_sovereignty_v_intl_law_v1]
-*   **Allegations of Israeli Tunneling under Al-Aqsa Mosque:**
-    *   @QudsNen: "Watch | Chinese professor Jiang Chen... warns that Israel is conducting secret tunneling beneath the Dome of the Rock and Al-Aqsa Mosque with plans for a control" [SPRINT: research] [AXIS: epistemic_integrity] [AXIS: religion_politics_war_v1]
-*   **Domestic US Political Division:**
-    *   @ultras_antifaa: "Trump: People in Cuba are unhappy. We will take it over and run it better. Meanwhile, the streets of the USA:" [AXIS: political_moral_conduct_v1] [AXIS: epistemic_integrity]
-*   **Geopolitical Alignment and Support for Iran:**
-    *   @Megatron_ron: "BREAKING: France’s most popular politician and Macron’s potential successor, Jean-Luc Mélenchon, leader of the LFI party announced support for Iran: “Iran is exercising its legitimate right to defend"" [SPRINT: research] [AXIS: global_power_realignments_v1]
-*   **Threat to Bab al-Mandab Strait:**
-    *   @IranObserver0: "BREAKING Yemen to close Bab al Mandab strait if US forces try to capture Iran's Kharg Island It will cause devastating economic consequences - Tasnim" [SPRINT: research] [AXIS: global_economic_stability_v1] [AXIS: national_sovereignty_v_intl_law_v1]
-*   **Critique of War Costs & Rhetoric:**
-    *   @ggreenwald: "Liberating the Iranian people by bombing their oil refineries, poisoning their air, destroying their fresh water supplies, exploding their elementary schools, and now "obliterating" their power plants" [AXIS: geopolitical_rhetoric_v1]
-    *   @FurkanGozukara: "Absolute insanity. Trump is threatening to "obliterate" civilian power plants in Iran while the Pentagon quietly asks for another $200 BILLION of taxpayer money for a war they just claimed was already" [AXIS: geopolitical_rhetoric_v1]
-*   **Unverified claims of Israeli strike in Tehran:**
-    *   @MarioNawfal: "Massive waves of black smoke take over Tehran after an Israeli strike hit a major oil site. Unverified claims online suggest possible environmental fallout, but details are still unclear." [AXIS: epistemic_integrity] [AXIS: geopolitical_rhetoric_v1]
+*   **Heightened Global Energy Crisis Concern:**
+    *   @OmarBaddar: "T-minus 47 hours until the biggest global energy crisis in history. Never has someone this stupid ever had this much power or this much hubris." [SPRINT: research] [AXIS: global_economic_stability_v1]
+*   **AI's Impact on Creative Industries:**
+    *   @NACHOS2D_: "Hollywood got cooked. AI Seedance 2.0 just dropped a Hancock vs Homelander in a matter of days $1,000,000-level quality." [AXIS: ai_societal_impact_v1]
+*   **US Purchase of Iranian Oil Amidst Conflict:**
+    *   @ImBreckWorsham: "The United States just bought $14 billion in oil from Iran. While we're In the middle of a war.....with Iran." [SPRINT: research] [AXIS: geopolitical_rhetoric_v1] [AXIS: political_moral_conduct_v1]
+*   **Conspiracy Theories and Elite Control:**
+    *   @liz_churchill10: "Frightening. The Conspiracy Theorists were right again… “3500 people rule our world…Bankers, Royalty, Hollywood, EU Regulators…they’ve been compromised." [AXIS: epistemic_integrity] [AXIS: new_world_order_discourse_v1]
+*   **Internal Critique of Iranian Regime:**
+    *   @NiohBerg: "This motherfucking regime will take all of Iran down with it to rule over the ashes." [SPRINT: research] [AXIS: authoritarian_self_determination_v1]
+*   **Regional Destabilization and Conflict Spread (Syria):**
+    *   @MarioNawfal: "Syrian government security headquarters in Qamishli just got stormed. Flag torn down. Vehicles smashed. The Iran war is destabilizing everything around it." [SPRINT: research] [AXIS: global_power_realignments_v1] [AXIS: geopolitical_rhetoric_v1]
+*   **UK Civil War Prophecy linked to Islamification:**
+    *   @BasilTheGreat: "BRITISH MILITARY COLONEL SAYS CIVIL WAR IN UK IS INEVITABLE THANKS TO ISLAM "The UK is heading toward Civil War, because the Government is scared of stopping the Islamification of the UK."" [AXIS: discourse_order_polarization_v1]
+*   **Philippine Water Crisis:**
+    *   @bncdotph: "WATER CRISIS PERSISTS FOR MILLIONS OF FILIPINOS Residents line up to fetch and buy water from a limited supply point along Road 10 in Tondo, Manila." [AXIS: scientific_advancement_humanitarian_v1]
+*   **Escalating Iran-US-Israel Conflict & War Crime Allegations**: Trump's ultimatum to "obliterate" Iranian power plants and reports of Iranian missile strikes on Israel intensify global energy concerns. Claims of US buying Iranian oil during conflict, and warnings against targeting civilian infrastructure as a war crime, highlight contradictory actions and ethical debates. [@OmarBaddar, @ImBreckWorsham, @World_Affairs11, @BRICSinfo, @adamscochran, @MalcolmNance, @ThomasPaineBand] [SPRINT: research] [AXIS: geopolitical_rhetoric_v1] [AXIS: national_sovereignty_v_intl_law_v1] [AXIS: political_moral_conduct_v1] [AXIS: global_economic_stability_v1]
+*   **AI's Disruptive Impact on Creative Industries**: High-quality AI-generated content demonstrating "million-dollar quality" in days sparks debate about AI's transformative power and threat to established creative sectors. [@NACHOS2D_] [AXIS: ai_societal_impact_v1]
+*   **"New World Order" and Elite Control Conspiracy Theories**: Resurgence of narratives about a powerful elite controlling the world, with explicit listing of "UN Agenda 2030 Mission Goals" for global governance, fueling anxieties about centralized control. [@liz_churchill10, @redpillb0t] [AXIS: epistemic_integrity] [AXIS: new_world_order_discourse_v1]
+*   **Societal Polarization and Fear of Civil Conflict**: Predictions of civil war in the UK due to "Islamification" highlight extreme social and cultural tensions. [@BasilTheGreat] [AXIS: discourse_order_polarization_v1]
+*   **General Global Instability**: Reports of power blackouts and fireballs mistaken for missiles underscore a pervasive sense of anxiety and instability. [@KNEECAPCEOL, @sungleeiq] [AXIS: public_trust_safety_crisis_v1]
