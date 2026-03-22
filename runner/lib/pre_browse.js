@@ -24,11 +24,11 @@ function log(msg) {
 
 /** Run a node script, logging to runner.log. Failures are swallowed (|| true). */
 function runScript(scriptPath, opts = {}) {
-  const { env = {}, stdout = 'log' } = opts;
+  const { env = {}, stdout = 'log', args = '' } = opts;
   const mergedEnv = { ...process.env, ...env };
   const redirect = stdout === 'devnull' ? '> /dev/null 2>&1' : `>> "${RUNNER_LOG}" 2>&1`;
   try {
-    execSync(`node "${scriptPath}" ${redirect}`, {
+    execSync(`node "${scriptPath}" ${args} ${redirect}`, {
       env: mergedEnv,
       shell: true,
       stdio: 'ignore',
@@ -67,7 +67,7 @@ function preBrowse(cycle) {
   }
 
   // ── 2. query.js --hours 4 (topic summary + memory index) ──────────────
-  runScript(path.join(PROJECT_ROOT, 'scraper/query.js') + ' --hours 4', { stdout: 'devnull' });
+  runScript(path.join(PROJECT_ROOT, 'scraper/query.js'), { args: '--hours 4', stdout: 'devnull' });
 
   // ── 3. recall.js (keyword-driven, from topic_summary top 3) ───────────
   let recallQuery = '';
@@ -83,9 +83,11 @@ function preBrowse(cycle) {
   } catch {}
 
   if (recallQuery) {
-    runScript(`${path.join(PROJECT_ROOT, 'runner/recall.js')} --query "${recallQuery}" --limit 5`);
+    // Sanitise recallQuery — remove shell metacharacters to prevent injection
+    const safeQuery = recallQuery.replace(/["`$\\!;|&<>(){}]/g, '');
+    runScript(path.join(PROJECT_ROOT, 'runner/recall.js'), { args: `--query "${safeQuery}" --limit 5` });
   } else {
-    runScript(`${path.join(PROJECT_ROOT, 'runner/recall.js')} --limit 5`);
+    runScript(path.join(PROJECT_ROOT, 'runner/recall.js'), { args: '--limit 5' });
   }
 
   // ── 4. curiosity.js (every CURIOSITY_EVERY cycles) ────────────────────

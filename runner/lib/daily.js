@@ -28,9 +28,11 @@ function log(msg) {
  */
 function runScript(script, args = '') {
   const sp = path.join(config.RUNNER_DIR, script);
-  const cmd = args ? `node "${sp}" ${args}` : `node "${sp}"`;
+  const cmd = args
+    ? `node "${sp}" ${args} >> "${config.RUNNER_LOG_PATH}" 2>&1`
+    : `node "${sp}" >> "${config.RUNNER_LOG_PATH}" 2>&1`;
   try {
-    execSync(cmd, { stdio: 'ignore', timeout: 300000 });
+    execSync(cmd, { shell: true, stdio: 'ignore', timeout: 300000 });
   } catch {}
 }
 

@@ -24,17 +24,17 @@ function log(msg) {
 
 /** Run a node script, logging to runner.log. Failures swallowed. */
 function runScript(scriptPath, opts = {}) {
-  const { env = {}, captureOutput = false } = opts;
+  const { env = {}, captureOutput = false, args = '' } = opts;
   const mergedEnv = { ...process.env, ...env };
   try {
     if (captureOutput) {
-      return execSync(`node "${scriptPath}"`, {
+      return execSync(`node "${scriptPath}" ${args}`, {
         env: mergedEnv,
         encoding: 'utf-8',
         timeout: 120_000,
       }).trim();
     }
-    execSync(`node "${scriptPath}" >> "${RUNNER_LOG}" 2>&1`, {
+    execSync(`node "${scriptPath}" ${args} >> "${RUNNER_LOG}" 2>&1`, {
       env: mergedEnv,
       shell: true,
       stdio: 'ignore',
@@ -98,7 +98,8 @@ function postBrowse({ cycle, today, hour }) {
 
   // ── 2. reading_queue.js --mark-done (if reading URL was set) ──────────
   if (fs.existsSync(config.READING_URL_PATH) && fs.statSync(config.READING_URL_PATH).size > 0) {
-    runScript(path.join(PROJECT_ROOT, 'runner/reading_queue.js') + ' --mark-done', {
+    runScript(path.join(PROJECT_ROOT, 'runner/reading_queue.js'), {
+      args: '--mark-done',
       env: { READING_CYCLE: String(cycle) },
     });
   }
@@ -154,12 +155,12 @@ function postBrowse({ cycle, today, hour }) {
   }
 
   // ── 6. moltbook.js --heartbeat ────────────────────────────────────────
-  runScript(path.join(PROJECT_ROOT, 'runner/moltbook.js') + ' --heartbeat');
+  runScript(path.join(PROJECT_ROOT, 'runner/moltbook.js'), { args: '--heartbeat' });
 
   // ── 7. moltbook.js --post-checkpoint (retry pending) ─────────────────
   const checkpointPending = path.join(config.STATE_DIR, 'checkpoint_pending');
   if (fs.existsSync(checkpointPending)) {
-    runScript(path.join(PROJECT_ROOT, 'runner/moltbook.js') + ' --post-checkpoint');
+    runScript(path.join(PROJECT_ROOT, 'runner/moltbook.js'), { args: '--post-checkpoint' });
   }
 
   // ── 8. Retry pending checkpoint tweet ─────────────────────────────────
