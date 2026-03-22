@@ -103,9 +103,9 @@ GATEWAY_ERR_LOG="$HOME/.openclaw-x-hunter/logs/gateway.err.log"  # x-hunter gate
 trap 'echo "[run] Stopping..."; bash "$PROJECT_ROOT/scraper/stop.sh" 2>/dev/null; bash "$PROJECT_ROOT/stream/stop.sh" 2>/dev/null; exit 0' INT TERM
 
 # ── Orchestrator A/B switch ───────────────────────────────────────────────────
-# Set ORCHESTRATOR=node in .env (or env) to use the Node orchestrator.
-# Default: bash (this file continues as path A). Rollback: ORCHESTRATOR=bash
-ORCHESTRATOR="${ORCHESTRATOR:-bash}"
+# Default: node (Phase 6). Rollback: ORCHESTRATOR=bash in .env, restart.
+# Path A (bash) kept intact below — just no longer the default.
+ORCHESTRATOR="${ORCHESTRATOR:-node}"
 if [ "$ORCHESTRATOR" = "node" ]; then
   echo "[run] Using Node orchestrator (path B)"
   exec node "$SCRIPT_DIR/orchestrator.js"

@@ -56,6 +56,7 @@ module.exports = {
 
   // Runner files
   RUNNER_LOG_PATH: path.join(RUNNER_DIR, 'runner.log'),
+  ORCHESTRATOR_LOG_PATH: path.join(RUNNER_DIR, 'orchestrator.log'),
   LOCKDIR: path.join(RUNNER_DIR, 'run.lock'),
   PIDFILE: path.join(RUNNER_DIR, 'run.pid'),
   PAUSE_FILE: path.join(RUNNER_DIR, 'PAUSE'),

@@ -1,6 +1,6 @@
 'use strict';
 
-// orchestrator.js — Node orchestrator (Phase 5)
+// orchestrator.js — Node orchestrator (Phase 5 + Phase 6 structured logging)
 //
 // Replaces the bash main loop in run.sh. Invoked via exec when ORCHESTRATOR=node.
 // This is a direct 1:1 port of run.sh lines 290-990 — same sequence, same scripts,
@@ -93,6 +93,34 @@ function readFileSafe(fp) {
 function cleanup() {
   try { fs.rmSync(config.LOCKDIR, { recursive: true, force: true }); } catch {}
   try { fs.rmSync(config.PIDFILE, { force: true }); } catch {}
+}
+
+// ── Structured logging (Phase 6) ────────────────────────────────────────────
+// JSON lines to runner/orchestrator.log — one entry per cycle.
+
+/**
+ * Append a JSON line to orchestrator.log. Swallows errors.
+ * @param {object} entry - structured log entry
+ */
+function structuredLog(entry) {
+  try {
+    const line = JSON.stringify(entry) + '\n';
+    fs.appendFileSync(config.ORCHESTRATOR_LOG_PATH, line);
+  } catch {}
+}
+
+/**
+ * Mutable per-cycle metrics object. Reset at cycle start, finalized at cycle end.
+ */
+function newCycleMetrics() {
+  return {
+    agentExitCodes: [],  // exit codes from all agentRun calls this cycle
+    postAttempted: false, // whether a post pipeline was run
+    postSuccess: null,    // true/false/null (null = no post this cycle)
+    browserRestarted: false,
+    downgradedToBrowse: false,
+    errors: [],           // any notable errors captured
+  };
 }
 
 process.on('exit', cleanup);
@@ -188,9 +216,12 @@ function journalInGit(today, hour) {
 // ── MAIN LOOP ────────────────────────────────────────────────────────────────
 // ══════════════════════════════════════════════════════════════════════════════
 
-log('Node orchestrator started (Phase 5)');
+log('Node orchestrator started (Phase 5 + Phase 6 logging)');
 
 let cycle = 0;
+let totalCycles = 0;
+let totalPostAttempts = 0;
+let totalPostSuccesses = 0;
 
 // eslint-disable-next-line no-constant-condition
 while (true) {
@@ -208,6 +239,7 @@ while (true) {
   const now = new Date().toTimeString().slice(0, 5);
   const hour = String(new Date().getHours()).padStart(2, '0');
   const dayNumber = getDayNumber(today);
+  const metrics = newCycleMetrics();
 
   // ── Determine cycle type ────────────────────────────────────────────────
   let cycleType;
@@ -225,6 +257,7 @@ while (true) {
     if (hourInt < config.TWEET_START || hourInt >= config.TWEET_END) {
       log(`Post window closed (hour=${hour}), running as BROWSE instead of ${cycleType}`);
       cycleType = 'BROWSE';
+      metrics.downgradedToBrowse = true;
     }
   }
 
@@ -254,6 +287,7 @@ while (true) {
       restartGateway();
       startBrowser();
       sleepSec(15);
+      metrics.browserRestarted = true;
     } else if (!checkGatewayPort()) {
       log(`gateway port ${config.GATEWAY_PORT} not responding — restarting gateway`);
       restartGateway();
@@ -280,6 +314,7 @@ while (true) {
       log('WARNING: browser not ready after reset — downgrading TWEET/QUOTE to BROWSE');
       if (cycleType === 'TWEET' || cycleType === 'QUOTE') {
         cycleType = 'BROWSE';
+        metrics.downgradedToBrowse = true;
       }
     }
     log(`x-hunter session + gateway restarted (context flush cycle ${cycle})`);
@@ -295,7 +330,8 @@ while (true) {
     });
     const prompt = buildFirstRunPrompt(ctx);
     const gwBefore = countGatewayErrLines();
-    agentRun({ agent: 'x-hunter', message: prompt, thinking: 'high', verbose: 'on' });
+    const exitCode = agentRun({ agent: 'x-hunter', message: prompt, thinking: 'high', verbose: 'on' });
+    metrics.agentExitCodes.push(exitCode);
     checkAndFixGatewayTimeout(gwBefore);
 
   // ── BROWSE cycle ──────────────────────────────────────────────────────
@@ -314,7 +350,8 @@ while (true) {
     const gwBefore = countGatewayErrLines();
     const journalBefore = journalInGit(today, hour);
 
-    agentRun({ agent: 'x-hunter', message: prompt, thinking: 'low', verbose: 'on' });
+    const browseExit = agentRun({ agent: 'x-hunter', message: prompt, thinking: 'low', verbose: 'on' });
+    metrics.agentExitCodes.push(browseExit);
     checkAndFixGatewayTimeout(gwBefore);
 
     // Retry if journal missing
@@ -323,7 +360,8 @@ while (true) {
       log('browse journal missing after agent run — retrying once (no thinking)');
       sleepSec(5);
       const gwBefore2 = countGatewayErrLines();
-      agentRun({ agent: 'x-hunter', message: prompt, verbose: 'on' });
+      const retryExit = agentRun({ agent: 'x-hunter', message: prompt, verbose: 'on' });
+      metrics.agentExitCodes.push(retryExit);
       checkAndFixGatewayTimeout(gwBefore2);
     }
 
@@ -346,7 +384,8 @@ while (true) {
     try { fs.unlinkSync(config.QUOTE_DRAFT_PATH); } catch {}
     try { fs.unlinkSync(path.join(config.STATE_DIR, 'quote_result.txt')); } catch {}
 
-    agentRun({ agent: 'x-hunter', message: prompt, thinking: 'low', verbose: 'on' });
+    const quoteExit = agentRun({ agent: 'x-hunter', message: prompt, thinking: 'low', verbose: 'on' });
+    metrics.agentExitCodes.push(quoteExit);
 
     // Restore state
     chmodPostsLog('644');
@@ -355,7 +394,9 @@ while (true) {
     // Post-quote pipeline: cleanup_tabs → voice_filter --quote → 3s sleep →
     //   post_quote → watchdog QUOTE → critique --quote
     runScriptLog(path.join(PROJECT_ROOT, 'runner/cleanup_tabs.js'));
-    postQuoteTweet();
+    const quoteResult = postQuoteTweet();
+    metrics.postAttempted = true;
+    metrics.postSuccess = quoteResult.posted;
 
     // Watchdog: verify quote was posted
     runScriptLog(path.join(PROJECT_ROOT, 'runner/watchdog.js'), '', {
@@ -385,13 +426,15 @@ while (true) {
       try { fs.unlinkSync(config.TWEET_DRAFT_PATH); } catch {}
       try { fs.unlinkSync(path.join(config.STATE_DIR, 'tweet_result.txt')); } catch {}
 
-      agentRun({ agent: 'x-hunter-tweet', message: prompt, thinking: 'low', verbose: 'on' });
+      const tweetExit = agentRun({ agent: 'x-hunter-tweet', message: prompt, thinking: 'low', verbose: 'on' });
+      metrics.agentExitCodes.push(tweetExit);
 
       // Retry if tweet_draft.txt missing
       if (!fileExists(config.TWEET_DRAFT_PATH)) {
         log('tweet_draft.txt missing after agent run — retrying once (no thinking)');
         sleepSec(5);
-        agentRun({ agent: 'x-hunter-tweet', message: prompt, verbose: 'on' });
+        const retryExit = agentRun({ agent: 'x-hunter-tweet', message: prompt, verbose: 'on' });
+        metrics.agentExitCodes.push(retryExit);
       }
     }
 
@@ -409,7 +452,9 @@ while (true) {
     runScriptLog(path.join(PROJECT_ROOT, 'runner/detect_drift.js'));
 
     // Post regular tweet (journal URL fix → critique gate → voice filter → post)
-    postRegularTweet({ today, hour });
+    const tweetResult = postRegularTweet({ today, hour });
+    metrics.postAttempted = true;
+    metrics.postSuccess = tweetResult.posted;
 
     // Watchdog: verify tweet was posted
     runScriptLog(path.join(PROJECT_ROOT, 'runner/watchdog.js'), '', {
@@ -459,6 +504,33 @@ while (true) {
   // ── Wait out remainder of interval + post-sleep detection ─────────────
   const elapsed = Math.floor((Date.now() - cycleStart) / 1000);
   const wait = config.BROWSE_INTERVAL - elapsed;
+
+  // ── Structured log (Phase 6) ──────────────────────────────────────────
+  totalCycles++;
+  if (metrics.postAttempted) {
+    totalPostAttempts++;
+    if (metrics.postSuccess) totalPostSuccesses++;
+  }
+  structuredLog({
+    ts: new Date().toISOString(),
+    cycle,
+    type: cycleType,
+    durationSec: elapsed,
+    day: dayNumber,
+    agentExitCodes: metrics.agentExitCodes,
+    postAttempted: metrics.postAttempted,
+    postSuccess: metrics.postSuccess,
+    browserRestarted: metrics.browserRestarted,
+    downgradedToBrowse: metrics.downgradedToBrowse,
+    health: {
+      totalCycles,
+      postSuccessRate: totalPostAttempts > 0
+        ? +(totalPostSuccesses / totalPostAttempts).toFixed(3)
+        : null,
+      totalPostAttempts,
+      totalPostSuccesses,
+    },
+  });
 
   if (wait > 0) {
     log(`Cycle ${cycle} (${cycleType}) done in ${elapsed}s. Next cycle in ${wait}s...`);
