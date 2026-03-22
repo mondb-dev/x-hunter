@@ -223,14 +223,39 @@ let totalCycles = 0;
 let totalPostAttempts = 0;
 let totalPostSuccesses = 0;
 
-// eslint-disable-next-line no-constant-condition
-while (true) {
+// Track expected wake time for post-sleep detection.
+// When setTimeout fires later than expected, Mac likely woke from sleep.
+let expectedWakeTs = 0;
+
+function runOneCycle() {
+
+  // ── Post-sleep detection ────────────────────────────────────────────────
+  // If we woke up much later than expected, Mac likely slept during the wait.
+  if (expectedWakeTs > 0) {
+    const lateness = Math.floor((Date.now() - expectedWakeTs) / 1000);
+    if (lateness > config.BROWSE_INTERVAL) {
+      log(`post-sleep detected (${lateness}s late) — restarting browser...`);
+      try {
+        execSync('openclaw browser --browser-profile x-hunter stop', {
+          stdio: 'ignore', timeout: 15_000,
+        });
+      } catch {}
+      sleepSec(3);
+      try {
+        execSync('openclaw browser --browser-profile x-hunter start', {
+          stdio: 'ignore', timeout: 15_000,
+        });
+      } catch {}
+      sleepSec(10);
+      log('browser restarted after sleep wake');
+    }
+  }
 
   // ── Pause sentinel ──────────────────────────────────────────────────────
   if (fileExists(config.PAUSE_FILE)) {
     log('PAUSED (runner/PAUSE exists) — sleeping 60s. Remove file to resume.');
-    sleepSec(60);
-    continue;
+    setTimeout(runOneCycle, 60_000);
+    return;
   }
 
   cycle++;
@@ -534,13 +559,14 @@ while (true) {
 
   if (wait > 0) {
     log(`Cycle ${cycle} (${cycleType}) done in ${elapsed}s. Next cycle in ${wait}s...`);
-    sleepSec(wait);
+    expectedWakeTs = Date.now() + wait * 1000;
+    setTimeout(runOneCycle, wait * 1000);
   } else {
     log(`Cycle ${cycle} (${cycleType}) done in ${elapsed}s. Starting next cycle immediately.`);
 
-    // Post-sleep detection: if elapsed > 2× interval, Mac likely woke from sleep
+    // Cycle itself took > 2× interval — Mac likely slept during cycle work
     if (elapsed > config.BROWSE_INTERVAL * 2) {
-      log(`post-sleep detected (elapsed=${elapsed}s) — restarting browser...`);
+      log(`post-sleep detected during cycle (elapsed=${elapsed}s) — restarting browser...`);
       try {
         execSync('openclaw browser --browser-profile x-hunter stop', {
           stdio: 'ignore', timeout: 15_000,
@@ -555,5 +581,11 @@ while (true) {
       sleepSec(10);
       log('browser restarted after sleep wake');
     }
+
+    expectedWakeTs = 0;
+    setImmediate(runOneCycle);
   }
 }
+
+// Kick off the first cycle
+runOneCycle();

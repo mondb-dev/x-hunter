@@ -144,7 +144,7 @@ test('9. Day number calculation', () => {
 // ── Test 10: Pause sentinel ──────────────────────────────────────────────────
 test('10. Pause sentinel check', () => {
   assert(src.includes('config.PAUSE_FILE'), 'Missing PAUSE_FILE check');
-  assert(src.includes('sleepSec(60)'), 'Missing 60s pause sleep');
+  assert(src.includes('setTimeout(runOneCycle, 60_000)'), 'Missing 60s pause sleep via setTimeout');
 });
 
 // ── Test 11: All 4 cycle types handled ───────────────────────────────────────

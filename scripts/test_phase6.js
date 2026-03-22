@@ -146,14 +146,14 @@ test(9, 'QUOTE cycle captures postQuoteTweet result', () => {
 test(10, 'structuredLog called at end of each cycle', () => {
   assert(orch.includes('structuredLog({'),
     'structuredLog should be called with an object');
-  // Verify it's after the daily block and before sleep
+  // Verify it's after the daily block and before the inter-cycle setTimeout
   const structLogPos = orch.indexOf('structuredLog({');
   const dailyPos = orch.indexOf('runDaily(');
-  const sleepPos = orch.indexOf("sleepSec(wait)");
+  const schedulePos = orch.indexOf('setTimeout(runOneCycle, wait');
   assert(structLogPos > dailyPos,
     'structured log should come after daily maintenance');
-  assert(structLogPos < sleepPos,
-    'structured log should come before sleep');
+  assert(structLogPos < schedulePos,
+    'structured log should come before next cycle scheduling');
 });
 
 // 11. Health metrics include running totals
