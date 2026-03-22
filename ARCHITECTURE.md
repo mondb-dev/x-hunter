@@ -4,18 +4,19 @@
 
 An autonomous AI agent that reads X (Twitter), forms beliefs, journals,
 tweets, and publishes to sebastianhunter.fun. The system runs continuously
-on a Mac with a persistent Chrome session.
+on a GCP VM (`e2-medium`, `us-central1-a`) as a systemd service.
 
 There are two distinct layers:
 
-- **Mechanical layer** — Node.js scripts and shell loops that handle all
-  scraping, browser navigation, data processing, and side effects. No LLM.
-- **Reasoning layer** — Claude (via openclaw) that reads pre-digested text
-  files, thinks, and writes text files. No browser access, no shell commands.
+- **Mechanical layer** — Node.js scripts that handle all scraping, browser
+  navigation, data processing, posting, and git. No LLM.
+- **Reasoning layer** — Gemini 2.5 Flash (via OpenClaw) that reads pre-digested
+  text files, thinks, and writes text files. No browser access, no shell commands.
 
-> **Current exception**: the tweet cycle still asks the LLM to post to
-> x.com and run git commands directly. This is a known gap — the intent is
-> to extract those into `runner/post_tweet.js` and have `run.sh` handle git.
+All posting (tweets, quote-tweets, replies) is handled mechanically via CDP.
+The LLM writes draft text files; `post_tweet.js` and `post_quote.js` post them.
+Git commit/push is handled by `runner/lib/git.js`. The LLM has no direct
+access to the browser or shell.
 
 ---
 
@@ -23,13 +24,13 @@ There are two distinct layers:
 
 ```
   ┌─────────────────────────────────────────────────────────────────┐
-  │                        runner/run.sh                            │
+  │   runner/run.sh (init) → exec → runner/orchestrator.js         │
   │                   (main orchestration loop)                     │
   └──────────┬──────────────────────────┬───────────────────────────┘
-             │ starts                   │ starts
+             │ starts                   │ runs
              ▼                          ▼
   ┌─────────────────────┐    ┌──────────────────────────────────────┐
-  │  scraper/start.sh   │    │     Agent cycle (every 20 min)       │
+  │  scraper/start.sh   │    │     Agent cycle (every ~20 min)      │
   │  (background loops) │    │  BROWSE (×5) → TWEET (×1) → repeat  │
   └──────────┬──────────┘    └──────────────────────────────────────┘
              │
@@ -45,7 +46,7 @@ collect.js  reply.js     follows.js
 
 ### `scraper/collect.js` — every 10 min
 
-Scrapes the X feed via CDP (Playwright connects to existing Chrome on
+Scrapes the X feed via CDP (puppeteer-core connects to existing Chrome on
 port 18801). Runs a 12-phase analytics pipeline:
 
 ```
@@ -307,7 +308,7 @@ yet committed to a lean. First ponder likely ~day 14–18.
 
 ---
 
-### Tweet cycle (every 6th = every 2 hours)
+### Tweet cycle (every 6th = every ~2 hours)
 
 ```
 Reads:
@@ -318,17 +319,17 @@ Reads:
 
 Writes:
   journals/YYYY-MM-DD_HH.html  journal entry for this synthesis window
-  state/posts_log.json         log the tweet
+  state/tweet_draft.txt        tweet text
+  state/quote_draft.txt        quote-tweet text (if quoting)
   state/ontology.json          update
   state/belief_state.json      update
 
-Then (still LLM — targeted for extraction):
-  → posts tweet via x.com/compose/post
-  → git add / commit / push
-
-After LLM returns — run.sh:
-  node runner/archive.js       index new journals/checkpoints → SQLite memory
-                               → attempt Irys/Arweave upload if SOL balance ok
+Then (mechanical — via orchestrator.js):
+  → post_tweet.js / post_quote.js posts via CDP
+  → posts_log.js logs to state/posts_log.json
+  → git add / commit / push (lib/git.js)
+  → archive.js indexes new journals/checkpoints → SQLite memory
+                → attempt Irys/Arweave upload if SOL balance ok
 ```
 
 ---
@@ -398,7 +399,7 @@ uploaded file from `https://arweave.net/<tx_id>`.
 ```
 X feed (raw HTML)
     │
-    ▼ CDP (Playwright)
+    ▼ CDP (puppeteer-core)
 collect.js — 12-phase pipeline — scored + clustered digest
     │                                │
     ▼                                ▼
@@ -438,7 +439,7 @@ state/index.db               state/feed_digest.txt
 
 ### HN-Gravity velocity score
 ```
-velocity = likes / (age_hours + 2)^1.5
+velocity = likes / (age_hours + 2)^1.8
 ```
 Decays engagement weight over time. A 1-hour-old post with 100 likes
 scores higher than a 24-hour-old post with the same likes.
@@ -485,7 +486,7 @@ follow_score = avg_velocity × 0.35
 | LLM (local critique) | Ollama `qwen2.5:7b` — no API cost, post-cycle consistency check |
 | Permanent storage | Arweave via Irys L2 (SOL-funded, `@irys/sdk`) — journals, checkpoints, tweet records |
 | Web frontend | Next.js at sebastianhunter.fun |
-| Orchestration | Bash (`run.sh`, `start.sh`, `stop.sh`); `caffeinate -sd` prevents Mac sleep |
+| Orchestration | `run.sh` (init) → `orchestrator.js` (Node.js main loop, SIGTERM-safe); systemd on GCP VM |
 
 ---
 
@@ -514,9 +515,10 @@ Ponder tweet (when ponder fires):
 
 ## Stability and Recovery
 
-- `caffeinate -sd -w $PID` runs beside the main loop to prevent Mac sleep
-- Post-sleep detection: if `ELAPSED > 2 × BROWSE_INTERVAL` (Mac was asleep),
-  run.sh triggers a browser stop/start before the next cycle
+- systemd `TimeoutStopSec=20` ensures graceful shutdown within 20s
+- `orchestrator.js` uses `setTimeout`-based inter-cycle sleep (SIGTERM-safe)
+- Post-sleep detection: if `ELAPSED > 2 × BROWSE_INTERVAL` (machine was suspended),
+  orchestrator triggers a browser stop/start before the next cycle
 - `clean_stale_locks()` removes dead-PID lock files each cycle
 - `agent_run()` has a 900s timeout to prevent hung openclaw CLI from blocking forever
 - Session reset every 6 cycles (prevents CDP compaction rate-limit deadlock)
