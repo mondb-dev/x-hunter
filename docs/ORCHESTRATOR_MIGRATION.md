@@ -373,7 +373,7 @@ Test pre_tweet by emptying browse_notes.md — verify "SKIP" is written, no agen
 
 ---
 
-### Phase 3: Extract Post & Git Helpers
+### Phase 3: Extract Post & Git Helpers ✅ DONE
 
 **Goal:** Unify the 6+ tweet-posting patterns into composable functions.
 
@@ -684,7 +684,7 @@ Phase 0  ──────────────── (stub + config)
 | 1 | Prompts + context loader | ~400 (4 heredocs + 15 state vars + 5 node -e blocks) | 4-6 hours | Phase 0 | **✅ DONE** |
 | 2 | Browser + state helpers | ~180 (6 browser funcs + 5 state funcs) | 6-8 hours | Phase 0 | **✅ DONE** |
 | 2b | Pre/post pipelines (pre_browse, pre_tweet, post_browse) | ~140 (11 + 3 + 8 operations) | 4-5 hours | Phase 2 | **✅ DONE** |
-| 3 | Post pipelines (post_tweet, post.js) + git | ~120 (4 posting flows + tweet post-pipeline + git) | 3-4 hours | Phase 2 |
+| 3 | Post pipelines (post_tweet, post.js) + git | ~120 (4 posting flows + tweet post-pipeline + git) | 3-4 hours | Phase 2 | **✅ DONE** |
 | 4 | Daily block | ~158 (19 ops + 5 tweet subflows) | 4-5 hours | Phase 3 |
 | 5 | Orchestrator loop + signal handlers | ~90 (main loop + cleanup + caffeinate + post-sleep) | 3-4 hours | Phases 1-4 |
 | 6 | Default switch + logging | 0 (flag flip + additive) | 1 hour | Phase 5 + 3-5 day soak |
