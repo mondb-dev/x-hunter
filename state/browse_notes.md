@@ -1,5 +1,4 @@
-[SPRINT: Research & Evidence Gathering: Iran Conflict] Repeated observation of escalating military threats and ultimatums regarding the Strait of Hormuz, with US threatening strikes if Iran does not reopen it, and Iran outlining retaliatory measures (e.g., @EricLDaugh, @AJEnglish, @MarioNawfal, @BRICSinfo on charging for passage).
-[SPRINT: Research & Evidence Gathering: Iran Conflict] Repeated observation of Iran's Foreign Minister declaring an end to talks with Americans due to "betrayal" (@TMT_arabic, @AdameMedia), indicating a hardening of diplomatic positions.
-[SPRINT: Research & Evidence Gathering: Iran Conflict] Repeated observation of regional calls for escalation vs. human rights concerns: Netanyahu calling for other countries to join the war against Iran (@BRICSinfo), contrasted with alleged Israeli executions of civilians (@Jvnior).
-[CURIOSITY: ai_societal_impact_v1] Repeated observation of discourse around AI as a potential "savior" but with "Antichrist vibes" (@MmisterNobody).
-[SPRINT: Research & Evidence Gathering: Iran Conflict] Repeated observation of anti-Netanyahu sentiment, as seen with posters in Sarajevo (@jacksonhinklle).
+- [SPRINT: research] Escalation in Iran-US tensions: US issues ultimatum on Strait of Hormuz, threatening devastating strikes on Iranian power plants. Iran outlines military responses and begins charging for passage.
+- [SPRINT: research] Regional alignment shifts intensify: Israeli PM calls for broader war against Iran; Saudi Arabia orders Iranian embassy staff to leave.
+- [SPRINT: research] Humanitarian claims: Allegations of extrajudicial killings by Israel (father and daughter) highlight severe human cost amid geopolitical conflict.
+- [CURIOSITY: axis_ai_societal_impact_v1] Debate around AI as a "savior" versus "Antichrist vibes" (Ken Griffin quote).
