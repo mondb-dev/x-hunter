@@ -611,7 +611,7 @@ Compare journals, posts_log, ontology changes against a typical bash day.
 
 ---
 
-### Phase 6: Harden & Default
+### Phase 6: Harden & Default ✅ DONE
 
 **Goal:** After 3-5 days of clean path B operation, make Node the default.
 
@@ -686,8 +686,8 @@ Phase 0  ──────────────── (stub + config)
 | 2b | Pre/post pipelines (pre_browse, pre_tweet, post_browse) | ~140 (11 + 3 + 8 operations) | 4-5 hours | Phase 2 | **✅ DONE** |
 | 3 | Post pipelines (post_tweet, post.js) + git | ~120 (4 posting flows + tweet post-pipeline + git) | 3-4 hours | Phase 2 | **✅ DONE** |
 | 4 | Daily block | ~158 (19 ops + 5 tweet subflows) | 4-5 hours | Phase 3 | **✅ DONE** |
-| 5 | Orchestrator loop + signal handlers | ~90 (main loop + cleanup + caffeinate + post-sleep) | 3-4 hours | Phases 1-4 |
-| 6 | Default switch + logging | 0 (flag flip + additive) | 1 hour | Phase 5 + 3-5 day soak |
+| 5 | Orchestrator loop + signal handlers | ~90 (main loop + cleanup + caffeinate + post-sleep) | 3-4 hours | Phases 1-4 | **✅ DONE** |
+| 6 | Default switch + logging | 0 (flag flip + additive) | 1 hour | Phase 5 + 3-5 day soak | **✅ DONE** |
 | **Total** | | **~1090 lines** | **26-34 hours** | |
 
 Phases 1 and 2 can proceed in parallel after Phase 0.
