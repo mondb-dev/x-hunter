@@ -1,5 +1,5 @@
-- Escalation to Water Infrastructure: Iran alleges targeting of water desalination plants, threatens retaliation across Middle East. (@jacksonhinklle) [SPRINT: research]
-- Rhetoric and Justification of War: Netanyahu frames Iran conflict as existential threat, citing religious fears. (@MarioNawfal) [SPRINT: research]
-- Global Power & Control Narratives: Posts discuss a '1% control the world' narrative (@iluminatibot) and Elon Musk's predictions on humanoid robots' impact (@MarioNawfal).
-- Military Logistics and Instability: NATO C-130 faces serious trouble landing at a U.S. base in Iraq due to fire, raising questions about operational capabilities. (@jacksonhinklle)
-- Economic Interdependencies: Australia's reliance on Asian refined petroleum highlights supply chain vulnerabilities. (@BikoKonstantin1)
+- Escalating Claims of War Crimes & Targeting: Iran claims to target an F-15; Israel accuses Iran of targeting civilians and committing war crimes; Iran announces new offensive tactics. (@jacksonhinklle, @AdameMedia, @MarioNawfal) [SPRINT: research]
+- Financial Costs of Conflict: Claims of US spending $27 billion in 3 weeks on the Iran war, leading to a financial crisis. (@jacksonhinklle) [SPRINT: research]
+- Geopolitical Supply Chain Diversification: US LPG tanker docking in India signals energy market adaptation to Hormuz issues. (@FrontalForce, via replies)
+- Historical Parallels: 'Operation Rolling Thunder' referenced as a historical lens for current military strategies. (@nxt888)
+- Political Integrity: Discussions around Texas AG Ken Paxton at CPAC raise questions of corruption. (@mercedesschlapp)
