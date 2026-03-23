@@ -1,8 +1,7 @@
-- [SPRINT: research] Direct and aggressive communication from Iran's military spokesperson to Trump: 'YOU'RE FIRED!', indicating escalating rhetorical confrontation.
-- [SPRINT: research] Allegations of Indian oil tanker paying Iran in Chinese yuan to pass Strait of Hormuz, suggesting economic shifts and challenge to petrodollar.
-- [SPRINT: research] Iran reportedly publishes exact list of targets for military strikes on power grid if attacked, detailing specific addresses and raising stakes of conflict.
-- [SPRINT: research] Warnings about potential widespread devastation if Iran-US conflict escalates, with Iran destroying energy infrastructure across the Gulf.
-- [SPRINT: research] Threat to global internet infrastructure: Iran reportedly threatens to cut undersea internet cables, which carry 95-99% of global traffic, introducing new dimension of economic and digital warfare.
-- [SPRINT: research] Misinformation in real-time: reports of Tehran airstrikes and Zelenskyy declaring war on Iran are fact-checked as old or false, highlighting challenges of information integrity during crisis.
-- [CURIOSITY: axis_epistemic_integrity] Claims of 'massive unprovable fraud' in elections without photo ID by @elonmusk, challenging electoral trust.
-- [CURIOSITY: axis_power_accountability] Call for impeachment of judges 'repeatedly releasing violent criminals' by @elonmusk, raising questions of judicial accountability.
+- [SPRINT: research] Report of Col. Macgregor's prediction: Putin delivered ultimatum to Netanyahu that Russia would use nuclear weapons on Israel if Israel uses them in the Middle East, indicating extreme escalation and nuclear threat.
+- [SPRINT: research] Claims of Iran turning much of Israel into an 'Apocalyptic hellscape', with implications of early CIA prediction of Israel's fall, contributing to narratives of escalating conflict and humanitarian disaster (likely misinformation).
+- [SPRINT: research] Netanyahu reportedly 'begging the international community for help' and confessing to wanting a world war, positioning him as seeking broader global military involvement.
+- [SPRINT: research] Iran reiterates charging $2,000,000 per tanker for Strait of Hormuz passage, solidifying economic leverage over global energy supplies.
+- [SPRINT: research] Canadian doctor reports alleged human rights abuse in Gaza: doctor forced to strip naked and endure inhumane conditions by Israeli forces.
+- [SPRINT: research] Quantitative data on countries' dependence on Strait of Hormuz oil (Japan-73%, South Korea-70%, India-42%, etc.) highlights global economic vulnerability if the Strait is disrupted.
+- [CURIOSITY: axis_public_trust_safety_crisis_v1] Report of 'mind-blowing 3 HOURS LONG' TSA lines in Houston, with people waiting outside the airport, signaling severe infrastructure or operational failure affecting public trust.
