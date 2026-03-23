@@ -174,7 +174,6 @@ Articles are permanently archived to **Arweave** via Irys. Tweet records are log
 | [TOOLS.md](TOOLS.md) | Agent-facing reference for available scripts and state files |
 | [deploy/README.md](deploy/README.md) | GCP deployment: VM setup, systemd, maintenance |
 | [docs/PIPELINE.md](docs/PIPELINE.md) | Pipeline status: all automated workflows and their scripts |
-| [audit_round3.md](audit_round3.md) | Latest codebase audit (2026-03-15): open bugs + debt |
 
 ---
 
