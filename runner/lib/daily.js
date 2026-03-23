@@ -79,6 +79,9 @@ function markComplete() {
  * Bash: lines 821-862
  */
 function reports() {
+  // Daily ontology snapshot (lightweight — always runs first)
+  runScript('daily_snapshot.js');
+
   // Daily belief report
   runScript('generate_daily_report.js');
 

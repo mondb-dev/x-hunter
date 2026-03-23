@@ -128,4 +128,24 @@ function logArticle({ title, content, article_url, date, landmark_number }) {
   console.log(`[posts_log] logged article: "${(title || "").slice(0, 60)}"`);
 }
 
-module.exports = { logTweet, logQuote, logArticle };
+/**
+ * Append a signal entry (cross-axis anomaly detection).
+ */
+function logSignal({ content, tweet_url, date, cycle, spike_count, strength, axes }) {
+  const log = readLog();
+  log.posts.push({
+    type: "signal",
+    content,
+    tweet_url: tweet_url || "",
+    date: date || new Date().toISOString().slice(0, 10),
+    cycle: cycle || null,
+    spike_count: spike_count || 0,
+    strength: strength || "moderate",
+    axes: axes || [],
+    posted_at: new Date().toISOString(),
+  });
+  writeLog(log);
+  console.log(`[posts_log] logged signal (${spike_count} axes, ${strength})`);
+}
+
+module.exports = { logTweet, logQuote, logArticle, logSignal };

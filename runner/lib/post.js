@@ -320,9 +320,98 @@ function postSimpleTweet({ resultFile, sourceFile, maxTitleChars = 240, gap = 0 
   return { posted: false };
 }
 
+// ── postSignalTweet ──────────────────────────────────────────────────────────
+/**
+ * Signal tweet posting pipeline (cross-axis anomaly detection).
+ *
+ * Reads state/signal_draft.txt (written by signal_detector.js).
+ * Passes through voice_filter.js for tone consistency, then posts.
+ * Logs to posts_log.json as type: 'signal'.
+ *
+ * @param {Object} opts
+ * @param {string} opts.today  - YYYY-MM-DD
+ * @param {string} opts.hour   - zero-padded hour (e.g. '14')
+ * @returns {{ posted: boolean }}
+ */
+function postSignalTweet({ today, hour }) {
+  const signalDraftPath = config.SIGNAL_DRAFT_PATH;
+  if (!exists(signalDraftPath)) return { posted: false };
+
+  const signalText = readFile(signalDraftPath).trim();
+  if (!signalText) {
+    try { fs.unlinkSync(signalDraftPath); } catch {}
+    return { posted: false };
+  }
+
+  // Write to tweet_draft.txt with journal URL
+  const journalUrl = `https://sebastianhunter.fun/journal/${today}/${hour}`;
+  fs.writeFileSync(DRAFT_PATH, `${signalText}\n${journalUrl}\n`);
+
+  // Voice filter (keep Sebastian's tone)
+  const vfOut = runNodeSafe('voice_filter.js');
+  log(`voice filter (signal): ${vfOut}`);
+
+  // Post
+  log('Posting signal tweet via CDP...');
+  runNodeSafe('post_tweet.js');
+
+  const resultPath = path.join(config.STATE_DIR, 'tweet_result.txt');
+  const tweetUrl = readFile(resultPath).trim();
+  if (tweetUrl) {
+    log(`Signal posted: ${tweetUrl}`);
+  } else {
+    log('Signal posted (URL not captured)');
+  }
+
+  // Re-log as type: "signal" with metadata (post_tweet.js logged as "tweet")
+  try {
+    const { logSignal } = require('../posts_log');
+    const signalLogPath = config.SIGNAL_LOG_PATH;
+    let spike_count = 0, strength = 'moderate', axes = [];
+    if (exists(signalLogPath)) {
+      const lines = readFile(signalLogPath).trim().split('\n').filter(Boolean);
+      if (lines.length) {
+        const latest = JSON.parse(lines[lines.length - 1]);
+        spike_count = latest.spike_count || 0;
+        strength = latest.strength || 'moderate';
+        axes = (latest.axes || []).map(a => a.id);
+      }
+    }
+    // Read back what voice_filter produced (tweet_draft.txt has final content)
+    const postedContent = exists(DRAFT_PATH) ? readFile(DRAFT_PATH).trim() : signalText;
+    // Patch the logTweet entry → signal entry in posts_log.json
+    const postsLogPath = path.join(config.STATE_DIR, 'posts_log.json');
+    if (exists(postsLogPath)) {
+      const logData = JSON.parse(readFile(postsLogPath));
+      const posts = Array.isArray(logData) ? logData : (logData.posts || []);
+      // Find the entry just logged by post_tweet.js (last tweet entry)
+      for (let i = posts.length - 1; i >= 0; i--) {
+        if (posts[i].type === 'tweet') {
+          posts[i].type = 'signal';
+          posts[i].spike_count = spike_count;
+          posts[i].strength = strength;
+          posts[i].axes = axes;
+          break;
+        }
+      }
+      const out = Array.isArray(logData) ? posts : { ...logData, posts, total_posts: posts.length };
+      fs.writeFileSync(postsLogPath, JSON.stringify(out, null, 2));
+      log(`[posts_log] patched entry to type: signal (${spike_count} axes, ${strength})`);
+    }
+  } catch (e) {
+    log(`[signal] logging metadata failed: ${e.message}`);
+  }
+
+  // Cleanup signal draft
+  try { fs.unlinkSync(signalDraftPath); } catch {}
+
+  return { posted: true, tweetUrl: tweetUrl || null };
+}
+
 module.exports = {
   postRegularTweet,
   postQuoteTweet,
   postLinkTweet,
   postSimpleTweet,
+  postSignalTweet,
 };

@@ -47,6 +47,8 @@ module.exports = {
   READING_URL_PATH: path.join(STATE_DIR, 'reading_url.txt'),
   MEMORY_RECALL_PATH: path.join(STATE_DIR, 'memory_recall.txt'),
   CRITIQUE_PATH: path.join(STATE_DIR, 'critique.md'),
+  SIGNAL_DRAFT_PATH: path.join(STATE_DIR, 'signal_draft.txt'),
+  SIGNAL_LOG_PATH: path.join(STATE_DIR, 'signal_log.jsonl'),
   COMMENT_CANDIDATES_PATH: path.join(STATE_DIR, 'comment_candidates.txt'),
   BROWSE_ARCHIVE_PATH: path.join(STATE_DIR, 'browse_archive.md'),
   ACTIVE_PLAN_PATH: path.join(STATE_DIR, 'active_plan.json'),

@@ -110,6 +110,21 @@ function postBrowse({ cycle, today, hour }) {
   // ── 4. detect_drift.js ────────────────────────────────────────────────
   runScript(path.join(PROJECT_ROOT, 'runner/detect_drift.js'));
 
+  // ── 4b. signal_detector.js (cross-axis anomaly detection) ─────────────
+  runScript(path.join(PROJECT_ROOT, 'runner/signal_detector.js'));
+
+  // ── 4c. Post signal tweet if signal_draft.txt was written ─────────────
+  const signalDraftPath = path.join(config.STATE_DIR, 'signal_draft.txt');
+  if (fs.existsSync(signalDraftPath) && fs.statSync(signalDraftPath).size > 0) {
+    const { postSignalTweet } = require('./post');
+    const { ensureBrowser } = require('./browser');
+    ensureBrowser();
+    const signalResult = postSignalTweet({ today, hour });
+    if (signalResult.posted) {
+      log('Signal tweet posted — committing state...');
+    }
+  }
+
   // ── 5. Journal commit decision (4 sub-steps) ─────────────────────────
   const journalFile = path.join(config.JOURNALS_DIR, `${today}_${hour}.html`);
   const journalRelPath = `journals/${today}_${hour}.html`;

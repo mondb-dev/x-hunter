@@ -24,6 +24,9 @@ const DAILY_DIR        = path.join(ROOT, "daily");
 const ONTO             = path.join(ROOT, "state", "ontology.json");
 const BELIEF           = path.join(ROOT, "state", "belief_state.json");
 const CHECKPOINT_STATE = path.join(ROOT, "state", "checkpoint_state.json");
+const SNAPSHOTS_DIR    = path.join(ROOT, "state", "snapshots");
+const SIGNAL_LOG       = path.join(ROOT, "state", "signal_log.jsonl");
+const VOCATION_PATH    = path.join(ROOT, "state", "vocation.json");
 
 const CHECKPOINT_INTERVAL_DAYS = 3;
 
@@ -49,6 +52,112 @@ function daysBetween(dateA, dateB) {
 
 const { callVertex } = require("./vertex.js");
 async function callLLM(prompt) { return callVertex(prompt, 4096); }
+
+// ── Snapshot trajectory helpers ──────────────────────────────────────────────
+
+/**
+ * Load snapshots from the checkpoint period (last N days, default 3).
+ * Returns array sorted oldest-first.
+ */
+function loadRecentSnapshots(days) {
+  const snaps = [];
+  if (!fs.existsSync(SNAPSHOTS_DIR)) return snaps;
+  const files = fs.readdirSync(SNAPSHOTS_DIR)
+    .filter(f => f.endsWith('.json'))
+    .sort()
+    .slice(-(days + 1)); // +1 so we can compute velocity from the day before the window
+  for (const f of files) {
+    try {
+      snaps.push(JSON.parse(fs.readFileSync(path.join(SNAPSHOTS_DIR, f), 'utf-8')));
+    } catch {}
+  }
+  return snaps;
+}
+
+/**
+ * Build trajectory markdown: per-axis score/confidence change over snapshot window.
+ */
+function buildTrajectorySection(snapshots) {
+  if (snapshots.length < 2) return null;
+
+  const oldest = snapshots[0];
+  const newest = snapshots[snapshots.length - 1];
+
+  // Build lookup: axisId → { oldScore, newScore, oldConf, newConf }
+  const oldMap = {};
+  for (const a of (oldest.axes || [])) oldMap[a.id] = a;
+
+  const rows = [];
+  for (const a of (newest.axes || [])) {
+    const old = oldMap[a.id];
+    if (!old) continue;
+    const dScore = (a.score - old.score);
+    const dConf  = (a.confidence - old.confidence);
+    if (Math.abs(dScore) < 0.001 && Math.abs(dConf) < 0.005) continue; // skip unchanged
+    const arrow = dScore > 0.005 ? '↑' : dScore < -0.005 ? '↓' : '→';
+    rows.push({
+      label: a.label || a.id,
+      arrow,
+      dScore,
+      dConf,
+      score: a.score,
+      conf: a.confidence,
+      ev24: a.evidence_24h || 0,
+    });
+  }
+
+  if (!rows.length) return null;
+
+  rows.sort((a, b) => Math.abs(b.dScore) - Math.abs(a.dScore));
+
+  let md = `### Axis trajectories (${oldest.date} → ${newest.date})\n\n`;
+  md += `| Axis | Dir | Δ Score | Δ Confidence | Current Score | Evidence (24h) |\n`;
+  md += `|---|---|---|---|---|---|\n`;
+  for (const r of rows.slice(0, 15)) {
+    md += `| ${r.label} | ${r.arrow} | ${r.dScore >= 0 ? '+' : ''}${r.dScore.toFixed(3)} | ${r.dConf >= 0 ? '+' : ''}${(r.dConf * 100).toFixed(1)}% | ${r.score.toFixed(3)} | ${r.ev24} |\n`;
+  }
+  return md;
+}
+
+// ── Signal log helpers ───────────────────────────────────────────────────────
+
+function loadSignalEvents(sinceDateStr) {
+  const events = [];
+  if (!fs.existsSync(SIGNAL_LOG)) return events;
+  const cutoff = new Date(sinceDateStr).getTime();
+  for (const line of fs.readFileSync(SIGNAL_LOG, 'utf-8').trim().split('\n')) {
+    if (!line) continue;
+    try {
+      const ev = JSON.parse(line);
+      if (new Date(ev.ts).getTime() >= cutoff) events.push(ev);
+    } catch {}
+  }
+  return events;
+}
+
+function buildSignalSection(events) {
+  if (!events.length) return null;
+  let md = `### Cross-axis anomaly events\n\n`;
+  for (const ev of events) {
+    const axisLabels = (ev.axes || []).slice(0, 5).map(a => a.id).join(', ');
+    md += `- **${ev.ts.slice(0, 16)}** — ${ev.strength} signal, ${ev.spike_count} axes (${axisLabels}${(ev.axes||[]).length > 5 ? ', …' : ''}), ${ev.evidence_24h} evidence entries\n`;
+  }
+  return md;
+}
+
+// ── Vocation helper ──────────────────────────────────────────────────────────
+
+function buildVocationSection() {
+  const voc = loadJson(VOCATION_PATH);
+  if (!voc || voc.status === 'not_triggered') return null;
+  let md = `### Vocation update\n\n`;
+  md += `**Status:** ${voc.status}\n`;
+  md += `**Label:** ${voc.label || '(forming)'}\n`;
+  if (voc.description) md += `**Direction:** ${voc.description}\n`;
+  if (voc.core_axes?.length) md += `**Core axes:** ${voc.core_axes.join(', ')}\n`;
+  if (voc.intent) md += `**Intent:** ${voc.intent}\n`;
+  return md;
+}
 
 (async function main() {
   try {
@@ -149,6 +258,15 @@ Write in third person ("Sebastian..."). Be analytical, not promotional. Keep it 
       interpretation = "_Interpretation not available for this checkpoint._";
     }
 
+    // ── Trajectory + signal + vocation data ──────────────────────────────────
+    const snapshots = loadRecentSnapshots(CHECKPOINT_INTERVAL_DAYS);
+    const trajectoryMd = buildTrajectorySection(snapshots);
+
+    const signalEvents = loadSignalEvents(cpState.last_checkpoint_date || '2020-01-01');
+    const signalMd = buildSignalSection(signalEvents);
+
+    const vocationMd = buildVocationSection();
+
     const allAxesSummary = axes.map(a => {
       const ev    = (a.evidence_log || []).length;
       const conf  = ((a.confidence || 0) * 100).toFixed(0);
@@ -187,7 +305,7 @@ ${interpretation}
 
 ---
 
-## Full ontology at this checkpoint
+${trajectoryMd ? `## Trajectory\n\n${trajectoryMd}\n\n---\n\n` : ''}${signalMd ? `## Anomaly log\n\n${signalMd}\n\n---\n\n` : ''}${vocationMd ? `## Vocation\n\n${vocationMd}\n\n---\n\n` : ''}## Full ontology at this checkpoint
 
 | Axis label | Score | Confidence | Evidence entries |
 |---|---|---|---|

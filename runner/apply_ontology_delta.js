@@ -443,6 +443,8 @@ for (const entry of (delta.evidence || [])) {
   axis.last_updated = now;
   axesUpdated.add(axis.id);
   recordDiversity(axis.id, pole_alignment, diversityState);
+
+  // ── Deferred: score_after + confidence_after added after recompute below ──
 }
 
 // Recompute confidence and score using trust-weighted Bayesian update.
@@ -470,6 +472,16 @@ for (const axis of onto.axes) {
   axis.score      = parseFloat(applyDriftCap(axis.id, rawScore, driftState).toFixed(4));
   axis.confidence = parseFloat(Math.min(0.95, totalWeight * 0.025).toFixed(4));
   if (axis.score !== rawScore) axesCapped++;
+
+  // ── Stamp score_after + confidence_after on newly added evidence entries ──
+  // Walk backwards through evidence_log to find entries added this cycle (those
+  // without score_after). This gives each entry the post-recompute snapshot.
+  for (let i = log.length - 1; i >= 0; i--) {
+    const e = log[i];
+    if (e.score_after !== undefined) break; // hit previously stamped entries
+    e.score_after      = axis.score;
+    e.confidence_after = axis.confidence;
+  }
 }
 
 // Persist updated drift cap state (scores reflect the clamped values for today)
