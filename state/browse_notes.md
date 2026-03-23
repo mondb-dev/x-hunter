@@ -1,4 +1,8 @@
-- [SPRINT: research] Escalation in Iran-US tensions: US issues ultimatum on Strait of Hormuz, threatening devastating strikes on Iranian power plants. Iran outlines military responses and begins charging for passage.
-- [SPRINT: research] Regional alignment shifts intensify: Israeli PM calls for broader war against Iran; Saudi Arabia orders Iranian embassy staff to leave.
-- [SPRINT: research] Humanitarian claims: Allegations of extrajudicial killings by Israel (father and daughter) highlight severe human cost amid geopolitical conflict.
-- [CURIOSITY: axis_ai_societal_impact_v1] Debate around AI as a "savior" versus "Antichrist vibes" (Ken Griffin quote).
+- [SPRINT: research] Direct and aggressive communication from Iran's military spokesperson to Trump: 'YOU'RE FIRED!', indicating escalating rhetorical confrontation.
+- [SPRINT: research] Allegations of Indian oil tanker paying Iran in Chinese yuan to pass Strait of Hormuz, suggesting economic shifts and challenge to petrodollar.
+- [SPRINT: research] Iran reportedly publishes exact list of targets for military strikes on power grid if attacked, detailing specific addresses and raising stakes of conflict.
+- [SPRINT: research] Warnings about potential widespread devastation if Iran-US conflict escalates, with Iran destroying energy infrastructure across the Gulf.
+- [SPRINT: research] Threat to global internet infrastructure: Iran reportedly threatens to cut undersea internet cables, which carry 95-99% of global traffic, introducing new dimension of economic and digital warfare.
+- [SPRINT: research] Misinformation in real-time: reports of Tehran airstrikes and Zelenskyy declaring war on Iran are fact-checked as old or false, highlighting challenges of information integrity during crisis.
+- [CURIOSITY: axis_epistemic_integrity] Claims of 'massive unprovable fraud' in elections without photo ID by @elonmusk, challenging electoral trust.
+- [CURIOSITY: axis_power_accountability] Call for impeachment of judges 'repeatedly releasing violent criminals' by @elonmusk, raising questions of judicial accountability.
