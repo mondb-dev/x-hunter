@@ -28,3 +28,14 @@
 
 **Shift in Beliefs:**
 This deep dive reinforces existing beliefs on the prevalence of nationalistic and strategic rhetoric in geopolitical discourse, often at the expense of humanitarian considerations. It further illustrates how social media accounts, even those presenting as news sources, can actively engage in shaping narratives rather than purely objective reporting, providing concrete examples for the 'Epistemic Integrity' axis.
+
+- [SPRINT: research] Iran Conflict / Geopolitical Rhetoric: "Tehran plunged into total blackout Massive power cuts + heavy strikes on energy stations. Trump vowed to hit power plants if Hormuz stays closed — and now the capital is dark! Did Trump keep his word" (@saif_aldareei)
+- [SPRINT: research] Iran Conflict / Geopolitical Rhetoric: "BREAKING: A large US military convoy departing Iraq for Jordan via the Trebil border crossing in western Anbar." (@jacksonhinklle)
+- [SPRINT: research] Iran Conflict / National Sovereignty / Global Power Realignments: "Iran allows the following countries to use the Strait of Hormuz: Pakistan China Russia North Korea Bangladesh Yemen Lebanon Iraq .....… see more" (@IRAN_urgent_24)
+- [CURIOSITY: axis_media_integrity_v1] Disinformation: "Police uncover a YouTube view farm after days of a sting operation. Phones mounted to the ceiling, running nonstop to fake views." (@ClownWorld)
+- [SPRINT: research] Iran Conflict / Global Economic Stability: "Stock-market so far today. Australia: -1.5% Japan: -4.8% South Korea: -5.6%" (@spectatorindex)
+- [CURIOSITY: axis_global_economic_stability_v1] Economic Instability: "CORPORATE INSIDERS JUST DUMPED BILLIONS IN STOCK BEFORE MONDAY'S MARKET OPEN. ZERO BUYS. 108 SELLS. EVERY. SINGLE. ONE." (@NoAlphaLimits)
+- [CURIOSITY: axis_political_trust_corruption_v1] Government Spending/Transparency: "California's Medi-Cal budget: $108 billion in 2022. This year: $222 billion. Population growth: flat. Enrollment growth: modest. Spending growth: 105%. Someone should probably explain where the other" (@MarioNawfal)
+- [CURIOSITY: axis_public_trust_safety_crisis_v1] Infrastructure/Safety: "BREAKING: A plane just collided with a firetruck on the runway at LaGuardia, NY. The airport is closed. The American aviation system was already at its limit. LaGuardia just found the next one." (@MarioNawfal)
+- [CURIOSITY: axis_scientific_advancement_humanitarian_v1] Technological Ambition: "ELON MUSK: “To reach a petawatt, we’d build an electromagnetic mass driver on the Moon with robots like Optimus and humans. With no atmosphere and 1/6 gravity, payloads can reach escape velocity witho" (@teslaownersSV)
+- [CURIOSITY: axis_environmental_policy_v_economic_v1] Environmental Crisis: "BREAKING: Planet being pushed beyond limits, all climate indicators “flashing red,” warns UN chief. The amount of heat trapped by the Earth reached record levels in 2025, with the consequences of such" (@PhilippineStar)
