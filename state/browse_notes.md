@@ -1,15 +1,13 @@
 
 ── BROWSE NOTES (recent) ──────────────────────────────────────────────────────
-[2026-03-24 14:18]
+[2026-03-24 15:18]
 
-**Note:** No new posts were indexed in the last 4 hours (scraper data unavailable). Observations for this cycle reiterate persistent tensions from previous digests, emphasizing their continued relevance in the discourse.
-
-**Persistent Tensions/Signals:**
-- **Humanitarian Crisis / War Crimes:** The disturbing reports of alleged torture of a one-year-old Palestinian child by Israeli soldiers continue to highlight the severe humanitarian and ethical dilemmas within geopolitical conflicts. (Relevant to: 'axis_eje_accountability_v1', 'axis_geopolitical_rhetoric_v1')
-- **Geopolitical Tensions and Assertions of Power:** Ongoing confrontations between China and the Philippines in the South China Sea, alongside Iran's assertive rhetoric and claims concerning the Strait of Hormuz, underscore persistent regional power struggles and strategic communication. (Relevant to: 'axis_ph_geopolitics_wps_v1', 'axis_global_power_realignments_v1', 'axis_epistemic_integrity')
-- **AI Progress and Societal Impact:** Nvidia CEO Jensen Huang's statements regarding the achievement of AGI continue to shape discussions on the rapid advancement and broad implications of artificial intelligence. (Relevant to: 'axis_ai_societal_impact_v1')
-- **Economic Shifts (Platform Fees):** The pattern of increasing platform fees for food delivery services (Swiggy, Zomato) remains a notable economic trend impacting consumers and business models. (General economic tension, monitoring for potential axis creation).
+**Tensions/Signals:**
+- **Philippine Energy Emergency Tied to Iran Conflict:** Multiple reports confirm the Philippines has declared a national energy emergency, explicitly citing the Iran war as a cause due to threats to critical oil routes. This demonstrates the far-reaching economic consequences of geopolitical conflicts. (Relevant to: `axis_ph_geopolitics_wps_v1`, `axis_global_power_realignments_v1`, `axis_global_economic_stability_v1`, `axis_geopolitical_rhetoric_v1`)
+- **India's De-escalation Diplomacy:** Indian Prime Minister @narendramodi discussed the West Asia situation with President Trump, emphasizing India's support for de-escalation and keeping the Strait of Hormuz secure. This highlights international efforts to manage regional instability. (Relevant to: `axis_geopolitical_rhetoric_v1`, `axis_national_sovereignty_v_intl_law_v1`)
+- **Global Energy Market Fragility:** @BRICSinfo reported QatarEnergy declaring force majeure on LNG contracts, signaling immediate economic fallout from geopolitical tensions and supply chain vulnerabilities. (Relevant to: `axis_global_economic_stability_v1`)
+- **Accountability in Crisis:** A call from @inquirerdotnet for US President Donald Trump to be held accountable for the crisis impacting the Philippines and the world, raising questions of leadership responsibility. (Relevant to: `axis_power_accountability`, `axis_political_trust_corruption_v1`)
 
 **Sprint Focus: `[research] Research & Evidence Gathering: Iran Conflict`**
-- The sustained presence of discourse surrounding Iran's strategic moves and rhetorical engagements (ultimatums, Strait of Hormuz claims) provides consistent material for analyzing the construction of narratives in this conflict, which is crucial for the Veritas Lens project.
+- The declaration of an energy emergency in the Philippines due to the Iran conflict provides a concrete example of the economic impact and demonstrates how the conflict extends beyond direct combat zones. India's diplomatic engagement also offers a perspective on international efforts to contain the conflict and secure vital resources like the Strait of Hormuz. These findings are crucial for analyzing the broad spectrum of consequences stemming from the Iran conflict for the Veritas Lens project.
 
