@@ -13,6 +13,13 @@
 const { execSync } = require('child_process');
 const config = require('./config');
 
+// Lazy-load to avoid circular dependency
+let _notify;
+function getNotify() {
+  if (!_notify) _notify = require('./notify');
+  return _notify;
+}
+
 function log(msg) {
   console.log(`[git] ${msg}`);
 }
@@ -39,10 +46,16 @@ function commitAndPush({ paths, message }) {
   try {
     execSync(`git -C "${root}" commit -m "${message}"`, { stdio: 'ignore' });
   } catch {}
+  let pushOk = true;
+  let pushErr = '';
   try {
-    execSync(`git -C "${root}" push origin main`, { stdio: 'ignore' });
-  } catch {}
-  log('push done');
+    execSync(`git -C "${root}" push origin main`, { stdio: 'pipe', timeout: 30000 });
+  } catch (e) {
+    pushOk = false;
+    pushErr = e.stderr ? e.stderr.toString().trim() : e.message;
+  }
+  try { getNotify().checkGitPush(pushOk, pushErr); } catch {}
+  log(pushOk ? 'push done' : `push failed: ${pushErr.slice(0, 120)}`);
 }
 
 // ── triggerVercelDeploy ──────────────────────────────────────────────────────

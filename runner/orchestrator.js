@@ -31,6 +31,7 @@ const { preTweet } = require('./lib/pre_tweet');
 const { postRegularTweet, postQuoteTweet } = require('./lib/post');
 const { commitAndPush, triggerVercelDeploy } = require('./lib/git');
 const { runDaily } = require('./lib/daily');
+const notify = require('./lib/notify');
 
 const loadContext = require('./lib/prompts/context');
 const buildBrowsePrompt = require('./lib/prompts/browse');
@@ -547,6 +548,25 @@ function runOneCycle() {
     postSuccess: metrics.postSuccess,
     browserRestarted: metrics.browserRestarted,
     downgradedToBrowse: metrics.downgradedToBrowse,
+    health: {
+      totalCycles,
+      postSuccessRate: totalPostAttempts > 0
+        ? +(totalPostSuccesses / totalPostAttempts).toFixed(3)
+        : null,
+      totalPostAttempts,
+      totalPostSuccesses,
+    },
+  });
+
+  // ── Notify: check for alert conditions ──────────────────────────────────
+  notify.checkCycle({
+    cycle,
+    type: cycleType,
+    exitCodes: metrics.agentExitCodes,
+    postAttempted: metrics.postAttempted,
+    postSuccess: metrics.postSuccess,
+    downgradedToBrowse: metrics.downgradedToBrowse,
+    browserRestarted: metrics.browserRestarted,
     health: {
       totalCycles,
       postSuccessRate: totalPostAttempts > 0
