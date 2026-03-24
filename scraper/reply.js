@@ -98,7 +98,7 @@ function isSpam(item) {
 async function fetchThreadContext(page, item) {
   const tweetUrl = `https://x.com/${item.from_username}/status/${item.id}`;
   try {
-    await page.goto(tweetUrl, { waitUntil: "domcontentloaded", timeout: 20_000 });
+    await page.goto(tweetUrl, { waitUntil: "domcontentloaded", timeout: 30_000 });
     await page.waitForSelector('article[data-testid="tweet"]', { timeout: 12_000 });
     await new Promise(r => setTimeout(r, 1_500));
 
@@ -117,7 +117,7 @@ async function fetchThreadContext(page, item) {
   } catch (err) {
     console.warn(`[reply] thread context fetch failed: ${err.message}`);
     // Navigate anyway so we end up on the right page for posting
-    try { await page.goto(tweetUrl, { waitUntil: "domcontentloaded", timeout: 15_000 }); } catch {}
+    try { await page.goto(tweetUrl, { waitUntil: "domcontentloaded", timeout: 30_000 }); } catch {}
     return [];
   }
 }
@@ -538,11 +538,12 @@ function logInteraction(data, item, replyText, memoryHints) {
     process.exit(1);
   }
 
+  // Open a dedicated tab — avoids CDP session conflicts with the runner
   let page;
   try {
-    page = await getXPage(browser);
+    page = await browser.newPage();
   } catch (err) {
-    console.error(`[reply] could not get page: ${err.message}`);
+    console.error(`[reply] could not open new tab: ${err.message}`);
     browser.disconnect();
     process.exit(1);
   }
@@ -636,6 +637,7 @@ function logInteraction(data, item, replyText, memoryHints) {
   writeQueue(queue);
 
   console.log(`[reply] done. replied ${repliedThisRun} time(s) this run.`);
+  await page.close().catch(() => {});
   browser.disconnect();
   process.exit(0);
 })();

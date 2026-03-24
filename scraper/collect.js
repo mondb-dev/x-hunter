@@ -192,7 +192,7 @@ async function captureMediaScreenshot(page, postId) {
 
 async function fetchReplies(page, tweetUrl, topN) {
   try {
-    await page.goto(tweetUrl, { waitUntil: "domcontentloaded", timeout: 15_000 });
+    await page.goto(tweetUrl, { waitUntil: "domcontentloaded", timeout: 30_000 });
     await page.waitForSelector('article[data-testid="tweet"]', { timeout: 8_000 });
     await new Promise(r => setTimeout(r, 1_500));
     const all = await extractPosts(page);
@@ -326,7 +326,7 @@ async function scrapeNotifications(page) {
   } catch {}
 
   try {
-    await page.goto("https://x.com/notifications", { waitUntil: "domcontentloaded", timeout: 20_000 });
+    await page.goto("https://x.com/notifications", { waitUntil: "domcontentloaded", timeout: 30_000 });
     await new Promise(r => setTimeout(r, 2_000));
 
     try {
@@ -386,17 +386,25 @@ async function scrapeNotifications(page) {
     process.exit(1);
   }
 
-  let page = await getXPage(browser);
+  // Open a dedicated tab for scraping — avoids CDP session conflicts with the
+  // runner, which holds its own session on the existing x.com page.
+  let page;
+  try {
+    page = await browser.newPage();
+  } catch (err) {
+    console.error(`[scraper] could not open new tab: ${err.message}`);
+    browser.disconnect();
+    process.exit(1);
+  }
 
   // Navigate to home feed
   try {
-    if (!page.url().includes("x.com/home")) {
-      await page.goto("https://x.com/home", { waitUntil: "domcontentloaded", timeout: 20_000 });
-    }
+    await page.goto("https://x.com/home", { waitUntil: "domcontentloaded", timeout: 30_000 });
     await page.waitForSelector('article[data-testid="tweet"]', { timeout: 12_000 });
     await new Promise(r => setTimeout(r, 2_000));
   } catch (err) {
     console.error(`[scraper] failed to load feed: ${err.message}`);
+    await page.close().catch(() => {});
     browser.disconnect();
     process.exit(1);
   }
@@ -630,6 +638,7 @@ async function scrapeNotifications(page) {
   // ── Phase 12: Scrape notifications / mentions ─────────────────────────────
   await scrapeNotifications(page);
 
+  await page.close().catch(() => {});
   browser.disconnect();
   process.exit(0);
 })();

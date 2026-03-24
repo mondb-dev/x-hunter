@@ -166,7 +166,7 @@ async function followUser(page, username) {
   const profileUrl = `https://x.com/${username}`;
   console.log(`[follows] navigating to ${profileUrl}`);
 
-  await page.goto(profileUrl, { waitUntil: "domcontentloaded", timeout: 20_000 });
+  await page.goto(profileUrl, { waitUntil: "domcontentloaded", timeout: 30_000 });
   await page.waitForSelector('[data-testid="primaryColumn"]', { timeout: 12_000 });
   await new Promise(r => setTimeout(r, 2_000));
 
@@ -306,11 +306,12 @@ function logFollow(trustGraph, username, item, classification) {
     process.exit(1);
   }
 
+  // Open a dedicated tab — avoids CDP session conflicts with the runner
   let page;
   try {
-    page = await getXPage(browser);
+    page = await browser.newPage();
   } catch (err) {
-    console.error(`[follows] could not get page: ${err.message}`);
+    console.error(`[follows] could not open new tab: ${err.message}`);
     browser.disconnect();
     process.exit(1);
   }
@@ -352,6 +353,7 @@ function logFollow(trustGraph, username, item, classification) {
   saveJson(TRUST_GRAPH, trustGraph);
 
   console.log(`[follows] done. followed ${followedThisRun} account(s) this run (today: ${countTodayFollows(queue)}/${MAX_PER_DAY}).`);
+  await page.close().catch(() => {});
   browser.disconnect();
   process.exit(0);
 })();
