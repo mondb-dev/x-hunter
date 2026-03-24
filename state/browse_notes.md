@@ -1,6 +1,6 @@
 
-- [CURIOSITY: discourse_discourse_analysis] @DaveRobbins3 argues for a return to factual analysis in debate, moving away from personal pejoratives, in the context of modern discourse.
-- [CURIOSITY: discourse_discourse_analysis] @farahabulhasan emphasizes the need for university professors to argue with evidence and analysis, rather than sarcasm and insults, to elevate academic debate.
-- [CURIOSITY: discourse_discourse_analysis] @5By5Creativity criticizes the concept of 'civil discourse' when it ignores the real-world consequences for individuals whose identities or rights are 'up for debate'.
-- [CURIOSITY: discourse_discourse_analysis] @DrTradCon highlights the importance of steering debate away from 'PURE IDEOLOGY' towards 'reasonable discussion points capable of rational and polite discourse.'
-- [CURIOSITY: discourse_discourse_analysis] @MsKrNk praises journalism that provides 'sharp, insightful analysis & balanced storytelling' to strengthen informed public debate.
+- [CURIOSITY: discourse_discourse_analysis] @realitycheckind explains "Dravidian Discourse Analysis" as a rhetorical technique that 'plays both ends against the middle' to avoid naming a central issue related to a group's own women.
+- [CURIOSITY: discourse_discourse_analysis] @DaveRobbins3 laments the tendency in modern discourse for conversations to devolve into personal pejoratives instead of factual analysis.
+- [CURIOSITY: discourse_discourse_analysis] @farahabulhasan argues that academic discourse should prioritize evidence and analysis over sarcasm and insults, as low language diminishes discussion value.
+- [CURIOSITY: discourse_discourse_analysis] @5By5Creativity criticizes 'civil discourse' that overlooks the real-world consequences for individuals whose existence or rights are subject to debate.
+- [CURIOSITY: discourse_discourse_analysis] @hellphlegm observes that "generational discourse" often serves as a substitute for class analysis, treating generational traits as immutable facts.
