@@ -129,7 +129,7 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
   try {
     // Navigate directly to the source tweet
     console.log(`[post_quote] navigating to source tweet: ${sourceUrl}`);
-    await page.goto(sourceUrl, { waitUntil: "domcontentloaded", timeout: 20_000 });
+    await page.goto(sourceUrl, { waitUntil: "domcontentloaded", timeout: 45_000 });
 
     // Poll for retweet button (up to 15s)
     await poll(page, "retweet button", "[data-testid='retweet']", { attempts: 15, interval: 1_000 });
@@ -250,7 +250,7 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
 
     if (!quoteUrl) {
       console.log("[post_quote] navigating to profile to confirm post and capture URL...");
-      await page.goto("https://x.com/sebastianhunts", { waitUntil: "domcontentloaded", timeout: 20_000 });
+      await page.goto("https://x.com/sebastianhunts", { waitUntil: "domcontentloaded", timeout: 45_000 });
       // Retry loop — X SPA may take a few seconds to render the timeline
       for (let attempt = 1; attempt <= 3 && !quoteUrl; attempt++) {
         await sleep(3_000);

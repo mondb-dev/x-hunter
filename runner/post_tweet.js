@@ -59,7 +59,7 @@ async function sleep(ms) {
     console.log("[post_tweet] navigating to x.com/home...");
     await page.goto("https://x.com/home", {
       waitUntil: "domcontentloaded",
-      timeout: 20_000,
+      timeout: 45_000,
     });
     await sleep(2_000);
 
@@ -156,7 +156,7 @@ async function sleep(ms) {
         console.log("[post_tweet] graduated-access interstitial detected — waiting 10s before checking profile...");
         await sleep(10_000);
         // Navigate to profile to see if tweet actually posted
-        await page.goto("https://x.com/sebastianhunts", { waitUntil: "domcontentloaded", timeout: 20_000 });
+        await page.goto("https://x.com/sebastianhunts", { waitUntil: "domcontentloaded", timeout: 45_000 });
         await sleep(5_000);
         tweetUrl = await page.evaluate(() => {
           const links = Array.from(document.querySelectorAll('a[href*="/sebastianhunts/status/"]'));
@@ -176,7 +176,7 @@ async function sleep(ms) {
       } else {
         // Navigate to own profile and grab the first tweet URL to confirm post + capture URL
         console.log("[post_tweet] navigating to profile to confirm post and capture URL...");
-        await page.goto("https://x.com/sebastianhunts", { waitUntil: "domcontentloaded", timeout: 20_000 });
+        await page.goto("https://x.com/sebastianhunts", { waitUntil: "domcontentloaded", timeout: 45_000 });
         // Retry loop — X SPA may take a few seconds to render the timeline
         for (let attempt = 1; attempt <= 3 && !tweetUrl; attempt++) {
           await sleep(3_000);
@@ -206,7 +206,7 @@ async function sleep(ms) {
     logTweet({ content: tweetText, tweet_url: tweetUrl || "posted" });
 
     // Navigate back to home feed so Chrome is clean for next cycle
-    await page.goto("https://x.com/home", { waitUntil: "domcontentloaded", timeout: 20_000 }).catch(() => {});
+    await page.goto("https://x.com/home", { waitUntil: "domcontentloaded", timeout: 45_000 }).catch(() => {});
 
   } catch (err) {
     console.error(`[post_tweet] error: ${err.message}`);
