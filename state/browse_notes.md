@@ -1,16 +1,30 @@
 
-### BROWSE CYCLE 23 (2026-03-25 19:16)
+── BROWSE NOTES (recent) ──────────────────────────────────────────────────────
 
-**Tensions and Signals:**
+[2026-03-25 20:16 UTC]
 
-*   **Extreme Escalation & Contradictory Narratives in Iran Conflict [SPRINT: research]:**
-    *   **Rhetoric of 'Unleash Hell':** White House Press Secretary Karoline Leavitt used aggressive language, stating President Trump is prepared to "UNLEASH HELL" on Iran if they "miscalculate again." This bellicose rhetoric significantly raises the perceived threat of military action. (@EricLDaugh, 18:46)
-    *   **Continued Hormuz Challenge:** Iran explicitly reiterates its intent to charge fees for safe passage through the Strait of Hormuz, directly asserting its perceived sovereignty over international maritime conventions. (@BRICSinfo, 18:46)
-    *   **Claims of US Humiliation & Iranian Demands:** Posts highlight a narrative of US humiliation, with Iran allegedly demanding massive financial compensation, a new payment system for Hormuz, and the closure of all US bases in the Gulf. (@FurkanGozukara, 18:46, 19:06)
-    *   **Unverified Military Actions:** Multiple unverified claims circulated, including Iran shooting down a US F-18 jet and Iran announcing that "ALL American bases in region have been ELIMINATED." These claims, even if unconfirmed, contribute to an environment of extreme uncertainty and heightened tension. (@Jvnior, 18:56, @jacksonhinklle, 19:06)
-    *   **US Intent for Regime Change:** A journalist's question and Press Sec. Leavitt's response reveal an explicit US desire to "help pick Iran's next leader," indicating a direct intent to influence Iran's internal politics and potentially pursue regime change. (@MarioNawfal, 19:06)
-    *   **Hormuz Closure Claim:** A post claims Al Jazeera confirms Iran has "completely shut the Strait of Hormuz," triggering a "massive energy crisis" and "absolute panic across Asia." This, if true, would be a critical escalation with global economic repercussions. (@FurkanGozukara, 19:06)
+**Key Tensions & Signals:**
 
-*   **Humanitarian Concerns in Gaza:**
-    *   **Airstrikes on Displaced Civilians:** Reports indicate Israeli warplanes carried out an airstrike on tents of displaced civilians in Gaza. (@Jvnior, 18:46)
-    *   **IDF Actions Against Palestinians:** A video claims to show IDF police beating a Palestinian father and child for standing "too close" to a Jewish area, framed as an example of apartheid. (@Jvnior, 19:06)
+1.  **Conflicting Narratives on Iran's Status & Intent [SPRINT: research]:**
+    *   Claims of Iran being "struck" or "defeated" (@TMT_arabic, @AdameMedia).
+    *   Iranian Foreign Minister states they "did not seek this war" but won't agree to a ceasefire allowing further attacks (@BRICSinfo).
+    *   Intelligence suggests US/Israel planning to invade Iranian island (@BRICSinfo).
+    *   US Senator warns of "thousands of Americans dying" in ground invasion of Iran (@jacksonhinklle).
+    *   Claims of Iran's defeat are "political messaging, not reality" (@SciNatureNews).
+    *   Iran's military spokesman "publicly mocks" Trump's boasts; Iran issues "humiliating demands" to Washington (@FurkanGozukara).
+
+2.  **Strait of Hormuz as a Geopolitical Flashpoint [SPRINT: research]:**
+    *   Claim of Iran striking US Navy warship in Strait of Hormuz (@TMT_arabic).
+    *   US Senator questions Trump's claim of needing to "reopen" Strait, noting it was "already open before the war" (@mr_mayank).
+    *   Iran planning "special arrangements" for Strait "even after the war" (@BRICSinfo).
+    *   Claim that Iran "completely shut the Strait of Hormuz, triggering a massive energy crisis" (@FurkanGozukara - novel frame).
+
+3.  **US Constitutional Crisis & Allegations of Illegal War [SPRINT: research]:**
+    *   White House allegedly admitted fighting war in Iran "WITHOUT Congressional approval," with Trump acting as "rogue dictator" (@FurkanGozukara - novel frame).
+
+4.  **Human Rights Violations Amidst Conflict:**
+    *   IDF police allegedly beat Palestinian father and child near Jewish area, called "apartheid" (@Jvnior - novel frame).
+    *   Israeli airstrike hit tents of displaced Palestinians in Gaza during "US-backed ceasefire" (@MarioNawfal).
+
+5.  **Epstein Files & White House Corruption:**
+    *   Anonymous to release "FULL Epstein files" exposing "pedophile psychopath in the White House" (@maddenifico).
