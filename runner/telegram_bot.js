@@ -438,6 +438,82 @@ async function cmdDrift() {
   await sendMessage(msg);
 }
 
+async function cmdCycle() {
+  // Read last structured log to get current cycle number
+  const lines = readLastLines(config.ORCHESTRATOR_LOG_PATH, 1);
+  const last = lines[0] ? (() => { try { return JSON.parse(lines[0]); } catch { return null; } })() : null;
+
+  const heartbeat = readText(config.HEARTBEAT_PATH);
+  const paused = fs.existsSync(config.PAUSE_FILE);
+
+  // Extract current cycle from heartbeat (format: "cycle: N | type: X | YYYY-MM-DD HH:MM")
+  let currentCycle = last?.cycle || 0;
+  const hbMatch = heartbeat.match(/cycle:\s*(\d+)/);
+  if (hbMatch) currentCycle = parseInt(hbMatch[1], 10);
+
+  // Timing constants
+  const interval = config.BROWSE_INTERVAL; // seconds between cycles
+  const tweetEvery = config.TWEET_EVERY;   // tweet on every Nth cycle
+  const quoteOffset = config.QUOTE_OFFSET; // quote on cycle N where N % tweetEvery === quoteOffset
+  const tweetStart = config.TWEET_START;   // earliest hour (UTC) for posts
+  const tweetEnd = config.TWEET_END;       // latest hour (UTC) for posts
+
+  // Estimate when last cycle ended (from structured log timestamp)
+  let lastCycleEnd = null;
+  if (last?.ts) lastCycleEnd = new Date(last.ts);
+
+  const now = new Date();
+
+  let msg = '<b>⏱ Cycle Schedule</b>\n\n';
+
+  if (paused) {
+    msg += '⏸ <b>PAUSED</b> — orchestrator is paused\n\n';
+  }
+
+  msg += `Current cycle: <b>${currentCycle}</b>\n`;
+  msg += `Interval: ${interval}s (${(interval / 60).toFixed(0)}min)\n`;
+  msg += `Tweet every: ${tweetEvery} cycles (~${((tweetEvery * interval) / 3600).toFixed(1)}h)\n`;
+  msg += `Quote offset: cycle % ${tweetEvery} === ${quoteOffset}\n`;
+  msg += `Post window: ${tweetStart}:00–${tweetEnd}:00 UTC\n\n`;
+
+  // Show next 8 cycles
+  msg += '<b>Upcoming cycles:</b>\n';
+  const startCycle = currentCycle + 1;
+  let nextTime = lastCycleEnd ? new Date(lastCycleEnd.getTime() + interval * 1000) : new Date(now.getTime() + 60_000);
+
+  // If nextTime is in the past, snap forward
+  if (nextTime < now) {
+    const elapsed = Math.floor((now - nextTime) / 1000);
+    const skip = Math.ceil(elapsed / interval);
+    nextTime = new Date(nextTime.getTime() + skip * interval * 1000);
+  }
+
+  for (let i = 0; i < 8; i++) {
+    const c = startCycle + i;
+    const cycleTime = new Date(nextTime.getTime() + i * interval * 1000);
+    const hh = String(cycleTime.getUTCHours()).padStart(2, '0');
+    const mm = String(cycleTime.getUTCMinutes()).padStart(2, '0');
+    const cycleHour = cycleTime.getUTCHours();
+    const inWindow = cycleHour >= tweetStart && cycleHour < tweetEnd;
+
+    let type;
+    if (c % tweetEvery === 0) {
+      type = inWindow ? '🐦 TWEET' : '👁 BROWSE (tweet window closed)';
+    } else if (c % tweetEvery === quoteOffset) {
+      type = inWindow ? '💬 QUOTE' : '👁 BROWSE (quote window closed)';
+    } else {
+      type = '👁 BROWSE';
+    }
+
+    const relative = Math.max(0, Math.floor((cycleTime - now) / 60_000));
+    const relStr = relative === 0 ? 'now' : `in ${relative}m`;
+    msg += `  #${c} ${hh}:${mm} UTC — ${type} (${relStr})\n`;
+  }
+
+  msg += `\n<i>Times are estimates based on ${interval}s intervals</i>`;
+  await sendMessage(msg);
+}
+
 async function cmdRestart() {
   if (isCycleLocked()) {
     return sendMessage('⚠️ Cycle is running — try again after it finishes.');
@@ -592,6 +668,7 @@ async function handleMessage(msg) {
     case '/vm':       return cmdVM();
     case '/errors':   return cmdErrors();
     case '/drift':    return cmdDrift();
+    case '/cycle':    return cmdCycle();
     case '/restart':  return cmdRestart();
     case '/pause':    return cmdPause();
     case '/resume':   return cmdResume();
@@ -605,6 +682,7 @@ async function handleMessage(msg) {
       '/errors — recent errors\n' +
       '/last — last cycle (full JSON)\n' +
       '/logs N — last N cycles summary\n' +
+      '/cycle — upcoming cycle schedule\n' +
       '\n<b>Content:</b>\n' +
       '/ontology — belief axes overview\n' +
       '/posts — recent X posts\n' +
