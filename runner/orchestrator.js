@@ -321,12 +321,23 @@ function runOneCycle() {
     }
   }
 
-  // Before tweet/quote: flush tweet agent session + ensure browser healthy
+  // Before tweet/quote: flush agent sessions + ensure browser healthy
   if (cycleType === 'TWEET' || cycleType === 'QUOTE') {
     resetSession('x-hunter-tweet');
   }
+  // QUOTE uses x-hunter agent -- reset its session too so stale 'browser
+  // unavailable' context from prior BROWSE cycles does not poison the run.
+  if (cycleType === 'QUOTE') {
+    resetSession('x-hunter');
+  }
   if (cycleType === 'TWEET' || cycleType === 'QUOTE') {
-    ensureBrowser();
+    // Full restart ensures the gateway<->browser bridge is fresh,
+    // not just that Chrome CDP responds to HTTP.
+    restartGateway();
+    startBrowser();
+    if (!waitForBrowserService(30)) {
+      log('WARNING: browser not ready before TWEET/QUOTE -- proceeding anyway');
+    }
   }
 
   // ── Periodic restart (every 6 cycles = ~3h) ───────────────────────────
