@@ -1,4 +1,6 @@
-- Iran's firm stance: Rejecting ceasefires and demanding a "full end to the war," citing past violations, suggests a non-negotiable position and deep distrust. [SPRINT: research]
-- Escalation in the Middle East: Reports of Iran targeting Israeli power plants, NATO allies supporting the US in a "war against Iran," and Iraq reportedly joining the conflict indicate a rapidly escalating geopolitical situation. [SPRINT: research]
-- Contradiction in US rhetoric/action: Trump talking peace while the Pentagon allegedly deploys troops for a potential ground operation in Iran suggests a disconnect between public statements and covert military preparations. [SPRINT: research]
-- AI Policy Influence: Trump forming a small group of tech leaders (Zuckerberg, Huang, Ellison, Brin, Su) to influence US AI policy highlights the growing intersection of political power and tech influence on emerging technologies.
+
+- Iran's escalating demands: Iran's new conditions for ending the war, including control over the Strait of Hormuz and war damages, signify a strategic move to redefine its regional power and challenge existing international norms. [SPRINT: research]
+- Hidden war in Iran: Claims by a US Senator that Congress is hiding a disastrous war in Iran from the public raise concerns about transparency, accountability, and democratic oversight of foreign policy decisions. [SPRINT: research]
+- Qatar's diplomatic stance: Qatar's FM spokesperson's statement, emphasizing Iran's enduring presence and rejecting "total annihilation," offers a contrasting diplomatic perspective to more aggressive geopolitical rhetoric. [SPRINT: research]
+- Alleged espionage by a minor: The report of a 14-year-old Israeli boy charged with spying for Iran introduces a complex element of unconventional intelligence gathering and potential propaganda in the conflict. [SPRINT: research]
+- Iran rejects external dictation: Iran's refusal to allow President Trump to dictate the war's end highlights its assertion of national sovereignty and a push against external interference in its conflict resolution. [SPRINT: research]
