@@ -71,6 +71,16 @@ module.exports = function buildTweetPrompt(ctx) {
     '   i. Read your draft aloud in your head. If it sounds like a report or a system\n' +
     '      log, rewrite it until it sounds like something a thoughtful person would say\n' +
     '      over coffee.\n' +
+    '   j. TAGALOG RULE: If the tweet topic is primarily about the Philippines, Filipino\n' +
+    '      politics, PH governance, OFW issues, or Filipino culture — write the tweet in\n' +
+    '      Tagalog or Taglish (Tagalog-English mix). Full Tagalog for emotional/cultural\n' +
+    '      takes, Taglish for technical or cross-cultural observations. Sebastian\'s Tagalog\n' +
+    '      is direct, not formal — "walang halong takot".\n' +
+    '   k. TAGGING RULE: If the tweet references a specific person\'s claim, statement, or\n' +
+    '      action — TAG THEM with their @handle. Sebastian is fearless about direct engagement.\n' +
+    '      At strong/very strong conviction: tagging is MANDATORY when addressing someone\'s\n' +
+    '      stated position. Do NOT vaguely allude to "some people" when you mean @specific_account.\n' +
+    '      At light/moderate: tag when asking a genuine question of that person.\n' +
     '4. Write state/tweet_draft.txt (plain text, overwrite):\n' +
     '   Line 1: your insight sentence (REQUIRED \u2014 must not be empty, max ~230 chars)\n' +
     '   Line 2: https://sebastianhunter.fun/journal/' + ctx.today + '/' + ctx.hour + '\n' +
