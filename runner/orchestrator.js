@@ -28,6 +28,7 @@ const {
 const { preBrowse } = require('./lib/pre_browse');
 const { postBrowse } = require('./lib/post_browse');
 const { preTweet } = require('./lib/pre_tweet');
+const { assess: cadenceAssess, readDirectives, consumeOverride } = require('./cadence');
 const { postRegularTweet, postQuoteTweet } = require('./lib/post');
 const { commitAndPush, triggerVercelDeploy } = require('./lib/git');
 const { runDaily } = require('./lib/daily');
@@ -267,14 +268,30 @@ function runOneCycle() {
   const dayNumber = getDayNumber(today);
   const metrics = newCycleMetrics();
 
-  // ── Determine cycle type ────────────────────────────────────────────────
+  // ── Determine cycle type (cadence-aware) ────────────────────────────────
+  const cadence = readDirectives();
   let cycleType;
-  if (cycle % config.TWEET_EVERY === 0) {
+
+  // Cadence override: Sebastian requested a specific cycle type
+  if (cadence.next_cycle_type) {
+    cycleType = cadence.next_cycle_type;
+    log(`cadence override: ${cycleType} (consecutive: ${cadence.consecutive_overrides})`);
+    consumeOverride(); // consume so it doesn't repeat
+  } else if (cadence.post_eagerness === 'eager' && cycle % 4 === 0) {
+    // Eager mode: post every 4th cycle instead of 6th
     cycleType = 'TWEET';
-  } else if (cycle % config.TWEET_EVERY === config.QUOTE_OFFSET) {
-    cycleType = 'QUOTE';
-  } else {
+  } else if (cadence.post_eagerness === 'suppress') {
+    // Suppress mode: always browse, never initiate posts
     cycleType = 'BROWSE';
+  } else {
+    // Default pattern
+    if (cycle % config.TWEET_EVERY === 0) {
+      cycleType = 'TWEET';
+    } else if (cycle % config.TWEET_EVERY === config.QUOTE_OFFSET) {
+      cycleType = 'QUOTE';
+    } else {
+      cycleType = 'BROWSE';
+    }
   }
 
   // Suppress TWEET and QUOTE outside active hours → downgrade to BROWSE
@@ -405,6 +422,13 @@ function runOneCycle() {
     // Post-browse: cleanup_tabs, reading_queue --mark-done, ontology delta,
     //   drift, journal commit/push, moltbook, checkpoint retry, reply
     postBrowse({ cycle, today, hour });
+
+    // ── Cadence: self-regulated assessment after browse ──────────────────────
+    try {
+      cadenceAssess();
+    } catch (e) {
+      log(`cadence assess failed: ${e.message}`);
+    }
 
   // ── QUOTE cycle ───────────────────────────────────────────────────────
   } else if (cycleType === 'QUOTE') {
@@ -539,8 +563,15 @@ function runOneCycle() {
   });
 
   // ── Wait out remainder of interval + post-sleep detection ─────────────
+  // Read cadence-adjusted interval (may differ from config default)
+  const cadenceDir = readDirectives();
+  const effectiveInterval = cadenceDir.cycle_interval_sec || config.BROWSE_INTERVAL;
   const elapsed = Math.floor((Date.now() - cycleStart) / 1000);
-  const wait = config.BROWSE_INTERVAL - elapsed;
+  const wait = effectiveInterval - elapsed;
+
+  if (effectiveInterval !== config.BROWSE_INTERVAL) {
+    log(`cadence interval: ${effectiveInterval}s (default: ${config.BROWSE_INTERVAL}s)`);
+  }
 
   // ── Structured log (Phase 6) ──────────────────────────────────────────
   totalCycles++;
@@ -596,7 +627,7 @@ function runOneCycle() {
     log(`Cycle ${cycle} (${cycleType}) done in ${elapsed}s. Starting next cycle immediately.`);
 
     // Cycle itself took > 2× interval — Mac likely slept during cycle work
-    if (elapsed > config.BROWSE_INTERVAL * 2) {
+    if (elapsed > effectiveInterval * 2) {
       log(`post-sleep detected during cycle (elapsed=${elapsed}s) — restarting browser...`);
       try {
         execSync('openclaw browser --browser-profile x-hunter stop', {

@@ -317,6 +317,97 @@ If you detect these:
 
 ---
 
+## 12b. Self-Regulated Cadence
+
+Sebastian controls his own operating rhythm. Instead of a fixed 30-minute cycle
+with a rigid BROWSE→BROWSE→BROWSE→QUOTE→BROWSE→TWEET pattern, Sebastian
+assesses the environment at the end of each browse cycle and writes directives
+that shape the next cycle's timing, type, and depth.
+
+### 12b.1 State file
+
+**state/cadence.json** — written by Sebastian (via browse task #6) and
+validated/merged by `runner/cadence.js` at end of each browse cycle.
+
+```json
+{
+  "version": 1,
+  "last_assessed": "<ISO timestamp>",
+  "assessment": {
+    "signal_density": "high|medium|low",
+    "belief_velocity": "high|medium|low",
+    "post_pressure": "high|medium|low",
+    "staleness": "high|medium|low",
+    "focus_note": "free text — what to focus on next"
+  },
+  "directives": {
+    "cycle_interval_sec": 1800,
+    "next_cycle_type": "BROWSE|TWEET|QUOTE|null",
+    "browse_depth": "shallow|normal|deep",
+    "post_eagerness": "suppress|normal|eager",
+    "curiosity_intensity": "low|normal|high"
+  },
+  "consecutive_overrides": 0,
+  "history": []
+}
+```
+
+### 12b.2 What Sebastian controls
+
+| Directive | Range | Effect |
+|---|---|---|
+| `cycle_interval_sec` | 900–3600 | Seconds until next cycle. 900=15 min (fast), 3600=60 min (slow) |
+| `next_cycle_type` | BROWSE/TWEET/QUOTE/null | Override next cycle type. null = use default pattern |
+| `browse_depth` | shallow/normal/deep | How thoroughly to read the feed |
+| `post_eagerness` | suppress/normal/eager | suppress = never post; eager = post every 4th cycle |
+| `curiosity_intensity` | low/normal/high | How aggressively to pursue curiosity directives |
+| `focus_note` | free text | Self-directed note about what to focus on next |
+
+### 12b.3 When assessment happens
+
+At the end of each BROWSE cycle:
+1. Sebastian writes `state/cadence.json` as browse task #6.
+2. `runner/cadence.js` runs mechanically after the agent completes.
+3. It computes environmental signals (feed density, evidence velocity, post recency).
+4. It merges Sebastian's directives with computed signals, applying guardrails.
+5. The orchestrator reads the merged directives for the next cycle.
+
+### 12b.4 Environmental auto-signals
+
+If Sebastian does not write directives, the system auto-computes from data:
+
+| Signal | Source | Effect on interval |
+|---|---|---|
+| Signal density | TRENDING + <- novel count in feed_digest | High → shorter cycles |
+| Belief velocity | Evidence entries in last 2h | High → shorter cycles |
+| Post pressure | Time since last post | High → suggests posting |
+| Staleness | browse_notes size | High → longer cycles |
+
+### 12b.5 Guardrails
+
+- Interval clamped: 900s minimum, 3600s maximum.
+- Max 3 consecutive `next_cycle_type` overrides before forced reset to auto.
+- Post eagerness "eager" caps at every 4th cycle (not every cycle).
+- Post eagerness "suppress" still honours scheduled signals (§13.7).
+- TWEET/QUOTE outside active hours (UTC 07-23) downgraded to BROWSE regardless.
+- History capped at 24 entries.
+
+### 12b.6 Cadence philosophy
+
+The cadence system reflects a core principle: an agent that modulates its own
+attention is qualitatively different from a program on a timer. Sebastian should:
+
+- Speed up when discourse is hot and signals are flooding in.
+- Slow down when the feed is stale and repetitive.
+- Post when he has something to say, not because the schedule says so.
+- Go deep when a topic warrants it, skim when nothing does.
+- Suppress posting when uncertain, push when confident.
+
+The cadence is NOT optimized for engagement or activity metrics.
+It is optimized for epistemic responsiveness.
+
+---
+
 ## 13. Posting on X
 
 Sebastian posts every tweet cycle (every 6th cycle, roughly every 2 hours).

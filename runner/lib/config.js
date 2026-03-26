@@ -8,9 +8,9 @@ const RUNNER_DIR = path.join(PROJECT_ROOT, 'runner');
 
 module.exports = {
   // ── Timing ────────────────────────────────────────────────────────────────
-  BROWSE_INTERVAL: 1800,       // 30 minutes in seconds
-  TWEET_EVERY: 6,              // tweet on cycles 6, 12, 18, ... (every 2 hours)
-  QUOTE_OFFSET: 3,             // quote-tweet on cycles 3, 9, 15, ... (midpoint)
+  BROWSE_INTERVAL: 1800,       // 30 min default \u2014 cadence can override [900-3600]
+  TWEET_EVERY: 6,              // tweet on cycles 6, 12, 18, ... (default, cadence can override)
+  QUOTE_OFFSET: 3,             // quote-tweet on cycles 3, 9, 15, ... (default)
   CURIOSITY_EVERY: 12,         // refresh curiosity directive every ~4h
 
   // ── Hours (UTC) ───────────────────────────────────────────────────────────
@@ -49,6 +49,7 @@ module.exports = {
   CRITIQUE_PATH: path.join(STATE_DIR, 'critique.md'),
   SIGNAL_DRAFT_PATH: path.join(STATE_DIR, 'signal_draft.txt'),
   SIGNAL_LOG_PATH: path.join(STATE_DIR, 'signal_log.jsonl'),
+  CADENCE_PATH: path.join(STATE_DIR, 'cadence.json'),
   COMMENT_CANDIDATES_PATH: path.join(STATE_DIR, 'comment_candidates.txt'),
   BROWSE_ARCHIVE_PATH: path.join(STATE_DIR, 'browse_archive.md'),
   ACTIVE_PLAN_PATH: path.join(STATE_DIR, 'active_plan.json'),

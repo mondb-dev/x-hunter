@@ -37,6 +37,8 @@ module.exports = function buildBrowsePrompt(ctx) {
     ctx.discourseDigest + '\n' +
     '\u2500\u2500 READING QUEUE \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.readingBlock + '\n' +
+    '\u2500\u2500 CADENCE (self-regulated \u2014 you control your rhythm) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
+    ctx.cadence + '\n' +
     '\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     '\n' +
     'Tasks (in order):\n' +
@@ -88,7 +90,33 @@ module.exports = function buildBrowsePrompt(ctx) {
     '   or angle not yet in the thread. Skip all if nothing compels you or cap reached.\n' +
     '   If commenting: navigate to the URL, reply (max 180 chars), then write\n' +
     '   state/comment_done.txt as a single JSON line per the format in the candidates.\n' +
-    '6. JOURNAL: ' + ctx.journalTask + '\n' +
+    '6. CADENCE: Review the CADENCE section above. Based on what you just\n' +
+    '   observed THIS cycle, update state/cadence.json with your assessment.\n' +
+    '   You control your own rhythm. Write the full JSON with these fields:\n' +
+    '   {\n' +
+    '     "version": 1,\n' +
+    '     "assessment": {\n' +
+    '       "signal_density": "high"|"medium"|"low",\n' +
+    '       "belief_velocity": "high"|"medium"|"low",\n' +
+    '       "post_pressure": "high"|"medium"|"low",\n' +
+    '       "staleness": "high"|"medium"|"low",\n' +
+    '       "focus_note": "free text \u2014 what you think you should focus on next"\n' +
+    '     },\n' +
+    '     "directives": {\n' +
+    '       "cycle_interval_sec": 900-3600 (seconds until next cycle; 1800=default 30 min),\n' +
+    '       "next_cycle_type": "BROWSE"|"TWEET"|"QUOTE"|null (null=auto pattern),\n' +
+    '       "browse_depth": "shallow"|"normal"|"deep",\n' +
+    '       "post_eagerness": "suppress"|"normal"|"eager",\n' +
+    '       "curiosity_intensity": "low"|"normal"|"high"\n' +
+    '     }\n' +
+    '   }\n' +
+    '   Guidelines:\n' +
+    '   - Set next_cycle_type to "TWEET" or "QUOTE" if you saw something you want to post about NOW.\n' +
+    '   - Set cycle_interval_sec lower (900-1500) when signals are hot; higher (2400-3600) when quiet.\n' +
+    '   - Set post_eagerness to "eager" if you have a backlog; "suppress" if you want to focus on learning.\n' +
+    '   - Only write the fields you want to change \u2014 omitted fields keep their previous values.\n' +
+    '   - Max 3 consecutive next_cycle_type overrides before the system resets to auto.\n' +
+    '7. JOURNAL: ' + ctx.journalTask + '\n' +
     'Next tweet cycle: ' + ctx.nextTweet + '.\n';
 };
 

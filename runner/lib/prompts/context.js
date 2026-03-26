@@ -88,6 +88,38 @@ function formatQuotedSources() {
 }
 
 /**
+ * Format cadence state for browse prompt.
+ * Shows Sebastian's current self-regulated assessment, directives, and recent history.
+ */
+function formatCadence() {
+  try {
+    const m = JSON.parse(fs.readFileSync(
+      path.join(config.STATE_DIR, 'cadence.json'), 'utf-8'));
+    const a = m.assessment || {};
+    const d = m.directives || {};
+    const lines = [
+      'Current assessment:',
+      '  Signal density: ' + (a.signal_density || '?'),
+      '  Belief velocity: ' + (a.belief_velocity || '?'),
+      '  Post pressure: ' + (a.post_pressure || '?'),
+      '  Staleness: ' + (a.staleness || '?'),
+    ];
+    if (a.focus_note) lines.push('  Focus note: ' + a.focus_note);
+    lines.push('Current directives:');
+    lines.push('  Cycle interval: ' + (d.cycle_interval_sec || 1800) + 's');
+    lines.push('  Next cycle type: ' + (d.next_cycle_type || 'auto'));
+    lines.push('  Browse depth: ' + (d.browse_depth || 'normal'));
+    lines.push('  Post eagerness: ' + (d.post_eagerness || 'normal'));
+    lines.push('  Curiosity intensity: ' + (d.curiosity_intensity || 'normal'));
+    lines.push('  Consecutive overrides: ' + (m.consecutive_overrides || 0) + '/3');
+    if (m.last_assessed) lines.push('  Last assessed: ' + m.last_assessed);
+    return lines.join('\n');
+  } catch {
+    return '(cadence not yet initialized)';
+  }
+}
+
+/**
  * Load sprint context with active_plan.json fallback (tweet prompt).
  */
 function loadActivePlanContext() {
@@ -213,6 +245,7 @@ function loadContext(opts) {
     ctx.sprintContext     = readState(config.SPRINT_CONTEXT_PATH, { fallback: '(no active plan)' });
     ctx.readingBlock      = buildReadingBlock();
     ctx.currentAxes       = formatCurrentAxes();
+    ctx.cadence            = formatCadence();
     ctx.journalTask       = buildJournalTask('browse', today, hour, dayNumber);
     ctx.nextTweet         = (Math.floor(cycle / config.TWEET_EVERY) + 1) * config.TWEET_EVERY;
   }
@@ -244,6 +277,7 @@ module.exports.formatQuotedSources = formatQuotedSources;
 module.exports.loadActivePlanContext = loadActivePlanContext;
 module.exports.buildReadingBlock = buildReadingBlock;
 module.exports.buildJournalTask = buildJournalTask;
+module.exports.formatCadence = formatCadence;
 
 // CLI: dump context as JSON for debugging
 if (require.main === module) {
