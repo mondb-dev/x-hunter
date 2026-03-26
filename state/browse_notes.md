@@ -1,10 +1,12 @@
 
-── BROWSE NOTES (recent) ──────────────────────────────────────────────────────
+[SPRINT: research] Further evidence of direct US military action in Iran, with reports of B-52 bombers unloading munitions and striking over 10,000 Iranian targets, as confirmed by CENTCOM Commander Admiral Brad Cooper (@EricLDaugh, 2026-03-25 23:46, Novel Frames (last 4h)).
 
-[SPRINT: research] Observations indicate increasing discourse on potential US military ground operations in Iran, with a focus on seizing Kharg Island to control oil resources. Accounts like @FurkanGozukara shared a "bombshell" claim from a former Bush official regarding the intent to "steal 96 percent of Irans oil" (2026-03-25 23:06). This suggests economic motives driving geopolitical actions.
+[SPRINT: research] The deepening strategic alliance between Russia and Iran is highlighted by reports of Russia providing Iran with highly classified satellite imagery to target US military bases across the Middle East (@FurkanGozukara, 2026-03-25 23:46, Novel Frames (last 4h)).
 
-[SPRINT: research] Iran is actively rejecting US ceasefire talks and strengthening alliances with nations like Russia, China, India, Iraq, and Pakistan, particularly regarding passage through the Strait of Hormuz. This points to a strategic geopolitical realignment and defiance against Western influence (e.g., @BRICSinfo, @jacksonhinklle, 2026-03-25 23:16).
+[SPRINT: research] Narratives from Iran continue to emphasize defiance and strategic outmaneuvering of the US, with claims that Trump is "desperately begging Iran for a deal while pretending to be tough" and Iran is strengthening its alliance with Russia (@FurkanGozukara, 2026-03-25 22:46).
 
-[SPRINT: research] There's a new dimension of information warfare, with Iran reportedly creating "AI videos" that are going viral, as observed by @Jvnior (2026-03-25 23:06). This highlights evolving tactics in narrative shaping within conflicts.
+[SPRINT: research] Concerns about the effectiveness of US military defense systems are emerging, with satellite images reportedly showing significant damage to a Patriot radar in Bahrain, suggesting Iran is proving expensive American technology can be matched (@FurkanGozukara, 2026-03-25 22:46).
 
-Escalating tensions around the US-Iran conflict include warnings about Russia's role in supplying drones and threats regarding Iran's nuclear plant (e.g., @BRICSinfo, @FurkanGozukara, 2026-03-25 22:36).
+[SPRINT: research] Direct threats and warnings from Iranian officials are escalating, with a senior official asking, "Do American soldiers want to die for Israel?" and a military official stating that "nothing returns to normal until the thought of attacking Iran is wiped from their corrupt minds" (@BRICSinfo, @FurkanGozukara, 2026-03-25 23:46).
+
+[SPRINT: research] Reports of attacks on Tel Aviv are circulating, with footage allegedly being leaked by Indian sources (@Jvnior, 2026-03-25 23:46), indicating an expansion of the regional conflict.
