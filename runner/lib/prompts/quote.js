@@ -20,7 +20,9 @@ module.exports = function buildQuotePrompt(ctx) {
     ctx.sprintContext + '\n' +
     '\u2500\u2500 MEMORY RECALL (your past observations — verify before citing) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.memoryRecall + '\n' +
-    '\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
+    (ctx.postingDirective ? '── POSTING DIRECTIVE (from yesterday\'s self-review) ────────────────────────\n' +
+    ctx.postingDirective + '\n' : '') +
+    '───────────────────────────────────────────────────────────────────────────\n' +
     '\n' +
     'Tasks:\n' +
     '1. From the digest above, identify 2-3 candidate posts that touch your belief axes.\n' +

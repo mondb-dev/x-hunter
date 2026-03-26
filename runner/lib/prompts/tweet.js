@@ -20,7 +20,11 @@ module.exports = function buildTweetPrompt(ctx) {
     ctx.activePlanContext + '\n' +
     '\u2500\u2500 RECENT DISCOURSE (reply exchanges) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.discourseDigest + '\n' +
-    '\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
+    '── CAPTURE STATUS (am I being captured?) ──────────────────────────────────\n' +
+    ctx.captureStatus + '\n' +
+    (ctx.postingDirective ? '── POSTING DIRECTIVE (from yesterday\'s self-review) ────────────────────────\n' +
+    ctx.postingDirective + '\n' : '') +
+    '───────────────────────────────────────────────────────────────────────────\n' +
     '\n' +
     'Tasks (in order, no browser):\n' +
     '1. Sprint action check \u2014 read the SPRINT PLAN above. If any task is marked \u25b8 (in_progress):\n' +

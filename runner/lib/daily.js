@@ -85,6 +85,12 @@ function reports() {
   // Daily belief report
   runScript('generate_daily_report.js');
 
+  // Capture detection — "am I being captured by one source/cluster?"
+  runScript('capture_detection.js');
+
+  // Posts quality assessment (LLM-assisted)
+  runScript('posts_assessment.js');
+
   // Write article from journals + beliefs, post to Moltbook
   runScript('write_article.js');
   runScript('moltbook.js', '--post-article');

@@ -50,6 +50,8 @@ module.exports = {
   SIGNAL_DRAFT_PATH: path.join(STATE_DIR, 'signal_draft.txt'),
   SIGNAL_LOG_PATH: path.join(STATE_DIR, 'signal_log.jsonl'),
   CADENCE_PATH: path.join(STATE_DIR, 'cadence.json'),
+  CAPTURE_STATE_PATH: path.join(STATE_DIR, 'capture_state.json'),
+  POSTING_DIRECTIVE_PATH: path.join(STATE_DIR, 'posting_directive.txt'),
   COMMENT_CANDIDATES_PATH: path.join(STATE_DIR, 'comment_candidates.txt'),
   BROWSE_ARCHIVE_PATH: path.join(STATE_DIR, 'browse_archive.md'),
   ACTIVE_PLAN_PATH: path.join(STATE_DIR, 'active_plan.json'),

@@ -88,6 +88,27 @@ function formatQuotedSources() {
 }
 
 /**
+ * Format capture detection status — compact summary for browse/tweet prompts.
+ * Reads state/capture_state.json written by capture_detection.js.
+ */
+function formatCaptureStatus() {
+  try {
+    const fp = path.join(config.STATE_DIR, 'capture_state.json');
+    const c = JSON.parse(fs.readFileSync(fp, 'utf-8'));
+    if (!c || !c.status) return '(capture detection not yet run)';
+    if (c.status === 'clean') return c.summary || 'Clean — no capture alerts.';
+    // warning or captured — show alerts
+    const lines = [`Status: ${c.status.toUpperCase()} (${c.evidence_24h} evidence entries, ${c.unique_sources} sources)`];
+    for (const a of (c.alerts || [])) {
+      lines.push(`  [${a.severity.toUpperCase()}] ${a.detail}`);
+    }
+    return lines.join('\n');
+  } catch {
+    return '(capture detection not yet run)';
+  }
+}
+
+/**
  * Format cadence state for browse prompt.
  * Shows Sebastian's current self-regulated assessment, directives, and recent history.
  */
@@ -246,6 +267,7 @@ function loadContext(opts) {
     ctx.readingBlock      = buildReadingBlock();
     ctx.currentAxes       = formatCurrentAxes();
     ctx.cadence            = formatCadence();
+    ctx.captureStatus     = formatCaptureStatus();
     ctx.journalTask       = buildJournalTask('browse', today, hour, dayNumber);
     ctx.nextTweet         = (Math.floor(cycle / config.TWEET_EVERY) + 1) * config.TWEET_EVERY;
   }
@@ -256,6 +278,7 @@ function loadContext(opts) {
     ctx.digest            = readState(config.FEED_DIGEST_PATH, { tail: 120, fallback: '(not available)' });
     ctx.topAxes           = formatTopAxes();
     ctx.memoryRecall      = readState(config.MEMORY_RECALL_PATH, { fallback: '(empty)' });
+    ctx.postingDirective  = readState(config.POSTING_DIRECTIVE_PATH, { fallback: '' });
   }
 
   if (type === 'tweet') {
@@ -264,6 +287,8 @@ function loadContext(opts) {
     ctx.discourseDigest   = readState(config.DISCOURSE_DIGEST_PATH, { fallback: '(no discourse yet)' });
     ctx.activePlanContext = loadActivePlanContext();
     ctx.currentAxes       = formatCurrentAxes();
+    ctx.captureStatus     = formatCaptureStatus();
+    ctx.postingDirective  = readState(config.POSTING_DIRECTIVE_PATH, { fallback: '' });
     ctx.journalTask       = buildJournalTask('tweet', today, hour, dayNumber);
   }
 
@@ -279,6 +304,7 @@ module.exports.loadActivePlanContext = loadActivePlanContext;
 module.exports.buildReadingBlock = buildReadingBlock;
 module.exports.buildJournalTask = buildJournalTask;
 module.exports.formatCadence = formatCadence;
+module.exports.formatCaptureStatus = formatCaptureStatus;
 
 // CLI: dump context as JSON for debugging
 if (require.main === module) {
