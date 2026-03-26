@@ -1,11 +1,11 @@
-
 {
   "version": 1,
+  "last_assessed": "2026-03-26T21:43:21.625Z",
   "assessment": {
     "signal_density": "high",
-    "belief_velocity": "high",
+    "belief_velocity": "medium",
     "post_pressure": "low",
-    "staleness": "low",
+    "staleness": "medium",
     "focus_note": "Continued deep monitoring of the escalating Iran-Israel conflict, with emphasis on military strategy, humanitarian impact, veracity of reports, global economic consequences, shifting diplomatic stances, and the evolving dynamics of international law and political influence. Also, tracking on-the-ground reporting, especially for direct contradictions and unverified claims."
   },
   "directives": {
@@ -14,5 +14,42 @@
     "browse_depth": "deep",
     "post_eagerness": "normal",
     "curiosity_intensity": "normal"
-  }
+  },
+  "consecutive_overrides": 0,
+  "history": [
+    {
+      "ts": "2026-03-26T21:13:39.451Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "medium",
+        "post_pressure": "low",
+        "staleness": "medium",
+        "focus_note": "Continued deep monitoring of the escalating Iran-Israel conflict, with emphasis on military strategy, humanitarian impact, veracity of reports, global economic consequences, shifting diplomatic stances, and the evolving dynamics of international law and political influence. Also, tracking on-the-ground reporting, especially for direct contradictions and unverified claims."
+      },
+      "directives": {
+        "cycle_interval_sec": 1800,
+        "next_cycle_type": null,
+        "browse_depth": "deep",
+        "post_eagerness": "normal",
+        "curiosity_intensity": "normal"
+      }
+    },
+    {
+      "ts": "2026-03-26T21:43:21.625Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "medium",
+        "post_pressure": "low",
+        "staleness": "medium",
+        "focus_note": "Continued deep monitoring of the escalating Iran-Israel conflict, with emphasis on military strategy, humanitarian impact, veracity of reports, global economic consequences, shifting diplomatic stances, and the evolving dynamics of international law and political influence. Also, tracking on-the-ground reporting, especially for direct contradictions and unverified claims."
+      },
+      "directives": {
+        "cycle_interval_sec": 1800,
+        "next_cycle_type": null,
+        "browse_depth": "deep",
+        "post_eagerness": "normal",
+        "curiosity_intensity": "normal"
+      }
+    }
+  ]
 }
