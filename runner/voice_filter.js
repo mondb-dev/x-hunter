@@ -28,6 +28,7 @@
 
 const fs   = require("fs");
 const path = require("path");
+const config = require("./lib/config");
 
 const ROOT = path.resolve(__dirname, "..");
 
@@ -450,6 +451,31 @@ Rules:
       console.log(`[voice_filter] keeping original (${tweetText.length} chars, under ${HARD_LIMIT})`);
       process.exit(0);
     }
+  }
+
+  // ── Grounding check (AGENTS.md §18.5) — reject fabricated day numbers ──
+  const currentDayNumber = Math.floor(
+    (Date.now() - new Date(config.AGENT_START_DATE + "T00:00:00Z").getTime()) / 86400000
+  ) + 1;
+  const dayRefs = revised.match(/\bDay\s+(\d+)\b/gi);
+  if (dayRefs) {
+    for (const ref of dayRefs) {
+      const cited = parseInt(ref.replace(/Day\s+/i, ""), 10);
+      if (cited > currentDayNumber) {
+        console.log(`[voice_filter] GROUNDING REJECTION: cited Day ${cited} but current day is ${currentDayNumber} — rejecting draft`);
+        // Write SKIP so post_tweet.js knows to skip
+        fs.writeFileSync(DRAFT_FILE, "SKIP", "utf-8");
+        process.exit(0);
+      }
+    }
+  }
+
+  // Also reject vague temporal claims without anchor (§18.5)
+  const vagueTemporalRe = /\b(over the past (weeks|months)|for (weeks|months) now|I have long)\b/i;
+  if (vagueTemporalRe.test(revised)) {
+    console.log(`[voice_filter] GROUNDING REJECTION: vague temporal claim without anchor — rejecting draft`);
+    fs.writeFileSync(DRAFT_FILE, "SKIP", "utf-8");
+    process.exit(0);
   }
 
   // Don't accept if it's radically different (cosine similarity proxy)

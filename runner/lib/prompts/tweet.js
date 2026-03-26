@@ -81,6 +81,10 @@ module.exports = function buildTweetPrompt(ctx) {
     '      At strong/very strong conviction: tagging is MANDATORY when addressing someone\'s\n' +
     '      stated position. Do NOT vaguely allude to "some people" when you mean @specific_account.\n' +
     '      At light/moderate: tag when asking a genuine question of that person.\n' +
+    '   l. GROUNDING RULE (AGENTS.md §18): NEVER reference a past observation, day number,\n' +
+    '      previous belief, or prior interaction without verifying it in the MEMORY RECALL section above.\n' +
+    '      If memory recall has no match, ground the tweet in THIS cycle only.\n' +
+    '      "Day 77" when you are on Day ' + ctx.dayNumber + ' is a credibility-destroying hallucination.\n' +
     '4. Write state/tweet_draft.txt (plain text, overwrite):\n' +
     '   Line 1: your insight sentence (REQUIRED \u2014 must not be empty, max ~230 chars)\n' +
     '   Line 2: https://sebastianhunter.fun/journal/' + ctx.today + '/' + ctx.hour + '\n' +

@@ -36,6 +36,10 @@ module.exports = function buildQuotePrompt(ctx) {
     '   If after reading it is not interesting enough to quote, navigate to your second candidate.\n' +
     '\n' +
     '3. Write your quote commentary ONLY after you have read the tweet in the browser.\n' +
+    '   GROUNDING RULE (AGENTS.md §18): If your commentary references ANY past observation\n' +
+    '   or prior belief ("I previously noted...", "My Day X analysis..."), you MUST verify it\n' +
+    '   against what you actually saw. If you cannot cite a specific date, write from what you\n' +
+    '   see in the tweet RIGHT NOW — do not invent a history.\n' +
     '   NOT acceptable: generic belief statement that could apply to any tweet.\n' +
     '   NOT acceptable: "this claim conflates X", "demands scrutiny", "risks premature judgment" \u2014 press release language.\n' +
     '   NOT acceptable: internal metrics in the tweet \u2014 no "conf 95%", "score 0.40", "(confidence: X)".\n' +

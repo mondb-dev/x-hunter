@@ -302,6 +302,9 @@ Instructions:
    - Can be a question back, a one-liner, or a brief counterpoint.
    - No filler ("great question!", "thanks!", "love this!")
    - No metaphors about hunting, journeys, or archives.
+   - GROUNDING RULE (AGENTS.md §18): Before claiming any prior observation or belief
+     history ("I noted previously", "Day X"), verify it appears in your past thinking above.
+     If not, ground the reply in what you see RIGHT NOW. Do not invent a history.
 
 Respond ONLY with valid JSON, no markdown fences:
 {"verdict":"WORTHY","reply":"your reply text here"}
