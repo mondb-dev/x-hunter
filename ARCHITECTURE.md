@@ -391,6 +391,58 @@ uploaded file from `https://arweave.net/<tx_id>`.
 | `state/action_plans.json` | ponder.js | ponder.js (context), act.js | no |
 | `state/ponder_state.json` | ponder.js | ponder.js (cooldown + delta) | yes |
 | `state/ponder_tweet.txt` | ponder.js | run.sh → post_tweet.js | yes |
+| `state/capture_state.json` | capture_detection.js | posts_assessment.js, LLM browse/tweet | no |
+| `state/posting_directive.txt` | posts_assessment.js | LLM tweet/quote prompts | no |
+| `state/cadence.json` | LLM browse (task #6) | orchestrator.js (via cadence.js) | no |
+
+---
+
+## Metacognition Pipeline
+
+Two daily scripts that run during the `reports()` block in `daily.js`
+(after `generate_daily_report.js`, before `write_article.js`).
+
+### Capture Detection (`runner/capture_detection.js`)
+
+Mechanical analysis (no LLM). Scans `ontology.json` evidence_log entries
+for the last 24h and computes source concentration metrics.
+
+```
+Detects:
+  1. Source dominance   — any single account driving >25% of today’s evidence
+  2. Cluster dominance  — any single topic cluster driving >40% of evidence
+  3. Pole skew          — >70% of evidence pushing in the same direction
+  4. Axis concentration — >50% of evidence landing on a single axis
+
+Reads:  state/ontology.json, state/trust_graph.json
+Writes: state/capture_state.json  (status: clean/warning/captured)
+```
+
+The capture status is surfaced in browse and tweet prompts via
+`context.js → formatCaptureStatus()`. If status is `warning` or `captured`,
+the agent sees the specific alerts before composing posts.
+
+### Posts Assessment (`runner/posts_assessment.js`)
+
+LLM-assisted daily self-review. Evaluates today’s posts against five criteria:
+
+| Criterion | What it checks |
+|---|---|
+| Goal-aligned | Does the post connect to vocation and active belief axes? |
+| Not repetitive | Does it say something new vs. the last 5 days of posts? |
+| Reflective of knowledge | Does it show evidence of having read and absorbed material? |
+| Reflective of conviction | Does the tone match the actual confidence on the relevant axes? |
+| Engaging | Does it name a specific tension or ask a genuine question? |
+
+```
+Reads:  state/posts_log.json, state/ontology.json, state/capture_state.json,
+        state/vocation.json
+Writes: daily/posts_assessment_YYYY-MM-DD.md   (full critique, archived)
+        state/posting_directive.txt            (3 specific rules for tomorrow)
+```
+
+The posting directive is injected into tweet and quote-tweet prompts the
+following day, so Sebastian reads it before composing.
 
 ---
 

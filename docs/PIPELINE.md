@@ -55,17 +55,20 @@ run.sh TWEET cycle
 ## Daily Block (every 72 browse cycles / ~24h)
 
 ```
+  → daily_snapshot.js          (idempotent full ontology snapshot)
   → generate_daily_report.js
+  → capture_detection.js       (source-capture analysis — no LLM)
+  → posts_assessment.js        (LLM self-review → posting_directive.txt)
   → write_article.js
   → moltbook.js --post-article
-  → post_tweet.js          (article link)
-  → generate_checkpoint.js (self-gates: every 3 days)
+  → post_tweet.js              (article link)
+  → generate_checkpoint.js     (self-gates: every 3 days)
   → moltbook.js --post-checkpoint
-  → ponder.js              (self-gates: conviction threshold)
-  → post_tweet.js          (ponder declaration, if ponder fired)
+  → ponder.js                  (self-gates: conviction threshold)
+  → post_tweet.js              (ponder declaration, if ponder fired)
   → moltbook.js --post-ponder  (if ponder_post_pending flag)
-  → deep_dive.js           (self-gates: 1 day after ponder)
-  → decision.js            (self-gates: after deep_dive)
+  → deep_dive.js               (self-gates: 1 day after ponder)
+  → decision.js                (self-gates: after deep_dive)
   → feed_digest.txt trim
 ```
 

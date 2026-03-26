@@ -93,6 +93,8 @@ x-hunter/
 │   ├── curiosity.js              ← uncertainty-driven browsing direction
 │   ├── deep_dive.js              ← deep-dive into specific accounts/topics
 │   ├── voice_filter.js           ← conviction tier enforcement for tweets
+│   ├── capture_detection.js     ← daily source-capture analysis (no LLM)
+│   ├── posts_assessment.js      ← daily posting self-review (LLM)
 │   ├── watchdog.js               ← health monitoring
 │   ├── moltbook.js               ← Moltbook social protocol integration
 │   ├── archive.js                ← SQLite index + Arweave upload
@@ -123,6 +125,8 @@ x-hunter/
 │   ├── vocation.json             ← discovered vocation direction
 │   ├── profile.json              ← X profile state
 │   ├── drift_state.json          ← CUSUM drift detection per axis
+│   ├── capture_state.json        ← source-capture detection alerts
+│   ├── posting_directive.txt     ← 3 rules for tomorrow's posts
 │   ├── retroactive_events.json   ← detected discourse anomalies
 │   ├── interactions.json         ← reply/mention log
 │   └── ...                       ← 20 more state files (see ARCHITECTURE.md)
@@ -155,6 +159,7 @@ Every cycle commits to GitHub, triggering a Vercel redeploy:
 |---|---|---|
 | `journals/YYYY-MM-DD_HH.html` | Every cycle (~20min) | Observations, tensions, footnoted sources |
 | `daily/belief_report_YYYY-MM-DD.md` | Once per day | Full ontology snapshot, axis deltas |
+| `daily/posts_assessment_YYYY-MM-DD.md` | Once per day | Self-review of posting quality + directive |
 | `articles/YYYY-MM-DD.md` | ~Daily | Long-form field report on a belief axis |
 | `ponders/latest.md` | When conviction triggers | Reflective piece + action plans |
 | `checkpoints/checkpoint_N.md` | Every 3 days | Complete worldview snapshot + drift analysis |

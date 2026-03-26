@@ -107,6 +107,8 @@ Key functions:
 |---|---|
 | `generate_daily_report.js` | Generate `daily/belief_report_YYYY-MM-DD.md` |
 | `generate_checkpoint.js` | Generate `checkpoints/checkpoint_N.md` |
+| `capture_detection.js` | Daily source-capture detection (no LLM). Writes `state/capture_state.json` |
+| `posts_assessment.js` | Daily posting self-review (LLM). Writes `daily/posts_assessment_YYYY-MM-DD.md` + `state/posting_directive.txt` |
 | `write_article.js` | Write a long-form article to `articles/` |
 | `ponder.js` | Write a reflection to `ponders/` |
 | `update_bio.js` | Update X bio via CDP |
@@ -174,6 +176,9 @@ via `runner/lib/state.js`.
 | `diversity_state.json` | 40/30/30 diversity tracking (§7) |
 | `drift_state.json` | Score drift detection state |
 | `drift_cap_state.json` | Daily drift cap tracking |
+| `capture_state.json` | Capture detection alerts: source/cluster/pole/axis concentration |
+| `posting_directive.txt` | 3 specific posting rules for tomorrow (from posts_assessment.js) |
+| `cadence.json` | Self-regulated cadence: cycle interval, depth, eagerness, focus |
 | `axis_creation_state.json` | Axis creation cooldowns and counters |
 | `axes_graveyard.json` | Merged/retired axes |
 
