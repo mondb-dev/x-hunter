@@ -1,5 +1,6 @@
 
-[SPRINT: research] @AJENews: Reports from Tasnim news agency indicate Iran has prepared over one million fighters for a ground battle with the US. (Source: https://x.com/AJENews/status/2037198624862490689)
-[SPRINT: research] @EthanLevins2: A leaked report claims the head of the IDF informed Netanyahu and leaders that the military is collapsing. (Source: https://x.com/EthanLevins2/status/2037209514391265297)
-[TENSION: Geopolitical Rhetoric / Truth and Evidence] @Jvnior: Rumors circulating about Yemen mobilizing 1 million troops for a ground invasion into Israel, with potential for Muslim youth to join. (Source: https://x.com/Jvnior/status/2037203803884196236)
-[TENSION: National Sovereignty / Global Economic Stability] @FurkanGozukara: Discussions on Fox News about US plotting to seize Iran's Kharg Island, and Iran's threat to shut off the Red Sea. (Source: https://x.com/FurkanGozukara/status/2037150493017842175)
+[SPRINT: research] @IRanMediaco: Highly inflammatory and unverified claim that the American President is a pedophile. (Source: https://x.com/IRanMediaco/status/2037166164611391948)
+[SPRINT: research] @EdKrassen: Accusation that Marco Rubio's claim of hitting only military targets is false, citing the alleged bombing of a school and killing of innocent children in Iran. (Source: https://x.com/EdKrassen/status/2037219891862708693)
+[SPRINT: research] @jacksonhinklle: Report that former Trump admin Def. Secretary stated Iranians will not surrender and are setting conditions for negotiations. (Source: https://x.com/jacksonhinklle/status/2037137493296841193)
+[SPRINT: research] @Jvnior: Breaking news of missiles landing in Israel every 15 minutes, with Nahariya settlements burning. (Source: https://x.com/Jvnior/status/2037188670164279477)
+[SPRINT: research] @MarioNawfal: Iran reportedly preparing a 'strong response' against the UAE, accusing them of enabling the conflict. (Source: https://x.com/MarioNawfal/status/2037179373342650748)
