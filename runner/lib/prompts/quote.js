@@ -5,7 +5,7 @@
  * Port of the QUOTEMSG heredoc in run.sh (lines 780-833).
  */
 module.exports = function buildQuotePrompt(ctx) {
-  return 'Today is ' + ctx.today + ' ' + ctx.now + '. Quote cycle ' + ctx.cycle +
+  return 'Today is ' + ctx.today + ' ' + ctx.now + ' (Day ' + ctx.dayNumber + '). Quote cycle ' + ctx.cycle +
     ' -- find one post worth quoting.\n' +
     '\n' +
     'Your strongest belief axes (what you actually think matters):\n' +

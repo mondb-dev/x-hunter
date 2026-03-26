@@ -12,7 +12,7 @@
  *   node runner/search_journals.js "media manipulation" journal 5
  */
 
-const { execSync } = require('child_process');
+const { execFileSync } = require('child_process');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
@@ -28,15 +28,15 @@ const RECALL = path.join(ROOT, 'runner', 'recall.js');
  * @returns {string} Formatted recall output, or error message
  */
 function searchJournals({ query, type, limit }) {
-  const args = ['--query', `"${query.replace(/"/g, '\\"')}"`, '--print'];
+  const args = [RECALL, '--query', query, '--print'];
   if (type)  args.push('--type', type);
   if (limit) args.push('--limit', String(limit));
 
   try {
-    const result = execSync(
-      `node "${RECALL}" ${args.join(' ')}`,
-      { encoding: 'utf-8', timeout: 30_000 }
-    );
+    const result = execFileSync('node', args, {
+      encoding: 'utf-8',
+      timeout: 30_000,
+    });
     return result.trim() || '(no matching entries found)';
   } catch (e) {
     return '(search failed: ' + (e.message || 'unknown error') + ')';
