@@ -432,6 +432,21 @@ function runOneCycle() {
 
   // ── QUOTE cycle ───────────────────────────────────────────────────────
   } else if (cycleType === 'QUOTE') {
+    // Pre-load memory recall for grounding (AGENTS.md §18)
+    try {
+      const topicFile = path.join(config.STATE_DIR, 'topic_summary.txt');
+      let recallQ = '';
+      try { recallQ = fs.readFileSync(topicFile, 'utf-8').split('\n').filter(l => l.trim()).slice(0, 3).join(' ').replace(/["`$\\!;|&<>(){}]/g, '').trim(); } catch {}
+      if (!recallQ) {
+        try { recallQ = fs.readFileSync(config.FEED_DIGEST_PATH, 'utf-8').split('\n').find(l => l.trim().length > 20) || ''; } catch {}
+        recallQ = recallQ.replace(/["`$\\!;|&<>(){}]/g, '').slice(0, 200).trim();
+      }
+      if (recallQ) {
+        execSync(`node "${path.join(PROJECT_ROOT, 'runner/recall.js')}" --query "${recallQ}" --limit 5`, { stdio: 'ignore', timeout: 30000 });
+        log('pre-quote recall loaded for grounding');
+      }
+    } catch (e) { log(`pre-quote recall failed (non-fatal): ${e.message}`); }
+
     const ctx = loadContext({
       type: 'quote', cycle, dayNumber, today, now, hour,
     });

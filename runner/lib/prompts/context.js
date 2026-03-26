@@ -255,6 +255,7 @@ function loadContext(opts) {
     ctx.quotedSources     = formatQuotedSources();
     ctx.digest            = readState(config.FEED_DIGEST_PATH, { tail: 120, fallback: '(not available)' });
     ctx.topAxes           = formatTopAxes();
+    ctx.memoryRecall      = readState(config.MEMORY_RECALL_PATH, { fallback: '(empty)' });
   }
 
   if (type === 'tweet') {

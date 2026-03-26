@@ -347,6 +347,30 @@ What he never does at this tier:
     process.exit(0);
   }
 
+  // ── Early grounding check on ORIGINAL draft (AGENTS.md §18.5) ─────────
+  // Must run before Ollama — fallthrough paths exit with the original intact,
+  // so the original itself must be clean.
+  const currentDayNum = Math.floor(
+    (Date.now() - new Date(config.AGENT_START_DATE + "T00:00:00Z").getTime()) / 86400000
+  ) + 1;
+  const origDayRefs = tweetText.match(/\bDay\s+(\d+)\b/gi);
+  if (origDayRefs) {
+    for (const ref of origDayRefs) {
+      const cited = parseInt(ref.replace(/Day\s+/i, ""), 10);
+      if (cited > currentDayNum) {
+        console.log(`[voice_filter] GROUNDING REJECTION (original): cited Day ${cited} but current day is ${currentDayNum} — rejecting draft`);
+        fs.writeFileSync(DRAFT_FILE, "SKIP", "utf-8");
+        process.exit(0);
+      }
+    }
+  }
+  const vagueTemporalOrigRe = /\b(over the past (weeks|months)|for (weeks|months) now|I have long)\b/i;
+  if (vagueTemporalOrigRe.test(tweetText)) {
+    console.log(`[voice_filter] GROUNDING REJECTION (original): vague temporal claim without anchor — rejecting draft`);
+    fs.writeFileSync(DRAFT_FILE, "SKIP", "utf-8");
+    process.exit(0);
+  }
+
   // Load ontology
   let axes = [];
   try {
