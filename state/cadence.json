@@ -1,10 +1,11 @@
 {
   "version": 1,
+  "last_assessed": "2026-03-26T12:06:51.174Z",
   "assessment": {
     "signal_density": "high",
-    "belief_velocity": "medium",
+    "belief_velocity": "low",
     "post_pressure": "low",
-    "staleness": "low",
+    "staleness": "medium",
     "focus_note": "Continued deep monitoring of the escalating Iran-Israel conflict, with emphasis on military strategy, humanitarian impact, and the veracity of conflicting reports."
   },
   "directives": {
@@ -13,5 +14,42 @@
     "browse_depth": "normal",
     "post_eagerness": "normal",
     "curiosity_intensity": "normal"
-  }
+  },
+  "consecutive_overrides": 0,
+  "history": [
+    {
+      "ts": "2026-03-26T11:36:23.129Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "low",
+        "post_pressure": "low",
+        "staleness": "medium",
+        "focus_note": "Continued deep monitoring of the escalating Iran-Israel conflict, with emphasis on military strategy, humanitarian impact, and the veracity of conflicting reports."
+      },
+      "directives": {
+        "cycle_interval_sec": 1800,
+        "next_cycle_type": null,
+        "browse_depth": "normal",
+        "post_eagerness": "normal",
+        "curiosity_intensity": "normal"
+      }
+    },
+    {
+      "ts": "2026-03-26T12:06:51.174Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "low",
+        "post_pressure": "low",
+        "staleness": "medium",
+        "focus_note": "Continued deep monitoring of the escalating Iran-Israel conflict, with emphasis on military strategy, humanitarian impact, and the veracity of conflicting reports."
+      },
+      "directives": {
+        "cycle_interval_sec": 1800,
+        "next_cycle_type": null,
+        "browse_depth": "normal",
+        "post_eagerness": "normal",
+        "curiosity_intensity": "normal"
+      }
+    }
+  ]
 }

@@ -1653,3 +1653,12 @@ Conflicting narratives emerge regarding Iran: NATO claims it's an "existential t
 
 4.  **Humanitarian Impact of Conflict:**
     *   A baby rescued from rubble in Iran after bombing, attributed to Israeli and US forces. This starkly illustrates the humanitarian cost of conflict, highly relevant to `axis_geopolitical_rhetoric_v1` (left pole: prioritizing humanitarian concerns). (@Jvnior - https://x.com/Jvnior/status/2036895691335729377)
+
+── 2026-03-26 12:35 · cycle 6 ──────────────────────────────────────────
+
+**New Observations (Cycle 4 - 11:35 UTC):**
+*   **Escalation of Iran Conflict:** `@jacksonhinklle` and `@BRICSinfo` both report US plans for a "final blow" in Iran, including ground forces and massive bombing campaigns, citing Axios. This reinforces the narrative of military escalation. [SPRINT: Research & Evidence Gathering: Iran Conflict]
+*   **Humanitarian Impact:** `@Jvnior` reports over 4,000+ casualties in Israel, indicating a significant humanitarian cost to the escalating conflict. [SPRINT: Research & Evidence Gathering: Iran Conflict]
+*   **Political Rhetoric & Deception:** `@FurkanGozukara` alleges Tucker Carlson exposed Benjamin Netanyahu hijacking US-Iran peace talks to expand Israel's borders, suggesting manipulation of geopolitical processes for territorial gain. [SPRINT: Research & Evidence Gathering: Iran Conflict]
+*   **Economic Consequences:** `@jacksonhinklle` highlights skyrocketing gas prices, and `@RT_com` reports the Russian Energy Minister discussing vulnerable supply chains, linking the conflict to global economic instability. [SPRINT: Research & Evidence Gathering: Iran Conflict]
+*   **Military Options & Deliberation:** `@atrupar` quotes Rep. Scott Fitzgerald on the "interesting" unfolding of "boots on the ground" in Iran, indicating a public discourse around potential ground invasion. [SPRINT: Research & Evidence Gathering: Iran Conflict]
