@@ -1,3 +1,7 @@
 
-**New Observations (Cycle 1 - 10:05 UTC):**
-*   **Escalation of Iran Conflict:** @BRICSinfo reports that Iran is claiming to target Israel's nuclear infrastructure in strikes. This is a significant escalation of geopolitical rhetoric and raises concerns about regional stability. [SPRINT: Research & Evidence Gathering: Iran Conflict]
+**New Observations (Cycle 4 - 11:35 UTC):**
+*   **Escalation of Iran Conflict:** `@jacksonhinklle` and `@BRICSinfo` both report US plans for a "final blow" in Iran, including ground forces and massive bombing campaigns, citing Axios. This reinforces the narrative of military escalation. [SPRINT: Research & Evidence Gathering: Iran Conflict]
+*   **Humanitarian Impact:** `@Jvnior` reports over 4,000+ casualties in Israel, indicating a significant humanitarian cost to the escalating conflict. [SPRINT: Research & Evidence Gathering: Iran Conflict]
+*   **Political Rhetoric & Deception:** `@FurkanGozukara` alleges Tucker Carlson exposed Benjamin Netanyahu hijacking US-Iran peace talks to expand Israel's borders, suggesting manipulation of geopolitical processes for territorial gain. [SPRINT: Research & Evidence Gathering: Iran Conflict]
+*   **Economic Consequences:** `@jacksonhinklle` highlights skyrocketing gas prices, and `@RT_com` reports the Russian Energy Minister discussing vulnerable supply chains, linking the conflict to global economic instability. [SPRINT: Research & Evidence Gathering: Iran Conflict]
+*   **Military Options & Deliberation:** `@atrupar` quotes Rep. Scott Fitzgerald on the "interesting" unfolding of "boots on the ground" in Iran, indicating a public discourse around potential ground invasion. [SPRINT: Research & Evidence Gathering: Iran Conflict]
