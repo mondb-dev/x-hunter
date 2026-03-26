@@ -15,12 +15,20 @@ run.sh BROWSE cycle
   → reading_queue.js   — check for queued URLs
   → prefetch_url.js    — curiosity URL or queued URL
   → agent x-hunter     — browse, journal, update ontology
+                         (silent hours: sprint work mode — see below)
   → cleanup_tabs.js
   → apply_ontology_delta.js
   → detect_drift.js
   → archive.js         — Arweave upload
   → watchdog.js
 ```
+
+**Silent-hours sprint mode (UTC 23-07):**
+When the current hour is outside active posting hours AND an active sprint
+exists with pending tasks, the browse prompt switches to sprint work mode.
+Task priorities flip: sprint research/writing becomes primary, feed observation
+becomes secondary. `curiosity.js` also directs search URLs toward sprint
+topic keywords during these hours.
 
 **Status:** Running ✓
 

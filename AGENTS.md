@@ -954,3 +954,75 @@ The voice filter mechanically rejects:
 - Any temporal language ("weeks", "months", "previously") without a concrete anchor
 
 If flagged, the post is rejected. Better no post than a dishonest one.
+
+---
+
+## 19. Silent-Hours Sprint Execution
+
+During silent hours (UTC 23-07), Sebastian's feed has low signal density
+and posting is suppressed. Instead of wasting these cycles on low-value
+observation, Sebastian uses silent hours to advance sprint deliverables.
+
+### 19.1 Detection
+
+A cycle is in "sprint work mode" when ALL are true:
+
+1. Current UTC hour < 7 OR ≥ 23 (outside active posting hours)
+2. An active sprint exists in `sprint_context.txt`
+3. At least one task is pending (▸ or ○)
+
+Detection happens in `runner/lib/prompts/context.js` and is passed to the
+browse prompt as `isSilentHours` + `hasActiveSprint`.
+
+### 19.2 Sprint work mode (browse prompt override)
+
+When sprint work mode activates, the browse prompt task list is replaced:
+
+| Normal browse | Sprint work browse |
+|---|---|
+| Task 0: Deep dive (reading queue) | Task 0: **Sprint research** (primary — 60% of cycle) |
+| Task 1: Curiosity search | Task 1: Curiosity (secondary, sprint-aligned only) |
+| Task 2: Feed observation + tensions | Task 2: Browse notes (sprint-tagged) |
+| Task 3: Browse notes | Task 3: Ontology delta (if relevant) |
+| Task 4: Ontology delta | Task 4: Cadence (post_eagerness = suppress) |
+| Task 5: Comment candidates | Task 5: Journal (sprint-focused) |
+| Task 6: Cadence | |
+| Task 7: Journal | |
+
+Sprint task routing by type:
+
+| Task type | Sprint work action |
+|---|---|
+| `[research]` | Navigate to X search, read 5-10 posts, note claims + contradictions + sources |
+| `[write]` | Write article draft to `articles/YYYY-MM-DD.md` from accumulated research |
+| `[engage]` | Search for conversations, note engagement opportunities (queue for active hours) |
+| `[publish]` | Check if write prerequisite produced a draft; refine if exists |
+
+### 19.3 Sprint-aware curiosity
+
+During silent hours with an active sprint, `runner/curiosity.js` prioritizes
+sprint research over uncertainty-axis exploration:
+
+**Priority order:**
+1. Discourse anchors (still highest — time-sensitive counter-arguments)
+2. **Sprint research** (NEW — extracts search terms from task title)
+3. Uncertainty axis (normal epistemic curiosity)
+4. Trending keywords
+
+This means the agent's search URLs during silent hours are sprint-directed,
+and the ambient focus tag combines sprint + curiosity tracking.
+
+### 19.4 What stays the same
+
+- The orchestrator loop is unchanged — no new cycle types
+- Post-browse scripts (ontology merge, drift detection, cadence) run normally
+- Journals are still written (but sprint-focused)
+- Ontology updates still happen when sprint research reveals axis-worthy evidence
+- Daily block (sprint_manager.js, sprint_update.js) tracks progress as before
+
+### 19.5 Philosophy
+
+The sprint execution model reflects a key principle: **observation and execution
+should not compete for the same time slots.** Active hours are for learning from
+live discourse; silent hours are for turning that learning into deliverables.
+The feed is the research instrument; the night is the workshop.

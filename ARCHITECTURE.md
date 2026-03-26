@@ -444,6 +444,34 @@ Writes: daily/posts_assessment_YYYY-MM-DD.md   (full critique, archived)
 The posting directive is injected into tweet and quote-tweet prompts the
 following day, so Sebastian reads it before composing.
 
+### Silent-Hours Sprint Execution
+
+During silent hours (UTC 23-07), browse cycles are redirected toward sprint
+deliverable work instead of low-value feed observation.
+
+**Detection** (in `runner/lib/prompts/context.js`):
+- `isSilentHours`: Current UTC hour < 7 or ≥ 23
+- `hasActiveSprint`: `sprint_context.txt` contains pending tasks
+
+**Browse prompt override** (in `runner/lib/prompts/browse.js`):
+When both flags are true, the normal 8-task browse list is replaced with a
+6-task sprint-focused list. Task 0 becomes "SPRINT RESEARCH" (primary — 60%
+of cycle) with type-specific instructions for [research], [write], [engage],
+and [publish] tasks. Normal observation, comment candidates, and deep dives
+are deprioritized.
+
+**Sprint-aware curiosity** (in `runner/curiosity.js`):
+During silent hours, a new "sprint_research" driver fires after discourse
+anchors but before uncertainty-axis exploration. It extracts search terms
+from the current sprint task title and generates sprint-directed search URLs.
+
+```
+Active hours (UTC 07-23):        Silent hours (UTC 23-07):
+  Browse → observe feed            Browse → sprint work
+  Curiosity → uncertainty axes     Curiosity → sprint research
+  Post → tweet/quote               Post → suppressed
+```
+
 ---
 
 ## Data Flow (End-to-End)

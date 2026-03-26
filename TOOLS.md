@@ -94,7 +94,7 @@ Key functions:
 |---|---|
 | `discourse_scan.js` | Scan feed for recurring tensions |
 | `discourse_digest.js` | Summarize feed content into digest |
-| `curiosity.js` | Generate curiosity-driven questions from observations |
+| `curiosity.js` | Generate curiosity directives; sprint-aware during silent hours (UTC 23-07) |
 | `deep_dive_detector.js` | Detect topics worth a deep dive |
 | `deep_dive.js` | Execute a deep-dive research session |
 | `reading_queue.js` | Manage reading queue for articles/threads |

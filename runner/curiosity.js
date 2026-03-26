@@ -29,6 +29,9 @@ const ONTOLOGY     = path.join(ROOT, "state", "ontology.json");
 const BELIEF       = path.join(ROOT, "state", "belief_state.json");
 const BROWSE_NOTES = path.join(ROOT, "state", "browse_notes.md");
 const ANCHORS      = path.join(ROOT, "state", "discourse_anchors.jsonl");
+const SPRINT_CTX   = path.join(ROOT, "state", "sprint_context.txt");
+
+const config = require("./lib/config");
 
 const { generate: llmGenerate } = require("./llm.js");
 
@@ -161,6 +164,57 @@ function buildSearchAngles(mainTerms, leftPole, rightPole) {
   return angles;
 }
 
+// ── Silent-hours sprint helpers ───────────────────────────────────────────────
+
+/**
+ * Check if current UTC hour is in silent period (outside active posting hours).
+ */
+function isSilentHours() {
+  const h = new Date().getUTCHours();
+  return h < config.TWEET_START || h >= config.TWEET_END;
+}
+
+/**
+ * Read sprint_context.txt and extract the first actionable task (▸ or ○).
+ * Returns { type, title, status } or null.
+ */
+function extractSprintTask() {
+  if (!fs.existsSync(SPRINT_CTX)) return null;
+  try {
+    const text = fs.readFileSync(SPRINT_CTX, "utf-8");
+    if (!text.trim() || text.includes("(no active plan)") || text.includes("(no active sprint)")) return null;
+
+    // Match task lines: "  ▸ [type] title" or "  ○ [type] title"
+    const lines = text.split("\n");
+    for (const line of lines) {
+      const m = line.match(/^\s*[▸○]\s*\[(\w+)\]\s+(.+)/);
+      if (m) {
+        return {
+          type: m[1].trim(),
+          title: m[2].trim(),
+          status: line.includes("▸") ? "in_progress" : "not_started",
+        };
+      }
+    }
+  } catch {}
+  return null;
+}
+
+/**
+ * Extract search terms from a sprint task title.
+ * Strips generic verbs and task-type prefixes, returns clean keywords.
+ */
+function sprintSearchTerms(task) {
+  const STRIP = new Set(["research", "write", "draft", "publish", "engage", "create", "build", "update", "monitor", "review", "check", "start", "complete", "finish"]);
+  const words = task.title
+    .replace(/[^a-zA-Z0-9 ]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .split(" ")
+    .filter(w => w.length > 2 && !STRIP.has(w.toLowerCase()));
+  return words.slice(0, 5).join(" ") || task.title.split(" ").slice(0, 4).join(" ");
+}
+
 
 
 // ── Log ───────────────────────────────────────────────────────────────────────
@@ -268,6 +322,62 @@ function markAnchorProcessed(postId) {
       `[curiosity] driver: discourse — @${discourseAnchor.username}: "${(discourseAnchor.summary || "").slice(0, 80)}"`
     );
     process.exit(0);
+  }
+
+  // ── Path 1b: Sprint research (silent hours only) ────────────────────────────
+  // During silent hours (UTC 23-07), if there's an active sprint with pending tasks,
+  // direct curiosity toward sprint-relevant research instead of generic uncertainty.
+  if (isSilentHours()) {
+    const sprintTask = extractSprintTask();
+    if (sprintTask) {
+      const searchTerms = sprintSearchTerms(sprintTask);
+      const taskSlug    = toSlug(sprintTask.title);
+      const expireLine  = CURRENT_CYCLE > 0
+        ? `refreshes at cycle ${EXPIRES_CYCLE}`
+        : `refreshes in ~${CURIOSITY_EVERY} cycles`;
+
+      const sprintAngles = buildSearchAngles(searchTerms, null, null);
+      const sprintAngleLines = sprintAngles.map((u, i) => `  SEARCH_URL_${i + 1}: ${u}`).join("\n");
+
+      const lines = [
+        `── curiosity directive · ${tsHuman} ${HR.slice(tsHuman.length + 25)}`,
+        `RESEARCH FOCUS: Sprint — "${sprintTask.title}"`,
+        `  Why: Silent hours sprint work — advancing [${sprintTask.type}] task`,
+        `  Status: ${sprintTask.status === "in_progress" ? "in progress" : "not yet started"}`,
+        ``,
+        `ACTIVE SEARCH (rotates each cycle — prefetch picks automatically):`,
+        sprintAngleLines,
+        `  This is sprint research time. Search deeply for:`,
+        `  - Specific factual claims (with or without evidence)`,
+        `  - Contradictions between sources on this topic`,
+        `  - High-quality analytical threads or primary sources`,
+        `  - Data or evidence that could anchor your analysis`,
+        ``,
+        `AMBIENT FOCUS (all browse cycles until directive refreshes):`,
+        `  Everything this cycle serves the sprint. Tag all findings:`,
+        `    [SPRINT: ${sprintTask.type}] [CURIOSITY: sprint_${taskSlug}]`,
+        ``,
+        `── end directive (${expireLine}) ${HR.slice(expireLine.length + 22)}`,
+      ];
+
+      fs.writeFileSync(DIRECTIVE, lines.join("\n"), "utf-8");
+
+      appendLog({
+        cycle:            CURRENT_CYCLE,
+        ts,
+        driver:           "sprint_research",
+        task_type:        sprintTask.type,
+        task_title:       sprintTask.title,
+        task_status:      sprintTask.status,
+        search_terms:     searchTerms,
+        expires_at_cycle: EXPIRES_CYCLE,
+      });
+
+      console.log(
+        `[curiosity] driver: sprint_research — [${sprintTask.type}] "${sprintTask.title}" (silent hours)`
+      );
+      process.exit(0);
+    }
   }
 
   // ── Path 2: uncertainty-driven ──────────────────────────────────────────────

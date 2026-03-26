@@ -270,6 +270,13 @@ function loadContext(opts) {
     ctx.captureStatus     = formatCaptureStatus();
     ctx.journalTask       = buildJournalTask('browse', today, hour, dayNumber);
     ctx.nextTweet         = (Math.floor(cycle / config.TWEET_EVERY) + 1) * config.TWEET_EVERY;
+
+    // Silent-hours sprint detection (UTC 23-07: feed is stale, redirect to sprint work)
+    const hourInt = parseInt(hour, 10);
+    ctx.isSilentHours = hourInt < config.TWEET_START || hourInt >= config.TWEET_END;
+    ctx.hasActiveSprint = ctx.sprintContext &&
+      ctx.sprintContext.trim() !== '(no active plan)' &&
+      ctx.sprintContext.trim() !== '(no active sprint)';
   }
 
   if (type === 'quote') {

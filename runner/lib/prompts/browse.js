@@ -3,10 +3,18 @@
 /**
  * Browse cycle prompt — reads pre-loaded digest, takes notes, updates ontology.
  * Port of the BROWSEMSG heredoc in run.sh (lines 571-657).
+ *
+ * Two modes:
+ *   - Normal browse: feed observation, curiosity search, ontology updates
+ *   - Silent-hours sprint: sprint work is PRIMARY when feed is stale (UTC 23-07)
  */
-module.exports = function buildBrowsePrompt(ctx) {
+
+// ── Context preamble (shared between normal and sprint modes) ─────────────
+
+function buildPreamble(ctx) {
+  const mode = (ctx.isSilentHours && ctx.hasActiveSprint) ? ' [SPRINT WORK MODE]' : '';
   return 'Today is ' + ctx.today + ' ' + ctx.now + ' \u2014 Day ' + ctx.dayNumber +
-    '. Browse cycle ' + ctx.cycle + ' -- no tweet this cycle.\n' +
+    '. Browse cycle ' + ctx.cycle + ' -- no tweet this cycle.' + mode + '\n' +
     '\n' +
     'All files are pre-loaded below. Do NOT call any read_file tools.\n' +
     'Proceed directly to tasks.\n' +
@@ -37,12 +45,17 @@ module.exports = function buildBrowsePrompt(ctx) {
     ctx.discourseDigest + '\n' +
     '\u2500\u2500 READING QUEUE \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.readingBlock + '\n' +
-    '── CADENCE (self-regulated — you control your rhythm) ──────────────────────\n' +
+    '\u2500\u2500 CADENCE (self-regulated \u2014 you control your rhythm) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.cadence + '\n' +
-    '── CAPTURE STATUS (am I being captured?) ──────────────────────────────────\n' +
+    '\u2500\u2500 CAPTURE STATUS (am I being captured?) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.captureStatus + '\n' +
-    '───────────────────────────────────────────────────────────────────────────\n' +
-    '\n' +
+    '\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n';
+}
+
+// ── Normal browse tasks ───────────────────────────────────────────────────
+
+function buildNormalTasks(ctx) {
+  return '\n' +
     'Tasks (in order):\n' +
     '0. DEEP DIVE (highest priority): If there is a reading queue item above, follow\n' +
     '   those instructions completely before anything else. A deep dive on a profile or link\n' +
@@ -120,6 +133,83 @@ module.exports = function buildBrowsePrompt(ctx) {
     '   - Max 3 consecutive next_cycle_type overrides before the system resets to auto.\n' +
     '7. JOURNAL: ' + ctx.journalTask + '\n' +
     'Next tweet cycle: ' + ctx.nextTweet + '.\n';
+}
+
+// ── Silent-hours sprint tasks ─────────────────────────────────────────────
+
+function buildSprintTasks(ctx) {
+  return '\n' +
+    '═══ SPRINT WORK MODE (silent hours \u2014 feed is stale, sprint is your priority) ═══\n' +
+    '\n' +
+    'It is outside active posting hours. The feed has low signal density right now.\n' +
+    'This cycle is dedicated to advancing your sprint deliverables.\n' +
+    '\n' +
+    'Tasks (in order):\n' +
+    '0. SPRINT RESEARCH (primary task \u2014 60% of this cycle):\n' +
+    '   Look at the SPRINT PLAN above. Find the first \u25b8 (in-progress) or \u25cb (not-started) task.\n' +
+    '   Work on it based on its type:\n' +
+    '\n' +
+    '   [research] task:\n' +
+    '     - Navigate to X search for the topic. Use 2-3 targeted search queries.\n' +
+    '     - Read 5-10 posts from diverse accounts. Look for:\n' +
+    '       * Specific factual claims (with or without evidence)\n' +
+    '       * Contradictions between sources\n' +
+    '       * High-quality analytical threads\n' +
+    '       * Primary sources or data that could anchor your analysis\n' +
+    '     - For each noteworthy finding, record in browse_notes.md:\n' +
+    '       [SPRINT: research] @user: "key claim or finding" \u2014 evidence quality: high/medium/low\n' +
+    '     - If you find an especially good thread or article, save the URL for follow-up.\n' +
+    '\n' +
+    '   [write] task:\n' +
+    '     - Review your accumulated [SPRINT: research] entries in browse_notes.\n' +
+    '     - Review relevant belief axes and evidence that inform this topic.\n' +
+    '     - Write a draft article to articles/' + ctx.today + '.md:\n' +
+    '       * Clear thesis grounded in evidence you actually found\n' +
+    '       * Specific claims with sources (not vague generalizations)\n' +
+    '       * Acknowledge what you do NOT know or could not verify\n' +
+    '       * 500-1500 words, honest and analytical\n' +
+    '     - If the article file already exists, review and refine it instead.\n' +
+    '\n' +
+    '   [engage] task:\n' +
+    '     - Search for conversations about the sprint topic.\n' +
+    '     - Identify 2-3 accounts or threads where your perspective adds value.\n' +
+    '     - Note engagement opportunities in browse_notes.md:\n' +
+    '       [SPRINT: engage] @user tweet_url \u2014 potential angle: "..."\n' +
+    '     - Do NOT engage yet \u2014 queue opportunities for active hours.\n' +
+    '\n' +
+    '   [publish] task:\n' +
+    '     - Check if the prerequisite write task produced a draft in articles/.\n' +
+    '     - If draft exists: review it, refine if needed, mark as ready.\n' +
+    '     - If no draft: note in browse_notes that publish is blocked on write.\n' +
+    '\n' +
+    '1. CURIOSITY (secondary): If the directive above has an ACTIVE SEARCH URL related\n' +
+    '   to your sprint topic, navigate to it. Otherwise skip curiosity this cycle \u2014\n' +
+    '   sprint research is your curiosity tonight.\n' +
+    '2. Append all findings to state/browse_notes.md (append only \u2014 do not overwrite).\n' +
+    '   Tag all sprint-related entries with [SPRINT: <task_type>].\n' +
+    '3. Write state/ontology_delta.json if sprint research reveals axis-worthy evidence.\n' +
+    '   Same rules as normal browse:\n' +
+    '   - Fit to existing axes first. Use axis_ids from CURRENT BELIEF AXES.\n' +
+    '   - New axes only if genuinely orthogonal + seen in 2+ cycles.\n' +
+    '   - Delta only \u2014 never modify ontology.json directly.\n' +
+    '4. CADENCE: Update state/cadence.json. During sprint work:\n' +
+    '   - Set focus_note to describe what sprint work you did and what remains.\n' +
+    '   - Recommend cycle_interval_sec based on sprint progress (faster if productive).\n' +
+    '   - Keep post_eagerness at "suppress" (no posting during silent hours).\n' +
+    '5. JOURNAL: ' + ctx.journalTask + '\n' +
+    '   Focus the journal on sprint work: what you researched, what you found,\n' +
+    '   what evidence quality was like, what gaps remain.\n' +
+    'Next tweet cycle: ' + ctx.nextTweet + '.\n';
+}
+
+// ── Main export ───────────────────────────────────────────────────────────
+
+module.exports = function buildBrowsePrompt(ctx) {
+  const preamble = buildPreamble(ctx);
+  const tasks = (ctx.isSilentHours && ctx.hasActiveSprint)
+    ? buildSprintTasks(ctx)
+    : buildNormalTasks(ctx);
+  return preamble + tasks;
 };
 
 // CLI mode
