@@ -133,6 +133,7 @@ function newCycleMetrics() {
 }
 
 process.on('exit', cleanup);
+process.on('SIGHUP', () => log('Ignoring SIGHUP'));   // nohup sets SIG_IGN but Node resets it
 process.on('SIGINT', () => {
   log('Stopping (SIGINT)...');
   try { execSync(`bash "${config.SCRAPER_DIR}/stop.sh"`, { stdio: 'ignore', timeout: 10_000 }); } catch {}
