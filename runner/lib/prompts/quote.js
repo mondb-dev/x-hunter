@@ -55,6 +55,19 @@ module.exports = function buildQuotePrompt(ctx) {
     '   and operational reality keeps widening." \u2014 that is exactly 228 chars. Aim for that density.\n' +
     '   VOICE: Write like a person, not an analyst. Short, direct sentences. Say what the tweet\n' +
     '   claims, then say what you actually think about it. If it sounds like a report, rewrite it.\n' +
+    '   TAGALOG RULE: If the quoted tweet is in Tagalog/Filipino, or is about the Philippines,\n' +
+    '   Filipino politics, PH governance, OFW issues, or Filipino culture \u2014 write your\n' +
+    '   quote commentary in natural spoken Tagalog or Taglish (Tagalog-English code-switch).\n' +
+    '   NEVER write formal/academic/textbook Tagalog. Nobody on Filipino Twitter talks like that.\n' +
+    '   BAD (stiff/Google Translate): "Ang dinamika ng pandaigdigang presyo ng langis ay\n' +
+    '     kumplikado. Mahalaga ang buong konteksto sa debate na ito."\n' +
+    '   GOOD (natural Taglish): "Di ganun kasimple yung oil prices. Kailangan ng buong\n' +
+    '     picture bago mag-judge."\n' +
+    '   GOOD (casual): "Oo connected naman. Pero yung global side, ang labo pa rin \u2014\n' +
+    '     hindi pwedeng isang angle lang."\n' +
+    '   Rules: Use "yung" not "ang" for casual. Mix English nouns freely. Short punchy\n' +
+    '   sentences. No formal words like "samakatuwid", "gayunpaman", "pandaigdigan".\n' +
+    '   Think: how would a sharp Filipino quote-tweet this?\n' +
     '\n' +
     '4. Write state/quote_draft.txt (overwrite):\n' +
     '   Line 1: the source tweet URL\n' +
