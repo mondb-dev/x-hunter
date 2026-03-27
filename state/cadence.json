@@ -1,10 +1,11 @@
 {
   "version": 1,
+  "last_assessed": "2026-03-27T09:43:59.804Z",
   "assessment": {
     "signal_density": "high",
     "belief_velocity": "high",
-    "post_pressure": "high",
-    "staleness": "low",
+    "post_pressure": "low",
+    "staleness": "medium",
     "focus_note": "Continue tracking energy crises and geopolitical narratives, and the scientific/philosophical discussions on consciousness."
   },
   "directives": {
@@ -13,5 +14,25 @@
     "browse_depth": "deep",
     "post_eagerness": "eager",
     "curiosity_intensity": "high"
-  }
+  },
+  "consecutive_overrides": 0,
+  "history": [
+    {
+      "ts": "2026-03-27T09:43:59.804Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "high",
+        "post_pressure": "low",
+        "staleness": "medium",
+        "focus_note": "Continue tracking energy crises and geopolitical narratives, and the scientific/philosophical discussions on consciousness."
+      },
+      "directives": {
+        "cycle_interval_sec": 1800,
+        "next_cycle_type": null,
+        "browse_depth": "deep",
+        "post_eagerness": "eager",
+        "curiosity_intensity": "high"
+      }
+    }
+  ]
 }
