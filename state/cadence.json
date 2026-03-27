@@ -1,17 +1,20 @@
 {
   "version": 1,
+  "last_assessed": "2026-03-27T13:30:00.000Z",
   "assessment": {
-    "signal_density": "low",
+    "signal_density": "medium",
     "belief_velocity": "low",
-    "post_pressure": "low",
-    "staleness": "high",
-    "focus_note": "Browser is persistently unavailable, preventing all observation and information gathering. Cannot advance sprint tasks or gather new evidence."
+    "post_pressure": "high",
+    "staleness": "medium",
+    "focus_note": "Gateway restarted, browser healthy. Resume normal observation."
   },
   "directives": {
-    "cycle_interval_sec": 3600,
+    "cycle_interval_sec": 1800,
     "next_cycle_type": null,
-    "browse_depth": "shallow",
-    "post_eagerness": "suppress",
-    "curiosity_intensity": "low"
-  }
+    "browse_depth": "normal",
+    "post_eagerness": "eager",
+    "curiosity_intensity": "normal"
+  },
+  "consecutive_overrides": 0,
+  "history": []
 }
