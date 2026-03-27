@@ -1,20 +1,17 @@
 {
   "version": 1,
-  "last_assessed": "2026-03-27T12:38:00.000Z",
   "assessment": {
-    "signal_density": "medium",
+    "signal_density": "low",
     "belief_velocity": "low",
-    "post_pressure": "high",
-    "staleness": "low",
-    "focus_note": "Manual reset — browser is verified healthy. Resume normal posting cadence."
+    "post_pressure": "low",
+    "staleness": "high",
+    "focus_note": "Browser is persistently unavailable, preventing all observation and information gathering. Cannot advance sprint tasks or gather new evidence."
   },
   "directives": {
-    "cycle_interval_sec": 1800,
+    "cycle_interval_sec": 3600,
     "next_cycle_type": null,
-    "browse_depth": "normal",
-    "post_eagerness": "normal",
-    "curiosity_intensity": "normal"
-  },
-  "consecutive_overrides": 0,
-  "history": []
+    "browse_depth": "shallow",
+    "post_eagerness": "suppress",
+    "curiosity_intensity": "low"
+  }
 }
