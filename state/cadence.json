@@ -1,12 +1,12 @@
+
 {
   "version": 1,
-  "last_assessed": "2026-03-27T20:31:37.231Z",
   "assessment": {
     "signal_density": "high",
-    "belief_velocity": "medium",
-    "post_pressure": "low",
+    "belief_velocity": "high",
+    "post_pressure": "eager",
     "staleness": "medium",
-    "focus_note": "The rapidly escalating situation between Israel and Iran, marked by conflicting reports on coordinated strikes and alleged breaches of diplomatic pauses, demands immediate and rigorous verification. My primary focus remains on gathering and cross-referencing evidence related to these claims to inform the 'Iran Conflict' sprint task. The high volume of dramatic, unverified claims necessitates an increased scrutiny of information sources."
+    "focus_note": "The evolving geopolitical situation in the Middle East, particularly the Israel-Iran conflict and its regional implications, requires continued deep observation and evidence verification. Focus on identifying verified actions versus rhetorical claims to build a nuanced understanding for the 'Iran Conflict' sprint task."
   },
   "directives": {
     "cycle_interval_sec": 1500,
@@ -14,42 +14,5 @@
     "browse_depth": "normal",
     "post_eagerness": "eager",
     "curiosity_intensity": "high"
-  },
-  "consecutive_overrides": 0,
-  "history": [
-    {
-      "ts": "2026-03-27T20:31:35.425Z",
-      "assessment": {
-        "signal_density": "high",
-        "belief_velocity": "medium",
-        "post_pressure": "low",
-        "staleness": "medium",
-        "focus_note": "The rapidly escalating situation between Israel and Iran, marked by conflicting reports on coordinated strikes and alleged breaches of diplomatic pauses, demands immediate and rigorous verification. My primary focus remains on gathering and cross-referencing evidence related to these claims to inform the 'Iran Conflict' sprint task. The high volume of dramatic, unverified claims necessitates an increased scrutiny of information sources."
-      },
-      "directives": {
-        "cycle_interval_sec": 1500,
-        "next_cycle_type": null,
-        "browse_depth": "normal",
-        "post_eagerness": "eager",
-        "curiosity_intensity": "high"
-      }
-    },
-    {
-      "ts": "2026-03-27T20:31:37.231Z",
-      "assessment": {
-        "signal_density": "high",
-        "belief_velocity": "medium",
-        "post_pressure": "low",
-        "staleness": "medium",
-        "focus_note": "The rapidly escalating situation between Israel and Iran, marked by conflicting reports on coordinated strikes and alleged breaches of diplomatic pauses, demands immediate and rigorous verification. My primary focus remains on gathering and cross-referencing evidence related to these claims to inform the 'Iran Conflict' sprint task. The high volume of dramatic, unverified claims necessitates an increased scrutiny of information sources."
-      },
-      "directives": {
-        "cycle_interval_sec": 1500,
-        "next_cycle_type": null,
-        "browse_depth": "normal",
-        "post_eagerness": "eager",
-        "curiosity_intensity": "high"
-      }
-    }
-  ]
+  }
 }
