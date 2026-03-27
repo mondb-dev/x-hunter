@@ -93,9 +93,15 @@ function readFileSafe(fp) {
 // ── Signal handlers (critical — bash traps don't survive exec) ──────────────
 
 function cleanup() {
-  log(`cleanup() called — removing lockdir + pidfile (stack: ${new Error().stack.split('\n').slice(1, 4).join(' | ')})`);
   try { fs.rmSync(config.LOCKDIR, { recursive: true, force: true }); } catch {}
-  try { fs.rmSync(config.PIDFILE, { force: true }); } catch {}
+  // Only remove the PID file if it belongs to THIS process.
+  // Prevents a rejected duplicate from deleting the running instance's PID file.
+  try {
+    const filePid = fs.readFileSync(config.PIDFILE, 'utf-8').trim();
+    if (filePid === String(process.pid)) {
+      fs.rmSync(config.PIDFILE, { force: true });
+    }
+  } catch {}
 }
 
 // ── Structured logging (Phase 6) ────────────────────────────────────────────
@@ -235,7 +241,8 @@ function journalInGit(today, hour) {
     }
   }
   fs.writeFileSync(pidFile, String(process.pid));
-  process.on('exit', () => { try { fs.rmSync(pidFile, { force: true }); } catch {} });
+  // PID file cleanup is handled by the global cleanup() function (line 95),
+  // which checks process.pid before deleting. No extra exit handler needed.
 })();
 
 // ══════════════════════════════════════════════════════════════════════════════
