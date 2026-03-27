@@ -353,6 +353,9 @@ function runOneCycle() {
       `cycle: ${cycle} | type: ${cycleType} | ${today} ${now}\n`);
   } catch {}
 
+  // ── Re-assert PID file (self-healing: something external deletes it) ──
+  try { fs.writeFileSync(config.PIDFILE, String(process.pid)); } catch {}
+
   // ── Clean stale lock files ─────────────────────────────────────────────
   cleanStaleLocks();
 
