@@ -215,6 +215,29 @@ function journalInGit(today, hour) {
 }
 
 // ══════════════════════════════════════════════════════════════════════════════
+// ── SINGLETON GUARD ──────────────────────────────────────────────────────────
+// ══════════════════════════════════════════════════════════════════════════════
+
+(function singletonGuard() {
+  const pidFile = config.PIDFILE;
+  if (fileExists(pidFile)) {
+    const oldPid = readFileSafe(pidFile).trim();
+    if (oldPid) {
+      try {
+        process.kill(Number(oldPid), 0); // 0 = existence check
+        log(`Another orchestrator is already running (pid ${oldPid}). Exiting.`);
+        process.exit(1);
+      } catch {
+        // process doesn't exist — stale pidfile, proceed
+        log(`Removing stale pidfile (old pid ${oldPid})`);
+      }
+    }
+  }
+  fs.writeFileSync(pidFile, String(process.pid));
+  process.on('exit', () => { try { fs.rmSync(pidFile, { force: true }); } catch {} });
+})();
+
+// ══════════════════════════════════════════════════════════════════════════════
 // ── MAIN LOOP ────────────────────────────────────────────────────────────────
 // ══════════════════════════════════════════════════════════════════════════════
 
