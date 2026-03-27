@@ -41,7 +41,7 @@ const HISTORY_CAP = 24;
 
 const VALID_CYCLE_TYPES = ['BROWSE', 'TWEET', 'QUOTE', null];
 const VALID_DEPTH = ['shallow', 'normal', 'deep'];
-const VALID_EAGERNESS = ['suppress', 'normal', 'eager'];
+const VALID_EAGERNESS = ['suppress', 'normal', 'eager', 'very_eager'];
 const VALID_INTENSITY = ['low', 'normal', 'high'];
 const VALID_DENSITY = ['high', 'medium', 'low'];
 
@@ -216,8 +216,8 @@ function assess() {
   // Post eagerness — agent can request eager/normal but NOT suppress.
   // Suppress kills journal production; only manual intervention should set it.
   if (agentDirectives.post_eagerness && VALID_EAGERNESS.includes(agentDirectives.post_eagerness)) {
-    if (agentDirectives.post_eagerness === "suppress") {
-      console.log("[cadence] BLOCKED: agent requested post_eagerness=suppress — ignoring (use manual override)");
+    if (agentDirectives.post_eagerness === "suppress" || agentDirectives.post_eagerness === "very_eager") {
+      console.log("[cadence] BLOCKED: agent requested post_eagerness=suppress/very_eager — ignoring (use manual override)");
     } else {
       directives.post_eagerness = agentDirectives.post_eagerness;
     }

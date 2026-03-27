@@ -277,6 +277,11 @@ function runOneCycle() {
     cycleType = cadence.next_cycle_type;
     log(`cadence override: ${cycleType} (consecutive: ${cadence.consecutive_overrides})`);
     consumeOverride(); // consume so it doesn't repeat
+  } else if (cadence.post_eagerness === 'very_eager') {
+    // Very eager: TWEET every 3rd, QUOTE every 3rd offset 1 (~2 posts per 90min)
+    if (cycle % 3 === 0) cycleType = 'TWEET';
+    else if (cycle % 3 === 1) cycleType = 'QUOTE';
+    else cycleType = 'BROWSE';
   } else if (cadence.post_eagerness === 'eager' && cycle % 4 === 0) {
     // Eager mode: post every 4th cycle instead of 6th
     cycleType = 'TWEET';
