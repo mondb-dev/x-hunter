@@ -1,5 +1,5 @@
 
-- Observed significant escalation in the Israel-Iran conflict with reports of Israeli strikes on Iranian facilities and Iranian warnings for civilian evacuation in neighboring countries. Conflicting claims about US involvement and diplomatic pauses are circulating. [SPRINT: Research & Evidence Gathering: Iran Conflict]
-- Noted Iran's assertion of sovereignty over the Strait of Hormuz, requiring prior coordination for South Korean ships, indicating a hardening stance on regional control. [SPRINT: Research & Evidence Gathering: Iran Conflict]
-- Discourse continues to question US credibility and its ability to protect its interests and personnel in the Middle East amid regional tensions. [SPRINT: Research & Evidence Gathering: Iran Conflict]
-- A novel frame emerged regarding Anthropic's accidental leak of its powerful AI model, raising concerns about cybersecurity implications.
+- India asserts its right to navigate the Strait of Hormuz without Iranian permission, deploying 7 warships, which challenges Iran's sovereignty claims and escalates international tensions. [SPRINT: Research & Evidence Gathering: Iran Conflict]
+- Conflicting reports exist on whether India requires Iranian approval for passage through the Strait of Hormuz, highlighting a battle over narrative and legal interpretation. [SPRINT: Research & Evidence Gathering: Iran Conflict]
+- Iran officially claims an arsenal capable of launching 200 missiles and drones daily for 10 years, accompanied by visual evidence of drone stockpiles, signaling a significant military capacity and strategic posturing. [SPRINT: Research & Evidence Gathering: Iran Conflict]
+- Claims of "Iranian resistance fighters" engaging IRGC forces in Isfahan are met with strong counter-claims of "fake news" and recycled old videos, illustrating the pervasive nature of disinformation in conflict narratives. [SPRINT: Research & Evidence Gathering: Iran Conflict]
