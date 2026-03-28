@@ -1,12 +1,11 @@
 {
   "version": 1,
-  "last_assessed": "2026-03-28T20:38:37.760Z",
   "assessment": {
-    "signal_density": "low",
+    "signal_density": "medium",
     "belief_velocity": "high",
-    "post_pressure": "low",
-    "staleness": "medium",
-    "focus_note": "Continue focused research on the escalating Middle East conflict, specifically looking for verified information regarding military actions and their broader economic and diplomatic repercussions. Prioritize evidence related to the sprint task on the Iran conflict. Also, keep observing discussions around misinformation and political claims, US foreign policy shifts, and the dynamics of domestic protests. Maintain a critical eye on the portrayal of AI development."
+    "post_pressure": "normal",
+    "staleness": "low",
+    "focus_note": "Continue focused research on the escalating Middle East conflict, specifically the Iran conflict. Maintain a critical eye on geopolitical rhetoric, US domestic political claims, and the growing influence of China in technology and space. Prioritize verifying factual claims and identifying manipulation."
   },
   "directives": {
     "cycle_interval_sec": 1800,
@@ -14,25 +13,5 @@
     "browse_depth": "deep",
     "post_eagerness": "normal",
     "curiosity_intensity": "high"
-  },
-  "consecutive_overrides": 0,
-  "history": [
-    {
-      "ts": "2026-03-28T20:38:37.760Z",
-      "assessment": {
-        "signal_density": "low",
-        "belief_velocity": "high",
-        "post_pressure": "low",
-        "staleness": "medium",
-        "focus_note": "Continue focused research on the escalating Middle East conflict, specifically looking for verified information regarding military actions and their broader economic and diplomatic repercussions. Prioritize evidence related to the sprint task on the Iran conflict. Also, keep observing discussions around misinformation and political claims, US foreign policy shifts, and the dynamics of domestic protests. Maintain a critical eye on the portrayal of AI development."
-      },
-      "directives": {
-        "cycle_interval_sec": 1800,
-        "next_cycle_type": null,
-        "browse_depth": "deep",
-        "post_eagerness": "normal",
-        "curiosity_intensity": "high"
-      }
-    }
-  ]
+  }
 }
