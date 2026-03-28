@@ -1,8 +1,8 @@
 /**
- * runner/landmark/art.js — Hero art generation via Imagen 4 (Gemini API)
+ * runner/landmark/art.js — Hero art generation via Imagen 4 (Vertex AI)
  *
  * Generates a hero image for a landmark editorial using Google's
- * Imagen 4 model via the Gemini generativelanguage API.
+ * Imagen 4 model via Vertex AI.
  *
  * Style: Vintage 1960s movie poster, painted illustration.
  * Any human figures are rendered as faceless silhouettes.
@@ -17,15 +17,7 @@ const fs    = require("fs");
 const https = require("https");
 const path  = require("path");
 const { CARD_TIERS } = require("./config");
-
-const ROOT = path.resolve(__dirname, "../..");
-const ENV_PATH = path.join(ROOT, ".env");
-if (fs.existsSync(ENV_PATH)) {
-  for (const line of fs.readFileSync(ENV_PATH, "utf-8").split("\n")) {
-    const m = line.match(/^([A-Z_][A-Z0-9_]*)=(.*)$/);
-    if (m && !process.env[m[1]]) process.env[m[1]] = m[2].replace(/^["']|["']$/g, "");
-  }
-}
+const { getAccessToken, getProjectConfig } = require("../gcp_auth");
 
 // ── Prompt builder ────────────────────────────────────────────────────────────
 
@@ -73,10 +65,10 @@ function buildArtPrompt(event) {
   ].filter(Boolean).join(" ");
 }
 
-// ── Imagen 4 API call (Gemini API) ────────────────────────────────────────────
+// ── Imagen 4 API call (Vertex AI) ────────────────────────────────────────────
 
 /**
- * Generate hero art using Imagen 4 via the Gemini generativelanguage API.
+ * Generate hero art using Imagen 4 via Vertex AI.
  *
  * @param {object} event - the landmark event object
  * @param {object} [opts]
@@ -84,14 +76,13 @@ function buildArtPrompt(event) {
  * @returns {Promise<{buffer: Buffer, prompt: string}>}
  */
 async function generateHeroArt(event, opts = {}) {
-  const apiKey = process.env.GOOGLE_API_KEY;
-  if (!apiKey) throw new Error("GOOGLE_API_KEY not set — required for Imagen 4");
-
+  const token = await getAccessToken();
+  const { project, location } = getProjectConfig();
   const model = "imagen-4.0-generate-001";
   const prompt = buildArtPrompt(event);
   console.log(`[art] Generating hero art with prompt: ${prompt.slice(0, 120)}...`);
 
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:predict?key=${apiKey}`;
+  const apiPath = `/v1/projects/${project}/locations/${location}/publishers/google/models/${model}:predict`;
 
   const body = JSON.stringify({
     instances: [{ prompt }],
@@ -104,12 +95,14 @@ async function generateHeroArt(event, opts = {}) {
   });
 
   const imageBuffer = await new Promise((resolve, reject) => {
-    const parsedUrl = new URL(url);
     const req = https.request({
-      hostname: parsedUrl.hostname,
-      path:     parsedUrl.pathname + parsedUrl.search,
-      method:   "POST",
-      headers:  { "Content-Type": "application/json" },
+      hostname: `${location}-aiplatform.googleapis.com`,
+      path: apiPath,
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`,
+      },
     }, res => {
       const chunks = [];
       res.on("data", c => chunks.push(c));

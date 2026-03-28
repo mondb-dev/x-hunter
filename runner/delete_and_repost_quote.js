@@ -11,7 +11,6 @@
 
 const fs      = require("fs");
 const path    = require("path");
-const https   = require("https");
 const { connectBrowser } = require("./cdp");
 
 const ROOT        = path.resolve(__dirname, "..");
@@ -38,8 +37,7 @@ function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
 // ── Gemini: regenerate the quote ─────────────────────────────────────────────
 async function regenerateQuote() {
-  const apiKey = process.env.GOOGLE_API_KEY;
-  if (!apiKey) throw new Error("GOOGLE_API_KEY not set");
+  const { generate } = require("./llm.js");
 
   // Load top axes from ontology.json (single source of truth)
   let axesSummary = "";
@@ -70,32 +68,7 @@ Max 240 characters. Direct. Sounds like a thinking person, not a press release.
 
 Respond with ONLY the commentary sentence. Nothing else.`;
 
-  const body = JSON.stringify({
-    contents: [{ parts: [{ text: prompt }] }],
-    generationConfig: { temperature: 0.7, maxOutputTokens: 120 },
-  });
-
-  return new Promise((resolve, reject) => {
-    const req = https.request({
-      hostname: "generativelanguage.googleapis.com",
-      path: `/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
-      method: "POST",
-      headers: { "Content-Type": "application/json", "Content-Length": Buffer.byteLength(body) },
-    }, res => {
-      let data = "";
-      res.on("data", c => data += c);
-      res.on("end", () => {
-        try {
-          const j = JSON.parse(data);
-          const text = j?.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || "";
-          resolve(text);
-        } catch (e) { reject(e); }
-      });
-    });
-    req.on("error", reject);
-    req.write(body);
-    req.end();
-  });
+  return generate(prompt, { temperature: 0.7, maxTokens: 120 });
 }
 
 // ── Main ─────────────────────────────────────────────────────────────────────

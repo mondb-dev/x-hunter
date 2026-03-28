@@ -1,32 +1,27 @@
 #!/usr/bin/env node
 /**
- * runner/vision.js — Gemini Flash multimodal helper for image/video understanding
+ * runner/vision.js — Gemini Flash multimodal helper via Vertex AI
  *
  * Exports:
  *   describeImage(base64, mimeType, context)  → Promise<string>   image description
  *   describeMedia(mediaItems)                 → Promise<Map>       batch describe
  *
- * Uses GOOGLE_API_KEY_REFLECTION (same key as llm.js).
- * Sends image data as inlineData parts to Gemini Flash multimodal API.
+ * Uses Vertex AI via service account (GOOGLE_APPLICATION_CREDENTIALS).
+ * Sends image data as inlineData parts to Gemini Flash multimodal endpoint.
  *
- * Cost: ~258 tokens per image ≈ $0.00002/image at Flash pricing.
+ * Cost: ~258 tokens per image at Flash pricing.
  */
 
 "use strict";
 
-const API_KEY = process.env.GOOGLE_API_KEY_REFLECTION
-             || process.env.GOOGLE_API_KEY
-             || "";
+const { getAccessToken, getProjectConfig } = require("./gcp_auth");
 
-const MODEL    = "gemini-2.5-flash";
-const BASE_URL = "https://generativelanguage.googleapis.com/v1beta";
-
-// Rate-limit: max concurrent vision calls to avoid quota issues
+const MODEL          = "gemini-2.5-flash";
 const MAX_CONCURRENT = 3;
 const TIMEOUT_MS     = 30_000;
 
 /**
- * Describe a single image using Gemini Flash vision.
+ * Describe a single image using Gemini Flash vision on Vertex AI.
  *
  * @param {string} base64 - base64-encoded image data
  * @param {string} mimeType - e.g. "image/png", "image/jpeg"
@@ -34,11 +29,16 @@ const TIMEOUT_MS     = 30_000;
  * @returns {Promise<string|null>} description or null on error
  */
 async function describeImage(base64, mimeType, context = "") {
-  if (!API_KEY) {
-    console.warn("[vision] no API key");
+  if (!base64 || !mimeType) return null;
+
+  let token;
+  try {
+    token = await getAccessToken();
+  } catch (err) {
+    console.warn(`[vision] auth error: ${err.message}`);
     return null;
   }
-  if (!base64 || !mimeType) return null;
+  const { project, location } = getProjectConfig();
 
   const contextNote = context
     ? `This image is attached to a tweet that says: "${context.slice(0, 300)}"\n\n`
@@ -50,13 +50,17 @@ async function describeImage(base64, mimeType, context = "") {
   const timer      = setTimeout(() => controller.abort(), TIMEOUT_MS);
 
   try {
-    const url = `${BASE_URL}/models/${MODEL}:generateContent?key=${API_KEY}`;
+    const url = `https://${location}-aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/google/models/${MODEL}:generateContent`;
     const res = await fetch(url, {
       method:  "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`,
+      },
       signal:  controller.signal,
       body: JSON.stringify({
         contents: [{
+          role: "user",
           parts: [
             { inlineData: { mimeType, data: base64 } },
             { text: prompt },

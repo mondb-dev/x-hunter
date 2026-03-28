@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * runner/llm.js — shared Gemini Flash helper (replaces local Ollama)
+ * runner/llm.js — shared Gemini Flash helper via Vertex AI
  *
  * Exports:
  *   generate(prompt, opts)  → Promise<string>       text response
@@ -8,26 +8,22 @@
  *   cosineSimilarity(a, b)  → number in [-1, 1]
  *   topK(queryVec, entries, k) → sorted entries with .similarity
  *
- * Uses GOOGLE_API_KEY_REFLECTION for all calls.
- * Falls back to GOOGLE_API_KEY if REFLECTION key is not set.
+ * Uses Vertex AI via service account (GOOGLE_APPLICATION_CREDENTIALS).
  *
  * Models:
  *   generate → gemini-2.5-flash
- *   embed    → text-embedding-004 (768 dimensions, matches nomic-embed-text)
+ *   embed    → text-embedding-004 (768 dimensions)
  */
 
 "use strict";
 
-const API_KEY = process.env.GOOGLE_API_KEY_REFLECTION
-             || process.env.GOOGLE_API_KEY
-             || "";
+const { getAccessToken, getProjectConfig } = require("./gcp_auth");
 
 const GENERATE_MODEL = "gemini-2.5-flash";
-const EMBED_MODEL    = "gemini-embedding-001";
-const BASE_URL       = "https://generativelanguage.googleapis.com/v1beta";
+const EMBED_MODEL    = "text-embedding-004";
 
 /**
- * Generate text via Gemini Flash.
+ * Generate text via Gemini Flash on Vertex AI.
  *
  * @param {string} prompt
  * @param {object} [opts]
@@ -43,19 +39,23 @@ async function generate(prompt, opts = {}) {
     timeoutMs   = 60_000,
   } = opts;
 
-  if (!API_KEY) throw new Error("[llm] no API key (set GOOGLE_API_KEY_REFLECTION)");
+  const token = await getAccessToken();
+  const { project, location } = getProjectConfig();
 
   const controller = new AbortController();
   const timer      = setTimeout(() => controller.abort(), timeoutMs);
 
   try {
-    const url = `${BASE_URL}/models/${GENERATE_MODEL}:generateContent?key=${API_KEY}`;
+    const url = `https://${location}-aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/google/models/${GENERATE_MODEL}:generateContent`;
     const res = await fetch(url, {
       method:  "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`,
+      },
       signal:  controller.signal,
       body: JSON.stringify({
-        contents: [{ parts: [{ text: prompt }] }],
+        contents: [{ role: "user", parts: [{ text: prompt }] }],
         generationConfig: {
           temperature,
           maxOutputTokens: maxTokens,
@@ -83,30 +83,41 @@ async function generate(prompt, opts = {}) {
 }
 
 /**
- * Generate an embedding via Gemini text-embedding-004.
+ * Generate an embedding via text-embedding-004 on Vertex AI.
  * Returns a flat number[] on success, or null on error (never throws).
  *
- * Output dimension: 768 (matches nomic-embed-text for DB compatibility).
+ * Output dimension: 768 (matches previous gemini-embedding-001 output).
+ *
+ * NOTE: If you had embeddings from gemini-embedding-001, they are from a
+ * different model space. Run backfill_embeddings.js to re-embed existing entries.
  */
 async function embed(text) {
   if (!text || typeof text !== "string") return null;
-  if (!API_KEY) {
-    console.warn("[llm/embed] no API key");
+
+  let token;
+  try {
+    token = await getAccessToken();
+  } catch (err) {
+    console.warn(`[llm/embed] auth error: ${err.message}`);
     return null;
   }
+  const { project, location } = getProjectConfig();
 
   const controller = new AbortController();
   const timer      = setTimeout(() => controller.abort(), 30_000);
 
   try {
-    const url = `${BASE_URL}/models/${EMBED_MODEL}:embedContent?key=${API_KEY}`;
+    const url = `https://${location}-aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/google/models/${EMBED_MODEL}:predict`;
     const res = await fetch(url, {
       method:  "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`,
+      },
       signal:  controller.signal,
       body: JSON.stringify({
-        content: { parts: [{ text: text.slice(0, 2048) }] },
-        outputDimensionality: 768,
+        instances: [{ content: text.slice(0, 2048) }],
+        parameters: { outputDimensionality: 768 },
       }),
     });
 
@@ -116,7 +127,7 @@ async function embed(text) {
     }
 
     const data = await res.json();
-    const vec  = data?.embedding?.values;
+    const vec  = data?.predictions?.[0]?.embeddings?.values;
     if (!Array.isArray(vec) || vec.length === 0) {
       console.warn("[llm/embed] unexpected response shape");
       return null;
