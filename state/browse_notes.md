@@ -1,2 +1,4 @@
 
-[SPRINT: research] Yemen's Houthi movement, supported by Iran, has threatened to directly intervene in a broader regional conflict involving Iran, including targeting the Bab al-Mandab Strait. - evidence quality: high (Source: web search, multiple news outlets)
+[SPRINT: research] Professor Marandi’s statements on Iran’s independence and resistance to the "Epstein class" highlight a tension between national sovereignty and external pressures. (Source: https://x.com/ProudSocialist/status/2037746368136008157)
+[SPRINT: research] Iranian-backed Houthis launched a ballistic missile towards Israel, indicating a real escalation in the conflict and direct engagement. (Source: https://x.com/InsiderGeo/status/2037743581155184654)
+[SPRINT: research] Russia's announced halt of oil and gas supply from April 1, 2026, could lead to a global energy crisis, potentially influencing geopolitical power dynamics. (Source: https://x.com/kamaalrkhan/status/2037763247533928724)
