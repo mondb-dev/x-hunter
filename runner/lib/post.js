@@ -33,6 +33,32 @@ function exists(fp) {
   try { return fs.existsSync(fp); } catch { return false; }
 }
 
+/**
+ * Check if content was already posted within the last `windowMs`.
+ * Compares the first 80 chars of content against recent posts.
+ * Returns true if duplicate found (should skip posting).
+ */
+function isDuplicatePost(content, windowMs = 2 * 60 * 60 * 1000) {
+  if (!content) return false;
+  try {
+    const logPath = path.join(config.STATE_DIR, 'posts_log.json');
+    const raw = fs.readFileSync(logPath, 'utf-8');
+    const data = JSON.parse(raw);
+    const posts = Array.isArray(data) ? data : (data.posts || []);
+    const cutoff = Date.now() - windowMs;
+    const needle = content.substring(0, 80);
+    return posts.some(p => {
+      if (!p.posted_at) return false;
+      const ts = new Date(p.posted_at).getTime();
+      if (ts < cutoff) return false;
+      const hay = (p.content || p.text || '').substring(0, 80);
+      return hay === needle;
+    });
+  } catch {
+    return false;
+  }
+}
+
 function readFile(fp) {
   try { return fs.readFileSync(fp, 'utf-8'); } catch { return ''; }
 }
@@ -129,8 +155,19 @@ function postRegularTweet({ today, hour }) {
       return { posted: false, rejected: false, skipped: true, tweetUrl: null };
     }
 
+    // Dedup guard: skip if same content was posted in last 2h
+    const tweetContent = readFile(DRAFT_PATH).split('\n')[0].trim();
+    if (isDuplicatePost(tweetContent)) {
+      log('DEDUP: tweet content matches a recent post — skipping');
+      try { fs.unlinkSync(DRAFT_PATH); } catch {}
+      return { posted: false, rejected: false, skipped: true, tweetUrl: null };
+    }
+
     log('Posting tweet via CDP...');
     runNodeSafe('post_tweet.js');
+
+    // Clear draft after posting attempt (prevent re-post by duplicate orchestrator)
+    try { fs.unlinkSync(DRAFT_PATH); } catch {}
 
     // Read result (posts_log.json is written by post_tweet.js directly)
     const resultPath = path.join(config.STATE_DIR, 'tweet_result.txt');
@@ -170,9 +207,21 @@ function postQuoteTweet() {
 
   // ── 2. Post quote-tweet via CDP ────────────────────────────────────────
   if (exists(quoteDraftPath)) {
+    // Dedup guard: skip if same content was posted in last 2h
+    const quoteLines = readFile(quoteDraftPath).split('\n').map(l => l.trim()).filter(Boolean);
+    const quoteContent = quoteLines.filter(l => !/^https:\/\//.test(l)).join(' ').trim();
+    if (isDuplicatePost(quoteContent)) {
+      log('DEDUP: quote content matches a recent post — skipping');
+      try { fs.unlinkSync(quoteDraftPath); } catch {}
+      return { posted: false, quoteUrl: null };
+    }
+
     log('Posting quote-tweet via CDP...');
     sleepSec(3); // give gateway time to release browser WS
     runNodeSafe('post_quote.js');
+
+    // Clear draft after posting attempt (prevent re-post by duplicate orchestrator)
+    try { fs.unlinkSync(quoteDraftPath); } catch {}
 
     const resultPath = path.join(config.STATE_DIR, 'quote_result.txt');
     const quoteUrl = readFile(resultPath).trim();

@@ -87,6 +87,23 @@ function logQuote({ source_url, content, tweet_url, date, cycle }) {
     console.log("[posts_log] updated existing quote entry");
     return;
   }
+
+  // Dedup: reject if same content (first 80 chars) was posted in last 2 hours
+  const cutoff = Date.now() - 2 * 60 * 60 * 1000;
+  const needle = (content || "").substring(0, 80);
+  if (needle) {
+    const dup = log.posts.find(p => {
+      if (!p.posted_at) return false;
+      const ts = new Date(p.posted_at).getTime();
+      if (ts < cutoff) return false;
+      return (p.content || p.text || "").substring(0, 80) === needle;
+    });
+    if (dup) {
+      console.log("[posts_log] DEDUP — quote content matches recent post, skipping log entry");
+      return;
+    }
+  }
+
   log.posts.push({
     type: "quote",
     source_url,
