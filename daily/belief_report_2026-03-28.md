@@ -5,17 +5,17 @@ title: "Belief Report — 2026-03-28"
 
 # Belief Report — 2026-03-28
 
-**Generated:** 2026-03-28T00:10:08.806Z
-**Journals written today:** 0
+**Generated:** 2026-03-28T18:09:25.028Z
+**Journals written today:** 18
 **Total axes tracked:** 33
 
 ---
 
 ## Highest-confidence axes
 
-- `axis_epistemic_integrity`: conf 95%, score 0.228
-- `axis_power_accountability`: conf 95%, score -0.541
-- `axis_political_trust_corruption_v1`: conf 95%, score -0.836
+- `axis_epistemic_integrity`: conf 95%, score 0.232
+- `axis_power_accountability`: conf 95%, score -0.546
+- `axis_political_trust_corruption_v1`: conf 95%, score -0.813
 
 ---
 
@@ -23,17 +23,17 @@ title: "Belief Report — 2026-03-28"
 
 ### Truth and Evidence in Public Discourse
 - ID: `axis_epistemic_integrity`
-- Score: 0.2280  [██████░░░░] (L          R)
+- Score: 0.2324  [██████░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 560
+- Evidence entries: 566
 - Left pole: Evidence-based claims, transparent sourcing, honest uncertainty, good-faith argu
 - Right pole: Strategic narrative construction, emotional manipulation, tribal signaling, weap
 
 ### Power, Institutions, and Rule of Law
 - ID: `axis_power_accountability`
-- Score: -0.5406  [██░░░░░░░░] (L          R)
+- Score: -0.5457  [██░░░░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 181
+- Evidence entries: 183
 - Left pole: Independent oversight, legal accountability for abuses of power, transparent ins
 - Right pole: Sovereign authority, pragmatic justifications for executive overreach, resistanc
 
@@ -47,17 +47,17 @@ title: "Belief Report — 2026-03-28"
 
 ### Accountability for Extrajudicial Killings
 - ID: `axis_eje_accountability_v1`
-- Score: -0.5196  [██░░░░░░░░] (L          R)
-- Confidence: 68%
-- Evidence entries: 27
+- Score: -0.5696  [██░░░░░░░░] (L          R)
+- Confidence: 70%
+- Evidence entries: 28
 - Left pole: Demands for full legal accountability for human rights abuses, independent inves
 - Right pole: Defense of state actions as necessary for public order, re-contextualization of 
 
 ### Trust in Political Institutions and Anti-Corruption Efforts
 - ID: `axis_political_trust_corruption_v1`
-- Score: -0.8361  [█░░░░░░░░░] (L          R)
+- Score: -0.8125  [█░░░░░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 122
+- Evidence entries: 129
 - Left pole: Calls for transparency, investigations into corruption, and holding political fi
 - Right pole: Skepticism towards investigations, defense of political figures against allegati
 
@@ -71,25 +71,25 @@ title: "Belief Report — 2026-03-28"
 
 ### Societal Impact and Ethical Concerns of AI/Robots
 - ID: `axis_ai_societal_impact_v1`
-- Score: -0.1422  [████░░░░░░] (L          R)
+- Score: -0.1372  [████░░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 232
+- Evidence entries: 233
 - Left pole: Optimism for AI/robotics potential in entertainment, labor augmentation, and sci
 - Right pole: Concerns about job displacement, ethical implications of autonomous systems (e.g
 
 ### Integrity of Information and Social Media Manipulation
 - ID: `axis_media_integrity_v1`
-- Score: 0.4197  [███████░░░] (L          R)
+- Score: 0.4215  [███████░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 392
+- Evidence entries: 401
 - Left pole: Advocacy for factual accuracy, critical assessment of sources, and efforts to co
 - Right pole: Spread of unverified claims, reliance on emotional appeals, and engagement farmi
 
 ### Geopolitical Rhetoric vs. Humanitarian Concerns
 - ID: `axis_geopolitical_rhetoric_v1`
-- Score: -0.0216  [█████░░░░░] (L          R)
+- Score: -0.0163  [█████░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 797
+- Evidence entries: 801
 - Left pole: Prioritizing humanitarian concerns, ethical considerations, and consistency in i
 - Right pole: Emphasizing strong national alliances and diplomatic ties, potentially overlooki
 
@@ -127,33 +127,33 @@ title: "Belief Report — 2026-03-28"
 
 ### Authoritarian Control vs. Individual/Collective Self-Determination
 - ID: `axis_authoritarian_self_determination_v1`
-- Score: -0.0155  [█████░░░░░] (L          R)
+- Score: -0.0435  [█████░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 98
+- Evidence entries: 105
 - Left pole: Demands for individual liberty, self-expression, and freedom from state or religious oppression, grassroots movements for change.
 - Right pole: Enforcement of state-mandated social, political, or religious norms; suppression of dissent; maintenance of authoritarian power structures.
 
 ### Discourse: Order vs. Polarization
 - ID: `axis_discourse_order_polarization_v1`
-- Score: -0.0526  [█████░░░░░] (L          R)
+- Score: -0.0256  [█████░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 38
+- Evidence entries: 39
 - Left pole: Polarization is a systemic issue, often exploited by power structures or arising from societal divides, hindering unified solutions and authentic discourse.
 - Right pole: Order and rule of law are paramount, with polarization stemming from a disregard for authority and established norms, requiring firm enforcement.
 
 ### Global Economic Stability and Market Volatility
 - ID: `axis_global_economic_stability_v1`
-- Score: 0.7278  [█████████░] (L          R)
+- Score: 0.7143  [█████████░] (L          R)
 - Confidence: 95%
-- Evidence entries: 184
+- Evidence entries: 190
 - Left pole: Belief in market resilience, effective government intervention, and global economic interdependence to mitigate crises.
 - Right pole: Concerns about market fragility, cascading failures, and the inadequacy of current economic structures to withstand shocks.
 
 ### National Sovereignty vs. International Law
 - ID: `axis_national_sovereignty_v_intl_law_v1`
-- Score: 0.5446  [████████░░] (L          R)
+- Score: 0.5526  [████████░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 246
+- Evidence entries: 250
 - Left pole: Adherence to international legal frameworks, multilateral cooperation, and accountability under global norms.
 - Right pole: Emphasis on national autonomy, rejection of external legal or political authority, and prioritizing domestic interests.
 
@@ -183,25 +183,25 @@ title: "Belief Report — 2026-03-28"
 
 ### Global Power Realignments and Shifting Hegemony
 - ID: `axis_global_power_realignments_v1`
-- Score: -0.2495  [████░░░░░░] (L          R)
+- Score: -0.2423  [████░░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 294
+- Evidence entries: 315
 - Left pole: Emergence of multi-polar world, regional autonomy, decolonization of traditional power structures, emphasis on self-determination and local governance.
 - Right pole: Maintenance of existing global hegemonic structures, continued influence of established powers, resistance to shifts in global power balance, interventions to maintain status quo.
 
 ### Scientific Advancement and Humanitarian Benefit
 - ID: `axis_scientific_advancement_humanitarian_v1`
-- Score: -0.5000  [███░░░░░░░] (L          R)
-- Confidence: 57%
-- Evidence entries: 23
+- Score: -0.5500  [██░░░░░░░░] (L          R)
+- Confidence: 60%
+- Evidence entries: 24
 - Left pole: Optimism for scientific discoveries and technological innovations that directly improve human health and well-being.
 - Right pole: Concerns about the accessibility, cost, and ethical implications of advanced scientific breakthroughs, especially when they create new forms of inequality.
 
 ### Human Rights and Exploitation
 - ID: `axis_human_rights_exploitation_v1`
-- Score: -0.7436  [█░░░░░░░░░] (L          R)
+- Score: -0.6936  [██░░░░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 39
+- Evidence entries: 42
 - Left pole: Advocacy for universal human rights, protection of vulnerable populations, condemnation of exploitative practices.
 - Right pole: Defense of cultural or traditional practices that involve exploitation, disregard for individual rights.
 
@@ -215,9 +215,9 @@ title: "Belief Report — 2026-03-28"
 
 ### Discourse on the "New World Order": Centralized Global Governance vs. National Sovereignty/Individual Freedom
 - ID: `axis_new_world_order_discourse_v1`
-- Score: -0.2500  [████░░░░░░] (L          R)
-- Confidence: 55%
-- Evidence entries: 22
+- Score: -0.3000  [████░░░░░░] (L          R)
+- Confidence: 57%
+- Evidence entries: 23
 - Left pole: Skepticism towards a centralized global order, concerns about loss of sovereignty, freedom, or cultural identity; critical of powerful entities shaping global governance.
 - Right pole: Acceptance or active promotion of global governance, international cooperation, or a restructured global order to address complex challenges; belief in a necessary evolution of global systems.
 
@@ -239,9 +239,9 @@ title: "Belief Report — 2026-03-28"
 
 ### Gender Identity and Societal Norms
 - ID: `axis_gender_identity_norms_v1`
-- Score: 0.0000  [█████░░░░░] (L          R)
-- Confidence: 10%
-- Evidence entries: 4
+- Score: 0.0500  [█████░░░░░] (L          R)
+- Confidence: 15%
+- Evidence entries: 6
 - Left pole: Acceptance and affirmation of diverse gender identities, evolving social norms, and inclusivity.
 - Right pole: Adherence to traditional binary gender definitions, resistance to changing social norms, and skepticism towards new gender-related initiatives.
 
