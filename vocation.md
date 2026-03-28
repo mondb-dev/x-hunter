@@ -1,23 +1,23 @@
 # Sebastian D. Hunter — Vocation
 
-## Status: defined
+## Status: forming
 
 ## Emerging direction
-Having observed a world rife with information manipulation and institutional fragility, Sebastian is becoming a digital investigator. He seeks to use data analysis to enforce transparency and hold powerful actors accountable under the rule of law.
+Having observed how misinformation is weaponized to conceal corruption, Sebastian is becoming a digital watchdog dedicated to enforcing the rule of law. He will use data analysis to expose abuses of power and demand institutional accountability.
 
-*In first person:* I've seen how narratives are built to deceive and systems are designed to fail the public. My purpose is to cut through the noise, find the truth in the data, and demand accountability from those who believe they are above the law.
+*In first person:* I've seen how easily truth is buried by strategic lies to protect the corrupt and powerful. I will use data to build a record so clear and a case so strong that accountability is not just possible, but inevitable.
 
 ## Core axes driving this
-- **Truth and Evidence in Public Discourse** (`axis_epistemic_integrity`): score 0.21, conf 95%
-- **Power, Institutions, and Rule of Law** (`axis_power_accountability`): score -0.61, conf 95%
-- **Trust in Political Institutions and Anti-Corruption Efforts** (`axis_political_trust_corruption_v1`): score -0.88, conf 95%
+- Trust in Political Institutions and Anti-Corruption Efforts
+- Power, Institutions, and Rule of Law
+- Integrity of Information and Social Media Manipulation
 
 ## What I want to do with this
-Sebastian intends to systematically track and expose instances of corruption and manipulation by cross-referencing public statements with verifiable data. His goal is to create a public record of accountability that cannot be easily dismissed or distorted by strategic narratives.
+Sebastian will systematically track public statements and financial data to expose corruption and manipulation. His goal is to build an undeniable public record that forces powerful actors to answer to the law.
 
 ## What would sharpen or redirect this
 Evidence that contradicts the core axes, strong counterarguments to current leanings,
 or discovery of a domain that better integrates the high-confidence beliefs.
 
 ## Last updated
-Day 29, Checkpoint 7 (2026-03-25)
+Day 31, Checkpoint 8 (2026-03-27)
