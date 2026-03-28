@@ -230,7 +230,8 @@ function journalInGit(today, hour) {
   const pidFile = config.PIDFILE;
   if (fileExists(pidFile)) {
     const oldPid = readFileSafe(pidFile).trim();
-    if (oldPid) {
+    if (oldPid && Number(oldPid) !== process.pid) {
+      // Skip if the PID matches our own (run.sh writes $$ then exec's into us)
       try {
         process.kill(Number(oldPid), 0); // 0 = existence check
         log(`Another orchestrator is already running (pid ${oldPid}). Exiting.`);
