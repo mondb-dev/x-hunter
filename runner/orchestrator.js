@@ -441,6 +441,10 @@ function runOneCycle() {
 
     // Agent run with journal-missing retry
     const journalPath = path.join(config.JOURNALS_DIR, `${today}_${hour}.html`);
+    // Unlock journal if it was archived read-only by a prior cycle in the same hour
+    if (fileExists(journalPath)) {
+      try { fs.chmodSync(journalPath, 0o644); } catch {}
+    }
     const gwBefore = countGatewayErrLines();
     const journalBefore = journalInGit(today, hour);
 

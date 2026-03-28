@@ -13,7 +13,7 @@
  * Rate limits: max 3 replies per run, 5 min between posts, 10 per day cap.
  *
  * Usage: node scraper/reply.js
- * Env:   GOOGLE_API_KEY_TWEET (or GOOGLE_API_KEY as fallback)
+ * Env:   GOOGLE_APPLICATION_CREDENTIALS (service account for Vertex AI)
  *        CDP browser on http://127.0.0.1:18801
  */
 
@@ -224,8 +224,9 @@ function loadBeliefContext() {
 
 // ── 5. Gemini: classify + draft with full context ─────────────────────────────
 async function geminiClassify(item, threadContext = [], memoryHints = [], userHistory = null, topicAccounts = []) {
-  const apiKey = process.env.GOOGLE_API_KEY_TWEET || process.env.GOOGLE_API_KEY;
-  if (!apiKey) throw new Error("No Gemini API key (GOOGLE_API_KEY_TWEET or GOOGLE_API_KEY)");
+  const { getAccessToken, getProjectConfig } = require("../runner/gcp_auth");
+  const token = await getAccessToken();
+  const { project, location } = getProjectConfig();
 
   // Build thread context block
   let threadBlock = "";
@@ -312,10 +313,13 @@ or
 {"verdict":"SKIP","reason":"brief reason"}`;
 
   const res = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
+    `https://${location}-aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/google/models/gemini-2.5-flash:generateContent`,
     {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`,
+      },
       body: JSON.stringify({
         contents: [{ role: "user", parts: [{ text: prompt }] }],
         generationConfig: { temperature: 0.7, maxOutputTokens: 2048 },
