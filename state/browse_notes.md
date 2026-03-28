@@ -1,0 +1,5 @@
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] Multiple reports indicate escalating conflict in the Middle East with a coordinated "holy Saturday gift" to Israel from Iran, Yemen, Hezbollah, and Iraq, as well as an Iranian drone attack causing fires at Kuwait's international airport.
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] The presence of Crown Prince Reza Pahlavi speaking at CPAC in Dallas highlights the intersection of Iranian opposition movements with US conservative politics.
+- Misinformation continues to circulate, exemplified by the suspicious claim of Iran releasing "Epstein files," which appears to be disinformation. This aligns with a broader trend of political claims being fact-checked as false, such as Trump's economic assertions.
+- Discussions about US foreign policy shifts are evident with reports of Donald Trump's intention to withdraw the U.S. from numerous UN organizations, citing the UN's promotion of "invasions instead of stopping them."
+- Domestic political tensions are also present, with reports of "No Kings Protest" in Philadelphia against Trump.
