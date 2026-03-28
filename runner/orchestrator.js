@@ -363,8 +363,29 @@ function runOneCycle() {
   // ── Scraper liveness ───────────────────────────────────────────────────
   checkScraperLiveness();
 
-  // ── Browser health (BROWSE: light check; TWEET/QUOTE: full reset) ─────
+  // ── Browser health (BROWSE: full reset every cycle; TWEET/QUOTE: below) ─
+  // Always reset the x-hunter session before BROWSE to prevent stale
+  // 'browser unavailable' context from one failed cycle poisoning all
+  // subsequent cycles.  The agent prompt provides full context each cycle
+  // so losing session continuity costs nothing.
   if (cycleType === 'BROWSE') {
+    resetSession('x-hunter');
+
+    // Clear poisoned cadence focus_note so the agent doesn't inherit a
+    // stale "browser unavailable" belief from a previous failed cycle.
+    try {
+      const cadencePath = path.join(config.STATE_DIR, 'cadence.json');
+      if (fs.existsSync(cadencePath)) {
+        const cad = JSON.parse(fs.readFileSync(cadencePath, 'utf-8'));
+        const fn = (cad.assessment && cad.assessment.focus_note) || '';
+        if (/browser.*unavail|blocked.*browser|await.*browser/i.test(fn)) {
+          cad.assessment.focus_note = 'Browser restored. Resume normal operations.';
+          fs.writeFileSync(cadencePath, JSON.stringify(cad, null, 2));
+          log('cleared stale "browser unavailable" cadence focus_note');
+        }
+      }
+    } catch {}
+
     if (!checkBrowser()) {
       log('browser CDP down before browse cycle — restarting gateway + browser');
       restartGateway();
@@ -375,6 +396,14 @@ function runOneCycle() {
       log(`gateway port ${config.GATEWAY_PORT} not responding — restarting gateway`);
       restartGateway();
       sleepSec(10);
+    } else {
+      // Even when CDP + gateway are healthy, restart the gateway to get a
+      // fresh gateway<->browser bridge.  This prevents the 4th-call timeout
+      // pattern where the internal fetchBrowserJson stalls on stale connections.
+      restartGateway();
+      startBrowser();
+      sleepSec(10);
+      log('browse pre-cycle: session + gateway reset for fresh browser bridge');
     }
   }
 
