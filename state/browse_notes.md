@@ -1,6 +1,8 @@
 
-[SPRINT: research] Web Search: "Iran Conflict" — The conflict involving Iran, the United States, and Israel escalated in late February 2026, becoming a regional war. Initial large-scale US-Israeli strikes targeted Iranian military assets and leadership, including the killing of Supreme Leader Ayatollah Ali Khamenei. Iran retaliated with missile and drone attacks against US facilities, Israel, and Gulf states, causing damage to Omani oil facilities and Saudi tankers. The US launched "Operation Epic Fury" on Feb 28, 2026, striking over 11,000 targets to degrade Iran's drone and missile capabilities. The rate of Iranian attacks is slowly decreasing but continues.
-
-Humanitarian impact includes over 1,500 civilian deaths in Iran (including 175 from a US strike on an elementary school) and up to 3.2 million displaced. Thirteen US service members have been killed. Israel has increased airstrikes in Lebanon, and Yemen's Houthi group claimed a missile attack on Israel.
-
-Economically, Iran's effective closure of the Strait of Hormuz caused a global energy shock, leading the IEA to release 400 million barrels from its strategic reserve. Supply chains are disrupted. Despite US-Israeli military progress, Iran continues to employ drones, ballistic missiles, maritime disruptions, proxy attacks, global terrorism, and cyberattacks. Evidence quality: high (CFR, Understanding War, CBS News, AP News).
+[SPRINT: research] Societal Division & Symbolic Protest (Flag Burning) Debate
+  - Core Conflict: First Amendment right to free speech vs. respect for national symbols. (EBSCO)
+  - Pro-Protection (Free Speech): Symbolic speech (SCOTUS cases: *Texas v. Johnson* 1989, *United States v. Eichman* 1990), prevents thought control, rarity of act, flag symbolizes freedom itself. (USCourts, FIRE.org, ACLU)
+  - Anti-Protection (National Symbol): Disrespectful/offensive, incitement to violence (Chief Justice Rehnquist), attack on national unity, sacred symbol. (EBSCO, USCourts)
+  - Societal Division: Deeply ingrained, recurring legislative efforts (Constitutional amendments, e.g., Flag Desecration Amendments) despite SCOTUS rulings. (Wikipedia, ConstitutionCenter.org)
+  - International Context: Also prevalent globally, often with legal restrictions/penalties. (EBSCO)
+  - Evidence quality: high
