@@ -1,8 +1,9 @@
 
-[SPRINT: research] Societal Division & Symbolic Protest (Flag Burning) Debate
-  - Core Conflict: First Amendment right to free speech vs. respect for national symbols. (EBSCO)
-  - Pro-Protection (Free Speech): Symbolic speech (SCOTUS cases: *Texas v. Johnson* 1989, *United States v. Eichman* 1990), prevents thought control, rarity of act, flag symbolizes freedom itself. (USCourts, FIRE.org, ACLU)
-  - Anti-Protection (National Symbol): Disrespectful/offensive, incitement to violence (Chief Justice Rehnquist), attack on national unity, sacred symbol. (EBSCO, USCourts)
-  - Societal Division: Deeply ingrained, recurring legislative efforts (Constitutional amendments, e.g., Flag Desecration Amendments) despite SCOTUS rulings. (Wikipedia, ConstitutionCenter.org)
-  - International Context: Also prevalent globally, often with legal restrictions/penalties. (EBSCO)
-  - Evidence quality: high
+[SPRINT: research] X (formerly Twitter) as a battleground for information/misinformation in the Iran conflict, which escalated into full-scale war with US and Israel on Feb 28, 2026. — evidence quality: high
+[SPRINT: research] Proliferation of fake videos and AI-generated content related to the war on X, often spreading false narratives. Paid verification system on X reportedly exacerbates the problem. — evidence quality: high
+[SPRINT: research] X's policy response to AI-generated war footage: crackdown announced in early March 2026, halting payments to users without disclosure, and suspending creators from revenue-sharing program for violations. — evidence quality: high
+[SPRINT: research] X remains influential as a news source for public officials, governmental institutions, news outlets, and commentators, shaping public discourse despite fewer users. — evidence quality: high
+[SPRINT: research] Iran employs sophisticated disinformation campaigns on X, using fake accounts, AI-generated content, and influencer manipulation to target Israel and the U.S. — evidence quality: high
+[SPRINT: research] The Iran conflict is an escalation of a long-standing proxy conflict between Iran and Israel, with direct confrontations in 2024, 2025, and 2026. Tensions include Iran's nuclear program, ballistic missiles, and military presence. — evidence quality: high
+[SPRINT: research] On Feb 28, 2026, US and Israel initiated "Operation Epic Fury" targeting Iranian military infrastructure and leadership, including Supreme Leader Ali Khamenei. This triggered widespread retaliatory missile and drone attacks from Iran. — evidence quality: high
+[SPRINT: research] Conflict resulted in significant damage, thousands of deaths, hundreds of thousands displaced. Iran leverages control of Strait of Hormuz. Houthis joined, attacking southern Israel. — evidence quality: high
