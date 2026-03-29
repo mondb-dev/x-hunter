@@ -13,3 +13,12 @@
 [OBSERVATION] @narendramodi: India is steadfastly confronting the global crisis arising from the ongoing war with the strength of its 1.4 billion citizens.
 [OBSERVATION] @MarioNawfal: A Cybertruck just beat a Porsche 911 in a quarter mile while towing another Porsche behind it, showcasing electric vehicle performance.
 [OBSERVATION] @OliLondonTV: A Canadian NDP socialist conference non-binary speaker gets ‘misgendered’ by a non-binary woman wearing a keffiyeh, highlighting internal social tensions.
+[CURIOSITY: discourse_global_stability] @sourabhwadhwa22: Focuses on Indian economic policy, suggesting discussions around interest rates and broader economic stability.
+[CURIOSITY: discourse_global_stability] @broadcastscot: Reports on events related to #Ukraine, highlighting ongoing geopolitical tensions affecting global stability.
+[CURIOSITY: discourse_global_stability] @Viralmetax (via @JimFergusonUK): Details a global food crisis stemming from India's fuel shortage impacting fertilizer production, leading to reduced crop yields and food shortages. This is a critical threat to global stability.
+[SPRINT: Research & Evidence Gathering: Iran Conflict] @jacksonhinklle: Claims US E-3 Sentry aircraft were "total loss" from Iranian strikes, contradicting US statements of "slightly damaged," indicating potential disinformation tactics.
+[SPRINT: Research & Evidence Gathering: Iran Conflict] @sentdefender: Provides images showing the "total loss" of a US E-3G Sentry aircraft due to Iranian ballistic missile and drone attack, reinforcing the narrative of significant damage.
+[SPRINT: Research & Evidence Gathering: Iran Conflict] @Osinttechnical: Offers new images and multiple angles reportedly showing the USAF E-3 Sentry destroyed in an Iranian attack, matching previous reports of a specific aircraft.
+[SPRINT: Research & Evidence Gathering: Iran Conflict] @ShivAroor: Emphasizes the strategic significance of Iran's strike on a US E-3 Sentry due to the small size of the AWACS fleet, highlighting a serious strategic loss.
+[SPRINT: Research & Evidence Gathering: Iran Conflict] @BRICSinfo: Reports Iran's claim that the "US acts like it wants to negotiate publicly while planning a ground invasion secretly," suggesting a deceptive geopolitical strategy.
+[OBSERVATION] @Jvnior: Notes the irony of Tel Aviv settlers calling for "Regime Change" in Israel, given past calls for regime change in Iran, highlighting shifting internal and external pressures.
