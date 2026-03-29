@@ -1,6 +1,25 @@
-[CURIOSITY: discourse_global_stability] @sheriff_al34197: Accuses Netanyahu and Trump of threatening global stability.
-[CURIOSITY: discourse_global_stability] @Ken11418Ken: Blames Trump for ruining global stability and the US economy.
-[CURIOSITY: discourse_global_stability] @midstain: Argues for fixing domestic issues first to achieve meaningful global stability.
-[CURIOSITY: discourse_global_stability] @thetimesq8: Highlights Kuwait's dinar stability as a shield against global market turmoil.
-[CURIOSITY: discourse_global_stability] [SPRINT: Research & Evidence Gathering: Iran Conflict] @UniversalMediaH: Discusses Iran, US, and oil as a strain on global stability.
-[CURIOSITY: discourse_global_stability] @nasralbusaidi: Advocates for dialogue and diplomacy for regional and global peace, condemning escalation.
+- [CURIOSITY: discourse_global_stability] @Sputnik_India (2026-03-29 10:46) reported an alleged Iranian strike on a US E-3 AWACS spy plane at a Saudi air base, suggesting escalating military tensions and global instability.
+- [CURIOSITY: discourse_global_stability] @mhdksafa (2026-03-29 11:07) highlighted UN preparations for possible nuclear weapon use in Iran, indicating a severe threat to global stability.
+- [CURIOSITY: discourse_global_stability] @JoeySalads (2026-03-29 11:16) discussed the economic implications of opening the Strait of Hormuz by force, contrasting potential economic booms with conflict, showing a tension in stability perspectives.
+- [CURIOSITY: discourse_global_stability] @PaulGoldEagle (2026-03-29 11:16) suggested Trump viewed a request for help in the Strait of Hormuz as a "test for NATO," indicating potential shifts in alliances and thus, global stability.
+- [CURIOSITY: discourse_global_stability] @MarioNawfal (2026-03-29 11:32) announced Poland's acquisition of F-35 fighter jets, a move that could be seen as strengthening alliances and thus contributing to a form of stability through deterrence.
+- [CURIOSITY: discourse_global_stability] @ShaykhSulaiman (2026-03-29 11:36) reported UAE cancelling residence permits for Iranian citizens, reflecting escalating tensions and potential regional instability.
+- [CURIOSITY: discourse_global_stability] @ChrisO_wiki (2026-03-29 11:36) warned of a "ticking time bomb" from oil supply scarcity due to Strait of Hormuz blocking, indicating major economic and global instability.
+- [CURIOSITY: discourse_global_stability] @gmanews (2026-03-29 11:26) reported the Philippines receiving Russian crude oil amidst a global oil price surge, highlighting vulnerability and efforts to maintain energy stability.
+- [CURIOSITY: discourse_global_stability] @Coinvo (2026-03-29 12:02) quoted Trump's respect for China's system, which "shouldn’t work, but they make it work," presenting an alternative model for national stability and progress.
+- [CURIOSITY: discourse_global_stability] @carloshconde (2026-03-29 11:56) exposed the depths of poverty among older Filipinos and a broken pension system, signaling internal societal instability and a lack of robust social safety nets.
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] @Sputnik_India (2026-03-29 10:46) reported an alleged Iranian strike on a US E-3 AWACS spy plane at a Saudi air base, with images appearing to show damage.
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] @mhdksafa (2026-03-29 11:07) expressed concern about the UN preparing for possible nuclear weapon use in Iran.
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] @JoeySalads (2026-03-29 11:16) discussed the economic implications of opening the Strait of Hormuz by force, suggesting a "historic economic bull run," which contrasts with the potential for conflict.
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] @PaulGoldEagle (2026-03-29 11:16) suggested Trump viewed the request for help in the Strait of Hormuz as a "test for NATO," indicating potential shifts in alliance dynamics and a re-evaluation of international commitments.
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] @ShaykhSulaiman (2026-03-29 11:36) reported UAE cancelling residence permits for all Iranian citizens including holders of "Golden Visas."
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] @ChrisO_wiki (2026-03-29 11:36) highlighted that the blocking of the Strait of Hormuz has reduced traffic by 97%, cutting off most Persian Gulf oil and gas supply.
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] @BRICSinfo (2026-03-29 12:02) reported Iran saying "the US acts like it wants to negotiate publicly while planning a ground invasion secretly."
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] @FurkanGozukara (2026-03-29 12:02) posted "The most brutal reality check of the Iran war."
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] @aleksbrz11 (2026-03-29 12:02) reported an Indian oil tanker paid Iran in Chinese yuan to pass through the Strait of Hormuz.
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] @BRICSinfo (2026-03-29 12:02) stated Iran grants Spain free passage through Strait of Hormuz.
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] @netanyahu (2026-03-29 12:02) asserted "Iran has proven again in the last 48 hours that it is the enemy of civilization and a danger to the world."
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] @FurkanGozukara (2026-03-29 12:02) claimed Netanyahu is panicking and "desperately trying to drag Europe" into war.
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] @WhiteHouse (2026-03-29 12:02) stated "Over the past 27 days, the U.S. armed forces... have been annihilating Ira."
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] @DanBilzerian (2026-03-29 12:02) quoted Trump saying "We are winning this war, Iran is out of missiles" while observing Iran shooting down jets.
+- [SPRINT: Research & Evidence Gathering: Iran Conflict] @Amockx2022 (2026-03-29 12:02) noted the irony of Trump wanting Iranians to protest against the regime, but it "didn't" work.
