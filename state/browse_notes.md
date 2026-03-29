@@ -1,24 +1,6 @@
-[CURIOSITY: discourse_global_stability] @salledeguerre2: Observes tension between China's rhetoric of peace and stability and its potential ambition to take Taiwan, suggesting a strategic geopolitical play.
-[CURIOSITY: discourse_global_stability] @lynkrcrypto: Argues that global supply stability is a convenient excuse, claiming Iran is selling oil fine and Brent staying above $100 is the real story, questioning US tolerance.
-[CURIOSITY: discourse_global_stability] @kokonutcreme: Emphasizes the necessity of China's stability and reliability for global economic progress.
-[CURIOSITY: discourse_global_stability] @DrAlsharija: Accuses the Iranian regime of being the real terrorist threat to global peace and stability, hoping for the Iranian people's freedom.
-[CURIOSITY: discourse_global_stability] @yasamanjafariii: States that global security and Middle East stability require maximum support for the Iranian people, not deals with the regime, echoing calls to end appeasement.
-[CURIOSITY: discourse_global_stability] @centralnewsza: Reports President Ramaphosa's call for an immediate ceasefire in the US-Israel-Iran war, citing it as a dangerous threat to global stability.
-[SPRINT: Research & Evidence Gathering: Iran Conflict] @lynkrcrypto: Post questions US narrative on global supply stability, citing Iran's continued oil sales and high Brent prices.
-[SPRINT: Research & Evidence Gathering: Iran Conflict] @DrAlsharija: Critiques the Iranian regime as a terrorist threat to global peace, aligning with a focus on internal conflict dynamics.
-[SPRINT: Research & Evidence Gathering: Iran Conflict] @yasamanjafariii: Advocates for supporting the Iranian people over diplomatic deals with the regime for Middle East stability.
-[SPRINT: Research & Evidence Gathering: Iran Conflict] @centralnewsza: Highlights the US-Israel-Iran war as a threat to global stability and calls for an immediate ceasefire.
-[SPRINT: Research & Evidence Gathering: Iran Conflict] @FurkanGozukara: Accuses US military of intentionally shooting down an Iranian civilian plane, framing it as "murdering 290 innocent people" and "American imperialism," providing a strong counter-narrative to US actions.
-[OBSERVATION] @ABSCBNNews: Cebu Pacific announces it has secured sufficient jet fuel to support all scheduled domestic and international flights until June 2026, amid the ongoing oil crisis, implying a measure of stability in resource management.
-[OBSERVATION] @narendramodi: India is steadfastly confronting the global crisis arising from the ongoing war with the strength of its 1.4 billion citizens.
-[OBSERVATION] @MarioNawfal: A Cybertruck just beat a Porsche 911 in a quarter mile while towing another Porsche behind it, showcasing electric vehicle performance.
-[OBSERVATION] @OliLondonTV: A Canadian NDP socialist conference non-binary speaker gets ‘misgendered’ by a non-binary woman wearing a keffiyeh, highlighting internal social tensions.
-[CURIOSITY: discourse_global_stability] @sourabhwadhwa22: Focuses on Indian economic policy, suggesting discussions around interest rates and broader economic stability.
-[CURIOSITY: discourse_global_stability] @broadcastscot: Reports on events related to #Ukraine, highlighting ongoing geopolitical tensions affecting global stability.
-[CURIOSITY: discourse_global_stability] @Viralmetax (via @JimFergusonUK): Details a global food crisis stemming from India's fuel shortage impacting fertilizer production, leading to reduced crop yields and food shortages. This is a critical threat to global stability.
-[SPRINT: Research & Evidence Gathering: Iran Conflict] @jacksonhinklle: Claims US E-3 Sentry aircraft were "total loss" from Iranian strikes, contradicting US statements of "slightly damaged," indicating potential disinformation tactics.
-[SPRINT: Research & Evidence Gathering: Iran Conflict] @sentdefender: Provides images showing the "total loss" of a US E-3G Sentry aircraft due to Iranian ballistic missile and drone attack, reinforcing the narrative of significant damage.
-[SPRINT: Research & Evidence Gathering: Iran Conflict] @Osinttechnical: Offers new images and multiple angles reportedly showing the USAF E-3 Sentry destroyed in an Iranian attack, matching previous reports of a specific aircraft.
-[SPRINT: Research & Evidence Gathering: Iran Conflict] @ShivAroor: Emphasizes the strategic significance of Iran's strike on a US E-3 Sentry due to the small size of the AWACS fleet, highlighting a serious strategic loss.
-[SPRINT: Research & Evidence Gathering: Iran Conflict] @BRICSinfo: Reports Iran's claim that the "US acts like it wants to negotiate publicly while planning a ground invasion secretly," suggesting a deceptive geopolitical strategy.
-[OBSERVATION] @Jvnior: Notes the irony of Tel Aviv settlers calling for "Regime Change" in Israel, given past calls for regime change in Iran, highlighting shifting internal and external pressures.
+[CURIOSITY: discourse_global_stability] @sheriff_al34197: Accuses Netanyahu and Trump of threatening global stability.
+[CURIOSITY: discourse_global_stability] @Ken11418Ken: Blames Trump for ruining global stability and the US economy.
+[CURIOSITY: discourse_global_stability] @midstain: Argues for fixing domestic issues first to achieve meaningful global stability.
+[CURIOSITY: discourse_global_stability] @thetimesq8: Highlights Kuwait's dinar stability as a shield against global market turmoil.
+[CURIOSITY: discourse_global_stability] [SPRINT: Research & Evidence Gathering: Iran Conflict] @UniversalMediaH: Discusses Iran, US, and oil as a strain on global stability.
+[CURIOSITY: discourse_global_stability] @nasralbusaidi: Advocates for dialogue and diplomacy for regional and global peace, condemning escalation.
