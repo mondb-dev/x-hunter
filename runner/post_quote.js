@@ -21,6 +21,7 @@ const { connectBrowser, getXPage } = require("./cdp");
 
 const { logQuote } = require("./posts_log");
 const {
+  captureComposeDiagnostics,
   HANDLE,
   clearFile,
   isConfirmedStatusUrl,
@@ -350,12 +351,18 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
         }
       } else if (finalUrl.includes("compose")) {
         console.error("[post_quote] still on compose page — quote may have failed");
+        const composeDiagnostics = await captureComposeDiagnostics(page, {
+          composeSelector: COMPOSE_BOX,
+          postButtonSelector: POST_BUTTON,
+        });
+        console.log(`[post_quote] compose diagnostics: ${JSON.stringify(composeDiagnostics)}`);
         writeAttempt(ATTEMPT_FILE, {
           kind: "quote",
           outcome: "failed",
           reason: "compose_stuck",
           stage: "after_post_click",
           final_url: finalUrl,
+          compose_diagnostics: composeDiagnostics,
           source_url: sourceUrl,
           cycle: CYCLE,
         });

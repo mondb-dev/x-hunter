@@ -18,6 +18,7 @@ const { connectBrowser, getXPage } = require("./cdp");
 
 const { logTweet } = require("./posts_log");
 const {
+  captureComposeDiagnostics,
   HANDLE,
   clearFile,
   isConfirmedStatusUrl,
@@ -240,12 +241,18 @@ async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_
         }
       } else if (finalUrl.includes("compose")) {
         console.error("[post_tweet] still on compose page — post may have failed");
+        const composeDiagnostics = await captureComposeDiagnostics(page, {
+          composeSelector: COMPOSE_BOX,
+          postButtonSelector: POST_BUTTON,
+        });
+        console.log(`[post_tweet] compose diagnostics: ${JSON.stringify(composeDiagnostics)}`);
         writeAttempt(ATTEMPT_FILE, {
           kind: "tweet",
           outcome: "failed",
           reason: "compose_stuck",
           stage: "after_post_click",
           final_url: finalUrl,
+          compose_diagnostics: composeDiagnostics,
           cycle: CYCLE,
         });
         browser.disconnect();
