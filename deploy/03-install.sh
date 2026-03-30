@@ -152,6 +152,9 @@ User=$USER
 WorkingDirectory=$PROJECT_DIR
 EnvironmentFile=$PROJECT_DIR/.env
 Environment=HOME=$HOME
+Environment=OPENCLAW_PROFILE=$OPENCLAW_PROFILE
+Environment=OPENCLAW_STATE_DIR=$HOME/.openclaw-$OPENCLAW_PROFILE
+Environment=OPENCLAW_CONFIG_PATH=$HOME/.openclaw-$OPENCLAW_PROFILE/openclaw.json
 Environment=PATH=$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin
 ExecStart=/bin/bash $PROJECT_DIR/runner/run.sh
 Restart=always
@@ -176,6 +179,9 @@ User=$USER
 WorkingDirectory=$PROJECT_DIR
 EnvironmentFile=$PROJECT_DIR/.env
 Environment=HOME=$HOME
+Environment=OPENCLAW_PROFILE=$OPENCLAW_PROFILE
+Environment=OPENCLAW_STATE_DIR=$HOME/.openclaw-$OPENCLAW_PROFILE
+Environment=OPENCLAW_CONFIG_PATH=$HOME/.openclaw-$OPENCLAW_PROFILE/openclaw.json
 Environment=PATH=$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin
 ExecStart=$(which node) $PROJECT_DIR/runner/telegram_bot.js
 Restart=always
