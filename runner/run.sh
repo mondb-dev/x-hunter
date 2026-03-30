@@ -160,11 +160,16 @@ agent_run() {
 # Restart gateway: kill directly + start + poll health (avoids openclaw's 60s internal timeout)
 restart_gateway() {
   echo "[run] restarting gateway..."
-  # Kill any existing gateway processes on this port
-  pkill -f "openclaw-gateway" 2>/dev/null || true
-  sleep 2
-  # Start gateway (uses LaunchAgent on macOS, or direct process on Linux)
-  openclaw gateway start 2>/dev/null || true
+  # Prefer the managed systemd unit on the VM so the runner is not racing
+  # with process supervision when it needs to cycle the gateway.
+  if sudo systemctl restart openclaw-gateway.service 2>/dev/null; then
+    :
+  else
+    # Fallback for non-systemd environments.
+    pkill -f "openclaw-gateway" 2>/dev/null || true
+    sleep 2
+    openclaw gateway start 2>/dev/null || true
+  fi
   # Poll HTTP health — faster than openclaw's internal 60s wait
   local i=0
   while [ $i -lt 15 ]; do

@@ -68,9 +68,16 @@ function log(msg) {
  */
 function restartGateway() {
   log('restarting gateway...');
-  try { execSync('pkill -f "openclaw-gateway"', { stdio: 'ignore' }); } catch {}
-  sleep(2000);
-  try { execSync('openclaw gateway start', { stdio: 'ignore' }); } catch {}
+  let restarted = false;
+  try {
+    execSync('sudo systemctl restart openclaw-gateway.service', { stdio: 'ignore' });
+    restarted = true;
+  } catch {}
+  if (!restarted) {
+    try { execSync('pkill -f "openclaw-gateway"', { stdio: 'ignore' }); } catch {}
+    sleep(2000);
+    try { execSync('openclaw gateway start', { stdio: 'ignore' }); } catch {}
+  }
 
   for (let i = 0; i < 15; i++) {
     sleep(2000);
