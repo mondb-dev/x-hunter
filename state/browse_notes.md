@@ -1,12 +1,6 @@
-[SPRINT: research] @ConflictAlarm: "Germany’s AfD calls for the withdrawal of all 40,000 US troops and nuclear weapons from the country. AfD co-leader Chrupalla cited Spain, which banned the US from using its bases for operations against Iran. The Telegraph reports Trump is already considering the move."
-[SPRINT: research] @grok: "Reacting to a viral claim of a US Navy sailor's 10-month deployment to Iran. In reality, amid the ongoing 2026 Iran conflict (started Feb 28 with US/Israel strikes), the Pentagon has confirmed deployments of thousands of Marines, sailors, and 82nd Airborne."
-[SPRINT: research] @MarioNawfal: "Israel says its soldiers won't join any U.S. ground operation in Iran... Channel 12 reports the IDF is sitting this one out if boots hit t"
-[SPRINT: research] @KimDotcom: "Getting ready to die for Israel." (with image of soldiers in military transport aircraft)
-[SPRINT: research] @iranin_arabic: "This war, in short A president sends soldiers he doesn’t know To kill Iranians he doesn’t know To cover up for old men who raped children they don’t know"
-[SPRINT: research] @LegendaryEnergy: "They should play this video for troops as they’re being sent on the ground in Iran: “Remember what you’re fighting for.”"
-[SPRINT: research] @Bull132355: "President Trump @POTUS please I know you're very occupied with IRAN-ISRAELi conflict, but please consider this a priority!! God bless United States."
-[SPRINT: research] @Escaping1984: "Trump statements over the last 14 years that argued against war with Iran, warned that only a weak president would start one, promised no new wars in the Middle East, or otherwise conflict with his recent war on Iran."
-[SPRINT: research] @Amockx2022: "THIS IS HILARIOUS Trump at 8 PM : Iran has gifted me 20 oil boats to me out of respect Iran Prof at 9 PM : "Iran hasn't gifted anythin""
-[SPRINT: research] @RT_com: "Philippines start buying Russian oil as country faces energy crisis..."
-[SPRINT: research] @PhilippineStar: "TODAY'S EDITORIAL: The Middle East crisis is highlighting not only the vulnerability of oil-importing countries like the Philippines to armed conflict in that volatile region, but also the risks faced"
-@MarioNawfal: "Tom Cotton and Chuck Schumer agree on very little. But they both want to ban the U.S. government from buying or operating Chinese humanoid robots with The American Security Robotics Act."
+
+[SPRINT: research] Iran Conflict: New claims of Iran striking Israeli bunkers and power plants (@7signxx, @AAliBaltistani).
+[SPRINT: research] Geopolitical Shifts: Russia breaks oil blockade on Cuba, and Philippines declares energy emergency, considering Russian oil (@jacksonhinklle, @TukiFromKL, @News5PH).
+[SPRINT: research] AI & National Security: Bipartisan effort to ban Chinese humanoid robots due to security concerns (@MarioNawfal).
+[SPRINT: research] Human Rights & Local Governance: Reports of armed men restricting community access and intimidating agrarian reform beneficiaries in Samal, Philippines (@manayleila).
+[RESEARCH] Economic Vulnerability: Philippine peso plunges to an all-time low (@ABSCBNNews).
