@@ -6,3 +6,19 @@
 [SPRINT: research] @Geopoliticupdat: "This matters because it escalates the Middle East conflict, risking global economic stability and cybersecurity." — evidence quality: low
 [SPRINT: research] @Cunts69639965: ""global economic stability runs through Riyadh" 🤣 🤣 🤣 Imagine believing that 😂" — evidence quality: low
 [SPRINT: research] Browsing for "Iran Conflict" and "Iran Conflict Dynamics" on X revealed a high volume of discussion, but specific text extraction from the search result screenshots was limited due to font size. General themes observed include continued focus on US-Iran interactions, the broader Middle East conflict, and the impact on global oil markets and the Strait of Hormuz. Specific claims related to economic stability and geopolitical rhetoric remain consistent with prior observations.
+[SPRINT: research] @MAGAVoice / @EricLDaugh: Claims President Trump stated Iran is allowing 20 oil boats through Strait of Hormuz out of respect/tribute. (Evidence Quality: Medium, disputed in comments)
+[SPRINT: research] @stocktalkweekly: Reports Trump saying 20 large oil tankers to pass under US Navy escort. (Evidence Quality: Medium, heavily disputed in comments)
+[SPRINT: research] @AshCrypto: 2,000,000,000,000 wiped out of Global stock market since US-Iran war started. (Evidence Quality: Medium, specific number, but unverified source)
+[SPRINT: research] @mandelusheewaza: Helium shortage from Middle East conflict affecting global tech supply chains, threatening economic stability. (Evidence Quality: Low)
+[SPRINT: research] @Geopoliticupdat: Escalation of Middle East conflict risking global economic stability and cybersecurity. (Evidence Quality: Low)
+[SPRINT: research] @alistairpages: Suggests US/Israeli objectives include undermining global economic stability and US financial hegemony. (Evidence Quality: Low)
+[SPRINT: research] @Marc14595: UK upholding International Law could prevent wars threatening global economic stability. (Evidence Quality: Low)
+[SPRINT: research] @NormalIslandNws: Sarcastic/critical claim about Israel\'s reluctance to join ground invasion of Iran, contrasting grown men with unarmed women and childre. (Evidence Quality: Low, satirical)
+[SPRINT: research] @FurkanGozukara: Claims Trump administration and Israel are massacring civilians in Tehran (1900+ killed). (Evidence Quality: Very Low, unverified, sensationalized)
+[SPRINT: research] @AJENews: Reports Trump wants to take the oil in Iran and seize Kharg Island. (Evidence Quality: Medium, reported statement)
+[SPRINT: research] @FurkanGozukara: Claims Iran dropped ultimatum on Washington to close all US bases. (Evidence Quality: Low, unverified)
+[SPRINT: research] @MarioNawfal: Iran struck Kuwaiti desalination plant (killing Indian worker) in response to coalition forces hitting Iran\'s water reservoir. (Evidence Quality: Medium)
+[SPRINT: research] @Jvnior: Claims Iran completely DESTROYED Israeli Port of Eilat. (Evidence Quality: Very Low, hyperbolic, unverified)
+[SPRINT: research] @MarioNawfal: Describes Houthi Palestine II missile capabilities against Israel (Mach 16, zigzagging, evading defenses). (Evidence Quality: Medium, technical claims, unverified)
+[SPRINT: research] @FurkanGozukara: Claims Iran destroyed an AWACS plane, crippling US military. (Evidence Quality: Low, disputed in comments)
+[SPRINT: research] @WhiteHouse (via Trump\'s tweet): Envoy negotiated release of 250 political prisoners in Belarus. Comments analyze this as legitimacy laundering. (Evidence Quality: High as a reported event, Medium as an analytical observation of rhetoric)
