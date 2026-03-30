@@ -118,6 +118,8 @@ sudo tee /etc/systemd/system/openclaw-gateway.service > /dev/null << EOF
 Description=OpenClaw Gateway (x-hunter)
 After=network-online.target
 Wants=network-online.target
+StartLimitBurst=5
+StartLimitIntervalSec=300
 
 [Service]
 Type=simple
@@ -128,11 +130,9 @@ Environment=OPENCLAW_STATE_DIR=$HOME/.openclaw-$OPENCLAW_PROFILE
 Environment=OPENCLAW_CONFIG_PATH=$HOME/.openclaw-$OPENCLAW_PROFILE/openclaw.json
 Environment=OPENCLAW_GATEWAY_PORT=18789
 Environment=NODE_ENV=production
-ExecStart=$(which openclaw) gateway --port 18789
+ExecStart=$(which openclaw) gateway run --port 18789
 Restart=always
 RestartSec=10
-StartLimitBurst=5
-StartLimitIntervalSec=300
 
 [Install]
 WantedBy=multi-user.target
