@@ -64,19 +64,23 @@ This installs:
 - Google Chrome (headless-capable)
 - OpenClaw CLI + gateway daemon
 - npm dependencies (scraper + runner)
-- Two systemd services
+- Three systemd services
+- A sudoers allowlist so the Telegram bot can restart the runner/gateway safely
 
 ### 4. Start Sebastian
 
 ```bash
 sudo systemctl start openclaw-gateway
 sudo systemctl start sebastian-runner
+sudo systemctl start sebastian-tgbot
 ```
 
 Check it's running:
 ```bash
 sudo systemctl status sebastian-runner
+sudo systemctl status sebastian-tgbot
 tail -30 ~/hunter/runner/runner.log
+tail -30 ~/hunter/runner/telegram_bot.log
 ```
 
 ## Systemd services
@@ -85,13 +89,16 @@ tail -30 ~/hunter/runner/runner.log
 |---|---|---|
 | `openclaw-gateway` | OpenClaw gateway | network |
 | `sebastian-runner` | Main agent loop (run.sh) | openclaw-gateway |
+| `sebastian-tgbot` | Telegram operator bot | network |
 
 **Commands:**
 ```bash
 sudo systemctl status sebastian-runner   # Check status
 sudo systemctl restart sebastian-runner  # Restart runner
+sudo systemctl restart sebastian-tgbot   # Restart Telegram bot
 sudo journalctl -u sebastian-runner -f   # Follow systemd journal
 tail -f ~/hunter/runner/runner.log       # Runner's own log
+tail -f ~/hunter/runner/telegram_bot.log # Telegram bot log
 ```
 
 ## Maintenance
@@ -102,6 +109,7 @@ tail -f ~/hunter/runner/runner.log       # Runner's own log
 gcloud compute ssh <vm-name> --zone=<zone>
 cd ~/hunter && git pull
 sudo systemctl restart sebastian-runner
+sudo systemctl restart sebastian-tgbot
 ```
 
 ### Viewing logs
@@ -115,6 +123,9 @@ tail -50 ~/.openclaw-x-hunter/logs/gateway.log
 
 # Systemd journal
 sudo journalctl -u sebastian-runner --since "1 hour ago"
+
+# Telegram bot log
+tail -100 ~/hunter/runner/telegram_bot.log
 ```
 
 ### Pausing/resuming
@@ -143,13 +154,14 @@ sudo systemctl start sebastian-runner
 ```
 systemd
   ├── openclaw-gateway.service  (restarts on crash)
-  └── sebastian-runner.service  (run.sh, restarts on crash)
-        ├── scraper/collect.js  (background, every 10 min)
-        ├── scraper/reply.js    (background, every 30 min)
-        ├── scraper/follows.js  (background, every 3 hours)
-        └── agent cycle         (every ~20 min via orchestrator.js)
-              ├── BROWSE ×5     (observe, read, update ontology)
-              └── TWEET ×1      (synthesize, journal, tweet, git push)
+  ├── sebastian-runner.service  (run.sh, restarts on crash)
+  │     ├── scraper/collect.js  (background, every 10 min)
+  │     ├── scraper/reply.js    (background, every 30 min)
+  │     ├── scraper/follows.js  (background, every 3 hours)
+  │     └── agent cycle         (every ~20 min via orchestrator.js)
+  │           ├── BROWSE ×5     (observe, read, update ontology)
+  │           └── TWEET ×1      (synthesize, journal, tweet, git push)
+  └── sebastian-tgbot.service   (operator control via Telegram)
 ```
 
 ## Cost breakdown

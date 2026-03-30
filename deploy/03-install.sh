@@ -108,6 +108,7 @@ fi
 
 # ── Step 8: Systemd services ─────────────────────────────────────────────────
 echo "[8/8] Installing systemd services..."
+SYSTEMCTL_BIN="$(command -v systemctl)"
 
 # --- Gateway service ---
 # OpenClaw's --install-daemon may have already created one.
@@ -162,9 +163,42 @@ StandardError=append:$PROJECT_DIR/runner/runner.log
 WantedBy=multi-user.target
 EOF
 
+# --- Telegram bot service ---
+sudo tee /etc/systemd/system/sebastian-tgbot.service > /dev/null << EOF
+[Unit]
+Description=Sebastian D. Hunter Telegram Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=$USER
+WorkingDirectory=$PROJECT_DIR
+EnvironmentFile=$PROJECT_DIR/.env
+Environment=HOME=$HOME
+Environment=PATH=$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=$(which node) $PROJECT_DIR/runner/telegram_bot.js
+Restart=always
+RestartSec=10
+StandardOutput=append:$PROJECT_DIR/runner/telegram_bot.log
+StandardError=append:$PROJECT_DIR/runner/telegram_bot.log
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# Allow the Telegram bot's service user to restart the managed services
+# without prompting for a password. This keeps the command surface narrow.
+sudo tee /etc/sudoers.d/sebastian-hunter-telegram > /dev/null << EOF
+$USER ALL=(root) NOPASSWD: $SYSTEMCTL_BIN status openclaw-gateway.service, $SYSTEMCTL_BIN status sebastian-runner.service, $SYSTEMCTL_BIN status sebastian-tgbot.service, $SYSTEMCTL_BIN restart openclaw-gateway.service, $SYSTEMCTL_BIN restart sebastian-runner.service, $SYSTEMCTL_BIN restart sebastian-tgbot.service, $SYSTEMCTL_BIN start openclaw-gateway.service, $SYSTEMCTL_BIN start sebastian-runner.service, $SYSTEMCTL_BIN start sebastian-tgbot.service, $SYSTEMCTL_BIN stop openclaw-gateway.service, $SYSTEMCTL_BIN stop sebastian-runner.service, $SYSTEMCTL_BIN stop sebastian-tgbot.service
+EOF
+sudo chmod 440 /etc/sudoers.d/sebastian-hunter-telegram
+sudo visudo -cf /etc/sudoers.d/sebastian-hunter-telegram > /dev/null
+
 sudo systemctl daemon-reload
 sudo systemctl enable openclaw-gateway.service
 sudo systemctl enable sebastian-runner.service
+sudo systemctl enable sebastian-tgbot.service
 
 echo ""
 echo "═══════════════════════════════════════════════════"
@@ -173,11 +207,14 @@ echo ""
 echo "  Start services:"
 echo "    sudo systemctl start openclaw-gateway"
 echo "    sudo systemctl start sebastian-runner"
+echo "    sudo systemctl start sebastian-tgbot"
 echo ""
 echo "  Check status:"
 echo "    sudo systemctl status openclaw-gateway"
 echo "    sudo systemctl status sebastian-runner"
+echo "    sudo systemctl status sebastian-tgbot"
 echo "    tail -30 ~/hunter/runner/runner.log"
+echo "    tail -30 ~/hunter/runner/telegram_bot.log"
 echo ""
 echo "  If browser profile was not migrated:"
 echo "    openclaw browser --browser-profile x-hunter start"
