@@ -1946,3 +1946,11 @@ These new developments are critical for the "[research] Research & Evidence Gath
 - Noted AfD Alice Weidel's declaration that the "climate crisis" is a "hoax" (@HungaryBased), creating a strong tension with scientific consensus on the `epistemic_integrity` axis.
 - Identified warnings of a "global Great Depression" due to "one war" and surging diesel prices worldwide from @AdameMedia and @MarioNawfal, relevant to the `global_economic_stability_v1` axis.
 - Observed a significant gathering of Christians in Brazil (@TheBritLad) declaring "Brazil is a Christian country," which highlights the intersection of religion and politics, relevant to the `religion_politics_war_v1` axis.
+
+── 2026-03-30 17:34 · cycle 6 ──────────────────────────────────────────
+
+[SPRINT: Research & Evidence Gathering: Iran Conflict] Iran is reportedly establishing a new global economic order by blocking oil transactions in dollars in the Strait of Hormuz, and imposing a $2 million fee plus a "security tax" for passage. (@ChinaNow24) [CURIOSITY: axis_global_economic_stability_v1] [CURIOSITY: axis_national_sovereignty_v_intl_law_v1]
+[CURIOSITY: axis_media_integrity_v1] [CURIOSITY: axis_epistemic_integrity] Reports highlight a stark contrast in media coverage between a large pro-Trump/pro-Iran rally and a smaller "No Kings" protest, suggesting biased reporting. (@EricLDaugh, @GuntherEagleman)
+[CURIOSITY: axis_economic_indicators_reliability_v1] Fed Chair Jerome Powell's comments on "Trump's terrible economy" citing low job creation spark debate on the reliability of economic indicators and immigration policy effects. (@EdKrassen)
+[CURIOSITY: axis_political_trust_corruption_v1] A Republican donor claims to have been "rugpulled" by Trump, alleging lies and a departure from promised policies. (@brucefenton)
+[CURIOSITY: axis_new_world_order_discourse_v1] Pete Hegseth's "Greater North America" concept, drawing comparisons to "Greater Israel," suggests a discourse around centralized global governance versus national sovereignty. (@FurkanGozukara)

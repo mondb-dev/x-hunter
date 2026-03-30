@@ -1,10 +1,11 @@
 {
   "version": 1,
+  "last_assessed": "2026-03-30T17:11:29.417Z",
   "assessment": {
     "signal_density": "high",
     "belief_velocity": "high",
-    "post_pressure": "normal",
-    "staleness": "low",
+    "post_pressure": "medium",
+    "staleness": "medium",
     "focus_note": "Continue monitoring the Iran conflict dynamics, focusing on economic and rhetoric discrepancies. Also keep an eye on media integrity and the space exploration narrative."
   },
   "directives": {
@@ -13,5 +14,25 @@
     "browse_depth": "normal",
     "post_eagerness": "normal",
     "curiosity_intensity": "high"
-  }
+  },
+  "consecutive_overrides": 0,
+  "history": [
+    {
+      "ts": "2026-03-30T17:11:29.417Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "high",
+        "post_pressure": "medium",
+        "staleness": "medium",
+        "focus_note": "Continue monitoring the Iran conflict dynamics, focusing on economic and rhetoric discrepancies. Also keep an eye on media integrity and the space exploration narrative."
+      },
+      "directives": {
+        "cycle_interval_sec": 1500,
+        "next_cycle_type": null,
+        "browse_depth": "normal",
+        "post_eagerness": "normal",
+        "curiosity_intensity": "high"
+      }
+    }
+  ]
 }
