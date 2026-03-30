@@ -1,4 +1,7 @@
 .env
+sebastian-hunter-vertex.json
+sebastian-builder-vertex.json
+hunter-builder-vertex.json
 state/snapshots/*
 !state/snapshots/.gitkeep
 node_modules/
@@ -29,3 +32,11 @@ runner/run.lock
 *.service-account.json
 *.bak
 .claude/
+staging/
+state/builder_prompt.txt
+state/meta_last_run.txt
+state/meta_failure_count.json
+state/tool_request.json
+state/tool_result.json
+state/sandboxes/*
+!state/sandboxes/.gitkeep

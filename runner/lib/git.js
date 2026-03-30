@@ -10,7 +10,8 @@
  * All operations are synchronous to match bash behavior.
  */
 
-const { execSync } = require('child_process');
+const fs = require('fs');
+const { execSync, execFileSync } = require('child_process');
 const config = require('./config');
 
 // Lazy-load to avoid circular dependency
@@ -48,14 +49,44 @@ function commitAndPush({ paths, message }) {
   } catch {}
   let pushOk = true;
   let pushErr = '';
+  if (hasUnpublishedFailedMetaMerge()) {
+    pushOk = false;
+    pushErr = 'blocked: local main still contains a failed META merge that was never pushed';
+  }
   try {
-    execSync(`git -C "${root}" push origin main`, { stdio: 'pipe', timeout: 30000 });
+    if (pushOk) {
+      execSync(`git -C "${root}" push origin main`, { stdio: 'pipe', timeout: 30000 });
+    }
   } catch (e) {
     pushOk = false;
     pushErr = e.stderr ? e.stderr.toString().trim() : e.message;
   }
   try { getNotify().checkGitPush(pushOk, pushErr); } catch {}
   log(pushOk ? 'push done' : `push failed: ${pushErr.slice(0, 120)}`);
+}
+
+function hasUnpublishedFailedMetaMerge() {
+  const historyPath = config.PROPOSAL_HISTORY_PATH;
+  try {
+    const history = JSON.parse(fs.readFileSync(historyPath, 'utf-8'));
+    const proposals = Array.isArray(history.proposals) ? history.proposals : [];
+    for (let i = proposals.length - 1; i >= 0; i--) {
+      const p = proposals[i];
+      if (p.pushed_to_origin !== false || !p.merge_commit || p.reverted) continue;
+      try {
+        execFileSync('git', ['-C', config.PROJECT_ROOT, 'merge-base', '--is-ancestor', p.merge_commit, 'HEAD'], {
+          stdio: 'ignore',
+          timeout: 10000,
+        });
+        return true;
+      } catch (e) {
+        if (e.status === 1) {
+          continue;
+        }
+      }
+    }
+  } catch {}
+  return false;
 }
 
 // ── triggerVercelDeploy ──────────────────────────────────────────────────────
@@ -73,7 +104,158 @@ function triggerVercelDeploy(hookUrl) {
   } catch {}
 }
 
+// ── Branch management (META cycle) ──────────────────────────────────────────
+
+/**
+ * Create a new branch from current HEAD and switch to it.
+ * @param {string} branch - branch name (e.g. 'meta/proposal_xyz_123')
+ */
+function createBranch(branch) {
+  const root = config.PROJECT_ROOT;
+  execSync(`git -C "${root}" checkout -b "${branch}"`, { stdio: 'pipe', timeout: 15000 });
+  log(`branch created: ${branch}`);
+}
+
+/**
+ * Merge a branch into main using --no-ff (preserves merge commit for easy revert).
+ * Switches to main first, then merges.
+ * @param {string} branch - branch to merge
+ */
+function mergeBranch(branch) {
+  const root = config.PROJECT_ROOT;
+  execSync(`git -C "${root}" checkout main`, { stdio: 'pipe', timeout: 15000 });
+  execSync(`git -C "${root}" merge "${branch}" --no-ff -m "Merge ${branch}"`, {
+    stdio: 'pipe', timeout: 30000,
+  });
+  log(`merged ${branch} into main`);
+}
+
+/**
+ * Delete a local branch (force). Safe to call even if branch doesn't exist.
+ * Ensures we're on main first.
+ * @param {string} branch - branch to delete
+ */
+function deleteBranch(branch) {
+  const root = config.PROJECT_ROOT;
+  try { execSync(`git -C "${root}" checkout main`, { stdio: 'ignore', timeout: 15000 }); } catch {}
+  try {
+    execSync(`git -C "${root}" branch -D "${branch}"`, { stdio: 'pipe', timeout: 15000 });
+    log(`branch deleted: ${branch}`);
+  } catch {}
+}
+
+/**
+ * Commit changes on the current (feature) branch.
+ * Does NOT push — the merge to main handles push.
+ * @param {Object} opts
+ * @param {string} opts.branch - branch name (for logging)
+ * @param {string[]} opts.paths - relative paths to add
+ * @param {string} opts.message - commit message
+ */
+function commitAndPushBranch({ branch, paths, message }) {
+  const root = config.PROJECT_ROOT;
+  const cleanPaths = Array.isArray(paths) ? paths.filter(Boolean) : [];
+  if (cleanPaths.length === 0) {
+    throw new Error(`No paths provided for commit on ${branch}`);
+  }
+  try {
+    execFileSync('git', ['-C', root, 'add', '--', ...cleanPaths], {
+      stdio: 'ignore',
+      timeout: 15000,
+    });
+  } catch (e) {
+    throw new Error(`git add failed on ${branch}: ${e.message}`);
+  }
+
+  let hasStagedChanges = false;
+  try {
+    execFileSync('git', ['-C', root, 'diff', '--cached', '--quiet', '--', ...cleanPaths], {
+      stdio: 'ignore',
+      timeout: 15000,
+    });
+  } catch (e) {
+    if (e.status === 1) {
+      hasStagedChanges = true;
+    } else {
+      throw new Error(`git diff --cached failed on ${branch}: ${e.message}`);
+    }
+  }
+
+  if (!hasStagedChanges) {
+    throw new Error(`No staged changes to commit on ${branch}`);
+  }
+
+  const safeMsg = String(message || '').replace(/[\u0000-\u001f]/g, ' ').trim();
+  if (!safeMsg) {
+    throw new Error(`Empty commit message for ${branch}`);
+  }
+
+  try {
+    execFileSync('git', ['-C', root, 'commit', '-m', safeMsg], {
+      stdio: 'pipe',
+      timeout: 15000,
+    });
+    const commitHash = execFileSync('git', ['-C', root, 'rev-parse', 'HEAD'], {
+      encoding: 'utf-8',
+      timeout: 10000,
+    }).trim();
+    log(`committed on ${branch}: ${safeMsg}`);
+    return { commitHash };
+  } catch (e) {
+    const stderr = e.stderr ? e.stderr.toString().trim() : e.message;
+    throw new Error(`commit failed on ${branch}: ${stderr.slice(0, 200)}`);
+  }
+}
+
+/**
+ * Revert a specific merge commit on main. Used by watchdog auto-revert.
+ * @param {string} commitHash - the merge commit hash to revert (NOT HEAD — other commits may exist after it)
+ * Returns true if revert succeeded.
+ */
+function revertLastMerge(commitHash) {
+  const root = config.PROJECT_ROOT;
+  if (!commitHash || !/^[0-9a-f]{7,40}$/i.test(commitHash)) {
+    log('revertLastMerge: invalid or missing commit hash — aborting');
+    return false;
+  }
+  try {
+    // -m 1 tells git to use the first parent (main) as the mainline
+    execSync(`git -C "${root}" revert ${commitHash} -m 1 --no-edit`, { stdio: 'pipe', timeout: 30000 });
+    execSync(`git -C "${root}" push origin main`, { stdio: 'pipe', timeout: 30000 });
+    log(`reverted merge commit ${commitHash} and pushed`);
+    return true;
+  } catch (e) {
+    log(`revert failed for ${commitHash}: ${e.message}`);
+    return false;
+  }
+}
+
+/**
+ * Get the last merge commit hash on main (for tracking meta merges).
+ * Returns { hash, message } or null.
+ */
+function lastMergeCommit() {
+  const root = config.PROJECT_ROOT;
+  try {
+    const out = execSync(
+      `git -C "${root}" log --merges --oneline -1`,
+      { encoding: 'utf-8', timeout: 10000 }
+    ).trim();
+    if (!out) return null;
+    const [hash, ...rest] = out.split(' ');
+    return { hash, message: rest.join(' ') };
+  } catch {
+    return null;
+  }
+}
+
 module.exports = {
   commitAndPush,
   triggerVercelDeploy,
+  createBranch,
+  mergeBranch,
+  deleteBranch,
+  commitAndPushBranch,
+  revertLastMerge,
+  lastMergeCommit,
 };

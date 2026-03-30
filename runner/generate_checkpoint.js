@@ -335,6 +335,111 @@ ${recentReports || "(no daily reports yet)"}
     fs.writeFileSync(CHECKPOINT_STATE, JSON.stringify(cpState, null, 2), "utf-8");
 
     console.log(`[checkpoint] written: checkpoints/checkpoint_${n}.md + latest.md`);
+
+    // ── Process reflection (§20.1) ───────────────────────────────────────
+    // Ask Sebastian to reflect on process gaps and optionally produce a proposal.
+    // Only if no active proposal already exists.
+    const proposalPath = path.join(ROOT, "state", "process_proposal.json");
+    let hasActiveProposal = false;
+    try {
+      const existing = JSON.parse(fs.readFileSync(proposalPath, "utf-8"));
+      hasActiveProposal = ["pending", "building", "testing"].includes(existing.status);
+    } catch {}
+
+    if (!hasActiveProposal) {
+      try {
+        // Load proposal history for feedback loop
+        let historyContext = "(no previous proposals)";
+        try {
+          const h = JSON.parse(fs.readFileSync(
+            path.join(ROOT, "state", "proposal_history.json"), "utf-8"));
+          const proposals = h.proposals || [];
+          if (proposals.length > 0) {
+            historyContext = proposals.slice(-5).map(p =>
+              `- [${p.status}] "${p.title}" — ${p.resolution_notes || "no notes"}`
+            ).join("\n");
+          }
+        } catch {}
+
+        const reflectionPrompt = `You are Sebastian D. Hunter, an autonomous AI agent that browses X/Twitter and forms beliefs.
+You are reflecting on your own process at Checkpoint ${n} (${today}).
+
+Your current belief state:
+${highConf || "(no active axes)"}
+
+Recent daily reports (summarised):
+${recentReports.slice(0, 3000) || "(none)"}
+
+Previous process improvement proposals and their outcomes:
+${historyContext}
+
+REFLECTION TASK:
+Where did your process fail or fall short in the last 3 days? What patterns kept emerging
+that you had no framework for? What would you build to fix it?
+
+Think about:
+- Information you needed but could not get
+- Patterns you noticed but had no way to track
+- Processes that felt broken or incomplete
+- Things you wanted to do but your pipeline didn't support
+
+If you identify a SPECIFIC, actionable gap, output a JSON proposal block like this:
+
+\`\`\`json
+{
+  "id": "proposal_<slug>_${Date.now()}",
+  "status": "pending",
+  "title": "Short description of what to build",
+  "problem": "What gap or failure pattern you observed",
+  "evidence": ["specific journal refs, dates, failure descriptions"],
+  "proposed_solution": "What to build — conceptual, not code",
+  "affected_files": ["best-guess list of files to modify or create"],
+  "scope": "protocol|pipeline|prompt|state",
+  "estimated_risk": "low|medium|high",
+  "created_at": "${new Date().toISOString()}",
+  "resolved_at": null,
+  "resolution": null
+}
+\`\`\`
+
+CONSTRAINTS:
+- You CANNOT propose changes to: SOUL.md, IDENTITY.md, AGENTS.md §1-§11, orchestrator.js, lib/agent.js, lib/git.js, lib/state.js, .env, builder_pipeline.js, builder_vertex.js
+- Maximum 1 proposal per checkpoint
+- Must cite specific evidence (not vague feelings)
+- If nothing genuinely needs fixing, say so — do not force a proposal
+
+If no proposal is warranted, just write a brief reflection paragraph (no JSON block).`;
+
+        const reflectionResult = await callLLM(reflectionPrompt);
+        console.log("[checkpoint] process reflection completed");
+
+        // Try to extract a proposal JSON from the response
+        const jsonMatch = reflectionResult.match(/```json\s*\n([\s\S]*?)```/);
+        if (jsonMatch) {
+          try {
+            const proposal = JSON.parse(jsonMatch[1]);
+            // Validate required fields + id format (prevents shell injection via branch names)
+            if (proposal.id && proposal.title && proposal.problem && proposal.scope
+                && /^proposal_[a-z0-9_]+$/i.test(proposal.id)) {
+              proposal.status = "pending";
+              proposal.created_at = new Date().toISOString();
+              fs.writeFileSync(proposalPath, JSON.stringify(proposal, null, 2));
+              console.log(`[checkpoint] process proposal written: ${proposal.title}`);
+            } else {
+              console.log("[checkpoint] proposal JSON missing required fields — skipped");
+            }
+          } catch (e) {
+            console.log(`[checkpoint] could not parse proposal JSON: ${e.message}`);
+          }
+        } else {
+          console.log("[checkpoint] no proposal in reflection (that's OK)");
+        }
+      } catch (err) {
+        console.warn("[checkpoint] process reflection failed:", err.message);
+      }
+    } else {
+      console.log("[checkpoint] active proposal exists — skipping reflection");
+    }
   } catch (err) {
     console.error(`[checkpoint] failed: ${err.message}`);
     process.exit(0); // non-fatal

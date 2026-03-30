@@ -98,6 +98,130 @@ function runScript(scriptName) {
   }
 }
 
+// ── META auto-revert ─────────────────────────────────────────────────────────
+// If 3+ consecutive CRITICAL/ERROR hits occur after a recent META merge,
+// automatically revert the last merge commit and mark the proposal as reverted.
+
+const PROPOSAL_HISTORY = path.join(ROOT, "state", "proposal_history.json");
+const META_FAILURE_STATE = path.join(ROOT, "state", "meta_failure_count.json");
+const PROCESS_PROPOSAL = path.join(ROOT, "state", "process_proposal.json");
+
+function checkMetaAutoRevert(hits) {
+  const criticalHits = hits.filter(h => h.severity === "CRITICAL" || h.severity === "ERROR");
+
+  // Load failure counter
+  let failState;
+  try {
+    failState = JSON.parse(fs.readFileSync(META_FAILURE_STATE, "utf-8"));
+  } catch {
+    failState = { consecutive_failures: 0, last_merge_hash: null };
+  }
+
+  // Check if the last merge was a META merge
+  let lastMerge = null;
+  let matchedHistoryEntry = null;
+  try {
+    const { lastMergeCommit } = require("./lib/git");
+    const candidate = lastMergeCommit();
+    if (candidate && candidate.message.startsWith("Merge meta/")) {
+      try {
+        const history = JSON.parse(fs.readFileSync(PROPOSAL_HISTORY, "utf-8"));
+        matchedHistoryEntry = (history.proposals || []).find(p =>
+          p.merge_commit === candidate.hash && p.status === "merged" && p.pushed_to_origin === true && !p.reverted
+        ) || null;
+      } catch {}
+      if (matchedHistoryEntry) {
+        lastMerge = candidate;
+      }
+    }
+  } catch {}
+
+  if (!lastMerge) {
+    // No recent META merge — reset counter
+    if (failState.consecutive_failures > 0) {
+      failState.consecutive_failures = 0;
+      failState.last_merge_hash = null;
+      try { fs.writeFileSync(META_FAILURE_STATE, JSON.stringify(failState, null, 2)); } catch {}
+    }
+    return;
+  }
+
+  // Track failures against this specific merge
+  if (failState.last_merge_hash !== lastMerge.hash) {
+    // New merge — reset counter
+    failState.last_merge_hash = lastMerge.hash;
+    failState.consecutive_failures = 0;
+  }
+
+  if (criticalHits.length > 0) {
+    failState.consecutive_failures++;
+    console.log(`[watchdog] META: ${failState.consecutive_failures} consecutive failure(s) after merge ${lastMerge.hash}`);
+  } else {
+    // No failures this cycle — reset
+    failState.consecutive_failures = 0;
+  }
+
+  try { fs.writeFileSync(META_FAILURE_STATE, JSON.stringify(failState, null, 2)); } catch {}
+
+  // Trigger auto-revert at 3 consecutive failures
+  if (failState.consecutive_failures >= 3) {
+    console.error(`[watchdog] META: 3 consecutive failures after merge — AUTO-REVERTING`);
+
+    try {
+      const { revertLastMerge } = require("./lib/git");
+      const reverted = revertLastMerge(lastMerge.hash);
+
+      if (reverted) {
+        console.log("[watchdog] META: revert successful");
+
+        // Update proposal history
+        try {
+          const history = JSON.parse(fs.readFileSync(PROPOSAL_HISTORY, "utf-8"));
+          const proposals = history.proposals || [];
+          let revertedProposalId = null;
+          for (let i = proposals.length - 1; i >= 0; i--) {
+            if (proposals[i].merge_commit === lastMerge.hash && !proposals[i].reverted) {
+              proposals[i].reverted = true;
+              proposals[i].revert_reason = `Auto-reverted: 3 consecutive failures (${criticalHits.map(h => h.name).join(", ")})`;
+              proposals[i].status = "reverted";
+              revertedProposalId = proposals[i].id;
+              break;
+            }
+          }
+          fs.writeFileSync(PROPOSAL_HISTORY, JSON.stringify(history, null, 2));
+          if (revertedProposalId) {
+            console.log("[watchdog] META: proposal_history updated with revert");
+            try {
+              const proposal = JSON.parse(fs.readFileSync(PROCESS_PROPOSAL, "utf-8"));
+              if (proposal.id === revertedProposalId) {
+                proposal.status = "reverted";
+                proposal.resolved_at = new Date().toISOString();
+                proposal.resolution = `Auto-reverted after merge ${lastMerge.hash}`;
+                fs.writeFileSync(PROCESS_PROPOSAL, JSON.stringify(proposal, null, 2));
+              }
+            } catch (e) {
+              console.error(`[watchdog] META: could not update process_proposal: ${e.message}`);
+            }
+          } else {
+            console.error(`[watchdog] META: no proposal_history entry matched merge ${lastMerge.hash}`);
+          }
+        } catch (e) {
+          console.error(`[watchdog] META: could not update proposal_history: ${e.message}`);
+        }
+
+        // Reset failure counter
+        failState.consecutive_failures = 0;
+        failState.last_merge_hash = null;
+        try { fs.writeFileSync(META_FAILURE_STATE, JSON.stringify(failState, null, 2)); } catch {}
+      } else {
+        console.error("[watchdog] META: git revert failed — manual intervention needed");
+      }
+    } catch (e) {
+      console.error(`[watchdog] META: auto-revert error: ${e.message}`);
+    }
+  }
+}
+
 // ── Main ───────────────────────────────────────────────────────────────────
 
 (async () => {
@@ -383,9 +507,19 @@ function runScript(scriptName) {
       if (match) hits.push({ ...p, count: match.length });
     }
 
-    // Save updated position
+    // Save updated position + worst severity seen this check
+    const SEVERITY_ORDER = ['OK', 'WARN', 'ERROR', 'CRITICAL'];
+    const worstSeverity = hits.length === 0 ? 'OK'
+      : hits.reduce((worst, h) =>
+          SEVERITY_ORDER.indexOf(h.severity) > SEVERITY_ORDER.indexOf(worst) ? h.severity : worst,
+        'OK');
     try {
-      fs.writeFileSync(STATE_FILE, JSON.stringify({ last_line: totalLines, checked_at: new Date().toISOString() }));
+      fs.writeFileSync(STATE_FILE, JSON.stringify({
+        last_line:     totalLines,
+        checked_at:    new Date().toISOString(),
+        last_severity: worstSeverity,
+        hit_count:     hits.length,
+      }));
     } catch (e) {
       console.error(`[watchdog] HEALTH: could not save state: ${e.message}`);
     }
@@ -399,6 +533,9 @@ function runScript(scriptName) {
         console.error(`[watchdog] HEALTH [${h.severity}] ${h.name} (x${h.count}): ${h.hint}`);
       }
     }
+
+    // ── META auto-revert: detect consecutive failures after meta merge ────
+    checkMetaAutoRevert(hits);
 
   } else {
     console.error(`[watchdog] unknown CYCLE_TYPE: "${TYPE}" — must be QUOTE, TWEET, JOURNAL, or HEALTH`);

@@ -73,6 +73,18 @@ else
   echo "  → No Vertex credentials file found (skipping)"
 fi
 
+# ── Step 3b: Transfer Builder (META cycle) service account ───────────────────
+echo "[3b/7] Transferring Builder Vertex AI credentials..."
+BUILDER_CREDS=$(grep '^BUILDER_CREDENTIALS=' "$LOCAL_PROJECT/.env" | cut -d'=' -f2-)
+if [ -n "$BUILDER_CREDS" ] && [ -f "$BUILDER_CREDS" ]; then
+  BUILDER_BASENAME=$(basename "$BUILDER_CREDS")
+  gscp "$BUILDER_CREDS" "$VM_NAME:~/hunter/$BUILDER_BASENAME"
+  gssh "sed -i 's|BUILDER_CREDENTIALS=.*|BUILDER_CREDENTIALS=/home/\$(whoami)/hunter/$BUILDER_BASENAME|' ~/hunter/.env"
+  echo "  → Builder credentials transferred + .env path updated"
+else
+  echo "  → No Builder credentials file found (skipping)"
+fi
+
 # ── Step 4: Transfer Chrome browser profile ──────────────────────────────────
 echo "[4/7] Transferring Chrome browser profile (~1.2 GB)..."
 echo "  → This may take a few minutes..."

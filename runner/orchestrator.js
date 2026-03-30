@@ -39,8 +39,78 @@ const buildBrowsePrompt = require('./lib/prompts/browse');
 const buildQuotePrompt = require('./lib/prompts/quote');
 const buildTweetPrompt = require('./lib/prompts/tweet');
 const buildFirstRunPrompt = require('./lib/prompts/first_run');
+const { buildBuilderPrompt } = require('./lib/prompts/builder');
+const { scanTools, executeToolRequest } = require('./lib/tools');
 
 const PROJECT_ROOT = config.PROJECT_ROOT;
+
+// ── META cycle state ────────────────────────────────────────────────────────
+const META_STATE_PATH = path.join(config.STATE_DIR, 'meta_last_run.txt');
+const PROPOSAL_PATH   = path.join(config.STATE_DIR, 'process_proposal.json');
+const STAGING_DIR     = path.join(PROJECT_ROOT, 'staging');
+
+function canRunMeta() {
+  // 1. Proposal must exist, be pending, and not expired
+  try {
+    const p = JSON.parse(fs.readFileSync(PROPOSAL_PATH, 'utf-8'));
+    if (p.status !== 'pending') return false;
+
+    const EXPIRY_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
+    const created = p.created_at ? new Date(p.created_at).getTime() : 0;
+    if (created && Date.now() - created > EXPIRY_MS) {
+      p.status       = 'expired';
+      p.resolved_at  = new Date().toISOString();
+      p.resolution   = 'Proposal expired after 7 days without execution';
+      fs.writeFileSync(PROPOSAL_PATH, JSON.stringify(p, null, 2));
+      log(`META: proposal "${p.title}" expired — skipping`);
+      return false;
+    }
+  } catch { return false; }
+
+  // 2. Max 1 META per 24h
+  try {
+    const lastRun = fs.readFileSync(META_STATE_PATH, 'utf-8').trim();
+    const elapsed = Date.now() - new Date(lastRun).getTime();
+    if (elapsed < 24 * 60 * 60 * 1000) return false;
+  } catch {} // file missing = never run → OK
+
+  // 3. Block if HEALTH check found CRITICAL errors in the last 2h
+  try {
+    const health  = JSON.parse(fs.readFileSync(
+      path.join(config.STATE_DIR, 'health_state.json'), 'utf-8'));
+    const ageMs   = Date.now() - new Date(health.checked_at).getTime();
+    if (ageMs < 2 * 60 * 60 * 1000
+        && (health.last_severity === 'CRITICAL' || health.last_severity === 'ERROR')) {
+      log(`META: blocked — HEALTH check found ${health.last_severity} errors in last 2h`);
+      return false;
+    }
+  } catch {} // health_state missing = no check yet → OK
+
+  return true;
+}
+
+/**
+ * Parse builder LLM response — extract fenced code blocks with staging paths.
+ * Expects format:
+ *   ### staging/path/to/file.js
+ *   ```javascript
+ *   ...code...
+ *   ```
+ */
+function parseBuilderResponse(response) {
+  const files = [];
+  // Match: ### staging/path\n```lang\ncontent\n```
+  const regex = /###\s+staging\/(.+?)\s*\n```[^\n]*\n([\s\S]*?)```/g;
+  let match;
+  while ((match = regex.exec(response)) !== null) {
+    const filePath = match[1].trim();
+    const content = match[2];
+    // Sanitize path: no .., no absolute paths
+    if (filePath.includes('..') || filePath.startsWith('/')) continue;
+    files.push({ filePath, content });
+  }
+  return files;
+}
 
 // ── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -127,6 +197,7 @@ function newCycleMetrics() {
     postAttempted: false, // whether a post pipeline was run
     postSuccess: null,    // true/false/null (null = no post this cycle)
     browserRestarted: false,
+    toolExecuted: false,  // whether a tool request was processed
     downgradedToBrowse: false,
     errors: [],           // any notable errors captured
   };
@@ -253,6 +324,14 @@ function journalInGit(today, hour) {
 
 log('Node orchestrator started (Phase 5 + Phase 6 logging)');
 
+// ── Tool discovery ────────────────────────────────────────────────────────
+try {
+  const tools = scanTools();
+  log(`tools: ${tools.length} discovered${tools.length ? ' (' + tools.map(t => t.name).join(', ') + ')' : ''}`);
+} catch (e) {
+  log(`tool discovery failed (non-fatal): ${e.message}`);
+}
+
 let cycle = 0;
 let totalCycles = 0;
 let totalPostAttempts = 0;
@@ -300,6 +379,16 @@ function runOneCycle() {
   const hour = String(new Date().getHours()).padStart(2, '0');
   const dayNumber = getDayNumber(today);
   const metrics = newCycleMetrics();
+
+  // ── Recover stale META proposal (process crash recovery) ────────────────
+  try {
+    const p = JSON.parse(fs.readFileSync(PROPOSAL_PATH, 'utf-8'));
+    if (p.status === 'building' || p.status === 'testing') {
+      log(`recovering stale proposal "${p.title}" (status: ${p.status}) → pending`);
+      p.status = 'pending';
+      fs.writeFileSync(PROPOSAL_PATH, JSON.stringify(p, null, 2));
+    }
+  } catch {}
 
   // ── Determine cycle type (cadence-aware) ────────────────────────────────
   const cadence = readDirectives();
@@ -458,6 +547,108 @@ function runOneCycle() {
     metrics.agentExitCodes.push(exitCode);
     checkAndFixGatewayTimeout(gwBefore);
 
+  // ── META cycle (replaces BROWSE when proposal is pending) ──────────────
+  } else if (cycleType === 'BROWSE' && canRunMeta()) {
+    cycleType = 'META';
+    log('META cycle: pending proposal detected — running builder');
+
+    try {
+      const proposal = JSON.parse(fs.readFileSync(PROPOSAL_PATH, 'utf-8'));
+
+      // Load previous attempts from history
+      let previousAttempts = [];
+      try {
+        const history = JSON.parse(fs.readFileSync(
+          path.join(config.STATE_DIR, 'proposal_history.json'), 'utf-8'));
+        previousAttempts = (history.proposals || [])
+          .filter(p => p.id === proposal.id && p.status === 'failed');
+      } catch {}
+
+      // Build prompt
+      const prompt = buildBuilderPrompt({ proposal, previousAttempts });
+
+      // Mark proposal as building
+      proposal.status = 'building';
+      fs.writeFileSync(PROPOSAL_PATH, JSON.stringify(proposal, null, 2));
+
+      // Call builder agent via Vertex AI (sync wrapper around async)
+      log('calling builder agent (Vertex AI)...');
+      let response;
+      try {
+        // Write prompt to temp file, call builder in subprocess
+        const tmpPrompt = path.join(config.STATE_DIR, 'builder_prompt.txt');
+        fs.writeFileSync(tmpPrompt, prompt);
+        response = execSync(
+          `node "${path.join(PROJECT_ROOT, 'runner/builder_call.js')}" "${tmpPrompt}"`,
+          {
+            encoding: 'utf-8',
+            timeout: 300_000, // 5 min for code generation
+            cwd: PROJECT_ROOT,
+            maxBuffer: 10 * 1024 * 1024,
+          }
+        );
+        try { fs.unlinkSync(tmpPrompt); } catch {}
+      } catch (e) {
+        const stderr = e.stderr ? e.stderr.toString().slice(0, 300) : e.message;
+        throw new Error(`Builder call failed: ${stderr}`);
+      }
+
+      // Parse response — extract fenced code blocks and write to staging/
+      log('parsing builder response...');
+      fs.mkdirSync(STAGING_DIR, { recursive: true });
+
+      const fileBlocks = parseBuilderResponse(response);
+      if (fileBlocks.length === 0) {
+        throw new Error('Builder produced no valid file blocks');
+      }
+      for (const { filePath: fp, content } of fileBlocks) {
+        const fullPath = path.join(STAGING_DIR, fp);
+        fs.mkdirSync(path.dirname(fullPath), { recursive: true });
+        fs.writeFileSync(fullPath, content);
+        log(`staging: ${fp}`);
+      }
+
+      // Run builder pipeline
+      log('running builder pipeline...');
+      proposal.status = 'testing';
+      fs.writeFileSync(PROPOSAL_PATH, JSON.stringify(proposal, null, 2));
+
+      const pipelineExit = (() => {
+        try {
+          execSync(`node "${path.join(PROJECT_ROOT, 'runner/builder_pipeline.js')}"`, {
+            stdio: 'inherit',
+            timeout: 120_000,
+            cwd: PROJECT_ROOT,
+          });
+          return 0;
+        } catch (e) {
+          return e.status || 1;
+        }
+      })();
+
+      if (pipelineExit === 0) {
+        log('META cycle: proposal merged successfully');
+      } else {
+        log(`META cycle: pipeline exited with code ${pipelineExit}`);
+      }
+
+      // Record META run timestamp
+      fs.writeFileSync(META_STATE_PATH, new Date().toISOString());
+
+    } catch (e) {
+      log(`META cycle failed: ${e.message}`);
+      // Reset proposal to pending so it can be retried
+      try {
+        const proposal = JSON.parse(fs.readFileSync(PROPOSAL_PATH, 'utf-8'));
+        if (proposal.status === 'building' || proposal.status === 'testing') {
+          proposal.status = 'pending';
+          fs.writeFileSync(PROPOSAL_PATH, JSON.stringify(proposal, null, 2));
+        }
+      } catch {}
+      // Record META run timestamp even on failure (24h cooldown still applies)
+      try { fs.writeFileSync(META_STATE_PATH, new Date().toISOString()); } catch {}
+    }
+
   // ── BROWSE cycle ──────────────────────────────────────────────────────
   } else if (cycleType === 'BROWSE') {
     // Pre-browse: 11 scripts (FTS5 heal, query, recall, curiosity, etc.)
@@ -496,6 +687,19 @@ function runOneCycle() {
     // Post-browse: cleanup_tabs, reading_queue --mark-done, ontology delta,
     //   drift, journal commit/push, moltbook, checkpoint retry, reply
     postBrowse({ cycle, today, hour });
+
+    // ── Tool execution (if Sebastian requested a tool) ────────────────────
+    if (fileExists(config.TOOL_REQUEST_PATH)) {
+      try {
+        log('tool request detected — executing...');
+        const toolResult = executeToolRequest();
+        const name = toolResult.workflow ? 'workflow' : toolResult.tool;
+        log(`tool "${name}" completed: ${toolResult.status}`);
+        metrics.toolExecuted = true;
+      } catch (e) {
+        log(`tool execution failed: ${e.message}`);
+      }
+    }
 
     // ── Cadence: self-regulated assessment after browse ──────────────────────
     try {
@@ -556,6 +760,19 @@ function runOneCycle() {
     // Coherence critique
     runScriptLog(path.join(PROJECT_ROOT, 'runner/critique.js'),
       `--quote --cycle "${cycle}"`);
+
+    // ── Tool execution ────────────────────────────────────────────────────
+    if (fileExists(config.TOOL_REQUEST_PATH)) {
+      try {
+        log('tool request detected (QUOTE) — executing...');
+        const toolResult = executeToolRequest();
+        const name = toolResult.workflow ? 'workflow' : toolResult.tool;
+        log(`tool "${name}" completed: ${toolResult.status}`);
+        metrics.toolExecuted = true;
+      } catch (e) {
+        log(`tool execution failed: ${e.message}`);
+      }
+    }
 
   // ── TWEET cycle ───────────────────────────────────────────────────────
   } else if (cycleType === 'TWEET') {
@@ -638,6 +855,19 @@ function runOneCycle() {
     // Coherence critique
     runScriptLog(path.join(PROJECT_ROOT, 'runner/critique.js'),
       `--cycle "${cycle}"`);
+
+    // ── Tool execution ────────────────────────────────────────────────────
+    if (fileExists(config.TOOL_REQUEST_PATH)) {
+      try {
+        log('tool request detected (TWEET) — executing...');
+        const toolResult = executeToolRequest();
+        const name = toolResult.workflow ? 'workflow' : toolResult.tool;
+        log(`tool "${name}" completed: ${toolResult.status}`);
+        metrics.toolExecuted = true;
+      } catch (e) {
+        log(`tool execution failed: ${e.message}`);
+      }
+    }
   }
 
   // ── Daily maintenance (self-gated, runs after ANY cycle type) ──────────
@@ -678,6 +908,7 @@ function runOneCycle() {
     postAttempted: metrics.postAttempted,
     postSuccess: metrics.postSuccess,
     browserRestarted: metrics.browserRestarted,
+    toolExecuted: metrics.toolExecuted,
     downgradedToBrowse: metrics.downgradedToBrowse,
     health: {
       totalCycles,

@@ -49,6 +49,13 @@ function buildPreamble(ctx) {
     ctx.cadence + '\n' +
     '\u2500\u2500 CAPTURE STATUS (am I being captured?) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.captureStatus + '\n' +
+    '\u2500\u2500 PROCESS PROPOSALS (META self-improvement) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
+    'Active: ' + (ctx.proposalStatus || '(none)') + '\n' +
+    'Recent: ' + (ctx.proposalHistory || '(no history)') + '\n' +
+    '\u2500\u2500 AVAILABLE TOOLS \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
+    (ctx.toolManifest || '(no tools registered)') + '\n' +
+    '\u2500\u2500 LAST TOOL RESULT \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
+    (ctx.lastToolResult || '(none)') + '\n' +
     '\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n';
 }
 
@@ -132,6 +139,17 @@ function buildNormalTasks(ctx) {
     '   - Only write the fields you want to change \u2014 omitted fields keep their previous values.\n' +
     '   - Max 3 consecutive next_cycle_type overrides before the system resets to auto.\n' +
     '7. JOURNAL: ' + ctx.journalTask + '\n' +
+    '8. TOOLS (optional): If you need to execute a registered tool, write state/tool_request.json.\n' +
+    '   Single tool:\n' +
+    '   { "tool": "<tool_name>", "args": { ... } }\n' +
+    '   Workflow (sequential, max 5 steps):\n' +
+    '   { "workflow": [\n' +
+    '       { "tool": "<tool_name>", "args": { ... } },\n' +
+    '       { "tool": "<tool_name>", "args": { "$prev": true, "other": "..." } }\n' +
+    '   ]}\n' +
+    '   $prev merges the previous step result into args. The orchestrator runs tools\n' +
+    '   AFTER your agent run completes. Results appear in LAST TOOL RESULT next cycle.\n' +
+    '   Do NOT write tool_result.json yourself. Only request tools listed in AVAILABLE TOOLS.\n' +
     'Next tweet cycle: ' + ctx.nextTweet + '.\n';
 }
 

@@ -59,6 +59,24 @@ module.exports = {
   HEARTBEAT_PATH: path.join(PROJECT_ROOT, 'HEARTBEAT.md'),
   INDEX_DB_PATH: path.join(STATE_DIR, 'index.db'),
 
+  // META cycle state
+  PROCESS_PROPOSAL_PATH: path.join(STATE_DIR, 'process_proposal.json'),
+  PROPOSAL_HISTORY_PATH: path.join(STATE_DIR, 'proposal_history.json'),
+  META_LAST_RUN_PATH: path.join(STATE_DIR, 'meta_last_run.txt'),
+  META_FAILURE_STATE_PATH: path.join(STATE_DIR, 'meta_failure_count.json'),
+  STAGING_DIR: path.join(PROJECT_ROOT, 'staging'),
+
+  // Tool system
+  TOOLS_DIR: path.join(PROJECT_ROOT, 'tools'),
+  TOOL_REQUEST_PATH: path.join(STATE_DIR, 'tool_request.json'),
+  TOOL_RESULT_PATH: path.join(STATE_DIR, 'tool_result.json'),
+  TOOL_TIMEOUT_MS: 30_000,
+  WORKFLOW_TIMEOUT_MS: 120_000,
+  SANDBOXES_DIR: path.join(STATE_DIR, 'sandboxes'),
+  SANDBOX_REAP_MAX_AGE_MS: 6 * 60 * 60 * 1000,
+  SANDBOX_STDIO_MAX_BYTES: 64 * 1024,
+  SANDBOX_MAX_OLD_SPACE_MB: 96,
+
   // Runner files
   RUNNER_LOG_PATH: path.join(RUNNER_DIR, 'runner.log'),
   ORCHESTRATOR_LOG_PATH: path.join(RUNNER_DIR, 'orchestrator.log'),

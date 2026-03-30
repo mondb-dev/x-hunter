@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const config = require('../config');
+const { buildToolManifest, loadLastToolResult } = require('../tools');
 
 // ── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -141,6 +142,38 @@ function formatCadence() {
 }
 
 /**
+ * Load current proposal status — compact summary for browse prompt.
+ */
+function loadProposalStatus() {
+  try {
+    const p = JSON.parse(fs.readFileSync(
+      path.join(config.STATE_DIR, 'process_proposal.json'), 'utf-8'));
+    return `Proposal "${p.title}" — status: ${p.status} (${p.scope}, risk: ${p.estimated_risk})`;
+  } catch {
+    return '(no active proposal)';
+  }
+}
+
+/**
+ * Load proposal history — compact summary of past proposals and outcomes.
+ */
+function loadProposalHistory() {
+  try {
+    const h = JSON.parse(fs.readFileSync(
+      path.join(config.STATE_DIR, 'proposal_history.json'), 'utf-8'));
+    const proposals = h.proposals || [];
+    if (proposals.length === 0) return '(no proposals yet)';
+    return proposals.slice(-5).map(p =>
+      `- [${p.status}] "${p.title}" (${p.resolved_at?.slice(0, 10) || '?'})` +
+      (p.resolution_notes ? ` — ${p.resolution_notes.slice(0, 80)}` : '') +
+      (p.reverted ? ' [REVERTED]' : '')
+    ).join('\n');
+  } catch {
+    return '(no proposal history)';
+  }
+}
+
+/**
  * Load sprint context with active_plan.json fallback (tweet prompt).
  */
 function loadActivePlanContext() {
@@ -271,6 +304,14 @@ function loadContext(opts) {
     ctx.journalTask       = buildJournalTask('browse', today, hour, dayNumber);
     ctx.nextTweet         = (Math.floor(cycle / config.TWEET_EVERY) + 1) * config.TWEET_EVERY;
 
+    // META cycle awareness: load proposal + history so Sebastian sees outcomes
+    ctx.proposalStatus    = loadProposalStatus();
+    ctx.proposalHistory   = loadProposalHistory();
+
+    // Tool system
+    ctx.toolManifest      = buildToolManifest();
+    ctx.lastToolResult    = loadLastToolResult();
+
     // Silent-hours sprint detection (UTC 23-07: feed is stale, redirect to sprint work)
     const hourInt = parseInt(hour, 10);
     ctx.isSilentHours = hourInt < config.TWEET_START || hourInt >= config.TWEET_END;
@@ -286,6 +327,7 @@ function loadContext(opts) {
     ctx.topAxes           = formatTopAxes();
     ctx.memoryRecall      = readState(config.MEMORY_RECALL_PATH, { fallback: '(empty)' });
     ctx.postingDirective  = readState(config.POSTING_DIRECTIVE_PATH, { fallback: '' });
+    ctx.lastToolResult    = loadLastToolResult();
   }
 
   if (type === 'tweet') {
@@ -297,6 +339,8 @@ function loadContext(opts) {
     ctx.captureStatus     = formatCaptureStatus();
     ctx.postingDirective  = readState(config.POSTING_DIRECTIVE_PATH, { fallback: '' });
     ctx.journalTask       = buildJournalTask('tweet', today, hour, dayNumber);
+    ctx.toolManifest      = buildToolManifest();
+    ctx.lastToolResult    = loadLastToolResult();
   }
 
   return ctx;

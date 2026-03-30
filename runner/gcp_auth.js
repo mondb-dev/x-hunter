@@ -27,8 +27,8 @@ if (fs.existsSync(path.join(ROOT, ".env"))) {
   }
 }
 
-let _cachedToken = null;
-let _tokenExpiry = 0;
+// Per-key token cache: keyPath → { token, expiry }
+const _tokenCache = new Map();
 
 function base64url(buf) {
   return buf.toString("base64").replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
@@ -52,22 +52,28 @@ function makeJwt(serviceAccount) {
   return `${unsigned}.${sig}`;
 }
 
-async function getAccessToken() {
-  if (_cachedToken && Date.now() < _tokenExpiry) return _cachedToken;
+/**
+ * Get an access token for a specific service account key file.
+ * Tokens are cached per key path and refreshed ~60s before expiry.
+ *
+ * @param {string} keyPath - absolute path to a GCP service account JSON
+ */
+async function getTokenForKey(keyPath) {
+  if (!keyPath) throw new Error("keyPath is required for getTokenForKey");
 
-  const keyPath = process.env.GOOGLE_APPLICATION_CREDENTIALS;
-  if (!keyPath) throw new Error("GOOGLE_APPLICATION_CREDENTIALS not set");
-  const sa = JSON.parse(fs.readFileSync(keyPath, "utf-8"));
+  const cached = _tokenCache.get(keyPath);
+  if (cached && Date.now() < cached.expiry) return cached.token;
 
-  const jwt  = makeJwt(sa);
+  const sa  = JSON.parse(fs.readFileSync(keyPath, "utf-8"));
+  const jwt = makeJwt(sa);
   const body = `grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=${jwt}`;
 
   return new Promise((resolve, reject) => {
     const req = https.request({
       hostname: "oauth2.googleapis.com",
-      path: "/token",
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      path:     "/token",
+      method:   "POST",
+      headers:  { "Content-Type": "application/x-www-form-urlencoded" },
     }, res => {
       let raw = "";
       res.on("data", c => raw += c);
@@ -75,9 +81,11 @@ async function getAccessToken() {
         try {
           const j = JSON.parse(raw);
           if (!j.access_token) throw new Error(`Token exchange failed: ${raw.slice(0, 200)}`);
-          _cachedToken = j.access_token;
-          _tokenExpiry = Date.now() + (j.expires_in - 60) * 1000;
-          resolve(_cachedToken);
+          _tokenCache.set(keyPath, {
+            token:  j.access_token,
+            expiry: Date.now() + (j.expires_in - 60) * 1000,
+          });
+          resolve(j.access_token);
         } catch (e) { reject(e); }
       });
     });
@@ -87,6 +95,16 @@ async function getAccessToken() {
   });
 }
 
+/**
+ * Get an access token using the default GOOGLE_APPLICATION_CREDENTIALS.
+ * Delegates to getTokenForKey — single code path for all token exchange.
+ */
+async function getAccessToken() {
+  const keyPath = process.env.GOOGLE_APPLICATION_CREDENTIALS;
+  if (!keyPath) throw new Error("GOOGLE_APPLICATION_CREDENTIALS not set");
+  return getTokenForKey(keyPath);
+}
+
 function getProjectConfig() {
   return {
     project:  process.env.VERTEX_PROJECT_ID || "sebastian-hunter",
@@ -94,4 +112,4 @@ function getProjectConfig() {
   };
 }
 
-module.exports = { getAccessToken, getProjectConfig };
+module.exports = { getAccessToken, getTokenForKey, getProjectConfig };
