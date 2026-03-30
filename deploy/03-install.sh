@@ -75,6 +75,9 @@ fi
 # Set workspace and model
 openclaw config set agents.defaults.workspace "$PROJECT_DIR"
 openclaw config set agents.defaults.model.primary "google/gemini-2.5-flash"
+openclaw config set browser.headless true
+openclaw config set browser.noSandbox true
+openclaw config set browser.defaultProfile "$OPENCLAW_PROFILE"
 
 # Register x-hunter agent
 openclaw agents add x-hunter \
