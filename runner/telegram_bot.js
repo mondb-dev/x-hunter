@@ -44,13 +44,6 @@ const path = require('path');
 const { execSync, execFileSync, spawnSync } = require('child_process');
 const config = require('./lib/config');
 
-// Default every spawned OpenClaw command to the dedicated x-hunter profile.
-process.env.OPENCLAW_PROFILE = process.env.OPENCLAW_PROFILE || 'x-hunter';
-process.env.OPENCLAW_STATE_DIR = process.env.OPENCLAW_STATE_DIR
-  || path.join(process.env.HOME || '', `.openclaw-${process.env.OPENCLAW_PROFILE}`);
-process.env.OPENCLAW_CONFIG_PATH = process.env.OPENCLAW_CONFIG_PATH
-  || path.join(process.env.OPENCLAW_STATE_DIR, 'openclaw.json');
-
 // ── Config ──────────────────────────────────────────────────────────────────
 
 const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '';

@@ -48,11 +48,6 @@ else
   exit 1
 fi
 
-# Keep every OpenClaw invocation on the same named profile/state directory.
-export OPENCLAW_PROFILE="${OPENCLAW_PROFILE:-x-hunter}"
-export OPENCLAW_STATE_DIR="${OPENCLAW_STATE_DIR:-$HOME/.openclaw-$OPENCLAW_PROFILE}"
-export OPENCLAW_CONFIG_PATH="${OPENCLAW_CONFIG_PATH:-$OPENCLAW_STATE_DIR/openclaw.json}"
-
 # ── Confirm gateway is running ────────────────────────────────────────────────
 if ! openclaw gateway status &>/dev/null; then
   echo "[run] Gateway not running. Starting..."
