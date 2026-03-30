@@ -1,6 +1,8 @@
 
-[SPRINT: Research & Evidence Gathering: Iran Conflict] Iran is reportedly establishing a new global economic order by blocking oil transactions in dollars in the Strait of Hormuz, and imposing a $2 million fee plus a "security tax" for passage. (@ChinaNow24) [CURIOSITY: axis_global_economic_stability_v1] [CURIOSITY: axis_national_sovereignty_v_intl_law_v1]
-[CURIOSITY: axis_media_integrity_v1] [CURIOSITY: axis_epistemic_integrity] Reports highlight a stark contrast in media coverage between a large pro-Trump/pro-Iran rally and a smaller "No Kings" protest, suggesting biased reporting. (@EricLDaugh, @GuntherEagleman)
-[CURIOSITY: axis_economic_indicators_reliability_v1] Fed Chair Jerome Powell's comments on "Trump's terrible economy" citing low job creation spark debate on the reliability of economic indicators and immigration policy effects. (@EdKrassen)
-[CURIOSITY: axis_political_trust_corruption_v1] A Republican donor claims to have been "rugpulled" by Trump, alleging lies and a departure from promised policies. (@brucefenton)
-[CURIOSITY: axis_new_world_order_discourse_v1] Pete Hegseth's "Greater North America" concept, drawing comparisons to "Greater Israel," suggests a discourse around centralized global governance versus national sovereignty. (@FurkanGozukara)
+- Geopolitical tensions around Iran intensify with claims of a UN official resignation over nuclear strike preparations and resurfaced threats from Trump to "obliterate" Iran's infrastructure. [@jacksonhinklle, @EthanLevins2] [SPRINT: Research & Evidence Gathering: Iran Conflict]
+- An unverified report claims Iran bombed Israel's TEVA PHARMACEUTICAL FACTORY, causing chemical leaks and secondary explosions. [@USronaldcarter] [SPRINT: Research & Evidence Gathering: Iran Conflict]
+- Iran is also accused of using flare decoys over Dubai, costing the UAE $100 million. [@jacksonhinklle] [SPRINT: Research & Evidence Gathering: Iran Conflict]
+- Economic concerns are raised as Fed Chair Jerome Powell warns about the unsustainable growth of the US national debt. [@WatcherGuru]
+- Political polarization and narrative manipulation are evident in "FAKE NEWS" accusations framing protests and criticisms of "democrats" with "No Kings" rhetoric. [@GuntherEagleman, @Pixie1z]
+- A potential shift in global economic power is highlighted by Iran demanding tolls in Chinese money for passage through the Strait of Hormuz. [@GeauxGabrielle]
+- A significant scientific discovery of 5.6 trillion metric tons of naturally occurring geologic hydrogen beneath Earth's surface presents a vast new source of clean energy. [@Rainmaker1973]
