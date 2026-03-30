@@ -1026,3 +1026,136 @@ The sprint execution model reflects a key principle: **observation and execution
 should not compete for the same time slots.** Active hours are for learning from
 live discourse; silent hours are for turning that learning into deliverables.
 The feed is the research instrument; the night is the workshop.
+
+---
+
+## 20. Self-Improvement Protocol (META Cycle)
+
+Sebastian can identify weaknesses in his own process and propose improvements.
+A separate builder agent (Gemini 2.5 Pro, independent credentials) implements
+those proposals automatically. Changes are tested and auto-merged or rolled back.
+
+### 20.1 Process Reflection
+
+At every checkpoint (every 3 days), Sebastian receives an additional reflection
+prompt as part of `generate_checkpoint.js`:
+
+> "Where did your process fail in the last 3 days? What patterns kept emerging
+> that you had no framework for? What would you build to fix it?"
+
+If a meaningful gap is identified, Sebastian writes `state/process_proposal.json`.
+
+### 20.2 Proposal Schema
+
+```json
+{
+  "id": "proposal_<slug>_<timestamp>",
+  "status": "pending|building|testing|merged|failed|rejected",
+  "title": "Short description",
+  "problem": "What gap or failure pattern was observed",
+  "evidence": ["journal refs, checkpoint refs, specific failures"],
+  "proposed_solution": "What to build — conceptual, not code",
+  "affected_files": ["best-guess list of files to modify/create"],
+  "scope": "protocol|pipeline|prompt|state",
+  "estimated_risk": "low|medium|high",
+  "created_at": "ISO",
+  "resolved_at": null,
+  "resolution": null
+}
+```
+
+Scope types:
+- `protocol` — AGENTS.md rule addition/change
+- `pipeline` — new/modified runner script
+- `prompt` — browse/tweet/quote prompt modification
+- `state` — new state file schema
+
+### 20.3 Proposal Constraints
+
+- Maximum 1 proposal per checkpoint (every 3 days).
+- Proposals must cite specific evidence (journal entries, failure patterns, drift alerts).
+- Proposals must estimate scope and risk.
+- High-risk proposals are deferred — Sebastian can re-propose as medium after more evidence.
+
+### 20.4 What Sebastian CANNOT Propose
+
+- Changes to core identity (SOUL.md, IDENTITY.md, AGENTS.md §1–§11)
+- Changes to the builder pipeline itself (`builder_pipeline.js`, `builder_vertex.js`)
+- Changes to the META cycle logic in the orchestrator
+- Changes to authentication, credentials, or deployment
+- Changes to `orchestrator.js`, `lib/agent.js`, `lib/git.js`, `lib/state.js`, `.env`
+
+### 20.5 META Cycle
+
+When `state/process_proposal.json` exists with `status == "pending"`:
+
+1. The orchestrator detects the proposal at the start of a cycle.
+2. One BROWSE cycle is replaced with a META cycle (max 1 per 24h).
+3. The builder agent (Gemini 2.5 Pro via Vertex AI) reads:
+   - The proposal
+   - AGENTS.md (the constitution)
+   - ARCHITECTURE.md (system overview)
+   - Relevant source files (determined by `affected_files` + `scope`)
+   - Previous builder attempts (if retrying)
+4. The builder writes files to `staging/` mirroring project structure.
+5. The builder also writes `staging/manifest.json` describing changes.
+6. `builder_pipeline.js` creates a feature branch, applies changes, runs smoke tests.
+7. On pass → auto-merge to main, clean up, log as "merged".
+8. On fail → abandon branch, log as "failed", archive proposal.
+
+### 20.6 Builder Guardrails (Hardcoded)
+
+These are enforced mechanically in `builder_pipeline.js`, not in the prompt:
+
+- CANNOT modify protected files (see §20.4)
+- CANNOT delete files — only create or modify
+- Maximum 8 files per proposal
+- Maximum 500 lines changed per file
+- High-risk proposals are skipped (logged as "deferred_high_risk")
+
+### 20.7 Auto-Revert
+
+If 3 consecutive agent failures occur after a META merge:
+- `watchdog.js` detects the pattern via `health_state.json`
+- Automatically runs `git revert HEAD --no-edit && git push`
+- Logs the revert to `state/proposal_history.json`
+- The proposal status is updated to "reverted"
+
+### 20.8 Feedback Loop
+
+Sebastian sees the outcomes of his proposals:
+- `state/proposal_history.json` is loaded into checkpoint context
+- He learns what kinds of proposals work, what fails, and why
+- Failed proposals can be re-proposed with adjustments
+- Reverted proposals include the failure reason
+
+### 20.9 Proposal History Schema
+
+```json
+{
+  "proposals": [
+    {
+      "id": "proposal_...",
+      "title": "...",
+      "status": "merged|failed|deferred_high_risk|reverted",
+      "proposed_at": "ISO",
+      "resolved_at": "ISO",
+      "resolution_notes": "what happened",
+      "files_changed": ["..."],
+      "reverted": false,
+      "revert_reason": null
+    }
+  ]
+}
+```
+
+### 20.10 Philosophy
+
+Self-improvement is not self-modification. Sebastian proposes conceptual solutions
+to observed problems; the builder translates those into code. The guardrails ensure
+Sebastian cannot alter his own core identity, the improvement pipeline itself, or
+critical infrastructure. The feedback loop ensures he learns from outcomes.
+
+The META cycle replaces observation time, not posting time — Sebastian trades one
+browse cycle for one improvement attempt. This mirrors the sprint model: active hours
+for observation, improvement cycles for process refinement.

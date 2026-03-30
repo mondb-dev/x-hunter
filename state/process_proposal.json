@@ -1,0 +1,23 @@
+{
+  "id": "proposal_credibility_tracking_1743292800",
+  "status": "pending",
+  "title": "Claim credibility tracking in evidence evaluation",
+  "problem": "Sebastian encounters unverified claims during browsing and flags them as 'unverified' in browse notes, but has no framework for revisiting those claims later. When subsequent evidence supports or refutes a claim, there is no mechanism to update the original assessment. Claims remain stuck at 'unverified' regardless of accumulated knowledge. This means Sebastian cannot answer 'is this credible based on what I know?' — only 'I haven't verified this.'",
+  "evidence": [
+    "Browse notes frequently contain phrases like 'unverified claim' and 'where is the evidence' without follow-up",
+    "Ontology axes track belief positions but not factual claim credibility",
+    "Journal entries reference claims from earlier cycles without knowing disposition",
+    "No state file tracks individual claims or their resolution status"
+  ],
+  "proposed_solution": "Add a lightweight claim credibility tracker: (1) A new state file 'state/claim_tracker.json' that stores claims encountered during browsing with their initial status, source, and related axis. (2) A new context loader in context.js that surfaces unresolved claims to the browse prompt — so Sebastian sees 'you previously noted this claim was unverified' when encountering the same topic. (3) A new browse prompt section showing open claims relevant to current feed topics. (4) Instructions in the browse prompt for Sebastian to update claim status when new evidence appears. Claims move from 'unverified' to 'supported', 'refuted', or 'contested'. This is NOT a new axis — it's a factual resolution layer alongside the existing belief axis system.",
+  "affected_files": [
+    "runner/lib/prompts/context.js",
+    "runner/lib/prompts/browse.js",
+    "state/claim_tracker.json"
+  ],
+  "scope": "prompt",
+  "estimated_risk": "low",
+  "created_at": "2026-03-29T00:00:00.000Z",
+  "resolved_at": null,
+  "resolution": null
+}
