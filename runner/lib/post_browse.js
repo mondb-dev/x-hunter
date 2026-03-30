@@ -14,6 +14,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const config = require('./config');
+const { triggerVercelDeploy } = require('./git');
 
 const PROJECT_ROOT = config.PROJECT_ROOT;
 const RUNNER_LOG = config.RUNNER_LOG_PATH;
@@ -159,6 +160,7 @@ function postBrowse({ cycle, today, hour }) {
         );
         execSync(`git -C "${PROJECT_ROOT}" push origin main`, { stdio: 'ignore', timeout: 30_000 });
         log('browse journal pushed');
+        triggerVercelDeploy(process.env.VERCEL_DEPLOY_HOOK || '');
       } catch {}
 
       // 5d. archive.js + JOURNAL watchdog

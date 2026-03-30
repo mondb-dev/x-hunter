@@ -534,6 +534,10 @@ while true; do
         git -C "$PROJECT_ROOT" commit -m "journal: ${TODAY} ${HOUR} (browse cycle ${CYCLE})" 2>/dev/null || true
         git -C "$PROJECT_ROOT" push origin main 2>/dev/null || true
         echo "[run] browse journal pushed"
+        if [ -n "${VERCEL_DEPLOY_HOOK:-}" ]; then
+          curl -s -X POST "$VERCEL_DEPLOY_HOOK" > /dev/null 2>&1 || true
+          echo "[run] Vercel deploy hook triggered"
+        fi
         node "$PROJECT_ROOT/runner/archive.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
         CYCLE_TYPE=JOURNAL node "$PROJECT_ROOT/runner/watchdog.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
       fi
