@@ -41,6 +41,12 @@ async function sleep(ms) {
   return new Promise(r => setTimeout(r, ms));
 }
 
+/** Random delay between min and max ms — mimics human timing variance */
+async function humanDelay(minMs, maxMs) {
+  const ms = minMs + Math.floor(Math.random() * (maxMs - minMs));
+  return sleep(ms);
+}
+
 function normalizeText(value) {
   return String(value || "").replace(/\s+/g, " ").trim().toLowerCase();
 }
@@ -129,12 +135,12 @@ async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_
       waitUntil: "domcontentloaded",
       timeout: 45_000,
     });
-    await sleep(2_000);
+    await humanDelay(2_500, 5_000); // human-like pause after page load
 
     // Wait for compose box
     console.log("[post_tweet] waiting for compose box...");
     await page.waitForSelector(COMPOSE_BOX, { timeout: 15_000 });
-    await sleep(500);
+    await humanDelay(500, 1_500);
 
     // Click + focus via evaluate (page.focus() and page.click() hang on this Chrome/puppeteer combo)
     await page.evaluate((sel) => {
@@ -144,7 +150,7 @@ async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_
     await page.evaluate((sel) => {
       document.querySelector(sel)?.focus();
     }, COMPOSE_BOX);
-    await sleep(2_000); // wait for React editor to fully initialise before inserting text
+    await humanDelay(2_000, 4_000); // wait for React editor to fully initialise before inserting text
 
     // Insert via execCommand — most reliable for React contenteditable (no clipboard perms needed)
     console.log("[post_tweet] inserting tweet via execCommand...");
@@ -191,7 +197,7 @@ async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_
     // Wait for Post button to be enabled
     console.log("[post_tweet] waiting for Post button...");
     await page.waitForSelector(POST_BUTTON, { timeout: 10_000 });
-    await sleep(500);
+    await humanDelay(500, 1_500);
 
     // Confirm it's not disabled
     const isDisabled = await page.$eval(POST_BUTTON, el => el.getAttribute("aria-disabled")).catch(() => null);
@@ -202,6 +208,7 @@ async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_
     }
 
     // Click Post (evaluate-based avoids Runtime.callFunctionOn timeout)
+    await humanDelay(1_500, 3_500); // human pause before posting
     console.log("[post_tweet] clicking Post...");
     await page.evaluate((sel) => {
       const el = document.querySelector(sel);

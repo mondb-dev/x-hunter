@@ -42,6 +42,12 @@ async function sleep(ms) {
   return new Promise(r => setTimeout(r, ms));
 }
 
+/** Random delay between min and max ms — mimics human timing variance */
+async function humanDelay(minMs, maxMs) {
+  const ms = minMs + Math.floor(Math.random() * (maxMs - minMs));
+  return sleep(ms);
+}
+
 function normalizeText(value) {
   return String(value || "").replace(/\s+/g, " ").trim().toLowerCase();
 }
@@ -210,6 +216,8 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
     console.log(`[post_quote] navigating to source tweet: ${sourceUrl}`);
     await page.goto(sourceUrl, { waitUntil: "domcontentloaded", timeout: 45_000 });
 
+    await humanDelay(2_000, 4_000); // pause after page load before interacting
+
     // Poll for retweet button (up to 15s)
     await poll(page, "retweet button", "[data-testid='retweet']", { attempts: 15, interval: 1_000 });
 
@@ -234,6 +242,7 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
     }
 
     // Click the Retweet button
+    await humanDelay(800, 2_000);
     console.log("[post_quote] clicking Retweet button...");
     await page.evaluate(() => document.querySelector("[data-testid='retweet']")?.click());
 
@@ -244,6 +253,7 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
     }, { attempts: 8, interval: 1_000 });
 
     // Click "Quote"
+    await humanDelay(600, 1_500);
     console.log("[post_quote] clicking Quote option...");
     const quoted = await page.evaluate(() => {
       const items = Array.from(document.querySelectorAll("[role='menuitem']"));
@@ -264,7 +274,7 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
     await page.evaluate((sel) => {
       document.querySelector(sel)?.focus();
     }, COMPOSE_BOX);
-    await sleep(2_000); // wait for React editor to fully initialise before inserting text
+    await humanDelay(2_000, 4_000); // wait for React editor to fully initialise before inserting text
 
     // Insert via execCommand — atomic insert, prevents character truncation
     // (keyboard.type with delay: 15 was dropping initial characters)
@@ -313,6 +323,7 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
     }, { attempts: 30, interval: 1_000 });
 
     // Click Post
+    await humanDelay(1_500, 3_500); // human pause before posting
     console.log("[post_quote] clicking Post...");
     await page.evaluate((sel) => {
       const el = document.querySelector(sel);
