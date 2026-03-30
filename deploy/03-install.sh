@@ -128,7 +128,7 @@ Environment=OPENCLAW_STATE_DIR=$HOME/.openclaw-$OPENCLAW_PROFILE
 Environment=OPENCLAW_CONFIG_PATH=$HOME/.openclaw-$OPENCLAW_PROFILE/openclaw.json
 Environment=OPENCLAW_GATEWAY_PORT=18789
 Environment=NODE_ENV=production
-ExecStart=$(which node) $(which openclaw | xargs readlink -f 2>/dev/null || npm root -g)/openclaw/dist/index.js gateway --port 18789
+ExecStart=$(which openclaw) gateway --port 18789
 Restart=always
 RestartSec=10
 StartLimitBurst=5
