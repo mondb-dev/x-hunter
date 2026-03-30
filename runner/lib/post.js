@@ -20,6 +20,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const config = require('./config');
+const { clearFile, isConfirmedStatusUrl } = require('../post_result');
 
 // ── Shared helpers ───────────────────────────────────────────────────────────
 
@@ -75,18 +76,41 @@ function firstLine(fp) {
  * Run a runner/*.js script, capture stdout (stderr piped to parent).
  * Returns stdout string. Throws on non-zero exit.
  */
-function runNode(script, args = '') {
+function runNode(script, args = '', extraEnv = {}) {
   const sp = path.join(config.RUNNER_DIR, script);
   const cmd = args ? `node "${sp}" ${args}` : `node "${sp}"`;
-  return execSync(cmd, { encoding: 'utf-8', timeout: 300000 }).trim();
+  return execSync(cmd, {
+    encoding: 'utf-8',
+    timeout: 300000,
+    env: { ...process.env, ...extraEnv },
+  }).trim();
 }
 
 /**
  * Run a runner/*.js script, suppress all errors.
  * Returns stdout string or '' on failure.
  */
-function runNodeSafe(script, args = '') {
-  try { return runNode(script, args); } catch { return ''; }
+function runNodeSafe(script, args = '', extraEnv = {}) {
+  try { return runNode(script, args, extraEnv); } catch { return ''; }
+}
+
+function runNodeDetailed(script, args = '', extraEnv = {}) {
+  try {
+    return { ok: true, output: runNode(script, args, extraEnv) };
+  } catch (err) {
+    const stdout = err && err.stdout ? String(err.stdout) : '';
+    const stderr = err && err.stderr ? String(err.stderr) : '';
+    const output = [stdout, stderr].filter(Boolean).join('\n').trim();
+    return { ok: false, output, error: err && err.message ? err.message : 'unknown error' };
+  }
+}
+
+function logScriptOutput(output) {
+  if (!output) return;
+  const lines = String(output).split(/\r?\n/).map(line => line.trimEnd()).filter(Boolean);
+  for (const line of lines) {
+    console.log(line);
+  }
 }
 
 function sleepSec(n) {
@@ -109,7 +133,7 @@ function sleepSec(n) {
  * @param {string} opts.hour   - zero-padded hour (e.g. '14')
  * @returns {{ posted: boolean, rejected: boolean, skipped: boolean, tweetUrl: string|null }}
  */
-function postRegularTweet({ today, hour }) {
+function postRegularTweet({ today, hour, cycle }) {
   // ── 1. Journal URL fix ──────────────────────────────────────────────────
   if (exists(DRAFT_PATH)) {
     const lines = readLines(DRAFT_PATH);
@@ -164,20 +188,25 @@ function postRegularTweet({ today, hour }) {
     }
 
     log('Posting tweet via CDP...');
-    runNodeSafe('post_tweet.js');
-
-    // Clear draft after posting attempt (prevent re-post by duplicate orchestrator)
-    try { fs.unlinkSync(DRAFT_PATH); } catch {}
+    const attempt = runNodeDetailed('post_tweet.js', '', { CYCLE_NUMBER: String(cycle || '') });
+    logScriptOutput(attempt.output);
 
     // Read result (posts_log.json is written by post_tweet.js directly)
     const resultPath = path.join(config.STATE_DIR, 'tweet_result.txt');
     const tweetUrl = readFile(resultPath).trim();
-    if (tweetUrl && tweetUrl !== 'posted') {
+    if (isConfirmedStatusUrl(tweetUrl)) {
+      try { fs.unlinkSync(DRAFT_PATH); } catch {}
       log(`Tweet posted: ${tweetUrl}`);
-    } else {
-      log('Tweet posted (URL not captured or post_tweet.js failed)');
+      return { posted: true, rejected: false, skipped: false, tweetUrl };
     }
-    return { posted: true, rejected: false, skipped: false, tweetUrl: tweetUrl || null };
+
+    clearFile(resultPath);
+    if (attempt.ok) {
+      log('Tweet post returned without a confirmed URL — leaving draft for watchdog retry');
+    } else {
+      log(`Tweet post failed — leaving draft for watchdog retry (${attempt.error})`);
+    }
+    return { posted: false, rejected: false, skipped: false, tweetUrl: null };
   }
 
   log('No tweet_draft.txt — agent did not produce a draft');
@@ -196,7 +225,7 @@ function postRegularTweet({ today, hour }) {
  *
  * @returns {{ posted: boolean, quoteUrl: string|null }}
  */
-function postQuoteTweet() {
+function postQuoteTweet({ cycle }) {
   const quoteDraftPath = config.QUOTE_DRAFT_PATH;
 
   // ── 1. Voice filter (--quote) ──────────────────────────────────────────
@@ -218,17 +247,24 @@ function postQuoteTweet() {
 
     log('Posting quote-tweet via CDP...');
     sleepSec(3); // give gateway time to release browser WS
-    runNodeSafe('post_quote.js');
-
-    // Clear draft after posting attempt (prevent re-post by duplicate orchestrator)
-    try { fs.unlinkSync(quoteDraftPath); } catch {}
+    const attempt = runNodeDetailed('post_quote.js', '', { CYCLE_NUMBER: String(cycle || '') });
+    logScriptOutput(attempt.output);
 
     const resultPath = path.join(config.STATE_DIR, 'quote_result.txt');
     const quoteUrl = readFile(resultPath).trim();
-    if (quoteUrl && quoteUrl !== 'posted') {
+    if (isConfirmedStatusUrl(quoteUrl)) {
+      try { fs.unlinkSync(quoteDraftPath); } catch {}
       log(`Quote posted: ${quoteUrl}`);
+      return { posted: true, quoteUrl };
     }
-    return { posted: true, quoteUrl: quoteUrl || null };
+
+    clearFile(resultPath);
+    if (attempt.ok) {
+      log('Quote post returned without a confirmed URL — leaving draft for watchdog retry');
+    } else {
+      log(`Quote post failed — leaving draft for watchdog retry (${attempt.error})`);
+    }
+    return { posted: false, quoteUrl: null };
   }
 
   log('No quote_draft.txt — agent did not produce a quote');

@@ -20,16 +20,61 @@ const path = require("path");
 const { connectBrowser, getXPage } = require("./cdp");
 
 const { logQuote } = require("./posts_log");
+const {
+  HANDLE,
+  clearFile,
+  isConfirmedStatusUrl,
+  writeAttempt,
+  writeResult,
+} = require("./post_result");
 
 const ROOT        = path.resolve(__dirname, "..");
 const DRAFT_FILE  = path.join(ROOT, "state", "quote_draft.txt");
 const RESULT_FILE = path.join(ROOT, "state", "quote_result.txt");
+const ATTEMPT_FILE = path.join(ROOT, "state", "quote_attempt.json");
+const CYCLE = Number.parseInt(process.env.CYCLE_NUMBER || "", 10) || null;
 
 const COMPOSE_BOX = '[data-testid="tweetTextarea_0"]';
 const POST_BUTTON = '[data-testid="tweetButton"], [data-testid="tweetButtonInline"]';
 
 async function sleep(ms) {
   return new Promise(r => setTimeout(r, ms));
+}
+
+function normalizeText(value) {
+  return String(value || "").replace(/\s+/g, " ").trim().toLowerCase();
+}
+
+async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_000) {
+  const needle = normalizeText(expectedText).slice(0, 80);
+  await page.goto(`https://x.com/${HANDLE}`, { waitUntil: "domcontentloaded", timeout: 45_000 });
+
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    await sleep(delayMs);
+    const match = await page.evaluate(({ expectedNeedle, handle }) => {
+      const norm = (value) => String(value || "").replace(/\s+/g, " ").trim().toLowerCase();
+      const articles = Array.from(document.querySelectorAll("article")).slice(0, 12);
+      for (const article of articles) {
+        const text = norm(article.innerText);
+        if (!text || !text.includes(expectedNeedle)) continue;
+        const links = Array.from(article.querySelectorAll('a[href*="/status/"]'))
+          .map(a => a.getAttribute("href") || "");
+        const href = links.find(href =>
+          new RegExp(`/${handle}/status/\\d+`, "i").test(href) &&
+          !/\/analytics/i.test(href)
+        );
+        if (href) return `https://x.com${href.split("?")[0]}`;
+      }
+      return null;
+    }, { expectedNeedle: needle, handle: HANDLE });
+
+    if (isConfirmedStatusUrl(match)) return match;
+    if (attempt < attempts) {
+      console.log(`[post_quote] profile confirmation miss ${attempt}/${attempts} — waiting...`);
+    }
+  }
+
+  return null;
 }
 
 /**
@@ -55,9 +100,17 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
 }
 
 (async () => {
+  clearFile(RESULT_FILE);
+
   // ── Read draft ──────────────────────────────────────────────────────────────
   if (!fs.existsSync(DRAFT_FILE)) {
     console.error("[post_quote] no quote_draft.txt found — skipping");
+    writeAttempt(ATTEMPT_FILE, {
+      kind: "quote",
+      outcome: "failed",
+      reason: "draft_missing",
+      cycle: CYCLE,
+    });
     process.exit(1);
   }
 
@@ -87,16 +140,34 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
   if (!sourceUrl) {
     console.error(`[post_quote] no valid x.com/twitter.com status URL found in quote_draft.txt`);
     console.error(`[post_quote] content: ${lines.join(" ").slice(0, 120)}...`);
+    writeAttempt(ATTEMPT_FILE, {
+      kind: "quote",
+      outcome: "failed",
+      reason: "source_url_missing",
+      cycle: CYCLE,
+    });
     process.exit(1);
   }
   // Reject quoting own tweets
   const sourceHandle = (sourceUrl.match(/x\.com\/([^/]+)/) || [])[1] || "";
   if (sourceHandle.toLowerCase() === "sebastianhunts") {
     console.error("[post_quote] cannot quote own tweet — skipping");
+    writeAttempt(ATTEMPT_FILE, {
+      kind: "quote",
+      outcome: "failed",
+      reason: "self_quote_blocked",
+      cycle: CYCLE,
+    });
     process.exit(1);
   }
   if (!quoteText) {
     console.error("[post_quote] quote text is empty");
+    writeAttempt(ATTEMPT_FILE, {
+      kind: "quote",
+      outcome: "failed",
+      reason: "quote_text_empty",
+      cycle: CYCLE,
+    });
     process.exit(1);
   }
 
@@ -121,6 +192,13 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
     browser = await connectBrowser();
   } catch (err) {
     console.error(`[post_quote] could not connect to Chrome: ${err.message}`);
+    writeAttempt(ATTEMPT_FILE, {
+      kind: "quote",
+      outcome: "failed",
+      reason: "cdp_connect_failed",
+      error: err.message,
+      cycle: CYCLE,
+    });
     process.exit(1);
   }
 
@@ -243,43 +321,92 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
 
     // Capture result — navigate to own profile to confirm post and get URL
     const finalUrl = page.url();
+    console.log(`[post_quote] page URL after post: ${finalUrl}`);
     let quoteUrl = null;
-    if (/x\.com\/\w+\/status\/\d+/.test(finalUrl)) {
+    if (isConfirmedStatusUrl(finalUrl)) {
       quoteUrl = finalUrl;
     }
 
     if (!quoteUrl) {
-      console.log("[post_quote] navigating to profile to confirm post and capture URL...");
-      await page.goto("https://x.com/sebastianhunts", { waitUntil: "domcontentloaded", timeout: 45_000 });
-      // Retry loop — X SPA may take a few seconds to render the timeline
-      for (let attempt = 1; attempt <= 3 && !quoteUrl; attempt++) {
-        await sleep(3_000);
-        quoteUrl = await page.evaluate(() => {
-          const links = Array.from(document.querySelectorAll('a[href*="/status/"]'));
-          const match = links.find(a => /\/sebastianhunts\/status\/\d+/.test(a.getAttribute("href") || ""));
-          if (match) return "https://x.com" + match.getAttribute("href").split("?")[0];
-          return null;
-        });
-        if (!quoteUrl && attempt < 3) {
-          console.log(`[post_quote] URL not found on attempt ${attempt}/3 — waiting...`);
+      if (finalUrl.includes("graduated-access")) {
+        console.log("[post_quote] graduated-access interstitial detected — waiting 10s before checking profile...");
+        await sleep(10_000);
+        quoteUrl = await confirmFromProfile(page, quoteText, 4, 3_000);
+        if (quoteUrl) {
+          console.log(`[post_quote] quote confirmed despite graduated-access: ${quoteUrl}`);
+        } else {
+          console.error("[post_quote] graduated-access blocked the quote — X rate-limiting");
+          writeAttempt(ATTEMPT_FILE, {
+            kind: "quote",
+            outcome: "failed",
+            reason: "rate_limited",
+            stage: "after_post_click",
+            final_url: finalUrl,
+            source_url: sourceUrl,
+            cycle: CYCLE,
+          });
+          browser.disconnect();
+          process.exit(1);
         }
-      }
-      if (quoteUrl) {
-        console.log(`[post_quote] SUCCESS (confirmed from profile): ${quoteUrl}`);
+      } else if (finalUrl.includes("compose")) {
+        console.error("[post_quote] still on compose page — quote may have failed");
+        writeAttempt(ATTEMPT_FILE, {
+          kind: "quote",
+          outcome: "failed",
+          reason: "compose_stuck",
+          stage: "after_post_click",
+          final_url: finalUrl,
+          source_url: sourceUrl,
+          cycle: CYCLE,
+        });
+        browser.disconnect();
+        process.exit(1);
       } else {
-        console.log("[post_quote] posted — could not confirm URL from profile after 3 attempts");
+        console.log("[post_quote] navigating to profile to confirm post and capture URL...");
+        quoteUrl = await confirmFromProfile(page, quoteText, 4, 3_000);
+        if (quoteUrl) {
+          console.log(`[post_quote] SUCCESS (confirmed from profile): ${quoteUrl}`);
+        } else {
+          console.error("[post_quote] could not confirm quote from profile after 4 attempts");
+          writeAttempt(ATTEMPT_FILE, {
+            kind: "quote",
+            outcome: "failed",
+            reason: "profile_confirm_timeout",
+            stage: "profile_confirm",
+            final_url: finalUrl,
+            source_url: sourceUrl,
+            cycle: CYCLE,
+          });
+          browser.disconnect();
+          process.exit(1);
+        }
       }
     } else {
       console.log(`[post_quote] SUCCESS: ${quoteUrl}`);
     }
 
-    fs.writeFileSync(RESULT_FILE, (quoteUrl || "posted") + "\n");
+    writeResult(RESULT_FILE, quoteUrl);
+    writeAttempt(ATTEMPT_FILE, {
+      kind: "quote",
+      outcome: "confirmed",
+      confirmed_url: quoteUrl,
+      final_url: finalUrl,
+      source_url: sourceUrl,
+      cycle: CYCLE,
+    });
 
-    // Log to posts_log.json — always runs, whether called from run.sh or manually
-    logQuote({ source_url: sourceUrl, content: quoteText, tweet_url: quoteUrl || "posted" });
+    logQuote({ source_url: sourceUrl, content: quoteText, tweet_url: quoteUrl, cycle: CYCLE });
 
   } catch (err) {
     console.error(`[post_quote] error: ${err.message}`);
+    clearFile(RESULT_FILE);
+    writeAttempt(ATTEMPT_FILE, {
+      kind: "quote",
+      outcome: "failed",
+      reason: "exception",
+      error: err.message,
+      cycle: CYCLE,
+    });
     browser.disconnect();
     process.exit(1);
   }

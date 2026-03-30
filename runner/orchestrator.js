@@ -737,6 +737,7 @@ function runOneCycle() {
     // Clear stale drafts
     try { fs.unlinkSync(config.QUOTE_DRAFT_PATH); } catch {}
     try { fs.unlinkSync(path.join(config.STATE_DIR, 'quote_result.txt')); } catch {}
+    try { fs.unlinkSync(path.join(config.STATE_DIR, 'quote_attempt.json')); } catch {}
 
     const quoteExit = agentRun({ agent: 'x-hunter', message: prompt, thinking: 'low', verbose: 'on' });
     metrics.agentExitCodes.push(quoteExit);
@@ -748,13 +749,14 @@ function runOneCycle() {
     // Post-quote pipeline: cleanup_tabs → voice_filter --quote → 3s sleep →
     //   post_quote → watchdog QUOTE → critique --quote
     runScriptLog(path.join(PROJECT_ROOT, 'runner/cleanup_tabs.js'));
-    const quoteResult = postQuoteTweet();
+    const quoteResult = postQuoteTweet({ cycle });
     metrics.postAttempted = true;
     metrics.postSuccess = quoteResult.posted;
 
     // Watchdog: verify quote was posted
     runScriptLog(path.join(PROJECT_ROOT, 'runner/watchdog.js'), '', {
       CYCLE_TYPE: 'QUOTE',
+      CYCLE_NUMBER: String(cycle),
     });
 
     // Coherence critique
@@ -792,6 +794,7 @@ function runOneCycle() {
       // Clear stale drafts
       try { fs.unlinkSync(config.TWEET_DRAFT_PATH); } catch {}
       try { fs.unlinkSync(path.join(config.STATE_DIR, 'tweet_result.txt')); } catch {}
+      try { fs.unlinkSync(path.join(config.STATE_DIR, 'tweet_attempt.json')); } catch {}
 
       const tweetExit = agentRun({ agent: 'x-hunter-tweet', message: prompt, thinking: 'low', verbose: 'on' });
       metrics.agentExitCodes.push(tweetExit);
@@ -819,13 +822,14 @@ function runOneCycle() {
     runScriptLog(path.join(PROJECT_ROOT, 'runner/detect_drift.js'));
 
     // Post regular tweet (journal URL fix → critique gate → voice filter → post)
-    const tweetResult = postRegularTweet({ today, hour });
+    const tweetResult = postRegularTweet({ today, hour, cycle });
     metrics.postAttempted = true;
     metrics.postSuccess = tweetResult.posted;
 
     // Watchdog: verify tweet was posted
     runScriptLog(path.join(PROJECT_ROOT, 'runner/watchdog.js'), '', {
       CYCLE_TYPE: 'TWEET',
+      CYCLE_NUMBER: String(cycle),
     });
 
     // Git commit + push

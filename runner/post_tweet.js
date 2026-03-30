@@ -17,9 +17,19 @@ const path = require("path");
 const { connectBrowser, getXPage } = require("./cdp");
 
 const { logTweet } = require("./posts_log");
+const {
+  HANDLE,
+  clearFile,
+  isConfirmedStatusUrl,
+  writeAttempt,
+  writeResult,
+} = require("./post_result");
 
 const ROOT       = path.resolve(__dirname, "..");
 const DRAFT_FILE = path.join(ROOT, "state", "tweet_draft.txt");
+const RESULT_FILE = path.join(ROOT, "state", "tweet_result.txt");
+const ATTEMPT_FILE = path.join(ROOT, "state", "tweet_attempt.json");
+const CYCLE = Number.parseInt(process.env.CYCLE_NUMBER || "", 10) || null;
 
 // X.com selectors (as of 2025)
 const COMPOSE_BOX   = '[data-testid="tweetTextarea_0"]';
@@ -30,15 +40,65 @@ async function sleep(ms) {
   return new Promise(r => setTimeout(r, ms));
 }
 
+function normalizeText(value) {
+  return String(value || "").replace(/\s+/g, " ").trim().toLowerCase();
+}
+
+async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_000) {
+  const needle = normalizeText(expectedText).slice(0, 80);
+  await page.goto(`https://x.com/${HANDLE}`, { waitUntil: "domcontentloaded", timeout: 45_000 });
+
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    await sleep(delayMs);
+    const match = await page.evaluate(({ expectedNeedle, handle }) => {
+      const norm = (value) => String(value || "").replace(/\s+/g, " ").trim().toLowerCase();
+      const articles = Array.from(document.querySelectorAll("article")).slice(0, 12);
+      for (const article of articles) {
+        const text = norm(article.innerText);
+        if (!text || !text.includes(expectedNeedle)) continue;
+        const links = Array.from(article.querySelectorAll('a[href*="/status/"]'))
+          .map(a => a.getAttribute("href") || "");
+        const href = links.find(href =>
+          new RegExp(`/${handle}/status/\\d+`, "i").test(href) &&
+          !/\/analytics/i.test(href)
+        );
+        if (href) return `https://x.com${href.split("?")[0]}`;
+      }
+      return null;
+    }, { expectedNeedle: needle, handle: HANDLE });
+
+    if (isConfirmedStatusUrl(match)) return match;
+    if (attempt < attempts) {
+      console.log(`[post_tweet] profile confirmation miss ${attempt}/${attempts} — waiting...`);
+    }
+  }
+
+  return null;
+}
+
 (async () => {
+  clearFile(RESULT_FILE);
+
   // Read draft
   if (!fs.existsSync(DRAFT_FILE)) {
     console.error("[post_tweet] no tweet_draft.txt found — skipping");
+    writeAttempt(ATTEMPT_FILE, {
+      kind: "tweet",
+      outcome: "failed",
+      reason: "draft_missing",
+      cycle: CYCLE,
+    });
     process.exit(1);
   }
   const tweetText = fs.readFileSync(DRAFT_FILE, "utf-8").trim();
   if (!tweetText) {
     console.error("[post_tweet] tweet_draft.txt is empty — skipping");
+    writeAttempt(ATTEMPT_FILE, {
+      kind: "tweet",
+      outcome: "failed",
+      reason: "draft_empty",
+      cycle: CYCLE,
+    });
     process.exit(1);
   }
   console.log(`[post_tweet] posting (${tweetText.length} chars): ${tweetText.slice(0, 80)}...`);
@@ -49,6 +109,13 @@ async function sleep(ms) {
     browser = await connectBrowser();
   } catch (err) {
     console.error(`[post_tweet] could not connect to Chrome: ${err.message}`);
+    writeAttempt(ATTEMPT_FILE, {
+      kind: "tweet",
+      outcome: "failed",
+      reason: "cdp_connect_failed",
+      error: err.message,
+      cycle: CYCLE,
+    });
     process.exit(1);
   }
 
@@ -146,7 +213,7 @@ async function sleep(ms) {
     console.log(`[post_tweet] page URL after post: ${finalUrl}`);
 
     let tweetUrl = null;
-    if (/x\.com\/\w+\/status\/\d+/.test(finalUrl)) {
+    if (isConfirmedStatusUrl(finalUrl)) {
       tweetUrl = finalUrl;
     }
 
@@ -155,61 +222,82 @@ async function sleep(ms) {
       if (finalUrl.includes("graduated-access")) {
         console.log("[post_tweet] graduated-access interstitial detected — waiting 10s before checking profile...");
         await sleep(10_000);
-        // Navigate to profile to see if tweet actually posted
-        await page.goto("https://x.com/sebastianhunts", { waitUntil: "domcontentloaded", timeout: 45_000 });
-        await sleep(5_000);
-        tweetUrl = await page.evaluate(() => {
-          const links = Array.from(document.querySelectorAll('a[href*="/sebastianhunts/status/"]'));
-          return links.length ? links[0].href : null;
-        });
+        tweetUrl = await confirmFromProfile(page, tweetText, 4, 3_000);
         if (tweetUrl) {
           console.log(`[post_tweet] tweet confirmed despite graduated-access: ${tweetUrl}`);
         } else {
           console.error("[post_tweet] graduated-access blocked the post — X rate-limiting");
+          writeAttempt(ATTEMPT_FILE, {
+            kind: "tweet",
+            outcome: "failed",
+            reason: "rate_limited",
+            stage: "after_post_click",
+            final_url: finalUrl,
+            cycle: CYCLE,
+          });
           browser.disconnect();
           process.exit(1);
         }
       } else if (finalUrl.includes("compose")) {
         console.error("[post_tweet] still on compose page — post may have failed");
+        writeAttempt(ATTEMPT_FILE, {
+          kind: "tweet",
+          outcome: "failed",
+          reason: "compose_stuck",
+          stage: "after_post_click",
+          final_url: finalUrl,
+          cycle: CYCLE,
+        });
         browser.disconnect();
         process.exit(1);
       } else {
         // Navigate to own profile and grab the first tweet URL to confirm post + capture URL
         console.log("[post_tweet] navigating to profile to confirm post and capture URL...");
-        await page.goto("https://x.com/sebastianhunts", { waitUntil: "domcontentloaded", timeout: 45_000 });
-        // Retry loop — X SPA may take a few seconds to render the timeline
-        for (let attempt = 1; attempt <= 3 && !tweetUrl; attempt++) {
-          await sleep(3_000);
-          tweetUrl = await page.evaluate(() => {
-            const links = Array.from(document.querySelectorAll('a[href*="/status/"]'));
-            const match = links.find(a => /\/sebastianhunts\/status\/\d+/.test(a.getAttribute("href") || ""));
-            if (match) return "https://x.com" + match.getAttribute("href").split("?")[0];
-            return null;
-          });
-          if (!tweetUrl && attempt < 3) {
-            console.log(`[post_tweet] URL not found on attempt ${attempt}/3 — waiting...`);
-          }
-        }
+        tweetUrl = await confirmFromProfile(page, tweetText, 4, 3_000);
         if (tweetUrl) {
           console.log(`[post_tweet] SUCCESS (confirmed from profile): ${tweetUrl}`);
         } else {
-          console.log("[post_tweet] posted — could not confirm URL from profile after 3 attempts");
+          console.error("[post_tweet] could not confirm tweet from profile after 4 attempts");
+          writeAttempt(ATTEMPT_FILE, {
+            kind: "tweet",
+            outcome: "failed",
+            reason: "profile_confirm_timeout",
+            stage: "profile_confirm",
+            final_url: finalUrl,
+            cycle: CYCLE,
+          });
+          browser.disconnect();
+          process.exit(1);
         }
       }
     } else {
       console.log(`[post_tweet] SUCCESS: ${tweetUrl}`);
     }
 
-    fs.writeFileSync(path.join(ROOT, "state", "tweet_result.txt"), (tweetUrl || "posted") + "\n");
+    writeResult(RESULT_FILE, tweetUrl);
+    writeAttempt(ATTEMPT_FILE, {
+      kind: "tweet",
+      outcome: "confirmed",
+      confirmed_url: tweetUrl,
+      final_url: finalUrl,
+      cycle: CYCLE,
+    });
 
-    // Log to posts_log.json — always runs, whether called from run.sh or manually
-    logTweet({ content: tweetText, tweet_url: tweetUrl || "posted" });
+    logTweet({ content: tweetText, tweet_url: tweetUrl, cycle: CYCLE });
 
     // Navigate back to home feed so Chrome is clean for next cycle
     await page.goto("https://x.com/home", { waitUntil: "domcontentloaded", timeout: 45_000 }).catch(() => {});
 
   } catch (err) {
     console.error(`[post_tweet] error: ${err.message}`);
+    clearFile(RESULT_FILE);
+    writeAttempt(ATTEMPT_FILE, {
+      kind: "tweet",
+      outcome: "failed",
+      reason: "exception",
+      error: err.message,
+      cycle: CYCLE,
+    });
     browser.disconnect();
     process.exit(1);
   }

@@ -22,13 +22,16 @@
 const fs                         = require("fs");
 const path                       = require("path");
 const { execFileSync, execSync } = require("child_process");
+const { isConfirmedStatusUrl }   = require("./post_result");
 
 const ROOT = path.resolve(__dirname, "..");
 
 const QUOTE_DRAFT  = path.join(ROOT, "state", "quote_draft.txt");
 const QUOTE_RESULT = path.join(ROOT, "state", "quote_result.txt");
+const QUOTE_ATTEMPT = path.join(ROOT, "state", "quote_attempt.json");
 const TWEET_DRAFT  = path.join(ROOT, "state", "tweet_draft.txt");
 const TWEET_RESULT = path.join(ROOT, "state", "tweet_result.txt");
+const TWEET_ATTEMPT = path.join(ROOT, "state", "tweet_attempt.json");
 const POSTS_LOG    = path.join(ROOT, "state", "posts_log.json");
 const JOURNALS_DIR = path.join(ROOT, "journals");
 const ARWEAVE_LOG  = path.join(ROOT, "state", "arweave_log.json");
@@ -43,6 +46,10 @@ function readTrim(file) {
 
 function fileExists(file) {
   return fs.existsSync(file);
+}
+
+function readJson(file) {
+  try { return JSON.parse(fs.readFileSync(file, "utf-8")); } catch { return null; }
 }
 
 /**
@@ -69,7 +76,7 @@ function patchPostsLog(type, url) {
     const data  = JSON.parse(fs.readFileSync(POSTS_LOG, "utf-8"));
     const posts = data.posts || [];
     for (let i = posts.length - 1; i >= 0; i--) {
-      if (posts[i].type === type && !posts[i].tweet_url) {
+      if (posts[i].type === type && (!posts[i].tweet_url || posts[i].tweet_url === "posted")) {
         posts[i].tweet_url = url;
         posts[i].posted_at = new Date().toISOString();
         break;
@@ -228,14 +235,14 @@ function checkMetaAutoRevert(hits) {
 
   // ── QUOTE check ───────────────────────────────────────────────────────────
   if (TYPE === "QUOTE") {
-    if (!fileExists(QUOTE_DRAFT)) {
-      console.log("[watchdog] QUOTE: no draft written — skipping");
+    const result = readTrim(QUOTE_RESULT);
+    if (isConfirmedStatusUrl(result)) {
+      console.log(`[watchdog] QUOTE: success confirmed (${result.slice(0, 60)})`);
       process.exit(0);
     }
 
-    const result = readTrim(QUOTE_RESULT);
-    if (result) {
-      console.log(`[watchdog] QUOTE: success confirmed (${result.slice(0, 60)})`);
+    if (!fileExists(QUOTE_DRAFT)) {
+      console.log("[watchdog] QUOTE: no draft written and no confirmed result — skipping");
       process.exit(0);
     }
 
@@ -244,28 +251,35 @@ function checkMetaAutoRevert(hits) {
     runScript("post_quote.js");
 
     const retryResult = readTrim(QUOTE_RESULT);
-    if (retryResult) {
+    if (isConfirmedStatusUrl(retryResult)) {
       console.log(`[watchdog] QUOTE retry OK: ${retryResult}`);
-      if (/x\.com\/\w+\/status\/\d+/.test(retryResult)) {
-        patchPostsLog("quote", retryResult);
-      }
+      patchPostsLog("quote", retryResult);
     } else {
-      console.error("[watchdog] QUOTE retry also failed — giving up");
+      const attempt = readJson(QUOTE_ATTEMPT);
+      if (attempt && attempt.reason) {
+        console.error(`[watchdog] QUOTE retry also failed — ${attempt.reason}`);
+      } else {
+        console.error("[watchdog] QUOTE retry also failed — giving up");
+      }
     }
 
   // ── TWEET check ───────────────────────────────────────────────────────────
   } else if (TYPE === "TWEET") {
     const draft = readTrim(TWEET_DRAFT);
+    const result = readTrim(TWEET_RESULT);
 
     if (!draft || draft === "SKIP") {
+      if (isConfirmedStatusUrl(result)) {
+        console.log(`[watchdog] TWEET: success confirmed (${result.slice(0, 60)})`);
+        process.exit(0);
+      }
       console.log("[watchdog] TWEET: no draft or SKIP — skipping");
       process.exit(0);
     }
 
     // Both files pre-cleaned at cycle start, so mtime comparison is reliable
-    const succeeded = resultFresherThanDraft(TWEET_DRAFT, TWEET_RESULT);
+    const succeeded = isConfirmedStatusUrl(result) && resultFresherThanDraft(TWEET_DRAFT, TWEET_RESULT);
     if (succeeded) {
-      const result = readTrim(TWEET_RESULT);
       console.log(`[watchdog] TWEET: success confirmed (${result.slice(0, 60)})`);
       process.exit(0);
     }
@@ -275,13 +289,16 @@ function checkMetaAutoRevert(hits) {
     runScript("post_tweet.js");
 
     const retryResult = readTrim(TWEET_RESULT);
-    if (retryResult) {
+    if (isConfirmedStatusUrl(retryResult)) {
       console.log(`[watchdog] TWEET retry OK: ${retryResult}`);
-      if (/x\.com\/\w+\/status\/\d+/.test(retryResult)) {
-        patchPostsLog("tweet", retryResult);
-      }
+      patchPostsLog("tweet", retryResult);
     } else {
-      console.error("[watchdog] TWEET retry also failed — giving up");
+      const attempt = readJson(TWEET_ATTEMPT);
+      if (attempt && attempt.reason) {
+        console.error(`[watchdog] TWEET retry also failed — ${attempt.reason}`);
+      } else {
+        console.error("[watchdog] TWEET retry also failed — giving up");
+      }
     }
 
   // ── JOURNAL check ─────────────────────────────────────────────────────────
