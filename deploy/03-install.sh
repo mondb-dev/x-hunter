@@ -75,9 +75,6 @@ fi
 # Set workspace and model
 openclaw config set agents.defaults.workspace "$PROJECT_DIR"
 openclaw config set agents.defaults.model.primary "google/gemini-2.5-flash"
-openclaw config set browser.headless true
-openclaw config set browser.noSandbox true
-openclaw config set browser.defaultProfile "$OPENCLAW_PROFILE"
 
 # Register x-hunter agent
 openclaw agents add x-hunter \
@@ -108,6 +105,12 @@ if [ ! -d "$HOME/.openclaw/browser/$OPENCLAW_PROFILE/user-data" ]; then
 else
   echo "  → Browser profile exists (migrated from local machine)"
 fi
+
+# Apply final browser settings after onboard/profile setup so runtime services
+# always start from the intended headless VM config.
+openclaw config set browser.headless true
+openclaw config set browser.noSandbox true
+openclaw config set browser.defaultProfile "$OPENCLAW_PROFILE"
 
 # ── Step 8: Systemd services ─────────────────────────────────────────────────
 echo "[8/8] Installing systemd services..."
@@ -144,7 +147,6 @@ sudo tee /etc/systemd/system/sebastian-runner.service > /dev/null << EOF
 Description=Sebastian D. Hunter Runner
 After=openclaw-gateway.service network-online.target
 Wants=openclaw-gateway.service
-Requires=openclaw-gateway.service
 
 [Service]
 Type=simple
