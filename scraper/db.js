@@ -599,19 +599,58 @@ function embeddedIds(entityType) {
 /** Raw db handle for advanced queries. */
 function raw() { return _db; }
 
+function checkFtsTable(tableName) {
+  try {
+    _db.prepare(`INSERT INTO ${tableName}(${tableName}) VALUES('integrity-check')`).run();
+    return { table: tableName, ok: true, error: null };
+  } catch (error) {
+    return { table: tableName, ok: false, error };
+  }
+}
+
+function rebuildFtsTable(tableName) {
+  _db.prepare(`INSERT INTO ${tableName}(${tableName}) VALUES('rebuild')`).run();
+}
+
+/**
+ * Check both FTS5 tables and rebuild them if either one is unhealthy.
+ */
+function checkAndHealFts() {
+  const checks = [
+    checkFtsTable("memory_fts"),
+    checkFtsTable("posts_fts"),
+  ];
+
+  if (checks.every((check) => check.ok)) {
+    return { healthy: true, rebuilt: false, checks, errors: [] };
+  }
+
+  const errors = checks
+    .filter((check) => !check.ok)
+    .map((check) => ({ table: check.table, message: check.error?.message || String(check.error) }));
+
+  rebuildFtsTable("memory_fts");
+  rebuildFtsTable("posts_fts");
+
+  const after = [
+    checkFtsTable("memory_fts"),
+    checkFtsTable("posts_fts"),
+  ];
+
+  return {
+    healthy: after.every((check) => check.ok),
+    rebuilt: true,
+    checks: after,
+    errors,
+  };
+}
+
 /**
  * Rebuild FTS5 indexes if corrupted.
  * Safe to call at any time — no-op if indexes are healthy.
  */
 function rebuildFtsIfNeeded() {
-  try {
-    _db.prepare("INSERT INTO memory_fts(memory_fts) VALUES('integrity-check')").run();
-  } catch {
-    _db.prepare("INSERT INTO memory_fts(memory_fts) VALUES('rebuild')").run();
-    _db.prepare("INSERT INTO posts_fts(posts_fts) VALUES('rebuild')").run();
-    return true; // rebuilt
-  }
-  return false;
+  return checkAndHealFts().rebuilt;
 }
 
 module.exports = {
@@ -620,6 +659,7 @@ module.exports = {
   upsertAccount, followCandidates, markFollowed, getAccount, postsByUser, postsInWindow,
   insertMemory, updateMemoryTxId, recallMemory, getMemoryByPath, recentMemory,
   storeEmbedding, getEmbedding, allEmbeddings, embeddedIds,
+  checkAndHealFts,
   rebuildFtsIfNeeded,
   raw,
 };

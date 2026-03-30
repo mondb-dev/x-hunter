@@ -433,13 +433,7 @@ while true; do
   # ── Browse cycle: read digest + topic summary, take notes ───────────────
   elif [ "$CYCLE_TYPE" = "BROWSE" ]; then
     # ── FTS5 self-heal: rebuild index if corrupted ────────────────────────
-    _FTS_CHECK=$(sqlite3 "$PROJECT_ROOT/state/index.db" "INSERT INTO memory_fts(memory_fts) VALUES('integrity-check');" 2>&1)
-    if [ -n "$_FTS_CHECK" ]; then
-      echo "[run] FTS5 corruption detected — rebuilding indexes"
-      sqlite3 "$PROJECT_ROOT/state/index.db" "INSERT INTO memory_fts(memory_fts) VALUES('rebuild');" 2>/dev/null || true
-      sqlite3 "$PROJECT_ROOT/state/index.db" "INSERT INTO posts_fts(posts_fts) VALUES('rebuild');" 2>/dev/null || true
-      echo "[run] FTS5 rebuild done"
-    fi
+    node "$PROJECT_ROOT/runner/fts_maintain.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
     # Generate topic summary + memory recall from SQLite index before invoking AI
     node "$PROJECT_ROOT/scraper/query.js" --hours 4 > /dev/null 2>&1 || true

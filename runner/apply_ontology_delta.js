@@ -47,6 +47,7 @@ const AXIS_GUARD = path.join(ROOT, "state", "axis_creation_state.json");
 const DIVERSITY  = path.join(ROOT, "state", "diversity_state.json");
 
 const { generate: llmGenerate } = require("./llm.js");
+const { parseOntologyDelta } = require("./lib/ontology_delta.js");
 
 // ── Diversity constraint (AGENTS.md §7) ───────────────────────────────────────
 // Per 24h rolling window per axis:
@@ -331,11 +332,15 @@ const trustMap = loadTrustMap();
 
 let delta;
 try {
-  let raw = fs.readFileSync(DELTA, "utf-8");
-  // Strip invalid JSON escape sequences — agent sometimes writes \- \( \, etc.
-  // Valid escapes after \: " \ / b f n r t u  — anything else: drop the backslash
-  raw = raw.replace(/\\([^"\\/bfnrtu])/g, "$1");
-  delta = JSON.parse(raw);
+  const raw = fs.readFileSync(DELTA, "utf-8");
+  const parsed = parseOntologyDelta(raw);
+  delta = parsed.delta;
+  if (parsed.repaired) {
+    console.log(
+      `[apply_delta] repaired ontology_delta.json via ${parsed.method}` +
+      ` (evidence=${delta.evidence.length}, new_axes=${delta.new_axes.length})`
+    );
+  }
 } catch (e) {
   console.error(`[apply_delta] could not parse ontology_delta.json: ${e.message}`);
   fs.unlinkSync(DELTA);

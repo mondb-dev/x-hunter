@@ -104,6 +104,9 @@ function buildNormalTasks(ctx) {
     '         "left_pole": "<description>", "right_pole": "<description>" }\n' +
     '     ]\n' +
     '   }\n' +
+    '   STRICT JSON ONLY: double-quoted keys and values, no comments, no trailing commas,\n' +
+    '   no markdown fences. In evidence.content, write one paraphrase sentence only:\n' +
+    '   no line breaks and no double quotes inside the text. Use apostrophes if needed.\n' +
     '   Omit "evidence" or "new_axes" if nothing to add. Skip writing the file entirely\n' +
     '   if nothing is axis-worthy this cycle.\n' +
     '\n' +
@@ -210,6 +213,8 @@ function buildSprintTasks(ctx) {
     '   - Fit to existing axes first. Use axis_ids from CURRENT BELIEF AXES.\n' +
     '   - New axes only if genuinely orthogonal + seen in 2+ cycles.\n' +
     '   - Delta only \u2014 never modify ontology.json directly.\n' +
+    '   - Write STRICT valid JSON only. In evidence.content, paraphrase in one sentence,\n' +
+    '     with no line breaks and no double quotes inside the text.\n' +
     '4. CADENCE: Update state/cadence.json. During sprint work:\n' +
     '   - Set focus_note to describe what sprint work you did and what remains.\n' +
     '   - Recommend cycle_interval_sec based on sprint progress (faster if productive).\n' +

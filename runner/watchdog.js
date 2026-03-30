@@ -462,10 +462,16 @@ function checkMetaAutoRevert(hits) {
         hint:     "Git push to remote failed — check connectivity and branch protection",
       },
       {
-        name:     "ontology_delta bad JSON escape",
-        re:       /could not parse ontology_delta\.json: Bad escaped character/,
+        name:     "ontology_delta parse failed",
+        re:       /could not parse ontology_delta\.json:/,
         severity: "WARN",
-        hint:     "Agent wrote invalid escape sequence in ontology_delta.json — sanitizer in apply_ontology_delta.js should fix this automatically",
+        hint:     "Agent wrote malformed ontology_delta.json — tolerant repair failed and that cycle's belief delta was dropped",
+      },
+      {
+        name:     "sqlite3 cli missing",
+        re:       /sqlite3: not found/,
+        severity: "WARN",
+        hint:     "Legacy sqlite3 CLI path ran without the binary installed — FTS maintenance should use better-sqlite3 only",
       },
     ];
 

@@ -125,6 +125,9 @@ module.exports = function buildTweetPrompt(ctx) {
     '   { "evidence": [{ "axis_id":"...", "source":"...", "content":"...",\n' +
     '                    "timestamp":"...", "pole_alignment":"left"|"right" }],\n' +
     '     "new_axes": [{ "id":"...", "label":"...", "left_pole":"...", "right_pole":"..." }] }\n' +
+    '   STRICT JSON ONLY: no comments, no trailing commas, no markdown fences.\n' +
+    '   In evidence.content, write a one-sentence paraphrase with no line breaks and no\n' +
+    '   double quotes inside the text. Use apostrophes if you need to quote words.\n' +
     '   Omit keys you do not need. Skip writing the file if nothing axis-worthy.\n' +
     '7. Done. The runner clears browse_notes.md after this cycle.\n';
 };

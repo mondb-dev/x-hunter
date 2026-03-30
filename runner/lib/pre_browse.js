@@ -48,23 +48,7 @@ function runScript(scriptPath, opts = {}) {
  */
 function preBrowse(cycle) {
   // ── 1. FTS5 integrity check + rebuild if corrupted ─────────────────────
-  try {
-    const check = execSync(
-      `sqlite3 "${config.INDEX_DB_PATH}" "INSERT INTO memory_fts(memory_fts) VALUES('integrity-check');"`,
-      { encoding: 'utf-8', timeout: 30_000 }
-    ).trim();
-    if (check) {
-      log('FTS5 corruption detected — rebuilding indexes');
-      try {
-        execSync(`sqlite3 "${config.INDEX_DB_PATH}" "INSERT INTO memory_fts(memory_fts) VALUES('rebuild');"`, { stdio: 'ignore', timeout: 30_000 });
-        execSync(`sqlite3 "${config.INDEX_DB_PATH}" "INSERT INTO posts_fts(posts_fts) VALUES('rebuild');"`, { stdio: 'ignore', timeout: 30_000 });
-      } catch {}
-      log('FTS5 rebuild done');
-    }
-  } catch {
-    // sqlite3 returns non-zero on integrity failure too — check stderr
-    // In bash, non-empty stdout triggers rebuild. Here we catch and check.
-  }
+  runScript(path.join(PROJECT_ROOT, 'runner/fts_maintain.js'));
 
   // ── 2. query.js --hours 4 (topic summary + memory index) ──────────────
   runScript(path.join(PROJECT_ROOT, 'scraper/query.js'), { args: '--hours 4', stdout: 'devnull' });
