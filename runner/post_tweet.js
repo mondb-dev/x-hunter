@@ -53,7 +53,7 @@ function normalizeText(value) {
 
 async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_000) {
   const needle = normalizeText(expectedText).slice(0, 80);
-  await page.goto(`https://x.com/${HANDLE}`, { waitUntil: "domcontentloaded", timeout: 45_000 });
+  await page.goto(`https://x.com/${HANDLE}`, { waitUntil: "domcontentloaded", timeout: 90_000 });
 
   for (let attempt = 1; attempt <= attempts; attempt++) {
     await sleep(delayMs);
@@ -207,6 +207,25 @@ async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_
       process.exit(1);
     }
 
+    // Check for anti-automation toast before posting
+    const prePostToast = await page.evaluate(() => {
+      const toasts = Array.from(document.querySelectorAll('[data-testid="toast"], [role="alert"]'));
+      return toasts.map(t => t.innerText).find(t => /automated|spam/i.test(t)) || null;
+    }).catch(() => null);
+    if (prePostToast) {
+      console.error(`[post_tweet] anti-automation toast detected before posting: ${prePostToast}`);
+      writeAttempt(ATTEMPT_FILE, {
+        kind: "tweet",
+        outcome: "failed",
+        reason: "anti_automation_block",
+        stage: "before_post_click",
+        toast: prePostToast,
+        cycle: CYCLE,
+      });
+      browser.disconnect();
+      process.exit(1);
+    }
+
     // Click Post (evaluate-based avoids Runtime.callFunctionOn timeout)
     await humanDelay(1_500, 3_500); // human pause before posting
     console.log("[post_tweet] clicking Post...");
@@ -214,7 +233,7 @@ async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_
       const el = document.querySelector(sel);
       if (el) el.click();
     }, POST_BUTTON);
-    await sleep(3_000);
+    await sleep(5_000); // longer wait for X to process the post
 
     // Try to get the new tweet URL from address bar first
     const finalUrl = page.url();
@@ -265,23 +284,49 @@ async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_
         browser.disconnect();
         process.exit(1);
       } else {
-        // Navigate to own profile and grab the first tweet URL to confirm post + capture URL
-        console.log("[post_tweet] navigating to profile to confirm post and capture URL...");
-        tweetUrl = await confirmFromProfile(page, tweetText, 4, 3_000);
-        if (tweetUrl) {
-          console.log(`[post_tweet] SUCCESS (confirmed from profile): ${tweetUrl}`);
-        } else {
-          console.error("[post_tweet] could not confirm tweet from profile after 4 attempts");
+        // Check for anti-automation toast after clicking Post
+        const postToast = await page.evaluate(() => {
+          const toasts = Array.from(document.querySelectorAll('[data-testid="toast"], [role="alert"]'));
+          return toasts.map(t => t.innerText).find(t => /automated|spam/i.test(t)) || null;
+        }).catch(() => null);
+        if (postToast) {
+          console.error(`[post_tweet] anti-automation toast after post: ${postToast}`);
           writeAttempt(ATTEMPT_FILE, {
             kind: "tweet",
             outcome: "failed",
-            reason: "profile_confirm_timeout",
-            stage: "profile_confirm",
+            reason: "anti_automation_block",
+            stage: "after_post_click",
+            toast: postToast,
             final_url: finalUrl,
             cycle: CYCLE,
           });
           browser.disconnect();
           process.exit(1);
+        }
+
+        // Navigate to own profile and grab the first tweet URL to confirm post + capture URL
+        console.log("[post_tweet] navigating to profile to confirm post and capture URL...");
+        tweetUrl = await confirmFromProfile(page, tweetText, 5, 4_000);
+        if (tweetUrl) {
+          console.log(`[post_tweet] SUCCESS (confirmed from profile): ${tweetUrl}`);
+        } else {
+          // If we landed on /home (not /compose), the tweet likely posted but profile confirm timed out
+          if (finalUrl.includes("/home")) {
+            console.log("[post_tweet] probable success — clicked Post and returned to /home, but could not confirm URL");
+            tweetUrl = "posted";
+          } else {
+            console.error("[post_tweet] could not confirm tweet from profile after 5 attempts");
+            writeAttempt(ATTEMPT_FILE, {
+              kind: "tweet",
+              outcome: "failed",
+              reason: "profile_confirm_timeout",
+              stage: "profile_confirm",
+              final_url: finalUrl,
+              cycle: CYCLE,
+            });
+            browser.disconnect();
+            process.exit(1);
+          }
         }
       }
     } else {

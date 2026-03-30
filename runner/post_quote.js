@@ -54,7 +54,7 @@ function normalizeText(value) {
 
 async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_000) {
   const needle = normalizeText(expectedText).slice(0, 80);
-  await page.goto(`https://x.com/${HANDLE}`, { waitUntil: "domcontentloaded", timeout: 45_000 });
+  await page.goto(`https://x.com/${HANDLE}`, { waitUntil: "domcontentloaded", timeout: 90_000 });
 
   for (let attempt = 1; attempt <= attempts; attempt++) {
     await sleep(delayMs);
@@ -322,6 +322,26 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
       return el != null && el.getAttribute("aria-disabled") !== "true";
     }, { attempts: 30, interval: 1_000 });
 
+    // Check for anti-automation toast before posting
+    const prePostToast = await page.evaluate(() => {
+      const toasts = Array.from(document.querySelectorAll('[data-testid="toast"], [role="alert"]'));
+      return toasts.map(t => t.innerText).find(t => /automated|spam/i.test(t)) || null;
+    }).catch(() => null);
+    if (prePostToast) {
+      console.error(`[post_quote] anti-automation toast detected before posting: ${prePostToast}`);
+      writeAttempt(ATTEMPT_FILE, {
+        kind: "quote",
+        outcome: "failed",
+        reason: "anti_automation_block",
+        stage: "before_post_click",
+        toast: prePostToast,
+        source_url: sourceUrl,
+        cycle: CYCLE,
+      });
+      browser.disconnect();
+      process.exit(1);
+    }
+
     // Click Post
     await humanDelay(1_500, 3_500); // human pause before posting
     console.log("[post_quote] clicking Post...");
@@ -329,7 +349,7 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
       const el = document.querySelector(sel);
       if (el) el.click();
     }, POST_BUTTON);
-    await sleep(3_500);
+    await sleep(5_000); // longer wait for X to process
 
     // Capture result — navigate to own profile to confirm post and get URL
     const finalUrl = page.url();
