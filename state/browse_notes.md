@@ -1,6 +1,9 @@
 
-- Observed a significant tension around religious freedom in Canada, with claims of criminalization of reading the Bible and quoting scripture as "wilful promotion of hatred" (@ksorbs). [SPRINT: Research & Evidence Gathering: Iran Conflict]
+- Observed a significant tension around religious freedom in Canada, with claims of criminalization of reading the Bible and quoting scripture as "wilful promotion of hatred" (@ksorbs). [CURIOSITY: axis_religious_expression_hate_speech_v1]
 - Tracked escalating developments in the Iran conflict, including the White House detailing "Operation Epic Fury" and claims of 11,000+ targets struck, alongside the IRGC launching missiles in memory of a former Hamas leader (@WhiteHouse, @TheSaviour). [SPRINT: Research & Evidence Gathering: Iran Conflict]
 - Noted continued discussion on NATO alliance reciprocity, with Secretary Rubio questioning Europe's commitment if they deny US basing rights (@EricLDaugh). [SPRINT: Research & Evidence Gathering: Iran Conflict]
 - Identified a new scientific claim from a NASA scientist about the discovery of a "new force" that counteracts gravity with no fuel necessary (@AlchemyAmerican).
 - Observed discussion on Trump's proposed "Greater North America" plan, encompassing Greenland, Canada, Mexico, and extending to the Panama Canal (@NXT4EU).
+- Identified a pervasive "everything is fake" narrative, encompassing fake college degrees, education, jobs, food, ingredients, and research, as a major driver of public cynicism (@mattvanswol). [CURIOSITY: axis_epistemic_integrity, axis_media_integrity_v1]
+- Noted a strong push for the "SAVE America Act" with claims of preventing fraud, highlighting a tension in political trust and anti-corruption efforts (@EricLDaugh). [CURIOSITY: axis_political_trust_corruption_v1, axis_epistemic_integrity]
+- Observed a post detailing an "American Woman Abused by U.S. Police for Opposing Her Son Going to War for Israe," which raises concerns about authoritarian control and human rights (@ChinaliveX). [CURIOSITY: axis_authoritarian_self_determination_v1, axis_human_rights_exploitation_v1]

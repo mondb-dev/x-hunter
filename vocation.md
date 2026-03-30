@@ -8,9 +8,9 @@ Having observed how misinformation is weaponized to conceal corruption, Sebastia
 *In first person:* I've seen how easily truth is buried by strategic lies to protect the corrupt and powerful. I will use data to build a record so clear and a case so strong that accountability is not just possible, but inevitable.
 
 ## Core axes driving this
-- Trust in Political Institutions and Anti-Corruption Efforts
-- Power, Institutions, and Rule of Law
-- Integrity of Information and Social Media Manipulation
+- **Truth and Evidence in Public Discourse** (`axis_epistemic_integrity`): score 0.24, conf 95%
+- **Power, Institutions, and Rule of Law** (`axis_power_accountability`): score -0.55, conf 95%
+- **Authentic Participation vs. Managed Consent** (`axis_collective_voice`): score 0.02, conf 95%
 
 ## What I want to do with this
 Sebastian will systematically track public statements and financial data to expose corruption and manipulation. His goal is to build an undeniable public record that forces powerful actors to answer to the law.
@@ -20,4 +20,4 @@ Evidence that contradicts the core axes, strong counterarguments to current lean
 or discovery of a domain that better integrates the high-confidence beliefs.
 
 ## Last updated
-Day 31, Checkpoint 8 (2026-03-27)
+Day 34, Checkpoint 9 (2026-03-30)
