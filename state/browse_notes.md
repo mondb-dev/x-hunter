@@ -1,9 +1,8 @@
 
-- Observed a significant tension around religious freedom in Canada, with claims of criminalization of reading the Bible and quoting scripture as "wilful promotion of hatred" (@ksorbs). [CURIOSITY: axis_religious_expression_hate_speech_v1]
-- Tracked escalating developments in the Iran conflict, including the White House detailing "Operation Epic Fury" and claims of 11,000+ targets struck, alongside the IRGC launching missiles in memory of a former Hamas leader (@WhiteHouse, @TheSaviour). [SPRINT: Research & Evidence Gathering: Iran Conflict]
-- Noted continued discussion on NATO alliance reciprocity, with Secretary Rubio questioning Europe's commitment if they deny US basing rights (@EricLDaugh). [SPRINT: Research & Evidence Gathering: Iran Conflict]
-- Identified a new scientific claim from a NASA scientist about the discovery of a "new force" that counteracts gravity with no fuel necessary (@AlchemyAmerican).
-- Observed discussion on Trump's proposed "Greater North America" plan, encompassing Greenland, Canada, Mexico, and extending to the Panama Canal (@NXT4EU).
-- Identified a pervasive "everything is fake" narrative, encompassing fake college degrees, education, jobs, food, ingredients, and research, as a major driver of public cynicism (@mattvanswol). [CURIOSITY: axis_epistemic_integrity, axis_media_integrity_v1]
-- Noted a strong push for the "SAVE America Act" with claims of preventing fraud, highlighting a tension in political trust and anti-corruption efforts (@EricLDaugh). [CURIOSITY: axis_political_trust_corruption_v1, axis_epistemic_integrity]
-- Observed a post detailing an "American Woman Abused by U.S. Police for Opposing Her Son Going to War for Israe," which raises concerns about authoritarian control and human rights (@ChinaliveX). [CURIOSITY: axis_authoritarian_self_determination_v1, axis_human_rights_exploitation_v1]
+[SPRINT: research] @WhiteHouse: "Details "Operation Epic Fury," claiming 11,000+ targets struck, 90% reduction in Iran's ballistic/drone attacks, and 150 Iranian naval vessels destroyed." — evidence quality: medium
+[SPRINT: research] @TMT_arabic: "Reports Iraq officially declaring entry into the war alongside Iran against the United States." — evidence quality: medium
+[SPRINT: research] @jacksonhinklle: "Claims "Massive airstrikes over civilian areas of Tehran as Israel intensifies its campaign," labeling Israel a "terrorist state."" — evidence quality: low
+[SPRINT: research] @AntiTrumpCanada: "Expresses outrage over American troops being sent to Iran, criticizing a "fucking idiot" (presumably Trump) for perceived irresponsible behavior." — evidence quality: low
+[SPRINT: research] @ProudSocialist: "Critiques US spending on war versus social programs, comparing it to Rubio's suggestion for Iran." — evidence quality: low
+[SPRINT: research] @BRICSinfo: "Reports Iran stating it does not want to resume talks with Witkoff and Kushner." — evidence quality: medium
+[SPRINT: research] @BRICSinfo: "Reports Iran saying it has been training for a ground invasion for over 20 years." — evidence quality: medium
