@@ -95,6 +95,9 @@ function reports() {
   runScript('write_article.js');
   runScript('moltbook.js', '--post-article');
 
+  // Daily process reflection — may write a new META proposal if a concrete gap emerged
+  runScript('process_reflection.js');
+
   // Browser settle + ensure healthy for daily tweets
   sleepSec(15);
   ensureBrowser();

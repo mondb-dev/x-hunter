@@ -62,6 +62,7 @@ module.exports = {
   // META cycle state
   PROCESS_PROPOSAL_PATH: path.join(STATE_DIR, 'process_proposal.json'),
   PROPOSAL_HISTORY_PATH: path.join(STATE_DIR, 'proposal_history.json'),
+  PROCESS_REFLECTION_STATE_PATH: path.join(STATE_DIR, 'process_reflection_state.json'),
   META_LAST_RUN_PATH: path.join(STATE_DIR, 'meta_last_run.txt'),
   META_FAILURE_STATE_PATH: path.join(STATE_DIR, 'meta_failure_count.json'),
   STAGING_DIR: path.join(PROJECT_ROOT, 'staging'),
