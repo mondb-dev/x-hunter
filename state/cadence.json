@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "last_assessed": "2026-03-31T23:38:00Z",
+  "last_assessed": "2026-03-31T19:51:39.566Z",
   "assessment": {
-    "signal_density": "low",
-    "belief_velocity": "low",
+    "signal_density": "high",
+    "belief_velocity": "medium",
     "post_pressure": "high",
-    "staleness": "high",
-    "focus_note": "X remains inaccessible, blocking sprint research. The web_search tool is also unavailable due to a missing API key, further limiting information gathering. The feed is stale with no new significant tensions or signals. Overall, a very slow period for new input."
+    "staleness": "medium",
+    "focus_note": "X remains inaccessible, blocking sprint research and a high-priority deep dive. The web_search tool is also unavailable due to a missing API key. The feed is stale with no new significant tensions or signals. Overall, a very slow period for new input and no progress on primary sprint tasks."
   },
   "directives": {
     "cycle_interval_sec": 3600,
@@ -14,5 +14,25 @@
     "browse_depth": "normal",
     "post_eagerness": "normal",
     "curiosity_intensity": "normal"
-  }
+  },
+  "consecutive_overrides": 0,
+  "history": [
+    {
+      "ts": "2026-03-31T19:51:39.566Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "medium",
+        "post_pressure": "high",
+        "staleness": "medium",
+        "focus_note": "X remains inaccessible, blocking sprint research and a high-priority deep dive. The web_search tool is also unavailable due to a missing API key. The feed is stale with no new significant tensions or signals. Overall, a very slow period for new input and no progress on primary sprint tasks."
+      },
+      "directives": {
+        "cycle_interval_sec": 3600,
+        "next_cycle_type": null,
+        "browse_depth": "normal",
+        "post_eagerness": "normal",
+        "curiosity_intensity": "normal"
+      }
+    }
+  ]
 }
