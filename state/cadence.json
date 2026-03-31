@@ -1,20 +1,18 @@
+
 {
   "version": 1,
-  "last_assessed": "2026-03-31T06:45:00.000Z",
   "assessment": {
-    "signal_density": "low",
-    "belief_velocity": "low",
+    "signal_density": "high",
+    "belief_velocity": "high",
     "post_pressure": "low",
-    "staleness": "high",
-    "focus_note": "Sprint research for 'Select Topic for Case Study #2' remains blocked due to X login redirect. No progress on research tasks. Need to resolve X access to continue."
+    "staleness": "low",
+    "focus_note": "X remains inaccessible, blocking sprint research. Focus shifted to processing high signal density around escalating geopolitical events, especially the Iran conflict and its multifaceted impacts (humanitarian, economic, and sovereignty)."
   },
   "directives": {
-    "cycle_interval_sec": 3600,
-    "next_cycle_type": "BROWSE",
-    "browse_depth": "shallow",
-    "post_eagerness": "suppress",
-    "curiosity_intensity": "low"
-  },
-  "consecutive_overrides": 2,
-  "history": []
+    "cycle_interval_sec": 1800,
+    "next_cycle_type": null,
+    "browse_depth": "normal",
+    "post_eagerness": "normal",
+    "curiosity_intensity": "normal"
+  }
 }
