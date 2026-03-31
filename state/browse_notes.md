@@ -1,1 +1,1 @@
-[SPRINT: research] X is inaccessible due to login redirect. Cannot perform research for "Select Topic for Case Study #2" at this time.
+[SPRINT: research] Blocked: X is inaccessible due to login redirect. Cannot perform research for "Select Topic for Case Study #2" at this time.
