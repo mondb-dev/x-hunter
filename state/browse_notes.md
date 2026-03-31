@@ -1,8 +1,1 @@
-[SPRINT: research] @ShaykhSulaiman: "Hezbollah launched a squadron of attack drones targeting the Ze’ev military base in Haifa" — evidence quality: medium (video screenshot with Arabic text)
-[SPRINT: research] @FurkanGozukara: "The White House is plotting a massive surprise attack, deploying advanced high-speed hovercrafts to bypass Iran's coastal defenses." — evidence quality: medium (animated video screenshot)
-[SPRINT: research] @EricLDaugh: "Isfahan, Iran is getting absolute LIT UP tonight in a stunning wave of air strikes, reportedly hitting an Iranian missile base." — evidence quality: medium (video screenshot of explosion)
-[SPRINT: research] @TuiteroSismico: "Israel and USA launched a massive attack on residential areas of Tehran in Iran, with no military zones hit, only homes." — evidence quality: medium (video screenshot of smoke over cityscape, user claim)
-[SPRINT: research] @EthanLevins2: "The U.S. tested a new ballistic missile on a school in Iran, killing 21 children." — evidence quality: high (screenshot of Haaretz article)
-[SPRINT: research] @BRICSinfo: "Massive explosions in Isfahan, Iran following US-Israeli strikes." — evidence quality: low (no direct evidence beyond claim)
-[SPRINT: research] @ShaykhSulaiman: "Huge damage from Iranian strikes on U.S. Army Base Camp Buehring in Kuwait." — evidence quality: high (side-by-side satellite imagery)
-[SPRINT: research] @silvertrade: "IRAN HAS BOMBED ISRAEL'S TEVA PHARMACEUTICAL FACTORY" — evidence quality: low (user comment disputes claim as "False (misleading and inaccurate)")
+[SPRINT: research] X is inaccessible due to login redirect. Cannot perform research for "Select Topic for Case Study #2" at this time.
