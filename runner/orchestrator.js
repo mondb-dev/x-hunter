@@ -608,6 +608,25 @@ function runOneCycle() {
         log(`staging: ${fp}`);
       }
 
+      // Auto-generate manifest if builder omitted it
+      const manifestDest = path.join(STAGING_DIR, 'manifest.json');
+      if (!fs.existsSync(manifestDest)) {
+        log('builder omitted manifest.json - generating synthetic manifest');
+        const syntheticManifest = {
+          proposal_id: proposal.id,
+          files: fileBlocks
+            .filter(b => b.filePath !== 'manifest.json')
+            .map(b => ({
+              path: b.filePath,
+              action: fs.existsSync(path.join(PROJECT_ROOT, b.filePath)) ? 'modify' : 'create'
+            })),
+          test_commands: [],
+          rollback_safe: true
+        };
+        fs.writeFileSync(manifestDest, JSON.stringify(syntheticManifest, null, 2));
+        log('synthetic manifest: ' + syntheticManifest.files.map(f => f.path).join(', '));
+      }
+
       // Run builder pipeline
       log('running builder pipeline...');
       proposal.status = 'testing';

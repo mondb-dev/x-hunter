@@ -129,6 +129,13 @@ async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_
   const page = await getXPage(browser);
 
   try {
+    // Override UA to avoid HeadlessChrome detection
+    const client = await page.createCDPSession();
+    await client.send("Network.setUserAgentOverride", {
+      userAgent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.7680.80 Safari/537.36",
+    });
+    await client.detach();
+
     // Navigate to home (inline compose box — more stable than /compose/post modal)
     console.log("[post_tweet] navigating to x.com/home...");
     await page.goto("https://x.com/home", {

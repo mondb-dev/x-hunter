@@ -20,8 +20,13 @@
 "use strict";
 
 const { connectBrowser, getXPage } = require("../runner/cdp");
+const { replyToTweet } = require("../runner/x_api");
 const fs   = require("fs");
 const path = require("path");
+
+// Load .env for X API credentials when running standalone
+try { require("dotenv").config({ path: path.join(__dirname, "..", ".env") }); } catch {}
+
 const db   = require("./db");
 const { extractKeywords } = require("./analytics");
 
@@ -341,98 +346,16 @@ or
   return JSON.parse(match[0]);
 }
 
-// ── 5. CDP: post a reply (page already on tweet URL) ─────────────────────────
+// ── 5. Post reply via X API ─────────────────────────────────────────────────
 async function postReply(page, item, replyText) {
-  console.log(`[reply] posting reply to @${item.from_username}`);
+  console.log(`[reply] posting reply to @${item.from_username} via API`);
 
-  // Page is already on the tweet URL from fetchThreadContext — wait for it
-  await page.waitForSelector('article[data-testid="tweet"]', { timeout: 12_000 });
-  await new Promise(r => setTimeout(r, 1_000));
+  // Extract tweet ID from the item
+  const tweetId = item.id;
+  if (!tweetId) throw new Error("no tweet ID on queue item");
 
-  // Click the reply button on the first article
-  // Use evaluate-based click — ElementHandle.click() uses Runtime.callFunctionOn which times out
-  const replyBtnExists = await page.evaluate(() => {
-    const el = document.querySelector('article[data-testid="tweet"] [data-testid="reply"]');
-    if (el) { el.click(); return true; }
-    return false;
-  });
-  if (!replyBtnExists) throw new Error("reply button not found on tweet page");
-  await new Promise(r => setTimeout(r, 1_500));
-
-  // Wait for reply compose box, then click+focus via evaluate
-  const COMPOSE = '[data-testid="tweetTextarea_0"]';
-  await page.waitForSelector(COMPOSE, { timeout: 8_000 });
-  await new Promise(r => setTimeout(r, 500));
-  await page.evaluate((sel) => {
-    const el = document.querySelector(sel);
-    if (el) el.click();
-  }, COMPOSE);
-  await page.evaluate((sel) => {
-    document.querySelector(sel)?.focus();
-  }, COMPOSE);
-  await new Promise(r => setTimeout(r, 500));
-
-  // Insert via execCommand (most reliable for React contenteditable)
-  await page.evaluate((text, sel) => {
-    const el = document.querySelector(sel);
-    if (el) { el.focus(); document.execCommand("insertText", false, text); }
-  }, replyText, COMPOSE);
-  await new Promise(r => setTimeout(r, 1_000));
-
-  // Verify text was inserted correctly
-  const insertedText = await page.evaluate((sel) => {
-    const el = document.querySelector(sel);
-    return el ? el.innerText.trim() : "";
-  }, COMPOSE);
-  const expectedLen = replyText.length;
-  const gotLen = insertedText.length;
-  console.log(`[reply] text verification: ${gotLen}/${expectedLen} chars`);
-
-  if (!insertedText || gotLen < expectedLen * 0.8) {
-    console.log("[reply] text truncated or missing — retrying with keyboard fallback");
-    // Clear and retry with keyboard.type
-    await page.evaluate((sel) => {
-      const el = document.querySelector(sel);
-      if (el) { el.focus(); document.execCommand("selectAll"); document.execCommand("delete"); }
-    }, COMPOSE);
-    await new Promise(r => setTimeout(r, 500));
-    await page.keyboard.type(replyText, { delay: 30 });
-    await new Promise(r => setTimeout(r, 1_000));
-
-    // Second verification
-    const retryText = await page.evaluate((sel) => {
-      const el = document.querySelector(sel);
-      return el ? el.innerText.trim() : "";
-    }, COMPOSE);
-    console.log(`[reply] retry verification: ${retryText.length}/${expectedLen} chars`);
-
-    if (!retryText || retryText.length < expectedLen * 0.5) {
-      throw new Error(`reply text insertion failed after retry (${retryText.length}/${expectedLen} chars) — aborting`);
-    }
-  }
-
-  // Dispatch input/keyup so React registers the typed text and enables Post button
-  await page.evaluate((sel) => {
-    const el = document.querySelector(sel);
-    if (el) {
-      el.dispatchEvent(new Event("input", { bubbles: true }));
-      el.dispatchEvent(new KeyboardEvent("keyup", { bubbles: true }));
-    }
-  }, COMPOSE);
-  await new Promise(r => setTimeout(r, 1_000));
-
-  // Post — wait for button enabled then click via evaluate
-  const POST_BTN = '[data-testid="tweetButton"], [data-testid="tweetButtonInline"]';
-  await page.waitForSelector(POST_BTN, { timeout: 12_000 });
-  const isDisabled = await page.$eval(POST_BTN, el => el.getAttribute("aria-disabled")).catch(() => null);
-  if (isDisabled === "true") throw new Error("Post button disabled — reply text may not have registered");
-  await page.evaluate((sel) => {
-    const el = document.querySelector(sel);
-    if (el) el.click();
-  }, POST_BTN);
-  await new Promise(r => setTimeout(r, 3_000));
-
-  console.log(`[reply] posted reply to @${item.from_username}`);
+  const result = await replyToTweet(replyText, tweetId);
+  console.log(`[reply] posted reply to @${item.from_username}: https://x.com/sebastianhunts/status/${result.id}`);
 }
 
 // ── Interactions log ──────────────────────────────────────────────────────────

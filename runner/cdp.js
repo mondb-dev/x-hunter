@@ -61,20 +61,30 @@ async function connectBrowser(timeout = 10_000) {
 /**
  * Find an existing x.com page, or fall back to the first available page.
  * Uses browser.targets() which is synchronous and instant (no Page object creation).
+ * Automatically overrides the User-Agent to remove "HeadlessChrome" which X detects.
  * @param {import("puppeteer-core").Browser} browser
  * @returns {Promise<import("puppeteer-core").Page>}
  */
 async function getXPage(browser) {
   const targets = browser.targets();
   const xTarget = targets.find(t => t.type() === "page" && /x\.com/.test(t.url()));
-  if (xTarget) return xTarget.page();
+  let page;
+  if (xTarget) {
+    page = await xTarget.page();
+  } else {
+    // Fallback: first page target
+    const firstPage = targets.find(t => t.type() === "page");
+    page = firstPage ? await firstPage.page() : await browser.newPage();
+  }
 
-  // Fallback: first page target
-  const firstPage = targets.find(t => t.type() === "page");
-  if (firstPage) return firstPage.page();
+  // Override User-Agent to remove "HeadlessChrome" — X blocks headless browsers
+  try {
+    const currentUA = await page.evaluate(() => navigator.userAgent);
+    const cleanUA = currentUA.replace(/HeadlessChrome/g, "Chrome");
+    await page.setUserAgent(cleanUA);
+  } catch {}
 
-  // Nothing open — open a new tab
-  return browser.newPage();
+  return page;
 }
 
 module.exports = { connectBrowser, getXPage, CDP_URL };

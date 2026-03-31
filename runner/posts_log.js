@@ -70,7 +70,7 @@ function logTweet({ content, tweet_url, date, cycle }) {
 /**
  * Append a quote entry. Upserts if agent already wrote an entry with same source_url.
  */
-function logQuote({ source_url, content, tweet_url, date, cycle }) {
+function logQuote({ source_url, content, tweet_url, date, cycle, mode }) {
   const log = readLog();
   // Upsert: if a quote entry with same source_url exists without a tweet_url, patch it
   const existing = source_url ? log.posts.find(p =>
@@ -108,6 +108,7 @@ function logQuote({ source_url, content, tweet_url, date, cycle }) {
     type: "quote",
     source_url,
     content,
+    mode: mode || "quote_tweet",
     tweet_url: tweet_url || "",
     date: date || new Date().toISOString().slice(0, 10),
     cycle: cycle || null,

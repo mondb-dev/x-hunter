@@ -30,12 +30,23 @@
 
 "use strict";
 
-const { connectBrowser, getXPage } = require("../runner/cdp");
+const dotenv = (() => {
+  try { return require("dotenv"); } catch { return null; }
+})();
+const { connectBrowser } = require("../runner/cdp");
 const fs        = require("fs");
 const path      = require("path");
 const db        = require("./db");
 const analytics = require("./analytics");
 const { describeMedia } = require("../runner/vision");
+const {
+  getUserByUsername,
+  getHomeTimeline,
+  getUserMentions,
+  searchRecent,
+} = require("../runner/x_api");
+
+if (dotenv) dotenv.config({ path: path.join(__dirname, "..", ".env") });
 
 // ── Paths ─────────────────────────────────────────────────────────────────────
 const ROOT        = path.resolve(__dirname, "..");
@@ -47,7 +58,6 @@ const FEED_DIGEST = path.join(ROOT, "state", "feed_digest.txt");
 const REPLY_QUEUE = path.join(ROOT, "state", "reply_queue.jsonl");
 
 // ── Constants ─────────────────────────────────────────────────────────────────
-const CDP_URL               = "http://127.0.0.1:18801";
 const MAX_SEEN              = 10000;
 const TOP_POSTS             = 25;
 const TOP_REPLIES           = 5;
@@ -103,6 +113,114 @@ function parseCount(str) {
   if (s.endsWith("K")) return parseFloat(s) * 1_000;
   if (s.endsWith("M")) return parseFloat(s) * 1_000_000;
   return parseInt(s) || 0;
+}
+
+function isLoginRedirectUrl(url) {
+  return /x\.com\/i\/flow\/login/.test(String(url || ""));
+}
+
+let cachedAuthedUser = null;
+
+async function getAuthenticatedUser() {
+  if (cachedAuthedUser) return cachedAuthedUser;
+  const username = (process.env.X_USERNAME || "").trim();
+  if (!username) throw new Error("X_USERNAME is not set");
+  const result = await getUserByUsername(username);
+  if (!result?.data?.id) throw new Error(`could not resolve X user for ${username}`);
+  cachedAuthedUser = result.data;
+  return cachedAuthedUser;
+}
+
+function buildIncludesMaps(response) {
+  return {
+    users: new Map((response?.includes?.users || []).map(u => [u.id, u])),
+    media: new Map((response?.includes?.media || []).map(m => [m.media_key, m])),
+  };
+}
+
+function inferApiMediaType(tweet, mediaMap) {
+  const keys = tweet?.attachments?.media_keys || [];
+  if (keys.some(k => /video|animated_gif/.test(mediaMap.get(k)?.type || ""))) return "video";
+  if (keys.some(k => (mediaMap.get(k)?.type || "") === "photo")) return "image";
+  return "none";
+}
+
+function mapApiTweet(tweet, maps) {
+  const user = maps.users.get(tweet.author_id) || {};
+  const metrics = tweet.public_metrics || {};
+  return {
+    id: tweet.id,
+    username: user.username || "unknown",
+    displayName: user.name || user.username || "unknown",
+    text: tweet.text || "",
+    ts: Date.parse(tweet.created_at || new Date().toISOString()),
+    likes: String(metrics.like_count || 0),
+    rts: String((metrics.retweet_count || 0) + (metrics.quote_count || 0)),
+    replies: String(metrics.reply_count || 0),
+    mediaType: inferApiMediaType(tweet, maps.media),
+  };
+}
+
+function mapApiTweets(response) {
+  const maps = buildIncludesMaps(response);
+  return (response?.data || []).map(tweet => mapApiTweet(tweet, maps));
+}
+
+async function fetchApiHomeTimelinePosts(count = 40) {
+  const user = await getAuthenticatedUser();
+  const response = await getHomeTimeline(user.id, { max_results: Math.min(100, count) });
+  return mapApiTweets(response);
+}
+
+async function fetchApiReplies(post, topN) {
+  const query = `conversation_id:${post.id} -from:${post.username}`;
+  const response = await searchRecent(query, { max_results: 25 });
+  return mapApiTweets(response)
+    .filter(r => r.id !== post.id && r.text)
+    .sort((a, b) =>
+      (parseCount(b.likes) + parseCount(b.rts)) -
+      (parseCount(a.likes) + parseCount(a.rts))
+    )
+    .slice(0, topN);
+}
+
+function loadQueuedReplyIds() {
+  const existingIds = new Set();
+  try {
+    const raw = fs.readFileSync(REPLY_QUEUE, "utf-8").trim().split("\n").filter(Boolean);
+    for (const line of raw) {
+      try { existingIds.add(JSON.parse(line).id); } catch {}
+    }
+  } catch {}
+  try {
+    const inter = JSON.parse(fs.readFileSync(path.join(ROOT, "state", "interactions.json"), "utf-8"));
+    for (const r of (inter.replies || [])) {
+      if (r.id) existingIds.add(r.id);
+    }
+  } catch {}
+  return existingIds;
+}
+
+function appendMentionsToReplyQueue(mentions) {
+  const existingIds = loadQueuedReplyIds();
+  const newItems = [];
+  for (const m of mentions) {
+    if (!m.text || !m.id || existingIds.has(m.id)) continue;
+    const stripped = m.text.replace(/@\w+/g, "").replace(/https?:\/\/\S+/g, "").trim();
+    if (stripped.length < 8) continue;
+    newItems.push(JSON.stringify({
+      id:            m.id,
+      ts:            m.ts,
+      ts_iso:        new Date(m.ts).toISOString(),
+      from_username: m.username,
+      text:          m.text,
+      queued_at:     new Date().toISOString(),
+      status:        "pending",
+    }));
+    existingIds.add(m.id);
+  }
+  if (newItems.length > 0) fs.appendFileSync(REPLY_QUEUE, newItems.join("\n") + "\n");
+  return newItems.length;
 }
 
 // ── DOM extraction ────────────────────────────────────────────────────────────
@@ -246,7 +364,7 @@ function fmtReply(r) {
  * @param {string} now - formatted timestamp
  * @returns {string}
  */
-function formatClusteredDigest(selected, clusters, now) {
+function formatClusteredDigest(selected, clusters, now, options = {}) {
   const clusterCount   = clusters.length;
   const singletonCount = clusters.filter(c => c.posts.length === 1).length;
   const multiCount     = clusterCount - singletonCount;
@@ -261,6 +379,7 @@ function formatClusteredDigest(selected, clusters, now) {
     `    v=velocity(HN) T=trust(0-10) N=novelty(TF-IDF,0-5)` +
     `  ★=burst  ←novel=rare-this-window  📷=media-description`
   );
+  if (options.sourceNote) lines.push(`    SOURCE: ${options.sourceNote}`);
   lines.push("");
 
   // Multi-post clusters first
@@ -310,21 +429,6 @@ function formatClusteredDigest(selected, clusters, now) {
 async function scrapeNotifications(page) {
   console.log("[scraper] checking notifications/mentions...");
 
-  const existingIds = new Set();
-  try {
-    const raw = fs.readFileSync(REPLY_QUEUE, "utf-8").trim().split("\n").filter(Boolean);
-    for (const line of raw) {
-      try { existingIds.add(JSON.parse(line).id); } catch {}
-    }
-  } catch {}
-  // Also exclude tweets we already replied to (from interactions.json)
-  try {
-    const inter = JSON.parse(fs.readFileSync(path.join(ROOT, "state", "interactions.json"), "utf-8"));
-    for (const r of (inter.replies || [])) {
-      if (r.id) existingIds.add(r.id);
-    }
-  } catch {}
-
   try {
     await page.goto("https://x.com/notifications", { waitUntil: "domcontentloaded", timeout: 30_000 });
     await new Promise(r => setTimeout(r, 2_000));
@@ -341,31 +445,23 @@ async function scrapeNotifications(page) {
     await new Promise(r => setTimeout(r, 1_000));
 
     const mentions = await extractPosts(page);
-    const newItems = [];
-
-    for (const m of mentions) {
-      if (!m.text || !m.id || existingIds.has(m.id)) continue;
-      const stripped = m.text.replace(/@\w+/g, "").replace(/https?:\/\/\S+/g, "").trim();
-      if (stripped.length < 8) continue;
-
-      newItems.push(JSON.stringify({
-        id:            m.id,
-        ts:            m.ts,
-        ts_iso:        new Date(m.ts).toISOString(),
-        from_username: m.username,
-        text:          m.text,
-        queued_at:     new Date().toISOString(),
-        status:        "pending",
-      }));
-      existingIds.add(m.id);
-    }
-
-    if (newItems.length > 0) {
-      fs.appendFileSync(REPLY_QUEUE, newItems.join("\n") + "\n");
-    }
-    console.log(`[scraper] notifications: queued ${newItems.length} new mention(s)`);
+    const queued = appendMentionsToReplyQueue(mentions);
+    console.log(`[scraper] notifications: queued ${queued} new mention(s)`);
   } catch (err) {
     console.error(`[scraper] notifications scrape failed: ${err.message}`);
+  }
+}
+
+async function scrapeNotificationsApi() {
+  console.log("[scraper] checking mentions via X API fallback...");
+  try {
+    const user = await getAuthenticatedUser();
+    const response = await getUserMentions(user.id, { max_results: 20 });
+    const mentions = mapApiTweets(response);
+    const queued = appendMentionsToReplyQueue(mentions);
+    console.log(`[scraper] mentions(api): queued ${queued} new mention(s)`);
+  } catch (err) {
+    console.error(`[scraper] mentions(api) failed: ${err.message}`);
   }
 }
 
@@ -378,46 +474,41 @@ async function scrapeNotifications(page) {
   const seenData   = loadJson(SEEN_IDS, { ids: [] });
   const seenSet    = new Set(seenData.ids);
 
-  let browser;
+  let browser = null;
+  let page = null;
+  let raw = [];
+  let collectSourceNote = null;
+  let browserReady = false;
+
   try {
     browser = await connectBrowser();
-  } catch (err) {
-    console.error(`[scraper] could not connect to Chrome: ${err.message}`);
-    process.exit(1);
-  }
-
-  // Open a dedicated tab for scraping — avoids CDP session conflicts with the
-  // runner, which holds its own session on the existing x.com page.
-  let page;
-  try {
     page = await browser.newPage();
-  } catch (err) {
-    console.error(`[scraper] could not open new tab: ${err.message}`);
-    browser.disconnect();
-    process.exit(1);
-  }
-
-  // Navigate to home feed
-  try {
     await page.goto("https://x.com/home", { waitUntil: "domcontentloaded", timeout: 30_000 });
-    await page.waitForSelector('article[data-testid="tweet"]', { timeout: 12_000 });
     await new Promise(r => setTimeout(r, 2_000));
+    if (isLoginRedirectUrl(page.url())) {
+      throw new Error(`x login redirect at ${page.url()}`);
+    }
+    await page.waitForSelector('article[data-testid="tweet"]', { timeout: 12_000 });
+    for (let i = 0; i < 3; i++) {
+      await page.evaluate(() => window.scrollBy(0, 1200));
+      await new Promise(r => setTimeout(r, 1_200));
+    }
+    raw = await extractPosts(page);
+    browserReady = true;
+    console.log(`[scraper] extracted ${raw.length} raw posts`);
   } catch (err) {
-    console.error(`[scraper] failed to load feed: ${err.message}`);
-    await page.close().catch(() => {});
-    browser.disconnect();
-    process.exit(1);
+    collectSourceNote = "X API fallback — reverse-chron timeline because browser auth is unavailable";
+    console.warn(`[scraper] browser collect unavailable: ${err.message}`);
+    try {
+      raw = await fetchApiHomeTimelinePosts(60);
+      console.log(`[scraper] extracted ${raw.length} posts via X API fallback`);
+    } catch (apiErr) {
+      console.error(`[scraper] API fallback failed: ${apiErr.message}`);
+      if (page) await page.close().catch(() => {});
+      if (browser) browser.disconnect();
+      process.exit(1);
+    }
   }
-
-  // Scroll to load more posts
-  for (let i = 0; i < 3; i++) {
-    await page.evaluate(() => window.scrollBy(0, 1200));
-    await new Promise(r => setTimeout(r, 1_200));
-  }
-
-  // ── Phase 1: Extract raw posts ────────────────────────────────────────────
-  const raw = await extractPosts(page);
-  console.log(`[scraper] extracted ${raw.length} raw posts`);
 
   // ── Phase 2: Sanitize ─────────────────────────────────────────────────────
   const sanitized = [];
@@ -466,7 +557,7 @@ async function scrapeNotifications(page) {
   // ── Phase 5b: Capture media screenshots (before reply-fetch navigates away) ─
   const mediaPosts = selected.filter(p => p.mediaType && p.mediaType !== "none");
   const capturedMedia = [];  // {postId, base64, mimeType, context, mediaType}
-  if (mediaPosts.length > 0) {
+  if (browserReady && mediaPosts.length > 0) {
     console.log(`[scraper] ${mediaPosts.length} posts with media — capturing screenshots...`);
     for (const post of mediaPosts.slice(0, 10)) {
       const shot = await captureMediaScreenshot(page, post.id);
@@ -486,8 +577,14 @@ async function scrapeNotifications(page) {
   // ── Phase 6: Fetch top replies for highest-scoring posts ──────────────────
   const withReplies = [];
   for (const post of selected.slice(0, REPLY_FETCH_COUNT)) {
-    const url = `https://x.com/${post.username}/status/${post.id}`;
-    const replies = await fetchReplies(page, url, TOP_REPLIES);
+    let replies = [];
+    try {
+      replies = browserReady
+        ? await fetchReplies(page, `https://x.com/${post.username}/status/${post.id}`, TOP_REPLIES)
+        : await fetchApiReplies(post, TOP_REPLIES);
+    } catch (err) {
+      console.warn(`[scraper] reply fetch failed for ${post.id}: ${err.message}`);
+    }
     withReplies.push({ ...post, topReplies: replies });
     for (const r of replies) seenSet.add(r.id);
   }
@@ -611,7 +708,9 @@ async function scrapeNotifications(page) {
 
   // ── Phase 10: Write clustered digest ──────────────────────────────────────
   const now = new Date().toISOString().slice(0, 16).replace("T", " ");
-  const digestBlock = formatClusteredDigest(withReplies, clusters, now);
+  const digestBlock = formatClusteredDigest(withReplies, clusters, now, {
+    sourceNote: collectSourceNote,
+  });
   fs.appendFileSync(FEED_DIGEST, digestBlock + "\n");
 
   // ── Phase 11: Write raw JSONL buffer ──────────────────────────────────────
@@ -636,9 +735,13 @@ async function scrapeNotifications(page) {
   console.log(`[scraper] wrote ${withReplies.length} posts (${clusterCount} clusters) to index+digest+buffer`);
 
   // ── Phase 12: Scrape notifications / mentions ─────────────────────────────
-  await scrapeNotifications(page);
+  if (browserReady) {
+    await scrapeNotifications(page);
+  } else {
+    await scrapeNotificationsApi();
+  }
 
-  await page.close().catch(() => {});
-  browser.disconnect();
+  if (page) await page.close().catch(() => {});
+  if (browser) browser.disconnect();
   process.exit(0);
 })();

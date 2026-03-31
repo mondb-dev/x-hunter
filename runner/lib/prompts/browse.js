@@ -39,14 +39,14 @@ function buildPreamble(ctx) {
     ctx.commentCandidates + '\n' +
     '\u2500\u2500 CURRENT BELIEF AXES (read before updating ontology) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.currentAxes + '\n' +
-    '\u2500\u2500 UNRESOLVED CLAIMS (claims to verify or refute) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
-    ctx.unresolvedClaims + '\n' +
     '\u2500\u2500 SPRINT PLAN (ACTIVE \u2014 guide your browsing toward these tasks) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.sprintContext + '\n' +
     '\u2500\u2500 RECENT DISCOURSE (reply exchanges) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.discourseDigest + '\n' +
     '\u2500\u2500 READING QUEUE \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.readingBlock + '\n' +
+    '\u2500\u2500 API PREFETCH FALLBACK (use when browser landed on login / UI unavailable) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
+    (ctx.apiPrefetchContext || '(none)') + '\n' +
     '\u2500\u2500 CADENCE (self-regulated \u2014 you control your rhythm) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.cadence + '\n' +
     '\u2500\u2500 CAPTURE STATUS (am I being captured?) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
@@ -69,11 +69,14 @@ function buildNormalTasks(ctx) {
     '0. DEEP DIVE (highest priority): If there is a reading queue item above, follow\n' +
     '   those instructions completely before anything else. A deep dive on a profile or link\n' +
     '   takes the full cycle \u2014 skip task 1 (curiosity search) if you did a deep dive.\n' +
+    '   If API PREFETCH FALLBACK contains data for that target, use it as your source when\n' +
+    '   browser auth is unavailable instead of trying to force the UI.\n' +
     '1. CURIOSITY: If NO deep dive this cycle and the directive above has an ACTIVE SEARCH URL,\n' +
     '   navigate to it now and read top 3-5 posts. Each cycle in the window searches a\n' +
     '   different angle \u2014 check which SEARCH_URL_N is preloaded in your browser.\n' +
     '   For ALL browse cycles while the directive is active: follow the AMBIENT FOCUS \u2014\n' +
     '   tag relevant browse_notes entries with [CURIOSITY: <axis_or_topic_id>].\n' +
+    '   If browser auth is unavailable and API PREFETCH FALLBACK has search results, use those.\n' +
     '2. Identify the 3-5 most interesting tensions or signals from TRENDING clusters\n' +
     '   and <- novel singletons. You may navigate to at most 1 additional URL.\n' +
     '   SPRINT FOCUS: If you have in-progress sprint tasks (marked \u25b8 above), actively\n' +
@@ -82,21 +85,7 @@ function buildNormalTasks(ctx) {
     '   reactions or questions you could respond to. Tag sprint-relevant findings in\n' +
     '   browse_notes with [SPRINT: task_id].\n' +
     '3. Append findings to state/browse_notes.md (append only -- do not overwrite).\n' +
-    '4. CLAIM TRACKER: Review the UNRESOLVED CLAIMS list. If your browsing uncovered new\n' +
-    '   evidence for any of them, or you found a new, significant, unverified claim, update the tracker.\n' +
-    '   To do so, write state/claim_tracker_delta.json. DO NOT write state/claim_tracker.json directly.\n' +
-    '   Delta format:\n' +
-    '   {\n' +
-    '     "new_claims": [\n' +
-    '       { "claim_text": "concise claim text", "source_url": "url", "related_axis_id": "axis_id", "notes": "initial notes" }\n' +
-    '     ],\n' +
-    '     "updated_claims": [\n' +
-    '       { "id": "claim_id_from_list", "new_status": "supported"|"refuted"|"contested", "notes": "notes on new evidence" }\n' +
-    '     ]\n' +
-    '   }\n' +
-    '   Use statuses: "supported" (strong evidence for), "refuted" (strong evidence against), "contested" (conflicting evidence).\n' +
-    '   Omit keys if empty. Skip the file if no changes.\n' +
-    '5. Write state/ontology_delta.json if anything is genuinely axis-worthy.\n' +
+    '4. Write state/ontology_delta.json if anything is genuinely axis-worthy.\n' +
     '   DO NOT write or modify state/ontology.json directly \u2014 the runner merges your delta.\n' +
     '   ONTOLOGY RULES (CURRENT BELIEF AXES shown above \u2014 do not alter existing data):\n' +
     '   a. Fit new evidence to an existing axis before creating a new one.\n' +
@@ -126,12 +115,12 @@ function buildNormalTasks(ctx) {
     '   Omit "evidence" or "new_axes" if nothing to add. Skip writing the file entirely\n' +
     '   if nothing is axis-worthy this cycle.\n' +
     '\n' +
-    '6. Review COMMENT CANDIDATES above. Comment on AT MOST ONE if your memory gives\n' +
+    '5. Review COMMENT CANDIDATES above. Comment on AT MOST ONE if your memory gives\n' +
     '   you something genuinely specific to say \u2014 a direct observation, contradiction,\n' +
     '   or angle not yet in the thread. Skip all if nothing compels you or cap reached.\n' +
     '   If commenting: navigate to the URL, reply (max 180 chars), then write\n' +
     '   state/comment_done.txt as a single JSON line per the format in the candidates.\n' +
-    '7. CADENCE: Review the CADENCE section above. Based on what you just\n' +
+    '6. CADENCE: Review the CADENCE section above. Based on what you just\n' +
     '   observed THIS cycle, update state/cadence.json with your assessment.\n' +
     '   You control your own rhythm. Write the full JSON with these fields:\n' +
     '   {\n' +
@@ -152,43 +141,115 @@ function buildNormalTasks(ctx) {
     '     }\n' +
     '   }\n' +
     '   Guidelines:\n' +
-    '   - Set next_cycle_type to "TWEET" or "QUOTE" only if you have a high-conviction idea.\n' +
-    '   - Increase cycle_interval_sec if signal is low. Decrease if high.\n' +
-    '   - Use focus_note to guide your future self.\n' +
-    '   - You can override the default cycle pattern up to 3 times in a row.\n' +
-    '\n' +
-    '8. JOURNAL: ' + ctx.journalTask + '\n';
+    '   - Set next_cycle_type to "TWEET" or "QUOTE" if you saw something you want to post about NOW.\n' +
+    '   - Set cycle_interval_sec lower (900-1500) when signals are hot; higher (2400-3600) when quiet.\n' +
+    '   - Set post_eagerness to "eager" if you have a backlog; "suppress" if you want to focus on learning.\n' +
+    '   - Only write the fields you want to change \u2014 omitted fields keep their previous values.\n' +
+    '   - Max 3 consecutive next_cycle_type overrides before the system resets to auto.\n' +
+    '7. JOURNAL: ' + ctx.journalTask + '\n' +
+    '8. TOOLS (optional): If you need to execute a registered tool, write state/tool_request.json.\n' +
+    '   Single tool:\n' +
+    '   { "tool": "<tool_name>", "args": { ... } }\n' +
+    '   Workflow (sequential, max 5 steps):\n' +
+    '   { "workflow": [\n' +
+    '       { "tool": "<tool_name>", "args": { ... } },\n' +
+    '       { "tool": "<tool_name>", "args": { "$prev": true, "other": "..." } }\n' +
+    '   ]}\n' +
+    '   $prev merges the previous step result into args. The orchestrator runs tools\n' +
+    '   AFTER your agent run completes. Results appear in LAST TOOL RESULT next cycle.\n' +
+    '   Do NOT write tool_result.json yourself. Only request tools listed in AVAILABLE TOOLS.\n' +
+    'Next tweet cycle: ' + ctx.nextTweet + '.\n';
 }
 
-// ── Silent-hours sprint tasks ─���───────────────────────────────────────────
+// ── Silent-hours sprint tasks ─────────────────────────────────────────────
 
 function buildSprintTasks(ctx) {
   return '\n' +
+    '═══ SPRINT WORK MODE (silent hours \u2014 feed is stale, sprint is your priority) ═══\n' +
+    '\n' +
+    'It is outside active posting hours. The feed has low signal density right now.\n' +
+    'This cycle is dedicated to advancing your sprint deliverables.\n' +
+    '\n' +
     'Tasks (in order):\n' +
-    '1. SPRINT WORK (PRIMARY): The feed is quiet. Focus on your active sprint.\n' +
-    '   Review the SPRINT PLAN above. Your primary goal this cycle is to make progress\n' +
-    '   on the tasks marked with \u25b8 (in-progress).\n' +
-    '   - For "research" tasks, use the search tool to find relevant accounts, papers,\n' +
-    '     or discussions. Curate findings into state/sprint_research_notes.md.\n' +
-    '   - For "drafting" tasks, write or refine content in the specified file.\n' +
-    '   - For "engagement" tasks, browse relevant communities or hashtags, take notes on\n' +
-    '     the discourse, and identify opportunities to contribute.\n' +
-    '   - Update the sprint plan by writing a new state/sprint_context.json, moving tasks\n' +
-    '     from \u25b7 to \u25b6 (done) or updating notes.\n' +
-    '2. BROWSE (SECONDARY): Briefly scan the feed digest for anything truly novel or\n' +
-    '   surprising that might be relevant to your sprint. Append brief notes to\n' +
-    '   state/browse_notes.md, tagging with [SPRINT: task_id].\n' +
-    '3. JOURNAL: ' + ctx.journalTask + '\n';
+    '0. SPRINT RESEARCH (primary task \u2014 60% of this cycle):\n' +
+    '   Look at the SPRINT PLAN above. Find the first \u25b8 (in-progress) or \u25cb (not-started) task.\n' +
+    '   Work on it based on its type:\n' +
+    '\n' +
+    '   [research] task:\n' +
+    '     - Navigate to X search for the topic. Use 2-3 targeted search queries.\n' +
+    '     - Read 5-10 posts from diverse accounts. Look for:\n' +
+    '       * Specific factual claims (with or without evidence)\n' +
+    '       * Contradictions between sources\n' +
+    '       * High-quality analytical threads\n' +
+    '       * Primary sources or data that could anchor your analysis\n' +
+    '     - For each noteworthy finding, record in browse_notes.md:\n' +
+    '       [SPRINT: research] @user: "key claim or finding" \u2014 evidence quality: high/medium/low\n' +
+    '     - If you find an especially good thread or article, save the URL for follow-up.\n' +
+    '\n' +
+    '   [write] task:\n' +
+    '     - Review your accumulated [SPRINT: research] entries in browse_notes.\n' +
+    '     - Review relevant belief axes and evidence that inform this topic.\n' +
+    '     - Write a draft article to articles/' + ctx.today + '.md:\n' +
+    '       * Clear thesis grounded in evidence you actually found\n' +
+    '       * Specific claims with sources (not vague generalizations)\n' +
+    '       * Acknowledge what you do NOT know or could not verify\n' +
+    '       * 500-1500 words, honest and analytical\n' +
+    '     - If the article file already exists, review and refine it instead.\n' +
+    '\n' +
+    '   [engage] task:\n' +
+    '     - Search for conversations about the sprint topic.\n' +
+    '     - Identify 2-3 accounts or threads where your perspective adds value.\n' +
+    '     - Note engagement opportunities in browse_notes.md:\n' +
+    '       [SPRINT: engage] @user tweet_url \u2014 potential angle: "..."\n' +
+    '     - Do NOT engage yet \u2014 queue opportunities for active hours.\n' +
+    '\n' +
+    '   [publish] task:\n' +
+    '     - Check if the prerequisite write task produced a draft in articles/.\n' +
+    '     - If draft exists: review it, refine if needed, mark as ready.\n' +
+    '     - If no draft: note in browse_notes that publish is blocked on write.\n' +
+    '\n' +
+    '1. CURIOSITY (secondary): If the directive above has an ACTIVE SEARCH URL related\n' +
+    '   to your sprint topic, navigate to it. Otherwise skip curiosity this cycle \u2014\n' +
+    '   sprint research is your curiosity tonight.\n' +
+    '2. Append all findings to state/browse_notes.md (append only \u2014 do not overwrite).\n' +
+    '   Tag all sprint-related entries with [SPRINT: <task_type>].\n' +
+    '3. Write state/ontology_delta.json if sprint research reveals axis-worthy evidence.\n' +
+    '   Same rules as normal browse:\n' +
+    '   - Fit to existing axes first. Use axis_ids from CURRENT BELIEF AXES.\n' +
+    '   - New axes only if genuinely orthogonal + seen in 2+ cycles.\n' +
+    '   - Delta only \u2014 never modify ontology.json directly.\n' +
+    '   - Write STRICT valid JSON only. In evidence.content, paraphrase in one sentence,\n' +
+    '     with no line breaks and no double quotes inside the text.\n' +
+    '4. CADENCE: Update state/cadence.json. During sprint work:\n' +
+    '   - Set focus_note to describe what sprint work you did and what remains.\n' +
+    '   - Recommend cycle_interval_sec based on sprint progress (faster if productive).\n' +
+    '   - Keep post_eagerness at "suppress" (no posting during silent hours).\n' +
+    '5. JOURNAL: ' + ctx.journalTask + '\n' +
+    '   Focus the journal on sprint work: what you researched, what you found,\n' +
+    '   what evidence quality was like, what gaps remain.\n' +
+    'Next tweet cycle: ' + ctx.nextTweet + '.\n';
 }
 
-// ── Main entrypoint ───────────────────────────────────────────────────────
+// ── Main export ───────────────────────────────────────────────────────────
 
-function buildBrowsePrompt(ctx) {
+module.exports = function buildBrowsePrompt(ctx) {
   const preamble = buildPreamble(ctx);
   const tasks = (ctx.isSilentHours && ctx.hasActiveSprint)
     ? buildSprintTasks(ctx)
     : buildNormalTasks(ctx);
   return preamble + tasks;
-}
+};
 
-module.exports = { buildBrowsePrompt };
+// CLI mode
+if (require.main === module) {
+  const loadContext = require('./context');
+  const ctx = loadContext({
+    type:      'browse',
+    cycle:     parseInt(process.env.CYCLE || '1', 10),
+    dayNumber: parseInt(process.env.DAY_NUMBER || '1', 10),
+    today:     process.env.TODAY || new Date().toISOString().slice(0, 10),
+    now:       process.env.NOW   || new Date().toTimeString().slice(0, 5),
+    hour:      process.env.HOUR  || String(new Date().getHours()).padStart(2, '0'),
+  });
+  process.stdout.write(module.exports(ctx));
+}

@@ -1,8 +1,10 @@
 {
-  "at": "2026-03-31T22:09:58.850Z",
+  "at": "2026-03-31T23:52:54.316Z",
   "kind": "tweet",
   "outcome": "failed",
-  "reason": "exception",
-  "error": "refusing to write unconfirmed status URL: posted",
+  "reason": "api_error",
+  "error": "X API 402: {\"account_id\":2038822179203330000,\"title\":\"CreditsDepleted\",\"detail\":\"Your enrolled account [2038822179203330048] does not have any credits to fulfill this request.\",\"type\":\"https://api.twitter.com/2/problems/credits\"}",
+  "status_code": 402,
+  "method": "api",
   "cycle": null
 }
