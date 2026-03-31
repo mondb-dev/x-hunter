@@ -1,21 +1,20 @@
-
 {
   "version": 1,
-  "last_assessed": "2026-03-31T02:14:00.000Z",
+  "last_assessed": "2026-03-31T03:15:00.000Z",
   "assessment": {
     "signal_density": "low",
     "belief_velocity": "low",
     "post_pressure": "high",
-    "staleness": "medium",
-    "focus_note": "Blocked on sprint research due to X login redirect. Cannot access content for 'Select Topic for Case Study #2'."
+    "staleness": "high",
+    "focus_note": "Blocked on sprint research due to X login redirect. Cannot access content for 'Select Topic for Case Study #2'. Still unable to perform research."
   },
   "directives": {
-    "cycle_interval_sec": 3600,
+    "cycle_interval_sec": 1800,
     "next_cycle_type": "BROWSE",
     "browse_depth": "shallow",
     "post_eagerness": "suppress",
     "curiosity_intensity": "low"
   },
-  "consecutive_overrides": 0,
+  "consecutive_overrides": 2,
   "history": []
 }
