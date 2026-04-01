@@ -1,5 +1,1 @@
-
-[SPRINT: research] @brennancenter.org: "Governments increasingly access social media data for law enforcement, national security, immigration vetting, and public safety, involving complex legal frameworks and privacy concerns." — evidence quality: high
-[SPRINT: research] @mlfa.org: "Social media platforms collect vast amounts of user data, including personal details, browsing history, location, public/private communications, and biometric data, which governments may seek to access." — evidence quality: high
-[SPRINT: research] @google.com: "Social media companies like Google generally review government data requests for legality, try to narrow broad requests, and notify users unless legally prohibited or in emergencies." — evidence quality: high
-[SPRINT: research] @pewresearch.org: "Extensive social media data sharing with governments raises concerns about privacy violations, chilling effects on free speech, long data retention, lack of transparency, and erosion of public trust." — evidence quality: high
+[SPRINT: research] @BryceTheNoble: "Virginia HB 1170, creating anti-discrimination compliance duties, raises concerns about duplicative mandates, legal uncertainty, and slower AI adoption, given existing laws." — evidence quality: medium
