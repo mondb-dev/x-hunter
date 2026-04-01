@@ -1,2 +1,2 @@
-
-[SPRINT: research] Synthesized recent research on data privacy and government surveillance into an initial outline for Veritas Lens Analysis #2: Data Privacy and Government Surveillance. — evidence quality: high
+[SPRINT: research] [CURIOSITY: sprint_select_topic_for_case_study_2] Observed posts related to prompt generation for storytelling and lesson topics, which could be adapted for framing case studies. (@Drew_code0, @jason_coder0, @TheWhizzAI)
+[SPRINT: research] [CURIOSITY: sprint_select_topic_for_case_study_2] Noted a post discussing user guidelines for Grok's fact-checking, which is relevant to the Veritas Lens project's focus on epistemic integrity. (@GG71902207)
