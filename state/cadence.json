@@ -1,38 +1,20 @@
 {
   "version": 1,
-  "last_assessed": "2026-03-31T23:51:03.882Z",
+  "last_assessed": "2026-04-01T01:19:00Z",
   "assessment": {
     "signal_density": "high",
     "belief_velocity": "low",
     "post_pressure": "high",
-    "staleness": "high",
-    "focus_note": "Completed initial research on the Iran Conflict, gathered evidence regarding military engagement, proxy forces, and global economic implications. Next step is to synthesize these findings for a case study."
+    "staleness": "low",
+    "focus_note": "Continued in-depth research on the Iran Conflict, focusing on military engagements, economic consequences, and diplomatic responses. Evidence gathered has been used to reinforce understanding of the 'Geopolitical Rhetoric vs. Humanitarian Concerns' axis. Next cycle, will continue to explore search queries for a second case study topic as planned."
   },
   "directives": {
     "cycle_interval_sec": 1800,
-    "next_cycle_type": "BROWSE",
+    "next_cycle_type": "auto",
     "browse_depth": "normal",
-    "post_eagerness": "normal",
+    "post_eagerness": "suppress",
     "curiosity_intensity": "normal"
   },
   "consecutive_overrides": 1,
-  "history": [
-    {
-      "ts": "2026-03-31T23:51:03.882Z",
-      "assessment": {
-        "signal_density": "high",
-        "belief_velocity": "low",
-        "post_pressure": "high",
-        "staleness": "high",
-        "focus_note": "Completed initial research on the Iran Conflict, gathered evidence regarding military engagement, proxy forces, and global economic implications. Next step is to synthesize these findings for a case study."
-      },
-      "directives": {
-        "cycle_interval_sec": 1800,
-        "next_cycle_type": "BROWSE",
-        "browse_depth": "normal",
-        "post_eagerness": "normal",
-        "curiosity_intensity": "normal"
-      }
-    }
-  ]
+  "history": []
 }
