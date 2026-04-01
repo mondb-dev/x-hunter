@@ -178,24 +178,74 @@ function isSilentHours() {
  * Read sprint_context.txt and extract the first actionable task (▸ or ○).
  * Returns { type, title, status } or null.
  */
+// Generic process words that indicate a task title has no real search topic.
+const META_TASK_WORDS = new Set([
+  "select", "choose", "pick", "decide", "determine", "topic", "subject",
+  "case", "study", "execute", "perform", "complete", "start", "begin",
+  "setup", "set", "up", "plan", "outline", "organise", "organize",
+  "gather", "collection", "curation", "curate", "initial", "draft",
+  "write", "publish", "post", "promote", "monitor", "review", "reflect",
+  "feedback", "engage", "community", "announce", "announcement",
+]);
+
+/**
+ * Returns true if this task title is purely meta process language with no
+ * real topical content (e.g. "Select Topic for Case Study #2").
+ */
+function isMetaTaskTitle(title) {
+  const words = title
+    .replace(/[^a-zA-Z0-9 ]/g, " ")
+    .trim()
+    .split(/\s+/)
+    .filter(w => w.length > 2);
+  if (words.length === 0) return true;
+  const metaCount = words.filter(w => META_TASK_WORDS.has(w.toLowerCase())).length;
+  return metaCount / words.length >= 0.6;
+}
+
 function extractSprintTask() {
   if (!fs.existsSync(SPRINT_CTX)) return null;
   try {
     const text = fs.readFileSync(SPRINT_CTX, "utf-8");
     if (!text.trim() || text.includes("(no active plan)") || text.includes("(no active sprint)")) return null;
 
-    // Match task lines: "  ▸ [type] title" or "  ○ [type] title"
     const lines = text.split("\n");
+    const tasks = [];
+
+    // Collect sprint goal line for fallback
+    let sprintGoal = "";
     for (const line of lines) {
-      const m = line.match(/^\s*[▸○]\s*\[(\w+)\]\s+(.+)/);
+      const gm = line.match(/^Current:\s+Week\s+\d+\s+[—–-]\s+(.+)/);
+      if (gm) { sprintGoal = gm[1].trim(); break; }
+    }
+
+    // Collect all actionable tasks
+    for (const line of lines) {
+      const m = line.match(/^\s*[▸○]\s*(?:\[\w+\]\s*)*\[(\w+)\]\s+(?:\[carried\]\s*)*(.+)/);
       if (m) {
-        return {
-          type: m[1].trim(),
-          title: m[2].trim(),
-          status: line.includes("▸") ? "in_progress" : "not_started",
-        };
+        tasks.push({
+          type:      m[1].trim(),
+          title:     m[2].trim(),
+          status:    line.includes("▸") ? "in_progress" : "not_started",
+          sprintGoal,
+        });
       }
     }
+
+    if (tasks.length === 0) return null;
+
+    // Prefer: in_progress first; then first non-meta task; then first task
+    const inProgress = tasks.find(t => t.status === "in_progress");
+    if (inProgress && !isMetaTaskTitle(inProgress.title)) return inProgress;
+
+    const nonMeta = tasks.find(t => !isMetaTaskTitle(t.title));
+    if (nonMeta) return nonMeta;
+
+    // All tasks are meta — return first but flag it
+    const first = tasks[0];
+    first.isMeta = true;
+    return first;
+
   } catch {}
   return null;
 }
@@ -205,14 +255,54 @@ function extractSprintTask() {
  * Strips generic verbs and task-type prefixes, returns clean keywords.
  */
 function sprintSearchTerms(task) {
-  const STRIP = new Set(["research", "write", "draft", "publish", "engage", "create", "build", "update", "monitor", "review", "check", "start", "complete", "finish"]);
-  const words = task.title
-    .replace(/[^a-zA-Z0-9 ]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim()
-    .split(" ")
-    .filter(w => w.length > 2 && !STRIP.has(w.toLowerCase()));
-  return words.slice(0, 5).join(" ") || task.title.split(" ").slice(0, 4).join(" ");
+  const STRIP = new Set([
+    "research", "write", "draft", "publish", "engage", "create", "build",
+    "update", "monitor", "review", "check", "start", "complete", "finish",
+    "select", "choose", "execute", "perform", "gather", "curate", "initial",
+    "topic", "case", "study", "analysis", "week", "carried",
+  ]);
+
+  // If the task is flagged as meta, fall through immediately to richer sources
+  if (!task.isMeta) {
+    const words = task.title
+      .replace(/[^a-zA-Z0-9 ]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+      .split(" ")
+      .filter(w => w.length > 2 && !STRIP.has(w.toLowerCase()));
+
+    const candidate = words.slice(0, 5).join(" ");
+    // Only use if we have at least 2 meaningful words left
+    if (candidate.trim().split(/\s+/).length >= 2) return candidate;
+  }
+
+  // Fallback 1: sprint week goal (e.g. "Publish a second case study to demonstrate...")
+  if (task.sprintGoal) {
+    const goalWords = task.sprintGoal
+      .replace(/[^a-zA-Z0-9 ]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+      .split(" ")
+      .filter(w => w.length > 3 && !STRIP.has(w.toLowerCase()));
+    const goalCandidate = goalWords.slice(0, 5).join(" ");
+    if (goalCandidate.trim().split(/\s+/).length >= 2) return goalCandidate;
+  }
+
+  // Fallback 2: plan compulsion (read from active_plan.json)
+  try {
+    const planPath = path.join(ROOT, "state", "active_plan.json");
+    if (fs.existsSync(planPath)) {
+      const plan = JSON.parse(fs.readFileSync(planPath, "utf-8"));
+      const compulsion = (plan.compulsion || plan.title || "").replace(/[^a-zA-Z0-9 ]/g, " ");
+      const cWords = compulsion.split(/\s+/)
+        .filter(w => w.length > 4 && !STRIP.has(w.toLowerCase()));
+      const cCandidate = cWords.slice(0, 5).join(" ");
+      if (cCandidate.trim().split(/\s+/).length >= 2) return cCandidate;
+    }
+  } catch {}
+
+  // Last resort: raw title first 4 words
+  return task.title.split(" ").slice(0, 4).join(" ");
 }
 
 
