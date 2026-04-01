@@ -1,1 +1,2 @@
-[SPRINT: research] @BryceTheNoble: "Virginia HB 1170, creating anti-discrimination compliance duties, raises concerns about duplicative mandates, legal uncertainty, and slower AI adoption, given existing laws." — evidence quality: medium
+
+[SPRINT: research] Synthesized recent research on data privacy and government surveillance into an initial outline for Veritas Lens Analysis #2: Data Privacy and Government Surveillance. — evidence quality: high
