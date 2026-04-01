@@ -268,6 +268,20 @@ function buildJournalTask(type, today, hour, dayNumber) {
     ' \u00b7 Hour ' + hour + '" in the header.';
 }
 
+function formatUnresolvedClaims() {
+  try {
+    const raw = fs.readFileSync(config.CLAIM_TRACKER_PATH, 'utf-8');
+    const tracker = JSON.parse(raw);
+    const open = (tracker.claims || []).filter(c => c.status === 'unverified' || c.status === 'contested');
+    if (!open.length) return '(no open claims)';
+    return open.slice(0, 10).map(c =>
+      `[${c.id}] ${c.claim_text} — status: ${c.status}` +
+      (c.related_axis_id ? ` | axis: ${c.related_axis_id}` : '') +
+      (c.notes ? ` | notes: ${c.notes}` : '')
+    ).join('\n');
+  } catch { return '(no open claims)'; }
+}
+
 // ── Main loader ─────────────────────────────────────────────────────────────
 
 /**
@@ -299,6 +313,7 @@ function loadContext(opts) {
     ctx.sprintContext     = readState(config.SPRINT_CONTEXT_PATH, { fallback: '(no active plan)' });
     ctx.readingBlock      = buildReadingBlock();
     ctx.apiPrefetchContext = readState(config.API_PREFETCH_CONTEXT_PATH, { fallback: '' });
+    ctx.unresolvedClaims  = formatUnresolvedClaims();
     ctx.currentAxes       = formatCurrentAxes();
     ctx.cadence            = formatCadence();
     ctx.captureStatus     = formatCaptureStatus();

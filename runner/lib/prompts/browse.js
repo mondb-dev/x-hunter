@@ -85,7 +85,21 @@ function buildNormalTasks(ctx) {
     '   reactions or questions you could respond to. Tag sprint-relevant findings in\n' +
     '   browse_notes with [SPRINT: task_id].\n' +
     '3. Append findings to state/browse_notes.md (append only -- do not overwrite).\n' +
-    '4. Write state/ontology_delta.json if anything is genuinely axis-worthy.\n' +
+    '4. CLAIM TRACKER: Review the UNRESOLVED CLAIMS list. If your browsing uncovered new\n' +
+    '   evidence for any of them, or you found a new, significant, unverified claim, update the tracker.\n' +
+    '   To do so, write state/claim_tracker_delta.json. DO NOT write state/claim_tracker.json directly.\n' +
+    '   Delta format:\n' +
+    '   {\n' +
+    '     "new_claims": [\n' +
+    '       { "claim_text": "concise claim text", "source_url": "url", "related_axis_id": "axis_id", "notes": "initial notes" }\n' +
+    '     ],\n' +
+    '     "updated_claims": [\n' +
+    '       { "id": "claim_id_from_list", "new_status": "supported"|"refuted"|"contested", "notes": "notes on new evidence" }\n' +
+    '     ]\n' +
+    '   }\n' +
+    '   Use statuses: "supported" (strong evidence for), "refuted" (strong evidence against), "contested" (conflicting evidence).\n' +
+    '   Omit keys if empty. Skip the file if no changes.\n' +
+    '5. Write state/ontology_delta.json if anything is genuinely axis-worthy.\n' +
     '   DO NOT write or modify state/ontology.json directly \u2014 the runner merges your delta.\n' +
     '   ONTOLOGY RULES (CURRENT BELIEF AXES shown above \u2014 do not alter existing data):\n' +
     '   a. Fit new evidence to an existing axis before creating a new one.\n' +
@@ -115,12 +129,12 @@ function buildNormalTasks(ctx) {
     '   Omit "evidence" or "new_axes" if nothing to add. Skip writing the file entirely\n' +
     '   if nothing is axis-worthy this cycle.\n' +
     '\n' +
-    '5. Review COMMENT CANDIDATES above. Comment on AT MOST ONE if your memory gives\n' +
+    '6. Review COMMENT CANDIDATES above. Comment on AT MOST ONE if your memory gives\n' +
     '   you something genuinely specific to say \u2014 a direct observation, contradiction,\n' +
     '   or angle not yet in the thread. Skip all if nothing compels you or cap reached.\n' +
     '   If commenting: navigate to the URL, reply (max 180 chars), then write\n' +
     '   state/comment_done.txt as a single JSON line per the format in the candidates.\n' +
-    '6. CADENCE: Review the CADENCE section above. Based on what you just\n' +
+    '7. CADENCE: Review the CADENCE section above. Based on what you just\n' +
     '   observed THIS cycle, update state/cadence.json with your assessment.\n' +
     '   You control your own rhythm. Write the full JSON with these fields:\n' +
     '   {\n' +
@@ -146,8 +160,8 @@ function buildNormalTasks(ctx) {
     '   - Set post_eagerness to "eager" if you have a backlog; "suppress" if you want to focus on learning.\n' +
     '   - Only write the fields you want to change \u2014 omitted fields keep their previous values.\n' +
     '   - Max 3 consecutive next_cycle_type overrides before the system resets to auto.\n' +
-    '7. JOURNAL: ' + ctx.journalTask + '\n' +
-    '8. TOOLS (optional): If you need to execute a registered tool, write state/tool_request.json.\n' +
+    '8. JOURNAL: ' + ctx.journalTask + '\n' +
+    '9. TOOLS (optional): If you need to execute a registered tool, write state/tool_request.json.\n' +
     '   Single tool:\n' +
     '   { "tool": "<tool_name>", "args": { ... } }\n' +
     '   Workflow (sequential, max 5 steps):\n' +

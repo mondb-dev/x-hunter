@@ -46,6 +46,8 @@ module.exports = {
   DISCOURSE_DIGEST_PATH: path.join(STATE_DIR, 'discourse_digest.txt'),
   READING_URL_PATH: path.join(STATE_DIR, 'reading_url.txt'),
   API_PREFETCH_CONTEXT_PATH: path.join(STATE_DIR, 'api_prefetch_context.txt'),
+  CLAIM_TRACKER_PATH: path.join(STATE_DIR, 'claim_tracker.json'),
+  CLAIM_TRACKER_DELTA_PATH: path.join(STATE_DIR, 'claim_tracker_delta.json'),
   MEMORY_RECALL_PATH: path.join(STATE_DIR, 'memory_recall.txt'),
   CRITIQUE_PATH: path.join(STATE_DIR, 'critique.md'),
   SIGNAL_DRAFT_PATH: path.join(STATE_DIR, 'signal_draft.txt'),

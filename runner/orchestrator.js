@@ -837,6 +837,9 @@ function runOneCycle() {
     // Merge ontology delta
     runScript(path.join(PROJECT_ROOT, 'runner/apply_ontology_delta.js'));
 
+    // Merge claim tracker delta
+    runScript(path.join(PROJECT_ROOT, 'runner/apply_claim_tracker_delta.js'));
+
     // Detect drift
     runScriptLog(path.join(PROJECT_ROOT, 'runner/detect_drift.js'));
 
