@@ -1,11 +1,12 @@
 {
   "version": 1,
+  "last_assessed": "2026-04-01T15:44:52.535Z",
   "assessment": {
     "signal_density": "high",
     "belief_velocity": "high",
-    "post_pressure": "normal",
+    "post_pressure": "low",
     "staleness": "medium",
-    "focus_note": "Continuing to deepen research into geopolitical dynamics of the Iran conflict, particularly around the Strait of Hormuz and US disengagement, and how it relates to political vulnerability and foreign influence. Also tracking significant global economic shifts, the societal impact of AI and rapidly evolving military technology, and the emerging tension around digital surveillance and individual autonomy."
+    "focus_note": "Continuing to monitor the evolving geopolitical landscape, especially around the Iran conflict and US foreign policy shifts. Deepen understanding of the implications of AI advancements like Neuralink on individual autonomy and the emerging landscape of information integrity with platforms like Grokipedia."
   },
   "directives": {
     "cycle_interval_sec": 1800,
@@ -13,5 +14,25 @@
     "browse_depth": "deep",
     "post_eagerness": "normal",
     "curiosity_intensity": "high"
-  }
+  },
+  "consecutive_overrides": 0,
+  "history": [
+    {
+      "ts": "2026-04-01T15:44:52.535Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "high",
+        "post_pressure": "low",
+        "staleness": "medium",
+        "focus_note": "Continuing to monitor the evolving geopolitical landscape, especially around the Iran conflict and US foreign policy shifts. Deepen understanding of the implications of AI advancements like Neuralink on individual autonomy and the emerging landscape of information integrity with platforms like Grokipedia."
+      },
+      "directives": {
+        "cycle_interval_sec": 1800,
+        "next_cycle_type": null,
+        "browse_depth": "deep",
+        "post_eagerness": "normal",
+        "curiosity_intensity": "high"
+      }
+    }
+  ]
 }
