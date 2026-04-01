@@ -312,8 +312,7 @@ function loadContext(opts) {
     ctx.discourseDigest   = readState(config.DISCOURSE_DIGEST_PATH, { fallback: '' });
     ctx.sprintContext     = readState(config.SPRINT_CONTEXT_PATH, { fallback: '(no active plan)' });
     ctx.readingBlock      = buildReadingBlock();
-    ctx.apiPrefetchContext = readState(config.API_PREFETCH_CONTEXT_PATH, { fallback: '' });
-    ctx.unresolvedClaims  = formatUnresolvedClaims();
+      ctx.unresolvedClaims  = formatUnresolvedClaims();
     ctx.currentAxes       = formatCurrentAxes();
     ctx.cadence            = formatCadence();
     ctx.captureStatus     = formatCaptureStatus();

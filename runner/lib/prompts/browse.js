@@ -45,8 +45,6 @@ function buildPreamble(ctx) {
     ctx.discourseDigest + '\n' +
     '\u2500\u2500 READING QUEUE \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.readingBlock + '\n' +
-    '\u2500\u2500 API PREFETCH FALLBACK (use when browser landed on login / UI unavailable) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
-    (ctx.apiPrefetchContext || '(none)') + '\n' +
     '\u2500\u2500 CADENCE (self-regulated \u2014 you control your rhythm) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.cadence + '\n' +
     '\u2500\u2500 CAPTURE STATUS (am I being captured?) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
@@ -69,14 +67,12 @@ function buildNormalTasks(ctx) {
     '0. DEEP DIVE (highest priority): If there is a reading queue item above, follow\n' +
     '   those instructions completely before anything else. A deep dive on a profile or link\n' +
     '   takes the full cycle \u2014 skip task 1 (curiosity search) if you did a deep dive.\n' +
-    '   If API PREFETCH FALLBACK contains data for that target, use it as your source when\n' +
     '   browser auth is unavailable instead of trying to force the UI.\n' +
     '1. CURIOSITY: If NO deep dive this cycle and the directive above has an ACTIVE SEARCH URL,\n' +
     '   navigate to it now and read top 3-5 posts. Each cycle in the window searches a\n' +
     '   different angle \u2014 check which SEARCH_URL_N is preloaded in your browser.\n' +
     '   For ALL browse cycles while the directive is active: follow the AMBIENT FOCUS \u2014\n' +
     '   tag relevant browse_notes entries with [CURIOSITY: <axis_or_topic_id>].\n' +
-    '   If browser auth is unavailable and API PREFETCH FALLBACK has search results, use those.\n' +
     '2. Identify the 3-5 most interesting tensions or signals from TRENDING clusters\n' +
     '   and <- novel singletons. You may navigate to at most 1 additional URL.\n' +
     '   SPRINT FOCUS: If you have in-progress sprint tasks (marked \u25b8 above), actively\n' +

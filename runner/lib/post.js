@@ -187,8 +187,12 @@ function postRegularTweet({ today, hour, cycle }) {
       return { posted: false, rejected: false, skipped: true, tweetUrl: null };
     }
 
-    log('Posting tweet via API...');
-    const attempt = runNodeDetailed('post_tweet_api.js', '', { CYCLE_NUMBER: String(cycle || '') });
+    log('Posting tweet via browser CDP...');
+    let attempt = runNodeDetailed('post_tweet.js', '', { CYCLE_NUMBER: String(cycle || '') });
+    if (!attempt.ok) {
+      log(`browser CDP failed (${attempt.error}) — falling back to API`);
+      attempt = runNodeDetailed('post_tweet_api.js', '', { CYCLE_NUMBER: String(cycle || '') });
+    }
     logScriptOutput(attempt.output);
 
     // Read result (posts_log.json is written by post_tweet.js directly)
@@ -245,8 +249,12 @@ function postQuoteTweet({ cycle }) {
       return { posted: false, quoteUrl: null };
     }
 
-    log('Posting quote-tweet via API...');
-    const attempt = runNodeDetailed('post_quote_api.js', '', { CYCLE_NUMBER: String(cycle || '') });
+    log('Posting quote-tweet via browser CDP...');
+    let attempt = runNodeDetailed('post_quote.js', '', { CYCLE_NUMBER: String(cycle || '') });
+    if (!attempt.ok) {
+      log(`browser CDP failed (${attempt.error}) — falling back to API`);
+      attempt = runNodeDetailed('post_quote_api.js', '', { CYCLE_NUMBER: String(cycle || '') });
+    }
     logScriptOutput(attempt.output);
 
     const resultPath = path.join(config.STATE_DIR, 'quote_result.txt');
@@ -307,7 +315,10 @@ function postLinkTweet({ resultFile, maxTitleChars = 255 }) {
   let posted = false;
   for (let attempt = 1; attempt <= 2; attempt++) {
     try {
-      runNode('post_tweet_api.js');
+      try { runNode('post_tweet.js'); } catch (browserErr) {
+        log(`link tweet browser attempt ${attempt} failed — falling back to API`);
+        runNode('post_tweet_api.js');
+      }
       try { fs.unlinkSync(resultPath); } catch {}
       posted = true;
       break;
@@ -364,7 +375,10 @@ function postSimpleTweet({ resultFile, sourceFile, maxTitleChars = 240, gap = 0 
 
     let rc = 1;
     try {
-      runNode('post_tweet_api.js');
+      try { runNode('post_tweet.js'); } catch (browserErr) {
+        log(`browser CDP failed — falling back to API`);
+        runNode('post_tweet_api.js');
+      }
       rc = 0;
     } catch (e) {
       rc = e.status || 1;
@@ -389,7 +403,11 @@ function postSimpleTweet({ resultFile, sourceFile, maxTitleChars = 240, gap = 0 
     try { fs.copyFileSync(sourcePath, DRAFT_PATH); } catch { return { posted: false }; }
     log(`tweeting from ${sourceFile}`);
 
-    runNodeSafe('post_tweet_api.js');
+    const sourceResult = runNodeDetailed('post_tweet.js');
+    if (!sourceResult.ok) {
+      log(`browser CDP failed (${sourceResult.error}) — falling back to API`);
+      runNodeSafe('post_tweet_api.js');
+    }
     try { fs.unlinkSync(sourcePath); } catch {}
     log('tweet posted');
 
@@ -432,8 +450,12 @@ function postSignalTweet({ today, hour }) {
   log(`voice filter (signal): ${vfOut}`);
 
   // Post
-  log('Posting signal tweet via API...');
-  runNodeSafe('post_tweet_api.js');
+  log('Posting signal tweet via browser CDP...');
+  const signalResult = runNodeDetailed('post_tweet.js');
+  if (!signalResult.ok) {
+    log(`browser CDP failed (${signalResult.error}) — falling back to API`);
+    runNodeSafe('post_tweet_api.js');
+  }
 
   const resultPath = path.join(config.STATE_DIR, 'tweet_result.txt');
   const tweetUrl = readFile(resultPath).trim();
