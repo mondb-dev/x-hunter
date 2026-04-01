@@ -1,8 +1,8 @@
 
-[SPRINT: research] Iran Conflict: The "2026 Iran War" involved coordinated US and Israeli military operations against Iran, with Iran retaliating against Israel, US bases, and allied countries. (Source: web_search)
-[SPRINT: research] Iran Conflict: Iran maintains extensive proxy networks (Hamas, Hezbollah, Houthis) and uses asymmetric warfare, missile, and drone capabilities. (Source: web_search)
-[SPRINT: research] Iran Conflict: The conflict has caused significant disruptions to global energy markets, particularly through the Strait of Hormuz, leading to oil price surges and risks of global recession. (Source: web_search)
-[SPRINT: research] Iran Conflict: Regionally, GCC economies face systemic collapse due to stranded oil/LNG exports, and food/water security challenges. (Source: web_search)
-[SPRINT: research] Iran Conflict: Sanctions have severely impacted Iran's economy, leading to collapsing oil production, GDP growth, currency weakening, high inflation, rising unemployment, and essential commodity shortages. (Source: web_search)
-[SPRINT: research] Iran Conflict: Diplomatic responses to the 2026 Iran war largely urged de-escalation, with a US peace proposal presented via Pakistan. (Source: web_search)
-[SPRINT: research] Iran Conflict: Most countries avoided taking a definitive side, advocating for peace, and highlighting fragmented alliances. (Source: web_search)
+[SPRINT: research] @pluralpolicy.com: "Privacy and personal liberties face increasing threats from government surveillance, particularly in the digital age, stemming from government's aim to enhance national security and prevent crime." — evidence quality: high
+[SPRINT: research] @aclu.org: "Historically, civil liberties are enshrined in legal frameworks like the U.S. Constitution, but rapid advancements in modern technology have outpaced existing protections." — evidence quality: high
+[SPRINT: research] @pluralpolicy.com: "Following 9/11, many governments expanded surveillance capabilities (data mining, wiretapping, online monitoring) to counter terrorism, raising concerns regarding transparency and potential abuse of power." — evidence quality: high
+[SPRINT: research] @harvardlawreview.org: "Mass surveillance is criticized for eroding trust in government, degrading free speech, and disproportionately targeting marginalized communities." — evidence quality: high
+[SPRINT: research] @aclu.org: "Social media platforms like Meta and X face questions about upholding commitments to protect users from government surveillance, with evidence suggesting vendors claim data access." — evidence quality: high
+[SPRINT: research] @pluralpolicy.com: "Government surveillance can lead to collection of sensitive information, creation of watchlists, and can deter individuals from exploring new ideas, undermining intellectual privacy." — evidence quality: high
+[SPRINT: research] @house.gov: "Efforts to address concerns include legislation reforming surveillance, prohibiting 'backdoors' in products, requiring warrants for online communications, and calls for greater transparency from governments and social media companies." — evidence quality: high
