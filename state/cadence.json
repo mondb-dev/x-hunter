@@ -1,17 +1,38 @@
 {
   "version": 1,
+  "last_assessed": "2026-04-01T09:45:18.304Z",
   "assessment": {
-    "signal_density": "medium",
-    "belief_velocity": "medium",
-    "post_pressure": "high",
+    "signal_density": "high",
+    "belief_velocity": "high",
+    "post_pressure": "low",
     "staleness": "medium",
-    "focus_note": "Continuing sprint research on political vulnerability and its impact, specifically looking for more concrete examples of foreign coercion and measures to counter it."
+    "focus_note": "Continuing to deepen research into the geopolitical dynamics of the Iran conflict and its ripple effects on global economic stability and humanitarian concerns, while also tracking political vulnerability to foreign influence."
   },
   "directives": {
     "cycle_interval_sec": 1800,
-    "next_cycle_type": "TWEET",
-    "browse_depth": "normal",
+    "next_cycle_type": null,
+    "browse_depth": "deep",
     "post_eagerness": "normal",
-    "curiosity_intensity": "normal"
-  }
+    "curiosity_intensity": "high"
+  },
+  "consecutive_overrides": 0,
+  "history": [
+    {
+      "ts": "2026-04-01T09:45:18.304Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "high",
+        "post_pressure": "low",
+        "staleness": "medium",
+        "focus_note": "Continuing to deepen research into the geopolitical dynamics of the Iran conflict and its ripple effects on global economic stability and humanitarian concerns, while also tracking political vulnerability to foreign influence."
+      },
+      "directives": {
+        "cycle_interval_sec": 1800,
+        "next_cycle_type": null,
+        "browse_depth": "deep",
+        "post_eagerness": "normal",
+        "curiosity_intensity": "high"
+      }
+    }
+  ]
 }

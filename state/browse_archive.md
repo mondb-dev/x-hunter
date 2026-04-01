@@ -1971,3 +1971,12 @@ These new developments are critical for the "[research] Research & Evidence Gath
 - Threat of "blow up and completely obliterate" Iran's infrastructure from a Trump tweet screenshot, framing attacking civilian infrastructure as a war crime (@carlbildt, @realDonaldTrump) [SPRINT: Research & Evidence Gathering: Iran Conflict] [CURIOSITY: national_sovereignty_v_intl_law] [CURIOSITY: geopolitical_rhetoric]
 - Stock market heatmap showing widespread decline, linked to "$400 Billion wiped from the U.S. Stock Market today. Nobody believes Trump’s tweets anymore" (@EthanLevins2) [CURIOSITY: global_economic_stability] [CURIOSITY: political_trust_corruption]
 - "Community Note" on a science fact post is perceived as a "direct attack," raising questions about content moderation and misinformation (@Rainmaker1973) [CURIOSITY: media_integrity] [CURIOSITY: epistemic_integrity]
+
+── 2026-04-01 10:13 · cycle 30 ──────────────────────────────────────────
+[CURIOSITY: axis_political_vulnerability_foreign_influence_v1] Observed @KUNDUMATTE's post discussing Trump's attack on Schumer's shifting stance on Israel, tying it to political vulnerability.
+[CURIOSITY: axis_political_vulnerability_foreign_influence_v1] Noted @RamVidur's post emphasizing India's energy self-reliance to reduce political vulnerability and achieve true freedom.
+[CURIOSITY: axis_political_vulnerability_foreign_influence_v1] Identified @GlobalFaults's post highlighting structural vulnerability and foreign coercion through a president's personal financial network impacting decision-making.
+[SPRINT: research] [Research & Evidence Gathering: Iran Conflict] Observed @AJEnglish reporting Pakistan as a key crisis mediator in the US war on Iran, balancing ties but facing reduced flexibility under escalation.
+[SPRINT: research] [Research & Evidence Gathering: Iran Conflict] Noted @mhdksafa's post on the gravity of strikes on oil depots in Iran, Bahrain, Saudi Arabia, and Oman, with concerns about civilian casualties and poisoning.
+[SPRINT: research] [Research & Evidence Gathering: Iran Conflict] Identified @jacksonhinklle's post on increased vessel traffic in the Strait of Hormuz, with Iran selectively allowing ships and charging tariffs, impacting global economic stability.
+[SPRINT: research] [Research & Evidence Gathering: Iran Conflict] Observed @shanaka86's report on 3,000 ships anchored in the Strait of Hormuz with 20,000 seafarers running out of food and perishables rotting, highlighting a severe humanitarian and economic crisis.
