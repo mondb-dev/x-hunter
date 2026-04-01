@@ -45,6 +45,30 @@ function buildPreamble(ctx) {
     ctx.discourseDigest + '\n' +
     '\u2500\u2500 READING QUEUE \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.readingBlock + '\n' +
+    (ctx.prefetchSource && !ctx.prefetchSource.startsWith('x') ? (
+      '\u2500\u2500 BROWSE SOURCE \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
+      ctx.prefetchSource.split('\n').slice(0,2).map((l,i) => i===0 ? 'Source: '+l : 'URL: '+l).join('\n') + '\n' +
+      (ctx.prefetchSource.startsWith('reddit') ?
+        'X unavailable this cycle. Browser is on Reddit.\n' +
+        'Read top posts and comment threads. Extract tensions, stances, disagreements.\n' +
+        'Treat high-upvote comments as social signal. Tag browse_notes entries with [REDDIT].\n' +
+        'Same observation principles as X: what do people believe, argue, fear?\n'
+      : ctx.prefetchSource.startsWith('arxiv') || ctx.prefetchSource.startsWith('scholar') || ctx.prefetchSource.startsWith('ssrn') || ctx.prefetchSource.startsWith('pubmed') ?
+        'X unavailable — browser is on a scholarly/academic source.\n' +
+        'This is a deep dive. Extract claims, evidence, methodology, author arguments.\n' +
+        'Note limitations, sample sizes, dates. Tag browse_notes entries with [RESEARCH].\n' +
+        'Cite the source when updating belief axes.\n'
+      : ctx.prefetchSource.startsWith('hackernews') ?
+        'X unavailable — browser is on Hacker News.\n' +
+        'Read top stories and comment threads. Tech, startup, and policy discourse.\n' +
+        'Same observation principles: tensions, contrarian views, emerging signals.\n' +
+        'Tag browse_notes entries with [HN].\n'
+      : ctx.prefetchSource.startsWith('none') ?
+        'Browser prefetch unavailable this cycle. X session may have expired.\n' +
+        'Use web_search tool for the curiosity topic if you need fresh information.\n'
+      : 'X unavailable — browser is on an external source. Apply same observation principles.\n') +
+      '\n'
+    ) : '') +
     '\u2500\u2500 CADENCE (self-regulated \u2014 you control your rhythm) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.cadence + '\n' +
     '\u2500\u2500 CAPTURE STATUS (am I being captured?) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +

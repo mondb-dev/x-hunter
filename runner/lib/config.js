@@ -49,6 +49,7 @@ module.exports = {
   CLAIM_TRACKER_DELTA_PATH: path.join(STATE_DIR, 'claim_tracker_delta.json'),
   MEMORY_RECALL_PATH: path.join(STATE_DIR, 'memory_recall.txt'),
   CRITIQUE_PATH: path.join(STATE_DIR, 'critique.md'),
+  PREFETCH_SOURCE_PATH: path.join(STATE_DIR, 'prefetch_source.txt'),
   SIGNAL_DRAFT_PATH: path.join(STATE_DIR, 'signal_draft.txt'),
   SIGNAL_LOG_PATH: path.join(STATE_DIR, 'signal_log.jsonl'),
   CADENCE_PATH: path.join(STATE_DIR, 'cadence.json'),
