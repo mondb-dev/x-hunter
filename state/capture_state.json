@@ -1,164 +1,156 @@
 {
-  "checked_at": "2026-03-31T23:51:04.145Z",
-  "evidence_24h": 31,
-  "unique_sources": 14,
-  "status": "warning",
-  "alerts": [
-    {
-      "type": "pole_skew",
-      "severity": "moderate",
-      "detail": "74% of evidence pushes \"right\" — risk of one-sided belief drift",
-      "dominant_pole": "right",
-      "share": 0.742
-    }
-  ],
-  "summary": "1 capture alert(s) detected:\n[MODERATE] 74% of evidence pushes \"right\" — risk of one-sided belief drift",
+  "checked_at": "2026-04-02T00:15:51.616Z",
+  "evidence_24h": 82,
+  "unique_sources": 30,
+  "status": "clean",
+  "alerts": [],
+  "summary": "Evidence distribution looks healthy (82 entries across 30 sources, 13 axes).",
   "source_concentration": {
-    "marionawfal": {
-      "username": "marionawfal",
-      "count": 7,
-      "share": 0.226
-    },
     "bricsinfo": {
       "username": "bricsinfo",
-      "count": 4,
-      "share": 0.129
+      "count": 8,
+      "share": 0.098
     },
-    "furkangozukara": {
-      "username": "furkangozukara",
-      "count": 4,
-      "share": 0.129
+    "unknown": {
+      "username": "unknown",
+      "count": 8,
+      "share": 0.098
     },
-    "clashreport": {
-      "username": "clashreport",
+    "jacksonhinklle": {
+      "username": "jacksonhinklle",
+      "count": 8,
+      "share": 0.098
+    },
+    "narendramodi": {
+      "username": "narendramodi",
+      "count": 5,
+      "share": 0.061
+    },
+    "diddtrumpdie": {
+      "username": "diddtrumpdie",
+      "count": 5,
+      "share": 0.061
+    },
+    "nikitabier": {
+      "username": "nikitabier",
       "count": 3,
-      "share": 0.097
+      "share": 0.037
     },
     "elonmusk": {
       "username": "elonmusk",
-      "count": 2,
-      "share": 0.065
+      "count": 3,
+      "share": 0.037
     },
-    "eliafriatisr": {
-      "username": "eliafriatisr",
-      "count": 2,
-      "share": 0.065
+    "foxnews": {
+      "username": "foxnews",
+      "count": 3,
+      "share": 0.037
     },
-    "shaykhsulaiman": {
-      "username": "shaykhsulaiman",
-      "count": 2,
-      "share": 0.065
+    "marionawfal": {
+      "username": "marionawfal",
+      "count": 3,
+      "share": 0.037
     },
-    "rainmaker1973": {
-      "username": "rainmaker1973",
-      "count": 1,
-      "share": 0.032
-    },
-    "ai_for_success": {
-      "username": "ai_for_success",
-      "count": 1,
-      "share": 0.032
-    },
-    "krassenstein": {
-      "username": "krassenstein",
-      "count": 1,
-      "share": 0.032
+    "ajenglish": {
+      "username": "ajenglish",
+      "count": 3,
+      "share": 0.037
     }
   },
   "axis_concentration": {
+    "axis_global_power_realignments_v1": {
+      "axis_id": "axis_global_power_realignments_v1",
+      "label": "Global Power Realignments and Shifting Hegemony",
+      "count": 20,
+      "share": 0.244
+    },
     "axis_geopolitical_rhetoric_v1": {
       "axis_id": "axis_geopolitical_rhetoric_v1",
       "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
-      "count": 7,
-      "share": 0.226
+      "count": 13,
+      "share": 0.159
     },
-    "axis_national_sovereignty_v_intl_law_v1": {
-      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "label": "National Sovereignty vs. International Law",
-      "count": 5,
-      "share": 0.161
+    "axis_political_vulnerability_foreign_influence_v1": {
+      "axis_id": "axis_political_vulnerability_foreign_influence_v1",
+      "label": "Political Vulnerability & Foreign Influence",
+      "count": 11,
+      "share": 0.134
     },
-    "axis_ai_societal_impact_v1": {
-      "axis_id": "axis_ai_societal_impact_v1",
-      "label": "Societal Impact and Ethical Concerns of AI/Robots",
-      "count": 4,
-      "share": 0.129
+    "axis_media_integrity_v1": {
+      "axis_id": "axis_media_integrity_v1",
+      "label": "Integrity of Information and Social Media Manipulation",
+      "count": 10,
+      "share": 0.122
+    },
+    "axis_epistemic_integrity": {
+      "axis_id": "axis_epistemic_integrity",
+      "label": "Truth and Evidence in Public Discourse",
+      "count": 9,
+      "share": 0.11
     },
     "axis_global_economic_stability_v1": {
       "axis_id": "axis_global_economic_stability_v1",
       "label": "Global Economic Stability and Market Volatility",
       "count": 4,
-      "share": 0.129
+      "share": 0.049
     },
-    "axis_human_rights_exploitation_v1": {
-      "axis_id": "axis_human_rights_exploitation_v1",
-      "label": "Human Rights and Exploitation",
+    "axis_national_sovereignty_v_intl_law_v1": {
+      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "label": "National Sovereignty vs. International Law",
       "count": 4,
-      "share": 0.129
+      "share": 0.049
     },
-    "axis_epistemic_integrity": {
-      "axis_id": "axis_epistemic_integrity",
-      "label": "Truth and Evidence in Public Discourse",
-      "count": 1,
-      "share": 0.032
+    "axis_ai_societal_impact_v1": {
+      "axis_id": "axis_ai_societal_impact_v1",
+      "label": "Societal Impact and Ethical Concerns of AI/Robots",
+      "count": 3,
+      "share": 0.037
     },
-    "axis_media_integrity_v1": {
-      "axis_id": "axis_media_integrity_v1",
-      "label": "Integrity of Information and Social Media Manipulation",
-      "count": 1,
-      "share": 0.032
+    "axis_political_trust_corruption_v1": {
+      "axis_id": "axis_political_trust_corruption_v1",
+      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
+      "count": 2,
+      "share": 0.024
     },
-    "axis_public_trust_safety_crisis_v1": {
-      "axis_id": "axis_public_trust_safety_crisis_v1",
-      "label": "Public Trust in Safety and Crisis Communication",
-      "count": 1,
-      "share": 0.032
-    },
-    "axis_authoritarian_self_determination_v1": {
-      "axis_id": "axis_authoritarian_self_determination_v1",
-      "label": "Authoritarian Control vs. Individual/Collective Self-Determination",
-      "count": 1,
-      "share": 0.032
-    },
-    "axis_religion_politics_war_v1": {
-      "axis_id": "axis_religion_politics_war_v1",
-      "label": "Religion, Politics, and War Rhetoric",
-      "count": 1,
-      "share": 0.032
+    "axis_scientific_advancement_humanitarian_v1": {
+      "axis_id": "axis_scientific_advancement_humanitarian_v1",
+      "label": "Scientific Advancement and Humanitarian Benefit",
+      "count": 2,
+      "share": 0.024
     }
   },
   "cluster_concentration": {
-    "Geopolitical News Aggregation": {
-      "cluster": "Geopolitical News Aggregation",
-      "count": 7,
-      "share": 0.226
+    "unknown": {
+      "cluster": "unknown",
+      "count": 31,
+      "share": 0.378
     },
     "footage shows another iranian drone striking close burj khalifa": {
       "cluster": "footage shows another iranian drone striking close burj khalifa",
-      "count": 4,
-      "share": 0.129
+      "count": 8,
+      "share": 0.098
     },
-    "Geopolitical Conspiracy Theories": {
-      "cluster": "Geopolitical Conspiracy Theories",
-      "count": 4,
-      "share": 0.129
+    "Polarizing Geopolitical Commentary": {
+      "cluster": "Polarizing Geopolitical Commentary",
+      "count": 8,
+      "share": 0.098
     },
-    "Global Conflict Reporting": {
-      "cluster": "Global Conflict Reporting",
-      "count": 3,
-      "share": 0.097
+    "Indian National Politics": {
+      "cluster": "Indian National Politics",
+      "count": 5,
+      "share": 0.061
     },
     "Technology and Societal Futurism": {
       "cluster": "Technology and Societal Futurism",
-      "count": 2,
-      "share": 0.065
+      "count": 3,
+      "share": 0.037
     }
   },
   "pole_balance": {
-    "left": 8,
-    "right": 23,
+    "left": 44,
+    "right": 38,
     "neutral": 0,
-    "left_share": 0.258,
-    "right_share": 0.742
+    "left_share": 0.537,
+    "right_share": 0.463
   }
 }
