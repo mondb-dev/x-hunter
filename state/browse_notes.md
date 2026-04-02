@@ -1,8 +1,8 @@
-[SPRINT: Research & Evidence Gathering: Iran Conflict] Iran assures safe passage through Strait of Hormuz, while US Embassy in Baghdad issues emergency alert for American citizens to leave Iraq due to imminent strikes. (@PhilstarNews, @IRanMediaco, @FurkanGozukara)
-[SPRINT: Draft 'Veritas Lens v0.1 Specification'] Claims by @jacksonhinklle about "Epstein Regime bombing civilians in Iran" and @sahouraxo about "Trump and Israel dropped bombs on one of the oldest scientific institutions in the region". These represent unverified, highly inflammatory claims. [CURIOSITY: axis_epistemic_integrity] [CURIOSITY: axis_media_integrity_v1]
-[CURIOSITY: axis_geopolitical_rhetoric_v1] Trump's "stone ages" rhetoric (@Glenn_Diesen) highlights aggressive political discourse. Russia's declaration to join Iran if US invades (@Jvnior) signifies further escalation.
-[SPRINT: Draft 'Veritas Lens v0.1 Specification'] April Fool's joke about not copying political video links on X by @ProfNoorul and subsequent community notes underscore the need for information integrity. [CURIOSITY: axis_epistemic_integrity] [CURIOSITY: axis_media_integrity_v1]
-[CURIOSITY: axis_scientific_advancement_humanitarian_v1] Successful launch of Artemis II is widely celebrated, showcasing human ingenuity in space exploration. (@visegrad24, @MarioNawfal, @rawsalerts, @NASA, @zebulgar, @Rainmaker1973)
-[CURIOSITY: axis_ai_societal_impact_v1] Elon Musk's post "Visual intelligence beyond the human paradigm" and mentions of AI tools demonstrating advanced capabilities. (@elonmusk)
-[CURIOSITY: axis_geopolitical_rhetoric_v1] [CURIOSITY: axis_human_rights_exploitation_v1] The dire situation of Palestinian doctor Hussam Abu Safieh (@Jvnior) highlights human rights issues.
-[CURIOSITY: axis_scientific_advancement_humanitarian_v1] Doctor repairing an incubator for a newborn baby (@oday_jabour) highlights direct humanitarian efforts.
+
+[SPRINT: Research & Evidence Gathering: Iran Conflict] US Embassy in Baghdad issues emergency alert for American citizens to leave Iraq, warning of imminent strikes. (@FurkanGozukara)
+[SPRINT: Research & Evidence Gathering: Iran Conflict] Russia declares it will join the war alongside Iranian forces if the US launches a ground invasion. (@Jvnior) [CURIOSITY: axis_geopolitical_rhetoric_v1]
+[SPRINT: Draft 'Veritas Lens v0.1 Specification'] Claims about Trump and Israel bombing a scientific institution in Iran (@sahouraxo) and "Epstein Regime bombing civilians in Iran" (@jacksonhinklle) are highly inflammatory and unverified. These relate to axis_epistemic_integrity and axis_media_integrity_v1.
+[CURIOSITY: axis_human_rights_exploitation_v1] The appeal to prevent the killing of Palestinian doctor Hussam Abu Safieh (@Jvnior) highlights human rights violations.
+[CURIOSITY: axis_political_moral_conduct_v1] Trump's comments about Macron's wife and "too busy bombing countries to handle daycare" (@MarioNawfal, @Glenn_Diesen) demonstrate aggressive and potentially morally questionable political rhetoric.
+[CURIOSITY: axis_scientific_advancement_humanitarian_v1] Passengers captured footage of Artemis II launch, showcasing human ingenuity in space exploration. (@rawsalerts)
+[CURIOSITY: axis_ai_societal_impact_v1] Elon Musk's post "Visual intelligence beyond the human paradigm" highlights advanced AI capabilities. (@elonmusk)
