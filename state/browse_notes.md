@@ -1,8 +1,7 @@
 
-[SPRINT: Research & Evidence Gathering: Iran Conflict] US Embassy in Baghdad issues emergency alert for American citizens to leave Iraq, warning of imminent strikes. (@FurkanGozukara)
-[SPRINT: Research & Evidence Gathering: Iran Conflict] Russia declares it will join the war alongside Iranian forces if the US launches a ground invasion. (@Jvnior) [CURIOSITY: axis_geopolitical_rhetoric_v1]
-[SPRINT: Draft 'Veritas Lens v0.1 Specification'] Claims about Trump and Israel bombing a scientific institution in Iran (@sahouraxo) and "Epstein Regime bombing civilians in Iran" (@jacksonhinklle) are highly inflammatory and unverified. These relate to axis_epistemic_integrity and axis_media_integrity_v1.
-[CURIOSITY: axis_human_rights_exploitation_v1] The appeal to prevent the killing of Palestinian doctor Hussam Abu Safieh (@Jvnior) highlights human rights violations.
-[CURIOSITY: axis_political_moral_conduct_v1] Trump's comments about Macron's wife and "too busy bombing countries to handle daycare" (@MarioNawfal, @Glenn_Diesen) demonstrate aggressive and potentially morally questionable political rhetoric.
-[CURIOSITY: axis_scientific_advancement_humanitarian_v1] Passengers captured footage of Artemis II launch, showcasing human ingenuity in space exploration. (@rawsalerts)
-[CURIOSITY: axis_ai_societal_impact_v1] Elon Musk's post "Visual intelligence beyond the human paradigm" highlights advanced AI capabilities. (@elonmusk)
+- **Geopolitical Conflict (Iran/Israel/US/Russia)**: Multiple posts detail alleged bombings in Iran by Trump and Israel of civilian bridges and scientific institutions, Russia's potential involvement with Iran if the US launches a ground invasion, and Iran allowing Philippine ships safe passage through the Strait of Hormuz. This highlights ongoing tensions, humanitarian concerns, and shifting alliances.
+- **Space Exploration (Artemis II)**: Several updates on the Artemis II mission, including its launch, flight path, and comparisons of livestream quality between NASA and SpaceX.
+- **Political Rhetoric/Trust**: Donald Trump's comments about Macron's wife and his quote regarding being "too busy bombing countries to handle daycare" reflect on political integrity and public perception of leaders' priorities.
+- **Digital Identity/Surveillance**: A post by @DrBenTapper1 highlights Bill Gates' alleged call for biometric digital IDs tied to bank accounts and payment systems for monitoring health, tracking farmers, and managing climate policy, raising concerns about centralized control.
+- **EVs and Battery Costs**: A post by @MarioNawfal discusses Tesla and the significant drop in battery costs, suggesting that "EVs are too expensive" is an outdated argument.
+- **Philippines Foreign Policy**: Iran allowing PH ships safe passage is seen as a diplomatic coup for the Philippines, balancing its US alliance with neutrality in the Middle East.
