@@ -213,14 +213,10 @@ function assess() {
     directives.browse_depth = agentDirectives.browse_depth;
   }
 
-  // Post eagerness — agent can request eager/very_eager/normal but NOT suppress.
-  // Suppress kills journal production; only manual intervention should set it.
+  // Post eagerness — honor the agent's requested posting mode, including
+  // suppress, so browse cycles can explicitly pause posting pressure.
   if (agentDirectives.post_eagerness && VALID_EAGERNESS.includes(agentDirectives.post_eagerness)) {
-    if (agentDirectives.post_eagerness === "suppress") {
-      console.log("[cadence] BLOCKED: agent requested post_eagerness=suppress — ignoring (use manual override)");
-    } else {
-      directives.post_eagerness = agentDirectives.post_eagerness;
-    }
+    directives.post_eagerness = agentDirectives.post_eagerness;
   }
 
 
