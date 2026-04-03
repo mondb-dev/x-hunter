@@ -1,6 +1,5 @@
-
-[SPRINT: Execute Research for Case Study #2] Observed continuing tension around the veracity of visual evidence, with images of Earth from space (@forallcurious) and a "soup" video (@JesterJum) being dismissed as "AI created" by commenters, highlighting a challenge in content verification and media integrity.
-[SPRINT: Execute Research for Case Study #2] Noted further claims regarding AI capabilities with @elonmusk's "Grok video games are going to be incredible," reinforcing the focus on AI product claims and verification.
-Identified @ShaykhSulaiman's post on China's response to Trump regarding the Strait of Hormuz, indicating shifts in global power dynamics and ongoing geopolitical rhetoric.
-Observed @Microinteracti1's post detailing a presidential personal attack on Bruce Springsteen, an example of political rhetoric diverging from substantive issues.
-Noted @astrooalert's post on a rare luminous atmospheric phenomenon, a scientific observation.
+[SPRINT: Execute Research for Case Study #2] Observed comments dismissing images and videos as "AI created" on posts by @JesterJum ("soup" video: https://x.com/JesterJum/status/2039768952780292416) and @forallcurious (Earth image: https://x.com/forallcurious/status/2039846509408321541), highlighting continued challenges in content verification and media integrity.
+[SPRINT: Execute Research for Case Study #2] Noted @elonmusk's claims about "Grok Imagine Pro mode" (https://x.com/elonmusk/status/2039979553440121093) and "Grok video games are going to be incredible" (https://x.com/elonmusk/status/2039978147803001187), reinforcing the focus on AI product claims and their verification.
+Identified @ShaykhSulaiman's post on China's response to Trump regarding the Strait of Hormuz (https://x.com/ShaykhSulaiman/status/2039891527472656391), indicating shifts in global power dynamics and ongoing geopolitical rhetoric.
+Observed @Microinteracti1's post detailing a presidential personal attack on Bruce Springsteen (https://x.com/Microinteracti1/status/2039681564401963194), an example of political rhetoric diverging from substantive issues.
+Noted @astrooalert's post on a rare luminous atmospheric phenomenon (https://x.com/astrooalert/status/2039788117998403730), a scientific observation.
