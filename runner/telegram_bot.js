@@ -480,6 +480,17 @@ function humanDuration(ms) {
   return parts.join(' ') || '<1m';
 }
 
+function formatPostState(entry) {
+  if (entry?.postSuppressed) {
+    const reason = entry.postSuppressionReason ? ` (${entry.postSuppressionReason})` : '';
+    return `⏸${reason}`;
+  }
+  if (entry?.postAttempted) {
+    return entry.postSuccess ? '✅' : '❌';
+  }
+  return '—';
+}
+
 // ── Command handlers ────────────────────────────────────────────────────────
 
 async function cmdStatus() {
@@ -512,7 +523,7 @@ async function cmdStatus() {
     msg += `Day: ${last.day}\n`;
     msg += `Duration: ${last.durationSec}s\n`;
     msg += `Agent exits: [${(last.agentExitCodes || []).join(', ')}]\n`;
-    msg += `Post: ${last.postAttempted ? (last.postSuccess ? '✅' : '❌') : '—'}\n`;
+    msg += `Post: ${formatPostState(last)}\n`;
     if (last.health) {
       msg += `\nTotal cycles: ${last.health.totalCycles}\n`;
       msg += `Post rate: ${last.health.postSuccessRate ?? 'N/A'}\n`;
@@ -574,7 +585,7 @@ async function cmdLogs(n = 5) {
     try {
       const e = JSON.parse(line);
       const exits = (e.agentExitCodes || []).join(',');
-      const post = e.postAttempted ? (e.postSuccess ? '✅' : '❌') : '—';
+      const post = formatPostState(e);
       msg += `#${e.cycle} ${e.type} | ${e.durationSec}s | exits:[${exits}] | post:${post}\n`;
     } catch {
       msg += escapeHtml(line.slice(0, 100)) + '\n';

@@ -196,6 +196,8 @@ function newCycleMetrics() {
     agentExitCodes: [],  // exit codes from all agentRun calls this cycle
     postAttempted: false, // whether a post pipeline was run
     postSuccess: null,    // true/false/null (null = no post this cycle)
+    postSuppressed: false,
+    postSuppressionReason: null,
     browserRestarted: false,
     toolExecuted: false,  // whether a tool request was processed
     downgradedToBrowse: false,
@@ -769,8 +771,10 @@ function runOneCycle() {
     //   post_quote → watchdog QUOTE → critique --quote
     runScriptLog(path.join(PROJECT_ROOT, 'runner/cleanup_tabs.js'));
     const quoteResult = postQuoteTweet({ cycle });
-    metrics.postAttempted = true;
-    metrics.postSuccess = quoteResult.posted;
+    metrics.postAttempted = Boolean(quoteResult.attempted);
+    metrics.postSuccess = quoteResult.attempted ? quoteResult.posted : null;
+    metrics.postSuppressed = Boolean(quoteResult.suppressed);
+    metrics.postSuppressionReason = quoteResult.suppressionReason || null;
 
     // Watchdog: verify quote was posted
     runScriptLog(path.join(PROJECT_ROOT, 'runner/watchdog.js'), '', {
@@ -845,8 +849,10 @@ function runOneCycle() {
 
     // Post regular tweet (journal URL fix → critique gate → voice filter → post)
     const tweetResult = postRegularTweet({ today, hour, cycle });
-    metrics.postAttempted = true;
-    metrics.postSuccess = tweetResult.posted;
+    metrics.postAttempted = Boolean(tweetResult.attempted);
+    metrics.postSuccess = tweetResult.attempted ? tweetResult.posted : null;
+    metrics.postSuppressed = Boolean(tweetResult.suppressed);
+    metrics.postSuppressionReason = tweetResult.suppressionReason || null;
 
     // Watchdog: verify tweet was posted
     runScriptLog(path.join(PROJECT_ROOT, 'runner/watchdog.js'), '', {
@@ -933,6 +939,8 @@ function runOneCycle() {
     agentExitCodes: metrics.agentExitCodes,
     postAttempted: metrics.postAttempted,
     postSuccess: metrics.postSuccess,
+    postSuppressed: metrics.postSuppressed,
+    postSuppressionReason: metrics.postSuppressionReason,
     browserRestarted: metrics.browserRestarted,
     toolExecuted: metrics.toolExecuted,
     downgradedToBrowse: metrics.downgradedToBrowse,
