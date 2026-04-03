@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-03T03:01:16.048Z",
+  "generated_at": "2026-04-03T04:01:18.100Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-03T03:01:18.268Z",
+  "profiled_at": "2026-04-03T04:01:19.785Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-03-31T10:47:40.000Z",
+      "last_seen_at": "2026-04-03T03:45:49.191Z",
       "discovery": {
-        "distinct_urls": 222,
+        "distinct_urls": 223,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -385,9 +385,9 @@
         ],
         "origin_counts": {
           "feed_buffer": 204,
-          "feed_buffer_reply": 29
+          "feed_buffer_reply": 30
         },
-        "distinct_referring_accounts": 74,
+        "distinct_referring_accounts": 75,
         "sample_referring_accounts": [
           "_yf1921",
           "abarreto33367",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:222",
+            "distinct_urls:223",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:74",
+            "referring_accounts:75",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:222",
+            "distinct_urls:223",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:74",
+            "referring_accounts:75",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1058,20 +1058,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.371171875,
-          "confidence": 0.081825,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:1",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0,
           "confidence": 0.55,
@@ -1084,6 +1070,20 @@
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.371171875,
+          "confidence": 0.081825,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
           ]
         }
       },
@@ -1180,6 +1180,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.84,
+          "confidence": 0.85,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:33",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3640885416666667,
           "confidence": 0.07772499999999999,
@@ -1193,20 +1207,6 @@
             "referring_accounts:0",
             "origin_types:1",
             "track_record_unavailable"
-          ]
-        },
-        "profile": {
-          "score": 0.84,
-          "confidence": 0.85,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:33",
-            "opinion_marker:false"
           ]
         }
       },
@@ -1238,6 +1238,130 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 33,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "grok.com",
+      "entity": "Grok",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-03T01:20:27.000Z",
+      "last_seen_at": "2026-04-03T03:31:24.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
+          "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 2,
+        "sample_referring_accounts": [
+          "endorfinaholic",
+          "markofrom"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.3041666666666667,
+          "basis": [
+            "referring_accounts:2",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.36377604166666666,
+          "confidence": 0.142225,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:2",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T04:01:18.962Z",
+        "homepage_url": "https://grok.com/",
+        "example_url": "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://grok.com/",
+        "example_final_url": "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -1304,20 +1428,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.36260416666666667,
-          "confidence": 0.0736,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:2",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.4,
           "confidence": 0.65,
@@ -1330,6 +1440,20 @@
             "corrections:false",
             "outbound_links:20",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.36260416666666667,
+          "confidence": 0.0736,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:2",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -1425,6 +1549,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.19,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:9",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.35770833333333335,
           "confidence": 0.0491,
@@ -1438,20 +1576,6 @@
             "referring_accounts:0",
             "origin_types:1",
             "track_record_unavailable"
-          ]
-        },
-        "profile": {
-          "score": 0.19,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:9",
-            "opinion_marker:false"
           ]
         }
       },
@@ -1547,6 +1671,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.58,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:13",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.35770833333333335,
           "confidence": 0.0491,
@@ -1561,6 +1699,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T03:31:24.727Z",
+        "homepage_url": "https://moderndiplomacy.eu/",
+        "example_url": "https://moderndiplomacy.eu/2026/03/06/alone-under-fire-irans-partners-step-back-as-war-intensifies/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://moderndiplomacy.eu/",
+        "example_final_url": "https://moderndiplomacy.eu/2026/03/06/alone-under-fire-irans-partners-step-back-as-war-intensifies/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 6,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 13,
+          "opinion_marker": false
         }
       }
     },
@@ -1624,6 +1793,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.52,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:34",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.35770833333333335,
           "confidence": 0.0491,
@@ -1638,6 +1821,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T03:31:25.497Z",
+        "homepage_url": "https://amnesty.org/",
+        "example_url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.amnesty.org/en/",
+        "example_final_url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 34,
+          "opinion_marker": false
         }
       }
     },
@@ -1701,6 +1915,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.44,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:19",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.35770833333333335,
           "confidence": 0.0491,
@@ -1715,6 +1943,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T03:31:26.004Z",
+        "homepage_url": "https://vt.edu/",
+        "example_url": "https://news.vt.edu/articles/2026/03/Iran-Israel-Trump-gas-LNG-prices-Strait-Hormuz-economic-impact.html",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.vt.edu/",
+        "example_final_url": "https://news.vt.edu/articles/2026/03/Iran-Israel-Trump-gas-LNG-prices-Strait-Hormuz-economic-impact.html",
+        "homepage_content_type": "text/html;charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 12,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 19,
+          "opinion_marker": false
         }
       }
     },
@@ -1779,6 +2038,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.22999999999999998,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:5",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.34984375,
           "confidence": 0.10635,
@@ -1792,6 +2065,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T03:31:26.950Z",
+        "homepage_url": "https://irys.xyz/",
+        "example_url": "https://gateway.irys.xyz/lZR6DY8ugYpeIkHpBQpgaNeVWmEhahjrDBNGc5Fz0EE",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://irys.xyz/",
+        "example_final_url": "https://node1.irys.xyz/lZR6DY8ugYpeIkHpBQpgaNeVWmEhahjrDBNGc5Fz0EE",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
         }
       }
     },
@@ -1869,6 +2173,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0.46,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:22",
+            "opinion_marker:true"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T04:01:19.166Z",
+        "homepage_url": "https://cbsnews.com/",
+        "example_url": "https://www.cbsnews.com/news/iran-war-recession-risk-oil-prices-inflation/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.cbsnews.com/",
+        "example_final_url": "https://www.cbsnews.com/news/iran-war-recession-risk-oil-prices-inflation/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 20,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 22,
+          "opinion_marker": true
         }
       }
     },
@@ -1946,6 +2295,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0.14,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T04:01:19.526Z",
+        "homepage_url": "https://discord.gg/",
+        "example_url": "https://discord.gg/JxPMkH88",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://discord.com/",
+        "example_final_url": "https://discord.com/invite/JxPMkH88",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 38,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -1966,6 +2360,282 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "mrk00001"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.44999999999999996,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:9",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T04:01:19.785Z",
+        "homepage_url": "https://ned.org/",
+        "example_url": "https://www.ned.org/about/board-of-directors/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.ned.org/",
+        "example_final_url": "https://www.ned.org/about/board-of-directors/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 25,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 9,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "athena.com",
+      "entity": "Athena",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-03T03:15:49.569Z",
+      "last_seen_at": "2026-04-03T03:15:49.569Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=27k7ut43wxglvx2o2e2nj7pszs"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "athenago"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "framia.pro",
+      "entity": "Framia Pro",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-03T03:35:48.193Z",
+      "last_seen_at": "2026-04-03T03:35:48.193Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://framia.pro/?utm_source=x&utm_campaign=twitter_adsmarch_framia_14_20260331&utm_medium=paid_social&twclid=2e6c8vey7aaz8sdwedu4gd0jgx"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "framiapro"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "dstack.ai",
+      "entity": "Dstack Ai",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-03T01:20:27.000Z",
+      "last_seen_at": "2026-04-03T01:20:27.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://sky.dstack.ai/?twclid=22u1vjb44uf96iph6oj89wot7a"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "dstackai"
         ],
         "distinct_axes": []
       },
