@@ -57,6 +57,7 @@ function buildArticleArtPrompt(article) {
     "Action-oriented composition — forces in motion, objects being operated, conditions actively changing.",
     "Wide cinematic framing, 16:9 aspect ratio.",
     "Polished premium pixel art, cohesive pixel clusters, readable focal subject, no blurry anti-aliasing.",
+    "IMPORTANT: absolutely no text, no words, no letters, no numbers anywhere in the image.",
   ].filter(Boolean).join(" ");
 }
 

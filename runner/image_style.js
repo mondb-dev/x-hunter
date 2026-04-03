@@ -31,9 +31,11 @@ const STYLE_DIRECTIVE = [
   "Editorial composition: dramatic cinematic framing, strong focal subject,",
   "atmospheric depth built from pixel color, deliberate tonal contrast,",
   "the visual clarity of a magazine cover rendered in pixel art.",
-  // Prohibited
+  // Prohibited — these constraints are absolute
+  "NO TEXT OF ANY KIND — zero letters, zero words, zero numbers, zero labels, zero captions.",
   "No flags, no national symbols, no insignia, no uniforms with markings,",
-  "no text, no lettering, no numbers, no logos, no title cards, no UI elements.",
+  "no logos, no title cards, no UI elements, no speech bubbles.",
+  "No visible faces — all figures are silhouettes or viewed from behind/distance.",
 ].join(" ");
 
 /**
