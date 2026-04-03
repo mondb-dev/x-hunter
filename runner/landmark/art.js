@@ -4,9 +4,9 @@
  * Generates a hero image for a landmark editorial using Google's
  * Imagen 4 model via Vertex AI.
  *
- * Style: Vintage 1960s movie poster, painted illustration.
- * Any human figures are rendered as faceless silhouettes.
- * No text/lettering in the image — all titling is separate.
+ * Style: Pixel art (primary) — see docs/IMAGE_STYLE.md for canonical rules.
+ * Human figures are faceless silhouettes. No text/lettering. No national symbols.
+ * Action-oriented composition. Accurate depiction of topic (era, geography, objects).
  *
  * Returns a Buffer of PNG image data (16:9).
  */
@@ -16,52 +16,39 @@
 const fs    = require("fs");
 const https = require("https");
 const path  = require("path");
-const { CARD_TIERS } = require("./config");
+const { LANDMARK_TIERS } = require("./config");
 const { getAccessToken, getProjectConfig } = require("../gcp_auth");
+const { STYLE_DIRECTIVE } = require("../image_style");
 
-// ── Prompt builder ────────────────────────────────────────────────────────────
-
-/**
- * Build the Imagen prompt from event data.
- *
- * Style: Editorial illustration — compelling, atmospheric, conceptual.
- * Figures are faceless when present. No text/lettering in the image.
- * Must visually represent the ACTUAL discourse topic, not a fabricated scene.
- */
-const STYLE_DIRECTIVE = [
-  "Editorial illustration, atmospheric and conceptual,",
-  "dramatic cinematic composition, rich color palette,",
-  "painterly digital art with subtle texture,",
-  "any human figures MUST be faceless silhouettes with no facial features,",
-  "absolutely no text, no lettering, no words, no numbers, no logos,",
-  "no title cards, no credits — the image is pure illustration only.",
-].join(" ");
+// Style rules: docs/IMAGE_STYLE.md + runner/image_style.js
 
 /**
  * @param {object} event
  * @param {string} event.headline
  * @param {string[]} event.topKeywords - top keywords from the event
  * @param {number} event.signalCount
+ * @param {string} [event.landmarkTierKey]
  * @returns {string} prompt for Imagen
  */
 function buildArtPrompt(event) {
-  const tier = CARD_TIERS[Math.min(Math.max(event.signalCount, 3), 6)];
+  const tier = LANDMARK_TIERS[event.landmarkTierKey] || LANDMARK_TIERS.tier_2;
   const keywords = (event.topKeywords || []).slice(0, 5).join(", ");
   const tierMood = {
-    Bronze: "contemplative, muted tones, understated tension",
-    Silver: "cool, atmospheric, steely blue tones, tension rising",
-    Gold:   "dramatic, high contrast, luminous, urgent energy",
+    "Tier 2": "cool, atmospheric, steely blue tones, tension building",
+    "Tier 1": "dramatic, high contrast, urgent energy, forces in motion",
+    Special: "reflective, transformative, significant shift underway",
+    Prediction: "ominous, alert, structural forces colliding",
   };
 
   return [
     STYLE_DIRECTIVE,
-    `Abstract conceptual scene representing a discourse about: ${keywords}.`,
-    event.headline ? `Theme: ${event.headline}.` : "",
-    `Mood and palette: ${tierMood[tier.name] || "contemplative"}.`,
-    "Wide cinematic composition (16:9 aspect ratio).",
-    "Symbolic and metaphorical — NOT a literal depiction of news events.",
-    "Think magazine cover illustration, abstract enough to be universal.",
-    "High detail, 4K quality.",
+    `Accurate depiction of the discourse topic: ${keywords}.`,
+    event.headline ? `Scene based on: ${event.headline}.` : "",
+    "Show era-accurate geography, vehicles, objects, or animals relevant to the topic.",
+    "Action-oriented — forces in motion, objects being operated, conditions changing.",
+    `Mood and palette: ${tierMood[tier.name] || "contemplative, forces at play"}.`,
+    "Wide cinematic composition, 16:9 aspect ratio.",
+    "Polished premium pixel art, cohesive pixel clusters, readable focal subject, no blurry anti-aliasing.",
   ].filter(Boolean).join(" ");
 }
 

@@ -11,14 +11,33 @@ export interface Article {
   date: string;
   title: string;
   axis: string;
+  excerpt: string;
   content: string;
   contentHtml: string;
+  imageUrl?: string;
   arweaveUrl?: string;
   moltbookUrl?: string;
 }
 
 const ARTICLES_DIR  = path.join(DATA_ROOT, "articles");
 const ARWEAVE_LOG   = path.join(DATA_ROOT, "state", "arweave_log.json");
+
+// Public image path check — images are copied to public/images/articles/ by prebuild
+const PUBLIC_IMAGES = path.resolve(process.cwd(), "public", "images", "articles");
+
+function getImageUrl(slug: string): string | undefined {
+  const p = path.join(PUBLIC_IMAGES, `${slug}.png`);
+  return fs.existsSync(p) ? `/images/articles/${slug}.png` : undefined;
+}
+
+function extractExcerpt(content: string): string {
+  for (const line of content.split("\n")) {
+    const t = line.trim();
+    if (!t || t.startsWith("#") || t.startsWith("*") || t.startsWith("-") || t.startsWith("|")) continue;
+    return t.length > 220 ? t.slice(0, 220) + "…" : t;
+  }
+  return "";
+}
 
 function coerceDate(d: unknown, fallback: string): string {
   if (!d) return fallback;
@@ -58,8 +77,10 @@ export function getAllArticles(): Article[] {
         date,
         title: data.title ?? slug,
         axis: data.axis ?? "",
+        excerpt: extractExcerpt(content),
         content,
         contentHtml: "",
+        imageUrl: getImageUrl(slug),
         arweaveUrl: arweave.get(date),
         moltbookUrl: data.moltbook ?? undefined,
       };
@@ -81,8 +102,10 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
     date,
     title: data.title ?? slug,
     axis: data.axis ?? "",
+    excerpt: extractExcerpt(content),
     content,
     contentHtml: processed.toString(),
+    imageUrl: getImageUrl(slug),
     arweaveUrl: arweave.get(date),
     moltbookUrl: data.moltbook ?? undefined,
   };
