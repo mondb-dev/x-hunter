@@ -2,7 +2,7 @@ import Link from "next/link";
 import { getAllJournalDays } from "@/lib/readJournals";
 import { readOntology, type Axis } from "@/lib/readOntology";
 import { getLatestCheckpoint } from "@/lib/readCheckpoints";
-import LatestPost from "@/components/LatestPost";
+import LatestArticle from "@/components/LatestArticle";
 import BeliefMap, { type MapNode, type MapEdge } from "@/components/BeliefMap";
 
 function buildGraph(axes: Axis[]): { nodes: MapNode[]; edges: MapEdge[] } {
@@ -67,8 +67,8 @@ export default async function IndexPage({
 
     return (
       <>
-        {/* Latest post from X */}
-        <LatestPost />
+        {/* Latest article */}
+        <LatestArticle />
 
         {/* Belief map */}
         {mapNodes.length > 0 && (
