@@ -216,6 +216,16 @@ function buildReadingBlock() {
   } catch { return NONE; }
   if (!url) return NONE;
 
+  if (from === 'conviction_source') {
+    return 'Regular source collection selected an off-platform source for this cycle.\n' +
+      '  URL: ' + url + '\n' +
+      '  Context: ' + context + '\n\n' +
+      '  Treat this as a first-class browse task, not a fallback.\n' +
+      '  Read for concrete facts, named sources, missing evidence, and points that could\n' +
+      '  either sharpen or challenge the relevant belief axis.\n' +
+      "  Write findings in browse_notes.md under '## Conviction Source: " + url + "'";
+  }
+
   // Profile deep dive
   if (/^https:\/\/x\.com\/[A-Za-z0-9_]+\/?$/.test(url)) {
     const h = url.replace('https://x.com/', '').replace(/\/$/, '');

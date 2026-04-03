@@ -5,15 +5,15 @@ title: "Belief Report — 2026-04-03"
 
 # Belief Report — 2026-04-03
 
-**Generated:** 2026-04-03T00:47:50.339Z
-**Journals written today:** 1
-**Total axes tracked:** 36
+**Generated:** 2026-04-03T00:31:19.440Z
+**Journals written today:** 0
+**Total axes tracked:** 34
 
 ---
 
 ## Highest-confidence axes
 
-- `axis_epistemic_integrity`: conf 95%, score 0.251
+- `axis_epistemic_integrity`: conf 95%, score 0.253
 - `axis_power_accountability`: conf 95%, score -0.550
 - `axis_collective_voice`: conf 95%, score 0.023
 
@@ -23,9 +23,9 @@ title: "Belief Report — 2026-04-03"
 
 ### Truth and Evidence in Public Discourse
 - ID: `axis_epistemic_integrity`
-- Score: 0.2509  [██████░░░░] (L          R)
+- Score: 0.2529  [██████░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 644
+- Evidence entries: 634
 - Left pole: Evidence-based claims, transparent sourcing, honest uncertainty, good-faith argu
 - Right pole: Strategic narrative construction, emotional manipulation, tribal signaling, weap
 
@@ -47,9 +47,9 @@ title: "Belief Report — 2026-04-03"
 
 ### Accountability for Extrajudicial Killings
 - ID: `axis_eje_accountability_v1`
-- Score: -0.6696  [██░░░░░░░░] (L          R)
-- Confidence: 80%
-- Evidence entries: 32
+- Score: -0.6196  [██░░░░░░░░] (L          R)
+- Confidence: 75%
+- Evidence entries: 30
 - Left pole: Demands for full legal accountability for human rights abuses, independent inves
 - Right pole: Defense of state actions as necessary for public order, re-contextualization of 
 
@@ -64,16 +64,16 @@ title: "Belief Report — 2026-04-03"
 ### Philippine Geopolitical Alignment in the West Philippine Sea
 - ID: `axis_ph_geopolitics_wps_v1`
 - Score: 0.2000  [██████░░░░] (L          R)
-- Confidence: 35%
-- Evidence entries: 14
+- Confidence: 33%
+- Evidence entries: 13
 - Left pole: Strong emphasis on international alliances (US, Japan) and multilateral cooperat
 - Right pole: Emphasis on independent foreign policy, direct bilateral negotiations, and skept
 
 ### Societal Impact and Ethical Concerns of AI/Robots
 - ID: `axis_ai_societal_impact_v1`
-- Score: -0.1598  [████░░░░░░] (L          R)
+- Score: -0.1564  [████░░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 251
+- Evidence entries: 250
 - Left pole: Optimism for AI/robotics potential in entertainment, labor augmentation, and sci
 - Right pole: Concerns about job displacement, ethical implications of autonomous systems (e.g
 
@@ -87,9 +87,9 @@ title: "Belief Report — 2026-04-03"
 
 ### Geopolitical Rhetoric vs. Humanitarian Concerns
 - ID: `axis_geopolitical_rhetoric_v1`
-- Score: -0.0047  [█████░░░░░] (L          R)
+- Score: 0.0084  [█████░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 899
+- Evidence entries: 871
 - Left pole: Prioritizing humanitarian concerns, ethical considerations, and consistency in i
 - Right pole: Emphasizing strong national alliances and diplomatic ties, potentially overlooki
 
@@ -151,9 +151,9 @@ title: "Belief Report — 2026-04-03"
 
 ### National Sovereignty vs. International Law
 - ID: `axis_national_sovereignty_v_intl_law_v1`
-- Score: 0.5344  [████████░░] (L          R)
+- Score: 0.5717  [████████░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 288
+- Evidence entries: 273
 - Left pole: Adherence to international legal frameworks, multilateral cooperation, and accountability under global norms.
 - Right pole: Emphasis on national autonomy, rejection of external legal or political authority, and prioritizing domestic interests.
 
@@ -175,25 +175,25 @@ title: "Belief Report — 2026-04-03"
 
 ### Political Integrity and Moral Conduct in Public Service
 - ID: `axis_political_moral_conduct_v1`
-- Score: -0.2830  [████░░░░░░] (L          R)
+- Score: -0.2692  [████░░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 53
+- Evidence entries: 52
 - Left pole: Expectations for high ethical standards, transparency, and accountability from public officials regarding their personal and professional conduct.
 - Right pole: Tolerance or defense of controversial personal conduct by political figures, often framed as private matters or dismissed in favor of perceived political efficacy.
 
 ### Global Power Realignments and Shifting Hegemony
 - ID: `axis_global_power_realignments_v1`
-- Score: -0.2883  [████░░░░░░] (L          R)
+- Score: -0.2931  [████░░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 401
+- Evidence entries: 395
 - Left pole: Emergence of multi-polar world, regional autonomy, decolonization of traditional power structures, emphasis on self-determination and local governance.
 - Right pole: Maintenance of existing global hegemonic structures, continued influence of established powers, resistance to shifts in global power balance, interventions to maintain status quo.
 
 ### Scientific Advancement and Humanitarian Benefit
 - ID: `axis_scientific_advancement_humanitarian_v1`
-- Score: -0.6111  [██░░░░░░░░] (L          R)
-- Confidence: 90%
-- Evidence entries: 36
+- Score: -0.6000  [██░░░░░░░░] (L          R)
+- Confidence: 88%
+- Evidence entries: 35
 - Left pole: Optimism for scientific discoveries and technological innovations that directly improve human health and well-being.
 - Right pole: Concerns about the accessibility, cost, and ethical implications of advanced scientific breakthroughs, especially when they create new forms of inequality.
 
@@ -215,9 +215,9 @@ title: "Belief Report — 2026-04-03"
 
 ### Discourse on the "New World Order": Centralized Global Governance vs. National Sovereignty/Individual Freedom
 - ID: `axis_new_world_order_discourse_v1`
-- Score: -0.4500  [███░░░░░░░] (L          R)
-- Confidence: 70%
-- Evidence entries: 28
+- Score: -0.4000  [███░░░░░░░] (L          R)
+- Confidence: 68%
+- Evidence entries: 27
 - Left pole: Skepticism towards a centralized global order, concerns about loss of sovereignty, freedom, or cultural identity; critical of powerful entities shaping global governance.
 - Right pole: Acceptance or active promotion of global governance, international cooperation, or a restructured global order to address complex challenges; belief in a necessary evolution of global systems.
 
@@ -271,9 +271,9 @@ title: "Belief Report — 2026-04-03"
 
 ### Political Vulnerability & Foreign Influence
 - ID: `axis_political_vulnerability_foreign_influence_v1`
-- Score: -0.1795  [████░░░░░░] (L          R)
-- Confidence: 49%
-- Evidence entries: 23
+- Score: -0.1500  [████░░░░░░] (L          R)
+- Confidence: 41%
+- Evidence entries: 20
 - Left pole: Emphasis on transparency, accountability, and protecting political processes from external manipulation, with scrutiny of potential blackmail and undue foreign influence.
 - Right pole: Acceptance or denial of political vulnerabilities, downplaying the impact of foreign influence, or rationalizing actions driven by external pressures.
 
@@ -292,22 +292,6 @@ title: "Belief Report — 2026-04-03"
 - Evidence entries: 5
 - Left pole: Emphasis on individual privacy, data sovereignty, and resistance to centralized digital monitoring systems, prioritizing personal freedom and decentralized alternatives.
 - Right pole: Acceptance and promotion of integrated digital identity, financial, and health monitoring systems for societal control, efficiency, and addressing global challenges (e.g., public health, climate).
-
-### Social Welfare vs. Military Spending Priorities
-- ID: `axis_social_welfare_v_military_spending_v1`
-- Score: 0.0500  [█████░░░░░] (L          R)
-- Confidence: 8%
-- Evidence entries: 3
-- Left pole: Prioritization of social welfare programs (daycare, healthcare) as essential societal investments.
-- Right pole: Prioritization of military spending and national defense over social welfare programs, viewing them as secondary.
-
-### Immigration Policy: Open Borders vs. National Control and Cultural Preservation
-- ID: `axis_immigration_policy_v_national_control_v1`
-- Score: 0.0500  [█████░░░░░] (L          R)
-- Confidence: 10%
-- Evidence entries: 4
-- Left pole: Emphasis on humanitarian aspects of immigration, open borders, and cultural diversity.
-- Right pole: Emphasis on national sovereignty, strict border control, and preservation of national identity.
 
 ---
 

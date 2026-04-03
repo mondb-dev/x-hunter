@@ -49,6 +49,8 @@ _db.exec(`
     score        REAL    DEFAULT 0,
     novelty      REAL    DEFAULT 0,
     keywords     TEXT    DEFAULT '',
+    external_urls TEXT   DEFAULT '[]',
+    external_domains TEXT DEFAULT '[]',
     parent_id    TEXT    DEFAULT NULL,
     scraped_at   INTEGER NOT NULL,
     PRIMARY KEY (id)
@@ -140,6 +142,8 @@ try { _db.exec("CREATE INDEX IF NOT EXISTS idx_posts_novelty ON posts(novelty DE
 // Add media columns to existing databases
 try { _db.exec("ALTER TABLE posts ADD COLUMN media_type TEXT DEFAULT 'none'"); } catch { /* already exists */ }
 try { _db.exec("ALTER TABLE posts ADD COLUMN media_description TEXT DEFAULT ''"); } catch { /* already exists */ }
+try { _db.exec("ALTER TABLE posts ADD COLUMN external_urls TEXT DEFAULT '[]'"); } catch { /* already exists */ }
+try { _db.exec("ALTER TABLE posts ADD COLUMN external_domains TEXT DEFAULT '[]'"); } catch { /* already exists */ }
 
 // ── FTS5 sync triggers ────────────────────────────────────────────────────────
 // Keep posts_fts in sync with posts table automatically
@@ -197,11 +201,11 @@ try {
 const stmtInsertPost = _db.prepare(`
   INSERT OR REPLACE INTO posts
     (id, ts, ts_iso, username, display_name, text, likes, rts, replies,
-     velocity, trust, score, novelty, keywords, parent_id, scraped_at,
+     velocity, trust, score, novelty, keywords, external_urls, external_domains, parent_id, scraped_at,
      media_type, media_description)
   VALUES
     (@id, @ts, @ts_iso, @username, @display_name, @text, @likes, @rts, @replies,
-     @velocity, @trust, @score, @novelty, @keywords, @parent_id, @scraped_at,
+     @velocity, @trust, @score, @novelty, @keywords, @external_urls, @external_domains, @parent_id, @scraped_at,
      @media_type, @media_description)
 `);
 
@@ -293,9 +297,13 @@ const stmtGetAccount = _db.prepare(`
 `);
 
 const stmtPostsByUser = _db.prepare(`
-  SELECT text, keywords FROM posts
+  SELECT text, keywords, external_urls, external_domains FROM posts
   WHERE  username = @username AND parent_id IS NULL
   ORDER BY ts DESC LIMIT @limit
+`);
+
+const stmtGetPostById = _db.prepare(`
+  SELECT * FROM posts WHERE id = @id
 `);
 
 const stmtPostsInWindow = _db.prepare(`
@@ -353,6 +361,8 @@ function insertPost(row) {
     score:        row.score    || 0,
     novelty:      row.novelty  || 0,
     keywords:     row.keywords || "",
+    external_urls: JSON.stringify(row.external_urls || []),
+    external_domains: JSON.stringify(row.external_domains || []),
     parent_id:    row.parent_id || null,
     scraped_at:   row.scraped_at || Date.now(),
     media_type:        row.media_type || "none",
@@ -454,6 +464,14 @@ function markFollowed(username) {
 /** Fetch a single account row, or undefined if not found. */
 function getAccount(username) {
   return stmtGetAccount.get({ username });
+}
+
+function getPostById(id) {
+  const row = stmtGetPostById.get({ id });
+  if (!row) return undefined;
+  try { row.external_urls = JSON.parse(row.external_urls || "[]"); } catch { row.external_urls = []; }
+  try { row.external_domains = JSON.parse(row.external_domains || "[]"); } catch { row.external_domains = []; }
+  return row;
 }
 
 /** Return recent non-reply posts by a specific user (for LLM context). */
@@ -657,6 +675,7 @@ module.exports = {
   insertPost, insertKeyword, search, topKeywords, recentPosts, postsByKeyword, prune,
   topNovelPosts, updateMediaDescription,
   upsertAccount, followCandidates, markFollowed, getAccount, postsByUser, postsInWindow,
+  getPostById,
   insertMemory, updateMemoryTxId, recallMemory, getMemoryByPath, recentMemory,
   storeEmbedding, getEmbedding, allEmbeddings, embeddedIds,
   checkAndHealFts,

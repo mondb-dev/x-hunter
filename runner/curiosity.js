@@ -32,6 +32,7 @@ const ANCHORS      = path.join(ROOT, "state", "discourse_anchors.jsonl");
 const SPRINT_CTX   = path.join(ROOT, "state", "sprint_context.txt");
 
 const config = require("./lib/config");
+const { createSelfEchoDetector } = require("./lib/self_echo.js");
 
 const { generate: llmGenerate } = require("./llm.js");
 
@@ -321,6 +322,7 @@ function getUnprocessedDiscourseAnchor() {
   const lines = fs.readFileSync(ANCHORS, "utf-8")
     .split("\n")
     .filter(l => l.trim());
+  const selfEchoDetector = createSelfEchoDetector();
 
   const processedIds = new Set();
   const anchors      = [];
@@ -338,7 +340,9 @@ function getUnprocessedDiscourseAnchor() {
 
   // Return most recent unprocessed anchor (anchors are appended chronologically)
   for (let i = anchors.length - 1; i >= 0; i--) {
-    if (!processedIds.has(anchors[i].post_id)) return anchors[i];
+    if (processedIds.has(anchors[i].post_id)) continue;
+    if (selfEchoDetector.findMatch(anchors[i].their_text || '')) continue;
+    return anchors[i];
   }
   return null;
 }
