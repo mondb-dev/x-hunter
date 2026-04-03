@@ -31,10 +31,8 @@ const STYLE_DIRECTIVE = [
   "Editorial composition: dramatic cinematic framing, strong focal subject,",
   "atmospheric depth built from pixel color, deliberate tonal contrast,",
   "the visual clarity of a magazine cover rendered in pixel art.",
-  // Figures
-  "Human figures as faceless silhouettes — no facial features, posture and tool in hand convey role.",
   // Prohibited
-  "No faces, no flags, no national symbols, no insignia, no uniforms with markings,",
+  "No flags, no national symbols, no insignia, no uniforms with markings,",
   "no text, no lettering, no numbers, no logos, no title cards, no UI elements.",
 ].join(" ");
 
