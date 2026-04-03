@@ -75,8 +75,7 @@ async function generateImage(prompt) {
     parameters: {
       sampleCount: 1,
       aspectRatio: "16:9",
-      personGeneration: "dont_allow",
-      safetySetting: "block_some",
+      safetySetting: "block_only_high",
     },
   });
 
