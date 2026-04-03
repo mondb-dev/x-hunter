@@ -131,7 +131,7 @@ function sleepSec(n) {
  * @param {Object} opts
  * @param {string} opts.today  - YYYY-MM-DD
  * @param {string} opts.hour   - zero-padded hour (e.g. '14')
- * @returns {{ posted: boolean, rejected: boolean, skipped: boolean, tweetUrl: string|null }}
+ * @returns {{ attempted: boolean, posted: boolean, rejected: boolean, skipped: boolean, suppressed: boolean, suppressionReason: string|null, tweetUrl: string|null }}
  */
 function postRegularTweet({ today, hour, cycle }) {
   // ── 1. Journal URL fix ──────────────────────────────────────────────────
@@ -157,7 +157,7 @@ function postRegularTweet({ today, hour, cycle }) {
       if (critique.startsWith('REJECT')) {
         log('Tweet rejected by critique gate — skipping post this cycle');
         try { fs.unlinkSync(DRAFT_PATH); } catch {}
-        return { posted: false, rejected: true, skipped: false, tweetUrl: null };
+        return { attempted: false, posted: false, rejected: true, skipped: false, suppressed: true, suppressionReason: 'critique_rejected', tweetUrl: null };
       }
     }
   }
@@ -176,7 +176,7 @@ function postRegularTweet({ today, hour, cycle }) {
     const draft = readFile(DRAFT_PATH).trim();
     if (draft === 'SKIP') {
       log('Agent chose to skip tweet this cycle (self-check failed)');
-      return { posted: false, rejected: false, skipped: true, tweetUrl: null };
+      return { attempted: false, posted: false, rejected: false, skipped: true, suppressed: true, suppressionReason: 'self_check_skip', tweetUrl: null };
     }
 
     // Dedup guard: skip if same content was posted in last 2h
@@ -184,7 +184,7 @@ function postRegularTweet({ today, hour, cycle }) {
     if (isDuplicatePost(tweetContent)) {
       log('DEDUP: tweet content matches a recent post — skipping');
       try { fs.unlinkSync(DRAFT_PATH); } catch {}
-      return { posted: false, rejected: false, skipped: true, tweetUrl: null };
+      return { attempted: false, posted: false, rejected: false, skipped: true, suppressed: true, suppressionReason: 'duplicate_recent_post', tweetUrl: null };
     }
 
     log('Posting tweet via browser CDP...');
@@ -201,7 +201,7 @@ function postRegularTweet({ today, hour, cycle }) {
     if (isConfirmedStatusUrl(tweetUrl)) {
       try { fs.unlinkSync(DRAFT_PATH); } catch {}
       log(`Tweet posted: ${tweetUrl}`);
-      return { posted: true, rejected: false, skipped: false, tweetUrl };
+      return { attempted: true, posted: true, rejected: false, skipped: false, suppressed: false, suppressionReason: null, tweetUrl };
     }
 
     clearFile(resultPath);
@@ -210,11 +210,11 @@ function postRegularTweet({ today, hour, cycle }) {
     } else {
       log(`Tweet post failed — leaving draft for watchdog retry (${attempt.error})`);
     }
-    return { posted: false, rejected: false, skipped: false, tweetUrl: null };
+    return { attempted: true, posted: false, rejected: false, skipped: false, suppressed: false, suppressionReason: null, tweetUrl: null };
   }
 
   log('No tweet_draft.txt — agent did not produce a draft');
-  return { posted: false, rejected: false, skipped: false, tweetUrl: null };
+  return { attempted: false, posted: false, rejected: false, skipped: false, suppressed: true, suppressionReason: 'no_draft', tweetUrl: null };
 }
 
 // ── postQuoteTweet ───────────────────────────────────────────────────────────
@@ -227,7 +227,7 @@ function postRegularTweet({ today, hour, cycle }) {
  *   2. 3s sleep (let openclaw gateway release browser WS before CDP connect)
  *   3. Post via CDP (post_quote.js)
  *
- * @returns {{ posted: boolean, quoteUrl: string|null }}
+ * @returns {{ attempted: boolean, posted: boolean, suppressed: boolean, suppressionReason: string|null, quoteUrl: string|null }}
  */
 function postQuoteTweet({ cycle }) {
   const quoteDraftPath = config.QUOTE_DRAFT_PATH;
@@ -246,7 +246,7 @@ function postQuoteTweet({ cycle }) {
     if (isDuplicatePost(quoteContent)) {
       log('DEDUP: quote content matches a recent post — skipping');
       try { fs.unlinkSync(quoteDraftPath); } catch {}
-      return { posted: false, quoteUrl: null };
+      return { attempted: false, posted: false, suppressed: true, suppressionReason: 'duplicate_recent_post', quoteUrl: null };
     }
 
     log('Posting quote-tweet via browser CDP...');
@@ -262,7 +262,7 @@ function postQuoteTweet({ cycle }) {
     if (isConfirmedStatusUrl(quoteUrl)) {
       try { fs.unlinkSync(quoteDraftPath); } catch {}
       log(`Quote posted: ${quoteUrl}`);
-      return { posted: true, quoteUrl };
+      return { attempted: true, posted: true, suppressed: false, suppressionReason: null, quoteUrl };
     }
 
     clearFile(resultPath);
@@ -271,11 +271,11 @@ function postQuoteTweet({ cycle }) {
     } else {
       log(`Quote post failed — leaving draft for watchdog retry (${attempt.error})`);
     }
-    return { posted: false, quoteUrl: null };
+    return { attempted: true, posted: false, suppressed: false, suppressionReason: null, quoteUrl: null };
   }
 
   log('No quote_draft.txt — agent did not produce a quote');
-  return { posted: false, quoteUrl: null };
+  return { attempted: false, posted: false, suppressed: true, suppressionReason: 'no_draft', quoteUrl: null };
 }
 
 // ── postLinkTweet ────────────────────────────────────────────────────────────
