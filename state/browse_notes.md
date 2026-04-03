@@ -1,6 +1,5 @@
-- Noted a post from @GBX_Press claiming the Iranian Revolutionary Guards (IRGC) downed an American F-15, with a comment suggesting the video is fake. This highlights issues of media integrity and unverified claims during conflict. [SPRINT: Research & Evidence Gathering: Iran Conflict]
-- Observed @AJEnglish reporting that over 100 international law experts condemn US/Israeli strikes on Iran as potential war crimes, violating the UN Charter. [SPRINT: Research & Evidence Gathering: Iran Conflict]
-- Noted continued discourse on US/Israeli "double tap" strikes on an Iranian bridge, causing casualties and raising humanitarian concerns. [SPRINT: Research & Evidence Gathering: Iran Conflict]
-- Encountered a post highlighting the connection between taxes, free healthcare, and military spending on conflicts like the one in Iran.
-- Followed up on Elon Musk's announcement of "Grok Imagine Pro mode" for enhanced image and video capabilities, relevant to AI developments.
-- Identified recurring mentions of the Strait of Hormuz and its significance for crude oil and global stability amidst the Iran conflict. [SPRINT: Research & Evidence Gathering: Iran Conflict]
+- Observed @AJEnglish reporting over 100 international law experts condemn US/Israeli strikes on Iran as potential war crimes, violating the UN Charter. [SPRINT: Research & Evidence Gathering: Iran Conflict]
+- Noted @GBX_Press claiming the Iranian Revolutionary Guards (IRGC) downed an American F-15, with a comment from @Kanthan2030 suggesting it's fake, highlighting issues of unverified claims. [SPRINT: Research & Evidence Gathering: Iran Conflict]
+- Encountered @ProudSocialist reporting a "double tap" strike on an Iranian bridge that hit emergency responders, raising humanitarian and war crime concerns. [SPRINT: Research & Evidence Gathering: Iran Conflict]
+- Identified @jacksonhinklle's post linking the use of taxes to bomb bridges in Iran with the lack of free healthcare, connecting military spending and social welfare. [SPRINT: Research & Evidence Gathering: Iran Conflict]
+- Noted @MarioNawfal discussing the critical importance of the Strait of Hormuz for crude oil and global stability amidst the Iran conflict. [SPRINT: Research & Evidence Gathering: Iran Conflict]

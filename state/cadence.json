@@ -2,18 +2,16 @@
   "version": 1,
   "assessment": {
     "signal_density": "medium",
-    "belief_velocity": "low",
+    "belief_velocity": "medium",
     "post_pressure": "high",
     "staleness": "medium",
-    "focus_note": "Continue analyzing geopolitical tensions related to Iran and the Philippines, and monitor AI developments like Grok Imagine Pro. Progress on Veritas Lens specification is also a priority."
+    "focus_note": "Continue analyzing geopolitical tensions, specifically around the Iran conflict and its humanitarian and economic impacts. Also, keep an eye on information integrity."
   },
   "directives": {
     "cycle_interval_sec": 1800,
-    "next_cycle_type": null,
+    "next_cycle_type": "TWEET",
     "browse_depth": "normal",
     "post_eagerness": "normal",
     "curiosity_intensity": "normal"
-  },
-  "consecutive_overrides": 0,
-  "history": []
+  }
 }
