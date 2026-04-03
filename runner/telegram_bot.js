@@ -28,7 +28,9 @@
  *   /resume              → resume the orchestrator
  *   /help                → list all commands
  *
- * Any other text → forwarded to openclaw agent as a chat message
+ * Any other text:
+ *   - system/technical query → routed to builder technical assistant
+ *   - otherwise → forwarded to openclaw agent as a chat message
  * (only when orchestrator is not running a cycle).
  *
  * Usage:
@@ -53,6 +55,7 @@ const AGENT_TIMEOUT_MS = 300_000;  // 5 min max for interactive agent calls
 const CYCLE_LOCK_PATH = path.join(config.STATE_DIR, 'cycle.lock');
 const STARTED_AT = new Date();
 const BUILDER_TIMEOUT_MS = 180_000;
+const RECALL_TIMEOUT_MS = 25_000;
 const SYSTEMCTL_BIN = shellPath('systemctl') || '/usr/bin/systemctl';
 
 let lastUpdateId = 0;
@@ -321,8 +324,9 @@ function runBuilderQuestion(question) {
   const prompt = [
     'You are the Sebastian Hunter builder assistant.',
     'You do not have shell access, browser access, or deployment authority.',
-    'Answer only from the active proposal and proposal history provided below.',
-    'Keep the answer concise and practical. Max 700 characters.',
+    'Answer from the active proposal/proposal history and runtime snapshot provided below.',
+    'If runtime state and proposal state conflict, call that out explicitly.',
+    'Keep the answer concise and practical. Max 900 characters.',
     '',
     '## Active proposal',
     JSON.stringify(proposal, null, 2),
@@ -330,10 +334,17 @@ function runBuilderQuestion(question) {
     '## Last historical record',
     JSON.stringify(snapshot.lastHistory || {}, null, 2),
     '',
+    '## Runtime and technical state',
+    JSON.stringify(collectTechnicalSnapshot(), null, 2),
+    '',
     `Operator question: ${question}`,
   ].join('\n');
 
-  const tmpPrompt = path.join(config.STATE_DIR, `builder_tg_prompt_${Date.now()}.txt`);
+  return callBuilderFromPrompt(prompt, 'builder_tg_prompt');
+}
+
+function callBuilderFromPrompt(prompt, prefix = 'builder_tg_prompt') {
+  const tmpPrompt = path.join(config.STATE_DIR, `${prefix}_${Date.now()}.txt`);
   fs.writeFileSync(tmpPrompt, prompt, 'utf-8');
 
   try {
@@ -358,6 +369,118 @@ function runBuilderQuestion(question) {
   } finally {
     try { fs.unlinkSync(tmpPrompt); } catch {}
   }
+}
+
+function isSystemTechnicalQuery(text) {
+  const t = String(text || '').toLowerCase();
+  if (!t) return false;
+
+  // Route only explicit operational/technical asks away from Sebastian chat.
+  return /\b(running\s+state|systemd|service|services|runner|orchestrator|gateway|telegram|tg\s*bot|cdp|chrome|browser|cycle\s*lock|health|uptime|vm|cpu|memory|ram|disk|pid|logs?|errors?|restart|infra|deployment|technical|builder|pipeline|process\s+proposal)\b/i.test(t);
+}
+
+function runRecallForTelegram(userMessage, limit = 5) {
+  const query = String(userMessage || '')
+    .replace(/["`$\\!;|&<>(){}]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 220);
+
+  if (!query) return '';
+
+  try {
+    const result = spawnSync(process.execPath, [
+      path.join(__dirname, 'recall.js'),
+      '--query', query,
+      '--limit', String(limit),
+    ], {
+      stdio: ['ignore', 'pipe', 'pipe'],
+      env: process.env,
+      timeout: RECALL_TIMEOUT_MS,
+      killSignal: 'SIGKILL',
+      maxBuffer: 1024 * 1024,
+    });
+
+    if (result.status !== 0 || result.signal === 'SIGKILL') return '';
+
+    const recallText = readText(config.MEMORY_RECALL_PATH);
+    if (!recallText) return '';
+    return recallText.slice(0, 3200);
+  } catch {
+    return '';
+  }
+}
+
+function collectTechnicalSnapshot() {
+  const report = collectTroubleshootingFindings();
+  const last = readLastLines(config.ORCHESTRATOR_LOG_PATH, 1)[0];
+  let lastCycle = null;
+  if (last) {
+    try {
+      const parsed = JSON.parse(last);
+      lastCycle = {
+        ts: parsed.ts || null,
+        cycle: parsed.cycle || null,
+        type: parsed.type || null,
+        durationSec: parsed.durationSec || null,
+        postAttempted: !!parsed.postAttempted,
+        postSuccess: !!parsed.postSuccess,
+      };
+    } catch {}
+  }
+
+  const builder = getBuilderSnapshot();
+  return {
+    generated_at: new Date().toISOString(),
+    services: {
+      runner: report.runnerState,
+      gateway: report.gatewayState,
+      telegram_bot: report.botState,
+      browser_cdp: report.browserOk ? 'responsive' : 'down',
+    },
+    scraper_loops: report.loops,
+    heartbeat: report.heartbeat || null,
+    findings: report.findings,
+    last_cycle: lastCycle,
+    health_state: readJSON(path.join(config.STATE_DIR, 'health_state.json')),
+    builder_state: {
+      active: builder.active,
+      proposal_status: builder.proposal?.status || null,
+      proposal_title: builder.proposal?.title || null,
+      last_history_status: builder.lastHistory?.status || null,
+      last_history_title: builder.lastHistory?.title || null,
+    },
+  };
+}
+
+function runTechnicalBuilderQuestion(question) {
+  const prompt = [
+    'You are the Sebastian Hunter technical assistant.',
+    'Answer the Telegram operator question about runtime/system state.',
+    'Use ONLY the JSON state below. If unknown, say unknown.',
+    'Be concise, practical, and specific. Max 900 characters.',
+    '',
+    '## Runtime and technical state',
+    JSON.stringify(collectTechnicalSnapshot(), null, 2),
+    '',
+    `Operator question: ${question}`,
+  ].join('\n');
+
+  return callBuilderFromPrompt(prompt, 'builder_tg_tech_prompt');
+}
+
+function formatTechnicalFallback(errorMsg = '') {
+  const report = collectTroubleshootingFindings();
+  let msg = '<b>🛠 Technical State (fallback)</b>\n\n';
+  msg += `Runner: ${escapeHtml(report.runnerState)}\n`;
+  msg += `Gateway: ${escapeHtml(report.gatewayState)}\n`;
+  msg += `TG bot: ${escapeHtml(report.botState)}\n`;
+  msg += `Browser: ${report.browserOk ? 'responsive' : 'down'}\n`;
+  msg += `Scraper: ${escapeHtml(report.loops.map((loop) => `${loop.label}=${loop.running ? 'up' : 'down'}`).join(', '))}\n`;
+  if (errorMsg) {
+    msg += `\n<i>Builder unavailable: ${escapeHtml(errorMsg.slice(0, 180))}</i>`;
+  }
+  return msg;
 }
 
 function collectTroubleshootingFindings() {
@@ -1020,10 +1143,25 @@ async function chatWithAgent(userMessage) {
 
   await sendTyping();
 
+  if (isSystemTechnicalQuery(userMessage)) {
+    const technical = runTechnicalBuilderQuestion(userMessage);
+    if (technical.ok) {
+      return sendMessage(`<b>🛠 Technical</b>\n\n${escapeHtml(technical.text)}`);
+    }
+    return sendMessage(formatTechnicalFallback(technical.error || 'unknown error'));
+  }
+
+  const recallContext = runRecallForTelegram(userMessage, 5);
+
   const prompt = [
     'You are Sebastian D. Hunter, responding to a message from your operator via Telegram.',
     'Keep your response concise (under 500 chars ideally). Be direct and helpful.',
     'You have access to the browser and can look things up if needed.',
+    'Use memory recall context when referencing your prior observations.',
+    'If memory recall has no relevant entries, answer from current context only.',
+    '',
+    '## Memory recall (from state/memory_recall.txt)',
+    recallContext || '(no recall hits for this query)',
     '',
     `Operator message: ${userMessage}`,
   ].join('\n');
@@ -1148,7 +1286,8 @@ async function handleMessage(msg) {
       '/restart browser|runner|gateway|scraper|all\n' +
       '/pause — pause orchestrator\n' +
       '/resume — resume orchestrator\n' +
-      '\n<i>Any other text → chat with Sebastian via OpenClaw</i>',
+      '\n<i>Any other text → chat with Sebastian (auto-recall on)</i>\n' +
+      '<i>System/technical asks are auto-routed to builder technical assistant</i>',
     );
     default:
       // Forward to OpenClaw agent as chat
