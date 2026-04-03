@@ -40,19 +40,41 @@ const IMAGES_DIR   = path.join(ARTICLES_DIR, "images");
  * @returns {string}
  */
 function buildArticleArtPrompt(article) {
-  const subjectLines = [
-    article.title ? `Scene based on article: "${article.title}".` : "",
-    article.excerpt
-      ? `Key themes from the article: ${article.excerpt.slice(0, 200).replace(/\n/g, " ")}`
-      : "",
-    article.axis
-      ? `Belief axis context: ${article.axis.replace(/_/g, " ")}.`
-      : "",
-  ].filter(Boolean).join(" ");
+  // If a concrete scene is provided, use it directly.
+  // Otherwise derive from title + excerpt, but strip obviously abstract phrases.
+  let sceneDirective;
+  if (article.scene) {
+    sceneDirective = `Scene: ${article.scene}.`;
+  } else {
+    // Filter out overly abstract excerpts — they push Imagen toward people-at-screens
+    const excerptIsVisual = article.excerpt &&
+      /\b(war|battle|flood|fire|ship|vessel|missile|drone|crowd|city|market|border|factory|port|oil|gas|protest|soldier|aircraft|satellite|storm|forest|desert|ocean|river|mountain|building|bridge|road|vehicle|tank|soldier|troops|election|vote|court|prison|wall|fence|cable|data center|mine|pipeline)\b/i.test(article.excerpt);
+
+    const subjectParts = [
+      article.title ? `Scene inspired by: "${article.title}".` : "",
+      excerptIsVisual
+        ? `Visual elements from the article: ${article.excerpt.slice(0, 160).replace(/\n/g, " ")}`
+        : "",
+      article.axis
+        ? `Thematic context: ${article.axis.replace(/_/g, " ")}.`
+        : "",
+    ].filter(Boolean);
+
+    // Fallback for abstract articles: a concrete editorial default
+    if (!excerptIsVisual) {
+      subjectParts.push(
+        "Editorial scene: a large public square at night, searchlights scanning across buildings, " +
+        "surveillance cameras on poles, news broadcast antennas, satellite dishes, cables running between structures. " +
+        "No people. Focus on infrastructure and architecture."
+      );
+    }
+
+    sceneDirective = subjectParts.join(" ");
+  }
 
   return [
     STYLE_DIRECTIVE,
-    subjectLines,
+    sceneDirective,
     "Accurate depiction — show era-correct geography, vehicles, objects, or animals relevant to the topic.",
     "Action-oriented composition — forces in motion, objects being operated, conditions actively changing.",
     "Wide cinematic framing, 16:9 aspect ratio.",
@@ -159,7 +181,11 @@ async function main() {
     return;
   }
 
-  const article = loadArticle(dateArg);
+  // Optional --scene "description" to override the auto-derived scene
+  const sceneIdx = args.indexOf("--scene");
+  const scene = sceneIdx !== -1 ? args[sceneIdx + 1] : undefined;
+
+  const article = { ...loadArticle(dateArg), scene };
   console.log(`[article_art] Generating image for: ${article.title}`);
 
   const prompt = buildArticleArtPrompt(article);
