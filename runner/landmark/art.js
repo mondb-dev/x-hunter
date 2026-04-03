@@ -76,8 +76,7 @@ async function generateHeroArt(event, opts = {}) {
     parameters: {
       sampleCount: 1,
       aspectRatio: "16:9",
-      personGeneration: "allow_adult",
-      safetySetting: "block_some",
+      safetySetting: "block_only_high",
     },
   });
 
