@@ -9,14 +9,15 @@
  * Card dimensions: 600×840 (standard trading card ratio ~5:7)
  *
  * Tier treatments:
- *   Gold   (tier 1, 25 ed.)  — gold glare border, radial gold glow
- *   Silver (tier 2, 50 ed.)  — silver metallic border, subtle sheen
- *   Bronze (tier 3, 100 ed.) — matte bronze border, no gloss
+ *   Tier 1              — strongest standard NFT gate, gold glow
+ *   Tier 2              — article signal edition, silver metallic frame
+ *   Special vocation    — green ceremonial glow
+ *   Special prediction  — crimson validated-signal glow
  */
 
 "use strict";
 
-const { CARD_TIERS, EDITION_SUPPLY } = require("./config");
+const { LANDMARK_TIERS } = require("./config");
 
 // ── SVG helpers ───────────────────────────────────────────────────────────────
 
@@ -53,6 +54,7 @@ function wrapText(text, maxChars) {
  * @param {string} params.headline       - event headline (movie title)
  * @param {string} params.dateStr        - date string
  * @param {number} params.signalCount    - signals fired (3-6)
+ * @param {string} params.tierKey        - gate-derived tier key
  * @param {object} params.signals        - individual signal flags
  * @param {object} params.stats          - detection stats
  * @param {number} params.editionNumber  - this edition's number
@@ -66,6 +68,7 @@ function generateCard(params) {
     headline,
     dateStr,
     signalCount,
+    tierKey = "tier_2",
     signals,
     stats,
     editionNumber = 1,
@@ -74,9 +77,8 @@ function generateCard(params) {
     heroArtDataUri,
   } = params;
 
-  const tierKey = Math.min(Math.max(signalCount, 3), 6);
-  const tier = CARD_TIERS[tierKey];
-  const supply = editionSupply || EDITION_SUPPLY[tierKey] || 100;
+  const tier = LANDMARK_TIERS[tierKey] || LANDMARK_TIERS.tier_2;
+  const supply = editionSupply || tier.editionSupply;
 
   // Title lines (wider for poster feel)
   const titleLines = wrapText(headline, 28);
@@ -101,21 +103,21 @@ function generateCard(params) {
     ? `<image x="0" y="0" width="600" height="840" href="${heroArtDataUri}" preserveAspectRatio="xMidYMid slice" />`
     : placeholderScene(tier);
 
-  // Gold tier gets an animated radial glow
+  // Glowing tiers get an animated radial highlight.
   const goldGlow = tier.glow ? `
     <radialGradient id="goldGlow" cx="50%" cy="30%" r="60%">
-      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.15" />
-      <stop offset="100%" stop-color="#FFD700" stop-opacity="0" />
+      <stop offset="0%" stop-color="${tier.frame}" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="${tier.frame}" stop-opacity="0" />
     </radialGradient>
     <rect width="600" height="840" fill="url(#goldGlow)" />` : "";
 
   // Border treatment per tier
   const borderDefs = tier.glow
     ? `<linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-         <stop offset="0%"   stop-color="#FFD700" />
-         <stop offset="40%"  stop-color="#FFF8DC" />
-         <stop offset="60%"  stop-color="#FFD700" />
-         <stop offset="100%" stop-color="#B8860B" />
+         <stop offset="0%"   stop-color="${tier.frame}" />
+         <stop offset="40%"  stop-color="${tier.accent}" />
+         <stop offset="60%"  stop-color="${tier.frame}" />
+         <stop offset="100%" stop-color="${tier.bg}" />
        </linearGradient>
        <filter id="borderGlow">
          <feGaussianBlur stdDeviation="2.5" result="blur" />
@@ -123,7 +125,7 @@ function generateCard(params) {
        </filter>`
     : "";
   const borderStroke = tier.glow ? "url(#borderGrad)" : tier.frame;
-  const borderWidth  = tier.glow ? 4 : (tier.name === "Silver" ? 3 : 2);
+  const borderWidth  = tier.glow ? 4 : (tier.name === "Tier 2" ? 3 : 2);
   const borderFilter = tier.glow ? ' filter="url(#borderGlow)"' : "";
 
   // Bottom data panel Y positions
@@ -188,9 +190,9 @@ function generateCard(params) {
   </text>
 
   <!-- Tier + signal badge (top-right corner) -->
-  <rect x="470" y="54" width="100" height="28" rx="4" fill="${tier.frame}" opacity="0.2" />
-  <text x="520" y="73" fill="${tier.frame}" font-size="12" font-weight="bold" font-family="monospace" text-anchor="middle">
-    ${tier.name.toUpperCase()} · ${signalCount}/6
+  <rect x="420" y="54" width="150" height="28" rx="4" fill="${tier.frame}" opacity="0.2" />
+  <text x="495" y="73" fill="${tier.frame}" font-size="12" font-weight="bold" font-family="monospace" text-anchor="middle">
+    ${esc(tier.badge)} · ${signalCount}/6
   </text>
 
   <!-- ─── TITLE (movie poster style) ─── -->

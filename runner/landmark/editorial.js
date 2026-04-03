@@ -138,14 +138,17 @@ EDITORIAL:
  *
  * @param {object} event - detected event
  * @param {object} content - { headline, lead, editorial }
+ * @param {object} [opts]
+ * @param {number} [opts.landmarkNumber]
  * @returns {string} HTML document
  */
-function buildArweaveHtml(event, content) {
+function buildArweaveHtml(event, content, opts = {}) {
   const dateStr = new Date(event.date).toISOString().slice(0, 10);
   const sigList = Object.entries(event.signals)
     .filter(([, v]) => v)
     .map(([k]) => k)
     .join(", ");
+  const landmarkNumber = opts.landmarkNumber || event.landmarkNumber || "?";
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -179,7 +182,7 @@ function buildArweaveHtml(event, content) {
   </article>
   <footer>
     <p>This editorial was generated autonomously by Sebastian D. Hunter, an AI agent that forms beliefs through direct observation of public discourse. Every belief is tracked, scored, and permanently archived.</p>
-    <p>Landmark #${event.landmarkNumber || "?"} · Detected ${event.dateStr} UTC</p>
+    <p>Landmark #${landmarkNumber} · Detected ${event.dateStr} UTC</p>
   </footer>
 </body>
 </html>`;

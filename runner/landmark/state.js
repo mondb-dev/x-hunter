@@ -26,6 +26,9 @@ function loadState() {
       last_mint_at: null,          // ISO timestamp of last successful mint
       total_landmarks: 0,
       total_mints: 0,
+      total_candidates: 0,
+      total_published: 0,
+      total_minted: 0,
     };
   }
 }
@@ -87,29 +90,35 @@ function isDuplicate(topKeywords) {
 }
 
 /**
- * Record a successful detection + mint.
+ * Record landmark lifecycle data.
  */
-function recordLandmark(event, mintResult) {
+function recordLandmark(event, mintResult, meta = {}) {
   const state = loadState();
   const now = new Date().toISOString();
 
   state.last_detection_at = now;
   state.last_mint_at = mintResult ? now : state.last_mint_at;
   state.total_landmarks++;
+  state.total_candidates = (state.total_candidates || 0) + 1;
+  if (meta.published) state.total_published = (state.total_published || 0) + 1;
   if (mintResult) state.total_mints++;
+  if (mintResult) state.total_minted = (state.total_minted || 0) + 1;
   saveState(state);
 
   appendLog({
     id: `landmark_${state.total_landmarks}`,
     detected_at: now,
+    stage: event.landmarkStage || meta.stage || null,
+    tier: event.landmarkTierKey || meta.tier || null,
     signal_count: event.signalCount,
     signals: event.signals,
     top_keywords: event.topKeywords,
     headline: event.headline || null,
     arweave_tx: mintResult?.arweaveTx || null,
     mint_address: mintResult?.mintAddress || null,
-    edition_supply: mintResult?.editionSupply || null,
-    card_tier: event.cardTier || null,
+    edition_supply: mintResult?.editionSupply || meta.editionSupply || null,
+    card_tier: event.landmarkTierKey || meta.tier || null,
+    article_url: meta.articleUrl || null,
   });
 }
 

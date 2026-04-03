@@ -33,10 +33,11 @@ const path = require("path");
 
 // ── Module imports ────────────────────────────────────────────────────────────
 
-const { EDITION_SUPPLY, CARD_TIERS, PATHS } = require("./config");
+const { PATHS } = require("./config");
 const { loadState, saveState, isCooldownClear, isDuplicate, recordLandmark } = require("./state");
 const { detect } = require("./detect");
 const { generateEditorial, buildArweaveHtml } = require("./editorial");
+const { evaluateLandmark, validateEditorialForMint } = require("./tiering");
 const { generateHeroArt } = require("./art");
 // Card rendering + minting preserved but not invoked (NFT pipeline disabled)
 // const { renderAndSave } = require("./render");
@@ -103,6 +104,17 @@ async function main() {
   console.log(`[landmark] Top event: ${event.signalCount}/6 signals`);
   console.log(`[landmark] Keywords: ${(event.topKeywords || []).join(", ")}`);
 
+  const gateEval = evaluateLandmark(event);
+  console.log(
+    `[landmark] Gate stage: ${gateEval.stage} | coherence ${gateEval.coherenceScore.toFixed(2)} | ` +
+    `relevant posts ${gateEval.evidenceSummary.relevantPosts}`
+  );
+
+  if (!gateEval.articleEligible) {
+    console.log("[landmark] Candidate-only event — skipping article/NFT publication.");
+    return;
+  }
+
   // ── 2. Dedup check ─────────────────────────────────────────────────────
 
   if (isDuplicate(event.topKeywords || []) && !FORCE) {
@@ -125,33 +137,52 @@ async function main() {
 
   // Attach headline to event for downstream use
   event.headline = content.headline;
-
-  const tierKey = Math.min(Math.max(event.signalCount, 3), 6);
-  const tier = CARD_TIERS[tierKey];
-  const supply = EDITION_SUPPLY[tierKey] || 1000;
   const landmarkNumber = (state.total_landmarks || 0) + 1;
+  const manifestDir = path.join(PATHS.LANDMARKS_DIR, `landmark_${landmarkNumber}`);
+  if (!fs.existsSync(manifestDir)) fs.mkdirSync(manifestDir, { recursive: true });
 
-  console.log(`[landmark] Tier: ${tier.name} | Supply: ${supply} | Landmark #${landmarkNumber}`);
+  const editorialValidation = validateEditorialForMint(event, content);
+  const finalEval = evaluateLandmark(event, {
+    editorialValidationPass: editorialValidation.passed,
+    canonicalLandmarkPageExists: true,
+  });
+  const tier = finalEval.tier;
+  const supply = tier.editionSupply;
+
+  event.landmarkNumber = landmarkNumber;
+  event.landmarkStage = finalEval.stage;
+  event.landmarkTierKey = tier.id;
+  event.coherenceScore = finalEval.coherenceScore;
+  event.evidenceSummary = finalEval.evidenceSummary;
+  event.editorialValidation = editorialValidation;
+
+  console.log(
+    `[landmark] Tier: ${tier.name} | Supply: ${supply} | Stage: ${finalEval.stage} | Landmark #${landmarkNumber}`
+  );
+  if (!editorialValidation.passed) {
+    console.log(`[landmark] Tier 1 validation pending: ${editorialValidation.reasons.join("; ")}`);
+  }
 
   if (DRY_RUN) {
     console.log("\n── DRY RUN SUMMARY ──");
     console.log(JSON.stringify({
       landmarkNumber,
+      stage: finalEval.stage,
       signalCount: event.signalCount,
-      tier: tier.name,
+      tier: tier.id,
+      coherenceScore: finalEval.coherenceScore,
+      evidenceSummary: finalEval.evidenceSummary,
+      editorialValidation,
       headline: content.headline,
       lead: content.lead,
       topKeywords: event.topKeywords,
     }, null, 2));
 
     // Still write editorial to disk for review
-    const dir = path.join(PATHS.LANDMARKS_DIR, `landmark_${landmarkNumber}`);
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-
-    const editorialHtml = buildArweaveHtml(event, content);
-    fs.writeFileSync(path.join(dir, "editorial.html"), editorialHtml);
-    fs.writeFileSync(path.join(dir, "event.json"), JSON.stringify(event, null, 2));
-    console.log(`[landmark] Dry run artifacts saved to ${dir}`);
+    const editorialHtml = buildArweaveHtml(event, content, { landmarkNumber });
+    fs.writeFileSync(path.join(manifestDir, "editorial.html"), editorialHtml);
+    fs.writeFileSync(path.join(manifestDir, "event.json"), JSON.stringify(event, null, 2));
+    console.log(`[landmark] Dry run artifacts saved to ${manifestDir}`);
     return;
   }
 
@@ -162,10 +193,7 @@ async function main() {
   let artPrompt = null;
   let artPath = null;
   try {
-    const artDir = path.join(PATHS.LANDMARKS_DIR, `landmark_${landmarkNumber}`);
-    if (!fs.existsSync(artDir)) fs.mkdirSync(artDir, { recursive: true });
-
-    artPath = path.join(artDir, `landmark_${landmarkNumber}_hero.png`);
+    artPath = path.join(manifestDir, `landmark_${landmarkNumber}_hero.png`);
     const result = await generateHeroArt(event, { outputPath: artPath });
     artBuf = result.buffer;
     artPrompt = result.prompt;
@@ -205,18 +233,27 @@ async function main() {
   // ── 6. Record ───────────────────────────────────────────────────────────
 
   console.log("\n── STEP 6: Recording ──");
-  recordLandmark(event, null);  // no mint result
+  recordLandmark(event, null, {
+    published: true,
+    stage: finalEval.stage,
+    tier: tier.id,
+    editionSupply: supply,
+    articleUrl,
+  });  // no mint result
 
   // Save manifest
-  const manifestDir = path.join(PATHS.LANDMARKS_DIR, `landmark_${landmarkNumber}`);
-  if (!fs.existsSync(manifestDir)) fs.mkdirSync(manifestDir, { recursive: true });
-
   const manifest = {
     landmark_number: landmarkNumber,
     detected_at:     new Date().toISOString(),
+    stage:           finalEval.stage,
     signal_count:    event.signalCount,
     signals:         event.signals,
-    tier:            tier.name,
+    tier:            tier.id,
+    tier_name:       tier.name,
+    edition_supply:  supply,
+    coherence_score: finalEval.coherenceScore,
+    evidence_summary: finalEval.evidenceSummary,
+    editorial_validation: editorialValidation,
     headline:        content.headline,
     lead:            content.lead,
     top_keywords:    event.topKeywords || [],
@@ -230,7 +267,7 @@ async function main() {
   );
 
   // Save editorial and event data for reference
-  const editorialHtml = buildArweaveHtml(event, content);
+  const editorialHtml = buildArweaveHtml(event, content, { landmarkNumber });
   fs.writeFileSync(path.join(manifestDir, "editorial.html"), editorialHtml);
   fs.writeFileSync(path.join(manifestDir, "event.json"), JSON.stringify(event, null, 2));
 
@@ -243,6 +280,7 @@ async function main() {
 
   console.log("\n╔═══════════════════════════════════════════╗");
   console.log(`║  LANDMARK #${String(landmarkNumber).padEnd(4)} PUBLISHED                 ║`);
+  console.log(`║  Stage: ${finalEval.stage.padEnd(35)}║`);
   console.log(`║  Tier: ${tier.name.padEnd(36)}║`);
   console.log(`║  Art:  ${artBuf ? "yes" : "none".padEnd(36)}║`);
   console.log("╚═══════════════════════════════════════════╝");

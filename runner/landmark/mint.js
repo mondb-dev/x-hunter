@@ -17,7 +17,8 @@
 
 const fs   = require("fs");
 const path = require("path");
-const { EDITION_SUPPLY, COLLECT_PRICE_SOL, CARD_TIERS, PATHS } = require("./config");
+const { COLLECT_PRICE_SOL, PATHS } = require("./config");
+const { evaluateLandmark, getTier } = require("./tiering");
 
 // Load .env
 const ROOT = path.resolve(__dirname, "../..");
@@ -89,7 +90,8 @@ async function uploadToArweave(data, contentType, tags = {}) {
  * @param {string} params.imageUri       - Arweave URI for card image
  * @param {string} params.editorialUri   - Arweave URI for full editorial
  * @param {number} params.signalCount    - detection signal count
- * @param {string} params.tierName       - Gold/Silver/Bronze
+ * @param {string} params.tierName       - gate-derived display name
+ * @param {string} params.tierId         - gate-derived tier id
  * @param {number} params.landmarkNumber - sequential ID
  * @param {string} params.date           - event date
  * @param {string[]} params.topKeywords  - event keywords
@@ -104,6 +106,7 @@ function buildMetadata(params) {
     external_url: `https://sebastianhunter.fun/landmarks/${params.landmarkNumber}`,
     attributes: [
       { trait_type: "Tier",            value: params.tierName },
+      { trait_type: "Tier ID",         value: params.tierId },
       { trait_type: "Signal Strength", value: params.signalCount },
       { trait_type: "Landmark",        value: `#${params.landmarkNumber}` },
       { trait_type: "Date",            value: params.date },
@@ -209,8 +212,14 @@ async function createMasterEdition(metadataUri, opts = {}) {
  */
 async function mintLandmark(event, content, editorialHtml, cardImagePath, opts = {}) {
   const lnum = opts.landmarkNumber || 1;
-  const tier = CARD_TIERS[Math.min(Math.max(event.signalCount, 3), 6)];
-  const maxSupply = EDITION_SUPPLY[event.signalCount] || 100;
+  const evaluation = evaluateLandmark(event, {
+    editorialValidationPass: opts.editorialValidationPass,
+    canonicalLandmarkPageExists: opts.canonicalLandmarkPageExists,
+    specialKind: opts.specialKind,
+    predictionValidated: opts.predictionValidated,
+  });
+  const tier = getTier(opts.tierKey || event.landmarkTierKey || evaluation.tier?.id || "tier_2");
+  const maxSupply = opts.editionSupply || tier.editionSupply;
 
   console.log(`[mint] Starting mint for Landmark #${lnum} (${tier.name}, supply: ${maxSupply})`);
 
@@ -231,14 +240,13 @@ async function mintLandmark(event, content, editorialHtml, cardImagePath, opts =
   const editorialId = await uploadToArweave(editorialBuf, "text/html", {
     Type:     "landmark-editorial",
     Landmark: String(lnum),
+    Stage:    event.landmarkStage || evaluation.stage,
   });
   const editorialUri = `https://gateway.irys.xyz/${editorialId}`;
   console.log(`[mint] Editorial uploaded: ${editorialUri}`);
 
   // 3. Build and upload metadata JSON
-  const dateStr = event.windowStart
-    ? new Date(event.windowStart).toISOString().slice(0, 10)
-    : new Date().toISOString().slice(0, 10);
+  const dateStr = new Date(event.date || event.windowTs || Date.now()).toISOString().slice(0, 10);
 
   const metadata = buildMetadata({
     name:           `Landmark #${lnum}: ${content.headline}`,
@@ -247,6 +255,7 @@ async function mintLandmark(event, content, editorialHtml, cardImagePath, opts =
     editorialUri,
     signalCount:    event.signalCount,
     tierName:       tier.name,
+    tierId:         tier.id,
     landmarkNumber: lnum,
     date:           dateStr,
     topKeywords:    event.topKeywords || [],
@@ -257,6 +266,7 @@ async function mintLandmark(event, content, editorialHtml, cardImagePath, opts =
   const metaId = await uploadToArweave(metaBuf, "application/json", {
     Type:     "landmark-metadata",
     Landmark: String(lnum),
+    Tier:     tier.id,
   });
   const metadataUri = `https://gateway.irys.xyz/${metaId}`;
   console.log(`[mint] Metadata uploaded: ${metadataUri}`);
@@ -282,7 +292,15 @@ async function mintLandmark(event, content, editorialHtml, cardImagePath, opts =
   );
   fs.writeFileSync(arweaveLogPath, JSON.stringify(arweaveLog, null, 2));
 
-  return { mintAddress, metadataUri, imageUri, editorialUri, signature };
+  return {
+    mintAddress,
+    metadataUri,
+    imageUri,
+    editorialUri,
+    signature,
+    editionSupply: maxSupply,
+    tier: tier.id,
+  };
 }
 
 module.exports = { mintLandmark, buildMetadata, uploadToArweave, createMasterEdition };

@@ -42,14 +42,14 @@ function renderCardSvg(event, content, artBuf, opts = {}) {
     ? `data:image/png;base64,${artBuf.toString("base64")}`
     : null;
 
-  const dateStr = event.windowStart
-    ? new Date(event.windowStart).toISOString().slice(0, 16).replace("T", " ")
-    : new Date().toISOString().slice(0, 10);
+  const baseDate = event.date || event.windowTs || Date.now();
+  const dateStr = new Date(baseDate).toISOString().slice(0, 16).replace("T", " ");
 
   return generateCard({
     headline:       content.headline || "Landmark Event",
     dateStr,
     signalCount:    event.signalCount,
+    tierKey:        opts.tierKey || event.landmarkTierKey || "tier_2",
     signals:        event.signals,
     stats:          event.stats || {},
     editionNumber:  opts.editionNumber || 1,
