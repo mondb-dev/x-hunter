@@ -91,6 +91,8 @@ function buildNormalTasks(ctx) {
     '0. DEEP DIVE (highest priority): If there is a reading queue item above, follow\n' +
     '   those instructions completely before anything else. A deep dive on a profile or link\n' +
     '   takes the full cycle \u2014 skip task 1 (curiosity search) if you did a deep dive.\n' +
+    '   The link may be an intentional off-platform source selected from your strongest\n' +
+    '   convictions. Treat that as normal browse work, not as a fallback mode.\n' +
     '   browser auth is unavailable instead of trying to force the UI.\n' +
     '1. CURIOSITY: If NO deep dive this cycle and the directive above has an ACTIVE SEARCH URL,\n' +
     '   navigate to it now and read top 3-5 posts. Each cycle in the window searches a\n' +
@@ -111,12 +113,13 @@ function buildNormalTasks(ctx) {
     '   Delta format:\n' +
     '   {\n' +
     '     "new_claims": [\n' +
-    '       { "claim_text": "concise claim text", "source_url": "url", "related_axis_id": "axis_id", "notes": "initial notes" }\n' +
+    '       { "claim_text": "concise claim text", "source_post_url": "x status url or source post url", "cited_url": "external article/doc url if present", "related_axis_id": "axis_id", "notes": "initial notes" }\n' +
     '     ],\n' +
     '     "updated_claims": [\n' +
-    '       { "id": "claim_id_from_list", "new_status": "supported"|"refuted"|"contested", "notes": "notes on new evidence" }\n' +
+    '       { "id": "claim_id_from_list", "new_status": "supported"|"refuted"|"contested", "source_post_url": "optional updated source post", "cited_url": "optional external article/doc url", "notes": "notes on new evidence" }\n' +
     '     ]\n' +
     '   }\n' +
+    '   If you only have one URL, use source_post_url for the X post and let the system infer cited_url when possible.\n' +
     '   Use statuses: "supported" (strong evidence for), "refuted" (strong evidence against), "contested" (conflicting evidence).\n' +
     '   Omit keys if empty. Skip the file if no changes.\n' +
     '5. Write state/ontology_delta.json if anything is genuinely axis-worthy.\n' +

@@ -39,6 +39,7 @@ const path      = require("path");
 const db        = require("./db");
 const analytics = require("./analytics");
 const { describeMedia } = require("../runner/vision");
+const { normalizedExternalUrls, domainsFromUrls, extractUrls } = require("../runner/lib/url_utils");
 const {
   getUserByUsername,
   getHomeTimeline,
@@ -145,9 +146,19 @@ function inferApiMediaType(tweet, mediaMap) {
   return "none";
 }
 
+function extractApiExternalUrls(tweet) {
+  const urls = [];
+  for (const item of tweet?.entities?.urls || []) {
+    const candidate = item.unwound_url || item.expanded_url || item.url;
+    if (candidate) urls.push(candidate);
+  }
+  return normalizedExternalUrls(urls);
+}
+
 function mapApiTweet(tweet, maps) {
   const user = maps.users.get(tweet.author_id) || {};
   const metrics = tweet.public_metrics || {};
+  const externalUrls = extractApiExternalUrls(tweet);
   return {
     id: tweet.id,
     username: user.username || "unknown",
@@ -158,6 +169,8 @@ function mapApiTweet(tweet, maps) {
     rts: String((metrics.retweet_count || 0) + (metrics.quote_count || 0)),
     replies: String(metrics.reply_count || 0),
     mediaType: inferApiMediaType(tweet, maps.media),
+    external_urls: externalUrls.map(item => item.url),
+    external_domains: domainsFromUrls(externalUrls),
   };
 }
 
@@ -243,6 +256,17 @@ async function extractPosts(page) {
 
         const textEl  = art.querySelector('[data-testid="tweetText"]');
         const text    = textEl?.innerText || "";
+        const externalUrls = [];
+        for (const anchor of art.querySelectorAll('a[href]')) {
+          const href = anchor.href || "";
+          try {
+            const parsed = new URL(href);
+            const host = parsed.hostname.replace(/^www\./, "").toLowerCase();
+            if (host === "x.com" || host === "twitter.com") continue;
+            if (!/^https?:$/.test(parsed.protocol)) continue;
+            externalUrls.push(parsed.toString());
+          } catch (_) {}
+        }
 
         const timeEl  = art.querySelector("time");
         const ts      = timeEl ? new Date(timeEl.getAttribute("datetime")).getTime() : Date.now();
@@ -260,11 +284,21 @@ async function extractPosts(page) {
                            || art.querySelector('video'));
         const mediaType = hasVideo ? "video" : hasImages ? "image" : "none";
 
-        results.push({ id, username, displayName, text, ts, likes, rts, replies, mediaType });
+        results.push({ id, username, displayName, text, ts, likes, rts, replies, mediaType, externalUrls });
       } catch (_) {}
     }
     return results;
   });
+}
+
+function enrichExternalUrls(post) {
+  const textUrls = extractUrls(post.text || "");
+  const external = normalizedExternalUrls([...(post.externalUrls || []), ...textUrls]);
+  return {
+    ...post,
+    external_urls: external.map(item => item.url),
+    external_domains: domainsFromUrls(external),
+  };
 }
 
 /**
@@ -317,6 +351,7 @@ async function fetchReplies(page, tweetUrl, topN) {
     return all
       .slice(1)
       .filter(p => p.text.length > 0)
+      .map(enrichExternalUrls)
       .sort((a, b) =>
         (parseCount(b.likes) + parseCount(b.rts)) -
         (parseCount(a.likes) + parseCount(a.rts))
@@ -516,7 +551,7 @@ async function scrapeNotificationsApi() {
     if (!post.text || seenSet.has(post.id)) continue;
     const { keep } = analytics.sanitizePost(post);
     if (!keep) continue;
-    sanitized.push(post);
+    sanitized.push(enrichExternalUrls(post));
   }
   console.log(`[scraper] ${sanitized.length} posts after sanitize+dedup`);
 
@@ -636,6 +671,8 @@ async function scrapeNotificationsApi() {
       novelty:      post.novelty || 0,
       keywords:     post.keywords.join(", "),
       scraped_at:   scrapedAt,
+      external_urls: post.external_urls || [],
+      external_domains: post.external_domains || [],
       media_type:        post.mediaType || "none",
       media_description: post.mediaDescription || "",
     });
@@ -658,6 +695,8 @@ async function scrapeNotificationsApi() {
         trust:        trustScore(r.username, trustGraph),
         score:        parseCount(r.likes) * 0.1,
         keywords:     rkw.join(", "),
+        external_urls: r.external_urls || [],
+        external_domains: r.external_domains || [],
         scraped_at:   scrapedAt,
         parent_id:    post.id,
       });
@@ -725,9 +764,13 @@ async function scrapeNotificationsApi() {
     keywords: post.keywords,
     media_type: post.mediaType || "none",
     media_description: post.mediaDescription || "",
+    external_urls: post.external_urls || [],
+    external_domains: post.external_domains || [],
     top_replies: post.topReplies.map(r => ({
       id: r.id, u: r.username, text: r.text,
       likes: parseCount(r.likes), rts: parseCount(r.rts),
+      external_urls: r.external_urls || [],
+      external_domains: r.external_domains || [],
     })),
   }));
   fs.appendFileSync(FEED_BUFFER, bufferLines.join("\n") + "\n");

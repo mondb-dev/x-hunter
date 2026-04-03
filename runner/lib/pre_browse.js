@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * runner/lib/pre_browse.js — pre-browse pipeline (11 ordered script invocations)
+ * runner/lib/pre_browse.js — pre-browse pipeline (14 ordered script invocations)
  *
  * Ported 1:1 from run.sh lines ~430-487 (inside the BROWSE elif block,
  * before the prompt construction + agent_run).
@@ -42,7 +42,8 @@ function runScript(scriptPath, opts = {}) {
 /**
  * preBrowse(cycle)
  *
- * Runs the 11-step pre-browse pipeline. Each step matches a block in run.sh.
+ * Runs the 14-step pre-browse pipeline. Each step matches a block in run.sh,
+ * plus deterministic external-source discovery, profiling, and conviction-driven source selection.
  *
  * @param {number} cycle - current cycle number
  */
@@ -93,19 +94,30 @@ function preBrowse(cycle) {
   // ── 8. discourse_digest.js → discourse_digest.txt ─────────────────────
   runScript(path.join(PROJECT_ROOT, 'runner/discourse_digest.js'));
 
-  // ── 9. reading_queue.js (emit reading URL for this cycle) ─────────────
+  // ── 9. external_source_discovery.js (mechanical registry refresh) ─────
+  runScript(path.join(PROJECT_ROOT, 'runner/external_source_discovery.js'));
+
+  // ── 10. external_source_profile.js (deterministic live profiling) ──────
+  runScript(path.join(PROJECT_ROOT, 'runner/external_source_profile.js'));
+
+  // ── 11. source_selector.js (periodic external source queueing) ────────
+  runScript(path.join(PROJECT_ROOT, 'runner/source_selector.js'), {
+    env: { SOURCE_SELECT_CYCLE: String(cycle) },
+  });
+
+  // ── 12. reading_queue.js (emit reading URL for this cycle) ────────────
   runScript(path.join(PROJECT_ROOT, 'runner/reading_queue.js'), {
     env: { READING_CYCLE: String(cycle) },
   });
 
-  // ── 10. deep_dive_detector.js (every 6 cycles) ───────────────────────
+  // ── 13. deep_dive_detector.js (every 6 cycles) ───────────────────────
   if (cycle % 6 === 0) {
     runScript(path.join(PROJECT_ROOT, 'runner/deep_dive_detector.js'), {
       env: { READING_CYCLE: String(cycle) },
     });
   }
 
-  // ── 11. prefetch_url.js (pre-load curiosity URL in browser) ───────────
+  // ── 14. prefetch_url.js (pre-load reading/curiosity URL in browser) ───
   runScript(path.join(PROJECT_ROOT, 'runner/prefetch_url.js'), {
     env: { PREFETCH_CYCLE: String(cycle) },
   });
