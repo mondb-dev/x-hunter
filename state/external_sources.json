@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-03T15:26:01.161Z",
+  "generated_at": "2026-04-03T16:25:37.169Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-03T14:26:17.205Z",
   "sources": [
@@ -629,9 +629,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-03T11:04:18.000Z",
+      "last_seen_at": "2026-04-03T12:32:30.000Z",
       "discovery": {
-        "distinct_urls": 5,
+        "distinct_urls": 7,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -640,14 +640,16 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 5
+          "feed_buffer_reply": 7
         },
-        "distinct_referring_accounts": 5,
+        "distinct_referring_accounts": 7,
         "sample_referring_accounts": [
           "afk500595388855",
           "chibifanpage2",
+          "cuteallthings",
           "endorfinaholic",
           "markofrom",
+          "miss_patcy",
           "udo_420"
         ],
         "distinct_axes": []
@@ -673,17 +675,17 @@
           ]
         },
         "breadth": {
-          "score": 0.20583333333333334,
+          "score": 0.26416666666666666,
           "basis": [
-            "distinct_urls:5",
+            "distinct_urls:7",
             "distinct_axes:0",
             "origin_types:1"
           ]
         },
         "corroboration": {
-          "score": 0.6291666666666668,
+          "score": 0.7375,
           "basis": [
-            "referring_accounts:5",
+            "referring_accounts:7",
             "origin_types:1"
           ]
         },
@@ -708,15 +710,15 @@
           ]
         },
         "overall": {
-          "score": 0.4133854166666667,
-          "confidence": 0.32485,
+          "score": 0.43630208333333337,
+          "confidence": 0.43685,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5",
+            "distinct_urls:7",
             "distinct_axes:0",
             "origin_types:1",
-            "referring_accounts:5",
+            "referring_accounts:7",
             "origin_types:1",
             "track_record_unavailable"
           ]
