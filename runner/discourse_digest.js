@@ -22,6 +22,8 @@ const INTERACTIONS = path.join(ROOT, "state", "interactions.json");
 const ANCHORS      = path.join(ROOT, "state", "discourse_anchors.jsonl");
 const OUT          = path.join(ROOT, "state", "discourse_digest.txt");
 
+const { createSelfEchoDetector } = require("./lib/self_echo.js");
+
 const args  = process.argv.slice(2);
 const limitArg = args.indexOf("--limit");
 const LIMIT = limitArg !== -1 ? parseInt(args[limitArg + 1], 10) || 5 : 5;
@@ -74,6 +76,7 @@ if (!replies.length) {
 }
 
 const substantive = getSubstantiveIds();
+const selfEchoDetector = createSelfEchoDetector();
 const ts          = new Date().toISOString().replace("T", " ").slice(0, 16);
 const HR          = "─".repeat(70);
 
@@ -84,18 +87,23 @@ const lines = [
 ];
 
 for (const r of replies) {
-  const theirText  = (r.their_text || "").replace(/\n/g, " ").trim();
+  const rawTheirText = (r.their_text || "").replace(/\n/g, " ").trim();
+  const theirText  = rawTheirText;
   const ourReply   = (r.our_reply  || "").replace(/\n/g, " ").trim();
   const when       = (r.replied_at || "").slice(0, 10);
   const anchor     = substantive.get(r.id);
-  const flagLine   = anchor
-    ? `  ★ SUBSTANTIVE CHALLENGE: ${anchor.summary}`
-    : null;
+  const selfEcho   = selfEchoDetector.findMatch(rawTheirText);
+  const flagLine   = selfEcho
+    ? `  ! SELF-ECHO: likely mirrors your own ${selfEcho.source_type} (${selfEcho.reference}). Do not count it as independent evidence.`
+    : anchor
+      ? `  ★ SUBSTANTIVE CHALLENGE: ${anchor.summary}`
+      : null;
 
   lines.push(`  @${r.from || "unknown"} [${when}]:`);
   lines.push(`  They: "${theirText.slice(0, 200)}"`);
   lines.push(`  You:  "${ourReply.slice(0, 200)}"`);
   if (flagLine) lines.push(flagLine);
+  if (selfEcho) lines.push(`  ! Matched excerpt: "${selfEcho.excerpt}"`);
   lines.push(``);
 }
 

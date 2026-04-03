@@ -14,12 +14,99 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const config = require('./config');
+const { extractKeywords } = require('../../scraper/analytics');
 
 const PROJECT_ROOT = config.PROJECT_ROOT;
 const RUNNER_LOG = config.RUNNER_LOG_PATH;
 
 function log(msg) {
   console.log(`[run] ${msg}`);
+}
+
+function readJson(filePath) {
+  try {
+    return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+  } catch {
+    return null;
+  }
+}
+
+function loadTopicSummaryRecallQuery() {
+  try {
+    const content = fs.readFileSync(config.TOPIC_SUMMARY_PATH, 'utf-8');
+    return content
+      .split('\n')
+      .filter(line => /^\d+x\s/.test(line))
+      .map(line => line.replace(/^\d+x\s*/, ''))
+      .slice(0, 3)
+      .join(' ')
+      .trim();
+  } catch {
+    return '';
+  }
+}
+
+function parseSprintContext() {
+  try {
+    const raw = fs.readFileSync(config.SPRINT_CONTEXT_PATH, 'utf-8');
+    if (!raw.trim() || raw.includes('(no active plan)') || raw.includes('(no active sprint)')) {
+      return null;
+    }
+
+    const lines = raw.split('\n');
+    const planTitle = lines
+      .map(line => line.match(/^PLAN:\s+(.+?)\s+\(active\)$/))
+      .find(Boolean)?.[1]?.trim() || '';
+
+    const tasks = lines
+      .map(line => line.match(/^\s*([▸○])\s*\[(\w+)\]\s+(.+)$/))
+      .filter(Boolean)
+      .map(match => ({
+        marker: match[1],
+        type: match[2].trim().toLowerCase(),
+        title: match[3].replace(/\[carried\]\s*/g, '').trim(),
+      }));
+
+    return { planTitle, tasks };
+  } catch {
+    return null;
+  }
+}
+
+function buildSprintBriefRecallQuery() {
+  const sprint = parseSprintContext();
+  if (!sprint?.planTitle || !Array.isArray(sprint.tasks) || sprint.tasks.length === 0) return '';
+
+  const explicitTask = sprint.tasks.find(task => task.marker === '▸') || null;
+  const activeTask = explicitTask || sprint.tasks.find(task => ['write', 'compile'].includes(task.type)) || null;
+  if (!activeTask || !['write', 'compile'].includes(activeTask.type)) return '';
+
+  const briefsDoc = readJson(config.RESEARCH_BRIEFS_PATH);
+  const briefs = Array.isArray(briefsDoc?.briefs) ? briefsDoc.briefs : [];
+  if (!briefs.length) return '';
+
+  const brief = briefs.find(entry => entry.title === sprint.planTitle);
+  if (!brief) return '';
+
+  const chunks = [
+    brief.title,
+    brief.brief,
+    brief.compulsion,
+    ...(Array.isArray(brief.belief_axes) ? brief.belief_axes : []),
+    ...(Array.isArray(brief.research?.open_questions) ? brief.research.open_questions : []),
+  ].filter(Boolean);
+
+  const query = extractKeywords(chunks.join('\n'), 8)
+    .slice(0, 6)
+    .join(' ')
+    .trim();
+
+  if (query) {
+    const basis = explicitTask ? 'explicit in-progress task' : 'top pending write/compile task';
+    log(`sprint-aware recall override: ${activeTask.type} task "${activeTask.title}" (${basis}) → research_briefs`);
+  }
+
+  return query;
 }
 
 /** Run a node script, logging to runner.log. Failures are swallowed (|| true). */
@@ -55,17 +142,7 @@ function preBrowse(cycle) {
   runScript(path.join(PROJECT_ROOT, 'scraper/query.js'), { args: '--hours 4', stdout: 'devnull' });
 
   // ── 3. recall.js (keyword-driven, from topic_summary top 3) ───────────
-  let recallQuery = '';
-  try {
-    const content = fs.readFileSync(config.TOPIC_SUMMARY_PATH, 'utf-8');
-    recallQuery = content
-      .split('\n')
-      .filter(line => /^\d+x\s/.test(line))
-      .map(line => line.replace(/^\d+x\s*/, ''))
-      .slice(0, 3)
-      .join(' ')
-      .trim();
-  } catch {}
+  let recallQuery = buildSprintBriefRecallQuery() || loadTopicSummaryRecallQuery();
 
   if (recallQuery) {
     // Sanitise recallQuery — remove shell metacharacters to prevent injection
@@ -123,4 +200,9 @@ function preBrowse(cycle) {
   });
 }
 
-module.exports = { preBrowse };
+module.exports = {
+  preBrowse,
+  buildSprintBriefRecallQuery,
+  loadTopicSummaryRecallQuery,
+  parseSprintContext,
+};

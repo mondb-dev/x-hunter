@@ -48,6 +48,7 @@ const DIVERSITY  = path.join(ROOT, "state", "diversity_state.json");
 
 const { generate: llmGenerate } = require("./llm.js");
 const { parseOntologyDelta } = require("./lib/ontology_delta.js");
+const { OWN_HANDLES, createSelfEchoDetector } = require("./lib/self_echo.js");
 
 // ── Diversity constraint (AGENTS.md §7) ───────────────────────────────────────
 // Per 24h rolling window per axis:
@@ -363,6 +364,7 @@ let evidenceAdded    = 0;
 let evidenceRejected = 0;
 let evidencePaused   = 0;
 let evidenceDampened = 0;
+let evidenceSelfEcho = 0;
 let axesAdded        = 0;
 let axesCapped       = 0;
 const axesUpdated    = new Set(); // tracks which axes got new evidence this run
@@ -372,6 +374,7 @@ const driftState     = loadDriftCapState(onto.axes);
 const axisGuardState = loadAxisGuardState();
 const diversityState = loadDiversityState();
 seedDiversityFromLogs(diversityState, onto.axes);
+const selfEchoDetector = createSelfEchoDetector();
 
 // ── Apply evidence entries ────────────────────────────────────────────────────
 
@@ -389,6 +392,26 @@ for (const entry of (delta.evidence || [])) {
   const axis = axisById[axis_id];
   if (!axis) {
     console.log(`[apply_delta] unknown axis_id "${axis_id}" — skipping evidence entry`);
+    continue;
+  }
+
+  const sourceUser = usernameFromUrl(source);
+  if (sourceUser && OWN_HANDLES.has(sourceUser)) {
+    console.log(
+      `[apply_delta] self-echo rejected: source ${source} is Sebastian's own post`
+    );
+    evidenceSelfEcho++;
+    continue;
+  }
+
+  const selfEchoMatch = selfEchoDetector.findMatch(content);
+  if (selfEchoMatch) {
+    console.log(
+      `[apply_delta] self-echo rejected on ${axis_id}: content mirrors ` +
+      `${selfEchoMatch.source_type} ${selfEchoMatch.reference} ` +
+      `(score=${selfEchoMatch.score.toFixed(3)})`
+    );
+    evidenceSelfEcho++;
     continue;
   }
 
@@ -430,7 +453,6 @@ for (const entry of (delta.evidence || [])) {
   }
 
   // Compute trust weight from source URL account
-  const sourceUser = usernameFromUrl(source);
   const rawWeight  = trustWeight(sourceUser, trustMap);
   const weight     = parseFloat((rawWeight * divCheck.weight).toFixed(3));
 
@@ -580,12 +602,13 @@ fs.writeFileSync(ONTO, JSON.stringify(onto, null, 2), "utf-8");
 fs.unlinkSync(DELTA);
 
 const rejMsg    = evidenceRejected ? `, ${evidenceRejected} rejected by stance check` : "";
+const echoMsg   = evidenceSelfEcho ? `, ${evidenceSelfEcho} rejected as self-echo` : "";
 const cappedMsg = axesCapped ? `, ${axesCapped} drift-capped` : "";
 const reapMsg   = reaped.length ? `, ${reaped.length} reaped` : "";
 const pausedMsg = evidencePaused ? `, ${evidencePaused} paused by diversity` : "";
 const dampenMsg = evidenceDampened ? `, ${evidenceDampened} dampened by diversity` : "";
 console.log(
-  `[apply_delta] applied: ${evidenceAdded} evidence entry(ies)${rejMsg}${pausedMsg}${dampenMsg}${cappedMsg}${reapMsg}, ${axesAdded} new axis(es)` +
+  `[apply_delta] applied: ${evidenceAdded} evidence entry(ies)${rejMsg}${echoMsg}${pausedMsg}${dampenMsg}${cappedMsg}${reapMsg}, ${axesAdded} new axis(es)` +
   ` — total axes: ${onto.axes.length} (axes created today: ${axisGuardState.count}/${MAX_AXES_PER_DAY})`
 );
 

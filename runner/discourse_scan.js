@@ -28,6 +28,7 @@ const ANCHORS_OUT  = path.join(ROOT, "state", "discourse_anchors.jsonl");
 const SCAN_STATE   = path.join(ROOT, "state", "discourse_scan_state.json");
 
 const { generate: llmGenerate } = require("./llm.js");
+const { createSelfEchoDetector } = require("./lib/self_echo.js");
 
 const MIN_TEXT_LEN  = 60;   // shorter messages are rarely substantive arguments
 const MAX_SCAN_IDS  = 300;  // rolling buffer cap for scanned_ids
@@ -135,6 +136,7 @@ or
 
   let scanned = 0;
   let anchors  = 0;
+  const selfEchoDetector = createSelfEchoDetector();
 
   for (const reply of toScan) {
     const theirText = reply.their_text || "";
@@ -153,6 +155,16 @@ or
     scanned++;
 
     if (result.is_substantive) {
+      const selfEchoMatch = selfEchoDetector.findMatch(theirText);
+      if (selfEchoMatch) {
+        console.log(
+          `[discourse_scan] self-echo ignored: @${reply.from || "unknown"} mirrors ` +
+          `${selfEchoMatch.source_type} ${selfEchoMatch.reference} ` +
+          `(score=${selfEchoMatch.score.toFixed(3)})`
+        );
+        continue;
+      }
+
       const anchor = {
         ts:         reply.replied_at || new Date().toISOString(),
         post_id:    reply.id,

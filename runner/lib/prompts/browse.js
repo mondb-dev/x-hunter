@@ -151,6 +151,9 @@ function buildNormalTasks(ctx) {
     '   no line breaks and no double quotes inside the text. Use apostrophes if needed.\n' +
     '   Omit "evidence" or "new_axes" if nothing to add. Skip writing the file entirely\n' +
     '   if nothing is axis-worthy this cycle.\n' +
+    '   SELF-ECHO RULE: if a post is quoting, paraphrasing, or recycling your own prior\n' +
+    '   tweets, replies, articles, or journals, treat it as resonance or feedback only.\n' +
+    '   It is NOT independent evidence and must not reinforce an axis.\n' +
     '\n' +
     '6. Review COMMENT CANDIDATES above. Comment on AT MOST ONE if your memory gives\n' +
     '   you something genuinely specific to say \u2014 a direct observation, contradiction,\n' +

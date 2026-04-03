@@ -128,6 +128,8 @@ module.exports = function buildTweetPrompt(ctx) {
     '   STRICT JSON ONLY: no comments, no trailing commas, no markdown fences.\n' +
     '   In evidence.content, write a one-sentence paraphrase with no line breaks and no\n' +
     '   double quotes inside the text. Use apostrophes if you need to quote words.\n' +
+    '   SELF-ECHO RULE: if a source is just quoting or paraphrasing your own prior text,\n' +
+    '   it is not independent support. Do not add it as evidence.\n' +
     '   Omit keys you do not need. Skip writing the file if nothing axis-worthy.\n' +
     '7. Done. The runner clears browse_notes.md after this cycle.\n';
 };

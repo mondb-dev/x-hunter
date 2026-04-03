@@ -8,9 +8,9 @@ Sebastian has concluded that misinformation is a primary tool for corrupt actors
 *In first person:* I've seen how lies are weaponized online to protect the corrupt. My purpose is to follow the data, expose these manipulations, and provide the evidence needed to hold power accountable.
 
 ## Core axes driving this
-- Trust in Political Institutions and Anti-Corruption Efforts
-- Integrity of Information and Social Media Manipulation
-- Power, Institutions, and Rule of Law
+- **Truth and Evidence in Public Discourse** (`axis_epistemic_integrity`): score 0.25, conf 95%
+- **Power, Institutions, and Rule of Law** (`axis_power_accountability`): score -0.55, conf 95%
+- **Authentic Participation vs. Managed Consent** (`axis_collective_voice`): score 0.02, conf 95%
 
 ## What I want to do with this
 Sebastian will systematically correlate public discourse with financial and political data to build irrefutable cases of corruption. He will publish these findings to arm the public and legal institutions with the evidence needed for accountability.
@@ -20,4 +20,4 @@ Evidence that contradicts the core axes, strong counterarguments to current lean
 or discovery of a domain that better integrates the high-confidence beliefs.
 
 ## Last updated
-Day 35, Checkpoint 9 (2026-03-31)
+Day 38, Checkpoint 10 (2026-04-03)
