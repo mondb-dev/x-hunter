@@ -15,6 +15,7 @@ const fs = require('fs');
 const path = require('path');
 const config = require('./config');
 const { triggerVercelDeploy } = require('./git');
+const { isXSuppressed, suppressionReason } = require('./x_control');
 
 const PROJECT_ROOT = config.PROJECT_ROOT;
 const RUNNER_LOG = config.RUNNER_LOG_PATH;
@@ -183,6 +184,9 @@ function postBrowse({ cycle, today, hour }) {
   // ── 8. Retry pending checkpoint tweet ─────────────────────────────────
   const checkpointResult = path.join(config.STATE_DIR, 'checkpoint_result.txt');
   if (fs.existsSync(checkpointResult)) {
+    if (isXSuppressed('tweet')) {
+      log(`checkpoint tweet suppressed (${suppressionReason('tweet')})`);
+    } else {
     try {
       const lines = fs.readFileSync(checkpointResult, 'utf-8').split('\n');
       let cpUrl = (lines[0] || '').trim();
@@ -204,10 +208,15 @@ function postBrowse({ cycle, today, hour }) {
         fs.unlinkSync(checkpointResult);
       } catch {}
     } catch {}
+    }
   }
 
   // ── 9. reply.js (process pending replies) ─────────────────────────────
-  runScriptVerbose(path.join(PROJECT_ROOT, 'scraper/reply.js'));
+  if (isXSuppressed('reply')) {
+    log(`reply processing suppressed (${suppressionReason('reply')})`);
+  } else {
+    runScriptVerbose(path.join(PROJECT_ROOT, 'scraper/reply.js'));
+  }
 }
 
 module.exports = { postBrowse };

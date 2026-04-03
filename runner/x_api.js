@@ -21,9 +21,29 @@
 "use strict";
 
 const path = require("path");
+const fs = require("fs");
 const crypto = require("crypto");
 const https  = require("https");
-try { require("dotenv").config({ path: path.join(__dirname, "..", ".env") }); } catch {}
+
+function loadEnvFileOnce() {
+  const envPath = path.join(__dirname, "..", ".env");
+  let loaded = false;
+
+  try {
+    require("dotenv").config({ path: envPath });
+    loaded = true;
+  } catch {}
+
+  if (loaded || !fs.existsSync(envPath)) return;
+
+  for (const line of fs.readFileSync(envPath, "utf-8").split("\n")) {
+    const m = line.match(/^([A-Z_][A-Z0-9_]*)=(.*)$/);
+    if (!m || process.env[m[1]]) continue;
+    process.env[m[1]] = m[2].replace(/^["']|["']$/g, "");
+  }
+}
+
+loadEnvFileOnce();
 
 // ── Config ───────────────────────────────────────────────────────────────────
 

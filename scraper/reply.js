@@ -21,6 +21,7 @@
 
 const { connectBrowser, getXPage } = require("../runner/cdp");
 const { replyToTweet } = require("../runner/x_api");
+const { isXSuppressed, suppressionReason } = require("../runner/lib/x_control");
 const fs   = require("fs");
 const path = require("path");
 
@@ -42,6 +43,11 @@ const MIN_GAP_MS   = 5 * 60 * 1000;  // 5 minutes between replies
 const MAX_PER_DAY  = 10;
 const MAX_AGE_MS   = 48 * 60 * 60 * 1000;  // ignore mentions older than 48h
 const OWN_USERNAME = "sebastianhunts";  // skip self-mentions
+
+if (isXSuppressed("reply")) {
+  console.log(`[reply] X reply suppression active — skipping (${suppressionReason("reply")})`);
+  process.exit(0);
+}
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 function loadJson(filePath, fallback) {

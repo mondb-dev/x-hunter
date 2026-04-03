@@ -21,6 +21,7 @@ const fs = require('fs');
 const path = require('path');
 const config = require('./config');
 const { clearFile, isConfirmedStatusUrl } = require('../post_result');
+const { isXSuppressed, suppressionReason } = require('./x_control');
 
 // ── Shared helpers ───────────────────────────────────────────────────────────
 
@@ -134,6 +135,19 @@ function sleepSec(n) {
  * @returns {{ attempted: boolean, posted: boolean, rejected: boolean, skipped: boolean, suppressed: boolean, suppressionReason: string|null, tweetUrl: string|null }}
  */
 function postRegularTweet({ today, hour, cycle }) {
+  if (isXSuppressed('tweet')) {
+    log('X tweet suppression active — skipping post');
+    return {
+      attempted: false,
+      posted: false,
+      rejected: false,
+      skipped: true,
+      suppressed: true,
+      suppressionReason: suppressionReason('tweet'),
+      tweetUrl: null,
+    };
+  }
+
   // ── 1. Journal URL fix ──────────────────────────────────────────────────
   if (exists(DRAFT_PATH)) {
     const lines = readLines(DRAFT_PATH);
@@ -232,6 +246,17 @@ function postRegularTweet({ today, hour, cycle }) {
 function postQuoteTweet({ cycle }) {
   const quoteDraftPath = config.QUOTE_DRAFT_PATH;
 
+  if (isXSuppressed('quote')) {
+    log('X quote suppression active — skipping post');
+    return {
+      attempted: false,
+      posted: false,
+      suppressed: true,
+      suppressionReason: suppressionReason('quote'),
+      quoteUrl: null,
+    };
+  }
+
   // ── 1. Voice filter (--quote) ──────────────────────────────────────────
   if (exists(quoteDraftPath)) {
     const qvfOut = runNodeSafe('voice_filter.js', '--quote');
@@ -296,6 +321,11 @@ function postQuoteTweet({ cycle }) {
  * @returns {{ posted: boolean }}
  */
 function postLinkTweet({ resultFile, maxTitleChars = 255 }) {
+  if (isXSuppressed('tweet')) {
+    log(`X tweet suppression active — keeping ${resultFile} for later`);
+    return { posted: false };
+  }
+
   const resultPath = path.join(config.STATE_DIR, resultFile);
   if (!exists(resultPath)) return { posted: false };
 
@@ -356,6 +386,11 @@ function postLinkTweet({ resultFile, maxTitleChars = 255 }) {
  * @returns {{ posted: boolean }}
  */
 function postSimpleTweet({ resultFile, sourceFile, maxTitleChars = 240, gap = 0 }) {
+  if (isXSuppressed('tweet')) {
+    log('X tweet suppression active — skipping simple tweet');
+    return { posted: false };
+  }
+
   // ── Result file mode (checkpoint) ──────────────────────────────────────
   if (resultFile) {
     const resultPath = path.join(config.STATE_DIR, resultFile);
@@ -432,6 +467,11 @@ function postSimpleTweet({ resultFile, sourceFile, maxTitleChars = 240, gap = 0 
  * @returns {{ posted: boolean }}
  */
 function postSignalTweet({ today, hour }) {
+  if (isXSuppressed('signal')) {
+    log('X signal suppression active — keeping signal draft for later');
+    return { posted: false };
+  }
+
   const signalDraftPath = config.SIGNAL_DRAFT_PATH;
   if (!exists(signalDraftPath)) return { posted: false };
 

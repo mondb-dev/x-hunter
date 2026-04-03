@@ -33,6 +33,7 @@ const { postRegularTweet, postQuoteTweet } = require('./lib/post');
 const { commitAndPush, triggerVercelDeploy } = require('./lib/git');
 const { runDaily } = require('./lib/daily');
 const notify = require('./lib/notify');
+const { isXSuppressed, suppressionReason } = require('./lib/x_control');
 
 const loadContext = require('./lib/prompts/context');
 const buildBrowsePrompt = require('./lib/prompts/browse');
@@ -421,6 +422,18 @@ function runOneCycle() {
     } else {
       cycleType = 'BROWSE';
     }
+  }
+
+  if (cycleType === 'TWEET' && isXSuppressed('tweet')) {
+    log(`X tweet suppression active — running BROWSE instead of TWEET`);
+    cycleType = 'BROWSE';
+    metrics.postSuppressed = true;
+    metrics.postSuppressionReason = suppressionReason('tweet');
+  } else if (cycleType === 'QUOTE' && isXSuppressed('quote')) {
+    log(`X quote suppression active — running BROWSE instead of QUOTE`);
+    cycleType = 'BROWSE';
+    metrics.postSuppressed = true;
+    metrics.postSuppressionReason = suppressionReason('quote');
   }
 
   // Suppress TWEET and QUOTE outside active hours → downgrade to BROWSE
