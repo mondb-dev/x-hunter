@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-03T05:01:42.258Z",
+  "generated_at": "2026-04-03T07:31:30.907Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-03T05:01:45.639Z",
+  "profiled_at": "2026-04-03T07:31:33.978Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-03T03:45:49.191Z",
+      "last_seen_at": "2026-04-03T04:03:18.000Z",
       "discovery": {
-        "distinct_urls": 223,
+        "distinct_urls": 224,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,7 +384,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 204,
+          "feed_buffer": 205,
           "feed_buffer_reply": 30
         },
         "distinct_referring_accounts": 75,
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:223",
+            "distinct_urls:224",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -463,7 +463,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:223",
+            "distinct_urls:224",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:75",
@@ -1115,6 +1115,130 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "thedispatch.com",
+      "entity": "Thedispatch",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-03T05:35:49.768Z",
+      "last_seen_at": "2026-04-03T05:35:49.768Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://thedispatch.com/article/slavery-christianity-judaism/?twclid=224n5l3gu5l6wy53cctpntxjmr"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "tomerpersico"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.58,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:20",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.36786458333333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T06:31:21.937Z",
+        "homepage_url": "https://thedispatch.com/",
+        "example_url": "https://thedispatch.com/article/slavery-christianity-judaism/?twclid=224n5l3gu5l6wy53cctpntxjmr",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://thedispatch.com/",
+        "example_final_url": "https://thedispatch.com/article/slavery-christianity-judaism/?twclid=224n5l3gu5l6wy53cctpntxjmr",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 20,
           "opinion_marker": false
         }
       }
@@ -3014,20 +3138,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.1,
           "confidence": 0.55,
@@ -3040,6 +3150,20 @@
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -3136,20 +3260,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.1,
           "confidence": 0.55,
@@ -3162,6 +3272,20 @@
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -3258,20 +3382,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.52,
           "confidence": 0.65,
@@ -3284,6 +3394,20 @@
             "corrections:false",
             "outbound_links:23",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -3380,20 +3504,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.33,
           "confidence": 0.65,
@@ -3406,6 +3516,20 @@
             "corrections:false",
             "outbound_links:7",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -3501,6 +3625,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.24,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:6",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.34346354166666665,
           "confidence": 0.07772499999999999,
@@ -3514,6 +3652,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T05:31:20.099Z",
+        "homepage_url": "https://iranintl.com/",
+        "example_url": "https://www.iranintl.com/en/202603269573",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.iranintl.com/",
+        "example_final_url": "https://www.iranintl.com/en/202603269573",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 10,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 6,
+          "opinion_marker": false
         }
       }
     },
@@ -3576,6 +3745,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.039999999999999994,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:2",
+            "opinion_marker:true"
+          ]
+        },
         "overall": {
           "score": 0.3370833333333333,
           "confidence": 0.0491,
@@ -3589,6 +3772,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T05:31:20.643Z",
+        "homepage_url": "https://org.in/",
+        "example_url": "https://downtoearth.org.in/governance/as-told-to-parliament-march-11-2026-country-making-efforts-to-strengthen-domestic-rare-earth-",
+        "homepage_status": null,
+        "example_status": 404,
+        "homepage_final_url": "https://org.in/",
+        "example_final_url": "https://www.downtoearth.org.in/governance/as-told-to-parliament-march-11-2026-country-making-efforts-to-strengthen-domestic-rare-earth-",
+        "homepage_content_type": "",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": true
         }
       }
     },
@@ -3651,6 +3865,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.72,
+          "confidence": 0.85,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:26",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3370833333333333,
           "confidence": 0.0491,
@@ -3664,6 +3892,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T05:31:22.587Z",
+        "homepage_url": "https://aje.news/",
+        "example_url": "http://aje.news/hp81ag",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://login.bl.ink/login?state=hKFo2SBoeDFpdE54UU5wSFphVmd0SHg2T19KLUpjTTJJcll5WKFupWxvZ2luo3RpZNkgMVpnV1lCXzNkdW9GaUZpWUlfYUtncnFVbnJkeXA2azGjY2lk2SBURWV3Rm1nOVI4Vjl2TDdYakhYOVhZM0x0eDRJdVZaMA&client=TEewFmg9R8V9vL7XjHX9XY3Ltx4IuVZ0&protocol=oauth2&scope=openid%20profile%20name%20email%20email_verified&audience=https%3A%2F%2Faj%2Fapi%2Fv3%2F&response_mode=query&response_type=code&redirect_uri=https%3A%2F%2Faj.bl.ink%2Fauthenticated&host=aj.bl.ink&reset_password_link=aj.bl.ink%2Freset_password&show_reset_password=false&logo_uri=https%3A%2F%2Fblink-logos.s3.amazonaws.com%2Faj.bl.ink.png&nonce=db45a5d4d4cb64ef52249860cfde7cab",
+        "example_final_url": "https://www.aljazeera.com/news/liveblog/2026/3/22/iran-war-live-trump-threatens-attacks-on-power-plants-over-hormuz-strait?update=4424917",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 19,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 26,
+          "opinion_marker": false
         }
       }
     },
@@ -3726,6 +3985,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3370833333333333,
           "confidence": 0.0491,
@@ -3739,6 +4012,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T05:31:22.948Z",
+        "homepage_url": "https://morningstar.com/",
+        "example_url": "https://www.morningstar.com/news/marketwatch/20260313199/the-iran-war-is-already-the-biggest-threat-to-global-shipping-and-supply-chains-since-covid",
+        "homepage_status": 202,
+        "example_status": 202,
+        "homepage_final_url": "https://www.morningstar.com/",
+        "example_final_url": "https://www.morningstar.com/news/marketwatch/20260313199/the-iran-war-is-already-the-biggest-threat-to-global-shipping-and-supply-chains-since-covid",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -3801,6 +4105,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.72,
+          "confidence": 0.85,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:46",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3370833333333333,
           "confidence": 0.0491,
@@ -3814,6 +4132,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T06:31:22.386Z",
+        "homepage_url": "https://atlanticcouncil.org/",
+        "example_url": "https://www.atlanticcouncil.org/dispatches/ten-lessons-from-the-first-month-of-the-iran-war/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.atlanticcouncil.org/",
+        "example_final_url": "https://www.atlanticcouncil.org/dispatches/ten-lessons-from-the-first-month-of-the-iran-war/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 8,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 46,
+          "opinion_marker": false
         }
       }
     },
@@ -3876,6 +4225,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.36,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:8",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3370833333333333,
           "confidence": 0.0491,
@@ -3889,6 +4252,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T06:31:24.397Z",
+        "homepage_url": "https://argusmedia.com/",
+        "example_url": "https://www.argusmedia.com/en/news-and-insights/latest-market-news/2807532-iran-attacks-us-vessel-off-oman-coast-salalah-port-hit",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.argusmedia.com/en",
+        "example_final_url": "https://www.argusmedia.com/en/news-and-insights/latest-market-news/2807532-iran-attacks-us-vessel-off-oman-coast-salalah-port-hit",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 8,
+          "opinion_marker": false
         }
       }
     },
@@ -3951,6 +4345,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.54,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:21",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3370833333333333,
           "confidence": 0.0491,
@@ -3964,6 +4372,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T06:31:28.007Z",
+        "homepage_url": "https://pbs.org/",
+        "example_url": "https://www.pbs.org/newshour/nation/iranian-attack-on-saudi-base-injures-u-s-troops-as-more-american-forces-arrive-in-the-middle-east",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.pbs.org/",
+        "example_final_url": "https://www.pbs.org/newshour/nation/iranian-attack-on-saudi-base-injures-u-s-troops-as-more-american-forces-arrive-in-the-middle-east",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 13,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 21,
+          "opinion_marker": false
         }
       }
     },
@@ -4039,6 +4478,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0.66,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:27",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T07:31:31.469Z",
+        "homepage_url": "https://acleddata.com/",
+        "example_url": "https://acleddata.com/update/middle-east-special-issue-march-2026",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://acleddata.com/",
+        "example_final_url": "https://acleddata.com/update/middle-east-special-issue-march-2026",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 27,
+          "opinion_marker": false
         }
       }
     },
@@ -4114,6 +4598,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T07:31:31.667Z",
+        "homepage_url": "https://timesofisrael.com/",
+        "example_url": "https://www.timesofisrael.com/x-cracks-down-on-ai-generated-war-footage-as-iran-misinformation-runs-rampant/",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://www.timesofisrael.com/",
+        "example_final_url": "https://www.timesofisrael.com/x-cracks-down-on-ai-generated-war-footage-as-iran-misinformation-runs-rampant/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -4189,6 +4718,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0.62,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:8",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T07:31:33.434Z",
+        "homepage_url": "https://isdglobal.org/",
+        "example_url": "https://www.isdglobal.org/digital-dispatch/misleading-and-manipulated-content-goes-viral-on-x-in-middle-east-conflict/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.isdglobal.org/",
+        "example_final_url": "https://www.isdglobal.org/digital-dispatch/misleading-and-manipulated-content-goes-viral-on-x-in-middle-east-conflict/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 8,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 8,
+          "opinion_marker": false
         }
       }
     },
@@ -4264,6 +4838,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0.28,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T07:31:33.978Z",
+        "homepage_url": "https://scmp.com/",
+        "example_url": "https://www.scmp.com/topics/israel-iran-conflict",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.scmp.com/",
+        "example_final_url": "https://www.scmp.com/topics/israel-iran-conflict",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": true
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
