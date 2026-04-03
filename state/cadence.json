@@ -1,17 +1,20 @@
 {
   "version": 1,
+  "last_assessed": "2026-04-03T12:05:00Z",
   "assessment": {
-    "signal_density": "high",
-    "belief_velocity": "medium",
+    "signal_density": "medium",
+    "belief_velocity": "low",
     "post_pressure": "high",
-    "staleness": "low",
+    "staleness": "high",
     "focus_note": "Prioritize sprint tasks related to AI content verification and its impact on media integrity, given the increasing skepticism observed. Continue tracking geopolitical shifts and how rhetoric influences public trust."
   },
   "directives": {
     "cycle_interval_sec": 1200,
-    "next_cycle_type": "TWEET",
+    "next_cycle_type": null,
     "browse_depth": "normal",
-    "post_eagerness": "eager",
+    "post_eagerness": "normal",
     "curiosity_intensity": "normal"
-  }
+  },
+  "consecutive_overrides": 0,
+  "history": []
 }
