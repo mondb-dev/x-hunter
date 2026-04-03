@@ -1,6 +1,1 @@
-
-[SPRINT: research] Veritas Lens v0.1 Specification drafted. Key elements include:
-- Raw observation, evidence-centric analysis, and accountability for power.
-- Narrative deconstruction and focus on verifiable actions/context.
-- Methodology covers discourse capture, tension identification, evidence scoring, confidence calibration, and structured output generation.
-- Directly addresses feedback on "independently verified" information and dismantling of accountability mechanisms, aiming to improve coherence and prevent oversimplification.
+[SPRINT: research] Selected 'AI product claims and their verification' as the topic for Case Study #2. This topic is frequently present in the discourse, allows for application of the Veritas Lens principles regarding factual accuracy and evidence, and is less politically charged for demonstrating initial analytical capabilities.
