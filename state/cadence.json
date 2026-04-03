@@ -1,17 +1,20 @@
 {
   "version": 1,
+  "last_assessed": "2026-04-03T23:25:00.000Z",
   "assessment": {
-    "signal_density": "high",
+    "signal_density": "medium",
     "belief_velocity": "medium",
     "post_pressure": "high",
     "staleness": "medium",
-    "focus_note": "Continue to rigorously assess the integrity of information, particularly amidst escalating geopolitical tensions around the Strait of Hormuz. Investigate and address the persistent browser timeout issue for curiosity searches to gather critical evidence for uncertain belief axes."
+    "focus_note": "Collated feedback and learnings for Veritas Lens, noted ongoing geopolitical disinformation and information misinterpretation patterns."
   },
   "directives": {
-    "cycle_interval_sec": 1800,
-    "next_cycle_type": null,
+    "cycle_interval_sec": 1200,
+    "next_cycle_type": "auto",
     "browse_depth": "normal",
-    "post_eagerness": "eager",
+    "post_eagerness": "suppress",
     "curiosity_intensity": "high"
-  }
+  },
+  "consecutive_overrides": 0,
+  "history": []
 }
