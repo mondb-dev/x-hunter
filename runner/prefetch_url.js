@@ -142,10 +142,21 @@ function classifySource(url) {
     const page = await getXPage(browser);
 
     console.log(`[prefetch] navigating to ${targetUrl}`);
-    await page.goto(targetUrl, { waitUntil: "domcontentloaded", timeout: TIMEOUT });
+    try {
+      await page.goto(targetUrl, { waitUntil: "domcontentloaded", timeout: TIMEOUT });
+    } catch (gotoErr) {
+      // X.com SPA replaces the main frame during navigation — puppeteer loses the
+      // original frame reference and throws "detached Frame". The navigation still
+      // completes; ignore this specific error and continue.
+      if (!gotoErr.message.includes('detached Frame') && !gotoErr.message.includes('detached frame')) {
+        throw gotoErr;
+      }
+    }
     await sleep(2_500);
 
-    if (isLoginRedirectUrl(page.url())) {
+    let currentUrl = "";
+    try { currentUrl = page.url(); } catch {}
+    if (isLoginRedirectUrl(currentUrl)) {
       console.log("[prefetch] X login redirect — switching to fallback source");
 
       let fallbackUrl;
@@ -166,9 +177,9 @@ function classifySource(url) {
       writeSource(source, page.url());
       console.log(`[prefetch] fallback ready — source: ${source} at ${page.url()}`);
     } else {
-      const source = classifySource(page.url());
-      writeSource(source, page.url());
-      console.log(`[prefetch] done — source: ${source} at ${page.url()}`);
+      const source = classifySource(currentUrl || targetUrl);
+      writeSource(source, currentUrl || targetUrl);
+      console.log(`[prefetch] done — source: ${source} at ${currentUrl || targetUrl}`);
     }
   } catch (err) {
     console.log(`[prefetch] navigation error: ${err.message}`);
