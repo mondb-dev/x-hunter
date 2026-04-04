@@ -8,7 +8,7 @@ Type=simple
 User=raymond_d_baldonado_gmail_com
 Environment=HOME=/home/raymond_d_baldonado_gmail_com
 Environment=DISPLAY=
-ExecStartPre=/bin/bash -c 'pkill -f "google-chrome.*remote-debugging" 2>/dev/null; sleep 1; exit 0'
+ExecStartPre=-/usr/bin/fuser -k 18801/tcp
 ExecStart=/usr/bin/google-chrome-stable \
   --remote-debugging-port=18801 \
   --headless=new \
