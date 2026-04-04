@@ -1,0 +1,30 @@
+[Unit]
+Description=Sebastian Hunter Chrome Browser (CDP)
+After=network.target
+Before=sebastian-runner.service
+
+[Service]
+Type=simple
+User=raymond_d_baldonado_gmail_com
+Environment=HOME=/home/raymond_d_baldonado_gmail_com
+Environment=DISPLAY=
+ExecStartPre=/bin/bash -c 'pkill -f "remote-debugging-port=18801" 2>/dev/null || true'
+ExecStartPre=/bin/sleep 1
+ExecStart=/usr/bin/google-chrome-stable \
+  --remote-debugging-port=18801 \
+  --headless=new \
+  --no-first-run \
+  --no-default-browser-check \
+  --no-sandbox \
+  --disable-dev-shm-usage \
+  --disable-background-networking \
+  --disable-sync \
+  --disable-extensions \
+  --user-data-dir=/home/raymond_d_baldonado_gmail_com/.config/google-chrome/x-hunter
+Restart=always
+RestartSec=5
+StandardOutput=append:/home/raymond_d_baldonado_gmail_com/hunter/runner/browser.log
+StandardError=append:/home/raymond_d_baldonado_gmail_com/hunter/runner/browser.log
+
+[Install]
+WantedBy=multi-user.target

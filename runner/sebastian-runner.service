@@ -1,0 +1,20 @@
+[Unit]
+Description=Sebastian D. Hunter Runner
+After=sebastian-browser.service network-online.target
+Wants=sebastian-browser.service
+
+[Service]
+Type=simple
+User=raymond_d_baldonado_gmail_com
+WorkingDirectory=/home/raymond_d_baldonado_gmail_com/hunter
+EnvironmentFile=/home/raymond_d_baldonado_gmail_com/hunter/.env
+Environment=HOME=/home/raymond_d_baldonado_gmail_com
+Environment=PATH=/home/raymond_d_baldonado_gmail_com/.local/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=/bin/bash /home/raymond_d_baldonado_gmail_com/hunter/runner/run.sh
+Restart=always
+RestartSec=30
+StandardOutput=append:/home/raymond_d_baldonado_gmail_com/hunter/runner/runner.log
+StandardError=append:/home/raymond_d_baldonado_gmail_com/hunter/runner/runner.log
+
+[Install]
+WantedBy=multi-user.target
