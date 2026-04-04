@@ -313,9 +313,21 @@ function loadContext(opts) {
   if (type === 'first_run') return ctx;
 
   if (type === 'browse') {
+    // Browse depth scales digest window and max URLs to navigate.
+    // Reads cadence.json directly (formatCadence() formats for display; we need the raw value).
+    let browseDepth = 'normal';
+    try {
+      const cad = JSON.parse(fs.readFileSync(
+        require('path').join(config.STATE_DIR, 'cadence.json'), 'utf-8'));
+      browseDepth = cad?.directives?.browse_depth || 'normal';
+    } catch {}
+    const digestTailLines = browseDepth === 'shallow' ? 80 : browseDepth === 'deep' ? 300 : 160;
+    ctx.maxNavUrls  = browseDepth === 'shallow' ? 0 : browseDepth === 'deep' ? 3 : 1;
+    ctx.browseDepth = browseDepth;
+
     ctx.browseNotes       = readState(config.BROWSE_NOTES_PATH, { tail: 80, fallback: '(empty)' });
     ctx.topicSummary      = readState(config.TOPIC_SUMMARY_PATH, { fallback: '(not yet generated)' });
-    ctx.digest            = readState(config.FEED_DIGEST_PATH, { tail: 160, fallback: '(not yet generated)' });
+    ctx.digest            = readState(config.FEED_DIGEST_PATH, { tail: digestTailLines, fallback: '(not yet generated)' });
     ctx.critique          = readState(config.CRITIQUE_PATH, { tail: 12, fallback: '' });
     ctx.curiosityDirective = readState(config.CURIOSITY_DIRECTIVE_PATH, { fallback: '' });
     ctx.commentCandidates = readState(config.COMMENT_CANDIDATES_PATH, { fallback: '' });
@@ -323,7 +335,7 @@ function loadContext(opts) {
     ctx.sprintContext     = readState(config.SPRINT_CONTEXT_PATH, { fallback: '(no active plan)' });
     ctx.readingBlock      = buildReadingBlock();
     ctx.prefetchSource    = readState(config.PREFETCH_SOURCE_PATH, { fallback: '' }).trim();
-      ctx.unresolvedClaims  = formatUnresolvedClaims();
+    ctx.unresolvedClaims  = formatUnresolvedClaims();
     ctx.currentAxes       = formatCurrentAxes();
     ctx.cadence            = formatCadence();
     ctx.captureStatus     = formatCaptureStatus();

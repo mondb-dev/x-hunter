@@ -65,7 +65,7 @@ function buildPreamble(ctx) {
         'Tag browse_notes entries with [HN].\n'
       : ctx.prefetchSource.startsWith('none') ?
         'Browser prefetch unavailable this cycle. X session may have expired.\n' +
-        'Use web_search tool for the curiosity topic if you need fresh information.\n'
+        'Rely on the feed digest above and use web_search for fresh information.\n'
       : 'X unavailable — browser is on an external source. Apply same observation principles.\n') +
       '\n'
     ) : '') +
@@ -95,12 +95,20 @@ function buildNormalTasks(ctx) {
     '   convictions. Treat that as normal browse work, not as a fallback mode.\n' +
     '   browser auth is unavailable instead of trying to force the UI.\n' +
     '1. CURIOSITY: If NO deep dive this cycle and the directive above has an ACTIVE SEARCH URL,\n' +
-    '   navigate to it now and read top 3-5 posts. Each cycle in the window searches a\n' +
-    '   different angle \u2014 check which SEARCH_URL_N is preloaded in your browser.\n' +
+    '   navigate to it and read top 3-5 posts. Each cycle in the window searches a different\n' +
+    '   angle \u2014 check which SEARCH_URL_N is preloaded in your browser.\n' +
+    '   WEB SEARCH: Always run web_search on the curiosity topic (1-2 targeted queries) to\n' +
+    '   find external coverage, primary sources, or scholarly context that X discourse lacks.\n' +
+    '   Use it to: verify claims circulating on X, find the original source of a trend, or\n' +
+    '   surface perspectives that do not appear in your feed. Tag findings [CURIOSITY: <id>].\n' +
     '   For ALL browse cycles while the directive is active: follow the AMBIENT FOCUS \u2014\n' +
     '   tag relevant browse_notes entries with [CURIOSITY: <axis_or_topic_id>].\n' +
     '2. Identify the 3-5 most interesting tensions or signals from TRENDING clusters\n' +
-    '   and <- novel singletons. You may navigate to at most 1 additional URL.\n' +
+    '   and <- novel singletons. You may navigate to at most ' + ctx.maxNavUrls + ' additional URL' + (ctx.maxNavUrls === 1 ? '' : 's') + '.\n' +
+    (ctx.maxNavUrls === 0 ? '   (shallow depth this cycle \u2014 rely on digest + web_search, skip additional URL navigation)\n' : '') +
+    '   WEB SEARCH: For the single most significant TRENDING story, run web_search to find\n' +
+    '   the primary source, original data, or authoritative external coverage. This grounds\n' +
+    '   your ontology updates in verifiable fact rather than X\'s second-hand discourse.\n' +
     '   SPRINT FOCUS: If you have in-progress sprint tasks (marked \u25b8 above), actively\n' +
     '   look for content that serves them. For "research" tasks, identify specific sources,\n' +
     '   accounts, or claims that could be curated. For "engage" tasks, note community\n' +
@@ -109,6 +117,8 @@ function buildNormalTasks(ctx) {
     '3. Append findings to state/browse_notes.md (append only -- do not overwrite).\n' +
     '4. CLAIM TRACKER: Review the UNRESOLVED CLAIMS list. If your browsing uncovered new\n' +
     '   evidence for any of them, or you found a new, significant, unverified claim, update the tracker.\n' +
+    '   WEB SEARCH: Before marking a claim "supported" or "refuted", run web_search to find\n' +
+    '   independent verification. Do not resolve a claim based solely on X posts.\n' +
     '   To do so, write state/claim_tracker_delta.json. DO NOT write state/claim_tracker.json directly.\n' +
     '   Delta format:\n' +
     '   {\n' +
