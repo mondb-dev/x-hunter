@@ -115,6 +115,9 @@ function buildNormalTasks(ctx) {
     '   reactions or questions you could respond to. Tag sprint-relevant findings in\n' +
     '   browse_notes with [SPRINT: task_id].\n' +
     '3. Append findings to state/browse_notes.md (append only -- do not overwrite).\n' +
+    '   VERIFICATION RULE: Do not write "unverified" or "unconfirmed" next to a claim\n' +
+    '   unless you searched for it (task 1, 2, or 4) and found nothing. If you have not\n' +
+    '   searched yet, note the claim neutrally and search before labeling it.\n' +
     '4. CLAIM TRACKER: Review the UNRESOLVED CLAIMS list. If your browsing uncovered new\n' +
     '   evidence for any of them, or you found a new, significant, unverified claim, update the tracker.\n' +
     '   WEB SEARCH: Before marking a claim "supported" or "refuted", run web_search to find\n' +
@@ -197,6 +200,11 @@ function buildNormalTasks(ctx) {
     '   - Only write the fields you want to change \u2014 omitted fields keep their previous values.\n' +
     '   - Max 3 consecutive next_cycle_type overrides before the system resets to auto.\n' +
     '8. JOURNAL: ' + ctx.journalTask + '\n' +
+    '   VERIFICATION RULE: Do not describe any claim as "unverified" or "unconfirmed"\n' +
+    '   unless you have already attempted web_search on it this cycle and found no\n' +
+    '   corroboration. If you have not searched: either search now, or state what you\n' +
+    '   observed on X without a verification label. "Unverified" is a conclusion, not\n' +
+    '   a default — it requires a real search attempt first.\n' +
     '9. TOOLS (optional): If you need to execute a registered tool, write state/tool_request.json.\n' +
     '   Single tool:\n' +
     '   { "tool": "<tool_name>", "args": { ... } }\n' +
