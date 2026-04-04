@@ -133,12 +133,14 @@ Create a detailed 4-week sprint plan. For each week, define:
 1. A clear weekly goal (what "done" looks like)
 2. 3-6 specific tasks with type and priority
 
-Task types:
-- "research" — gathering info, reading, analyzing discourse
+Task types (use the most specific type — do NOT default to "research"):
+- "research" — external information gathering ONLY: browsing X, searching sources, reading new posts
 - "write" — drafting content (article, thread, manifesto)
 - "publish" — posting to X, website, or Moltbook
 - "engage" — replying, quote-tweeting, community interaction
-- "reflect" — reviewing progress, adjusting approach
+- "reflect" — ANY internal synthesis task: collating past findings, reviewing existing notes/journals,
+  summarising accumulated data, reviewing progress, adjusting approach. Use "reflect" whenever the
+  task works with data already collected, not with new external sources.
 
 Priority: 1 (critical), 2 (important), 3 (nice-to-have)
 
@@ -199,6 +201,13 @@ ${recentDigest || "(empty)"}
 ## TASK
 Plan Week ${nextWeek}. Learn from what worked and what didn't.
 Adjust course if needed — the plan serves your compulsion, not the other way around.
+
+Task types (pick the most specific — do NOT default to "research"):
+- "research" — external only: browsing X, searching new sources
+- "write" — drafting content
+- "publish" — posting to X or website
+- "engage" — replying, quote-tweeting
+- "reflect" — internal synthesis: collating past notes, reviewing existing findings, summarising accumulated data, adjusting approach
 
 Respond in this exact JSON format:
 {

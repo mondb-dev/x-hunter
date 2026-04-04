@@ -141,7 +141,16 @@ const TOOL_EXECUTORS = {
     if (!url) return 'Error: url is required';
     log(`navigate → ${url}`);
     try {
-      await ctx.page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+      try {
+        await ctx.page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+      } catch (gotoErr) {
+        // X.com SPA replaces the main frame during navigation — puppeteer loses the
+        // original frame reference and throws "detached Frame". The navigation still
+        // completes; ignore this specific error and continue.
+        if (!gotoErr.message.includes('detached Frame') && !gotoErr.message.includes('detached frame')) {
+          throw gotoErr;
+        }
+      }
       // Wait a bit for dynamic content
       await new Promise(r => setTimeout(r, 2000));
       const text = await ctx.page.evaluate(() => {

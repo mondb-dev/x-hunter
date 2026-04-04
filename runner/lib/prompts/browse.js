@@ -216,7 +216,9 @@ function buildSprintTasks(ctx) {
     '   Work on it based on its type:\n' +
     '\n' +
     '   [research] task:\n' +
-    '     - Navigate to X search for the topic. Use 2-3 targeted search queries.\n' +
+    '     - Navigate to X search. Use 2-3 targeted queries about the PLAN TOPIC (the subject\n' +
+    '       matter of the sprint plan — e.g. key terms from the plan description or belief axes).\n' +
+    '       Do NOT search for the task title itself as a search query.\n' +
     '     - Read 5-10 posts from diverse accounts. Look for:\n' +
     '       * Specific factual claims (with or without evidence)\n' +
     '       * Contradictions between sources\n' +
@@ -248,6 +250,18 @@ function buildSprintTasks(ctx) {
     '     - If draft exists: review it, refine if needed, mark as ready.\n' +
     '     - If no draft: note in browse_notes that publish is blocked on write.\n' +
     '\n' +
+    '   [reflect] task — internal synthesis, NO external browsing needed:\n' +
+    '     - Use read_file to read state/browse_notes.md in full.\n' +
+    '     - Use list_files on journals/ then read_file on the 5 most recent journal files.\n' +
+    '     - Collect all entries tagged [SPRINT: research], [SPRINT: engage], or similar.\n' +
+    '     - Identify key themes, contradictions, gaps, and strongest findings.\n' +
+    '     - Write a structured collation to state/sprint_reflect.md:\n' +
+    '       * Section: Key Findings (bullet list with source references)\n' +
+    '       * Section: Themes and Patterns\n' +
+    '       * Section: Gaps and Unknowns\n' +
+    '       * Section: Recommended Next Steps\n' +
+    '     - Do NOT navigate the browser for this task. All data is in local files.\n' +
+    '\n' +
     '1. CURIOSITY (secondary): If the directive above has an ACTIVE SEARCH URL related\n' +
     '   to your sprint topic, navigate to it. Otherwise skip curiosity this cycle \u2014\n' +
     '   sprint research is your curiosity tonight.\n' +
@@ -265,8 +279,11 @@ function buildSprintTasks(ctx) {
     '   - Recommend cycle_interval_sec based on sprint progress (faster if productive).\n' +
     '   - Keep post_eagerness at "suppress" (no posting during silent hours).\n' +
     '5. JOURNAL: ' + ctx.journalTask + '\n' +
-    '   Focus the journal on sprint work: what you researched, what you found,\n' +
-    '   what evidence quality was like, what gaps remain.\n' +
+    '   Write a standard observation journal (150-200 words, same format as normal cycles).\n' +
+    '   If sprint research yielded concrete findings, include a brief note.\n' +
+    '   If X searches for the sprint topic were unproductive or returned no results, draw\n' +
+    '   observations from the FEED DIGEST above instead.\n' +
+    '   Do NOT write a journal entry that is solely about failed searches or blocked sprint work.\n' +
     'Next tweet cycle: ' + ctx.nextTweet + '.\n';
 }
 
