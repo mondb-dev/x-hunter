@@ -18,7 +18,6 @@ module.exports = {
   TWEET_END: 23,               // latest hour (exclusive)
 
   // ── Ports ─────────────────────────────────────────────────────────────────
-  GATEWAY_PORT: 18789,         // openclaw gateway WebSocket/HTTP port
   CDP_PORT: 18801,             // Chrome DevTools Protocol port
 
   // ── Dates ─────────────────────────────────────────────────────────────────
@@ -91,12 +90,6 @@ module.exports = {
   LOCKDIR: path.join(RUNNER_DIR, 'run.lock'),
   PIDFILE: path.join(RUNNER_DIR, 'run.pid'),
   PAUSE_FILE: path.join(RUNNER_DIR, 'PAUSE'),
-
-  // External logs
-  GATEWAY_ERR_LOG: path.join(
-    process.env.HOME || '',
-    '.openclaw-x-hunter/logs/gateway.err.log'
-  ),
 
   // ── Log rotation limits ───────────────────────────────────────────────────
   RUNNER_LOG_MAX_LINES: 5000,

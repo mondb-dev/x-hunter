@@ -48,17 +48,23 @@ else
   exit 1
 fi
 
-# ── Confirm gateway is running ────────────────────────────────────────────────
-if ! openclaw gateway status &>/dev/null; then
-  echo "[run] Gateway not running. Starting..."
-  openclaw gateway start
-  sleep 3
+# ── Ensure Chrome browser is running ─────────────────────────────────────────
+echo "[run] Ensuring Chrome browser is running on CDP port ${CDP_PORT:-18801}..."
+if ! curl -sf "http://127.0.0.1:${CDP_PORT:-18801}/json/version" -o /dev/null --max-time 3; then
+  if sudo systemctl restart sebastian-browser.service 2>/dev/null; then
+    sleep 5
+  else
+    CHROME_BIN=$(command -v google-chrome-stable || command -v google-chrome || command -v chromium || echo "")
+    CHROME_PROFILE="${CHROME_USER_DATA_DIR:-$HOME/.config/google-chrome/x-hunter}"
+    if [ -n "$CHROME_BIN" ]; then
+      "$CHROME_BIN" --remote-debugging-port="${CDP_PORT:-18801}" \
+        --user-data-dir="$CHROME_PROFILE" \
+        --no-first-run --no-default-browser-check --headless=new \
+        --disable-background-timer-throttling &
+      sleep 5
+    fi
+  fi
 fi
-
-# ── Ensure browser is running ─────────────────────────────────────────────────
-echo "[run] Starting x-hunter browser..."
-openclaw browser --browser-profile x-hunter start
-sleep 2
 
 # ── Configure git identity ────────────────────────────────────────────────────
 git -C "$PROJECT_ROOT" config user.name "${GIT_USER_NAME:-x-hunter-agent}"
@@ -96,9 +102,7 @@ QUOTE_OFFSET=3        # quote-tweet on cycles 3, 9, 15, ... (midpoint between tw
 TWEET_START=7         # earliest hour to post original tweets (0-23 UTC)
 TWEET_END=23          # latest hour exclusive
 CURIOSITY_EVERY=12    # refresh curiosity directive every ~4h (was 4)
-GATEWAY_PORT=18789    # openclaw gateway WebSocket/HTTP port
 CDP_PORT=18801        # Chrome DevTools Protocol port
-GATEWAY_ERR_LOG="$HOME/.openclaw-x-hunter/logs/gateway.err.log"  # x-hunter gateway error log
 
 trap 'echo "[run] Stopping..."; bash "$PROJECT_ROOT/scraper/stop.sh" 2>/dev/null; bash "$PROJECT_ROOT/stream/stop.sh" 2>/dev/null; exit 0' INT TERM
 

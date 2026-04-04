@@ -238,7 +238,7 @@ function postRegularTweet({ today, hour, cycle }) {
  *
  * Steps:
  *   1. Voice filter --quote (adjust tone for quote-tweet)
- *   2. 3s sleep (let openclaw gateway release browser WS before CDP connect)
+ *   2. 3s sleep (let agent release browser WS before CDP connect)
  *   3. Post via CDP (post_quote.js)
  *
  * @returns {{ attempted: boolean, posted: boolean, suppressed: boolean, suppressionReason: string|null, quoteUrl: string|null }}

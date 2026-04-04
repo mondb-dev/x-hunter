@@ -26,8 +26,8 @@ const CDP_URL = process.env.CDP_URL || "http://127.0.0.1:18801";
  * @returns {Promise<import("puppeteer-core").Browser>}
  */
 async function connectBrowser(timeout = 10_000) {
-  // Retry once: Chrome aborts new WS connections if the OpenClaw gateway is still
-  // holding its browser-level debugger socket immediately after an agent run.
+  // Retry once: Chrome may briefly reject new WS connections if a prior
+  // puppeteer session is still releasing the debugger socket.
   for (let attempt = 1; attempt <= 2; attempt++) {
     try {
       // 1. Fetch WS endpoint (fast HTTP call, respects timeout)
@@ -50,7 +50,7 @@ async function connectBrowser(timeout = 10_000) {
       return await puppeteer.connect({ browserWSEndpoint: wsUrl, protocolTimeout: 120_000 });
     } catch (err) {
       if (attempt < 2) {
-        await new Promise(r => setTimeout(r, 4_000)); // wait for gateway to release WS
+        await new Promise(r => setTimeout(r, 4_000)); // wait for prior session to release WS
         continue;
       }
       throw err;

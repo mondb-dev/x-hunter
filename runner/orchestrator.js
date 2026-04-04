@@ -14,15 +14,13 @@ const path = require('path');
 const { execSync, spawn } = require('child_process');
 
 const config = require('./lib/config');
-const { agentRun } = require('./lib/agent');
+const { agentRunSync: agentRun } = require('./lib/gemini_agent');
 const {
-  restartGateway, startBrowser, checkBrowser,
+  startBrowser, checkBrowser,
   waitForBrowserService, ensureBrowser,
-  checkAndFixGatewayTimeout, countGatewayErrLines,
-  checkGatewayPort,
 } = require('./lib/browser');
 const {
-  resetSession, cleanStaleLocks, backupState,
+  cleanStaleLocks, backupState,
   restoreIfCorrupt, chmodPostsLog,
 } = require('./lib/state');
 const { preBrowse } = require('./lib/pre_browse');
@@ -352,17 +350,7 @@ function runOneCycle() {
     const lateness = Math.floor((Date.now() - expectedWakeTs) / 1000);
     if (lateness > config.BROWSE_INTERVAL) {
       log(`post-sleep detected (${lateness}s late) — restarting browser...`);
-      try {
-        execSync('openclaw browser --browser-profile x-hunter stop', {
-          stdio: 'ignore', timeout: 15_000,
-        });
-      } catch {}
-      sleepSec(3);
-      try {
-        execSync('openclaw browser --browser-profile x-hunter start', {
-          stdio: 'ignore', timeout: 15_000,
-        });
-      } catch {}
+      startBrowser();
       sleepSec(10);
       log('browser restarted after sleep wake');
     }
@@ -469,12 +457,8 @@ function runOneCycle() {
   checkScraperLiveness();
 
   // ── Browser health (BROWSE: full reset every cycle; TWEET/QUOTE: below) ─
-  // Always reset the x-hunter session before BROWSE to prevent stale
-  // 'browser unavailable' context from one failed cycle poisoning all
-  // subsequent cycles.  The agent prompt provides full context each cycle
-  // so losing session continuity costs nothing.
+  // Clear stale cadence state before BROWSE — each cycle gets fresh context.
   if (cycleType === 'BROWSE') {
-    resetSession('x-hunter');
 
     // Clear poisoned cadence focus_note so the agent doesn't inherit a
     // stale "browser unavailable" belief from a previous failed cycle.
@@ -492,49 +476,25 @@ function runOneCycle() {
     } catch {}
 
     if (!checkBrowser()) {
-      log('browser CDP down before browse cycle — restarting gateway + browser');
-      restartGateway();
+      log('browser CDP down before browse cycle — restarting browser');
       startBrowser();
       sleepSec(15);
       metrics.browserRestarted = true;
-    } else if (!checkGatewayPort()) {
-      log(`gateway port ${config.GATEWAY_PORT} not responding — restarting gateway`);
-      restartGateway();
-      sleepSec(10);
-    } else {
-      // Even when CDP + gateway are healthy, restart the gateway to get a
-      // fresh gateway<->browser bridge.  This prevents the 4th-call timeout
-      // pattern where the internal fetchBrowserJson stalls on stale connections.
-      restartGateway();
-      startBrowser();
-      sleepSec(10);
-      log('browse pre-cycle: session + gateway reset for fresh browser bridge');
     }
   }
 
-  // Before tweet/quote: flush agent sessions + ensure browser healthy
+  // Before tweet/quote: ensure browser healthy
   if (cycleType === 'TWEET' || cycleType === 'QUOTE') {
-    resetSession('x-hunter-tweet');
-  }
-  // QUOTE uses x-hunter agent -- reset its session too so stale 'browser
-  // unavailable' context from prior BROWSE cycles does not poison the run.
-  if (cycleType === 'QUOTE') {
-    resetSession('x-hunter');
-  }
-  if (cycleType === 'TWEET' || cycleType === 'QUOTE') {
-    // Full restart ensures the gateway<->browser bridge is fresh,
-    // not just that Chrome CDP responds to HTTP.
-    restartGateway();
-    startBrowser();
+    if (!checkBrowser()) {
+      startBrowser();
+    }
     if (!waitForBrowserService(30)) {
       log('WARNING: browser not ready before TWEET/QUOTE -- proceeding anyway');
     }
   }
 
-  // ── Periodic restart (every 6 cycles = ~3h) ───────────────────────────
+  // ── Periodic browser restart (every 6 cycles = ~3h) ──────────────────
   if (cycle % 6 === 0) {
-    resetSession('x-hunter');
-    restartGateway();
     startBrowser();
     if (waitForBrowserService(30)) {
       log('browser healthy after reset');
@@ -545,7 +505,7 @@ function runOneCycle() {
         metrics.downgradedToBrowse = true;
       }
     }
-    log(`x-hunter session + gateway restarted (context flush cycle ${cycle})`);
+    log(`browser restarted (refresh cycle ${cycle})`);
   }
 
   // Second lock sweep after gateway/browser restarts
@@ -557,10 +517,8 @@ function runOneCycle() {
       type: 'first_run', cycle: 1, dayNumber, today, now, hour,
     });
     const prompt = buildFirstRunPrompt(ctx);
-    const gwBefore = countGatewayErrLines();
     const exitCode = agentRun({ agent: 'x-hunter', message: prompt, thinking: 'high', verbose: 'on' });
     metrics.agentExitCodes.push(exitCode);
-    checkAndFixGatewayTimeout(gwBefore);
 
   // ── META cycle (replaces BROWSE when proposal is pending) ──────────────
   } else if (cycleType === 'BROWSE' && canRunMeta()) {
@@ -688,14 +646,6 @@ function runOneCycle() {
     // Pre-browse: 11 scripts (FTS5 heal, query, recall, curiosity, etc.)
     preBrowse(cycle);
 
-    // Refresh gateway<->Chrome bridge after prefetch.
-    // prefetch_url.js connects via puppeteer-core then calls browser.disconnect(),
-    // which can invalidate the openclaw gateway's internal Chrome WS session.
-    // Restarting only the gateway (not Chrome) re-establishes the bridge so the
-    // agent's browser tool doesn't hit fetchBrowserJson timeout on the stale link.
-    restartGateway();
-    log('post-prefetch gateway restart — browser bridge refreshed');
-
     // Build prompt
     const ctx = loadContext({
       type: 'browse', cycle, dayNumber, today, now, hour,
@@ -708,22 +658,18 @@ function runOneCycle() {
     if (fileExists(journalPath)) {
       try { fs.chmodSync(journalPath, 0o644); } catch {}
     }
-    const gwBefore = countGatewayErrLines();
     const journalBefore = journalInGit(today, hour);
 
     const browseExit = agentRun({ agent: 'x-hunter', message: prompt, thinking: 'low', verbose: 'on' });
     metrics.agentExitCodes.push(browseExit);
-    checkAndFixGatewayTimeout(gwBefore);
 
     // Retry if journal missing
     const journalAfter = journalInGit(today, hour);
     if (!journalAfter && !journalBefore && !fileExists(journalPath)) {
       log('browse journal missing after agent run — retrying once (no thinking)');
       sleepSec(5);
-      const gwBefore2 = countGatewayErrLines();
       const retryExit = agentRun({ agent: 'x-hunter', message: prompt, verbose: 'on' });
       metrics.agentExitCodes.push(retryExit);
-      checkAndFixGatewayTimeout(gwBefore2);
     }
 
     // Post-browse: cleanup_tabs, reading_queue --mark-done, ontology delta,
@@ -1004,17 +950,7 @@ function runOneCycle() {
     // Cycle itself took > 2× interval — Mac likely slept during cycle work
     if (elapsed > effectiveInterval * 2) {
       log(`post-sleep detected during cycle (elapsed=${elapsed}s) — restarting browser...`);
-      try {
-        execSync('openclaw browser --browser-profile x-hunter stop', {
-          stdio: 'ignore', timeout: 15_000,
-        });
-      } catch {}
-      sleepSec(3);
-      try {
-        execSync('openclaw browser --browser-profile x-hunter start', {
-          stdio: 'ignore', timeout: 15_000,
-        });
-      } catch {}
+      startBrowser();
       sleepSec(10);
       log('browser restarted after sleep wake');
     }

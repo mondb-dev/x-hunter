@@ -22,91 +22,15 @@ function log(msg) {
   console.log(`[run] ${msg}`);
 }
 
-// ── Session management ───────────────────────────────────────────────────────
-
-/**
- * resetSession(agentName)
- * Bash: run.sh lines 116-126
- *
- * Wipe all JSONL files (not .bak) and clear sessions.json for the agent,
- * so the gateway starts with a fresh context.
- */
-function resetSession(agentName) {
-  const dir = path.join(
-    process.env.HOME || '',
-    '.openclaw/agents',
-    agentName,
-    'sessions'
-  );
-  if (!fs.existsSync(dir)) return;
-
-  let found = false;
-  try {
-    const files = fs.readdirSync(dir);
-    for (const f of files) {
-      if (f.endsWith('.jsonl')) {
-        fs.unlinkSync(path.join(dir, f));
-        found = true;
-      }
-    }
-  } catch {}
-
-  // Wipe sessions.json so gateway starts truly fresh
-  try {
-    fs.writeFileSync(path.join(dir, 'sessions.json'), '{}');
-  } catch {}
-
-  if (found) log(`${agentName} session reset (context flush)`);
-}
-
 // ── Lock file cleanup ────────────────────────────────────────────────────────
 
 /**
  * cleanStaleLocks()
- * Bash: run.sh lines 273-285
- *
- * Remove JSONL lock files whose owner PID is no longer running
- * (prevents 10s lock timeouts on stale locks).
+ * No-op — OpenClaw sessions removed. Kept for API compatibility.
  */
 function cleanStaleLocks() {
-  const agentsDir = path.join(process.env.HOME || '', '.openclaw/agents');
-  if (!fs.existsSync(agentsDir)) return;
-
-  let cleaned = 0;
-  try {
-    const agents = fs.readdirSync(agentsDir);
-    for (const agent of agents) {
-      const sessionsDir = path.join(agentsDir, agent, 'sessions');
-      if (!fs.existsSync(sessionsDir)) continue;
-
-      const files = fs.readdirSync(sessionsDir);
-      for (const f of files) {
-        if (!f.endsWith('.lock')) continue;
-        const lockPath = path.join(sessionsDir, f);
-        let lockPid = '';
-        try {
-          lockPid = fs.readFileSync(lockPath, 'utf-8').trim();
-        } catch { lockPid = '0'; }
-
-        if (!lockPid || !isProcessAlive(lockPid)) {
-          try { fs.unlinkSync(lockPath); } catch {}
-          cleaned++;
-        }
-      }
-    }
-  } catch {}
-
-  if (cleaned > 0) log(`cleaned ${cleaned} stale lock(s)`);
-}
-
-/** Check if a PID is alive (equivalent to bash `kill -0`). */
-function isProcessAlive(pid) {
-  try {
-    process.kill(Number(pid), 0);
-    return true;
-  } catch {
-    return false;
-  }
+  // Previously cleaned .openclaw/agents/*/sessions/*.lock files.
+  // No longer needed after OpenClaw removal.
 }
 
 // ── State backup/restore ─────────────────────────────────────────────────────
@@ -193,7 +117,6 @@ function chmodPostsLog(mode) {
 }
 
 module.exports = {
-  resetSession,
   cleanStaleLocks,
   backupState,
   restoreIfCorrupt,

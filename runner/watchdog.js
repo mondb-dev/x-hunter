@@ -422,7 +422,7 @@ function checkMetaAutoRevert(hits) {
         name:     "agent run failed",
         re:       /An unknown error occurred/,
         severity: "ERROR",
-        hint:     "Openclaw agent returned a generic error — check gateway/model logs",
+        hint:     "Agent returned a generic error — check Vertex AI / model logs",
       },
       {
         name:     "all model fallbacks exhausted",

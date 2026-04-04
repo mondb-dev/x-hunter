@@ -30,7 +30,7 @@
  *
  * Any other text:
  *   - system/technical query → routed to builder technical assistant
- *   - otherwise → forwarded to openclaw agent as a chat message
+ *   - otherwise → answered via Vertex AI (Gemini) chat
  * (only when orchestrator is not running a cycle).
  *
  * Usage:
@@ -216,21 +216,11 @@ function scraperLoopState() {
 
 function restartBrowserProfile() {
   try {
-    execSync('openclaw browser --browser-profile x-hunter stop', {
-      stdio: 'ignore',
-      timeout: 15_000,
-    });
-  } catch {}
-
-  execCapture('sleep', ['3'], 4000);
-
-  try {
-    execSync('openclaw browser --browser-profile x-hunter start', {
-      stdio: 'ignore',
-      timeout: 15_000,
-    });
-  } catch {}
-
+    const { startBrowser } = require('./lib/browser');
+    startBrowser();
+  } catch (err) {
+    console.log(`[tgbot] browser restart error: ${err.message}`);
+  }
   execCapture('sleep', ['5'], 6000);
   return browserResponsive();
 }
@@ -434,7 +424,7 @@ function collectTechnicalSnapshot() {
     generated_at: new Date().toISOString(),
     services: {
       runner: report.runnerState,
-      gateway: report.gatewayState,
+      browser_service: report.browserState || 'unknown',
       telegram_bot: report.botState,
       browser_cdp: report.browserOk ? 'responsive' : 'down',
     },
@@ -473,7 +463,7 @@ function formatTechnicalFallback(errorMsg = '') {
   const report = collectTroubleshootingFindings();
   let msg = '<b>🛠 Technical State (fallback)</b>\n\n';
   msg += `Runner: ${escapeHtml(report.runnerState)}\n`;
-  msg += `Gateway: ${escapeHtml(report.gatewayState)}\n`;
+  msg += `Browser svc: ${escapeHtml(report.browserState || 'n/a')}\n`;
   msg += `TG bot: ${escapeHtml(report.botState)}\n`;
   msg += `Browser: ${report.browserOk ? 'responsive' : 'down'}\n`;
   msg += `Scraper: ${escapeHtml(report.loops.map((loop) => `${loop.label}=${loop.running ? 'up' : 'down'}`).join(', '))}\n`;
@@ -485,7 +475,7 @@ function formatTechnicalFallback(errorMsg = '') {
 
 function collectTroubleshootingFindings() {
   const runnerState = systemdState('sebastian-runner.service');
-  const gatewayState = systemdState('openclaw-gateway.service');
+  const browserState = systemdState('sebastian-browser.service');
   const botState = systemdState('sebastian-tgbot.service');
   const browserOk = browserResponsive();
   const loops = scraperLoopState();
@@ -504,15 +494,6 @@ function collectTroubleshootingFindings() {
       key: 'runner',
       message: `sebastian-runner.service is ${runnerState}`,
       fix: 'runner',
-    });
-  }
-
-  if (gatewayState !== 'active') {
-    findings.push({
-      severity: 'error',
-      key: 'gateway',
-      message: `openclaw-gateway.service is ${gatewayState}`,
-      fix: 'gateway',
     });
   }
 
@@ -555,7 +536,7 @@ function collectTroubleshootingFindings() {
 
   return {
     runnerState,
-    gatewayState,
+    browserState,
     botState,
     browserOk,
     loops,
@@ -567,7 +548,7 @@ function collectTroubleshootingFindings() {
 function formatTroubleshootingReport(report, fixes = []) {
   let msg = '<b>🧰 Troubleshoot</b>\n\n';
   msg += `Runner: ${escapeHtml(report.runnerState)}\n`;
-  msg += `Gateway: ${escapeHtml(report.gatewayState)}\n`;
+  msg += `Browser svc: ${escapeHtml(report.browserState || 'n/a')}\n`;
   msg += `TG bot: ${escapeHtml(report.botState)}\n`;
   msg += `Browser: ${report.browserOk ? 'responsive' : 'down'}\n`;
   msg += `Scraper: ${report.loops.map((loop) => `${loop.label}=${loop.running ? 'up' : 'down'}`).join(', ')}\n`;
@@ -660,14 +641,14 @@ async function cmdStatus() {
 
 async function cmdServices() {
   const runnerState = systemdState('sebastian-runner.service');
-  const gatewayState = systemdState('openclaw-gateway.service');
+  const browserState = systemdState('sebastian-browser.service');
   const botState = systemdState('sebastian-tgbot.service');
   const browserOk = browserResponsive();
   const loops = scraperLoopState();
 
   let msg = '<b>🧩 Services</b>\n\n';
   msg += `sebastian-runner: ${escapeHtml(runnerState)}\n`;
-  msg += `openclaw-gateway: ${escapeHtml(gatewayState)}\n`;
+  msg += `sebastian-browser: ${escapeHtml(browserState)}\n`;
   msg += `sebastian-tgbot: ${escapeHtml(botState)}\n`;
   msg += `browser CDP: ${browserOk ? 'responsive' : 'down'}\n`;
   msg += `scraper loops: ${escapeHtml(loops.map((loop) => `${loop.label}=${loop.running ? 'up' : 'down'}`).join(', '))}\n`;
@@ -1045,12 +1026,9 @@ async function cmdRestart(rawText = '') {
     );
   }
 
-  if (target === 'gateway') {
-    const result = sudoSystemctl('restart', 'openclaw-gateway.service');
-    if (!result.ok) {
-      return sendMessage(`❌ Gateway restart failed\n<pre>${escapeHtml(result.stderr.slice(0, 600))}</pre>`);
-    }
-    return sendMessage('✅ openclaw-gateway.service restarted');
+  if (target === 'gateway' || target === 'browser') {
+    const browserOk = restartBrowserProfile();
+    return sendMessage(browserOk ? '✅ Browser restarted' : '❌ Browser restart failed');
   }
 
   if (target === 'runner') {
@@ -1061,17 +1039,14 @@ async function cmdRestart(rawText = '') {
     return sendMessage('✅ sebastian-runner.service restarted');
   }
 
-  const gatewayResult = sudoSystemctl('restart', 'openclaw-gateway.service');
   const runnerResult = sudoSystemctl('restart', 'sebastian-runner.service');
   const browserOk = restartBrowserProfile();
   const scraperResult = restartScraperLoops();
 
   let msg = '<b>🔄 Restart all</b>\n\n';
-  msg += `Gateway: ${gatewayResult.ok ? 'ok' : 'failed'}\n`;
   msg += `Runner: ${runnerResult.ok ? 'ok' : 'failed'}\n`;
   msg += `Browser: ${browserOk ? 'ok' : 'failed'}\n`;
   msg += `Scraper: ${scraperResult.ok ? 'ok' : 'failed'}\n`;
-  if (!gatewayResult.ok) msg += `\nGateway error: ${escapeHtml(gatewayResult.stderr.slice(0, 240))}\n`;
   if (!runnerResult.ok) msg += `Runner error: ${escapeHtml(runnerResult.stderr.slice(0, 240))}\n`;
   return sendMessage(msg);
 }
@@ -1097,9 +1072,6 @@ async function cmdTroubleshoot(rawText = '') {
     if (finding.fix === 'runner') {
       const result = sudoSystemctl('restart', 'sebastian-runner.service');
       fixes.push(result.ok ? 'Restarted sebastian-runner.service' : `Runner restart failed: ${result.stderr.slice(0, 200)}`);
-    } else if (finding.fix === 'gateway') {
-      const result = sudoSystemctl('restart', 'openclaw-gateway.service');
-      fixes.push(result.ok ? 'Restarted openclaw-gateway.service' : `Gateway restart failed: ${result.stderr.slice(0, 200)}`);
     } else if (finding.fix === 'browser') {
       const ok = restartBrowserProfile();
       fixes.push(ok ? 'Restarted browser profile x-hunter' : 'Browser restart failed');
@@ -1131,7 +1103,7 @@ async function cmdResume() {
   }
 }
 
-// ── Chat with OpenClaw ──────────────────────────────────────────────────────
+// ── Chat with Vertex AI ─────────────────────────────────────────────────────
 
 async function chatWithAgent(userMessage) {
   if (isCycleLocked()) {
@@ -1173,43 +1145,19 @@ async function chatWithAgent(userMessage) {
       started: new Date().toISOString(),
     }));
 
-    const result = spawnSync('openclaw', [
-      'agent',
-      '--agent', 'x-hunter',
-      '--message', prompt,
-    ], {
-      stdio: ['ignore', 'pipe', 'pipe'],
-      env: process.env,
-      timeout: AGENT_TIMEOUT_MS,
-      killSignal: 'SIGKILL',
-      maxBuffer: 1024 * 1024,
-    });
+    // Call Vertex AI directly for chat (no browser needed)
+    const { callVertex } = require('./vertex');
+    const response = await callVertex(prompt, 1000, { thinkingBudget: 0 });
 
     // Release lock
     try { fs.unlinkSync(CYCLE_LOCK_PATH); } catch {}
 
-    if (result.signal === 'SIGKILL') {
-      return sendMessage('⏱ Agent timed out (5 min limit).');
-    }
-
-    const stdout = (result.stdout || '').toString().trim();
-    const stderr = (result.stderr || '').toString().trim();
-
-    if (result.status !== 0) {
-      console.log(`[tgbot] agent exited ${result.status}: ${stderr.slice(0, 200)}`);
-      return sendMessage(
-        '❌ Agent returned an error.\n\n' +
-        `<pre>${escapeHtml((stderr || stdout || 'Unknown error').slice(0, 500))}</pre>`,
-      );
-    }
-
-    // Extract the agent's final response (last meaningful content)
-    const response = stdout || '<i>Agent completed but produced no output</i>';
-    await sendMessage(response.slice(0, 4000));
+    await sendMessage((response || '<i>Agent produced no output</i>').slice(0, 4000));
 
   } catch (e) {
     try { fs.unlinkSync(CYCLE_LOCK_PATH); } catch {}
-    await sendMessage(`❌ Error: ${e.message}`);
+    console.log(`[tgbot] chat error: ${e.message}`);
+    await sendMessage(`❌ Error: ${escapeHtml(e.message.slice(0, 500))}`);
   }
 }
 
@@ -1290,7 +1238,7 @@ async function handleMessage(msg) {
       '<i>System/technical asks are auto-routed to builder technical assistant</i>',
     );
     default:
-      // Forward to OpenClaw agent as chat
+      // Forward to Vertex AI as chat
       return chatWithAgent(text);
   }
 }
