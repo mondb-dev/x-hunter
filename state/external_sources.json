@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-04T15:29:02.223Z",
+  "generated_at": "2026-04-04T16:29:03.002Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-04T15:29:02.608Z",
   "sources": [
@@ -6841,19 +6841,22 @@
       "domain": "reddit.com",
       "entity": "Reddit",
       "kind": "forum",
-      "first_seen_at": "2026-04-04T15:29:02.221Z",
-      "last_seen_at": "2026-04-04T15:29:02.221Z",
+      "first_seen_at": "2026-04-04T15:59:00Z",
+      "last_seen_at": "2026-04-04T16:29:03.001Z",
       "discovery": {
         "distinct_urls": 1,
         "example_urls": [
-          "https://www.reddit.com/search/?q=Emphasis%20economic%20development&sort=hot&t=week"
+          "https://www.reddit.com/search/?q=Prioritization%20environmental%20conservation&sort=hot&t=week"
         ],
         "origin_counts": {
+          "ontology_evidence": 1,
           "prefetch": 1
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
-        "distinct_axes": []
+        "distinct_axes": [
+          "axis_environmental_policy_v_economic_v1"
+        ]
       },
       "claims": {
         "total": 0,
@@ -6877,39 +6880,24 @@
           ]
         },
         "breadth": {
-          "score": 0.08916666666666666,
+          "score": 0.2075,
           "basis": [
             "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
+            "distinct_axes:1",
+            "origin_types:2"
           ]
         },
         "corroboration": {
-          "score": 0.0875,
+          "score": 0.175,
           "basis": [
             "referring_accounts:0",
-            "origin_types:1"
+            "origin_types:2"
           ]
         },
         "track_record": {
           "score": null,
           "basis": [
             "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.17895833333333333,
-          "confidence": 0.0491,
-          "method": "mechanical_v1",
-          "basis": [
-            "community_forum_pattern",
-            "search_results_seen",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
           ]
         },
         "profile": {
@@ -6924,6 +6912,21 @@
             "corrections:false",
             "outbound_links:1",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.21304687499999997,
+          "confidence": 0.081825,
+          "method": "mechanical_v1",
+          "basis": [
+            "community_forum_pattern",
+            "search_results_seen",
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
           ]
         }
       },
