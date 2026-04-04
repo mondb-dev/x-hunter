@@ -165,9 +165,17 @@ async function agentRun({ agent, message, thinking, useBrowser = true, verbose }
       page = await getXPage(browser);
       log('browser connected');
     } catch (err) {
-      log(`WARNING: browser connection failed: ${err.message} — proceeding without browser`);
-      // Fall back to file-only tools
-      useBrowser = false;
+      log(`WARNING: browser connection failed: ${err.message} — restarting Chrome and retrying`);
+      try {
+        require('./browser').ensureBrowser();
+        await new Promise(r => setTimeout(r, 3000));
+        browser = await connectBrowser();
+        page = await getXPage(browser);
+        log('browser reconnected after restart');
+      } catch (err2) {
+        log(`WARNING: browser reconnect failed: ${err2.message} — proceeding without browser`);
+        useBrowser = false;
+      }
     }
   }
 
