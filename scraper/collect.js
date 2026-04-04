@@ -60,9 +60,36 @@ const REPLY_QUEUE = path.join(ROOT, "state", "reply_queue.jsonl");
 
 // ── Constants ─────────────────────────────────────────────────────────────────
 const MAX_SEEN              = 10000;
-const TOP_POSTS             = 25;
 const TOP_REPLIES           = 5;
-const REPLY_FETCH_COUNT     = 8;   // fetch replies for top N posts
+
+/**
+ * Derive collection limits from cadence assessment signals.
+ * signal_density + belief_velocity → how many posts to collect and reply-fetch.
+ *
+ * signal_density:  high=TRENDING+novel ≥8, medium=≥3, low=<3
+ * belief_velocity: high=≥15 recent evidence, medium=≥5, low=<5
+ *
+ * Returns { topPosts, replyFetchCount }
+ */
+function getCollectionLimits() {
+  try {
+    const cadencePath = path.join(ROOT, "state", "cadence.json");
+    const cad = JSON.parse(fs.readFileSync(cadencePath, "utf-8"));
+    const density  = cad?.assessment?.signal_density  || "medium";
+    const velocity = cad?.assessment?.belief_velocity || "medium";
+
+    // High signal or high velocity → collect more
+    const score = (density === "high" ? 2 : density === "medium" ? 1 : 0)
+                + (velocity === "high" ? 1 : 0);
+
+    if (score >= 3) return { topPosts: 50, replyFetchCount: 15 };
+    if (score >= 2) return { topPosts: 40, replyFetchCount: 12 };
+    if (score >= 1) return { topPosts: 25, replyFetchCount: 8  };
+                    return { topPosts: 15, replyFetchCount: 5  };
+  } catch {
+    return { topPosts: 25, replyFetchCount: 8 };
+  }
+}
 const JACCARD_DEDUP_THRESHOLD    = 0.65;
 const JACCARD_CLUSTER_THRESHOLD  = 0.25;
 const NOVELTY_WEIGHT        = 0.4;
@@ -586,8 +613,9 @@ async function scrapeNotificationsApi() {
     return { ...post, novelty, total: post.total + novelty * NOVELTY_WEIGHT };
   });
   scored.sort((a, b) => b.total - a.total);
-  const selected = scored.slice(0, TOP_POSTS);
-  console.log(`[scraper] selected ${selected.length} posts (top by velocity+trust+alignment+novelty)`);
+  const { topPosts, replyFetchCount } = getCollectionLimits();
+  const selected = scored.slice(0, topPosts);
+  console.log(`[scraper] selected ${selected.length} posts (top by velocity+trust+alignment+novelty) [limit=${topPosts}]`);
 
   // ── Phase 5b: Capture media screenshots (before reply-fetch navigates away) ─
   const mediaPosts = selected.filter(p => p.mediaType && p.mediaType !== "none");
@@ -611,7 +639,7 @@ async function scrapeNotificationsApi() {
 
   // ── Phase 6: Fetch top replies for highest-scoring posts ──────────────────
   const withReplies = [];
-  for (const post of selected.slice(0, REPLY_FETCH_COUNT)) {
+  for (const post of selected.slice(0, replyFetchCount)) {
     let replies = [];
     try {
       replies = browserReady
@@ -623,7 +651,7 @@ async function scrapeNotificationsApi() {
     withReplies.push({ ...post, topReplies: replies });
     for (const r of replies) seenSet.add(r.id);
   }
-  for (const post of selected.slice(REPLY_FETCH_COUNT)) {
+  for (const post of selected.slice(replyFetchCount)) {
     withReplies.push({ ...post, topReplies: [] });
   }
 

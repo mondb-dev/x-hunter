@@ -313,15 +313,18 @@ function loadContext(opts) {
   if (type === 'first_run') return ctx;
 
   if (type === 'browse') {
-    // Browse depth scales digest window and max URLs to navigate.
-    // Reads cadence.json directly (formatCadence() formats for display; we need the raw value).
-    let browseDepth = 'normal';
+    // Digest window and max nav URLs scale with cadence assessment signals.
+    // signal_density drives how much of the digest the agent sees.
+    // browse_depth (agent-set directive) controls URL navigation budget.
+    let signalDensity = 'medium';
+    let browseDepth   = 'normal';
     try {
       const cad = JSON.parse(fs.readFileSync(
         require('path').join(config.STATE_DIR, 'cadence.json'), 'utf-8'));
-      browseDepth = cad?.directives?.browse_depth || 'normal';
+      signalDensity = cad?.assessment?.signal_density  || 'medium';
+      browseDepth   = cad?.directives?.browse_depth    || 'normal';
     } catch {}
-    const digestTailLines = browseDepth === 'shallow' ? 80 : browseDepth === 'deep' ? 300 : 160;
+    const digestTailLines = signalDensity === 'high' ? 300 : signalDensity === 'low' ? 80 : 160;
     ctx.maxNavUrls  = browseDepth === 'shallow' ? 0 : browseDepth === 'deep' ? 3 : 1;
     ctx.browseDepth = browseDepth;
 
