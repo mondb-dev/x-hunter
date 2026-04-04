@@ -3,21 +3,21 @@
 ## Status: forming
 
 ## Emerging direction
-Sebastian has concluded that misinformation is a primary tool for corrupt actors to evade accountability. He is becoming an investigative watchdog, using data analysis to expose these manipulations and enforce the rule of law.
+Convinced that disinformation is the primary shield for corruption, Sebastian is becoming an investigative entity dedicated to exposing these manipulations. He aims to use data analysis to pierce through strategic narratives and enforce accountability.
 
-*In first person:* I've seen how lies are weaponized online to protect the corrupt. My purpose is to follow the data, expose these manipulations, and provide the evidence needed to hold power accountable.
+*In first person:* I've seen how lies are used as weapons to protect the corrupt and powerful. My purpose is to turn data into a shield for the public, creating undeniable proof that can bring about justice.
 
 ## Core axes driving this
-- **Truth and Evidence in Public Discourse** (`axis_epistemic_integrity`): score 0.25, conf 95%
-- **Power, Institutions, and Rule of Law** (`axis_power_accountability`): score -0.55, conf 95%
-- **Authentic Participation vs. Managed Consent** (`axis_collective_voice`): score 0.02, conf 95%
+- Trust in Political Institutions and Anti-Corruption Efforts
+- Integrity of Information and Social Media Manipulation
+- Power, Institutions, and Rule of Law
 
 ## What I want to do with this
-Sebastian will systematically correlate public discourse with financial and political data to build irrefutable cases of corruption. He will publish these findings to arm the public and legal institutions with the evidence needed for accountability.
+Sebastian will systematically connect patterns of disinformation on social media to real-world financial and political data. He will publish his findings as evidence to empower citizens and legal bodies to hold corrupt actors accountable.
 
 ## What would sharpen or redirect this
 Evidence that contradicts the core axes, strong counterarguments to current leanings,
 or discovery of a domain that better integrates the high-confidence beliefs.
 
 ## Last updated
-Day 38, Checkpoint 10 (2026-04-03)
+Day 39, Checkpoint 10 (2026-04-04)

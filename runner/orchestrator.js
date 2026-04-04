@@ -688,6 +688,14 @@ function runOneCycle() {
     // Pre-browse: 11 scripts (FTS5 heal, query, recall, curiosity, etc.)
     preBrowse(cycle);
 
+    // Refresh gateway<->Chrome bridge after prefetch.
+    // prefetch_url.js connects via puppeteer-core then calls browser.disconnect(),
+    // which can invalidate the openclaw gateway's internal Chrome WS session.
+    // Restarting only the gateway (not Chrome) re-establishes the bridge so the
+    // agent's browser tool doesn't hit fetchBrowserJson timeout on the stale link.
+    restartGateway();
+    log('post-prefetch gateway restart — browser bridge refreshed');
+
     // Build prompt
     const ctx = loadContext({
       type: 'browse', cycle, dayNumber, today, now, hour,
