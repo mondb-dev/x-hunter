@@ -39,6 +39,7 @@ const JOURNALS_DIR  = path.join(ROOT, "journals");
 const CHECKPOINTS_DIR = path.join(ROOT, "checkpoints");
 const DAILY_DIR     = path.join(ROOT, "daily");
 const ARTICLES_DIR  = path.join(ROOT, "articles");
+const PONDERS_DIR   = path.join(ROOT, "ponders");
 const ARWEAVE_LOG   = path.join(ROOT, "state", "arweave_log.json");
 
 // ── HTML text extraction ──────────────────────────────────────────────────────
@@ -110,6 +111,17 @@ function parseMarkdown(filePath, relPath, type) {
     // belief_report_YYYY-MM-DD.md
     const m = fname.match(/(\d{4}-\d{2}-\d{2})/);
     if (m) { date = m[1]; title = `Belief Report ${date}`; }
+  } else if (type === "ponder") {
+    // ponder_N.md or ponder-N.md
+    const m = fname.match(/ponder[_-](\d+)/i);
+    const n = m ? m[1] : "?";
+    title = `Ponder ${n}`;
+    const mtime = fs.statSync(filePath).mtime;
+    date = mtime.toISOString().slice(0, 10);
+  } else if (type === "posts_assessment") {
+    // posts_assessment_YYYY-MM-DD.md
+    const m = fname.match(/(\d{4}-\d{2}-\d{2})/);
+    if (m) { date = m[1]; title = `Posts Assessment ${date}`; }
   }
 
   return { type, date, hour: null, title, text_content: text, file_path: relPath };

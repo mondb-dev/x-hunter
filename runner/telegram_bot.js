@@ -481,8 +481,10 @@ function collectTroubleshootingFindings() {
   const loops = scraperLoopState();
   const heartbeat = readText(config.HEARTBEAT_PATH);
   const recentRunnerErrors = shell(
-    'grep -i "error\\|fail\\|crash\\|timeout\\|fatal" ' +
-    `"${config.RUNNER_LOG_PATH}" 2>/dev/null | tail -5`,
+    'tail -500 ' + `"${config.RUNNER_LOG_PATH}"` +
+    ' 2>/dev/null | grep -i "error\\|fail\\|crash\\|timeout\\|fatal"' +
+    ' | grep -iv "detached frame\\|detached Frame\\|non-fatal\\|non_fatal\\|warn"' +
+    ' | tail -5',
     10_000,
   );
 
