@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-04T13:13:59.021Z",
+  "generated_at": "2026-04-04T14:59:01.445Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-04T12:43:58.845Z",
+  "profiled_at": "2026-04-04T14:29:01.186Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -6718,19 +6718,22 @@
       "domain": "news.ycombinator.com",
       "entity": "News Ycombinator",
       "kind": "forum",
-      "first_seen_at": "2026-04-04T13:13:59.020Z",
-      "last_seen_at": "2026-04-04T13:13:59.020Z",
+      "first_seen_at": "2026-04-04T13:43:00Z",
+      "last_seen_at": "2026-04-04T13:43:00Z",
       "discovery": {
         "distinct_urls": 1,
         "example_urls": [
           "https://news.ycombinator.com/"
         ],
         "origin_counts": {
-          "prefetch": 1
+          "ontology_evidence": 2
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
-        "distinct_axes": []
+        "distinct_axes": [
+          "axis_ai_societal_impact_v1",
+          "axis_digital_supply_chain_security"
+        ]
       },
       "claims": {
         "total": 0,
@@ -6753,10 +6756,10 @@
           ]
         },
         "breadth": {
-          "score": 0.08916666666666666,
+          "score": 0.2058333333333333,
           "basis": [
             "distinct_urls:1",
-            "distinct_axes:0",
+            "distinct_axes:2",
             "origin_types:1"
           ]
         },
@@ -6788,13 +6791,13 @@
           ]
         },
         "overall": {
-          "score": 0.23395833333333332,
-          "confidence": 0.0491,
+          "score": 0.25947916666666665,
+          "confidence": 0.0736,
           "method": "mechanical_v1",
           "basis": [
             "community_forum_pattern",
             "distinct_urls:1",
-            "distinct_axes:0",
+            "distinct_axes:2",
             "origin_types:1",
             "referring_accounts:0",
             "origin_types:1",
