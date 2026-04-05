@@ -82,6 +82,14 @@ function reports() {
   // Daily ontology snapshot (lightweight — always runs first)
   runScript('daily_snapshot.js');
 
+  // Intelligence export — regenerate conflict claims export after snapshot
+  try {
+    const exportScript = path.join(config.RUNNER_DIR, 'intelligence', 'export.js');
+    execSync(`node "${exportScript}" >> "${config.RUNNER_LOG_PATH}" 2>&1`, {
+      shell: true, stdio: 'ignore', timeout: 60000,
+    });
+  } catch {}
+
   // Daily belief report
   runScript('generate_daily_report.js');
 

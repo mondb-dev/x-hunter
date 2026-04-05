@@ -608,3 +608,265 @@ main {
   .plan-milestone { flex-direction: column; gap: 0.25rem; }
   .plan-milestone-week { min-width: unset; }
 }
+
+
+/* ── Intelligence page ───────────────────────────────────────────────────── */
+.intel-header {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+.intel-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.4rem;
+}
+.intel-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.6rem;
+  line-height: 1.2;
+}
+.intel-meta {
+  font-size: 12px;
+  color: var(--muted);
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.8rem;
+}
+.intel-description {
+  font-size: 13px;
+  color: var(--muted);
+  max-width: 680px;
+  line-height: 1.6;
+  margin: 0 0 2rem;
+}
+
+/* ── Sections ─────────────────────────────────────────────────────────────── */
+.intel-section {
+  margin-bottom: 2.5rem;
+}
+.intel-section-label {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+  margin: 0 0 1rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.4rem;
+}
+
+/* ── Axis bars ─────────────────────────────────────────────────────────────── */
+.intel-axes { display: flex; flex-direction: column; gap: 1.2rem; }
+.intel-axis { }
+.intel-axis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.2rem;
+}
+.intel-axis-label { font-size: 13px; font-weight: 500; }
+.intel-axis-conf { font-size: 11px; color: var(--muted); }
+.intel-axis-poles {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+.intel-axis-track {
+  position: relative;
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: visible;
+}
+.intel-axis-tick {
+  position: absolute;
+  top: -2px;
+  width: 1px;
+  height: 12px;
+  background: var(--muted);
+  transform: translateX(-50%);
+}
+.intel-axis-fill {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-radius: 4px;
+  opacity: 0.85;
+  transition: width 0.3s;
+}
+.intel-axis-marker {
+  position: absolute;
+  top: -3px;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border: 2px solid #555;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+.intel-axes-note {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 0.8rem;
+}
+
+/* ── Sebastian take ─────────────────────────────────────────────────────────── */
+.intel-take {
+  border-left: 3px solid #f59e0b;
+  padding-left: 1rem;
+}
+.intel-take p { font-size: 14px; line-height: 1.7; margin: 0 0 0.6rem; }
+.intel-take-refs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.intel-take-ref {
+  font-size: 12px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.intel-take-ref:hover { text-decoration: underline; }
+
+/* ── Categories ─────────────────────────────────────────────────────────────── */
+.intel-categories { display: flex; flex-direction: column; gap: 0.6rem; }
+.intel-category {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.intel-cat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  user-select: none;
+  font-size: 13px;
+  font-weight: 500;
+  background: var(--surface);
+}
+.intel-cat-header:hover { background: var(--border); }
+.intel-cat-label { flex: 1; }
+.intel-cat-count {
+  font-size: 11px;
+  color: var(--muted);
+  background: var(--border);
+  padding: 2px 8px;
+  border-radius: 99px;
+}
+.intel-claims {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+}
+.intel-claim {
+  padding: 0.65rem 1rem;
+  border-top: 1px solid var(--border);
+}
+.intel-claim:hover { background: var(--surface); }
+.intel-claim-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.25rem;
+  flex-wrap: wrap;
+}
+.intel-claim-handle { font-size: 11px; color: var(--muted); font-family: monospace; }
+.intel-tier-chip {
+  font-size: 10px;
+  font-weight: 700;
+  color: #000;
+  padding: 1px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+.intel-corr { font-size: 11px; color: var(--muted); }
+.intel-claim-text { font-size: 13px; line-height: 1.6; margin: 0; }
+.intel-cat-more {
+  font-size: 11px;
+  color: var(--muted);
+  padding: 0.5rem 1rem;
+  border-top: 1px solid var(--border);
+  margin: 0;
+}
+
+/* ── Contradictions ─────────────────────────────────────────────────────────── */
+.intel-contradictions { display: flex; flex-direction: column; gap: 1rem; }
+.intel-contradiction {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+}
+.intel-contra-cat {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.intel-contra-sides { display: flex; flex-direction: column; gap: 0.5rem; }
+.intel-contra-claim {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  position: relative;
+}
+.intel-contra-tier { font-size: 10px; font-weight: 700; color: #000; padding: 1px 5px; border-radius: 3px; align-self: flex-start; }
+.intel-contra-vs {
+  text-align: center;
+  font-size: 10px;
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0;
+}
+.intel-contra-text { font-size: 13px; line-height: 1.5; margin: 0; }
+
+/* ── Source tiers ─────────────────────────────────────────────────────────── */
+.intel-tiers { display: flex; flex-direction: column; gap: 0.8rem; }
+.intel-tier {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+}
+.intel-tier-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+  flex-wrap: wrap;
+}
+.intel-tier-count { font-size: 12px; color: var(--muted); }
+.intel-tier-desc { font-size: 11px; color: var(--muted); flex: 1; }
+.intel-tier-handles { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.intel-tier-handle {
+  font-size: 11px;
+  font-family: monospace;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1px 6px;
+  border-radius: 4px;
+  color: var(--muted);
+}
+
+/* ── Methodology ─────────────────────────────────────────────────────────── */
+.intel-methodology {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+/* ── Intel responsive ────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .intel-title { font-size: 1.4rem; }
+  .intel-axis-poles { font-size: 9px; }
+  .intel-cat-header { font-size: 12px; }
+}
