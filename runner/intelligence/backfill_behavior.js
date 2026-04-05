@@ -98,7 +98,9 @@ function main() {
   // ── 2. Load source_registry ───────────────────────────────────────────────
   let registry = {};
   if (fs.existsSync(REGISTRY_PATH)) {
-    registry = JSON.parse(fs.readFileSync(REGISTRY_PATH, 'utf8'));
+    const raw = JSON.parse(fs.readFileSync(REGISTRY_PATH, 'utf8'));
+    // Support both flat {handle: {...}} and wrapped {accounts: {handle: {...}}}
+    registry = raw.accounts ?? raw;
     log(`Loaded registry: ${Object.keys(registry).length} classified accounts`);
   } else {
     log('WARN: source_registry.json not found — skipping registry seed');
