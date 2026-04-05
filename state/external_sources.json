@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-05T17:19:38.017Z",
+  "generated_at": "2026-04-05T18:19:31.435Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-05T07:19:17.638Z",
   "sources": [
@@ -7332,18 +7332,16 @@
       "entity": "Reddit",
       "kind": "forum",
       "first_seen_at": "2026-04-04T15:59:00Z",
-      "last_seen_at": "2026-04-05T17:19:38.015Z",
+      "last_seen_at": "2026-04-05T12:39:00Z",
       "discovery": {
-        "distinct_urls": 4,
+        "distinct_urls": 3,
         "example_urls": [
           "https://www.reddit.com/search/?q=Emphasis%20individual%20merit&sort=hot&t=week",
           "https://www.reddit.com/search/?q=Reliance%20family%20name&sort=hot&t=week",
-          "https://www.reddit.com/search/?q=Prioritization%20environmental%20conservation&sort=hot&t=week",
-          "https://www.reddit.com/search/?q=Prioritization%20protecting%20vulnerable&sort=hot&t=week"
+          "https://www.reddit.com/search/?q=Prioritization%20environmental%20conservation&sort=hot&t=week"
         ],
         "origin_counts": {
-          "ontology_evidence": 5,
-          "prefetch": 1
+          "ontology_evidence": 5
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -7374,18 +7372,18 @@
           ]
         },
         "breadth": {
-          "score": 0.3533333333333333,
+          "score": 0.26416666666666666,
           "basis": [
-            "distinct_urls:4",
+            "distinct_urls:3",
             "distinct_axes:2",
-            "origin_types:2"
+            "origin_types:1"
           ]
         },
         "corroboration": {
-          "score": 0.175,
+          "score": 0.0875,
           "basis": [
             "referring_accounts:0",
-            "origin_types:2"
+            "origin_types:1"
           ]
         },
         "track_record": {
@@ -7409,17 +7407,17 @@
           ]
         },
         "overall": {
-          "score": 0.24494791666666663,
-          "confidence": 0.17995,
+          "score": 0.2172395833333333,
+          "confidence": 0.13085,
           "method": "mechanical_v1",
           "basis": [
             "community_forum_pattern",
             "search_results_seen",
-            "distinct_urls:4",
+            "distinct_urls:3",
             "distinct_axes:2",
-            "origin_types:2",
+            "origin_types:1",
             "referring_accounts:0",
-            "origin_types:2",
+            "origin_types:1",
             "track_record_unavailable"
           ]
         }
