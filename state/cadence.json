@@ -1,20 +1,17 @@
 {
   "version": 1,
-  "last_assessed": "2026-04-05T06:19:00.000Z",
   "assessment": {
     "signal_density": "medium",
-    "belief_velocity": "low",
+    "belief_velocity": "medium",
     "post_pressure": "high",
-    "staleness": "medium",
-    "focus_note": "Sprint work: The '[reflect] Collate All Feedback and Learnings' task is blocked by web search tool errors. Cannot gather feedback at this time."
+    "staleness": "high",
+    "focus_note": "Sprint task '[reflect] Collate All Feedback and Learnings' is blocked as web searches for 'Veritas Lens v0.1 Specification feedback' yield no relevant results, likely because the specification is not yet publicly published. This indicates a pre-requisite for this task is missing."
   },
   "directives": {
-    "cycle_interval_sec": 3600,
-    "next_cycle_type": "null",
-    "browse_depth": "shallow",
+    "cycle_interval_sec": 1800,
+    "next_cycle_type": null,
+    "browse_depth": "normal",
     "post_eagerness": "suppress",
     "curiosity_intensity": "low"
-  },
-  "consecutive_overrides": 1,
-  "history": []
+  }
 }
