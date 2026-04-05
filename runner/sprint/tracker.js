@@ -65,30 +65,55 @@ function repairJson(raw) {
 /**
  * Gather signals of what Sebastian did today — articles, posts, journals.
  * Returns an array of { source, description } objects.
+ *
+ * NOTE: tracker runs at midnight UTC but articles/journals are written
+ * during the day UTC. We check both today AND yesterday so the previous
+ * day's work is captured on the next tracker run.
  */
 function gatherTodaySignals() {
   const d = today();
+  const prev = new Date(); prev.setDate(prev.getDate() - 1);
+  const yesterday = prev.toISOString().slice(0, 10);
   const signals = [];
 
-  // Check for articles written today
+  // Extract title from article content (H1 or YAML frontmatter title:)
+  function articleTitle(content) {
+    const yamlTitle = content.match(/^---[\s\S]*?\ntitle:\s*["']?([^"'\n]+)["']?/m);
+    if (yamlTitle) return yamlTitle[1].trim();
+    const h1 = content.match(/^#\s+(.+)/m);
+    return h1 ? h1[1].trim() : "untitled";
+  }
+
+  // Check for articles written today or yesterday (tracker always runs before article is written)
   const articlesDir = path.join(ROOT, "articles");
   if (fs.existsSync(articlesDir)) {
-    const articleFile = path.join(articlesDir, `${d}.md`);
-    if (fs.existsSync(articleFile)) {
-      const content = fs.readFileSync(articleFile, "utf-8");
-      const titleMatch = content.match(/^#\s+(.+)/m);
-      signals.push({
-        source: "article",
-        description: `Published article: "${titleMatch?.[1] || "untitled"}"`,
-      });
+    const seenDates = new Set();
+    for (const dateStr of [d, yesterday]) {
+      if (seenDates.has(dateStr)) continue;
+      const articleFile = path.join(articlesDir, `${dateStr}.md`);
+      if (fs.existsSync(articleFile)) {
+        const content = fs.readFileSync(articleFile, "utf-8");
+        const title = articleTitle(content);
+        // Only include if non-trivial (skip stub articles that may be overwritten)
+        if (content.trim().length > 200) {
+          signals.push({
+            source: "article",
+            description: `Published article: "${title}" (${dateStr})`,
+          });
+          seenDates.add(dateStr);
+        }
+      }
     }
   }
 
-  // Check posts_log for today's posts
+  // Check posts_log for today's and yesterday's posts
   const postsLog = loadJson(path.join(STATE, "posts_log.json"));
   if (postsLog?.posts) {
-    const todayPosts = postsLog.posts.filter(p => p.date === d || p.posted_at?.startsWith(d));
-    for (const p of todayPosts) {
+    const recentPosts = postsLog.posts.filter(p => {
+      const pd = (p.date || p.posted_at || "").slice(0, 10);
+      return pd === d || pd === yesterday;
+    });
+    for (const p of recentPosts) {
       signals.push({
         source: `tweet:${p.type || "post"}`,
         description: `Posted ${p.type || "tweet"}: "${(p.content || "").slice(0, 100)}"`,
@@ -96,10 +121,10 @@ function gatherTodaySignals() {
     }
   }
 
-  // Check for journal entries today
+  // Check for journal entries today or yesterday
   const journalsDir = path.join(ROOT, "journals");
   if (fs.existsSync(journalsDir)) {
-    const journalFiles = fs.readdirSync(journalsDir).filter(f => f.startsWith(d));
+    const journalFiles = fs.readdirSync(journalsDir).filter(f => f.startsWith(d) || f.startsWith(yesterday));
     if (journalFiles.length > 0) {
       signals.push({
         source: "journals",
