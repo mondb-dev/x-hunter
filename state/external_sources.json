@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-05T19:19:32.385Z",
+  "generated_at": "2026-04-05T21:49:36.025Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-05T07:19:17.638Z",
   "sources": [
@@ -7205,6 +7205,137 @@
       }
     },
     {
+      "domain": "reddit.com",
+      "entity": "Reddit",
+      "kind": "forum",
+      "first_seen_at": "2026-04-04T15:59:00Z",
+      "last_seen_at": "2026-04-05T21:49:36.024Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://www.reddit.com/search/?q=Emphasis%20individual%20merit&sort=hot&t=week",
+          "https://www.reddit.com/search/?q=Reliance%20family%20name&sort=hot&t=week",
+          "https://www.reddit.com/search/?q=Prioritization%20environmental%20conservation&sort=hot&t=week",
+          "https://www.reddit.com/search/?q=Prioritization%20free%20speech&sort=hot&t=week",
+          "https://www.reddit.com/search/?q=Prioritization%20protecting%20vulnerable&sort=hot&t=week"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 5,
+          "journals": 1,
+          "prefetch": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_environmental_policy_v_economic_v1",
+          "axis_political_dynasties_meritocracy_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": true,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.21999999999999997,
+          "basis": [
+            "community_forum_pattern",
+            "search_results_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.4425,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:2",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.26249999999999996,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.009999999999999998,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.27265625,
+          "confidence": 0.22904999999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "community_forum_pattern",
+            "search_results_seen",
+            "distinct_urls:5",
+            "distinct_axes:2",
+            "origin_types:3",
+            "referring_accounts:0",
+            "origin_types:3",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-04T15:29:02.607Z",
+        "homepage_url": "https://reddit.com/",
+        "example_url": "https://www.reddit.com/search/?q=Emphasis%20economic%20development&sort=hot&t=week",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://www.reddit.com/",
+        "example_final_url": "https://www.reddit.com/search/?q=Emphasis%20economic%20development&sort=hot&t=week",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "news.ycombinator.com",
       "entity": "News Ycombinator",
       "kind": "forum",
@@ -7323,135 +7454,6 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 32,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "reddit.com",
-      "entity": "Reddit",
-      "kind": "forum",
-      "first_seen_at": "2026-04-04T15:59:00Z",
-      "last_seen_at": "2026-04-05T19:19:32.383Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://www.reddit.com/search/?q=Emphasis%20individual%20merit&sort=hot&t=week",
-          "https://www.reddit.com/search/?q=Reliance%20family%20name&sort=hot&t=week",
-          "https://www.reddit.com/search/?q=Prioritization%20environmental%20conservation&sort=hot&t=week",
-          "https://www.reddit.com/search/?q=Freedom%20Religious%20Expression&sort=hot&t=week"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 5,
-          "prefetch": 1
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_environmental_policy_v_economic_v1",
-          "axis_political_dynasties_meritocracy_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": true,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.21999999999999997,
-          "basis": [
-            "community_forum_pattern",
-            "search_results_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.3533333333333333,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:2",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.009999999999999998,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:1",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.24494791666666663,
-          "confidence": 0.17995,
-          "method": "mechanical_v1",
-          "basis": [
-            "community_forum_pattern",
-            "search_results_seen",
-            "distinct_urls:4",
-            "distinct_axes:2",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-04T15:29:02.607Z",
-        "homepage_url": "https://reddit.com/",
-        "example_url": "https://www.reddit.com/search/?q=Emphasis%20economic%20development&sort=hot&t=week",
-        "homepage_status": 403,
-        "example_status": 403,
-        "homepage_final_url": "https://www.reddit.com/",
-        "example_final_url": "https://www.reddit.com/search/?q=Emphasis%20economic%20development&sort=hot&t=week",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
           "opinion_marker": false
         }
       }
