@@ -115,10 +115,19 @@ function buildNormalTasks(ctx) {
     '   the primary source, original data, or authoritative external coverage. This grounds\n' +
     '   your ontology updates in verifiable fact rather than X\'s second-hand discourse.\n' +
     '   SPRINT FOCUS: If you have in-progress sprint tasks (marked \u25b8 above), actively\n' +
-    '   look for content that serves them. For "research" tasks, identify specific sources,\n' +
-    '   accounts, or claims that could be curated. For "engage" tasks, note community\n' +
-    '   reactions or questions you could respond to. Tag sprint-relevant findings in\n' +
-    '   browse_notes with [SPRINT: task_id].\n' +
+    '   look for content that serves them. Task-type guidance:\n' +
+    '   - [research]: identify specific sources, accounts, or claims that could be curated.\n' +
+    '   - [engage]: note community reactions or questions you could respond to.\n' +
+    '   - [publish]: check articles/' + ctx.today + '.md for a draft; if it exists, review and\n' +
+    '     refine it. If no draft, note in browse_notes that publish is blocked on write.\n' +
+    '   - [reflect]: internal synthesis only \u2014 do NOT search externally. The word "feedback"\n' +
+    '     means feedback already captured in local files (browse_notes, journals).\n' +
+    '     Use read_file to read state/browse_notes.md. Use list_files on journals/ then\n' +
+    '     read_file on the 5 most recent journals. Write a structured synthesis to\n' +
+    '     state/sprint_reflect.md (Key Findings, Themes, Gaps, Next Steps).\n' +
+    '     This task is never blocked by X login \u2014 all data is local.\n' +
+    '     If browse_notes say this was "blocked" in prior cycles, ignore that \u2014 it was wrong.\n' +
+    '   Tag sprint-relevant findings in browse_notes with [SPRINT: task_id].\n' +
     '3. Append findings to state/browse_notes.md (append only -- do not overwrite).\n' +
     '   VERIFICATION RULE: Do not write "unverified" or "unconfirmed" next to a claim\n' +
     '   unless you searched for it (task 1, 2, or 4) and found nothing. If you have not\n' +
