@@ -82,7 +82,19 @@ function reports() {
   // Daily ontology snapshot (lightweight — always runs first)
   runScript('daily_snapshot.js');
 
-  // Intelligence export — regenerate conflict claims export after snapshot
+  // Intelligence pipeline: backfill source credibility → generate conflict claims → export
+  try {
+    const backfillScript = path.join(config.RUNNER_DIR, 'intelligence', 'backfill_behavior.js');
+    execSync(`node "${backfillScript}" >> "${config.RUNNER_LOG_PATH}" 2>&1`, {
+      shell: true, stdio: 'ignore', timeout: 60000,
+    });
+  } catch {}
+  try {
+    const generateScript = path.join(config.RUNNER_DIR, 'intelligence', 'generate_conflict_claims.js');
+    execSync(`node "${generateScript}" >> "${config.RUNNER_LOG_PATH}" 2>&1`, {
+      shell: true, stdio: 'ignore', timeout: 300000,
+    });
+  } catch {}
   try {
     const exportScript = path.join(config.RUNNER_DIR, 'intelligence', 'export.js');
     execSync(`node "${exportScript}" >> "${config.RUNNER_LOG_PATH}" 2>&1`, {

@@ -334,6 +334,49 @@ function formatUnresolvedClaims() {
   } catch { return '(no open claims)'; }
 }
 
+function formatIntelligenceTensions() {
+  try {
+    const p = path.join(config.STATE_DIR, 'intelligence_export.json');
+    if (!fs.existsSync(p)) return '(no intelligence export)';
+    const intel = JSON.parse(fs.readFileSync(p, 'utf-8'));
+
+    const categories = intel.categories || {};
+    const contradictions = intel.contradictions || [];
+
+    // Claims from all categories, ranked by total evidence activity
+    const allClaims = Object.values(categories)
+      .flatMap(c => c.claims || [])
+      .filter(c => (c.corroborating_count || 0) + (c.contradicting_count || 0) > 0)
+      .sort((a, b) =>
+        (b.corroborating_count + b.contradicting_count) -
+        (a.corroborating_count + a.contradicting_count))
+      .slice(0, 5);
+
+    let out = `Conflict tracker (iran-us-israel): ${intel.claim_count || 0} claims across ${Object.keys(categories).length} categories\n`;
+
+    if (contradictions.length) {
+      out += `Active contradictions (${contradictions.length} total — top 3):\n`;
+      for (const c of contradictions.slice(0, 3)) {
+        const s0 = (c.sides && c.sides[0] && c.sides[0].claim_text || '').slice(0, 80);
+        const s1 = (c.sides && c.sides[1] && c.sides[1].claim_text || '').slice(0, 80);
+        out += `  [${c.category || '?'}] "${s0}" ↔ "${s1}"\n`;
+      }
+    }
+
+    if (allClaims.length) {
+      out += `Most corroborated claims:\n`;
+      for (const c of allClaims) {
+        const handle = c.source_handle ? `@${c.source_handle}: ` : '';
+        out += `  +${c.corroborating_count || 0}/-${c.contradicting_count || 0} ${handle}${c.claim_text.slice(0, 100)}\n`;
+      }
+    }
+
+    return out.trim();
+  } catch {
+    return '(intelligence export unavailable)';
+  }
+}
+
 // ── Main loader ─────────────────────────────────────────────────────────────
 
 /**
@@ -381,6 +424,7 @@ function loadContext(opts) {
     ctx.readingBlock      = buildReadingBlock();
     ctx.prefetchSource    = readState(config.PREFETCH_SOURCE_PATH, { fallback: '' }).trim();
     ctx.unresolvedClaims  = formatUnresolvedClaims();
+    ctx.intelTensions     = formatIntelligenceTensions();
     ctx.currentAxes       = formatCurrentAxes();
     ctx.cadence            = formatCadence();
     ctx.captureStatus     = formatCaptureStatus();

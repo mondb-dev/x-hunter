@@ -74,6 +74,10 @@ function buildPreamble(ctx) {
       : 'X unavailable — browser is on an external source. Apply same observation principles.\n') +
       '\n'
     ) : '') +
+    '\u2500\u2500 UNRESOLVED CLAIMS (open from claim tracker) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
+    ctx.unresolvedClaims + '\n' +
+    '\u2500\u2500 INTELLIGENCE TENSIONS (iran-us-israel conflict tracker) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
+    ctx.intelTensions + '\n' +
     '\u2500\u2500 CADENCE (self-regulated \u2014 you control your rhythm) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.cadence + '\n' +
     '\u2500\u2500 CAPTURE STATUS (am I being captured?) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
@@ -149,6 +153,13 @@ function buildNormalTasks(ctx) {
     '   If you only have one URL, use source_post_url for the X post and let the system infer cited_url when possible.\n' +
     '   Use statuses: "supported" (strong evidence for), "refuted" (strong evidence against), "contested" (conflicting evidence).\n' +
     '   Omit keys if empty. Skip the file if no changes.\n' +
+    '4b. INTELLIGENCE TENSIONS: Review the INTELLIGENCE TENSIONS section above. These are\n' +
+    '   tracked conflict claims for the iran-us-israel situation. Use this section to:\n' +
+    '   - Prioritize browsing on topics where contradictions are actively building (↔ pairs).\n' +
+    '   - If you encounter new evidence corroborating or refuting a listed claim, note its\n' +
+    '     claim text in browse_notes.md with [INTEL: <category>] and add it to the claim\n' +
+    '     tracker delta (task 4) as a new_claim or updated_claim if you can match by text.\n' +
+    '   - No write action required — this is read-only signal for browsing focus.\n' +
     '5. Write state/ontology_delta.json if anything is genuinely axis-worthy.\n' +
     '   DO NOT write or modify state/ontology.json directly \u2014 the runner merges your delta.\n' +
     '   ONTOLOGY RULES (CURRENT BELIEF AXES shown above \u2014 do not alter existing data):\n' +
