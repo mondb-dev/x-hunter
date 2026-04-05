@@ -11,6 +11,8 @@
  *   state/ontology.json        (current top axes for grounding)
  *   state/sprints.db           (existing sprints + accomplishments)
  *   state/feed_digest.txt      (recent discourse for timeliness)
+ *   state/sprint_reflect.md    (collated findings from reflect tasks, if present)
+ *   state/browse_notes.md      ([SPRINT: ...] tagged entries from browse cycles)
  *
  * Writes:
  *   state/sprints.db           (sprints + tasks via db.js)
@@ -82,9 +84,34 @@ function buildAxisContext() {
     .join("\n");
 }
 
+// ── Sprint observations (what was actually found during this sprint) ──────────
+
+function loadSprintObservations() {
+  const parts = [];
+
+  // Collated synthesis from [reflect] tasks
+  try {
+    const reflect = fs.readFileSync(path.join(STATE, "sprint_reflect.md"), "utf-8").trim();
+    if (reflect) parts.push("### Collated findings (from reflect tasks):\n" + reflect.slice(0, 2000));
+  } catch {}
+
+  // [SPRINT: ...] tagged entries from browse_notes (last 40 matching lines)
+  try {
+    const notes = fs.readFileSync(path.join(STATE, "browse_notes.md"), "utf-8");
+    const sprintLines = notes.split("\n")
+      .filter(l => l.includes("[SPRINT:"))
+      .slice(-40)
+      .join("\n")
+      .trim();
+    if (sprintLines) parts.push("### Sprint-tagged browse notes:\n" + sprintLines.slice(0, 2000));
+  } catch {}
+
+  return parts.length ? parts.join("\n\n") : "(none yet)";
+}
+
 // ── Build the full-plan prompt ────────────────────────────────────────────────
 
-function buildFullPlanPrompt(plan, axisContext, recentDigest) {
+function buildFullPlanPrompt(plan, axisContext, recentDigest, sprintObservations) {
   const research   = plan.research || {};
   const milestones = (research.milestones || []).map(m => `  Week ${m.week}: ${m.goal}`).join("\n");
   const risks      = (research.risks || []).join("\n  - ");
@@ -120,6 +147,9 @@ ${axisContext}
 
 ## RECENT DISCOURSE (what's happening on X right now)
 ${recentDigest || "(empty)"}
+
+## SPRINT OBSERVATIONS (what you have actually found so far)
+${sprintObservations}
 
 ## YOUR CAPABILITIES
 - Post tweets, threads, and quote-tweets on X
@@ -171,7 +201,7 @@ Respond in this exact JSON format:
 
 // ── Build a single-sprint prompt (for mid-plan replanning) ────────────────────
 
-function buildNextSprintPrompt(plan, completedSprints, accomplishments, axisContext, recentDigest) {
+function buildNextSprintPrompt(plan, completedSprints, accomplishments, axisContext, recentDigest, sprintObservations) {
   const nextWeek = completedSprints.length + 1;
   const prevRetros = completedSprints
     .map(s => `Week ${s.week}: ${s.goal}\n  Retro: ${s.retro || "(none)"}`)
@@ -197,6 +227,9 @@ ${axisContext}
 
 ## RECENT DISCOURSE
 ${recentDigest || "(empty)"}
+
+## SPRINT OBSERVATIONS (what you've actually found in this sprint)
+${sprintObservations}
 
 ## TASK
 Plan Week ${nextWeek}. Learn from what worked and what didn't.
@@ -235,13 +268,14 @@ Respond in this exact JSON format:
 async function generateFullPlan(plan) {
   console.log(`[sprint/planner] generating full 4-week plan for "${plan.title}"`);
 
-  const axisContext  = buildAxisContext();
+  const axisContext       = buildAxisContext();
+  const sprintObservations = loadSprintObservations();
   const digestPath   = path.join(STATE, "feed_digest.txt");
   const recentDigest = fs.existsSync(digestPath)
     ? fs.readFileSync(digestPath, "utf-8").split("\n").slice(-100).join("\n")
     : "";
 
-  const prompt = buildFullPlanPrompt(plan, axisContext, recentDigest);
+  const prompt = buildFullPlanPrompt(plan, axisContext, recentDigest, sprintObservations);
   const raw    = await callVertex(prompt, 8000);
   const parsed = repairJson(raw);
 
@@ -296,16 +330,17 @@ async function generateFullPlan(plan) {
  * Called when current sprint is done and next sprint has no tasks.
  */
 async function generateNextSprint(plan, planId) {
-  const sprints         = sprintDb.getSprints(planId);
-  const completed       = sprints.filter(s => s.status === "completed");
-  const accomplishments = sprintDb.getAccomplishments(planId);
-  const axisContext     = buildAxisContext();
-  const digestPath      = path.join(STATE, "feed_digest.txt");
-  const recentDigest    = fs.existsSync(digestPath)
+  const sprints            = sprintDb.getSprints(planId);
+  const completed          = sprints.filter(s => s.status === "completed");
+  const accomplishments    = sprintDb.getAccomplishments(planId);
+  const axisContext        = buildAxisContext();
+  const sprintObservations = loadSprintObservations();
+  const digestPath         = path.join(STATE, "feed_digest.txt");
+  const recentDigest       = fs.existsSync(digestPath)
     ? fs.readFileSync(digestPath, "utf-8").split("\n").slice(-100).join("\n")
     : "";
 
-  const prompt = buildNextSprintPrompt(plan, completed, accomplishments, axisContext, recentDigest);
+  const prompt = buildNextSprintPrompt(plan, completed, accomplishments, axisContext, recentDigest, sprintObservations);
   const raw    = await callVertex(prompt, 4000);
   const parsed = repairJson(raw);
 
