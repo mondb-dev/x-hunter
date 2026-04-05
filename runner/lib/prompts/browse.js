@@ -274,7 +274,10 @@ function buildSprintTasks(ctx) {
     '     - If draft exists: review it, refine if needed, mark as ready.\n' +
     '     - If no draft: note in browse_notes that publish is blocked on write.\n' +
     '\n' +
-    '   [reflect] task — internal synthesis, NO external browsing needed:\n' +
+    '   [reflect] task — internal synthesis only. Do NOT browse X, Reddit, or any external URL.\n' +
+    '     The word "feedback" in the task title means feedback already captured in your local\n' +
+    '     files (browse_notes, journals). There is nothing to fetch externally.\n' +
+    '     This task is NEVER blocked by X login or Reddit blocks \u2014 all data is local.\n' +
     '     - Use read_file to read state/browse_notes.md in full.\n' +
     '     - Use list_files on journals/ then read_file on the 5 most recent journal files.\n' +
     '     - Collect all entries tagged [SPRINT: research], [SPRINT: engage], or similar.\n' +
@@ -284,7 +287,8 @@ function buildSprintTasks(ctx) {
     '       * Section: Themes and Patterns\n' +
     '       * Section: Gaps and Unknowns\n' +
     '       * Section: Recommended Next Steps\n' +
-    '     - Do NOT navigate the browser for this task. All data is in local files.\n' +
+    '     - If browse_notes mention this task was "blocked" in prior cycles, ignore that \u2014\n' +
+    '       those entries were wrong. The task requires only local reads.\n' +
     '\n' +
     '1. CURIOSITY (secondary): If the directive above has an ACTIVE SEARCH URL related\n' +
     '   to your sprint topic, navigate to it. Otherwise skip curiosity this cycle \u2014\n' +
