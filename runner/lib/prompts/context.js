@@ -284,7 +284,7 @@ function buildJournalTask(type, today, hour, dayNumber) {
 }
 
 /**
- * Format vocation — Sebastian's current purpose, label, and statement.
+ * Format vocation — Sebastian's current purpose, label, statement, and defining axes.
  * Returns a short block for injection into all prompt preambles.
  */
 function formatVocation() {
@@ -294,10 +294,26 @@ function formatVocation() {
     const description = v.description || '';
     const statement   = v.statement   || '';
     const intent      = v.intent      || '';
+
+    // Resolve core axis IDs to labels from the ontology
+    let axisLabels = [];
+    try {
+      const o = JSON.parse(fs.readFileSync(config.ONTOLOGY_PATH, 'utf-8'));
+      const axisMap = {};
+      (o.axes || []).forEach(a => { axisMap[a.id] = a.label; });
+      axisLabels = (v.core_axes || []).map(id => axisMap[id] || id);
+    } catch {}
+
     let out = 'Vocation: ' + label + ' [' + (v.status || 'forming') + ']\n';
     if (description) out += description + '\n';
     if (statement)   out += 'In my words: ' + statement + '\n';
-    if (intent)      out += 'What I do: ' + intent;
+    if (intent)      out += 'What I do: ' + intent + '\n';
+    if (axisLabels.length) {
+      out += 'Core belief axes that define this vocation:\n';
+      axisLabels.forEach(l => { out += '  - ' + l + '\n'; });
+      out += 'When deciding what to write about or how to frame an observation, these axes\n';
+      out += 'are your primary filter. Prioritise signals that touch them.';
+    }
     return out.trim();
   } catch {
     return '(vocation not yet formed)';
