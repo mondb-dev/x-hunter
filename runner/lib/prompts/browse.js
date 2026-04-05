@@ -234,17 +234,23 @@ function buildSprintTasks(ctx) {
     '   Work on it based on its type:\n' +
     '\n' +
     '   [research] task:\n' +
-    '     - Navigate to X search. Use 2-3 targeted queries about the PLAN TOPIC (the subject\n' +
-    '       matter of the sprint plan — e.g. key terms from the plan description or belief axes).\n' +
+    '     PRIMARY: Use web_search with 3-5 targeted queries about the PLAN TOPIC (the subject\n' +
+    '       matter of the sprint plan \u2014 e.g. key terms from the plan description or belief axes).\n' +
     '       Do NOT search for the task title itself as a search query.\n' +
-    '     - Read 5-10 posts from diverse accounts. Look for:\n' +
+    '       web_search works regardless of browser auth \u2014 always try it first.\n' +
+    '     SECONDARY: If BROWSE SOURCE above shows X is available, also navigate to X search\n' +
+    '       for 2-3 additional queries. If X shows a login page, skip browser navigation\n' +
+    '       entirely \u2014 web_search is your full research tool this cycle.\n' +
+    '     - Extract findings from 5-10 diverse sources. Look for:\n' +
     '       * Specific factual claims (with or without evidence)\n' +
     '       * Contradictions between sources\n' +
     '       * High-quality analytical threads\n' +
     '       * Primary sources or data that could anchor your analysis\n' +
     '     - For each noteworthy finding, record in browse_notes.md:\n' +
-    '       [SPRINT: research] @user: "key claim or finding" \u2014 evidence quality: high/medium/low\n' +
-    '     - If you find an especially good thread or article, save the URL for follow-up.\n' +
+    '       [SPRINT: research] source: "key claim or finding" \u2014 evidence quality: high/medium/low\n' +
+    '     - A task is only BLOCKED if both web_search AND X returned nothing relevant.\n' +
+    '       If web_search produced results, the task is IN PROGRESS, not blocked.\n' +
+    '     - If you find an especially good article, save the URL for follow-up.\n' +
     '\n' +
     '   [write] task:\n' +
     '     - Review your accumulated [SPRINT: research] entries in browse_notes.\n' +
