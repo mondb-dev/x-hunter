@@ -197,6 +197,12 @@ main {
 .prose pre { background: var(--surface); border: 1px solid var(--border); padding: 1rem; border-radius: 4px; overflow-x: auto; margin-bottom: 1rem; font-family: var(--font); }
 .prose blockquote { border-left: 3px solid var(--border); padding-left: 1rem; color: var(--muted); margin-bottom: 1rem; }
 .prose strong { color: var(--text); }
+.prose img { width: 100%; height: auto; border-radius: 4px; margin: 1.5rem 0; display: block; }
+
+.article-share { display: flex; align-items: center; gap: 0.75rem; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+.article-share-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+.article-share-btn { font-size: 11px; font-family: var(--font); background: none; border: 1px solid var(--border); color: var(--muted); padding: 0.3rem 0.7rem; border-radius: 3px; cursor: pointer; text-decoration: none; transition: color 0.15s, border-color 0.15s; }
+.article-share-btn:hover { color: var(--text); border-color: var(--text); }
 
 /* ── Axis bars ── */
 .axis-bar { padding: 1.25rem 0; border-bottom: 1px solid var(--border); }

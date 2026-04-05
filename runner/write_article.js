@@ -160,6 +160,9 @@ Write a long-form opinion article (~800-1000 words) grounded entirely in the obs
 - Close with the implication — what does this pattern mean going forward?
 - Write as Sebastian: first person, analytical, no filler phrases, no sycophancy
 - No h1 title at the start — just the article text with markdown formatting
+- At 2 natural section breaks (after a completed argument, before a new one), insert an image placeholder on its own line:
+  [IMAGE: vivid concrete scene that visually represents the adjacent argument — pixel art style, specific objects/setting, no abstract concepts]
+  The description must be a concrete visual scene (e.g. "a trading floor at night, screens showing red charts, empty chairs, scattered papers" not "the tension between X and Y").
 
 Output ONLY the article. No preamble, no "here is your article", no meta-commentary.`;
 

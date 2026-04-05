@@ -830,12 +830,15 @@ while true; do
     node "$PROJECT_ROOT/runner/write_article.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     # ── Article cover image (Imagen 4) ───────────────────────────────────────
     node "$PROJECT_ROOT/runner/article_art.js" --date "$TODAY" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
-    # Copy generated image to web/public for live serving (prebuild only runs at deploy time)
-    if [ -f "$PROJECT_ROOT/articles/images/${TODAY}.png" ]; then
-      mkdir -p "$PROJECT_ROOT/web/public/images/articles"
-      cp "$PROJECT_ROOT/articles/images/${TODAY}.png" "$PROJECT_ROOT/web/public/images/articles/${TODAY}.png"
-      echo "[run] article cover image copied to web/public/images/articles/${TODAY}.png" >> "$PROJECT_ROOT/runner/runner.log"
-    fi
+    # Copy all generated images for today (cover + inline) to web/public
+    mkdir -p "$PROJECT_ROOT/web/public/images/articles"
+    _IMG_COUNT=0
+    for _IMG in "$PROJECT_ROOT/articles/images/${TODAY}"*.png; do
+      [ -f "$_IMG" ] || continue
+      cp "$_IMG" "$PROJECT_ROOT/web/public/images/articles/"
+      _IMG_COUNT=$(( _IMG_COUNT + 1 ))
+    done
+    [ "$_IMG_COUNT" -gt 0 ] && echo "[run] copied $_IMG_COUNT article image(s) to web/public/images/articles/" >> "$PROJECT_ROOT/runner/runner.log"
     node "$PROJECT_ROOT/runner/moltbook.js" --post-article >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     # ── Tweet the Moltbook article link ──────────────────────────────────────
     # Daily block tweets need a browser — ensure it's healthy before first attempt.

@@ -1,15 +1,58 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { getAllArticles, getArticleBySlug } from "@/lib/readArticles";
+
+const SITE_URL = "https://sebastianhunter.fun";
 
 export async function generateStaticParams() {
   const articles = getAllArticles();
   return articles.map((a) => ({ slug: a.slug }));
 }
 
+export async function generateMetadata(
+  { params }: { params: Promise<{ slug: string }> }
+): Promise<Metadata> {
+  const { slug } = await params;
+  const article = await getArticleBySlug(slug);
+  if (!article) return {};
+
+  const url = `${SITE_URL}/articles/${slug}`;
+  const image = article.imageUrl ? `${SITE_URL}${article.imageUrl}` : `${SITE_URL}/pfp.svg`;
+  const description = article.excerpt || "A field report by Sebastian D. Hunter.";
+
+  return {
+    title: `${article.title} — Sebastian D. Hunter`,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      url,
+      title: article.title,
+      description,
+      images: [{ url: image, width: 1200, height: 675, alt: article.title }],
+      publishedTime: article.date,
+      authors: ["Sebastian D. Hunter"],
+      tags: article.axis ? [article.axis] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description,
+      images: [image],
+      creator: "@SebastianHunts",
+      site: "@SebastianHunts",
+    },
+  };
+}
+
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const article = await getArticleBySlug(slug);
   if (!article) notFound();
+
+  const articleUrl = `${SITE_URL}/articles/${slug}`;
+  const shareText = encodeURIComponent(`${article.title} — ${articleUrl}`);
+  const xShareUrl = `https://x.com/intent/tweet?text=${shareText}&via=SebastianHunts`;
 
   return (
     <>
@@ -41,6 +84,23 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         className="prose"
         dangerouslySetInnerHTML={{ __html: article.contentHtml }}
       />
+
+      <div className="article-share">
+        <span className="article-share-label">share</span>
+        <a
+          href={xShareUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="article-share-btn"
+        >
+          post on X
+        </a>
+        <CopyLinkButton url={articleUrl} />
+      </div>
     </>
   );
 }
+
+// ── Copy link button (client component) ──────────────────────────────────────
+
+import CopyLinkButton from "@/components/CopyLinkButton";

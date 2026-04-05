@@ -162,6 +162,67 @@ function loadArticle(date) {
   return { title, excerpt, axis, date };
 }
 
+// ── Inline image processor ─────────────────────────────────────────────────────
+
+/**
+ * Find [IMAGE: description] markers in article markdown, generate an image for
+ * each, save to articles/images/{date}-{n}.png, and rewrite the article file
+ * with proper markdown image tags.
+ *
+ * Returns the count of images generated.
+ */
+async function processInlineImages(date) {
+  const articlePath = path.join(ARTICLES_DIR, `${date}.md`);
+  if (!fs.existsSync(articlePath)) return 0;
+
+  const raw = fs.readFileSync(articlePath, "utf-8");
+  const MARKER_RE = /^\[IMAGE:\s*(.+?)\]\s*$/gm;
+  const markers = [...raw.matchAll(MARKER_RE)];
+  if (markers.length === 0) return 0;
+
+  fs.mkdirSync(IMAGES_DIR, { recursive: true });
+
+  let updated = raw;
+  let generated = 0;
+
+  for (let i = 0; i < markers.length; i++) {
+    const [fullMatch, description] = markers[i];
+    const imgName = `${date}-${i + 1}.png`;
+    const outputPath = path.join(IMAGES_DIR, imgName);
+    const webPath = `/images/articles/${imgName}`;
+
+    // Already generated — just make sure the marker is replaced
+    if (fs.existsSync(outputPath)) {
+      console.log(`[article_art] inline image ${imgName} already exists — skipping generation`);
+    } else {
+      console.log(`[article_art] generating inline image ${i + 1}/${markers.length}: ${description.slice(0, 80)}`);
+      const prompt = buildArticleArtPrompt({ title: description, scene: description, date });
+      try {
+        const buffer = await generateImage(prompt);
+        fs.writeFileSync(outputPath, buffer);
+        console.log(`[article_art] saved inline image: ${outputPath} (${(buffer.length / 1024).toFixed(0)} KB)`);
+        generated++;
+      } catch (err) {
+        console.warn(`[article_art] inline image ${i + 1} failed: ${err.message} — leaving marker`);
+        continue;
+      }
+    }
+
+    // Replace marker with markdown image tag
+    updated = updated.replace(
+      fullMatch,
+      `\n![${description.slice(0, 80)}](${webPath})\n`,
+    );
+  }
+
+  if (updated !== raw) {
+    fs.writeFileSync(articlePath, updated);
+    console.log(`[article_art] rewrote article with ${markers.length} inline image(s)`);
+  }
+
+  return generated;
+}
+
 // ── Main ───────────────────────────────────────────────────────────────────────
 
 async function main() {
@@ -174,26 +235,29 @@ async function main() {
     process.exit(1);
   }
 
-  const outputPath = path.join(IMAGES_DIR, `${dateArg}.png`);
+  fs.mkdirSync(IMAGES_DIR, { recursive: true });
 
-  if (fs.existsSync(outputPath)) {
-    console.log(`[article_art] Image already exists: ${outputPath} — skipping.`);
-    return;
+  // ── Cover image ──────────────────────────────────────────────────────────────
+  const coverPath = path.join(IMAGES_DIR, `${dateArg}.png`);
+
+  if (fs.existsSync(coverPath)) {
+    console.log(`[article_art] cover image already exists: ${coverPath} — skipping.`);
+  } else {
+    // Optional --scene "description" to override the auto-derived scene
+    const sceneIdx = args.indexOf("--scene");
+    const scene = sceneIdx !== -1 ? args[sceneIdx + 1] : undefined;
+
+    const article = { ...loadArticle(dateArg), scene };
+    console.log(`[article_art] generating cover for: ${article.title}`);
+
+    const prompt = buildArticleArtPrompt(article);
+    const buffer = await generateImage(prompt);
+    fs.writeFileSync(coverPath, buffer);
+    console.log(`[article_art] cover saved: ${coverPath} (${(buffer.length / 1024).toFixed(0)} KB)`);
   }
 
-  // Optional --scene "description" to override the auto-derived scene
-  const sceneIdx = args.indexOf("--scene");
-  const scene = sceneIdx !== -1 ? args[sceneIdx + 1] : undefined;
-
-  const article = { ...loadArticle(dateArg), scene };
-  console.log(`[article_art] Generating image for: ${article.title}`);
-
-  const prompt = buildArticleArtPrompt(article);
-  const buffer = await generateImage(prompt);
-
-  fs.mkdirSync(IMAGES_DIR, { recursive: true });
-  fs.writeFileSync(outputPath, buffer);
-  console.log(`[article_art] Saved: ${outputPath} (${(buffer.length / 1024).toFixed(0)} KB)`);
+  // ── Inline images ────────────────────────────────────────────────────────────
+  await processInlineImages(dateArg);
 }
 
 main().catch(err => {
@@ -201,4 +265,4 @@ main().catch(err => {
   process.exit(1);
 });
 
-module.exports = { buildArticleArtPrompt };
+module.exports = { buildArticleArtPrompt, processInlineImages };
