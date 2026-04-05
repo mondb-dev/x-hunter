@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-05T13:09:24.303Z",
+  "generated_at": "2026-04-05T14:49:27.011Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-05T07:19:17.638Z",
   "sources": [
@@ -7332,13 +7332,14 @@
       "entity": "Reddit",
       "kind": "forum",
       "first_seen_at": "2026-04-04T15:59:00Z",
-      "last_seen_at": "2026-04-05T13:09:24.302Z",
+      "last_seen_at": "2026-04-05T14:49:27.009Z",
       "discovery": {
-        "distinct_urls": 3,
+        "distinct_urls": 4,
         "example_urls": [
           "https://www.reddit.com/search/?q=Emphasis%20individual%20merit&sort=hot&t=week",
           "https://www.reddit.com/search/?q=Reliance%20family%20name&sort=hot&t=week",
-          "https://www.reddit.com/search/?q=Prioritization%20environmental%20conservation&sort=hot&t=week"
+          "https://www.reddit.com/search/?q=Prioritization%20environmental%20conservation&sort=hot&t=week",
+          "https://www.reddit.com/search/?q=Freedom%20Religious%20Expression&sort=hot&t=week"
         ],
         "origin_counts": {
           "ontology_evidence": 5,
@@ -7373,9 +7374,9 @@
           ]
         },
         "breadth": {
-          "score": 0.32416666666666666,
+          "score": 0.3533333333333333,
           "basis": [
-            "distinct_urls:3",
+            "distinct_urls:4",
             "distinct_axes:2",
             "origin_types:2"
           ]
@@ -7408,13 +7409,13 @@
           ]
         },
         "overall": {
-          "score": 0.23856770833333332,
-          "confidence": 0.151325,
+          "score": 0.24494791666666663,
+          "confidence": 0.17995,
           "method": "mechanical_v1",
           "basis": [
             "community_forum_pattern",
             "search_results_seen",
-            "distinct_urls:3",
+            "distinct_urls:4",
             "distinct_axes:2",
             "origin_types:2",
             "referring_accounts:0",
