@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-05T09:19:19.654Z",
+  "generated_at": "2026-04-05T11:19:21.774Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-05T07:19:17.638Z",
   "sources": [
@@ -7332,21 +7332,22 @@
       "entity": "Reddit",
       "kind": "forum",
       "first_seen_at": "2026-04-04T15:59:00Z",
-      "last_seen_at": "2026-04-05T09:19:19.653Z",
+      "last_seen_at": "2026-04-05T11:19:21.773Z",
       "discovery": {
         "distinct_urls": 2,
         "example_urls": [
-          "https://www.reddit.com/search/?q=Prioritization%20environmental%20conservation&sort=hot&t=week",
-          "https://www.reddit.com/search/?q=Political%20Dynasties%20Meritocracy&sort=hot&t=week"
+          "https://www.reddit.com/search/?q=Emphasis%20individual%20merit&sort=hot&t=week",
+          "https://www.reddit.com/search/?q=Prioritization%20environmental%20conservation&sort=hot&t=week"
         ],
         "origin_counts": {
-          "ontology_evidence": 1,
+          "ontology_evidence": 4,
           "prefetch": 1
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
         "distinct_axes": [
-          "axis_environmental_policy_v_economic_v1"
+          "axis_environmental_policy_v_economic_v1",
+          "axis_political_dynasties_meritocracy_v1"
         ]
       },
       "claims": {
@@ -7371,10 +7372,10 @@
           ]
         },
         "breadth": {
-          "score": 0.23666666666666664,
+          "score": 0.295,
           "basis": [
             "distinct_urls:2",
-            "distinct_axes:1",
+            "distinct_axes:2",
             "origin_types:2"
           ]
         },
@@ -7406,14 +7407,14 @@
           ]
         },
         "overall": {
-          "score": 0.2194270833333333,
-          "confidence": 0.11044999999999999,
+          "score": 0.2321875,
+          "confidence": 0.1227,
           "method": "mechanical_v1",
           "basis": [
             "community_forum_pattern",
             "search_results_seen",
             "distinct_urls:2",
-            "distinct_axes:1",
+            "distinct_axes:2",
             "origin_types:2",
             "referring_accounts:0",
             "origin_types:2",
