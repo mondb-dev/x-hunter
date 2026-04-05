@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-05T00:49:12.342Z",
+  "generated_at": "2026-04-05T01:19:21.515Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-04T15:29:02.608Z",
   "sources": [
@@ -764,9 +764,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-16T09:36:45.269Z",
-      "last_seen_at": "2026-03-31T23:51:41.032Z",
+      "last_seen_at": "2026-04-05T00:50:03.209Z",
       "discovery": {
-        "distinct_urls": 17,
+        "distinct_urls": 18,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -775,7 +775,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 17
+          "articles": 18
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -804,7 +804,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:17",
+            "distinct_urls:18",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -838,11 +838,11 @@
         },
         "overall": {
           "score": 0.40726562499999996,
-          "confidence": 0.476475,
+          "confidence": 0.498975,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:17",
+            "distinct_urls:18",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -6842,12 +6842,12 @@
       "entity": "Reddit",
       "kind": "forum",
       "first_seen_at": "2026-04-04T15:59:00Z",
-      "last_seen_at": "2026-04-05T00:49:12.341Z",
+      "last_seen_at": "2026-04-05T01:19:21.513Z",
       "discovery": {
         "distinct_urls": 2,
         "example_urls": [
           "https://www.reddit.com/search/?q=Prioritization%20environmental%20conservation&sort=hot&t=week",
-          "https://www.reddit.com/search/?q=Emphasis%20individual%20merit&sort=hot&t=week"
+          "https://www.reddit.com/search/?q=Reliance%20family%20name&sort=hot&t=week"
         ],
         "origin_counts": {
           "ontology_evidence": 1,
