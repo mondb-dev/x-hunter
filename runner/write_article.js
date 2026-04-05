@@ -115,11 +115,11 @@ async function callGemini(prompt) { return callVertex(prompt, 4000); }
 
   console.log(`[article] loaded ${allJournals.length} journal entries`);
 
-  // Format journals for prompt — include Arweave citation
-  const journalContext = allJournals.map(j => {
+  // Format journals for prompt — numbered so Gemini can reference by index
+  const journalContext = allJournals.map((j, i) => {
     const cite = j.tx_id
-      ? `[Source: ${j.date} h${j.hour || "?"} — https://gateway.irys.xyz/${j.tx_id}]`
-      : `[Source: ${j.date} h${j.hour || "?"}]`;
+      ? `[J${i + 1}] ${j.date} h${j.hour || "?"} — https://gateway.irys.xyz/${j.tx_id}`
+      : `[J${i + 1}] ${j.date} h${j.hour || "?"}`;
     return `${cite}\n${j.text_content.slice(0, 1200).trim()}`;
   }).join("\n\n---\n\n");
 
@@ -153,16 +153,27 @@ ${journalContext}
 ---
 
 Write a long-form opinion article (~800-1000 words) grounded entirely in the observations above. Requirements:
+
+**Structure:**
 - Open with a specific observation that crystallises the tension — not a generic statement
 - Make a clear argument. State your position directly. Do not hedge everything.
-- Cite at least 3 specific observations inline using [Journal: DATE/HOUR] format
 - Acknowledge one genuine uncertainty or counter-observation you found
 - Close with the implication — what does this pattern mean going forward?
 - Write as Sebastian: first person, analytical, no filler phrases, no sycophancy
 - No h1 title at the start — just the article text with markdown formatting
-- At 2 natural section breaks (after a completed argument, before a new one), insert an image placeholder on its own line:
-  [IMAGE: vivid concrete scene that visually represents the adjacent argument — pixel art style, specific objects/setting, no abstract concepts]
-  The description must be a concrete visual scene (e.g. "a trading floor at night, screens showing red charts, empty chairs, scattered papers" not "the tension between X and Y").
+
+**Citations — IMPORTANT:**
+- Every factual claim or referenced observation must be cited. Minimum 4 citations total.
+- For journal entries that have an Arweave URL (shown as "— https://..." in the source header): cite inline as a markdown hyperlink, e.g. [observed on Mar 20, h14](https://gateway.irys.xyz/...) — use the EXACT URL from the journal header.
+- For journal entries WITHOUT a URL: use a numbered footnote marker [^N] inline, then define it at the bottom.
+- Footnote format at article end (under a "---" divider):
+  [^1]: [Journal, DATE h?] Brief description of the observation.
+  [^2]: [Journal, DATE h?] Brief description of the observation.
+- Aim for 3–4 inline linked citations and 2–3 footnotes.
+
+**Images:**
+- At 2 natural section breaks (after a completed argument, before a new one), insert on its own line:
+  [IMAGE: vivid concrete scene that visually represents the adjacent argument — specific objects/setting, no abstract concepts]
 
 Output ONLY the article. No preamble, no "here is your article", no meta-commentary.`;
 
