@@ -280,11 +280,86 @@ function sendTest() {
   );
 }
 
+// ── Human request ────────────────────────────────────────────────────────────
+
+const HUMAN_REQUEST_PATH = path.join(
+  path.resolve(__dirname, '../..'), 'state', 'human_request.json'
+);
+const HUMAN_REQUEST_LOG_PATH = path.join(
+  path.resolve(__dirname, '../..'), 'state', 'human_request_log.json'
+);
+
+/** Cooldown: agent can only ping once per 4 hours per action_needed type */
+const HUMAN_REQUEST_COOLDOWN_MS = 4 * 60 * 60 * 1000;
+
+let lastHumanRequestAt = {};
+
+/**
+ * checkHumanRequest() — called after each cycle.
+ * If state/human_request.json exists, sends a Telegram message to the operator
+ * describing what Sebastian needs, then removes the request file.
+ *
+ * Request file format:
+ *   {
+ *     "message":      "what Sebastian needs and why",
+ *     "action_needed": "website" | "community" | "account" | "other",
+ *     "priority":     "low" | "medium" | "high",   (optional, default "medium")
+ *     "sprint_task":  "task title for context"     (optional)
+ *   }
+ */
+function checkHumanRequest() {
+  let req;
+  try {
+    req = JSON.parse(fs.readFileSync(HUMAN_REQUEST_PATH, 'utf-8'));
+  } catch {
+    return; // no request file
+  }
+
+  // Always consume the file to prevent re-firing next cycle
+  try { fs.unlinkSync(HUMAN_REQUEST_PATH); } catch {}
+
+  const action = (req.action_needed || 'other').toLowerCase();
+  const now = Date.now();
+
+  // Cooldown per action type
+  if (lastHumanRequestAt[action] && now - lastHumanRequestAt[action] < HUMAN_REQUEST_COOLDOWN_MS) {
+    console.log(`[notify] human_request cooldown active for "${action}" — skipping`);
+    return;
+  }
+  lastHumanRequestAt[action] = now;
+
+  const priority = req.priority || 'medium';
+  const priorityIcon = priority === 'high' ? '🔴' : priority === 'low' ? '🔵' : '🟡';
+  const ts = new Date().toISOString().slice(0, 19).replace('T', ' ') + ' UTC';
+
+  const lines = [
+    `<b>${priorityIcon} Sebastian needs your help</b>`,
+    `<b>Action needed:</b> ${req.action_needed || 'unspecified'}`,
+  ];
+  if (req.sprint_task) lines.push(`<b>Sprint task:</b> ${req.sprint_task}`);
+  lines.push('');
+  lines.push(req.message || '(no message)');
+  lines.push('');
+  lines.push(`<i>${ts}</i>`);
+
+  console.log(`[notify] sending human_request alert: action="${action}" priority="${priority}"`);
+  sendTelegram(lines.join('\n'));
+
+  // Append to log (non-fatal)
+  try {
+    let log = [];
+    try { log = JSON.parse(fs.readFileSync(HUMAN_REQUEST_LOG_PATH, 'utf-8')); } catch {}
+    log.push({ ...req, sent_at: new Date().toISOString() });
+    fs.writeFileSync(HUMAN_REQUEST_LOG_PATH, JSON.stringify(log.slice(-50), null, 2));
+  } catch {}
+}
+
 // ── Exports ─────────────────────────────────────────────────────────────────
 
 module.exports = {
   checkCycle,
   checkGitPush,
+  checkHumanRequest,
   sendTest,
   sendTelegram,
 };

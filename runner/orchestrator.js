@@ -689,6 +689,9 @@ function runOneCycle() {
       }
     }
 
+    // ── Human request (Sebastian flagged something needing operator action) ──
+    try { notify.checkHumanRequest(); } catch (e) { log(`human_request check failed: ${e.message}`); }
+
     // ── Cadence: self-regulated assessment after browse ──────────────────────
     try {
       cadenceAssess();
@@ -765,6 +768,9 @@ function runOneCycle() {
         log(`tool execution failed: ${e.message}`);
       }
     }
+
+    // ── Human request ─────────────────────────────────────────────────────
+    try { notify.checkHumanRequest(); } catch (e) { log(`human_request check failed: ${e.message}`); }
 
   // ── TWEET cycle ───────────────────────────────────────────────────────
   } else if (cycleType === 'TWEET') {
@@ -867,6 +873,9 @@ function runOneCycle() {
         log(`tool execution failed: ${e.message}`);
       }
     }
+
+    // ── Human request ─────────────────────────────────────────────────────
+    try { notify.checkHumanRequest(); } catch (e) { log(`human_request check failed: ${e.message}`); }
   }
 
   // ── Daily maintenance (self-gated, runs after ANY cycle type) ──────────

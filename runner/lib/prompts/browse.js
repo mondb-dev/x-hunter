@@ -230,6 +230,19 @@ function buildNormalTasks(ctx) {
     '   $prev merges the previous step result into args. The orchestrator runs tools\n' +
     '   AFTER your agent run completes. Results appear in LAST TOOL RESULT next cycle.\n' +
     '   Do NOT write tool_result.json yourself. Only request tools listed in AVAILABLE TOOLS.\n' +
+    '10. HUMAN REQUEST (use sparingly): If you are blocked on a sprint task because it\n' +
+    '   requires something only the operator can provide \u2014 a website, a community platform,\n' +
+    '   an account, a service \u2014 write state/human_request.json to send them a Telegram message.\n' +
+    '   Only use this if a sprint task genuinely cannot proceed without operator action.\n' +
+    '   Do NOT use it for X login failures, tool errors, or things you can work around.\n' +
+    '   Format:\n' +
+    '   {\n' +
+    '     "message": "what you need and why, in plain language",\n' +
+    '     "action_needed": "website" | "community" | "account" | "other",\n' +
+    '     "priority": "low" | "medium" | "high",\n' +
+    '     "sprint_task": "name of the blocked task"\n' +
+    '   }\n' +
+    '   The operator will be notified via Telegram. Cooldown: once per 4 hours per action type.\n' +
     'Next tweet cycle: ' + ctx.nextTweet + '.\n';
 }
 
@@ -329,6 +342,13 @@ function buildSprintTasks(ctx) {
     '   If X searches for the sprint topic were unproductive or returned no results, draw\n' +
     '   observations from the FEED DIGEST above instead.\n' +
     '   Do NOT write a journal entry that is solely about failed searches or blocked sprint work.\n' +
+    '6. HUMAN REQUEST: If a sprint task is genuinely blocked because it requires something\n' +
+    '   only the operator can provide (a website, community platform, account, service),\n' +
+    '   write state/human_request.json \u2014 the operator will receive a Telegram message.\n' +
+    '   Only use this for real blockers, not X login failures or tool errors.\n' +
+    '   Format: { "message": "what you need and why", "action_needed": "website"|"community"|"account"|"other",\n' +
+    '             "priority": "low"|"medium"|"high", "sprint_task": "task name" }\n' +
+    '   Cooldown: once per 4 hours per action type.\n' +
     'Next tweet cycle: ' + ctx.nextTweet + '.\n';
 }
 
