@@ -1,156 +1,164 @@
 {
-  "checked_at": "2026-04-04T00:41:33.842Z",
-  "evidence_24h": 66,
-  "unique_sources": 27,
-  "status": "clean",
-  "alerts": [],
-  "summary": "Evidence distribution looks healthy (66 entries across 27 sources, 14 axes).",
+  "checked_at": "2026-04-05T00:49:31.540Z",
+  "evidence_24h": 147,
+  "unique_sources": 19,
+  "status": "warning",
+  "alerts": [
+    {
+      "type": "source_dominance",
+      "severity": "moderate",
+      "detail": "@askfocal accounts for 29% of today's evidence (42/147)",
+      "username": "askfocal",
+      "share": 0.286
+    }
+  ],
+  "summary": "1 capture alert(s) detected:\n[MODERATE] @askfocal accounts for 29% of today's evidence (42/147)",
   "source_concentration": {
-    "ajenglish": {
-      "username": "ajenglish",
-      "count": 9,
-      "share": 0.136
+    "askfocal": {
+      "username": "askfocal",
+      "count": 42,
+      "share": 0.286
     },
-    "gbx_press": {
-      "username": "gbx_press",
-      "count": 6,
-      "share": 0.091
+    "whitehouse": {
+      "username": "whitehouse",
+      "count": 19,
+      "share": 0.129
     },
-    "ericldaugh": {
-      "username": "ericldaugh",
-      "count": 6,
-      "share": 0.091
-    },
-    "shaykhsulaiman": {
-      "username": "shaykhsulaiman",
-      "count": 5,
-      "share": 0.076
-    },
-    "usronaldcarter": {
-      "username": "usronaldcarter",
-      "count": 4,
-      "share": 0.061
+    "popbase": {
+      "username": "popbase",
+      "count": 15,
+      "share": 0.102
     },
     "marionawfal": {
       "username": "marionawfal",
-      "count": 4,
-      "share": 0.061
+      "count": 12,
+      "share": 0.082
+    },
+    "projectlincoln": {
+      "username": "projectlincoln",
+      "count": 10,
+      "share": 0.068
+    },
+    "unknown": {
+      "username": "unknown",
+      "count": 7,
+      "share": 0.048
+    },
+    "crazymoments01": {
+      "username": "crazymoments01",
+      "count": 6,
+      "share": 0.041
+    },
+    "adrianaveterin": {
+      "username": "adrianaveterin",
+      "count": 5,
+      "share": 0.034
+    },
+    "mattwallace888": {
+      "username": "mattwallace888",
+      "count": 5,
+      "share": 0.034
     },
     "nicksortor": {
       "username": "nicksortor",
-      "count": 3,
-      "share": 0.045
-    },
-    "kerryholmekb": {
-      "username": "kerryholmekb",
-      "count": 3,
-      "share": 0.045
-    },
-    "gabriele_corno": {
-      "username": "gabriele_corno",
-      "count": 2,
-      "share": 0.03
-    },
-    "currentreport1": {
-      "username": "currentreport1",
-      "count": 2,
-      "share": 0.03
+      "count": 4,
+      "share": 0.027
     }
   },
   "axis_concentration": {
-    "axis_geopolitical_rhetoric_v1": {
-      "axis_id": "axis_geopolitical_rhetoric_v1",
-      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
-      "count": 15,
-      "share": 0.227
+    "axis_ai_workflow_approach_v1": {
+      "axis_id": "axis_ai_workflow_approach_v1",
+      "label": "AI Workflow Approach: Efficiency/Automation vs. Strategic Integration",
+      "count": 41,
+      "share": 0.279
     },
-    "axis_national_sovereignty_v_intl_law_v1": {
-      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "label": "National Sovereignty vs. International Law",
-      "count": 11,
-      "share": 0.167
+    "axis_environmental_policy_v_economic_v1": {
+      "axis_id": "axis_environmental_policy_v_economic_v1",
+      "label": "Environmental Policy vs. Economic Development",
+      "count": 20,
+      "share": 0.136
+    },
+    "axis_political_moral_conduct_v1": {
+      "axis_id": "axis_political_moral_conduct_v1",
+      "label": "Political Integrity and Moral Conduct in Public Service",
+      "count": 19,
+      "share": 0.129
     },
     "axis_epistemic_integrity": {
       "axis_id": "axis_epistemic_integrity",
       "label": "Truth and Evidence in Public Discourse",
-      "count": 10,
-      "share": 0.152
-    },
-    "axis_media_integrity_v1": {
-      "axis_id": "axis_media_integrity_v1",
-      "label": "Integrity of Information and Social Media Manipulation",
-      "count": 10,
-      "share": 0.152
-    },
-    "axis_global_economic_stability_v1": {
-      "axis_id": "axis_global_economic_stability_v1",
-      "label": "Global Economic Stability and Market Volatility",
-      "count": 3,
-      "share": 0.045
-    },
-    "axis_global_power_realignments_v1": {
-      "axis_id": "axis_global_power_realignments_v1",
-      "label": "Global Power Realignments and Shifting Hegemony",
-      "count": 3,
-      "share": 0.045
-    },
-    "axis_digital_supply_chain_security": {
-      "axis_id": "axis_digital_supply_chain_security",
-      "label": "Digital Supply Chain Security and Vulnerabilities",
-      "count": 3,
-      "share": 0.045
+      "count": 15,
+      "share": 0.102
     },
     "axis_ai_societal_impact_v1": {
       "axis_id": "axis_ai_societal_impact_v1",
       "label": "Societal Impact and Ethical Concerns of AI/Robots",
-      "count": 2,
-      "share": 0.03
+      "count": 15,
+      "share": 0.102
     },
-    "axis_public_trust_safety_crisis_v1": {
-      "axis_id": "axis_public_trust_safety_crisis_v1",
-      "label": "Public Trust in Safety and Crisis Communication",
-      "count": 2,
-      "share": 0.03
+    "axis_social_welfare_v_military_spending_v1": {
+      "axis_id": "axis_social_welfare_v_military_spending_v1",
+      "label": "Social Welfare vs. Military Spending Priorities",
+      "count": 10,
+      "share": 0.068
     },
-    "axis_human_rights_exploitation_v1": {
-      "axis_id": "axis_human_rights_exploitation_v1",
-      "label": "Human Rights and Exploitation",
-      "count": 2,
-      "share": 0.03
+    "axis_religion_politics_war_v1": {
+      "axis_id": "axis_religion_politics_war_v1",
+      "label": "Religion, Politics, and War Rhetoric",
+      "count": 6,
+      "share": 0.041
+    },
+    "axis_media_integrity_v1": {
+      "axis_id": "axis_media_integrity_v1",
+      "label": "Integrity of Information and Social Media Manipulation",
+      "count": 5,
+      "share": 0.034
+    },
+    "axis_geopolitical_rhetoric_v1": {
+      "axis_id": "axis_geopolitical_rhetoric_v1",
+      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
+      "count": 4,
+      "share": 0.027
+    },
+    "axis_national_sovereignty_v_intl_law_v1": {
+      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "label": "National Sovereignty vs. International Law",
+      "count": 4,
+      "share": 0.027
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 33,
-      "share": 0.5
+      "count": 104,
+      "share": 0.707
     },
-    "triggered protests worldwide demonstrators dozens cities condemned": {
-      "cluster": "triggered protests worldwide demonstrators dozens cities condemned",
-      "count": 9,
-      "share": 0.136
-    },
-    "streets los angeles president trump signature song": {
-      "cluster": "streets los angeles president trump signature song",
-      "count": 6,
-      "share": 0.091
-    },
-    "Geopolitical Crisis Narratives": {
-      "cluster": "Geopolitical Crisis Narratives",
-      "count": 5,
-      "share": 0.076
+    "sunk iranian naval ships": {
+      "cluster": "sunk iranian naval ships",
+      "count": 19,
+      "share": 0.129
     },
     "Geopolitical News Aggregation": {
       "cluster": "Geopolitical News Aggregation",
-      "count": 4,
-      "share": 0.061
+      "count": 12,
+      "share": 0.082
+    },
+    "raised together": {
+      "cluster": "raised together",
+      "count": 6,
+      "share": 0.041
+    },
+    "president trump delivers message": {
+      "cluster": "president trump delivers message",
+      "count": 3,
+      "share": 0.02
     }
   },
   "pole_balance": {
-    "left": 25,
-    "right": 41,
+    "left": 61,
+    "right": 86,
     "neutral": 0,
-    "left_share": 0.379,
-    "right_share": 0.621
+    "left_share": 0.415,
+    "right_share": 0.585
   }
 }
