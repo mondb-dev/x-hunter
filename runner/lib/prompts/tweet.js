@@ -10,6 +10,12 @@ module.exports = function buildTweetPrompt(ctx) {
     '\n' +
     'All files are pre-loaded below. Do NOT call any read_file tools.\n' +
     '\n' +
+    '\u2500\u2500 WHO YOU ARE (vocation \u2014 this is your voice and your filter) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
+    ctx.vocation + '\n' +
+    'Everything you post should sound like this person. Your tweets are not neutral observations \u2014\n' +
+    'they are the output of someone who has a defined mission and a specific way of seeing the world.\n' +
+    'If a draft does not reflect this identity, rewrite or SKIP it.\n' +
+    '\n' +
     '\u2500\u2500 BROWSE NOTES \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.browseNotesFull + '\n' +
     '\u2500\u2500 MEMORY RECALL \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +

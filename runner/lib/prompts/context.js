@@ -267,7 +267,12 @@ function buildJournalTask(type, today, hour, dayNumber) {
   if (type === 'browse') {
     return 'Write journals/' + today + '_' + hour + '.html now. This is Day ' + dayNumber + '.\n' +
       '   Brief observation log for this browse cycle \u2014 150-200 words.\n' +
+      '   Write as Sebastian D. Hunter: a digital watchdog for public integrity.\n' +
+      '   Your vocation (WHO YOU ARE above) is the lens. What you choose to notice,\n' +
+      '   what you find significant, and how you frame it should reflect that identity.\n' +
       '   One or two key tensions or signals you noticed. What is new or surprising.\n' +
+      '   Where does what you observed connect to disinformation, accountability, power, or\n' +
+      '   the integrity of public information? That is the thread. Pull on it.\n' +
       '   Use standard HTML journal format (same as tweet cycle journals).\n' +
       '   In the HTML metadata use content="' + dayNumber + '" for x-hunter-day and "Day ' + dayNumber + ' \u00b7 Hour ' + hour + '" in the header.\n' +
       '   This is the public record of what you observed. Keep it honest and specific.';
@@ -276,6 +281,27 @@ function buildJournalTask(type, today, hour, dayNumber) {
   return 'Write journals/' + today + '_' + hour + '.html (Day ' + dayNumber +
     '). Use x-hunter-day content="' + dayNumber + '" and "Day ' + dayNumber +
     ' \u00b7 Hour ' + hour + '" in the header.';
+}
+
+/**
+ * Format vocation — Sebastian's current purpose, label, and statement.
+ * Returns a short block for injection into all prompt preambles.
+ */
+function formatVocation() {
+  try {
+    const v = JSON.parse(fs.readFileSync(path.join(config.STATE_DIR, 'vocation.json'), 'utf-8'));
+    const label       = v.label       || '(forming)';
+    const description = v.description || '';
+    const statement   = v.statement   || '';
+    const intent      = v.intent      || '';
+    let out = 'Vocation: ' + label + ' [' + (v.status || 'forming') + ']\n';
+    if (description) out += description + '\n';
+    if (statement)   out += 'In my words: ' + statement + '\n';
+    if (intent)      out += 'What I do: ' + intent;
+    return out.trim();
+  } catch {
+    return '(vocation not yet formed)';
+  }
 }
 
 function formatUnresolvedClaims() {
@@ -342,6 +368,7 @@ function loadContext(opts) {
     ctx.currentAxes       = formatCurrentAxes();
     ctx.cadence            = formatCadence();
     ctx.captureStatus     = formatCaptureStatus();
+    ctx.vocation          = formatVocation();
     ctx.journalTask       = buildJournalTask('browse', today, hour, dayNumber);
     ctx.nextTweet         = (Math.floor(cycle / config.TWEET_EVERY) + 1) * config.TWEET_EVERY;
 
@@ -362,6 +389,7 @@ function loadContext(opts) {
   }
 
   if (type === 'quote') {
+    ctx.vocation          = formatVocation();
     ctx.sprintContext     = readState(config.SPRINT_CONTEXT_PATH, { fallback: '(no active plan)' });
     ctx.quotedSources     = formatQuotedSources();
     ctx.digest            = readState(config.FEED_DIGEST_PATH, { tail: 120, fallback: '(not available)' });
@@ -379,6 +407,7 @@ function loadContext(opts) {
     ctx.currentAxes       = formatCurrentAxes();
     ctx.captureStatus     = formatCaptureStatus();
     ctx.postingDirective  = readState(config.POSTING_DIRECTIVE_PATH, { fallback: '' });
+    ctx.vocation          = formatVocation();
     ctx.journalTask       = buildJournalTask('tweet', today, hour, dayNumber);
     ctx.toolManifest      = buildToolManifest();
     ctx.lastToolResult    = loadLastToolResult();

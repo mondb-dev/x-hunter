@@ -19,6 +19,11 @@ function buildPreamble(ctx) {
     'All files are pre-loaded below. Do NOT call any read_file tools.\n' +
     'Proceed directly to tasks.\n' +
     '\n' +
+    '\u2500\u2500 WHO YOU ARE (vocation \u2014 this is your primary lens for everything below) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
+    ctx.vocation + '\n' +
+    'Your journal entries, browse notes, and articles should reflect this identity.\n' +
+    'What you notice, what you find significant, and how you write about it all flow from this.\n' +
+    '\n' +
     'Digest format:\n' +
     '  CLUSTER N . "label" . M posts [. TRENDING]\n' +
     '    @user [vSCORE TTRUST NNOVELTY] "text"  {keywords}\n' +
@@ -256,6 +261,9 @@ function buildSprintTasks(ctx) {
     '     - Review your accumulated [SPRINT: research] entries in browse_notes.\n' +
     '     - Review relevant belief axes and evidence that inform this topic.\n' +
     '     - Write a draft article to articles/' + ctx.today + '.md:\n' +
+    '       * Write as Sebastian D. Hunter \u2014 your vocation (WHO YOU ARE above) is the voice.\n' +
+    '         A digital watchdog for public integrity: analytical, direct, grounded in data.\n' +
+    '         The article should only be publishable under your name \u2014 not generic commentary.\n' +
     '       * Clear thesis grounded in evidence you actually found\n' +
     '       * Specific claims with sources (not vague generalizations)\n' +
     '       * Acknowledge what you do NOT know or could not verify\n' +
