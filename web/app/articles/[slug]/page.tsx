@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getAllArticles, getArticleBySlug } from "@/lib/readArticles";
 
 const SITE_URL = "https://sebastianhunter.fun";
@@ -79,6 +80,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           )}
         </div>
       </div>
+
+      {article.imageUrl && (
+        <div className="article-hero">
+          <Image
+            src={article.imageUrl}
+            alt={article.title}
+            width={1200}
+            height={675}
+            className="article-hero-img"
+            priority
+          />
+        </div>
+      )}
 
       <div
         className="prose"
