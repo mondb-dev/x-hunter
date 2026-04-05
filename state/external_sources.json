@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-05T22:49:36.700Z",
+  "generated_at": "2026-04-05T23:19:45.415Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-05T07:19:17.638Z",
   "sources": [
@@ -7209,14 +7209,15 @@
       "entity": "Reddit",
       "kind": "forum",
       "first_seen_at": "2026-04-04T15:59:00Z",
-      "last_seen_at": "2026-04-05T22:49:36.699Z",
+      "last_seen_at": "2026-04-05T23:19:45.413Z",
       "discovery": {
-        "distinct_urls": 4,
+        "distinct_urls": 5,
         "example_urls": [
           "https://www.reddit.com/search/?q=Emphasis%20individual%20merit&sort=hot&t=week",
           "https://www.reddit.com/search/?q=Reliance%20family%20name&sort=hot&t=week",
           "https://www.reddit.com/search/?q=Prioritization%20environmental%20conservation&sort=hot&t=week",
-          "https://www.reddit.com/search/?q=Prioritization%20free%20speech&sort=hot&t=week"
+          "https://www.reddit.com/search/?q=Prioritization%20free%20speech&sort=hot&t=week",
+          "https://www.reddit.com/search/?q=Prioritization%20protecting%20vulnerable&sort=hot&t=week"
         ],
         "origin_counts": {
           "ontology_evidence": 5,
@@ -7252,9 +7253,9 @@
           ]
         },
         "breadth": {
-          "score": 0.41333333333333333,
+          "score": 0.4425,
           "basis": [
-            "distinct_urls:4",
+            "distinct_urls:5",
             "distinct_axes:2",
             "origin_types:3"
           ]
@@ -7287,13 +7288,13 @@
           ]
         },
         "overall": {
-          "score": 0.26627604166666663,
-          "confidence": 0.20042500000000002,
+          "score": 0.27265625,
+          "confidence": 0.22904999999999998,
           "method": "mechanical_v1",
           "basis": [
             "community_forum_pattern",
             "search_results_seen",
-            "distinct_urls:4",
+            "distinct_urls:5",
             "distinct_axes:2",
             "origin_types:3",
             "referring_accounts:0",
