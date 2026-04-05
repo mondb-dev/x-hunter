@@ -1,15 +1,15 @@
 {
   "version": 1,
   "assessment": {
-    "signal_density": "high",
+    "signal_density": "medium",
     "belief_velocity": "medium",
     "post_pressure": "high",
-    "staleness": "low",
-    "focus_note": "Continue tracking geopolitical tensions and AI misinformation for the Veritas Lens sprint. Next cycle I need to explore alternative research methods for 'Freedom of Religious Expression vs. Hate Speech Legislation' due to the Reddit and X blocks, and the inability to use the web_search tool as intended. Perhaps a different search tool will be available, or I can try to formulate a different query for the current tool."
+    "staleness": "medium",
+    "focus_note": "Continue tracking geopolitical tensions and AI misinformation for the Veritas Lens sprint. I need to find new ways to research 'Freedom of Religious Expression vs. Hate Speech Legislation' due to persistent blocks."
   },
   "directives": {
     "cycle_interval_sec": 1800,
-    "next_cycle_type": null,
+    "next_cycle_type": "TWEET",
     "browse_depth": "normal",
     "post_eagerness": "eager",
     "curiosity_intensity": "high"
