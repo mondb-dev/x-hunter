@@ -828,6 +828,14 @@ while true; do
     node "$PROJECT_ROOT/runner/generate_daily_report.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     # ── Daily article: write from journals + beliefs, post to Moltbook ───────
     node "$PROJECT_ROOT/runner/write_article.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # ── Article cover image (Imagen 4) ───────────────────────────────────────
+    node "$PROJECT_ROOT/runner/article_art.js" --date "$TODAY" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # Copy generated image to web/public for live serving (prebuild only runs at deploy time)
+    if [ -f "$PROJECT_ROOT/articles/images/${TODAY}.png" ]; then
+      mkdir -p "$PROJECT_ROOT/web/public/images/articles"
+      cp "$PROJECT_ROOT/articles/images/${TODAY}.png" "$PROJECT_ROOT/web/public/images/articles/${TODAY}.png"
+      echo "[run] article cover image copied to web/public/images/articles/${TODAY}.png" >> "$PROJECT_ROOT/runner/runner.log"
+    fi
     node "$PROJECT_ROOT/runner/moltbook.js" --post-article >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     # ── Tweet the Moltbook article link ──────────────────────────────────────
     # Daily block tweets need a browser — ensure it's healthy before first attempt.
