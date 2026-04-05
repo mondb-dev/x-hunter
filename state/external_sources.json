@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-05T11:19:21.774Z",
+  "generated_at": "2026-04-05T12:14:23.262Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-05T07:19:17.638Z",
   "sources": [
@@ -7332,12 +7332,13 @@
       "entity": "Reddit",
       "kind": "forum",
       "first_seen_at": "2026-04-04T15:59:00Z",
-      "last_seen_at": "2026-04-05T11:19:21.773Z",
+      "last_seen_at": "2026-04-05T12:14:23.260Z",
       "discovery": {
-        "distinct_urls": 2,
+        "distinct_urls": 3,
         "example_urls": [
           "https://www.reddit.com/search/?q=Emphasis%20individual%20merit&sort=hot&t=week",
-          "https://www.reddit.com/search/?q=Prioritization%20environmental%20conservation&sort=hot&t=week"
+          "https://www.reddit.com/search/?q=Prioritization%20environmental%20conservation&sort=hot&t=week",
+          "https://www.reddit.com/search/?q=Political%20Dynasties%20Meritocracy&sort=hot&t=week"
         ],
         "origin_counts": {
           "ontology_evidence": 4,
@@ -7372,9 +7373,9 @@
           ]
         },
         "breadth": {
-          "score": 0.295,
+          "score": 0.32416666666666666,
           "basis": [
-            "distinct_urls:2",
+            "distinct_urls:3",
             "distinct_axes:2",
             "origin_types:2"
           ]
@@ -7407,13 +7408,13 @@
           ]
         },
         "overall": {
-          "score": 0.2321875,
-          "confidence": 0.1227,
+          "score": 0.23856770833333332,
+          "confidence": 0.151325,
           "method": "mechanical_v1",
           "basis": [
             "community_forum_pattern",
             "search_results_seen",
-            "distinct_urls:2",
+            "distinct_urls:3",
             "distinct_axes:2",
             "origin_types:2",
             "referring_accounts:0",
