@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-05T05:19:15.969Z",
+  "generated_at": "2026-04-05T06:19:16.266Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-05T05:19:17.032Z",
+  "profiled_at": "2026-04-05T06:19:17.379Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-04T00:44:06.000Z",
+      "last_seen_at": "2026-04-04T19:52:11.000Z",
       "discovery": {
-        "distinct_urls": 244,
+        "distinct_urls": 245,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,10 +384,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 221,
+          "feed_buffer": 222,
           "feed_buffer_reply": 34
         },
-        "distinct_referring_accounts": 83,
+        "distinct_referring_accounts": 84,
         "sample_referring_accounts": [
           "_yf1921",
           "abarreto33367",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:244",
+            "distinct_urls:245",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:83",
+            "referring_accounts:84",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:244",
+            "distinct_urls:245",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:83",
+            "referring_accounts:84",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -509,9 +509,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-03T22:58:39.000Z",
+      "last_seen_at": "2026-04-04T18:01:36.000Z",
       "discovery": {
-        "distinct_urls": 10,
+        "distinct_urls": 12,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,20 +520,20 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 10
+          "feed_buffer_reply": 12
         },
-        "distinct_referring_accounts": 10,
+        "distinct_referring_accounts": 12,
         "sample_referring_accounts": [
           "afk500595388855",
           "chibifanpage2",
           "cuteallthings",
           "endorfinaholic",
           "ihopwaitress74",
+          "jkeeter82",
           "leeymackk",
           "markofrom",
           "miss_patcy",
-          "mrbeen16i",
-          "udo_420"
+          "mrbeen16i"
         ],
         "distinct_axes": []
       },
@@ -558,9 +558,9 @@
           ]
         },
         "breadth": {
-          "score": 0.3516666666666667,
+          "score": 0.41,
           "basis": [
-            "distinct_urls:10",
+            "distinct_urls:12",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -568,7 +568,7 @@
         "corroboration": {
           "score": 0.7375,
           "basis": [
-            "referring_accounts:10",
+            "referring_accounts:12",
             "origin_types:1"
           ]
         },
@@ -593,15 +593,15 @@
           ]
         },
         "overall": {
-          "score": 0.45544270833333333,
-          "confidence": 0.590225,
+          "score": 0.468203125,
+          "confidence": 0.602475,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:10",
+            "distinct_urls:12",
             "distinct_axes:0",
             "origin_types:1",
-            "referring_accounts:10",
+            "referring_accounts:12",
             "origin_types:1",
             "track_record_unavailable"
           ]
@@ -4494,20 +4494,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.36,
           "confidence": 0.65,
@@ -4520,6 +4506,20 @@
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -4551,6 +4551,250 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "wsj.com",
+      "entity": "Wsj",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-05T05:24:00.718Z",
+      "last_seen_at": "2026-04-05T05:24:00.718Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "wsj"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-05T06:19:16.709Z",
+        "homepage_url": "https://wsj.com/",
+        "example_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
+        "homepage_status": 401,
+        "example_status": 401,
+        "homepage_final_url": "https://www.wsj.com/",
+        "example_final_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
+        "homepage_content_type": "text/html;charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "steampowered.com",
+      "entity": "Steampowered",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-04T23:34:51.000Z",
+      "last_seen_at": "2026-04-04T23:34:51.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "sid_rpg"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.36,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:12",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-05T06:19:17.379Z",
+        "homepage_url": "https://steampowered.com/",
+        "example_url": "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://store.steampowered.com/",
+        "example_final_url": "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 8,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 12,
           "opinion_marker": false
         }
       }
@@ -6964,16 +7208,14 @@
       "entity": "Reddit",
       "kind": "forum",
       "first_seen_at": "2026-04-04T15:59:00Z",
-      "last_seen_at": "2026-04-05T05:19:15.967Z",
+      "last_seen_at": "2026-04-04T15:59:00Z",
       "discovery": {
-        "distinct_urls": 2,
+        "distinct_urls": 1,
         "example_urls": [
-          "https://www.reddit.com/search/?q=Prioritization%20environmental%20conservation&sort=hot&t=week",
-          "https://www.reddit.com/search/?q=Collate%20All%20Feedback%20and%20Learnings&sort=hot&t=week"
+          "https://www.reddit.com/search/?q=Prioritization%20environmental%20conservation&sort=hot&t=week"
         ],
         "origin_counts": {
-          "ontology_evidence": 1,
-          "prefetch": 1
+          "ontology_evidence": 1
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -7003,18 +7245,18 @@
           ]
         },
         "breadth": {
-          "score": 0.23666666666666664,
+          "score": 0.1475,
           "basis": [
-            "distinct_urls:2",
+            "distinct_urls:1",
             "distinct_axes:1",
-            "origin_types:2"
+            "origin_types:1"
           ]
         },
         "corroboration": {
-          "score": 0.175,
+          "score": 0.0875,
           "basis": [
             "referring_accounts:0",
-            "origin_types:2"
+            "origin_types:1"
           ]
         },
         "track_record": {
@@ -7038,17 +7280,17 @@
           ]
         },
         "overall": {
-          "score": 0.2194270833333333,
-          "confidence": 0.11044999999999999,
+          "score": 0.19171874999999997,
+          "confidence": 0.06135,
           "method": "mechanical_v1",
           "basis": [
             "community_forum_pattern",
             "search_results_seen",
-            "distinct_urls:2",
+            "distinct_urls:1",
             "distinct_axes:1",
-            "origin_types:2",
+            "origin_types:1",
             "referring_accounts:0",
-            "origin_types:2",
+            "origin_types:1",
             "track_record_unavailable"
           ]
         }
