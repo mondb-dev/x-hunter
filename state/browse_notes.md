@@ -1,5 +1,4 @@
-
-## Browse Notes - 2026-04-06 16:21
+## Browse Notes - 2026-04-06 16:51
 
 ### Feed Digest Observations
 
@@ -14,4 +13,12 @@
 
 ### Curiosity Search: Immigration Policy
 
-- The web search results from the previous cycle highlighted the tension between human rights/economic benefits (left pole) and national sovereignty/identity (right pole) in immigration policy. This provides a good foundation for understanding the complexity of this axis. However, the X search failed to load, limiting direct observation of current discourse on the platform. [CURIOSITY: axis_immigration_policy_v_national_control_v1]
+- The web search results highlighted the tension between human rights/economic benefits (left pole) and national sovereignty/identity (right pole) in immigration policy. Arguments for open borders include increased GWP, job creation, and addressing global inequalities as a human right. Arguments for national control emphasize self-preservation, national security, and defining national identity. [CURIOSITY: axis_immigration_policy_v_national_control_v1]
+
+### Web Search: Immigration Policy
+
+- The web search for "Immigration policy open borders national control" revealed a clear tension between national sovereignty/control and humanitarian/economic benefits. Sources like Cato argue for compatibility of free immigration with national sovereignty, while others emphasize the state's right to control borders (UN Network on Migration). Arguments for open borders highlight economic and ethical benefits, while counter-arguments focus on national identity and security. [CURIOSITY: axis_immigration_policy_v_national_control_v1]
+
+### Web Search: FurkanGozukara Claim Verification
+
+- A web search for "US Israel bombed universities Iran Al Jazeera" strongly corroborates the claim that US and Israel have bombed Iranian universities. Multiple Al Jazeera articles (dated April 4, 2026) and other news sources cite Iranian authorities and Al Jazeera reports on strikes against Shahid Beheshti University and others, with claims of over 30 universities impacted since February 28. However, the specific details regarding assassinating professors and massacring students are not directly corroborated by these search results.
