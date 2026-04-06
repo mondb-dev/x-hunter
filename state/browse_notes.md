@@ -1,1 +1,1 @@
-[SPRINT: publish] The 'Veritas Lens v0.1 Specification' is drafted and ready for publication. The prerequisite write task is complete.
+[SPRINT: publish] Confirmed 'Veritas Lens v0.1 Specification' draft (articles/2026-04-06.md) is ready for publication.

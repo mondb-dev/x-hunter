@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-06T05:06:29.793Z",
+  "generated_at": "2026-04-06T06:06:31.216Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-06T05:06:33.940Z",
+  "profiled_at": "2026-04-06T06:06:37.588Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -509,9 +509,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-05T16:05:26.000Z",
+      "last_seen_at": "2026-04-06T05:41:29.732Z",
       "discovery": {
-        "distinct_urls": 14,
+        "distinct_urls": 15,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,9 +520,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 14
+          "feed_buffer_reply": 14,
+          "feed_buffer": 1
         },
-        "distinct_referring_accounts": 14,
+        "distinct_referring_accounts": 15,
         "sample_referring_accounts": [
           "afk500595388855",
           "bitcoinwealth",
@@ -530,10 +531,10 @@
           "cuteallthings",
           "endorfinaholic",
           "greglions",
+          "grok",
           "ihopwaitress74",
           "jkeeter82",
-          "leeymackk",
-          "markofrom"
+          "leeymackk"
         ],
         "distinct_axes": []
       },
@@ -558,18 +559,18 @@
           ]
         },
         "breadth": {
-          "score": 0.41,
+          "score": 0.47,
           "basis": [
-            "distinct_urls:14",
+            "distinct_urls:15",
             "distinct_axes:0",
-            "origin_types:1"
+            "origin_types:2"
           ]
         },
         "corroboration": {
-          "score": 0.7375,
+          "score": 0.825,
           "basis": [
-            "referring_accounts:14",
-            "origin_types:1"
+            "referring_accounts:15",
+            "origin_types:2"
           ]
         },
         "track_record": {
@@ -593,16 +594,16 @@
           ]
         },
         "overall": {
-          "score": 0.468203125,
-          "confidence": 0.602475,
+          "score": 0.48953125,
+          "confidence": 0.62295,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:14",
+            "distinct_urls:15",
             "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:14",
-            "origin_types:1",
+            "origin_types:2",
+            "referring_accounts:15",
+            "origin_types:2",
             "track_record_unavailable"
           ]
         }
@@ -3673,7 +3674,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-03T04:31:22.533Z",
+        "fetched_at": "2026-04-06T05:36:30.906Z",
         "homepage_url": "https://app.link/",
         "example_url": "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
         "homepage_status": 404,
@@ -3795,7 +3796,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-03T05:01:43.490Z",
+        "fetched_at": "2026-04-06T05:36:31.790Z",
         "homepage_url": "https://manduka.com/",
         "example_url": "https://www.manduka.com/products/manduka-pro-yoga-mat?utm_source=twitter&utm_medium=cpc&utm_campaign=xconvert&utm_content=PRO+Mat+-+Rooibos+1x1&twclid=2c1i50hvb8z81u6asprj4f4oqt",
         "homepage_status": 200,
@@ -3917,7 +3918,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-03T05:01:45.402Z",
+        "fetched_at": "2026-04-06T05:36:34.567Z",
         "homepage_url": "https://nextinvestors.com/",
         "example_url": "https://nextinvestors.com/articles/rml-tungsten-price-running-high-grade-tungsten-sitting-in-stockpiles-plus-gold-drilling-in-may/?twclid=29vvkujdwopqjncmmhre6nbvtf",
         "homepage_status": 200,
@@ -4039,7 +4040,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-03T05:01:45.639Z",
+        "fetched_at": "2026-04-06T05:36:34.801Z",
         "homepage_url": "https://scitools.com/",
         "example_url": "https://scitools.com/codecheck?xad=codecheck&twclid=23owlb2i7ei44kgcykku0zs4en",
         "homepage_status": 200,
@@ -4925,6 +4926,128 @@
       }
     },
     {
+      "domain": "aikido.dev",
+      "entity": "Aikido Dev",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-06T05:21:30.007Z",
+      "last_seen_at": "2026-04-06T05:21:30.007Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.aikido.dev/attack/infinite?utm_source=twitter&utm_medium=paidsocial&utm_campaign=US_tofu&utm_content=2026-02-26-Mack-Infinte-2-A&twclid=28a2h7kzzful35m0kfwtl23x0c"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "aikidosecurity"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.45999999999999996,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:10",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-06T06:06:34.828Z",
+        "homepage_url": "https://aikido.dev/",
+        "example_url": "https://www.aikido.dev/attack/infinite?utm_source=twitter&utm_medium=paidsocial&utm_campaign=US_tofu&utm_content=2026-02-26-Mack-Infinte-2-A&twclid=28a2h7kzzful35m0kfwtl23x0c",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.aikido.dev/",
+        "example_final_url": "https://www.aikido.dev/attack/infinite?utm_source=twitter&utm_medium=paidsocial&utm_campaign=US_tofu&utm_content=2026-02-26-Mack-Infinte-2-A&twclid=28a2h7kzzful35m0kfwtl23x0c",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 10,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "iranintl.com",
       "entity": "Iranintl",
       "kind": "unknown",
@@ -5014,7 +5137,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-03T05:31:20.099Z",
+        "fetched_at": "2026-04-06T06:06:35.536Z",
         "homepage_url": "https://iranintl.com/",
         "example_url": "https://www.iranintl.com/en/202603269573",
         "homepage_status": 200,
@@ -5134,7 +5257,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-03T05:31:20.643Z",
+        "fetched_at": "2026-04-06T06:06:36.105Z",
         "homepage_url": "https://org.in/",
         "example_url": "https://downtoearth.org.in/governance/as-told-to-parliament-march-11-2026-country-making-efforts-to-strengthen-domestic-rare-earth-",
         "homepage_status": null,
@@ -5234,7 +5357,7 @@
             "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:26",
+            "outbound_links:27",
             "opinion_marker:false"
           ]
         },
@@ -5254,12 +5377,12 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-03T05:31:22.587Z",
+        "fetched_at": "2026-04-06T06:06:37.588Z",
         "homepage_url": "https://aje.news/",
         "example_url": "http://aje.news/hp81ag",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://login.bl.ink/login?state=hKFo2SBoeDFpdE54UU5wSFphVmd0SHg2T19KLUpjTTJJcll5WKFupWxvZ2luo3RpZNkgMVpnV1lCXzNkdW9GaUZpWUlfYUtncnFVbnJkeXA2azGjY2lk2SBURWV3Rm1nOVI4Vjl2TDdYakhYOVhZM0x0eDRJdVZaMA&client=TEewFmg9R8V9vL7XjHX9XY3Ltx4IuVZ0&protocol=oauth2&scope=openid%20profile%20name%20email%20email_verified&audience=https%3A%2F%2Faj%2Fapi%2Fv3%2F&response_mode=query&response_type=code&redirect_uri=https%3A%2F%2Faj.bl.ink%2Fauthenticated&host=aj.bl.ink&reset_password_link=aj.bl.ink%2Freset_password&show_reset_password=false&logo_uri=https%3A%2F%2Fblink-logos.s3.amazonaws.com%2Faj.bl.ink.png&nonce=db45a5d4d4cb64ef52249860cfde7cab",
+        "homepage_final_url": "https://login.bl.ink/login?state=hKFo2SBQUHR4bkpFLWxnMTJuU1dnUm1BZ291Ukt1QWhzTHJNeKFupWxvZ2luo3RpZNkgLVk3Z2diUlROdktBRzVMMTBwRUZLRXdCcmpqYWNLcDejY2lk2SBURWV3Rm1nOVI4Vjl2TDdYakhYOVhZM0x0eDRJdVZaMA&client=TEewFmg9R8V9vL7XjHX9XY3Ltx4IuVZ0&protocol=oauth2&scope=openid%20profile%20name%20email%20email_verified&audience=https%3A%2F%2Faj%2Fapi%2Fv3%2F&response_mode=query&response_type=code&redirect_uri=https%3A%2F%2Faj.bl.ink%2Fauthenticated&host=aj.bl.ink&reset_password_link=aj.bl.ink%2Freset_password&show_reset_password=false&logo_uri=https%3A%2F%2Fblink-logos.s3.amazonaws.com%2Faj.bl.ink.png&nonce=28c63671437554305b05cc49318e6c3b",
         "example_final_url": "https://www.aljazeera.com/news/liveblog/2026/3/22/iran-war-live-trump-threatens-attacks-on-power-plants-over-hormuz-strait?update=4424917",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
@@ -5280,7 +5403,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 26,
+          "outbound_links_count": 27,
           "opinion_marker": false
         }
       }
