@@ -315,7 +315,7 @@ const TOOL_EXECUTORS = {
         },
         body: JSON.stringify({
           contents: [{ role: 'user', parts: [{ text: `Search the web for: ${query}\n\nReturn the top 5-10 results with titles, URLs, and brief descriptions.` }] }],
-          tools: [{ googleSearchRetrieval: { dynamicRetrievalConfig: { mode: 'MODE_DYNAMIC', dynamicThreshold: 0.0 } } }],
+          tools: [{ google_search: {} }],
           generationConfig: { temperature: 0.1, maxOutputTokens: 2000, thinkingConfig: { thinkingBudget: 0 } },
         }),
       });

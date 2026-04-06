@@ -111,8 +111,32 @@ function reports() {
   // Posts quality assessment (LLM-assisted)
   runScript('posts_assessment.js');
 
-  // Write article from journals + beliefs, post to Moltbook
+  // Write article from journals + beliefs, generate cover art, post to Moltbook
   runScript('write_article.js');
+
+  // Article cover image (Imagen 4) + inline images
+  const today = new Date().toISOString().slice(0, 10);
+  runScript('article_art.js', `--date ${today}`);
+
+  // Copy generated images to web/public for the website
+  const imgSrc = path.join(config.PROJECT_ROOT, 'articles', 'images');
+  const imgDst = path.join(config.PROJECT_ROOT, 'web', 'public', 'images', 'articles');
+  try {
+    fs.mkdirSync(imgDst, { recursive: true });
+    let copied = 0;
+    if (fs.existsSync(imgSrc)) {
+      for (const f of fs.readdirSync(imgSrc)) {
+        if (f.startsWith(today) && f.endsWith('.png')) {
+          fs.copyFileSync(path.join(imgSrc, f), path.join(imgDst, f));
+          copied++;
+        }
+      }
+    }
+    if (copied > 0) log(`copied ${copied} article image(s) to web/public/images/articles/`);
+  } catch (err) {
+    log(`image copy failed: ${err.message}`);
+  }
+
   runScript('moltbook.js', '--post-article');
 
   // Daily process reflection — may write a new META proposal if a concrete gap emerged
