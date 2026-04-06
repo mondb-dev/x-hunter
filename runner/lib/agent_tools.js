@@ -141,14 +141,24 @@ const TOOL_EXECUTORS = {
     if (!url) return 'Error: url is required';
     log(`navigate → ${url}`);
     try {
+      // Skip goto if already at this URL — avoids triggering rate-limits on
+      // X search when the page was preloaded and the agent navigates again.
+      const currentUrl = ctx.page.url();
+      let alreadyHere = false;
       try {
-        await ctx.page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30_000 });
-      } catch (gotoErr) {
-        // X.com SPA replaces the main frame during navigation — puppeteer loses the
-        // original frame reference and throws "detached Frame". The navigation still
-        // completes; ignore this specific error and continue.
-        if (!gotoErr.message.includes('detached Frame') && !gotoErr.message.includes('detached frame')) {
-          throw gotoErr;
+        alreadyHere = currentUrl && new URL(currentUrl).href === new URL(url).href;
+      } catch {}
+
+      if (!alreadyHere) {
+        try {
+          await ctx.page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+        } catch (gotoErr) {
+          // X.com SPA replaces the main frame during navigation — puppeteer loses the
+          // original frame reference and throws "detached Frame". The navigation still
+          // completes; ignore this specific error and continue.
+          if (!gotoErr.message.includes('detached Frame') && !gotoErr.message.includes('detached frame')) {
+            throw gotoErr;
+          }
         }
       }
       // Wait a bit for dynamic content
