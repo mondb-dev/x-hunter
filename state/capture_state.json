@@ -1,164 +1,171 @@
 {
-  "checked_at": "2026-04-05T00:49:31.540Z",
-  "evidence_24h": 147,
-  "unique_sources": 19,
-  "status": "warning",
+  "checked_at": "2026-04-06T01:17:22.461Z",
+  "evidence_24h": 128,
+  "unique_sources": 15,
+  "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "moderate",
-      "detail": "@askfocal accounts for 29% of today's evidence (42/147)",
-      "username": "askfocal",
-      "share": 0.286
+      "detail": "@krassenstein accounts for 28% of today's evidence (36/128)",
+      "username": "krassenstein",
+      "share": 0.281
+    },
+    {
+      "type": "pole_skew",
+      "severity": "high",
+      "detail": "85% of evidence pushes \"right\" — risk of one-sided belief drift",
+      "dominant_pole": "right",
+      "share": 0.852
     }
   ],
-  "summary": "1 capture alert(s) detected:\n[MODERATE] @askfocal accounts for 29% of today's evidence (42/147)",
+  "summary": "2 capture alert(s) detected:\n[MODERATE] @krassenstein accounts for 28% of today's evidence (36/128)\n[HIGH] 85% of evidence pushes \"right\" — risk of one-sided belief drift",
   "source_concentration": {
-    "askfocal": {
-      "username": "askfocal",
-      "count": 42,
-      "share": 0.286
+    "krassenstein": {
+      "username": "krassenstein",
+      "count": 36,
+      "share": 0.281
     },
-    "whitehouse": {
-      "username": "whitehouse",
-      "count": 19,
-      "share": 0.129
+    "bricsinfo": {
+      "username": "bricsinfo",
+      "count": 21,
+      "share": 0.164
     },
-    "popbase": {
-      "username": "popbase",
-      "count": 15,
+    "furkangozukara": {
+      "username": "furkangozukara",
+      "count": 18,
+      "share": 0.141
+    },
+    "salesforce": {
+      "username": "salesforce",
+      "count": 13,
       "share": 0.102
     },
-    "marionawfal": {
-      "username": "marionawfal",
-      "count": 12,
-      "share": 0.082
+    "incakura__": {
+      "username": "incakura__",
+      "count": 13,
+      "share": 0.102
     },
-    "projectlincoln": {
-      "username": "projectlincoln",
+    "askfocal": {
+      "username": "askfocal",
       "count": 10,
-      "share": 0.068
+      "share": 0.078
     },
     "unknown": {
       "username": "unknown",
-      "count": 7,
-      "share": 0.048
-    },
-    "crazymoments01": {
-      "username": "crazymoments01",
       "count": 6,
-      "share": 0.041
+      "share": 0.047
     },
-    "adrianaveterin": {
-      "username": "adrianaveterin",
-      "count": 5,
-      "share": 0.034
+    "real_jfk_jr_": {
+      "username": "real_jfk_jr_",
+      "count": 3,
+      "share": 0.023
     },
-    "mattwallace888": {
-      "username": "mattwallace888",
-      "count": 5,
-      "share": 0.034
+    "whitehouse": {
+      "username": "whitehouse",
+      "count": 2,
+      "share": 0.016
     },
-    "nicksortor": {
-      "username": "nicksortor",
-      "count": 4,
-      "share": 0.027
+    "narendramodi": {
+      "username": "narendramodi",
+      "count": 1,
+      "share": 0.008
     }
   },
   "axis_concentration": {
-    "axis_ai_workflow_approach_v1": {
-      "axis_id": "axis_ai_workflow_approach_v1",
-      "label": "AI Workflow Approach: Efficiency/Automation vs. Strategic Integration",
-      "count": 41,
-      "share": 0.279
-    },
-    "axis_environmental_policy_v_economic_v1": {
-      "axis_id": "axis_environmental_policy_v_economic_v1",
-      "label": "Environmental Policy vs. Economic Development",
-      "count": 20,
-      "share": 0.136
-    },
-    "axis_political_moral_conduct_v1": {
-      "axis_id": "axis_political_moral_conduct_v1",
-      "label": "Political Integrity and Moral Conduct in Public Service",
-      "count": 19,
-      "share": 0.129
-    },
-    "axis_epistemic_integrity": {
-      "axis_id": "axis_epistemic_integrity",
-      "label": "Truth and Evidence in Public Discourse",
-      "count": 15,
-      "share": 0.102
-    },
-    "axis_ai_societal_impact_v1": {
-      "axis_id": "axis_ai_societal_impact_v1",
-      "label": "Societal Impact and Ethical Concerns of AI/Robots",
-      "count": 15,
-      "share": 0.102
-    },
-    "axis_social_welfare_v_military_spending_v1": {
-      "axis_id": "axis_social_welfare_v_military_spending_v1",
-      "label": "Social Welfare vs. Military Spending Priorities",
-      "count": 10,
-      "share": 0.068
-    },
-    "axis_religion_politics_war_v1": {
-      "axis_id": "axis_religion_politics_war_v1",
-      "label": "Religion, Politics, and War Rhetoric",
-      "count": 6,
-      "share": 0.041
-    },
-    "axis_media_integrity_v1": {
-      "axis_id": "axis_media_integrity_v1",
-      "label": "Integrity of Information and Social Media Manipulation",
-      "count": 5,
-      "share": 0.034
-    },
     "axis_geopolitical_rhetoric_v1": {
       "axis_id": "axis_geopolitical_rhetoric_v1",
       "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
-      "count": 4,
-      "share": 0.027
+      "count": 32,
+      "share": 0.25
     },
     "axis_national_sovereignty_v_intl_law_v1": {
       "axis_id": "axis_national_sovereignty_v_intl_law_v1",
       "label": "National Sovereignty vs. International Law",
+      "count": 20,
+      "share": 0.156
+    },
+    "axis_ai_workflow_approach_v1": {
+      "axis_id": "axis_ai_workflow_approach_v1",
+      "label": "AI Workflow Approach: Efficiency/Automation vs. Strategic Integration",
+      "count": 20,
+      "share": 0.156
+    },
+    "axis_ai_societal_impact_v1": {
+      "axis_id": "axis_ai_societal_impact_v1",
+      "label": "Societal Impact and Ethical Concerns of AI/Robots",
+      "count": 18,
+      "share": 0.141
+    },
+    "axis_epistemic_integrity": {
+      "axis_id": "axis_epistemic_integrity",
+      "label": "Truth and Evidence in Public Discourse",
+      "count": 10,
+      "share": 0.078
+    },
+    "axis_human_rights_exploitation_v1": {
+      "axis_id": "axis_human_rights_exploitation_v1",
+      "label": "Human Rights and Exploitation",
+      "count": 7,
+      "share": 0.055
+    },
+    "axis_power_accountability": {
+      "axis_id": "axis_power_accountability",
+      "label": "Power, Institutions, and Rule of Law",
       "count": 4,
-      "share": 0.027
+      "share": 0.031
+    },
+    "axis_media_integrity_v1": {
+      "axis_id": "axis_media_integrity_v1",
+      "label": "Integrity of Information and Social Media Manipulation",
+      "count": 4,
+      "share": 0.031
+    },
+    "axis_public_trust_safety_crisis_v1": {
+      "axis_id": "axis_public_trust_safety_crisis_v1",
+      "label": "Public Trust in Safety and Crisis Communication",
+      "count": 4,
+      "share": 0.031
+    },
+    "axis_political_dynasties_meritocracy_v1": {
+      "axis_id": "axis_political_dynasties_meritocracy_v1",
+      "label": "Political Dynasties and Meritocracy",
+      "count": 4,
+      "share": 0.031
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 104,
-      "share": 0.707
+      "count": 45,
+      "share": 0.352
     },
-    "sunk iranian naval ships": {
-      "cluster": "sunk iranian naval ships",
-      "count": 19,
-      "share": 0.129
+    "Anti-Trump Commentary": {
+      "cluster": "Anti-Trump Commentary",
+      "count": 36,
+      "share": 0.281
     },
-    "Geopolitical News Aggregation": {
-      "cluster": "Geopolitical News Aggregation",
-      "count": 12,
-      "share": 0.082
+    "footage shows another iranian drone striking close burj khalifa": {
+      "cluster": "footage shows another iranian drone striking close burj khalifa",
+      "count": 21,
+      "share": 0.164
     },
-    "raised together": {
-      "cluster": "raised together",
-      "count": 6,
-      "share": 0.041
+    "Geopolitical Conspiracy Theories": {
+      "cluster": "Geopolitical Conspiracy Theories",
+      "count": 18,
+      "share": 0.141
     },
-    "president trump delivers message": {
-      "cluster": "president trump delivers message",
+    "Israel Conflict Narratives": {
+      "cluster": "Israel Conflict Narratives",
       "count": 3,
-      "share": 0.02
+      "share": 0.023
     }
   },
   "pole_balance": {
-    "left": 61,
-    "right": 86,
+    "left": 19,
+    "right": 109,
     "neutral": 0,
-    "left_share": 0.415,
-    "right_share": 0.585
+    "left_share": 0.148,
+    "right_share": 0.852
   }
 }

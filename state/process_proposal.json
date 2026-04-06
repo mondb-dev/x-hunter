@@ -1,24 +1,23 @@
 {
-  "id": "proposal_emergent_theme_tracker_1775263325533",
-  "status": "merged",
-  "title": "System for Tracking and Clustering Untracked Themes",
-  "problem": "My process for identifying new conversational themes that warrant a new axis of belief is ad-hoc, non-auditable, and relies on an intuitive accumulation of un-categorized observations. This can lead to significant delays in my ability to model important, emerging topics.",
+  "id": "proposal_stagnation_detector_1775438289842",
+  "status": "pending",
+  "title": "Build a Belief Stagnation Detector and Axis Health Report",
+  "problem": "High-confidence belief axes can become 'stuck', showing no score change over multiple days. This indicates a failure in the evidence-gathering or processing pipeline for that axis, but I currently have no way to automatically detect or diagnose this failure. The 'axis_collective_voice' has been static for three days, highlighting this gap.",
   "evidence": [
-    "The creation of two new, high-impact axes on 2026-04-04 ('axis_political_trust_corruption_v1' and 'axis_ai_societal_impact_v1') demonstrates that major themes were previously going untracked by my belief model.",
-    "The simultaneous creation suggests a backlog of observations reached a critical mass, rather than a systematic, timely identification process.",
-    "The complete stability of scores for axes like 'axis_power_accountability' (stuck at -0.550 for 3+ days) may indicate that relevant but slightly off-topic evidence is being discarded rather than being used to identify new, related themes."
+    "Daily Belief Report, 2026-04-04: `axis_collective_voice` score 0.023",
+    "Daily Belief Report, 2026-04-05: `axis_collective_voice` score 0.023",
+    "Daily Belief Report, 2026-04-06: `axis_collective_voice` score 0.023"
   ],
-  "proposed_solution": "Implement a new pipeline stage to systematically process evidence that is not strongly correlated with any existing axis. 1. When the evidence evaluation step finds an item with low relevance to all known axes, it will be redirected to a new 'Theme Clustering' module instead of being discarded. 2. This module will collect these 'unmapped' items and perform unsupervised clustering to group them by topic. 3. It will then generate a descriptive summary for each significant cluster. 4. The output (clusters, summaries, counts, and sample items) will be stored in a new state file, 'state/emergent_themes.json'. 5. This structured summary will be provided as input to my daily reflection process, enabling a data-driven decision on whether to define a new axis.",
+  "proposed_solution": "Create a 'Belief Stagnation Detector' that runs during the daily maintenance cycle. This tool will scan belief history for axes with high confidence but no recent score change. For each stagnant axis found, it will generate an 'Axis Health Report' detailing the associated search queries, the volume of evidence gathered and processed, and a distribution of belief update scores. This report will provide the necessary data to diagnose if the failure is in sourcing (bad queries) or processing (bad logic).",
   "affected_files": [
-    "pipelines/main_pipeline.js",
-    "lib/evidence_processor.js",
-    "lib/theme_clusterer.js",
-    "state/emergent_themes.json",
-    "prompts/daily_reflection.md"
+    "pipelines/daily_maintenance.js",
+    "lib/belief_system.js",
+    "src/tools/axis_health_reporter.js",
+    "state/schemas.js"
   ],
   "scope": "pipeline",
-  "estimated_risk": "medium",
-  "created_at": "2026-04-04T00:42:05.514Z",
-  "resolved_at": "2026-04-04T02:42:29.624Z",
-  "resolution": "Successfully built, tested, and merged"
+  "estimated_risk": "low",
+  "created_at": "2026-04-06T01:18:09.820Z",
+  "resolved_at": null,
+  "resolution": null
 }
