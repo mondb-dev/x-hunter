@@ -51,8 +51,6 @@ export default async function JournalEntryPage({
           {entry.arweaveUrl && (
             <a
               href={entry.arweaveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
               style={{ marginLeft: "auto", fontSize: "11px", color: "var(--muted)", fontFamily: "monospace" }}
               title="Permanent copy on Arweave"
             >

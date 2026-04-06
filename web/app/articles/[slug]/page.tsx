@@ -73,7 +73,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             </a>
           )}
           {article.arweaveUrl && (
-            <a href={article.arweaveUrl} target="_blank" rel="noopener noreferrer"
+            <a href={article.arweaveUrl}
                style={{ color: "var(--muted)", textDecoration: "underline" }}>
               permanent record on Arweave →
             </a>
