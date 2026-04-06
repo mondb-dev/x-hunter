@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-06T17:21:44.835Z",
+  "generated_at": "2026-04-06T18:21:44.875Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-06T14:36:39.907Z",
   "sources": [
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-06T06:46:29.000Z",
+      "last_seen_at": "2026-04-06T15:57:07.000Z",
       "discovery": {
-        "distinct_urls": 251,
+        "distinct_urls": 252,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -385,9 +385,9 @@
         ],
         "origin_counts": {
           "feed_buffer": 226,
-          "feed_buffer_reply": 36
+          "feed_buffer_reply": 37
         },
-        "distinct_referring_accounts": 86,
+        "distinct_referring_accounts": 87,
         "sample_referring_accounts": [
           "_yf1921",
           "abarreto33367",
@@ -395,10 +395,10 @@
           "adityarajkaul",
           "ahmed_4846",
           "ajenglish",
+          "al_falkenberg",
           "alice_kanyana",
           "alphatrades27",
-          "asifali_haider",
-          "atif_hussain72"
+          "asifali_haider"
         ],
         "distinct_axes": []
       },
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:251",
+            "distinct_urls:252",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:86",
+            "referring_accounts:87",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:251",
+            "distinct_urls:252",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:86",
+            "referring_accounts:87",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -761,6 +761,134 @@
       }
     },
     {
+      "domain": "google.com",
+      "entity": "Google",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-01T05:04:23.454Z",
+      "last_seen_at": "2026-04-06T17:51:00Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHKak43YlGcz5X6qUoELjZuRUqVVq-wkNdb94fpIPeRwd3SLB4MnRt4IMw2qmWiUIiYxlw4xKZLO1N6L9zWCpsbkFH-BFk43pn4XQI1j5FiGCiVr5TmzzTqO8ZlEeRhM7RD78ukDox2YtOoj2exNowNHG2kwaG5szzv8M=",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCux0Esh3Wf46OpPP7Ecjy_Uwoust5YUxh9Q2bvVXjBcpNS5FZCK-I0dSg-oddOZ2bN-9IPIA5hMeEKl-XGq2shAHgmufI_mSFl_mxSrCVCsSyrky18sWlNJUe-KY_KpA__NK-8_oP_O-WlPoUHdlZL11hQvTqB_TXUeBoDInknraVJ-UdWknJJPXRm90gxUNCWOfteIWP31XVB9d81eGCzA=",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFCw96vlaNlxNRXBpVj5mge4rLgXa78XwZMGqVdp93EO8s3n4fNPhqgxkjMdJMn6-UNAuONNeTBczq16ajGwpHoGULhCJIAru2o96n3OHYFKJpt07S1NjxMCrCvdlBJGGhs0V4sILFqHjEP6yeQ4BJ9AhHavJlypkSNVID_Ic1uL4OEQfjNAnYMuFMOOzPWw9RiDB0PsBzb7gYSoFD0HobiWMT_6q6-XQgWqr5uRQdLwn9u6vUTR3Scz_ncWcgQPVU6tnEfDMEBQGEnqN22psBdqfe",
+          "https://www.google.com/",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKAm7cEtEHneIH4aLEoLsazl1Jv2qhj0xOvj9qQxWqj4t8G9dZqWG_oY9Rt-zcoWOvXLtecIPBm1_xLTO9Osgz2KE2_-M8RMhWpVTNn0MHRSp6QOzVUNorYPXd5YiPXJNj0ZOC06vWLdju4HAeRrCz_nk="
+        ],
+        "origin_counts": {
+          "ontology_evidence": 3,
+          "journals": 2
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_digital_supply_chain_security",
+          "axis_religious_expression_hate_speech_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.3825,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:2",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.14,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.40945312500000003,
+          "confidence": 0.208575,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:2",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-06T10:06:44.116Z",
+        "homepage_url": "https://google.com/",
+        "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFCw96vlaNlxNRXBpVj5mge4rLgXa78XwZMGqVdp93EO8s3n4fNPhqgxkjMdJMn6-UNAuONNeTBczq16ajGwpHoGULhCJIAru2o96n3OHYFKJpt07S1NjxMCrCvdlBJGGhs0V4sILFqHjEP6yeQ4BJ9AhHavJlypkSNVID_Ic1uL4OEQfjNAnYMuFMOOzPWw9RiDB0PsBzb7gYSoFD0HobiWMT_6q6-XQgWqr5uRQdLwn9u6vUTR3Scz_ncWcgQPVU6tnEfDMEBQGEnqN22psBdqfe",
+        "homepage_status": 200,
+        "example_status": 404,
+        "homepage_final_url": "https://www.google.com/",
+        "example_final_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFCw96vlaNlxNRXBpVj5mge4rLgXa78XwZMGqVdp93EO8s3n4fNPhqgxkjMdJMn6-UNAuONNeTBczq16ajGwpHoGULhCJIAru2o96n3OHYFKJpt07S1NjxMCrCvdlBJGGhs0V4sILFqHjEP6yeQ4BJ9AhHavJlypkSNVID_Ic1uL4OEQfjNAnYMuFMOOzPWw9RiDB0PsBzb7gYSoFD0HobiWMT_6q6-XQgWqr5uRQdLwn9u6vUTR3Scz_ncWcgQPVU6tnEfDMEBQGEnqN22psBdqfe",
+        "homepage_content_type": "text/html; charset=ISO-8859-1",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "moltbook.com",
       "entity": "Moltbook",
       "kind": "unknown",
@@ -880,131 +1008,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "google.com",
-      "entity": "Google",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-06T08:36:00Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFCw96vlaNlxNRXBpVj5mge4rLgXa78XwZMGqVdp93EO8s3n4fNPhqgxkjMdJMn6-UNAuONNeTBczq16ajGwpHoGULhCJIAru2o96n3OHYFKJpt07S1NjxMCrCvdlBJGGhs0V4sILFqHjEP6yeQ4BJ9AhHavJlypkSNVID_Ic1uL4OEQfjNAnYMuFMOOzPWw9RiDB0PsBzb7gYSoFD0HobiWMT_6q6-XQgWqr5uRQdLwn9u6vUTR3Scz_ncWcgQPVU6tnEfDMEBQGEnqN22psBdqfe",
-          "https://www.google.com/",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKAm7cEtEHneIH4aLEoLsazl1Jv2qhj0xOvj9qQxWqj4t8G9dZqWG_oY9Rt-zcoWOvXLtecIPBm1_xLTO9Osgz2KE2_-M8RMhWpVTNn0MHRSp6QOzVUNorYPXd5YiPXJNj0ZOC06vWLdju4HAeRrCz_nk="
-        ],
-        "origin_counts": {
-          "ontology_evidence": 1,
-          "journals": 2
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_religious_expression_hate_speech_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.2658333333333333,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:1",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.14,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.38393229166666665,
-          "confidence": 0.139075,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:1",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-06T10:06:44.116Z",
-        "homepage_url": "https://google.com/",
-        "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFCw96vlaNlxNRXBpVj5mge4rLgXa78XwZMGqVdp93EO8s3n4fNPhqgxkjMdJMn6-UNAuONNeTBczq16ajGwpHoGULhCJIAru2o96n3OHYFKJpt07S1NjxMCrCvdlBJGGhs0V4sILFqHjEP6yeQ4BJ9AhHavJlypkSNVID_Ic1uL4OEQfjNAnYMuFMOOzPWw9RiDB0PsBzb7gYSoFD0HobiWMT_6q6-XQgWqr5uRQdLwn9u6vUTR3Scz_ncWcgQPVU6tnEfDMEBQGEnqN22psBdqfe",
-        "homepage_status": 200,
-        "example_status": 404,
-        "homepage_final_url": "https://www.google.com/",
-        "example_final_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFCw96vlaNlxNRXBpVj5mge4rLgXa78XwZMGqVdp93EO8s3n4fNPhqgxkjMdJMn6-UNAuONNeTBczq16ajGwpHoGULhCJIAru2o96n3OHYFKJpt07S1NjxMCrCvdlBJGGhs0V4sILFqHjEP6yeQ4BJ9AhHavJlypkSNVID_Ic1uL4OEQfjNAnYMuFMOOzPWw9RiDB0PsBzb7gYSoFD0HobiWMT_6q6-XQgWqr5uRQdLwn9u6vUTR3Scz_ncWcgQPVU6tnEfDMEBQGEnqN22psBdqfe",
-        "homepage_content_type": "text/html; charset=ISO-8859-1",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -1870,6 +1873,130 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 20,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "varrd.com",
+      "entity": "Varrd",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-05T18:50:00.000Z",
+      "last_seen_at": "2026-04-06T17:00:29.000Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://varrd.com/?twclid=222hhmjo1hjeaafibt54abkalz",
+          "https://varrd.com/?twclid=259psgb6qwqeps7b503vvnbwm4",
+          "https://varrd.com/?twclid=266bv1ckp2jamywvscny0w7obi"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "varrdinc"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.43999999999999995,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:8",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.36000000000000004,
+          "confidence": 0.1386,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-06T10:36:36.454Z",
+        "homepage_url": "https://varrd.com/",
+        "example_url": "https://varrd.com/?twclid=222hhmjo1hjeaafibt54abkalz",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://varrd.com/",
+        "example_final_url": "https://varrd.com/?twclid=222hhmjo1hjeaafibt54abkalz",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 8,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 8,
           "opinion_marker": false
         }
       }
@@ -2973,129 +3100,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "varrd.com",
-      "entity": "Varrd",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-05T18:50:00.000Z",
-      "last_seen_at": "2026-04-05T22:25:13.000Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://varrd.com/?twclid=222hhmjo1hjeaafibt54abkalz",
-          "https://varrd.com/?twclid=259psgb6qwqeps7b503vvnbwm4"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "varrdinc"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.43999999999999995,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:8",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3536197916666667,
-          "confidence": 0.10997499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-06T10:36:36.454Z",
-        "homepage_url": "https://varrd.com/",
-        "example_url": "https://varrd.com/?twclid=222hhmjo1hjeaafibt54abkalz",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://varrd.com/",
-        "example_final_url": "https://varrd.com/?twclid=222hhmjo1hjeaafibt54abkalz",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 8,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 8,
           "opinion_marker": false
         }
       }
