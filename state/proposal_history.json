@@ -35,6 +35,25 @@
       "pushed_to_origin": true,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_stagnation_detector_1775438289842",
+      "title": "Build a Belief Stagnation Detector and Axis Health Report",
+      "status": "failed",
+      "proposed_at": "2026-04-06T01:18:09.820Z",
+      "resolved_at": "2026-04-06T01:57:41.707Z",
+      "resolution_notes": "Pipeline error: Tests failed: Import failed for src/tools/axis_health_reporter.js: node:internal/modules/cjs/loader:1459\n  throw err;\n  ^\n\nError: Cannot find module '../../../lib/belief_system'\nRequire stack:\n- /home/raymond_d_baldonado_gmail_com/hunter/src/tools/axis_health_reporte; Blocked test command (unsafe): echo 'NOTE: This test requires mock state files (e.g., state/ontology.json) to run successfully.'; Blocked test command (unsafe): echo 'It will gracefully handle a missing state/belief_history.jsonl.'; Test command failed: node pipelines/daily_maintenance.js --dry-run — Daily maintenance failed: Error: Cannot find module '../../../lib/belief_system'\nRequire stack:\n- /home/raymond_d_baldonado_gmail_com/hunter/src/tools/axis_health_reporter.js\n- /home/raymond_d_baldona",
+      "files_changed": [
+        "pipelines/daily_maintenance.js",
+        "lib/belief_system.js",
+        "src/tools/axis_health_reporter.js",
+        "state/schemas.js"
+      ],
+      "branch_name": "meta/proposal_stagnation_detector_1775438289842",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }

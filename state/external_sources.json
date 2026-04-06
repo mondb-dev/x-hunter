@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-06T01:11:26.049Z",
+  "generated_at": "2026-04-06T02:41:27.161Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-05T07:19:17.638Z",
+  "profiled_at": "2026-04-06T02:41:28.668Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -64,16 +64,16 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.22,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:31",
             "opinion_marker:false"
           ]
         },
@@ -93,15 +93,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-03T01:41:51.822Z",
+        "fetched_at": "2026-04-06T02:41:27.500Z",
         "homepage_url": "https://house.gov/",
         "example_url": "https://www.house.gov/",
         "homepage_status": null,
-        "example_status": null,
+        "example_status": 200,
         "homepage_final_url": "https://house.gov/",
         "example_final_url": "https://www.house.gov/",
         "homepage_content_type": "",
-        "example_content_type": "",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -115,11 +115,11 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 31,
           "opinion_marker": false
         }
       }
@@ -187,16 +187,16 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.66,
+          "confidence": 0.75,
           "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
             "about:false",
             "contact:false",
-            "corrections:false",
-            "outbound_links:0",
+            "corrections:true",
+            "outbound_links:4",
             "opinion_marker:false"
           ]
         },
@@ -217,33 +217,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-03T01:41:51.825Z",
+        "fetched_at": "2026-04-06T02:41:27.946Z",
         "homepage_url": "https://theguardian.com/",
         "example_url": "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://theguardian.com/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.theguardian.com/us",
         "example_final_url": "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
+          "opinion_marker": true
         },
         "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
           "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "has_corrections_link": true,
+          "outbound_links_count": 4,
           "opinion_marker": false
         }
       }
@@ -308,16 +308,16 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.36,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
-            "about:false",
+            "canonical:true",
+            "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:15",
             "opinion_marker:false"
           ]
         },
@@ -337,33 +337,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-03T01:41:51.826Z",
+        "fetched_at": "2026-04-06T02:41:28.175Z",
         "homepage_url": "https://apnews.com/",
         "example_url": "https://apnews.com/hub/iran",
-        "homepage_status": null,
-        "example_status": null,
+        "homepage_status": 200,
+        "example_status": 200,
         "homepage_final_url": "https://apnews.com/",
         "example_final_url": "https://apnews.com/hub/iran",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_content_type": "text/html;charset=UTF-8",
+        "example_content_type": "text/html;charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
+          "has_canonical": true,
+          "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 15,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
+          "has_canonical": true,
+          "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 15,
           "opinion_marker": false
         }
       }
@@ -473,7 +473,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-03T02:36:16.608Z",
+        "fetched_at": "2026-04-06T02:41:28.668Z",
         "homepage_url": "https://t.co/",
         "example_url": "https://t.co/pJSE124ec4",
         "homepage_status": 200,
@@ -764,9 +764,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-16T09:36:45.269Z",
-      "last_seen_at": "2026-04-05T00:50:03.209Z",
+      "last_seen_at": "2026-04-06T01:18:09.724Z",
       "discovery": {
-        "distinct_urls": 18,
+        "distinct_urls": 19,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -775,7 +775,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 18
+          "articles": 19
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -804,7 +804,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:18",
+            "distinct_urls:19",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -838,11 +838,11 @@
         },
         "overall": {
           "score": 0.40726562499999996,
-          "confidence": 0.498975,
+          "confidence": 0.521475,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:18",
+            "distinct_urls:19",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -879,6 +879,131 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "irys.xyz",
+      "entity": "Irys Xyz",
+      "kind": "unknown",
+      "first_seen_at": "2026-03-16T09:36:45.277Z",
+      "last_seen_at": "2026-04-06T01:18:09.724Z",
+      "discovery": {
+        "distinct_urls": 6,
+        "example_urls": [
+          "https://gateway.irys.xyz/lZR6DY8ugYpeIkHpBQpgaNeVWmEhahjrDBNGc5Fz0EE",
+          "https://gateway.irys.xyz/ry9Vj5H5CbzQy3qJIF1lDIEFtN8UdVOP6lwH5R0GaG4",
+          "https://gateway.irys.xyz/SG0Yxwh0zvtP90DE9inYOkX_AeV7Hlg2UB1IQHJDxxA",
+          "https://gateway.irys.xyz/rY79E5ddq2h3I1sXEPkgSK4U8lmtlxNA_qf0-P8-XUQ",
+          "https://gateway.irys.xyz/Ecq01Z9pGOJPQUNWlwBZIZztAyXr8nZ9kuaNaBOgEQo"
+        ],
+        "origin_counts": {
+          "journals": 3,
+          "articles": 3
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.295,
+          "basis": [
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22999999999999998,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:5",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3903125,
+          "confidence": 0.2127,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T03:31:26.950Z",
+        "homepage_url": "https://irys.xyz/",
+        "example_url": "https://gateway.irys.xyz/lZR6DY8ugYpeIkHpBQpgaNeVWmEhahjrDBNGc5Fz0EE",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://irys.xyz/",
+        "example_final_url": "https://node1.irys.xyz/lZR6DY8ugYpeIkHpBQpgaNeVWmEhahjrDBNGc5Fz0EE",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
           "opinion_marker": false
         }
       }
@@ -2601,128 +2726,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "irys.xyz",
-      "entity": "Irys Xyz",
-      "kind": "unknown",
-      "first_seen_at": "2026-03-16T09:36:45.277Z",
-      "last_seen_at": "2026-03-16T09:36:45.281Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://gateway.irys.xyz/lZR6DY8ugYpeIkHpBQpgaNeVWmEhahjrDBNGc5Fz0EE",
-          "https://gateway.irys.xyz/ry9Vj5H5CbzQy3qJIF1lDIEFtN8UdVOP6lwH5R0GaG4",
-          "https://gateway.irys.xyz/SG0Yxwh0zvtP90DE9inYOkX_AeV7Hlg2UB1IQHJDxxA"
-        ],
-        "origin_counts": {
-          "journals": 3
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.1475,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.22999999999999998,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:5",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.34984375,
-          "confidence": 0.10635,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-03T03:31:26.950Z",
-        "homepage_url": "https://irys.xyz/",
-        "example_url": "https://gateway.irys.xyz/lZR6DY8ugYpeIkHpBQpgaNeVWmEhahjrDBNGc5Fz0EE",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://irys.xyz/",
-        "example_final_url": "https://node1.irys.xyz/lZR6DY8ugYpeIkHpBQpgaNeVWmEhahjrDBNGc5Fz0EE",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 2,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 5,
           "opinion_marker": false
         }
       }
@@ -7209,14 +7212,15 @@
       "entity": "News Ycombinator",
       "kind": "forum",
       "first_seen_at": "2026-04-04T13:43:00Z",
-      "last_seen_at": "2026-04-04T13:43:00Z",
+      "last_seen_at": "2026-04-06T02:41:27.159Z",
       "discovery": {
         "distinct_urls": 1,
         "example_urls": [
           "https://news.ycombinator.com/"
         ],
         "origin_counts": {
-          "ontology_evidence": 2
+          "ontology_evidence": 2,
+          "prefetch": 1
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -7246,18 +7250,18 @@
           ]
         },
         "breadth": {
-          "score": 0.2058333333333333,
+          "score": 0.2658333333333333,
           "basis": [
             "distinct_urls:1",
             "distinct_axes:2",
-            "origin_types:1"
+            "origin_types:2"
           ]
         },
         "corroboration": {
-          "score": 0.0875,
+          "score": 0.175,
           "basis": [
             "referring_accounts:0",
-            "origin_types:1"
+            "origin_types:2"
           ]
         },
         "track_record": {
@@ -7281,16 +7285,16 @@
           ]
         },
         "overall": {
-          "score": 0.25947916666666665,
-          "confidence": 0.0736,
+          "score": 0.2808072916666666,
+          "confidence": 0.09407499999999999,
           "method": "mechanical_v1",
           "basis": [
             "community_forum_pattern",
             "distinct_urls:1",
             "distinct_axes:2",
-            "origin_types:1",
+            "origin_types:2",
             "referring_accounts:0",
-            "origin_types:1",
+            "origin_types:2",
             "track_record_unavailable"
           ]
         }
