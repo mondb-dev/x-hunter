@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-06T10:06:43.270Z",
+  "generated_at": "2026-04-06T11:06:36.054Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-06T10:06:44.523Z",
+  "profiled_at": "2026-04-06T10:36:36.455Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -511,7 +511,7 @@
       "first_seen_at": "2026-04-03T01:20:27.000Z",
       "last_seen_at": "2026-04-06T05:41:29.732Z",
       "discovery": {
-        "distinct_urls": 15,
+        "distinct_urls": 16,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,12 +520,13 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 14,
+          "feed_buffer_reply": 15,
           "feed_buffer": 1
         },
-        "distinct_referring_accounts": 15,
+        "distinct_referring_accounts": 16,
         "sample_referring_accounts": [
           "afk500595388855",
+          "aresclips_",
           "bitcoinwealth",
           "chibifanpage2",
           "cuteallthings",
@@ -533,8 +534,7 @@
           "greglions",
           "grok",
           "ihopwaitress74",
-          "jkeeter82",
-          "leeymackk"
+          "jkeeter82"
         ],
         "distinct_axes": []
       },
@@ -561,7 +561,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:15",
+            "distinct_urls:16",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -569,7 +569,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:15",
+            "referring_accounts:16",
             "origin_types:2"
           ]
         },
@@ -599,10 +599,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:15",
+            "distinct_urls:16",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:15",
+            "referring_accounts:16",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -5413,6 +5413,128 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "varrd.com",
+      "entity": "Varrd",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-05T22:25:13.000Z",
+      "last_seen_at": "2026-04-05T22:25:13.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://varrd.com/?twclid=222hhmjo1hjeaafibt54abkalz"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "varrdinc"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.43999999999999995,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:8",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-06T10:36:36.454Z",
+        "homepage_url": "https://varrd.com/",
+        "example_url": "https://varrd.com/?twclid=222hhmjo1hjeaafibt54abkalz",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://varrd.com/",
+        "example_final_url": "https://varrd.com/?twclid=222hhmjo1hjeaafibt54abkalz",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 8,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 8,
           "opinion_marker": false
         }
       }
