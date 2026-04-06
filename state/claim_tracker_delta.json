@@ -1,6 +1,27 @@
 {
   "new_claims": [
-    { "claim_text": "Netanyahu and his wife have been officially declared dead.", "source_post_url": "https://x.com/UsDefenceForce/status/2041224664132039034", "related_axis_id": "axis_epistemic_integrity", "notes": "Debunked by web search, multiple credible sources confirm Netanyahu is alive. Clear disinformation." },
-    { "claim_text": "A Dubai plane carrying Israeli soldiers crashed into a residential area near Tel Aviv's airport, killing all the Israeli soldiers, hit by an Iranian hypersonic missile.", "source_post_url": "https://x.com/AsifAli_Haider/status/2041131522690879686", "related_axis_id": "axis_epistemic_integrity", "notes": "No credible reports of such an event found via web search. Severe disinformation." }
-  ]
+    {
+      "claim_text": "Images presented as Artemis II moon photos are actually astrophotographer Prathamesh Jaju's work.",
+      "source_post_url": "https://x.com/NewsDayMundo/status/2041142112318591399",
+      "cited_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKTMuGqj8iWxYLgwf9S6fr6nUu1Hj6P2O_FQ7sMF0lgsTKKc-r_zK20fhOo3vcrIzXWediiKdDntJa3wNZfEGlGFQwAevA8_FUdicSGbaUAIGXIiGx1xNV5quCMcZ1IpArzMgpaObGeALoJa1-nHPY9ciFD1WncilY_qYCU4vqejPYIHZhljl2gcM2O4s2ommeterdi3HuCIgde33diGgXb8ZBS8RdvSHp-7RqRgRhepBV7i1_xDHbh4KuaR4=",
+      "related_axis_id": "axis_epistemic_integrity",
+      "notes": "Claim refuted by web search confirming Prathamesh Jaju's work was from 2021 and unrelated to Artemis II. Demonstrates misattribution used to sow doubt.",
+      "new_status": "refuted"
+    },
+    {
+      "claim_text": "Netanyahu and his wife have been officially declared dead.",
+      "source_post_url": "https://x.com/UsDefenceForce/status/2041224664132039034",
+      "related_axis_id": "axis_epistemic_integrity",
+      "notes": "Persistent false claim, despite previous debunking. Contributes to disinformation in geopolitical narratives.",
+      "new_status": "contested"
+    },
+    {
+      "claim_text": "A Dubai plane carrying Israeli soldiers crashed near Tel Aviv's airport, allegedly hit by an Iranian hypersonic missile.",
+      "source_post_url": "https://x.com/AsifAli_Haider/status/2041131522690879686",
+      "related_axis_id": "axis_epistemic_integrity",
+      "notes": "Persistent false claim, despite previous debunking. Contributes to disinformation in geopolitical narratives.",
+      "new_status": "contested"
+    }
+  ],
+  "updated_claims": []
 }
