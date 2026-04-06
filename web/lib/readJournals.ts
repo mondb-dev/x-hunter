@@ -21,6 +21,10 @@ const JOURNALS_DIR = path.join(DATA_ROOT, "journals");
 const ARWEAVE_LOG  = path.join(DATA_ROOT, "state/arweave_log.json");
 
 // Build a map of journal file path → Arweave gateway URL
+function proxyUrl(gateway: string): string {
+  return gateway.replace("https://gateway.irys.xyz/", "/arweave/");
+}
+
 function loadArweaveIndex(): Map<string, string> {
   const index = new Map<string, string>();
   try {
@@ -28,7 +32,7 @@ function loadArweaveIndex(): Map<string, string> {
     const log = JSON.parse(raw) as { uploads: Array<{ file: string; gateway: string; type: string }> };
     for (const entry of log.uploads ?? []) {
       if (entry.type === "journal" && entry.file && entry.gateway) {
-        index.set(path.basename(entry.file), entry.gateway);
+        index.set(path.basename(entry.file), proxyUrl(entry.gateway));
       }
     }
   } catch { /* arweave_log not present yet — that's fine */ }

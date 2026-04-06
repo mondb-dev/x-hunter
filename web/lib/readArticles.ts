@@ -45,13 +45,17 @@ function coerceDate(d: unknown, fallback: string): string {
   return String(d).slice(0, 10);
 }
 
+function proxyUrl(gateway: string): string {
+  return gateway.replace("https://gateway.irys.xyz/", "/arweave/");
+}
+
 function buildArweaveIndex(): Map<string, string> {
   const index = new Map<string, string>();
   try {
     const log = JSON.parse(fs.readFileSync(ARWEAVE_LOG, "utf-8"));
     for (const entry of (log.uploads ?? [])) {
       if (entry.type === "article" && entry.date && entry.gateway) {
-        index.set(entry.date, entry.gateway);
+        index.set(entry.date, proxyUrl(entry.gateway));
       }
     }
   } catch { /* no log yet */ }

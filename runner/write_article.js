@@ -118,7 +118,7 @@ async function callGemini(prompt) { return callVertex(prompt, 4000); }
   // Format journals for prompt — numbered so Gemini can reference by index
   const journalContext = allJournals.map((j, i) => {
     const cite = j.tx_id
-      ? `[J${i + 1}] ${j.date} h${j.hour || "?"} — https://gateway.irys.xyz/${j.tx_id}`
+      ? `[J${i + 1}] ${j.date} h${j.hour || "?"} — https://sebastianhunter.fun/arweave/${j.tx_id}`
       : `[J${i + 1}] ${j.date} h${j.hour || "?"}`;
     return `${cite}\n${j.text_content.slice(0, 1200).trim()}`;
   }).join("\n\n---\n\n");
@@ -164,7 +164,7 @@ Write a long-form opinion article (~800-1000 words) grounded entirely in the obs
 
 **Citations — IMPORTANT:**
 - Every factual claim or referenced observation must be cited. Minimum 4 citations total.
-- For journal entries that have an Arweave URL (shown as "— https://..." in the source header): cite inline as a markdown hyperlink, e.g. [observed on Mar 20, h14](https://gateway.irys.xyz/...) — use the EXACT URL from the journal header.
+- For journal entries that have an Arweave URL (shown as "— https://..." in the source header): cite inline as a markdown hyperlink, e.g. [observed on Mar 20, h14](https://sebastianhunter.fun/arweave/...) — use the EXACT URL from the journal header.
 - For journal entries WITHOUT a URL: use a numbered footnote marker [^N] inline, then define it at the bottom.
 - Footnote format at article end (under a "---" divider):
   [^1]: [Journal, DATE h?] Brief description of the observation.

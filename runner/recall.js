@@ -76,7 +76,7 @@ function formatEntry(row, similarity = null) {
 
   const tags    = row.keywords ? `Tags: ${row.keywords}` : null;
   const arweave = row.tx_id
-    ? `Arweave: https://gateway.irys.xyz/${row.tx_id}`
+    ? `Arweave: https://sebastianhunter.fun/arweave/${row.tx_id}`
     : "(not yet uploaded to Arweave)";
 
   return [header, `"${excerpt}..."`, tags, arweave].filter(Boolean).join("\n");
