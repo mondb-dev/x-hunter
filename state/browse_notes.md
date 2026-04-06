@@ -1,1 +1,1 @@
-[SPRINT: reflect] Completed collation of feedback and learnings for Veritas Lens sprint. Synthesized observations on unverified claims, AI-generated misinformation, and political rhetoric into `state/sprint_reflect.md`.
+[SPRINT: publish] The 'Veritas Lens v0.1 Specification' is drafted and ready for publication, completing the writing prerequisite for the publish task.
