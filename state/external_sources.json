@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-06T19:21:46.182Z",
+  "generated_at": "2026-04-06T20:21:47.252Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-06T14:36:39.907Z",
   "sources": [
@@ -765,9 +765,9 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-06T18:51:00Z",
+      "last_seen_at": "2026-04-06T19:23:23.177Z",
       "discovery": {
-        "distinct_urls": 7,
+        "distinct_urls": 8,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHKak43YlGcz5X6qUoELjZuRUqVVq-wkNdb94fpIPeRwd3SLB4MnRt4IMw2qmWiUIiYxlw4xKZLO1N6L9zWCpsbkFH-BFk43pn4XQI1j5FiGCiVr5TmzzTqO8ZlEeRhM7RD78ukDox2YtOoj2exNowNHG2kwaG5szzv8M=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCux0Esh3Wf46OpPP7Ecjy_Uwoust5YUxh9Q2bvVXjBcpNS5FZCK-I0dSg-oddOZ2bN-9IPIA5hMeEKl-XGq2shAHgmufI_mSFl_mxSrCVCsSyrky18sWlNJUe-KY_KpA__NK-8_oP_O-WlPoUHdlZL11hQvTqB_TXUeBoDInknraVJ-UdWknJJPXRm90gxUNCWOfteIWP31XVB9d81eGCzA=",
@@ -777,7 +777,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 5,
-          "journals": 2
+          "journals": 3
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -807,9 +807,9 @@
           ]
         },
         "breadth": {
-          "score": 0.4408333333333333,
+          "score": 0.47,
           "basis": [
-            "distinct_urls:7",
+            "distinct_urls:8",
             "distinct_axes:2",
             "origin_types:2"
           ]
@@ -842,12 +842,12 @@
           ]
         },
         "overall": {
-          "score": 0.4222135416666667,
-          "confidence": 0.265825,
+          "score": 0.42859375000000005,
+          "confidence": 0.29445,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:7",
+            "distinct_urls:8",
             "distinct_axes:2",
             "origin_types:2",
             "referring_accounts:0",
