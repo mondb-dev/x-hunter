@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-06T08:06:33.362Z",
+  "generated_at": "2026-04-06T09:36:34.937Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-06T08:06:36.709Z",
+  "profiled_at": "2026-04-06T09:06:35.662Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -880,6 +880,131 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "google.com",
+      "entity": "Google",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-01T05:04:23.454Z",
+      "last_seen_at": "2026-04-06T08:36:00Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFCw96vlaNlxNRXBpVj5mge4rLgXa78XwZMGqVdp93EO8s3n4fNPhqgxkjMdJMn6-UNAuONNeTBczq16ajGwpHoGULhCJIAru2o96n3OHYFKJpt07S1NjxMCrCvdlBJGGhs0V4sILFqHjEP6yeQ4BJ9AhHavJlypkSNVID_Ic1uL4OEQfjNAnYMuFMOOzPWw9RiDB0PsBzb7gYSoFD0HobiWMT_6q6-XQgWqr5uRQdLwn9u6vUTR3Scz_ncWcgQPVU6tnEfDMEBQGEnqN22psBdqfe",
+          "https://www.google.com/",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKAm7cEtEHneIH4aLEoLsazl1Jv2qhj0xOvj9qQxWqj4t8G9dZqWG_oY9Rt-zcoWOvXLtecIPBm1_xLTO9Osgz2KE2_-M8RMhWpVTNn0MHRSp6QOzVUNorYPXd5YiPXJNj0ZOC06vWLdju4HAeRrCz_nk="
+        ],
+        "origin_counts": {
+          "ontology_evidence": 1,
+          "journals": 2
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_religious_expression_hate_speech_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.2658333333333333,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:1",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.14,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.38393229166666665,
+          "confidence": 0.139075,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:1",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-03T09:58:16.591Z",
+        "homepage_url": "https://google.com/",
+        "example_url": "https://www.google.com/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.google.com/",
+        "example_final_url": "https://www.google.com/",
+        "homepage_content_type": "text/html; charset=ISO-8859-1",
+        "example_content_type": "text/html; charset=ISO-8859-1",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -2452,7 +2577,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-03T08:58:15.554Z",
+        "fetched_at": "2026-04-06T09:06:34.722Z",
         "homepage_url": "https://davidprotein.com/",
         "example_url": "https://davidprotein.com/pages/meet-david-gold?utm_source=X&utm_medium=paid&utm_campaign=CPC_2026&utm_term=GOLD_CPC_2026&twclid=2beqsd3kifgmiz3bgaf4s8hcjs",
         "homepage_status": 200,
@@ -5414,127 +5539,6 @@
       }
     },
     {
-      "domain": "google.com",
-      "entity": "Google",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-06T07:08:03.275Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://www.google.com/",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKAm7cEtEHneIH4aLEoLsazl1Jv2qhj0xOvj9qQxWqj4t8G9dZqWG_oY9Rt-zcoWOvXLtecIPBm1_xLTO9Osgz2KE2_-M8RMhWpVTNn0MHRSp6QOzVUNorYPXd5YiPXJNj0ZOC06vWLdju4HAeRrCz_nk="
-        ],
-        "origin_counts": {
-          "journals": 2
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.14,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.34346354166666665,
-          "confidence": 0.07772499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-03T09:58:16.591Z",
-        "homepage_url": "https://google.com/",
-        "example_url": "https://www.google.com/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.google.com/",
-        "example_final_url": "https://www.google.com/",
-        "homepage_content_type": "text/html; charset=ISO-8859-1",
-        "example_content_type": "text/html; charset=ISO-8859-1",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "org.in",
       "entity": "Org In",
       "kind": "unknown",
@@ -7183,7 +7187,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-03T08:58:15.688Z",
+        "fetched_at": "2026-04-06T09:06:34.873Z",
         "homepage_url": "https://harvardlawreview.org/",
         "example_url": "https://harvardlawreview.org/",
         "homepage_status": 200,
@@ -7303,7 +7307,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-03T08:58:15.951Z",
+        "fetched_at": "2026-04-06T09:06:35.132Z",
         "homepage_url": "https://brennancenter.org/",
         "example_url": "https://www.brennancenter.org/",
         "homepage_status": 200,
@@ -7394,16 +7398,16 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.37,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
-            "published_time:false",
-            "canonical:false",
+            "published_time:true",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:9",
             "opinion_marker:false"
           ]
         },
@@ -7423,33 +7427,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-03T08:58:16.140Z",
+        "fetched_at": "2026-04-06T09:06:35.662Z",
         "homepage_url": "https://mlfa.org/",
         "example_url": "https://www.mlfa.org/",
-        "homepage_status": 403,
-        "example_status": 403,
+        "homepage_status": 200,
+        "example_status": 200,
         "homepage_final_url": "https://mlfa.org/",
-        "example_final_url": "https://www.mlfa.org/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "example_final_url": "https://mlfa.org/",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
+          "has_published_time": true,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 9,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
+          "has_published_time": true,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 9,
           "opinion_marker": false
         }
       }
