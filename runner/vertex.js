@@ -16,20 +16,21 @@ const { getAccessToken, getProjectConfig } = require("./gcp_auth");
 /**
  * callVertex(prompt, maxTokens, options)
  *
- * Calls Vertex AI gemini-2.5-pro with the given prompt.
+ * Calls Vertex AI with the given prompt.
  * Returns the text content string.
  *
- * options.thinkingBudget - if set, limits thinking tokens (0 = disable thinking)
+ * options.model         - model ID (default: gemini-2.5-pro)
+ * options.thinkingBudget - if set and > 0, sets thinking token budget
  */
 async function callVertex(prompt, maxTokens = 2000, options = {}) {
   const token    = await getAccessToken();
   const { project, location } = getProjectConfig();
-  const model    = "gemini-2.5-pro";
+  const model    = options.model || "gemini-2.5-pro";
 
   const apiPath  = `/v1/projects/${project}/locations/${location}/publishers/google/models/${model}:generateContent`;
 
   const generationConfig = { temperature: 0.7, maxOutputTokens: maxTokens };
-  if (options.thinkingBudget !== undefined) {
+  if (options.thinkingBudget !== undefined && options.thinkingBudget > 0) {
     generationConfig.thinkingConfig = { thinkingBudget: options.thinkingBudget };
   }
 

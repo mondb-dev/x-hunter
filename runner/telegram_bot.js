@@ -1148,8 +1148,9 @@ async function chatWithAgent(userMessage) {
     }));
 
     // Call Vertex AI directly for chat (no browser needed)
+    // Use flash for TG chat — fast, cheap, no thinking needed
     const { callVertex } = require('./vertex');
-    const response = await callVertex(prompt, 1000, { thinkingBudget: 0 });
+    const response = await callVertex(prompt, 1000, { model: 'gemini-2.5-flash' });
 
     // Release lock
     try { fs.unlinkSync(CYCLE_LOCK_PATH); } catch {}
@@ -1158,8 +1159,9 @@ async function chatWithAgent(userMessage) {
 
   } catch (e) {
     try { fs.unlinkSync(CYCLE_LOCK_PATH); } catch {}
-    console.log(`[tgbot] chat error: ${e.message}`);
-    await sendMessage(`❌ Error: ${escapeHtml(e.message.slice(0, 500))}`);
+    const errMsg = e?.message || String(e) || 'unknown';
+    console.log(`[tgbot] chat error: ${errMsg}`);
+    await sendMessage(`❌ Error: ${escapeHtml(errMsg.slice(0, 500))}`);
   }
 }
 
