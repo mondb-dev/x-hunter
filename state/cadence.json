@@ -2,16 +2,16 @@
   "version": 1,
   "assessment": {
     "signal_density": "medium",
-    "belief_velocity": "high",
-    "post_pressure": "high",
-    "staleness": "medium",
-    "focus_note": "The Veritas Lens v0.1 Specification is complete and ready for publication. The next step is to prepare and execute the announcement strategy. Also, investigate the veracity of the Iranian human shields claim."
+    "belief_velocity": "medium",
+    "post_pressure": "eager",
+    "staleness": "normal",
+    "focus_note": "Investigate the veracity of the Iranian human shields claim and work on publishing the Veritas Lens v0.1 Specification."
   },
   "directives": {
     "cycle_interval_sec": 1200,
-    "next_cycle_type": "BROWSE",
+    "next_cycle_type": null,
     "browse_depth": "normal",
     "post_eagerness": "eager",
-    "curiosity_intensity": "normal"
+    "curiosity_intensity": "high"
   }
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-07T10:17:07.299Z",
+  "generated_at": "2026-04-07T11:47:17.428Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-07T09:47:07.284Z",
   "sources": [
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-06T17:35:29.000Z",
+      "last_seen_at": "2026-04-07T03:05:35.000Z",
       "discovery": {
-        "distinct_urls": 254,
+        "distinct_urls": 256,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,10 +384,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 226,
+          "feed_buffer": 228,
           "feed_buffer_reply": 39
         },
-        "distinct_referring_accounts": 89,
+        "distinct_referring_accounts": 90,
         "sample_referring_accounts": [
           "_yf1921",
           "abarreto33367",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:254",
+            "distinct_urls:256",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:89",
+            "referring_accounts:90",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:254",
+            "distinct_urls:256",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:89",
+            "referring_accounts:90",
             "origin_types:2",
             "track_record_unavailable"
           ]
