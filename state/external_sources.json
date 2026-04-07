@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-07T15:07:16.044Z",
+  "generated_at": "2026-04-07T16:07:17.331Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-07T14:47:16.554Z",
+  "profiled_at": "2026-04-07T15:47:25.063Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-07T11:46:22.000Z",
+      "last_seen_at": "2026-04-07T14:43:16.000Z",
       "discovery": {
-        "distinct_urls": 257,
+        "distinct_urls": 258,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,7 +384,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 228,
+          "feed_buffer": 229,
           "feed_buffer_reply": 40
         },
         "distinct_referring_accounts": 91,
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:257",
+            "distinct_urls:258",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -463,7 +463,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:257",
+            "distinct_urls:258",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:91",
@@ -641,6 +641,135 @@
       }
     },
     {
+      "domain": "google.com",
+      "entity": "Google",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-01T05:04:23.454Z",
+      "last_seen_at": "2026-04-07T15:27:00Z",
+      "discovery": {
+        "distinct_urls": 11,
+        "example_urls": [
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCmNHptSbVV3zGxP_M6wvF6PcPxnfQnf-w9J2CIiFt2D2AVZQffTQL7N4jd0jzuJ50Mh5rLLNMVr7wNa8VaGxy95U5puMCuVK_zI9aYx7FN7TMnmb81qR7Po_gte6ZmIEAKMYoG1uREvXeWIIsn97g8Gqal8F9nghWkc0Kx6cyKYDOYeqCyIme0Rvo_yYOdQ17MK2czw==",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHKak43YlGcz5X6qUoELjZuRUqVVq-wkNdb94fpIPeRwd3SLB4MnRt4IMw2qmWiUIiYxlw4xKZLO1N6L9zWCpsbkFH-BFk43pn4XQI1j5FiGCiVr5TmzzTqO8ZlEeRhM7RD78ukDox2YtOoj2exNowNHG2kwaG5szzv8M=",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCux0Esh3Wf46OpPP7Ecjy_Uwoust5YUxh9Q2bvVXjBcpNS5FZCK-I0dSg-oddOZ2bN-9IPIA5hMeEKl-XGq2shAHgmufI_mSFl_mxSrCVCsSyrky18sWlNJUe-KY_KpA__NK-8_oP_O-WlPoUHdlZL11hQvTqB_TXUeBoDInknraVJ-UdWknJJPXRm90gxUNCWOfteIWP31XVB9d81eGCzA=",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGL4i6SgNkdW0wZISn0IjToDVkRebwksJYjpjpd84MVX_gYTidcpGuUxnvwanhj3e43nVCMUeHxEeMR5P9Mrv26gu-cqurOHnOg-2cbscl_k_m54TvsROhc9OtiRcteUZVu4NY5cDH7QSZlRykwoMQqcr9T3w==",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_oRn8ww7aRETnFkCXMuknbRgi7XFC5ZKnKuFkYvJqPvj4PtoBbzrTp2OTrLIIiwPx6xp5S3ht0__q-FpVjNpmxp-yl7_KX-yOXsXzoRDeClrH0hLzWN_2sQxzyruK3fPwHwCYI7eu7bL-Gu3rZzfFcYur-89IK0p_D7ZELUMS6rLpim80jiKIfQe6RXzcWpkUtvcIYhxG_Gmj7zNL2iU1TVGiFtDCjNdSA7u4GVZAdHP9zsMk9VpE_rz7X3G-Z3cKqclR4Yi7fCmMrsU755w=="
+        ],
+        "origin_counts": {
+          "ontology_evidence": 7,
+          "journals": 8
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_digital_supply_chain_security",
+          "axis_ph_geopolitics_wps_v1",
+          "axis_religious_expression_hate_speech_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.6158333333333332,
+          "basis": [
+            "distinct_urls:11",
+            "distinct_axes:3",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.14,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.4604947916666667,
+          "confidence": 0.392575,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:11",
+            "distinct_axes:3",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-06T10:06:44.116Z",
+        "homepage_url": "https://google.com/",
+        "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFCw96vlaNlxNRXBpVj5mge4rLgXa78XwZMGqVdp93EO8s3n4fNPhqgxkjMdJMn6-UNAuONNeTBczq16ajGwpHoGULhCJIAru2o96n3OHYFKJpt07S1NjxMCrCvdlBJGGhs0V4sILFqHjEP6yeQ4BJ9AhHavJlypkSNVID_Ic1uL4OEQfjNAnYMuFMOOzPWw9RiDB0PsBzb7gYSoFD0HobiWMT_6q6-XQgWqr5uRQdLwn9u6vUTR3Scz_ncWcgQPVU6tnEfDMEBQGEnqN22psBdqfe",
+        "homepage_status": 200,
+        "example_status": 404,
+        "homepage_final_url": "https://www.google.com/",
+        "example_final_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFCw96vlaNlxNRXBpVj5mge4rLgXa78XwZMGqVdp93EO8s3n4fNPhqgxkjMdJMn6-UNAuONNeTBczq16ajGwpHoGULhCJIAru2o96n3OHYFKJpt07S1NjxMCrCvdlBJGGhs0V4sILFqHjEP6yeQ4BJ9AhHavJlypkSNVID_Ic1uL4OEQfjNAnYMuFMOOzPWw9RiDB0PsBzb7gYSoFD0HobiWMT_6q6-XQgWqr5uRQdLwn9u6vUTR3Scz_ncWcgQPVU6tnEfDMEBQGEnqN22psBdqfe",
+        "homepage_content_type": "text/html; charset=ISO-8859-1",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "wikipedia.org",
       "entity": "Wikipedia",
       "kind": "reference",
@@ -756,134 +885,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 4,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "google.com",
-      "entity": "Google",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-07T03:22:34.773Z",
-      "discovery": {
-        "distinct_urls": 10,
-        "example_urls": [
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHKak43YlGcz5X6qUoELjZuRUqVVq-wkNdb94fpIPeRwd3SLB4MnRt4IMw2qmWiUIiYxlw4xKZLO1N6L9zWCpsbkFH-BFk43pn4XQI1j5FiGCiVr5TmzzTqO8ZlEeRhM7RD78ukDox2YtOoj2exNowNHG2kwaG5szzv8M=",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCux0Esh3Wf46OpPP7Ecjy_Uwoust5YUxh9Q2bvVXjBcpNS5FZCK-I0dSg-oddOZ2bN-9IPIA5hMeEKl-XGq2shAHgmufI_mSFl_mxSrCVCsSyrky18sWlNJUe-KY_KpA__NK-8_oP_O-WlPoUHdlZL11hQvTqB_TXUeBoDInknraVJ-UdWknJJPXRm90gxUNCWOfteIWP31XVB9d81eGCzA=",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGL4i6SgNkdW0wZISn0IjToDVkRebwksJYjpjpd84MVX_gYTidcpGuUxnvwanhj3e43nVCMUeHxEeMR5P9Mrv26gu-cqurOHnOg-2cbscl_k_m54TvsROhc9OtiRcteUZVu4NY5cDH7QSZlRykwoMQqcr9T3w==",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_oRn8ww7aRETnFkCXMuknbRgi7XFC5ZKnKuFkYvJqPvj4PtoBbzrTp2OTrLIIiwPx6xp5S3ht0__q-FpVjNpmxp-yl7_KX-yOXsXzoRDeClrH0hLzWN_2sQxzyruK3fPwHwCYI7eu7bL-Gu3rZzfFcYur-89IK0p_D7ZELUMS6rLpim80jiKIfQe6RXzcWpkUtvcIYhxG_Gmj7zNL2iU1TVGiFtDCjNdSA7u4GVZAdHP9zsMk9VpE_rz7X3G-Z3cKqclR4Yi7fCmMrsU755w==",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHu0Ck6uUZy6z4JLfUlfoZgQIhg9yYnuAoJG_4m_QmOWEamrd3du0wqOzlqQW6fmzRZu4cx_yHoLa4iOIEZ6ADec2p4YsuSafVRSI2teZ6TIHB6qOWvgcghOc64IYQ2ROPLCiKrlF7J1zTkIPjYOv1I5pg9Gh88HIiDxn5mU196gJpoLL9IbxJtWCSgeafC72zvQpdLIdn0BxQAkN2jR9ut5MJSqG_7q_xf3D6sY49oV-4cn4Y45mVT6q21iSzUxJjamrAe1OxcvAWAThT06gQ="
-        ],
-        "origin_counts": {
-          "ontology_evidence": 6,
-          "journals": 8
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_digital_supply_chain_security",
-          "axis_religious_expression_hate_speech_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.5283333333333333,
-          "basis": [
-            "distinct_urls:10",
-            "distinct_axes:2",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.14,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.44135416666666666,
-          "confidence": 0.3517,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:10",
-            "distinct_axes:2",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-06T10:06:44.116Z",
-        "homepage_url": "https://google.com/",
-        "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFCw96vlaNlxNRXBpVj5mge4rLgXa78XwZMGqVdp93EO8s3n4fNPhqgxkjMdJMn6-UNAuONNeTBczq16ajGwpHoGULhCJIAru2o96n3OHYFKJpt07S1NjxMCrCvdlBJGGhs0V4sILFqHjEP6yeQ4BJ9AhHavJlypkSNVID_Ic1uL4OEQfjNAnYMuFMOOzPWw9RiDB0PsBzb7gYSoFD0HobiWMT_6q6-XQgWqr5uRQdLwn9u6vUTR3Scz_ncWcgQPVU6tnEfDMEBQGEnqN22psBdqfe",
-        "homepage_status": 200,
-        "example_status": 404,
-        "homepage_final_url": "https://www.google.com/",
-        "example_final_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFCw96vlaNlxNRXBpVj5mge4rLgXa78XwZMGqVdp93EO8s3n4fNPhqgxkjMdJMn6-UNAuONNeTBczq16ajGwpHoGULhCJIAru2o96n3OHYFKJpt07S1NjxMCrCvdlBJGGhs0V4sILFqHjEP6yeQ4BJ9AhHavJlypkSNVID_Ic1uL4OEQfjNAnYMuFMOOzPWw9RiDB0PsBzb7gYSoFD0HobiWMT_6q6-XQgWqr5uRQdLwn9u6vUTR3Scz_ncWcgQPVU6tnEfDMEBQGEnqN22psBdqfe",
-        "homepage_content_type": "text/html; charset=ISO-8859-1",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -2002,6 +2003,130 @@
       }
     },
     {
+      "domain": "davidprotein.com",
+      "entity": "Davidprotein",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-03T08:27:46.000Z",
+      "last_seen_at": "2026-04-07T15:31:29.871Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://davidprotein.com/pages/meet-david-gold?utm_source=X&utm_medium=paid&utm_campaign=CPC_2026&utm_term=GOLD_CPC_2026&twclid=2beqsd3kifgmiz3bgaf4s8hcjs",
+          "https://davidprotein.com/pages/meet-david-gold?utm_source=X&utm_medium=paid&utm_campaign=CPC_2026&utm_term=GOLD_CPC_2026&twclid=2aq2aksb285pxr1176vsihr3ob",
+          "https://davidprotein.com/pages/meet-david-gold?utm_source=X&utm_medium=paid&utm_campaign=CPC_2026&utm_term=GOLD_CPC_2026&twclid=28j06cysrmon6tvqd0wwsrgo47"
+        ],
+        "origin_counts": {
+          "feed_buffer": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "david_protein"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.27,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:3",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.36000000000000004,
+          "confidence": 0.1386,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-06T09:06:34.722Z",
+        "homepage_url": "https://davidprotein.com/",
+        "example_url": "https://davidprotein.com/pages/meet-david-gold?utm_source=X&utm_medium=paid&utm_campaign=CPC_2026&utm_term=GOLD_CPC_2026&twclid=2beqsd3kifgmiz3bgaf4s8hcjs",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://davidprotein.com/",
+        "example_final_url": "https://davidprotein.com/pages/meet-david-gold?utm_source=X&utm_medium=paid&utm_campaign=CPC_2026&utm_term=GOLD_CPC_2026&twclid=2beqsd3kifgmiz3bgaf4s8hcjs",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "varrd.com",
       "entity": "Varrd",
       "kind": "unknown",
@@ -2732,129 +2857,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "davidprotein.com",
-      "entity": "Davidprotein",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-03T08:27:46.000Z",
-      "last_seen_at": "2026-04-05T06:24:00.977Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://davidprotein.com/pages/meet-david-gold?utm_source=X&utm_medium=paid&utm_campaign=CPC_2026&utm_term=GOLD_CPC_2026&twclid=2beqsd3kifgmiz3bgaf4s8hcjs",
-          "https://davidprotein.com/pages/meet-david-gold?utm_source=X&utm_medium=paid&utm_campaign=CPC_2026&utm_term=GOLD_CPC_2026&twclid=2aq2aksb285pxr1176vsihr3ob"
-        ],
-        "origin_counts": {
-          "feed_buffer": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "david_protein"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.27,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:3",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3536197916666667,
-          "confidence": 0.10997499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-06T09:06:34.722Z",
-        "homepage_url": "https://davidprotein.com/",
-        "example_url": "https://davidprotein.com/pages/meet-david-gold?utm_source=X&utm_medium=paid&utm_campaign=CPC_2026&utm_term=GOLD_CPC_2026&twclid=2beqsd3kifgmiz3bgaf4s8hcjs",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://davidprotein.com/",
-        "example_final_url": "https://davidprotein.com/pages/meet-david-gold?utm_source=X&utm_medium=paid&utm_campaign=CPC_2026&utm_term=GOLD_CPC_2026&twclid=2beqsd3kifgmiz3bgaf4s8hcjs",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 3,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 3,
           "opinion_marker": false
         }
       }
@@ -6280,6 +6282,128 @@
       }
     },
     {
+      "domain": "speak4.io",
+      "entity": "Speak4 Io",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-07T15:21:30.156Z",
+      "last_seen_at": "2026-04-07T15:21:30.156Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://speak4.io/lp/hc01cshw?ts=1772120278&twclid=2dds00srijbdtkmjbi9s7cxdwr"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "afphq"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.12,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:2",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-07T15:27:21.660Z",
+        "homepage_url": "https://speak4.io/",
+        "example_url": "https://speak4.io/lp/hc01cshw?ts=1772120278&twclid=2dds00srijbdtkmjbi9s7cxdwr",
+        "homepage_status": null,
+        "example_status": 200,
+        "homepage_final_url": "https://speak4.io/",
+        "example_final_url": "https://speak4.io/lp/hc01cshw?ts=1772120278&twclid=2dds00srijbdtkmjbi9s7cxdwr",
+        "homepage_content_type": "",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "iranintl.com",
       "entity": "Iranintl",
       "kind": "unknown",
@@ -9021,13 +9145,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-04T15:29:02.607Z",
+        "fetched_at": "2026-04-07T15:47:25.063Z",
         "homepage_url": "https://reddit.com/",
-        "example_url": "https://www.reddit.com/search/?q=Emphasis%20economic%20development&sort=hot&t=week",
+        "example_url": "https://www.reddit.com/search/?q=Emphasis%20individual%20merit&sort=hot&t=week",
         "homepage_status": 403,
         "example_status": 403,
         "homepage_final_url": "https://www.reddit.com/",
-        "example_final_url": "https://www.reddit.com/search/?q=Emphasis%20economic%20development&sort=hot&t=week",
+        "example_final_url": "https://www.reddit.com/search/?q=Emphasis%20individual%20merit&sort=hot&t=week",
         "homepage_content_type": "text/html",
         "example_content_type": "text/html",
         "homepage": {
