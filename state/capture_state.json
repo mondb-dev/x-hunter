@@ -1,171 +1,171 @@
 {
-  "checked_at": "2026-04-06T01:17:22.461Z",
-  "evidence_24h": 128,
-  "unique_sources": 15,
-  "status": "captured",
+  "checked_at": "2026-04-07T01:27:50.492Z",
+  "evidence_24h": 141,
+  "unique_sources": 21,
+  "status": "warning",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "moderate",
-      "detail": "@krassenstein accounts for 28% of today's evidence (36/128)",
-      "username": "krassenstein",
-      "share": 0.281
+      "detail": "@narendramodi accounts for 27% of today's evidence (38/141)",
+      "username": "narendramodi",
+      "share": 0.27
     },
     {
       "type": "pole_skew",
-      "severity": "high",
-      "detail": "85% of evidence pushes \"right\" — risk of one-sided belief drift",
+      "severity": "moderate",
+      "detail": "81% of evidence pushes \"right\" — risk of one-sided belief drift",
       "dominant_pole": "right",
-      "share": 0.852
+      "share": 0.809
     }
   ],
-  "summary": "2 capture alert(s) detected:\n[MODERATE] @krassenstein accounts for 28% of today's evidence (36/128)\n[HIGH] 85% of evidence pushes \"right\" — risk of one-sided belief drift",
+  "summary": "2 capture alert(s) detected:\n[MODERATE] @narendramodi accounts for 27% of today's evidence (38/141)\n[MODERATE] 81% of evidence pushes \"right\" — risk of one-sided belief drift",
   "source_concentration": {
-    "krassenstein": {
-      "username": "krassenstein",
-      "count": 36,
-      "share": 0.281
-    },
-    "bricsinfo": {
-      "username": "bricsinfo",
-      "count": 21,
-      "share": 0.164
-    },
-    "furkangozukara": {
-      "username": "furkangozukara",
-      "count": 18,
-      "share": 0.141
-    },
-    "salesforce": {
-      "username": "salesforce",
-      "count": 13,
-      "share": 0.102
-    },
-    "incakura__": {
-      "username": "incakura__",
-      "count": 13,
-      "share": 0.102
-    },
-    "askfocal": {
-      "username": "askfocal",
-      "count": 10,
-      "share": 0.078
+    "narendramodi": {
+      "username": "narendramodi",
+      "count": 38,
+      "share": 0.27
     },
     "unknown": {
       "username": "unknown",
+      "count": 32,
+      "share": 0.227
+    },
+    "jacksonhinklle": {
+      "username": "jacksonhinklle",
+      "count": 13,
+      "share": 0.092
+    },
+    "furkangozukara": {
+      "username": "furkangozukara",
+      "count": 10,
+      "share": 0.071
+    },
+    "proudsocialist": {
+      "username": "proudsocialist",
+      "count": 8,
+      "share": 0.057
+    },
+    "rainmaker1973": {
+      "username": "rainmaker1973",
       "count": 6,
-      "share": 0.047
+      "share": 0.043
     },
-    "real_jfk_jr_": {
-      "username": "real_jfk_jr_",
+    "elonmusk": {
+      "username": "elonmusk",
+      "count": 5,
+      "share": 0.035
+    },
+    "impactph2019": {
+      "username": "impactph2019",
+      "count": 4,
+      "share": 0.028
+    },
+    "klonnypin_gosch": {
+      "username": "klonnypin_gosch",
+      "count": 4,
+      "share": 0.028
+    },
+    "xfreeze": {
+      "username": "xfreeze",
       "count": 3,
-      "share": 0.023
-    },
-    "whitehouse": {
-      "username": "whitehouse",
-      "count": 2,
-      "share": 0.016
-    },
-    "narendramodi": {
-      "username": "narendramodi",
-      "count": 1,
-      "share": 0.008
+      "share": 0.021
     }
   },
   "axis_concentration": {
-    "axis_geopolitical_rhetoric_v1": {
-      "axis_id": "axis_geopolitical_rhetoric_v1",
-      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
-      "count": 32,
-      "share": 0.25
-    },
-    "axis_national_sovereignty_v_intl_law_v1": {
-      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "label": "National Sovereignty vs. International Law",
-      "count": 20,
-      "share": 0.156
-    },
-    "axis_ai_workflow_approach_v1": {
-      "axis_id": "axis_ai_workflow_approach_v1",
-      "label": "AI Workflow Approach: Efficiency/Automation vs. Strategic Integration",
-      "count": 20,
-      "share": 0.156
-    },
-    "axis_ai_societal_impact_v1": {
-      "axis_id": "axis_ai_societal_impact_v1",
-      "label": "Societal Impact and Ethical Concerns of AI/Robots",
-      "count": 18,
-      "share": 0.141
-    },
     "axis_epistemic_integrity": {
       "axis_id": "axis_epistemic_integrity",
       "label": "Truth and Evidence in Public Discourse",
-      "count": 10,
-      "share": 0.078
+      "count": 50,
+      "share": 0.355
     },
-    "axis_human_rights_exploitation_v1": {
-      "axis_id": "axis_human_rights_exploitation_v1",
-      "label": "Human Rights and Exploitation",
-      "count": 7,
-      "share": 0.055
+    "axis_geopolitical_rhetoric_v1": {
+      "axis_id": "axis_geopolitical_rhetoric_v1",
+      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
+      "count": 23,
+      "share": 0.163
     },
     "axis_power_accountability": {
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
+      "count": 14,
+      "share": 0.099
+    },
+    "axis_human_rights_exploitation_v1": {
+      "axis_id": "axis_human_rights_exploitation_v1",
+      "label": "Human Rights and Exploitation",
+      "count": 8,
+      "share": 0.057
+    },
+    "axis_political_trust_corruption_v1": {
+      "axis_id": "axis_political_trust_corruption_v1",
+      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
+      "count": 7,
+      "share": 0.05
+    },
+    "axis_digital_supply_chain_security": {
+      "axis_id": "axis_digital_supply_chain_security",
+      "label": "Digital Supply Chain Security and Vulnerabilities",
+      "count": 7,
+      "share": 0.05
+    },
+    "axis_religious_expression_hate_speech_v1": {
+      "axis_id": "axis_religious_expression_hate_speech_v1",
+      "label": "Freedom of Religious Expression vs. Hate Speech Legislation",
+      "count": 6,
+      "share": 0.043
+    },
+    "axis_ai_societal_impact_v1": {
+      "axis_id": "axis_ai_societal_impact_v1",
+      "label": "Societal Impact and Ethical Concerns of AI/Robots",
+      "count": 5,
+      "share": 0.035
+    },
+    "axis_collective_voice": {
+      "axis_id": "axis_collective_voice",
+      "label": "Authentic Participation vs. Managed Consent",
       "count": 4,
-      "share": 0.031
+      "share": 0.028
     },
     "axis_media_integrity_v1": {
       "axis_id": "axis_media_integrity_v1",
       "label": "Integrity of Information and Social Media Manipulation",
       "count": 4,
-      "share": 0.031
-    },
-    "axis_public_trust_safety_crisis_v1": {
-      "axis_id": "axis_public_trust_safety_crisis_v1",
-      "label": "Public Trust in Safety and Crisis Communication",
-      "count": 4,
-      "share": 0.031
-    },
-    "axis_political_dynasties_meritocracy_v1": {
-      "axis_id": "axis_political_dynasties_meritocracy_v1",
-      "label": "Political Dynasties and Meritocracy",
-      "count": 4,
-      "share": 0.031
+      "share": 0.028
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 45,
-      "share": 0.352
+      "count": 53,
+      "share": 0.376
     },
-    "Anti-Trump Commentary": {
-      "cluster": "Anti-Trump Commentary",
-      "count": 36,
-      "share": 0.281
+    "Indian National Politics": {
+      "cluster": "Indian National Politics",
+      "count": 38,
+      "share": 0.27
     },
-    "footage shows another iranian drone striking close burj khalifa": {
-      "cluster": "footage shows another iranian drone striking close burj khalifa",
-      "count": 21,
-      "share": 0.164
+    "Polarizing Geopolitical Commentary": {
+      "cluster": "Polarizing Geopolitical Commentary",
+      "count": 13,
+      "share": 0.092
     },
     "Geopolitical Conspiracy Theories": {
       "cluster": "Geopolitical Conspiracy Theories",
-      "count": 18,
-      "share": 0.141
+      "count": 10,
+      "share": 0.071
     },
-    "Israel Conflict Narratives": {
-      "cluster": "Israel Conflict Narratives",
-      "count": 3,
-      "share": 0.023
+    "Anti-Establishment Geopolitics": {
+      "cluster": "Anti-Establishment Geopolitics",
+      "count": 8,
+      "share": 0.057
     }
   },
   "pole_balance": {
-    "left": 19,
-    "right": 109,
-    "neutral": 0,
-    "left_share": 0.148,
-    "right_share": 0.852
+    "left": 26,
+    "right": 114,
+    "neutral": 1,
+    "left_share": 0.184,
+    "right_share": 0.809
   }
 }
