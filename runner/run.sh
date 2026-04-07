@@ -970,7 +970,7 @@ while true; do
       fi
     done
     # ── Git commit daily outputs ───────────────────────────────────────────
-    git -C "$PROJECT_ROOT" add journals/ checkpoints/ state/ articles/ daily/ ponders/ 2>/dev/null || true
+    git -C "$PROJECT_ROOT" add journals/ checkpoints/ state/ articles/ daily/ ponders/ web/public/images/articles/ 2>/dev/null || true
     git -C "$PROJECT_ROOT" commit -m "daily: ${TODAY}" 2>/dev/null || true
     git -C "$PROJECT_ROOT" push origin main 2>/dev/null || true
     # Trigger Vercel redeploy for new article/checkpoint

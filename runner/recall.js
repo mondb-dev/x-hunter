@@ -119,7 +119,11 @@ async function semanticRecall(queryText, typeFilter, limitN) {
 
     if (!forceFts) {
       const semResults = await semanticRecall(query, type || null, limit);
-      if (semResults !== null) {
+      // Accept semantic results only if at least one hit has meaningful similarity.
+      // Proper nouns / handles score near-zero — fall through to FTS5 in that case.
+      const SEM_MIN_SCORE = 0.05;
+      const bestScore = semResults?.length ? semResults[0]._similarity ?? 0 : 0;
+      if (semResults !== null && semResults.length > 0 && bestScore >= SEM_MIN_SCORE) {
         results      = semResults;
         usedSemantic = true;
         if (type) queryLabel += ` [type:${type}]`;

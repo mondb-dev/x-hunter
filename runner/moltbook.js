@@ -825,7 +825,34 @@ async function postArticle() {
   const title = titleMatch ? titleMatch[1].trim() : "Field notes — Sebastian D. Hunter";
 
   // Strip the # title line from body (Moltbook has its own title field)
-  const body = raw.replace(/^#\s+.+\n/, "").trim();
+  let body = raw.replace(/^#\s+.+\n/, "").trim();
+
+  // Prefer the processed articles/{today}.md over the draft — article_art.js replaces
+  // [IMAGE: ...] markers with real image tags in that file but never updates article_draft.md.
+  const today = new Date().toISOString().slice(0, 10);
+  const articleFile = path.join(PROJECT_ROOT, "articles", `${today}.md`);
+  if (fs.existsSync(articleFile)) {
+    const processed = fs.readFileSync(articleFile, "utf-8");
+    // Only use it if article_art.js has already run (no raw [IMAGE:] markers left)
+    if (!processed.includes("[IMAGE:")) {
+      // Strip frontmatter, rewrite relative image paths to absolute URLs
+      const bodyFromFile = processed
+        .replace(/^---[\s\S]*?---\n/, "")
+        .replace(/\(\/images\/articles\//g, "(https://sebastianhunter.fun/images/articles/")
+        .trim();
+      if (bodyFromFile.length > 200) {
+        body = bodyFromFile;
+        console.log("[moltbook] using processed article with inline images");
+      }
+    } else {
+      // article_art.js hasn't run yet — strip the markers so they don't appear as text
+      body = body.replace(/^\[IMAGE:.*?\]\s*$/gm, "").replace(/\n{3,}/g, "\n\n").trim();
+      console.log("[moltbook] stripped [IMAGE:] markers (article_art.js not yet run)");
+    }
+  } else {
+    // No processed file — strip markers
+    body = body.replace(/^\[IMAGE:.*?\]\s*$/gm, "").replace(/\n{3,}/g, "\n\n").trim();
+  }
 
   // Add checkpoint Arweave link as footer
   const checkpointUrl = latestCheckpointArweave();
@@ -849,8 +876,6 @@ async function postArticle() {
     const ARTICLE_RESULT = path.join(PROJECT_ROOT, "state", "article_result.txt");
     fs.writeFileSync(ARTICLE_RESULT, `${postUrl}\n${title}`);
     // Patch moltbook URL into the article's frontmatter for the website
-    const today = new Date().toISOString().slice(0, 10);
-    const articleFile = path.join(PROJECT_ROOT, "articles", `${today}.md`);
     if (fs.existsSync(articleFile)) {
       const raw = fs.readFileSync(articleFile, "utf-8");
       if (!raw.includes("moltbook:")) {

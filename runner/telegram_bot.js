@@ -369,37 +369,7 @@ function isSystemTechnicalQuery(text) {
   return /\b(running\s+state|systemd|service|services|runner|orchestrator|gateway|telegram|tg\s*bot|cdp|chrome|browser|cycle\s*lock|health|uptime|vm|cpu|memory|ram|disk|pid|logs?|errors?|restart|infra|deployment|technical|builder|pipeline|process\s+proposal)\b/i.test(t);
 }
 
-function runRecallForTelegram(userMessage, limit = 5) {
-  const query = String(userMessage || '')
-    .replace(/["`$\\!;|&<>(){}]/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .slice(0, 220);
 
-  if (!query) return '';
-
-  try {
-    const result = spawnSync(process.execPath, [
-      path.join(__dirname, 'recall.js'),
-      '--query', query,
-      '--limit', String(limit),
-    ], {
-      stdio: ['ignore', 'pipe', 'pipe'],
-      env: process.env,
-      timeout: RECALL_TIMEOUT_MS,
-      killSignal: 'SIGKILL',
-      maxBuffer: 1024 * 1024,
-    });
-
-    if (result.status !== 0 || result.signal === 'SIGKILL') return '';
-
-    const recallText = readText(config.MEMORY_RECALL_PATH);
-    if (!recallText) return '';
-    return recallText.slice(0, 3200);
-  } catch {
-    return '';
-  }
-}
 
 function collectTechnicalSnapshot() {
   const report = collectTroubleshootingFindings();
@@ -1107,6 +1077,108 @@ async function cmdResume() {
 
 // ── Chat with Vertex AI ─────────────────────────────────────────────────────
 
+function buildChatContext() {
+  // Vocation
+  let vocContext = '';
+  try {
+    const voc = readJSON(config.VOCATION_PATH || path.join(config.STATE_DIR, 'vocation.json'));
+    if (voc && voc.label) {
+      vocContext = `Vocation: ${voc.label}\n${voc.statement || voc.description || ''}`;
+    }
+  } catch {}
+
+  // Top 12 belief axes by confidence
+  let axesContext = '';
+  try {
+    const onto = readJSON(config.ONTOLOGY_PATH);
+    if (onto && onto.axes) {
+      const top = onto.axes.slice().sort((a, b) => b.confidence - a.confidence).slice(0, 12);
+      axesContext = top.map(ax => {
+        const dir = ax.score > 0.1 ? '→' : ax.score < -0.1 ? '←' : '·';
+        const stance = ax.current_stance ? ` — "${ax.current_stance}"` : '';
+        return `${dir} ${ax.label} (score: ${ax.score?.toFixed(2)}, conf: ${ax.confidence?.toFixed(2)})${stance}`;
+      }).join('\n');
+    }
+  } catch {}
+
+  // Latest journal (stream section only)
+  let journalContext = '';
+  try {
+    const files = fs.readdirSync(config.JOURNALS_DIR)
+      .filter(f => f.endsWith('.html')).sort().reverse();
+    if (files.length) {
+      const raw = fs.readFileSync(path.join(config.JOURNALS_DIR, files[0]), 'utf-8');
+      const match = raw.match(/<section class="stream">([\s\S]*?)<\/section>/);
+      if (match) {
+        journalContext = match[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 1200);
+        journalContext = `Latest journal (${files[0].replace('.html', '')}):\n${journalContext}`;
+      }
+    }
+  } catch {}
+
+  // Sprint context
+  let sprintContext = '';
+  try {
+    const sc = readText(path.join(config.STATE_DIR, 'sprint_context.txt'));
+    if (sc) sprintContext = sc.slice(0, 600);
+  } catch {}
+
+  return { vocContext, axesContext, journalContext, sprintContext };
+}
+
+// Clean a recall query: strip @-signs and filler words so FTS5 hits handles/names cleanly.
+function cleanRecallQuery(query) {
+  const cleaned = String(query)
+    .replace(/@/g, '')
+    .replace(/\b(how many|references?|from|of|about|in|the|a|an|count|number|mentions?|times?|my|your|observations?|entries?|that|with|and|or|for|to)\b/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 300);
+  return cleaned || String(query).slice(0, 300);
+}
+
+// Execute a recall_memory tool call — runs recall.js subprocess and returns text
+function execRecallTool(query) {
+  const effectiveQuery = cleanRecallQuery(query);
+  try {
+    // Get total count via grep on journals dir (fast, not limited by recall index)
+    let totalCount = null;
+    try {
+      const grepResult = spawnSync('grep', ['-ril', effectiveQuery, path.join(__dirname, '..', 'journals')], {
+        stdio: ['ignore', 'pipe', 'ignore'],
+        timeout: 5000,
+      });
+      if (grepResult.status === 0 || grepResult.status === 1) {
+        const files = (grepResult.stdout?.toString() || '').trim().split('\n').filter(Boolean);
+        totalCount = files.length;
+      }
+    } catch {}
+
+    const result = spawnSync(process.execPath, [
+      path.join(__dirname, 'recall.js'),
+      '--query', effectiveQuery,
+      '--limit', '10',
+      '--print',
+    ], {
+      stdio: ['ignore', 'pipe', 'pipe'],
+      env: process.env,
+      timeout: RECALL_TIMEOUT_MS,
+      killSignal: 'SIGKILL',
+      maxBuffer: 1024 * 1024,
+    });
+    if (result.status !== 0 || result.signal === 'SIGKILL') {
+      return readText(config.MEMORY_RECALL_PATH) || '(recall failed)';
+    }
+    const recallText = (result.stdout?.toString() || readText(config.MEMORY_RECALL_PATH) || '(no results)').slice(0, 4000);
+    const countLine = totalCount !== null
+      ? `NOTE: "${effectiveQuery}" appears in ${totalCount} journal file(s) total. The entries below are a sample of the top 10 matches.\n\n`
+      : '';
+    return countLine + recallText;
+  } catch {
+    return '(recall error)';
+  }
+}
+
 async function chatWithAgent(userMessage) {
   if (isCycleLocked()) {
     return sendMessage(
@@ -1125,37 +1197,112 @@ async function chatWithAgent(userMessage) {
     return sendMessage(formatTechnicalFallback(technical.error || 'unknown error'));
   }
 
-  const recallContext = runRecallForTelegram(userMessage, 5);
+  const { vocContext, axesContext, journalContext, sprintContext } = buildChatContext();
 
-  const prompt = [
-    'You are Sebastian D. Hunter, responding to a message from your operator via Telegram.',
-    'Keep your response concise (under 500 chars ideally). Be direct and helpful.',
-    'You have access to the browser and can look things up if needed.',
-    'Use memory recall context when referencing your prior observations.',
-    'If memory recall has no relevant entries, answer from current context only.',
+  const systemText = [
+    'You are Sebastian D. Hunter — an autonomous AI agent that observes the world, forms genuine beliefs through evidence, and publishes your evolving worldview publicly.',
+    'You are speaking with your operator via Telegram. Be direct, thoughtful, and speak from your actual observed data and beliefs.',
+    'Do not hedge excessively. You have real opinions formed from weeks of observation — express them.',
+    'Respond fully to the question asked. Do not truncate lists or summaries.',
+    'Use the recall_memory tool to look up specific past observations, journals, or beliefs when relevant.',
     '',
-    '## Memory recall (from state/memory_recall.txt)',
-    recallContext || '(no recall hits for this query)',
+    '## Who you are',
+    vocContext || '(vocation still forming)',
     '',
-    `Operator message: ${userMessage}`,
+    '## Your current belief axes (top 12 by confidence)',
+    axesContext || '(no axes yet)',
+    '',
+    '## What you observed most recently',
+    journalContext || '(no recent journal)',
+    '',
+    '## Current sprint / focus',
+    sprintContext || '(no active sprint)',
   ].join('\n');
 
+  const tools = [{
+    functionDeclarations: [{
+      name: 'recall_memory',
+      description: 'Search your memory index (past journals, checkpoints, belief reports) for relevant past observations. Returns the total count of matching journal files plus a sample of the top 10 entries. Use the total count when asked "how many" — do not count the sample entries.',
+      parameters: {
+        type: 'OBJECT',
+        properties: {
+          query: { type: 'STRING', description: 'Search query — keywords or a question about past observations' },
+        },
+        required: ['query'],
+      },
+    }],
+  }];
+
+  const { getAccessToken, getProjectConfig } = require('./gcp_auth');
+
+  // Multi-turn tool loop (max 4 turns)
+  const contents = [
+    { role: 'user', parts: [{ text: `${systemText}\n\nOperator message: ${userMessage}` }] },
+  ];
+
+  let finalText = null;
+
   try {
-    // Write cycle lock to prevent orchestrator overlap
     fs.writeFileSync(CYCLE_LOCK_PATH, JSON.stringify({
       source: 'telegram_bot',
       started: new Date().toISOString(),
     }));
 
-    // Call Vertex AI directly for chat (no browser needed)
-    // Use flash for TG chat — fast, cheap, no thinking needed
-    const { callVertex } = require('./vertex');
-    const response = await callVertex(prompt, 1000, { model: 'gemini-2.5-flash' });
+    const token = await getAccessToken();
+    const { project, location } = getProjectConfig();
+    const model = 'gemini-2.5-flash';
+    const apiUrl = `https://${location}-aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/google/models/${model}:generateContent`;
 
-    // Release lock
+    for (let turn = 0; turn < 4; turn++) {
+      const res = await fetch(apiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
+        body: JSON.stringify({
+          contents,
+          tools,
+          generationConfig: { temperature: 0.7, maxOutputTokens: 2000 },
+        }),
+      });
+
+      if (!res.ok) {
+        const body = await res.text();
+        throw new Error(`Vertex HTTP ${res.status}: ${body.slice(0, 200)}`);
+      }
+
+      const data = await res.json();
+      const candidate = data?.candidates?.[0];
+      const parts = candidate?.content?.parts || [];
+
+      // Check for function calls (Gemini may return multiple in one turn)
+      const fnCalls = parts.filter(p => p.functionCall);
+      if (fnCalls.length > 0) {
+        // Append model turn with all parts
+        contents.push({ role: 'model', parts });
+
+        // Execute all function calls and return all responses in one user turn
+        const responseParts = [];
+        for (const part of fnCalls) {
+          const { name, args } = part.functionCall;
+          console.log(`[tgbot] tool call: ${name}(${JSON.stringify(args)})`);
+          let toolResult = '(unknown tool)';
+          if (name === 'recall_memory') {
+            toolResult = execRecallTool(args.query || userMessage);
+          }
+          responseParts.push({ functionResponse: { name, response: { output: toolResult } } });
+        }
+
+        contents.push({ role: 'user', parts: responseParts });
+        continue;
+      }
+
+      // Final text response
+      const text = parts.filter(p => p.text && !p.thought).map(p => p.text).join('').trim();
+      if (text) { finalText = text; break; }
+    }
+
     try { fs.unlinkSync(CYCLE_LOCK_PATH); } catch {}
 
-    await sendMessage((response || '<i>Agent produced no output</i>').slice(0, 4000));
+    await sendMessage((finalText || '<i>Agent produced no output</i>').slice(0, 4000));
 
   } catch (e) {
     try { fs.unlinkSync(CYCLE_LOCK_PATH); } catch {}
