@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-07T22:12:34.081Z",
+  "generated_at": "2026-04-07T23:12:28.205Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-07T21:52:26.439Z",
+  "profiled_at": "2026-04-07T22:52:28.549Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -369,6 +369,137 @@
       }
     },
     {
+      "domain": "google.com",
+      "entity": "Google",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-01T05:04:23.454Z",
+      "last_seen_at": "2026-04-07T22:12:00Z",
+      "discovery": {
+        "distinct_urls": 17,
+        "example_urls": [
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCmNHptSbVV3zGxP_M6wvF6PcPxnfQnf-w9J2CIiFt2D2AVZQffTQL7N4jd0jzuJ50Mh5rLLNMVr7wNa8VaGxy95U5puMCuVK_zI9aYx7FN7TMnmb81qR7Po_gte6ZmIEAKMYoG1uREvXeWIIsn97g8Gqal8F9nghWkc0Kx6cyKYDOYeqCyIme0Rvo_yYOdQ17MK2czw==",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfGmvMCsPeFUI4B-xmyKoaAkX_AG6Q9V1ZLs6ol2Qfeui48brn29RzcplcRWPGm_jTX4UXQepNKn_bVIhXEvqz4GGcsd5ybSyDByJlOqa6DCdHVN5Wh4pP2HqPH3ym0CeYu1sncGZpEaCB",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfBcbRDc8qsGETTtjHy8r70yXj3Vj6tnRXi-SKDvn5RbZ5twBQTM9EFWeLMPoPpntCGdhdTaqiIr7LfPkqNetD5MLdxxVoZPV6S7z6mjBlTbippsba0cjyQl7kWCm-zLHaU3x499dTzzv2x8JEHMos4qCBLwyseBjF4fIOjg0cwDq9uYL4rLGwOAPbMTAJBe9a8eK_6kuP_vVP7pMSEL2EjdwyvHtt",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHKak43YlGcz5X6qUoELjZuRUqVVq-wkNdb94fpIPeRwd3SLB4MnRt4IMw2qmWiUIiYxlw4xKZLO1N6L9zWCpsbkFH-BFk43pn4XQI1j5FiGCiVr5TmzzTqO8ZlEeRhM7RD78ukDox2YtOoj2exNowNHG2kwaG5szzv8M=",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCux0Esh3Wf46OpPP7Ecjy_Uwoust5YUxh9Q2bvVXjBcpNS5FZCK-I0dSg-oddOZ2bN-9IPIA5hMeEKl-XGq2shAHgmufI_mSFl_mxSrCVCsSyrky18sWlNJUe-KY_KpA__NK-8_oP_O-WlPoUHdlZL11hQvTqB_TXUeBoDInknraVJ-UdWknJJPXRm90gxUNCWOfteIWP31XVB9d81eGCzA="
+        ],
+        "origin_counts": {
+          "ontology_evidence": 13,
+          "journals": 10
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_digital_supply_chain_security",
+          "axis_economic_indicators_reliability_v1",
+          "axis_ph_geopolitics_wps_v1",
+          "axis_religious_expression_hate_speech_v1",
+          "axis_social_welfare_v_military_spending_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.7616666666666666,
+          "basis": [
+            "distinct_urls:17",
+            "distinct_axes:5",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.14,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.49239583333333337,
+          "confidence": 0.5582,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:17",
+            "distinct_axes:5",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-06T10:06:44.116Z",
+        "homepage_url": "https://google.com/",
+        "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFCw96vlaNlxNRXBpVj5mge4rLgXa78XwZMGqVdp93EO8s3n4fNPhqgxkjMdJMn6-UNAuONNeTBczq16ajGwpHoGULhCJIAru2o96n3OHYFKJpt07S1NjxMCrCvdlBJGGhs0V4sILFqHjEP6yeQ4BJ9AhHavJlypkSNVID_Ic1uL4OEQfjNAnYMuFMOOzPWw9RiDB0PsBzb7gYSoFD0HobiWMT_6q6-XQgWqr5uRQdLwn9u6vUTR3Scz_ncWcgQPVU6tnEfDMEBQGEnqN22psBdqfe",
+        "homepage_status": 200,
+        "example_status": 404,
+        "homepage_final_url": "https://www.google.com/",
+        "example_final_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFCw96vlaNlxNRXBpVj5mge4rLgXa78XwZMGqVdp93EO8s3n4fNPhqgxkjMdJMn6-UNAuONNeTBczq16ajGwpHoGULhCJIAru2o96n3OHYFKJpt07S1NjxMCrCvdlBJGGhs0V4sILFqHjEP6yeQ4BJ9AhHavJlypkSNVID_Ic1uL4OEQfjNAnYMuFMOOzPWw9RiDB0PsBzb7gYSoFD0HobiWMT_6q6-XQgWqr5uRQdLwn9u6vUTR3Scz_ncWcgQPVU6tnEfDMEBQGEnqN22psBdqfe",
+        "homepage_content_type": "text/html; charset=ISO-8859-1",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "t.co",
       "entity": "T Co",
       "kind": "unknown",
@@ -509,9 +640,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-07T17:18:52.000Z",
+      "last_seen_at": "2026-04-07T21:08:51.000Z",
       "discovery": {
-        "distinct_urls": 19,
+        "distinct_urls": 20,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,7 +651,7 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 18,
+          "feed_buffer_reply": 19,
           "feed_buffer": 1
         },
         "distinct_referring_accounts": 18,
@@ -561,7 +692,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:19",
+            "distinct_urls:20",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -599,7 +730,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:19",
+            "distinct_urls:20",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:18",
@@ -632,136 +763,6 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "google.com",
-      "entity": "Google",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-07T19:39:28.595Z",
-      "discovery": {
-        "distinct_urls": 14,
-        "example_urls": [
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCmNHptSbVV3zGxP_M6wvF6PcPxnfQnf-w9J2CIiFt2D2AVZQffTQL7N4jd0jzuJ50Mh5rLLNMVr7wNa8VaGxy95U5puMCuVK_zI9aYx7FN7TMnmb81qR7Po_gte6ZmIEAKMYoG1uREvXeWIIsn97g8Gqal8F9nghWkc0Kx6cyKYDOYeqCyIme0Rvo_yYOdQ17MK2czw==",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfGmvMCsPeFUI4B-xmyKoaAkX_AG6Q9V1ZLs6ol2Qfeui48brn29RzcplcRWPGm_jTX4UXQepNKn_bVIhXEvqz4GGcsd5ybSyDByJlOqa6DCdHVN5Wh4pP2HqPH3ym0CeYu1sncGZpEaCB",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfBcbRDc8qsGETTtjHy8r70yXj3Vj6tnRXi-SKDvn5RbZ5twBQTM9EFWeLMPoPpntCGdhdTaqiIr7LfPkqNetD5MLdxxVoZPV6S7z6mjBlTbippsba0cjyQl7kWCm-zLHaU3x499dTzzv2x8JEHMos4qCBLwyseBjF4fIOjg0cwDq9uYL4rLGwOAPbMTAJBe9a8eK_6kuP_vVP7pMSEL2EjdwyvHtt",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHKak43YlGcz5X6qUoELjZuRUqVVq-wkNdb94fpIPeRwd3SLB4MnRt4IMw2qmWiUIiYxlw4xKZLO1N6L9zWCpsbkFH-BFk43pn4XQI1j5FiGCiVr5TmzzTqO8ZlEeRhM7RD78ukDox2YtOoj2exNowNHG2kwaG5szzv8M=",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCux0Esh3Wf46OpPP7Ecjy_Uwoust5YUxh9Q2bvVXjBcpNS5FZCK-I0dSg-oddOZ2bN-9IPIA5hMeEKl-XGq2shAHgmufI_mSFl_mxSrCVCsSyrky18sWlNJUe-KY_KpA__NK-8_oP_O-WlPoUHdlZL11hQvTqB_TXUeBoDInknraVJ-UdWknJJPXRm90gxUNCWOfteIWP31XVB9d81eGCzA="
-        ],
-        "origin_counts": {
-          "ontology_evidence": 9,
-          "journals": 10
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_digital_supply_chain_security",
-          "axis_economic_indicators_reliability_v1",
-          "axis_ph_geopolitics_wps_v1",
-          "axis_religious_expression_hate_speech_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.7033333333333333,
-          "basis": [
-            "distinct_urls:14",
-            "distinct_axes:4",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.14,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.47963541666666665,
-          "confidence": 0.47845,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:14",
-            "distinct_axes:4",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-06T10:06:44.116Z",
-        "homepage_url": "https://google.com/",
-        "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFCw96vlaNlxNRXBpVj5mge4rLgXa78XwZMGqVdp93EO8s3n4fNPhqgxkjMdJMn6-UNAuONNeTBczq16ajGwpHoGULhCJIAru2o96n3OHYFKJpt07S1NjxMCrCvdlBJGGhs0V4sILFqHjEP6yeQ4BJ9AhHavJlypkSNVID_Ic1uL4OEQfjNAnYMuFMOOzPWw9RiDB0PsBzb7gYSoFD0HobiWMT_6q6-XQgWqr5uRQdLwn9u6vUTR3Scz_ncWcgQPVU6tnEfDMEBQGEnqN22psBdqfe",
-        "homepage_status": 200,
-        "example_status": 404,
-        "homepage_final_url": "https://www.google.com/",
-        "example_final_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFCw96vlaNlxNRXBpVj5mge4rLgXa78XwZMGqVdp93EO8s3n4fNPhqgxkjMdJMn6-UNAuONNeTBczq16ajGwpHoGULhCJIAru2o96n3OHYFKJpt07S1NjxMCrCvdlBJGGhs0V4sILFqHjEP6yeQ4BJ9AhHavJlypkSNVID_Ic1uL4OEQfjNAnYMuFMOOzPWw9RiDB0PsBzb7gYSoFD0HobiWMT_6q6-XQgWqr5uRQdLwn9u6vUTR3Scz_ncWcgQPVU6tnEfDMEBQGEnqN22psBdqfe",
-        "homepage_content_type": "text/html; charset=ISO-8859-1",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -6772,6 +6773,128 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 26,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "tickerscores.ai",
+      "entity": "Tickerscores Ai",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-07T06:40:29.000Z",
+      "last_seen_at": "2026-04-07T06:40:29.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://tickerscores.ai/?twclid=29mi9nru582fdb9vf7t1d5r9yf"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "tickerscores_ai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.25,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:3",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-07T22:52:28.548Z",
+        "homepage_url": "https://tickerscores.ai/",
+        "example_url": "https://tickerscores.ai/?twclid=29mi9nru582fdb9vf7t1d5r9yf",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://tickerscores.ai/",
+        "example_final_url": "https://tickerscores.ai/?twclid=29mi9nru582fdb9vf7t1d5r9yf",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
           "opinion_marker": false
         }
       }
