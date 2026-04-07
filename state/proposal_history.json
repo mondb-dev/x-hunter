@@ -54,6 +54,24 @@
       "pushed_to_origin": null,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_belief_change_attribution_1775525313479",
+      "title": "Belief Change Attribution in Daily Reports",
+      "status": "merged",
+      "proposed_at": "2026-04-07T01:28:33.454Z",
+      "resolved_at": "2026-04-07T02:23:23.175Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "pipelines/daily_maintenance.js",
+        "src/schemas/belief_report.schema.json",
+        "src/tools/belief_reporter.js"
+      ],
+      "branch_name": "meta/proposal_belief_change_attribution_1775525313479",
+      "merge_commit": "afb131ff9329ef2ba749e12a3596d3232ce321a6",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }

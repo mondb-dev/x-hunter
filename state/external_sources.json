@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-07T01:21:52.448Z",
+  "generated_at": "2026-04-07T02:52:01.536Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-07T00:22:00.549Z",
+  "profiled_at": "2026-04-07T01:51:53.628Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -765,7 +765,7 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-07T00:22:51.427Z",
+      "last_seen_at": "2026-04-07T01:22:39.224Z",
       "discovery": {
         "distinct_urls": 10,
         "example_urls": [
@@ -777,7 +777,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "journals": 5
+          "journals": 6
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -893,9 +893,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-16T09:36:45.269Z",
-      "last_seen_at": "2026-04-06T04:32:55.252Z",
+      "last_seen_at": "2026-04-07T01:28:33.367Z",
       "discovery": {
-        "distinct_urls": 19,
+        "distinct_urls": 20,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -904,7 +904,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 19
+          "articles": 20
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -933,7 +933,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:19",
+            "distinct_urls:20",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -967,11 +967,11 @@
         },
         "overall": {
           "score": 0.40726562499999996,
-          "confidence": 0.521475,
+          "confidence": 0.543975,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:19",
+            "distinct_urls:20",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -4876,7 +4876,7 @@
           ]
         },
         "profile": {
-          "score": 0.03,
+          "score": 0.09,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -4885,7 +4885,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:3",
+            "outbound_links:9",
             "opinion_marker:false"
           ]
         },
@@ -4905,7 +4905,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-04T01:40:47.284Z",
+        "fetched_at": "2026-04-07T01:51:53.627Z",
         "homepage_url": "https://ironclaw.com/",
         "example_url": "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=2axdpb938w7qafe76dwca4od5q",
         "homepage_status": 200,
@@ -4921,7 +4921,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 3,
+          "outbound_links_count": 9,
           "opinion_marker": false
         },
         "example": {
@@ -4931,7 +4931,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 3,
+          "outbound_links_count": 9,
           "opinion_marker": false
         }
       }
