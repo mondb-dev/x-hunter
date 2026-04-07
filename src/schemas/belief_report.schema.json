@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Belief Dynamics Report",
+  "description": "A report detailing the changes in belief axes over a 24-hour period.",
+  "type": "object",
+  "properties": {
+    "report_date": {
+      "type": "string",
+      "format": "date",
+      "description": "The date for which the report was generated (YYYY-MM-DD)."
+    },
+    "comparison_period": {
+      "type": "object",
+      "properties": {
+        "current": { "type": "string" },
+        "previous": { "type": "string" }
+      },
+      "required": ["current", "previous"]
+    },
+    "axis_dynamics": {
+      "type": "array",
+      "description": "List of axes with their score changes, sorted by largest absolute delta.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "axis_id": {
+            "type": "string"
+          },
+          "axis_label": {
+            "type": "string"
+          },
+          "previous_score": {
+            "type": "number",
+            "description": "The score from the previous day."
+          },
+          "new_score": {
+            "type": "number",
+            "description": "The score for the current day."
+          },
+          "delta": {
+            "type": "number",
+            "description": "The change in score (new_score - previous_score)."
+          },
+          "contribution_summary": {
+            "type": "object",
+            "properties": {
+              "journal_entries": { "type": "integer" },
+              "evidence_items": { "type": "integer" },
+              "positive_evidence": { "type": "integer" },
+              "negative_evidence": { "type": "integer" }
+            },
+            "required": ["journal_entries", "evidence_items", "positive_evidence", "negative_evidence"]
+          }
+        },
+        "required": ["axis_id", "axis_label", "previous_score", "new_score", "delta", "contribution_summary"]
+      }
+    }
+  },
+  "required": ["report_date", "comparison_period", "axis_dynamics"]
+}
