@@ -1,171 +1,156 @@
 {
-  "checked_at": "2026-04-07T01:27:50.492Z",
-  "evidence_24h": 141,
-  "unique_sources": 21,
-  "status": "warning",
-  "alerts": [
-    {
-      "type": "source_dominance",
-      "severity": "moderate",
-      "detail": "@narendramodi accounts for 27% of today's evidence (38/141)",
-      "username": "narendramodi",
-      "share": 0.27
-    },
-    {
-      "type": "pole_skew",
-      "severity": "moderate",
-      "detail": "81% of evidence pushes \"right\" — risk of one-sided belief drift",
-      "dominant_pole": "right",
-      "share": 0.809
-    }
-  ],
-  "summary": "2 capture alert(s) detected:\n[MODERATE] @narendramodi accounts for 27% of today's evidence (38/141)\n[MODERATE] 81% of evidence pushes \"right\" — risk of one-sided belief drift",
+  "checked_at": "2026-04-08T01:37:56.842Z",
+  "evidence_24h": 115,
+  "unique_sources": 30,
+  "status": "clean",
+  "alerts": [],
+  "summary": "Evidence distribution looks healthy (115 entries across 30 sources, 19 axes).",
   "source_concentration": {
-    "narendramodi": {
-      "username": "narendramodi",
-      "count": 38,
-      "share": 0.27
-    },
     "unknown": {
       "username": "unknown",
-      "count": 32,
-      "share": 0.227
+      "count": 20,
+      "share": 0.174
+    },
+    "ericldaugh": {
+      "username": "ericldaugh",
+      "count": 11,
+      "share": 0.096
     },
     "jacksonhinklle": {
       "username": "jacksonhinklle",
-      "count": 13,
-      "share": 0.092
+      "count": 7,
+      "share": 0.061
+    },
+    "americalivex_": {
+      "username": "americalivex_",
+      "count": 6,
+      "share": 0.052
+    },
+    "nicksortor": {
+      "username": "nicksortor",
+      "count": 5,
+      "share": 0.043
     },
     "furkangozukara": {
       "username": "furkangozukara",
-      "count": 10,
-      "share": 0.071
-    },
-    "proudsocialist": {
-      "username": "proudsocialist",
-      "count": 8,
-      "share": 0.057
-    },
-    "rainmaker1973": {
-      "username": "rainmaker1973",
-      "count": 6,
+      "count": 5,
       "share": 0.043
     },
-    "elonmusk": {
-      "username": "elonmusk",
+    "philippinestar": {
+      "username": "philippinestar",
       "count": 5,
+      "share": 0.043
+    },
+    "amockx2022": {
+      "username": "amockx2022",
+      "count": 4,
       "share": 0.035
     },
-    "impactph2019": {
-      "username": "impactph2019",
+    "fmrrepmtg": {
+      "username": "fmrrepmtg",
       "count": 4,
-      "share": 0.028
+      "share": 0.035
     },
-    "klonnypin_gosch": {
-      "username": "klonnypin_gosch",
+    "_infogram_": {
+      "username": "_infogram_",
       "count": 4,
-      "share": 0.028
-    },
-    "xfreeze": {
-      "username": "xfreeze",
-      "count": 3,
-      "share": 0.021
+      "share": 0.035
     }
   },
   "axis_concentration": {
-    "axis_epistemic_integrity": {
-      "axis_id": "axis_epistemic_integrity",
-      "label": "Truth and Evidence in Public Discourse",
-      "count": 50,
-      "share": 0.355
-    },
     "axis_geopolitical_rhetoric_v1": {
       "axis_id": "axis_geopolitical_rhetoric_v1",
       "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
-      "count": 23,
-      "share": 0.163
+      "count": 19,
+      "share": 0.165
     },
     "axis_power_accountability": {
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
-      "count": 14,
-      "share": 0.099
+      "count": 13,
+      "share": 0.113
     },
     "axis_human_rights_exploitation_v1": {
       "axis_id": "axis_human_rights_exploitation_v1",
       "label": "Human Rights and Exploitation",
-      "count": 8,
-      "share": 0.057
+      "count": 12,
+      "share": 0.104
     },
-    "axis_political_trust_corruption_v1": {
-      "axis_id": "axis_political_trust_corruption_v1",
-      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
-      "count": 7,
-      "share": 0.05
+    "axis_national_sovereignty_v_intl_law_v1": {
+      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "label": "National Sovereignty vs. International Law",
+      "count": 11,
+      "share": 0.096
     },
-    "axis_digital_supply_chain_security": {
-      "axis_id": "axis_digital_supply_chain_security",
-      "label": "Digital Supply Chain Security and Vulnerabilities",
-      "count": 7,
-      "share": 0.05
+    "axis_epistemic_integrity": {
+      "axis_id": "axis_epistemic_integrity",
+      "label": "Truth and Evidence in Public Discourse",
+      "count": 10,
+      "share": 0.087
     },
-    "axis_religious_expression_hate_speech_v1": {
-      "axis_id": "axis_religious_expression_hate_speech_v1",
-      "label": "Freedom of Religious Expression vs. Hate Speech Legislation",
-      "count": 6,
-      "share": 0.043
-    },
-    "axis_ai_societal_impact_v1": {
-      "axis_id": "axis_ai_societal_impact_v1",
-      "label": "Societal Impact and Ethical Concerns of AI/Robots",
-      "count": 5,
-      "share": 0.035
-    },
-    "axis_collective_voice": {
-      "axis_id": "axis_collective_voice",
-      "label": "Authentic Participation vs. Managed Consent",
-      "count": 4,
-      "share": 0.028
+    "axis_ph_geopolitics_wps_v1": {
+      "axis_id": "axis_ph_geopolitics_wps_v1",
+      "label": "Philippine Geopolitical Alignment in the West Philippine Sea",
+      "count": 10,
+      "share": 0.087
     },
     "axis_media_integrity_v1": {
       "axis_id": "axis_media_integrity_v1",
       "label": "Integrity of Information and Social Media Manipulation",
+      "count": 10,
+      "share": 0.087
+    },
+    "axis_collective_voice": {
+      "axis_id": "axis_collective_voice",
+      "label": "Authentic Participation vs. Managed Consent",
+      "count": 6,
+      "share": 0.052
+    },
+    "axis_ai_societal_impact_v1": {
+      "axis_id": "axis_ai_societal_impact_v1",
+      "label": "Societal Impact and Ethical Concerns of AI/Robots",
       "count": 4,
-      "share": 0.028
+      "share": 0.035
+    },
+    "axis_political_dynasties_meritocracy_v1": {
+      "axis_id": "axis_political_dynasties_meritocracy_v1",
+      "label": "Political Dynasties and Meritocracy",
+      "count": 4,
+      "share": 0.035
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 53,
-      "share": 0.376
+      "count": 66,
+      "share": 0.574
     },
-    "Indian National Politics": {
-      "cluster": "Indian National Politics",
-      "count": 38,
-      "share": 0.27
+    "streets los angeles president trump signature song": {
+      "cluster": "streets los angeles president trump signature song",
+      "count": 11,
+      "share": 0.096
     },
     "Polarizing Geopolitical Commentary": {
       "cluster": "Polarizing Geopolitical Commentary",
-      "count": 13,
-      "share": 0.092
+      "count": 7,
+      "share": 0.061
     },
     "Geopolitical Conspiracy Theories": {
       "cluster": "Geopolitical Conspiracy Theories",
-      "count": 10,
-      "share": 0.071
+      "count": 5,
+      "share": 0.043
     },
-    "Anti-Establishment Geopolitics": {
-      "cluster": "Anti-Establishment Geopolitics",
-      "count": 8,
-      "share": 0.057
+    "bicol saro partylist rep terry ridon said saturday https tinyurl com mu7acm8y": {
+      "cluster": "bicol saro partylist rep terry ridon said saturday https tinyurl com mu7acm8y",
+      "count": 5,
+      "share": 0.043
     }
   },
   "pole_balance": {
-    "left": 26,
-    "right": 114,
-    "neutral": 1,
-    "left_share": 0.184,
-    "right_share": 0.809
+    "left": 44,
+    "right": 71,
+    "neutral": 0,
+    "left_share": 0.383,
+    "right_share": 0.617
   }
 }
