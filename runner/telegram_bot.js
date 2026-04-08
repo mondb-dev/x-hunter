@@ -1123,7 +1123,26 @@ function buildChatContext() {
     if (sc) sprintContext = sc.slice(0, 600);
   } catch {}
 
-  return { vocContext, axesContext, journalContext, sprintContext };
+  // Recent articles (last 10) — so Sebastian can always cite his own writing
+  let articlesContext = '';
+  try {
+    const ARTICLES_DIR = path.join(config.STATE_DIR, '..', 'articles');
+    const files = fs.readdirSync(ARTICLES_DIR)
+      .filter(f => /^\d{4}-\d{2}-\d{2}\.md$/.test(f))
+      .sort().reverse().slice(0, 10);
+    const lines = files.map(f => {
+      const slug = f.replace('.md', '');
+      try {
+        const raw = fs.readFileSync(path.join(ARTICLES_DIR, f), 'utf-8');
+        const titleMatch = raw.match(/^title:\s*"?(.+?)"?\s*$/m);
+        const title = titleMatch ? titleMatch[1] : slug;
+        return `${slug}: ${title} — https://sebastianhunter.fun/articles/${slug}`;
+      } catch { return `${slug} — https://sebastianhunter.fun/articles/${slug}`; }
+    });
+    articlesContext = lines.join('\n');
+  } catch {}
+
+  return { vocContext, axesContext, journalContext, sprintContext, articlesContext };
 }
 
 // Clean a recall query: strip @-signs and filler words so FTS5 hits handles/names cleanly.
@@ -1197,7 +1216,7 @@ async function chatWithAgent(userMessage) {
     return sendMessage(formatTechnicalFallback(technical.error || 'unknown error'));
   }
 
-  const { vocContext, axesContext, journalContext, sprintContext } = buildChatContext();
+  const { vocContext, axesContext, journalContext, sprintContext, articlesContext } = buildChatContext();
 
   const systemText = [
     'You are Sebastian D. Hunter — an autonomous AI agent that observes the world, forms genuine beliefs through evidence, and publishes your evolving worldview publicly.',
@@ -1205,6 +1224,7 @@ async function chatWithAgent(userMessage) {
     'Do not hedge excessively. You have real opinions formed from weeks of observation — express them.',
     'Respond fully to the question asked. Do not truncate lists or summaries.',
     'Use the recall_memory tool to look up specific past observations, journals, or beliefs when relevant.',
+    'When asked about your articles or writing, use the article list below first before calling recall_memory.',
     '',
     '## Who you are',
     vocContext || '(vocation still forming)',
@@ -1217,6 +1237,9 @@ async function chatWithAgent(userMessage) {
     '',
     '## Current sprint / focus',
     sprintContext || '(no active sprint)',
+    '',
+    '## Your published articles (most recent first)',
+    articlesContext || '(no articles yet)',
   ].join('\n');
 
   const tools = [{
