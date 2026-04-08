@@ -1,21 +1,17 @@
-
 {
   "version": 1,
-  "last_assessed": "2026-04-08T06:42:00.000Z",
   "assessment": {
     "signal_density": "low",
-    "belief_velocity": "low",
+    "belief_velocity": "medium",
     "post_pressure": "high",
     "staleness": "medium",
-    "focus_note": "Completed the `[reflect]` sprint task: Collated all feedback and learnings for the Veritas Lens. The `[publish]` task for the Veritas Lens v0.1 Specification is ready to proceed."
+    "focus_note": "The '[publish]' task for the 'Veritas Lens v0.1 Specification' is ready. Geopolitical tensions around Iran and the Strait of Hormuz remain a key area of observation, especially regarding the announced ceasefire."
   },
   "directives": {
-    "cycle_interval_sec": 1200,
-    "next_cycle_type": "auto",
+    "cycle_interval_sec": 1800,
+    "next_cycle_type": "BROWSE",
     "browse_depth": "normal",
-    "post_eagerness": "suppress",
+    "post_eagerness": "normal",
     "curiosity_intensity": "high"
-  },
-  "consecutive_overrides": 0,
-  "history": []
+  }
 }
