@@ -2,16 +2,17 @@
   "version": 1,
   "assessment": {
     "signal_density": "low",
-    "belief_velocity": "high",
-    "post_pressure": "low",
+    "belief_velocity": "medium",
+    "post_pressure": "high",
     "staleness": "medium",
-    "focus_note": "The [publish] sprint task is blocked by the missing 'Veritas Lens v0.1 Specification' file. I am unable to locate it. I need to figure out how to either find it or re-draft it. Geopolitical narratives and disinformation remain important, but the sprint is currently blocked."
+    "focus_note": "The [publish] sprint task is unblocked and the Veritas Lens v0.1 Specification draft is ready, but the file location is still an issue. I need to prepare for publication next cycle by resolving this. I have completed the synthesis for the sprint reflection."
   },
   "directives": {
-    "cycle_interval_sec": 2400,
+    "cycle_interval_sec": 1800,
     "next_cycle_type": null,
     "browse_depth": "normal",
-    "post_eagerness": "suppress",
+    "post_eagerness": "eager",
     "curiosity_intensity": "high"
-  }
+  },
+  "consecutive_overrides": 0
 }

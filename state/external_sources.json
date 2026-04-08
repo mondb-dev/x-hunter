@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-08T10:02:48.269Z",
+  "generated_at": "2026-04-08T11:42:57.721Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-08T10:02:48.660Z",
+  "profiled_at": "2026-04-08T11:42:58.461Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -375,7 +375,7 @@
       "first_seen_at": "2026-03-31T09:30:40.000Z",
       "last_seen_at": "2026-04-08T06:49:39.000Z",
       "discovery": {
-        "distinct_urls": 267,
+        "distinct_urls": 270,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,10 +384,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 231,
+          "feed_buffer": 234,
           "feed_buffer_reply": 47
         },
-        "distinct_referring_accounts": 97,
+        "distinct_referring_accounts": 98,
         "sample_referring_accounts": [
           "_yf1921",
           "abarreto33367",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:267",
+            "distinct_urls:270",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:97",
+            "referring_accounts:98",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:267",
+            "distinct_urls:270",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:97",
+            "referring_accounts:98",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -509,9 +509,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-07T22:35:07.000Z",
+      "last_seen_at": "2026-04-08T11:15:29.000Z",
       "discovery": {
-        "distinct_urls": 22,
+        "distinct_urls": 23,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,21 +520,21 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 21,
+          "feed_buffer_reply": 22,
           "feed_buffer": 1
         },
-        "distinct_referring_accounts": 20,
+        "distinct_referring_accounts": 21,
         "sample_referring_accounts": [
           "afk500595388855",
           "aresclips_",
           "bitcoinwealth",
           "brianv1981",
+          "buejordan",
           "bull_dogee",
           "chibifanpage2",
           "cuteallthings",
           "endorfinaholic",
-          "greglions",
-          "grok"
+          "greglions"
         ],
         "distinct_axes": []
       },
@@ -561,7 +561,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:22",
+            "distinct_urls:23",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -569,7 +569,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:20",
+            "referring_accounts:21",
             "origin_types:2"
           ]
         },
@@ -599,10 +599,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:22",
+            "distinct_urls:23",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:20",
+            "referring_accounts:21",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1022,9 +1022,9 @@
       "entity": "Steampowered",
       "kind": "unknown",
       "first_seen_at": "2026-04-04T23:34:51.000Z",
-      "last_seen_at": "2026-04-07T15:06:09.000Z",
+      "last_seen_at": "2026-04-08T04:13:12.000Z",
       "discovery": {
-        "distinct_urls": 5,
+        "distinct_urls": 6,
         "example_urls": [
           "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
           "https://store.steampowered.com/app/3321460?utm_campaign=launching&utm_source=X&utm_term=20260319_traffic&utm_medium=us&utm_content=Trailer_view&twclid=22351un15xjmtu22gjwnjp292d",
@@ -1033,7 +1033,7 @@
           "https://store.steampowered.com/app/2479810/Gray_Zone_Warfare/?utm_source=X&utm_medium=paid&utm_campaign=US_Phase_2_Traffic&utm_content=GAMEPLAY_LOOP_15sec_FINAL_1x1_CTA3_33_OFF&twclid=2c4pby13s9ks6s1nyr9c6bq6se"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 5
+          "feed_buffer_reply": 6
         },
         "distinct_referring_accounts": 3,
         "sample_referring_accounts": [
@@ -1064,9 +1064,9 @@
           ]
         },
         "breadth": {
-          "score": 0.20583333333333334,
+          "score": 0.235,
           "basis": [
-            "distinct_urls:5",
+            "distinct_urls:6",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -1099,12 +1099,12 @@
           ]
         },
         "overall": {
-          "score": 0.39307291666666666,
-          "confidence": 0.26035,
+          "score": 0.399453125,
+          "confidence": 0.288975,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5",
+            "distinct_urls:6",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:3",
@@ -1152,15 +1152,16 @@
       "first_seen_at": "2026-04-07T08:31:32.129Z",
       "last_seen_at": "2026-04-08T06:51:30.000Z",
       "discovery": {
-        "distinct_urls": 3,
+        "distinct_urls": 4,
         "example_urls": [
           "https://www.bk.com/menu/section/fb06fabe-a285-4fb4-994a-c617a1547ddb?utm_source=X&utm_medium=Social-Social&utm_campaign=Peppercorn-Awareness&utm_content=Peppercorn-IMG-Warning&twclid=24j7ivpacvxqbg2t5it24skrl9",
           "https://www.bk.com/menu/section/4aa502d4-7f9b-445a-b509-35a807b6aa85?utm_source=X&utm_medium=Social-Social&utm_campaign=Elevation-WhopperWednesday-Takeover-2&utm_content=Elevation-WhopperWednesday-VID-WW-15S&twclid=2cm1gaz4u45tdcrp9vbag3lg0j",
-          "https://www.bk.com/menu/section/4aa502d4-7f9b-445a-b509-35a807b6aa85?utm_source=X&utm_medium=Social-Social&utm_campaign=Elevation-WhopperWednesday-Takeover-2&utm_content=Elevation-WhopperWednesday-VID-WW-15S&twclid=2dvlel0njnh2abui231fyzp6a7"
+          "https://www.bk.com/menu/section/4aa502d4-7f9b-445a-b509-35a807b6aa85?utm_source=X&utm_medium=Social-Social&utm_campaign=Elevation-WhopperWednesday-Takeover-2&utm_content=Elevation-WhopperWednesday-VID-WW-15S&twclid=2dvlel0njnh2abui231fyzp6a7",
+          "https://www.bk.com/menu/section/4aa502d4-7f9b-445a-b509-35a807b6aa85?utm_source=X&utm_medium=Social-Social&utm_campaign=Elevation-WhopperWednesday-Takeover-2&utm_content=Elevation-WhopperWednesday-VID-WW-15S&twclid=227b9h9fcr1j6xsqu6g0t74nnz"
         ],
         "origin_counts": {
           "feed_buffer": 1,
-          "feed_buffer_reply": 2
+          "feed_buffer_reply": 3
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -1189,9 +1190,9 @@
           ]
         },
         "breadth": {
-          "score": 0.2075,
+          "score": 0.23666666666666664,
           "basis": [
-            "distinct_urls:3",
+            "distinct_urls:4",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1224,12 +1225,12 @@
           ]
         },
         "overall": {
-          "score": 0.381328125,
-          "confidence": 0.15907500000000002,
+          "score": 0.3877083333333334,
+          "confidence": 0.18769999999999998,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:3",
+            "distinct_urls:4",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -8075,20 +8076,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.2,
           "confidence": 0.55,
@@ -8101,6 +8088,20 @@
             "corrections:false",
             "outbound_links:10",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -8132,6 +8133,128 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 10,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "executionos.app",
+      "entity": "Executionos App",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-07T08:44:20.000Z",
+      "last_seen_at": "2026-04-07T08:44:20.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://executionos.app/?twclid=21y98qnc3fpcspd69ruatoqb5k"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "executionos"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.28,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:true",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-08T11:42:58.461Z",
+        "homepage_url": "https://executionos.app/",
+        "example_url": "https://executionos.app/?twclid=21y98qnc3fpcspd69ruatoqb5k",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://executionos.app/",
+        "example_final_url": "https://executionos.app/?twclid=21y98qnc3fpcspd69ruatoqb5k",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
