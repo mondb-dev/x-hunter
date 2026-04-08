@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-08T03:12:36.025Z",
+  "generated_at": "2026-04-08T04:17:45.722Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-08T03:12:36.488Z",
+  "profiled_at": "2026-04-08T03:32:36.687Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -375,7 +375,7 @@
       "first_seen_at": "2026-03-31T09:30:40.000Z",
       "last_seen_at": "2026-04-07T21:44:02.000Z",
       "discovery": {
-        "distinct_urls": 262,
+        "distinct_urls": 263,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -385,9 +385,9 @@
         ],
         "origin_counts": {
           "feed_buffer": 231,
-          "feed_buffer_reply": 42
+          "feed_buffer_reply": 43
         },
-        "distinct_referring_accounts": 93,
+        "distinct_referring_accounts": 94,
         "sample_referring_accounts": [
           "_yf1921",
           "abarreto33367",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:262",
+            "distinct_urls:263",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:93",
+            "referring_accounts:94",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:262",
+            "distinct_urls:263",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:93",
+            "referring_accounts:94",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -509,9 +509,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-07T21:08:51.000Z",
+      "last_seen_at": "2026-04-07T22:35:07.000Z",
       "discovery": {
-        "distinct_urls": 21,
+        "distinct_urls": 22,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,10 +520,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 20,
+          "feed_buffer_reply": 21,
           "feed_buffer": 1
         },
-        "distinct_referring_accounts": 19,
+        "distinct_referring_accounts": 20,
         "sample_referring_accounts": [
           "afk500595388855",
           "aresclips_",
@@ -561,7 +561,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:21",
+            "distinct_urls:22",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -569,7 +569,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:19",
+            "referring_accounts:20",
             "origin_types:2"
           ]
         },
@@ -599,10 +599,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:21",
+            "distinct_urls:22",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:19",
+            "referring_accounts:20",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -4104,6 +4104,129 @@
       }
     },
     {
+      "domain": "absinthe.network",
+      "entity": "Absinthe Network",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-07T15:42:35.000Z",
+      "last_seen_at": "2026-04-07T16:57:52.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://boost.absinthe.network/8hhp-sfkk/home?utm_source=x&utm_medium=cpc&utm_campaign=Absinthe&utm_id=sero&utm_content=Mar26&twclid=25502jccgfzmkpf20p6sbvaj8t",
+          "https://boost.absinthe.network/8hhp-sfkk/home?utm_source=x&utm_medium=cpc&utm_campaign=Absinthe&utm_id=sero&utm_content=Mar26&twclid=27dk09s6c9l5kjigyxxwuc0j3w"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "arenaclub"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-07T19:37:20.364Z",
+        "homepage_url": "https://absinthe.network/",
+        "example_url": "https://boost.absinthe.network/8hhp-sfkk/home?utm_source=x&utm_medium=cpc&utm_campaign=Absinthe&utm_id=sero&utm_content=Mar26&twclid=25502jccgfzmkpf20p6sbvaj8t",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://absinthe.network/",
+        "example_final_url": "https://boost.absinthe.network/8hhp-sfkk/home?utm_source=x&utm_medium=cpc&utm_campaign=Absinthe&utm_id=sero&utm_content=Mar26&twclid=25502jccgfzmkpf20p6sbvaj8t",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "irys.xyz",
       "entity": "Irys Xyz",
       "kind": "unknown",
@@ -6544,128 +6667,6 @@
       }
     },
     {
-      "domain": "absinthe.network",
-      "entity": "Absinthe Network",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-07T15:42:35.000Z",
-      "last_seen_at": "2026-04-07T15:42:35.000Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://boost.absinthe.network/8hhp-sfkk/home?utm_source=x&utm_medium=cpc&utm_campaign=Absinthe&utm_id=sero&utm_content=Mar26&twclid=25502jccgfzmkpf20p6sbvaj8t"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "arenaclub"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.1,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-07T19:37:20.364Z",
-        "homepage_url": "https://absinthe.network/",
-        "example_url": "https://boost.absinthe.network/8hhp-sfkk/home?utm_source=x&utm_medium=cpc&utm_campaign=Absinthe&utm_id=sero&utm_content=Mar26&twclid=25502jccgfzmkpf20p6sbvaj8t",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://absinthe.network/",
-        "example_final_url": "https://boost.absinthe.network/8hhp-sfkk/home?utm_source=x&utm_medium=cpc&utm_campaign=Absinthe&utm_id=sero&utm_content=Mar26&twclid=25502jccgfzmkpf20p6sbvaj8t",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 4,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "tradestation.com",
       "entity": "Tradestation",
       "kind": "unknown",
@@ -7336,6 +7337,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3472395833333333,
           "confidence": 0.08135,
@@ -7348,6 +7363,100 @@
             "referring_accounts:1",
             "origin_types:1",
             "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-08T03:12:36.488Z",
+        "homepage_url": "https://cointracker.io/",
+        "example_url": "https://www.cointracker.io/?utm_source=x&utm_medium=paid_social&utm_campaign=PDM_PaidSocial_X_Awareness_Reach&twclid=2db4ytuyg7wyekq6zcdaap0vjo",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://www.cointracker.io/",
+        "example_final_url": "https://www.cointracker.io/?utm_source=x&utm_medium=paid_social&utm_campaign=PDM_PaidSocial_X_Awareness_Reach&twclid=2db4ytuyg7wyekq6zcdaap0vjo",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "combos.fun",
+      "entity": "Combos Fun",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-08T03:21:32.122Z",
+      "last_seen_at": "2026-04-08T03:21:32.122Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2aswwo64b7owkoq09axl1gyba6"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "combosfun_ai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
           ]
         },
         "profile": {
@@ -7363,18 +7472,32 @@
             "outbound_links:0",
             "opinion_marker:false"
           ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
         }
       },
       "profile": {
-        "fetched_at": "2026-04-08T03:12:36.488Z",
-        "homepage_url": "https://cointracker.io/",
-        "example_url": "https://www.cointracker.io/?utm_source=x&utm_medium=paid_social&utm_campaign=PDM_PaidSocial_X_Awareness_Reach&twclid=2db4ytuyg7wyekq6zcdaap0vjo",
-        "homepage_status": 403,
-        "example_status": 403,
-        "homepage_final_url": "https://www.cointracker.io/",
-        "example_final_url": "https://www.cointracker.io/?utm_source=x&utm_medium=paid_social&utm_campaign=PDM_PaidSocial_X_Awareness_Reach&twclid=2db4ytuyg7wyekq6zcdaap0vjo",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "fetched_at": "2026-04-08T03:32:36.686Z",
+        "homepage_url": "https://combos.fun/",
+        "example_url": "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2aswwo64b7owkoq09axl1gyba6",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://combos.fun/",
+        "example_final_url": "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2aswwo64b7owkoq09axl1gyba6",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
