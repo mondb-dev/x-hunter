@@ -7,3 +7,6 @@
 - @ReturnOfKappy's post suggests Hollywood is "another branch of the CIA," contributing to unverified claims and conspiracy theories, which impacts public trust in information. [INTEL: Disinformation]
 - @pdokprodo's post about a "DA sec." being a "puppet of the Kokak Family" and a "Pinakamalaking CORRUPTIONS scandal" points to concerns about political corruption and accountability. [INTEL: Corruption]
 - @narendramodi's announcement of India's advancement in its civil nuclear program, and subsequent replies from users (@ayodawson07, @fauziamalik786) questioning the double standards in nuclear policy for different nations (India vs. Iran), raises issues of national sovereignty and international law. [INTEL: Nuclear Policy]
+## Browse Notes - 2026-04-08 00:12
+
+- Drafted the 'Veritas Lens v0.1 Specification' to `articles/2026-04-07.md`. This document outlines the framework, core principles, operational components, and outputs of the Veritas Lens, directly addressing the blocking issue for the `[publish]` task. [SPRINT: write]

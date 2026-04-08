@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-07T23:12:28.205Z",
+  "generated_at": "2026-04-08T00:12:37.871Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-07T22:52:28.549Z",
   "sources": [
@@ -504,9 +504,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-07T16:41:42.000Z",
+      "last_seen_at": "2026-04-07T21:44:02.000Z",
       "discovery": {
-        "distinct_urls": 260,
+        "distinct_urls": 262,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -515,10 +515,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 230,
-          "feed_buffer_reply": 41
+          "feed_buffer": 231,
+          "feed_buffer_reply": 42
         },
-        "distinct_referring_accounts": 92,
+        "distinct_referring_accounts": 93,
         "sample_referring_accounts": [
           "_yf1921",
           "abarreto33367",
@@ -556,7 +556,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:260",
+            "distinct_urls:262",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -564,7 +564,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:92",
+            "referring_accounts:93",
             "origin_types:2"
           ]
         },
@@ -594,10 +594,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:260",
+            "distinct_urls:262",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:92",
+            "referring_accounts:93",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -896,9 +896,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-16T09:36:45.269Z",
-      "last_seen_at": "2026-04-07T06:16:47.963Z",
+      "last_seen_at": "2026-04-06T04:32:55.252Z",
       "discovery": {
-        "distinct_urls": 20,
+        "distinct_urls": 19,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -907,7 +907,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 20
+          "articles": 19
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -936,7 +936,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:20",
+            "distinct_urls:19",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -970,11 +970,11 @@
         },
         "overall": {
           "score": 0.40726562499999996,
-          "confidence": 0.543975,
+          "confidence": 0.521475,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:20",
+            "distinct_urls:19",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -2502,6 +2502,130 @@
       }
     },
     {
+      "domain": "starlink.com",
+      "entity": "Starlink",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-07T03:51:50.000Z",
+      "last_seen_at": "2026-04-07T23:00:01.000Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
+          "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
+          "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-perform-pointy-roof-scroll&twclid=2ce5a580pj831lcqe7626u3hna"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "starlink"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.009999999999999998,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.36000000000000004,
+          "confidence": 0.1386,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-07T06:02:00.759Z",
+        "homepage_url": "https://starlink.com/",
+        "example_url": "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://starlink.com/",
+        "example_final_url": "https://starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "rice.edu",
       "entity": "Rice",
       "kind": "unknown",
@@ -3605,23 +3729,23 @@
       }
     },
     {
-      "domain": "starlink.com",
-      "entity": "Starlink",
+      "domain": "bit.ly",
+      "entity": "Bit Ly",
       "kind": "unknown",
-      "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-04-07T17:41:25.000Z",
+      "first_seen_at": "2026-04-06T16:33:36.000Z",
+      "last_seen_at": "2026-04-07T07:51:49.000Z",
       "discovery": {
         "distinct_urls": 2,
         "example_urls": [
-          "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
-          "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626"
+          "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q",
+          "https://bit.ly/4rFUGm4?twclid=2bcgwzcedehb1ong389c8zjnsb"
         ],
         "origin_counts": {
           "feed_buffer_reply": 2
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
-          "starlink"
+          "3commas_io"
         ],
         "distinct_axes": []
       },
@@ -3667,16 +3791,16 @@
           ]
         },
         "profile": {
-          "score": 0.009999999999999998,
-          "confidence": 0.55,
+          "score": 0.48,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
             "corrections:false",
-            "outbound_links:1",
+            "outbound_links:34",
             "opinion_marker:false"
           ]
         },
@@ -3696,15 +3820,138 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-07T06:02:00.759Z",
-        "homepage_url": "https://starlink.com/",
-        "example_url": "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
+        "fetched_at": "2026-04-07T12:07:12.141Z",
+        "homepage_url": "https://bit.ly/",
+        "example_url": "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://starlink.com/",
-        "example_final_url": "https://starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
+        "homepage_final_url": "https://bitly.com/",
+        "example_final_url": "https://3commas.io/?utm_source=twitter-ads&utm_medium=cpc&utm_campaign=usa_coinbasefutures&utm_term=post&utm_content=coinbase-futures",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 86,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 34,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "degenidle.com",
+      "entity": "Degenidle",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-07T16:00:02.000Z",
+      "last_seen_at": "2026-04-07T21:44:02.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://degenidle.com/?twclid=2cjpeg7bzynm31yynzfte1vs7q",
+          "https://degenidle.com/?twclid=22bry39fztg78r380x6m35y4d5"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "degenidle"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-07T18:07:19.339Z",
+        "homepage_url": "https://degenidle.com/",
+        "example_url": "https://degenidle.com/?twclid=2cjpeg7bzynm31yynzfte1vs7q",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://degenidle.com/",
+        "example_final_url": "https://degenidle.com/?twclid=2cjpeg7bzynm31yynzfte1vs7q",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -3712,7 +3959,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 1,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -3722,7 +3969,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 1,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -6046,128 +6293,6 @@
       }
     },
     {
-      "domain": "bit.ly",
-      "entity": "Bit Ly",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-06T16:33:36.000Z",
-      "last_seen_at": "2026-04-06T16:33:36.000Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "3commas_io"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.48,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:34",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-07T12:07:12.141Z",
-        "homepage_url": "https://bit.ly/",
-        "example_url": "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://bitly.com/",
-        "example_final_url": "https://3commas.io/?utm_source=twitter-ads&utm_medium=cpc&utm_campaign=usa_coinbasefutures&utm_term=post&utm_content=coinbase-futures",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 86,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 34,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "rexshares.com",
       "entity": "Rexshares",
       "kind": "unknown",
@@ -6407,128 +6532,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 2,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "degenidle.com",
-      "entity": "Degenidle",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-07T16:00:02.000Z",
-      "last_seen_at": "2026-04-07T16:00:02.000Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://degenidle.com/?twclid=2cjpeg7bzynm31yynzfte1vs7q"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "degenidle"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-07T18:07:19.339Z",
-        "homepage_url": "https://degenidle.com/",
-        "example_url": "https://degenidle.com/?twclid=2cjpeg7bzynm31yynzfte1vs7q",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://degenidle.com/",
-        "example_final_url": "https://degenidle.com/?twclid=2cjpeg7bzynm31yynzfte1vs7q",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
