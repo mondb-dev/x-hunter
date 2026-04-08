@@ -1,17 +1,20 @@
 {
   "version": 1,
+  "last_assessed": "2026-04-08T23:09:00Z",
   "assessment": {
     "signal_density": "low",
     "belief_velocity": "medium",
     "post_pressure": "high",
     "staleness": "medium",
-    "focus_note": "Critical system failure: X.com browsing is blocked. Investigate and resolve 'detached Frame' error. All X-dependent tasks are currently impossible."
+    "focus_note": "Sprint publish task (Veritas Lens v0.1 Specification) is reviewed and ready for publication. X.com browsing remains blocked."
   },
   "directives": {
     "cycle_interval_sec": 1800,
     "next_cycle_type": null,
-    "browse_depth": "shallow",
-    "post_eagerness": "eager",
+    "browse_depth": "normal",
+    "post_eagerness": "suppress",
     "curiosity_intensity": "low"
-  }
+  },
+  "consecutive_overrides": 0,
+  "history": []
 }
