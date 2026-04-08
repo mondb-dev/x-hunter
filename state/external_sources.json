@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-08T12:12:50.452Z",
+  "generated_at": "2026-04-08T13:12:51.548Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-08T11:42:58.461Z",
   "sources": [
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-08T06:49:39.000Z",
+      "last_seen_at": "2026-04-08T11:44:19.000Z",
       "discovery": {
-        "distinct_urls": 270,
+        "distinct_urls": 275,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,10 +384,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 234,
-          "feed_buffer_reply": 47
+          "feed_buffer": 238,
+          "feed_buffer_reply": 48
         },
-        "distinct_referring_accounts": 98,
+        "distinct_referring_accounts": 100,
         "sample_referring_accounts": [
           "_yf1921",
           "abarreto33367",
@@ -398,7 +398,7 @@
           "al_falkenberg",
           "alice_kanyana",
           "alphatrades27",
-          "asifali_haider"
+          "arckonarts"
         ],
         "distinct_axes": []
       },
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:270",
+            "distinct_urls:275",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:98",
+            "referring_accounts:100",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:270",
+            "distinct_urls:275",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:98",
+            "referring_accounts:100",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -511,7 +511,7 @@
       "first_seen_at": "2026-04-03T01:20:27.000Z",
       "last_seen_at": "2026-04-08T11:15:29.000Z",
       "discovery": {
-        "distinct_urls": 23,
+        "distinct_urls": 24,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,12 +520,13 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 22,
+          "feed_buffer_reply": 23,
           "feed_buffer": 1
         },
-        "distinct_referring_accounts": 21,
+        "distinct_referring_accounts": 22,
         "sample_referring_accounts": [
           "afk500595388855",
+          "anim8studio",
           "aresclips_",
           "bitcoinwealth",
           "brianv1981",
@@ -533,8 +534,7 @@
           "bull_dogee",
           "chibifanpage2",
           "cuteallthings",
-          "endorfinaholic",
-          "greglions"
+          "endorfinaholic"
         ],
         "distinct_axes": []
       },
@@ -561,7 +561,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:23",
+            "distinct_urls:24",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -569,7 +569,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:21",
+            "referring_accounts:22",
             "origin_types:2"
           ]
         },
@@ -599,10 +599,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:23",
+            "distinct_urls:24",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:21",
+            "referring_accounts:22",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -894,6 +894,135 @@
       }
     },
     {
+      "domain": "steampowered.com",
+      "entity": "Steampowered",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-04T23:34:51.000Z",
+      "last_seen_at": "2026-04-08T11:44:19.000Z",
+      "discovery": {
+        "distinct_urls": 9,
+        "example_urls": [
+          "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
+          "https://store.steampowered.com/app/3321460?utm_campaign=launching&utm_source=X&utm_term=20260319_traffic&utm_medium=us&utm_content=Trailer_view&twclid=22351un15xjmtu22gjwnjp292d",
+          "https://store.steampowered.com/app/2479810/Gray_Zone_Warfare/?utm_source=X&utm_medium=paid&utm_campaign=US_Phase_2_Traffic&utm_content=WORLD_15sec_FINAL+1x1+_CTA3_33_OFF&twclid=2kr6kebwcf3k27ku3d0550n3y",
+          "https://store.steampowered.com/app/3321460?utm_campaign=launching&utm_source=X&utm_term=20260319_traffic&utm_medium=us&utm_content=Trailer_view&twclid=2b8uue8ig8hxeqmq1846ndn7sa",
+          "https://store.steampowered.com/app/2479810/Gray_Zone_Warfare/?utm_source=X&utm_medium=paid&utm_campaign=US_Phase_2_Traffic&utm_content=GAMEPLAY_LOOP_15sec_FINAL_1x1_CTA3_33_OFF&twclid=2c4pby13s9ks6s1nyr9c6bq6se"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 9
+        },
+        "distinct_referring_accounts": 4,
+        "sample_referring_accounts": [
+          "arckonarts",
+          "crimsondesert_",
+          "grayzonewarfare",
+          "sid_rpg"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.32249999999999995,
+          "basis": [
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.5208333333333334,
+          "basis": [
+            "referring_accounts:4",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.36,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:14",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.42875,
+          "confidence": 0.4071,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:4",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-08T06:42:44.210Z",
+        "homepage_url": "https://steampowered.com/",
+        "example_url": "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://store.steampowered.com/",
+        "example_final_url": "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 8,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 14,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "moltbook.com",
       "entity": "Moltbook",
       "kind": "unknown",
@@ -1013,134 +1142,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "steampowered.com",
-      "entity": "Steampowered",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-04T23:34:51.000Z",
-      "last_seen_at": "2026-04-08T04:13:12.000Z",
-      "discovery": {
-        "distinct_urls": 6,
-        "example_urls": [
-          "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
-          "https://store.steampowered.com/app/3321460?utm_campaign=launching&utm_source=X&utm_term=20260319_traffic&utm_medium=us&utm_content=Trailer_view&twclid=22351un15xjmtu22gjwnjp292d",
-          "https://store.steampowered.com/app/2479810/Gray_Zone_Warfare/?utm_source=X&utm_medium=paid&utm_campaign=US_Phase_2_Traffic&utm_content=WORLD_15sec_FINAL+1x1+_CTA3_33_OFF&twclid=2kr6kebwcf3k27ku3d0550n3y",
-          "https://store.steampowered.com/app/3321460?utm_campaign=launching&utm_source=X&utm_term=20260319_traffic&utm_medium=us&utm_content=Trailer_view&twclid=2b8uue8ig8hxeqmq1846ndn7sa",
-          "https://store.steampowered.com/app/2479810/Gray_Zone_Warfare/?utm_source=X&utm_medium=paid&utm_campaign=US_Phase_2_Traffic&utm_content=GAMEPLAY_LOOP_15sec_FINAL_1x1_CTA3_33_OFF&twclid=2c4pby13s9ks6s1nyr9c6bq6se"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 6
-        },
-        "distinct_referring_accounts": 3,
-        "sample_referring_accounts": [
-          "crimsondesert_",
-          "grayzonewarfare",
-          "sid_rpg"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.235,
-          "basis": [
-            "distinct_urls:6",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.4125,
-          "basis": [
-            "referring_accounts:3",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.36,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:14",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.399453125,
-          "confidence": 0.288975,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:6",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:3",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-08T06:42:44.210Z",
-        "homepage_url": "https://steampowered.com/",
-        "example_url": "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://store.steampowered.com/",
-        "example_final_url": "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 8,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 14,
           "opinion_marker": false
         }
       }
