@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-08T01:32:32.847Z",
+  "generated_at": "2026-04-08T02:12:42.278Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-08T01:32:43.184Z",
+  "profiled_at": "2026-04-08T01:52:34.647Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -511,7 +511,7 @@
       "first_seen_at": "2026-04-03T01:20:27.000Z",
       "last_seen_at": "2026-04-07T21:08:51.000Z",
       "discovery": {
-        "distinct_urls": 20,
+        "distinct_urls": 21,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,10 +520,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 19,
+          "feed_buffer_reply": 20,
           "feed_buffer": 1
         },
-        "distinct_referring_accounts": 18,
+        "distinct_referring_accounts": 19,
         "sample_referring_accounts": [
           "afk500595388855",
           "aresclips_",
@@ -561,7 +561,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:20",
+            "distinct_urls:21",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -569,7 +569,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:18",
+            "referring_accounts:19",
             "origin_types:2"
           ]
         },
@@ -599,10 +599,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:20",
+            "distinct_urls:21",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:18",
+            "referring_accounts:19",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -898,9 +898,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-16T09:36:45.269Z",
-      "last_seen_at": "2026-04-06T04:32:55.252Z",
+      "last_seen_at": "2026-04-08T01:38:41.003Z",
       "discovery": {
-        "distinct_urls": 19,
+        "distinct_urls": 20,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -909,7 +909,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 19
+          "articles": 20
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -938,7 +938,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:19",
+            "distinct_urls:20",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -972,11 +972,11 @@
         },
         "overall": {
           "score": 0.40726562499999996,
-          "confidence": 0.521475,
+          "confidence": 0.543975,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:19",
+            "distinct_urls:20",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -6969,20 +6969,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0,
           "confidence": 0.55,
@@ -6995,6 +6981,20 @@
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -7022,6 +7022,128 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "typeform.com",
+      "entity": "Typeform",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-08T01:41:31.577Z",
+      "last_seen_at": "2026-04-08T01:41:31.577Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://form.typeform.com/to/rQ99Fjtn?utm_source=mediabuyer&twclid=294n0eht0qoq4ibz93o6uvw95v"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "fabrice_mayrand"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-08T01:52:34.647Z",
+        "homepage_url": "https://typeform.com/",
+        "example_url": "https://form.typeform.com/to/rQ99Fjtn?utm_source=mediabuyer&twclid=294n0eht0qoq4ibz93o6uvw95v",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.typeform.com/",
+        "example_final_url": "https://form.typeform.com/to/rQ99Fjtn?utm_source=mediabuyer&twclid=294n0eht0qoq4ibz93o6uvw95v",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 9,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
