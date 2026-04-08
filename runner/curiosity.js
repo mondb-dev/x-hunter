@@ -423,7 +423,9 @@ function markAnchorProcessed(postId) {
   // direct curiosity toward sprint-relevant research instead of generic uncertainty.
   if (isSilentHours()) {
     const sprintTask = extractSprintTask();
-    if (sprintTask) {
+    // [reflect] tasks are local-only — no external search needed. Fall through
+    // to normal curiosity paths so prefetch navigates to something useful.
+    if (sprintTask && sprintTask.type !== 'reflect') {
       const searchTerms = sprintSearchTerms(sprintTask);
       const taskSlug    = toSlug(sprintTask.title);
       const expireLine  = CURRENT_CYCLE > 0
