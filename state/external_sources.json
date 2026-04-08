@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-08T04:17:45.722Z",
+  "generated_at": "2026-04-08T05:07:38.842Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-08T03:32:36.687Z",
+  "profiled_at": "2026-04-08T05:07:46.549Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-07T21:44:02.000Z",
+      "last_seen_at": "2026-04-08T04:31:32.422Z",
       "discovery": {
-        "distinct_urls": 263,
+        "distinct_urls": 264,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -385,9 +385,9 @@
         ],
         "origin_counts": {
           "feed_buffer": 231,
-          "feed_buffer_reply": 43
+          "feed_buffer_reply": 44
         },
-        "distinct_referring_accounts": 94,
+        "distinct_referring_accounts": 95,
         "sample_referring_accounts": [
           "_yf1921",
           "abarreto33367",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:263",
+            "distinct_urls:264",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:94",
+            "referring_accounts:95",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:263",
+            "distinct_urls:264",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:94",
+            "referring_accounts:95",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1024,15 +1024,16 @@
       "first_seen_at": "2026-04-04T23:34:51.000Z",
       "last_seen_at": "2026-04-07T15:06:09.000Z",
       "discovery": {
-        "distinct_urls": 4,
+        "distinct_urls": 5,
         "example_urls": [
           "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
           "https://store.steampowered.com/app/3321460?utm_campaign=launching&utm_source=X&utm_term=20260319_traffic&utm_medium=us&utm_content=Trailer_view&twclid=22351un15xjmtu22gjwnjp292d",
           "https://store.steampowered.com/app/2479810/Gray_Zone_Warfare/?utm_source=X&utm_medium=paid&utm_campaign=US_Phase_2_Traffic&utm_content=WORLD_15sec_FINAL+1x1+_CTA3_33_OFF&twclid=2kr6kebwcf3k27ku3d0550n3y",
-          "https://store.steampowered.com/app/3321460?utm_campaign=launching&utm_source=X&utm_term=20260319_traffic&utm_medium=us&utm_content=Trailer_view&twclid=2b8uue8ig8hxeqmq1846ndn7sa"
+          "https://store.steampowered.com/app/3321460?utm_campaign=launching&utm_source=X&utm_term=20260319_traffic&utm_medium=us&utm_content=Trailer_view&twclid=2b8uue8ig8hxeqmq1846ndn7sa",
+          "https://store.steampowered.com/app/2479810/Gray_Zone_Warfare/?utm_source=X&utm_medium=paid&utm_campaign=US_Phase_2_Traffic&utm_content=GAMEPLAY_LOOP_15sec_FINAL_1x1_CTA3_33_OFF&twclid=2c4pby13s9ks6s1nyr9c6bq6se"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 4
+          "feed_buffer_reply": 5
         },
         "distinct_referring_accounts": 3,
         "sample_referring_accounts": [
@@ -1063,9 +1064,9 @@
           ]
         },
         "breadth": {
-          "score": 0.17666666666666664,
+          "score": 0.20583333333333334,
           "basis": [
-            "distinct_urls:4",
+            "distinct_urls:5",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -1098,12 +1099,12 @@
           ]
         },
         "overall": {
-          "score": 0.38669270833333336,
-          "confidence": 0.231725,
+          "score": 0.39307291666666666,
+          "confidence": 0.26035,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:4",
+            "distinct_urls:5",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:3",
@@ -7516,6 +7517,128 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "prismmarketview.com",
+      "entity": "Prismmarketview",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-08T05:01:31.706Z",
+      "last_seen_at": "2026-04-08T05:01:31.706Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://prismmarketview.com/companies/sbc-medical-group-holdings-incorporated/?twclid=26comjr0eies8gnklzmi3odvtu"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "prismmarketview"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.5599999999999999,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:10",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-08T05:07:46.549Z",
+        "homepage_url": "https://prismmarketview.com/",
+        "example_url": "https://prismmarketview.com/companies/sbc-medical-group-holdings-incorporated/?twclid=26comjr0eies8gnklzmi3odvtu",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://prismmarketview.com/",
+        "example_final_url": "https://prismmarketview.com/companies/sbc-medical-group-holdings-incorporated/?twclid=26comjr0eies8gnklzmi3odvtu",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 10,
           "opinion_marker": false
         }
       }
