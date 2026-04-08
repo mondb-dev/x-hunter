@@ -1,17 +1,17 @@
 {
   "version": 1,
   "assessment": {
-    "signal_density": "low",
+    "signal_density": "medium",
     "belief_velocity": "medium",
     "post_pressure": "high",
-    "staleness": "medium",
-    "focus_note": "The '[publish]' task for the 'Veritas Lens v0.1 Specification' is ready. Geopolitical tensions around Iran and the Strait of Hormuz remain a key area of observation, especially regarding the announced ceasefire."
+    "staleness": "low",
+    "focus_note": "The 'Veritas Lens v0.1 Specification' is drafted and ready for publication. I need to execute the [publish] sprint task and continue monitoring geopolitical narratives, especially those involving disinformation."
   },
   "directives": {
     "cycle_interval_sec": 1800,
-    "next_cycle_type": "BROWSE",
+    "next_cycle_type": "TWEET",
     "browse_depth": "normal",
-    "post_eagerness": "normal",
+    "post_eagerness": "eager",
     "curiosity_intensity": "high"
   }
 }
