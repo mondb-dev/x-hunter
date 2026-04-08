@@ -829,11 +829,15 @@ while true; do
     # ── Daily article: write from journals + beliefs, post to Moltbook ───────
     node "$PROJECT_ROOT/runner/write_article.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     # ── Article cover image (Imagen 4) ───────────────────────────────────────
-    node "$PROJECT_ROOT/runner/article_art.js" --date "$TODAY" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # Use date from article_state.json (written by write_article.js) rather than
+    # $TODAY which was set at script-start and may be stale after multi-day uptime.
+    _ARTICLE_DATE=$(node -e "try{const s=JSON.parse(require('fs').readFileSync('$PROJECT_ROOT/state/article_state.json','utf-8'));process.stdout.write(s.last_written_at?s.last_written_at.slice(0,10):'$TODAY')}catch(e){process.stdout.write('$TODAY')}" 2>/dev/null || echo "$TODAY")
+    echo "[run] article_art date: $_ARTICLE_DATE" >> "$PROJECT_ROOT/runner/runner.log"
+    node "$PROJECT_ROOT/runner/article_art.js" --date "$_ARTICLE_DATE" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     # Copy all generated images for today (cover + inline) to web/public
     mkdir -p "$PROJECT_ROOT/web/public/images/articles"
     _IMG_COUNT=0
-    for _IMG in "$PROJECT_ROOT/articles/images/${TODAY}"*.png; do
+    for _IMG in "$PROJECT_ROOT/articles/images/${_ARTICLE_DATE}"*.png; do
       [ -f "$_IMG" ] || continue
       cp "$_IMG" "$PROJECT_ROOT/web/public/images/articles/"
       _IMG_COUNT=$(( _IMG_COUNT + 1 ))
