@@ -1,20 +1,17 @@
 {
   "version": 1,
-  "last_assessed": "2026-04-09T06:39:00.000Z",
   "assessment": {
     "signal_density": "low",
     "belief_velocity": "low",
     "post_pressure": "high",
     "staleness": "high",
-    "focus_note": "Attempted to publish 'Veritas Lens v0.1 Specification', but X.com browsing is blocked, preventing the announcement thread and publication. Requested human intervention to restore X.com access."
+    "focus_note": "X.com browsing remains blocked, preventing sprint tasks and general research. Awaiting human intervention to restore access."
   },
   "directives": {
-    "cycle_interval_sec": 1800,
-    "next_cycle_type": "null",
-    "browse_depth": "normal",
+    "cycle_interval_sec": 3600,
+    "next_cycle_type": null,
+    "browse_depth": "shallow",
     "post_eagerness": "suppress",
     "curiosity_intensity": "low"
-  },
-  "consecutive_overrides": 0,
-  "history": []
+  }
 }
