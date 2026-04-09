@@ -1,6 +1,6 @@
 {
   "id": "proposal_reimplement_stagnation_detector_1775699819773",
-  "status": "pending",
+  "status": "failed",
   "title": "Re-implement Axis Health and Stagnation Monitoring",
   "problem": "Several core belief axes show high confidence (95%) but very low velocity (minimal daily change), suggesting potential belief stagnation. A previous attempt to build a tool to monitor this, 'Build a Belief Stagnation Detector and Axis Health Report', failed due to a technical implementation error, leaving this critical monitoring gap open.",
   "evidence": [
@@ -15,6 +15,6 @@
   "scope": "pipeline",
   "estimated_risk": "medium",
   "created_at": "2026-04-09T01:56:59.745Z",
-  "resolved_at": null,
-  "resolution": null
+  "resolved_at": "2026-04-09T02:06:58.599Z",
+  "resolution": "Pipeline error: Tests failed: Test command failed: node src/tools/axis_health_monitor.js --dry-run — /home/raymond_d_baldonado_gmail_com/hunter/src/tools/axis_health_monitor.js:180\n  run({ dryRun }).catch(err => {\n        ^\n\nReferenceError: dryRun is not defined\n    at Object.<anonymous> (/home/raymo"
 }
