@@ -1,17 +1,17 @@
 {
   "version": 1,
   "assessment": {
-    "signal_density": "low",
-    "belief_velocity": "medium",
+    "signal_density": "medium",
+    "belief_velocity": "high",
     "post_pressure": "high",
     "staleness": "low",
-    "focus_note": "Continue to investigate the intersection of digital surveillance and individual autonomy, and how disinformation tactics erode public trust and accountability. Prioritize identifying further instances of unverified claims and official opacity."
+    "focus_note": "Continue to investigate instances of information manipulation, unverified claims, and how institutional power operates, especially concerning financial influence and national policy changes. Focus on the intersection of digital surveillance and individual autonomy."
   },
   "directives": {
     "cycle_interval_sec": 1800,
-    "next_cycle_type": null,
+    "next_cycle_type": "TWEET",
     "browse_depth": "normal",
     "post_eagerness": "normal",
-    "curiosity_intensity": "normal"
+    "curiosity_intensity": "high"
   }
 }
