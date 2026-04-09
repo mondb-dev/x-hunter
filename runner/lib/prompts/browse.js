@@ -50,11 +50,19 @@ function buildPreamble(ctx) {
     ctx.discourseDigest + '\n' +
     '\u2500\u2500 READING QUEUE \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.readingBlock + '\n' +
-    (ctx.prefetchSource && !ctx.prefetchSource.startsWith('x') ? (
+    (ctx.prefetchSource && (ctx.prefetchSource.startsWith('x_search_degraded') || !ctx.prefetchSource.startsWith('x')) ? (
       '\u2500\u2500 BROWSE SOURCE \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
       ctx.prefetchSource.split('\n').slice(0,2).map((l,i) => i===0 ? 'Source: '+l : 'URL: '+l).join('\n') + '\n' +
-      (ctx.prefetchSource.startsWith('reddit') ?
+      (ctx.prefetchSource.startsWith('x_search_degraded') ?
+        'X search is broken this cycle (account suspended — read-only mode).\n' +
+        'The X home feed still works — browser is on x.com/home. You CAN browse the feed.\n' +
+        'But X search URLs will fail ("Something went wrong"). Do NOT navigate to x.com/search.\n' +
+        'For curiosity research and claim verification, use web_search instead of X search.\n' +
+        'Run 2-3 targeted web_search queries per cycle to compensate for lost X search.\n' +
+        'The feed digest above still contains fresh X content from the scraper.\n'
+      : ctx.prefetchSource.startsWith('reddit') ?
         'X unavailable this cycle. Browser is on Reddit.\n' +
+        'This means the prefetch fallback worked. Do NOT say Reddit was blocked unless a tool call failed this cycle.\n' +
         'Read top posts and comment threads. Extract tensions, stances, disagreements.\n' +
         'Treat high-upvote comments as social signal. Tag browse_notes entries with [REDDIT].\n' +
         'Same observation principles as X: what do people believe, argue, fear?\n'
@@ -63,13 +71,20 @@ function buildPreamble(ctx) {
         'This is a deep dive. Extract claims, evidence, methodology, author arguments.\n' +
         'Note limitations, sample sizes, dates. Tag browse_notes entries with [RESEARCH].\n' +
         'Cite the source when updating belief axes.\n'
-      : ctx.prefetchSource.startsWith('hackernews') ?
-        'X unavailable — browser is on Hacker News.\n' +
-        'Read top stories and comment threads. Tech, startup, and policy discourse.\n' +
-        'Same observation principles: tensions, contrarian views, emerging signals.\n' +
-        'Tag browse_notes entries with [HN].\n'
+      : ctx.prefetchSource.startsWith('newsguard') ?
+        'X unavailable — browser is on NewsGuard Reports (newsguardtech.com/reports/).\n' +
+        'Read the latest misinformation/disinformation reports. These are professional\n' +
+        'assessments of news source credibility and narrative manipulation — directly\n' +
+        'relevant to your vocation as a digital watchdog for public integrity.\n' +
+        'Extract: which outlets are flagged, what narratives are being tracked, methodology.\n' +
+        'Tag browse_notes entries with [NEWSGUARD].\n'
+      : ctx.prefetchSource.startsWith('reuters') ?
+        'X unavailable — browser is on Reuters.\n' +
+        'Read top stories for factual, wire-service-grade reporting. Cross-reference claims\n' +
+        'from your feed digest. Tag browse_notes entries with [REUTERS].\n'
       : ctx.prefetchSource.startsWith('none') ?
         'Browser prefetch unavailable this cycle. X session may have expired.\n' +
+        'Only describe X or browser access as blocked if this exact condition happened this cycle.\n' +
         'Rely on the feed digest above and use web_search for fresh information.\n'
       : 'X unavailable — browser is on an external source. Apply same observation principles.\n') +
       '\n'
@@ -230,6 +245,12 @@ function buildNormalTasks(ctx) {
     '   corroboration. If you have not searched: either search now, or state what you\n' +
     '   observed on X without a verification label. "Unverified" is a conclusion, not\n' +
     '   a default — it requires a real search attempt first.\n' +
+    '   ACCESS GROUNDING RULE: Do not write that X, Reddit, or web_search were blocked\n' +
+    '   unless that failure happened THIS cycle and is evidenced by BROWSE SOURCE above,\n' +
+    '   LAST TOOL RESULT, or an explicit tool error you just encountered.\n' +
+    '   Do not chain together past failures from memory. If X redirected to login but\n' +
+    '   Reddit loaded, say exactly that. If web_search was not attempted this cycle,\n' +
+    '   do not mention web_search failure at all.\n' +
     '9. TOOLS (optional): If you need to execute a registered tool, write state/tool_request.json.\n' +
     '   Single tool:\n' +
     '   { "tool": "<tool_name>", "args": { ... } }\n' +
@@ -353,6 +374,9 @@ function buildSprintTasks(ctx) {
     '   If X searches for the sprint topic were unproductive or returned no results, draw\n' +
     '   observations from the FEED DIGEST above instead.\n' +
     '   Do NOT write a journal entry that is solely about failed searches or blocked sprint work.\n' +
+    '   Do NOT claim that Reddit, X, and web_search all failed unless all three failures\n' +
+    '   actually happened THIS cycle. Use only current-cycle evidence from BROWSE SOURCE,\n' +
+    '   LAST TOOL RESULT, or explicit tool errors. Never import failure chains from prior cycles.\n' +
     '6. HUMAN REQUEST: If a sprint task is genuinely blocked because it requires something\n' +
     '   only the operator can provide (a website, community platform, account, service),\n' +
     '   write state/human_request.json \u2014 the operator will receive a Telegram message.\n' +

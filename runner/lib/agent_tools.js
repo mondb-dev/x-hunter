@@ -317,38 +317,50 @@ const TOOL_EXECUTORS = {
       const model = 'gemini-2.5-flash';
       const url = `https://${location}-aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/google/models/${model}:generateContent`;
 
-      const res = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          contents: [{ role: 'user', parts: [{ text: `Search the web for: ${query}\n\nReturn the top 5-10 results with titles, URLs, and brief descriptions.` }] }],
-          tools: [{ google_search: {} }],
-          generationConfig: { temperature: 0.1, maxOutputTokens: 2000, thinkingConfig: { thinkingBudget: 0 } },
-        }),
-      });
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 30_000); // 30s timeout
 
-      if (!res.ok) {
-        const body = await res.text();
-        return `Search error: HTTP ${res.status} — ${body.slice(0, 200)}`;
-      }
+      try {
+        const res = await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`,
+          },
+          signal: controller.signal,
+          body: JSON.stringify({
+            contents: [{ role: 'user', parts: [{ text: query }] }],
+            tools: [{ google_search: {} }],
+            generationConfig: { temperature: 0.1, maxOutputTokens: 4096, thinkingConfig: { thinkingBudget: 0 } },
+          }),
+        });
 
-      const data = await res.json();
-      const parts = data?.candidates?.[0]?.content?.parts || [];
-      const text = parts.filter(p => p.text && !p.thought).map(p => p.text).join('');
-      // Also extract grounding metadata if available
-      const grounding = data?.candidates?.[0]?.groundingMetadata;
-      let groundingInfo = '';
-      if (grounding?.groundingChunks) {
-        groundingInfo = '\n\nSources:\n' + grounding.groundingChunks
-          .filter(c => c.web)
-          .map(c => `- ${c.web.title || 'Untitled'}: ${c.web.uri}`)
-          .join('\n');
+        if (!res.ok) {
+          const body = await res.text();
+          return `Search error: HTTP ${res.status} — ${body.slice(0, 200)}`;
+        }
+
+        const data = await res.json();
+        const parts = data?.candidates?.[0]?.content?.parts || [];
+        const text = parts.filter(p => p.text && !p.thought).map(p => p.text).join('');
+        // Extract grounding metadata — sources are the most useful part
+        const grounding = data?.candidates?.[0]?.groundingMetadata;
+        let groundingInfo = '';
+        if (grounding?.groundingChunks) {
+          groundingInfo = '\n\nSources:\n' + grounding.groundingChunks
+            .filter(c => c.web)
+            .map(c => `- ${c.web.title || 'Untitled'}: ${c.web.uri}`)
+            .join('\n');
+        }
+        if (grounding?.searchEntryPoint?.renderedContent) {
+          groundingInfo += '\n\n(Google Search grounding active)';
+        }
+        return (text + groundingInfo) || 'No results found.';
+      } finally {
+        clearTimeout(timer);
       }
-      return text + groundingInfo || 'No results found.';
     } catch (err) {
+      if (err.name === 'AbortError') return 'Search error: request timed out (30s)';
       return `Search error: ${err.message}`;
     }
   },

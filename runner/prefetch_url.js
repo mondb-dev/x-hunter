@@ -76,7 +76,7 @@ function toScholarlyUrl(deepDiveUrl, readingUrlText) {
     if (tm) topic = tm[1].trim().split(/\s+/).slice(0, 6).join(" ");
   }
   if (topic) return `https://scholar.google.com/scholar?q=${encodeURIComponent(topic)}`;
-  return "https://news.ycombinator.com/";
+  return "https://www.newsguardtech.com/reports/";
 }
 
 /** Label a URL by its content source. */
@@ -85,6 +85,7 @@ function classifySource(url) {
   if (/arxiv\.org/.test(url))              return "arxiv";
   if (/scholar\.google/.test(url))         return "scholar";
   if (/news\.ycombinator\.com/.test(url))  return "hackernews";
+  if (/newsguardtech\.com/.test(url))     return "newsguard";
   if (/ssrn\.com/.test(url))               return "ssrn";
   if (/pubmed/.test(url))                  return "pubmed";
   if (/semanticscholar\.org/.test(url))    return "scholar";
@@ -156,7 +157,27 @@ function classifySource(url) {
 
     let currentUrl = "";
     try { currentUrl = page.url(); } catch {}
-    if (isLoginRedirectUrl(currentUrl)) {
+
+    // Detect X search degradation (suspended account: feed works, search doesn't)
+    if (!isLoginRedirectUrl(currentUrl) && /x\.com\/search/.test(currentUrl)) {
+      try {
+        const bodyText = await page.evaluate(() => document.body?.innerText?.substring(0, 500) || "");
+        if (/Something went wrong|Try reloading/i.test(bodyText)) {
+          console.log("[prefetch] X search degraded (suspended account) — agent should use web_search");
+          // Navigate back to home feed (which still works) so the agent has live content
+          await page.goto(HOME_URL, { waitUntil: "domcontentloaded", timeout: TIMEOUT }).catch(() => {});
+          await sleep(2_500);
+          writeSource("x_search_degraded", currentUrl);
+          console.log(`[prefetch] done — source: x_search_degraded (browser on home feed)`);
+        } else {
+          writeSource("x", currentUrl);
+          console.log(`[prefetch] done — source: x at ${currentUrl}`);
+        }
+      } catch {
+        writeSource("x", currentUrl);
+        console.log(`[prefetch] done — source: x at ${currentUrl}`);
+      }
+    } else if (isLoginRedirectUrl(currentUrl)) {
       console.log("[prefetch] X login redirect — switching to fallback source");
 
       let fallbackUrl;
@@ -167,8 +188,8 @@ function classifySource(url) {
         fallbackUrl = toRedditUrl(targetUrl, directiveText);
         console.log(`[prefetch] curiosity fallback (reddit): ${fallbackUrl}`);
       } else {
-        fallbackUrl = "https://news.ycombinator.com/";
-        console.log(`[prefetch] home fallback (hackernews): ${fallbackUrl}`);
+        fallbackUrl = "https://www.newsguardtech.com/reports/";
+        console.log(`[prefetch] home fallback (newsguard): ${fallbackUrl}`);
       }
 
       await page.goto(fallbackUrl, { waitUntil: "domcontentloaded", timeout: TIMEOUT });
