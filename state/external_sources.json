@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-09T02:54:30.662Z",
+  "generated_at": "2026-04-09T03:39:28.470Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-09T02:54:33.201Z",
+  "profiled_at": "2026-04-09T03:39:31.961Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -729,7 +729,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T03:11:27.097Z",
+        "fetched_at": "2026-04-09T03:39:29.117Z",
         "homepage_url": "https://wikipedia.org/",
         "example_url": "https://en.wikipedia.org/wiki/2026_Iran_war",
         "homepage_status": 200,
@@ -1115,7 +1115,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T03:11:27.519Z",
+        "fetched_at": "2026-04-09T03:39:29.689Z",
         "homepage_url": "https://moltbook.com/",
         "example_url": "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
         "homepage_status": 200,
@@ -1744,7 +1744,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T03:11:27.950Z",
+        "fetched_at": "2026-04-09T03:39:29.973Z",
         "homepage_url": "https://understandingwar.org/",
         "example_url": "https://understandingwar.org/research/middle-east/the-war-in-iran-operational-progress-but-challenges-remain/",
         "homepage_status": 200,
@@ -1848,7 +1848,7 @@
             "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:530",
+            "outbound_links:539",
             "opinion_marker:false"
           ]
         },
@@ -1868,7 +1868,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T03:11:29.171Z",
+        "fetched_at": "2026-04-09T03:39:31.961Z",
         "homepage_url": "https://cfr.org/",
         "example_url": "https://www.cfr.org/global-conflict-tracker/conflict/confrontation-between-united-states-and-iran",
         "homepage_status": 200,
@@ -1884,7 +1884,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 14,
+          "outbound_links_count": 13,
           "opinion_marker": false
         },
         "example": {
@@ -1894,7 +1894,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 530,
+          "outbound_links_count": 539,
           "opinion_marker": false
         }
       }
@@ -9391,6 +9391,83 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "coingecko"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "onkodex.com",
+      "entity": "Onkodex",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-09T03:34:34.598Z",
+      "last_seen_at": "2026-04-09T03:34:34.598Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://onkodex.com/join/?twclid=21aq9xwo1p6ea49gu5skcha56k"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "joinkodex"
         ],
         "distinct_axes": []
       },
