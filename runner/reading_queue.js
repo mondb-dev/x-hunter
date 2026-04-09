@@ -97,7 +97,7 @@ function scanInteractions(lastScannedId) {
     // Also extract @mentions (excluding the agent itself) and queue as profile URLs
     const mentionedAccounts = (text.match(/@(\w+)/g) || [])
       .map(m => m.slice(1).toLowerCase())
-      .filter(u => u !== "sebastianhunts" && u.length > 1);
+      .filter(u => u !== "sebhunts_ai" && u !== "sebastianhunts" && u.length > 1);
     for (const account of mentionedAccounts) {
       const profileUrl = `https://x.com/${account}`;
       if (!urls.includes(profileUrl)) urls.push(profileUrl);

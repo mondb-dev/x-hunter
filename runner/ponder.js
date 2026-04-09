@@ -176,7 +176,7 @@ function extractHandles(browseNotes) {
   for (const m of matches) {
     const h = m[1].toLowerCase();
     // Skip obvious non-account tokens
-    if (h.length > 2 && !["sebastianhunts", "x", "twitter", "com"].includes(h)) seen.add(m[1]);
+    if (h.length > 2 && !["sebhunts_ai", "sebastianhunts", "x", "twitter", "com"].includes(h)) seen.add(m[1]);
   }
   return [...seen].slice(0, 30); // top 30 unique handles observed
 }

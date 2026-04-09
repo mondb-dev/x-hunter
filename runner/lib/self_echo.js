@@ -18,7 +18,7 @@ const STOP_WORDS = new Set([
   'such', 'only', 'over', 'under', 'have', 'has', 'had', 'do', 'does', 'did',
 ]);
 
-const OWN_HANDLES = new Set(['sebastianhunts', 'sebastian_hunts']);
+const OWN_HANDLES = new Set(['sebhunts_ai', 'sebastianhunts', 'sebastian_hunts']);
 const MIN_MATCH_TEXT_CHARS = 40;
 const MIN_SHARED_TOKENS = 8;
 const CONTAINMENT_CHARS = 70;

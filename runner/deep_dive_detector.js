@@ -28,7 +28,7 @@ const MAX_QUEUE_DEPTH   = 3;   // don't queue more than this many pending deep d
 
 // Accounts to never deep dive (noise, own account, X system accounts)
 const BLOCKLIST = new Set([
-  "sebastianhunts", "x", "twitter", "verified", "support",
+  "sebhunts_ai", "sebastianhunts", "x", "twitter", "verified", "support",
   "elonmusk",       // too noisy — already well-known signal
   "foxnews",        // institutional account — low personal signal
   "cnn", "bbc", "nytimes", "reuters", "ap",

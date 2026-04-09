@@ -157,7 +157,7 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
   }
   // Reject quoting own tweets
   const sourceHandle = (sourceUrl.match(/x\.com\/([^/]+)/) || [])[1] || "";
-  if (sourceHandle.toLowerCase() === "sebastianhunts") {
+  if (sourceHandle.toLowerCase() === "sebhunts_ai") {
     console.error("[post_quote] cannot quote own tweet — skipping");
     writeAttempt(ATTEMPT_FILE, {
       kind: "quote",
@@ -190,7 +190,7 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
   // ── Pre-post guard: reject quotes of tweets that mention @SebastianHunts ──
   // Fetches the source tweet page and checks for Sebastian mentions to prevent
   // quoting replies/questions directed at the agent (AGENTS.md §13.6 / HARD SKIP rule)
-  const OWN_HANDLES = ["sebastianhunts", "sebastian_hunts"];
+  const OWN_HANDLES = ["sebhunts_ai", "sebastianhunts", "sebastian_hunts"];
   const _guardNeedsCheck = true; // always check — agent prompt is not enough
 
   // ── Connect to Chrome ───────────────────────────────────────────────────────

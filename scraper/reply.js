@@ -42,7 +42,7 @@ const MAX_PER_RUN  = 3;
 const MIN_GAP_MS   = 5 * 60 * 1000;  // 5 minutes between replies
 const MAX_PER_DAY  = 10;
 const MAX_AGE_MS   = 48 * 60 * 60 * 1000;  // ignore mentions older than 48h
-const OWN_USERNAME = "sebastianhunts";  // skip self-mentions
+const OWN_USERNAME = "SebHunts_AI";  // skip self-mentions
 
 if (isXSuppressed("reply")) {
   console.log(`[reply] X reply suppression active — skipping (${suppressionReason("reply")})`);
@@ -361,7 +361,7 @@ async function postReply(page, item, replyText) {
   if (!tweetId) throw new Error("no tweet ID on queue item");
 
   const result = await replyToTweet(replyText, tweetId);
-  console.log(`[reply] posted reply to @${item.from_username}: https://x.com/sebastianhunts/status/${result.id}`);
+  console.log(`[reply] posted reply to @${item.from_username}: https://x.com/SebHunts_AI/status/${result.id}`);
 }
 
 // ── Interactions log ──────────────────────────────────────────────────────────
