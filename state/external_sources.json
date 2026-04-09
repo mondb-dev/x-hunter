@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-09T03:39:28.470Z",
+  "generated_at": "2026-04-09T04:39:29.357Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-09T03:39:31.961Z",
+  "profiled_at": "2026-04-09T04:39:31.204Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-09T01:09:55.892Z",
+      "last_seen_at": "2026-04-09T02:37:41.000Z",
       "discovery": {
-        "distinct_urls": 285,
+        "distinct_urls": 288,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,10 +384,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 242,
-          "feed_buffer_reply": 56
+          "feed_buffer": 243,
+          "feed_buffer_reply": 58
         },
-        "distinct_referring_accounts": 106,
+        "distinct_referring_accounts": 107,
         "sample_referring_accounts": [
           "_yf1921",
           "abarreto33367",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:285",
+            "distinct_urls:288",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:106",
+            "referring_accounts:107",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:285",
+            "distinct_urls:288",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:106",
+            "referring_accounts:107",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -609,7 +609,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T04:11:36.539Z",
+        "fetched_at": "2026-04-09T04:39:30.101Z",
         "homepage_url": "https://grok.com/",
         "example_url": "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
         "homepage_status": 200,
@@ -1151,9 +1151,9 @@
       "entity": "Bk",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T08:31:32.129Z",
-      "last_seen_at": "2026-04-08T11:43:12.000Z",
+      "last_seen_at": "2026-04-09T01:30:49.000Z",
       "discovery": {
-        "distinct_urls": 6,
+        "distinct_urls": 7,
         "example_urls": [
           "https://www.bk.com/menu/section/fb06fabe-a285-4fb4-994a-c617a1547ddb?utm_source=X&utm_medium=Social-Social&utm_campaign=Peppercorn-Awareness&utm_content=Peppercorn-IMG-Warning&twclid=24j7ivpacvxqbg2t5it24skrl9",
           "https://www.bk.com/menu/section/4aa502d4-7f9b-445a-b509-35a807b6aa85?utm_source=X&utm_medium=Social-Social&utm_campaign=Elevation-WhopperWednesday-Takeover-2&utm_content=Elevation-WhopperWednesday-VID-WW-15S&twclid=2cm1gaz4u45tdcrp9vbag3lg0j",
@@ -1163,7 +1163,7 @@
         ],
         "origin_counts": {
           "feed_buffer": 1,
-          "feed_buffer_reply": 5
+          "feed_buffer_reply": 6
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -1192,9 +1192,9 @@
           ]
         },
         "breadth": {
-          "score": 0.295,
+          "score": 0.32416666666666666,
           "basis": [
-            "distinct_urls:6",
+            "distinct_urls:7",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1227,12 +1227,12 @@
           ]
         },
         "overall": {
-          "score": 0.40046875,
-          "confidence": 0.24495,
+          "score": 0.4068489583333333,
+          "confidence": 0.273575,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:6",
+            "distinct_urls:7",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -1265,6 +1265,133 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "mottandbow.com",
+      "entity": "Mottandbow",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-06T22:25:00.000Z",
+      "last_seen_at": "2026-04-08T10:45:11.000Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
+          "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-flexible-highquality-D795-V4-A-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=22mpw1zi0m3wgrq6uu36az1dqv",
+          "https://www.mottandbow.com/collections/classic-tee-perfected2?utm_source=twitter&utm_medium=twitter&utm_campaign=utm_campaign%3Dxconvert&utm_content=img-mt-juliana-stack-confidence-D57-V1-B-h163-p210-LP_MTCT2-c%2FNone-irl&twclid=2670d02ikxb9ux5a9633nrgyyd",
+          "https://www.mottandbow.com/collections/md-onlyjeans-worth-buying-v1?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-crotchshot-compliments-D910-V1-C-h27-p2-LP_MDOJV2-c%2FNone-irl&twclid=21euztwnudbibfpdsv69m9lwsf",
+          "https://www.mottandbow.com/pages/mens-tee?utm_medium=twitter&utm_campaign=%28M%29+Tees+-+USA+-+Prospecting+-+ABO+20+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Tees+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-mt-agus-mosaic-fit-D534-V1-F-h135-p141-LP_MT-c%2Fnone-irl&twclid=2cstma7gynu4m1yzxiy0bk24cg"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1,
+          "feed_buffer_reply": 4
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "mottandbow"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.26583333333333337,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.39408854166666674,
+          "confidence": 0.216325,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-07T13:07:13.844Z",
+        "homepage_url": "https://mottandbow.com/",
+        "example_url": "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.mottandbow.com/",
+        "example_final_url": "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -1389,132 +1516,6 @@
         },
         "example": {
           "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "mottandbow.com",
-      "entity": "Mottandbow",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-06T22:25:00.000Z",
-      "last_seen_at": "2026-04-08T08:55:37.000Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
-          "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-flexible-highquality-D795-V4-A-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=22mpw1zi0m3wgrq6uu36az1dqv",
-          "https://www.mottandbow.com/collections/classic-tee-perfected2?utm_source=twitter&utm_medium=twitter&utm_campaign=utm_campaign%3Dxconvert&utm_content=img-mt-juliana-stack-confidence-D57-V1-B-h163-p210-LP_MTCT2-c%2FNone-irl&twclid=2670d02ikxb9ux5a9633nrgyyd",
-          "https://www.mottandbow.com/collections/md-onlyjeans-worth-buying-v1?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-crotchshot-compliments-D910-V1-C-h27-p2-LP_MDOJV2-c%2FNone-irl&twclid=21euztwnudbibfpdsv69m9lwsf"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1,
-          "feed_buffer_reply": 3
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "mottandbow"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.23666666666666664,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.1,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3877083333333334,
-          "confidence": 0.18769999999999998,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-07T13:07:13.844Z",
-        "homepage_url": "https://mottandbow.com/",
-        "example_url": "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.mottandbow.com/",
-        "example_final_url": "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": true,
           "has_about_link": false,
@@ -2115,7 +2116,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T03:41:28.394Z",
+        "fetched_at": "2026-04-09T04:39:30.395Z",
         "homepage_url": "https://britannica.com/",
         "example_url": "https://www.britannica.com/event/2026-Iran-War",
         "homepage_status": 403,
@@ -2611,7 +2612,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T03:41:28.792Z",
+        "fetched_at": "2026-04-09T04:39:30.835Z",
         "homepage_url": "https://georgetown.edu/",
         "example_url": "https://gjia.georgetown.edu/2026/03/26/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
         "homepage_status": 200,
@@ -2734,7 +2735,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T03:41:29.275Z",
+        "fetched_at": "2026-04-09T04:39:31.204Z",
         "homepage_url": "https://ajc.org/",
         "example_url": "https://www.ajc.org/news/the-iran-strikes-explained-how-we-got-here-and-what-it-means",
         "homepage_status": 200,
@@ -9468,6 +9469,160 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "joinkodex"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "amazon.com",
+      "entity": "Amazon",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-09T03:23:02.000Z",
+      "last_seen_at": "2026-04-09T03:23:02.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44/ref_=dvm_us_c_soc_THBY_tw_rb?twclid=2e4zyrzur7iapo7e8zxfmiz1fu"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "primevideo"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "nobullproject.com",
+      "entity": "Nobullproject",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-09T04:34:34.845Z",
+      "last_seen_at": "2026-04-09T04:34:34.845Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://nobullproject.com/collections/drive-2-shoes?utm_source=x&utm_medium=paidsocial&utm_campaign=cpatest&utm_term=drive&utm_content=white&twclid=24gy5fp678esqwxit13xmono4x"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "nobull"
         ],
         "distinct_axes": []
       },
