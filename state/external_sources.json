@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-09T01:20:02.707Z",
+  "generated_at": "2026-04-09T01:50:02.445Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-09T01:20:23.805Z",
+  "profiled_at": "2026-04-09T01:50:02.938Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -375,7 +375,7 @@
       "first_seen_at": "2026-03-31T09:30:40.000Z",
       "last_seen_at": "2026-04-09T01:09:55.892Z",
       "discovery": {
-        "distinct_urls": 284,
+        "distinct_urls": 285,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -385,9 +385,9 @@
         ],
         "origin_counts": {
           "feed_buffer": 242,
-          "feed_buffer_reply": 55
+          "feed_buffer_reply": 56
         },
-        "distinct_referring_accounts": 105,
+        "distinct_referring_accounts": 106,
         "sample_referring_accounts": [
           "_yf1921",
           "abarreto33367",
@@ -398,7 +398,7 @@
           "al_falkenberg",
           "alice_kanyana",
           "alphatrades27",
-          "arckonarts"
+          "apart_blown"
         ],
         "distinct_axes": []
       },
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:284",
+            "distinct_urls:285",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:105",
+            "referring_accounts:106",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:284",
+            "distinct_urls:285",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:105",
+            "referring_accounts:106",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -9067,20 +9067,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0,
           "confidence": 0.55,
@@ -9093,6 +9079,20 @@
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -9189,20 +9189,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.84,
           "confidence": 0.85,
@@ -9215,6 +9201,20 @@
             "corrections:false",
             "outbound_links:37",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -9246,6 +9246,128 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 37,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "orangestandard.com",
+      "entity": "Orangestandard",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-09T01:29:55.376Z",
+      "last_seen_at": "2026-04-09T01:29:55.376Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://orangestandard.com/?utm_source=Twitter&utm_medium=Tweet&utm_campaign=btcaccts&twclid=221wvicldxi1mxr7dfi4dgcd74"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "orangestandardx"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.12,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:2",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-09T01:50:02.937Z",
+        "homepage_url": "https://orangestandard.com/",
+        "example_url": "https://orangestandard.com/?utm_source=Twitter&utm_medium=Tweet&utm_campaign=btcaccts&twclid=221wvicldxi1mxr7dfi4dgcd74",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://orangestandard.com/",
+        "example_final_url": "https://orangestandard.com/?utm_source=Twitter&utm_medium=Tweet&utm_campaign=btcaccts&twclid=221wvicldxi1mxr7dfi4dgcd74",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
           "opinion_marker": false
         }
       }
