@@ -550,10 +550,106 @@ function postSignalTweet({ today, hour }) {
   return { posted: true, tweetUrl: tweetUrl || null };
 }
 
+// ── postVerificationTweet ────────────────────────────────────────────────────
+/**
+ * Verification tweet posting pipeline.
+ *
+ * Reads state/verification_draft.txt (written by verify_claims.js).
+ * Passes through voice_filter.js for tone consistency, then posts.
+ * Logs to posts_log.json as type: 'verification'.
+ *
+ * @param {Object} opts
+ * @param {string} opts.today  - YYYY-MM-DD
+ * @param {string} opts.hour   - zero-padded hour (e.g. '14')
+ * @returns {{ posted: boolean }}
+ */
+function postVerificationTweet({ today, hour }) {
+  if (isXSuppressed('verification')) {
+    log('X verification suppression active — keeping draft for later');
+    return { posted: false };
+  }
+
+  const draftPath = config.VERIFICATION_DRAFT_PATH;
+  if (!exists(draftPath)) return { posted: false };
+
+  const verifyText = readFile(draftPath).trim();
+  if (!verifyText) {
+    try { fs.unlinkSync(draftPath); } catch {}
+    return { posted: false };
+  }
+
+  // Write to tweet_draft.txt (the shared posting path)
+  fs.writeFileSync(DRAFT_PATH, verifyText + '\n');
+
+  // Voice filter (keep Sebastian's tone)
+  const vfOut = runNodeSafe('voice_filter.js');
+  log(`voice filter (verification): ${vfOut}`);
+
+  // Post
+  log('Posting verification tweet via browser CDP...');
+  const postResult = runNodeDetailed('post_tweet.js');
+  if (!postResult.ok) {
+    log(`browser CDP failed (${postResult.error}) — falling back to API`);
+    runNodeSafe('post_tweet_api.js');
+  }
+
+  const resultPath = path.join(config.STATE_DIR, 'tweet_result.txt');
+  const tweetUrl = readFile(resultPath).trim();
+  if (tweetUrl) {
+    log(`Verification posted: ${tweetUrl}`);
+  } else {
+    log('Verification posted (URL not captured)');
+  }
+
+  // Patch the posts_log entry type from "tweet" to "verification"
+  try {
+    const postedContent = exists(DRAFT_PATH) ? readFile(DRAFT_PATH).trim() : verifyText;
+    const postsLogPath = path.join(config.STATE_DIR, 'posts_log.json');
+    if (exists(postsLogPath)) {
+      const logData = JSON.parse(readFile(postsLogPath));
+      const posts = Array.isArray(logData) ? logData : (logData.posts || []);
+      for (let i = posts.length - 1; i >= 0; i--) {
+        if (posts[i].type === 'tweet') {
+          posts[i].type = 'verification';
+          break;
+        }
+      }
+      const out = Array.isArray(logData) ? posts : { ...logData, posts, total_posts: posts.length };
+      fs.writeFileSync(postsLogPath, JSON.stringify(out, null, 2));
+      log('[posts_log] patched entry to type: verification');
+    }
+
+    // Update verification DB with tweet URL
+    try {
+      // Extract claim_id from draft text (format: 'Claim check: "..."')
+      const vdb = require('../intelligence/verification_db');
+      const allVerified = vdb.getAllVerifications();
+      // Find the most recently verified claim that hasn't been tweeted
+      const candidate = allVerified.find(c =>
+        (c.status === 'supported' || c.status === 'refuted') && !c.tweet_posted
+      );
+      if (candidate && tweetUrl) {
+        vdb.markTweetPosted(candidate.claim_id, tweetUrl);
+        log(`[verification_db] marked ${candidate.claim_id} as tweeted`);
+      }
+    } catch (e) {
+      log(`[verification_db] tweet tracking failed: ${e.message}`);
+    }
+  } catch (e) {
+    log(`[verification] logging metadata failed: ${e.message}`);
+  }
+
+  // Cleanup verification draft
+  try { fs.unlinkSync(draftPath); } catch {}
+
+  return { posted: true, tweetUrl: tweetUrl || null };
+}
+
 module.exports = {
   postRegularTweet,
   postQuoteTweet,
   postLinkTweet,
   postSimpleTweet,
   postSignalTweet,
+  postVerificationTweet,
 };

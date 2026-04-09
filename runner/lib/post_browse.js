@@ -127,6 +127,25 @@ function postBrowse({ cycle, today, hour }) {
     }
   }
 
+  // ── 4d. Claim verification pipeline ─────────────────────────────────
+  runScript(path.join(PROJECT_ROOT, 'runner/intelligence/verify_claims.js'));
+
+  // ── 4e. Post verification tweet if draft exists ────────────────────
+  const verifyDraftPath = config.VERIFICATION_DRAFT_PATH;
+  if (fs.existsSync(verifyDraftPath) && fs.statSync(verifyDraftPath).size > 0) {
+    if (isXSuppressed('tweet')) {
+      log(`verification tweet suppressed (${suppressionReason('tweet')})`);
+    } else {
+      const { postVerificationTweet } = require('./post');
+      const { ensureBrowser } = require('./browser');
+      ensureBrowser();
+      const verifyResult = postVerificationTweet({ today, hour });
+      if (verifyResult.posted) {
+        log('Verification tweet posted');
+      }
+    }
+  }
+
   // ── 5. Journal commit decision (4 sub-steps) ─────────────────────────
   const journalFile = path.join(config.JOURNALS_DIR, `${today}_${hour}.html`);
   const journalRelPath = `journals/${today}_${hour}.html`;

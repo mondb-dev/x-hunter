@@ -1,0 +1,60 @@
+import fs from "fs";
+import path from "path";
+import { DATA_ROOT } from "./dataRoot";
+
+const EXPORT_PATH = path.join(DATA_ROOT, "state/verification_export.json");
+
+// ── Types ─────────────────────────────────────────────────────────────────────
+
+export interface ScoringBreakdown {
+  source_tier: number;
+  newsguard: number;
+  corroboration: number;
+  evidence_quality: number;
+  cross_source: number;
+  web_search: number;
+}
+
+export interface VerifiedClaim {
+  claim_id: string;
+  claim_text: string;
+  status: "supported" | "refuted" | "contested" | "unverified" | "expired";
+  confidence_score: number;
+  scoring_breakdown: ScoringBreakdown;
+  source_handle: string | null;
+  source_tier: number | null;
+  evidence_urls: string[];
+  tweet_url: string | null;
+  category: string | null;
+  related_axis_id: string | null;
+  verification_count: number;
+  verified_at: string | null;
+  created_at: string;
+}
+
+export interface VerificationStats {
+  total: number;
+  supported: number;
+  refuted: number;
+  contested: number;
+  unverified: number;
+  expired: number;
+}
+
+export interface VerificationExport {
+  generated_at: string;
+  stats: VerificationStats;
+  claims: VerifiedClaim[];
+}
+
+// ── Reader ────────────────────────────────────────────────────────────────────
+
+export function readVerification(): VerificationExport | null {
+  try {
+    if (!fs.existsSync(EXPORT_PATH)) return null;
+    const raw = fs.readFileSync(EXPORT_PATH, "utf-8");
+    return JSON.parse(raw) as VerificationExport;
+  } catch {
+    return null;
+  }
+}

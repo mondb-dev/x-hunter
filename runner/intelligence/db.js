@@ -92,6 +92,45 @@ db.exec(`
     changed_by   TEXT,
     changed_at   TEXT
   );
+
+  CREATE TABLE IF NOT EXISTS claim_verifications (
+    claim_id           TEXT PRIMARY KEY,
+    claim_source       TEXT NOT NULL,
+    claim_text         TEXT NOT NULL,
+    confidence_score   REAL NOT NULL,
+    scoring_breakdown  TEXT,
+    status             TEXT NOT NULL DEFAULT 'unverified',
+    verification_count INTEGER DEFAULT 0,
+    last_verified_at   TEXT,
+    web_search_summary TEXT,
+    evidence_urls      TEXT,
+    tweet_posted       INTEGER DEFAULT 0,
+    tweet_url          TEXT,
+    source_handle      TEXT,
+    source_tier        INTEGER,
+    related_axis_id    TEXT,
+    category           TEXT,
+    created_at         TEXT NOT NULL,
+    updated_at         TEXT
+  );
+
+  CREATE TABLE IF NOT EXISTS claim_audit_log (
+    id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+    claim_id            TEXT NOT NULL,
+    claim_source        TEXT NOT NULL,
+    old_status          TEXT,
+    new_status          TEXT NOT NULL,
+    confidence_score    REAL,
+    scoring_breakdown   TEXT,
+    verification_method TEXT,
+    evidence_urls       TEXT,
+    notes               TEXT,
+    created_at          TEXT NOT NULL
+  );
+
+  CREATE INDEX IF NOT EXISTS idx_cv_status ON claim_verifications(status);
+  CREATE INDEX IF NOT EXISTS idx_cv_score  ON claim_verifications(confidence_score);
+  CREATE INDEX IF NOT EXISTS idx_audit_claim ON claim_audit_log(claim_id);
 `);
 
 module.exports = db;

@@ -870,3 +870,102 @@ main {
   .intel-axis-poles { font-size: 9px; }
   .intel-cat-header { font-size: 12px; }
 }
+
+/* ── Verification page ──────────────────────────────────────────────────── */
+.verify-page { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+.verify-header { margin-bottom: 2rem; }
+.verify-eyebrow {
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted); margin: 0 0 0.4rem; display: block;
+}
+.verify-title { font-size: 2rem; font-weight: 700; margin: 0 0 0.6rem; }
+.verify-description { font-size: 14px; line-height: 1.6; color: var(--muted); margin: 0; }
+
+.verify-stats {
+  display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;
+}
+.verify-stat {
+  background: var(--card-bg, #1e293b); border: 1px solid var(--border, #334155);
+  border-radius: 8px; padding: 1rem 1.2rem; text-align: center; min-width: 80px; flex: 1;
+}
+.verify-stat-value { font-size: 1.6rem; font-weight: 700; }
+.verify-stat-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+.verify-claims { display: flex; flex-direction: column; gap: 1rem; }
+.verify-empty { color: var(--muted); font-size: 14px; text-align: center; padding: 3rem 0; }
+
+.verify-claim {
+  background: var(--card-bg, #1e293b); border: 1px solid var(--border, #334155);
+  border-radius: 8px; padding: 1rem 1.2rem;
+}
+.verify-claim-header {
+  display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.6rem;
+}
+.verify-claim-status {
+  font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px;
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+.verify-claim-handle {
+  font-size: 12px; color: var(--link, #60a5fa); text-decoration: none;
+}
+.verify-claim-handle:hover { text-decoration: underline; }
+.verify-claim-tier {
+  font-size: 11px; border: 1px solid; border-radius: 4px; padding: 1px 6px;
+}
+.verify-claim-text {
+  font-size: 14px; line-height: 1.6; margin: 0 0 0.8rem; color: var(--fg, #e2e8f0);
+}
+
+.verify-confidence { margin-bottom: 0.8rem; }
+.verify-confidence-header {
+  display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;
+}
+.verify-confidence-label { font-size: 11px; color: var(--muted); text-transform: uppercase; }
+.verify-confidence-pct { font-size: 13px; font-weight: 600; }
+.verify-confidence-track {
+  height: 6px; background: var(--border, #334155); border-radius: 3px;
+  overflow: hidden; margin-bottom: 0.6rem;
+}
+.verify-confidence-fill { height: 100%; border-radius: 3px; transition: width 0.3s; }
+
+.verify-breakdown { display: flex; flex-direction: column; gap: 3px; }
+.verify-breakdown-row { display: flex; align-items: center; gap: 0.4rem; }
+.verify-breakdown-label { font-size: 10px; color: var(--muted); width: 100px; flex-shrink: 0; }
+.verify-breakdown-track {
+  flex: 1; height: 4px; background: var(--border, #334155); border-radius: 2px; overflow: hidden;
+}
+.verify-breakdown-fill { height: 100%; border-radius: 2px; }
+.verify-breakdown-val { font-size: 10px; color: var(--muted); width: 30px; text-align: right; }
+
+.verify-claim-evidence { margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
+.verify-claim-evidence-label { font-size: 11px; color: var(--muted); }
+.verify-claim-evidence-link {
+  font-size: 11px; color: var(--link, #60a5fa); text-decoration: none;
+  background: rgba(96,165,250,0.1); padding: 1px 6px; border-radius: 3px;
+}
+.verify-claim-evidence-link:hover { text-decoration: underline; }
+
+.verify-claim-footer {
+  display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;
+  font-size: 11px; color: var(--muted);
+}
+.verify-claim-date { }
+.verify-claim-tweet { color: var(--link, #60a5fa); text-decoration: none; }
+.verify-claim-tweet:hover { text-decoration: underline; }
+.verify-claim-category {
+  background: rgba(148,163,184,0.15); padding: 1px 6px; border-radius: 3px; text-transform: capitalize;
+}
+
+.verify-methodology {
+  margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border, #334155);
+}
+.verify-methodology h3 { font-size: 14px; font-weight: 600; margin: 0 0 0.5rem; }
+.verify-methodology p { font-size: 13px; line-height: 1.7; color: var(--muted); margin: 0; }
+
+@media (max-width: 640px) {
+  .verify-title { font-size: 1.4rem; }
+  .verify-stats { gap: 0.5rem; }
+  .verify-stat { min-width: 60px; padding: 0.6rem 0.8rem; }
+  .verify-stat-value { font-size: 1.2rem; }
+  .verify-breakdown-label { width: 70px; }
+}
