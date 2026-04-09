@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-09T09:09:32.036Z",
+  "generated_at": "2026-04-09T10:09:32.878Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-09T09:09:35.814Z",
+  "profiled_at": "2026-04-09T10:09:40.336Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -375,7 +375,7 @@
       "first_seen_at": "2026-03-31T09:30:40.000Z",
       "last_seen_at": "2026-04-09T07:41:08.000Z",
       "discovery": {
-        "distinct_urls": 294,
+        "distinct_urls": 295,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -385,9 +385,9 @@
         ],
         "origin_counts": {
           "feed_buffer": 244,
-          "feed_buffer_reply": 63
+          "feed_buffer_reply": 64
         },
-        "distinct_referring_accounts": 111,
+        "distinct_referring_accounts": 112,
         "sample_referring_accounts": [
           "_yf1921",
           "abarreto33367",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:294",
+            "distinct_urls:295",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:111",
+            "referring_accounts:112",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:294",
+            "distinct_urls:295",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:111",
+            "referring_accounts:112",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -509,9 +509,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-09T06:15:32.000Z",
+      "last_seen_at": "2026-04-09T06:28:44.000Z",
       "discovery": {
-        "distinct_urls": 30,
+        "distinct_urls": 32,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,10 +520,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 29,
-          "feed_buffer": 1
+          "feed_buffer_reply": 30,
+          "feed_buffer": 2
         },
-        "distinct_referring_accounts": 27,
+        "distinct_referring_accounts": 29,
         "sample_referring_accounts": [
           "afk500595388855",
           "anim8studio",
@@ -534,7 +534,7 @@
           "bull_dogee",
           "chibifanpage2",
           "cuteallthings",
-          "endorfinaholic"
+          "elonmusk"
         ],
         "distinct_axes": []
       },
@@ -561,7 +561,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:30",
+            "distinct_urls:32",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -569,7 +569,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:27",
+            "referring_accounts:29",
             "origin_types:2"
           ]
         },
@@ -599,10 +599,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:30",
+            "distinct_urls:32",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:27",
+            "referring_accounts:29",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -962,16 +962,16 @@
           ]
         },
         "profile": {
-          "score": 0.14,
-          "confidence": 0.65,
+          "score": 0.54,
+          "confidence": 0.75,
           "basis": [
             "meta_author:false",
-            "published_time:false",
-            "canonical:false",
+            "published_time:true",
+            "canonical:true",
             "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:145",
             "opinion_marker:false"
           ]
         },
@@ -992,13 +992,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T10:06:44.116Z",
+        "fetched_at": "2026-04-09T10:09:36.402Z",
         "homepage_url": "https://google.com/",
-        "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFCw96vlaNlxNRXBpVj5mge4rLgXa78XwZMGqVdp93EO8s3n4fNPhqgxkjMdJMn6-UNAuONNeTBczq16ajGwpHoGULhCJIAru2o96n3OHYFKJpt07S1NjxMCrCvdlBJGGhs0V4sILFqHjEP6yeQ4BJ9AhHavJlypkSNVID_Ic1uL4OEQfjNAnYMuFMOOzPWw9RiDB0PsBzb7gYSoFD0HobiWMT_6q6-XQgWqr5uRQdLwn9u6vUTR3Scz_ncWcgQPVU6tnEfDMEBQGEnqN22psBdqfe",
+        "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCmNHptSbVV3zGxP_M6wvF6PcPxnfQnf-w9J2CIiFt2D2AVZQffTQL7N4jd0jzuJ50Mh5rLLNMVr7wNa8VaGxy95U5puMCuVK_zI9aYx7FN7TMnmb81qR7Po_gte6ZmIEAKMYoG1uREvXeWIIsn97g8Gqal8F9nghWkc0Kx6cyKYDOYeqCyIme0Rvo_yYOdQ17MK2czw==",
         "homepage_status": 200,
-        "example_status": 404,
+        "example_status": 200,
         "homepage_final_url": "https://www.google.com/",
-        "example_final_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFCw96vlaNlxNRXBpVj5mge4rLgXa78XwZMGqVdp93EO8s3n4fNPhqgxkjMdJMn6-UNAuONNeTBczq16ajGwpHoGULhCJIAru2o96n3OHYFKJpt07S1NjxMCrCvdlBJGGhs0V4sILFqHjEP6yeQ4BJ9AhHavJlypkSNVID_Ic1uL4OEQfjNAnYMuFMOOzPWw9RiDB0PsBzb7gYSoFD0HobiWMT_6q6-XQgWqr5uRQdLwn9u6vUTR3Scz_ncWcgQPVU6tnEfDMEBQGEnqN22psBdqfe",
+        "example_final_url": "https://idsa.in/publisher/comments/the-philippines-evolving-west-philippine-sea-strategy-2",
         "homepage_content_type": "text/html; charset=ISO-8859-1",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
@@ -1013,12 +1013,12 @@
         },
         "example": {
           "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 145,
           "opinion_marker": false
         }
       }
@@ -6540,7 +6540,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T08:06:34.810Z",
+        "fetched_at": "2026-04-09T10:09:37.696Z",
         "homepage_url": "https://quorum.us/",
         "example_url": "https://cpmadvocacy.quorum.us/campaign/158654/?utm_source=x&utm_medium=paid_social&utm_campaign=iowa_prediction_markets&twclid=2n7g30ite25eujoe3z8invqck",
         "homepage_status": 200,
@@ -7121,7 +7121,7 @@
           ]
         },
         "profile": {
-          "score": 0.45999999999999996,
+          "score": 0.44999999999999996,
           "confidence": 0.65,
           "basis": [
             "meta_author:false",
@@ -7130,7 +7130,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:10",
+            "outbound_links:9",
             "opinion_marker:false"
           ]
         },
@@ -7150,7 +7150,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T06:06:34.828Z",
+        "fetched_at": "2026-04-09T10:09:40.021Z",
         "homepage_url": "https://aikido.dev/",
         "example_url": "https://www.aikido.dev/attack/infinite?utm_source=twitter&utm_medium=paidsocial&utm_campaign=US_tofu&utm_content=2026-02-26-Mack-Infinte-2-A&twclid=28a2h7kzzful35m0kfwtl23x0c",
         "homepage_status": 200,
@@ -7176,7 +7176,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 10,
+          "outbound_links_count": 9,
           "opinion_marker": false
         }
       }
@@ -9451,6 +9451,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-09T10:09:40.336Z",
+        "homepage_url": "https://coingecko.com/",
+        "example_url": "https://www.coingecko.com/en/api/acquisition/entry-plans?utm_source=twitter&utm_medium=ad&utm_campaign=bau&utm_content=mar26-gt-brand-ad-free-v1&audience_segment=prospecting&twclid=26xrmua0k4othy65876mc0aamh",
+        "homepage_status": 200,
+        "example_status": 403,
+        "homepage_final_url": "https://www.coingecko.com/",
+        "example_final_url": "https://www.coingecko.com/en/api/acquisition/entry-plans?utm_source=twitter&utm_medium=ad&utm_campaign=bau&utm_content=mar26-gt-brand-ad-free-v1&audience_segment=prospecting&twclid=26xrmua0k4othy65876mc0aamh",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
