@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-09T16:24:40.373Z",
+  "generated_at": "2026-04-09T17:24:40.446Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-09T16:24:42.060Z",
+  "profiled_at": "2026-04-09T16:54:46.508Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-09T14:31:13.000Z",
+      "last_seen_at": "2026-04-09T15:55:19.000Z",
       "discovery": {
-        "distinct_urls": 307,
+        "distinct_urls": 308,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,10 +384,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 248,
+          "feed_buffer": 249,
           "feed_buffer_reply": 72
         },
-        "distinct_referring_accounts": 122,
+        "distinct_referring_accounts": 123,
         "sample_referring_accounts": [
           "_philschmid",
           "_yf1921",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:307",
+            "distinct_urls:308",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:122",
+            "referring_accounts:123",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:307",
+            "distinct_urls:308",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:122",
+            "referring_accounts:123",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -12732,7 +12732,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T10:06:44.523Z",
+        "fetched_at": "2026-04-09T16:54:46.507Z",
         "homepage_url": "https://pewresearch.org/",
         "example_url": "https://www.pewresearch.org/",
         "homepage_status": 200,
