@@ -34,10 +34,10 @@ const SIGNAL_LOG   = path.join(ROOT, "state", "signal_log.jsonl");
 const SIGNAL_DRAFT = path.join(ROOT, "state", "signal_draft.txt");
 
 // ── Configuration ─────────────────────────────────────────────────────────────
-const SPIKE_THRESHOLD    = 6;      // minimum distinct axes in 24h window to trigger
+const SPIKE_THRESHOLD    = 8;      // only strong signals (was 6 — raised to reduce noise)
 const COOLDOWN_HOURS     = 48;     // minimum hours between signal posts
 const LOOKBACK_HOURS     = 24;     // rolling window for spike detection
-const HIGH_SPIKE         = 8;      // "strong signal" threshold for language escalation
+const HIGH_SPIKE         = 10;     // "strong signal" threshold for language escalation
 
 const isDryRun = process.argv.includes("--dry-run");
 

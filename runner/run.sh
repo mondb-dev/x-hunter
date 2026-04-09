@@ -920,15 +920,12 @@ while true; do
       echo "[run] plan announcement tweet posted"
       sleep 60  # rate-limit gap
     fi
-    # Post ponder declaration tweet if ponder fired and wrote a draft
+    # Ponder tweet posting disabled (not part of new cadence)
+    # Ponder data still generated for /ponders web page.
     if [ -f "$PROJECT_ROOT/state/ponder_tweet.txt" ]; then
-      cp "$PROJECT_ROOT/state/ponder_tweet.txt" "$PROJECT_ROOT/state/tweet_draft.txt"
-      node "$PROJECT_ROOT/runner/post_tweet.js" 2>&1 | grep -v '^$' || true
       rm -f "$PROJECT_ROOT/state/ponder_tweet.txt"
-      echo "[run] ponder declaration tweet posted"
-      # Flag Moltbook ponder post as pending — will retry each daily cycle until success
+      echo "[run] ponder tweet skipped (posting disabled)"
       touch "$PROJECT_ROOT/state/ponder_post_pending"
-      sleep 10  # rate-limit gap
     fi
     # Moltbook ponder post — retries every daily cycle until it succeeds and clears the flag
     if [ -f "$PROJECT_ROOT/state/ponder_post_pending" ]; then

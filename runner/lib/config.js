@@ -56,6 +56,8 @@ module.exports = {
   SIGNAL_LOG_PATH: path.join(STATE_DIR, 'signal_log.jsonl'),
   VERIFICATION_EXPORT_PATH: path.join(STATE_DIR, 'verification_export.json'),
   VERIFICATION_DRAFT_PATH: path.join(STATE_DIR, 'verification_draft.txt'),
+  PREDICTION_DRAFT_PATH: path.join(STATE_DIR, 'prediction_draft.txt'),
+  PREDICTION_LOG_PATH: path.join(STATE_DIR, 'prediction_log.jsonl'),
   CADENCE_PATH: path.join(STATE_DIR, 'cadence.json'),
   X_CONTROL_PATH: path.join(STATE_DIR, 'x_control.json'),
   CAPTURE_STATE_PATH: path.join(STATE_DIR, 'capture_state.json'),

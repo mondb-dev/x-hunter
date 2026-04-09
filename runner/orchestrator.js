@@ -385,27 +385,23 @@ function runOneCycle() {
   const cadence = readDirectives();
   let cycleType;
 
+  // ── New cadence: no regular tweets. Only QUOTE (1-2/day) + BROWSE ────
   // Cadence override: Sebastian requested a specific cycle type
   if (cadence.next_cycle_type) {
     cycleType = cadence.next_cycle_type;
     log(`cadence override: ${cycleType} (consecutive: ${cadence.consecutive_overrides})`);
     consumeOverride(); // consume so it doesn't repeat
-  } else if (cadence.post_eagerness === 'very_eager') {
-    // Very eager: TWEET every 3rd, QUOTE every 3rd offset 1 (~2 posts per 90min)
-    if (cycle % 3 === 0) cycleType = 'TWEET';
-    else if (cycle % 3 === 1) cycleType = 'QUOTE';
-    else cycleType = 'BROWSE';
-  } else if (cadence.post_eagerness === 'eager' && cycle % 4 === 0) {
-    // Eager mode: post every 4th cycle instead of 6th
-    cycleType = 'TWEET';
+    // Block TWEET overrides — only QUOTE and BROWSE allowed
+    if (cycleType === 'TWEET') {
+      log('TWEET override blocked (regular tweets disabled) — running BROWSE');
+      cycleType = 'BROWSE';
+    }
   } else if (cadence.post_eagerness === 'suppress') {
     // Suppress mode: always browse, never initiate posts
     cycleType = 'BROWSE';
   } else {
-    // Default pattern
-    if (cycle % config.TWEET_EVERY === 0) {
-      cycleType = 'TWEET';
-    } else if (cycle % config.TWEET_EVERY === config.QUOTE_OFFSET) {
+    // Default: QUOTE on offset cycles (max 2/day enforced in postQuoteTweet), BROWSE otherwise
+    if (cycle % config.TWEET_EVERY === config.QUOTE_OFFSET) {
       cycleType = 'QUOTE';
     } else {
       cycleType = 'BROWSE';
@@ -675,6 +671,21 @@ function runOneCycle() {
     // Post-browse: cleanup_tabs, reading_queue --mark-done, ontology delta,
     //   drift, journal commit/push, moltbook, checkpoint retry, reply
     postBrowse({ cycle, today, hour });
+
+    // ── Periodic full commit (every 6th cycle — replaces old TWEET cycle ops) ──
+    if (cycle % config.TWEET_EVERY === 0) {
+      log('periodic full commit (checkpoints, articles, ponders, state)');
+      commitAndPush({
+        paths: ['journals/', 'checkpoints/', 'state/', 'articles/', 'daily/', 'ponders/'],
+        message: `cycle ${cycle}: ${today} ${now}`,
+      });
+      const vercelHook = process.env.VERCEL_DEPLOY_HOOK || '';
+      if (vercelHook) triggerVercelDeploy(vercelHook);
+      runScriptLog(path.join(PROJECT_ROOT, 'runner/archive.js'));
+      runScriptLog(path.join(PROJECT_ROOT, 'runner/watchdog.js'), '', {
+        CYCLE_TYPE: 'JOURNAL',
+      });
+    }
 
     // ── Tool execution (if Sebastian requested a tool) ────────────────────
     if (fileExists(config.TOOL_REQUEST_PATH)) {

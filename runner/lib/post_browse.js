@@ -127,24 +127,31 @@ function postBrowse({ cycle, today, hour }) {
     }
   }
 
-  // ── 4d. Claim verification pipeline ─────────────────────────────────
-  runScript(path.join(PROJECT_ROOT, 'runner/intelligence/verify_claims.js'));
+  // ── 4d. Predictive prompt (max 1/day, only when 3+ axes drifting) ───
+  runScript(path.join(PROJECT_ROOT, 'runner/predictive_prompt.js'));
 
-  // ── 4e. Post verification tweet if draft exists ────────────────────
-  const verifyDraftPath = config.VERIFICATION_DRAFT_PATH;
-  if (fs.existsSync(verifyDraftPath) && fs.statSync(verifyDraftPath).size > 0) {
+  // ── 4d-post. Post prediction tweet if draft exists ────────────────
+  const predDraftPath = path.join(config.STATE_DIR, 'prediction_draft.txt');
+  if (fs.existsSync(predDraftPath) && fs.statSync(predDraftPath).size > 0) {
     if (isXSuppressed('tweet')) {
-      log(`verification tweet suppressed (${suppressionReason('tweet')})`);
+      log(`prediction tweet suppressed (${suppressionReason('tweet')})`);
     } else {
-      const { postVerificationTweet } = require('./post');
+      const { postPredictionTweet } = require('./post');
       const { ensureBrowser } = require('./browser');
       ensureBrowser();
-      const verifyResult = postVerificationTweet({ today, hour });
-      if (verifyResult.posted) {
-        log('Verification tweet posted');
+      const predResult = postPredictionTweet({ today, hour });
+      if (predResult.posted) {
+        log('Prediction tweet posted');
       }
     }
   }
+
+  // ── 4e. Claim verification pipeline ─────────────────────────────────
+  runScript(path.join(PROJECT_ROOT, 'runner/intelligence/verify_claims.js'));
+
+  // ── 4f. Verification pipeline runs but does NOT auto-post tweets ───
+  // Verification data still updates for the /verified web page.
+  // Verification tweet posting disabled — not part of new cadence.
 
   // ── 5. Journal commit decision (4 sub-steps) ─────────────────────────
   const journalFile = path.join(config.JOURNALS_DIR, `${today}_${hour}.html`);
@@ -200,7 +207,7 @@ function postBrowse({ cycle, today, hour }) {
     runScript(path.join(PROJECT_ROOT, 'runner/moltbook.js'), { args: '--post-checkpoint' });
   }
 
-  // ── 8. Retry pending checkpoint tweet ─────────────────────────────────
+  // ── 8. Retry pending checkpoint tweet (gist + website link) ────────────
   const checkpointResult = path.join(config.STATE_DIR, 'checkpoint_result.txt');
   if (fs.existsSync(checkpointResult)) {
     if (isXSuppressed('tweet')) {
@@ -208,22 +215,42 @@ function postBrowse({ cycle, today, hour }) {
     } else {
     try {
       const lines = fs.readFileSync(checkpointResult, 'utf-8').split('\n');
-      let cpUrl = (lines[0] || '').trim();
-      let cpTitle = (lines[1] || '').trim();
-      const maxCp = 240 - cpUrl.length;
-      if (cpTitle.length > maxCp) cpTitle = cpTitle.slice(0, maxCp) + '...';
+      const cpTitle = (lines[1] || '').trim();
+      // Extract checkpoint number for website link
+      const cpNum = (cpTitle.match(/checkpoint\s+(\d+)/i) || [])[1] || '';
+      const webUrl = cpNum
+        ? `https://sebastianhunter.fun/checkpoint/${cpNum}`
+        : 'https://sebastianhunter.fun/checkpoints';
 
-      fs.writeFileSync(config.TWEET_DRAFT_PATH, `${cpTitle}\n${cpUrl}`);
-      log(`retrying checkpoint tweet: ${cpUrl}`);
+      // Build a gist from the latest checkpoint file
+      let gist = '';
+      try {
+        const cpDir = path.join(PROJECT_ROOT, 'checkpoints');
+        const cpFiles = fs.readdirSync(cpDir).filter(f => f.endsWith('.md')).sort();
+        if (cpFiles.length) {
+          const latest = fs.readFileSync(path.join(cpDir, cpFiles[cpFiles.length - 1]), 'utf-8');
+          // Extract interpretation section or first paragraph after frontmatter
+          const body = latest.replace(/^---[\s\S]*?---\s*/, '');
+          const para = body.split('\n\n').find(p => p.trim().length > 50 && !p.startsWith('#'));
+          if (para) {
+            gist = para.trim().replace(/\n/g, ' ');
+            const maxLen = 240 - webUrl.length;
+            if (gist.length > maxLen) gist = gist.slice(0, maxLen - 3) + '...';
+          }
+        }
+      } catch {}
 
-      // Run post_tweet.js once — check exit code to decide cleanup
+      if (!gist) gist = cpTitle; // fallback to title
+
+      fs.writeFileSync(config.TWEET_DRAFT_PATH, `${gist}\n${webUrl}`);
+      log(`checkpoint tweet: ${webUrl}`);
+
       try {
         const out = execSync(`node "${path.join(PROJECT_ROOT, 'runner/post_tweet.js')}"`, {
           encoding: 'utf-8',
           timeout: 60_000,
         }).trim();
         if (out) console.log(out.split('\n').filter(l => l).join('\n'));
-        // Success (exit 0) — remove result file
         fs.unlinkSync(checkpointResult);
       } catch {}
     } catch {}

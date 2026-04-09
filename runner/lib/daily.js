@@ -146,8 +146,63 @@ function reports() {
   sleepSec(15);
   ensureBrowser();
 
-  // Article tweet (2-attempt retry via postLinkTweet)
-  postLinkTweet({ resultFile: 'article_result.txt', maxTitleChars: 255 });
+  // Article tweet: excerpt + website link (not moltbook link)
+  const articleResultPath = path.join(config.STATE_DIR, 'article_result.txt');
+  if (fs.existsSync(articleResultPath)) {
+    try {
+      // Find today's article file for excerpt
+      const articlesDir = path.join(config.PROJECT_ROOT, 'articles');
+      const articleFiles = fs.readdirSync(articlesDir)
+        .filter(f => f.startsWith(today) && f.endsWith('.md')).sort();
+      let excerpt = '';
+      let slug = '';
+      if (articleFiles.length) {
+        const articleContent = fs.readFileSync(path.join(articlesDir, articleFiles[0]), 'utf-8');
+        slug = articleFiles[0].replace('.md', '');
+        // Extract first paragraph after frontmatter
+        const body = articleContent.replace(/^---[\s\S]*?---\s*/, '');
+        const para = body.split('\n\n').find(p => p.trim().length > 30 && !p.startsWith('#'));
+        if (para) {
+          excerpt = para.trim().replace(/\n/g, ' ');
+        }
+      }
+      const webUrl = slug
+        ? `https://sebastianhunter.fun/articles/${slug}`
+        : 'https://sebastianhunter.fun/articles';
+      if (!excerpt) {
+        // Fallback: read title from result file
+        const lines = fs.readFileSync(articleResultPath, 'utf-8').split('\n');
+        excerpt = (lines[1] || 'New article published').trim();
+      }
+      const maxExcerpt = 250 - webUrl.length;
+      if (excerpt.length > maxExcerpt) excerpt = excerpt.slice(0, maxExcerpt - 3) + '...';
+
+      const DRAFT_PATH = config.TWEET_DRAFT_PATH;
+      fs.writeFileSync(DRAFT_PATH, `${excerpt}\n${webUrl}`);
+      log(`article tweet: ${webUrl}`);
+
+      // Post with 2-attempt retry
+      let posted = false;
+      for (let attempt = 1; attempt <= 2; attempt++) {
+        try {
+          execSync(`node "${path.join(config.RUNNER_DIR, 'post_tweet.js')}"`, { timeout: 60_000 });
+          posted = true;
+          break;
+        } catch {
+          if (attempt < 2) sleepSec(20);
+        }
+      }
+      if (posted) {
+        try { fs.unlinkSync(articleResultPath); } catch {}
+        log('article tweet posted');
+      } else {
+        log('article tweet failed — keeping result for retry');
+      }
+      sleepSec(60);
+    } catch (e) {
+      log(`article tweet error: ${e.message}`);
+    }
+  }
 }
 
 /**
@@ -160,8 +215,13 @@ function checkpoint() {
   runScript('update_bio.js');
   runScript('moltbook.js', '--post-checkpoint');
 
-  // Checkpoint tweet (single-attempt, resultFile mode, 60s gap)
-  postSimpleTweet({ resultFile: 'checkpoint_result.txt', maxTitleChars: 240, gap: 60 });
+  // Checkpoint tweet: gist of interpretation + website link
+  // (the retry logic in post_browse.js handles the actual gist extraction;
+  //  daily just ensures checkpoint_result.txt exists for next browse cycle to pick up)
+  const cpResultPath = path.join(config.STATE_DIR, 'checkpoint_result.txt');
+  if (fs.existsSync(cpResultPath)) {
+    log('checkpoint_result.txt exists — will be tweeted in next browse cycle');
+  }
 }
 
 /**
@@ -174,24 +234,16 @@ function checkpoint() {
 function ponder() {
   runScript('ponder.js');
 
-  // Plan announcement tweet (source file mode, 60s gap)
-  postSimpleTweet({ sourceFile: 'plan_tweet.txt', gap: 60 });
-
-  // Ponder declaration tweet — special: must touch ponder_post_pending flag after
+  // Plan and ponder tweet posting disabled (not part of new cadence)
+  // Ponder/plan data still generated for web pages.
+  try { fs.unlinkSync(path.join(config.STATE_DIR, 'plan_tweet.txt')); } catch {}
   const ponderTweetPath = path.join(config.STATE_DIR, 'ponder_tweet.txt');
   if (exists(ponderTweetPath)) {
-    const draftPath = config.TWEET_DRAFT_PATH;
-    try { fs.copyFileSync(ponderTweetPath, draftPath); } catch {}
-    try {
-      execSync(`node "${path.join(config.RUNNER_DIR, 'post_tweet.js')}"`, { stdio: 'ignore', timeout: 120000 });
-    } catch {}
     try { fs.unlinkSync(ponderTweetPath); } catch {}
-    log('ponder declaration tweet posted');
-    // Flag Moltbook ponder post as pending — retries each daily cycle until success
+    // Still flag moltbook ponder post as pending (moltbook posting is fine)
     try {
       fs.writeFileSync(path.join(config.STATE_DIR, 'ponder_post_pending'), '');
     } catch {}
-    sleepSec(10); // rate-limit gap (10s, not 60s — matches bash)
   }
 
   // Moltbook ponder post — retries every daily cycle until flag cleared

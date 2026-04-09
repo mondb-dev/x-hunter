@@ -40,6 +40,24 @@ function exists(fp) {
  * Compares the first 80 chars of content against recent posts.
  * Returns true if duplicate found (should skip posting).
  */
+const MAX_QUOTES_PER_DAY = 2;
+
+/**
+ * Count how many posts of a given type were made today.
+ */
+function todayPostCount(type) {
+  try {
+    const logPath = path.join(config.STATE_DIR, 'posts_log.json');
+    const raw = fs.readFileSync(logPath, 'utf-8');
+    const data = JSON.parse(raw);
+    const posts = Array.isArray(data) ? data : (data.posts || []);
+    const todayStr = new Date().toISOString().slice(0, 10);
+    return posts.filter(p =>
+      p.type === type && p.posted_at && p.posted_at.startsWith(todayStr)
+    ).length;
+  } catch { return 0; }
+}
+
 function isDuplicatePost(content, windowMs = 2 * 60 * 60 * 1000) {
   if (!content) return false;
   try {
@@ -245,6 +263,14 @@ function postRegularTweet({ today, hour, cycle }) {
  */
 function postQuoteTweet({ cycle }) {
   const quoteDraftPath = config.QUOTE_DRAFT_PATH;
+
+  // ── Daily quote cap (max 2/day) ────────────────────────────────────────
+  const quotesToday = todayPostCount('quote');
+  if (quotesToday >= MAX_QUOTES_PER_DAY) {
+    log(`daily quote cap reached (${quotesToday}/${MAX_QUOTES_PER_DAY}) — skipping`);
+    try { fs.unlinkSync(quoteDraftPath); } catch {}
+    return { attempted: false, posted: false, suppressed: true, suppressionReason: 'daily_quote_cap', quoteUrl: null };
+  }
 
   if (isXSuppressed('quote')) {
     log('X quote suppression active — skipping post');
@@ -645,6 +671,80 @@ function postVerificationTweet({ today, hour }) {
   return { posted: true, tweetUrl: tweetUrl || null };
 }
 
+// ── postPredictionTweet ──────────────────────────────────────────────────────
+/**
+ * Prediction tweet posting pipeline.
+ *
+ * Reads state/prediction_draft.txt (written by predictive_prompt.js).
+ * Passes through voice_filter.js for tone consistency, then posts.
+ * Logs to posts_log.json as type: 'prediction'.
+ *
+ * @param {Object} opts
+ * @param {string} opts.today  - YYYY-MM-DD
+ * @param {string} opts.hour   - zero-padded hour (e.g. '14')
+ * @returns {{ posted: boolean }}
+ */
+function postPredictionTweet({ today, hour }) {
+  if (isXSuppressed('tweet')) {
+    log('X tweet suppression active — keeping prediction draft for later');
+    return { posted: false };
+  }
+
+  const predDraftPath = path.join(config.STATE_DIR, 'prediction_draft.txt');
+  if (!exists(predDraftPath)) return { posted: false };
+
+  const predText = readFile(predDraftPath).trim();
+  if (!predText) {
+    try { fs.unlinkSync(predDraftPath); } catch {}
+    return { posted: false };
+  }
+
+  // Write to tweet_draft.txt
+  fs.writeFileSync(DRAFT_PATH, `${predText}\n`);
+
+  // Voice filter
+  const vfOut = runNodeSafe('voice_filter.js');
+  log(`voice filter (prediction): ${vfOut}`);
+
+  // Post
+  log('Posting prediction tweet via browser CDP...');
+  const result = runNodeDetailed('post_tweet.js');
+  if (!result.ok) {
+    log(`browser CDP failed (${result.error}) — falling back to API`);
+    runNodeSafe('post_tweet_api.js');
+  }
+
+  const resultPath = path.join(config.STATE_DIR, 'tweet_result.txt');
+  const tweetUrl = readFile(resultPath).trim();
+  if (tweetUrl) log(`Prediction posted: ${tweetUrl}`);
+  else log('Prediction posted (URL not captured)');
+
+  // Patch posts_log entry to type: "prediction"
+  try {
+    const postsLogPath = path.join(config.STATE_DIR, 'posts_log.json');
+    if (exists(postsLogPath)) {
+      const logData = JSON.parse(readFile(postsLogPath));
+      const posts = Array.isArray(logData) ? logData : (logData.posts || []);
+      for (let i = posts.length - 1; i >= 0; i--) {
+        if (posts[i].type === 'tweet') {
+          posts[i].type = 'prediction';
+          break;
+        }
+      }
+      const out = Array.isArray(logData) ? posts : { ...logData, posts, total_posts: posts.length };
+      fs.writeFileSync(postsLogPath, JSON.stringify(out, null, 2));
+      log('[posts_log] patched entry to type: prediction');
+    }
+  } catch (e) {
+    log(`[prediction] logging metadata failed: ${e.message}`);
+  }
+
+  // Cleanup
+  try { fs.unlinkSync(predDraftPath); } catch {}
+
+  return { posted: true, tweetUrl: tweetUrl || null };
+}
+
 module.exports = {
   postRegularTweet,
   postQuoteTweet,
@@ -652,4 +752,5 @@ module.exports = {
   postSimpleTweet,
   postSignalTweet,
   postVerificationTweet,
+  postPredictionTweet,
 };
