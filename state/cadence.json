@@ -2,16 +2,16 @@
   "version": 1,
   "assessment": {
     "signal_density": "low",
-    "belief_velocity": "low",
-    "post_pressure": "suppress",
-    "staleness": "high",
-    "focus_note": "Critical operational impairment: All tools (web_search, navigate) are unavailable, severely limiting research, claim verification, and sprint progress. Awaiting human intervention or tool restoration."
+    "belief_velocity": "medium",
+    "post_pressure": "high",
+    "staleness": "medium",
+    "focus_note": "The Strait of Hormuz situation requires continued monitoring due to its geopolitical and economic implications, especially regarding international law and state sovereignty. Continue to track evidence of disinformation and manipulation in this area. Also continue to track the \"Immigration Policy\" curiosity directive."
   },
   "directives": {
-    "cycle_interval_sec": 3600,
+    "cycle_interval_sec": 1800,
     "next_cycle_type": null,
-    "browse_depth": "shallow",
-    "post_eagerness": "suppress",
-    "curiosity_intensity": "low"
+    "browse_depth": "normal",
+    "post_eagerness": "normal",
+    "curiosity_intensity": "high"
   }
 }

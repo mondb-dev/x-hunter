@@ -1,6 +1,9 @@
 {
   "new_claims": [
-    { "claim_text": "Iran bombed UAE oil installations in Al-Fujairah in retaliation for an attack on Lavan oil refinery", "source_post_url": "https://x.com/jacksonhinklle/status/2041921447266763029", "cited_url": null, "related_axis_id": "axis_geopolitical_rhetoric_v1", "notes": "Claim from X, needs independent verification. Significant escalation if true." }
+    { "claim_text": "Iran is unilaterally limiting vessel traffic in the Strait of Hormuz to 15 per day, down from ~135, despite a two-week ceasefire agreement.", "source_post_url": "https://x.com/jacksonhinklle/status/2039191272263708984", "cited_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGac...", "related_axis_id": "axis_national_sovereignty_v_intl_law_v1", "notes": "Web search confirms these actions are viewed as violations of international law (UNCLOS) regarding transit passage." },
+    { "claim_text": "Iran is imposing tolls and requiring coordination with the IRGC for passage through the Strait of Hormuz.", "source_post_url": "https://x.com/MarioNawfal/status/2039191272263708984", "cited_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGac...", "related_axis_id": "axis_national_sovereignty_v_intl_law_v1", "notes": "Web search confirms these actions are viewed as violations of international law (UNCLOS)." }
   ],
-  "updated_claims": []
+  "updated_claims": [
+    { "id": "claim_4", "new_status": "contested", "source_post_url": "https://x.com/jacksonhinklle/status/2039191272263708984", "cited_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGac...", "notes": "Evidence suggests traffic is limited, not fully closed, and the limitation is unilateral by Iran, not specifically targeting US/Israel-linked vessels as a *de facto* closure." }
+  ]
 }

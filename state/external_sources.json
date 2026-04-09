@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-09T14:09:35.360Z",
+  "generated_at": "2026-04-09T15:54:38.916Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-09T14:09:40.216Z",
+  "profiled_at": "2026-04-09T15:54:43.370Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-09T07:41:08.000Z",
+      "last_seen_at": "2026-04-09T14:31:13.000Z",
       "discovery": {
-        "distinct_urls": 299,
+        "distinct_urls": 302,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -385,10 +385,11 @@
         ],
         "origin_counts": {
           "feed_buffer": 247,
-          "feed_buffer_reply": 65
+          "feed_buffer_reply": 68
         },
-        "distinct_referring_accounts": 114,
+        "distinct_referring_accounts": 117,
         "sample_referring_accounts": [
+          "_philschmid",
           "_yf1921",
           "abarreto33367",
           "abscbnnews",
@@ -397,8 +398,7 @@
           "ajenglish",
           "al_falkenberg",
           "alice_kanyana",
-          "alphatrades27",
-          "apart_blown"
+          "alphatrades27"
         ],
         "distinct_axes": []
       },
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:299",
+            "distinct_urls:302",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:114",
+            "referring_accounts:117",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:299",
+            "distinct_urls:302",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:114",
+            "referring_accounts:117",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -761,6 +761,141 @@
       }
     },
     {
+      "domain": "google.com",
+      "entity": "Google",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-01T05:04:23.454Z",
+      "last_seen_at": "2026-04-09T15:09:00Z",
+      "discovery": {
+        "distinct_urls": 19,
+        "example_urls": [
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCmNHptSbVV3zGxP_M6wvF6PcPxnfQnf-w9J2CIiFt2D2AVZQffTQL7N4jd0jzuJ50Mh5rLLNMVr7wNa8VaGxy95U5puMCuVK_zI9aYx7FN7TMnmb81qR7Po_gte6ZmIEAKMYoG1uREvXeWIIsn97g8Gqal8F9nghWkc0Kx6cyKYDOYeqCyIme0Rvo_yYOdQ17MK2czw==",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfGmvMCsPeFUI4B-xmyKoaAkX_AG6Q9V1ZLs6ol2Qfeui48brn29RzcplcRWPGm_jTX4UXQepNKn_bVIhXEvqz4GGcsd5ybSyDByJlOqa6DCdHVN5Wh4pP2HqPH3ym0CeYu1sncGZpEaCB",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfBcbRDc8qsGETTtjHy8r70yXj3Vj6tnRXi-SKDvn5RbZ5twBQTM9EFWeLMPoPpntCGdhdTaqiIr7LfPkqNetD5MLdxxVoZPV6S7z6mjBlTbippsba0cjyQl7kWCm-zLHaU3x499dTzzv2x8JEHMos4qCBLwyseBjF4fIOjg0cwDq9uYL4rLGwOAPbMTAJBe9a8eK_6kuP_vVP7pMSEL2EjdwyvHtt",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGs5fHdLZ8nkWbtQLu5spVzev0tHyQJVjdpL3wsAdcQGKFgaT2bTHqwXanWZmLXEosxYjsF1yGvWRxW2U7Fs0rKYiPkJHAv8bbGzJ9hli8HiAlznJ6JcMevkd_sPk1QurjhEtVOkqVTE9ThrCb7uyXZRlyHRzvp5gMMniRKE-aEl5BotGmlfPVK",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHKak43YlGcz5X6qUoELjZuRUqVVq-wkNdb94fpIPeRwd3SLB4MnRt4IMw2qmWiUIiYxlw4xKZLO1N6L9zWCpsbkFH-BFk43pn4XQI1j5FiGCiVr5TmzzTqO8ZlEeRhM7RD78ukDox2YtOoj2exNowNHG2kwaG5szzv8M="
+        ],
+        "origin_counts": {
+          "ontology_evidence": 15,
+          "journals": 11
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_digital_supply_chain_security",
+          "axis_economic_indicators_reliability_v1",
+          "axis_global_economic_stability_v1",
+          "axis_national_sovereignty_v_intl_law_v1",
+          "axis_ph_geopolitics_wps_v1",
+          "axis_religious_expression_hate_speech_v1",
+          "axis_social_welfare_v_military_spending_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": true,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.37,
+          "basis": [
+            "unknown_domain_pattern",
+            "search_results_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.82,
+          "basis": [
+            "distinct_urls:19",
+            "distinct_axes:7",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.54,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:145",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.45015625000000004,
+          "confidence": 0.6154499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "search_results_seen",
+            "distinct_urls:19",
+            "distinct_axes:7",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-09T10:09:36.402Z",
+        "homepage_url": "https://google.com/",
+        "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCmNHptSbVV3zGxP_M6wvF6PcPxnfQnf-w9J2CIiFt2D2AVZQffTQL7N4jd0jzuJ50Mh5rLLNMVr7wNa8VaGxy95U5puMCuVK_zI9aYx7FN7TMnmb81qR7Po_gte6ZmIEAKMYoG1uREvXeWIIsn97g8Gqal8F9nghWkc0Kx6cyKYDOYeqCyIme0Rvo_yYOdQ17MK2czw==",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.google.com/",
+        "example_final_url": "https://idsa.in/publisher/comments/the-philippines-evolving-west-philippine-sea-strategy-2",
+        "homepage_content_type": "text/html; charset=ISO-8859-1",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 145,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "steampowered.com",
       "entity": "Steampowered",
       "kind": "unknown",
@@ -886,139 +1021,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 14,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "google.com",
-      "entity": "Google",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-08T01:12:50.268Z",
-      "discovery": {
-        "distinct_urls": 18,
-        "example_urls": [
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCmNHptSbVV3zGxP_M6wvF6PcPxnfQnf-w9J2CIiFt2D2AVZQffTQL7N4jd0jzuJ50Mh5rLLNMVr7wNa8VaGxy95U5puMCuVK_zI9aYx7FN7TMnmb81qR7Po_gte6ZmIEAKMYoG1uREvXeWIIsn97g8Gqal8F9nghWkc0Kx6cyKYDOYeqCyIme0Rvo_yYOdQ17MK2czw==",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfGmvMCsPeFUI4B-xmyKoaAkX_AG6Q9V1ZLs6ol2Qfeui48brn29RzcplcRWPGm_jTX4UXQepNKn_bVIhXEvqz4GGcsd5ybSyDByJlOqa6DCdHVN5Wh4pP2HqPH3ym0CeYu1sncGZpEaCB",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfBcbRDc8qsGETTtjHy8r70yXj3Vj6tnRXi-SKDvn5RbZ5twBQTM9EFWeLMPoPpntCGdhdTaqiIr7LfPkqNetD5MLdxxVoZPV6S7z6mjBlTbippsba0cjyQl7kWCm-zLHaU3x499dTzzv2x8JEHMos4qCBLwyseBjF4fIOjg0cwDq9uYL4rLGwOAPbMTAJBe9a8eK_6kuP_vVP7pMSEL2EjdwyvHtt",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHKak43YlGcz5X6qUoELjZuRUqVVq-wkNdb94fpIPeRwd3SLB4MnRt4IMw2qmWiUIiYxlw4xKZLO1N6L9zWCpsbkFH-BFk43pn4XQI1j5FiGCiVr5TmzzTqO8ZlEeRhM7RD78ukDox2YtOoj2exNowNHG2kwaG5szzv8M=",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCux0Esh3Wf46OpPP7Ecjy_Uwoust5YUxh9Q2bvVXjBcpNS5FZCK-I0dSg-oddOZ2bN-9IPIA5hMeEKl-XGq2shAHgmufI_mSFl_mxSrCVCsSyrky18sWlNJUe-KY_KpA__NK-8_oP_O-WlPoUHdlZL11hQvTqB_TXUeBoDInknraVJ-UdWknJJPXRm90gxUNCWOfteIWP31XVB9d81eGCzA="
-        ],
-        "origin_counts": {
-          "ontology_evidence": 13,
-          "journals": 11
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_digital_supply_chain_security",
-          "axis_economic_indicators_reliability_v1",
-          "axis_ph_geopolitics_wps_v1",
-          "axis_religious_expression_hate_speech_v1",
-          "axis_social_welfare_v_military_spending_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": true,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.37,
-          "basis": [
-            "unknown_domain_pattern",
-            "search_results_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.7616666666666666,
-          "basis": [
-            "distinct_urls:18",
-            "distinct_axes:5",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.54,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:145",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.4373958333333333,
-          "confidence": 0.5807,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "search_results_seen",
-            "distinct_urls:18",
-            "distinct_axes:5",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-09T10:09:36.402Z",
-        "homepage_url": "https://google.com/",
-        "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCmNHptSbVV3zGxP_M6wvF6PcPxnfQnf-w9J2CIiFt2D2AVZQffTQL7N4jd0jzuJ50Mh5rLLNMVr7wNa8VaGxy95U5puMCuVK_zI9aYx7FN7TMnmb81qR7Po_gte6ZmIEAKMYoG1uREvXeWIIsn97g8Gqal8F9nghWkc0Kx6cyKYDOYeqCyIme0Rvo_yYOdQ17MK2czw==",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.google.com/",
-        "example_final_url": "https://idsa.in/publisher/comments/the-philippines-evolving-west-philippine-sea-strategy-2",
-        "homepage_content_type": "text/html; charset=ISO-8859-1",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 145,
           "opinion_marker": false
         }
       }
@@ -6645,7 +6647,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:24",
+            "outbound_links:21",
             "opinion_marker:false"
           ]
         },
@@ -6665,7 +6667,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T14:36:39.907Z",
+        "fetched_at": "2026-04-09T15:09:36.158Z",
         "homepage_url": "https://fandango.com/",
         "example_url": "https://www.fandango.com/lee-cronins-the-mummy-2026-244052/movie-overview?twclid=2buocyfoltepc4nr5ab0l6j90t",
         "homepage_status": 200,
@@ -6681,7 +6683,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 26,
+          "outbound_links_count": 23,
           "opinion_marker": false
         },
         "example": {
@@ -6691,7 +6693,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 24,
+          "outbound_links_count": 21,
           "opinion_marker": false
         }
       }
@@ -11410,7 +11412,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T07:06:44.479Z",
+        "fetched_at": "2026-04-09T15:09:37.262Z",
         "homepage_url": "https://pbs.org/",
         "example_url": "https://www.pbs.org/newshour/nation/iranian-attack-on-saudi-base-injures-u-s-troops-as-more-american-forces-arrive-in-the-middle-east",
         "homepage_status": 200,
@@ -11530,7 +11532,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T07:36:34.042Z",
+        "fetched_at": "2026-04-09T15:09:37.700Z",
         "homepage_url": "https://acleddata.com/",
         "example_url": "https://acleddata.com/update/middle-east-special-issue-march-2026",
         "homepage_status": 200,
@@ -11650,7 +11652,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T07:36:34.270Z",
+        "fetched_at": "2026-04-09T15:09:37.940Z",
         "homepage_url": "https://timesofisrael.com/",
         "example_url": "https://www.timesofisrael.com/x-cracks-down-on-ai-generated-war-footage-as-iran-misinformation-runs-rampant/",
         "homepage_status": 403,
@@ -11770,7 +11772,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T07:36:35.556Z",
+        "fetched_at": "2026-04-09T15:54:40.925Z",
         "homepage_url": "https://isdglobal.org/",
         "example_url": "https://www.isdglobal.org/digital-dispatch/misleading-and-manipulated-content-goes-viral-on-x-in-middle-east-conflict/",
         "homepage_status": 200,
@@ -11890,7 +11892,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T07:36:36.126Z",
+        "fetched_at": "2026-04-09T15:54:41.578Z",
         "homepage_url": "https://scmp.com/",
         "example_url": "https://www.scmp.com/topics/israel-iran-conflict",
         "homepage_status": 200,
@@ -12010,7 +12012,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T08:06:36.029Z",
+        "fetched_at": "2026-04-09T15:54:43.005Z",
         "homepage_url": "https://yenisafak.com/",
         "example_url": "https://en.yenisafak.com/world/us-israeli-strike-on-isfahan-kills-26-half-of-them-women-and-children-3716388",
         "homepage_status": 200,
@@ -12130,7 +12132,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T08:06:36.502Z",
+        "fetched_at": "2026-04-09T15:54:43.370Z",
         "homepage_url": "https://pluralpolicy.com/",
         "example_url": "https://www.pluralpolicy.com/",
         "homepage_status": 200,
