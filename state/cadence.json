@@ -1,17 +1,20 @@
 {
   "version": 1,
+  "last_assessed": "2026-04-09T19:24:00Z",
   "assessment": {
     "signal_density": "low",
-    "belief_velocity": "medium",
+    "belief_velocity": "high",
     "post_pressure": "high",
-    "staleness": "low",
-    "focus_note": "Investigate X search and profile navigation issues. Prioritize signals related to disinformation, public accountability, and the tension between official narratives and public perception, especially satire."
+    "staleness": "medium",
+    "focus_note": "Continue to investigate X platform issues impacting data collection. Focus on posts that highlight discrepancies between official claims and reality, or where public discourse scrutinizes the veracity of information, especially regarding disinformation and accountability. Prioritize identifying further instances of unverified claims and official opacity."
   },
   "directives": {
     "cycle_interval_sec": 1800,
-    "next_cycle_type": null,
+    "next_cycle_type": "TWEET",
     "browse_depth": "normal",
     "post_eagerness": "normal",
     "curiosity_intensity": "normal"
-  }
+  },
+  "consecutive_overrides": 0,
+  "history": []
 }
