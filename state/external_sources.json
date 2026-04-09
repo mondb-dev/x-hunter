@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-09T02:24:29.036Z",
+  "generated_at": "2026-04-09T02:54:30.662Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-09T01:50:02.938Z",
+  "profiled_at": "2026-04-09T02:54:33.201Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -93,7 +93,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T02:41:27.500Z",
+        "fetched_at": "2026-04-09T02:54:31.222Z",
         "homepage_url": "https://house.gov/",
         "example_url": "https://www.house.gov/",
         "homepage_status": null,
@@ -217,7 +217,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T02:41:27.946Z",
+        "fetched_at": "2026-04-09T02:54:32.066Z",
         "homepage_url": "https://theguardian.com/",
         "example_url": "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
         "homepage_status": 200,
@@ -337,7 +337,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T02:41:28.175Z",
+        "fetched_at": "2026-04-09T02:54:32.452Z",
         "homepage_url": "https://apnews.com/",
         "example_url": "https://apnews.com/hub/iran",
         "homepage_status": 200,
@@ -473,7 +473,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-06T02:41:28.668Z",
+        "fetched_at": "2026-04-09T02:54:33.201Z",
         "homepage_url": "https://t.co/",
         "example_url": "https://t.co/pJSE124ec4",
         "homepage_status": 200,
@@ -5226,6 +5226,129 @@
       }
     },
     {
+      "domain": "sourcebot.dev",
+      "entity": "Sourcebot Dev",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-08T08:09:20.000Z",
+      "last_seen_at": "2026-04-08T16:07:41.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://docs.sourcebot.dev/docs/features/mcp-server?twclid=24rnkjjr58b4nqm87glv1o5dr0",
+          "https://docs.sourcebot.dev/docs/features/mcp-server?twclid=24ec14k39mxu897t8n8zmu1dhg"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "sourcebot_dev"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.33999999999999997,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:15",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-09T00:20:00.567Z",
+        "homepage_url": "https://sourcebot.dev/",
+        "example_url": "https://docs.sourcebot.dev/docs/features/mcp-server?twclid=24rnkjjr58b4nqm87glv1o5dr0",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.sourcebot.dev/",
+        "example_final_url": "https://docs.sourcebot.dev/docs/features/mcp-server?twclid=24rnkjjr58b4nqm87glv1o5dr0",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 11,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 15,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "irys.xyz",
       "entity": "Irys Xyz",
       "kind": "unknown",
@@ -8886,128 +9009,6 @@
       }
     },
     {
-      "domain": "sourcebot.dev",
-      "entity": "Sourcebot Dev",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-08T08:09:20.000Z",
-      "last_seen_at": "2026-04-08T08:09:20.000Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://docs.sourcebot.dev/docs/features/mcp-server?twclid=24rnkjjr58b4nqm87glv1o5dr0"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "sourcebot_dev"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.33999999999999997,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:15",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-09T00:20:00.567Z",
-        "homepage_url": "https://sourcebot.dev/",
-        "example_url": "https://docs.sourcebot.dev/docs/features/mcp-server?twclid=24rnkjjr58b4nqm87glv1o5dr0",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.sourcebot.dev/",
-        "example_final_url": "https://docs.sourcebot.dev/docs/features/mcp-server?twclid=24rnkjjr58b4nqm87glv1o5dr0",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 11,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 15,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "kfc.com",
       "entity": "Kfc",
       "kind": "unknown",
@@ -9370,6 +9371,83 @@
           "has_corrections_link": false,
           "outbound_links_count": 2,
           "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "coingecko.com",
+      "entity": "Coingecko",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-09T02:24:37.562Z",
+      "last_seen_at": "2026-04-09T02:24:37.562Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.coingecko.com/en/api/acquisition/entry-plans?utm_source=twitter&utm_medium=ad&utm_campaign=bau&utm_content=mar26-gt-brand-ad-free-v1&audience_segment=prospecting&twclid=26xrmua0k4othy65876mc0aamh"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "coingecko"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
         }
       }
     },
