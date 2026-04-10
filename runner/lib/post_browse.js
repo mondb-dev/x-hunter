@@ -217,9 +217,6 @@ function postBrowse({ cycle, today, hour }) {
         triggerVercelDeploy(process.env.VERCEL_DEPLOY_HOOK || '');
       } catch {}
 
-      // GCS sync runs regardless of git push success — website needs fresh data
-      syncToGCS();
-
       // 5d. archive.js + JOURNAL watchdog
       runScript(path.join(PROJECT_ROOT, 'runner/archive.js'));
       runScript(path.join(PROJECT_ROOT, 'runner/watchdog.js'), {
@@ -227,6 +224,18 @@ function postBrowse({ cycle, today, hour }) {
       });
     }
   }
+
+  // GCS sync — always runs so the website sees fresh data even when no new
+  // journal was written (e.g. duplicate/sprint cycles). Throttled to once
+  // per hour using a stamp file to avoid redundant rsync on every cycle.
+  try {
+    const syncStamp = path.join(config.STATE_DIR, '.last_gcs_sync');
+    const lastSync = fs.existsSync(syncStamp) ? fs.statSync(syncStamp).mtimeMs : 0;
+    if (Date.now() - lastSync > 55 * 60 * 1000 || hasJournal) {
+      syncToGCS();
+      fs.writeFileSync(syncStamp, new Date().toISOString());
+    }
+  } catch {}
 
   // ── 6. moltbook.js --heartbeat ────────────────────────────────────────
   runScript(path.join(PROJECT_ROOT, 'runner/moltbook.js'), { args: '--heartbeat' });
