@@ -104,6 +104,30 @@ function triggerVercelDeploy(hookUrl) {
   } catch {}
 }
 
+// ── syncToGCS ───────────────────────────────────────────────────────────────
+/**
+ * Sync state/journals/checkpoints/articles/daily/ponders/landmarks to GCS bucket.
+ * Called after data changes so the Cloud Run site (GCS FUSE mount) sees fresh data.
+ */
+function syncToGCS() {
+  const bucket = process.env.GCS_DATA_BUCKET || 'sebastian-hunter-data';
+  const root = config.PROJECT_ROOT;
+  const dirs = ['state', 'journals', 'checkpoints', 'articles', 'daily', 'ponders', 'landmarks'];
+  try {
+    for (const d of dirs) {
+      const src = path.join(root, d);
+      if (fs.existsSync(src)) {
+        execSync(`gsutil -m -q rsync -r "${src}/" "gs://${bucket}/${d}/"`, {
+          stdio: 'ignore', timeout: 120000, cwd: root,
+        });
+      }
+    }
+    log('GCS data sync complete');
+  } catch (err) {
+    log(`GCS sync error: ${err.message}`);
+  }
+}
+
 // ── Branch management (META cycle) ──────────────────────────────────────────
 
 /**
@@ -252,6 +276,7 @@ function lastMergeCommit() {
 module.exports = {
   commitAndPush,
   triggerVercelDeploy,
+  syncToGCS,
   createBranch,
   mergeBranch,
   deleteBranch,

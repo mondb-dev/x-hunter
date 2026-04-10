@@ -28,7 +28,7 @@ const { postBrowse } = require('./lib/post_browse');
 const { preTweet } = require('./lib/pre_tweet');
 const { assess: cadenceAssess, readDirectives, consumeOverride } = require('./cadence');
 const { postRegularTweet, postQuoteTweet } = require('./lib/post');
-const { commitAndPush, triggerVercelDeploy } = require('./lib/git');
+const { commitAndPush, triggerVercelDeploy, syncToGCS } = require('./lib/git');
 const { runDaily } = require('./lib/daily');
 const notify = require('./lib/notify');
 const { isXSuppressed, suppressionReason } = require('./lib/x_control');
@@ -681,6 +681,7 @@ function runOneCycle() {
       });
       const vercelHook = process.env.VERCEL_DEPLOY_HOOK || '';
       if (vercelHook) triggerVercelDeploy(vercelHook);
+      syncToGCS();
       runScriptLog(path.join(PROJECT_ROOT, 'runner/archive.js'));
       runScriptLog(path.join(PROJECT_ROOT, 'runner/watchdog.js'), '', {
         CYCLE_TYPE: 'JOURNAL',
@@ -850,11 +851,12 @@ function runOneCycle() {
       message: `cycle ${cycle}: ${today} ${now}`,
     });
 
-    // Vercel deploy
+    // Deploy: Vercel (legacy) + GCS sync for Cloud Run
     const vercelHook = process.env.VERCEL_DEPLOY_HOOK || '';
     if (vercelHook) {
       triggerVercelDeploy(vercelHook);
     }
+    syncToGCS();
 
     // Archive journals/checkpoints
     runScriptLog(path.join(PROJECT_ROOT, 'runner/archive.js'));
