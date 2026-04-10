@@ -210,6 +210,98 @@ export function buildCoreContext(opts: ContextOpts = {}): string {
   return parts.join("\n\n");
 }
 
+// ── File-based recall ────────────────────────────────────────────────────────
+//
+// Searches GCS-mounted journal + checkpoint + article files for passages
+// matching the query keywords. Used by /api/ask before the Gemini call
+// to inject relevant past observations (no SQLite / FTS5 on Cloud Run).
+
+export interface RecallHit {
+  source: string;   // e.g. "2026-04-09_14" or "checkpoint-21"
+  type:   "journal" | "checkpoint" | "article";
+  excerpt: string;
+}
+
+function tokenize(text: string): string[] {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .split(/\s+/)
+    .filter((w) => w.length > 3);
+}
+
+function score(tokens: string[], text: string): number {
+  const lower = text.toLowerCase();
+  return tokens.reduce((n, t) => n + (lower.includes(t) ? 1 : 0), 0);
+}
+
+export function recallFromFiles(query: string, maxHits = 6): RecallHit[] {
+  const tokens = [...new Set(tokenize(query))];
+  if (!tokens.length) return [];
+
+  const hits: Array<RecallHit & { _score: number }> = [];
+
+  // Search journals (last 30)
+  try {
+    const jDir = path.join(DATA_ROOT, "journals");
+    const files = fs.readdirSync(jDir).filter((f) => f.endsWith(".html")).sort().reverse().slice(0, 30);
+    for (const f of files) {
+      const raw = fs.readFileSync(path.join(jDir, f), "utf-8");
+      const text = raw.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+      const s = score(tokens, text);
+      if (s > 0) {
+        // Find best matching window
+        const words = text.split(" ");
+        let best = 0, bestIdx = 0;
+        for (let i = 0; i < words.length - 60; i += 20) {
+          const window = words.slice(i, i + 80).join(" ");
+          const ws = score(tokens, window);
+          if (ws > best) { best = ws; bestIdx = i; }
+        }
+        const excerpt = words.slice(bestIdx, bestIdx + 80).join(" ").slice(0, 500);
+        hits.push({ source: f.replace(".html", ""), type: "journal", excerpt, _score: s });
+      }
+    }
+  } catch { /* no journals */ }
+
+  // Search checkpoints (last 10)
+  try {
+    const cpDir = path.join(DATA_ROOT, "checkpoints");
+    const files = fs.readdirSync(cpDir).filter((f) => f.endsWith(".md")).sort().reverse().slice(0, 10);
+    for (const f of files) {
+      const raw = fs.readFileSync(path.join(cpDir, f), "utf-8");
+      const body = raw.replace(/^---[\s\S]*?---\s*/, "").replace(/\s+/g, " ").trim();
+      const s = score(tokens, body);
+      if (s > 0) {
+        const excerpt = body.slice(0, 500);
+        hits.push({ source: f.replace(".md", ""), type: "checkpoint", excerpt, _score: s });
+      }
+    }
+  } catch { /* no checkpoints */ }
+
+  // Search articles (last 20)
+  try {
+    const aDir = path.join(DATA_ROOT, "articles");
+    const files = fs.readdirSync(aDir)
+      .filter((f) => /^\d{4}-\d{2}-\d{2}/.test(f) && f.endsWith(".md"))
+      .sort().reverse().slice(0, 20);
+    for (const f of files) {
+      const raw = fs.readFileSync(path.join(aDir, f), "utf-8");
+      const body = raw.replace(/^---[\s\S]*?---\s*/, "").replace(/\s+/g, " ").trim();
+      const s = score(tokens, body);
+      if (s > 0) {
+        const excerpt = body.slice(0, 500);
+        hits.push({ source: f.replace(".md", ""), type: "article", excerpt, _score: s });
+      }
+    }
+  } catch { /* no articles */ }
+
+  return hits
+    .sort((a, b) => b._score - a._score)
+    .slice(0, maxHits)
+    .map(({ _score: _, ...h }) => h);
+}
+
 // ── Auth ──────────────────────────────────────────────────────────────────────
 
 export async function getAccessToken(): Promise<string> {

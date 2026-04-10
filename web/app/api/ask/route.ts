@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { buildPersona, buildCoreContext, getAccessToken, callGemini } from "@/lib/sebastianRespond";
+import { buildPersona, buildCoreContext, recallFromFiles, getAccessToken, callGemini } from "@/lib/sebastianRespond";
 
 // ── Rate limiting (in-memory, per IP) ───────────────────────────────────────
 const RATE_WINDOW_MS = 60_000;
@@ -46,14 +46,23 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "question is required." }, { status: 400 });
   }
 
-  const context = buildCoreContext({
+  const coreContext = buildCoreContext({
     maxAxes:           8,
-    journalCount:      5,
-    journalChars:      1200,
+    journalCount:      3,
+    journalChars:      800,
     includeCheckpoint: true,
-    checkpointChars:   1500,
+    checkpointChars:   1200,
     includeClaims:     true,
   });
+
+  // File-based recall — keyword search over journals/checkpoints/articles
+  const hits = recallFromFiles(question, 6);
+  const recallBlock = hits.length
+    ? `## Recalled observations (keyword match on your question)\n` +
+      hits.map((h) => `[${h.type} · ${h.source}]: ${h.excerpt}`).join("\n\n")
+    : "";
+
+  const context = [coreContext, recallBlock].filter(Boolean).join("\n\n");
 
   const systemInstruction = buildPersona("public");
 
