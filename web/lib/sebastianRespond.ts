@@ -13,7 +13,23 @@
 
 import fs from "fs";
 import path from "path";
+import { Pool } from "pg";
 import { DATA_ROOT } from "./dataRoot";
+
+// ── Postgres pool (lazy, only if DATABASE_URL is set) ────────────────────────
+let _pool: Pool | null = null;
+function getPool(): Pool | null {
+  if (!process.env.DATABASE_URL) return null;
+  if (!_pool) {
+    _pool = new Pool({
+      connectionString: process.env.DATABASE_URL,
+      ssl: process.env.PG_SSL === "false" ? false : { rejectUnauthorized: false },
+      max: 3,
+      idleTimeoutMillis: 10_000,
+    });
+  }
+  return _pool;
+}
 
 // ── Persona ──────────────────────────────────────────────────────────────────
 
@@ -208,6 +224,38 @@ export function buildCoreContext(opts: ContextOpts = {}): string {
   }
 
   return parts.join("\n\n");
+}
+
+// ── Postgres FTS recall ───────────────────────────────────────────────────────
+//
+// Queries the memory table using Postgres full-text search (plainto_tsquery).
+// Same data as the SQLite FTS5 index on the VM — journals, checkpoints, articles.
+// Returns null if DATABASE_URL is not configured (falls back to file recall).
+
+export async function recallFromDB(query: string, limit = 6): Promise<RecallHit[] | null> {
+  const pool = getPool();
+  if (!pool) return null;
+  try {
+    const { rows } = await pool.query<{
+      type: string; title: string; date: string; text_content: string; file_path: string;
+    }>(
+      `SELECT type, title, date, text_content, file_path
+       FROM memory
+       WHERE to_tsvector('english', text_content) @@ plainto_tsquery('english', $1)
+          OR text_content ILIKE $2
+       ORDER BY ts_rank(to_tsvector('english', text_content), plainto_tsquery('english', $1)) DESC
+       LIMIT $3`,
+      [query, `%${query.split(" ")[0]}%`, limit]
+    );
+    return rows.map((r) => ({
+      source: r.file_path?.replace(/^(journals|checkpoints|articles)\//, "").replace(/\.(html|md)$/, "") ?? r.date,
+      type:   (r.type === "journal" ? "journal" : r.type === "checkpoint" ? "checkpoint" : "article") as RecallHit["type"],
+      excerpt: (r.text_content ?? "").replace(/\s+/g, " ").trim().slice(0, 500),
+    }));
+  } catch (err) {
+    console.error("[recall] DB error:", err instanceof Error ? err.message : err);
+    return null;
+  }
 }
 
 // ── File-based recall ────────────────────────────────────────────────────────
