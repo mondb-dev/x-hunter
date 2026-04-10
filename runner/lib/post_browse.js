@@ -147,7 +147,17 @@ function postBrowse({ cycle, today, hour }) {
   }
 
   // ── 4e. Claim verification pipeline ─────────────────────────────────
-  runScript(path.join(PROJECT_ROOT, 'runner/intelligence/verify_claims.js'));
+  // Dispatch to Cloud Tasks worker if configured, else run inline
+  const cloudTasks = require('./cloud_tasks');
+  if (cloudTasks.isEnabled('verify')) {
+    const dispatched = cloudTasks.enqueueVerifyCycle();
+    log(dispatched ? 'verification dispatched to Cloud Tasks' : 'Cloud Tasks dispatch failed — running inline');
+    if (!dispatched) {
+      runScript(path.join(PROJECT_ROOT, 'runner/intelligence/verify_claims.js'));
+    }
+  } else {
+    runScript(path.join(PROJECT_ROOT, 'runner/intelligence/verify_claims.js'));
+  }
 
   // ── 4f. Verification pipeline runs but does NOT auto-post tweets ───
   // Verification data still updates for the /verified web page.
