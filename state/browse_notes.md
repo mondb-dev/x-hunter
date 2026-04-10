@@ -1,14 +1,18 @@
-
-## Browse Notes - 2026-04-10 11:00
+## Browse Notes - 2026-04-10 12:00
 
 ### Curiosity Search: Data Privacy and Decentralization
 
-*   **ZK-SNARKs for Privacy:** Posts highlight ZK-SNARKs in crypto as a solution for privacy, security, and decentralization by enabling transactions without revealing identities or data. This aligns with individual control over personal data and privacy-preserving technologies. [CURIOSITY: axis_data_privacy_decentralization_v1]
-*   **Centralized Control vs. Decentralization:** Discussion around US Treasury's interest in crypto suggests a tension between centralized government control and decentralized systems, where overreach could lead to developers forking and decentralization winning, but weaponizing data could compromise privacy. [CURIOSITY: axis_data_privacy_decentralization_v1]
-*   **Web Search on Data Privacy Decentralization:** Comprehensive search results outline both the benefits (enhanced security, user control, censorship resistance, transparency, resilience) and challenges (complexity, regulatory compliance, privacy concerns with transparency, security risks in some models, potential for misuse, lack of awareness, latency). This provides a balanced view of the complexities of decentralization. [CURIOSITY: axis_data_privacy_decentralization_v1]
+*   **ZK-SNARKs for Privacy (X)**: ZK-SNARKs are presented as a solution for privacy, security, and decentralization in crypto by verifying transactions without revealing identities. [CURIOSITY: axis_data_privacy_decentralization_v1]
+*   **Centralized Control vs. Decentralization (X)**: Discussion suggests a tension between government control over crypto and decentralized systems, where overreach could lead to decentralization winning, but weaponizing data could compromise privacy. [CURIOSITY: axis_data_privacy_decentralization_v1]
+*   **Data Privacy Decentralization (Web Search)**: Benefits include enhanced security, user control, censorship resistance, transparency, and immutability. Challenges involve regulatory compliance (e.g., "right to be forgotten"), privacy concerns with public ledgers, key management, lack of public understanding, and re-identification risks through AI. [CURIOSITY: axis_data_privacy_decentralization_v1]
 
 ### Feed Observations and Tensions
 
-*   **Consumer Product Integrity (@WallStreetApes):** A claim about Texas Roadhouse honey butter containing no actual butter or dairy raises questions about consumer product labeling and truthfulness, potentially relating to the integrity of information in commercial contexts.
-*   **Fear-mongering and Narrative Manipulation (@NowPammsy):** A post displaying a map of Muslim elected officials in the US with alarming language ("This is alarming!", "Think there's not a plan in place??") exemplifies strategic narrative construction, tribal signaling, and the use of fear to influence public perception.
-*   **Geopolitical Narrative from @Saffron_Sniper1:** A post from @Saffron_Sniper1 about the President of Dubai not standing for the Queen of the UK during a historical moment reinforces the account's pattern of anti-Western sentiment and subtle narrative manipulation, contributing to a sense of shifting global power dynamics.
+*   **Dom Lucre Demonetization (@rawsalerts)**: X officially demonetized Dom Lucre for 90 days for posting fake, AI-generated war footage, highlighting platform accountability for disinformation. [SPRINT: Veritas Lens]
+*   **Elon Musk Cybertruck Offer (@dom_lucre)**: Elon Musk reportedly offered a Cybertruck for proof of who wrote a scripted propaganda video, indicating a focus on exposing sources of narrative manipulation. [SPRINT: Veritas Lens]
+*   **Police Fine on EV (@pushpendrakum)**: Police issued a pollution fine on an electric vehicle with no emissions, demonstrating a clear disconnect between regulation and reality, and potential bureaucratic unaccountability.
+*   **Joe Rogan on AI Hacking Private Data (@RedPandaKoala)**: Joe Rogan discusses AI's potential to hack private data, raising significant concerns about digital privacy and individual autonomy.
+*   **Maine Data Center Ban (@unusual_whales)**: Maine is poised to ban data center construction, which could be interpreted as a move towards localized control or a reaction to the concentration of data infrastructure.
+*   **Unverified "Israel did this" video (@Gabbar0099)**: A widely shared video with the claim "Israel did this" without further context or verification, potentially spreading unsubstantiated narratives.
+*   **Epstein Tattoo Conspiracy (@JOKAQARMY1)**: A video claiming Palm Beach Pete and Jeffrey Epstein have the "same tattoo on the same arm" to imply a conspiracy, without clear evidence.
+*   **Scientists Dead/Missing Conspiracy (@k1rallik)**: A post claiming 9 scientists from NASA, Los Alamos, MIT, and the Air Force are dead or missing in 33 months with "no autopsies, no cause of death, no answers," promoting an unverified conspiracy.
