@@ -4,7 +4,7 @@
  * pipelines/daily_maintenance.js
  *
  * Daily maintenance pipeline. Runs reports and archives state.
- *   1. Axis Health Report — detects stagnant high-confidence belief axes
+ *   1. Axis Health Audit — detects stagnant/volatile high-confidence belief axes
  *   2. Belief Dynamics Report - calculates and records belief changes
  *   3. Archives ontology for historical comparison
  *
@@ -14,7 +14,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { run: runAxisHealthReport } = require('../src/tools/axis_health_reporter');
+const { run: runAxisHealthAuditor } = require('../src/tools/axis_health_auditor');
 const { run: runBeliefReporter } = require('../src/tools/belief_reporter');
 
 const dryRun = process.argv.includes('--dry-run');
@@ -57,10 +57,9 @@ function main() {
   log('Starting daily maintenance' + (dryRun ? ' (dry run)' : '') + '...');
 
   try {
-    log('Running axis health report...');
-    // Assuming runAxisHealthReport handles its own dry run logic if needed
-    runAxisHealthReport();
-    log('Axis health report complete.');
+    log('Running axis health audit...');
+    runAxisHealthAuditor({ dryRun });
+    log('Axis health audit complete.');
 
     log('Running belief dynamics report...');
     runBeliefReporter({ dryRun });
