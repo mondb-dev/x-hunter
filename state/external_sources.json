@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-10T05:19:57.050Z",
+  "generated_at": "2026-04-10T05:59:57.754Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-10T01:59:51.884Z",
   "sources": [
@@ -375,7 +375,7 @@
       "first_seen_at": "2026-03-31T09:30:40.000Z",
       "last_seen_at": "2026-04-09T23:47:03.000Z",
       "discovery": {
-        "distinct_urls": 351,
+        "distinct_urls": 352,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -385,9 +385,9 @@
         ],
         "origin_counts": {
           "feed_buffer": 269,
-          "feed_buffer_reply": 97
+          "feed_buffer_reply": 98
         },
-        "distinct_referring_accounts": 151,
+        "distinct_referring_accounts": 152,
         "sample_referring_accounts": [
           "_philschmid",
           "_yf1921",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:351",
+            "distinct_urls:352",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:151",
+            "referring_accounts:152",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:351",
+            "distinct_urls:352",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:151",
+            "referring_accounts:152",
             "origin_types:2",
             "track_record_unavailable"
           ]
