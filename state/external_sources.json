@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-10T21:00:24.111Z",
+  "generated_at": "2026-04-10T22:00:34.157Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-10T19:45:22.026Z",
+  "profiled_at": "2026-04-10T22:00:34.951Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-10T19:15:08.000Z",
+      "last_seen_at": "2026-04-10T20:17:05.000Z",
       "discovery": {
-        "distinct_urls": 405,
+        "distinct_urls": 409,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,10 +384,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 302,
-          "feed_buffer_reply": 120
+          "feed_buffer": 304,
+          "feed_buffer_reply": 123
         },
-        "distinct_referring_accounts": 174,
+        "distinct_referring_accounts": 177,
         "sample_referring_accounts": [
           "_philschmid",
           "_yf1921",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:405",
+            "distinct_urls:409",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:174",
+            "referring_accounts:177",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:405",
+            "distinct_urls:409",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:174",
+            "referring_accounts:177",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -509,9 +509,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-10T13:07:41.000Z",
+      "last_seen_at": "2026-04-10T21:21:32.000Z",
       "discovery": {
-        "distinct_urls": 38,
+        "distinct_urls": 40,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,10 +520,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 36,
+          "feed_buffer_reply": 38,
           "feed_buffer": 2
         },
-        "distinct_referring_accounts": 33,
+        "distinct_referring_accounts": 35,
         "sample_referring_accounts": [
           "afk500595388855",
           "anim8studio",
@@ -561,7 +561,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:38",
+            "distinct_urls:40",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -569,7 +569,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:33",
+            "referring_accounts:35",
             "origin_types:2"
           ]
         },
@@ -599,10 +599,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:38",
+            "distinct_urls:40",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:33",
+            "referring_accounts:35",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -7402,7 +7402,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-07T21:52:26.439Z",
+        "fetched_at": "2026-04-10T22:00:34.951Z",
         "homepage_url": "https://tradestation.com/",
         "example_url": "https://www.tradestation.com/born-trader-bear/?utm_source=x&utm_medium=paidsocial&utm_campaign=TS_COR-Prospecting-Traffic_Apr2026_Born-Trader+&utm_content=TSS_DSO_Bra_Awa_Pro_VID_2025_Brand_Campaign_Q1_Bear_1080x1080_15_v2&twclid=2dp5ql0qnlq22xrvygkx7ryw6t",
         "homepage_status": 200,
