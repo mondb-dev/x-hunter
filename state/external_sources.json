@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-10T07:20:00.453Z",
+  "generated_at": "2026-04-10T08:30:02.339Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-10T06:19:58.878Z",
   "sources": [
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-10T01:47:43.000Z",
+      "last_seen_at": "2026-04-10T08:00:47.000Z",
       "discovery": {
-        "distinct_urls": 361,
+        "distinct_urls": 364,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,7 +384,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 274,
+          "feed_buffer": 277,
           "feed_buffer_reply": 103
         },
         "distinct_referring_accounts": 157,
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:361",
+            "distinct_urls:364",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -463,7 +463,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:361",
+            "distinct_urls:364",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:157",
@@ -765,9 +765,9 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-09T15:09:00Z",
+      "last_seen_at": "2026-04-10T07:42:19.525Z",
       "discovery": {
-        "distinct_urls": 19,
+        "distinct_urls": 20,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCmNHptSbVV3zGxP_M6wvF6PcPxnfQnf-w9J2CIiFt2D2AVZQffTQL7N4jd0jzuJ50Mh5rLLNMVr7wNa8VaGxy95U5puMCuVK_zI9aYx7FN7TMnmb81qR7Po_gte6ZmIEAKMYoG1uREvXeWIIsn97g8Gqal8F9nghWkc0Kx6cyKYDOYeqCyIme0Rvo_yYOdQ17MK2czw==",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfGmvMCsPeFUI4B-xmyKoaAkX_AG6Q9V1ZLs6ol2Qfeui48brn29RzcplcRWPGm_jTX4UXQepNKn_bVIhXEvqz4GGcsd5ybSyDByJlOqa6DCdHVN5Wh4pP2HqPH3ym0CeYu1sncGZpEaCB",
@@ -776,12 +776,13 @@
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHKak43YlGcz5X6qUoELjZuRUqVVq-wkNdb94fpIPeRwd3SLB4MnRt4IMw2qmWiUIiYxlw4xKZLO1N6L9zWCpsbkFH-BFk43pn4XQI1j5FiGCiVr5TmzzTqO8ZlEeRhM7RD78ukDox2YtOoj2exNowNHG2kwaG5szzv8M="
         ],
         "origin_counts": {
-          "ontology_evidence": 15,
+          "ontology_evidence": 16,
           "journals": 11
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
         "distinct_axes": [
+          "axis_data_privacy_decentralization_v1",
           "axis_digital_supply_chain_security",
           "axis_economic_indicators_reliability_v1",
           "axis_global_economic_stability_v1",
@@ -815,8 +816,8 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:19",
-            "distinct_axes:7",
+            "distinct_urls:20",
+            "distinct_axes:8",
             "origin_types:2"
           ]
         },
@@ -849,13 +850,13 @@
         },
         "overall": {
           "score": 0.45015625000000004,
-          "confidence": 0.6154499999999999,
+          "confidence": 0.63795,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:19",
-            "distinct_axes:7",
+            "distinct_urls:20",
+            "distinct_axes:8",
             "origin_types:2",
             "referring_accounts:0",
             "origin_types:2",
