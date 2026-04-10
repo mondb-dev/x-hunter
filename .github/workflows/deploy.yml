@@ -18,8 +18,8 @@ jobs:
     name: Deploy Web
     runs-on: ubuntu-latest
     if: |
-      contains(github.event.commits[0].modified, 'web/') ||
-      contains(github.event.commits[0].added, 'web/')
+      contains(toJSON(github.event.commits[*].modified), 'web/') ||
+      contains(toJSON(github.event.commits[*].added), 'web/')
     steps:
       - uses: actions/checkout@v4
 
