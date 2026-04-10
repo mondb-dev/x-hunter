@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-10T12:00:06.872Z",
+  "generated_at": "2026-04-10T14:00:09.212Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-10T10:00:04.651Z",
+  "profiled_at": "2026-04-10T13:30:10.891Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-10T10:00:47.000Z",
+      "last_seen_at": "2026-04-10T13:35:01.000Z",
       "discovery": {
-        "distinct_urls": 376,
+        "distinct_urls": 381,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,10 +384,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 284,
-          "feed_buffer_reply": 108
+          "feed_buffer": 287,
+          "feed_buffer_reply": 111
         },
-        "distinct_referring_accounts": 162,
+        "distinct_referring_accounts": 164,
         "sample_referring_accounts": [
           "_philschmid",
           "_yf1921",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:376",
+            "distinct_urls:381",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:162",
+            "referring_accounts:164",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:376",
+            "distinct_urls:381",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:162",
+            "referring_accounts:164",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -765,9 +765,9 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-10T10:01:17.698Z",
+      "last_seen_at": "2026-04-10T12:30:00Z",
       "discovery": {
-        "distinct_urls": 21,
+        "distinct_urls": 22,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMj5_f7x9PeEIs1Oi-MtcWpQWKNIguJurjCAEHa198wA4aBiQ-axvcXfsBblu9No4r-FEeUiKpWyp8U5zNa7jN8C3xZIWDYpAetpuoB0RPUSmNx0u1MQQ4cYbm9doVihWLA9mXy4E03PIOYR2INZZGe9cMLTQkcaD2fPxmZHx3yzBhmjaFudOUphqBsxwnuw=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCmNHptSbVV3zGxP_M6wvF6PcPxnfQnf-w9J2CIiFt2D2AVZQffTQL7N4jd0jzuJ50Mh5rLLNMVr7wNa8VaGxy95U5puMCuVK_zI9aYx7FN7TMnmb81qR7Po_gte6ZmIEAKMYoG1uREvXeWIIsn97g8Gqal8F9nghWkc0Kx6cyKYDOYeqCyIme0Rvo_yYOdQ17MK2czw==",
@@ -776,7 +776,7 @@
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGs5fHdLZ8nkWbtQLu5spVzev0tHyQJVjdpL3wsAdcQGKFgaT2bTHqwXanWZmLXEosxYjsF1yGvWRxW2U7Fs0rKYiPkJHAv8bbGzJ9hli8HiAlznJ6JcMevkd_sPk1QurjhEtVOkqVTE9ThrCb7uyXZRlyHRzvp5gMMniRKE-aEl5BotGmlfPVK"
         ],
         "origin_counts": {
-          "ontology_evidence": 17,
+          "ontology_evidence": 20,
           "journals": 12
         },
         "distinct_referring_accounts": 0,
@@ -784,6 +784,7 @@
         "distinct_axes": [
           "axis_data_privacy_decentralization_v1",
           "axis_digital_supply_chain_security",
+          "axis_digital_surveillance_autonomy_v1",
           "axis_economic_indicators_reliability_v1",
           "axis_global_economic_stability_v1",
           "axis_national_sovereignty_v_intl_law_v1",
@@ -817,8 +818,8 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:21",
-            "distinct_axes:9",
+            "distinct_urls:22",
+            "distinct_axes:10",
             "origin_types:2"
           ]
         },
@@ -856,8 +857,8 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:21",
-            "distinct_axes:9",
+            "distinct_urls:22",
+            "distinct_axes:10",
             "origin_types:2",
             "referring_accounts:0",
             "origin_types:2",
@@ -1374,7 +1375,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-07T13:07:13.844Z",
+        "fetched_at": "2026-04-10T13:30:10.890Z",
         "homepage_url": "https://mottandbow.com/",
         "example_url": "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
         "homepage_status": 200,
@@ -2744,7 +2745,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-07T12:07:12.141Z",
+        "fetched_at": "2026-04-10T12:30:16.938Z",
         "homepage_url": "https://bit.ly/",
         "example_url": "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q",
         "homepage_status": 200,
@@ -13697,7 +13698,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-07T12:47:12.451Z",
+        "fetched_at": "2026-04-10T13:00:08.609Z",
         "homepage_url": "https://news.ycombinator.com/",
         "example_url": "https://news.ycombinator.com/",
         "homepage_status": 200,

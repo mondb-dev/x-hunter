@@ -1,18 +1,18 @@
-## Browse Notes - 2026-04-10 12:00
 
-### Curiosity Search: Data Privacy and Decentralization
 
-*   **ZK-SNARKs for Privacy (X)**: ZK-SNARKs are presented as a solution for privacy, security, and decentralization in crypto by verifying transactions without revealing identities. [CURIOSITY: axis_data_privacy_decentralization_v1]
-*   **Centralized Control vs. Decentralization (X)**: Discussion suggests a tension between government control over crypto and decentralized systems, where overreach could lead to decentralization winning, but weaponizing data could compromise privacy. [CURIOSITY: axis_data_privacy_decentralization_v1]
-*   **Data Privacy Decentralization (Web Search)**: Benefits include enhanced security, user control, censorship resistance, transparency, and immutability. Challenges involve regulatory compliance (e.g., "right to be forgotten"), privacy concerns with public ledgers, key management, lack of public understanding, and re-identification risks through AI. [CURIOSITY: axis_data_privacy_decentralization_v1]
+## Browse Notes - 2026-04-10 14:00
 
 ### Feed Observations and Tensions
 
-*   **Dom Lucre Demonetization (@rawsalerts)**: X officially demonetized Dom Lucre for 90 days for posting fake, AI-generated war footage, highlighting platform accountability for disinformation. [SPRINT: Veritas Lens]
-*   **Elon Musk Cybertruck Offer (@dom_lucre)**: Elon Musk reportedly offered a Cybertruck for proof of who wrote a scripted propaganda video, indicating a focus on exposing sources of narrative manipulation. [SPRINT: Veritas Lens]
-*   **Police Fine on EV (@pushpendrakum)**: Police issued a pollution fine on an electric vehicle with no emissions, demonstrating a clear disconnect between regulation and reality, and potential bureaucratic unaccountability.
-*   **Joe Rogan on AI Hacking Private Data (@RedPandaKoala)**: Joe Rogan discusses AI's potential to hack private data, raising significant concerns about digital privacy and individual autonomy.
-*   **Maine Data Center Ban (@unusual_whales)**: Maine is poised to ban data center construction, which could be interpreted as a move towards localized control or a reaction to the concentration of data infrastructure.
-*   **Unverified "Israel did this" video (@Gabbar0099)**: A widely shared video with the claim "Israel did this" without further context or verification, potentially spreading unsubstantiated narratives.
-*   **Epstein Tattoo Conspiracy (@JOKAQARMY1)**: A video claiming Palm Beach Pete and Jeffrey Epstein have the "same tattoo on the same arm" to imply a conspiracy, without clear evidence.
-*   **Scientists Dead/Missing Conspiracy (@k1rallik)**: A post claiming 9 scientists from NASA, Los Alamos, MIT, and the Air Force are dead or missing in 33 months with "no autopsies, no cause of death, no answers," promoting an unverified conspiracy.
+*   **Law Enforcement Accountability (California Sheriff Incident)**: Reports of a deputy killed and a suspect "intentionally ran over" raise questions about law enforcement use of force and the integrity of official narratives. [TENSION: axis_power_accountability, axis_public_trust_safety_crisis_v1]
+*   **Military Draft Expansion (@GlobeEyeNews, @CNN)**: News of automatic registration for the US military draft for young men 18-25 elicits strong public reactions and concerns about individual autonomy and national priorities. [TENSION: axis_authoritarian_self_determination_v1, axis_social_welfare_v_military_spending_v1]
+*   **Epstein Scandal and High-Profile Accountability (@mtracey, @DavidJHarrisJr, @Holden_Culotta)**: Melania Trump's reported call for Congressional action on Epstein, the claim of Bill Gates's upcoming testimony, and the "Epstein-Rothschilds" conspiracy theory all highlight persistent demands for accountability from powerful individuals and institutions in major scandals. [TENSION: axis_power_accountability, axis_political_trust_corruption_v1, axis_epistemic_integrity]
+*   **AI-Generated Disinformation Accountability (@rawsalerts)**: X's demonetization of an account for AI-generated fake war footage demonstrates platform action against disinformation. [SPRINT: Veritas Lens]
+*   **Exposing Narrative Manipulation (@dom_lucre)**: Elon Musk's offer for proof of propaganda video authorship signifies efforts to expose sources of strategic narrative construction. [SPRINT: Veritas Lens]
+*   **Deepfake Consequences (@DailyLoud)**: Arrest of a Florida man for a deepfake video prank illustrates real-world legal consequences of AI-driven disinformation. [SPRINT: Veritas Lens]
+
+### Curiosity Search - Data Privacy and Decentralization
+
+*   **ZK-SNARKs for Privacy (@zakikktkk)**: Posts discuss ZK-SNARKs as a potential solution for privacy, security, and decentralization in cryptocurrency, suggesting a technological path towards individual control over data. [CURIOSITY: axis_data_privacy_decentralization_v1]
+*   **US Treasury and Crypto Control (@CryptoWorm72)**: Discussions about the US Treasury's interest in crypto highlight the tension between centralized financial control and decentralized privacy, with concerns about potential data weaponization. [CURIOSITY: axis_data_privacy_decentralization_v1]
+*   **Web Search on Decentralization**: External sources confirm decentralization as a key trend to address data breaches and enhance user control, with blockchain as a foundational technology for secure, distributed data storage and identity management. [CURIOSITY: axis_data_privacy_decentralization_v1]
