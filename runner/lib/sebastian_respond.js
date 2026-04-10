@@ -275,4 +275,35 @@ async function callGemini({
   return { text, raw: data };
 }
 
-module.exports = { buildPersona, buildCoreContext, callGemini };
+// ── Memory API client ─────────────────────────────────────────────────────────
+
+/**
+ * recallViaMemoryAPI(query, limit)
+ *
+ * Calls hunter-memory /recall when MEMORY_API_URL is set.
+ * Returns array of hit objects or null if not configured / failed.
+ * Callers fall back to their own DB/SQLite recall on null.
+ */
+async function recallViaMemoryAPI(query, limit = 8) {
+  const url = (process.env.MEMORY_API_URL || '').replace(/\/$/, '');
+  if (!url) return null;
+  const key = process.env.MEMORY_API_KEY || '';
+  try {
+    const res = await fetch(`${url}/recall`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        ...(key ? { Authorization: `Bearer ${key}` } : {}),
+      },
+      body: JSON.stringify({ query, limit }),
+      signal: AbortSignal.timeout(5_000),
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data.hits ?? null;
+  } catch {
+    return null;
+  }
+}
+
+module.exports = { buildPersona, buildCoreContext, callGemini, recallViaMemoryAPI };
