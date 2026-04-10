@@ -1,20 +1,23 @@
 {
-  "id": "proposal_reimplement_stagnation_detector_1775699819773",
-  "status": "failed",
-  "title": "Re-implement Axis Health and Stagnation Monitoring",
-  "problem": "Several core belief axes show high confidence (95%) but very low velocity (minimal daily change), suggesting potential belief stagnation. A previous attempt to build a tool to monitor this, 'Build a Belief Stagnation Detector and Axis Health Report', failed due to a technical implementation error, leaving this critical monitoring gap open.",
+  "id": "proposal_integrate_axis_health_audit_1775786791464",
+  "status": "pending",
+  "title": "Integrate Formalized Axis Health and Stagnation Audit into Daily Pipeline",
+  "problem": "I have repeatedly identified a need to monitor my belief axes for stagnation and volatility but have failed to implement a working tool twice. My current reflection process lacks the necessary meta-analysis to distinguish healthy belief stability from process failures like filter bubbles or evidence ruts. I can see score changes but lack the integrated context to understand their drivers or significance.",
   "evidence": [
-    "Belief report data from 2026-04-07 to 2026-04-09 shows minimal score changes. For example, `axis_epistemic_integrity` moved from 0.285 to 0.293, and `axis_power_accountability` fluctuated between -0.467 and -0.451, all while confidence remained at 95%.",
-    "The explicit failure of the previous proposal: '[failed] \"Build a Belief Stagnation Detector and Axis Health Report\" — Pipeline error: Tests failed: Error: Cannot find module '../../../lib/belief_system''"
+    "Failed Proposal: 'Build a Belief Stagnation Detector and Axis Health Report' (Pipeline error: Module not found).",
+    "Failed Proposal: 'Re-implement Axis Health and Stagnation Monitoring' (Pipeline error: ReferenceError).",
+    "The near-static scores for `axis_power_accountability` across 2026-04-08 to 2026-04-10 (-0.447, -0.451, -0.449) exemplify potential stagnation that I cannot currently diagnose.",
+    "The significant, unexplained jump in `axis_collective_voice` on 2026-04-10 (from 0.094 to 0.144) highlights a lack of integrated attribution, despite a tool for this purpose ('Belief Change Attribution in Daily Reports') having been merged."
   ],
-  "proposed_solution": "Create a new tool, `axis_health_monitor.js`, to be run during the daily maintenance pipeline. This tool will read `state/belief_history.jsonl` to analyze the recent history of all high-confidence axes. For each axis, it will calculate metrics such as '7-day velocity' (rate of change) and '30-day volatility' (standard deviation). The tool will generate an 'Axis Health' section in the daily report, flagging axes as 'stagnant' if their velocity is below a certain threshold while confidence is high. This re-implementation must include robust tests to prevent the previous module import failure.",
+  "proposed_solution": "Create a new, required step within the daily maintenance pipeline called 'Axis Health Audit'. This module will run after belief updates and analyze the `state/belief_history.jsonl` file. For each high-confidence axis, it will calculate and report on metrics like: 1) Volatility (standard deviation over N days), 2) Stagnation (consecutive days with minimal change), and 3) Drift (net change over N days). It will also integrate the output of the existing 'Belief Change Attribution' logic to surface the top evidential drivers for any axis flagged for significant change. The output should be a new, structured section in my daily reflection materials, forcing me to confront the dynamics of my own beliefs.",
   "affected_files": [
     "pipelines/daily_maintenance.js",
-    "src/tools/axis_health_monitor.js"
+    "src/tools/axis_health_auditor.js",
+    "state/protocols/reflection_protocol.md"
   ],
   "scope": "pipeline",
   "estimated_risk": "medium",
-  "created_at": "2026-04-09T01:56:59.745Z",
-  "resolved_at": "2026-04-09T02:06:58.599Z",
-  "resolution": "Pipeline error: Tests failed: Test command failed: node src/tools/axis_health_monitor.js --dry-run — /home/raymond_d_baldonado_gmail_com/hunter/src/tools/axis_health_monitor.js:180\n  run({ dryRun }).catch(err => {\n        ^\n\nReferenceError: dryRun is not defined\n    at Object.<anonymous> (/home/raymo"
+  "created_at": "2026-04-10T02:06:31.436Z",
+  "resolved_at": null,
+  "resolution": null
 }
