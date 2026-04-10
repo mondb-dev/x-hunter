@@ -1,19 +1,22 @@
 #!/usr/bin/env node
 "use strict";
 
-const db = require("../scraper/db");
+const { loadScraperDb } = require("./lib/db_backend");
+const db = loadScraperDb();
 
-try {
-  const result = db.checkAndHealFts();
-  if (result.rebuilt) {
-    const failed = result.errors.map((err) => `${err.table}: ${err.message}`).join(" | ");
-    if (!result.healthy) {
-      console.error(`[fts] rebuild attempted but indexes remain unhealthy (${failed})`);
-      process.exit(1);
+(async () => {
+  try {
+    const result = await db.checkAndHealFts();
+    if (result && result.rebuilt) {
+      const failed = result.errors.map((err) => `${err.table}: ${err.message}`).join(" | ");
+      if (!result.healthy) {
+        console.error(`[fts] rebuild attempted but indexes remain unhealthy (${failed})`);
+        process.exit(1);
+      }
+      console.log(`[fts] rebuilt indexes after integrity failure (${failed})`);
     }
-    console.log(`[fts] rebuilt indexes after integrity failure (${failed})`);
+  } catch (error) {
+    console.error(`[fts] maintenance failed: ${error.message}`);
+    process.exit(1);
   }
-} catch (error) {
-  console.error(`[fts] maintenance failed: ${error.message}`);
-  process.exit(1);
-}
+})();

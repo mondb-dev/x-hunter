@@ -21,7 +21,8 @@
 
 const fs      = require("fs");
 const path    = require("path");
-const db      = require("../scraper/db");
+const { loadScraperDb } = require("./lib/db_backend");
+const db = loadScraperDb();
 const { extractKeywords } = require("../scraper/analytics");
 
 // Load .env from project root
@@ -222,7 +223,7 @@ function scanDir(dir, pattern) {
   async function tryUpload(irys, filePath, relPath, parsed) {
     const txId = await uploadToIrys(irys, filePath, parsed);
     if (txId) {
-      db.updateMemoryTxId(relPath, txId);
+      await db.updateMemoryTxId(relPath, txId);
       appendArweaveLog({
         tx_id:       txId,
         type:        parsed.type,
@@ -243,7 +244,7 @@ function scanDir(dir, pattern) {
   const journalFiles = scanDir(JOURNALS_DIR, /^\d{4}-\d{2}-\d{2}_\d{2}\.html$/);
   for (const filePath of journalFiles) {
     const relPath = path.relative(ROOT, filePath);
-    const existing = db.getMemoryByPath(relPath);
+    const existing = await db.getMemoryByPath(relPath);
     if (existing) {
       if (!existing.tx_id && irys) {
         // No tx_id yet — attempt upload
@@ -257,8 +258,10 @@ function scanDir(dir, pattern) {
           console.warn(`[archive] mtime drift on ${path.basename(filePath)} (+${Math.round(driftMs/1000)}s) — file modified after indexing, re-uploading`);
           const parsed = parseJournal(filePath, relPath);
           const keywords = extractKeywords(parsed.text_content, 10).join(", ");
-          db.raw().prepare("UPDATE memory SET text_content=?, keywords=?, indexed_at=? WHERE file_path=?")
-            .run(parsed.text_content, keywords, Date.now(), relPath);
+          await db.raw().query(
+            "UPDATE memory SET text_content=$1, keywords=$2, indexed_at=$3 WHERE file_path=$4",
+            [parsed.text_content, keywords, Date.now(), relPath]
+          );
           if (irys) {
             const ok = await tryUpload(irys, filePath, relPath, parsed);
             if (ok) try { fs.chmodSync(filePath, 0o444); } catch { /* ignore */ }
@@ -272,7 +275,7 @@ function scanDir(dir, pattern) {
     }
     const parsed = parseJournal(filePath, relPath);
     const keywords = extractKeywords(parsed.text_content, 10).join(", ");
-    db.insertMemory({ ...parsed, keywords, indexed_at: Date.now() });
+    await db.insertMemory({ ...parsed, keywords, indexed_at: Date.now() });
     indexed++;
     console.log(`[archive] indexed journal: ${parsed.title}`);
     if (irys) {
@@ -285,14 +288,14 @@ function scanDir(dir, pattern) {
   const checkpointFiles = scanDir(CHECKPOINTS_DIR, /^checkpoint[_-]\d+\.md$/i);
   for (const filePath of checkpointFiles) {
     const relPath = path.relative(ROOT, filePath);
-    const existing = db.getMemoryByPath(relPath);
+    const existing = await db.getMemoryByPath(relPath);
     if (existing) {
       if (!existing.tx_id && irys) await tryUpload(irys, filePath, relPath, existing);
       continue;
     }
     const parsed = parseMarkdown(filePath, relPath, "checkpoint");
     const keywords = extractKeywords(parsed.text_content, 10).join(", ");
-    db.insertMemory({ ...parsed, keywords, indexed_at: Date.now() });
+    await db.insertMemory({ ...parsed, keywords, indexed_at: Date.now() });
     indexed++;
     console.log(`[archive] indexed checkpoint: ${parsed.title}`);
     if (irys) await tryUpload(irys, filePath, relPath, parsed);
@@ -302,14 +305,14 @@ function scanDir(dir, pattern) {
   const reportFiles = scanDir(DAILY_DIR, /^belief_report_\d{4}-\d{2}-\d{2}\.md$/);
   for (const filePath of reportFiles) {
     const relPath = path.relative(ROOT, filePath);
-    const existing = db.getMemoryByPath(relPath);
+    const existing = await db.getMemoryByPath(relPath);
     if (existing) {
       if (!existing.tx_id && irys) await tryUpload(irys, filePath, relPath, existing);
       continue;
     }
     const parsed = parseMarkdown(filePath, relPath, "belief_report");
     const keywords = extractKeywords(parsed.text_content, 10).join(", ");
-    db.insertMemory({ ...parsed, keywords, indexed_at: Date.now() });
+    await db.insertMemory({ ...parsed, keywords, indexed_at: Date.now() });
     indexed++;
     console.log(`[archive] indexed belief report: ${parsed.title}`);
     if (irys) await tryUpload(irys, filePath, relPath, parsed);
@@ -319,7 +322,7 @@ function scanDir(dir, pattern) {
   const articleFiles = scanDir(ARTICLES_DIR, /^\d{4}-\d{2}-\d{2}\.md$/);
   for (const filePath of articleFiles) {
     const relPath = path.relative(ROOT, filePath);
-    const existing = db.getMemoryByPath(relPath);
+    const existing = await db.getMemoryByPath(relPath);
     if (existing) {
       if (!existing.tx_id && irys) await tryUpload(irys, filePath, relPath, existing);
       continue;
@@ -334,7 +337,7 @@ function scanDir(dir, pattern) {
     const title = titleMatch ? titleMatch[1] : `Article ${date}`;
     const parsed = { type: "article", date, hour: null, title, text_content: text, file_path: relPath };
     const keywords = extractKeywords(text, 10).join(", ");
-    db.insertMemory({ ...parsed, keywords, indexed_at: Date.now() });
+    await db.insertMemory({ ...parsed, keywords, indexed_at: Date.now() });
     indexed++;
     console.log(`[archive] indexed article: ${title}`);
     if (irys) await tryUpload(irys, filePath, relPath, parsed);
@@ -352,11 +355,11 @@ function scanDir(dir, pattern) {
     for (const post of (postsData.posts || [])) {
       if (!post.id || !post.content) continue;
       const filePath = `state/posts_log.json#${post.id}`;
-      if (db.getMemoryByPath(filePath)) continue;
+      if (await db.getMemoryByPath(filePath)) continue;
       const textWithUrl = post.tweet_url
         ? `${post.content}\n\n[URL: ${post.tweet_url}]`
         : post.content;
-      db.insertMemory({
+      await db.insertMemory({
         type:         "tweet",
         date:         post.date || new Date().toISOString().slice(0, 10),
         hour:         null,
@@ -372,10 +375,8 @@ function scanDir(dir, pattern) {
     if (newTweets) console.log(`[archive] indexed ${newTweets} new tweet(s) from posts_log.json`);
   }
 
-  // Ensure FTS5 indexes are in sync after all inserts
-  if (indexed > 0 && db.rebuildFtsIfNeeded()) {
-    console.log("[archive] FTS5 indexes rebuilt (were out of sync)");
-  }
+  // Ensure FTS indexes are in sync after all inserts (no-op in Postgres)
+  if (indexed > 0) await db.rebuildFtsIfNeeded();
   console.log(`[archive] done. indexed=${indexed}, uploaded=${uploaded}`);
   process.exit(0);
 })();

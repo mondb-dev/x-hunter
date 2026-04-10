@@ -33,7 +33,8 @@ const ACTIVE_PLAN_PATH      = path.join(STATE, "active_plan.json");
 const SPRINT_CONTEXT_PATH   = path.join(STATE, "sprint_context.txt");
 const SPRINT_SNAPSHOT_PATH  = path.join(STATE, "sprint_snapshot.json");
 
-const sprintDb = require("./sprint/db.js");
+const { loadSprintDb } = require("./lib/db_backend");
+const sprintDb = loadSprintDb();
 const planner  = require("./sprint/planner.js");
 const tracker  = require("./sprint/tracker.js");
 
@@ -64,7 +65,7 @@ async function main() {
   console.log(`[sprint_manager] active plan: "${activePlan.title}" (${planId})`);
 
   // 2. SYNC — ensure plan exists in DB
-  sprintDb.upsertPlan({
+  await sprintDb.upsertPlan({
     plan_id:        planId,
     title:          activePlan.title,
     compulsion:     activePlan.compulsion,
@@ -75,7 +76,7 @@ async function main() {
   });
 
   // 3. PLAN — generate sprints if none exist
-  const existingSprints = sprintDb.getSprints(planId);
+  const existingSprints = await sprintDb.getSprints(planId);
   if (existingSprints.length === 0) {
     console.log("[sprint_manager] no sprints found — generating full plan");
     try {
@@ -99,12 +100,12 @@ async function main() {
 
   // 5. NEXT — handle sprint transitions
   if (trackResult.action === "sprint_completed") {
-    const sprints   = sprintDb.getSprints(planId);
+    const sprints   = await sprintDb.getSprints(planId);
     const nextReady = sprints.find(s => s.status === "not_started");
 
     if (nextReady) {
       // Pre-planned sprint exists — activate it
-      const tasks = sprintDb.getTasks(nextReady.id);
+      const tasks = await sprintDb.getTasks(nextReady.id);
       if (tasks.length === 0) {
         // Sprint exists but has no tasks — replan it
         console.log(`[sprint_manager] week ${nextReady.week} has no tasks — replanning`);
@@ -114,7 +115,7 @@ async function main() {
           console.error(`[sprint_manager] next sprint planning failed: ${err.message}`);
         }
       } else {
-        sprintDb.activateSprint(nextReady.id, today());
+        await sprintDb.activateSprint(nextReady.id, today());
         console.log(`[sprint_manager] activated pre-planned week ${nextReady.week}`);
       }
     } else {
@@ -129,24 +130,24 @@ async function main() {
         }
       } else {
         console.log("[sprint_manager] all 4 weeks done — plan complete");
-        sprintDb.completePlan(planId, today());
+        await sprintDb.completePlan(planId, today());
       }
     }
   } else if (trackResult.action === "plan_completed") {
     console.log("[sprint_manager] plan marked complete");
-    sprintDb.completePlan(planId, today());
+    await sprintDb.completePlan(planId, today());
   }
 
   // 6. LOG — write sprint context for tweet prompt
-  const context = sprintDb.buildPromptContext(planId);
+  const context = await sprintDb.buildPromptContext(planId);
   fs.writeFileSync(SPRINT_CONTEXT_PATH, context);
   console.log(`[sprint_manager] sprint context written (${context.length} chars)`);
 
   // 7. SNAPSHOT — write JSON snapshot for the website /plan page
-  const summary = sprintDb.getSprintSummary(planId);
+  const summary = await sprintDb.getSprintSummary(planId);
   if (summary) {
     // Enrich with recent accomplishments
-    const recentAccomplishments = sprintDb.getAccomplishments(planId, sprintDb.addDays(today(), -7));
+    const recentAccomplishments = await sprintDb.getAccomplishments(planId, sprintDb.addDays(today(), -7));
     const snapshot = {
       ...summary,
       plan_id:        planId,
@@ -166,7 +167,7 @@ async function main() {
     console.log(`[sprint_manager] sprint snapshot written`);
   }
 
-  sprintDb.close();
+  await sprintDb.close();
   console.log("[sprint_manager] done");
 }
 

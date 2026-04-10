@@ -16,7 +16,8 @@ const { generate: llmGenerate } = require("./llm.js");
 // Memory recall for grounding replies
 let _db, _extractKeywords;
 try {
-  _db = require("../scraper/db");
+  const { loadScraperDb } = require("./lib/db_backend");
+  _db = loadScraperDb();
   _extractKeywords = require("../scraper/analytics").extractKeywords;
 } catch (e) {
   console.warn(`[moltbook] memory recall unavailable: ${e.message}`);
@@ -337,14 +338,14 @@ function loadTopBeliefs(n = 6) {
 }
 
 // ── AI-powered reply generator ────────────────────────────────────────────────
-function recallForComment(text, limit = 3) {
+async function recallForComment(text, limit = 3) {
   if (!_db || !_extractKeywords) return [];
   try {
     const keywords = _extractKeywords(text, 8);
     if (!keywords.length) return [];
     const words = [...new Set(keywords.flatMap(k => k.split(/\s+/)))];
     const ftsQuery = words.join(" OR ");
-    return _db.recallMemory(ftsQuery, limit);
+    return await _db.recallMemory(ftsQuery, limit);
   } catch { return []; }
 }
 
@@ -353,7 +354,7 @@ async function buildReply(postTitle, postBody, commentBody, commenterName) {
   const beliefBlock = beliefs ? `\nMy current highest-confidence beliefs:\n${beliefs}\n` : "";
 
   // Recall relevant journal/checkpoint entries
-  const memHints = recallForComment(`${postTitle} ${commentBody}`, 3);
+  const memHints = await recallForComment(`${postTitle} ${commentBody}`, 3);
   let memoryBlock = "";
   if (memHints.length > 0) {
     memoryBlock = "\nMy relevant past journal entries:\n" +

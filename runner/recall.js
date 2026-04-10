@@ -31,7 +31,8 @@
 
 const fs   = require("fs");
 const path = require("path");
-const db   = require("../scraper/db");
+const { loadScraperDb } = require("./lib/db_backend");
+const db = loadScraperDb();
 const { embed, topK } = require("../scraper/embed");
 
 const ROOT        = path.resolve(__dirname, "..");
@@ -88,16 +89,15 @@ async function semanticRecall(queryText, typeFilter, limitN) {
   const queryVec = await embed(queryText);
   if (!queryVec) return null; // fall back to FTS5
 
-  const embeddings = db.allEmbeddings("memory");
+  const embeddings = await db.allEmbeddings("memory");
   if (embeddings.length === 0) return null; // nothing embedded yet
 
-  const nearest   = topK(queryVec, embeddings, limitN * 3); // over-fetch, filter after
-  const _db       = db.raw();
-  const stmtById  = _db.prepare("SELECT * FROM memory WHERE id = ?");
+  const nearest = topK(queryVec, embeddings, limitN * 3); // over-fetch, filter after
 
   const results = [];
   for (const hit of nearest) {
-    const row = stmtById.get(parseInt(hit.entity_id, 10));
+    const { rows: memRows } = await db.raw().query("SELECT * FROM memory WHERE id = $1", [parseInt(hit.entity_id, 10)]);
+    const row = memRows[0];
     if (!row) continue;
     if (typeFilter && row.type !== typeFilter) continue;
     results.push({ ...row, _similarity: hit.similarity });
@@ -133,7 +133,7 @@ async function semanticRecall(queryText, typeFilter, limitN) {
 
     if (!usedSemantic) {
       // FTS5 fallback (or forced)
-      results    = db.recallMemory(query, limit);
+      results    = await db.recallMemory(query, limit);
       queryLabel += " [fts5]";
       if (type) {
         results    = results.filter(r => r.type === type);
@@ -141,7 +141,7 @@ async function semanticRecall(queryText, typeFilter, limitN) {
       }
     }
   } else {
-    results    = db.recentMemory(type || null, limit);
+    results    = await db.recentMemory(type || null, limit);
     queryLabel = type ? `recent ${type} entries` : "recent entries";
   }
 
