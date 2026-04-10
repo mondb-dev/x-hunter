@@ -215,8 +215,10 @@ function postBrowse({ cycle, today, hour }) {
         execSync(`git -C "${PROJECT_ROOT}" push origin main`, { stdio: 'ignore', timeout: 30_000 });
         log('browse journal pushed');
         triggerVercelDeploy(process.env.VERCEL_DEPLOY_HOOK || '');
-        syncToGCS();
       } catch {}
+
+      // GCS sync runs regardless of git push success — website needs fresh data
+      syncToGCS();
 
       // 5d. archive.js + JOURNAL watchdog
       runScript(path.join(PROJECT_ROOT, 'runner/archive.js'));
