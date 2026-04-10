@@ -6,9 +6,13 @@ import { DATA_ROOT } from "@/lib/dataRoot";
 // ── Rate limiting (in-memory, per IP) ───────────────────────────────────────
 const RATE_WINDOW_MS = 60_000;
 const RATE_LIMIT = 5;
+const WHITELISTED_IPS = new Set(
+  (process.env.ASK_WHITELISTED_IPS ?? "").split(",").map((s) => s.trim()).filter(Boolean)
+);
 const ipWindows = new Map<string, { count: number; reset: number }>();
 
 function checkRateLimit(ip: string): boolean {
+  if (WHITELISTED_IPS.has(ip)) return true;
   const now = Date.now();
   const w = ipWindows.get(ip);
   if (!w || now > w.reset) {
