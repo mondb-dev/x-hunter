@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-10T16:10:13.364Z",
+  "generated_at": "2026-04-10T17:00:22.967Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-10T15:50:13.199Z",
+  "profiled_at": "2026-04-10T16:45:24.316Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-10T15:30:10.000Z",
+      "last_seen_at": "2026-04-10T15:54:51.000Z",
       "discovery": {
-        "distinct_urls": 389,
+        "distinct_urls": 392,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,10 +384,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 292,
-          "feed_buffer_reply": 114
+          "feed_buffer": 294,
+          "feed_buffer_reply": 115
         },
-        "distinct_referring_accounts": 169,
+        "distinct_referring_accounts": 170,
         "sample_referring_accounts": [
           "_philschmid",
           "_yf1921",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:389",
+            "distinct_urls:392",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:169",
+            "referring_accounts:170",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:389",
+            "distinct_urls:392",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:169",
+            "referring_accounts:170",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -13215,7 +13215,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-07T16:37:18.436Z",
+        "fetched_at": "2026-04-10T16:45:15.317Z",
         "homepage_url": "https://allsides.com/",
         "example_url": "https://allsides.com/news-source/aaron-rupar",
         "homepage_status": 403,
@@ -13306,16 +13306,16 @@
           ]
         },
         "profile": {
-          "score": 0.18,
-          "confidence": 0.65,
+          "score": 0.65,
+          "confidence": 0.75,
           "basis": [
-            "meta_author:true",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:true",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:11",
             "opinion_marker:false"
           ]
         },
@@ -13335,33 +13335,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-07T16:37:18.776Z",
+        "fetched_at": "2026-04-10T16:45:21.481Z",
         "homepage_url": "https://mediabiasfactcheck.com/",
         "example_url": "https://www.mediabiasfactcheck.com/public-notice/",
-        "homepage_status": 429,
-        "example_status": 429,
+        "homepage_status": 200,
+        "example_status": 200,
         "homepage_final_url": "https://mediabiasfactcheck.com/",
-        "example_final_url": "https://mediabiasfactcheck.com/public-notice/",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
+        "example_final_url": "https://mediabiasfactcheck.com/public-notice-bias-and-credibility/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 5,
           "opinion_marker": false
         },
         "example": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 11,
           "opinion_marker": false
         }
       }
@@ -13426,16 +13426,16 @@
           ]
         },
         "profile": {
-          "score": 0.15000000000000002,
-          "confidence": 0.65,
+          "score": 0.6799999999999999,
+          "confidence": 0.85,
           "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
             "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:1",
+            "outbound_links:8",
             "opinion_marker:false"
           ]
         },
@@ -13455,15 +13455,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-07T16:37:19.281Z",
+        "fetched_at": "2026-04-10T16:45:22.551Z",
         "homepage_url": "https://bongino.com/",
         "example_url": "https://www.bongino.com/articles/is-aaron-rupar-the-worlds-most-dishonest-journalist",
         "homepage_status": 200,
-        "example_status": 502,
+        "example_status": 404,
         "homepage_final_url": "https://bongino.com/",
         "example_final_url": "https://bongino.com/articles/is-aaron-rupar-the-worlds-most-dishonest-journalist",
         "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": true,
           "has_published_time": true,
@@ -13475,13 +13475,13 @@
           "opinion_marker": false
         },
         "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 1,
+          "outbound_links_count": 8,
           "opinion_marker": false
         }
       }
@@ -13575,7 +13575,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-07T16:37:20.387Z",
+        "fetched_at": "2026-04-10T16:45:24.315Z",
         "homepage_url": "https://racketmn.com/",
         "example_url": "https://racketmn.com/local-twitter-man-aaron-rupar-beacon-for-the-truth-or-threat-to-the-free-press/",
         "homepage_status": 200,
