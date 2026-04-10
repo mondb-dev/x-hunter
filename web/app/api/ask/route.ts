@@ -160,7 +160,7 @@ Your tone: analytical, measured, intellectually honest. No hype, no hedging for 
     const token = await getAccessToken();
 
     const vertexUrl =
-      "https://us-central1-aiplatform.googleapis.com/v1/projects/sebastian-hunter/locations/us-central1/publishers/google/models/gemini-2.0-flash-001:streamGenerateContent?alt=sse";
+      "https://us-central1-aiplatform.googleapis.com/v1/projects/sebastian-hunter/locations/us-central1/publishers/google/models/gemini-2.5-flash:streamGenerateContent?alt=sse";
 
     const vertexRes = await fetch(vertexUrl, {
       method: "POST",
