@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-10T18:00:17.502Z",
+  "generated_at": "2026-04-10T19:15:20.808Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-10T16:45:24.316Z",
+  "profiled_at": "2026-04-10T18:15:18.898Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-10T16:24:16.000Z",
+      "last_seen_at": "2026-04-10T18:11:48.000Z",
       "discovery": {
-        "distinct_urls": 394,
+        "distinct_urls": 401,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,10 +384,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 294,
-          "feed_buffer_reply": 117
+          "feed_buffer": 298,
+          "feed_buffer_reply": 120
         },
-        "distinct_referring_accounts": 171,
+        "distinct_referring_accounts": 172,
         "sample_referring_accounts": [
           "_philschmid",
           "_yf1921",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:394",
+            "distinct_urls:401",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:171",
+            "referring_accounts:172",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:394",
+            "distinct_urls:401",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:171",
+            "referring_accounts:172",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -4836,7 +4836,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-07T18:07:19.339Z",
+        "fetched_at": "2026-04-10T18:15:18.767Z",
         "homepage_url": "https://degenidle.com/",
         "example_url": "https://degenidle.com/?twclid=2cjpeg7bzynm31yynzfte1vs7q",
         "homepage_status": 200,
@@ -13602,6 +13602,126 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 6,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "theblock.co",
+      "entity": "Theblock Co",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-10T18:02:30.762Z",
+      "last_seen_at": "2026-04-10T18:02:30.762Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://theblock.co/post/297298/iran-bitcoin-strait-of-hormuz-transit-fees"
+        ],
+        "origin_counts": {
+          "journals": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.009999999999999998,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3370833333333333,
+          "confidence": 0.0491,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-10T18:15:18.898Z",
+        "homepage_url": "https://theblock.co/",
+        "example_url": "https://theblock.co/post/297298/iran-bitcoin-strait-of-hormuz-transit-fees",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://theblock.co/",
+        "example_final_url": "https://theblock.co/post/297298/iran-bitcoin-strait-of-hormuz-transit-fees",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
           "opinion_marker": false
         }
       }
