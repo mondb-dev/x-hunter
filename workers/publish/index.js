@@ -30,6 +30,23 @@
 const http = require('http');
 const { Storage } = require('@google-cloud/storage');
 
+// ── Structured logging (Cloud Logging format) ──────────────────────────────
+function structLog(severity, message, fields = {}) {
+  const entry = {
+    severity,
+    message,
+    component: 'publish-worker',
+    ...fields,
+    timestamp: new Date().toISOString(),
+  };
+  console.log(JSON.stringify(entry));
+}
+const log = {
+  info: (msg, f) => structLog('INFO', msg, f),
+  warn: (msg, f) => structLog('WARNING', msg, f),
+  error: (msg, f) => structLog('ERROR', msg, f),
+};
+
 // ── DB setup ────────────────────────────────────────────────────────────────
 
 const { Pool } = require('pg');
@@ -51,7 +68,7 @@ const bucket = storage.bucket(process.env.GCS_DATA_BUCKET || 'sebastian-hunter-d
 async function uploadToGCS(remotePath, content) {
   const file = bucket.file(remotePath);
   await file.save(content, { contentType: 'application/json', resumable: false });
-  console.log(`[publish] uploaded ${remotePath} to GCS`);
+  log.info('uploaded to GCS', { path: remotePath });
 }
 
 // ── Draft generation ────────────────────────────────────────────────────────
@@ -110,11 +127,11 @@ async function handleClaimResolved(event) {
   const { claim_id, new_status } = event;
   if (!claim_id) throw new Error('missing claim_id in event');
 
-  console.log(`[publish] claim-resolved: ${claim_id} → ${new_status}`);
+  log.info('claim-resolved event', { claim_id, new_status });
 
   // Only generate drafts for terminal statuses
   if (new_status !== 'supported' && new_status !== 'refuted') {
-    console.log(`[publish] status ${new_status} is not terminal — skipping draft`);
+    log.info('non-terminal status, skipping draft', { new_status });
     return { action: 'skipped', reason: 'non-terminal status' };
   }
 
@@ -129,13 +146,13 @@ async function handleClaimResolved(event) {
 
   // Check if already tweeted
   if (claim.tweet_posted) {
-    console.log(`[publish] ${claim_id} already tweeted — skipping`);
+    log.info('already tweeted, skipping', { claim_id });
     return { action: 'skipped', reason: 'already tweeted' };
   }
 
   // Generate draft
   const draft = generateDraft(claim);
-  console.log(`[publish] draft generated (${draft.length} chars)`);
+  log.info('draft generated', { claim_id, chars: draft.length });
 
   // Store draft in Postgres for VM pickup
   await query(`
@@ -145,7 +162,7 @@ async function handleClaimResolved(event) {
       content = $2, created_at = $3
   `, [claim_id, draft, new Date().toISOString()]);
 
-  console.log(`[publish] draft stored for VM pickup: ${claim_id}`);
+  log.info('draft stored for VM pickup', { claim_id });
 
   // Also regenerate the export
   await generateExport();
@@ -199,7 +216,7 @@ async function generateExport() {
   // Upload to GCS for Cloud Run site
   await uploadToGCS('state/verification_export.json', json);
 
-  console.log(`[publish] export: ${stats.total} claims (${stats.supported} supported, ${stats.refuted} refuted)`);
+  log.info('export generated', { total: stats.total, supported: stats.supported, refuted: stats.refuted, contested: stats.contested });
   return exportData;
 }
 
@@ -279,7 +296,7 @@ const server = http.createServer(async (req, res) => {
     res.writeHead(404);
     res.end('Not found');
   } catch (err) {
-    console.error('[publish] error:', err);
+    log.error('request handler error', { error: err.message, stack: err.stack });
     res.writeHead(500, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({ error: err.message }));
   }
@@ -287,5 +304,5 @@ const server = http.createServer(async (req, res) => {
 
 const PORT = process.env.PORT || 8081;
 server.listen(PORT, () => {
-  console.log(`[publish] worker listening on :${PORT}`);
+  log.info('worker started', { port: PORT });
 });

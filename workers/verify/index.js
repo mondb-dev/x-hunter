@@ -24,6 +24,24 @@
 const http = require('http');
 const { PubSub } = require('@google-cloud/pubsub');
 
+// ── Structured logging (Cloud Logging format) ──────────────────────────────
+// Cloud Run pipes stdout JSON to Cloud Logging with severity + labels.
+function structLog(severity, message, fields = {}) {
+  const entry = {
+    severity,
+    message,
+    component: 'verify-worker',
+    ...fields,
+    timestamp: new Date().toISOString(),
+  };
+  console.log(JSON.stringify(entry));
+}
+const log = {
+  info: (msg, f) => structLog('INFO', msg, f),
+  warn: (msg, f) => structLog('WARNING', msg, f),
+  error: (msg, f) => structLog('ERROR', msg, f),
+};
+
 // ── DB setup ────────────────────────────────────────────────────────────────
 
 const { Pool } = require('pg');
@@ -57,7 +75,7 @@ async function publishClaimResolved(claim, result) {
       },
     });
   } catch (err) {
-    console.error('[verify] pubsub publish error:', err.message);
+    log.error('pubsub publish failed', { error: err.message });
   }
 }
 
@@ -179,7 +197,7 @@ async function webSearchVerify(claimText) {
       };
     } finally { clearTimeout(timer); }
   } catch (err) {
-    console.error('[verify] web search error:', err.message);
+    log.error('web search failed', { error: err.message });
     return null;
   }
 }
@@ -273,16 +291,16 @@ const MAX_CLAIMS = 10;
 const WEB_SEARCH_PER_CYCLE = 1;
 
 async function runVerifyCycle() {
-  console.log('[verify] starting cycle');
+  log.info('starting verification cycle');
 
   // Load claims from DB
   const claims = await getUnverified();
   if (claims.length === 0) {
-    console.log('[verify] no unverified claims');
+    log.info('no unverified claims');
     return { scored: 0, searched: 0 };
   }
 
-  console.log(`[verify] ${claims.length} unverified/contested claims`);
+  log.info('claims to verify', { count: claims.length });
   const batch = claims.slice(0, MAX_CLAIMS);
 
   let webSearchCount = 0;
@@ -315,7 +333,7 @@ async function runVerifyCycle() {
       if (Date.now() - last < 24 * 3600_000) continue;
     }
 
-    console.log(`[verify] web searching: "${(claim.claim_text || '').slice(0, 80)}"`);
+    log.info('web searching claim', { claim_id: claim.claim_id, text: (claim.claim_text || '').slice(0, 80) });
     const searchData = await webSearchVerify(claim.claim_text);
     webSearchCount++;
 
@@ -324,7 +342,7 @@ async function runVerifyCycle() {
       const updated = scoreClaim(claim, sourceData);
       Object.assign(result, updated);
       claim._searchData = searchData;
-      console.log(`[verify] web: ${searchData.web_search_result} → ${updated.suggested_status} (${(updated.confidence * 100).toFixed(0)}%)`);
+      log.info('web search result', { verdict: searchData.web_search_result, status: updated.suggested_status, confidence: Math.round(updated.confidence * 100) });
     }
   }
 
@@ -381,7 +399,7 @@ async function runVerifyCycle() {
     });
   } catch {}
 
-  console.log(`[verify] done: scored ${results.length}, searched ${webSearchCount}`);
+  log.info('cycle complete', { scored: results.length, searched: webSearchCount });
   return { scored: results.length, searched: webSearchCount };
 }
 
@@ -445,7 +463,7 @@ const server = http.createServer(async (req, res) => {
     res.writeHead(404);
     res.end('Not found');
   } catch (err) {
-    console.error('[verify] error:', err);
+    log.error('request handler error', { error: err.message, stack: err.stack });
     res.writeHead(500, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({ error: err.message }));
   }
@@ -453,5 +471,5 @@ const server = http.createServer(async (req, res) => {
 
 const PORT = process.env.PORT || 8080;
 server.listen(PORT, () => {
-  console.log(`[verify] worker listening on :${PORT}`);
+  log.info('worker started', { port: PORT });
 });
