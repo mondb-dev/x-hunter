@@ -48,10 +48,10 @@ export async function POST(req: NextRequest) {
 
   const context = buildCoreContext({
     maxAxes:           8,
-    journalCount:      3,
-    journalChars:      600,
+    journalCount:      5,
+    journalChars:      1200,
     includeCheckpoint: true,
-    checkpointChars:   1200,
+    checkpointChars:   1500,
     includeClaims:     true,
   });
 
@@ -65,7 +65,7 @@ export async function POST(req: NextRequest) {
       systemInstruction,
       contents: [{ role: "user", parts: [{ text: `${context}\n\n---\n\nQuestion: ${question}` }] }],
       stream:      true,
-      maxTokens:   600,
+      maxTokens:   1500,
       temperature: 0.4,
     }) as Response;
 
