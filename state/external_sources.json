@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-09T23:19:46.162Z",
+  "generated_at": "2026-04-09T23:59:47.044Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-09T23:19:46.674Z",
   "sources": [
@@ -375,7 +375,7 @@
       "first_seen_at": "2026-03-31T09:30:40.000Z",
       "last_seen_at": "2026-04-09T21:01:09.000Z",
       "discovery": {
-        "distinct_urls": 334,
+        "distinct_urls": 335,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -385,9 +385,9 @@
         ],
         "origin_counts": {
           "feed_buffer": 265,
-          "feed_buffer_reply": 84
+          "feed_buffer_reply": 85
         },
-        "distinct_referring_accounts": 140,
+        "distinct_referring_accounts": 141,
         "sample_referring_accounts": [
           "_philschmid",
           "_yf1921",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:334",
+            "distinct_urls:335",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:140",
+            "referring_accounts:141",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:334",
+            "distinct_urls:335",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:140",
+            "referring_accounts:141",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1157,9 +1157,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-16T09:36:45.269Z",
-      "last_seen_at": "2026-04-09T01:56:59.662Z",
+      "last_seen_at": "2026-04-08T02:28:27.184Z",
       "discovery": {
-        "distinct_urls": 21,
+        "distinct_urls": 20,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -1168,7 +1168,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 21
+          "articles": 20
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1197,7 +1197,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:21",
+            "distinct_urls:20",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -1235,7 +1235,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:21",
+            "distinct_urls:20",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
