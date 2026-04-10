@@ -12,12 +12,12 @@
 
 const fs   = require('fs');
 const path = require('path');
-// Allow running from infra/ or repo root — resolve pg from root node_modules
+// pg lives in runner/node_modules (added to runner/package.json)
 let Pool;
 try {
   Pool = require('pg').Pool;
 } catch {
-  Pool = require(require('path').join(__dirname, '..', 'node_modules', 'pg')).Pool;
+  Pool = require(require('path').join(__dirname, '..', 'runner', 'node_modules', 'pg')).Pool;
 }
 
 // Load .env
