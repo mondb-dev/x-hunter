@@ -745,6 +745,63 @@ function postPredictionTweet({ today, hour }) {
   return { posted: true, tweetUrl: tweetUrl || null };
 }
 
+// ── postLandmarkSpecialTweet ─────────────────────────────────────────────────
+
+function postLandmarkSpecialTweet({ today, hour }) {
+  if (isXSuppressed('tweet')) {
+    log('X tweet suppression active — keeping landmark special draft for later');
+    return { posted: false };
+  }
+
+  const draftPath = path.join(config.STATE_DIR, 'landmark_special_draft.txt');
+  if (!exists(draftPath)) return { posted: false };
+
+  const text = readFile(draftPath).trim();
+  if (!text) {
+    try { fs.unlinkSync(draftPath); } catch {}
+    return { posted: false };
+  }
+
+  fs.writeFileSync(DRAFT_PATH, `${text}\n`);
+
+  const vfOut = runNodeSafe('voice_filter.js');
+  log(`voice filter (landmark special): ${vfOut}`);
+
+  log('Posting landmark special tweet via browser CDP...');
+  const result = runNodeDetailed('post_tweet.js');
+  if (!result.ok) {
+    log(`browser CDP failed (${result.error}) — falling back to API`);
+    runNodeSafe('post_tweet_api.js');
+  }
+
+  const resultPath = path.join(config.STATE_DIR, 'tweet_result.txt');
+  const tweetUrl = readFile(resultPath).trim();
+  if (tweetUrl) log(`Landmark special posted: ${tweetUrl}`);
+  else log('Landmark special posted (URL not captured)');
+
+  try {
+    const postsLogPath = path.join(config.STATE_DIR, 'posts_log.json');
+    if (exists(postsLogPath)) {
+      const logData = JSON.parse(readFile(postsLogPath));
+      const posts = Array.isArray(logData) ? logData : (logData.posts || []);
+      for (let i = posts.length - 1; i >= 0; i--) {
+        if (posts[i].type === 'tweet') {
+          posts[i].type = 'landmark_special';
+          break;
+        }
+      }
+      const out = Array.isArray(logData) ? posts : { ...logData, posts, total_posts: posts.length };
+      fs.writeFileSync(postsLogPath, JSON.stringify(out, null, 2));
+    }
+  } catch (e) {
+    log(`[landmark_special] logging metadata failed: ${e.message}`);
+  }
+
+  try { fs.unlinkSync(draftPath); } catch {}
+
+  return { posted: true, tweetUrl: tweetUrl || null };
+}
+
 module.exports = {
   postRegularTweet,
   postQuoteTweet,
@@ -753,4 +810,5 @@ module.exports = {
   postSignalTweet,
   postVerificationTweet,
   postPredictionTweet,
+  postLandmarkSpecialTweet,
 };

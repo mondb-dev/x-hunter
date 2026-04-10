@@ -163,6 +163,23 @@ function postBrowse({ cycle, today, hour }) {
   // Verification data still updates for the /verified web page.
   // Verification tweet posting disabled — not part of new cadence.
 
+  // ── 4g. Landmark special announcement (vocation / prediction confirmed) ──
+  // Written by landmark/index.js step 7 when stage is special_vocation/prediction.
+  const specialDraftPath = path.join(config.STATE_DIR, 'landmark_special_draft.txt');
+  if (fs.existsSync(specialDraftPath) && fs.statSync(specialDraftPath).size > 0) {
+    if (isXSuppressed('tweet')) {
+      log(`landmark special tweet suppressed (${suppressionReason('tweet')})`);
+    } else {
+      const { postLandmarkSpecialTweet } = require('./post');
+      const { ensureBrowser } = require('./browser');
+      ensureBrowser();
+      const result = postLandmarkSpecialTweet({ today, hour });
+      if (result.posted) {
+        log('Landmark special tweet posted');
+      }
+    }
+  }
+
   // ── 5. Journal commit decision (4 sub-steps) ─────────────────────────
   const journalFile = path.join(config.JOURNALS_DIR, `${today}_${hour}.html`);
   const journalRelPath = `journals/${today}_${hour}.html`;

@@ -24,7 +24,8 @@
 
 const fs   = require("fs");
 const path = require("path");
-const db   = require("../scraper/db");
+const { loadScraperDb } = require("./lib/db_backend");
+const db = loadScraperDb();
 const { extractKeywords } = require("../scraper/analytics");
 
 const ROOT           = path.resolve(__dirname, "..");
@@ -145,104 +146,109 @@ function writeStub(lines) {
 
 // ── Main ──────────────────────────────────────────────────────────────────────
 
-const log = loadLog();
-processCommentDone(log);
+(async () => {
+  const log = loadLog();
+  processCommentDone(log);
 
-const now = new Date().toISOString().slice(0, 16).replace("T", " ");
+  const now = new Date().toISOString().slice(0, 16).replace("T", " ");
 
-// ── Gate check: does Hunter have a settled axis to speak from? ─────────────────
-const strongAxis = getStrongestAxis();
+  // ── Gate check: does Hunter have a settled axis to speak from? ───────────────
+  const strongAxis = getStrongestAxis();
 
-if (!strongAxis) {
-  const best = getMostProgressedAxis();
-  const bestDesc = best
-    ? `"${best.label}" — confidence: ${((best.confidence || 0) * 100).toFixed(0)}%, ` +
-      `${(best.evidence_log || []).length} evidence entries`
-    : "no axes yet";
+  if (!strongAxis) {
+    const best = getMostProgressedAxis();
+    const bestDesc = best
+      ? `"${best.label}" — confidence: ${((best.confidence || 0) * 100).toFixed(0)}%, ` +
+        `${(best.evidence_log || []).length} evidence entries`
+      : "no axes yet";
 
-  writeStub([
-    `── comment candidates · ${now} ${pad(70 - now.length - 24)}`,
-    `Not ready for proactive comments yet.`,
-    ``,
-    `Threshold: confidence ≥ ${(MIN_AXIS_CONFIDENCE * 100).toFixed(0)}% with ≥ ${MIN_EVIDENCE_COUNT} evidence entries on any axis.`,
-    `Most progressed: ${bestDesc}`,
-    `── end candidates ${pad(52)}`,
-  ]);
-  console.log(`[comment] axis gate not met — most progressed: ${bestDesc}`);
-  process.exit(0);
-}
-
-// ── Daily cap ─────────────────────────────────────────────────────────────────
-if (log.today_count >= MAX_PER_DAY) {
-  writeStub([
-    `── comment candidates · ${now} ${pad(70 - now.length - 24)}`,
-    `Daily cap reached (${log.today_count}/${MAX_PER_DAY}). No proactive comments today.`,
-    `── end candidates ${pad(52)}`,
-  ]);
-  console.log(`[comment] cap reached (${log.today_count}/${MAX_PER_DAY})`);
-  process.exit(0);
-}
-
-// ── Find candidates ───────────────────────────────────────────────────────────
-const posts = db.recentPosts(4, 60);
-
-const candidates = [];
-for (const post of posts) {
-  if (candidates.length >= CANDIDATES_LIMIT) break;
-  if ((post.score || 0) < SCORE_THRESHOLD)   continue;
-  if (log.commented_ids.includes(post.id))    continue;
-
-  const keywords = extractKeywords(post.text, 8);
-  if (!keywords.length) continue;
-
-  // Use OR between words so FTS5 doesn't require ALL keywords in one doc
-  const words = [...new Set(keywords.flatMap(k => k.split(/\s+/)))];
-  const ftsQuery = words.join(" OR ");
-  const memMatches = db.recallMemory(ftsQuery, 1);
-  if (!memMatches.length) continue;
-
-  const tweetUrl = `https://x.com/${post.username}/status/${post.id}`;
-  candidates.push({ post, tweetUrl, memory: memMatches[0] });
-}
-
-// ── Build candidates file ─────────────────────────────────────────────────────
-const evidenceCount = (strongAxis.evidence_log || []).length;
-const lines = [
-  `── comment candidates · ${now} ${pad(70 - now.length - 24)}`,
-  `Active axis: "${strongAxis.label}"`,
-  `  confidence: ${((strongAxis.confidence || 0) * 100).toFixed(0)}%  ·  ${evidenceCount} evidence entries`,
-  `  "${strongAxis.left_pole}" ↔ "${strongAxis.right_pole}"`,
-  ``,
-  `(${log.today_count}/${MAX_PER_DAY} proactive comments used today)`,
-  ``,
-  `Posts where your memory has something specific to say.`,
-  `Pick AT MOST ONE — only if your memory gives you something genuinely specific:`,
-  `a direct observation, contradiction, or angle not yet in the thread.`,
-  `Skip entirely if nothing compels you.`,
-  ``,
-];
-
-if (candidates.length === 0) {
-  lines.push("  (no posts with memory matches above threshold — skip)");
-  lines.push("");
-} else {
-  for (let i = 0; i < candidates.length; i++) {
-    const { post, tweetUrl, memory } = candidates[i];
-    const memExcerpt = (memory.text_content || "").replace(/\s+/g, " ").trim().slice(0, 180);
-    lines.push(`  ${i + 1}. @${post.username} [score:${(post.score || 0).toFixed(0)}]`);
-    lines.push(`     "${post.text.slice(0, 140)}"`);
-    lines.push(`     URL: ${tweetUrl}`);
-    lines.push(`     Your memory: [${memory.type} · ${memory.title} · ${memory.date}]`);
-    lines.push(`     "${memExcerpt}..."`);
-    lines.push(``);
+    writeStub([
+      `── comment candidates · ${now} ${pad(70 - now.length - 24)}`,
+      `Not ready for proactive comments yet.`,
+      ``,
+      `Threshold: confidence ≥ ${(MIN_AXIS_CONFIDENCE * 100).toFixed(0)}% with ≥ ${MIN_EVIDENCE_COUNT} evidence entries on any axis.`,
+      `Most progressed: ${bestDesc}`,
+      `── end candidates ${pad(52)}`,
+    ]);
+    console.log(`[comment] axis gate not met — most progressed: ${bestDesc}`);
+    process.exit(0);
   }
-}
 
-lines.push(`After commenting, write state/comment_done.txt (single JSON line):`);
-lines.push(`{"id":"<post_id>","username":"<user>","url":"<tweet_url>","text":"<your comment>","commented_at":"<ISO>"}`);
-lines.push(``);
-lines.push(`── end candidates ${pad(52)}`);
+  // ── Daily cap ───────────────────────────────────────────────────────────────
+  if (log.today_count >= MAX_PER_DAY) {
+    writeStub([
+      `── comment candidates · ${now} ${pad(70 - now.length - 24)}`,
+      `Daily cap reached (${log.today_count}/${MAX_PER_DAY}). No proactive comments today.`,
+      `── end candidates ${pad(52)}`,
+    ]);
+    console.log(`[comment] cap reached (${log.today_count}/${MAX_PER_DAY})`);
+    process.exit(0);
+  }
 
-writeStub(lines);
-console.log(`[comment] axis "${strongAxis.label}" (${((strongAxis.confidence||0)*100).toFixed(0)}% confidence, ${evidenceCount} entries) — wrote ${candidates.length} candidate(s)`);
-process.exit(0);
+  // ── Find candidates ─────────────────────────────────────────────────────────
+  const posts = await db.recentPosts(4, 60);
+
+  const candidates = [];
+  for (const post of posts) {
+    if (candidates.length >= CANDIDATES_LIMIT) break;
+    if ((post.score || 0) < SCORE_THRESHOLD)   continue;
+    if (log.commented_ids.includes(post.id))    continue;
+
+    const keywords = extractKeywords(post.text, 8);
+    if (!keywords.length) continue;
+
+    // Use OR between words so FTS5 doesn't require ALL keywords in one doc
+    const words = [...new Set(keywords.flatMap(k => k.split(/\s+/)))];
+    const ftsQuery = words.join(" OR ");
+    const memMatches = await db.recallMemory(ftsQuery, 1);
+    if (!memMatches.length) continue;
+
+    const tweetUrl = `https://x.com/${post.username}/status/${post.id}`;
+    candidates.push({ post, tweetUrl, memory: memMatches[0] });
+  }
+
+  // ── Build candidates file ───────────────────────────────────────────────────
+  const evidenceCount = (strongAxis.evidence_log || []).length;
+  const lines = [
+    `── comment candidates · ${now} ${pad(70 - now.length - 24)}`,
+    `Active axis: "${strongAxis.label}"`,
+    `  confidence: ${((strongAxis.confidence || 0) * 100).toFixed(0)}%  ·  ${evidenceCount} evidence entries`,
+    `  "${strongAxis.left_pole}" ↔ "${strongAxis.right_pole}"`,
+    ``,
+    `(${log.today_count}/${MAX_PER_DAY} proactive comments used today)`,
+    ``,
+    `Posts where your memory has something specific to say.`,
+    `Pick AT MOST ONE — only if your memory gives you something genuinely specific:`,
+    `a direct observation, contradiction, or angle not yet in the thread.`,
+    `Skip entirely if nothing compels you.`,
+    ``,
+  ];
+
+  if (candidates.length === 0) {
+    lines.push("  (no posts with memory matches above threshold — skip)");
+    lines.push("");
+  } else {
+    for (let i = 0; i < candidates.length; i++) {
+      const { post, tweetUrl, memory } = candidates[i];
+      const memExcerpt = (memory.text_content || "").replace(/\s+/g, " ").trim().slice(0, 180);
+      lines.push(`  ${i + 1}. @${post.username} [score:${(post.score || 0).toFixed(0)}]`);
+      lines.push(`     "${post.text.slice(0, 140)}"`);
+      lines.push(`     URL: ${tweetUrl}`);
+      lines.push(`     Your memory: [${memory.type} · ${memory.title} · ${memory.date}]`);
+      lines.push(`     "${memExcerpt}..."`);
+      lines.push(``);
+    }
+  }
+
+  lines.push(`After commenting, write state/comment_done.txt (single JSON line):`);
+  lines.push(`{"id":"<post_id>","username":"<user>","url":"<tweet_url>","text":"<your comment>","commented_at":"<ISO>"}`);
+  lines.push(``);
+  lines.push(`── end candidates ${pad(52)}`);
+
+  writeStub(lines);
+  console.log(`[comment] axis "${strongAxis.label}" (${((strongAxis.confidence||0)*100).toFixed(0)}% confidence, ${evidenceCount} entries) — wrote ${candidates.length} candidate(s)`);
+  process.exit(0);
+})().catch(err => {
+  console.error(`[comment] fatal: ${err.message}`);
+  process.exit(0); // non-fatal to runner
+});

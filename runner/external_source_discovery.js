@@ -14,7 +14,8 @@
 const fs = require("fs");
 const path = require("path");
 const config = require("./lib/config");
-const db = require("../scraper/db");
+const { loadScraperDb } = require("./lib/db_backend");
+const db = loadScraperDb();
 const {
   canonicalDomain,
   extractUrls,
@@ -251,13 +252,13 @@ function collectFromOntology(map) {
   }
 }
 
-function collectFromClaims(map) {
+async function collectFromClaims(map) {
   const tracker = readJson(CLAIMS, { claims: [] });
   for (const claim of tracker.claims || []) {
     let claimUrl = claim.cited_url || claim.source_url;
     if (!claim.cited_url && /\/status\/(\d+)/.test(String(claim.source_post_url || claim.source_url || ""))) {
       const tweetId = String(claim.source_post_url || claim.source_url).match(/\/status\/(\d+)/)?.[1];
-      const post = tweetId ? db.getPostById(tweetId) : null;
+      const post = tweetId ? await db.getPostById(tweetId) : null;
       if (post && Array.isArray(post.external_urls) && post.external_urls.length > 0) {
         claimUrl = post.external_urls[0];
       }
@@ -457,12 +458,12 @@ function buildOutput(map, previousByDomain, previousRegistry = {}) {
   };
 }
 
-function main() {
+async function main() {
   const previousRegistry = readJson(OUTPUT, { sources: [] });
   const previousByDomain = new Map((previousRegistry.sources || []).map(source => [source.domain, source]));
   const map = new Map();
   collectFromOntology(map);
-  collectFromClaims(map);
+  await collectFromClaims(map);
   collectFromPosts(map);
   collectFromQueue(map);
   collectFromFeedBuffer(map);
@@ -475,9 +476,7 @@ function main() {
   console.log(`[external_source_discovery] wrote ${output.sources.length} sources`);
 }
 
-try {
-  main();
-} catch (err) {
+main().catch(err => {
   console.error(`[external_source_discovery] error: ${err.message}`);
   process.exit(0);
-}
+});

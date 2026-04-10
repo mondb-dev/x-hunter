@@ -19,7 +19,8 @@
 
 "use strict";
 
-const db    = require("../scraper/db");
+const { loadScraperDb } = require("./lib/db_backend");
+const db = loadScraperDb();
 const { embed } = require("../scraper/embed");
 
 // ── Args ──────────────────────────────────────────────────────────────────────
@@ -45,7 +46,7 @@ async function embedBatch(entityType, rows) {
       failed++;
       process.stdout.write("x");
     } else {
-      db.storeEmbedding(entityType, String(row.id), vec);
+      await db.storeEmbedding(entityType, String(row.id), vec);
       done++;
       process.stdout.write(".");
     }
@@ -63,8 +64,8 @@ async function embedBatch(entityType, rows) {
 
   // ── Memory ──────────────────────────────────────────────────────────────────
   if (doMemory) {
-    const existingIds = db.embeddedIds("memory");
-    const allMemory   = _db.prepare("SELECT id, text_content FROM memory ORDER BY id").all();
+    const existingIds = await db.embeddedIds("memory");
+    const { rows: allMemory } = await _db.query("SELECT id, text_content FROM memory ORDER BY id");
     const pending     = allMemory.filter(r => !existingIds.has(String(r.id)));
 
     console.log(`[backfill] memory: ${allMemory.length} total, ${existingIds.size} already embedded, ${pending.length} to embed`);
@@ -85,8 +86,8 @@ async function embedBatch(entityType, rows) {
 
   // ── Posts ────────────────────────────────────────────────────────────────────
   if (doPosts) {
-    const existingIds = db.embeddedIds("post");
-    const allPosts    = _db.prepare("SELECT id, text FROM posts ORDER BY ts DESC").all();
+    const existingIds = await db.embeddedIds("post");
+    const { rows: allPosts } = await _db.query("SELECT id, text FROM posts ORDER BY ts DESC");
     const pending     = allPosts.filter(r => !existingIds.has(String(r.id)));
 
     console.log(`[backfill] posts: ${allPosts.length} total, ${existingIds.size} already embedded, ${pending.length} to embed`);

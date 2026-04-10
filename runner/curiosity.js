@@ -20,7 +20,8 @@
 
 const fs   = require("fs");
 const path = require("path");
-const db   = require("../scraper/db");
+const { loadScraperDb } = require("./lib/db_backend");
+const db = loadScraperDb();
 
 const ROOT         = path.resolve(__dirname, "..");
 const DIRECTIVE    = path.join(ROOT, "state", "curiosity_directive.txt");
@@ -558,7 +559,7 @@ function markAnchorProcessed(postId) {
   }
 
   // ── Path 2: trending — Ollama picks from top 5 scraped keywords ───────────
-  const top = db.topKeywords(4, 20).slice(0, 5);
+  const top = (await db.topKeywords(4, 20)).slice(0, 5);
 
   if (!top || top.length === 0) {
     console.log("[curiosity] no uncertain axes, no trending keywords — skipping");

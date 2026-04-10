@@ -45,6 +45,7 @@ const { generateHeroArt } = require("./art");
 const { postArticle } = require("../post_article");
 const { logArticle } = require("../posts_log");
 const { connectBrowser, getXPage } = require("../cdp");
+const config = require("../lib/config");
 
 // ── CLI flags ─────────────────────────────────────────────────────────────────
 
@@ -277,6 +278,30 @@ async function main() {
     article_url: articleUrl || "",
     landmark_number: landmarkNumber,
   });
+
+  // ── 7. Special announcement draft ──────────────────────────────────────────
+  // If this is a vocation or prediction milestone, write a draft tweet for
+  // the next post_browse cycle to pick up and post.
+
+  if (finalEval.stage === "special_vocation" || finalEval.stage === "special_prediction") {
+    const landmarkUrl = `https://sebastianhunter.fun/landmarks/${landmarkNumber}`;
+    let draft;
+    if (finalEval.stage === "special_vocation") {
+      draft =
+        `VOCATION MILESTONE — Sebastian has developed a clear analytical identity.\n\n` +
+        `${content.headline}\n\n` +
+        `${content.lead.slice(0, 200).trim()}${content.lead.length > 200 ? "..." : ""}\n\n` +
+        `Full article: ${articleUrl || landmarkUrl}`;
+    } else {
+      draft =
+        `PREDICTION CONFIRMED — ${content.headline}\n\n` +
+        `${content.lead.slice(0, 200).trim()}${content.lead.length > 200 ? "..." : ""}\n\n` +
+        `${articleUrl || landmarkUrl}`;
+    }
+    const draftPath = path.join(config.STATE_DIR, "landmark_special_draft.txt");
+    fs.writeFileSync(draftPath, draft);
+    console.log(`[landmark] special draft written → state/landmark_special_draft.txt`);
+  }
 
   console.log("\n╔═══════════════════════════════════════════╗");
   console.log(`║  LANDMARK #${String(landmarkNumber).padEnd(4)} PUBLISHED                 ║`);

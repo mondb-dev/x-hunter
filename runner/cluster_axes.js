@@ -24,7 +24,8 @@
 
 const fs   = require("fs");
 const path = require("path");
-const db   = require("../scraper/db");
+const { loadScraperDb } = require("./lib/db_backend");
+const db = loadScraperDb();
 const { embed, cosineSimilarity } = require("../scraper/embed");
 
 const ROOT       = path.resolve(__dirname, "..");
@@ -79,7 +80,7 @@ function axisHash(axis) {
     const hash     = axisHash(axis);
     const entityId = `${axis.id}:${hash}`;
 
-    let vec = db.getEmbedding("axis", entityId);
+    let vec = await db.getEmbedding("axis", entityId);
     if (!vec) {
       const text = axisText(axis);
       vec = await embed(text);
@@ -88,7 +89,7 @@ function axisHash(axis) {
         axisVectors.push(null);
         continue;
       }
-      db.storeEmbedding("axis", entityId, vec);
+      await db.storeEmbedding("axis", entityId, vec);
     }
 
     axisVectors.push(vec);

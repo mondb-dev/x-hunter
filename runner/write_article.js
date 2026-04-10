@@ -12,7 +12,8 @@ const path = require("path");
 const https = require("https");
 
 const ROOT = path.join(__dirname, "..");
-const db = require("../scraper/db.js");
+const { loadScraperDb } = require("./lib/db_backend");
+const db = loadScraperDb();
 
 // ── Load env ──────────────────────────────────────────────────────────────────
 if (fs.existsSync(path.join(ROOT, ".env"))) {
@@ -98,13 +99,13 @@ async function callGemini(prompt) { return callVertex(prompt, 4000); }
     .join("\n");
 
   // Pull recent journals (last 20 by date)
-  const recentJournals = db.recentMemory("journal", 20);
+  const recentJournals = await db.recentMemory("journal", 20);
 
   // Pull topic-relevant journals via FTS5 (dedupe with recent)
   const recentIds = new Set(recentJournals.map(r => r.id));
   const topicKeywords = [axis.label, axis.left_pole, axis.right_pole]
     .filter(Boolean).join(" ").replace(/[^\w\s]/g, " ");
-  const topicJournals = db.recallMemory(topicKeywords, 10)
+  const topicJournals = (await db.recallMemory(topicKeywords, 10))
     .filter(r => r.type === "journal" && !recentIds.has(r.id));
 
   const allJournals = [...recentJournals, ...topicJournals]
