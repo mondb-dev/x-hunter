@@ -15,6 +15,11 @@ export interface ScoringBreakdown {
   web_search: number;
 }
 
+export interface SourceStance {
+  name: string;
+  stance: string;
+}
+
 export interface VerifiedClaim {
   claim_id: string;
   claim_text: string;
@@ -30,6 +35,12 @@ export interface VerifiedClaim {
   verification_count: number;
   verified_at: string | null;
   created_at: string;
+  original_source: string | null;
+  claim_date: string | null;
+  supporting_sources: SourceStance[];
+  dissenting_sources: SourceStance[];
+  framing_analysis: string | null;
+  web_search_summary: string | null;
 }
 
 export interface VerificationStats {

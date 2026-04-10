@@ -139,16 +139,73 @@ function ClaimCard({ claim }: { claim: VerifiedClaim }) {
 
       <p className="verify-claim-text">{claim.claim_text}</p>
 
+      {/* Origin: who said it and when */}
+      {(claim.original_source || claim.claim_date) && (
+        <div className="verify-claim-origin">
+          {claim.original_source && (
+            <span className="verify-claim-origin-source">Source: {claim.original_source}</span>
+          )}
+          {claim.claim_date && (
+            <span className="verify-claim-origin-date">Reported: {claim.claim_date}</span>
+          )}
+        </div>
+      )}
+
       <ConfidenceBar score={claim.confidence_score} breakdown={claim.scoring_breakdown} />
+
+      {/* Web search summary */}
+      {claim.web_search_summary && (
+        <div className="verify-claim-summary">
+          <p>{claim.web_search_summary}</p>
+        </div>
+      )}
+
+      {/* Supporting sources */}
+      {claim.supporting_sources && claim.supporting_sources.length > 0 && (
+        <div className="verify-claim-sources verify-claim-sources--supporting">
+          <span className="verify-claim-sources-label" style={{ color: "#4ade80" }}>Supporting</span>
+          {claim.supporting_sources.map((s, i) => (
+            <div key={i} className="verify-claim-source-item">
+              <span className="verify-claim-source-name">{s.name}</span>
+              <span className="verify-claim-source-stance">{s.stance}</span>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Dissenting sources */}
+      {claim.dissenting_sources && claim.dissenting_sources.length > 0 && (
+        <div className="verify-claim-sources verify-claim-sources--dissenting">
+          <span className="verify-claim-sources-label" style={{ color: "#f87171" }}>Dissenting</span>
+          {claim.dissenting_sources.map((s, i) => (
+            <div key={i} className="verify-claim-source-item">
+              <span className="verify-claim-source-name">{s.name}</span>
+              <span className="verify-claim-source-stance">{s.stance}</span>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Framing analysis */}
+      {claim.framing_analysis && (
+        <div className="verify-claim-framing">
+          <span className="verify-claim-framing-label">Framing Analysis</span>
+          <p>{claim.framing_analysis}</p>
+        </div>
+      )}
 
       {claim.evidence_urls && claim.evidence_urls.length > 0 && (
         <div className="verify-claim-evidence">
           <span className="verify-claim-evidence-label">Evidence:</span>
-          {claim.evidence_urls.map((url, i) => (
-            <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="verify-claim-evidence-link">
-              {new URL(url).hostname.replace("www.", "")}
-            </a>
-          ))}
+          {claim.evidence_urls.map((url, i) => {
+            let hostname = url;
+            try { hostname = new URL(url).hostname.replace("www.", ""); } catch {}
+            return (
+              <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="verify-claim-evidence-link">
+                {hostname}
+              </a>
+            );
+          })}
         </div>
       )}
 

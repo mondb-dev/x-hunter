@@ -15,24 +15,29 @@ const db = require('./db');
 // ── Schema (idempotent) ─────────────────────────────────────────────────────
 db.exec(`
   CREATE TABLE IF NOT EXISTS claim_verifications (
-    claim_id           TEXT PRIMARY KEY,
-    claim_source       TEXT NOT NULL,
-    claim_text         TEXT NOT NULL,
-    confidence_score   REAL NOT NULL,
-    scoring_breakdown  TEXT,
-    status             TEXT NOT NULL DEFAULT 'unverified',
-    verification_count INTEGER DEFAULT 0,
-    last_verified_at   TEXT,
-    web_search_summary TEXT,
-    evidence_urls      TEXT,
-    tweet_posted       INTEGER DEFAULT 0,
-    tweet_url          TEXT,
-    source_handle      TEXT,
-    source_tier        INTEGER,
-    related_axis_id    TEXT,
-    category           TEXT,
-    created_at         TEXT NOT NULL,
-    updated_at         TEXT
+    claim_id            TEXT PRIMARY KEY,
+    claim_source        TEXT NOT NULL,
+    claim_text          TEXT NOT NULL,
+    confidence_score    REAL NOT NULL,
+    scoring_breakdown   TEXT,
+    status              TEXT NOT NULL DEFAULT 'unverified',
+    verification_count  INTEGER DEFAULT 0,
+    last_verified_at    TEXT,
+    web_search_summary  TEXT,
+    evidence_urls       TEXT,
+    tweet_posted        INTEGER DEFAULT 0,
+    tweet_url           TEXT,
+    source_handle       TEXT,
+    source_tier         INTEGER,
+    related_axis_id     TEXT,
+    category            TEXT,
+    original_source     TEXT,
+    claim_date          TEXT,
+    supporting_sources  TEXT,
+    dissenting_sources  TEXT,
+    framing_analysis    TEXT,
+    created_at          TEXT NOT NULL,
+    updated_at          TEXT
   );
 
   CREATE TABLE IF NOT EXISTS claim_audit_log (
@@ -54,6 +59,16 @@ db.exec(`
   CREATE INDEX IF NOT EXISTS idx_audit_claim ON claim_audit_log(claim_id);
 `);
 
+// ── Migrate: add columns if they don't exist (for existing DBs) ───────────
+try {
+  const cols = db.pragma('table_info(claim_verifications)').map(c => c.name);
+  if (!cols.includes('original_source'))    db.exec('ALTER TABLE claim_verifications ADD COLUMN original_source TEXT');
+  if (!cols.includes('claim_date'))         db.exec('ALTER TABLE claim_verifications ADD COLUMN claim_date TEXT');
+  if (!cols.includes('supporting_sources')) db.exec('ALTER TABLE claim_verifications ADD COLUMN supporting_sources TEXT');
+  if (!cols.includes('dissenting_sources')) db.exec('ALTER TABLE claim_verifications ADD COLUMN dissenting_sources TEXT');
+  if (!cols.includes('framing_analysis'))   db.exec('ALTER TABLE claim_verifications ADD COLUMN framing_analysis TEXT');
+} catch {}
+
 // ── Prepared statements ─────────────────────────────────────────────────────
 
 const stmts = {
@@ -62,11 +77,13 @@ const stmts = {
       claim_id, claim_source, claim_text, confidence_score, scoring_breakdown,
       status, verification_count, last_verified_at, web_search_summary,
       evidence_urls, source_handle, source_tier, related_axis_id, category,
+      original_source, claim_date, supporting_sources, dissenting_sources, framing_analysis,
       created_at, updated_at
     ) VALUES (
       @claim_id, @claim_source, @claim_text, @confidence_score, @scoring_breakdown,
       @status, 1, @last_verified_at, @web_search_summary,
       @evidence_urls, @source_handle, @source_tier, @related_axis_id, @category,
+      @original_source, @claim_date, @supporting_sources, @dissenting_sources, @framing_analysis,
       @created_at, @updated_at
     )
     ON CONFLICT(claim_id) DO UPDATE SET
@@ -77,6 +94,11 @@ const stmts = {
       last_verified_at   = @last_verified_at,
       web_search_summary = COALESCE(@web_search_summary, claim_verifications.web_search_summary),
       evidence_urls      = COALESCE(@evidence_urls, claim_verifications.evidence_urls),
+      original_source    = COALESCE(@original_source, claim_verifications.original_source),
+      claim_date         = COALESCE(@claim_date, claim_verifications.claim_date),
+      supporting_sources = COALESCE(@supporting_sources, claim_verifications.supporting_sources),
+      dissenting_sources = COALESCE(@dissenting_sources, claim_verifications.dissenting_sources),
+      framing_analysis   = COALESCE(@framing_analysis, claim_verifications.framing_analysis),
       updated_at         = @updated_at
   `),
 
@@ -148,6 +170,11 @@ function upsertVerification(record) {
     source_tier:        record.source_tier || null,
     related_axis_id:    record.related_axis_id || null,
     category:           record.category || null,
+    original_source:    record.original_source || null,
+    claim_date:         record.claim_date || null,
+    supporting_sources: record.supporting_sources ? JSON.stringify(record.supporting_sources) : null,
+    dissenting_sources: record.dissenting_sources ? JSON.stringify(record.dissenting_sources) : null,
+    framing_analysis:   record.framing_analysis || null,
     created_at:         record.created_at || now,
     updated_at:         now,
   });
@@ -220,6 +247,8 @@ function markExpired(claimId) {
 function parseRow(row) {
   row.scoring_breakdown = row.scoring_breakdown ? JSON.parse(row.scoring_breakdown) : {};
   row.evidence_urls = row.evidence_urls ? JSON.parse(row.evidence_urls) : [];
+  row.supporting_sources = row.supporting_sources ? JSON.parse(row.supporting_sources) : [];
+  row.dissenting_sources = row.dissenting_sources ? JSON.parse(row.dissenting_sources) : [];
   return row;
 }
 

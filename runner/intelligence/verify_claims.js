@@ -149,16 +149,20 @@ async function webSearchVerify(claimText) {
     const url = `https://${location}-aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/google/models/gemini-2.5-flash:generateContent`;
 
     const prompt = [
-      'You are a fact-checker. Evaluate the following claim using current information.',
+      'You are a fact-checker and claim analyst. Evaluate the following claim using current information.',
       '',
       `CLAIM: "${claimText}"`,
       '',
-      'Search for evidence supporting or refuting this claim. Then respond with ONLY valid JSON (no markdown, no code fences):',
+      'Search for evidence about this claim. Then respond with ONLY valid JSON (no markdown, no code fences):',
       '{',
       '  "verdict": "confirmed" | "refuted" | "partial" | "inconclusive" | "no_results",',
       '  "summary": "2-3 sentence explanation of findings",',
       '  "evidence_urls": ["url1", "url2"],',
-      '  "key_sources": ["source name 1", "source name 2"]',
+      '  "original_source": "who first made or reported this claim (person, outlet, or organization)",',
+      '  "claim_date": "approximate date the claim was first made (YYYY-MM-DD or YYYY-MM)",',
+      '  "supporting_sources": [{"name": "source name", "stance": "brief description of their position"}],',
+      '  "dissenting_sources": [{"name": "source name", "stance": "brief description of their counter-position"}],',
+      '  "framing_analysis": "Is the claim framed as a valid category/question, or is it a false dichotomy, misleading framing, or loaded question? Explain in 1-2 sentences."',
       '}',
     ].join('\n');
 
@@ -229,6 +233,11 @@ async function webSearchVerify(claimText) {
         summary: parsed.summary || '',
         evidence_urls: [...new Set([...(parsed.evidence_urls || []), ...groundingUrls])].slice(0, 5),
         key_sources: parsed.key_sources || [],
+        original_source: parsed.original_source || null,
+        claim_date: parsed.claim_date || null,
+        supporting_sources: parsed.supporting_sources || [],
+        dissenting_sources: parsed.dissenting_sources || [],
+        framing_analysis: parsed.framing_analysis || null,
       };
     } finally {
       clearTimeout(timer);
@@ -303,6 +312,12 @@ function exportVerificationData() {
         verification_count: c.verification_count,
         verified_at: c.last_verified_at,
         created_at: c.created_at,
+        original_source: c.original_source || null,
+        claim_date: c.claim_date || null,
+        supporting_sources: c.supporting_sources || [],
+        dissenting_sources: c.dissenting_sources || [],
+        framing_analysis: c.framing_analysis || null,
+        web_search_summary: c.web_search_summary || null,
       })),
     };
 
@@ -467,6 +482,11 @@ async function run() {
           source_tier:        claim.source_tier || null,
           related_axis_id:    claim.related_axis_id || null,
           category:           claim.category || null,
+          original_source:    searchData?.original_source || null,
+          claim_date:         searchData?.claim_date || null,
+          supporting_sources: searchData?.supporting_sources || null,
+          dissenting_sources: searchData?.dissenting_sources || null,
+          framing_analysis:   searchData?.framing_analysis || null,
           created_at:         claim.created_at,
         });
 
