@@ -41,7 +41,23 @@ function buildContext(): string {
     }
   } catch { /* no ontology */ }
 
-  // 2. Resolved claims from verification export
+  // 2. Vocation
+  try {
+    const voc = JSON.parse(
+      fs.readFileSync(path.join(DATA_ROOT, "state", "vocation.json"), "utf-8")
+    );
+    if (voc.label) {
+      const lines = [
+        `Label: ${voc.label}`,
+        voc.description ? `Description: ${voc.description}` : "",
+        voc.intent ? `Intent: ${voc.intent}` : "",
+        voc.statement ? `In Sebastian's words: "${voc.statement}"` : "",
+      ].filter(Boolean).join("\n");
+      parts.push(`VOCATION (status: ${voc.status ?? "unknown"}):\n${lines}`);
+    }
+  } catch { /* no vocation */ }
+
+  // 4. Resolved claims from verification export
   try {
     const exp = JSON.parse(
       fs.readFileSync(path.join(DATA_ROOT, "state", "verification_export.json"), "utf-8")
@@ -60,7 +76,7 @@ function buildContext(): string {
     }
   } catch { /* no export */ }
 
-  // 3. Latest checkpoint summary
+  // 5. Latest checkpoint summary
   try {
     const cpDir = path.join(DATA_ROOT, "checkpoints");
     const files = fs.readdirSync(cpDir).filter((f) => f.endsWith(".md")).sort();
@@ -72,7 +88,7 @@ function buildContext(): string {
     }
   } catch { /* no checkpoints */ }
 
-  // 4. Recent journal snippets (last 3)
+  // 6. Recent journal snippets (last 3)
   try {
     const jDir = path.join(DATA_ROOT, "journals");
     const files = fs.readdirSync(jDir).filter((f) => f.endsWith(".html")).sort();
