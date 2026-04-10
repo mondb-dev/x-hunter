@@ -12,7 +12,13 @@
 
 const fs   = require('fs');
 const path = require('path');
-const { Pool } = require('pg');
+// Allow running from infra/ or repo root — resolve pg from root node_modules
+let Pool;
+try {
+  Pool = require('pg').Pool;
+} catch {
+  Pool = require(require('path').join(__dirname, '..', 'node_modules', 'pg')).Pool;
+}
 
 // Load .env
 const envPath = path.join(__dirname, '../.env');
