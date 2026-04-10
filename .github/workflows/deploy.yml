@@ -1,0 +1,111 @@
+name: Deploy to Cloud Run
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web/**'
+      - 'workers/verify/**'
+      - 'workers/publish/**'
+
+env:
+  PROJECT_ID: sebastian-hunter
+  REGION: us-central1
+  REGISTRY: us-central1-docker.pkg.dev/sebastian-hunter/hunter
+
+jobs:
+  deploy-web:
+    name: Deploy Web
+    runs-on: ubuntu-latest
+    if: |
+      contains(github.event.commits[0].modified, 'web/') ||
+      contains(github.event.commits[0].added, 'web/')
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - uses: google-github-actions/setup-gcloud@v2
+
+      - name: Configure Docker
+        run: gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
+
+      - name: Build and push
+        run: |
+          docker build -t $REGISTRY/web:${{ github.sha }} -t $REGISTRY/web:latest web/
+          docker push --all-tags $REGISTRY/web
+
+      - name: Deploy to Cloud Run
+        run: |
+          gcloud run deploy sebastian-web \
+            --image=$REGISTRY/web:${{ github.sha }} \
+            --region=$REGION \
+            --platform=managed \
+            --project=$PROJECT_ID
+
+  deploy-verify:
+    name: Deploy Verify Worker
+    runs-on: ubuntu-latest
+    if: |
+      contains(toJSON(github.event.commits[*].modified), 'workers/verify/') ||
+      contains(toJSON(github.event.commits[*].added), 'workers/verify/')
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - uses: google-github-actions/setup-gcloud@v2
+
+      - name: Configure Docker
+        run: gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
+
+      - name: Build and push
+        run: |
+          docker build -t $REGISTRY/verify:${{ github.sha }} -t $REGISTRY/verify:latest workers/verify/
+          docker push --all-tags $REGISTRY/verify
+
+      - name: Deploy to Cloud Run
+        run: |
+          gcloud run deploy hunter-verify \
+            --image=$REGISTRY/verify:${{ github.sha }} \
+            --region=$REGION \
+            --platform=managed \
+            --project=$PROJECT_ID
+
+  deploy-publish:
+    name: Deploy Publish Worker
+    runs-on: ubuntu-latest
+    if: |
+      contains(toJSON(github.event.commits[*].modified), 'workers/publish/') ||
+      contains(toJSON(github.event.commits[*].added), 'workers/publish/')
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - uses: google-github-actions/setup-gcloud@v2
+
+      - name: Configure Docker
+        run: gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
+
+      - name: Build and push
+        run: |
+          docker build -t $REGISTRY/publish:${{ github.sha }} -t $REGISTRY/publish:latest workers/publish/
+          docker push --all-tags $REGISTRY/publish
+
+      - name: Deploy to Cloud Run
+        run: |
+          gcloud run deploy hunter-publish \
+            --image=$REGISTRY/publish:${{ github.sha }} \
+            --region=$REGION \
+            --platform=managed \
+            --project=$PROJECT_ID

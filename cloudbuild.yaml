@@ -1,0 +1,77 @@
+steps:
+  # Build and deploy web service when web/** changes
+  - name: 'gcr.io/cloud-builders/docker'
+    id: build-web
+    dir: 'web'
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/hunter/web:$SHORT_SHA', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/hunter/web:latest', '.']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    id: push-web
+    waitFor: ['build-web']
+    args: ['push', '--all-tags', 'us-central1-docker.pkg.dev/$PROJECT_ID/hunter/web:$SHORT_SHA']
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: deploy-web
+    waitFor: ['push-web']
+    entrypoint: gcloud
+    args:
+      - run
+      - deploy
+      - sebastian-web
+      - --image=us-central1-docker.pkg.dev/$PROJECT_ID/hunter/web:$SHORT_SHA
+      - --region=us-central1
+      - --platform=managed
+
+  # Build and deploy verify worker when workers/verify/** changes
+  - name: 'gcr.io/cloud-builders/docker'
+    id: build-verify
+    dir: 'workers/verify'
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/hunter/verify:$SHORT_SHA', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/hunter/verify:latest', '.']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    id: push-verify
+    waitFor: ['build-verify']
+    args: ['push', '--all-tags', 'us-central1-docker.pkg.dev/$PROJECT_ID/hunter/verify:$SHORT_SHA']
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: deploy-verify
+    waitFor: ['push-verify']
+    entrypoint: gcloud
+    args:
+      - run
+      - deploy
+      - hunter-verify
+      - --image=us-central1-docker.pkg.dev/$PROJECT_ID/hunter/verify:$SHORT_SHA
+      - --region=us-central1
+      - --platform=managed
+
+  # Build and deploy publish worker when workers/publish/** changes
+  - name: 'gcr.io/cloud-builders/docker'
+    id: build-publish
+    dir: 'workers/publish'
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/hunter/publish:$SHORT_SHA', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/hunter/publish:latest', '.']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    id: push-publish
+    waitFor: ['build-publish']
+    args: ['push', '--all-tags', 'us-central1-docker.pkg.dev/$PROJECT_ID/hunter/publish:$SHORT_SHA']
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: deploy-publish
+    waitFor: ['push-publish']
+    entrypoint: gcloud
+    args:
+      - run
+      - deploy
+      - hunter-publish
+      - --image=us-central1-docker.pkg.dev/$PROJECT_ID/hunter/publish:$SHORT_SHA
+      - --region=us-central1
+      - --platform=managed
+
+images:
+  - 'us-central1-docker.pkg.dev/$PROJECT_ID/hunter/web:$SHORT_SHA'
+  - 'us-central1-docker.pkg.dev/$PROJECT_ID/hunter/verify:$SHORT_SHA'
+  - 'us-central1-docker.pkg.dev/$PROJECT_ID/hunter/publish:$SHORT_SHA'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
