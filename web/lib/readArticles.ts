@@ -22,11 +22,9 @@ export interface Article {
 const ARTICLES_DIR  = path.join(DATA_ROOT, "articles");
 const ARWEAVE_LOG   = path.join(DATA_ROOT, "state", "arweave_log.json");
 
-// Public image path check — images are copied to public/images/articles/ by prebuild
-const PUBLIC_IMAGES = path.resolve(process.cwd(), "public", "images", "articles");
-
 function getImageUrl(slug: string): string | undefined {
-  const p = path.join(PUBLIC_IMAGES, `${slug}.png`);
+  // Check GCS FUSE-mounted data directory (runtime path)
+  const p = path.join(DATA_ROOT, "articles", "images", `${slug}.png`);
   return fs.existsSync(p) ? `/images/articles/${slug}.png` : undefined;
 }
 
