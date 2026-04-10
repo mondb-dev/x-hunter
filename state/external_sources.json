@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-10T22:00:34.157Z",
+  "generated_at": "2026-04-10T23:00:27.163Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-10T22:00:34.951Z",
+  "profiled_at": "2026-04-10T23:00:28.152Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -375,7 +375,7 @@
       "first_seen_at": "2026-03-31T09:30:40.000Z",
       "last_seen_at": "2026-04-10T20:17:05.000Z",
       "discovery": {
-        "distinct_urls": 409,
+        "distinct_urls": 411,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -385,9 +385,9 @@
         ],
         "origin_counts": {
           "feed_buffer": 304,
-          "feed_buffer_reply": 123
+          "feed_buffer_reply": 125
         },
-        "distinct_referring_accounts": 177,
+        "distinct_referring_accounts": 178,
         "sample_referring_accounts": [
           "_philschmid",
           "_yf1921",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:409",
+            "distinct_urls:411",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:177",
+            "referring_accounts:178",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:409",
+            "distinct_urls:411",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:177",
+            "referring_accounts:178",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -4959,7 +4959,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-07T22:52:28.548Z",
+        "fetched_at": "2026-04-10T23:00:28.151Z",
         "homepage_url": "https://tickerscores.ai/",
         "example_url": "https://tickerscores.ai/?twclid=29mi9nru582fdb9vf7t1d5r9yf",
         "homepage_status": 200,
