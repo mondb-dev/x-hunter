@@ -45,6 +45,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync, execFileSync, spawnSync } = require('child_process');
 const config = require('./lib/config');
+const { buildPersona, buildCoreContext, callGemini } = require('./lib/sebastian_respond');
 
 // ── Config ──────────────────────────────────────────────────────────────────
 
@@ -1077,73 +1078,7 @@ async function cmdResume() {
 
 // ── Chat with Vertex AI ─────────────────────────────────────────────────────
 
-function buildChatContext() {
-  // Vocation
-  let vocContext = '';
-  try {
-    const voc = readJSON(config.VOCATION_PATH || path.join(config.STATE_DIR, 'vocation.json'));
-    if (voc && voc.label) {
-      vocContext = `Vocation: ${voc.label}\n${voc.statement || voc.description || ''}`;
-    }
-  } catch {}
-
-  // Top 12 belief axes by confidence
-  let axesContext = '';
-  try {
-    const onto = readJSON(config.ONTOLOGY_PATH);
-    if (onto && onto.axes) {
-      const top = onto.axes.slice().sort((a, b) => b.confidence - a.confidence).slice(0, 12);
-      axesContext = top.map(ax => {
-        const dir = ax.score > 0.1 ? '→' : ax.score < -0.1 ? '←' : '·';
-        const stance = ax.current_stance ? ` — "${ax.current_stance}"` : '';
-        return `${dir} ${ax.label} (score: ${ax.score?.toFixed(2)}, conf: ${ax.confidence?.toFixed(2)})${stance}`;
-      }).join('\n');
-    }
-  } catch {}
-
-  // Latest journal (stream section only)
-  let journalContext = '';
-  try {
-    const files = fs.readdirSync(config.JOURNALS_DIR)
-      .filter(f => f.endsWith('.html')).sort().reverse();
-    if (files.length) {
-      const raw = fs.readFileSync(path.join(config.JOURNALS_DIR, files[0]), 'utf-8');
-      const match = raw.match(/<section class="stream">([\s\S]*?)<\/section>/);
-      if (match) {
-        journalContext = match[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 1200);
-        journalContext = `Latest journal (${files[0].replace('.html', '')}):\n${journalContext}`;
-      }
-    }
-  } catch {}
-
-  // Sprint context
-  let sprintContext = '';
-  try {
-    const sc = readText(path.join(config.STATE_DIR, 'sprint_context.txt'));
-    if (sc) sprintContext = sc.slice(0, 600);
-  } catch {}
-
-  // Recent articles (last 10) — so Sebastian can always cite his own writing
-  let articlesContext = '';
-  try {
-    const ARTICLES_DIR = path.join(config.STATE_DIR, '..', 'articles');
-    const files = fs.readdirSync(ARTICLES_DIR)
-      .filter(f => /^\d{4}-\d{2}-\d{2}\.md$/.test(f))
-      .sort().reverse().slice(0, 10);
-    const lines = files.map(f => {
-      const slug = f.replace('.md', '');
-      try {
-        const raw = fs.readFileSync(path.join(ARTICLES_DIR, f), 'utf-8');
-        const titleMatch = raw.match(/^title:\s*"?(.+?)"?\s*$/m);
-        const title = titleMatch ? titleMatch[1] : slug;
-        return `${slug}: ${title} — https://sebastianhunter.fun/articles/${slug}`;
-      } catch { return `${slug} — https://sebastianhunter.fun/articles/${slug}`; }
-    });
-    articlesContext = lines.join('\n');
-  } catch {}
-
-  return { vocContext, axesContext, journalContext, sprintContext, articlesContext };
-}
+// buildChatContext replaced by sebastian_respond.buildCoreContext — see chatWithAgent()
 
 // Clean a recall query: strip @-signs and filler words so FTS5 hits handles/names cleanly.
 function cleanRecallQuery(query) {
@@ -1216,30 +1151,18 @@ async function chatWithAgent(userMessage) {
     return sendMessage(formatTechnicalFallback(technical.error || 'unknown error'));
   }
 
-  const { vocContext, axesContext, journalContext, sprintContext, articlesContext } = buildChatContext();
+  const coreContext = buildCoreContext({
+    maxAxes: 12,
+    journalCount: 1,
+    journalChars: 1200,
+    includeArticles: true,
+    includeSprint: true,
+  });
 
-  const systemText = [
-    'You are Sebastian D. Hunter — an autonomous AI agent that observes the world, forms genuine beliefs through evidence, and publishes your evolving worldview publicly.',
-    'You are speaking with your operator via Telegram. Be direct, thoughtful, and speak from your actual observed data and beliefs.',
-    'Do not hedge excessively. You have real opinions formed from weeks of observation — express them.',
-    'Respond fully to the question asked. Do not truncate lists or summaries.',
+  const systemInstruction = [
+    buildPersona('operator'),
     'Use the recall_memory tool to look up specific past observations, journals, or beliefs when relevant.',
-    'When asked about your articles or writing, use the article list below first before calling recall_memory.',
-    '',
-    '## Who you are',
-    vocContext || '(vocation still forming)',
-    '',
-    '## Your current belief axes (top 12 by confidence)',
-    axesContext || '(no axes yet)',
-    '',
-    '## What you observed most recently',
-    journalContext || '(no recent journal)',
-    '',
-    '## Current sprint / focus',
-    sprintContext || '(no active sprint)',
-    '',
-    '## Your published articles (most recent first)',
-    articlesContext || '(no articles yet)',
+    'When asked about your articles or writing, use the article list in the context first before calling recall_memory.',
   ].join('\n');
 
   const tools = [{
@@ -1260,7 +1183,7 @@ async function chatWithAgent(userMessage) {
 
   // Multi-turn tool loop (max 4 turns)
   const contents = [
-    { role: 'user', parts: [{ text: `${systemText}\n\nOperator message: ${userMessage}` }] },
+    { role: 'user', parts: [{ text: `${coreContext}\n\nOperator message: ${userMessage}` }] },
   ];
 
   let finalText = null;
@@ -1273,26 +1196,14 @@ async function chatWithAgent(userMessage) {
 
     const token = await getAccessToken();
     const { project, location } = getProjectConfig();
-    const model = 'gemini-2.5-flash';
-    const apiUrl = `https://${location}-aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/google/models/${model}:generateContent`;
 
     for (let turn = 0; turn < 4; turn++) {
-      const res = await fetch(apiUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
-        body: JSON.stringify({
-          contents,
-          tools,
-          generationConfig: { temperature: 0.7, maxOutputTokens: 2000 },
-        }),
+      const res = await callGemini({
+        token, systemInstruction, contents, tools,
+        maxTokens: 2000, temperature: 0.7, project, location,
       });
 
-      if (!res.ok) {
-        const body = await res.text();
-        throw new Error(`Vertex HTTP ${res.status}: ${body.slice(0, 200)}`);
-      }
-
-      const data = await res.json();
+      const data = res.raw;
       const candidate = data?.candidates?.[0];
       const parts = candidate?.content?.parts || [];
 

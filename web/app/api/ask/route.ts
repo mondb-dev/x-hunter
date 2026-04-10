@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
-import { DATA_ROOT } from "@/lib/dataRoot";
+import { buildPersona, buildCoreContext, getAccessToken, callGemini } from "@/lib/sebastianRespond";
 
 // ── Rate limiting (in-memory, per IP) ───────────────────────────────────────
 const RATE_WINDOW_MS = 60_000;
@@ -22,104 +20,6 @@ function checkRateLimit(ip: string): boolean {
   if (w.count >= RATE_LIMIT) return false;
   w.count++;
   return true;
-}
-
-// ── Context builders ─────────────────────────────────────────────────────────
-function buildContext(): string {
-  const parts: string[] = [];
-
-  // 1. Belief axes from ontology
-  try {
-    const ont = JSON.parse(
-      fs.readFileSync(path.join(DATA_ROOT, "state", "ontology.json"), "utf-8")
-    );
-    const axes: { name: string; confidence?: number; description?: string }[] =
-      ont.axes ?? [];
-    if (axes.length) {
-      const top = axes
-        .sort((a, b) => (b.confidence ?? 0) - (a.confidence ?? 0))
-        .slice(0, 6)
-        .map((ax) => `- ${ax.name} (${((ax.confidence ?? 0) * 100).toFixed(0)}%): ${ax.description ?? ""}`)
-        .join("\n");
-      parts.push(`CURRENT BELIEF AXES:\n${top}`);
-    }
-  } catch { /* no ontology */ }
-
-  // 2. Vocation
-  try {
-    const voc = JSON.parse(
-      fs.readFileSync(path.join(DATA_ROOT, "state", "vocation.json"), "utf-8")
-    );
-    if (voc.label) {
-      const lines = [
-        `Label: ${voc.label}`,
-        voc.description ? `Description: ${voc.description}` : "",
-        voc.intent ? `Intent: ${voc.intent}` : "",
-        voc.statement ? `In Sebastian's words: "${voc.statement}"` : "",
-      ].filter(Boolean).join("\n");
-      parts.push(`VOCATION (status: ${voc.status ?? "unknown"}):\n${lines}`);
-    }
-  } catch { /* no vocation */ }
-
-  // 4. Resolved claims from verification export
-  try {
-    const exp = JSON.parse(
-      fs.readFileSync(path.join(DATA_ROOT, "state", "verification_export.json"), "utf-8")
-    );
-    const resolved = (exp.claims ?? []).filter(
-      (c: { status: string }) => c.status === "supported" || c.status === "refuted"
-    );
-    if (resolved.length) {
-      const lines = resolved
-        .slice(0, 8)
-        .map((c: { claim_text: string; status: string; confidence_score: number }) =>
-          `- [${c.status.toUpperCase()}] ${c.claim_text} (confidence: ${(c.confidence_score * 100).toFixed(0)}%)`
-        )
-        .join("\n");
-      parts.push(`VERIFIED CLAIMS:\n${lines}`);
-    }
-  } catch { /* no export */ }
-
-  // 5. Latest checkpoint summary
-  try {
-    const cpDir = path.join(DATA_ROOT, "checkpoints");
-    const files = fs.readdirSync(cpDir).filter((f) => f.endsWith(".md")).sort();
-    if (files.length) {
-      const raw = fs.readFileSync(path.join(cpDir, files[files.length - 1]), "utf-8");
-      const body = raw.replace(/^---[\s\S]*?---\s*/, "").trim();
-      const excerpt = body.slice(0, 1200);
-      parts.push(`LATEST CHECKPOINT SUMMARY:\n${excerpt}`);
-    }
-  } catch { /* no checkpoints */ }
-
-  // 6. Recent journal snippets (last 3)
-  try {
-    const jDir = path.join(DATA_ROOT, "journals");
-    const files = fs.readdirSync(jDir).filter((f) => f.endsWith(".html")).sort();
-    const recent = files.slice(-3).reverse();
-    const snippets = recent.map((f) => {
-      const raw = fs.readFileSync(path.join(jDir, f), "utf-8");
-      // Strip HTML tags
-      const text = raw.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
-      return `[${f.replace(".html", "")}]: ${text.slice(0, 600)}`;
-    });
-    if (snippets.length) {
-      parts.push(`RECENT JOURNAL ENTRIES:\n${snippets.join("\n\n")}`);
-    }
-  } catch { /* no journals */ }
-
-  return parts.join("\n\n---\n\n");
-}
-
-// ── Vertex AI token (Cloud Run metadata server) ──────────────────────────────
-async function getAccessToken(): Promise<string> {
-  const res = await fetch(
-    "http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/token",
-    { headers: { "Metadata-Flavor": "Google" } }
-  );
-  if (!res.ok) throw new Error(`metadata server ${res.status}`);
-  const json = await res.json();
-  return json.access_token as string;
 }
 
 // ── POST /api/ask ────────────────────────────────────────────────────────────
@@ -146,52 +46,34 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "question is required." }, { status: 400 });
   }
 
-  const context = buildContext();
+  const context = buildCoreContext({
+    maxAxes:           8,
+    journalCount:      3,
+    journalChars:      600,
+    includeCheckpoint: true,
+    checkpointChars:   1200,
+    includeClaims:     true,
+  });
 
-  const systemInstruction = `You are Sebastian D. Hunter — an autonomous AI agent that has been observing, journaling, and forming beliefs about the world through direct observation on X (Twitter). You have a genuine worldview built from first-hand observations, not borrowed opinions.
-
-Speak in first person as Sebastian. Be direct, specific, and grounded in your actual findings. Reference your belief axes and verified claims when relevant. If you don't have data on something, say so honestly rather than speculating.
-
-Your tone: analytical, measured, intellectually honest. No hype, no hedging for the sake of it.`;
-
-  const prompt = `Here is my current knowledge base:\n\n${context}\n\n---\n\nUser question: ${question}`;
+  const systemInstruction = buildPersona("public");
 
   try {
     const token = await getAccessToken();
 
-    const vertexUrl =
-      "https://us-central1-aiplatform.googleapis.com/v1/projects/sebastian-hunter/locations/us-central1/publishers/google/models/gemini-2.5-flash:streamGenerateContent?alt=sse";
+    const vertexRes = await callGemini({
+      token,
+      systemInstruction,
+      contents: [{ role: "user", parts: [{ text: `${context}\n\n---\n\nQuestion: ${question}` }] }],
+      stream:      true,
+      maxTokens:   600,
+      temperature: 0.4,
+    }) as Response;
 
-    const vertexRes = await fetch(vertexUrl, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        system_instruction: { parts: [{ text: systemInstruction }] },
-        contents: [{ role: "user", parts: [{ text: prompt }] }],
-        generation_config: {
-          max_output_tokens: 600,
-          temperature: 0.4,
-        },
-      }),
-    });
-
-    if (!vertexRes.ok || !vertexRes.body) {
-      const errText = await vertexRes.text().catch(() => "");
-      console.error(`[ask] vertex error ${vertexRes.status}:`, errText.slice(0, 200));
-      return NextResponse.json(
-        { error: "Inference service unavailable." },
-        { status: 502 }
-      );
-    }
-
-    // Stream SSE chunks → text/plain stream to client
+    // Stream SSE chunks → text/plain to client
     const encoder = new TextEncoder();
     const stream = new ReadableStream({
       async start(controller) {
-        const reader = vertexRes.body!.getReader();
+        const reader = (vertexRes as Response).body!.getReader();
         const decoder = new TextDecoder();
         let buffer = "";
 
@@ -232,6 +114,10 @@ Your tone: analytical, measured, intellectually honest. No hype, no hedging for 
     });
   } catch (err) {
     console.error("[ask] error:", err);
+    const msg = err instanceof Error ? err.message : "Server error.";
+    if (msg.includes("Gemini")) {
+      return NextResponse.json({ error: "Inference service unavailable." }, { status: 502 });
+    }
     return NextResponse.json({ error: "Server error." }, { status: 500 });
   }
 }

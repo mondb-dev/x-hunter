@@ -30,6 +30,7 @@ try { require("dotenv").config({ path: path.join(__dirname, "..", ".env") }); } 
 
 const db   = require("./db");
 const { extractKeywords } = require("./analytics");
+const { buildPersona, buildCoreContext } = require("../runner/lib/sebastian_respond");
 
 // ── Paths ─────────────────────────────────────────────────────────────────────
 const ROOT         = path.resolve(__dirname, "..");
@@ -202,35 +203,9 @@ function memoryWebUrl(filePath) {
   return `https://sebastianhunter.fun/journal/${m[1]}/${parseInt(m[2], 10)}`;
 }
 
-// ── 4. Belief & vocation context ──────────────────────────────────────────────
+// ── 4. Belief & vocation context — delegated to sebastian_respond ─────────────
 function loadBeliefContext() {
-  let beliefBlock = "";
-  try {
-    const onto = JSON.parse(fs.readFileSync(ONTOLOGY, "utf-8"));
-    const axes = (onto.axes || [])
-      .filter(a => (a.confidence || 0) >= 0.4)
-      .sort((a, b) => (b.confidence || 0) - (a.confidence || 0))
-      .slice(0, 6);
-    if (axes.length) {
-      beliefBlock = "\nWhat you currently think (your actual positions — do NOT cite these numbers or labels in replies):\n" +
-        axes.map(a => {
-          const score = a.score || 0;
-          const lean = Math.abs(score) < 0.1 ? "undecided" :
-            score > 0 ? `leaning toward: ${(a.right_pole || "").slice(0, 100)}` :
-            `leaning toward: ${(a.left_pole || "").slice(0, 100)}`;
-          return `  - On "${a.label}": ${lean}`;
-        }).join("\n") + "\n";
-    }
-  } catch {}
-
-  try {
-    const voc = JSON.parse(fs.readFileSync(VOCATION, "utf-8"));
-    if (voc.statement) {
-      beliefBlock += `\nWhat drives you: ${voc.statement}\n`;
-    }
-  } catch {}
-
-  return beliefBlock;
+  return buildCoreContext({ maxAxes: 6, journalCount: 0 });
 }
 
 // ── 5. Gemini: classify + draft with full context ─────────────────────────────
@@ -282,7 +257,8 @@ async function geminiClassify(item, threadContext = [], memoryHints = [], userHi
   // Build belief axes + vocation context
   const beliefBlock = loadBeliefContext();
 
-  const prompt = `You are Sebastian D. Hunter — a person who has spent weeks reading discourse on X and forming views. You reply like a real person, not a system.
+  const prompt = `${buildPersona('reply')}
+
 ${beliefBlock}${threadBlock}${memoryBlock}${accountBlock}${userBlock}
 The mention you are replying to:
 @${item.from_username}: "${item.text}"
