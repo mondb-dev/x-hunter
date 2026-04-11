@@ -177,6 +177,11 @@ function postBrowse({ cycle, today, hour }) {
     }
   }
 
+  // ── 4e-obs. Index browse_notes cycle block into memory table ─────────────
+  // Runs every cycle (fast — idempotent ON CONFLICT DO NOTHING inserts).
+  // New entries are picked up by backfill_embeddings on its next 2h run.
+  runScript(path.join(PROJECT_ROOT, 'runner/index_browse_notes.js'));
+
   // ── 4e-pre. Routine embedding backfill (throttled to once per 2h) ─────────
   // Embeds new memory rows via text-embedding-004 → Postgres embeddings table.
   // Idempotent; skips already-embedded rows.
@@ -249,6 +254,51 @@ function postBrowse({ cycle, today, hour }) {
         try { fs.unlinkSync(journalFile); } catch {}
       }
     } else {
+      // 5c-pre. Append raw browse_notes for this cycle as a journal appendix
+      try {
+        const notesPath = config.BROWSE_NOTES_PATH;
+        if (fs.existsSync(notesPath)) {
+          const raw = fs.readFileSync(notesPath, 'utf-8');
+          // Find the last cycle marker line — everything after it belongs to this cycle
+          const markerRe = /^--- Cycle \d+ \| .+ ---$/m;
+          const lines = raw.split('\n');
+          let markerIdx = -1;
+          for (let i = lines.length - 1; i >= 0; i--) {
+            if (markerRe.test(lines[i].trim())) { markerIdx = i; break; }
+          }
+          const cycleLines = markerIdx >= 0
+            ? lines.slice(markerIdx + 1).filter(l => l.trim())
+            : lines.filter(l => l.trim() && !markerRe.test(l.trim()));
+
+          if (cycleLines.length > 0) {
+            const items = cycleLines.map(l => {
+              const escaped = l.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+              // Highlight [TAG] prefixes for readability
+              const tagged = escaped.replace(/^(\[[\w: -]+\])\s*/,
+                '<span class="obs-tag">$1</span> ');
+              return `        <li>${tagged}</li>`;
+            }).join('\n');
+
+            const section =
+              '\n    <section class="browse-notes">\n' +
+              `      <h2>Raw Observations (Cycle ${cycle})</h2>\n` +
+              '      <ul>\n' +
+              items + '\n' +
+              '      </ul>\n' +
+              '    </section>';
+
+            let html = fs.readFileSync(journalFile, 'utf-8');
+            if (html.includes('</article>')) {
+              html = html.replace('</article>', section + '\n  </article>');
+              fs.writeFileSync(journalFile, html);
+              log(`browse_notes appendix written (${cycleLines.length} entries)`);
+            }
+          }
+        }
+      } catch (err) {
+        log(`browse_notes appendix failed (non-fatal): ${err.message}`);
+      }
+
       // 5c. git add → commit → push
       log('Browse journal written — committing and pushing...');
       try {
