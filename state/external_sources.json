@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-11T18:23:07.571Z",
+  "generated_at": "2026-04-11T19:13:02.380Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-11T12:28:25.345Z",
   "sources": [
@@ -509,9 +509,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-11T10:07:40.000Z",
+      "last_seen_at": "2026-04-11T18:40:16.000Z",
       "discovery": {
-        "distinct_urls": 49,
+        "distinct_urls": 50,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,7 +520,7 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 47,
+          "feed_buffer_reply": 48,
           "feed_buffer": 2
         },
         "distinct_referring_accounts": 41,
@@ -561,7 +561,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:49",
+            "distinct_urls:50",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -599,7 +599,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:49",
+            "distinct_urls:50",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:41",
