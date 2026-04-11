@@ -146,6 +146,20 @@ function postBrowse({ cycle, today, hour }) {
     }
   }
 
+  // ── 4e-pre. Routine embedding backfill (throttled to once per 2h) ─────────
+  // Embeds new memory rows via text-embedding-004 → Postgres embeddings table.
+  // Idempotent; skips already-embedded rows.
+  {
+    const embedStamp = path.join(config.STATE_DIR, '.last_embed_backfill');
+    const lastEmbed = fs.existsSync(embedStamp) ? fs.statSync(embedStamp).mtimeMs : 0;
+    if (Date.now() - lastEmbed > 2 * 60 * 60 * 1000) {
+      runScript(path.join(PROJECT_ROOT, 'runner/backfill_embeddings.js'), {
+        args: '--memory --batch 50',
+      });
+      try { fs.writeFileSync(embedStamp, new Date().toISOString()); } catch {}
+    }
+  }
+
   // ── 4e. Claim verification pipeline ─────────────────────────────────
   // Dispatch to Cloud Tasks worker if configured, else run inline
   const cloudTasks = require('./cloud_tasks');

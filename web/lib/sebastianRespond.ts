@@ -15,6 +15,7 @@ import fs from "fs";
 import path from "path";
 import { Pool } from "pg";
 import { DATA_ROOT } from "./dataRoot";
+import { recallViaAPI, semanticViaAPI, type MemoryHit } from "./memoryClient";
 
 // ── Postgres pool (lazy, only if DATABASE_URL is set) ────────────────────────
 let _pool: Pool | null = null;
@@ -348,6 +349,46 @@ export function recallFromFiles(query: string, maxHits = 6): RecallHit[] {
     .sort((a, b) => b._score - a._score)
     .slice(0, maxHits)
     .map(({ _score: _, ...h }) => h);
+}
+
+// ── Unified recall ───────────────────────────────────────────────────────────
+//
+// Single entry point for all recall. Runs FTS + query embedding in parallel,
+// then cosine-similarity recall, merges and deduplicates. Falls back to direct
+// Postgres FTS → file scan if the memory API is unreachable.
+
+export interface RecallResult {
+  hits:   (MemoryHit | RecallHit)[];
+  method: string;
+}
+
+export async function recall(
+  question: string,
+  token:    string,
+  limit = 8
+): Promise<RecallResult> {
+  const [embedding, ftsHits] = await Promise.all([
+    embedQuery(question, token).catch(() => null),
+    recallViaAPI(question, limit).catch(() => null),
+  ]);
+
+  const semanticHits = embedding
+    ? await semanticViaAPI(embedding, limit).catch(() => null)
+    : null;
+
+  if (semanticHits?.length || ftsHits?.length) {
+    const seen = new Set<string>();
+    const hits: MemoryHit[] = [];
+    for (const h of [...(semanticHits ?? []), ...(ftsHits ?? [])]) {
+      if (!seen.has(h.source)) { seen.add(h.source); hits.push(h); }
+    }
+    const method = semanticHits?.length ? "semantic + keyword" : "keyword";
+    return { hits: hits.slice(0, limit), method };
+  }
+
+  // Memory API unavailable — fall back to direct DB or file scan
+  const fallback = (await recallFromDB(question, limit)) ?? recallFromFiles(question, limit);
+  return { hits: fallback, method: "keyword (fallback)" };
 }
 
 // ── Vertex AI embedding ───────────────────────────────────────────────────────

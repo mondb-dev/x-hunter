@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { buildPersona, buildCoreContext, recallFromDB, recallFromFiles, getAccessToken, callGemini, embedQuery } from "@/lib/sebastianRespond";
-import { recallViaAPI, semanticViaAPI, MemoryHit } from "@/lib/memoryClient";
+import { buildPersona, buildCoreContext, recall, getAccessToken, callGemini } from "@/lib/sebastianRespond";
 
 // ── Rate limiting (in-memory, per IP) ───────────────────────────────────────
 const RATE_WINDOW_MS = 60_000;
@@ -61,35 +60,9 @@ export async function POST(req: NextRequest) {
   try {
     const token = await getAccessToken();
 
-    // Embed the query + run FTS in parallel (independent)
-    const [embedding, ftsHits] = await Promise.all([
-      embedQuery(question, token).catch(() => null),
-      recallViaAPI(question, 6).catch(() => null),
-    ]);
-
-    // Semantic recall (depends on embedding result)
-    const semanticHits = embedding
-      ? await semanticViaAPI(embedding, 6).catch(() => null)
-      : null;
-
-    // Merge: semantic first (highest cosine score), then FTS, deduplicate by source
-    let hits: MemoryHit[];
-    if (semanticHits?.length || ftsHits?.length) {
-      const seen = new Set<string>();
-      hits = [];
-      for (const h of [...(semanticHits ?? []), ...(ftsHits ?? [])]) {
-        if (!seen.has(h.source)) { seen.add(h.source); hits.push(h); }
-      }
-      hits = hits.slice(0, 8);
-    } else {
-      // Memory API unavailable — fall back to direct Postgres FTS or file scan
-      const fallback = (await recallFromDB(question, 8)) ?? recallFromFiles(question, 8);
-      hits = fallback;
-    }
-
-    const recallMethod = semanticHits?.length ? "semantic + keyword" : "keyword";
+    const { hits, method } = await recall(question, token, 8);
     const recallBlock = hits.length
-      ? `## Recalled observations (${recallMethod} match)\n` +
+      ? `## Recalled observations (${method})\n` +
         hits.map((h) => `[${h.type} · ${h.source}]: ${h.excerpt}`).join("\n\n")
       : "";
 
