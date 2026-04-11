@@ -350,6 +350,36 @@ export function recallFromFiles(query: string, maxHits = 6): RecallHit[] {
     .map(({ _score: _, ...h }) => h);
 }
 
+// ── Vertex AI embedding ───────────────────────────────────────────────────────
+
+/**
+ * Embed a query string using Gemini text-embedding-004 (768-dim).
+ * Returns null on any error so callers can degrade gracefully.
+ */
+export async function embedQuery(
+  text: string,
+  token: string,
+  project  = "sebastian-hunter",
+  location = "us-central1"
+): Promise<number[] | null> {
+  try {
+    const url = `https://${location}-aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/google/models/text-embedding-004:predict`;
+    const res = await fetch(url, {
+      method:  "POST",
+      headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
+      body:    JSON.stringify({ instances: [{ content: text }] }),
+      signal:  AbortSignal.timeout(6_000),
+    });
+    if (!res.ok) return null;
+    const data = await res.json() as {
+      predictions?: Array<{ embeddings?: { values?: number[] } }>;
+    };
+    return data?.predictions?.[0]?.embeddings?.values ?? null;
+  } catch {
+    return null;
+  }
+}
+
 // ── Auth ──────────────────────────────────────────────────────────────────────
 
 export async function getAccessToken(): Promise<string> {

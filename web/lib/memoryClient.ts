@@ -50,6 +50,41 @@ export async function recallViaAPI(
   }
 }
 
+/**
+ * Semantic recall — pass a pre-computed query embedding, get back the
+ * most similar memory rows ranked by cosine similarity.
+ * Returns null if MEMORY_API_URL is not set or the call fails.
+ */
+export async function semanticViaAPI(
+  embedding: number[],
+  limit = 8,
+  types?: string[]
+): Promise<MemoryHit[] | null> {
+  if (!MEMORY_API_URL) return null;
+  try {
+    const res = await fetch(`${MEMORY_API_URL}/semantic`, {
+      method:  "POST",
+      headers: headers(),
+      body:    JSON.stringify({ embedding, limit, types }),
+      signal:  AbortSignal.timeout(8_000),
+    });
+    if (!res.ok) return null;
+    const data = await res.json() as { hits: Omit<MemoryHit, "source">[] };
+    return (data.hits ?? []).map((h) => ({
+      ...h,
+      source:
+        (h.file_path ?? "")
+          .replace(/^(journals|checkpoints|articles)\//, "")
+          .replace(/\.(html|md)$/, "") ||
+        h.date ||
+        h.title ||
+        "unknown",
+    }));
+  } catch {
+    return null;
+  }
+}
+
 export interface ContextSnapshot {
   vocation:     unknown;
   axes:         unknown[];
