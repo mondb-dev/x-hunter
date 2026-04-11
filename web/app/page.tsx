@@ -48,7 +48,7 @@ export default async function IndexPage({
     const params = await searchParams;
     const currentPage = Math.max(1, parseInt(params?.page ?? "1", 10));
 
-    const days = getAllJournalDays(); // newest date first
+    const days = await getAllJournalDays(); // newest date first
     const ontology = readOntology();
     const latestCheckpoint = await getLatestCheckpoint();
 
