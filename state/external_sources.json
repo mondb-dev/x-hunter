@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-11T11:12:52.474Z",
+  "generated_at": "2026-04-11T19:13:02.380Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-11T11:13:22.937Z",
+  "profiled_at": "2026-04-11T12:28:25.345Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-11T09:21:41.000Z",
+      "last_seen_at": "2026-04-11T17:29:07.000Z",
       "discovery": {
-        "distinct_urls": 441,
+        "distinct_urls": 450,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,10 +384,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 325,
-          "feed_buffer_reply": 134
+          "feed_buffer": 327,
+          "feed_buffer_reply": 143
         },
-        "distinct_referring_accounts": 195,
+        "distinct_referring_accounts": 202,
         "sample_referring_accounts": [
           "60minutes",
           "_philschmid",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:441",
+            "distinct_urls:450",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:195",
+            "referring_accounts:202",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:441",
+            "distinct_urls:450",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:195",
+            "referring_accounts:202",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -509,9 +509,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-11T10:07:40.000Z",
+      "last_seen_at": "2026-04-11T18:40:16.000Z",
       "discovery": {
-        "distinct_urls": 47,
+        "distinct_urls": 50,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,10 +520,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 45,
+          "feed_buffer_reply": 48,
           "feed_buffer": 2
         },
-        "distinct_referring_accounts": 39,
+        "distinct_referring_accounts": 41,
         "sample_referring_accounts": [
           "afk500595388855",
           "andrekonsta",
@@ -561,7 +561,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:47",
+            "distinct_urls:50",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -569,7 +569,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:39",
+            "referring_accounts:41",
             "origin_types:2"
           ]
         },
@@ -599,10 +599,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:47",
+            "distinct_urls:50",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:39",
+            "referring_accounts:41",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -765,18 +765,18 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-11T08:35:00Z",
+      "last_seen_at": "2026-04-11T17:57:00Z",
       "discovery": {
-        "distinct_urls": 23,
+        "distinct_urls": 27,
         "example_urls": [
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMj5_f7x9PeEIs1Oi-MtcWpQWKNIguJurjCAEHa198wA4aBiQ-axvcXfsBblu9No4r-FEeUiKpWyp8U5zNa7jN8C3xZIWDYpAetpuoB0RPUSmNx0u1MQQ4cYbm9doVihWLA9mXy4E03PIOYR2INZZGe9cMLTQkcaD2fPxmZHx3yzBhmjaFudOUphqBsxwnuw=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCmNHptSbVV3zGxP_M6wvF6PcPxnfQnf-w9J2CIiFt2D2AVZQffTQL7N4jd0jzuJ50Mh5rLLNMVr7wNa8VaGxy95U5puMCuVK_zI9aYx7FN7TMnmb81qR7Po_gte6ZmIEAKMYoG1uREvXeWIIsn97g8Gqal8F9nghWkc0Kx6cyKYDOYeqCyIme0Rvo_yYOdQ17MK2czw==",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfGmvMCsPeFUI4B-xmyKoaAkX_AG6Q9V1ZLs6ol2Qfeui48brn29RzcplcRWPGm_jTX4UXQepNKn_bVIhXEvqz4GGcsd5ybSyDByJlOqa6DCdHVN5Wh4pP2HqPH3ym0CeYu1sncGZpEaCB",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfBcbRDc8qsGETTtjHy8r70yXj3Vj6tnRXi-SKDvn5RbZ5twBQTM9EFWeLMPoPpntCGdhdTaqiIr7LfPkqNetD5MLdxxVoZPV6S7z6mjBlTbippsba0cjyQl7kWCm-zLHaU3x499dTzzv2x8JEHMos4qCBLwyseBjF4fIOjg0cwDq9uYL4rLGwOAPbMTAJBe9a8eK_6kuP_vVP7pMSEL2EjdwyvHtt",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGs5fHdLZ8nkWbtQLu5spVzev0tHyQJVjdpL3wsAdcQGKFgaT2bTHqwXanWZmLXEosxYjsF1yGvWRxW2U7Fs0rKYiPkJHAv8bbGzJ9hli8HiAlznJ6JcMevkd_sPk1QurjhEtVOkqVTE9ThrCb7uyXZRlyHRzvp5gMMniRKE-aEl5BotGmlfPVK"
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8="
         ],
         "origin_counts": {
-          "ontology_evidence": 21,
+          "ontology_evidence": 29,
           "journals": 12
         },
         "distinct_referring_accounts": 0,
@@ -786,7 +786,10 @@
           "axis_digital_supply_chain_security",
           "axis_digital_surveillance_autonomy_v1",
           "axis_economic_indicators_reliability_v1",
+          "axis_epistemic_integrity",
+          "axis_geopolitical_rhetoric_v1",
           "axis_global_economic_stability_v1",
+          "axis_human_rights_exploitation_v1",
           "axis_national_sovereignty_v_intl_law_v1",
           "axis_ph_geopolitics_wps_v1",
           "axis_power_accountability",
@@ -818,8 +821,8 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:23",
-            "distinct_axes:10",
+            "distinct_urls:27",
+            "distinct_axes:13",
             "origin_types:2"
           ]
         },
@@ -857,8 +860,8 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:23",
-            "distinct_axes:10",
+            "distinct_urls:27",
+            "distinct_axes:13",
             "origin_types:2",
             "referring_accounts:0",
             "origin_types:2",
@@ -1533,6 +1536,130 @@
       }
     },
     {
+      "domain": "sedaily.com",
+      "entity": "Sedaily",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-11T12:02:00Z",
+      "last_seen_at": "2026-04-11T12:05:15.619Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://sedaily.com/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 2,
+          "journals": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_global_economic_stability_v1",
+          "axis_national_sovereignty_v_intl_law_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.2658333333333333,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:2",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.4,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:true",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:51",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.38393229166666665,
+          "confidence": 0.09407499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:2",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-11T12:28:24.277Z",
+        "homepage_url": "https://sedaily.com/",
+        "example_url": "https://sedaily.com/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.sedaily.com/",
+        "example_final_url": "https://www.sedaily.com/",
+        "homepage_content_type": "text/html;charset=UTF-8",
+        "example_content_type": "text/html;charset=UTF-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 51,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 51,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "absinthe.network",
       "entity": "Absinthe Network",
       "kind": "unknown",
@@ -2036,7 +2163,7 @@
       "entity": "Jpost",
       "kind": "unknown",
       "first_seen_at": "2026-04-06T20:24:01.569Z",
-      "last_seen_at": "2026-04-11T11:06:30.470Z",
+      "last_seen_at": "2026-04-11T12:05:15.619Z",
       "discovery": {
         "distinct_urls": 2,
         "example_urls": [
@@ -2044,8 +2171,8 @@
           "https://www.jpost.com/international/article-795777"
         ],
         "origin_counts": {
-          "ontology_evidence": 1,
-          "journals": 2
+          "ontology_evidence": 2,
+          "journals": 3
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -5330,7 +5457,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-08T11:42:58.461Z",
+        "fetched_at": "2026-04-11T12:03:23.967Z",
         "homepage_url": "https://executionos.app/",
         "example_url": "https://executionos.app/?twclid=21y98qnc3fpcspd69ruatoqb5k",
         "homepage_status": 200,
@@ -5912,20 +6039,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.34984375,
-          "confidence": 0.06135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:1",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.58,
           "confidence": 0.75,
@@ -5938,6 +6051,20 @@
             "corrections:false",
             "outbound_links:25",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.34984375,
+          "confidence": 0.06135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -13915,20 +14042,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3370833333333333,
-          "confidence": 0.0491,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.54,
           "confidence": 0.75,
@@ -13941,6 +14054,20 @@
             "corrections:false",
             "outbound_links:21",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3370833333333333,
+          "confidence": 0.0491,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -14035,20 +14162,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3370833333333333,
-          "confidence": 0.0491,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0,
           "confidence": 0.55,
@@ -14061,6 +14174,20 @@
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3370833333333333,
+          "confidence": 0.0491,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -14092,6 +14219,126 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "timeskuwait.com",
+      "entity": "Timeskuwait",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-11T12:05:15.619Z",
+      "last_seen_at": "2026-04-11T12:05:15.619Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://timeskuwait.com/"
+        ],
+        "origin_counts": {
+          "journals": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.37,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:9",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3370833333333333,
+          "confidence": 0.0491,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-11T12:28:25.345Z",
+        "homepage_url": "https://timeskuwait.com/",
+        "example_url": "https://timeskuwait.com/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://timeskuwait.com/",
+        "example_final_url": "https://timeskuwait.com/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 9,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 9,
           "opinion_marker": false
         }
       }
