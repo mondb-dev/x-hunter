@@ -135,12 +135,6 @@ function runScript(scriptPath, opts = {}) {
  * @param {number} cycle - current cycle number
  */
 function preBrowse(cycle) {
-  // ── 0. Cycle marker in browse_notes.md (enables per-cycle extraction) ──
-  {
-    const marker = `\n--- Cycle ${cycle} | ${new Date().toISOString()} ---\n`;
-    try { fs.appendFileSync(config.BROWSE_NOTES_PATH, marker); } catch {}
-  }
-
   // ── 1. FTS5 integrity check + rebuild if corrupted ─────────────────────
   runScript(path.join(PROJECT_ROOT, 'runner/fts_maintain.js'));
 

@@ -254,21 +254,14 @@ function postBrowse({ cycle, today, hour }) {
         try { fs.unlinkSync(journalFile); } catch {}
       }
     } else {
-      // 5c-pre. Append raw browse_notes for this cycle as a journal appendix
+      // 5c-pre. Append raw browse_notes for this cycle as a journal appendix.
+      // The agent overwrites browse_notes.md each cycle (not appends), so the
+      // entire file is the current cycle's observations — no marker needed.
       try {
         const notesPath = config.BROWSE_NOTES_PATH;
         if (fs.existsSync(notesPath)) {
           const raw = fs.readFileSync(notesPath, 'utf-8');
-          // Find the last cycle marker line — everything after it belongs to this cycle
-          const markerRe = /^--- Cycle \d+ \| .+ ---$/m;
-          const lines = raw.split('\n');
-          let markerIdx = -1;
-          for (let i = lines.length - 1; i >= 0; i--) {
-            if (markerRe.test(lines[i].trim())) { markerIdx = i; break; }
-          }
-          const cycleLines = markerIdx >= 0
-            ? lines.slice(markerIdx + 1).filter(l => l.trim())
-            : lines.filter(l => l.trim() && !markerRe.test(l.trim()));
+          const cycleLines = raw.split('\n').filter(l => l.trim());
 
           if (cycleLines.length > 0) {
             const items = cycleLines.map(l => {
