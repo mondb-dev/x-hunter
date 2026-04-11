@@ -152,10 +152,36 @@ function generateManifests() {
   }
 }
 
+// ── redeployWeb ──────────────────────────────────────────────────────────────
+/**
+ * Force a new Cloud Run revision for sebastian-web by updating LAST_SYNC env var.
+ * The new pod gets a fresh GCS FUSE mount and immediately sees all synced files.
+ * Runs with --async so the runner is not blocked while the revision rolls out.
+ */
+function redeployWeb() {
+  const project = process.env.GCP_PROJECT || 'sebastian-hunter';
+  const region  = process.env.GCP_REGION  || 'us-central1';
+  const ts = Date.now().toString();
+  try {
+    execSync(
+      `gcloud run services update sebastian-web` +
+      ` --update-env-vars LAST_SYNC=${ts}` +
+      ` --region ${region}` +
+      ` --project ${project}` +
+      ` --async` +
+      ` --quiet`,
+      { stdio: 'ignore', timeout: 30000 },
+    );
+    log('Cloud Run redeploy triggered (async)');
+  } catch (err) {
+    log(`Cloud Run redeploy error: ${err.message}`);
+  }
+}
+
 // ── syncToGCS ───────────────────────────────────────────────────────────────
 /**
- * Sync state/journals/checkpoints/articles/daily/ponders/landmarks to GCS bucket.
- * Called after data changes so the Cloud Run site (GCS FUSE mount) sees fresh data.
+ * Sync state/journals/checkpoints/articles/daily/ponders/landmarks to GCS bucket,
+ * then trigger a Cloud Run redeploy so the new pod picks up all fresh files.
  */
 function syncToGCS() {
   const bucket = process.env.GCS_DATA_BUCKET || 'sebastian-hunter-data';
@@ -172,6 +198,7 @@ function syncToGCS() {
       }
     }
     log('GCS data sync complete');
+    redeployWeb();
   } catch (err) {
     log(`GCS sync error: ${err.message}`);
   }
@@ -326,6 +353,7 @@ module.exports = {
   commitAndPush,
   triggerVercelDeploy,
   syncToGCS,
+  redeployWeb,
   createBranch,
   mergeBranch,
   deleteBranch,
