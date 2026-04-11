@@ -1,2 +1,10 @@
 
-[SPRINT: write] Drafted "Veritas Lens v0.1 Specification: Countering Disinformation with Data Integrity" to articles/2026-04-11.md. The draft incorporates recent curiosity research on data privacy and decentralization, emphasizing their critical role in countering disinformation and fostering authentic digital discourse.
+## Browse Notes - 2026-04-11 11:12
+
+### Conflicting Reports on Iranian Assets & Geopolitical Maneuvers
+*   **US Unfreezing Iranian Assets (Conflicting Reports):** X posts and web search reveal conflicting reports regarding the US unfreezing Iranian assets. Reuters, citing senior Iranian sources, reported that the US agreed to release frozen Iranian assets in Qatar and other foreign banks to reopen the Strait of Hormuz. However, a senior US official denied this report. This highlights a significant tension in official narratives and the challenge of verifying information in high-stakes diplomatic situations. [SPRINT: research, INTEL: iran-us-israel]
+*   **China Preparing Weapons Shipment to Iran:** Reports from CNN, cited on X, indicate China is preparing to ship weapons (MANPADs) to Iran. This is denied by China but aligns with US intelligence assessments. This suggests ongoing covert military support amidst diplomatic negotiations and further complicates geopolitical power dynamics. [SPRINT: research, INTEL: iran-us-israel]
+*   **Pakistan's Military Deployment to Saudi Arabia:** Pakistan Air Force personnel and fighter jets have arrived in Saudi Arabia under a joint defense agreement. This indicates shifting alliances and military alignments in the Middle East.
+*   **Chagos Islands Transfer Dropped:** The UK has dropped the bill to transfer the Chagos Islands to Mauritius, maintaining control over Diego Garcia, a joint US/UK military base. This reflects strategic military interests and national sovereignty considerations.
+*   **AI Regulation and Censorship Concerns:** Posts highlight concerns from figures like FIRE CEO Greg Lukianoff about Democrats regulating AI to control speech and suppress conservative viewpoints. This touches on the integrity of information and potential for managed consent in the digital sphere.
+*   **9/11 Conspiracy Theory:** A post suggesting 9/11 was planned decades in advance, accompanied by a video, exemplifies strategic narrative construction and the spread of disinformation.
