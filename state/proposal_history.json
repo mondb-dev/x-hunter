@@ -107,6 +107,25 @@
       "pushed_to_origin": true,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_source_diversity_audit_1775873873752",
+      "title": "Build a Belief Update Source Diversity Audit",
+      "status": "merged",
+      "proposed_at": "2026-04-11T02:17:53.723Z",
+      "resolved_at": "2026-04-11T02:32:04.681Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "pipelines/daily_maintenance.js",
+        "src/tools/source_diversity_auditor.js",
+        "src/prompts/daily_report.txt",
+        "state/belief_history.jsonl"
+      ],
+      "branch_name": "meta/proposal_source_diversity_audit_1775873873752",
+      "merge_commit": "bcd916ccc96a8e16d0ac74e30193e98894934898",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }
