@@ -279,7 +279,8 @@ function sprint() {
  * inodes — critical because the running shell holds fd open on runner.log.
  */
 function housekeeping({ today, vercelDeployHook }) {
-  // Trim feed_digest.txt to 3000 lines
+  // feed_digest.txt — time-based 72h rotation runs every 2h from post_browse.js.
+  // This is a safety-net line cap in case the trim stamp gets stale.
   trimFile(config.FEED_DIGEST_PATH, config.DIGEST_MAX_LINES);
 
   // Rotate logs (inode-preserving)

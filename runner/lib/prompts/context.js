@@ -377,6 +377,28 @@ function formatIntelligenceTensions() {
   }
 }
 
+function formatEngagementSummary() {
+  try {
+    const p = config.ENGAGEMENT_SUMMARY_PATH;
+    if (!fs.existsSync(p)) return '(engagement data not yet collected)';
+    const eng = JSON.parse(fs.readFileSync(p, 'utf-8'));
+    const s = eng.stats || {};
+    const age = eng.generated_at
+      ? Math.round((Date.now() - new Date(eng.generated_at).getTime()) / 60_000)
+      : null;
+    const ageStr = age !== null ? ` (${age}m ago)` : '';
+    const best = eng.best;
+    const bestStr = best
+      ? ` Best: "${best.text_preview.slice(0, 60)}" — ${best.likes}❤ ${best.replies}↩`
+      : '';
+    return [
+      `Recent engagement${ageStr}: avg ${s.avg_likes ?? '?'}❤ ${s.avg_replies ?? '?'}↩ per post`,
+      `Trend: ${s.trend ?? '?'} | Followers: ${eng.followers ?? '?'}`,
+      bestStr,
+    ].filter(Boolean).join('\n');
+  } catch { return '(engagement data unavailable)'; }
+}
+
 // ── Main loader ─────────────────────────────────────────────────────────────
 
 /**
@@ -471,6 +493,7 @@ function loadContext(opts) {
     ctx.journalTask       = buildJournalTask('tweet', today, hour, dayNumber);
     ctx.toolManifest      = buildToolManifest();
     ctx.lastToolResult    = loadLastToolResult();
+    ctx.engagementSummary = formatEngagementSummary();
   }
 
   return ctx;

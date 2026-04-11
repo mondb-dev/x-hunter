@@ -30,6 +30,8 @@ module.exports = function buildTweetPrompt(ctx) {
     ctx.captureStatus + '\n' +
     (ctx.postingDirective ? '── POSTING DIRECTIVE (from yesterday\'s self-review) ────────────────────────\n' +
     ctx.postingDirective + '\n' : '') +
+    '── ENGAGEMENT FEEDBACK (your recent posts) ────────────────────────────────\n' +
+    ctx.engagementSummary + '\n' +
     '───────────────────────────────────────────────────────────────────────────\n' +
     '\n' +
     'Tasks (in order, no browser):\n' +
