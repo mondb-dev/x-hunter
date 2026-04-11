@@ -11,6 +11,7 @@
  */
 
 const fs = require('fs');
+const path = require('path');
 const { execSync, execFileSync } = require('child_process');
 const config = require('./config');
 
@@ -104,6 +105,53 @@ function triggerVercelDeploy(hookUrl) {
   } catch {}
 }
 
+// ── generateManifests ────────────────────────────────────────────────────────
+/**
+ * Write articles/manifest.json and journals/manifest.json so the web app can
+ * list files without relying on GCS FUSE directory listing cache (which is
+ * stale for up to 60s after new files land in GCS).
+ *
+ * Each manifest: { generated: ISO string, files: string[] } — sorted newest-first.
+ * The web readers fall back to readdirSync if manifests are missing.
+ */
+function generateManifests() {
+  const root = config.PROJECT_ROOT;
+
+  // Articles: YYYY-MM-DD.md
+  try {
+    const articlesDir = path.join(root, 'articles');
+    if (fs.existsSync(articlesDir)) {
+      const files = fs.readdirSync(articlesDir)
+        .filter(f => /^\d{4}-\d{2}-\d{2}[^/]*\.md$/.test(f))
+        .sort()
+        .reverse();
+      fs.writeFileSync(
+        path.join(articlesDir, 'manifest.json'),
+        JSON.stringify({ generated: new Date().toISOString(), files }, null, 2),
+      );
+    }
+  } catch (err) {
+    log(`manifest generation (articles) error: ${err.message}`);
+  }
+
+  // Journals: YYYY-MM-DD_HH.html
+  try {
+    const journalsDir = path.join(root, 'journals');
+    if (fs.existsSync(journalsDir)) {
+      const files = fs.readdirSync(journalsDir)
+        .filter(f => /^\d{4}-\d{2}-\d{2}_\d{2}\.html$/.test(f))
+        .sort()
+        .reverse();
+      fs.writeFileSync(
+        path.join(journalsDir, 'manifest.json'),
+        JSON.stringify({ generated: new Date().toISOString(), files }, null, 2),
+      );
+    }
+  } catch (err) {
+    log(`manifest generation (journals) error: ${err.message}`);
+  }
+}
+
 // ── syncToGCS ───────────────────────────────────────────────────────────────
 /**
  * Sync state/journals/checkpoints/articles/daily/ponders/landmarks to GCS bucket.
@@ -114,6 +162,7 @@ function syncToGCS() {
   const root = config.PROJECT_ROOT;
   const dirs = ['state', 'journals', 'checkpoints', 'articles', 'daily', 'ponders', 'landmarks'];
   try {
+    generateManifests();
     for (const d of dirs) {
       const src = path.join(root, d);
       if (fs.existsSync(src)) {

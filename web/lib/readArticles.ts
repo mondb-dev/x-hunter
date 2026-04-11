@@ -60,15 +60,30 @@ function buildArweaveIndex(): Map<string, string> {
   return index;
 }
 
+function listArticleFiles(): string[] {
+  // Prefer manifest.json (written by syncToGCS on the VM) to avoid GCS FUSE
+  // directory-listing cache returning stale results after new files land.
+  const manifestPath = path.join(ARTICLES_DIR, "manifest.json");
+  try {
+    if (fs.existsSync(manifestPath)) {
+      const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
+      if (Array.isArray(manifest.files)) {
+        return manifest.files.filter((f: string) => /^\d{4}-\d{2}-\d{2}[^/]*\.md$/.test(f));
+      }
+    }
+  } catch { /* fall through */ }
+  // Fallback: direct directory scan
+  return fs.readdirSync(ARTICLES_DIR)
+    .filter((f) => /^\d{4}-\d{2}-\d{2}[^/]*\.md$/.test(f))
+    .sort()
+    .reverse();
+}
+
 export function getAllArticles(): Article[] {
   if (!fs.existsSync(ARTICLES_DIR)) return [];
   const arweave = buildArweaveIndex();
 
-  return fs
-    .readdirSync(ARTICLES_DIR)
-    .filter((f) => /^\d{4}-\d{2}-\d{2}\.md$/.test(f))
-    .sort()
-    .reverse() // newest first
+  return listArticleFiles()
     .map((filename) => {
       const slug = filename.replace(/\.md$/, "");
       const raw = fs.readFileSync(path.join(ARTICLES_DIR, filename), "utf-8");
