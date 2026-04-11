@@ -162,12 +162,16 @@ function redeployWeb() {
   const project = process.env.GCP_PROJECT || 'sebastian-hunter';
   const region  = process.env.GCP_REGION  || 'us-central1';
   const ts = Date.now().toString();
+  // Use the Compute Engine default SA which has roles/editor (Cloud Run included).
+  // The VM's gcloud active account may be a different SA without run.services.update.
+  const account = '362753554748-compute@developer.gserviceaccount.com';
   try {
     execSync(
       `gcloud run services update sebastian-web` +
       ` --update-env-vars LAST_SYNC=${ts}` +
       ` --region ${region}` +
       ` --project ${project}` +
+      ` --account ${account}` +
       ` --async` +
       ` --quiet`,
       { stdio: 'ignore', timeout: 30000 },
