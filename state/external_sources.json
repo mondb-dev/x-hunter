@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-11T06:05:39.103Z",
+  "generated_at": "2026-04-11T06:25:39.013Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-11T05:45:39.296Z",
   "sources": [
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-11T04:36:00.000Z",
+      "last_seen_at": "2026-04-11T05:39:51.000Z",
       "discovery": {
-        "distinct_urls": 431,
+        "distinct_urls": 433,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,10 +384,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 320,
+          "feed_buffer": 322,
           "feed_buffer_reply": 129
         },
-        "distinct_referring_accounts": 188,
+        "distinct_referring_accounts": 189,
         "sample_referring_accounts": [
           "_philschmid",
           "_yf1921",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:431",
+            "distinct_urls:433",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:188",
+            "referring_accounts:189",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:431",
+            "distinct_urls:433",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:188",
+            "referring_accounts:189",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -509,9 +509,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-10T21:48:49.000Z",
+      "last_seen_at": "2026-04-11T05:39:51.000Z",
       "discovery": {
-        "distinct_urls": 42,
+        "distinct_urls": 43,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,12 +520,13 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 40,
+          "feed_buffer_reply": 41,
           "feed_buffer": 2
         },
-        "distinct_referring_accounts": 37,
+        "distinct_referring_accounts": 38,
         "sample_referring_accounts": [
           "afk500595388855",
+          "andrekonsta",
           "anim8studio",
           "aresclips_",
           "bitcoinwealth",
@@ -533,8 +534,7 @@
           "buejordan",
           "bull_dogee",
           "chibifanpage2",
-          "cuteallthings",
-          "elonmusk"
+          "cuteallthings"
         ],
         "distinct_axes": []
       },
@@ -561,7 +561,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:42",
+            "distinct_urls:43",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -569,7 +569,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:37",
+            "referring_accounts:38",
             "origin_types:2"
           ]
         },
@@ -599,10 +599,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:42",
+            "distinct_urls:43",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:37",
+            "referring_accounts:38",
             "origin_types:2",
             "track_record_unavailable"
           ]
