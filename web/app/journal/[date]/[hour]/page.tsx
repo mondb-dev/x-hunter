@@ -2,9 +2,10 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getAllJournalDays, getJournalEntry } from "@/lib/readJournals";
 
+export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
-  const days = getAllJournalDays();
+  const days = await getAllJournalDays();
   return days.flatMap((d) =>
     d.entries.map((e) => ({
       date: e.date,
@@ -22,11 +23,13 @@ export default async function JournalEntryPage({
   const hourNum = parseInt(hour, 10);
   if (isNaN(hourNum)) notFound();
 
-  const entry = getJournalEntry(date, hourNum);
+  const [entry, allDays] = await Promise.all([
+    getJournalEntry(date, hourNum),
+    getAllJournalDays(),
+  ]);
   if (!entry) notFound();
 
-  // Find actual adjacent entries (not just ±1 hour — those files may not exist)
-  const allEntries = getAllJournalDays()
+  const allEntries = allDays
     .flatMap((d) => d.entries)
     .sort((a, b) => a.date.localeCompare(b.date) || a.hour - b.hour);
   const idx = allEntries.findIndex((e) => e.date === date && e.hour === hourNum);

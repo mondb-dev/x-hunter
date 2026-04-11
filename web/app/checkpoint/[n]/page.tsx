@@ -1,9 +1,10 @@
 import { notFound } from "next/navigation";
 import { getAllCheckpoints, getCheckpointByN } from "@/lib/readCheckpoints";
 
+export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
-  const checkpoints = getAllCheckpoints();
+  const checkpoints = await getAllCheckpoints();
   return checkpoints.map((cp) => ({ n: String(cp.n) }));
 }
 

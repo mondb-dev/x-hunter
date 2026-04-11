@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { getAllJournalDays } from "@/lib/readJournals";
 
+export const dynamic = "force-dynamic";
 
-export default function JournalsPage() {
-  const days = getAllJournalDays();
+export default async function JournalsPage() {
+  const days = await getAllJournalDays();
   const totalEntries = days.reduce((n, d) => n + d.entries.length, 0);
 
   return (

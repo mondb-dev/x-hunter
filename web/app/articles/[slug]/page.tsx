@@ -3,10 +3,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { getAllArticles, getArticleBySlug } from "@/lib/readArticles";
 
+export const dynamic = "force-dynamic";
+
 const SITE_URL = "https://sebastianhunter.fun";
 
 export async function generateStaticParams() {
-  const articles = getAllArticles();
+  const articles = await getAllArticles();
   return articles.map((a) => ({ slug: a.slug }));
 }
 
@@ -114,7 +116,5 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     </>
   );
 }
-
-// ── Copy link button (client component) ──────────────────────────────────────
 
 import CopyLinkButton from "@/components/CopyLinkButton";

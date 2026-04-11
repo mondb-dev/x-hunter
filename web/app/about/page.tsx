@@ -13,9 +13,9 @@ function daysSince(from: Date): number {
   return Math.floor((Date.now() - from.getTime()) / (1000 * 60 * 60 * 24));
 }
 
-export default function AboutPage() {
+export default async function AboutPage() {
   const ontology = readOntology();
-  const days = getAllJournalDays();
+  const days = await getAllJournalDays();
   const ponders = getAllPonders();
   const totalEntries = days.reduce((n, d) => n + d.entries.length, 0);
   const activeAxes = ontology.axes.filter(a => a.confidence > 0).length;

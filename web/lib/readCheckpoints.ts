@@ -1,10 +1,8 @@
-import fs from "fs";
-import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkHtml from "remark-html";
-import { DATA_ROOT } from "./dataRoot";
+import { gcsListFiles, gcsReadFile, gcsFileExists } from "./gcs";
 
 export interface Checkpoint {
   n: number;
@@ -14,35 +12,33 @@ export interface Checkpoint {
   contentHtml: string;
 }
 
-const CHECKPOINTS_DIR = path.join(DATA_ROOT, "checkpoints");
+export async function getAllCheckpoints(): Promise<Checkpoint[]> {
+  const files = await gcsListFiles("checkpoints", /^checkpoint_\d+\.md$/);
 
-export function getAllCheckpoints(): Checkpoint[] {
-  if (!fs.existsSync(CHECKPOINTS_DIR)) return [];
-
-  return fs
-    .readdirSync(CHECKPOINTS_DIR)
-    .filter((f) => /^checkpoint_\d+\.md$/.test(f))
-    .sort((a, b) => {
-      const nA = parseInt(a.match(/\d+/)![0]);
-      const nB = parseInt(b.match(/\d+/)![0]);
-      return nA - nB;
-    })
-    .map((filename) => {
-      const n = parseInt(filename.match(/\d+/)![0]);
-      const raw = fs.readFileSync(path.join(CHECKPOINTS_DIR, filename), "utf-8");
-      const { data, content } = matter(raw);
-      return {
-        n,
-        date: data.date ?? "",
-        title: data.title ?? `Checkpoint ${n}`,
-        content,
-        contentHtml: "",
-      };
-    });
+  return Promise.all(
+    files
+      .sort((a, b) => {
+        const nA = parseInt(a.match(/\d+/)![0]);
+        const nB = parseInt(b.match(/\d+/)![0]);
+        return nA - nB;
+      })
+      .map(async (filename) => {
+        const n = parseInt(filename.match(/\d+/)![0]);
+        const raw = await gcsReadFile(`checkpoints/${filename}`);
+        const { data, content } = matter(raw);
+        return {
+          n,
+          date: (data.date ?? "") as string,
+          title: (data.title ?? `Checkpoint ${n}`) as string,
+          content,
+          contentHtml: "",
+        };
+      }),
+  );
 }
 
 export async function getCheckpointByN(n: number): Promise<Checkpoint | null> {
-  const all = getAllCheckpoints();
+  const all = await getAllCheckpoints();
   const cp = all.find((c) => c.n === n);
   if (!cp) return null;
   const processed = await remark().use(remarkGfm).use(remarkHtml, { sanitize: false }).process(cp.content);
@@ -51,23 +47,21 @@ export async function getCheckpointByN(n: number): Promise<Checkpoint | null> {
 
 export async function getLatestCheckpoint(): Promise<Checkpoint | null> {
   try {
-    const latestPath = path.join(CHECKPOINTS_DIR, "latest.md");
-    if (!fs.existsSync(latestPath)) return null;
+    const exists = await gcsFileExists("checkpoints/latest.md");
+    if (!exists) return null;
 
-    // Read latest.md directly — it is always overwritten with the most recent checkpoint content
-    const raw = fs.readFileSync(latestPath, "utf-8");
+    const raw = await gcsReadFile("checkpoints/latest.md");
     if (!raw.trim()) return null;
     const { data, content } = matter(raw);
 
-    // Derive checkpoint number from the highest-numbered numbered file
-    const all = getAllCheckpoints();
+    const all = await getAllCheckpoints();
     const n = all.length > 0 ? all[all.length - 1].n : 1;
 
     const processed = await remark().use(remarkGfm).use(remarkHtml, { sanitize: false }).process(content);
     return {
       n,
-      date: data.date ?? "",
-      title: data.title ?? `Checkpoint ${n}`,
+      date: (data.date ?? "") as string,
+      title: (data.title ?? `Checkpoint ${n}`) as string,
       content,
       contentHtml: processed.toString(),
     };

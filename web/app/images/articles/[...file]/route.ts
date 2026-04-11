@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import fs from "fs";
 import path from "path";
-import { DATA_ROOT } from "@/lib/dataRoot";
+import { gcsReadBuffer, gcsFileExists } from "@/lib/gcs";
 
 export async function GET(
   _req: NextRequest,
@@ -9,13 +8,12 @@ export async function GET(
 ) {
   const { file } = await params;
   const filename = file.join("/");
-  const filePath = path.join(DATA_ROOT, "articles", "images", filename);
+  const relPath = `articles/images/${filename}`;
 
-  if (!fs.existsSync(filePath)) {
-    return new NextResponse(null, { status: 404 });
-  }
+  const exists = await gcsFileExists(relPath);
+  if (!exists) return new NextResponse(null, { status: 404 });
 
-  const buf = fs.readFileSync(filePath);
+  const buf = new Uint8Array(await gcsReadBuffer(relPath));
   const ext = path.extname(filename).toLowerCase();
   const contentType =
     ext === ".png" ? "image/png" :

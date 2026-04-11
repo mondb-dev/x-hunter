@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { getAllArticles } from "@/lib/readArticles";
 
-export default function LatestArticle() {
+export default async function LatestArticle() {
   try {
-    const articles = getAllArticles();
+    const articles = await getAllArticles();
     const article = articles[0] ?? null;
 
     if (!article) {

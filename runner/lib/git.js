@@ -202,7 +202,6 @@ function syncToGCS() {
       }
     }
     log('GCS data sync complete');
-    redeployWeb();
   } catch (err) {
     log(`GCS sync error: ${err.message}`);
   }

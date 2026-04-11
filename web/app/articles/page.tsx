@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { getAllArticles } from "@/lib/readArticles";
 
-export default function ArticlesPage() {
-  const articles = getAllArticles();
+export const dynamic = "force-dynamic";
+
+export default async function ArticlesPage() {
+  const articles = await getAllArticles();
 
   return (
     <>
