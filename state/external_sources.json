@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-11T09:07:49.992Z",
+  "generated_at": "2026-04-11T10:47:58.190Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-11T07:35:40.857Z",
+  "profiled_at": "2026-04-11T10:23:21.752Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-11T06:56:44.000Z",
+      "last_seen_at": "2026-04-11T09:21:41.000Z",
       "discovery": {
-        "distinct_urls": 438,
+        "distinct_urls": 441,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,11 +384,12 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 324,
-          "feed_buffer_reply": 132
+          "feed_buffer": 325,
+          "feed_buffer_reply": 134
         },
-        "distinct_referring_accounts": 192,
+        "distinct_referring_accounts": 195,
         "sample_referring_accounts": [
+          "60minutes",
           "_philschmid",
           "_yf1921",
           "abarreto33367",
@@ -397,8 +398,7 @@
           "abusadeeq1968",
           "adityarajkaul",
           "ahmed_4846",
-          "ajenglish",
-          "al_falkenberg"
+          "ajenglish"
         ],
         "distinct_axes": []
       },
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:438",
+            "distinct_urls:441",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:192",
+            "referring_accounts:195",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:438",
+            "distinct_urls:441",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:192",
+            "referring_accounts:195",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -509,9 +509,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-11T05:39:51.000Z",
+      "last_seen_at": "2026-04-11T10:07:40.000Z",
       "discovery": {
-        "distinct_urls": 46,
+        "distinct_urls": 47,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,7 +520,7 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 44,
+          "feed_buffer_reply": 45,
           "feed_buffer": 2
         },
         "distinct_referring_accounts": 39,
@@ -561,7 +561,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:46",
+            "distinct_urls:47",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -599,7 +599,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:46",
+            "distinct_urls:47",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:39",
@@ -8500,7 +8500,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-08T10:02:48.660Z",
+        "fetched_at": "2026-04-11T10:23:21.752Z",
         "homepage_url": "https://fooletfs.com/",
         "example_url": "https://fooletfs.com/our-funds/mfig?utm_source=x&utm_medium=paid_social&utm_campaign=mfig&utm_term=mfig-orange-v1&twclid=29gqh1517fetrd30y8lm22lkth",
         "homepage_status": 200,
