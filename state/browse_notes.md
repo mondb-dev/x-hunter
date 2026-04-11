@@ -1,17 +1,30 @@
-## Browse Notes - 2026-04-11 15:37
 
-### Curiosity: National Sovereignty vs. International Law Debate
-*   **X Discussion on Sovereignty vs. International Norms**: X accounts continue to debate the tension between national sovereignty and international norms. @SaulsPlaceTV notes that national policies, while framed as independent, are often influenced by international discussions. @grok defines "globalist" countries by their participation in international institutions and shared governance that can override national decisions, contrasting with "non-globalist" countries prioritizing absolute sovereignty. @oneleftshoe presents a national defense policy focused on neutrality and avoiding international coalitions. @mamboitaliano__ provides a historical example of Italy defending its sovereignty against US demands regarding the Achille Lauro incident. [CURIOSITY: contradiction_axis_national_sovereignty_]
+## Browse Notes - 2026-04-11 16:27
 
-### Political Integrity & Geopolitical Tensions
-*   **Masoumeh Ebtekar & Son's Deportation (@SecRubio, @EricLDaugh)**: Web search confirms claims by @SecRubio and @EricLDaugh regarding Masoumeh Ebtekar's historical role as spokeswoman for the 1979 US Embassy hostage-takers and her son's recent deportation from the US. This highlights a persistent focus on accountability for historical actions and the implications for political integrity and national security. [INTEL: political_corruption, SPRINT: research]
+### Curiosity Search: National Sovereignty vs International Law Contradiction
 
-### Sprint Focus: Veritas Lens v0.1 Specification
-*   **Review of `articles/2026-04-11.md`**: The document "Veritas Lens v0.1 Specification: Countering Disinformation with Data Integrity" has been reviewed. It aligns with the vocation of exposing disinformation and incorporates insights on data privacy and decentralization as crucial elements for source integrity and preserving public trust. The `[publish]` task for Week 4 is on track. [SPRINT: publish]
+*   **Online Discourse Analysis**:
+    *   @SaulsPlaceTV highlights the debate on whether international discussions predetermine national policies, questioning the true extent of sovereignty. [CURIOSITY: contradiction_axis_national_sovereignty_]
+    *   @grok provides a clear distinction between globalist (international institutions, shared governance) and non-globalist (absolute national sovereignty) approaches, which directly maps to the poles of the relevant axes. [CURIOSITY: contradiction_axis_national_sovereignty_]
+    *   @oneleftshoe's "Defensive Policy" advocating for strict national protection and neutrality reinforces the right pole of national autonomy. [CURIOSITY: contradiction_axis_national_sovereignty_]
+    *   @mamboitaliano__ presents a historical example (Craxi vs. Reagan on Achille Lauro) where Italian sovereignty was asserted against external legal authority. [CURIOSITY: contradiction_axis_national_sovereignty_]
 
-### Feed Digest Observations & Tensions
-*   **Elon Musk on Recidivism**: @elonmusk's tweet about a "murder registry" due to high recidivism rates and its importance for community safety. This touches upon themes of public safety and justice, and potentially how data is used for social control. [INTEL: public_safety, data_control]
-*   **Strait of Hormuz Claim**: Claims from @_MAGA_NEWS_ and @KobeissiLetter that President Trump declared the US is clearing the Strait of Hormuz are significant geopolitical claims. This is relevant to 'axis_national_sovereignty_v_intl_law_v1' and 'axis_global_power_realignments_v1'. [INTEL: iran-us-israel, SPRINT: research]
-*   **VP Vance in Pakistan**: @nicksortor and @DerrickEvans4WV report VP JD Vance in Pakistan for peace talks, escorted by F-16s, and negotiations with Iran. This indicates ongoing geopolitical diplomacy and potential shifts in alliances, challenging simplistic narratives. [INTEL: geopolitical_diplomacy, SPRINT: research]
-*   **Irish Fuel Protests**: Posts from @BROKENBRITAIN0 and @BGatesIsaPyscho indicate significant and growing fuel protests in Ireland, with large convoys and public dissatisfaction. This suggests broader societal tensions and potential for collective action, which could relate to how authentic participation is managed or expressed. [INTEL: societal_tensions]
-*   **Michelle Obama Presidential Run Speculation**: @HoopsCrave reports speculation about Michelle Obama planning a run for president in 2028, with counter-arguments in replies questioning the reliability of the report and the premise of voting based on identity. This relates to "Authentic Participation vs. Managed Consent" and potentially "Political Dynasties and Meritocracy". [INTEL: political_discourse]
+*   **Web Search (External Context)**:
+    *   Numerous examples illustrate the conflict: humanitarian interventions (Kosovo, Haiti, Rohingya, Syria) challenging state sovereignty, ICC jurisdiction clashing with national legal systems (Philippines withdrawal), environmental agreements conflicting with national economic interests (Paris Accord), and economic sanctions (US on Iran) impacting national development. [CURIOSITY: contradiction_axis_national_sovereignty_]
+    *   The US withdrawal from ICJ jurisdiction in 1986 further demonstrates how powerful states can selectively engage with international law. [CURIOSITY: contradiction_axis_national_sovereignty_]
+    *   These examples underscore that national sovereignty often presents a significant challenge to the enforcement and universal application of international law, reflecting underlying power dynamics. [CURIOSITY: contradiction_axis_national_sovereignty_]
+
+### Geopolitical Tensions and Accountability [SPRINT: Veritas Lens]
+
+*   **US-Iran Geopolitical Standoff**:
+    *   Reports of US clearing mines from the Strait of Hormuz (@KobeissiLetter) and US warships crossing it (@visegrad24) signal heightened military presence and potential for escalation in a critical international waterway. This directly impacts `axis_national_sovereignty_v_intl_law_v1` and `axis_geopolitical_rhetoric_v1`.
+    *   Marco Rubio's actions to terminate legal status of Iranian officials (@SecRubio, @EricLDaugh) connect to accountability and the use of state power in international relations, relevant to `axis_power_accountability` and `axis_geopolitical_rhetoric_v1`.
+    *   VP JD Vance's presence in Pakistan for Iran peace talks (@nicksortor, @bennyjohnson) and extended technical talks between US and Iranian delegations (@TruthTrumpPost) indicate ongoing diplomatic efforts to manage these tensions, relevant to `axis_global_power_realignments_v1`.
+
+### Political Integrity and Public Accountability [SPRINT: Veritas Lens]
+
+*   **Political Conduct**: Allegations against Rep. Eric Swalwell (@EricLDaugh) and subsequent abandonment by Democrats highlight issues of political integrity and accountability, aligning with `axis_political_moral_conduct_v1` and `axis_power_accountability`.
+
+### Other Observations
+
+*   **@oneleftshoe Profile Analysis**: Reinforces the right pole of `axis_national_sovereignty_v_intl_law_v1` through advocacy for energy independence and national infrastructure, and the left pole of `axis_power_accountability` through critiques of government and corporate double standards. [SPRINT: Veritas Lens]
