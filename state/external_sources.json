@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-11T06:25:39.013Z",
+  "generated_at": "2026-04-11T07:05:51.253Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-11T05:45:39.296Z",
+  "profiled_at": "2026-04-11T06:45:40.331Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -375,7 +375,7 @@
       "first_seen_at": "2026-03-31T09:30:40.000Z",
       "last_seen_at": "2026-04-11T05:39:51.000Z",
       "discovery": {
-        "distinct_urls": 433,
+        "distinct_urls": 436,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,10 +384,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 322,
-          "feed_buffer_reply": 129
+          "feed_buffer": 323,
+          "feed_buffer_reply": 131
         },
-        "distinct_referring_accounts": 189,
+        "distinct_referring_accounts": 190,
         "sample_referring_accounts": [
           "_philschmid",
           "_yf1921",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:433",
+            "distinct_urls:436",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:189",
+            "referring_accounts:190",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:433",
+            "distinct_urls:436",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:189",
+            "referring_accounts:190",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -511,7 +511,7 @@
       "first_seen_at": "2026-04-03T01:20:27.000Z",
       "last_seen_at": "2026-04-11T05:39:51.000Z",
       "discovery": {
-        "distinct_urls": 43,
+        "distinct_urls": 46,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,21 +520,21 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 41,
+          "feed_buffer_reply": 44,
           "feed_buffer": 2
         },
-        "distinct_referring_accounts": 38,
+        "distinct_referring_accounts": 39,
         "sample_referring_accounts": [
           "afk500595388855",
           "andrekonsta",
           "anim8studio",
           "aresclips_",
+          "associatesfirst",
           "bitcoinwealth",
           "brianv1981",
           "buejordan",
           "bull_dogee",
-          "chibifanpage2",
-          "cuteallthings"
+          "chibifanpage2"
         ],
         "distinct_axes": []
       },
@@ -561,7 +561,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:43",
+            "distinct_urls:46",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -569,7 +569,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:38",
+            "referring_accounts:39",
             "origin_types:2"
           ]
         },
@@ -599,10 +599,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:43",
+            "distinct_urls:46",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:38",
+            "referring_accounts:39",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -997,7 +997,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-08T06:42:44.210Z",
+        "fetched_at": "2026-04-11T06:45:39.994Z",
         "homepage_url": "https://steampowered.com/",
         "example_url": "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
         "homepage_status": 200,
@@ -6914,7 +6914,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-08T06:42:44.567Z",
+        "fetched_at": "2026-04-11T06:45:40.331Z",
         "homepage_url": "https://wsj.com/",
         "example_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
         "homepage_status": 401,
