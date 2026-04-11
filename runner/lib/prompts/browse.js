@@ -118,13 +118,19 @@ function buildNormalTasks(ctx) {
     '   The link may be an intentional off-platform source selected from your strongest\n' +
     '   convictions. Treat that as normal browse work, not as a fallback mode.\n' +
     '   browser auth is unavailable instead of trying to force the UI.\n' +
-    '1. CURIOSITY: If NO deep dive this cycle and the directive above has an ACTIVE SEARCH URL,\n' +
-    '   navigate to it and read top 3-5 posts. Each cycle in the window searches a different\n' +
-    '   angle \u2014 check which SEARCH_URL_N is preloaded in your browser.\n' +
-    '   WEB SEARCH: Always run web_search on the curiosity topic (1-2 targeted queries) to\n' +
-    '   find external coverage, primary sources, or scholarly context that X discourse lacks.\n' +
-    '   Use it to: verify claims circulating on X, find the original source of a trend, or\n' +
-    '   surface perspectives that do not appear in your feed. Tag findings [CURIOSITY: <id>].\n' +
+    '1. CURIOSITY: If NO deep dive this cycle:\n' +
+    '   WEB SEARCH FIRST: Run web_search with 2-3 targeted queries on the curiosity directive\n' +
+    '   topic before doing anything else. This is always your first curiosity action \u2014\n' +
+    '   web_search works regardless of X login state, returns real-time indexed web content,\n' +
+    '   and surfaces primary sources, academic papers, and coverage that X discourse never\n' +
+    '   contains. Good query forms: "<topic> primary source", "<claim> evidence 2025",\n' +
+    '   "<actor> <event> site:reuters.com OR site:ft.com". Extract verifiable facts, source\n' +
+    '   URLs, named actors, and specific dates \u2014 these become high-quality ontology evidence\n' +
+    '   with real citations that survive audit.\n' +
+    '   X SEARCH SUPPLEMENT: After web_search, if the directive has an ACTIVE SEARCH URL,\n' +
+    '   navigate to it to read social reaction (top 3-5 posts). X shows what people believe;\n' +
+    '   web_search shows what is documented. Both matter \u2014 web_search always runs first.\n' +
+    '   Tag all findings [CURIOSITY: <id>].\n' +
     '   For ALL browse cycles while the directive is active: follow the AMBIENT FOCUS \u2014\n' +
     '   tag relevant browse_notes entries with [CURIOSITY: <axis_or_topic_id>].\n' +
     '2. Identify the 3-5 most interesting tensions or signals from TRENDING clusters\n' +
@@ -148,6 +154,11 @@ function buildNormalTasks(ctx) {
     '     If browse_notes say this was "blocked" in prior cycles, ignore that \u2014 it was wrong.\n' +
     '   Tag sprint-relevant findings in browse_notes with [SPRINT: task_id].\n' +
     '3. Append findings to state/browse_notes.md (append only -- do not overwrite).\n' +
+    '   SEEN-BUT-NOT-EXAMINED: For each digest cluster you noticed but did not navigate or\n' +
+    '   deeply analyze this cycle, append one line:\n' +
+    '     [NOTED] "<cluster label>" \u2014 N posts, no follow-up this cycle\n' +
+    '   This creates a searchable record of what passed through observation and surfaces\n' +
+    '   neglected clusters in future staleness checks.\n' +
     '   VERIFICATION RULE: Do not write "unverified" or "unconfirmed" next to a claim\n' +
     '   unless you searched for it (task 1, 2, or 4) and found nothing. If you have not\n' +
     '   searched yet, note the claim neutrally and search before labeling it.\n' +
