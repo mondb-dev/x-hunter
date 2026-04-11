@@ -6,7 +6,8 @@
  * Daily maintenance pipeline. Runs reports and archives state.
  *   1. Axis Health Audit — detects stagnant/volatile high-confidence belief axes
  *   2. Belief Dynamics Report - calculates and records belief changes
- *   3. Archives ontology for historical comparison
+ *   3. Source Diversity Audit - analyzes sources of belief changes
+ *   4. Archives ontology for historical comparison
  *
  * Usage:
  *   node pipelines/daily_maintenance.js [--dry-run]
@@ -16,6 +17,7 @@ const fs = require('fs');
 const path = require('path');
 const { run: runAxisHealthAuditor } = require('../src/tools/axis_health_auditor');
 const { run: runBeliefReporter } = require('../src/tools/belief_reporter');
+const { run: runSourceDiversityAuditor } = require('../src/tools/source_diversity_auditor');
 
 const dryRun = process.argv.includes('--dry-run');
 
@@ -64,6 +66,10 @@ function main() {
     log('Running belief dynamics report...');
     runBeliefReporter({ dryRun });
     log('Belief dynamics report complete.');
+
+    log('Running source diversity audit...');
+    runSourceDiversityAuditor({ dryRun });
+    log('Source diversity audit complete.');
 
   } catch (err) {
     console.error('Daily maintenance failed during reporting: ' + err.message);
