@@ -54,6 +54,19 @@ function commitAndPush({ paths, message }) {
     pushOk = false;
     pushErr = 'blocked: local main still contains a failed META merge that was never pushed';
   }
+  // Pull remote changes before pushing to avoid non-fast-forward failures
+  // when code is deployed from local while the VM has pending commits.
+  if (pushOk) {
+    try {
+      execSync(`git -C "${root}" fetch origin`, { stdio: 'ignore', timeout: 20000 });
+      execSync(`git -C "${root}" rebase origin/main`, { stdio: 'ignore', timeout: 30000 });
+    } catch (e) {
+      // Rebase conflict — abort and log; push will likely fail too but that's ok
+      try { execSync(`git -C "${root}" rebase --abort`, { stdio: 'ignore', timeout: 10000 }); } catch {}
+      pushOk = false;
+      pushErr = `rebase failed: ${e.stderr ? e.stderr.toString().trim() : e.message}`.slice(0, 200);
+    }
+  }
   try {
     if (pushOk) {
       execSync(`git -C "${root}" push origin main`, { stdio: 'pipe', timeout: 30000 });
