@@ -146,6 +146,16 @@ function postBrowse({ cycle, today, hour }) {
     }
   }
 
+  // ── 4d-traj. Axis trajectory summary (throttled to once per 2h) ───────────
+  {
+    const trajStamp = path.join(config.STATE_DIR, '.last_trajectory');
+    const lastTraj = fs.existsSync(trajStamp) ? fs.statSync(trajStamp).mtimeMs : 0;
+    if (Date.now() - lastTraj > 2 * 60 * 60 * 1000) {
+      runScript(path.join(PROJECT_ROOT, 'runner/generate_trajectory.js'));
+      try { fs.writeFileSync(trajStamp, new Date().toISOString()); } catch {}
+    }
+  }
+
   // ── 4d-trim. Feed digest time-based rotation (throttled to once per 2h) ───
   // Keeps only the last 72h of digest entries; drops older blocks.
   {

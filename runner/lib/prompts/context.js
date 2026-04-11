@@ -435,6 +435,7 @@ function loadContext(opts) {
     ctx.maxNavUrls  = browseDepth === 'shallow' ? 0 : browseDepth === 'deep' ? 3 : 1;
     ctx.browseDepth = browseDepth;
 
+    ctx.trajectoryContext = readState(config.TRAJECTORY_SUMMARY_PATH, { fallback: '' });
     ctx.browseNotes       = readState(config.BROWSE_NOTES_PATH, { tail: 80, fallback: '(empty)' });
     ctx.topicSummary      = readState(config.TOPIC_SUMMARY_PATH, { fallback: '(not yet generated)' });
     ctx.digest            = readState(config.FEED_DIGEST_PATH, { tail: digestTailLines, fallback: '(not yet generated)' });

@@ -309,6 +309,125 @@ function sprintSearchTerms(task) {
 
 
 
+// ── Curiosity hit rate ────────────────────────────────────────────────────────
+//
+// After each directive expires, check whether the target axis actually gained
+// new evidence. Append a {type:'result'} entry to the log. Show running rate
+// in new directives so the agent knows if its research is productive.
+
+function evaluatePreviousDirective() {
+  if (!fs.existsSync(LOG)) return;
+  try {
+    const lines = fs.readFileSync(LOG, 'utf-8').split('\n').filter(l => l.trim());
+    const entries = lines.map(l => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
+
+    // Find most recent directive entry (axis-based) that doesn't yet have a result
+    const resultedCycles = new Set(
+      entries.filter(e => e.type === 'result').map(e => e.directive_cycle)
+    );
+    const prev = [...entries]
+      .reverse()
+      .find(e => !e.type && e.axis_id && e.cycle !== undefined && !resultedCycles.has(e.cycle));
+
+    if (!prev) return;
+
+    // Check if current cycle has passed the expiry of that directive
+    if (CURRENT_CYCLE < (prev.expires_at_cycle || 0)) return;
+
+    // Count evidence entries on that axis added after the directive was issued
+    let evidenceGained = 0;
+    if (fs.existsSync(ONTOLOGY)) {
+      const onto = JSON.parse(fs.readFileSync(ONTOLOGY, 'utf-8'));
+      const axis = (onto.axes || []).find(a => a.id === prev.axis_id);
+      if (axis) {
+        evidenceGained = (axis.evidence_log || [])
+          .filter(e => (e.timestamp || '') > prev.ts)
+          .length;
+      }
+    }
+
+    appendLog({
+      type:             'result',
+      directive_cycle:  prev.cycle,
+      directive_ts:     prev.ts,
+      axis_id:          prev.axis_id,
+      axis_label:       prev.axis_label,
+      evidence_gained:  evidenceGained,
+      hit:              evidenceGained > 0,
+    });
+    console.log(`[curiosity] hit-rate eval: "${prev.axis_label}" → ${evidenceGained} new evidence (${evidenceGained > 0 ? 'HIT' : 'MISS'})`);
+  } catch (err) {
+    console.error(`[curiosity] hit-rate eval error: ${err.message}`);
+  }
+}
+
+function computeHitRate() {
+  if (!fs.existsSync(LOG)) return null;
+  try {
+    const lines = fs.readFileSync(LOG, 'utf-8').split('\n').filter(l => l.trim());
+    const results = lines
+      .map(l => { try { return JSON.parse(l); } catch { return null; } })
+      .filter(e => e?.type === 'result')
+      .slice(-5); // last 5 directives with results
+    if (results.length < 2) return null;
+    const hits = results.filter(r => r.hit).length;
+    return { hits, total: results.length, rate: (hits / results.length).toFixed(2) };
+  } catch { return null; }
+}
+
+// ── Cross-axis contradiction detection ────────────────────────────────────────
+//
+// Finds pairs of axes with opposing score directions and overlapping topics.
+// Returns the strongest contradiction pair, or null if none found.
+
+function detectContradiction(axes) {
+  // Filter to axes with meaningful, well-established scores
+  const significant = axes.filter(a =>
+    Math.abs(a.score || 0) > 0.15 &&
+    (a.confidence || 0) > 0.5 &&
+    (a.evidence_log || []).length >= 3
+  );
+  if (significant.length < 2) return null;
+
+  // Tokenize labels into significant word sets for overlap detection
+  const STOP = new Set(['of','and','in','the','a','an','for','to','vs','or','with','at','by','from','on']);
+  function tokens(str) {
+    return new Set(
+      (str || '').toLowerCase().replace(/[^a-z0-9 ]/g, ' ').split(/\s+/)
+        .filter(w => w.length > 3 && !STOP.has(w))
+    );
+  }
+
+  let best = null;
+  let bestScore = 0;
+
+  for (let i = 0; i < significant.length; i++) {
+    for (let j = i + 1; j < significant.length; j++) {
+      const a = significant[i];
+      const b = significant[j];
+      // Must point in opposing directions
+      if (Math.sign(a.score) === Math.sign(b.score)) continue;
+
+      // Check label/pole keyword overlap
+      const tokA = new Set([...tokens(a.label), ...tokens(a.left_pole), ...tokens(a.right_pole)]);
+      const tokB = new Set([...tokens(b.label), ...tokens(b.left_pole), ...tokens(b.right_pole)]);
+      const overlap = [...tokA].filter(t => tokB.has(t)).length;
+      if (overlap === 0) continue;
+
+      // Score: magnitude of both scores × overlap × combined confidence
+      const tension = Math.abs(a.score) + Math.abs(b.score);
+      const confAvg = ((a.confidence || 0) + (b.confidence || 0)) / 2;
+      const score   = tension * overlap * confAvg;
+
+      if (score > bestScore) {
+        bestScore = score;
+        best = { a, b, overlap, tension };
+      }
+    }
+  }
+  return best;
+}
+
 // ── Log ───────────────────────────────────────────────────────────────────────
 
 function appendLog(entry) {
@@ -361,6 +480,19 @@ function markAnchorProcessed(postId) {
   const HR       = "─".repeat(70);
   const stateDir = path.join(ROOT, "state");
   if (!fs.existsSync(stateDir)) fs.mkdirSync(stateDir, { recursive: true });
+
+  // ── Evaluate previous directive hit rate ────────────────────────────────────
+  evaluatePreviousDirective();
+  const hitRate = computeHitRate();
+  const hitRateLine = hitRate
+    ? `Curiosity hit rate: ${hitRate.hits}/${hitRate.total} directives produced new evidence (${(hitRate.rate * 100).toFixed(0)}% over last ${hitRate.total})`
+    : '';
+
+  // ── Load all axes once (used by contradiction + uncertainty paths) ───────────
+  const allAxesData = (() => {
+    if (!fs.existsSync(ONTOLOGY)) return [];
+    try { return JSON.parse(fs.readFileSync(ONTOLOGY, 'utf-8')).axes || []; } catch { return []; }
+  })();
 
   // ── Path 1: discourse-triggered — someone challenged Hunter's thinking ───────
   const discourseAnchor = getUnprocessedDiscourseAnchor();
@@ -477,6 +609,67 @@ function markAnchorProcessed(postId) {
     }
   }
 
+  // ── Path 1c: cross-axis contradiction ───────────────────────────────────────
+  // Fire when two established axes point in opposing directions on overlapping
+  // topics. Research goal: find evidence that resolves or explains the tension.
+  const contradiction = detectContradiction(allAxesData);
+
+  if (contradiction) {
+    const { a, b } = contradiction;
+    const topic = [a.label, b.label]
+      .join(' vs ')
+      .replace(/[^a-zA-Z0-9 ]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+    const searchTerms = topic.split(' ').slice(0, 4).join(' ');
+    const searchUrl   = `https://x.com/search?q=${encodeURIComponent(searchTerms)}&f=live`;
+    const contSlug    = toSlug(`contradiction_${a.id}_${b.id}`).slice(0, 40);
+    const expireLine  = CURRENT_CYCLE > 0
+      ? `refreshes at cycle ${EXPIRES_CYCLE}`
+      : `refreshes in ~${CURIOSITY_EVERY} cycles`;
+
+    const contAngles = buildSearchAngles(searchTerms, null, null);
+    const contAngleLines = contAngles.map((u, i) => `  SEARCH_URL_${i + 1}: ${u}`).join('\n');
+
+    const lines = [
+      `── curiosity directive · ${tsHuman} ${HR.slice(tsHuman.length + 25)}`,
+      `CONTRADICTION DETECTED: two established axes point in opposing directions`,
+      ``,
+      `  Axis A: "${a.label}" — score ${(a.score).toFixed(3)} → ${a.score > 0 ? a.right_pole : a.left_pole}`,
+      `  Axis B: "${b.label}" — score ${(b.score).toFixed(3)} → ${b.score > 0 ? b.right_pole : b.left_pole}`,
+      ``,
+      `  These beliefs share overlapping territory but pull different directions.`,
+      `  Can both be true? Is one wrong? Find evidence that resolves this tension.`,
+      ``,
+      `ACTIVE SEARCH:`,
+      contAngleLines,
+      `  Look for: primary sources, credible analysis, data that speaks to BOTH axes.`,
+      `  Tag findings: [CURIOSITY: ${contSlug}]`,
+      ``,
+      hitRateLine ? `NOTE: ${hitRateLine}` : '',
+      `── end directive (${expireLine}) ${HR.slice(expireLine.length + 22)}`,
+    ].filter(l => l !== null);
+
+    fs.writeFileSync(DIRECTIVE, lines.join('\n'), 'utf-8');
+
+    appendLog({
+      cycle:            CURRENT_CYCLE,
+      ts,
+      driver:           'contradiction',
+      axis_a_id:        a.id,
+      axis_a_label:     a.label,
+      axis_a_score:     a.score,
+      axis_b_id:        b.id,
+      axis_b_label:     b.label,
+      axis_b_score:     b.score,
+      search_terms:     searchTerms,
+      expires_at_cycle: EXPIRES_CYCLE,
+    });
+
+    console.log(`[curiosity] driver: contradiction — "${a.label}" (${a.score.toFixed(3)}) vs "${b.label}" (${b.score.toFixed(3)})`);
+    process.exit(0);
+  }
+
   // ── Path 2: uncertainty-driven ──────────────────────────────────────────────
   const uncertainAxes = getUncertainAxes();
 
@@ -533,8 +726,9 @@ function markAnchorProcessed(postId) {
       `  When you find something relevant, tag your browse_notes entry:`,
       `    [CURIOSITY: ${axisSlug}]`,
       ``,
+      hitRateLine ? `NOTE: ${hitRateLine}` : ``,
       `── end directive (${expireLine}) ${HR.slice(expireLine.length + 22)}`,
-    ];
+    ].filter(l => l !== null);
 
     fs.writeFileSync(DIRECTIVE, lines.join("\n"), "utf-8");
 

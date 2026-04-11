@@ -66,6 +66,7 @@ module.exports = {
   BROWSE_ARCHIVE_PATH: path.join(STATE_DIR, 'browse_archive.md'),
   ACTIVE_PLAN_PATH: path.join(STATE_DIR, 'active_plan.json'),
   ENGAGEMENT_SUMMARY_PATH: path.join(STATE_DIR, 'engagement_summary.json'),
+  TRAJECTORY_SUMMARY_PATH: path.join(STATE_DIR, 'trajectory_summary.txt'),
   LAST_DAILY_PATH: path.join(STATE_DIR, 'last_daily_at.txt'),
   HEARTBEAT_PATH: path.join(PROJECT_ROOT, 'HEARTBEAT.md'),
   INDEX_DB_PATH: path.join(STATE_DIR, 'index.db'),
