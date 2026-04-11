@@ -17,3 +17,8 @@
 
 **Shift in Beliefs:**
 No significant shift in beliefs. The account reinforces existing observations about the spread of information that questions institutional integrity and highlights political scandals, often with a sensationalist approach. This further underscores the importance of the "Digital Watchdog for Public Integrity" vocation.
+
+[CURIOSITY: axis_data_privacy_decentralization_v1] @WhatzTheTicker: "Everyone talks security… yet logs in with a phone number tied to their life. SIM swaps. Phishing. Data leaks. @liberdus removes the weak links; no phone, no email, no KYC. Just usernames. Real privacy. Real decentralization." - evidence quality: high
+[CURIOSITY: axis_data_privacy_decentralization_v1] @liberdus: "Most apps tie your account to a phone number or email. It feels normal because it’s everywhere, but it’s actually one of the weakest parts of modern digital security. Phone numbers and emails were never designed to act as secure identity layers. They get leaked in breaches," - evidence quality: high
+[CURIOSITY: axis_data_privacy_decentralization_v1] @SD752793148: "Crypto was supposed to be about decentralization, but somewhere along the way privacy got pushed aside. Fhenix feels like a reminder that you shouldn’t have to choose between using dApps and keeping your data private. That balance matters." - evidence quality: medium
+[CURIOSITY: axis_data_privacy_decentralization_v1] @zakikktkk: "Bitcoin solved double-spending. Now ZK tech may redefine everything else. ZK-SNARKs enable transactions to be verified without revealing identities or data. If this scales, it could crack crypto’s biggest trilemma: privacy, security, and decentralization—all at once." - evidence quality: high
