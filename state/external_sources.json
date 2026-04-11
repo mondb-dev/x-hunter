@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-11T08:05:40.291Z",
+  "generated_at": "2026-04-11T09:07:49.992Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-11T07:35:40.857Z",
   "sources": [
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-11T05:39:51.000Z",
+      "last_seen_at": "2026-04-11T06:56:44.000Z",
       "discovery": {
-        "distinct_urls": 437,
+        "distinct_urls": 438,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,10 +384,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 323,
+          "feed_buffer": 324,
           "feed_buffer_reply": 132
         },
-        "distinct_referring_accounts": 191,
+        "distinct_referring_accounts": 192,
         "sample_referring_accounts": [
           "_philschmid",
           "_yf1921",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:437",
+            "distinct_urls:438",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:191",
+            "referring_accounts:192",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:437",
+            "distinct_urls:438",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:191",
+            "referring_accounts:192",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -765,9 +765,9 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-10T12:30:00Z",
+      "last_seen_at": "2026-04-11T08:35:00Z",
       "discovery": {
-        "distinct_urls": 22,
+        "distinct_urls": 23,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMj5_f7x9PeEIs1Oi-MtcWpQWKNIguJurjCAEHa198wA4aBiQ-axvcXfsBblu9No4r-FEeUiKpWyp8U5zNa7jN8C3xZIWDYpAetpuoB0RPUSmNx0u1MQQ4cYbm9doVihWLA9mXy4E03PIOYR2INZZGe9cMLTQkcaD2fPxmZHx3yzBhmjaFudOUphqBsxwnuw=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCmNHptSbVV3zGxP_M6wvF6PcPxnfQnf-w9J2CIiFt2D2AVZQffTQL7N4jd0jzuJ50Mh5rLLNMVr7wNa8VaGxy95U5puMCuVK_zI9aYx7FN7TMnmb81qR7Po_gte6ZmIEAKMYoG1uREvXeWIIsn97g8Gqal8F9nghWkc0Kx6cyKYDOYeqCyIme0Rvo_yYOdQ17MK2czw==",
@@ -776,7 +776,7 @@
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGs5fHdLZ8nkWbtQLu5spVzev0tHyQJVjdpL3wsAdcQGKFgaT2bTHqwXanWZmLXEosxYjsF1yGvWRxW2U7Fs0rKYiPkJHAv8bbGzJ9hli8HiAlznJ6JcMevkd_sPk1QurjhEtVOkqVTE9ThrCb7uyXZRlyHRzvp5gMMniRKE-aEl5BotGmlfPVK"
         ],
         "origin_counts": {
-          "ontology_evidence": 20,
+          "ontology_evidence": 21,
           "journals": 12
         },
         "distinct_referring_accounts": 0,
@@ -818,7 +818,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:22",
+            "distinct_urls:23",
             "distinct_axes:10",
             "origin_types:2"
           ]
@@ -857,7 +857,7 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:22",
+            "distinct_urls:23",
             "distinct_axes:10",
             "origin_types:2",
             "referring_accounts:0",
