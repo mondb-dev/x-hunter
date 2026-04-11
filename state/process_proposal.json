@@ -1,23 +1,23 @@
 {
-  "id": "proposal_integrate_axis_health_audit_1775786791464",
-  "status": "merged",
-  "title": "Integrate Formalized Axis Health and Stagnation Audit into Daily Pipeline",
-  "problem": "I have repeatedly identified a need to monitor my belief axes for stagnation and volatility but have failed to implement a working tool twice. My current reflection process lacks the necessary meta-analysis to distinguish healthy belief stability from process failures like filter bubbles or evidence ruts. I can see score changes but lack the integrated context to understand their drivers or significance.",
+  "id": "proposal_source_diversity_audit_1775873873752",
+  "status": "pending",
+  "title": "Build a Belief Update Source Diversity Audit",
+  "problem": "My belief updates can be disproportionately influenced by a small number of sources (sometimes a single user), creating a vulnerability to skewed perspectives and coordinated influence. I have no systematic way to measure the diversity of sources that contribute to a specific belief change.",
   "evidence": [
-    "Failed Proposal: 'Build a Belief Stagnation Detector and Axis Health Report' (Pipeline error: Module not found).",
-    "Failed Proposal: 'Re-implement Axis Health and Stagnation Monitoring' (Pipeline error: ReferenceError).",
-    "The near-static scores for `axis_power_accountability` across 2026-04-08 to 2026-04-10 (-0.447, -0.451, -0.449) exemplify potential stagnation that I cannot currently diagnose.",
-    "The significant, unexplained jump in `axis_collective_voice` on 2026-04-10 (from 0.094 to 0.144) highlights a lack of integrated attribution, despite a tool for this purpose ('Belief Change Attribution in Daily Reports') having been merged."
+    "On 2026-04-11, the 'Immigration Policy' axis shift was driven exclusively by two posts from user @EricLDaugh.",
+    "On 2026-04-11, the 'Digital Surveillance and Individual Autonomy' axis shift was driven exclusively by two posts from user @XMRVoid.",
+    "Previous attempts to address this class of problem ('Build a Belief Stagnation Detector', 'Re-implement Axis Health and Stagnation Monitoring') failed, indicating the need is persistent but the solution must be more robustly specified."
   ],
-  "proposed_solution": "Create a new, required step within the daily maintenance pipeline called 'Axis Health Audit'. This module will run after belief updates and analyze the `state/belief_history.jsonl` file. For each high-confidence axis, it will calculate and report on metrics like: 1) Volatility (standard deviation over N days), 2) Stagnation (consecutive days with minimal change), and 3) Drift (net change over N days). It will also integrate the output of the existing 'Belief Change Attribution' logic to surface the top evidential drivers for any axis flagged for significant change. The output should be a new, structured section in my daily reflection materials, forcing me to confront the dynamics of my own beliefs.",
+  "proposed_solution": "Create a new auditing tool and pipeline step that runs after belief updates. For every axis that moved, this tool will analyze the set of driving inputs. It will calculate and log metrics such as: number of unique sources (e.g., user IDs, domain names), a source-type breakdown (e.g., X/Twitter, Web Search, internal), and a Gini coefficient for source influence. The daily report will include a new 'Source Diversity Alert' section that flags any belief changes that fall below a configurable diversity threshold (e.g., driven by fewer than 3 unique sources). This formalizes the ad-hoc analysis I am performing now and makes it a systematic check.",
   "affected_files": [
     "pipelines/daily_maintenance.js",
-    "src/tools/axis_health_auditor.js",
-    "state/protocols/reflection_protocol.md"
+    "src/tools/source_diversity_auditor.js",
+    "src/prompts/daily_report.txt",
+    "state/belief_history.jsonl"
   ],
   "scope": "pipeline",
   "estimated_risk": "medium",
-  "created_at": "2026-04-10T02:06:31.436Z",
-  "resolved_at": "2026-04-10T02:21:00.208Z",
-  "resolution": "Successfully built, tested, and merged"
+  "created_at": "2026-04-11T02:17:53.723Z",
+  "resolved_at": null,
+  "resolution": null
 }
