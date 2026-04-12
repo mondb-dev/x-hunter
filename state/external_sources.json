@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-12T18:28:29.546Z",
+  "generated_at": "2026-04-12T18:58:37.401Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-12T16:58:58.134Z",
   "sources": [
@@ -509,9 +509,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-12T12:30:00.000Z",
+      "last_seen_at": "2026-04-12T17:20:04.000Z",
       "discovery": {
-        "distinct_urls": 55,
+        "distinct_urls": 56,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,10 +520,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 53,
+          "feed_buffer_reply": 54,
           "feed_buffer": 2
         },
-        "distinct_referring_accounts": 45,
+        "distinct_referring_accounts": 46,
         "sample_referring_accounts": [
           "afk500595388855",
           "andrekonsta",
@@ -561,7 +561,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:55",
+            "distinct_urls:56",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -569,7 +569,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:45",
+            "referring_accounts:46",
             "origin_types:2"
           ]
         },
@@ -599,10 +599,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:55",
+            "distinct_urls:56",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:45",
+            "referring_accounts:46",
             "origin_types:2",
             "track_record_unavailable"
           ]
