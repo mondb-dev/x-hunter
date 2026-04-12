@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { buildPersona, buildCoreContext, recall, getAccessToken, callGemini } from "@/lib/sebastianRespond";
+// disabled — re-enable by removing the early return below and restoring the import
+// import { buildPersona, buildCoreContext, recall, getAccessToken, callGemini } from "@/lib/sebastianRespond";
 
 // ── Rate limiting (in-memory, per IP) ───────────────────────────────────────
 const RATE_WINDOW_MS = 60_000;
@@ -24,6 +25,9 @@ function checkRateLimit(ip: string): boolean {
 
 // ── POST /api/ask ────────────────────────────────────────────────────────────
 export async function POST(req: NextRequest) {
+  // temporarily disabled
+  return NextResponse.json({ error: "Ask is currently unavailable." }, { status: 503 });
+  // eslint-disable-next-line no-unreachable
   const ip =
     req.headers.get("x-forwarded-for")?.split(",")[0].trim() ?? "unknown";
 
