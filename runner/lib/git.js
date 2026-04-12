@@ -59,7 +59,8 @@ function commitAndPush({ paths, message }) {
   if (pushOk) {
     try {
       execSync(`git -C "${root}" fetch origin`, { stdio: 'ignore', timeout: 20000 });
-      execSync(`git -C "${root}" rebase origin/main`, { stdio: 'ignore', timeout: 30000 });
+      // -Xtheirs: VM state files always win over remote code-push changes
+      execSync(`git -C "${root}" rebase -Xtheirs origin/main`, { stdio: 'ignore', timeout: 30000 });
     } catch (e) {
       // Rebase conflict — abort and log; push will likely fail too but that's ok
       try { execSync(`git -C "${root}" rebase --abort`, { stdio: 'ignore', timeout: 10000 }); } catch {}

@@ -368,14 +368,26 @@ function checkMetaAutoRevert(hits) {
 
       if (unpushed > 0) {
         console.log(`[watchdog] JOURNAL: ${unpushed} unpushed commit(s) — pushing...`);
+        // Fetch + rebase before pushing to handle commits pushed from local dev
+        let rebaseOk = true;
         try {
-          execSync(
-            `git -C "${ROOT}" push origin main`,
-            { encoding: "utf-8", timeout: 60_000 }
-          );
-          console.log("[watchdog] JOURNAL: git push OK");
+          execSync(`git -C "${ROOT}" fetch origin`, { encoding: "utf-8", timeout: 20_000 });
+          execSync(`git -C "${ROOT}" rebase origin/main`, { encoding: "utf-8", timeout: 30_000 });
         } catch (e) {
-          console.error(`[watchdog] JOURNAL: git push failed: ${e.message}`);
+          rebaseOk = false;
+          console.error(`[watchdog] JOURNAL: rebase failed — aborting: ${e.message?.slice(0, 120)}`);
+          try { execSync(`git -C "${ROOT}" rebase --abort`, { stdio: "ignore", timeout: 10_000 }); } catch {}
+        }
+        if (rebaseOk) {
+          try {
+            execSync(
+              `git -C "${ROOT}" push origin main`,
+              { encoding: "utf-8", timeout: 60_000 }
+            );
+            console.log("[watchdog] JOURNAL: git push OK");
+          } catch (e) {
+            console.error(`[watchdog] JOURNAL: git push failed: ${e.message}`);
+          }
         }
       } else {
         console.log("[watchdog] JOURNAL: git push confirmed");
