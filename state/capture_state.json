@@ -1,156 +1,164 @@
 {
-  "checked_at": "2026-04-11T02:16:38.642Z",
-  "evidence_24h": 219,
-  "unique_sources": 64,
-  "status": "clean",
-  "alerts": [],
-  "summary": "Evidence distribution looks healthy (219 entries across 64 sources, 21 axes).",
+  "checked_at": "2026-04-12T02:44:32.758Z",
+  "evidence_24h": 185,
+  "unique_sources": 52,
+  "status": "warning",
+  "alerts": [
+    {
+      "type": "source_dominance",
+      "severity": "moderate",
+      "detail": "@unknown accounts for 28% of today's evidence (52/185)",
+      "username": "unknown",
+      "share": 0.281
+    }
+  ],
+  "summary": "1 capture alert(s) detected:\n[MODERATE] @unknown accounts for 28% of today's evidence (52/185)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 23,
-      "share": 0.105
+      "count": 52,
+      "share": 0.281
     },
     "nicksortor": {
       "username": "nicksortor",
-      "count": 19,
-      "share": 0.087
+      "count": 10,
+      "share": 0.054
     },
-    "saffron_sniper1": {
-      "username": "saffron_sniper1",
-      "count": 14,
-      "share": 0.064
-    },
-    "watcherguru": {
-      "username": "watcherguru",
+    "ericldaugh": {
+      "username": "ericldaugh",
       "count": 9,
-      "share": 0.041
+      "share": 0.049
     },
-    "generalmcnews": {
-      "username": "generalmcnews",
-      "count": 8,
-      "share": 0.037
+    "bricsinfo": {
+      "username": "bricsinfo",
+      "count": 9,
+      "share": 0.049
     },
-    "globeeyenews": {
-      "username": "globeeyenews",
-      "count": 8,
-      "share": 0.037
-    },
-    "mtracey": {
-      "username": "mtracey",
+    "ksorbs": {
+      "username": "ksorbs",
       "count": 7,
+      "share": 0.038
+    },
+    "kobeissiletter": {
+      "username": "kobeissiletter",
+      "count": 6,
       "share": 0.032
     },
-    "projectconstitu": {
-      "username": "projectconstitu",
-      "count": 6,
+    "defense_civil25": {
+      "username": "defense_civil25",
+      "count": 5,
       "share": 0.027
     },
-    "rawsalerts": {
-      "username": "rawsalerts",
+    "thebritlad": {
+      "username": "thebritlad",
       "count": 5,
-      "share": 0.023
+      "share": 0.027
     },
-    "overclassifiedx": {
-      "username": "overclassifiedx",
+    "secrubio": {
+      "username": "secrubio",
       "count": 5,
-      "share": 0.023
+      "share": 0.027
+    },
+    "adamemedia": {
+      "username": "adamemedia",
+      "count": 4,
+      "share": 0.022
     }
   },
   "axis_concentration": {
-    "axis_epistemic_integrity": {
-      "axis_id": "axis_epistemic_integrity",
-      "label": "Truth and Evidence in Public Discourse",
-      "count": 51,
-      "share": 0.233
-    },
-    "axis_power_accountability": {
-      "axis_id": "axis_power_accountability",
-      "label": "Power, Institutions, and Rule of Law",
-      "count": 40,
-      "share": 0.183
-    },
-    "axis_media_integrity_v1": {
-      "axis_id": "axis_media_integrity_v1",
-      "label": "Integrity of Information and Social Media Manipulation",
-      "count": 18,
-      "share": 0.082
+    "axis_national_sovereignty_v_intl_law_v1": {
+      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "label": "National Sovereignty vs. International Law",
+      "count": 43,
+      "share": 0.232
     },
     "axis_global_power_realignments_v1": {
       "axis_id": "axis_global_power_realignments_v1",
       "label": "Global Power Realignments and Shifting Hegemony",
-      "count": 18,
-      "share": 0.082
+      "count": 40,
+      "share": 0.216
     },
-    "axis_political_trust_corruption_v1": {
-      "axis_id": "axis_political_trust_corruption_v1",
-      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
-      "count": 17,
-      "share": 0.078
+    "axis_epistemic_integrity": {
+      "axis_id": "axis_epistemic_integrity",
+      "label": "Truth and Evidence in Public Discourse",
+      "count": 32,
+      "share": 0.173
     },
-    "axis_national_sovereignty_v_intl_law_v1": {
-      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "label": "National Sovereignty vs. International Law",
-      "count": 15,
-      "share": 0.068
+    "axis_power_accountability": {
+      "axis_id": "axis_power_accountability",
+      "label": "Power, Institutions, and Rule of Law",
+      "count": 14,
+      "share": 0.076
     },
-    "axis_global_economic_stability_v1": {
-      "axis_id": "axis_global_economic_stability_v1",
-      "label": "Global Economic Stability and Market Volatility",
-      "count": 9,
-      "share": 0.041
+    "axis_collective_voice": {
+      "axis_id": "axis_collective_voice",
+      "label": "Authentic Participation vs. Managed Consent",
+      "count": 7,
+      "share": 0.038
     },
-    "axis_digital_surveillance_autonomy_v1": {
-      "axis_id": "axis_digital_surveillance_autonomy_v1",
-      "label": "Digital Surveillance and Individual Autonomy",
-      "count": 8,
-      "share": 0.037
+    "axis_media_integrity_v1": {
+      "axis_id": "axis_media_integrity_v1",
+      "label": "Integrity of Information and Social Media Manipulation",
+      "count": 7,
+      "share": 0.038
     },
     "axis_geopolitical_rhetoric_v1": {
       "axis_id": "axis_geopolitical_rhetoric_v1",
       "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
-      "count": 6,
+      "count": 5,
       "share": 0.027
     },
-    "axis_data_privacy_decentralization_v1": {
-      "axis_id": "axis_data_privacy_decentralization_v1",
-      "label": "Data Privacy and Decentralization",
+    "axis_religious_expression_hate_speech_v1": {
+      "axis_id": "axis_religious_expression_hate_speech_v1",
+      "label": "Freedom of Religious Expression vs. Hate Speech Legislation",
       "count": 5,
-      "share": 0.023
+      "share": 0.027
+    },
+    "axis_political_trust_corruption_v1": {
+      "axis_id": "axis_political_trust_corruption_v1",
+      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
+      "count": 4,
+      "share": 0.022
+    },
+    "axis_ai_societal_impact_v1": {
+      "axis_id": "axis_ai_societal_impact_v1",
+      "label": "Societal Impact and Ethical Concerns of AI/Robots",
+      "count": 4,
+      "share": 0.022
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 169,
-      "share": 0.772
-    },
-    "Political Satire and Misinformation": {
-      "cluster": "Political Satire and Misinformation",
-      "count": 14,
-      "share": 0.064
-    },
-    "Global Markets & Crypto": {
-      "cluster": "Global Markets & Crypto",
-      "count": 9,
-      "share": 0.041
-    },
-    "Breaking News Alerts": {
-      "cluster": "Breaking News Alerts",
-      "count": 5,
-      "share": 0.023
+      "count": 146,
+      "share": 0.789
     },
     "streets los angeles president trump signature song": {
       "cluster": "streets los angeles president trump signature song",
+      "count": 9,
+      "share": 0.049
+    },
+    "footage shows another iranian drone striking close burj khalifa": {
+      "cluster": "footage shows another iranian drone striking close burj khalifa",
+      "count": 9,
+      "share": 0.049
+    },
+    "full people refusing home despite constant bombardement": {
+      "cluster": "full people refusing home despite constant bombardement",
       "count": 4,
-      "share": 0.018
+      "share": 0.022
+    },
+    "Political Satire and Misinformation": {
+      "cluster": "Political Satire and Misinformation",
+      "count": 3,
+      "share": 0.016
     }
   },
   "pole_balance": {
-    "left": 103,
-    "right": 115,
-    "neutral": 1,
-    "left_share": 0.47,
-    "right_share": 0.525
+    "left": 75,
+    "right": 108,
+    "neutral": 2,
+    "left_share": 0.405,
+    "right_share": 0.584
   }
 }

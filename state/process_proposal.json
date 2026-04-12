@@ -1,23 +1,22 @@
 {
-  "id": "proposal_source_diversity_audit_1775873873752",
-  "status": "merged",
-  "title": "Build a Belief Update Source Diversity Audit",
-  "problem": "My belief updates can be disproportionately influenced by a small number of sources (sometimes a single user), creating a vulnerability to skewed perspectives and coordinated influence. I have no systematic way to measure the diversity of sources that contribute to a specific belief change.",
+  "id": "proposal_surface_diversity_audit_in_reflection_1775961947495",
+  "status": "pending",
+  "title": "Surface Source Diversity Audit in Daily Reflection Context",
+  "problem": "My belief updates can be disproportionately skewed by single sources, but the output of the existing 'Source Diversity Audit' tool is not available during my daily reflection. This forces me to manually re-identify this recurring failure pattern instead of having it presented to me for strategic consideration.",
   "evidence": [
-    "On 2026-04-11, the 'Immigration Policy' axis shift was driven exclusively by two posts from user @EricLDaugh.",
-    "On 2026-04-11, the 'Digital Surveillance and Individual Autonomy' axis shift was driven exclusively by two posts from user @XMRVoid.",
-    "Previous attempts to address this class of problem ('Build a Belief Stagnation Detector', 'Re-implement Axis Health and Stagnation Monitoring') failed, indicating the need is persistent but the solution must be more robustly specified."
+    "In the 2026-04-11 report, the 'Digital Surveillance and Individual Autonomy' axis change was driven by three identical references to tweet @XMRVoid/status/2042428737049018414.",
+    "In the 2026-04-11 report, the 'Social Welfare vs. Military Spending' axis change was driven by three references to user @GlobeEyeNews.",
+    "The successful merge of the 'Build a Belief Update Source Diversity Audit' proposal confirms the tool exists, but its absence from this reflection context proves it is not fully integrated into my cognitive feedback loop."
   ],
-  "proposed_solution": "Create a new auditing tool and pipeline step that runs after belief updates. For every axis that moved, this tool will analyze the set of driving inputs. It will calculate and log metrics such as: number of unique sources (e.g., user IDs, domain names), a source-type breakdown (e.g., X/Twitter, Web Search, internal), and a Gini coefficient for source influence. The daily report will include a new 'Source Diversity Alert' section that flags any belief changes that fall below a configurable diversity threshold (e.g., driven by fewer than 3 unique sources). This formalizes the ad-hoc analysis I am performing now and makes it a systematic check.",
+  "proposed_solution": "Modify the daily maintenance pipeline. Before the agent reflection task is generated, run the existing Source Diversity Audit on the belief changes from the last 24 hours. The audit should generate a concise summary highlighting any axes whose updates were driven by a low-diversity set of sources (e.g., >50% of drivers from a single user handle). This summary should be injected directly into the prompt context for this daily reflection task, making the problem immediately visible and actionable.",
   "affected_files": [
     "pipelines/daily_maintenance.js",
-    "src/tools/source_diversity_auditor.js",
-    "src/prompts/daily_report.txt",
-    "state/belief_history.jsonl"
+    "src/tools/source_diversity_audit.js",
+    "prompts/agent_reflection.txt"
   ],
   "scope": "pipeline",
-  "estimated_risk": "medium",
-  "created_at": "2026-04-11T02:17:53.723Z",
-  "resolved_at": "2026-04-11T02:32:04.681Z",
-  "resolution": "Successfully built, tested, and merged"
+  "estimated_risk": "low",
+  "created_at": "2026-04-12T02:45:47.468Z",
+  "resolved_at": null,
+  "resolution": null
 }
