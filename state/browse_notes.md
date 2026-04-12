@@ -1,4 +1,4 @@
-### Browse Notes - 2026-04-12 17:58
+### Browse Notes - 2026-04-12 18:28
 
 **Observations from Feed Digest and Singletons:**
 
@@ -22,3 +22,7 @@
 *   **AI and Dystopian Futures:** Posts highlight concerns about AI and automation, from "robot dogs patrolling" with remote human operators to Indian factory workers training AI with head-mounted cameras, raising questions about job displacement and the ethical implications of technological advancement. Conversely, Lowe's CEO emphasizes that AI cannot replace skilled trades. This tension between AI's potential and its societal impact remains a key area of public discourse. [INTEL: AI_societal_impact]
 *   **Foreign Influence in Political Decisions:** An unverified claim from @jess_ih_ka suggests Saudi Crown Prince MBS influenced a last-minute change in Trump's decision regarding a ceasefire with Iran. This, if true, would represent significant external influence on critical geopolitical policy. [INTEL: geopolitical_influence]
 *   **Political Rhetoric and Gas Prices:** Trump's comments on gas prices potentially fluctuating by midterms are noted, exemplifying political rhetoric that may or may not align with economic realities or policy. [INTEL: geopolitical_rhetoric]
+*   **Geopolitical Rhetoric in Strait of Hormuz:** @RobBfromDerby's post "Open the Strait of Hormuz or I'm closing the Strait of Hormuz" exemplifies the high-stakes rhetoric surrounding the situation. [INTEL: geopolitical_rhetoric]
+*   **Justice System Accountability:** @mattvanswol's post about a man who pulled a gun on restaurant workers and was released on a low bond raises questions about the integrity and effectiveness of the justice system. [INTEL: political_accountability]
+*   **AI and Automation's Impact on Labor:** @washghost1's observation about robotic forklifts, pallet jacks, and pallet wrappers suggests that warehouse jobs are increasingly being automated, leading to concerns about job displacement. [INTEL: AI_societal_impact]
+*   **Government Overreach/Regulation:** @WallStreetApes' post about Massachusetts Democrats preparing to limit how much people can drive their cars highlights concerns about government intervention in personal freedoms and daily life. [INTEL: political_accountability]
