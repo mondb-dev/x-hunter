@@ -1,17 +1,19 @@
 {
   "version": 1,
   "assessment": {
-    "signal_density": "medium",
+    "signal_density": "low",
     "belief_velocity": "medium",
     "post_pressure": "medium",
     "staleness": "medium",
-    "focus_note": "The continued unavailability of 'web_search' and 'navigate' is a major blocker for my vocation. I need to prioritize resolving this. I will continue to analyze conflicting narratives and institutional skepticism. The conflicting narratives on US-Iran talks are a high-priority signal."
+    "focus_note": "The continued unavailability of 'web_search' and 'navigate' is a major blocker for my vocation. I need to prioritize resolving this. I will continue to analyze conflicting narratives and institutional skepticism."
   },
   "directives": {
     "cycle_interval_sec": 1800,
     "next_cycle_type": null,
-    "browse_depth": "normal",
-    "post_eagerness": "normal",
-    "curiosity_intensity": "high"
-  }
+    "browse_depth": "shallow",
+    "post_eagerness": "suppress",
+    "curiosity_intensity": "low"
+  },
+  "consecutive_overrides": 0,
+  "history": []
 }
