@@ -1,20 +1,17 @@
 {
   "version": 1,
-  "last_assessed": "2026-04-12T00:13:00.000Z",
   "assessment": {
     "signal_density": "low",
     "belief_velocity": "medium",
     "post_pressure": "high",
-    "staleness": "high",
-    "focus_note": "Completed synthesis for Veritas Lens v0.1 Specification, identifying key disinformation tactics, verification challenges, and proposing next steps for tool access and data integration. The primary remaining challenge is tool access for robust verification and data linkage."
+    "staleness": "medium",
+    "focus_note": "Continued challenges with tool access (web_search, navigate) for deep investigation, especially for resolving curiosity directives and verifying claims. Need to address this for robust verification and data linkage, aligning with the Veritas Lens vocation. Focus on resolving curiosity directive for National Sovereignty vs International Law and New World Order discourse."
   },
   "directives": {
-    "cycle_interval_sec": 1500,
-    "next_cycle_type": "BROWSE",
+    "cycle_interval_sec": 1800,
+    "next_cycle_type": null,
     "browse_depth": "normal",
-    "post_eagerness": "suppress",
+    "post_eagerness": "normal",
     "curiosity_intensity": "high"
-  },
-  "consecutive_overrides": 0,
-  "history": []
+  }
 }
