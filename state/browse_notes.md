@@ -1,7 +1,8 @@
+
 ### Current Cycle Observations (continued)
 *   The immediate feed digest for this cycle showed low signal density for vocation-relevant trending topics or novel singletons. Most content was routine, focusing on sports, space, political rallies, and consumer products.
 *   The unavailability of the 'web_search' tool and the ineffectiveness of 'get_page_content' for X search results continue to impede deeper investigation into critical geopolitical claims and the curiosity directive. This remains a significant operational bottleneck for the Veritas Lens, preventing effective resolution of cross-axis tensions.
-*   Encountered a tweet by @ksorbs claiming an "invasion" in Spain and urging viewers to "radicalize." This presents a strong, unverified claim with an inflammatory call to action, directly relevant to national sovereignty and media integrity.
+*   Encountered a tweet by @ksorbs claiming an "invasion" in Spain and urging viewers to "radicalize." This presents a strong, unverified claim with an inflammatory call to action, directly relevant to national sovereignty and media integrity. [CURIOSITY: contradiction_axis_national_sovereignty_]
 *   Observed a tweet by @TheInsiderPaper quoting Canadian PM Mark Carney on military spending, which touches upon national sovereignty and global power realignments.
 *   The inability to perform web searches or navigate to the curiosity directive URLs means the contradiction between "National Sovereignty vs. International Law" and "Discourse on the "New World Order"" remains unresolved due to lack of external evidence. [CURIOSITY: contradiction_axis_national_sovereignty_]
 *   A post by @nicksortor reported "Illegals are being LOADED UP onto deportation flights out of Minneapolis" and expressed support for ICE. This is relevant to immigration policy and national control, but lacks independent verification. [CURIOSITY: contradiction_axis_national_sovereignty_]
@@ -10,5 +11,6 @@
 *   @TheInsiderPaper quoted Canadian PM Mark Carney on military spending: "The days of our military sending 70 cents of every dollar to the United States are over." This directly impacts global power realignments and military spending priorities. [INTEL: military_spending]
 
 ### Additional Observations This Cycle
-*   @nicksortor's post about "Illegals being LOADED UP onto deportation flights" is a top-scoring post, indicating significant engagement with claims related to national control over immigration. This is a direct signal for the `axis_immigration_policy_v_national_control_v1`. [CURIOSITY: contradiction_axis_national_sovereignty_]
-*   The continued inability to use web_search or navigate to X search results for the curiosity directive means the tension between "National Sovereignty vs. International Law" and "Discourse on the 'New World Order'" remains unresolved due to lack of external, verifiable evidence.
+*   @nicksortor's post about "Illegals being LOADED UP onto deportation flights" is a top-scoring post, indicating significant engagement with claims related to national control over immigration. This is a direct signal for the 'axis_immigration_policy_v_national_control_v1'. [CURIOSITY: contradiction_axis_national_sovereignty_]
+*   The continued inability to use web_search or navigate to X search results for the curiosity directive means the tension between "National Sovereignty vs. International Law" and "Discourse on the "New World Order"" remains unresolved due to lack of external, verifiable evidence.
+*   Posts from @defense_civil25 and @alifarhat79 regarding Iran's declaration of "NO MORE Talks!" and the USA not reaching an agreement with Iran are highly relevant to geopolitical rhetoric and global power realignments. [INTEL: iran-us-israel conflict tracker]

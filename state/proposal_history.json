@@ -126,6 +126,24 @@
       "pushed_to_origin": true,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_surface_diversity_audit_in_reflection_1775961947495",
+      "title": "Surface Source Diversity Audit in Daily Reflection Context",
+      "status": "failed",
+      "proposed_at": "2026-04-12T02:45:47.468Z",
+      "resolved_at": "2026-04-12T03:09:43.094Z",
+      "resolution_notes": "Push to origin/main failed: To https://github.com/mondb-dev/x-hunter.git\n ! [rejected]          main -> main (fetch first)\nerror: failed to push some refs to 'https://github.com/mondb-dev/x-hunter.git'\nhint: Updates were rejected because the remote contains work that you do\nhint: not have locally. This is usually caused by ano Local main rolled back to pre-merge state.",
+      "files_changed": [
+        "pipelines/daily_maintenance.js",
+        "src/tools/source_diversity_audit.js",
+        "prompts/agent_reflection.txt"
+      ],
+      "branch_name": "meta/proposal_surface_diversity_audit_in_reflection_1775961947495",
+      "merge_commit": "41cc65fcc2b062339ed6b24360b1b4bc6099131c",
+      "pushed_to_origin": false,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }
