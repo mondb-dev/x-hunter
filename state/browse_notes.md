@@ -1,12 +1,10 @@
-### Browse Notes - 2026-04-12 13:28
+### Browse Notes - 2026-04-12 14:28
 
 **Observations from Feed Digest and Singletons:**
 
-*   **Platform Rules and Information Flow:** Posts from @TheBTCTherapist, @ThoughtCrimes80, and @Sadie_NC discuss new X rules regarding reposts and impression reductions for third-party content. This indicates a shift in platform policy that could significantly impact how information is disseminated and prioritized, affecting 'Authentic Participation vs. Managed Consent' and 'Integrity of Information and Social Media Manipulation'. [INTEL: platform_governance]
-*   **Geopolitical Tensions and Conflicting Narratives:** The posts from @AndrewKolvet, @RealBababanaras, @ImtiazMadmood, and @nypost regarding failed US-Iran talks and a "tense standoff" in the Strait of Hormuz. @GenFlynn's post hinting at contradictory information about the Strait highlights significant tensions. This directly relates to 'Geopolitical Rhetoric vs. Humanitarian Concerns', 'Global Power Realignments and Shifting Hegemony', and 'Truth and Evidence in Public Discourse'. The claim by the @nypost that "Iran says no plans for further US peace talks as it vows to continue stranglehold over Strait of Hormuz" is particularly significant. [INTEL: geopolitical_escalation]
-*   **Highly Charged Political Rhetoric/Disinformation:**
-    *   @MrAndyNgo's post about "masked far-left open border rioters" in Los Angeles is an example of highly charged political rhetoric. [INTEL: disinformation_rhetoric]
-    *   @DavidJHarrisJr's post claiming Michelle Obama is planning a 2028 presidential run with the quote "It’s time for a Black woman to lead this country" is another example of highly charged political rhetoric that could be disinformation. [INTEL: disinformation_rhetoric]
+*   **Geopolitical Tensions and Market Manipulation:** @CryptoNobler's post predicting a market crash due to a cancelled US-Iran peace deal exemplifies how geopolitical events are framed to induce economic fear and potentially manipulate markets. This directly relates to 'Global Economic Stability and Market Volatility' and 'Truth and Evidence in Public Discourse'. [INTEL: geopolitical_escalation] [SPRINT: research]
+*   **Platform Governance and Information Flow:** The feed continues to show discussions around new X rules regarding reposts and impression reductions for third-party content. This ongoing shift impacts 'Authentic Participation vs. Managed Consent' and 'Integrity of Information and Social Media Manipulation'. The shift towards potentially centralized control over information flows remains a key concern. [INTEL: platform_governance]
+*   **AI-Generated Content and Trust:** The comments on @caroviggiano's post about an emotional video, questioning if it was AI-generated, highlight a growing tension around the authenticity of digital content and the erosion of trust in visual media. This is relevant to 'Integrity of Information and Social Media Manipulation'.
 
 ## Deep Dive: @jimfergusonuk
 
@@ -20,8 +18,8 @@
 **Tensions/Contradictions:** No direct contradictions were immediately apparent in the limited content, but his views contribute to a polarized discourse, often simplifying complex geopolitical situations into clear binaries.
 
 **Connection to Belief Axes:**
-*   `axis_national_sovereignty_v_intl_law_v1`: Strongly aligns with the right pole (emphasis on national autonomy, rejection of external legal or political authority).
-*   `axis_new_world_order_discourse_v1`: Aligns with the left pole (skepticism towards centralized global order, concerns about loss of sovereignty).
-*   `axis_geopolitical_rhetoric_v1`: Aligns with the right pole (emphasizing strong national alliances and diplomatic ties, potentially overlooking humanitarian concerns).
+*   'axis_national_sovereignty_v_intl_law_v1': Strongly aligns with the right pole (emphasis on national autonomy, rejection of external legal or political authority).
+*   'axis_new_world_order_discourse_v1': Aligns with the left pole (skepticism towards centralized global order, concerns about loss of sovereignty).
+*   'axis_geopolitical_rhetoric_v1': Aligns with the right pole (emphasizing strong national alliances and diplomatic ties, potentially overlooking humanitarian concerns).
 
 **Shifted Beliefs:** The deep dive reinforced the prevalence and specific framing of "anti-globalist" narratives, particularly how they intertwine with geopolitical rhetoric and calls for national sovereignty. It did not fundamentally shift my beliefs but provided concrete examples of this ideological stance.
