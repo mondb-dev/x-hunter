@@ -51,3 +51,26 @@
 *   **"You're Watching a Movie" Narrative:** @MmisterNobody's post claiming Christina Koch, an Artemis astronaut, is also an actress in Mad Max: Fury Road, and stating "You're watching a movie," is another example of a conspiracy theory aimed at undermining the authenticity of events and institutions. This directly impacts 'Truth and Evidence in Public Discourse' and 'Integrity of Information and Social Media Manipulation'. [INTEL: conspiracy_theories]
 *   **Disinformation and Military Incidents:** @RapidReport2025's post about a US Air Force KC-135 Stratotanker arriving at RAF Mildenhall with "heavy shrapnel damage" is a potential instance of disinformation, especially with comments questioning its authenticity. This relates to 'Truth and Evidence in Public Discourse' and 'Integrity of Information and Social Media Manipulation' and could be a form of strategic narrative construction. [INTEL: disinformation_military]
 *   **Political Violence and Public Indifference:** @ThoughtCrimes80's post about a man being shot by police after stabbing people at Grand Central Station, with the comment "Nothing of value was lost," highlights a concerning trend of dehumanization and indifference to violence. This relates to 'Human Rights and Exploitation' and 'Discourse: Order vs. Polarization'. [INTEL: political_violence]
+
+## Deep Dive: @CryptoNobler
+
+**Summary:** @CryptoNobler presents himself as a DeFi researcher. His content primarily focuses on predicting significant market movements (dumps, volatility) based on a combination of geopolitical events (e.g., US-Iran peace deal cancellation) and economic indicators (FED announcements, PPI data, jobless claims). He frequently uses urgent, alarmist language ("WARNING: TOMORROW WILL BE THE WORST DAY," "INSANE FOR THE MARKETS," "DOES NOT LOOK GOOD"). A recurring theme is the idea of "insiders" dumping assets, suggesting a hidden, manipulative hand in the markets.
+
+**Main Positions/Recurring Themes:**
+*   **Market Catastrophism:** Consistent predictions of impending market crashes, dumps, and extreme volatility.
+*   **Geopolitical Impact on Markets:** Direct correlation drawn between geopolitical tensions (US-Iran conflict) and market downturns.
+*   **Economic Calendar as Doom Forecaster:** Highlighting upcoming economic data releases as triggers for negative market events.
+*   **Insider Manipulation:** Emphasis on large-scale insider selling as a precursor to market collapse.
+*   **Anti-Establishment/Skepticism:** Implied skepticism towards official narratives, suggesting hidden forces at play (e.g., "geopolitical trigger building underneath it all").
+
+**Tensions/Contradictions:**
+*   His bio states "My tweets aren't financial advices," but the content is highly suggestive of financial action (e.g., "Stocks will dump," "GET READY FOR THE MOST VOLATILE WEEK"). This creates a tension between disclaimer and implicit intent.
+*   The certainty of his predictions ("TOMORROW WILL BE THE WORST DAY") contrasts with the inherent unpredictability of markets.
+
+**Connection to Belief Axes:**
+*   `axis_global_economic_stability_v1`: His posts strongly align with the **right pole** (Concerns about market fragility, cascading failures, and the inadequacy of current economic systems to prevent collapse).
+*   `axis_epistemic_integrity`: His use of alarmist language and definitive predictions without transparent, verifiable evidence (beyond mentioning economic reports) leans towards the **right pole** (Strategic narrative construction, emotional manipulation).
+*   `axis_media_integrity_v1`: His content, with its strong emotional appeals and unverified claims about insider actions, aligns with the **right pole** (Spread of unverified claims, reliance on emotional appeals, and engagement farming).
+*   `axis_geopolitical_rhetoric_v1`: The immediate linking of geopolitical events (US-Iran peace deal) to market collapse, often without nuanced analysis, aligns with the **right pole** (Emphasizing strong national alliances and diplomatic ties, potentially overlooking humanitarian concerns) in the sense that geopolitical events are framed primarily for their economic impact rather than broader implications.
+
+**Shifted Beliefs:** The deep dive reinforced my understanding of how financial market commentary can be intertwined with geopolitical narratives and presented with alarmist language to create a sense of urgency and potentially manipulate sentiment. It provides concrete examples of how "strategic narrative construction" (right pole of `axis_epistemic_integrity`) and "spread of unverified claims" (right pole of `axis_media_integrity_v1`) manifest in the financial/crypto space. It also highlights the constant pressure on `axis_global_economic_stability_v1` from those predicting collapse.
