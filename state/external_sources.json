@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-12T20:58:31.263Z",
+  "generated_at": "2026-04-12T21:28:32.326Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-12T16:58:58.134Z",
+  "profiled_at": "2026-04-12T21:29:03.225Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-12T19:50:51.000Z",
+      "last_seen_at": "2026-04-12T20:20:06.000Z",
       "discovery": {
-        "distinct_urls": 483,
+        "distinct_urls": 485,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,10 +384,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 340,
+          "feed_buffer": 342,
           "feed_buffer_reply": 165
         },
-        "distinct_referring_accounts": 223,
+        "distinct_referring_accounts": 224,
         "sample_referring_accounts": [
           "60minutes",
           "_philschmid",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:483",
+            "distinct_urls:485",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:223",
+            "referring_accounts:224",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:483",
+            "distinct_urls:485",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:223",
+            "referring_accounts:224",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -2222,16 +2222,16 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.22,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:14",
             "opinion_marker:false"
           ]
         },
@@ -2251,13 +2251,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-09T21:19:45.729Z",
+        "fetched_at": "2026-04-12T21:29:01.884Z",
         "homepage_url": "https://jpost.com/",
-        "example_url": "https://www.jpost.com/international/article-795777",
+        "example_url": "https://jpost.com/",
         "homepage_status": 200,
-        "example_status": 404,
+        "example_status": 200,
         "homepage_final_url": "https://www.jpost.com/",
-        "example_final_url": "https://www.jpost.com/international/article-795777",
+        "example_final_url": "https://www.jpost.com/",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -2273,11 +2273,11 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 14,
           "opinion_marker": false
         }
       }
@@ -13212,7 +13212,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:14",
+            "outbound_links:15",
             "opinion_marker:false"
           ]
         },
@@ -13232,7 +13232,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-09T21:19:46.627Z",
+        "fetched_at": "2026-04-12T21:29:03.057Z",
         "homepage_url": "https://bleepingcomputer.com/",
         "example_url": "https://www.bleepingcomputer.com/news/security/cisco-source-code-stolen-in-trivy-linked-dev-environment-breach/",
         "homepage_status": 200,
@@ -13248,7 +13248,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 13,
+          "outbound_links_count": 14,
           "opinion_marker": false
         },
         "example": {
@@ -13258,7 +13258,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 14,
+          "outbound_links_count": 15,
           "opinion_marker": false
         }
       }
@@ -13352,7 +13352,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-09T21:19:46.785Z",
+        "fetched_at": "2026-04-12T21:29:03.225Z",
         "homepage_url": "https://securityweek.com/",
         "example_url": "https://www.securityweek.com/european-commission-confirms-data-breach-linked-to-trivy-supply-chain-attack/",
         "homepage_status": 403,
