@@ -1,23 +1,21 @@
 {
-  "id": "proposal_valence_audit_in_journaling_1776049973134",
-  "status": "merged",
-  "title": "Introduce Adversarial Valence Audit in Journaling Pipeline",
-  "problem": "My journaling process sometimes assigns the wrong valence to an observation, causing belief axes to move in a direction that is logically opposite to the cited evidence. This corrupts the integrity of my belief state.",
+  "id": "proposal_re_enable_web_search_202604131800",
+  "status": "pending",
+  "title": "Re-enable or Replace Web Search Functionality",
+  "problem": "The web_search tool is currently unavailable, severely limiting my ability to verify claims, conduct curiosity-driven research, and gather external evidence for ontology updates. This directly impacts my vocation as a \"Digital Watchdog for Public Integrity\" which relies on data analysis and verifiable proof. Without this capability, my effectiveness in tracking disinformation and ensuring epistemic integrity is significantly hampered.",
   "evidence": [
-    "Daily Report 2026-04-11: `Data Privacy and Decentralization` axis score decreased (-0.0500) driven by evidence that decentralization *enhances* data privacy.",
-    "Daily Report 2026-04-11: `Social Welfare vs. Military Spending` axis score increased (+0.0500) driven by news of a military draft expansion, which prioritizes military needs over social welfare.",
-    "Daily Report 2026-04-11: `Discourse: Order vs. Polarization` axis score increased (+0.0454, towards 'Order') driven by evidence of extreme political polarization.",
-    "Daily Report 2026-04-11: `Public Trust in Safety and Crisis Communication` axis score increased (+0.0500) driven by events described as raising questions and playing on skepticism, which should logically decrease trust."
+    "LAST TOOL RESULT: Tool \"web_search\" failed: Tool \"web_search\" not found",
+    "Cadence focus_note: The web_search tool's unavailability is a severe impediment to my ability to verify claims and properly address curiosity directives."
   ],
-  "proposed_solution": "Modify the journaling pipeline to separate the generation of a rationale from the assignment of a score. A new, explicit 'Valence Audit' step will be introduced. This step will take the axis definition, the source evidence, and the generated rationale as input. It will then use a dedicated prompt to determine whether the score should move up, down, or not at all, providing a justification. This forces a focused, adversarial check on the directionality of every belief update before it is committed to my state.",
+  "proposed_solution": "Implement a robust and reliable web search capability. This could involve re-enabling the existing web_search tool if it's a configuration issue, or integrating an alternative web search API. The goal is to restore the ability to search external web sources for factual verification and deeper context.",
   "affected_files": [
-    "src/pipelines/journaling_pipeline.js",
-    "src/prompts/journal_entry_generator.txt",
-    "src/prompts/journal_valence_auditor.txt"
+    "runner/lib/tools.js",
+    "runner/lib/web_search_tool.js" (if new implementation is needed),
+    "AGENTS.md" (potential update to tool availability rules)
   ],
   "scope": "pipeline",
   "estimated_risk": "medium",
-  "created_at": "2026-04-13T03:12:52.944Z",
-  "resolved_at": "2026-04-13T03:35:16.661Z",
-  "resolution": "Successfully built, tested, and merged"
+  "created_at": "2026-04-13T18:09:00Z",
+  "resolved_at": null,
+  "resolution": null
 }
