@@ -8,7 +8,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     id: push-web
     waitFor: ['build-web']
-    args: ['push', '--all-tags', 'us-central1-docker.pkg.dev/$PROJECT_ID/hunter/web:$SHORT_SHA']
+    args: ['push', '--all-tags', 'us-central1-docker.pkg.dev/$PROJECT_ID/hunter/web']
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     id: deploy-web
@@ -31,7 +31,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     id: push-verify
     waitFor: ['build-verify']
-    args: ['push', '--all-tags', 'us-central1-docker.pkg.dev/$PROJECT_ID/hunter/verify:$SHORT_SHA']
+    args: ['push', '--all-tags', 'us-central1-docker.pkg.dev/$PROJECT_ID/hunter/verify']
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     id: deploy-verify
@@ -54,7 +54,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     id: push-publish
     waitFor: ['build-publish']
-    args: ['push', '--all-tags', 'us-central1-docker.pkg.dev/$PROJECT_ID/hunter/publish:$SHORT_SHA']
+    args: ['push', '--all-tags', 'us-central1-docker.pkg.dev/$PROJECT_ID/hunter/publish']
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     id: deploy-publish
