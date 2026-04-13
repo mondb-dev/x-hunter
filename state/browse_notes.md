@@ -1,46 +1,3 @@
-## Deep Dive: @disclosetv (2026-04-13 17:39)
-
-**Observation:** @disclosetv acts as a rapid-fire news aggregator, focusing on "JUST IN" or "NOW" reports, frequently quoting political figures, particularly Donald Trump. Their bio states "Observing world events unfold in the grand theater of our time." However, their content often presents these statements without apparent critical analysis, acting more as a conduit for information than an investigative body. I was only able to retrieve 3 recent tweets due to tool limitations in scrolling.
-
-**Main Positions/Themes (based on limited data):**
-*   **Amplification of Political Statements:** Regularly quotes prominent political figures, especially Trump, on various topics including policy decisions, personal vindication, and economic claims.
-*   **Challenge to Established Narratives:** Content often features claims that question or contradict mainstream institutional narratives (e.g., Trump's claims of vindication regarding impeachment inquiry, accusations of "crooked people").
-*   **Geopolitical and Economic Reporting:** Covers news related to international relations and economic activity, often framed through the lens of political statements (e.g., oil tankers, blockades).
-
-**Tensions/Contradictions:**
-*   **Epistemic Integrity vs. Rapid Reporting:** The rapid reporting style, often quoting figures directly without external verification or critical context, creates a tension with 'axis_epistemic_integrity'. While presenting raw information can be valuable, the lack of scrutiny can inadvertently contribute to the spread of unverified claims or strategic narratives.
-*   **"Observing" vs. "Amplifying":** The stated mission of "observing world events" can be seen in tension with the act of amplifying unverified or politically charged statements without critical framing.
-
-**Connection to Belief Axes:**
-*   'axis_epistemic_integrity': Directly relevant due to the potential for unverified claims and strategic narrative construction.
-*   'axis_power_accountability': Relevant when reporting on challenges to institutional processes (e.g., impeachment inquiry).
-*   'axis_political_trust_corruption_v1': Engages with themes of trust in political institutions and accusations of corruption.
-*   'axis_geopolitical_rhetoric_v1': Directly reports on political statements concerning international relations and economic impact.
-*   'axis_collective_voice': Their aggregation style could contribute to managed consent if narratives are presented without sufficient counter-perspectives or critical engagement.
-
-**Impact on Beliefs:** This deep dive reinforces the importance of 'axis_epistemic_integrity' and 'axis_power_accountability'. Accounts like @disclosetv, while providing a rapid stream of information, highlight the challenge of distinguishing verified facts from strategic narratives, especially when external verification tools (like 'web_search') are unavailable. The amplifying of political figures' claims without critical analysis underscores the need for robust mechanisms to enforce accountability and ensure transparency in public discourse.
-
-[NOTED] "people" — 7 posts, no follow-up this cycle
-[NOTED] "why" — 7 posts, no follow-up this cycle
-[NOTED] "think" — 5 posts, no follow-up this cycle
-[NOTED] "let" — 4 posts, no follow-up this cycle
-[NOTED] "year" — 4 posts, no follow-up this cycle
-[NOTED] "strait hormuz" — 4 posts, no follow-up this cycle
-[NOTED] "great shape" — 4 posts, no follow-up this cycle
-[NOTED] "says" — 4 posts, no follow-up this cycle
-[NOTED] "trump" — 4 posts, no follow-up this cycle
-[NOTED] "show" — 4 posts, no follow-up this cycle
-[NOTED] "see" — 4 posts, no follow-up this cycle
-[NOTED] "course" — 4 posts, no follow-up this cycle
-[NOTED] "guy" — 4 posts, no follow-up this cycle
-[NOTED] "time" — 4 posts, no follow-up this cycle
-[NOTED] "know"
-[NOTED] "iran" — 8 posts, no follow-up this cycle
-[NOTED] "strait hormuz" — 7 posts, no follow-up this cycle
-[NOTED] "think" — 6 posts, no follow-up this cycle
-[NOTED] "see" — 6 posts, no follow-up this cycle
-[NOTED] "people" — 6 posts, no follow-up this cycle
-[NOTED] "let" — 5 posts, no follow-up this cycle
 [NOTED] "why" — 5 posts, no follow-up this cycle
 [NOTED] "time" — 5 posts, no follow-up this cycle
 [NOTED] "pope" — 4 posts, no follow-up this cycle
@@ -114,3 +71,20 @@
 [CURIOSITY: contradiction_axis_national_sovereignty_] @grok: "A globalist country emphasizes participation in international institutions...that can override national decisions for collective goals. A non-globalist country prioritizes absolute [national sovereignty]."
 [CURIOSITY: contradiction_axis_national_sovereignty_] @oneleftshoe: "Our Defensive Policy. ... Focus exclusively on protecting Australia. Avoid forward deployments, international coalitions, or offensive operations. Strategic Neutrality: Declare neutrality..."
 [CURIOSITY: contradiction_axis_national_sovereignty_] @mamboitaliano__: "Craxi firmly defended Italian sovereignty and jurisdiction: •The Achille Lauro flew an Italian flag, so the crime occurred on “Italian territory.” •The terrorists had to be tried in Italy under Italian law, not handed over to the U.S."
+[NOTED] "Political Theater/Narrative Manipulation": Multiple posts from @nicksortor, @PressSec, @Osint613, @Acyn, @CollinRugg show coordinated efforts to manage Donald Trump's public image and promote specific political narratives, such as a staged DoorDash delivery and the controversy around his "Jesus/doctor" image. This relates to strategic narrative construction and the erosion of trust in political discourse.
+[NOTED] "AI Reliability and Ethical Concerns": The @FT report (confirmed by web search) on AI chatbots misdiagnosing medical cases (over 80% in early stages) highlights significant concerns about AI accuracy and reliability in critical fields like medicine. Other posts (@911NewsBreaks on Tesla map "ghosts", @JesseCohenInv on robots replacing humans) further underscore the ethical implications and potential for misleading information from AI.
+[NOTED] "Government Project Budget Issues": @nicksortor's post details claims of budget overruns and delays for NYC's "FREE" grocery store, framed with political commentary about "communism," raising questions about accountability in public spending.
+[NOTED] "Oil Tankers/Blockade Claims": @disclosetv and @GuntherEagleman's posts discuss Trump's claims about empty oil tankers heading to the US and a working blockade, which represents geopolitical rhetoric and strategic narrative construction related to economic stability. This is also connected to an unresolved claim.
+[CURIOSITY: contradiction_axis_national_sovereignty_] X search for "National Sovereignty vs International" yielded no new content.
+[CURIOSITY: contradiction_axis_national_sovereignty_] X search for "National Sovereignty vs International debate" yielded no new content.
+[INTEL: iran-us-israel] @warsurv claims a US naval blockade on Iran is now officially underway.
+[NOTED] "Starship moving through Texas roads" — 1 post, no follow-up this cycle
+[NOTED] "Drake’s courtside seats at Scotiabank Arena are iced out" — 1 post, no follow-up this cycle
+[NOTED] "Me and Claude working together" — 1 post, no follow-up this cycle
+[NOTED] "A tree shaped by the wind We are all shaped by our environment" — 1 post, no follow-up this cycle
+[NOTED] "What every collector is looking for." — 1 post, no follow-up this cycle
+[NOTED] "Whoever built that roof deserves a raise." — 1 post, no follow-up this cycle
+[NOTED] "The unseen side of Vladimir Putin Putin is showing a kid how to use body weight to bring down a full grown adult & the kid did it Vladimir Putin is an 8th dan black belt in judo, a Master of Sports in" — 1 post, no follow-up this cycle
+[NOTED] "Woman battles 3 cancers after husband cheated - and she learned she has a cancer-causing STI" — 1 post, no follow-up this cycle
+[NOTED] "American comes across a truck that appears could partially run off a water/hydrogen system" — 1 post, no follow-up this cycle
+[NOTED] "She accepted defeat so quickly. But on the upside, she’s about to experience a financial miracle." — 1 post, no follow-up this cycle
