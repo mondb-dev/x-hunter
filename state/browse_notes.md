@@ -1,57 +1,3 @@
-[NOTED] "didn" — 3 posts, no follow-up this cycle
-[NOTED] "war" — 3 posts, no follow_up this cycle
-[NOTED] "dog" — 3 posts, no follow-up this cycle
-[NOTED] "work" — 3 posts, no follow-up this cycle
-[NOTED] "surprised" — 3 posts, no follow-up this cycle
-[NOTED] "message" — 3 posts, no follow-up this cycle
-[NOTED] "talks"
-[NOTED] "why" — 7 posts, no follow-up this cycle
-[NOTED] "think" — 6 posts, no follow-up this cycle
-[NOTED] "people" — 5 posts, no follow-up this cycle
-[NOTED] "says" — 5 posts, no follow-up this cycle
-[NOTED] "post" — 4 posts, no follow-up this cycle
-[NOTED] "thought" — 4 posts, no follow-up this cycle
-[NOTED] "take" — 4 posts, no follow-up this cycle
-[NOTED] "great shape" — 4 posts, no follow-up this cycle
-[NOTED] "make" — 4 posts, no follow-up this cycle
-[NOTED] "trump" — 4 posts, no follow-up this cycle
-[NOTED] "dog" — 4 posts, no follow-up this cycle
-[NOTED] "guy" — 4 posts, no follow-up this cycle
-[NOTED] "time" — 4 posts, no follow-up this cycle
-[NOTED] "let" — 3 posts, no follow-up this cycle
-[NOTED] "woman" — 3 posts, no follow-up this cycle
-[NOTED] "corporate priorities" — 3 posts, no follow-up this cycle
-[NOTED] "claude downdetector" — 3 posts, no follow-up this cycle
-[NOTED] "fbi atlanta field office" — 1 post, no follow-up this cycle
-[NOTED] "announces defense partnership" — 1 post, no follow-up this cycle
-[NOTED] "user reports indicate problems" — 1 post, no follow-up this cycle
-[NOTED] "greatest export any company america" — 1 post, no follow-up this cycle
-[NOTED] "per yale youth poll vance rubio trump desantis" — 1 post, no follow-up this cycle
-[NOTED] "happen spain legalized" — 1 post, no follow-up this cycle
-[NOTED] "girlfriend katie perry rules" — 1 post, no follow-up this cycle
-[NOTED] "video went viral china banned" — 1 post, no follow-up this cycle
-[NOTED] "lights meth pipe right front" — 1 post, no follow-up this cycle
-[NOTED] "raced home confront year old jason nichols" — 1 post, no follow-up this cycle
-[NOTED] "supposedly due strong anti sentiments" — 1 post, no follow-up this cycle
-[NOTED] "artemis astronaut christina koch shares" — 1 post, no follow-up this cycle
-[NOTED] "attorney general ken paxton launches investigation" — 1 post, no follow-up this cycle
-[NOTED] "empty oil tankers headed america trump blockade already working major ship tracking firm" — 1 post, no follow-up this cycle
-[NOTED] "suspect accused throwing molotov cocktail openai ceo sam altman home" — 1 post, no follow-up this cycle
-[NOTED] "really rooting" — 1 post, no follow-up this cycle
-[NOTED] "radio without hearing shooz once hour" — 1 post, no follow-up this cycle
-[NOTED] "new world record year old sprint phenom gout gout" — 1 post, no follow-up this cycle
-[NOTED] "minnesota somali migrant accused stealing 11m taxpayer funds" — 1 post, no follow-up this cycle
-[NOTED] "enforcing naval blockade iran according wsj" — 1 post, no follow-up this cycle
-[NOTED] "meta building creepy clone mark zuckerberg chat" — 1 post, no follow-up this cycle
-[NOTED] "show baywatch" — 1 post, no follow-up this cycle
-[NOTED] "trump says lot tankers" — 1 post, no follow-up this cycle
-[NOTED] "navy ship grabs supply load mid air" — 1 post, no follow-up this cycle
-[NOTED] "cemetery sees images people tesla driving map" — 1 post, no follow-up this cycle
-[NOTED] "troops always ready" — 1 post, no follow-up this cycle
-[NOTED] "replace humans meanwhile robots" — 1 post, no follow-up this cycle
-[NOTED] "unusual happening right" — 1 post, no follow-up this cycle
-[NOTED] "picture yourself depicted jesus christ trump" — 1 post, no follow-up this cycle
-[NOTED] "omg" — 1 post, no follow-up this cycle
 [NOTED] "mercedez camper trave luxur" — 1 post, no follow-up this cycle
 [NOTED] "world trying secure iran deal" — 1 post, no follow-up this cycle
 [NOTED] "oval office via doordash right" — 1 post, no follow-up this cycle
@@ -81,7 +27,7 @@
 [NOTED] "President Trump's DoorDash delivery and related posts" - Multiple posts (from @PressSec, @nicksortor, @MargoMartin47, @ABC, @nypost, @paratroopbrady) highlight a coordinated political narrative around a DoorDash delivery to the White House, serving to shape public image and promote specific policies. This is a clear example of strategic narrative construction.
 [NOTED] "NYC 'FREE' grocery store budget overruns" - @nicksortor's post critically examines alleged budget issues and delays for a city-run grocery store, raising questions about accountability in public spending and potentially political corruption.
 [NOTED] "Semi-truck crash and driver's turban" - @libsoftiktok and @EricLDaugh's posts about a semi-truck crash, with an emphasis on the driver's turban, suggests xenophobic framing and potential manipulation of information for tribal signaling.
-[NOTED] "California legislators attempting to make investigating fraud illegal" - @elonmusk's post highlights a potential legislative effort to impede fraud investigations, which directly challenges power accountability and transparency.
+[NOTED] "California legislators attempting to make investigating fraud illegal" - @elonmusk's post highlights a potential legislative effort to impede fraud investigations, which directly challenges power accountability and transparency. **[REFUTED by web_search]**
 [NOTED] "Justin Trudeau and red Solo cup controversy" - @ExxAlerts' post on Trudeau's use of a red Solo cup after banning single-use plastics in Canada points to political hypocrisy and a lack of moral conduct in public service.
 [NOTED] "AI prison of the future with false memories" - @patobonato's post introduces a concept of AI-driven prisons that re-educate criminals with false memories, raising significant ethical concerns about AI's societal impact and potential for manipulation.
 [NOTED] "US naval blockade on Iran" - @warsurv's claim about an official US naval blockade on Iran is a significant geopolitical claim that requires verification, especially given conflicting comments. This is a new claim that needs to be tracked.
@@ -110,10 +56,42 @@
 [NOTED] "California legislators are trying to make investigating fraud illegal" — 1 post, no follow-up this cycle
 [NOTED] "NEW: Outrage online as Justin Trudeau is seen drinking from a red Solo cup at Coachella with his girlfriend Katy Perry, after banning them in Canada. The former Canadian Prime Minister banned single-u" — 1 post, no follow-up this cycle
 [NOTED] "Wait, no way? Is this how movie filming actually is? I thought it was all real...." — 1 post, no follow-up this cycle
-[NOTED] "A scientist from Yemen showcased a concept for an AI prison of the future Cognify proposes locking criminals in special capsules and reeducating their brains with false memories generated by neural ne" — 1 post, no follow-up this cycle
+[NOTED] "A scientist from Yemen showcased a concept for an AI prison of the future Cognify proposes locking criminals in special capsules and re-educating their brains with false memories generated by neural ne" — 1 post, no follow-up this cycle
 [NOTED] "President Trump tipped a DoorDash driver with a $100 bill after she delivered two bags of McDonald’s to the Oval Office. " — 1 post, no follow-up this cycle
 [NOTED] "I will be in Uttar Pradesh and Uttarakhand tomorrow, 14th April. It is a matter of immense joy that the Delhi-Dehradun Economic Corridor will be inaugurated at a programme in Dehradun. This Corridor w" — 1 post, no follow-up this cycle
-[NOTED] "The entire neighborhood turned out to show support and celebrate Artemis II astronaut Victor Glover as he returned home. : @DallasRiffRaff" — 1 post, no follow-up this cycle
+[NOTED] "The entire neighborhood turned out to show support and celebrate Artemis II astronaut Victor Glover as he returned home." — 1 post, no follow-up this cycle
 [NOTED] "Oracle accused of targeting employees with stock options in recent layoffs" — 1 post, no follow-up this cycle
-[NOTED] "President Trump had some McDonalds delivered to the White House using Door Dash. I wonder if RFK Jr. will have some? " — 1 post, no follow-up this cycle
+[NOTED] "President Trump has McDonalds delivered to the White House using Door Dash. I wonder if RFK Jr. will have some? " — 1 post, no follow-up this cycle
 [NOTED] "We really shouldn’t have to worry about dodging bullets at the park. Good on them for the spatial awareness though." — 1 post, no follow-up this cycle
+[NOTED] "Serious question..."what sport is actually better than women’s beach volleyball?" I’ll wait......" — 1 post, no follow-up this cycle
+[NOTED] "President Trump has McDonalds delivered via DoorDash to the Oval Office" — 1 post, no follow-up this cycle
+[NOTED] "9-year-old Rory McIlroy chipping into a washing machine on the Northern Irish talk show “Kelly” in 1999. 27 years later, he’s a back-to-back Masters champion." — 1 post, no follow-up this cycle
+[NOTED] "Wooden Cane Attacker Gets Absolutely Handled by a Relentless K-9 A 25-year-old man had to be rushed to the hospital after getting cracked in the head multiple times with a broken wooden cane on the 12" — 1 post, no follow-up this cycle
+[NOTED] "retirement plan: this" — 1 post, no follow-up this cycle
+[NOTED] "The S&P 500 closes over +1% higher in a massive reversal, posting its highest close since the Iran War began." — 1 post, no follow-up this cycle
+[NOTED] "Chelsea Manning among MASS ARRESTS outside Senator Schumer office as protesters demand "Stop War on Iran"" — 1 post, no follow-up this cycle
+[NOTED] "A very large and out of control fire is currently burning near I-75 in Naples, Florida." — 1 post, no follow-up this cycle
+[NOTED] "Journalist Savanah Hernandez was assaulted outside the Whipple ICE Facility in Minneapolis on Saturday." — 1 post, no follow-up this cycle
+[NOTED] "NYPD have made 89 ARRESTS — including Bradley Manning (who now calls himself Chelsea) — after pro-Islam protestors BLOCKED Third Ave in NYC" — 1 post, no follow-up this cycle
+[NOTED] "The second lady released tsar bomba" — 1 post, no follow-up this cycle
+[NOTED] "Trump gets McDonald’s door dash delivered to the White House" — 1 post, no follow-up this cycle
+[NOTED] "A classic Gladys Kravitz moment (‘Bewitched’ (1964))." — 1 post, no follow-up this cycle
+[NOTED] "IT'S OFFICIAL: President Trump has commenced a major US military operation to clear Iran's SEA MINES in the Strait of Hormuz" — 1 post, no follow-up this cycle
+[NOTED] "Starbucks is now receiving massive backlash online after a woman discovered a fully intact mouse inside her can of Double Shot Energy" — 1 post, no follow-up this cycle
+[CURIOSITY: contradiction_axis_national_sovereignty_] @Globalsurv: "CHINA has issued a strong warning to US reinstating that China has an energy agreement with IRAN and it ships will not be intercepted. Chinese Defense Ministry: ‘Chinese ships continue to move in an"
+[CURIOSITY: contradiction_axis_national_sovereignty_] @AlertaMundoNews: "A K-9 police dog neutralized a man accused of stabbing a parking lot employee in San Diego."
+[NOTED] "Massive five alarm fire has engulfed a warehouse in Northwest Miami Dade County."
+[CURIOSITY: contradiction_axis_national_sovereignty_] @Breaking911: "Dozens of anti-war protesters were arrested after blocking Third Avenue in NYC outside Sen. Chuck Schumer’s office building in Manhattan."
+[NOTED] "SEAL Team 7 Alpha Platoon in Heavy Combat – Battle of Mosul (2017)"
+[NOTED] "Iggy Pop leaves 2026 Coachella inside a black coffin!"
+[NOTED] "The jealousy faces oh my lord"
+[NOTED] "A Saudi young man gifted his guests gold ingots to reflect the spirit of generosity he possesses."
+[NOTED] "A worker died at an Amazon, $AMZN, warehouse in Oregon last week, per MorePerfectUnion."
+[NOTED] "In the United Kingdom, Millie Taplin was offered a drink by a stranger while heading to a nightclub for the first time on her 18th birthday."
+[NOTED] "Rep. Eric Swalwell announces he will resign from Congress."
+[NOTED] "In the Nari Shakti Vandana Conference in New Delhi, the enthusiasm and confidence of mothers, sisters, and daughters filled us with new energy."
+[NOTED] "Now that's wifee material"
+[NOTED] "Never lose faith guys, maybe the woman of your life hasn’t been born yet."
+[NOTED] "Dude saw the moment and became king for 8 seconds straight"
+[NOTED] "The Austin housing market is going full biblical collapse."
+[NOTED] "As soon as OSHA leaves."
