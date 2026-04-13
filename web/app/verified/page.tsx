@@ -3,6 +3,17 @@ import { readVerification, VerifiedClaim, ScoringBreakdown } from "../../lib/rea
 
 export const dynamic = "force-dynamic";
 
+type FilterStatus = "all" | "supported" | "refuted" | "contested" | "unverified" | "expired";
+
+const FILTER_LABELS: Record<FilterStatus, string> = {
+  all: "All",
+  supported: "Supported",
+  refuted: "Refuted",
+  contested: "Contested",
+  unverified: "Unverified",
+  expired: "Expired",
+};
+
 // ── Status colours ───────────────────────────────────────────────────────────
 const STATUS_COLORS: Record<string, string> = {
   supported: "#4ade80",
@@ -210,13 +221,19 @@ function ClaimCard({ claim }: { claim: VerifiedClaim }) {
       )}
 
       <div className="verify-claim-footer">
-        {claim.verified_at && (
+        {claim.verified_at ? (
           <span className="verify-claim-date">
             Verified: {new Date(claim.verified_at).toLocaleDateString("en-US", {
               month: "short", day: "numeric", year: "numeric",
             })}
           </span>
-        )}
+        ) : claim.created_at ? (
+          <span className="verify-claim-date" style={{ color: "#64748b" }}>
+            Observed: {new Date(claim.created_at).toLocaleDateString("en-US", {
+              month: "short", day: "numeric", year: "numeric",
+            })}
+          </span>
+        ) : null}
         {claim.tweet_url && (
           <a href={claim.tweet_url} target="_blank" rel="noopener noreferrer" className="verify-claim-tweet">
             View tweet
@@ -232,14 +249,28 @@ function ClaimCard({ claim }: { claim: VerifiedClaim }) {
 
 // ── Page ─────────────────────────────────────────────────────────────────────
 
-export default function VerifiedPage() {
+export default function VerifiedPage({ searchParams }: { searchParams?: { filter?: string } }) {
   const data = readVerification();
   if (!data) return notFound();
 
   const { stats, claims } = data;
+  const activeFilter = (searchParams?.filter ?? "all") as FilterStatus;
+  const filteredClaims = activeFilter === "all"
+    ? claims
+    : claims.filter((c) => c.status === activeFilter);
+
   const avgConfidence = claims.length
     ? Math.round((claims.reduce((s, c) => s + c.confidence_score, 0) / claims.length) * 100)
     : 0;
+
+  const filterCounts: Record<FilterStatus, number> = {
+    all: claims.length,
+    supported: stats.supported,
+    refuted: stats.refuted,
+    contested: stats.contested,
+    unverified: stats.unverified,
+    expired: stats.expired,
+  };
 
   return (
     <div className="verify-page">
@@ -261,11 +292,26 @@ export default function VerifiedPage() {
         <StatCard label="Unverified" value={stats.unverified} color="#94a3b8" />
       </div>
 
+      <div className="verify-filters">
+        {(Object.keys(FILTER_LABELS) as FilterStatus[]).map((f) => (
+          filterCounts[f] > 0 || f === "all" ? (
+            <a
+              key={f}
+              href={f === "all" ? "/verified" : `/verified?filter=${f}`}
+              className={`verify-filter-tab${activeFilter === f ? " verify-filter-tab--active" : ""}`}
+            >
+              {FILTER_LABELS[f]}
+              <span className="verify-filter-count">{filterCounts[f]}</span>
+            </a>
+          ) : null
+        ))}
+      </div>
+
       <div className="verify-claims">
-        {claims.length === 0 && (
-          <p className="verify-empty">No claims verified yet. Check back soon.</p>
+        {filteredClaims.length === 0 && (
+          <p className="verify-empty">No {activeFilter === "all" ? "" : activeFilter + " "}claims yet. Check back soon.</p>
         )}
-        {claims.map((claim) => (
+        {filteredClaims.map((claim) => (
           <ClaimCard key={claim.claim_id} claim={claim} />
         ))}
       </div>

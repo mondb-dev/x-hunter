@@ -29,7 +29,7 @@ function log(msg) { console.log(`[verify_claims] ${msg}`); }
 
 // ── Configuration ───────────────────────────────────────────────────────────
 const MAX_CLAIMS_PER_CYCLE   = 10;   // score up to N claims per run
-const WEB_SEARCH_PER_CYCLE   = 1;    // run web search on top N claims
+const WEB_SEARCH_PER_CYCLE   = 3;    // run web search on top N claims
 const STALE_HOURS            = 48;   // claims older than this get priority bump
 const EXPIRY_RULES = {               // hours until auto-expire by category
   military_action:         72,
@@ -305,7 +305,7 @@ function exportVerificationData() {
         scoring_breakdown: c.scoring_breakdown,
         source_handle: c.source_handle,
         source_tier: c.source_tier,
-        evidence_urls: c.evidence_urls,
+        evidence_urls: (c.evidence_urls || []).filter(u => !String(u).includes('vertexaisearch.cloud.google.com')),
         tweet_url: c.tweet_url,
         category: c.category,
         related_axis_id: c.related_axis_id,
@@ -468,6 +468,10 @@ async function run() {
         const searchData = claim._searchData;
         const statusChanged = result.suggested_status !== oldStatus;
 
+        // Strip ephemeral Vertex grounding redirect URLs — they expire within hours
+        const stableEvidenceUrls = (searchData?.evidence_urls || [])
+          .filter(u => !String(u).includes('vertexaisearch.cloud.google.com'));
+
         // Upsert verification record
         vdb.upsertVerification({
           claim_id:           claim.claim_id,
@@ -477,7 +481,7 @@ async function run() {
           scoring_breakdown:  result.breakdown,
           status:             result.suggested_status,
           web_search_summary: searchData?.summary || null,
-          evidence_urls:      searchData?.evidence_urls || null,
+          evidence_urls:      stableEvidenceUrls.length ? stableEvidenceUrls : null,
           source_handle:      handle || claim.source_handle || null,
           source_tier:        claim.source_tier || null,
           related_axis_id:    claim.related_axis_id || null,
