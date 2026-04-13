@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-13T15:09:13.440Z",
+  "generated_at": "2026-04-13T16:09:15.473Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-13T15:09:44.216Z",
+  "profiled_at": "2026-04-13T16:09:49.161Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-13T14:15:11.000Z",
+      "last_seen_at": "2026-04-13T15:16:20.000Z",
       "discovery": {
-        "distinct_urls": 532,
+        "distinct_urls": 536,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,10 +384,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 366,
-          "feed_buffer_reply": 190
+          "feed_buffer": 367,
+          "feed_buffer_reply": 193
         },
-        "distinct_referring_accounts": 251,
+        "distinct_referring_accounts": 253,
         "sample_referring_accounts": [
           "60minutes",
           "_margaritavill_",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:532",
+            "distinct_urls:536",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:251",
+            "referring_accounts:253",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:532",
+            "distinct_urls:536",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:251",
+            "referring_accounts:253",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -509,9 +509,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-13T10:30:35.000Z",
+      "last_seen_at": "2026-04-13T14:43:01.000Z",
       "discovery": {
-        "distinct_urls": 60,
+        "distinct_urls": 61,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,21 +520,21 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 58,
+          "feed_buffer_reply": 59,
           "feed_buffer": 2
         },
-        "distinct_referring_accounts": 48,
+        "distinct_referring_accounts": 49,
         "sample_referring_accounts": [
           "afk500595388855",
           "andrekonsta",
           "anim8studio",
           "aresclips_",
+          "aroh_obidatti",
           "associatesfirst",
           "bitcoinwealth",
           "brianv1981",
           "buejordan",
-          "bull_dogee",
-          "chibifanpage2"
+          "bull_dogee"
         ],
         "distinct_axes": []
       },
@@ -561,7 +561,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:60",
+            "distinct_urls:61",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -569,7 +569,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:48",
+            "referring_accounts:49",
             "origin_types:2"
           ]
         },
@@ -599,10 +599,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:60",
+            "distinct_urls:61",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:48",
+            "referring_accounts:49",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -7777,7 +7777,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-10T15:30:16.315Z",
+        "fetched_at": "2026-04-13T16:09:48.929Z",
         "homepage_url": "https://speak4.io/",
         "example_url": "https://speak4.io/lp/hc01cshw?ts=1772120278&twclid=2dds00srijbdtkmjbi9s7cxdwr",
         "homepage_status": null,
@@ -14564,7 +14564,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-10T15:50:13.199Z",
+        "fetched_at": "2026-04-13T16:09:49.161Z",
         "homepage_url": "https://reddit.com/",
         "example_url": "https://www.reddit.com/search/?q=Emphasis%20individual%20merit&sort=hot&t=week",
         "homepage_status": 403,

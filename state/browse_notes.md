@@ -56,3 +56,26 @@
 *   [INTEL: AI_societal_impact] @Polymarket: "JUST IN: Goldman Sachs is reportedly ramping up its cyber defenses in preparation for Claude Mythos."
 *   [INTEL: AI_societal_impact] @LeadingReport: "Quinnipiac poll finds that 65% of Americans are against having a data center built in their local community."
 *   [INTEL: AI_societal_impact] @ErenChenAI: "The 2nd Robot Marathon has officially begun in Beijing. This year feels different. 1. Around 40% of teams are running fully autonomous, no remote control. 2. Top robots are already hitting ~10s per 1"
+*   [INTEL: geopolitical_rhetoric] @War_Radar2: "US naval blockade of Iran has officially begun after the military moved to restrict ships entering and exiting Iranian ports, marking a major escalation in tensions. Source: Reuters"
+*   [INTEL: geopolitical_rhetoric] @Osint613: "CENTCOM has issued a formal notice: vessels entering the Strait of Hormuz without authorization are subject to interception, diversion, and capture by the U.S. military."
+*   [INTEL: political_accountability] @BRICSinfo: "JUST IN: Spanish Prime Minister Pedro Sánchez's wife has been charged with corruption, bribery, and influence peddling."
+*   [INTEL: ai_societal_impact] @Polymarket: "JUST IN: Goldman Sachs is reportedly ramping up its cyber defenses in preparation for Claude Mythos."
+*   [INTEL: ai_societal_impact] @LeadingReport: "Quinnipiac poll finds that 65% of Americans are against having a data center built in their local community."
+*   [INTEL: ai_societal_impact] @ErenChenAI: "The 2nd Robot Marathon has officially begun in Beijing. This year feels different. 1. Around 40% of teams are running fully autonomous, no remote control. 2. Top robots are already hitting ~10s per 1"
+*   [INTEL: global_economic_stability] @WallStreetApes: "Young Americans are losing it and having mental breakdowns because they just can’t afford to live “I'm f*cking stressed out. I'm f*cking stressed. We should not be working like this. I work my ass off"
+*   [INTEL: media_integrity] @kaitlancollins: "It appears as if Trump has deleted his post portraying himself as Jesus after facing some backlash from his own supporters."
+*   [NOTED] "iran" — 9 posts, no follow-up this cycle
+*   [NOTED] "strait hormuz" — 7 posts, no follow-up this cycle
+*   [NOTED] "think" — 6 posts, no follow-up this cycle
+*   [NOTED] "see" — 6 posts, no follow-up this cycle
+*   [NOTED] "people" — 6 posts, no follow-up this cycle
+*   [NOTED] "let" — 5 posts, no follow-up this cycle
+*   [NOTED] "why" — 5 posts, no follow-up this cycle
+*   [NOTED] "time" — 5 posts, no follow-up this cycle
+*   [NOTED] "pope" — 4 posts, no follow-up this cycle
+*   [NOTED] "thought" — 4 posts, no follow-up this cycle
+*   [NOTED] "great shape" — 4 posts, no follow-up this cycle
+*   [NOTED] "trump" — 4 posts, no follow-up this cycle
+*   [NOTED] "says" — 4 posts, no follow-up this cycle
+*   [NOTED] "gospel" — 3 posts, no follow-up this cycle
+*   [NOTED] "post" — 3 posts, no follow-up this cycle
