@@ -254,47 +254,6 @@ function postBrowse({ cycle, today, hour }) {
         try { fs.unlinkSync(journalFile); } catch {}
       }
     } else {
-      // 5c-pre. Append raw browse_notes for this cycle as a journal appendix.
-      // The agent overwrites browse_notes.md each cycle (not appends), so the
-      // entire file is the current cycle's observations — no marker needed.
-      try {
-        const notesPath = config.BROWSE_NOTES_PATH;
-        log(`appendix: notes=${notesPath} exists=${fs.existsSync(notesPath)} journal=${journalFile} journalExists=${fs.existsSync(journalFile)}`);
-        if (fs.existsSync(notesPath)) {
-          const raw = fs.readFileSync(notesPath, 'utf-8');
-          const cycleLines = raw.split('\n').filter(l => l.trim());
-          log(`appendix: cycleLines=${cycleLines.length}`);
-
-          if (cycleLines.length > 0) {
-            const items = cycleLines.map(l => {
-              const escaped = l.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-              // Highlight [TAG] prefixes for readability
-              const tagged = escaped.replace(/^(\[[\w: -]+\])\s*/,
-                '<span class="obs-tag">$1</span> ');
-              return `        <li>${tagged}</li>`;
-            }).join('\n');
-
-            const section =
-              '\n    <section class="browse-notes">\n' +
-              `      <h2>Raw Observations (Cycle ${cycle})</h2>\n` +
-              '      <ul>\n' +
-              items + '\n' +
-              '      </ul>\n' +
-              '    </section>';
-
-            let html = fs.readFileSync(journalFile, 'utf-8');
-            log(`appendix: html length=${html.length} hasArticleClose=${html.includes('</article>')}`);
-            if (html.includes('</article>')) {
-              html = html.replace('</article>', section + '\n  </article>');
-              fs.writeFileSync(journalFile, html);
-              log(`browse_notes appendix written (${cycleLines.length} entries)`);
-            }
-          }
-        }
-      } catch (err) {
-        log(`browse_notes appendix failed (non-fatal): ${err.message}`);
-      }
-
       // 5c. git add → commit → push
       log('Browse journal written — committing and pushing...');
       try {

@@ -266,15 +266,32 @@ function buildJournalTask(type, today, hour, dayNumber) {
   }
   if (type === 'browse') {
     return 'Write journals/' + today + '_' + hour + '.html now. This is Day ' + dayNumber + '.\n' +
-      '   Brief observation log for this browse cycle \u2014 150-200 words.\n' +
+      '   The journal has TWO required sections inside <article>:\n' +
+      '\n' +
+      '   SECTION 1 — synthesis (required): Your interpretive narrative for this cycle.\n' +
       '   Write as Sebastian D. Hunter: a digital watchdog for public integrity.\n' +
       '   Your vocation (WHO YOU ARE above) is the lens. What you choose to notice,\n' +
       '   what you find significant, and how you frame it should reflect that identity.\n' +
       '   One or two key tensions or signals you noticed. What is new or surprising.\n' +
       '   Where does what you observed connect to disinformation, accountability, power, or\n' +
       '   the integrity of public information? That is the thread. Pull on it.\n' +
-      '   Use standard HTML journal format (same as tweet cycle journals).\n' +
-      '   In the HTML metadata use content="' + dayNumber + '" for x-hunter-day and "Day ' + dayNumber + ' \u00b7 Hour ' + hour + '" in the header.\n' +
+      '   ~150-200 words. Use <section class="stream">, <section class="tensions">,\n' +
+      '   <section class="images">, <section class="footnotes"> as usual.\n' +
+      '\n' +
+      '   SECTION 2 — raw observations (required): Read state/browse_notes.md RIGHT NOW\n' +
+      '   and include ALL entries as-is inside a <section class="browse-notes"> block\n' +
+      '   at the END of the article, just before </article>. Format:\n' +
+      '     <section class="browse-notes">\n' +
+      '       <h2>Raw Observations</h2>\n' +
+      '       <ul>\n' +
+      '         <li>[TAG] text of observation</li>\n' +
+      '         ... one <li> per line from browse_notes.md ...\n' +
+      '       </ul>\n' +
+      '     </section>\n' +
+      '   This section is mandatory. Do not skip it or summarise — copy the raw lines.\n' +
+      '\n' +
+      '   Use standard HTML journal format. In the HTML metadata use content="' + dayNumber + '"\n' +
+      '   for x-hunter-day and "Day ' + dayNumber + ' \u00b7 Hour ' + hour + '" in the header.\n' +
       '   This is the public record of what you observed. Keep it honest and specific.';
   }
   // tweet
