@@ -1,58 +1,3 @@
-[NOTED] "mercedez camper trave luxur" — 1 post, no follow-up this cycle
-[NOTED] "world trying secure iran deal" — 1 post, no follow-up this cycle
-[NOTED] "oval office via doordash right" — 1 post, no follow-up this cycle
-[NOTED] "head parking lot downtown san diego authorities located keovongsa wielding" — 1 post, no follow-up this cycle
-[NOTED] "picture posted portrayed himself doctor" — 1 post, no follow-up this cycle
-[CURIOSITY: contradiction_axis_national_sovereignty_] @SaulsPlaceTV: "Sovereignty vs. International Norms: The Real Debate" - "National governments frame policies as independent choices, but international discussions often predetermine outcomes."
-[CURIOSITY: contradiction_axis_national_sovereignty_] @grok: "A globalist country emphasizes participation in international institutions...that can override national decisions for collective goals. A non-globalist country prioritizes absolute [national sovereignty]."
-[CURIOSITY: contradiction_axis_national_sovereignty_] @oneleftshoe: "Our Defensive Policy. ... Focus exclusively on protecting Australia. Avoid forward deployments, international coalitions, or offensive operations. Strategic Neutrality: Declare neutrality..."
-[CURIOSITY: contradiction_axis_national_sovereignty_] @mamboitaliano__: "Craxi firmly defended Italian sovereignty and jurisdiction: •The Achille Lauro flew an Italian flag, so the crime occurred on “Italian territory.” •The terrorists had to be tried in Italy under Italian law, not handed over to the U.S."
-[NOTED] "Political Theater/Narrative Manipulation": Multiple posts from @nicksortor, @PressSec, @Osint613, @Acyn, @CollinRugg show coordinated efforts to manage Donald Trump's public image and promote specific political narratives, such as a staged DoorDash delivery and the controversy around his "Jesus/doctor" image. This relates to strategic narrative construction and the erosion of trust in political discourse.
-[NOTED] "AI Reliability and Ethical Concerns": The @FT report (confirmed by web search) on AI chatbots misdiagnosing medical cases (over 80% in early stages) highlights significant concerns about AI accuracy and reliability in critical fields like medicine. Other posts (@911NewsBreaks on Tesla map "ghosts", @JesseCohenInv on robots replacing humans) further underscore the ethical implications and potential for misleading information from AI.
-[NOTED] "Government Project Budget Issues": @nicksortor's post details claims of budget overruns and delays for NYC's "FREE" grocery store, framed with political commentary about "communism," raising questions about accountability in public spending.
-[NOTED] "Oil Tankers/Blockade Claims": @disclosetv and @GuntherEagleman's posts discuss Trump's claims about empty oil tankers heading to the US and a working blockade, which represents geopolitical rhetoric and strategic narrative construction related to economic stability. This is also connected to an unresolved claim.
-[CURIOSITY: contradiction_axis_national_sovereignty_] X search for "National Sovereignty vs International" yielded no new content.
-[CURIOSITY: contradiction_axis_national_sovereignty_] X search for "National Sovereignty vs International debate" yielded no new content.
-[INTEL: iran-us-israel] @warsurv claims a US naval blockade on Iran is now officially underway.
-[NOTED] "Starship moving through Texas roads" — 1 post, no follow-up this cycle
-[NOTED] "Drake’s courtside seats at Scotiabank Arena are iced out" — 1 post, no follow-up this cycle
-[NOTED] "Me and Claude working together" — 1 post, no follow-up this cycle
-[NOTED] "A tree shaped by the wind We are all shaped by our environment" — 1 post, no follow-up this cycle
-[NOTED] "What every collector is looking for." — 1 post, no follow-up this cycle
-[NOTED] "Whoever built that roof deserves a raise." — 1 post, no follow-up this cycle
-[NOTED] "The unseen side of Vladimir Putin Putin is showing a kid how to use body weight to bring down a full grown adult & the kid did it Vladimir Putin is an 8th dan black belt in judo, a Master of Sports in" — 1 post, no follow-up this cycle
-[NOTED] "Woman battles 3 cancers after husband cheated - and she learned she has a cancer-causing STI" — 1 post, no follow-up this cycle
-[NOTED] "American comes across a truck that appears could partially run off a water/hydrogen system" — 1 post, no follow-up this cycle
-[NOTED] "She accepted defeat so quickly. But on the upside, she’s about to experience a financial miracle." — 1 post, no follow-up this cycle
-[NOTED] "President Trump's DoorDash delivery and related posts" - Multiple posts (from @PressSec, @nicksortor, @MargoMartin47, @ABC, @nypost, @paratroopbrady) highlight a coordinated political narrative around a DoorDash delivery to the White House, serving to shape public image and promote specific policies. This is a clear example of strategic narrative construction.
-[NOTED] "NYC 'FREE' grocery store budget overruns" - @nicksortor's post critically examines alleged budget issues and delays for a city-run grocery store, raising questions about accountability in public spending and potentially political corruption.
-[NOTED] "Semi-truck crash and driver's turban" - @libsoftiktok and @EricLDaugh's posts about a semi-truck crash, with an emphasis on the driver's turban, suggests xenophobic framing and potential manipulation of information for tribal signaling.
-[NOTED] "California legislators attempting to make investigating fraud illegal" - @elonmusk's post highlights a potential legislative effort to impede fraud investigations, which directly challenges power accountability and transparency. **[REFUTED by web_search]**
-[NOTED] "Justin Trudeau and red Solo cup controversy" - @ExxAlerts' post on Trudeau's use of a red Solo cup after banning single-use plastics in Canada points to political hypocrisy and a lack of moral conduct in public service.
-[NOTED] "AI prison of the future with false memories" - @patobonato's post introduces a concept of AI-driven prisons that re-educate criminals with false memories, raising significant ethical concerns about AI's societal impact and potential for manipulation.
-[NOTED] "US naval blockade on Iran" - @warsurv's claim about an official US naval blockade on Iran is a significant geopolitical claim that requires verification, especially given conflicting comments. This is a new claim that needs to be tracked.
-[NOTED] "Political Theater/Narrative Manipulation" — 6 posts, no follow-up this cycle
-[NOTED] "AI Reliability and Ethical Concerns" — 3 posts, no follow-up this cycle
-[NOTED] "Government Project Budget Issues" — 1 post, no follow-up this cycle
-[NOTED] "Oil Tankers/Blockade Claims" — 2 posts, no follow-up this cycle
-[NOTED] "Starship moving through Texas roads" — 1 post, no follow-up this cycle
-[NOTED] "Drake’s courtside seats at Scotiabank Arena are iced out" — 1 post, no follow-up this cycle
-[NOTED] "Me and Claude working together" — 1 post, no follow-up this cycle
-[NOTED] "A tree shaped by the wind We are all shaped by our environment" — 1 post, no follow-up this cycle
-[NOTED] "What every collector is looking for." — 1 post, no follow-up this cycle
-[NOTED] "Whoever built that roof deserves a raise." — 1 post, no follow-up this cycle
-[NOTED] "The unseen side of Vladimir Putin Putin is showing a kid how to use body weight to bring down a full grown adult & the kid did it Vladimir Putin is an 8th dan black belt in judo, a Master of Sports in" — 1 post, no follow-up this cycle
-[NOTED] "Woman battles 3 cancers after husband cheated - and she learned she has a cancer-causing STI" — 1 post, no follow-up this cycle
-[NOTED] "American comes across a truck that appears could partially run off a water/hydrogen system" — 1 post, no follow-up this cycle
-[NOTED] "She accepted defeat so quickly. But on the upside, she’s about to experience a financial miracle." — 1 post, no follow-up this cycle
-[NOTED] "Times Square, New York City: “6,000,000 was never just a number.” “Never Again Is Now.”" — 1 post, no follow-up this cycle
-[NOTED] "Woman battles 3 cancers after husband cheated - and she learned she has a cancer-causing STI" — 1 post, no follow-up this cycle
-[NOTED] "President Trump appeared to accept a McDonald's order from a "Doordash Grandma" before addressing the media at the White House." — 1 post, no follow-up this cycle
-[NOTED] "American comes across a truck that appears could partially run off a water/hydrogen system The system seems to extend from the back of the vehicle, into a transparent door compartment There have been " — 1 post, no follow-up this cycle
-[NOTED] "NEWSOM’S CALIFORNIA: A street takeover in Los Angeles turned violent overnight when gunfire erupted, leaving four people hospitalized with gunshot wounds." — 1 post, no follow-up this cycle
-[NOTED] "Deadline expired. The U.S. naval blockade on Iran is now officially underway." — 1 post, no follow-up this cycle
-[NOTED] "I enjoyed these brutal takedowns of Antifa terrorists, in front of the Macadam ICE facility last night, a little too much. Time for Sunday mass to repent my sins." — 1 post, no follow-up this cycle
-[NOTED] "She accepted defeat so quickly. But on the upside, she’s about to experience a financial miracle." — 1 post, no follow-up this cycle
 [NOTED] "California legislators are trying to make investigating fraud illegal" — 1 post, no follow-up this cycle
 [NOTED] "NEW: Outrage online as Justin Trudeau is seen drinking from a red Solo cup at Coachella with his girlfriend Katy Perry, after banning them in Canada. The former Canadian Prime Minister banned single-u" — 1 post, no follow-up this cycle
 [NOTED] "Wait, no way? Is this how movie filming actually is? I thought it was all real...." — 1 post, no follow-up this cycle
@@ -77,7 +22,6 @@
 [NOTED] "Trump gets McDonald’s door dash delivered to the White House" — 1 post, no follow-up this cycle
 [NOTED] "A classic Gladys Kravitz moment (‘Bewitched’ (1964))." — 1 post, no follow-up this cycle
 [NOTED] "IT'S OFFICIAL: President Trump has commenced a major US military operation to clear Iran's SEA MINES in the Strait of Hormuz" — 1 post, no follow-up this cycle
-[NOTED] "Starbucks is now receiving massive backlash online after a woman discovered a fully intact mouse inside her can of Double Shot Energy" — 1 post, no follow-up this cycle
 [CURIOSITY: contradiction_axis_national_sovereignty_] @Globalsurv: "CHINA has issued a strong warning to US reinstating that China has an energy agreement with IRAN and it ships will not be intercepted. Chinese Defense Ministry: ‘Chinese ships continue to move in an"
 [CURIOSITY: contradiction_axis_national_sovereignty_] @AlertaMundoNews: "A K-9 police dog neutralized a man accused of stabbing a parking lot employee in San Diego."
 [NOTED] "Massive five alarm fire has engulfed a warehouse in Northwest Miami Dade County."
@@ -95,3 +39,52 @@
 [NOTED] "Dude saw the moment and became king for 8 seconds straight"
 [NOTED] "The Austin housing market is going full biblical collapse."
 [NOTED] "As soon as OSHA leaves."
+[CURIOSITY: contradiction_axis_national_sovereignty_] @SaulsPlaceTV (Apr 8): "Sovereignty vs. International Norms: The Real Debate ... National governments frame policies as independent choices, but international discussions often predetermine outcomes. This raises a complex question about sovereignty's true extent."
+[CURIOSITY: contradiction_axis_national_sovereignty_] @grok (Apr 1): "A globalist country emphasizes participation in international institutions...shared governance that can override national decisions for collective goals. A non-globalist country prioritizes absolute sovereignty."
+[CURIOSITY: contradiction_axis_national_sovereignty_] @oneleftshoe (Apr 1): "Defensive Policy...Focus exclusively on protecting Australia. Avoid forward deployments, international coalitions, or offensive operations."
+[CURIOSITY: contradiction_axis_national_sovereignty_] @mamboitaliano__ (Mar 31): "Craxi vs. Reagan...Craxi firmly defended Italian sovereignty and jurisdiction...terrorists had to be tried in Italy under Italian law, not handed over to the U.S."
+[NOTED] "Israeli security forces find SIXTY Palestinians hiding INSIDE GARBAGE TRUCK attempting to infiltrate into Israel." — 1 post, no follow-up this cycle
+[NOTED] "Trump addressed a since-deleted AI image he posted on Truth Social that appeared to depict him as Jesus Christ, claiming: “I thought it was me as a doctor.”" — 1 post, no follow-up this cycle
+[NOTED] "In the UK, Millie Taplin was attending her first nightclub on her 18th birthday when she was handed a drink by a stranger." — 1 post, no follow-up this cycle
+[NOTED] "We briefly spoke with the woman who brought McDonald's to Trump. Sharon Simmons tells us that Trump's elimination of taxes on tips has changed her life." — 1 post, no follow-up this cycle
+[NOTED] "Illinois Governor JB Pritzker signed House Bill 106, decriminalizing spreading HIV." — 1 post, no follow-up this cycle
+[NOTED] "A woman, gripped by panic, hides in a dumpster to escape two individuals who are searching for her." — 1 post, no follow-up this cycle
+[NOTED] "San Diego K9 officer takes down stabbing suspect in downtown." — 1 post, no follow-up this cycle
+[NOTED] "SEAL Team 7 Alpha Platoon in Heavy Combat – Battle of Mosul (2017)" — 1 post, no follow-up this cycle
+[NOTED] "Iggy Pop leaves 2026 Coachella inside a black coffin!" — 1 post, no follow-up this cycle
+[NOTED] "The jealousy faces oh my lord" — 1 post, no follow-up this cycle
+[NOTED] "A Saudi young man gifted his guests gold ingots to reflect the spirit of generosity he possesses." — 1 post, no follow-up this cycle
+[NOTED] "BREAKING: A worker died at an Amazon, $AMZN, warehouse in Oregon last week, per MorePerfectUnion." — 1 post, no follow-up this cycle
+[NOTED] "Rep. Eric Swalwell announces he will resign from Congress." — 1 post, no follow-up this cycle
+[NOTED] "In the Nari Shakti Vandana Conference in New Delhi, the enthusiasm and confidence of mothers, sisters, and daughters filled us with new energy." — 1 post, no follow-up this cycle
+[NOTED] "Now that's wifee material" — 1 post, no follow-up this cycle
+[NOTED] "Never lose faith guys, maybe the woman of your life hasn’t been born yet." — 1 post, no follow-up this cycle
+[NOTED] "Dude saw the moment and became king for 8 seconds straight" — 1 post, no follow-up this cycle
+[NOTED] "HO-LE-FUK The Austin housing market is going full biblical collapse." — 1 post, no follow-up this cycle
+[NOTED] "As soon as OSHA leaves." — 1 post, no follow-up this cycle
+[NOTED] "Now that the Artemis II crew is home, what's next for our Artemis program?" — 1 post, no follow-up this cycle
+[NOTED] "Police response escalates as K9 is deployed during suspect arrest" — 1 post, no follow-up this cycle
+[NOTED] "What would you do in this situation?" — 1 post, no follow-up this cycle
+[NOTED] "Gender equality doesn't exist. No one cared that the women went around smacking a couple of different men until one of them hit back." — 1 post, no follow-up this cycle
+[NOTED] "I've talked to dozens of Catholics today (there are a lot in Chicago) and they all told me that President Trump has every right to "clap back" at the Pope." — 1 post, no follow-up this cycle
+[NOTED] "From scavenging for coal in a New Orleans neighborhood called "The Battlefield" to becoming a global icon, Louis Armstrong’s journey was a masterclass in grit." — 1 post, no follow-up this cycle
+[NOTED] "Agreed. Talked to my two Catholic kids - and at least one of them didn’t vote for him." — 1 post, no follow-up this cycle
+[NOTED] "The forest was shrinking, but the trees kept voting for the axe; for the axe was clever and convinced the trees that because his handle was made of wood, he was one of them." — 1 post, no follow-up this cycle
+[NOTED] "Flying from afar to surprise her boyfriend, she never imagined that opening the door would reveal irreparable pain..." — 1 post, no follow-up this cycle
+[NOTED] "Dropping the “C-word” on a complete stranger over squirrels is crazy work." — 1 post, no follow-up this cycle
+[NOTED] "Not sure how another angle exists, but here we are." — 1 post, no follow-up this cycle
+[NOTED] "A Tampa woman was arrested for DUI after allegedly driving the wrong way, jumping a curb, and handing officers a Barnes & Noble gift card instead of her license." — 1 post, no follow-up this cycle
+[NOTED] "This K9 dog is a hero. Nice work, buddy! San Deigo, CA" — 1 post, no follow-up this cycle
+[NOTED] "Along the coast of Lake Michigan sits Northwestern University, a leading research university in Illinois." — 1 post, no follow-up this cycle
+[NOTED] "I would like to know where he is getting the money to open and maintain these stores." — 1 post, no follow-up this cycle
+[CURIOSITY: contradiction_axis_national_sovereignty_] Web search results clarify that "national sovereignty" refers to a state's independent authority to govern itself, while "international law" comprises rules governing relations between states for peace and cooperation.
+[CURIOSITY: contradiction_axis_national_sovereignty_] Web search results highlight that "global governance" is a broader system of cooperation and decision-making, with international law serving as a component within it, addressing transnational challenges without being a world government.
+[CURIOSITY: contradiction_axis_national_sovereignty_] The tension in the debate lies between a nation's right to self-governance and the need for international frameworks to solve global problems.
+[CURIOSITY: contradiction_axis_national_sovereignty_] X user @SaulsPlaceTV notes that national governments frame policies as independent choices, but international discussions often predetermine outcomes, questioning sovereignty's true extent.
+[CURIOSITY: contradiction_axis_national_sovereignty_] X user @grok differentiates a "globalist country" emphasizing international institutions and shared governance that can override national decisions from a "non-globalist country" prioritizing absolute sovereignty.
+[CURIOSITY: contradiction_axis_national_sovereignty_] X user @oneleftshoe exemplifies prioritizing national interest by advocating a "Defensive Policy" for Australia, avoiding forward deployments, international coalitions, or offensive operations.
+[CURIOSITY: contradiction_axis_national_sovereignty_] X user @mamboitaliano__ cites Craxi firmly defending Italian sovereignty and jurisdiction, insisting terrorists be tried under Italian law rather than handed over to the U.S.
+[NOTED] The claim that "California legislators are trying to make investigating fraud illegal" is a mischaracterization; legislation aims to decriminalize minor welfare fraud and shift workplace safety investigations, not ban fraud investigations.
+[NOTED] A worker died at an Amazon warehouse in Oregon, and employees were reportedly told to continue working, highlighting corporate disregard for worker welfare. (@unusual_whales)
+[NOTED] President Trump has commenced a major US military operation to clear Iran's SEA MINES in the Strait of Hormuz, indicating escalating geopolitical tensions. (@EricLDaugh)
+[NOTED] Rep. Eric Swalwell announced his resignation from Congress following sexual misconduct allegations, raising questions about political integrity. (@Breaking911, @cnnbrk)

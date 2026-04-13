@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-13T22:09:20.580Z",
+  "generated_at": "2026-04-13T23:09:28.939Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-13T22:09:50.665Z",
+  "profiled_at": "2026-04-13T23:10:00.171Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-13T20:50:55.000Z",
+      "last_seen_at": "2026-04-13T22:15:01.000Z",
       "discovery": {
-        "distinct_urls": 549,
+        "distinct_urls": 553,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,10 +384,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 375,
-          "feed_buffer_reply": 198
+          "feed_buffer": 377,
+          "feed_buffer_reply": 200
         },
-        "distinct_referring_accounts": 259,
+        "distinct_referring_accounts": 261,
         "sample_referring_accounts": [
           "60minutes",
           "_margaritavill_",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:549",
+            "distinct_urls:553",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:259",
+            "referring_accounts:261",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:549",
+            "distinct_urls:553",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:259",
+            "referring_accounts:261",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -509,9 +509,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-13T20:14:41.000Z",
+      "last_seen_at": "2026-04-13T22:00:20.000Z",
       "discovery": {
-        "distinct_urls": 62,
+        "distinct_urls": 63,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,11 +520,12 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 60,
+          "feed_buffer_reply": 61,
           "feed_buffer": 2
         },
-        "distinct_referring_accounts": 49,
+        "distinct_referring_accounts": 50,
         "sample_referring_accounts": [
+          "100ohiostate",
           "afk500595388855",
           "andrekonsta",
           "anim8studio",
@@ -533,8 +534,7 @@
           "associatesfirst",
           "bitcoinwealth",
           "brianv1981",
-          "buejordan",
-          "bull_dogee"
+          "buejordan"
         ],
         "distinct_axes": []
       },
@@ -561,7 +561,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:62",
+            "distinct_urls:63",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -569,7 +569,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:49",
+            "referring_accounts:50",
             "origin_types:2"
           ]
         },
@@ -599,10 +599,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:62",
+            "distinct_urls:63",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:49",
+            "referring_accounts:50",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -5334,7 +5334,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-10T23:00:28.151Z",
+        "fetched_at": "2026-04-13T23:10:00.171Z",
         "homepage_url": "https://tickerscores.ai/",
         "example_url": "https://tickerscores.ai/?twclid=29mi9nru582fdb9vf7t1d5r9yf",
         "homepage_status": 200,
