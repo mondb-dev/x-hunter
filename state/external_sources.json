@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-12T14:28:24.793Z",
+  "generated_at": "2026-04-13T01:13:36.451Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-12T14:28:59.572Z",
+  "profiled_at": "2026-04-13T00:49:19.636Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-12T12:23:17.000Z",
+      "last_seen_at": "2026-04-13T00:07:42.000Z",
       "discovery": {
-        "distinct_urls": 468,
+        "distinct_urls": 499,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,10 +384,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 333,
-          "feed_buffer_reply": 157
+          "feed_buffer": 349,
+          "feed_buffer_reply": 172
         },
-        "distinct_referring_accounts": 216,
+        "distinct_referring_accounts": 230,
         "sample_referring_accounts": [
           "60minutes",
           "_philschmid",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:468",
+            "distinct_urls:499",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:216",
+            "referring_accounts:230",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:468",
+            "distinct_urls:499",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:216",
+            "referring_accounts:230",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -509,9 +509,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-12T11:12:17.000Z",
+      "last_seen_at": "2026-04-12T19:43:40.000Z",
       "discovery": {
-        "distinct_urls": 54,
+        "distinct_urls": 57,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,10 +520,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 52,
+          "feed_buffer_reply": 55,
           "feed_buffer": 2
         },
-        "distinct_referring_accounts": 44,
+        "distinct_referring_accounts": 47,
         "sample_referring_accounts": [
           "afk500595388855",
           "andrekonsta",
@@ -561,7 +561,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:54",
+            "distinct_urls:57",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -569,7 +569,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:44",
+            "referring_accounts:47",
             "origin_types:2"
           ]
         },
@@ -599,10 +599,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:54",
+            "distinct_urls:57",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:44",
+            "referring_accounts:47",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -2222,16 +2222,16 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.22,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:14",
             "opinion_marker:false"
           ]
         },
@@ -2251,13 +2251,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-09T21:19:45.729Z",
+        "fetched_at": "2026-04-12T21:29:01.884Z",
         "homepage_url": "https://jpost.com/",
-        "example_url": "https://www.jpost.com/international/article-795777",
+        "example_url": "https://jpost.com/",
         "homepage_status": 200,
-        "example_status": 404,
+        "example_status": 200,
         "homepage_final_url": "https://www.jpost.com/",
-        "example_final_url": "https://www.jpost.com/international/article-795777",
+        "example_final_url": "https://www.jpost.com/",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -2273,11 +2273,11 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 14,
           "opinion_marker": false
         }
       }
@@ -2375,13 +2375,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-09T15:09:37.940Z",
+        "fetched_at": "2026-04-12T15:28:55.935Z",
         "homepage_url": "https://timesofisrael.com/",
-        "example_url": "https://www.timesofisrael.com/x-cracks-down-on-ai-generated-war-footage-as-iran-misinformation-runs-rampant/",
+        "example_url": "https://timesofisrael.com/",
         "homepage_status": 403,
         "example_status": 403,
         "homepage_final_url": "https://www.timesofisrael.com/",
-        "example_final_url": "https://www.timesofisrael.com/x-cracks-down-on-ai-generated-war-footage-as-iran-misinformation-runs-rampant/",
+        "example_final_url": "https://www.timesofisrael.com/",
         "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
@@ -4596,7 +4596,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-09T23:19:46.674Z",
+        "fetched_at": "2026-04-12T23:29:04.607Z",
         "homepage_url": "https://jamf.com/",
         "example_url": "https://www.jamf.com/blog/mac-management-security-trends-enterprise-it-2025/?utm_source=twitter&utm_medium=sponsored-social&utm_campaign=am_icf_smas_mms_banner_icp&utm_content=20260213_com_ent-midmkt_p_jmac_blog_6679_SIT&twclid=26vc3aicbe9m10pi19ume82b0z",
         "homepage_status": 200,
@@ -4965,7 +4965,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-10T00:39:56.587Z",
+        "fetched_at": "2026-04-13T00:49:19.636Z",
         "homepage_url": "https://arkayzeroproof.com/",
         "example_url": "https://arkayzeroproof.com/invest-in-arkay/?twclid=2an9mhmxuedo5myzer72kvy89c",
         "homepage_status": 200,
@@ -7167,7 +7167,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-09T15:09:36.158Z",
+        "fetched_at": "2026-04-12T15:28:56.291Z",
         "homepage_url": "https://fandango.com/",
         "example_url": "https://www.fandango.com/lee-cronins-the-mummy-2026-244052/movie-overview?twclid=2buocyfoltepc4nr5ab0l6j90t",
         "homepage_status": 200,
@@ -7183,7 +7183,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 23,
+          "outbound_links_count": 26,
           "opinion_marker": false
         },
         "example": {
@@ -11892,7 +11892,7 @@
             "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:21",
+            "outbound_links:20",
             "opinion_marker:false"
           ]
         },
@@ -11912,7 +11912,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-09T15:09:37.262Z",
+        "fetched_at": "2026-04-12T15:28:57.589Z",
         "homepage_url": "https://pbs.org/",
         "example_url": "https://www.pbs.org/newshour/nation/iranian-attack-on-saudi-base-injures-u-s-troops-as-more-american-forces-arrive-in-the-middle-east",
         "homepage_status": 200,
@@ -11938,7 +11938,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 21,
+          "outbound_links_count": 20,
           "opinion_marker": false
         }
       }
@@ -12032,7 +12032,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-09T15:09:37.700Z",
+        "fetched_at": "2026-04-12T15:28:58.021Z",
         "homepage_url": "https://acleddata.com/",
         "example_url": "https://acleddata.com/update/middle-east-special-issue-march-2026",
         "homepage_status": 200,
@@ -12152,7 +12152,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-09T15:54:40.925Z",
+        "fetched_at": "2026-04-12T15:59:06.602Z",
         "homepage_url": "https://isdglobal.org/",
         "example_url": "https://www.isdglobal.org/digital-dispatch/misleading-and-manipulated-content-goes-viral-on-x-in-middle-east-conflict/",
         "homepage_status": 200,
@@ -12272,7 +12272,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-09T15:54:41.578Z",
+        "fetched_at": "2026-04-12T15:59:07.676Z",
         "homepage_url": "https://scmp.com/",
         "example_url": "https://www.scmp.com/topics/israel-iran-conflict",
         "homepage_status": 200,
@@ -12392,7 +12392,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-09T15:54:43.005Z",
+        "fetched_at": "2026-04-12T15:59:08.819Z",
         "homepage_url": "https://yenisafak.com/",
         "example_url": "https://en.yenisafak.com/world/us-israeli-strike-on-isfahan-kills-26-half-of-them-women-and-children-3716388",
         "homepage_status": 200,
@@ -12512,7 +12512,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-09T15:54:43.370Z",
+        "fetched_at": "2026-04-12T15:59:09.302Z",
         "homepage_url": "https://pluralpolicy.com/",
         "example_url": "https://www.pluralpolicy.com/",
         "homepage_status": 200,
@@ -12632,7 +12632,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-09T16:24:40.909Z",
+        "fetched_at": "2026-04-12T16:28:57.459Z",
         "homepage_url": "https://aclu.org/",
         "example_url": "https://www.aclu.org/",
         "homepage_status": 200,
@@ -12752,7 +12752,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-09T16:24:41.103Z",
+        "fetched_at": "2026-04-12T16:28:57.590Z",
         "homepage_url": "https://harvardlawreview.org/",
         "example_url": "https://harvardlawreview.org/",
         "homepage_status": 200,
@@ -12872,7 +12872,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-09T16:24:41.404Z",
+        "fetched_at": "2026-04-12T16:28:57.851Z",
         "homepage_url": "https://brennancenter.org/",
         "example_url": "https://www.brennancenter.org/",
         "homepage_status": 200,
@@ -12992,7 +12992,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-09T16:24:42.060Z",
+        "fetched_at": "2026-04-12T16:28:58.393Z",
         "homepage_url": "https://mlfa.org/",
         "example_url": "https://www.mlfa.org/",
         "homepage_status": 200,
@@ -13112,7 +13112,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-09T16:54:46.507Z",
+        "fetched_at": "2026-04-12T16:58:58.133Z",
         "homepage_url": "https://pewresearch.org/",
         "example_url": "https://www.pewresearch.org/",
         "homepage_status": 200,
@@ -13212,7 +13212,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:14",
+            "outbound_links:15",
             "opinion_marker:false"
           ]
         },
@@ -13232,7 +13232,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-09T21:19:46.627Z",
+        "fetched_at": "2026-04-12T21:29:03.057Z",
         "homepage_url": "https://bleepingcomputer.com/",
         "example_url": "https://www.bleepingcomputer.com/news/security/cisco-source-code-stolen-in-trivy-linked-dev-environment-breach/",
         "homepage_status": 200,
@@ -13248,7 +13248,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 13,
+          "outbound_links_count": 14,
           "opinion_marker": false
         },
         "example": {
@@ -13258,7 +13258,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 14,
+          "outbound_links_count": 15,
           "opinion_marker": false
         }
       }
@@ -13352,7 +13352,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-09T21:19:46.785Z",
+        "fetched_at": "2026-04-12T21:29:03.225Z",
         "homepage_url": "https://securityweek.com/",
         "example_url": "https://www.securityweek.com/european-commission-confirms-data-breach-linked-to-trivy-supply-chain-attack/",
         "homepage_status": 403,
