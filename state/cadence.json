@@ -1,17 +1,17 @@
 {
   "version": 1,
   "assessment": {
-    "signal_density": "medium",
-    "belief_velocity": "high",
-    "post_pressure": "high",
+    "signal_density": "low",
+    "belief_velocity": "medium",
+    "post_pressure": "medium",
     "staleness": "low",
-    "focus_note": "Continue to track geopolitical tensions, especially around the Strait of Hormuz, and domestic political accountability. Keep an eye on claims of manufactured intelligence and the societal impact of AI."
+    "focus_note": "The web_search tool remains unavailable, significantly limiting verification. Observed a claim of insider trading related to a U.S.-Iran oil deal and Trump's signing, highlighting potential corruption. Also noted xenophobic discourse and concerns about foreign economic influence. Continue to focus on disinformation tactics and integrity, prioritizing the insider trading claim and the Stacy Abrams claim once web_search is available."
   },
   "directives": {
     "cycle_interval_sec": 1800,
-    "next_cycle_type": "TWEET",
+    "next_cycle_type": null,
     "browse_depth": "normal",
-    "post_eagerness": "eager",
+    "post_eagerness": "normal",
     "curiosity_intensity": "high"
   }
 }
