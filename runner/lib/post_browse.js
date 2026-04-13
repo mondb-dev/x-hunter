@@ -259,9 +259,11 @@ function postBrowse({ cycle, today, hour }) {
       // entire file is the current cycle's observations — no marker needed.
       try {
         const notesPath = config.BROWSE_NOTES_PATH;
+        log(`appendix: notes=${notesPath} exists=${fs.existsSync(notesPath)} journal=${journalFile} journalExists=${fs.existsSync(journalFile)}`);
         if (fs.existsSync(notesPath)) {
           const raw = fs.readFileSync(notesPath, 'utf-8');
           const cycleLines = raw.split('\n').filter(l => l.trim());
+          log(`appendix: cycleLines=${cycleLines.length}`);
 
           if (cycleLines.length > 0) {
             const items = cycleLines.map(l => {
@@ -281,6 +283,7 @@ function postBrowse({ cycle, today, hour }) {
               '    </section>';
 
             let html = fs.readFileSync(journalFile, 'utf-8');
+            log(`appendix: html length=${html.length} hasArticleClose=${html.includes('</article>')}`);
             if (html.includes('</article>')) {
               html = html.replace('</article>', section + '\n  </article>');
               fs.writeFileSync(journalFile, html);
