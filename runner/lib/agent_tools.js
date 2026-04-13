@@ -337,7 +337,8 @@ const TOOL_EXECUTORS = {
 
         if (!res.ok) {
           const body = await res.text();
-          return `Search error: HTTP ${res.status} — ${body.slice(0, 200)}`;
+          log(`web_search HTTP ${res.status}: ${body.slice(0, 200)}`);
+          return `web_search returned HTTP ${res.status}. The tool IS available — this was a transient API error. Try again with a different query or proceed without it.`;
         }
 
         const data = await res.json();
@@ -360,8 +361,8 @@ const TOOL_EXECUTORS = {
         clearTimeout(timer);
       }
     } catch (err) {
-      if (err.name === 'AbortError') return 'Search error: request timed out (30s)';
-      return `Search error: ${err.message}`;
+      if (err.name === 'AbortError') return 'web_search timed out (30s). The tool IS available — try a shorter query.';
+      return `web_search error: ${err.message}. The tool IS available — this was a transient error.`;
     }
   },
 };
