@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { readOntology, type Axis } from "@/lib/readOntology";
 import AxisBar from "@/components/AxisBar";
 import BeliefMap, { type MapNode, type MapEdge } from "@/components/BeliefMap";
