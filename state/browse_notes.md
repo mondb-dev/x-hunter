@@ -1,21 +1,38 @@
-## Browse Notes for 2026-04-13 04:03
+## Browse Notes for 2026-04-13 05:22
 
-### Curiosity Directive: National Sovereignty vs. International Law
-
-The X search on "National Sovereignty vs International" and subsequent web search provided several relevant perspectives on the ongoing debate:
-*   **X Posts:**
-    *   @SaulsPlaceTV discusses the tension between national governments' claims of independent policy-making and the predetermination of outcomes by international discussions, questioning the true extent of sovereignty. [CURIOSITY: contradiction_axis_national_sovereignty_]
-    *   @grok distinguishes between "globalist" countries (emphasizing international institutions and shared governance) and "non-globalist" countries (prioritizing absolute national sovereignty). [CURIOSITY: contradiction_axis_national_sovereignty_]
-    *   @oneleftshoe (MMP - Australia) outlines a defensive policy of "Strategic Neutrality," avoiding international coalitions, reflecting a national sovereignty stance. [CURIOSITY: contradiction_axis_national_sovereignty_]
-    *   @mamboitaliano__ provides a historical example of Craxi defending Italian sovereignty and jurisdiction against US pressure, emphasizing national law over extradition. [CURIOSITY: contradiction_axis_national_sovereignty_]
-*   **Web Search (Scholarly Context):** The web search clarified that national sovereignty is a state's independent authority to govern itself without external interference, while international law comprises rules governing states' relationships. The debate arises from the inherent clash where absolute sovereignty implies no obligation to international law, while international law often restricts state freedom. It also highlighted the evolving interpretation of sovereignty to facilitate cooperation without entirely compromising national autonomy. [CURIOSITY: contradiction_axis_national_sovereignty_]
+### General Observations:
+*   'web_search' tool was not found this cycle, limiting ability to find primary sources for verification.
 
 ### Trending Tensions & Signals:
 
-*   **Georgia Lawmaker Karen Bennett Charged with Pandemic Fraud**: Former Georgia House member Karen Bennett pleaded guilty to lying to collect federal unemployment benefits during the COVID-19 pandemic, as confirmed by web search (CBS News, AP News, Justice.gov). This is a significant instance of political corruption and lack of accountability. [INTEL: political_trust_corruption, power_accountability]
-*   **Eric Swalwell Allegations**: The ongoing allegations of sexual misconduct against Eric Swalwell and the suspension of his gubernatorial campaign continue to be a significant tension. This raises questions about political trust, accountability, and the potential for strategic narratives around such allegations. [INTEL: political_trust_corruption, political_moral_conduct]
-*   **China providing satellite imagery to Iran**: A claim by @_MAGA_NEWS_ suggests China enabled Iran to track US naval movements. This represents a significant development in global power realignments and potential digital supply chain vulnerabilities. [INTEL: global_power_realignments, digital_supply_chain_security]
-*   **Tulsi Gabbard's claims about Obama administration**: @QuantumGuard17 highlights Tulsi Gabbard's repeated claims that the Obama administration "manufactured intelligence," which directly relates to the integrity of information in public discourse. [INTEL: epistemic_integrity]
-*   **Strait of Hormuz Naval Activity**: @War_Radar2 reports two American destroyers entered the Strait of Hormuz and a US warship shot down an Iranian surveillance drone. This is a significant geopolitical development with implications for national sovereignty and international law. [INTEL: national_sovereignty_v_intl_law, geopolitical_rhetoric, global_power_realignments]
-*   **AI and Worker Replacement**: @MarioNawfal's post about Indian factory workers wearing head-mounted cameras for AI to learn their physical work, implying they are training their own replacements. This raises ethical concerns about AI's societal impact and potential exploitation. [INTEL: ai_societal_impact, human_rights_exploitation]
-*   **CIA Surveillance**: @TreeLakeRain humorously questions "Can the CIA see me picking my nose?", which, while lighthearted, touches on concerns about digital surveillance and individual autonomy. [INTEL: digital_surveillance_autonomy]
+*   **Colorado Child Rapist Probation Statistics and Political Link**: Continues to be a prominent claim regarding judicial outcomes and political affiliation. The underlying tension of political influence on justice remains. [INTEL: political_trust_corruption, epistemic_integrity, human_rights_exploitation]
+*   **Canadian Child Predators and Political Link**: Similar rhetoric to the Colorado claim, linking political figures to severe crimes. [INTEL: political_trust_corruption, epistemic_integrity, human_rights_exploitation]
+*   **Eric Swalwell Allegations**: Ongoing discussion about political accountability and integrity. [INTEL: political_trust_corruption, political_moral_conduct]
+*   **CIA Disinformation Campaign in Iran**: A specific post from @Polymarket reiterates the web search finding from the previous cycle, detailing claims of the CIA hacking IRGC commanders and sending false messages as part of a deception campaign. This directly relates to strategic narrative construction and epistemic integrity. [CURIOSITY: epistemic_integrity]
+*   **Former Cleveland Clinic Medical Director's "Shocking Confession"**: Dr. Daniel Neides apologizing for not providing informed consent to vaccinated patients. This raises questions about medical ethics, institutional integrity, and public trust. [INTEL: power_accountability, epistemic_integrity]
+*   **Lindsey Graham's Political Conduct**: A post from @RepJackKimble highlighting Lindsey Graham's long political career without sexual harassment accusations, bringing up questions of political moral conduct. [CURIOSITY: political_moral_conduct_v1]
+*   **Ted Cruz and Religious Expression**: A post from @RT_com noting Ted Cruz's hesitation to use "CHRIST IS KING" due to its hateful online usage, touching on the intersection of religious expression and political figures' conduct. [CURIOSITY: religious_expression_hate_speech_v1, political_moral_conduct_v1]
+*   **Trump's Image and Political Messaging**: Posts from @unusual_whales and @ShadowofEzra regarding Trump posting an image of himself as Jesus on Truth Social, which relates to political messaging, public perception, and potentially epistemic integrity (how political figures present themselves). [CURIOSITY: epistemic_integrity]
+*   **Trump and DeSantis Alliance**: A post from @realJennaEllis suggesting a strong alliance between Trump and DeSantis, with implications for political narratives and the 2024 election.
+
+### Unexamined Clusters:
+[NOTED] "people" — 11 posts, no follow-up this cycle
+[NOTED] "know" — 9 posts, no follow-up this cycle
+[NOTED] "think" — 7 posts, no follow-up this cycle
+[NOTED] "why" — 7 posts, no follow-up this cycle
+[NOTED] "trump" — 6 posts, no follow-up this cycle
+[NOTED] "iran" — 6 posts, no follow-up this cycle
+[NOTED] "said" — 4 posts, no follow-up this cycle
+[NOTED] "looks" — 4 posts, no follow-up this cycle
+[NOTED] "years" — 4 posts, no follow-up this cycle
+[NOTED] "take" — 4 posts, no follow-up this cycle
+[NOTED] "right" — 4 posts, no follow-up this cycle
+[NOTED] "pope" — 4 posts, no follow-up this cycle
+[NOTED] "want" — 4 posts, no follow-up this cycle
+[NOTED] "always" — 4 posts, no follow-up this cycle
+[NOTED] "much" — 3 posts, no follow-up this cycle
+[NOTED] "strait hormuz" — 3 posts, no follow-up this cycle
+[NOTED] "blessed" — 1 post, no follow-up this cycle
+[NOTED] "ruining kitchens" — 1 post, no follow-up this cycle
+[NOTED] "year old lauren sanchez says" — 1 post, no follow-up this cycle
+[NOTED] "former president barack obama saw choir danish girls practicing" — 1 post, no follow-up this cycle
