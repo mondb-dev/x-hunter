@@ -120,36 +120,54 @@ function recentSignals() {
   return signals;
 }
 
+/**
+ * Load recent browse notes for additional grounding context.
+ */
+function recentBrowseContext() {
+  const notesPath = path.join(ROOT, "state", "browse_notes.md");
+  try {
+    const raw = fs.readFileSync(notesPath, "utf-8");
+    // Take last 60 non-empty lines to get recent cycle observations
+    const lines = raw.split("\n").filter(l => l.trim() && !l.startsWith("#") && !l.startsWith("[NOTED]"));
+    return lines.slice(-60).join("\n").slice(0, 2000);
+  } catch { return ""; }
+}
+
 async function generatePrediction(driftingAxes, signals, vocation) {
+  // Build rich evidence context: axis label + actual evidence text
   const axesSummary = driftingAxes.slice(0, 6).map(a => {
     const evidence = a.recent_evidence.length > 0
-      ? `\n    Evidence: ${a.recent_evidence.join("; ").slice(0, 200)}`
+      ? `\n    Recent observations: ${a.recent_evidence.join(" | ").slice(0, 300)}`
       : "";
-    return `  - ${a.label} (score: ${a.score.toFixed(2)}, confidence: ${a.confidence.toFixed(2)}, drift: ${a.direction}, ${a.drift_count} alerts)${evidence}`;
+    return `  - ${a.label} (drifting ${a.direction}, ${a.drift_count} alerts in 48h)${evidence}`;
   }).join("\n");
 
-  const signalSummary = signals.length > 0
-    ? `\nRecent signals (${signals.length} in 7d): ${signals.map(s => `${s.spike_count} axes on ${s.ts.slice(0, 10)}`).join(", ")}`
-    : "\nNo structural signals in the last 7 days.";
+  const browseContext = recentBrowseContext();
+  const browseSection = browseContext
+    ? `\nRecent browse observations that are driving the drift:\n${browseContext}`
+    : "";
 
   const vocLabel = vocation?.label || "Digital Watchdog for Public Integrity";
 
   const prompt = `You are Sebastian D. Hunter, an autonomous AI agent whose vocation is "${vocLabel}".
 
-You observe public discourse and form beliefs from scratch. You are about to make a prediction tweet based on patterns you have observed in your belief axes.
+You observe public discourse and track belief axes. The following topics have been shifting in discourse intensity over the last 48 hours:
 
-Here are the belief axes that have been drifting recently:
 ${axesSummary}
-${signalSummary}
+${browseSection}
 
-Based on these observed patterns, write a SHORT prediction tweet (max 260 characters). The prediction should:
-1. State what you think is about to happen or is developing
-2. Reference the specific pattern or evidence that led to this prediction
-3. Be concrete and falsifiable — not vague
-4. Sound like a watchdog analyst, not a pundit
-5. End with a timeframe (e.g., "within days", "this week", "by month-end")
+Based on the SPECIFIC EVENTS AND ACTORS you see above, write a SHORT prediction tweet (max 260 characters).
 
-Do NOT use hashtags. Do NOT use emojis. Write in first person.
+RULES:
+- Name a SPECIFIC actor, country, institution, or event (e.g. "Iran", "Congress", "Swalwell", "the Strait of Hormuz") — do NOT reference your own axes or belief system
+- State what you predict will happen in the real world and WHY based on the pattern
+- Be concrete and falsifiable (reader should be able to check if you were right)
+- End with a timeframe ("within days", "this week", "within 72 hours", etc.)
+- Sound like a watchdog analyst citing observed patterns, not a pundit or pundit-quoting bot
+- Do NOT say "my axes", "belief drift", "correlated axes", "axis", or any internal system language
+- Do NOT use hashtags or emojis
+- Write in first person
+
 Return ONLY the tweet text, nothing else.`;
 
   const raw = await callVertex(prompt, 512);
