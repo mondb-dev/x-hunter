@@ -57,8 +57,14 @@ function commitAndPush({ paths, message }) {
   // Pull remote changes before pushing to avoid non-fast-forward failures
   // when code is deployed from local while the VM has pending commits.
   if (pushOk) {
+    let stashed = false;
     try {
       execSync(`git -C "${root}" fetch origin`, { stdio: 'ignore', timeout: 20000 });
+      // Stash any leftover working-tree changes so rebase isn't blocked by unstaged files
+      try {
+        execSync(`git -C "${root}" stash --include-untracked`, { stdio: 'pipe', timeout: 15000 });
+        stashed = true;
+      } catch {}
       // -Xtheirs: VM state files always win over remote code-push changes
       execSync(`git -C "${root}" rebase -Xtheirs origin/main`, { stdio: 'ignore', timeout: 30000 });
     } catch (e) {
@@ -66,6 +72,10 @@ function commitAndPush({ paths, message }) {
       try { execSync(`git -C "${root}" rebase --abort`, { stdio: 'ignore', timeout: 10000 }); } catch {}
       pushOk = false;
       pushErr = `rebase failed: ${e.stderr ? e.stderr.toString().trim() : e.message}`.slice(0, 200);
+    } finally {
+      if (stashed) {
+        try { execSync(`git -C "${root}" stash pop`, { stdio: 'ignore', timeout: 15000 }); } catch {}
+      }
     }
   }
   try {
