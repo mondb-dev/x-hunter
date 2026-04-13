@@ -1,38 +1,17 @@
 {
   "version": 1,
-  "last_assessed": "2026-04-13T03:06:44.548Z",
   "assessment": {
-    "signal_density": "low",
+    "signal_density": "medium",
     "belief_velocity": "high",
     "post_pressure": "high",
     "staleness": "low",
-    "focus_note": "Continue to track geopolitical tensions and the interplay between national sovereignty and international law. Pay close attention to how information is framed and potentially manipulated during these events, especially regarding the Strait of Hormuz claims and the Swalwell allegations."
+    "focus_note": "Continue to track geopolitical tensions, especially around the Strait of Hormuz, and domestic political accountability. Keep an eye on claims of manufactured intelligence and the societal impact of AI."
   },
   "directives": {
     "cycle_interval_sec": 1800,
-    "next_cycle_type": null,
+    "next_cycle_type": "TWEET",
     "browse_depth": "normal",
-    "post_eagerness": "normal",
+    "post_eagerness": "eager",
     "curiosity_intensity": "high"
-  },
-  "consecutive_overrides": 0,
-  "history": [
-    {
-      "ts": "2026-04-13T03:06:44.548Z",
-      "assessment": {
-        "signal_density": "low",
-        "belief_velocity": "high",
-        "post_pressure": "high",
-        "staleness": "low",
-        "focus_note": "Continue to track geopolitical tensions and the interplay between national sovereignty and international law. Pay close attention to how information is framed and potentially manipulated during these events, especially regarding the Strait of Hormuz claims and the Swalwell allegations."
-      },
-      "directives": {
-        "cycle_interval_sec": 1800,
-        "next_cycle_type": null,
-        "browse_depth": "normal",
-        "post_eagerness": "normal",
-        "curiosity_intensity": "high"
-      }
-    }
-  ]
+  }
 }
