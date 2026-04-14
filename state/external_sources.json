@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-14T06:29:16.975Z",
+  "generated_at": "2026-04-14T07:29:17.866Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-14T05:59:46.070Z",
+  "profiled_at": "2026-04-14T06:59:47.880Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -765,9 +765,9 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-14T05:16:53.795Z",
+      "last_seen_at": "2026-04-14T06:31:37.630Z",
       "discovery": {
-        "distinct_urls": 32,
+        "distinct_urls": 33,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
@@ -777,7 +777,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 36,
-          "journals": 13
+          "journals": 14
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -823,7 +823,7 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:32",
+            "distinct_urls:33",
             "distinct_axes:15",
             "origin_types:2"
           ]
@@ -862,7 +862,7 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:32",
+            "distinct_urls:33",
             "distinct_axes:15",
             "origin_types:2",
             "referring_accounts:0",
@@ -982,7 +982,7 @@
             "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:14",
+            "outbound_links:15",
             "opinion_marker:false"
           ]
         },
@@ -1002,7 +1002,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-11T06:45:39.994Z",
+        "fetched_at": "2026-04-14T06:59:47.304Z",
         "homepage_url": "https://steampowered.com/",
         "example_url": "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
         "homepage_status": 200,
@@ -1028,7 +1028,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 14,
+          "outbound_links_count": 15,
           "opinion_marker": false
         }
       }
@@ -6228,6 +6228,128 @@
       }
     },
     {
+      "domain": "barringtonhillsobserver.com",
+      "entity": "Barringtonhillsobserver",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-14T06:31:47.102Z",
+      "last_seen_at": "2026-04-14T06:31:47.102Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://barringtonhillsobserver.com/"
+        ],
+        "origin_counts": {
+          "claim_tracker": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_epistemic_integrity"
+        ]
+      },
+      "claims": {
+        "total": 1,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 1,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.26,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:37",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.34984375,
+          "confidence": 0.06135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-14T06:59:47.502Z",
+        "homepage_url": "https://barringtonhillsobserver.com/",
+        "example_url": "https://barringtonhillsobserver.com/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://barringtonhillsobserver.com/",
+        "example_final_url": "https://barringtonhillsobserver.com/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 37,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 37,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "discord.gg",
       "entity": "Discord Gg",
       "kind": "unknown",
@@ -7538,7 +7660,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-11T06:45:40.331Z",
+        "fetched_at": "2026-04-14T06:59:47.879Z",
         "homepage_url": "https://wsj.com/",
         "example_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
         "homepage_status": 401,
