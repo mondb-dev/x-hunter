@@ -249,12 +249,17 @@ function ClaimCard({ claim }: { claim: VerifiedClaim }) {
 
 // ── Page ─────────────────────────────────────────────────────────────────────
 
-export default function VerifiedPage({ searchParams }: { searchParams?: { filter?: string } }) {
-  const data = readVerification();
+export default async function VerifiedPage({
+  searchParams,
+}: {
+  searchParams?: Promise<{ filter?: string }> | { filter?: string };
+}) {
+  const data = await readVerification();
   if (!data) return notFound();
 
+  const params = searchParams ? await searchParams : undefined;
   const { stats, claims } = data;
-  const activeFilter = (searchParams?.filter ?? "all") as FilterStatus;
+  const activeFilter = (params?.filter ?? "all") as FilterStatus;
   const filteredClaims = activeFilter === "all"
     ? claims
     : claims.filter((c) => c.status === activeFilter);

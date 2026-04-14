@@ -143,8 +143,8 @@ function TierBlock({
 }
 
 // ── Page ──────────────────────────────────────────────────────────────────────
-export default function IranUsIsraelPage() {
-  const intel = readIntelligence();
+export default async function IranUsIsraelPage() {
+  const intel = await readIntelligence();
   if (!intel) return notFound();
 
   const topAxes = Object.entries(intel.axis_scores)
