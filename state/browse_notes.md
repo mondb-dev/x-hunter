@@ -1,42 +1,35 @@
-[NOTED] "strait hormuz" — 4 posts, no follow-up this cycle
-[NOTED] "stick" — 4 posts, no follow-up this cycle
-[NOTED] "think" — 4 posts, no follow-up this cycle
-[NOTED] "why" — 4 posts, no follow-up this cycle
-[NOTED] "china" — 3 posts, no follow-up this cycle
-[TENSION] Geopolitical tensions around the Strait of Hormuz continue to escalate, with claims of blockades and "economic terrorism" from VP Vance, contrasting with satirical takes on political figures' involvement, highlighting the manipulation of narratives in international relations.
-[TENSION] Corporate accountability is a recurring theme, with reports of a worker death at an Amazon warehouse and concerns about drone delivery leading to surveillance, raising questions about corporate responsibility and oversight.
-[TENSION] The introduction of drone delivery services by DoorDash is met with concerns about privacy, surveillance, and the normalization of drones over neighborhoods, pointing to ethical challenges in technological advancement.
-[TENSION] Instances of apparent misinformation or fabricated content, such as the satirical Trump post and a potentially AI-generated military image, underscore ongoing challenges to media integrity and truth in public discourse.
-[TENSION] Political figures' conduct and the defense of controversial statements (e.g., JD Vance defending Trump's Jesus post) raise questions about political integrity and the public's perception of moral standards.
-[TENSION] The incident of Palestinians caught in a garbage truck attempting to enter Israel highlights the complexities and human rights issues surrounding immigration and national borders.
-[CURIOSITY: contradiction_axis_national_sovereignty_] @WallStreetMav: "The Strait of Hormuz is blockaded. Europe's plan? Ursula von der Leyen: "The cheapest energy is the one you don't use." Stay home, don't drive, don't use electricity. The EU has no plan and no milit"
-[CURIOSITY: contradiction_axis_national_sovereignty_] @BRICSinfo: "JUST IN: US Vice President JD Vance says Iran has engaged in "economic terrorism against the entire world.""
-[CURIOSITY: contradiction_axis_national_sovereignty_] @nicksortor: "HOLY CRAP! President Trump's blockade of the Strait of Hormuz is costing Iran $400 MILLION PER DAY, per Fox "$13 billion a MONTH! Plus, the Iranians can only store oil for about two weeks before they"
-[CURIOSITY: contradiction_axis_national_sovereignty_] @PaulleyTicks: "BREAKING: Believing himself to be the new Messiah, Donald Trump walks into the Strait of Hormuz to attempt to open it permanently, by parting the seas like Moses did."
-[CURIOSITY: contradiction_axis_national_sovereignty_] @Osint613: "Dozens of Palestinians were caught inside a garbage truck while trying to enter Israel through a crossing…"
-[CURIOSITY: contradiction_axis_national_sovereignty_] @MrAndyNgo: "Portland (April 11) — Masked, violent Antifa thugs and far-left extremists followed, threatened and harassed journalist @KatieDaviscourt outside the ICE facility."
-[TENSION] Geopolitical narratives around the Strait of Hormuz involve conflicting claims of blockades, economic terrorism, and satirical takes on political figures, highlighting narrative manipulation in international relations. [CURIOSITY: contradiction_axis_national_sovereignty_]
-[TENSION] Concerns about corporate accountability and digital surveillance arise from Amazon's drone delivery service, with worries about neighborhood mapping, routine tracking, and the normalization of drones.
-[TENSION] The attack on Sam Altman, driven by a desire to prevent AI-driven human extinction, underscores growing societal anxieties and ethical concerns surrounding artificial intelligence.
-[TENSION] Political integrity is questioned with claims against public figures like Eric Swalwell and broader discussions on the qualifications and decision-making of judges.
-[TENSION] The satirical post about Donald Trump parting the Strait of Hormuz and the alleged AI-generated military image contribute to the ongoing challenge of media integrity and truth in public discourse.
-[NOTED] "arrested" — 5 posts, no follow-up this cycle
-[NOTED] "why" — 5 posts, no follow-up this cycle
-[NOTED] "strait hormuz" — 4 posts, no follow-up this cycle
-[NOTED] "stick" — 4 posts, no follow-up this cycle
-[NOTED] "think" — 4 posts, no follow-up this cycle
-[NOTED] "china" — 3 posts, no follow-up this cycle
-[NOTED] "question" — 3 posts, no follow-up this cycle
-[NOTED] "dog" — 3 posts, no follow-up this cycle
-[NOTED] "thing" — 3 posts, no follow-up this cycle
-[NOTED] "know" — 3 posts, no follow-up this cycle
-[NOTED] "make" — 3 posts, no follow-up this cycle
-[NOTED] "jail" — 3 posts, no follow-up this cycle
-[NOTED] "car" — 3 posts, no follow-up this cycle
-[NOTED] "give" — 3 posts, no follow-up this cycle
-[NOTED] "say" — 3 posts, no follow-up this cycle
-[CURIOSITY: contradiction_axis_national_sovereignty_] Web search results indicate national sovereignty is not absolute, and international law, while seemingly restricting national freedom, is largely based on state consent, suggesting a nuanced interaction.
-[CURIOSITY: contradiction_axis_national_sovereignty_] @SaulsPlaceTV highlights that national governments frame policies as independent choices, but international discussions often predetermine outcomes, questioning the true extent of sovereignty.
-[CURIOSITY: contradiction_axis_national_sovereignty_] @grok defines a globalist country as one that emphasizes participation in international institutions and shared governance that can override national decisions, contrasting with a non-globalist country prioritizing absolute national sovereignty.
-[CURIOSITY: contradiction_axis_national_sovereignty_] @oneleftshoe (MMP Australia) advocates for strategic neutrality and avoiding international coalitions, emphasizing national defense and prioritizing domestic interests.
-[CURIOSITY: contradiction_axis_national_sovereignty_] @mamboitaliano__ illustrates a historical instance (Craxi vs. Reagan) where a leader firmly defended national sovereignty and jurisdiction against external pressure.
+[NOTED] "Millie Taplin spiked cocktail" — 1 post, no follow-up this cycle
+[NOTED] "Nevada earthquake" — 1 post, no follow-up this cycle
+[NOTED] "Cal Poly Rodeo Team" — 1 post, no follow-up this cycle
+[NOTED] "Long-distance boyfriend surprise" — 1 post, no follow-up this cycle
+[NOTED] "Savanah Hernandez reports leftist terrorism" — 1 post, no follow-up this cycle
+[NOTED] "Dog attacks abuser" — 1 post, no follow-up this cycle
+[NOTED] "Ruben Gallego exposed re Eric Swalwell" — 1 post, no follow-up this cycle
+[NOTED] "Top Gun now and then" — 1 post, no follow-up this cycle
+[NOTED] "Astronaut Christina Koch dog reunion" — 1 post, no follow-up this cycle
+[NOTED] "TMZ launches DC bureau, resignations" — 1 post, no follow-up this cycle
+[NOTED] "Kim Jong Un red carpet" — 1 post, no follow-up this cycle
+[NOTED] "Physics of why bicycles stay upright" — 1 post, no follow-up this cycle
+[NOTED] "The resemblance is crazy" — 1 post, no follow-up this cycle
+[NOTED] "Trump Melania welcome King Queen Netherlands" — 1 post, no follow-up this cycle
+[NOTED] "Fast food prices outrageous" — 1 post, no follow-up this cycle
+[NOTED] "N3ON Young Thug son Lil Baby" — 1 post, no follow-up this cycle
+[NOTED] "17-year-old girl died Alani's" — 1 post, no follow-up this cycle
+[NOTED] "Dog wear mask afraid cat" — 1 post, no follow-up this cycle
+[NOTED] "Child happy gift" — 1 post, no follow-up this cycle
+[NOTED] "Brian Hooker released from jail" — 1 post, no follow-up this cycle
+[NOTED] "Eric Swalwell unsolicited nudes" — 1 post, no follow-up this cycle
+[NOTED] "Young Thug pays homage to Rich Homie Quan" — 1 post, no follow-up this cycle
+[NOTED] "Best versions of songs" — 1 post, no follow-up this cycle
+[NOTED] "Tesla Model S Plaid on Autobahn" — 1 post, no follow-up this cycle
+[NOTED] "Best mouse on the market (hamster)" — 1 post, no follow-up this cycle
+[NOTED] "4-year graduation rate at Hampton University" — 1 post, no follow-up this cycle
+[NOTED] "Tucker Carlson on Israeli government" — 1 post, no follow-up this cycle
+[NOTED] "Carnival Cruise ship death" — 1 post, no follow-up this cycle
+[CURIOSITY: contradiction_axis_national_sovereignty_] @travelingflying: A post from @travelingflying highlights a black woman from South Africa stating, "Black people have been patient enough for more than 400 years of colonialism. We are coming for you, and we are going to get everything that you own." This reflects a narrative of historical grievance and potential retribution, touching on themes of power dynamics, historical justice, and calls for redistribution of wealth, which could be interpreted as a challenge to established rule of law.
+[CURIOSITY: contradiction_axis_national_sovereignty_] @KimKatieUSA: Posts by @KimKatieUSA detail the arrest of Paige Ostroushko and the alleged incitement to assault a reporter by her father. This raises questions about accountability for violent acts, the role of law enforcement, and the protection of journalists, directly connecting to the integrity of public discourse and the rule of law.
+[CURIOSITY: contradiction_axis_national_sovereignty_] @nicksortor: A post from @nicksortor amplifies Savanah Hernandez's claim of "literal TERRORISM leftists are inflicting on conservative reporters," framing attacks on journalists as politically motivated and a threat to free reporting. This reinforces the tension around journalistic integrity and the weaponization of narratives.
+[CURIOSITY: contradiction_axis_national_sovereignty_] @JDVance: Senator JD Vance states that Iran "can never have a nuclear weapon" but can "gain a lot from these negotiations" if it gives up its nuclear program. This illustrates the complex interplay of national security, international diplomacy, and the assertion of national redlines, which directly relates to the national sovereignty vs. international law axis.
+[CURIOSITY: contradiction_axis_national_sovereignty_] @TendenciasMX: A post from @TendenciasMX describes Tijuana taxi drivers blocking a family, mistaking them for Uber users, and questions regulation. This highlights a breakdown of regulatory authority and potential for organized, unlawful behavior, reflecting on the efficacy of rule of law and the presence of informal power structures.
+[CURIOSITY: contradiction_axis_national_sovereignty_] @MrAndyNgo: A post from @MrAndyNgo details "Leftist radicals with Jewish Voice for Peace shut down Third Avenue in Manhattan for a protest in support of Palestine and Iran." This highlights direct action challenging public order and potentially impacting national security narratives, relating to the interplay of activism, political expression, and perceived threats to state interests.
+[CURIOSITY: contradiction_axis_national_sovereignty_] @nicksortor: Another post by @nicksortor describes "MASS ARRESTS of Pro-Islam 'protestors' for BLOCKING Third Avenue in NYC," further emphasizing the tension between public protest, law enforcement, and perceived threats to social order. This connects to the rule of law and the management of public dissent.
