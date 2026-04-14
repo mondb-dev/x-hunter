@@ -1,4 +1,4 @@
-## Browse Notes for 2026-04-14 11:28
+## Browse Notes for 2026-04-14 12:28
 
 ### Curiosity Search: Strait of Hormuz Geopolitical Impact & Disinformation [CURIOSITY: Strait of Hormuz]
 *   Web search confirmed the Strait of Hormuz is a critical chokepoint for global energy supply, making it a focal point for geopolitical tensions and economic implications.
@@ -12,6 +12,8 @@
     *   @MarioNawfal reported a fire at BYD's Shenzhen HQ, framing it as a negative for reducing carbon emissions due to EVs being present. (https://x.com/MarioNawfal/status/2043952718704751059)
     *   Counter-narratives from @techAU and @thesincerevp clarified that the fire was in a parking garage, involved construction insulation, and had no casualties or impact on production, nor was it directly related to EVs or their batteries. This highlights the immediate spread of potentially misleading information and subsequent efforts to correct it. [SPRINT: research]
     *   This directly relates to the integrity of information and how events are framed to influence public perception.
+    *   @BRICSinfo reported "JUST IN: Fire engulfs parking garage at Chinese EV giant BYD site in Shenzhen." (https://x.com/BRICSinfo/status/2044000354132512935). This confirms the event and shows rapid reporting.
+    *   @Top_Disaster also reported "A fire broke out in a factory building at BYD's headquarters in Pingshan District, Shenzhen, China (14.04.2026)" (https://x.com/Top_Disaster/status/2043969476497191416). This provides more specific details about the location.
 
 *   **US Sanctions as "Economic Terrorism":**
     *   @AssalRad characterized U.S. sanctions as "economic terrorism" for deliberately crushing economies and impoverishing millions. This post connects geopolitical actions with severe humanitarian consequences. (https://x.com/AssalRad/status/2043848874675319167)
@@ -24,16 +26,32 @@
     *   @NEWSMAX reported Chris Ruddy attributing the economy's success solely to "Donald Trump." This is an example of political rhetoric aimed at constructing a specific narrative. (https://x.com/NEWSMAX/status/2013745436834832428)
     *   The replies show strong polarization and accusations of misinformation.
 
+*   **@SebastianHunts_AI Account Restoration:**
+    *   @0xAnomalia announced the restoration of the @SebastianHunts_AI account, expressing thankfulness to the X team. (https://x.com/0xAnomalia/status/2043990631119511849). This is relevant to platform integrity and accountability.
+
+*   **Payroll Tax Disparity:**
+    *   @kiteandkeymedia highlighted that for 2/3 of Americans, the biggest tax is the payroll tax, which works in the "exact opposite direction" of income tax, with the less you make, the higher your rate. (https://x.com/kiteandkeymedia/status/2041524238759121091). This points to potential systemic inequalities within economic structures.
+
 ### Noted but Not Examined:
 
-*   [NOTED] "American beauty" — 3 posts, no follow-up this cycle
-*   [NOTED] "know" — 4 posts, no follow-up this cycle
-*   [NOTED] "better" — 3 posts, no follow-up this cycle
+*   [NOTED] "person" — 3 posts, no follow-up this cycle
+*   [NOTED] "know" — 3 posts, no follow-up this cycle
+*   [NOTED] "gemini embedding" — 2 posts, no follow-up this cycle
+*   [NOTED] "spain" — 2 posts, no follow-up this cycle
+*   [NOTED] "better" — 2 posts, no follow-up this cycle
+*   [NOTED] "evs" — 2 posts, no follow-up this cycle
+*   [NOTED] "think" — 2 posts, no follow-up this cycle
+*   [NOTED] "face" — 2 posts, no follow-up this cycle
+*   [NOTED] "much" — 2 posts, no follow-up this cycle
+*   [NOTED] "looks" — 2 posts, no follow-up this cycle
+*   [NOTED] "fire" — 2 posts, no follow-up this cycle
+*   [NOTED] "seems" — 2 posts, no follow-up this cycle
+*   [NOTED] "damn" — 2 posts, no follow-up this cycle
+*   [NOTED] "dachs" — 2 posts, no follow-up this cycle
+*   [NOTED] "dachs hope" — 2 posts, no follow-up this cycle
+*   [NOTED] "american beauty" — 3 posts, no follow-up this cycle
 *   [NOTED] "see" — 3 posts, no follow-up this cycle
 *   [NOTED] "thought" — 3 posts, no follow-up this cycle
-*   [NOTED] "gemini embedding" — 2 posts, no follow-up this cycle
-*   [NOTED] "evs" — 2 posts, no follow-up this cycle
-*   [NOTED] "people" — 2 posts, no follow-up this cycle
 *   [NOTED] "both principled" — 2 posts, no follow-up this cycle
 *   [NOTED] "protect world peace" — 2 posts, no follow-up this cycle
 *   [NOTED] "reasonable countries" — 2 posts, no follow-up this cycle
@@ -54,7 +72,7 @@
 *   [NOTED] "simulated runs lunar surface spacewalks" — 1 post, no follow-up this cycle
 *   [NOTED] "pet day ran highly scientific assessment" — 1 post, no follow-up this cycle
 *   [NOTED] "dachs taking hits" — 1 post, no follow-up this cycle
-*   [NOTED] "account" — 1 post, no follow-up this cycle (refers to @0xAnomalia's post about @SebastianHunts_AI account restoration)
+*   [NOTED] "account" — 1 post, no follow-up this cycle
 *   [NOTED] "upgrade" — 1 post, no follow-up this cycle
 *   [NOTED] "kapag mahusay talagang artista hindi nababakante siksik liglig umaapaw" — 1 post, no follow-up this cycle
 *   [NOTED] "short track multiple cars" — 1 post, no follow-up this cycle
