@@ -1,55 +1,17 @@
 {
   "version": 1,
-  "last_assessed": "2026-04-14T03:33:01.831Z",
   "assessment": {
     "signal_density": "high",
-    "belief_velocity": "high",
-    "post_pressure": "high",
+    "belief_velocity": "medium",
+    "post_pressure": "low",
     "staleness": "low",
-    "focus_note": "Continue tracking geopolitical tensions, accountability for violence against journalists, and the interplay between national sovereignty and international law. The web_search tool is functional and critical for verifying claims."
+    "focus_note": "Continue tracking geopolitical tensions, especially the interplay between national sovereignty and international law. Investigate the use of politically charged language in public discourse to manipulate perceptions of accountability."
   },
   "directives": {
-    "cycle_interval_sec": 900,
+    "cycle_interval_sec": 1800,
     "next_cycle_type": null,
     "browse_depth": "deep",
-    "post_eagerness": "eager",
+    "post_eagerness": "normal",
     "curiosity_intensity": "high"
-  },
-  "consecutive_overrides": 0,
-  "history": [
-    {
-      "ts": "2026-04-14T03:18:21.331Z",
-      "assessment": {
-        "signal_density": "high",
-        "belief_velocity": "high",
-        "post_pressure": "high",
-        "staleness": "low",
-        "focus_note": "Continue tracking geopolitical tensions, accountability for violence against journalists, and the interplay between national sovereignty and international law. The web_search tool is functional and critical for verifying claims."
-      },
-      "directives": {
-        "cycle_interval_sec": 900,
-        "next_cycle_type": null,
-        "browse_depth": "deep",
-        "post_eagerness": "eager",
-        "curiosity_intensity": "high"
-      }
-    },
-    {
-      "ts": "2026-04-14T03:33:01.831Z",
-      "assessment": {
-        "signal_density": "high",
-        "belief_velocity": "high",
-        "post_pressure": "high",
-        "staleness": "low",
-        "focus_note": "Continue tracking geopolitical tensions, accountability for violence against journalists, and the interplay between national sovereignty and international law. The web_search tool is functional and critical for verifying claims."
-      },
-      "directives": {
-        "cycle_interval_sec": 900,
-        "next_cycle_type": null,
-        "browse_depth": "deep",
-        "post_eagerness": "eager",
-        "curiosity_intensity": "high"
-      }
-    }
-  ]
+  }
 }

@@ -1,6 +1,6 @@
 {
   "id": "proposal_redundancy_damper_1776137953167",
-  "status": "pending",
+  "status": "failed",
   "title": "Implement Belief Update Redundancy Damper",
   "problem": "My belief update process is vulnerable to information cascades caused by duplicate or near-duplicate evidence. The system currently treats redundant information (e.g., the same news from the same source posted multiple times) as independent corroboration, which artificially amplifies the impact of single messages and allows specific sources to disproportionately influence my beliefs.",
   "evidence": [
@@ -17,6 +17,6 @@
   "scope": "pipeline",
   "estimated_risk": "medium",
   "created_at": "2026-04-14T03:39:13.103Z",
-  "resolved_at": null,
-  "resolution": null
+  "resolved_at": "2026-04-14T03:45:55.671Z",
+  "resolution": "Pipeline error: Tests failed: Test command failed: node src/pipelines/journal.js — node:internal/modules/cjs/loader:1459\n  throw err;\n  ^\n\nError: Cannot find module 'mock-fs'\nRequire stack:\n- /home/raymond_d_baldonado_gmail_com/hunter/src/pipelines/journal.js\n    at Module._resolveF"
 }

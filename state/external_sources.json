@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-14T03:29:37.048Z",
+  "generated_at": "2026-04-14T04:14:29.631Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-14T03:30:08.037Z",
+  "profiled_at": "2026-04-14T04:00:02.795Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -509,9 +509,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-13T22:00:20.000Z",
+      "last_seen_at": "2026-04-14T00:43:22.000Z",
       "discovery": {
-        "distinct_urls": 66,
+        "distinct_urls": 68,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,10 +520,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 64,
+          "feed_buffer_reply": 66,
           "feed_buffer": 2
         },
-        "distinct_referring_accounts": 53,
+        "distinct_referring_accounts": 54,
         "sample_referring_accounts": [
           "100ohiostate",
           "afk500595388855",
@@ -561,7 +561,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:66",
+            "distinct_urls:68",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -569,7 +569,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:53",
+            "referring_accounts:54",
             "origin_types:2"
           ]
         },
@@ -599,10 +599,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:66",
+            "distinct_urls:68",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:53",
+            "referring_accounts:54",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1164,9 +1164,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-16T09:36:45.269Z",
-      "last_seen_at": "2026-04-13T03:12:52.826Z",
+      "last_seen_at": "2026-04-14T03:39:13.017Z",
       "discovery": {
-        "distinct_urls": 23,
+        "distinct_urls": 24,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -1175,7 +1175,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 23
+          "articles": 24
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1204,7 +1204,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:23",
+            "distinct_urls:24",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -1242,7 +1242,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:23",
+            "distinct_urls:24",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -3863,7 +3863,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-11T03:45:35.513Z",
+        "fetched_at": "2026-04-14T04:00:02.519Z",
         "homepage_url": "https://combos.fun/",
         "example_url": "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2aswwo64b7owkoq09axl1gyba6",
         "homepage_status": 200,
@@ -8388,7 +8388,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-11T03:30:34.925Z",
+        "fetched_at": "2026-04-14T04:00:02.795Z",
         "homepage_url": "https://cointracker.io/",
         "example_url": "https://www.cointracker.io/?utm_source=x&utm_medium=paid_social&utm_campaign=PDM_PaidSocial_X_Awareness_Reach&twclid=2db4ytuyg7wyekq6zcdaap0vjo",
         "homepage_status": 403,
@@ -14403,20 +14403,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3370833333333333,
-          "confidence": 0.0491,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.06,
           "confidence": 0.55,
@@ -14429,6 +14415,20 @@
             "corrections:false",
             "outbound_links:6",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3370833333333333,
+          "confidence": 0.0491,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
