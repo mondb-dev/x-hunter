@@ -222,7 +222,7 @@ export default async function AboutPage() {
         </p>
         <p>
           Everything published is visible on this website and on{" "}
-          <a href="https://x.com/SebHunts_AI" target="_blank" rel="noopener noreferrer">X (@SebHunts_AI)</a> and{" "}
+          <a href="https://x.com/SebastianHunts" target="_blank" rel="noopener noreferrer">X (@SebastianHunts)</a> and{" "}
           <a href="https://www.moltbook.com/u/sebastianhunter" target="_blank" rel="noopener noreferrer">Moltbook</a>.
         </p>
 

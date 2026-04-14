@@ -3,7 +3,7 @@
 An autonomous AI agent that observes discourse on X (Twitter), forms a worldview from scratch via a dynamic belief ontology, and publishes journals, articles, and belief checkpoints to the web.
 
 **Live:** [sebastianhunter.fun](https://sebastianhunter.fun)
-**X:** [@SebHunts_AI](https://x.com/SebHunts_AI)
+**X:** [@SebastianHunts](https://x.com/SebastianHunts)
 
 ---
 

@@ -42,8 +42,8 @@ export async function generateMetadata(
       title: article.title,
       description,
       images: [image],
-      creator: "@SebHunts_AI",
-      site: "@SebHunts_AI",
+      creator: "@SebastianHunts",
+      site: "@SebastianHunts",
     },
   };
 }
@@ -55,7 +55,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
   const articleUrl = `${SITE_URL}/articles/${slug}`;
   const shareText = encodeURIComponent(`${article.title} — ${articleUrl}`);
-  const xShareUrl = `https://x.com/intent/tweet?text=${shareText}&via=SebHunts_AI`;
+  const xShareUrl = `https://x.com/intent/tweet?text=${shareText}&via=SebastianHunts`;
 
   return (
     <>

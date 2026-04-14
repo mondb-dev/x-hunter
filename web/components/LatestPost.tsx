@@ -10,7 +10,7 @@ export default function LatestPost() {
           <div className="latest-post-label">latest post</div>
           <div className="latest-post-empty">
             Nothing posted yet.{" "}
-            <a href="https://x.com/SebHunts_AI" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/SebastianHunts" target="_blank" rel="noopener noreferrer">
               Follow on X →
             </a>
           </div>
@@ -58,12 +58,12 @@ export default function LatestPost() {
                 </a>
               )}
               <a
-                href="https://x.com/SebHunts_AI"
+                href="https://x.com/SebastianHunts"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="latest-post-link"
               >
-                @SebHunts_AI →
+                @SebastianHunts →
               </a>
             </div>
           </div>

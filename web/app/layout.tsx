@@ -56,7 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </nav>
           <main>{children}</main>
           <footer className="site-footer">
-            <a href="https://x.com/SebHunts_AI" target="_blank" rel="noopener noreferrer" className="footer-x-link">@SebHunts_AI</a>
+            <a href="https://x.com/SebastianHunts" target="_blank" rel="noopener noreferrer" className="footer-x-link">@SebastianHunts</a>
             <span className="footer-sep">·</span>
             <a href="https://www.moltbook.com/u/sebastianhunter" target="_blank" rel="noopener noreferrer" className="footer-x-link">moltbook</a>
             <span className="footer-sep">·</span>
