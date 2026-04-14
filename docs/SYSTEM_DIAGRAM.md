@@ -43,6 +43,7 @@ flowchart LR
         direction TB
         GIT["GitHub\njournals · state\ngit push each cycle"]
         ARW["Arweave via Irys\njournals · checkpoints\nlandmark articles + cards"]
+        GCS["GCS Bucket\ngsutil rsync each cycle\nstate · journals · landmarks"]
     end
 
     %% ── OUTPUTS ──────────────────────────────────────────────────────────
@@ -50,7 +51,7 @@ flowchart LR
         direction TB
         XO["X / Twitter\ntweets · quote-tweets\nreplies · X Articles"]
         MB["Moltbook\nlong-form articles"]
-        WEB["sebastianhunter.fun\nVercel · Next.js\nreads Arweave + state"]
+        WEB["sebastianhunter.fun\nCloud Run · Next.js\nreads from GCS bucket"]
     end
 
     %% ── INPUT FLOWS ──────────────────────────────────────────────────────
@@ -77,15 +78,17 @@ flowchart LR
     AGT -->|"journal commit"| GIT
     AGT -->|"upload"| ARW
     SIG -->|"landmark article + card"| ARW
+    AGT -->|"gsutil rsync ~1h"| GCS
+    SIG -->|"landmarks/"| GCS
 
     %% ── OUTPUT FLOWS ─────────────────────────────────────────────────────
     CRT -->|"tweet gate\npost-tweet coherence"| XO
     AGT -->|"tweet draft\nquote · reply"| XO
     SIG -->|"X Article\nlandmark"| XO
     AGT -->|"long-form"| MB
-    ARW -->|"permanent URLs"| WEB
-    GIT -->|"Vercel deploy hook"| WEB
-    PON -->|"ponders · checkpoints"| WEB
+    GCS -->|"serves state\n+ content"| WEB
+    ARW -->|"permanent URLs\nembedded in pages"| WEB
+    PON -->|"ponders · checkpoints"| GCS
 
     %% ── STYLES ───────────────────────────────────────────────────────────
     classDef input     fill:#1a2a3a,stroke:#4a9eff,color:#e0f0ff
@@ -98,7 +101,7 @@ flowchart LR
     class XI,WS,XT input
     class CHR,TG,VM vm
     class VTX,SQL,RUN gcp
-    class GIT,ARW store
+    class GIT,ARW,GCS store
     class XO,MB,WEB output
     class SCR,AGT,BLF,SIG,CRT,PON cycle
 ```
@@ -114,5 +117,5 @@ flowchart LR
 | **Vertex AI** | Gemini 2.5 Flash for all LLM work; Imagen 4 for landmark hero art; text-embedding-004 for semantic memory |
 | **Cloud SQL** | Postgres stores 768-dim embeddings for semantic recall during browse and reply |
 | **Cloud Run** | Three workers: claim verification, article publishing, memory API |
-| **Permanent storage** | GitHub (git push every cycle); Arweave via Irys (journals, checkpoints, landmark articles + cards) |
-| **Outputs** | X (tweets, quotes, replies, X Articles); Moltbook (long-form); sebastianhunter.fun (Vercel, pulls from Arweave + GitHub) |
+| **Permanent storage** | GitHub (git push every cycle); Arweave via Irys (journals, checkpoints, landmark articles + cards); GCS bucket (gsutil rsync ~hourly — state, journals, landmarks) |
+| **Outputs** | X (tweets, quotes, replies, X Articles); Moltbook (long-form); sebastianhunter.fun (Cloud Run · Next.js, reads from GCS bucket; embeds Arweave URLs for permanent content) |
