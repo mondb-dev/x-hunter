@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-14T13:32:30.943Z",
+  "generated_at": "2026-04-14T14:33:16.620Z",
   "stats": {
     "total": 31,
     "supported": 0,
@@ -159,8 +159,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "verification_count": 3,
-      "verified_at": "2026-04-14T13:32:30.891Z",
+      "verification_count": 5,
+      "verified_at": "2026-04-14T14:33:16.580Z",
       "created_at": "2026-04-14T13:00:18.070Z",
       "original_source": "Philippine Energy Secretary Sharon Garin / Agence France-Presse (AFP)",
       "claim_date": "2026-04-14",
@@ -538,8 +538,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 9,
-      "verified_at": "2026-04-14T13:32:30.856Z",
+      "verification_count": 11,
+      "verified_at": "2026-04-14T14:33:16.562Z",
       "created_at": "2026-04-14T09:57:43.868Z",
       "original_source": null,
       "claim_date": null,
@@ -576,6 +576,61 @@
       "dissenting_sources": [],
       "framing_analysis": null,
       "web_search_summary": "```json\n{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"The claim that Sundas \\\"Sunny\\\" Naqvi was falsely reported to have been detained by ICE at the Dodge County Jail, and that this claim was amplified by Cook County Commissioner Kevin Morrison, is confirmed. Dodge County Sheriff Dale Schmidt has presented evidence, including surveillance footage, hotel records, and text messages, refuting Naqvi's account of detention. The Department of Homeland Security also stated that Naqvi was not taken into cus"
+    },
+    {
+      "claim_id": "claim_3",
+      "claim_text": "US reported destroying 150 Iranian vessels",
+      "status": "unverified",
+      "confidence_score": 0.375,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 12,
+      "verified_at": "2026-04-14T14:33:16.596Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": "White House Press Secretary Karoline Leavitt and US Central Command (CENTCOM)",
+      "claim_date": "2026-04-08",
+      "supporting_sources": [
+        {
+          "name": "Naval Today",
+          "stance": "Reports White House statements on the destruction of Iranian naval vessels, including 150+ vessels and the entire submarine fleet."
+        },
+        {
+          "name": "The Japan Times",
+          "stance": "Cites a US official and the White House confirming the destruction of over 150 Iranian naval vessels, including 16 warships."
+        },
+        {
+          "name": "CBS News",
+          "stance": "Reports CENTCOM's statement that over 155 Iranian vessels have been damaged or destroyed by US forces."
+        },
+        {
+          "name": "WION (The World is One News)",
+          "stance": "Reports on a White House briefing where it was stated that the US destroyed over 150 Iranian naval vessels."
+        },
+        {
+          "name": "FW-MAG Future Warfare Magazine",
+          "stance": "Reports Pentagon figures indicating a minimum of 130 Iranian surface vessels hit, including destroyed, sunk, or severely damaged."
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "IBTimes UK",
+          "stance": "Notes that there has been no independent verification of Trump's claim of 150 Iranian naval vessels being 'underwater' and that neither the Pentagon nor CENTCOM has publicly provided matching figures, advising caution."
+        }
+      ],
+      "framing_analysis": "The claim is framed as a factual statement regarding military operations. While the numbers are reported by official US sources, some outlets highlight the lack of independent verification, suggesting a need for critical evaluation rather than a false dichotomy.",
+      "web_search_summary": "Multiple sources, including statements from the White House and CENTCOM, confirm that the US has reported destroying over 150 Iranian naval vessels. This occurred as part of a broader military campaign, Operation Epic Fury, which also targeted Iran's submarine fleet and naval mines."
     },
     {
       "claim_id": "claim_21",
@@ -630,60 +685,6 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim is framed as a direct factual assertion about illegal activity. It is a valid question seeking to confirm or deny specific actions related to petition signing and payment.",
       "web_search_summary": "Multiple reports and video evidence confirm that individuals in San Francisco's Tenderloin and South of Market neighborhoods have been paying homeless people $5 to sign petitions using other people's names. This activity is illegal and is currently under investigation by California election officials."
-    },
-    {
-      "claim_id": "claim_24",
-      "claim_text": "Iran's government estimates war damage at approximately $270 billion.",
-      "status": "unverified",
-      "confidence_score": 0.375,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 1
-      },
-      "source_handle": "currentreport1",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 11,
-      "verified_at": "2026-04-14T13:32:30.895Z",
-      "created_at": "2026-04-14T08:26:36.547Z",
-      "original_source": "Fatemeh Mohajerani (Iranian government spokeswoman)",
-      "claim_date": "2026-04-14",
-      "supporting_sources": [
-        {
-          "name": "Jagonews24.com",
-          "stance": "Reports the Iranian government's preliminary estimate of $270 billion in war losses from US and Israeli attacks."
-        },
-        {
-          "name": "Anadolu Agency",
-          "stance": "Confirms the Iranian government spokeswoman's statement regarding the $270 billion estimate for damages from US-Israeli strikes."
-        },
-        {
-          "name": "The Star",
-          "stance": "Cites Iranian government spokesperson Fatemeh Mohajerani on the preliminary estimate of $270 billion in damages from US and Israeli strikes."
-        },
-        {
-          "name": "Tasnim News Agency",
-          "stance": "Reports the Iranian administration's spokeswoman estimating damages from the recent US-Israeli war at approximately $270 billion."
-        },
-        {
-          "name": "Tempo.co",
-          "stance": "States that the damage from the joint US-Israeli war on Iran is estimated at $270 billion, citing Iranian government spokesperson Fatemeh Mohajerani."
-        },
-        {
-          "name": "Yeni Safak English",
-          "stance": "Reports the Iranian government spokeswoman's statement on the $270 billion estimate for war damage from US-Israeli strikes."
-        }
-      ],
-      "dissenting_sources": [],
-      "framing_analysis": "The claim is framed as a direct statement of fact from the Iranian government. It is a straightforward question about a reported figure, not a false dichotomy or loaded question.",
-      "web_search_summary": "Iran's government has estimated preliminary war damages from recent US and Israeli strikes at approximately $270 billion. This figure was provided by Iranian government spokeswoman Fatemeh Mohajerani, who also noted that the final cost is likely to be higher and will be determined through a multi-stage assessment process."
     },
     {
       "claim_id": "claim_19",
@@ -745,8 +746,8 @@
       "web_search_summary": "Multiple sources indicate that Representative Ayanna Pressley's net worth significantly increased after she entered Congress. Reports suggest she had a negative net worth or approximately $12,000 when she took office in 2019, and by 2024, her net worth was estimated to be up to $8 million or $9 million. This increase is largely attributed to real estate investments and the consulting firm started by her husband in 2019."
     },
     {
-      "claim_id": "claim_3",
-      "claim_text": "US reported destroying 150 Iranian vessels",
+      "claim_id": "claim_24",
+      "claim_text": "Iran's government estimates war damage at approximately $270 billion.",
       "status": "unverified",
       "confidence_score": 0.375,
       "scoring_breakdown": {
@@ -757,47 +758,46 @@
         "cross_source": 0.5,
         "web_search": 1
       },
-      "source_handle": null,
+      "source_handle": "currentreport1",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 10,
-      "verified_at": "2026-04-14T13:32:30.915Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": "White House Press Secretary Karoline Leavitt and US Central Command (CENTCOM)",
-      "claim_date": "2026-04-08",
+      "verification_count": 12,
+      "verified_at": "2026-04-14T14:00:42.338Z",
+      "created_at": "2026-04-14T08:26:36.547Z",
+      "original_source": "Fatemeh Mohajerani (Iranian government spokeswoman)",
+      "claim_date": "2026-04-14",
       "supporting_sources": [
         {
-          "name": "Naval Today",
-          "stance": "Reports White House statements on the destruction of Iranian naval vessels, including 150+ vessels and the entire submarine fleet."
+          "name": "Jagonews24.com",
+          "stance": "Reports the Iranian government's preliminary estimate of $270 billion in war losses from US and Israeli attacks."
         },
         {
-          "name": "The Japan Times",
-          "stance": "Cites a US official and the White House confirming the destruction of over 150 Iranian naval vessels, including 16 warships."
+          "name": "Anadolu Agency",
+          "stance": "Confirms the Iranian government spokeswoman's statement regarding the $270 billion estimate for damages from US-Israeli strikes."
         },
         {
-          "name": "CBS News",
-          "stance": "Reports CENTCOM's statement that over 155 Iranian vessels have been damaged or destroyed by US forces."
+          "name": "The Star",
+          "stance": "Cites Iranian government spokesperson Fatemeh Mohajerani on the preliminary estimate of $270 billion in damages from US and Israeli strikes."
         },
         {
-          "name": "WION (The World is One News)",
-          "stance": "Reports on a White House briefing where it was stated that the US destroyed over 150 Iranian naval vessels."
+          "name": "Tasnim News Agency",
+          "stance": "Reports the Iranian administration's spokeswoman estimating damages from the recent US-Israeli war at approximately $270 billion."
         },
         {
-          "name": "FW-MAG Future Warfare Magazine",
-          "stance": "Reports Pentagon figures indicating a minimum of 130 Iranian surface vessels hit, including destroyed, sunk, or severely damaged."
+          "name": "Tempo.co",
+          "stance": "States that the damage from the joint US-Israeli war on Iran is estimated at $270 billion, citing Iranian government spokesperson Fatemeh Mohajerani."
+        },
+        {
+          "name": "Yeni Safak English",
+          "stance": "Reports the Iranian government spokeswoman's statement on the $270 billion estimate for war damage from US-Israeli strikes."
         }
       ],
-      "dissenting_sources": [
-        {
-          "name": "IBTimes UK",
-          "stance": "Notes that there has been no independent verification of Trump's claim of 150 Iranian naval vessels being 'underwater' and that neither the Pentagon nor CENTCOM has publicly provided matching figures, advising caution."
-        }
-      ],
-      "framing_analysis": "The claim is framed as a factual statement regarding military operations. While the numbers are reported by official US sources, some outlets highlight the lack of independent verification, suggesting a need for critical evaluation rather than a false dichotomy.",
-      "web_search_summary": "Multiple sources, including statements from the White House and CENTCOM, confirm that the US has reported destroying over 150 Iranian naval vessels. This occurred as part of a broader military campaign, Operation Epic Fury, which also targeted Iran's submarine fleet and naval mines."
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed as a direct statement of fact from the Iranian government. It is a straightforward question about a reported figure, not a false dichotomy or loaded question.",
+      "web_search_summary": "Iran's government has estimated preliminary war damages from recent US and Israeli strikes at approximately $270 billion. This figure was provided by Iranian government spokeswoman Fatemeh Mohajerani, who also noted that the final cost is likely to be higher and will be determined through a multi-stage assessment process."
     },
     {
       "claim_id": "claim_2",
@@ -818,8 +818,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 11,
-      "verified_at": "2026-04-14T13:32:30.912Z",
+      "verification_count": 13,
+      "verified_at": "2026-04-14T14:33:16.593Z",
       "created_at": "2026-03-31T00:00:00.000Z",
       "original_source": "Israel Defense Forces (IDF)",
       "claim_date": "2026-03",
@@ -867,8 +867,8 @@
       "web_search_summary": "Israel has claimed to have destroyed a significant portion of Iran's air defense systems, with figures ranging from 80% to 85%. These claims were made by high-ranking Israeli military officials following military operations in early 2026. However, Iran has stated that while some systems were damaged, they have been replaced or repaired, and Western intelligence agencies view Iran's statements as propaganda. Independent verification of the exact percentage of destroyed systems is difficult."
     },
     {
-      "claim_id": "claim_25",
-      "claim_text": "Iran demands compensation from Saudi Arabia, the UAE, Qatar, and Bahrain.",
+      "claim_id": "claim_5",
+      "claim_text": "Closure of Strait of Hormuz caused US gas prices to surpass $4/gallon",
       "status": "unverified",
       "confidence_score": 0.325,
       "scoring_breakdown": {
@@ -879,21 +879,50 @@
         "cross_source": 0.5,
         "web_search": 0.5
       },
-      "source_handle": "globeeyenews",
+      "source_handle": null,
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 11,
-      "verified_at": "2026-04-14T13:32:30.899Z",
-      "created_at": "2026-04-14T08:26:36.559Z",
+      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "verification_count": 7,
+      "verified_at": "2026-04-14T14:33:16.605Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
       "dissenting_sources": [],
       "framing_analysis": null,
-      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Iran has formally demanded compensation from Saudi Arabia, the UAE, Qatar, and Bahrain (along with Jordan) for their alleged roles in facilitating US-Israeli attacks against Iran. Iran claims these countries breached international obligations by allowing their territories to be used for military actions and, in some cases, directly participating in attacks. This demand was communicated in a letter to the UN Secretary-General and the UN Security Council b"
+      "web_search_summary": "```json\n{\n  \"verdict\": \"partial\",\n  \"summary\": \"The claim that the closure of the Strait of Hormuz caused US gas prices to surpass $4/gallon is partially confirmed. While US gas prices did exceed $4/gallon in early 2026 due to a closure of the Strait of Hormuz, this was not the first time prices reached this level. US gas prices had previously surpassed $4/gallon in 2022 due to the war in Ukraine and in 2008.\",\n  \"evidence_urls\": [\n    \"https://vertexaisearch.cloud.google.com/grounding-api-redir"
+    },
+    {
+      "claim_id": "claim_6",
+      "claim_text": "Iran attacked Kuwaiti oil tanker Al-Salmi in Dubai",
+      "status": "unverified",
+      "confidence_score": 0.325,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 7,
+      "verified_at": "2026-04-14T14:33:16.609Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"On March 31, 2026, the Kuwaiti oil tanker Al-Salmi was attacked by an Iranian drone while anchored off Dubai Port. The attack caused damage to the vessel's hull and a fire onboard, though Dubai authorities reported no oil spill and no injuries to the 24 crew members. The incident is considered an escalation in regional tensions, following earlier attacks between the US, Israel, and Iran.\",\n  \"evidence_urls\": [\n    \"https://vertexaisearch.cloud.google.com"
     },
     {
       "claim_id": "claim_29",
@@ -914,8 +943,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 4,
-      "verified_at": "2026-04-14T13:32:30.904Z",
+      "verification_count": 6,
+      "verified_at": "2026-04-14T14:33:16.587Z",
       "created_at": "2026-04-14T10:26:26.301Z",
       "original_source": null,
       "claim_date": null,
@@ -925,8 +954,8 @@
       "web_search_summary": "```json\n{\n  \"verdict\": \"partial\",\n  \"summary\": \"There is significant evidence suggesting that U.S. sanctions have severely impacted the economies of multiple nations, leading to widespread impoverishment and humanitarian crises. Many affected nations and some international bodies have characterized these actions as \\\"economic terrorism.\\\" However, the U.S. government typically frames sanctions as a foreign policy tool to achieve specific objectives, often citing national security or human rights"
     },
     {
-      "claim_id": "claim_4",
-      "claim_text": "Strait of Hormuz effectively closed to US/Israel-linked vessels",
+      "claim_id": "claim_25",
+      "claim_text": "Iran demands compensation from Saudi Arabia, the UAE, Qatar, and Bahrain.",
       "status": "unverified",
       "confidence_score": 0.325,
       "scoring_breakdown": {
@@ -937,50 +966,21 @@
         "cross_source": 0.5,
         "web_search": 0.5
       },
-      "source_handle": null,
+      "source_handle": "globeeyenews",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "verification_count": 13,
-      "verified_at": "2026-04-14T13:32:30.918Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 12,
+      "verified_at": "2026-04-14T14:00:42.341Z",
+      "created_at": "2026-04-14T08:26:36.559Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
       "dissenting_sources": [],
       "framing_analysis": null,
-      "web_search_summary": "{\n  \"verdict\": \"partial\",\n  \"summary\": \"The Strait of Hormuz is not effectively closed to all US/Israel-linked vessels, but Iran has imposed significant restrictions and threats. Iran's Revolutionary Guard Corps (IRGC) announced on March 27, 2026, that the strait is closed to any vessel going \\\"to and from\\\" the ports of the US, Israel, and their allies, and has launched attacks on merchant ships. However, the US has also implemented a blockade on Iranian ports, and some US-sanctioned and Iran-l"
-    },
-    {
-      "claim_id": "claim_27",
-      "claim_text": "Rep. Ayanna Pressley's net worth significantly increased after entering Congress, warranting an investigation.",
-      "status": "unverified",
-      "confidence_score": 0.325,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0.5
-      },
-      "source_handle": "magavoice",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_political_trust_corruption_v1",
-      "verification_count": 8,
-      "verified_at": "2026-04-14T13:32:30.902Z",
-      "created_at": "2026-04-14T10:26:26.275Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": "```json\n{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Rep. Ayanna Pressley's net worth has significantly increased since she entered Congress in 2019. Her financial disclosures show a shift from a negative net worth to multimillion-dollar assets, primarily attributed to real estate investments and her husband's consulting firm, which was founded the same year she took office. This increase has led to scrutiny and questions regarding how members of Congress accumulate wealth while in office.\",\n  \"evi"
+      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Iran has formally demanded compensation from Saudi Arabia, the UAE, Qatar, and Bahrain (along with Jordan) for their alleged roles in facilitating US-Israeli attacks against Iran. Iran claims these countries breached international obligations by allowing their territories to be used for military actions and, in some cases, directly participating in attacks. This demand was communicated in a letter to the UN Secretary-General and the UN Security Council b"
     },
     {
       "claim_id": "claim_20",
@@ -1012,6 +1012,35 @@
       "web_search_summary": "```json\n{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Representative Ayanna Pressley entered Congress in 2019 with a reported negative net worth, or approximately $12,000 in assets offset by over $600,000 in debt. As of 2024, her net worth is estimated to be up to $8 million, largely due to real estate investments and income from her husband's consulting firm, which was founded the same year she took office. This significant increase in wealth has drawn scrutiny and raised questions about how member"
     },
     {
+      "claim_id": "claim_27",
+      "claim_text": "Rep. Ayanna Pressley's net worth significantly increased after entering Congress, warranting an investigation.",
+      "status": "unverified",
+      "confidence_score": 0.325,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": "magavoice",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_political_trust_corruption_v1",
+      "verification_count": 10,
+      "verified_at": "2026-04-14T14:33:16.583Z",
+      "created_at": "2026-04-14T10:26:26.275Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": "```json\n{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Rep. Ayanna Pressley's net worth has significantly increased since she entered Congress in 2019. Her financial disclosures show a shift from a negative net worth to multimillion-dollar assets, primarily attributed to real estate investments and her husband's consulting firm, which was founded the same year she took office. This increase has led to scrutiny and questions regarding how members of Congress accumulate wealth while in office.\",\n  \"evi"
+    },
+    {
       "claim_id": "claim_30",
       "claim_text": "Hezbollah claims Israel is implementing a 'Greater Israel' plan with help from the United States.",
       "status": "unverified",
@@ -1036,8 +1065,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 3,
-      "verified_at": "2026-04-14T13:32:30.908Z",
+      "verification_count": 5,
+      "verified_at": "2026-04-14T14:33:16.590Z",
       "created_at": "2026-04-14T10:26:26.311Z",
       "original_source": "Hezbollah (specifically Secretary-General Naim Qassem and other officials)",
       "claim_date": "2025-09",
@@ -1101,35 +1130,6 @@
       "web_search_summary": null
     },
     {
-      "claim_id": "claim_9",
-      "claim_text": "American journalist Shelly Kittleson kidnapped in Baghdad, possibly by Iran-backed militia",
-      "status": "unverified",
-      "confidence_score": 0.275,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_power_accountability",
-      "verification_count": 2,
-      "verified_at": "2026-04-14T06:01:05.264Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null
-    },
-    {
       "claim_id": "claim_7",
       "claim_text": ">1,500 civilians killed, up to 3.2 million displaced due to the conflict",
       "status": "unverified",
@@ -1159,37 +1159,8 @@
       "web_search_summary": null
     },
     {
-      "claim_id": "claim_6",
-      "claim_text": "Iran attacked Kuwaiti oil tanker Al-Salmi in Dubai",
-      "status": "unverified",
-      "confidence_score": 0.275,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 6,
-      "verified_at": "2026-04-14T08:00:38.139Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null
-    },
-    {
-      "claim_id": "claim_5",
-      "claim_text": "Closure of Strait of Hormuz caused US gas prices to surpass $4/gallon",
+      "claim_id": "claim_4",
+      "claim_text": "Strait of Hormuz effectively closed to US/Israel-linked vessels",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -1206,8 +1177,37 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "verification_count": 6,
-      "verified_at": "2026-04-14T08:00:38.136Z",
+      "verification_count": 17,
+      "verified_at": "2026-04-14T14:33:16.599Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": "{\n  \"verdict\": \"partial\",\n  \"summary\": \"The Strait of Hormuz is not effectively closed to all US/Israel-linked vessels, but Iran has imposed significant restrictions and threats. Iran's Revolutionary Guard Corps (IRGC) announced on March 27, 2026, that the strait is closed to any vessel going \\\"to and from\\\" the ports of the US, Israel, and their allies, and has launched attacks on merchant ships. However, the US has also implemented a blockade on Iranian ports, and some US-sanctioned and Iran-l"
+    },
+    {
+      "claim_id": "claim_9",
+      "claim_text": "American journalist Shelly Kittleson kidnapped in Baghdad, possibly by Iran-backed militia",
+      "status": "unverified",
+      "confidence_score": 0.275,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_power_accountability",
+      "verification_count": 2,
+      "verified_at": "2026-04-14T06:01:05.264Z",
       "created_at": "2026-03-31T00:00:00.000Z",
       "original_source": null,
       "claim_date": null,
