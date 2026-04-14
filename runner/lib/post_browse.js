@@ -109,6 +109,11 @@ function postBrowse({ cycle, today, hour }) {
   // ── 3. apply_ontology_delta.js ────────────────────────────────────────
   runScriptVerbose(path.join(PROJECT_ROOT, 'runner/apply_ontology_delta.js'));
 
+  // ── 3b. Merge claim tracker delta before verification/export ──────────
+  const hadClaimTrackerDelta = fs.existsSync(config.CLAIM_TRACKER_DELTA_PATH) &&
+    fs.statSync(config.CLAIM_TRACKER_DELTA_PATH).size > 0;
+  runScript(path.join(PROJECT_ROOT, 'runner/apply_claim_tracker_delta.js'));
+
   // ── 4. detect_drift.js ────────────────────────────────────────────────
   runScript(path.join(PROJECT_ROOT, 'runner/detect_drift.js'));
 
@@ -199,6 +204,12 @@ function postBrowse({ cycle, today, hour }) {
   // ── 4e. Claim verification pipeline ─────────────────────────────────
   // Dispatch to Cloud Tasks worker if configured, else run inline
   const cloudTasks = require('./cloud_tasks');
+  if (hadClaimTrackerDelta && cloudTasks.isEnabled('publish')) {
+    const dispatched = cloudTasks.enqueueExport();
+    log(dispatched
+      ? 'verification export dispatched after claim tracker update'
+      : 'verification export dispatch failed after claim tracker update');
+  }
   if (cloudTasks.isEnabled('verify')) {
     const dispatched = cloudTasks.enqueueVerifyCycle();
     log(dispatched ? 'verification dispatched to Cloud Tasks' : 'Cloud Tasks dispatch failed — running inline');

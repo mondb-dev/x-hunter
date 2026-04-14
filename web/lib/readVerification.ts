@@ -1,8 +1,4 @@
-import fs from "fs";
-import path from "path";
-import { DATA_ROOT } from "./dataRoot";
-
-const EXPORT_PATH = path.join(DATA_ROOT, "state/verification_export.json");
+import { gcsFileExists, gcsReadFile } from "./gcs";
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -60,10 +56,11 @@ export interface VerificationExport {
 
 // ── Reader ────────────────────────────────────────────────────────────────────
 
-export function readVerification(): VerificationExport | null {
+export async function readVerification(): Promise<VerificationExport | null> {
   try {
-    if (!fs.existsSync(EXPORT_PATH)) return null;
-    const raw = fs.readFileSync(EXPORT_PATH, "utf-8");
+    const exists = await gcsFileExists("state/verification_export.json");
+    if (!exists) return null;
+    const raw = await gcsReadFile("state/verification_export.json");
     return JSON.parse(raw) as VerificationExport;
   } catch {
     return null;

@@ -6,8 +6,10 @@
 'use strict';
 const fs   = require('fs');
 const path = require('path');
-const { loadScraperDb } = require('./lib/db_backend');
+const { loadScraperDb, loadVerificationDb } = require('./lib/db_backend');
+const { scoreClaim } = require('./intelligence/claim_scorer');
 const db = loadScraperDb();
+const vdb = loadVerificationDb();
 const { canonicalDomain, normalizeUrl } = require('./lib/url_utils');
 
 const ROOT        = path.resolve(__dirname, '..');
@@ -34,6 +36,11 @@ function nextId(claims) {
 function tweetIdFromUrl(url) {
   const match = String(url || '').match(/\/status\/(\d+)/);
   return match ? match[1] : null;
+}
+
+function handleFromUrl(url) {
+  const match = String(url || '').match(/x\.com\/([^/?#]+)/i);
+  return match ? match[1].replace(/^@/, '').toLowerCase() : null;
 }
 
 function domainFor(rawUrl, allowX = false) {
@@ -68,6 +75,61 @@ async function inferClaimAttribution(claim) {
   };
 }
 
+function buildVerificationSeed(claim) {
+  const seededClaim = {
+    source_tier: claim.source_tier || null,
+    corroborating_count: claim.corroborating_count || 0,
+    contradicting_count: claim.contradicting_count || 0,
+    cited_url: claim.cited_url || null,
+    cited_domain: claim.cited_domain || null,
+    web_search_result: null,
+  };
+  const { confidence, breakdown } = scoreClaim(seededClaim, {});
+  return {
+    claim_id: claim.id,
+    claim_source: 'tracker',
+    claim_text: claim.claim_text,
+    confidence_score: confidence,
+    scoring_breakdown: breakdown,
+    status: claim.status || 'unverified',
+    source_handle: handleFromUrl(claim.source_post_url || claim.source_url),
+    source_tier: claim.source_tier || null,
+    related_axis_id: claim.related_axis_id || null,
+    category: claim.category || null,
+    created_at: claim.created_at || new Date().toISOString(),
+  };
+}
+
+async function syncClaimToVerificationDb(claim) {
+  if (!claim?.id || !claim.claim_text) return false;
+
+  const seed = buildVerificationSeed(claim);
+  let existing = null;
+  try {
+    existing = await Promise.resolve(vdb.getVerification(seed.claim_id));
+  } catch (err) {
+    log('verification lookup failed for', seed.claim_id + ':', err.message);
+  }
+
+  const unchanged = existing &&
+    existing.claim_text === seed.claim_text &&
+    existing.status === seed.status &&
+    (existing.source_handle || null) === (seed.source_handle || null) &&
+    (existing.related_axis_id || null) === (seed.related_axis_id || null) &&
+    (existing.category || null) === (seed.category || null) &&
+    Math.abs((existing.confidence_score || 0) - seed.confidence_score) < 1e-9;
+
+  if (unchanged) return false;
+
+  try {
+    await Promise.resolve(vdb.upsertVerification(seed));
+    return true;
+  } catch (err) {
+    log('verification sync failed for', seed.claim_id + ':', err.message);
+    return false;
+  }
+}
+
 (async () => {
   if (!fs.existsSync(DELTA)) { log('no delta -- nothing to do'); process.exit(0); }
 
@@ -77,6 +139,7 @@ async function inferClaimAttribution(claim) {
 
   const tracker = readTracker();
   let added = 0, updated = 0;
+  let synced = 0;
 
   for (const claim of (delta.new_claims || [])) {
     const id = nextId(tracker.claims);
@@ -96,6 +159,7 @@ async function inferClaimAttribution(claim) {
       updated_at: null,
     });
     added++;
+    if (await syncClaimToVerificationDb(tracker.claims[tracker.claims.length - 1])) synced++;
     log('added: ' + id + ' -- ' + claim.claim_text.slice(0, 60));
   }
 
@@ -116,12 +180,13 @@ async function inferClaimAttribution(claim) {
     existing.cited_domain = attribution.cited_domain || existing.cited_domain || null;
     existing.updated_at = new Date().toISOString();
     updated++;
+    if (await syncClaimToVerificationDb(existing)) synced++;
     log('updated: ' + update.id + ' -> ' + existing.status);
   }
 
   writeTracker(tracker);
   fs.unlinkSync(DELTA);
-  log('done. added=' + added + ' updated=' + updated + ' total=' + tracker.claims.length);
+  log('done. added=' + added + ' updated=' + updated + ' synced=' + synced + ' total=' + tracker.claims.length);
 })().catch(err => {
   log('fatal:', err.message);
   process.exit(0);

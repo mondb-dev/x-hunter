@@ -19,9 +19,12 @@
 const fs   = require('fs');
 const path = require('path');
 const config = require('../lib/config');
+const { loadIntelligenceDb, loadVerificationDb, usePostgres } = require('../lib/db_backend');
 
 const { scoreClaim } = require('./claim_scorer');
-const vdb = require('./verification_db');
+const idb = loadIntelligenceDb();
+const vdb = loadVerificationDb();
+const DB_IS_PG = usePostgres();
 
 const isDryRun = process.argv.includes('--dry-run');
 
@@ -59,19 +62,33 @@ function loadTrackerClaims() {
   }
 }
 
-function loadIntelligenceClaims() {
+async function loadIntelligenceClaims() {
   try {
-    const db = require('./db');
-    const rows = db.prepare(`
-      SELECT id as claim_id, claim_text, source_handle, source_url,
-             source_tier, source_ng_score, category, axis_id as related_axis_id,
-             has_supporting_url, corroborating_count, contradicting_count,
-             status, observed_at as created_at
-      FROM claims
-      WHERE status IN ('unverified', 'contested')
-      ORDER BY corroborating_count DESC
-      LIMIT 50
-    `).all();
+    let rows;
+    if (DB_IS_PG) {
+      const result = await idb.query(`
+        SELECT id as claim_id, claim_text, source_handle, source_url,
+               source_tier, source_ng_score, category, axis_id as related_axis_id,
+               has_supporting_url, corroborating_count, contradicting_count,
+               status, observed_at as created_at
+        FROM claims
+        WHERE status IN ('unverified', 'contested')
+        ORDER BY corroborating_count DESC
+        LIMIT 50
+      `);
+      rows = result.rows;
+    } else {
+      rows = idb.prepare(`
+        SELECT id as claim_id, claim_text, source_handle, source_url,
+               source_tier, source_ng_score, category, axis_id as related_axis_id,
+               has_supporting_url, corroborating_count, contradicting_count,
+               status, observed_at as created_at
+        FROM claims
+        WHERE status IN ('unverified', 'contested')
+        ORDER BY corroborating_count DESC
+        LIMIT 50
+      `).all();
+    }
     return rows.map(r => ({
       ...r,
       id: r.claim_id,
@@ -87,11 +104,19 @@ function loadIntelligenceClaims() {
 /**
  * Load source data for enrichment — tries intelligence.db first, then source_registry.json.
  */
-function loadSourceData(handle) {
+async function loadSourceData(handle) {
   if (!handle) return {};
   try {
-    const db = require('./db');
-    const row = db.prepare('SELECT credibility_tier, ng_score FROM sources WHERE handle = ?').get(handle);
+    let row;
+    if (DB_IS_PG) {
+      const result = await idb.query(
+        'SELECT credibility_tier, ng_score FROM sources WHERE handle = $1',
+        [handle]
+      );
+      row = result.rows[0];
+    } else {
+      row = idb.prepare('SELECT credibility_tier, ng_score FROM sources WHERE handle = ?').get(handle);
+    }
     if (row && row.credibility_tier) return row;
   } catch {}
   try {
@@ -102,6 +127,18 @@ function loadSourceData(handle) {
     if (acct) return { credibility_tier: acct.credibility_tier, ng_score: acct.ng_score };
   } catch {}
   return {};
+}
+
+async function getVerification(claimId) {
+  return DB_IS_PG ? vdb.getVerification(claimId) : vdb.getVerification(claimId);
+}
+
+async function getAllVerifications() {
+  return DB_IS_PG ? vdb.getAllVerifications() : vdb.getAllVerifications();
+}
+
+async function markExpired(claimId) {
+  return DB_IS_PG ? vdb.markExpired(claimId) : vdb.markExpired(claimId);
 }
 
 /**
@@ -288,9 +325,9 @@ function writeVerificationDraft(claim, result, searchData) {
 
 // ── Export verification data for web ────────────────────────────────────────
 
-function exportVerificationData() {
+async function exportVerificationData() {
   try {
-    const all = vdb.getAllVerifications();
+    const all = await getAllVerifications();
     const stats = { total: all.length, supported: 0, refuted: 0, contested: 0, unverified: 0, expired: 0 };
     for (const c of all) { stats[c.status] = (stats[c.status] || 0) + 1; }
 
@@ -330,9 +367,9 @@ function exportVerificationData() {
 
 // ── Claim lifecycle (expiry) ────────────────────────────────────────────────
 
-function processExpiry() {
+async function processExpiry() {
   const now = Date.now();
-  const all = vdb.getAllVerifications();
+  const all = await getAllVerifications();
   let expired = 0;
 
   for (const claim of all) {
@@ -341,7 +378,7 @@ function processExpiry() {
     const age = now - new Date(claim.created_at).getTime();
     if (age > expiryHours * 3600_000) {
       if (!isDryRun) {
-        vdb.markExpired(claim.claim_id);
+        await markExpired(claim.claim_id);
       }
       expired++;
     }
@@ -375,7 +412,7 @@ async function run() {
   // 1. Load claims from both sources
   const trackerClaims = loadTrackerClaims()
     .filter(c => c.status === 'unverified' || c.status === 'contested');
-  const intelClaims = loadIntelligenceClaims();
+  const intelClaims = await loadIntelligenceClaims();
 
   // Deduplicate by claim_id (tracker takes precedence)
   const seen = new Set();
@@ -391,7 +428,7 @@ async function run() {
 
   if (allClaims.length === 0) {
     log('no unverified claims to process');
-    if (!isDryRun) exportVerificationData();
+    if (!isDryRun) await exportVerificationData();
     return;
   }
 
@@ -406,10 +443,10 @@ async function run() {
 
   for (const claim of prioritized) {
     const handle = claim.source_handle || handleFromUrl(claim.source_url || claim.source_post_url);
-    const sourceData = loadSourceData(handle);
+    const sourceData = await loadSourceData(handle);
 
     // Check existing verification for web_search_result carry-forward
-    const existing = vdb.getVerification(claim.claim_id);
+    const existing = await getVerification(claim.claim_id);
     if (existing?.web_search_summary && !claim.web_search_result) {
       // Preserve previous web search result
       const prevBreakdown = existing.scoring_breakdown || {};
@@ -430,7 +467,7 @@ async function run() {
   for (const { claim, result, sourceData, handle, oldStatus } of results) {
     if (webSearchCount >= WEB_SEARCH_PER_CYCLE) break;
 
-    const existing = vdb.getVerification(claim.claim_id);
+    const existing = await getVerification(claim.claim_id);
     // Skip if already searched recently (within 24h)
     if (existing?.last_verified_at) {
       const lastVerified = new Date(existing.last_verified_at).getTime();
@@ -463,70 +500,126 @@ async function run() {
 
   // 5. Persist results
   if (!isDryRun) {
-    vdb.runTransaction(() => {
-      for (const { claim, result, handle, oldStatus } of results) {
-        const searchData = claim._searchData;
-        const statusChanged = result.suggested_status !== oldStatus;
+    const persistOne = async ({ claim, result, handle, oldStatus }) => {
+      const searchData = claim._searchData;
+      const statusChanged = result.suggested_status !== oldStatus;
 
-        // Strip ephemeral Vertex grounding redirect URLs — they expire within hours
-        const stableEvidenceUrls = (searchData?.evidence_urls || [])
-          .filter(u => !String(u).includes('vertexaisearch.cloud.google.com'));
+      // Strip ephemeral Vertex grounding redirect URLs — they expire within hours
+      const stableEvidenceUrls = (searchData?.evidence_urls || [])
+        .filter(u => !String(u).includes('vertexaisearch.cloud.google.com'));
 
-        // Upsert verification record
-        vdb.upsertVerification({
-          claim_id:           claim.claim_id,
-          claim_source:       claim.claim_source,
-          claim_text:         claim.claim_text,
-          confidence_score:   result.confidence,
-          scoring_breakdown:  result.breakdown,
-          status:             result.suggested_status,
-          web_search_summary: searchData?.summary || null,
-          evidence_urls:      stableEvidenceUrls.length ? stableEvidenceUrls : null,
-          source_handle:      handle || claim.source_handle || null,
-          source_tier:        claim.source_tier || null,
-          related_axis_id:    claim.related_axis_id || null,
-          category:           claim.category || null,
-          original_source:    searchData?.original_source || null,
-          claim_date:         searchData?.claim_date || null,
-          supporting_sources: searchData?.supporting_sources || null,
-          dissenting_sources: searchData?.dissenting_sources || null,
-          framing_analysis:   searchData?.framing_analysis || null,
-          created_at:         claim.created_at,
-        });
+      await Promise.resolve(vdb.upsertVerification({
+        claim_id:           claim.claim_id,
+        claim_source:       claim.claim_source,
+        claim_text:         claim.claim_text,
+        confidence_score:   result.confidence,
+        scoring_breakdown:  result.breakdown,
+        status:             result.suggested_status,
+        web_search_summary: searchData?.summary || null,
+        evidence_urls:      stableEvidenceUrls.length ? stableEvidenceUrls : null,
+        source_handle:      handle || claim.source_handle || null,
+        source_tier:        claim.source_tier || null,
+        related_axis_id:    claim.related_axis_id || null,
+        category:           claim.category || null,
+        original_source:    searchData?.original_source || null,
+        claim_date:         searchData?.claim_date || null,
+        supporting_sources: searchData?.supporting_sources || null,
+        dissenting_sources: searchData?.dissenting_sources || null,
+        framing_analysis:   searchData?.framing_analysis || null,
+        created_at:         claim.created_at,
+      }));
 
-        // Log audit if status changed
-        if (statusChanged) {
-          vdb.logAudit({
-            claim_id:            claim.claim_id,
-            claim_source:        claim.claim_source,
-            old_status:          oldStatus,
-            new_status:          result.suggested_status,
-            confidence_score:    result.confidence,
-            scoring_breakdown:   result.breakdown,
-            verification_method: searchData ? 'web_search' : 'auto_score',
-            evidence_urls:       searchData?.evidence_urls || null,
-            notes:               searchData?.summary || `Auto-scored: ${result.confidence.toFixed(3)}`,
-          });
+      if (statusChanged) {
+        await Promise.resolve(vdb.logAudit({
+          claim_id:            claim.claim_id,
+          claim_source:        claim.claim_source,
+          old_status:          oldStatus,
+          new_status:          result.suggested_status,
+          confidence_score:    result.confidence,
+          scoring_breakdown:   result.breakdown,
+          verification_method: searchData ? 'web_search' : 'auto_score',
+          evidence_urls:       searchData?.evidence_urls || null,
+          notes:               searchData?.summary || `Auto-scored: ${result.confidence.toFixed(3)}`,
+        }));
 
-          // Update claim_tracker.json for tracker-sourced claims
-          if (claim.claim_source === 'tracker' && result.suggested_status !== 'unverified') {
-            const note = searchData
-              ? `[auto-verified] ${result.suggested_status} (${Math.round(result.confidence * 100)}%): ${searchData.summary?.slice(0, 100) || ''}`
-              : `[auto-scored] ${result.suggested_status} (${Math.round(result.confidence * 100)}%)`;
-            updateTrackerClaim(claim.claim_id, result.suggested_status, note);
-            log(`tracker updated: ${claim.claim_id} → ${result.suggested_status}`);
-          }
+        if (claim.claim_source === 'tracker' && result.suggested_status !== 'unverified') {
+          const note = searchData
+            ? `[auto-verified] ${result.suggested_status} (${Math.round(result.confidence * 100)}%): ${searchData.summary?.slice(0, 100) || ''}`
+            : `[auto-scored] ${result.suggested_status} (${Math.round(result.confidence * 100)}%)`;
+          updateTrackerClaim(claim.claim_id, result.suggested_status, note);
+          log(`tracker updated: ${claim.claim_id} → ${result.suggested_status}`);
         }
       }
-    });
+    };
+
+    if (DB_IS_PG) {
+      await vdb.runTransaction(async () => {
+        for (const row of results) {
+          await persistOne(row);
+        }
+      });
+    } else {
+      vdb.runTransaction(() => {
+        for (const row of results) {
+          const searchData = row.claim._searchData;
+          const statusChanged = row.result.suggested_status !== row.oldStatus;
+
+          const stableEvidenceUrls = (searchData?.evidence_urls || [])
+            .filter(u => !String(u).includes('vertexaisearch.cloud.google.com'));
+
+          vdb.upsertVerification({
+            claim_id:           row.claim.claim_id,
+            claim_source:       row.claim.claim_source,
+            claim_text:         row.claim.claim_text,
+            confidence_score:   row.result.confidence,
+            scoring_breakdown:  row.result.breakdown,
+            status:             row.result.suggested_status,
+            web_search_summary: searchData?.summary || null,
+            evidence_urls:      stableEvidenceUrls.length ? stableEvidenceUrls : null,
+            source_handle:      row.handle || row.claim.source_handle || null,
+            source_tier:        row.claim.source_tier || null,
+            related_axis_id:    row.claim.related_axis_id || null,
+            category:           row.claim.category || null,
+            original_source:    searchData?.original_source || null,
+            claim_date:         searchData?.claim_date || null,
+            supporting_sources: searchData?.supporting_sources || null,
+            dissenting_sources: searchData?.dissenting_sources || null,
+            framing_analysis:   searchData?.framing_analysis || null,
+            created_at:         row.claim.created_at,
+          });
+
+          if (statusChanged) {
+            vdb.logAudit({
+              claim_id:            row.claim.claim_id,
+              claim_source:        row.claim.claim_source,
+              old_status:          row.oldStatus,
+              new_status:          row.result.suggested_status,
+              confidence_score:    row.result.confidence,
+              scoring_breakdown:   row.result.breakdown,
+              verification_method: searchData ? 'web_search' : 'auto_score',
+              evidence_urls:       searchData?.evidence_urls || null,
+              notes:               searchData?.summary || `Auto-scored: ${row.result.confidence.toFixed(3)}`,
+            });
+
+            if (row.claim.claim_source === 'tracker' && row.result.suggested_status !== 'unverified') {
+              const note = searchData
+                ? `[auto-verified] ${row.result.suggested_status} (${Math.round(row.result.confidence * 100)}%): ${searchData.summary?.slice(0, 100) || ''}`
+                : `[auto-scored] ${row.result.suggested_status} (${Math.round(row.result.confidence * 100)}%)`;
+              updateTrackerClaim(row.claim.claim_id, row.result.suggested_status, note);
+              log(`tracker updated: ${row.claim.claim_id} → ${row.result.suggested_status}`);
+            }
+          }
+        }
+      });
+    }
 
     log(`scored ${results.length} claims, web-searched ${webSearchCount}`);
 
     // 6. Process expiry
-    processExpiry();
+    await processExpiry();
 
     // 7. Export for web
-    exportVerificationData();
+    await exportVerificationData();
   } else {
     log(`[dry-run] would persist ${results.length} results`);
   }

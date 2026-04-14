@@ -85,13 +85,22 @@ deploy_publish() {
     --project="$PROJECT" --region="$REGION" \
     --format='value(status.url)')
 
-  echo "=== Setting up Pub/Sub push subscription ==="
+  echo "=== Setting up Pub/Sub push subscriptions ==="
   gcloud pubsub subscriptions describe claim-resolved-push \
     --project="$PROJECT" 2>/dev/null || \
   gcloud pubsub subscriptions create claim-resolved-push \
     --project="$PROJECT" \
     --topic=claim-resolved \
     --push-endpoint="${PUBLISH_URL}/claim-resolved" \
+    --push-auth-service-account="sebastian-hunter-ai@${PROJECT}.iam.gserviceaccount.com" \
+    --ack-deadline=60
+
+  gcloud pubsub subscriptions describe cycle-complete-push \
+    --project="$PROJECT" 2>/dev/null || \
+  gcloud pubsub subscriptions create cycle-complete-push \
+    --project="$PROJECT" \
+    --topic=cycle-complete \
+    --push-endpoint="${PUBLISH_URL}/export" \
     --push-auth-service-account="sebastian-hunter-ai@${PROJECT}.iam.gserviceaccount.com" \
     --ack-deadline=60
 }

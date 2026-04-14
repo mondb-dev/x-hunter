@@ -1,8 +1,4 @@
-import fs from "fs";
-import path from "path";
-import { DATA_ROOT } from "./dataRoot";
-
-const EXPORT_PATH = path.join(DATA_ROOT, "state/intelligence_export.json");
+import { gcsFileExists, gcsReadFile } from "./gcs";
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -95,10 +91,11 @@ export interface IntelligenceExport {
 
 // ── Reader ────────────────────────────────────────────────────────────────────
 
-export function readIntelligence(): IntelligenceExport | null {
+export async function readIntelligence(): Promise<IntelligenceExport | null> {
   try {
-    if (!fs.existsSync(EXPORT_PATH)) return null;
-    const raw = fs.readFileSync(EXPORT_PATH, "utf-8");
+    const exists = await gcsFileExists("state/intelligence_export.json");
+    if (!exists) return null;
+    const raw = await gcsReadFile("state/intelligence_export.json");
     return JSON.parse(raw) as IntelligenceExport;
   } catch {
     return null;
