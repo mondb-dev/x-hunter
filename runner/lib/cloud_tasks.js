@@ -55,7 +55,7 @@ function enqueue({ queue, url, body, method = 'POST' }) {
       `--location=${GCP_LOCATION}`,
       `--project=${GCP_PROJECT}`,
       `--url=${url}`,
-      `--http-method=${method}`,
+      `--method=${method}`,
       '--oidc-service-account-email=' +
         (process.env.CLOUD_TASKS_SA_EMAIL || `sebastian-hunter-ai@${GCP_PROJECT}.iam.gserviceaccount.com`),
     ];

@@ -468,8 +468,9 @@ async function run() {
     if (webSearchCount >= WEB_SEARCH_PER_CYCLE) break;
 
     const existing = await getVerification(claim.claim_id);
-    // Skip if already searched recently (within 24h)
-    if (existing?.last_verified_at) {
+    // Skip only if already web-searched AND result is recent (within 24h).
+    // last_verified_at is updated on every scoring cycle so cannot be used alone.
+    if (existing?.web_search_summary && existing?.last_verified_at) {
       const lastVerified = new Date(existing.last_verified_at).getTime();
       if (Date.now() - lastVerified < 24 * 3600_000) continue;
     }
