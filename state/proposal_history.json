@@ -162,6 +162,24 @@
       "pushed_to_origin": true,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_redundancy_damper_1776137953167",
+      "title": "Implement Belief Update Redundancy Damper",
+      "status": "failed",
+      "proposed_at": "2026-04-14T03:39:13.103Z",
+      "resolved_at": "2026-04-14T03:45:55.672Z",
+      "resolution_notes": "Pipeline error: Tests failed: Test command failed: node src/pipelines/journal.js — node:internal/modules/cjs/loader:1459\n  throw err;\n  ^\n\nError: Cannot find module 'mock-fs'\nRequire stack:\n- /home/raymond_d_baldonado_gmail_com/hunter/src/pipelines/journal.js\n    at Module._resolveF",
+      "files_changed": [
+        "src/tools/redundancy_damper.js",
+        "src/lib/belief_updater.js",
+        "src/pipelines/journal.js"
+      ],
+      "branch_name": "meta/proposal_redundancy_damper_1776137953167",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }
