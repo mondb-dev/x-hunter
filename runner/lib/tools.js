@@ -207,6 +207,7 @@ function scanToolsSandboxed() {
         read: (row.capabilities.read || []).map(normalizeStatePattern).filter(Boolean),
         write: (row.capabilities.write || []).map(normalizeStatePattern).filter(Boolean),
         call_tools: Array.isArray(row.capabilities.call_tools) ? [...row.capabilities.call_tools] : [],
+        network: row.capabilities.network === true,
       },
       _execute: null,
     });
@@ -412,7 +413,6 @@ function executeSingle(toolName, args, registry, depth = 0, callerName = null) {
 }
 
 function executeSingleWithTimeout(toolName, args) {
-  const runnerPath = path.join(config.RUNNER_DIR, 'sandbox_run.js');
   const encodedArgs = Buffer.from(JSON.stringify(args || {}), 'utf-8').toString('base64');
   const start = Date.now();
   let registry;
@@ -428,6 +428,10 @@ function executeSingleWithTimeout(toolName, args) {
       duration_ms: Date.now() - start,
     };
   }
+
+  // Network-capable tools bypass bubblewrap (which unshares-all namespaces, blocking network).
+  const _tool = registry.find(t => t.name === toolName);
+  const runnerPath = path.join(config.RUNNER_DIR, _tool?.capabilities?.network ? 'network_run.js' : 'sandbox_run.js');
 
   try {
     const stdout = execFileSync(process.execPath, [runnerPath, toolName, encodedArgs], {
@@ -606,6 +610,7 @@ function executeToolRequest() {
 
 module.exports = {
   scanTools,
+  scanToolsDirect,
   validateTool,
   buildToolManifest,
   loadLastToolResult,
