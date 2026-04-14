@@ -1,14 +1,58 @@
 {
-  "generated_at": "2026-04-14T12:32:06.070Z",
+  "generated_at": "2026-04-14T13:32:30.943Z",
   "stats": {
-    "total": 30,
+    "total": 31,
     "supported": 0,
-    "refuted": 1,
-    "contested": 2,
-    "unverified": 27,
+    "refuted": 2,
+    "contested": 1,
+    "unverified": 28,
     "expired": 0
   },
   "claims": [
+    {
+      "claim_id": "claim_28",
+      "claim_text": "PH President Ferdinand Marcos Jr. is experiencing deteriorating health, and reports to the contrary are 'fake news'.",
+      "status": "refuted",
+      "confidence_score": 0.375,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": -1
+      },
+      "source_handle": "abscbnnews",
+      "source_tier": null,
+      "evidence_urls": [
+        "https://news.abs-cbn.com/news/2026/1/28/marcos-jr-asserts-good-health-after-alleged-medical-report-goes-viral-1887",
+        "https://news.abs-cbn.com/news/2026/4/6/marcos-jr-definitely-in-good-health-palace-says-after-critics-allege-recycled-easter-photo-2061",
+        "https://www.philstar.com/headlines/2026/01/22/2327770/marcos-under-medical-observation-palace",
+        "https://ktvn.com/news/ap-philippine-president-marcos-debunks-health-rumors-with-jumping-jacks-2026-04-13T113800Z",
+        "https://news.inquirer.net/1798369/palace-denies-imee-marcos-claim-president-has-been-sick-for-months"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_media_integrity_v1",
+      "verification_count": 7,
+      "verified_at": "2026-04-14T13:01:29.973Z",
+      "created_at": "2026-04-14T10:26:26.292Z",
+      "original_source": "Undetermined, but widely circulated on social media",
+      "claim_date": "2026-01",
+      "supporting_sources": [],
+      "dissenting_sources": [
+        {
+          "name": "Senator Imee Marcos",
+          "stance": "Claimed President Marcos Jr. had been sick for months, despite admitting she had not seen him for a long time."
+        },
+        {
+          "name": "United People's Initiative (UPI) (retired military generals)",
+          "stance": "Filed a petition to compel Marcos Jr. to disclose his health status and undergo a drug test, citing concerns about his appearance and ability to work."
+        }
+      ],
+      "framing_analysis": "The claim is framed as a direct assertion of fact, but it is presented as a loaded question by implying that any reports to the contrary are \"fake news.\" This framing attempts to preemptively discredit any official statements or evidence that might contradict the claim.",
+      "web_search_summary": "Claims of Philippine President Ferdinand Marcos Jr.'s deteriorating health are largely refuted by official statements and his recent public appearances. While he was diagnosed with diverticulitis in January 2026, Malacañang has consistently stated he is in good health and has dismissed rumors to the contrary as \"fake news.\" Marcos himself has publicly demonstrated his physical well-being and challenged critics."
+    },
     {
       "claim_id": "claim_1",
       "claim_text": "US operations in Iran could end in 2-3 weeks (Trump statement)",
@@ -68,35 +112,6 @@
       "web_search_summary": "The claim that \"US operations in Iran could end in 2-3 weeks\" is refuted. While Donald Trump did make statements in late March and early April 2026 suggesting a withdrawal from Iran within 2-3 weeks, these statements were made in the context of a hypothetical scenario where the US was actively engaged in military operations in Iran, which is not currently the case. There is no evidence of ongoing US military operations in Iran that would be ending in 2-3 weeks. The provided search results indicate that these statements were made in a hypothetical context, and not reflective of current events."
     },
     {
-      "claim_id": "claim_4",
-      "claim_text": "Strait of Hormuz effectively closed to US/Israel-linked vessels",
-      "status": "contested",
-      "confidence_score": 0.275,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "verification_count": 10,
-      "verified_at": "2026-04-14T11:31:07.555Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null
-    },
-    {
       "claim_id": "claim_10",
       "claim_text": "Trump threatens to destroy Iranian civilian energy/water infrastructure if no deal",
       "status": "contested",
@@ -126,6 +141,56 @@
       "web_search_summary": null
     },
     {
+      "claim_id": "claim_31",
+      "claim_text": "Philippines seeking US permission to buy Russian crude due to fuel shortages and Strait of Hormuz blockade.",
+      "status": "unverified",
+      "confidence_score": 0.63,
+      "scoring_breakdown": {
+        "source_tier": 1,
+        "newsguard": 0.7,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": "ajenglish",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "verification_count": 3,
+      "verified_at": "2026-04-14T13:32:30.891Z",
+      "created_at": "2026-04-14T13:00:18.070Z",
+      "original_source": "Philippine Energy Secretary Sharon Garin / Agence France-Presse (AFP)",
+      "claim_date": "2026-04-14",
+      "supporting_sources": [
+        {
+          "name": "Sharjah24-AFP",
+          "stance": "Reports that the Philippines is seeking US permission to buy more Russian crude due to fuel supply pressures from the Strait of Hormuz blockade."
+        },
+        {
+          "name": "NAMPA",
+          "stance": "Confirms the Philippines is seeking US permission for more Russian crude due to scant fuel supplies amid the Strait of Hormuz blockade."
+        },
+        {
+          "name": "Global News",
+          "stance": "Reports that Philippine Energy Secretary Sharon Garin confirmed the government is seeking US permission to buy more Russian crude due to the Strait of Hormuz blockade."
+        },
+        {
+          "name": "Reuters",
+          "stance": "States that the Philippines' Energy Secretary Sharon Garin confirmed the country is asking the United States for an extension on a waiver to purchase Russian oil and petroleum products."
+        },
+        {
+          "name": "Thairath English",
+          "stance": "Reports that the Philippine government has requested the US to extend the waiver period to allow continued purchase of oil from Russia amid efforts to diversify energy sources."
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed as a straightforward factual statement regarding the Philippines' actions and motivations. It does not appear to be a false dichotomy, misleading framing, or loaded question.",
+      "web_search_summary": "The Philippines is indeed seeking permission from the United States to purchase more Russian crude oil. This is due to severe fuel shortages in the Philippines, exacerbated by the blockade of the Strait of Hormuz, which has disrupted their traditional oil supply routes from the Middle East. The US had previously granted a temporary waiver for Russian oil purchases, which recently expired."
+    },
+    {
       "claim_id": "claim_23",
       "claim_text": "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed.",
       "status": "unverified",
@@ -150,8 +215,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_power_accountability",
-      "verification_count": 11,
-      "verified_at": "2026-04-14T12:32:06.032Z",
+      "verification_count": 12,
+      "verified_at": "2026-04-14T13:01:29.937Z",
       "created_at": "2026-04-14T07:30:44.029Z",
       "original_source": "Savanah Hernandez (reporter)",
       "claim_date": "2026-04-12",
@@ -221,35 +286,6 @@
       ],
       "framing_analysis": "The claim is framed as a straightforward factual assertion regarding an arrest and impending charges. While some dissenting sources attempt to reframe the narrative by claiming Ostroushko was the victim, the overwhelming evidence from multiple news outlets and law enforcement statements supports the original framing of the claim.",
       "web_search_summary": "Paige Ostroushko was arrested and is facing charges for assaulting reporter Savanah Hernandez during an anti-ICE protest in Minneapolis on April 12, 2026. Videos of the incident show Ostroushko, along with her parents, physically attacking Hernandez. The Hennepin County Sheriff's Office confirmed that charges would be filed against three individuals, including Paige Ostroushko, in connection with the assault."
-    },
-    {
-      "claim_id": "claim_15",
-      "claim_text": "US-Israeli missile strikes caused a bridge in Karaj, Iran, to collapse.",
-      "status": "unverified",
-      "confidence_score": 0.405,
-      "scoring_breakdown": {
-        "source_tier": 0.6,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 1,
-        "web_search": 0.5
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 0,
-      "verified_at": "2026-04-10T10:43:41.575Z",
-      "created_at": "2026-04-02T19:56:05.845Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null
     },
     {
       "claim_id": "claim_16",
@@ -455,6 +491,64 @@
       "web_search_summary": null
     },
     {
+      "claim_id": "claim_15",
+      "claim_text": "US-Israeli missile strikes caused a bridge in Karaj, Iran, to collapse.",
+      "status": "unverified",
+      "confidence_score": 0.405,
+      "scoring_breakdown": {
+        "source_tier": 0.6,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 1,
+        "web_search": 0.5
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 0,
+      "verified_at": "2026-04-10T10:43:41.575Z",
+      "created_at": "2026-04-02T19:56:05.845Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null
+    },
+    {
+      "claim_id": "claim_26",
+      "claim_text": "U.S. sanctions have deliberately crushed the economy of multiple nations, impoverishing millions of innocent people, which can be defined as economic terrorism.",
+      "status": "unverified",
+      "confidence_score": 0.4,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": "assalrad",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 9,
+      "verified_at": "2026-04-14T13:32:30.856Z",
+      "created_at": "2026-04-14T09:57:43.868Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": "{\n  \"verdict\": \"partial\",\n  \"summary\": \"The claim that U.S. sanctions have deliberately crushed economies and impoverished millions is supported by various sources, including UN experts and academic studies. However, the characterization of these actions as \\\"economic terrorism\\\" is a matter of ongoing debate, as the definition of economic terrorism typically refers to actions by non-state actors or has a more specific legal meaning that doesn't universally encompass state-imposed sanctions.\",\n "
+    },
+    {
       "claim_id": "claim_22",
       "claim_text": "Sundas \"Sunny\" Naqvi was falsely claimed to have been detained by ICE at the Dodge County Jail; this claim was amplified by Cook County Commissioner Kevin Morrison.",
       "status": "unverified",
@@ -482,35 +576,6 @@
       "dissenting_sources": [],
       "framing_analysis": null,
       "web_search_summary": "```json\n{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"The claim that Sundas \\\"Sunny\\\" Naqvi was falsely reported to have been detained by ICE at the Dodge County Jail, and that this claim was amplified by Cook County Commissioner Kevin Morrison, is confirmed. Dodge County Sheriff Dale Schmidt has presented evidence, including surveillance footage, hotel records, and text messages, refuting Naqvi's account of detention. The Department of Homeland Security also stated that Naqvi was not taken into cus"
-    },
-    {
-      "claim_id": "claim_26",
-      "claim_text": "U.S. sanctions have deliberately crushed the economy of multiple nations, impoverishing millions of innocent people, which can be defined as economic terrorism.",
-      "status": "unverified",
-      "confidence_score": 0.4,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0.5,
-        "cross_source": 0.5,
-        "web_search": 0.5
-      },
-      "source_handle": "assalrad",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 7,
-      "verified_at": "2026-04-14T12:32:06.036Z",
-      "created_at": "2026-04-14T09:57:43.868Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": "{\n  \"verdict\": \"partial\",\n  \"summary\": \"The claim that U.S. sanctions have deliberately crushed economies and impoverished millions is supported by various sources, including UN experts and academic studies. However, the characterization of these actions as \\\"economic terrorism\\\" is a matter of ongoing debate, as the definition of economic terrorism typically refers to actions by non-state actors or has a more specific legal meaning that doesn't universally encompass state-imposed sanctions.\",\n "
     },
     {
       "claim_id": "claim_21",
@@ -567,8 +632,8 @@
       "web_search_summary": "Multiple reports and video evidence confirm that individuals in San Francisco's Tenderloin and South of Market neighborhoods have been paying homeless people $5 to sign petitions using other people's names. This activity is illegal and is currently under investigation by California election officials."
     },
     {
-      "claim_id": "claim_3",
-      "claim_text": "US reported destroying 150 Iranian vessels",
+      "claim_id": "claim_24",
+      "claim_text": "Iran's government estimates war damage at approximately $270 billion.",
       "status": "unverified",
       "confidence_score": 0.375,
       "scoring_breakdown": {
@@ -579,47 +644,46 @@
         "cross_source": 0.5,
         "web_search": 1
       },
-      "source_handle": null,
+      "source_handle": "currentreport1",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 9,
-      "verified_at": "2026-04-14T09:58:51.484Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": "White House Press Secretary Karoline Leavitt and US Central Command (CENTCOM)",
-      "claim_date": "2026-04-08",
+      "verification_count": 11,
+      "verified_at": "2026-04-14T13:32:30.895Z",
+      "created_at": "2026-04-14T08:26:36.547Z",
+      "original_source": "Fatemeh Mohajerani (Iranian government spokeswoman)",
+      "claim_date": "2026-04-14",
       "supporting_sources": [
         {
-          "name": "Naval Today",
-          "stance": "Reports White House statements on the destruction of Iranian naval vessels, including 150+ vessels and the entire submarine fleet."
+          "name": "Jagonews24.com",
+          "stance": "Reports the Iranian government's preliminary estimate of $270 billion in war losses from US and Israeli attacks."
         },
         {
-          "name": "The Japan Times",
-          "stance": "Cites a US official and the White House confirming the destruction of over 150 Iranian naval vessels, including 16 warships."
+          "name": "Anadolu Agency",
+          "stance": "Confirms the Iranian government spokeswoman's statement regarding the $270 billion estimate for damages from US-Israeli strikes."
         },
         {
-          "name": "CBS News",
-          "stance": "Reports CENTCOM's statement that over 155 Iranian vessels have been damaged or destroyed by US forces."
+          "name": "The Star",
+          "stance": "Cites Iranian government spokesperson Fatemeh Mohajerani on the preliminary estimate of $270 billion in damages from US and Israeli strikes."
         },
         {
-          "name": "WION (The World is One News)",
-          "stance": "Reports on a White House briefing where it was stated that the US destroyed over 150 Iranian naval vessels."
+          "name": "Tasnim News Agency",
+          "stance": "Reports the Iranian administration's spokeswoman estimating damages from the recent US-Israeli war at approximately $270 billion."
         },
         {
-          "name": "FW-MAG Future Warfare Magazine",
-          "stance": "Reports Pentagon figures indicating a minimum of 130 Iranian surface vessels hit, including destroyed, sunk, or severely damaged."
+          "name": "Tempo.co",
+          "stance": "States that the damage from the joint US-Israeli war on Iran is estimated at $270 billion, citing Iranian government spokesperson Fatemeh Mohajerani."
+        },
+        {
+          "name": "Yeni Safak English",
+          "stance": "Reports the Iranian government spokeswoman's statement on the $270 billion estimate for war damage from US-Israeli strikes."
         }
       ],
-      "dissenting_sources": [
-        {
-          "name": "IBTimes UK",
-          "stance": "Notes that there has been no independent verification of Trump's claim of 150 Iranian naval vessels being 'underwater' and that neither the Pentagon nor CENTCOM has publicly provided matching figures, advising caution."
-        }
-      ],
-      "framing_analysis": "The claim is framed as a factual statement regarding military operations. While the numbers are reported by official US sources, some outlets highlight the lack of independent verification, suggesting a need for critical evaluation rather than a false dichotomy.",
-      "web_search_summary": "Multiple sources, including statements from the White House and CENTCOM, confirm that the US has reported destroying over 150 Iranian naval vessels. This occurred as part of a broader military campaign, Operation Epic Fury, which also targeted Iran's submarine fleet and naval mines."
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed as a direct statement of fact from the Iranian government. It is a straightforward question about a reported figure, not a false dichotomy or loaded question.",
+      "web_search_summary": "Iran's government has estimated preliminary war damages from recent US and Israeli strikes at approximately $270 billion. This figure was provided by Iranian government spokeswoman Fatemeh Mohajerani, who also noted that the final cost is likely to be higher and will be determined through a multi-stage assessment process."
     },
     {
       "claim_id": "claim_19",
@@ -681,8 +745,8 @@
       "web_search_summary": "Multiple sources indicate that Representative Ayanna Pressley's net worth significantly increased after she entered Congress. Reports suggest she had a negative net worth or approximately $12,000 when she took office in 2019, and by 2024, her net worth was estimated to be up to $8 million or $9 million. This increase is largely attributed to real estate investments and the consulting firm started by her husband in 2019."
     },
     {
-      "claim_id": "claim_24",
-      "claim_text": "Iran's government estimates war damage at approximately $270 billion.",
+      "claim_id": "claim_3",
+      "claim_text": "US reported destroying 150 Iranian vessels",
       "status": "unverified",
       "confidence_score": 0.375,
       "scoring_breakdown": {
@@ -693,46 +757,47 @@
         "cross_source": 0.5,
         "web_search": 1
       },
-      "source_handle": "currentreport1",
+      "source_handle": null,
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 9,
-      "verified_at": "2026-04-14T12:32:06.045Z",
-      "created_at": "2026-04-14T08:26:36.547Z",
-      "original_source": "Fatemeh Mohajerani (Iranian government spokeswoman)",
-      "claim_date": "2026-04-14",
+      "verification_count": 10,
+      "verified_at": "2026-04-14T13:32:30.915Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": "White House Press Secretary Karoline Leavitt and US Central Command (CENTCOM)",
+      "claim_date": "2026-04-08",
       "supporting_sources": [
         {
-          "name": "Jagonews24.com",
-          "stance": "Reports the Iranian government's preliminary estimate of $270 billion in war losses from US and Israeli attacks."
+          "name": "Naval Today",
+          "stance": "Reports White House statements on the destruction of Iranian naval vessels, including 150+ vessels and the entire submarine fleet."
         },
         {
-          "name": "Anadolu Agency",
-          "stance": "Confirms the Iranian government spokeswoman's statement regarding the $270 billion estimate for damages from US-Israeli strikes."
+          "name": "The Japan Times",
+          "stance": "Cites a US official and the White House confirming the destruction of over 150 Iranian naval vessels, including 16 warships."
         },
         {
-          "name": "The Star",
-          "stance": "Cites Iranian government spokesperson Fatemeh Mohajerani on the preliminary estimate of $270 billion in damages from US and Israeli strikes."
+          "name": "CBS News",
+          "stance": "Reports CENTCOM's statement that over 155 Iranian vessels have been damaged or destroyed by US forces."
         },
         {
-          "name": "Tasnim News Agency",
-          "stance": "Reports the Iranian administration's spokeswoman estimating damages from the recent US-Israeli war at approximately $270 billion."
+          "name": "WION (The World is One News)",
+          "stance": "Reports on a White House briefing where it was stated that the US destroyed over 150 Iranian naval vessels."
         },
         {
-          "name": "Tempo.co",
-          "stance": "States that the damage from the joint US-Israeli war on Iran is estimated at $270 billion, citing Iranian government spokesperson Fatemeh Mohajerani."
-        },
-        {
-          "name": "Yeni Safak English",
-          "stance": "Reports the Iranian government spokeswoman's statement on the $270 billion estimate for war damage from US-Israeli strikes."
+          "name": "FW-MAG Future Warfare Magazine",
+          "stance": "Reports Pentagon figures indicating a minimum of 130 Iranian surface vessels hit, including destroyed, sunk, or severely damaged."
         }
       ],
-      "dissenting_sources": [],
-      "framing_analysis": "The claim is framed as a direct statement of fact from the Iranian government. It is a straightforward question about a reported figure, not a false dichotomy or loaded question.",
-      "web_search_summary": "Iran's government has estimated preliminary war damages from recent US and Israeli strikes at approximately $270 billion. This figure was provided by Iranian government spokeswoman Fatemeh Mohajerani, who also noted that the final cost is likely to be higher and will be determined through a multi-stage assessment process."
+      "dissenting_sources": [
+        {
+          "name": "IBTimes UK",
+          "stance": "Notes that there has been no independent verification of Trump's claim of 150 Iranian naval vessels being 'underwater' and that neither the Pentagon nor CENTCOM has publicly provided matching figures, advising caution."
+        }
+      ],
+      "framing_analysis": "The claim is framed as a factual statement regarding military operations. While the numbers are reported by official US sources, some outlets highlight the lack of independent verification, suggesting a need for critical evaluation rather than a false dichotomy.",
+      "web_search_summary": "Multiple sources, including statements from the White House and CENTCOM, confirm that the US has reported destroying over 150 Iranian naval vessels. This occurred as part of a broader military campaign, Operation Epic Fury, which also targeted Iran's submarine fleet and naval mines."
     },
     {
       "claim_id": "claim_2",
@@ -753,8 +818,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 9,
-      "verified_at": "2026-04-14T09:58:51.479Z",
+      "verification_count": 11,
+      "verified_at": "2026-04-14T13:32:30.912Z",
       "created_at": "2026-03-31T00:00:00.000Z",
       "original_source": "Israel Defense Forces (IDF)",
       "claim_date": "2026-03",
@@ -802,6 +867,122 @@
       "web_search_summary": "Israel has claimed to have destroyed a significant portion of Iran's air defense systems, with figures ranging from 80% to 85%. These claims were made by high-ranking Israeli military officials following military operations in early 2026. However, Iran has stated that while some systems were damaged, they have been replaced or repaired, and Western intelligence agencies view Iran's statements as propaganda. Independent verification of the exact percentage of destroyed systems is difficult."
     },
     {
+      "claim_id": "claim_25",
+      "claim_text": "Iran demands compensation from Saudi Arabia, the UAE, Qatar, and Bahrain.",
+      "status": "unverified",
+      "confidence_score": 0.325,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": "globeeyenews",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 11,
+      "verified_at": "2026-04-14T13:32:30.899Z",
+      "created_at": "2026-04-14T08:26:36.559Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Iran has formally demanded compensation from Saudi Arabia, the UAE, Qatar, and Bahrain (along with Jordan) for their alleged roles in facilitating US-Israeli attacks against Iran. Iran claims these countries breached international obligations by allowing their territories to be used for military actions and, in some cases, directly participating in attacks. This demand was communicated in a letter to the UN Secretary-General and the UN Security Council b"
+    },
+    {
+      "claim_id": "claim_29",
+      "claim_text": "U.S. sanctions have deliberately crushed the economy of multiple nations, impoverishing millions, constituting 'economic terrorism'.",
+      "status": "unverified",
+      "confidence_score": 0.325,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": "assalrad",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 4,
+      "verified_at": "2026-04-14T13:32:30.904Z",
+      "created_at": "2026-04-14T10:26:26.301Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": "```json\n{\n  \"verdict\": \"partial\",\n  \"summary\": \"There is significant evidence suggesting that U.S. sanctions have severely impacted the economies of multiple nations, leading to widespread impoverishment and humanitarian crises. Many affected nations and some international bodies have characterized these actions as \\\"economic terrorism.\\\" However, the U.S. government typically frames sanctions as a foreign policy tool to achieve specific objectives, often citing national security or human rights"
+    },
+    {
+      "claim_id": "claim_4",
+      "claim_text": "Strait of Hormuz effectively closed to US/Israel-linked vessels",
+      "status": "unverified",
+      "confidence_score": 0.325,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "verification_count": 13,
+      "verified_at": "2026-04-14T13:32:30.918Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": "{\n  \"verdict\": \"partial\",\n  \"summary\": \"The Strait of Hormuz is not effectively closed to all US/Israel-linked vessels, but Iran has imposed significant restrictions and threats. Iran's Revolutionary Guard Corps (IRGC) announced on March 27, 2026, that the strait is closed to any vessel going \\\"to and from\\\" the ports of the US, Israel, and their allies, and has launched attacks on merchant ships. However, the US has also implemented a blockade on Iranian ports, and some US-sanctioned and Iran-l"
+    },
+    {
+      "claim_id": "claim_27",
+      "claim_text": "Rep. Ayanna Pressley's net worth significantly increased after entering Congress, warranting an investigation.",
+      "status": "unverified",
+      "confidence_score": 0.325,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": "magavoice",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_political_trust_corruption_v1",
+      "verification_count": 8,
+      "verified_at": "2026-04-14T13:32:30.902Z",
+      "created_at": "2026-04-14T10:26:26.275Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": "```json\n{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Rep. Ayanna Pressley's net worth has significantly increased since she entered Congress in 2019. Her financial disclosures show a shift from a negative net worth to multimillion-dollar assets, primarily attributed to real estate investments and her husband's consulting firm, which was founded the same year she took office. This increase has led to scrutiny and questions regarding how members of Congress accumulate wealth while in office.\",\n  \"evi"
+    },
+    {
       "claim_id": "claim_20",
       "claim_text": "Rep. Ayanna Pressley entered Congress with a negative net worth and is now a multi-millionaire, warranting investigation.",
       "status": "unverified",
@@ -831,66 +1012,68 @@
       "web_search_summary": "```json\n{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Representative Ayanna Pressley entered Congress in 2019 with a reported negative net worth, or approximately $12,000 in assets offset by over $600,000 in debt. As of 2024, her net worth is estimated to be up to $8 million, largely due to real estate investments and income from her husband's consulting firm, which was founded the same year she took office. This significant increase in wealth has drawn scrutiny and raised questions about how member"
     },
     {
-      "claim_id": "claim_27",
-      "claim_text": "Rep. Ayanna Pressley's net worth significantly increased after entering Congress, warranting an investigation.",
+      "claim_id": "claim_30",
+      "claim_text": "Hezbollah claims Israel is implementing a 'Greater Israel' plan with help from the United States.",
       "status": "unverified",
-      "confidence_score": 0.325,
+      "confidence_score": 0.306,
       "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
+        "source_tier": 0.4,
+        "newsguard": 0.24,
         "corroboration": 0,
         "evidence_quality": 0,
         "cross_source": 0.5,
-        "web_search": 0.5
+        "web_search": 1
       },
-      "source_handle": "magavoice",
+      "source_handle": "bricsinfo",
       "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_political_trust_corruption_v1",
-      "verification_count": 6,
-      "verified_at": "2026-04-14T12:32:06.053Z",
-      "created_at": "2026-04-14T10:26:26.275Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": "```json\n{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Rep. Ayanna Pressley's net worth has significantly increased since she entered Congress in 2019. Her financial disclosures show a shift from a negative net worth to multimillion-dollar assets, primarily attributed to real estate investments and her husband's consulting firm, which was founded the same year she took office. This increase has led to scrutiny and questions regarding how members of Congress accumulate wealth while in office.\",\n  \"evi"
-    },
-    {
-      "claim_id": "claim_25",
-      "claim_text": "Iran demands compensation from Saudi Arabia, the UAE, Qatar, and Bahrain.",
-      "status": "unverified",
-      "confidence_score": 0.325,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0.5
-      },
-      "source_handle": "globeeyenews",
-      "source_tier": null,
-      "evidence_urls": [],
+      "evidence_urls": [
+        "https://jns.org/hezbollah-chief-gaza-peace-plan-serves-greater-israel-goals/",
+        "https://www.timesofisrael.com/hezbollah-chief-says-trumps-gaza-plan-full-of-dangers-claims-it-is-israels-project/",
+        "https://www.tehrantimes.com/news/494957/Iran-targeted-for-blocking-Greater-Israel-scheme-Hezbollah",
+        "https://www.youtube.com/watch?v=X203-g_2Q_Y",
+        "https://en.irna.ir/news/85249443/Hezbollah-denounces-Trump-s-Gaza-plan-as-part-of-Greater-Israel-plot"
+      ],
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 9,
-      "verified_at": "2026-04-14T12:32:06.049Z",
-      "created_at": "2026-04-14T08:26:36.559Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
+      "verification_count": 3,
+      "verified_at": "2026-04-14T13:32:30.908Z",
+      "created_at": "2026-04-14T10:26:26.311Z",
+      "original_source": "Hezbollah (specifically Secretary-General Naim Qassem and other officials)",
+      "claim_date": "2025-09",
+      "supporting_sources": [
+        {
+          "name": "JNS.org",
+          "stance": "Reports Hezbollah's claim that the American proposal to end the war in Gaza is part of a scheme by Jerusalem to forge a 'Greater Israel' and that the U.S. is fully assisting it."
+        },
+        {
+          "name": "The Times of Israel",
+          "stance": "Reports Hezbollah's leader Naim Qassem stating that Washington's plan for a ceasefire in Gaza was 'full of dangers,' accusing Israel of using the proposal to achieve what it 'failed' to do during the war, and that 'we must confront the Greater Israel project'."
+        },
+        {
+          "name": "Tehran Times",
+          "stance": "Reports a senior Hezbollah official stating that U.S. and Israeli hostility toward Tehran stems from Iran's role in thwarting the 'Greater Israel' project."
+        },
+        {
+          "name": "IRNA",
+          "stance": "Reports Hezbollah's Secretary-General Naim Qassem stating that Trump's Gaza plan is part of the 'Greater Israel' plot and everyone must resist it."
+        },
+        {
+          "name": "Palestine Chronicle",
+          "stance": "Reports Hezbollah's condemnation of US-Israeli aggression and its assertion that Washington and Tel Aviv seek to weaken states to integrate them into 'occupation and domination projects'."
+        },
+        {
+          "name": "Al Jazeera",
+          "stance": "Discusses the 'Greater Israel' project and reports that many in the region view current escalations through this lens."
+        }
+      ],
       "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Iran has formally demanded compensation from Saudi Arabia, the UAE, Qatar, and Bahrain (along with Jordan) for their alleged roles in facilitating US-Israeli attacks against Iran. Iran claims these countries breached international obligations by allowing their territories to be used for military actions and, in some cases, directly participating in attacks. This demand was communicated in a letter to the UN Secretary-General and the UN Security Council b"
+      "framing_analysis": "The claim is framed as a direct accusation by Hezbollah against Israel and the United States. It presents a specific interpretation of geopolitical events through the lens of the 'Greater Israel' concept, which is a long-standing and controversial idea in the region.",
+      "web_search_summary": "Hezbollah has repeatedly claimed that Israel is implementing a \"Greater Israel\" plan and that the United States is assisting in this endeavor. These claims often arise in the context of proposed peace plans or military actions in the region."
     },
     {
-      "claim_id": "claim_30",
-      "claim_text": "Hezbollah claims Israel is implementing a 'Greater Israel' plan with help from the United States.",
+      "claim_id": "claim_8",
+      "claim_text": "Iranian President Pezeshkian ready to end hostilities if firm guarantees against future domestic strikes received",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -901,15 +1084,15 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "bricsinfo",
+      "source_handle": null,
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 1,
-      "verified_at": "2026-04-14T10:26:26.313Z",
-      "created_at": "2026-04-14T10:26:26.311Z",
+      "related_axis_id": "axis_political_trust_corruption_v1",
+      "verification_count": 2,
+      "verified_at": "2026-04-14T06:01:05.260Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -1026,93 +1209,6 @@
       "verification_count": 6,
       "verified_at": "2026-04-14T08:00:38.136Z",
       "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null
-    },
-    {
-      "claim_id": "claim_8",
-      "claim_text": "Iranian President Pezeshkian ready to end hostilities if firm guarantees against future domestic strikes received",
-      "status": "unverified",
-      "confidence_score": 0.275,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_political_trust_corruption_v1",
-      "verification_count": 2,
-      "verified_at": "2026-04-14T06:01:05.260Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null
-    },
-    {
-      "claim_id": "claim_28",
-      "claim_text": "PH President Ferdinand Marcos Jr. is experiencing deteriorating health, and reports to the contrary are 'fake news'.",
-      "status": "unverified",
-      "confidence_score": 0.275,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": "abscbnnews",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_media_integrity_v1",
-      "verification_count": 6,
-      "verified_at": "2026-04-14T12:32:06.055Z",
-      "created_at": "2026-04-14T10:26:26.292Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null
-    },
-    {
-      "claim_id": "claim_29",
-      "claim_text": "U.S. sanctions have deliberately crushed the economy of multiple nations, impoverishing millions, constituting 'economic terrorism'.",
-      "status": "unverified",
-      "confidence_score": 0.275,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": "assalrad",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 2,
-      "verified_at": "2026-04-14T12:32:06.058Z",
-      "created_at": "2026-04-14T10:26:26.301Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
