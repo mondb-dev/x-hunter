@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-14T09:54:05.808Z",
+  "generated_at": "2026-04-14T10:24:06.228Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-14T09:54:54.194Z",
+  "profiled_at": "2026-04-14T10:24:36.874Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -375,7 +375,7 @@
       "first_seen_at": "2026-03-31T09:30:40.000Z",
       "last_seen_at": "2026-04-14T08:09:24.836Z",
       "discovery": {
-        "distinct_urls": 570,
+        "distinct_urls": 571,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -385,9 +385,9 @@
         ],
         "origin_counts": {
           "feed_buffer": 383,
-          "feed_buffer_reply": 211
+          "feed_buffer_reply": 212
         },
-        "distinct_referring_accounts": 268,
+        "distinct_referring_accounts": 269,
         "sample_referring_accounts": [
           "60minutes",
           "_margaritavill_",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:570",
+            "distinct_urls:571",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:268",
+            "referring_accounts:269",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:570",
+            "distinct_urls:571",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:268",
+            "referring_accounts:269",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -641,6 +641,150 @@
       }
     },
     {
+      "domain": "google.com",
+      "entity": "Google",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-01T05:04:23.454Z",
+      "last_seen_at": "2026-04-14T09:57:43.868Z",
+      "discovery": {
+        "distinct_urls": 34,
+        "example_urls": [
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMj5_f7x9PeEIs1Oi-MtcWpQWKNIguJurjCAEHa198wA4aBiQ-axvcXfsBblu9No4r-FEeUiKpWyp8U5zNa7jN8C3xZIWDYpAetpuoB0RPUSmNx0u1MQQ4cYbm9doVihWLA9mXy4E03PIOYR2INZZGe9cMLTQkcaD2fPxmZHx3yzBhmjaFudOUphqBsxwnuw=",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCmNHptSbVV3zGxP_M6wvF6PcPxnfQnf-w9J2CIiFt2D2AVZQffTQL7N4jd0jzuJ50Mh5rLLNMVr7wNa8VaGxy95U5puMCuVK_zI9aYx7FN7TMnmb81qR7Po_gte6ZmIEAKMYoG1uREvXeWIIsn97g8Gqal8F9nghWkc0Kx6cyKYDOYeqCyIme0Rvo_yYOdQ17MK2czw==",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfGmvMCsPeFUI4B-xmyKoaAkX_AG6Q9V1ZLs6ol2Qfeui48brn29RzcplcRWPGm_jTX4UXQepNKn_bVIhXEvqz4GGcsd5ybSyDByJlOqa6DCdHVN5Wh4pP2HqPH3ym0CeYu1sncGZpEaCB"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 36,
+          "claim_tracker": 1,
+          "journals": 14
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_data_privacy_decentralization_v1",
+          "axis_digital_supply_chain_security",
+          "axis_digital_surveillance_autonomy_v1",
+          "axis_economic_indicators_reliability_v1",
+          "axis_epistemic_integrity",
+          "axis_geopolitical_rhetoric_v1",
+          "axis_global_economic_stability_v1",
+          "axis_human_rights_exploitation_v1",
+          "axis_national_sovereignty_v_intl_law_v1",
+          "axis_new_world_order_discourse_v1",
+          "axis_ph_geopolitics_wps_v1",
+          "axis_political_trust_corruption_v1",
+          "axis_power_accountability",
+          "axis_religious_expression_hate_speech_v1",
+          "axis_social_welfare_v_military_spending_v1"
+        ]
+      },
+      "claims": {
+        "total": 1,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 1,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": true,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.37,
+          "basis": [
+            "unknown_domain_pattern",
+            "search_results_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.8799999999999999,
+          "basis": [
+            "distinct_urls:34",
+            "distinct_axes:15",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.26249999999999996,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.14,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.471484375,
+          "confidence": 0.6584249999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "search_results_seen",
+            "distinct_urls:34",
+            "distinct_axes:15",
+            "origin_types:3",
+            "referring_accounts:0",
+            "origin_types:3",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-12T10:38:50.188Z",
+        "homepage_url": "https://google.com/",
+        "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
+        "homepage_status": 200,
+        "example_status": 404,
+        "homepage_final_url": "https://www.google.com/",
+        "example_final_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
+        "homepage_content_type": "text/html; charset=ISO-8859-1",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "wikipedia.org",
       "entity": "Wikipedia",
       "kind": "reference",
@@ -756,149 +900,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 4,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "google.com",
-      "entity": "Google",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-14T06:31:37.630Z",
-      "discovery": {
-        "distinct_urls": 33,
-        "example_urls": [
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMj5_f7x9PeEIs1Oi-MtcWpQWKNIguJurjCAEHa198wA4aBiQ-axvcXfsBblu9No4r-FEeUiKpWyp8U5zNa7jN8C3xZIWDYpAetpuoB0RPUSmNx0u1MQQ4cYbm9doVihWLA9mXy4E03PIOYR2INZZGe9cMLTQkcaD2fPxmZHx3yzBhmjaFudOUphqBsxwnuw=",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCmNHptSbVV3zGxP_M6wvF6PcPxnfQnf-w9J2CIiFt2D2AVZQffTQL7N4jd0jzuJ50Mh5rLLNMVr7wNa8VaGxy95U5puMCuVK_zI9aYx7FN7TMnmb81qR7Po_gte6ZmIEAKMYoG1uREvXeWIIsn97g8Gqal8F9nghWkc0Kx6cyKYDOYeqCyIme0Rvo_yYOdQ17MK2czw==",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfGmvMCsPeFUI4B-xmyKoaAkX_AG6Q9V1ZLs6ol2Qfeui48brn29RzcplcRWPGm_jTX4UXQepNKn_bVIhXEvqz4GGcsd5ybSyDByJlOqa6DCdHVN5Wh4pP2HqPH3ym0CeYu1sncGZpEaCB"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 36,
-          "journals": 14
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_data_privacy_decentralization_v1",
-          "axis_digital_supply_chain_security",
-          "axis_digital_surveillance_autonomy_v1",
-          "axis_economic_indicators_reliability_v1",
-          "axis_epistemic_integrity",
-          "axis_geopolitical_rhetoric_v1",
-          "axis_global_economic_stability_v1",
-          "axis_human_rights_exploitation_v1",
-          "axis_national_sovereignty_v_intl_law_v1",
-          "axis_new_world_order_discourse_v1",
-          "axis_ph_geopolitics_wps_v1",
-          "axis_political_trust_corruption_v1",
-          "axis_power_accountability",
-          "axis_religious_expression_hate_speech_v1",
-          "axis_social_welfare_v_military_spending_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": true,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.37,
-          "basis": [
-            "unknown_domain_pattern",
-            "search_results_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.82,
-          "basis": [
-            "distinct_urls:33",
-            "distinct_axes:15",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.14,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.45015625000000004,
-          "confidence": 0.63795,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "search_results_seen",
-            "distinct_urls:33",
-            "distinct_axes:15",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-12T10:38:50.188Z",
-        "homepage_url": "https://google.com/",
-        "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
-        "homepage_status": 200,
-        "example_status": 404,
-        "homepage_final_url": "https://www.google.com/",
-        "example_final_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
-        "homepage_content_type": "text/html; charset=ISO-8859-1",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -3214,6 +3215,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.36786458333333333,
           "confidence": 0.08135,
@@ -3227,20 +3242,6 @@
             "referring_accounts:1",
             "origin_types:1",
             "track_record_unavailable"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
           ]
         }
       },
@@ -4875,6 +4876,129 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "app.link",
+      "entity": "App Link",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-03T04:05:48.185Z",
+      "last_seen_at": "2026-04-14T10:14:08.619Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
+          "https://chipotle.app.link/CFCROzYFA1b?%243p=a_twitter&twclid=2cc0rz9d8z8z95tfghmhm1chq0"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "chipotletweets"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.009999999999999998,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-12T08:38:48.933Z",
+        "homepage_url": "https://app.link/",
+        "example_url": "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
+        "homepage_status": 404,
+        "example_status": 200,
+        "homepage_final_url": "https://app.link/",
+        "example_final_url": "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
           "opinion_marker": false
         }
       }
@@ -7210,128 +7334,6 @@
       }
     },
     {
-      "domain": "app.link",
-      "entity": "App Link",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-03T04:05:48.185Z",
-      "last_seen_at": "2026-04-03T04:05:48.185Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "chipotletweets"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.009999999999999998,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:1",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-12T08:38:48.933Z",
-        "homepage_url": "https://app.link/",
-        "example_url": "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
-        "homepage_status": 404,
-        "example_status": 200,
-        "homepage_final_url": "https://app.link/",
-        "example_final_url": "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "nextinvestors.com",
       "entity": "Nextinvestors",
       "kind": "unknown",
@@ -9618,7 +9620,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-11T10:23:21.752Z",
+        "fetched_at": "2026-04-14T10:24:34.970Z",
         "homepage_url": "https://fooletfs.com/",
         "example_url": "https://fooletfs.com/our-funds/mfig?utm_source=x&utm_medium=paid_social&utm_campaign=mfig&utm_term=mfig-orange-v1&twclid=29gqh1517fetrd30y8lm22lkth",
         "homepage_status": 200,
@@ -11841,6 +11843,128 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 33,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "artprice.com",
+      "entity": "Artprice",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-14T10:04:08.272Z",
+      "last_seen_at": "2026-04-14T10:04:08.272Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.artprice.com/artprice-news/14183/world-record-a-painting-by-raja-ravi-varma-sold-for-nearly-18-million-dollars-in-mumbai?utm_medium=artprice-news&utm_source=X&utm_campaign=news&utm_content=14183&twclid=23wn7ayvhifg7vr11g3elt7wk3"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "artpricedotcom"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.46,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:true",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:6",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-14T10:24:36.874Z",
+        "homepage_url": "https://artprice.com/",
+        "example_url": "https://www.artprice.com/artprice-news/14183/world-record-a-painting-by-raja-ravi-varma-sold-for-nearly-18-million-dollars-in-mumbai?utm_medium=artprice-news&utm_source=X&utm_campaign=news&utm_content=14183&twclid=23wn7ayvhifg7vr11g3elt7wk3",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.artprice.com/check_browser?from=%252F",
+        "example_final_url": "https://www.artprice.com/check_browser?from=%252Fartprice-news%252F14183%252Fworld-record-a-painting-by-raja-ravi-varma-sold-for-nearly-18-million-dollars-in-mumbai%253Futm_medium%253Dartprice-news%2526utm_source%253DX%2526utm_campaign%253Dnews%2526utm_content%253D14183%2526twclid%253D23wn7ayvhifg7vr11g3elt7wk3",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 6,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 6,
           "opinion_marker": false
         }
       }
