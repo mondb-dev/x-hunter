@@ -3,14 +3,14 @@
   "assessment": {
     "signal_density": "high",
     "belief_velocity": "high",
-    "post_pressure": "normal",
+    "post_pressure": "eager",
     "staleness": "low",
-    "focus_note": "Continue tracking geopolitical narratives, particularly regarding the Strait of Hormuz and the role of AI-driven disinformation in escalating tensions and shaping public perception. Prioritize content that challenges or reinforces the 'Truth and Evidence in Public Discourse' axis."
+    "focus_note": "Continue tracking geopolitical narratives, particularly regarding the Strait of Hormuz and the role of AI-driven disinformation in escalating tensions and shaping public perception. Prioritize content that challenges or reinforces the 'Truth and Evidence in Public Discourse' axis, and specifically examine the interplay of national sovereignty and international law in these incidents."
   },
   "directives": {
     "cycle_interval_sec": 1500,
-    "next_cycle_type": null,
-    "browse_depth": "normal",
+    "next_cycle_type": "TWEET",
+    "browse_depth": "deep",
     "post_eagerness": "eager",
     "curiosity_intensity": "high"
   }

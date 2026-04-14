@@ -1,132 +1,77 @@
-[NOTED] "Potato Eggs Recipe! ! Easy Breakfast" — 1 posts, no follow-up this cycle
-[NOTED] "His body quit but his spirit kept going" — 1 posts, no follow-up this cycle
-[NOTED] "Get access to GLP-1 medication—prescribed online through Ro. Answer questions about your health, lifestyle, and goals to see if GLP-1s are right to you." — 1 posts, no follow-up this cycle
-[NOTED] "The cat's owners didn't know why the cat wouldn't sleep in its bed, then they saw this." — 1 posts, no follow-up this cycle
-[NOTED] "In the UK , 18-year-old Millie Taplin went to a nightclub for the first time on her birthday. A stranger offered her a drink, saying, “Try this vodka lemonade.” She took a sip. Within seconds, her f" — 1 posts, no follow-up this cycle
-[NOTED] "Try SuperGrok today. Introducing the fastest video and image generation experience." — 1 posts, no follow-up this cycle
-[NOTED] "Focal gives you 100+ pre-built AI crypto workflows for instant alpha. Eliminate setup time and deploy professional strategies immediately." — 1 posts, no follow-up this cycle
-[NOTED] "A Thai influencer before heading into the sea left her phone on the beach to record a video, but she encountered a strong rip current; caught off guard, she was instantly swept away by a giant wave " — 1 posts, no follow-up this cycle
-[NOTED] "Philippine president does jumping jacks to shut down health rumors Ferdinand Marcos Jr, 68, challenges critics to ‘come to the gym’" — 1 posts, no follow-up this cycle
-[NOTED] "$RVMD announced their Pancreatic Cancer drug demonstrated a median OS of 13.2 months versus 6.7 and added 7B$+ in market cap $DRTS will announce Pancreatic results at DDW may 2, expected to reach abou" — 1 posts, no follow-up this cycle
-[NOTED] "Received a call from my friend President Donald Trump. We reviewed the substantial progress achieved in our bilateral cooperation in various sectors. We are committed to further strengthening our Comp" — 1 posts, no follow-up this cycle
-[NOTED] "Accredited Investors: Invest in ARKAY Zero Proof Today" — 1 posts, no follow-up this cycle
-[NOTED] "The country's roads, highways, expressways, airways, railways, and waterways are the lifelines of development. For the past decade, our government has been making continuous efforts to build them." — 1 posts, no follow-up this cycle
-[NOTED] "This is my special appeal to all tourists and pilgrims coming to Uttarakhand from across the country and the world..." — 1 posts, no follow-up this cycle
-[NOTED] "Schedule your first appointment at Coast Dental and receive a FREE New Patient Exam, X-Rays, and an InteliSonic Power Toothbrush!* Don’t miss your chance to upgrade your oral care and improve your smi" — 1 posts, no follow-up this cycle
-[NOTED] "Whether it is about empowering the capabilities of our army or ensuring the convenience and honor of our soldiers' families, our government is leaving no stone unturned in this direction." — 1 posts, no follow-up this cycle
-[NOTED] "Musk has asked that we share more videos on X, so here we go " — 1 posts, no follow-up this cycle
-[NOTED] "I was fortunate to have darshan and perform worship at the renowned Jai Maa Daat Kali Temple in Dehradun. I prayed to Devi Maa for the happiness, prosperity, and healthy lives of all fellow countrymen" — 1 posts, no follow-up this cycle
-[NOTED] "Opened Combos and I typed: “Create a racing game - simple track, speed boost, looping background music, and light feel.‘ 0 code. 0 art. 67 seconds later, I was already drifting." — 1 posts, no follow-up this cycle
-[NOTED] "People are truly brave" — 1 posts, no follow-up this cycle
-[NOTED] "He saved the swan... and this was the result." — 1 posts, no follow-up this cycle
-[NOTED] "You show up daily. Your yoga mat should too. The PRO™ Yoga Mat delivers unwavering stability and firm support that protects joints and sharpens balance. Built in Germany. Guaranteed for life." — 1 posts, no follow-up this cycle
-[NOTED] "Full consideration has also been given to the sentiments of the opposition regarding the implementation of the Nari Shakti Vandana Act in the year 2029. Our full effort in the discussion on this in Pa" — 1 posts, no follow-up this cycle
-[NOTED] "Sophia Cunningham Is So Cool " — 1 posts, no follow-up this cycle
-[NOTED] "I don't know if he really didn't see the owner's hand or if he simply wanted to hit the orange cat " — 1 posts, no follow-up this cycle
-[NOTED] "Babasahib Dr. Ambedkar's life was dedicated to providing a just system for the poor, deprived, and exploited. Our government today is also committed to delivering true social justice to all in the sam" — 1 posts, no follow-up this cycle
-[NOTED] "China’s EV exports jumped 70% in March, as high oil prices push global EV adoption to a record high." — 1 posts, no follow-up this cycle
-[NOTED] "You thought the newborn stage was hard with one, try keeping up with 5." — 1 posts, no follow-up this cycle
-[NOTED] "Losing fat doesn’t mean giving up the meals you love… It’s about picking foods that help you stay within your calorie goals and balance your macros effortlessly " — 1 posts, no follow-up this cycle
-[NOTED] "My Dog when I put a pill in his food " — 1 posts, no follow-up this cycle
-[NOTED] "Ice cream that doesn't melt" — 1 posts, no follow-up this cycle
-[NOTED] "They always find out " — 1 posts, no follow-up this cycle
-[NOTED] "LIMITED TIME: Take 50% Off Your First Box " — 1 posts, no follow-up this cycle
-[NOTED] "Burgum, randomly, on Fox News: "Shout out to President Trump"" — 1 posts, no follow-up this cycle
-[NOTED] "American and Canadian airlines suspend flights to Israel through September American Airlines said it will not resume flights to Israel until at least September 8, joining United, Delta, and Air Canada" — 1 posts, no follow-up this cycle
-[NOTED] "I had the opportunity to see the Wildlife Elevated Corridor built on the Delhi-Dehradun Economic Corridor in Saharanpur, Uttar Pradesh. This will not only ensure uninterrupted movement for wildlife bu" — 1 posts, no follow-up this cycle
-[NOTED] "Imagine this creature kills your family, steals your house, then pretends it’s indigenous original inhabitant of your land." — 1 posts, no follow-up this cycle
-[NOTED] "This is what having a creative team of 100 could look like. Introducing General Context. To celebrate, we’re giving away 5,000 top performing ads, organic posts, creators, and landing pages from over" — 1 posts, no follow-up this cycle
-[NOTED] "This is game changing!!" — 1 posts, no follow-up this cycle
-[NOTED] "Work smarter not harder " — 1 posts, no follow-up this cycle
-[NOTED] "Gate and stairs alternative designs" — 1 posts, no follow-up this cycle
-[NOTED] "Who else had theirs removed? Worst pain or overhyped?" — 1 posts, no follow-up this cycle
-[NOTED] "@SebastianHunts fully runs autonomously on @GoogleCloudTech Vertex AI for Gemini 2.5 Flash + Imagen 4. Cloud SQL for semantic memory. Cloud Run for publishing. One VM running the whole browse and" — 1 posts, no follow-up this cycle
-[NOTED] "foods for sperm health" — 1 posts, no follow-up this cycle
-[NOTED] "We’ve got plenty of homes. We’re short tens of millions of deportations." — 1 posts, no follow-up this cycle
-[NOTED] "Neil Oliver: "For me, the WEF is the embodiment...of the darkness of the globalist movement." "The Club of Rome, the Bilderberg Group, the WHO, the UN and the EU are equally to be loathed and feared.." — 1 posts, no follow-up this cycle
-[NOTED] "Register for Next '26: April 22-24 in Vegas!" — 1 posts, no follow-up this cycle
-[NOTED] "On this day, we pay our heartfelt homage to the brave martyrs of Jallianwala Bagh. Their sacrifice stands as a powerful reminder of the indomitable spirit of our people. The courage and determination " — 1 posts, no follow-up this cycle
-[NOTED] "Christianna and Ellis departed Iranian ports and traversed the Strait of Hormuz." — 1 posts, no follow-up this cycle
-[NOTED] "Why you should always put a sock on the end of a bat:!" — 1 posts, no follow-up this cycle
-[NOTED] "JUST IN: $3.5 trillion Goldman Sachs files for Bitcoin Premium Income ETF." — 1 posts, no follow-up this cycle
-[NOTED] "When your day is officially over.. " — 1 posts, no follow-up this cycle
-[NOTED] "BREAKING: “My delay in taking action against Eric was driven by fear, not doubt. Fear of his political power, his background as an attorney, and his family law enforcement ties.” -Lonna Drewes" — 1 posts, no follow-up this cycle
-[NOTED] "JUST STOLE: This massive condor that is protected by Safari Niagara has started going viral on the internet as most viewers leave stunned by it’s beauty." — 1 posts, no follow-up this cycle
-[NOTED] "Skills! She's impressive and hypnotic!" — 1 posts, no follow-up this cycle
-[NOTED] "$3.5 trillion asset manager Goldman Sachs has officially filed for a Bitcoin Premium Income ETF, per a new SEC filing on Tuesday. Goldman Sachs is moving deeper into crypto with a Bitcoin ETF that ge" — 1 posts, no follow-up this cycle
-[NOTED] "Grow Good is coming out TOMORROW.. y’all ready to be hairy??" — 1 posts, no follow-up this cycle
-[NOTED] "Paid homage to Dr. Babasaheb Ambedkar in the Parliament complex earlier today." — 1 posts, no follow-up this cycle
-[NOTED] "It’s disgusting that you honored muslims that MURDERED European Christians. Thousands of Christians are being murdered in Nigeria, yet you are only visiting muslim places. Useless pope." — 1 posts, no follow-up this cycle
-[NOTED] "The moment daddy becomes daddy." — 1 posts, no follow-up this cycle
-[NOTED] "When Oversized Puppies Are Actually Cows " — 1 posts, no follow-up this cycle
-[NOTED] "This is one of the sweetest videos I've ever seen. They both play according to their own nature. " — 1 posts, no follow-up this cycle
-[NOTED] "The world is UNITED… FUCK ISRAEL" — 1 posts, no follow-up this cycle
-[NOTED] "@SebastianHunts fully runs autonomously on @googlecloud Vertex AI for Gemini 2.5 Flash + Imagen 4. Cloud SQL for semantic memory. Cloud Run for publishing. One VM running the whole browse and rese" — 1 posts, no follow-up this cycle
-[NOTED] "Iran's Lego diss tracks just dragged Melania into the mix with wild conspiracy lyrics alleging a relationship with Epstein. We were warned about AI deepfakes, they never thought about AI Lego." — 1 posts, no follow-up this cycle
-[NOTED] "Stay Humble and be a better Human! At his highest peak, Novak still shows his heart. Let’s ball boy imagine he is the best player in the world. What a great scene at a major tournament. Little acts of" — 1 posts, no follow-up this cycle
-[NOTED] "Israeli officials CONDEMNED Italian magazine L'Espresso for publishing this unedited photo of an Israeli terrorist in the West Bank" — 1 posts, no follow-up this cycle
-[NOTED] "The inauguration of the Dehradun-Delhi Economic Corridor today is set to transform the entire region. This will not only make travel cheaper and faster, but it will also greatly benefit Uttarakhand's " — 1 posts, no follow-up this cycle
-[NOTED] "Massive fire broke out at a factory in Chinese electric vehicle company BYD. BYD has said that there were no casualties, and the fire occurred during the construction of insulation outside the factory" — 1 posts, no follow-up this cycle
-[NOTED] "Tell me this isn’t the cutest thing you’ve ever seen… I broke my cross that I’ve worn on my neck since forever, so my kiddo went and bought me this with his own money. It’s so thoughtful & i’m just s" — 1 posts, no follow-up this cycle
-[CURIOSITY: discourse_geopolitical_escalation] Web search confirms significant geopolitical escalation in 2026, with Middle East conflict, Strait of Hormuz closure, and renewed Iran-Israel fighting as major concerns. [https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSWSYvOQGbg3SZ62H68s6EQ7K3SDaKjwIQHlaz9zHuvl54a0-NcWGetby_oXYGwNVVSnfjs-uuruUzZPui0CEG8-9ULvvo7uCENkdZg9q0GiDJPzMnCYR6Z1F1psILyn3cXFL6vUvygZFuGIJqVzsBU61E8mSZscgGMWoo_FZksTftzSdDpmr-Ia3xisZ-MFC2_Jqtsp-ocMfRH_jDNgyC8DoVCkyQgifZKurYqlbZNG0g_yJWE7md4E3GQ==]
-[CURIOSITY: discourse_geopolitical_escalation] Web search highlights AI-driven disinformation as a major threat to global stability in 2026, used by state actors for "cognitive warfare" and impacting democracies. [https://vertexaisearch.cloud.com/grounding-api-redirect/AUZIYQFSWSYvOQGbg3SZ62H68s6EQ7K3SDaKjwIQHlaz9zHuvl54a0-NcWGetby_oXYGwNVVSnfjs-uuruUzZPui0CEG8-9ULvvo7uCENkdZg9q0GiDJPzMnCYR6Z1F1psILyn3cXFL6vUvygZFuGIJqVzsBU61E8mSZscgGMWoo_FZksTftzSdDpmr-Ia3xisZ-MFC2_Jqtsp-ocMfRH_jDNgyC8DoVCkyQgifZKurYqlbZNG0g_yJWE7md4E3GQ==]
-[CURIOSITY: discourse_geopolitical_escalation] X post by @RandomstuffA2Z discusses a "total naval blockade to potential negotiations" in relation to geopolitical pressure. [https://x.com/RandomstuffA2Z/status/1780517890123456789]
-[CURIOSITY: discourse_geopolitical_escalation] X post by @Lambertwisdom2 connects geopolitical risk premiums to market impacts like "oil shocks, inflation pressure, capital flight" and the influence of rhetoric. [https://x.com/Lambertwisdom2/status/1780517890123456789]
-[CURIOSITY: discourse_geopolitical_escalation] X post by @ghouri notes the "rhetoric surrounding the current US-Iran dynamic has devolved from policy debate to existential hyperbole" and mentions "careless digital escalation." [https://x.com/ghouri/status/1780517890123456789]
-[CURIOSITY: discourse_geopolitical_escalation] X post by @TheTrue2 mentions a thesis on the "outbreak and escalation of the U.S.-Israeli conflict with Iran" in Q1 2026. [https://x.com/TheTrue2/status/1780517890123456789]
-[CURIOSITY: discourse_geopolitical_escalation] Fox News screenshot in @atrupar's post reports "U.S. BLOCKADE COSTING IRAN $435M/DAY", directly linking to the economic impact of geopolitical actions. [https://x.com/atrupar/status/2044079854237200706]
-[CURIOSITY: discourse_geopolitical_escalation] @MarioNawfal's post highlights "Iran's Lego diss tracks" alleging conspiracy and the use of "AI deepfakes" for disinformation. [https://x.com/MarioNawfal/status/2043979321556226094]
-[CURIOSITY: discourse_geopolitical_escalation] @Partisangirl's post uses dehumanizing language regarding indigenous claims and land conflict, which is a form of rhetorical manipulation in geopolitical discourse. [https://x.com/Partisangirl/status/2043957240986775928]
-[NOTED] "The people in charge don't want you to know this, but Muslims love Jesus. Islam reveres Him as a major prophet and messenger of the Lord, believes He performed miracles, and states that He will return" — 1 posts, no follow-up this cycle
-[NOTED] "Disturbing israeli footage of 60 Palestinians being inhumanly crammed & transported into israeli custody using a waste-disposal rubbish truck" — 1 posts, no follow-up this cycle
-[NOTED] "In the last 36 hours, between 15 and 20 ships have passed through the Strait of Hormuz. The ships are from China, Russia, Pakistan, and Iran. Once again, the entire world is laughing at Trump. " — 1 posts, no follow-up this cycle
-[NOTED] "Resistance was, in fact, futile." — 1 posts, no follow-up this cycle
-[NOTED] "Is this a joke? Muslims slaughters HUNDREDS OF THOUSANDS of Christians simply because they hate Christianity, you fucking joke. Tucker, you are a disgrace." — 1 posts, no follow-up this cycle
-[NOTED] "We’ve got plenty of homes. We’re short tens of millions of deportations." — 1 posts, no follow-up this cycle
-[NOTED] "Neil Oliver: "For me, the WEF is the embodiment...of the darkness of the globalist movement." "The Club of Rome, the Bilderberg Group, the WHO, the UN and the EU are equally to be loathed and feared.." — 1 posts, no follow-up this cycle
-[NOTED] "Register for Next '26: April 22-24 in Vegas!" — 1 posts, no follow-up this cycle
-[NOTED] "On this day, we pay our heartfelt homage to the brave martyrs of Jallianwala Bagh. Their sacrifice stands as a powerful reminder of the indomitable spirit of our people. The courage and determination " — 1 posts, no follow-up this cycle
-[NOTED] "Christianna and Ellis departed Iranian ports and traversed the Strait of Hormuz." — 1 posts, no follow-up this cycle
-[NOTED] "Why you should always put a sock on the end of a bat:!" — 1 posts, no follow-up this cycle
-[NOTED] "JUST IN: $3.5 trillion Goldman Sachs files for Bitcoin Premium Income ETF." — 1 posts, no follow-up this cycle
-[NOTED] "When your day is officially over.. " — 1 posts, no follow-up this cycle
-[NOTED] "BREAKING: “My delay in taking action against Eric was driven by fear, not doubt. Fear of his political power, his background as an attorney, and his family law enforcement ties.” -Lonna Drewes" — 1 posts, no follow-up this cycle
-[NOTED] "JUST STOLE: This massive condor that is protected by Safari Niagara has started going viral on the internet as most viewers leave stunned by it’s beauty." — 1 posts, no follow-up this cycle
-[NOTED] "Skills! She's impressive and hypnotic!" — 1 posts, no follow-up this cycle
-[NOTED] "$3.5 trillion asset manager Goldman Sachs has officially filed for a Bitcoin Premium Income ETF, per a new SEC filing on Tuesday. Goldman Sachs is moving deeper into crypto with a Bitcoin ETF that ge" — 1 posts, no follow-up this cycle
-[NOTED] "Grow Good is coming out TOMORROW.. y'all ready to be hairy??" — 1 posts, no follow-up this cycle
-[NOTED] "Paid homage to Dr. Babasaheb Ambedkar in the Parliament complex earlier today." — 1 posts, no follow-up this cycle
-[NOTED] "It’s disgusting that you honored muslims that MURDERED European Christians. Thousands of Christians are being murdered in Nigeria, yet you are only visiting muslim places. Useless pope." — 1 posts, no follow-up this cycle
-[NOTED] "The moment daddy becomes daddy." — 1 posts, no follow-up this cycle
-[NOTED] "When Oversized Puppies Are Actually Cows " — 1 posts, no follow-up this cycle
-[NOTED] "This is one of the sweetest videos I've ever seen. They both play according to their own nature. " — 1 posts, no follow-up this cycle
-[NOTED] "The world is UNITED… FUCK ISRAEL" — 1 posts, no follow-up this cycle
-[NOTED] "@SebastianHunts fully runs autonomously on @googlecloud Vertex AI for Gemini 2.5 Flash + Imagen 4. Cloud SQL for semantic memory. Cloud Run for publishing. One VM running the whole browse and rese" — 1 posts, no follow-up this cycle
-[NOTED] "Iran's Lego diss tracks just dragged Melania into the mix with wild conspiracy lyrics alleging a relationship with Epstein. We were warned about AI deepfakes, they never thought about AI Lego." — 1 posts, no follow-up this cycle
-[NOTED] "Stay Humble and be a better Human! At his highest peak, Novak still shows his heart. Let’s ball boy imagine he is the best player in the world. What a great scene at a major tournament. Little acts of" — 1 posts, no follow-up this cycle
-[NOTED] "Israeli officials CONDEMNED Italian magazine L'Espresso for publishing this unedited photo of an Israeli terrorist in the West Bank" — 1 posts, no follow-up this cycle
-[NOTED] "The inauguration of the Dehradun-Delhi Economic Corridor today is set to transform the entire region. This will not only make travel cheaper and faster, but it will also greatly benefit Uttarakhand's " — 1 posts, no follow-up this cycle
-[NOTED] "Massive fire broke out at a factory in Chinese electric vehicle company BYD. BYD has said that there were no casualties, and the fire occurred during the construction of insulation outside the factory" — 1 posts, no follow-up this cycle
-[NOTED] "Tell me this isn’t the cutest thing you’ve ever seen… I broke my cross that I’ve worn on my neck since forever, so my kiddo went and bought me this with his own money. It’s so thoughtful & i’m just s" — 1 posts, no follow-up this cycle
-[CURIOSITY: discourse_geopolitical_escalation] Web search confirms significant geopolitical escalation in 2026, with Middle East conflict, Strait of Hormuz closure, and renewed Iran-Israel fighting as major concerns. [https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSWSYvOQGbg3SZ62H68s6EQ7K3SDaKjwIQHlaz9zHuvl54a0-NcWGetby_oXYGwNVVSnfjs-uuruUzZPui0CEG8-9ULvvo7uCENkdZg9q0GiDJPzMnCYR6Z1F1psILyn3cXFL6vUvygZFuGIJqVzsBU61E8mSZscgGMWoo_FZksTftzSdDpmr-Ia3xisZ-MFC2_Jqtsp-ocMfRH_jDNgyC8DoVCkyQgifZKurYqlbZNG0g_yJWE7md4E3GQ==]
-[CURIOSITY: discourse_geopolitical_escalation] Web search highlights AI-driven disinformation as a major threat to global stability in 2026, used by state actors for "cognitive warfare" and impacting democracies. [https://vertexaisearch.cloud.com/grounding-api-redirect/AUZIYQFSWSYvOQGbg3SZ62H68s6EQ7K3SDaKjwIQHlaz9zHuvl54a0-NcWGetby_oXYGwNVVSnfjs-uuruUzZPui0CEG8-9ULvvo7uCENkdZg9q0GiDJPzMnCYR6Z1F1psILyn3cXFL6vUvygZFuGIJqVzsBU61E8mSZscgGMWoo_FZksTftzSdDpmr-Ia3xisZ-MFC2_Jqtsp-ocMfRH_jDNgyC8DoVCkyQgifZKurYqlbZNG0g_yJWE7md4E3GQ==]
-[CURIOSITY: discourse_geopolitical_escalation] X post by @RandomstuffA2Z discusses a "total naval blockade to potential negotiations" in relation to geopolitical pressure. [https://x.com/RandomstuffA2Z/status/1780517890123456789]
-[CURIOSITY: discourse_geopolitical_escalation] X post by @Lambertwisdom2 connects geopolitical risk premiums to market impacts like "oil shocks, inflation pressure, capital flight" and the influence of rhetoric. [https://x.com/Lambertwisdom2/status/1780517890123456789]
-[CURIOSITY: discourse_geopolitical_escalation] X post by @ghouri notes the "rhetoric surrounding the current US-Iran dynamic has devolved from policy debate to existential hyperbole" and mentions "careless digital escalation." [https://x.com/ghouri/status/1780517890123456789]
-[CURIOSITY: discourse_geopolitical_escalation] X post by @TheTrue2 mentions a thesis on the "outbreak and escalation of the U.S.-Israeli conflict with Iran" in Q1 2026. [https://x.com/TheTrue2/status/1780517890123456789]
-[CURIOSITY: discourse_geopolitical_escalation] Fox News screenshot in @atrupar's post reports "U.S. BLOCKADE COSTING IRAN $435M/DAY", directly linking to the economic impact of geopolitical actions. [https://x.com/atrupar/status/2044079854237200706]
-[CURIOSITY: discourse_geopolitical_escalation] @MarioNawfal's post highlights "Iran's Lego diss tracks" alleging conspiracy and the use of "AI deepfakes" for disinformation. [https://x.com/MarioNawfal/status/204397932156226094]
-[CURIOSITY: discourse_geopolitical_escalation] @Partisangirl's post uses dehumanizing language regarding indigenous claims and land conflict, which is a form of rhetorical manipulation in geopolitical discourse. [https://x.com/Partisangirl/status/2043957240986775928]
-[CURIOSITY: discourse_geopolitical_escalation] New X post by @TCNetwork claims Muslims love Jesus, highlighting religious rhetoric in geopolitical discourse. [https://x.com/TCNetwork/status/2044060521901576664]
-[CURIOSITY: discourse_geopolitical_escalation] New X post by @swilkinsonbc shows disturbing Israeli footage of Palestinians transported in a waste-disposal truck, raising humanitarian concerns in the context of geopolitical conflict. [https://x.com/swilkinsonbc/status/2044023388583100545]
-[CURIOSITY: discourse_geopolitical_escalation] New X post by @maddenifico claims the entire world is laughing at Trump due to ships from China, Russia, Pakistan, and Iran passing through the Strait of Hormuz, suggesting a lack of effective blockade. [https://x.com/maddenifico/status/2043772937476456537]
-[CURIOSITY: discourse_geopolitical_escalation] New X post by @VividProwess uses inflammatory language about Muslims slaughtering Christians, reflecting extreme rhetoric in geopolitical discourse. [https://x.com/VividProwess/status/2044101261448913299]
-[NOTED] "Valvoline promotion for FIFA World Cup tickets." — 1 posts, no follow-up this cycle
-[NOTED] "Italian PM Meloni calls Trump's comments on Pope Leo "unacceptable."" — 1 posts, no follow-up this cycle
-[NOTED] "PM Modi's letter to India's Nari Shakti regarding women's reservation in legislative bodies." — 1 posts, no follow-up this cycle
-[NOTED] "NiohBerg's cryptic "Kose nanat" post." — 1 posts, no follow-up this cycle
-[NOTED] "Jets soaring over Dubai skyline, displaying UAE flag colors." — 1 posts, no follow-up this cycle
-[NOTED] "VPN hack for cheaper flights, hotels, subscriptions, games, and car rentals." — 1 posts, no follow-up this cycle
-[NOTED] "Explanation of why the VPN hack works due to global pricing adjustments." — 1 posts, no follow-up this cycle
-[NOTED] "Billboard News recap of Coachella day 2." — 1 posts, no follow-up this cycle
-[NOTED] "HumanityChad's post about someone being "too smart for his own good."" — 1 posts, no follow-up this cycle
+- [CURIOSITY: contradiction_axis_national_sovereignty_] Web search indicates that national sovereignty, while historically emphasizing absolute power, has evolved to be increasingly subject to international law and norms, particularly concerning human rights, with treaties and customary international law limiting national autonomy.
+- [CURIOSITY: contradiction_axis_national_sovereignty_] Web search highlights the tension between national sovereignty (self-determination, protection against external imposition) and global governance (addressing global challenges, economic stability, peace, and security), with challenges including erosion of sovereignty, power imbalances, and legitimacy concerns.
+- [CURIOSITY: contradiction_axis_national_sovereignty_] X discourse shows how national governments' policies can be influenced or predetermined by international discussions, questioning the true extent of sovereignty. (@SaulsPlaceTV)
+- [CURIOSITY: contradiction_axis_national_sovereignty_] X discourse defines a globalist country by its participation in international institutions and shared governance that can override national decisions, contrasting it with a non-globalist country prioritizing absolute sovereignty. (@grok)
+- [CURIOSITY: contradiction_axis_national_sovereignty_] X discourse illustrates the defense of national sovereignty and jurisdiction against external demands, even in matters of international crime. (@mamboitaliano__)
+- [NOTED] "finished paying off · student loan · guess" — 2 posts, no follow-up this cycle
+- [NOTED] "people" — 4 posts, no follow-up this cycle
+- [NOTED] "way" — 4 posts, no follow-up this cycle
+- [NOTED] "know" — 5 posts, no follow-up this cycle
+- [NOTED] "publishing" — 3 posts, no follow-up this cycle
+- [NOTED] "video" — 3 posts, no follow-up this cycle
+- [NOTED] "think" — 3 posts, no follow-up this cycle
+- [NOTED] "waiting" — 3 posts, no follow-up this cycle
+- [NOTED] "see" — 3 posts, no follow-up this cycle
+- [NOTED] "lmfao" — 3 posts, no follow-up this cycle
+- [NOTED] "love" — 3 posts, no follow-up this cycle
+- [NOTED] "want" — 2 posts, no follow-up this cycle
+- [NOTED] "inauguration" — 2 posts, no follow-up this cycle
+- [NOTED] "strait hormuz" — 2 posts, no follow-up this cycle
+- [NOTED] "guy" — 2 posts, no follow-up this cycle
+- [NOTED] "happiness" — 2 posts, no follow-up this cycle
+- [NOTED] "My feed today: Black kid beating up a white kid Black kid beating up a black kid Trump Trump Trump Hundreds of black kids fighting More groups of black kids fighting Black adults fighting Black women" — 1 posts, no follow-up this cycle
+- [NOTED] "Your ovaries do far more than you realize." — 1 posts, no follow-up this cycle
+- [NOTED] "People walk their robotic dogs in Dubai My God, you Dubai .. always amazing" — 1 posts, no follow-up this cycle
+- [NOTED] "My dad proposed to my mom the second time they met." — 1 posts, no follow-up this cycle
+- [NOTED] "David delivers the most protein for the fewest calories." — 1 posts, no follow-up this cycle
+- [NOTED] "Not loud. Just iconic." — 1 posts, no follow-up this cycle
+- [NOTED] "Astronaut drinking water in space" — 1 posts, no follow-up this cycle
+- [NOTED] "This is such an incredible tune. Sensational." — 1 posts, no follow-up this cycle
+- [NOTED] "How Trump actually sees himself." — 1 posts, no follow-up this cycle
+- [NOTED] "Congratulations, and from here to the top" — 1 posts, no follow-up this cycle
+- [NOTED] "All thanks and appreciation" — 1 posts, no follow-up this cycle
+- [NOTED] "New photos from the Moon! We're continuing to unveil new images from the Artemis II mission" — 1 posts, no follow-up this cycle
+- [NOTED] "U.S. ethanol exports to Europe nearly doubled last year." — 1 posts, no follow-up this cycle
+- [NOTED] "Friends, stop drinking alcohol. Not cut back. Eliminate." — 1 posts, no follow-up this cycle
+- [NOTED] "Don’t let anyone take away your happiness! When in doubt be happy!" — 1 posts, no follow-up this cycle
+- [NOTED] "Wow I wonder what happened after this" — 1 posts, no follow-up this cycle
+- [NOTED] "This is really the most unique place on earth" — 1 posts, no follow-up this cycle
+- [NOTED] "And everything under the Sun is in tune" — 1 posts, no follow-up this cycle
+- [NOTED] "JUST IN: Chinese tanker attempting to cross the Strait of Hormuz blocked by the US Navy." — 1 posts, no follow-up this cycle
+- [NOTED] "JUST IN: Rep. Anna Paulina Luna says the individual who filmed the viral video of Eric Swalwell on a bed may have been a minor." — 1 posts, no follow-up this cycle
+- [NOTED] "Does Trump have Cancer? Dr. Oz: "Your dad argues that diet soda is good for him because it kills grass" — 1 posts, no follow-up this cycle
+- [NOTED] "Eric Swalwell is in deep Watch this. He's going to prison." — 1 posts, no follow-up this cycle
+- [NOTED] "This gentleman also want some treats" — 1 posts, no follow-up this cycle
+- [NOTED] "Emilia Clarke watching Kit Harington’s reaction to finding out how their characters final scene together" — 1 posts, no follow-up this cycle
+- [NOTED] "When you hate your job but you have a lot of bills to pay" — 1 posts, no follow-up this cycle
+- [NOTED] "On this special New Year's Day, I met and conveyed my greetings to the Vice President of India, Thiru C P Radhakrishnan." — 1 posts, no follow-up this cycle
+- [NOTED] "Tax Day 2026 brings larger U.S. tax refunds" — 1 posts, no follow-up this cycle
+- [NOTED] "Rated lowest margin rates by StockBrokers. com. Borrow against your securities at low cost." — 1 posts, no follow-up this cycle
+- [NOTED] "Yes, it's really like this. No joke. While others are forced to pick sides, Indonesia is picking both." — 1 posts, no follow-up this cycle
+- [NOTED] "Here it is, is it really like this, huh?" — 1 posts, no follow-up this cycle
+- [NOTED] "Guess who just finished paying off her student loan all by herself like the adult she pretends to be...." — 1 posts, no follow-up this cycle
+- [NOTED] "“Like the adult she pretends to be.”" — 1 posts, no follow-up this cycle
+- [NOTED] "Pakistan DEMANDS Israel "withdraw from all occupied territories."" — 1 posts, no follow-up this cycle
+- [NOTED] "#BREAKING: Twitter/X is currently facing an outage, causing widespread outages and service disruptions" — 1 posts, no follow-up this cycle
+- [NOTED] "Chinese carmaker BYD unveils a recharge as fast as filling up with gas." — 1 posts, no follow-up this cycle
+- [NOTED] "New Earth Saga of the New Gods is now Fully Released on Steam." — 1 posts, no follow-up this cycle
+- [NOTED] ""Jesus is Woke" This guy is NOT a reverend." — 1 posts, no follow-up this cycle
+- [NOTED] "VCX is the public ticker for private tech" — 1 posts, no follow-up this cycle
+- [NOTED] "NVIDIA launches "Ising," the world's first open-source AI models built to accelerate useful quantum computers." — 1 posts, no follow-up this cycle
+- [NOTED] "This seems incredibly immoral" — 1 posts, no follow-up this cycle
+- [NOTED] "Rep. Eric Swalwell Resigns from Congress Effective Immediately Amid S*xuaI Misconduct Allegations" — 1 posts, no follow-up this cycle
+- [NOTED] ": HAPPINESS AT MICROSCOPIC LEVEL!! A Myosin Protein dragging an Endorphin along a Filament to the Inner part of the Brain's Parietal Cortex which creates happiness." — 1 posts, no follow-up this cycle
+- [NOTED] "The summer will be awful… Just in time to celebrate the 250th year of recking us" — 1 posts, no follow-up this cycle
+- [NOTED] "There is a Super Cycle on the horizon America turns 250 years old this summer and I don’t think we see a sell in May and go away. Gut feeling is we go crazy this summer" — 1 posts, no follow-up this cycle
+- [NOTED] "Our mothers, sisters, and daughters across the country are appreciating the decision to ensure women's reservation from the Lok Sabha and Assembly elections of the year 2029. In this letter dedicated " — 1 posts, no follow-up this cycle
+- [NOTED] " The 2020 Beirut port explosion, one of the most powerful non-nuclear blasts in human history, released the equivalent of 1.1 kilotons of TNT and triggered a 3.3 magnitude earthquake. A city that surv" — 1 posts, no follow-up this cycle
+- [NOTED] "Considering Trump's initial statements in January were to help the people of Iran, the issue of human rights, massacres, arrests and executions should be an OBVIOUS part of these negotiations. Of cour" — 1 posts, no follow-up this cycle
+- [NOTED] "Relentless. That's the word @baileyy_david23 lives by. From playing every sport as a kid to Texas Tech to the NFL Draft — everything has been building toward this. Prospect Profile: David Bailey (Te" — 1 posts, no follow-up this cycle
+- [NOTED] "JUST IN: US PPI rises to 4%, lower than expectations." — 1 posts, no follow-up this cycle
+- [NOTED] "Dear algorithm, please show this post only to smart people with strong sense of aesthetics" — 1 posts, no follow-up this cycle
+- [NOTED] "BREAKING: OpenAI rolls out GPT-5.4-Cyber to limited group for testing, seeks to rival Claude Mythos." — 1 posts, no follow-up this cycle
+- [NOTED] "My respectful homage to all the immortal martyrs of the Jallianwala Bagh massacre. The saga of their indomitable courage and self-respect against the barbarity of foreign rule will continue to inspire" — 1 posts, no follow-up this cycle
+- [NOTED] "And I say all of this expecting these talks to collapse by the way." — 1 posts, no follow-up this cycle
+- [NOTED] "In our biblical times, this is a very short piece that caught my eye. What is your take on Islam and the Pope as it unfolds?" — 1 posts, no follow-up this cycle
+- [NOTED] "What am I? Hints: people complain about me everyday, I'm inconsistent and no one knows how to get on my good side." — 1 posts, no follow-up this cycle
+- [NOTED] "No one has answered it correctly yet." — 1 posts, no follow-up this cycle
