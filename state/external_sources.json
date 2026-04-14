@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-14T16:29:01.011Z",
+  "generated_at": "2026-04-14T17:28:55.866Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-14T16:29:32.135Z",
   "sources": [
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-14T13:08:54.060Z",
+      "last_seen_at": "2026-04-14T15:53:46.000Z",
       "discovery": {
-        "distinct_urls": 578,
+        "distinct_urls": 580,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -385,9 +385,9 @@
         ],
         "origin_counts": {
           "feed_buffer": 384,
-          "feed_buffer_reply": 218
+          "feed_buffer_reply": 220
         },
-        "distinct_referring_accounts": 275,
+        "distinct_referring_accounts": 277,
         "sample_referring_accounts": [
           "60minutes",
           "_margaritavill_",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:578",
+            "distinct_urls:580",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:275",
+            "referring_accounts:277",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:578",
+            "distinct_urls:580",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:275",
+            "referring_accounts:277",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -4271,6 +4271,130 @@
       }
     },
     {
+      "domain": "manduka.com",
+      "entity": "Manduka",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-03T04:15:49.237Z",
+      "last_seen_at": "2026-04-14T16:38:54.336Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://www.manduka.com/products/manduka-pro-yoga-mat?utm_source=twitter&utm_medium=cpc&utm_campaign=xconvert&utm_content=PRO+Mat+-+Rooibos+1x1&twclid=2c1i50hvb8z81u6asprj4f4oqt",
+          "https://www.manduka.com/products/manduka-pro-yoga-mat?utm_source=twitter&utm_medium=cpc&utm_campaign=xconvert&utm_content=PRO+Mat+-+Black+1x1+static&twclid=2e2x263nhjwqzinmq5yxsfroj8",
+          "https://www.manduka.com/products/manduka-pro-yoga-mat?utm_source=twitter&utm_medium=cpc&utm_campaign=xconvert&utm_content=PRO+Mat+-+Rooibos+3+Reasons+9x16&twclid=2124nbhjy6tjk6heu8c4lgq71a"
+        ],
+        "origin_counts": {
+          "feed_buffer": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "mandukayoga"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.36000000000000004,
+          "confidence": 0.1386,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-12T09:38:50.086Z",
+        "homepage_url": "https://manduka.com/",
+        "example_url": "https://www.manduka.com/products/manduka-pro-yoga-mat?utm_source=twitter&utm_medium=cpc&utm_campaign=xconvert&utm_content=PRO+Mat+-+Rooibos+1x1&twclid=2c1i50hvb8z81u6asprj4f4oqt",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.manduka.com/",
+        "example_final_url": "https://www.manduka.com/products/manduka-pro-yoga-mat?utm_source=twitter&utm_medium=cpc&utm_campaign=xconvert&utm_content=PRO+Mat+-+Rooibos+1x1&twclid=2c1i50hvb8z81u6asprj4f4oqt",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "anymark.co",
       "entity": "Anymark Co",
       "kind": "unknown",
@@ -5378,129 +5502,6 @@
       }
     },
     {
-      "domain": "manduka.com",
-      "entity": "Manduka",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-03T04:15:49.237Z",
-      "last_seen_at": "2026-04-14T09:24:08.317Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://www.manduka.com/products/manduka-pro-yoga-mat?utm_source=twitter&utm_medium=cpc&utm_campaign=xconvert&utm_content=PRO+Mat+-+Rooibos+1x1&twclid=2c1i50hvb8z81u6asprj4f4oqt",
-          "https://www.manduka.com/products/manduka-pro-yoga-mat?utm_source=twitter&utm_medium=cpc&utm_campaign=xconvert&utm_content=PRO+Mat+-+Black+1x1+static&twclid=2e2x263nhjwqzinmq5yxsfroj8"
-        ],
-        "origin_counts": {
-          "feed_buffer": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "mandukayoga"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.1,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3536197916666667,
-          "confidence": 0.10997499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-12T09:38:50.086Z",
-        "homepage_url": "https://manduka.com/",
-        "example_url": "https://www.manduka.com/products/manduka-pro-yoga-mat?utm_source=twitter&utm_medium=cpc&utm_campaign=xconvert&utm_content=PRO+Mat+-+Rooibos+1x1&twclid=2c1i50hvb8z81u6asprj4f4oqt",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.manduka.com/",
-        "example_final_url": "https://www.manduka.com/products/manduka-pro-yoga-mat?utm_source=twitter&utm_medium=cpc&utm_campaign=xconvert&utm_content=PRO+Mat+-+Rooibos+1x1&twclid=2c1i50hvb8z81u6asprj4f4oqt",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "jamf.com",
       "entity": "Jamf",
       "kind": "unknown",
@@ -6603,6 +6604,129 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 6,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "spotandtango.com",
+      "entity": "Spotandtango",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-08T23:49:56.355Z",
+      "last_seen_at": "2026-04-14T17:08:54.415Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://www.spotandtango.com/unkibble?discount=XUNKIBBLE&utm_medium=cpc&utm_campaign=X_Convert_2026&utm_source=twitter&twclid=2adust2nkwc5tq5qj4fqfz0vb8",
+          "https://www.spotandtango.com/unkibble?discount=XUNKIBBLE&utm_medium=cpc&utm_campaign=X_Convert_2026&utm_source=twitter&twclid=27kz3x4r2tf564ckyjotr9dn40"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "spotandtango"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.15000000000000002,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:5",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-12T00:13:41.857Z",
+        "homepage_url": "https://spotandtango.com/",
+        "example_url": "https://www.spotandtango.com/unkibble?discount=XUNKIBBLE&utm_medium=cpc&utm_campaign=X_Convert_2026&utm_source=twitter&twclid=2adust2nkwc5tq5qj4fqfz0vb8",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.spotandtango.com/",
+        "example_final_url": "https://www.spotandtango.com/unkibble?discount=XUNKIBBLE&utm_medium=cpc&utm_campaign=X_Convert_2026&utm_source=twitter&twclid=2adust2nkwc5tq5qj4fqfz0vb8",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
           "opinion_marker": false
         }
       }
@@ -10149,128 +10273,6 @@
       }
     },
     {
-      "domain": "spotandtango.com",
-      "entity": "Spotandtango",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-08T23:49:56.355Z",
-      "last_seen_at": "2026-04-08T23:49:56.355Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://www.spotandtango.com/unkibble?discount=XUNKIBBLE&utm_medium=cpc&utm_campaign=X_Convert_2026&utm_source=twitter&twclid=2adust2nkwc5tq5qj4fqfz0vb8"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "spotandtango"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.15000000000000002,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:5",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-12T00:13:41.857Z",
-        "homepage_url": "https://spotandtango.com/",
-        "example_url": "https://www.spotandtango.com/unkibble?discount=XUNKIBBLE&utm_medium=cpc&utm_campaign=X_Convert_2026&utm_source=twitter&twclid=2adust2nkwc5tq5qj4fqfz0vb8",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.spotandtango.com/",
-        "example_final_url": "https://www.spotandtango.com/unkibble?discount=XUNKIBBLE&utm_medium=cpc&utm_campaign=X_Convert_2026&utm_source=twitter&twclid=2adust2nkwc5tq5qj4fqfz0vb8",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 4,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 5,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "oracle.com",
       "entity": "Oracle",
       "kind": "unknown",
@@ -13015,20 +13017,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0,
           "confidence": 0.55,
@@ -13041,6 +13029,20 @@
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
