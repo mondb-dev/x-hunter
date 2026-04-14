@@ -1,22 +1,33 @@
-## Deep Dive: @swilkinsonbc
-@swilkinsonbc is Sarah Wilkinson, a self-described former graphic designer now "Working for Freedom and Justice in Palestine." Her bio states her desire for "An End to the israeli Genocide of Gaza." She has a significant following (372.1K).
+## Deep Dive: @googlecloud
+@googlecloud is the official X account for Google Cloud. Their bio focuses on providing cloud services, support, and promoting their events.
 
-Her pinned tweet, from March 28, features her speaking outside the Old Bailey in London about the "state silencing of pro-Palestinian voices."
+Their pinned tweet (Apr 9) promotes "Google Cloud Next LIVE, April 22-24," which is an upcoming event.
 
-Recent tweets (last 4 hours) highlight:
-- Israeli bombing of Al-Shati Camp, west of Gaza City, with casualties taken to Al-Shifa Hospital.
-- A court prohibition on British media revealing "truths behind the shockingly-corrupt trial of the #Filton6," with a link to The Grayzone.
-- The deployment of "Over 10,000 American marines, sailors & airmen in dozens of warships and aircraft" aiming to block ships entering & leaving Iranian ports.
+**Recurring themes:**
+*   Promotion of Google Cloud products and services.
+*   Upcoming events and conferences (e.g., #GoogleCloudNext).
+*   Focus on cloud technology and its applications.
 
-Her recurring themes are strong pro-Palestinian advocacy, criticism of Israeli actions, and concerns about media censorship and state suppression of pro-Palestinian narratives. She consistently frames events within a context of injustice and power imbalances, often implying a deliberate suppression of truth. Her views strongly align with the "Geopolitical Rhetoric vs. Humanitarian Concerns" axis (left pole) and the "Truth and Evidence in Public Discourse" axis (left pole, by advocating for suppressed truths), and the "Power, Institutions, and Rule of Law" axis (left pole, by criticizing state actions and highlighting corruption).
-[CURIOSITY: contradiction_axis_national_sovereignty_] Web search on "National Sovereignty vs International Law primary source" revealed that the Peace of Westphalia (1648) established state sovereignty, while the UN Charter (1945) and International Covenants on Human Rights (1966) introduced obligations that limit absolute sovereignty, particularly regarding human rights.
-[CURIOSITY: contradiction_axis_national_sovereignty_] The X post by @SaulsPlaceTV (Apr 8) highlights the tension between national policies framed as independent choices and international discussions predetermining outcomes, questioning the true extent of sovereignty.
-[CURIOSITY: contradiction_axis_national_sovereignty_] @grok's tweet (Apr 1) defines globalist (participation in international institutions, shared governance) vs. non-globalist (prioritizes absolute sovereignty) perspectives, directly aligning with the poles of both axes in the curiosity directive.
-[CURIOSITY: contradiction_axis_national_sovereignty_] @oneleftshoe's post (Apr 1) advocating for Australia's strategic neutrality and avoidance of international coalitions exemplifies prioritizing national autonomy, aligning with the right pole of "National Sovereignty vs. International Law".
-[CURIOSITY: contradiction_axis_national_sovereignty_] @mamboitaliano__'s historical example (Mar 31) of Craxi defending Italian sovereignty against US demands regarding the Achille Lauro incident further illustrates the assertion of national law over international demands.
+**Connections to Belief Axes:**
+*   **[axis_ai_societal_impact_v1] Societal Impact and Ethical Concerns of AI/Robots:** While not explicitly stating a position on AI's societal impact, Google Cloud provides the foundational infrastructure for AI development. This implicitly leans towards the "optimism for AI/robotics potential" pole by enabling these technologies.
+*   **[axis_digital_supply_chain_security] Digital Supply Chain Security and Vulnerabilities:** As a major cloud provider, Google Cloud's services are integral to the digital supply chain. The nature of their business implies a focus on robust and secure infrastructure, which aligns with "robust security practices."
+
+**Tensions or Contradictions:**
+*   No direct tensions or contradictions were evident from the limited content available on their profile. The account primarily serves as a promotional and informational channel for Google Cloud's offerings.
+
 [NOTED] "know" — 6 posts, no follow-up this cycle
 [NOTED] "people" — 5 posts, no follow-up this cycle
 [NOTED] "say" — 5 posts, no follow-up this cycle
 [NOTED] "iran" — 5 posts, no follow-up this cycle
 [NOTED] "forget" — 4 posts, no follow-up this cycle
-[INTEL: Strait of Hormuz] Web search for "Chinese tanker blocked by US Navy Strait of Hormuz 2026" revealed that a US-sanctioned Chinese tanker, Rich Starry, successfully transited the Strait of Hormuz despite a US naval blockade on Iranian ports, which began on April 13, 2026. This incident was seen as a test of the blockade and was used by Iran to criticize the US, with Beijing rejecting the blockade's legality. The Strait has been largely blocked by Iran since February 28, 2026, following an air war launched by the US and Israel against Iran.
+[NOTED] "video" — 5 posts, no follow-up this cycle
+[NOTED] "trump" — 5 posts, no follow-up this cycle
+[NOTED] "way" — 4 posts, no follow-up this cycle
+[NOTED] "thought" — 3 posts, no follow-up this cycle
+[NOTED] "years" — 3 posts, no follow-up this cycle
+[NOTED] "said" — 3 posts, no follow-up this cycle
+[NOTED] "lies" — 3 posts, no follow-up this cycle
+[NOTED] "see" — 3 posts, no follow-up this cycle
+[NOTED] "navy" — 2 posts, no follow-up this cycle
+[NOTED] "forgive" — 2 posts, no follow-up this cycle
+[CURIOSITY: contradiction_axis_national_sovereignty_] Web search for "Chinese tanker blocked US Navy Strait of Hormuz 2026" revealed that a US-sanctioned Chinese tanker, Rich Starry, successfully transited the Strait of Hormuz on April 14, 2026, despite a US naval blockade on Iranian ports, which began on April 13, 2026. This incident was seen as a test of the blockade and was used by Iran to criticize the US, with Beijing rejecting the blockade's legality. The Strait has been largely blocked by Iran since February 28, 2026, following an air war launched by the US and Israel against Iran. This reinforces the 'contested' status, as some vessels are passing while others are blocked.
