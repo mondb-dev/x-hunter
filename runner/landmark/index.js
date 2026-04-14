@@ -39,9 +39,8 @@ const { detect } = require("./detect");
 const { generateEditorial, buildArweaveHtml } = require("./editorial");
 const { evaluateLandmark, validateEditorialForMint } = require("./tiering");
 const { generateHeroArt } = require("./art");
-// Card rendering + minting preserved but not invoked (NFT pipeline disabled)
-// const { renderAndSave } = require("./render");
-// const { mintLandmark } = require("./mint");
+const { renderAndSave } = require("./render");
+// const { mintLandmark } = require("./mint");  — NFT minting not yet enabled
 const { postArticle } = require("../post_article");
 const { logArticle } = require("../posts_log");
 const { connectBrowser, getXPage } = require("../cdp");
@@ -205,6 +204,23 @@ async function main() {
     artPath = null;
   }
 
+  // ── 4b. Card Rendering ──────────────────────────────────────────────────
+
+  console.log("\n── STEP 4b: Card Rendering ──");
+  let cardPaths = null;
+  try {
+    cardPaths = await renderAndSave(event, content, artBuf, {
+      landmarkNumber: landmarkNumber,
+      editionSupply:  supply,
+      outputDir:      manifestDir,
+      png:            true,
+    });
+    console.log(`[landmark] Card SVG: ${cardPaths.svgPath}`);
+    if (cardPaths.pngPath) console.log(`[landmark] Card PNG: ${cardPaths.pngPath}`);
+  } catch (err) {
+    console.warn(`[landmark] Card render failed: ${err.message} — continuing without card`);
+  }
+
   // ── 5. Publish as X Article ─────────────────────────────────────────────
 
   console.log("\n── STEP 5: X Article Publication ──");
@@ -259,6 +275,8 @@ async function main() {
     lead:            content.lead,
     top_keywords:    event.topKeywords || [],
     art_prompt:      artPrompt,
+    card_svg:        cardPaths?.svgPath || null,
+    card_png:        cardPaths?.pngPath || null,
     x_article_url:   articleUrl,
   };
 

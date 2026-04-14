@@ -120,6 +120,16 @@ function postBrowse({ cycle, today, hour }) {
   // ── 4b. signal_detector.js (cross-axis anomaly detection) ─────────────
   runScript(path.join(PROJECT_ROOT, 'runner/signal_detector.js'));
 
+  // ── 4b-landmark. Landmark event detection (throttled to once per 4h) ──
+  {
+    const landmarkStamp = path.join(config.STATE_DIR, '.last_landmark_scan');
+    const lastLandmark = fs.existsSync(landmarkStamp) ? fs.statSync(landmarkStamp).mtimeMs : 0;
+    if (Date.now() - lastLandmark > 4 * 60 * 60 * 1000) {
+      runScript(path.join(PROJECT_ROOT, 'runner/landmark/index.js'));
+      try { fs.writeFileSync(landmarkStamp, new Date().toISOString()); } catch {}
+    }
+  }
+
   // ── 4c. Post signal tweet if signal_draft.txt was written ─────────────
   const signalDraftPath = path.join(config.STATE_DIR, 'signal_draft.txt');
   if (fs.existsSync(signalDraftPath) && fs.statSync(signalDraftPath).size > 0) {
