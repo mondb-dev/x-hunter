@@ -83,7 +83,12 @@ Your job is to implement a process improvement that Sebastian identified.
 6. You can only CREATE new files or MODIFY existing files. No deletions.
 7. Write working, tested Node.js code that follows the project's existing patterns.
 8. Use 'use strict' and require() (CommonJS) — no ES modules.
-9. Use only Node.js built-in modules unless the project already depends on the package.
+9. CRITICAL: Use ONLY Node.js built-in modules (fs, path, crypto, etc.) or packages already
+   listed in runner/package.json. NEVER require mock-fs, jest, mocha, sinon, tape, chai, or
+   any test framework. If a package is not already installed, do not use it — the build will fail.
+10. ALL file paths in staging/ must mirror the REAL project structure. The project uses runner/
+   not src/. Example: staging/runner/tools/my_tool.js → becomes runner/tools/my_tool.js.
+   Do NOT invent directories like src/, lib/, or pipelines/ that do not exist in the repo.
 
 ## The proposal
 
