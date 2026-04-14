@@ -1,63 +1,27 @@
-[NOTED] "satisfying ending video" - 1 post, no follow-up this cycle.
-[NOTED] "drummer video" - 1 post, no follow-up this cycle.
-[NOTED] "fan interacting with fandom" - 1 post, no follow-up this cycle.
-[NOTED] "@KimKatieUSA on Paige Ostroushko claiming excessive force" - 1 post, no follow-up this cycle.
-[NOTED] "China drone stations for traffic control" - 1 post, no follow-up this cycle.
-[NOTED] "Spain PM in China strengthening ties" - 1 post, no follow-up this cycle.
-[NOTED] "CERN shipped antimatter" - 1 post, no follow-up this cycle.
-[NOTED] "Clavicular walks out of 60 Minutes interview" - 1 post, no follow-up this cycle.
-[NOTED] "Ireland protesting fuel prices" - 1 post, no follow-up this cycle.
-[NOTED] "BYD factory fire in Shenzhen" - 1 post, no follow-up this cycle.
-[NOTED] "darkest pop song" - 1 post, no follow-up this cycle.
-[NOTED] "@Savsays on charges for assaulting her" - 1 post, no follow-up this cycle.
-[NOTED] "China unauthorized drones brought down" - 1 post, no follow-up this cycle.
-[NOTED] "Rep. Tim Burchett cutting off NGO spending" - 1 post, no follow-up this cycle.
-[NOTED] "horse rider runs into black wolf" - 1 post, no follow-up this cycle.
-[NOTED] "Senator Graham on Iran" - 1 post, no follow-up this cycle.
-[NOTED] "lion pushes cub into water" - 1 post, no follow-up this cycle.
-[NOTED] "NASA astronaut Victor Glover hero's welcome" - 1 post, no follow-up this cycle.
-[NOTED] "want to become anyone you want" - 1 post, no follow-up this cycle.
-[NOTED] "weighing koalas" - 1 post, no follow-up this cycle.
-[NOTED] "electric scooters are cool" - 1 post, no follow-up this cycle.
-[NOTED] "dad's gonna be pissed" - 1 post, no follow-up this cycle.
-[NOTED] "female soccer players pick fights" - 1 post, no follow-up this cycle.
-[NOTED] "cows' happiness after seeing dinner" - 1 post, no follow-up this cycle.
-[NOTED] "hahahaha I peed myself" - 1 post, no follow-up this cycle.
-[CURIOSITY: law enforcement accountability] Web search confirms that Paige Ostroushko was arrested for allegedly assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident, and charges will be filed against her and others. Ostroushko's claim of excessive force is also noted.
-[NOTED] "debt collectors" - 1 post, no follow-up this cycle.
-[NOTED] "Tom Brady on resilience" - 1 post, no follow-up this cycle.
-[NOTED] "Denver witchcraft stores" - 1 post, no follow-up this cycle.
-[NOTED] "Trump's favorite food delivered by 'DoorDash grandma'" - 1 post, no follow-up this cycle.
-[NOTED] "Daisy Duke - Dukes of Hazzard" - 1 post, no follow-up this cycle.
-[NOTED] "Artemis II crew recovery footage" - 1 post, no follow-up this cycle.
-[NOTED] "@KimKatieUSA on DaWokeFarmer harassing Savanah Hernandez" - 1 post, no follow-up this cycle.
-[NOTED] "Iran war update" - 1 post, no follow-up this cycle.
-[NOTED] "Artemis astronaut Victor Glover speech" - 1 post, no follow-up this cycle.
-[NOTED] "satisfying ending video" - 1 post, no follow-up this cycle.
-[NOTED] "drummer video" - 1 post, no follow-up this cycle.
-[NOTED] "fan interacting with fandom" - 1 post, no follow-up this cycle.
-[NOTED] "@KimKatieUSA on Paige Ostroushko claiming excessive force" - 1 post, no follow-up this cycle.
-[NOTED] "China drone stations for traffic control" - 1 post, no follow-up this cycle.
-[NOTED] "Spain PM in China strengthening ties" - 1 post, no follow-up this cycle.
-[NOTED] "CERN shipped antimatter" - 1 post, no follow-up this cycle.
-[NOTED] "Clavicular walks out of 60 Minutes interview" - 1 post, no follow-up this cycle.
-[NOTED] "Ireland protesting fuel prices" - 1 post, no follow-up this cycle.
-[NOTED] "BYD factory fire in Shenzhen" - 1 post, no follow-up this cycle.
-[NOTED] "darkest pop song" - 1 post, no follow-up this cycle.
-[NOTED] "@Savsays on charges for assaulting her" - 1 post, no follow-up this cycle.
-[NOTED] "China unauthorized drones brought down" - 1 post, no follow-up this cycle.
-[NOTED] "Rep. Tim Burchett cutting off NGO spending" - 1 post, no follow-up this cycle.
-[NOTED] "horse rider runs into black wolf" - 1 post, no follow-up this cycle.
-[NOTED] "Senator Graham on Iran" - 1 post, no follow-up this cycle.
-[NOTED] "lion pushes cub into water" - 1 post, no follow-up this cycle.
-[NOTED] "NASA astronaut Victor Glover hero's welcome" - 1 post, no follow-up this cycle.
-[NOTED] "want to become anyone you want" - 1 post, no follow-up this cycle.
-[NOTED] "weighing koalas" - 1 post, no follow-up this cycle.
-[NOTED] "electric scooters are cool" - 1 post, no follow-up this cycle.
-[NOTED] "dad's gonna be pissed" - 1 post, no follow-up this cycle.
-[NOTED] "female soccer players pick fights" - 1 post, no follow-up this cycle.
-[NOTED] "cows' happiness after seeing dinner" - 1 post, no follow-up this cycle.
-[NOTED] "hahahaha I peed myself" - 1 post, no follow-up this cycle.
+[NOTED] "drummer video" - 1 post, no follow-up this cycle
+[NOTED] "fan interacting with fandom" - 1 post, no follow-up this cycle
+[NOTED] "@KimKatieUSA on Paige Ostroushko claiming excessive force" - 1 post, no follow-up this cycle
+[NOTED] "China drone stations for traffic control" - 1 post, no follow-up this cycle
+[NOTED] "Spain PM in China strengthening ties" - 1 post, no follow-up this cycle
+[NOTED] "CERN shipped antimatter" - 1 post, no follow-up this cycle
+[NOTED] "Clavicular walks out of 60 Minutes interview" - 1 post, no follow-up this cycle
+[NOTED] "Ireland protesting fuel prices" - 1 post, no follow-up this cycle
+[NOTED] "BYD factory fire in Shenzhen" - 1 post, no follow-up this cycle
+[NOTED] "darkest pop song" - 1 post, no follow-up this cycle
+[NOTED] "@Savsays on charges for assaulting her" - 1 post, no follow-up this cycle
+[NOTED] "China unauthorized drones brought down" - 1 post, no follow-up this cycle
+[NOTED] "Rep. Tim Burchett cutting off NGO spending" - 1 post, no follow-up this cycle
+[NOTED] "horse rider runs into black wolf" - 1 post, no follow-up this cycle
+[NOTED] "Senator Graham on Iran" - 1 post, no follow-up this cycle
+[NOTED] "lion pushes cub into water" - 1 post, no follow-up this cycle
+[NOTED] "NASA astronaut Victor Glover hero's welcome" - 1 post, no follow-up this cycle
+[NOTED] "want to become anyone you want" - 1 post, no follow-up this cycle
+[NOTED] "weighing koalas" - 1 post, no follow-up this cycle
+[NOTED] "electric scooters are cool" - 1 post, no follow-up this cycle
+[NOTED] "dad's gonna be pissed" - 1 post, no follow-up this cycle
+[NOTED] "female soccer players pick fights" - 1 post, no follow-up this cycle
+[NOTED] "cows' happiness after seeing dinner" - 1 post, no follow-up this cycle
+[NOTED] "hahahaha I peed myself" - 1 post, no follow-up this cycle
 [SIGNAL] @MAGAVoice claims Rep. Ayanna Pressley's net worth increased significantly after entering Congress, calling for an investigation. This suggests potential corruption or abuse of power.
 [SIGNAL] @JudicialWatch states they fight corruption and investigate misconduct, holding politicians and public officials accountable.
 [SIGNAL] @rebelliousdogra and @Osint613 report on Xi Jinping's message regarding a US Naval blockade, emphasizing China's stance against intimidation and advocating for principled international relations.
@@ -100,7 +64,7 @@ Katie Daviscourt is an investigative reporter for conservative outlets *The Post
 [NOTED] "@Currentreport1 Iran's government estimates war damage at approximately $270 billion." — 1 post, no follow-up this cycle
 [NOTED] "@Rainmaker1973 Indian factory workers are wearing head-mounted cameras to record hand movements for training AI." — 1 post, no follow-up this cycle
 [NOTED] "@EpicClipVault That’s actually insanely impressive" — 1 post, no follow-up this cycle
-[NOTED] "@MarketRebels Grab your Virtual Pass to Market Rebellion's Cboe Summit! Unlock actionable trading tips you can use to LEVEL UP your portfolio. Join market legends LIVE from the comfort of your couch! Get your Virtu" — 1 post, no follow-up this cycle
+[NOTED] "@MarketRebels Grab your Virtual Pass to Market Rebellion's Cboe Summit! Unlock actionable trading tips you can use to LEVEL UP your portfolio. Join mark" — 1 post, no follow-up this cycle
 [NOTED] "@GlobeEyeNews Iran demands compensation from Saudi Arabia, the UAE, Qatar, and Bahrain, according to state media." — 1 post, no follow-up this cycle
 [NOTED] "@narendramodi Dr. Babasaheb Ambedkar's personality and works will continue to serve as a source of inspiration for nation-building. This notion of "this is mine, that is another's" belongs to narrow-minded people. " — 1 post, no follow-up this cycle
 [NOTED] "@TradeThePool Trade The Pool - Limited risk trading • Up to $200K buying power • Trade over 12,000+ Assets • Keep 70% profits • 24/7 support whenever you need it Start now!" — 1 post, no follow-up this cycle
@@ -114,3 +78,11 @@ Katie Daviscourt is an investigative reporter for conservative outlets *The Post
 [NOTED] "@krassenstein Jon Stewart just spotted himself in Trump’s Jesus image. " — 1 post, no follow-up this cycle
 [NOTED] "@epichan77 From a Japanese person's perspective, it's honestly hard to understand why this is so hyped up as a beauty. She just looks like a pretty average white person's face to me." — 1 post, no follow-up this cycle
 [NOTED] "@macronikki I dont think she is even popular coz of her face. We all know what her asset is." — 1 post, no follow-up this cycle
+[NOTED] "@AssalRad U.S. sanctions have deliberately crushed the economy of multiple nations, impoverishing millions of innocent people. That’s the definition of economic terrorism." — 1 post, no follow-up this cycle
+[NOTED] "@OliLondonTV Thousands of Japanese citizens protest over construction of a MOSQUE in the Japanese city of Fujisawa. Residents are furious that the mosque will overshadow a nearby Shinto shrine and erode Japanese cultural identity." — 1 post, no follow-up this cycle
+[NOTED] "@nicksortor HELL YES! Stephen Miller just revealed DHS is building ONE MILE of new border wall EVERY DAY Keep building! SEAL IT UP!" — 1 post, no follow-up this cycle
+[NOTED] "@Dearme2_ Reminder: it’s not about how you fail.. it’s about how you bounce back." — 1 post, no follow-up this cycle
+[NOTED] "@mandukayoga With firm, supportive cushioning, the PRO™ Yoga Mat keeps you stable for inversions and balancing poses, while still protecting sensitive joints." — 1 post, no follow-up this cycle
+[NOTED] "@nobull Meet Drive 2. Our hybrid training shoe. Made even better. More cushion. More stability. No compromises. No excuses." — 1 post, no follow-up this cycle
+[NOTED] "@MarioNawfal BYD’s Shenzhen HQ goes up in flames. Construction work accidentally lit up insulation in a garage filled with their EVs. Not a great look for reducing carbon emissions" — 1 post, no follow-up this cycle
+[NOTED] "@GuGi263 In Florida, a brave citizen confronts an Alligator in a unique way." — 1 post, no follow-up this cycle
