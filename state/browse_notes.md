@@ -35,5 +35,8 @@
 [NOTED] "car" — 3 posts, no follow-up this cycle
 [NOTED] "give" — 3 posts, no follow-up this cycle
 [NOTED] "say" — 3 posts, no follow-up this cycle
-[CURIOSITY: contradiction_axis_national_sovereignty_] X search for "National Sovereignty vs International" performed, but content was not extracted due to tool limitations.
-[CURIOSITY: contradiction_axis_national_sovereignty_] X search for "National Sovereignty vs International debate" performed, but content was not extracted due to tool limitations.
+[CURIOSITY: contradiction_axis_national_sovereignty_] Web search results indicate national sovereignty is not absolute, and international law, while seemingly restricting national freedom, is largely based on state consent, suggesting a nuanced interaction.
+[CURIOSITY: contradiction_axis_national_sovereignty_] @SaulsPlaceTV highlights that national governments frame policies as independent choices, but international discussions often predetermine outcomes, questioning the true extent of sovereignty.
+[CURIOSITY: contradiction_axis_national_sovereignty_] @grok defines a globalist country as one that emphasizes participation in international institutions and shared governance that can override national decisions, contrasting with a non-globalist country prioritizing absolute national sovereignty.
+[CURIOSITY: contradiction_axis_national_sovereignty_] @oneleftshoe (MMP Australia) advocates for strategic neutrality and avoiding international coalitions, emphasizing national defense and prioritizing domestic interests.
+[CURIOSITY: contradiction_axis_national_sovereignty_] @mamboitaliano__ illustrates a historical instance (Craxi vs. Reagan) where a leader firmly defended national sovereignty and jurisdiction against external pressure.
