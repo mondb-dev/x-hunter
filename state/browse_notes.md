@@ -1,77 +1,22 @@
-- [CURIOSITY: contradiction_axis_national_sovereignty_] Web search indicates that national sovereignty, while historically emphasizing absolute power, has evolved to be increasingly subject to international law and norms, particularly concerning human rights, with treaties and customary international law limiting national autonomy.
-- [CURIOSITY: contradiction_axis_national_sovereignty_] Web search highlights the tension between national sovereignty (self-determination, protection against external imposition) and global governance (addressing global challenges, economic stability, peace, and security), with challenges including erosion of sovereignty, power imbalances, and legitimacy concerns.
-- [CURIOSITY: contradiction_axis_national_sovereignty_] X discourse shows how national governments' policies can be influenced or predetermined by international discussions, questioning the true extent of sovereignty. (@SaulsPlaceTV)
-- [CURIOSITY: contradiction_axis_national_sovereignty_] X discourse defines a globalist country by its participation in international institutions and shared governance that can override national decisions, contrasting it with a non-globalist country prioritizing absolute sovereignty. (@grok)
-- [CURIOSITY: contradiction_axis_national_sovereignty_] X discourse illustrates the defense of national sovereignty and jurisdiction against external demands, even in matters of international crime. (@mamboitaliano__)
-- [NOTED] "finished paying off · student loan · guess" — 2 posts, no follow-up this cycle
-- [NOTED] "people" — 4 posts, no follow-up this cycle
-- [NOTED] "way" — 4 posts, no follow-up this cycle
-- [NOTED] "know" — 5 posts, no follow-up this cycle
-- [NOTED] "publishing" — 3 posts, no follow-up this cycle
-- [NOTED] "video" — 3 posts, no follow-up this cycle
-- [NOTED] "think" — 3 posts, no follow-up this cycle
-- [NOTED] "waiting" — 3 posts, no follow-up this cycle
-- [NOTED] "see" — 3 posts, no follow-up this cycle
-- [NOTED] "lmfao" — 3 posts, no follow-up this cycle
-- [NOTED] "love" — 3 posts, no follow-up this cycle
-- [NOTED] "want" — 2 posts, no follow-up this cycle
-- [NOTED] "inauguration" — 2 posts, no follow-up this cycle
-- [NOTED] "strait hormuz" — 2 posts, no follow-up this cycle
-- [NOTED] "guy" — 2 posts, no follow-up this cycle
-- [NOTED] "happiness" — 2 posts, no follow-up this cycle
-- [NOTED] "My feed today: Black kid beating up a white kid Black kid beating up a black kid Trump Trump Trump Hundreds of black kids fighting More groups of black kids fighting Black adults fighting Black women" — 1 posts, no follow-up this cycle
-- [NOTED] "Your ovaries do far more than you realize." — 1 posts, no follow-up this cycle
-- [NOTED] "People walk their robotic dogs in Dubai My God, you Dubai .. always amazing" — 1 posts, no follow-up this cycle
-- [NOTED] "My dad proposed to my mom the second time they met." — 1 posts, no follow-up this cycle
-- [NOTED] "David delivers the most protein for the fewest calories." — 1 posts, no follow-up this cycle
-- [NOTED] "Not loud. Just iconic." — 1 posts, no follow-up this cycle
-- [NOTED] "Astronaut drinking water in space" — 1 posts, no follow-up this cycle
-- [NOTED] "This is such an incredible tune. Sensational." — 1 posts, no follow-up this cycle
-- [NOTED] "How Trump actually sees himself." — 1 posts, no follow-up this cycle
-- [NOTED] "Congratulations, and from here to the top" — 1 posts, no follow-up this cycle
-- [NOTED] "All thanks and appreciation" — 1 posts, no follow-up this cycle
-- [NOTED] "New photos from the Moon! We're continuing to unveil new images from the Artemis II mission" — 1 posts, no follow-up this cycle
-- [NOTED] "U.S. ethanol exports to Europe nearly doubled last year." — 1 posts, no follow-up this cycle
-- [NOTED] "Friends, stop drinking alcohol. Not cut back. Eliminate." — 1 posts, no follow-up this cycle
-- [NOTED] "Don’t let anyone take away your happiness! When in doubt be happy!" — 1 posts, no follow-up this cycle
-- [NOTED] "Wow I wonder what happened after this" — 1 posts, no follow-up this cycle
-- [NOTED] "This is really the most unique place on earth" — 1 posts, no follow-up this cycle
-- [NOTED] "And everything under the Sun is in tune" — 1 posts, no follow-up this cycle
-- [NOTED] "JUST IN: Chinese tanker attempting to cross the Strait of Hormuz blocked by the US Navy." — 1 posts, no follow-up this cycle
-- [NOTED] "JUST IN: Rep. Anna Paulina Luna says the individual who filmed the viral video of Eric Swalwell on a bed may have been a minor." — 1 posts, no follow-up this cycle
-- [NOTED] "Does Trump have Cancer? Dr. Oz: "Your dad argues that diet soda is good for him because it kills grass" — 1 posts, no follow-up this cycle
-- [NOTED] "Eric Swalwell is in deep Watch this. He's going to prison." — 1 posts, no follow-up this cycle
-- [NOTED] "This gentleman also want some treats" — 1 posts, no follow-up this cycle
-- [NOTED] "Emilia Clarke watching Kit Harington’s reaction to finding out how their characters final scene together" — 1 posts, no follow-up this cycle
-- [NOTED] "When you hate your job but you have a lot of bills to pay" — 1 posts, no follow-up this cycle
-- [NOTED] "On this special New Year's Day, I met and conveyed my greetings to the Vice President of India, Thiru C P Radhakrishnan." — 1 posts, no follow-up this cycle
-- [NOTED] "Tax Day 2026 brings larger U.S. tax refunds" — 1 posts, no follow-up this cycle
-- [NOTED] "Rated lowest margin rates by StockBrokers. com. Borrow against your securities at low cost." — 1 posts, no follow-up this cycle
-- [NOTED] "Yes, it's really like this. No joke. While others are forced to pick sides, Indonesia is picking both." — 1 posts, no follow-up this cycle
-- [NOTED] "Here it is, is it really like this, huh?" — 1 posts, no follow-up this cycle
-- [NOTED] "Guess who just finished paying off her student loan all by herself like the adult she pretends to be...." — 1 posts, no follow-up this cycle
-- [NOTED] "“Like the adult she pretends to be.”" — 1 posts, no follow-up this cycle
-- [NOTED] "Pakistan DEMANDS Israel "withdraw from all occupied territories."" — 1 posts, no follow-up this cycle
-- [NOTED] "#BREAKING: Twitter/X is currently facing an outage, causing widespread outages and service disruptions" — 1 posts, no follow-up this cycle
-- [NOTED] "Chinese carmaker BYD unveils a recharge as fast as filling up with gas." — 1 posts, no follow-up this cycle
-- [NOTED] "New Earth Saga of the New Gods is now Fully Released on Steam." — 1 posts, no follow-up this cycle
-- [NOTED] ""Jesus is Woke" This guy is NOT a reverend." — 1 posts, no follow-up this cycle
-- [NOTED] "VCX is the public ticker for private tech" — 1 posts, no follow-up this cycle
-- [NOTED] "NVIDIA launches "Ising," the world's first open-source AI models built to accelerate useful quantum computers." — 1 posts, no follow-up this cycle
-- [NOTED] "This seems incredibly immoral" — 1 posts, no follow-up this cycle
-- [NOTED] "Rep. Eric Swalwell Resigns from Congress Effective Immediately Amid S*xuaI Misconduct Allegations" — 1 posts, no follow-up this cycle
-- [NOTED] ": HAPPINESS AT MICROSCOPIC LEVEL!! A Myosin Protein dragging an Endorphin along a Filament to the Inner part of the Brain's Parietal Cortex which creates happiness." — 1 posts, no follow-up this cycle
-- [NOTED] "The summer will be awful… Just in time to celebrate the 250th year of recking us" — 1 posts, no follow-up this cycle
-- [NOTED] "There is a Super Cycle on the horizon America turns 250 years old this summer and I don’t think we see a sell in May and go away. Gut feeling is we go crazy this summer" — 1 posts, no follow-up this cycle
-- [NOTED] "Our mothers, sisters, and daughters across the country are appreciating the decision to ensure women's reservation from the Lok Sabha and Assembly elections of the year 2029. In this letter dedicated " — 1 posts, no follow-up this cycle
-- [NOTED] " The 2020 Beirut port explosion, one of the most powerful non-nuclear blasts in human history, released the equivalent of 1.1 kilotons of TNT and triggered a 3.3 magnitude earthquake. A city that surv" — 1 posts, no follow-up this cycle
-- [NOTED] "Considering Trump's initial statements in January were to help the people of Iran, the issue of human rights, massacres, arrests and executions should be an OBVIOUS part of these negotiations. Of cour" — 1 posts, no follow-up this cycle
-- [NOTED] "Relentless. That's the word @baileyy_david23 lives by. From playing every sport as a kid to Texas Tech to the NFL Draft — everything has been building toward this. Prospect Profile: David Bailey (Te" — 1 posts, no follow-up this cycle
-- [NOTED] "JUST IN: US PPI rises to 4%, lower than expectations." — 1 posts, no follow-up this cycle
-- [NOTED] "Dear algorithm, please show this post only to smart people with strong sense of aesthetics" — 1 posts, no follow-up this cycle
-- [NOTED] "BREAKING: OpenAI rolls out GPT-5.4-Cyber to limited group for testing, seeks to rival Claude Mythos." — 1 posts, no follow-up this cycle
-- [NOTED] "My respectful homage to all the immortal martyrs of the Jallianwala Bagh massacre. The saga of their indomitable courage and self-respect against the barbarity of foreign rule will continue to inspire" — 1 posts, no follow-up this cycle
-- [NOTED] "And I say all of this expecting these talks to collapse by the way." — 1 posts, no follow-up this cycle
-- [NOTED] "In our biblical times, this is a very short piece that caught my eye. What is your take on Islam and the Pope as it unfolds?" — 1 posts, no follow-up this cycle
-- [NOTED] "What am I? Hints: people complain about me everyday, I'm inconsistent and no one knows how to get on my good side." — 1 posts, no follow-up this cycle
-- [NOTED] "No one has answered it correctly yet." — 1 posts, no follow-up this cycle
+## Deep Dive: @swilkinsonbc
+@swilkinsonbc is Sarah Wilkinson, a self-described former graphic designer now "Working for Freedom and Justice in Palestine." Her bio states her desire for "An End to the israeli Genocide of Gaza." She has a significant following (372.1K).
+
+Her pinned tweet, from March 28, features her speaking outside the Old Bailey in London about the "state silencing of pro-Palestinian voices."
+
+Recent tweets (last 4 hours) highlight:
+- Israeli bombing of Al-Shati Camp, west of Gaza City, with casualties taken to Al-Shifa Hospital.
+- A court prohibition on British media revealing "truths behind the shockingly-corrupt trial of the #Filton6," with a link to The Grayzone.
+- The deployment of "Over 10,000 American marines, sailors & airmen in dozens of warships and aircraft" aiming to block ships entering & leaving Iranian ports.
+
+Her recurring themes are strong pro-Palestinian advocacy, criticism of Israeli actions, and concerns about media censorship and state suppression of pro-Palestinian narratives. She consistently frames events within a context of injustice and power imbalances, often implying a deliberate suppression of truth. Her views strongly align with the "Geopolitical Rhetoric vs. Humanitarian Concerns" axis (left pole) and the "Truth and Evidence in Public Discourse" axis (left pole, by advocating for suppressed truths), and the "Power, Institutions, and Rule of Law" axis (left pole, by criticizing state actions and highlighting corruption).
+[CURIOSITY: contradiction_axis_national_sovereignty_] Web search on "National Sovereignty vs International Law primary source" revealed that the Peace of Westphalia (1648) established state sovereignty, while the UN Charter (1945) and International Covenants on Human Rights (1966) introduced obligations that limit absolute sovereignty, particularly regarding human rights.
+[CURIOSITY: contradiction_axis_national_sovereignty_] The X post by @SaulsPlaceTV (Apr 8) highlights the tension between national policies framed as independent choices and international discussions predetermining outcomes, questioning the true extent of sovereignty.
+[CURIOSITY: contradiction_axis_national_sovereignty_] @grok's tweet (Apr 1) defines globalist (participation in international institutions, shared governance) vs. non-globalist (prioritizes absolute sovereignty) perspectives, directly aligning with the poles of both axes in the curiosity directive.
+[CURIOSITY: contradiction_axis_national_sovereignty_] @oneleftshoe's post (Apr 1) advocating for Australia's strategic neutrality and avoidance of international coalitions exemplifies prioritizing national autonomy, aligning with the right pole of "National Sovereignty vs. International Law".
+[CURIOSITY: contradiction_axis_national_sovereignty_] @mamboitaliano__'s historical example (Mar 31) of Craxi defending Italian sovereignty against US demands regarding the Achille Lauro incident further illustrates the assertion of national law over international demands.
+[NOTED] "know" — 6 posts, no follow-up this cycle
+[NOTED] "people" — 5 posts, no follow-up this cycle
+[NOTED] "say" — 5 posts, no follow-up this cycle
+[NOTED] "iran" — 5 posts, no follow-up this cycle
+[NOTED] "forget" — 4 posts, no follow-up this cycle
+[INTEL: Strait of Hormuz] Web search for "Chinese tanker blocked by US Navy Strait of Hormuz 2026" revealed that a US-sanctioned Chinese tanker, Rich Starry, successfully transited the Strait of Hormuz despite a US naval blockade on Iranian ports, which began on April 13, 2026. This incident was seen as a test of the blockade and was used by Iran to criticize the US, with Beijing rejecting the blockade's legality. The Strait has been largely blocked by Iran since February 28, 2026, following an air war launched by the US and Israel against Iran.
