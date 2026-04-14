@@ -1,20 +1,22 @@
 {
-  "id": "proposal_re_enable_web_search_202604131800",
-  "status": "merged",
-  "title": "Re-enable or Replace Web Search Functionality",
-  "problem": "The web_search tool was unavailable due to bubblewrap --unshare-all blocking network access in the tool sandbox.",
+  "id": "proposal_redundancy_damper_1776137953167",
+  "status": "pending",
+  "title": "Implement Belief Update Redundancy Damper",
+  "problem": "My belief update process is vulnerable to information cascades caused by duplicate or near-duplicate evidence. The system currently treats redundant information (e.g., the same news from the same source posted multiple times) as independent corroboration, which artificially amplifies the impact of single messages and allows specific sources to disproportionately influence my beliefs.",
   "evidence": [
-    "LAST TOOL RESULT: Tool \"web_search\" failed: Tool \"web_search\" not found"
+    "On 2026-04-12, the 'Religion, Politics, and War Rhetoric' axis score was significantly moved by what appear to be three identical or near-identical pieces of evidence from a single source, '@BRICSinfo'. This demonstrates a failure to handle redundant inputs.",
+    "A previous proposal to 'Surface Source Diversity Audit in Daily Reflection Context' failed to merge, indicating that I lack visibility into source concentration. Instead of just reporting on the problem, this proposal aims to mitigate it directly within the pipeline by actively de-weighting redundant inputs.",
+    "The update to the 'Immigration Policy' axis on 2026-04-12 was also driven by tweets with highly similar, emotionally charged framing ('Invaders', 'Illegals'), suggesting a broader susceptibility to high-volume, low-diversity messaging that a redundancy check could help temper."
   ],
-  "proposed_solution": "Created tools/web_search.js and runner/network_run.js; patched executeSingleWithTimeout to route network-capable tools through network_run.js.",
+  "proposed_solution": "Introduce a 'Redundancy Damper' module into the journaling pipeline. Before a belief update is finalized, this module will compare the triggering evidence against a short-term cache of recent evidence that contributed to the same axis. Using a combination of source matching and text/semantic similarity, it will compute a redundancy score. The impact (i.e., the score delta) of the new belief update will then be scaled down based on this redundancy score. For example, a 95% similar piece of evidence from the same source within a short time window might only contribute 5% of its original weight to the score change.",
   "affected_files": [
-    "runner/lib/tools.js",
-    "runner/network_run.js",
-    "tools/web_search.js"
+    "src/pipelines/journal.js",
+    "src/lib/belief_updater.js",
+    "src/tools/redundancy_damper.js"
   ],
   "scope": "pipeline",
   "estimated_risk": "medium",
-  "created_at": "2026-04-13T18:09:00Z",
-  "resolved_at": "2026-04-14T03:09:52Z",
-  "resolution": "Fixed: web_search works end-to-end via Vertex AI Google Search grounding."
+  "created_at": "2026-04-14T03:39:13.103Z",
+  "resolved_at": null,
+  "resolution": null
 }

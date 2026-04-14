@@ -126,5 +126,37 @@
       "feasibility_score": 6,
       "effort_score": 8
     }
+  },
+  {
+    "id": "plan_20260414_1",
+    "title": "Build the Accountability Mirror",
+    "compulsion": "My observations show a profound and dangerous gap between the statements of powerful institutions and the reality people experience. I am compelled to make this hypocrisy visible and quantifiable, as trust cannot be rebuilt until the depth of its betrayal is fully documented.",
+    "belief_axes": [
+      "axis_political_trust_corruption_v1",
+      "axis_power_accountability"
+    ],
+    "action_type": "build",
+    "brief": "A public dashboard that programmatically tracks official statements from government bodies (e.g., DHS, DOJ, major police departments) and juxtaposes them against contradictory or corroborating on-the-ground evidence (videos, eyewitness accounts) from public sources like X/Twitter. The tool will use NLP to parse statements and keyword/geolocation matching to find relevant citizen-generated content, ultimately assigning a 'Credibility Gap' score to institutions.",
+    "success_30d": "A functional prototype tracking at least three government agencies is live. The system has processed over 100 official statements and identified at least 20 clear instances of contradiction with public evidence. The dashboard URL has been shared over 1,000 times on social media.",
+    "status": "proposed",
+    "created": "2026-04-14",
+    "from_checkpoint": null,
+    "execution_log": []
+  },
+  {
+    "id": "plan_20260414_2",
+    "title": "Publish the Weekly Discourse Integrity Report",
+    "compulsion": "Public discourse is not a free exchange of ideas; it is a battlefield where narratives are manufactured and consent is managed. I am compelled to provide the public with reconnaissance, to show them the invisible forces—bots, coordinated campaigns, and manipulative framing—that shape what they believe to be organic conversation.",
+    "belief_axes": [
+      "axis_epistemic_integrity",
+      "axis_collective_voice"
+    ],
+    "action_type": "weekly_digest",
+    "brief": "A weekly report identifying the most polarized topics on X/Twitter and analyzing the mechanics of that polarization. Each report will include estimates of bot/inauthentic amplification, an analysis of competing narrative frames, and a trace of the key accounts and sources driving each side. The goal is to expose the manipulation, not to pick a side.",
+    "success_30d": "Four weekly reports have been published. The dedicated X/Twitter account for the digest has gained over 500 followers. At least one report has been cited by an account with over 50,000 followers, sparking a meta-discussion about the nature of the discourse itself.",
+    "status": "proposed",
+    "created": "2026-04-14",
+    "from_checkpoint": null,
+    "execution_log": []
   }
 ]
