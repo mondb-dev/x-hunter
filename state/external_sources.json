@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-14T05:14:30.790Z",
+  "generated_at": "2026-04-14T05:44:38.969Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-14T05:15:00.797Z",
+  "profiled_at": "2026-04-14T05:45:15.730Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-13T23:21:50.000Z",
+      "last_seen_at": "2026-04-14T03:48:09.000Z",
       "discovery": {
-        "distinct_urls": 563,
+        "distinct_urls": 564,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,7 +384,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 382,
+          "feed_buffer": 383,
           "feed_buffer_reply": 205
         },
         "distinct_referring_accounts": 263,
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:563",
+            "distinct_urls:564",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -463,7 +463,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:563",
+            "distinct_urls:564",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:263",
@@ -765,19 +765,19 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-14T04:14:00Z",
+      "last_seen_at": "2026-04-14T05:16:53.795Z",
       "discovery": {
-        "distinct_urls": 31,
+        "distinct_urls": 32,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMj5_f7x9PeEIs1Oi-MtcWpQWKNIguJurjCAEHa198wA4aBiQ-axvcXfsBblu9No4r-FEeUiKpWyp8U5zNa7jN8C3xZIWDYpAetpuoB0RPUSmNx0u1MQQ4cYbm9doVihWLA9mXy4E03PIOYR2INZZGe9cMLTQkcaD2fPxmZHx3yzBhmjaFudOUphqBsxwnuw=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCmNHptSbVV3zGxP_M6wvF6PcPxnfQnf-w9J2CIiFt2D2AVZQffTQL7N4jd0jzuJ50Mh5rLLNMVr7wNa8VaGxy95U5puMCuVK_zI9aYx7FN7TMnmb81qR7Po_gte6ZmIEAKMYoG1uREvXeWIIsn97g8Gqal8F9nghWkc0Kx6cyKYDOYeqCyIme0Rvo_yYOdQ17MK2czw==",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfGmvMCsPeFUI4B-xmyKoaAkX_AG6Q9V1ZLs6ol2Qfeui48brn29RzcplcRWPGm_jTX4UXQepNKn_bVIhXEvqz4GGcsd5ybSyDByJlOqa6DCdHVN5Wh4pP2HqPH3ym0CeYu1sncGZpEaCB",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8="
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfGmvMCsPeFUI4B-xmyKoaAkX_AG6Q9V1ZLs6ol2Qfeui48brn29RzcplcRWPGm_jTX4UXQepNKn_bVIhXEvqz4GGcsd5ybSyDByJlOqa6DCdHVN5Wh4pP2HqPH3ym0CeYu1sncGZpEaCB"
         ],
         "origin_counts": {
-          "ontology_evidence": 34,
-          "journals": 12
+          "ontology_evidence": 36,
+          "journals": 13
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -793,6 +793,7 @@
           "axis_national_sovereignty_v_intl_law_v1",
           "axis_new_world_order_discourse_v1",
           "axis_ph_geopolitics_wps_v1",
+          "axis_political_trust_corruption_v1",
           "axis_power_accountability",
           "axis_religious_expression_hate_speech_v1",
           "axis_social_welfare_v_military_spending_v1"
@@ -822,8 +823,8 @@
         "breadth": {
           "score": 0.82,
           "basis": [
-            "distinct_urls:31",
-            "distinct_axes:14",
+            "distinct_urls:32",
+            "distinct_axes:15",
             "origin_types:2"
           ]
         },
@@ -861,8 +862,8 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:31",
-            "distinct_axes:14",
+            "distinct_urls:32",
+            "distinct_axes:15",
             "origin_types:2",
             "referring_accounts:0",
             "origin_types:2",
@@ -1723,6 +1724,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.15,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:3",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3832291666666666,
           "confidence": 0.0736,
@@ -1736,20 +1751,6 @@
             "referring_accounts:0",
             "origin_types:1",
             "track_record_unavailable"
-          ]
-        },
-        "profile": {
-          "score": 0.15,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:3",
-            "opinion_marker:false"
           ]
         }
       },
@@ -4968,7 +4969,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-11T05:25:39.205Z",
+        "fetched_at": "2026-04-14T05:45:09.735Z",
         "homepage_url": "https://falconx.io/",
         "example_url": "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
         "homepage_status": 200,
@@ -8635,7 +8636,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-11T05:25:45.405Z",
+        "fetched_at": "2026-04-14T05:45:15.149Z",
         "homepage_url": "https://prismmarketview.com/",
         "example_url": "https://prismmarketview.com/companies/sbc-medical-group-holdings-incorporated/?twclid=26comjr0eies8gnklzmi3odvtu",
         "homepage_status": 200,
@@ -8757,7 +8758,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-11T05:25:45.847Z",
+        "fetched_at": "2026-04-14T05:45:15.518Z",
         "homepage_url": "https://thefp.com/",
         "example_url": "https://www.thefp.com/p/the-radicalization-of-calla-walsh?utm_source=x&utm_medium=paid-social&utm_campaign=content&utm_content=callawalsh&utm_adgroup=ret&utm_adid=&twclid=28og7mgurhtluup81u6899c5o6",
         "homepage_status": null,
@@ -8879,7 +8880,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-11T05:25:46.819Z",
+        "fetched_at": "2026-04-14T05:45:15.730Z",
         "homepage_url": "https://cuervo.com/",
         "example_url": "https://cuervo.com/?twclid=2cw6oebezormtkrlgtaweck05m",
         "homepage_status": 200,
