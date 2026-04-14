@@ -457,6 +457,7 @@ function loadContext(opts) {
     ctx.topicSummary      = readState(config.TOPIC_SUMMARY_PATH, { fallback: '(not yet generated)' });
     ctx.digest            = readState(config.FEED_DIGEST_PATH, { tail: digestTailLines, fallback: '(not yet generated)' });
     ctx.critique          = readState(config.CRITIQUE_PATH, { tail: 12, fallback: '' });
+    ctx.articleMeta       = readState(config.ARTICLE_META_PATH, { fallback: '' });
     ctx.curiosityDirective = readState(config.CURIOSITY_DIRECTIVE_PATH, { fallback: '' });
     ctx.commentCandidates = readState(config.COMMENT_CANDIDATES_PATH, { fallback: '' });
     ctx.discourseDigest   = readState(config.DISCOURSE_DIGEST_PATH, { fallback: '' });

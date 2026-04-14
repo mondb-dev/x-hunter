@@ -50,6 +50,7 @@ module.exports = {
   RESEARCH_BRIEFS_PATH: path.join(STATE_DIR, 'research_briefs.json'),
   MEMORY_RECALL_PATH: path.join(STATE_DIR, 'memory_recall.txt'),
   CRITIQUE_PATH: path.join(STATE_DIR, 'critique.md'),
+  ARTICLE_META_PATH: path.join(STATE_DIR, 'article_meta.md'),
   PREFETCH_SOURCE_PATH: path.join(STATE_DIR, 'prefetch_source.txt'),
   SOURCE_PLAN_PATH: path.join(STATE_DIR, 'source_plan.json'),
   SIGNAL_DRAFT_PATH: path.join(STATE_DIR, 'signal_draft.txt'),

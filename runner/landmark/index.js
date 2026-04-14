@@ -39,7 +39,8 @@ const { detect } = require("./detect");
 const { generateEditorial, buildArweaveHtml } = require("./editorial");
 const { evaluateLandmark, validateEditorialForMint } = require("./tiering");
 const { generateHeroArt } = require("./art");
-const { renderAndSave } = require("./render");
+const { renderAndSave }   = require("./render");
+const { critiqueArticle } = require("./critique");
 // const { mintLandmark } = require("./mint");  — NFT minting not yet enabled
 const { postArticle } = require("../post_article");
 const { logArticle } = require("../posts_log");
@@ -297,7 +298,34 @@ async function main() {
     landmark_number: landmarkNumber,
   });
 
-  // ── 7. Special announcement draft ──────────────────────────────────────────
+  // ── 7. Article critique + meta proposal ────────────────────────────────────
+
+  console.log("\n── STEP 7: Article Critique ──");
+  let critiqueResult = null;
+  try {
+    critiqueResult = await critiqueArticle(event, content, {
+      landmarkNumber: landmarkNumber,
+      outputDir:      manifestDir,
+    });
+    if (critiqueResult) {
+      manifest.critique = {
+        evidence:  critiqueResult.evidence,
+        vocation:  critiqueResult.vocation,
+        voice:     critiqueResult.voice,
+        headline:  critiqueResult.headline,
+        gaps:      critiqueResult.gaps,
+      };
+      // Rewrite manifest with critique scores included
+      fs.writeFileSync(
+        path.join(manifestDir, "manifest.json"),
+        JSON.stringify(manifest, null, 2),
+      );
+    }
+  } catch (err) {
+    console.warn(`[landmark] Critique failed: ${err.message} — continuing`);
+  }
+
+  // ── 9. Special announcement draft ──────────────────────────────────────────
   // If this is a vocation or prediction milestone, write a draft tweet for
   // the next post_browse cycle to pick up and post.
 

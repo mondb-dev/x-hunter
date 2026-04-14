@@ -36,6 +36,22 @@ function loadBeliefContext() {
   }
 }
 
+function loadVocationContext() {
+  try {
+    const vocPath = path.join(PATHS.ROOT, "state", "vocation.json");
+    const voc = JSON.parse(fs.readFileSync(vocPath, "utf-8"));
+    const label     = voc.label     || null;
+    const statement = voc.statement || voc.description || null;
+    if (!label && !statement) return null;
+    const parts = [];
+    if (label)     parts.push(`Role: ${label}`);
+    if (statement) parts.push(`Voice: "${statement}"`);
+    return parts.join("\n");
+  } catch {
+    return null;
+  }
+}
+
 // ── Generate editorial ────────────────────────────────────────────────────────
 
 /**
@@ -45,7 +61,8 @@ function loadBeliefContext() {
  * @returns {Promise<{headline: string, lead: string, editorial: string}>}
  */
 async function generateEditorial(event) {
-  const beliefContext = loadBeliefContext();
+  const beliefContext  = loadBeliefContext();
+  const vocationContext = loadVocationContext();
   const sigList = Object.entries(event.signals)
     .filter(([, v]) => v)
     .map(([k]) => k)
@@ -68,6 +85,9 @@ async function generateEditorial(event) {
 
 ## Sample posts from this window
 ${sampleTexts}
+
+## Sebastian's vocation
+${vocationContext || "(vocation not yet defined)"}
 
 ## Sebastian's current belief axes
 ${beliefContext}
@@ -94,7 +114,7 @@ Generate three things for this landmark event:
    - ONLY reference claims, events, or facts that appear in the sample posts above. Quote them directly.
    - If posts reference a real-world event, describe what the POSTS CLAIM, not what you think happened. Use language like "posts are claiming..." or "accounts are discussing..."
    - Connect to Sebastian's belief axes — how does this event relate to what he's been tracking?
-   - Maintain Sebastian's voice: analytical, evidence-based, willing to state a position
+   - Maintain Sebastian's voice: analytical, evidence-based, willing to state a position. Let the vocation inform the *lens* (how he sees the event), not the subject of the article.
    - Close with the implication — what does this convergence signal about what comes next?
    - No hedging everything. State what you actually think.
    - TAG PEOPLE: Cite specific posts from the sample data using @username inline (e.g. "As @user put it...", "@user argues that..."). Include the @usernames of the most relevant contributors from the sample posts so they get tagged when this is published as an X Article. Do not tag accounts gratuitously — only tag those whose specific posts you are citing or responding to.
