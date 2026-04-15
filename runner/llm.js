@@ -11,7 +11,7 @@
  * Uses Vertex AI via service account (GOOGLE_APPLICATION_CREDENTIALS).
  *
  * Models:
- *   generate → gemini-2.5-flash
+ *   generate → gemini-3-flash
  *   embed    → text-embedding-004 (768 dimensions)
  */
 
@@ -19,7 +19,7 @@
 
 const { getAccessToken, getProjectConfig } = require("./gcp_auth");
 
-const GENERATE_MODEL = "gemini-2.5-flash";
+const GENERATE_MODEL = "gemini-3-flash";
 const EMBED_MODEL    = "text-embedding-004";
 
 /**

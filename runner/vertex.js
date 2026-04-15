@@ -19,13 +19,13 @@ const { getAccessToken, getProjectConfig } = require("./gcp_auth");
  * Calls Vertex AI with the given prompt.
  * Returns the text content string.
  *
- * options.model         - model ID (default: gemini-2.5-pro)
+ * options.model         - model ID (default: gemini-3.1-pro-preview)
  * options.thinkingBudget - if set and > 0, sets thinking token budget
  */
 async function callVertex(prompt, maxTokens = 2000, options = {}) {
   const token    = await getAccessToken();
   const { project, location } = getProjectConfig();
-  const model    = options.model || "gemini-2.5-pro";
+  const model    = options.model || "gemini-3.1-pro-preview";
 
   const apiPath  = `/v1/projects/${project}/locations/${location}/publishers/google/models/${model}:generateContent`;
 

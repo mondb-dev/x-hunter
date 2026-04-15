@@ -32,7 +32,7 @@ async function callBuilder(prompt, maxTokens = 8192, options = {}) {
 
   const token            = await getTokenForKey(keyPath);
   const { project, location } = getProjectConfig();
-  const model            = process.env.BUILDER_MODEL || "gemini-2.5-pro";
+  const model            = process.env.BUILDER_MODEL || "gemini-3.1-pro-preview";
 
   const apiPath = `/v1/projects/${project}/locations/${location}/publishers/google/models/${model}:generateContent`;
 
