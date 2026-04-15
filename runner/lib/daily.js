@@ -174,8 +174,12 @@ function reports() {
         const lines = fs.readFileSync(articleResultPath, 'utf-8').split('\n');
         excerpt = (lines[1] || 'New article published').trim();
       }
-      const maxExcerpt = 250 - webUrl.length;
-      if (excerpt.length > maxExcerpt) excerpt = excerpt.slice(0, maxExcerpt - 3) + '...';
+      const maxExcerpt = 250 - webUrl.length - 1; // -1 for newline separator
+      if (excerpt.length > maxExcerpt) {
+        // Cut at last word boundary before limit, not mid-word
+        const cut = excerpt.slice(0, maxExcerpt - 1).replace(/\s+\S*$/, '');
+        excerpt = (cut || excerpt.slice(0, maxExcerpt - 1)) + '…';
+      }
 
       const DRAFT_PATH = config.TWEET_DRAFT_PATH;
       fs.writeFileSync(DRAFT_PATH, `${excerpt}\n${webUrl}`);
