@@ -167,6 +167,30 @@ async function markExpired(claimId) {
 }
 
 /**
+ * Full-text search over claim_text + web_search_summary using Postgres tsvector.
+ * Returns rows shaped for recall.js formatting.
+ * @param {string} queryStr
+ * @param {number} limit
+ * @returns {Promise<Array>}
+ */
+async function recallVerifications(queryStr, limit = 5) {
+  if (!queryStr || !queryStr.trim()) return [];
+  const { rows } = await query(`
+    SELECT *,
+           ts_rank(
+             to_tsvector('english', coalesce(claim_text,'') || ' ' || coalesce(web_search_summary,'')),
+             plainto_tsquery('english', $1)
+           ) AS rank
+    FROM   claim_verifications
+    WHERE  to_tsvector('english', coalesce(claim_text,'') || ' ' || coalesce(web_search_summary,''))
+           @@ plainto_tsquery('english', $1)
+    ORDER  BY rank DESC
+    LIMIT  $2
+  `, [queryStr.trim(), limit]);
+  return rows.map(parseRow);
+}
+
+/**
  * Run upserts + audit logs in a single transaction.
  * @param {Function} fn — async callback, receives no args
  */
@@ -185,5 +209,6 @@ module.exports = {
   getAuditLog,
   markTweetPosted,
   markExpired,
+  recallVerifications,
   runTransaction,
 };

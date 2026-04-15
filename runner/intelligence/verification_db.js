@@ -57,7 +57,42 @@ db.exec(`
   CREATE INDEX IF NOT EXISTS idx_cv_status ON claim_verifications(status);
   CREATE INDEX IF NOT EXISTS idx_cv_score  ON claim_verifications(confidence_score);
   CREATE INDEX IF NOT EXISTS idx_audit_claim ON claim_audit_log(claim_id);
+
+  CREATE VIRTUAL TABLE IF NOT EXISTS cv_fts USING fts5(
+    claim_id UNINDEXED,
+    claim_text,
+    web_search_summary,
+    claim_source,
+    content='claim_verifications',
+    content_rowid='rowid'
+  );
 `);
+
+// ── FTS5 sync triggers for claim_verifications ───────────────────────────────
+try {
+  db.exec(`
+    CREATE TRIGGER IF NOT EXISTS cv_ai AFTER INSERT ON claim_verifications BEGIN
+      INSERT INTO cv_fts(rowid, claim_id, claim_text, web_search_summary, claim_source)
+      VALUES (new.rowid, new.claim_id, new.claim_text,
+              COALESCE(new.web_search_summary, ''), new.claim_source);
+    END;
+    CREATE TRIGGER IF NOT EXISTS cv_au AFTER UPDATE ON claim_verifications BEGIN
+      INSERT INTO cv_fts(cv_fts, rowid, claim_id, claim_text, web_search_summary, claim_source)
+      VALUES ('delete', old.rowid, old.claim_id, old.claim_text,
+              COALESCE(old.web_search_summary, ''), old.claim_source);
+      INSERT INTO cv_fts(rowid, claim_id, claim_text, web_search_summary, claim_source)
+      VALUES (new.rowid, new.claim_id, new.claim_text,
+              COALESCE(new.web_search_summary, ''), new.claim_source);
+    END;
+    CREATE TRIGGER IF NOT EXISTS cv_ad AFTER DELETE ON claim_verifications BEGIN
+      INSERT INTO cv_fts(cv_fts, rowid, claim_id, claim_text, web_search_summary, claim_source)
+      VALUES ('delete', old.rowid, old.claim_id, old.claim_text,
+              COALESCE(old.web_search_summary, ''), old.claim_source);
+    END;
+  `);
+  // Populate FTS index from existing rows
+  db.exec(`INSERT INTO cv_fts(cv_fts) VALUES('rebuild')`);
+} catch { /* already consistent */ }
 
 // ── Migrate: add columns if they don't exist (for existing DBs) ───────────
 try {
@@ -253,6 +288,43 @@ function parseRow(row) {
 }
 
 /**
+ * FTS5 full-text search over claim_text + web_search_summary.
+ * Returns rows ordered by BM25 relevance, shaped for recall.js formatting.
+ * @param {string} queryStr
+ * @param {number} limit
+ * @returns {Array}
+ */
+function recallVerifications(queryStr, limit = 5) {
+  const safe = queryStr.replace(/["*()\-]/g, ' ').trim();
+  if (!safe) return [];
+  try {
+    return db.prepare(`
+      SELECT cv.*,
+             bm25(cv_fts) AS rank
+      FROM   cv_fts
+      JOIN   claim_verifications cv ON cv.rowid = cv_fts.rowid
+      WHERE  cv_fts MATCH ?
+      ORDER  BY rank
+      LIMIT  ?
+    `).all(safe, limit).map(parseRow);
+  } catch (e) {
+    if (e.code === 'SQLITE_CORRUPT_VTAB') {
+      try { db.exec(`INSERT INTO cv_fts(cv_fts) VALUES('rebuild')`); } catch {}
+      try {
+        return db.prepare(`
+          SELECT cv.*, bm25(cv_fts) AS rank
+          FROM   cv_fts
+          JOIN   claim_verifications cv ON cv.rowid = cv_fts.rowid
+          WHERE  cv_fts MATCH ?
+          ORDER  BY rank LIMIT ?
+        `).all(safe, limit).map(parseRow);
+      } catch { return []; }
+    }
+    return [];
+  }
+}
+
+/**
  * Run all upserts + audit logs in a single transaction.
  * @param {Function} fn — callback receiving no args; call upsertVerification/logAudit inside
  */
@@ -267,5 +339,6 @@ module.exports = {
   getAuditLog,
   markTweetPosted,
   markExpired,
+  recallVerifications,
   runTransaction,
 };

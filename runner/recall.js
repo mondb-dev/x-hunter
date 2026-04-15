@@ -31,8 +31,9 @@
 
 const fs   = require("fs");
 const path = require("path");
-const { loadScraperDb } = require("./lib/db_backend");
+const { loadScraperDb, loadVerificationDb } = require("./lib/db_backend");
 const db = loadScraperDb();
+const vdb = loadVerificationDb();
 const { embed, topK } = require("../scraper/embed");
 
 const ROOT        = path.resolve(__dirname, "..");
@@ -81,6 +82,23 @@ function formatEntry(row, similarity = null) {
     : "(not yet uploaded to Arweave)";
 
   return [header, `"${excerpt}..."`, tags, arweave].filter(Boolean).join("\n");
+}
+
+function formatVerification(row) {
+  const statusMap = { supported: "SUPPORTED", refuted: "REFUTED", contested: "CONTESTED",
+                      unverified: "UNVERIFIED", expired: "EXPIRED" };
+  const status   = statusMap[row.status] ?? row.status.toUpperCase();
+  const pct      = Math.round((row.confidence_score ?? 0) * 100);
+  const when     = row.last_verified_at ?? row.created_at ?? "";
+  const dateStr  = when ? new Date(when).toISOString().slice(0, 10) : "";
+  const source   = row.source_handle ? `@${row.source_handle}` : (row.claim_source ?? "");
+  const header   = `[verification · ${status} · ${pct}% confidence · ${dateStr}${source ? " · " + source : ""}]`;
+  const claim    = `Claim: "${(row.claim_text || "").trim()}"`;
+  const summary  = row.web_search_summary
+    ? `Finding: ${row.web_search_summary.trim().slice(0, 200)}`
+    : null;
+  const link     = `https://sebastianhunter.fun/verified#${row.claim_id}`;
+  return [header, claim, summary, link].filter(Boolean).join("\n");
 }
 
 // ── Semantic search over memory embeddings ────────────────────────────────────
@@ -156,6 +174,23 @@ async function semanticRecall(queryText, typeFilter, limitN) {
       const sim = usedSemantic && row._similarity != null ? row._similarity : null;
       lines.push(formatEntry(row, sim));
       lines.push("");
+    }
+  }
+
+  // ── Verification recall ─────────────────────────────────────────────────
+  if (query) {
+    let vResults = [];
+    try {
+      vResults = await vdb.recallVerifications(query, 3);
+    } catch { /* verification db unavailable — skip */ }
+
+    if (vResults.length > 0) {
+      lines.push(`── veritas lens: matching verified claims ──────────────────────────────`);
+      lines.push("");
+      for (const row of vResults) {
+        lines.push(formatVerification(row));
+        lines.push("");
+      }
     }
   }
 
