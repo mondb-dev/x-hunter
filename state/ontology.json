@@ -9,7 +9,7 @@
       "confidence": 0.95,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
-      "last_updated": "2026-04-14T22:22:09.425Z",
+      "last_updated": "2026-04-15T00:00:40.061Z",
       "evidence_log": [
         {
           "pole_alignment": "right",
@@ -9028,6 +9028,36 @@
           "pole_alignment": "right",
           "trust_weight": 0.5,
           "stance_confidence": 0.9,
+          "score_after": 0.3228,
+          "confidence_after": 0.95
+        },
+        {
+          "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhPoqIx3uFkYR-TbE4MDvexRoP-DB_WyiwN7uwg4MRRXrsMOgfyjAgTyuBbu1VEi8NStZ_DgV_t0UDD55wdoDTtw3QjLUhruHrbhpPoQB9RgZC3BMh9VqC52x2KyWQiKDWyg4R7DSqEMcyfuv5IaFKZqbBNRk-wL-ff-yhcj4OxIV0JlDRJGZZuGxAOjlb5USCBcnSZ5-UdqdxRMlAlMdI4JOp5Ccs8kDgoJnFUw==",
+          "content": "Conflicting reports on X regarding Strait of Hormuz shipping (e.g., 'zero vessels left' vs. '20 commercial vessels transited') demonstrate narrative manipulation and a lack of factual clarity in public discourse.",
+          "timestamp": "2026-04-14T23:33:00Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "stance_confidence": 0.8,
+          "score_after": 0.321,
+          "confidence_after": 0.95
+        },
+        {
+          "source": "https://x.com/MarioNawfal/status/2044166303938707679",
+          "content": "@MarioNawfal's claim of 'Zero vessels left Iranian ports' after the US blockade directly contradicts other reports and web search findings of vessels transiting, highlighting narrative manipulation in public discourse.",
+          "timestamp": "2026-04-14T23:58:00Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "stance_confidence": 1,
+          "score_after": 0.3228,
+          "confidence_after": 0.95
+        },
+        {
+          "source": "https://x.com/rawsalerts/status/2044189499282849980",
+          "content": "President Donald Trump's announcement on Fox News that 'the Iran War is over' is a highly significant and potentially misleading claim given ongoing hostilities and blockades, demonstrating strategic narrative construction.",
+          "timestamp": "2026-04-14T23:58:00Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "stance_confidence": 0.8,
           "score_after": 0.3228,
           "confidence_after": 0.95
         }
@@ -19122,11 +19152,11 @@
       "label": "Integrity of Information and Social Media Manipulation",
       "left_pole": "Advocacy for factual accuracy, critical assessment of sources, and efforts to co",
       "right_pole": "Spread of unverified claims, reliance on emotional appeals, and engagement farmi",
-      "score": 0.45,
+      "score": 0.4511,
       "confidence": 0.95,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
-      "last_updated": "2026-04-14T20:00:45.755Z",
+      "last_updated": "2026-04-15T00:00:40.061Z",
       "evidence_log": [
         {
           "pole_alignment": "right",
@@ -24382,6 +24412,16 @@
           "stance_confidence": 0.8,
           "score_after": 0.45,
           "confidence_after": 0.95
+        },
+        {
+          "source": "https://x.com/sentdefender/status/2044175321813884999",
+          "content": "@sentdefender's report of '20 commercial vessels... have transited the Strait of Hormuz' directly contradicts @MarioNawfal's claim of zero vessels, illustrating conflicting information in social media and the challenge of verifying claims.",
+          "timestamp": "2026-04-14T23:58:00Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "stance_confidence": 0.8,
+          "score_after": 0.4511,
+          "confidence_after": 0.95
         }
       ]
     },
@@ -24390,11 +24430,11 @@
       "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
       "left_pole": "Prioritizing humanitarian concerns, ethical considerations, and consistency in i",
       "right_pole": "Emphasizing strong national alliances and diplomatic ties, potentially overlooki",
-      "score": 0.0667,
+      "score": 0.0694,
       "confidence": 0.95,
       "topics": [],
       "created_at": "2026-02-28T10:52:00Z",
-      "last_updated": "2026-04-14T21:56:35.938Z",
+      "last_updated": "2026-04-15T00:27:40.215Z",
       "evidence_log": [
         {
           "source": "https://x.com/itswpceo/status/2027744997856907590",
@@ -34702,6 +34742,34 @@
           "stance_confidence": 0.7,
           "score_after": 0.0667,
           "confidence_after": 0.95
+        },
+        {
+          "source": "https://x.com/BRICSinfo/status/2044023177739702439",
+          "content": "Mossad chief David Barnea's vow to continue efforts until Iran's 'extremist regime' is 'replaced' constitutes aggressive geopolitical rhetoric aimed at regime change.",
+          "timestamp": "2026-04-14T23:33:00Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "stance_confidence": 0.7,
+          "score_after": 0.0676,
+          "confidence_after": 0.95
+        },
+        {
+          "source": "https://x.com/BRICSinfo/status/2044023177739702439",
+          "content": "Mossad chief David Barnea vows efforts will continue until Iran's 'extremist regime' is 'replaced,' representing a direct statement of intent for regime change within geopolitical rhetoric.",
+          "timestamp": "2026-04-14T23:58:00Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "score_after": 0.0685,
+          "confidence_after": 0.95
+        },
+        {
+          "source": "https://x.com/rawsalerts/status/2044189499282849980",
+          "content": "@rawsalerts' report that President Trump announced the Iran War is over on Fox News is a significant and potentially misleading claim amidst ongoing hostilities.",
+          "timestamp": "2026-04-14T23:59:00Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "score_after": 0.0694,
+          "confidence_after": 0.95
         }
       ]
     },
@@ -40326,11 +40394,11 @@
       "label": "National Sovereignty vs. International Law",
       "left_pole": "Adherence to international legal frameworks, multilateral cooperation, and accountability under global norms.",
       "right_pole": "Emphasis on national autonomy, rejection of external legal or political authority, and prioritizing domestic interests.",
-      "score": 0.4907,
+      "score": 0.4937,
       "confidence": 0.95,
       "topics": [],
       "created_at": "2026-03-04T06:59:19.884Z",
-      "last_updated": "2026-04-14T23:10:57.829Z",
+      "last_updated": "2026-04-15T00:27:40.215Z",
       "evidence_log": [
         {
           "source": "https://x.com/newswatchplusph/status/2029058966119231768",
@@ -45211,6 +45279,34 @@
           "stance_confidence": 0.8,
           "score_after": 0.4907,
           "confidence_after": 0.95
+        },
+        {
+          "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1NbiGoAdeSXtKZ-mfxAGiHq4o98htf4mhLfaOMjuEj7Ys_huQXwgHbyI_R3dOPlApHVpj9bRQjbc-Nkb49L8lir7TDwnR89C4lEANczn6wVjw0CRRB92Fvjb3F7DCPECFHLpJkthh8U=",
+          "content": "The Strait of Hormuz conflict exemplifies the tension between Iran's claims of national sovereignty over its territorial waters and the international right of transit passage under UNCLOS.",
+          "timestamp": "2026-04-14T23:33:00Z",
+          "pole_alignment": "right",
+          "trust_weight": 0.5,
+          "stance_confidence": 0.9,
+          "score_after": 0.4913,
+          "confidence_after": 0.95
+        },
+        {
+          "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRqCF0h7HSh15B6-OBgIdl-7jSH0Tyg9xex48RMewuFFg9aopKDyAb-vy60Dmdo8y-kq9dRMJgVsyEb97g1AVupoMLiBFw2z0Myl0GOtVFOp2TDknMD4Ytne6vwSADhIwqCy_99aDiZ6keiDT3IznqViCGiLBmBlyD-SEqyBLK8sTPw9EB7go_VjXaJncTztLUeP3VLjE=",
+          "content": "The US-sanctioned Chinese tanker Rich Starry successfully transited the Strait of Hormuz on April 14, 2026, despite a US naval blockade on Iranian ports, highlighting the tension between national autonomy and international legal frameworks.",
+          "timestamp": "2026-04-14T23:58:00Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "score_after": 0.4925,
+          "confidence_after": 0.95
+        },
+        {
+          "source": "https://x.com/MarioNawfal/status/2044166303938707679",
+          "content": "@MarioNawfal claims zero vessels left Iranian ports and six merchant ships turned back from the US naval blockade on Iran, while other reports suggest continued transit.",
+          "timestamp": "2026-04-14T23:19:00Z",
+          "pole_alignment": "right",
+          "trust_weight": 1,
+          "score_after": 0.4937,
+          "confidence_after": 0.95
         }
       ]
     },
@@ -47075,11 +47171,11 @@
       "label": "Global Power Realignments and Shifting Hegemony",
       "left_pole": "Emergence of multi-polar world, regional autonomy, decolonization of traditional power structures, emphasis on self-determination and local governance.",
       "right_pole": "Maintenance of existing global hegemonic structures, continued influence of established powers, resistance to shifts in global power balance, interventions to maintain status quo.",
-      "score": -0.2534,
+      "score": -0.2582,
       "confidence": 0.95,
       "topics": [],
       "created_at": "2026-03-06T09:55:08.961Z",
-      "last_updated": "2026-04-14T23:10:57.829Z",
+      "last_updated": "2026-04-15T00:27:40.215Z",
       "evidence_log": [
         {
           "source": "https://x.com/jacksonhinklle/status/2029857247711420600",
@@ -51959,6 +52055,35 @@
           "trust_weight": 1,
           "score_after": -0.2534,
           "confidence_after": 0.95
+        },
+        {
+          "source": "https://x.com/GBX_Press/status/2044099655685026249",
+          "content": "Russia's reported decision to price oil and gas deals with Europe in Chinese Yuan signals a shift towards a multi-polar world and regional autonomy in global economic power dynamics.",
+          "timestamp": "2026-04-14T23:33:00Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "stance_confidence": 0.8,
+          "score_after": -0.255,
+          "confidence_after": 0.95
+        },
+        {
+          "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIEvjVKMZUHXiLufL43HrsxFv064neJGFIRu-3dYvUVScvq7eWPm8aYuc77nZMKYRO5oyR3FEPuoqAfyFjkZEmGWZJq8WBoLuY8a4CdYxzC_jrIMZniU0G6jkV-6BIuaomrq3_6qWBCjOg4hGIBPS1BnY93ghB9tvg7pLIdmUIDTB0Xkg5KCqgzVZIHExPtVwyZRXOdmuSujP7bv_UJWQ=",
+          "content": "Russia has mandated that all oil and gas transactions with major buyers be settled in Chinese Yuan or Ruble, with India also adopting Yuan for Russian crude, indicating a significant de-dollarization trend and a shift towards a multipolar world.",
+          "timestamp": "2026-04-14T23:58:00Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "score_after": -0.2566,
+          "confidence_after": 0.95
+        },
+        {
+          "source": "[INTEL: Geopolitical Shift] @GBX_Press reports \"BREAKING Russia announces that all future oil and gas deals with Europe will be priced in Chinese Yuan.\"",
+          "content": "Russia's decision to price oil and gas deals with Europe in Chinese Yuan signifies a major shift in global power dynamics and de-dollarization efforts.",
+          "timestamp": "2026-04-14T23:19:00Z",
+          "pole_alignment": "left",
+          "trust_weight": 1,
+          "stance_confidence": 0.8,
+          "score_after": -0.2582,
+          "confidence_after": 0.95
         }
       ]
     },
@@ -56777,5 +56902,5 @@
     }
   ],
   "axis_creation_rules_version": "1.0",
-  "last_updated": "2026-04-14T23:10:57.829Z"
+  "last_updated": "2026-04-15T00:27:40.215Z"
 }

@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-14T23:11:34.089Z",
+  "generated_at": "2026-04-15T00:28:26.751Z",
   "stats": {
-    "total": 34,
+    "total": 36,
     "supported": 0,
     "refuted": 3,
     "contested": 0,
-    "unverified": 31,
+    "unverified": 33,
     "expired": 0
   },
   "claims": [
@@ -585,8 +585,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_human_rights_exploitation_v1",
-      "verification_count": 10,
-      "verified_at": "2026-04-14T23:11:34.054Z",
+      "verification_count": 13,
+      "verified_at": "2026-04-15T00:28:26.716Z",
       "created_at": "2026-03-31T00:00:00.000Z",
       "original_source": null,
       "claim_date": null,
@@ -594,6 +594,61 @@
       "dissenting_sources": [],
       "framing_analysis": null,
       "web_search_summary": "```json\n{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Donald Trump has repeatedly threatened to destroy Iranian civilian energy and water infrastructure if certain demands are not met. These threats, made in March and April 2026, include targeting electric generating plants, oil wells, and desalination plants. Legal experts and international organizations have stated that such actions would constitute war crimes.\",\n  \"evidence_urls\": [\n    \"https://vertexaisearch.cloud.google.com/grounding-api-redir"
+    },
+    {
+      "claim_id": "claim_3",
+      "claim_text": "US reported destroying 150 Iranian vessels",
+      "status": "unverified",
+      "confidence_score": 0.375,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 31,
+      "verified_at": "2026-04-15T00:28:26.723Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": "White House Press Secretary Karoline Leavitt and US Central Command (CENTCOM)",
+      "claim_date": "2026-04-08",
+      "supporting_sources": [
+        {
+          "name": "Naval Today",
+          "stance": "Reports White House statements on the destruction of Iranian naval vessels, including 150+ vessels and the entire submarine fleet."
+        },
+        {
+          "name": "The Japan Times",
+          "stance": "Cites a US official and the White House confirming the destruction of over 150 Iranian naval vessels, including 16 warships."
+        },
+        {
+          "name": "CBS News",
+          "stance": "Reports CENTCOM's statement that over 155 Iranian vessels have been damaged or destroyed by US forces."
+        },
+        {
+          "name": "WION (The World is One News)",
+          "stance": "Reports on a White House briefing where it was stated that the US destroyed over 150 Iranian naval vessels."
+        },
+        {
+          "name": "FW-MAG Future Warfare Magazine",
+          "stance": "Reports Pentagon figures indicating a minimum of 130 Iranian surface vessels hit, including destroyed, sunk, or severely damaged."
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "IBTimes UK",
+          "stance": "Notes that there has been no independent verification of Trump's claim of 150 Iranian naval vessels being 'underwater' and that neither the Pentagon nor CENTCOM has publicly provided matching figures, advising caution."
+        }
+      ],
+      "framing_analysis": "The claim is framed as a factual statement regarding military operations. While the numbers are reported by official US sources, some outlets highlight the lack of independent verification, suggesting a need for critical evaluation rather than a false dichotomy.",
+      "web_search_summary": "Multiple sources, including statements from the White House and CENTCOM, confirm that the US has reported destroying over 150 Iranian naval vessels. This occurred as part of a broader military campaign, Operation Epic Fury, which also targeted Iran's submarine fleet and naval mines."
     },
     {
       "claim_id": "claim_19",
@@ -763,59 +818,63 @@
       "web_search_summary": "Multiple reports and video evidence confirm that individuals in San Francisco's Tenderloin and South of Market neighborhoods have been paying homeless people $5 to sign petitions using other people's names. This activity is illegal and is currently under investigation by California election officials."
     },
     {
-      "claim_id": "claim_3",
-      "claim_text": "US reported destroying 150 Iranian vessels",
+      "claim_id": "claim_36",
+      "claim_text": "US-sanctioned Chinese tanker Rich Starry successfully transited the Strait of Hormuz despite US naval blockade.",
       "status": "unverified",
-      "confidence_score": 0.375,
+      "confidence_score": 0.361,
       "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
+        "source_tier": 0.4,
+        "newsguard": 0.24,
         "corroboration": 0,
-        "evidence_quality": 0,
+        "evidence_quality": 0.5,
         "cross_source": 0.5,
-        "web_search": 1
+        "web_search": 0.8
       },
-      "source_handle": null,
+      "source_handle": "bricsinfo",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 28,
-      "verified_at": "2026-04-14T23:11:34.061Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": "White House Press Secretary Karoline Leavitt and US Central Command (CENTCOM)",
-      "claim_date": "2026-04-08",
+      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "verification_count": 3,
+      "verified_at": "2026-04-15T00:28:26.683Z",
+      "created_at": "2026-04-15T00:00:47.654Z",
+      "original_source": "RBC-Ukraine, The Jerusalem Post, Modern Diplomacy, Lloyd's List, gCaptain, The Times of Israel",
+      "claim_date": "2026-04-14",
       "supporting_sources": [
         {
-          "name": "Naval Today",
-          "stance": "Reports White House statements on the destruction of Iranian naval vessels, including 150+ vessels and the entire submarine fleet."
+          "name": "RBC-Ukraine",
+          "stance": "Reported the successful transit of Rich Starry despite the blockade."
         },
         {
-          "name": "The Japan Times",
-          "stance": "Cites a US official and the White House confirming the destruction of over 150 Iranian naval vessels, including 16 warships."
+          "name": "Modern Diplomacy",
+          "stance": "Confirmed the vessel's movement through the Strait of Hormuz."
         },
         {
-          "name": "CBS News",
-          "stance": "Reports CENTCOM's statement that over 155 Iranian vessels have been damaged or destroyed by US forces."
+          "name": "Lloyd's List",
+          "stance": "Stated the tanker sailed out of the Strait of Hormuz apparently unchallenged."
         },
         {
-          "name": "WION (The World is One News)",
-          "stance": "Reports on a White House briefing where it was stated that the US destroyed over 150 Iranian naval vessels."
+          "name": "gCaptain",
+          "stance": "Reported the tanker sailing out of the Strait of Hormuz, testing the blockade."
         },
         {
-          "name": "FW-MAG Future Warfare Magazine",
-          "stance": "Reports Pentagon figures indicating a minimum of 130 Iranian surface vessels hit, including destroyed, sunk, or severely damaged."
+          "name": "The Times of Israel",
+          "stance": "Confirmed the tanker passed through the Strait of Hormuz despite the blockade."
         }
       ],
       "dissenting_sources": [
         {
-          "name": "IBTimes UK",
-          "stance": "Notes that there has been no independent verification of Trump's claim of 150 Iranian naval vessels being 'underwater' and that neither the Pentagon nor CENTCOM has publicly provided matching figures, advising caution."
+          "name": "The Times of India",
+          "stance": "Reported the tanker made a U-turn in the Gulf of Oman after transiting the Strait of Hormuz."
+        },
+        {
+          "name": "Seatrade Maritime News",
+          "stance": "Reported the tanker reversed course after what looked to be a successful transit, suggesting the blockade was in force."
         }
       ],
-      "framing_analysis": "The claim is framed as a factual statement regarding military operations. While the numbers are reported by official US sources, some outlets highlight the lack of independent verification, suggesting a need for critical evaluation rather than a false dichotomy.",
-      "web_search_summary": "Multiple sources, including statements from the White House and CENTCOM, confirm that the US has reported destroying over 150 Iranian naval vessels. This occurred as part of a broader military campaign, Operation Epic Fury, which also targeted Iran's submarine fleet and naval mines."
+      "framing_analysis": "The claim is framed as a direct challenge to the effectiveness of the US naval blockade. It presents a clear, verifiable event (the tanker's transit) against a stated US objective (enforcing a blockade).",
+      "web_search_summary": "The US-sanctioned Chinese tanker Rich Starry did transit the Strait of Hormuz on April 14, 2026, despite a US naval blockade that began on April 13, 2026. However, after initially appearing to successfully exit the Gulf, the tanker made a U-turn in the Gulf of Oman and headed back towards the Strait of Hormuz, suggesting the blockade may have ultimately impacted its full transit. The blockade specifically targeted ships entering or leaving Iranian ports, and the Rich Starry was sanctioned for its involvement in trade linked to Iran."
     },
     {
       "claim_id": "claim_11",
@@ -865,8 +924,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 29,
-      "verified_at": "2026-04-14T23:11:34.058Z",
+      "verification_count": 32,
+      "verified_at": "2026-04-15T00:28:26.720Z",
       "created_at": "2026-03-31T00:00:00.000Z",
       "original_source": "Israel Defense Forces (IDF)",
       "claim_date": "2026-03",
@@ -932,8 +991,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "verification_count": 48,
-      "verified_at": "2026-04-14T23:11:34.035Z",
+      "verification_count": 54,
+      "verified_at": "2026-04-15T00:28:26.707Z",
       "created_at": "2026-03-31T00:00:00.000Z",
       "original_source": null,
       "claim_date": null,
@@ -990,8 +1049,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "verification_count": 23,
-      "verified_at": "2026-04-14T23:11:34.064Z",
+      "verification_count": 26,
+      "verified_at": "2026-04-15T00:28:26.726Z",
       "created_at": "2026-03-31T00:00:00.000Z",
       "original_source": null,
       "claim_date": null,
@@ -1048,8 +1107,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_human_rights_exploitation_v1",
-      "verification_count": 18,
-      "verified_at": "2026-04-14T23:11:34.069Z",
+      "verification_count": 21,
+      "verified_at": "2026-04-15T00:28:26.733Z",
       "created_at": "2026-03-31T00:00:00.000Z",
       "original_source": null,
       "claim_date": null,
@@ -1059,8 +1118,8 @@
       "web_search_summary": "```json\n{\n  \"verdict\": \"partial\",\n  \"summary\": \"The claim of over 1,500 civilians killed and up to 3.2 million displaced due to conflict is partially confirmed. While the specific numbers in the claim are plausible for certain recent or ongoing conflicts, global figures for civilian casualties and displacement are significantly higher. For example, in a recent conflict in Iran, over 1,600 civilians were killed and 3.2 million displaced. Globally, civilian deaths in conflict surged by 40% in 2024"
     },
     {
-      "claim_id": "claim_8",
-      "claim_text": "Iranian President Pezeshkian ready to end hostilities if firm guarantees against future domestic strikes received",
+      "claim_id": "claim_9",
+      "claim_text": "American journalist Shelly Kittleson kidnapped in Baghdad, possibly by Iran-backed militia",
       "status": "unverified",
       "confidence_score": 0.325,
       "scoring_breakdown": {
@@ -1076,16 +1135,16 @@
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_political_trust_corruption_v1",
-      "verification_count": 15,
-      "verified_at": "2026-04-14T23:11:34.071Z",
+      "related_axis_id": "axis_power_accountability",
+      "verification_count": 11,
+      "verified_at": "2026-04-14T23:37:04.502Z",
       "created_at": "2026-03-31T00:00:00.000Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
       "dissenting_sources": [],
       "framing_analysis": null,
-      "web_search_summary": "```json\n{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Iranian President Masoud Pezeshkian has stated that Iran is ready to end hostilities if firm guarantees against future domestic strikes are received. He has emphasized that Iran has never sought tension or war but is committed to defending its sovereignty and requires guarantees to prevent a recurrence of aggression. Pezeshkian has also called for an immediate cessation of attacks by opposing forces and has linked a recent ceasefire to Iran's ter"
+      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"American freelance journalist Shelly Kittleson was kidnapped in Baghdad on March 31, 2026, by Kataib Hezbollah, an Iran-backed militia. She was released on April 7, 2026, in a prisoner swap with Iraq, on the condition that she immediately leave the country. U.S. officials had reportedly warned Kittleson of threats against her prior to her abduction.\",\n  \"evidence_urls\": [\n    \"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHghfqMCA4"
     },
     {
       "claim_id": "claim_32",
@@ -1194,8 +1253,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 21,
-      "verified_at": "2026-04-14T23:11:34.067Z",
+      "verification_count": 24,
+      "verified_at": "2026-04-15T00:28:26.730Z",
       "created_at": "2026-03-31T00:00:00.000Z",
       "original_source": null,
       "claim_date": null,
@@ -1263,8 +1322,37 @@
       "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Iran has formally demanded compensation from Saudi Arabia, the UAE, Qatar, and Bahrain (along with Jordan) for their alleged roles in facilitating US-Israeli attacks against Iran. Iran claims these countries breached international obligations by allowing their territories to be used for military actions and, in some cases, directly participating in attacks. This demand was communicated in a letter to the UN Secretary-General and the UN Security Council b"
     },
     {
-      "claim_id": "claim_9",
-      "claim_text": "American journalist Shelly Kittleson kidnapped in Baghdad, possibly by Iran-backed militia",
+      "claim_id": "claim_35",
+      "claim_text": "Russia announces all future oil and gas deals with Europe will be priced in Chinese Yuan.",
+      "status": "unverified",
+      "confidence_score": 0.325,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": "gbx_press",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_global_economic_stability_v1",
+      "verification_count": 4,
+      "verified_at": "2026-04-15T00:28:26.704Z",
+      "created_at": "2026-04-14T23:36:19.791Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": "{\n  \"verdict\": \"refuted\",\n  \"summary\": \"The claim that Russia announced all future oil and gas deals with Europe will be priced in Chinese Yuan is inaccurate. While Russia has been actively seeking to de-dollarize its energy trade and has increased the use of rubles and yuan in deals with countries like China and India, there is no evidence of a blanket announcement stating that all future oil and gas deals with Europe will be priced in Chinese Yuan. Europe has significantly reduced its reliance"
+    },
+    {
+      "claim_id": "claim_8",
+      "claim_text": "Iranian President Pezeshkian ready to end hostilities if firm guarantees against future domestic strikes received",
       "status": "unverified",
       "confidence_score": 0.325,
       "scoring_breakdown": {
@@ -1280,16 +1368,16 @@
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_power_accountability",
-      "verification_count": 10,
-      "verified_at": "2026-04-14T23:11:34.074Z",
+      "related_axis_id": "axis_political_trust_corruption_v1",
+      "verification_count": 18,
+      "verified_at": "2026-04-15T00:28:26.736Z",
       "created_at": "2026-03-31T00:00:00.000Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
       "dissenting_sources": [],
       "framing_analysis": null,
-      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"American freelance journalist Shelly Kittleson was kidnapped in Baghdad on March 31, 2026, by Kataib Hezbollah, an Iran-backed militia. She was released on April 7, 2026, in a prisoner swap with Iraq, on the condition that she immediately leave the country. U.S. officials had reportedly warned Kittleson of threats against her prior to her abduction.\",\n  \"evidence_urls\": [\n    \"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHghfqMCA4"
+      "web_search_summary": "```json\n{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Iranian President Masoud Pezeshkian has stated that Iran is ready to end hostilities if firm guarantees against future domestic strikes are received. He has emphasized that Iran has never sought tension or war but is committed to defending its sovereignty and requires guarantees to prevent a recurrence of aggression. Pezeshkian has also called for an immediate cessation of attacks by opposing forces and has linked a recent ceasefire to Iran's ter"
     },
     {
       "claim_id": "claim_30",
