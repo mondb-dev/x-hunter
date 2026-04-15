@@ -224,7 +224,7 @@ function loadBeliefContext() {
 }
 
 // ── 5. Gemini: classify + draft with full context ─────────────────────────────
-async function geminiClassify(item, threadContext = [], memoryHints = [], userHistory = null, topicAccounts = []) {
+async function geminiClassify(item, threadContext = [], memoryHints = [], userHistory = null, topicAccounts = [], verifiedHints = []) {
   const { getAccessToken, getProjectConfig } = require("../runner/gcp_auth");
   const token = await getAccessToken();
   const { project, location } = getProjectConfig();
@@ -607,7 +607,7 @@ function logInteraction(data, item, replyText, memoryHints) {
 
     let verdict;
     try {
-      verdict = await geminiClassify(item, threadContext, memoryHints, userHistory, topicAccounts);
+      verdict = await geminiClassify(item, threadContext, memoryHints, userHistory, topicAccounts, verifiedHints);
     } catch (err) {
       console.error(`[reply] Gemini error: ${err.message}`);
       item.status = "error";
