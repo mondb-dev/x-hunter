@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-15T17:49:35.886Z",
+  "generated_at": "2026-04-15T18:09:27.730Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-15T17:50:25.679Z",
   "sources": [
@@ -310,6 +310,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.5816145833333334,
           "confidence": 0.08585,
@@ -323,20 +337,6 @@
             "referring_accounts:0",
             "origin_types:1",
             "track_record_unavailable"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
           ]
         }
       },
@@ -1297,7 +1297,7 @@
       "entity": "Cbsnews",
       "kind": "unknown",
       "first_seen_at": "2026-03-27T23:18:50.928Z",
-      "last_seen_at": "2026-04-15T17:32:17.942Z",
+      "last_seen_at": "2026-04-15T17:52:07.500Z",
       "discovery": {
         "distinct_urls": 5,
         "example_urls": [
