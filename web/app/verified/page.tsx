@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { readVerification, VerifiedClaim, ScoringBreakdown } from "../../lib/readVerification";
+import CopyLinkButton from "../../components/CopyLinkButton";
 
 export const dynamic = "force-dynamic";
 
@@ -123,7 +124,7 @@ function ClaimCard({ claim }: { claim: VerifiedClaim }) {
   const tierLabel = TIER_LABELS[tier ?? 5] ?? "Unknown";
 
   return (
-    <div className="verify-claim">
+    <div id={claim.claim_id} className="verify-claim">
       <div className="verify-claim-header">
         <span
           className="verify-claim-status"
@@ -242,6 +243,7 @@ function ClaimCard({ claim }: { claim: VerifiedClaim }) {
         {claim.category && (
           <span className="verify-claim-category">{claim.category.replace(/_/g, " ")}</span>
         )}
+        <CopyLinkButton url={`/verified#${claim.claim_id}`} />
       </div>
     </div>
   );
@@ -260,9 +262,14 @@ export default async function VerifiedPage({
   const params = searchParams ? await searchParams : undefined;
   const { stats, claims } = data;
   const activeFilter = (params?.filter ?? "all") as FilterStatus;
-  const filteredClaims = activeFilter === "all"
-    ? claims
-    : claims.filter((c) => c.status === activeFilter);
+  const filteredClaims = (activeFilter === "all"
+    ? [...claims]
+    : claims.filter((c) => c.status === activeFilter)
+  ).sort((a, b) => {
+    const aDate = a.verified_at ?? a.created_at;
+    const bDate = b.verified_at ?? b.created_at;
+    return new Date(bDate).getTime() - new Date(aDate).getTime();
+  });
 
   const avgConfidence = claims.length
     ? Math.round((claims.reduce((s, c) => s + c.confidence_score, 0) / claims.length) * 100)
@@ -280,8 +287,8 @@ export default async function VerifiedPage({
   return (
     <div className="verify-page">
       <header className="verify-header">
-        <span className="verify-eyebrow">Claim Verification</span>
-        <h1 className="verify-title">Sebastian&apos;s Fact Checks</h1>
+        <span className="verify-eyebrow">Veritas Lens</span>
+        <h1 className="verify-title">Claim Verification</h1>
         <p className="verify-description">
           Claims observed during research, scored for credibility using source tier,
           corroboration, evidence quality, and web search verification.
