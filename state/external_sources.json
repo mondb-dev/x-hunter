@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-15T07:54:19.155Z",
+  "generated_at": "2026-04-15T08:44:12.388Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-15T07:54:51.880Z",
+  "profiled_at": "2026-04-15T08:44:43.575Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -375,7 +375,7 @@
       "first_seen_at": "2026-03-31T09:30:40.000Z",
       "last_seen_at": "2026-04-15T05:39:52.000Z",
       "discovery": {
-        "distinct_urls": 613,
+        "distinct_urls": 615,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -385,9 +385,9 @@
         ],
         "origin_counts": {
           "feed_buffer": 399,
-          "feed_buffer_reply": 243
+          "feed_buffer_reply": 245
         },
-        "distinct_referring_accounts": 299,
+        "distinct_referring_accounts": 300,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:613",
+            "distinct_urls:615",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:299",
+            "referring_accounts:300",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:613",
+            "distinct_urls:615",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:299",
+            "referring_accounts:300",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -647,7 +647,7 @@
       "first_seen_at": "2026-04-04T23:34:51.000Z",
       "last_seen_at": "2026-04-15T02:28:55.847Z",
       "discovery": {
-        "distinct_urls": 13,
+        "distinct_urls": 14,
         "example_urls": [
           "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
           "https://store.steampowered.com/app/3321460?utm_campaign=launching&utm_source=X&utm_term=20260319_traffic&utm_medium=us&utm_content=Trailer_view&twclid=22351un15xjmtu22gjwnjp292d",
@@ -656,16 +656,17 @@
           "https://store.steampowered.com/app/2479810/Gray_Zone_Warfare/?utm_source=X&utm_medium=paid&utm_campaign=US_Phase_2_Traffic&utm_content=GAMEPLAY_LOOP_15sec_FINAL_1x1_CTA3_33_OFF&twclid=2c4pby13s9ks6s1nyr9c6bq6se"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 12,
+          "feed_buffer_reply": 13,
           "feed_buffer": 1
         },
-        "distinct_referring_accounts": 7,
+        "distinct_referring_accounts": 8,
         "sample_referring_accounts": [
           "alexmog_fr",
           "arckonarts",
           "crimsondesert_",
           "fp32ai",
           "grayzonewarfare",
+          "lazyotterco",
           "sid_rpg",
           "y_j_inquisitor"
         ],
@@ -694,7 +695,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:13",
+            "distinct_urls:14",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -702,7 +703,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:7",
+            "referring_accounts:8",
             "origin_types:2"
           ]
         },
@@ -732,10 +733,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:13",
+            "distinct_urls:14",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:7",
+            "referring_accounts:8",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -5376,7 +5377,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T08:38:48.933Z",
+        "fetched_at": "2026-04-15T08:44:42.263Z",
         "homepage_url": "https://app.link/",
         "example_url": "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
         "homepage_status": 404,
@@ -8691,7 +8692,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T08:38:47.571Z",
+        "fetched_at": "2026-04-15T08:44:42.582Z",
         "homepage_url": "https://discord.gg/",
         "example_url": "https://discord.gg/JxPMkH88",
         "homepage_status": 200,
@@ -8813,7 +8814,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T08:38:47.807Z",
+        "fetched_at": "2026-04-15T08:44:42.822Z",
         "homepage_url": "https://ned.org/",
         "example_url": "https://www.ned.org/about/board-of-directors/",
         "homepage_status": 200,
@@ -8935,7 +8936,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T08:38:48.584Z",
+        "fetched_at": "2026-04-15T08:44:43.575Z",
         "homepage_url": "https://dstack.ai/",
         "example_url": "https://sky.dstack.ai/?twclid=22u1vjb44uf96iph6oj89wot7a",
         "homepage_status": 200,
@@ -16835,6 +16836,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.4,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:13",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3472395833333333,
           "confidence": 0.08135,
@@ -16848,6 +16863,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-15T08:19:41.393Z",
+        "homepage_url": "https://github.com/",
+        "example_url": "https://github.com/BlockRunAI/ClawRouter/?twclid=2bnr8zsvp3b72fbw0yuil7yilw",
+        "homepage_status": 200,
+        "example_status": 404,
+        "homepage_final_url": "https://github.com/",
+        "example_final_url": "https://github.com/BlockRunAI/ClawRouter/?twclid=2bnr8zsvp3b72fbw0yuil7yilw",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 13,
+          "opinion_marker": false
         }
       }
     },
@@ -16912,6 +16958,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.23,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3472395833333333,
           "confidence": 0.08135,
@@ -16925,6 +16985,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-15T08:19:41.766Z",
+        "homepage_url": "https://gamedaymath.com/",
+        "example_url": "https://www.gamedaymath.com/pricing?twclid=22wv0ellx5eqlyjtmchr7w8rag",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.gamedaymath.com/",
+        "example_final_url": "https://www.gamedaymath.com/pricing?twclid=22wv0ellx5eqlyjtmchr7w8rag",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
         }
       }
     },
@@ -16989,6 +17080,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.14,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3472395833333333,
           "confidence": 0.08135,
@@ -17002,6 +17107,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-15T08:19:43.065Z",
+        "homepage_url": "https://la28.org/",
+        "example_url": "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=2dvfag01sx2wxc4fmpjts9gb7p",
+        "homepage_status": 200,
+        "example_status": null,
+        "homepage_final_url": "https://la28.org/",
+        "example_final_url": "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=2dvfag01sx2wxc4fmpjts9gb7p",
+        "homepage_content_type": "text/html;charset=utf-8",
+        "example_content_type": "",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 14,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
