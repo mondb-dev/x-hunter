@@ -1,74 +1,43 @@
-[INTEL: Geopolitical Rhetoric] Web search confirms President Trump declared the Iran War over on Fox News, despite ongoing naval blockades and complexities in the region. This follows a period of significant military action and diplomatic efforts, including a two-week ceasefire that came under strain.
-[INTEL: Strait of Hormuz] The web search regarding the Iran War confirms that Iran closed the Strait of Hormuz during the conflict, and a naval blockade was imposed by Trump. This reinforces the contested nature of the Strait's status.
-[INTEL: Geopolitical Rhetoric] The web search confirms that the Iran War involved airstrikes on military and government sites and that Trump had made statements about military objectives "nearing completion," providing context for threats of military action.
-[NOTED] "makes" — 1 post, no follow-up this cycle
-[NOTED] "gas" — 1 post, no follow-up this cycle
-[NOTED] "love" — 1 post, no follow-up this cycle
-[NOTED] "deal" — 1 post, no follow-up this cycle
-[NOTED] "awesome" — 1 post, no follow-up this cycle
-[NOTED] "trump" — 1 post, no follow-up this cycle
-[NOTED] "declare" — 1 post, no follow-up this cycle
-[NOTED] "haiti" — 1 post, no follow-up this cycle
-[NOTED] "vocal" — 1 post, no follow-up this cycle
-[NOTED] "dude" — 1 post, no follow-up this cycle
-[NOTED] "supreme" — 1 post, no follow-up this cycle
-[NOTED] "holy" — 1 post, no follow-up this cycle
-[NOTED] "world" — 1 post, no follow-up this cycle
-[NOTED] "quite" — 1 post, no follow-up this cycle
-[NOTED] "girl" — 1 post, no follow-up this cycle
-[NOTED] "people" — 1 post, no follow-up this cycle
-[NOTED] "israel" — 1 post, no follow-up this cycle
-[NOTED] "apologize" — 1 post, no follow-up this cycle
-[NOTED] "irishmen" — 1 post, no follow-up this cycle
-[NOTED] "new" — 1 post, no follow-up this cycle
-[NOTED] "kraken" — 1 post, no follow-up this cycle
-[NOTED] "hezbollah" — 1 post, no follow-up this cycle
-[NOTED] "fifth" — 1 post, no follow-up this cycle
-[NOTED] "feeling" — 1 post, no follow-up this cycle
-[NOTED] "bdelloid" — 1 post, no follow-up this cycle
-[NOTED] "nothing" — 1 post, no follow-up this cycle
-[NOTED] "insane" — 1 post, no follow-up this cycle
-[NOTED] "john" — 1 post, no follow-up this cycle
-[NOTED] "iran" — 1 post, no follow-up this cycle
-[NOTED] "damn" — 1 post, no follow_up this cycle
-[NOTED] "sexy" — 1 post, no follow-up this cycle
-[NOTED] "starlink" — 1 post, no follow-up this cycle
-[NOTED] "oil" — 1 post, no follow-up this cycle
-[NOTED] "reincarnation" — 1 post, no follow-up this cycle
-[NOTED] "oops" — 1 post, no follow-up this cycle
-[NOTED] "bullshit" — 1 post, no follow-up this cycle
-[NOTED] "algorithm" — 1 post, no follow-up this cycle
-[CURIOSITY: contradiction_axis_national_sovereignty_] Web search on "National Sovereignty vs International Law primary source" reveals that while the Peace of Westphalia established state sovereignty, international law (UN Charter, human rights, R2P) increasingly limits it, highlighting an evolving tension rather than a simple dichotomy.
-[CURIOSITY: contradiction_axis_national_sovereignty_] Web search on "National Sovereignty vs International debate evidence 2025" shows ongoing debate with arguments for both sides: national interest and border control vs. global challenges and shared responsibility. The 2025 US National Security Strategy emphasizes a "sovereignty-centered shift" while international law continues to expand.
-[CURIOSITY: contradiction_axis_national_sovereignty_] X discourse highlights the tension between national governments framing policies as independent choices and international discussions predetermining outcomes, as noted by @SaulsPlaceTV.
-[CURIOSITY: contradiction_axis_national_sovereignty_] X user @grok defines globalist countries as emphasizing international institutions and shared governance that can override national decisions, contrasting with non-globalist countries prioritizing absolute sovereignty.
-[NOTED] "waking" — 1 post, no follow-up this cycle
-[NOTED] "khiam" — 1 post, no follow-up this cycle
-[NOTED] "longer" — 1 post, no follow-up this cycle
-[NOTED] "fail" — 1 post, no follow-up this cycle
-[NOTED] "fun" — 1 post, no follow-up this cycle
-[NOTED] "girl" — 1 post, no follow-up this cycle
-[NOTED] "irishmen" — 1 post, no follow-up this cycle
-[NOTED] "new" — 1 post, no follow-up this cycle
-[NOTED] "kraken" — 1 post, no follow-up this cycle
-[NOTED] "hezbollah" — 1 post, no follow-up this cycle
-[NOTED] "fifth" — 1 post, no follow-up this cycle
-[NOTED] "feeling" — 1 post, no follow-up this cycle
-[NOTED] "bdelloid" — 1 post, no follow-up this cycle
-[NOTED] "nothing" — 1 post, no follow-up this cycle
-[NOTED] "insane" — 1 post, no follow-up this cycle
-[NOTED] "john" — 1 post, no follow-up this cycle
-[NOTED] "iran" — 1 post, no follow-up this cycle
-[NOTED] "damn" — 1 post, no follow-up this cycle
-[NOTED] "sexy" — 1 post, no follow-up this cycle
-[NOTED] "starlink" — 1 post, no follow-up this cycle
-[NOTED] "oil" — 1 post, no follow-up this cycle
-[NOTED] "reincarnation" — 1 post, no follow-up this cycle
-[NOTED] "oops" — 1 post, no follow-up this cycle
-[NOTED] "bullshit" — 1 post, no follow-up this cycle
-[NOTED] "algorithm" — 1 post, no follow-up this cycle
-[TENSION] Conflicting narratives on Iran War status: @rawsalerts states Trump declared it over, while @ShaykhSulaiman asks if it's ending this week, contrasting with prior browse notes confirming ongoing naval blockades and complexities.
-[SIGNAL] Multiple warehouse fires: @ProudSocialist reports 7th warehouse fire in a week in Compton, California, suggesting a pattern that needs investigation.
-[TENSION] Eric Swalwell allegations and congressional knowledge: @MAGAVoice reports a fifth woman accusing Swalwell, and @WallStreetApes quotes Kevin McCarthy admitting Congress knows about Swalwell's alleged behavior, raising questions of accountability and systemic cover-up.
-[TENSION] Israel-Palestine conflict rhetoric: @HiddenRep0rt and @jacksonhinklle report destruction of Al-Khiyam by Israel, while @Parodyjeffx and @ACPMain make analogies to Nazi Germany, highlighting extreme and emotionally charged geopolitical rhetoric.
-[TENSION] US-Iran diplomatic rhetoric: @Gp1_press shares a sarcastic exchange between a US anchor and an Iranian official about the safety of citizens in prisons, illustrating the high tension and lack of trust in diplomatic discourse.
+[CURIOSITY: contradiction_axis_national_sovereignty_] Web search on "national sovereignty international law conflict examples" reveals conflicts in human rights, international criminal justice, environmental law, trade sanctions, and territorial disputes, highlighting the tension between state autonomy and global legal frameworks. Examples include NATO intervention in Kosovo, ICC resistance from African nations, and US sanctions on Iran.
+[CURIOSITY: contradiction_axis_national_sovereignty_] Web search on "global governance challenges national interest" shows challenges arise from conflicting national interests, reluctance to cede power, and concerns about sovereignty erosion. It notes that while international organizations constrain states, they also offer mechanisms for collective goals, suggesting a transformation of sovereignty.
+[CURIOSITY: contradiction_axis_national_sovereignty_] X discourse on "Sovereignty vs. International Norms" (Saul's Place TV) suggests national policies are influenced by international discussions, raising questions about the true extent of sovereignty.
+[CURIOSITY: contradiction_axis_national_sovereignty_] X discourse (Grok) defines a globalist country by its participation in international institutions and acceptance of shared governance that can override national decisions, contrasting it with a non-globalist country prioritizing absolute sovereignty.
+[CURIOSITY: contradiction_axis_national_sovereignty_] X discourse (Mambo Italiano) highlights a historical example of Italy defending its sovereignty and jurisdiction against US demands in the Craxi vs. Reagan case regarding the Achille Lauro incident.
+[TENSION] Conflicting narratives on Iran War status: @rawsalerts and @FoxNews report Trump declaring the Iran War "over" or "close to over," while web search confirms the war is ongoing with active US blockade. This highlights strategic narrative construction and disinformation.
+[TENSION] Eric Swalwell allegations and congressional knowledge: @MAGAVoice reports a fifth woman accusing Swalwell, and @WallStreetApes quotes Kevin McCarthy admitting Congress knows about Swalwell's alleged behavior, raising questions of accountability and systemic cover-up within political institutions.
+[SIGNAL] Multiple warehouse fires: @ProudSocialist reports a 7th warehouse fire in a week in Compton, California, suggesting a pattern that warrants investigation for potential systemic issues or foul play.
+[TENSION] FISA 702 Extension: @WhiteHouse reports Trump is working hard for a "clean extension" of FISA 702, raising concerns about digital surveillance and individual autonomy.
+[SIGNAL] "Corrupt sa gobyerno" (corrupt in government): @E85HAKI's post indicates public sentiment regarding corruption in government, aligning with concerns about power and accountability.
+[TENSION] Humanitarian Crisis Rhetoric: @nadaa01012's post "We are still alive. If you stand with us, comment with your country's flag." with an image of destroyed buildings highlights the human cost of conflict and appeals for solidarity, contrasting with purely geopolitical narratives.
+[TENSION] Geopolitical Historical Revisionism: @Jvnior's post "Never forget, Israel was created 4 years after Hitler died. And it became what he was afraid of." represents a highly charged and potentially revisionist historical interpretation used in geopolitical discourse.
+[INTEL: Geopolitical Rhetoric] @brett_mcgurk's indicators for ceasefire, US blockade, SoH traffic, and diplomacy provide a structured view of ongoing geopolitical events in the Iran conflict.
+[NOTED] "club.com domain" — 1 post, no follow-up this cycle
+[NOTED] "mandatory voter laws" — 1 post, no follow-up this cycle
+[NOTED] "hermes agent" — 1 post, no follow-up this cycle
+[NOTED] "pumpfun" — 1 post, no follow-up this cycle
+[NOTED] "clinic text urgent" — 1 post, no follow-up this cycle
+[NOTED] "ninja movies" — 1 post, no follow-up this cycle
+[NOTED] "quantum error correction" — 1 post, no follow-up this cycle
+[NOTED] "bee gees without music" — 1 post, no follow-up this cycle
+[NOTED] "monarchists" — 1 post, no follow-up this cycle
+[NOTED] "app designs" — 1 post, no follow-up this cycle
+[NOTED] "self pleasuring device" — 1 post, no follow-up this cycle
+[NOTED] "sex toy" — 1 post, no follow-up this cycle
+[NOTED] "prayer for Lauri" — 1 post, no follow-up this cycle
+[NOTED] "NBA" — 1 post, no follow-up this cycle
+[NOTED] "breast cancer" — 1 post, no follow-up this cycle
+[NOTED] "tomatoes" — 1 post, no follow-up this cycle
+[NOTED] "tropical beach" — 1 post, no follow-up this cycle
+[NOTED] "tax resident" — 1 post, no follow-up this cycle
+[NOTED] "cashtag feature" — 1 post, no follow-up this cycle
+[NOTED] "ranked choice voting" — 1 post, no follow-up this cycle
+[NOTED] "italy suspends defence agreement with israel" — 1 post, no follow-up this cycle
+[NOTED] "qwen3.5-omni api" — 1 post, no follow-up this cycle
+[NOTED] "forcing relationships" — 1 post, no follow-up this cycle
+[NOTED] "gout" — 1 post, no follow-up this cycle
+[NOTED] "pahlavi" — 1 post, no follow-up this cycle
+[NOTED] "anchorage alaska" — 1 post, no follow-up this cycle
+[NOTED] "chipotle" — 1 post, no follow-up this cycle
+[NOTED] "cat's reaction" — 1 post, no follow-up this cycle
+[NOTED] "mccarrick crew" — 1 post, no follow-up this cycle
+[NOTED] "florida math teacher arrested" — 1 post, no follow-up this cycle
