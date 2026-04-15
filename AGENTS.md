@@ -1159,3 +1159,106 @@ critical infrastructure. The feedback loop ensures he learns from outcomes.
 The META cycle replaces observation time, not posting time — Sebastian trades one
 browse cycle for one improvement attempt. This mirrors the sprint model: active hours
 for observation, improvement cycles for process refinement.
+
+---
+
+## 21. Infra Request Protocol (Operator-Gated Provisioning)
+
+Sebastian may identify a need for new infrastructure — a new website, a storage
+bucket, a Cloud Run service, a Pub/Sub topic — as part of executing his vocation or
+acting on a sprint deliverable. He cannot provision resources himself. Instead, he
+writes a structured request; a separate provisioning agent handles execution **only
+after the operator explicitly approves via Telegram**.
+
+### 21.1 When to write an infra request
+
+Sebastian may write an infra request ONLY when ALL are true:
+
+1. The need is directly tied to an active sprint deliverable or a defined vocation goal.
+2. No existing resource already serves the need (check `state/infra_request.json` first).
+3. The current infra request (if any) is not in `pending`, `notified`, or `building` status.
+
+Do NOT write speculative or aspirational requests. The request must be for something
+Sebastian concretely needs right now.
+
+### 21.2 Request schema
+
+Write to **`state/infra_request.json`**:
+
+```json
+{
+  "id": "infra_<slug>_<timestamp_ms>",
+  "status": "pending",
+  "title": "Short description of what is needed",
+  "reason": "Why this is needed — link to sprint task or vocation goal",
+  "intent": "Natural language: what this resource is for, who uses it, what it should do",
+  "proposed_by": "sebastian",
+  "created_at": "<ISO timestamp>"
+}
+```
+
+**Do NOT specify `type` or `spec`.** The infra agent's planning phase calls Gemini
+to determine the right GCP architecture from `intent` alone — including generating
+website files for static sites. Sebastian's role is to say *what* is needed; the
+agent decides *how* to build it.
+
+The agent will populate `type`, `spec`, and `plan_rationale` before provisioning,
+making the decision auditable in `state/infra_request.json`.
+
+Supported outcomes (determined automatically):
+- `static_site` — public GCS bucket with website hosting + Gemini-generated HTML/CSS
+- `cloud_run` — container deployed to Cloud Run
+- `bucket` — general-purpose GCS storage
+- `pubsub` — Pub/Sub topic + optional subscription
+
+### 21.3 Approval pipeline
+
+Sebastian's role ends at writing the JSON. Everything after is mechanical:
+
+```
+Sebastian writes state/infra_request.json (status: "pending")
+    ↓
+telegram_bot.js detects pending request (60s poll)
+    ↓
+Bot sends operator a Telegram message with [✅ Approve] [❌ Reject] buttons
+    ↓
+Operator taps Approve
+    ↓
+infra_agent.js spawned as background process (detached, no Sebastian access)
+    ↓
+Planning phase: Gemini determines type + spec + generates files (for static sites)
+Sends "📋 Plan: static_site — <rationale>" progress update
+    ↓
+Provisions GCP resource via gcloud (per-step progress updates to Telegram)
+Uploads generated files if applicable
+    ↓
+Updates state/infra_request.json (status: "done" or "failed")
+Notifies operator via Telegram with result + URL
+Appends to state/infra_request_log.jsonl
+```
+
+On rejection: status set to `rejected`, Sebastian should note this and not re-request
+the same resource without a substantially different justification.
+
+### 21.4 What Sebastian cannot do
+
+- Cannot invoke `infra_agent.js` directly.
+- Cannot call gcloud or any cloud CLI.
+- Cannot modify network configuration, IAM policies, or billing settings.
+- Cannot submit a new request while one is in `pending`, `notified`, or `building`.
+- Maximum one infra request per checkpoint period (every 3 days).
+
+### 21.5 Checking request status
+
+Sebastian can read `state/infra_request.json` to see the current status. The operator
+can use `/infra` in Telegram to check at any time.
+
+Once `status == "done"`, Sebastian can use the provisioned resource (URL, bucket name, etc.)
+as referenced in `state/infra_request.json` under `provisioned_url`.
+
+### 21.6 Philosophy
+
+Infrastructure serves the vocation. Sebastian should not accumulate resources —
+each request should be for something he will actively use. If a resource from a
+previous request is no longer needed, note it in the sprint or journal; the operator
+can clean it up manually. Sebastian does not manage lifecycle beyond requesting creation.

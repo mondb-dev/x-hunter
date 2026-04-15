@@ -43,7 +43,7 @@
 const https = require('https');
 const fs = require('fs');
 const path = require('path');
-const { execSync, execFileSync, spawnSync } = require('child_process');
+const { execSync, execFileSync, spawnSync, spawn } = require('child_process');
 const config = require('./lib/config');
 const { buildPersona, buildCoreContext, callGemini } = require('./lib/sebastian_respond');
 
@@ -58,8 +58,10 @@ const STARTED_AT = new Date();
 const BUILDER_TIMEOUT_MS = 180_000;
 const RECALL_TIMEOUT_MS = 25_000;
 const SYSTEMCTL_BIN = shellPath('systemctl') || '/usr/bin/systemctl';
+const INFRA_CHECK_INTERVAL_MS = 60_000;  // check for pending infra requests every 60s
 
 let lastUpdateId = 0;
+let lastInfraCheckAt = 0;
 
 // ── Telegram helpers ────────────────────────────────────────────────────────
 
@@ -103,6 +105,42 @@ async function sendMessage(text, parseMode = 'HTML') {
   } catch (e) {
     console.log(`[tgbot] send error: ${e.message}`);
   }
+}
+
+/**
+ * Send a message with an inline keyboard. Returns the Telegram message object
+ * (contains message_id needed to edit later).
+ */
+async function sendMessageWithKeyboard(text, inlineKeyboard, parseMode = 'HTML') {
+  try {
+    if (text.length > 4000) text = text.slice(0, 4000) + '\n\n<i>[truncated]</i>';
+    return await telegramAPI('sendMessage', {
+      chat_id: CHAT_ID,
+      text,
+      parse_mode: parseMode,
+      disable_web_page_preview: true,
+      reply_markup: { inline_keyboard: inlineKeyboard },
+    });
+  } catch (e) {
+    console.log(`[tgbot] sendWithKeyboard error: ${e.message}`);
+    return null;
+  }
+}
+
+async function answerCallbackQuery(callbackQueryId, text = '') {
+  try {
+    await telegramAPI('answerCallbackQuery', { callback_query_id: callbackQueryId, text });
+  } catch {}
+}
+
+async function editMessageReplyMarkup(messageId, inlineKeyboard) {
+  try {
+    await telegramAPI('editMessageReplyMarkup', {
+      chat_id: CHAT_ID,
+      message_id: messageId,
+      reply_markup: { inline_keyboard: inlineKeyboard },
+    });
+  } catch {}
 }
 
 async function sendTyping() {
@@ -1246,6 +1284,145 @@ async function chatWithAgent(userMessage) {
   }
 }
 
+// ── Infra request (§21) ──────────────────────────────────────────────────────
+
+function loadInfraRequest() {
+  return readJSON(path.join(config.STATE_DIR, 'infra_request.json'));
+}
+
+function saveInfraRequest(req) {
+  fs.writeFileSync(
+    path.join(config.STATE_DIR, 'infra_request.json'),
+    JSON.stringify(req, null, 2),
+    'utf-8',
+  );
+}
+
+async function cmdInfra() {
+  const req = loadInfraRequest();
+  if (!req) return sendMessage('<b>🏗 Infra</b>\n\n<i>No infra request on file</i>');
+
+  const statusEmoji = {
+    pending: '⏳', notified: '📬', approved: '✅', rejected: '❌',
+    building: '🔧', done: '✅', failed: '💥',
+  }[req.status] || '❓';
+
+  let msg = `<b>🏗 Infra Request</b>\n\n`;
+  msg += `${statusEmoji} <b>${escapeHtml(req.title)}</b>\n`;
+  msg += `Status: <code>${req.status}</code>\n`;
+  msg += `Type: <code>${req.type}</code>\n`;
+  msg += `ID: <code>${req.id}</code>\n`;
+  msg += `Created: ${req.created_at || '?'}\n`;
+  if (req.resolution_note) msg += `\nResult: ${escapeHtml(req.resolution_note)}\n`;
+  if (req.provisioned_url) msg += `URL: <a href="${escapeHtml(req.provisioned_url)}">${escapeHtml(req.provisioned_url)}</a>\n`;
+  if (req.reason) msg += `\n<i>Reason: ${escapeHtml(req.reason)}</i>`;
+
+  await sendMessage(msg);
+}
+
+/**
+ * Check for a pending infra request and notify operator with inline keyboard.
+ * Called on a 60s interval from the poll loop.
+ */
+async function checkPendingInfraRequest() {
+  const req = loadInfraRequest();
+  if (!req || req.status !== 'pending') return;
+
+  console.log(`[tgbot] pending infra request found: ${req.id}`);
+
+  const specLines = Object.entries(req.spec || {})
+    .map(([k, v]) => `  ${escapeHtml(k)}: <code>${escapeHtml(String(v))}</code>`)
+    .join('\n');
+
+  const msg =
+    `📬 <b>Infra Request — Approval Required</b>\n\n` +
+    `<b>${escapeHtml(req.title)}</b>\n` +
+    `Type: <code>${req.type}</code>\n\n` +
+    `<b>Reason:</b>\n${escapeHtml(req.reason || '(not specified)')}\n\n` +
+    (specLines ? `<b>Spec:</b>\n${specLines}\n\n` : '') +
+    `<i>ID: ${req.id}</i>`;
+
+  const keyboard = [[
+    { text: '✅ Approve', callback_data: `infra_approve_${req.id}` },
+    { text: '❌ Reject',  callback_data: `infra_reject_${req.id}` },
+  ]];
+
+  const sent = await sendMessageWithKeyboard(msg, keyboard);
+  const msgId = sent?.result?.message_id || null;
+
+  // Mark as notified so we don't re-send
+  req.status = 'notified';
+  req.notified_at = new Date().toISOString();
+  if (msgId) req.tg_message_id = msgId;
+  saveInfraRequest(req);
+}
+
+/**
+ * Handle inline keyboard callbacks for infra approve/reject.
+ */
+async function handleCallbackQuery(cq) {
+  // Only respond to our authorized chat
+  if (String(cq.message?.chat?.id) !== String(CHAT_ID)) {
+    await answerCallbackQuery(cq.id);
+    return;
+  }
+
+  const data = cq.data || '';
+  console.log(`[tgbot] callback_query: ${data}`);
+
+  if (data.startsWith('infra_approve_') || data.startsWith('infra_reject_')) {
+    const isApprove = data.startsWith('infra_approve_');
+    const requestedId = data.replace(/^infra_(approve|reject)_/, '');
+
+    const req = loadInfraRequest();
+    if (!req || req.id !== requestedId) {
+      await answerCallbackQuery(cq.id, 'Request not found or already resolved.');
+      return;
+    }
+    if (req.status !== 'notified' && req.status !== 'pending') {
+      await answerCallbackQuery(cq.id, `Already ${req.status}.`);
+      return;
+    }
+
+    if (isApprove) {
+      req.status = 'approved';
+      req.approved_at = new Date().toISOString();
+      saveInfraRequest(req);
+
+      await answerCallbackQuery(cq.id, '✅ Approved — provisioning started');
+
+      // Remove keyboard from original message
+      if (req.tg_message_id) await editMessageReplyMarkup(req.tg_message_id, []);
+
+      await sendMessage(`✅ <b>Infra request approved</b>\n\n<b>${escapeHtml(req.title)}</b>\n\nProvisioning now...`);
+
+      // Spawn infra_agent.js as a detached background process
+      const agentPath = path.join(__dirname, 'infra_agent.js');
+      const child = spawn(process.execPath, [agentPath], {
+        detached: true,
+        stdio: 'ignore',
+        env: process.env,
+      });
+      child.unref();
+      console.log(`[tgbot] infra_agent spawned (pid ${child.pid})`);
+
+    } else {
+      req.status = 'rejected';
+      req.resolved_at = new Date().toISOString();
+      req.resolution_note = 'Rejected by operator via Telegram';
+      saveInfraRequest(req);
+
+      await answerCallbackQuery(cq.id, '❌ Rejected');
+      if (req.tg_message_id) await editMessageReplyMarkup(req.tg_message_id, []);
+      await sendMessage(`❌ <b>Infra request rejected</b>\n\n<b>${escapeHtml(req.title)}</b>`);
+    }
+    return;
+  }
+
+  // Unknown callback — just acknowledge
+  await answerCallbackQuery(cq.id);
+}
+
 // ── Helpers ─────────────────────────────────────────────────────────────────
 
 function escapeHtml(str) {
@@ -1284,6 +1461,7 @@ async function handleMessage(msg) {
     case '/journal':  return cmdJournal();
     case '/vocation': return cmdVocation();
     case '/builder':  return cmdBuilder(text);
+    case '/infra':    return cmdInfra();
     case '/vm':       return cmdVM();
     case '/errors':   return cmdErrors();
     case '/drift':    return cmdDrift();
@@ -1315,6 +1493,7 @@ async function handleMessage(msg) {
       '/drift — recent drift alerts\n' +
       '/builder — active builder proposal\n' +
       '/builder ask ... — ask builder about the active proposal\n' +
+      '/infra — current infra request status\n' +
       '\n<b>Control:</b>\n' +
       '/restart browser|runner|gateway|scraper|all\n' +
       '/pause — pause orchestrator\n' +
@@ -1335,7 +1514,7 @@ async function poll() {
     const result = await telegramAPI('getUpdates', {
       offset: lastUpdateId + 1,
       timeout: 30,  // long-poll: Telegram holds connection for 30s
-      allowed_updates: ['message'],
+      allowed_updates: ['message', 'callback_query'],
     });
 
     if (result.ok && result.result && result.result.length > 0) {
@@ -1343,8 +1522,19 @@ async function poll() {
         lastUpdateId = update.update_id;
         if (update.message) {
           await handleMessage(update.message);
+        } else if (update.callback_query) {
+          await handleCallbackQuery(update.callback_query);
         }
       }
+    }
+
+    // Periodic infra request check (every INFRA_CHECK_INTERVAL_MS)
+    const now = Date.now();
+    if (now - lastInfraCheckAt >= INFRA_CHECK_INTERVAL_MS) {
+      lastInfraCheckAt = now;
+      await checkPendingInfraRequest().catch(e =>
+        console.log(`[tgbot] infra check error: ${e.message}`),
+      );
     }
   } catch (e) {
     console.log(`[tgbot] poll error: ${e.message}`);

@@ -78,6 +78,10 @@ module.exports = {
   PROCESS_REFLECTION_STATE_PATH: path.join(STATE_DIR, 'process_reflection_state.json'),
   META_LAST_RUN_PATH: path.join(STATE_DIR, 'meta_last_run.txt'),
   META_FAILURE_STATE_PATH: path.join(STATE_DIR, 'meta_failure_count.json'),
+
+  // Infra request (§21 — operator-approved provisioning)
+  INFRA_REQUEST_PATH: path.join(STATE_DIR, 'infra_request.json'),
+  INFRA_REQUEST_LOG_PATH: path.join(STATE_DIR, 'infra_request_log.jsonl'),
   STAGING_DIR: path.join(PROJECT_ROOT, 'staging'),
 
   // Tool system
