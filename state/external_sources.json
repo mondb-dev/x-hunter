@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-15T04:34:07.818Z",
+  "generated_at": "2026-04-15T05:24:15.958Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-15T04:34:40.100Z",
+  "profiled_at": "2026-04-15T05:24:47.398Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-15T04:18:56.583Z",
+      "last_seen_at": "2026-04-15T04:48:55.990Z",
       "discovery": {
-        "distinct_urls": 604,
+        "distinct_urls": 608,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,10 +384,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 392,
-          "feed_buffer_reply": 241
+          "feed_buffer": 395,
+          "feed_buffer_reply": 242
         },
-        "distinct_referring_accounts": 295,
+        "distinct_referring_accounts": 296,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:604",
+            "distinct_urls:608",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:295",
+            "referring_accounts:296",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:604",
+            "distinct_urls:608",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:295",
+            "referring_accounts:296",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -511,7 +511,7 @@
       "first_seen_at": "2026-04-03T01:20:27.000Z",
       "last_seen_at": "2026-04-14T21:31:31.000Z",
       "discovery": {
-        "distinct_urls": 70,
+        "distinct_urls": 71,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,10 +520,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 68,
+          "feed_buffer_reply": 69,
           "feed_buffer": 2
         },
-        "distinct_referring_accounts": 56,
+        "distinct_referring_accounts": 57,
         "sample_referring_accounts": [
           "100ohiostate",
           "afk500595388855",
@@ -561,7 +561,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:70",
+            "distinct_urls:71",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -569,7 +569,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:56",
+            "referring_accounts:57",
             "origin_types:2"
           ]
         },
@@ -599,17 +599,17 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:70",
+            "distinct_urls:71",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:56",
+            "referring_accounts:57",
             "origin_types:2",
             "track_record_unavailable"
           ]
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T05:08:45.348Z",
+        "fetched_at": "2026-04-15T05:24:46.169Z",
         "homepage_url": "https://grok.com/",
         "example_url": "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
         "homepage_status": 200,
@@ -778,7 +778,7 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-15T03:46:00.233Z",
+      "last_seen_at": "2026-04-15T05:00:38.858Z",
       "discovery": {
         "distinct_urls": 62,
         "example_urls": [
@@ -3763,7 +3763,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T05:08:45.619Z",
+        "fetched_at": "2026-04-15T05:24:46.447Z",
         "homepage_url": "https://britannica.com/",
         "example_url": "https://www.britannica.com/event/2026-Iran-War",
         "homepage_status": 403,
@@ -4633,7 +4633,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T05:08:46.183Z",
+        "fetched_at": "2026-04-15T05:24:47.052Z",
         "homepage_url": "https://georgetown.edu/",
         "example_url": "https://gjia.georgetown.edu/2026/03/26/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
         "homepage_status": 200,
@@ -4984,7 +4984,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:19",
+            "outbound_links:20",
             "opinion_marker:false"
           ]
         },
@@ -5004,7 +5004,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T05:08:46.530Z",
+        "fetched_at": "2026-04-15T05:24:47.398Z",
         "homepage_url": "https://ajc.org/",
         "example_url": "https://www.ajc.org/news/the-iran-strikes-explained-how-we-got-here-and-what-it-means",
         "homepage_status": 200,
@@ -5030,7 +5030,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 19,
+          "outbound_links_count": 20,
           "opinion_marker": false
         }
       }
@@ -16344,6 +16344,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.28,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3472395833333333,
           "confidence": 0.08135,
@@ -16357,6 +16371,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-15T04:59:40.274Z",
+        "homepage_url": "https://theepochtimes.com/",
+        "example_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.theepochtimes.com/",
+        "example_final_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 22,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -16421,6 +16466,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.33999999999999997,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:21",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3472395833333333,
           "confidence": 0.08135,
@@ -16434,6 +16493,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-15T04:59:42.001Z",
+        "homepage_url": "https://bimzelxhcp.com/",
+        "example_url": "https://www.bimzelxhcp.com/rheumatology/Psoriatic-Arthritis/Zero-In-On-Domains?utm_medium=paid_social&utm_source=x&utm_campaign=phm_BKZHCPRheum&utm_content=Awareness-KW&utm_term=PSA_ZeroEndpoints_US_BK_2500818&utm_id=23850502164480094&twclid=2dvpthvevxfli7pfaji92p3iqa",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.bimzelxhcp.com/",
+        "example_final_url": "https://www.bimzelxhcp.com/rheumatology/Psoriatic-Arthritis/Zero-In-On-Domains?utm_medium=paid_social&utm_source=x&utm_campaign=phm_BKZHCPRheum&utm_content=Awareness-KW&utm_term=PSA_ZeroEndpoints_US_BK_2500818&utm_id=23850502164480094&twclid=2dvpthvevxfli7pfaji92p3iqa",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 22,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 21,
+          "opinion_marker": false
         }
       }
     },
