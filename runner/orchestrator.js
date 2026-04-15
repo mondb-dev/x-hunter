@@ -391,17 +391,14 @@ function runOneCycle() {
     cycleType = cadence.next_cycle_type;
     log(`cadence override: ${cycleType} (consecutive: ${cadence.consecutive_overrides})`);
     consumeOverride(); // consume so it doesn't repeat
-    // Block TWEET overrides — only QUOTE and BROWSE allowed
-    if (cycleType === 'TWEET') {
-      log('TWEET override blocked (regular tweets disabled) — running BROWSE');
-      cycleType = 'BROWSE';
-    }
   } else if (cadence.post_eagerness === 'suppress') {
     // Suppress mode: always browse, never initiate posts
     cycleType = 'BROWSE';
   } else {
-    // Default: QUOTE on offset cycles (max 2/day enforced in postQuoteTweet), BROWSE otherwise
-    if (cycle % config.TWEET_EVERY === config.QUOTE_OFFSET) {
+    // Default: TWEET every TWEET_EVERY cycles, QUOTE at offset, BROWSE otherwise
+    if (cycle % config.TWEET_EVERY === 0) {
+      cycleType = 'TWEET';
+    } else if (cycle % config.TWEET_EVERY === config.QUOTE_OFFSET) {
       cycleType = 'QUOTE';
     } else {
       cycleType = 'BROWSE';
