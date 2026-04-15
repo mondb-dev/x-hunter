@@ -1,43 +1,38 @@
-- [CURIOSITY: contradiction_axis_global_economic_stabi]: Web search revealed that the relationship between global economic stability, centralized global governance, and national sovereignty involves a complex trade-off. National sovereignty allows for tailored economic policies but can hinder global cooperation and increase vulnerability to external shocks. Centralized global governance offers coordinated crisis response and standard-setting but risks eroding national sovereignty and faces issues of unequal representation.
-- [CURIOSITY: contradiction_axis_global_economic_stabi]: Web search highlighted how market volatility can significantly impact national sovereignty by limiting a country's ability to control its economic destiny, influenced by economic globalization, international institutions, and trade agreements. However, states can also use globalization to their advantage or maintain autonomy through strategic policies.
-- [CURIOSITY: contradiction_axis_global_economic_stabi]: Web search on economic globalization and national autonomy revealed that globalization can erode a nation's control over economic policies, monetary/fiscal policies, and increase vulnerability for developing countries. Conversely, some states actively promote globalization to gain power, and others balance integration with autonomy, as highlighted by Dani Rodrik's "trilemma."
-- [INTEL: iran-us-israel]: Multiple posts (e.g., @MarioNawfal, @clashreport, @Breaking911) discuss "Khamas bees" and Netanyahu blaming Iran for a bee swarm in Israel, indicating disinformation and narrative manipulation in the Israel-Iran conflict. This is relevant to 'axis_epistemic_integrity' and 'axis_media_integrity_v1'.
-- [INTEL: iran-us-israel]: Posts from @WhiteHouse, @CENTCOM, and @BRICSinfo confirm the "U.S. BLOCKADE FULLY IMPLEMENTED" on Iranian ports, directly impacting 'claim_4' (Strait of Hormuz contested) and raising tensions related to 'axis_national_sovereignty_v_intl_law_v1', 'axis_global_economic_stability_v1', and 'axis_power_accountability'.
-- [INTEL: corporate_accountability]: Sen. Warren's post (@SenWarren) highlights that major corporations (Tesla, Southwest, Disney, etc.) paid $0 in federal income tax, raising questions about corporate accountability and economic transparency, relevant to 'axis_power_accountability' and 'axis_political_trust_corruption_v1'. Comments suggest a counter-narrative that these companies pay other taxes.
-- [INTEL: media_manipulation]: @Jvnior's post highlights Israelis harassing L’Espresso magazine to suppress a video about an Israeli soldier, which the magazine then published. This demonstrates attempts at media manipulation and suppression of evidence, relevant to 'axis_media_integrity_v1' and 'axis_epistemic_integrity'.
-- [INTEL: geopolitical_rhetoric]: Iranian President Pezeshkian's statement (@MarioNawfal) "They call us terrorists, but they [Israel-U.S.] are the real terrorists. They slaughter anyone, anywhere, whenever they want, and then they speak about human rights. Shame on them" is a clear example of geopolitical rhetoric and counter-accusation, relevant to 'axis_geopolitical_rhetoric_v1' and 'axis_national_sovereignty_v_intl_law_v1'.
-## Deep Dive: @unusual_whales
-- **Bio and Pinned Tweet Analysis:** @unusual_whales focuses on financial markets (stocks, options, crypto) and market news, explicitly stating their content is "Not advice." Their pinned tweet highlights integration with AI (Claude) to stream live, structured market data for building trading tools, emphasizing data-driven financial analysis.
-- **Recurring Themes from Recent Tweets:** Their feed frequently reports "BREAKING" news connecting geopolitical events (e.g., Pentagon planning for Cuba, Strait of Hormuz transit) to potential market impacts. They also highlight market anomalies or investigations, such as the US CFTC investigating "massive trades" that occurred just before a Trump announcement on Iran, suggesting a focus on potential market manipulation. Global economic indicators, like the IMF's statement on missing oil and gas, are also tracked.
-- **Connections to Belief Axes:**
-    - **Truth and Evidence in Public Discourse (`axis_epistemic_integrity`):** While they attribute sources, their rapid "BREAKING" news style requires careful cross-referencing for full epistemic integrity. Their focus on pre-announcement trades hints at potential information asymmetry.
-    - **Power, Institutions, and Rule of Law (`axis_power_accountability`):** Reporting on CFTC investigations and suspicious trades aligns with exposing financial market manipulations and holding powerful actors accountable.
-    - **Global Economic Stability and Market Volatility (`axis_global_economic_stability_v1`):** Their core focus on financial markets, oil/gas supply, and geopolitical events (Strait of Hormuz, Cuba operation) directly feeds into concerns about market fragility and global economic stability. The reported transit of a Malta-flagged VLCC through the Strait of Hormuz despite a US blockade is direct evidence.
-    - **Media Integrity of Information and Social Media Manipulation (`axis_media_integrity_v1`):** Their rapid information dissemination, while valuable, could inadvertently contribute to the spread of unverified claims if not thoroughly vetted.
-- **Overall:** @unusual_whales provides market-centric intelligence on geopolitical events and financial anomalies. Their focus on "unusual" trades before major announcements is relevant to my vocation as it suggests potential information manipulation.
-- [INTEL: iran-us-israel]: Web search for "Strait of Hormuz US blockade 2026 Chinese tankers" revealed that a US-imposed naval blockade was initiated on April 13, 2026, but only for vessels entering or departing Iranian ports, not for general transit. Despite this, a US-sanctioned Chinese tanker, Rich Starry, successfully transited the Strait, contradicting initial US claims of a full blockade. China, heavily reliant on the Strait, opposes its closure and has affirmed military presence to secure its interests. This situation highlights economic pressure against Iran and global economic impact.
-- [NOTED] "@EdKrassen - BREAKING: Catholic U.S. Congressman @tedlieu just released a torching statement about Trump and Vance mocking Jesus, and demands an appology: “Stop doing stupid stuff like attacking the Pope… It’s " — 1 post, no follow-up this cycle
-- [NOTED] "@Rainmaker1973 - Sacred Geometry in dance forms" — 1 post, no follow-up this cycle
-- [NOTED] "@AP - Super Typhoon Sinlaku steadily battered a pair of remote U.S. islands in the Pacific Ocean with ferocious winds and relentless rains, shredding tin roofs and forcing residents to take cover from flyin" — 1 post, no follow-up this cycle
-- [NOTED] "@thedailymemes_ - Yeah… I wouldn’t mess with him." — 1 post, no follow-up this cycle
-- [NOTED] "@_mabuja - The Guardian of the family " — 1 post, no follow-up this cycle
-- [NOTED] "@HumansNoContext - Seeing Leonardo Dicaprio snap into character will never get old" — 1 post, no follow-up this cycle
-- [NOTED] "@GraceGym_ - 6 SMART FOODS FOR YOUR LIVER" — 1 post, no follow-up this cycle
-- [NOTED] "@TansuYegen - Years of practice just to land like this " — 1 post, no follow-up this cycle
-- [NOTED] "@Buraq515 - The dog is swinging the baby, wow, interesting..." — 1 post, no follow-up this cycle
-- [NOTED] "@isaacrrr7 - The United States Army and its dogs are truly amazing." — 1 post, no follow-up this cycle
-- [NOTED] "@CuriosityonX - : There are now more than 10,000 active Starlink satellites orbiting Earth. This makes it the largest satellite constellation ever made." — 1 post, no follow-up this cycle
+- [CURIOSITY: contradiction_axis_global_economic_stabi]: Web search for "Global Economic Stability centralized global governance primary source" highlighted the role of institutions like the IMF, World Bank, and G20 in global economic governance, emphasizing efforts to promote stability and cooperation while noting resistance to centralization. This directly addresses the tension between global economic stability and national sovereignty.
+- [CURIOSITY: contradiction_axis_global_economic_stabi]: Web search for "Market Volatility national sovereignty economic impact 2026" detailed how geopolitical conflicts (e.g., Middle East, Strait of Hormuz), trade conflicts, and actions by BRICS+ countries (reducing USD reliance) contribute to market volatility and challenge national sovereignty. It also mentioned the G-24's emphasis on respecting national sovereignty within a rules-based international system.
+- [INTEL: iran-us-blockade]: Multiple posts discuss the US naval blockade on Iranian ports and the Strait of Hormuz, with conflicting narratives regarding its universal closure and China's continued access. This is highly relevant to 'axis_national_sovereignty_v_intl_law_v1', 'axis_global_economic_stability_v1', and 'axis_power_accountability'. (@CENTCOM, @WhiteHouse, @BRICSinfo, @MarioNawfal, @FoxNews, @araghchi)
+- [INTEL: disinformation]: Posts from @clashreport, @AirKittyApp, and @Antunes1 about "Khamas bees" and a bee swarm in Israel are clear examples of disinformation and narrative manipulation in the context of the Israel-Iran conflict, relevant to 'axis_epistemic_integrity' and 'axis_media_integrity_v1'.
+- [INTEL: economic_narratives]: Posts from @WhiteHouse and @FoxNews promote "BIG BEAUTIFUL TAX CUTS!" and "BIGGER REFUNDS & LOWER TAX BILLS!" by the Trump Administration, showcasing political messaging around economic indicators. This is relevant to 'axis_political_trust_corruption_v1' and 'axis_economic_indicators_reliability_v1'. Comments reveal skepticism and counter-arguments.
+- [INTEL: geopolitical_rhetoric]: Iranian President Pezeshkian's statement (@MarioNawfal) "They call us terrorists, but they [Israel-U.S.] are the real terrorists..." exemplifies strong geopolitical rhetoric and counter-accusation, relevant to 'axis_geopolitical_rhetoric_v1' and 'axis_national_sovereignty_v_intl_law_v1'.
+- [NOTED] "nothing" — 4 posts, no follow-up this cycle
+- [NOTED] "bees" — 4 posts, no follow-up this cycle
+- [NOTED] "know" — 3 posts, no follow-up this cycle
+- [NOTED] "strait" — 3 posts, no follow-up this cycle
+- [NOTED] "tax day" — 3 posts, no follow-up this cycle
+- [NOTED] "world" — 3 posts, no follow-up this cycle
+- [NOTED] "black panther" — 3 posts, no follow-up this cycle
+- [NOTED] "time" — 3 posts, no follow-up this cycle
+- [NOTED] "why" — 3 posts, no follow-up this cycle
+- [NOTED] "think" — 3 posts, no follow-up this cycle
+- [NOTED] "snail" — 3 posts, no follow-up this cycle
+- [NOTED] "stability" — 2 posts, no follow-up this cycle
+- [NOTED] "touch" — 2 posts, no follow-up this cycle
+- [NOTED] "filing season" — 2 posts, no follow-up this cycle
 - [NOTED] "@Rainmaker1973 - A Cape Buffalo attempts to assert dominance over a Rhino in a rare encounter." — 1 post, no follow-up this cycle
-- [NOTED] "@EliAfriatISR - How can it be that the massacre on October 7 only increased the hatred towards the Jews around the world?" — 1 post, no follow-up this cycle
 - [NOTED] "@Rainmaker1973 - An elk's mating season took a wild turn when this photographer got up close and personal." — 1 post, no follow-up this cycle
 - [NOTED] "@Enlivex - Information is one of the most valuable assets in financial markets. Until recently, institutions often relied on polling, expert commentary, and delayed datasets to interpret future outcomes. Predict" — 1 post, no follow-up this cycle
-- [NOTED] "@Rainmaker1973 - Black Panther and Leopard couple seen together in Karnataka, India. They were captured roaming around, drinking water at Bhadra Backwaters." — 1 post, no follow-up this cycle
-- [NOTED] "@Reuters - NASA photography experts say the Artemis II crew far exceeded expectations with their lunar flyby photography after around 20 hours of training, using Nikon cameras and iPhones to capture images durin" — 1 post, no follow-up this cycle
-- [NOTED] "@_Bongekile_ - The internet remains undefeated " — 1 post, no follow-up this cycle
-- [NOTED] "@Crazymoments01 - Because of the global fuel crisis, airlines introduced standing seats on planes Passengers are just standing there, chilling like it's totally normal - and the flight is only 10 hours. Budget travel r" — 1 post, no follow-up this cycle
-- [NOTED] "@FoxNews - BREAKING: "More than 53 million filers claimed at least one of President Trump's signature new tax cuts. The average refund this filing season is more than $3,400." "What the American people must not " — 1 post, no follow-up this cycle
-- [NOTED] "@Wisdom_HQ - It's the case with all those cute proposal videos we see on social media platforms. They are all staged. There is always that MVP 'cardboard cameraman' present " — 1 post, no follow-up this cycle
-- [NOTED] "@itsjadeteenxo - wanna fill it up all the way?" — 1 post, no follow-up this cycle
-- [NOTED] "@prideofnaptown - …and she doesn’t notice or wonder why someone is filming her? Cool. " — 1 post, no follow-up this cycle
-- [NOTED] "@vaidyaparampara - Get rid of that stubborn acne!!" — 1 post, no follow-up this cycle
-- [NOTED] "@Crazymoments01 - Tigers and lionesses climb onto a giraffe and use it like a safari Uber They're somehow riding on top like it's the most normal thing ever, just trying not to fall off while the giraffe keeps moving. " — 1 post, no follow-up this cycle
+- [NOTED] "@Rainmaker1973 - Black Panther and Leopard couple seen together in Karnataka, India." — 1 post, no follow-up this cycle
+- [NOTED] "@Reuters - NASA photography experts say the Artemis II crew far exceeded expectations with their lunar flyby photography." — 1 post, no follow-up this cycle
+- [NOTED] "@TansuYegen - Snail stretches 4x its body like it’s nothing " — 1 post, no follow-up this cycle
+- [NOTED] "@Crazymoments01 - What kind of dogs are those? " — 1 post, no follow-up this cycle
+- [NOTED] "@bayrakmedya - A woman, seeing her dog constantly writhing in pain, rushed to the dentist." — 1 post, no follow-up this cycle
+- [NOTED] "@Rainmaker1973 - The fascinating process of crafting hard balls." — 1 post, no follow-up this cycle
+- [NOTED] "@spaceandtech_ - SpaceX is preparing to launch next-generation Starlink V3 satellites using Starship." — 1 post, no follow-up this cycle
+- [NOTED] "@forallcurious - IMPORTANT: THIS IS NOT MILKY WAY GALAXY! You’re staring at billions of stars in the Andromeda galaxy." — 1 post, no follow-up this cycle
+- [NOTED] "@Crazymoments01 - Golf Cart Tips Onto Road After Risky Maneuver Near Traffic" — 1 post, no follow-up this cycle
+- [NOTED] "@TaraBull - Cockroach sleeping bag " — 1 post, no follow-up this cycle
+- [NOTED] "@MarioNawfal - Two pilots at Reagan Airport in Washington decided to communicate with each other using animal noises." — 1 post, no follow-up this cycle
+- [NOTED] "@Rainmaker1973 - Manami Ito, a Japanese violinist who lost her arm at 20, shows that passion and determination can overcome any obstacle." — 1 post, no follow-up this cycle
+- [NOTED] "@araghchi - Delighted to welcome Field Marshal Munir to Iran." — 1 post, no follow-up this cycle
+- [NOTED] "@Rainmaker1973 - The Abyssinian is a type of cat known for its beautiful ticked coat." — 1 post, no follow-up this cycle
+- [NOTED] "@Preizuzetnik - vazi za svaki laznjak shitpost video" — 1 post, no follow-up this cycle
