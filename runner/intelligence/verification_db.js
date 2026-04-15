@@ -57,6 +57,19 @@ db.exec(`
   CREATE INDEX IF NOT EXISTS idx_cv_status ON claim_verifications(status);
   CREATE INDEX IF NOT EXISTS idx_cv_score  ON claim_verifications(confidence_score);
   CREATE INDEX IF NOT EXISTS idx_audit_claim ON claim_audit_log(claim_id);
+`);
+
+// ── Schema migrations (idempotent) ─────────────────────────────────────────
+for (const col of [
+  "ALTER TABLE claim_verifications ADD COLUMN watch_tweet_url TEXT",
+  "ALTER TABLE claim_verifications ADD COLUMN watch_posted_at TEXT",
+  "ALTER TABLE claim_verifications ADD COLUMN resolution_tweet_url TEXT",
+  "ALTER TABLE claim_verifications ADD COLUMN resolution_posted_at TEXT",
+]) {
+  try { db.exec(col); } catch {} // SQLITE_ERROR = column exists — safe to ignore
+}
+
+db.exec(`
 
   CREATE VIRTUAL TABLE IF NOT EXISTS cv_fts USING fts5(
     claim_id UNINDEXED,
@@ -181,6 +194,42 @@ const stmts = {
   markExpired: db.prepare(`
     UPDATE claim_verifications SET status = 'expired', updated_at = ? WHERE claim_id = ?
   `),
+
+  setWatchTweetUrl: db.prepare(`
+    UPDATE claim_verifications
+    SET watch_tweet_url = ?, watch_posted_at = ?, updated_at = ?
+    WHERE claim_id = ?
+  `),
+
+  setResolutionTweetUrl: db.prepare(`
+    UPDATE claim_verifications
+    SET resolution_tweet_url = ?, resolution_posted_at = ?, updated_at = ?
+    WHERE claim_id = ?
+  `),
+
+  // Candidates for watch-signal: unverified, has a source URL to quote, not yet watch-posted
+  getWatchCandidates: db.prepare(`
+    SELECT * FROM claim_verifications
+    WHERE  status = 'unverified'
+      AND  watch_tweet_url IS NULL
+      AND  confidence_score >= 0.45
+      AND  related_axis_id IS NOT NULL
+      AND  source_handle IS NOT NULL
+      AND  original_source IS NOT NULL
+    ORDER  BY confidence_score DESC
+    LIMIT  10
+  `),
+
+  // Candidates for resolution post: verdict in, confidence high, watch tweet exists
+  getResolutionCandidates: db.prepare(`
+    SELECT * FROM claim_verifications
+    WHERE  status IN ('supported', 'refuted')
+      AND  confidence_score >= 0.65
+      AND  watch_tweet_url IS NOT NULL
+      AND  resolution_tweet_url IS NULL
+    ORDER  BY confidence_score DESC
+    LIMIT  10
+  `),
 };
 
 // ── Public helpers ──────────────────────────────────────────────────────────
@@ -279,6 +328,24 @@ function markExpired(claimId) {
   }
 }
 
+function setWatchTweetUrl(claimId, url) {
+  const now = new Date().toISOString();
+  stmts.setWatchTweetUrl.run(url, now, now, claimId);
+}
+
+function setResolutionTweetUrl(claimId, url) {
+  const now = new Date().toISOString();
+  stmts.setResolutionTweetUrl.run(url, now, now, claimId);
+}
+
+function getWatchCandidates() {
+  return stmts.getWatchCandidates.all().map(parseRow);
+}
+
+function getResolutionCandidates() {
+  return stmts.getResolutionCandidates.all().map(parseRow);
+}
+
 function parseRow(row) {
   row.scoring_breakdown = row.scoring_breakdown ? JSON.parse(row.scoring_breakdown) : {};
   row.evidence_urls = row.evidence_urls ? JSON.parse(row.evidence_urls) : [];
@@ -339,6 +406,10 @@ module.exports = {
   getAuditLog,
   markTweetPosted,
   markExpired,
+  setWatchTweetUrl,
+  setResolutionTweetUrl,
+  getWatchCandidates,
+  getResolutionCandidates,
   recallVerifications,
   runTransaction,
 };

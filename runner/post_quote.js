@@ -30,8 +30,12 @@ const {
 } = require("./post_result");
 
 const ROOT        = path.resolve(__dirname, "..");
-const DRAFT_FILE  = path.join(ROOT, "state", "quote_draft.txt");
-const RESULT_FILE = path.join(ROOT, "state", "quote_result.txt");
+const DRAFT_FILE  = process.env.DRAFT_FILE
+  ? path.resolve(ROOT, process.env.DRAFT_FILE)
+  : path.join(ROOT, "state", "quote_draft.txt");
+const RESULT_FILE = process.env.RESULT_FILE
+  ? path.resolve(ROOT, process.env.RESULT_FILE)
+  : path.join(ROOT, "state", "quote_result.txt");
 const ATTEMPT_FILE = path.join(ROOT, "state", "quote_attempt.json");
 const CYCLE = Number.parseInt(process.env.CYCLE_NUMBER || "", 10) || null;
 

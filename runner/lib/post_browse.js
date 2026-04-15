@@ -145,6 +145,37 @@ function postBrowse({ cycle, today, hour }) {
     }
   }
 
+  // ── 4c-verification. Post verification watch/resolution quote if ready ─
+  runScript(path.join(PROJECT_ROOT, 'runner/post_verification.js'));
+  const vDraftPath = path.join(config.STATE_DIR, 'verification_draft.txt');
+  const vMetaPath  = path.join(config.STATE_DIR, 'verification_meta.json');
+  if (fs.existsSync(vDraftPath) && fs.statSync(vDraftPath).size > 0) {
+    if (isXSuppressed('quote')) {
+      log(`verification quote suppressed (${suppressionReason('quote')})`);
+    } else {
+      const { postVerificationQuote } = require('./post');
+      const { ensureBrowser } = require('./browser');
+      ensureBrowser();
+      const vResult = postVerificationQuote({ today, hour });
+      if (vResult.posted && vResult.claim_id) {
+        log(`Verification ${vResult.type} quote posted: ${vResult.quoteUrl}`);
+        // Update verification DB with the resulting tweet URL
+        try {
+          const { loadVerificationDb } = require('./db_backend');
+          const vdb = loadVerificationDb();
+          if (vResult.type === 'watch' && typeof vdb.setWatchTweetUrl === 'function') {
+            vdb.setWatchTweetUrl(vResult.claim_id, vResult.quoteUrl);
+          } else if (vResult.type === 'resolution' && typeof vdb.setResolutionTweetUrl === 'function') {
+            vdb.setResolutionTweetUrl(vResult.claim_id, vResult.quoteUrl);
+          }
+        } catch (e) { log(`verification DB update failed (non-fatal): ${e.message}`); }
+      }
+    }
+    // Clean up draft regardless of outcome (post_verification.js will re-select next cycle)
+    try { fs.unlinkSync(vDraftPath); } catch {}
+    try { fs.unlinkSync(vMetaPath);  } catch {}
+  }
+
   // ── 4d. Predictive prompt (max 1/day, only when 3+ axes drifting) ───
   runScript(path.join(PROJECT_ROOT, 'runner/predictive_prompt.js'));
 

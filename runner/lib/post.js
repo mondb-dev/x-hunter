@@ -802,6 +802,85 @@ function postLandmarkSpecialTweet({ today, hour }) {
   return { posted: true, tweetUrl: tweetUrl || null };
 }
 
+// ── postVerificationQuote ────────────────────────────────────────────────────
+/**
+ * Post a verification watch or resolution quote-tweet.
+ * Reads state/verification_draft.txt (written by post_verification.js).
+ * Uses post_quote.js with DRAFT_FILE env var pointing to the verification draft
+ * so as NOT to interfere with the agent's normal quote_draft.txt slot.
+ *
+ * @param {{ today: string, hour: string }} opts
+ * @returns {{ posted: boolean, quoteUrl: string|null, type: string|null }}
+ */
+function postVerificationQuote({ today, hour }) {
+  const vDraftPath = path.join(config.STATE_DIR, 'verification_draft.txt');
+  const vMetaPath  = path.join(config.STATE_DIR, 'verification_meta.json');
+
+  if (!exists(vDraftPath)) return { posted: false, quoteUrl: null, type: null };
+
+  if (isXSuppressed('quote')) {
+    log('X quote suppression active — skipping verification quote');
+    return { posted: false, quoteUrl: null, type: null };
+  }
+
+  // Read meta for type (watch|resolution) and claim_id
+  let meta = { claim_id: null, type: 'watch' };
+  try { meta = JSON.parse(readFile(vMetaPath)); } catch {}
+
+  // Dedup: check content matches something posted in last 2 hours
+  const draftContent = readFile(vDraftPath);
+  const quoteContent = draftContent.split('\n').slice(1).join(' ').trim();
+  if (isDuplicatePost(quoteContent)) {
+    log('DEDUP: verification quote content matches recent post — skipping');
+    try { fs.unlinkSync(vDraftPath); } catch {}
+    return { posted: false, quoteUrl: null, type: null };
+  }
+
+  log(`Posting verification ${meta.type} quote (claim: ${meta.claim_id})...`);
+
+  // Use RESULT_FILE=state/verification_result.txt to avoid clobbering quote_result.txt
+  const vResultPath = path.join(config.STATE_DIR, 'verification_result.txt');
+  try { clearFile(vResultPath); } catch {}
+
+  const attempt = runNodeDetailed('post_quote.js', '', {
+    DRAFT_FILE:  'state/verification_draft.txt',
+    RESULT_FILE: 'state/verification_result.txt',
+    CYCLE_NUMBER: '',
+  });
+  logScriptOutput(attempt.output);
+
+  const quoteUrl = readFile(vResultPath).trim();
+  if (isConfirmedStatusUrl(quoteUrl)) {
+    try { fs.unlinkSync(vDraftPath); } catch {}
+    try { fs.unlinkSync(vMetaPath);  } catch {}
+
+    const { logVerification } = require('../posts_log');
+    const draftLines = draftContent.split('\n').map(l => l.trim()).filter(Boolean);
+    const sourceUrl  = draftLines[0] || '';
+    const content    = draftLines.slice(1).filter(l => !l.startsWith('https://')).join(' ');
+    logVerification({
+      claim_id: meta.claim_id,
+      source_url: sourceUrl,
+      content,
+      tweet_url: quoteUrl,
+      date: today,
+      verification_type: meta.type,
+    });
+
+    log(`Verification ${meta.type} posted: ${quoteUrl}`);
+    return { posted: true, quoteUrl, type: meta.type, claim_id: meta.claim_id };
+  }
+
+  if (attempt.ok) {
+    log('Verification quote returned without confirmed URL — leaving draft for retry');
+  } else {
+    log(`Verification quote failed: ${attempt.error}`);
+    try { fs.unlinkSync(vDraftPath); } catch {}
+    try { fs.unlinkSync(vMetaPath);  } catch {}
+  }
+  return { posted: false, quoteUrl: null, type: meta.type };
+}
+
 module.exports = {
   postRegularTweet,
   postQuoteTweet,
@@ -809,6 +888,7 @@ module.exports = {
   postSimpleTweet,
   postSignalTweet,
   postVerificationTweet,
+  postVerificationQuote,
   postPredictionTweet,
   postLandmarkSpecialTweet,
 };

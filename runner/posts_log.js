@@ -166,4 +166,36 @@ function logSignal({ content, tweet_url, date, cycle, spike_count, strength, axe
   console.log(`[posts_log] logged signal (${spike_count} axes, ${strength})`);
 }
 
-module.exports = { logTweet, logQuote, logArticle, logSignal };
+module.exports = { logTweet, logQuote, logArticle, logSignal, logVerification };
+
+/**
+ * Append a verification post entry (watch signal or resolution).
+ * type: 'verification_watch' | 'verification_resolution'
+ */
+function logVerification({ claim_id, source_url, content, tweet_url, date, cycle, verification_type }) {
+  const log = readLog();
+  // Dedup: same claim_id + same type already logged today
+  const todayStr = new Date().toISOString().slice(0, 10);
+  const dup = log.posts.find(p =>
+    (p.type === 'verification_watch' || p.type === 'verification_resolution') &&
+    p.claim_id === claim_id &&
+    p.type === ('verification_' + verification_type) &&
+    (p.posted_at || '').startsWith(todayStr)
+  );
+  if (dup) {
+    console.log(`[posts_log] DEDUP — ${verification_type} for ${claim_id} already logged today`);
+    return;
+  }
+  log.posts.push({
+    type: 'verification_' + verification_type,
+    claim_id: claim_id || null,
+    source_url: source_url || '',
+    content,
+    tweet_url: tweet_url || '',
+    date: date || new Date().toISOString().slice(0, 10),
+    cycle: cycle || null,
+    posted_at: new Date().toISOString(),
+  });
+  writeLog(log);
+  console.log(`[posts_log] logged verification ${verification_type} for ${claim_id}`);
+}
