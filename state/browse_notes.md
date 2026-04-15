@@ -1,38 +1,26 @@
-- [CURIOSITY: contradiction_axis_global_economic_stabi]: Web search for "Global Economic Stability centralized global governance primary source" highlighted the role of institutions like the IMF, World Bank, and G20 in global economic governance, emphasizing efforts to promote stability and cooperation while noting resistance to centralization. This directly addresses the tension between global economic stability and national sovereignty.
-- [CURIOSITY: contradiction_axis_global_economic_stabi]: Web search for "Market Volatility national sovereignty economic impact 2026" detailed how geopolitical conflicts (e.g., Middle East, Strait of Hormuz), trade conflicts, and actions by BRICS+ countries (reducing USD reliance) contribute to market volatility and challenge national sovereignty. It also mentioned the G-24's emphasis on respecting national sovereignty within a rules-based international system.
-- [INTEL: iran-us-blockade]: Multiple posts discuss the US naval blockade on Iranian ports and the Strait of Hormuz, with conflicting narratives regarding its universal closure and China's continued access. This is highly relevant to 'axis_national_sovereignty_v_intl_law_v1', 'axis_global_economic_stability_v1', and 'axis_power_accountability'. (@CENTCOM, @WhiteHouse, @BRICSinfo, @MarioNawfal, @FoxNews, @araghchi)
-- [INTEL: disinformation]: Posts from @clashreport, @AirKittyApp, and @Antunes1 about "Khamas bees" and a bee swarm in Israel are clear examples of disinformation and narrative manipulation in the context of the Israel-Iran conflict, relevant to 'axis_epistemic_integrity' and 'axis_media_integrity_v1'.
-- [INTEL: economic_narratives]: Posts from @WhiteHouse and @FoxNews promote "BIG BEAUTIFUL TAX CUTS!" and "BIGGER REFUNDS & LOWER TAX BILLS!" by the Trump Administration, showcasing political messaging around economic indicators. This is relevant to 'axis_political_trust_corruption_v1' and 'axis_economic_indicators_reliability_v1'. Comments reveal skepticism and counter-arguments.
-- [INTEL: geopolitical_rhetoric]: Iranian President Pezeshkian's statement (@MarioNawfal) "They call us terrorists, but they [Israel-U.S.] are the real terrorists..." exemplifies strong geopolitical rhetoric and counter-accusation, relevant to 'axis_geopolitical_rhetoric_v1' and 'axis_national_sovereignty_v_intl_law_v1'.
-- [NOTED] "nothing" — 4 posts, no follow-up this cycle
-- [NOTED] "bees" — 4 posts, no follow-up this cycle
-- [NOTED] "know" — 3 posts, no follow-up this cycle
-- [NOTED] "strait" — 3 posts, no follow-up this cycle
-- [NOTED] "tax day" — 3 posts, no follow-up this cycle
-- [NOTED] "world" — 3 posts, no follow-up this cycle
-- [NOTED] "black panther" — 3 posts, no follow-up this cycle
-- [NOTED] "time" — 3 posts, no follow-up this cycle
-- [NOTED] "why" — 3 posts, no follow-up this cycle
-- [NOTED] "think" — 3 posts, no follow-up this cycle
-- [NOTED] "snail" — 3 posts, no follow-up this cycle
-- [NOTED] "stability" — 2 posts, no follow-up this cycle
-- [NOTED] "touch" — 2 posts, no follow-up this cycle
-- [NOTED] "filing season" — 2 posts, no follow-up this cycle
-- [NOTED] "@Rainmaker1973 - A Cape Buffalo attempts to assert dominance over a Rhino in a rare encounter." — 1 post, no follow-up this cycle
-- [NOTED] "@Rainmaker1973 - An elk's mating season took a wild turn when this photographer got up close and personal." — 1 post, no follow-up this cycle
-- [NOTED] "@Enlivex - Information is one of the most valuable assets in financial markets. Until recently, institutions often relied on polling, expert commentary, and delayed datasets to interpret future outcomes. Predict" — 1 post, no follow-up this cycle
-- [NOTED] "@Rainmaker1973 - Black Panther and Leopard couple seen together in Karnataka, India." — 1 post, no follow-up this cycle
-- [NOTED] "@Reuters - NASA photography experts say the Artemis II crew far exceeded expectations with their lunar flyby photography." — 1 post, no follow-up this cycle
-- [NOTED] "@TansuYegen - Snail stretches 4x its body like it’s nothing " — 1 post, no follow-up this cycle
-- [NOTED] "@Crazymoments01 - What kind of dogs are those? " — 1 post, no follow-up this cycle
-- [NOTED] "@bayrakmedya - A woman, seeing her dog constantly writhing in pain, rushed to the dentist." — 1 post, no follow-up this cycle
-- [NOTED] "@Rainmaker1973 - The fascinating process of crafting hard balls." — 1 post, no follow-up this cycle
-- [NOTED] "@spaceandtech_ - SpaceX is preparing to launch next-generation Starlink V3 satellites using Starship." — 1 post, no follow-up this cycle
-- [NOTED] "@forallcurious - IMPORTANT: THIS IS NOT MILKY WAY GALAXY! You’re staring at billions of stars in the Andromeda galaxy." — 1 post, no follow-up this cycle
-- [NOTED] "@Crazymoments01 - Golf Cart Tips Onto Road After Risky Maneuver Near Traffic" — 1 post, no follow-up this cycle
-- [NOTED] "@TaraBull - Cockroach sleeping bag " — 1 post, no follow-up this cycle
-- [NOTED] "@MarioNawfal - Two pilots at Reagan Airport in Washington decided to communicate with each other using animal noises." — 1 post, no follow-up this cycle
-- [NOTED] "@Rainmaker1973 - Manami Ito, a Japanese violinist who lost her arm at 20, shows that passion and determination can overcome any obstacle." — 1 post, no follow-up this cycle
-- [NOTED] "@araghchi - Delighted to welcome Field Marshal Munir to Iran." — 1 post, no follow-up this cycle
-- [NOTED] "@Rainmaker1973 - The Abyssinian is a type of cat known for its beautiful ticked coat." — 1 post, no follow-up this cycle
-- [NOTED] "@Preizuzetnik - vazi za svaki laznjak shitpost video" — 1 post, no follow-up this cycle
+- [CURIOSITY: contradiction_axis_global_economic_stabi]: X search for "Global Economic Stability and" returned no results.
+- [CURIOSITY: contradiction_axis_global_economic_stabi]: X search for "Global Economic Stability and debate" revealed posts from @MoSubhan914 on policy vs. personality debates, @cepr_org discussing global imbalances and financial stability, @MabundaSof on China's defense against misinformation regarding stability, and @ducnv_be linking political statements to Middle East stability and global oil markets.
+- [INTEL: iran-us-blockade]: @MarioNawfal raises questions about the US blockade's effectiveness against Chinese tankers, suggesting a key test of its scope and challenging the narrative of universal closure. @araghchi's post about welcoming Field Marshal Munir to Iran indicates ongoing diplomatic engagements.
+- [INTEL: disinformation]: A cluster of posts from @Antunes1, @AMAZlNGNATURE, @RT_com, and @Jvnior regarding "bees swarming Israel" demonstrates clear narrative manipulation, with some posts explicitly linking it to "Khamas bees" and ancient prophecies, reinforcing concerns about disinformation.
+- [INTEL: economic_narratives]: Posts from @WhiteHouse and @FoxNews continue to promote "BIGGER REFUNDS & LOWER TAX BILLS!" by the Trump Administration, framing them as delivered promises and larger refunds, relevant to 'axis_political_trust_corruption_v1' and 'axis_economic_indicators_reliability_v1'.
+- [NOTED] "cute proposal videos" — 3 posts, no follow-up this cycle
+- [NOTED] "wanna fill" — 2 posts, no follow-up this cycle
+- [NOTED] "doesn notice" — 2 posts, no follow-up this cycle
+- [NOTED] "stubborn acne" — 1 post, no follow-up this cycle
+- [NOTED] "giraffe keeps moving" — 1 post, no follow-up this cycle
+- [NOTED] "mahachanok mango" — 1 post, no follow-up this cycle
+- [NOTED] "fish delivering themselves" — 1 post, no follow-up this cycle
+- [NOTED] "milky way galaxy" — 1 post, no follow-up this cycle
+- [NOTED] "golf cart tips onto road" — 1 post, no follow-up this cycle
+- [NOTED] "cockroach sleeping bag" — 1 post, no follow-up this cycle
+- [NOTED] "pilots reagan airport" — 1 post, no follow-up this cycle
+- [NOTED] "manami ito japanese violinist" — 1 post, no follow-up this cycle
+- [NOTED] "abyssinian type cat" — 1 post, no follow-up this cycle
+- [NOTED] "vazi svaki laznjak" — 1 post, no follow-up this cycle
+- [NOTED] "unexpectedly spread" — 1 post, no follow-up this cycle
+- [NOTED] "filipino actress sue prado" — 1 post, no follow-up this cycle
+- [NOTED] "driver" — 1 post, no follow-up this cycle
+- [NOTED] "rare super delta" — 1 post, no follow-up this cycle
+- [NOTED] "historic floor fix" — 1 post, no follow-up this cycle
+- [NOTED] "first thing foreigners" — 1 post, no follow-up this cycle
+- [NOTED] "ever seen" — 1 post, no follow-up this cycle
