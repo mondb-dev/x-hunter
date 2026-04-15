@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-15T05:24:15.958Z",
+  "generated_at": "2026-04-15T06:14:09.232Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-15T05:24:47.398Z",
+  "profiled_at": "2026-04-15T06:14:40.215Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -509,9 +509,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-14T21:31:31.000Z",
+      "last_seen_at": "2026-04-15T00:26:26.000Z",
       "discovery": {
-        "distinct_urls": 71,
+        "distinct_urls": 72,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -520,10 +520,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 69,
+          "feed_buffer_reply": 70,
           "feed_buffer": 2
         },
-        "distinct_referring_accounts": 57,
+        "distinct_referring_accounts": 58,
         "sample_referring_accounts": [
           "100ohiostate",
           "afk500595388855",
@@ -561,7 +561,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:71",
+            "distinct_urls:72",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -569,7 +569,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:57",
+            "referring_accounts:58",
             "origin_types:2"
           ]
         },
@@ -599,10 +599,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:71",
+            "distinct_urls:72",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:57",
+            "referring_accounts:58",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1615,16 +1615,16 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.56,
+          "confidence": 0.75,
           "basis": [
-            "meta_author:false",
+            "meta_author:true",
             "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:2",
             "opinion_marker:false"
           ]
         },
@@ -1644,7 +1644,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T06:08:46.417Z",
+        "fetched_at": "2026-04-15T06:14:38.775Z",
         "homepage_url": "https://framia.pro/",
         "example_url": "https://framia.pro/?utm_source=x&utm_campaign=twitter_adsmarch_framia_14_20260331&utm_medium=paid_social&twclid=2e6c8vey7aaz8sdwedu4gd0jgx",
         "homepage_status": 200,
@@ -1654,23 +1654,23 @@
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
-          "has_meta_author": false,
+          "has_meta_author": true,
           "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 2,
           "opinion_marker": false
         },
         "example": {
-          "has_meta_author": false,
+          "has_meta_author": true,
           "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 2,
           "opinion_marker": false
         }
       }
@@ -5376,7 +5376,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T06:08:46.577Z",
+        "fetched_at": "2026-04-15T06:14:38.972Z",
         "homepage_url": "https://anymark.co/",
         "example_url": "https://anymark.co/?utm_source=x&utm_campaign=x771&twclid=293t0nesyim9m91au5fqoaj5s8",
         "homepage_status": 200,
@@ -5746,7 +5746,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T06:08:46.881Z",
+        "fetched_at": "2026-04-15T06:14:39.372Z",
         "homepage_url": "https://rice.edu/",
         "example_url": "https://news.rice.edu/news/2026/more-dangerous-and-unpredictable-experts-discuss-ongoing-iran-conflict",
         "homepage_status": null,
@@ -5868,7 +5868,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T06:08:47.945Z",
+        "fetched_at": "2026-04-15T06:14:40.215Z",
         "homepage_url": "https://moderndiplomacy.eu/",
         "example_url": "https://moderndiplomacy.eu/2026/03/06/alone-under-fire-irans-partners-step-back-as-war-intensifies/",
         "homepage_status": 200,
@@ -16524,6 +16524,83 @@
           "has_corrections_link": false,
           "outbound_links_count": 21,
           "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "netbird.io",
+      "entity": "Netbird Io",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-14T08:38:53.000Z",
+      "last_seen_at": "2026-04-14T08:38:53.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://netbird.io/knowledge-hub/expose-command?utm_campaign=x-netbird-expose-non-eu&twclid=2d8u7bef0hoyccx1tucq6gyfty"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "netbird"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
         }
       }
     },
