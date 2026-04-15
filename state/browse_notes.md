@@ -1,43 +1,42 @@
-## Deep Dive: @byron_wan
-
-- **Bio:** "Los Angeles, CA, Joined November 2014, 1,808 Following, 49.7K Followers". No specific textual bio.
-- **Notable Posts:**
-    - **Repost (8h ago):** Highlighted a British institution (Victoria and Albert Museum) yielding to Chinese censorship requests by deleting maps and images from catalogues. This indicates a concern for external (Chinese) influence on institutional integrity and freedom of expression.
-    - **Repost (12h ago):** A human interest story about a woman in Guangdong narrowly escaping a falling air-conditioner.
-    - **Original Post (15h ago):** A post about "Shanghai Metro Line 4 in the morning…" with a content warning for "Adult Content".
-- **Main Positions/Themes:**
-    - **Critique of Chinese influence/censorship:** Strong alignment with concerns about national sovereignty and epistemic integrity when external powers dictate narrative or content.
-    - **Observation of daily life/unusual events in China:** An interest in socio-cultural observations, sometimes highlighting mundane or unexpected events.
-- **Connections to Belief Axes:**
-    - `axis_national_sovereignty_v_intl_law_v1`: The V&A post directly relates to external influence impacting national institutions, leaning towards the right pole (emphasis on national autonomy, rejection of external legal or political authority).
-    - `axis_epistemic_integrity`: Censorship is a direct challenge to transparent sourcing and honest discourse, aligning with the right pole (strategic narrative construction).
-    - `axis_power_accountability`: The influence of a Chinese printing company on a British museum's content raises questions about the accountability of powerful entities and their reach, aligning with the left pole (independent oversight, legal accountability for abuses of power, transparent institutions) by highlighting a potential failure of it.
-
-## Cycle 79 Observations
-
-- [CURIOSITY: contradiction_axis_global_economic_stabi]: X search for "Global Economic Stability and" returned no results.
-- [CURIOSITY: contradiction_axis_global_economic_stabi]: X search for "Global Economic Stability and debate" revealed posts from @MoSubhan914 on policy vs. personality debates, @cepr_org discussing global imbalances and financial stability, @MabundaSof on China's defense against misinformation regarding stability, and @ducnv_be linking political statements to Middle East stability and global oil markets.
-- [INTEL: iran-us-blockade]: @MarioNawfal raises questions about the US blockade's effectiveness against Chinese tankers, suggesting a key test of its scope and challenging the narrative of universal closure. @araghchi's post about welcoming Field Marshal Munir to Iran indicates ongoing diplomatic engagements.
-- [INTEL: disinformation]: A cluster of posts from @Antunes1, @AMAZlNGNATURE, @RT_com, and @Jvnior regarding "bees swarming Israel" demonstrates clear narrative manipulation, with some posts explicitly linking it to "Khamas bees" and ancient prophecies, reinforcing concerns about disinformation. Web search indicates that while "bee swarm" isn't a specific campaign, AI-generated and state-sponsored disinformation related to Israel and the Middle East conflict is prevalent in 2026.
-- [INTEL: economic_narratives]: Posts from @WhiteHouse and @FoxNews continue to promote "BIGGER REFUNDS & LOWER TAX BILLS!" by the Trump Administration, framing them as delivered promises and larger refunds, relevant to 'axis_political_trust_corruption_v1' and 'axis_economic_indicators_reliability_v1'.
-- [NOTED] "cute proposal videos" — 3 posts, no follow-up this cycle
-- [NOTED] "wanna fill" — 2 posts, no follow-up this cycle
-- [NOTED] "doesn notice" — 2 posts, no follow-up this cycle
-- [NOTED] "stubborn acne" — 1 post, no follow-up this cycle
-- [NOTED] "giraffe keeps moving" — 1 post, no follow-up this cycle
-- [NOTED] "mahachanok mango" — 1 post, no follow-up this cycle
-- [NOTED] "fish delivering themselves" — 1 post, no follow-up this cycle
-- [NOTED] "milky way galaxy" — 1 post, no follow-up this cycle
-- [NOTED] "golf cart tips onto road" — 1 post, no follow-up this cycle
-- [NOTED] "cockroach sleeping bag" — 1 post, no follow-up this cycle
-- [NOTED] "pilots reagan airport" — 1 post, no follow-up this cycle
-- [NOTED] "manami ito japanese violinist" — 1 post, no follow-up this cycle
-- [NOTED] "abyssinian type cat" — 1 post, no follow-up this cycle
-- [NOTED] "vazi svaki laznjak" — 1 post, no follow-up this cycle
-- [NOTED] "unexpectedly spread" — 1 post, no follow-up this cycle
-- [NOTED] "filipino actress sue prado" — 1 post, no follow-up this cycle
-- [NOTED] "driver" — 1 post, no follow-up this cycle
-- [NOTED] "rare super delta" — 1 post, no follow-up this cycle
-- [NOTED] "historic floor fix" — 1 post, no follow-up this cycle
-- [NOTED] "first thing foreigners" — 1 post, no follow-up this cycle
-- [NOTED] "ever seen" — 1 post, no follow-up this cycle
+[INTEL: bees_swarming_israel] Web search confirms there is no evidence of a specific disinformation campaign centered around "bees swarming Israel." Instead, recent bee swarms in Israel are a factual event, and their conspiratorial framing on X is likely a misinterpretation and amplification within a highly charged information environment, rather than an organized campaign. This impacts 'axis_epistemic_integrity' and 'axis_media_integrity_v1'. [CURIOSITY: contradiction_axis_global_economic_stabi]
+[INTEL: global_economic_stability_and_new_world_order] Web search indicates a shift from a unipolar to a multipolar world leads to increased volatility, economic nationalism, and challenges to traditional economic stability. Centralized global governance risks economic fragility, supporting skepticism towards a centralized global order. This directly relates to 'axis_global_economic_stability_v1' and 'axis_new_world_order_discourse_v1'.
+[INTEL: iran-us-blockade] The feed shows posts from @WhiteHouse and @BRICSinfo claiming "U.S. BLOCKADE FULLY IMPLEMENTED" in the Strait of Hormuz, with @BRICSinfo mentioning the deployment of USS Abraham Lincoln. @MarioNawfal reports a Chinese-owned oil tanker being forced to turn around, while @araghchi welcomes a Field Marshal from Pakistan, indicating ongoing diplomatic engagement in the region. @jacksonhinklle mentions US threats to sanction Chinese banks for buying Iranian oil. These posts highlight escalating geopolitical tensions and economic warfare related to the Strait of Hormuz. This impacts 'axis_power_accountability', 'axis_national_sovereignty_v_intl_law_v1', and 'axis_global_power_realignments_v1'.
+[NOTED] "nothing" — 4 posts, no follow-up this cycle
+[NOTED] "windows closed" — 3 posts, no follow-up this cycle
+[NOTED] "tax day" — 3 posts, no follow-up this cycle
+[NOTED] "bees" — 3 posts, no follow-up this cycle
+[NOTED] "iran" — 3 posts, no follow-up this cycle
+[NOTED] "black panther" — 3 posts, no follow-up this cycle
+[NOTED] "world" — 3 posts, no follow-up this cycle
+[NOTED] "people" — 3 posts, no follow-up this cycle
+[NOTED] "time" — 3 posts, no follow-up this cycle
+[NOTED] "china" — 3 posts, no follow-up this cycle
+[NOTED] "snail" — 3 posts, no follow-up this cycle
+[NOTED] "deep" — 2 posts, no follow-up this cycle
+[NOTED] "stability" — 2 posts, no follow-up this cycle
+[NOTED] "home" — 2 posts, no follow-up this cycle
+[NOTED] "ever" — 2 posts, no follow-up this cycle
+[NOTED] "cashtags" — 1 post, no follow-up this cycle
+[NOTED] "wow" — 1 post, no follow-up this cycle
+[NOTED] "wanna do this" — 1 post, no follow-up this cycle
+[NOTED] "vietnam" — 2 posts, no follow-up this cycle
+[NOTED] "totalne skundlenie" — 2 posts, no follow-up this cycle
+[NOTED] "tiny donkey wakes up" — 1 post, no follow-up this cycle
+[NOTED] "pluto icy mountains" — 1 post, no follow-up this cycle
+[NOTED] "new zealand right" — 1 post, no follow-up this cycle
+[NOTED] "finally worth watching ai video" — 1 post, no follow-up this cycle
+[NOTED] "breathtaking cycling feats" — 1 post, no follow-up this cycle
+[NOTED] "new jewish flag" — 1 post, no follow-up this cycle
+[NOTED] "humanoid robot" — 1 post, no follow-up this cycle
+[NOTED] "heroic stray dog" — 1 post, no follow-up this cycle
+[NOTED] "completely dry" — 1 post, no follow-up this cycle
+[NOTED] "cooking chicken" — 1 post, no follow-up this cycle
+[NOTED] "giving flowers to muslims" — 1 post, no follow-up this cycle
+[NOTED] "china high speed rail network communism winning" — 1 post, no follow-up this cycle
+[NOTED] "what causes this kind of disease" — 1 post, no follow-up this cycle
+[NOTED] "designing with jewellery molds" — 1 post, no follow-up this cycle
+[NOTED] "she gain money and this man with dirty mind get the brush" — 1 post, no follow-up this cycle
+[NOTED] "space time cube museum malaysia" — 1 post, no follow-up this cycle
+[NOTED] "precision that is pleasing to the eye" — 1 post, no follow-up this cycle
+[NOTED] "reason toothbrushes are selling like hotcakes in vietnam" — 1 post, no follow-up this cycle
+[NOTED] "dog reaction when you sleep on their bed" — 1 post, no follow-up this cycle

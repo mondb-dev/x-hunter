@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-15T20:09:31.229Z",
+  "generated_at": "2026-04-15T21:29:34.481Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-15T19:10:00.719Z",
+  "profiled_at": "2026-04-15T21:30:05.516Z",
   "sources": [
     {
       "domain": "cbp.gov",
@@ -757,9 +757,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-15T13:07:37.000Z",
+      "last_seen_at": "2026-04-15T20:03:36.000Z",
       "discovery": {
-        "distinct_urls": 83,
+        "distinct_urls": 84,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -768,10 +768,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 80,
+          "feed_buffer_reply": 81,
           "feed_buffer": 3
         },
-        "distinct_referring_accounts": 68,
+        "distinct_referring_accounts": 69,
         "sample_referring_accounts": [
           "100ohiostate",
           "afk500595388855",
@@ -809,7 +809,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:83",
+            "distinct_urls:84",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -817,7 +817,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:68",
+            "referring_accounts:69",
             "origin_types:2"
           ]
         },
@@ -847,10 +847,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:83",
+            "distinct_urls:84",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:68",
+            "referring_accounts:69",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -893,9 +893,9 @@
       "entity": "Steampowered",
       "kind": "unknown",
       "first_seen_at": "2026-04-04T23:34:51.000Z",
-      "last_seen_at": "2026-04-15T02:28:55.847Z",
+      "last_seen_at": "2026-04-15T15:54:53.000Z",
       "discovery": {
-        "distinct_urls": 14,
+        "distinct_urls": 15,
         "example_urls": [
           "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
           "https://store.steampowered.com/app/3321460?utm_campaign=launching&utm_source=X&utm_term=20260319_traffic&utm_medium=us&utm_content=Trailer_view&twclid=22351un15xjmtu22gjwnjp292d",
@@ -904,13 +904,14 @@
           "https://store.steampowered.com/app/2479810/Gray_Zone_Warfare/?utm_source=X&utm_medium=paid&utm_campaign=US_Phase_2_Traffic&utm_content=GAMEPLAY_LOOP_15sec_FINAL_1x1_CTA3_33_OFF&twclid=2c4pby13s9ks6s1nyr9c6bq6se"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 13,
+          "feed_buffer_reply": 14,
           "feed_buffer": 1
         },
-        "distinct_referring_accounts": 8,
+        "distinct_referring_accounts": 9,
         "sample_referring_accounts": [
           "alexmog_fr",
           "arckonarts",
+          "blindspot_games",
           "crimsondesert_",
           "fp32ai",
           "grayzonewarfare",
@@ -943,7 +944,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:14",
+            "distinct_urls:15",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -951,7 +952,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:8",
+            "referring_accounts:9",
             "origin_types:2"
           ]
         },
@@ -981,10 +982,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:14",
+            "distinct_urls:15",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:8",
+            "referring_accounts:9",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1297,7 +1298,7 @@
       "entity": "Cbsnews",
       "kind": "unknown",
       "first_seen_at": "2026-03-27T23:18:50.928Z",
-      "last_seen_at": "2026-04-15T19:51:14.566Z",
+      "last_seen_at": "2026-04-15T21:11:35.608Z",
       "discovery": {
         "distinct_urls": 5,
         "example_urls": [
@@ -3529,7 +3530,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T21:29:01.884Z",
+        "fetched_at": "2026-04-15T21:30:04.482Z",
         "homepage_url": "https://jpost.com/",
         "example_url": "https://jpost.com/",
         "homepage_status": 200,
@@ -5426,6 +5427,131 @@
       }
     },
     {
+      "domain": "ironclaw.com",
+      "entity": "Ironclaw",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-03T20:17:54.000Z",
+      "last_seen_at": "2026-04-15T01:40:00.000Z",
+      "discovery": {
+        "distinct_urls": 4,
+        "example_urls": [
+          "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=2axdpb938w7qafe76dwca4od5q",
+          "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=22j1nmfmrt96ryd46ylnh0myhl",
+          "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=29ttgzvj74nppybjq6f5b473d",
+          "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=29j7j373qr6a58vj9xn1pzzmqk"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 4
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "near_ai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.17666666666666664,
+          "basis": [
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.09,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:9",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3663802083333333,
+          "confidence": 0.16722499999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-13T02:04:08.303Z",
+        "homepage_url": "https://ironclaw.com/",
+        "example_url": "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=2axdpb938w7qafe76dwca4od5q",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.ironclaw.com/",
+        "example_final_url": "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=2axdpb938w7qafe76dwca4od5q",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 9,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 9,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "georgetown.edu",
       "entity": "Georgetown",
       "kind": "unknown",
@@ -6044,130 +6170,6 @@
       }
     },
     {
-      "domain": "ironclaw.com",
-      "entity": "Ironclaw",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-03T20:17:54.000Z",
-      "last_seen_at": "2026-04-14T19:18:59.000Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=2axdpb938w7qafe76dwca4od5q",
-          "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=22j1nmfmrt96ryd46ylnh0myhl",
-          "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=29ttgzvj74nppybjq6f5b473d"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 3
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "near_ai"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.1475,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.09,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:9",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.36000000000000004,
-          "confidence": 0.1386,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-13T02:04:08.303Z",
-        "homepage_url": "https://ironclaw.com/",
-        "example_url": "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=2axdpb938w7qafe76dwca4od5q",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.ironclaw.com/",
-        "example_final_url": "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=2axdpb938w7qafe76dwca4od5q",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 9,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 9,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "zite.com",
       "entity": "Zite",
       "kind": "unknown",
@@ -6411,6 +6413,130 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 4,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "easesourcing.com",
+      "entity": "Easesourcing",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-15T03:30:00.000Z",
+      "last_seen_at": "2026-04-15T18:26:05.000Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://www.easesourcing.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=eu260327&twclid=2c9z6424e0kfmv2lyfp3g2o0yr",
+          "https://www.easesourcing.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=eu260327&twclid=24bm30as7hstjamlp84zngh3ef",
+          "https://www.easesourcing.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=eu260327&twclid=2aw0e53wf75nv858i1qlh1yo1p"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "easesourcing_"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.05,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:5",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.36000000000000004,
+          "confidence": 0.1386,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-15T19:10:00.718Z",
+        "homepage_url": "https://easesourcing.com/",
+        "example_url": "https://www.easesourcing.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=eu260327&twclid=2c9z6424e0kfmv2lyfp3g2o0yr",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.easesourcing.com/",
+        "example_final_url": "https://www.easesourcing.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=eu260327&twclid=2c9z6424e0kfmv2lyfp3g2o0yr",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
           "opinion_marker": false
         }
       }
@@ -8872,129 +8998,6 @@
       }
     },
     {
-      "domain": "easesourcing.com",
-      "entity": "Easesourcing",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-15T03:30:00.000Z",
-      "last_seen_at": "2026-04-15T18:26:05.000Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://www.easesourcing.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=eu260327&twclid=2c9z6424e0kfmv2lyfp3g2o0yr",
-          "https://www.easesourcing.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=eu260327&twclid=24bm30as7hstjamlp84zngh3ef"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "easesourcing_"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.05,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:5",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3536197916666667,
-          "confidence": 0.10997499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-15T19:10:00.718Z",
-        "homepage_url": "https://easesourcing.com/",
-        "example_url": "https://www.easesourcing.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=eu260327&twclid=2c9z6424e0kfmv2lyfp3g2o0yr",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.easesourcing.com/",
-        "example_final_url": "https://www.easesourcing.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=eu260327&twclid=2c9z6424e0kfmv2lyfp3g2o0yr",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 5,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 5,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "irys.xyz",
       "entity": "Irys Xyz",
       "kind": "unknown",
@@ -9600,6 +9603,128 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 37,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "newsguardtech.com",
+      "entity": "Newsguardtech",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-15T20:31:26.914Z",
+      "last_seen_at": "2026-04-15T20:31:26.914Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.newsguardtech.com/"
+        ],
+        "origin_counts": {
+          "claim_tracker": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_epistemic_integrity"
+        ]
+      },
+      "claims": {
+        "total": 1,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 1,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.37,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:9",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.34984375,
+          "confidence": 0.06135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-15T21:10:04.851Z",
+        "homepage_url": "https://newsguardtech.com/",
+        "example_url": "https://www.newsguardtech.com/",
+        "homepage_status": null,
+        "example_status": 200,
+        "homepage_final_url": "https://newsguardtech.com/",
+        "example_final_url": "https://www.newsguardtech.com/",
+        "homepage_content_type": "",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 9,
           "opinion_marker": false
         }
       }
@@ -18389,6 +18514,128 @@
       }
     },
     {
+      "domain": "octra.org",
+      "entity": "Octra",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-14T20:38:08.000Z",
+      "last_seen_at": "2026-04-14T20:38:08.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://octra.org/?twclid=29u80pypzhs8hn0f0vi1nyosqb"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "octralabs"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.07,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:7",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-15T21:10:05.182Z",
+        "homepage_url": "https://octra.org/",
+        "example_url": "https://octra.org/?twclid=29u80pypzhs8hn0f0vi1nyosqb",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://octra.org/",
+        "example_final_url": "https://octra.org/?twclid=29u80pypzhs8hn0f0vi1nyosqb",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "iranintl.com",
       "entity": "Iranintl",
       "kind": "unknown",
@@ -20518,7 +20765,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T21:29:03.057Z",
+        "fetched_at": "2026-04-15T21:30:05.275Z",
         "homepage_url": "https://bleepingcomputer.com/",
         "example_url": "https://www.bleepingcomputer.com/news/security/cisco-source-code-stolen-in-trivy-linked-dev-environment-breach/",
         "homepage_status": 200,
@@ -20638,7 +20885,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T21:29:03.225Z",
+        "fetched_at": "2026-04-15T21:30:05.516Z",
         "homepage_url": "https://securityweek.com/",
         "example_url": "https://www.securityweek.com/european-commission-confirms-data-breach-linked-to-trivy-supply-chain-attack/",
         "homepage_status": 403,
