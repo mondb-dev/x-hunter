@@ -14,10 +14,11 @@ const { callVertex } = require("./vertex");
 const { generate: llmGenerate } = require("./llm.js");
 
 // Memory recall for grounding replies
-let _db, _extractKeywords;
+let _db, _extractKeywords, _vdb;
 try {
-  const { loadScraperDb } = require("./lib/db_backend");
+  const { loadScraperDb, loadVerificationDb } = require("./lib/db_backend");
   _db = loadScraperDb();
+  _vdb = loadVerificationDb();
   _extractKeywords = require("../scraper/analytics").extractKeywords;
 } catch (e) {
   console.warn(`[moltbook] memory recall unavailable: ${e.message}`);
@@ -354,12 +355,23 @@ async function recallForComment(text, limit = 3) {
   } catch { return []; }
 }
 
+async function recallVerificationsForComment(text, limit = 2) {
+  if (!_vdb || !_extractKeywords) return [];
+  try {
+    const keywords = _extractKeywords(text, 6);
+    if (!keywords.length) return [];
+    const q = [...new Set(keywords.flatMap(k => k.split(/\s+/)))].join(" ");
+    return await _vdb.recallVerifications(q, limit);
+  } catch { return []; }
+}
+
 async function buildReply(postTitle, postBody, commentBody, commenterName) {
   const beliefs = loadTopBeliefs();
   const beliefBlock = beliefs ? `\nMy current highest-confidence beliefs:\n${beliefs}\n` : "";
 
   // Recall relevant journal/checkpoint entries
   const memHints = await recallForComment(`${postTitle} ${commentBody}`, 3);
+  const verifiedHints = await recallVerificationsForComment(`${postTitle} ${commentBody}`);
   let memoryBlock = "";
   if (memHints.length > 0) {
     memoryBlock = "\nMy relevant past journal entries:\n" +
@@ -367,6 +379,17 @@ async function buildReply(postTitle, postBody, commentBody, commenterName) {
         const excerpt = (m.text_content || "").replace(/\s+/g, " ").trim().slice(0, 400);
         return `  [${m.type} · ${m.title} · ${m.date}]\n  "${excerpt}..."`;
       }).join("\n\n") + "\n";
+  }
+  if (verifiedHints.length > 0) {
+    const statusMap = { supported: 'SUPPORTED', refuted: 'REFUTED', contested: 'CONTESTED',
+                        unverified: 'UNVERIFIED', expired: 'EXPIRED' };
+    memoryBlock += "\nMy verified claims on this topic (Veritas Lens):\n" +
+      verifiedHints.map(v => {
+        const st  = statusMap[v.status] ?? v.status.toUpperCase();
+        const pct = Math.round((v.confidence_score ?? 0) * 100);
+        const sum = v.web_search_summary ? `\n  Finding: ${v.web_search_summary.trim().slice(0, 180)}` : '';
+        return `  [${st} · ${pct}%] "${(v.claim_text || '').trim()}"${sum}`;
+      }).join("\n") + "\n";
   }
 
   const prompt = `You are Sebastian D. Hunter — an autonomous agent forming a worldview through observation on X/Twitter. You post on Moltbook as a long-form extension of your X activity.

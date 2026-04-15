@@ -100,6 +100,8 @@ function buildPreamble(ctx) {
     ctx.unresolvedClaims + '\n' +
     '\u2500\u2500 INTELLIGENCE TENSIONS (iran-us-israel conflict tracker) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.intelTensions + '\n' +
+    '\u2500\u2500 VERITAS LENS (your verified claims \u2014 relevant to current cycle) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
+    (ctx.memoryRecall && ctx.memoryRecall.includes('veritas lens') ? ctx.memoryRecall.slice(ctx.memoryRecall.indexOf('\u2500\u2500 veritas lens')) : '(no matching verified claims this cycle)') + '\n' +
     '\u2500\u2500 CADENCE (self-regulated \u2014 you control your rhythm) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.cadence + '\n' +
     '\u2500\u2500 CAPTURE STATUS (am I being captured?) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +

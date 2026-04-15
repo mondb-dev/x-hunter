@@ -466,6 +466,7 @@ function loadContext(opts) {
     ctx.prefetchSource    = readState(config.PREFETCH_SOURCE_PATH, { fallback: '' }).trim();
     ctx.unresolvedClaims  = formatUnresolvedClaims();
     ctx.intelTensions     = formatIntelligenceTensions();
+    ctx.memoryRecall      = readState(config.MEMORY_RECALL_PATH, { fallback: '(empty)' });
     ctx.currentAxes       = formatCurrentAxes();
     ctx.cadence            = formatCadence();
     ctx.captureStatus     = formatCaptureStatus();

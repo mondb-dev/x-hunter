@@ -32,6 +32,12 @@ const db   = require("./db");
 const { extractKeywords } = require("./analytics");
 const { buildPersona, buildCoreContext } = require("../runner/lib/sebastian_respond");
 
+let _vdb;
+try {
+  const { loadVerificationDb } = require("../runner/lib/db_backend");
+  _vdb = loadVerificationDb();
+} catch { /* verification db unavailable */ }
+
 // ── Paths ─────────────────────────────────────────────────────────────────────
 const ROOT         = path.resolve(__dirname, "..");
 const REPLY_QUEUE  = path.join(ROOT, "state", "reply_queue.jsonl");
@@ -156,6 +162,16 @@ function recallForMention(text, limit = 5) {
   }
 }
 
+async function recallVerificationsForMention(text, limit = 2) {
+  if (!_vdb) return [];
+  try {
+    const keywords = extractKeywords(text, 6);
+    if (!keywords.length) return [];
+    const q = [...new Set(keywords.flatMap(k => k.split(/\s+/)))].join(" ");
+    return await _vdb.recallVerifications(q, limit);
+  } catch { return []; }
+}
+
 // ── 3b. Account lookup — find accounts discussing this topic ────────────────
 /**
  * Query the posts table for accounts whose posts match keywords from the mention.
@@ -233,6 +249,19 @@ async function geminiClassify(item, threadContext = [], memoryHints = [], userHi
         const urlLine = webUrl ? `\n  URL: ${webUrl}` : "";
         return `  [${m.type} · ${m.title} · ${m.date}]${urlLine}\n  "${excerpt}..."`;
       }).join("\n\n") + "\n";
+  }
+
+  // Append Veritas Lens hits if any
+  if (verifiedHints && verifiedHints.length > 0) {
+    const statusMap = { supported: 'SUPPORTED', refuted: 'REFUTED', contested: 'CONTESTED',
+                        unverified: 'UNVERIFIED', expired: 'EXPIRED' };
+    memoryBlock += "\nYour verified claims relevant to this topic (Veritas Lens):\n" +
+      verifiedHints.map(v => {
+        const st  = statusMap[v.status] ?? v.status.toUpperCase();
+        const pct = Math.round((v.confidence_score ?? 0) * 100);
+        const sum = v.web_search_summary ? `\n  Finding: ${v.web_search_summary.trim().slice(0, 180)}` : '';
+        return `  [${st} · ${pct}% confidence] "${(v.claim_text || '').trim()}"${sum}`;
+      }).join("\n") + "\n";
   }
 
   // Build user history block
@@ -484,6 +513,7 @@ function logInteraction(data, item, replyText, memoryHints) {
 
     // ── Step 3: Memory recall + account lookup ────────────────────────────
     const memoryHints = recallForMention(item.text);
+    const verifiedHints = await recallVerificationsForMention(item.text);
     const topicAccounts = accountsForTopic(item.text);
     if (memoryHints.length > 0) {
       console.log(`[reply] memory: ${memoryHints.length} relevant entry(s) found (${memoryHints.map(m => m.title).join(", ")})`);

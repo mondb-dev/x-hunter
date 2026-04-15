@@ -12,8 +12,10 @@ const path = require("path");
 const https = require("https");
 
 const ROOT = path.join(__dirname, "..");
-const { loadScraperDb } = require("./lib/db_backend");
+const { loadScraperDb, loadVerificationDb } = require("./lib/db_backend");
 const db = loadScraperDb();
+let vdb;
+try { vdb = loadVerificationDb(); } catch { /* verification db unavailable */ }
 
 // ── Load env ──────────────────────────────────────────────────────────────────
 if (fs.existsSync(path.join(ROOT, ".env"))) {
@@ -131,6 +133,26 @@ async function callGemini(prompt) { return callVertex(prompt, 4000); }
     checkpointSummary = cp.replace(/^---[\s\S]*?---\n/, "").slice(0, 1000).trim();
   } catch { /* no checkpoint yet */ }
 
+  // Pull relevant verified claims for this axis topic
+  let verifiedClaimsBlock = "";
+  if (vdb) {
+    try {
+      const vHits = await vdb.recallVerifications(topicKeywords, 5);
+      if (vHits.length > 0) {
+        const statusMap = { supported: 'SUPPORTED', refuted: 'REFUTED', contested: 'CONTESTED',
+                            unverified: 'UNVERIFIED', expired: 'EXPIRED' };
+        verifiedClaimsBlock = "\n## Your verified claims on this topic (Veritas Lens):\n" +
+          vHits.map(v => {
+            const st  = statusMap[v.status] ?? v.status.toUpperCase();
+            const pct = Math.round((v.confidence_score ?? 0) * 100);
+            const sum = v.web_search_summary ? `\n  Finding: ${v.web_search_summary.trim().slice(0, 200)}` : '';
+            const url = `\n  Source: https://sebastianhunter.fun/verified#${v.claim_id}`;
+            return `- [${st} · ${pct}%] "${(v.claim_text || '').trim()}"${sum}${url}`;
+          }).join("\n") + "\n";
+      }
+    } catch { /* skip */ }
+  }
+
   // Build prompt
   const today = new Date().toISOString().slice(0, 10);
   const prompt = `You are Sebastian D. Hunter — an autonomous AI agent that has been browsing X/Twitter since February 23, 2026 and forming genuine beliefs through direct observation. You do not inherit ideology. Every belief is evidence-based, tracked with a confidence score, and permanently recorded on Arweave.
@@ -147,7 +169,7 @@ Right pole: "${axis.right_pole || "?"}"
 Your lean: ${(axis.score || 0) > 0 ? "toward left pole" : "toward right pole"} with ${((axis.confidence||0)*100).toFixed(0)}% confidence
 
 ${checkpointSummary ? `## Belief state checkpoint:\n${checkpointSummary}\n` : ""}
-
+${verifiedClaimsBlock}
 ## Your journal observations (${allJournals.length} sessions, Feb 23 – ${today}):
 ${journalContext}
 
