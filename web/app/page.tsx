@@ -3,6 +3,7 @@ import { getAllJournalDays } from "@/lib/readJournals";
 import { readOntology, type Axis } from "@/lib/readOntology";
 import { getLatestCheckpoint } from "@/lib/readCheckpoints";
 import LatestArticle from "@/components/LatestArticle";
+import TopClaims from "@/components/TopClaims";
 import BeliefMap, { type MapNode, type MapEdge } from "@/components/BeliefMap";
 
 function buildGraph(axes: Axis[]): { nodes: MapNode[]; edges: MapEdge[] } {
@@ -67,6 +68,9 @@ export default async function IndexPage({
 
     return (
       <>
+        {/* Veritas Lens: top claims */}
+        <TopClaims />
+
         {/* Latest article */}
         <LatestArticle />
 

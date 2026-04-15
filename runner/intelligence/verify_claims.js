@@ -248,9 +248,14 @@ async function webSearchVerify(claimText) {
         parsed = JSON.parse(clean);
       } catch {
         log(`failed to parse web search response: ${text.slice(0, 200)}`);
+        // Try to salvage a summary string even from malformed JSON
+        const summaryMatch = text.match(/"summary"\s*:\s*"((?:[^"\\]|\\.)*)"/);
+        const fallbackSummary = summaryMatch
+          ? summaryMatch[1].replace(/\\n/g, ' ').replace(/\\"/g, '"')
+          : text.replace(/```json\s*/gi, '').replace(/```/g, '').replace(/\{[\s\S]*\}/, '').trim().slice(0, 500);
         return {
           web_search_result: 'inconclusive',
-          summary: text.slice(0, 500),
+          summary: fallbackSummary || text.slice(0, 500),
           evidence_urls: groundingUrls,
         };
       }

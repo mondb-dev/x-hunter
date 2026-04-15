@@ -2,6 +2,26 @@ import { notFound } from "next/navigation";
 import { readVerification, VerifiedClaim, ScoringBreakdown } from "../../lib/readVerification";
 import CopyLinkButton from "../../components/CopyLinkButton";
 
+/**
+ * Gemini sometimes returns web_search_summary as a raw JSON blob:
+ *   ```json\n{"verdict":"...", "summary":"..."}\n```
+ * or just  {"verdict":"...", "summary":"..."}
+ * Extract the human-readable summary text in those cases.
+ */
+function parseSummary(raw: string): string {
+  const stripped = raw.replace(/^```json\s*/i, "").replace(/```\s*$/, "").trim();
+  try {
+    const parsed = JSON.parse(stripped);
+    if (typeof parsed === "object" && parsed !== null) {
+      const s = parsed.summary ?? parsed.text ?? parsed.content ?? parsed.verdict_explanation;
+      if (typeof s === "string" && s.length > 0) return s;
+    }
+  } catch {
+    // not JSON — return original
+  }
+  return raw;
+}
+
 export const dynamic = "force-dynamic";
 
 type FilterStatus = "all" | "supported" | "refuted" | "contested" | "unverified" | "expired";
@@ -168,7 +188,7 @@ function ClaimCard({ claim }: { claim: VerifiedClaim }) {
       {/* Web search summary */}
       {claim.web_search_summary && (
         <div className="verify-claim-summary">
-          <p>{claim.web_search_summary}</p>
+          <p>{parseSummary(claim.web_search_summary)}</p>
         </div>
       )}
 
