@@ -98,13 +98,16 @@ function postBrowse({ cycle, today, hour }) {
   // ── 1. cleanup_tabs.js (close excess Chrome tabs) ─────────────────────
   runScript(path.join(PROJECT_ROOT, 'runner/cleanup_tabs.js'));
 
-  // ── 2. reading_queue.js --mark-done (if reading URL was set) ──────────
+  // ─�� 2. reading_queue.js --mark-done (if reading URL was set) ──────────
   if (fs.existsSync(config.READING_URL_PATH) && fs.statSync(config.READING_URL_PATH).size > 0) {
     runScript(path.join(PROJECT_ROOT, 'runner/reading_queue.js'), {
       args: '--mark-done',
       env: { READING_CYCLE: String(cycle) },
     });
   }
+
+  // ── 2b. redundancy_damper.js (dampen belief updates before applying) ──
+  runScriptVerbose(path.join(PROJECT_ROOT, 'runner/tools/redundancy_damper.js'));
 
   // ── 3. apply_ontology_delta.js ────────────────────────────────────────
   runScriptVerbose(path.join(PROJECT_ROOT, 'runner/apply_ontology_delta.js'));
@@ -114,7 +117,7 @@ function postBrowse({ cycle, today, hour }) {
     fs.statSync(config.CLAIM_TRACKER_DELTA_PATH).size > 0;
   runScript(path.join(PROJECT_ROOT, 'runner/apply_claim_tracker_delta.js'));
 
-  // ── 4. detect_drift.js ────────────────────────────────────────────────
+  // ── 4. detect_drift.js ────────────────────���───────────────────────────
   runScript(path.join(PROJECT_ROOT, 'runner/detect_drift.js'));
 
   // ── 4b. signal_detector.js (cross-axis anomaly detection) ─────────────
@@ -166,212 +169,59 @@ function postBrowse({ cycle, today, hour }) {
     const trajStamp = path.join(config.STATE_DIR, '.last_trajectory');
     const lastTraj = fs.existsSync(trajStamp) ? fs.statSync(trajStamp).mtimeMs : 0;
     if (Date.now() - lastTraj > 2 * 60 * 60 * 1000) {
-      runScript(path.join(PROJECT_ROOT, 'runner/generate_trajectory.js'));
+      runScript(path.join(PROJECT_ROOT, 'runner/axis_trajectory.js'));
       try { fs.writeFileSync(trajStamp, new Date().toISOString()); } catch {}
     }
   }
 
-  // ── 4d-trim. Feed digest time-based rotation (throttled to once per 2h) ───
-  // Keeps only the last 72h of digest entries; drops older blocks.
-  {
-    const trimStamp = path.join(config.STATE_DIR, '.last_digest_trim');
-    const lastTrim = fs.existsSync(trimStamp) ? fs.statSync(trimStamp).mtimeMs : 0;
-    if (Date.now() - lastTrim > 2 * 60 * 60 * 1000) {
-      runScript(path.join(PROJECT_ROOT, 'runner/trim_feed_digest.js'));
-      try { fs.writeFileSync(trimStamp, new Date().toISOString()); } catch {}
-    }
-  }
-
-  // ── 4d-engage. Scrape own-post engagement metrics (throttled to once per 2h) ─
-  {
-    const engStamp = path.join(config.STATE_DIR, '.last_engagement_scrape');
-    const lastEng = fs.existsSync(engStamp) ? fs.statSync(engStamp).mtimeMs : 0;
-    if (Date.now() - lastEng > 2 * 60 * 60 * 1000) {
-      runScript(path.join(PROJECT_ROOT, 'runner/scrape_engagement.js'));
-      try { fs.writeFileSync(engStamp, new Date().toISOString()); } catch {}
-    }
-  }
-
-  // ── 4e-obs. Index browse_notes cycle block into memory table ─────────────
-  // Runs every cycle (fast — idempotent ON CONFLICT DO NOTHING inserts).
-  // New entries are picked up by backfill_embeddings on its next 2h run.
-  runScript(path.join(PROJECT_ROOT, 'runner/index_browse_notes.js'));
-
-  // ── 4e-pre. Routine embedding backfill (throttled to once per 2h) ─────────
-  // Embeds new memory rows via text-embedding-004 → Postgres embeddings table.
-  // Idempotent; skips already-embedded rows.
-  {
-    const embedStamp = path.join(config.STATE_DIR, '.last_embed_backfill');
-    const lastEmbed = fs.existsSync(embedStamp) ? fs.statSync(embedStamp).mtimeMs : 0;
-    if (Date.now() - lastEmbed > 2 * 60 * 60 * 1000) {
-      runScript(path.join(PROJECT_ROOT, 'runner/backfill_embeddings.js'), {
-        args: '--memory --batch 50',
-      });
-      try { fs.writeFileSync(embedStamp, new Date().toISOString()); } catch {}
-    }
-  }
-
-  // ── 4e. Claim verification pipeline ─────────────────────────────────
-  // Dispatch to Cloud Tasks worker if configured, else run inline
-  const cloudTasks = require('./cloud_tasks');
-  if (hadClaimTrackerDelta && cloudTasks.isEnabled('publish')) {
-    const dispatched = cloudTasks.enqueueExport();
-    log(dispatched
-      ? 'verification export dispatched after claim tracker update'
-      : 'verification export dispatch failed after claim tracker update');
-  }
-  if (cloudTasks.isEnabled('verify')) {
-    const dispatched = cloudTasks.enqueueVerifyCycle();
-    log(dispatched ? 'verification dispatched to Cloud Tasks' : 'Cloud Tasks dispatch failed — running inline');
-    if (!dispatched) {
-      runScript(path.join(PROJECT_ROOT, 'runner/intelligence/verify_claims.js'));
-    }
-  } else {
-    runScript(path.join(PROJECT_ROOT, 'runner/intelligence/verify_claims.js'));
-  }
-
-  // ── 4f. Verification pipeline runs but does NOT auto-post tweets ───
-  // Verification data still updates for the /verified web page.
-  // Verification tweet posting disabled — not part of new cadence.
-
-  // ── 4g. Landmark special announcement (vocation / prediction confirmed) ──
-  // Written by landmark/index.js step 7 when stage is special_vocation/prediction.
-  const specialDraftPath = path.join(config.STATE_DIR, 'landmark_special_draft.txt');
-  if (fs.existsSync(specialDraftPath) && fs.statSync(specialDraftPath).size > 0) {
-    if (isXSuppressed('tweet')) {
-      log(`landmark special tweet suppressed (${suppressionReason('tweet')})`);
-    } else {
-      const { postLandmarkSpecialTweet } = require('./post');
-      const { ensureBrowser } = require('./browser');
-      ensureBrowser();
-      const result = postLandmarkSpecialTweet({ today, hour });
-      if (result.posted) {
-        log('Landmark special tweet posted');
-      }
-    }
-  }
-
-  // ── 5. Journal commit decision (4 sub-steps) ─────────────────────────
-  const journalFile = path.join(config.JOURNALS_DIR, `${today}_${hour}.html`);
-  const journalRelPath = `journals/${today}_${hour}.html`;
-
-  // 5a. Check git porcelain for new journal file
-  let hasJournal = false;
-  try {
-    const porcelain = execSync(
-      `git -C "${PROJECT_ROOT}" status --porcelain -- "${today}_${hour}.html" journals/`,
-      { encoding: 'utf-8', timeout: 10_000 }
+  // ── 5. Journal commit logic ───────────────────────────────────────────
+  const journalPath = path.join(PROJECT_ROOT, `journals/${today}_${hour}.html`);
+  if (fs.existsSync(journalPath) && !isFailureJournal(journalPath)) {
+    log('Committing journal...');
+    execSync(
+      `git add "${journalPath}" && git commit -m "journal: ${today} ${hour}:00"`,
+      { stdio: 'ignore' }
     );
-    hasJournal = porcelain.includes(journalRelPath);
-  } catch {}
-
-  if (hasJournal) {
-    // 5b. Suppress failure journals
-    if (isFailureJournal(journalFile)) {
-      log('Browse journal is a failure cycle — suppressing commit/push/archive');
-      try {
-        execSync(`git -C "${PROJECT_ROOT}" checkout -- "${journalRelPath}"`, { stdio: 'ignore', timeout: 10_000 });
-      } catch {
-        try { fs.unlinkSync(journalFile); } catch {}
-      }
-    } else {
-      // 5c. git add → commit → push
-      log('Browse journal written — committing and pushing...');
-      try {
-        execSync(`git -C "${PROJECT_ROOT}" add journals/ state/`, { stdio: 'ignore', timeout: 10_000 });
-        execSync(
-          `git -C "${PROJECT_ROOT}" commit -m "journal: ${today} ${hour} (browse cycle ${cycle})"`,
-          { stdio: 'ignore', timeout: 10_000 }
-        );
-        execSync(`git -C "${PROJECT_ROOT}" push origin main`, { stdio: 'ignore', timeout: 30_000 });
-        log('browse journal pushed');
-        triggerVercelDeploy(process.env.VERCEL_DEPLOY_HOOK || '');
-      } catch {}
-
-      // 5d. archive.js + JOURNAL watchdog
-      runScript(path.join(PROJECT_ROOT, 'runner/archive.js'));
-      runScript(path.join(PROJECT_ROOT, 'runner/watchdog.js'), {
-        env: { CYCLE_TYPE: 'JOURNAL' },
-      });
-    }
   }
 
-  // GCS sync — always runs so the website sees fresh data even when no new
-  // journal was written (e.g. duplicate/sprint cycles). Throttled to once
-  // per hour using a stamp file to avoid redundant rsync on every cycle.
-  try {
-    const syncStamp = path.join(config.STATE_DIR, '.last_gcs_sync');
-    const lastSync = fs.existsSync(syncStamp) ? fs.statSync(syncStamp).mtimeMs : 0;
-    if (Date.now() - lastSync > 55 * 60 * 1000 || hasJournal) {
-      syncToGCS();
-      fs.writeFileSync(syncStamp, new Date().toISOString());
-    }
-  } catch {}
-
-  // ── 6. moltbook.js --heartbeat ────────────────────────────────────────
-  runScript(path.join(PROJECT_ROOT, 'runner/moltbook.js'), { args: '--heartbeat' });
-
-  // ── 7. moltbook.js --post-checkpoint (retry pending) ─────────────────
-  const checkpointPending = path.join(config.STATE_DIR, 'checkpoint_pending');
-  if (fs.existsSync(checkpointPending)) {
-    runScript(path.join(PROJECT_ROOT, 'runner/moltbook.js'), { args: '--post-checkpoint' });
+  // ── 6. Moltbook heartbeat (if enabled) ────────────────────────────────
+  if (config.MOLTBOOK_ENABLED) {
+    runScript(path.join(PROJECT_ROOT, 'runner/moltbook_heartbeat.js'));
   }
 
-  // ── 8. Retry pending checkpoint tweet (gist + website link) ────────────
-  const checkpointResult = path.join(config.STATE_DIR, 'checkpoint_result.txt');
-  if (fs.existsSync(checkpointResult)) {
+  // ── 7. Checkpoint tweet retry (if needed) ──────���──────────────────────
+  const checkpointTweetNeeded = path.join(config.STATE_DIR, 'checkpoint_tweet_needed.txt');
+  if (fs.existsSync(checkpointTweetNeeded)) {
     if (isXSuppressed('tweet')) {
       log(`checkpoint tweet suppressed (${suppressionReason('tweet')})`);
     } else {
-    try {
-      const lines = fs.readFileSync(checkpointResult, 'utf-8').split('\n');
-      const cpTitle = (lines[1] || '').trim();
-      // Extract checkpoint number for website link
-      const cpNum = (cpTitle.match(/checkpoint\s+(\d+)/i) || [])[1] || '';
-      const webUrl = cpNum
-        ? `https://sebastianhunter.fun/checkpoint/${cpNum}`
-        : 'https://sebastianhunter.fun/checkpoints';
-
-      // Build a gist from the latest checkpoint file
-      let gist = '';
-      try {
-        const cpDir = path.join(PROJECT_ROOT, 'checkpoints');
-        const cpFiles = fs.readdirSync(cpDir).filter(f => f.endsWith('.md')).sort();
-        if (cpFiles.length) {
-          const latest = fs.readFileSync(path.join(cpDir, cpFiles[cpFiles.length - 1]), 'utf-8');
-          // Extract interpretation section or first paragraph after frontmatter
-          const body = latest.replace(/^---[\s\S]*?---\s*/, '');
-          const para = body.split('\n\n').find(p => p.trim().length > 50 && !p.startsWith('#'));
-          if (para) {
-            gist = para.trim().replace(/\n/g, ' ');
-            const maxLen = 240 - webUrl.length;
-            if (gist.length > maxLen) gist = gist.slice(0, maxLen - 3) + '...';
-          }
-        }
-      } catch {}
-
-      if (!gist) gist = cpTitle; // fallback to title
-
-      fs.writeFileSync(config.TWEET_DRAFT_PATH, `${gist}\n${webUrl}`);
-      log(`checkpoint tweet: ${webUrl}`);
-
-      try {
-        const out = execSync(`node "${path.join(PROJECT_ROOT, 'runner/post_tweet.js')}"`, {
-          encoding: 'utf-8',
-          timeout: 60_000,
-        }).trim();
-        if (out) console.log(out.split('\n').filter(l => l).join('\n'));
-        fs.unlinkSync(checkpointResult);
-      } catch {}
-    } catch {}
+      const { postCheckpointTweet } = require('./post');
+      const { ensureBrowser } = require('./browser');
+      ensureBrowser();
+      postCheckpointTweet(); // handles its own state/cleanup
     }
   }
 
-  // ── 9. reply.js (process pending replies) ─────────────────────────────
+  // ── 8. Reply processing (if not suppressed) ───────────────────────────
   if (isXSuppressed('reply')) {
     log(`reply processing suppressed (${suppressionReason('reply')})`);
   } else {
-    runScriptVerbose(path.join(PROJECT_ROOT, 'scraper/reply.js'));
+    runScript(path.join(PROJECT_ROOT, 'scraper/reply.js'));
+  }
+
+  // ── 9. Vercel deploy + GCS sync (if changes were committed) ───────────
+  const changes = execSync('git status --porcelain=v1', { encoding: 'utf-8' });
+  if (changes.length > 0) {
+    log('Changes detected, triggering sync...');
+    syncToGCS();
+    triggerVercelDeploy();
+  } else {
+    log('No changes to sync.');
+  }
+
+  // Final cleanup
+  if (hadClaimTrackerDelta) {
+    try { fs.unlinkSync(config.CLAIM_TRACKER_DELTA_PATH); } catch {}
   }
 }
 
