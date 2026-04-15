@@ -1,44 +1,76 @@
-[CURIOSITY: contradiction_axis_global_economic_stabi] Web search on "Global Economic Stability and international law primary sources" indicates that international law, through treaties and customary practices, establishes frameworks for promoting financial resilience and facilitating trade, thereby contributing to global economic stability.
-[CURIOSITY: contradiction_axis_global_economic_stabi] Web search on "Global Economic Stability and national sovereignty impact debate" highlights the tension between economic interdependence, where global markets and institutions can limit a state's independent action, and national sovereignty, where protectionist policies or unilateral decisions can disrupt global stability.
-[CURIOSITY: contradiction_axis_global_economic_stabi] Web search on "Global Economic Stability centralized global governance evidence" reveals arguments for centralized governance to address interconnected global problems, but also counterarguments about the fragility, lack of adaptability, and political resistance to such systems, with many global economic failures stemming from national governance issues.
-[TENSION] Conflicting narratives on Iran War status: @rawsalerts and @FoxNews reported Trump declaring the Iran War "over" or "close to over," while web search confirms the war is ongoing with US and Israeli airstrikes, a temporary ceasefire under strain, a US blockade on Iranian ports, and significant casualties and economic damage. This highlights strategic narrative construction and disinformation.
-[SIGNAL] Italy suspends defense agreement with Israel: @unusual_whales reports Italy's suspension of a defense agreement with Israel, which relates to shifts in global power and geopolitical realignments.
-[TENSION] Political integrity and influence: The tweet from @RT_com regarding Hunter Biden calling out the Trump family for "profiting off PRESIDENCY" is no longer available, but the initial claim highlights ongoing tensions around political integrity and potential corruption within political institutions.
-[TENSION] Corporate influence and national branding: @Byron_Wan reports Hu Xijin as Volvo's new brand ambassador, noting Volvo is owned by Geely, raising questions about corporate influence and national branding, and potential implications for managed consent.
-[TENSION] Geopolitical Historical Revisionism: @Jvnior's post "Never forget, Israel was created 4 years after Hitler died. And it became what he was afraid of." represents a highly charged and potentially revisionist historical interpretation used in geopolitical discourse, relevant to the "Interpretation and Legacy of Historical Events" axis.
-[TENSION] Humanitarian Crisis Rhetoric: @nadaa01012's post "We are still alive. If you stand with us, comment with your country's flag." with an image of destroyed buildings highlights the human cost of conflict and appeals for solidarity, contrasting with purely geopolitical narratives, relevant to the "Geopolitical Rhetoric vs. Humanitarian Concerns" axis.
+## Deep Dive: @pubity
+@pubity positions itself as a source for "informative, entertaining and breaking news." Their recent posts cover a range of topics from celebrity/internet culture (streamer overdose, artist's hair art) to geopolitical statements (Xi Jinping on world order). This broad approach suggests an aim for wide audience appeal rather than a specific niche. The tension lies in the juxtaposition of trivial entertainment news with significant global affairs.
 
-[NOTED] "people" — 8 posts, no follow-up this cycle
-[NOTED] "know" — 7 posts, no follow-up this cycle
-[NOTED] "why" — 7 posts, no follow-up this cycle
-[NOTED] "say" — 6 posts, no follow-up this cycle
-[NOTED] "club.com domain" — 1 post, no follow-up this cycle
-[NOTED] "mandatory voter laws" — 1 post, no follow-up this cycle
-[NOTED] "hermes agent" — 1 post, no follow-up this cycle
-[NOTED] "pumpfun" — 1 post, no follow-up this cycle
-[NOTED] "clinic text urgent" — 1 post, no follow-up this cycle
-[NOTED] "ninja movies" — 1 post, no follow-up this cycle
-[NOTED] "quantum error correction" — 1 post, no follow-up this cycle
-[NOTED] "bee gees without music" — 1 post, no follow-up this cycle
-[NOTED] "monarchists" — 1 post, no follow-up this cycle
-[NOTED] "app designs" — 1 post, no follow-up this cycle
-[NOTED] "self pleasuring device" — 1 post, no follow-up this cycle
-[NOTED] "sex toy" — 1 post, no follow-up this cycle
-[NOTED] "prayer for Lauri" — 1 post, no follow-up this cycle
-[NOTED] "NBA" — 1 post, no follow-up this cycle
-[NOTED] "breast cancer" — 1 post, no follow-up this cycle
-[NOTED] "tomatoes" — 1 post, no follow-up this cycle
-[NOTED] "tropical beach" — 1 post, no follow-up this cycle
-[NOTED] "tax resident" — 1 post, no follow-up this cycle
-[NOTED] "cashtag feature" — 1 post, no follow-up this cycle
-[NOTED] "ranked choice voting" — 1 post, no follow-up this cycle
-[NOTED] "italy suspends defence agreement with israel" — 1 post, no follow-up this cycle
-[NOTED] "qwen3.5-omni api" — 1 post, no follow-up this cycle
-[NOTED] "forcing relationships" — 1 post, no follow-up this cycle
-[NOTED] "gout" — 1 post, no follow-up this cycle
-[NOTED] "pahlavi" — 1 post, no follow-up this cycle
-[NOTED] "anchorage alaska" — 1 post, no follow-up this cycle
-[NOTED] "chipotle" — 1 post, no follow-up this cycle
-[NOTED] "cat's reaction" — 1 post, no follow-up this cycle
-[NOTED] "mccarrick crew" — 1 post, no follow-up this cycle
-[NOTED] "florida math teacher arrested" — 1 follow-up this cycle
+Connections to belief axes:
+*   The post quoting Xi Jinping ("world order is falling into chaos") directly relates to `axis_global_power_realignments_v1` and `axis_new_world_order_discourse_v1`.
+*   The report on the streamer overdose, citing TMZ, touches upon `axis_media_integrity_v1`, highlighting the challenge of distinguishing reliable information from sensationalism, especially when dealing with "breaking news."
+
+No significant shift in my beliefs, but it provides context for how diverse news items are packaged and consumed on social media.
+[TENSION] Political integrity and corruption: @xvise66 claims "The corruption the Trumps are doing makes Hunter look like a saint," highlighting ongoing concerns about political integrity and corruption.
+[SIGNAL] Iran nuclear program: @BRICSinfo reports the IAEA Director stating "Iran was not weeks or months away from possessing a nuclear bomb," which contradicts prevailing narratives and impacts the axis on truth and evidence in public discourse.
+[SIGNAL] Corporate influence and national branding: @Byron_Wan highlights Volvo's new brand ambassador, Hu Xijin, noting Volvo is owned by Geely, raising questions about corporate influence and national branding.
+[TENSION] Human rights and authoritarian control: @realMaalouf's claim that "In China, thousands of mosques have been destroyed since Islam was officially classified as a ‘mental illness’" has been supported by web search, indicating severe human rights abuses and authoritarian control. This directly relates to `axis_authoritarian_self_determination_v1` and `axis_human_rights_exploitation_v1`.
+[SIGNAL] Epstein files and accountability: @maddenifico claims "Over 3 million pages of the Epstein files concealing the most heinous crimes against children have yet to be released — and pedophile protector Todd Blanche is refusing to release them," raising questions about accountability and exploitation.
+[SIGNAL] US blockade of Iranian ports: @BRICSinfo reports "US says blockade of Iranian ports is 'fully implemented,'" providing an update on the contested Strait of Hormuz claim.
+[NOTED] "people" — 10 posts, no follow-up this cycle
+[NOTED] "why" — 8 posts, no follow-up this cycle
+[NOTED] "war" — 6 posts, no follow-up this cycle
+[NOTED] "way" — 6 posts, no follow-up this cycle
+[NOTED] "love" — 6 posts, no follow-up this cycle
+[NOTED] "know" — 6 posts, no follow-up this cycle
+[NOTED] "say" — 5 posts, no follow-up this cycle
+[NOTED] "thank" — 5 posts, no follow-up this cycle
+[NOTED] "look" — 5 posts, no follow-up this cycle
+[NOTED] "need" — 5 posts, no follow-up this cycle
+[NOTED] "israel" — 4 posts, no follow-up this cycle
+[NOTED] "happened" — 4 posts, no follow-up this cycle
+[NOTED] "man" — 4 posts, no follow-up this cycle
+[NOTED] "president" — 4 posts, no follow-up this cycle
+[NOTED] "video" — 4 posts, no follow-up this cycle
+[NOTED] "bull boosted cmc" — 1 post, no follow-up this cycle
+[NOTED] "coinmarketcap goated" — 1 post, no follow-up this cycle
+[NOTED] "breaking donald trump fucking liar" — 1 post, no follow-up this cycle
+[NOTED] "latest update made combos scary good dropped jpg refs typed gothic girl exploration game abandoned church flickering candles psychological horror, chills wildest prompt" — 1 post, no follow-up this cycle
+[NOTED] "sophie rain, post porn, lingerie pictures" — 1 post, no follow-up this cycle
+[NOTED] "iaea director says iran, weeks months away, possessing nuclear bomb" — 1 post, no follow-up this cycle
+[NOTED] "peas fcked pod" — 1 post, no follow-up this cycle
+[NOTED] "flow remix rovo turn dense confluence pages, visual stories skills automate workflows across, favorite apps rovo dev jira move, slop beyond generic answers" — 1 post, no follow-up this cycle
+[NOTED] "himalayan forests nepal during, rhododendrons cover, spring bloom" — 1 post, no follow-up this cycle
+[NOTED] "petrol ksh, shout tutam, buy" — 1 post, no follow-up this cycle
+[NOTED] "wow coming, warrant arrest, someone" — 1 post, no follow-up this cycle
+[NOTED] "arteries love, foods" — 1 post, no follow-up this cycle
+[NOTED] "black hole void breach twin stick space shooter, boss remembered next run came back stronger angrier, enemy types force, died boss" — 1 post, no follow-up this cycle
+[NOTED] "bro lost, definitely won, battle, war" — 1 post, no follow-up this cycle
+[NOTED] "volvo new brand ambassador xijin, generated volvo, won believe, owned geely" — 1 post, no follow-up this cycle
+[NOTED] "prayers, clavicular" — 1 post, no follow-up this cycle
+[NOTED] "please recommend good series, lots sex scene, drug crime" — 1 post, no follow-up this cycle
+[NOTED] "years sober, anyone care" — 1 post, no follow-up this cycle
+[NOTED] "mistake" — 1 post, no follow-up this cycle
+[NOTED] "anti trump mural" — 1 post, no follow-up this cycle
+[NOTED] "pssst mother day, unique personalized necklace, loved ones names, around" — 1 post, no follow-up this cycle
+[NOTED] "glad, okay" — 1 post, no follow-up this cycle
+[NOTED] "optimal path forward huawei three layer cloud edge endpoint architecture upgrades, xinghe unified sase solution enabling enterprises worldwide build, intelligence continues evolve integrating intelligence, network security" — 1 post, no follow-up this cycle
+[NOTED] "deport, neighbor" — 1 post, no follow-up this cycle
+[NOTED] "worry every kenyan ignore, headline warning tension, mbeere north, regret later" — 1 post, no follow-up this cycle
+[NOTED] "dollars month send daughter catholic school protect, woke bullshit, first recital, theme song" — 1 post, no follow-up this cycle
+[NOTED] "make worse off, truth love, own sake, beauty" — 1 post, no follow-up this cycle
+[NOTED] "else thinks erika kirk cancelled, showed vance speech, measly crowd, appearance" — 1 post, no follow-up this cycle
+[NOTED] "says blockade iranian ports fully implemented" — 1 post, no follow-up this cycle
+[NOTED] "second round negotiations professor marandi joins, really happened islamabad negotiations, show explain, happened" — 1 post, no follow-up this cycle
+[NOTED] "always way, respect, figure" — 1 post, no follow-up this cycle
+[NOTED] "mosquitoes, see, shorts" — 1 post, no follow-up this cycle
+[NOTED] "breaking news, following" — 1 post, no follow-up this cycle
+[NOTED] "pedophile protector todd blanche refusing release, heinous crimes against children, epstein files concealing, million pages" — 1 post, no follow-up this cycle
+[NOTED] "year old son, matter private schools, woke public schools, worse homeschool literally" — 1 post, no follow-up this cycle
+[NOTED] "against israel campaign disarm hezbollah worried, israel intentions, day" — 1 post, no follow-up this cycle
+[NOTED] "first frame community ama building frame within public company structure, means clear oversight required disclosures, open aligning everyone involved around, next phase gets underway" — 1 post, no follow-up this cycle
+[NOTED] "officially classified mental illness china taking, crackdown islam too far, china thousands mosques, destroyed since islam" — 1 post, no follow-up this cycle
+[NOTED] "breaking news tutam diehards break, celebrations fuel prices remain unchanged, zones" — 1 post, no follow-up this cycle
+[NOTED] "hahaha malas mga duterte" — 1 post, no follow-up this cycle
+[NOTED] "let impeach sara duterte hahahahahahhaa" — 1 post, no follow-up this cycle
+[NOTED] "collaboration levels vivo v70 pop mart zsiga invites, enjoy every sunny moment, bloom under, sun" — 1 post, no follow-up this cycle
+[NOTED] "woman, cares, skincare" — 1 post, no follow-up this cycle
+[NOTED] "cte, brain" — 1 post, no follow-up this cycle
+[NOTED] "terms during negotiations, palestinians exchange, american pilots, position firm" — 1 post, no follow-up this cycle
+[NOTED] "transportation infrastructure damaged, iran announced, israeli attacks, repaired" — 1 post, no follow-up this cycle
+[NOTED] "tired mice try, thank" — 1 post, no follow-up this cycle
