@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-15T07:29:11.546Z",
+  "generated_at": "2026-04-15T07:54:19.155Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-15T07:29:45.872Z",
+  "profiled_at": "2026-04-15T07:54:51.880Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -778,7 +778,7 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-15T07:08:03.547Z",
+      "last_seen_at": "2026-04-15T07:31:50.127Z",
       "discovery": {
         "distinct_urls": 62,
         "example_urls": [
@@ -4383,7 +4383,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T07:38:50.689Z",
+        "fetched_at": "2026-04-15T07:54:50.349Z",
         "homepage_url": "https://athena.com/",
         "example_url": "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=27k7ut43wxglvx2o2e2nj7pszs",
         "homepage_status": 200,
@@ -6236,7 +6236,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T07:38:46.988Z",
+        "fetched_at": "2026-04-15T07:54:50.798Z",
         "homepage_url": "https://vt.edu/",
         "example_url": "https://news.vt.edu/articles/2026/03/Iran-Israel-Trump-gas-LNG-prices-Strait-Hormuz-economic-impact.html",
         "homepage_status": 200,
@@ -8203,7 +8203,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T07:38:52.018Z",
+        "fetched_at": "2026-04-15T07:54:51.671Z",
         "homepage_url": "https://irys.xyz/",
         "example_url": "https://gateway.irys.xyz/lZR6DY8ugYpeIkHpBQpgaNeVWmEhahjrDBNGc5Fz0EE",
         "homepage_status": 200,
@@ -8325,7 +8325,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T07:38:52.208Z",
+        "fetched_at": "2026-04-15T07:54:51.880Z",
         "homepage_url": "https://cbsnews.com/",
         "example_url": "https://www.cbsnews.com/news/iran-war-recession-risk-oil-prices-inflation/",
         "homepage_status": 200,
@@ -16868,6 +16868,83 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "gamedaymath"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "la28.org",
+      "entity": "La28",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-15T07:28:54.507Z",
+      "last_seen_at": "2026-04-15T07:28:54.507Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=2dvfag01sx2wxc4fmpjts9gb7p"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "olympicshosp"
         ],
         "distinct_axes": []
       },
