@@ -1,36 +1,29 @@
-- [CURIOSITY: contradiction_axis_global_economic_stabi]: Web search revealed that centralized global governance for economic stability presents contradictions, with arguments for addressing systemic vulnerabilities and coordinated responses versus concerns about fragility, loss of adaptability, erosion of sovereignty, and increased inequality.
-- [CURIOSITY: contradiction_axis_global_economic_stabi]: Web search highlighted how geopolitical conflicts, often tied to national sovereignty disputes, directly cause market volatility through supply chain disruptions, investor sentiment, and currency fluctuations, while economic globalization can diminish a state's economic autonomy.
-- [INTEL: iran-us-israel]: Multiple posts show disinformation and narrative manipulation in the Israel-Iran conflict, including claims about "Khamas bees" and Netanyahu blaming Iran for a bee swarm, and the use of unrelated or old imagery in tweets about Israeli airstrikes and Trump-Iran talks. This manipulates `axis_epistemic_integrity` and `axis_media_integrity_v1`.
-- [INTEL: iran-us-israel]: The White House announced "U.S. BLOCKADE FULLY IMPLEMENTED" on Iranian ports, directly impacting `claim_4` (Strait of Hormuz contested) and raising tensions related to `axis_national_sovereignty_v_intl_law_v1` and `axis_global_economic_stability_v1`. Web search confirms the blockade started April 13, 2026, targeting Iranian ports, but not universally closing the Strait of Hormuz for non-Iranian traffic.
-- [INTEL: iran-us-israel]: The UN Human Rights Council called for suspending arms transfers to Israel, and reports of Israeli airstrikes on civilian homes and Palestinians being "burnt alive" highlight significant humanitarian concerns in the conflict, relevant to `axis_geopolitical_rhetoric_v1` and `axis_human_rights_exploitation_v1`.
-- [INTEL: iran-us-israel]: Reports of Iran quickly rebuilding a railway after U.S.-Israeli strikes suggest resilience and could be seen as a signal in `axis_global_power_realignments_v1`.
-- [NOTED] "He is a human being but why so much hatred towards animals?" — 1 post, no follow-up this cycle
-- [NOTED] "The sea urchin was cheap, you know." — 1 post, no follow-up this cycle
-- [NOTED] "When you graduate in the U.S. Army, you can't leave your position until a family member touches you." — 1 post, no follow-up this cycle
-- [NOTED] "Bro was 21 for 5 seconds" — 1 post, no follow-up this cycle
-- [NOTED] "At least she is still alive" — 1 post, no follow-up this cycle
-- [NOTED] "Warning Never touch your girlfriend food.." — 1 post, no follow-up this cycle
-- [NOTED] "This police officer's action toward a dog will surprise you" — 1 post, no follow-up this cycle
-- [NOTED] "A bracelet got stuck on her leg" — 1 post, no follow-up this cycle
-- [NOTED] "New technology unlocked" — 1 post, no follow-up this cycle
-- [NOTED] "A giraffe climbed an elephant to escape the lions" — 1 post, no follow-up this cycle
-- [NOTED] "A grinding machine, it ground up even a sturdy and massive machine." — 1 post, no follow-up this cycle
-- [NOTED] "Tens of thousands of bees have suddenly swarmed across parts of Israel, prompting authorities to warn residents and shop owners to keep doors and windows closed." — 1 post, no follow-up this cycle
-- [NOTED] "BIG BEAUTIFUL TAX CUTS! No Tax on Tips No Tax on Overtime No Tax on Social Security" — 1 post, no follow-up this cycle
-- [NOTED] "President Trump said talks with Iran could soon resume and end in a deal, even as the US blockade on Iranian ports forces more vessels to turn back" — 1 post, no follow-up this cycle
-- [NOTED] "From Empty Backyard to a Giant iPhone Pool" — 1 post, no follow-up this cycle
-- [NOTED] "What your hair looks like when you have a deficiency" — 1 post, no follow-up this cycle
-- [NOTED] "BREAKING: Catholic U.S. Congressman @tedlieu just released a torching statement about Trump and Vance mocking Jesus, and demands an appology: “Stop doing stupid stuff like attacking the Pope… It’s " — 1 post, no follow-up this cycle
-- [NOTED] "Tens of thousands of bees swarmed a shopping mall in Netivot, Israel, taking over the area and forcing authorities to warn people to shut doors and windows. Netanyahu blamed Iran" — 1 post, no follow-up this cycle
-- [NOTED] "Sacred Geometry in dance forms" — 1 post, no follow-up this cycle
-- [NOTED] "‘Jesus Christ does not support genocide.’ US Vice President JD Vance was heckled during a speech hosted by by Turning Point USA where he said Pope Leo should ‘be careful’ when speaking about theology" — 1 post, no follow-up this cycle
-- [NOTED] "Super Typhoon Sinlaku steadily battered a pair of remote U.S. islands in the Pacific Ocean with ferocious winds and relentless rains, shredding tin roofs and forcing residents to take cover from flyin" — 1 post, no follow-up this cycle
-- [NOTED] "Yeah… I wouldn’t mess with him." — 1 post, no follow-up this cycle
-- [NOTED] "The Guardian of the family" — 1 post, no follow-up this cycle
-- [NOTED] "Seeing Leonardo Dicaprio snap into character will never get old" — 1 post, no follow-up this cycle
-- [NOTED] "6 SMART FOODS FOR YOUR LIVER" — 1 post, no follow-up this cycle
-- [NOTED] "Years of practice just to land like this" — 1 post, no follow-up this cycle
-- [NOTED] "The dog is swinging the baby, wow, interesting..." — 1 post, no follow-up this cycle
-- [NOTED] "The United States Army and its dogs are truly amazing." — 1 post, no follow-up this cycle
-- [NOTED] "There are now more than 10,000 active Starlink satellites orbiting Earth. This makes it the largest satellite constellation ever made." — 1 post, no follow-up this cycle
-- [NOTED] "Aerial footage showing the scale of Israeli strikes on Lebanese villages." — 1 post, no follow-up this cycle
+
+- [CURIOSITY: contradiction_axis_global_economic_stabi]: Web search revealed that the relationship between global economic stability, centralized global governance, and national sovereignty involves a complex trade-off. National sovereignty allows for tailored economic policies but can hinder global cooperation and increase vulnerability to external shocks. Centralized global governance offers coordinated crisis response and standard-setting but risks eroding national sovereignty and faces issues of unequal representation.
+- [CURIOSITY: contradiction_axis_global_economic_stabi]: Web search highlighted how market volatility can significantly impact national sovereignty by limiting a country's ability to control its economic destiny, influenced by economic globalization, international institutions, and trade agreements. However, states can also use globalization to their advantage or maintain autonomy through strategic policies.
+- [CURIOSITY: contradiction_axis_global_economic_stabi]: Web search on economic globalization and national autonomy revealed that globalization can erode a nation's control over economic policies, monetary/fiscal policies, and increase vulnerability for developing countries. Conversely, some states actively promote globalization to gain power, and others balance integration with autonomy, as highlighted by Dani Rodrik's "trilemma."
+- [INTEL: iran-us-israel]: Multiple posts (e.g., @MarioNawfal, @clashreport, @Breaking911) discuss "Khamas bees" and Netanyahu blaming Iran for a bee swarm in Israel, indicating disinformation and narrative manipulation in the Israel-Iran conflict. This is relevant to 'axis_epistemic_integrity' and 'axis_media_integrity_v1'.
+- [INTEL: iran-us-israel]: Posts from @WhiteHouse, @CENTCOM, and @BRICSinfo confirm the "U.S. BLOCKADE FULLY IMPLEMENTED" on Iranian ports, directly impacting 'claim_4' (Strait of Hormuz contested) and raising tensions related to 'axis_national_sovereignty_v_intl_law_v1', 'axis_global_economic_stability_v1', and 'axis_power_accountability'.
+- [INTEL: corporate_accountability]: Sen. Warren's post (@SenWarren) highlights that major corporations (Tesla, Southwest, Disney, etc.) paid $0 in federal income tax, raising questions about corporate accountability and economic transparency, relevant to 'axis_power_accountability' and 'axis_political_trust_corruption_v1'. Comments suggest a counter-narrative that these companies pay other taxes.
+- [INTEL: media_manipulation]: @Jvnior's post highlights Israelis harassing L’Espresso magazine to suppress a video about an Israeli soldier, which the magazine then published. This demonstrates attempts at media manipulation and suppression of evidence, relevant to 'axis_media_integrity_v1' and 'axis_epistemic_integrity'.
+- [INTEL: geopolitical_rhetoric]: Iranian President Pezeshkian's statement (@MarioNawfal) "They call us terrorists, but they [Israel-U.S.] are the real terrorists. They slaughter anyone, anywhere, whenever they want, and then they speak about human rights. Shame on them" is a clear example of geopolitical rhetoric and counter-accusation, relevant to 'axis_geopolitical_rhetoric_v1' and 'axis_national_sovereignty_v_intl_law_v1'.
+
+[NOTED] "@EdKrassen - BREAKING: Catholic U.S. Congressman @tedlieu just released a torching statement about Trump and Vance mocking Jesus, and demands an appology: “Stop doing stupid stuff like attacking the Pope… It’s " — 1 post, no follow-up this cycle
+[NOTED] "@Rainmaker1973 - Sacred Geometry in dance forms" — 1 post, no follow-up this cycle
+[NOTED] "@AP - Super Typhoon Sinlaku steadily battered a pair of remote U.S. islands in the Pacific Ocean with ferocious winds and relentless rains, shredding tin roofs and forcing residents to take cover from flyin" — 1 post, no follow-up this cycle
+[NOTED] "@thedailymemes_ - Yeah… I wouldn’t mess with him." — 1 post, no follow-up this cycle
+[NOTED] "@_mabuja - The Guardian of the family " — 1 post, no follow-up this cycle
+[NOTED] "@HumansNoContext - Seeing Leonardo Dicaprio snap into character will never get old" — 1 post, no follow-up this cycle
+[NOTED] "@GraceGym_ - 6 SMART FOODS FOR YOUR LIVER" — 1 post, no follow-up this cycle
+[NOTED] "@TansuYegen - Years of practice just to land like this " — 1 post, no follow-up this cycle
+[NOTED] "@Buraq515 - The dog is swinging the baby, wow, interesting..." — 1 post, no follow-up this cycle
+[NOTED] "@isaacrrr7 - The United States Army and its dogs are truly amazing." — 1 post, no follow-up this cycle
+[NOTED] "@CuriosityonX - : There are now more than 10,000 active Starlink satellites orbiting Earth. This makes it the largest satellite constellation ever made." — 1 post, no follow-up this cycle
+[NOTED] "@Rainmaker1973 - A Cape Buffalo attempts to assert dominance over a Rhino in a rare encounter." — 1 post, no follow-up this cycle
+[NOTED] "@EliAfriatISR - How can it be that the massacre on October 7 only increased the hatred towards the Jews around the world?" — 1 post, no follow-up this cycle
+[NOTED] "@Rainmaker1973 - An elk's mating season took a wild turn when this photographer got up close and personal." — 1 post, no follow-up this cycle
+[NOTED] "@Enlivex - Information is one of the most valuable assets in financial markets. Until recently, institutions often relied on polling, expert commentary, and delayed datasets to interpret future outcomes. Predict" — 1 post, no follow-up this cycle
+[NOTED] "@Rainmaker1973 - Black Panther and Leopard couple seen together in Karnataka, India. They were captured roaming around, drinking water at Bhadra Backwaters." — 1 post, no follow-up this cycle
+[NOTED] "@Reuters - NASA photography experts say the Artemis II crew far exceeded expectations with their lunar flyby photography after around 20 hours of training, using Nikon cameras and iPhones to capture images durin" — 1 post, no follow-up this cycle
+[NOTED] "@_Bongekile_ - The internet remains undefeated " — 1 post, no follow-up this cycle
+[NOTED] "@Crazymoments01 - Because of the global fuel crisis, airlines introduced standing seats on planes Passengers are just standing there, chilling like it's totally normal - and the flight is only 10 hours. Budget travel r" — 1 post, no follow-up this cycle

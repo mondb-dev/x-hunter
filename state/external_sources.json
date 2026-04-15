@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-15T17:04:25.924Z",
+  "generated_at": "2026-04-15T17:49:35.886Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-15T17:04:56.917Z",
+  "profiled_at": "2026-04-15T17:50:25.679Z",
   "sources": [
     {
       "domain": "cbp.gov",
@@ -242,6 +242,132 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 32,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "washingtonpost.com",
+      "entity": "Washingtonpost",
+      "kind": "news",
+      "first_seen_at": "2026-04-15T17:29:00Z",
+      "last_seen_at": "2026-04-15T17:29:00Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.washingtonpost.com/world/2026/04/13/us-iran-blockade-strait-hormuz-oil/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 3
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_global_economic_stability_v1",
+          "axis_national_sovereignty_v_intl_law_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.75,
+          "basis": [
+            "newsroom_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.26416666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:3",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.5816145833333334,
+          "confidence": 0.08585,
+          "method": "mechanical_v1",
+          "basis": [
+            "newsroom_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:1",
+            "distinct_axes:3",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-15T17:50:25.678Z",
+        "homepage_url": "https://washingtonpost.com/",
+        "example_url": "https://www.washingtonpost.com/world/2026/04/13/us-iran-blockade-strait-hormuz-oil/",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://washingtonpost.com/",
+        "example_final_url": "https://www.washingtonpost.com/world/2026/04/13/us-iran-blockade-strait-hormuz-oil/",
+        "homepage_content_type": "",
+        "example_content_type": "",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -495,9 +621,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-15T14:10:00.000Z",
+      "last_seen_at": "2026-04-15T17:48:57.375Z",
       "discovery": {
-        "distinct_urls": 633,
+        "distinct_urls": 636,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -506,10 +632,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 411,
-          "feed_buffer_reply": 251
+          "feed_buffer": 412,
+          "feed_buffer_reply": 253
         },
-        "distinct_referring_accounts": 309,
+        "distinct_referring_accounts": 310,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -547,7 +673,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:633",
+            "distinct_urls:636",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -555,7 +681,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:309",
+            "referring_accounts:310",
             "origin_types:2"
           ]
         },
@@ -585,10 +711,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:633",
+            "distinct_urls:636",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:309",
+            "referring_accounts:310",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -901,7 +1027,7 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-15T15:51:50.073Z",
+      "last_seen_at": "2026-04-15T17:32:17.981Z",
       "discovery": {
         "distinct_urls": 89,
         "example_urls": [
@@ -913,7 +1039,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 90,
-          "claim_tracker": 8,
+          "claim_tracker": 7,
           "journals": 37
         },
         "distinct_referring_accounts": 0,
@@ -939,12 +1065,12 @@
         ]
       },
       "claims": {
-        "total": 8,
+        "total": 7,
         "supported": 0,
         "refuted": 0,
-        "contested": 2,
+        "contested": 1,
         "unverified": 6,
-        "resolved_count": 2
+        "resolved_count": 1
       },
       "structural_features": {
         "has_search_paths": true,
@@ -979,7 +1105,7 @@
           "basis": [
             "supported:0",
             "refuted:0",
-            "contested:2"
+            "contested:1"
           ]
         },
         "profile": {
@@ -1010,7 +1136,7 @@
             "origin_types:3",
             "supported:0",
             "refuted:0",
-            "contested:2"
+            "contested:1"
           ]
         }
       },
@@ -1163,6 +1289,139 @@
           "has_corrections_link": false,
           "outbound_links_count": 4,
           "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "cbsnews.com",
+      "entity": "Cbsnews",
+      "kind": "unknown",
+      "first_seen_at": "2026-03-27T23:18:50.928Z",
+      "last_seen_at": "2026-04-15T17:32:17.942Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://www.cbsnews.com/news/us-naval-blockade-iranian-ports-april-2026/",
+          "https://www.cbsnews.com/news/strait-of-hormuz-us-blockade-iran-ports-april-2026/",
+          "https://www.cbsnews.com/news/iran-war-recession-risk-oil-prices-inflation/",
+          "https://www.cbsnews.com/us-iran-tensions/",
+          "https://www.cbsnews.com/news/iran-response-us-peace-proposal-war/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 1,
+          "claim_tracker": 2,
+          "journals": 5
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_global_economic_stability_v1",
+          "axis_national_sovereignty_v_intl_law_v1"
+        ]
+      },
+      "claims": {
+        "total": 2,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 1,
+        "unverified": 1,
+        "resolved_count": 1
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.4425,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:2",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.26249999999999996,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": 0.5,
+          "basis": [
+            "supported:0",
+            "refuted:0",
+            "contested:1"
+          ]
+        },
+        "profile": {
+          "score": 0.46,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:23",
+            "opinion_marker:true"
+          ]
+        },
+        "overall": {
+          "score": 0.44462500000000005,
+          "confidence": 0.47905,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:2",
+            "origin_types:3",
+            "referring_accounts:0",
+            "origin_types:3",
+            "supported:0",
+            "refuted:0",
+            "contested:1"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-15T07:54:51.880Z",
+        "homepage_url": "https://cbsnews.com/",
+        "example_url": "https://www.cbsnews.com/news/iran-war-recession-risk-oil-prices-inflation/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.cbsnews.com/",
+        "example_final_url": "https://www.cbsnews.com/news/iran-war-recession-risk-oil-prices-inflation/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 21,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 23,
+          "opinion_marker": true
         }
       }
     },
@@ -2176,132 +2435,6 @@
           "has_corrections_link": false,
           "outbound_links_count": 0,
           "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "cbsnews.com",
-      "entity": "Cbsnews",
-      "kind": "unknown",
-      "first_seen_at": "2026-03-27T23:18:50.928Z",
-      "last_seen_at": "2026-04-15T12:56:25.892Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://www.cbsnews.com/news/strait-of-hormuz-us-blockade-iran-ports-april-2026/",
-          "https://www.cbsnews.com/news/iran-war-recession-risk-oil-prices-inflation/",
-          "https://www.cbsnews.com/us-iran-tensions/",
-          "https://www.cbsnews.com/news/iran-response-us-peace-proposal-war/"
-        ],
-        "origin_counts": {
-          "claim_tracker": 1,
-          "journals": 4
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_national_sovereignty_v_intl_law_v1"
-        ]
-      },
-      "claims": {
-        "total": 1,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 1,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.295,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:1",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.46,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:23",
-            "opinion_marker:true"
-          ]
-        },
-        "overall": {
-          "score": 0.3903125,
-          "confidence": 0.16770000000000002,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:1",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-15T07:54:51.880Z",
-        "homepage_url": "https://cbsnews.com/",
-        "example_url": "https://www.cbsnews.com/news/iran-war-recession-risk-oil-prices-inflation/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.cbsnews.com/",
-        "example_final_url": "https://www.cbsnews.com/news/iran-war-recession-risk-oil-prices-inflation/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 21,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 23,
-          "opinion_marker": true
         }
       }
     },
@@ -20142,7 +20275,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T16:58:58.133Z",
+        "fetched_at": "2026-04-15T17:29:56.368Z",
         "homepage_url": "https://pewresearch.org/",
         "example_url": "https://www.pewresearch.org/",
         "homepage_status": 200,
