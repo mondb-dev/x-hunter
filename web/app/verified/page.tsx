@@ -3,23 +3,47 @@ import { readVerification, VerifiedClaim, ScoringBreakdown } from "../../lib/rea
 import CopyLinkButton from "../../components/CopyLinkButton";
 
 /**
- * Gemini sometimes returns web_search_summary as a raw JSON blob:
- *   ```json\n{"verdict":"...", "summary":"..."}\n```
- * or just  {"verdict":"...", "summary":"..."}
- * Extract the human-readable summary text in those cases.
+ * Gemini sometimes returns web_search_summary as a raw JSON blob — often truncated,
+ * with no closing quote on the summary value.  Handle all cases:
+ *   1. Full valid JSON  → JSON.parse
+ *   2. Truncated JSON   → char-by-char scan from "summary": "
+ *   3. Plain text       → return as-is
  */
 function parseSummary(raw: string): string {
-  const stripped = raw.replace(/^```json\s*/i, "").replace(/```\s*$/, "").trim();
+  if (!raw) return raw;
+  // Strip code fences
+  const s = raw.replace(/^```json\s*/i, "").replace(/```\s*$/, "").trim();
+  // 1. Try full JSON parse
   try {
-    const parsed = JSON.parse(stripped);
+    const parsed = JSON.parse(s);
     if (typeof parsed === "object" && parsed !== null) {
-      const s = parsed.summary ?? parsed.text ?? parsed.content ?? parsed.verdict_explanation;
-      if (typeof s === "string" && s.length > 0) return s;
+      const v = parsed.summary ?? parsed.text ?? parsed.content ?? parsed.verdict_explanation;
+      if (typeof v === "string" && v.length > 0) return v;
     }
-  } catch {
-    // not JSON — return original
+  } catch { /* fall through */ }
+  // 2. Char-by-char scan — handles truncated JSON (no closing quote)
+  const keyMatch = s.match(/"summary"\s*:\s*"/);
+  if (!keyMatch || keyMatch.index === undefined) return raw;
+  let pos = keyMatch.index + keyMatch[0].length;
+  const buf: string[] = [];
+  while (pos < s.length) {
+    const ch = s[pos];
+    if (ch === "\\" && pos + 1 < s.length) {
+      const next = s[pos + 1];
+      if (next === '"') buf.push('"');
+      else if (next === 'n') buf.push(' ');
+      else if (next === '\\') buf.push('\\');
+      else buf.push(next);
+      pos += 2;
+    } else if (ch === '"') {
+      break; // clean end of string value
+    } else {
+      buf.push(ch);
+      pos++;
+    }
   }
-  return raw;
+  const result = buf.join("").trim();
+  return result || raw;
 }
 
 export const dynamic = "force-dynamic";
