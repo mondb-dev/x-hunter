@@ -35,6 +35,89 @@ const PROTECTED_FILES = [
 ];
 
 /**
+ * Load a tail of lines from a file. Returns empty string on failure.
+ */
+function tailFile(filePath, lines = 60) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf-8');
+    return content.split('\n').slice(-lines).join('\n').trim();
+  } catch { return ''; }
+}
+
+/**
+ * Load last N entries from a .jsonl file as pretty JSON array.
+ */
+function tailJsonl(filePath, n = 8) {
+  try {
+    const entries = fs.readFileSync(filePath, 'utf-8')
+      .trim().split('\n').filter(Boolean)
+      .slice(-n)
+      .map(l => { try { return JSON.parse(l); } catch { return null; } })
+      .filter(Boolean);
+    return JSON.stringify(entries, null, 2);
+  } catch { return ''; }
+}
+
+/**
+ * Load a JSON state file, pretty-printed and capped at maxChars.
+ */
+function loadJson(filePath, maxChars = 1500) {
+  try {
+    const raw = fs.readFileSync(filePath, 'utf-8');
+    return raw.slice(0, maxChars) + (raw.length > maxChars ? '\n... (truncated)' : '');
+  } catch { return ''; }
+}
+
+/**
+ * Build the system monitoring snapshot for the builder.
+ * Gives the builder eyes on actual runtime state so proposals
+ * are grounded in what the system is doing right now.
+ */
+function loadMonitoringContext() {
+  const STATE = path.join(ROOT, 'state');
+  const LOG   = path.join(ROOT, 'runner', 'runner.log');
+
+  const sections = [];
+
+  // runner.log — last 80 lines (errors, warnings, cycle activity)
+  const log = tailFile(LOG, 80);
+  if (log) sections.push(`### runner.log (last 80 lines)\n\`\`\`\n${log}\n\`\`\``);
+
+  // health_state.json — system health metrics
+  const health = loadJson(path.join(STATE, 'health_state.json'));
+  if (health) sections.push(`### state/health_state.json\n\`\`\`json\n${health}\n\`\`\``);
+
+  // critique.md — last coherence evaluation
+  const critique = tailFile(path.join(STATE, 'critique.md'), 30);
+  if (critique) sections.push(`### state/critique.md (last 30 lines)\n\`\`\`\n${critique}\n\`\`\``);
+
+  // critique_history.jsonl — last 6 critique entries (coherence trend)
+  const critiqueHistory = tailJsonl(path.join(STATE, 'critique_history.jsonl'), 6);
+  if (critiqueHistory) sections.push(`### state/critique_history.jsonl (last 6)\n\`\`\`json\n${critiqueHistory}\n\`\`\``);
+
+  // signal_log.jsonl — last 6 signal detection results
+  const signalLog = tailJsonl(path.join(STATE, 'signal_log.jsonl'), 6);
+  if (signalLog) sections.push(`### state/signal_log.jsonl (last 6)\n\`\`\`json\n${signalLog}\n\`\`\``);
+
+  // landmark_state.json — landmark pipeline status
+  const landmarkState = loadJson(path.join(STATE, 'landmark_state.json'));
+  if (landmarkState) sections.push(`### state/landmark_state.json\n\`\`\`json\n${landmarkState}\n\`\`\``);
+
+  // posts_log.json — last 5 posts (success/failure rates)
+  try {
+    const raw = fs.readFileSync(path.join(STATE, 'posts_log.json'), 'utf-8').replace(/\\'/g, "'");
+    const posts = (JSON.parse(raw).posts || []).slice(-5);
+    sections.push(`### state/posts_log.json (last 5 posts)\n\`\`\`json\n${JSON.stringify(posts, null, 2)}\n\`\`\``);
+  } catch {}
+
+  // article_meta.md — meta proposal from last landmark article
+  const articleMeta = tailFile(path.join(STATE, 'article_meta.md'), 20);
+  if (articleMeta) sections.push(`### state/article_meta.md\n\`\`\`\n${articleMeta}\n\`\`\``);
+
+  return sections.join('\n\n') || '(no monitoring data available)';
+}
+
+/**
  * Build the builder prompt from a proposal + context files.
  *
  * @param {Object} opts
@@ -55,6 +138,9 @@ function buildBuilderPrompt({ proposal, previousAttempts = [] }) {
 
   // Load tool manifest so builder knows what already exists
   const toolsManifest = buildToolManifest();
+
+  // Load live monitoring snapshot
+  const monitoringContext = loadMonitoringContext();
 
   // Build previous attempts context
   let attemptsSection = '';
@@ -145,6 +231,24 @@ Capabilities format:
   - capabilities.call_tools: optional array of tool names this tool may call via callTool()
 
 Do not rely on raw fs access outside declared capabilities. Use context.readState() and context.writeState() for state files.
+
+## System monitoring snapshot
+
+This is the live state of the system at the time this proposal is being implemented.
+Use it to understand what is actually failing, what is working, and what the system
+has been doing recently. These files are READ-ONLY — do not write to them in your implementation.
+
+Available monitoring files you can reference in your reasoning:
+- \`runner/runner.log\` — runtime errors, warnings, cycle activity
+- \`state/health_state.json\` — system health metrics
+- \`state/critique.md\` — last coherence evaluation of Sebastian's output
+- \`state/critique_history.jsonl\` — coherence trend over recent cycles
+- \`state/signal_log.jsonl\` — recent signal detection results
+- \`state/landmark_state.json\` — landmark pipeline status and counters
+- \`state/posts_log.json\` — recent post history (success/failure)
+- \`state/article_meta.md\` — meta proposal from last landmark article
+
+${monitoringContext}
 
 ## Relevant source files
 
