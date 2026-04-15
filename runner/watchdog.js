@@ -246,6 +246,24 @@ function checkMetaAutoRevert(hits) {
       process.exit(0);
     }
 
+    // Guard: check if posts_log already has a recent quote (prevents double-post on CDP unconfirmed)
+    try {
+      const draftContent = readTrim(QUOTE_DRAFT).substring(0, 80);
+      const logData = readJson(POSTS_LOG);
+      if (logData && draftContent) {
+        const cutoff = Date.now() - 5 * 60 * 1000; // 5 minutes
+        const alreadyPosted = (logData.posts || []).some(p =>
+          p.type === 'quote' &&
+          p.posted_at && new Date(p.posted_at).getTime() > cutoff &&
+          (p.content || p.text || '').substring(0, 80) === draftContent
+        );
+        if (alreadyPosted) {
+          console.log("[watchdog] QUOTE: already logged in posts_log (CDP unconfirmed but posted) — skipping retry");
+          process.exit(0);
+        }
+      }
+    } catch {}
+
     // Result missing — retry once
     console.log("[watchdog] QUOTE: no result — retrying post_quote.js...");
     runScript("post_quote.js");
