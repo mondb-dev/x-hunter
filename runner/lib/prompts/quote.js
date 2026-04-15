@@ -31,6 +31,12 @@ module.exports = function buildQuotePrompt(ctx) {
     '   analyzing for the Veritas Lens, or community discussion to engage with.\n' +
     '   HARD SKIP (never quote these): questions or replies directed AT you (@SebastianHunts),\n' +
     '   retweets with no original text, posts that are only a URL, posts shorter than 15 words.\n' +
+    '   HARD SKIP: posts where your only angle depends on what the REPLIES are alleging about\n' +
+    '   the tweet itself (e.g. replies claim a video is fabricated, replies allege the account\n' +
+    '   is compromised, replies say a claim is false). Reply allegations are unverified noise.\n' +
+    '   If you quote the original while echoing those allegations, YOU are the one spreading\n' +
+    '   an unverified claim — which is the exact behaviour you are supposed to observe and\n' +
+    '   critique, not commit. Skip entirely or pick a different candidate.\n' +
     '   Candidates must be making a real substantive claim you can engage with.\n' +
     '\n' +
     '2. Navigate to the best candidate URL in your browser. Read the actual tweet and its visible replies.\n' +
@@ -47,6 +53,13 @@ module.exports = function buildQuotePrompt(ctx) {
     '   NOT acceptable: generic belief statement that could apply to any tweet.\n' +
     '   NOT acceptable: "this claim conflates X", "demands scrutiny", "risks premature judgment" \u2014 press release language.\n' +
     '   NOT acceptable: internal metrics in the tweet \u2014 no "conf 95%", "score 0.40", "(confidence: X)".\n' +
+    '   NOT acceptable: treating what REPLIES allege as established fact. "Identified as fabricated\n' +
+    '   in the replies", "confirmed false by replies", "replies say this is fake" — these all take\n' +
+    '   unverified reply noise and present it as a finding. You have not verified it. Writing\n' +
+    '   "such deceptive content can circulate under the AP handle" when you only saw anonymous\n' +
+    '   replies make that claim means YOU are calling AP deceptive without any verification.\n' +
+    '   That is misinformation. Do not do this. If you cannot engage with the tweet on its own\n' +
+    '   merits without laundering reply allegations, skip it.\n' +
     '   ACCEPTABLE: a direct response to what this specific tweet actually says, from your position on the axis.\n' +
     '   The reader must be able to see why THIS tweet provoked THIS response.\n' +
     '   HARD LIMIT: Max 240 characters. Count them. If it is over 240 when you re-read, CUT WORDS\n' +
