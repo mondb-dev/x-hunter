@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-15T03:44:05.880Z",
+  "generated_at": "2026-04-15T04:34:07.818Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-15T03:44:37.144Z",
+  "profiled_at": "2026-04-15T04:34:40.100Z",
   "sources": [
     {
       "domain": "house.gov",
@@ -373,9 +373,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-15T03:28:55.890Z",
+      "last_seen_at": "2026-04-15T04:18:56.583Z",
       "discovery": {
-        "distinct_urls": 603,
+        "distinct_urls": 604,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -384,10 +384,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 391,
+          "feed_buffer": 392,
           "feed_buffer_reply": 241
         },
-        "distinct_referring_accounts": 294,
+        "distinct_referring_accounts": 295,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -425,7 +425,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:603",
+            "distinct_urls:604",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -433,7 +433,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:294",
+            "referring_accounts:295",
             "origin_types:2"
           ]
         },
@@ -463,10 +463,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:603",
+            "distinct_urls:604",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:294",
+            "referring_accounts:295",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -778,7 +778,7 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-15T02:56:25.969Z",
+      "last_seen_at": "2026-04-15T03:46:00.233Z",
       "discovery": {
         "distinct_urls": 62,
         "example_urls": [
@@ -1012,7 +1012,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T04:08:53.981Z",
+        "fetched_at": "2026-04-15T04:34:38.342Z",
         "homepage_url": "https://wikipedia.org/",
         "example_url": "https://en.wikipedia.org/wiki/2026_Iran_war",
         "homepage_status": 200,
@@ -1390,7 +1390,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T04:08:54.434Z",
+        "fetched_at": "2026-04-15T04:34:38.657Z",
         "homepage_url": "https://moltbook.com/",
         "example_url": "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
         "homepage_status": 200,
@@ -2396,7 +2396,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T04:08:54.734Z",
+        "fetched_at": "2026-04-15T04:34:38.964Z",
         "homepage_url": "https://understandingwar.org/",
         "example_url": "https://understandingwar.org/research/middle-east/the-war-in-iran-operational-progress-but-challenges-remain/",
         "homepage_status": 200,
@@ -2624,7 +2624,7 @@
             "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:529",
+            "outbound_links:530",
             "opinion_marker:false"
           ]
         },
@@ -2644,7 +2644,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-12T04:08:55.675Z",
+        "fetched_at": "2026-04-15T04:34:40.100Z",
         "homepage_url": "https://cfr.org/",
         "example_url": "https://www.cfr.org/global-conflict-tracker/conflict/confrontation-between-united-states-and-iran",
         "homepage_status": 200,
@@ -2670,7 +2670,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 529,
+          "outbound_links_count": 530,
           "opinion_marker": false
         }
       }
@@ -5527,6 +5527,130 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 9,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "cosmos.so",
+      "entity": "Cosmos So",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-14T03:21:06.000Z",
+      "last_seen_at": "2026-04-15T02:12:03.000Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc",
+          "https://cosmos.so/?twclid=2byirh1tzwmrzd352osdsykqjo",
+          "https://cosmos.so/?twclid=25fb5zkvgutjc80m43laabv8z6"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "thecosmos"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.039999999999999994,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:4",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.36000000000000004,
+          "confidence": 0.1386,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-15T02:04:34.633Z",
+        "homepage_url": "https://cosmos.so/",
+        "example_url": "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.cosmos.so/",
+        "example_final_url": "https://www.cosmos.so/",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
           "opinion_marker": false
         }
       }
@@ -15428,128 +15552,6 @@
       }
     },
     {
-      "domain": "cosmos.so",
-      "entity": "Cosmos So",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-14T03:21:06.000Z",
-      "last_seen_at": "2026-04-14T03:21:06.000Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "thecosmos"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.039999999999999994,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:4",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-15T02:04:34.633Z",
-        "homepage_url": "https://cosmos.so/",
-        "example_url": "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.cosmos.so/",
-        "example_final_url": "https://www.cosmos.so/",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 4,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 4,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "yeptype.com",
       "entity": "Yeptype",
       "kind": "unknown",
@@ -16278,6 +16280,160 @@
           "has_corrections_link": false,
           "outbound_links_count": 2,
           "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "theepochtimes.com",
+      "entity": "Theepochtimes",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-15T03:48:55.844Z",
+      "last_seen_at": "2026-04-15T03:48:55.844Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "epochtimes"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "bimzelxhcp.com",
+      "entity": "Bimzelxhcp",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-15T04:18:56.583Z",
+      "last_seen_at": "2026-04-15T04:18:56.583Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.bimzelxhcp.com/rheumatology/Psoriatic-Arthritis/Zero-In-On-Domains?utm_medium=paid_social&utm_source=x&utm_campaign=phm_BKZHCPRheum&utm_content=Awareness-KW&utm_term=PSA_ZeroEndpoints_US_BK_2500818&utm_id=23850502164480094&twclid=2dvpthvevxfli7pfaji92p3iqa"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "bimzelxhcp"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
         }
       }
     },

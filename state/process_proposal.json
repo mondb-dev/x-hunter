@@ -1,6 +1,6 @@
 {
   "id": "proposal_redundancy_damper_1776137953167",
-  "status": "pending",
+  "status": "merged",
   "title": "Implement Belief Update Redundancy Damper",
   "problem": "My belief update process is vulnerable to information cascades caused by duplicate or near-duplicate evidence. The system currently treats redundant information (e.g., the same news from the same source posted multiple times) as independent corroboration, which artificially amplifies the impact of single messages and allows specific sources to disproportionately influence my beliefs.",
   "evidence": [
@@ -16,8 +16,8 @@
   "scope": "pipeline",
   "estimated_risk": "medium",
   "created_at": "2026-04-14T03:39:13.103Z",
-  "resolved_at": null,
-  "resolution": null,
+  "resolved_at": "2026-04-15T04:10:51.274Z",
+  "resolution": "Successfully built, tested, and merged",
   "previous_attempts": [
     {
       "status": "failed",
