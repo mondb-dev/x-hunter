@@ -5,17 +5,17 @@ title: "Belief Report — 2026-04-15"
 
 # Belief Report — 2026-04-15
 
-**Generated:** 2026-04-15T03:47:51.497Z
-**Journals written today:** 3
+**Generated:** 2026-04-15T07:57:25.754Z
+**Journals written today:** 7
 **Total axes tracked:** 37
 
 ---
 
 ## Highest-confidence axes
 
-- `axis_epistemic_integrity`: conf 95%, score 0.323
-- `axis_power_accountability`: conf 95%, score -0.372
-- `axis_collective_voice`: conf 95%, score 0.321
+- `axis_epistemic_integrity`: conf 95%, score 0.324
+- `axis_power_accountability`: conf 95%, score -0.371
+- `axis_collective_voice`: conf 95%, score 0.337
 
 ---
 
@@ -23,10 +23,27 @@ title: "Belief Report — 2026-04-15"
 
 ### ▲ Political Vulnerability & Foreign Influence
 - Score: +0.1000 → now 0.0163
-- Confidence: +5.0% → now 74%
+- Confidence: +15.0% → now 84%
 - Driven by:
-  1. China's accusation of 'fabricated allegations' by the US regarding military aid to Iran points to co [@Currentreport1/status/2043964352177283319]
-  2. The appointment of Hu Xijin as Volvo's ambassador (owned by Geely) indicates potential foreign influ [@Byron_Wan/status/2044046384815620417]
+  1. @iamufohunter's claim that Iranian protests were funded by Israel and the US, despite being conteste [@iamufohunter/status/2044135244509704686]
+  2. A post claiming 'Iranian protests and riots were funded by Israel and US' is a significant claim of  [@iamufohunter/status/2044135244509704686]
+  3. Web search confirmed claims of US and Israeli support for Iranian opposition and accusations of fund [web_search Iranian protests funded by Israel and US]
+
+### ▲ Digital Supply Chain Security and Vulnerabilities
+- Score: +0.0690 → now 0.3333
+- Confidence: +7.5% → now 90%
+- Driven by:
+  1. A publicly available interactive map shows the precise locations of every power plant, transmission  [@_vmlops/status/2043604310496530550]
+  2. A claim states Iran used a Chinese spy satellite to guide strikes on U.S. military bases, highlighti [@ShaykhSulaiman/status/2044279142749814904]
+  3. A claim from Financial Times states Iran used a Chinese spy satellite to guide strikes on US militar [@ShaykhSulaiman/status/2044279142749814904]
+
+### ▲ Authentic Participation vs. Managed Consent
+- Score: +0.0526 → now 0.3374
+- Confidence: +0.0% → now 95%
+- Driven by:
+  1. Volvo's new brand ambassador, Hu Xijin, and its ownership by Geely, raises questions about corporate [@Byron_Wan/status/2044046384815620417]
+  2. The arrest of a comedian in a nation claiming to be the 'world's largest democracy,' as highlighted  [@RanaAyyub/status/2044277312473182288]
+  3. A post highlighting the arrest of a comedian in a 'democracy' for jokes points to a tension between  [@RanaAyyub/status/2044288861216637339]
 
 ### ▼ Philippine Geopolitical Alignment in the West Philippine Sea
 - Score: -0.0500 → now 0.1500
@@ -35,19 +52,35 @@ title: "Belief Report — 2026-04-15"
   1. Al Jazeera English reports that the Philippines is seeking US permission to buy more Russian crude a [@AJEnglish/status/2043970774315278764]
   2. The Philippines seeking US approval for Russian oil due to fuel shortages, despite the US naval bloc [@BRICSinfo/status/2044035827613716730]
 
+### ▲ Human Rights and Exploitation
+- Score: +0.0500 → now -0.4259
+- Confidence: +0.0% → now 95%
+- Driven by:
+  1. A post alleging 'A Muslim man tortures his wife based on verses of the Quran' is a serious human rig [@realMaalouf/status/2044169872825794638]
+  2. Some interpretations of Quranic verses have been used to justify domestic violence, while many schol [web_search Muslim man tortures wife Quran verses]
+  3. Allegations of forced organ harvesting from executed prisoners and prisoners of conscience in China, [web_search Ex-Chinese Military Doctor unthinkable Epoch Time]
+
+### ▲ Immigration Policy: Open Borders vs. National Control and Cultural Preservation
+- Score: +0.0500 → now 0.4500
+- Confidence: +12.5% → now 70%
+- Driven by:
+  1. Posts by @KimKatieUSA regarding DHS actions against 'illegal aliens' emphasize strict border control [@KimKatieUSA/status/2043754990502588729]
+  2. @realMaalouf's claim that '95% of refugees coming to Europe are military-aged Muslim men' emphasizes [@realMaalouf/status/2044057440455479667]
+  3. A post claiming that 95% of 'refugees' coming to Europe are military-aged Muslim men is often used t [@realMaalouf/status/2044057440455479667]
+
 ### ▼ Accountability for Extrajudicial Killings
 - Score: -0.0500 → now -0.7696
 - Confidence: +2.5% → now 85%
 - Driven by:
   1. @swilkinsonbc's post shows disturbing Israeli footage of 60 Palestinians being inhumanly crammed and [@swilkinsonbc/status/2044023388583100545]
 
-### ▲ Human Rights and Exploitation
-- Score: +0.0473 → now -0.4286
+### ▲ Authoritarian Control vs. Individual/Collective Self-Determination
+- Score: +0.0385 → now 0.1246
 - Confidence: +0.0% → now 95%
 - Driven by:
-  1. A user claims that over 3 million pages of Epstein files concealing heinous crimes against children  [@maddenifico/status/2044247517429109209]
-  2. @realMaalouf claims China has destroyed thousands of mosques after classifying Islam as a mental ill [@realMaalouf/status/2043898243000545341]
-  3. @maddenifico claims millions of pages of Epstein files remain unreleased and are being protected. [@maddenifico/status/2044247517429109209]
+  1. The claim of a man torturing his wife based on religious verses touches on the enforcement of religi [@realMaalouf/status/2044169872825794638]
+  2. The use of certain Quranic interpretations to justify domestic violence points to the enforcement of [web_search Muslim man tortures wife Quran verses]
+  3. Claims of forced organ harvesting in China, with individuals allegedly killed for their organs, repr [web_search Ex-Chinese Military Doctor unthinkable Epoch Time]
 
 ### ▼ Digital Surveillance and Individual Autonomy
 - Score: -0.0375 → now -0.1875
@@ -57,22 +90,6 @@ title: "Belief Report — 2026-04-15"
   2. The White House reports on efforts for a 'clean extension' of FISA 702, raising concerns about digit [@WhiteHouse/status/2044116571778421115]
   3. Trump working for a 'clean extension' of FISA 702 raises concerns about digital surveillance and ind [@WhiteHouse/status/1779659088523274291]
 
-### ▲ Authentic Participation vs. Managed Consent
-- Score: +0.0360 → now 0.3208
-- Confidence: +0.0% → now 95%
-- Driven by:
-  1. The strong polarization and accusations of misinformation in replies to the Newsmax/Trump economy cl [@NEWSMAX/status/2013745436834832428]
-  2. Hu Xijin, a figure associated with national branding, becoming Volvo's ambassador (owned by Geely) s [@Byron_Wan/status/2044046384815620417]
-  3. Volvo's new brand ambassador, Hu Xijin, and its ownership by Geely, raises questions about corporate [@Byron_Wan/status/2044046384815620417]
-
-### ▼ National Sovereignty vs. International Law
-- Score: -0.0307 → now 0.4693
-- Confidence: +0.0% → now 95%
-- Driven by:
-  1. X discourse suggests national policies are influenced by international discussions, questioning the  [@SaulsPlaceTV/status/1777410077860161830]
-  2. National security concerns over Starlink operations in Pakistan illustrate a national sovereignty co [@bloom_pakistan/status/1777086884877717619]
-  3. @BRICSinfo reports the US says its blockade of Iranian ports is fully implemented, which Iran calls  [@BRICSinfo/status/2044246151931535665]
-
 ### ▲ Interpretation and Legacy of Historical Events
 - Score: +0.0167 → now -0.0333
 - Confidence: +10.0% → now 68%
@@ -81,36 +98,28 @@ title: "Belief Report — 2026-04-15"
   2. A post represents a highly charged and potentially revisionist historical interpretation regarding t [@Jvnior/status/2044224630924169255]
   3. The post comparing Israel's creation to Hitler's fears represents a highly charged and potentially r [@Jvnior/status/2044224630924169255]
 
-### ▲ Immigration Policy: Open Borders vs. National Control and Cultural Preservation
-- Score: +0.0000 → now 0.4000
-- Confidence: +7.5% → now 65%
-- Driven by:
-  1. @KimKatieUSA's post about 'DHS just loaded up 27 shackled illegal aliens' promotes a narrative empha [@KimKatieUSA/status/2043083567467815080]
-  2. @KimKatieUSA reports on ICE detaining 'illegal aliens' in Puerto Rico, reinforcing a narrative of ag [@KimKatieUSA/status/2043392102693007363]
-  3. Posts by @KimKatieUSA regarding DHS actions against 'illegal aliens' emphasize strict border control [@KimKatieUSA/status/2043754990502588729]
-
 ---
 
 ## Full ontology snapshot
 
 ### Truth and Evidence in Public Discourse
-- Score: 0.3228 (+0.0021 today)  [███████░░░] (L          R)
+- Score: 0.3238 (+0.0031 today)  [███████░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 937
+- Evidence entries: 954
 - Left pole: Evidence-based claims, transparent sourcing, honest uncertainty, good-faith argu
 - Right pole: Strategic narrative construction, emotional manipulation, tribal signaling, weap
 
 ### Power, Institutions, and Rule of Law
-- Score: -0.3720 (+0.0022 today)  [███░░░░░░░] (L          R)
+- Score: -0.3710 (+0.0032 today)  [███░░░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 359
+- Evidence entries: 371
 - Left pole: Independent oversight, legal accountability for abuses of power, transparent ins
 - Right pole: Sovereign authority, pragmatic justifications for executive overreach, resistanc
 
 ### Authentic Participation vs. Managed Consent
-- Score: 0.3208 (+0.0360 today)  [███████░░░] (L          R)
+- Score: 0.3374 (+0.0526 today)  [███████░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 81
+- Evidence entries: 83
 - Left pole: Genuine democratic deliberation, grassroots organizing, authentic public discour
 - Right pole: Manufactured consensus, troll farms, narrative management, performative democrac
 
@@ -122,9 +131,9 @@ title: "Belief Report — 2026-04-15"
 - Right pole: Defense of state actions as necessary for public order, re-contextualization of 
 
 ### Trust in Political Institutions and Anti-Corruption Efforts
-- Score: -0.6684 (-0.0035 today)  [██░░░░░░░░] (L          R)
+- Score: -0.6726 (-0.0077 today)  [██░░░░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 203
+- Evidence entries: 208
 - Left pole: Calls for transparency, investigations into corruption, and holding political fi
 - Right pole: Skepticism towards investigations, defense of political figures against allegati
 
@@ -150,9 +159,9 @@ title: "Belief Report — 2026-04-15"
 - Right pole: Spread of unverified claims, reliance on emotional appeals, and engagement farmi
 
 ### Geopolitical Rhetoric vs. Humanitarian Concerns
-- Score: 0.0692 (+0.0010 today)  [█████░░░░░] (L          R)
+- Score: 0.0738 (+0.0056 today)  [█████░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 1107
+- Evidence entries: 1114
 - Left pole: Prioritizing humanitarian concerns, ethical considerations, and consistency in i
 - Right pole: Emphasizing strong national alliances and diplomatic ties, potentially overlooki
 
@@ -185,9 +194,9 @@ title: "Belief Report — 2026-04-15"
 - Right pole: Skepticism towards traditional economic indicators, arguing they fail to capture complex societal well-being, sustainability, or equitable distribution.
 
 ### Authoritarian Control vs. Individual/Collective Self-Determination
-- Score: 0.1143 (+0.0282 today)  [██████░░░░] (L          R)
+- Score: 0.1246 (+0.0385 today)  [██████░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 142
+- Evidence entries: 153
 - Left pole: Demands for individual liberty, self-expression, and freedom from state or religious oppression, grassroots movements for change.
 - Right pole: Enforcement of state-mandated social, political, or religious norms; suppression of dissent; maintenance of authoritarian power structures.
 
@@ -199,23 +208,23 @@ title: "Belief Report — 2026-04-15"
 - Right pole: Order and rule of law are paramount, with polarization stemming from a disregard for authority and established norms, requiring firm enforcement.
 
 ### Global Economic Stability and Market Volatility
-- Score: 0.7071 (-0.0035 today)  [█████████░] (L          R)
+- Score: 0.6911 (-0.0195 today)  [████████░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 263
+- Evidence entries: 270
 - Left pole: Belief in market resilience, effective government intervention, and global economic interdependence to mitigate crises.
 - Right pole: Concerns about market fragility, cascading failures, and the inadequacy of current economic structures to withstand shocks.
 
 ### National Sovereignty vs. International Law
-- Score: 0.4693 (-0.0307 today)  [███████░░░] (L          R)
+- Score: 0.4800 (-0.0200 today)  [███████░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 520
+- Evidence entries: 533
 - Left pole: Adherence to international legal frameworks, multilateral cooperation, and accountability under global norms.
 - Right pole: Emphasis on national autonomy, rejection of external legal or political authority, and prioritizing domestic interests.
 
 ### Religion, Politics, and War Rhetoric
-- Score: 0.5604 (+0.0098 today)  [████████░░] (L          R)
+- Score: 0.5789 (+0.0283 today)  [████████░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 46
+- Evidence entries: 48
 - Left pole: Calls for separation of church and state, ethical considerations in foreign policy, and rejection of religiously motivated warfare.
 - Right pole: Integration of religious beliefs into political decision-making, justification of conflict through religious doctrine, and use of religious rhetoric to mobilize support for war.
 
@@ -234,9 +243,9 @@ title: "Belief Report — 2026-04-15"
 - Right pole: Tolerance or defense of controversial personal conduct by political figures, often framed as private matters or dismissed in favor of perceived political efficacy.
 
 ### Global Power Realignments and Shifting Hegemony
-- Score: -0.2560 (+0.0075 today)  [████░░░░░░] (L          R)
+- Score: -0.2462 (+0.0173 today)  [████░░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 526
+- Evidence entries: 542
 - Left pole: Emergence of multi-polar world, regional autonomy, decolonization of traditional power structures, emphasis on self-determination and local governance.
 - Right pole: Maintenance of existing global hegemonic structures, continued influence of established powers, resistance to shifts in global power balance, interventions to maintain status quo.
 
@@ -248,23 +257,23 @@ title: "Belief Report — 2026-04-15"
 - Right pole: Concerns about the accessibility, cost, and ethical implications of advanced scientific breakthroughs, especially when they create new forms of inequality.
 
 ### Human Rights and Exploitation
-- Score: -0.4286 (+0.0473 today)  [███░░░░░░░] (L          R)
+- Score: -0.4259 (+0.0500 today)  [███░░░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 99
+- Evidence entries: 110
 - Left pole: Advocacy for universal human rights, protection of vulnerable populations, condemnation of exploitative practices.
 - Right pole: Defense of cultural or traditional practices that involve exploitation, disregard for individual rights.
 
 ### Digital Supply Chain Security and Vulnerabilities
-- Score: 0.2941 (+0.0298 today)  [██████░░░░] (L          R)
-- Confidence: 85%
-- Evidence entries: 34
+- Score: 0.3333 (+0.0690 today)  [███████░░░] (L          R)
+- Confidence: 90%
+- Evidence entries: 36
 - Left pole: Robust security practices, verifiable software origins, rapid threat response in digital supply chains.
 - Right pole: Exploitation of software supply chain vulnerabilities, unchecked access to critical digital infrastructure, state-sponsored cyber attacks.
 
 ### Discourse on the "New World Order": Centralized Global Governance vs. National Sovereignty/Individual Freedom
-- Score: -0.3704 (+0.0144 today)  [███░░░░░░░] (L          R)
+- Score: -0.3684 (+0.0164 today)  [███░░░░░░░] (L          R)
 - Confidence: 95%
-- Evidence entries: 57
+- Evidence entries: 60
 - Left pole: Skepticism towards a centralized global order, concerns about loss of sovereignty, freedom, or cultural identity; critical of powerful entities shaping global governance.
 - Right pole: Acceptance or active promotion of global governance, international cooperation, or a restructured global order to address complex challenges; belief in a necessary evolution of global systems.
 
@@ -312,8 +321,8 @@ title: "Belief Report — 2026-04-15"
 
 ### Political Vulnerability & Foreign Influence
 - Score: 0.0163 (+0.1000 today)  [█████░░░░░] (L          R)
-- Confidence: 74%
-- Evidence entries: 33
+- Confidence: 84%
+- Evidence entries: 37
 - Left pole: Emphasis on transparency, accountability, and protecting political processes from external manipulation, with scrutiny of potential blackmail and undue foreign influence.
 - Right pole: Acceptance or denial of political vulnerabilities, downplaying the impact of foreign influence, or rationalizing actions driven by external pressures.
 
@@ -339,9 +348,9 @@ title: "Belief Report — 2026-04-15"
 - Right pole: Prioritization of military spending and national defense over social welfare programs, viewing them as secondary.
 
 ### Immigration Policy: Open Borders vs. National Control and Cultural Preservation
-- Score: 0.4000 (+0.0000 today)  [███████░░░] (L          R)
-- Confidence: 65%
-- Evidence entries: 27
+- Score: 0.4500 (+0.0500 today)  [███████░░░] (L          R)
+- Confidence: 70%
+- Evidence entries: 29
 - Left pole: Emphasis on humanitarian aspects of immigration, open borders, and cultural diversity.
 - Right pole: Emphasis on national sovereignty, strict border control, and preservation of national identity.
 
