@@ -812,7 +812,35 @@ async function scrapeNotificationsApi() {
     await scrapeNotificationsApi();
   }
 
-  if (page) await page.close().catch(() => {});
+  // ── Write scrape throughput metrics (#6) ──────────────────────────────────
+  const METRICS_PATH = path.join(ROOT, "state", "scrape_metrics.jsonl");
+  const HEALTH_STATE_PATH = path.join(ROOT, "state", "health_state.json");
+  const replyTotal = withReplies.reduce((n, post) => n + (post.topReplies?.length || 0), 0);
+  fs.appendFileSync(METRICS_PATH, JSON.stringify({
+    ts: scrapedAt,
+    raw: raw.length,
+    after_sanitize: sanitized.length,
+    after_dedup: deduped.length,
+    after_novelty: selected.length,
+    stored: withReplies.length,
+    api_fallback: collectSourceNote !== null,
+    reply_count: replyTotal,
+  }) + "\n");
+  try {
+    const _rawLines = fs.readFileSync(METRICS_PATH, "utf-8")
+      .trim().split("\n").filter(Boolean).slice(-3)
+      .map(l => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
+    if (_rawLines.length >= 3 && _rawLines.every(m => m.stored < 5)) {
+      let _health = {};
+      try { _health = JSON.parse(fs.readFileSync(HEALTH_STATE_PATH, "utf-8")); } catch {}
+      _health.scrape_degraded = true;
+      _health.scrape_degraded_at = new Date().toISOString();
+      fs.writeFileSync(HEALTH_STATE_PATH, JSON.stringify(_health, null, 2));
+      console.warn("[scraper] SCRAPE DEGRADED: stored < 5 for 3 consecutive runs");
+    }
+  } catch {}
+
+    if (page) await page.close().catch(() => {});
   if (browser) browser.disconnect();
   process.exit(0);
 })();

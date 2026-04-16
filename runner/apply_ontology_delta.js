@@ -49,6 +49,7 @@ const DIVERSITY  = path.join(ROOT, "state", "diversity_state.json");
 const { generate: llmGenerate } = require("./llm.js");
 const { parseOntologyDelta } = require("./lib/ontology_delta.js");
 const { OWN_HANDLES, createSelfEchoDetector } = require("./lib/self_echo.js");
+const crypto = require("crypto");
 
 // ── Diversity constraint (AGENTS.md §7) ───────────────────────────────────────
 // Per 24h rolling window per axis:
@@ -168,6 +169,20 @@ function saveAxisGuardState(state) {
  * Used for Jaccard-based similarity as a proxy for cosine similarity on embeddings.
  */
 const STOP = new Set(["the","a","an","and","or","of","in","is","are","that","to","for","with","on","by","at","from","as","this","it","its","which","vs","versus"]);
+/**
+ * Compute a 12-char SHA-1 fingerprint of claim text for cross-source dedup (#7).
+ */
+function computeClaimFingerprint(text) {
+  if (!text || text.length < 20) return null;
+  const tokens = text.toLowerCase()
+    .replace(/[^a-z0-9 ]/g, " ")
+    .split(/s+/)
+    .filter(w => w.length > 2 && !STOP.has(w))
+    .sort();
+  if (tokens.length < 3) return null;
+  return crypto.createHash("sha1").update(tokens.join(" ")).digest("hex").slice(0, 12);
+}
+
 function tokenSet(str) {
   return new Set(
     (str || "").toLowerCase().replace(/[^a-z0-9 ]/g, " ").split(/\s+/)
@@ -386,6 +401,21 @@ const selfEchoDetector = createSelfEchoDetector();
 
 const axisById = {};
 for (const a of onto.axes) axisById[a.id] = a;
+// Pre-build set of claim fingerprints from evidence in the last 6h (#7)
+const CLAIM_DEDUP_WINDOW_MS = 6 * 3_600_000;
+const claimDedupNowMs = Date.now();
+const recentClaimIds = new Set(
+  onto.axes.flatMap(a =>
+    (a.evidence_log || []).filter(e => {
+      if (!e.claim_id) return false;
+      const ts = e.timestamp ? Date.parse(e.timestamp) : 0;
+      return (claimDedupNowMs - ts) < CLAIM_DEDUP_WINDOW_MS;
+    }).map(e => e.claim_id)
+  )
+);
+let evidenceClaimDeduped = 0;
+
+
 
 for (const entry of (delta.evidence || [])) {
   const { axis_id, source, content, timestamp, pole_alignment } = entry;
@@ -418,6 +448,18 @@ for (const entry of (delta.evidence || [])) {
     continue;
   }
   seenSourcesThisRun.add(sourceStr);
+
+  // Cross-source claim fingerprint dedup (#7)
+  const claimFp = computeClaimFingerprint(content || "");
+  if (claimFp) {
+    if (recentClaimIds.has(claimFp)) {
+      console.log("[apply_delta] claim dedup: fp " + claimFp + " already seen in 6h window");
+      evidenceClaimDeduped++;
+      continue;
+    }
+    recentClaimIds.add(claimFp);
+    entry.claim_id = claimFp;
+  }
 
   const sourceUser = usernameFromUrl(sourceStr);
   if (sourceUser && OWN_HANDLES.has(sourceUser)) {
@@ -487,6 +529,7 @@ for (const entry of (delta.evidence || [])) {
     timestamp:      timestamp || now,
     pole_alignment: pole_alignment,
     trust_weight:   parseFloat(weight.toFixed(3)),
+    ...(entry.claim_id ? { claim_id: entry.claim_id } : {}),
   };
   if (stanceConf !== null) logEntry.stance_confidence = parseFloat(stanceConf.toFixed(3));
 
@@ -656,6 +699,7 @@ fs.unlinkSync(DELTA);
 const rejMsg    = evidenceRejected ? `, ${evidenceRejected} rejected by stance check` : "";
 const echoMsg   = evidenceSelfEcho ? `, ${evidenceSelfEcho} rejected as self-echo` : "";
 const dedupMsg  = evidenceDeduped  ? `, ${evidenceDeduped} deduped (same source)` : "";
+const claimMsg  = evidenceClaimDeduped ? `, ${evidenceClaimDeduped} claim-deduped` : "";
 const invMsg    = evidenceInvalid  ? `, ${evidenceInvalid} invalid source` : "";
 const cappedMsg = axesCapped ? `, ${axesCapped} drift-capped` : "";
 const reapMsg   = reaped.length ? `, ${reaped.length} reaped` : "";
@@ -663,7 +707,7 @@ const pausedMsg = evidencePaused ? `, ${evidencePaused} paused by diversity` : "
 const dampenMsg = evidenceDampened ? `, ${evidenceDampened} dampened by diversity` : "";
 const decayMsg  = axesDecayed ? `, ${axesDecayed} axes confidence-decayed` : "";
 console.log(
-  `[apply_delta] applied: ${evidenceAdded} evidence entry(ies)${rejMsg}${echoMsg}${dedupMsg}${invMsg}${pausedMsg}${dampenMsg}${cappedMsg}${reapMsg}${decayMsg}, ${axesAdded} new axis(es)` +
+  `[apply_delta] applied: ${evidenceAdded} evidence entry(ies)${rejMsg}${echoMsg}${dedupMsg}${claimMsg}${invMsg}${pausedMsg}${dampenMsg}${cappedMsg}${reapMsg}${decayMsg}, ${axesAdded} new axis(es)` +
   ` — total axes: ${onto.axes.length} (axes created today: ${axisGuardState.count}/${MAX_AXES_PER_DAY})`
 );
 
