@@ -28,6 +28,7 @@ const {
   writeAttempt,
   writeResult,
 } = require("./post_result");
+const voiceFilter = require("./lib/voice_filter");
 
 const ROOT        = path.resolve(__dirname, "..");
 const DRAFT_FILE  = process.env.DRAFT_FILE
@@ -188,6 +189,12 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
 
   if (quoteText.length > 280) {
     console.error(`[post_quote] commentary too long (${quoteText.length} > 280 chars)`);
+    process.exit(1);
+  }
+  const vfErrors = voiceFilter.check(quoteText);
+  if (vfErrors.length > 0) {
+    console.error(`[post_quote] voice_filter rejected draft: ${vfErrors.join("; ")}`);
+    writeAttempt(ATTEMPT_FILE, { kind: "quote", outcome: "failed", reason: "voice_filter", cycle: CYCLE });
     process.exit(1);
   }
 

@@ -25,6 +25,7 @@ const {
   writeAttempt,
   writeResult,
 } = require("./post_result");
+const voiceFilter = require("./lib/voice_filter");
 
 const ROOT       = path.resolve(__dirname, "..");
 const DRAFT_FILE = path.join(ROOT, "state", "tweet_draft.txt");
@@ -106,6 +107,12 @@ async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_
       reason: "draft_empty",
       cycle: CYCLE,
     });
+    process.exit(1);
+  }
+  const vfErrors = voiceFilter.check(tweetText);
+  if (vfErrors.length > 0) {
+    console.error(`[post_tweet] voice_filter rejected draft: ${vfErrors.join("; ")}`);
+    writeAttempt(ATTEMPT_FILE, { kind: "tweet", outcome: "failed", reason: "voice_filter", cycle: CYCLE });
     process.exit(1);
   }
   console.log(`[post_tweet] posting (${tweetText.length} chars): ${tweetText.slice(0, 80)}...`);

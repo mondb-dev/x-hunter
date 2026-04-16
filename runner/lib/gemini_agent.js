@@ -17,7 +17,7 @@ const fs = require('fs');
 const path = require('path');
 const { getAccessToken, getProjectConfig } = require('../gcp_auth');
 const { connectBrowser, getXPage } = require('../cdp');
-const { TOOL_EXECUTORS, getBrowseTools, getTweetTools } = require('./agent_tools');
+const { TOOL_EXECUTORS, getBrowseTools, getTweetTools, sanitizeToolResult } = require('./agent_tools');
 const config = require('./config');
 
 const MODEL = 'gemini-2.5-flash';
@@ -277,10 +277,12 @@ async function agentRun({ agent, message, thinking, useBrowser = true, verbose }
           result = result.slice(0, 20000) + '\n...(truncated)';
         }
 
+        // Sanitize external tool results to block prompt injection
+        const safeResult = sanitizeToolResult(result);
         functionResponses.push({
           functionResponse: {
             name,
-            response: { result },
+            response: { result: safeResult },
           },
         });
       }

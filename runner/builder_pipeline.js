@@ -136,7 +136,7 @@ function runSmokeTests(manifest) {
     const realPath = path.join(ROOT, f.path);
     if (!fs.existsSync(realPath)) continue;
     try {
-      execSync(`node --check "${realPath}"`, { stdio: "pipe", timeout: 10_000 });
+      execFileSync(process.execPath, ['--check', realPath], { stdio: 'pipe', timeout: 10_000 });
     } catch (e) {
       const stderr = e.stderr ? e.stderr.toString().trim() : e.message;
       failures.push(`Syntax error in ${f.path}: ${stderr.slice(0, 200)}`);
@@ -163,13 +163,34 @@ function runSmokeTests(manifest) {
 
   // 3. Custom test commands from manifest
   for (const cmd of (manifest.test_commands || [])) {
-    // Sanitize: only allow simple "node <path>" commands — no shell operators
-    if (!cmd.startsWith("node ") || /[;&|`$(){}]/.test(cmd)) {
-      failures.push(`Blocked test command (unsafe): ${cmd}`);
+    // Sanitize: only allow "node [--check] <relative-path>" — no shell operators, no arbitrary flags
+    const parts = cmd.trim().split(/\s+/);
+    if (parts[0] !== 'node' || parts.length < 2) {
+      failures.push(`Blocked test command (not a node command): ${cmd}`);
+      continue;
+    }
+    const ALLOWED_FLAGS = new Set(['--check']);
+    const filePart = parts[parts.length - 1];
+    const flagParts = parts.slice(1, -1);
+    if (flagParts.some(fl => !ALLOWED_FLAGS.has(fl))) {
+      failures.push(`Blocked test command (disallowed flags: ${flagParts.join(' ')}): ${cmd}`);
+      continue;
+    }
+    if (!isSafeRelativePath(filePart)) {
+      failures.push(`Blocked test command (unsafe path): ${cmd}`);
+      continue;
+    }
+    const absTestPath = path.join(ROOT, filePart);
+    if (!fs.existsSync(absTestPath)) {
+      failures.push(`Test file not found: ${filePart}`);
       continue;
     }
     try {
-      execSync(cmd, { stdio: "pipe", timeout: 30_000, cwd: ROOT });
+      execFileSync(process.execPath, [...flagParts, absTestPath], {
+        stdio: 'pipe',
+        timeout: 30_000,
+        cwd: ROOT,
+      });
     } catch (e) {
       const stderr = e.stderr ? e.stderr.toString().trim() : e.message;
       failures.push(`Test command failed: ${cmd} — ${stderr.slice(0, 200)}`);
