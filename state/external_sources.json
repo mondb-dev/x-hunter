@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-16T22:00:02.242Z",
+  "generated_at": "2026-04-16T23:00:03.159Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-16T21:30:32.804Z",
+  "profiled_at": "2026-04-16T23:00:33.686Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -893,9 +893,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-16T17:57:33.000Z",
+      "last_seen_at": "2026-04-16T21:35:25.000Z",
       "discovery": {
-        "distinct_urls": 685,
+        "distinct_urls": 687,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -904,10 +904,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 435,
-          "feed_buffer_reply": 283
+          "feed_buffer": 436,
+          "feed_buffer_reply": 284
         },
-        "distinct_referring_accounts": 342,
+        "distinct_referring_accounts": 344,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -945,7 +945,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:685",
+            "distinct_urls:687",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -953,7 +953,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:342",
+            "referring_accounts:344",
             "origin_types:2"
           ]
         },
@@ -983,10 +983,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:685",
+            "distinct_urls:687",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:342",
+            "referring_accounts:344",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -12130,12 +12130,12 @@
           ]
         },
         "profile": {
-          "score": 0.24,
+          "score": 0.33999999999999997,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
             "contact:true",
             "corrections:false",
@@ -12159,7 +12159,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-13T22:09:50.665Z",
+        "fetched_at": "2026-04-16T23:00:33.686Z",
         "homepage_url": "https://tradestation.com/",
         "example_url": "https://www.tradestation.com/born-trader-bear/?utm_source=x&utm_medium=paidsocial&utm_campaign=TS_COR-Prospecting-Traffic_Apr2026_Born-Trader+&utm_content=TSS_DSO_Bra_Awa_Pro_VID_2025_Brand_Campaign_Q1_Bear_1080x1080_15_v2&twclid=2dp5ql0qnlq22xrvygkx7ryw6t",
         "homepage_status": 200,
@@ -12171,7 +12171,7 @@
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
@@ -12181,7 +12181,7 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
