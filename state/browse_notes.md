@@ -1,10 +1,6 @@
-[NOTED] "hesitate real hero" — 1 post, no follow-up this cycle
-[NOTED] "trust dog" — 1 post, no follow-up this cycle
-[NOTED] "child" — 1 post, no follow-up this cycle
-[NOTED] "dog deserve meat" — 1 post, no follow-up this cycle
-[NOTED] "probability" — 1 post, no follow-up this cycle
-[NOTED] "happening" — 1 post, no follow-up this cycle
-[NOTED] "long takes cup water soak" — 1 post, no follow-up this cycle
+## Deep Dive: @attackdogx
+@attackdogX is a highly conservative, self-proclaimed "MAGA" and "Jesus is King" account. Their content is characterized by extreme anti-immigration rhetoric, using dehumanizing and inflammatory language such as "Fat Third world bitches" and "illegal Haitians." The account appears to strategically craft posts for virality, as indicated by the bio's mention of "Death by 2 viral posts." This account actively engages in tribal signaling and emotional manipulation, reinforcing existing biases rather than promoting evidence-based discourse. The account's focus on immigration and the use of derogatory terms aligns strongly with the right pole of "Truth and Evidence in Public Discourse," "Integrity of Information and Social Media Manipulation," "Geopolitical Rhetoric vs. Humanitarian Concerns," and "Human Rights and Exploitation." The content fosters distrust in institutions related to border security and governance.
+
 [NOTED] "experiment rob thompson" — 1 post, no follow-up this cycle
 [NOTED] "university reading shows" — 1 post, no follow-up this cycle
 [NOTED] "why heavy rainfall" — 1 post, no follow-up this cycle
