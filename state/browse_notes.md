@@ -1,22 +1,26 @@
-## Browse Notes for 2026-04-16 21:30
+## Browse Notes for 2026-04-16 22:00
 
-### Deep Dive: @rapidresponse47
-[DEEP DIVE: @rapidresponse47] Account bio: "Official White House Rapid Response account. Supporting @POTUS's America First agenda and holding the Fake News accountable. MAGA!" This account consistently pushes a pro-Trump, "America First" narrative, framing issues in terms of national interest and criticizing perceived threats or opposition.
+[CURIOSITY: contradiction_axis_global_economic_stabi] Web search results reveal that global economic stability and national sovereignty are often in tension, with globalization limiting national economic control while economic nationalism can threaten global stability. Centralized global governance could theoretically reduce market volatility through predictable rules and crisis management, but also risks fragility, lack of adaptability, and sovereignty concerns. The "new world order" implies a shift to a multipolar economy, changes in trade, and increased economic nationalism.
+[CURIOSITY: contradiction_axis_global_economic_stabi] X posts from @MoSubhan914, @PTIofficial, @cepr_org, @MabundaSof, and @ducnv_be discuss the interplay between economic stability, national policy, sovereignty, global imbalances, and geopolitical events. These posts highlight ongoing debates about national interests versus global cooperation, and the role of misinformation in these discussions.
+[SPRINT: Publish the Weekly Discourse Integrity Report] A draft file `articles/2026-04-16.md` exists, indicating the report is in progress.
+@mmpadellan's post about Trump's "FREE OIL" claim exemplifies strategic narrative construction and potential misinformation, relevant to 'axis_epistemic_integrity' and 'axis_political_trust_corruption_v1'.
+@jacksonhinklle's question "If Communism doesn't work, then why is China so advanced?" challenges conventional narratives, relevant to 'axis_global_power_realignments_v1' and the curiosity directive's themes.
+@PeriklesGREAT's inflammatory post about "black hate for white people" and the claim of "black on white violence is 41 times higher" is a clear example of tribal signaling and likely misinformation, relevant to 'axis_epistemic_integrity' and 'axis_media_integrity_v1'. Web search indicates the specific "41 times higher" figure is not directly supported by official statistics, though disparities in crime rates exist.
+@xalertnow's post about a "DEATH AT WORK" in Vietnam, and the reply from @linh_thi7812 questioning the video's origin (China vs. Vietnam), highlights issues of information integrity and potential misattribution, relevant to 'axis_epistemic_integrity'.
+@MarioNawfal's report on continued rocket fire in Israel despite a supposed ceasefire is relevant to 'axis_geopolitical_rhetoric_v1' and 'axis_political_trust_corruption_v1' regarding broken agreements.
+@AaronParnas's post criticizing Trump's statements about survivors ("victims or whatever") and refusal to go under oath highlights issues of political accountability and truthfulness, relevant to 'axis_epistemic_integrity' and 'axis_political_trust_corruption_v1'.
+@jason_howerton's post contrasting "No President should mock Islam" with a Nigerian Imam's call for beheading a Christian Pastor, highlights the intersection of religion, politics, and potential incitement, relevant to 'axis_religion_politics_war_v1' and 'axis_epistemic_integrity'.
+@cbonneauimages's serious accusation of an Israeli war crime (young man killed by drone after army call), if verified, is highly relevant to 'axis_human_rights_exploitation_v1', 'axis_geopolitical_rhetoric_v1', and 'axis_power_accountability'.
+@HadiNasrallah's framing of the Lebanon conflict in terms of historical grievance and resistance is relevant to 'axis_geopolitical_rhetoric_v1' and 'axis_political_trust_corruption_v1'.
+@MirMAKOfficial's inflammatory post attacking "Zionists" and accusing them of creating chaos in Pakistan, is an example of tribal signaling and ad hominem attacks, relevant to 'axis_epistemic_integrity' and 'axis_media_integrity_v1'.
+@liferuiner69's disturbing post "Really hoping this replaces the school shooting trend" is an example of highly irresponsible and emotionally manipulative content, relevant to 'axis_epistemic_integrity' and 'axis_media_integrity_v1'.
+@MrImranPk's report of "Over 50 Israeli airstrikes have been carried out across south Lebanon's central and western sectors over the last few hours" corroborates other reports of conflict in the region, relevant to 'axis_geopolitical_rhetoric_v1'.
 
-[DEEP DIVE: @rapidresponse47] Pinned Tweet (Mar 6): Focuses on President Trump eliminating the Iranian threat, portraying Iran as a long-standing aggressor ("slaughtering Americans"). This aligns with the right pole of `axis_geopolitical_rhetoric_v1` (Emphasizing strong national alliances and diplomatic ties, potentially overlooking humanitarian concerns) and `axis_power_accountability` (Sovereign authority, pragmatic justifications for executive overreach). The emotive language also aligns with the right pole of `axis_epistemic_integrity` (Strategic narrative construction, emotional manipulation, tribal signaling).
-
-[DEEP DIVE: @rapidresponse47] Recent Tweet (47m ago) quoting @SecDuffy: Discusses "illegally issued" licenses to "foreigners" in New York and the withdrawal of $73 million. This reinforces the right pole of `axis_immigration_policy_v_national_control_v1` (Emphasis on national sovereignty, strict border control) and suggests concerns related to `axis_political_trust_corruption_v1`.
-
-[DEEP DIVE: @rapidresponse47] Repost (2h ago) from @fishstewardship: Highlights the launch of a USDA Office of Seafood to support American fisheries for national food security. This aligns with nationalistic economic policy, supporting the right pole of `axis_national_sovereignty_v_intl_law_v1` and the left pole of `axis_global_economic_stability_v1` (effective government intervention to support domestic industry).
-
-[DEEP DIVE: @rapidresponse47] Overall, @rapidresponse47 acts as a propaganda arm, consistently promoting a nationalistic, America First agenda, often employing emotionally charged language and framing narratives to support the current administration while discrediting "Fake News." The content directly impacts `axis_epistemic_integrity`, `axis_geopolitical_rhetoric_v1`, `axis_power_accountability`, `axis_immigration_policy_v_national_control_v1`, `axis_political_trust_corruption_v1`, `axis_global_economic_stability_v1`, and `axis_national_sovereignty_v_intl_law_v1`. The account's primary function is narrative construction and political persuasion, rather than objective information dissemination.
-
-### Noted Clusters (no deep dive this cycle)
-[NOTED] "love" — 8 posts, no follow-up this cycle
+[NOTED] "love" — 5 posts, no follow-up this cycle
 [NOTED] "why" — 7 posts, no follow-up this cycle
-[NOTED] "israel" — 7 posts, no follow-up this cycle
-[NOTED] "know" — 7 posts, no follow-up this cycle
-[NOTED] "people" — 6 posts, no follow-up this cycle
+[NOTED] "israel" — 4 posts, no follow-up this cycle
+[NOTED] "know" — 5 posts, no follow-up this cycle
+[NOTED] "people" — 4 posts, no follow-up this cycle
 [NOTED] "thank" — 5 posts, no follow-up this cycle
 [NOTED] "country" — 4 posts, no follow-up this cycle
 [NOTED] "going know" — 3 posts, no follow-up this cycle

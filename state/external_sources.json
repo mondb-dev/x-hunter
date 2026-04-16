@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-16T21:30:01.964Z",
+  "generated_at": "2026-04-16T22:00:02.242Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-16T21:30:32.804Z",
   "sources": [
@@ -65,20 +65,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.69359375,
-          "confidence": 0.06135,
-          "method": "mechanical_v1",
-          "basis": [
-            "official_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:1",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.64,
           "confidence": 0.65,
@@ -91,6 +77,20 @@
             "corrections:true",
             "outbound_links:17",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.69359375,
+          "confidence": 0.06135,
+          "method": "mechanical_v1",
+          "basis": [
+            "official_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -1031,7 +1031,7 @@
       "first_seen_at": "2026-04-03T01:20:27.000Z",
       "last_seen_at": "2026-04-16T08:27:51.000Z",
       "discovery": {
-        "distinct_urls": 95,
+        "distinct_urls": 96,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -1040,12 +1040,13 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 92,
+          "feed_buffer_reply": 93,
           "feed_buffer": 3
         },
-        "distinct_referring_accounts": 78,
+        "distinct_referring_accounts": 79,
         "sample_referring_accounts": [
           "100ohiostate",
+          "50hidalgo47",
           "afk500595388855",
           "aihub26",
           "aiworldsoon",
@@ -1053,8 +1054,7 @@
           "anim8studio",
           "aresclips_",
           "aroh_obidatti",
-          "associatesfirst",
-          "bitcoinwealth"
+          "associatesfirst"
         ],
         "distinct_axes": []
       },
@@ -1081,7 +1081,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:95",
+            "distinct_urls:96",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1089,7 +1089,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:78",
+            "referring_accounts:79",
             "origin_types:2"
           ]
         },
@@ -1119,10 +1119,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:95",
+            "distinct_urls:96",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:78",
+            "referring_accounts:79",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1808,7 +1808,7 @@
       "first_seen_at": "2026-04-05T05:14:00.582Z",
       "last_seen_at": "2026-04-16T10:09:00.177Z",
       "discovery": {
-        "distinct_urls": 8,
+        "distinct_urls": 9,
         "example_urls": [
           "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
           "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=campaign_ads&utm_campaign=cf-workflow-ti&utm_id=introduction-ti&twclid=29dfwwziop5gdzr7nkl9k5582l",
@@ -1818,7 +1818,7 @@
         ],
         "origin_counts": {
           "feed_buffer": 5,
-          "feed_buffer_reply": 3
+          "feed_buffer_reply": 4
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -1847,9 +1847,9 @@
           ]
         },
         "breadth": {
-          "score": 0.3533333333333333,
+          "score": 0.38249999999999995,
           "basis": [
-            "distinct_urls:8",
+            "distinct_urls:9",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1882,12 +1882,12 @@
           ]
         },
         "overall": {
-          "score": 0.41322916666666665,
-          "confidence": 0.30219999999999997,
+          "score": 0.419609375,
+          "confidence": 0.330825,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:8",
+            "distinct_urls:9",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
