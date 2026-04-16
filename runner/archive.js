@@ -24,6 +24,7 @@ const path    = require("path");
 const { loadScraperDb } = require("./lib/db_backend");
 const db = loadScraperDb();
 const { extractKeywords } = require("../scraper/analytics");
+const { embed } = require("../scraper/embed");
 
 // Load .env from project root
 const ENV_PATH = path.resolve(__dirname, "../.env");
@@ -126,6 +127,21 @@ function parseMarkdown(filePath, relPath, type) {
   }
 
   return { type, date, hour: null, title, text_content: text, file_path: relPath };
+}
+
+// ── Embedding helper ───────────────────────────────────────────────────────────────────────────────
+
+async function embedMemoryEntry(relPath, textContent) {
+  try {
+    const vec = await embed((textContent || "").slice(0, 2048));
+    if (!vec) return;
+    const memRow = db.raw().prepare("SELECT id FROM memory WHERE file_path = ?").get(relPath);
+    if (memRow && memRow.id) {
+      db.storeEmbedding("memory", String(memRow.id), vec);
+    }
+  } catch (embErr) {
+    console.warn(`[archive] embed failed for ${relPath}: ${embErr.message}`);
+  }
 }
 
 // ── Irys uploader ─────────────────────────────────────────────────────────────
@@ -278,6 +294,7 @@ function scanDir(dir, pattern) {
     await db.insertMemory({ ...parsed, keywords, indexed_at: Date.now() });
     indexed++;
     console.log(`[archive] indexed journal: ${parsed.title}`);
+    await embedMemoryEntry(relPath, parsed.text_content);
     if (irys) {
       const ok = await tryUpload(irys, filePath, relPath, parsed);
       if (ok) try { fs.chmodSync(filePath, 0o444); } catch { /* ignore */ }
@@ -298,6 +315,7 @@ function scanDir(dir, pattern) {
     await db.insertMemory({ ...parsed, keywords, indexed_at: Date.now() });
     indexed++;
     console.log(`[archive] indexed checkpoint: ${parsed.title}`);
+    await embedMemoryEntry(relPath, parsed.text_content);
     if (irys) await tryUpload(irys, filePath, relPath, parsed);
   }
 
@@ -315,6 +333,7 @@ function scanDir(dir, pattern) {
     await db.insertMemory({ ...parsed, keywords, indexed_at: Date.now() });
     indexed++;
     console.log(`[archive] indexed belief report: ${parsed.title}`);
+    await embedMemoryEntry(relPath, parsed.text_content);
     if (irys) await tryUpload(irys, filePath, relPath, parsed);
   }
 
@@ -340,6 +359,7 @@ function scanDir(dir, pattern) {
     await db.insertMemory({ ...parsed, keywords, indexed_at: Date.now() });
     indexed++;
     console.log(`[archive] indexed article: ${title}`);
+    await embedMemoryEntry(relPath, parsed.text_content);
     if (irys) await tryUpload(irys, filePath, relPath, parsed);
   }
 
@@ -371,6 +391,7 @@ function scanDir(dir, pattern) {
       });
       newTweets++;
       indexed++;
+      await embedMemoryEntry(filePath, textWithUrl);
     }
     if (newTweets) console.log(`[archive] indexed ${newTweets} new tweet(s) from posts_log.json`);
   }

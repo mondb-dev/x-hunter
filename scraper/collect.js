@@ -55,6 +55,13 @@ try {
   console.warn("[collect] llm.js not available for Gemini enrichment:", e.message);
 }
 
+let _llmEmbed = null;
+try {
+  _llmEmbed = require("../runner/llm").embed;
+} catch (e) {
+  // embed not available
+}
+
 // BigQuery streaming (non-blocking)
 let _bqClient = null;
 let _bqTable = null;
@@ -822,6 +829,19 @@ async function scrapeNotificationsApi() {
         db.insertKeyword({ post_id: r.id, keyword: kw, score: parseCount(r.likes) * 0.1 });
       }
     }
+  }
+
+  // ── Phase 7b: Embed top posts inline ─────────────────────────────────────────────
+  if (_llmEmbed) {
+    const embedTargets = (selected || []).slice(0, 20).filter(p => p.id && p.text);
+    let embCount = 0;
+    for (const p of embedTargets) {
+      try {
+        const vec = await _llmEmbed(p.text.slice(0, 2048));
+        if (vec) { db.storeEmbedding("post", String(p.id), vec); embCount++; }
+      } catch { /* ignore embed failures */ }
+    }
+    if (embCount > 0) console.log("[collect] embedded " + embCount + " top posts");
   }
 
   // ── Phase 8: Upsert per-account stats ────────────────────────────────────

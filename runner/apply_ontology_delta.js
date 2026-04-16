@@ -45,6 +45,7 @@ const TRUST      = path.join(ROOT, "state", "trust_graph.json");
 const DRIFT_CAP  = path.join(ROOT, "state", "drift_cap_state.json");
 const AXIS_GUARD = path.join(ROOT, "state", "axis_creation_state.json");
 const DIVERSITY  = path.join(ROOT, "state", "diversity_state.json");
+const EVIDENCE_URL_QUEUE = path.join(ROOT, "state", "evidence_url_queue.jsonl");
 
 const { generate: llmGenerate } = require("./llm.js");
 const { parseOntologyDelta } = require("./lib/ontology_delta.js");
@@ -534,6 +535,11 @@ for (const entry of (delta.evidence || [])) {
   if (stanceConf !== null) logEntry.stance_confidence = parseFloat(stanceConf.toFixed(3));
 
   axis.evidence_log.push(logEntry);
+  // Queue source URL for Arweave archiving (issue #14)
+  try {
+    fs.appendFileSync(EVIDENCE_URL_QUEUE,
+      JSON.stringify({ url: sourceStr, axis_id: axis.id, ts: now }) + "\n");
+  } catch { /* non-blocking */ }
   evidenceAdded++;
   axis.last_updated = now;
   axesUpdated.add(axis.id);
