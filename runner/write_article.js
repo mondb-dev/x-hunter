@@ -60,7 +60,7 @@ function axisPosition(axis) {
 }
 
 const { callVertex } = require("./vertex.js");
-async function callGemini(prompt) { return callVertex(prompt, 4000); }
+async function callGemini(prompt) { return callVertex(prompt, 8192, { thinkingBudget: 0 }); }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
 (async () => {

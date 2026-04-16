@@ -54,7 +54,12 @@ async function callVertex(prompt, maxTokens = 2000, options = {}) {
       res.on("end", () => {
         try {
           const j = JSON.parse(raw);
-          const text = j?.candidates?.[0]?.content?.parts?.[0]?.text;
+          const candidate = j?.candidates?.[0];
+          const finishReason = candidate?.finishReason;
+          if (finishReason === "MAX_TOKENS") {
+            process.stderr.write("[vertex] WARNING: response truncated (MAX_TOKENS)\n");
+          }
+          const text = candidate?.content?.parts?.[0]?.text;
           if (!text) throw new Error(`No content in response: ${raw.slice(0, 300)}`);
           resolve(text.trim());
         } catch (e) { reject(e); }
