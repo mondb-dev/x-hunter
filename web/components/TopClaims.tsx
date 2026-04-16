@@ -66,7 +66,7 @@ export default async function TopClaims() {
       <div className="top-claims-wrap">
         <div className="top-claims-header">
           <span className="top-claims-label">veritas lens</span>
-          <Link href="/verified" className="top-claims-view-all">
+          <Link href="/veritas-lens" className="top-claims-view-all">
             view all →
           </Link>
         </div>
@@ -74,7 +74,7 @@ export default async function TopClaims() {
           {top.map((claim) => (
             <Link
               key={claim.claim_id}
-              href={`/verified#${claim.claim_id}`}
+              href={`/veritas-lens#${claim.claim_id}`}
               className="top-claims-link"
               style={{ textDecoration: "none" }}
             >

@@ -315,7 +315,7 @@ function writeVerificationDraft(claim, result, searchData) {
     searchData?.summary || '',
     '',
     sourceLine,
-    'https://sebastianhunter.fun/verified',
+    'https://sebastianhunter.fun/veritas-lens',
   ].filter(l => l !== undefined);
 
   const draft = lines.join('\n').trim();

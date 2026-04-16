@@ -97,7 +97,7 @@ function formatVerification(row) {
   const summary  = row.web_search_summary
     ? `Finding: ${row.web_search_summary.trim().slice(0, 200)}`
     : null;
-  const link     = `https://sebastianhunter.fun/verified#${row.claim_id}`;
+  const link     = `https://sebastianhunter.fun/veritas-lens#${row.claim_id}`;
   return [header, claim, summary, link].filter(Boolean).join("\n");
 }
 

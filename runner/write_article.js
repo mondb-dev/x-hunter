@@ -146,7 +146,7 @@ async function callGemini(prompt) { return callVertex(prompt, 16384, { thinkingB
             const st  = statusMap[v.status] ?? v.status.toUpperCase();
             const pct = Math.round((v.confidence_score ?? 0) * 100);
             const sum = v.web_search_summary ? `\n  Finding: ${v.web_search_summary.trim().slice(0, 200)}` : '';
-            const url = `\n  Source: https://sebastianhunter.fun/verified#${v.claim_id}`;
+            const url = `\n  Source: https://sebastianhunter.fun/veritas-lens#${v.claim_id}`;
             return `- [${st} · ${pct}%] "${(v.claim_text || '').trim()}"${sum}${url}`;
           }).join("\n") + "\n";
       }
