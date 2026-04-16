@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-16T15:59:55.021Z",
+  "generated_at": "2026-04-16T17:30:00.458Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-16T15:30:25.195Z",
+  "profiled_at": "2026-04-16T17:30:35.652Z",
   "sources": [
     {
       "domain": "cbp.gov",
@@ -501,9 +501,9 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-16T15:33:25.356Z",
+      "last_seen_at": "2026-04-16T16:03:55.981Z",
       "discovery": {
-        "distinct_urls": 93,
+        "distinct_urls": 94,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
@@ -514,7 +514,7 @@
         "origin_counts": {
           "ontology_evidence": 93,
           "claim_tracker": 10,
-          "journals": 38
+          "journals": 39
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -562,7 +562,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:93",
+            "distinct_urls:94",
             "distinct_axes:17",
             "origin_types:3"
           ]
@@ -603,7 +603,7 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:93",
+            "distinct_urls:94",
             "distinct_axes:17",
             "origin_types:3",
             "referring_accounts:0",
@@ -771,9 +771,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-16T14:40:03.000Z",
+      "last_seen_at": "2026-04-16T16:04:50.000Z",
       "discovery": {
-        "distinct_urls": 676,
+        "distinct_urls": 679,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -782,10 +782,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 432,
-          "feed_buffer_reply": 277
+          "feed_buffer": 434,
+          "feed_buffer_reply": 278
         },
-        "distinct_referring_accounts": 336,
+        "distinct_referring_accounts": 337,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -823,7 +823,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:676",
+            "distinct_urls:679",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -831,7 +831,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:336",
+            "referring_accounts:337",
             "origin_types:2"
           ]
         },
@@ -861,10 +861,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:676",
+            "distinct_urls:679",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:336",
+            "referring_accounts:337",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -909,7 +909,7 @@
       "first_seen_at": "2026-04-03T01:20:27.000Z",
       "last_seen_at": "2026-04-16T08:27:51.000Z",
       "discovery": {
-        "distinct_urls": 94,
+        "distinct_urls": 95,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -918,10 +918,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 91,
+          "feed_buffer_reply": 92,
           "feed_buffer": 3
         },
-        "distinct_referring_accounts": 77,
+        "distinct_referring_accounts": 78,
         "sample_referring_accounts": [
           "100ohiostate",
           "afk500595388855",
@@ -959,7 +959,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:94",
+            "distinct_urls:95",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -967,7 +967,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:77",
+            "referring_accounts:78",
             "origin_types:2"
           ]
         },
@@ -997,10 +997,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:94",
+            "distinct_urls:95",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:77",
+            "referring_accounts:78",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -2431,6 +2431,133 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "combos.fun",
+      "entity": "Combos Fun",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-08T03:21:32.122Z",
+      "last_seen_at": "2026-04-15T21:03:51.000Z",
+      "discovery": {
+        "distinct_urls": 6,
+        "example_urls": [
+          "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2aswwo64b7owkoq09axl1gyba6",
+          "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dnewlp&twclid=214b4hyrgkylv69abzphtpq11y",
+          "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dhaunted&twclid=26lo5qdp5buuc737mtffxc5t9h",
+          "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2eueriprl4uxngwrddowf7q0mq",
+          "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dhaunted&twclid=257no4bi1i9z6s1y6trtk5m8u"
+        ],
+        "origin_counts": {
+          "feed_buffer": 5,
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "combosfun_ai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.295,
+          "basis": [
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.40046875,
+          "confidence": 0.24495,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-14T04:00:02.519Z",
+        "homepage_url": "https://combos.fun/",
+        "example_url": "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2aswwo64b7owkoq09axl1gyba6",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://combos.fun/",
+        "example_final_url": "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2aswwo64b7owkoq09axl1gyba6",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -4563,132 +4690,6 @@
       }
     },
     {
-      "domain": "combos.fun",
-      "entity": "Combos Fun",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-08T03:21:32.122Z",
-      "last_seen_at": "2026-04-15T02:08:59.052Z",
-      "discovery": {
-        "distinct_urls": 5,
-        "example_urls": [
-          "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2aswwo64b7owkoq09axl1gyba6",
-          "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dnewlp&twclid=214b4hyrgkylv69abzphtpq11y",
-          "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dhaunted&twclid=26lo5qdp5buuc737mtffxc5t9h",
-          "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2eueriprl4uxngwrddowf7q0mq",
-          "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dhaunted&twclid=257no4bi1i9z6s1y6trtk5m8u"
-        ],
-        "origin_counts": {
-          "feed_buffer": 5
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "combosfun_ai"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.20583333333333334,
-          "basis": [
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.37276041666666665,
-          "confidence": 0.19585000000000002,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-14T04:00:02.519Z",
-        "homepage_url": "https://combos.fun/",
-        "example_url": "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2aswwo64b7owkoq09axl1gyba6",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://combos.fun/",
-        "example_final_url": "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2aswwo64b7owkoq09axl1gyba6",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "straitstimes.com",
       "entity": "Straitstimes",
       "kind": "unknown",
@@ -5176,6 +5177,130 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 62,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "idf.il",
+      "entity": "Idf Il",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-16T17:05:26.485Z",
+      "last_seen_at": "2026-04-16T17:05:26.485Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.idf.il/en/articles/2026/04/16/idf-finds-weapons-in-school-in-bint-jbeil-lebanon/"
+        ],
+        "origin_counts": {
+          "claim_tracker": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_epistemic_integrity"
+        ]
+      },
+      "claims": {
+        "total": 1,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 1,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.37046874999999996,
+          "confidence": 0.06135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-16T17:30:30.153Z",
+        "homepage_url": "https://idf.il/",
+        "example_url": "https://www.idf.il/en/articles/2026/04/16/idf-finds-weapons-in-school-in-bint-jbeil-lebanon/",
+        "homepage_status": null,
+        "example_status": 200,
+        "homepage_final_url": "https://idf.il/",
+        "example_final_url": "https://www.idf.il/en/articles/2026/04/16/idf-finds-weapons-in-school-in-bint-jbeil-lebanon/",
+        "homepage_content_type": "",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -9500,6 +9625,129 @@
       }
     },
     {
+      "domain": "finviz.com",
+      "entity": "Finviz",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-14T01:12:31.000Z",
+      "last_seen_at": "2026-04-15T18:00:00.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://finviz.com/register?affilId=659201043&twclid=237p0oqyf8bhakod3naytz02qh",
+          "https://finviz.com/register?affilId=659201043&twclid=22l7z0nd2d4y6738kf2nuox13d"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "investingstats"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.12,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-15T00:49:34.041Z",
+        "homepage_url": "https://finviz.com/",
+        "example_url": "https://finviz.com/register?affilId=659201043&twclid=237p0oqyf8bhakod3naytz02qh",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://finviz.com/",
+        "example_final_url": "https://finviz.com/register?twclid=237p0oqyf8bhakod3naytz02qh",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "github.com",
       "entity": "Github",
       "kind": "unknown",
@@ -11666,7 +11914,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-13T16:09:48.929Z",
+        "fetched_at": "2026-04-16T17:00:32.151Z",
         "homepage_url": "https://speak4.io/",
         "example_url": "https://speak4.io/lp/hc01cshw?ts=1772120278&twclid=2dds00srijbdtkmjbi9s7cxdwr",
         "homepage_status": null,
@@ -16456,128 +16704,6 @@
       }
     },
     {
-      "domain": "finviz.com",
-      "entity": "Finviz",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-14T01:12:31.000Z",
-      "last_seen_at": "2026-04-14T01:12:31.000Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://finviz.com/register?affilId=659201043&twclid=237p0oqyf8bhakod3naytz02qh"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "investingstats"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.12,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-15T00:49:34.041Z",
-        "homepage_url": "https://finviz.com/",
-        "example_url": "https://finviz.com/register?affilId=659201043&twclid=237p0oqyf8bhakod3naytz02qh",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://finviz.com/",
-        "example_final_url": "https://finviz.com/register?twclid=237p0oqyf8bhakod3naytz02qh",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 7,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "deere.com",
       "entity": "Deere",
       "kind": "unknown",
@@ -19994,6 +20120,128 @@
       }
     },
     {
+      "domain": "xhawk.ai",
+      "entity": "Xhawk Ai",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-16T04:00:01.000Z",
+      "last_seen_at": "2026-04-16T04:00:01.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://xhawk.ai/?twclid=218eppqu7okpx25fant8nuhrp1"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "xhawkceo"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.29000000000000004,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:true",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-16T17:30:30.504Z",
+        "homepage_url": "https://xhawk.ai/",
+        "example_url": "https://xhawk.ai/?twclid=218eppqu7okpx25fant8nuhrp1",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://xhawk.ai/",
+        "example_final_url": "https://xhawk.ai/?twclid=218eppqu7okpx25fant8nuhrp1",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "iranintl.com",
       "entity": "Iranintl",
       "kind": "unknown",
@@ -22363,7 +22611,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-13T17:09:54.874Z",
+        "fetched_at": "2026-04-16T17:30:30.742Z",
         "homepage_url": "https://allsides.com/",
         "example_url": "https://allsides.com/news-source/aaron-rupar",
         "homepage_status": 403,
@@ -22483,7 +22731,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-13T17:09:59.488Z",
+        "fetched_at": "2026-04-16T17:30:35.652Z",
         "homepage_url": "https://mediabiasfactcheck.com/",
         "example_url": "https://www.mediabiasfactcheck.com/public-notice/",
         "homepage_status": 200,
@@ -23819,7 +24067,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-13T16:09:49.161Z",
+        "fetched_at": "2026-04-16T17:00:32.391Z",
         "homepage_url": "https://reddit.com/",
         "example_url": "https://www.reddit.com/search/?q=Emphasis%20individual%20merit&sort=hot&t=week",
         "homepage_status": 403,
