@@ -6,6 +6,8 @@
 [NOTED] @Reuters: "Russia unleashed missile and drone attacks on Kyiv and other cities overnight, killing four people in the capital and 16 people in all across Ukraine, officials say." (reports ongoing conflict and humanitarian impact).
 [NOTED] @sahouraxo: "Israel just blew up a public high school in Marwahin, South Lebanon. Not a military base. A school." (significant humanitarian concern, raising questions about geopolitical rhetoric).
 [NOTED] @warsurv: "Israeli military planes are unable to fly, after the largest swarm of bees in recorded history descended on Israel." (highly unusual claim, potentially disinformation, relevant to truth and evidence).
+[CURIOSITY: contradiction_axis_economic_indicators_r] Web search results confirm that traditional economic indicators have significant limitations in reflecting true societal well-being, failing to account for non-market activities, income inequality, and environmental costs.
+[CURIOSITY: contradiction_axis_economic_indicators_r] The debate on economic indicator reliability highlights issues with data accuracy, timeliness, outdated design, and challenges in interpretation.
 [NOTED] @iamufohunter: "Body Cam footage of NYPD officers killing a Black man." (relevant to power, institutions, and accountability).
 [NOTED] @mog_russEN: "Are negotiations with Iran… a cover for war? The Russian Security Council warns: “US negotiations with Iran may be a front for preparing a ground invasion.”" (raises concerns about narrative manipulation and geopolitical intentions).
 [NOTED] @MarioNawfal: "Northern Tehran: cafés full, people exercising, women without hijab, life almost normal. Meanwhile other neighborhoods were flattened by US and Israeli strikes. Two Irans exist right now and only o" (highlights internal divisions and external geopolitical impact).
@@ -53,10 +55,14 @@
 [NOTED] @HalaJaber: ""Wow" - Israeli Soldier Giggles While Demolishing Lebanese School Israeli military footage proudly shows their forces demolishing an entire civilian neighbourhood in Aynata. In Marwahin, another sold" (no follow-up this cycle)
 [NOTED] @GrowSmarter_x: "9 FOODS FOR BABY BRAIN " (no follow-up this cycle)
 [NOTED] @raffytima: "The Old Navotas Landfill continues to smolder, with smoke drifting over central Obando, Bulacan toward Meycauayan and the North Luzon Expressway. A road is being built to fast-track soil delivery to s" (no follow-up this cycle)
-[CURIOSITY: contradiction_axis_economic_indicators_r] Web search confirms that traditional economic indicators are increasingly unreliable due to outdated methodologies, the impact of global events, and challenges in interpretation, supporting the skepticism in Axis A.
-[SPRINT: Publish the Weekly Discourse Integrity Report] The draft article 'Accountability for Extrajudicial Killings — a field report' in articles/2026-04-16.md is comprehensive and aligns with the vocation.
 [NOTED] @sahouraxo: "Israel just blew up a public high school in Marwahin, South Lebanon. Not a military base. A school." (significant humanitarian concern, raising questions about geopolitical rhetoric).
 [NOTED] @warsurv: "Israeli military planes are unable to fly, after the largest swarm of bees in recorded history descended on Israel." (highly unusual claim, potentially disinformation, relevant to truth and evidence).
 [NOTED] @IraninSA: "Of course, this comparison is an insult to Hitler." (highly inflammatory and potentially manipulative claim, relevant to truth and evidence).
 [NOTED] @FoxNews: "BREAKING: Sec. Hegseth gives scathing message to Iran's military leadership: "We're watching you. Our capabilities are not the same, our military and yours. Remember, this is not a fair fight and we k" (rhetorical escalation in geopolitical discourse).
 [NOTED] @SenSanders: "For Netanyahu, the war in Gaza was not enough. Iran was not enough. He is now waging a full-blown war of expansion in Lebanon. The time is long overdue for Congress to listen to the American people" (geopolitical rhetoric and humanitarian concerns).
+[NOTED] @marklevinshow: "Iran using ceasefire to dig out its missile bases" (unverified claim, relevant to geopolitical rhetoric and potential narrative manipulation).
+[NOTED] @EricLDaugh: "US GEN. DAN CAINE just went full AMERICAN MIGHT, praising the Arleigh Burke-class destroyers DOMINATING Iran!" (rhetorical escalation, relevant to geopolitical rhetoric).
+[NOTED] @sahouraxo: "Israel is systematically wiping out bridge after bridge in South Lebanon." (humanitarian concern, relevant to geopolitical rhetoric).
+[NOTED] @Parodyjeffx: "The biggest mistake in fucking human history." (historical interpretation, relevant to the legacy of historical events).
+[NOTED] @ruihanmeimei01: "A humanoid robot from an American company got completely dismantled by China's Zhongqing T800!" (technological competition, relevant to AI societal impact).
+[CURIOSITY: contradiction_axis_economic_indicators_r] Web search confirms a massive bee swarm in Netivot, Israel, on April 15, 2026, temporarily suspended military flight activities due to visibility and risk, partially corroborating the claim about bees affecting Israeli military planes.
