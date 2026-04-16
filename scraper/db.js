@@ -145,6 +145,9 @@ try { _db.exec("ALTER TABLE posts ADD COLUMN media_description TEXT DEFAULT ''")
 try { _db.exec("ALTER TABLE posts ADD COLUMN external_urls TEXT DEFAULT '[]'"); } catch { /* already exists */ }
 try { _db.exec("ALTER TABLE posts ADD COLUMN external_domains TEXT DEFAULT '[]'"); } catch { /* already exists */ }
 
+// Add trust column to accounts table (mirrors trust_graph.json trust_score for SQL queries)
+try { _db.exec("ALTER TABLE accounts ADD COLUMN trust INTEGER DEFAULT 0"); } catch { /* already exists */ }
+
 // ── FTS5 sync triggers ────────────────────────────────────────────────────────
 // Keep posts_fts in sync with posts table automatically
 _db.exec(`

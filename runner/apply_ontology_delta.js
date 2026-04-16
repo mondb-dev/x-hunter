@@ -360,14 +360,20 @@ try {
 if (!Array.isArray(onto.axes)) onto.axes = [];
 
 const now = new Date().toISOString();
-let evidenceAdded    = 0;
-let evidenceRejected = 0;
-let evidencePaused   = 0;
-let evidenceDampened = 0;
-let evidenceSelfEcho = 0;
-let axesAdded        = 0;
-let axesCapped       = 0;
-const axesUpdated    = new Set(); // tracks which axes got new evidence this run
+let evidenceAdded      = 0;
+let evidenceRejected   = 0;
+let evidencePaused     = 0;
+let evidenceDampened   = 0;
+let evidenceSelfEcho   = 0;
+let evidenceDeduped    = 0;
+let evidenceInvalid    = 0;
+let axesAdded          = 0;
+let axesCapped         = 0;
+const axesUpdated      = new Set(); // tracks which axes got new evidence this run
+const seenSourcesThisRun = new Set(); // global source dedup: one URL per run across all axes
+
+// Invalid sources that should never update ontology (#12)
+const INVALID_SOURCES = new Set(['browse_notes', 'web_search', 'internal', '']);
 
 // ── Load daily drift cap + axis creation guard + diversity state ───────────────
 const driftState     = loadDriftCapState(onto.axes);
@@ -395,10 +401,28 @@ for (const entry of (delta.evidence || [])) {
     continue;
   }
 
-  const sourceUser = usernameFromUrl(source);
+  // ── Invalid source check (#12) ─────────────────────────────────────────────
+  // Reject internal/non-URL sources — they cannot be validated or retrieved later
+  const sourceStr = (source || "").trim();
+  if (INVALID_SOURCES.has(sourceStr) || (!sourceStr.startsWith("http://") && !sourceStr.startsWith("https://"))) {
+    console.log(`[apply_delta] invalid source rejected for ${axis_id}: "${sourceStr.slice(0, 80)}"`);
+    evidenceInvalid++;
+    continue;
+  }
+
+  // ── Per-session source dedup (#1) ──────────────────────────────────────────
+  // One URL may update at most one axis per browse session to prevent pseudo-replication
+  if (seenSourcesThisRun.has(sourceStr)) {
+    console.log(`[apply_delta] source dedup: "${sourceStr.slice(0, 80)}" already used this session`);
+    evidenceDeduped++;
+    continue;
+  }
+  seenSourcesThisRun.add(sourceStr);
+
+  const sourceUser = usernameFromUrl(sourceStr);
   if (sourceUser && OWN_HANDLES.has(sourceUser)) {
     console.log(
-      `[apply_delta] self-echo rejected: source ${source} is Sebastian's own post`
+      `[apply_delta] self-echo rejected: source ${sourceStr} is Sebastian's own post`
     );
     evidenceSelfEcho++;
     continue;
@@ -457,8 +481,9 @@ for (const entry of (delta.evidence || [])) {
   const weight     = parseFloat((rawWeight * divCheck.weight).toFixed(3));
 
   const logEntry = {
-    source:         source    || "",
+    source:         sourceStr,
     content:        content   || "",
+    summary:        entry.summary || "",
     timestamp:      timestamp || now,
     pole_alignment: pole_alignment,
     trust_weight:   parseFloat(weight.toFixed(3)),
@@ -478,7 +503,8 @@ for (const entry of (delta.evidence || [])) {
 // Only run on axes that received new evidence this call — axes with no new entries
 // retain their accumulated score/confidence (the log may not contain the full history).
 // score      = Σ(w_i × ±1) / Σ(w_i)     — trust-weighted mean
-// confidence = min(0.95, Σ(w_i) × 0.025) — effective evidence count drives confidence
+// confidence = min(0.98, uniqueSources × 0.025) — unique source count drives confidence
+//              (not total weight — prevents pseudo-replication from inflating confidence)
 for (const axis of onto.axes) {
   if (!axesUpdated.has(axis.id)) continue;
   const log = axis.evidence_log || [];
@@ -496,8 +522,12 @@ for (const axis of onto.axes) {
 
   const rawScore = parseFloat((weightedSum / totalWeight).toFixed(4));
   // Apply daily drift cap — score cannot move more than ±0.05 from start-of-day value
-  axis.score      = parseFloat(applyDriftCap(axis.id, rawScore, driftState).toFixed(4));
-  axis.confidence = parseFloat(Math.min(0.95, totalWeight * 0.025).toFixed(4));
+  axis.score = parseFloat(applyDriftCap(axis.id, rawScore, driftState).toFixed(4));
+
+  // Confidence: count unique sources in the full log (not total weight) so that
+  // pseudo-replicated sources don't inflate confidence artificially (#2)
+  const uniqueSources = new Set(log.filter(e => e && e.source).map(e => e.source)).size;
+  axis.confidence = parseFloat(Math.min(0.98, uniqueSources * 0.025).toFixed(4));
   if (axis.score !== rawScore) axesCapped++;
 
   // ── Stamp score_after + confidence_after on newly added evidence entries ──
@@ -513,6 +543,28 @@ for (const axis of onto.axes) {
 
 // Persist updated drift cap state (scores reflect the clamped values for today)
 saveDriftCapState(driftState);
+
+// ── Confidence decay for axes not updated this run (#2) ───────────────────────
+// Axes with no new evidence lose 0.002 confidence per elapsed calendar day.
+// Gated by axis.last_decayed_at (YYYY-MM-DD): at most one decay tick per day,
+// regardless of how many times apply_ontology_delta.js runs.
+let axesDecayed = 0;
+const ONE_DAY_MS = 86_400_000;
+for (const axis of onto.axes) {
+  if (axesUpdated.has(axis.id)) continue; // recomputed fresh above
+  if (!axis.last_updated || !(axis.confidence > 0)) continue;
+  if (axis.last_decayed_at === TODAY_DATE) continue; // already decayed today
+  const daysSince = (Date.now() - new Date(axis.last_updated).getTime()) / ONE_DAY_MS;
+  if (daysSince < 1) continue; // less than 1 day stale — no decay yet
+  // Apply exactly one tick (0.002) per calendar day
+  const newConf = parseFloat(Math.max(0, (axis.confidence || 0) - 0.002).toFixed(4));
+  if (newConf < axis.confidence) {
+    console.log(`[apply_delta] decay ${axis.id}: confidence ${axis.confidence} → ${newConf} (${Math.floor(daysSince)}d since last evidence)`);
+    axis.confidence = newConf;
+    axis.last_decayed_at = TODAY_DATE;
+    axesDecayed++;
+  }
+}
 
 // Persist diversity state (pole counts for today's rolling window)
 saveDiversityState(diversityState);
@@ -603,12 +655,15 @@ fs.unlinkSync(DELTA);
 
 const rejMsg    = evidenceRejected ? `, ${evidenceRejected} rejected by stance check` : "";
 const echoMsg   = evidenceSelfEcho ? `, ${evidenceSelfEcho} rejected as self-echo` : "";
+const dedupMsg  = evidenceDeduped  ? `, ${evidenceDeduped} deduped (same source)` : "";
+const invMsg    = evidenceInvalid  ? `, ${evidenceInvalid} invalid source` : "";
 const cappedMsg = axesCapped ? `, ${axesCapped} drift-capped` : "";
 const reapMsg   = reaped.length ? `, ${reaped.length} reaped` : "";
 const pausedMsg = evidencePaused ? `, ${evidencePaused} paused by diversity` : "";
 const dampenMsg = evidenceDampened ? `, ${evidenceDampened} dampened by diversity` : "";
+const decayMsg  = axesDecayed ? `, ${axesDecayed} axes confidence-decayed` : "";
 console.log(
-  `[apply_delta] applied: ${evidenceAdded} evidence entry(ies)${rejMsg}${echoMsg}${pausedMsg}${dampenMsg}${cappedMsg}${reapMsg}, ${axesAdded} new axis(es)` +
+  `[apply_delta] applied: ${evidenceAdded} evidence entry(ies)${rejMsg}${echoMsg}${dedupMsg}${invMsg}${pausedMsg}${dampenMsg}${cappedMsg}${reapMsg}${decayMsg}, ${axesAdded} new axis(es)` +
   ` — total axes: ${onto.axes.length} (axes created today: ${axisGuardState.count}/${MAX_AXES_PER_DAY})`
 );
 

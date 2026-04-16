@@ -166,7 +166,7 @@ async function followUser(page, username) {
   const profileUrl = `https://x.com/${username}`;
   console.log(`[follows] navigating to ${profileUrl}`);
 
-  await page.goto(profileUrl, { waitUntil: "domcontentloaded", timeout: 30_000 });
+  await page.goto(profileUrl, { waitUntil: "domcontentloaded", timeout: 20_000 });
   await page.waitForSelector('[data-testid="primaryColumn"]', { timeout: 12_000 });
   await new Promise(r => setTimeout(r, 2_000));
 
@@ -191,9 +191,18 @@ async function followUser(page, username) {
 
 // ── LLM-based cluster + reason generation ────────────────────────────────────
 
+// Fixed taxonomy — keeps cluster labels consistent for topic affinity scoring
+const CLUSTER_TAXONOMY = [
+  "geopolitics", "us_politics", "middle_east", "asia_pacific", "latin_america", "europe",
+  "economics", "markets_finance", "tech_ai", "science", "disinformation", "accountability_journalism",
+  "legal_courts", "military", "climate_energy", "health", "crypto_web3", "entertainment", "sports",
+  "animal_content", "humor_memes", "religion", "human_rights", "sovereignty", "elections",
+  "media_criticism", "conspiracy", "academic_research", "government_official", "breaking_news",
+];
+
 /**
- * Use the LLM to produce a short topic cluster label (2-3 words) and a
- * one-sentence follow reason from the account's recent posts + ontology.
+ * Use the LLM to produce a cluster label (from fixed taxonomy), trust score 1-7,
+ * and a one-sentence follow reason from the account's recent posts + ontology.
  * Falls back to heuristic values if the LLM call fails.
  */
 async function classifyFollow(username, item, ontologyAxes) {
@@ -212,18 +221,26 @@ async function classifyFollow(username, item, ontologyAxes) {
     "",
     `The agent tracks these belief axes: ${axisLabels || "(none yet)"}`,
     "",
-    "Respond with EXACTLY two lines, nothing else:",
-    "Line 1: A 2-4 word topic cluster label for this account (e.g. \"US Foreign Policy\", \"AI Ethics\", \"Middle East Conflict\", \"Crypto Governance\")",
-    "Line 2: One sentence explaining why this account is worth following (what perspective or information they provide)",
+    "Classify this account. Return JSON only, no other text:",
+    "{",
+    `  "cluster": one label from EXACTLY this list: [${CLUSTER_TAXONOMY.join(", ")}],`,
+    '  "trust_score": integer 1-7 where 1=unreliable/entertainment/meme, 4=neutral news outlet, 7=primary source or domain expert. Base this on source type, posting consistency, and factual grounding,',
+    '  "follow_reason": one sentence explaining relevance to understanding geopolitics and public accountability',
+    "}",
   ].filter(Boolean).join("\n");
 
   try {
     const result = await callVertex(prompt, 4096);
-    const lines = result.trim().split("\n").filter(Boolean);
-    if (lines.length >= 2) {
+    const jsonMatch = result.match(/\{[\s\S]*\}/);
+    if (jsonMatch) {
+      const parsed = JSON.parse(jsonMatch[0]);
+      const cluster = CLUSTER_TAXONOMY.includes(parsed.cluster) ? parsed.cluster : null;
+      const trust_score = Number.isInteger(parsed.trust_score) && parsed.trust_score >= 1 && parsed.trust_score <= 7
+        ? parsed.trust_score : 3;
       return {
-        cluster: lines[0].replace(/^(cluster|label|line ?1)[:\s]*/i, "").trim().slice(0, 50),
-        reason:  lines[1].replace(/^(reason|line ?2)[:\s]*/i, "").trim().slice(0, 200),
+        cluster:     cluster || CLUSTER_TAXONOMY[0],
+        trust_score,
+        reason:      (parsed.follow_reason || "").trim().slice(0, 200),
       };
     }
   } catch (err) {
@@ -233,8 +250,9 @@ async function classifyFollow(username, item, ontologyAxes) {
   // Fallback: extract first meaningful keyword phrase
   const kws = (item.top_keywords || "").split(", ").filter(Boolean);
   return {
-    cluster: kws[0]?.split(" ").slice(0, 3).join(" ") || "unknown",
-    reason:  `Data-driven follow: avg_score=${item.avg_score?.toFixed(1)}, ${kws.length} topic keywords`,
+    cluster:     "geopolitics",
+    trust_score: 3,
+    reason:      `Data-driven follow: avg_score=${item.avg_score?.toFixed(1)}, ${kws.length} topic keywords`,
   };
 }
 
@@ -250,9 +268,18 @@ function logFollow(trustGraph, username, item, classification) {
     follow_reason: classification.reason,
     cluster:       classification.cluster,
     weight:        1.0,
-    trust_score:   3,  // neutral-positive start; AI adjusts during browse cycles
+    trust_score:   classification.trust_score ?? 3,
   };
   trustGraph.last_updated = new Date().toISOString();
+
+  // Mirror trust score into SQLite accounts table so RAKE scoring picks it up
+  try {
+    const rawDb = db.raw();
+    rawDb.prepare("UPDATE accounts SET trust = ? WHERE username = ?")
+      .run(classification.trust_score ?? 3, username);
+  } catch (e) {
+    console.error(`[follows] SQLite trust update failed for @${username}: ${e.message}`);
+  }
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
@@ -306,12 +333,11 @@ function logFollow(trustGraph, username, item, classification) {
     process.exit(1);
   }
 
-  // Open a dedicated tab — avoids CDP session conflicts with the runner
   let page;
   try {
-    page = await browser.newPage();
+    page = await getXPage(browser);
   } catch (err) {
-    console.error(`[follows] could not open new tab: ${err.message}`);
+    console.error(`[follows] could not get page: ${err.message}`);
     browser.disconnect();
     process.exit(1);
   }
@@ -353,7 +379,6 @@ function logFollow(trustGraph, username, item, classification) {
   saveJson(TRUST_GRAPH, trustGraph);
 
   console.log(`[follows] done. followed ${followedThisRun} account(s) this run (today: ${countTodayFollows(queue)}/${MAX_PER_DAY}).`);
-  await page.close().catch(() => {});
   browser.disconnect();
   process.exit(0);
 })();
