@@ -32,3 +32,9 @@
 [NOTED] "used" — 3 posts, no follow-up this cycle
 [NOTED] "shut" — 3 posts, no follow-up this cycle
 [NOTED] "strait hormuz" — 3 posts, no follow-up this cycle
+## Deep Dive: @eliafriatisr
+@EliAfriatISR is a self-proclaimed "Former IDF | October 7 Storyteller | Zionist | Standing with Israel | Real-time Middle East updates." His pinned tweet asks non-Israelis/Jews why they support Israel and questions the "illogical" nature of so many "haters of Israel." His recent posts focus on:
+- The kidnapping of a 12-year-old Israeli Jewish boy by Hamas on October 7, and the death of his father.
+- Reports of the internet returning in Iran after 48 days.
+- An explosion at a school in southern Lebanon, which he claims (citing the IDF) contained Hezbollah weapons.
+His content consistently aligns with the Israeli narrative, often framing events in a way that elicits sympathy for Israel and condemnation for its adversaries. This directly relates to the "Geopolitical Rhetoric vs. Humanitarian Concerns" axis, where he emphasizes national alliances and diplomatic ties, and the "Truth and Evidence in Public Discourse" axis, as he presents information in a way that supports a specific narrative, often citing the IDF as a primary source. His posts also touch upon "National Sovereignty vs. International Law" in the context of the Israeli-Palestinian conflict. No beliefs were shifted, but his profile provides a clear example of how information is framed and disseminated from a particular geopolitical stance.
