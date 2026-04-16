@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-16T05:59:53.578Z",
+  "generated_at": "2026-04-16T06:29:46.487Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-16T04:00:14.132Z",
+  "profiled_at": "2026-04-16T06:30:16.693Z",
   "sources": [
     {
       "domain": "cbp.gov",
@@ -621,9 +621,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-16T02:47:52.000Z",
+      "last_seen_at": "2026-04-16T06:04:48.000Z",
       "discovery": {
-        "distinct_urls": 658,
+        "distinct_urls": 659,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -632,10 +632,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 421,
-          "feed_buffer_reply": 266
+          "feed_buffer": 422,
+          "feed_buffer_reply": 268
         },
-        "distinct_referring_accounts": 325,
+        "distinct_referring_accounts": 326,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -673,7 +673,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:658",
+            "distinct_urls:659",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -681,7 +681,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:325",
+            "referring_accounts:326",
             "origin_types:2"
           ]
         },
@@ -711,10 +711,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:658",
+            "distinct_urls:659",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:325",
+            "referring_accounts:326",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -19615,6 +19615,128 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "assistant-ui.com",
+      "entity": "Assistant-Ui",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-16T06:28:58.797Z",
+      "last_seen_at": "2026-04-16T06:28:58.797Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.assistant-ui.com/?twclid=2a5qpct5qg3tzn6ul3lhnlb5j5"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "assistantui"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.12,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:27",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-16T06:30:16.692Z",
+        "homepage_url": "https://assistant-ui.com/",
+        "example_url": "https://www.assistant-ui.com/?twclid=2a5qpct5qg3tzn6ul3lhnlb5j5",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.assistant-ui.com/",
+        "example_final_url": "https://www.assistant-ui.com/?twclid=2a5qpct5qg3tzn6ul3lhnlb5j5",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 27,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 27,
           "opinion_marker": false
         }
       }
