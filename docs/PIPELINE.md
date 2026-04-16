@@ -8,18 +8,26 @@ Current state of all automated pipelines. Updated as new phases are built.
 
 ```
 run.sh BROWSE cycle
-  → recall.js          — FTS5 memory hint for agent
+  → recall.js          — FTS5 + semantic memory hint for agent
   → comment.js         — discourse counter-arg candidate
   → discourse_scan.js  — scan for exchanges to respond to
   → discourse_digest.js
-  → reading_queue.js   — check for queued URLs
+  → reading_queue.js   — check for queued URLs (user-shared / conviction / adversarial)
   → prefetch_url.js    — curiosity URL or queued URL
   → agent x-hunter     — browse, journal, update ontology
                          (silent hours: sprint work mode — see below)
   → cleanup_tabs.js
-  → apply_ontology_delta.js
+  → apply_ontology_delta.js  — 8-gate validation:
+                               1. invalid source rejection
+                               2. per-session source dedup (seenSourcesThisRun)
+                               3. self-echo check
+                               4. claim fingerprint dedup (SHA-1, 6h window)
+                               5. stance validation (Ollama)
+                               6. diversity constraint
+                               7. confidence recompute (unique sources × 0.025, cap 0.98)
+                               8. confidence decay (−0.002/day on idle axes)
   → detect_drift.js
-  → archive.js         — Arweave upload
+  → archive.js         — Arweave upload + inline memory embedding
   → watchdog.js
 ```
 
@@ -77,6 +85,7 @@ run.sh TWEET cycle
   → moltbook.js --post-ponder  (if ponder_post_pending flag)
   → deep_dive.js               (self-gates: 1 day after ponder)
   → decision.js                (self-gates: after deep_dive)
+  → backfill_trust.js          (trust recalibration: accounts.trust ± 0.5 based on last 7d)
   → feed_digest.txt trim
 ```
 
@@ -114,8 +123,11 @@ run.sh TWEET cycle
 
 | File | Written by | Read by | Notes |
 |---|---|---|---|
-| `state/ontology.json` | agent (delta), `apply_ontology_delta.js` | All belief scripts | Primary belief store |
+| `state/ontology.json` | agent (delta), `apply_ontology_delta.js` | All belief scripts | Primary belief store; evidence entries include summary, claim_id, arweave_tx |
 | `state/posts_log.json` | runner (CDP result) | `web/lib/readPosts.ts` | Runner owns writes; agent should not write directly |
+| `state/scrape_metrics.jsonl` | `collect.js` (each run) | `watchdog.js` | Per-run throughput: raw/sanitized/stored counts + api_fallback flag |
+| `state/source_plan.json` | `source_selector.js` | `source_selector.js` | Most recent conviction pick + last_adversarial_date |
+| `state/evidence_url_queue.jsonl` | `apply_ontology_delta.js` | `archive_evidence_urls.js` | Queue of evidence source URLs pending Arweave archiving |
 | `state/ponder_state.json` | `ponder.js`, `deep_dive.js`, `decision.js` | Same scripts (self-gate) | Tracks pipeline phase dates |
 | `state/research_briefs.json` | `deep_dive.js` | `decision.js` | Intermediate — not committed to git |
 | `state/active_plan.json` | `decision.js` | Builder (future) | Winning plan + first sprint |
