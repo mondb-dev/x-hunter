@@ -13,8 +13,7 @@
  *
  * Entity types stored: 'memory' (memory.id), 'post' (posts.id)
  *
- * Ollama must be running with nomic-embed-text pulled.
- * Pull with: ollama pull nomic-embed-text
+ * Uses Gemini text-embedding-004 via Vertex AI (runner/llm.js).
  */
 
 "use strict";
@@ -29,7 +28,7 @@ const doMemory    = !args.includes("--posts");
 const doPosts     = !args.includes("--memory");
 const batchIdx    = args.indexOf("--batch");
 const BATCH_SIZE  = batchIdx !== -1 ? parseInt(args[batchIdx + 1], 10) || 20 : 20;
-const DELAY_MS    = 150; // gentle rate-limiting between Ollama calls
+const DELAY_MS    = 150; // gentle rate-limiting between Vertex AI calls
 
 async function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
@@ -65,7 +64,7 @@ async function embedBatch(entityType, rows) {
   // ── Memory ──────────────────────────────────────────────────────────────────
   if (doMemory) {
     const existingIds = await db.embeddedIds("memory");
-    const { rows: allMemory } = await _db.query("SELECT id, text_content FROM memory ORDER BY id");
+    const allMemory = _db.prepare("SELECT id, text_content FROM memory ORDER BY id").all();
     const pending     = allMemory.filter(r => !existingIds.has(String(r.id)));
 
     console.log(`[backfill] memory: ${allMemory.length} total, ${existingIds.size} already embedded, ${pending.length} to embed`);
@@ -87,7 +86,7 @@ async function embedBatch(entityType, rows) {
   // ── Posts ────────────────────────────────────────────────────────────────────
   if (doPosts) {
     const existingIds = await db.embeddedIds("post");
-    const { rows: allPosts } = await _db.query("SELECT id, text FROM posts ORDER BY ts DESC");
+    const allPosts = _db.prepare("SELECT id, text FROM posts ORDER BY ts DESC").all();
     const pending     = allPosts.filter(r => !existingIds.has(String(r.id)));
 
     console.log(`[backfill] posts: ${allPosts.length} total, ${existingIds.size} already embedded, ${pending.length} to embed`);
