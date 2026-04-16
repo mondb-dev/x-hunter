@@ -173,7 +173,7 @@ async function captureArticleUrl(page) {
 
   // Check profile for the latest post
   console.log("[post_article] checking profile for article URL...");
-  await page.goto("https://x.com/SebHunts_AI", {
+  await page.goto("https://x.com/SebastianHunts", {
     waitUntil: "domcontentloaded",
     timeout: 20_000,
   });
@@ -183,7 +183,7 @@ async function captureArticleUrl(page) {
     const found = await page.evaluate(() => {
       const links = Array.from(document.querySelectorAll('a[href*="/status/"]'));
       const match = links.find(a =>
-        /\/SebHunts_AI\/status\/\d+/.test(a.getAttribute("href") || ""),
+        /\/SebastianHunts\/status\/\d+/.test(a.getAttribute("href") || ""),
       );
       if (match) return "https://x.com" + match.getAttribute("href").split("?")[0];
       return null;

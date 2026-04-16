@@ -47,6 +47,55 @@ const {
   searchRecent,
 } = require("../runner/x_api");
 
+// ── Gemini enrichment helper (loaded lazily) ─────────────────────────────────
+let _llmGenerate = null;
+try {
+  _llmGenerate = require("../runner/llm").generate;
+} catch (e) {
+  console.warn("[collect] llm.js not available for Gemini enrichment:", e.message);
+}
+
+// BigQuery streaming (non-blocking)
+let _bqClient = null;
+let _bqTable = null;
+function getBqTable() {
+  if (_bqTable) return _bqTable;
+  try {
+    const {BigQuery} = require("@google-cloud/bigquery");
+    _bqClient = new BigQuery({projectId: "sebastian-hunter"});
+    _bqTable = _bqClient.dataset("hunter").table("posts");
+  } catch(e) {
+    console.warn("[collect] BigQuery not available:", e.message);
+  }
+  return _bqTable;
+}
+function bqInsertPost(post) {
+  const tbl = getBqTable();
+  if (!tbl) return;
+  const row = {
+    id: post.id || String(post.ts),
+    text: (post.text || "").slice(0, 2000),
+    username: post.username || "",
+    ts: post.ts || 0,
+    score: post.total || 0,
+    velocity: post.velocity || 0,
+    trust: post.trust || 0,
+    alignment: post.alignment || 0,
+    media_type: post.mediaType || "",
+    external_urls: JSON.stringify(post.external_urls || []).slice(0, 500),
+    cluster: post.cluster || "",
+    stance: (post.gemini_meta && post.gemini_meta.stance) || "",
+    claim: (post.gemini_meta && post.gemini_meta.claim) || "",
+    entities: JSON.stringify((post.gemini_meta && post.gemini_meta.entities) || []).slice(0, 500),
+    inserted_at: Date.now(),
+  };
+  tbl.insert([row]).catch(e => {
+    if (e.name !== "PartialFailureError") {
+      console.warn("[collect] BQ insert error:", e.message);
+    }
+  });
+}
+
 if (dotenv) dotenv.config({ path: path.join(__dirname, "..", ".env") });
 
 // ── Paths ─────────────────────────────────────────────────────────────────────
@@ -637,6 +686,46 @@ async function scrapeNotificationsApi() {
     console.log(`[scraper] captured ${capturedMedia.length}/${mediaPosts.slice(0, 10).length} media screenshots`);
   }
 
+  // ── Phase 5c: Gemini metadata enrichment for top posts ────────────────────
+  if (_llmGenerate) {
+    try {
+      let enriched = 0;
+      const enrichTargets = selected.slice(0, 20);
+      for (const post of enrichTargets) {
+        try {
+          const safeText = (post.text || '').replace(/"/g, "'").slice(0, 500);
+          const metaPrompt = [
+            'Extract structured metadata from this tweet. Return JSON only, no other text.',
+            '',
+            'Tweet: "' + safeText + '"',
+            'Author: @' + post.username,
+            '',
+            '{',
+            '  "entities": ["list of named entities: people, orgs, countries, events"],',
+            '  "claim": "one sentence summarizing the core claim or event",',
+            '  "stance": "one of: factual_report / opinion / speculation / satire / unclear",',
+            '  "credibility_signals": ["contains_link", "first_person", "screenshot_claim"],',
+            '  "axis_relevance": ["0-2 axis labels from Sebastian\'s belief framework most relevant"]',
+            '}',
+          ].join('\n');
+          const raw = await _llmGenerate(metaPrompt, { temperature: 0.1, maxTokens: 200 });
+          const jsonMatch = raw.match(/\{[\s\S]*\}/);
+          if (jsonMatch) {
+            post.gemini_meta = JSON.parse(jsonMatch[0]);
+            enriched++;
+          } else {
+            post.gemini_meta = null;
+          }
+        } catch (_e) {
+          post.gemini_meta = null;
+        }
+      }
+      console.log('[collect] Gemini enrichment: ' + enriched + '/' + enrichTargets.length + ' posts enriched');
+    } catch (enrichErr) {
+      console.warn('[collect] Gemini enrichment phase failed:', enrichErr.message);
+    }
+  }
+
   // ── Phase 6: Fetch top replies for highest-scoring posts ──────────────────
   const withReplies = [];
   for (const post of selected.slice(0, replyFetchCount)) {
@@ -704,6 +793,7 @@ async function scrapeNotificationsApi() {
       media_type:        post.mediaType || "none",
       media_description: post.mediaDescription || "",
     });
+    bqInsertPost(post);
     for (const kw of post.keywords) {
       db.insertKeyword({ post_id: post.id, keyword: kw, score: post.total });
     }

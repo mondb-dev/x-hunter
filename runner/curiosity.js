@@ -709,6 +709,23 @@ function markAnchorProcessed(postId) {
       : `refreshes in ~${CURIOSITY_EVERY} cycles`;
 
     const axisAngles = buildSearchAngles(searchTerms, axis.left_pole, axis.right_pole);
+
+    // Adversarial injection: every 12 curiosity log entries, force a counter-argument angle
+    const logCount = fs.existsSync(LOG)
+      ? fs.readFileSync(LOG, 'utf8').trim().split('\n').filter(Boolean).length
+      : 0;
+    const needsAdversarial = logCount > 0 && logCount % 12 === 0;
+    if (needsAdversarial && axis && (axis.score || 0) !== 0) {
+      const counterPole = (axis.score || 0) > 0
+        ? (axis.left_pole || '')
+        : (axis.right_pole || '');
+      if (counterPole) {
+        const counterTerms = counterPole + ' evidence arguments';
+        axisAngles.push(`https://x.com/search?q=${encodeURIComponent(counterTerms)}&f=live`);
+        console.log(`[curiosity] adversarial angle injected for "${axis.label}": "${counterPole}"`);
+      }
+    }
+
     const axisAngleLines = axisAngles.map((u, i) => `  SEARCH_URL_${i + 1}: ${u}`).join("\n");
     const lines = [
       `── curiosity directive · ${tsHuman} ${HR.slice(tsHuman.length + 25)}`,

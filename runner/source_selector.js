@@ -374,6 +374,64 @@ function main() {
   console.log(`[source_selector] queued ${candidate.label} for ${chosen.axis.id}`);
 }
 
+async function selectAdversarialSource() {
+  // Fire once per day — check last run date in source_plan.json
+  const plan = fs.existsSync(PLAN_FILE)
+    ? JSON.parse(fs.readFileSync(PLAN_FILE, 'utf8'))
+    : {};
+  const lastAdv = plan.last_adversarial_date || '';
+  const today = new Date().toISOString().slice(0, 10);
+  if (lastAdv === today) return { skipped: true, reason: 'already ran today' };
+
+  // Load ontology, find highest-confidence axis with |score| > 0.3
+  if (!fs.existsSync(ONTOLOGY)) return { skipped: true, reason: 'no ontology' };
+  const ontology = JSON.parse(fs.readFileSync(ONTOLOGY, 'utf8'));
+  const axes = ontology.axes || [];
+  const candidates = axes
+    .filter(a => a.confidence >= 0.7 && Math.abs(a.score || 0) > 0.3 && (a.evidence_log || []).length >= 4)
+    .sort((a, b) => b.confidence - a.confidence);
+  if (!candidates.length) return { skipped: true, reason: 'no qualifying axis' };
+
+  const axis = candidates[0];
+  const counterDirection = (axis.score || 0) > 0 ? 'against' : 'supporting';
+  const counterPole = (axis.score || 0) > 0 ? (axis.left_pole || axis.negative_pole || 'opposing view') : (axis.right_pole || axis.positive_pole || 'opposing view');
+
+  // Build search query targeting the counter-pole
+  const searchTerms = [counterPole, axis.label].filter(Boolean).join(' ');
+
+  // Select from credible sources only
+  const credibleSources = [
+    `https://www.reuters.com/site-search/?query=${encodeURIComponent(searchTerms)}`,
+    `https://apnews.com/search?q=${encodeURIComponent(searchTerms)}`,
+    `https://www.bbc.co.uk/search?q=${encodeURIComponent(searchTerms)}`,
+    `https://www.theguardian.com/search?q=${encodeURIComponent(searchTerms)}`,
+    `https://scholar.google.com/scholar?q=${encodeURIComponent(searchTerms)}`,
+  ];
+  const chosen = credibleSources[Math.floor(Math.random() * credibleSources.length)];
+
+  // Append to reading queue
+  const queueEntry = {
+    url: chosen,
+    from_user: 'adversarial_selector',
+    axis: axis.label,
+    counter_direction: counterDirection,
+    counter_pole: counterPole,
+    axis_score: axis.score,
+    added_at: new Date().toISOString(),
+    queued_at: Date.now(),
+  };
+  fs.appendFileSync(QUEUE_FILE, JSON.stringify(queueEntry) + '\n');
+
+  // Update last_adversarial_date in source_plan.json
+  plan.last_adversarial_date = today;
+  writeJson(PLAN_FILE, plan);
+
+  console.log(`[source_selector] adversarial: queued counter-argument search for axis "${axis.label}" (score ${(axis.score || 0).toFixed(2)}) -> ${counterDirection} ${counterPole}`);
+  return { queued: true, axis: axis.label, url: chosen };
+}
+
+module.exports = { selectConvictionSource: main, selectAdversarialSource };
+
 try {
   main();
 } catch (err) {

@@ -2,7 +2,7 @@
 
 const fs = require("fs");
 
-const HANDLE = "SebHunts_AI";
+const HANDLE = "SebastianHunts";
 const STATUS_URL_RE = new RegExp(`^https://x\\.com/${HANDLE}/status/\\d+(?:\\?.*)?$`, "i");
 
 function isConfirmedStatusUrl(value) {
