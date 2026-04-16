@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-16T17:30:00.458Z",
+  "generated_at": "2026-04-16T18:00:05.667Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-16T17:30:35.652Z",
+  "profiled_at": "2026-04-16T18:00:37.651Z",
   "sources": [
     {
       "domain": "cbp.gov",
@@ -773,7 +773,7 @@
       "first_seen_at": "2026-03-31T09:30:40.000Z",
       "last_seen_at": "2026-04-16T16:04:50.000Z",
       "discovery": {
-        "distinct_urls": 679,
+        "distinct_urls": 681,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -783,9 +783,9 @@
         ],
         "origin_counts": {
           "feed_buffer": 434,
-          "feed_buffer_reply": 278
+          "feed_buffer_reply": 280
         },
-        "distinct_referring_accounts": 337,
+        "distinct_referring_accounts": 338,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -823,7 +823,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:679",
+            "distinct_urls:681",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -831,7 +831,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:337",
+            "referring_accounts:338",
             "origin_types:2"
           ]
         },
@@ -861,10 +861,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:679",
+            "distinct_urls:681",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:337",
+            "referring_accounts:338",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -5243,6 +5243,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.37046874999999996,
           "confidence": 0.06135,
@@ -5256,20 +5270,6 @@
             "referring_accounts:0",
             "origin_types:1",
             "track_record_unavailable"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
           ]
         }
       },
@@ -20180,20 +20180,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.29000000000000004,
           "confidence": 0.65,
@@ -20206,6 +20192,20 @@
             "corrections:false",
             "outbound_links:1",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -22851,7 +22851,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-13T17:10:00.489Z",
+        "fetched_at": "2026-04-16T18:00:36.659Z",
         "homepage_url": "https://bongino.com/",
         "example_url": "https://www.bongino.com/articles/is-aaron-rupar-the-worlds-most-dishonest-journalist",
         "homepage_status": 200,
@@ -22971,7 +22971,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-13T17:10:01.668Z",
+        "fetched_at": "2026-04-16T18:00:37.651Z",
         "homepage_url": "https://racketmn.com/",
         "example_url": "https://racketmn.com/local-twitter-man-aaron-rupar-beacon-for-the-truth-or-threat-to-the-free-press/",
         "homepage_status": 200,
