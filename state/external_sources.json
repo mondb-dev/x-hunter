@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-16T06:29:46.487Z",
+  "generated_at": "2026-04-16T07:59:52.420Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-16T06:30:16.693Z",
+  "profiled_at": "2026-04-16T07:00:16.810Z",
   "sources": [
     {
       "domain": "cbp.gov",
@@ -621,9 +621,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-16T06:04:48.000Z",
+      "last_seen_at": "2026-04-16T07:34:45.000Z",
       "discovery": {
-        "distinct_urls": 659,
+        "distinct_urls": 661,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -633,9 +633,9 @@
         ],
         "origin_counts": {
           "feed_buffer": 422,
-          "feed_buffer_reply": 268
+          "feed_buffer_reply": 271
         },
-        "distinct_referring_accounts": 326,
+        "distinct_referring_accounts": 328,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -673,7 +673,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:659",
+            "distinct_urls:661",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -681,7 +681,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:326",
+            "referring_accounts:328",
             "origin_types:2"
           ]
         },
@@ -711,10 +711,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:659",
+            "distinct_urls:661",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:326",
+            "referring_accounts:328",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1523,7 +1523,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-13T06:39:34.567Z",
+        "fetched_at": "2026-04-16T07:00:16.810Z",
         "homepage_url": "https://starlink.com/",
         "example_url": "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
         "homepage_status": 200,
@@ -1806,6 +1806,133 @@
       }
     },
     {
+      "domain": "falconx.io",
+      "entity": "Falconx Io",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-05T05:14:00.582Z",
+      "last_seen_at": "2026-04-16T07:48:58.856Z",
+      "discovery": {
+        "distinct_urls": 7,
+        "example_urls": [
+          "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
+          "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=campaign_ads&utm_campaign=cf-workflow-ti&utm_id=introduction-ti&twclid=29dfwwziop5gdzr7nkl9k5582l",
+          "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=290876wk36itqs0859sz2icfct",
+          "https://focal.falconx.io/focal/agent-hub?utm_source=x&utm_medium=campaign_ads&utm_campaign=cf-agenthub&utm_id=introduction&twclid=2e6ijxp8d3pl5fova7yphh4mvg",
+          "https://focal.falconx.io/focal/agent-hub?utm_source=x&utm_medium=campaign_ads&utm_campaign=cf-agenthub&utm_id=introduction&twclid=274wvtawrnqaeprym3fjkxpct2"
+        ],
+        "origin_counts": {
+          "feed_buffer": 4,
+          "feed_buffer_reply": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "askfocal"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.32416666666666666,
+          "basis": [
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.36,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.4068489583333333,
+          "confidence": 0.273575,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-14T05:45:09.735Z",
+        "homepage_url": "https://falconx.io/",
+        "example_url": "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.falconx.io/",
+        "example_final_url": "https://askfocal.com/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "doubleclick.net",
       "entity": "Doubleclick",
       "kind": "unknown",
@@ -1924,133 +2051,6 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "falconx.io",
-      "entity": "Falconx Io",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-05T05:14:00.582Z",
-      "last_seen_at": "2026-04-14T20:21:21.000Z",
-      "discovery": {
-        "distinct_urls": 6,
-        "example_urls": [
-          "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
-          "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=campaign_ads&utm_campaign=cf-workflow-ti&utm_id=introduction-ti&twclid=29dfwwziop5gdzr7nkl9k5582l",
-          "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=290876wk36itqs0859sz2icfct",
-          "https://focal.falconx.io/focal/agent-hub?utm_source=x&utm_medium=campaign_ads&utm_campaign=cf-agenthub&utm_id=introduction&twclid=2e6ijxp8d3pl5fova7yphh4mvg",
-          "https://focal.falconx.io/focal/agent-hub?utm_source=x&utm_medium=campaign_ads&utm_campaign=cf-agenthub&utm_id=introduction&twclid=274wvtawrnqaeprym3fjkxpct2"
-        ],
-        "origin_counts": {
-          "feed_buffer": 3,
-          "feed_buffer_reply": 3
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "askfocal"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.295,
-          "basis": [
-            "distinct_urls:6",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.36,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.40046875,
-          "confidence": 0.24495,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:6",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-14T05:45:09.735Z",
-        "homepage_url": "https://falconx.io/",
-        "example_url": "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.falconx.io/",
-        "example_final_url": "https://askfocal.com/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 3,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -5928,6 +5928,131 @@
       }
     },
     {
+      "domain": "cosmos.so",
+      "entity": "Cosmos So",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-14T03:21:06.000Z",
+      "last_seen_at": "2026-04-15T21:48:54.000Z",
+      "discovery": {
+        "distinct_urls": 4,
+        "example_urls": [
+          "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc",
+          "https://cosmos.so/?twclid=2byirh1tzwmrzd352osdsykqjo",
+          "https://cosmos.so/?twclid=25fb5zkvgutjc80m43laabv8z6",
+          "https://cosmos.so/?twclid=2a6c7wlb03u0zwpihimrba6jbs"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 4
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "thecosmos"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.17666666666666664,
+          "basis": [
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.039999999999999994,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:4",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3663802083333333,
+          "confidence": 0.16722499999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-15T02:04:34.633Z",
+        "homepage_url": "https://cosmos.so/",
+        "example_url": "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.cosmos.so/",
+        "example_final_url": "https://www.cosmos.so/",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "georgetown.edu",
       "entity": "Georgetown",
       "kind": "unknown",
@@ -6417,130 +6542,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "cosmos.so",
-      "entity": "Cosmos So",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-14T03:21:06.000Z",
-      "last_seen_at": "2026-04-15T02:12:03.000Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc",
-          "https://cosmos.so/?twclid=2byirh1tzwmrzd352osdsykqjo",
-          "https://cosmos.so/?twclid=25fb5zkvgutjc80m43laabv8z6"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 3
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "thecosmos"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.1475,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.039999999999999994,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:4",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.36000000000000004,
-          "confidence": 0.1386,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-15T02:04:34.633Z",
-        "homepage_url": "https://cosmos.so/",
-        "example_url": "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.cosmos.so/",
-        "example_final_url": "https://www.cosmos.so/",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 4,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 4,
           "opinion_marker": false
         }
       }
@@ -19680,20 +19681,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.12,
           "confidence": 0.55,
@@ -19706,6 +19693,20 @@
             "corrections:false",
             "outbound_links:27",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },

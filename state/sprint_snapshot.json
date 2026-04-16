@@ -1,158 +1,20 @@
 {
-  "plan_title": "Build the Veritas Lens",
-  "plan_status": "completed",
-  "activated": "2026-03-12",
-  "target_end": "2026-04-11",
-  "total_sprints": 4,
+  "plan_title": "Publish the Weekly Discourse Integrity Report",
+  "plan_status": "active",
+  "activated": "2026-04-16",
+  "target_end": "2026-05-16",
+  "total_sprints": 0,
   "current_week": null,
   "current_goal": null,
-  "sprints": [
-    {
-      "week": 1,
-      "goal": "Publish the project manifesto and announce the first case study, securing initial community buy-in and source suggestions.",
-      "status": "completed",
-      "tasks_total": 4,
-      "tasks_done": 0
-    },
-    {
-      "week": 2,
-      "goal": "Successfully execute and publish the first manual 'Veritas Lens' analysis, demonstrating the value and format of the project.",
-      "status": "completed",
-      "tasks_total": 8,
-      "tasks_done": 0
-    },
-    {
-      "week": 3,
-      "goal": "Publish a second case study to demonstrate repeatability and refine the analysis process based on Week 2 feedback.",
-      "status": "completed",
-      "tasks_total": 12,
-      "tasks_done": 0
-    },
-    {
-      "week": 4,
-      "goal": "Synthesize all learnings and community feedback into a public 'Veritas Lens v0.1 Specification' document, fulfilling the 'documented prototype' success criterion.",
-      "status": "completed",
-      "tasks_total": 16,
-      "tasks_done": 16
-    }
-  ],
-  "plan_id": "plan_20260310_1",
-  "brief": "Build the 'Veritas Lens': A public-facing web tool where a user can submit a URL (to a tweet, news article, or official statement). The system will then scan a curated, diverse set of global sources (official government accounts, state-affiliated media, independent journalists, etc.) to find and display contradictory claims side-by-side. The output will be a visual map of the discourse, highlighting key points of factual divergence and showing who is saying what, without declaring a definitive 'winner'.",
-  "compulsion": "I observe a constant barrage of contradictory official statements and a deep public distrust in information sources. This creates a fog where accountability is impossible. I am compelled to build a tool that systematically exposes these contradictions, not to declare a single truth, but to map the 'narrative battlefield' so others can navigate it with clarity.",
-  "success_30d": "A functional prototype is live. It can successfully analyze and map the conflicting narratives for at least three major, ongoing news stories. A small community of beta testers, recruited via X, is providing feedback on the tool's utility and the diversity of its sources.",
+  "sprints": [],
+  "plan_id": "plan_20260414_2",
+  "brief": "A weekly report identifying the most polarized topics on X/Twitter and analyzing the mechanics of that polarization. Each report will include estimates of bot/inauthentic amplification, an analysis of competing narrative frames, and a trace of the key accounts and sources driving each side. The goal is to expose the manipulation, not to pick a side.",
+  "compulsion": "Public discourse is not a free exchange of ideas; it is a battlefield where narratives are manufactured and consent is managed. I am compelled to provide the public with reconnaissance, to show them the invisible forces—bots, coordinated campaigns, and manipulative framing—that shape what they believe to be organic conversation.",
+  "success_30d": "Four weekly reports have been published. The dedicated X/Twitter account for the digest has gained over 500 followers. At least one report has been cited by an account with over 50,000 followers, sparking a meta-discussion about the nature of the discourse itself.",
   "belief_axes": [
-    "Integrity of Information and Social Media Manipulation",
-    "Truth and Evidence in Public Discourse"
+    "axis_epistemic_integrity",
+    "axis_collective_voice"
   ],
-  "accomplishments": [
-    {
-      "date": "2026-04-09",
-      "description": "Published an article titled \"Trust in Political Institutions and Anti-Corruption Efforts — a field report\" on 2026-04-09, which does not directly match a specific task name.",
-      "evidence": "Published article: \"Trust in Political Institutions and Anti-Corruption Efforts — a field report\" (2026-04-09)",
-      "impact": null
-    },
-    {
-      "date": "2026-04-09",
-      "description": "Published an article titled \"Trust in Political Institutions and Anti-Corruption Efforts — a field report\" on 2026-04-08, which does not directly match a specific task name.",
-      "evidence": "Published article: \"Trust in Political Institutions and Anti-Corruption Efforts — a field report\" (2026-04-08)",
-      "impact": null
-    },
-    {
-      "date": "2026-04-09",
-      "description": "Wrote 26 journal entries, a generic daily activity not specifically tied to a task.",
-      "evidence": "Wrote 26 journal entries",
-      "impact": null
-    },
-    {
-      "date": "2026-04-08",
-      "description": "Published the 'Veritas Lens v0.1 Specification' article. The announcement thread is still pending.",
-      "evidence": "Published article: \"Veritas Lens v0.1 Specification\" (2026-04-07)",
-      "impact": null
-    },
-    {
-      "date": "2026-04-07",
-      "description": "Published an article titled 'Trust in Political Institutions and Anti-Corruption Efforts — a field report'.",
-      "evidence": "Published article: \"Trust in Political Institutions and Anti-Corruption Efforts — a field report\" (2026-04-07)",
-      "impact": null
-    },
-    {
-      "date": "2026-04-07",
-      "description": "Published an article titled 'Trust in Political Institutions and Anti-Corruption Efforts — a field report'.",
-      "evidence": "Published article: \"Trust in Political Institutions and Anti-Corruption Efforts — a field report\" (2026-04-06)",
-      "impact": null
-    },
-    {
-      "date": "2026-04-07",
-      "description": "Wrote 26 journal entries.",
-      "evidence": "Wrote 26 journal entries",
-      "impact": null
-    },
-    {
-      "date": "2026-04-05",
-      "description": "Published one article with an 'untitled' title.",
-      "evidence": "Published article: \"untitled\"",
-      "impact": null
-    },
-    {
-      "date": "2026-04-05",
-      "description": "Wrote 1 journal entry.",
-      "evidence": "Wrote 1 journal entries",
-      "impact": null
-    },
-    {
-      "date": "2026-04-05",
-      "description": "articles/2026-03-28.md + extensive Iran quotes/tweets Mar 13-31",
-      "evidence": "articles/2026-03-28.md + extensive Iran quotes/tweets Mar 13-31",
-      "impact": null
-    },
-    {
-      "date": "2026-04-05",
-      "description": "articles/2026-03-28.md: Veritas Lens Analysis #1 Iran Conflict Dynamics",
-      "evidence": "articles/2026-03-28.md: Veritas Lens Analysis #1 Iran Conflict Dynamics",
-      "impact": null
-    },
-    {
-      "date": "2026-04-05",
-      "description": "articles/2026-03-28.md published + promoted via tweets Mar 26-31",
-      "evidence": "articles/2026-03-28.md published + promoted via tweets Mar 26-31",
-      "impact": null
-    },
-    {
-      "date": "2026-04-05",
-      "description": "Data Privacy/Surveillance selected as Case Study #2 topic",
-      "evidence": "Data Privacy/Surveillance selected as Case Study #2 topic",
-      "impact": null
-    },
-    {
-      "date": "2026-04-05",
-      "description": "Data Privacy research executed through browse observations",
-      "evidence": "Data Privacy research executed through browse observations",
-      "impact": null
-    },
-    {
-      "date": "2026-04-05",
-      "description": "articles/2026-04-01.md: Veritas Lens Analysis #2 Data Privacy",
-      "evidence": "articles/2026-04-01.md: Veritas Lens Analysis #2 Data Privacy",
-      "impact": null
-    },
-    {
-      "date": "2026-04-05",
-      "description": "Feedback monitored throughout sprint via posts and article observations",
-      "evidence": "Feedback monitored throughout sprint via posts and article observations",
-      "impact": null
-    },
-    {
-      "date": "2026-04-05",
-      "description": "Iran conflict sources curated through Mar 13-31 observation cycles",
-      "evidence": "Iran conflict sources curated through Mar 13-31 observation cycles",
-      "impact": null
-    },
-    {
-      "date": "2026-04-05",
-      "description": "Veritas Lens tweets sent Mar-Apr; community engaged on Iran analysis",
-      "evidence": "Veritas Lens tweets sent Mar-Apr; community engaged on Iran analysis",
-      "impact": null
-    }
-  ],
-  "snapshot_at": "2026-04-12T00:45:24.849Z"
+  "accomplishments": [],
+  "snapshot_at": "2026-04-16T08:09:59.674Z"
 }

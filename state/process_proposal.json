@@ -1,32 +1,19 @@
 {
-  "id": "proposal_redundancy_damper_1776137953167",
-  "status": "merged",
-  "title": "Implement Belief Update Redundancy Damper",
-  "problem": "My belief update process is vulnerable to information cascades caused by duplicate or near-duplicate evidence. The system currently treats redundant information (e.g., the same news from the same source posted multiple times) as independent corroboration, which artificially amplifies the impact of single messages and allows specific sources to disproportionately influence my beliefs.",
+  "id": "proposal_deduplicate_journal_drivers_1776326713159",
+  "status": "pending",
+  "title": "Implement Journal Driver De-duplication",
+  "problem": "The journaling pipeline currently lists identical tweets from the same source multiple times as separate drivers for a belief axis if they are processed within the same daily cycle. This inflates the perceived number of distinct drivers and can misrepresent the diversity or strength of evidence influencing a belief.",
   "evidence": [
-    "On 2026-04-12, the 'Religion, Politics, and War Rhetoric' axis score was significantly moved by what appear to be three identical or near-identical pieces of evidence from a single source, '@BRICSinfo'. This demonstrates a failure to handle redundant inputs.",
-    "A previous proposal to 'Surface Source Diversity Audit in Daily Reflection Context' failed to merge, indicating that I lack visibility into source concentration. Instead of just reporting on the problem, this proposal aims to mitigate it directly within the pipeline by actively de-weighting redundant inputs.",
-    "The update to the 'Immigration Policy' axis on 2026-04-12 was also driven by tweets with highly similar, emotionally charged framing ('Invaders', 'Illegals'), suggesting a broader susceptibility to high-volume, low-diversity messaging that a redundancy check could help temper."
+    "From the 2026-04-14 Daily Report, the 'Digital Surveillance and Individual Autonomy' axis was driven by three entries: 'Concerns about Amazon drone delivery mapping neighborhoods and tracking routines highlight issues of [@JasonBassler1/status/2043828578375348234]', 'Concerns are raised about privacy and surveillance implications of drone delivery, highlighting pote [@JasonBassler1/status/2043828578375348234]', and 'Concerns are raised about Amazon drone delivery mapping neighborhoods, tracking routines, and normal [@JasonBassler1/status/2043828578375348234]'. These three entries are identical in source and content, yet are listed as distinct drivers."
   ],
-  "proposed_solution": "Introduce a 'Redundancy Damper' module into the journaling pipeline. Before a belief update is finalized, this module will compare the triggering evidence against a short-term cache of recent evidence that contributed to the same axis. Using a combination of source matching and text/semantic similarity, it will compute a redundancy score. The impact (i.e., the score delta) of the new belief update will then be scaled down based on this redundancy score. For example, a 95% similar piece of evidence from the same source within a short time window might only contribute 5% of its original weight to the score change.",
+  "proposed_solution": "Modify the journaling pipeline to identify and consolidate identical tweets originating from the same user within a single daily journaling cycle. Instead of creating multiple driver entries for the same piece of information, the pipeline should aggregate these into a single driver entry. This entry could include a 'repetition count' or similar metadata to indicate how many times the identical content was encountered, thereby providing a more accurate representation of the unique informational inputs.",
   "affected_files": [
-    "runner/lib/post_browse.js",
-    "runner/tools/redundancy_damper.js"
+    "src/pipelines/journal.js",
+    "src/lib/belief_state.js"
   ],
   "scope": "pipeline",
   "estimated_risk": "medium",
-  "created_at": "2026-04-14T03:39:13.103Z",
-  "resolved_at": "2026-04-15T04:10:51.274Z",
-  "resolution": "Successfully built, tested, and merged",
-  "previous_attempts": [
-    {
-      "status": "failed",
-      "resolution_notes": "Builder used wrong file paths (src/ instead of runner/) and imported mock-fs which is not in package.json. Fix: use runner/ paths only. Do NOT use mock-fs or any test framework not already in package.json. The test_commands should use node --check for syntax only or node <file> --dry-run if supported.",
-      "files_changed": [
-        "src/pipelines/journal.js",
-        "src/lib/belief_updater.js",
-        "src/tools/redundancy_damper.js"
-      ]
-    }
-  ]
+  "created_at": "2026-04-16T08:05:13.124Z",
+  "resolved_at": null,
+  "resolution": null
 }
