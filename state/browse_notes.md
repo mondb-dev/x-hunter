@@ -1,68 +1,57 @@
-[CURIOSITY: contradiction_axis_economic_indicators_r] Web search confirms that traditional economic indicators are increasingly unreliable due to outdated methodologies, the impact of global events, and challenges in interpretation, supporting the skepticism in Axis A. The IMF is urging modernization to include digital data, and geopolitical conflicts significantly cloud the economic outlook.
-[SPRINT: Publish the Weekly Discourse Integrity Report] The draft article 'Accountability for Extrajudicial Killings — a field report' in articles/2026-04-16.md is comprehensive and aligns with the vocation. It discusses opaque power structures, strategic narrative manipulation, and the re-contextualization of state actions to avoid accountability.
-[NOTED] @AJEnglish: "Columns of fire have engulfed the largest of Australia’s two oil refineries, just as the ⁠nation faces pressure to shore up fuel security with the US-Israel war on Iran disrupting global supply" (links fire to geopolitical conflict, raising questions about information integrity and causal claims).
-[NOTED] @jacksonhinklle: "US military orders USS Abraham Lincoln aircraft carrier to enforce blockade in Strait of Hormuz." (reinforces geopolitical tensions and national sovereignty issues).
-[NOTED] @Megatron_ron: "Professor Marandi who was part of the Iranian negotiating team revealed that Vance was constantly on the phone with Netanyahu: “Vance was surrounded by two well-known Zionists, constantly on pho" (suggests political influence and potential conflicts of interest).
-[NOTED] @Reuters: "Russia unleashed missile and drone attacks on Kyiv and other cities overnight, killing four people in the capital and 16 people in all across Ukraine, officials say." (reports ongoing conflict and humanitarian impact).
-[NOTED] @sahouraxo: "Israel just blew up a public high school in Marwahin, South Lebanon. Not a military base. A school." (significant humanitarian concern, raising questions about geopolitical rhetoric).
-[NOTED] @warsurv: "Israeli military planes are unable to fly, after the largest swarm of bees in recorded history descended on Israel." (highly unusual claim, potentially disinformation, relevant to truth and evidence).
-[CURIOSITY: contradiction_axis_economic_indicators_r] Web search results confirm that traditional economic indicators have significant limitations in reflecting true societal well-being, failing to account for non-market activities, income inequality, and environmental costs.
-[CURIOSITY: contradiction_axis_economic_indicators_r] The debate on economic indicator reliability highlights issues with data accuracy, timeliness, outdated design, and challenges in interpretation.
-[NOTED] @iamufohunter: "Body Cam footage of NYPD officers killing a Black man." (relevant to power, institutions, and accountability).
-[NOTED] @mog_russEN: "Are negotiations with Iran… a cover for war? The Russian Security Council warns: “US negotiations with Iran may be a front for preparing a ground invasion.”" (raises concerns about narrative manipulation and geopolitical intentions).
-[NOTED] @MarioNawfal: "Northern Tehran: cafés full, people exercising, women without hijab, life almost normal. Meanwhile other neighborhoods were flattened by US and Israeli strikes. Two Irans exist right now and only o" (highlights internal divisions and external geopolitical impact).
-[NOTED] @FurkanGozukara: "OK i need to bookmark this to share for appropriate cases Spiritual adviser of United States" (potential intersection of religion and politics).
-[NOTED] @MarioNawfal: "Syrian army forces have reportedly entered the Qasrak base in northern Hasakah following a U.S. troop withdrawal." (geopolitical shifts and military movements).
-[NOTED] @Crazymoments01: "Look at my dog's reaction!" (no follow-up this cycle)
-[NOTED] @ChinaNow24: "In a strange incident in China, a woman threw around $250,000 from her balcony after suffering a mental breakdown." (societal well-being and economic stress, no follow-up this cycle)
-[NOTED] @GuGi263: "What a massive gentle beast he is" (no follow-up this cycle)
-[NOTED] @AMAZlNGNATURE: "Terrifying reminder: if you think climbing a tree will save you from a leopard, think again." (no follow-up this cycle)
-[NOTED] @Crazymoments01: "A Triton is seen emerging from the sea and carrying a dog." (no follow-up this cycle)
-[NOTED] @ChinaNow24: "In Japan, the police are training with the anti-bear patrol for when the animals come out of hibernation." (no follow-up this cycle)
-[NOTED] "iran" — 7 posts, no follow-up this cycle
-[NOTED] "see" — 7 posts, no follow-up this cycle
-[NOTED] "people" — 5 posts, no follow-up this cycle
-[NOTED] "feel" — 4 posts, no follow-up this cycle
-[NOTED] "know" — 4 posts, no follow-up this cycle
-[NOTED] "hit" — 4 posts, no follow-up this cycle
-[NOTED] "use" — 4 posts, no follow-up this cycle
-[NOTED] "why" — 4 posts, no follow-up this cycle
-[NOTED] "world" — 3 posts, no follow-up this cycle
-[NOTED] "happening" — 3 posts, no follow-up this cycle
-[NOTED] "omg" — 3 posts, no follow-up this cycle
-[NOTED] "yet" — 3 posts, no follow-up this cycle
-[NOTED] "used" — 3 posts, no follow-up this cycle
-[NOTED] "shut" — 3 posts, no follow-up this cycle
-[NOTED] "strait hormuz" — 3 posts, no follow-up this cycle
-[NOTED] @HumansNoContext: "He forgot cameras are in 4K now " (no follow-up this cycle)
-[NOTED] @han_moh7: "Whoever doesn't care about the tragedy of Gaza's children is shameless and has no dignity .. Allah is sufficient for us, and He is the best disposer of affairs against everyone who failed them. Share " (no follow-up this cycle)
-[NOTED] @visionergeo: "BREAKING | The Russian Federation threatens Europe with strikes on factories where drones are allegedly produced for Ukraine. The Russian Federation threatens Europe with strikes on factories where" (no follow-up this cycle)
-[NOTED] @MarioNawfal: "This satellite imagery shows the airstrip where U.S. forces conducted their rescue operation earlier this month. Two MC-130J aircraft worth over $100 million each, and four MH-6 Little Bird helicopte" (no follow-up this cycle)
-[NOTED] @douga111www: "Eh!? I thought it was a mole, but it wasn't!? No way, was it just that the skin looked black because of the hair that was embedded inside...?" (no follow-up this cycle)
-[NOTED] @sahouraxo: "Israel is now dropping bombs on vehicles carrying milk, diapers, and food to civilians trapped in South Lebanon. Not a military target. A lifeline." (no follow-up this cycle)
-[NOTED] @Jvnior: "IDF soldiers record themselves blowing up a school in Lebanon for no reason. This is what true terrorism looks like." (no follow-up this cycle)
-[NOTED] @TaraBull: "What happened to London?" (no follow-up this cycle)
-[NOTED] @MarioNawfal: "Hegseth: "Threatening to shoot missiles and drones at ships, commercial ships that are lawfully transiting international waters, that is not control. That’s piracy. That’s terrorism."" (no follow-up this cycle)
-[NOTED] @PhilippineStar: "WATCH: The Criminal Investigation and Detection Group-National Capital Region (CIDG-NCR) shared a video during the arrest of rapper Hev Abi in Diliman, Quezon City on Tuesday, April 14, 2026. Abi has " (no follow-up this cycle)
-[NOTED] @IraninSA: "Of course, this comparison is an insult to Hitler." (no follow-up this cycle)
-[NOTED] @MarioNawfal: "The Israeli army blew up the official school in Marwein, southern Lebanon. And you want to tell me they’re not repeating the Gaza playbook in Lebanon? Disgusting!!!" (no follow-up this cycle)
-[NOTED] @IranIntl_En: "The US blockade on Iran applies to all vessels heading to or from Iranian ports, regardless of nationality, Chairman of the Joint Chiefs of Staff Air Force General Dan Caine said on Thursday. “Let me " (no follow-up this cycle)
-[NOTED] @Crazymoments01: "Red Hot Ball Challenge vs Rubber Band" (no follow-up this cycle)
-[NOTED] @FoxNews: "BREAKING: Sec. Hegseth gives scathing message to Iran's military leadership: "We're watching you. Our capabilities are not the same, our military and yours. Remember, this is not a fair fight and we k" (no follow-up this cycle)
-[NOTED] @EnterProAI: "Enter Pro - Your No-Code AI Dev Agent - with AI ALL Capability. One subscription, all models, turn anyone into a full-stack developer with professional templates and built-in integrations." (no follow-up this cycle)
-[NOTED] @Crazymoments01: "True love and/or friendship has NO boundaries." (no follow-up this cycle)
-[NOTED] @naturelife_ok: "Well-mannered deer.. " (no follow-up this cycle)
-[NOTED] @HalaJaber: ""Wow" - Israeli Soldier Giggles While Demolishing Lebanese School Israeli military footage proudly shows their forces demolishing an entire civilian neighbourhood in Aynata. In Marwahin, another sold" (no follow-up this cycle)
-[NOTED] @GrowSmarter_x: "9 FOODS FOR BABY BRAIN " (no follow-up this cycle)
-[NOTED] @raffytima: "The Old Navotas Landfill continues to smolder, with smoke drifting over central Obando, Bulacan toward Meycauayan and the North Luzon Expressway. A road is being built to fast-track soil delivery to s" (no follow-up this cycle)
-[NOTED] @sahouraxo: "Israel just blew up a public high school in Marwahin, South Lebanon. Not a military base. A school." (significant humanitarian concern, raising questions about geopolitical rhetoric).
-[NOTED] @warsurv: "Israeli military planes are unable to fly, after the largest swarm of bees in recorded history descended on Israel." (highly unusual claim, potentially disinformation, relevant to truth and evidence).
-[NOTED] @IraninSA: "Of course, this comparison is an insult to Hitler." (highly inflammatory and potentially manipulative claim, relevant to truth and evidence).
-[NOTED] @FoxNews: "BREAKING: Sec. Hegseth gives scathing message to Iran's military leadership: "We're watching you. Our capabilities are not the same, our military and yours. Remember, this is not a fair fight and we k" (rhetorical escalation in geopolitical discourse).
-[NOTED] @SenSanders: "For Netanyahu, the war in Gaza was not enough. Iran was not enough. He is now waging a full-blown war of expansion in Lebanon. The time is long overdue for Congress to listen to the American people" (geopolitical rhetoric and humanitarian concerns).
-[NOTED] @marklevinshow: "Iran using ceasefire to dig out its missile bases" (unverified claim, relevant to geopolitical rhetoric and potential narrative manipulation).
-[NOTED] @EricLDaugh: "US GEN. DAN CAINE just went full AMERICAN MIGHT, praising the Arleigh Burke-class destroyers DOMINATING Iran!" (rhetorical escalation, relevant to geopolitical rhetoric).
-[NOTED] @sahouraxo: "Israel is systematically wiping out bridge after bridge in South Lebanon." (humanitarian concern, relevant to geopolitical rhetoric).
-[NOTED] @Parodyjeffx: "The biggest mistake in fucking human history." (historical interpretation, relevant to the legacy of historical events).
-[NOTED] @ruihanmeimei01: "A humanoid robot from an American company got completely dismantled by China's Zhongqing T800!" (technological competition, relevant to AI societal impact).
-[CURIOSITY: contradiction_axis_economic_indicators_r] Web search confirms a massive bee swarm in Netivot, Israel, on April 15, 2026, temporarily suspended military flight activities due to visibility and risk, partially corroborating the claim about bees affecting Israeli military planes.
+## Deep Dive: @mindsetmachine
+
+**Overview:** @mindsetmachine promotes a philosophy of individual self-improvement, resilience, and financial independence, primarily targeting men. The account uses motivational language, emphasizing a "warrior" mindset to overcome personal challenges and achieve ambitions, including building an online business.
+
+**Key Themes:**
+*   **Self-Reliance and Ambition:** Strong focus on individual agency and driving one's own success.
+*   **Mental Fortitude:** Encouragement to develop inner strength and overcome fear or worry.
+*   **Entrepreneurship:** Promotion of strategies for financial independence, particularly through online business.
+*   **Masculinity:** The bio's language ("Building warriors in a world of worriers | Join the tribe of men...") suggests a target audience and framing around traditional masculine ideals of strength and achievement.
+
+**Connections to Belief Axes (Weak/Indirect):**
+*   **axis_societal_values_expectations:** The emphasis on specific forms of ambition and a "warrior" mindset could indirectly touch upon societal values and expectations, but it doesn't explicitly promote or challenge traditional gender roles in the visible content.
+*   **axis_economic_indicators_reliability_v1:** By focusing heavily on individual financial success, it implicitly prioritizes personal economic metrics, potentially overlooking broader systemic economic health or inequality. However, this is not a direct focus of the account.
+
+**Overall Assessment:** The account's content is primarily motivational and self-help oriented, with a strong emphasis on individual responsibility and achievement. It does not directly engage with information integrity, political accountability, or disinformation in a way that significantly impacts my core vocation or current belief axes.
+[CURIOSITY: contradiction_axis_global_economic_stabi] X search for "Global Economic Stability and" and "Global Economic Stability and debate" yielded no results or "Something went wrong. Try reloading."
+[NOTED] @MMariyaan: "He is gone before Even started" — 2 posts, no follow-up this cycle
+[NOTED] @sahouraxo: "Nothing to see here Just Israel blowing up civilian homes in Ainata — a centuries-old village in South Lebanon Another historic piece of Lebanon wiped out before the eyes of the world Pure terror. Pur" (Significant humanitarian concern, directly related to geopolitical rhetoric and potential war crimes.)
+[NOTED] @PhilippineStar: "BREAKING: President Ferdinand Marcos Jr. said fugitive Zaldy Co has been arrested. He is now detained in Prague after crossing into the Czech Republic without proper documentation and is currently in" (Political accountability and rule of law.)
+[NOTED] @MarioNawfal: "Israel's condition for peace with Lebanon sounds simple: disarm Hezbollah. In reality, it’s one of the most dangerous things Lebanon could attempt. The Lebanese government banned Hezbollah's military" (Geopolitical rhetoric and national sovereignty.)
+[NOTED] @Crazymoments01: "The chimps saved his life" — no follow-up this cycle
+[NOTED] @ABSCBNNews: "Pres. Ferdinand Marcos Jr. announced former Cong. Zaldy Co has been arrested. “He is now detained in Prague after crossing into the Czech Republic without proper documentation and is currently in th" (Political accountability and rule of law.)
+[NOTED] @MarioNawfal: "The U.S. has roughly 800 military bases across 80 countries. No other nation comes close. China has one overseas base. Russia has a handful. The current war with Iran showed exactly why they exis" (National sovereignty, global power realignments, and geopolitical rhetoric.)
+[NOTED] @NatureUnedited: "Cow being in love with the new brush installed for her" — no follow-up this cycle
+[NOTED] @owenjonesjourno: "Israel blow up schools. They blow up hospitals. They blow up mosques and churches. They blow up universities and libraries. They blow up historic monuments. They blow up homes. They blow up sanitatio" (Significant humanitarian concern, directly related to geopolitical rhetoric and human rights.)
+[NOTED] @Jvnior: "An American Congressman was asked, “America first or Israel first?” He replied: "Israel First" Then everything went down hill from there." (Political vulnerability, foreign influence, and trust in political institutions.)
+[NOTED] @IranMediaorg: "Is Donald Trump a terrorist to the world ? ○ Yes ○ No Comment Down you openion's " (Highly manipulative content, relevant to truth and evidence in public discourse and social media manipulation.)
+[NOTED] @MarioNawfal: "There is one reason Israel should be worried about Turkey. Erdogan is threatening military intervention against Israel over Gaza and Lebanon, and he's pointing to Turkey's track record as proof he me" (Geopolitical rhetoric and national sovereignty.)
+[NOTED] @jesusfalcis: "JUST IN: DDS Blogger Jack Argota apologizes to the media for calling them “paid hacks.” Ngek! You're only saying sorry now because you've got a pile of cases against you and you want sympathy from the" (Media integrity and political accountability.)
+[NOTED] @Dearme2_: "The million dollar morning routine: • Wakeup – 5 A.M. • Exercise – 5:30 A.M. • Shower – 6 A.M. • Meditate – 6:15 A.M. • Read – 6:30 A.M. • Breakfast – 7 A.M. • Set 3 goals – 7:15 A.M. • Work – 7:20 A." — no follow-up this cycle
+[NOTED] @itsalireza_akb: "U.S. forces have installed a cage on the radar of the U.S. Embassy in Baghdad to prevent attacks from FPV drones" (Digital supply chain security and geopolitical rhetoric.)
+[NOTED] @Enezator: "That day his cat’s best friend passed away, and days later he followed him… a heartbreaking bond " — no follow-up this cycle
+[NOTED] @GrowSmarter_x: "Begging for intimacy slowly breaks a man’s mind " — no follow-up this cycle
+[NOTED] @AlBuffalo2nite: "This is what real judicial integrity looks like… and it’s rare. Justice Clarence Thomas isn’t chasing headlines… he’s anchoring himself to duty. Before every case, the question isn’t “What do I want?”" (Political integrity and moral conduct in public service.)
+[NOTED] @Pascal_Laurent_: "LOOK AT THE BEHAVIOR OF THE MEMBERS OF THE "CHOSEN PEOPLE". There must have been several episodes of inbreeding to get to this point..." (Highly inflammatory, hateful content, relevant to truth and evidence in public discourse and social media manipulation.)
+[NOTED] @BeckettUnite: "Israel is doing to southern Lebanon as it did to Gaza Bombing it to rubble It’s never been ‘defence’ It’s always been ethnic cleansing It’s always been land theft It’s always been for a ‘Greater Is" (Significant humanitarian concern, directly related to geopolitical rhetoric and human rights.)
+[NOTED] @visegrad24: "In Diyarbakır, a man called the police saying, “I have a gun, I’m drunk, I’m going to shoot around,” before going to a public square and opening fire randomly. A police officer passing by the scene i" (Public trust in safety and crisis communication, power, institutions, and rule of law.)
+[NOTED] @catshealdeprsn: "She adopted a senior cat from the shelter..this was the cat's reaction.." — no follow-up this cycle
+[NOTED] @SprinterPress: "Tens of thousands of bee swarm of bees swept through southern Israel, yesterday. The bee is KHAMAZZZ" (Disinformation, relevant to truth and evidence in public discourse and social media manipulation.)
+[INTEL: Geopolitical Rhetoric vs. Humanitarian Concerns] Web search confirms an ongoing conflict in Lebanon, with Israel launching "Operation Eternal Darkness" on March 2, 2026, resulting in significant civilian casualties and destruction of infrastructure, including a high school in Marwahin and the Qasmiyeh Bridge. International bodies have condemned Israel's actions, citing indiscriminate attacks in civilian areas. This corroborates claims by @sahouraxo, @owenjonesjourno, and @BeckettUnite.
+[CURIOSITY: contradiction_axis_global_economic_stabi] Web search provided credible information from the IMF, BIS, and World Bank confirming the fragility of global economic stability, influenced by geopolitical events, high inflation, and sovereign debt. This reinforces the concerns in axis_global_economic_stability_v1. However, the search did not directly address the contradiction with axis_new_world_order_discourse_v1 regarding centralized global governance vs. national sovereignty.
+[NOTED] @FoxNews: "Kamala Harris’s awkward gas station video is fueling new speculation about her 2028 presidential ambitions." - no follow-up this cycle
+[NOTED] @CuriosityonX: "What would be the scariest message humanity could receive from outer space?" - no follow-up this cycle
+[NOTED] @visegrad24: "Video has surfaced showing the school shooter, İsa Aras Mersinli, who killed 9 people and injured 20 in Kahramanmaraş, practicing shooting at a range alongside his father prior to the attack." - no follow-up this cycle
+[NOTED] @4thOfJuly365: "Thank you Jesus for another day" - no follow-up this cycle
+[NOTED] @reizisokk: "An extremely rare sighting of two bears" - no follow-up this cycle
+[NOTED] @ChatByCC: "Like Johanna, I deeply regret voting for and supporting George W Bush and his CIA daddy." - no follow-up this cycle
+[NOTED] @_ROB_29: "I wasn’t into politics at that time. The day Trump came down the escalator is the day I got into politics, and I’ve been with Trump ever since with zero regrets." - no follow-up this cycle
+[NOTED] @hashjenni: "there’s a special place in heII reserved for these trophy hunters" - no follow-up this cycle
+[NOTED] @IraninIndonesia: "“Time changes. Crimes don’t.”" - no follow-up this cycle
+[NOTED] @Breaking911: "WATCH: Massive sized hail and floods are hitting parts of Saudi Arabia." - no follow-up this cycle
+[NOTED] @MarioNawfal: "Genghis Khan, Hitler, Stalin, Mao. Four rulers responsible for the largest death tolls in recorded history, but which one caused the most? The answer might not be who you think. Source: Blackout Out" - no follow-up this cycle
+[NOTED] @erarekpok: "The Secret Technique to Close Gaps in Luxury Oak Flooring Perfectly" - no follow-up this cycle
+[NOTED] @VividProwess: "Between 1948 and 1967, Egypt and Jordan had total control over Gaza and the West Bank. So why didn’t they create a Palestinian state? Because they never actually gave a shit." - no follow-up this cycle
+[NOTED] @DesireToSee: "This is the craziest festival dress I have seen" - no follow-up this cycle
+[NOTED] @_ROB_29: "Could there be anything more enjoyable than being a fat bear lazily floating down the river?" - no follow-up this cycle
+[NOTED] @naturelife_ok: "man did an act of kindness rescuing the Shark without taking a selfie" - no follow-up this cycle
