@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-16T07:59:52.420Z",
+  "generated_at": "2026-04-16T08:59:59.001Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-16T07:00:16.810Z",
   "sources": [
@@ -623,7 +623,7 @@
       "first_seen_at": "2026-03-31T09:30:40.000Z",
       "last_seen_at": "2026-04-16T07:34:45.000Z",
       "discovery": {
-        "distinct_urls": 661,
+        "distinct_urls": 662,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -633,9 +633,9 @@
         ],
         "origin_counts": {
           "feed_buffer": 422,
-          "feed_buffer_reply": 271
+          "feed_buffer_reply": 272
         },
-        "distinct_referring_accounts": 328,
+        "distinct_referring_accounts": 329,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -673,7 +673,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:661",
+            "distinct_urls:662",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -681,7 +681,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:328",
+            "referring_accounts:329",
             "origin_types:2"
           ]
         },
@@ -711,10 +711,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:661",
+            "distinct_urls:662",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:328",
+            "referring_accounts:329",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -757,9 +757,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-16T01:21:47.000Z",
+      "last_seen_at": "2026-04-16T02:37:35.000Z",
       "discovery": {
-        "distinct_urls": 88,
+        "distinct_urls": 90,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -768,10 +768,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 85,
+          "feed_buffer_reply": 87,
           "feed_buffer": 3
         },
-        "distinct_referring_accounts": 73,
+        "distinct_referring_accounts": 75,
         "sample_referring_accounts": [
           "100ohiostate",
           "afk500595388855",
@@ -809,7 +809,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:88",
+            "distinct_urls:90",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -817,7 +817,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:73",
+            "referring_accounts:75",
             "origin_types:2"
           ]
         },
@@ -847,10 +847,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:88",
+            "distinct_urls:90",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:73",
+            "referring_accounts:75",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1299,7 +1299,7 @@
       "entity": "Cbsnews",
       "kind": "unknown",
       "first_seen_at": "2026-03-27T23:18:50.928Z",
-      "last_seen_at": "2026-04-16T05:31:55.257Z",
+      "last_seen_at": "2026-04-16T08:02:31.879Z",
       "discovery": {
         "distinct_urls": 5,
         "example_urls": [
@@ -1686,9 +1686,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-16T09:36:45.269Z",
-      "last_seen_at": "2026-04-15T09:43:22.919Z",
+      "last_seen_at": "2026-04-16T08:05:13.063Z",
       "discovery": {
-        "distinct_urls": 25,
+        "distinct_urls": 26,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -1697,7 +1697,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 25
+          "articles": 26
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1726,7 +1726,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:25",
+            "distinct_urls:26",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -1764,7 +1764,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:25",
+            "distinct_urls:26",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -3932,6 +3932,130 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "interactivebrokers.com",
+      "entity": "Interactivebrokers",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-14T20:58:57.462Z",
+      "last_seen_at": "2026-04-15T10:43:19.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://www.interactivebrokers.com/mkt/?src=twitter1516e&url=%2Fen%2Ftrading%2Fmargin.php&twclid=26s33m7076ex8oai4uldw5cov5",
+          "https://forecasttrader.interactivebrokers.com/mkt/?src=twitter1537b&url=%2Feventtrader%2F%23%2Felection-hub%2Fgrid&twclid=2abhxqzgaih51gi3yoloyg1buu"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1,
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "ibkr"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.17833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.66,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:38",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.37494791666666666,
+          "confidence": 0.13045,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-14T21:29:32.425Z",
+        "homepage_url": "https://interactivebrokers.com/",
+        "example_url": "https://www.interactivebrokers.com/mkt/?src=twitter1516e&url=%2Fen%2Ftrading%2Fmargin.php&twclid=26s33m7076ex8oai4uldw5cov5",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.interactivebrokers.com/",
+        "example_final_url": "https://www.interactivebrokers.com/en/home.php",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 38,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 38,
           "opinion_marker": false
         }
       }
@@ -15468,128 +15592,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 6,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "interactivebrokers.com",
-      "entity": "Interactivebrokers",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-14T20:58:57.462Z",
-      "last_seen_at": "2026-04-14T20:58:57.462Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://www.interactivebrokers.com/mkt/?src=twitter1516e&url=%2Fen%2Ftrading%2Fmargin.php&twclid=26s33m7076ex8oai4uldw5cov5"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "ibkr"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.66,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:true",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:38",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-14T21:29:32.425Z",
-        "homepage_url": "https://interactivebrokers.com/",
-        "example_url": "https://www.interactivebrokers.com/mkt/?src=twitter1516e&url=%2Fen%2Ftrading%2Fmargin.php&twclid=26s33m7076ex8oai4uldw5cov5",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.interactivebrokers.com/",
-        "example_final_url": "https://www.interactivebrokers.com/en/home.php",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 38,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 38,
           "opinion_marker": false
         }
       }

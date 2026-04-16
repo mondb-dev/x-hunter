@@ -197,6 +197,23 @@
       "pushed_to_origin": true,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_deduplicate_journal_drivers_1776326713159",
+      "title": "Implement Journal Driver De-duplication",
+      "status": "failed",
+      "proposed_at": "2026-04-16T08:05:13.124Z",
+      "resolved_at": "2026-04-16T08:30:52.000Z",
+      "resolution_notes": "Pipeline error: Tests failed: Blocked test command (unsafe): # This change introduces library files, not a directly executable script.; Blocked test command (unsafe): # To test, a new test script would be needed, for example:; Blocked test command (unsafe): # node tests/test_journal_deduplication.js",
+      "files_changed": [
+        "src/lib/belief_state.js",
+        "src/pipelines/journal.js"
+      ],
+      "branch_name": "meta/proposal_deduplicate_journal_drivers_1776326713159",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }

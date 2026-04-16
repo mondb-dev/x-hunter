@@ -1,6 +1,6 @@
 {
   "id": "proposal_deduplicate_journal_drivers_1776326713159",
-  "status": "pending",
+  "status": "failed",
   "title": "Implement Journal Driver De-duplication",
   "problem": "The journaling pipeline currently lists identical tweets from the same source multiple times as separate drivers for a belief axis if they are processed within the same daily cycle. This inflates the perceived number of distinct drivers and can misrepresent the diversity or strength of evidence influencing a belief.",
   "evidence": [
@@ -14,6 +14,6 @@
   "scope": "pipeline",
   "estimated_risk": "medium",
   "created_at": "2026-04-16T08:05:13.124Z",
-  "resolved_at": null,
-  "resolution": null
+  "resolved_at": "2026-04-16T08:30:51.999Z",
+  "resolution": "Pipeline error: Tests failed: Blocked test command (unsafe): # This change introduces library files, not a directly executable script.; Blocked test command (unsafe): # To test, a new test script would be needed, for example:; Blocked test command (unsafe): # node tests/test_journal_deduplication.js"
 }
