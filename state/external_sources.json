@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-16T00:29:38.798Z",
+  "generated_at": "2026-04-16T01:29:40.852Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-16T00:00:16.445Z",
+  "profiled_at": "2026-04-16T01:30:10.801Z",
   "sources": [
     {
       "domain": "cbp.gov",
@@ -621,9 +621,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-15T21:21:49.000Z",
+      "last_seen_at": "2026-04-16T01:13:16.000Z",
       "discovery": {
-        "distinct_urls": 644,
+        "distinct_urls": 647,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -633,9 +633,9 @@
         ],
         "origin_counts": {
           "feed_buffer": 417,
-          "feed_buffer_reply": 256
+          "feed_buffer_reply": 259
         },
-        "distinct_referring_accounts": 315,
+        "distinct_referring_accounts": 318,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -673,7 +673,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:644",
+            "distinct_urls:647",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -681,7 +681,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:315",
+            "referring_accounts:318",
             "origin_types:2"
           ]
         },
@@ -711,10 +711,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:644",
+            "distinct_urls:647",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:315",
+            "referring_accounts:318",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -757,9 +757,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-15T20:03:36.000Z",
+      "last_seen_at": "2026-04-16T01:21:47.000Z",
       "discovery": {
-        "distinct_urls": 84,
+        "distinct_urls": 85,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -768,10 +768,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 81,
+          "feed_buffer_reply": 82,
           "feed_buffer": 3
         },
-        "distinct_referring_accounts": 69,
+        "distinct_referring_accounts": 70,
         "sample_referring_accounts": [
           "100ohiostate",
           "afk500595388855",
@@ -809,7 +809,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:84",
+            "distinct_urls:85",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -817,7 +817,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:69",
+            "referring_accounts:70",
             "origin_types:2"
           ]
         },
@@ -847,10 +847,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:84",
+            "distinct_urls:85",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:69",
+            "referring_accounts:70",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1298,7 +1298,7 @@
       "entity": "Cbsnews",
       "kind": "unknown",
       "first_seen_at": "2026-03-27T23:18:50.928Z",
-      "last_seen_at": "2026-04-15T23:31:48.268Z",
+      "last_seen_at": "2026-04-16T01:01:17.910Z",
       "discovery": {
         "distinct_urls": 5,
         "example_urls": [
@@ -7616,7 +7616,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-13T00:49:19.636Z",
+        "fetched_at": "2026-04-16T01:00:10.850Z",
         "homepage_url": "https://arkayzeroproof.com/",
         "example_url": "https://arkayzeroproof.com/invest-in-arkay/?twclid=2an9mhmxuedo5myzer72kvy89c",
         "homepage_status": 200,
@@ -18997,6 +18997,128 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "deepgram.com",
+      "entity": "Deepgram",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-16T01:28:58.709Z",
+      "last_seen_at": "2026-04-16T01:28:58.709Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://deepgram.com/state-of-voice-ai-report?utm_source=twitter&utm_medium=paidsocial&utm_campaign=Twitter_ACQ_Q42025_Evergreen_Prospecting&utm_content=state-of-voice&twclid=22an8eeru83cxpws6fqbuga3v2"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "deepgramai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.24000000000000002,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-16T01:30:10.801Z",
+        "homepage_url": "https://deepgram.com/",
+        "example_url": "https://deepgram.com/state-of-voice-ai-report?utm_source=twitter&utm_medium=paidsocial&utm_campaign=Twitter_ACQ_Q42025_Evergreen_Prospecting&utm_content=state-of-voice&twclid=22an8eeru83cxpws6fqbuga3v2",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://deepgram.com/",
+        "example_final_url": "https://deepgram.com/state-of-voice-ai-report?utm_source=twitter&utm_medium=paidsocial&utm_campaign=Twitter_ACQ_Q42025_Evergreen_Prospecting&utm_content=state-of-voice&twclid=22an8eeru83cxpws6fqbuga3v2",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
