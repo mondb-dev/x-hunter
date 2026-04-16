@@ -1,4 +1,4 @@
-import { gcsFileExists, gcsReadFile } from "./gcs";
+import { cachedReadFileSync } from "./fileCache";
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -93,9 +93,7 @@ export interface IntelligenceExport {
 
 export async function readIntelligence(): Promise<IntelligenceExport | null> {
   try {
-    const exists = await gcsFileExists("state/intelligence_export.json");
-    if (!exists) return null;
-    const raw = await gcsReadFile("state/intelligence_export.json");
+    const raw = cachedReadFileSync("state/intelligence_export.json");
     return JSON.parse(raw) as IntelligenceExport;
   } catch {
     return null;

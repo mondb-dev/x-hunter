@@ -1,5 +1,5 @@
 import path from "path";
-import { gcsListFiles, gcsReadFile, gcsFileExists } from "./gcs";
+import { cachedReadFileSync, cachedReaddirSync } from "./fileCache";
 
 export interface JournalEntry {
   date: string;
@@ -23,7 +23,7 @@ function proxyUrl(gateway: string): string {
 async function loadArweaveIndex(): Promise<Map<string, string>> {
   const index = new Map<string, string>();
   try {
-    const raw = await gcsReadFile("state/arweave_log.json");
+    const raw = cachedReadFileSync("state/arweave_log.json");
     const log = JSON.parse(raw) as { uploads: Array<{ file: string; gateway: string; type: string }> };
     for (const entry of log.uploads ?? []) {
       if (entry.type === "journal" && entry.file && entry.gateway) {
@@ -62,19 +62,16 @@ function computeDay(date: string): number {
 
 export async function getAllJournalDays(): Promise<JournalDay[]> {
   try {
-    const [files, arweave] = await Promise.all([
-      gcsListFiles("journals", /^\d{4}-\d{2}-\d{2}_\d{2}\.html$/),
-      loadArweaveIndex(),
-    ]);
+    const files = cachedReaddirSync("journals").filter(f => /^\d{4}-\d{2}-\d{2}_\d{2}\.html$/.test(f)).sort();
+    const arweave = await loadArweaveIndex();
 
     const byDate = new Map<string, JournalEntry[]>();
 
-    await Promise.all(
-      files.map(async (filename) => {
+    for (const filename of files) {
         const parsed = parseSlug(filename);
-        if (!parsed) return;
+        if (!parsed) continue;
 
-        const raw = await gcsReadFile(`journals/${filename}`);
+        const raw = cachedReadFileSync(`journals/${filename}`);
         const { body, title } = extractBody(raw);
 
         const entry: JournalEntry = {
@@ -89,8 +86,7 @@ export async function getAllJournalDays(): Promise<JournalDay[]> {
 
         if (!byDate.has(parsed.date)) byDate.set(parsed.date, []);
         byDate.get(parsed.date)!.push(entry);
-      }),
-    );
+      }
 
     return Array.from(byDate.entries())
       .sort(([a], [b]) => b.localeCompare(a))
@@ -106,13 +102,10 @@ export async function getAllJournalDays(): Promise<JournalDay[]> {
 
 export async function getJournalEntry(date: string, hour: number): Promise<JournalEntry | null> {
   const filename = `${date}_${String(hour).padStart(2, "0")}.html`;
-  const exists = await gcsFileExists(`journals/${filename}`);
-  if (!exists) return null;
+  let raw: string;
+  try { raw = cachedReadFileSync(`journals/${filename}`); } catch { return null; }
 
-  const [raw, arweave] = await Promise.all([
-    gcsReadFile(`journals/${filename}`),
-    loadArweaveIndex(),
-  ]);
+  const arweave = await loadArweaveIndex();
 
   const { body, title } = extractBody(raw);
 

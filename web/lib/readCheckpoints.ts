@@ -2,7 +2,7 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkHtml from "remark-html";
-import { gcsListFiles, gcsReadFile, gcsFileExists } from "./gcs";
+import { cachedReadFileSync, cachedReaddirSync } from "./fileCache";
 
 export interface Checkpoint {
   n: number;
@@ -13,7 +13,7 @@ export interface Checkpoint {
 }
 
 export async function getAllCheckpoints(): Promise<Checkpoint[]> {
-  const files = await gcsListFiles("checkpoints", /^checkpoint_\d+\.md$/);
+  const files = cachedReaddirSync("checkpoints").filter(f => /^checkpoint_\d+\.md$/.test(f));
 
   return Promise.all(
     files
@@ -22,9 +22,9 @@ export async function getAllCheckpoints(): Promise<Checkpoint[]> {
         const nB = parseInt(b.match(/\d+/)![0]);
         return nA - nB;
       })
-      .map(async (filename) => {
+      .map((filename) => {
         const n = parseInt(filename.match(/\d+/)![0]);
-        const raw = await gcsReadFile(`checkpoints/${filename}`);
+        const raw = cachedReadFileSync(`checkpoints/${filename}`);
         const { data, content } = matter(raw);
         return {
           n,
@@ -47,10 +47,8 @@ export async function getCheckpointByN(n: number): Promise<Checkpoint | null> {
 
 export async function getLatestCheckpoint(): Promise<Checkpoint | null> {
   try {
-    const exists = await gcsFileExists("checkpoints/latest.md");
-    if (!exists) return null;
-
-    const raw = await gcsReadFile("checkpoints/latest.md");
+    let raw: string;
+    try { raw = cachedReadFileSync("checkpoints/latest.md"); } catch { return null; }
     if (!raw.trim()) return null;
     const { data, content } = matter(raw);
 

@@ -1,8 +1,11 @@
+import fs from "fs";
+import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkHtml from "remark-html";
-import { gcsListFiles, gcsReadFile, gcsFileExists } from "./gcs";
+import { cachedReadFileSync, cachedReaddirSync } from "./fileCache";
+import { DATA_ROOT } from "./dataRoot";
 
 export interface Article {
   slug: string;
@@ -39,7 +42,7 @@ function proxyUrl(gateway: string): string {
 async function buildArweaveIndex(): Promise<Map<string, string>> {
   const index = new Map<string, string>();
   try {
-    const raw = await gcsReadFile("state/arweave_log.json");
+    const raw = cachedReadFileSync("state/arweave_log.json");
     const log = JSON.parse(raw);
     for (const entry of (log.uploads ?? [])) {
       if (entry.type === "article" && entry.date && entry.gateway) {
@@ -50,56 +53,48 @@ async function buildArweaveIndex(): Promise<Map<string, string>> {
   return index;
 }
 
-async function getImageUrl(slug: string): Promise<string | undefined> {
-  const exists = await gcsFileExists(`articles/images/${slug}.png`);
-  return exists ? `/images/articles/${slug}.png` : undefined;
+function getImageUrl(slug: string): string | undefined {
+  return fs.existsSync(path.join(DATA_ROOT, `articles/images/${slug}.png`))
+    ? `/images/articles/${slug}.png` : undefined;
 }
 
 export async function getAllArticles(): Promise<Article[]> {
-  const [files, arweave] = await Promise.all([
-    gcsListFiles("articles", /^\d{4}-\d{2}-\d{2}[^/]*\.md$/),
-    buildArweaveIndex(),
-  ]);
+  const files = cachedReaddirSync("articles").filter(f => /^\d{4}-\d{2}-\d{2}[^/]*\.md$/.test(f));
+  const arweave = await buildArweaveIndex();
 
-  return Promise.all(
-    files
-      .sort()
-      .reverse()
-      .map(async (filename) => {
-        const slug = filename.replace(/\.md$/, "");
-        const raw = await gcsReadFile(`articles/${filename}`);
-        const { data, content } = matter(raw);
-        const date = coerceDate(data.date, slug);
-        const imageUrl = await getImageUrl(slug);
-        return {
-          slug,
-          date,
-          title: (data.title ?? slug) as string,
-          axis: (data.axis ?? "") as string,
-          excerpt: extractExcerpt(content),
-          content,
-          contentHtml: "",
-          imageUrl,
-          arweaveUrl: arweave.get(date),
-          moltbookUrl: (data.moltbook ?? undefined) as string | undefined,
-        };
-      }),
-  );
+  return files
+    .sort()
+    .reverse()
+    .map((filename) => {
+      const slug = filename.replace(/\.md$/, "");
+      const raw = cachedReadFileSync(`articles/${filename}`);
+      const { data, content } = matter(raw);
+      const date = coerceDate(data.date, slug);
+      const imageUrl = getImageUrl(slug);
+      return {
+        slug,
+        date,
+        title: (data.title ?? slug) as string,
+        axis: (data.axis ?? "") as string,
+        excerpt: extractExcerpt(content),
+        content,
+        contentHtml: "",
+        imageUrl,
+        arweaveUrl: arweave.get(date),
+        moltbookUrl: (data.moltbook ?? undefined) as string | undefined,
+      };
+    });
 }
 
 export async function getArticleBySlug(slug: string): Promise<Article | null> {
-  const exists = await gcsFileExists(`articles/${slug}.md`);
-  if (!exists) return null;
-
-  const [raw, arweave] = await Promise.all([
-    gcsReadFile(`articles/${slug}.md`),
-    buildArweaveIndex(),
-  ]);
+  let raw: string;
+  try { raw = cachedReadFileSync(`articles/${slug}.md`); } catch { return null; }
+  const arweave = await buildArweaveIndex();
 
   const { data, content } = matter(raw);
   const processed = await remark().use(remarkGfm).use(remarkHtml, { sanitize: false }).process(content);
   const date = coerceDate(data.date, slug);
-  const imageUrl = await getImageUrl(slug);
+  const imageUrl = getImageUrl(slug);
 
   return {
     slug,

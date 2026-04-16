@@ -1,4 +1,4 @@
-import { gcsFileExists, gcsReadFile } from "./gcs";
+import { cachedReadFileSync } from "./fileCache";
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -58,9 +58,7 @@ export interface VerificationExport {
 
 export async function readVerification(): Promise<VerificationExport | null> {
   try {
-    const exists = await gcsFileExists("state/verification_export.json");
-    if (!exists) return null;
-    const raw = await gcsReadFile("state/verification_export.json");
+    const raw = cachedReadFileSync("state/verification_export.json");
     return JSON.parse(raw) as VerificationExport;
   } catch {
     return null;
