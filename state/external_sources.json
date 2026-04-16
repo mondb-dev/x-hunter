@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-16T02:59:50.454Z",
+  "generated_at": "2026-04-16T03:29:42.816Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-16T03:00:21.379Z",
+  "profiled_at": "2026-04-16T03:30:12.964Z",
   "sources": [
     {
       "domain": "cbp.gov",
@@ -759,7 +759,7 @@
       "first_seen_at": "2026-04-03T01:20:27.000Z",
       "last_seen_at": "2026-04-16T01:21:47.000Z",
       "discovery": {
-        "distinct_urls": 85,
+        "distinct_urls": 87,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -768,10 +768,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 82,
+          "feed_buffer_reply": 84,
           "feed_buffer": 3
         },
-        "distinct_referring_accounts": 70,
+        "distinct_referring_accounts": 72,
         "sample_referring_accounts": [
           "100ohiostate",
           "afk500595388855",
@@ -809,7 +809,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:85",
+            "distinct_urls:87",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -817,7 +817,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:70",
+            "referring_accounts:72",
             "origin_types:2"
           ]
         },
@@ -847,10 +847,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:85",
+            "distinct_urls:87",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:70",
+            "referring_accounts:72",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -895,7 +895,7 @@
       "first_seen_at": "2026-04-04T23:34:51.000Z",
       "last_seen_at": "2026-04-15T15:54:53.000Z",
       "discovery": {
-        "distinct_urls": 16,
+        "distinct_urls": 17,
         "example_urls": [
           "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
           "https://store.steampowered.com/app/3321460?utm_campaign=launching&utm_source=X&utm_term=20260319_traffic&utm_medium=us&utm_content=Trailer_view&twclid=22351un15xjmtu22gjwnjp292d",
@@ -904,15 +904,16 @@
           "https://store.steampowered.com/app/2479810/Gray_Zone_Warfare/?utm_source=X&utm_medium=paid&utm_campaign=US_Phase_2_Traffic&utm_content=GAMEPLAY_LOOP_15sec_FINAL_1x1_CTA3_33_OFF&twclid=2c4pby13s9ks6s1nyr9c6bq6se"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 15,
+          "feed_buffer_reply": 16,
           "feed_buffer": 1
         },
-        "distinct_referring_accounts": 9,
+        "distinct_referring_accounts": 10,
         "sample_referring_accounts": [
           "alexmog_fr",
           "arckonarts",
           "blindspot_games",
           "crimsondesert_",
+          "dobro_goranku",
           "fp32ai",
           "grayzonewarfare",
           "lazyotterco",
@@ -944,7 +945,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:16",
+            "distinct_urls:17",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -952,7 +953,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:9",
+            "referring_accounts:10",
             "origin_types:2"
           ]
         },
@@ -982,10 +983,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:16",
+            "distinct_urls:17",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:9",
+            "referring_accounts:10",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1298,7 +1299,7 @@
       "entity": "Cbsnews",
       "kind": "unknown",
       "first_seen_at": "2026-03-27T23:18:50.928Z",
-      "last_seen_at": "2026-04-16T02:32:29.917Z",
+      "last_seen_at": "2026-04-16T03:01:48.638Z",
       "discovery": {
         "distinct_urls": 5,
         "example_urls": [
@@ -19189,20 +19190,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.1,
           "confidence": 0.55,
@@ -19215,6 +19202,20 @@
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -19311,20 +19312,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.22,
           "confidence": 0.55,
@@ -19337,6 +19324,20 @@
             "corrections:false",
             "outbound_links:16",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -19368,6 +19369,128 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 16,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "monadicdna.com",
+      "entity": "Monadicdna",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-13T01:10:27.000Z",
+      "last_seen_at": "2026-04-13T01:10:27.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://explorer.monadicdna.com/?twclid=23v8cbj938nxfoq8gmro6dqa1l"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "monadicdna"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.38,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:6",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-16T03:30:12.964Z",
+        "homepage_url": "https://monadicdna.com/",
+        "example_url": "https://explorer.monadicdna.com/?twclid=23v8cbj938nxfoq8gmro6dqa1l",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://monadicdna.com/",
+        "example_final_url": "https://explorer.monadicdna.com/?twclid=23v8cbj938nxfoq8gmro6dqa1l",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 6,
           "opinion_marker": false
         }
       }
