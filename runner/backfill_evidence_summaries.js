@@ -30,7 +30,7 @@ const path = require("path");
 const ROOT  = path.resolve(__dirname, "..");
 const ONTO  = path.join(ROOT, "state", "ontology.json");
 
-const { callVertex } = require("./vertex.js");
+const { callBuilder } = require("./builder_vertex.js");
 
 const BATCH_SIZE    = 50;   // save ontology.json every N entries
 const DELAY_MS      = 430;  // ~140 req/min — stays within Gemini Flash quota
@@ -55,7 +55,7 @@ Write a 1-2 sentence factual summary of what this source observed and why it ${e
 
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
     try {
-      const text = await callVertex(prompt, 120);
+      const text = await callBuilder(prompt, 120);
       const summary = text.trim().replace(/^["']|["']$/g, "").slice(0, 200);
       if (summary.length > 10) return summary;
       throw new Error("summary too short");
