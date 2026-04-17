@@ -117,6 +117,7 @@ async function run() {
     cited_domain:        null,
     web_search_result:   searchData?.web_search_result || null,
     evidence_urls:       searchData?.evidence_urls || [],
+    evidence_domains:    searchData?.evidence_domains || [],
     category:            opts.category || null,
     related_axis_id:     opts.axis || null,
   };

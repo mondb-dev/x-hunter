@@ -83,11 +83,14 @@ async function webSearchVerify(claimText) {
       const parts = data?.candidates?.[0]?.content?.parts || [];
       const text = parts.filter(p => p.text && !p.thought).map(p => p.text).join('');
 
-      // Extract grounding metadata — real URLs from chunks, or search queries as fallback
+      // Extract grounding metadata — keep redirect URIs (they resolve to real pages)
+      // and extract domain/title for source attribution
       const grounding = data?.candidates?.[0]?.groundingMetadata;
-      const groundingUrls = (grounding?.groundingChunks || [])
-        .filter(c => c.web?.uri && !String(c.web.uri).includes('vertexaisearch.cloud.google.com'))
-        .map(c => c.web.uri);
+      const groundingChunks = (grounding?.groundingChunks || []).filter(c => c.web?.uri);
+      const groundingUrls = groundingChunks.map(c => c.web.uri);
+      const groundingDomains = groundingChunks
+        .map(c => c.web.domain || c.web.title || null)
+        .filter(Boolean);
       const searchQueries = grounding?.webSearchQueries || [];
 
       // Parse structured response
@@ -109,6 +112,7 @@ async function webSearchVerify(claimText) {
           web_search_result: verdict ? (verdictMap[verdict] || 'inconclusive') : 'inconclusive',
           summary: rx('summary') || text.replace(/```json\s*/gi, '').replace(/```/g, '').trim().slice(0, 500),
           evidence_urls: groundingUrls,
+          evidence_domains: groundingDomains,
           original_source: rx('original_source'),
           claim_date: rx('claim_date'),
           supporting_sources: rx('supporting_sources') ? [{ name: rx('supporting_sources'), stance: '' }] : [],
@@ -126,6 +130,7 @@ async function webSearchVerify(claimText) {
         web_search_result:  verdictMap[parsed.verdict] || 'inconclusive',
         summary:            parsed.summary || '',
         evidence_urls:      groundingUrls.slice(0, 5),
+        evidence_domains:   groundingDomains.slice(0, 5),
         original_source:    parsed.original_source || null,
         claim_date:         parsed.claim_date || null,
         supporting_sources: parsed.supporting_sources ? [{ name: parsed.supporting_sources, stance: '' }] : [],

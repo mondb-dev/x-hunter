@@ -38,6 +38,8 @@ const HIGH_TIER_DOMAINS = new Set([
   'reuters.com', 'apnews.com', 'bbc.com', 'bbc.co.uk', 'nytimes.com',
   'wsj.com', 'theguardian.com', 'aljazeera.com', 'ft.com', 'washingtonpost.com',
   'economist.com', 'haaretz.com', 'timesofisrael.com', 'axios.com', 'politico.com',
+  'cnn.com', 'cbsnews.com', 'nbcnews.com', 'abcnews.go.com', 'wikipedia.org',
+  'middleeastmonitor.com', 'france24.com', 'dw.com',
 ]);
 
 // ── Component scorers ───────────────────────────────────────────────────────
@@ -141,18 +143,25 @@ function applyWebSearchBoost(breakdown, claim) {
   if (breakdown.web_search < 0.8) return;  // only confirmed/partial
 
   const evidenceUrls = claim.evidence_urls || claim._evidence_urls || [];
-  if (evidenceUrls.length === 0) return;  // no grounded evidence
+  const evidenceDomains = claim.evidence_domains || [];
+  if (evidenceUrls.length === 0 && evidenceDomains.length === 0) return;  // no grounded evidence
 
   const tier = claim.source_tier;
   if (tier && tier >= 4) return;  // low-credibility source, don't boost
 
-  // Count how many evidence URLs are from high-tier domains
+  // Count how many evidence sources are from high-tier domains
   let highTierCount = 0;
+  // Check actual URLs
   for (const url of evidenceUrls) {
     try {
       const domain = new URL(url).hostname.replace(/^www\./, '');
       if (HIGH_TIER_DOMAINS.has(domain)) highTierCount++;
     } catch {}
+  }
+  // Check domain names from grounding metadata (covers redirect URLs)
+  for (const d of evidenceDomains) {
+    const clean = d.replace(/^www\./, '').toLowerCase();
+    if (HIGH_TIER_DOMAINS.has(clean)) highTierCount++;
   }
 
   // Strong boost: confirmed + multiple high-tier sources
