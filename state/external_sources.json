@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-17T20:50:40.839Z",
+  "generated_at": "2026-04-17T21:40:32.508Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-17T20:51:11.808Z",
+  "profiled_at": "2026-04-17T21:41:04.911Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -743,9 +743,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-17T19:28:14.000Z",
+      "last_seen_at": "2026-04-17T20:07:24.000Z",
       "discovery": {
-        "distinct_urls": 733,
+        "distinct_urls": 735,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -754,10 +754,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 463,
-          "feed_buffer_reply": 311
+          "feed_buffer": 464,
+          "feed_buffer_reply": 312
         },
-        "distinct_referring_accounts": 370,
+        "distinct_referring_accounts": 372,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -795,7 +795,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:733",
+            "distinct_urls:735",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -803,7 +803,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:370",
+            "referring_accounts:372",
             "origin_types:2"
           ]
         },
@@ -833,10 +833,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:733",
+            "distinct_urls:735",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:370",
+            "referring_accounts:372",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1275,9 +1275,9 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-17T20:05:44.082Z",
+      "last_seen_at": "2026-04-17T20:50:00Z",
       "discovery": {
-        "distinct_urls": 118,
+        "distinct_urls": 119,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
@@ -1286,7 +1286,7 @@
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxs1cM8PTd_QtRaKpYmDBqTaoVyKJalJfIuu-PaW2zHSU-BfWPq7hhOb9M8JgfyL1usSQ2-naI-6KBvJwgBMdVAh7IQ_yAgTaqqSsLNjBtonmwJ6ztGpNPEWFY0XBLj3YCtCkXYl9FqA=="
         ],
         "origin_counts": {
-          "ontology_evidence": 110,
+          "ontology_evidence": 111,
           "claim_tracker": 13,
           "journals": 47
         },
@@ -1336,7 +1336,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:118",
+            "distinct_urls:119",
             "distinct_axes:17",
             "origin_types:3"
           ]
@@ -1377,7 +1377,7 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:118",
+            "distinct_urls:119",
             "distinct_axes:17",
             "origin_types:3",
             "referring_accounts:0",
@@ -1803,7 +1803,7 @@
       "entity": "Geopoliticalfutures",
       "kind": "unknown",
       "first_seen_at": "2026-04-17T20:25:00Z",
-      "last_seen_at": "2026-04-17T20:28:45.186Z",
+      "last_seen_at": "2026-04-17T20:52:56.126Z",
       "discovery": {
         "distinct_urls": 1,
         "example_urls": [
@@ -1865,6 +1865,20 @@
             "contested:1"
           ]
         },
+        "profile": {
+          "score": 0.36,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:false",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:6",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.44070833333333337,
           "confidence": 0.36455,
@@ -1880,20 +1894,6 @@
             "supported:0",
             "refuted:0",
             "contested:1"
-          ]
-        },
-        "profile": {
-          "score": 0.36,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:false",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:6",
-            "opinion_marker:false"
           ]
         }
       },
@@ -3947,6 +3947,132 @@
       }
     },
     {
+      "domain": "cosmos.so",
+      "entity": "Cosmos So",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-14T03:21:06.000Z",
+      "last_seen_at": "2026-04-17T20:27:30.000Z",
+      "discovery": {
+        "distinct_urls": 6,
+        "example_urls": [
+          "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc",
+          "https://cosmos.so/?twclid=2byirh1tzwmrzd352osdsykqjo",
+          "https://cosmos.so/?twclid=25fb5zkvgutjc80m43laabv8z6",
+          "https://cosmos.so/?twclid=2a6c7wlb03u0zwpihimrba6jbs",
+          "https://cosmos.so/?twclid=2em0lh4q5h9lpy091tfwsjvvu1"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 6
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "thecosmos"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.235,
+          "basis": [
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.039999999999999994,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:4",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.379140625,
+          "confidence": 0.22447499999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-15T02:04:34.633Z",
+        "homepage_url": "https://cosmos.so/",
+        "example_url": "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.cosmos.so/",
+        "example_final_url": "https://www.cosmos.so/",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "understandingwar.org",
       "entity": "Understandingwar",
       "kind": "unknown",
@@ -4907,7 +5033,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T21:29:32.425Z",
+        "fetched_at": "2026-04-17T21:41:03.022Z",
         "homepage_url": "https://interactivebrokers.com/",
         "example_url": "https://www.interactivebrokers.com/mkt/?src=twitter1516e&url=%2Fen%2Ftrading%2Fmargin.php&twclid=26s33m7076ex8oai4uldw5cov5",
         "homepage_status": 200,
@@ -5440,26 +5566,26 @@
       }
     },
     {
-      "domain": "cosmos.so",
-      "entity": "Cosmos So",
+      "domain": "zite.com",
+      "entity": "Zite",
       "kind": "unknown",
-      "first_seen_at": "2026-04-14T03:21:06.000Z",
-      "last_seen_at": "2026-04-16T20:56:50.000Z",
+      "first_seen_at": "2026-04-14T05:33:25.000Z",
+      "last_seen_at": "2026-04-17T18:55:36.000Z",
       "discovery": {
         "distinct_urls": 5,
         "example_urls": [
-          "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc",
-          "https://cosmos.so/?twclid=2byirh1tzwmrzd352osdsykqjo",
-          "https://cosmos.so/?twclid=25fb5zkvgutjc80m43laabv8z6",
-          "https://cosmos.so/?twclid=2a6c7wlb03u0zwpihimrba6jbs",
-          "https://cosmos.so/?twclid=2em0lh4q5h9lpy091tfwsjvvu1"
+          "https://try.zite.com/ad-integrations-1?twclid=22vk5745ty6qkvlrboi0g1qhow",
+          "https://try.zite.com/ad-integrations-1?twclid=25j4xstsdl7o9k74nxojviklu",
+          "https://try.zite.com/ad-integrations-1?twclid=2dbn2us1oqun57fqavzbhnf4ot",
+          "https://try.zite.com/ad-spreadsheets-1?twclid=2f4ga2nsu6jp7tfq9gkqcfsehs",
+          "https://try.zite.com/ad-spreadsheets-1?twclid=29qn63n37twja7xfg7mzsdjagt"
         ],
         "origin_counts": {
           "feed_buffer_reply": 5
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
-          "thecosmos"
+          "zite"
         ],
         "distinct_axes": []
       },
@@ -5505,16 +5631,16 @@
           ]
         },
         "profile": {
-          "score": 0.039999999999999994,
+          "score": 0.12,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:4",
+            "outbound_links:2",
             "opinion_marker:false"
           ]
         },
@@ -5534,23 +5660,149 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T02:04:34.633Z",
-        "homepage_url": "https://cosmos.so/",
-        "example_url": "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc",
+        "fetched_at": "2026-04-15T01:14:34.399Z",
+        "homepage_url": "https://zite.com/",
+        "example_url": "https://try.zite.com/ad-integrations-1?twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://www.cosmos.so/",
-        "example_final_url": "https://www.cosmos.so/",
+        "homepage_final_url": "https://www.zite.com/",
+        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=SCsBylhB8Hh93h2E&twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 4,
+          "outbound_links_count": 2,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "byteplus.com",
+      "entity": "Byteplus",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-15T13:30:37.000Z",
+      "last_seen_at": "2026-04-17T16:39:08.000Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
+          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=2dnuttry4m02uyeswjtnkyw6cq",
+          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=29q4voamvbgxgyt2c5thxlhg3x",
+          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=29ug61xxzesjlbg5gzuvre58jz",
+          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_video_codingplan&utm_content=tecdo&twclid=25cpjoe66peh1858zv8hf438l2"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 5
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "byteplusglobal"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.20583333333333334,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.12,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.37276041666666665,
+          "confidence": 0.19585000000000002,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-16T04:00:14.132Z",
+        "homepage_url": "https://byteplus.com/",
+        "example_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.byteplus.com/en",
+        "example_final_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
           "opinion_marker": false
         },
         "example": {
@@ -5560,7 +5812,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 4,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -7050,256 +7302,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 3,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "zite.com",
-      "entity": "Zite",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-14T05:33:25.000Z",
-      "last_seen_at": "2026-04-15T00:32:13.000Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://try.zite.com/ad-integrations-1?twclid=22vk5745ty6qkvlrboi0g1qhow",
-          "https://try.zite.com/ad-integrations-1?twclid=25j4xstsdl7o9k74nxojviklu",
-          "https://try.zite.com/ad-integrations-1?twclid=2dbn2us1oqun57fqavzbhnf4ot",
-          "https://try.zite.com/ad-spreadsheets-1?twclid=2f4ga2nsu6jp7tfq9gkqcfsehs"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 4
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "zite"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.17666666666666664,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.12,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:2",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3663802083333333,
-          "confidence": 0.16722499999999998,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-15T01:14:34.399Z",
-        "homepage_url": "https://zite.com/",
-        "example_url": "https://try.zite.com/ad-integrations-1?twclid=22vk5745ty6qkvlrboi0g1qhow",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.zite.com/",
-        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=SCsBylhB8Hh93h2E&twclid=22vk5745ty6qkvlrboi0g1qhow",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 2,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 2,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "byteplus.com",
-      "entity": "Byteplus",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-15T13:30:37.000Z",
-      "last_seen_at": "2026-04-17T14:35:00.000Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
-          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=2dnuttry4m02uyeswjtnkyw6cq",
-          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=29q4voamvbgxgyt2c5thxlhg3x",
-          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=29ug61xxzesjlbg5gzuvre58jz"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 4
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "byteplusglobal"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.17666666666666664,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.12,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3663802083333333,
-          "confidence": 0.16722499999999998,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-16T04:00:14.132Z",
-        "homepage_url": "https://byteplus.com/",
-        "example_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.byteplus.com/en",
-        "example_final_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 5,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -13891,7 +13893,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T20:59:29.550Z",
+        "fetched_at": "2026-04-17T21:16:02.177Z",
         "homepage_url": "https://soaratlas.com/",
         "example_url": "https://soaratlas.com/?twclid=2eza3sd4va29a55s5jzj2vre23",
         "homepage_status": 403,
@@ -16575,7 +16577,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T20:59:39.871Z",
+        "fetched_at": "2026-04-17T21:16:12.562Z",
         "homepage_url": "https://spr.ly/",
         "example_url": "http://spr.ly/6017B6mDnt?twclid=2ajcph2gf0va7okmqyb2o5fv6v",
         "homepage_status": 200,
@@ -16697,7 +16699,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T21:29:31.730Z",
+        "fetched_at": "2026-04-17T21:41:04.911Z",
         "homepage_url": "https://mfaaction.com/",
         "example_url": "https://mfaaction.com/open-letter-to-congress/?twclid=2bzcexp35ec32pbxv40nq5e3in",
         "homepage_status": 200,

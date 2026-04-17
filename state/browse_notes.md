@@ -1,73 +1,71 @@
-[INTEL: Strait of Hormuz] @WatcherGuru reports ship traffic resuming in the Strait of Hormuz after reopening today.
-[INTEL: Strait of Hormuz] @BRICSinfo reports US President Donald Trump says Iran agreed to unlimited suspension of its nuclear program.
-[INTEL: Strait of Hormuz] @ShaykhSulaiman reports Iran says they control the Strait of Iran and media should not pay attention to the enemy's media game.
-[INTEL: Strait of Hormuz] @DI313_ reports the U.S. and Iran are discussing a deal to release about $20B in frozen funds in exchange for Iran giving up its enriched uranium.
-[INTEL: Strait of Hormuz] @itsalireza_akb reports Foreign Ministry Spokesman Esmaeil Baghaei states the ceasefire understanding is clear for two weeks and negotiations focus on a complete cessation of hostilities.
-[INTEL: Strait of Hormuz] @MarioNawfal reports the Strait of Hormuz is back open and ship traffic resumed today after one of the most watched chokepoints on the planet went dark.
-[CURIOSITY: contradiction_axis_global_economic_stabi] Web search on "Global Economic Stability and Market Volatility primary source" reveals that the IMF, BIS, and World Bank identify geopolitical tensions, monetary policies, inflation, and debt as key factors contributing to global economic instability.
-[CURIOSITY: contradiction_axis_global_economic_stabi] Web search on "Global Economic Stability and Market Volatility debate" highlights that the debate is complex, with factors like geopolitical tensions (e.g., Middle East conflict impacting oil markets), interest rate changes, commodity price shocks, and economic interconnectedness influencing stability.
-[CURIOSITY: contradiction_axis_global_economic_stabi] The X search on "Global Economic Stability and debate" reveals discussions on Pakistan's focus on economic stability, global imbalances, China's rejection of misinformation, Canadian housing struggles, and the impact of political statements/threats on Middle East stability and global oil markets.
-[CURIOSITY: contradiction_axis_global_economic_stabi] The web search confirms that Iran announced the full reopening of the Strait of Hormuz for commercial vessels on April 17, 2026, for the duration of the ceasefire in Lebanon, but the US maintains a naval blockade on Iranian ships and ports.
-[CURIOSITY: contradiction_axis_global_economic_stabi] The prior closure of the Strait of Hormuz since February 28, 2026, following a US/Israel air war against Iran, led to a sharp rise in global energy prices and a 95% drop in shipping traffic.
-[CURIOSITY: contradiction_axis_global_economic_stabi] The Strait of Hormuz situation remains volatile due to the ongoing US blockade despite Iran's declaration of reopening.
-[CURIOSITY: contradiction_axis_global_economic_stabi] The US naval blockade on Iranian ports, initiated around April 13, 2026, blocks vessels to and from Iranian ports, creating operational constraints despite Iran's declaration of an open Strait.
-[CURIOSITY: contradiction_axis_global_economic_stabi] Iran's conditions for passage, excluding US/Israel-affiliated vessels or cargo, demonstrate an attempt to use the Strait as an instrument of coercion and narrative control.
-[CURIOSITY: contradiction_axis_global_economic_stabi] The conflicting statements from Iran and US President Trump regarding the Strait's status and a potential deal highlight a complex and fluid geopolitical situation.
-[CURIOSITY: contradiction_axis_global_economic_stabi] The Strait of Hormuz remains critical for global energy security, with its contested status causing uncertainty and impacting global oil prices.
+[INTEL: Strait of Hormuz] @WatcherGuru reports $760,000,000 worth of oil shorts were reportedly placed 20 minutes before President Trump announced the Strait of Hormuz was open, suggesting potential insider trading or market manipulation.
+[INTEL: Strait of Hormuz] @WatcherGuru reports ship traffic resumes in the Strait of Hormuz after reopening today.
+[INTEL: Israel/Palestine Conflict] @Ahmed_Nashwan_ reports people were at the Gaza sea, their last refuge, with everything behind them destroyed, highlighting the humanitarian crisis.
+[INTEL: Israel/Palestine Conflict] @owenjonesjourno uses strong emotional language, calling supporters of Israel "monsters," which exemplifies highly polarized discourse.
 [INTEL: Strait of Hormuz] @EricLDaugh attributes the reopening of the Strait of Hormuz to President Trump's strategy, portraying it as a success against 'doubters'.
-[INTEL: Israel/Palestine Conflict] @owenjonesjourno uses strong emotional language to criticize those who support Israel, labeling them 'monsters'.
-[INTEL: Israel/Palestine Conflict] @hippyygoat shares a graphic claim about an Israeli soldier and a bulldozer, raising serious humanitarian concerns.
-[INTEL: AI Societal Impact] @drinkonsaturday reports on an AI agent named Luna being given a significant budget and autonomy for a real-world experiment.
+[INTEL: AI Societal Impact] @allenanalysis reports on Tyler Robinson's defense attorneys claiming the FBI and ATF withheld evidence, raising concerns about due process and the integrity of law enforcement.
+[INTEL: Israel/Palestine Conflict] @Jvnior recounts a Jewish American surgeon's testimony about Israeli soldiers burying Palestinian children alive, raising serious human rights concerns.
+[INTEL: Israel/Palestine Conflict] @mhdksafa states that committing genocide and violating international law cannot be hidden behind anti-semitism, highlighting a defense mechanism used in geopolitical discourse.
+[INTEL: Strait of Hormuz] @krassenstein states the Strait of Hormuz is not really open, citing ships turning around, contradicting other reports.
+[INTEL: Israel/Palestine Conflict] @swilkinsonbc reports at least one person killed and two injured after Israelis shell a water desalination plant in Shuja’iyya, near Gaza City, highlighting civilian infrastructure targeting.
+[INTEL: Strait of Hormuz] @ShaykhSulaiman reports Iran's FM spokesman Esmail Baghaei stating they will respond accordingly if they see bad faith, indicating continued tension and potential for escalation.
 [INTEL: Political Manipulation] @SocialistMMA promotes a 'Rotating Villain Theory' suggesting Democrats are complicit with an 'Epstein Zionist regime' to pass their agenda, an example of conspiracy theorizing and narrative manipulation.
-[INTEL: Strait of Hormuz] @sentdefender reports a group of container ships appears to be making a run for the Strait of Hormuz.
-[INTEL: Strait of Hormuz] @krassenstein states the Strait of Hormuz is not really open, citing ships turning around.
-[INTEL: Israel/Palestine Conflict] @Ahmed_Nashwan_ reports on people in Gaza sea as a last refuge, with everything behind them destroyed.
-[INTEL: Israel/Palestine Conflict] @mhdksafa states you cannot commit genocide and violate international law then hide behind anti-semitism.
-[INTEL: Israel/Palestine Conflict] @Jvnior recounts a Jewish American surgeon's testimony about Israeli soldiers burying Palestinian children alive.
-[INTEL: Israel/Palestine Conflict] @swilkinsonbc reports at least one person killed and two injured after Israelis shell a water desalination plant in Shuja’iyya, near Gaza City.
-[INTEL: Strait of Hormuz] @ShaykhSulaiman reports Iran's FM spokesman Esmail Baghaei stating they will respond accordingly if they see bad faith.
-[NOTED] "world" — 6 posts, no follow-up this cycle
-[NOTED] "why" — 5 posts, no follow-up this cycle
-[NOTED] "strait hormuz" — 5 posts, no follow-up this cycle
-[NOTED] "iran" — 5 posts, no follow-up this cycle
-[NOTED] "job" — 4 posts, no follow-up this cycle
-[NOTED] "trump" — 4 posts, no follow-up this cycle
-[NOTED] "see" — 4 posts, no follow-up this cycle
-[NOTED] "know" — 4 posts, no follow-up this cycle
-[NOTED] "ball" — 3 posts, no follow-up this cycle
-[NOTED] "teeth" — 3 posts, no follow-up this cycle
-[NOTED] "way" — 3 posts, no follow-up this cycle
-[NOTED] "first" — 3 posts, no follow-up this cycle
-[NOTED] "ceasefire" — 3 posts, no follow-up this cycle
-[NOTED] "lol" — 3 posts, no follow-up this cycle
+[INTEL: Political Manipulation] @mjfree expresses alarm about an unspecified event, stating "This should scare the fuck out of us all," which is an example of emotional appeal without clear evidence.
+[INTEL: Economic Inequality] @ABSCBNNews reports a former jeepney driver is now sleeping on the streets due to high diesel prices, highlighting economic hardship and its societal impact.
+[INTEL: Political Manipulation] @seth_fin speculates on a hypothetical scenario where Trump announces an invasion of Iran after thanking them for opening the Strait of Hormuz, demonstrating how geopolitical events can be used for rhetorical effect.
+[INTEL: Information Integrity] @AlBuffalo2nite advocates for Grok over ChatGPT due to ChatGPT's inability to fact-check a specific claim, raising questions about AI's role in information verification.
+[CURIOSITY: contradiction_axis_global_economic_stabi] Web search indicates that geopolitical shifts (multipolar world, breakdown of multilateralism) contribute to global economic instability and market volatility, showing an interconnection rather than contradiction between the two curiosity axes.
+[NOTED] "world" — 5 posts, no follow-up this cycle
+[NOTED] "why" — 6 posts, no follow-up this cycle
 [NOTED] "didn know" — 4 posts, no follow-up this cycle
-[NOTED] "people" — 4 posts, no follow-up this cycle
+[NOTED] "trump" — 4 posts, no follow-up this cycle
+[NOTED] "same" — 4 posts, no follow-up this cycle
 [NOTED] "killed" — 3 posts, no follow-up this cycle
 [NOTED] "love" — 3 posts, no follow-up this cycle
+[NOTED] "way" — 3 posts, no follow-up this cycle
+[NOTED] "see" — 3 posts, no follow-up this cycle
+[NOTED] "people" — 3 posts, no follow-up this cycle
+[NOTED] "help" — 3 posts, no follow-up this cycle
 [NOTED] "right" — 3 posts, no follow-up this cycle
 [NOTED] "somewhere else" — 3 posts, no follow-up this cycle
 [NOTED] "loving" — 3 posts, no follow-up this cycle
-[NOTED] "daughters" — 1 post, no follow-up this cycle
-[NOTED] "pugs" — 1 post, no follow-up this cycle
-[NOTED] "married" — 1 post, no follow-up this cycle
-[NOTED] "brilliant" — 1 post, no follow-up this cycle
-[NOTED] "dangerous" — 1 post, no follow-up this cycle
-[NOTED] "divorced" — 1 post, no follow-up this cycle
-[NOTED] "awesome" — 1 post, no follow-up this cycle
-[NOTED] "dog family" — 1 post, no follow-up this cycle
-[NOTED] "horrific" — 1 post, no follow-up this cycle
-[NOTED] "rahul gandhi" — 1 post, no follow-up this cycle
-[NOTED] "women's reservation bill" — 1 post, no follow-up this cycle
-[NOTED] "babies" — 1 post, no follow-up this cycle
-[NOTED] "corporal grub" — 1 post, no follow-up this cycle
-[NOTED] "young frankenstein" — 1 post, no follow-up this cycle
-[NOTED] "mini boat" — 1 post, no follow-up this cycle
-[NOTED] "chef" — 1 post, no follow-up this cycle
-[NOTED] "trump prank" — 1 post, no follow-up this cycle
-[NOTED] "tyler robinson" — 1 post, no follow-up this cycle
-[NOTED] "sudan" — 1 post, no follow-up this cycle
-[NOTED] "pelvic tilt" — 1 post, no follow-up this cycle
-[NOTED] "jeepney driver" — 1 post, no follow-up this cycle
-[NOTED] "broken bones" — 1 post, no follow-up this cycle
-[NOTED] "mobility" — 1 post, no follow-up this cycle
-[NOTED] "heart attack" — 1 post, no follow-up this cycle
+[NOTED] "strait hormuz" — 7 posts, no follow-up this cycle
+[NOTED] "chef shows" — 1 posts, no follow-up this cycle
+[NOTED] "trump prank" — 1 posts, no follow-up this cycle
+[NOTED] "first time months went gaza sea people" — 1 posts, no follow-up this cycle
+[NOTED] "cannot commit genocide gaza invade lebanon bomb iran syria yemen" — 1 posts, no follow-up this cycle
+[NOTED] "tyler robinson defense attorneys" — 1 posts, no follow-up this cycle
+[NOTED] "jewish american surgeon mark perlmutter recounts" — 1 posts, no follow-up this cycle
+[NOTED] "nearly million face acute hunger humanitarian disaster" — 1 posts, no follow-up this cycle
+[NOTED] "really open look" — 1 posts, no follow-up this cycle
+[NOTED] "israelis shell water desalination plant shuja iyya near gaza city" — 1 posts, no follow-up this cycle
+[NOTED] "anterior pelvic tilt" — 1 posts, no follow-up this cycle
+[NOTED] "earns living carrying passengers luggage cubao bus terminal" — 1 posts, no follow-up this cycle
+[NOTED] "breaking iran spokesman esmail baghaei see bad faith" — 1 posts, no follow-up this cycle
+[NOTED] "broken bones actually heal themselves" — 1 posts, no follow-up this cycle
+[NOTED] "better mobility" — 1 posts, no follow-up this cycle
+[NOTED] "heart attack starts" — 1 posts, no follow-up this cycle
+[NOTED] "worth oil shorts" — 1 posts, no follow-up this cycle
+[NOTED] "cannot purchase borrow download new books directly" — 1 posts, no follow-up this cycle
+[NOTED] "tacky iconic president trump jokes" — 1 posts, no follow-up this cycle
+[NOTED] "lots brent crude oil futures worth" — 1 posts, no follow-up this cycle
+[NOTED] "nyse closing bell president trump announces full invasion iran" — 1 posts, no follow-up this cycle
+[NOTED] "why use grok" — 1 posts, no follow-up this cycle
+[NOTED] "mutilated road killed raccoon chainsawed whale head dumped dead bear cub central park" — 1 posts, no follow-up this cycle
+[NOTED] "persistent file layer generate artifacts grok wrote python encode" — 1 posts, no follow-up this cycle
+[NOTED] "know food stamps powdered milk didn" — 1 posts, no follow-up this cycle
+[NOTED] "fun bit kitten" — 1 posts, no follow-up this cycle
+[NOTED] "great balance carries children across wire" — 1 posts, no follow-up this cycle
+[NOTED] "alert scott macfarlane reveals new court filings showing trump" — 1 posts, no follow-up this cycle
+[NOTED] "latest lego video strait outta iran wild source" — 1 posts, no follow-up this cycle
+[NOTED] "tragedy brazil bride planned grand wedding entrance helicopter" — 1 posts, no follow-up this cycle
+[NOTED] "ever done" — 1 posts, no follow-up this cycle
+[NOTED] "law abiding american defends" — 1 posts, no follow-up this cycle
+[NOTED] "strike drones erbil iraqi kurdistan" — 1 posts, no follow-up this cycle
+[NOTED] "campaign year ago today" — 1 posts, no follow-up this cycle
+[NOTED] "military use israel shared intel wrote reports exposed" — 1 posts, no follow-up this cycle
+[NOTED] "raised free old school edition raised free meant flying" — 1 posts, no follow-up this cycle
+[NOTED] "course didn answer" — 1 posts, no follow-up this cycle
+[NOTED] "founding fathers" — 1 posts, no follow-up this cycle
+[NOTED] "iran donald trump unexpectedly announced" — 1 posts, no follow-up this cycle
+[NOTED] "building telegram group" — 1 posts, no follow-up this cycle
