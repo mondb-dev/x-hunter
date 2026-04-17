@@ -1,19 +1,23 @@
 {
-  "id": "proposal_deduplicate_journal_drivers_1776326713159",
-  "status": "failed",
-  "title": "Implement Journal Driver De-duplication",
-  "problem": "The journaling pipeline currently lists identical tweets from the same source multiple times as separate drivers for a belief axis if they are processed within the same daily cycle. This inflates the perceived number of distinct drivers and can misrepresent the diversity or strength of evidence influencing a belief.",
+  "id": "proposal_narrative_contestation_mapping_1713346961000",
+  "status": "pending",
+  "title": "Implement Narrative Contestation Mapping Module",
+  "problem": "My current belief formation process is effective at evaluating individual claims and seeking immediate validation, but it lacks a systematic framework for identifying, tracking, and characterizing *competing narratives* or *information operations* around contentious topics. While I recognize when claims are 'contested' or 'used to frame' a discussion, I do not systematically map the landscape of these contestations, including the actors involved, the distinct narratives they promote, or their evolution over time. This leaves me potentially vulnerable to being swayed by dominant narratives or missing crucial counter-narratives, hindering a comprehensive understanding of complex issues, especially in geopolitical and ideological contexts.",
   "evidence": [
-    "From the 2026-04-14 Daily Report, the 'Digital Surveillance and Individual Autonomy' axis was driven by three entries: 'Concerns about Amazon drone delivery mapping neighborhoods and tracking routines highlight issues of [@JasonBassler1/status/2043828578375348234]', 'Concerns are raised about privacy and surveillance implications of drone delivery, highlighting pote [@JasonBassler1/status/2043828578375348234]', and 'Concerns are raised about Amazon drone delivery mapping neighborhoods, tracking routines, and normal [@JasonBassler1/status/2043828578375348234]'. These three entries are identical in source and content, yet are listed as distinct drivers."
+    "2026-04-15 report, `axis_political_vulnerability_foreign_influence`: 'Driven by: 1. @iamufohunter's claim that Iranian protests were funded by Israel and the US, despite being conteste [@iamufohunter/status/2044135244509704686]'. The explicit mention of 'contested' indicates an awareness of conflicting views, but the current report structure doesn't detail the *nature* or *sources* of the contestation. The web search `[web_search Iranian protests funded by Israel and US]` provides some confirmation but doesn't map the full narrative landscape.",
+    "2026-04-15 report, `axis_human_rights_and_exploitation`: 'Driven by: 2. Some interpretations of Quranic verses have been used to justify domestic violence, while many schol [web_search Muslim man tortures wife Quran verses]'. Here, the web search explicitly points to 'some interpretations' vs. 'many scholars,' indicating a debate or differing narratives, but this isn't systematically tracked beyond this single instance.",
+    "2026-04-15 report, `axis_immigration_policy_open_borders_vs_national_control_and_cultural_preservation`: 'Driven by: 3. A post claiming that 95% of 'refugees' coming to Europe are military-aged Muslim men is often used t [@realMaalouf/status/2044057440455479667]'. The phrase 'often used to frame' directly points to a narrative being constructed, but I don't have a mechanism to track the broader usage or counter-arguments to this framing."
   ],
-  "proposed_solution": "Modify the journaling pipeline to identify and consolidate identical tweets originating from the same user within a single daily journaling cycle. Instead of creating multiple driver entries for the same piece of information, the pipeline should aggregate these into a single driver entry. This entry could include a 'repetition count' or similar metadata to indicate how many times the identical content was encountered, thereby providing a more accurate representation of the unique informational inputs.",
+  "proposed_solution": "Implement a 'Narrative Contestation Mapping Module' within the journaling pipeline. This module would actively identify topics where significant conflicting claims or narratives are detected (e.g., via explicit 'contested' flags, keyword analysis, or divergence from established sources during web searches). For such topics, it would then attempt to: 1) identify and categorize the primary distinct narratives being pushed, 2) track the sources (users, accounts, media outlets) promoting each narrative, 3) monitor the prevalence and evolution of these narratives over time, and 4) summarize these competing narratives in the daily report for relevant axes, indicating the actors involved and the general claims/sentiment of each narrative.",
   "affected_files": [
     "src/pipelines/journal.js",
-    "src/lib/belief_state.js"
+    "src/pipelines/report.js",
+    "src/modules/narrative_tracker.js",
+    "src/state.js"
   ],
   "scope": "pipeline",
   "estimated_risk": "medium",
-  "created_at": "2026-04-16T08:05:13.124Z",
-  "resolved_at": "2026-04-16T08:30:51.999Z",
-  "resolution": "Pipeline error: Tests failed: Blocked test command (unsafe): # This change introduces library files, not a directly executable script.; Blocked test command (unsafe): # To test, a new test script would be needed, for example:; Blocked test command (unsafe): # node tests/test_journal_deduplication.js"
+  "created_at": "2026-04-17T08:35:58.066Z",
+  "resolved_at": null,
+  "resolution": null
 }
