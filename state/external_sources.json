@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-17T12:30:22.168Z",
+  "generated_at": "2026-04-17T13:00:23.324Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-17T12:31:16.678Z",
+  "profiled_at": "2026-04-17T13:00:54.313Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -893,9 +893,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-17T12:06:09.000Z",
+      "last_seen_at": "2026-04-17T12:28:28.000Z",
       "discovery": {
-        "distinct_urls": 715,
+        "distinct_urls": 717,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -904,10 +904,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 450,
-          "feed_buffer_reply": 304
+          "feed_buffer": 451,
+          "feed_buffer_reply": 305
         },
-        "distinct_referring_accounts": 360,
+        "distinct_referring_accounts": 362,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -945,7 +945,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:715",
+            "distinct_urls:717",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -953,7 +953,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:360",
+            "referring_accounts:362",
             "origin_types:2"
           ]
         },
@@ -983,10 +983,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:715",
+            "distinct_urls:717",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:360",
+            "referring_accounts:362",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -9972,7 +9972,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T12:59:21.590Z",
+        "fetched_at": "2026-04-17T13:00:53.192Z",
         "homepage_url": "https://temu.com/",
         "example_url": "https://www.temu.com/kuiper/un1.html?subj=feed-un&_bg_fs=1&_p_mat1_type=1&_p_jump_id=725&_x_vst_scene=adg&gids=538325&_p_rfs=1&_x_ads_channel=twitter&twclid=29gpd1jhyu86nybj5gna95l3tw",
         "homepage_status": 200,
@@ -24291,16 +24291,16 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.36,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
-            "published_time:false",
-            "canonical:false",
+            "published_time:true",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:8",
             "opinion_marker:false"
           ]
         },
@@ -24320,33 +24320,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T12:59:21.920Z",
+        "fetched_at": "2026-04-17T13:00:54.313Z",
         "homepage_url": "https://timeskuwait.com/",
         "example_url": "https://timeskuwait.com/",
-        "homepage_status": null,
-        "example_status": null,
+        "homepage_status": 200,
+        "example_status": 200,
         "homepage_final_url": "https://timeskuwait.com/",
         "example_final_url": "https://timeskuwait.com/",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
+          "has_published_time": true,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 8,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
+          "has_published_time": true,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 8,
           "opinion_marker": false
         }
       }
