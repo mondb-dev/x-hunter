@@ -59,6 +59,29 @@
 [NOTED] "alert scott macfarlane reveals new court filings showing trump" — 1 posts, no follow-up this cycle
 [NOTED] "latest lego video strait outta iran wild source" — 1 posts, no follow-up this cycle
 [NOTED] "tragedy brazil bride planned grand wedding entrance helicopter" — 1 posts, no follow-up this cycle
+[NOTED] "ever done" — 1 posts, no follow_up this cycle
+[NOTED] "law abiding american defends" — 1 posts, no follow-up this cycle
+[NOTED] "strike drones erbil iraqi kurdistan" — 1 posts, no follow-up this cycle
+[NOTED] "campaign year ago today" — 1 posts, no follow-up this cycle
+[NOTED] "military use israel shared intel wrote reports exposed" — 1 posts, no follow-up this cycle
+[NOTED] "raised free old school edition raised free meant flying" — 1 posts, no follow-up this cycle
+[NOTED] "course didn answer" — 1 posts, no follow-up this cycle
+[NOTED] "founding fathers" — 1 posts, no follow-up this cycle
+[NOTED] "iran donald trump unexpectedly announced" — 1 posts, no follow-up this cycle
+[NOTED] "building telegram group" — 1 posts, no follow-up this cycle
+[INTEL: AI Societal Impact] @SoveyX reports a 93-year-old woman uses a Tesla Model Y with Full Self-Driving and Grok for navigation, highlighting the potential for AI to enhance independence.
+[INTEL: Political Manipulation] @StarmertheFraud reports allegations of antisemitism against a Green Party councillor and mentions an old letter discussing potential offenses by Labour Party members, indicating political maneuvering and attempts to discredit opponents.
+[INTEL: Humanitarian Crisis] @CrazyVibes_1 shares a story of an elderly man saving a mother deer, an example of humanitarian concern, though the source is not explicitly tied to a verified news outlet.
+[INTEL: Geopolitical Tension] @IranIntl_En reports Iranian state media stating two F-4 fighter jets and one MiG-29 took off over Tehran for assigned missions, indicating continued military activity.
+[INTEL: Political Manipulation] @hakeemjeffries claims Republicans are trying to rig midterm elections and calls for fighting back against a "MAGA power grab," an example of highly polarized political rhetoric.
+[INTEL: Information Integrity] @LibOrNormal asks if people who kill children should be executed on live TV, an example of emotional rhetoric potentially manipulating public opinion.
+[INTEL: AI Societal Impact] @doganuraldesign claims to have built a health dashboard in 5 minutes with Grok 4.3 (beta), highlighting the rapid development capabilities of AI.
+[NOTED] "mutilated road killed raccoon chainsawed whale head dumped dead bear cub central park" — 1 posts, no follow-up this cycle
+[NOTED] "great balance carries children across wire" — 1 posts, no follow-up this cycle
+[NOTED] "know food stamps powdered milk didn" — 1 posts, no follow-up this cycle
+[NOTED] "alert scott macfarlane reveals new court filings showing trump" — 1 posts, no follow-up this cycle
+[NOTED] "latest lego video strait outta iran wild source" — 1 posts, no follow-up this cycle
+[NOTED] "tragedy brazil bride planned grand wedding entrance helicopter" — 1 posts, no follow-up this cycle
 [NOTED] "ever done" — 1 posts, no follow-up this cycle
 [NOTED] "law abiding american defends" — 1 posts, no follow-up this cycle
 [NOTED] "strike drones erbil iraqi kurdistan" — 1 posts, no follow-up this cycle
@@ -69,3 +92,28 @@
 [NOTED] "founding fathers" — 1 posts, no follow-up this cycle
 [NOTED] "iran donald trump unexpectedly announced" — 1 posts, no follow-up this cycle
 [NOTED] "building telegram group" — 1 posts, no follow-up this cycle
+[NOTED] "trump told israel bombing lebanon prohibited israel launched drone strike south lebanon anyway killed man motorcycle" — 1 posts, no follow-up this cycle
+[NOTED] "unhinged enforcers sharia law" — 1 posts, no follow-up this cycle
+[NOTED] "china huawei aggressively pushing tech worldwide attempt make consumers reliant beijing ecosystem china challenge tech comes trump pushes sales american tech allies ensure dominance" — 1 posts, no follow-up this cycle
+[NOTED] "macron starmer meloni opening strait hormuz" — 1 posts, no follow-up this cycle
+[NOTED] "united states collect leftover uranium" — 1 posts, no follow-up this cycle
+[NOTED] "unbelievable iran military parade goes pink" — 1 posts, no follow-up this cycle
+[NOTED] "same war europe running" — 1 posts, no follow-up this cycle
+[NOTED] "powerful storm hit haikou hainan china" — 1 posts, no follow-up this cycle
+[NOTED] "let someone else lead" — 1 posts, no follow-up this cycle
+[NOTED] "moved censure rep andy ogles" — 1 posts, no follow-up this cycle
+[NOTED] "thousands people committed doing something hard" — 1 posts, no follow-up this cycle
+[NOTED] "real green party candidate his name dylan lewis creser" — 1 posts, no follow-up this cycle
+[NOTED] "learn hebrew wondering" — 1 posts, no follow-up this cycle
+[NOTED] "first post yours seen days" — 1 posts, no follow-up this cycle
+[NOTED] "same comment" — 1 posts, no follow-up this cycle
+[NOTED] "old money starter pack" — 1 posts, no follow-up this cycle
+[NOTED] "soon announce hebrew learning space" — 1 posts, no follow-up this cycle
+[NOTED] "urgent allegations antisemitism against green party councillor" — 1 posts, no follow-up this cycle
+[NOTED] "elderly man saved" — 1 posts, no follow-up this cycle
+[NOTED] "iranian state media reported" — 1 posts, no follow-up this cycle
+[NOTED] "good morning beautiful fighters happy friday" — 1 posts, no follow-up this cycle
+[NOTED] "fighting back against" — 1 posts, no follow-up this cycle
+[NOTED] "kill children executed live" — 1 posts, no follow-up this cycle
+[NOTED] "grok beta" — 1 posts, no follow-up this cycle
+[NOTED] "secret formulas look expensive budget" — 1 posts, no follow-up this cycle
