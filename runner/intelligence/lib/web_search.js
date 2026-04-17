@@ -41,21 +41,18 @@ async function webSearchVerify(claimText) {
     const url = `https://${location}-aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/google/models/gemini-2.5-flash:generateContent`;
 
     const prompt = [
-      'You are a fact-checker and claim analyst. Evaluate the following claim using current information.',
+      'You are a fact-checker. Evaluate the following claim using current information.',
       '',
       `CLAIM: "${claimText}"`,
       '',
-      'Search for evidence about this claim. Then respond with ONLY valid JSON (no markdown, no code fences):',
-      '{',
-      '  "verdict": "confirmed" | "refuted" | "partial" | "inconclusive" | "no_results",',
-      '  "summary": "2-3 sentence explanation of findings",',
-      '  "evidence_urls": ["url1", "url2"],',
-      '  "supporting_sources_summary": "e.g. Reuters, AP News, and WHO confirm...",',
-      '  "dissenting_sources_summary": "e.g. Some fringe outlets dispute...",',
-      '  "original_source": "who first made or reported this claim",',
-      '  "claim_date": "YYYY-MM-DD or YYYY-MM",',
-      '  "framing_analysis": "Is the claim framed validly or misleadingly? 1-2 sentences."',
-      '}',
+      'Search for evidence. Respond with ONLY a JSON object (no markdown fences, no extra text):',
+      '{"verdict":"confirmed|refuted|partial|inconclusive|no_results",',
+      '"summary":"2-3 sentence findings",',
+      '"supporting_sources":"Name the outlets/orgs that support this claim, e.g. Reuters, AP News confirm X",',
+      '"dissenting_sources":"Name outlets/orgs that contradict this, or empty string if none",',
+      '"original_source":"who first reported this claim",',
+      '"claim_date":"YYYY-MM-DD or YYYY-MM if known, else empty",',
+      '"framing_analysis":"Is the claim framed validly or misleadingly? 1-2 sentences."}',
     ].join('\n');
 
     const controller = new AbortController();
@@ -86,11 +83,12 @@ async function webSearchVerify(claimText) {
       const parts = data?.candidates?.[0]?.content?.parts || [];
       const text = parts.filter(p => p.text && !p.thought).map(p => p.text).join('');
 
-      // Extract grounding URLs
+      // Extract grounding metadata — real URLs from chunks, or search queries as fallback
       const grounding = data?.candidates?.[0]?.groundingMetadata;
       const groundingUrls = (grounding?.groundingChunks || [])
-        .filter(c => c.web?.uri)
+        .filter(c => c.web?.uri && !String(c.web.uri).includes('vertexaisearch.cloud.google.com'))
         .map(c => c.web.uri);
+      const searchQueries = grounding?.webSearchQueries || [];
 
       // Parse structured response
       let parsed;
@@ -100,26 +98,22 @@ async function webSearchVerify(claimText) {
         if (jsonMatch) clean = jsonMatch[0];
         parsed = JSON.parse(clean);
       } catch {
-        log(`failed to parse response: ${text.slice(0, 200)}`);
-        // Salvage fields from malformed JSON using regex
-        const summaryMatch = text.match(/"summary"\s*:\s*"((?:[^"\\]|\\.)*)"/);
-        const verdictMatch = text.match(/"verdict"\s*:\s*"(\w+)"/);
-        const frameMatch = text.match(/"framing_analysis"\s*:\s*"((?:[^"\\]|\\.)*)"/);
-        const supportMatch = text.match(/"supporting_sources_summary"\s*:\s*"((?:[^"\\]|\\.)*)"/);
-        const dissentMatch = text.match(/"dissenting_sources_summary"\s*:\s*"((?:[^"\\]|\\.)*)"/);
-
+        log(`failed to parse JSON, using regex fallback`);
+        const rx = (key) => {
+          const m = text.match(new RegExp(`"${key}"\\s*:\\s*"((?:[^"\\\\]|\\\\.)*)"`, 's'));
+          return m ? m[1].replace(/\\n/g, ' ').replace(/\\"/g, '"') : null;
+        };
+        const verdict = rx('verdict');
         const verdictMap = { confirmed: 'confirmed', refuted: 'refuted', partial: 'partial' };
         return {
-          web_search_result: verdictMatch ? (verdictMap[verdictMatch[1]] || 'inconclusive') : 'inconclusive',
-          summary: summaryMatch
-            ? summaryMatch[1].replace(/\\n/g, ' ').replace(/\\"/g, '"')
-            : text.replace(/```json\s*/gi, '').replace(/```/g, '').trim().slice(0, 500),
+          web_search_result: verdict ? (verdictMap[verdict] || 'inconclusive') : 'inconclusive',
+          summary: rx('summary') || text.replace(/```json\s*/gi, '').replace(/```/g, '').trim().slice(0, 500),
           evidence_urls: groundingUrls,
-          original_source: null,
-          claim_date: null,
-          supporting_sources: supportMatch ? [{ name: supportMatch[1].replace(/\\n/g, ' ').replace(/\\"/g, '"'), stance: '' }] : [],
-          dissenting_sources: dissentMatch ? [{ name: dissentMatch[1].replace(/\\n/g, ' ').replace(/\\"/g, '"'), stance: '' }] : [],
-          framing_analysis: frameMatch ? frameMatch[1].replace(/\\n/g, ' ').replace(/\\"/g, '"') : null,
+          original_source: rx('original_source'),
+          claim_date: rx('claim_date'),
+          supporting_sources: rx('supporting_sources') ? [{ name: rx('supporting_sources'), stance: '' }] : [],
+          dissenting_sources: rx('dissenting_sources') ? [{ name: rx('dissenting_sources'), stance: '' }] : [],
+          framing_analysis: rx('framing_analysis'),
         };
       }
 
@@ -131,11 +125,11 @@ async function webSearchVerify(claimText) {
       return {
         web_search_result:  verdictMap[parsed.verdict] || 'inconclusive',
         summary:            parsed.summary || '',
-        evidence_urls:      [...new Set([...(parsed.evidence_urls || []), ...groundingUrls])].slice(0, 5),
+        evidence_urls:      groundingUrls.slice(0, 5),
         original_source:    parsed.original_source || null,
         claim_date:         parsed.claim_date || null,
-        supporting_sources: parsed.supporting_sources_summary ? [{ name: parsed.supporting_sources_summary, stance: '' }] : [],
-        dissenting_sources: parsed.dissenting_sources_summary ? [{ name: parsed.dissenting_sources_summary, stance: '' }] : [],
+        supporting_sources: parsed.supporting_sources ? [{ name: parsed.supporting_sources, stance: '' }] : [],
+        dissenting_sources: parsed.dissenting_sources ? [{ name: parsed.dissenting_sources, stance: '' }] : [],
         framing_analysis:   parsed.framing_analysis || null,
       };
     } finally {

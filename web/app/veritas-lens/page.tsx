@@ -353,7 +353,7 @@ export default async function VerifiedPage({
           filterCounts[f] > 0 || f === "all" ? (
             <a
               key={f}
-              href={f === "all" ? "/verified" : `/verified?filter=${f}`}
+              href={f === "all" ? "/veritas-lens" : `/veritas-lens?filter=${f}`}
               className={`verify-filter-tab${activeFilter === f ? " verify-filter-tab--active" : ""}`}
             >
               {FILTER_LABELS[f]}
