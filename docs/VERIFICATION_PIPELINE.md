@@ -190,3 +190,24 @@ Both `verify_one.js` and `verify_claims.js` use the same scorer (`claim_scorer.j
 ## LLM Credentials
 
 Both scripts use `BUILDER_CREDENTIALS` (separate GCP service account) calling `gemini-2.5-flash` with Google Search grounding. This keeps verification traffic isolated from the main browse/synthesize pipeline which uses `GOOGLE_APPLICATION_CREDENTIALS`.
+
+---
+
+## Code Organization
+
+Shared logic is extracted into `runner/intelligence/lib/` to avoid duplication:
+
+```
+runner/intelligence/
+  verify_claims.js        — batch orchestrator (systemd timer)
+  verify_one.js           — on-demand single-claim verification
+  claim_scorer.js         — pure scoring (weights, thresholds, component scorers)
+  verification_db.js      — SQLite CRUD for claim_verifications + audit log
+  db.js                   — intelligence.db connection singleton
+  lib/
+    web_search.js          — Gemini + Google Search grounding via BUILDER_CREDENTIALS
+    verification_export.js — export claim_verifications to JSON for the web frontend
+    source_data.js         — load source credibility from intelligence.db or source_registry.json
+```
+
+Both `verify_claims.js` and `verify_one.js` import from `lib/` — no duplicated LLM calls, export logic, or source lookups.
