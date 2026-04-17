@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-17T09:30:18.678Z",
+  "generated_at": "2026-04-17T10:00:19.133Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-17T09:30:48.742Z",
+  "profiled_at": "2026-04-17T10:01:08.235Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -1673,7 +1673,7 @@
       "entity": "Cbsnews",
       "kind": "unknown",
       "first_seen_at": "2026-03-27T23:18:50.928Z",
-      "last_seen_at": "2026-04-16T21:04:37.059Z",
+      "last_seen_at": "2026-04-17T09:33:57.364Z",
       "discovery": {
         "distinct_urls": 5,
         "example_urls": [
@@ -5312,6 +5312,132 @@
       }
     },
     {
+      "domain": "cosmos.so",
+      "entity": "Cosmos So",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-14T03:21:06.000Z",
+      "last_seen_at": "2026-04-16T20:56:50.000Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc",
+          "https://cosmos.so/?twclid=2byirh1tzwmrzd352osdsykqjo",
+          "https://cosmos.so/?twclid=25fb5zkvgutjc80m43laabv8z6",
+          "https://cosmos.so/?twclid=2a6c7wlb03u0zwpihimrba6jbs",
+          "https://cosmos.so/?twclid=2em0lh4q5h9lpy091tfwsjvvu1"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 5
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "thecosmos"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.20583333333333334,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.039999999999999994,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:4",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.37276041666666665,
+          "confidence": 0.19585000000000002,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-15T02:04:34.633Z",
+        "homepage_url": "https://cosmos.so/",
+        "example_url": "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.cosmos.so/",
+        "example_final_url": "https://www.cosmos.so/",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "straitstimes.com",
       "entity": "Straitstimes",
       "kind": "unknown",
@@ -6269,7 +6395,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T09:54:54.193Z",
+        "fetched_at": "2026-04-17T10:01:08.235Z",
         "homepage_url": "https://newsmax.com/",
         "example_url": "https://www.newsmax.com/ruddy/chris-ruddy-scott-bessent-donald-trump/2026/01/19/id/1242743/?twclid=26mj7qjkmqd4eerrni08qzffox",
         "homepage_status": null,
@@ -6921,131 +7047,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 2,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "cosmos.so",
-      "entity": "Cosmos So",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-14T03:21:06.000Z",
-      "last_seen_at": "2026-04-15T21:48:54.000Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc",
-          "https://cosmos.so/?twclid=2byirh1tzwmrzd352osdsykqjo",
-          "https://cosmos.so/?twclid=25fb5zkvgutjc80m43laabv8z6",
-          "https://cosmos.so/?twclid=2a6c7wlb03u0zwpihimrba6jbs"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 4
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "thecosmos"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.17666666666666664,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.039999999999999994,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:4",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3663802083333333,
-          "confidence": 0.16722499999999998,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-15T02:04:34.633Z",
-        "homepage_url": "https://cosmos.so/",
-        "example_url": "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.cosmos.so/",
-        "example_final_url": "https://www.cosmos.so/",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 4,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 4,
           "opinion_marker": false
         }
       }

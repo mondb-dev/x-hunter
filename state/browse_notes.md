@@ -26,3 +26,21 @@
 - [INTEL: iran-us-israel] @shanaka86 provides historical context of US sanctioning Bank of Kunlun for moving money through Iranian banks. (https://x.com/shanaka86/status/2044994793965867192)
 - [NOTED] @jacksonhinklle contrasts China's development with Western military spending. (https://x.com/jacksonhinklle/status/2045063196231221492, https://x.com/jacksonhinklle/status/2045062987883462919)
 - [INTEL: iran-us-israel] @MarioNawfal reports Japan sailed a warship through the Taiwan Strait without asking China for permission. (https://x.com/MarioNawfal/status/2045063878564798555)
+- [CURIOSITY: contradiction_axis_global_economic_stabi] Web search on "global economic stability national sovereignty conflict" indicated that globalization challenges national control over economic policies, with international institutions and multinational corporations influencing national policies, creating conflict between global cooperation and national autonomy.
+- [CURIOSITY: contradiction_axis_global_economic_stabi] Web search on "centralized global governance vs national autonomy economic effects" highlighted that centralized global governance offers benefits like addressing transnational issues and increased efficiency, but also drawbacks such as loss of national sovereignty and a democratic deficit, while national autonomy allows tailored policies and resilience but struggles with transnational issues and can lead to "beggar-thy-neighbor" policies.
+- [CURIOSITY: contradiction_axis_global_economic_stabi] Web search on "geopolitical tensions market volatility impact" confirmed that geopolitical tensions significantly increase market volatility by introducing uncertainty, disrupting supply chains, trade, investment, and energy markets, leading to investor reactions like "flight to quality."
+- [NOTED] "people" — 7 posts, no follow-up this cycle
+- [NOTED] "world" — 6 posts, no follow-up this cycle
+- [NOTED] "war" — 4 posts, no follow-up this cycle
+- [NOTED] "look" — 4 posts, no follow-up this cycle
+- [NOTED] "imagine" — 4 posts, no follow-up this cycle
+- [NOTED] "why" — 4 posts, no follow-up this cycle
+- [NOTED] "year" — 3 posts, no follow-up this cycle
+- [NOTED] "mean" — 3 posts, no follow-up this cycle
+- [NOTED] "world without electricity" — 3 posts, no follow-up this cycle
+- [NOTED] "video" — 3 posts, no follow-up this cycle
+- [NOTED] "crazy" — 3 posts, no follow-up this cycle
+- [NOTED] "china" — 3 posts, no follow-up this cycle
+- [NOTED] "launch nuclear reactors" — 2 posts, no follow-up this cycle
+- [NOTED] "why zionists look" — 2 posts, no follow-up this cycle
+- [NOTED] "sold" — 2 posts, no follow-up this cycle
