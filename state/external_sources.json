@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-17T13:00:23.324Z",
+  "generated_at": "2026-04-17T14:30:24.464Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-17T13:00:54.313Z",
+  "profiled_at": "2026-04-17T14:00:58.591Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -893,9 +893,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-17T12:28:28.000Z",
+      "last_seen_at": "2026-04-17T12:34:39.000Z",
       "discovery": {
-        "distinct_urls": 717,
+        "distinct_urls": 720,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -904,10 +904,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 451,
-          "feed_buffer_reply": 305
+          "feed_buffer": 453,
+          "feed_buffer_reply": 307
         },
-        "distinct_referring_accounts": 362,
+        "distinct_referring_accounts": 364,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -945,7 +945,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:717",
+            "distinct_urls:720",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -953,7 +953,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:362",
+            "referring_accounts:364",
             "origin_types:2"
           ]
         },
@@ -983,10 +983,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:717",
+            "distinct_urls:720",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:362",
+            "referring_accounts:364",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1673,7 +1673,7 @@
       "entity": "Cbsnews",
       "kind": "unknown",
       "first_seen_at": "2026-03-27T23:18:50.928Z",
-      "last_seen_at": "2026-04-17T11:35:03.526Z",
+      "last_seen_at": "2026-04-17T14:03:58.239Z",
       "discovery": {
         "distinct_urls": 5,
         "example_urls": [
@@ -4655,7 +4655,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T13:29:27.222Z",
+        "fetched_at": "2026-04-17T14:00:53.980Z",
         "homepage_url": "https://pupgum.com/",
         "example_url": "https://pupgum.com/?discount=X20&utm_source=twitter&utm_medium=cpc&utm_campaign=x04&twclid=2dx55fuulwvv0t6pgl8v4t8syr",
         "homepage_status": 200,
@@ -5529,7 +5529,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T13:59:21.517Z",
+        "fetched_at": "2026-04-17T14:00:54.432Z",
         "homepage_url": "https://straitstimes.com/",
         "example_url": "https://straitstimes.com/",
         "homepage_status": 200,
@@ -15711,7 +15711,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T13:29:28.264Z",
+        "fetched_at": "2026-04-17T14:00:55.383Z",
         "homepage_url": "https://hubs.la/",
         "example_url": "https://hubs.la/Q044Rgs40?twclid=2dj6mgj4wttl7kn2ssc6dwffaw",
         "homepage_status": 200,
@@ -24531,17 +24531,17 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.27999999999999997,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
-            "about:false",
+            "canonical:true",
+            "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
+            "outbound_links:20",
+            "opinion_marker:true"
           ]
         },
         "overall": {
@@ -24560,34 +24560,34 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T13:59:31.520Z",
+        "fetched_at": "2026-04-17T14:00:58.591Z",
         "homepage_url": "https://devdiscourse.com/",
         "example_url": "https://devdiscourse.com/",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://devdiscourse.com/",
-        "example_final_url": "https://devdiscourse.com/",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.devdiscourse.com/",
+        "example_final_url": "https://www.devdiscourse.com/",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
+          "has_canonical": true,
+          "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
+          "outbound_links_count": 20,
+          "opinion_marker": true
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
+          "has_canonical": true,
+          "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
+          "outbound_links_count": 20,
+          "opinion_marker": true
         }
       }
     },

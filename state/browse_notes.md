@@ -1,152 +1,94 @@
-
-## Tensions and Signals (Current Cycle)
-
-*   **Narrative Manipulation & Tribal Signaling:** @iAnonPatriot posted a blank image with text about a "Black family celebrates after the daughter gets approved for food stamps," captioned "This is getting ridiculous." This appears to be a deliberate attempt to frame welfare recipients negatively and engage in tribal signaling. [Related to axis_epistemic_integrity, axis_media_integrity_v1]
-*   **Hypocrisy in Stated Principles vs. Actions:** @BasilTheGreat highlights a contradiction where EU President Ursula Von Der Leyen speaks of protecting freedom of speech while a man is reportedly arrested for speaking out against her. This points to a tension in accountability of institutions. [Related to axis_power_accountability, axis_epistemic_integrity]
-*   **Human Rights Abuses & Accountability:** @IranIntl_En reports the killing of two young men by Basij and Revolutionary Guards forces at checkpoints in Iran. This is a direct signal of human rights violations and lack of accountability. [Related to axis_eje_accountability_v1, axis_human_rights_exploitation_v1]
-*   **Negative Framing of Renewable Energy:** @wideawake_media uses the instance of a solar farm damaged by weather to broadly criticize solar technology as "inefficient, intermittent and fragile." This exemplifies narrative manipulation against climate solutions. [Related to axis_epistemic_integrity, axis_media_integrity_v1, axis_environmental_policy_v_economic_v1]
-*   **Inflammatory and Dehumanizing Rhetoric:** @jacksonhinklle's tweet "You will die for Israel and your last meal will be goyslop" is highly inflammatory and appears to be designed to dehumanize and provoke, fitting the pattern of strategic narrative construction and tribal signaling. [Related to axis_epistemic_integrity, axis_media_integrity_v1]
-*   **Historical Geopolitical Incident:** @abierkhatib mentioned the US shooting down Iran Air Flight 655 in 1988. Web search confirms this occurred, with 290 fatalities, and the US claimed misidentification while Iran called it reckless. This is relevant to `axis_geopolitical_rhetoric_v1` and `axis_power_accountability`. [CURIOSITY: contradiction_axis_global_economic_stabi]
-*   **Ideological Statement on China:** @jacksonhinklle stated "China is PROOF that COMMUNISM WORKS!", an ideological claim relevant to `axis_global_power_realignments_v1` and `axis_new_world_order_discourse_v1`.
-*   **Protests against Constitutional Revision:** @ErekoRex reported nationwide protests in Japan against revising the pacifist constitution, relevant to `axis_national_sovereignty_v_intl_law_v1` and `axis_authoritarian_self_determination_v1`.
-*   **Disappearing Government Files:** @mohitlaws reported 16 files disappearing from a DOJ webpage, relevant to `axis_political_trust_corruption_v1` and `axis_power_accountability`.
-*   **"Human Zoo" Claim:** @XH_Lee23 posted about a "Human Zoo" in New York where Filipinos were allegedly treated as animals, relevant to `axis_human_rights_exploitation_v1`.
-*   **Epstein Files and Political Figures:** @itx_soulsync posted images allegedly from Epstein Files, accusing Trump of pedophilia, relevant to `axis_epistemic_integrity` and `axis_political_trust_corruption_v1`.
-*   **"Total War Economy" Claim:** @jacksonhinklle claimed the Trump Administration is approaching US automakers for military production, signaling a "total war economy," relevant to `axis_global_power_realignments_v1` and `axis_global_economic_stability_v1`.
-*   **Judicial Accountability and Immigration:** @EricLDaugh reported a "leftist judge" releasing a "foreign violent gang member" who was then placed in federal custody by ICE, relevant to `axis_power_accountability` and `axis_immigration_policy_v_national_control_v1`.
-
-## Seen-But-Not-Examined Clusters (Current Cycle)
-*   [NOTED] "people" — 8 posts, no follow-up this cycle
-*   [NOTED] "war" — 5 posts, no follow-up this cycle
-*   [NOTED] "know" — 4 posts, no follow-up this cycle
-*   [NOTED] "think" — 4 posts, no follow-up this cycle
-*   [NOTED] "things" — 3 posts, no follow-up this cycle
-*   [NOTED] "streets" — 3 posts, no follow-up this cycle
-*   [NOTED] "see" — 3 posts, no follow-up this cycle
-*   [NOTED] "world" — 3 posts, no follow-up this cycle
-*   [NOTED] "regime" — 3 posts, no follow-up this cycle
-*   [NOTED] "help" — 3 posts, no follow-up this cycle
-*   [NOTED] "lives" — 3 posts, no follow-up this cycle
-*   [NOTED] "give" — 3 posts, no follow-up this cycle
-*   [NOTED] "tell" — 3 posts, no follow-up this cycle
-*   [NOTED] "charlotte dropping known terrorist onto" — 2 posts, no follow-up this cycle
-*   [NOTED] "dropped his bond posted bond" — 2 posts, no follow-up this cycle
-*   [NOTED] "last meal" — 1 posts, no follow-up this cycle
-*   [NOTED] "die" — 1 posts, no follow-up this cycle
-*   [NOTED] "israel" — 1 posts, no follow-up this cycle
-*   [NOTED] "goyslop" — 1 posts, no follow-up this cycle
-*   [NOTED] "trump blockade iran already making america closest gulf ally nervous" — 1 posts, no follow-up this cycle
-*   [NOTED] "strategy saudi arabia spent weeks rerouting" — 1 posts, no follow-up this cycle
-*   [NOTED] "hormuz closed pumping crude across" — 1 posts, no follow-up this cycle
-*   [NOTED] "entire oil export operation" — 1 posts, no follow-up this cycle
-*   [NOTED] "new giant cruise ship aircraft arrives" — 1 posts, no follow-up this cycle
-*   [NOTED] "lands victoria harbour" — 1 posts, no follow-up this cycle
-*   [NOTED] "puppy taking nap gets woken" — 1 posts, no follow-up this cycle
-*   [NOTED] "falls right back asleep" — 1 posts, no follow-up this cycle
-*   [NOTED] "passenger plane" — 1 posts, no follow-up this cycle
-*   [NOTED] "strait hormuz" — 1 posts, no follow-up this cycle
-*   [NOTED] "killed around" — 1 posts, no follow-up this cycle
-*   [NOTED] "idea" — 1 posts, no follow-up this cycle
-*   [NOTED] "world looks reversed robinchanning" — 1 posts, no follow-up this cycle
-*   [NOTED] "walked backward perfectly" — 1 posts, no follow-up this cycle
-*   [NOTED] "buy pre cut watermelon again" — 1 posts, no follow-up this cycle
-*   [NOTED] "hiding inside" — 1 posts, no follow-up this cycle
-*   [NOTED] "seeing" — 1 posts, no follow-up this cycle
-*   [NOTED] "lop rahul gandhi bjp" — 1 posts, no follow-up this cycle
-*   [NOTED] "armed forces bjp" — 1 posts, no follow-up this cycle
-*   [NOTED] "people india bjp" — 1 posts, no follow-up this cycle
-*   [NOTED] "armed forces" — 1 posts, no follow-up this cycle
-*   [NOTED] "american people neat suits" — 1 posts, no follow-up this cycle
-*   [NOTED] "human zoo new york" — 1 posts, no follow-up this cycle
-*   [NOTED] "human rights crime" — 1 posts, no follow-up this cycle
-*   [NOTED] "treated animals" — 1 posts, no follow-up this cycle
-*   [NOTED] "resistance groups pop fight back" — 1 posts, no follow-up this cycle
-*   [NOTED] "displace people" — 1 posts, no follow-up this cycle
-*   [NOTED] "shouldn surprised" — 1 posts, no follow-up this cycle
-*   [NOTED] "wipe" — 1 posts, no follow-up this cycle
-*   [NOTED] "china proof" — 1 posts, no follow-up this cycle
-*   [NOTED] "communism works" — 1 posts, no follow-up this cycle
-*   [NOTED] "happening nationwide protests across japan against revising" — 1 posts, no follow-up this cycle
-*   [NOTED] "defending article opposing government moves" — 1 posts, no follow-up this cycle
-*   [NOTED] "pacifist constitution tens thousands" — 1 posts, no follow-up this cycle
-*   [NOTED] "erode post war restraints" — 1 posts, no follow-up this cycle
-*   [NOTED] "ceo tehran fire department" — 1 posts, no follow-up this cycle
-*   [NOTED] "three person family" — 1 posts, no follow-up this cycle
-*   [NOTED] "injured his leg" — 1 posts, no follow-up this cycle
-*   [NOTED] "ghodratollah mohammadi" — 1 posts, no follow-up this cycle
-*   [NOTED] "spicy duck vitamin fresh vegetable jai cooking" — 1 posts, no follow-up this cycle
-*   [NOTED] "fried catfish" — 1 posts, no follow-up this cycle
-*   [NOTED] "eggs" — 1 posts, no follow-up this cycle
-*   [NOTED] "military action slow gorbachev style implosion internal crumbling" — 1 posts, no follow-up this cycle
-*   [NOTED] "iranian inside iran right" — 1 posts, no follow-up this cycle
-*   [NOTED] "method matters far less" — 1 posts, no follow-up this cycle
-*   [NOTED] "people iran want above" — 1 posts, no follow-up this cycle
-*   [NOTED] "bam margera age hasn done" — 1 posts, no follow-up this cycle
-*   [NOTED] "trick since cky2k" — 1 posts, no follow-up this cycle
-*   [NOTED] "proves" — 1 posts, no follow-up this cycle
-*   [NOTED] "sight rescuing shark stuck tire" — 1 posts, no follow-up this cycle
-*   [NOTED] "actually doing volunteer work" — 1 posts, no follow-up this cycle
-*   [NOTED] "truly wonderful" — 1 posts, no follow-up this cycle
-*   [NOTED] "solar powered surveillance camera shaqif castle sits" — 1 posts, no follow-up this cycle
-*   [NOTED] "climbed shaqif castle" — 1 posts, no follow_up this cycle
-*   [NOTED] "nabatieh governorate overlooking" — 1 posts, no follow-up this cycle
-*   [NOTED] "litani river right" — 1 posts, no follow-up this cycle
-*   [NOTED] "deep velvety atmosphere 1950s 1990s night sky" — 1 posts, no follow-up this cycle
-*   [NOTED] "specific kind soul every frame" — 1 posts, no follow-up this cycle
-*   [NOTED] "old disney hits way" — 1 posts, no follow-up this cycle
-*   [NOTED] "almost impossible explain anyone" — 1 posts, no follow-up this cycle
-*   [NOTED] "trump anyone tries make excuses" — 1 posts, no follow-up this cycle
-*   [NOTED] "epstein files every time" — 1 posts, no follow-up this cycle
-*   [NOTED] "butt humanity need prison" — 1 posts, no follow-up this cycle
-*   [NOTED] "fucking pedo share" — 1 posts, no follow-up this cycle
-*   [NOTED] "ukraine drain defense supplies total war economy coming soon seems" — 1 posts, no follow-up this cycle
-*   [NOTED] "trump administration approaching automakers use" — 1 posts, no follow-up this cycle
-*   [NOTED] "military production wars iran" — 1 posts, no follow-up this cycle
-*   [NOTED] "breaking" — 1 posts, no follow-up this cycle
-*   [NOTED] "turning frozen lake" — 1 posts, no follow-up this cycle
-*   [NOTED] "working boat germany" — 1 posts, no follow-up this cycle
-*   [NOTED] "today birthday" — 1 posts, no follow-up this cycle
-*   [NOTED] "anyone wish" — 1 posts, no follow-up this cycle
-*   [NOTED] "jaguar really loves catnip" — 1 posts, no follow-up this cycle
-*   [NOTED] "capable resolving conflicts opening hearts" — 1 posts, no follow-up this cycle
-*   [NOTED] "based fear threats weapons" — 1 posts, no follow-up this cycle
-*   [NOTED] "embrace peace founded love" — 1 posts, no follow-up this cycle
-*   [NOTED] "justice unarmed peace" — 1 posts, no follow-up this cycle
-*   [NOTED] "city first mosque locals say" — 1 posts, no follow-up this cycle
-*   [NOTED] "dwarf nearby shinto shrine" — 1 posts, no follow-up this cycle
-*   [NOTED] "fujisawa protest plans" — 1 posts, no follow-up this cycle
-*   [NOTED] "calls prayer traffic" — 1 posts, no follow-up this cycle
-*   [NOTED] "make great media secrecy" — 1 posts, no follow-up this cycle
-*   [NOTED] "gulf truly dangerous" — 1 posts, no follow-up this cycle
-*   [NOTED] "made trump stop" — 1 posts, no follow-up this cycle
-*   [NOTED] "bases verify true" — 1 posts, no follow-up this cycle
-*   [NOTED] "best unboxing video" — 1 posts, no follow-up this cycle
-*   [NOTED] "see" — 1 posts, no follow-up this cycle
-*   [NOTED] "day" — 1 posts, no follow-up this cycle
-*   [NOTED] "iranian city carrying hezbollah flags pro government proxy forces operating publicly" — 1 posts, no follow-up this cycle
-*   [NOTED] "video allegedly shows armed group linked" — 1 posts, no follow-up this cycle
-*   [NOTED] "islamic republic staging motorbike parade" — 1 posts, no follow-up this cycle
-*   [NOTED] "streets weapons display" — 1 posts, no follow-up this cycle
-*   [NOTED] "least files" — 1 posts, no follow-up this cycle
-*   [NOTED] "doj webpage" — 1 posts, no follow-up this cycle
-*   [NOTED] "different soul" — 1 posts, no follow-up this cycle
-*   [NOTED] "deer gave" — 1 posts, no follow-up this cycle
-*   [NOTED] "came" — 1 posts, no follow-up this cycle
-*   [NOTED] "rifle" — 1 posts, no follow-up this cycle
-*   [NOTED] "people iran" — 1 posts, no follow-up this cycle
-*   [NOTED] "holy smokes leftist judge charlotte released foreign violent gang member tren aragua reduced bond" — 1 posts, no follow-up this cycle
-*   [NOTED] "federal custody couldn walk free" — 1 posts, no follow-up this cycle
-*   [NOTED] "community lfg ice saves" — 1 posts, no follow-up this cycle
-*   [NOTED] "ice quickly swooped" — 1 posts, no follow-up this cycle
-*   [NOTED] "charlotte dropping known terrorist onto" — 1 posts, no follow-up this cycle
-*   [NOTED] "dropped his bond posted bond" — 1 posts, no follow-up this cycle
-*   [NOTED] "streets north carolina hours away" — 1 posts, no follow-up this cycle
-*   [NOTED] "ice detainer thank god" — 1 posts, no follow-up this cycle
-*   [NOTED] "zelensky ukraine plans produce air defense systems" — 1 posts, no follow-up this cycle
-*   [NOTED] "serious strategic task" — 1 posts, no follow-up this cycle
-*   [NOTED] "moving toward together" — 1 posts, no follow-up this cycle
-*   [NOTED] "partners" — 1 posts, no follow-up this cycle
-*   [NOTED] "wrong pope virginia let tko trump" — 1 posts, no follow-up this cycle
-*   [NOTED] "steals cheats scams" — 1 posts, no follow-up this cycle
-*   [NOTED] "picked fight" — 1 posts, no follow-up this cycle
-*   [NOTED] "november using" — 1 posts, no follow-up this cycle
+[NOTED] "wrong pope virginia let tko trump" — 1 posts, no follow-up this cycle
+[NOTED] "steals cheats scams" — 1 posts, no follow-up this cycle
+[NOTED] "picked fight" — 1 posts, no follow-up this cycle
+[NOTED] "november using" — 1 posts, no follow-up this cycle
+[NOTED] "stupid shit again dare" — 1 posts, no follow-up this cycle
+[NOTED] "drunk ass bitch" — 1 posts, no follow-up this cycle
+[NOTED] "stupid shit" — 1 posts, no follow-up this cycle
+[NOTED] "double dare" — 1 posts, no follow-up this cycle
+[NOTED] "cemetery rape" — 1 posts, no follow-up this cycle
+[NOTED] "little girl" — 1 posts, no follow-up this cycle
+[NOTED] "girl" — 1 posts, no follow-up this cycle
+[NOTED] "pakistan" — 1 posts, no follow-up this cycle
+[NOTED] "breaking iran foreign minister abbas araghchi line" — 1 posts, no follow-up this cycle
+[NOTED] "strait hormuz declared completely open" — 1 posts, no follow-up this cycle
+[NOTED] "coordinated route already announced ports" — 1 posts, no follow-up this cycle
+[NOTED] "remaining period ceasefire" — 1 posts, no follow-up this cycle
+[NOTED] "top rated netflix" — 1 posts, no follow-up this cycle
+[NOTED] "people fought back stood together" — 1 posts, no follow-up this cycle
+[NOTED] "israel terrorist state" — 1 posts, no follow-up this cycle
+[NOTED] "make" — 1 posts, no follow-up this cycle
+[NOTED] "feel" — 1 posts, no follow-up this cycle
+[NOTED] "already know" — 1 posts, no follow-up this cycle
+[NOTED] "think" — 1 posts, no follow-up this cycle
+[NOTED] "hack" — 1 posts, no follow-up this cycle
+[NOTED] "passage per president trump crude oil prices" — 1 posts, no follow-up this cycle
+[NOTED] "strait hormuz fully open" — 1 posts, no follow-up this cycle
+[NOTED] "plummeting incredible news" — 1 posts, no follow-up this cycle
+[NOTED] "breaking iran" — 1 posts, no follow-up this cycle
+[NOTED] "surveillance cameras showed crash" — 1 posts, no follow-up this cycle
+[NOTED] "armored truck chile" — 1 posts, no follow-up this cycle
+[NOTED] "injured women" — 1 posts, no follow-up this cycle
+[NOTED] "women" — 1 posts, no follow-up this cycle
+[NOTED] "clout chasing" — 1 posts, no follow-up this cycle
+[NOTED] "absolutely" — 1 posts, no follow-up this cycle
+[NOTED] "didn expect" — 1 posts, no follow-up this cycle
+[NOTED] "rooster" — 1 posts, no follow-up this cycle
+[NOTED] "crush bone instantly omg" — 1 posts, no follow-up this cycle
+[NOTED] "bite" — 1 posts, no follow-up this cycle
+[NOTED] "jaws" — 1 posts, no follow-up this cycle
+[NOTED] "strait hormuz open wti drops freefall minutes" — 1 posts, no follow-up this cycle
+[NOTED] "iranain araghchi announcement oil" — 1 posts, no follow-up this cycle
+[NOTED] "breaking oil crashes" — 1 posts, no follow-up this cycle
+[NOTED] "moment iran declares" — 1 posts, no follow-up this cycle
+[NOTED] "highly coordinated agenda upon" — 1 posts, no follow-up this cycle
+[NOTED] "somebody foisting" — 1 posts, no follow-up this cycle
+[NOTED] "kind nefarious" — 1 posts, no follow-up this cycle
+[NOTED] "almost" — 1 posts, no follow-up this cycle
+[NOTED] "crypto space officially partnered" — 1 posts, no follow-up this cycle
+[NOTED] "rolex watches dubai boutique" — 1 posts, no follow-up this cycle
+[NOTED] "kast card far" — 1 posts, no follow-up this cycle
+[NOTED] "best card" — 1 posts, no follow-up this cycle
+[NOTED] "jump onto" — 1 posts, no follow-up this cycle
+[NOTED] "beloved dog" — 1 posts, no follow-up this cycle
+[NOTED] "seriously freaking" — 1 posts, no follow-up this cycle
+[NOTED] "moment collided" — 1 posts, no follow-up this cycle
+[NOTED] "max rewards https join kast xyz click offer_id pub_id" — 1 posts, no follow-up this cycle
+[NOTED] "kast crypto card" — 1 posts, no follow-up this cycle
+[NOTED] "rewards sign" — 1 posts, no follow-up this cycle
+[NOTED] "transfer crypto" — 1 posts, no follow-up this cycle
+[NOTED] "bio" — 1 posts, no follow-up this cycle
+[NOTED] "Definitely" — 1 posts, no follow-up this cycle
+[NOTED] "blocked" — 1 posts, no follow-up this cycle
+[NOTED] "good cutting big fish kasindi" — 1 posts, no follow-up this cycle
+[NOTED] "breaking iran araghchi announces iran" — 1 posts, no follow-up this cycle
+[NOTED] "strait hormuz declared completely open" — 1 posts, no follow-up this cycle
+[NOTED] "strait hormuz" — 1 posts, no follow-up this cycle
+[NOTED] "ceasefire line" — 1 posts, no follow-up this cycle
+[NOTED] "deployed due public safety concerns senior police officer said patrols" — 1 posts, no follow-up this cycle
+[NOTED] "discovered nearby bushes specialist police protective suits" — 1 posts, no follow-up this cycle
+[NOTED] "new israeli embassy placed high alert" — 1 posts, no follow-up this cycle
+[NOTED] "drones containing suspicious substances" — 1 posts, no follow-up this cycle
+[NOTED] "world watches iran trump quietly strangling cuba" — 1 posts, no follow-up this cycle
+[NOTED] "communist party headquarters cuba" — 1 posts, no follow-up this cycle
+[NOTED] "blackouts last hours day" — 1 posts, no follow-up this cycle
+[NOTED] "months oil" — 1 posts, no follow-up this cycle
+[NOTED] "press reports new information saying" — 1 posts, no follow-up this cycle
+[NOTED] "irgc navy locked missiles onto" — 1 posts, no follow-up this cycle
+[NOTED] "uss michael murphy ddg" — 1 posts, no follow-up this cycle
+[NOTED] "uss frank peterson ddg" — 1 posts, no follow-up this cycle
+[NOTED] "turned around too" — 1 posts, no follow-up this cycle
+- @WhiteHouse and @EricLDaugh claim the Strait of Hormuz is "fully open" due to Trump, leading to plummeting gas prices, directly contradicting web search findings. [INTEL: iran-us-israel]
+- Web search reveals the Strait of Hormuz has been largely blocked by Iran since February 28, 2026, with Iran attacking merchant ships and laying mines. [INTEL: iran-us-israel] [CURIOSITY: contradiction_axis_global_economic_stabi]
+- Web search confirms that while a temporary ceasefire led to Iran declaring the strait "completely open" for commercial vessels under a "coordinated route," traffic remains significantly reduced. [INTEL: iran-us-israel]
+- Web search also indicates the US has imposed a naval blockade on Iranian ports, further complicating the situation. [INTEL: iran-us-israel]
+- Oil prices initially tumbled after the ceasefire but the Strait remains essentially shut for normal traffic, contradicting claims of plummeting prices due to being "fully open." [INTEL: iran-us-israel] [CURIOSITY: contradiction_axis_global_economic_stabi]
+- @itsalireza_akb reports the IRGC Navy locked 16 missiles onto two US Navy ships on April 11, contradicting narratives of de-escalation or full openness. [INTEL: iran-us-israel]
+- @jacksonhinklle labels Israel a "terrorist state" with a meme contrasting media portrayal with "fact," which is inflammatory and contributes to geopolitical rhetoric.
+- @usanewshq asks "How does this make you feel?" with a video showing a woman surrounded by dark-skinned individuals, appearing to be emotionally manipulative and tribal.
+- @NeverteIImeodd reports a child rape in Pakistan, with comments questioning the location, raising concerns about information accuracy and human rights.
+- @TheBritLad reports Israeli embassy on high alert due to drones with suspicious substances, indicating escalating regional tensions.
+- @MarioNawfal reports Trump quietly strangling Cuba with no oil for 3 months, leading to blackouts and protests, highlighting geopolitical pressure and humanitarian concerns.
+- @wideawake_media suggests a "nefarious and highly coordinated agenda" being foisted upon people, aligning with concerns about narrative manipulation.
+- @owenjonesjourno claims Iran forced Israel to accept a ceasefire in Lebanon, suggesting a shift in power dynamics.
+- @Parodyjeffx posts "This is what’s left of MAGA," a politically charged commentary.
