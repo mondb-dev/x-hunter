@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-17T17:00:27.420Z",
+  "generated_at": "2026-04-17T18:00:36.355Z",
   "method": "mechanical_registry_v1",
   "profiled_at": "2026-04-17T17:00:58.702Z",
   "sources": [
@@ -755,7 +755,7 @@
         ],
         "origin_counts": {
           "feed_buffer": 461,
-          "feed_buffer_reply": 308
+          "feed_buffer_reply": 309
         },
         "distinct_referring_accounts": 367,
         "sample_referring_accounts": [
@@ -1275,9 +1275,9 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-17T16:02:51.882Z",
+      "last_seen_at": "2026-04-17T17:32:09.341Z",
       "discovery": {
-        "distinct_urls": 115,
+        "distinct_urls": 116,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
@@ -1286,9 +1286,9 @@
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxs1cM8PTd_QtRaKpYmDBqTaoVyKJalJfIuu-PaW2zHSU-BfWPq7hhOb9M8JgfyL1usSQ2-naI-6KBvJwgBMdVAh7IQ_yAgTaqqSsLNjBtonmwJ6ztGpNPEWFY0XBLj3YCtCkXYl9FqA=="
         ],
         "origin_counts": {
-          "ontology_evidence": 107,
-          "claim_tracker": 13,
-          "journals": 46
+          "ontology_evidence": 108,
+          "claim_tracker": 14,
+          "journals": 47
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1313,12 +1313,12 @@
         ]
       },
       "claims": {
-        "total": 13,
+        "total": 14,
         "supported": 1,
         "refuted": 1,
-        "contested": 1,
+        "contested": 2,
         "unverified": 10,
-        "resolved_count": 3
+        "resolved_count": 4
       },
       "structural_features": {
         "has_search_paths": true,
@@ -1336,7 +1336,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:115",
+            "distinct_urls:116",
             "distinct_axes:17",
             "origin_types:3"
           ]
@@ -1353,7 +1353,7 @@
           "basis": [
             "supported:1",
             "refuted:1",
-            "contested:1"
+            "contested:2"
           ]
         },
         "profile": {
@@ -1377,14 +1377,14 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:115",
+            "distinct_urls:116",
             "distinct_axes:17",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
             "supported:1",
             "refuted:1",
-            "contested:1"
+            "contested:2"
           ]
         }
       },
@@ -1673,7 +1673,7 @@
       "entity": "Cbsnews",
       "kind": "unknown",
       "first_seen_at": "2026-03-27T23:18:50.928Z",
-      "last_seen_at": "2026-04-17T16:02:51.842Z",
+      "last_seen_at": "2026-04-15T17:06:55.918Z",
       "discovery": {
         "distinct_urls": 5,
         "example_urls": [
@@ -1685,7 +1685,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "claim_tracker": 2,
+          "claim_tracker": 1,
           "journals": 5
         },
         "distinct_referring_accounts": 0,
@@ -1696,12 +1696,12 @@
         ]
       },
       "claims": {
-        "total": 2,
+        "total": 1,
         "supported": 0,
         "refuted": 0,
-        "contested": 1,
+        "contested": 0,
         "unverified": 1,
-        "resolved_count": 1
+        "resolved_count": 0
       },
       "structural_features": {
         "has_search_paths": false,
@@ -1731,11 +1731,9 @@
           ]
         },
         "track_record": {
-          "score": 0.5,
+          "score": null,
           "basis": [
-            "supported:0",
-            "refuted:0",
-            "contested:1"
+            "no_resolved_claims_observed"
           ]
         },
         "profile": {
@@ -1753,8 +1751,8 @@
           ]
         },
         "overall": {
-          "score": 0.44462500000000005,
-          "confidence": 0.47905,
+          "score": 0.43078125,
+          "confidence": 0.22904999999999998,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
@@ -1763,9 +1761,7 @@
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
-            "supported:0",
-            "refuted:0",
-            "contested:1"
+            "track_record_unavailable"
           ]
         }
       },
