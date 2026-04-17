@@ -122,6 +122,54 @@ function scoreWebSearch(webSearchResult) {
   return labels[webSearchResult] ?? 0.0;
 }
 
+// ── Web search boost ─────────────────────────────────────────────────────────
+// When web search confirms a claim with grounded evidence (evidence_urls from
+// credible sources), the confirmation itself IS corroboration and evidence.
+// Without this boost, claims confirmed by Wikipedia + Reuters + Guardian still
+// score 38% because the DB has no corroboration/evidence metadata — the web
+// search already proved those things.
+//
+// Boost conditions (all must be true):
+//   1. Web search returned "confirmed" or "partial" (score >= 0.8)
+//   2. Claim has evidence_urls (grounded, not hallucinated)
+//   3. Source is credible (Tier 1-3) OR source is unknown (not Tier 4-5)
+//
+// Effect: fills corroboration and evidence_quality to at least 0.7 when they
+// would otherwise be 0 due to missing DB metadata.
+
+function applyWebSearchBoost(breakdown, claim) {
+  if (breakdown.web_search < 0.8) return;  // only confirmed/partial
+
+  const evidenceUrls = claim.evidence_urls || claim._evidence_urls || [];
+  if (evidenceUrls.length === 0) return;  // no grounded evidence
+
+  const tier = claim.source_tier;
+  if (tier && tier >= 4) return;  // low-credibility source, don't boost
+
+  // Count how many evidence URLs are from high-tier domains
+  let highTierCount = 0;
+  for (const url of evidenceUrls) {
+    try {
+      const domain = new URL(url).hostname.replace(/^www\./, '');
+      if (HIGH_TIER_DOMAINS.has(domain)) highTierCount++;
+    } catch {}
+  }
+
+  // Strong boost: confirmed + multiple high-tier sources
+  // Moderate boost: confirmed + any evidence URLs
+  const boostLevel = highTierCount >= 2 ? 0.9 : highTierCount >= 1 ? 0.8 : 0.7;
+
+  // Lift corroboration — web search found supporting sources
+  if (breakdown.corroboration < boostLevel) {
+    breakdown.corroboration = boostLevel;
+  }
+
+  // Lift evidence quality — web search provided grounded URLs
+  if (breakdown.evidence_quality < boostLevel) {
+    breakdown.evidence_quality = boostLevel;
+  }
+}
+
 // ── Main scorer ─────────────────────────────────────────────────────────────
 
 /**
@@ -134,6 +182,7 @@ function scoreWebSearch(webSearchResult) {
  *   - cited_url {string|null}
  *   - cited_domain {string|null}
  *   - web_search_result {number|string|null} — set by verification pipeline
+ *   - evidence_urls {string[]|null} — set by web search (grounding URLs)
  *
  * @param {object} sourceData — optional enrichment from source_registry:
  *   - ng_score {number|null}
@@ -153,6 +202,9 @@ function scoreClaim(claim, sourceData = {}) {
     cross_source:     scoreCrossSource(claim.corroborating_count, claim.contradicting_count),
     web_search:       scoreWebSearch(claim.web_search_result),
   };
+
+  // Apply web search boost before computing weighted sum
+  applyWebSearchBoost(breakdown, { ...claim, source_tier: tier });
 
   // Web search refutation overrides the normal scoring
   const webRefuted = breakdown.web_search < 0;
@@ -175,8 +227,10 @@ function scoreClaim(claim, sourceData = {}) {
     suggested_status = 'refuted';
   } else if (confidence >= STATUS_THRESHOLDS.supported && breakdown.web_search >= 0.8) {
     suggested_status = 'supported';
-  } else if (confidence <= STATUS_THRESHOLDS.refuted && hasWebEvidence) {
-    // Only refute if we actually searched and found counter-evidence
+  } else if (confidence <= STATUS_THRESHOLDS.refuted && breakdown.web_search < 0) {
+    // Only refute via low confidence if web search actively found counter-evidence.
+    // "Inconclusive" (0.5) or "no_results" (0.3) is NOT refutation — it just means
+    // we don't have enough data, which is "unverified".
     suggested_status = 'refuted';
   } else if (claim.contradicting_count > 0 && claim.corroborating_count > 0) {
     suggested_status = 'contested';

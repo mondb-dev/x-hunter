@@ -327,6 +327,7 @@ async function run() {
 
     if (searchData) {
       claim.web_search_result = searchData.web_search_result;
+      claim.evidence_urls = searchData.evidence_urls || [];
       const updatedResult = scoreClaim(claim, sourceData);
 
       log(`  web result: ${searchData.web_search_result} → confidence ${updatedResult.confidence.toFixed(3)} → ${updatedResult.suggested_status}`);

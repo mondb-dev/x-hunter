@@ -24,7 +24,7 @@ const path = require('path');
  */
 async function loadSourceData(handle, idb, stateDir, isPostgres = false) {
   if (!handle) return {};
-  handle = handle.replace(/^@/, '');
+  handle = handle.replace(/^@/, '').toLowerCase();
 
   // Try intelligence.db first
   if (idb) {
