@@ -270,10 +270,17 @@ Write each file as a fenced code block with the staging path as header:
   "files": [
     { "path": "relative/path.js", "action": "create|modify" }
   ],
-  "test_commands": ["node runner/new_script.js --dry-run"],
+  "test_commands": ["node --check runner/new_script.js"],
   "rollback_safe": true
 }
 \`\`\`
+
+IMPORTANT — test_commands constraints (violations cause immediate pipeline failure):
+- Only \`node\` commands are allowed. No shell commands (echo, bash, sh, etc.).
+- The ONLY permitted flag is \`--check\` (syntax check). No \`-e\`, no \`--dry-run\`, no other flags.
+- The final argument must be a relative file path. No inline scripts.
+- Valid: \`node --check runner/foo.js\` or \`node runner/foo.js\`
+- Do NOT use \`node -e "..."\` under any circumstances — it will be blocked.
 
 Write the complete, working code now. Do not explain — just produce the files.`;
 
