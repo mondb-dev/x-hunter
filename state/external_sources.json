@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-17T10:00:19.133Z",
+  "generated_at": "2026-04-17T11:00:20.638Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-17T10:01:08.235Z",
+  "profiled_at": "2026-04-17T11:00:52.509Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -895,7 +895,7 @@
       "first_seen_at": "2026-03-31T09:30:40.000Z",
       "last_seen_at": "2026-04-17T08:06:45.000Z",
       "discovery": {
-        "distinct_urls": 711,
+        "distinct_urls": 713,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -904,10 +904,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 449,
-          "feed_buffer_reply": 301
+          "feed_buffer": 450,
+          "feed_buffer_reply": 302
         },
-        "distinct_referring_accounts": 356,
+        "distinct_referring_accounts": 358,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -945,7 +945,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:711",
+            "distinct_urls:713",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -953,7 +953,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:356",
+            "referring_accounts:358",
             "origin_types:2"
           ]
         },
@@ -983,10 +983,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:711",
+            "distinct_urls:713",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:356",
+            "referring_accounts:358",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1673,7 +1673,7 @@
       "entity": "Cbsnews",
       "kind": "unknown",
       "first_seen_at": "2026-03-27T23:18:50.928Z",
-      "last_seen_at": "2026-04-17T09:33:57.364Z",
+      "last_seen_at": "2026-04-17T10:02:54.188Z",
       "discovery": {
         "distinct_urls": 5,
         "example_urls": [
@@ -13515,7 +13515,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T10:24:34.970Z",
+        "fetched_at": "2026-04-17T11:00:50.459Z",
         "homepage_url": "https://fooletfs.com/",
         "example_url": "https://fooletfs.com/our-funds/mfig?utm_source=x&utm_medium=paid_social&utm_campaign=mfig&utm_term=mfig-orange-v1&twclid=29gqh1517fetrd30y8lm22lkth",
         "homepage_status": 200,
@@ -15467,7 +15467,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T10:24:36.874Z",
+        "fetched_at": "2026-04-17T11:00:52.331Z",
         "homepage_url": "https://artprice.com/",
         "example_url": "https://www.artprice.com/artprice-news/14183/world-record-a-painting-by-raja-ravi-varma-sold-for-nearly-18-million-dollars-in-mumbai?utm_medium=artprice-news&utm_source=X&utm_campaign=news&utm_content=14183&twclid=23wn7ayvhifg7vr11g3elt7wk3",
         "homepage_status": 200,
@@ -20984,6 +20984,128 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 5,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "usekeel.io",
+      "entity": "Usekeel Io",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-17T05:49:41.000Z",
+      "last_seen_at": "2026-04-17T05:49:41.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://usekeel.io/run?twclid=2bgfmx5me1bzmqklq02dv94p1e"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "usekeelio"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.12,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-17T11:00:52.509Z",
+        "homepage_url": "https://usekeel.io/",
+        "example_url": "https://usekeel.io/run?twclid=2bgfmx5me1bzmqklq02dv94p1e",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://usekeel.io/",
+        "example_final_url": "https://usekeel.io/run?twclid=2bgfmx5me1bzmqklq02dv94p1e",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
