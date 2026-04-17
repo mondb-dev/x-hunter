@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-17T03:30:10.766Z",
+  "generated_at": "2026-04-17T04:00:10.253Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-17T03:30:41.402Z",
+  "profiled_at": "2026-04-17T04:00:41.693Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -623,9 +623,9 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-17T03:01:20.589Z",
+      "last_seen_at": "2026-04-17T00:02:55.255Z",
       "discovery": {
-        "distinct_urls": 111,
+        "distinct_urls": 110,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
@@ -636,7 +636,7 @@
         "origin_counts": {
           "ontology_evidence": 103,
           "claim_tracker": 11,
-          "journals": 46
+          "journals": 45
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -684,7 +684,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:111",
+            "distinct_urls:110",
             "distinct_axes:17",
             "origin_types:3"
           ]
@@ -725,7 +725,7 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:111",
+            "distinct_urls:110",
             "distinct_axes:17",
             "origin_types:3",
             "referring_accounts:0",
@@ -893,9 +893,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-17T02:05:16.000Z",
+      "last_seen_at": "2026-04-17T02:30:09.000Z",
       "discovery": {
-        "distinct_urls": 699,
+        "distinct_urls": 703,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -904,10 +904,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 444,
-          "feed_buffer_reply": 291
+          "feed_buffer": 446,
+          "feed_buffer_reply": 293
         },
-        "distinct_referring_accounts": 348,
+        "distinct_referring_accounts": 349,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -945,7 +945,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:699",
+            "distinct_urls:703",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -953,7 +953,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:348",
+            "referring_accounts:349",
             "origin_types:2"
           ]
         },
@@ -983,10 +983,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:699",
+            "distinct_urls:703",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:348",
+            "referring_accounts:349",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1031,7 +1031,7 @@
       "first_seen_at": "2026-04-03T01:20:27.000Z",
       "last_seen_at": "2026-04-16T08:27:51.000Z",
       "discovery": {
-        "distinct_urls": 96,
+        "distinct_urls": 97,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -1040,10 +1040,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 93,
+          "feed_buffer_reply": 94,
           "feed_buffer": 3
         },
-        "distinct_referring_accounts": 79,
+        "distinct_referring_accounts": 80,
         "sample_referring_accounts": [
           "100ohiostate",
           "50hidalgo47",
@@ -1081,7 +1081,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:96",
+            "distinct_urls:97",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1089,7 +1089,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:79",
+            "referring_accounts:80",
             "origin_types:2"
           ]
         },
@@ -1119,10 +1119,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:96",
+            "distinct_urls:97",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:79",
+            "referring_accounts:80",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -2657,7 +2657,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T04:00:02.519Z",
+        "fetched_at": "2026-04-17T04:00:41.455Z",
         "homepage_url": "https://combos.fun/",
         "example_url": "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2aswwo64b7owkoq09axl1gyba6",
         "homepage_status": 200,
@@ -8735,7 +8735,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T04:00:02.795Z",
+        "fetched_at": "2026-04-17T04:00:41.693Z",
         "homepage_url": "https://cointracker.io/",
         "example_url": "https://www.cointracker.io/?utm_source=x&utm_medium=paid_social&utm_campaign=PDM_PaidSocial_X_Awareness_Reach&twclid=2db4ytuyg7wyekq6zcdaap0vjo",
         "homepage_status": 403,
