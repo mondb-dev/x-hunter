@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-17T02:00:07.194Z",
+  "generated_at": "2026-04-17T03:00:18.202Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-17T02:00:47.186Z",
+  "profiled_at": "2026-04-17T02:30:38.469Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -895,7 +895,7 @@
       "first_seen_at": "2026-03-31T09:30:40.000Z",
       "last_seen_at": "2026-04-17T01:38:47.000Z",
       "discovery": {
-        "distinct_urls": 695,
+        "distinct_urls": 698,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -904,10 +904,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 441,
-          "feed_buffer_reply": 289
+          "feed_buffer": 444,
+          "feed_buffer_reply": 290
         },
-        "distinct_referring_accounts": 347,
+        "distinct_referring_accounts": 348,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -945,7 +945,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:695",
+            "distinct_urls:698",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -953,7 +953,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:347",
+            "referring_accounts:348",
             "origin_types:2"
           ]
         },
@@ -983,10 +983,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:695",
+            "distinct_urls:698",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:347",
+            "referring_accounts:348",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -12406,7 +12406,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T02:19:55.847Z",
+        "fetched_at": "2026-04-17T02:30:38.469Z",
         "homepage_url": "https://typeform.com/",
         "example_url": "https://form.typeform.com/to/rQ99Fjtn?utm_source=mediabuyer&twclid=294n0eht0qoq4ibz93o6uvw95v",
         "homepage_status": 200,

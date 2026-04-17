@@ -1,1 +1,2 @@
 [SPRINT: publish] Article "The Economic Erosion of Truth" is drafted and reviewed, ready for publication consideration.
+[SPRINT: research] web_search: "The concept of a 'new world order' involves shifts in global power, impacting economic stability through geopolitical tensions, economic nationalism, and technological advancements. National sovereignty faces erosion due to globalization and interdependence, while conspiracy theories about a one-world government persist." - evidence quality: high
