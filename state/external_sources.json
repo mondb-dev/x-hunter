@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-17T20:25:31.791Z",
+  "generated_at": "2026-04-17T20:50:40.839Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-17T20:01:03.413Z",
+  "profiled_at": "2026-04-17T20:51:11.808Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -743,9 +743,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-17T16:51:41.000Z",
+      "last_seen_at": "2026-04-17T19:28:14.000Z",
       "discovery": {
-        "distinct_urls": 732,
+        "distinct_urls": 733,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -754,7 +754,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 462,
+          "feed_buffer": 463,
           "feed_buffer_reply": 311
         },
         "distinct_referring_accounts": 370,
@@ -795,7 +795,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:732",
+            "distinct_urls:733",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -833,7 +833,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:732",
+            "distinct_urls:733",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:370",
@@ -1287,7 +1287,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 110,
-          "claim_tracker": 14,
+          "claim_tracker": 13,
           "journals": 47
         },
         "distinct_referring_accounts": 0,
@@ -1313,12 +1313,12 @@
         ]
       },
       "claims": {
-        "total": 14,
+        "total": 13,
         "supported": 1,
         "refuted": 1,
-        "contested": 2,
+        "contested": 1,
         "unverified": 10,
-        "resolved_count": 4
+        "resolved_count": 3
       },
       "structural_features": {
         "has_search_paths": true,
@@ -1353,7 +1353,7 @@
           "basis": [
             "supported:1",
             "refuted:1",
-            "contested:2"
+            "contested:1"
           ]
         },
         "profile": {
@@ -1384,7 +1384,7 @@
             "origin_types:3",
             "supported:1",
             "refuted:1",
-            "contested:2"
+            "contested:1"
           ]
         }
       },
@@ -1794,6 +1794,137 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "geopoliticalfutures.com",
+      "entity": "Geopoliticalfutures",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-17T20:25:00Z",
+      "last_seen_at": "2026-04-17T20:28:45.186Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.geopoliticalfutures.com/article/the-strait-of-hormuz-reopens-with-conditions/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 1,
+          "claim_tracker": 1,
+          "journals": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_epistemic_integrity",
+          "axis_national_sovereignty_v_intl_law_v1"
+        ]
+      },
+      "claims": {
+        "total": 1,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 1,
+        "unverified": 0,
+        "resolved_count": 1
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.3258333333333333,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:2",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.26249999999999996,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": 0.5,
+          "basis": [
+            "supported:0",
+            "refuted:0",
+            "contested:1"
+          ]
+        },
+        "overall": {
+          "score": 0.44070833333333337,
+          "confidence": 0.36455,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:1",
+            "distinct_axes:2",
+            "origin_types:3",
+            "referring_accounts:0",
+            "origin_types:3",
+            "supported:0",
+            "refuted:0",
+            "contested:1"
+          ]
+        },
+        "profile": {
+          "score": 0.36,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:false",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:6",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-17T20:51:11.808Z",
+        "homepage_url": "https://geopoliticalfutures.com/",
+        "example_url": "https://www.geopoliticalfutures.com/article/the-strait-of-hormuz-reopens-with-conditions/",
+        "homepage_status": 200,
+        "example_status": 404,
+        "homepage_final_url": "https://geopoliticalfutures.com/",
+        "example_final_url": "https://geopoliticalfutures.com/article/the-strait-of-hormuz-reopens-with-conditions/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 6,
           "opinion_marker": false
         }
       }
@@ -7049,6 +7180,131 @@
       }
     },
     {
+      "domain": "byteplus.com",
+      "entity": "Byteplus",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-15T13:30:37.000Z",
+      "last_seen_at": "2026-04-17T14:35:00.000Z",
+      "discovery": {
+        "distinct_urls": 4,
+        "example_urls": [
+          "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
+          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=2dnuttry4m02uyeswjtnkyw6cq",
+          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=29q4voamvbgxgyt2c5thxlhg3x",
+          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=29ug61xxzesjlbg5gzuvre58jz"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 4
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "byteplusglobal"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.17666666666666664,
+          "basis": [
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.12,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3663802083333333,
+          "confidence": 0.16722499999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-16T04:00:14.132Z",
+        "homepage_url": "https://byteplus.com/",
+        "example_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.byteplus.com/en",
+        "example_final_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "georgetown.edu",
       "entity": "Georgetown",
       "kind": "unknown",
@@ -7910,130 +8166,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 5,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "byteplus.com",
-      "entity": "Byteplus",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-15T13:30:37.000Z",
-      "last_seen_at": "2026-04-17T14:35:00.000Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
-          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=2dnuttry4m02uyeswjtnkyw6cq",
-          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=29q4voamvbgxgyt2c5thxlhg3x"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 3
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "byteplusglobal"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.1475,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.12,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.36000000000000004,
-          "confidence": 0.1386,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-16T04:00:14.132Z",
-        "homepage_url": "https://byteplus.com/",
-        "example_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.byteplus.com/en",
-        "example_final_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 5,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
