@@ -37,18 +37,28 @@ function humanDelay(min, max) {
 async function typeIntoCompose(page, text, selector) {
   await page.click(selector);
   await sleep(300);
-  const inserted = await page.evaluate((txt, sel) => {
+  await page.evaluate((txt, sel) => {
     const el = document.querySelector(sel);
-    if (!el) return null;
+    if (!el) return;
     el.focus();
     document.execCommand('insertText', false, txt);
-    return el.textContent;
   }, text, selector);
+  await sleep(1200); // wait for React to process the DOM mutation
+  const inserted = await page.evaluate((sel) => {
+    const el = document.querySelector(sel);
+    return el ? el.innerText.trim() : '';
+  }, selector);
   if (!inserted || inserted.length < text.length * 0.8) {
+    // Clear first to avoid duplication, then keyboard fallback
+    await page.evaluate((sel) => {
+      const el = document.querySelector(sel);
+      if (el) { el.focus(); document.execCommand('selectAll'); document.execCommand('delete'); }
+    }, selector);
+    await sleep(300);
     await page.click(selector);
     await page.keyboard.type(text, { delay: 20 });
+    await sleep(800);
   }
-  await sleep(500);
 }
 
 async function postTweet(page, text) {

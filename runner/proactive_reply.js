@@ -27,8 +27,8 @@ const STATE_FILE = path.join(config.STATE_DIR, 'proactive_reply_state.json');
 const INTERACTIONS = path.join(config.STATE_DIR, 'interactions.json');
 const OWN_HANDLE = 'SebastianHunts';
 
-const MAX_PER_DAY = 4;
-const MIN_GAP_MS  = 60 * 60 * 1000;
+const MAX_PER_DAY = 8;
+const MIN_GAP_MS  = 30 * 60 * 1000;
 const REPLY_BTN   = '[data-testid="reply"]';
 const COMPOSE_BOX = '[data-testid="tweetTextarea_0"]';
 const POST_BUTTON = '[data-testid="tweetButton"], [data-testid="tweetButtonInline"]';
@@ -95,11 +95,15 @@ function parseDigestForCandidates() {
 
     if (!url) continue;
     if (handle.toLowerCase() === OWN_HANDLE.toLowerCase()) continue;
-    if (likes < 200) continue;
+
+    // Lower threshold for factual claim posts (numbers, stats, attributions, quotes)
+    const isFactualClaim = /\d+%|\$[\d.]+[BMK]?|\d+[\s,]\d{3}|said|claims?|according|report|study|data|source/.test(text);
+    const minLikes = isFactualClaim ? 50 : 200;
+    if (likes < minLikes) continue;
 
     candidates.push({
-      handle, text, url, likes, velocity, trust, novelty,
-      score: likes * 0.4 + velocity * 0.3 + novelty * 100 * 0.3,
+      handle, text, url, likes, velocity, trust, novelty, isFactualClaim,
+      score: likes * 0.4 + velocity * 0.3 + novelty * 100 * 0.3 + (isFactualClaim ? 50 : 0),
     });
   }
 
@@ -187,23 +191,27 @@ async function draftReply(candidate, verification) {
     recallBlock +
     verificationBlock +
     '\n\nYou are proactively engaging with a post on X. This is outbound -- nobody asked you.\n' +
-    'Your goal: insert Sebastian\'s voice into a high-visibility conversation.\n\n' +
+    'Your goal: insert Sebastian\'s voice into a high-visibility conversation, especially to correct\n' +
+    'wrong claims with solid evidence from your research and investigations.\n\n' +
     'The post:\n' +
     '  @' + candidate.handle + ': "' + candidate.text + '"\n' +
-    '  (' + candidate.likes + ' likes)\n\n' +
-    'Draft a reply (max 200 chars) that:\n' +
-    '1. Takes a clear position -- agree, disagree, or add a specific nuance\n' +
-    '2. References something concrete (a fact, a source, a contradiction you know about)\n' +
-    '3. Is direct and confident. No hedging ("interesting point", "worth noting")\n' +
-    '4. Sounds like a sharp person contributing, not a bot responding\n' +
-    '5. Does NOT start with "I" -- lead with the substance\n' +
+    '  (' + candidate.likes + ' likes' + (candidate.isFactualClaim ? ', contains factual claim' : '') + ')\n\n' +
+    'Draft a reply (max 260 chars) that:\n' +
+    '1. PRIORITY: If this post makes a specific factual claim that is wrong or unverified, CORRECT IT.\n' +
+    '   Lead with the correct information. Name the source. Be direct — not "well actually" but just the fact.\n' +
+    '2. If the claim checks out, add what supports it or what context makes it more precise.\n' +
+    '3. If there is nothing factual to correct or confirm, take a clear position with a specific detail.\n' +
+    '4. Is direct and confident. No hedging ("interesting point", "worth noting", "raises questions").\n' +
+    '5. Sounds like a sharp person contributing, not a bot responding. No filler.\n' +
+    '6. Does NOT start with "I" — lead with the substance or the fact.\n' +
     (verification
-      ? '6. If the claim is refuted or unverified, call it out with evidence. If supported, back it.\n'
+      ? '7. The verification result below gives you evidence. Use it. If refuted, say so with the specific counter-evidence.\n'
       : '') +
     '\nBAD: "Great point about the tax system. Worth investigating further."\n' +
     'BAD: "This raises important questions about corporate accountability."\n' +
     'GOOD: "Zero in federal tax but $2.3B in lobbying spend. The money goes somewhere -- just not to the public."\n' +
-    'GOOD: "Lavrov calling Russia a stabilizer while occupying Crimea. Words only work when the record is clean."\n\n' +
+    'GOOD: "Lavrov calling Russia a stabilizer while occupying Crimea. Words only work when the record is clean."\n' +
+    'GOOD: "That number is wrong. IMF data shows 2.1%, not 4.3%. The report they cited was from 2019."\n\n' +
     'Return ONLY the reply text. Nothing else. If you cannot write something genuinely worth posting, return SKIP.';
 
   const { getAccessToken, getProjectConfig } = require('./gcp_auth');
@@ -222,7 +230,7 @@ async function draftReply(candidate, verification) {
   });
 
   const text = (res.text || '').trim();
-  if (!text || text === 'SKIP' || text.length > 220) return null;
+  if (!text || text === 'SKIP' || text.length > 270) return null;
   return text;
 }
 
@@ -250,19 +258,29 @@ async function postReplyViaCDP(page, tweetUrl, replyText) {
   await page.click(COMPOSE_BOX);
   await sleep(300);
 
-  const inserted = await page.evaluate((txt, sel) => {
+  await page.evaluate((txt, sel) => {
     const el = document.querySelector(sel);
-    if (!el) return null;
+    if (!el) return;
     el.focus();
     document.execCommand('insertText', false, txt);
-    return el.textContent;
   }, replyText, COMPOSE_BOX);
+  await sleep(1200); // wait for React to process the DOM mutation
+
+  const inserted = await page.evaluate((sel) => {
+    const el = document.querySelector(sel);
+    return el ? el.innerText.trim() : '';
+  }, COMPOSE_BOX);
 
   if (!inserted || inserted.length < replyText.length * 0.8) {
+    await page.evaluate((sel) => {
+      const el = document.querySelector(sel);
+      if (el) { el.focus(); document.execCommand('selectAll'); document.execCommand('delete'); }
+    }, COMPOSE_BOX);
+    await sleep(300);
     await page.click(COMPOSE_BOX);
     await page.keyboard.type(replyText, { delay: 20 });
+    await sleep(800);
   }
-  await sleep(800);
 
   await page.click(POST_BUTTON);
   await sleep(5000);

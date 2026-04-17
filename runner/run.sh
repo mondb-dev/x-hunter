@@ -572,6 +572,9 @@ while true; do
     # ── Process pending replies after each browse cycle ───────────────────
     node "$PROJECT_ROOT/scraper/reply.js" 2>&1 || true
 
+    # ── Proactive outbound replies (no time gate — run during silent hours too) ─
+    node "$PROJECT_ROOT/runner/proactive_reply.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+
   # ── Quote cycle: find one post worth quoting + sharp commentary ──────────
   elif [ "$CYCLE_TYPE" = "QUOTE" ]; then
     AGENT_MSG=$(CYCLE=$CYCLE DAY_NUMBER=$DAY_NUMBER TODAY=$TODAY NOW="$NOW" HOUR=$HOUR node "$SCRIPT_DIR/lib/prompts/quote.js")
