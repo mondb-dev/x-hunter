@@ -179,8 +179,10 @@ function prioritize(claims) {
  */
 async function webSearchVerify(claimText) {
   try {
-    const { getAccessToken, getProjectConfig } = require('../gcp_auth');
-    const token = await getAccessToken();
+    const { getTokenForKey, getProjectConfig } = require('../gcp_auth');
+    const builderKey = process.env.BUILDER_CREDENTIALS;
+    if (!builderKey) throw new Error('BUILDER_CREDENTIALS not set');
+    const token = await getTokenForKey(builderKey);
     const { project, location } = getProjectConfig();
 
     const url = `https://${location}-aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/google/models/gemini-2.5-flash:generateContent`;
