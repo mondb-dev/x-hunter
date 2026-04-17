@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-17T14:53:06.249Z",
+  "generated_at": "2026-04-17T16:03:47.812Z",
   "stats": {
-    "total": 34,
+    "total": 46,
     "supported": 0,
-    "refuted": 3,
+    "refuted": 4,
     "contested": 0,
-    "unverified": 31,
+    "unverified": 42,
     "expired": 0
   },
   "claims": [
@@ -37,6 +37,45 @@
       "dissenting_sources": [],
       "framing_analysis": null,
       "web_search_summary": "The Federal Reserve did not announce a 0.5% interest rate increase in April 2026. The Federal Open Market Committee (FOMC) meeting in April 2026 (scheduled for April 28-29) is widely expected to result in no change to interest rates, maintaining the target range at 3.50%-3.75%. While there were some discussions about potential rate hikes earlier in the year due to inflation concerns, the overwhelming consensus for April is a hold."
+    },
+    {
+      "claim_id": "claim_101",
+      "claim_text": "USS Eisenhower aircraft carrier was hit by Iran days before the ceasefire.",
+      "status": "refuted",
+      "confidence_score": 0.45,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": -1
+      },
+      "source_handle": "rt_com",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_epistemic_integrity",
+      "verification_count": 1,
+      "verified_at": "2026-04-17T15:44:32.641Z",
+      "created_at": "2026-04-17T11:03:29.172Z",
+      "original_source": "Houthi rebels and Iranian state media",
+      "claim_date": "2024-05",
+      "supporting_sources": [
+        {
+          "name": "Houthi rebels and Iranian state media claimed attacks on the USS Eisenhower in May-June 2024, asserting direct hits and even sinking the vessel.",
+          "stance": ""
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "U.S. officials and the Navy consistently denied these Houthi claims, stating there was no damage or injuries to the USS Eisenhower. CBS News reported that these claims were part of a disinformation campaign using fake footage and doctored images. More recently, in April 2026, the USS Eisenhower experienced a small internal fire during maintenance at Norfolk Naval Shipyard, which was not an attack.",
+          "stance": ""
+        }
+      ],
+      "framing_analysis": "The claim is misleading as it attributes unverified attacks by a proxy group directly to Iran and misrepresents an internal ship incident as an external attack. It also uses the vague 'days before the ceasefire' to create a sense of urgency and connection to broader geopolitical events without factual basis for the 'hit'.",
+      "web_search_summary": "The claim that the USS Eisenhower aircraft carrier was hit by Iran is false. While Iranian-backed Houthi rebels claimed to have attacked the carrier in May-June 2024, these claims were widely debunked as disinformation by U.S. officials and credible news organizations. The USS Eisenhower recently experienced a small internal fire on April 14, 2026, during scheduled maintenance, which was not an attack by Iran."
     },
     {
       "claim_id": "live_7f7bf175bd",
@@ -95,6 +134,79 @@
       "dissenting_sources": [],
       "framing_analysis": null,
       "web_search_summary": "The claim that South Africa has more anti-White and anti-Asian laws than anti-Black laws under Apartheid, constituting 'Apartheid 2.0,' is refuted. While there are contemporary laws in South Africa aimed at addressing historical racial inequalities, such as Black Economic Empowerment (BEE) policies, these are fundamentally different from the systemic, institutionalized racial segregation and oppression of Apartheid. Apartheid-era laws stripped Black South Africans of citizenship, land, and basic human rights, which is not comparable to current affirmative action policies. The term \"Apartheid 2.0\" has been used by some, including Elon Musk and Donald Trump, to describe current South African policies, particularly those perceived as disadvantaging white South Africans, but this framing is widely rejected by the South African government and many analysts as offensive and inaccurate."
+    },
+    {
+      "claim_id": "claim_104",
+      "claim_text": "Two young men killed by Basij and Revolutionary Guards forces at checkpoints in Iran",
+      "status": "unverified",
+      "confidence_score": 0.62,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.7,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": "iranintl_en",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_eje_accountability_v1",
+      "verification_count": 2,
+      "verified_at": "2026-04-17T16:03:47.809Z",
+      "created_at": "2026-04-17T12:32:31.975Z",
+      "original_source": "Iran International",
+      "claim_date": "March 2026",
+      "supporting_sources": [
+        {
+          "name": "Iran International, IranWire, Amnesty International, The Jerusalem Post, India Today, Sky News",
+          "stance": ""
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed factually, reporting alleged events without apparent bias.",
+      "web_search_summary": "Multiple reports indicate that Basij and Revolutionary Guards forces have killed young men at checkpoints in Iran. Iran International specifically reported two such deaths in recent weeks, identifying Morteza Madadi, who was shot dead on March 8, 2026, and another young man in Ramsar who died after being attacked with a stun device at a checkpoint. Other reports from 2025 also detail similar incidents involving young men killed at checkpoints by these forces."
+    },
+    {
+      "claim_id": "claim_105",
+      "claim_text": "Solar farm reduced to toxic debris by bad weather, highlighting fragility of solar technology",
+      "status": "unverified",
+      "confidence_score": 0.6,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.7,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 0.8
+      },
+      "source_handle": "wideawake_media",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_environmental_policy_v_economic_v1",
+      "verification_count": 2,
+      "verified_at": "2026-04-17T16:03:47.810Z",
+      "created_at": "2026-04-17T12:32:31.985Z",
+      "original_source": "Local residents and some news outlets (e.g., Fox News affiliate KRIV-TV) initially reported concerns about toxic leakage following the hailstorm.",
+      "claim_date": "2024-03",
+      "supporting_sources": [
+        {
+          "name": "Dallas Express, Power The Future, Fox News affiliate KRIV-TV, Newsweek, PatSnap Eureka, Sandia National Laboratories, MDPI",
+          "stance": ""
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "Solar Energy Industries Association (SEIA), Copenhagen Infrastructure Partners (CIP), PV Magazine, SOLARCYCLE",
+          "stance": ""
+        }
+      ],
+      "framing_analysis": "The claim accurately points to the fragility of solar technology in the face of severe weather, as demonstrated by the significant damage to the solar farm. However, the framing regarding 'toxic debris' is misleading, as industry experts and the farm owner refuted immediate widespread toxic leakage from the specific incident, although solar panels can contain hazardous materials that require proper management at end-of-life or after catastrophic damage.",
+      "web_search_summary": "A solar farm in Texas was severely damaged by a hailstorm in March 2024, leading to concerns among some residents and news outlets about toxic chemicals leaking from broken panels. While the incident highlights the vulnerability of solar technology to extreme weather, claims of immediate widespread toxic debris were largely refuted by industry experts. They stated the damaged panels were silicon-based, not containing highly toxic cadmium telluride, and were constructed to prevent leakage even if broken."
     },
     {
       "claim_id": "claim_10",
@@ -221,6 +333,45 @@
       "dissenting_sources": [],
       "framing_analysis": null,
       "web_search_summary": "Russia has deployed hypersonic missiles against Ukraine in 2026. Specifically, Russia used its Oreshnik hypersonic missile in January 2026, targeting critical infrastructure near Lviv in western Ukraine. This was reportedly the second time Russia had used the Oreshnik against Ukraine, with the first instance occurring in November 2024. Additionally, in February 2026, the Ukrainian Air Force reported that Russia launched four Zircon hypersonic anti-ship missiles at Ukraine."
+    },
+    {
+      "claim_id": "claim_100",
+      "claim_text": "USS Eisenhower aircraft carrier caught fire during maintenance at Norfolk Naval Shipyard, with sailors injured.",
+      "status": "unverified",
+      "confidence_score": 0.45,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": "rt_com",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_epistemic_integrity",
+      "verification_count": 2,
+      "verified_at": "2026-04-17T16:03:47.809Z",
+      "created_at": "2026-04-17T11:03:29.119Z",
+      "original_source": "The U.S. Navy, through spokespersons, confirmed the incident to various news outlets, with USNI News often cited as an initial reporter.",
+      "claim_date": "2026-04-14",
+      "supporting_sources": [
+        {
+          "name": "Multiple news outlets including Times Now, Forbes, 13News Now, Naval Today, Caliber.Az, Rolling Out, RealClearDefense, and 19FortyFive reported on the incident, citing U.S. Navy officials and USNI News.",
+          "stance": ""
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "No dissenting sources were found.",
+          "stance": ""
+        }
+      ],
+      "framing_analysis": "The claim is framed factually and accurately reflects the reported event without apparent bias or misleading language.",
+      "web_search_summary": "The USS Dwight D. Eisenhower aircraft carrier experienced a small fire on April 14, 2026, while undergoing scheduled maintenance at Norfolk Naval Shipyard. The fire was quickly contained by the ship's crew and shipyard personnel. Initial reports indicated three sailors were injured, with later updates stating eight sailors were treated, all of whom returned to full duty."
     },
     {
       "claim_id": "claim_4",
@@ -729,6 +880,45 @@
       "web_search_summary": "Israeli politician Yitzhak Kroizer stated in the Knesset that \"there are no innocent civilians, no innocent children in Jenin\" and that he supports IDF soldiers \"in every situation, even if the collateral damage includes children or women, it doesn't matter to me.\" These statements were made in defense of Israeli forces after a Palestinian family, including two children, were killed in Jenin."
     },
     {
+      "claim_id": "claim_102",
+      "claim_text": "Black family celebrates after the daughter gets approved for food stamps",
+      "status": "unverified",
+      "confidence_score": 0.305,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0.3
+      },
+      "source_handle": "ianonpatriot",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_epistemic_integrity",
+      "verification_count": 2,
+      "verified_at": "2026-04-17T16:03:47.809Z",
+      "created_at": "2026-04-17T12:32:31.947Z",
+      "original_source": "Unknown",
+      "claim_date": "Unknown",
+      "supporting_sources": [
+        {
+          "name": "N/A",
+          "stance": ""
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "N/A",
+          "stance": ""
+        }
+      ],
+      "framing_analysis": "The claim itself presents a positive scenario. However, the lack of supporting evidence and the prevalence of negative or stereotypical content related to Black individuals and food stamps in search results suggest that this claim, if it exists, is not widely reported or may be overshadowed by other narratives.",
+      "web_search_summary": "No evidence was found to support the claim of a \"Black family celebrating after the daughter gets approved for food stamps.\" Search results predominantly feature discussions and viral videos related to food stamp cuts, alleged fraud, or AI-generated content depicting Black women in stereotypical and often negative ways concerning EBT benefits."
+    },
+    {
       "claim_id": "claim_36",
       "claim_text": "US-sanctioned Chinese tanker Rich Starry successfully transited the Strait of Hormuz despite US naval blockade.",
       "status": "unverified",
@@ -961,6 +1151,122 @@
       "web_search_summary": null
     },
     {
+      "claim_id": "claim_103",
+      "claim_text": "EU President Ursula Von Der Leyen states EU protects freedom of speech, yet a man is arrested for speaking out against her",
+      "status": "unverified",
+      "confidence_score": 0.275,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": "basilthegreat",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_power_accountability",
+      "verification_count": 2,
+      "verified_at": "2026-04-17T16:03:47.809Z",
+      "created_at": "2026-04-17T12:32:31.966Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null
+    },
+    {
+      "claim_id": "claim_107",
+      "claim_text": "Images from the Epstein Files implicate Trump in pedophilia.",
+      "status": "unverified",
+      "confidence_score": 0.275,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": "itx_soulsync",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_epistemic_integrity",
+      "verification_count": 2,
+      "verified_at": "2026-04-17T16:03:47.810Z",
+      "created_at": "2026-04-17T13:03:25.425Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null
+    },
+    {
+      "claim_id": "claim_109",
+      "claim_text": "16 files have disappeared from a DOJ webpage.",
+      "status": "unverified",
+      "confidence_score": 0.275,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": "mohitlaws",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_political_trust_corruption_v1",
+      "verification_count": 2,
+      "verified_at": "2026-04-17T16:03:47.810Z",
+      "created_at": "2026-04-17T13:03:25.452Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null
+    },
+    {
+      "claim_id": "live_d757b9f711",
+      "claim_text": "The US imposed new sanctions on Russia in March 2026",
+      "status": "unverified",
+      "confidence_score": 0.275,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": "AP",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": null,
+      "verification_count": 1,
+      "verified_at": "2026-04-17T15:45:55.068Z",
+      "created_at": "2026-04-17T15:45:55.068Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null
+    },
+    {
       "claim_id": "claim_93",
       "claim_text": "US military will now target and intercept Iranian ships anywhere in the world.",
       "status": "unverified",
@@ -1019,6 +1325,35 @@
       "web_search_summary": null
     },
     {
+      "claim_id": "claim_110",
+      "claim_text": "A leftist judge in Charlotte NC released a foreign violent gang member of Tren de Aragua on reduced bond, but ICE quickly intervened and placed him in federal custody.",
+      "status": "unverified",
+      "confidence_score": 0.185,
+      "scoring_breakdown": {
+        "source_tier": 0.2,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": "ericldaugh",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_power_accountability",
+      "verification_count": 1,
+      "verified_at": "2026-04-17T16:03:47.810Z",
+      "created_at": "2026-04-17T13:03:25.462Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null
+    },
+    {
       "claim_id": "claim_91",
       "claim_text": "South Africa has enacted 'Apartheid 2.0' laws that are anti-White and anti-Asian.",
       "status": "unverified",
@@ -1040,6 +1375,64 @@
       "verification_count": 1,
       "verified_at": "2026-04-17T01:19:08.868Z",
       "created_at": "2026-04-16T21:04:37.012Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null
+    },
+    {
+      "claim_id": "claim_106",
+      "claim_text": "Provocative statement 'You will die for Israel and your last meal will be goyslop'",
+      "status": "unverified",
+      "confidence_score": 0.17,
+      "scoring_breakdown": {
+        "source_tier": 0.4,
+        "newsguard": 0,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": "jacksonhinklle",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_epistemic_integrity",
+      "verification_count": 2,
+      "verified_at": "2026-04-17T16:03:47.810Z",
+      "created_at": "2026-04-17T12:32:31.995Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null
+    },
+    {
+      "claim_id": "claim_108",
+      "claim_text": "Trump Administration is approaching US automakers to use their factories for military production as wars in Iran and Ukraine drain defense supplies, leading to a total war economy.",
+      "status": "unverified",
+      "confidence_score": 0.17,
+      "scoring_breakdown": {
+        "source_tier": 0.4,
+        "newsguard": 0,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": "jacksonhinklle",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_global_power_realignments_v1",
+      "verification_count": 2,
+      "verified_at": "2026-04-17T16:03:47.810Z",
+      "created_at": "2026-04-17T13:03:25.442Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
