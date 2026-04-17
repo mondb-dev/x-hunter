@@ -211,3 +211,98 @@ runner/intelligence/
 ```
 
 Both `verify_claims.js` and `verify_one.js` import from `lib/` — no duplicated LLM calls, export logic, or source lookups.
+
+---
+
+## Live Integration (2026-04-17)
+
+Verification is wired into all three engagement surfaces via `runner/lib/verify_claim.js`, a shared wrapper that calls `verify_one.js` and parses the JSON result.
+
+### Wrapper: `runner/lib/verify_claim.js`
+
+```js
+const { verifyClaim } = require('./runner/lib/verify_claim');
+
+const result = verifyClaim({
+  claim: 'Iran closed the Strait of Hormuz',
+  handle: '@IRGC_NEWS',
+  url: 'https://x.com/IRGC_NEWS/status/123',
+  category: 'military_action',
+  axis: 'axis_geopolitical_rhetoric_v1',
+  tier: 3,
+  dryRun: false,
+});
+// result = { claim_id, status, confidence, summary, verdict_label, lens_url, evidence_urls, framing, cached }
+// or null on failure
+```
+
+Handles stdout noise from web_search debug output by scanning lines bottom-up for the first JSON object. 90s timeout, errors return `null` (never throws).
+
+### Integration Points
+
+```
+                       ┌──────────────────────────┐
+                       │  verify_claim.js wrapper  │
+                       │  (execFileSync → JSON)    │
+                       └───────┬──────────────────┘
+                               │
+              ┌────────────────┼────────────────┐
+              ▼                ▼                ▼
+   ┌──────────────────┐  ┌──────────┐  ┌──────────────────┐
+   │ Claims Thread    │  │ Proactive│  │ Inbound Replies  │
+   │ post_claims_     │  │ Reply    │  │ scraper/reply.js │
+   │ thread.js        │  │ proactive│  │                  │
+   │                  │  │ _reply.js│  │                  │
+   └──────────────────┘  └──────────┘  └──────────────────┘
+```
+
+#### 1. Claims Thread (`runner/post_claims_thread.js`)
+
+- **When**: Before posting the 2-tweet thread
+- **What**: Calls `verifyClaim()` on the draft's claim text
+- **Effect**: Appends the Veritas Lens URL to tweet2 if it fits within 280 chars. Logs verification metadata (status, confidence, verdict_label, lens_url) alongside the tweet in `posts_log.json`.
+- **Fallback**: If verification fails or is unavailable, posts the thread without it.
+
+#### 2. Proactive Replies (`runner/proactive_reply.js`)
+
+- **When**: After selecting a high-engagement target post from `feed_digest.txt`
+- **What**: Calls `verifyClaim()` on the target post's text (if >30 chars)
+- **Effect**: Feeds the full verification result (verdict, confidence, summary, evidence URLs, framing analysis, lens URL) into the Gemini draft prompt as a `VERIFICATION RESULT` block. The prompt instructs: if refuted or unverified, call it out; if supported, cite evidence.
+- **Caps**: 4 replies/day, 60min gap between replies
+- **State**: `state/proactive_reply_state.json`
+- **Integration**: Added as step 8.5 in `runner/lib/post_browse.js`
+
+#### 3. Inbound Replies (`scraper/reply.js`)
+
+- **When**: Processing a mention (step 3b, after memory recall)
+- **What**: Calls `verifyClaim()` on mention text if >40 chars
+- **Effect**: Injects a `LIVE VERIFICATION` block into the `geminiClassify()` prompt alongside existing `verifiedHints` (cached DB lookups). The live block includes verdict, confidence, summary, evidence URLs, framing, and lens URL. Prompt instructs: ground your reply in this fresh data.
+- **Distinction from `verifiedHints`**: `verifiedHints` are cached keyword matches from the verification DB (older, broader). `liveVerification` is a fresh web-searched result for the specific claim in this mention.
+- **Fallback**: If `verify_claim.js` is not loadable or the call fails, proceeds without live verification (non-fatal).
+
+### Data Flow
+
+```
+mention/post text
+    │
+    ▼
+verifyClaim({ claim, handle, url })
+    │
+    ├── execFileSync → verify_one.js
+    │     ├── web search (Gemini + Google Search grounding)
+    │     ├── claim_scorer.js (composite score)
+    │     ├── persist to claim_verifications DB
+    │     ├── re-export verification_export.json
+    │     └── JSON stdout (last line)
+    │
+    ▼
+{ claim_id, status, confidence, summary, verdict_label, lens_url, evidence_urls, framing }
+    │
+    ├── Claims thread: lens URL appended to tweet2
+    ├── Proactive reply: fed into Gemini draft prompt
+    └── Inbound reply: injected into geminiClassify prompt
+```
+
+### Error Handling
+
+All three integrations treat verification as optional — a failed or timed-out call returns `null` and the pipeline continues without it. No verification failure can block a post or reply from going out.
