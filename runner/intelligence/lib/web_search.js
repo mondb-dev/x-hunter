@@ -50,11 +50,11 @@ async function webSearchVerify(claimText) {
       '  "verdict": "confirmed" | "refuted" | "partial" | "inconclusive" | "no_results",',
       '  "summary": "2-3 sentence explanation of findings",',
       '  "evidence_urls": ["url1", "url2"],',
-      '  "original_source": "who first made or reported this claim (person, outlet, or organization)",',
-      '  "claim_date": "approximate date the claim was first made (YYYY-MM-DD or YYYY-MM)",',
-      '  "supporting_sources": [{"name": "source name", "stance": "brief description of their position"}],',
-      '  "dissenting_sources": [{"name": "source name", "stance": "brief description of their counter-position"}],',
-      '  "framing_analysis": "Is the claim framed as a valid category/question, or is it a false dichotomy, misleading framing, or loaded question? Explain in 1-2 sentences."',
+      '  "supporting_sources_summary": "e.g. Reuters, AP News, and WHO confirm...",',
+      '  "dissenting_sources_summary": "e.g. Some fringe outlets dispute...",',
+      '  "original_source": "who first made or reported this claim",',
+      '  "claim_date": "YYYY-MM-DD or YYYY-MM",',
+      '  "framing_analysis": "Is the claim framed validly or misleadingly? 1-2 sentences."',
       '}',
     ].join('\n');
 
@@ -72,7 +72,7 @@ async function webSearchVerify(claimText) {
         body: JSON.stringify({
           contents: [{ role: 'user', parts: [{ text: prompt }] }],
           tools: [{ google_search: {} }],
-          generationConfig: { temperature: 0.1, maxOutputTokens: 2048, thinkingConfig: { thinkingBudget: 0 } },
+          generationConfig: { temperature: 0.1, maxOutputTokens: 4096 },
         }),
       });
 
@@ -101,9 +101,13 @@ async function webSearchVerify(claimText) {
         parsed = JSON.parse(clean);
       } catch {
         log(`failed to parse response: ${text.slice(0, 200)}`);
-        // Salvage fields from malformed JSON
+        // Salvage fields from malformed JSON using regex
         const summaryMatch = text.match(/"summary"\s*:\s*"((?:[^"\\]|\\.)*)"/);
         const verdictMatch = text.match(/"verdict"\s*:\s*"(\w+)"/);
+        const frameMatch = text.match(/"framing_analysis"\s*:\s*"((?:[^"\\]|\\.)*)"/);
+        const supportMatch = text.match(/"supporting_sources_summary"\s*:\s*"((?:[^"\\]|\\.)*)"/);
+        const dissentMatch = text.match(/"dissenting_sources_summary"\s*:\s*"((?:[^"\\]|\\.)*)"/);
+
         const verdictMap = { confirmed: 'confirmed', refuted: 'refuted', partial: 'partial' };
         return {
           web_search_result: verdictMatch ? (verdictMap[verdictMatch[1]] || 'inconclusive') : 'inconclusive',
@@ -111,6 +115,11 @@ async function webSearchVerify(claimText) {
             ? summaryMatch[1].replace(/\\n/g, ' ').replace(/\\"/g, '"')
             : text.replace(/```json\s*/gi, '').replace(/```/g, '').trim().slice(0, 500),
           evidence_urls: groundingUrls,
+          original_source: null,
+          claim_date: null,
+          supporting_sources: supportMatch ? [{ name: supportMatch[1].replace(/\\n/g, ' ').replace(/\\"/g, '"'), stance: '' }] : [],
+          dissenting_sources: dissentMatch ? [{ name: dissentMatch[1].replace(/\\n/g, ' ').replace(/\\"/g, '"'), stance: '' }] : [],
+          framing_analysis: frameMatch ? frameMatch[1].replace(/\\n/g, ' ').replace(/\\"/g, '"') : null,
         };
       }
 
@@ -125,8 +134,8 @@ async function webSearchVerify(claimText) {
         evidence_urls:      [...new Set([...(parsed.evidence_urls || []), ...groundingUrls])].slice(0, 5),
         original_source:    parsed.original_source || null,
         claim_date:         parsed.claim_date || null,
-        supporting_sources: parsed.supporting_sources || [],
-        dissenting_sources: parsed.dissenting_sources || [],
+        supporting_sources: parsed.supporting_sources_summary ? [{ name: parsed.supporting_sources_summary, stance: '' }] : [],
+        dissenting_sources: parsed.dissenting_sources_summary ? [{ name: parsed.dissenting_sources_summary, stance: '' }] : [],
         framing_analysis:   parsed.framing_analysis || null,
       };
     } finally {

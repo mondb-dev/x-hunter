@@ -223,7 +223,7 @@ function ClaimCard({ claim }: { claim: VerifiedClaim }) {
           {claim.supporting_sources.map((s, i) => (
             <div key={i} className="verify-claim-source-item">
               <span className="verify-claim-source-name">{s.name}</span>
-              <span className="verify-claim-source-stance">{s.stance}</span>
+              {s.stance && <span className="verify-claim-source-stance">{s.stance}</span>}
             </div>
           ))}
         </div>
@@ -236,7 +236,7 @@ function ClaimCard({ claim }: { claim: VerifiedClaim }) {
           {claim.dissenting_sources.map((s, i) => (
             <div key={i} className="verify-claim-source-item">
               <span className="verify-claim-source-name">{s.name}</span>
-              <span className="verify-claim-source-stance">{s.stance}</span>
+              {s.stance && <span className="verify-claim-source-stance">{s.stance}</span>}
             </div>
           ))}
         </div>
