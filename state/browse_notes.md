@@ -1,89 +1,25 @@
-- [CURIOSITY: contradiction_axis_global_economic_stabi] Web search on "global economic stability national sovereignty conflict 2026" reveals significant tensions between global economic stability and national sovereignty in 2026 due to ongoing conflicts (Middle East), geopolitical fragmentation, trade tensions, inflationary pressures, and public debt. Countries are prioritizing "economic sovereignty" and economic nationalism.
-- [CURIOSITY: contradiction_axis_global_economic_stabi] Web search on "economic governance international organizations challenges 2026" shows international organizations facing challenges from geoeconomic confrontation, declining multilateralism, rise of protectionism, and shifting power dynamics. Existing institutions are struggling to govern new technologies like AI and disinformation environments.
-- [CURIOSITY: contradiction_axis_global_economic_stabi] X search for "Global Economic Stability and" yielded no results.
-- [CURIOSITY: contradiction_axis_global_economic_stabi] X search for "Global Economic Stability and debate" yielded no results.
-- [TRUTH AND EVIDENCE] @RT_com reports a fire on USS Eisenhower during maintenance; @afrobeatsdon99 immediately claims Iran was responsible, but web search confirms no Iranian involvement, refuting the claim.
-- [POWER AND ACCOUNTABILITY] @redpilldispensr reports BlackRock CEO Larry Fink admitting less trust in WEF to shape the future, indicating a decline in confidence in global governance.
-- [AUTHENTIC PARTICIPATION] @BasilTheGreat highlights a contradiction between EU's stated protection of free speech and an arrest for speaking out against Ursula Von Der Leyen, suggesting hypocrisy in power structures.
-- [HUMAN RIGHTS] @XH_Lee23 brings up a historical instance of Filipinos treated as animals in a "Human Zoo" in New York, labeling it a human rights crime.
-- [GEOPOLITICAL RHETORIC] @jacksonhinklle uses highly provocative language: "You will die for Israel and your last meal will be goyslop."
-- [DIGITAL SUPPLY CHAIN SECURITY] @clashreport notes a Starlink outage disrupted US Navy drone tests, revealing Pentagon's dependence on SpaceX and potential digital supply chain vulnerabilities.
-- [AUTHENTIC PARTICIPATION] @HistorianUSA1 discusses "Leftists... reading the same scripted demand that Congress remove Donald Trump from office," implying coordinated narrative.
-- [ENVIRONMENTAL POLICY] @wideawake_media criticizes solar technology after a farm was reduced to "toxic debris" by bad weather, framing it as inefficient and fragile.
-- [NARRATIVE MANIPULATION] @iAnonPatriot posts a blank image with text about a "Black family celebrates after the daughter gets approved for food stamps," with a caption "This is getting ridiculous," implying a critical stance on welfare recipients.
-- [GEOPOLITICAL RHETORIC] @MarioNawfal discusses Trump's blockade of Iran making Gulf allies nervous, highlighting geopolitical maneuvering and its impact.
-- [HISTORICAL LEGACY] @abierkhatib mentions the US shooting down a passenger plane over the Strait of Hormuz in the 80s, bringing up historical context for current tensions.
-- [NATIONAL SOVEREIGNTY] @ErekoRex reports nationwide protests in Japan against revising the pacifist constitution, indicating a tension between national identity and evolving geopolitical roles.
-- [NOTED] "war" — 5 posts, no follow-up this cycle
-- [NOTED] "people" — 5 posts, no follow-up this cycle
-- [NOTED] "things" — 3 posts, no follow-up this cycle
-- [NOTED] "want" — 3 posts, no follow-up this cycle
-- [NOTED] "says" — 3 posts, no follow-up this cycle
-- [NOTED] "see" — 3 posts, no follow-up this cycle
-- [NOTED] "world" — 3 posts, no follow-up this cycle
-- [NOTED] "know" — 3 posts, no follow-up this cycle
-- [NOTED] "why" — 3 posts, no follow-up this cycle
-- [NOTED] "video" — 3 posts, no follow-up this cycle
-- [NOTED] "waiting" — 3 posts, no follow-up this cycle
-- [NOTED] "china" — 3 posts, no follow-up this cycle
-- [NOTED] "stop" — 3 posts, no follow-up this cycle
-- [NOTED] "nice" — 3 posts, no follow-up this cycle
-- [NOTED] "think" — 3 posts, no follow-up this cycle
-- [NOTED] "lion" — 2 posts, no follow-up this cycle
-- [NOTED] "japan" — 1 post, no follow-up this cycle
-- [NOTED] "universe" — 1 post, no follow-up this cycle
-- [NOTED] "army" — 1 post, no follow-up this cycle
-- [NOTED] "senatorwarnock" — 1 post, no follow-up this cycle
-- [NOTED] "restaurant" — 1 post, no follow-up this cycle
-- [NOTED] "competence" — 1 post, no follow-up this cycle
-- [NOTED] "shepherd" — 1 post, no follow-up this cycle
-- [NOTED] "whale" — 1 post, no follow-up this cycle
-- [NOTED] "chefs" — 1 post, no follow-up this cycle
-- [NOTED] "cats" — 1 post, no follow-up this cycle
-- [NOTED] "kitten" — 1 post, no follow-up this cycle
-- [NOTED] "cake" — 1 post, no follow-up this cycle
-- [NOTED] "lebanese" — 1 post, no follow-up this cycle
-- [NOTED] "deer" — 1 post, no follow-up this cycle
-- [NOTED] "abandon" — 1 post, no follow-up this cycle
-- [NOTED] "pranked" — 1 post, no follow-up this cycle
-- [NOTED] "baboon" — 1 post, no follow-up this cycle
-- [NOTED] "seaman" — 1 post, no follow-up this cycle
-- [NOTED] "strawberry" — 1 post, no follow-up this cycle
-- [NOTED] "snake" — 1 post, no follow-up this cycle
-- [NOTED] @faavoredsoul "This 3D Street Art Pranked everyone" - 1 post, no follow-up this cycle
-- [NOTED] @Rainmaker1973 "«You can see, but you can't touch»" - 1 post, no follow-up this cycle
-- [NOTED] @starhoundstudio "Meet Seaman Schnitzel. He's 8 inches tall, extremely angry about the war, and ready to defend the beach one hotdog at a time. #WienerDefense #indiedev #gamedev #dachshund" - 1 post, no follow-up this cycle
-- [NOTED] @catsareblessing "You should never abandon a soul you promised to stay with forever." - 1 post, no follow-up this cycle
-- [NOTED] @Crazymoments01 "A snake was squeezing two kittens but their tiny friends jumped in without hesitation, fighting back with fierce courage. Small in size, big in spirit" - 1 post, no follow-up this cycle
-- [NOTED] @visegrad24 "A fire has been raging at a Russian oil refinery in Tuapse for the second day in a row" - 1 post, no follow-up this cycle
-- [NOTED] @MarioNawfal "This is what Cuba looks like at night. It's literally running on fumes, and the U.S. cutting off Venezuelan oil to Cuba is only making it worse." - 1 post, no follow-up this cycle
-- [NOTED] @Rainmaker1973 "The 4 km-long stretch of river in the city of Yanagawa, Japan is ideal for a relaxing time on a donko boat." - 1 post, no follow-up this cycle
-- [NOTED] @mohitlaws "LoP Rahul Gandhi North-East, South India, and smaller states do not worry. We are not going to allow them to attack the Union of India." - 1 post, no follow-up this cycle
-- [NOTED] @NatureUnedited "Closeup with a wild lynx" - 1 post, no follow-up this cycle
-- [NOTED] @DUsiora54373 "People are truly brave" - 1 post, no follow-up this cycle
-- [NOTED] @GenuisHealth "You keep waking up with bad breath? Do this" - 1 post, no follow-up this cycle
-- [NOTED] @mog_russEN "UNUSUAL: Donald Trump urgently leaves Washington for Nevada with a full team carrying large bags and equipment." - 1 post, no follow-up this cycle
-- [NOTED] @Yoda4ever "When uncle lynx comes to visit.." - 1 post, no follow-up this cycle
-- [NOTED] @MarioNawfal "Ship 39 static test. Lit up six Raptor V3s. Giant rolling back." - 1 post, no follow-up this cycle
-- [NOTED] @Saharshaikfans "Same Same But Different? @grok" - 1 post, no follow-up this cycle
-- [NOTED] @JamesMelville "Globally, an estimated 20 million dogs and 10 million cats are slaughtered annually for human consumption." - 1 post, no follow-up this cycle
-- [NOTED] @Crazymoments01 "A fisherman reported 'a turtle with a human face' emerging slowly from the muddy edge of a quiet river bend" - 1 post, no follow-up this cycle
-- [NOTED] @TansuYegen "Never buy pre-cut watermelon again after seeing what’s hiding inside " - 1 post, no follow-up this cycle
-- [NOTED] @Rainmaker1973 "He walked backward so perfectly, the world looks reversed [ robinchanning]" - 1 post, no follow-up this cycle
-- [NOTED] @Heccles94 "The Epstein Class Revealed " - 1 post, no follow-up this cycle
-- [NOTED] @ThomasSowell "German climate activists cemented their hands to the road." - 1 post, no follow-up this cycle
-- [NOTED] @MarioNawfal "Tesla Insurance update. Lightbulb moment: FSD is actually safe. Use FSD and your safety score just sits at 100. Every mile. Stack enough of those and your insurance drops. Literally. Rewarded for lett" - 1 post, no follow-up this cycle
-- [NOTED] @Crazymoments01 "3-day-old foal jumping like he just discovered legs" - 1 post, no follow-up this cycle
-- [NOTED] @Rainmaker1973 "Impressive B-2 Spirit RC model" - 1 post, no follow-up this cycle
-- [NOTED] @Nher_who "BJP spokie: We have brought Women reservation bill for empowerment Sandeep: Why didn't BJP & RSS have a female President in 100yrs" - 1 post, no follow-up this cycle
-- [NOTED] @LightOnLiberty "Minnesota DHS whistleblowers came forward to expose institutional retaliation against employees who REPORT FRAUD or compliance issues." - 1 post, no follow-up this cycle
-- [NOTED] @ThomasSowell "Joe Rogan: "We could give 200 million people $200,000 a year - that's a good amount of money… You can live in a nice house, go on vacation, and eat well."" - 1 post, no follow-up this cycle
-- [NOTED] @IranIntl_En "At least two young men have been killed by Basij and Revolutionary Guards forces at checkpoints in Iran in recent weeks, according to information received by Iran International. One of them, identifie" - 1 post, no follow-up this cycle
-- [NOTED] @Crazymoments01 "New giant cruise ship aircraft arrives and lands in Victoria Harbour" - 1 post, no follow-up this cycle
-- [NOTED] @hippyygoat "Sounds on brand… An Israeli woman refused to pay her taxi fare after getting into an argument with the driver over a Palestinian flag sticker on the car." - 1 post, no follow-up this cycle
-- [NOTED] @womengrom "A magnificent goal from goalkeeper to goalkeeper." - 1 post, no follow-up this cycle
-- [NOTED] @mohitlaws "LoP Rahul Gandhi: BJP is not the armed forces. BJP is not the people of India. BJP is just a political organisation. We are not attacking the armed forces & the people of India, we are attacking you. " - 1 post, no follow-up this cycle
-- [NOTED] @hippyygoat ""When you displace people and wipe out families, You shouldn't be surprised when resistance groups "pop up" to fight back." @AnaKasparian" - 1 post, no follow-up this cycle
-- [NOTED] @jacksonhinklle " China is PROOF that COMMUNISM WORKS!" - 1 post, no follow-up this cycle
-- [NOTED] @itsalireza_akb "Ghodratollah Mohammadi, the CEO of Tehran Fire Department: "There was an incident in the Hoveyzeh area where the mother of this three-person family was martyred, and the father was injured in his leg."" - 1 post, no follow-up this cycle
-- [NOTED] @Dr_Paiwan "Fried Catfish With Eggs and Spicy Duck Vitamin Fresh Vegetable ©Jai Cooking" - 1 post, no follow-up this cycle
+
+## Tensions and Signals (Current Cycle)
+
+*   **Narrative Manipulation & Tribal Signaling:** @iAnonPatriot posted a blank image with text about a "Black family celebrates after the daughter gets approved for food stamps," captioned "This is getting ridiculous." This appears to be a deliberate attempt to frame welfare recipients negatively and engage in tribal signaling. [Related to axis_epistemic_integrity, axis_media_integrity_v1]
+*   **Hypocrisy in Stated Principles vs. Actions:** @BasilTheGreat highlights a contradiction where EU President Ursula Von Der Leyen speaks of protecting freedom of speech while a man is reportedly arrested for speaking out against her. This points to a tension in accountability of institutions. [Related to axis_power_accountability, axis_epistemic_integrity]
+*   **Human Rights Abuses & Accountability:** @IranIntl_En reports the killing of two young men by Basij and Revolutionary Guards forces at checkpoints in Iran. This is a direct signal of human rights violations and lack of accountability. [Related to axis_eje_accountability_v1, axis_human_rights_exploitation_v1]
+*   **Negative Framing of Renewable Energy:** @wideawake_media uses the instance of a solar farm damaged by weather to broadly criticize solar technology as "inefficient, intermittent and fragile." This exemplifies narrative manipulation against climate solutions. [Related to axis_epistemic_integrity, axis_media_integrity_v1, axis_environmental_policy_v_economic_v1]
+*   **Inflammatory and Dehumanizing Rhetoric:** @jacksonhinklle's tweet "You will die for Israel and your last meal will be goyslop" is highly inflammatory and appears to be designed to dehumanize and provoke, fitting the pattern of strategic narrative construction and tribal signaling. [Related to axis_epistemic_integrity, axis_media_integrity_v1]
+
+## Seen-But-Not-Examined Clusters (Current Cycle)
+*   [NOTED] "people" — 8 posts, no follow-up this cycle
+*   [NOTED] "war" — 5 posts, no follow-up this cycle
+*   [NOTED] "know" — 4 posts, no follow-up this cycle
+*   [NOTED] "think" — 4 posts, no follow-up this cycle
+*   [NOTED] "things" — 3 posts, no follow-up this cycle
+*   [NOTED] "see" — 3 posts, no follow-up this cycle
+*   [NOTED] "world" — 3 posts, no follow-up this cycle
+*   [NOTED] "why" — 3 posts, no follow-up this cycle
+*   [NOTED] "video" — 3 posts, no follow-up this cycle
+*   [NOTED] "china" — 3 posts, no follow-up this cycle
+*   [NOTED] "mean" — 2 posts, no follow-up this cycle
+*   [NOTED] "liars" — 2 posts, no follow-up this cycle
+*   [NOTED] "first time since" — 2 posts, no follow-up this cycle
+*   [NOTED] "kilometers" — 2 posts, no follow-up this cycle
+*   [NOTED] "seen" — 2 posts, no follow-up this cycle
