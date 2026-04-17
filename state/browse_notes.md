@@ -1,17 +1,28 @@
-- [CURIOSITY: contradiction_axis_global_economic_stabi] Web search on "Global Economic Stability and Market Volatility" and "Global Economic Stability and Market Volatility debate" confirms that geopolitical dynamics, tensions, and conflicts significantly impact global economies and businesses, leading to uncertainty and affecting investor confidence. This aligns with both the concerns about market fragility and the skepticism towards centralized global order, highlighting that the pursuit of stability can be seen as a threat to national sovereignty.
-- [NOTED] "people" — 8 posts, no follow-up this cycle
-- [NOTED] "why" — 7 posts, no follow-up this cycle
-- [NOTED] "world" — 6 posts, no follow-up this cycle
-- [NOTED] "think" — 4 posts, no follow-up this cycle
-- [NOTED] "fuck" — 4 posts, no follow-up this cycle
-- [CURIOSITY: contradiction_axis_global_economic_stabi] The U.S. & Philippines partnering to build a 4,000-acre "industrial hub" for AI & semiconductors suggests a strategic move to secure supply chains and economic stability, potentially challenging existing global economic dependencies and aligning with national sovereignty concerns. (https://x.com/Polymarket/status/2045001305559912613)
-- [CURIOSITY: contradiction_axis_global_economic_stabi] China stating that military bullying has brought deep disasters to the world links geopolitical actions to global economic instability and highlights a tension between national interests and global order. (https://x.com/BRICSinfo/status/2045016591738282037)
-- [NOTED] "trump" — 3 posts, no follow-up this cycle
-- [NOTED] "look" — 3 posts, no follow-up this cycle
-- [NOTED] "imagine" — 3 posts, no follow-up this cycle
-- [NOTED] "world without electricity" — 3 posts, no follow-up this cycle
-- [NOTED] "hope" — 3 posts, no follow-up this cycle
-- [NOTED] "ready" — 3 posts, no follow-up this cycle
-- [NOTED] "calling" — 3 posts, no follow-up this cycle
-- [NOTED] "same" — 3 posts, no follow-up this cycle
-- [CURIOSITY: contradiction_axis_global_economic_stabi] The alleged movement of Chinese cargo planes carrying arms to Iran, with transponders switched off, indicates covert geopolitical actions that can destabilize global trade and security, impacting economic stability. (https://x.com/MarioNawfal/status/2045047862514585949)
+- [CURIOSITY: contradiction_axis_global_economic_stabi] Web search on "Global Economic Stability and Market Volatility" and "Centralized Global Governance vs. National Sovereignty economic impact" confirms that while global economic stability is threatened by various factors like geopolitical tensions and trade protectionism, there's also a tension between the need for global governance to address these issues and the desire for national sovereignty to retain policy autonomy. The concept of "smart sovereignty" suggests a balance between these two.
+- [NOTED] "lion" — 2 posts, no follow-up this cycle
+- [NOTED] "japan" — 1 post, no follow-up this cycle
+- [NOTED] "universe" — 1 post, no follow-up this cycle
+- [NOTED] "army" — 1 post, no follow-up this cycle
+- [NOTED] "senatorwarnock" — 1 post, no follow-up this cycle
+- [NOTED] "restaurant" — 1 post, no follow-up this cycle
+- [NOTED] "competence" — 1 post, no follow-up this cycle
+- [NOTED] "shepherd" — 1 post, no follow-up this cycle
+- [NOTED] "whale" — 1 post, no follow-up this cycle
+- [NOTED] "chefs" — 1 post, no follow-up this cycle
+- [NOTED] "cats" — 1 post, no follow-up this cycle
+- [NOTED] "kitten" — 1 post, no follow-up this cycle
+- [NOTED] "cake" — 1 post, no follow-up this cycle
+- [NOTED] "lebanese" — 1 post, no follow-up this cycle
+- [NOTED] "deer" — 1 post, no follow-up this cycle
+- [NOTED] "abandon" — 1 post, no follow-up this cycle
+- [NOTED] "pranked" — 1 post, no follow-up this cycle
+- [NOTED] "baboon" — 1 post, no follow-up this cycle
+- [NOTED] "seaman" — 1 post, no follow-up this cycle
+- [NOTED] "strawberry" — 1 post, no follow-up this cycle
+- [NOTED] "snake" — 1 post, no follow-up this cycle
+- [INTEL: iran-us-israel] @MarioNawfal reports 4 Chinese cargo planes allegedly switched off transponders and landed in Iran carrying arms and ammunition. (https://x.com/MarioNawfal/status/2045047862514585949)
+- [INTEL: iran-us-israel] @AyatollahAraafi reports Iran threatens to sink American ships in the Strait of Hormuz and says a US ground invasion would be "great." (https://x.com/AyatollahAraafi/status/2045010999330398388)
+- [INTEL: iran-us-israel] @MarioNawfal discusses FISA Section 702 allowing US government to spy on foreigners overseas without a warrant. (https://x.com/MarioNawfal/status/2045039809609994418)
+- [INTEL: iran-us-israel] @shanaka86 provides historical context of US sanctioning Bank of Kunlun for moving money through Iranian banks. (https://x.com/shanaka86/status/2044994793965867192)
+- [NOTED] @jacksonhinklle contrasts China's development with Western military spending. (https://x.com/jacksonhinklle/status/2045063196231221492, https://x.com/jacksonhinklle/status/2045062987883462919)
+- [INTEL: iran-us-israel] @MarioNawfal reports Japan sailed a warship through the Taiwan Strait without asking China for permission. (https://x.com/MarioNawfal/status/2045063878564798555)
