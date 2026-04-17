@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-17T03:00:18.202Z",
+  "generated_at": "2026-04-17T03:30:10.766Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-17T02:30:38.469Z",
+  "profiled_at": "2026-04-17T03:30:41.402Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -623,9 +623,9 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-17T00:02:55.255Z",
+      "last_seen_at": "2026-04-17T03:01:20.589Z",
       "discovery": {
-        "distinct_urls": 110,
+        "distinct_urls": 111,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
@@ -636,7 +636,7 @@
         "origin_counts": {
           "ontology_evidence": 103,
           "claim_tracker": 11,
-          "journals": 45
+          "journals": 46
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -684,7 +684,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:110",
+            "distinct_urls:111",
             "distinct_axes:17",
             "origin_types:3"
           ]
@@ -725,7 +725,7 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:110",
+            "distinct_urls:111",
             "distinct_axes:17",
             "origin_types:3",
             "referring_accounts:0",
@@ -893,9 +893,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-17T01:38:47.000Z",
+      "last_seen_at": "2026-04-17T02:05:16.000Z",
       "discovery": {
-        "distinct_urls": 698,
+        "distinct_urls": 699,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -905,7 +905,7 @@
         ],
         "origin_counts": {
           "feed_buffer": 444,
-          "feed_buffer_reply": 290
+          "feed_buffer_reply": 291
         },
         "distinct_referring_accounts": 348,
         "sample_referring_accounts": [
@@ -945,7 +945,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:698",
+            "distinct_urls:699",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -983,7 +983,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:698",
+            "distinct_urls:699",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:348",
@@ -2689,6 +2689,132 @@
       }
     },
     {
+      "domain": "ironclaw.com",
+      "entity": "Ironclaw",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-03T20:17:54.000Z",
+      "last_seen_at": "2026-04-16T04:58:31.000Z",
+      "discovery": {
+        "distinct_urls": 9,
+        "example_urls": [
+          "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=2axdpb938w7qafe76dwca4od5q",
+          "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=22j1nmfmrt96ryd46ylnh0myhl",
+          "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=29ttgzvj74nppybjq6f5b473d",
+          "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=29j7j373qr6a58vj9xn1pzzmqk",
+          "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=2a1supxg2lb87spwrrni0g4a4q"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 9
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "near_ai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.32249999999999995,
+          "basis": [
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.12,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:15",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.39828125000000003,
+          "confidence": 0.31035,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-16T02:30:12.185Z",
+        "homepage_url": "https://ironclaw.com/",
+        "example_url": "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=2axdpb938w7qafe76dwca4od5q",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.ironclaw.com/",
+        "example_final_url": "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=2axdpb938w7qafe76dwca4od5q",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 15,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 15,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "framia.pro",
       "entity": "Framia Pro",
       "kind": "unknown",
@@ -2811,132 +2937,6 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 2,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "ironclaw.com",
-      "entity": "Ironclaw",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-03T20:17:54.000Z",
-      "last_seen_at": "2026-04-16T04:58:31.000Z",
-      "discovery": {
-        "distinct_urls": 8,
-        "example_urls": [
-          "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=2axdpb938w7qafe76dwca4od5q",
-          "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=22j1nmfmrt96ryd46ylnh0myhl",
-          "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=29ttgzvj74nppybjq6f5b473d",
-          "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=29j7j373qr6a58vj9xn1pzzmqk",
-          "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=2a1supxg2lb87spwrrni0g4a4q"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 8
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "near_ai"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.29333333333333333,
-          "basis": [
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.12,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:15",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.39190104166666667,
-          "confidence": 0.281725,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-16T02:30:12.185Z",
-        "homepage_url": "https://ironclaw.com/",
-        "example_url": "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=2axdpb938w7qafe76dwca4od5q",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.ironclaw.com/",
-        "example_final_url": "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=2axdpb938w7qafe76dwca4od5q",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 15,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 15,
           "opinion_marker": false
         }
       }
@@ -12528,7 +12528,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T03:14:59.287Z",
+        "fetched_at": "2026-04-17T03:30:41.270Z",
         "homepage_url": "https://atr.org/",
         "example_url": "https://atr.org/mfn/?utm_source=x&utm_medium=cpm&utm_campaign=20260220&utm_content=mfn_v2&twclid=2dracnytvfda9fekosdp3ini9y",
         "homepage_status": 200,
@@ -24156,7 +24156,7 @@
           ]
         },
         "profile": {
-          "score": 0.06,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -24165,7 +24165,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:6",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -24185,23 +24185,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T03:30:08.037Z",
+        "fetched_at": "2026-04-17T03:30:41.402Z",
         "homepage_url": "https://nationaltoday.com/",
         "example_url": "https://nationaltoday.com/conservative-reporter-savanah-hernandez-attacked-at-anti-ice-protest/",
-        "homepage_status": 200,
-        "example_status": 404,
+        "homepage_status": 403,
+        "example_status": 403,
         "homepage_final_url": "https://nationaltoday.com/",
         "example_final_url": "https://nationaltoday.com/conservative-reporter-savanah-hernandez-attacked-at-anti-ice-protest/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
+          "has_published_time": false,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 6,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -24211,7 +24211,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 6,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
