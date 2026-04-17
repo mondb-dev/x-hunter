@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-17T11:00:20.638Z",
+  "generated_at": "2026-04-17T12:00:28.913Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-17T11:00:52.509Z",
+  "profiled_at": "2026-04-17T11:30:51.089Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -623,9 +623,9 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-17T08:00:00Z",
+      "last_seen_at": "2026-04-17T11:03:29.172Z",
       "discovery": {
-        "distinct_urls": 112,
+        "distinct_urls": 114,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
@@ -634,9 +634,9 @@
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxs1cM8PTd_QtRaKpYmDBqTaoVyKJalJfIuu-PaW2zHSU-BfWPq7hhOb9M8JgfyL1usSQ2-naI-6KBvJwgBMdVAh7IQ_yAgTaqqSsLNjBtonmwJ6ztGpNPEWFY0XBLj3YCtCkXYl9FqA=="
         ],
         "origin_counts": {
-          "ontology_evidence": 105,
-          "claim_tracker": 11,
-          "journals": 45
+          "ontology_evidence": 106,
+          "claim_tracker": 13,
+          "journals": 46
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -661,11 +661,11 @@
         ]
       },
       "claims": {
-        "total": 11,
+        "total": 13,
         "supported": 1,
         "refuted": 0,
         "contested": 1,
-        "unverified": 9,
+        "unverified": 11,
         "resolved_count": 2
       },
       "structural_features": {
@@ -684,7 +684,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:112",
+            "distinct_urls:114",
             "distinct_axes:17",
             "origin_types:3"
           ]
@@ -725,7 +725,7 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:112",
+            "distinct_urls:114",
             "distinct_axes:17",
             "origin_types:3",
             "referring_accounts:0",
@@ -1673,7 +1673,7 @@
       "entity": "Cbsnews",
       "kind": "unknown",
       "first_seen_at": "2026-03-27T23:18:50.928Z",
-      "last_seen_at": "2026-04-17T10:02:54.188Z",
+      "last_seen_at": "2026-04-17T11:35:03.526Z",
       "discovery": {
         "distinct_urls": 5,
         "example_urls": [
@@ -10933,7 +10933,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:29",
+            "outbound_links:25",
             "opinion_marker:false"
           ]
         },
@@ -10953,7 +10953,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T11:29:19.770Z",
+        "fetched_at": "2026-04-17T11:30:50.433Z",
         "homepage_url": "https://elpais.com/",
         "example_url": "https://elpais.com/",
         "homepage_status": 200,
@@ -10969,7 +10969,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 29,
+          "outbound_links_count": 25,
           "opinion_marker": false
         },
         "example": {
@@ -10979,7 +10979,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 29,
+          "outbound_links_count": 25,
           "opinion_marker": false
         }
       }
@@ -21049,20 +21049,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.12,
           "confidence": 0.55,
@@ -21075,6 +21061,20 @@
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -24080,7 +24080,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T11:29:20.018Z",
+        "fetched_at": "2026-04-17T11:30:50.601Z",
         "homepage_url": "https://foxbusiness.com/",
         "example_url": "https://foxbusiness.com/",
         "homepage_status": 200,
@@ -24200,7 +24200,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T11:29:20.520Z",
+        "fetched_at": "2026-04-17T11:30:51.089Z",
         "homepage_url": "https://alarabiya.net/",
         "example_url": "https://alarabiya.net/",
         "homepage_status": 403,
