@@ -23,6 +23,7 @@ const { scoreClaim }              = require('./claim_scorer');
 const { webSearchVerify }         = require('./lib/web_search');
 const { exportVerificationData }  = require('./lib/verification_export');
 const { loadSourceData }          = require('./lib/source_data');
+const { investigateClaimSync }    = require('../lib/verify_claim');
 
 const idb = loadIntelligenceDb();
 const vdb = loadVerificationDb();
@@ -36,6 +37,8 @@ function log(msg) { console.log(`[verify_claims] ${msg}`); }
 const MAX_CLAIMS_PER_CYCLE   = 10;
 const WEB_SEARCH_PER_CYCLE   = 3;
 const STALE_HOURS            = 48;
+const MAX_INVESTIGATIONS_PER_DAY = 2;
+const INVESTIGATION_COOLDOWN_MS  = 12 * 3600_000; // 12h between investigations
 const EXPIRY_RULES = {
   military_action:         72,
   casualties_humanitarian: 72,
@@ -254,6 +257,97 @@ function persistResult({ claim, result, handle, oldStatus }) {
   }
 }
 
+// ── Deep investigation cadence ──────────────────────────────────────────────
+
+const INVESTIGATION_STATE_PATH = require('path').join(config.STATE_DIR, 'investigation_state.json');
+
+function loadInvestigationState() {
+  try {
+    return JSON.parse(fs.readFileSync(INVESTIGATION_STATE_PATH, 'utf-8'));
+  } catch {
+    return { last_investigation_at: null, today_count: 0, today_date: null };
+  }
+}
+
+function saveInvestigationState(state) {
+  fs.writeFileSync(INVESTIGATION_STATE_PATH, JSON.stringify(state, null, 2), 'utf-8');
+}
+
+async function maybeInvestigate(results) {
+  const state = loadInvestigationState();
+  const today = new Date().toISOString().slice(0, 10);
+
+  // Reset daily counter
+  if (state.today_date !== today) {
+    state.today_count = 0;
+    state.today_date = today;
+  }
+
+  if (state.today_count >= MAX_INVESTIGATIONS_PER_DAY) {
+    log(`investigation: daily limit reached (${state.today_count}/${MAX_INVESTIGATIONS_PER_DAY})`);
+    return;
+  }
+
+  // Cooldown check
+  if (state.last_investigation_at) {
+    const elapsed = Date.now() - new Date(state.last_investigation_at).getTime();
+    if (elapsed < INVESTIGATION_COOLDOWN_MS) {
+      const hoursLeft = ((INVESTIGATION_COOLDOWN_MS - elapsed) / 3600_000).toFixed(1);
+      log(`investigation: cooldown active (${hoursLeft}h remaining)`);
+      return;
+    }
+  }
+
+  // Find best candidate: contested or unverified with web search done but no deep investigation
+  const candidates = results
+    .filter(r => {
+      const status = r.result.suggested_status;
+      if (status !== 'contested' && status !== 'unverified') return false;
+      // Must have had a web search (otherwise too early)
+      if (!r.claim._searchData) return false;
+      // Must not already be deep-investigated
+      const existing = vdb.getVerification(r.claim.claim_id);
+      if (existing?.investigation_depth === 'deep') return false;
+      return true;
+    })
+    .sort((a, b) => {
+      // Prefer contested over unverified
+      const aContested = a.result.suggested_status === 'contested' ? 1 : 0;
+      const bContested = b.result.suggested_status === 'contested' ? 1 : 0;
+      if (bContested !== aContested) return bContested - aContested;
+      // Then by priority
+      return (b.claim._priority || 0) - (a.claim._priority || 0);
+    });
+
+  if (candidates.length === 0) {
+    log('investigation: no eligible candidates this cycle');
+    return;
+  }
+
+  const pick = candidates[0];
+  log(`investigation: starting deep investigation for "${(pick.claim.claim_text || '').slice(0, 80)}"`);
+
+  const invResult = investigateClaimSync({
+    claim: pick.claim.claim_text,
+    claimId: pick.claim.claim_id,
+    handle: pick.handle,
+    category: pick.claim.category,
+    tier: pick.claim.source_tier,
+  });
+
+  if (invResult) {
+    log(`investigation: completed — ${invResult.status} (${Math.round((invResult.confidence || 0) * 100)}%), ${invResult.supporting || 0} supporting, ${invResult.contradicting || 0} contradicting`);
+    // Re-export since investigate_claim.js already persisted
+    exportVerificationData(vdb, config.VERIFICATION_EXPORT_PATH);
+  } else {
+    log('investigation: failed or timed out');
+  }
+
+  state.last_investigation_at = new Date().toISOString();
+  state.today_count++;
+  saveInvestigationState(state);
+}
+
 // ── Main pipeline ───────────────────────────────────────────────────────────
 
 async function run() {
@@ -356,7 +450,10 @@ async function run() {
     // 6. Process expiry
     processExpiry();
 
-    // 7. Export for web
+    // 7. Deep investigation on high-priority contested/unverified claims (max 2/day)
+    await maybeInvestigate(results);
+
+    // 8. Export for web
     exportVerificationData(vdb, config.VERIFICATION_EXPORT_PATH);
   } else {
     log(`[dry-run] would persist ${results.length} results`);
