@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-17T18:00:36.355Z",
+  "generated_at": "2026-04-17T20:25:31.791Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-17T17:00:58.702Z",
+  "profiled_at": "2026-04-17T20:01:03.413Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -745,7 +745,7 @@
       "first_seen_at": "2026-03-31T09:30:40.000Z",
       "last_seen_at": "2026-04-17T16:51:41.000Z",
       "discovery": {
-        "distinct_urls": 729,
+        "distinct_urls": 732,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -754,10 +754,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 461,
-          "feed_buffer_reply": 309
+          "feed_buffer": 462,
+          "feed_buffer_reply": 311
         },
-        "distinct_referring_accounts": 367,
+        "distinct_referring_accounts": 370,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -795,7 +795,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:729",
+            "distinct_urls:732",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -803,7 +803,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:367",
+            "referring_accounts:370",
             "origin_types:2"
           ]
         },
@@ -833,10 +833,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:729",
+            "distinct_urls:732",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:367",
+            "referring_accounts:370",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -879,9 +879,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-17T14:56:19.000Z",
+      "last_seen_at": "2026-04-17T17:35:19.000Z",
       "discovery": {
-        "distinct_urls": 103,
+        "distinct_urls": 104,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -890,10 +890,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 99,
+          "feed_buffer_reply": 100,
           "feed_buffer": 4
         },
-        "distinct_referring_accounts": 82,
+        "distinct_referring_accounts": 83,
         "sample_referring_accounts": [
           "100ohiostate",
           "50hidalgo47",
@@ -931,7 +931,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:103",
+            "distinct_urls:104",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -939,7 +939,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:82",
+            "referring_accounts:83",
             "origin_types:2"
           ]
         },
@@ -969,10 +969,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:103",
+            "distinct_urls:104",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:82",
+            "referring_accounts:83",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1275,9 +1275,9 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-17T17:32:09.341Z",
+      "last_seen_at": "2026-04-17T20:05:44.082Z",
       "discovery": {
-        "distinct_urls": 116,
+        "distinct_urls": 118,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
@@ -1286,7 +1286,7 @@
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxs1cM8PTd_QtRaKpYmDBqTaoVyKJalJfIuu-PaW2zHSU-BfWPq7hhOb9M8JgfyL1usSQ2-naI-6KBvJwgBMdVAh7IQ_yAgTaqqSsLNjBtonmwJ6ztGpNPEWFY0XBLj3YCtCkXYl9FqA=="
         ],
         "origin_counts": {
-          "ontology_evidence": 108,
+          "ontology_evidence": 110,
           "claim_tracker": 14,
           "journals": 47
         },
@@ -1336,7 +1336,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:116",
+            "distinct_urls:118",
             "distinct_axes:17",
             "origin_types:3"
           ]
@@ -1377,7 +1377,7 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:116",
+            "distinct_urls:118",
             "distinct_axes:17",
             "origin_types:3",
             "referring_accounts:0",
@@ -1541,13 +1541,143 @@
       }
     },
     {
+      "domain": "cbsnews.com",
+      "entity": "Cbsnews",
+      "kind": "unknown",
+      "first_seen_at": "2026-03-27T23:18:50.928Z",
+      "last_seen_at": "2026-04-17T18:00:00Z",
+      "discovery": {
+        "distinct_urls": 6,
+        "example_urls": [
+          "https://www.cbsnews.com/news/us-naval-blockade-iran-ports-2026/",
+          "https://www.cbsnews.com/news/us-naval-blockade-iranian-ports-april-2026/",
+          "https://www.cbsnews.com/news/strait-of-hormuz-us-blockade-iran-ports-april-2026/",
+          "https://www.cbsnews.com/news/iran-war-recession-risk-oil-prices-inflation/",
+          "https://www.cbsnews.com/us-iran-tensions/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 2,
+          "claim_tracker": 1,
+          "journals": 5
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_global_economic_stability_v1",
+          "axis_national_sovereignty_v_intl_law_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 1,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 1,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.53,
+          "basis": [
+            "distinct_urls:6",
+            "distinct_axes:3",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.26249999999999996,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.46,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:23",
+            "opinion_marker:true"
+          ]
+        },
+        "overall": {
+          "score": 0.449921875,
+          "confidence": 0.26992499999999997,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:6",
+            "distinct_axes:3",
+            "origin_types:3",
+            "referring_accounts:0",
+            "origin_types:3",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-15T07:54:51.880Z",
+        "homepage_url": "https://cbsnews.com/",
+        "example_url": "https://www.cbsnews.com/news/iran-war-recession-risk-oil-prices-inflation/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.cbsnews.com/",
+        "example_final_url": "https://www.cbsnews.com/news/iran-war-recession-risk-oil-prices-inflation/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 21,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 23,
+          "opinion_marker": true
+        }
+      }
+    },
+    {
       "domain": "starlink.com",
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-04-16T23:45:07.000Z",
+      "last_seen_at": "2026-04-17T12:06:00.000Z",
       "discovery": {
-        "distinct_urls": 12,
+        "distinct_urls": 13,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -1556,7 +1686,7 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 10,
+          "feed_buffer_reply": 11,
           "feed_buffer": 2
         },
         "distinct_referring_accounts": 2,
@@ -1589,7 +1719,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:12",
+            "distinct_urls:13",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1623,11 +1753,11 @@
         },
         "overall": {
           "score": 0.44890625,
-          "confidence": 0.44894999999999996,
+          "confidence": 0.47145000000000004,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:12",
+            "distinct_urls:13",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2",
@@ -1665,135 +1795,6 @@
           "has_corrections_link": false,
           "outbound_links_count": 1,
           "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "cbsnews.com",
-      "entity": "Cbsnews",
-      "kind": "unknown",
-      "first_seen_at": "2026-03-27T23:18:50.928Z",
-      "last_seen_at": "2026-04-15T17:06:55.918Z",
-      "discovery": {
-        "distinct_urls": 5,
-        "example_urls": [
-          "https://www.cbsnews.com/news/us-naval-blockade-iranian-ports-april-2026/",
-          "https://www.cbsnews.com/news/strait-of-hormuz-us-blockade-iran-ports-april-2026/",
-          "https://www.cbsnews.com/news/iran-war-recession-risk-oil-prices-inflation/",
-          "https://www.cbsnews.com/us-iran-tensions/",
-          "https://www.cbsnews.com/news/iran-response-us-peace-proposal-war/"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 1,
-          "claim_tracker": 1,
-          "journals": 5
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_global_economic_stability_v1",
-          "axis_national_sovereignty_v_intl_law_v1"
-        ]
-      },
-      "claims": {
-        "total": 1,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 1,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.4425,
-          "basis": [
-            "distinct_urls:5",
-            "distinct_axes:2",
-            "origin_types:3"
-          ]
-        },
-        "corroboration": {
-          "score": 0.26249999999999996,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:3"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.46,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:23",
-            "opinion_marker:true"
-          ]
-        },
-        "overall": {
-          "score": 0.43078125,
-          "confidence": 0.22904999999999998,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:5",
-            "distinct_axes:2",
-            "origin_types:3",
-            "referring_accounts:0",
-            "origin_types:3",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-15T07:54:51.880Z",
-        "homepage_url": "https://cbsnews.com/",
-        "example_url": "https://www.cbsnews.com/news/iran-war-recession-risk-oil-prices-inflation/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.cbsnews.com/",
-        "example_final_url": "https://www.cbsnews.com/news/iran-war-recession-risk-oil-prices-inflation/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 21,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 23,
-          "opinion_marker": true
         }
       }
     },
@@ -4031,13 +4032,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T19:34:26.804Z",
+        "fetched_at": "2026-04-17T20:01:01.215Z",
         "homepage_url": "https://cloud.com/",
-        "example_url": "https://vertexaisearch.cloud.com/grounding-api-redirect/AUZIYQFSWSYvOQGbg3SZ62H68s6EQ7K3SDaKjwIQHlaz9zHuvl54a0-NcWGetby_oXYGwNVVSnfjs-uuruUzZPui0CEG8-9ULvvo7uCENkdZg9q0GiDJPzMnCYR6Z1F1psILyn3cXFL6vUvygZFuGIJqVzsBU61E8mSZscgGMWoo_FZksTftzSdDpmr-Ia3xisZ-MFC2_Jqtsp-ocMfRH_jDNgyC8DoVCkyQgifZKurYqlbZNG0g_yJWE7md4E3GQ==]",
+        "example_url": "https://vertexaisearch.cloud.com/grounding-api-redirect/AUZIYQFSWSYvOQGbg3SZ62H68s6EQ7K3SDaKjwIQHlaz9zHuvl54a0-NcWGetby_oXYGwNVVSnfjs-uuruUzZPui0CEG8-9ULvvo7uCENkdZg9q0GiDJPzMnCYR6Z1F1psILyn3cXFL6vUvygZFuGIJqVzsBU61E8mSZscgGMWoo_FZksTftzSdDpmr-Ia3xisZ-MFC2_Jqtsp-ocMfRH_jDNgyC8DoVCkyQgifZKurYqlbZNG0g_yJWE7md4E3GQ==",
         "homepage_status": 200,
         "example_status": null,
         "homepage_final_url": "https://www.cloud.com/",
-        "example_final_url": "https://vertexaisearch.cloud.com/grounding-api-redirect/AUZIYQFSWSYvOQGbg3SZ62H68s6EQ7K3SDaKjwIQHlaz9zHuvl54a0-NcWGetby_oXYGwNVVSnfjs-uuruUzZPui0CEG8-9ULvvo7uCENkdZg9q0GiDJPzMnCYR6Z1F1psILyn3cXFL6vUvygZFuGIJqVzsBU61E8mSZscgGMWoo_FZksTftzSdDpmr-Ia3xisZ-MFC2_Jqtsp-ocMfRH_jDNgyC8DoVCkyQgifZKurYqlbZNG0g_yJWE7md4E3GQ==]",
+        "example_final_url": "https://vertexaisearch.cloud.com/grounding-api-redirect/AUZIYQFSWSYvOQGbg3SZ62H68s6EQ7K3SDaKjwIQHlaz9zHuvl54a0-NcWGetby_oXYGwNVVSnfjs-uuruUzZPui0CEG8-9ULvvo7uCENkdZg9q0GiDJPzMnCYR6Z1F1psILyn3cXFL6vUvygZFuGIJqVzsBU61E8mSZscgGMWoo_FZksTftzSdDpmr-Ia3xisZ-MFC2_Jqtsp-ocMfRH_jDNgyC8DoVCkyQgifZKurYqlbZNG0g_yJWE7md4E3GQ==",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "",
         "homepage": {
@@ -7914,6 +7915,130 @@
       }
     },
     {
+      "domain": "byteplus.com",
+      "entity": "Byteplus",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-15T13:30:37.000Z",
+      "last_seen_at": "2026-04-17T14:35:00.000Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
+          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=2dnuttry4m02uyeswjtnkyw6cq",
+          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=29q4voamvbgxgyt2c5thxlhg3x"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "byteplusglobal"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.12,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.36000000000000004,
+          "confidence": 0.1386,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-16T04:00:14.132Z",
+        "homepage_url": "https://byteplus.com/",
+        "example_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.byteplus.com/en",
+        "example_final_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "rice.edu",
       "entity": "Rice",
       "kind": "unknown",
@@ -10124,6 +10249,129 @@
       }
     },
     {
+      "domain": "coindesk.com",
+      "entity": "Coindesk",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-14T15:07:57.000Z",
+      "last_seen_at": "2026-04-17T16:41:00.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://consensus.coindesk.com/?utm_source=x&utm_medium=paid&utm_campaign=CMIA26&utm_content=speakerscarousel&twclid=25wlgerig7ee1h05a2z5wafpgx",
+          "https://consensus.coindesk.com/?utm_source=x&utm_medium=paid&utm_campaign=CMIA26&utm_content=eb11static&twclid=27fjgm2ggih3oazqv7awx49b6z"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "coindesk"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.42,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:6",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-17T19:01:01.293Z",
+        "homepage_url": "https://coindesk.com/",
+        "example_url": "https://consensus.coindesk.com/?utm_source=x&utm_medium=paid&utm_campaign=CMIA26&utm_content=speakerscarousel&twclid=25wlgerig7ee1h05a2z5wafpgx",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.coindesk.com/",
+        "example_final_url": "https://consensus.coindesk.com/?utm_source=x&utm_medium=paid&utm_campaign=CMIA26&utm_content=speakerscarousel&twclid=25wlgerig7ee1h05a2z5wafpgx",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 15,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 6,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "outx.ai",
       "entity": "Outx Ai",
       "kind": "unknown",
@@ -10365,129 +10613,6 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "byteplus.com",
-      "entity": "Byteplus",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-15T13:30:37.000Z",
-      "last_seen_at": "2026-04-15T14:20:39.000Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
-          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=2dnuttry4m02uyeswjtnkyw6cq"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "byteplusglobal"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.12,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3536197916666667,
-          "confidence": 0.10997499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-16T04:00:14.132Z",
-        "homepage_url": "https://byteplus.com/",
-        "example_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.byteplus.com/en",
-        "example_final_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 5,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -16074,7 +16199,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T18:19:31.501Z",
+        "fetched_at": "2026-04-17T18:31:03.631Z",
         "homepage_url": "https://googlecloudevents.com/",
         "example_url": "https://www.googlecloudevents.com/next-vegas/?utm_source=twitter&utm_medium=social_video&utm_campaign=FY26-Q2-GLOBAL-GLO27877-physicalevent-er-next26-mc-105752&utm_content=x-video&utm_term=-&twclid=2ehex7zq3t812jvfufjghnt42r",
         "homepage_status": 200,
@@ -16101,128 +16226,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 15,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "coindesk.com",
-      "entity": "Coindesk",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-14T15:07:57.000Z",
-      "last_seen_at": "2026-04-14T15:07:57.000Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://consensus.coindesk.com/?utm_source=x&utm_medium=paid&utm_campaign=CMIA26&utm_content=speakerscarousel&twclid=25wlgerig7ee1h05a2z5wafpgx"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "coindesk"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.42,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:6",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-14T18:44:26.631Z",
-        "homepage_url": "https://coindesk.com/",
-        "example_url": "https://consensus.coindesk.com/?utm_source=x&utm_medium=paid&utm_campaign=CMIA26&utm_content=speakerscarousel&twclid=25wlgerig7ee1h05a2z5wafpgx",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.coindesk.com/",
-        "example_final_url": "https://consensus.coindesk.com/?utm_source=x&utm_medium=paid&utm_campaign=CMIA26&utm_content=speakerscarousel&twclid=25wlgerig7ee1h05a2z5wafpgx",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 16,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 6,
           "opinion_marker": false
         }
       }
@@ -16318,7 +16321,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-14T19:09:34.965Z",
+        "fetched_at": "2026-04-17T20:01:03.413Z",
         "homepage_url": "https://valvolineglobal.com/",
         "example_url": "https://www.valvolineglobal.com/en/fifa-national-sweeps/?utm_source=X&utm_medium=paidsocial&utm_campaign=WC26_GM_US_AWE&utm_content=wcsimplified&twclid=299i90helnojknptru820mqim9",
         "homepage_status": 200,
