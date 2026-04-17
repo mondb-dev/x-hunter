@@ -17,6 +17,9 @@
 
 'use strict';
 
+const fs = require('fs');
+const path = require('path');
+
 // ── Weights ─────────────────────────────────────────────────────────────────
 const WEIGHTS = {
   source_tier:      0.30,
@@ -33,14 +36,52 @@ const STATUS_THRESHOLDS = {
   refuted:   0.25,   // <= this or web search refutes → refuted
 };
 
-// Tier 1-2 domains that count as high-quality evidence sources
-const HIGH_TIER_DOMAINS = new Set([
-  'reuters.com', 'apnews.com', 'bbc.com', 'bbc.co.uk', 'nytimes.com',
-  'wsj.com', 'theguardian.com', 'aljazeera.com', 'ft.com', 'washingtonpost.com',
-  'economist.com', 'haaretz.com', 'timesofisrael.com', 'axios.com', 'politico.com',
-  'cnn.com', 'cbsnews.com', 'nbcnews.com', 'abcnews.go.com', 'wikipedia.org',
-  'middleeastmonitor.com', 'france24.com', 'dw.com',
-]);
+// ── High-tier domains (derived from source_registry.json) ───────────────────
+// Built dynamically from tier 1-2 accounts in the registry.
+// Maps handle → likely website domain so grounding metadata can be matched.
+// Falls back to a small seed set for domains that don't map 1:1 from handles.
+
+const HANDLE_TO_DOMAIN = {
+  reuters: 'reuters.com', ap: 'apnews.com', apnews: 'apnews.com',
+  bbc: 'bbc.com', bbcbreaking: 'bbc.com', cnn: 'cnn.com',
+  foxnews: 'foxnews.com', ajenglish: 'aljazeera.com', aljazeera: 'aljazeera.com',
+  nytimes: 'nytimes.com', washingtonpost: 'washingtonpost.com',
+  theguardian: 'theguardian.com', wsj: 'wsj.com', ft: 'ft.com',
+  axios: 'axios.com', politico: 'politico.com', thehill: 'thehill.com',
+  haaretz: 'haaretz.com', timesofisrael: 'timesofisrael.com',
+  cbsnews: 'cbsnews.com', nbcnews: 'nbcnews.com', skynews: 'news.sky.com',
+  dailymail: 'dailymail.co.uk',
+};
+
+// Additional known-credible domains not tied to a Twitter handle
+const SEED_DOMAINS = [
+  'wikipedia.org', 'bbc.co.uk', 'abcnews.go.com', 'economist.com',
+  'france24.com', 'dw.com', 'middleeastmonitor.com',
+];
+
+function buildHighTierDomains(registryPath) {
+  const domains = new Set(SEED_DOMAINS);
+
+  try {
+    const registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
+    const accounts = registry.accounts || {};
+    for (const [handle, data] of Object.entries(accounts)) {
+      if (data.credibility_tier <= 2) {
+        // Use explicit mapping if available, else try handle + .com
+        const domain = HANDLE_TO_DOMAIN[handle.toLowerCase()];
+        if (domain) domains.add(domain);
+      }
+    }
+  } catch {
+    // Registry not found — use handle mappings as fallback
+    for (const d of Object.values(HANDLE_TO_DOMAIN)) domains.add(d);
+  }
+
+  return domains;
+}
+
+const REGISTRY_PATH = path.resolve(__dirname, '../../state/source_registry.json');
+const HIGH_TIER_DOMAINS = buildHighTierDomains(REGISTRY_PATH);
 
 // ── Component scorers ───────────────────────────────────────────────────────
 
