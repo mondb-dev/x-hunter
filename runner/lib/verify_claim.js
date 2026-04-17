@@ -85,4 +85,61 @@ function verifyClaim(opts) {
   }
 }
 
-module.exports = { verifyClaim };
+/**
+ * Deep investigate a claim (full agent loop, ~5-10 minutes).
+ *
+ * @param {object} opts
+ * @param {string} opts.claim - claim text (required)
+ * @param {string} [opts.claimId] - existing claim ID
+ * @param {string} [opts.handle] - source handle
+ * @param {string} [opts.url] - source URL
+ * @param {string} [opts.category]
+ * @param {string} [opts.axis]
+ * @param {number} [opts.tier]
+ * @param {boolean} [opts.dryRun]
+ *
+ * @returns {object|null} { claim_id, investigation_id, status, confidence, summary, key_finding, ... }
+ */
+function investigateClaimSync(opts) {
+  if (!opts || !opts.claim) {
+    log('investigateClaimSync: missing required claim parameter');
+    return null;
+  }
+
+  try {
+    const args = [
+      'runner/intelligence/investigate_claim.js',
+      '--claim', opts.claim,
+    ];
+
+    if (opts.claimId) args.push('--claim-id', opts.claimId);
+    if (opts.handle) args.push('--source-handle', opts.handle);
+    if (opts.url) args.push('--source-url', opts.url);
+    if (opts.category) args.push('--category', opts.category);
+    if (opts.axis) args.push('--axis', opts.axis);
+    if (opts.tier) args.push('--source-tier', String(opts.tier));
+    if (opts.dryRun) args.push('--dry-run');
+
+    const stdout = execFileSync('node', args, {
+      cwd: ROOT,
+      timeout: 900_000, // 15 min
+      encoding: 'utf-8',
+    });
+
+    const lines = stdout.trim().split('\n').reverse();
+    for (const line of lines) {
+      try {
+        const json = JSON.parse(line);
+        if (json.claim_id && json.investigation_id) return json;
+      } catch {}
+    }
+
+    log(`investigateClaimSync: no valid JSON in output`);
+    return null;
+  } catch (err) {
+    log(`investigateClaimSync error: ${err.message}`);
+    return null;
+  }
+}
+
+module.exports = { verifyClaim, investigateClaimSync };

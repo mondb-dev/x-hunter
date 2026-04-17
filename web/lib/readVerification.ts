@@ -16,6 +16,41 @@ export interface SourceStance {
   stance: string;
 }
 
+export interface InvestigationSource {
+  url: string;
+  domain: string;
+  title?: string;
+  quote?: string;
+  date?: string;
+  relevance?: string;
+}
+
+export interface SubQuestion {
+  question: string;
+  answer: string;
+  confidence: number;
+  sources: InvestigationSource[];
+}
+
+export interface AttributionLevel {
+  level: number;
+  description: string;
+  url?: string;
+}
+
+export interface InvestigationData {
+  investigation_id: string;
+  sub_questions: SubQuestion[];
+  attribution_chain: AttributionLevel[];
+  supporting_evidence: InvestigationSource[];
+  contradicting_evidence: InvestigationSource[];
+  overall_verdict: string;
+  summary: string;
+  key_finding: string;
+  duration_seconds: number;
+  created_at: string;
+}
+
 export interface VerifiedClaim {
   claim_id: string;
   claim_text: string;
@@ -37,6 +72,8 @@ export interface VerifiedClaim {
   dissenting_sources: SourceStance[];
   framing_analysis: string | null;
   web_search_summary: string | null;
+  investigation_depth?: string;
+  investigation?: InvestigationData;
 }
 
 export interface VerificationStats {

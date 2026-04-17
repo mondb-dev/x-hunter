@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { readVerification, VerifiedClaim, ScoringBreakdown } from "../../lib/readVerification";
+import { readVerification, VerifiedClaim, ScoringBreakdown, InvestigationData } from "../../lib/readVerification";
 import CopyLinkButton from "../../components/CopyLinkButton";
 
 /**
@@ -112,6 +112,101 @@ const SCORE_COLORS: Record<keyof ScoringBreakdown, string> = {
 };
 
 // ── Components ───────────────────────────────────────────────────────────────
+
+function InvestigationSection({ inv }: { inv: InvestigationData }) {
+  return (
+    <details className="verify-investigation">
+      <summary className="verify-investigation-toggle">
+        Deep Investigation
+        <span className="verify-investigation-badge">
+          {inv.sub_questions.length} sub-questions, {inv.supporting_evidence.length} supporting, {inv.contradicting_evidence.length} contradicting
+        </span>
+      </summary>
+
+      {inv.key_finding && (
+        <div className="verify-investigation-finding">
+          <strong>Key finding:</strong> {inv.key_finding}
+        </div>
+      )}
+
+      {inv.attribution_chain.length > 0 && (
+        <div className="verify-investigation-chain">
+          <span className="verify-investigation-section-label">Attribution Chain</span>
+          <div className="verify-investigation-chain-list">
+            {inv.attribution_chain.map((a, i) => (
+              <div key={i} className="verify-investigation-chain-item">
+                <span className="verify-investigation-chain-level">L{a.level}</span>
+                <span className="verify-investigation-chain-desc">{a.description}</span>
+                {a.url && (
+                  <a href={a.url} target="_blank" rel="noopener noreferrer" className="verify-investigation-chain-link">source</a>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {inv.sub_questions.length > 0 && (
+        <div className="verify-investigation-questions">
+          <span className="verify-investigation-section-label">Sub-Questions</span>
+          {inv.sub_questions.map((sq, i) => (
+            <div key={i} className="verify-investigation-question">
+              <div className="verify-investigation-q">
+                <strong>Q:</strong> {sq.question}
+                <span className="verify-investigation-q-conf" style={{
+                  color: sq.confidence >= 0.8 ? "#4ade80" : sq.confidence >= 0.5 ? "#fbbf24" : "#f87171"
+                }}>
+                  {Math.round(sq.confidence * 100)}%
+                </span>
+              </div>
+              <div className="verify-investigation-a">{sq.answer}</div>
+              {sq.sources && sq.sources.length > 0 && (
+                <div className="verify-investigation-q-sources">
+                  {sq.sources.map((s, j) => (
+                    <a key={j} href={s.url} target="_blank" rel="noopener noreferrer"
+                       className="verify-investigation-q-source" title={s.quote || s.title || ""}>
+                      {s.domain || s.title || "source"}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {inv.supporting_evidence.length > 0 && (
+        <div className="verify-investigation-evidence verify-investigation-evidence--supporting">
+          <span className="verify-investigation-section-label" style={{ color: "#4ade80" }}>Supporting Evidence</span>
+          {inv.supporting_evidence.map((e, i) => (
+            <div key={i} className="verify-investigation-evidence-item">
+              <a href={e.url} target="_blank" rel="noopener noreferrer" className="verify-investigation-evidence-domain">
+                {e.domain || "source"}
+              </a>
+              {e.quote && <span className="verify-investigation-evidence-quote">&ldquo;{e.quote}&rdquo;</span>}
+              {e.relevance && <span className="verify-investigation-evidence-relevance">{e.relevance}</span>}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {inv.contradicting_evidence.length > 0 && (
+        <div className="verify-investigation-evidence verify-investigation-evidence--contradicting">
+          <span className="verify-investigation-section-label" style={{ color: "#f87171" }}>Contradicting Evidence</span>
+          {inv.contradicting_evidence.map((e, i) => (
+            <div key={i} className="verify-investigation-evidence-item">
+              <a href={e.url} target="_blank" rel="noopener noreferrer" className="verify-investigation-evidence-domain">
+                {e.domain || "source"}
+              </a>
+              {e.quote && <span className="verify-investigation-evidence-quote">&ldquo;{e.quote}&rdquo;</span>}
+              {e.relevance && <span className="verify-investigation-evidence-relevance">{e.relevance}</span>}
+            </div>
+          ))}
+        </div>
+      )}
+    </details>
+  );
+}
 
 function StatCard({ label, value, color }: { label: string; value: number; color: string }) {
   return (
@@ -248,6 +343,11 @@ function ClaimCard({ claim }: { claim: VerifiedClaim }) {
           <span className="verify-claim-framing-label">Framing Analysis</span>
           <p>{claim.framing_analysis}</p>
         </div>
+      )}
+
+      {/* Deep investigation */}
+      {claim.investigation && (
+        <InvestigationSection inv={claim.investigation} />
       )}
 
       {claim.evidence_urls && claim.evidence_urls.length > 0 && (

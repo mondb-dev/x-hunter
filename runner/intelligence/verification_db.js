@@ -115,7 +115,32 @@ try {
   if (!cols.includes('supporting_sources')) db.exec('ALTER TABLE claim_verifications ADD COLUMN supporting_sources TEXT');
   if (!cols.includes('dissenting_sources')) db.exec('ALTER TABLE claim_verifications ADD COLUMN dissenting_sources TEXT');
   if (!cols.includes('framing_analysis'))   db.exec('ALTER TABLE claim_verifications ADD COLUMN framing_analysis TEXT');
+  if (!cols.includes('investigation_id'))   db.exec('ALTER TABLE claim_verifications ADD COLUMN investigation_id TEXT');
+  if (!cols.includes('investigation_depth')) db.exec("ALTER TABLE claim_verifications ADD COLUMN investigation_depth TEXT DEFAULT 'quick'");
 } catch {}
+
+// ── Investigation table (deep research results) ─────────────────────────────
+db.exec(`
+  CREATE TABLE IF NOT EXISTS claim_investigations (
+    investigation_id      TEXT PRIMARY KEY,
+    claim_id              TEXT NOT NULL,
+    claim_text            TEXT NOT NULL,
+    sub_questions         TEXT,
+    attribution_chain     TEXT,
+    supporting_evidence   TEXT,
+    contradicting_evidence TEXT,
+    overall_verdict       TEXT,
+    confidence            REAL,
+    summary               TEXT,
+    key_finding           TEXT,
+    raw_result            TEXT,
+    turns_used            INTEGER,
+    duration_seconds      INTEGER,
+    created_at            TEXT NOT NULL,
+    FOREIGN KEY (claim_id) REFERENCES claim_verifications(claim_id)
+  );
+  CREATE INDEX IF NOT EXISTS idx_inv_claim ON claim_investigations(claim_id);
+`);
 
 // ── Prepared statements ─────────────────────────────────────────────────────
 
@@ -229,6 +254,33 @@ const stmts = {
       AND  resolution_tweet_url IS NULL
     ORDER  BY confidence_score DESC
     LIMIT  10
+  `),
+
+  // ── Investigation statements ──────────────────────────────────────────────
+  insertInvestigation: db.prepare(`
+    INSERT INTO claim_investigations (
+      investigation_id, claim_id, claim_text, sub_questions, attribution_chain,
+      supporting_evidence, contradicting_evidence, overall_verdict, confidence,
+      summary, key_finding, raw_result, turns_used, duration_seconds, created_at
+    ) VALUES (
+      @investigation_id, @claim_id, @claim_text, @sub_questions, @attribution_chain,
+      @supporting_evidence, @contradicting_evidence, @overall_verdict, @confidence,
+      @summary, @key_finding, @raw_result, @turns_used, @duration_seconds, @created_at
+    )
+  `),
+
+  getInvestigation: db.prepare(`
+    SELECT * FROM claim_investigations WHERE investigation_id = ?
+  `),
+
+  getInvestigationByClaim: db.prepare(`
+    SELECT * FROM claim_investigations WHERE claim_id = ? ORDER BY created_at DESC LIMIT 1
+  `),
+
+  linkInvestigation: db.prepare(`
+    UPDATE claim_verifications
+    SET investigation_id = ?, investigation_depth = 'deep', updated_at = ?
+    WHERE claim_id = ?
   `),
 };
 
@@ -346,6 +398,49 @@ function getResolutionCandidates() {
   return stmts.getResolutionCandidates.all().map(parseRow);
 }
 
+function insertInvestigation(record) {
+  stmts.insertInvestigation.run({
+    investigation_id:      record.investigation_id,
+    claim_id:              record.claim_id,
+    claim_text:            record.claim_text,
+    sub_questions:         JSON.stringify(record.sub_questions || []),
+    attribution_chain:     JSON.stringify(record.attribution_chain || []),
+    supporting_evidence:   JSON.stringify(record.supporting_evidence || []),
+    contradicting_evidence: JSON.stringify(record.contradicting_evidence || []),
+    overall_verdict:       record.overall_verdict || 'inconclusive',
+    confidence:            record.confidence || 0,
+    summary:               record.summary || '',
+    key_finding:           record.key_finding || '',
+    raw_result:            JSON.stringify(record.raw_result || {}),
+    turns_used:            record.turns_used || 0,
+    duration_seconds:      record.duration_seconds || 0,
+    created_at:            record.created_at || new Date().toISOString(),
+  });
+}
+
+function getInvestigation(investigationId) {
+  const row = stmts.getInvestigation.get(investigationId);
+  return row ? parseInvestigation(row) : null;
+}
+
+function getInvestigationByClaim(claimId) {
+  const row = stmts.getInvestigationByClaim.get(claimId);
+  return row ? parseInvestigation(row) : null;
+}
+
+function linkInvestigation(claimId, investigationId) {
+  stmts.linkInvestigation.run(investigationId, new Date().toISOString(), claimId);
+}
+
+function parseInvestigation(row) {
+  try { row.sub_questions = JSON.parse(row.sub_questions || '[]'); } catch { row.sub_questions = []; }
+  try { row.attribution_chain = JSON.parse(row.attribution_chain || '[]'); } catch { row.attribution_chain = []; }
+  try { row.supporting_evidence = JSON.parse(row.supporting_evidence || '[]'); } catch { row.supporting_evidence = []; }
+  try { row.contradicting_evidence = JSON.parse(row.contradicting_evidence || '[]'); } catch { row.contradicting_evidence = []; }
+  try { row.raw_result = JSON.parse(row.raw_result || '{}'); } catch { row.raw_result = {}; }
+  return row;
+}
+
 function parseRow(row) {
   row.scoring_breakdown = row.scoring_breakdown ? JSON.parse(row.scoring_breakdown) : {};
   row.evidence_urls = row.evidence_urls ? JSON.parse(row.evidence_urls) : [];
@@ -410,6 +505,10 @@ module.exports = {
   setResolutionTweetUrl,
   getWatchCandidates,
   getResolutionCandidates,
+  insertInvestigation,
+  getInvestigation,
+  getInvestigationByClaim,
+  linkInvestigation,
   recallVerifications,
   runTransaction,
 };
