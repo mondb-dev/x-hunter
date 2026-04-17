@@ -315,10 +315,14 @@ function ClaimCard({ claim }: { claim: VerifiedClaim }) {
       {claim.supporting_sources && claim.supporting_sources.length > 0 && (
         <div className="verify-claim-sources verify-claim-sources--supporting">
           <span className="verify-claim-sources-label" style={{ color: "#4ade80" }}>Supporting</span>
-          {claim.supporting_sources.map((s, i) => (
+          {claim.supporting_sources.map((s: any, i: number) => (
             <div key={i} className="verify-claim-source-item">
-              <span className="verify-claim-source-name">{s.name}</span>
-              {s.stance && <span className="verify-claim-source-stance">{s.stance}</span>}
+              {s.url ? (
+                <a href={s.url} target="_blank" rel="noopener noreferrer" className="verify-claim-source-name verify-claim-source-link">{s.name}</a>
+              ) : (
+                <span className="verify-claim-source-name">{s.name}</span>
+              )}
+              {(s.excerpt || s.stance) && <span className="verify-claim-source-stance">{s.excerpt || s.stance}</span>}
             </div>
           ))}
         </div>
@@ -328,10 +332,14 @@ function ClaimCard({ claim }: { claim: VerifiedClaim }) {
       {claim.dissenting_sources && claim.dissenting_sources.length > 0 && (
         <div className="verify-claim-sources verify-claim-sources--dissenting">
           <span className="verify-claim-sources-label" style={{ color: "#f87171" }}>Dissenting</span>
-          {claim.dissenting_sources.map((s, i) => (
+          {claim.dissenting_sources.map((s: any, i: number) => (
             <div key={i} className="verify-claim-source-item">
-              <span className="verify-claim-source-name">{s.name}</span>
-              {s.stance && <span className="verify-claim-source-stance">{s.stance}</span>}
+              {s.url ? (
+                <a href={s.url} target="_blank" rel="noopener noreferrer" className="verify-claim-source-name verify-claim-source-link">{s.name}</a>
+              ) : (
+                <span className="verify-claim-source-name">{s.name}</span>
+              )}
+              {(s.excerpt || s.stance) && <span className="verify-claim-source-stance">{s.excerpt || s.stance}</span>}
             </div>
           ))}
         </div>

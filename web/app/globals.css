@@ -1008,6 +1008,8 @@ main {
   font-size: 12px; padding: 0.15rem 0;
 }
 .verify-claim-source-name { font-weight: 600; color: var(--fg, #e2e8f0); }
+a.verify-claim-source-link { color: var(--accent, #60a5fa); text-decoration: underline; text-decoration-color: var(--accent, #60a5fa)40; }
+a.verify-claim-source-link:hover { text-decoration-color: var(--accent, #60a5fa); }
 .verify-claim-source-stance { color: var(--muted); font-style: italic; }
 
 /* Framing analysis */

@@ -48,11 +48,14 @@ async function webSearchVerify(claimText) {
       'Search for evidence. Respond with ONLY a JSON object (no markdown fences, no extra text):',
       '{"verdict":"confirmed|refuted|partial|inconclusive|no_results",',
       '"summary":"2-3 sentence findings",',
-      '"supporting_sources":"Name the outlets/orgs that support this claim, e.g. Reuters, AP News confirm X",',
-      '"dissenting_sources":"Name outlets/orgs that contradict this, or empty string if none",',
+      '"supporting_sources":[{"name":"Outlet/org name","excerpt":"1 sentence of what they reported"}],',
+      '"dissenting_sources":[{"name":"Outlet/org name","excerpt":"1 sentence of what they reported"}],',
       '"original_source":"who first reported this claim",',
       '"claim_date":"YYYY-MM-DD or YYYY-MM if known, else empty",',
       '"framing_analysis":"Is the claim framed validly or misleadingly? 1-2 sentences."}',
+      '',
+      'For supporting_sources and dissenting_sources: list EACH outlet separately as its own object.',
+      'Use empty arrays [] if none.',
     ].join('\n');
 
     const controller = new AbortController();
@@ -93,6 +96,34 @@ async function webSearchVerify(claimText) {
         .filter(Boolean);
       const searchQueries = grounding?.webSearchQueries || [];
 
+      // Helper: match a source name to a grounding URL by domain keyword
+      function matchUrl(sourceName) {
+        if (!sourceName) return null;
+        const lower = sourceName.toLowerCase();
+        for (const chunk of groundingChunks) {
+          const domain = (chunk.web.domain || chunk.web.title || '').toLowerCase();
+          const uri = (chunk.web.uri || '').toLowerCase();
+          const words = lower.replace(/[^a-z0-9\s]/g, '').split(/\s+/).filter(w => w.length > 3);
+          for (const w of words) {
+            if (domain.includes(w) || uri.includes(w)) return chunk.web.uri;
+          }
+        }
+        return null;
+      }
+
+      function normalizeSources(raw) {
+        if (!raw) return [];
+        if (typeof raw === 'string') {
+          if (!raw.trim()) return [];
+          return [{ name: raw, excerpt: '', url: matchUrl(raw) }];
+        }
+        if (!Array.isArray(raw)) return [];
+        return raw.map(s => {
+          if (typeof s === 'string') return { name: s, excerpt: '', url: matchUrl(s) };
+          return { name: s.name || '', excerpt: s.excerpt || s.stance || '', url: matchUrl(s.name) };
+        }).filter(s => s.name);
+      }
+
       // Parse structured response
       let parsed;
       try {
@@ -115,8 +146,8 @@ async function webSearchVerify(claimText) {
           evidence_domains: groundingDomains,
           original_source: rx('original_source'),
           claim_date: rx('claim_date'),
-          supporting_sources: rx('supporting_sources') ? [{ name: rx('supporting_sources'), stance: '' }] : [],
-          dissenting_sources: rx('dissenting_sources') ? [{ name: rx('dissenting_sources'), stance: '' }] : [],
+          supporting_sources: normalizeSources(rx('supporting_sources')),
+          dissenting_sources: normalizeSources(rx('dissenting_sources')),
           framing_analysis: rx('framing_analysis'),
         };
       }
@@ -133,8 +164,8 @@ async function webSearchVerify(claimText) {
         evidence_domains:   groundingDomains.slice(0, 5),
         original_source:    parsed.original_source || null,
         claim_date:         parsed.claim_date || null,
-        supporting_sources: parsed.supporting_sources ? [{ name: parsed.supporting_sources, stance: '' }] : [],
-        dissenting_sources: parsed.dissenting_sources ? [{ name: parsed.dissenting_sources, stance: '' }] : [],
+        supporting_sources: normalizeSources(parsed.supporting_sources),
+        dissenting_sources: normalizeSources(parsed.dissenting_sources),
         framing_analysis:   parsed.framing_analysis || null,
       };
     } finally {

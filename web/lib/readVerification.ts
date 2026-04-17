@@ -13,7 +13,9 @@ export interface ScoringBreakdown {
 
 export interface SourceStance {
   name: string;
-  stance: string;
+  stance?: string;
+  excerpt?: string;
+  url?: string;
 }
 
 export interface InvestigationSource {
