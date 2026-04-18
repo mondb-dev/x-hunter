@@ -301,7 +301,7 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
       const el = document.querySelector(sel);
       return el ? el.innerText.trim() : "";
     }, COMPOSE_BOX);
-    if (!insertedText || insertedText.length < quoteText.length * 0.8) {
+    if (!insertedText || insertedText.length < quoteText.length * 0.95) {
       console.log(`[post_quote] text verification: got ${insertedText.length}/${quoteText.length} chars — retrying with keyboard`);
       // Clear and retry with keyboard
       await page.evaluate((sel) => {
@@ -318,7 +318,7 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
         return el ? el.innerText.trim() : "";
       }, COMPOSE_BOX);
       console.log(`[post_quote] retry verification: ${retryText.length}/${quoteText.length} chars`);
-      if (!retryText || retryText.length < quoteText.length * 0.5) {
+      if (!retryText || retryText.length < quoteText.length * 0.9) {
         console.error(`[post_quote] text insertion failed after retry — aborting`);
         browser.disconnect();
         process.exit(1);

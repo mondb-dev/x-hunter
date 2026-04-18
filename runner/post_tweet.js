@@ -183,7 +183,7 @@ async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_
     const gotLen = insertedText.length;
     console.log(`[post_tweet] text verification: ${gotLen}/${expectedLen} chars`);
 
-    if (!insertedText || gotLen < expectedLen * 0.8) {
+    if (!insertedText || gotLen < expectedLen * 0.95) {
       console.log("[post_tweet] text truncated or missing — retrying with keyboard fallback");
       // Clear and retry with keyboard.type
       await page.evaluate((sel) => {
@@ -201,7 +201,7 @@ async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_
       }, COMPOSE_BOX);
       console.log(`[post_tweet] retry verification: ${retryText.length}/${expectedLen} chars`);
 
-      if (!retryText || retryText.length < expectedLen * 0.5) {
+      if (!retryText || retryText.length < expectedLen * 0.9) {
         console.error("[post_tweet] text insertion failed after retry — aborting");
         browser.disconnect();
         process.exit(1);

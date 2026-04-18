@@ -48,7 +48,7 @@ async function typeIntoCompose(page, text, selector) {
     const el = document.querySelector(sel);
     return el ? el.innerText.trim() : '';
   }, selector);
-  if (!inserted || inserted.length < text.length * 0.8) {
+  if (!inserted || inserted.length < text.length * 0.95) {
     // Clear first to avoid duplication, then keyboard fallback
     await page.evaluate((sel) => {
       const el = document.querySelector(sel);

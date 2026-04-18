@@ -82,7 +82,7 @@ What he never sounds like:
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
 async function callOllama(prompt) {
-  return llmGenerate(prompt, { temperature: 0.4, maxTokens: 200, timeoutMs: 30_000 });
+  return llmGenerate(prompt, { temperature: 0.4, maxTokens: 400, timeoutMs: 30_000 });
 }
 
 /**
@@ -429,7 +429,8 @@ Rules:
     revised = response
       .replace(/^["']|["']$/g, "")
       .replace(/^(Revised|Tweet|Output|Result|Here)[:.]?\s*/i, "")
-      .replace(/\n.*/s, "") // take only first line
+      .replace(/\n/g, " ")  // join lines — LLM may wrap tweet text across newlines
+      .replace(/\s{2,}/g, " ")
       .trim();
   } catch (err) {
     console.log(`[voice_filter] Ollama unavailable: ${err.message} — passing through original`);
