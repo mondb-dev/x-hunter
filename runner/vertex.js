@@ -29,12 +29,19 @@ async function callVertex(prompt, maxTokens = 2000, options = {}) {
 
   const apiPath  = `/v1/projects/${project}/locations/${location}/publishers/google/models/${model}:generateContent`;
 
-  const generationConfig = { temperature: 0.7, maxOutputTokens: maxTokens };
-  if (options.thinkingBudget !== undefined && options.thinkingBudget > 0) {
-    generationConfig.thinkingConfig = { thinkingBudget: options.thinkingBudget };
+  // Thinking tokens share the maxOutputTokens budget in Gemini 2.5.
+  // To preserve the caller's full response budget, add the thinking budget on top.
+  const DEFAULT_THINKING_BUDGET = 1024;
+  const thinkingBudget = options.thinkingBudget !== undefined
+    ? options.thinkingBudget
+    : DEFAULT_THINKING_BUDGET;
+
+  const generationConfig = { temperature: 0.7 };
+  if (thinkingBudget > 0) {
+    generationConfig.maxOutputTokens = maxTokens + thinkingBudget;
+    generationConfig.thinkingConfig = { thinkingBudget };
   } else {
-    // Disable thinking by default — otherwise thinking tokens consume the
-    // maxOutputTokens budget, truncating the actual response.
+    generationConfig.maxOutputTokens = maxTokens;
     generationConfig.thinkingConfig = { thinkingBudget: 0 };
   }
 
