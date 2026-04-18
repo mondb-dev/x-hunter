@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-18T03:00:39.342Z",
+  "generated_at": "2026-04-18T04:00:40.194Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-18T03:01:25.472Z",
+  "profiled_at": "2026-04-18T04:01:12.014Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -317,7 +317,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:32",
+            "outbound_links:31",
             "opinion_marker:false"
           ]
         },
@@ -337,7 +337,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T03:44:35.916Z",
+        "fetched_at": "2026-04-18T04:01:10.426Z",
         "homepage_url": "https://house.gov/",
         "example_url": "https://www.house.gov/",
         "homepage_status": null,
@@ -363,7 +363,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 32,
+          "outbound_links_count": 31,
           "opinion_marker": false
         }
       }
@@ -587,7 +587,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T03:44:36.341Z",
+        "fetched_at": "2026-04-18T04:01:11.033Z",
         "homepage_url": "https://theguardian.com/",
         "example_url": "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
         "homepage_status": 200,
@@ -707,7 +707,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T03:44:36.617Z",
+        "fetched_at": "2026-04-18T04:01:11.322Z",
         "homepage_url": "https://apnews.com/",
         "example_url": "https://apnews.com/hub/iran",
         "homepage_status": 200,
@@ -743,9 +743,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-17T22:46:01.000Z",
+      "last_seen_at": "2026-04-18T02:39:28.000Z",
       "discovery": {
-        "distinct_urls": 745,
+        "distinct_urls": 748,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -754,10 +754,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 470,
-          "feed_buffer_reply": 317
+          "feed_buffer": 471,
+          "feed_buffer_reply": 319
         },
-        "distinct_referring_accounts": 379,
+        "distinct_referring_accounts": 382,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -795,7 +795,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:745",
+            "distinct_urls:748",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -803,7 +803,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:379",
+            "referring_accounts:382",
             "origin_types:2"
           ]
         },
@@ -833,17 +833,17 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:745",
+            "distinct_urls:748",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:379",
+            "referring_accounts:382",
             "origin_types:2",
             "track_record_unavailable"
           ]
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T03:44:37.144Z",
+        "fetched_at": "2026-04-18T04:01:12.014Z",
         "homepage_url": "https://t.co/",
         "example_url": "https://t.co/pJSE124ec4",
         "homepage_status": 200,
@@ -879,9 +879,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-17T20:59:01.000Z",
+      "last_seen_at": "2026-04-18T02:39:28.000Z",
       "discovery": {
-        "distinct_urls": 105,
+        "distinct_urls": 108,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -890,10 +890,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 102,
-          "feed_buffer": 5
+          "feed_buffer_reply": 105,
+          "feed_buffer": 7
         },
-        "distinct_referring_accounts": 86,
+        "distinct_referring_accounts": 89,
         "sample_referring_accounts": [
           "100ohiostate",
           "50hidalgo47",
@@ -931,7 +931,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:105",
+            "distinct_urls:108",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -939,7 +939,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:86",
+            "referring_accounts:89",
             "origin_types:2"
           ]
         },
@@ -969,10 +969,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:105",
+            "distinct_urls:108",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:86",
+            "referring_accounts:89",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1275,9 +1275,9 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-18T00:16:39.652Z",
+      "last_seen_at": "2026-04-18T03:02:54.883Z",
       "discovery": {
-        "distinct_urls": 124,
+        "distinct_urls": 127,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
@@ -1288,7 +1288,7 @@
         "origin_counts": {
           "ontology_evidence": 113,
           "claim_tracker": 14,
-          "journals": 50
+          "journals": 53
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1336,7 +1336,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:124",
+            "distinct_urls:127",
             "distinct_axes:17",
             "origin_types:3"
           ]
@@ -1377,7 +1377,7 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:124",
+            "distinct_urls:127",
             "distinct_axes:17",
             "origin_types:3",
             "referring_accounts:0",
@@ -10513,6 +10513,129 @@
       }
     },
     {
+      "domain": "eclincher.com",
+      "entity": "Eclincher",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-09T00:33:40.000Z",
+      "last_seen_at": "2026-04-17T11:31:29.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://www.eclincher.com/ai-social-media-agent?twclid=22gdnmarextv0i2rs5d53x1dzn",
+          "https://www.eclincher.com/?twclid=21sy63abvajenoajxb1ex3nm60"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "eclincher"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.28,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:4",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-15T13:44:52.582Z",
+        "homepage_url": "https://eclincher.com/",
+        "example_url": "https://www.eclincher.com/ai-social-media-agent?twclid=22gdnmarextv0i2rs5d53x1dzn",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.eclincher.com/",
+        "example_final_url": "https://www.eclincher.com/ai-social-media-agent?twclid=22gdnmarextv0i2rs5d53x1dzn",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 9,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "ro.co",
       "entity": "Ro Co",
       "kind": "unknown",
@@ -15642,128 +15765,6 @@
       }
     },
     {
-      "domain": "eclincher.com",
-      "entity": "Eclincher",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-09T00:33:40.000Z",
-      "last_seen_at": "2026-04-09T00:33:40.000Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://www.eclincher.com/ai-social-media-agent?twclid=22gdnmarextv0i2rs5d53x1dzn"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "eclincher"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.28,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:4",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-15T13:44:52.582Z",
-        "homepage_url": "https://eclincher.com/",
-        "example_url": "https://www.eclincher.com/ai-social-media-agent?twclid=22gdnmarextv0i2rs5d53x1dzn",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.eclincher.com/",
-        "example_final_url": "https://www.eclincher.com/ai-social-media-agent?twclid=22gdnmarextv0i2rs5d53x1dzn",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 9,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 4,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "marketrebellion.com",
       "entity": "Marketrebellion",
       "kind": "unknown",
@@ -18660,7 +18661,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T03:19:36.912Z",
+        "fetched_at": "2026-04-18T03:31:09.981Z",
         "homepage_url": "https://frame.community/",
         "example_url": "https://frame.community/?twclid=28irkrqcy6e8k4qy0o87wprl7j",
         "homepage_status": 200,
@@ -25219,6 +25220,126 @@
           "has_corrections_link": false,
           "outbound_links_count": 20,
           "opinion_marker": true
+        }
+      }
+    },
+    {
+      "domain": "sustainability-directory.com",
+      "entity": "Sustainability-Directory",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-18T03:02:54.883Z",
+      "last_seen_at": "2026-04-18T03:02:54.883Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://sustainability-directory.com/"
+        ],
+        "origin_counts": {
+          "journals": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.25,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:3",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3370833333333333,
+          "confidence": 0.0491,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-18T03:31:10.198Z",
+        "homepage_url": "https://sustainability-directory.com/",
+        "example_url": "https://sustainability-directory.com/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://sustainability-directory.com/",
+        "example_final_url": "https://sustainability-directory.com/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
         }
       }
     },
