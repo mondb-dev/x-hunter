@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-18T01:10:37.407Z",
+  "generated_at": "2026-04-18T02:00:47.473Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-18T01:11:09.481Z",
+  "profiled_at": "2026-04-18T02:01:38.866Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -745,7 +745,7 @@
       "first_seen_at": "2026-03-31T09:30:40.000Z",
       "last_seen_at": "2026-04-17T22:15:36.000Z",
       "discovery": {
-        "distinct_urls": 740,
+        "distinct_urls": 743,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -754,10 +754,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 467,
-          "feed_buffer_reply": 315
+          "feed_buffer": 468,
+          "feed_buffer_reply": 317
         },
-        "distinct_referring_accounts": 376,
+        "distinct_referring_accounts": 377,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -795,7 +795,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:740",
+            "distinct_urls:743",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -803,7 +803,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:376",
+            "referring_accounts:377",
             "origin_types:2"
           ]
         },
@@ -833,10 +833,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:740",
+            "distinct_urls:743",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:376",
+            "referring_accounts:377",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3914,7 +3914,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T01:39:56.711Z",
+        "fetched_at": "2026-04-18T02:01:17.828Z",
         "homepage_url": "https://pixelsuite.ai/",
         "example_url": "https://www.pixelsuite.ai/?twclid=21t2mc2zkr7fbld6fej146r5rz",
         "homepage_status": 200,
@@ -5911,13 +5911,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T01:14:34.399Z",
+        "fetched_at": "2026-04-18T01:31:09.923Z",
         "homepage_url": "https://zite.com/",
         "example_url": "https://try.zite.com/ad-integrations-1?twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.zite.com/",
-        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=SCsBylhB8Hh93h2E&twclid=22vk5745ty6qkvlrboi0g1qhow",
+        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=pEYBf7PJ3XV2KOv1&twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -14634,7 +14634,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T01:39:55.285Z",
+        "fetched_at": "2026-04-18T02:01:37.833Z",
         "homepage_url": "https://kfc.com/",
         "example_url": "https://www.kfc.com/menu?utm_source=twitter&utm_medium=social&utm_campaign=kfcvaluefeast&utm_creative=9box&twclid=250lznofqwrkd2iq53t7qffgxo",
         "homepage_status": null,
@@ -14756,7 +14756,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T01:39:56.215Z",
+        "fetched_at": "2026-04-18T02:01:38.866Z",
         "homepage_url": "https://insuranceleadsguide.com/",
         "example_url": "https://insuranceleadsguide.com/insurance-leads/insurance-agency-marketing-tools/?twclid=286vjil8sq5bkkcyaaco0b55aj",
         "homepage_status": 200,
@@ -21680,20 +21680,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.13,
           "confidence": 0.55,
@@ -21706,6 +21692,20 @@
             "corrections:false",
             "outbound_links:3",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
