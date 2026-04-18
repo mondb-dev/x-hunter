@@ -110,6 +110,84 @@ function parseDigestForCandidates() {
   return candidates.sort((a, b) => b.score - a.score);
 }
 
+// ── Feed buffer parsing (followed accounts + axis-aligned posts) ─────────────
+//
+// This is the primary engagement surface for building relationships with
+// accounts Sebastian actually follows. Followed accounts bypass the like
+// threshold entirely — he should reply to people he chose to follow even
+// if the post has low engagement. Axis-aligned posts from anyone get a
+// reduced threshold (≥10 likes) so Sebastian can join small conversations
+// early rather than only piling onto viral posts.
+
+function loadFollowedHandles() {
+  try {
+    const tg = JSON.parse(fs.readFileSync(config.TRUST_GRAPH_PATH || path.join(ROOT, 'state/trust_graph.json'), 'utf-8'));
+    const accounts = tg.accounts || {};
+    return new Set(
+      Object.keys(accounts)
+        .filter(h => accounts[h].followed)
+        .map(h => h.replace(/^@/, '').toLowerCase())
+    );
+  } catch { return new Set(); }
+}
+
+function parseBufferForCandidates(followedHandles, axisKeywords) {
+  const bufferPath = path.join(ROOT, 'state/feed_buffer.jsonl');
+  let lines;
+  try {
+    lines = fs.readFileSync(bufferPath, 'utf-8').split('\n').filter(l => l.trim());
+  } catch { return []; }
+
+  // Only look at posts from the last 4 hours
+  const cutoff = Date.now() - 4 * 60 * 60 * 1000;
+  const candidates = [];
+
+  for (const line of lines) {
+    let p;
+    try { p = JSON.parse(line); } catch { continue; }
+
+    const handle = (p.u || '').toLowerCase();
+    if (!handle || handle === OWN_HANDLE.toLowerCase()) continue;
+    if (!p.id || !p.text) continue;
+    if ((p.ts || 0) < cutoff) continue;
+
+    const isFollowed = followedHandles.has(handle);
+    const likes = p.likes || 0;
+    const isFactualClaim = /\d+%|\$[\d.]+[BMK]?|\d+[\s,]\d{3}|said|claims?|according|report|study|data|source/.test(p.text);
+    const axisHits = axisKeywords.filter(kw => p.text.toLowerCase().includes(kw)).length;
+    const isAxisAligned = axisHits >= 2;
+
+    // Gate: followed accounts always qualify (min 1 like to exclude pure spam),
+    // axis-aligned posts qualify at ≥10 likes.
+    if (!isFollowed && (!isAxisAligned || likes < 10)) continue;
+
+    const url = 'https://x.com/' + p.u + '/status/' + p.id;
+    const velocity = p.velocity || 0;
+    const novelty = p.novelty || 0;
+
+    candidates.push({
+      handle: p.u,
+      text: p.text,
+      url,
+      likes,
+      velocity,
+      trust: p.trust || 0,
+      novelty,
+      isFactualClaim,
+      isFollowed,
+      isAxisAligned,
+      // Followed-account bonus: Sebastian should reply to people he follows.
+      // Axis-alignment bonus: more relevant = higher priority.
+      score: likes * 0.3 + velocity * 0.2 + novelty * 50 * 0.2 +
+             (isFactualClaim ? 40 : 0) +
+             (isFollowed ? 60 : 0) +
+             (axisHits * 20),
+    });
+  }
+
+  return candidates.sort((a, b) => b.score - a.score);
+}
+
 // ── Axis relevance filter ───────────────────────────────────────────────────
 
 function loadTopAxisKeywords() {
@@ -191,8 +269,13 @@ async function draftReply(candidate, verification) {
     recallBlock +
     verificationBlock +
     '\n\nYou are proactively engaging with a post on X. This is outbound -- nobody asked you.\n' +
-    'Your goal: insert Sebastian\'s voice into a high-visibility conversation, especially to correct\n' +
-    'wrong claims with solid evidence from your research and investigations.\n\n' +
+    (candidate.isFollowed
+      ? 'You follow @' + candidate.handle + '. This is someone whose perspective you track. ' +
+        'Reply as you would to someone in your orbit — engage with their point, add your angle, ' +
+        'agree or push back with something specific. Not performance, just genuine engagement.\n\n'
+      : 'Your goal: insert Sebastian\'s voice into a high-visibility conversation, especially to correct\n' +
+        'wrong claims with solid evidence from your research and investigations.\n\n'
+    ) +
     'The post:\n' +
     '  @' + candidate.handle + ': "' + candidate.text + '"\n' +
     '  (' + candidate.likes + ' likes' + (candidate.isFactualClaim ? ', contains factual claim' : '') + ')\n\n' +
@@ -300,25 +383,43 @@ async function main() {
   const state = loadState();
   if (!canReply(state)) return;
 
-  const candidates = parseDigestForCandidates();
-  if (candidates.length === 0) {
-    log('no high-engagement candidates in digest');
+  const keywords = loadTopAxisKeywords();
+  const followedHandles = loadFollowedHandles();
+
+  // Primary pool: followed accounts + axis-aligned posts from recent buffer
+  const bufferCandidates = parseBufferForCandidates(followedHandles, keywords);
+  log('buffer candidates: ' + bufferCandidates.length +
+      ' (' + bufferCandidates.filter(c => c.isFollowed).length + ' from followed accounts)');
+
+  // Secondary pool: high-engagement posts from digest (existing logic)
+  const digestCandidates = parseDigestForCandidates();
+  const relevant = digestCandidates.filter(c => isAxisRelevant(c.text, keywords));
+  const digestPool = relevant.length > 0 ? relevant : digestCandidates.slice(0, 3);
+
+  // Merge: buffer candidates first (relationships), then digest (reach)
+  // Dedupe by URL so digest doesn't re-add a post already in buffer
+  const seen = new Set(bufferCandidates.map(c => c.url));
+  const merged = [
+    ...bufferCandidates,
+    ...digestPool.filter(c => !seen.has(c.url)),
+  ];
+
+  if (merged.length === 0) {
+    log('no candidates from buffer or digest');
     return;
   }
 
-  const keywords = loadTopAxisKeywords();
-  const relevant = candidates.filter(c => isAxisRelevant(c.text, keywords));
-  const pool = relevant.length > 0 ? relevant : candidates.slice(0, 3);
-
-  const fresh = pool.filter(c => !alreadyEngaged(c.url));
+  const fresh = merged.filter(c => !alreadyEngaged(c.url));
   if (fresh.length === 0) {
     log('all candidates already engaged');
     return;
   }
 
   const target = fresh[0];
-  log('target: @' + target.handle + ' (' + target.likes + ' likes) — ' +
-      target.text.slice(0, 80));
+  log('target: @' + target.handle + ' (' + target.likes + ' likes' +
+      (target.isFollowed ? ', followed' : '') +
+      (target.isAxisAligned ? ', axis-aligned' : '') +
+      ') — ' + target.text.slice(0, 80));
 
   // ── Verify if the post contains a factual claim ──────────────────────
   let verification = null;
