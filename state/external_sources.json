@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-17T23:45:35.505Z",
+  "generated_at": "2026-04-18T00:15:37.125Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-17T23:46:07.090Z",
+  "profiled_at": "2026-04-18T00:16:06.411Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -10754,6 +10754,129 @@
       }
     },
     {
+      "domain": "patsnap.com",
+      "entity": "Patsnap",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-15T12:34:14.000Z",
+      "last_seen_at": "2026-04-17T17:32:11.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://eureka.patsnap.com/mse-landing?from=mktcampaign_mse_ads_x_formuvideo-asia2en2&twclid=29qq6c80v43jc7y7o992xnzaaf",
+          "https://eureka.patsnap.com/mse-landing?from=mktcampaign_mse_ads_x_skincare&twclid=2dxgyf84ginyic8e44iqs5v3p3"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "patsnapeureka"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.14,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-15T21:50:14.108Z",
+        "homepage_url": "https://patsnap.com/",
+        "example_url": "https://eureka.patsnap.com/mse-landing?from=mktcampaign_mse_ads_x_formuvideo-asia2en2&twclid=29qq6c80v43jc7y7o992xnzaaf",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.patsnap.com/",
+        "example_final_url": "https://eureka.patsnap.com/mse-landing?from=mktcampaign_mse_ads_x_formuvideo-asia2en2&twclid=29qq6c80v43jc7y7o992xnzaaf",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 6,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "moxt.ai",
       "entity": "Moxt Ai",
       "kind": "unknown",
@@ -19539,128 +19662,6 @@
       }
     },
     {
-      "domain": "patsnap.com",
-      "entity": "Patsnap",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-15T12:34:14.000Z",
-      "last_seen_at": "2026-04-15T12:34:14.000Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://eureka.patsnap.com/mse-landing?from=mktcampaign_mse_ads_x_formuvideo-asia2en2&twclid=29qq6c80v43jc7y7o992xnzaaf"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "patsnapeureka"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.14,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-15T21:50:14.108Z",
-        "homepage_url": "https://patsnap.com/",
-        "example_url": "https://eureka.patsnap.com/mse-landing?from=mktcampaign_mse_ads_x_formuvideo-asia2en2&twclid=29qq6c80v43jc7y7o992xnzaaf",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.patsnap.com/",
-        "example_final_url": "https://eureka.patsnap.com/mse-landing?from=mktcampaign_mse_ads_x_formuvideo-asia2en2&twclid=29qq6c80v43jc7y7o992xnzaaf",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html;charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 6,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "leronx.org",
       "entity": "Leronx",
       "kind": "unknown",
@@ -21486,6 +21487,128 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 2,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "willowvoice.com",
+      "entity": "Willowvoice",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-17T20:50:19.000Z",
+      "last_seen_at": "2026-04-17T20:50:19.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://willowvoice.com/developers?twclid=2ebuy7l735ljqyo9xotbgwpmp0"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "willowvoiceai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-18T00:16:06.410Z",
+        "homepage_url": "https://willowvoice.com/",
+        "example_url": "https://willowvoice.com/developers?twclid=2ebuy7l735ljqyo9xotbgwpmp0",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://willowvoice.com/",
+        "example_final_url": "https://willowvoice.com/developers?twclid=2ebuy7l735ljqyo9xotbgwpmp0",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }

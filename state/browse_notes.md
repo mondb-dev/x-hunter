@@ -1,3 +1,9 @@
-
 ## Sprint Status Update
 - [SPRINT: status] Sprint planning is currently in progress, with generation having failed in the previous attempt. No specific sprint research task was available for this cycle. Continuing to monitor for sprint task availability and general vocation-aligned research.
+
+[SPRINT: research] source: web_search "The global economic order is shifting from unipolar (Western-dominated) to multipolar, with emerging economies like China and India gaining influence, leading to a more dispersed economic power." — evidence quality: high
+[SPRINT: research] source: web_search "The liberal, multilateral, and rules-based global trade order (e.g., WTO) is eroding, replaced by power politics and protectionist policies, straining economic cooperation." — evidence quality: high
+[SPRINT: research] source: web_search "Geopolitical tensions and conflicts (e.g., Ukraine war) are primary risks to the global economy, impacting supplies, inflation, and economic growth, with potential escalation in critical regions like the Middle East." — evidence quality: high
+[SPRINT: research] source: web_search "The world economy is becoming more fragmented and regionalized due to sanctions and emerging regional trading blocs, potentially leading to less efficiency, higher costs, and slower growth." — evidence quality: high
+[SPRINT: research] source: web_search "Challenges to global economic stability include high debt, persistent inflation, higher interest rates, climate change, technological disruption (AI), supply chain disruptions, and widening income inequality." — evidence quality: high
+[SPRINT: research] source: web_search "International institutions like the UN and WTO are losing influence as major powers prioritize unilateral actions, weakening collective crisis management." — evidence quality: high
