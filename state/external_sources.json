@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-18T05:00:48.340Z",
+  "generated_at": "2026-04-18T05:30:41.186Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-18T05:01:19.935Z",
+  "profiled_at": "2026-04-18T05:31:13.222Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -979,7 +979,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T05:24:46.169Z",
+        "fetched_at": "2026-04-18T05:31:11.556Z",
         "homepage_url": "https://grok.com/",
         "example_url": "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
         "homepage_status": 200,
@@ -4769,7 +4769,7 @@
             "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:530",
+            "outbound_links:547",
             "opinion_marker:false"
           ]
         },
@@ -4789,7 +4789,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T04:34:40.100Z",
+        "fetched_at": "2026-04-18T05:31:12.506Z",
         "homepage_url": "https://cfr.org/",
         "example_url": "https://www.cfr.org/global-conflict-tracker/conflict/confrontation-between-united-states-and-iran",
         "homepage_status": 200,
@@ -4815,7 +4815,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 530,
+          "outbound_links_count": 547,
           "opinion_marker": false
         }
       }
@@ -5560,6 +5560,130 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 4,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "theograce.com",
+      "entity": "Theograce",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-15T02:38:55.907Z",
+      "last_seen_at": "2026-04-17T15:04:52.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://www.theograce.com/products/terry-diamond-heart-necklace-with-engraved-names-in-gold-plating?utm_term=Guitar&utm_id=41178982&utm_medium=cpc&utm_campaign=US_ALL_twitter_cpc_Display_MD26_M4W_Still&utm_source=twitter&utm_content=MD26&twclid=2dnpihgths0rs7qj2dk5rkgxbo",
+          "https://www.theograce.com/products/charming-heart-necklace-with-engraved-beads-in-gold-finish?utm_term=Sweetheart2&utm_id=41178982&utm_medium=cpc&utm_campaign=US_ALL_twitter_cpc_Display_MD26_M4W_Still&utm_source=twitter&utm_content=MD26&twclid=2cchfup2mt59bokpab3a3gz068"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1,
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "theogrofficial"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.17833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.37494791666666666,
+          "confidence": 0.13045,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-04-18T03:01:25.472Z",
+        "homepage_url": "https://theograce.com/",
+        "example_url": "https://www.theograce.com/products/terry-diamond-heart-necklace-with-engraved-names-in-gold-plating?utm_term=Guitar&utm_id=41178982&utm_medium=cpc&utm_campaign=US_ALL_twitter_cpc_Display_MD26_M4W_Still&utm_source=twitter&utm_content=MD26&twclid=2dnpihgths0rs7qj2dk5rkgxbo",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.theograce.com/",
+        "example_final_url": "https://www.theograce.com/products/terry-diamond-heart-necklace-with-engraved-names-in-gold-plating?utm_term=Guitar&utm_id=41178982&utm_medium=cpc&utm_campaign=US_ALL_twitter_cpc_Display_MD26_M4W_Still&utm_source=twitter&utm_content=MD26&twclid=2dnpihgths0rs7qj2dk5rkgxbo",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -6406,7 +6530,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T05:24:46.447Z",
+        "fetched_at": "2026-04-18T05:31:12.825Z",
         "homepage_url": "https://britannica.com/",
         "example_url": "https://www.britannica.com/event/2026-Iran-War",
         "homepage_status": 403,
@@ -7774,7 +7898,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T05:24:47.052Z",
+        "fetched_at": "2026-04-18T05:31:13.222Z",
         "homepage_url": "https://georgetown.edu/",
         "example_url": "https://gjia.georgetown.edu/2026/03/26/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
         "homepage_status": 200,
@@ -18444,128 +18568,6 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 3,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "theograce.com",
-      "entity": "Theograce",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-15T02:38:55.907Z",
-      "last_seen_at": "2026-04-15T02:38:55.907Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://www.theograce.com/products/terry-diamond-heart-necklace-with-engraved-names-in-gold-plating?utm_term=Guitar&utm_id=41178982&utm_medium=cpc&utm_campaign=US_ALL_twitter_cpc_Display_MD26_M4W_Still&utm_source=twitter&utm_content=MD26&twclid=2dnpihgths0rs7qj2dk5rkgxbo"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "theogrofficial"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.1,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-04-18T03:01:25.472Z",
-        "homepage_url": "https://theograce.com/",
-        "example_url": "https://www.theograce.com/products/terry-diamond-heart-necklace-with-engraved-names-in-gold-plating?utm_term=Guitar&utm_id=41178982&utm_medium=cpc&utm_campaign=US_ALL_twitter_cpc_Display_MD26_M4W_Still&utm_source=twitter&utm_content=MD26&twclid=2dnpihgths0rs7qj2dk5rkgxbo",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.theograce.com/",
-        "example_final_url": "https://www.theograce.com/products/terry-diamond-heart-necklace-with-engraved-names-in-gold-plating?utm_term=Guitar&utm_id=41178982&utm_medium=cpc&utm_campaign=US_ALL_twitter_cpc_Display_MD26_M4W_Still&utm_source=twitter&utm_content=MD26&twclid=2dnpihgths0rs7qj2dk5rkgxbo",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
