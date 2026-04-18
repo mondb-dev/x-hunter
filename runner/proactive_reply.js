@@ -18,7 +18,8 @@ const path = require('path');
 
 const { connectBrowser, getXPage } = require('./cdp');
 const { isXSuppressed } = require('./lib/x_control');
-const { buildPersona, buildCoreContext, recallViaMemoryAPI } = require('./lib/sebastian_respond');
+const { buildPersona, buildCoreContext, recallViaMemoryAPI, callGemini } = require('./lib/sebastian_respond');
+const { getAccessToken, getProjectConfig } = require('./gcp_auth');
 const { verifyClaim } = require('./lib/verify_claim');
 const config = require('./lib/config');
 
@@ -297,8 +298,6 @@ async function draftReply(candidate, verification) {
     'GOOD: "That number is wrong. IMF data shows 2.1%, not 4.3%. The report they cited was from 2019."\n\n' +
     'Return ONLY the reply text. Nothing else. If you cannot write something genuinely worth posting, return SKIP.';
 
-  const { getAccessToken, getProjectConfig } = require('./gcp_auth');
-  const { callGemini } = require('./lib/vertex_call');
   const token = await getAccessToken();
   const { project, location } = getProjectConfig();
 
