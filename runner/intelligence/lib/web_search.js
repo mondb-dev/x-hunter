@@ -72,7 +72,7 @@ async function webSearchVerify(claimText) {
         body: JSON.stringify({
           contents: [{ role: 'user', parts: [{ text: prompt }] }],
           tools: [{ google_search: {} }],
-          generationConfig: { temperature: 0.1, maxOutputTokens: 4096 },
+          generationConfig: { temperature: 0.1, maxOutputTokens: 4096, thinkingConfig: { thinkingBudget: 0 } },
         }),
       });
 
