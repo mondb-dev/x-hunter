@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-18T13:30:53.735Z",
+  "generated_at": "2026-04-18T14:21:03.761Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-18T13:31:25.985Z",
+  "profiled_at": "2026-04-18T14:21:35.733Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -1275,9 +1275,9 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-18T12:43:17.506Z",
+      "last_seen_at": "2026-04-18T13:57:31.541Z",
       "discovery": {
-        "distinct_urls": 138,
+        "distinct_urls": 139,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
@@ -1288,7 +1288,7 @@
         "origin_counts": {
           "ontology_evidence": 122,
           "claim_tracker": 15,
-          "journals": 58
+          "journals": 59
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1336,7 +1336,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:138",
+            "distinct_urls:139",
             "distinct_axes:17",
             "origin_types:3"
           ]
@@ -1377,7 +1377,7 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:138",
+            "distinct_urls:139",
             "distinct_axes:17",
             "origin_types:3",
             "referring_accounts:0",
@@ -10722,7 +10722,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T13:44:52.582Z",
+        "fetched_at": "2026-04-18T13:56:24.956Z",
         "homepage_url": "https://eclincher.com/",
         "example_url": "https://www.eclincher.com/ai-social-media-agent?twclid=22gdnmarextv0i2rs5d53x1dzn",
         "homepage_status": 200,
@@ -15729,7 +15729,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T12:55:01.800Z",
+        "fetched_at": "2026-04-18T13:56:25.527Z",
         "homepage_url": "https://3c.wiki/",
         "example_url": "https://3c.wiki/3PtZuMY?twclid=2bz0sgqd5e9nj510697vwg5ap7",
         "homepage_status": 200,
@@ -15851,7 +15851,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T13:44:50.890Z",
+        "fetched_at": "2026-04-18T13:56:25.996Z",
         "homepage_url": "https://vtfy.link/",
         "example_url": "https://vtfy.link/announcing-the-vuetify0-alpha?twclid=228s56xmohhj46sz7w0iglr2ez",
         "homepage_status": 200,
@@ -19360,12 +19360,12 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.1,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
@@ -19389,7 +19389,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T13:19:53.372Z",
+        "fetched_at": "2026-04-18T13:56:26.475Z",
         "homepage_url": "https://tradeodds.io/",
         "example_url": "https://www.tradeodds.io/dashboard?tab=factor-match&utm_source=twitter&utm_medium=cpc&utm_campaign=Factor+Match+Purchase+Campaign+Desk&utm_id=factor+match+purchase+campaign+desk&utm_term=factor+match+purchase+purchase+desk+us&utm_content=ad2&twclid=21dpzozj7vqb86fdz6auuzunmy",
         "homepage_status": 200,
@@ -19401,7 +19401,7 @@
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -19411,7 +19411,7 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -21950,7 +21950,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T13:44:56.651Z",
+        "fetched_at": "2026-04-18T14:21:35.129Z",
         "homepage_url": "https://iranintl.com/",
         "example_url": "https://www.iranintl.com/en/202603269573",
         "homepage_status": 200,
@@ -21966,7 +21966,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 10,
+          "outbound_links_count": 9,
           "opinion_marker": false
         },
         "example": {
@@ -22070,7 +22070,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T13:44:57.171Z",
+        "fetched_at": "2026-04-18T14:21:35.733Z",
         "homepage_url": "https://org.in/",
         "example_url": "https://downtoearth.org.in/governance/as-told-to-parliament-march-11-2026-country-making-efforts-to-strengthen-domestic-rare-earth-",
         "homepage_status": null,
