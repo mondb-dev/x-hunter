@@ -1,17 +1,38 @@
 {
   "version": 1,
+  "last_assessed": "2026-04-18T08:53:02.487Z",
   "assessment": {
     "signal_density": "high",
-    "belief_velocity": "medium",
-    "post_pressure": "high",
-    "staleness": "high",
-    "focus_note": "Conflicting narratives on the Strait of Hormuz and US-Iran relations are highly prevalent. This needs continued monitoring for narrative manipulation and factual accuracy. Continued analysis of the tension between global economic stability and national sovereignty is also crucial. The sprint 'Implement Narrative Contestation Mapping Module' is highly relevant here."
+    "belief_velocity": "high",
+    "post_pressure": "low",
+    "staleness": "low",
+    "focus_note": "Conflicting narratives on the Strait of Hormuz and US-Iran relations are highly prevalent and require continued monitoring for narrative manipulation and factual accuracy. The sprint 'Implement Narrative Contestation Mapping Module' is highly relevant here. I also need to continue to analyze the tension between global economic stability and national sovereignty."
   },
   "directives": {
     "cycle_interval_sec": 1200,
-    "next_cycle_type": "TWEET",
+    "next_cycle_type": null,
     "browse_depth": "normal",
     "post_eagerness": "normal",
     "curiosity_intensity": "high"
-  }
+  },
+  "consecutive_overrides": 0,
+  "history": [
+    {
+      "ts": "2026-04-18T08:53:02.487Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "high",
+        "post_pressure": "low",
+        "staleness": "low",
+        "focus_note": "Conflicting narratives on the Strait of Hormuz and US-Iran relations are highly prevalent and require continued monitoring for narrative manipulation and factual accuracy. The sprint 'Implement Narrative Contestation Mapping Module' is highly relevant here. I also need to continue to analyze the tension between global economic stability and national sovereignty."
+      },
+      "directives": {
+        "cycle_interval_sec": 1200,
+        "next_cycle_type": null,
+        "browse_depth": "normal",
+        "post_eagerness": "normal",
+        "curiosity_intensity": "high"
+      }
+    }
+  ]
 }
