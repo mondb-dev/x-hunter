@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-18T02:00:47.473Z",
+  "generated_at": "2026-04-18T03:00:39.342Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-18T02:01:38.866Z",
+  "profiled_at": "2026-04-18T03:01:25.472Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -743,9 +743,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-17T22:15:36.000Z",
+      "last_seen_at": "2026-04-17T22:46:01.000Z",
       "discovery": {
-        "distinct_urls": 743,
+        "distinct_urls": 745,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -754,10 +754,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 468,
+          "feed_buffer": 470,
           "feed_buffer_reply": 317
         },
-        "distinct_referring_accounts": 377,
+        "distinct_referring_accounts": 379,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -795,7 +795,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:743",
+            "distinct_urls:745",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -803,7 +803,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:377",
+            "referring_accounts:379",
             "origin_types:2"
           ]
         },
@@ -833,10 +833,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:743",
+            "distinct_urls:745",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:377",
+            "referring_accounts:379",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -4388,12 +4388,12 @@
           ]
         },
         "profile": {
-          "score": 0.039999999999999994,
+          "score": 0.14,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
@@ -4417,7 +4417,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T02:04:34.633Z",
+        "fetched_at": "2026-04-18T02:31:09.720Z",
         "homepage_url": "https://cosmos.so/",
         "example_url": "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc",
         "homepage_status": 200,
@@ -4429,7 +4429,7 @@
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -4439,7 +4439,7 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -14878,7 +14878,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T02:29:36.190Z",
+        "fetched_at": "2026-04-18T02:31:10.024Z",
         "homepage_url": "https://orangestandard.com/",
         "example_url": "https://orangestandard.com/?utm_source=Twitter&utm_medium=Tweet&utm_campaign=btcaccts&twclid=221wvicldxi1mxr7dfi4dgcd74",
         "homepage_status": 200,
@@ -17928,7 +17928,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T02:04:34.164Z",
+        "fetched_at": "2026-04-18T02:31:10.258Z",
         "homepage_url": "https://applebees.com/",
         "example_url": "https://www.applebees.com/en/specials/o-m-cheeseburger?utm_medium=paid_social&utm_source=x&utm_content=&utm_campaign=c3_omcheese_x_2026&utm_term=omcheese&twclid=24c5yy50sjts1xxlnvqx3wkide",
         "homepage_status": 403,
@@ -18050,7 +18050,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T02:04:35.313Z",
+        "fetched_at": "2026-04-18T02:31:11.023Z",
         "homepage_url": "https://yeptype.com/",
         "example_url": "https://yeptype.com/?twclid=2anjxqkv18gchj0txvqb12xn2c",
         "homepage_status": 200,
@@ -18172,7 +18172,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T02:04:36.192Z",
+        "fetched_at": "2026-04-18T03:01:10.231Z",
         "homepage_url": "https://argosdns.io/",
         "example_url": "https://www.argosdns.io/?twclid=2b56poqhcqmksqee3vb6bhyxig",
         "homepage_status": 200,
@@ -18294,7 +18294,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T02:29:39.932Z",
+        "fetched_at": "2026-04-18T03:01:12.632Z",
         "homepage_url": "https://prusa3d.com/",
         "example_url": "https://www.prusa3d.com/p/core-one-plus-business?twclid=244madfj5oyples0uimdkj22es",
         "homepage_status": 200,
@@ -18416,7 +18416,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T02:29:52.195Z",
+        "fetched_at": "2026-04-18T03:01:25.126Z",
         "homepage_url": "https://statefreedomcaucus.org/",
         "example_url": "https://www.statefreedomcaucus.org/15-strong/?twclid=2epfodwob5z2m8xe9l0e1w4xfa",
         "homepage_status": null,
@@ -18538,7 +18538,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T02:54:44.007Z",
+        "fetched_at": "2026-04-18T03:01:25.472Z",
         "homepage_url": "https://theograce.com/",
         "example_url": "https://www.theograce.com/products/terry-diamond-heart-necklace-with-engraved-names-in-gold-plating?utm_term=Guitar&utm_id=41178982&utm_medium=cpc&utm_campaign=US_ALL_twitter_cpc_Display_MD26_M4W_Still&utm_source=twitter&utm_content=MD26&twclid=2dnpihgths0rs7qj2dk5rkgxbo",
         "homepage_status": 200,
