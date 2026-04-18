@@ -20,6 +20,7 @@
 "use strict";
 
 const { connectBrowser, getXPage } = require("../runner/cdp");
+const { replyToTweet } = require("../runner/x_api");
 const { isXSuppressed, suppressionReason } = require("../runner/lib/x_control");
 const fs   = require("fs");
 const path = require("path");
@@ -30,12 +31,6 @@ try { require("dotenv").config({ path: path.join(__dirname, "..", ".env") }); } 
 const db   = require("./db");
 const { extractKeywords } = require("./analytics");
 const { buildPersona, buildCoreContext } = require("../runner/lib/sebastian_respond");
-
-let _vdb;
-try {
-  const { loadVerificationDb } = require("../runner/lib/db_backend");
-  _vdb = loadVerificationDb();
-} catch { /* verification db unavailable */ }
 
 // ── Paths ─────────────────────────────────────────────────────────────────────
 const ROOT         = path.resolve(__dirname, "..");
@@ -48,7 +43,7 @@ const MAX_PER_RUN  = 3;
 const MIN_GAP_MS   = 5 * 60 * 1000;  // 5 minutes between replies
 const MAX_PER_DAY  = 10;
 const MAX_AGE_MS   = 48 * 60 * 60 * 1000;  // ignore mentions older than 48h
-const OWN_USERNAME = "SebastianHunts";  // skip self-mentions
+const OWN_USERNAME = "SebHunts_AI";  // skip self-mentions
 
 if (isXSuppressed("reply")) {
   console.log(`[reply] X reply suppression active — skipping (${suppressionReason("reply")})`);
@@ -161,16 +156,6 @@ function recallForMention(text, limit = 5) {
   }
 }
 
-async function recallVerificationsForMention(text, limit = 2) {
-  if (!_vdb) return [];
-  try {
-    const keywords = extractKeywords(text, 6);
-    if (!keywords.length) return [];
-    const q = [...new Set(keywords.flatMap(k => k.split(/\s+/)))].join(" ");
-    return await _vdb.recallVerifications(q, limit);
-  } catch { return []; }
-}
-
 // ── 3b. Account lookup — find accounts discussing this topic ────────────────
 /**
  * Query the posts table for accounts whose posts match keywords from the mention.
@@ -248,19 +233,6 @@ async function geminiClassify(item, threadContext = [], memoryHints = [], userHi
         const urlLine = webUrl ? `\n  URL: ${webUrl}` : "";
         return `  [${m.type} · ${m.title} · ${m.date}]${urlLine}\n  "${excerpt}..."`;
       }).join("\n\n") + "\n";
-  }
-
-  // Append Veritas Lens hits if any
-  if (verifiedHints && verifiedHints.length > 0) {
-    const statusMap = { supported: 'SUPPORTED', refuted: 'REFUTED', contested: 'CONTESTED',
-                        unverified: 'UNVERIFIED', expired: 'EXPIRED' };
-    memoryBlock += "\nYour verified claims relevant to this topic (Veritas Lens):\n" +
-      verifiedHints.map(v => {
-        const st  = statusMap[v.status] ?? v.status.toUpperCase();
-        const pct = Math.round((v.confidence_score ?? 0) * 100);
-        const sum = v.web_search_summary ? `\n  Finding: ${v.web_search_summary.trim().slice(0, 180)}` : '';
-        return `  [${st} · ${pct}% confidence] "${(v.claim_text || '').trim()}"${sum}`;
-      }).join("\n") + "\n";
   }
 
   // Build user history block
@@ -356,92 +328,16 @@ or
   return JSON.parse(match[0]);
 }
 
-// ── 5. Post reply via CDP ────────────────────────────────────────────────────
-// Page is already on the tweet URL from fetchThreadContext.
+// ── 5. Post reply via X API ─────────────────────────────────────────────────
 async function postReply(page, item, replyText) {
-  console.log(`[reply] posting reply to @${item.from_username} via CDP`);
+  console.log(`[reply] posting reply to @${item.from_username} via API`);
 
-  const REPLY_BTN = '[data-testid="reply"]';
-  const COMPOSE   = '[data-testid="tweetTextarea_0"]';
-  const POST_BTN  = '[data-testid="tweetButton"], [data-testid="tweetButtonInline"]';
-  const ACCT      = 'SebastianHunts';
+  // Extract tweet ID from the item
+  const tweetId = item.id;
+  if (!tweetId) throw new Error("no tweet ID on queue item");
 
-  const sleep = ms => new Promise(r => setTimeout(r, ms));
-
-  // Page is already on the tweet URL — click Reply on the article containing item.id
-  await page.waitForSelector('article[data-testid="tweet"]', { timeout: 15_000 });
-  await sleep(1_000);
-
-  const clicked = await page.evaluate((tweetId, sel) => {
-    const articles = Array.from(document.querySelectorAll('article[data-testid="tweet"]'));
-    const target = articles.find(a =>
-      Array.from(a.querySelectorAll('a[href]')).some(l => l.href.includes(tweetId))
-    ) || articles[articles.length - 1];
-    const btn = target && target.querySelector(sel);
-    if (btn) { btn.click(); return true; }
-    return false;
-  }, item.id, REPLY_BTN);
-
-  if (!clicked) throw new Error("could not find Reply button on tweet");
-  await sleep(1_500);
-
-  // Wait for reply compose box
-  await page.waitForSelector(COMPOSE, { timeout: 12_000 });
-  await sleep(500);
-
-  // Focus and insert text
-  await page.evaluate((sel) => {
-    const el = document.querySelector(sel);
-    if (el) { el.click(); el.focus(); }
-  }, COMPOSE);
-  await sleep(800);
-
-  await page.evaluate((text, sel) => {
-    const el = document.querySelector(sel);
-    if (el) { el.focus(); document.execCommand("insertText", false, text); }
-  }, replyText, COMPOSE);
-  await sleep(1_200);
-
-  // Verify text inserted — keyboard fallback if truncated
-  const inserted = await page.evaluate((sel) => document.querySelector(sel)?.innerText?.trim() || '', COMPOSE);
-  if (!inserted || inserted.length < replyText.length * 0.8) {
-    await page.evaluate((sel) => {
-      const el = document.querySelector(sel);
-      if (el) { el.focus(); document.execCommand("selectAll"); document.execCommand("delete"); }
-    }, COMPOSE);
-    await sleep(300);
-    await page.keyboard.type(replyText, { delay: 20 });
-    await sleep(1_000);
-  }
-
-  // Click Post
-  await page.waitForSelector(POST_BTN, { timeout: 8_000 });
-  await sleep(500);
-  await page.evaluate((sel) => { const el = document.querySelector(sel); if (el) el.click(); }, POST_BTN);
-  await sleep(5_000);
-
-  // Confirm from profile (non-fatal if missed)
-  const needle = replyText.slice(0, 60).toLowerCase().replace(/\s+/g, ' ').trim();
-  try {
-    await page.goto(`https://x.com/${ACCT}`, { waitUntil: 'domcontentloaded', timeout: 30_000 });
-    await sleep(3_000);
-    const confirmed = await page.evaluate((n) => {
-      const articles = Array.from(document.querySelectorAll('article')).slice(0, 8);
-      for (const a of articles) {
-        if (a.innerText.toLowerCase().includes(n)) {
-          const link = Array.from(a.querySelectorAll('a[href*="/status/"]'))
-            .map(l => l.getAttribute('href')).find(h => h && !/analytics/i.test(h));
-          return link ? `https://x.com${link.split('?')[0]}` : 'posted';
-        }
-      }
-      return null;
-    }, needle);
-    if (confirmed) {
-      console.log(`[reply] posted reply to @${item.from_username}: ${confirmed}`);
-      return confirmed;
-    }
-  } catch {}
-  console.log(`[reply] reply sent to @${item.from_username} (URL unconfirmed)`);
+  const result = await replyToTweet(replyText, tweetId);
+  console.log(`[reply] posted reply to @${item.from_username}: https://x.com/SebHunts_AI/status/${result.id}`);
 }
 
 // ── Interactions log ──────────────────────────────────────────────────────────
@@ -588,7 +484,6 @@ function logInteraction(data, item, replyText, memoryHints) {
 
     // ── Step 3: Memory recall + account lookup ────────────────────────────
     const memoryHints = recallForMention(item.text);
-    const verifiedHints = await recallVerificationsForMention(item.text);
     const topicAccounts = accountsForTopic(item.text);
     if (memoryHints.length > 0) {
       console.log(`[reply] memory: ${memoryHints.length} relevant entry(s) found (${memoryHints.map(m => m.title).join(", ")})`);
