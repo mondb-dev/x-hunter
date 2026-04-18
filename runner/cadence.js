@@ -213,10 +213,18 @@ function assess() {
     directives.browse_depth = agentDirectives.browse_depth;
   }
 
-  // Post eagerness — honor the agent's requested posting mode, including
-  // suppress, so browse cycles can explicitly pause posting pressure.
+  // Post eagerness — honor the agent's requested posting mode.
+  // During active posting hours, override "suppress" → "normal" so that
+  // stale silent-hours cadence doesn't block TWEET/QUOTE cycles.
+  // The orchestrator's hour-window check (TWEET_START–TWEET_END) is the
+  // authoritative gate for silent-hours tweet suppression.
   if (agentDirectives.post_eagerness && VALID_EAGERNESS.includes(agentDirectives.post_eagerness)) {
     directives.post_eagerness = agentDirectives.post_eagerness;
+  }
+  const currentHour = new Date().getUTCHours();
+  if (directives.post_eagerness === 'suppress' &&
+      currentHour >= config.TWEET_START && currentHour < config.TWEET_END) {
+    directives.post_eagerness = 'normal';
   }
 
 

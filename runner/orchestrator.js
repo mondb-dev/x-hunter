@@ -385,14 +385,16 @@ function runOneCycle() {
   const cadence = readDirectives();
   let cycleType;
 
-  // ── New cadence: no regular tweets. Only QUOTE (1-2/day) + BROWSE ────
   // Cadence override: Sebastian requested a specific cycle type
   if (cadence.next_cycle_type) {
     cycleType = cadence.next_cycle_type;
     log(`cadence override: ${cycleType} (consecutive: ${cadence.consecutive_overrides})`);
     consumeOverride(); // consume so it doesn't repeat
   } else if (cadence.post_eagerness === 'suppress') {
-    // Suppress mode: always browse, never initiate posts
+    // Suppress mode: skip TWEET/QUOTE cycle types, but engagement
+    // (replies, comments) still runs inside the BROWSE handler.
+    // NOTE: cadence.js auto-resets suppress → normal during active hours,
+    // so this only fires during genuine silent hours (UTC 23–07).
     cycleType = 'BROWSE';
   } else {
     // Default: TWEET every TWEET_EVERY cycles, QUOTE at offset, BROWSE otherwise
