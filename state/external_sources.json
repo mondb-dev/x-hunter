@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-18T09:30:57.034Z",
+  "generated_at": "2026-04-18T10:10:48.500Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-18T09:31:31.805Z",
+  "profiled_at": "2026-04-18T10:11:22.547Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -743,9 +743,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-18T06:43:16.000Z",
+      "last_seen_at": "2026-04-18T08:33:25.000Z",
       "discovery": {
-        "distinct_urls": 758,
+        "distinct_urls": 760,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -754,10 +754,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 475,
-          "feed_buffer_reply": 325
+          "feed_buffer": 476,
+          "feed_buffer_reply": 326
         },
-        "distinct_referring_accounts": 387,
+        "distinct_referring_accounts": 388,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -795,7 +795,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:758",
+            "distinct_urls:760",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -803,7 +803,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:387",
+            "referring_accounts:388",
             "origin_types:2"
           ]
         },
@@ -833,10 +833,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:758",
+            "distinct_urls:760",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:387",
+            "referring_accounts:388",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1275,7 +1275,7 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-18T08:52:27.873Z",
+      "last_seen_at": "2026-04-18T09:33:20.956Z",
       "discovery": {
         "distinct_urls": 136,
         "example_urls": [
@@ -1677,7 +1677,7 @@
       "first_seen_at": "2026-04-07T03:51:50.000Z",
       "last_seen_at": "2026-04-18T03:29:32.000Z",
       "discovery": {
-        "distinct_urls": 14,
+        "distinct_urls": 15,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -1686,7 +1686,7 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 12,
+          "feed_buffer_reply": 13,
           "feed_buffer": 2
         },
         "distinct_referring_accounts": 2,
@@ -1719,7 +1719,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:14",
+            "distinct_urls:15",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1753,11 +1753,11 @@
         },
         "overall": {
           "score": 0.44890625,
-          "confidence": 0.49395,
+          "confidence": 0.51645,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:14",
+            "distinct_urls:15",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2",
@@ -7394,7 +7394,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T09:59:45.541Z",
+        "fetched_at": "2026-04-18T10:11:18.734Z",
         "homepage_url": "https://manduka.com/",
         "example_url": "https://www.manduka.com/products/manduka-pro-yoga-mat?utm_source=twitter&utm_medium=cpc&utm_campaign=xconvert&utm_content=PRO+Mat+-+Rooibos+1x1&twclid=2c1i50hvb8z81u6asprj4f4oqt",
         "homepage_status": 200,
@@ -7615,13 +7615,13 @@
           ]
         },
         "profile": {
-          "score": 0.27,
-          "confidence": 0.65,
+          "score": 0.13,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:true",
-            "about:true",
+            "about:false",
             "contact:false",
             "corrections:false",
             "outbound_links:3",
@@ -7644,23 +7644,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T09:59:44.919Z",
+        "fetched_at": "2026-04-18T10:11:19.181Z",
         "homepage_url": "https://davidprotein.com/",
         "example_url": "https://davidprotein.com/pages/meet-david-gold?utm_source=X&utm_medium=paid&utm_campaign=CPC_2026&utm_term=GOLD_CPC_2026&twclid=2beqsd3kifgmiz3bgaf4s8hcjs",
-        "homepage_status": 200,
+        "homepage_status": 502,
         "example_status": 200,
         "homepage_final_url": "https://davidprotein.com/",
         "example_final_url": "https://davidprotein.com/pages/meet-david-gold?utm_source=X&utm_medium=paid&utm_campaign=CPC_2026&utm_term=GOLD_CPC_2026&twclid=2beqsd3kifgmiz3bgaf4s8hcjs",
-        "homepage_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 3,
+          "outbound_links_count": 1,
           "opinion_marker": false
         },
         "example": {
@@ -12679,7 +12679,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T09:59:47.806Z",
+        "fetched_at": "2026-04-18T10:11:22.143Z",
         "homepage_url": "https://nextinvestors.com/",
         "example_url": "https://nextinvestors.com/articles/rml-tungsten-price-running-high-grade-tungsten-sitting-in-stockpiles-plus-gold-drilling-in-may/?twclid=29vvkujdwopqjncmmhre6nbvtf",
         "homepage_status": 200,
@@ -12801,7 +12801,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T09:59:48.239Z",
+        "fetched_at": "2026-04-18T10:11:22.547Z",
         "homepage_url": "https://scitools.com/",
         "example_url": "https://scitools.com/codecheck?xad=codecheck&twclid=23owlb2i7ei44kgcykku0zs4en",
         "homepage_status": 200,
