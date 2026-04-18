@@ -5,7 +5,7 @@
  */
 "use strict";
 
-const { connectBrowser } = require("./cdp");
+const { connectBrowser, getXPage } = require("./cdp");
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
@@ -18,7 +18,7 @@ async function main() {
 
   console.log(`[delete_tweet] deleting: ${tweetUrl}`);
   const browser = await connectBrowser();
-  const page    = await browser.newPage();
+  const page    = await getXPage(browser);
 
   await page.goto(tweetUrl, { waitUntil: "domcontentloaded", timeout: 20_000 });
   await sleep(3_000);

@@ -32,6 +32,10 @@ async function callVertex(prompt, maxTokens = 2000, options = {}) {
   const generationConfig = { temperature: 0.7, maxOutputTokens: maxTokens };
   if (options.thinkingBudget !== undefined && options.thinkingBudget > 0) {
     generationConfig.thinkingConfig = { thinkingBudget: options.thinkingBudget };
+  } else {
+    // Disable thinking by default — otherwise thinking tokens consume the
+    // maxOutputTokens budget, truncating the actual response.
+    generationConfig.thinkingConfig = { thinkingBudget: 0 };
   }
 
   const body     = JSON.stringify({
@@ -59,7 +63,12 @@ async function callVertex(prompt, maxTokens = 2000, options = {}) {
           if (finishReason === "MAX_TOKENS") {
             process.stderr.write("[vertex] WARNING: response truncated (MAX_TOKENS)\n");
           }
-          const text = candidate?.content?.parts?.[0]?.text;
+          // Concatenate text parts, skipping thinking parts (thought: true)
+          const parts = candidate?.content?.parts || [];
+          const text = parts
+            .filter(p => p.text !== undefined && !p.thought)
+            .map(p => p.text)
+            .join("");
           if (!text) throw new Error(`No content in response: ${raw.slice(0, 300)}`);
           resolve(text.trim());
         } catch (e) { reject(e); }
