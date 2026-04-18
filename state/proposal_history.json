@@ -233,6 +233,25 @@
       "pushed_to_origin": null,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_contestation_mapping_1713346961000",
+      "title": "Implement Narrative Contestation Mapping Module",
+      "status": "failed",
+      "proposed_at": "2026-04-17T08:35:58.066Z",
+      "resolved_at": "2026-04-18T09:12:29.175Z",
+      "resolution_notes": "Pipeline error: Tests failed: Blocked test command (disallowed flags: -e \"const fs = require('fs'); const path = require('path'); const stateDir = path.join(process.cwd(), 'state'); if (!fs.existsSync(stateDir)) fs.mkdirSync(stateDir); fs.writeFileSync(path.join(stateDir, 'feed_digest.txt'), '---\\ncluster_id: c1\\nkeywords: iran, protest, funding, israel\\n - id: 123\\n author: @userA\\n text: Protests in Iran are funded by the US and Israel.\\n---\\ncluster_id: c2\\nkeywords: iran, protest, grassroots, people\\n - id: 456\\n author: @userB\\n text: These are grassroots protests by the people.\\n',): node -e \"const fs = require('fs'); const path = require('path'); const stateDir = path.join(process.cwd(), 'state'); if (!fs.existsSync(stateDir)) fs.mkdirSync(stateDir); fs.writeFileSync(path.join(stateDir, 'feed_digest.txt'), '---\\ncluster_id: c1\\nkeywords: iran, protest, funding, israel\\n - id: 123\\n   author: @userA\\n   text: Protests in Iran are funded by the US and Israel.\\n---\\ncluster_id: c2\\nkeywords: iran, protest, grassroots, people\\n - id: 456\\n   author: @userB\\n   text: These are grassroots protests by the people.\\n', 'utf8');\"; Blocked test command (disallowed flags: -e \"const fs = require('fs'); const path = require('path'); const journalDir = path.join(process.cwd(), 'journals'); if (!fs.existsSync(journalDir)) fs.mkdirSync(journalDir); const d = new Date(); const f = path.join(journalDir, d.toISOString().split('T')[0] + '_' + d.getUTCHours().toString().padStart(2, '0') + '.html'); fs.writeFileSync(f, '<html><body></body></html>',): node -e \"const fs = require('fs'); const path = require('path'); const journalDir = path.join(process.cwd(), 'journals'); if (!fs.existsSync(journalDir)) fs.mkdirSync(journalDir); const d = new Date(); const f = path.join(journalDir, d.toISOString().split('T')[0] + '_' + d.getUTCHours().toString().padStart(2, '0') + '.html'); fs.writeFileSync(f, '<html><body></body></html>', 'utf8');\"; Test command failed: node src/pipelines/report.js — /home/raymond_d_baldonado_gmail_com/hunter/src/pipelines/report.js:12\n    const topics = Object.values(state.contested_topics);\n                          ^\n\nTypeError: Cannot convert undefined or null; Blocked test command (disallowed flags: -e \"const fs = require('fs'); const assert = require('assert'); const report = fs.readFileSync('daily/belief_report_' + new Date().toISOString().split('T')[0] + '.md', 'utf8'); assert(report.includes('## Narrative Contestation Map'), 'Report should contain narrative map'); assert(report.includes('Topic: iran, protest'), 'Report should contain iran protest topic'); console.log('Tests): node -e \"const fs = require('fs'); const assert = require('assert'); const report = fs.readFileSync('daily/belief_report_' + new Date().toISOString().split('T')[0] + '.md', 'utf8'); assert(report.includes('## Narrative Contestation Map'), 'Report should contain narrative map'); assert(report.includes('Topic: iran, protest'), 'Report should contain iran protest topic'); console.log('Tests passed');\"",
+      "files_changed": [
+        "src/modules/narrative_tracker.js",
+        "src/pipelines/journal.js",
+        "src/pipelines/report.js",
+        "src/state.js"
+      ],
+      "branch_name": "meta/proposal_narrative_contestation_mapping_1713346961000",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }

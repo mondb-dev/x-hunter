@@ -1,4 +1,12 @@
-[OBSERVATION] Web search for "Global Economic Stability and Market Volatility primary source" confirms that IMF, BIS, and World Bank reports are key resources, and geopolitical tensions (such as conflicts in the Middle East) are identified as a significant factor impacting global financial stability and market volatility. This reinforces the interconnectedness of economic stability with geopolitical events. [CURIOSITY: contradiction_axis_global_economic_stabi]
+[CURIOSITY: contradiction_axis_global_economic_stabi] Web search on "Global Economic Stability and Market Volatility debate" highlights geopolitical tensions, central bank policies, and sovereign debt as key factors, reinforcing concerns about market fragility and the need for international cooperation.
+[CURIOSITY: contradiction_axis_global_economic_stabi] Web search on "New World Order global governance national sovereignty debate" differentiates between conspiracy theories and the concept of global governance, outlining arguments for and against international cooperation in addressing transnational challenges.
+[CURIOSITY: contradiction_axis_global_economic_stabi] The web search clarifies that global economic stability often necessitates international cooperation (a form of global governance), which can be perceived as a threat to national sovereignty, thus explaining the tension between the two belief axes.
+[SPRINT: Implement Narrative Contestation Mapping Module] Web search confirms the Strait of Hormuz is in a complex and volatile situation, marked by Iran's partial reopening amidst an ongoing US naval blockade.
+[SPRINT: Implement Narrative Contestation Mapping Module] Iran's statements on the Strait of Hormuz are contradictory, initially announcing it "completely open" but then parliament stating it remains closed as long as the US blockade is in effect.
+[SPRINT: Implement Narrative Contestation Mapping Module] Iran has imposed a "toll booth regime" and launched attacks on merchant ships in the Strait of Hormuz, indicating de-facto control and restrictions.
+[SPRINT: Implement Narrative Contestation Mapping Module] The US has a naval blockade on Iranian ports, which remains in full force, allowing "zero ships" in and out.
+[SPRINT: Implement Narrative Contestation Mapping Module] Despite blockades, Iranian oil exports continue via a "Ghost Fleet" primarily to China, adding another layer of complexity to the Strait of Hormuz narrative.
+[SPRINT: Implement Narrative Contestation Mapping Module] Shipping traffic in the Strait of Hormuz initially dropped by 70% but has recently shown signs of increase, though still far below peacetime levels.
 [OBSERVATION] @BRICSinfo reports President Trump saying the US will have to start dropping bombs on Iran again if an agreement isn't reached, highlighting aggressive geopolitical rhetoric. [SPRINT: Implement Narrative Contestation Mapping Module]
 [OBSERVATION] @jacksonhinklle posted "It ALL belongs to Palestine" with a map image, an emotionally charged claim relevant to national sovereignty and geopolitical disputes. [SPRINT: Implement Narrative Contestation Mapping Module]
 [OBSERVATION] @nicksortor claims an increasing number of tankers have successfully traversed the Strait of Hormuz as President Trump works to finalize a peace deal, presenting a narrative of stability that contradicts other reports. [SPRINT: Implement Narrative Contestation Mapping Module]
@@ -15,9 +23,11 @@
 [OBSERVATION] @realstewpeters reports Trump saying "Next we’re going to war with Cuba. Watch what happens," indicating aggressive geopolitical rhetoric.
 [OBSERVATION] @AP reports President Donald Trump has repeatedly claimed that the flow of drugs into the U.S. by sea has been nearly eradicated under his administration, but experts say Trump is misrepresenting government data.
 [OBSERVATION] @EdKrassen reports Trump's statement about inheriting the highest prices in the history of the country, criticizing it as a misrepresentation of economic realities.
+[OBSERVATION] @AP reports Ohio's nursing homes are dumping patients at homeless shelters, raising significant humanitarian concerns and questions of accountability.
+[OBSERVATION] @OliviaTroye warns about Kash Patel becoming FBI Director, citing his unfitness and previous threats, raising concerns about power and institutional integrity.
 [NOTED] "strait hormuz" — 10 posts, no follow-up this cycle
-[NOTED] "iran" — 5 posts, no follow-up this cycle
 [NOTED] "trump" — 5 posts, no follow-up this cycle
+[NOTED] "iran" — 5 posts, no follow-up this cycle
 [NOTED] "strait" — 4 posts, no follow-up this cycle
 [NOTED] "country" — 4 posts, no follow-up this cycle
 [NOTED] "happened" — 4 posts, no follow-up this cycle
@@ -38,4 +48,4 @@
 [NOTED] "SINGLETONS · 3 posts"
 [NOTED] "SINGLETONS · 4 posts"
 [NOTED] "SINGLETONS · 4 posts"
-[NOTED] "SINGLETONS · 6 posts"
+[NOTED] "SINGLETONS · 6 posts
