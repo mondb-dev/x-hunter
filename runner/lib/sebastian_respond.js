@@ -241,7 +241,11 @@ async function callGemini({
 
   const body = {
     contents,
-    generationConfig: { maxOutputTokens: maxTokens, temperature },
+    generationConfig: {
+      maxOutputTokens: maxTokens,
+      temperature,
+      thinkingConfig: { thinkingBudget: 0 },
+    },
   };
   if (systemInstruction) {
     body.system_instruction = { parts: [{ text: systemInstruction }] };

@@ -196,7 +196,7 @@ async function callGemini(prompt, token) {
   const apiPath = `/v1/projects/${GCP_PROJECT}/locations/${GCP_LOCATION}/publishers/google/models/${INFRA_MODEL}:generateContent`;
   const body = JSON.stringify({
     contents: [{ role: 'user', parts: [{ text: prompt }] }],
-    generationConfig: { temperature: 0.4, maxOutputTokens: 16384 },
+    generationConfig: { temperature: 0.4, maxOutputTokens: 16384, thinkingConfig: { thinkingBudget: 0 } },
   });
 
   return new Promise((resolve, reject) => {
