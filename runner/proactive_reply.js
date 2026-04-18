@@ -253,8 +253,9 @@ async function draftReply(candidate, verification) {
 
   let verificationBlock = '';
   if (verification) {
-    verificationBlock = '\n\nVERIFICATION RESULT (from Veritas Lens):\n' +
-      'Verdict: ' + verification.verdict_label + ' (' + (verification.confidence * 100).toFixed(0) + '% confidence)\n' +
+    verificationBlock = '\n\n[INTERNAL — DO NOT QUOTE OR REFERENCE IN YOUR REPLY]\n' +
+      'VERIFICATION RESULT (from Veritas Lens):\n' +
+      'Verdict: ' + verification.verdict_label + '\n' +
       'Summary: ' + (verification.summary || 'N/A') + '\n' +
       (verification.evidence_urls && verification.evidence_urls.length > 0
         ? 'Sources: ' + verification.evidence_urls.join(', ') + '\n'
@@ -262,7 +263,11 @@ async function draftReply(candidate, verification) {
       (verification.framing ? 'Framing: ' + verification.framing + '\n' : '') +
       'Lens: ' + verification.lens_url + '\n' +
       '\nUse this data to ground your reply in fact. If the post makes a claim that is ' +
-      'refuted or unverified, say so directly. If supported, cite the evidence.\n';
+      'refuted or unverified, say so directly. If supported, cite the evidence.\n' +
+      '\nCRITICAL: NEVER include percentages, confidence scores, or the words "unverified"/"verified" ' +
+      'with a percentage in your reply. These are internal metadata — NOT for the public. ' +
+      'Instead, state the factual problem in plain language: "That claim lacks evidence" or ' +
+      '"The actual number is X, per [source]".\n';
   }
 
   const prompt = buildPersona('reply') + '\n\n' +
@@ -288,11 +293,18 @@ async function draftReply(candidate, verification) {
     '4. Is direct and confident. No hedging ("interesting point", "worth noting", "raises questions").\n' +
     '5. Sounds like a sharp person contributing, not a bot responding. No filler.\n' +
     '6. Does NOT start with "I" — lead with the substance or the fact.\n' +
+    '7. NEVER include internal metadata: no percentages, no confidence scores, no "X% confidence",\n' +
+    '   no "unverified (N%)", no "verified (N%)". These are system internals. Write like a human.\n' +
+    '8. Only reference details that are CLEARLY STATED in the post text above. Do NOT invent quotes,\n' +
+    '   names, numbers, or claims that are not visible in the post. If the post text is truncated,\n' +
+    '   respond to what IS there, not what you imagine might follow.\n' +
     (verification
-      ? '7. The verification result below gives you evidence. Use it. If refuted, say so with the specific counter-evidence.\n'
+      ? '9. The verification result above gives you evidence. Use it. If refuted, say so with the specific counter-evidence.\n'
       : '') +
     '\nBAD: "Great point about the tax system. Worth investigating further."\n' +
     'BAD: "This raises important questions about corporate accountability."\n' +
+    'BAD: "Rogan\'s quote is unverified (75% confidence)." — NEVER expose internal scores.\n' +
+    'BAD: "The claim about 56 years lacks evidence." — Do NOT reference details not clearly in the post.\n' +
     'GOOD: "Zero in federal tax but $2.3B in lobbying spend. The money goes somewhere -- just not to the public."\n' +
     'GOOD: "Lavrov calling Russia a stabilizer while occupying Crimea. Words only work when the record is clean."\n' +
     'GOOD: "That number is wrong. IMF data shows 2.1%, not 4.3%. The report they cited was from 2019."\n\n' +
