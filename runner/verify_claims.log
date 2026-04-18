@@ -1,0 +1,195 @@
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 89 unverified/contested claims (89 tracker, 0 intel)
+[verify_claims] web searching: "Israeli politician Yitzhak Kroizer stated that killing Palestinian children is n"
+[verify_claims] failed to parse web search response: {
+  "verdict": "confirmed",
+  "summary": "Israeli politician Yitzhak Kroizer stated in the Knesset that \"there are no innocent civilians, no innocent children in Jenin\" and that he supports IDF sold
+[verify_claims]   web result: inconclusive → confidence 0.310 → unverified
+[verify_claims] web searching: "Black Supremacy is a problem, supported by interracial violent crime statistics."
+[verify_claims] failed to parse web search response: ```json
+{
+  "verdict": "partial",
+  "summary": "While \"Black Supremacy\" is a recognized ideology held by some fringe groups, the claim that it is a widespread \"problem\" supported by interracial vi
+[verify_claims]   web result: inconclusive → confidence 0.400 → unverified
+[verify_claims] web searching: "South Africa has more anti-White and anti-Asian laws than anti-Black laws under "
+[verify_claims] failed to parse web search response: ```json
+{
+  "verdict": "refuted",
+  "summary": "The claim that South Africa has more anti-White and anti-Asian laws than anti-Black laws under Apartheid, constituting 'Apartheid 2.0,' is refuted. Whil
+[verify_claims]   web result: inconclusive → confidence 0.220 → refuted
+[verify_claims] verification draft written (Refuted, 22%)
+[verify_claims] tracker updated: claim_89 → refuted
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] export written: 19 claims
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 88 unverified/contested claims (88 tracker, 0 intel)
+[verify_claims] web searching: "Israeli army told a young man he could die alone or with family, then killed him"
+[verify_claims]   web result: inconclusive → confidence 0.325 → unverified
+[verify_claims] web searching: "Strait of Hormuz effectively closed to US/Israel-linked vessels"
+[web_search] failed to parse response: ```json
+{
+  "verdict": "partial",
+  "summary": "The Strait of Hormuz is not entirely closed, but shipping for US/Israel-linked vessels, and vessels going to or from Iranian ports, has been severely di
+[verify_claims]   web result: partial → confidence 0.430 → unverified
+[verify_claims] web searching: "Trump threatens to destroy Iranian civilian energy/water infrastructure if no de"
+[web_search] failed to parse response: {
+  "verdict": "confirmed",
+  "summary": "Donald Trump has repeatedly threatened to destroy Iran's civilian energy and water infrastructure if a deal is not reached. These threats have been made in th
+[verify_claims]   web result: confirmed → confidence 0.540 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verification_export] exported 26 claims
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 91 unverified/contested claims (91 tracker, 0 intel)
+[verify_claims] web searching: "US Commander Admiral Brad Cooper openly confesses US military is completely inte"
+[web_search] failed to parse response: ```json
+{
+  "verdict": "confirmed",
+  "summary": "Admiral Brad Cooper, Commander of US Central Command (CENTCOM), has repeatedly affirmed the close strategic relationship and defense cooperation betwe
+[verify_claims]   web result: confirmed → confidence 0.405 → unverified
+[verify_claims] web searching: "4 Chinese cargo planes allegedly switched off their transponders and landed in I"
+[web_search] failed to parse response: ```json
+{
+  "verdict": "inconclusive",
+  "summary": "Reports from various intelligence and defense monitoring communities allege that Chinese cargo planes have landed in Iran after switching off their
+[verify_claims]   web result: inconclusive → confidence 0.360 → unverified
+[verify_claims] web searching: "FISA Section 702 allows the U.S. government to spy on foreigners overseas withou"
+[web_search] failed to parse response: ```json
+{
+  "verdict": "confirmed",
+  "summary": "FISA Section 702 authorizes the U.S. government to surveil foreigners located outside the United States without a warrant. This surveillance incidenta
+[verify_claims]   web result: confirmed → confidence 0.410 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verification_export] exported 30 claims
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 102 unverified/contested claims (102 tracker, 0 intel)
+[verify_claims] web searching: "USS Eisenhower aircraft carrier caught fire during maintenance at Norfolk Naval "
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "USS Eisenhower aircraft carrier was hit by Iran days before the ceasefire."
+[web_search] failed to parse response: ```json
+{
+  "verdict": "refuted",
+  "summary": "The claim that the USS Eisenhower aircraft carrier was hit by Iran days before a ceasefire is false. While the Iran-backed Houthi militants have repeate
+[verify_claims]   web result: refuted → confidence 0.450 → refuted
+[verify_claims] verification draft written (Refuted, 45%)
+[verify_claims] web searching: "Black family celebrates after the daughter gets approved for food stamps"
+[verify_claims]   web result: no_results → confidence 0.305 → unverified
+[verify_claims] tracker updated: claim_101 → refuted
+[verify_claims] scored 10 claims, web-searched 3
+[verification_export] exported 39 claims
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 102 unverified/contested claims (102 tracker, 0 intel)
+[verify_claims] web searching: "USS Eisenhower aircraft carrier caught fire during maintenance at Norfolk Naval "
+_dbg_grounding: {
+  "webSearchQueries": [
+    "USS Eisenhower fire Norfolk Naval Shipyard sailors injured",
+    "USS Eisenhower fire maintenance Norfolk",
+    "USS Eisenhower incident Norfolk Naval Shipyard"
+  ],
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n 
+_dbg_full_text: ```json
+{
+  "verdict": "confirmed",
+  "summary": "The USS Dwight D. Eisenhower aircraft carrier experienced a small fire on April 14, 2026, while undergoing scheduled maintenance at Norfolk Naval Shipyard. The fire was quickly contained by the ship's crew and shipyard personnel. Initial reports indicated three sailors were injured, with later updates stating eight sailors were treated, all of whom returned to full duty.",
+  "evidence_urls": [
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQWoKiUD-_soWLnteljJyPHWy885evQIn3gNgvy73qAhCOuEiHhNdqC9WC_MDg00rGAyOH0oUyWZvAEObQHcqlnOlmtaEkvuthhoilxQmRoqkoqfQ6xdAr3pzEZbZeKGJ3GBPkglqcvEkVWToh3SfuZPLr-Xa6s9UZ33WeomtHIJ2f017OO5Mnh3iOdPhCG3DAfNXC51HD10XviV0vzApfc125_t7HEO3coJdShgKSCCS-oxxuBDHty_jF2nzt",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeCdVaNyE_P2ettg1Qbwwka-LPEUIUkuFVB9PpjTPQJT62_KixAXraKLAJuXGTg5qPIGVgTYr1sRFoQaFoz0S2z_3Z8dGC16UT332ZByrL6teADDXRZUX2dF4un_K7_BLrU_HUNV3VIAyIJmFefH47DIY3kcIXs5robpT3B4lzEVnQk7--2fK0ZaBNLvzaAK_cMvD1CsXwV4HCHeWGHFsZcO_S12h8cHwSnCc5qFzkbux-VJL3",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERigRsWP1SrPck6jgVNOU45UoUS5bx2k1f940dmVWe-SkV62JUwrkV0ACJYLbJtVe1FMqp_KviQTmJ8XKHp2SYGQESS7fj8QgsIRplPgYg4IDptyPYkxun8-nXy0GvaK5wpuuOrlOpx4aLKgLpk1EQIyz1Gve-wrpO32_AZIJGZS--dY4Xj-w33oslNBZEGkus_GtZQI65sypcoBEqzB3HMUJ-WjyolxI-ideD6ulL33_CAVYD5h67IFKLpItkPignyxWF_KrCcjhVRP_pC7hvKBujtpEz5Uwg4DOX32cJvwMqVS8R6SR21Z6PoAeOwl3PjjqKqA==",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-inBviBq6nH6RIPrm5uAuucJYLHC4-v72eg84sF4wAilTiCgGx3cJFc8SbgOyQHMVldSub-1KxB7ol4RQ9USiExiGMVrM5-hMKCD3EJ2-Y_xE4qcdRgp2NnaIlkNcFa-ML78nRYV0zX7WzzDzBw7toP9-6mZF89z5lJ8wP2yJ1enFYm2IDHkgjrHuzEA4QK0F4txe",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtPuH1DPb_dTkOr5tU-qhgtBqgAQSLyggTx5R2COoijM3SNRDsgDolqLUvnsNJd0ztDps6rL0QV2UDfVawDkuY530ZToW3StjpE80ikXnoUhf6dxEaDwpbwM_5qjwtjW0qKg2YGPt0F_P2XXz46Gx2B7IfmZkHolU0TzS5oUM_6VxfmF_NldBlbMHyq2kztQ==",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHgj2ywzkvdl2VarwkTNS5vPDOWq3LBEhE1-qfGjZw3Pztq2pq6zSKjTjZDmvT4jGV0viaKOGrsQeI-McDmOXoYEowZcQBe1q9fhfIs1SdXiL268Y4ogCpUa7wyJMbpvemDEz56XLJFOtO9AY3y3H0xU0hK3oGZ_SbC3f4=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRvxgLu57qEVtz3IcdhU1QzqrzDYDxCm_-sspQz9AXqOF1JgkEq63JCI1NvAC8O_TpNFshXy0N2CYMT8uX6THSU7argJgN2BK3HHriuJMir2s9ZYfntZCSQdHYNH6X_k2YSZMcfCMrqbVp4aV3UFIj43YgzCoUWKlLse7qef2sevbUZdTtoXsQaPzFoee6dvP0Qu2stXqrQYMPQuVHIFEm0LW-ELv2Q5wBZGJ5enDSorCM",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyb9bu6AITt9Niz8I8iBFkE3cz3qeFhknXh-xM93_PoEhsm1_KfYNIInwxuxuoEGstIbCGecvM2lkzro3e1KStVnHvT8asaqLTpBcZW5EEhVuOrAuvIMcL87nRa2vgRp0SdJTlxFc=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUDcQP3SbhHVE6jAjjT0mLZIubHcK39W3O1AUgNRiErNytIxCLXLt-SkYEhoZwXoOTGFUyOU02Cw4vG_9hOzZlGRDerqmMI_vP9C7lx
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "USS Eisenhower aircraft carrier was hit by Iran days before the ceasefire."
+_dbg_grounding: {
+  "webSearchQueries": [
+    "USS Eisenhower hit by Iran",
+    "USS Eisenhower attack Iran",
+    "USS Eisenhower recent incidents",
+    "Houthi attacks USS Eisenhower",
+    "Iran attacks US Navy ships"
+  ],
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip
+_dbg_full_text: ```json
+{
+  "verdict": "refuted",
+  "summary": "The claim that the USS Eisenhower aircraft carrier was hit by Iran is false. While Iranian-backed Houthi rebels claimed to have attacked the carrier in May-June 2024, these claims were widely debunked as disinformation by U.S. officials and credible news organizations. The USS Eisenhower recently experienced a small internal fire on April 14, 2026, during scheduled maintenance, which was not an attack by Iran.",
+  "evidence_urls": [
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqYvOCl_6W_K-mO-gmmHWKh0HZrrCGRMRWvVknJKKgYYd61zMYUpwAy5TOeS2X6K8ji2b68jXXJQRdecUv6fNHSpdyrOcx2tb5ISPrNRHxCXDc6Oh6wWwEQylzDKV_N7pGcCnMd7qRUiZdvkOM88bFqhql-NPtd1VaKQE9hkRpOb96oAOWjFmhP8ySviuaCMD-iNItZUFUrX72uq_ICsg=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFu5zPGyo3Ib-zaxb_DE8Gj7bGaigKi6GIL1zzykE1nLJj6893qlb1qguU01Ofedm0PmA4oFnUeq_9tJM730gmGUmeSapTLAG7XVP9iRxyCz3W2JLfLYg7U20d-rgAZW4zZa6qaHcVawWhnUS_epK4eOXEjDM4KBgy3oZnYhl7wJXwR80uSsJ2Gxf0=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-X5uT76ykR7Qqo-QD6ii3Be978pEtwlyzX_cy6oOFsic5lAxBdV7HU3MDpfxItM5rmlX6ef9Ud1n7DA-UUeya2tHcHd617qd2PbrPNrBhU1KIxc1xZLvGMpwvHwnLlRGMpa9r6HjqMekegokcG1ePOn8SQqdSzHRRkdtHVSBIvXqJxu03PA6KASx0g2IAIp7cTD1R2Dt5dy7zS0k=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKINic5X6UmvU1njjErVn-GULXV6p8gQiLaY5fF1hCU0hB2FC5S_fJuyjlzNHsCQxPCSagY-7NOSNtwV8yAFsGa55HTiI4t2QkrxQ4yJZP4ax5TNrhasF0H5lZVossOXUbWgQv2f6Pr9HKKyXtRPy32A=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVGDnz4Dy9mPTZDyM3dz8HcCoUVOoGbqHGSXtHAv4w9cCNGkAhfulqdODTgULof14uNsltweW_z2G3WeNm7E2sLz5glvQCGfnP2vdE_aK9L6YlLAlYAxFTQpHoMQLOt86PP5_serDqFbs-R3WN7YZvHGCsEPu7htdZLqSzfMS8F6-TtGVqzKRWT2cN8oyh29JnZvl2xw4DGjnAopCfpA4Q8iz1pZLU_PWfso8IX2ccmp4ybUbEkpnKnvTvZPHt=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqtxckLvlH7s8QdSTPELrz2sC2nbCZyYVG0g70NFisVetKxSpNYoy7pE9A606BIjr4CjLXOfnTR4pd_JCy7Ygk-c7Lib85pMHetNwz6AkkghyRuFLZ7-DoWCZktgboUt6jNR2NBdzLKkM3vPNkirrC5cJpOpEPrE-dYiCVvuiq52bkHFFrTOuKA0_ls0dpiRqNqHQAcvHrnwKRaqsf2719cCUh01pzsJFGu9Dgmfls5VdRkSNZXQ5rWBVuYQ="
+  ],
+  "supporting_sources_summary": "Houthi rebels and Iranian state media claimed attacks on the USS Eisenhower in May-June 2024, asserting direct hits and even sinking the vessel.",
+  "dissenting_sources_summary": "U.S. officials and the Navy consistently denied these Houthi claims, stating there was no damage or injuries to the USS Eisenhower. CBS News reported that these claims were part of a disinformation campaign using fake footage and doctored images. More recently, in April 2026, the USS Eisenhower experienced a small internal fire during maintenance at Norfolk Naval Shipyard, which was not an attack.",
+  "original_source": "Houthi rebels and Iranian state media",
+  "claim_date": "2024-05",
+  "framing_analysis": "The claim is misleading as it attributes unverifie
+[verify_claims]   web result: refuted → confidence 0.450 → refuted
+[verify_claims] verification draft written (Refuted, 45%)
+[verify_claims] web searching: "Black family celebrates after the daughter gets approved for food stamps"
+_dbg_grounding: {
+  "webSearchQueries": [
+    "\"Black family celebrates after the daughter gets approved for food stamps\"",
+    "food stamps celebration viral video",
+    "food stamps approval viral video black family"
+  ],
+  "searchEntryPoint": {
+    "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .ch
+_dbg_full_text: ```json
+{
+  "verdict": "no_results",
+  "summary": "No evidence was found to support the claim of a \"Black family celebrating after the daughter gets approved for food stamps.\" Search results predominantly feature discussions and viral videos related to food stamp cuts, alleged fraud, or AI-generated content depicting Black women in stereotypical and often negative ways concerning EBT benefits.",
+  "evidence_urls": [
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF83A_bci8AnTd-PykBzrz6vmIKXNbTsgZZI4OsfW714UMyyVHjAMNZpLt5tm-m_JebyMZDnDiUBY7nJ_aQDtDBI9v9nPxdtCEehNkFV7bm8QNi802ihLlj5XZcc4kYV-v3NMGQE94=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGF1Q_h8ZCJoiW1UVNjEwd_613rXEKKddrrp4UxXY7RNrBs_A9ar20vOysQktWBWu78p6QyZRpFD7qOOVrOqElXjP0PBNYM5W0OTbr60Ru7jlHYiD_QPNwcM9m3AWQ97F-w23vCTnIU5xABKWxlQW9zh7MCnKfG3dl-bz0GKYnJs0qPS-qg0UOfkVYIQh7oBKFZjeKj8Q==",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1p9X95aHapvexwPqqEe3f13sXOuqLxSDxewpuq6_4zslK0ar73cXFQDXUTtALlMYetHrzDy1S4lQ2WwEgjS03ziZ-MzlOdCCpSNZ5nAUgrcTzyV1LxsvRI4hTQk3SNbMz3KKgEtI=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5weAj7_9F5oSsBmnBNzLQgWJsmxEhsVPxIoqZ5k4dS3WcyKZgNdgfBYEDD6LTvhpplLpzldf-jJQq2PKD0_6Do5AwX3yxPdiSs-Rgj0962O-7gSnzf9Swn9ybmVt24VjQhakfSkM=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHML2-kNfEjHi0MIVGEt6h9JVkvw56astx5eEvBx-deqy9cxESkWpb2CMqvrXAb-ekksdyojVYe1zt08XRiXlrH2ZQu5GKnrV5LuKKAQRWcBUR9xQ9C-qqvxCf7-R6uyK4U3JWdSkcWRpamHZbMb1pZdua28ahKcrHGbajUxl8dEYJf",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2uH3bYIrs7rEQrU4snw8VO5vhVjd4uLlqtWxib4Px3GMoTkvBw7vbX_uhFBTTgRTnheD2GHpuBhHfT1-CUwSy10iIaCsGt_BCgFAKssCirqPqWFWfxw7zKpTDAO-GQaDwjIIDnzA=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHw6-kclsbIaEClKQ00VIeDJDvZaktlxxPwjCn_7BPxowi50Jfw-hjspcAPhR_x1qg7ikGLHKkp3uYZWu6UdVfFSRTUjqFoAUYE7F5fFRFG8xAdRiVuUx74Yyn0bZiRWGkT1nJxWsS5VK1AifOd_J2i_pJ2-nRZoxbz",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWN16RD8fJfKCm9ohDZ9WqqhlOsJdqMdd-5YBHLKz-HJ2KCFbNZcmbWw4XorxquzKCGu2V-BAebj14dNXRGrCLdKXbKru-nf6JghFkv8UPnP54GYQAloQ8-oZappEAhI5_ZV5T-nkElPsrSKAyzRwTNHGYDVeYjxg--e5IvuDKDgiAF9KRfBIzqNtnCco=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdls1hu-7QiTecGLjpWgx7MldKqPp_k-B4oJrYjcr3qHYkHxqcoAeiGAFEzK5qNGsLPPV5r7ivud7WBVxRybNlLVMpYnLBa9UPvkzDJts-q82NnVPthAJFK_eUPm5zPSZJ99XzEYY=",
+    "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1GdcqIDsXNASjCEfeYjxYU2tmB0HkX3j-YhPvFR5HAJlOuWm1Mb-Bb_hS6hTXi4P2dFL9dIL6RE-5ebCcHMyM8-jMv-KpyiokWTSWXYQiOhHa6lxZUI8dnI451YjrX9jcPhVeSLtrY2Rsjxq6dpERIs4_-UQzWdPTJDcxPXBMpXmMtERXaUNHo29pRdCaIQ="
+  ],
+  "supporting_sources_summary": "N/A",
+  "dissenting_sources_summary": "N/A",
+  "original_source": "Unknown",
+  "claim_date": "Unknown",
+  "framing_analysis": "The claim itself presents a posit
+[verify_claims]   web result: no_results → confidence 0.305 → unverified
+[verify_claims] tracker updated: claim_101 → refuted
+[verify_claims] scored 10 claims, web-searched 3
+[verification_export] exported 44 claims
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 101 unverified/contested claims (101 tracker, 0 intel)
+[verify_claims] web searching: "EU President Ursula Von Der Leyen states EU protects freedom of speech, yet a ma"
+[verify_claims]   web result: confirmed → confidence 0.375 → unverified
+[verify_claims] web searching: "Provocative statement 'You will die for Israel and your last meal will be goyslo"
+[verify_claims]   web result: no_results → confidence 0.200 → unverified
+[verify_claims] web searching: "Images from the Epstein Files implicate Trump in pedophilia."
+[verify_claims]   web result: inconclusive → confidence 0.325 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] investigation: starting deep investigation for "EU President Ursula Von Der Leyen states EU protects freedom of speech, yet a ma"
+[investigate] investigating: "EU President Ursula Von Der Leyen states EU protects freedom of speech, yet a ma..." (claim=claim_103, inv=inv_claim_103_mo36akbk)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 31s with exit=1
+[investigate] failed to parse investigation_result.json: ENOENT: no such file or directory, open '/home/raymond_d_baldonado_gmail_com/hunter/state/investigation_result.json'
+[investigate] no valid investigation result found
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim EU President Ursula Von Der Leyen states EU protects freedom of speech, yet a man is arrested for speaking out against her --claim-id claim_103 --source-handle basilthegreat
+[investigate] investigating: "EU President Ursula Von Der Leyen states EU protects freedom of speech, yet a ma..." (claim=claim_103, inv=inv_claim_103_mo36akbk)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 31s with exit=1
+[investigate] failed to parse investigation_result.json: ENOENT: no such file or directory, open '/home/raymond_d_baldonado_gmail_com/hunter/state/investigation_result.json'
+[investigate] no valid investigation result found
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 46 claims
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 106 unverified/contested claims (106 tracker, 0 intel)
+[verify_claims] web searching: "$760,000,000 worth of oil shorts were reportedly placed 20 minutes before Presid"
