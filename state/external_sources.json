@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-18T06:00:42.457Z",
+  "generated_at": "2026-04-18T07:10:43.170Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-18T06:01:13.354Z",
+  "profiled_at": "2026-04-18T06:51:13.595Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -743,9 +743,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T09:30:40.000Z",
-      "last_seen_at": "2026-04-18T04:25:00.000Z",
+      "last_seen_at": "2026-04-18T06:43:16.000Z",
       "discovery": {
-        "distinct_urls": 749,
+        "distinct_urls": 753,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -754,10 +754,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 471,
-          "feed_buffer_reply": 320
+          "feed_buffer": 472,
+          "feed_buffer_reply": 323
         },
-        "distinct_referring_accounts": 383,
+        "distinct_referring_accounts": 384,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -795,7 +795,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:749",
+            "distinct_urls:753",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -803,7 +803,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:383",
+            "referring_accounts:384",
             "origin_types:2"
           ]
         },
@@ -833,10 +833,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:749",
+            "distinct_urls:753",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:383",
+            "referring_accounts:384",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1675,9 +1675,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-04-17T12:06:00.000Z",
+      "last_seen_at": "2026-04-18T03:29:32.000Z",
       "discovery": {
-        "distinct_urls": 13,
+        "distinct_urls": 14,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -1686,7 +1686,7 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 11,
+          "feed_buffer_reply": 12,
           "feed_buffer": 2
         },
         "distinct_referring_accounts": 2,
@@ -1719,7 +1719,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:13",
+            "distinct_urls:14",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1753,11 +1753,11 @@
         },
         "overall": {
           "score": 0.44890625,
-          "confidence": 0.47145000000000004,
+          "confidence": 0.49395,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:13",
+            "distinct_urls:14",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2",
@@ -3038,7 +3038,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T06:14:38.775Z",
+        "fetched_at": "2026-04-18T06:31:13.563Z",
         "homepage_url": "https://framia.pro/",
         "example_url": "https://framia.pro/?utm_source=x&utm_campaign=twitter_adsmarch_framia_14_20260331&utm_medium=paid_social&twclid=2e6c8vey7aaz8sdwedu4gd0jgx",
         "homepage_status": 200,
@@ -6653,7 +6653,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T06:39:39.741Z",
+        "fetched_at": "2026-04-18T06:51:12.958Z",
         "homepage_url": "https://epochtimes.com/",
         "example_url": "https://www.epochtimes.com/",
         "homepage_status": 200,
@@ -7525,7 +7525,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T06:14:38.972Z",
+        "fetched_at": "2026-04-18T06:31:13.752Z",
         "homepage_url": "https://anymark.co/",
         "example_url": "https://anymark.co/?utm_source=x&utm_campaign=x771&twclid=293t0nesyim9m91au5fqoaj5s8",
         "homepage_status": 200,
@@ -8763,7 +8763,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T06:14:39.372Z",
+        "fetched_at": "2026-04-18T06:31:17.204Z",
         "homepage_url": "https://rice.edu/",
         "example_url": "https://news.rice.edu/news/2026/more-dangerous-and-unpredictable-experts-discuss-ongoing-iran-conflict",
         "homepage_status": null,
@@ -8885,7 +8885,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T06:14:40.215Z",
+        "fetched_at": "2026-04-18T06:31:18.309Z",
         "homepage_url": "https://moderndiplomacy.eu/",
         "example_url": "https://moderndiplomacy.eu/2026/03/06/alone-under-fire-irans-partners-step-back-as-war-intensifies/",
         "homepage_status": 200,
@@ -8901,7 +8901,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 6,
+          "outbound_links_count": 2,
           "opinion_marker": false
         },
         "example": {
@@ -18907,7 +18907,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T06:39:40.384Z",
+        "fetched_at": "2026-04-18T06:51:13.595Z",
         "homepage_url": "https://netbird.io/",
         "example_url": "https://netbird.io/knowledge-hub/expose-command?utm_campaign=x-netbird-expose-non-eu&twclid=2d8u7bef0hoyccx1tucq6gyfty",
         "homepage_status": 200,
