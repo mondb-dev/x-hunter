@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-04-18T07:10:43.170Z",
+  "generated_at": "2026-04-18T07:30:51.729Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-18T06:51:13.595Z",
+  "profiled_at": "2026-04-18T07:31:26.196Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -745,7 +745,7 @@
       "first_seen_at": "2026-03-31T09:30:40.000Z",
       "last_seen_at": "2026-04-18T06:43:16.000Z",
       "discovery": {
-        "distinct_urls": 753,
+        "distinct_urls": 754,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -755,9 +755,9 @@
         ],
         "origin_counts": {
           "feed_buffer": 472,
-          "feed_buffer_reply": 323
+          "feed_buffer_reply": 324
         },
-        "distinct_referring_accounts": 384,
+        "distinct_referring_accounts": 385,
         "sample_referring_accounts": [
           "0xanomalia",
           "60minutes",
@@ -795,7 +795,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:753",
+            "distinct_urls:754",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -803,7 +803,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:384",
+            "referring_accounts:385",
             "origin_types:2"
           ]
         },
@@ -833,10 +833,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:753",
+            "distinct_urls:754",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:384",
+            "referring_accounts:385",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -879,9 +879,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-04-18T02:39:28.000Z",
+      "last_seen_at": "2026-04-18T07:01:28.000Z",
       "discovery": {
-        "distinct_urls": 109,
+        "distinct_urls": 112,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -890,10 +890,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 106,
-          "feed_buffer": 7
+          "feed_buffer_reply": 108,
+          "feed_buffer": 8
         },
-        "distinct_referring_accounts": 89,
+        "distinct_referring_accounts": 91,
         "sample_referring_accounts": [
           "100ohiostate",
           "50hidalgo47",
@@ -931,7 +931,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:109",
+            "distinct_urls:112",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -939,7 +939,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:89",
+            "referring_accounts:91",
             "origin_types:2"
           ]
         },
@@ -969,10 +969,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:109",
+            "distinct_urls:112",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:89",
+            "referring_accounts:91",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1275,9 +1275,9 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-04-18T05:32:10.979Z",
+      "last_seen_at": "2026-04-18T07:14:19.763Z",
       "discovery": {
-        "distinct_urls": 128,
+        "distinct_urls": 130,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
@@ -1286,9 +1286,9 @@
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxs1cM8PTd_QtRaKpYmDBqTaoVyKJalJfIuu-PaW2zHSU-BfWPq7hhOb9M8JgfyL1usSQ2-naI-6KBvJwgBMdVAh7IQ_yAgTaqqSsLNjBtonmwJ6ztGpNPEWFY0XBLj3YCtCkXYl9FqA=="
         ],
         "origin_counts": {
-          "ontology_evidence": 113,
+          "ontology_evidence": 115,
           "claim_tracker": 14,
-          "journals": 54
+          "journals": 56
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1336,7 +1336,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:128",
+            "distinct_urls:130",
             "distinct_axes:17",
             "origin_types:3"
           ]
@@ -1377,7 +1377,7 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:128",
+            "distinct_urls:130",
             "distinct_axes:17",
             "origin_types:3",
             "referring_accounts:0",
@@ -1803,7 +1803,7 @@
       "entity": "Geopoliticalfutures",
       "kind": "unknown",
       "first_seen_at": "2026-04-17T20:25:00Z",
-      "last_seen_at": "2026-04-17T22:57:54.874Z",
+      "last_seen_at": "2026-04-18T07:14:23.577Z",
       "discovery": {
         "distinct_urls": 1,
         "example_urls": [
@@ -2531,7 +2531,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T07:29:41.116Z",
+        "fetched_at": "2026-04-18T07:31:21.873Z",
         "homepage_url": "https://ethos.com/",
         "example_url": "https://www.ethos.com/life/life-insurance-now/?utm_source=twitter&utm_medium=cpc&utm_campaign=Broad01162026&utm_campaign_id=40806420&utm_adgroup=Broad01162026&utm_adgroup_id=54091382&utm_ad_id=2024963714831835547&ad_name=hiking+%28convert%29&twclid=2eck112qrn4y0a9og1cs3anquo",
         "homepage_status": 200,
@@ -4262,16 +4262,16 @@
           ]
         },
         "profile": {
-          "score": 0.1,
+          "score": 0.27,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:true",
             "about:false",
-            "contact:false",
+            "contact:true",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:5",
             "opinion_marker:false"
           ]
         },
@@ -4291,7 +4291,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T07:29:42.379Z",
+        "fetched_at": "2026-04-18T07:31:22.986Z",
         "homepage_url": "https://enter.pro/",
         "example_url": "https://enter.pro/?utm_source=x&utm_medium=paid_social&utm_campaign=twitter_adsmarch_enter_13_0260403&twclid=21y4m3veyg3qz1wzl60cdelnk1",
         "homepage_status": 200,
@@ -4305,9 +4305,9 @@
           "has_published_time": false,
           "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": false,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 5,
           "opinion_marker": false
         },
         "example": {
@@ -4315,9 +4315,9 @@
           "has_published_time": false,
           "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": false,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 5,
           "opinion_marker": false
         }
       }
@@ -7026,7 +7026,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T07:29:44.831Z",
+        "fetched_at": "2026-04-18T07:31:25.426Z",
         "homepage_url": "https://thedispatch.com/",
         "example_url": "https://thedispatch.com/article/slavery-christianity-judaism/?twclid=224n5l3gu5l6wy53cctpntxjmr",
         "homepage_status": 200,
@@ -9007,7 +9007,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-15T07:29:45.872Z",
+        "fetched_at": "2026-04-18T07:31:26.195Z",
         "homepage_url": "https://amnesty.org/",
         "example_url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/",
         "homepage_status": 200,
@@ -21741,6 +21741,83 @@
           "has_corrections_link": false,
           "outbound_links_count": 3,
           "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "gothamist.com",
+      "entity": "Gothamist",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-17T09:07:59.000Z",
+      "last_seen_at": "2026-04-17T09:07:59.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://gothamist.com/news/mamdani-administrations-new-72nd-street-bike-lane-would-link-upper-east-and-west-sides&utm_id=571007&sfmc_id=79023345&utm_content=2026415&nypr_member=True"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "witzshared"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
         }
       }
     },
