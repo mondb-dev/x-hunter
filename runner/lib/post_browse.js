@@ -240,7 +240,14 @@ function postBrowse({ cycle, today, hour }) {
     runScript(path.join(PROJECT_ROOT, 'scraper/reply.js'));
   }
 
-  // ── 9. Vercel deploy + GCS sync (if changes were committed) ───────────
+  // ── 8.5. Proactive reply (after each BROWSE — check x_control, uses its own cap/gap) ─
+  if (isXSuppressed('reply')) {
+    log('proactive reply suppressed (x_control)');
+  } else {
+    runScript(path.join(PROJECT_ROOT, 'runner/proactive_reply.js'));
+  }
+
+    // ── 9. Vercel deploy + GCS sync (if changes were committed) ───────────
   const changes = execSync('git status --porcelain=v1', { encoding: 'utf-8' });
   if (changes.length > 0) {
     log('Changes detected, triggering sync...');
