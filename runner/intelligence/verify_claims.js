@@ -24,6 +24,7 @@ const { webSearchVerify }         = require('./lib/web_search');
 const { exportVerificationData }  = require('./lib/verification_export');
 const { loadSourceData }          = require('./lib/source_data');
 const { investigateClaimSync }    = require('../lib/verify_claim');
+const { syncToGCS }               = require('../lib/git');
 
 const idb = loadIntelligenceDb();
 const vdb = loadVerificationDb();
@@ -372,7 +373,10 @@ async function run() {
 
   if (allClaims.length === 0) {
     log('no unverified claims to process');
-    if (!isDryRun) exportVerificationData(vdb, config.VERIFICATION_EXPORT_PATH);
+    if (!isDryRun) {
+      exportVerificationData(vdb, config.VERIFICATION_EXPORT_PATH);
+      syncToGCS();
+    }
     return;
   }
 
@@ -455,6 +459,7 @@ async function run() {
 
     // 8. Export for web
     exportVerificationData(vdb, config.VERIFICATION_EXPORT_PATH);
+    syncToGCS();
   } else {
     log(`[dry-run] would persist ${results.length} results`);
   }
