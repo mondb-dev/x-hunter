@@ -265,7 +265,7 @@ function buildJournalTask(type, today, hour, dayNumber) {
       '.html ALREADY EXISTS. DO NOT write or overwrite this file \u2014 it has been permanently archived to Arweave.';
   }
   if (type === 'browse') {
-    return 'Write journals/' + today + '_' + hour + '.html now. This is Day ' + dayNumber + '.\n' +
+    return 'Use the write_file tool to write journals/' + today + '_' + hour + '.html now. This is Day ' + dayNumber + '.\n' +
       '   The journal has TWO required sections inside <article>:\n' +
       '\n' +
       '   SECTION 1 — synthesis (required): Your interpretive narrative for this cycle.\n' +

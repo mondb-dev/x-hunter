@@ -200,7 +200,7 @@ function postBrowse({ cycle, today, hour }) {
     const trajStamp = path.join(config.STATE_DIR, '.last_trajectory');
     const lastTraj = fs.existsSync(trajStamp) ? fs.statSync(trajStamp).mtimeMs : 0;
     if (Date.now() - lastTraj > 2 * 60 * 60 * 1000) {
-      runScript(path.join(PROJECT_ROOT, 'runner/axis_trajectory.js'));
+      runScript(path.join(PROJECT_ROOT, 'runner/generate_trajectory.js'));
       try { fs.writeFileSync(trajStamp, new Date().toISOString()); } catch {}
     }
   }

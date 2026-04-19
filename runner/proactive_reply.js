@@ -18,7 +18,7 @@ const path = require('path');
 
 const { connectBrowser, getXPage } = require('./cdp');
 const { isXSuppressed } = require('./lib/x_control');
-const { buildPersona, buildCoreContext, recallForTopic, formatRecallHints } = require('./lib/sebastian_respond');
+const { buildPersona, buildCoreContext } = require('./lib/sebastian_respond');
 const { verifyClaim } = require('./lib/verify_claim');
 const config = require('./lib/config');
 
@@ -166,11 +166,8 @@ async function draftReply(candidate, verification) {
     includeSprint: false,
   });
 
-  // Recall past observations about this topic
-  const recallHits = recallForTopic(candidate.text, 4);
-  const recallBlock = recallHits.length > 0
-    ? '\n\nYour past observations on this topic:\n' + formatRecallHints(recallHits) + '\n'
-    : '';
+  const recallBlock = '';  // recallForTopic removed — memory API handles recall
+
 
   let verificationBlock = '';
   if (verification) {
