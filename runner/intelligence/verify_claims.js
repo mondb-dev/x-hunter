@@ -24,7 +24,7 @@ const { webSearchVerify }         = require('./lib/web_search');
 const { exportVerificationData }  = require('./lib/verification_export');
 const { loadSourceData }          = require('./lib/source_data');
 const { investigateClaimSync }    = require('../lib/verify_claim');
-const { syncToGCS }               = require('../lib/git');
+const { execSync }                = require('child_process');
 
 const idb = loadIntelligenceDb();
 const vdb = loadVerificationDb();
@@ -33,6 +33,32 @@ const DB_IS_PG = usePostgres();
 const isDryRun = process.argv.includes('--dry-run');
 
 function log(msg) { console.log(`[verify_claims] ${msg}`); }
+
+/**
+ * Commit and push state/verification_export.json directly to GitHub so Vercel
+ * picks it up immediately on the next build (triggered by the push).
+ * Runs after every export. Silently skips on any git error.
+ */
+function pushExport() {
+  const root = config.PROJECT_ROOT;
+  const rel  = 'state/verification_export.json';
+  try {
+    execSync(`git -C "${root}" add "${rel}"`, { stdio: 'ignore', timeout: 10000 });
+    execSync(`git -C "${root}" diff --cached --quiet -- "${rel}"`, { stdio: 'ignore', timeout: 5000 });
+    // diff exits 0 when nothing staged — nothing new to push
+    log('export unchanged since last commit, skipping push');
+    return;
+  } catch {
+    // diff exits 1 when there ARE staged changes — proceed to commit+push
+  }
+  try {
+    execSync(`git -C "${root}" commit -m "verify: update verification export"`, { stdio: 'ignore', timeout: 15000 });
+    execSync(`git -C "${root}" push origin main`, { stdio: 'ignore', timeout: 30000 });
+    log('pushed verification export to GitHub');
+  } catch (err) {
+    log(`push failed (will be picked up by next orchestrator commit): ${err.message}`);
+  }
+}
 
 // ── Configuration ───────────────────────────────────────────────────────────
 const MAX_CLAIMS_PER_CYCLE   = 10;
@@ -340,6 +366,7 @@ async function maybeInvestigate(results) {
     log(`investigation: completed — ${invResult.status} (${Math.round((invResult.confidence || 0) * 100)}%), ${invResult.supporting || 0} supporting, ${invResult.contradicting || 0} contradicting`);
     // Re-export since investigate_claim.js already persisted
     exportVerificationData(vdb, config.VERIFICATION_EXPORT_PATH);
+    pushExport();
   } else {
     log('investigation: failed or timed out');
   }
@@ -375,7 +402,7 @@ async function run() {
     log('no unverified claims to process');
     if (!isDryRun) {
       exportVerificationData(vdb, config.VERIFICATION_EXPORT_PATH);
-      syncToGCS();
+      pushExport();
     }
     return;
   }
@@ -459,7 +486,7 @@ async function run() {
 
     // 8. Export for web
     exportVerificationData(vdb, config.VERIFICATION_EXPORT_PATH);
-    syncToGCS();
+    pushExport();
   } else {
     log(`[dry-run] would persist ${results.length} results`);
   }
