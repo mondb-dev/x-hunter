@@ -221,7 +221,7 @@ async function draftReply(candidate, verification) {
     'Return ONLY the reply text. Nothing else. If you cannot write something genuinely worth posting, return SKIP.';
 
   const { getAccessToken, getProjectConfig } = require('./gcp_auth');
-  const { callGemini } = require('./lib/vertex_call');
+  const { callGemini } = require('./lib/sebastian_respond');
   const token = await getAccessToken();
   const { project, location } = getProjectConfig();
 
@@ -229,6 +229,7 @@ async function draftReply(candidate, verification) {
     token,
     systemInstruction: buildPersona('reply'),
     contents: [{ role: 'user', parts: [{ text: prompt }] }],
+    tools: [{ google_search: {} }],
     maxTokens: 300,
     temperature: 0.8,
     project,
@@ -237,7 +238,15 @@ async function draftReply(candidate, verification) {
 
   const text = (res.text || '').trim();
   if (!text || text === 'SKIP' || text.length > 270) return null;
-  return text;
+
+  // Extract grounding URLs from Vertex response for source citation
+  const groundingChunks = res.raw?.candidates?.[0]?.groundingMetadata?.groundingChunks || [];
+  const sourceUrls = groundingChunks
+    .filter(c => c.web?.uri)
+    .map(c => c.web.uri)
+    .slice(0, 3);
+
+  return { text, sourceUrls };
 }
 
 // ── CDP reply posting ───────────────────────────────────────────────────────
@@ -349,12 +358,22 @@ async function main() {
   }
 
   // Draft reply with verification context
-  const replyText = await draftReply(target, verification);
-  if (!replyText) {
+  const draft = await draftReply(target, verification);
+  if (!draft) {
     log('Gemini returned SKIP or empty — no reply this cycle');
     return;
   }
-  log('drafted: ' + replyText.slice(0, 120));
+
+  // Build reply text: append one source URL if it fits (X shortens to ~23 chars via t.co)
+  let replyText = draft.text;
+  let citedUrl = null;
+  if (draft.sourceUrls && draft.sourceUrls.length > 0 && replyText.length <= 247) {
+    citedUrl = draft.sourceUrls[0];
+    replyText = replyText + '\n' + citedUrl;
+  }
+  log('drafted: ' + replyText.slice(0, 120) +
+    (citedUrl ? ' [+source]' : '') +
+    (draft.sourceUrls.length > 0 ? ` (${draft.sourceUrls.length} grounding URLs)` : ''));
 
   const browser = await connectBrowser();
   const page = await getXPage(browser);
@@ -369,6 +388,7 @@ async function main() {
       handle: target.handle,
       reply: replyText,
       verification: verification ? verification.verdict_label : null,
+      source_urls: draft.sourceUrls || [],
     });
     state.last_reply_at = new Date().toISOString();
     saveState(state);
@@ -380,6 +400,7 @@ async function main() {
         tweet_url: target.url,
         handle: target.handle,
         our_reply: replyText,
+        source_urls: draft.sourceUrls || [],
         verification: verification ? {
           status: verification.status,
           confidence: verification.confidence,
