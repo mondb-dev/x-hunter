@@ -315,9 +315,9 @@ async function agentRun({ agent, message, thinking, useBrowser = true, verbose }
     const jHour = String(now.getUTCHours()).padStart(2, '0');
     const jPath = require('path').join(config.JOURNALS_DIR, jToday + '_' + jHour + '.html');
     if (!fs.existsSync(jPath)) {
-      const artMatch = allText.match(/<article class="journal-entry">[sS]*?</article>/);
+      const artMatch = allText.match(/<article class="journal-entry">[\s\S]*?<\/article>/);
       if (artMatch) {
-        const dayMatch = allText.match(/Day (d+)/);
+        const dayMatch = allText.match(/Day (\d+)/);
         const dayNum = dayMatch ? dayMatch[1] : '?';
         const html = [
           '<!DOCTYPE html>',
