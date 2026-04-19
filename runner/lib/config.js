@@ -51,19 +51,19 @@ module.exports = {
   ACTIVE_PLAN_PATH: path.join(STATE_DIR, 'active_plan.json'),
   LAST_DAILY_PATH: path.join(STATE_DIR, 'last_daily_at.txt'),
   HEARTBEAT_PATH: path.join(PROJECT_ROOT, 'HEARTBEAT.md'),
-  INDEX_D  ARTICLE_META_PATH: path.join(STATE_DIR, 'article_meta.md'),
-B_PATH: path.join(STATE_DIR, 'index.db'),
+  INDEX_DB_PATH: path.join(STATE_DIR, 'index.db'),
+  ARTICLE_META_PATH: path.join(STATE_DIR, 'article_meta.md'),
 
   // Runner files
   RUNNER_LOG_PATH: path.join(RUNNER_DIR, 'runner.log'),
   ORCHESTRATOR_LOG_PATH: path.join(RUNNER_DIR, 'orchestrator.log'),
   LOCKDIR: path.join(RUNNER_DIR, 'run.lock'),
-  PIDFILE: path.join(RUN  VERIFICATION_EXPORT_PATH: path.join(STATE_DIR, 'verification_export.json'),
+  PIDFILE: path.join(RUNNER_DIR, 'run.pid'),
+  PAUSE_FILE: path.join(RUNNER_DIR, 'PAUSE'),
+  VERIFICATION_EXPORT_PATH: path.join(STATE_DIR, 'verification_export.json'),
   VERIFICATION_DRAFT_PATH: path.join(STATE_DIR, 'verification_draft.txt'),
   PREDICTION_DRAFT_PATH: path.join(STATE_DIR, 'prediction_draft.txt'),
   PREDICTION_LOG_PATH: path.join(STATE_DIR, 'prediction_log.jsonl'),
-NER_DIR, 'run.pid'),
-  PAUSE_FILE: path.join(RUNNER_DIR, 'PAUSE'),
 
   // External logs
   GATEWAY_ERR_LOG: path.join(
@@ -76,6 +76,6 @@ NER_DIR, 'run.pid'),
   SCRAPER_LOG_MAX_LINES: 3000,
   DIGEST_MAX_LINES: 3000,
   BROWSE_ARCHIVE_MAX_LINES: 6000,
-};
   ENGAGEMENT_SUMMARY_PATH: path.join(STATE_DIR, 'engagement_summary.json'),
   TRAJECTORY_SUMMARY_PATH: path.join(STATE_DIR, 'trajectory_summary.txt'),
+};
