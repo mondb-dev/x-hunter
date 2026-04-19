@@ -31,6 +31,8 @@ try { require("dotenv").config({ path: path.join(__dirname, "..", ".env") }); } 
 const db   = require("./db");
 const { extractKeywords } = require("./analytics");
 const { buildPersona, buildCoreContext } = require("../runner/lib/sebastian_respond");
+let verifyClaim = null;
+try { ({ verifyClaim } = require("../runner/lib/verify_claim")); } catch {}
 
 // ── Paths ─────────────────────────────────────────────────────────────────────
 const ROOT         = path.resolve(__dirname, "..");
@@ -209,7 +211,7 @@ function loadBeliefContext() {
 }
 
 // ── 5. Gemini: classify + draft with full context ─────────────────────────────
-async function geminiClassify(item, threadContext = [], memoryHints = [], userHistory = null, topicAccounts = [], verifiedHints = []) {
+async function geminiClassify(item, threadContext = [], memoryHints = [], userHistory = null, topicAccounts = [], verifiedHints = [], liveVerification = null) {
   const { getAccessToken, getProjectConfig } = require("../runner/gcp_auth");
   const token = await getAccessToken();
   const { project, location } = getProjectConfig();
@@ -254,12 +256,30 @@ async function geminiClassify(item, threadContext = [], memoryHints = [], userHi
       }).join("\n") + "\n";
   }
 
+  // Build live verification block
+  let verifyBlock = "";
+  if (liveVerification) {
+    const v = liveVerification;
+    const urls = (v.evidence_urls || []).slice(0, 2).join(" | ");
+    verifyBlock = `\nLIVE VERIFICATION of this mention's claim:\n` +
+      `  Verdict: ${v.verdict_label} (confidence ${Math.round((v.confidence || 0) * 100)}%)\n` +
+      `  Summary: ${v.summary || "No summary."}\n` +
+      (v.framing ? `  Framing: ${v.framing.slice(0, 200)}\n` : "") +
+      (urls ? `  Evidence: ${urls}\n` : "") +
+      `  Veritas Lens: ${v.lens_url}\n` +
+      `CRITICAL GROUNDING RULES:\n` +
+      `- "Refuted" = PROVEN FALSE by evidence. You may correct using the counter-evidence above.\n` +
+      `- "Unverified" = COULD NOT CONFIRM OR DENY. This is NOT "false". Do NOT say the claim is wrong.\n` +
+      `- "Supported" = Claim checks out. You may cite the evidence.\n` +
+      `- NEVER fabricate corrections. Only correct when you have specific counter-evidence from sources above.\n`;
+  }
+
   // Build belief axes + vocation context
   const beliefBlock = loadBeliefContext();
 
   const prompt = `${buildPersona('reply')}
 
-${beliefBlock}${threadBlock}${memoryBlock}${accountBlock}${userBlock}
+${beliefBlock}${threadBlock}${memoryBlock}${accountBlock}${userBlock}${verifyBlock}
 The mention you are replying to:
 @${item.from_username}: "${item.text}"
 
@@ -500,9 +520,22 @@ function logInteraction(data, item, replyText, memoryHints) {
       console.log(`[reply] user history: @${item.from_username} has ${userHistory.reply_count} prior exchange(s)`);
     }
 
+    // ── Step 3b: Live claim verification ──────────────────────────────────
+    let liveVerification = null;
+    if (verifyClaim && item.text.length > 40) {
+      try {
+        liveVerification = verifyClaim({ claim: item.text, handle: item.from_username });
+        if (liveVerification) {
+          console.log(`[reply] live verify: ${liveVerification.verdict_label} (${Math.round((liveVerification.confidence || 0) * 100)}%)`);
+        }
+      } catch (err) {
+        console.warn(`[reply] live verify failed (non-fatal): ${err.message}`);
+      }
+    }
+
     let verdict;
     try {
-      verdict = await geminiClassify(item, threadContext, memoryHints, userHistory, topicAccounts, verifiedHints);
+      verdict = await geminiClassify(item, threadContext, memoryHints, userHistory, topicAccounts, verifiedHints, liveVerification);
     } catch (err) {
       console.error(`[reply] Gemini error: ${err.message}`);
       item.status = "error";
