@@ -188,6 +188,7 @@ async function agentRun({ agent, message, thinking, useBrowser = true, verbose }
 
   let turn = 0;
   let exitCode = 0;
+  let allText = '';
 
   try {
     while (turn < MAX_TURNS) {
@@ -240,6 +241,7 @@ async function agentRun({ agent, message, thinking, useBrowser = true, verbose }
 
       // Log any text output
       if (text && verbose === 'on') {
+        allText += text;
         // Print to stdout like openclaw did
         process.stdout.write(text);
         if (!text.endsWith('\n')) process.stdout.write('\n');
@@ -305,6 +307,42 @@ async function agentRun({ agent, message, thinking, useBrowser = true, verbose }
     }
   }
 
+
+  // Auto-save journal if agent wrote it as text output instead of calling write_file
+  if (agent === 'x-hunter' && allText.includes('<article class="journal-entry">')) {
+    const now = new Date();
+    const jToday = now.toISOString().slice(0, 10);
+    const jHour = String(now.getUTCHours()).padStart(2, '0');
+    const jPath = require('path').join(config.JOURNALS_DIR, jToday + '_' + jHour + '.html');
+    if (!fs.existsSync(jPath)) {
+      const artMatch = allText.match(/<article class="journal-entry">[sS]*?</article>/);
+      if (artMatch) {
+        const dayMatch = allText.match(/Day (d+)/);
+        const dayNum = dayMatch ? dayMatch[1] : '?';
+        const html = [
+          '<!DOCTYPE html>',
+          '<html lang="en">',
+          '<head>',
+          '  <meta charset="UTF-8">',
+          '  <meta name="x-hunter-date" content="' + jToday + '">',
+          '  <meta name="x-hunter-hour" content="' + jHour + '">',
+          '  <meta name="x-hunter-day" content="' + dayNum + '">',
+          '  <title>Journal — ' + jToday + ' ' + jHour + ':00</title>',
+          '</head>',
+          '<body>',
+          artMatch[0],
+          '</body>',
+          '</html>',
+        ].join('\n');
+        try {
+          fs.writeFileSync(jPath, html);
+          log('auto-saved journal from text output: ' + jPath);
+        } catch (writeErr) {
+          log('WARNING: auto-save journal failed: ' + writeErr.message);
+        }
+      }
+    }
+  }
   const elapsed = Math.floor((Date.now() - startTs) / 1000);
   log(`agent=${agent} exit=${exitCode} elapsed=${elapsed}s turns=${turn}`);
   return exitCode;

@@ -209,10 +209,17 @@ function postBrowse({ cycle, today, hour }) {
   const journalPath = path.join(PROJECT_ROOT, `journals/${today}_${hour}.html`);
   if (fs.existsSync(journalPath) && !isFailureJournal(journalPath)) {
     log('Committing journal...');
-    execSync(
-      `git add "${journalPath}" && git commit -m "journal: ${today} ${hour}:00"`,
-      { stdio: 'ignore' }
-    );
+    try {
+      execSync(
+        `git add "${journalPath}" && git commit -m "journal: ${today} ${hour}:00"`,
+        { stdio: 'ignore' }
+      );
+      execSync('git push', { stdio: 'ignore', cwd: path.join(journalPath, '../..') });
+      log('journal pushed to origin');
+    } catch (commitErr) {
+      // already committed or push failed — not fatal
+      log('journal commit/push skipped: ' + commitErr.message.split('\n')[0]);
+    }
   }
 
   // ── 6. Moltbook heartbeat (if enabled) ────────────────────────────────
