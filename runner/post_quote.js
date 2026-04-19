@@ -303,23 +303,47 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
     }, COMPOSE_BOX);
     if (!insertedText || insertedText.length < quoteText.length * 0.95) {
       console.log(`[post_quote] text verification: got ${insertedText.length}/${quoteText.length} chars — retrying with keyboard`);
-      // Clear and retry with keyboard
+      // Clear compose box completely
       await page.evaluate((sel) => {
         const el = document.querySelector(sel);
         if (el) { el.focus(); document.execCommand("selectAll"); document.execCommand("delete"); }
       }, COMPOSE_BOX);
-      await sleep(500);
-      await page.keyboard.type(quoteText, { delay: 30 });
       await sleep(1_000);
 
-      // Second verification — abort if still truncated
+      // Verify box is actually empty before retyping
+      const clearedText = await page.evaluate((sel) => {
+        const el = document.querySelector(sel);
+        return el ? el.innerText.trim() : "";
+      }, COMPOSE_BOX);
+      if (clearedText.length > 0) {
+        console.log(`[post_quote] box not fully cleared (${clearedText.length} chars remain) — clearing again`);
+        await page.evaluate((sel) => {
+          const el = document.querySelector(sel);
+          if (el) { el.innerHTML = ""; }
+        }, COMPOSE_BOX);
+        await sleep(500);
+      }
+
+      // Re-click and re-focus to ensure cursor is at position 0
+      await page.evaluate((sel) => {
+        const el = document.querySelector(sel);
+        if (el) { el.click(); el.focus(); }
+      }, COMPOSE_BOX);
+      await sleep(1_000);
+
+      await page.keyboard.type(quoteText, { delay: 30 });
+      await sleep(1_500);
+
+      // Second verification — stricter: check length AND first 20 chars match
       const retryText = await page.evaluate((sel) => {
         const el = document.querySelector(sel);
         return el ? el.innerText.trim() : "";
       }, COMPOSE_BOX);
-      console.log(`[post_quote] retry verification: ${retryText.length}/${quoteText.length} chars`);
-      if (!retryText || retryText.length < quoteText.length * 0.9) {
-        console.error(`[post_quote] text insertion failed after retry — aborting`);
+      const retryLen = retryText.length;
+      const firstCharsMatch = retryText.substring(0, 20) === quoteText.substring(0, 20);
+      console.log(`[post_quote] retry verification: ${retryLen}/${quoteText.length} chars, first-20-match: ${firstCharsMatch}`);
+      if (!retryText || retryLen < quoteText.length * 0.98 || !firstCharsMatch) {
+        console.error(`[post_quote] text insertion failed after retry — got "${retryText.substring(0, 40)}..." — aborting`);
         browser.disconnect();
         process.exit(1);
       }

@@ -185,24 +185,48 @@ async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_
 
     if (!insertedText || gotLen < expectedLen * 0.95) {
       console.log("[post_tweet] text truncated or missing — retrying with keyboard fallback");
-      // Clear and retry with keyboard.type
+      // Clear compose box completely
       await page.evaluate((sel) => {
         const el = document.querySelector(sel);
         if (el) { el.focus(); document.execCommand("selectAll"); document.execCommand("delete"); }
       }, COMPOSE_BOX);
-      await sleep(500);
+      await sleep(1_000);
+
+      // Verify box is actually empty before retyping
+      const clearedText = await page.evaluate((sel) => {
+        const el = document.querySelector(sel);
+        return el ? el.innerText.trim() : "";
+      }, COMPOSE_BOX);
+      if (clearedText.length > 0) {
+        console.log(`[post_tweet] box not fully cleared (${clearedText.length} chars remain) — clearing again`);
+        await page.evaluate((sel) => {
+          const el = document.querySelector(sel);
+          if (el) { el.innerHTML = ""; }
+        }, COMPOSE_BOX);
+        await sleep(500);
+      }
+
+      // Re-click and re-focus to ensure cursor is at position 0
+      await page.evaluate((sel) => {
+        const el = document.querySelector(sel);
+        if (el) { el.click(); el.focus(); }
+      }, COMPOSE_BOX);
+      await sleep(1_000);
+
       await page.keyboard.type(tweetText, { delay: 20 });
       await sleep(1_500);
 
-      // Second verification
+      // Second verification — stricter: check length AND first 20 chars match
       const retryText = await page.evaluate((sel) => {
         const el = document.querySelector(sel);
         return el ? el.innerText.trim() : "";
       }, COMPOSE_BOX);
-      console.log(`[post_tweet] retry verification: ${retryText.length}/${expectedLen} chars`);
+      const retryLen = retryText.length;
+      const firstCharsMatch = retryText.substring(0, 20) === tweetText.substring(0, 20);
+      console.log(`[post_tweet] retry verification: ${retryLen}/${expectedLen} chars, first-20-match: ${firstCharsMatch}`);
 
-      if (!retryText || retryText.length < expectedLen * 0.9) {
-        console.error("[post_tweet] text insertion failed after retry — aborting");
+      if (!retryText || retryLen < expectedLen * 0.98 || !firstCharsMatch) {
+        console.error(`[post_tweet] text insertion failed after retry — got "${retryText.substring(0, 40)}..." — aborting`);
         browser.disconnect();
         process.exit(1);
       }
