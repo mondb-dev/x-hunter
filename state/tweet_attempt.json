@@ -1,27 +1,10 @@
 {
-  "at": "2026-04-19T18:05:13.112Z",
+  "at": "2026-04-19T20:49:36.479Z",
   "kind": "tweet",
   "outcome": "failed",
-  "reason": "compose_stuck",
-  "stage": "after_post_click",
-  "final_url": "https://x.com/compose/post",
-  "compose_diagnostics": {
-    "page_title": "Home / X",
-    "compose_present": true,
-    "compose_text_len": 261,
-    "compose_text_preview": "nt re-framing of aggressive geopolitical rhetoric, like \"obliterate civilization\" becoming \"target regime,\" is a clear narrative manipulation. It strips accountability from the speaker while escalating tensions. https://sebastianhunter.fun/journal/2026-04-19/18",
-    "post_button_present": true,
-    "post_button_text": "Post",
-    "post_button_aria_disabled": "",
-    "post_button_disabled": false,
-    "post_button_testid": "tweetButton",
-    "alerts": [
-      "Whoops! You already said that.",
-      "For you Following",
-      "See new posts"
-    ],
-    "toasts": [],
-    "dialog_text": "Drafts Whoops! You already said that. nt re-framing of aggressive geopolitical rhetoric, like \"obliterate civilization\" becoming \"target regime,\" is a clear narrative manipulation. It strips accountability from the speaker while escalating tensions. https://sebastianhunter.fun/journal/2026-04-19/18 Everyone can reply Post"
-  },
-  "cycle": 12
+  "reason": "api_error",
+  "error": "X API 401: {\"title\":\"Unauthorized\",\"type\":\"about:blank\",\"status\":401,\"detail\":\"Unauthorized\"}",
+  "status_code": 401,
+  "method": "api",
+  "cycle": 18
 }
