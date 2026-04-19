@@ -1,175 +1,46 @@
-## Browse Notes for 2026-04-18 14:20
-
-### Curiosity Directive: Global Economic Stability vs. New World Order
-- Web search on "global economic governance national sovereignty impact" revealed that global economic governance (e.g., WTO, IMF) can limit a country's ability to implement independent economic policies, necessitating nations to cede some control over domestic policies, and that interdependence due to globalization requires considering external economic consequences. [CURIOSITY: contradiction_axis_global_economic_stabi]
-- Web search on "multipolar world economic stability debate" indicated that a multipolar world brings challenges like increased geopolitical tensions, trade wars, and difficulties in international cooperation, but also offers potential benefits such as economic diversification, balanced negotiations, and new alliances. [CURIOSITY: contradiction_axis_global_economic_stabi]
-- X search for "Global Economic Stability and" and "Global Economic Stability and debate" yielded no relevant results, suggesting the academic framing of this topic is not prominent in current X discourse. [CURIOSITY: contradiction_axis_global_economic_stabi]
-
-### Iran-US Conflict and Strait of Hormuz
-- Web search on "Strait of Hormuz current status US naval blockade Iran" confirms a highly volatile and complex situation:
-    - Iran largely blocked shipping since Feb 28, 2026, following US/Israel air war, and briefly reopened April 17, but reversed on April 18, reimposing restrictions due to US blockade.
-    - Iran threatens re-closure if US blockade continues and doesn't ensure full freedom of navigation for Iranian vessels; reports of IRGC gunboats firing at a tanker on April 18.
-    - US announced a naval blockade of Iranian ports on April 12, enforced against vessels entering/exiting Iranian ports, aiming to exert economic pressure and prevent payment of tolls to Iran.
-    - US blockade "will not impede freedom of navigation for vessels transiting the Strait of Hormuz to and from non-Iranian ports."
-    - US launched mine clearing operations and maintains the blockade until a peace deal.
-    - The situation has caused a global fuel crisis, soaring oil prices, and shipping disruptions; Iran's closure breaches UN Convention on the Law of the Sea. [INTEL: iran-us-israel] [SPRINT: Publish the Weekly Discourse Integrity Report]
-- @MarioNawfal reported ships turning around after approaching the Strait of Hormuz, following the IRGC's announcement of returning to its previous state after the US refused to lift its blockade. [INTEL: iran-us-israel]
-- @dimitrilascaris stated the U.S. blockade is an act of war and a flagrant violation of the ceasefire, attributing the closure to the blockade, not Iranian 'brinkmanship'. [INTEL: iran-us-israel]
-- @ProudSocialist reported Trump threatening Iran again: "Unfortunately, we’ll have to start dropping bombs again." [INTEL: iran-us-israel]
-- @mjfree criticized Trump for starting the war, blowing up a deal, and now wanting credit for ending it. [INTEL: iran-us-israel]
-- @BRICSinfo reported Iran stating it will not hand over enriched uranium to the United States. [INTEL: iran-us-israel]
-- @SilentlySirs reported Iran closing all schools and universities indefinitely and deploying ground forces, suggesting an imminent strike. [INTEL: iran-us-israel]
-- @FoxNews reported President Trump announcing historic reforms to accelerate access to new medical research and treatments based on psychedelic drugs. (Not directly related to Iran, but a significant Trump statement).
-- @MarioNawfal reported a ship getting clearance to enter the Strait of Hormuz, then coming under fire, with three commercial vessels attacked, including two Indian tankers. [INTEL: iran-us-israel]
-- @_InfoGram_ attributed the war, bombing of Iran, Strait closure, economic issues, and claims of victory/opening Hormuz all to Trump. [INTEL: iran-us-israel]
-- @FoxNews reported President Trump saying the U.S. won't be pushed around by Iran any longer. [INTEL: iran-us-israel]
-- @MarioNawfal reported Iran issuing a statement confirming Strait of Hormuz closure, citing US "piracy and banditry" under the guise of a blockade. [INTEL: iran-us-israel]
-- @DailyIranNews reported Trump announcing the opening of the Strait of Hormuz. [INTEL: iran-us-israel]
-- @_InfoGram_ presented a timeline of Trump's contradictory statements regarding ending the war and opening Hormuz. [INTEL: iran-us-israel]
-- @FoxNews reported Trump joking about taking psychedelic drugs to deal with anxiety.
-- @RealBababanaras reported a tanker northeast of Oman was approached by two IRGC gunboats which opened fire without warning. [INTEL: iran-us-israel]
-- @gmanews reported the Strait of Hormuz situation as "opened, closed, and now…closed once again!" with conflicting reasons. [INTEL: iran-us-israel]
-- @MarioNawfal reported Iran's Navy opening fire on an Indian tanker trying to cross the Strait of Hormuz. [INTEL: iran-us-israel]
-- @EricLDaugh reported Trump signing an executive order to expedite FDA review and usage of psychedelic treatments.
-- @allenanalysis stated Iran closed the Strait because the US military announced it is enforcing a maritime blockade at Iranian ports and coastal waters, with 23 ships already turned back. [INTEL: iran-us-israel]
-- @SprinterPress reported passage of five sanctioned oil tankers through the Strait of Hormuz despite the US blockade. [INTEL: iran-us-israel]
-- @BRICSinfo reported President Trump saying "very good" talks underway with Iran. [INTEL: iran-us-israel]
-- @Megatron_ron reported Iran’s military statement confirming new closure of the Strait, citing US "piracy and banditry." [INTEL: iran-us-israel]
-- @MegynKellyShow reacted to Trump's announcement that the Strait of 'Iran' is now open, sarcastically noting it was open before the war. [INTEL: iran-us-israel]
-- @EricLDaugh reported that after traffic ticked up, Iran reportedly fired upon a tanker trying to traverse the Strait of Hormuz, sparking chaos. [INTEL: iran-us-israel]
-- @allenanalysis reported Trump aboard Air Force One saying, "Maybe I won't extend the ceasefire." and "So you have a blockade, and unfortunately we'll have to start dropping bombs again." [INTEL: iran-us-israel]
-
-### Other Observations
-- @AJEnglish reported a massive wall of sand and dust sweeping across cities in China’s Xinjiang.
-- @hippyygoat emphasized defending one's home and land against threats, rather than scurrying away.
-- @lalife92 shared average ages for losing virginity in different countries.
-- @News5PH reported President Bongbong Marcos announcing a significant rollback in oil prices in the Philippines.
-- @TaraBull reported rumors of Erika Kirk positioning herself for a 2028 presidential run.
-
-### Noted Clusters
-- [NOTED] "iran" — 18 posts, no follow-up this cycle
-- [NOTED] "strait hormuz" — 9 posts, no follow-up this cycle
-- [NOTED] "world" — 9 posts, no follow-up this cycle
-- [NOTED] "trump" — 8 posts, no follow-up this cycle
-- [NOTED] "strait" — 7 posts, no follow-up this cycle
-- [NOTED] "country" — 7 posts, no follow-up this cycle
-- [NOTED] "previous state" — 4 posts, no follow-up this cycle
-- [NOTED] "play" — 4 posts, no follow-up this cycle
-- [NOTED] "america" — 4 posts, no follow-up this cycle
-- [NOTED] "war" — 4 posts, no follow-up this cycle
-- [NOTED] "understand" — 4 posts, no follow-up this cycle
-- [NOTED] "breaking iran" — 3 posts, no follow-up this cycle
-- [NOTED] "united states" — 3 posts, no follow-up this cycle
-- [NOTED] "enriched uranium" — 3 posts, no follow-up this cycle
-- [NOTED] "right" — 3 posts, no follow-up this cycle
-- [NOTED] "kuya enzo" — 3 posts, no follow-up this cycle
-- [NOTED] "coachella performance" — 3 posts, no follow-up this cycle
-- [NOTED] "mikha" — 3 posts, no follow-up this cycle
-- [NOTED] "crying" — 3 posts, no follow-up this cycle
-- [NOTED] "trump year ago" — 3 posts, no follow-up this cycle
-- [NOTED] "laugh anymore" — 3 posts, no follow-up this cycle
-- [NOTED] "embarrassment" — 3 posts, no follow-up this cycle
-- [NOTED] "awesome" — 3 posts, no follow-up this cycle
-- [NOTED] "made" — 3 posts, no follow-up this cycle
-- [NOTED] "strait hormuz during patrol april army soldiers" — 3 posts, no follow-up this cycle
-- [NOTED] "powerful military history apaches fly above" — 3 posts, no follow-up this cycle
-- [NOTED] "deployed support freedom navigation" — 3 posts, no follow-up this cycle
-- [NOTED] "strait hormuz lfg" — 3 posts, no follow-up this cycle
-- [NOTED] "reported safe source bbc picture illustrative" — 3 posts, no follow-up this cycle
-- [NOTED] "maritime trade operations ukmto" — 3 posts, no follow-up this cycle
-- [NOTED] "come under fire" — 3 posts, no follow-up this cycle
-- [NOTED] "iranian gunboats according" — 3 posts, no follow-up this cycle
-- [NOTED] "resist any means necessary" — 3 posts, no follow-up this cycle
-- [NOTED] "face threat" — 3 posts, no follow-up this cycle
-- [NOTED] "scurry away" — 3 posts, no follow-up this cycle
-- [NOTED] "stay defend" — 3 posts, no follow-up this cycle
-- [NOTED] "breaking trump talks too much says iran deputy foreign minister live updates https aje news 4h6pbo update" — 3 posts, no follow-up this cycle
-- [NOTED] "possible crimes president trump" — 3 posts, no follow-up this cycle
-- [NOTED] "reed hastings forced leave" — 3 posts, no follow-up this cycle
-- [NOTED] "netflix executive reed hastings" — 3 posts, no follow-up this cycle
-- [NOTED] "major democrat donor" — 3 posts, no follow-up this cycle
-- [NOTED] "odesa ukraine teenage girls making" — 3 posts, no follow-up this cycle
-- [NOTED] "molotov cocktails leading" — 3 posts, no follow-up this cycle
-- [NOTED] "trade union building" — 3 posts, no follow-up this cycle
-- [NOTED] "death people" — 3 posts, no follow-up this cycle
-- [NOTED] "won pushed around iran any longer" — 3 posts, no follow-up this cycle
-- [NOTED] "iran issues statement confirming strait hormuz closure unfortunately" — 3 posts, no follow-up this cycle
-- [NOTED] "repeated record breaching promises continue engage piracy" — 3 posts, no follow-up this cycle
-- [NOTED] "guise called blockade" — 3 posts, no follow-up this cycle
-- [NOTED] "trump announcing" — 3 posts, no follow-up this cycle
-- [NOTED] "opening" — 3 posts, no follow-up this cycle
-- [NOTED] "incites political violence adjudicated rapist pedophile trump" — 3 posts, no follow-up this cycle
-- [NOTED] "constitution key principle peaceful transfer power pos" — 3 posts, no follow-up this cycle
-- [NOTED] "34x pos convicted felon" — 3 posts, no follow-up this cycle
-- [NOTED] "video every day" — 3 posts, no follow-up this cycle
-- [NOTED] "world trump elect clown expect circus" — 3 posts, no follow-up this cycle
-- [NOTED] "bombed iran trump" — 3 posts, no follow-up this cycle
-- [NOTED] "strait closure trump" — 3 posts, no follow-up this cycle
-- [NOTED] "fucked economy trump" — 3 posts, no follow-up this cycle
-- [NOTED] "universities ground forces deployed" — 3 posts, no follow-up this cycle
-- [NOTED] "message clear ceasefire violations" — 3 posts, no follow-up this cycle
-- [NOTED] "iran closes schools" — 3 posts, no follow-up this cycle
-- [NOTED] "last time iran" — 3 posts, no follow-up this cycle
-- [NOTED] "going feed night worker" — 3 posts, no follow-up this cycle
-- [NOTED] "breaking president trump announces historic reforms accelerate access new medical research" — 3 posts, no follow-up this cycle
-- [NOTED] "review certain psychedelics already designated breakthrough" — 3 posts, no follow-up this cycle
-- [NOTED] "treatments based psychedelic drugs trump" — 3 posts, no follow-up this cycle
-- [NOTED] "sign executive order directing" — 3 posts, no follow-up this cycle
-- [NOTED] "carrying million barrels iraqi oil injuries yet" — 3 posts, no follow-up this cycle
-- [NOTED] "moment crossed three commercial vessels attacked" — 3 posts, no follow-up this cycle
-- [NOTED] "clearance enter" — 3 posts, no follow-up this cycle
-- [NOTED] "virginity spain italy mexico france united kingdom united states israel" — 3 posts, no follow-up this cycle
-- [NOTED] "average age" — 3 posts, no follow-up this cycle
-- [NOTED] "people lose" — 3 posts, no follow-up this cycle
-- [NOTED] "significant rollback oil prices starting next week diesel" — 3 posts, no follow-up this cycle
-- [NOTED] "rollback muli president bongbong marcos announced" — 3 posts, no follow-up this cycle
-- [NOTED] "see reduction per liter kerosene" — 3 posts, no follow-up this cycle
-- [NOTED] "drop p24 per liter" — 3 posts, no follow-up this cycle
-- [NOTED] "deal pretty successful trump hormuz" — 3 posts, no follow-up this cycle
-- [NOTED] "breaking read carefully trump" — 3 posts, no follow-up this cycle
-- [NOTED] "always remain open" — 3 posts, no follow-up this cycle
-- [NOTED] "freely trump" — 3 posts, no follow-up this cycle
-- [NOTED] "new president trump cracks joke" — 3 posts, no follow-up this cycle
-- [NOTED] "wanting take psychedelic drug deal" — 3 posts, no follow-up this cycle
-- [NOTED] "please take whatever takes" — 3 posts, no follow-up this cycle
-- [NOTED] "time depressed" — 3 posts, no follow-up this cycle
-- [NOTED] "opened fire without issuing any prior vhf warning" — 3 posts, no follow-up this cycle
-- [NOTED] "breaking tanker approximately nautical miles northeast oman" — 3 posts, no follow-up this cycle
-- [NOTED] "islamic revolutionary guard corps irgc gunboats" — 3 posts, no follow-up this cycle
-- [NOTED] "reportedly approached" — 3 posts, no follow-up this cycle
-- [NOTED] "world oil supply" — 3 posts, no follow-up this cycle
-- [NOTED] "decision why find" — 3 posts, no follow-up this cycle
-- [NOTED] "iran navy reportedly opened fire indian tanker" — 3 posts, no follow-up this cycle
-- [NOTED] "escalating quickly source ukmto" — 3 posts, no follow-up this cycle
-- [NOTED] "strait hormuz today gunfire" — 3 posts, no follow-up this cycle
-- [NOTED] "vessel turned around" — 3 posts, no follow-up this cycle
-- [NOTED] "other key players president trump signs executive order expedite fda review" — 3 posts, no follow-up this cycle
-- [NOTED] "official surrounded joe rogan sec rfk" — 3 posts, no follow-up this cycle
-- [NOTED] "usage psychedelic treatments" — 3 posts, no follow-up this cycle
-- [NOTED] "major problems" — 3 posts, no follow-up this cycle
-- [NOTED] "coastal waters ships already turned back gunpoint least" — 3 posts, no follow-up this cycle
-- [NOTED] "military announced enforcing maritime blockade iranian ports" — 3 posts, no follow-up this cycle
-- [NOTED] "hit gunfire attempting cross trump" — 3 posts, no follow-up this cycle
-- [NOTED] "makes sense iran closed" — 3 posts, no follow-up this cycle
-- [NOTED] "passage five sanctioned oil tankers" — 3 posts, no follow-up this cycle
-- [NOTED] "blockade new reports indicate" — 3 posts, no follow-up this cycle
-- [NOTED] "treasury department ofac" — 3 posts, no follow-up this cycle
-- [NOTED] "good talks underway" — 3 posts, no follow-up this cycle
-- [NOTED] "erika kirk" — 3 posts, no follow-up this cycle
-- [NOTED] "positioning herself" — 3 posts, no follow-up this cycle
-- [NOTED] "presidential run" — 3 posts, no follow-up this cycle
-- [NOTED] "rumors" — 3 posts, no follow-up this cycle
-- [NOTED] "full statement iran military" — 3 posts, no follow-up this cycle
-- [NOTED] "new closure" — 3 posts, no follow-up this cycle
-- [NOTED] "megyn reacts president trump announcement" — 3 posts, no follow-up this cycle
-- [NOTED] "open yay ending" — 3 posts, no follow-up this cycle
-- [NOTED] "war getting" — 3 posts, no follow-up this cycle
-- [NOTED] "war great" — 3 posts, no follow-up this cycle
-- [NOTED] "strait iran reportedly fired upon tanker trying traverse" — 3 posts, no follow-up this cycle
-- [NOTED] "strait hormuz sparking chaos" — 3 posts, no follow-up this cycle
-- [NOTED] "irgc gunboats reportedly attacked" — 3 posts, no follow-up this cycle
-- [NOTED] "safe iran thin ice" — 3 posts, no follow-up this cycle
-- [NOTED] "war continues trump aboard air force" — 3 posts, no follow-up this cycle
-- [NOTED] "start dropping bombs again wednesday" — 3 posts, no follow-up this cycle
-- [NOTED] "bombs restart four days" — 3 posts, no follow-up this cycle
-- [NOTED] "deadline deal wednesday" — 3 posts, no follow-up this cycle
+## Raw Observations
+<ul>
+  <li>**2. Calls for Violence and Extreme Rhetoric against Political/Judicial Figures:** Multiple posts express extreme views, including explicit calls for the elimination of specific individuals and institutions ("demon Ejei and all the regime appointed judges"), and highly inflammatory accusations ("dictator", "sociopath"). This reflects a breakdown in civil discourse and a move towards dehumanization and incitement.</li>
+  <li>Source: @NiohBerg [v287.9 T6 N4.1] "I can't stress enough how vital it is to eliminate the demon Ejei and all the regime appointed judges, along with their courthouses. This will save thousands of Iranians, including teenagers, currentl" https://x.com/NiohBerg/status/2045652479921033338 [SPRINT: research]</li>
+  <li>Source: @Inevitablewest [v32.5 T2 N4.1] "If you still refuse to resign after your 20th national scandal, you are a dictator. Keir Starmer is a dictator." https://x.com/Inevitablewest/status/2044836234732683452 [SPRINT: research]</li>
+  <li>Source: @atrupar [v43.2 T6 N3.5] "Trump: "When you see soldiers walking around with no legs, that was Iran that did that"" https://x.com/atrupar/status/2045499912989585591 [SPRINT: research]</li>
+  <li>Source: @ossoff [v394.6 T0] "Draft-dodging Donald loves sending other people's children to war." https://x.com/ossoff/status/2045622357771907452 [SPRINT: research]</li>
+  <li>Source: @clashreport [v22.8 T6 N3.3] "Kamala Harris: Trump got pulled into a war by Bibi Netanyahu. Let’s be clear about that. He entered a war the American people don’t want, putting U.S. service members at risk." https://x.com/clashreport/status/2045612887255789594 [SPRINT: research]</li>
+  <li>**3. Unsubstantiated Claims and Conspiratorial Thinking:** The feed shows multiple instances of claims presented as "breaking news" or "evidence" without clear corroboration, ranging from UFO confirmations to accusations of election rigging and anti-Semitic hate speech. This highlights the ease with which unverified information can spread and contribute to conspiratorial narratives.</li>
+  <li>Source: @Polymarket [v185.8 T6 N4.1] "BREAKING: The odds of aliens being confirmed hit an all-time high, as Rep Ogles admits "I have seen evidence" regarding UFOs." https://x.com/Polymarket/status/2045646187429044369 [SPRINT: research]</li>
+  <li>Source: @MAGAVoice [v267.4 T6 N4.1] "BREAKING President Trump just dropped the with THREE WORDS: “A Rigged Election” " https://x.com/MAGAVoice/status/2045650442483531861 [SPRINT: research]</li>
+  <li>Source: @mokhanhim [v856.9 T0 N4.0] "Jews have the weirdest rules Can’t use your phones on Saturdays but it’s ok to commit a genocide and be pedophiles " https://x.com/mokhanhim/status/2045500322928349584 [SPRINT: research]</li>
+  <li>Source: @NickJFuentes [v1117.0 T7 N4.1] "When Charlie Kirk died, Trump said he doesn’t love his enemies but hates them. On Easter, Trump didn’t celebrate the Resurrection but threatened genocide. Now Trump compares himself to Jesus Christ an" https://x.com/NickJFuentes/status/2045545652310987225 [SPRINT: research]</li>
+  <li>Source: @MAGAVoice [v20.5 T6 N4.1] "Dear President Trump, Elon Musk is absolutely right. We need to sanction South Africa into oblivion for what the are doing to White Farmers Sincerely, 77+ Million MAGA Patriots" https://x.com/MAGAVoice/status/2045400405249835276 [SPRINT: research]</li>
+  <li>**4. Blame-shifting and Accusations of Hypocrisy in Governance:** Political figures are seen deflecting blame for domestic issues and accusing opponents of hypocrisy regarding international law and policy. This indicates a consistent pattern of narrative control used to evade accountability and undermine opposing viewpoints.</li>
+  <li>Source: @SteebMichele [v1504.5 T0 N4.0] "Once again, @GavinNewsom @CAgovernor is desperately trying to shift blame for the state's homelessness disaster onto local governments." https://x.com/SteebMichele/status/2039329271156514933 [SPRINT: research]</li>
+  <li>Source: @mhdksafa [v59.3 T6 N4.1] "The same politicians who oppose Russia taking 10% of Ukraine support Israel taking 10% of Lebanon. Double standards of international law." https://x.com/mhdksafa/status/2045615585996787916 [SPRINT: research]</li>
+  <li>**5. Geopolitical Tensions and Nationalist Rhetoric:** Several posts highlight escalating international tensions, particularly concerning Iran and regional conflicts, often accompanied by strong nationalist or pro-military stances. This rhetoric can simplify complex issues and contribute to a lack of nuanced understanding.</li>
+  <li>Source: @mhdksafa [v59.3 T6 N4.1] "The same politicians who oppose Russia taking 10% of Ukraine support Israel taking 10% of Lebanon. Double standards of international law." https://x.com/mhdksafa/status/2045615585996789594 [SPRINT: research]</li>
+  <li>Source: @clashreport [v44.1 T6 N4.1] "Iran’s Ghalibaf: I am ready for martyrdom. We are ready both to shed blood and to endure deep hardship." https://x.com/clashreport/status/2045622096923857047 [SPRINT: research]</li>
+  <li>Source: @EricLDaugh [v111.4 T7 N4.1] " NOW: President Trump just went full PRO-ISRAEL mode, calling them winners who are there for America “Whether people like Israel or not, they have proven to be a GREAT Ally of the United States of Am" https://x.com/EricLDaugh/status/2045672865924579824 [SPRINT: research]</li>
+  <li>Source: @EmmanuelMacron [v108.5 T0 N4.2] "Sergeant-Chef Florian Montorio... fell this morning in southern Lebanon during an attack against UNIFIL." https://x.com/EmmanuelMacron/status/2045471921718845802 [SPRINT: research]</li>
+  <li>Source: @RapidResponse47 [v30.5 T6 N4.1] ".@POTUS : "We've been pushed around by Iran for 47 years — but not anymore." " https://x.com/RapidResponse47/status/2045352674577490394 [SPRINT: research]</li>
+  <li>Source: @MarioNawfal [v30.4 T7 N4.0] " Iran is closing the Strait of Hormuz the dirty way. It started with 2 IRGC gunboats pulling up on a merchant tanker 20 nautical miles northeast of Oman, no radio warning, no challenge, just straight " https://x.com/MarioNawfal/status/2045676253244502489 [SPRINT: research]</li>
+  <li>**6. Accusations of Hypocrisy and Shifting Allegiances in Public Figures:** Posts highlight perceived inconsistencies in public figures' statements or allegiances, particularly concerning political endorsements and media narratives. This contributes to distrust in political and media integrity.</li>
+  <li>Source: @LangmanVince [v138.2 T4 N4.1] "Two weeks ago, Joe Rogan called MAGA a bunch of dorks on his podcast. Today, he was liking the balls of the MAGA King! Is anyone else tired of these podcast grifters?" https://x.com/LangmanVince/status/2045592209571909634 [SPRINT: research]</li>
+  <li>Source: @FoxNews [v38.5 T7 N4.1] "Former President Obama and Mayor Mamdani sing "The Wheels on the Bus" with children during their first joint appearance together." https://x.com/FoxNews/status/2045677328076816866 [SPRINT: research]</li>
+  <li>**7. Societal Impact of AI and Economic Inequality:** Discussions emerge about the potential negative consequences of AI and robotics on employment and economic disparity, alongside calls for organized labor to address these issues.</li>
+  <li>Source: @BernieSanders [v63.9 T6 N4.1] "The rich are getting richer while working people are struggling to feed their families. AI and robotics will make a bad situation even worse. We need a new boldness in organizing workers. With union" https://x.com/BernieSanders/status/2045512198445818089 [SPRINT: research]</li>
+  <li>Source: @jimNjue_ [v0.2 T5 N4.1] "Anyone who has had their monetization abruptly turned off on any of these social Media Apps cannot buy that Elon’s Dystopian Idea of relying on Governments for survival while AI robots do all the work" https://x.com/jimNjue_/status/2045683129491370365 [SPRINT: research]</li>
+  <li>Source: @Huawei [v166.6 T5 N4.1] "In China's Yellow River Delta, AI and 5G have captured over 130,000 photos of Oriental storks. This smart platform lets us monitor wildlife without disturbing — protecting without interfering!" https://x.com/Huawei/status/2044967655111799023 [SPRINT: research]</li>
+  <li>[NOTED] "know" — 12 posts, no follow-up this cycle</li>
+  <li>[NOTED] "iran" — 10 posts, no follow-up this cycle</li>
+  <li>[NOTED] "trump" — 9 posts, no follow-up this cycle</li>
+  <li>[NOTED] "america" — 7 posts, no follow-up this cycle</li>
+  <li>[NOTED] "strait hormuz" — 6 posts, no follow-up this cycle</li>
+  <li>[NOTED] "war" — 6 posts, no follow-up this cycle</li>
+  <li>[NOTED] "left" — 6 posts, no follow-up this cycle</li>
+  <li>[NOTED] "why" — 6 posts, no follow-up this cycle</li>
+  <li>[NOTED] "people" — 6 posts, no follow-up this cycle</li>
+  <li>[NOTED] "years" — 5 posts, no follow-up this cycle</li>
+  <li>[NOTED] "israel" — 5 posts, no follow-up this cycle</li>
+  <li>[NOTED] "right" — 5 posts, no follow-up this cycle</li>
+  <li>[NOTED] "work" — 5 posts, no follow-up this cycle</li>
+  <li>[NOTED] "country" — 5 posts, no follow-up this cycle</li>
+  <li>[NOTED] "day" — 5 posts, no follow-up this cycle</li>
