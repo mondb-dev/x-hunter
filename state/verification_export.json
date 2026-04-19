@@ -1,88 +1,83 @@
 {
-  "generated_at": "2026-04-19T02:49:11.216Z",
+  "generated_at": "2026-04-19T15:18:31.592Z",
   "stats": {
-    "total": 47,
+    "total": 49,
     "supported": 1,
-    "refuted": 7,
+    "refuted": 6,
     "contested": 0,
-    "unverified": 39,
+    "unverified": 42,
     "expired": 0
   },
   "claims": [
     {
-      "claim_id": "claim_31",
-      "claim_text": "Philippines seeking US permission to buy Russian crude due to fuel shortages and Strait of Hormuz blockade.",
+      "claim_id": "claim_10",
+      "claim_text": "Trump threatens to destroy Iranian civilian energy/water infrastructure if no deal",
       "status": "supported",
-      "confidence_score": 0.8,
+      "confidence_score": 0.78,
       "scoring_breakdown": {
-        "source_tier": 1,
-        "newsguard": 0.7,
-        "corroboration": 0.7,
-        "evidence_quality": 0.7,
+        "source_tier": 0.8,
+        "newsguard": 0.5,
+        "corroboration": 0.9,
+        "evidence_quality": 0.9,
         "cross_source": 0.5,
         "web_search": 1
       },
-      "source_handle": "ajenglish",
+      "source_handle": null,
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "verification_count": 3,
-      "verified_at": "2026-04-17T17:37:55.620Z",
-      "created_at": "2026-04-14T13:00:18.070Z",
-      "original_source": "ABS-CBN News and Philstar.com, reporting on statements from Philippine Energy Secretary Sharon Garin.",
-      "claim_date": "2026-04-14",
+      "related_axis_id": "axis_human_rights_exploitation_v1",
+      "verification_count": 150,
+      "verified_at": "2026-04-19T03:10:53.846Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": "Donald Trump (via social media posts and public statements)",
+      "claim_date": "2026-03",
       "supporting_sources": [
         {
-          "name": "ABS-CBN News",
-          "excerpt": "Manila said Tuesday it was seeking US permission to buy more Russian crude, as the import-dependent Philippines scrambles to shore up scant fuel supplies amid a blockade of the Strait of Hormuz.",
-          "url": null
-        },
-        {
-          "name": "Philstar.com",
-          "excerpt": "The Philippines is seeking an extension of a United States sanctions waiver to allow continued oil imports from Russia, as the government moves to secure fuel supply amid ongoing global disruptions, the Department of Energy (DOE) said.",
-          "url": null
-        },
-        {
-          "name": "Voice of Emirates News Agency",
-          "excerpt": "The Philippine government has initiated diplomatic efforts to obtain formal permission from the United States to purchase additional quantities of Russian crude oil.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXKMNd7aNekQLvKrCoDG69cnO2D6o4TwRCOtSlMJePYZbo9XWU-0G35Kjqe3-aZeUHzCw0X3j4h02GvJy75cSMg7nt8CyTiukG14ZJK8yWJi-kTqghCZye3_att_d9AsDMlcYvynMXwVOpHSCIO1N5y1tqGirdVQkLeOo7tjTDXtfOaw6Q_hhKYNBzA0LX2_768BDvBRFLkif62MK9ezvkaTy-aSdtnVPCuLpVhwkV8x9aqkBMM9D3Z0hBz5pJZL4="
+          "name": "Axios",
+          "excerpt": "President Trump threatened on Monday that if a deal with Iran \"is not shortly reached\" and if the Hormuz Strait isn't open \"immediately,\" the U.S. will \"completely obliterate\" Iran's power, energy and water infrastructure.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNwjyhWr1YvI4CYVvWC3r_m64OFQiUw2T3qiwIAaKAIgS7XxhoIh4HSUoZaahvD1OGx-GPQTxQB1M6wQ5wDlxACKdGgqkDzZRZabWYt3OcNBfV7AJ-ZKzSkgz4V6FVmRoIPbZKgwevGyApC9IB4Ep47QgRf8J-ZkIZC4XznkNBhOojq7U="
         },
         {
           "name": "Global News",
-          "excerpt": "Manila said Tuesday it was seeking US permission to buy more Russian crude, as the import-dependent Philippines scrambles to shore up scant fuel supplies amid a blockade of the Strait of Hormuz.",
+          "excerpt": "U.S. President Donald Trump on Monday threatened widespread destruction of Iran's energy resources and other vital infrastructure, potentially including desalination plants that supply drinking water, if a deal to end the war is not reached “shortly.”",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGwpzSaZh_ODHv7V81U44U86Gt2SzJLBX_2HkBCO0Ce5Sq7a6tcrxOg1VlXEHQjPFe3iVvBL1ELWPWkyer24b21rmD4DKJJamc21XXJ9-h_a_pp8MSecySC2eeZgOx3FPpRhtjRpAffzsxpTrmP2GVL3vV_ghoul6Fv9qXD-VDNzx7F0KzuR0of6NOc6Nz1-CtLNS6IEiVXfKadLxHeRIHlT08JdhGWXlQGgVLtSR4TQci"
+        },
+        {
+          "name": "The Washington Post",
+          "excerpt": "President Donald Trump escalated his threats to target Iran's infrastructure if it does not open up the Strait of Hormuz, warning the country will be “living in Hell” in an expletive-filled message on social media Sunday.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTOeE346s1F5ebLKRWsmZpjPMxZiFAwgKdU1WgPFsRT9EAawO7PJxfovNkIDK5MF5t3r0UrMOl4jZ1dSndNiEsqSl-WAW4AZ4_DT8dx5m9piQifXM-vk-Ql_HLy2PpVzEZW5SBWiPCawBOEEtM8Ia3E6KVvLj9ezhmNf28-bcJa2OTdUwuxwYHhi73Zkn_OZKeo_uI"
+        },
+        {
+          "name": "WJBD",
+          "excerpt": "President Donald Trump has set several deadlines for launching massive attacks on critical Iranian infrastructure if Tehran doesn't make a peace deal includes reopening the vital Strait of Hormuz since U.S.-Israeli military operations against Iran began in February.",
           "url": null
         },
         {
-          "name": "Power Philippines",
-          "excerpt": "The Philippines is seeking a fresh sanctions waiver from the United States to allow continued imports of Russian crude and petroleum products, as supply disruptions tied to escalating geopolitical tensions strain domestic fuel markets.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5_2NayNsQpOGjKsU4J-YPmQ7rcGnM-ZqOetQJqv2-dd_Q4vLnzOAQjLNWiR3Vr3PrxXzN9efwp67aV36kU1qtcji1rEXelpIQCzNdgXDJgWdCay0XkRuind8P3Ww6zl7H3X-0Q50JDpVrdgWLdJejRVtRuZ4X19VtxV8UAA8kraFZR9H5_Vzs4Kb_HEv_4Q=="
-        },
-        {
-          "name": "Mena FN",
-          "excerpt": "Manila said Tuesday it was seeking US permission to buy more Russian crude, as the import-dependent Philippines scrambles to shore up scant fuel supplies amid a blockade of the Strait of Hormuz.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQES4IWoSTOfbbQTbXN-LI8bfikbAEYObUNz6x4eLx1s5umw1rgsX-y6eT2cmuX0rmFqU-mrJYHWKTdpXjObsbMRYOqufS6aGiTY9ltWCTNnxTdwEBhoCwS7tdkXbsjkYWMpfiEXRgHdeJXO0IhfbkqiQHgZ0oMbLIhBRXiHIwdvZZC-V7CDD2S_"
-        },
-        {
-          "name": "Wikipedia - 2026 Strait of Hormuz crisis",
-          "excerpt": "Shipping traffic through the Strait of Hormuz, a major maritime choke point for world energy trade, has been largely blocked by Iran since 28 February 2026, when the United States and Israel launched an air war against Iran and assassinated its supreme leader Ali Khamenei.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2Chw8YMihM3Mrdp1ap_1FPefQo86KGsblgNvcha-s_Z_32mKHnX5H_cICs50u4-4NvjZO9NWddpVZyjcOqNF6vQ3wZ8i5dXhcjDhNMYpvWvTp7nYVUw2Bq7GVHONs_3ytLA_zaJdtwAPaevRnjBOSdtWIug=="
-        },
-        {
-          "name": "Wikipedia - 2026 Philippine energy crisis",
-          "excerpt": "Since late February 2026, an energy crisis in the Philippines has occurred as a result of the war in Iran.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5_2NayNsQpOGjKsU4J-YPmQ7rcGnM-ZqOetQJqv2-dd_Q4vLnzOAQjLNWiR3Vr3PrxXzN9efwp67aV36kU1qtcji1rEXelpIQCzNdgXDJgWdCay0XkRuind8P3Ww6zl7H3X-0Q50JDpVrdgWLdJejRVtRuZ4X19VtxV8UAA8kraFZR9H5_Vzs4Kb_HEv_4Q=="
+          "name": "The New Arab",
+          "excerpt": "US President Donald Trump has threatened to resume military strikes against Iran if a long-term agreement is not reached by next week, even as he pointed to unspecified \"good news\" in ongoing negotiations and said a deal was likely.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwgH8lmoGc3Q3jX0d7k6s1EvwaX_UUkWc-BmtxEHRSDfVHcq4CEFLf986eZu2T4R9pwj5c8DQS1vg2R4Ubi2AWGirlA2JgK7goaYmHc-ULfe4N2dk1aukGo1HlWC0kZgnPa82_KgcDc4pnKred9Zv4oq9M6Co8t-7sSoeF-cV8ffxGdslN4crcgtHz"
         },
         {
           "name": "PBS News",
-          "excerpt": "Iran said Friday it fully reopened the Strait of Hormuz to commercial vessels, but President Donald Trump said the American blockade on Iranian ships and ports 'will remain in full force' until Tehran reaches a deal with the U.S., including on its nuclear program.",
-          "url": null
+          "excerpt": "U.S. President Donald Trump said late Tuesday he's pulling back on his threats to attack Iranian bridges, power plants and other civilian targets, subject to Iran agreeing to a two-week ceasefire and reopening of the Strait of Hormuz.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGwpzSaZh_ODHv7V81U44U86Gt2SzJLBX_2HkBCO0Ce5Sq7a6tcrxOg1VlXEHQjPFe3iVvBL1ELWPWkyer24b21rmD4DKJJamc21XXJ9-h_a_pp8MSecySC2eeZgOx3FPpRhtjRpAffzsxpTrmP2GVL3vV_ghoul6Fv9qXD-VDNzx7F0KzuR0of6NOc6Nz1-CtLNS6IEiVXfKadLxHeRIHlT08JdhGWXlQGgVLtSR4TQci"
+        },
+        {
+          "name": "WAER",
+          "excerpt": "He repeated his threat against Iran's civilian infrastructure if a deal is not reached by Tuesday night, and that includes an open Strait of Hormuz.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFj4cKNYQXUp4cBBRvNOJL_72BeU9dPCh6THss7QOxuvh3QkWOD_-6-4O-IBCbbjN3wXPnaMAE7ZQaCYzqAPC-Qf4kJmJQed5dQhMtyC8U6KC-XwwlxCerNhTUvdKPJxDMToOfPPTCM5Qkr0_e008wziuSNmZ3PBBGBJCTdivzTIiUoF1mfryhjAW9nC80jmXM2mSktVM5VBlkCY-M6-oInq49fNwtRe83Pz58vLQ=="
+        },
+        {
+          "name": "YouTube (President Trump threatens to hit Iran's infrastructure if Strait of Hormuz not reopened by deadline)",
+          "excerpt": "President Donald Trump has stepped up his threat to hit Iran's critical infrastructure hard if it doesn't reopen the Strait of Hormuz by his Tuesday deadline.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGEqbO0isQYrnl-WioZR3HMnCdIgDqxlR2mwxZhRxXE5wJKXeaLNhBRQ-imiy1UgeGGEKNZ4mcgL_SokaAhhIEAYNzhUBySsHFP25gjrLwBpzud_Ejhsc6tEwQtmnmQWQMdVSiSxw=="
         }
       ],
       "dissenting_sources": [],
-      "framing_analysis": "The claim is framed factually, accurately reflecting the reported diplomatic efforts by the Philippines and the underlying geopolitical and economic reasons for these actions.",
-      "web_search_summary": "The Philippines is actively seeking permission from the United States to purchase additional Russian crude oil. This request is driven by significant fuel shortages within the country and the ongoing disruption of oil shipments due to a blockade of the Strait of Hormuz, which has led to a declared national energy emergency.",
+      "framing_analysis": "The claim is framed accurately, as multiple sources confirm Trump's direct threats against Iranian civilian infrastructure in the context of a potential deal and the Strait of Hormuz.",
+      "web_search_summary": "Donald Trump has repeatedly threatened to destroy Iranian civilian energy and water infrastructure if a deal is not reached, specifically mentioning power plants, oil wells, Kharg Island, and potentially desalination plants. These threats have been made in the context of ongoing negotiations and demands for Iran to reopen the Strait of Hormuz. Experts have warned that such actions could constitute war crimes.",
       "investigation_depth": "quick"
     },
     {
@@ -334,103 +329,6 @@
       ],
       "framing_analysis": "The claim misleadingly frames interracial violent crime statistics as direct evidence supporting the existence of 'Black Supremacy' as a problem. While crime statistics show racial disparities in offending and victimization, they do not provide data on the ideological motivations of offenders, nor do they establish a causal link between these crimes and a widespread ideology of Black Supremacy.",
       "web_search_summary": "While 'Black Supremacy' is a recognized concept and fringe ideology held by some groups, and interracial violent crime statistics exist, these statistics do not inherently support the claim that 'Black Supremacy is a problem' by demonstrating it as the underlying motivation for such crimes. Crime statistics describe the demographics of offenders and victims but do not typically provide insight into the ideological motivations of individuals, nor do they indicate a widespread problem of Black Supremacy driving these crimes.",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_37",
-      "claim_text": "President Trump announced on Fox News that the Iran War is over.",
-      "status": "refuted",
-      "confidence_score": 0.375,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": -1
-      },
-      "source_handle": "rawsalerts",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 2,
-      "verified_at": "2026-04-17T17:43:28.931Z",
-      "created_at": "2026-04-15T00:51:47.508Z",
-      "original_source": "President Trump on Fox News/Fox Business (specifically in an interview with Maria Bartiromo)",
-      "claim_date": "2026-04-14",
-      "supporting_sources": [
-        {
-          "name": "RBC-Ukraine",
-          "excerpt": "US President Donald Trump has declared the completion of the military operation against the Iranian regime, according to the Instagram account of Fox News journalist Maria Bartiromo.",
-          "url": null
-        },
-        {
-          "name": "Fox News",
-          "excerpt": "Maria Bartiromo on Tuesday posted a short “curtain raiser” clip on X ahead of her full interview with US President Donald Trump airing tomorrow on Fox. In the clip, she says she repeatedly asked Trump, Mr. President you refer to war as was, is it over? and Trump responds: It is over.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu3RfktUPoEmZjJ-4mjtGxPPl7C_sIASzIRPyKNLgxfR475yVmvFEVQk23HyXtsePXCDtzE8Dbf66IW-20KaZ-Xnd3cKHLb7c8pfjBiiH3bi-TuS4KxOQg5-mqxtZkof4h9Q-31iI4qAyKXfwHYlJX_zCPMW7_UcIe4O1uYrzJ0YIyaYaplAZVczuIFo_dqC_2ng15kv4cw7jWhOQqPPN5cAF2qXnzu_VIF8w="
-        },
-        {
-          "name": "CBS News",
-          "excerpt": "President Trump is again voicing optimism about a potential deal with Iran to end the war currently paused by a two-week ceasefire. Mr. Trump told Fox News the conflict is \"very close to over\" as he and Pakistan's leader suggest a new round of direct U.S.-Iran peace talks could be looming.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu3RfktUPoEmZjJ-4mjtGxPPl7C_sIASzIRPyKNLgxfR475yVmvFEVQk23HyXtsePXCDtzE8Dbf66IW-20KaZ-Xnd3cKHLb7c8pfjBiiH3bi-TuS4KxOQg5-mqxtZkof4h9Q-31iI4qAyKXfwHYlJX_zCPMW7_UcIe4O1uYrzJ0YIyaYaplAZVczuIFo_dqC_2ng15kv4cw7jWhOQqPPN5cAF2qXnzu_VIF8w="
-        },
-        {
-          "name": "Time Magazine",
-          "excerpt": "President Donald Trump has said that he believes the war with Iran is “very close to over” after suggesting that negotiations with Iran will resume this week.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEM2tWRiBa-WF9dCV-glRkG79raJHzAR-0U1zijBGxKxfP4l6bsFTy6xGBIa1JN7TSdMaP_Kz_yTPBZeKx-dtFpUUD6Xzsn7bx6TD_meVJR26rExO-yC2x06FFRagATT2y8J00VTBSJD9oI0LuHn4de4ZVQGwpM9yYFCHsk9GY="
-        },
-        {
-          "name": "Fox Business",
-          "excerpt": "President Donald Trump said the U.S.-Iran war is \"very close\" to an end as hostilities ease amid a two-week ceasefire agreement.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9OujBuAhex5m-CNYzlXm2khJmd5bB8hxFjQM3MeGwbF56_4lOIuhiG_TkkSc9LN3jDf4xHJ9M7zXrrb_SpYf91kT2LKsASKqJiiCZCmpiHS7cRI6HgBTLUoTjbt2Yhnzuqq4GeiJeJar362SpIfDNImX1ciRdmx0CsCPa9ziP466SiJ-LI0BWJk6TmHOoOMrtM1VQvGfXTY4sxr0QrjmS"
-        },
-        {
-          "name": "CGTN",
-          "excerpt": "Fox News reporter Maria Bartiromo said in a social media post on Tuesday that United States President Donald Trump had told her Iran war was \"very close to over.\"",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfvVyLaB3bVkq2gSDVxeC5pTUvbnA0ZIDeGbcDE_OsmEwfihOaDew2OelJdQ52pGCquKCnxZFfhAZ1ROF-i4g5t0S_yuVPKEygqNC-jVBmoQL_6OTdWsqpPjrDRn8ZfSCHYBW-iXay3fmB7EIY4mXsBESfRSa7GJY="
-        }
-      ],
-      "dissenting_sources": [
-        {
-          "name": "CBS News",
-          "excerpt": "The Iranian regime is challenging the U.S. military's claim to have \"completely halted economic trade going into and out of Iran by sea,\" and is again threatening to impede commercial shipping in another vital Middle Eastern waterway if the American blockade of its ports continues.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu3RfktUPoEmZjJ-4mjtGxPPl7C_sIASzIRPyKNLgxfR475yVmvFEVQk23HyXtsePXCDtzE8Dbf66IW-20KaZ-Xnd3cKHLb7c8pfjBiiH3bi-TuS4KxOQg5-mqxtZkof4h9Q-31iI4qAyKXfwHYlJX_zCPMW7_UcIe4O1uYrzJ0YIyaYaplAZVczuIFo_dqC_2ng15kv4cw7jWhOQqPPN5cAF2qXnzu_VIF8w="
-        },
-        {
-          "name": "RBC-Ukraine",
-          "excerpt": "The two-week ceasefire between the US and Iran, brokered by Pakistan, proved fragile. The negotiations in Islamabad on a permanent end to the war failed due to Tehran's refusal to meet key demands – to abandon its nuclear program and stop supporting proxy forces.",
-          "url": null
-        },
-        {
-          "name": "The Times of Israel",
-          "excerpt": "She says Trump expressed the stance during an interview that will air on Wednesday. The comments would appear to undermine Trump's threats to resume the war if Iran doesn't agree to his terms for a permanent ceasefire.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGeQj0w56Y3vza9bv6cpC_TBu9wQ0pvjSUjglGS7hAKH_rbaKnLYN41aQdt8N-3SakpUVzlt-NJXqbmTNjRkqLM_PyHrUAjYILsb3BpFZt3thLC18U9yJVs7a4qjQaiqJ1f-_sq4X9Ittg5jbZgfzCfFWAH1uA3vakE9ugStSKcDVTyuhExfklYy3GQ8LMGgxF3yV9jVWzhI5t3xfG83-eu1Du30P79rKIz87O79VmPeU="
-        },
-        {
-          "name": "Fox News",
-          "excerpt": "A U.S. military blockade on Iranian ports remains in effect, according to Trump.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu3RfktUPoEmZjJ-4mjtGxPPl7C_sIASzIRPyKNLgxfR475yVmvFEVQk23HyXtsePXCDtzE8Dbf66IW-20KaZ-Xnd3cKHLb7c8pfjBiiH3bi-TuS4KxOQg5-mqxtZkof4h9Q-31iI4qAyKXfwHYlJX_zCPMW7_UcIe4O1uYrzJ0YIyaYaplAZVczuIFo_dqC_2ng15kv4cw7jWhOQqPPN5cAF2qXnzu_VIF8w="
-        },
-        {
-          "name": "Time Magazine",
-          "excerpt": "In his interview with Fox, Trump said: “If I pulled up stakes right now, it would take them 20 years to rebuild that country, and we're not finished,” claiming that Iran wants “to make a deal very badly” following failed negotiations between the U.S. and Iran in Pakistan over the weekend.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEM2tWRiBa-WF9dCV-glRkG79raJHzAR-0U1zijBGxKxfP4l6bsFTy6xGBIa1JN7TSdMaP_Kz_yTPBZeKx-dtFpUUD6Xzsn7bx6TD_meVJR26rExO-yC2x06FFRagATT2y8J00VTBSJD9oI0LuHn4de4ZVQGwpM9yYFCHsk9GY="
-        },
-        {
-          "name": "Fox Business",
-          "excerpt": "On Monday, Trump instituted a naval blockade of all Iranian ports, marking a fresh intensification of the conflict after the U.S. agreed to stop bombing Iran last week.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9OujBuAhex5m-CNYzlXm2khJmd5bB8hxFjQM3MeGwbF56_4lOIuhiG_TkkSc9LN3jDf4xHJ9M7zXrrb_SpYf91kT2LKsASKqJiiCZCmpiHS7cRI6HgBTLUoTjbt2Yhnzuqq4GeiJeJar362SpIfDNImX1ciRdmx0CsCPa9ziP466SiJ-LI0BWJk6TmHOoOMrtM1VQvGfXTY4sxr0QrjmS"
-        },
-        {
-          "name": "White House official (Stephen Miller) via Fox News",
-          "excerpt": "Speaking to Fox News amid the blockade, Miller warned: “This embargo is squeezing the economic life out of the Iranian regime, and the United States has the capacity to continue this indefinitely if Iran chooses the wrong path.”",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu3RfktUPoEmZjJ-4mjtGxPPl7C_sIASzIRPyKNLgxfR475yVmvFEVQk23HyXtsePXCDtzE8Dbf66IW-20KaZ-Xnd3cKHLb7c8pfjBiiH3bi-TuS4KxOQg5-mqxtZkof4h9Q-31iI4qAyKXfwHYlJX_zCPMW7_UcIe4O1uYrzJ0YIyaYaplAZVczuIFo_dqC_2ng15kv4cw7jWhOQqPPN5cAF2qXnzu_VIF8w="
-        }
-      ],
-      "framing_analysis": "The claim is framed as a direct announcement from President Trump. While he did make such a statement, the broader context provided by news reports, including those from Fox News, indicates that the conflict with Iran was still ongoing at the time of his declaration, making the claim misleading in its implication that the war had actually concluded.",
-      "web_search_summary": "President Trump stated on Fox News that the Iran War was \"over\" or \"very close to over\" in mid-April 2026. However, contemporaneous reports from the same outlets and others indicate that a conflict with Iran was ongoing, with a naval blockade in effect, failed peace talks, and continued military actions and threats from both sides.",
       "investigation_depth": "quick"
     },
     {
@@ -793,47 +691,46 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "verification_count": 150,
-      "verified_at": "2026-04-17T17:38:56.111Z",
+      "verification_count": 151,
+      "verified_at": "2026-04-19T03:10:53.842Z",
       "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": "User provided claim",
-      "claim_date": null,
+      "original_source": "Iran's Islamic Revolutionary Guard Corps (IRGC)",
+      "claim_date": "2026-03-27",
       "supporting_sources": [
         {
-          "name": "Wikipedia - 2026 Strait of Hormuz crisis",
-          "excerpt": "On 27 March, the IRGC announced that the strait is closed to any vessel going 'to and from' the ports of the US, Israel, and their allies.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0COIMJBJPOlQLdfsUUw53r-5pr05BxnAHcafZthmP6TMeMAuat7vLODIfBoNg1pPfG_2d8hH7bt9lHNjeGEG2VQzKKN1sfbWJNcaruewt0lXD9DK6hRt_msGCQfYc3U2WwuH09e6onF906-mPjcyehvMVmhY="
+          "name": "Wikipedia",
+          "excerpt": "On 27 March, the IRGC announced that the strait is closed to any vessel going \"to and from\" the ports of the US, Israel, and their allies.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4zpHS2d2tqDKmP2dSuLetekFEPM2fhLdBCE-aw2kFZC0fD59SkEOP32jhplOMNiQgSIdy4hfMnsNqE1XdwUE-WmFXIA6LQ56tRFVGBYBIjb2Bknr3eUn3ZIJ4iextzLFsrLnHeEhXCxwfe6KFAukWFscOag=="
         },
         {
-          "name": "Myanmar International TV",
-          "excerpt": "Iran's Islamic Revolution Guard Corps (IRGC) announced on Friday that passage is prohibited for any vessel through any corridor in the Strait of Hormuz to and from the ports of countries allied with and supporting US and Israel.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmEL7w8BUjjTOvAtVB37Y1keeWCuqZT6aGYSsJxvA1C6kfAD_2anlVLO4y9duwf49EZRRAt-W2EVIf3LwdIoD47tHLOf3RGqR6RWFkdVlqzojzwnSEw3h_d7FA-mm2j3iIHe0tKiNYeWq9DXvSmFBCJUQ8zodEt8u3Oo5GAvtcwJ2Tr_VpDAuSDaesULN_low="
+          "name": "IBTimes UK",
+          "excerpt": "Those rules have included an outright ban on ships linked to the US and Israel, according to the source.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHpanI8MLj6B9BFkclzuaRNxZRShanWBcF3HOppXFghnhkc-wkjVQPhuYLJEH0GHzxVxAxKVrnEOdbf9jaXseDrorKTsoGpNb6KEaMA8Gbg5ZXasLEHFB96_K1s_WwgIPMMw7qquDlZ58kG4nZz73FsjYmw_r9S_Zbt3wf"
         },
         {
-          "name": "IRGC-affiliated Fars News",
-          "excerpt": "According to the source, Iran has now reopened the Strait following the ceasefire in Lebanon, subject to three conditions: 'Ships must be commercial. The passage of military vessels is prohibited, and neither the ships nor their cargo may be linked to hostile countries.'",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUovQkPCGwzMM0yUvSUvcg0Jq08yuvLGlqthacblwZDA9GZzpLagEGJEfCAXcyc9FnPGvTO-UlEl7FmciSM1BUcm-JF8B6SsctBfA5_cp3rV51hmXckFc-b0QeXljooWFb1Zjd7a5YAO8RxGJeff7B0Xkq9pnDZ88cImZ9gj02vqh83iUlSolzSgJUAu3ykLEFFEWBbCndCUI8fzhFwrSr"
+          "name": "The Hindu",
+          "excerpt": "Iran swiftly reversed course on reopening the Strait of Hormuz, reimposing restrictions on the critical waterway on Saturday (April 18, 2026) after the U.S. said the move would not end its blockade.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8PmSWl6rCHs8rM1Tf5_Vuuc61UbHpxcXNYIpn8lktGFvXZWUTqva84ulqrptOWnUV5k0Z4pRwXEIZ_Y_KHKTO__n3vEbtIp_RWTyDXpjKu-nN_T5xRgkTwecVxGRx1gHP583QI6203QNSUkkdubaRb0IL6X2_uuS-wJqisp0jff1tfGEfkMeALpL02WvaYcTmPj1o7nBRUCo_IyK2j12EIAQiRYnfa34nT609VqVrjOBgjAwoVXeyFEQH02c2nA=="
         },
         {
-          "name": "The Washington Post",
-          "excerpt": "President Trump welcomed the announcement, but U.S. officials said the naval blockade on vessels leaving from and going to Iranian ports remains in effect.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzos_lQQFUd9bWSfN3lhFCqILbX0K6VK2Bk3Bc0IRVBqVc0gADc9CVBwCSMIL3y-cdhVncdGCANRpUeE_kJhI8h-4FW2uFiQvXIRnVtloOBItzxcvGsaDf32OPptaxcEOG-yX9rlLwgog-_qDUguFEsXfEzLb4bxIKKS_L7J05FABA_QrN2QAzTWAeFGc="
+          "name": "The Guardian",
+          "excerpt": "Iran's Khatam al-Anbiya joint military command said on Saturday that Tehran had restored the strait to its “previous status” and was now “under strict management and control by the armed forces”.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGo6ZJIzOQXSOonxeByKcJYYeUju9azmv5k_z21VzYP7ieUX0ZcYM4bJ8JClEOptu1oFAJMFfCWI0DU1QD1gg3t-eiId9o7DpOoeU9A3ANRNRr6MR-0npyen5XryI30ZSjtjiHvm8B64eQ-jYFNW6kTbA4_1W13h71uf2JU0vdgct81IwLOytgNGLk-luVEQ8ZxBG39LPuclLW57kaeIJNo0M8="
+        },
+        {
+          "name": "Fox News",
+          "excerpt": "A regional intelligence official has confirmed to Fox News' Trey Yingst that the Strait of Hormuz is \"under full IRGC control and effectively closed at this moment.\"",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHT3v2D9fe8iBnAN3-liEAUkvFsX-d80Vt7MsIeq-HIpwblixy0esSPRT8n5bHybqsX_NwY6FvEsjXcSmdIJGnuBFXu0F_5-0esF-qHKn0zhUv1AnXVOkO1A5GrHDKPDqJOj9NpdhR5oDm4UKbWdGKajnX9rvkeqfbL_5SNLWJVKFeRfOQ4z6QJV3-Ahy8rX7jBxTSrFWtt4Q5-Rk="
+        },
+        {
+          "name": "Sentinel Colorado",
+          "excerpt": "Iran's military announced Saturday that it was closing the Strait of Hormuz, citing a continued American blockade, leaving the status of access to a vital waterway unclear a day after President Donald Trump and the country declared it open.",
+          "url": null
         }
       ],
-      "dissenting_sources": [
-        {
-          "name": "CBS News",
-          "excerpt": "Iran announced earlier that all commercial vessels would be allowed to safely transit the strait, at least while a new 10-day ceasefire that has halted fighting between Israel and Hezbollah in Lebanon endures.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUovQkPCGwzMM0yUvSUvcg0Jq08yuvLGlqthacblwZDA9GZzpLagEGJEfCAXcyc9FnPGvTO-UlEl7FmciSM1BUcm-JF8B6SsctBfA5_cp3rV51hmXckFc-b0QeXljooWFb1Zjd7a5YAO8RxGJeff7B0Xkq9pnDZ88cImZ9gj02vqh83iUlSolzSgJUAu3ykLEFFEWBbCndCUI8fzhFwrSr"
-        },
-        {
-          "name": "Marine Link",
-          "excerpt": "Iranian Foreign Minister Abbas Araqchi said the Strait of Hormuz was open following the agreement of a ceasefire in Lebanon, while U.S. President Donald Trump said he believed a deal to end the Iran war would come 'soon', although the timing remains unclear.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpw2ldp6apbI44Pscs-4OS2GEyOwMU4lqsYYXRxnC2lee2rjTOeHq78SgpQ58b24_Gu7vZVRgtxX_Re5yP1zKHjM2xPFoq76E33GH1bPoynbSYlWbSEi39yR6iNzBc6viWQHHuAlI3Uiy0q5Aw8SJdmo3cFj23s3_ki0svXFxTV078c-ICUg=="
-        }
-      ],
-      "framing_analysis": "The claim is framed validly as it specifically addresses 'US/Israel-linked vessels,' which remain subject to explicit prohibitions and restrictions by Iran, despite a broader, conditional reopening for other commercial traffic. The ongoing US naval blockade further reinforces the effective closure for Iranian-linked vessels.",
-      "web_search_summary": "The Strait of Hormuz was largely blocked by Iran since late February 2026, with explicit announcements in late March 2026 prohibiting passage for vessels linked to the US and Israel. While Iran announced a conditional reopening for commercial vessels on April 17, 2026, during a ceasefire, this reopening specifically excludes military vessels and those linked to 'hostile countries,' effectively maintaining the closure for US/Israel-linked vessels. Additionally, the US has imposed a naval blockade on Iranian ports, further restricting shipping in the area.",
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed validly, as it accurately reflects the current situation in the Strait of Hormuz as reported by multiple news outlets and official statements from Iran. The closure is a direct response to ongoing geopolitical tensions and military actions.",
+      "web_search_summary": "The Strait of Hormuz is currently under the strict control of Iran's armed forces and is effectively closed to vessels linked to the US and Israel. This closure is in retaliation for a US blockade of Iranian ports and follows a period of conflict that began in late February 2026. Iran has stated that the strait will remain closed until the US blockade is lifted.",
       "investigation_depth": "quick"
     },
     {
@@ -974,8 +871,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_10",
-      "claim_text": "Trump threatens to destroy Iranian civilian energy/water infrastructure if no deal",
+      "claim_id": "claim_22",
+      "claim_text": "Sundas \"Sunny\" Naqvi was falsely claimed to have been detained by ICE at the Dodge County Jail; this claim was amplified by Cook County Commissioner Kevin Morrison.",
       "status": "unverified",
       "confidence_score": 0.69,
       "scoring_breakdown": {
@@ -986,57 +883,57 @@
         "cross_source": 0.5,
         "web_search": 1
       },
-      "source_handle": null,
+      "source_handle": "mrandyngo",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_human_rights_exploitation_v1",
-      "verification_count": 149,
-      "verified_at": "2026-04-17T17:37:44.655Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": "Donald Trump (via social media posts and statements reported by news outlets)",
+      "related_axis_id": "axis_epistemic_integrity",
+      "verification_count": 4,
+      "verified_at": "2026-04-19T03:10:53.848Z",
+      "created_at": "2026-04-14T06:31:47.102Z",
+      "original_source": "Sundas \"Sunny\" Naqvi and her family/supporters, including Cook County Commissioner Kevin Morrison",
       "claim_date": "2026-03",
       "supporting_sources": [
         {
-          "name": "Axios",
-          "excerpt": "President Trump threatened on Monday that if a deal with Iran 'is not shortly reached' and if the Hormuz Strait isn't open 'immediately,' the U.S. will 'completely obliterate' Iran's power, energy and water infrastructure.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwhZSPXQRaq_xyNGCIJOv6aFQpq1YI7nOFq7u2OX9OtCEG-VbEVgkvh8Jky3pLNRoI1DifCtUg7E3Pp0f0OywU8-jU0XfQpEaEbAWcmD54pdKMS22IWy4-rsjt2phdPfb3xWAIs3RtqG-hjGM96KixCCFCeXUI7KQa0JMQ4-TaqO40PucJ"
+          "name": "The Daily Northwestern",
+          "excerpt": "A Wisconsin sheriff is suing Sundas “Sunny” Naqvi for defamation, alleging she falsely claimed she was held in immigration custody at the Dodge County Jail in March.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWCnF7ybplZdwIAxS-rflRoc83b_I4xPd795VUxuwKDY5u147ntUq8OWXhMGb7lS94SKZr61dPNObtTbkQm38KbDeidcthcbvq36xg4Eg0Ne-BiLFSgPt1m0RVjT6IU-3MBdwnc1iF04zKELU35ZAbk8Kqyl2mWb8Qrnnp36Cysq_ejQgIIABZ4k8VqmFElW8HgmItiVw1l8fWerYIl3dfAHLQaGVppSF-aowE5LsHZcY="
         },
         {
-          "name": "Global News",
-          "excerpt": "U.S. President Donald Trump on Monday threatened widespread destruction of Iran's energy resources and other vital infrastructure, potentially including desalination plants that supply drinking water, if a deal to end the war is not reached “shortly.”",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEvY0oXcYt4iNotRyd4qaONcLDhbHKTlzgukFVmMRirt1W1crXVGETxFLRBlYt02E12SGPsbVpfAYD8DHZUkWqnH2Au5z7lRrls_5FQEfSU5cjal72T-IPyQHCNcm0PwhH4CFfZ1jlFApHi0KVeXnUuQFYMqWDmkA9w21B9EWbzURBxKXvmWYD4y86n1VA="
+          "name": "CBS News",
+          "excerpt": "The Department of Homeland Security is disputing claims that a Skokie woman was held at O'Hare International Airport for hours.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4DsJRMkWTqheMpTsHPjBbyNthFujbtAZpLnbiaqcdN9J0cd2xCLqs493u0BwCcUzkTQnKf3iqVlzBRCfugpd5XRH1OrSggRRhXBgL4MU-StH4mdTei2uo6wzYOZFr14TKJrvgry2J5BUtHLjL5W8Sm4Dvk3SFguNvLR6unoaB0EtKtXtRJfUUiQUmY7VGNB_1vW2ZOIkiQu1N"
         },
         {
-          "name": "The Washington Post",
-          "excerpt": "President Donald Trump escalated his threats to target Iran's infrastructure if it does not open up the Strait of Hormuz, warning the country will be “living in Hell” in an expletive-filled message on social media Sunday. He later suggested that the United States could target “every power plant” in the country — an attack that experts warned could amount to war crimes.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSHwsvagjr940i1M_nL6IrDXk0I9dcdVwb7yULwJA5L45wnu4g0xRl0z5xKp5pTQgS3XEnmikieVghEcK3bg778NqQYeQG8NRnA-pzNW2n1FbV9JBuvlMT4Z2xidUq_jRddixNX7KrQNZ7JAZ4iltlw3-BpUEiVvPs6kr2KnatMNkx2JE5lrFN36Prk303s3wk8dLLE5A0owjI1WCCipNfYg=="
+          "name": "The Times of India",
+          "excerpt": "When she was released, the Department of Homeland Security released footage showing that Naqvi was allowed to leave the airport about 90 minutes after she landed and she was never detained by ICE.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSTTEJEwN8FTfOz2XY_wcYk7_5j49rbWpbx8kbacvfGFOZtSaOeULrrXdNnsBovGMCy4OW3mgJWeMebsOYl6aZFvGrtHyFJtdrj2YMsjLBWSHbHNd-aGZwf8k_Z0sUunOw7oecQrSMxvuMAWKNz1cXs5DTnWaMMCKve8x8KvbbICGunlkTlQRVjzuRwBNc24VwM9HaiswimXHTNtieppzVMw3otreVee1Oglt1oFQ9NS5C_QA2sjGDEPJWm48bBNolW63C313pazFj5ZWG_uOVfFd93QErpWfDrV0SWBztsUDbyFxsS599hVPzBv_tugF5-iZP"
         },
         {
-          "name": "PBS News",
-          "excerpt": "President Donald Trump said late Tuesday he's pulling back on his threats to attack Iranian bridges, power plants and other civilian targets, subject to Iran agreeing to a two-week ceasefire and reopening of the Strait of Hormuz.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEvY0oXcYt4iNotRyd4qaONcLDhbHKTlzgukFVmMRirt1W1crXVGETxFLRBlYt02E12SGPsbVpfAYD8DHZUkWqnH2Au5z7lRrls_5FQEfSU5cjal72T-IPyQHCNcm0PwhH4CFfZ1jlFApHi0KVeXnUuQFYMqWDmkA9w21B9EWbzURBxKXvmWYD4y86n1VA="
+          "name": "The Record North Shore",
+          "excerpt": "Days after the family of a Skokie woman alleged that she was detained by federal authorities and moved to two different facilities before her release, U.S. Customs and Border Protection called her story “blatantly FALSE.”",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWCnF7ybplZdwIAxS-rflRoc83b_I4xPd795VUxuwKDY5u147ntUq8OWXhMGb7lS94SKZr61dPNObtTbkQm38KbDeidcthcbvq36xg4Eg0Ne-BiLFSgPt1m0RVjT6IU-3MBdwnc1iF04zKELU35ZAbk8Kqyl2mWb8Qrnnp36Cysq_ejQgIIABZ4k8VqmFElW8HgmItiVw1l8fWerYIl3dfAHLQaGVppSF-aowE5LsHZcY="
         },
         {
-          "name": "Amnesty International",
-          "excerpt": "In recent days, President Trump has repeatedly issued escalating threats against Iran's energy and transport infrastructure, warning that unless the Iranian authorities reopen the Strait of Hormuz, the United States would carry out the “complete demolition” of the country's power plants and bridges.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5uJ12rXiIpLx4K54eX5MIW7AS1Cc_dQuBSs-TRvkSLRHAKA414eqpx6sMmpf3GtieAk0PC14s6IxRu-Ol3dWt0MyZoSfIy-x1t0-EKDw4zqDYjtB7LWsqs263DLvInb2vj27Cf7m00EVJ8afIoSnq7S0LRWoio_Ff3JemZu21Cs5d0czQHFRsAwaq07EccwgyKQAqhDdE8SwHu6r54bzaWMy3A8oGzWBSbFgyALfJnS_LSkLUiBFPnt2wEvLTh2iGcPeAHRKKNCsnXfGvGMEhTbHFF8scXs7eeYVWb8mlxshGly3U-qlOMbiUMtCrPFY="
+          "name": "CBS News",
+          "excerpt": "On Friday, Dodge County Sheriff Dale Schmidt filed a defamation lawsuit against Naqvi and Morrison, and outlined evidence he said proves her claims were false.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4DsJRMkWTqheMpTsHPjBbyNthFujbtAZpLnbiaqcdN9J0cd2xCLqs493u0BwCcUzkTQnKf3iqVlzBRCfugpd5XRH1OrSggRRhXBgL4MU-StH4mdTei2uo6wzYOZFr14TKJrvgry2J5BUtHLjL5W8Sm4Dvk3SFguNvLR6unoaB0EtKtXtRJfUUiQUmY7VGNB_1vW2ZOIkiQu1N"
         },
         {
-          "name": "The Washington Post",
-          "excerpt": "President Donald Trump said the United States would target “every” Iranian bridge and power plant. Experts say such blanket action violates international law.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSHwsvagjr940i1M_nL6IrDXk0I9dcdVwb7yULwJA5L45wnu4g0xRl0z5xKp5pTQgS3XEnmikieVghEcK3bg778NqQYeQG8NRnA-pzNW2n1FbV9JBuvlMT4Z2xidUq_jRddixNX7KrQNZ7JAZ4iltlw3-BpUEiVvPs6kr2KnatMNkx2JE5lrFN36Prk303s3wk8dLLE5A0owjI1WCCipNfYg=="
+          "name": "WISN 12 (YouTube)",
+          "excerpt": "Sheriff Schmidt claims the comments made by both Sundas 'Sunny' Naqvi and Commissioner Kevin Morrison are defamatory.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEiokqbIJ4CAQNVyOY3R8uOmtZtwuFZCGUBEcYTJOCalpKzBXDsXLFUmjp9mLsqfAEx6Q-l0obzkTz0nDkLdqbD67lfYR5BG8wclscm2aitgIo_jRuKVG8jKyMOfyqoZHixB4vP4hQ="
         },
         {
-          "name": "LSE United States Politics and Policy",
-          "excerpt": "Last week, perhaps most extreme was his threat that he would wipe out a “whole civilization” in Iran. Preceding this was his declaration: “Tuesday will be Power Plant Day, and Bridge Day, all wrapped up in one, in Iran. There will be nothing like it!!! Open the F‑‑‑in' [Hormuz] Strait, you crazy bastards, or you'll be living in Hell – JUST WATCH!”",
-          "url": null
+          "name": "Reason Magazine",
+          "excerpt": "Schmidt is suing [Sundas] Naqvi, Morrison, and unidentified Doe Defendants for falsely claiming that Naqvi was illegally detained at Dodge County Jail from March 5, 2026 through March 7, 2026.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhsRFROiImlbyvg9JzZYZylUxtzJIfAlNw8Y5nailJcS_bCi7Cw0mZ59eMIA7f8V-MbnkA7BzGKsjjBinPaX4deRna8uHy-VqauVclCh-9kJuYztiKeRPqc6gVGorUjpxqdgnWuQgM4BBr3fq6HsAQeboX2AH-qX4Gi4_w99IwSAsq9MV0FvA3XJg8Ip4KUDwjay1elGLBz3TZHp5mvjfHAU1dhD85nQVhtqX3HvnuJSBQgJamQyeexQigdccuJQX58EHkiRXSLzSDqupgyTW3TQ8qqHDX-pSI6IjUD0oU"
         }
       ],
       "dissenting_sources": [],
-      "framing_analysis": "The claim accurately reflects the reported threats made by Donald Trump regarding Iranian civilian infrastructure. The framing is valid as it directly quotes or paraphrases his statements and the concerns raised by various organizations and experts.",
-      "web_search_summary": "Donald Trump has repeatedly threatened to destroy Iranian civilian energy and water infrastructure if a deal is not reached and the Strait of Hormuz is not reopened. These threats, made in March and April 2026, included targeting power plants, bridges, and potentially desalination plants. International legal experts and human rights organizations have warned that such actions could constitute war crimes.",
+      "framing_analysis": "The claim is framed validly, as it accurately reflects the core assertion made by Naqvi and amplified by Morrison, which has since been widely disputed by official sources and is the subject of a defamation lawsuit.",
+      "web_search_summary": "The claim that Sundas \"Sunny\" Naqvi was falsely reported to have been detained by ICE at the Dodge County Jail, and that this claim was amplified by Cook County Commissioner Kevin Morrison, is confirmed. Multiple sources, including the Department of Homeland Security and the Dodge County Sheriff, have refuted Naqvi's account of detention, presenting evidence that she was not in federal custody at the Dodge County Jail. The Dodge County Sheriff has since filed a defamation lawsuit against Naqvi and Morrison.",
       "investigation_depth": "quick"
     },
     {
@@ -1385,92 +1282,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_23",
-      "claim_text": "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed.",
-      "status": "unverified",
-      "confidence_score": 0.655,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0.8,
-        "evidence_quality": 0.8,
-        "cross_source": 0.5,
-        "web_search": 1
-      },
-      "source_handle": "savsays",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_power_accountability",
-      "verification_count": 3,
-      "verified_at": "2026-04-17T17:42:49.016Z",
-      "created_at": "2026-04-14T07:30:44.029Z",
-      "original_source": "Savanah Hernandez on X.com (Twitter)",
-      "claim_date": "2026-04-11",
-      "supporting_sources": [
-        {
-          "name": "Waupaca County Post",
-          "excerpt": "Paige Ostroushko, a University of Wisconsin-Stevens Point soccer player and psychology major, faces charges for assaulting journalist Savanah Hernandez on April 11.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXMVU6sYZkq4DVnGhFzdI0OJOzjssh349UHHuiOQlH6oLDSLYw-_A5tL0ZjtNxkKiJoa4RiH7BvdU2xmQneQvg0zhzRx214XV8U7NoG63xUKk52XFZVBmTSCCj1U0C0vRYRt0vevKZNK9Mnefmc7MgBDc4oUioRforRfzZD2i0NfbmEknB1IXiWVjKZg=="
-        },
-        {
-          "name": "CBS News",
-          "excerpt": "New video shared with WCCO shows the scuffle in which a reporter says she got hurt outside the Whipple Federal Building in Minneapolis on Saturday. The cases against three people arrested in that fight are now in the hands of the Hennepin County Attorney for potential charges.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjGQ0TbSL25saQpTTkCufcA2JuUdFQ-v3-IIDsfRW5U1F02j7tpEOgCF_VRGr1L-jp44RQS4GHJRcOzu2GKlJbBp2CBGiJ4dCQCOFWqOjW3FhjeFKM7w4osVdQvzLvpR8kZ0TT1ifzpbonmUwTGT_mAn3JAjFq0EZHx6TFfodb10VLtcUikd2hlMmtUP69x29tL3BP4WFN79Q="
-        },
-        {
-          "name": "WFMD",
-          "excerpt": "Frontlines TPUSA reporter Savanah Hernandez was attacked while covering an ICE protest in Minneapolis on Saturday.",
-          "url": null
-        },
-        {
-          "name": "BroBible",
-          "excerpt": "Paige Ostroushko and her father are currently facing charges that stem from an alleged assault over the weekend.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAixqw_tQ2b3ggN1FU-TeGtWKhlf6iqj1dZolxnneDab5_3SCsXnaSPAJv5xuCt4XaUCUhYepOUPUHkrGl4sx8GLhmGaiBN8jDPA3ykTMJDB-Efct2CpH9bR_dTSSL1HxYrAWLs3EynQk5o3f7QJuKKQ-49X_WGglYQ1mHhMU1LOpEO03oM7I1-iL_ZMlSMRBMeSYmYSq9GgMdjZ90bL6Sum8rBaGG6qDwbQsSqmVM4d3AsrzEZg=="
-        },
-        {
-          "name": "KARE 11",
-          "excerpt": "Prosecutors say they are investigating an assault of a Turning Point USA reporter during an anti-ICE protest Saturday in Minneapolis.",
-          "url": null
-        },
-        {
-          "name": "FOX 9",
-          "excerpt": "Federal authorities say the FBI is investigating the assault of a Turning Point USA journalist by protesters outside the Whipple Building on Saturday during an anti-ICE rally.",
-          "url": null
-        },
-        {
-          "name": "The Post Millennial",
-          "excerpt": "The Hennepin County Sheriff's Office has filed only misdemeanor charges against three individuals captured on video launching a brutal mob assault against TPUSA reporter Savanah Hernandez during an anti-ICE protest in Minneapolis, Minnesota.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWvNhFLwDANg7HTj4ctqWOEZBCXyM0p9-AukReh21i2nJ2ULCjyh8HeERQHU2Uv8nVQ3zCQyj_rDoUeX2lFgpWUoDxH8mImtopsRniieKtLXqER3IZ0PYSEPAsjs157bQiXnO7WUy-pSs7ZX1HCY3NnhAN20tMQKBvtjn9tngieElCVIFBm_8WtoRdkXvE_mowWgErT2Dzko33_lx32Cv8tW-K9KWUdAjGPzybnxwFYOp9qS_FIlAYEVSf7McgwuqT"
-        },
-        {
-          "name": "The Daily Wire",
-          "excerpt": "Federal investigations are underway after TPUSA reporter Savanah Hernandez was attacked by a family while filming an anti-ICE protest in Minneapolis over the weekend.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8Xz-FywbVvBEnXHsr2ESjMKLfHbc-pd1OeR4W2hJMFZNpDOgGTOa14EUko3fIv3I5UWxRFYg4MuskcdYlHiLyRFqseAX_id8Zld6B6rcgf-FBGaVmBm9a_ESUbytXvqrX18wyStJssGWaf0m4aVkC4eS8JOvJNIhGObPsjvaCE9w0RxNjPsqdwhSj50lA1u0BR9owgG0FgLkdpqBdE7QaHkxATejngIXgnH4ydrq7Tl0LBoLT9UI="
-        },
-        {
-          "name": "The Spun",
-          "excerpt": "Paige Ostroushko, a college soccer player, was arrested at an ICE protest in Minneapolis.",
-          "url": null
-        },
-        {
-          "name": "TotalProSports",
-          "excerpt": "University of Wisconsin soccer star Paige Ostroushko found herself arrested on Saturday.",
-          "url": null
-        },
-        {
-          "name": "The Times of India",
-          "excerpt": "Paige Ostroushko, who played for the University of Wisconsin Stevens Point, was arrested during an ICE protest on April 11.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_v6u2pTQPhujX9oRDGf1oNQDh0OqTeHoQs0NWTjHLDpQLZZKcl8QSy2Wa_XNhYrDTZnlsJOLT2t9fHhi0i-6pSSiLjcnV26wwC7RJyiK48fehhEYqWO8ojmETCwQAL6igBGPoeU7hmxvo8-OpLKlJjLO0A1SD9HHxjicbQcZ4BMJUD9CODWetnR5LK__QqUc317KklgTWb5Qj0-PeNOLAmub2WWa29kl1AnX4aHtCN5UK8va-hAP98eTkbHCkI_3rNJ5bnRniEjVgcciVUyhyKle0ZJNF1TedwkhnHy7X2oxU1ANA4_0c9bYQCa6dzDoaG4zHBDtLWFdJGVmXnSrqATCOve5OhAMgTWAkyKzNHsYf9DE="
-        }
-      ],
-      "dissenting_sources": [],
-      "framing_analysis": "The claim is framed factually, stating an arrest and charges. The reporting from various sources generally aligns with this framing, focusing on the events and legal actions, with some sources also highlighting the involvement of Ostroushko's family and the federal investigation.",
-      "web_search_summary": "Paige Ostroushko was arrested for disorderly conduct during an anti-ICE protest in Minneapolis on April 11, 2026, where reporter Savanah Hernandez was allegedly assaulted. Videos of the incident show Ostroushko and others physically engaging with Hernandez, and charges for misdemeanor assault have been filed against Paige Ostroushko, her father, and her boyfriend. The FBI has also opened a federal investigation into the alleged assault.",
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "claim_1",
       "claim_text": "US operations in Iran could end in 2-3 weeks (Trump statement)",
       "status": "unverified",
@@ -1525,6 +1336,82 @@
       ],
       "framing_analysis": "The claim is framed to suggest an imminent end to US operations, which is partially supported by Trump's statements. However, it omits the concurrent threats of intensified military action within the same timeframe, which provides a more complete picture of his remarks during the ongoing conflict.",
       "web_search_summary": "Donald Trump has recently made statements, around late March and early April 2026, indicating that US operations in Iran could conclude within two to three weeks. However, during the same period, Trump also stated that the US would continue to 'hit Iran extremely hard' or bomb the country 'back to the stone ages' over the next two to three weeks, within the context of an ongoing '2026 Iran war'.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_31",
+      "claim_text": "Philippines seeking US permission to buy Russian crude due to fuel shortages and Strait of Hormuz blockade.",
+      "status": "unverified",
+      "confidence_score": 0.63,
+      "scoring_breakdown": {
+        "source_tier": 1,
+        "newsguard": 0.7,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": "ajenglish",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "verification_count": 4,
+      "verified_at": "2026-04-19T03:10:53.848Z",
+      "created_at": "2026-04-14T13:00:18.070Z",
+      "original_source": "ABS-CBN News and Philstar.com, reporting on statements from Philippine Energy Secretary Sharon Garin.",
+      "claim_date": "2026-04-14",
+      "supporting_sources": [
+        {
+          "name": "ABS-CBN News",
+          "excerpt": "Manila said Tuesday it was seeking US permission to buy more Russian crude, as the import-dependent Philippines scrambles to shore up scant fuel supplies amid a blockade of the Strait of Hormuz.",
+          "url": null
+        },
+        {
+          "name": "Philstar.com",
+          "excerpt": "The Philippines is seeking an extension of a United States sanctions waiver to allow continued oil imports from Russia, as the government moves to secure fuel supply amid ongoing global disruptions, the Department of Energy (DOE) said.",
+          "url": null
+        },
+        {
+          "name": "Voice of Emirates News Agency",
+          "excerpt": "The Philippine government has initiated diplomatic efforts to obtain formal permission from the United States to purchase additional quantities of Russian crude oil.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXKMNd7aNekQLvKrCoDG69cnO2D6o4TwRCOtSlMJePYZbo9XWU-0G35Kjqe3-aZeUHzCw0X3j4h02GvJy75cSMg7nt8CyTiukG14ZJK8yWJi-kTqghCZye3_att_d9AsDMlcYvynMXwVOpHSCIO1N5y1tqGirdVQkLeOo7tjTDXtfOaw6Q_hhKYNBzA0LX2_768BDvBRFLkif62MK9ezvkaTy-aSdtnVPCuLpVhwkV8x9aqkBMM9D3Z0hBz5pJZL4="
+        },
+        {
+          "name": "Global News",
+          "excerpt": "Manila said Tuesday it was seeking US permission to buy more Russian crude, as the import-dependent Philippines scrambles to shore up scant fuel supplies amid a blockade of the Strait of Hormuz.",
+          "url": null
+        },
+        {
+          "name": "Power Philippines",
+          "excerpt": "The Philippines is seeking a fresh sanctions waiver from the United States to allow continued imports of Russian crude and petroleum products, as supply disruptions tied to escalating geopolitical tensions strain domestic fuel markets.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5_2NayNsQpOGjKsU4J-YPmQ7rcGnM-ZqOetQJqv2-dd_Q4vLnzOAQjLNWiR3Vr3PrxXzN9efwp67aV36kU1qtcji1rEXelpIQCzNdgXDJgWdCay0XkRuind8P3Ww6zl7H3X-0Q50JDpVrdgWLdJejRVtRuZ4X19VtxV8UAA8kraFZR9H5_Vzs4Kb_HEv_4Q=="
+        },
+        {
+          "name": "Mena FN",
+          "excerpt": "Manila said Tuesday it was seeking US permission to buy more Russian crude, as the import-dependent Philippines scrambles to shore up scant fuel supplies amid a blockade of the Strait of Hormuz.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQES4IWoSTOfbbQTbXN-LI8bfikbAEYObUNz6x4eLx1s5umw1rgsX-y6eT2cmuX0rmFqU-mrJYHWKTdpXjObsbMRYOqufS6aGiTY9ltWCTNnxTdwEBhoCwS7tdkXbsjkYWMpfiEXRgHdeJXO0IhfbkqiQHgZ0oMbLIhBRXiHIwdvZZC-V7CDD2S_"
+        },
+        {
+          "name": "Wikipedia - 2026 Strait of Hormuz crisis",
+          "excerpt": "Shipping traffic through the Strait of Hormuz, a major maritime choke point for world energy trade, has been largely blocked by Iran since 28 February 2026, when the United States and Israel launched an air war against Iran and assassinated its supreme leader Ali Khamenei.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2Chw8YMihM3Mrdp1ap_1FPefQo86KGsblgNvcha-s_Z_32mKHnX5H_cICs50u4-4NvjZO9NWddpVZyjcOqNF6vQ3wZ8i5dXhcjDhNMYpvWvTp7nYVUw2Bq7GVHONs_3ytLA_zaJdtwAPaevRnjBOSdtWIug=="
+        },
+        {
+          "name": "Wikipedia - 2026 Philippine energy crisis",
+          "excerpt": "Since late February 2026, an energy crisis in the Philippines has occurred as a result of the war in Iran.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5_2NayNsQpOGjKsU4J-YPmQ7rcGnM-ZqOetQJqv2-dd_Q4vLnzOAQjLNWiR3Vr3PrxXzN9efwp67aV36kU1qtcji1rEXelpIQCzNdgXDJgWdCay0XkRuind8P3Ww6zl7H3X-0Q50JDpVrdgWLdJejRVtRuZ4X19VtxV8UAA8kraFZR9H5_Vzs4Kb_HEv_4Q=="
+        },
+        {
+          "name": "PBS News",
+          "excerpt": "Iran said Friday it fully reopened the Strait of Hormuz to commercial vessels, but President Donald Trump said the American blockade on Iranian ships and ports 'will remain in full force' until Tehran reaches a deal with the U.S., including on its nuclear program.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed factually, accurately reflecting the reported diplomatic efforts by the Philippines and the underlying geopolitical and economic reasons for these actions.",
+      "web_search_summary": "The Philippines is actively seeking permission from the United States to purchase additional Russian crude oil. This request is driven by significant fuel shortages within the country and the ongoing disruption of oil shipments due to a blockade of the Strait of Hormuz, which has led to a declared national energy emergency.",
       "investigation_depth": "quick"
     },
     {
@@ -1658,164 +1545,6 @@
       ],
       "framing_analysis": "The claim accurately reflects President Pezeshkian's stated position on ending hostilities, contingent on Iran not being attacked. While 'firm guarantees' is an interpretation, it aligns with his condition for halting Iranian strikes.",
       "web_search_summary": "Iranian President Masoud Pezeshkian has expressed a readiness to end hostilities, stating in a televised address on March 7, 2026, that Iran would halt attacks on neighboring countries unless those countries launched strikes against Iran. He also apologized to regional states affected by recent hostilities and emphasized that Iran does not seek confrontation. This conditional cessation of Iranian strikes effectively serves as a demand for guarantees against future domestic strikes originating from those territories.",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_22",
-      "claim_text": "Sundas \"Sunny\" Naqvi was falsely claimed to have been detained by ICE at the Dodge County Jail; this claim was amplified by Cook County Commissioner Kevin Morrison.",
-      "status": "unverified",
-      "confidence_score": 0.62,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0.7,
-        "evidence_quality": 0.7,
-        "cross_source": 0.5,
-        "web_search": 1
-      },
-      "source_handle": "mrandyngo",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_epistemic_integrity",
-      "verification_count": 3,
-      "verified_at": "2026-04-17T17:42:39.781Z",
-      "created_at": "2026-04-14T06:31:47.102Z",
-      "original_source": "Sundas \"Sunny\" Naqvi, amplified by Cook County Commissioner Kevin Morrison",
-      "claim_date": "2026-03",
-      "supporting_sources": [
-        {
-          "name": "The Times of India",
-          "excerpt": "A Wisconsin sheriff has now sued Illinois woman Sunny Naqvi who claimed in March that she was detained by the US Customs and Border Protection agents at O'Hare International Airport and then was taken to the ICE facility, with Cook County Commissioner Kevin Morrison amplifying the incident.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFL7STHzXjJ0-OUr6E0fCea5021mbzJXamUGMqcMPVMAZHO3WTFcLSc4-XuzihjiaKwk_TgmLyR1V-dUkpSPPN1oBLD9MPhgDC_vNpH21wGjAwvPJA0DF1Z4dWxo0W5cuibk9IxMFSkWTtCQzbCr4LvSjG2vR9Zq4Zo1crtQwsdD-S_Szr6TnL6XpJm76t9zKw7bVmpyb1bYui5P7J3tSkWYh4EAaXipBcd0LnuttFW1aG7wU9NWvojbDjWbMeUFZHX-QerKCnFdg9UVHvRfGlZQWsVKlD3NBSU0KxcOWeVS2Y0g169iRaybQInO6EOYbDsXpk="
-        },
-        {
-          "name": "The Daily Northwestern",
-          "excerpt": "A Wisconsin sheriff is suing Sundas “Sunny” Naqvi for defamation, alleging she falsely claimed she was held in immigration custody at the Dodge County Jail in March, and also suing Cook County Commissioner Kevin Morrison for amplifying these claims.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFlLIZ83X1F-HYqI80Xe1pQfviOjFq-IOtPGbB_d2RB28pmPcrBfZ1JZUGV9DTe8hR8lJ-s4QyTNKrpleQFZS7gtNlrg4u33cTxDpFaZ40naRqy9Qq_-33ZB_bf3dD1Gfpro7S9NOvDVbqDCvbHZKkpKN0CjC_-7hQLuEtMB5VT3cstlCp06h1D80_pM5o-5OKqHty5ixz24vVK2sthd_dpfSafGU64Tn1IaO7BEx8PwA=="
-        },
-        {
-          "name": "WHMI",
-          "excerpt": "Dodge County Sheriff Dale Schmidt announced legal action after a weekslong investigation into claims by Sundas \"Sunny\" Naqvi that she was held by federal authorities in Illinois and Wisconsin, including at the Dodge County Jail, and the lawsuit also details statements made by Cook County Commissioner Kevin Morrison, who publicly amplified the claims.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsgCZEZT1mwNvc3lfL96qOEgvC0ViioP3Gb5WwJ2_TtNpPhShb-WYof0LgGs_2DhkVMbFwwXvJo2VxU419CesrFzWU8ZMl65havDPdS0ZEdS1O6phizzIAmdUQMkC-z58w67sPhOCcvYSOom8gLZR9-2nG5HGRg-WZonwm2SQvXXuS_JIL0jdU5vMh-J5bU-BSkhzl3PK0P0dP8q1UpKTEeoyo_MlQHuQEzK-R6E1oVI8czX4V"
-        },
-        {
-          "name": "AsatuNews.co.id",
-          "excerpt": "Dodge County Sheriff Dale Schmidt filed a federal defamation lawsuit against Sundas \"Sunny\" Naqvi and Cook County Commissioner Kevin Morrison for allegedly fabricating a story about Naqvi being illegally detained by federal immigration agents.",
-          "url": null
-        },
-        {
-          "name": "Journal & Topics Media Group",
-          "excerpt": "Dodge County Sheriff Dale Schmidt held a press conference refuting earlier allegations by Skokie resident Naqvi that she was ever held at the Dodge County Jail in Wisconsin, and as a result, Schmidt filed a federal civil lawsuit against Naqvi and Morrison for defamation, as Naqvi's allegations were amplified by Morrison.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFe3rtYNYgQFv7bXfyDaOVjUosasvEZYyJ5tCcOx8NdhmAgx1UCsPRj71N93fdxPAixDK07Nxy0QtRkWZPW7HMnpiSbiJPBMXrL39X-COhhrfxN1PMPT4jos1SkAcegxi_iv6FcbpalfpSzyIDqFIQNDsdrYNq2retuDSLs-LUBQo2THCqCd0H0jE5QIfeSghEj8EBCylXgae2qyY51qM3CatXOnFjGkxqPrdPw8Q5neQfv8EN85r46-SfRPRtJUw=="
-        },
-        {
-          "name": "CBS News",
-          "excerpt": "A Wisconsin sheriff is suing an Illinois woman for $1 million, accusing her of defamation, saying her claims of being detained by federal immigration officials in the Dodge County Jail are a hoax, and her supporters, including Cook County Commissioner Kevin Morrison, decried her alleged detainment.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXhSDMzvMGg8swrs5zA1kbRxGb_bOeFC8onZL_sTWl_-IuFnZfyg3cpq6bZSlF8OyYSKHzmKDuN4rJCt9ri9lyXx6uRdnq6YUYdfa2BQffY3MedoNXv5vlER_G0-5Ty_T9vcYlOGaoRKrl3vMEx6DNZdOffQ=="
-        },
-        {
-          "name": "Reason Magazine",
-          "excerpt": "Plaintiff Dale Schmidt is suing Sundas Naqvi, Morrison, and unidentified Doe Defendants for falsely claiming that Naqvi was illegally detained at Dodge County Jail from March 5, 2026 through March 7, 2026, and Schmidt maintains that Naqvi was never booked or detained at Dodge County Jail.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGEjETllpL2xCA7nbTVsidwT2B9bP-ihpWBsDlq1VBGRFnjrTnbhgyC-araos8GJKQdwZxJ1WrI67JDLr0vW5fXjUvAr5Pk73BR0VhxEmWyVxXpCiQMJ2qzVjcawH-Y5DbQtwaGpMh-4CE-kfVI1qQkLuCkaNBNww3NoE_zxnjab_FMejeZA_ETo9F2KXi8BbpfOy58lg36Gv4341sWnRe1RegjDQco2NTuG9AanJd-bhMSoy35wMTN4_DwQIfyON_z2GYbQevjia4I_H9-yARcJa_c-l0dbMAlPBD9wqo="
-        },
-        {
-          "name": "Journal & Topics Media Group",
-          "excerpt": "Dueling accounts of what happened to Sunny Naqvi and five others after she arrived at O'Hare Airport continued this week, with Homeland Security officials disputing claims that the Skokie woman was held at three locations over two days, while Cook County Commissioner Kevin Morrison doubled down on his claims that Naqvi was held by ICE and CBP for two days.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFe3rtYNYgQFv7bXfyDaOVjUosasvEZYyJ5tCcOx8NdhmAgx1UCsPRj71N93fdxPAixDK07Nxy0QtRkWZPW7HMnpiSbiJPBMXrL39X-COhhrfxN1PMPT4jos1SkAcegxi_iv6FcbpalfpSzyIDqFIQNDsdrYNq2retuDSLs-LUBQo2THCqCd0H0jE5QIfeSghEj8EBCylXgae2qyY51qM3CatXOnFjGkxqPrdPw8Q5neQfv8EN85r46-SfRPRtJUw=="
-        }
-      ],
-      "dissenting_sources": [],
-      "framing_analysis": "The claim is framed as a factual statement regarding a false accusation and its amplification. The available evidence from the sheriff's office and DHS supports this framing, indicating that Naqvi's detention claims were indeed false and were publicly supported by Morrison.",
-      "web_search_summary": "Evidence strongly suggests that the claim of Sundas \"Sunny\" Naqvi being detained by ICE at the Dodge County Jail was false. Dodge County Sheriff Dale Schmidt has filed a defamation lawsuit against Naqvi and Cook County Commissioner Kevin Morrison, presenting evidence such as hotel records, surveillance video, and text messages to refute Naqvi's account. Kevin Morrison is confirmed to have amplified these claims, holding press conferences and sharing information that the sheriff and Department of Homeland Security (DHS) have stated is inaccurate.",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_26",
-      "claim_text": "U.S. sanctions have deliberately crushed the economy of multiple nations, impoverishing millions of innocent people, which can be defined as economic terrorism.",
-      "status": "unverified",
-      "confidence_score": 0.62,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0.7,
-        "evidence_quality": 0.7,
-        "cross_source": 0.5,
-        "web_search": 1
-      },
-      "source_handle": "assalrad",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 3,
-      "verified_at": "2026-04-17T17:43:15.415Z",
-      "created_at": "2026-04-14T09:57:43.868Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [
-        {
-          "name": "Centre for Economic and Policy Research (CEPR) via SCMP",
-          "excerpt": "A comprehensive study by the Centre for Economic and Policy Research (CEPR) highlights the 'horrendous effects' of US-led sanctions on targeted populations, specifically Iran, Afghanistan, and Venezuela, noting they impoverish populations and significantly drag the global economy.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1b4PX_KYxPjD0mLtMerQjtwERrx-UgaM24Gf5P6TabA_XtxhLI_XjXwiPz_0nV-rZkQlhgNJcLT5LZv3fkSi4Hpc5LeKbo6xOb1xp7e3oD2oaw5pVsWEPFPZajbJWz8kzwEYU3i6Jo2lImrfoRHdJe1EYXwXcZh4vfGxJDzqDAP0W5mssDdOt0K38dy8yee2wWULqdBpz7OVYCMtoMpEZ_XTdFrV-awzbl7E4q9wZP51uv2uoVtPBLQC-erwSmWOJcOM="
-        },
-        {
-          "name": "Le Monde diplomatique",
-          "excerpt": "Criticism of the humanitarian impact of US sanctions has grown, with sanctions posing 'serious threats to human rights, including the right to food and potable water — as well as undermining human security.'",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgLFOBS-yBeGXJ2rVyKysMmdiC0JheuEWO8YW2vbOmvqK0j61njICATgyqv0D0UyCuzmeH-Io6teJ6l9SFH6byZuxGk5xGgPhD5leqYnKtJgkF9_V6j3kmugJMHbOBg40hzb9T2wNiDhDfGZEdN4L8rE_gELoQymk7cKKykg=="
-        },
-        {
-          "name": "Cato Institute",
-          "excerpt": "Sanctions have 'massive humanitarian costs' and can 'reduce the economic performance of the targeted state, degrade public health, and cause tens of thousands of deaths per year under the most crushing sanctions regimes.'",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVO66jhHUZOocP4FUuP0-sZ_XcFodslyyx3HrZXxw0-gMSO5RagSQoVBV6vjqbkYaHCZujVsBPmXbqRlEpGLISVRUYRzwtrIdPdDstTfJT3Eb0Vq91iDTcFLPkRyrFLxtxfMw1d3yI5VhlSvPmonsJ8h9A0By0u9e03BJ1GxunY0x_kE2gi3G3rfBhJhkiZQixqej4LWR1BxMLh6lcNKCpvkmHTB-WsxRucf1TNJgSWTPSXg=="
-        },
-        {
-          "name": "U.S. Treasury Secretary Scott Bessent (reported by vertexaisearch.cloud.google.com)",
-          "excerpt": "U.S. Treasury Secretary Scott Bessent openly acknowledged that Washington's sanctions strategy is designed to 'weaken Iran's economy and contribute to domestic unrest,' describing it as a deliberate form of 'economic statecraft' with 'no shots fired.'",
-          "url": null
-        },
-        {
-          "name": "National Iranian American Council (NIAC)",
-          "excerpt": "The report 'Targeting Civilians: The Human Cost of U.S. Economic Sanctions' details how sanctions have pushed millions into poverty and led to mass starvation in countries like Yemen and Afghanistan.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJSBbDHx1tsvmPpihHuiMvYYEQEwpgA63whNYcNeS64q_pkZ-KHfqyRo89hAvJ0zHY8HhCuR5vd_UJ98k16Rh5jcDR7asm1w0LQBWa2IMXOOGyaK20slZ5FjQKXuXwz5tQVPHioLdQ26hpRCoDUIa9GTevvOtwdQJ_BzqkwtGIF5g="
-        },
-        {
-          "name": "Washington Post",
-          "excerpt": "Sanctions on Venezuela, for instance, contributed to an economic contraction roughly three times as large as that caused by the Great Depression in the United States.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_JRYUUcKaLljksEjqL4yGu_Si8mJYX9luCL6mAsGQsnLs5ilBPs9gBxUQAmYZJ_Vwf0hFqr559-3fL7XcNXjzkbA16MQIbjYjrfrrHZinowR73qyIl3rDHk6x0f0MeAFn2sJWmXhvMhoVk0JAlqU2t4sTEgLafASqFgWShFceSqR8CXF36KVJ0lKGbMC5mw=="
-        },
-        {
-          "name": "Quora",
-          "excerpt": "One answer directly characterizes US sanctions as 'economic terrorism,' stating, 'Yes, I think that's a good characterization.'",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEc-b5MFspwgXU-jrSDhsm-nIUGvDYhu6UEnmXzApRBvogn0Ag0dRYYWM1rGmvV9zLIYC_2b8h0_EjXZV20xuzCJIS69CKzdAAYGFQs7I76mCUqH4ZLrMoYFBtt448ilLC55AhOoT62ojn44KN7P18LwvMIR24M0tAN9uYwNAKwDJX5MDzJycg5XyE92xdHPQso4ejA_cRIhss="
-        },
-        {
-          "name": "The Institute of Development Studies and Partner Organisations",
-          "excerpt": "A quantitative analysis of UN and US sanctions found that US sanctions have a negative impact on GDP growth, leading to an aggregate decline in GDP of 13.4 percent over seven years.",
-          "url": null
-        }
-      ],
-      "dissenting_sources": [
-        {
-          "name": "Hinrich Foundation",
-          "excerpt": "One major criticism of country-wide economic sanctions is the ability of corrupt elites in and around government to inoculate themselves against the impact of sanctions, foisting the consequences onto innocent and often impoverished citizens.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNeVTJp1vrBVLdUQmBhWpVT4DtPN4DlbPhykjQjVQ1OwrzbHpZfcq2UcLDGLpTT7YFs-1s2yG4JZRXidGRKyCpii1GVhLQlQ1d-YaC9V08aezDd5nOoQcad-ThCuAR8OoWFLvWdupq1KmeX4RFVW7lDCACv1PX-9EFkYVIh5w9Z0ILcTpqGlh8LbyOy9wI8ewaaOmNsA=="
-        },
-        {
-          "name": "Study.com",
-          "excerpt": "The UN does not impose sanctions on the US for 'State Sponsored Economic Terrorism' partly because the US has veto power and significant influence within the UN.",
-          "url": null
-        },
-        {
-          "name": "Brookings Institution",
-          "excerpt": "Economic sanctions are a serious instrument of foreign policy and should be employed only after consideration no less rigorous than what would precede military intervention, serving as an alternative to military force.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeUKIh7cG25Sc9ZfgSB2qkip4eShDZgeOPhyEKevgCgSSMjPLvosKi6zDGoJCwiReMy0wj1_rYqFJg3n5HIqL8jOeVnOLjrAskK8ip1eu7x1GpjSbCfX9pWswVYIN8JJdM-flMwXhcZo_BDpd3NQjz8BtNccLj58XDQ4fn0RvHaBydN5X24gcG3g=="
-        }
-      ],
-      "framing_analysis": "The claim uses strong, accusatory language, framing U.S. sanctions as intentionally destructive and akin to economic terrorism. This framing is supported by evidence detailing the severe economic and humanitarian impacts of sanctions, as well as acknowledgments from U.S. officials regarding the deliberate intent to weaken economies.",
-      "web_search_summary": "U.S. sanctions have been widely reported to severely damage national economies, leading to widespread impoverishment and humanitarian crises in targeted countries. Reports indicate these sanctions cause significant declines in GDP, threaten human rights, and compromise access to basic necessities. Some U.S. officials have acknowledged that sanctions are intentionally designed to weaken economies and create domestic unrest, leading critics to characterize these actions as a form of \"economic terrorism.\"",
       "investigation_depth": "quick"
     },
     {
@@ -2278,6 +2007,179 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "claim_23",
+      "claim_text": "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed.",
+      "status": "unverified",
+      "confidence_score": 0.45,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": "savsays",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_power_accountability",
+      "verification_count": 4,
+      "verified_at": "2026-04-19T03:10:53.848Z",
+      "created_at": "2026-04-14T07:30:44.029Z",
+      "original_source": "Savanah Hernandez on X.com (Twitter)",
+      "claim_date": "2026-04-11",
+      "supporting_sources": [
+        {
+          "name": "Waupaca County Post",
+          "excerpt": "Paige Ostroushko, a University of Wisconsin-Stevens Point soccer player and psychology major, faces charges for assaulting journalist Savanah Hernandez on April 11.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXMVU6sYZkq4DVnGhFzdI0OJOzjssh349UHHuiOQlH6oLDSLYw-_A5tL0ZjtNxkKiJoa4RiH7BvdU2xmQneQvg0zhzRx214XV8U7NoG63xUKk52XFZVBmTSCCj1U0C0vRYRt0vevKZNK9Mnefmc7MgBDc4oUioRforRfzZD2i0NfbmEknB1IXiWVjKZg=="
+        },
+        {
+          "name": "CBS News",
+          "excerpt": "New video shared with WCCO shows the scuffle in which a reporter says she got hurt outside the Whipple Federal Building in Minneapolis on Saturday. The cases against three people arrested in that fight are now in the hands of the Hennepin County Attorney for potential charges.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjGQ0TbSL25saQpTTkCufcA2JuUdFQ-v3-IIDsfRW5U1F02j7tpEOgCF_VRGr1L-jp44RQS4GHJRcOzu2GKlJbBp2CBGiJ4dCQCOFWqOjW3FhjeFKM7w4osVdQvzLvpR8kZ0TT1ifzpbonmUwTGT_mAn3JAjFq0EZHx6TFfodb10VLtcUikd2hlMmtUP69x29tL3BP4WFN79Q="
+        },
+        {
+          "name": "WFMD",
+          "excerpt": "Frontlines TPUSA reporter Savanah Hernandez was attacked while covering an ICE protest in Minneapolis on Saturday.",
+          "url": null
+        },
+        {
+          "name": "BroBible",
+          "excerpt": "Paige Ostroushko and her father are currently facing charges that stem from an alleged assault over the weekend.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAixqw_tQ2b3ggN1FU-TeGtWKhlf6iqj1dZolxnneDab5_3SCsXnaSPAJv5xuCt4XaUCUhYepOUPUHkrGl4sx8GLhmGaiBN8jDPA3ykTMJDB-Efct2CpH9bR_dTSSL1HxYrAWLs3EynQk5o3f7QJuKKQ-49X_WGglYQ1mHhMU1LOpEO03oM7I1-iL_ZMlSMRBMeSYmYSq9GgMdjZ90bL6Sum8rBaGG6qDwbQsSqmVM4d3AsrzEZg=="
+        },
+        {
+          "name": "KARE 11",
+          "excerpt": "Prosecutors say they are investigating an assault of a Turning Point USA reporter during an anti-ICE protest Saturday in Minneapolis.",
+          "url": null
+        },
+        {
+          "name": "FOX 9",
+          "excerpt": "Federal authorities say the FBI is investigating the assault of a Turning Point USA journalist by protesters outside the Whipple Building on Saturday during an anti-ICE rally.",
+          "url": null
+        },
+        {
+          "name": "The Post Millennial",
+          "excerpt": "The Hennepin County Sheriff's Office has filed only misdemeanor charges against three individuals captured on video launching a brutal mob assault against TPUSA reporter Savanah Hernandez during an anti-ICE protest in Minneapolis, Minnesota.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWvNhFLwDANg7HTj4ctqWOEZBCXyM0p9-AukReh21i2nJ2ULCjyh8HeERQHU2Uv8nVQ3zCQyj_rDoUeX2lFgpWUoDxH8mImtopsRniieKtLXqER3IZ0PYSEPAsjs157bQiXnO7WUy-pSs7ZX1HCY3NnhAN20tMQKBvtjn9tngieElCVIFBm_8WtoRdkXvE_mowWgErT2Dzko33_lx32Cv8tW-K9KWUdAjGPzybnxwFYOp9qS_FIlAYEVSf7McgwuqT"
+        },
+        {
+          "name": "The Daily Wire",
+          "excerpt": "Federal investigations are underway after TPUSA reporter Savanah Hernandez was attacked by a family while filming an anti-ICE protest in Minneapolis over the weekend.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8Xz-FywbVvBEnXHsr2ESjMKLfHbc-pd1OeR4W2hJMFZNpDOgGTOa14EUko3fIv3I5UWxRFYg4MuskcdYlHiLyRFqseAX_id8Zld6B6rcgf-FBGaVmBm9a_ESUbytXvqrX18wyStJssGWaf0m4aVkC4eS8JOvJNIhGObPsjvaCE9w0RxNjPsqdwhSj50lA1u0BR9owgG0FgLkdpqBdE7QaHkxATejngIXgnH4ydrq7Tl0LBoLT9UI="
+        },
+        {
+          "name": "The Spun",
+          "excerpt": "Paige Ostroushko, a college soccer player, was arrested at an ICE protest in Minneapolis.",
+          "url": null
+        },
+        {
+          "name": "TotalProSports",
+          "excerpt": "University of Wisconsin soccer star Paige Ostroushko found herself arrested on Saturday.",
+          "url": null
+        },
+        {
+          "name": "The Times of India",
+          "excerpt": "Paige Ostroushko, who played for the University of Wisconsin Stevens Point, was arrested during an ICE protest on April 11.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_v6u2pTQPhujX9oRDGf1oNQDh0OqTeHoQs0NWTjHLDpQLZZKcl8QSy2Wa_XNhYrDTZnlsJOLT2t9fHhi0i-6pSSiLjcnV26wwC7RJyiK48fehhEYqWO8ojmETCwQAL6igBGPoeU7hmxvo8-OpLKlJjLO0A1SD9HHxjicbQcZ4BMJUD9CODWetnR5LK__QqUc317KklgTWb5Qj0-PeNOLAmub2WWa29kl1AnX4aHtCN5UK8va-hAP98eTkbHCkI_3rNJ5bnRniEjVgcciVUyhyKle0ZJNF1TedwkhnHy7X2oxU1ANA4_0c9bYQCa6dzDoaG4zHBDtLWFdJGVmXnSrqATCOve5OhAMgTWAkyKzNHsYf9DE="
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed factually, stating an arrest and charges. The reporting from various sources generally aligns with this framing, focusing on the events and legal actions, with some sources also highlighting the involvement of Ostroushko's family and the federal investigation.",
+      "web_search_summary": "Paige Ostroushko was arrested for disorderly conduct during an anti-ICE protest in Minneapolis on April 11, 2026, where reporter Savanah Hernandez was allegedly assaulted. Videos of the incident show Ostroushko and others physically engaging with Hernandez, and charges for misdemeanor assault have been filed against Paige Ostroushko, her father, and her boyfriend. The FBI has also opened a federal investigation into the alleged assault.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_26",
+      "claim_text": "U.S. sanctions have deliberately crushed the economy of multiple nations, impoverishing millions of innocent people, which can be defined as economic terrorism.",
+      "status": "unverified",
+      "confidence_score": 0.45,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": "assalrad",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 4,
+      "verified_at": "2026-04-19T03:10:53.848Z",
+      "created_at": "2026-04-14T09:57:43.868Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [
+        {
+          "name": "Centre for Economic and Policy Research (CEPR) via SCMP",
+          "excerpt": "A comprehensive study by the Centre for Economic and Policy Research (CEPR) highlights the 'horrendous effects' of US-led sanctions on targeted populations, specifically Iran, Afghanistan, and Venezuela, noting they impoverish populations and significantly drag the global economy.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1b4PX_KYxPjD0mLtMerQjtwERrx-UgaM24Gf5P6TabA_XtxhLI_XjXwiPz_0nV-rZkQlhgNJcLT5LZv3fkSi4Hpc5LeKbo6xOb1xp7e3oD2oaw5pVsWEPFPZajbJWz8kzwEYU3i6Jo2lImrfoRHdJe1EYXwXcZh4vfGxJDzqDAP0W5mssDdOt0K38dy8yee2wWULqdBpz7OVYCMtoMpEZ_XTdFrV-awzbl7E4q9wZP51uv2uoVtPBLQC-erwSmWOJcOM="
+        },
+        {
+          "name": "Le Monde diplomatique",
+          "excerpt": "Criticism of the humanitarian impact of US sanctions has grown, with sanctions posing 'serious threats to human rights, including the right to food and potable water — as well as undermining human security.'",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgLFOBS-yBeGXJ2rVyKysMmdiC0JheuEWO8YW2vbOmvqK0j61njICATgyqv0D0UyCuzmeH-Io6teJ6l9SFH6byZuxGk5xGgPhD5leqYnKtJgkF9_V6j3kmugJMHbOBg40hzb9T2wNiDhDfGZEdN4L8rE_gELoQymk7cKKykg=="
+        },
+        {
+          "name": "Cato Institute",
+          "excerpt": "Sanctions have 'massive humanitarian costs' and can 'reduce the economic performance of the targeted state, degrade public health, and cause tens of thousands of deaths per year under the most crushing sanctions regimes.'",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVO66jhHUZOocP4FUuP0-sZ_XcFodslyyx3HrZXxw0-gMSO5RagSQoVBV6vjqbkYaHCZujVsBPmXbqRlEpGLISVRUYRzwtrIdPdDstTfJT3Eb0Vq91iDTcFLPkRyrFLxtxfMw1d3yI5VhlSvPmonsJ8h9A0By0u9e03BJ1GxunY0x_kE2gi3G3rfBhJhkiZQixqej4LWR1BxMLh6lcNKCpvkmHTB-WsxRucf1TNJgSWTPSXg=="
+        },
+        {
+          "name": "U.S. Treasury Secretary Scott Bessent (reported by vertexaisearch.cloud.google.com)",
+          "excerpt": "U.S. Treasury Secretary Scott Bessent openly acknowledged that Washington's sanctions strategy is designed to 'weaken Iran's economy and contribute to domestic unrest,' describing it as a deliberate form of 'economic statecraft' with 'no shots fired.'",
+          "url": null
+        },
+        {
+          "name": "National Iranian American Council (NIAC)",
+          "excerpt": "The report 'Targeting Civilians: The Human Cost of U.S. Economic Sanctions' details how sanctions have pushed millions into poverty and led to mass starvation in countries like Yemen and Afghanistan.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJSBbDHx1tsvmPpihHuiMvYYEQEwpgA63whNYcNeS64q_pkZ-KHfqyRo89hAvJ0zHY8HhCuR5vd_UJ98k16Rh5jcDR7asm1w0LQBWa2IMXOOGyaK20slZ5FjQKXuXwz5tQVPHioLdQ26hpRCoDUIa9GTevvOtwdQJ_BzqkwtGIF5g="
+        },
+        {
+          "name": "Washington Post",
+          "excerpt": "Sanctions on Venezuela, for instance, contributed to an economic contraction roughly three times as large as that caused by the Great Depression in the United States.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_JRYUUcKaLljksEjqL4yGu_Si8mJYX9luCL6mAsGQsnLs5ilBPs9gBxUQAmYZJ_Vwf0hFqr559-3fL7XcNXjzkbA16MQIbjYjrfrrHZinowR73qyIl3rDHk6x0f0MeAFn2sJWmXhvMhoVk0JAlqU2t4sTEgLafASqFgWShFceSqR8CXF36KVJ0lKGbMC5mw=="
+        },
+        {
+          "name": "Quora",
+          "excerpt": "One answer directly characterizes US sanctions as 'economic terrorism,' stating, 'Yes, I think that's a good characterization.'",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEc-b5MFspwgXU-jrSDhsm-nIUGvDYhu6UEnmXzApRBvogn0Ag0dRYYWM1rGmvV9zLIYC_2b8h0_EjXZV20xuzCJIS69CKzdAAYGFQs7I76mCUqH4ZLrMoYFBtt448ilLC55AhOoT62ojn44KN7P18LwvMIR24M0tAN9uYwNAKwDJX5MDzJycg5XyE92xdHPQso4ejA_cRIhss="
+        },
+        {
+          "name": "The Institute of Development Studies and Partner Organisations",
+          "excerpt": "A quantitative analysis of UN and US sanctions found that US sanctions have a negative impact on GDP growth, leading to an aggregate decline in GDP of 13.4 percent over seven years.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "Hinrich Foundation",
+          "excerpt": "One major criticism of country-wide economic sanctions is the ability of corrupt elites in and around government to inoculate themselves against the impact of sanctions, foisting the consequences onto innocent and often impoverished citizens.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNeVTJp1vrBVLdUQmBhWpVT4DtPN4DlbPhykjQjVQ1OwrzbHpZfcq2UcLDGLpTT7YFs-1s2yG4JZRXidGRKyCpii1GVhLQlQ1d-YaC9V08aezDd5nOoQcad-ThCuAR8OoWFLvWdupq1KmeX4RFVW7lDCACv1PX-9EFkYVIh5w9Z0ILcTpqGlh8LbyOy9wI8ewaaOmNsA=="
+        },
+        {
+          "name": "Study.com",
+          "excerpt": "The UN does not impose sanctions on the US for 'State Sponsored Economic Terrorism' partly because the US has veto power and significant influence within the UN.",
+          "url": null
+        },
+        {
+          "name": "Brookings Institution",
+          "excerpt": "Economic sanctions are a serious instrument of foreign policy and should be employed only after consideration no less rigorous than what would precede military intervention, serving as an alternative to military force.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeUKIh7cG25Sc9ZfgSB2qkip4eShDZgeOPhyEKevgCgSSMjPLvosKi6zDGoJCwiReMy0wj1_rYqFJg3n5HIqL8jOeVnOLjrAskK8ip1eu7x1GpjSbCfX9pWswVYIN8JJdM-flMwXhcZo_BDpd3NQjz8BtNccLj58XDQ4fn0RvHaBydN5X24gcG3g=="
+        }
+      ],
+      "framing_analysis": "The claim uses strong, accusatory language, framing U.S. sanctions as intentionally destructive and akin to economic terrorism. This framing is supported by evidence detailing the severe economic and humanitarian impacts of sanctions, as well as acknowledgments from U.S. officials regarding the deliberate intent to weaken economies.",
+      "web_search_summary": "U.S. sanctions have been widely reported to severely damage national economies, leading to widespread impoverishment and humanitarian crises in targeted countries. Reports indicate these sanctions cause significant declines in GDP, threaten human rights, and compromise access to basic necessities. Some U.S. officials have acknowledged that sanctions are intentionally designed to weaken economies and create domestic unrest, leading critics to characterize these actions as a form of \"economic terrorism.\"",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "live_ab72a062ac",
       "claim_text": "JUST IN:  President Trump says US will have to start dropping bombs on Iran again if an agreement isn't reached.",
       "status": "unverified",
@@ -2372,6 +2274,68 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "claim_36",
+      "claim_text": "US-sanctioned Chinese tanker Rich Starry successfully transited the Strait of Hormuz despite US naval blockade.",
+      "status": "unverified",
+      "confidence_score": 0.361,
+      "scoring_breakdown": {
+        "source_tier": 0.4,
+        "newsguard": 0.24,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0.8
+      },
+      "source_handle": "bricsinfo",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "verification_count": 4,
+      "verified_at": "2026-04-19T03:10:53.849Z",
+      "created_at": "2026-04-15T00:00:47.654Z",
+      "original_source": "Not specified in the provided context.",
+      "claim_date": "2026-04-14",
+      "supporting_sources": [
+        {
+          "name": "Modern Diplomacy",
+          "excerpt": "A Chinese tanker named Rich Starry has passed through the Strait of Hormuz despite an ongoing United States blockade of the critical maritime chokepoint.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6RLtb-fdgi8LkA2R2KD4O7PnGtM-HLW5hS9JSJJT7m3iYKozKQpruUvgPa4un-DFGfVTYD6qvdyLiF_AwJP0n1ez06jyzKXnefbUaYvl11pW1yeRe1Yy6BafLSyoPDiw1I2XM7ku_ocZIWqq69--kOtPznQOiOCpYPB9-1UyS8JTCcatrvd9qJ8JLieSp4S7UloL0Xg=="
+        },
+        {
+          "name": "TRT World",
+          "excerpt": "A Chinese-owned tanker under US sanctions has transited the Strait of Hormuz, marking the first known passage through the strategic waterway since the current blockade took hold.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGigO8-ijOD6uNCAPzM3g82QF4XxW8WnD6MFE8i95TM0FCxIlO7hkzCmqTYFbYqYHYmBouRg1UbiCtVhnIg94nFiRrk6YiAeklYUWgFcte4rtPqqqn1pNYcv4uEvlQJYb_BTqKJJYYSIw=="
+        },
+        {
+          "name": "TVP World",
+          "excerpt": "The Rich Starry would be the first to make it through the strait and to exit the Gulf since the blockade began, data from LSEG, MarineTraffic and Kpler showed.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGigO8-ijOD6uNCAPzM3g82QF4XxW8WnD6MFE8i95TM0FCxIlO7hkzCmqTYFbYqYHYmBouRg1UbiCtVhnIg94nFiRrk6YiAeklYUWgFcte4rtPqqqn1pNYcv4uEvlQJYb_BTqKJJYYSIw=="
+        },
+        {
+          "name": "vesseltracker.com",
+          "excerpt": "The 'Rich Starry' sailed unhindered through the Strait of Hormuz on the night of April 13, 2026, enroute to Sohar.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "The Quint",
+          "excerpt": "The US-imposed naval blockade on Iranian ports in the Strait of Hormuz has resulted in the US-sanctioned tanker Rich Starry reversing course and returning to the strait after an unsuccessful attempt to exit the Gulf.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFIEcGQn1rLw9GY1ZhZZsA3OW9Pf-SQNeCt2K88lW7VfgfRGOhf7cD-Hi1xZ7TuNSX6l15M51rPQhwfKqWF2ZckrcfSMcwbs2QZMCEoLWHpTnc5Y5sepXya1YxSOiqtytsva2QHlJfilDSW2BErCkO8qZrdqYpRF0dEYM4n2wHiX82r6_K0saTjjXOfGr7eVuCP4G1V1ERd6Ej1g=="
+        },
+        {
+          "name": "Current time information in Qeshm, IR",
+          "excerpt": "A Chinese tanker under sanctions, Rich Starry, has returned to the Strait of Hormuz after earlier slipping past the U.S. Navy blockade and entering the Persian Gulf.",
+          "url": null
+        }
+      ],
+      "framing_analysis": "The claim is framed to highlight a perceived failure of the US naval blockade. While the tanker did transit, the framing might be misleading by implying a completely unhindered passage without any initial US intervention or compliance, and by not fully clarifying the specific scope of the blockade.",
+      "web_search_summary": "The US-sanctioned Chinese tanker Rich Starry did transit the Strait of Hormuz amidst a US naval blockade that began on April 13, 2026. While some reports indicate it initially slipped past or sailed unhindered, others suggest it was among vessels that initially complied with US Navy instructions to turn back before ultimately completing its transit. The blockade was primarily aimed at ships going to and from Iranian ports, and the Rich Starry had loaded cargo in the UAE, not Iran.",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "claim_98",
       "claim_text": "4 Chinese cargo planes allegedly switched off their transponders and landed in Iran carrying arms and ammunition.",
       "status": "unverified",
@@ -2441,6 +2405,163 @@
       ],
       "framing_analysis": "The claim is framed as an allegation, using cautious language like 'allegedly.' However, the act of switching off transponders is often presented as highly suspicious and indicative of illicit activity, implying a covert operation without definitive proof of the cargo's nature.",
       "web_search_summary": "Reports circulating among intelligence and defense monitoring communities allege that four Chinese cargo planes switched off their transponders and landed in Iran within a 48-hour window, potentially carrying arms and ammunition. While multiple news outlets have reported on these allegations, no official confirmation from any government or independent verification of the cargo or landings has been provided. Chinese officials have explicitly denied providing weapons to Iran, calling such reports untrue and baseless.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_37",
+      "claim_text": "President Trump announced on Fox News that the Iran War is over.",
+      "status": "unverified",
+      "confidence_score": 0.35,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": "rawsalerts",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 3,
+      "verified_at": "2026-04-19T03:10:53.849Z",
+      "created_at": "2026-04-15T00:51:47.508Z",
+      "original_source": "President Trump on Fox News/Fox Business (specifically in an interview with Maria Bartiromo)",
+      "claim_date": "2026-04-14",
+      "supporting_sources": [
+        {
+          "name": "RBC-Ukraine",
+          "excerpt": "US President Donald Trump has declared the completion of the military operation against the Iranian regime, according to the Instagram account of Fox News journalist Maria Bartiromo.",
+          "url": null
+        },
+        {
+          "name": "Fox News",
+          "excerpt": "Maria Bartiromo on Tuesday posted a short “curtain raiser” clip on X ahead of her full interview with US President Donald Trump airing tomorrow on Fox. In the clip, she says she repeatedly asked Trump, Mr. President you refer to war as was, is it over? and Trump responds: It is over.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu3RfktUPoEmZjJ-4mjtGxPPl7C_sIASzIRPyKNLgxfR475yVmvFEVQk23HyXtsePXCDtzE8Dbf66IW-20KaZ-Xnd3cKHLb7c8pfjBiiH3bi-TuS4KxOQg5-mqxtZkof4h9Q-31iI4qAyKXfwHYlJX_zCPMW7_UcIe4O1uYrzJ0YIyaYaplAZVczuIFo_dqC_2ng15kv4cw7jWhOQqPPN5cAF2qXnzu_VIF8w="
+        },
+        {
+          "name": "CBS News",
+          "excerpt": "President Trump is again voicing optimism about a potential deal with Iran to end the war currently paused by a two-week ceasefire. Mr. Trump told Fox News the conflict is \"very close to over\" as he and Pakistan's leader suggest a new round of direct U.S.-Iran peace talks could be looming.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu3RfktUPoEmZjJ-4mjtGxPPl7C_sIASzIRPyKNLgxfR475yVmvFEVQk23HyXtsePXCDtzE8Dbf66IW-20KaZ-Xnd3cKHLb7c8pfjBiiH3bi-TuS4KxOQg5-mqxtZkof4h9Q-31iI4qAyKXfwHYlJX_zCPMW7_UcIe4O1uYrzJ0YIyaYaplAZVczuIFo_dqC_2ng15kv4cw7jWhOQqPPN5cAF2qXnzu_VIF8w="
+        },
+        {
+          "name": "Time Magazine",
+          "excerpt": "President Donald Trump has said that he believes the war with Iran is “very close to over” after suggesting that negotiations with Iran will resume this week.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEM2tWRiBa-WF9dCV-glRkG79raJHzAR-0U1zijBGxKxfP4l6bsFTy6xGBIa1JN7TSdMaP_Kz_yTPBZeKx-dtFpUUD6Xzsn7bx6TD_meVJR26rExO-yC2x06FFRagATT2y8J00VTBSJD9oI0LuHn4de4ZVQGwpM9yYFCHsk9GY="
+        },
+        {
+          "name": "Fox Business",
+          "excerpt": "President Donald Trump said the U.S.-Iran war is \"very close\" to an end as hostilities ease amid a two-week ceasefire agreement.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9OujBuAhex5m-CNYzlXm2khJmd5bB8hxFjQM3MeGwbF56_4lOIuhiG_TkkSc9LN3jDf4xHJ9M7zXrrb_SpYf91kT2LKsASKqJiiCZCmpiHS7cRI6HgBTLUoTjbt2Yhnzuqq4GeiJeJar362SpIfDNImX1ciRdmx0CsCPa9ziP466SiJ-LI0BWJk6TmHOoOMrtM1VQvGfXTY4sxr0QrjmS"
+        },
+        {
+          "name": "CGTN",
+          "excerpt": "Fox News reporter Maria Bartiromo said in a social media post on Tuesday that United States President Donald Trump had told her Iran war was \"very close to over.\"",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfvVyLaB3bVkq2gSDVxeC5pTUvbnA0ZIDeGbcDE_OsmEwfihOaDew2OelJdQ52pGCquKCnxZFfhAZ1ROF-i4g5t0S_yuVPKEygqNC-jVBmoQL_6OTdWsqpPjrDRn8ZfSCHYBW-iXay3fmB7EIY4mXsBESfRSa7GJY="
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "CBS News",
+          "excerpt": "The Iranian regime is challenging the U.S. military's claim to have \"completely halted economic trade going into and out of Iran by sea,\" and is again threatening to impede commercial shipping in another vital Middle Eastern waterway if the American blockade of its ports continues.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu3RfktUPoEmZjJ-4mjtGxPPl7C_sIASzIRPyKNLgxfR475yVmvFEVQk23HyXtsePXCDtzE8Dbf66IW-20KaZ-Xnd3cKHLb7c8pfjBiiH3bi-TuS4KxOQg5-mqxtZkof4h9Q-31iI4qAyKXfwHYlJX_zCPMW7_UcIe4O1uYrzJ0YIyaYaplAZVczuIFo_dqC_2ng15kv4cw7jWhOQqPPN5cAF2qXnzu_VIF8w="
+        },
+        {
+          "name": "RBC-Ukraine",
+          "excerpt": "The two-week ceasefire between the US and Iran, brokered by Pakistan, proved fragile. The negotiations in Islamabad on a permanent end to the war failed due to Tehran's refusal to meet key demands – to abandon its nuclear program and stop supporting proxy forces.",
+          "url": null
+        },
+        {
+          "name": "The Times of Israel",
+          "excerpt": "She says Trump expressed the stance during an interview that will air on Wednesday. The comments would appear to undermine Trump's threats to resume the war if Iran doesn't agree to his terms for a permanent ceasefire.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGeQj0w56Y3vza9bv6cpC_TBu9wQ0pvjSUjglGS7hAKH_rbaKnLYN41aQdt8N-3SakpUVzlt-NJXqbmTNjRkqLM_PyHrUAjYILsb3BpFZt3thLC18U9yJVs7a4qjQaiqJ1f-_sq4X9Ittg5jbZgfzCfFWAH1uA3vakE9ugStSKcDVTyuhExfklYy3GQ8LMGgxF3yV9jVWzhI5t3xfG83-eu1Du30P79rKIz87O79VmPeU="
+        },
+        {
+          "name": "Fox News",
+          "excerpt": "A U.S. military blockade on Iranian ports remains in effect, according to Trump.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu3RfktUPoEmZjJ-4mjtGxPPl7C_sIASzIRPyKNLgxfR475yVmvFEVQk23HyXtsePXCDtzE8Dbf66IW-20KaZ-Xnd3cKHLb7c8pfjBiiH3bi-TuS4KxOQg5-mqxtZkof4h9Q-31iI4qAyKXfwHYlJX_zCPMW7_UcIe4O1uYrzJ0YIyaYaplAZVczuIFo_dqC_2ng15kv4cw7jWhOQqPPN5cAF2qXnzu_VIF8w="
+        },
+        {
+          "name": "Time Magazine",
+          "excerpt": "In his interview with Fox, Trump said: “If I pulled up stakes right now, it would take them 20 years to rebuild that country, and we're not finished,” claiming that Iran wants “to make a deal very badly” following failed negotiations between the U.S. and Iran in Pakistan over the weekend.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEM2tWRiBa-WF9dCV-glRkG79raJHzAR-0U1zijBGxKxfP4l6bsFTy6xGBIa1JN7TSdMaP_Kz_yTPBZeKx-dtFpUUD6Xzsn7bx6TD_meVJR26rExO-yC2x06FFRagATT2y8J00VTBSJD9oI0LuHn4de4ZVQGwpM9yYFCHsk9GY="
+        },
+        {
+          "name": "Fox Business",
+          "excerpt": "On Monday, Trump instituted a naval blockade of all Iranian ports, marking a fresh intensification of the conflict after the U.S. agreed to stop bombing Iran last week.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9OujBuAhex5m-CNYzlXm2khJmd5bB8hxFjQM3MeGwbF56_4lOIuhiG_TkkSc9LN3jDf4xHJ9M7zXrrb_SpYf91kT2LKsASKqJiiCZCmpiHS7cRI6HgBTLUoTjbt2Yhnzuqq4GeiJeJar362SpIfDNImX1ciRdmx0CsCPa9ziP466SiJ-LI0BWJk6TmHOoOMrtM1VQvGfXTY4sxr0QrjmS"
+        },
+        {
+          "name": "White House official (Stephen Miller) via Fox News",
+          "excerpt": "Speaking to Fox News amid the blockade, Miller warned: “This embargo is squeezing the economic life out of the Iranian regime, and the United States has the capacity to continue this indefinitely if Iran chooses the wrong path.”",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu3RfktUPoEmZjJ-4mjtGxPPl7C_sIASzIRPyKNLgxfR475yVmvFEVQk23HyXtsePXCDtzE8Dbf66IW-20KaZ-Xnd3cKHLb7c8pfjBiiH3bi-TuS4KxOQg5-mqxtZkof4h9Q-31iI4qAyKXfwHYlJX_zCPMW7_UcIe4O1uYrzJ0YIyaYaplAZVczuIFo_dqC_2ng15kv4cw7jWhOQqPPN5cAF2qXnzu_VIF8w="
+        }
+      ],
+      "framing_analysis": "The claim is framed as a direct announcement from President Trump. While he did make such a statement, the broader context provided by news reports, including those from Fox News, indicates that the conflict with Iran was still ongoing at the time of his declaration, making the claim misleading in its implication that the war had actually concluded.",
+      "web_search_summary": "President Trump stated on Fox News that the Iran War was \"over\" or \"very close to over\" in mid-April 2026. However, contemporaneous reports from the same outlets and others indicate that a conflict with Iran was ongoing, with a naval blockade in effect, failed peace talks, and continued military actions and threats from both sides.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_44",
+      "claim_text": "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases.",
+      "status": "unverified",
+      "confidence_score": 0.35,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": "shaykhsulaiman",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_global_power_realignments_v1",
+      "verification_count": 1,
+      "verified_at": "2026-04-19T03:10:53.849Z",
+      "created_at": "2026-04-15T05:00:38.823Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null,
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_45",
+      "claim_text": "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S. military bases.",
+      "status": "unverified",
+      "confidence_score": 0.35,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": "shaykhsulaiman",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_digital_supply_chain_security",
+      "verification_count": 1,
+      "verified_at": "2026-04-19T03:10:53.849Z",
+      "created_at": "2026-04-15T05:26:09.055Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null,
       "investigation_depth": "quick"
     },
     {
@@ -2548,68 +2669,6 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim is framed misleadingly by suggesting 'images' directly 'implicate' Trump in pedophilia. While the Epstein files do contain uncorroborated allegations of sexual assault of a minor against Trump, and mentions of photos with 'topless young women,' there is no confirmed evidence from images that directly proves pedophilia as implied by the claim.",
       "web_search_summary": "{\"ve_",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_36",
-      "claim_text": "US-sanctioned Chinese tanker Rich Starry successfully transited the Strait of Hormuz despite US naval blockade.",
-      "status": "unverified",
-      "confidence_score": 0.286,
-      "scoring_breakdown": {
-        "source_tier": 0.4,
-        "newsguard": 0.24,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0.8
-      },
-      "source_handle": "bricsinfo",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "verification_count": 3,
-      "verified_at": "2026-04-17T17:45:59.032Z",
-      "created_at": "2026-04-15T00:00:47.654Z",
-      "original_source": "Not specified in the provided context.",
-      "claim_date": "2026-04-14",
-      "supporting_sources": [
-        {
-          "name": "Modern Diplomacy",
-          "excerpt": "A Chinese tanker named Rich Starry has passed through the Strait of Hormuz despite an ongoing United States blockade of the critical maritime chokepoint.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6RLtb-fdgi8LkA2R2KD4O7PnGtM-HLW5hS9JSJJT7m3iYKozKQpruUvgPa4un-DFGfVTYD6qvdyLiF_AwJP0n1ez06jyzKXnefbUaYvl11pW1yeRe1Yy6BafLSyoPDiw1I2XM7ku_ocZIWqq69--kOtPznQOiOCpYPB9-1UyS8JTCcatrvd9qJ8JLieSp4S7UloL0Xg=="
-        },
-        {
-          "name": "TRT World",
-          "excerpt": "A Chinese-owned tanker under US sanctions has transited the Strait of Hormuz, marking the first known passage through the strategic waterway since the current blockade took hold.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGigO8-ijOD6uNCAPzM3g82QF4XxW8WnD6MFE8i95TM0FCxIlO7hkzCmqTYFbYqYHYmBouRg1UbiCtVhnIg94nFiRrk6YiAeklYUWgFcte4rtPqqqn1pNYcv4uEvlQJYb_BTqKJJYYSIw=="
-        },
-        {
-          "name": "TVP World",
-          "excerpt": "The Rich Starry would be the first to make it through the strait and to exit the Gulf since the blockade began, data from LSEG, MarineTraffic and Kpler showed.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGigO8-ijOD6uNCAPzM3g82QF4XxW8WnD6MFE8i95TM0FCxIlO7hkzCmqTYFbYqYHYmBouRg1UbiCtVhnIg94nFiRrk6YiAeklYUWgFcte4rtPqqqn1pNYcv4uEvlQJYb_BTqKJJYYSIw=="
-        },
-        {
-          "name": "vesseltracker.com",
-          "excerpt": "The 'Rich Starry' sailed unhindered through the Strait of Hormuz on the night of April 13, 2026, enroute to Sohar.",
-          "url": null
-        }
-      ],
-      "dissenting_sources": [
-        {
-          "name": "The Quint",
-          "excerpt": "The US-imposed naval blockade on Iranian ports in the Strait of Hormuz has resulted in the US-sanctioned tanker Rich Starry reversing course and returning to the strait after an unsuccessful attempt to exit the Gulf.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFIEcGQn1rLw9GY1ZhZZsA3OW9Pf-SQNeCt2K88lW7VfgfRGOhf7cD-Hi1xZ7TuNSX6l15M51rPQhwfKqWF2ZckrcfSMcwbs2QZMCEoLWHpTnc5Y5sepXya1YxSOiqtytsva2QHlJfilDSW2BErCkO8qZrdqYpRF0dEYM4n2wHiX82r6_K0saTjjXOfGr7eVuCP4G1V1ERd6Ej1g=="
-        },
-        {
-          "name": "Current time information in Qeshm, IR",
-          "excerpt": "A Chinese tanker under sanctions, Rich Starry, has returned to the Strait of Hormuz after earlier slipping past the U.S. Navy blockade and entering the Persian Gulf.",
-          "url": null
-        }
-      ],
-      "framing_analysis": "The claim is framed to highlight a perceived failure of the US naval blockade. While the tanker did transit, the framing might be misleading by implying a completely unhindered passage without any initial US intervention or compliance, and by not fully clarifying the specific scope of the blockade.",
-      "web_search_summary": "The US-sanctioned Chinese tanker Rich Starry did transit the Strait of Hormuz amidst a US naval blockade that began on April 13, 2026. While some reports indicate it initially slipped past or sailed unhindered, others suggest it was among vessels that initially complied with US Navy instructions to turn back before ultimately completing its transit. The blockade was primarily aimed at ships going to and from Iranian ports, and the Rich Starry had loaded cargo in the UAE, not Iran.",
       "investigation_depth": "quick"
     },
     {
