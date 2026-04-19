@@ -89,91 +89,6 @@ function formatQuotedSources() {
 }
 
 /**
- * Format capture detection status — compact summary for browse/tweet prompts.
- * Reads state/capture_state.json written by capture_detection.js.
- */
-function formatCaptureStatus() {
-  try {
-    const fp = path.join(config.STATE_DIR, 'capture_state.json');
-    const c = JSON.parse(fs.readFileSync(fp, 'utf-8'));
-    if (!c || !c.status) return '(capture detection not yet run)';
-    if (c.status === 'clean') return c.summary || 'Clean — no capture alerts.';
-    // warning or captured — show alerts
-    const lines = [`Status: ${c.status.toUpperCase()} (${c.evidence_24h} evidence entries, ${c.unique_sources} sources)`];
-    for (const a of (c.alerts || [])) {
-      lines.push(`  [${a.severity.toUpperCase()}] ${a.detail}`);
-    }
-    return lines.join('\n');
-  } catch {
-    return '(capture detection not yet run)';
-  }
-}
-
-/**
- * Format cadence state for browse prompt.
- * Shows Sebastian's current self-regulated assessment, directives, and recent history.
- */
-function formatCadence() {
-  try {
-    const m = JSON.parse(fs.readFileSync(
-      path.join(config.STATE_DIR, 'cadence.json'), 'utf-8'));
-    const a = m.assessment || {};
-    const d = m.directives || {};
-    const lines = [
-      'Current assessment:',
-      '  Signal density: ' + (a.signal_density || '?'),
-      '  Belief velocity: ' + (a.belief_velocity || '?'),
-      '  Post pressure: ' + (a.post_pressure || '?'),
-      '  Staleness: ' + (a.staleness || '?'),
-    ];
-    if (a.focus_note) lines.push('  Focus note: ' + a.focus_note);
-    lines.push('Current directives:');
-    lines.push('  Cycle interval: ' + (d.cycle_interval_sec || 1800) + 's');
-    lines.push('  Next cycle type: ' + (d.next_cycle_type || 'auto'));
-    lines.push('  Browse depth: ' + (d.browse_depth || 'normal'));
-    lines.push('  Post eagerness: ' + (d.post_eagerness || 'normal'));
-    lines.push('  Curiosity intensity: ' + (d.curiosity_intensity || 'normal'));
-    lines.push('  Consecutive overrides: ' + (m.consecutive_overrides || 0) + '/3');
-    if (m.last_assessed) lines.push('  Last assessed: ' + m.last_assessed);
-    return lines.join('\n');
-  } catch {
-    return '(cadence not yet initialized)';
-  }
-}
-
-/**
- * Load current proposal status — compact summary for browse prompt.
- */
-function loadProposalStatus() {
-  try {
-    const p = JSON.parse(fs.readFileSync(
-      path.join(config.STATE_DIR, 'process_proposal.json'), 'utf-8'));
-    return `Proposal "${p.title}" — status: ${p.status} (${p.scope}, risk: ${p.estimated_risk})`;
-  } catch {
-    return '(no active proposal)';
-  }
-}
-
-/**
- * Load proposal history — compact summary of past proposals and outcomes.
- */
-function loadProposalHistory() {
-  try {
-    const h = JSON.parse(fs.readFileSync(
-      path.join(config.STATE_DIR, 'proposal_history.json'), 'utf-8'));
-    const proposals = h.proposals || [];
-    if (proposals.length === 0) return '(no proposals yet)';
-    return proposals.slice(-5).map(p =>
-      `- [${p.status}] "${p.title}" (${p.resolved_at?.slice(0, 10) || '?'})` +
-      (p.resolution_notes ? ` — ${p.resolution_notes.slice(0, 80)}` : '') +
-      (p.reverted ? ' [REVERTED]' : '')
-    ).join('\n');
-  } catch {
-    return '(no proposal history)';
-  }
-}
-
-/**
  * Load sprint context with active_plan.json fallback (tweet prompt).
  */
 function loadActivePlanContext() {
@@ -351,49 +266,6 @@ function formatUnresolvedClaims() {
   } catch { return '(no open claims)'; }
 }
 
-function formatIntelligenceTensions() {
-  try {
-    const p = path.join(config.STATE_DIR, 'intelligence_export.json');
-    if (!fs.existsSync(p)) return '(no intelligence export)';
-    const intel = JSON.parse(fs.readFileSync(p, 'utf-8'));
-
-    const categories = intel.categories || {};
-    const contradictions = intel.contradictions || [];
-
-    // Claims from all categories, ranked by total evidence activity
-    const allClaims = Object.values(categories)
-      .flatMap(c => c.claims || [])
-      .filter(c => (c.corroborating_count || 0) + (c.contradicting_count || 0) > 0)
-      .sort((a, b) =>
-        (b.corroborating_count + b.contradicting_count) -
-        (a.corroborating_count + a.contradicting_count))
-      .slice(0, 5);
-
-    let out = `Conflict tracker (iran-us-israel): ${intel.claim_count || 0} claims across ${Object.keys(categories).length} categories\n`;
-
-    if (contradictions.length) {
-      out += `Active contradictions (${contradictions.length} total — top 3):\n`;
-      for (const c of contradictions.slice(0, 3)) {
-        const s0 = (c.sides && c.sides[0] && c.sides[0].claim_text || '').slice(0, 80);
-        const s1 = (c.sides && c.sides[1] && c.sides[1].claim_text || '').slice(0, 80);
-        out += `  [${c.category || '?'}] "${s0}" ↔ "${s1}"\n`;
-      }
-    }
-
-    if (allClaims.length) {
-      out += `Most corroborated claims:\n`;
-      for (const c of allClaims) {
-        const handle = c.source_handle ? `@${c.source_handle}: ` : '';
-        out += `  +${c.corroborating_count || 0}/-${c.contradicting_count || 0} ${handle}${c.claim_text.slice(0, 100)}\n`;
-      }
-    }
-
-    return out.trim();
-  } catch {
-    return '(intelligence export unavailable)';
-  }
-}
-
 function formatEngagementSummary() {
   try {
     const p = config.ENGAGEMENT_SUMMARY_PATH;
@@ -465,29 +337,10 @@ function loadContext(opts) {
     ctx.readingBlock      = buildReadingBlock();
     ctx.prefetchSource    = readState(config.PREFETCH_SOURCE_PATH, { fallback: '' }).trim();
     ctx.unresolvedClaims  = formatUnresolvedClaims();
-    ctx.intelTensions     = formatIntelligenceTensions();
-    ctx.memoryRecall      = readState(config.MEMORY_RECALL_PATH, { fallback: '(empty)' });
     ctx.currentAxes       = formatCurrentAxes();
-    ctx.cadence            = formatCadence();
-    ctx.captureStatus     = formatCaptureStatus();
     ctx.vocation          = formatVocation();
     ctx.journalTask       = buildJournalTask('browse', today, hour, dayNumber);
     ctx.nextTweet         = (Math.floor(cycle / config.TWEET_EVERY) + 1) * config.TWEET_EVERY;
-
-    // META cycle awareness: load proposal + history so Sebastian sees outcomes
-    ctx.proposalStatus    = loadProposalStatus();
-    ctx.proposalHistory   = loadProposalHistory();
-
-    // Tool system
-    ctx.toolManifest      = buildToolManifest();
-    ctx.lastToolResult    = loadLastToolResult();
-
-    // Silent-hours sprint detection (UTC 23-07: feed is stale, redirect to sprint work)
-    const hourInt = parseInt(hour, 10);
-    ctx.isSilentHours = hourInt < config.TWEET_START || hourInt >= config.TWEET_END;
-    ctx.hasActiveSprint = ctx.sprintContext &&
-      ctx.sprintContext.trim() !== '(no active plan)' &&
-      ctx.sprintContext.trim() !== '(no active sprint)';
   }
 
   if (type === 'quote') {
@@ -496,8 +349,6 @@ function loadContext(opts) {
     ctx.quotedSources     = formatQuotedSources();
     ctx.digest            = readState(config.FEED_DIGEST_PATH, { tail: 120, fallback: '(not available)' });
     ctx.topAxes           = formatTopAxes();
-    ctx.memoryRecall      = readState(config.MEMORY_RECALL_PATH, { fallback: '(empty)' });
-    ctx.postingDirective  = readState(config.POSTING_DIRECTIVE_PATH, { fallback: '' });
     ctx.lastToolResult    = loadLastToolResult();
   }
 
@@ -507,8 +358,6 @@ function loadContext(opts) {
     ctx.discourseDigest   = readState(config.DISCOURSE_DIGEST_PATH, { fallback: '(no discourse yet)' });
     ctx.activePlanContext = loadActivePlanContext();
     ctx.currentAxes       = formatCurrentAxes();
-    ctx.captureStatus     = formatCaptureStatus();
-    ctx.postingDirective  = readState(config.POSTING_DIRECTIVE_PATH, { fallback: '' });
     ctx.vocation          = formatVocation();
     ctx.journalTask       = buildJournalTask('tweet', today, hour, dayNumber);
     ctx.toolManifest      = buildToolManifest();
@@ -527,8 +376,6 @@ module.exports.formatQuotedSources = formatQuotedSources;
 module.exports.loadActivePlanContext = loadActivePlanContext;
 module.exports.buildReadingBlock = buildReadingBlock;
 module.exports.buildJournalTask = buildJournalTask;
-module.exports.formatCadence = formatCadence;
-module.exports.formatCaptureStatus = formatCaptureStatus;
 
 // CLI: dump context as JSON for debugging
 if (require.main === module) {

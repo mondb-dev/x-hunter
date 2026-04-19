@@ -8,9 +8,9 @@ const RUNNER_DIR = path.join(PROJECT_ROOT, 'runner');
 
 module.exports = {
   // ── Timing ────────────────────────────────────────────────────────────────
-  BROWSE_INTERVAL: 1800,       // 30 min default \u2014 cadence can override [900-3600]
-  TWEET_EVERY: 6,              // tweet on cycles 6, 12, 18, ... (default, cadence can override)
-  QUOTE_OFFSET: 3,             // quote-tweet on cycles 3, 9, 15, ... (default)
+  BROWSE_INTERVAL: 1800,       // 30 minutes in seconds
+  TWEET_EVERY: 6,              // tweet on cycles 6, 12, 18, ... (every 2 hours)
+  QUOTE_OFFSET: 3,             // quote-tweet on cycles 3, 9, 15, ... (midpoint)
   CURIOSITY_EVERY: 12,         // refresh curiosity directive every ~4h
 
   // ── Hours (UTC) ───────────────────────────────────────────────────────────
@@ -18,7 +18,7 @@ module.exports = {
   TWEET_END: 23,               // latest hour (exclusive)
 
   // ── Ports ─────────────────────────────────────────────────────────────────
-  CDP_PORT: 18801,             // Chrome DevTools Protocol port
+  GATEWAY_PORT: 18789,         // openclaw gatels Protocol port
 
   // ── Dates ─────────────────────────────────────────────────────────────────
   AGENT_START_DATE: '2026-02-23',
@@ -44,63 +44,32 @@ module.exports = {
   SPRINT_CONTEXT_PATH: path.join(STATE_DIR, 'sprint_context.txt'),
   DISCOURSE_DIGEST_PATH: path.join(STATE_DIR, 'discourse_digest.txt'),
   READING_URL_PATH: path.join(STATE_DIR, 'reading_url.txt'),
-  CLAIM_TRACKER_PATH: path.join(STATE_DIR, 'claim_tracker.json'),
-  CLAIM_TRACKER_DELTA_PATH: path.join(STATE_DIR, 'claim_tracker_delta.json'),
-  EXTERNAL_SOURCES_PATH: path.join(STATE_DIR, 'external_sources.json'),
-  RESEARCH_BRIEFS_PATH: path.join(STATE_DIR, 'research_briefs.json'),
   MEMORY_RECALL_PATH: path.join(STATE_DIR, 'memory_recall.txt'),
   CRITIQUE_PATH: path.join(STATE_DIR, 'critique.md'),
-  ARTICLE_META_PATH: path.join(STATE_DIR, 'article_meta.md'),
-  PREFETCH_SOURCE_PATH: path.join(STATE_DIR, 'prefetch_source.txt'),
-  SOURCE_PLAN_PATH: path.join(STATE_DIR, 'source_plan.json'),
-  SIGNAL_DRAFT_PATH: path.join(STATE_DIR, 'signal_draft.txt'),
-  SIGNAL_LOG_PATH: path.join(STATE_DIR, 'signal_log.jsonl'),
-  VERIFICATION_EXPORT_PATH: path.join(STATE_DIR, 'verification_export.json'),
-  VERIFICATION_DRAFT_PATH: path.join(STATE_DIR, 'verification_draft.txt'),
-  PREDICTION_DRAFT_PATH: path.join(STATE_DIR, 'prediction_draft.txt'),
-  PREDICTION_LOG_PATH: path.join(STATE_DIR, 'prediction_log.jsonl'),
-  CADENCE_PATH: path.join(STATE_DIR, 'cadence.json'),
-  X_CONTROL_PATH: path.join(STATE_DIR, 'x_control.json'),
-  CAPTURE_STATE_PATH: path.join(STATE_DIR, 'capture_state.json'),
-  POSTING_DIRECTIVE_PATH: path.join(STATE_DIR, 'posting_directive.txt'),
   COMMENT_CANDIDATES_PATH: path.join(STATE_DIR, 'comment_candidates.txt'),
   BROWSE_ARCHIVE_PATH: path.join(STATE_DIR, 'browse_archive.md'),
   ACTIVE_PLAN_PATH: path.join(STATE_DIR, 'active_plan.json'),
-  ENGAGEMENT_SUMMARY_PATH: path.join(STATE_DIR, 'engagement_summary.json'),
-  TRAJECTORY_SUMMARY_PATH: path.join(STATE_DIR, 'trajectory_summary.txt'),
   LAST_DAILY_PATH: path.join(STATE_DIR, 'last_daily_at.txt'),
   HEARTBEAT_PATH: path.join(PROJECT_ROOT, 'HEARTBEAT.md'),
-  INDEX_DB_PATH: path.join(STATE_DIR, 'index.db'),
-
-  // META cycle state
-  PROCESS_PROPOSAL_PATH: path.join(STATE_DIR, 'process_proposal.json'),
-  PROPOSAL_HISTORY_PATH: path.join(STATE_DIR, 'proposal_history.json'),
-  PROCESS_REFLECTION_STATE_PATH: path.join(STATE_DIR, 'process_reflection_state.json'),
-  META_LAST_RUN_PATH: path.join(STATE_DIR, 'meta_last_run.txt'),
-  META_FAILURE_STATE_PATH: path.join(STATE_DIR, 'meta_failure_count.json'),
-
-  // Infra request (§21 — operator-approved provisioning)
-  INFRA_REQUEST_PATH: path.join(STATE_DIR, 'infra_request.json'),
-  INFRA_REQUEST_LOG_PATH: path.join(STATE_DIR, 'infra_request_log.jsonl'),
-  STAGING_DIR: path.join(PROJECT_ROOT, 'staging'),
-
-  // Tool system
-  TOOLS_DIR: path.join(PROJECT_ROOT, 'tools'),
-  TOOL_REQUEST_PATH: path.join(STATE_DIR, 'tool_request.json'),
-  TOOL_RESULT_PATH: path.join(STATE_DIR, 'tool_result.json'),
-  TOOL_TIMEOUT_MS: 30_000,
-  WORKFLOW_TIMEOUT_MS: 120_000,
-  SANDBOXES_DIR: path.join(STATE_DIR, 'sandboxes'),
-  SANDBOX_REAP_MAX_AGE_MS: 6 * 60 * 60 * 1000,
-  SANDBOX_STDIO_MAX_BYTES: 64 * 1024,
-  SANDBOX_MAX_OLD_SPACE_MB: 96,
+  INDEX_D  ARTICLE_META_PATH: path.join(STATE_DIR, 'article_meta.md'),
+B_PATH: path.join(STATE_DIR, 'index.db'),
 
   // Runner files
   RUNNER_LOG_PATH: path.join(RUNNER_DIR, 'runner.log'),
   ORCHESTRATOR_LOG_PATH: path.join(RUNNER_DIR, 'orchestrator.log'),
   LOCKDIR: path.join(RUNNER_DIR, 'run.lock'),
-  PIDFILE: path.join(RUNNER_DIR, 'run.pid'),
+  PIDFILE: path.join(RUN  VERIFICATION_EXPORT_PATH: path.join(STATE_DIR, 'verification_export.json'),
+  VERIFICATION_DRAFT_PATH: path.join(STATE_DIR, 'verification_draft.txt'),
+  PREDICTION_DRAFT_PATH: path.join(STATE_DIR, 'prediction_draft.txt'),
+  PREDICTION_LOG_PATH: path.join(STATE_DIR, 'prediction_log.jsonl'),
+NER_DIR, 'run.pid'),
   PAUSE_FILE: path.join(RUNNER_DIR, 'PAUSE'),
+
+  // External logs
+  GATEWAY_ERR_LOG: path.join(
+    process.env.HOME || '',
+    '.openclaw-x-hunter/logs/gateway.err.log'
+  ),
 
   // ── Log rotation limits ───────────────────────────────────────────────────
   RUNNER_LOG_MAX_LINES: 5000,
@@ -108,3 +77,5 @@ module.exports = {
   DIGEST_MAX_LINES: 3000,
   BROWSE_ARCHIVE_MAX_LINES: 6000,
 };
+  ENGAGEMENT_SUMMARY_PATH: path.join(STATE_DIR, 'engagement_summary.json'),
+  TRAJECTORY_SUMMARY_PATH: path.join(STATE_DIR, 'trajectory_summary.txt'),

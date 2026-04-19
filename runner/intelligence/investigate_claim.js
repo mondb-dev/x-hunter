@@ -216,24 +216,6 @@ async function run() {
 
   // Persist if not dry-run
   if (!opts.dryRun) {
-    // Save investigation
-    vdb.insertInvestigation({
-      investigation_id: invId,
-      claim_id:         claimId,
-      claim_text:       claimText,
-      sub_questions:    result.sub_questions || [],
-      attribution_chain: result.attribution_chain || [],
-      supporting_evidence: result.supporting_evidence || [],
-      contradicting_evidence: result.contradicting_evidence || [],
-      overall_verdict:  result.overall_verdict,
-      confidence:       result.confidence,
-      summary:          result.summary,
-      key_finding:      result.key_finding,
-      raw_result:       result,
-      turns_used:       0, // TODO: pass turns from agent
-      duration_seconds: durationSec,
-    });
-
     // Build source summary from investigation evidence
     const supportingSources = (result.supporting_evidence || []).map(e => ({
       name: `${e.domain || 'Unknown'}: ${(e.quote || e.relevance || '').slice(0, 120)}`,
@@ -244,7 +226,7 @@ async function run() {
       stance: 'contradicting',
     }));
 
-    // Upsert the claim verification with deep investigation data
+    // Upsert claim_verifications first — insertInvestigation has a FK on this table
     vdb.upsertVerification({
       claim_id:           claimId,
       claim_source:       existing?.claim_source || 'live',
@@ -264,6 +246,24 @@ async function run() {
       dissenting_sources: dissentingSources.length ? dissentingSources : null,
       framing_analysis:   result.key_finding || existing?.framing_analysis || null,
       created_at:         existing?.created_at || new Date().toISOString(),
+    });
+
+    // Save investigation (FK on claim_verifications, so must come after upsertVerification)
+    vdb.insertInvestigation({
+      investigation_id: invId,
+      claim_id:         claimId,
+      claim_text:       claimText,
+      sub_questions:    result.sub_questions || [],
+      attribution_chain: result.attribution_chain || [],
+      supporting_evidence: result.supporting_evidence || [],
+      contradicting_evidence: result.contradicting_evidence || [],
+      overall_verdict:  result.overall_verdict,
+      confidence:       result.confidence,
+      summary:          result.summary,
+      key_finding:      result.key_finding,
+      raw_result:       result,
+      turns_used:       0,
+      duration_seconds: durationSec,
     });
 
     // Link investigation to claim

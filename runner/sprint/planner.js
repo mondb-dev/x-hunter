@@ -29,8 +29,9 @@ const path = require("path");
 const ROOT  = path.resolve(__dirname, "../..");
 const STATE = path.join(ROOT, "state");
 
-const { callVertex } = require("../vertex.js");
-const sprintDb       = require("./db.js");
+const { callVertex }  = require("../vertex.js");
+const { loadSprintDb } = require("../lib/db_backend");
+const sprintDb         = loadSprintDb();
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -287,7 +288,7 @@ async function generateFullPlan(plan) {
   console.log(`[sprint/planner] ${parsed.sprints.length} sprints generated`);
 
   // Sync plan to DB
-  const dbPlan = sprintDb.upsertPlan({
+  const dbPlan = await sprintDb.upsertPlan({
     plan_id:        plan.id || `plan_${plan.activated_date}`,
     title:          plan.title,
     compulsion:     plan.compulsion,
@@ -301,7 +302,7 @@ async function generateFullPlan(plan) {
   for (const sprint of parsed.sprints) {
     const start = sprintDb.addDays(dbPlan.activated_date, (sprint.week - 1) * 7);
     const end   = sprintDb.addDays(start, 6);
-    const sprintId = sprintDb.upsertSprint({
+    const sprintId = await sprintDb.upsertSprint({
       plan_id:    dbPlan.plan_id,
       week:       sprint.week,
       goal:       sprint.goal,
@@ -310,15 +311,16 @@ async function generateFullPlan(plan) {
     });
 
     if (sprint.tasks?.length) {
-      sprintDb.bulkInsertTasks(sprintId, sprint.tasks);
+      await sprintDb.bulkInsertTasks(sprintId, sprint.tasks);
       console.log(`[sprint/planner] week ${sprint.week}: "${sprint.goal}" — ${sprint.tasks.length} tasks`);
     }
   }
 
   // Activate week 1
-  const week1 = sprintDb.getSprints(dbPlan.plan_id).find(s => s.week === 1);
+  const allSprints = await sprintDb.getSprints(dbPlan.plan_id);
+  const week1 = allSprints.find(s => s.week === 1);
   if (week1) {
-    sprintDb.activateSprint(week1.id, today());
+    await sprintDb.activateSprint(week1.id, today());
     console.log("[sprint/planner] week 1 activated");
   }
 
@@ -330,9 +332,9 @@ async function generateFullPlan(plan) {
  * Called when current sprint is done and next sprint has no tasks.
  */
 async function generateNextSprint(plan, planId) {
-  const sprints            = sprintDb.getSprints(planId);
+  const sprints            = await sprintDb.getSprints(planId);
   const completed          = sprints.filter(s => s.status === "completed");
-  const accomplishments    = sprintDb.getAccomplishments(planId);
+  const accomplishments    = await sprintDb.getAccomplishments(planId);
   const axisContext        = buildAxisContext();
   const sprintObservations = loadSprintObservations();
   const digestPath         = path.join(STATE, "feed_digest.txt");
@@ -353,11 +355,11 @@ async function generateNextSprint(plan, planId) {
   const end    = sprintDb.addDays(start, 6);
   console.log(`[sprint/planner] next sprint: week ${week} — "${parsed.goal}" — ${parsed.tasks.length} tasks`);
 
-  const sprintId = sprintDb.upsertSprint({ plan_id: planId, week, goal: parsed.goal, start_date: start, end_date: end });
+  const sprintId = await sprintDb.upsertSprint({ plan_id: planId, week, goal: parsed.goal, start_date: start, end_date: end });
   if (parsed.tasks?.length) {
-    sprintDb.bulkInsertTasks(sprintId, parsed.tasks);
+    await sprintDb.bulkInsertTasks(sprintId, parsed.tasks);
   }
-  sprintDb.activateSprint(sprintId, start);
+  await sprintDb.activateSprint(sprintId, start);
 
   return parsed;
 }
