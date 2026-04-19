@@ -329,6 +329,7 @@ or
       },
       body: JSON.stringify({
         contents: [{ role: "user", parts: [{ text: prompt }] }],
+        tools: [{ google_search: {} }],
         generationConfig: { temperature: 0.7, maxOutputTokens: 2048 },
       }),
     }
@@ -341,11 +342,20 @@ or
 
   const data = await res.json();
   const text = data.candidates?.[0]?.content?.parts?.[0]?.text || "";
+  // Extract grounding URLs from Vertex response
+  const groundingChunks = data?.candidates?.[0]?.groundingMetadata?.groundingChunks || [];
+  const sourceUrls = groundingChunks
+    .filter(c => c.web?.uri)
+    .map(c => c.web.uri)
+    .slice(0, 3);
+
   // Strip optional markdown fences, then extract the JSON object (greedy match)
   const stripped = text.replace(/```(?:json)?\s*/gi, "").replace(/```\s*/g, "").trim();
   const match = stripped.match(/\{[\s\S]*\}/);
   if (!match) throw new Error(`Gemini returned no JSON. Raw: ${text.slice(0, 300)}`);
-  return JSON.parse(match[0]);
+  const parsed = JSON.parse(match[0]);
+  parsed.sourceUrls = sourceUrls;
+  return parsed;
 }
 
 // ── 5. Post reply via X API ─────────────────────────────────────────────────
@@ -551,11 +561,17 @@ function logInteraction(data, item, replyText, memoryHints) {
       continue;
     }
 
-    const replyText = verdict.reply;
+    let replyText = verdict.reply;
     if (!replyText || replyText.length > 280) {
       item.status = "skipped";
       item.skip_reason = "reply text invalid or too long";
       continue;
+    }
+
+    // Append one grounding source URL if it fits (X shortens to ~23 chars via t.co)
+    const sourceUrls = verdict.sourceUrls || [];
+    if (sourceUrls.length > 0 && replyText.length <= 247) {
+      replyText = replyText + '\n' + sourceUrls[0];
     }
 
     // ── Step 5: Post reply (page already on tweet URL) ────────────────────
