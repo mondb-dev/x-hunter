@@ -18,8 +18,7 @@ const path = require('path');
 
 const { connectBrowser, getXPage } = require('./cdp');
 const { isXSuppressed } = require('./lib/x_control');
-const { buildPersona, buildCoreContext, recallViaMemoryAPI, callGemini } = require('./lib/sebastian_respond');
-const { getAccessToken, getProjectConfig } = require('./gcp_auth');
+const { buildPersona, buildCoreContext, recallForTopic, formatRecallHints } = require('./lib/sebastian_respond');
 const { verifyClaim } = require('./lib/verify_claim');
 const config = require('./lib/config');
 
@@ -111,84 +110,6 @@ function parseDigestForCandidates() {
   return candidates.sort((a, b) => b.score - a.score);
 }
 
-// ── Feed buffer parsing (followed accounts + axis-aligned posts) ─────────────
-//
-// This is the primary engagement surface for building relationships with
-// accounts Sebastian actually follows. Followed accounts bypass the like
-// threshold entirely — he should reply to people he chose to follow even
-// if the post has low engagement. Axis-aligned posts from anyone get a
-// reduced threshold (≥10 likes) so Sebastian can join small conversations
-// early rather than only piling onto viral posts.
-
-function loadFollowedHandles() {
-  try {
-    const tg = JSON.parse(fs.readFileSync(config.TRUST_GRAPH_PATH || path.join(ROOT, 'state/trust_graph.json'), 'utf-8'));
-    const accounts = tg.accounts || {};
-    return new Set(
-      Object.keys(accounts)
-        .filter(h => accounts[h].followed)
-        .map(h => h.replace(/^@/, '').toLowerCase())
-    );
-  } catch { return new Set(); }
-}
-
-function parseBufferForCandidates(followedHandles, axisKeywords) {
-  const bufferPath = path.join(ROOT, 'state/feed_buffer.jsonl');
-  let lines;
-  try {
-    lines = fs.readFileSync(bufferPath, 'utf-8').split('\n').filter(l => l.trim());
-  } catch { return []; }
-
-  // Only look at posts from the last 4 hours
-  const cutoff = Date.now() - 4 * 60 * 60 * 1000;
-  const candidates = [];
-
-  for (const line of lines) {
-    let p;
-    try { p = JSON.parse(line); } catch { continue; }
-
-    const handle = (p.u || '').toLowerCase();
-    if (!handle || handle === OWN_HANDLE.toLowerCase()) continue;
-    if (!p.id || !p.text) continue;
-    if ((p.ts || 0) < cutoff) continue;
-
-    const isFollowed = followedHandles.has(handle);
-    const likes = p.likes || 0;
-    const isFactualClaim = /\d+%|\$[\d.]+[BMK]?|\d+[\s,]\d{3}|said|claims?|according|report|study|data|source/.test(p.text);
-    const axisHits = axisKeywords.filter(kw => p.text.toLowerCase().includes(kw)).length;
-    const isAxisAligned = axisHits >= 2;
-
-    // Gate: followed accounts always qualify (min 1 like to exclude pure spam),
-    // axis-aligned posts qualify at ≥10 likes.
-    if (!isFollowed && (!isAxisAligned || likes < 10)) continue;
-
-    const url = 'https://x.com/' + p.u + '/status/' + p.id;
-    const velocity = p.velocity || 0;
-    const novelty = p.novelty || 0;
-
-    candidates.push({
-      handle: p.u,
-      text: p.text,
-      url,
-      likes,
-      velocity,
-      trust: p.trust || 0,
-      novelty,
-      isFactualClaim,
-      isFollowed,
-      isAxisAligned,
-      // Followed-account bonus: Sebastian should reply to people he follows.
-      // Axis-alignment bonus: more relevant = higher priority.
-      score: likes * 0.3 + velocity * 0.2 + novelty * 50 * 0.2 +
-             (isFactualClaim ? 40 : 0) +
-             (isFollowed ? 60 : 0) +
-             (axisHits * 20),
-    });
-  }
-
-  return candidates.sort((a, b) => b.score - a.score);
-}
-
 // ── Axis relevance filter ───────────────────────────────────────────────────
 
 function loadTopAxisKeywords() {
@@ -246,28 +167,27 @@ async function draftReply(candidate, verification) {
   });
 
   // Recall past observations about this topic
-  const recallHits = (await recallViaMemoryAPI(candidate.text, 4)) || [];
+  const recallHits = recallForTopic(candidate.text, 4);
   const recallBlock = recallHits.length > 0
-    ? '\n\nYour past observations on this topic:\n' + recallHits.map(h => '- ' + (h.text || h.snippet || '')).filter(Boolean).join('\n') + '\n'
+    ? '\n\nYour past observations on this topic:\n' + formatRecallHints(recallHits) + '\n'
     : '';
 
   let verificationBlock = '';
   if (verification) {
-    verificationBlock = '\n\n[INTERNAL — DO NOT QUOTE OR REFERENCE IN YOUR REPLY]\n' +
-      'VERIFICATION RESULT (from Veritas Lens):\n' +
-      'Verdict: ' + verification.verdict_label + '\n' +
+    verificationBlock = '\n\nVERIFICATION RESULT (from Veritas Lens):\n' +
+      'Verdict: ' + verification.verdict_label + ' (' + (verification.confidence * 100).toFixed(0) + '% confidence)\n' +
       'Summary: ' + (verification.summary || 'N/A') + '\n' +
       (verification.evidence_urls && verification.evidence_urls.length > 0
         ? 'Sources: ' + verification.evidence_urls.join(', ') + '\n'
         : '') +
       (verification.framing ? 'Framing: ' + verification.framing + '\n' : '') +
       'Lens: ' + verification.lens_url + '\n' +
-      '\nUse this data to ground your reply in fact. If the post makes a claim that is ' +
-      'refuted or unverified, say so directly. If supported, cite the evidence.\n' +
-      '\nCRITICAL: NEVER include percentages, confidence scores, or the words "unverified"/"verified" ' +
-      'with a percentage in your reply. These are internal metadata — NOT for the public. ' +
-      'Instead, state the factual problem in plain language: "That claim lacks evidence" or ' +
-      '"The actual number is X, per [source]".\n';
+      '\nCRITICAL GROUNDING RULES:\n' +
+      '- "Refuted" means the claim is PROVEN FALSE by evidence. You may correct it with the counter-evidence above.\n' +
+      '- "Unverified" means we COULD NOT CONFIRM OR DENY the claim. This is NOT the same as false.\n' +
+      '  Do NOT say a claim is wrong just because it is unverified. You do not have enough evidence.\n' +
+      '- "Supported" means the claim checks out. You may cite the evidence.\n' +
+      '- NEVER fabricate corrections. Only correct claims when you have specific counter-evidence from the sources above.\n';
   }
 
   const prompt = buildPersona('reply') + '\n\n' +
@@ -275,41 +195,33 @@ async function draftReply(candidate, verification) {
     recallBlock +
     verificationBlock +
     '\n\nYou are proactively engaging with a post on X. This is outbound -- nobody asked you.\n' +
-    (candidate.isFollowed
-      ? 'You follow @' + candidate.handle + '. This is someone whose perspective you track. ' +
-        'Reply as you would to someone in your orbit — engage with their point, add your angle, ' +
-        'agree or push back with something specific. Not performance, just genuine engagement.\n\n'
-      : 'Your goal: insert Sebastian\'s voice into a high-visibility conversation, especially to correct\n' +
-        'wrong claims with solid evidence from your research and investigations.\n\n'
-    ) +
+    'Your goal: insert Sebastian\'s voice into a high-visibility conversation, especially to correct\n' +
+    'wrong claims with solid evidence from your research and investigations.\n\n' +
     'The post:\n' +
     '  @' + candidate.handle + ': "' + candidate.text + '"\n' +
     '  (' + candidate.likes + ' likes' + (candidate.isFactualClaim ? ', contains factual claim' : '') + ')\n\n' +
     'Draft a reply (max 260 chars) that:\n' +
-    '1. PRIORITY: If this post makes a specific factual claim that is wrong or unverified, CORRECT IT.\n' +
-    '   Lead with the correct information. Name the source. Be direct — not "well actually" but just the fact.\n' +
-    '2. If the claim checks out, add what supports it or what context makes it more precise.\n' +
+    '1. PRIORITY: If the verification says REFUTED, correct the claim using the specific counter-evidence provided.\n' +
+    '   Lead with the correct information. Name the source. Be direct.\n' +
+    '   If the verification says UNVERIFIED, do NOT claim the post is wrong. Instead, add context, a related\n' +
+    '   observation, or engage with the topic — but NEVER assert something is false without evidence.\n' +
+    '2. If the claim is supported, add what supports it or what context makes it more precise.\n' +
     '3. If there is nothing factual to correct or confirm, take a clear position with a specific detail.\n' +
     '4. Is direct and confident. No hedging ("interesting point", "worth noting", "raises questions").\n' +
     '5. Sounds like a sharp person contributing, not a bot responding. No filler.\n' +
     '6. Does NOT start with "I" — lead with the substance or the fact.\n' +
-    '7. NEVER include internal metadata: no percentages, no confidence scores, no "X% confidence",\n' +
-    '   no "unverified (N%)", no "verified (N%)". These are system internals. Write like a human.\n' +
-    '8. Only reference details that are CLEARLY STATED in the post text above. Do NOT invent quotes,\n' +
-    '   names, numbers, or claims that are not visible in the post. If the post text is truncated,\n' +
-    '   respond to what IS there, not what you imagine might follow.\n' +
     (verification
-      ? '9. The verification result above gives you evidence. Use it. If refuted, say so with the specific counter-evidence.\n'
+      ? '7. Use the verification evidence. If REFUTED, say so with counter-evidence. If UNVERIFIED, do NOT fabricate corrections.\n'
       : '') +
     '\nBAD: "Great point about the tax system. Worth investigating further."\n' +
     'BAD: "This raises important questions about corporate accountability."\n' +
-    'BAD: "Rogan\'s quote is unverified (75% confidence)." — NEVER expose internal scores.\n' +
-    'BAD: "The claim about 56 years lacks evidence." — Do NOT reference details not clearly in the post.\n' +
     'GOOD: "Zero in federal tax but $2.3B in lobbying spend. The money goes somewhere -- just not to the public."\n' +
     'GOOD: "Lavrov calling Russia a stabilizer while occupying Crimea. Words only work when the record is clean."\n' +
     'GOOD: "That number is wrong. IMF data shows 2.1%, not 4.3%. The report they cited was from 2019."\n\n' +
     'Return ONLY the reply text. Nothing else. If you cannot write something genuinely worth posting, return SKIP.';
 
+  const { getAccessToken, getProjectConfig } = require('./gcp_auth');
+  const { callGemini } = require('./lib/vertex_call');
   const token = await getAccessToken();
   const { project, location } = getProjectConfig();
 
@@ -394,43 +306,25 @@ async function main() {
   const state = loadState();
   if (!canReply(state)) return;
 
-  const keywords = loadTopAxisKeywords();
-  const followedHandles = loadFollowedHandles();
-
-  // Primary pool: followed accounts + axis-aligned posts from recent buffer
-  const bufferCandidates = parseBufferForCandidates(followedHandles, keywords);
-  log('buffer candidates: ' + bufferCandidates.length +
-      ' (' + bufferCandidates.filter(c => c.isFollowed).length + ' from followed accounts)');
-
-  // Secondary pool: high-engagement posts from digest (existing logic)
-  const digestCandidates = parseDigestForCandidates();
-  const relevant = digestCandidates.filter(c => isAxisRelevant(c.text, keywords));
-  const digestPool = relevant.length > 0 ? relevant : digestCandidates.slice(0, 3);
-
-  // Merge: buffer candidates first (relationships), then digest (reach)
-  // Dedupe by URL so digest doesn't re-add a post already in buffer
-  const seen = new Set(bufferCandidates.map(c => c.url));
-  const merged = [
-    ...bufferCandidates,
-    ...digestPool.filter(c => !seen.has(c.url)),
-  ];
-
-  if (merged.length === 0) {
-    log('no candidates from buffer or digest');
+  const candidates = parseDigestForCandidates();
+  if (candidates.length === 0) {
+    log('no high-engagement candidates in digest');
     return;
   }
 
-  const fresh = merged.filter(c => !alreadyEngaged(c.url));
+  const keywords = loadTopAxisKeywords();
+  const relevant = candidates.filter(c => isAxisRelevant(c.text, keywords));
+  const pool = relevant.length > 0 ? relevant : candidates.slice(0, 3);
+
+  const fresh = pool.filter(c => !alreadyEngaged(c.url));
   if (fresh.length === 0) {
     log('all candidates already engaged');
     return;
   }
 
   const target = fresh[0];
-  log('target: @' + target.handle + ' (' + target.likes + ' likes' +
-      (target.isFollowed ? ', followed' : '') +
-      (target.isAxisAligned ? ', axis-aligned' : '') +
-      ') — ' + target.text.slice(0, 80));
+  log('target: @' + target.handle + ' (' + target.likes + ' likes) — ' +
+      target.text.slice(0, 80));
 
   // ── Verify if the post contains a factual claim ──────────────────────
   let verification = null;
@@ -445,6 +339,13 @@ async function main() {
       log('verification: ' + verification.verdict_label +
         ' (' + (verification.confidence * 100).toFixed(0) + '%)');
     }
+  }
+
+  // Gate: skip if verification is "unverified" with low confidence — not enough signal to engage
+  if (verification && verification.status === 'unverified' && verification.confidence < 0.4) {
+    log('verification too weak to engage (' + verification.verdict_label + ' at ' +
+      (verification.confidence * 100).toFixed(0) + '%) — risk of hallucinated correction');
+    return;
   }
 
   // Draft reply with verification context
