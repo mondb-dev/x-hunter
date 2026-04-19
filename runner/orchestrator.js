@@ -333,7 +333,24 @@ try {
   log(`tool discovery failed (non-fatal): ${e.message}`);
 }
 
-let cycle = 0;
+// ── Persist cycle counter across restarts ─────────────────────────────────
+const CYCLE_STATE_PATH = path.join(config.STATE_DIR, 'cycle_counter.json');
+
+function loadPersistedCycle() {
+  try {
+    const data = JSON.parse(fs.readFileSync(CYCLE_STATE_PATH, 'utf-8'));
+    if (typeof data.cycle === 'number' && data.cycle > 0) return data.cycle;
+    return 0;
+  } catch { return 0; }
+}
+
+function persistCycle(c) {
+  try {
+    fs.writeFileSync(CYCLE_STATE_PATH, JSON.stringify({ cycle: c, ts: new Date().toISOString() }));
+  } catch {}
+}
+
+let cycle = loadPersistedCycle();
 let totalCycles = 0;
 let totalPostAttempts = 0;
 let totalPostSuccesses = 0;
@@ -918,6 +935,7 @@ function runOneCycle() {
     totalPostAttempts++;
     if (metrics.postSuccess) totalPostSuccesses++;
   }
+  persistCycle(cycle);
   structuredLog({
     ts: new Date().toISOString(),
     cycle,
