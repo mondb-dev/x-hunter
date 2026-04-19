@@ -2080,3 +2080,51 @@ Tucker Carlson's claims about US policymakers fearing Israel and intelligence ag
 The Artemis II launch is generating discussion, with some posts expressing skepticism and flat earth theories, pointing to challenges in epistemic integrity and scientific consensus. [SPRINT: Collate All Feedback and Learnings]
 Donald Trump's comments on birthright citizenship are contributing to the discourse on immigration policy and national control.
 Concerns are being raised about America's decreasing speed in weapon production, which impacts military readiness and global power realignments.
+
+── 2026-04-19 15:02 · cycle 6 ──────────────────────────────────────────
+## Raw Observations
+<ul>
+  <li>**2. Calls for Violence and Extreme Rhetoric against Political/Judicial Figures:** Multiple posts express extreme views, including explicit calls for the elimination of specific individuals and institutions ("demon Ejei and all the regime appointed judges"), and highly inflammatory accusations ("dictator", "sociopath"). This reflects a breakdown in civil discourse and a move towards dehumanization and incitement.</li>
+  <li>Source: @NiohBerg [v287.9 T6 N4.1] "I can't stress enough how vital it is to eliminate the demon Ejei and all the regime appointed judges, along with their courthouses. This will save thousands of Iranians, including teenagers, currentl" https://x.com/NiohBerg/status/2045652479921033338 [SPRINT: research]</li>
+  <li>Source: @Inevitablewest [v32.5 T2 N4.1] "If you still refuse to resign after your 20th national scandal, you are a dictator. Keir Starmer is a dictator." https://x.com/Inevitablewest/status/2044836234732683452 [SPRINT: research]</li>
+  <li>Source: @atrupar [v43.2 T6 N3.5] "Trump: "When you see soldiers walking around with no legs, that was Iran that did that"" https://x.com/atrupar/status/2045499912989585591 [SPRINT: research]</li>
+  <li>Source: @ossoff [v394.6 T0] "Draft-dodging Donald loves sending other people's children to war." https://x.com/ossoff/status/2045622357771907452 [SPRINT: research]</li>
+  <li>Source: @clashreport [v22.8 T6 N3.3] "Kamala Harris: Trump got pulled into a war by Bibi Netanyahu. Let’s be clear about that. He entered a war the American people don’t want, putting U.S. service members at risk." https://x.com/clashreport/status/2045612887255789594 [SPRINT: research]</li>
+  <li>**3. Unsubstantiated Claims and Conspiratorial Thinking:** The feed shows multiple instances of claims presented as "breaking news" or "evidence" without clear corroboration, ranging from UFO confirmations to accusations of election rigging and anti-Semitic hate speech. This highlights the ease with which unverified information can spread and contribute to conspiratorial narratives.</li>
+  <li>Source: @Polymarket [v185.8 T6 N4.1] "BREAKING: The odds of aliens being confirmed hit an all-time high, as Rep Ogles admits "I have seen evidence" regarding UFOs." https://x.com/Polymarket/status/2045646187429044369 [SPRINT: research]</li>
+  <li>Source: @MAGAVoice [v267.4 T6 N4.1] "BREAKING President Trump just dropped the with THREE WORDS: “A Rigged Election” " https://x.com/MAGAVoice/status/2045650442483531861 [SPRINT: research]</li>
+  <li>Source: @mokhanhim [v856.9 T0 N4.0] "Jews have the weirdest rules Can’t use your phones on Saturdays but it’s ok to commit a genocide and be pedophiles " https://x.com/mokhanhim/status/2045500322928349584 [SPRINT: research]</li>
+  <li>Source: @NickJFuentes [v1117.0 T7 N4.1] "When Charlie Kirk died, Trump said he doesn’t love his enemies but hates them. On Easter, Trump didn’t celebrate the Resurrection but threatened genocide. Now Trump compares himself to Jesus Christ an" https://x.com/NickJFuentes/status/2045545652310987225 [SPRINT: research]</li>
+  <li>Source: @MAGAVoice [v20.5 T6 N4.1] "Dear President Trump, Elon Musk is absolutely right. We need to sanction South Africa into oblivion for what the are doing to White Farmers Sincerely, 77+ Million MAGA Patriots" https://x.com/MAGAVoice/status/2045400405249835276 [SPRINT: research]</li>
+  <li>**4. Blame-shifting and Accusations of Hypocrisy in Governance:** Political figures are seen deflecting blame for domestic issues and accusing opponents of hypocrisy regarding international law and policy. This indicates a consistent pattern of narrative control used to evade accountability and undermine opposing viewpoints.</li>
+  <li>Source: @SteebMichele [v1504.5 T0 N4.0] "Once again, @GavinNewsom @CAgovernor is desperately trying to shift blame for the state's homelessness disaster onto local governments." https://x.com/SteebMichele/status/2039329271156514933 [SPRINT: research]</li>
+  <li>Source: @mhdksafa [v59.3 T6 N4.1] "The same politicians who oppose Russia taking 10% of Ukraine support Israel taking 10% of Lebanon. Double standards of international law." https://x.com/mhdksafa/status/2045615585996787916 [SPRINT: research]</li>
+  <li>**5. Geopolitical Tensions and Nationalist Rhetoric:** Several posts highlight escalating international tensions, particularly concerning Iran and regional conflicts, often accompanied by strong nationalist or pro-military stances. This rhetoric can simplify complex issues and contribute to a lack of nuanced understanding.</li>
+  <li>Source: @mhdksafa [v59.3 T6 N4.1] "The same politicians who oppose Russia taking 10% of Ukraine support Israel taking 10% of Lebanon. Double standards of international law." https://x.com/mhdksafa/status/2045615585996789594 [SPRINT: research]</li>
+  <li>Source: @clashreport [v44.1 T6 N4.1] "Iran’s Ghalibaf: I am ready for martyrdom. We are ready both to shed blood and to endure deep hardship." https://x.com/clashreport/status/2045622096923857047 [SPRINT: research]</li>
+  <li>Source: @EricLDaugh [v111.4 T7 N4.1] " NOW: President Trump just went full PRO-ISRAEL mode, calling them winners who are there for America “Whether people like Israel or not, they have proven to be a GREAT Ally of the United States of Am" https://x.com/EricLDaugh/status/2045672865924579824 [SPRINT: research]</li>
+  <li>Source: @EmmanuelMacron [v108.5 T0 N4.2] "Sergeant-Chef Florian Montorio... fell this morning in southern Lebanon during an attack against UNIFIL." https://x.com/EmmanuelMacron/status/2045471921718845802 [SPRINT: research]</li>
+  <li>Source: @RapidResponse47 [v30.5 T6 N4.1] ".@POTUS : "We've been pushed around by Iran for 47 years — but not anymore." " https://x.com/RapidResponse47/status/2045352674577490394 [SPRINT: research]</li>
+  <li>Source: @MarioNawfal [v30.4 T7 N4.0] " Iran is closing the Strait of Hormuz the dirty way. It started with 2 IRGC gunboats pulling up on a merchant tanker 20 nautical miles northeast of Oman, no radio warning, no challenge, just straight " https://x.com/MarioNawfal/status/2045676253244502489 [SPRINT: research]</li>
+  <li>**6. Accusations of Hypocrisy and Shifting Allegiances in Public Figures:** Posts highlight perceived inconsistencies in public figures' statements or allegiances, particularly concerning political endorsements and media narratives. This contributes to distrust in political and media integrity.</li>
+  <li>Source: @LangmanVince [v138.2 T4 N4.1] "Two weeks ago, Joe Rogan called MAGA a bunch of dorks on his podcast. Today, he was liking the balls of the MAGA King! Is anyone else tired of these podcast grifters?" https://x.com/LangmanVince/status/2045592209571909634 [SPRINT: research]</li>
+  <li>Source: @FoxNews [v38.5 T7 N4.1] "Former President Obama and Mayor Mamdani sing "The Wheels on the Bus" with children during their first joint appearance together." https://x.com/FoxNews/status/2045677328076816866 [SPRINT: research]</li>
+  <li>**7. Societal Impact of AI and Economic Inequality:** Discussions emerge about the potential negative consequences of AI and robotics on employment and economic disparity, alongside calls for organized labor to address these issues.</li>
+  <li>Source: @BernieSanders [v63.9 T6 N4.1] "The rich are getting richer while working people are struggling to feed their families. AI and robotics will make a bad situation even worse. We need a new boldness in organizing workers. With union" https://x.com/BernieSanders/status/2045512198445818089 [SPRINT: research]</li>
+  <li>Source: @jimNjue_ [v0.2 T5 N4.1] "Anyone who has had their monetization abruptly turned off on any of these social Media Apps cannot buy that Elon’s Dystopian Idea of relying on Governments for survival while AI robots do all the work" https://x.com/jimNjue_/status/2045683129491370365 [SPRINT: research]</li>
+  <li>Source: @Huawei [v166.6 T5 N4.1] "In China's Yellow River Delta, AI and 5G have captured over 130,000 photos of Oriental storks. This smart platform lets us monitor wildlife without disturbing — protecting without interfering!" https://x.com/Huawei/status/2044967655111799023 [SPRINT: research]</li>
+  <li>[NOTED] "know" — 12 posts, no follow-up this cycle</li>
+  <li>[NOTED] "iran" — 10 posts, no follow-up this cycle</li>
+  <li>[NOTED] "trump" — 9 posts, no follow-up this cycle</li>
+  <li>[NOTED] "america" — 7 posts, no follow-up this cycle</li>
+  <li>[NOTED] "strait hormuz" — 6 posts, no follow-up this cycle</li>
+  <li>[NOTED] "war" — 6 posts, no follow-up this cycle</li>
+  <li>[NOTED] "left" — 6 posts, no follow-up this cycle</li>
+  <li>[NOTED] "why" — 6 posts, no follow-up this cycle</li>
+  <li>[NOTED] "people" — 6 posts, no follow-up this cycle</li>
+  <li>[NOTED] "years" — 5 posts, no follow-up this cycle</li>
+  <li>[NOTED] "israel" — 5 posts, no follow-up this cycle</li>
+  <li>[NOTED] "right" — 5 posts, no follow-up this cycle</li>
+  <li>[NOTED] "work" — 5 posts, no follow-up this cycle</li>
+  <li>[NOTED] "country" — 5 posts, no follow-up this cycle</li>
+  <li>[NOTED] "day" — 5 posts, no follow-up this cycle</li>
