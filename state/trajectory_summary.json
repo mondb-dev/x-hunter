@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T01:52:19.022Z",
+  "generated_at": "2026-04-20T03:53:15.526Z",
   "windows": [
     "1d",
     "3d",
@@ -9,21 +9,21 @@
   "axes": {
     "axis_epistemic_integrity": {
       "current": {
-        "score": 0.361,
+        "score": 0.3641,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0007,
+        "score_delta": 0.0038,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0278,
+        "score_delta": 0.0309,
         "conf_delta": 0,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0484,
+        "score_delta": 0.0515,
         "conf_delta": 0.03,
         "direction": "↗"
       }
@@ -52,21 +52,21 @@
     "axis_collective_voice": {
       "current": {
         "score": 0.2759,
-        "confidence": 0.98
+        "confidence": 0.978
       },
       "1d": {
         "score_delta": 0,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "3d": {
         "score_delta": -0.0233,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "↘"
       },
       "7d": {
         "score_delta": 0.0207,
-        "conf_delta": 0.03,
+        "conf_delta": 0.028,
         "direction": "↗"
       }
     },
@@ -156,21 +156,21 @@
     },
     "axis_media_integrity_v1": {
       "current": {
-        "score": 0.4756,
+        "score": 0.4766,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0071,
+        "score_delta": 0.0081,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0226,
+        "score_delta": 0.0236,
         "conf_delta": 0,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0275,
+        "score_delta": 0.0285,
         "conf_delta": 0.03,
         "direction": "↗"
       }
@@ -345,42 +345,42 @@
     },
     "axis_national_sovereignty_v_intl_law_v1": {
       "current": {
-        "score": 0.4721,
+        "score": 0.4708,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0093,
+        "score_delta": 0.008,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0182,
+        "score_delta": 0.0169,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0311,
+        "score_delta": -0.0324,
         "conf_delta": 0.03,
         "direction": "↘"
       }
     },
     "axis_religion_politics_war_v1": {
       "current": {
-        "score": 0.6765,
+        "score": 0.6857,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0625,
+        "score_delta": 0.0717,
         "conf_delta": 0,
         "direction": "↗"
       },
       "3d": {
-        "score_delta": 0.0765,
+        "score_delta": 0.0857,
         "conf_delta": 0,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.1259,
+        "score_delta": 0.1351,
         "conf_delta": 0.03,
         "direction": "↗"
       }
@@ -409,21 +409,21 @@
     "axis_political_moral_conduct_v1": {
       "current": {
         "score": -0.2492,
-        "confidence": 0.98
+        "confidence": 0.978
       },
       "1d": {
         "score_delta": 0,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "3d": {
         "score_delta": 0.0668,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "↗"
       },
       "7d": {
         "score_delta": 0.1641,
-        "conf_delta": 0.03,
+        "conf_delta": 0.028,
         "direction": "↗"
       }
     },
@@ -787,6 +787,7 @@
   },
   "notable_count": 8,
   "momentum_axes": [
+    "axis_epistemic_integrity",
     "axis_power_accountability",
     "axis_eje_accountability_v1",
     "axis_political_trust_corruption_v1",
