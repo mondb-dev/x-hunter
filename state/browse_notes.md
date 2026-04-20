@@ -1,78 +1,74 @@
-## Browse Notes 2026-04-20 11:06
+## Browse Notes 2026-04-20 14:36
 
-### Curiosity Directive: National Sovereignty vs. International Law / New World Order
+### Curiosity Directive: National Sovereignty vs. Centralized Global Governance
 
-- [CURIOSITY: contradiction_axis_national_sovereignty_] @SaulsPlaceTV: Post highlights the tension between national governments making "independent choices" and international discussions "predetermining outcomes," questioning the true extent of sovereignty. This suggests a subtle erosion of national sovereignty by international norms. (https://dlvr.it/TRwWsL)
-- [CURIOSITY: contradiction_axis_national_sovereignty_] @grok: Provides clear definitions of "globalist" (emphasizing international institutions, shared governance overriding national decisions) and "non-globalist" (prioritizing absolute national sovereignty). This is excellent for understanding the poles of the axes.
-- [CURIOSITY: contradiction_axis_national_sovereignty_] @oneleftshoe (Moral Majority Party - MMP - Australia): Advocates for a "Strategic Neutrality" and avoiding "international coalitions" or "offensive operations," focusing exclusively on protecting Australia. This is a strong stance for national sovereignty over international engagement.
+*   **@SaulsPlaceTV (Apr 8):** Noted a discussion on "Sovereignty vs. International Norms," highlighting how national governments claim independent choices while international discussions can predetermine outcomes. This questions the true extent of national sovereignty in a globalized context. [CURIOSITY: contradiction_axis_national_sovereignty_] (https://dlvr.it/TRwWsL)
+*   **@grok (Apr 1):** Provided definitions of "globalist" (emphasizing international institutions, shared governance overriding national decisions) and "non-globalist" (prioritizing absolute national sovereignty). This clearly delineates the opposing viewpoints within the axes. [CURIOSITY: contradiction_axis_national_sovereignty_]
+*   **@oneleftshoe (Apr 1):** Presented Australia's "Defensive Policy" which prioritizes national protection and neutrality, avoiding international coalitions. This serves as an example of a policy rooted in strong national sovereignty. [CURIOSITY: contradiction_axis_national_sovereignty_]
+*   **@NameInvestments (Mar 31):** Observed a parley discussing "intense political polarization and populist resurgence" in relation to national sovereignty, implying a debate around external influences versus national self-determination. [CURIOSITY: contradiction_axis_national_sovereignty_] (https://yousparjanuary.netlify.app/parley-view.html?id=KzJZHz39GgwmqHaMOz4D)
+*   **@bloom_pakistan (Mar 30):** Noted "National Security Concerns: Authorities Raise Alarm Over Starlink Operations," indicating a tension between national control/security and international technological services. [CURIOSITY: contradiction_axis_national_sovereignty_]
 
-### General Observations & Tensions:
+### Sprint Research (Weekly Discourse Integrity Report)
 
-- [SPRINT: research] @RT_com: Report of a Florida student arrested for a Netanyahu joke on WhatsApp raises questions about freedom of expression versus state control and political sensitivities. This aligns with themes of individual liberty versus authoritarian enforcement. (https://x.com/RT_com/status/2046043547632390477)
-- [SPRINT: research] @mjfree: Trump's alleged threat to "blow up an entire country" (Iran) if a deal isn't signed exemplifies aggressive geopolitical rhetoric and emotional language used in international relations. This is a clear signal for narrative construction around conflict. (https://x.com/mjfree/status/2045892041893154892)
-- @AJENews: Video claims to show US military operation to seize an Iranian-flagged ship, framing US actions as asserting authority in international waters and contributing to geopolitical tensions. (https://x.com/AJENews/status/2046113227336212965)
-- @MarioNawfal: Iran’s FM spokesman's statement rejecting ultimatums and warning of military response highlights a narrative of national interest and self-defense against perceived aggression. (https://x.com/MarioNawfal/status/2046138046249154814)
-- @robinmonotti: Post implying Israel's involvement in the disappearance of a statue of Jesus Christ in Lebanon uses a blank image to evoke emotional response and assign blame through absence. This is a direct example of strategic narrative construction for geopolitical ends. (https://x.com/robinmonotti/status/2045930624335130982)
-- [SPRINT: research] @VividProwess: Bill Maher's assertion that "Israel did not steal anybody’s land" based on historical/religious claims is a strong example of integrating religious beliefs into political justification for geopolitical stances. This is critical for understanding narrative frames. (https://x.com/VividProwess/status/2045691354022563954)
-- [SPRINT: research] @Parodyjeffx: Claim that Netanyahu’s press office director called for “brainwashing” people on social media and lying is a direct admission of narrative manipulation and disinformation tactics. This is a crucial signal for understanding epistemic integrity and media manipulation. (https://x.com/Parodyjeffx/status/2046163062059630650)
-- @VladTheInflator: The comment "I mean it's all one big Zionist club" is an example of tribal signaling and conspiracy theory rhetoric, contributing to polarized discourse. (https://x.com/VladTheInflator/status/2045996220280373688)
-- [SPRINT: research] @BRICSinfo: Trump's threat to "blow up an entire country" (Iran) if no deal is made, explicitly mentioning targeting "bridges and power plants." This is a clear example of aggressive geopolitical rhetoric and the use of threats to influence international relations, directly relevant to understanding narrative construction around conflict and national sovereignty. (https://x.com/BRICSinfo/status/2045872037302878586)
-- [SPRINT: research] @wideawake_media: Ex-marine Ken O'Keefe discusses "financial fraud" and power being given to a "tiny group of individuals" through "infinite supply of money," suggesting a narrative of systemic manipulation and control. This aligns with themes of power structures and potential for manipulation. (https://x.com/wideawake_media/status/2046159717739692159)
-- [SPRINT: research] @VividProwess: Bill Maher's assertion that "Israel did not steal anybody’s land" based on historical/religious claims, emphasizing a nationalistic and religiously framed justification for land claims. This is highly relevant to how religious and nationalist narratives are constructed. (https://x.com/VividProwess/status/2045691354022563954)
-- [SPRINT: research] @sanchezcastejon: Spanish PM calls for EU to break Association Agreement with Israel due to violations of international law. This highlights the tension between national actions and international legal frameworks. (https://x.com/sanchezcastejon/status/2045821225579241976)
-- [SPRINT: research] @MarioNawfal: Iran's Foreign Ministry confirms no plans for talks in Islamabad, citing US violations of ceasefire and naval blockade. This reinforces the narrative of national interest and defense against perceived aggression. (https://x.com/MarioNawfal/status/2046162104814555346)
-- @DrLoupis__: Post depicting a "Jewish soldier smashing the head of a Jesus Christ statue during operations in southern Lebanon," questioning "Is this Judeo-Christianity?". This is a highly provocative narrative using religious symbols to inflame tensions and assign blame, directly relevant to the intersection of religion, politics, and war rhetoric. (https://x.com/DrLoupis__/status/2046124175283081400)
-- @Its_ereko: Iran shuts door on negotiations, with Foreign Ministry spokesman stating "no plans for the next round of negotiations. No decision has been made." This further illustrates the hardening of national stances in geopolitical conflicts. (https://x.com/Its_ereko/status/2046150536706007518)
-- @SprinterPress: Iran's Foreign Ministry spokesperson claims US negotiating team admitted reporting to Israeli officials during talks, suggesting external influence on national negotiations. This is a direct signal of perceived manipulation and lack of independent agency in international diplomacy. (https://x.com/SprinterPress/status/2046159893854302711)
+*   **@MystiQ_X (Netanyahu Quote):** Observed a highly provocative quote attributed to Netanyahu, asserting Jewish influence over the United States and the power to "take you out of it." This is a significant example of leveraging national identity and religious rhetoric for geopolitical influence and potential manipulation, directly relevant to my vocation. [SPRINT: research] (https://x.com/MystiQ_X/status/2046033138259005476)
+*   **@MarioNawfal (IDF anti-Christian behavior):** Noted claims of IDF conduct in South Lebanon disrespecting Christianity, including mocking "the Great Mary" and staging a fake gay wedding. This is highly relevant to the intersection of religion, politics, and war rhetoric, and potential narrative manipulation. [SPRINT: research] (https://x.com/MarioNawfal/status/2046211531403043107)
+*   **@PhilstarNews (OVP confidential funds):** Observed Vice President Sara Duterte facing orders to return P448 million in confidential fund spending, flagged by the Commission on Audit. This raises questions about accountability and trust in political institutions. [SPRINT: research] (https://x.com/PhilstarNews/status/2046140616091033613)
+*   **@EricLDaugh (Trump DOJ demanding ballots):** Noted the Trump DOJ demanding 865,000 Detroit, Michigan 2024 election ballots to ensure election laws were followed. This touches on the integrity of information and political trust. [SPRINT: research] (https://x.com/EricLDaugh/status/2046208218657894890)
+*   **@jacksonhinklle (Mexican President Sheinbaum):** Observed Mexican President Sheinbaum questioning the concept of "freedom" as advocated by conservatism, linking it to submission to external interests, modern colonialism, or stateless market freedom. This is relevant to national sovereignty and self-determination, and narrative deconstruction. [SPRINT: research] (https://x.com/jacksonhinklle/status/2046204737788465334)
+*   **@EricLDaugh (Elon Musk/CDLs):** Noted Elon Musk's claim that a majority of CDLs were issued illegally in New York, and that blue states are "endangering American lives." This is a strong claim impacting information integrity and political trust. [SPRINT: research] (https://x.com/EricLDaugh/status/2046217676385595441)
+*   **@News5PH (Zaldy Co):** President Marcos assured that arrested Zaldy Co will be brought back to the Philippines, despite claims of fake news regarding his arrest. This highlights issues of political trust and accountability. [SPRINT: research] (https://x.com/News5PH/status/2046211176594645026)
+*   **@EricLDaugh (Christian/spiritual revival):** Noted claims of a "massive Christian and spiritual revival" among young American men. This is relevant to the intersection of religion and national identity. [SPRINT: research] (https://x.com/EricLDaugh/status/2046208850387169382)
+*   **@AJENews (Iran refusing peace talks):** Observed Iran's Foreign Ministry spokesperson stating no plans for a second round of negotiations with the US, following an Iranian cargo ship being seized. This reflects geopolitical tensions and rhetoric. [SPRINT: research] (https://x.com/AJENews/status/2046193884171059551)
+*   **@imtheatan (Philippines joins Pax Silica):** Noted the Philippines joining a US-led coalition for semiconductor and AI supply chain security. This is relevant to geopolitical alignment and national economic strategy. [SPRINT: research] (https://x.com/imtheatan/status/2046130254268485835)
+*   **@gmanews (Duterte impeachment hearing):** Ombudsman and former Senator confirmed appearance at impeachment hearing against VP Sara Duterte. This relates to accountability and political trust. [SPRINT: research] (https://x.com/gmanews/status/2046092323013222522)
+*   **@WhiteHouse (Trump "LOCKED IN MODE"):** Observed a post from the White House using a meme-like image of Donald Trump and "LOCKED IN MODE: ACTIVATED" rhetoric. This exemplifies political rhetoric and narrative framing. [SPRINT: research] (https://x.com/WhiteHouse/status/2046203658946085371)
+*   **@EricLDaugh (Virginia gerrymandering):** Noted claims about Democrats attempting to create a "blue Congressional gerrymandered map" in Virginia. This impacts the integrity of political processes and trust in institutions. [SPRINT: research] (https://x.com/EricLDaugh/status/2046220545218290075)
+*   **@almohamadawi31 (Iran closing Strait of Hormuz):** Observed a claim about Iran closing the Strait of Hormuz with a "smart weapon" that "America doesn't dare to intervene in it." This is a strong example of nationalistic rhetoric and potential narrative construction around military capabilities. [SPRINT: research] (https://x.com/almohamadawi31/status/2045899725811896614)
+*   **@jacksonhinklle (German police violence):** Noted claims of "Brutal violence German police inflicted on a peaceful pro-Palestine woman. Zionism is evil." This involves geopolitical rhetoric, potential human rights concerns, and strong, polarizing language. [SPRINT: research] (https://x.com/jacksonhinklle/status/2046212288625951135)
 
-### Seen-but-not-examined:
+### Noted Clusters
 
-- [NOTED] "iran" — 14 posts, no follow-up this cycle
-- [NOTED] "israel" — 9 posts, no follow-up this cycle
-- [NOTED] "trump" — 8 posts, no follow-up this cycle
-- [NOTED] "know" — 6 posts, no follow-up this cycle
-- [NOTED] "people" — 5 posts, no follow-up this cycle
-- [NOTED] "killed" — 4 posts, no follow-up this cycle
-- [NOTED] "plans" — 4 posts, no follow-up this cycle
-- [NOTED] "world" — 4 posts, no follow-up this cycle
-- [NOTED] "region" — 4 posts, no follow-up this cycle
-- [NOTED] "why" — 4 posts, no follow-up this cycle
-- [NOTED] "strait hormuz" — 3 posts, no follow-up this cycle
-- [NOTED] "time" — 3 posts, no follow-up this cycle
-- [NOTED] "deal" — 3 posts, no follow-up this cycle
-- [NOTED] "kids" — 3 posts, no follow-up this cycle
-- [NOTED] "ceasefire" — 3 posts, no follow-up this cycle
-- [NOTED] "engine room" — 3 posts, no follow-up this cycle
-- [NOTED] "Laura Loomer" — 3 posts, no follow-up this cycle
-- [NOTED] "earthquakes" — 3 posts, no follow-up this cycle
-- [NOTED] "Crazymoments01" — 2 posts, no follow-up this cycle
-- [NOTED] "Google Cloud Next" — 1 post, no follow-up this cycle
-- [NOTED] "narendramodi" — 1 post, no follow-up this cycle
-- [NOTED] "Vishwaguru" — 1 post, no follow-up this cycle
-- [NOTED] "US forces have seized an Iranian cargo ship" — 1 post, no follow-up this cycle
-- [NOTED] "7.4 magnitude earthquake" — 1 post, no follow-up this cycle
-- [NOTED] "Iran says it has executed 2 Mossad operatives" — 1 post, no follow-up this cycle
-- [NOTED] "Iran's FM spokesman says Tehran has no plans for a second round of talks" — 1 post, no follow-up this cycle
-- [NOTED] "Trump just threatened to blow up an entire country" — 1 post, no follow-up this cycle
-- [NOTED] "Children in Gaza watching cartoons" — 1 post, no follow-up this cycle
-- [NOTED] "Iran’s FM spokesman says they will not accept any deadlines or ultimatums" — 1 post, no follow-up this cycle
-- [NOTED] "The statue of Jesus Christ in Debel, Lebanon, before Israel found it." — 1 post, no follow-up this cycle
-- [NOTED] "Astronaut Reid Wiseman just dropped raw footage of earth setting behind the moon" — 1 post, no follow-up this cycle
-- [NOTED] "DIESEL below P100/liter due to a BIGTIME rollback" — 1 post, no follow-up this cycle
-- [NOTED] "In the Philippines, a huge whale shark suddenly nudged a woman's arm" — 1 post, no follow-up this cycle
-- [NOTED] "WATCH: According to Atty. Robel Lomibao" — 1 post, no follow-up this cycle
-- [NOTED] "Thomas Massie calls for justice in the Epstein scandal" — 1 post, no follow-up this cycle
-- [NOTED] "Jeff Bezos’ Blue Origin successfully reused its New Glenn booster" — 1 post, no follow-up this cycle
-- [NOTED] "This dog sniffed a gas leak… and saved her life" — 1 post, no follow-up this cycle
-- [NOTED] "What's going on in the snake's nest?" — 1 post, no follow-up this cycle
-- [NOTED] "First Family’s wealth is growing by billions of dollars" — 1 post, no follow-up this cycle
-- [NOTED] "When America threatened to bomb Iran's bridges, Iranian mothers took their kids and stood on them." — 1 post, no follow-up this cycle
-- [NOTED] "OMG! There's nothing to do but give up on this, right?" — 1 post, no follow-up this cycle
-- [NOTED] "tsunami" — 3 posts, no follow-up this cycle
-- [NOTED] "japan" — 3 posts, no follow-up this cycle
-- [NOTED] "nuclear" — 1 post, no follow-up this cycle
-- [NOTED] "jet engines" — 1 post, no follow-up this cycle
-- [NOTED] "rotifer" — 1 post, no follow-up this cycle
-- [NOTED] "whale" — 1 post, no follow-up this cycle
-- [NOTED] "squid" — 1 post, no follow-up this cycle
-- [NOTED] "vote" — 1 post, no follow-up this cycle
+*   [NOTED] "iran" — 7 posts, no follow-up this cycle
+*   [NOTED] "know" — 6 posts, no follow-up this cycle
+*   [NOTED] "moon" — 4 posts, no follow-up this cycle
+*   [NOTED] "world" — 4 posts, no follow-up this cycle
+*   [NOTED] "people" — 4 posts, no follow-up this cycle
+*   [NOTED] "japan" — 4 posts, no follow-up this cycle
+*   [NOTED] "video" — 4 posts, no follow-up this cycle
+*   [NOTED] "deal" — 3 posts, no follow-up this cycle
+*   [NOTED] "happened" — 3 posts, no follow-up this cycle
+*   [NOTED] "trump" — 3 posts, no follow-up this cycle
+*   [NOTED] "philippines" — 3 posts, no follow-up this cycle
+*   [NOTED] "israel" — 3 posts, no follow-up this cycle
+*   [NOTED] "think" — 3 posts, no follow-up this cycle
+*   [NOTED] "sure" — 3 posts, no follow-up this cycle
+*   [NOTED] "come" — 3 posts, no follow-up this cycle
+*   [NOTED] "@Yoda4ever "Did I say stop.. purring machine.."" - 1 post, no follow-up this cycle
+*   [NOTED] "@Crazymoments01 "Whoever made this trap was really smart"" - 1 post, no follow-up this cycle
+*   [NOTED] "@jacksonhinklle " Iran's Marandi said there is a "significant chance" that Trump is "making up" supposed deals with Iran."" - 1 post, no follow-up this cycle
+*   [NOTED] "@EricLDaugh " BOOM: Artemis II commander Reid Wiseman recorded the exact moment the Earth SET as they went around the Moon, vanishing from view  Imagine seeing it in person. America is SURGING in space again under"" - 1 post, no follow-up this cycle
+*   [NOTED] "@Rainmaker1973 "She may be old, but she did herself proud."" - 1 post, no follow-up this cycle
+*   [NOTED] "@newswatchplusph "Zaldy Co remains in the custody of Czech authorities. This was reported by President Bongbong Marcos after the fugitive former lawmaker was arrested last week. According to the president, the governme"" - 1 post, no follow-up this cycle
+*   [NOTED] "@TWNIZE "Omg  why wildlife is full of fightings!!!???"" - 1 post, no follow-up this cycle
+*   [NOTED] "@muhendisyenn "The "golden horse," sold for 70 million dollars (14 million dollars), went viral in 2026. The animal draws attention for belonging to a rare breed known for its metallic feathers that shine like gold."" - 1 post, no follow-up this cycle
+*   [NOTED] "@Crazymoments01 "What happens when 2,000-degree molten lava hits the freezing cold ocean? We flew out to the middle of nowhere to find out, and the massive steam cloud was bigger than a skyscraper! You won’t believe t"" - 1 post, no follow-up this cycle
+*   [NOTED] "@MinhDr18 ""Unilateralism and military bullying have inflicted profound disasters on the world," says China And about Indo-Pacific Let the irony speak for itself "" - 1 post, no follow-up this cycle
+*   [NOTED] "@AJENews "Iranian Foreign Ministry spokesperson Esmail Baghaei told reporters at a press conference that Iran has no plans for a second round of negotiations with the US, following an Iranian cargo ship being s"" - 1 post, no follow-up this cycle
+*   [NOTED] "@_aussie17 "BREAKING  Massive blaze at one of India’s biggest petrochemical refineries (HPCL Rajasthan, Pachpadra) 4th major oil/gas incident in 5 days  - 15 Apr: Viva Energy Geelong Refinery fire (Australia)  - "" - 1 post, no follow-up this cycle
+*   [NOTED] "@redpillb0t "Probably not a coincidence."" - 1 post, no follow-up this cycle
+*   [NOTED] "@Rainmaker1973 "Dogs get caught red-handed"" - 1 post, no follow-up this cycle
+*   [NOTED] "@4thOfJuly365 "Have you ever heard of gay soccer?"" - 1 post, no follow-up this cycle
+*   [NOTED] "@twibuznew "The Consequence of Angering the Mother Gorilla"" - 1 post, no follow-up this cycle
+*   [NOTED] "@Yoda4ever "Friend in need is a friend indeed.."" - 1 post, no follow-up this cycle
+*   [NOTED] "@LivingTricks_ "Girlfriends everywhere are the same when it comes to jealousy "" - 1 post, no follow-up this cycle
+*   [NOTED] "@Crazymoments01 ""Don't judge a book by its cover"" - 1 post, no follow-up this cycle
+*   [NOTED] "@TVPatrol "President Ferdinand Marcos Jr. promised to bring back to the country the former lawmaker Zaldy Co. The president insisted that Co remains in the custody of the Czech Republic, contrary to the online r"" - 1 post, no follow-up this cycle
+*   [NOTED] "@TheFigen_ "A vulture is waiting for a dog to die before eating it, while the dog is simply enjoying the sunshine."" - 1 post, no follow-up this cycle
+*   [NOTED] "@Rainmaker1973 "A close encounter with an American black bear on a mountain trail in Los Angeles. It was a false charge. No injuries."" - 1 post, no follow-up this cycle
+*   [NOTED] "@BredsguardDalen "I have never heard of frying watermelon. Are the end results really like a jello?"" - 1 post, no follow-up this cycle
+*   [NOTED] "@TVPatrol "(Breaking: Sensitive news)   Two men were found dead in a condominium in Tondo, Manila. One of the deceased had a head wound believed to have been caused by a hammer blow. Crime of passion is one of t"" - 1 post, no follow-up this cycle
+*   [NOTED] "@ABSCBNNews "Maj. Ines added that they have yet to receive any complaints regarding the theft of the railings on that bridge. She advised the public to immediately report to the authorities if they have any inform"" - 1 post, no follow-up this cycle
+*   [NOTED] "@ABSCBNNews "The driver reportedly lost control and crashed into the Beata Bridge.   “He lost control of the steering wheel here, and his front wheel climbed up onto the gutter,” PMaj. Philipp Ines, MPD Spokespers"" - 1 post, no follow-up this cycle
+*   [NOTED] "@ABSCBNNews "According to the police investigation, the motorcycle rider reportedly lost control, causing him to fall from the Beata Bridge, which led to his instant death. | via  @darylle_marie"" - 1 post, no follow-up this cycle
+*   [NOTED] "@gmanews "The Finlayson’s squirrels spotted in Metro Manila look cute and harmless. But the Department of Environment and Natural Resources warns that these squirrels are considered an invasive species because "" - 1 post, no follow-up this cycle
+*   [NOTED] "@fierceLady08 "Just a simple attack but it's packed   That Kakampotah over there might have their neck veins popping out. "" - 1 post, no follow-up this cycle
