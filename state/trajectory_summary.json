@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T14:09:18.175Z",
+  "generated_at": "2026-04-20T17:08:45.854Z",
   "windows": [
     "1d",
     "3d",
@@ -93,21 +93,21 @@
     },
     "axis_political_trust_corruption_v1": {
       "current": {
-        "score": -0.592,
+        "score": -0.5956,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": -0.0074,
+        "score_delta": -0.011,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0114,
+        "score_delta": 0.0078,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0858,
+        "score_delta": 0.0822,
         "conf_delta": 0.03,
         "direction": "↗"
       }
@@ -136,62 +136,62 @@
     "axis_ai_societal_impact_v1": {
       "current": {
         "score": -0.001,
-        "confidence": 0.98
+        "confidence": 0.978
       },
       "1d": {
         "score_delta": 0,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "3d": {
         "score_delta": 0.0084,
-        "conf_delta": 0.034,
+        "conf_delta": 0.032,
         "direction": "→"
       },
       "7d": {
         "score_delta": 0.0508,
-        "conf_delta": 0.03,
+        "conf_delta": 0.028,
         "direction": "↗"
       }
     },
     "axis_media_integrity_v1": {
       "current": {
-        "score": 0.4587,
+        "score": 0.4564,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": -0.0098,
+        "score_delta": -0.0121,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0057,
+        "score_delta": 0.0034,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0106,
+        "score_delta": 0.0083,
         "conf_delta": 0.03,
         "direction": "→"
       }
     },
     "axis_geopolitical_rhetoric_v1": {
       "current": {
-        "score": 0.0962,
+        "score": 0.097,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0068,
+        "score_delta": 0.0076,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.011,
+        "score_delta": 0.0118,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0315,
+        "score_delta": 0.0323,
         "conf_delta": 0.03,
         "direction": "↗"
       }
@@ -345,21 +345,21 @@
     },
     "axis_national_sovereignty_v_intl_law_v1": {
       "current": {
-        "score": 0.4748,
+        "score": 0.4652,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.012,
+        "score_delta": 0.0024,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0209,
+        "score_delta": 0.0113,
         "conf_delta": 0,
-        "direction": "↗"
+        "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0284,
+        "score_delta": -0.038,
         "conf_delta": 0.03,
         "direction": "↘"
       }
@@ -471,22 +471,22 @@
     },
     "axis_human_rights_exploitation_v1": {
       "current": {
-        "score": -0.3571,
-        "confidence": 0.976
+        "score": -0.3672,
+        "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
+        "score_delta": -0.0101,
+        "conf_delta": 0.002,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0361,
-        "conf_delta": -0.004,
+        "score_delta": 0.026,
+        "conf_delta": 0,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0764,
-        "conf_delta": 0.026,
+        "score_delta": 0.0663,
+        "conf_delta": 0.03,
         "direction": "↗"
       }
     },
@@ -723,23 +723,23 @@
     },
     "axis_social_welfare_v_military_spending_v1": {
       "current": {
-        "score": 0.3,
-        "confidence": 0.319
+        "score": 0.25,
+        "confidence": 0.35
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": -0.05,
+        "conf_delta": 0.029,
+        "direction": "↘"
       },
       "3d": {
-        "score_delta": 0.05,
-        "conf_delta": -0.1645,
-        "direction": "↗"
+        "score_delta": 0,
+        "conf_delta": -0.1335,
+        "direction": "→"
       },
       "7d": {
-        "score_delta": 0.05,
-        "conf_delta": -0.1685,
-        "direction": "↗"
+        "score_delta": 0,
+        "conf_delta": -0.1375,
+        "direction": "→"
       }
     },
     "axis_immigration_policy_v_national_control_v1": {
@@ -794,7 +794,6 @@
     "axis_religion_politics_war_v1",
     "axis_political_moral_conduct_v1",
     "axis_human_rights_exploitation_v1",
-    "axis_social_welfare_v_military_spending_v1",
     "axis_immigration_policy_v_national_control_v1"
   ]
 }
