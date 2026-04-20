@@ -1,164 +1,164 @@
 {
-  "checked_at": "2026-04-19T14:58:33.482Z",
-  "evidence_24h": 35,
-  "unique_sources": 23,
+  "checked_at": "2026-04-20T15:14:24.650Z",
+  "evidence_24h": 93,
+  "unique_sources": 52,
   "status": "warning",
   "alerts": [
     {
       "type": "pole_skew",
       "severity": "moderate",
-      "detail": "74% of evidence pushes \"right\" — risk of one-sided belief drift",
+      "detail": "75% of evidence pushes \"right\" — risk of one-sided belief drift",
       "dominant_pole": "right",
-      "share": 0.743
+      "share": 0.753
     }
   ],
-  "summary": "1 capture alert(s) detected:\n[MODERATE] 74% of evidence pushes \"right\" — risk of one-sided belief drift",
+  "summary": "1 capture alert(s) detected:\n[MODERATE] 75% of evidence pushes \"right\" — risk of one-sided belief drift",
   "source_concentration": {
     "ericldaugh": {
       "username": "ericldaugh",
-      "count": 5,
-      "share": 0.143
+      "count": 11,
+      "share": 0.118
     },
-    "berniesanders": {
-      "username": "berniesanders",
+    "marionawfal": {
+      "username": "marionawfal",
+      "count": 6,
+      "share": 0.065
+    },
+    "jacksonhinklle": {
+      "username": "jacksonhinklle",
+      "count": 4,
+      "share": 0.043
+    },
+    "bricsinfo": {
+      "username": "bricsinfo",
+      "count": 4,
+      "share": 0.043
+    },
+    "unknown": {
+      "username": "unknown",
       "count": 3,
-      "share": 0.086
+      "share": 0.032
     },
-    "steebmichele": {
-      "username": "steebmichele",
+    "allenanalysis": {
+      "username": "allenanalysis",
+      "count": 3,
+      "share": 0.032
+    },
+    "ajenews": {
+      "username": "ajenews",
+      "count": 3,
+      "share": 0.032
+    },
+    "grok": {
+      "username": "grok",
+      "count": 3,
+      "share": 0.032
+    },
+    "oneleftshoe": {
+      "username": "oneleftshoe",
+      "count": 3,
+      "share": 0.032
+    },
+    "crrja5": {
+      "username": "crrja5",
       "count": 2,
-      "share": 0.057
-    },
-    "niohberg": {
-      "username": "niohberg",
-      "count": 2,
-      "share": 0.057
-    },
-    "jimnjue_": {
-      "username": "jimnjue_",
-      "count": 2,
-      "share": 0.057
-    },
-    "mhdksafa": {
-      "username": "mhdksafa",
-      "count": 2,
-      "share": 0.057
-    },
-    "rapidresponse47": {
-      "username": "rapidresponse47",
-      "count": 2,
-      "share": 0.057
-    },
-    "clashreport": {
-      "username": "clashreport",
-      "count": 2,
-      "share": 0.057
-    },
-    "mollyploofkins": {
-      "username": "mollyploofkins",
-      "count": 1,
-      "share": 0.029
-    },
-    "fmrrepmtg": {
-      "username": "fmrrepmtg",
-      "count": 1,
-      "share": 0.029
+      "share": 0.022
     }
   },
   "axis_concentration": {
-    "axis_geopolitical_rhetoric_v1": {
-      "axis_id": "axis_geopolitical_rhetoric_v1",
-      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
-      "count": 8,
-      "share": 0.229
-    },
-    "axis_ai_societal_impact_v1": {
-      "axis_id": "axis_ai_societal_impact_v1",
-      "label": "Societal Impact and Ethical Concerns of AI/Robots",
-      "count": 5,
-      "share": 0.143
-    },
-    "axis_epistemic_integrity": {
-      "axis_id": "axis_epistemic_integrity",
-      "label": "Truth and Evidence in Public Discourse",
-      "count": 4,
-      "share": 0.114
-    },
-    "axis_power_accountability": {
-      "axis_id": "axis_power_accountability",
-      "label": "Power, Institutions, and Rule of Law",
-      "count": 3,
-      "share": 0.086
-    },
-    "axis_collective_voice": {
-      "axis_id": "axis_collective_voice",
-      "label": "Authentic Participation vs. Managed Consent",
-      "count": 3,
-      "share": 0.086
+    "axis_national_sovereignty_v_intl_law_v1": {
+      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "label": "National Sovereignty vs. International Law",
+      "count": 39,
+      "share": 0.419
     },
     "axis_media_integrity_v1": {
       "axis_id": "axis_media_integrity_v1",
       "label": "Integrity of Information and Social Media Manipulation",
-      "count": 3,
-      "share": 0.086
+      "count": 22,
+      "share": 0.237
     },
-    "axis_national_sovereignty_v_intl_law_v1": {
-      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "label": "National Sovereignty vs. International Law",
-      "count": 2,
-      "share": 0.057
+    "axis_geopolitical_rhetoric_v1": {
+      "axis_id": "axis_geopolitical_rhetoric_v1",
+      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
+      "count": 9,
+      "share": 0.097
     },
-    "axis_political_moral_conduct_v1": {
-      "axis_id": "axis_political_moral_conduct_v1",
-      "label": "Political Integrity and Moral Conduct in Public Service",
-      "count": 2,
-      "share": 0.057
+    "axis_epistemic_integrity": {
+      "axis_id": "axis_epistemic_integrity",
+      "label": "Truth and Evidence in Public Discourse",
+      "count": 6,
+      "share": 0.065
+    },
+    "axis_religion_politics_war_v1": {
+      "axis_id": "axis_religion_politics_war_v1",
+      "label": "Religion, Politics, and War Rhetoric",
+      "count": 6,
+      "share": 0.065
     },
     "axis_political_trust_corruption_v1": {
       "axis_id": "axis_political_trust_corruption_v1",
       "label": "Trust in Political Institutions and Anti-Corruption Efforts",
-      "count": 1,
-      "share": 0.029
+      "count": 3,
+      "share": 0.032
     },
     "axis_authoritarian_self_determination_v1": {
       "axis_id": "axis_authoritarian_self_determination_v1",
       "label": "Authoritarian Control vs. Individual/Collective Self-Determination",
+      "count": 2,
+      "share": 0.022
+    },
+    "axis_global_power_realignments_v1": {
+      "axis_id": "axis_global_power_realignments_v1",
+      "label": "Global Power Realignments and Shifting Hegemony",
+      "count": 2,
+      "share": 0.022
+    },
+    "axis_immigration_policy_v_national_control_v1": {
+      "axis_id": "axis_immigration_policy_v_national_control_v1",
+      "label": "Immigration Policy: Open Borders vs. National Control and Cultural Preservation",
+      "count": 2,
+      "share": 0.022
+    },
+    "axis_power_accountability": {
+      "axis_id": "axis_power_accountability",
+      "label": "Power, Institutions, and Rule of Law",
       "count": 1,
-      "share": 0.029
+      "share": 0.011
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 12,
-      "share": 0.343
-    },
-    "us_politics": {
-      "cluster": "us_politics",
-      "count": 9,
-      "share": 0.257
+      "count": 32,
+      "share": 0.344
     },
     "geopolitics": {
       "cluster": "geopolitics",
-      "count": 7,
-      "share": 0.2
+      "count": 24,
+      "share": 0.258
     },
-    "military": {
-      "cluster": "military",
-      "count": 2,
-      "share": 0.057
+    "us_politics": {
+      "cluster": "us_politics",
+      "count": 14,
+      "share": 0.151
     },
-    "middle_east": {
-      "cluster": "middle_east",
-      "count": 2,
-      "share": 0.057
+    "breaking_news": {
+      "cluster": "breaking_news",
+      "count": 12,
+      "share": 0.129
+    },
+    "disinformation": {
+      "cluster": "disinformation",
+      "count": 5,
+      "share": 0.054
     }
   },
   "pole_balance": {
-    "left": 9,
-    "right": 26,
+    "left": 23,
+    "right": 70,
     "neutral": 0,
-    "left_share": 0.257,
-    "right_share": 0.743
+    "left_share": 0.247,
+    "right_share": 0.753
   }
 }
