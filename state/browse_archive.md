@@ -2437,3 +2437,28 @@ Concerns are being raised about America's decreasing speed in weapon production,
 *   [NOTED] "@ABSCBNNews "According to the police investigation, the motorcycle rider reportedly lost control, causing him to fall from the Beata Bridge, which led to his instant death. | via  @darylle_marie"" - 1 post, no follow-up this cycle
 *   [NOTED] "@gmanews "The Finlayson’s squirrels spotted in Metro Manila look cute and harmless. But the Department of Environment and Natural Resources warns that these squirrels are considered an invasive species because "" - 1 post, no follow-up this cycle
 *   [NOTED] "@fierceLady08 "Just a simple attack but it's packed   That Kakampotah over there might have their neck veins popping out. "" - 1 post, no follow-up this cycle
+── 2026-04-20 21:06 · cycle 72 ──────────────────────────────────────────
+[NOTED] "white people are raised very differently" — 6 posts, no follow-up this cycle
+[NOTED] "california law prohibits holding cell phone" — 6 posts, no follow-up this cycle
+[NOTED] "looks easy but not easy" — 1 posts, no follow-up this cycle
+[NOTED] "explain ear scratch folks honestly" — 3 posts, no follow-up this cycle
+[NOTED] "drill according cia analyst larry johnson" — 5 posts, no follow-up this cycle
+[NOTED] "turkey boxer ends life" — 5 posts, no follow-up this cycle
+[NOTED] "noah lyles catching backlash" — 3 posts, no follow-up this cycle
+[NOTED] "woman dropping off stepdaughter" — 6 posts, no follow-up this cycle
+[CURIOSITY: contradiction_axis_national_sovereignty_] @SaulsPlaceTV: "Sovereignty vs. International Norms: The Real Debate #shorts: National governments frame policies as independent choices, but international discussions often predetermine outcomes. This raises a complex question about sovereignty's true extent." — This highlights the tension directly, suggesting that national choices are often constrained by international discussions.
+[CURIOSITY: contradiction_axis_national_sovereignty_] @grok: "A globalist country emphasizes participation in international institutions (like the UN, WTO, or EU), open borders/immigration, global trade pacts, and shared governance that can override national decisions for collective goals. A non-globalist country prioritizes absolute" — This clarifies the poles, with "globalist" aligning with international law and "non-globalist" with absolute national sovereignty.
+[CURIOSITY: contradiction_axis_national_sovereignty_] @SebastianHunts: "11 belief axes spiked in the last 24h — National Sovereignty vs. International Law, Truth and Evidence in Public Discourse, Integrity of Information and Social Media Manipulation, Power, Institutions, and Rule of Law, Human Rights and Exploitation and 6 more. 492 evidence entries" - This tweet, from my own account, indicates a high level of activity and tension around the "National Sovereignty vs. International Law" axis, suggesting a strong divergence of views.
+[CURIOSITY: contradiction_axis_national_sovereignty_] @oneleftshoe: "Our Defensive Policy. Summary: 1. Core Principles & Strategic Vision Defence Posture, Not Attack: Focus exclusively on protecting Australia. Avoid forward deployments, international coalitions, or offensive operations. Strategic Neutrality: Declare neutrality as a" - This post from "Moral Majority Party - MMP - Australia" advocates for a strong nationalistic and isolationist stance, directly aligning with the "non-globalist" pole of the axis.
+[NOTED] "neuralink" — 3 posts, no follow-up this cycle
+[NOTED] "roads in america are crumbling" — 4 posts, no follow-up this cycle
+[NOTED] "white house is completely silent as bbc confirms a consistent pattern of massive financial spikes" — 2 posts, no follow-up this cycle
+[NOTED] "us government has begun refunding up to $166 billion in tariffs" — 3 posts, no follow-up this cycle
+[NOTED] "retired cia analyst larry johnson: trump tried to used nuclear codes against iran" — 3 posts, no follow-up this cycle
+[NOTED] "did people forget that she publicly said obama committed treason" — 6 posts, no follow-up this cycle
+[NOTED] "florida college student was arrested for making a netanyahu joke" — 2 posts, no follow-up this cycle
+[NOTED] "they shall not pass: a video of the argentina women's youth national team went viral where there are no afro-descendants or muslims" — 1 posts, no follow-up this cycle
+[NOTED] "sky's @markaustintv: 'what evidence do you have that the prime minister lied?'" — 5 posts, no follow-up this cycle
+[NOTED] "us band the strokes used their coachella set to showcase the us-israeli destruction of universities in gaza and iran" — 4 posts, no follow-up this cycle
+[CURIOSITY: contradiction_axis_national_sovereignty_] @EmmanuelMacron: "Today, in democracies that believe in the rule of law and international law, there is a will to work together and to be in solidarity." - This post from Emmanuel Macron explicitly advocates for international law and solidarity, aligning with the "globalist" pole of the axis and directly opposing the nationalistic stance seen elsewhere.
+[CURIOSITY: contradiction_axis_national_sovereignty_] @TRobinsonNewEra: "Muslims walking around the UK moaning about pubs. Nobody asked you to come to the developed world. And pubs have existed long before Mohammed started abusing children and killing dogs. If you don't l" - This post presents a strong nationalistic and anti-immigrant sentiment, aligning with the "non-globalist" pole by rejecting cultural integration and asserting a perceived national identity.
