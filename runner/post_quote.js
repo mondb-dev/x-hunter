@@ -57,15 +57,21 @@ function normalizeText(value) {
   return String(value || "").replace(/\s+/g, " ").trim().toLowerCase();
 }
 
-async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_000) {
-  const needle = normalizeText(expectedText).slice(0, 80);
+async function confirmFromProfile(page, expectedText, attempts = 6, delayMs = 4_000) {
+  const needle = normalizeText(expectedText).slice(0, 50);
+  console.log(`[post_quote] confirmFromProfile: looking for "${needle.slice(0, 40)}..." (${attempts} attempts, ${delayMs}ms delay)`);
   await page.goto(`https://x.com/${HANDLE}`, { waitUntil: "domcontentloaded", timeout: 90_000 });
+  await sleep(3_000);
 
   for (let attempt = 1; attempt <= attempts; attempt++) {
     await sleep(delayMs);
-    const match = await page.evaluate(({ expectedNeedle, handle }) => {
+    const result = await page.evaluate(({ expectedNeedle, handle }) => {
       const norm = (value) => String(value || "").replace(/\s+/g, " ").trim().toLowerCase();
-      const articles = Array.from(document.querySelectorAll("article")).slice(0, 12);
+      const articles = Array.from(document.querySelectorAll("article")).slice(0, 15);
+      const debug = { articleCount: articles.length, firstArticlePreview: "" };
+      if (articles.length > 0) {
+        debug.firstArticlePreview = norm(articles[0].innerText).slice(0, 80);
+      }
       for (const article of articles) {
         const text = norm(article.innerText);
         if (!text || !text.includes(expectedNeedle)) continue;
@@ -75,14 +81,21 @@ async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_
           new RegExp(`/${handle}/status/\\d+`, "i").test(href) &&
           !/\/analytics/i.test(href)
         );
-        if (href) return `https://x.com${href.split("?")[0]}`;
+        if (href) return { url: `https://x.com${href.split("?")[0]}`, debug };
       }
-      return null;
+      return { url: null, debug };
     }, { expectedNeedle: needle, handle: HANDLE });
 
-    if (isConfirmedStatusUrl(match)) return match;
+    if (isConfirmedStatusUrl(result.url)) {
+      console.log(`[post_quote] profile confirmed on attempt ${attempt}: ${result.url}`);
+      return result.url;
+    }
     if (attempt < attempts) {
-      console.log(`[post_quote] profile confirmation miss ${attempt}/${attempts} — waiting...`);
+      console.log(`[post_quote] profile confirmation miss ${attempt}/${attempts} (${result.debug.articleCount} articles, first: "${result.debug.firstArticlePreview}") — reloading...`);
+      if (attempt % 2 === 0) {
+        await page.reload({ waitUntil: "domcontentloaded", timeout: 30_000 });
+        await sleep(2_000);
+      }
     }
   }
 
@@ -436,11 +449,14 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
         process.exit(1);
       } else {
         console.log("[post_quote] navigating to profile to confirm post and capture URL...");
-        quoteUrl = await confirmFromProfile(page, quoteText, 4, 3_000);
+        quoteUrl = await confirmFromProfile(page, quoteText, 6, 4_000);
         if (quoteUrl) {
           console.log(`[post_quote] SUCCESS (confirmed from profile): ${quoteUrl}`);
+        } else if (finalUrl.includes("/home")) {
+          console.log("[post_quote] probable success — clicked Post and returned to /home, but could not confirm URL");
+          quoteUrl = "posted";
         } else {
-          console.error("[post_quote] could not confirm quote from profile after 4 attempts");
+          console.error("[post_quote] could not confirm quote from profile after 6 attempts");
           writeAttempt(ATTEMPT_FILE, {
             kind: "quote",
             outcome: "failed",
@@ -458,7 +474,17 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
       console.log(`[post_quote] SUCCESS: ${quoteUrl}`);
     }
 
-    writeResult(RESULT_FILE, quoteUrl);
+    // Write result — if confirmed URL use writeResult validation;
+    // if "posted" (soft-confirm), write directly
+    if (isConfirmedStatusUrl(quoteUrl)) {
+      writeResult(RESULT_FILE, quoteUrl);
+    } else if (quoteUrl === "posted") {
+      console.log("[post_quote] writing soft-confirmed result (no URL captured)");
+      fs.writeFileSync(RESULT_FILE, "posted\n");
+    } else {
+      writeResult(RESULT_FILE, quoteUrl);
+    }
+
     writeAttempt(ATTEMPT_FILE, {
       kind: "quote",
       outcome: "confirmed",

@@ -235,6 +235,12 @@ function postRegularTweet({ today, hour, cycle }) {
       log(`Tweet posted: ${tweetUrl}`);
       return { attempted: true, posted: true, rejected: false, skipped: false, suppressed: false, suppressionReason: null, tweetUrl };
     }
+    // Accept "posted" as soft confirmation - tweet went through but URL could not be captured
+    if (tweetUrl === "posted") {
+      try { fs.unlinkSync(DRAFT_PATH); } catch {}
+      log("Tweet posted (soft-confirmed - URL not captured from profile)");
+      return { attempted: true, posted: true, rejected: false, skipped: false, suppressed: false, suppressionReason: null, tweetUrl: "posted" };
+    }
 
     clearFile(resultPath);
     if (attempt.ok) {
@@ -314,6 +320,12 @@ function postQuoteTweet({ cycle }) {
       try { fs.unlinkSync(quoteDraftPath); } catch {}
       log(`Quote posted: ${quoteUrl}`);
       return { attempted: true, posted: true, suppressed: false, suppressionReason: null, quoteUrl };
+    }
+    // Accept "posted" as soft confirmation - quote went through but URL could not be captured
+    if (quoteUrl === "posted") {
+      try { fs.unlinkSync(quoteDraftPath); } catch {}
+      log("Quote posted (soft-confirmed - URL not captured from profile)");
+      return { attempted: true, posted: true, suppressed: false, suppressionReason: null, quoteUrl: "posted" };
     }
 
     clearFile(resultPath);

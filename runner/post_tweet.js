@@ -52,15 +52,23 @@ function normalizeText(value) {
   return String(value || "").replace(/\s+/g, " ").trim().toLowerCase();
 }
 
-async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_000) {
-  const needle = normalizeText(expectedText).slice(0, 80);
+async function confirmFromProfile(page, expectedText, attempts = 6, delayMs = 4_000) {
+  // Use first 50 chars as needle — shorter is more reliable since tweets may be slightly reformatted
+  const needle = normalizeText(expectedText).slice(0, 50);
+  console.log(`[post_tweet] confirmFromProfile: looking for "${needle.slice(0, 40)}..." (${attempts} attempts, ${delayMs}ms delay)`);
   await page.goto(`https://x.com/${HANDLE}`, { waitUntil: "domcontentloaded", timeout: 90_000 });
+  // Extra wait for profile feed to load
+  await sleep(3_000);
 
   for (let attempt = 1; attempt <= attempts; attempt++) {
     await sleep(delayMs);
-    const match = await page.evaluate(({ expectedNeedle, handle }) => {
+    const result = await page.evaluate(({ expectedNeedle, handle }) => {
       const norm = (value) => String(value || "").replace(/\s+/g, " ").trim().toLowerCase();
-      const articles = Array.from(document.querySelectorAll("article")).slice(0, 12);
+      const articles = Array.from(document.querySelectorAll("article")).slice(0, 15);
+      const debug = { articleCount: articles.length, firstArticlePreview: "" };
+      if (articles.length > 0) {
+        debug.firstArticlePreview = norm(articles[0].innerText).slice(0, 80);
+      }
       for (const article of articles) {
         const text = norm(article.innerText);
         if (!text || !text.includes(expectedNeedle)) continue;
@@ -70,14 +78,22 @@ async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_
           new RegExp(`/${handle}/status/\\d+`, "i").test(href) &&
           !/\/analytics/i.test(href)
         );
-        if (href) return `https://x.com${href.split("?")[0]}`;
+        if (href) return { url: `https://x.com${href.split("?")[0]}`, debug };
       }
-      return null;
+      return { url: null, debug };
     }, { expectedNeedle: needle, handle: HANDLE });
 
-    if (isConfirmedStatusUrl(match)) return match;
+    if (isConfirmedStatusUrl(result.url)) {
+      console.log(`[post_tweet] profile confirmed on attempt ${attempt}: ${result.url}`);
+      return result.url;
+    }
     if (attempt < attempts) {
-      console.log(`[post_tweet] profile confirmation miss ${attempt}/${attempts} — waiting...`);
+      console.log(`[post_tweet] profile confirmation miss ${attempt}/${attempts} (${result.debug.articleCount} articles, first: "${result.debug.firstArticlePreview}") — reloading...`);
+      // Reload the profile page on every other miss to get fresh content
+      if (attempt % 2 === 0) {
+        await page.reload({ waitUntil: "domcontentloaded", timeout: 30_000 });
+        await sleep(2_000);
+      }
     }
   }
 
@@ -371,7 +387,16 @@ async function confirmFromProfile(page, expectedText, attempts = 4, delayMs = 3_
       console.log(`[post_tweet] SUCCESS: ${tweetUrl}`);
     }
 
-    writeResult(RESULT_FILE, tweetUrl);
+    // Write result — if we have a confirmed URL use writeResult validation;
+    // if we only have "posted" (probable success, no URL), write directly
+    if (isConfirmedStatusUrl(tweetUrl)) {
+      writeResult(RESULT_FILE, tweetUrl);
+    } else if (tweetUrl === "posted") {
+      console.log("[post_tweet] writing soft-confirmed result (no URL captured)");
+      fs.writeFileSync(RESULT_FILE, "posted\n");
+    } else {
+      writeResult(RESULT_FILE, tweetUrl);
+    }
     writeAttempt(ATTEMPT_FILE, {
       kind: "tweet",
       outcome: "confirmed",
