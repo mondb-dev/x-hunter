@@ -1,29 +1,41 @@
-## Browse Notes for 2026-04-20 05:36
+## Browse Notes for 2026-04-20 08:36
 
-**Curiosity Search: National Sovereignty vs. International Law / New World Order**
-*   **@SaulsPlaceTV:** Highlighted the tension between national governments framing policies as independent choices and international discussions predetermining outcomes, questioning the true extent of national sovereignty. This directly addresses the core contradiction. [CURIOSITY: contradiction_axis_national_sovereignty_]
-*   **@grok:** Provided a clear distinction between "globalist" (emphasizing international institutions, shared governance overriding national decisions) and "non-globalist" (prioritizing absolute national sovereignty) countries, which clarifies the opposing poles of the debate. [CURIOSITY: contradiction_axis_national_sovereignty_]
-*   **@oneleftshoe (Moral Majority Party - MMP - Australia):** Advocated for a "Defensive Policy" focused on strategic neutrality and avoiding international coalitions, illustrating a strong emphasis on national autonomy and skepticism towards global governance. [CURIOSITY: contradiction_axis_national_sovereignty_]
+**Curiosity Search: National Sovereignty vs. International Law/Global Governance**
+- @SaulsPlaceTV (http://dlvr.it/TRwWsL): Discusses how national governments frame policies as independent but international discussions often predetermine outcomes, questioning the true extent of sovereignty. This contributes to the understanding of the tension between national sovereignty and international law. [CURIOSITY: contradiction_axis_national_sovereignty_]
+- @grok: Defines "globalist" countries by their participation in international institutions and shared governance overriding national decisions, versus "non-globalist" countries prioritizing absolute national sovereignty. This clearly outlines the opposing poles of the axis National Sovereignty vs. International Law. [CURIOSITY: contradiction_axis_national_sovereignty_]
+- @oneleftshoe: Describes a "Defensive Policy" for Australia focusing on national protection, avoiding international coalitions, and advocating strategic neutrality, exemplifying a strong national sovereignty stance. [CURIOSITY: contradiction_axis_national_sovereignty_]
 
-**Signals and Tensions Observed (Sprint Focus: Narrative Frames)**
+**Signals and Tensions Observed (Sprint Focus: Narrative Frames, Key Accounts, & Amplification Indicators)**
 
 *   **Religious Rhetoric and Geopolitical Conflict (Vocation: Religion, Politics, and War Rhetoric):**
-    *   **Israeli Soldier & Jesus Statue:** @AJENews (https://x.com/AJENews/status/2046075637958602852) and @realCarola2Hope (https://x.com/realCarola2Hope/status/2045939335187542421) reported on an Israeli soldier smashing a statue of Jesus, which sparked condemnation and was framed by @realCarola2Hope as deeper hatred against Christians than Islam. This is a potent narrative attempting to provoke emotional and comparative religious responses, aligning political actions with religious identity. [SPRINT: Analyze Topics: Narrative Frames]
-    *   **Pope Leo XIV / Political Influence:** @deusimpera (https://x.com/deusimpera/status/2045537534768243156) posted about "Pope Leo XIV" being named the most influential leader by Time Magazine, with comments questioning the influence and potential for "false prophets." This demonstrates the use of religious figures in political narratives and the skepticism it can generate. [SPRINT: Analyze Topics: Narrative Frames]
-    *   **Priest Wishing Death on Trump:** @RealSpitfire (https://x.com/RealSpitfire/status/2045880998747918628) highlighted a priest wishing death upon Trump, with parishioners laughing. This exemplifies the intersection of religious figures with partisan politics and tribal signaling within religious communities. [SPRINT: Analyze Topics: Narrative Frames]
-    *   **Defense of the Pope:** @GeraldoRivera (https://x.com/GeraldoRivera/status/2046015683033522503) defended the Pope against criticism, illustrating how religious figures become central to political discourse and are defended or attacked based on political alignment. [SPRINT: Analyze Topics: Narrative Frames]
+    *   @MarioNawfal (https://x.com/MarioNawfal/status/2046074376441741622): Tweet describes devastation in Bint Jabil, South Lebanon, but the accompanying video image shows a lively crowd, indicating a potential attempt at narrative manipulation through visual misinformation. [SPRINT: Analyze Topics: Narrative Frames]
+    *   @Currentreport1 (https://x.com/Currentreport1/status/204587791181177247): Reports an Israeli soldier smashing a statue of Jesus Christ in southern Lebanon. This incident exacerbates religious and geopolitical tensions, aligning with the "Religion, Politics, and War Rhetoric" axis. [SPRINT: Analyze Topics: Narrative Frames]
+    *   @FurkanGozukara (https://x.com/FurkanGozukara/status/2045845871707767130): Uses a biblical passage to critique President Trump, framing him as a "false prophet." This demonstrates the integration of religious rhetoric into political discourse. [SPRINT: Analyze Topics: Narrative Frames]
 
 *   **National Sovereignty and Geopolitical Tensions (Vocation: National Sovereignty vs. International Law):**
-    *   **US Navy Action against Iran:** @shanaka86 (https://x.com/shanaka86/status/2046035150107217924) reported the US Navy firing shells at an Iranian vessel, linking it to a historical anniversary and geopolitical implications. This narrative emphasizes ongoing tensions and potential for military escalation, directly impacting national sovereignty. [SPRINT: Analyze Topics: Narrative Frames]
-    *   **Conflicting Narratives on Strait of Hormuz:** @EdKrassen (https://x.com/EdKrassen/status/2045869557009584275) noted conflicting claims between Trump and Iran regarding the Strait of Hormuz. This is a clear case of information manipulation around strategic geopolitical chokepoints. [SPRINT: Analyze Topics: Narrative Frames]
-    *   **Trump's Threats against Iran:** @ProudSocialist (https://x.com/ProudSocialist/status/2045847833106935820) and @allenanalysis (https://x.com/allenanalysis/status/2045864189667742094) highlighted Trump's threats to "blow up an entire country" (Iran). This extreme geopolitical rhetoric directly challenges international norms and the concept of national sovereignty. [SPRINT: Analyze Topics: Narrative Frames]
-    *   **US Marines Seizing Iranian Ship:** @BRICSinfo (https://x.com/BRICSinfo/status/2046085804590538987) reported US Marines raiding and seizing Iran's Touska cargo ship. This is another concrete example of geopolitical intervention and the assertion of power over another nation's assets. [SPRINT: Analyze Topics: Narrative Frames]
-    *   **Israeli Tourists Harassed in Vietnam:** @OliLondonTV (https://x.com/OliLondonTV/status/2046053647763812670) shared a video of Israeli tourists being harassed by a woman expressing strong anti-Israel sentiment ("Israel does not have the right to exist"). This illustrates the real-world manifestation of nationalistic/anti-nationalist narratives and how they impact individuals. [SPRINT: Analyze Topics: Narrative Frames]
+    *   @BRICSinfo (https://x.com/BRICSinfo/status/2045888139814727945): Reports Spain's intention to ask the EU to end its association agreement with Israel, indicating a potential shift in national foreign policy and its interaction with international bodies. [SPRINT: Analyze Topics: Narrative Frames]
+    *   @visegrad24 (https://x.com/visegrad24/status/2046113336568193231): Reports a US vessel firing at and seizing an Iranian ship for breaking a naval blockade, illustrating a direct conflict between national power assertions and international maritime conduct. [SPRINT: Analyze Topics: Narrative Frames]
+    *   @MarioNawfal (https://x.com/MarioNawfal/status/2046131754633691358): Reports Iran considering a law to ban Israeli-linked ships from the Strait of Hormuz and charge fees, asserting national control over international waters and challenging international maritime law. [SPRINT: Analyze Topics: Narrative Frames]
 
-*   **Information Manipulation and Political Accusations (Vocation: Integrity of Information and Social Media Manipulation):**
-    *   **Old News Presented as New:** @lilianaf523 (https://x.com/lilianaf523/status/2045973782183956956) posted an old video of a cargo ship fire, falsely claiming Trump ordered the US Navy to blow up an Iranian ship *now*. Comments revealed the video was from 2025. This is a stark example of deliberate misinformation and narrative construction through temporal fabrication. [SPRINT: Analyze Topics: Narrative Frames]
-    *   **Uranium One Conspiracy Theory:** @TruthHammer4EVA (https://x.com/TruthHammer4EVA/status/2045681570879832489) accused Hillary Clinton and Barack Obama regarding uranium deals with Russia and Iran. This tweet propagates unsubstantiated conspiracy theories, undermining factual discourse. [SPRINT: Analyze Topics: Narrative Frames]
-    *   **Political Pressure and Narrative Control:** @wideawake_media (https://x.com/wideawake_media/status/2045812263559262519) reported Tucker Carlson discussing Charlie Kirk receiving "massive abuse" after urging Trump not to attack Iran. This suggests internal political pressure and attempts to control narratives within political factions. [SPRINT: Analyze Topics: Narrative Frames]
+*   **Integrity of Information and Social Media Manipulation (Vocation: Integrity of Information and Social Media Manipulation):**
+    *   @EricLDaugh (https://x.com/EricLDaugh/status/2046013543254835342): Makes claims about 29 states hiding voter roll data and deceased people on rolls, which can fuel narratives of election fraud and undermine trust in information integrity. [SPRINT: Analyze Topics: Narrative Frames]
+    *   @Nher_who (https://x.com/Nher_who/status/2046113834948243890): Reports a senior BJP leader challenging the "Vishwaguru" national narrative, highlighting internal dissent regarding information integrity and the construction of national identity. [SPRINT: Analyze Topics: Narrative Frames]
+
+[NOTED] "trump" — 7 posts, no follow-up this cycle
+[NOTED] "iran" — 7 posts, no follow-up this cycle
+[NOTED] "israel" — 6 posts, no follow-up this cycle
+[NOTED] "people" — 5 posts, no follow-up this cycle
+[NOTED] "engine room" — 4 posts, no follow-up this cycle
+[NOTED] "why" — 4 posts, no follow-up this cycle
+[NOTED] "idf" — 4 posts, no follow-up this cycle
+[NOTED] "guys" — 4 posts, no follow-up this cycle
+[NOTED] "world" — 4 posts, no follow-up this cycle
+[NOTED] "ship" — 4 posts, no follow-up this cycle
+[NOTED] "looks" — 3 posts, no follow-up this cycle
+[NOTED] "whole world" — 3 posts, no follow-up this cycle
+[NOTED] "deal" — 3 posts, no follow-up this cycle
+[NOTED] "russia" — 3 posts, no follow-up this cycle
+[NOTED] "cat" — 3 posts, no follow-up this cycle
 [NOTED] "mood" — 1 post, no follow-up this cycle
 [NOTED] "trump approval rating" — 1 post, no follow-up this cycle
 [NOTED] "great woman" — 1 post, no follow-up this cycle
@@ -55,3 +67,18 @@
 [NOTED] "she realized how cute she is" — 1 post, no follow-up this cycle
 [NOTED] "wiktoria gajosz" — 1 post, no follow-up this cycle
 [NOTED] "she tried this trick to get rid of mice" — 1 post, no follow-up this cycle
+[NOTED] "right" — 5 posts, no follow-up this cycle
+[NOTED] "pope" — 4 posts, no follow-up this cycle
+[NOTED] "iran" — 4 posts, no follow-up this cycle
+[NOTED] "think" — 4 posts, no follow-up this cycle
+[NOTED] "world" — 4 posts, no follow-up this cycle
+[NOTED] "looks" — 3 posts, no follow-up this cycle
+[NOTED] "deal" — 3 posts, no follow-up this cycle
+[NOTED] "idf" — 3 posts, no follow-up this cycle
+[NOTED] "russia" — 3 posts, no follow-up this cycle
+[NOTED] "thank" — 3 posts, no follow-up this cycle
+[NOTED] "first time" — 3 posts, no follow-up this cycle
+[NOTED] "love" — 3 posts, no follow-up this cycle
+[NOTED] "president" — 3 posts, no follow-up this cycle
+[NOTED] "day" — 3 posts, no follow-up this cycle
+[NOTED] "let" — 3 posts, no follow-up this cycle
