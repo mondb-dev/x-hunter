@@ -1,84 +1,78 @@
-## Browse Notes for 2026-04-20 08:36
+## Browse Notes 2026-04-20 11:06
 
-**Curiosity Search: National Sovereignty vs. International Law/Global Governance**
-- @SaulsPlaceTV (http://dlvr.it/TRwWsL): Discusses how national governments frame policies as independent but international discussions often predetermine outcomes, questioning the true extent of sovereignty. This contributes to the understanding of the tension between national sovereignty and international law. [CURIOSITY: contradiction_axis_national_sovereignty_]
-- @grok: Defines "globalist" countries by their participation in international institutions and shared governance overriding national decisions, versus "non-globalist" countries prioritizing absolute national sovereignty. This clearly outlines the opposing poles of the axis National Sovereignty vs. International Law. [CURIOSITY: contradiction_axis_national_sovereignty_]
-- @oneleftshoe: Describes a "Defensive Policy" for Australia focusing on national protection, avoiding international coalitions, and advocating strategic neutrality, exemplifying a strong national sovereignty stance. [CURIOSITY: contradiction_axis_national_sovereignty_]
+### Curiosity Directive: National Sovereignty vs. International Law / New World Order
 
-**Signals and Tensions Observed (Sprint Focus: Narrative Frames, Key Accounts, & Amplification Indicators)**
+- [CURIOSITY: contradiction_axis_national_sovereignty_] @SaulsPlaceTV: Post highlights the tension between national governments making "independent choices" and international discussions "predetermining outcomes," questioning the true extent of sovereignty. This suggests a subtle erosion of national sovereignty by international norms. (https://dlvr.it/TRwWsL)
+- [CURIOSITY: contradiction_axis_national_sovereignty_] @grok: Provides clear definitions of "globalist" (emphasizing international institutions, shared governance overriding national decisions) and "non-globalist" (prioritizing absolute national sovereignty). This is excellent for understanding the poles of the axes.
+- [CURIOSITY: contradiction_axis_national_sovereignty_] @oneleftshoe (Moral Majority Party - MMP - Australia): Advocates for a "Strategic Neutrality" and avoiding "international coalitions" or "offensive operations," focusing exclusively on protecting Australia. This is a strong stance for national sovereignty over international engagement.
 
-*   **Religious Rhetoric and Geopolitical Conflict (Vocation: Religion, Politics, and War Rhetoric):**
-    *   @MarioNawfal (https://x.com/MarioNawfal/status/2046074376441741622): Tweet describes devastation in Bint Jabil, South Lebanon, but the accompanying video image shows a lively crowd, indicating a potential attempt at narrative manipulation through visual misinformation. [SPRINT: Analyze Topics: Narrative Frames]
-    *   @Currentreport1 (https://x.com/Currentreport1/status/204587791181177247): Reports an Israeli soldier smashing a statue of Jesus Christ in southern Lebanon. This incident exacerbates religious and geopolitical tensions, aligning with the "Religion, Politics, and War Rhetoric" axis. [SPRINT: Analyze Topics: Narrative Frames]
-    *   @FurkanGozukara (https://x.com/FurkanGozukara/status/2045845871707767130): Uses a biblical passage to critique President Trump, framing him as a "false prophet." This demonstrates the integration of religious rhetoric into political discourse. [SPRINT: Analyze Topics: Narrative Frames]
+### General Observations & Tensions:
 
-*   **National Sovereignty and Geopolitical Tensions (Vocation: National Sovereignty vs. International Law):**
-    *   @BRICSinfo (https://x.com/BRICSinfo/status/2045888139814727945): Reports Spain's intention to ask the EU to end its association agreement with Israel, indicating a potential shift in national foreign policy and its interaction with international bodies. [SPRINT: Analyze Topics: Narrative Frames]
-    *   @visegrad24 (https://x.com/visegrad24/status/2046113336568193231): Reports a US vessel firing at and seizing an Iranian ship for breaking a naval blockade, illustrating a direct conflict between national power assertions and international maritime conduct. [SPRINT: Analyze Topics: Narrative Frames]
-    *   @MarioNawfal (https://x.com/MarioNawfal/status/2046131754633691358): Reports Iran considering a law to ban Israeli-linked ships from the Strait of Hormuz and charge fees, asserting national control over international waters and challenging international maritime law. [SPRINT: Analyze Topics: Narrative Frames]
+- [SPRINT: research] @RT_com: Report of a Florida student arrested for a Netanyahu joke on WhatsApp raises questions about freedom of expression versus state control and political sensitivities. This aligns with themes of individual liberty versus authoritarian enforcement. (https://x.com/RT_com/status/2046043547632390477)
+- [SPRINT: research] @mjfree: Trump's alleged threat to "blow up an entire country" (Iran) if a deal isn't signed exemplifies aggressive geopolitical rhetoric and emotional language used in international relations. This is a clear signal for narrative construction around conflict. (https://x.com/mjfree/status/2045892041893154892)
+- @AJENews: Video claims to show US military operation to seize an Iranian-flagged ship, framing US actions as asserting authority in international waters and contributing to geopolitical tensions. (https://x.com/AJENews/status/2046113227336212965)
+- @MarioNawfal: Iran’s FM spokesman's statement rejecting ultimatums and warning of military response highlights a narrative of national interest and self-defense against perceived aggression. (https://x.com/MarioNawfal/status/2046138046249154814)
+- @robinmonotti: Post implying Israel's involvement in the disappearance of a statue of Jesus Christ in Lebanon uses a blank image to evoke emotional response and assign blame through absence. This is a direct example of strategic narrative construction for geopolitical ends. (https://x.com/robinmonotti/status/2045930624335130982)
+- [SPRINT: research] @VividProwess: Bill Maher's assertion that "Israel did not steal anybody’s land" based on historical/religious claims is a strong example of integrating religious beliefs into political justification for geopolitical stances. This is critical for understanding narrative frames. (https://x.com/VividProwess/status/2045691354022563954)
+- [SPRINT: research] @Parodyjeffx: Claim that Netanyahu’s press office director called for “brainwashing” people on social media and lying is a direct admission of narrative manipulation and disinformation tactics. This is a crucial signal for understanding epistemic integrity and media manipulation. (https://x.com/Parodyjeffx/status/2046163062059630650)
+- @VladTheInflator: The comment "I mean it's all one big Zionist club" is an example of tribal signaling and conspiracy theory rhetoric, contributing to polarized discourse. (https://x.com/VladTheInflator/status/2045996220280373688)
+- [SPRINT: research] @BRICSinfo: Trump's threat to "blow up an entire country" (Iran) if no deal is made, explicitly mentioning targeting "bridges and power plants." This is a clear example of aggressive geopolitical rhetoric and the use of threats to influence international relations, directly relevant to understanding narrative construction around conflict and national sovereignty. (https://x.com/BRICSinfo/status/2045872037302878586)
+- [SPRINT: research] @wideawake_media: Ex-marine Ken O'Keefe discusses "financial fraud" and power being given to a "tiny group of individuals" through "infinite supply of money," suggesting a narrative of systemic manipulation and control. This aligns with themes of power structures and potential for manipulation. (https://x.com/wideawake_media/status/2046159717739692159)
+- [SPRINT: research] @VividProwess: Bill Maher's assertion that "Israel did not steal anybody’s land" based on historical/religious claims, emphasizing a nationalistic and religiously framed justification for land claims. This is highly relevant to how religious and nationalist narratives are constructed. (https://x.com/VividProwess/status/2045691354022563954)
+- [SPRINT: research] @sanchezcastejon: Spanish PM calls for EU to break Association Agreement with Israel due to violations of international law. This highlights the tension between national actions and international legal frameworks. (https://x.com/sanchezcastejon/status/2045821225579241976)
+- [SPRINT: research] @MarioNawfal: Iran's Foreign Ministry confirms no plans for talks in Islamabad, citing US violations of ceasefire and naval blockade. This reinforces the narrative of national interest and defense against perceived aggression. (https://x.com/MarioNawfal/status/2046162104814555346)
+- @DrLoupis__: Post depicting a "Jewish soldier smashing the head of a Jesus Christ statue during operations in southern Lebanon," questioning "Is this Judeo-Christianity?". This is a highly provocative narrative using religious symbols to inflame tensions and assign blame, directly relevant to the intersection of religion, politics, and war rhetoric. (https://x.com/DrLoupis__/status/2046124175283081400)
+- @Its_ereko: Iran shuts door on negotiations, with Foreign Ministry spokesman stating "no plans for the next round of negotiations. No decision has been made." This further illustrates the hardening of national stances in geopolitical conflicts. (https://x.com/Its_ereko/status/2046150536706007518)
+- @SprinterPress: Iran's Foreign Ministry spokesperson claims US negotiating team admitted reporting to Israeli officials during talks, suggesting external influence on national negotiations. This is a direct signal of perceived manipulation and lack of independent agency in international diplomacy. (https://x.com/SprinterPress/status/2046159893854302711)
 
-*   **Integrity of Information and Social Media Manipulation (Vocation: Integrity of Information and Social Media Manipulation):**
-    *   @EricLDaugh (https://x.com/EricLDaugh/status/2046013543254835342): Makes claims about 29 states hiding voter roll data and deceased people on rolls, which can fuel narratives of election fraud and undermine trust in information integrity. [SPRINT: Analyze Topics: Narrative Frames]
-    *   @Nher_who (https://x.com/Nher_who/status/2046113834948243890): Reports a senior BJP leader challenging the "Vishwaguru" national narrative, highlighting internal dissent regarding information integrity and the construction of national identity. [SPRINT: Analyze Topics: Narrative Frames]
+### Seen-but-not-examined:
 
-[NOTED] "trump" — 7 posts, no follow-up this cycle
-[NOTED] "iran" — 7 posts, no follow-up this cycle
-[NOTED] "israel" — 6 posts, no follow-up this cycle
-[NOTED] "people" — 5 posts, no follow-up this cycle
-[NOTED] "engine room" — 4 posts, no follow-up this cycle
-[NOTED] "why" — 4 posts, no follow-up this cycle
-[NOTED] "idf" — 4 posts, no follow-up this cycle
-[NOTED] "guys" — 4 posts, no follow-up this cycle
-[NOTED] "world" — 4 posts, no follow-up this cycle
-[NOTED] "ship" — 4 posts, no follow-up this cycle
-[NOTED] "looks" — 3 posts, no follow-up this cycle
-[NOTED] "whole world" — 3 posts, no follow-up this cycle
-[NOTED] "deal" — 3 posts, no follow-up this cycle
-[NOTED] "russia" — 3 posts, no follow-up this cycle
-[NOTED] "cat" — 3 posts, no follow-up this cycle
-[NOTED] "mood" — 1 post, no follow-up this cycle
-[NOTED] "trump approval rating" — 1 post, no follow-up this cycle
-[NOTED] "great woman" — 1 post, no follow-up this cycle
-[NOTED] "unable read tragic" — 1 post, no follow-up this cycle
-[NOTED] "ridiculous late last week trump claimed" — 1 post, no follow-up this cycle
-[NOTED] "statement sean hannity yesterday definitively confirmed" — 1 post, no follow-up this cycle
-[NOTED] "former federal judge michael luttig drops profound warning" — 1 post, no follow-up this cycle
-[NOTED] "worst year" — 1 post, no follow-up this cycle
-[NOTED] "ever seen vagina appreciative" — 1 post, no follow-up this cycle
-[NOTED] "perfect credit score" — 1 post, no follow-up this cycle
-[NOTED] "biggest attack russian oil refinery rosneft tuapse oil depot export facility krasnodar krai russia" — 1 post, no follow-up this cycle
-[NOTED] "brutal violence german police inflicted peaceful pro palestine woman horrific scenes" — 1 post, no follow-up this cycle
-[NOTED] "officer" — 1 post, no follow-up this cycle
-[NOTED] "afterimage ballerina work dali nika atelier" — 1 post, no follow-up this cycle
-[NOTED] "drivers license" — 1 post, no follow-up this cycle
-[NOTED] "hypocritically refused endorse his own party new york mayoral candidate zohran mamdani" — 1 post, no follow-up this cycle
-[NOTED] "target using banana stickers" — 1 post, no follow-up this cycle
-[NOTED] "critically injured people first" — 1 post, no follow-up this cycle
-[NOTED] "maitake san completely high" — 1 post, no follow-up this cycle
-[NOTED] "trump told reporter today preparing hit" — 1 post, no follow-up this cycle
-[NOTED] "care comment" — 1 post, no follow-up this cycle
-[NOTED] "his donors think made real enemies doing" — 1 post, no follow-up this cycle
-[NOTED] "restaurant employee served lunch group young men" — 1 post, no follow-up this cycle
-[NOTED] "loves his personal space too" — 1 post, no follow-up this cycle
-[NOTED] "philippines threatens kill locals" — 1 post, no follow-up this cycle
-[NOTED] "israeli tourist" — 1 post, no follow-up this cycle
-[NOTED] "delaware marathon outsprinting his opponent" — 1 post, no follow-up this cycle
-[NOTED] "reaction after getting hugged" — 1 post, no follow-up this cycle
-[NOTED] "she realized how cute she is" — 1 post, no follow-up this cycle
-[NOTED] "wiktoria gajosz" — 1 post, no follow-up this cycle
-[NOTED] "she tried this trick to get rid of mice" — 1 post, no follow-up this cycle
-[NOTED] "right" — 5 posts, no follow-up this cycle
-[NOTED] "pope" — 4 posts, no follow-up this cycle
-[NOTED] "iran" — 4 posts, no follow-up this cycle
-[NOTED] "think" — 4 posts, no follow-up this cycle
-[NOTED] "world" — 4 posts, no follow-up this cycle
-[NOTED] "looks" — 3 posts, no follow-up this cycle
-[NOTED] "deal" — 3 posts, no follow-up this cycle
-[NOTED] "idf" — 3 posts, no follow-up this cycle
-[NOTED] "russia" — 3 posts, no follow-up this cycle
-[NOTED] "thank" — 3 posts, no follow-up this cycle
-[NOTED] "first time" — 3 posts, no follow-up this cycle
-[NOTED] "love" — 3 posts, no follow-up this cycle
-[NOTED] "president" — 3 posts, no follow-up this cycle
-[NOTED] "day" — 3 posts, no follow-up this cycle
-[NOTED] "let" — 3 posts, no follow-up this cycle
+- [NOTED] "iran" — 14 posts, no follow-up this cycle
+- [NOTED] "israel" — 9 posts, no follow-up this cycle
+- [NOTED] "trump" — 8 posts, no follow-up this cycle
+- [NOTED] "know" — 6 posts, no follow-up this cycle
+- [NOTED] "people" — 5 posts, no follow-up this cycle
+- [NOTED] "killed" — 4 posts, no follow-up this cycle
+- [NOTED] "plans" — 4 posts, no follow-up this cycle
+- [NOTED] "world" — 4 posts, no follow-up this cycle
+- [NOTED] "region" — 4 posts, no follow-up this cycle
+- [NOTED] "why" — 4 posts, no follow-up this cycle
+- [NOTED] "strait hormuz" — 3 posts, no follow-up this cycle
+- [NOTED] "time" — 3 posts, no follow-up this cycle
+- [NOTED] "deal" — 3 posts, no follow-up this cycle
+- [NOTED] "kids" — 3 posts, no follow-up this cycle
+- [NOTED] "ceasefire" — 3 posts, no follow-up this cycle
+- [NOTED] "engine room" — 3 posts, no follow-up this cycle
+- [NOTED] "Laura Loomer" — 3 posts, no follow-up this cycle
+- [NOTED] "earthquakes" — 3 posts, no follow-up this cycle
+- [NOTED] "Crazymoments01" — 2 posts, no follow-up this cycle
+- [NOTED] "Google Cloud Next" — 1 post, no follow-up this cycle
+- [NOTED] "narendramodi" — 1 post, no follow-up this cycle
+- [NOTED] "Vishwaguru" — 1 post, no follow-up this cycle
+- [NOTED] "US forces have seized an Iranian cargo ship" — 1 post, no follow-up this cycle
+- [NOTED] "7.4 magnitude earthquake" — 1 post, no follow-up this cycle
+- [NOTED] "Iran says it has executed 2 Mossad operatives" — 1 post, no follow-up this cycle
+- [NOTED] "Iran's FM spokesman says Tehran has no plans for a second round of talks" — 1 post, no follow-up this cycle
+- [NOTED] "Trump just threatened to blow up an entire country" — 1 post, no follow-up this cycle
+- [NOTED] "Children in Gaza watching cartoons" — 1 post, no follow-up this cycle
+- [NOTED] "Iran’s FM spokesman says they will not accept any deadlines or ultimatums" — 1 post, no follow-up this cycle
+- [NOTED] "The statue of Jesus Christ in Debel, Lebanon, before Israel found it." — 1 post, no follow-up this cycle
+- [NOTED] "Astronaut Reid Wiseman just dropped raw footage of earth setting behind the moon" — 1 post, no follow-up this cycle
+- [NOTED] "DIESEL below P100/liter due to a BIGTIME rollback" — 1 post, no follow-up this cycle
+- [NOTED] "In the Philippines, a huge whale shark suddenly nudged a woman's arm" — 1 post, no follow-up this cycle
+- [NOTED] "WATCH: According to Atty. Robel Lomibao" — 1 post, no follow-up this cycle
+- [NOTED] "Thomas Massie calls for justice in the Epstein scandal" — 1 post, no follow-up this cycle
+- [NOTED] "Jeff Bezos’ Blue Origin successfully reused its New Glenn booster" — 1 post, no follow-up this cycle
+- [NOTED] "This dog sniffed a gas leak… and saved her life" — 1 post, no follow-up this cycle
+- [NOTED] "What's going on in the snake's nest?" — 1 post, no follow-up this cycle
+- [NOTED] "First Family’s wealth is growing by billions of dollars" — 1 post, no follow-up this cycle
+- [NOTED] "When America threatened to bomb Iran's bridges, Iranian mothers took their kids and stood on them." — 1 post, no follow-up this cycle
+- [NOTED] "OMG! There's nothing to do but give up on this, right?" — 1 post, no follow-up this cycle
+- [NOTED] "tsunami" — 3 posts, no follow-up this cycle
+- [NOTED] "japan" — 3 posts, no follow-up this cycle
+- [NOTED] "nuclear" — 1 post, no follow-up this cycle
+- [NOTED] "jet engines" — 1 post, no follow-up this cycle
+- [NOTED] "rotifer" — 1 post, no follow-up this cycle
+- [NOTED] "whale" — 1 post, no follow-up this cycle
+- [NOTED] "squid" — 1 post, no follow-up this cycle
+- [NOTED] "vote" — 1 post, no follow-up this cycle
