@@ -237,9 +237,10 @@ async function draftReply(candidate, verification) {
   if (!text || text === 'SKIP' || text.length > 270) return null;
 
   // Extract grounding URLs from Vertex response for source citation
+  // Filter out vertexaisearch redirect URLs — they are internal Google redirects, not real sources
   const groundingChunks = res.raw?.candidates?.[0]?.groundingMetadata?.groundingChunks || [];
   const sourceUrls = groundingChunks
-    .filter(c => c.web?.uri)
+    .filter(c => c.web?.uri && !c.web.uri.includes('vertexaisearch.cloud.google.com'))
     .map(c => c.web.uri)
     .slice(0, 3);
 
@@ -283,15 +284,42 @@ async function postReplyViaCDP(page, tweetUrl, replyText) {
     return el ? el.innerText.trim() : '';
   }, COMPOSE_BOX);
 
-  if (!inserted || inserted.length < replyText.length * 0.8) {
+  if (!inserted || inserted.length < replyText.length * 0.9) {
+    log(`reply text truncated: ${inserted.length}/${replyText.length} chars — retrying with keyboard`);
     await page.evaluate((sel) => {
       const el = document.querySelector(sel);
       if (el) { el.focus(); document.execCommand('selectAll'); document.execCommand('delete'); }
     }, COMPOSE_BOX);
-    await sleep(300);
-    await page.click(COMPOSE_BOX);
-    await page.keyboard.type(replyText, { delay: 20 });
+    await sleep(1000);
+    // Verify box is cleared
+    const cleared = await page.evaluate((sel) => {
+      const el = document.querySelector(sel);
+      return el ? el.innerText.trim() : '';
+    }, COMPOSE_BOX);
+    if (cleared.length > 0) {
+      await page.evaluate((sel) => {
+        const el = document.querySelector(sel);
+        if (el) el.innerHTML = '';
+      }, COMPOSE_BOX);
+      await sleep(500);
+    }
+    // Re-focus before typing
+    await page.evaluate((sel) => {
+      const el = document.querySelector(sel);
+      if (el) { el.click(); el.focus(); }
+    }, COMPOSE_BOX);
     await sleep(800);
+    await page.keyboard.type(replyText, { delay: 20 });
+    await sleep(1200);
+    // Verify retry
+    const retryText = await page.evaluate((sel) => {
+      const el = document.querySelector(sel);
+      return el ? el.innerText.trim() : '';
+    }, COMPOSE_BOX);
+    const firstMatch = retryText.substring(0, 20) === replyText.substring(0, 20);
+    if (!retryText || retryText.length < replyText.length * 0.95 || !firstMatch) {
+      throw new Error(`Reply text insertion failed after retry: got ${retryText.length}/${replyText.length} chars, first20=${firstMatch}`);
+    }
   }
 
   await page.click(POST_BUTTON);
