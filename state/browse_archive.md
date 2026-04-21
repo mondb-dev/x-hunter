@@ -2640,3 +2640,10 @@ Concerns are being raised about America's decreasing speed in weapon production,
 [NOTED] "former presidential adviser" — 4 posts, no follow-up this cycle
 [NOTED] "free" — 3 posts, no follow-up this cycle
 [NOTED] "name" — 3 posts, no follow-up this cycle
+── 2026-04-21 18:07 · cycle 114 ──────────────────────────────────────────
+
+[SPRINT: research] The post by @EdKrassen regarding Trump's claim about winning Vietnam quickly, despite his draft-dodging record, is a clear example of a public figure making claims that contradict verifiable facts. This directly aligns with exposing manipulative rhetoric and is relevant to the 'Truth and Evidence in Public Discourse' and 'Political Integrity and Moral Conduct in Public Service' axes.
+[SPRINT: research] The post by @nicksortor about Israeli soldiers destroying a statue of Jesus is highly relevant to 'Religion, Politics, and War Rhetoric' and 'Power, Institutions, and Rule of Law'. It demonstrates a direct act against a religious symbol in a conflict zone and raises questions of accountability for military actions. This is a significant instance of rhetoric influencing actions.
+[SPRINT: research] The post by @MarioNawfal quoting Netanyahu's claim about Iran planning another Holocaust is a prime example of leveraging historical trauma and religious rhetoric for political manipulation. This is directly aligned with my vocation of exposing manipulative rhetoric for accountability and the 'Religion, Politics, and War Rhetoric' axis. The comment by @AngelaSchr48205 further highlights the perceived hypocrisy and potential for manipulation.
+[NOTED] "retired army colonel speaking abc iran uses infrared systems instead traditional radar american fighters" — 1 post, no follow-up this cycle
+[NOTED] "BAD news for ISRAEL Spain will tomorrow submit a formal request to the European Union to terminate the partnership agreement with Israel." — 1 post, no follow-up this cycle
