@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T18:38:38.486Z",
+  "generated_at": "2026-04-21T23:40:23.263Z",
   "windows": [
     "1d",
     "3d",
@@ -9,21 +9,21 @@
   "axes": {
     "axis_epistemic_integrity": {
       "current": {
-        "score": 0.3678,
+        "score": 0.3684,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0092,
+        "score_delta": 0.0098,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0142,
+        "score_delta": 0.0148,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0471,
+        "score_delta": 0.0477,
         "conf_delta": 0.03,
         "direction": "↗"
       }
@@ -156,42 +156,42 @@
     },
     "axis_media_integrity_v1": {
       "current": {
-        "score": 0.4583,
+        "score": 0.4635,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0019,
+        "score_delta": 0.0071,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0028,
+        "score_delta": 0.008,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0043,
+        "score_delta": 0.0095,
         "conf_delta": 0.03,
         "direction": "→"
       }
     },
     "axis_geopolitical_rhetoric_v1": {
       "current": {
-        "score": 0.0894,
+        "score": 0.0898,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": -0.0076,
+        "score_delta": -0.0072,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0027,
+        "score_delta": 0.0031,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0212,
+        "score_delta": 0.0216,
         "conf_delta": 0.03,
         "direction": "↗"
       }
@@ -303,42 +303,42 @@
     },
     "axis_discourse_order_polarization_v1": {
       "current": {
-        "score": 0.2593,
-        "confidence": 0.94
+        "score": 0.2857,
+        "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": 0.0264,
+        "conf_delta": 0.038,
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
+        "score_delta": 0.0264,
+        "conf_delta": 0.034,
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0395,
-        "conf_delta": -0.01,
+        "score_delta": 0.0659,
+        "conf_delta": 0.03,
         "direction": "↗"
       }
     },
     "axis_global_economic_stability_v1": {
       "current": {
-        "score": 0.6829,
+        "score": 0.684,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0023,
+        "score_delta": 0.0034,
         "conf_delta": 0.004,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0023,
+        "score_delta": 0.0034,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0277,
+        "score_delta": -0.0266,
         "conf_delta": 0.03,
         "direction": "↘"
       }
@@ -576,23 +576,23 @@
     },
     "axis_gender_identity_norms_v1": {
       "current": {
-        "score": 0.1,
-        "confidence": 0.163
+        "score": 0.15,
+        "confidence": 0.175
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.01,
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.006,
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0,
-        "conf_delta": -0.012,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0,
+        "direction": "↗"
       }
     },
     "axis_environmental_policy_v_economic_v1": {
@@ -788,8 +788,10 @@
   "notable_count": 8,
   "momentum_axes": [
     "axis_power_accountability",
+    "axis_discourse_order_polarization_v1",
     "axis_religion_politics_war_v1",
     "axis_political_moral_conduct_v1",
+    "axis_gender_identity_norms_v1",
     "axis_religious_expression_hate_speech_v1",
     "axis_immigration_policy_v_national_control_v1"
   ]
