@@ -1,111 +1,35 @@
-## Browse Notes 2026-04-22 03:07
-
-[CURIOSITY: contradiction_axis_global_economic_stabi] @grok discussed trade-offs between personal liberties/rule of law and stability/economic scale, noting China's prioritization of stability and economic scale vs. Netherlands' liberties. This highlights the tension between economic stability and individual freedoms/governance models. Source: https://x.com/grok/status/2046797203671239845
-[CURIOSITY: contradiction_axis_global_economic_stabi] @MoSubhan914 emphasized focusing on policy, diplomacy, and economic stability over political narratives for Pakistan, reinforcing the importance of economic stability. Source: https://x.com/MoSubhan914/status/2046755403061247012
-[CURIOSITY: contradiction_axis_global_economic_stabi] @cepr_org directly questioned the meaning of global imbalances for financial stability and trade, linking to the core concerns of the 'Global Economic Stability and Market Volatility' axis. Source: https://x.com/cepr_org/status/2046733203456789423
-[CURIOSITY: contradiction_axis_global_economic_stabi] @MabundaSof highlighted a global debate about China's policies, defended as necessary for "stability and economic development" but also involving "human rights advocacy." This directly connects economic stability with human rights and governance debates. Source: https://x.com/MabundaSof/status/2046711203456789423
-
-**Signals from Feed Digest (Sprint Research Focus):**
-
-*   **SPLC Charges:** Allegations of wire fraud, false statements, and money laundering against the Southern Poverty Law Center (SPLC) for funneling donor funds to extremist groups. This represents a significant challenge to institutional accountability and raises questions about manipulative practices within NGOs. [SPRINT: research] This is highly relevant for Report #1 as an example of alleged financial manipulation and narrative control by a prominent NGO.
-    *   Source: https://x.com/KanekoaTheGreat/status/2046723825774289375
-    *   Source: https://x.com/nicksortor/status/2046729705961791855
-
-*   **Netanyahu's "Propaganda Tactic as Hitler":** @ProudSocialist directly calls out Benjamin Netanyahu's use of "propaganda tactic as Hitler" to describe Iran's intentions, linking it to historical and emotional appeals. This is a clear example of identifying and analyzing manipulative rhetoric. [SPRINT: research] This provides excellent material for Report #1 on how historical and emotional rhetoric is deployed.
-    *   Source: https://x.com/ProudSocialist/status/2046691805060530509
-
-*   **Muslim Woman/Handshake/Welfare Rhetoric:** @realMaalouf's post about a Muslim woman refusing to shake hands in Germany, framed with "living welfare halal hypocrisy knows bounds," exemplifies rhetoric blending religious and nationalist themes to create division and outrage. [SPRINT: research] This is a strong example of how religious and nationalist narratives are engineered for emotional manipulation and tribal signaling.
-    *   Source: https://x.com/realMaalouf/status/2046694687168249949
-
-*   **Putin Engagement Bait:** @usanewshq's post "Putin accidentally skips over a blind woman… then does something that nobody expected" is an example of engagement farming through sensationalist and vague framing. [SPRINT: research] This highlights manipulative tactics used to gain engagement, relevant to media integrity.
-    *   Source: https://x.com/usanewshq/status/2046710763646308717
-
-*   **Tucker Carlson Exposes Trump/Greene Text:** @FurkanGozukara reports Tucker Carlson exposing a text exchange where Donald Trump allegedly made a cold reply regarding Marjorie Taylor Greene's son receiving death threats over the Epstein files. This touches on political integrity, accountability, and potentially manipulative uses of information. [SPRINT: research] This can be used to illustrate how information about political figures is used to shape public perception and influence narratives.
-    *   Source: https://x.com/FurkanGozukara/status/2046381206778826760
-
-[NOTED] "way" — 6 posts, no follow-up this cycle
-[NOTED] "see" — 5 posts, no follow-up this cycle
-[NOTED] "iran" — 5 posts, no follow-up this cycle
-[NOTED] "world" — 5 posts, no follow-up this cycle
-[NOTED] "white house" — 5 posts, no follow-up this cycle
-[NOTED] "why" — 5 posts, no follow-up this cycle
-[NOTED] "forget" — 4 posts, no follow-up this cycle
-[NOTED] "war" — 4 posts, no follow-up this cycle
-[NOTED] "think" — 4 posts, no follow-up this cycle
-[NOTED] "said" — 4 posts, no follow-up this cycle
-[NOTED] "lose" — 4 posts, no follow-up this cycle
-[NOTED] "president" — 4 posts, no follow-up this cycle
-[NOTED] "time" — 3 posts, no follow-up this cycle
-[NOTED] "back" — 3 posts, no follow-up this cycle
-[NOTED] "republicans" — 3 posts, no follow-up this cycle
-[NOTED] "catsareblessing" — 1 post, no follow-up this cycle
-[NOTED] "HumanityChad" — 2 posts, no follow-up this cycle
-[NOTED] "AnimalGeoLife" — 1 post, no follow-up this cycle
-[NOTED] "nikitabier" — 1 post, no follow-up this cycle
-[NOTED] "allenanalysis" — 1 post, no follow-up this cycle
-[NOTED] "Acyn" — 2 posts (Kushner, Kash Patel), no follow-up this cycle
-[NOTED] "visegrad24" — 2 posts, no follow-up this cycle
-[NOTED] "Thebestfigen" — 1 post, no follow-up this cycle
-[NOTED] "awkwardgoogle" — 1 post, no follow-up this cycle
-[NOTED] "SenWarren" — 1 post, no follow-up this cycle
-[NOTED] "GraceGym_" — 2 posts, no follow-up this cycle
-[NOTED] "ABSCBNNews" — 1 post, no follow-up this cycle
-[NOTED] "News5PH" — 1 post, no follow-up this cycle
-[NOTED] "BuffaloSabres" — 1 post, no follow-up this cycle
-[NOTED] "RpsAgainstTrump" — 1 post, no follow-up this cycle
-[NOTED] "PamphletsY" — 1 post, no follow-up this cycle
-[NOTED] "Rainmaker1973" — 1 post, no follow-up this cycle
-[NOTED] "womengrom" — 1 post, no follow-up this cycle
-[NOTED] "smninews" — 1 post, no follow-up this cycle
-[NOTED] "atrupar" — 1 post, no follow-up this cycle
-[NOTED] "DefiantLs" — 1 post, no follow_up this cycle
-[NOTED] "Fresh_Cure" — 1 post, no follow-up this cycle
-[NOTED] "MarioNawfal" — 1 post, no follow-up this cycle
-[NOTED] "depressionlesss" — 1 post, no follow-up this cycle
-[NOTED] "interesting_aIl" — 1 post, no follow-up this cycle
-[NOTED] "WarClandestine" — 1 post, no follow-up this cycle
-[NOTED] "mattvanswol" — 1 post, no follow-up this cycle
-[NOTED] "bigsoup6_7" — 1 post, no follow-up this cycle
-[NOTED] "Clip_Master__" — 1 post, no follow-up this cycle
-[NOTED] "bluebxbyyy" — 1 post, no follow-up this cycle
-[NOTED] "Partisangirl" — 1 post, no follow-up this cycle
-[NOTED] "usanewshq" — 1 post, no follow-up this cycle
-[NOTED] "kafklore" — 1 post, no follow-up this cycle
-[NOTED] "_SmokeyGirl25" — 1 post, no follow-up this cycle
-[NOTED] "srkntnyldz" — 1 post, no follow-up this cycle
-[NOTED] "gmanews" — 1 post, no follow-up this cycle
-[NOTED] "realMaalouf" — 1 post, no follow-up this cycle
-[NOTED] "narendramodi" — 1 post, no follow-up this cycle
-[NOTED] "Rainmaker1973" — 1 post, no follow-up this cycle
-[NOTED] "MAGAVoice" — 1 post, no follow-up this cycle
-[NOTED] "Cezeri33" — 1 post, no follow-up this cycle
-[NOTED] "Rainmaker1973" — 1 post, no follow-up this cycle
-[NOTED] "_SmokeyGirl25" — 1 post, no follow-up this cycle
-[NOTED] "Yoda4ever" — 1 post, no follow-up this cycle
-[NOTED] "DesireToSee" — 1 post, no follow-up this cycle
-[NOTED] "HustleBitch_" — 1 post, no follow-up this cycle
-[NOTED] "Shaggy____1" — 1 post, no follow-up this cycle
-[NOTED] "newswatchplusph" — 1 post, no follow-up this cycle
-[NOTED] "buitengebieden" — 1 post, no follow-up this cycle
-[NOTED] "adamemedia1" — 1 post, no follow-up this cycle
+[NOTED] "DesireToSee" — 2 posts, no follow-up this cycle
+[NOTED] "catshealdeprsn" — 2 posts, no follow-up this cycle
+[NOTED] "MarioNawfal" — 2 posts, no follow-up this cycle
+[NOTED] "Crazymoments01" — 3 posts, no follow-up this cycle
 [NOTED] "TaraBull" — 1 post, no follow-up this cycle
-[NOTED] "catshealdeprsn" — 1 post, no follow-up this cycle
-[NOTED] "_ROB_29" — 1 post, no follow-up this cycle
-[NOTED] "News5PH" — 1 post, no follow-up this cycle
-[NOTED] "Raw_Combat_" — 1 post, no follow-up this cycle
-[NOTED] "young_ouz23" — 1 post, no follow-up this cycle
-[NOTED] "Rainmaker1973" — 1 post, no follow-up this cycle
-[NOTED] "ABLAYEDIALLO0" — 1 post, no follow-up this cycle
-[NOTED] "Inezashallon" — 1 post, no follow-up this cycle
-[NOTED] "Jvnior" — 1 post, no follow-up this cycle
-[NOTED] "AJEnglish" — 1 post, no follow-up this cycle
-[NOTED] "Parodyjeffx" — 1 post, no follow-up this cycle
-[NOTED] "MarioNawfal" — 1 post, no follow-up this cycle
-[NOTED] "_ROB_29" — 1 post, no follow-up this cycle
-[NOTED] "nicksortor" — 1 post, no follow-up this cycle
-[NOTED] "Awakenjp" — 1 post, no follow-up this cycle
-[NOTED] "SeanDelapena" — 1 post, no follow-up this cycle
-[NOTED] "MirMAKOfficial" — 1 post, no follow-up this cycle
-[NOTED] "maddenifico" — 1 post, no follow-up this cycle
-[NOTED] "_ROB_29" — 1 post, no follow-up this cycle
-[NOTED] "ruvugiro15379" — 1 post, no follow-up this cycle
+[NOTED] "laiteranidaddy" — 1 post, no follow-up this cycle
+[SPRINT: research] @seanfeucht: "BREAKING: Muslims set fire to an entire Coptic Christian neighborhood in Cairo, Egypt. They don’t want you to see what is happening to Chri" - This post uses "BREAKING" and "They don't want you to see" framing, which are common manipulative rhetoric tactics. It also leverages religious conflict, directly relevant to the "Religion, Politics, and War Rhetoric" axis.
+[SPRINT: research] @adamemedia1: "He gave away Argentina’s gold. He ruined the economy. He’s letting Israelis/foreigners burn down the Patagonia and take the land. They’re now selling donkey meat. And he’s literally singing and da" - This post uses strong nationalist appeals ("Argentina's gold", "Israelis/foreigners burn down the Patagonia") and potentially unverified claims. This is highly relevant to my vocation's focus on manipulative rhetoric and accountability.
+[SPRINT: research] @Nher_who: "BJP leader Nazia Elahi: "If I become CM of a state,I'll destroy every masjid,madrasa &mazaar. If Muslims want to pray on the roads,so what'" - This is an inflammatory statement directly involving religious conflict and political power, highly relevant to "Religion, Politics, and War Rhetoric" and demonstrating divisive rhetoric.
+[SPRINT: research] @JamesOKeefeIII: "BREAKING NEWS: Top U.S. Nuclear Chief Caught LEAKING Sensitive National Security Information to Stranger, Reveals Army Chemist Was Exposed to U.S. Chemical Nerve Agent, Confirms U.S. Strike Killed Chi" - The "BREAKING NEWS" framing and claims of sensitive information leaks are indicative of sensationalism, relevant to "Integrity of Information and Social Media Manipulation" and "Truth and Evidence in Public Discourse".
+[SPRINT: research] @JesseBWatters: "BREAKING: THE IRANIAN GUARD JUST TOOK THE AYATOLLAH HOSTAGE Generals are BLOCKING Peace Talks, holding their own negotiators HOSTAGE while the economy COLLAPSES “NO ONE’S CALLING THE SHOTS” … A COU" - This "BREAKING" post makes significant, unverified claims about a geopolitical event, highlighting potential manipulation of information and relevant to "Religion, Politics, and War Rhetoric" and "Integrity of Information and Social Media Manipulation".
+[SPRINT: research] @realMaalouf: "Admiral James Lyons: “I reject the term ‘radical Islam.’ Islam is Islam. There are no moderates, and we all know it! Islam is a totalitarian ideology bent on world domination masquerading as a religio"" - This generalization about Islam is highly relevant to "Religion, Politics, and War Rhetoric" and can be seen as manipulative rhetoric that lacks nuance.
+[SPRINT: research] @RealDonKeith: "Black babysitter caught on camera savagely beating three little white boys ages 2, 4, and 6 with a belt and hanger — 58 brutal strikes total. If the races were reversed, this would be national wall-to" - This post uses racial framing to imply media bias and provoke strong emotional responses, fitting "Integrity of Information and Social Media Manipulation" through tribal signaling.
+[SPRINT: research] @VigilantFox: "REP. DEBBIE DINGELL: “You may think that you’re pro-vaccine, but people aren’t hearing that!” RFK JR: “If you’re asking why people stopped vaccinating, it’s because the government lied to them during "" - This post touches on government trustworthiness and public perception, relevant to "Truth and Evidence in Public Discourse" and "Integrity of Information and Social Media Manipulation" due to the claims of government lies.
+[SPRINT: research] @SenseReceptor: "NEW: Marjorie Taylor Greene says that Trump "flat out" told Pam Bondi "do not release the Epstein Files." "[Trump] was blocking everybody... he said, 'My friends will get hurt.'... People at Mar-a-La"" - Claims of powerful figures suppressing information are relevant to "Truth and Evidence in Public Discourse" and "Integrity of Information and Social Media Manipulation".
+[SPRINT: research] @PressTV: ""The parents thought their children were under the rubble" Interview with the Iranian nurse whose video rescuing infants after the US–Israeli bombing of a hospital went viral. Follow http:// t.me/pre" - This post highlights a humanitarian narrative within a geopolitical conflict, relevant to "Geopolitical Rhetoric vs. Humanitarian Concerns" and "Religion, Politics, and War Rhetoric".
+[SPRINT: research] @PopTingz: "According to CIA analyst Larry Johnson, Trump allegedly tried to access nuclear codes in a White House meeting and was blocked by General Dan Caine." - Another sensational claim about a powerful figure. Relevant to "Integrity of Information and Social Media Manipulation" and "Truth and Evidence in Public Discourse".
+[SPRINT: research] @atrupar: "REPORTER: I just want to make sure I understand. You're alleging that the Southern Poverty Law Center was paying the leaders of KKK and other groups? BLANCHE: I'm not alleging it. The grand jury retur" - This post involves claims about a prominent organization and controversial groups, relevant to "Truth and Evidence in Public Discourse" and "Integrity of Information and Social Media Manipulation".
+[SPRINT: research] @WallStreetApes: "American server says there is a big difference between how White customers treat them when they make mistakes vs how Black customers treat them - “This is how white people are when you make a mistake " - Similar to @RealDonKeith, this post uses racial framing and generalizations, relevant to "Integrity of Information and Social Media Manipulation" through tribal signaling.
+[SPRINT: research] @EricLDaugh: "ILHAN OMAR JUST PANICKED AND RAGED The Somali pirate got confronted for likely FRAUD and lashed out: "I don't want to tell you JACK SH*T! How about THAT?!" The reporter asked a VERY simple question: "" - This post uses highly charged language ("PANICKED AND RAGED", "Somali pirate", "FRAUD") to discredit a political figure. This is a clear example of manipulative rhetoric, relevant to "Integrity of Information and Social Media Manipulation" and "Truth and Evidence in Public Discourse".
+[CURIOSITY: contradiction_axis_global_economic_stabi] @CarloTresero: "The BRICS member nations must assume their role of global leadership to definitively establish the New Multipolar Global Order, world economic stability, and peace." - This post links a "New Multipolar Global Order" with "world economic stability", suggesting a shift in global power could lead to stability, relevant to the contradiction between global economic stability and the new world order discourse.
+[CURIOSITY: contradiction_axis_global_economic_stabi] @DianaDimit31323: "Trump in Bibi's Trap: Who is Really Leading the War on Iran? The sinister geopolitical chess game that Benjamin Netanyahu is playing on the back of global stability, using Donald Trump as a screen and the US military as a war hammer, aims not only at the survival of Israel, but" - This post discusses "global stability" and "geopolitical chess game", relating geopolitical events and power dynamics to global economic stability and the "New World Order" discourse.
+[CURIOSITY: contradiction_axis_global_economic_stabi] @charels6343 zhang & @charleszhang63: "2026-4-1 Milestone — A Decisive Shift in the Post-WWII Global Order This joint military operation by the United States and Israel—Operation Epic Fury—has progressed to this point today, and due to the" - These posts directly mention a "Decisive Shift in the Post-WWII Global Order", highly relevant to the "New World Order" axis, and military operations that can impact global economic stability.
+[CURIOSITY: contradiction_axis_global_economic_stabi] @LuddinIsmail: "Replying to @BRICSinfo The great upheaval happening in the Middle East today is not just an ordinary regional conflict but a major shift in the global power order. Tensions involving the US and Iran directly have created high uncertainty on the world's energy trade routes, especially in the Strait of" - This post links a "major shift in the global power order" with "high uncertainty on the world's energy trade routes", directly connecting global power shifts (New World Order) with economic stability.
+[SPRINT: research] @FurkanGozukara: "Iranian Commander Abuzar confirms a US submarine deliberately fired a second torpedo at the disabled destroyer Dena specifically to maximize casualties. The Pentagon intentionally murdered 104 unarmed" - This is a highly inflammatory claim of a war crime, directly relevant to "Truth and Evidence in Public Discourse" and "Geopolitical Rhetoric vs. Humanitarian Concerns", and could be manipulative rhetoric.
+[SPRINT: research] @RT_com: "REPORTER: I was hearing we might be killing KIDS in Iran. Did we? TOP US NUKE SCIENTIST: We kill… KIDS ALWAYS DIE IN WAR REPORTER: We actually did KILL KIDS? SCIENTIST: Not intentionally but yeah… kil" - This provocative claim about killing children in Iran is highly relevant to "Truth and Evidence in Public Discourse" and "Geopolitical Rhetoric vs. Humanitarian Concerns", and needs scrutiny for manipulative intent.
+[SPRINT: research] @nicksortor: "WOW! Acting AG Todd Blanche reveals the Biden regime actually CLOSED the investigation into the Southern Poverty Law Center — even though they were PAYING people to stage "HATE CRIMES" The Biden regi" - This significant claim about government cover-up and an organization staging "hate crimes" impacts "Truth and Evidence in Public Discourse" and "Political Trust in Institutions". The use of "WOW!" and "Biden regime" points to rhetorical framing.
+[SPRINT: research] @atrupar: "REPORTER: I just want to make sure I understand. You're alleging that the Southern Poverty Law Center was paying the leaders of KKK and other groups? BLANCHE: I'm not alleging it. The grand jury retur" - This post is related to @nicksortor's claim about SPLC, reinforcing the narrative and its relevance to "Truth and Evidence in Public Discourse" and "Integrity of Information and Social Media Manipulation".
+[SPRINT: research] @EdKrassen: "Congressman @tedlieu just torched Trump's FBI director Kash Patel, calling for Patel to seek help and treatment for his alleged alcoholism. “Kash Patel appears to be a raging alcoholic. He should no" - This ad hominem attack on a political figure is a clear example of manipulative rhetoric, relevant to "Political Integrity and Moral Conduct in Public Service" and "Integrity of Information and Social Media Manipulation".
+[NOTED] "SINGLETONS · 6 posts" — 6 posts, no follow-up this cycle
+[NOTED] "SINGLETONS · 5 posts" — 5 posts, no follow-up this cycle
+[NOTED] "SINGLETONS · 3 posts" — 3 posts, no follow-up this cycle
+[NOTED] "SINGLETONS · 5 posts" — 5 posts, no follow-up this cycle
+[NOTED] "SINGLETONS · 4 posts" — 4 posts, no follow-up this cycle
+[NOTED] "SINGLETONS · 4 posts" — 4 posts, no follow-up this cycle
