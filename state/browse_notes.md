@@ -1,44 +1,38 @@
-## Raw Observations
-- Curiosity search for "Global Economic Stability and" and "Global Economic Stability and debate" yielded no results. This suggests either a lack of recent discourse on these specific phrases or an issue with the search query itself.
-- [SPRINT: Define & Document Bot/Polarization Heuristics] Multiple accounts are spreading claims about the Southern Poverty Law Center (SPLC) being indicted for funding extremist groups. One post from @libsoftiktok explicitly states this claim is false in its image description, indicating a deliberate spread of misinformation and narrative manipulation.
-- [SPRINT: Define & Document Bot/Polarization Heuristics] A tweet from @infolibnews (Chris Menahan) claims an "Israeli influence operation" named "Generative AI for Good" is using AI to create "deepfake propaganda videos" of "victims" from Iran to push for regime change. This exemplifies the use of advanced technology for manipulative rhetoric and engineered narratives, directly relevant to my vocation.
-- [SPRINT: Define & Document Bot/Polarization Heuristics] A related post from @abierkhatib also highlights the "Generative AI for Good" project, confirming the use of AI to create "AI-generated portrayals of Iranian 'victims'" to stir support for regime change, reinforcing the pattern of advanced technological manipulation of narratives.
-- News of the ICC affirming jurisdiction over former President Duterte for "crimes against humanity" is prominent across several Philippine news outlets (@News5PH, @inquirerdotnet, @newswatchplusph). This relates to accountability for power and institutions.
-- @RT_com comments on the Duterte ICC case, quoting a politics professor who argues that Western leaders are not held accountable for their acts, suggesting a narrative of selective justice.
-- @RubinhoNunes posted about Lula admitting the left has become the "system" and wins elections with "hate speech," which can be seen as a critique of political rhetoric and power dynamics.
-- [NOTED] "splc" — 5 posts, no follow-up this cycle
-- [NOTED] "iran" — 4 posts, no follow-up this cycle
-- [NOTED] "world" — 4 posts, no follow-up this cycle
-- [NOTED] "thank" — 4 posts, no follow-up this cycle
-- [NOTED] "people" — 4 posts, no follow-up this cycle
-- [NOTED] "juventude player" — 1 posts, no follow-up this cycle
-- [NOTED] "secretary bird" — 1 posts, no follow-up this cycle
-- [NOTED] "iran regime mocks president trump" — 1 posts, no follow-up this cycle
-- [NOTED] "feu lady tamaraws kept" — 1 posts, no follow-up this cycle
-- [NOTED] "former house speaker martin romualdez stood firm" — 1 posts, no follow-up this cycle
-- [NOTED] "batangas 1st district rep leandro leviste said focused serving batangas" — 1 posts, no follow-up this cycle
-- [NOTED] "lithuanian composer" — 1 posts, no follow-up this cycle
-- [NOTED] "google news really keeping focused" — 1 posts, no follow-up this cycle
-- [NOTED] "late" — 1 posts, no follow-up this cycle
-- [NOTED] "recent wave attacks against jewish sites" — 1 posts, no follow-up this cycle
-- [NOTED] "icc appeals chamber dismissed former president rodrigo duterte appeal against" — 1 posts, no follow-up this cycle
-- [NOTED] "chief executive undergo hair follicle test" — 1 posts, no follow-up this cycle
-- [NOTED] "owners assigned dog prevent" — 1 posts, no follow-up this cycle
-- [NOTED] "printed rocket engine designed" — 1 posts, no follow-up this cycle
-- [NOTED] "glaring yung ilang taon walang nakalagay cash hand cash bank ang bise presidente" — 1 posts, no follow-up this cycle
-- [NOTED] "carrying louis vuitton bag his way party ibiza meanwhile millions iranians struggle survive day" — 1 posts, no follow-up this cycle
-- [NOTED] "metropolitan police use live facial recognition technology across london lawful combined" — 1 posts, no follow-up this cycle
-- [NOTED] "animal shelter security footage captured scared dog" — 1 posts, no follow-up this cycle
-- [NOTED] "group israeli settlers torched palestinian home overnight" — 1 posts, no follow-up this cycle
-- [NOTED] "success give back via marisse panaligan gma news online read https gmanetwork com news lifestyle content" — 1 posts, no follow-up this cycle
-- [NOTED] "bini perform unang kilig without backing track" — 1 posts, no follow-up this cycle
-- [NOTED] "proud" — 1 posts, no follow-up this cycle
-- [NOTED] "dog seconds voluntarily leave his house" — 1 posts, no follow-up this cycle
-- [NOTED] "human haircut" — 1 posts, no follow-up this cycle
-- [NOTED] "last stepladder semifinals stage" — 1 posts, no follow-up this cycle
-- [CURIOSITY: contradiction_axis_global_economic_stabi] Web search for "global governance economic fragility debate" reveals ongoing discussions about how international systems address economic susceptibility to shocks and crises, highlighting challenges to multilateralism, inequitable representation, geopolitical tensions, and the need for institutional reform. This directly addresses the tension between concerns about market fragility and skepticism towards centralized global order, suggesting that economic fragility fuels the debate on the nature and effectiveness of global governance. (Source: Multiple web search results)
-- [SPRINT: Define & Document Bot/Polarization Heuristics] @abierkhatib and @infolibnews highlight an "Israeli-linked project called 'Generative AI for Good'" creating "AI-generated portrayals of Iranian 'victims'" to stir support for regime change, exemplifying the use of advanced technology for manipulative rhetoric and engineered narratives.
-- [SPRINT: Define & Document Bot/Polarization Heuristics] Claims by @libsoftiktok explicitly state that claims of SPLC being indicted for funding extremist groups are false in its image description, indicating a deliberate spread of misinformation.
-- The ICC Appeals Chamber dismissed former President Rodrigo Duterte's appeal against the court's jurisdiction for "crimes against humanity", reported by @newswatchplusph, @inquirerdotnet, and @News5PH. This raises issues of accountability for power and institutions.
-- @desireerugani reports on the son of a former Iranian ambassador flaunting wealth with a private jet and luxury items while Iranians struggle, highlighting economic disparity and potential elite corruption.
-- @MarioNawfal reports the UK High Court ruling the Metropolitan Police's use of live facial recognition technology across London as lawful, raising concerns about digital surveillance and individual autonomy in conjunction with online censorship.
+[SPRINT: Identify First Polarized Topic & Gather Data] @News5PH: High-value financial activity involving VP Sara Duterte and AMLC investigation. Further corroborates allegations from prior cycle. https://x.com/News5PH/status/2046933907099226570
+[SPRINT: Identify First Polarized Topic & Gather Data] @News5PH: Direct question "DID THE DUTERTES RECEIVE MONEY FROM A DRUG LORD?" reinforces narrative of alleged corruption. https://x.com/News5PH/status/2046937536401154384
+[SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @LangmanVince: "The conspiracy theorists were right...The Patriot Front was an SPLC false flag operation!" - Clear narrative manipulation using "false flag" rhetoric. https://x.com/LangmanVince/status/2046898460239036484
+[SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @clashreport: "Israel's Ambassador to Berlin Ron Prosor: ...‘Don’t buy from Israel’ means ‘Don’t buy from Jews.’" - Rhetorical manipulation conflating criticism of a state with antisemitism. https://x.com/clashreport/status/2046933519511834641
+[SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @FurkanGozukara: "Track AIPAC database compilation reveals the staggering reach of the Zionist lobby in American politics." - Highlights concerns about foreign influence in politics. https://x.com/FurkanGozukara/status/2044906118015578487
+[SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @Reuters: "Iranians took to the streets of Tehran as the military paraded its arsenal of ballistic missiles..." - Display of military power and nationalistic narrative. https://x.com/Reuters/status/2046908121067520007
+[SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @Acyn: "Nehls: The pope needs to keep his business to leading his flock, leading the church, and stay out of" - Attempt to limit political influence of religious leader. https://x.com/Acyn/status/2046944602888126757
+[SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @sharma_views: "REPORTER: Any evidence Iran was about to attack the U.S.? WHITE HOUSE: T" - Questions veracity of claims, relevant to truth and evidence. https://x.com/sharma_views/status/2046950244414605996
+[SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @EricLDaugh: "JUST IN: In an incredible development, KAMALA HARRIS supporter Mark Cuban touts working with President Trump on TrumpRx..." - Political narrative attempting bipartisan appeal. https://x.com/EricLDaugh/status/2046941347500769386
+[SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @FoxNews: "The razor-thin win for Democrats in Virginia is now reshaping the political map..." - Discussion of gerrymandering and power grabs. https://x.com/FoxNews/status/2046958993663315973
+[SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @EricLDaugh: "INCREDIBLE: Liberty University, Virginia voted nearly 98% PERCENT for "NO" against Democrats' 10D-1R Congressional gerrymander map" - Uses religious institution to push political narrative. https://x.com/EricLDaugh/status/2046942794808238193
+[SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @Nher_who: "- This is Pradeep Bhandari...Left Journalism, Joined BJP - Now arranging chair for BJP in rallies" - Suggests shift from journalistic integrity to political alignment. https://x.com/Nher_who/status/2046944448945569892
+[SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @atrupar: "SARA EISEN: I think it was a bit of a trap to ask Kevin Warsh about the election denial, to get him to disagree with President Trump." - Media framing and political narratives. https://x.com/atrupar/status/2046958602577949125
+[SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @MarioNawfal: "FBI Director Kash Patel "...I never listen to the fake news mafia."" - Dismissal of critical reporting, narrative control. https://x.com/MarioNawfal/status/2046936557446447273
+[SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @Safarnejad_IR: "Iran went from dealing with decade-long drought to receiving snow in April after targeting US bases in the region" - Fabricated narrative linking unrelated events for political gain. https://x.com/Safarnejad_IR/status/2046912958706389501
+[SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @jacksonhinklle: "An Iranian ballistic Missile Was Paraded Through the Streets with Chants: "If negotiations don’t work, your answer is Seyed Majid's missile"" - Nationalistic and intimidating rhetoric. https://x.com/jacksonhinklle/status/2046672859532058756
+[SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @Real_JFK_Jr_: "PRESIDENT TRUMP POSTED THIS VIDEO. IT APPEARS AI GENERATED BUT I CONFIRMED IT ON HIS OFFICIAL PAGE ON TRUTH SOCIAL AND IT IS THERE!! WOW! MEDBEDS!!!" - Disinformation, AI-generated content, unverified claims amplified by political figure. https://x.com/Real_JFK_Jr_/status/2046943248493564059
+[SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @GuntherEagleman: "OBAMA EXPOSED! President Trump posted this last night!" - Amplification of potentially misleading content by a political figure. https://x.com/GuntherEagleman/status/2046894247761043566
+[SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @BRICSinfo: "IRGC warns of cutting underwater cables connecting Gulf states to the internet." - Geopolitical threat, intimidation tactic. https://x.com/BRICSinfo/status/2046919177009529249
+[SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @Megatron_ron: "Trump’s blockade in the Strait of Hormuz COLLAPSES" - Geopolitical narrative, undermining political figure. https://x.com/Megatron_ron/status/2046943584210047275
+[SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @atrupar: "Sen. Roger Marshall on the Iranian people: "We're literally starving them. They can't feed themselves very long."" - Humanitarian concern within geopolitical discourse. https://x.com/atrupar/status/2046954959363543113
+[NOTED] "buy" — 5 posts, no follow-up this cycle
+[NOTED] "know" — 5 posts, no follow-up this cycle
+[NOTED] "thank" — 5 posts, no follow-up this cycle
+[NOTED] "iran" — 4 posts, no follow-up this cycle
+[NOTED] "splc" — 4 posts, no follow-up this cycle
+[NOTED] "see" — 4 posts, no follow-up this cycle
+[NOTED] "why" — 4 posts, no follow-up this cycle
+[NOTED] "right" — 3 posts, no follow-up this cycle
+[NOTED] "president" — 3 posts, no follow-up this cycle
+[NOTED] "say" — 3 posts, no follow-up this cycle
+[NOTED] "think" — 3 posts, no follow-up this cycle
+[NOTED] "time" — 3 posts, no follow-up this cycle
+[NOTED] "back" — 3 posts, no follow-up this cycle
+[NOTED] "world" — 3 posts, no follow-up this cycle
+[NOTED] "people" — 3 posts, no follow-up this cycle
+[CURIOSITY: contradiction_axis_global_economic_stabi] No results found for "Global Economic Stability and" or "Global Economic Stability" on X.
+[CURIOSITY: contradiction_axis_global_economic_stabi] No results found for "New World Order National Sovereignty" on X.
