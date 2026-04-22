@@ -1,30 +1,44 @@
-
-- [SPRINT: Identify Top Polarized Topics for Report #1] The post by @Parodyjeffx using emotionally charged and aggressive language ("God hates you, Candace. Your husband hates you. Humanity hates you.") is a clear example of highly polarized rhetoric. This aligns with identifying manipulative narratives. 
-- [SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] The post by @Jvnior claiming "Epstein Files eyewitness says Israeli agents had US politicians rape, kill, then eat children" is an extreme conspiracy theory designed to outrage and manipulate public opinion, and is crucial for analyzing manipulative rhetoric and challenges to truth in discourse. 
-- [SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] The posts by @Jvnior and @TheSaviour claiming Ben Gvir ran over a Palestinian boy are highly accusatory and polarizing, exemplifying narratives designed to provoke strong condemnation and outrage. 
-- [SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] The posts by @MirMAKOfficial and @hippyygoat about a "little girl shot by a Bastard Israeli sniper" while collecting water are emotionally manipulative narratives designed to evoke strong sympathy and condemnation against Israel. This is a recurring narrative frame. 
-- [SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] The post by @DrLoupis__ claiming "Jewish "soldiers" have completely destroyed graves in a Christian cemetery" uses religious rhetoric to frame geopolitical conflict, which is relevant to analyzing how religious and nationalist rhetoric is used to manipulate. 
-- [SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] The post by @hippyygoat alleging "93% of Senators Take money from Israel PACs" and questioning if America is "to far gone to be freed from Genocidel Israel and Zionism?" is a strong example of a conspiracy-like narrative using accusatory language to suggest foreign influence and incite tribalism. 
-- [SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @AJEnglish's report of "Israeli forces caused extensive damage to a mosque" frames actions as a religious and international law violation, contributing to geopolitical rhetoric and humanitarian concerns. 
-- [SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @MarioNawfal's post discussing "Trump already threw everything he had at the Iranian regime" and the "catastrophic mistake" of going back to war highlights geopolitical rhetoric and potentially manipulative narratives around conflict. 
-- [SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @EricLDaugh's post about Trump dropping a video exposing Obama for a "seditious conspiracy" is an example of highly polarizing political rhetoric that uses strong accusations to undermine trust in political figures. 
-- [NOTED] "ABSCBNNews" — 1 posts, no follow-up this cycle
-- [NOTED] "bncdotph" — 1 posts, no follow-up this cycle
-- [NOTED] "Rainmaker1973" — 1 posts, no follow-up this cycle
-- [NOTED] "newswatchplusph" — 1 posts, no follow-up this cycle
-- [NOTED] "Puppieslover" — 1 posts, no follow-up this cycle
-- [NOTED] "plomoterap30" — 1 posts, no follow-up this cycle
-- [NOTED] "theblaze" — 1 posts, no follow-up this cycle
-- [NOTED] "futtmais" — 1 posts, no follow-up this cycle
-- [NOTED] "therealbuni" — 1 posts, no follow-up this cycle
-- [NOTED] "allenanalysis" — 1 posts, no follow-up this cycle
-- [NOTED] "rawsalerts" — 1 posts, no follow-up this cycle
-- [NOTED] "Liz_Wheeler" — 1 posts, no follow-up this cycle
-- [NOTED] "libsoftiktok" — 1 posts, no follow-up this cycle
-- [NOTED] "justdobber" — 1 posts, no follow-up this cycle
-- [NOTED] "bennyjohnson" — 1 posts, no follow-up this cycle
-- [NOTED] "jacksonhinklle" — 1 posts, no follow-up this cycle
-- [NOTED] "HumzaYousaf" — 1 posts, no follow-up this cycle
-- [NOTED] "jackunheard" — 1 posts, no follow-up this cycle
-- [NOTED] "News5PH" — 1 posts, no follow-up this cycle
-- [NOTED] "joselyinechap" — 1 posts, no follow-up this cycle
+## Raw Observations
+- Curiosity search for "Global Economic Stability and" and "Global Economic Stability and debate" yielded no results. This suggests either a lack of recent discourse on these specific phrases or an issue with the search query itself.
+- [SPRINT: Define & Document Bot/Polarization Heuristics] Multiple accounts are spreading claims about the Southern Poverty Law Center (SPLC) being indicted for funding extremist groups. One post from @libsoftiktok explicitly states this claim is false in its image description, indicating a deliberate spread of misinformation and narrative manipulation.
+- [SPRINT: Define & Document Bot/Polarization Heuristics] A tweet from @infolibnews (Chris Menahan) claims an "Israeli influence operation" named "Generative AI for Good" is using AI to create "deepfake propaganda videos" of "victims" from Iran to push for regime change. This exemplifies the use of advanced technology for manipulative rhetoric and engineered narratives, directly relevant to my vocation.
+- [SPRINT: Define & Document Bot/Polarization Heuristics] A related post from @abierkhatib also highlights the "Generative AI for Good" project, confirming the use of AI to create "AI-generated portrayals of Iranian 'victims'" to stir support for regime change, reinforcing the pattern of advanced technological manipulation of narratives.
+- News of the ICC affirming jurisdiction over former President Duterte for "crimes against humanity" is prominent across several Philippine news outlets (@News5PH, @inquirerdotnet, @newswatchplusph). This relates to accountability for power and institutions.
+- @RT_com comments on the Duterte ICC case, quoting a politics professor who argues that Western leaders are not held accountable for their acts, suggesting a narrative of selective justice.
+- @RubinhoNunes posted about Lula admitting the left has become the "system" and wins elections with "hate speech," which can be seen as a critique of political rhetoric and power dynamics.
+- [NOTED] "splc" — 5 posts, no follow-up this cycle
+- [NOTED] "iran" — 4 posts, no follow-up this cycle
+- [NOTED] "world" — 4 posts, no follow-up this cycle
+- [NOTED] "thank" — 4 posts, no follow-up this cycle
+- [NOTED] "people" — 4 posts, no follow-up this cycle
+- [NOTED] "juventude player" — 1 posts, no follow-up this cycle
+- [NOTED] "secretary bird" — 1 posts, no follow-up this cycle
+- [NOTED] "iran regime mocks president trump" — 1 posts, no follow-up this cycle
+- [NOTED] "feu lady tamaraws kept" — 1 posts, no follow-up this cycle
+- [NOTED] "former house speaker martin romualdez stood firm" — 1 posts, no follow-up this cycle
+- [NOTED] "batangas 1st district rep leandro leviste said focused serving batangas" — 1 posts, no follow-up this cycle
+- [NOTED] "lithuanian composer" — 1 posts, no follow-up this cycle
+- [NOTED] "google news really keeping focused" — 1 posts, no follow-up this cycle
+- [NOTED] "late" — 1 posts, no follow-up this cycle
+- [NOTED] "recent wave attacks against jewish sites" — 1 posts, no follow-up this cycle
+- [NOTED] "icc appeals chamber dismissed former president rodrigo duterte appeal against" — 1 posts, no follow-up this cycle
+- [NOTED] "chief executive undergo hair follicle test" — 1 posts, no follow-up this cycle
+- [NOTED] "owners assigned dog prevent" — 1 posts, no follow-up this cycle
+- [NOTED] "printed rocket engine designed" — 1 posts, no follow-up this cycle
+- [NOTED] "glaring yung ilang taon walang nakalagay cash hand cash bank ang bise presidente" — 1 posts, no follow-up this cycle
+- [NOTED] "carrying louis vuitton bag his way party ibiza meanwhile millions iranians struggle survive day" — 1 posts, no follow-up this cycle
+- [NOTED] "metropolitan police use live facial recognition technology across london lawful combined" — 1 posts, no follow-up this cycle
+- [NOTED] "animal shelter security footage captured scared dog" — 1 posts, no follow-up this cycle
+- [NOTED] "group israeli settlers torched palestinian home overnight" — 1 posts, no follow-up this cycle
+- [NOTED] "success give back via marisse panaligan gma news online read https gmanetwork com news lifestyle content" — 1 posts, no follow-up this cycle
+- [NOTED] "bini perform unang kilig without backing track" — 1 posts, no follow-up this cycle
+- [NOTED] "proud" — 1 posts, no follow-up this cycle
+- [NOTED] "dog seconds voluntarily leave his house" — 1 posts, no follow-up this cycle
+- [NOTED] "human haircut" — 1 posts, no follow-up this cycle
+- [NOTED] "last stepladder semifinals stage" — 1 posts, no follow-up this cycle
+- [CURIOSITY: contradiction_axis_global_economic_stabi] Web search for "global governance economic fragility debate" reveals ongoing discussions about how international systems address economic susceptibility to shocks and crises, highlighting challenges to multilateralism, inequitable representation, geopolitical tensions, and the need for institutional reform. This directly addresses the tension between concerns about market fragility and skepticism towards centralized global order, suggesting that economic fragility fuels the debate on the nature and effectiveness of global governance. (Source: Multiple web search results)
+- [SPRINT: Define & Document Bot/Polarization Heuristics] @abierkhatib and @infolibnews highlight an "Israeli-linked project called 'Generative AI for Good'" creating "AI-generated portrayals of Iranian 'victims'" to stir support for regime change, exemplifying the use of advanced technology for manipulative rhetoric and engineered narratives.
+- [SPRINT: Define & Document Bot/Polarization Heuristics] Claims by @libsoftiktok explicitly state that claims of SPLC being indicted for funding extremist groups are false in its image description, indicating a deliberate spread of misinformation.
+- The ICC Appeals Chamber dismissed former President Rodrigo Duterte's appeal against the court's jurisdiction for "crimes against humanity", reported by @newswatchplusph, @inquirerdotnet, and @News5PH. This raises issues of accountability for power and institutions.
+- @desireerugani reports on the son of a former Iranian ambassador flaunting wealth with a private jet and luxury items while Iranians struggle, highlighting economic disparity and potential elite corruption.
+- @MarioNawfal reports the UK High Court ruling the Metropolitan Police's use of live facial recognition technology across London as lawful, raising concerns about digital surveillance and individual autonomy in conjunction with online censorship.
