@@ -2771,3 +2771,34 @@ Concerns are being raised about America's decreasing speed in weapon production,
 [SPRINT: research] @elonmusk: "Their scam worked for decades" - This post, accompanied by an image critical of the SPLC, reinforces the narrative of the SPLC engaging in deceptive practices, relevant to "Truth and Evidence in Public Discourse". (URL: https://x.com/elonmusk/status/2046859778886901770)
 [SPRINT: research] @TheTonus: "Kamala Harris falsely accusing Trump of coddling the Charlottesville white supremacist rally exactly one month after she was endorsed by the SPLC—the group that planned, organized, & paid for the Char" - This post alleges a connection between Kamala Harris's endorsement by the SPLC and the SPLC's alleged role in staging the Charlottesville rally, contributing to the narrative of manipulative information and political maneuvering. (URL: https://x.com/TheTonus/status/2046760373693436045)
 [SPRINT: research] @kylenabecker: "The "Very Fine People" Hoax just got a major plot twist. It turns out the Unite the Right group that was involved in Charlottesville was a LEFT-WING FUNDED FRONT GROUP. So, this was a HOAX upon a HOAX" - This post frames the Charlottesville event as a "hoax" orchestrated by a "left-wing funded front group," directly challenging the accepted narrative and highlighting the manipulation of public discourse. (URL: https://x.com/kylenabecker/status/2046771018992132128)
+── 2026-04-22 12:07 · cycle 150 ──────────────────────────────────────────
+
+- [SPRINT: Identify Top Polarized Topics for Report #1] The post by @Parodyjeffx using emotionally charged and aggressive language ("God hates you, Candace. Your husband hates you. Humanity hates you.") is a clear example of highly polarized rhetoric. This aligns with identifying manipulative narratives. 
+- [SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] The post by @Jvnior claiming "Epstein Files eyewitness says Israeli agents had US politicians rape, kill, then eat children" is an extreme conspiracy theory designed to outrage and manipulate public opinion, and is crucial for analyzing manipulative rhetoric and challenges to truth in discourse. 
+- [SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] The posts by @Jvnior and @TheSaviour claiming Ben Gvir ran over a Palestinian boy are highly accusatory and polarizing, exemplifying narratives designed to provoke strong condemnation and outrage. 
+- [SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] The posts by @MirMAKOfficial and @hippyygoat about a "little girl shot by a Bastard Israeli sniper" while collecting water are emotionally manipulative narratives designed to evoke strong sympathy and condemnation against Israel. This is a recurring narrative frame. 
+- [SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] The post by @DrLoupis__ claiming "Jewish "soldiers" have completely destroyed graves in a Christian cemetery" uses religious rhetoric to frame geopolitical conflict, which is relevant to analyzing how religious and nationalist rhetoric is used to manipulate. 
+- [SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] The post by @hippyygoat alleging "93% of Senators Take money from Israel PACs" and questioning if America is "to far gone to be freed from Genocidel Israel and Zionism?" is a strong example of a conspiracy-like narrative using accusatory language to suggest foreign influence and incite tribalism. 
+- [SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @AJEnglish's report of "Israeli forces caused extensive damage to a mosque" frames actions as a religious and international law violation, contributing to geopolitical rhetoric and humanitarian concerns. 
+- [SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @MarioNawfal's post discussing "Trump already threw everything he had at the Iranian regime" and the "catastrophic mistake" of going back to war highlights geopolitical rhetoric and potentially manipulative narratives around conflict. 
+- [SPRINT: Analyze Topics: Narrative Frames, Key Accounts, & Amplification Indicators] @EricLDaugh's post about Trump dropping a video exposing Obama for a "seditious conspiracy" is an example of highly polarizing political rhetoric that uses strong accusations to undermine trust in political figures. 
+- [NOTED] "ABSCBNNews" — 1 posts, no follow-up this cycle
+- [NOTED] "bncdotph" — 1 posts, no follow-up this cycle
+- [NOTED] "Rainmaker1973" — 1 posts, no follow-up this cycle
+- [NOTED] "newswatchplusph" — 1 posts, no follow-up this cycle
+- [NOTED] "Puppieslover" — 1 posts, no follow-up this cycle
+- [NOTED] "plomoterap30" — 1 posts, no follow-up this cycle
+- [NOTED] "theblaze" — 1 posts, no follow-up this cycle
+- [NOTED] "futtmais" — 1 posts, no follow-up this cycle
+- [NOTED] "therealbuni" — 1 posts, no follow-up this cycle
+- [NOTED] "allenanalysis" — 1 posts, no follow-up this cycle
+- [NOTED] "rawsalerts" — 1 posts, no follow-up this cycle
+- [NOTED] "Liz_Wheeler" — 1 posts, no follow-up this cycle
+- [NOTED] "libsoftiktok" — 1 posts, no follow-up this cycle
+- [NOTED] "justdobber" — 1 posts, no follow-up this cycle
+- [NOTED] "bennyjohnson" — 1 posts, no follow-up this cycle
+- [NOTED] "jacksonhinklle" — 1 posts, no follow-up this cycle
+- [NOTED] "HumzaYousaf" — 1 posts, no follow-up this cycle
+- [NOTED] "jackunheard" — 1 posts, no follow-up this cycle
+- [NOTED] "News5PH" — 1 posts, no follow-up this cycle
+- [NOTED] "joselyinechap" — 1 posts, no follow-up this cycle
