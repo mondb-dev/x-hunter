@@ -1,188 +1,111 @@
-- [CURIOSITY: contradiction_axis_global_economic_stabi] No relevant results found for "Global Economic Stability and" or "Global Economic Stability and debate" on X search. This directive will be re-evaluated in the next cycle.
-- [NOTED] "@CinemaShogun" — 1 posts, no follow-up this cycle
-- [NOTED] "@marlon_humphrey" — 1 posts, no follow-up this cycle
-- [NOTED] "@ghetto_gronk" — 1 posts, no follow-up this cycle
-- [NOTED] "@AJEnglish" — 1 posts, no follow-up this cycle
-- [NOTED] "@KitchenRecipes_" — 1 posts, no follow-up this cycle
-- [NOTED] "@gmanews" — 1 posts, no follow-up this cycle
-- [NOTED] "@atrupar" — 1 posts, no follow-up this cycle
-- [NOTED] "@visegrad24" — 1 posts, no follow-up this cycle
-- [NOTED] "@FoxNews" — 1 posts, no follow-up this cycle
-- [NOTED] "@News5PH" — 1 posts, no follow-up this cycle
-- [NOTED] "@MacFarlaneNews" — 1 posts, no follow-up this cycle
-- [NOTED] "@ricwe123" — 1 posts, no follow-up this cycle
-- [NOTED] "@HumansNoContext" — 1 posts, no follow-up this cycle
-- [NOTED] "@elenacute01" — 1 posts, no follow-up this cycle
-- [NOTED] "@DailyCaller" — 1 posts, no follow-up this cycle
-- [NOTED] "@Rainmaker1973" — 1 posts, no follow-up this cycle
-- [NOTED] "@ChinaNow24" — 1 posts, no follow-up this cycle
-- [NOTED] "@ABridgen" — 1 posts, no follow-up this cycle
-- [NOTED] "@MAGAVoice" — 1 posts, no follow-up this cycle
-- [NOTED] "@VividProwess" — 1 posts, no follow-up this cycle
-- [NOTED] "@Megatron_ron" — 1 posts, no follow-up this cycle
-- [NOTED] "@atrupar" — 1 posts, no follow-up this cycle
-- [NOTED] "@jacksonhinklle" — 1 posts, no follow-up this cycle
-- [NOTED] "@News5PH" — 1 posts, no follow-up this cycle
-- [NOTED] "@MAGAVoice" — 1 posts, no follow-up this cycle
-- [NOTED] "@RapidResponse47" — 1 posts, no follow-up this cycle
-- [NOTED] "@FurkanGozukara" — 1 posts, no follow-up this cycle
-- [NOTED] "@atrupar" — 1 posts, no follow-up this cycle
-- [NOTED] "@Yoda4ever" — 1 posts, no follow-up this cycle
-- [NOTED] "@ABSCBNNews" — 1 posts, no follow-up this cycle
-- [NOTED] "@MarioNawfal" — 1 posts, no follow-up this cycle
-- [NOTED] "@MAGAVoice" — 1 posts, no follow-up this cycle
-- [NOTED] "@mog_russEN" — 1 posts, no follow-up this cycle
-- [NOTED] "@GuGi263" — 1 posts, no follow-up this cycle
-- [NOTED] "@RT_com" — 1 posts, no follow-up this cycle
-- [NOTED] "@Rainmaker1973" — 1 posts, no follow-up this cycle
-- [NOTED] "@EricLDaugh" — 1 posts, no follow-up this cycle
-- [NOTED] "@MarioNawfal" — 1 posts, no follow-up this cycle
-- [NOTED] "@Rainmaker1973" — 1 posts, no follow-up this cycle
-- [NOTED] "@atrupar" — 1 posts, no follow-up this cycle
-- [NOTED] "@Yoda4ever" — 1 posts, no follow-up this cycle
-- [NOTED] "@diharagirimana" — 1 posts, no follow-up this cycle
-- [NOTED] "@ABSCBNNews" — 1 posts, no follow-up this cycle
-- Conflicting narratives on Iran ceasefire: @nicksortor reported Trump extending a ceasefire, while @MarioNawfal stated Iran rejected it. This highlights the manipulation of information in geopolitical discourse.
-- Inflammatory rhetoric: @Trump_Fact_News claimed Iran attacked the US Navy fleet using "an eye for an eye" justification. This is a clear example of emotionally charged, potentially false, narrative construction.
-- Religious and political rhetoric: President Milei's strong condemnation of Pope Francis as an "idiot" and "representative of the evil one" who "promotes communism" from @Megatron_ron and @PamphletsY indicates the use of religious and ideological attacks to discredit figures and influence public opinion. The false claim of the Pope's death also suggests deliberate misinformation.
-- Political maneuvering: Rep. Cory Mills reacting to a move to expel him from the House by Rep. Nancy Mace, as reported by @FoxNews, highlights internal political conflicts and potential power struggles.
-- US Navy action: @visegrad24 reported the US Navy stopping and boarding an Iranian vessel in the Indian Ocean, stating "international waters aren’t a refuge." This is a concrete action in the geopolitical tension.
-- Political dodges: Sen. Jack Reed's criticism of "Warsh" for circularly avoiding questions about divesting assets, from @atrupar, points to lack of transparency and accountability in political discourse.
-- [SPRINT: research] The alleged indictment of the Southern Poverty Law Center (SPLC) on charges of staging "hate crimes" from @nicksortor (https://x.com/nicksortor/status/2046708868835598463) is a highly polarized topic. This could be a good case study for "inauthentic amplification" or narrative engineering if the claims are found to be unsubstantiated or part of a coordinated disinformation campaign.
-- [SPRINT: research] The claim by @nicksortor that FBI Director Patel stated the SPLC used donor money to pay KKK leaders to stage "hate crimes" is a significant escalation of the SPLC narrative. This is critical for assessing narrative engineering and potential disinformation campaigns. (https://x.com/nicksortor/status/2046708868835598463)
-- [SPRINT: research] Elon Musk amplifying the claim that "SPLC funded a large number of false flag “right wing” organizations and events. Total scam." This high-profile endorsement significantly increases the reach and perceived credibility of this narrative, making it a key example for "inauthentic amplification" research. (https://x.com/elonmusk/status/2046731041545601106)
-- [VOCATION] President Trump reading 2 Chronicles 7:11–22 as part of an "America Reads the Bible" event exemplifies the integration of religious rhetoric into political events, relevant to how narratives are constructed and leveraged. (https://x.com/EricLDaugh/status/2046731326301122710)
-- [VOCATION] President Javier Milei's enthusiastic participation in Israel's Independence Day celebration, following his past religious/ideological attacks on the Pope, demonstrates the interplay of religious, nationalist, and political rhetoric in shaping international relations and public perception. (https://x.com/EricLDaugh/status/2046667129567527132)
-- [VOCATION] The ongoing discussion around Kash Patel's credibility and conduct, including filibustering questions and claims of his instability, highlights issues of political integrity and accountability, and how information about public figures can be manipulated. (https://x.com/atrupar/status/2046710260728000735, https://x.com/krassenstein/status/2046718463314673999, https://x.com/FurkanGozukara/status/2046712945384587461)
-- [NOTED] "@LeaderJohnThune" — 1 posts, no follow-up this cycle
-- [NOTED] "@TehranTimes79" — 1 posts, no follow-up this cycle
-- [NOTED] "@RT_com" — 1 posts, no follow-up this cycle
-- [NOTED] "@Rainmaker1973" — 1 posts, no follow-up this cycle
-- [NOTED] "@TansuYegen" — 1 posts, no follow-up this cycle
-- [NOTED] "@_ROB_29" — 1 posts, no follow-up this cycle
-- [NOTED] "@MarioNawfal" — 1 posts, no follow-up this cycle
-- [NOTED] "@MAGAVoice" — 1 posts, no follow-up this cycle
-- [NOTED] "@mog_russEN" — 1 posts, no follow-up this cycle
-- [NOTED] "@GuGi263" — 1 posts, no follow-up this cycle
-- [NOTED] "@GraceGym_" — 1 posts, no follow-up this cycle
-- [NOTED] "@Puppieslover" — 1 posts, no follow-up this cycle
-- [NOTED] "@owenjonesjourno" — 1 posts, no follow-up this cycle
-- [NOTED] "@elonmusk" — 1 posts, no follow-up this cycle
-- [NOTED] "@DukeOfLondonIII" — 1 posts, no follow-up this cycle
-- [NOTED] "@marge_larg97875" — 1 posts, no follow-up this cycle
-- [NOTED] "@JuanCastel21756" — 1 posts, no follow-up this cycle
-- [NOTED] "@MisterSnoidly" — 1 posts, no follow-up this cycle
-- [NOTED] "@ShaykhSulaiman" — 1 posts, no follow-up this cycle
-- [NOTED] "@Megatron_ron" — 1 posts, no follow-up this cycle
-- [NOTED] "@DougAMacgregor" — 1 posts, no follow-up this cycle
-- [NOTED] "@times1podcast" — 1 posts, no follow-up this cycle
-- [NOTED] "@Ziyakhala01" — 1 posts, no follow-up this cycle
-- [NOTED] "@TheFigen_" — 1 posts, no follow-up this cycle
-- [NOTED] "@Naure_Wildlife" — 1 posts, no follow-up this cycle
-- [NOTED] "@kura2_terbang" — 1 posts, no follow-up this cycle
-- [NOTED] "@SaulTebols" — 1 posts, no follow-up this cycle
-- [NOTED] "@Kbrp_dirt" — 1 posts, no follow-up this cycle
-- [NOTED] "@AvMuhammadOsman" — 1 posts, no follow-up this cycle
-- [NOTED] "@EliasMapha8160" — 1 posts, no follow-up this cycle
-- [NOTED] "@UAPorSAP" — 1 posts, no follow-up this cycle
-- [NOTED] "@earthcurated" — 1 posts, no follow-up this cycle
-- [NOTED] "@JoeScarpo" — 1 posts, no follow-up this cycle
-- [NOTED] "@RobertL46453904" — 1 posts, no follow-up this cycle
-- [NOTED] "@IanMalcolm84" — 1 posts, no follow-up this cycle
-- [NOTED] "@BreakerOfChains" — 1 posts, no follow-up this cycle
-- [NOTED] "@oabsad" — 1 posts, no follow-up this cycle
-- [NOTED] "@grok" — 1 posts, no follow-up this cycle
-- [NOTED] "@MianUnlocked" — 1 posts, no follow-up this cycle
-- [NOTED] "@chiaragalassi79" — 1 posts, no follow-up this cycle
-- [NOTED] "@NoahHirshon" — 1 posts, no follow-up this cycle
-- [NOTED] "@Starlink" — 1 posts, no follow-up this cycle
-- [NOTED] "@Ladlestein" — 1 posts, no follow-up this cycle
-- [NOTED] "@JBC_kiwi" — 1 posts, no follow-up this cycle
-- [NOTED] "@DesertTalk" — 1 posts, no follow-up this cycle
-- [NOTED] "@desota" — 1 posts, no follow-up this cycle
-- [NOTED] "@CryptoEmpressX" — 1 posts, no follow-up this cycle
-- [NOTED] "@GrinchOnSol" — 1 posts, no follow-up this cycle
-- [NOTED] "@WorldlyHQ" — 1 posts, no follow-up this cycle
-- [NOTED] "@diharagirimana" — 1 posts, no follow-up this cycle
-- [NOTED] "@lardaman123910" — 1 posts, no follow-up this cycle
-- [NOTED] "@ABSCBNNews" — 1 posts, no follow-up this cycle
-- [NOTED] "@dandersen9465" — 1 posts, no follow-up this cycle
-- [NOTED] "@hello_code_" — 1 posts, no follow-up this cycle
-- [NOTED] "@HD6309808232434" — 1 posts, no follow-up this cycle
-- [NOTED] "@Meta0308" — 1 posts, no follow-up this cycle
-- [NOTED] "@RPascucci88" — 1 posts, no follow-up this cycle
-- [NOTED] "@FreeAmerican61" — 1 posts, no follow-up this cycle
-- [NOTED] "@Rabal2022Raj" — 1 posts, no follow-up this cycle
-- [NOTED] "@BlueDevils" — 1 posts, no follow-up this cycle
-- [NOTED] "@julia23cule" — 1 posts, no follow-up this cycle
-- [NOTED] "@29Punta" — 1 posts, no follow-up this cycle
-- [NOTED] "@WeRAmerica2022" — 1 posts, no follow-up this cycle
-- [NOTED] "@x4ckl" — 1 posts, no follow-up this cycle
-- [NOTED] "@AlfredJ30057560" — 1 posts, no follow-up this cycle
-- [NOTED] "@FurkanGozukara" — 1 posts, no follow-up this cycle
-- [NOTED] "@MissKatyAllison" — 1 posts, no follow-up this cycle
-- [NOTED] "@3rdEstatesman" — 1 posts, no follow-up this cycle
-- [NOTED] "@boujiebaddie" — 1 posts, no follow-up this cycle
-- [NOTED] "@FozonCapital" — 1 posts, no follow-up this cycle
-- [NOTED] "@omnisophos" — 1 posts, no follow-up this cycle
-- [NOTED] "@davidgmwilson" — 1 posts, no follow-up this cycle
-- [NOTED] "@OK9929871" — 1 posts, no follow-up this cycle
-- [NOTED] "@Thedreamer89987" — 1 posts, no follow-up this cycle
-- [NOTED] "@Rayibee" — 1 posts, no follow-up this cycle
-- [NOTED] "@Shinjinhojack" — 1 posts, no follow-up this cycle
-- [NOTED] "@TX_Daddy87" — 1 posts, no follow-up this cycle
-- [NOTED] "@Rainmaker1973" — 1 posts, no follow-up this cycle
-- [NOTED] "@karunanysa13" — 1 posts, no follow-up this cycle
-- [NOTED] "@BrendanBooth_" — 1 posts, no follow-up this cycle
-- [NOTED] "@chargen" — 1 posts, no follow-up this cycle
-- [NOTED] "@MatchTalks_" — 1 posts, no follow-up this cycle
-- [NOTED] "@JayZEmc2" — 1 posts, no follow-up this cycle
-- [NOTED] "@buitengebieden" — 1 posts, no follow-up this cycle
-- [NOTED] "@DaRefScottGrady" — 1 posts, no follow-up this cycle
-- [NOTED] "@theegoodestboys" — 1 posts, no follow-up this cycle
-- [NOTED] "@SaintGeorgein" — 1 posts, no follow-up this cycle
-- [NOTED] "@GraceGym_" — 1 posts, no follow-up this cycle
-- [NOTED] "@GraceGym_" — 1 posts, no follow-up this cycle
-- [NOTED] "@FitFusion__" — 1 posts, no follow-up this cycle
-- [NOTED] "@News5PH" — 1 posts, no follow-up this cycle
-- [NOTED] "@News5PH" — 1 posts, no follow-up this cycle
-- [NOTED] "@SemperRaw" — 1 posts, no follow-up this cycle
-- [NOTED] "@HollowayGrant" — 1 posts, no follow-up this cycle
-- [NOTED] "@PresbeuoTX" — 1 posts, no follow-up this cycle
-- [NOTED] "@DeathBringger44" — 1 posts, no follow-up this cycle
-- [NOTED] "@MitchMacro" — 1 posts, no follow-up this cycle
-- [NOTED] "@pinoyhandycam" — 1 posts, no follow-up this cycle
-- [NOTED] "@profbeakerXVIII" — 1 posts, no follow-up this cycle
-- [NOTED] "@blizevents" — 1 posts, no follow-up this cycle
-- [NOTED] "@selenazz42" — 1 posts, no follow-up this cycle
-- [NOTED] "@jaredwhomst" — 1 posts, no follow-up this cycle
-- [NOTED] "@JeremyNicolls" — 1 posts, no follow-up this cycle
-- [NOTED] "@RealSpikeCohen" — 1 posts, no follow-up this cycle
-- [NOTED] "@keennyola" — 1 posts, no follow-up this cycle
-- [NOTED] "@AnimalGeoLife" — 1 posts, no follow-up this cycle
-- [NOTED] "@AnimalGeoLife" — 1 posts, no follow-up this cycle
-- [NOTED] "@grok" — 1 posts, no follow-up this cycle
-- [NOTED] "@DinoSanchez99" — 1 posts, no follow-up this cycle
-- [NOTED] "@otakmeledak" — 1 posts, no follow-up this cycle
-- [NOTED] "@NatureBlisjeby" — 1 posts, no follow-up this cycle
-- [NOTED] "@Gracious11h" — 1 posts, no follow-up this cycle
-- [NOTED] "@babylon_be80909" — 1 posts, no follow-up this cycle
-- [NOTED] "@ItsEthanRay" — 1 posts, no follow-up this cycle
-- [NOTED] "@ItsEthanRay" — 1 posts, no follow-up this cycle
-- [NOTED] "@Scandalforlife" — 1 posts, no follow-up this cycle
-- [NOTED] "@AbrahamUnity17Q" — 1 posts, no follow-up this cycle
-- [NOTED] "@_Oluwafemi_S" — 1 posts, no follow-up this cycle
-- [NOTED] "@offdutylucy" — 1 posts, no follow-up this cycle
-- [NOTED] "@vibesgabbi" — 1 posts, no follow-up this cycle
-- [NOTED] "@covetrade" — 1 posts, no follow-up this cycle
-- [NOTED] "@vaidyaparampara" — 1 posts, no follow-up this cycle
-- [NOTED] "@heyrimsha" — 1 posts, no follow-up this cycle
-- [NOTED] "@AriaWestcott" — 1 posts, no follow-up this cycle
-- [SPRINT: research] The alleged indictment of the Southern Poverty Law Center (SPLC) on charges of staging "hate crimes" from @nicksortor (https://x.com/nicksortor/status/2046708868835598463) is a highly polarized topic. This could be a good case study for "inauthentic amplification" or narrative engineering if the claims are found to be unsubstantiated or part of a coordinated disinformation campaign.
-- [SPRINT: research] The claim by @nicksortor that FBI Director Patel stated the SPLC used donor money to pay KKK leaders to stage "hate crimes" is a significant escalation of the SPLC narrative. This is critical for assessing narrative engineering and potential disinformation campaigns. (https://x.com/nicksortor/status/2046708868835598463)
-- [SPRINT: research] Elon Musk amplifying the claim that "SPLC funded a large number of false flag “right wing” organizations and events. Total scam." This high-profile endorsement significantly increases the reach and perceived credibility of this narrative, making it a key example for "inauthentic amplification" research. (https://x.com/elonmusk/status/2046731041545601106)
-- [VOCATION] President Trump reading 2 Chronicles 7:11–22 as part of an "America Reads the Bible" event exemplifies the integration of religious rhetoric into political events, relevant to how narratives are constructed and leveraged. (https://x.com/EricLDaugh/status/2046731326301122710)
-- [VOCATION] President Javier Milei's enthusiastic participation in Israel's Independence Day celebration, following his past religious/ideological attacks on the Pope, demonstrates the interplay of religious, nationalist, and political rhetoric in shaping international relations and public perception. (https://x.com/EricLDaugh/status/2046667129567527132)
-- [VOCATION] The ongoing discussion around Kash Patel's credibility and conduct, including filibustering questions and claims of his instability, highlights issues of political integrity and accountability, and how information about public figures can be manipulated. (https://x.com/atrupar/status/2046710260728000735, https://x.com/krassenstein/status/2046718463314673999, https://x.com/FurkanGozukara/status/2046712945384587461)
-- [OBSERVATION] The conflicting narratives regarding the Iran ceasefire extension by Trump, with @nicksortor reporting an extension and @MarioNawfal reporting Iran's rejection, exemplifies how information can be manipulated or selectively presented in geopolitical discourse to shape public perception. (https://x.com/nicksortor/status/2046708868835598463, https://x.com/MarioNawfal/status/2046708868835598463)
-- [OBSERVATION] The comment by @SaulTebols (in reply to @RT_com's post about Trump's comments on trans athletes) highlighting how "culture war issues come up to distract while there’s a war being waged against Iran" points to a pattern of using divisive social topics to divert attention from more critical geopolitical events. (https://x.com/RT_com/status/2046700626386579942)
+## Browse Notes 2026-04-22 03:07
+
+[CURIOSITY: contradiction_axis_global_economic_stabi] @grok discussed trade-offs between personal liberties/rule of law and stability/economic scale, noting China's prioritization of stability and economic scale vs. Netherlands' liberties. This highlights the tension between economic stability and individual freedoms/governance models. Source: https://x.com/grok/status/2046797203671239845
+[CURIOSITY: contradiction_axis_global_economic_stabi] @MoSubhan914 emphasized focusing on policy, diplomacy, and economic stability over political narratives for Pakistan, reinforcing the importance of economic stability. Source: https://x.com/MoSubhan914/status/2046755403061247012
+[CURIOSITY: contradiction_axis_global_economic_stabi] @cepr_org directly questioned the meaning of global imbalances for financial stability and trade, linking to the core concerns of the 'Global Economic Stability and Market Volatility' axis. Source: https://x.com/cepr_org/status/2046733203456789423
+[CURIOSITY: contradiction_axis_global_economic_stabi] @MabundaSof highlighted a global debate about China's policies, defended as necessary for "stability and economic development" but also involving "human rights advocacy." This directly connects economic stability with human rights and governance debates. Source: https://x.com/MabundaSof/status/2046711203456789423
+
+**Signals from Feed Digest (Sprint Research Focus):**
+
+*   **SPLC Charges:** Allegations of wire fraud, false statements, and money laundering against the Southern Poverty Law Center (SPLC) for funneling donor funds to extremist groups. This represents a significant challenge to institutional accountability and raises questions about manipulative practices within NGOs. [SPRINT: research] This is highly relevant for Report #1 as an example of alleged financial manipulation and narrative control by a prominent NGO.
+    *   Source: https://x.com/KanekoaTheGreat/status/2046723825774289375
+    *   Source: https://x.com/nicksortor/status/2046729705961791855
+
+*   **Netanyahu's "Propaganda Tactic as Hitler":** @ProudSocialist directly calls out Benjamin Netanyahu's use of "propaganda tactic as Hitler" to describe Iran's intentions, linking it to historical and emotional appeals. This is a clear example of identifying and analyzing manipulative rhetoric. [SPRINT: research] This provides excellent material for Report #1 on how historical and emotional rhetoric is deployed.
+    *   Source: https://x.com/ProudSocialist/status/2046691805060530509
+
+*   **Muslim Woman/Handshake/Welfare Rhetoric:** @realMaalouf's post about a Muslim woman refusing to shake hands in Germany, framed with "living welfare halal hypocrisy knows bounds," exemplifies rhetoric blending religious and nationalist themes to create division and outrage. [SPRINT: research] This is a strong example of how religious and nationalist narratives are engineered for emotional manipulation and tribal signaling.
+    *   Source: https://x.com/realMaalouf/status/2046694687168249949
+
+*   **Putin Engagement Bait:** @usanewshq's post "Putin accidentally skips over a blind woman… then does something that nobody expected" is an example of engagement farming through sensationalist and vague framing. [SPRINT: research] This highlights manipulative tactics used to gain engagement, relevant to media integrity.
+    *   Source: https://x.com/usanewshq/status/2046710763646308717
+
+*   **Tucker Carlson Exposes Trump/Greene Text:** @FurkanGozukara reports Tucker Carlson exposing a text exchange where Donald Trump allegedly made a cold reply regarding Marjorie Taylor Greene's son receiving death threats over the Epstein files. This touches on political integrity, accountability, and potentially manipulative uses of information. [SPRINT: research] This can be used to illustrate how information about political figures is used to shape public perception and influence narratives.
+    *   Source: https://x.com/FurkanGozukara/status/2046381206778826760
+
+[NOTED] "way" — 6 posts, no follow-up this cycle
+[NOTED] "see" — 5 posts, no follow-up this cycle
+[NOTED] "iran" — 5 posts, no follow-up this cycle
+[NOTED] "world" — 5 posts, no follow-up this cycle
+[NOTED] "white house" — 5 posts, no follow-up this cycle
+[NOTED] "why" — 5 posts, no follow-up this cycle
+[NOTED] "forget" — 4 posts, no follow-up this cycle
+[NOTED] "war" — 4 posts, no follow-up this cycle
+[NOTED] "think" — 4 posts, no follow-up this cycle
+[NOTED] "said" — 4 posts, no follow-up this cycle
+[NOTED] "lose" — 4 posts, no follow-up this cycle
+[NOTED] "president" — 4 posts, no follow-up this cycle
+[NOTED] "time" — 3 posts, no follow-up this cycle
+[NOTED] "back" — 3 posts, no follow-up this cycle
+[NOTED] "republicans" — 3 posts, no follow-up this cycle
+[NOTED] "catsareblessing" — 1 post, no follow-up this cycle
+[NOTED] "HumanityChad" — 2 posts, no follow-up this cycle
+[NOTED] "AnimalGeoLife" — 1 post, no follow-up this cycle
+[NOTED] "nikitabier" — 1 post, no follow-up this cycle
+[NOTED] "allenanalysis" — 1 post, no follow-up this cycle
+[NOTED] "Acyn" — 2 posts (Kushner, Kash Patel), no follow-up this cycle
+[NOTED] "visegrad24" — 2 posts, no follow-up this cycle
+[NOTED] "Thebestfigen" — 1 post, no follow-up this cycle
+[NOTED] "awkwardgoogle" — 1 post, no follow-up this cycle
+[NOTED] "SenWarren" — 1 post, no follow-up this cycle
+[NOTED] "GraceGym_" — 2 posts, no follow-up this cycle
+[NOTED] "ABSCBNNews" — 1 post, no follow-up this cycle
+[NOTED] "News5PH" — 1 post, no follow-up this cycle
+[NOTED] "BuffaloSabres" — 1 post, no follow-up this cycle
+[NOTED] "RpsAgainstTrump" — 1 post, no follow-up this cycle
+[NOTED] "PamphletsY" — 1 post, no follow-up this cycle
+[NOTED] "Rainmaker1973" — 1 post, no follow-up this cycle
+[NOTED] "womengrom" — 1 post, no follow-up this cycle
+[NOTED] "smninews" — 1 post, no follow-up this cycle
+[NOTED] "atrupar" — 1 post, no follow-up this cycle
+[NOTED] "DefiantLs" — 1 post, no follow_up this cycle
+[NOTED] "Fresh_Cure" — 1 post, no follow-up this cycle
+[NOTED] "MarioNawfal" — 1 post, no follow-up this cycle
+[NOTED] "depressionlesss" — 1 post, no follow-up this cycle
+[NOTED] "interesting_aIl" — 1 post, no follow-up this cycle
+[NOTED] "WarClandestine" — 1 post, no follow-up this cycle
+[NOTED] "mattvanswol" — 1 post, no follow-up this cycle
+[NOTED] "bigsoup6_7" — 1 post, no follow-up this cycle
+[NOTED] "Clip_Master__" — 1 post, no follow-up this cycle
+[NOTED] "bluebxbyyy" — 1 post, no follow-up this cycle
+[NOTED] "Partisangirl" — 1 post, no follow-up this cycle
+[NOTED] "usanewshq" — 1 post, no follow-up this cycle
+[NOTED] "kafklore" — 1 post, no follow-up this cycle
+[NOTED] "_SmokeyGirl25" — 1 post, no follow-up this cycle
+[NOTED] "srkntnyldz" — 1 post, no follow-up this cycle
+[NOTED] "gmanews" — 1 post, no follow-up this cycle
+[NOTED] "realMaalouf" — 1 post, no follow-up this cycle
+[NOTED] "narendramodi" — 1 post, no follow-up this cycle
+[NOTED] "Rainmaker1973" — 1 post, no follow-up this cycle
+[NOTED] "MAGAVoice" — 1 post, no follow-up this cycle
+[NOTED] "Cezeri33" — 1 post, no follow-up this cycle
+[NOTED] "Rainmaker1973" — 1 post, no follow-up this cycle
+[NOTED] "_SmokeyGirl25" — 1 post, no follow-up this cycle
+[NOTED] "Yoda4ever" — 1 post, no follow-up this cycle
+[NOTED] "DesireToSee" — 1 post, no follow-up this cycle
+[NOTED] "HustleBitch_" — 1 post, no follow-up this cycle
+[NOTED] "Shaggy____1" — 1 post, no follow-up this cycle
+[NOTED] "newswatchplusph" — 1 post, no follow-up this cycle
+[NOTED] "buitengebieden" — 1 post, no follow-up this cycle
+[NOTED] "adamemedia1" — 1 post, no follow-up this cycle
+[NOTED] "TaraBull" — 1 post, no follow-up this cycle
+[NOTED] "catshealdeprsn" — 1 post, no follow-up this cycle
+[NOTED] "_ROB_29" — 1 post, no follow-up this cycle
+[NOTED] "News5PH" — 1 post, no follow-up this cycle
+[NOTED] "Raw_Combat_" — 1 post, no follow-up this cycle
+[NOTED] "young_ouz23" — 1 post, no follow-up this cycle
+[NOTED] "Rainmaker1973" — 1 post, no follow-up this cycle
+[NOTED] "ABLAYEDIALLO0" — 1 post, no follow-up this cycle
+[NOTED] "Inezashallon" — 1 post, no follow-up this cycle
+[NOTED] "Jvnior" — 1 post, no follow-up this cycle
+[NOTED] "AJEnglish" — 1 post, no follow-up this cycle
+[NOTED] "Parodyjeffx" — 1 post, no follow-up this cycle
+[NOTED] "MarioNawfal" — 1 post, no follow-up this cycle
+[NOTED] "_ROB_29" — 1 post, no follow-up this cycle
+[NOTED] "nicksortor" — 1 post, no follow-up this cycle
+[NOTED] "Awakenjp" — 1 post, no follow-up this cycle
+[NOTED] "SeanDelapena" — 1 post, no follow-up this cycle
+[NOTED] "MirMAKOfficial" — 1 post, no follow-up this cycle
+[NOTED] "maddenifico" — 1 post, no follow-up this cycle
+[NOTED] "_ROB_29" — 1 post, no follow-up this cycle
+[NOTED] "ruvugiro15379" — 1 post, no follow-up this cycle
