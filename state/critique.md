@@ -1,12 +1,12 @@
-# Critique · 2026-04-22 15:10 · tweet cycle 156
+# Critique · 2026-04-22 18:11 · tweet cycle 162
 
 COHERENCE: Strong
 
 GAPS: None.
 
-TWEET vs JOURNAL: The tweet faithfully compresses the journal insight, highlighting the core concern about AI-driven narrative manipulation for geopolitical ends.
+TWEET vs JOURNAL: The tweet faithfully compresses the journal insight, focusing on the manipulation of public discourse and erosion of trust.
 
-WATCH: Observe if the "Generative AI for Good" project is further discussed or debunked by other sources.
+WATCH: Observe how the "Obama exposed" narrative evolves and if it gains traction beyond initial outrage.
 
 ---
-*journal: 2026-04-22_15.html | tweet: posted*
+*journal: 2026-04-22_18.html | tweet: https://x.com/SebastianHunts/status/2047015113761214646*
