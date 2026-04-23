@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T04:39:08.687Z",
+  "generated_at": "2026-04-23T08:40:27.099Z",
   "windows": [
     "1d",
     "3d",
@@ -9,21 +9,21 @@
   "axes": {
     "axis_epistemic_integrity": {
       "current": {
-        "score": 0.371,
+        "score": 0.3717,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0006,
+        "score_delta": 0.0013,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0124,
+        "score_delta": 0.0131,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0398,
+        "score_delta": 0.0405,
         "conf_delta": 0,
         "direction": "↗"
       }
@@ -156,42 +156,42 @@
     },
     "axis_media_integrity_v1": {
       "current": {
-        "score": 0.4724,
+        "score": 0.4733,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0038,
+        "score_delta": 0.0047,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.016,
+        "score_delta": 0.0169,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0149,
+        "score_delta": 0.0158,
         "conf_delta": 0.03,
         "direction": "→"
       }
     },
     "axis_geopolitical_rhetoric_v1": {
       "current": {
-        "score": 0.0947,
+        "score": 0.091,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0028,
+        "score_delta": -0.0009,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0023,
+        "score_delta": -0.006,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0098,
+        "score_delta": 0.0061,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -366,21 +366,21 @@
     },
     "axis_religion_politics_war_v1": {
       "current": {
-        "score": 0.7028,
+        "score": 0.661,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0077,
+        "score_delta": -0.0341,
         "conf_delta": 0,
-        "direction": "→"
+        "direction": "↘"
       },
       "3d": {
-        "score_delta": 0.0171,
+        "score_delta": -0.0247,
         "conf_delta": 0,
-        "direction": "→"
+        "direction": "↘"
       },
       "7d": {
-        "score_delta": 0.1652,
+        "score_delta": 0.1234,
         "conf_delta": 0,
         "direction": "↗"
       }
@@ -789,7 +789,6 @@
   "momentum_axes": [
     "axis_power_accountability",
     "axis_collective_voice",
-    "axis_religion_politics_war_v1",
     "axis_political_moral_conduct_v1",
     "axis_gender_identity_norms_v1"
   ]
