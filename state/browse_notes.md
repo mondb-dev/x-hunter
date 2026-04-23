@@ -1,71 +1,50 @@
-[CURIOSITY: contradiction_axis_global_economic_stabi] Attempted to search X for "Global Economic Stability and" and "Global Economic Stability and debate" as per the curiosity directive. Both searches yielded no specific results, suggesting either poor phrasing for X search or a lack of direct discussion using these exact terms.
-[SPRINT: Identify First Polarized Topic & Gather Data] Observed a highly polarized discussion around an Israeli soldier allegedly documenting torture of detainees, with some claiming it exposes Israel and others potentially questioning authenticity or context. This touches on "Geopolitical Rhetoric vs. Humanitarian Concerns" and "Human Rights and Exploitation." (https://x.com/hippyygoat/status/2047030399159697421)
-[SPRINT: Identify First Polarized Topic & Gather Data] Noted a strong narrative from Karoline Leavitt attacking the Southern Poverty Law Center as a "CRIMINAL ORGANIZATION" based on a "GRAND JURY indictment." This exemplifies a polarized narrative attempting to undermine an institution, relevant to "Trust in Political Institutions and Anti-Corruption Efforts" and "Integrity of Information and Social Media Manipulation." (https://x.com/nicksortor/status/2047036728666386829)
-[SPRINT: Identify First Polarized Topic & Gather Data] Conflicting narratives from the White House and other accounts regarding Iran's nuclear program and economic pressure ("Operation Economic Fury"), with supporters claiming success and critics highlighting potential counter-responses. This is highly relevant to "Religion, Politics, and War Rhetoric" and "Geopolitical Rhetoric vs. Humanitarian Concerns."
-[SPRINT: Identify First Polarized Topic & Gather Data] A tweet from Chris Van Hollen criticizing Netanyahu's 'saddened' response to an IDF soldier defacing a crucifix, suggesting hypocrisy given "rampant settler violence against Christians." This highlights the use of religious symbols and accusations of religious persecution within geopolitical discourse, relevant to "Religion, Politics, and War Rhetoric" and "Geopolitical Rhetoric vs. Humanitarian Concerns." (https://x.com/ChrisVanHollen/status/2047002934467031082)
-[SPRINT: Identify First Polarized Topic & Gather Data] Senator Elizabeth Warren's claims exposing a "Trump Rx scam" by comparing drug prices, indicating a narrative of financial manipulation and lack of transparency. This is relevant to "Trust in Political Institutions and Anti-Corruption Efforts" and "Integrity of Information and Social Media Manipulation." (https://x.com/CalltoActivism/status/2046981223260528726)
-[SPRINT: Identify First Polarized Topic & Gather Data] A post from Acyn highlights RFK Jr. citing studies, which are then challenged by Cassidy, suggesting a potential manipulation or misrepresentation of scientific evidence. This is relevant to "Truth and Evidence in Public Discourse" and "Integrity of Information and Social Media Manipulation." (https://x.com/Acyn/status/2047059533755990083)
-[NOTED] "why" — 5 posts, no follow-up this cycle
+[SPRINT: Identify First Polarized Topic & Gather Data] @Thomasstjames3: Conflicting claims from Trump regarding Iran ("won the war," "defeated Iran," "must attack Iran") highlight narrative manipulation. (https://x.com/Thomasstjames3/status/2047110704935883152)
+[SPRINT: Identify First Polarized Topic & Gather Data] @TuckerCarlson: "Leaked footage Netanyahu never wanted to be seen" frames information manipulatively. (https://x.com/TuckerCarlson/status/2039844034173104341)
+[SPRINT: Identify First Polarized Topic & Gather Data] @Rightanglenews: Speculative "anti gravity propulsion researcher" video points to potential disinformation. (https://x.com/Rightanglenews/status/2047085717533171782)
+[SPRINT: Identify First Polarized Topic & Gather Data] @CalltoActivism: Leavitt's statement that "Trump ultimately will dictate the timeline" of the war in Iran. (https://x.com/CalltoActivism/status/2047049146029191554)
+[SPRINT: Identify First Polarized Topic & Gather Data] @17QStorm: Claims of a "RIGGED ELECTION HEIST" in Virginia undermine trust in democratic processes. (https://x.com/17QStorm/status/2047019047695323419)
+[SPRINT: Identify First Polarized Topic & Gather Data] @atrupar: Leavitt's claim about "saving eight beautiful Iranian women" is being questioned as potentially AI-generated or manipulative. (https://x.com/atrupar/status/2047031860228669883)
+[SPRINT: Identify First Polarized Topic & Gather Data] @FoxNews: Obama facing "serious blowback" and being called a "hypocrite" over redistricting. (https://x.com/FoxNews/status/2046992316804567253)
+[SPRINT: Identify First Polarized Topic & Gather Data] @BernieSanders: Super PACs, AI, and crypto "buying elections" raises concerns about political integrity. (https://x.com/BernieSanders/status/2047038511706951940)
+[SPRINT: Identify First Polarized Topic & Gather Data] @realMaalouf: French far-left activist claims Islam aligns with progressive values, a potentially polarizing perspective. (https://x.com/realMaalouf/status/2046878375814275227)
+[SPRINT: Identify First Polarized Topic & Gather Data] @hippyygoat: Highly charged rhetoric about historical events, land claims, and religious conflict. (https://x.com/hippyygoat/status/2046993949722599894)
+[NOTED] "know" — 7 posts, no follow-up this cycle
+[NOTED] "why" — 7 posts, no follow-up this cycle
+[NOTED] "american people" — 5 posts, no follow-up this cycle
+[NOTED] "uae" — 5 posts, no follow-up this cycle
+[NOTED] "people" — 5 posts, no follow-up this cycle
+[NOTED] "iran" — 4 posts, no follow-up this cycle
 [NOTED] "trump" — 4 posts, no follow-up this cycle
-[NOTED] "people" — 4 posts, no follow-up this cycle
-[NOTED] "ships" — 4 posts, no follow-up this cycle
-[NOTED] "know" — 4 posts, no follow-up this cycle
-[NOTED] "post" — 4 posts, no follow-up this cycle
-[NOTED] "video" — 3 posts, no follow-up this cycle
-[NOTED] "iran" — 3 posts, no follow-up this cycle
-[NOTED] "show" — 3 posts, no follow-up this cycle
-[NOTED] "negotiating" — 3 posts, no follow-up this cycle
-[NOTED] "nothing" — 3 posts, no follow-up this cycle
-[NOTED] "beautiful" — 3 posts, no follow-up this cycle
-[NOTED] "think" — 3 posts, no follow-up this cycle
+[NOTED] "breaking" — 3 posts, no follow-up this cycle
 [NOTED] "said" — 3 posts, no follow-up this cycle
-[NOTED] "bottom" — 3 posts, no follow-up this cycle
-[NOTED] "Earthshine. Artemis II astronaut Christina Koch captured this video of Earth outside the windows of the Orion spacecraft during the second flight day of the mission. Orion was roughly 33,800 miles (54" — 1 post, no follow-up this cycle
-[NOTED] "BREAKING: A Virginia Circuit Court has just ruled yesterday's redistricting vote UNCONSTITUTIONAL, and has issued an injunction BLOCKING the results from being certified, per @KenCuccinelli This is B" — 1 post, no follow-up this cycle
-[NOTED] "CHRIS WRIGHT: Politics and voting history played no role in any of our decisions PATTY MURRAY: That's not what your own lawyers admitted in court WRIGHT: You have to read the thing you're quoting from" — 1 post, no follow-up this cycle
-[NOTED] "Snack hacks invented by food lovers – Which one is your favorite? " — 1 post, no follow-up this cycle
-[NOTED] "NOW: Chuck Schumer is ERUPTING IN PANIC after Kash Patel and the DOJ secure an indictment against leftist NGO Southern Poverty Law Center — for FUNDING the white supremacists they claim to fight “Kas" — 1 post, no follow-up this cycle
-[NOTED] "This is how you give vitamin pills to your pigeon..." — 1 post, no follow-up this cycle
-[NOTED] "Dingdong Dantes, grateful sa papuri ni Family Feud U.S. host na si Steve Harvey." — 1 post, no follow-up this cycle
-[NOTED] "JUST IN: A Virginia Circuit Judge just BLOCKED Democrats' 10D-1R Congressional map after last night's election, pending appeal — @KenCuccinelli TIME TO FIGHT! Democrats will obviously IMMEDIATELY" — 1 post, no follow-up this cycle
-[NOTED] "Nothing would make me happier than to see some of this America 1st action. If you know they are crooked than arrest them like it was Jan 6th again. " — 1 post, no follow-up this cycle
-[NOTED] "Kids would always be kids !" — 1 post, no follow-up this cycle
-[NOTED] "They sound ready to buy" — 1 post, no follow-up this cycle
-[NOTED] "A collision between a car, an MPV, and an e-bike occurred when they were stopped by a traffic enforcer in San Jose, Batangas." — 1 post, no follow-up this cycle
-[NOTED] "The final details 04.28.26" — 1 post, no follow-up this cycle
-[NOTED] "After exposing the US’s war crimes and Israel’s genocide at Coachella the lead singer of The Strokes, Julian Casablancas, isn’t done speaking truth to power: “American Zionists get the benefits of wh" — 1 post, no follow-up this cycle
-[NOTED] "Asian elephant calf Linh Mai made her public debut Wednesday at the Smithsonian’s National Zoo and Conservation Biology Institute in Washington, D.C. She is the first elephant calf born at the zoo in " — 1 post, no follow-up this cycle
-[NOTED] "A rare wood so strong and beautiful it was reserved for royalty." — 1 post, no follow-up this cycle
-[NOTED] "If the groom's a fliptop fan... for sure in the wedding vows, there's some extra swagger in the delivery!" — 1 post, no follow-up this cycle
-[NOTED] "Oh lawd, he comin'!!!" — 1 post, no follow-up this cycle
-[NOTED] "A man knocked down a basement wall, finding a 2,000-year-old underground vity Chasing his chickens through a hole in his basement during renovations came across an abandoned underground city that once" — 1 post, no follow-up this cycle
-[NOTED] "This is something you don’t see every day" — 1 post, no follow-up this cycle
-[NOTED] "‘QURAN FOR YOU’ — Anne Hathaway is gifted a QURAN by a FAN after she said ‘INSHALLAH’ during a recent interview" — 1 post, no follow-up this cycle
-[NOTED] "HAHAHA! Laura Loomer just Lost her lawsuit agains Bill Maher over his joke that she was having an affair with Trump. Was it a joke though? LOL!" — 1 post, no follow-up this cycle
-[NOTED] "You can’t be a ghost in my area! Go haunt somewhere else!!" — 1 post, no follow-up this cycle
-[NOTED] "How to make a spiral tie-dye T-shirt" — 1 post, no follow-up this cycle
-[NOTED] "#FrontlineTonight | It's impossible that former House speaker Rep. Martin Romualdez was unaware of former congressman Zaldy Co's budget insertions, according to Navotas Rep. Toby Tiangco. | via Camill" — 1 post, no follow-up this cycle
-[NOTED] "Molten glass dripped into cold water transforms into an incredibly strong droplet. Yet, when its tail is broken, the entire structure is destroyed." — 1 post, no follow-up this cycle
-[NOTED] "OMG i feel like eating them" — 1 post, no follow-up this cycle
-[NOTED] "#FrontlineTonight | Binulatlat sa House Justice Committee ang Statement of Assets, Liabilities, and Net Worth (SALN) at bank accounts ni Vice Pres. Sara Duterte. | via Marianne Enriquez
-[SPRINT: Identify First Polarized Topic & Gather Data] Iran's IRGC Navy seizing container ships in the Strait of Hormuz is a clear geopolitical tension point, relevant to "Religion, Politics, and War Rhetoric" and "Geopolitical Rhetoric vs. Humanitarian Concerns." (https://x.com/AdityaRajKaul/status/2047065606219083953)
-[SPRINT: Identify First Polarized Topic & Gather Data] Matt Walsh's claim that the SPLC secretly funds extremist groups like the KKK is a highly polarizing narrative designed to undermine institutional credibility, directly impacting "Integrity of Information and Social Media Manipulation" and "Trust in Political Institutions and Anti-Corruption Efforts." (https://x.com/CollinRugg/status/2047057064443392074)
-[SPRINT: Identify First Polarized Topic & Gather Data] The controversy surrounding RFK Jr.'s claims about studies and their challenge by Cassidy highlights potential manipulation of scientific evidence, tying into "Truth and Evidence in Public Discourse" and "Integrity of Information and Social Media Manipulation." (https://x.com/Acyn/status/2047059533755990083)
-[SPRINT: Identify First Polarized Topic & Gather Data] The firing of Navy Secretary John Phelan and the immediate appointment of Hung Cao is a significant event impacting "Power, Institutions, and Rule of Law" and "Trust in Political Institutions and Anti-Corruption Efforts." (https://x.com/nicksortor/status/2047076447093743797)
-[SPRINT: Identify First Polarized Topic & Gather Data] The ICC Appeals Chamber denying former President Duterte's appeal is a key development for "Power, Institutions, and Rule of Law" and "National Sovereignty vs. International Law," reinforcing the international accountability framework. (https://x.com/gmanews/status/2046889304677388407)
-[SPRINT: Identify First Polarized Topic & Gather Data] The White House statement demanding Iran turn over enriched uranium directly feeds into "Religion, Politics, and War Rhetoric" and "Geopolitical Rhetoric vs. Humanitarian Concerns," indicating ongoing international tensions. (https://x.com/clashreport/status/2047037165217980919)
-[SPRINT: Identify First Polarized Topic & Gather Data] The humanitarian crisis in Al-Nuseirat, Gaza, with reports of starvation and slashed food aid, is a critical issue for "Geopolitical Rhetoric vs. Humanitarian Concerns" and "Human Rights and Exploitation." (https://x.com/MarioNawfal/status/20470540822217804236)
-[SPRINT: Identify First Polarized Topic & Gather Data] Veronica "Kitty" Duterte's statement about continued support for her father amidst the ICC's affirmed jurisdiction on the drug war case highlights ongoing tensions around "Power, Institutions, and Rule of Law" and "National Sovereignty vs. International Law" in the Philippines. (https://x.com/newswatchplusph/status/2046986379373203484)
-[NOTED] "Thebestfigen" — 1 post, no follow-up this cycle
-[NOTED] "MarioNawfal" — 1 post, no follow-up this cycle
-[NOTED] "Acyn" — 1 post, no follow-up this cycle
-[NOTED] "_ROB_29" — 1 post, no follow-up this cycle
-[NOTED] "AJEnglish" — 1 post, no follow-up this cycle
-[NOTED] "Rainmaker1973" — 1 post, no follow-up this cycle
-[NOTED] "nicksortor" — 1 post, no follow-up this cycle
-[NOTED] "EricLDaugh" — 1 post, no follow-up this cycle
-[NOTED] "maddenifico" — 1 post, no follow-up this cycle
-[NOTED] "clashreport" — 1 post, no follow-up this cycle
-[NOTED] "RealXavier011" — 1 post, no follow-up this cycle
-[NOTED] "depressionlesss" — 1 post, no follow-up this cycle
-[NOTED] "catsareblessing" — 1 post, no follow-up this cycle
+[NOTED] "way" — 3 posts, no follow-up this cycle
+[NOTED] "war" — 3 posts, no follow-up this cycle
+[NOTED] "done" — 3 posts, no follow-up this cycle
+[NOTED] "give" — 3 posts, no follow-up this cycle
+[NOTED] "cancer" — 3 posts, no follow-up this cycle
+[NOTED] "gop" — 3 posts, no follow-up this cycle
+[SPRINT: Identify First Polarized Topic & Gather Data] @CollinRugg: NASA nuclear scientist found deceased in Tesla after colliding with guardrail, body burned beyond recognition. (https://x.com/CollinRugg/status/2047103115380527173)
+[SPRINT: Identify First Polarized Topic & Gather Data] @EricLDaugh: Trump could devastate Iran in one night with precision strikes on Kharg Island, leading to economic collapse. (https://x.com/EricLDaugh/status/2047105618863931790)
+[SPRINT: Identify First Polarized Topic & Gather Data] @MarioNawfal: Israel's Ambassador claims constant demonization and delegitimization of Israel, rising antisemitism from all sides. (https://x.com/MarioNawfal/status/2046938319620329967)
+[SPRINT: Identify First Polarized Topic & Gather Data] @Real_JFK_Jr_: Senior Army nuclear scientist placed on leave, facing criminal prosecution after being exposed by James O'Keefe. (https://x.com/Real_JFK_Jr_/status/2047109769668800655)
+[SPRINT: Identify First Polarized Topic & Gather Data] @TuckerCarlson: Leaked footage of "The Bibi Files" on Netanyahu, produced in secret by Emmy-winning filmmaker. (https://x.com/TuckerCarlson/status/2039844034173104341)
+[SPRINT: Identify First Polarized Topic & Gather Data] @GavinNewsom: Trump is selling off America's parks to polluters, while California is building new ones. (https://x.com/GavinNewsom/status/2047073895128383488)
+[SPRINT: Identify First Polarized Topic & Gather Data] @nicksortor: Sen. Chris Murphy melting down over Trump admin sending Afghan "refugees" to Congo; Democrats brought Afghans with no vetting. (https://x.com/nicksortor/status/2047024930282184761)
+[SPRINT: Identify First Polarized Topic & Gather Data] @BernieSanders: Super PACs, AI, and crypto are buying elections with billionaire money, undermining democracy. (https://x.com/BernieSanders/status/2047038511706951940)
+[SPRINT: Identify First Polarized Topic & Gather Data] @Acyn: Jessica and Gutfeld debate FBI assessment of greatest threat; Gutfeld calls it "BS!". (https://x.com/Acyn/status/2047084327570477518)
+[SPRINT: Identify First Polarized Topic & Gather Data] @FoxNews: Obama facing blowback for celebrating Virginia's redistricting win, called a "hypocrite" for past comments on gerrymandering. (https://x.com/FoxNews/status/2046992316804567253)
+[SPRINT: Identify First Polarized Topic & Gather Data] @atrupar: Leavitt claims Trump is the only one who could save "eight beautiful Iranian women," questioned as AI-generated. (https://x.com/atrupar/status/2047031860228669883)
+[SPRINT: Identify First Polarized Topic & Gather Data] @EricLDaugh: Sen. John Kennedy files major proposals on Senate floor for reconciliation votes: citizenship to vote, voter ID, election day only. (https://x.com/EricLDaugh/status/2047127321434337494)
+[SPRINT: Identify First Polarized Topic & Gather Data] @hippyygoat: Highly charged rhetoric about historical events and land claims, suggesting "biggest mistake" in giving shelter to holocaust survivors. (https://x.com/hippyygoat/status/2046993949722599894)
+[SPRINT: Identify First Polarized Topic & Gather Data] @atrupar: Hannity questions Kash Patel about using FBI to discredit a story about his girlfriend; Patel denies. (https://x.com/atrupar/status/2047127649672163641)
+[SPRINT: Identify First Polarized Topic & Gather Data] @SenSanders: Robert F. Kennedy Jr.'s misstatement about prescription drug costs being lowest in the world. (https://x.com/SenSanders/status/2046995325278158856)
+[SPRINT: Identify First Polarized Topic & Gather Data] @Acyn: MacFarlane questions the "good look" of political actions amidst soaring gas prices and "first world problems." (https://x.com/Acyn/status/2047105216894619900)
+[SPRINT: Identify First Polarized Topic & Gather Data] @MarioNawfal: Rep. Dingell tried to corner RFK Jr. on vaccines; RFK Jr. states government lied during COVID, breaking trust. (https://x.com/MarioNawfal/status/2047052823897231710)
+[SPRINT: Identify First Polarized Topic & Gather Data] @WallStreetApes: Florida Democrat Judge Tiffany Baker-Carper released a man who later murdered a 5-year-old. (https://x.com/WallStreetApes/status/2047011111900463218)
+[SPRINT: Identify First Polarized Topic & Gather Data] @ThatTylerPopp: Police officer wearing a Star of David patch on uniform, sparking criticism due to country under investigation for genocide. (https://x.com/ThatTylerPopp/status/2046569231685234936)
+[SPRINT: Identify First Polarized Topic & Gather Data] @realMaalouf: Japanese Prime Minister to deport "culturally incompatible foreigners," referencing Muslim migrants taking over a children's park to pray and demand Sharia law. (https://x.com/realMaalouf/status/2046985936135733602)
+[SPRINT: Identify First Polarized Topic & Gather Data] @RT_com: Israel troops mocking Christian rites in church. (https://x.com/RT_com/status/2047147846051516664)
+[SPRINT: Identify First Polarized Topic & Gather Data] @RapidResponse47: SPLC accused of funding the Klan and Neo-Nazis, defrauding donors. (https://x.com/RapidResponse47/status/2047129605996192012)
+[SPRINT: Identify First Polarized Topic & Gather Data] @AJEnglish: Al Jazeera journalist receives threats from Israeli WhatsApp number to stop reporting or leave Lebanon. (https://x.com/AJEnglish/status/2047090177353355458)
+[SPRINT: Identify First Polarized Topic & Gather Data] @Parodyjeffx: Ben Gvir had to pull a gun on his own people, raising questions about Israel's stability. (https://x.com/Parodyjeffx/status/2047116495126237571)
+[SPRINT: Identify First Polarized Topic & Gather Data] @ShaykhSulaiman: FMR CIA Larry Johnson claims Trump wanted nuclear codes after classified meeting about Iran invasion. (https://x.com/ShaykhSulaiman/status/2047134946012147880)
