@@ -46,6 +46,33 @@ function parseSummary(raw: string): string {
   return result || raw;
 }
 
+// ── Topic tag derivation ────────────────────────────────────────────────────
+function deriveTag(claim: VerifiedClaim): string {
+  const haystack = [
+    claim.claim_text,
+    claim.original_source ?? "",
+    claim.category ?? "",
+  ].join(" ").toLowerCase();
+  if (/\biran\b|hormuz|iranian\b|irgc|tehran|khamenei|pezeshkian/.test(haystack)) return "iran";
+  if (/\bukraine\b|\brussia\b|russian\b|zelensky|kyiv|moscow|putin/.test(haystack)) return "ukraine";
+  if (/\bisrael\b|\bidf\b|\bgaza\b|palestine|hamas|jenin|hezbollah|netanyahu|west bank/.test(haystack)) return "israel";
+  if (/\bchina\b|chinese\b|taiwan|beijing|\bxi\b|ccp|uyghur/.test(haystack)) return "china";
+  if (/\btrump\b|biden|\bice\b|congress|federal reserve|\bdoj\b|\bdoge\b|republican|democrat|white house|tariff|\bmaga\b/.test(haystack)) return "us-politics";
+  if (/\boil\b|crude\b|energy\b|opec|sanctions\b|gas price|inflation/.test(haystack)) return "economy";
+  return "other";
+}
+
+const TAG_ORDER: string[] = ["iran", "ukraine", "israel", "us-politics", "china", "economy", "other"];
+const TAG_LABELS: Record<string, string> = {
+  iran: "Iran War",
+  ukraine: "Ukraine / Russia",
+  israel: "Israel / Gaza",
+  china: "China",
+  "us-politics": "US Politics",
+  economy: "Economy",
+  other: "Other",
+};
+
 export const dynamic = "force-dynamic";
 
 type FilterStatus = "all" | "supported" | "refuted" | "contested" | "unverified" | "expired";
@@ -233,44 +260,39 @@ function ConfidenceBar({ score, breakdown }: { score: number; breakdown: Scoring
           style={{ width: `${pct}%`, background: barColor }}
         />
       </div>
-      <div className="verify-breakdown">
-        {(Object.keys(breakdown) as (keyof ScoringBreakdown)[]).map((key) => {
-          const val = breakdown[key];
-          const w = Math.round(Math.abs(val) * 100);
-          return (
-            <div key={key} className="verify-breakdown-row">
-              <span className="verify-breakdown-label">{SCORE_LABELS[key]}</span>
-              <div className="verify-breakdown-track">
-                <div
-                  className="verify-breakdown-fill"
-                  style={{ width: `${w}%`, background: SCORE_COLORS[key] }}
-                />
+      <details className="verify-breakdown-details">
+        <summary className="verify-breakdown-summary">Score breakdown</summary>
+        <div className="verify-breakdown">
+          {(Object.keys(breakdown) as (keyof ScoringBreakdown)[]).map((key) => {
+            const val = breakdown[key];
+            const w = Math.round(Math.abs(val) * 100);
+            return (
+              <div key={key} className="verify-breakdown-row">
+                <span className="verify-breakdown-label">{SCORE_LABELS[key]}</span>
+                <div className="verify-breakdown-track">
+                  <div
+                    className="verify-breakdown-fill"
+                    style={{ width: `${w}%`, background: SCORE_COLORS[key] }}
+                  />
+                </div>
+                <span className="verify-breakdown-val">{w}%</span>
               </div>
-              <span className="verify-breakdown-val">{w}%</span>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+      </details>
     </div>
   );
 }
 
 function ClaimCard({ claim }: { claim: VerifiedClaim }) {
-  const statusColor = STATUS_COLORS[claim.status] ?? "#94a3b8";
-  const statusLabel = STATUS_LABELS[claim.status] ?? claim.status;
   const tier = claim.source_tier;
   const tierColor = TIER_COLORS[tier ?? 5] ?? "#94a3b8";
   const tierLabel = TIER_LABELS[tier ?? 5] ?? "Unknown";
 
   return (
-    <div id={claim.claim_id} className="verify-claim">
+    <div id={claim.claim_id} className={`verify-claim verify-claim--${claim.status}`}>
       <div className="verify-claim-header">
-        <span
-          className="verify-claim-status"
-          style={{ background: statusColor, color: "#000" }}
-        >
-          {statusLabel}
-        </span>
         {claim.source_handle && (
           <a
             href={`https://x.com/${claim.source_handle}`}
@@ -406,7 +428,7 @@ function ClaimCard({ claim }: { claim: VerifiedClaim }) {
 export default async function VerifiedPage({
   searchParams,
 }: {
-  searchParams?: Promise<{ filter?: string }> | { filter?: string };
+  searchParams?: Promise<{ filter?: string; tag?: string }> | { filter?: string; tag?: string };
 }) {
   const data = await readVerification();
   if (!data) return notFound();
@@ -414,14 +436,26 @@ export default async function VerifiedPage({
   const params = searchParams ? await searchParams : undefined;
   const { stats, claims } = data;
   const activeFilter = (params?.filter ?? "all") as FilterStatus;
+  const activeTag = params?.tag ?? "all";
+
+  function buildUrl(tag: string, filter: FilterStatus): string {
+    const p = new URLSearchParams();
+    if (filter !== "all") p.set("filter", filter);
+    if (tag !== "all") p.set("tag", tag);
+    const qs = p.toString();
+    return `/veritas-lens${qs ? "?" + qs : ""}`;
+  }
+
   const filteredClaims = (activeFilter === "all"
     ? [...claims]
     : claims.filter((c) => c.status === activeFilter)
-  ).sort((a, b) => {
-    const aDate = a.verified_at ?? a.created_at;
-    const bDate = b.verified_at ?? b.created_at;
-    return new Date(bDate).getTime() - new Date(aDate).getTime();
-  });
+  )
+    .filter((c) => activeTag === "all" || deriveTag(c) === activeTag)
+    .sort((a, b) => {
+      const aDate = a.verified_at ?? a.created_at;
+      const bDate = b.verified_at ?? b.created_at;
+      return new Date(bDate).getTime() - new Date(aDate).getTime();
+    });
 
   const avgConfidence = claims.length
     ? Math.round((claims.reduce((s, c) => s + c.confidence_score, 0) / claims.length) * 100)
@@ -435,6 +469,20 @@ export default async function VerifiedPage({
     unverified: stats.unverified,
     expired: stats.expired,
   };
+
+  const tagCounts = TAG_ORDER.reduce((acc, tag) => {
+    acc[tag] = claims.filter((c) => deriveTag(c) === tag).length;
+    return acc;
+  }, {} as Record<string, number>);
+
+  const showGrouped = activeFilter === "all" && activeTag === "all";
+  const groupedClaims: Record<string, VerifiedClaim[]> = showGrouped
+    ? TAG_ORDER.reduce((acc, tag) => {
+        const items = filteredClaims.filter((c) => deriveTag(c) === tag);
+        if (items.length > 0) acc[tag] = items;
+        return acc;
+      }, {} as Record<string, VerifiedClaim[]>)
+    : {};
 
   return (
     <div className="verify-page">
@@ -454,6 +502,7 @@ export default async function VerifiedPage({
         <StatCard label="Refuted" value={stats.refuted} color="#f87171" />
         <StatCard label="Contested" value={stats.contested} color="#fbbf24" />
         <StatCard label="Unverified" value={stats.unverified} color="#94a3b8" />
+        {stats.expired > 0 && <StatCard label="Expired" value={stats.expired} color="#64748b" />}
       </div>
 
       <div className="verify-filters">
@@ -461,7 +510,7 @@ export default async function VerifiedPage({
           filterCounts[f] > 0 || f === "all" ? (
             <a
               key={f}
-              href={f === "all" ? "/veritas-lens" : `/veritas-lens?filter=${f}`}
+              href={buildUrl(activeTag, f)}
               className={`verify-filter-tab${activeFilter === f ? " verify-filter-tab--active" : ""}`}
             >
               {FILTER_LABELS[f]}
@@ -471,14 +520,53 @@ export default async function VerifiedPage({
         ))}
       </div>
 
-      <div className="verify-claims">
-        {filteredClaims.length === 0 && (
-          <p className="verify-empty">No {activeFilter === "all" ? "" : activeFilter + " "}claims yet. Check back soon.</p>
-        )}
-        {filteredClaims.map((claim) => (
-          <ClaimCard key={claim.claim_id} claim={claim} />
+      <div className="verify-tag-filters">
+        <a
+          href={buildUrl("all", activeFilter)}
+          className={`verify-tag-tab${activeTag === "all" ? " verify-tag-tab--active" : ""}`}
+        >
+          All topics
+        </a>
+        {TAG_ORDER.filter((tag) => tagCounts[tag] > 0).map((tag) => (
+          <a
+            key={tag}
+            href={buildUrl(tag, activeFilter)}
+            className={`verify-tag-tab${activeTag === tag ? " verify-tag-tab--active" : ""}`}
+          >
+            {TAG_LABELS[tag]}
+            <span className="verify-filter-count">{tagCounts[tag]}</span>
+          </a>
         ))}
       </div>
+
+      {showGrouped ? (
+        <div className="verify-grouped">
+          {TAG_ORDER.filter((tag) => groupedClaims[tag]).map((tag) => (
+            <div key={tag} className="verify-topic-group">
+              <div className="verify-topic-header">
+                <h3 className="verify-topic-label">{TAG_LABELS[tag]}</h3>
+                <a href={buildUrl(tag, "all")} className="verify-topic-see-all">
+                  {groupedClaims[tag].length} {groupedClaims[tag].length === 1 ? "claim" : "claims"}
+                </a>
+              </div>
+              <div className="verify-claims">
+                {groupedClaims[tag].map((claim) => (
+                  <ClaimCard key={claim.claim_id} claim={claim} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="verify-claims">
+          {filteredClaims.length === 0 && (
+            <p className="verify-empty">No claims found for this filter.</p>
+          )}
+          {filteredClaims.map((claim) => (
+            <ClaimCard key={claim.claim_id} claim={claim} />
+          ))}
+        </div>
+      )}
 
       <div className="verify-methodology">
         <h3>Methodology</h3>
