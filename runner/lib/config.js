@@ -60,6 +60,8 @@ module.exports = {
   LOCKDIR: path.join(RUNNER_DIR, 'run.lock'),
   PIDFILE: path.join(RUNNER_DIR, 'run.pid'),
   PAUSE_FILE: path.join(RUNNER_DIR, 'PAUSE'),
+  CLAIM_TRACKER_PATH: path.join(STATE_DIR, 'claim_tracker.json'),
+  CLAIM_TRACKER_DELTA_PATH: path.join(STATE_DIR, 'claim_tracker_delta.json'),
   VERIFICATION_EXPORT_PATH: path.join(STATE_DIR, 'verification_export.json'),
   VERIFICATION_DRAFT_PATH: path.join(STATE_DIR, 'verification_draft.txt'),
   PREDICTION_DRAFT_PATH: path.join(STATE_DIR, 'prediction_draft.txt'),

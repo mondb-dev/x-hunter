@@ -101,6 +101,14 @@ function reports() {
       shell: true, stdio: 'ignore', timeout: 60000,
     });
   } catch {}
+  // Verification pipeline: score + web-search unverified claims from tracker
+  try {
+    const verifyScript = path.join(config.RUNNER_DIR, 'intelligence', 'verify_claims.js');
+    const verifyLog = path.join(config.RUNNER_DIR, 'verify_claims.log');
+    execSync(`node "${verifyScript}" >> "${verifyLog}" 2>&1`, {
+      shell: true, stdio: 'ignore', timeout: 600000,
+    });
+  } catch {}
 
   // Daily belief report
   runScript('generate_daily_report.js');
