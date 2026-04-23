@@ -1114,6 +1114,34 @@ a.verify-claim-source-link:hover { text-decoration-color: var(--accent, #60a5fa)
 .verify-claim--unverified { border-left: 3px solid #334155; }
 .verify-claim--expired   { border-left: 3px solid #475569; opacity: 0.65; }
 
+/* ── Search ─────────────────────────────────────────────────────────────────── */
+.verify-search-row { margin-bottom: 0.75rem; }
+.verify-search-wrap {
+  position: relative; display: flex; align-items: center;
+}
+.verify-search-icon {
+  position: absolute; left: 0.7rem; color: #64748b; pointer-events: none; flex-shrink: 0;
+}
+.verify-search-input {
+  width: 100%; padding: 0.5rem 2.2rem 0.5rem 2rem;
+  background: var(--card-bg, #1e293b); border: 1px solid var(--border, #334155);
+  border-radius: 8px; color: var(--fg, #e2e8f0); font-size: 13px;
+  outline: none; transition: border-color 0.15s;
+  -webkit-appearance: none;
+}
+.verify-search-input::placeholder { color: #475569; }
+.verify-search-input:focus { border-color: rgba(255,255,255,0.3); }
+.verify-search-input::-webkit-search-cancel-button { display: none; }
+.verify-search-clear {
+  position: absolute; right: 0.5rem; background: none; border: none;
+  color: #64748b; cursor: pointer; font-size: 16px; line-height: 1;
+  padding: 0.2rem 0.3rem; border-radius: 4px;
+}
+.verify-search-clear:hover { color: #e2e8f0; }
+.verify-search-meta {
+  font-size: 12px; color: var(--muted); margin: 0 0 1rem;
+}
+
 /* ── Tag filter row ─────────────────────────────────────────────────────────── */
 .verify-tag-filters {
   display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem;
@@ -1122,8 +1150,10 @@ a.verify-claim-source-link:hover { text-decoration-color: var(--accent, #60a5fa)
   display: inline-flex; align-items: center; gap: 0.3rem;
   padding: 0.2rem 0.65rem; border-radius: 9999px; font-size: 0.75rem;
   border: 1px solid rgba(255,255,255,0.08); color: #64748b;
-  text-decoration: none; transition: border-color 0.15s, color 0.15s;
+  text-decoration: none; cursor: pointer;
   background: rgba(255,255,255,0.02);
+  transition: border-color 0.15s, color 0.15s;
+  font-family: inherit;
 }
 .verify-tag-tab:hover { border-color: rgba(255,255,255,0.2); color: #94a3b8; }
 .verify-tag-tab--active { border-color: #60a5fa; color: #60a5fa; background: rgba(96,165,250,0.06); }
