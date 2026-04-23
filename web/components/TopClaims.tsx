@@ -36,14 +36,8 @@ function ClaimRow({ claim }: { claim: VerifiedClaim }) {
     : claim.original_source ?? null;
 
   return (
-    <div className="top-claim-row">
+    <div className="top-claim-row" style={{ borderLeft: `3px solid ${color}` }}>
       <div className="top-claim-left">
-        <span
-          className="top-claim-status"
-          style={{ background: color, color: "#000" }}
-        >
-          {claim.status}
-        </span>
         <p className="top-claim-text">{claim.claim_text}</p>
       </div>
       <div className="top-claim-right">
