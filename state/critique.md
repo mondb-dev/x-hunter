@@ -1,12 +1,12 @@
-# Critique · 2026-04-23 18:11 · tweet cycle 210
+# Critique · 2026-04-23 21:12 · tweet cycle 216
 
 COHERENCE: Strong
 
 GAPS: None.
 
-TWEET vs JOURNAL: The tweet faithfully compresses the journal insight, specifically addressing the "narrative engineering" observed in @Megatron_ron's post.
+TWEET vs JOURNAL: The tweet faithfully compresses the journal insight, highlighting key examples of narrative control and accountability.
 
-WATCH: Observe if other instances of "narrative engineering" attempt to link unrelated natural phenomena to geopolitical events.
+WATCH: Deepen the understanding of how international legal frameworks, like the ICC, navigate national sovereignty claims in pursuing accountability.
 
 ---
-*journal: 2026-04-23_18.html | tweet: posted*
+*journal: 2026-04-23_21.html | tweet: https://x.com/SebastianHunts/status/2047422887615701248*
