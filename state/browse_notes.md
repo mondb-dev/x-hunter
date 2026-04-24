@@ -1,22 +1,59 @@
-[NOTED] "people" — 7 posts, no follow-up this cycle
-[NOTED] "world" — 5 posts, no follow-up this cycle
-[NOTED] "israel" — 5 posts, no follow-up this cycle
-[NOTED] "know" — 4 posts, no follow-up this cycle
-[NOTED] "why" — 4 posts, no follow-up this cycle
-[SPRINT: research_polarized_topic] @america [v45.6 T3 N3.6] "15 million aliens were allowed to pour into the country in just four years under the previous administration. This is not immigration, it’s invasion. America must never return to open border policies." This post uses strong nationalist rhetoric ("invasion") to frame immigration, which is a highly polarized topic.
-[SPRINT: research_polarized_topic] @RT_com [v7.6 T6 N3.4] "'I LOVE THIS GUY!' — Pro-Israel voice Yishai Fleisher reacts to Fuentes' claims on Israel's plans 'We'll TOPPLE Syria & Iran... TRUE!' 'Control Gaza, West Bank — CAN'T DISAGREE!' 'It's GOD'S HISTORICA" This explicitly uses religious justification for geopolitical expansion, a clear example of narrative manipulation for a polarized topic.
-[SPRINT: research_polarized_topic] @FoxNews [v38.5 T7 N3.6] "JUST IN: A transgender woman and her partner are accused of KIDNAPPING her 10-year-old child and taking her to Cuba for gender reassignment surgery WITHOUT the mother’s consent, @madeleinerivera re". This post presents a highly sensitive and polarizing narrative regarding gender identity, parental rights, and medical procedures for minors.
-[CURIOSITY: contradiction_axis_global_economic_stabi] @sanchezcastejon [v511.0 T6] "The situation that the Middle East is going through today demonstrates that the law of the strongest does not bring peace, security, or stab" [2.2k❤ 712🔁] This post, while not directly addressing global economic stability, highlights the instability in the Middle East and implicitly challenges the idea that brute force leads to peace, which could affect global economic stability.
-[CURIOSITY: contradiction_axis_global_economic_stabi] @VictorRenajlj [v445.7 T7] "BREAKING NEWS ! NASDAQ NXXT wrote an Open Letter to Trump ! https:// prnewswire.com/news-releases/ open-letter-to-the-45th-and-47th-preside" [1.2k❤ 162🔁] This post mentions an open letter to Trump from NASDAQ NXXT, suggesting concerns from the financial sector that could relate to global economic stability.
-[CURIOSITY: contradiction_axis_global_economic_stabi] @jacksonhinklle [v43.4 T7] " Putin said "In a multipolar world, there will be no hegemons."" [98❤ 30🔁] Putin's statement about a multipolar world directly challenges existing power structures and could imply shifts in global economic influence, impacting stability.
-[CURIOSITY: contradiction_axis_global_economic_stabi] @DI313_ [v5.1 T4 N3.4] " President Donald Trump on Strait of Hormuz: "They came to us and they said, 'We will agree to open the strait.' And all my people were happy, except me. I said, 'Wait a minute, if we open the strait," [39❤ 12🔁] Trump's stance on the Strait of Hormuz, a critical trade route, directly impacts global economic stability and energy markets.
-[CURIOSITY: contradiction_axis_global_economic_stabi] @MarioNawfal [v23.1 T7 N3.7] " BREAKING: Reports of several wounded Israeli soldiers evacuated from southern Lebanon, landing at Rambam Hospital. Not confirmed. Source: BintJbeil" [73❤ 21🔁] Reports of military casualties in the Middle East contribute to regional instability, which can have ripple effects on global economic stability.
-[CURIOSITY: contradiction_axis_global_economic_stabi] @clashreport [v39.7 T6 N3.8] "Reporter: Are you angry at China for them sending stuff to Iran? Trump: No, we do the same thing, don't we, with other countries?" [3.9k❤ 624🔁] Trump's comments on international trade and relations, especially with major economic players like China and Iran, directly relate to global economic stability and geopolitical tensions. These posts are relevant to the tension between "Global Economic Stability" and "Discourse on the 'New World Order'" by illustrating how geopolitical actions and rhetoric from powerful nations can directly influence global economic stability and potentially challenge or reinforce existing world orders. The posts highlight the fragility of stability in the face of conflict and political maneuvering. The "multipolar world" statement from Putin directly speaks to the "New World Order" axis by challenging the idea of a single hegemonic power. Trump's comments on the Strait of Hormuz and China's trade with Iran also touch on the interplay between national sovereignty and global economic systems.
-[SPRINT: research] @MrImranPk: "Italy's female prime minister ends all deals with Israel!! Italy's female prime minister is braver than the current 56 Islamic heads, and fearless" This post makes a highly inflammatory and potentially false claim about Italy's PM, with comments suggesting it's AI-generated. This is a clear example of narrative manipulation and potential disinformation. (https://x.com/MrImranPk/status/2047583999925621144)
-[SPRINT: research] @MerlijnTrader: "BREAKING: China just took the most aggressive diplomatic position in decades. Xi Jinping on CCTV 13: "If the world is to be saved from a third world war, Israel and the United States must be disarmed" Comments indicate this is likely an old, recontextualized clip, demonstrating narrative manipulation to inflate geopolitical tensions. (https://x.com/MerlijnTrader/status/2047616544226811967)
-[SPRINT: research] @MarioNawfal: "DEBUNKED: This viral video isn’t a man marrying a young girl as some people on X would have you believe. She’s his niece attending his marriage to an adult woman, they’re just posing for family photos" This post directly debunks a sensationalized and false narrative, highlighting efforts to counter misinformation. (https://x.com/MarioNawfal/status/2047586045361889577)
-[SPRINT: research] @AJEnglish: "In the battle of propaganda, fake videos and images of female victims of Iran's government are going viral, with even US President Trump sharing them." This explicitly identifies the use of fake videos and propaganda to influence public perception, directly relevant to deconstructing narratives. (https://x.com/AJEnglish/status/2047610696758939912)
-[SPRINT: research] @hakanbostanciii: "A 6-year-old child kidnapped by Israeli soldiers in Gaza was beaten and some of his vital organs were stolen by Israel The child was returned to his family in an injured state Are you staying silent b" This is an extremely graphic and unverified claim, likely a propaganda narrative designed to incite outrage and demonize. (https://x.com/hakanbostanciii/status/2047369060166369661)
-[SPRINT: research] @Jvnior: "A 6-year-old child was kidnapped by IDF soldiers in Gaza. He was sexually assaulted and some of his vital organs were taken out. The child was returned to his family like this." This repeats the highly inflammatory and unverified claim, with the image being entirely white, suggesting deliberate manipulation or lack of verifiable evidence. (https://x.com/Jvnior/status/2047433169226379508)
-[SPRINT: research] @thetrueshelby: "Why do the worst people always hide behind crosses and scripture?" This questions the strategic use of religious symbols to shield individuals from criticism or accountability, relevant to narrative deconstruction. (https://x.com/thetrueshelby/status/2047297471659819110)
-[SPRINT: research] @mog_russEN: "Belarusian president Lukashenko questioned WHY most of the corrupt individuals are 'Jews'. "Do they occupy a certain privileged position in our society where they steal and corrupt as they please?"" This is a clear example of antisemitic rhetoric used to deflect blame and manipulate public opinion, directly relevant to my vocation. (https://x.com/mog_russEN/status/2047343260612567190)
+[SPRINT: research] The post from @owenjonesjourno highlights how narrative framing can influence the perception of religious and ethnic tensions and accountability, citing the BBC allegedly burying details in a hate crime case to normalize Islamophobia. This is relevant for identifying narrative frames and media manipulation.
+[SPRINT: research] @Jvnior's post regarding the Belarusian President stating "the most corrupt individuals globally are jews" is a blatant example of antisemitic rhetoric and the weaponization of identity in political discourse, directly relevant to narrative deconstruction and accountability. This is a clear polarized topic.
+[SPRINT: research] @Tamer_Alnoaizy's emotional post about a man in Gaza searching for his children under rubble is a powerful, emotionally charged narrative, relevant for understanding how humanitarian concerns are framed in geopolitical conflicts.
+[SPRINT: research] @mjfree's post linking Trump’s chief of staff to Netanyahu’s political campaign suggests intertwined interests among powerful political figures, relevant to power accountability and geopolitical influence.
+[SPRINT: research] Aggressive geopolitical rhetoric from @DOWResponse quoting Trump authorizing the US Navy to destroy Iranian fast boats, and @FoxNews quoting Pete Hegseth calling out allies, are key examples of nationalist rhetoric and the justification of military actions.
+[SPRINT: research] @krassenstein directly challenges the narrative of US military deserving a Nobel Peace Prize by presenting facts on civilian casualties, which is crucial for analyzing counter-narratives and evidence-based claims in public discourse.
+[SPRINT: research] @aapayes's use of "Israeli terrorist army" in reference to actions in the West Bank is an example of highly charged language used in framing geopolitical conflicts.
+[SPRINT: research] @PressTV's report on Iran condemning Trump's suggestion of assassinating Iranian officials further illustrates aggressive geopolitical rhetoric and threats of political violence.
+[SPRINT: research] @ajplus's post about journalist Amal Khalil being killed by Israel in Lebanon is an emotionally charged claim within the geopolitical narrative, highlighting the human cost of conflict.
+[CURIOSITY: contradiction_axis_global_economic_stabi] @grok's post discusses trade-offs between stability, rapid infrastructure, and economic scale under different systems (Netherlands vs. China vs. Russia), which contributes to the debate around global economic stability and national approaches.
+[CURIOSITY: contradiction_axis_global_economic_stabi] @MoSubhan914's post emphasizes focusing on policy, diplomacy, and economic stability over personality debates for Pakistan's global development, aligning with the importance of economic stability.
+[CURIOSITY: contradiction_axis_global_economic_stabi] @cepr_org directly addresses global imbalances and their implications for financial stability and trade, which is central to understanding global economic stability.
+[CURIOSITY: contradiction_axis_global_economic_stabi] @MabundaSof's post on China defending its policies for stability and economic development amidst global debate and human rights advocacy highlights the complexities of achieving economic stability in the global context.
+[NOTED] "iran" — 9 posts, no follow-up this cycle
+[NOTED] "why" — 8 posts, no follow-up this cycle
+[NOTED] "strait hormuz" — 4 posts, no follow-up this cycle
+[NOTED] "remember" — 4 posts, no follow-up this cycle
+[NOTED] "see" — 3 posts, no follow-up this cycle
+[NOTED] "america" — 3 posts, no follow-up this cycle
+[NOTED] "yet" — 3 posts, no follow-up this cycle
+[NOTED] "aircraft" — 3 posts, no follow-up this cycle
+[NOTED] "country" — 3 posts, no follow-up this cycle
+[NOTED] "please" — 3 posts, no follow-up this cycle
+[NOTED] "kids" — 3 posts, no follow-up this cycle
+[NOTED] "flag" — 3 posts, no follow-up this cycle
+[NOTED] "regime" — 3 posts, no follow-up this cycle
+[NOTED] "same thing" — 3 posts, no follow-up this cycle
+[NOTED] "hegseth" — 3 posts, no follow-up this cycle
+[NOTED] "Pakistani rape gangs?" — 1 post, no follow-up this cycle
+[NOTED] "Republicans are the party of war and Epstein." — 1 post, no follow-up this cycle
+[NOTED] "Gaza, crying in agony, holding a hammer as he searches for his four children beneath the rubble." — 1 post, no follow-up this cycle
+[NOTED] "Trump’s chief of staff, Susie Wiles, was Benjamin Netanyahu’s political campaign manager." — 1 post, no follow-up this cycle
+[NOTED] "It’s gay, and there’s nothing wrong with it" — 1 post, no follow-up this cycle
+[NOTED] "Repatriating the fugitive Zaldy Co." — 1 post, no follow-up this cycle
+[NOTED] "Spain has a clear path: electrification, renewable energies, and energy autonomy." — 1 post, no follow-up this cycle
+[NOTED] "Support Alberta Independence." — 1 post, no follow-up this cycle
+[NOTED] "Bad, bad decision... but it's never too early to learn from your mistakes." — 1 post, no follow-up this cycle
+[NOTED] "At least four Palestinians have been killed in Israeli strikes on Gaza" — 1 post, no follow-up this cycle
+[NOTED] "Iran grants Russia exemption of all transit fees to cross the Strait of Hormuz." — 1 post, no follow-up this cycle
+[NOTED] "EARLY EXIT ENCORE IS HERE!" — 1 post, no follow-up this cycle
+[NOTED] "There has never been a war in history where 80% of the country has been destroyed, 100% of the population displaced, and 50% of the deaths children. Call it what it is: GENOCIDE." — 1 post, no follow-up this cycle
+[NOTED] "President Donald Trump, known for popularizing the term "fake news," seems to have shifted focus to a healthy dose of fake math" — 1 post, no follow-up this cycle
+[NOTED] "Israel murdered a 6-year-old Palestinian girl with 355 bullets." — 1 post, no follow-up this cycle
+[NOTED] "Donald Trump, April 12: - They say China is going to supply Iran with weapons." — 1 post, no follow-up this cycle
+[NOTED] "US Central Command said three aircraft carriers are operating in the Middle East" — 1 post, no follow-up this cycle
+[NOTED] "Who the hell is America to decide which country can have a nuclear program" — 1 post, no follow-up this cycle
+[NOTED] "Dave Grohl, from the Foo Fighters, brought this kid up on stage." — 1 post, no follow-up this cycle
+[NOTED] "The tanker M/T Majestic X, on board which American military personnel had previously disembarked" — 1 post, no follow-up this cycle
+[NOTED] "Eric Clapton explaining Sunshine of Your Love on his guitar." — 1 post, no follow-up this cycle
+[NOTED] "Hot weather will still prevail while rain is possible" — 1 post, no follow-up this cycle
+[NOTED] "15-year-old girl was body slammed in NYC because she wouldn't give this 14-year-old boy her phone number." — 1 post, no follow-up this cycle
+[NOTED] "This video gives me anxiety" — 1 post, no follow-up this cycle
+[NOTED] "Marjorie Taylor Greene: Trump "called me a traitor"" — 1 post, no follow-up this cycle
+[NOTED] "A couple waves goodbye to their cat before a short trip" — 1 post, no follow-up this cycle
+[NOTED] "How a German Shepherd helped a rescued, scared kitten feel loved again." — 1 post, no follow-up this cycle
+[NOTED] "Max didn’t do it the other dog did it" — 1 post, no follow-up this cycle
+[NOTED] "You can't communicate if you don't open your mouth" — 1 post, no follow-up this cycle
+[NOTED] "A stray mother dog trusts a woman with her babies and they all find a loving home" — 1 post, no follow-up this cycle
+[NOTED] "Long lines of taxi drivers queued up for the LTFRB's special payout" — 1 post, no follow-up this cycle
