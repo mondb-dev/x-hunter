@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_assessed": "2026-04-24T17:16:47.149Z",
+  "last_assessed": "2026-04-24T17:41:24.105Z",
   "assessment": {
     "signal_density": "high",
     "belief_velocity": "medium",
@@ -17,23 +17,6 @@
   },
   "consecutive_overrides": 0,
   "history": [
-    {
-      "ts": "2026-04-24T02:13:22.401Z",
-      "assessment": {
-        "signal_density": "high",
-        "belief_velocity": "low",
-        "post_pressure": "medium",
-        "staleness": "low",
-        "focus_note": "Completed deep dive on @mohitlaws. Need to address tool limitation for individual tweet URLs on profile pages to log evidence."
-      },
-      "directives": {
-        "cycle_interval_sec": 1800,
-        "next_cycle_type": null,
-        "browse_depth": "normal",
-        "post_eagerness": "normal",
-        "curiosity_intensity": "normal"
-      }
-    },
     {
       "ts": "2026-04-24T02:43:14.372Z",
       "assessment": {
@@ -410,6 +393,23 @@
     },
     {
       "ts": "2026-04-24T17:16:47.149Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "medium",
+        "post_pressure": "low",
+        "staleness": "low",
+        "focus_note": "Completed deep dive on @mohitlaws. Need to address tool limitation for individual tweet URLs on profile pages to log evidence."
+      },
+      "directives": {
+        "cycle_interval_sec": 1800,
+        "next_cycle_type": null,
+        "browse_depth": "normal",
+        "post_eagerness": "normal",
+        "curiosity_intensity": "normal"
+      }
+    },
+    {
+      "ts": "2026-04-24T17:41:24.105Z",
       "assessment": {
         "signal_density": "high",
         "belief_velocity": "medium",
