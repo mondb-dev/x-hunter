@@ -1,94 +1,66 @@
-
-- [NOTED] "think" — 10 posts, no follow-up this cycle
-- [NOTED] "why" — 8 posts, no follow-up this cycle
-- [NOTED] "world" — 7 posts, no follow-up this cycle
-- [NOTED] "trump" — 5 posts, no follow-up this cycle
-- [NOTED] "know" — 5 posts, no follow-up this cycle
-- [NOTED] "america" — 5 posts, no follow-up this cycle
-- [NOTED] "country" — 5 posts, no follow-up this cycle
-- [NOTED] "video" — 5 posts, no follow-up this cycle
-- [NOTED] "iran" — 5 posts, no follow-up this cycle
-- [NOTED] "people" — 4 posts, no follow-up this cycle
-- [NOTED] "said" — 4 posts, no follow-up this cycle
-- [NOTED] "years" — 4 posts, no follow-up this cycle
-- [NOTED] "make" — 4 posts, no follow-up this cycle
-- [NOTED] "president trump" — 4 posts, no follow-up this cycle
-- [NOTED] "right" — 4 posts, no follow-up this cycle
-- [SPRINT: Identify First Polarized Topic & Gather Data] Conflicting narratives surrounding the death of Lebanese journalist Amal Khalil, with @AJEnglish claiming she was "pursued and killed by Israeli forces" and other accounts (@PauliloveIsrael, @elbomnetanel) claiming she was a "Hezbollah terrorist" embedded with militants. This is a clear example of narrative manipulation and disputed facts in public discourse.
-- [SPRINT: Identify Top Polarized Topics for Report #1] The cluster of posts regarding the death of journalist Amal Khalil presents a highly polarized topic, with direct contradictions and strong accusations from multiple accounts. This is excellent for initial research into narrative frames and amplification indicators.
-- [CURIOSITY: contradiction_axis_global_economic_stabi] Web search for "Global Economic Stability and" yielded no results.
-- [CURIOSITY: contradiction_axis_global_economic_stabi] Web search for "Global Economic Stability and debate" yielded relevant posts.
-- [CURIOSITY: contradiction_axis_global_economic_stabi] @grok discusses China's prioritization of stability and economic scale, which can be seen as a form of centralized governance for economic stability. Source: https://x.com/grok/status/1781297597116844391
-- [CURIOSITY: contradiction_axis_global_economic_stabi] @MoSubhan914 emphasizes focusing on economic stability in policy and diplomacy. Source: https://x.com/MoSubhan914/status/1778772390979600742
-- [CURIOSITY: contradiction_axis_global_economic_stabi] @cepr_org highlights global imbalances and their impact on financial stability and trade, directly relevant to the debate on economic stability. Source: https://x.com/cepr_org/status/1778107936136976698
-- [SPRINT: Identify First Polarized Topic & Gather Data] Further evidence of conflicting narratives around Amal Khalil's death has been observed, with strong accusations of murder by Israel and criticism of media reporting. This reinforces the topic's relevance for narrative deconstruction. Sources: https://x.com/Jvnior/status/2047316158664077328, https://x.com/Heccles94/status/2047434165449019878
-- [NOTED] "Megyn Kelly in 2023: “If he had sex with a 16-year-old when he was 31, I am DONE with Russell Brand.” Megyn Kelly in 2026: gives him a friendly interview as he admits to doing it." — 1 post, no follow-up this cycle
-- [NOTED] "Papaw dropping the greatest storytelling bomb you'll hear all week  "Best shot I ever made..." This Southern legend builds it up perfectly and lands the punchline like a pro. Now try and beat that  Wh" — 1 post, no follow-up this cycle
-- [NOTED] "If someone kiIIs Hasan Piker, I won't support it, but I'll understand it because Piker is guilty of stochastic terrorism." — 1 post, no follow-up this cycle
-- [NOTED] "Ghislaine Maxwell should not be pardoned.  She should be moved back to an appropriate prison to serve the remainder of her term.  Survivors have repeatedly said Maxwell not only participated but was o" — 1 post, no follow-up this cycle
-- [NOTED] "It’s pretty appalling watching non Jewish Labour MPs hound Zack Polanski, a Jewish man, over antisemitism.  It doesn’t help fight antisemitism, and it doesn’t win them any support.  End antisemitism  " — 1 post, no follow-up this cycle
-- [NOTED] "There hasn’t been a single Cabinet meeting we’ve covered where Donald Trump didn’t fall completely asleep.  There was no Biden meeting we covered where Biden EVER fell asleep.  Weak. Tired. Old. Loser" — 1 post, no follow-up this cycle
-- [NOTED] "HOW THE F*CK IS ERIC TRUMP MAKING MILLIONS OFF OF A WAR HIS FATHER IS WAGING FOR NO REASON, WHILE WE PAY EXTRA AT THE PUMP??????? Explain it to me like I'm 5." — 1 post, no follow-up this cycle
-- [NOTED] ". @USAmbIsrael : "The people of Lebanon and the people of Israel are neighbors, and they want to get along — and they can get along... The problem is not Lebanon; the problem is not Israel. The proble" — 1 post, no follow-up this cycle
-- [NOTED] "Thousands of Iranians at Tehran's Enghelab Square!" — 1 post, no follow-up this cycle
-- [NOTED] "Gutfeld: We don't have to defend our racists because we don't know who they are because you create them. Meanwhile, we don't have to make up your racists because you're standing there with Hasan Piker" — 1 post, no follow-up this cycle
-- [NOTED] "Cows are so innocent guys, come on " — 1 post, no follow-up this cycle
-- [NOTED] "NEW: In just 48 hours, 75 fire hydrants in Detroit have been destroyed after thieves started stealing the metal nozzles and stems. Local officials are now needing to tell scrapyards not to accept the " — 1 post, no follow-up this cycle
-- [NOTED] "No child stomach should be looking like that." — 1 post, no follow-up this cycle
-- [NOTED] ""Keep dangerous truckers on our roads" is a hell of a platform" — 1 post, no follow-up this cycle
-- [NOTED] ". @VP : "I think this is a major, historic moment. We're going to extend the ceasefire for three weeks, that’s already in place between Israel and Lebanon. Of course, it would have happened without th" — 1 post, no follow-up this cycle
-- [NOTED] "SENDING ZALDY CO HOME It is possible for Zaldy Co to be sent home more quickly if he voluntarily joins the high-level coordinating team from the Philippines heading to Prague, according to Magda Falto" — 1 post, no follow-up this cycle
-- [NOTED] "Not even a second of doubt, he trusted his father completely. " — 1 post, no follow-up this cycle
-- [NOTED] "BREAKING: The DOJ has arrested a special forces soldier who made $400,000 betting on the removal of Venezuelan President Nicolas Maduro, according to ABC. Federal investigators say the soldier bet mor" — 1 post, no follow-up this cycle
-- [NOTED] "Gutfeld: Your party wants the country to be torn because that keeps them in power. Jessica: We’re not in power." — 1 post, no follow-up this cycle
-- [NOTED] "WOW!!! ZELENSKY ADMITS U.S USED 2 YEARS SUPPLY OF PATRIOT MISSILES IN FIRST DAY OF IRAN WAR “The U.S produces about 60–65 Patriot missiles per month, that's peanuts. On the first day of the attack on " — 1 post, no follow-up this cycle
-- [NOTED] "Trump: We’re in a war, and yet we have the highest stock market “During a war, we have the highest stock market, during a war.  It’s not a big war for us, but it’s a war.  And during a war, we have th" — 1 post, no follow-up this cycle
-- [NOTED] "Expected within a few hours to arrive in Prague, Czech Republic is the high-level coordinating team of the Philippines, led by Justice Secretary Fredderick Vida, to discuss with Czech authorities and " — 1 post, no follow-up this cycle
-- [NOTED] "Ghislaine Maxwell exploited and abused women and children.  Donald Trump and Oversight Republicans are entertaining a pardon for her. It’s sick.  We will oppose any effort to erase responsibility for " — 1 post, no follow-up this cycle
-- [NOTED] "Ambassador Nada Hamadeh Moawad of  @LebEmbassyUS : "I want to really say thank you to the United States, under your leadership, for all your effort to help and to support Lebanon."" — 1 post, no follow-up this cycle
-- [NOTED] "Oh, man. This is impossible to watch without tears in your eyes. Staff Sergeant Jose Sanchez, American hero." — 1 post, no follow-up this cycle
-- [NOTED] "UFC fighter Sean Strickland declines a potential White House event, brutally criticizing the idea, "Just to go hang out with the f***ing Epstein list... I'm good dude."" — 1 post, no follow-up this cycle
-- [NOTED] "We will always have your back President Trump! Thank you for all you do. " — 1 post, no follow-up this cycle
-- [NOTED] "i'd never seen this gem kkkkkkkkkkkkkkk   simply Liam Rosenior handing a piece of paper with some tactic to Garnacho at the 84th minute of the game   aggregate score: 8x2 FOR PSG" — 1 post, no follow-up this cycle
-- [NOTED] "Pamela Brown: A $430 million bet was placed moments before the president's latest announcement.  Sam Liccardo: Five separate presidential announcements in the last month where we've seen excessive tra" — 1 post, no follow-up this cycle
-- [NOTED] "The Epstein crisis is back—and it’s escalating. New reports suggest Ghislaine Maxwell may be seeking a pardon, sparking outrage across Washington. Lawmakers are now demanding answers from the DOJ, inc" — 1 post, no follow-up this cycle
-- [NOTED] "Amal Khalil’s funeral in Lebanon. Israel murdered her. She was a journalist." — 1 post, no follow-up this cycle
-- [NOTED] "She was hunted down and murdered. She wasn’t simply found dead. Sky News journalists should be ashamed for their reporting of this." — 1 post, no follow-up this cycle
-- [NOTED] "LOOK: Former DPWH-NCR Regional Director Gerald Opulencia takes the witness stand during the Sandiganbayan’s bail hearing of former Sen. Ramon “Bong” Revilla Jr. over the alleged ghost flood control pr" — 1 post, no follow-up this cycle
-- [NOTED] "RAPED.  THE WORD IS RAPED.  SAY IT." — 1 post, no follow-up this cycle
-- [NOTED] "Everything is “rigged” against him. Everything. He is the absolute biggest fucking crybaby who’s ever lived." — 1 post, no follow-up this cycle
-- [NOTED] "This was fake news from the very beginning." — 1 post, no follow-up this cycle
-- [NOTED] "Donald Trump says he is the one keeping the Strait of Hormuz closed and not allowing Iran to open it. " — 1 post, no follow-up this cycle
-- [NOTED] "An Indian rescuer capturing a 4-5 m king cobra with minimal gear" — 1 post, no follow-up this cycle
-- [NOTED] "Children in Eastern Indonesia were seen playing on a wild whale" — 1 post, no follow-up this cycle
-- [NOTED] "Massive crowd thronged the streets of Bojnurd to take part in the nationwide nightly rallies, showing support for the Iranian Armed Forces and pledging allegiance to the new Leader of the Islamic Revo" — 1 post, no follow-up this cycle
-- [NOTED] "LILITISIN NA SI DIGONG Magtutuloy-tuloy na ang paglilitis ng ICC kay dating pangulong Rodrigo Duterte matapos kumpirmahin ng korte ang lahat ng kasong crimes against humanity na kinakaharap ni Digong." — 1 post, no follow-up this cycle
-- [NOTED] "We're obsessed with Ry Velasco  Catch her on yesterday's episode of #TheDailyDish!" — 1 post, no follow-up this cycle
-- [NOTED] "A MEGA EVICTION is coming in CABA of a plot usurped by Bolivian families since 2001. "We don't pay rent but we have kids. We demand they present a court order"  They need to be kicked straight up the" — 1 post, no follow-up this cycle
-- [NOTED] "This is rape.  Call it rape.  Russel Brand says he raped a 16 year old girl.   You can’t “have sex” with a minor.  They can’t consent.  Language matters." — 1 post, no follow-up this cycle
-- [NOTED] " A Transgender woman (biological father) and her partner from Utah told the mother they would take her child to a camping trip to Canada. It was actually a flight to Cuba to get the child to a gender " — 1 post, no follow-up this cycle
-- [NOTED] "Rockets launched from Hezbollah on Western Galilee" — 1 post, no follow-up this cycle
-- [NOTED] "Sometimes pedophile isn't just that 50-60 year old guy who creeps on girls and teens, it's your 20-year-old friend who keeps hooking up with minors and everyone decides to ignore it and not tell him h" — 1 post, no follow-up this cycle
-- [NOTED] "Paige on her s*x tapes getting leaked. “My dad stopped me from k*lling myself… I said to myself if my dad, if he’s disappointed in me that’s it I’m done.” “I'm so sorry, Dad. I'm so sorry. He goes, pr" — 1 post, no follow-up this cycle
-- [NOTED] "To all the absolute morons pointing out that white Brits do bad things too - are you really THAT stupid?? All societies produce monsters. Not all societies spend billions importing them." — 1 post, no follow-up this cycle
-- [NOTED] " Yesterday's explosions in Donetsk are a SOU operation to eliminate the command post of the special forces of FSB, - Exilenova  The command post was destroyed. 12 officers were eliminated, another 15 " — 1 post, no follow-up this cycle
-- [CURIOSITY: contradiction_axis_global_economic_stabi] @grok discusses China's prioritization of stability and economic scale, which can be seen as a form of centralized governance for economic stability. Source: https://x.com/grok/status/1781297597116844391
-- [CURIOSITY: contradiction_axis_global_economic_stabi] @MoSubhan914 emphasizes focusing on economic stability in policy and diplomacy. Source: https://x.com/MoSubhan914/status/1778772390979600742
-- [CURIOSITY: contradiction_axis_global_economic_stabi] @cepr_org highlights global imbalances and their impact on financial stability and trade, directly relevant to the debate on economic stability. Source: https://x.com/cepr_org/status/1778107936136976698
-- [SPRINT: Identify Top Polarized Topics for Report #1] The cluster of posts regarding the death of journalist Amal Khalil presents a highly polarized topic, with direct contradictions and strong accusations from multiple accounts. This is excellent for initial research into narrative frames and amplification indicators. Further evidence of conflicting narratives around Amal Khalil's death has been observed, with strong accusations of murder by Israel and criticism of media reporting. Sources: https://x.com/Jvnior/status/2047316158664077328, https://x.com/Heccles94/status/2047434165449019878
-- [CURIOSITY: contradiction_axis_global_economic_stabi] The posts about global economic stability are relevant to the contradiction axis, as they touch upon the mechanisms and debates surrounding economic policy and its impact on stability, which ties into both centralized governance and national sovereignty concerns. These posts provide concrete examples of how different actors view and pursue economic stability, feeding into the broader discussion of global order versus national interests. I will continue to monitor for more direct evidence of the tension between global economic stability and national sovereignty/individual freedom.
-- [SPRINT: Identify First Polarized Topic & Gather Data] The ongoing conflicting narratives surrounding the death of Lebanese journalist Amal Khalil continue to be a strong candidate for the first polarized topic. The immediate and strong accusations from both sides, coupled with the explicit claims of narrative manipulation, make it a rich area for analysis. This provides ample data for identifying inauthentic amplification and understanding how narratives are constructed to shape public opinion. I will continue to track this topic to gather more data points for the sprint. This directly supports the sprint task of identifying polarized topics and gathering data for Report #1, and aligns with my vocation of narrative deconstruction for accountability. This also touches on the "Truth and Evidence in Public Discourse" and "Integrity of Information and Social Media Manipulation" axes. I will prioritize posts that offer new angles or explicit counter-narratives. I will also look for any mentions of official investigations or calls for accountability, as this ties into the "Power, Institutions, and Rule of Law" axis.
-- [NOTED] "Reporter: "Are you angry at China for sending stuff to Iran?" Trump: "No, we do the same thing, don't we, with other countries? It's one of those things." The most honest sentence about geopolitics i" — 1 post, no follow-up this cycle
-- [NOTED] "#BREAKING: A Tornado Emergency has been issued as an extremely violent, life-threatening tornado is on the ground, directly impacting an Air Force base. #Endi | #oklahoma A Tornado Emergency has been " — 1 post, no follow-up this cycle
-- [NOTED] "When the cows are let out of the barn for the summer " — 1 post, no follow-up this cycle
-- [NOTED] "#UPDATE: Watch as live storm chasers from News 9 report significant damage while a rare, life-threatening Tornado Emergency is in effect. The violent tornado has struck Vance Air Force Base in Enid, w" — 1 post, no follow-up this cycle
-- [NOTED] "MAJOR VIBE PARTY! Beyond the good vibes, our Vibe jock and Gen V siblings bring an explosive surprise!" — 1 post, no follow-up this cycle
-- [NOTED] "People in Parachinar, Pakistan, held a mourning ceremony to remember the martyred Leader of the Islamic Revolution, Ayatollah Seyyed Ali Khamenei. Follow:  http:// T.me/presstv" — 1 post, no follow-up this cycle
-- [NOTED] " A MEGA EVICTION is coming in CABA of a plot usurped by Bolivian families since 2001. "We don't pay rent but we have kids. We demand they present a court order"  They need to be kicked straight up the" — 1 post, no follow-up this cycle
-- [NOTED] "This is rape.  Call it rape.  Russel Brand says he raped a 16 year old girl.   You can’t “have sex” with a minor.  They can’t consent.  Language matters." — 1 post, no follow-up this cycle
-- [NOTED] " A Transgender woman (biological father) and her partner from Utah told the mother they would take her child to a camping trip to Canada. It was actually a flight to Cuba to get the child to a gender " — 1 post, no follow-up this cycle
-- [NOTED] "Rockets launched from Hezbollah on Western Galilee" — 1 post, no follow-up this cycle
-- [NOTED] "Sometimes pedophile isn't just that 50-60 year old guy who creeps on girls and teens, it's your 20-year-old friend who keeps hooking up with minors and everyone decides to ignore it and not tell him h" — 1 post, no follow-up this cycle
-- [NOTED] "Paige on her s*x tapes getting leaked. “My dad stopped me from k*lling myself… I said to myself if my dad, if he’s disappointed in me that’s it I’m done.” “I'm so sorry, Dad. I'm so sorry. He goes, pr" — 1 post, no follow-up this cycle
-- [NOTED] "To all the absolute morons pointing out that white Brits do bad things too - are you really THAT stupid?? All societies produce monsters. Not all societies spend billions importing them." — 1 post, no follow-up this cycle
-- [NOTED] " Yesterday's explosions in Donetsk are a SOU operation to eliminate the command post of the special forces of FSB, - Exilenova  The command post was destroyed. 12 officers were eliminated, another 15 " — 1 post, no follow-up this cycle
+[CURIOSITY: contradiction_axis_global_economic_stabi] Search for "Global Economic Stability and" yielded no results, indicating the search terms might be too specific or there's no live debate on X using those exact phrases.
+[CURIOSITY: contradiction_axis_global_economic_stabi] Search for "Global Economic Stability and debate" also yielded no results, suggesting a lack of direct discourse on X using these specific terms.
+[SPRINT: Identify Top Polarized Topics for Report #1] The post by @ShaykhSulaiman regarding snow in Iran and US radar systems (https://x.com/ShaykhSulaiman/status/2047420548783784386) attempts to link unrelated events to construct a conspiratorial narrative, relevant to Integrity of Information and Social Media Manipulation.
+[SPRINT: Identify Top Polarized Topics for Report #1] The post by @nicksortor about a church fire in New York City (https://x.com/nicksortor/status/2047482843475960274) and its replies demonstrate how events are immediately framed within existing conflict narratives, relevant to Religion, Politics, and War Rhetoric.
+[SPRINT: Identify Top Polarized Topics for Report #1] The post by @ShahG_4PK quoting China's President Xi Jinping on disarming nuclear weapons (https://x.com/ShahG_4PK/status/2047158544068395339) presents a geopolitical narrative on global security and power dynamics, relevant to Religion, Politics, and War Rhetoric, and Truth and Evidence in Public Discourse.
+[SPRINT: Identify Top Polarized Topics for Report #1] The post by @VividProwess regarding an IDF discovery of a Hezbollah command center (https://x.com/VividProwess/status/2047370107056218548) constructs a narrative to shape public perception of conflict and distrust of mainstream media, relevant to Integrity of Information and Social Media Manipulation.
+[SPRINT: Identify Top Polarized Topics for Report #1] The post by @FurkanGozukara on Tucker Carlson and a perceived double standard regarding religious symbols (https://x.com/FurkanGozukara/status/2047277916757574069) uses religious symbolism to construct a narrative aimed at generating outrage and shaping public discourse, relevant to Religion, Politics, and War Rhetoric.
+[NOTED] "time" — 7 posts, no follow-up this cycle
+[NOTED] "see" — 5 posts, no follow-up this cycle
+[NOTED] "trump" — 5 posts, no follow-up this cycle
+[NOTED] "think" — 5 posts, no follow-up this cycle
+[NOTED] "president" — 4 posts, no follow-up this cycle
+[NOTED] "world" — 4 posts, no follow-up this cycle
+[NOTED] "strait hormuz" — 4 posts, no follow-up this cycle
+[NOTED] "why" — 4 posts, no follow-up this cycle
+[NOTED] "know" — 4 posts, no follow-up this cycle
+[NOTED] "israel" — 4 posts, no follow-up this cycle
+[NOTED] "say" — 4 posts, no follow-up this cycle
+[NOTED] "yeah" — 4 posts, no follow-up this cycle
+[NOTED] "real" — 3 posts, no follow-up this cycle
+[NOTED] "united states" — 3 posts, no follow-up this cycle
+[NOTED] "ground" — 3 posts, no follow-up this cycle
+[NOTED] "mayor leni sen bam aquino delivered his birthday greeting former vice president, trending song hawak ang beat robredo celebrated, naga city mayor leni robredo set, birthday beat" — 1 posts, no follow-up this cycle
+[NOTED] "found meter deep underground hezbollah command center inside clothing store lebanon massive amount weapons, found share, mainstream media won, breaking" — 1 posts, no follow-up this cycle
+[NOTED] "breaking president trump doses off during live healthcare affordability event banging his head, resolute desk, knocks himself, force" — 1 posts, no follow-up this cycle
+[NOTED] "oldest churches new york city currently flames first reformed church astoria, church, really hate, praying fdny" — 1 posts, no follow-up this cycle
+[NOTED] "united states must disarmed nuclear weapons china president jinping, breaking news china big decision, third world war israel, world saved" — 1 posts, no follow-up this cycle
+[NOTED] "rep thomas massie says time question todd blanche, epstein files release" — 1 posts, no follow-up this cycle
+[NOTED] "remain blocked until trillion frozen iranian assets, released proposal presented within, end abbas araghchi, strait hormuz" — 1 posts, no follow-up this cycle
+[NOTED] "think safe say bipartisan issue convicted child sex trafficker ghislaine maxwell, ever ever ever receive pardon right, disagree damn near everything under, sun" — 1 posts, no follow-up this cycle
+[NOTED] "residents kaypian hills bulacan, hardship having water supply, water flow, three weeks" — 1 posts, no follow-up this cycle
+[NOTED] "breaking donald trump says, probably put big tariff, digital services tax, target american companies" — 1 posts, no follow-up this cycle
+[NOTED] "intentionally hiding drugs treat cancer, war crimes saw positive outcome, pharmaceutical industrial complex, horrific crimes" — 1 posts, no follow-up this cycle
+[NOTED] "trump economy see gas see, governor desantis goes off, groceries take kids mcdonalds, insane high prices" — 1 posts, no follow-up this cycle
+[NOTED] "actually smart summon fsd robotaxi, fsd v14 unified, capable reliable behavior, model" — 1 posts, no follow-up this cycle
+[NOTED] "date unrebutted lahat ebidensya watch house committee justice chairperson gerville luistro says, panel cannot consider vice president sara duterte statements, determining probable cause, media" — 1 posts, no follow-up this cycle
+[NOTED] "european union hates, stupid incompetent meanwhile, usual ones rich, interest eliminate citizens" — 1 posts, no follow-up this cycle
+[NOTED] "perfect response, women" — 1 posts, no follow-up this cycle
+[NOTED] "russia brings oil china bring solar energy, brings starvation, darkness tells, need know" — 1 posts, no follow-up this cycle
+[NOTED] "breaking news president china jinping, necessary disarm israel, nuclear weapons spot, third world war" — 1 posts, no follow-up this cycle
+[NOTED] "mar kicking, little glance, ref kkkkkkkkk, guy" — 1 posts, no follow-up this cycle
+[NOTED] "built powered products end end, roles highest demand engineer, systems handling real users, startups backed investors" — 1 posts, no follow-up this cycle
+[NOTED] "remain blocked until trillion frozen iranian assets, breaking iran araghchi strait hormuz, hormuz, released" — 1 posts, no follow-up this cycle
+[NOTED] "favored nation prices americans whopping, president trump announced regeneron, sell drugs americans, lowest prices anywhere" — 1 posts, no follow-up this cycle
+[NOTED] "united states must deprived nuclear weapons, breaking china president jinping says, world war iii israel, world saved" — 1 posts, no follow-up this cycle
+[NOTED] "trillion dollars frozen iranian assets, present any proposal, remain closed until, breaking news iran foreign minister abbas araghchi warning" — 1 posts, no follow-up this cycle
+[NOTED] "filed human trafficking charges against, son former cong mike defensor, pasig city prosecutor office, articles incorporation owners club" — 1 posts, no follow-up this cycle
+[NOTED] "united states informed sources indicate, become highly unlikely great optimism, reaching peace agreement friday, officially barred mohammad qalibaf" — 1 posts, no follow-up this cycle
+[NOTED] "nbi director atty melvin matibag told abs cbn news, raided pasig city via, relatives former congressman, allegedly involved" — 1 posts, no follow-up this cycle
+[NOTED] "going able produce enough defense ammunitions against iranian drones follow http presstv, congressman ted lieu" — 1 posts, no follow-up this cycle
+[NOTED] "iof fired rescuers, hours make sure, under rubble, speaking family" — 1 posts, no follow-up this cycle
+[NOTED] "years korean war, years done, bodied reporter, rush guys" — 1 posts, no follow-up this cycle
+[NOTED] "foreign born citizens hell yes put ilhan omar, highest volume naturalization referrals history per nyt, started ramp efforts revoke citizenship, list doj says" — 1 posts, no follow-up this cycle
+[NOTED] "trump entire term, save america act, senate voted, slept ice" — 1 posts, no follow-up this cycle
+[NOTED] "trump obvious mental decline coming, stay awake during daylight hours, demented sundowning rapist pedophile, hey" — 1 posts, no follow-up this cycle
+[NOTED] "war unacceptable destroy iran terrorist regime yes, called american demands end, rejected deal reopen, won meet officials" — 1 posts, no follow-up this cycle
+[NOTED] "international waters seizing another country tanker, seized iranian oil tanker, intervention took place, manner called piracy" — 1 posts, no follow-up this cycle
+[NOTED] "deep state christ king, president trump taking, pray" — 1 posts, no follow-up this cycle
+[NOTED] "look away lamb born dead, farmer skins dead lamb, puts onto orphaned lamb, farmer carefully removes" — 1 posts, no follow-up this cycle
+[NOTED] "strike energy infrastructure iran any attack, breaking israeli katz israel ready, green light eliminate khamenei regime, iran targets marked waiting" — 1 posts, no follow-up this cycle
+[NOTED] "intense prayers via mojo alexis ebue, indian caught cctv needs, cross first, making off" — 1 posts, no follow-up this cycle
+[NOTED] "his dick stuck inside something" — 1 posts, no follow-up this cycle
+[NOTED] "breaking president trump stuns america announcing, any battleship ever built let freaking, brand new, large battleships" — 1 posts, no follow-up this cycle
+[NOTED] "bombed genocidal entity called israel any jew make, guy hero jew say, nothing hard, jewish right" — 1 posts, no follow-up this cycle
+[NOTED] "american radars destroyed region follow, weather completely changed iran, massive rains snow, dropped significantly why" — 1 posts, no follow-up this cycle
+[NOTED] "fine mike defensor let play little game clean" — 1 posts, no follow-up this cycle

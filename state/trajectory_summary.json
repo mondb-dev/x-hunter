@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T01:44:07.409Z",
+  "generated_at": "2026-04-24T04:13:30.037Z",
   "windows": [
     "1d",
     "3d",
@@ -30,21 +30,21 @@
     },
     "axis_power_accountability": {
       "current": {
-        "score": -0.2688,
+        "score": -0.2721,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0,
+        "score_delta": -0.0033,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0056,
+        "score_delta": -0.0089,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0835,
+        "score_delta": 0.0802,
         "conf_delta": 0,
         "direction": "↗"
       }
@@ -72,22 +72,22 @@
     },
     "axis_eje_accountability_v1": {
       "current": {
-        "score": -0.8571,
-        "confidence": 0.825
+        "score": -0.8636,
+        "confidence": 0.85
       },
       "1d": {
-        "score_delta": -0.0375,
-        "conf_delta": 0.062,
+        "score_delta": -0.044,
+        "conf_delta": 0.087,
         "direction": "↘"
       },
       "3d": {
-        "score_delta": -0.0375,
-        "conf_delta": 0.058,
+        "score_delta": -0.044,
+        "conf_delta": 0.083,
         "direction": "↘"
       },
       "7d": {
-        "score_delta": -0.0875,
-        "conf_delta": -0.021,
+        "score_delta": -0.094,
+        "conf_delta": 0.004,
         "direction": "↘"
       }
     },
@@ -156,21 +156,21 @@
     },
     "axis_media_integrity_v1": {
       "current": {
-        "score": 0.4753,
+        "score": 0.4783,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0036,
+        "score_delta": 0.0066,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.017,
+        "score_delta": 0.02,
         "conf_delta": 0,
-        "direction": "→"
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0223,
+        "score_delta": 0.0253,
         "conf_delta": 0,
         "direction": "↗"
       }
@@ -744,22 +744,22 @@
     },
     "axis_immigration_policy_v_national_control_v1": {
       "current": {
-        "score": 0.65,
-        "confidence": 0.692
+        "score": 0.7,
+        "confidence": 0.75
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.056,
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
+        "score_delta": 0.05,
+        "conf_delta": 0.052,
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.15,
-        "conf_delta": 0.069,
+        "score_delta": 0.2,
+        "conf_delta": 0.127,
         "direction": "↗"
       }
     },
@@ -790,6 +790,7 @@
     "axis_eje_accountability_v1",
     "axis_historical_legacy_v1",
     "axis_political_moral_conduct_v1",
-    "axis_gender_identity_norms_v1"
+    "axis_gender_identity_norms_v1",
+    "axis_immigration_policy_v_national_control_v1"
   ]
 }
