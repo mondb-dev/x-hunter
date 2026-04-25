@@ -34,6 +34,10 @@ const { buildPersona, buildCoreContext } = require("../runner/lib/sebastian_resp
 let verifyClaim = null;
 try { ({ verifyClaim } = require("../runner/lib/verify_claim")); } catch {}
 
+// Postgres interactions store (optional — non-fatal if unavailable)
+let interactionsDb = null;
+try { interactionsDb = require("../runner/intelligence/interactions_db.pg"); } catch {}
+
 // ── Paths ─────────────────────────────────────────────────────────────────────
 const ROOT         = path.resolve(__dirname, "..");
 const REPLY_QUEUE  = path.join(ROOT, "state", "reply_queue.jsonl");
@@ -406,6 +410,20 @@ function logInteraction(data, item, replyText, memoryHints) {
   data.users[item.from_username] = u;
 
   saveJson(INTERACTIONS, data);
+
+  // Mirror to Postgres (fire-and-forget)
+  if (interactionsDb && process.env.DATABASE_URL) {
+    interactionsDb.insertInteraction({
+      tweet_id:       item.id,
+      type:           'reply',
+      from_username:  item.from_username,
+      from_display:   item.display_name || null,
+      their_text:     item.text,
+      our_reply:      replyText,
+      memory_used:    memoryHints.map(m => `${m.type}:${m.title}`),
+      interaction_at: data.last_reply_at,
+    }).catch(e => console.warn('[reply] interactions_db write failed:', e.message));
+  }
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────

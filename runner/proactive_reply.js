@@ -22,6 +22,10 @@ const { buildPersona, buildCoreContext } = require('./lib/sebastian_respond');
 const { verifyClaim } = require('./lib/verify_claim');
 const config = require('./lib/config');
 
+// Postgres interactions store (optional — non-fatal if unavailable)
+let interactionsDb = null;
+try { interactionsDb = require('./intelligence/interactions_db.pg'); } catch {}
+
 const ROOT = path.resolve(__dirname, '..');
 const STATE_FILE = path.join(config.STATE_DIR, 'proactive_reply_state.json');
 const INTERACTIONS = path.join(config.STATE_DIR, 'interactions.json');
@@ -435,6 +439,19 @@ async function main() {
       });
       fs.writeFileSync(INTERACTIONS, JSON.stringify(data, null, 2));
     } catch {}
+
+    // Mirror to Postgres (fire-and-forget)
+    if (interactionsDb && process.env.DATABASE_URL) {
+      interactionsDb.insertInteraction({
+        tweet_id:       (target.url || '').split('/').pop() || null,
+        type:           'proactive',
+        from_username:  target.handle ? target.handle.replace(/^@/, '') : 'unknown',
+        their_text:     target.text || null,
+        our_reply:      replyText,
+        memory_used:    [],
+        interaction_at: new Date().toISOString(),
+      }).catch(e => console.warn('[proactive_reply] interactions_db write failed:', e.message));
+    }
 
     log('done');
   } finally {

@@ -212,6 +212,20 @@ const TOOL_DECLARATIONS = [
       required: ['query'],
     },
   },
+  {
+    name: 'query_engagement',
+    description: 'Search Sebastian\'s past reply exchanges — both replies to mentions and proactive replies. ' +
+      'Returns matching interactions with the person\'s text, Sebastian\'s reply, and memory used. ' +
+      'Use to recall what was said to a specific user, find past exchanges on a topic, or review engagement history.',
+    parameters: {
+      type: 'OBJECT',
+      properties: {
+        query: { type: 'STRING', description: 'Keywords to search for in past exchanges (or @username to look up a specific user)' },
+        limit: { type: 'INTEGER', description: 'Max results (default 10, max 20)' },
+      },
+      required: ['query'],
+    },
+  },
 ];
 
 // ── Tool executors ───────────────────────────────────────────────────────────
@@ -546,6 +560,35 @@ const TOOL_EXECUTORS = {
       return `search_ontology error: ${err.message}`;
     }
   },
+
+  async query_engagement(args) {
+    const queryStr = (args.query || '').trim();
+    if (!queryStr) return 'Error: query is required';
+    const safeLimit = Math.min(Math.max(1, parseInt(args.limit) || 10), 20);
+    log(`query_engagement → "${queryStr}" limit=${safeLimit}`);
+    try {
+      const { searchInteractions, getByUser } = require('../intelligence/interactions_db.pg');
+      let rows;
+      // If query looks like a @handle, look up by user instead
+      if (/^@?[A-Za-z0-9_]{1,50}$/.test(queryStr)) {
+        rows = await getByUser(queryStr, safeLimit);
+      } else {
+        rows = await searchInteractions(queryStr, safeLimit);
+      }
+      if (!rows || rows.length === 0) return `No past exchanges found for "${queryStr}".`;
+      return rows.map(r =>
+        `[${r.interaction_at ? new Date(r.interaction_at).toISOString().slice(0,16) : '?'}] @${r.from_username} (${r.type})
+` +
+        `  THEM: ${(r.their_text || '').slice(0, 120)}
+` +
+        `  US:   ${(r.our_reply || '').slice(0, 160)}`
+      ).join('
+
+');
+    } catch (err) {
+      return `query_engagement error: ${err.message}`;
+    }
+  },
 };
 
 // ── Subset selectors ─────────────────────────────────────────────────────────
@@ -558,7 +601,7 @@ function getBrowseTools() {
 /** Tools for tweet cycles (file-only + ontology search). */
 function getTweetTools() {
   return TOOL_DECLARATIONS.filter(t =>
-    ['read_file', 'write_file', 'list_files', 'search_ontology'].includes(t.name)
+    ['read_file', 'write_file', 'list_files', 'search_ontology', 'query_engagement'].includes(t.name)
   );
 }
 
