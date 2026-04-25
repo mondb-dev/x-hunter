@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "generated_at": "2026-04-19T03:02:23.280Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-04-25T17:52:59.256Z",
+  "profiled_at": "2026-04-25T19:52:57.843Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -20617,7 +20617,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-22T17:07:58.640Z",
+        "fetched_at": "2026-04-25T18:22:54.963Z",
         "homepage_url": "https://forminit.com/",
         "example_url": "https://forminit.com/?twclid=218m3c3ox1o2100kng6d1o9tlf",
         "homepage_status": 200,
@@ -20739,7 +20739,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-22T17:37:54.520Z",
+        "fetched_at": "2026-04-25T18:22:55.275Z",
         "homepage_url": "https://xhawk.ai/",
         "example_url": "https://xhawk.ai/?twclid=218eppqu7okpx25fant8nuhrp1",
         "homepage_status": 200,
@@ -20861,7 +20861,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-22T19:07:54.885Z",
+        "fetched_at": "2026-04-25T19:22:58.600Z",
         "homepage_url": "https://bitcoinculturehub.com/",
         "example_url": "https://bitcoinculturehub.com/?twclid=296t692fyjaf8r7jqnhro0j2l3",
         "homepage_status": 200,
@@ -24726,7 +24726,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-22T17:37:54.777Z",
+        "fetched_at": "2026-04-25T18:22:55.595Z",
         "homepage_url": "https://allsides.com/",
         "example_url": "https://allsides.com/news-source/aaron-rupar",
         "homepage_status": 403,
@@ -24817,16 +24817,16 @@
           ]
         },
         "profile": {
-          "score": 0.18,
-          "confidence": 0.65,
+          "score": 0.65,
+          "confidence": 0.75,
           "basis": [
-            "meta_author:true",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:true",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:11",
             "opinion_marker:false"
           ]
         },
@@ -24846,33 +24846,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-22T17:37:55.227Z",
+        "fetched_at": "2026-04-25T18:23:01.600Z",
         "homepage_url": "https://mediabiasfactcheck.com/",
         "example_url": "https://www.mediabiasfactcheck.com/public-notice/",
-        "homepage_status": 429,
-        "example_status": 429,
+        "homepage_status": 200,
+        "example_status": 200,
         "homepage_final_url": "https://mediabiasfactcheck.com/",
-        "example_final_url": "https://mediabiasfactcheck.com/public-notice/",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
+        "example_final_url": "https://mediabiasfactcheck.com/public-notice-bias-and-credibility/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 5,
           "opinion_marker": false
         },
         "example": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 11,
           "opinion_marker": false
         }
       }
@@ -24966,7 +24966,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-22T18:37:55.945Z",
+        "fetched_at": "2026-04-25T19:22:59.556Z",
         "homepage_url": "https://bongino.com/",
         "example_url": "https://www.bongino.com/articles/is-aaron-rupar-the-worlds-most-dishonest-journalist",
         "homepage_status": 200,
@@ -25086,7 +25086,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-22T18:37:57.097Z",
+        "fetched_at": "2026-04-25T19:23:00.698Z",
         "homepage_url": "https://racketmn.com/",
         "example_url": "https://racketmn.com/local-twitter-man-aaron-rupar-beacon-for-the-truth-or-threat-to-the-free-press/",
         "homepage_status": 200,
@@ -26172,7 +26172,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-22T18:37:57.397Z",
+        "fetched_at": "2026-04-25T19:23:01.166Z",
         "homepage_url": "https://scholar.google.com/",
         "example_url": "https://scholar.google.com/scholar?q=Evidence-based%20claims%2C%20transparent%20sourcing%2C%20honest%20uncertainty%2C%20good-faith%20argu%20Truth%20and%20Evidence%20in%20Public%20Discourse",
         "homepage_status": 200,
@@ -26295,7 +26295,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-22T18:37:57.601Z",
+        "fetched_at": "2026-04-25T19:52:57.498Z",
         "homepage_url": "https://news.ycombinator.com/",
         "example_url": "https://news.ycombinator.com/",
         "homepage_status": 200,
@@ -26424,7 +26424,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-04-22T19:07:55.147Z",
+        "fetched_at": "2026-04-25T19:52:57.843Z",
         "homepage_url": "https://reddit.com/",
         "example_url": "https://www.reddit.com/search/?q=Emphasis%20individual%20merit&sort=hot&t=week",
         "homepage_status": 403,
