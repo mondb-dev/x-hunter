@@ -577,14 +577,10 @@ const TOOL_EXECUTORS = {
       }
       if (!rows || rows.length === 0) return `No past exchanges found for "${queryStr}".`;
       return rows.map(r =>
-        `[${r.interaction_at ? new Date(r.interaction_at).toISOString().slice(0,16) : '?'}] @${r.from_username} (${r.type})
-` +
-        `  THEM: ${(r.their_text || '').slice(0, 120)}
-` +
+        `[${r.interaction_at ? new Date(r.interaction_at).toISOString().slice(0,16) : '?'}] @${r.from_username} (${r.type})\n` +
+        `  THEM: ${(r.their_text || '').slice(0, 120)}\n` +
         `  US:   ${(r.our_reply || '').slice(0, 160)}`
-      ).join('
-
-');
+      ).join('\n\n');
     } catch (err) {
       return `query_engagement error: ${err.message}`;
     }
