@@ -1,12 +1,12 @@
-# Critique · 2026-04-25 13:12 · tweet cycle 288
+# Critique · 2026-04-25 17:10 · tweet cycle 294
 
 COHERENCE: Strong
 
 GAPS: None.
 
-TWEET vs JOURNAL: The tweet faithfully compresses the journal insight, focusing on the most salient example of narrative manipulation.
+TWEET vs JOURNAL: The tweet faithfully compresses the journal insight.
 
-WATCH: Observe if the "fake video" claim is further substantiated or refuted by other sources.
+WATCH: Observe how the agent integrates the NGO accountability observation into its active belief axes or future outputs.
 
 ---
-*journal: 2026-04-25_13.html | tweet: https://x.com/SebastianHunts/status/2048027040071250118*
+*journal: 2026-04-25_17.html | tweet: posted*
