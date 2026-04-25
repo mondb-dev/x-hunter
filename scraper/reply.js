@@ -563,7 +563,7 @@ function logInteraction(data, item, replyText, memoryHints) {
 
     let verdict;
     try {
-      verdict = await geminiClassify(item, threadContext, memoryHints, userHistory, topicAccounts, verifiedHints, liveVerification);
+      verdict = await geminiClassify(item, threadContext, memoryHints, userHistory, topicAccounts, [], liveVerification);
     } catch (err) {
       console.error(`[reply] Gemini error: ${err.message}`);
       item.status = "error";
