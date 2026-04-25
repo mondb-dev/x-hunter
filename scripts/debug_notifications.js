@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 // Debug script: check what the notifications/mentions page renders
-const { connectBrowser } = require('../scraper/lib/browser');
+const { connectBrowser } = require('../runner/cdp');
 
 (async () => {
   const browser = await connectBrowser();
