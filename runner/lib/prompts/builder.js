@@ -114,6 +114,42 @@ function loadMonitoringContext() {
   const articleMeta = tailFile(path.join(STATE, 'article_meta.md'), 20);
   if (articleMeta) sections.push(`### state/article_meta.md\n\`\`\`\n${articleMeta}\n\`\`\``);
 
+  // proactive_reply_state.json — outbound reply engine stats
+  try {
+    const pr = JSON.parse(fs.readFileSync(path.join(STATE, 'proactive_reply_state.json'), 'utf-8'));
+    const summary = {
+      replies_today: (pr.replies_today || []).length,
+      last_reply_at: pr.last_reply_at || null,
+      top_handles: (pr.replies_today || []).slice(-3).map(r => r.handle),
+    };
+    sections.push(`### state/proactive_reply_state.json (summary)\n\`\`\`json\n${JSON.stringify(summary, null, 2)}\n\`\`\``);
+  } catch {}
+
+  // interactions.json — reply exchange history (totals + recent)
+  try {
+    const data = JSON.parse(fs.readFileSync(path.join(STATE, 'interactions.json'), 'utf-8'));
+    const allReplies = data.replies || data.interactions || [];
+    const recent = allReplies.slice(-5).map(r => ({
+      from:       r.from || r.handle || '?',
+      our_reply:  (r.our_reply || '').slice(0, 80),
+      replied_at: r.replied_at || r.timestamp || null,
+    }));
+    sections.push(
+      `### state/interactions.json (totals + last 5)\n\`\`\`json\n` +
+      JSON.stringify({
+        total_replies: data.total_replies || allReplies.length,
+        today_count:   data.today_count || 0,
+        unique_users:  Object.keys(data.users || {}).length,
+        recent,
+      }, null, 2) +
+      '\n\`\`\`'
+    );
+  } catch {}
+
+  // discourse_anchors.jsonl — substantive counter-reasoning encounters
+  const anchors = tailJsonl(path.join(STATE, 'discourse_anchors.jsonl'), 5);
+  if (anchors) sections.push(`### state/discourse_anchors.jsonl (last 5)\n\`\`\`json\n${anchors}\n\`\`\``);
+
   return sections.join('\n\n') || '(no monitoring data available)';
 }
 
@@ -164,8 +200,8 @@ Your job is to implement a process improvement that Sebastian identified.
    - Modified file: staging/runner/existing.js → full replacement of runner/existing.js
 2. You MUST also write staging/manifest.json describing your changes.
 3. You CANNOT modify these protected files: ${PROTECTED_FILES.join(', ')}
-4. Maximum 8 files per proposal.
-5. Maximum 500 lines per file.
+4. Maximum 12 files per proposal.
+5. Maximum 800 lines per file.
 6. You can only CREATE new files or MODIFY existing files. No deletions.
 7. Write working, tested Node.js code that follows the project's existing patterns.
 8. Use 'use strict' and require() (CommonJS) — no ES modules.
@@ -254,6 +290,86 @@ ${monitoringContext}
 
 ${sourceFiles}
 
+## Adding agent tools (TOOL_DECLARATIONS / TOOL_EXECUTORS)
+
+If your proposal requires a new capability for Sebastian, you can modify
+\`runner/lib/agent_tools.js\` (it is NOT protected). Follow this exact pattern:
+
+**Step 1: Add a declaration** to \`TOOL_DECLARATIONS\` array:
+\`\`\`js
+{
+  name: 'my_new_tool',
+  description: 'One sentence describing what this tool does and when to use it.',
+  parameters: {
+    type: 'OBJECT',
+    properties: {
+      query: { type: 'STRING', description: 'Input description' },
+      limit: { type: 'INTEGER', description: 'Max results (default 10, max N)' },
+    },
+    required: ['query'],
+  },
+},
+\`\`\`
+
+**Step 2: Add an executor** to \`TOOL_EXECUTORS\` object:
+\`\`\`js
+async my_new_tool(args) {
+  const input = (args.query || '').trim();
+  if (!input) return 'Error: query is required';
+  const limit = Math.min(Math.max(1, parseInt(args.limit) || 10), 25);
+  log(\`my_new_tool → "\${input}" limit=\${limit}\`);
+  try {
+    // implementation — load db, read file, etc.
+    return JSON.stringify(results, null, 2);
+  } catch (err) {
+    return \`my_new_tool error: \${err.message}\`;
+  }
+},
+\`\`\`
+
+**Step 3: Add to tool selectors** if needed:
+- \`getBrowseTools()\` returns ALL tools — new tools appear automatically.
+- \`getTweetTools()\` — add name to the filter array only if useful during tweet cycles.
+
+Key constraints:
+- Executors are async functions receiving \`(args)\`. The \`ctx\` second param is available
+  but rarely needed (it carries the browser page reference).
+- Return a string (or \`JSON.stringify\`'d result) — never return raw objects.
+- Non-fatal errors: catch and return \`toolname error: message\`.
+- Only use packages already in runner/package.json.
+
+## Requesting GCP infrastructure
+
+If your implementation requires a new GCP resource (bucket, database table, Cloud Run
+service, Pub/Sub topic), you can trigger the operator-gated provisioning flow by writing
+a **special state trigger file** to staging:
+
+\`\`\`
+### staging/state/infra_request.json
+\`\`\`json
+{
+  "id": "infra_<slug>_<timestamp_ms>",
+  "status": "pending",
+  "title": "Short description of what is needed",
+  "reason": "Why this is needed — link to proposal title",
+  "intent": "Natural language: what resource, who uses it, what it does",
+  "proposed_by": "meta_builder",
+  "created_at": "<ISO timestamp>"
+}
+\`\`\`
+\`\`\`
+
+And add it to the manifest as a special infra trigger:
+\`\`\`json
+{ "path": "state/infra_request.json", "action": "infra_trigger" }
+\`\`\`
+
+This file is NOT committed to git. The pipeline copies it to state/ where the
+Telegram bot detects it and sends an approval request to the operator.
+For **database migrations** specifically, use type intent \`"db_migration"\` and
+include your SQL as a separate file: \`{ "path": "infra/migrations/NNN_<name>.sql", "action": "create" }\`.
+The infra agent will detect the SQL file and run it against the Postgres database.
+
 ## Output format
 
 Write each file as a fenced code block with the staging path as header:
@@ -299,7 +415,13 @@ function loadRelevantFiles(proposal) {
       files.add('AGENTS.md');
       break;
     case 'pipeline':
-      // Already covered by affected_files
+      // builder can freely add tools as part of pipeline improvements
+      files.add('runner/lib/agent_tools.js');
+      break;
+    case 'tool':
+      // explicit tool-addition proposal — show tool declarations + db helpers
+      files.add('runner/lib/agent_tools.js');
+      files.add('runner/lib/db_backend.js');
       break;
     case 'prompt':
       files.add('runner/lib/prompts/browse.js');
@@ -309,9 +431,8 @@ function loadRelevantFiles(proposal) {
       break;
   }
 
-  // prompt-scope proposals modify context/browse loaders which are large files;
-  // give the builder more headroom to avoid truncating critical sections
-  const charLimit = proposal.scope === 'prompt' ? 12000 : 6000;
+  // tool/prompt-scope proposals involve large files — give more headroom
+  const charLimit = (proposal.scope === 'prompt' || proposal.scope === 'tool') ? 12000 : 6000;
 
   const sections = [];
   for (const rel of files) {

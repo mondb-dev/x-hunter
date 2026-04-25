@@ -71,8 +71,8 @@ function validateManifest(manifest) {
   const files = manifest.files || [];
 
   // File count limit
-  if (files.length > 8) {
-    errors.push(`Too many files: ${files.length} (max 8)`);
+  if (files.length > 12) {
+    errors.push(`Too many files: ${files.length} (max 12)`);
   }
 
   // Check for protected files
@@ -81,8 +81,10 @@ function validateManifest(manifest) {
     if (PROTECTED_FILES.includes(rel)) {
       errors.push(`Protected file: ${rel}`);
     }
+    // Skip infra_trigger entries — they are handled separately, not as code files
+    if (f.action === 'infra_trigger') continue;
     // Block deletion actions
-    if (f.action === "delete") {
+    if (f.action === 'delete') {
       errors.push(`Deletion not allowed: ${rel}`);
     }
   }
@@ -96,14 +98,15 @@ function validateManifest(manifest) {
 
   // Check staged files exist and line count
   for (const f of files) {
+    if (f.action === 'infra_trigger') continue;  // not a code file
     const stagingPath = path.join(STAGING_DIR, f.path);
     if (!fs.existsSync(stagingPath)) {
       errors.push(`Staging file missing: ${f.path}`);
       continue;
     }
     const lines = fs.readFileSync(stagingPath, "utf-8").split("\n").length;
-    if (lines > 500) {
-      errors.push(`File too large: ${f.path} (${lines} lines, max 500)`);
+    if (lines > 800) {
+      errors.push(`File too large: ${f.path} (${lines} lines, max 800)`);
     }
   }
 
@@ -249,6 +252,9 @@ function restoreTargetFiles(snapshot) {
 function applyStagingFiles(manifest) {
   const files = manifest.files || [];
   for (const f of files) {
+    // infra_trigger entries are handled separately by applyInfraTrigger()
+    if (f.action === 'infra_trigger') continue;
+
     const src = path.join(STAGING_DIR, f.path);
     const dst = path.join(ROOT, f.path);
 
@@ -261,6 +267,57 @@ function applyStagingFiles(manifest) {
     fs.copyFileSync(src, dst);
     log(`applied: ${f.path} (${f.action})`);
   }
+}
+
+// ── Infra trigger ────────────────────────────────────────────────────────────
+
+/**
+ * If the builder wrote staging/state/infra_request.json with action "infra_trigger",
+ * copy it to state/infra_request.json so the Telegram bot picks it up for operator approval.
+ * This file is NOT committed to git — it's a side-effect of the META cycle.
+ */
+function applyInfraTrigger(manifest) {
+  const infraEntry = (manifest.files || []).find(
+    f => f.action === 'infra_trigger' && f.path === 'state/infra_request.json'
+  );
+  if (!infraEntry) return false;
+
+  const src = path.join(STAGING_DIR, 'state', 'infra_request.json');
+  if (!fs.existsSync(src)) {
+    log('WARNING: infra_trigger declared but staging/state/infra_request.json not found — skipped');
+    return false;
+  }
+
+  // Validate the file is proper JSON with required fields
+  let req;
+  try {
+    req = JSON.parse(fs.readFileSync(src, 'utf-8'));
+    if (!req.id || !req.title || !req.intent) {
+      log('WARNING: infra_trigger JSON missing required fields (id, title, intent) — skipped');
+      return false;
+    }
+  } catch (e) {
+    log(`WARNING: infra_trigger JSON invalid: ${e.message} — skipped`);
+    return false;
+  }
+
+  // Force status to 'pending' regardless of what builder wrote
+  req.status = 'pending';
+  req.proposed_by = req.proposed_by || 'meta_builder';
+
+  const dst = path.join(ROOT, 'state', 'infra_request.json');
+  // Don't overwrite an active request
+  try {
+    const existing = JSON.parse(fs.readFileSync(dst, 'utf-8'));
+    if (['pending', 'notified', 'building'].includes(existing.status)) {
+      log(`WARNING: active infra request already exists (${existing.status}) — skipped new trigger`);
+      return false;
+    }
+  } catch {} // no existing file or invalid JSON = OK to overwrite
+
+  fs.writeFileSync(dst, JSON.stringify(req, null, 2), 'utf-8');
+  log(`infra trigger activated: [${req.id}] ${req.title}`);
+  return true;
 }
 
 // ── Cleanup staging directory ───────────────────────────────────────────────
@@ -371,7 +428,10 @@ function rollbackLocalMain(branchName, preMergeHead) {
     process.exit(1);
   }
   const branchName = `meta/${safeId}`;
-  const filesChanged = (manifest.files || []).map(f => f.path);
+  // infra_trigger entries are state-side-effects, not committed code files
+  const filesChanged = (manifest.files || [])
+    .filter(f => f.action !== 'infra_trigger')
+    .map(f => f.path);
   const preMergeHead = execFileSync("git", ["-C", ROOT, "rev-parse", "main"], {
     encoding: "utf-8",
     timeout: 10000,
@@ -448,6 +508,10 @@ function rollbackLocalMain(branchName, preMergeHead) {
     // 10. Clean up branch on successful publish only
     if (pushedToOrigin) {
       deleteBranch(branchName);
+
+      // Apply infra trigger if builder included one (runs AFTER successful push)
+      const infraTriggered = applyInfraTrigger(manifest);
+      if (infraTriggered) log('infra request queued for operator approval');
     }
 
     // 11. Update proposal + history

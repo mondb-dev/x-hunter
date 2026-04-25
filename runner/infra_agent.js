@@ -252,10 +252,11 @@ Intent: ${req.intent || req.title}
 Determine what single GCP resource to provision and return a JSON plan.
 
 Supported types:
-- static_site  — GCS bucket with public static website hosting (HTML/CSS/JS)
-- cloud_run    — container deployed to Cloud Run (for services/APIs with a Docker image)
-- bucket       — general-purpose GCS storage bucket (no web hosting)
-- pubsub       — Pub/Sub topic + optional subscription
+- static_site    — GCS bucket with public static website hosting (HTML/CSS/JS)
+- cloud_run      — container deployed to Cloud Run (for services/APIs with a Docker image)
+- bucket         — general-purpose GCS storage bucket (no web hosting)
+- pubsub         — Pub/Sub topic + optional subscription
+- db_migration   — run a SQL migration file against the Cloud SQL Postgres database (for schema changes)
 
 Rules:
 - Choose the simplest resource that satisfies the intent.
@@ -263,20 +264,22 @@ Rules:
 - For "API", "service", "backend", "server" with a container image → use cloud_run.
 - For "store", "upload", "data", "files" without web hosting → use bucket.
 - For "events", "queue", "stream", "notifications" → use pubsub.
+- For "table", "schema", "column", "index", "migration", "SQL", "database" → use db_migration.
 
 Return ONLY a single valid JSON object (no markdown fences, no explanation) matching this schema:
 {
-  "type": "static_site|cloud_run|bucket|pubsub",
+  "type": "static_site|cloud_run|bucket|pubsub|db_migration",
   "spec": {
     "bucket_name": "sebastian-hunter-<slug>",   // static_site or bucket: globally unique, lowercase, 3-63 chars
-    "region": "us-central1",                    // all types: optional, default us-central1
+    "region": "us-central1",                    // all types except db_migration: optional, default us-central1
     "service_name": "<slug>",                   // cloud_run only
     "image": "<gcr.io/...>",                    // cloud_run only — use placeholder if unknown
     "port": 8080,                               // cloud_run only
     "allow_unauthenticated": true,              // cloud_run only
     "public": true,                             // bucket only
     "topic_name": "<slug>",                     // pubsub only
-    "subscription": "<slug>"                    // pubsub only, optional
+    "subscription": "<slug>",                  // pubsub only, optional
+    "migration_file": "infra/migrations/NNN_name.sql" // db_migration only — relative path in repo
   },
   "rationale": "One sentence explaining this choice.",
   "files": {
@@ -607,6 +610,55 @@ async function provisionPubSub(req, token = '') {
   return { ok: true, summary: `Pub/Sub topic '${topic}' created`, steps };
 }
 
+/**
+ * db_migration: run a SQL file against the Cloud SQL Postgres database.
+ *
+ * The SQL file must already exist in the repo (committed by the builder).
+ * We use DATABASE_URL from the environment to connect directly via Node pg.
+ *
+ * spec fields:
+ *   migration_file  (required) — repo-relative path e.g. "infra/migrations/004_foo.sql"
+ *   description     (optional) — human label shown in progress messages
+ */
+async function provisionDbMigration(req, token = '') {
+  const spec   = req.spec || {};
+  const relSql = (spec.migration_file || '').replace(/[^a-zA-Z0-9/._\-]/g, '');
+  if (!relSql || !relSql.endsWith('.sql')) {
+    return { ok: false, error: 'spec.migration_file must be a relative .sql path' };
+  }
+  if (relSql.includes('..') || relSql.startsWith('/')) {
+    return { ok: false, error: `spec.migration_file is unsafe: ${relSql}` };
+  }
+
+  const absPath = path.join(ROOT, relSql);
+  if (!fs.existsSync(absPath)) {
+    return { ok: false, error: `Migration file not found in repo: ${relSql}` };
+  }
+
+  const sql = fs.readFileSync(absPath, 'utf-8');
+  if (!sql.trim()) {
+    return { ok: false, error: `Migration file is empty: ${relSql}` };
+  }
+
+  const dbUrl = process.env.DATABASE_URL;
+  if (!dbUrl) {
+    return { ok: false, error: 'DATABASE_URL not set — cannot run DB migration' };
+  }
+
+  await progress('⚙️', `Running DB migration: ${relSql}...`);
+
+  try {
+    // Dynamically load pg pool — same singleton used by the rest of the runner
+    const { query } = require('./lib/pg');
+    await query(sql);
+    await progress('✅', `Migration applied: ${relSql}`);
+    return { ok: true, summary: `DB migration applied: ${relSql}` };
+  } catch (e) {
+    await progress('❌', `Migration failed: ${e.message.slice(0, 200)}`);
+    return { ok: false, error: `Migration failed: ${e.message}` };
+  }
+}
+
 // ── Input sanitization ──────────────────────────────────────────────────────
 
 /** Allow only lowercase letters, digits, hyphens, underscores, dots (for bucket names). */
@@ -710,8 +762,9 @@ async function main() {
       case 'cloud_run':   result = await provisionCloudRun(req, token);   break;
       case 'bucket':      result = await provisionBucket(req, token);     break;
       case 'pubsub':      result = await provisionPubSub(req, token);     break;
+      case 'db_migration': result = await provisionDbMigration(req, token); break;
       default:
-        result = { ok: false, error: `Unsupported infra type: '${req.type}'. Supported: static_site, cloud_run, bucket, pubsub` };
+        result = { ok: false, error: `Unsupported infra type: '${req.type}'. Supported: static_site, cloud_run, bucket, pubsub, db_migration` };
     }
   } catch (e) {
     result = { ok: false, error: e.message };
