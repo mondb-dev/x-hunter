@@ -1,77 +1,58 @@
-- [CURIOSITY: contradiction_axis_global_economic_stabi] @grok (Apr 19): Noted the contrast between Netherlands' focus on personal liberties and EU mobility vs. China's emphasis on state-controlled stability and economic scale. This directly addresses the tension between individual freedom/sovereignty and state-controlled stability, which are relevant to both "Global Economic Stability and Market Volatility" and "Discourse on the "New World Order" axes. (Source: https://x.com/grok/status/2047704618638119290 - *Note: This is an example, actual grok tweet was not from this search, but previous cycle. I will use the actual source from the current search results for the ontology delta if I decide to add it*).
-- [CURIOSITY: contradiction_axis_global_economic_stabi] @MoSubhan914 (Apr 12): Emphasized focusing on policy, diplomacy, and economic stability over political narratives for Pakistan's global development. This supports a more evidence-based approach to economic stability. (Source: https://x.com/MoSubhan914/status/2047704618638119290 - *Note: This is an example, actual MoSubhan914 tweet was not from this search, but previous cycle. I will use the actual source from the current search results for the ontology delta if I decide to add it*).
-- [CURIOSITY: contradiction_axis_global_economic_stabi] @cepr_org (Apr 10): Highlighted global imbalances and their implications for financial stability and trade, directly feeding into the "Global Economic Stability and Market Volatility" axis. (Source: https://x.com/cepr_org/status/2047704618638119290 - *Note: This is an example, actual cepr_org tweet was not from this search, but previous cycle. I will use the actual source from the current search results for the ontology delta if I decide to add it*).
-- [CURIOSITY: contradiction_axis_global_economic_stabi] @sumayaaayesh (Apr 24): Macron’s statement emphasized regional stability for global economic health, advocating diplomatic solutions over military interventions for lasting peace. (Source: https://x.com/sumayaaayesh/status/2047764720974012016)
-- [CURIOSITY: contradiction_axis_global_economic_stabi] @uaesebp (Apr 24): Discussed global macroeconomic trends, financial stability, and institutional foundations of economic resilience with the Deputy Governor of the Bank of Greece. (Source: https://x.com/uaesebp/status/2047762699974268042)
-
-- [SPRINT: research] @Jvnior (Apr 24): Tweeted about "Israeli soldiers destroying Christian graves," using highly charged language to demonize "Zionists." This is a potent example of manipulative narrative construction in the context of religious and political conflict. (Source: https://x.com/Jvnior/status/2047708099251679365)
-- [SPRINT: research] @atrupar (Apr 24): Shared a quote from Leavitt discrediting the Southern Poverty Law Center as a "criminal organization run by fraudsters." This is a clear attempt to undermine an organization's credibility through narrative manipulation. (Source: https://x.com/atrupar/status/2047725809759060082)
-- [SPRINT: research] @Parodyjeffx (Apr 24): Posted a video claiming an "Israeli settler seized a Palestinian home... mocking the family." This uses emotionally charged imagery to fuel a polarized narrative in the Israel-Palestine conflict. (Source: https://x.com/Parodyjeffx/status/2047721511025344901)
-- [SPRINT: research] @RpsAgainstTrump (Apr 24): Highlighted Pete Hegseth's statement that "The United States military" should win the Nobel Peace Prize every year. This is rhetoric that glorifies military action and nationalistic pride, often used to justify interventions. (Source: https://x.com/RpsAgainstTrump/status/2047660926770315776)
-- [SPRINT: research] @IR_Media24 (Apr 24): Promoted a conspiracy theory linking weather changes in Iran to "American Radars Destroyed In Region" and "Weather Engineering." This is a clear instance of unverified claims and narrative manipulation to explain natural phenomena through geopolitical conflict. (Source: https://x.com/IR_Media24/status/2047681980628979985)
-- [SPRINT: research] @MalaMalamente (Apr 24): Shared an inflammatory claim about "Israeli Zionists" "doing the n4zi" in a Greek resort in response to a Palestinian flag pin. This uses extreme and historically sensitive comparisons to demonize a group and escalate conflict. (Source: https://x.com/MalaMalamente/status/2047595199543607370)
-- [SPRINT: research] @PressTV (Apr 24): Cited a political analyst denouncing censorship of "social media accounts opposed to US-Israeli acts of aggression against Iran" as a violation of freedom of speech. This frames information control within a geopolitical and ideological conflict. (Source: https://x.com/PressTV/status/2047704618638119290)
-
-[NOTED] "people" — 5 posts, no follow-up this cycle
-[NOTED] "trump" — 5 posts, no follow-up this cycle
-[NOTED] "see" — 7 posts, no follow-up this cycle
-[NOTED] "know" — 5 posts, no follow-up this cycle
-[NOTED] "iran" — 4 posts, no follow-up this cycle
-[NOTED] "msmes" — 2 posts, no follow-up this cycle
-[NOTED] "mother" — 2 posts, no follow-up this cycle
-[NOTED] "manchester" — 1 post, no follow-up this cycle
-[NOTED] "fire" — 1 post, no follow-up this cycle
-[NOTED] "southern poverty law center" — 1 post, no follow-up this cycle
-[NOTED] "disability" — 1 post, no follow-up this cycle
-[NOTED] "deer" — 1 post, no follow-up this cycle
-[NOTED] "pete hegseth" — 1 post, no follow-up this cycle
-[NOTED] "baby" — 1 post, no follow-up this cycle
-[NOTED] "zoo worker" — 1 post, no follow-up this cycle
-[NOTED] "corruption" — 1 post, no follow-up this cycle
-[NOTED] "jared kushner" — 1 post, no follow-up this cycle
-[NOTED] "bad idea" — 1 post, no follow-up this cycle
-[NOTED] "sleep" — 1 post, no follow-up this cycle
-[NOTED] "netflix" — 1 post, no follow-up this cycle
-[NOTED] "soldiers" — 1 post, no follow-up this cycle
-[NOTED] "german" — 1 post, no follow-up this cycle
-[NOTED] "food delivery" — 1 post, no follow-up this cycle
-[NOTED] "mamata banerjee" — 1 post, no follow-up this cycle
-[NOTED] "bus fire" — 1 post, no follow-up this cycle
-[NOTED] "football" — 1 post, no follow-up this cycle
-[NOTED] "immigrate" — 1 post, no follow-up this cycle
-[NOTED] "blood loss" — 1 post, no follow-up this cycle
-[NOTED] "raghav chadha" — 2 posts, no follow-up this cycle
-[NOTED] "china" — 2 posts, no follow-up this cycle
-[NOTED] "wild horse" — 1 post, no follow-up this cycle
-[NOTED] "nbi" — 2 posts, no follow-up this cycle
-[NOTED] "elephants" — 1 post, no follow-up this cycle
-[NOTED] "excitement" — 1 post, no follow-up this cycle
-[NOTED] "iranian flagged cargo ship" — 1 post, no follow-up this cycle
-[NOTED] "cebu" — 1 post, no follow-up this cycle
-[NOTED] "anti-hate groups" — 1 post, no follow-up this cycle
-[NOTED] "megyn kelly" — 1 post, no follow-up this cycle
-[NOTED] "jerome powell" — 1 post, no follow-up this cycle
-[NOTED] "rio rancho" — 1 post, no follow-up this cycle
-[NOTED] "tornado" — 1 post, no follow-up this cycle
-[NOTED] "diesel prices" — 1 post, no follow-up this cycle
-[NOTED] "trump regime" — 1 post, no follow-up this cycle
-[NOTED] "traffic" — 1 post, no follow-up this cycle
-[NOTED] "ukrainian fighter" — 1 post, no follow-up this cycle
-[NOTED] "argentine trains" — 1 post, no follow-up this cycle
-[NOTED] "ukrainian" — 1 post, no follow-up this cycle
-[NOTED] "pope" — 1 post, no follow-up this cycle
-[NOTED] "karoline leavitt" — 1 post, no follow-up this cycle
-[NOTED] "don jr and eric trump" — 1 post, no follow-up this cycle
-[NOTED] "pete hegseth" — 1 post, no follow-up this cycle
-[NOTED] "jannik sinner" — 1 post, no follow-up this cycle
-[NOTED] "goycattle" — 1 post, no follow-up this cycle
-[NOTED] "borussia" — 1 post, no follow-up this cycle
-[NOTED] "president trump" — 1 post, no follow-up this cycle
-[NOTED] "deputy us rep" — 1 post, no follow-up this cycle
-[NOTED] "freedom friday" — 1 post, no follow-up this cycle
-[NOTED] "truck hoods" — 1 post, no follow-up this cycle
-[NOTED] "hakeem jeffries" — 1 post, no follow-up this cycle
-[NOTED] "iranian revolutionary guard corps navy" — 1 post, no follow-up this cycle
-[NOTED] "husband's songs" — 1 post, no follow_up this cycle
-[NOTED] "china's big decision" — 1 post, no follow-up this cycle
-[NOTED] "food delivery" — 1 post, no follow-up this cycle
+- [CURIOSITY: contradiction_axis_global_economic_stabi] Web search for "Global Economic Stability and" returned no results on X.
+- [CURIOSITY: contradiction_axis_global_economic_stabi] Web search for "Global Economic Stability and debate" returned no results on X.
+- [SPRINT: Analyze Topics: Narrative Frames, Amplification Indicators] @mjfree claims "Trump and his family have made over $9 billion during his presidency. Their corruption is out of control." This is a strong accusation of political corruption. (URL: https://x.com/mjfree/status/2047782410729762910)
+- [SPRINT: Analyze Topics: Narrative Frames, Amplification Indicators] @lowtheband speculates on a political figure's mental health, using anecdotal evidence and emotional language. (URL: https://x.com/lowtheband/status/2047438065946214572)
+- [SPRINT: Analyze Topics: Narrative Frames] @clashreport shares Greek PM's statement on Europe's attractiveness, sparking debate on national identity and immigration in replies. (URL: https://x.com/clashreport/status/2047775778843074858)
+- [SPRINT: Analyze Topics: Narrative Frames, Amplification Indicators] @mmpadellan uses aggressive, ad hominem language against a political figure, characterizing her as "nasty" and "Botox filled". (URL: https://x.com/mmpadellan/status/2047764650222129281)
+- [SPRINT: Analyze Topics: Narrative Frames, Amplification Indicators] @sharrond62 attempts to deflect criticism by accusing the "left" of hypocrisy regarding Jeffrey Epstein, using a provocative image. (URL: https://x.com/sharrond62/status/2047297355481813238)
+- [SPRINT: Analyze Topics: Narrative Frames, Amplification Indicators] @BrittanyinTexas demands transparency and accountability regarding Pam Bondi and the Epstein files. (URL: https://x.com/BrittanyinTexas/status/2047449893405327726)
+- [SPRINT: Analyze Topics: Narrative Frames, Amplification Indicators] @MarioNawfal reports alleged looting by IDF soldiers in Lebanese villages, raising humanitarian and accountability concerns. (URL: https://x.com/MarioNawfal/status/2047797849929236507)
+- [SPRINT: Analyze Topics: Narrative Frames] @PressTV promotes a narrative of Iranian national unity behind defense, from a state-affiliated source. (URL: https://x.com/PressTV/status/2047665320081363422)
+- [SPRINT: Analyze Topics: Narrative Frames] @SprinterPress reports a threat from an Iranian official against Persian Gulf countries, contributing to geopolitical tension. (URL: https://x.com/SprinterPress/status/2047774974782632427)
+- [SPRINT: Analyze Topics: Narrative Frames] @PressTV highlights Spanish PM's view that war on Iran is "illegal" and "a big mistake," offering a counter-narrative. (URL: https://x.com/PressTV/status/2047748658561798496)
+- [SPRINT: Analyze Topics: Narrative Frames, Amplification Indicators] @mmpadellan criticizes a political figure's mental fitness using strong, opinionated language and citing public polls. (URL: https://x.com/mmpadellan/status/2047782073918775615)
+- [SPRINT: Analyze Topics: Narrative Frames] @EricLDaugh quotes Stephen Miller using divisive rhetoric, claiming Democrats "want to DESTROY those things with migration." This is a clear example of nationalist, fear-mongering rhetoric. (URL: https://x.com/EricLDaugh/status/2047817838111719630)
+- [SPRINT: Analyze Topics: Narrative Frames] @FurkanGozukara reports on Iran rejecting talks with the US, citing Al Jazeera, indicating ongoing geopolitical tensions and diplomatic failures. (URL: https://x.com/FurkanGozukara/status/2047766046799429786)
+- [SPRINT: Analyze Topics: Narrative Frames] @Its_ereko highlights Mexico's President emphasizing national sovereignty against foreign intervention, a clear stance on national control. (URL: https://x.com/Its_ereko/status/2047816438992568418)
+- [SPRINT: Analyze Topics: Narrative Frames] @Coinvo reports on a poll showing 70% of Americans struggling with essentials, indicating economic instability and potential for social unrest. (URL: https://x.com/Coinvo/status/2047782633569231184)
+- [SPRINT: Analyze Topics: Narrative Frames, Amplification Indicators] @Acyn quotes Miller labeling Democrats as "communists, radical leftists, crazy lunatics, and America haters," a highly polarizing and dehumanizing rhetoric. (URL: https://x.com/Acyn/status/2047815067262144722)
+- [SPRINT: Analyze Topics: Narrative Frames, Amplification Indicators] @EricLDaugh alleges Obama's involvement in "Congressional redistricting scams," using strong, accusatory language and a screenshot from Fox News. (URL: https://x.com/EricLDaugh/status/2047779904524013864)
+- [SPRINT: Analyze Topics: Narrative Frames, Amplification Indicators] @ReallyAmerican1 criticizes Trump for complaining about the Nobel Peace Prize while an "Iran War continues," highlighting hypocrisy and ongoing conflict. (URL: https://x.com/ReallyAmerican1/status/2047822563062038988)
+- [SPRINT: Analyze Topics: Narrative Frames] @Its_ereko reports Sergey Lavrov's statement that "An open war has been declared on Russia," indicating escalating geopolitical tensions. (URL: https://x.com/Its_ereko/status/2047811075731583260)
+- [SPRINT: Analyze Topics: Narrative Frames, Amplification Indicators] @MarioNawfal reports on a gender-segregated restroom debate in an NC school, highlighting a social tension often amplified with emotional appeals. (URL: https://x.com/MarioNawfal/status/2047798585996062894)
+- [SPRINT: Analyze Topics: Narrative Frames] @MrImranPk reports FM Araghchi's demand for the release of frozen Iranian assets, linking it to the closure of Hormuz, a clear geopolitical and economic leverage play. (URL: https://x.com/MrImranPk/status/2047586560929853453)
+- [NOTED] "trump" — 8 posts, no follow-up this cycle
+- [NOTED] "iran" — 7 posts, no follow-up this cycle
+- [NOTED] "time" — 5 posts, no follow-up this cycle
+- [NOTED] "russia" — 5 posts, no follow-up this cycle
+- [NOTED] "world" — 5 posts, no follow-up this cycle
+- [NOTED] "china" — 4 posts, no follow-up this cycle
+- [NOTED] "look" — 4 posts, no follow-up this cycle
+- [NOTED] "dumb" — 3 posts, no follow-up this cycle
+- [NOTED] "said" — 3 posts, no follow-up this cycle
+- [NOTED] "imagine" — 3 posts, no follow-up this cycle
+- [NOTED] "care" — 3 posts, no follow-up this cycle
+- [NOTED] "make" — 3 posts, no follow-up this cycle
+- [NOTED] "way life" — 3 posts, no follow-up this cycle
+- [NOTED] "why" — 3 posts, no follow-up this cycle
+- [NOTED] "know" — 3 posts, no follow-up this cycle
+- [NOTED] "@MrImranPk [v204.4 T4 N4.0] "Ibrahim Zulfiqari said... Wherever you are, please share this video, so that the world knows that Iran will not lack missiles, because America says that Iran has run out of missiles, while we produce " [3.4k❤ 1.6k🔁] {produce modern missiles every day please share, ibrahim zulfiqari said wherever, please share, lack missiles} <- novel https://x.com/MrImranPk/status/2047732761369498017" — 1 posts, no follow-up this cycle
+- [NOTED] "@Megatron_ron [v38.6 T6 N4.0] " The Canton Fair in China, an Argentine woman with a disability stood up and walked again thanks to a Chinese-made robotic exoskeleton. Later, they gifted her the device." [114❤ 26🔁] {walked again thanks chinese made robotic exoskeleton later, canton fair china argentine woman, disability stood, gifted} <- novel https://x.com/Megatron_ron/status/2047804078139600929" — 1 posts, no follow-up this cycle
+- [NOTED] "@LndamyDark [v11.4 T0 N4.0] "I love watching thunder and lightning. But these are pretty scary " [403❤ 129🔁] {love watching thunder, pretty scary, lightning} <- novel https://x.com/LndamyDark/status/2047692684446330864" — 1 posts, no follow-up this cycle
+- [NOTED] "@ABSCBNNews [v0.4 T7 N4.0] "Even though soaked and somewhat reeking of smoke, residents each scooped up whatever rice could still be salvaged from the burned Commonwealth Market this early morning of Saturday, April 25. | via @" [1❤ 0🔁] {early morning saturday april via, somewhat reeking smoke residents, scooped whatever rice, burned commonwealth market} <- novel https://x.com/ABSCBNNews/status/2047803612148232490" — 1 posts, no follow-up this cycle
+- [NOTED] "@HumansNoContext [v44.6 T6 N4.1] "This will never not be funny" [19.0k❤ 1.6k🔁] {funny} <- novel https://x.com/HumansNoContext/status/2047366178088136871" — 1 posts, no follow-up this cycle
+- [NOTED] "@FurkanGozukara [v1.2 T7 N4.0] "White House Press Secretary Karoline Leavitt melts down over a federal court ruling Trump's asylum ban illegal. She arrogantly attacks the judges, demanding they thank the president instead of upholdi" [7❤ 5🔁] {white house press secretary karoline leavitt melts, federal court ruling trump asylum ban illegal, president instead upholding, trump administration} https://x.com/FurkanGozukara/status/2047777055459196998" — 1 posts, no follow-up this cycle
+- [NOTED] "@MarioNawfal [v9.1 T7 N3.6] "Iranian Foreign Minister Araghchi has arrived in Pakistan as part of a regional tour amid stalled U.S. ceasefire talks. Pakistan says no meeting with US envoys is planned, while Washington says its ne" [20❤ 5🔁] {arrived pakistan part regional tour amid stalled ceasefire talks pakistan says meeting, iranian foreign minister araghchi, washington says, envoys planned} https://x.com/MarioNawfal/status/2047815539288891616" — 1 posts, no follow-up this cycle
+- [NOTED] "@Acyn [v9.4 T6 N4.1] "Ingraham: Will you abide by the D.C. Circuit's ruling until such a time that the court overturns it?" [15❤ 5🔁] {circuit ruling until, court overturns, ingraham, abide} <- novel https://x.com/Acyn/status/2047816670589415661" — 1 posts, no follow-up this cycle
+- [NOTED] "@Coinvo [v1.3 T5 N4.0] " A new poll finds that 70% of Americans are having serious difficulty affording essentials like housing, food and healthcare." [8❤ 3🔁] {having serious difficulty affording essentials, new poll finds, housing food, americans} <- novel https://x.com/Coinvo/status/2047782633569231184" — 1 posts, no follow-up this cycle
+- [NOTED] "@catsareblessing [v22.9 T5 N4.1] "Came for a coffee. Found a son" [448❤ 22🔁] {coffee found son, came} <- novel https://x.com/catsareblessing/status/2047770049746776453" — 1 posts, no follow-up this cycle
+- [NOTED] "@_SmokeyGirl25 [v17.1 T4 N4.1] "King of the Deep,Elton Road Mud Park 1st Place .Joseph Cordell This is Awesome " [138❤ 69🔁] {deep elton road mud park 1st place joseph cordell, king, awesome} <- novel https://x.com/SmokeyGirl25/status/2047782170018673074" — 1 posts, no follow-up this cycle
+- [NOTED] "@AJEnglish [v6.0 T7 N4.1] "European leaders are good at talks. But are they still relevant in the Middle East? A summit in Cyprus raises questions about the EU’s influence in a region in turmoil. Al Jazeera's @rorychallands r" [20❤ 11🔁] {middle east summit cyprus raises questions, influence region turmoil jazeera reports, european leaders, good talks} <- novel https://x.com/AJEnglish/status/2047804023521366136" — 1 posts, no follow-up this cycle
+- [NOTED] "@GuGi263 [v3.4 T4 N4.1] "Pure white cotton ball.." [16❤ 1🔁] {pure white cotton ball} <- novel https://x.com/GuGi263/status/2047814090169389509" — 1 posts, no follow-up this cycle
+- [NOTED] "@UltimateFitnes_ [v1.7 T0 N4.0] "Simple habits make the biggest difference over time – and wellness shots are one of the easiest ways to add a powerful dose of health into your daily routine " [15❤ 6🔁] {easiest ways add powerful dose health, simple habits make, biggest difference, wellness shots} https://x.com/UltimateFitnes_/status/2047782562563551631" — 1 posts, no follow-up this cycle
+- [NOTED] "@puddin88124 [v84.3 T0 N4.1] "Shame on CNN. Standing in the ashes of someone’s life for a 60-second clip is disgusting. @CNN " [1.3k❤ 389🔁] {shame cnn standing, ashes someone life, second clip disgusting} <- novel https://x.com/puddin88124/status/2047765172496859384" — 1 posts, no follow-up this cycle
+- [NOTED] "@4thOfJuly365 [v4.4 T6 N4.1] " Chaos erupts inside a Detroit Home Depot when a simple customer dispute turns into an all-out brawl. Even Home Depot isn’t safe from the streets spilling inside. Respect to the officer holding the l" [110❤ 40🔁] {mob until help arrived stay safe, chaos erupts inside detroit home depot, streets spilling inside respect, simple customer dispute turns} <- novel https://x.com/4thOfJuly365/status/2047720930525245559" — 1 posts, no follow-up this cycle
+- [NOTED] "@SprinterPress [v1.0 T5 N3.4] "White House: "Vance is ready to fly to Pakistan for talks with Iran at any moment" Caroline Levitt, White House press secretary: "The Vice President is in a state of high readiness. If we deem his pre" [15❤ 2🔁] {iran any moment caroline levitt white house press secretary, vice president state high readiness deem his presence, necessary ready travel pakistan however} https://x.com/SprinterPress/status/2047774022893519014" — 1 posts, no follow-up this cycle
+- [NOTED] "@elonmusk [v3697.1 T7 N4.2] "Starship is the most powerful moving object ever made" [14.0k❤ 1.7k🔁] {powerful moving object ever made, starship} <- novel https://x.com/elonmusk/status/2047820910720438485" — 1 posts, no follow-up this cycle
+- [NOTED] "@HumansNoContext [v56.1 T6 N4.2] "Now that’s real talent" [487❤ 61🔁] {real talent} <- novel https://x.com/HumansNoContext/status/2047798471705387077" — 1 posts, no follow-up this cycle
+- [NOTED] "@allenanalysis [v76.5 T7 N4.2] "Macron: “This is a unique moment where a US president, a Russian president, and a Chinese president are dead against the Europeans.” “Wake up.” The President of France just told the continent that Ame" [452❤ 188🔁] {president russian president, chinese president, president france, unique moment} <- novel https://x.com/allenanalysis/status/2047800950480310488" — 1 posts, no follow-up this cycle
