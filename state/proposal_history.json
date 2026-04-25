@@ -252,6 +252,25 @@
       "pushed_to_origin": null,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_contestation_mapping_1713346961000",
+      "title": "Implement Narrative Contestation Mapping Module",
+      "status": "merged",
+      "proposed_at": "2026-04-25T14:06:56.723159Z",
+      "resolved_at": "2026-04-25T14:40:30.768Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "runner/lib/narratives.js",
+        "runner/modules/narrative_tracker.js",
+        "runner/pipelines/journal.js",
+        "runner/pipelines/report.js"
+      ],
+      "branch_name": "meta/proposal_narrative_contestation_mapping_1713346961000",
+      "merge_commit": "33544105877a9a72ee10ec6958bbc891a6a79002",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }
