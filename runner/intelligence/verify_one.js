@@ -163,7 +163,7 @@ async function run() {
     });
 
     // 5. Re-export for web
-    exportVerificationData(vdb, config.VERIFICATION_EXPORT_PATH);
+    await exportVerificationData(vdb, config.VERIFICATION_EXPORT_PATH);
   }
 
   // 6. Output for caller

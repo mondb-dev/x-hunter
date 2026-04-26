@@ -195,9 +195,9 @@ function writeVerificationDraft(claim, result, searchData) {
 
 // ── Claim lifecycle (expiry) ────────────────────────────────────────────────
 
-function processExpiry() {
+async function processExpiry() {
   const now = Date.now();
-  const all = vdb.getAllVerifications();
+  const all = await Promise.resolve(vdb.getAllVerifications());
   let expired = 0;
 
   for (const claim of all) {
@@ -206,7 +206,7 @@ function processExpiry() {
     const age = now - new Date(claim.created_at).getTime();
     if (age > expiryHours * 3600_000) {
       if (!isDryRun) {
-        vdb.markExpired(claim.claim_id);
+        await Promise.resolve(vdb.markExpired(claim.claim_id));
       }
       expired++;
     }
@@ -365,7 +365,7 @@ async function maybeInvestigate(results) {
   if (invResult) {
     log(`investigation: completed — ${invResult.status} (${Math.round((invResult.confidence || 0) * 100)}%), ${invResult.supporting || 0} supporting, ${invResult.contradicting || 0} contradicting`);
     // Re-export since investigate_claim.js already persisted
-    exportVerificationData(vdb, config.VERIFICATION_EXPORT_PATH);
+    await exportVerificationData(vdb, config.VERIFICATION_EXPORT_PATH);
     pushExport();
   } else {
     log('investigation: failed or timed out');
@@ -401,7 +401,7 @@ async function run() {
   if (allClaims.length === 0) {
     log('no unverified claims to process');
     if (!isDryRun) {
-      exportVerificationData(vdb, config.VERIFICATION_EXPORT_PATH);
+      await exportVerificationData(vdb, config.VERIFICATION_EXPORT_PATH);
       pushExport();
     }
     return;
@@ -420,7 +420,7 @@ async function run() {
     const handle = claim.source_handle || handleFromUrl(claim.source_url || claim.source_post_url);
     const sourceData = await loadSourceData(handle, idb, config.STATE_DIR, DB_IS_PG);
 
-    const existing = vdb.getVerification(claim.claim_id);
+    const existing = await Promise.resolve(vdb.getVerification(claim.claim_id));
     if (existing?.web_search_summary && !claim.web_search_result) {
       const prevBreakdown = existing.scoring_breakdown || {};
       claim.web_search_result = prevBreakdown.web_search > 0 ? prevBreakdown.web_search : null;
@@ -479,13 +479,13 @@ async function run() {
     log(`scored ${results.length} claims, web-searched ${webSearchCount}`);
 
     // 6. Process expiry
-    processExpiry();
+    await processExpiry();
 
     // 7. Deep investigation on high-priority contested/unverified claims (max 2/day)
     await maybeInvestigate(results);
 
     // 8. Export for web
-    exportVerificationData(vdb, config.VERIFICATION_EXPORT_PATH);
+    await exportVerificationData(vdb, config.VERIFICATION_EXPORT_PATH);
     pushExport();
   } else {
     log(`[dry-run] would persist ${results.length} results`);

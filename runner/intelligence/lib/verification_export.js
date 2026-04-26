@@ -26,10 +26,11 @@ function filterStableUrls(urls) {
  *
  * @param {object} vdb - verification DB module (must have getAllVerifications())
  * @param {string} exportPath - absolute path to write the JSON file
+ * @returns {Promise<void>}
  */
-function exportVerificationData(vdb, exportPath) {
+async function exportVerificationData(vdb, exportPath) {
   try {
-    const all = vdb.getAllVerifications();
+    const all = await Promise.resolve(vdb.getAllVerifications());
     const stats = { total: all.length, supported: 0, refuted: 0, contested: 0, unverified: 0, expired: 0 };
     for (const c of all) { stats[c.status] = (stats[c.status] || 0) + 1; }
 
