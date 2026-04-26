@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T18:17:56.027Z",
+  "generated_at": "2026-04-26T20:18:01.510Z",
   "windows": [
     "1d",
     "3d",
@@ -30,21 +30,21 @@
     },
     "axis_power_accountability": {
       "current": {
-        "score": -0.2823,
+        "score": -0.2756,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": -0.0038,
+        "score_delta": 0.0029,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0135,
+        "score_delta": -0.0068,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0106,
+        "score_delta": -0.0039,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -94,21 +94,21 @@
     "axis_political_trust_corruption_v1": {
       "current": {
         "score": -0.5841,
-        "confidence": 0.98
+        "confidence": 0.978
       },
       "1d": {
         "score_delta": 0.0121,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "3d": {
         "score_delta": 0.0063,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "7d": {
         "score_delta": 0.0005,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       }
     },
@@ -177,21 +177,21 @@
     },
     "axis_geopolitical_rhetoric_v1": {
       "current": {
-        "score": 0.0763,
+        "score": 0.0773,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": -0.0061,
+        "score_delta": -0.0051,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0118,
+        "score_delta": -0.0108,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0131,
+        "score_delta": -0.0121,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -303,42 +303,42 @@
     },
     "axis_discourse_order_polarization_v1": {
       "current": {
-        "score": 0.2982,
-        "confidence": 0.978
+        "score": 0.322,
+        "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": 0.0238,
+        "conf_delta": 0,
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0.0125,
-        "conf_delta": 0.002,
-        "direction": "→"
+        "score_delta": 0.0363,
+        "conf_delta": 0.004,
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0389,
-        "conf_delta": 0.034,
+        "score_delta": 0.0627,
+        "conf_delta": 0.036,
         "direction": "↗"
       }
     },
     "axis_global_economic_stability_v1": {
       "current": {
-        "score": 0.6814,
+        "score": 0.6823,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": -0.0041,
+        "score_delta": -0.0032,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0049,
+        "score_delta": -0.004,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0008,
+        "score_delta": 0.0017,
         "conf_delta": 0.002,
         "direction": "→"
       }
@@ -366,21 +366,21 @@
     },
     "axis_religion_politics_war_v1": {
       "current": {
-        "score": 0.6485,
+        "score": 0.6376,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.026,
-        "conf_delta": 0,
-        "direction": "↗"
-      },
-      "3d": {
-        "score_delta": -0.0187,
+        "score_delta": 0.0151,
         "conf_delta": 0,
         "direction": "→"
       },
+      "3d": {
+        "score_delta": -0.0296,
+        "conf_delta": 0,
+        "direction": "↘"
+      },
       "7d": {
-        "score_delta": 0.0345,
+        "score_delta": 0.0236,
         "conf_delta": 0,
         "direction": "↗"
       }
@@ -789,6 +789,7 @@
   "momentum_axes": [
     "axis_historical_legacy_v1",
     "axis_public_trust_safety_crisis_v1",
+    "axis_discourse_order_polarization_v1",
     "axis_immigration_policy_v_national_control_v1"
   ]
 }
