@@ -56,13 +56,27 @@ export default async function TopClaims() {
     const top = pickTopClaims(data.claims);
     if (top.length === 0) return null;
 
+    const updatedAt = data.generated_at
+      ? new Date(data.generated_at).toLocaleString("en-US", {
+          month: "short", day: "numeric", hour: "2-digit", minute: "2-digit",
+          timeZone: "UTC", timeZoneName: "short",
+        })
+      : null;
+
     return (
       <div className="top-claims-wrap">
         <div className="top-claims-header">
           <span className="top-claims-label">veritas lens</span>
-          <Link href="/veritas-lens" className="top-claims-view-all">
-            view all →
-          </Link>
+          <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+            {updatedAt && (
+              <span style={{ color: "var(--muted)", fontSize: "10px" }}>
+                updated {updatedAt}
+              </span>
+            )}
+            <Link href="/veritas-lens" className="top-claims-view-all">
+              view all →
+            </Link>
+          </div>
         </div>
         <div className="top-claims-list">
           {top.map((claim) => (

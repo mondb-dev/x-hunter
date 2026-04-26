@@ -22,7 +22,13 @@ export default async function VerifiedPage() {
         <p className="verify-description">
           Claims observed during research, scored for credibility using source tier,
           corroboration, evidence quality, and web search verification.
-          {claims.length} claims tracked · avg confidence {avgConfidence}%.
+          {claims.length} claims tracked · avg confidence {avgConfidence}%
+          {data.generated_at && (
+            <> · updated {new Date(data.generated_at).toLocaleString("en-US", {
+                month: "short", day: "numeric", hour: "2-digit", minute: "2-digit",
+                timeZone: "UTC", timeZoneName: "short",
+              })}</>
+          )}.
         </p>
       </header>
 
