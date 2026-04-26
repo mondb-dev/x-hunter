@@ -105,6 +105,10 @@ function parseDigestForCandidates() {
     const minLikes = isFactualClaim ? 50 : 200;
     if (likes < minLikes) continue;
 
+    // Skip posts that are likely satire, jokes, or sarcasm — Sebastian looks
+    // dumb engaging seriously with non-serious content.
+    if (isSatireOrJoke(text)) { log(`skipping satire/joke candidate: @${handle}: "${text.slice(0,60)}..."` ); continue; }
+
     candidates.push({
       handle, text, url, likes, velocity, trust, novelty, isFactualClaim,
       score: likes * 0.4 + velocity * 0.3 + novelty * 100 * 0.3 + (isFactualClaim ? 50 : 0),
@@ -112,6 +116,40 @@ function parseDigestForCandidates() {
   }
 
   return candidates.sort((a, b) => b.score - a.score);
+}
+
+// ── Tone filter — satire / joke / sarcasm heuristics ─────────────────────
+
+/**
+ * Returns true if the text is almost certainly a joke, satire, or sarcasm
+ * rather than a sincere factual claim or opinion. Uses lexical signals only —
+ * fast, zero latency, no API call. Designed to be conservative: it will miss
+ * subtle irony but reliably blocks obvious cases.
+ */
+function isSatireOrJoke(text) {
+  const t = text.toLowerCase();
+
+  // Explicit tone markers
+  if (/\b(satire|parody|irony|ironic|sarcasm|sarcastic)\b/.test(t)) return true;
+
+  // Joke framing
+  if (/^(why did|what do you call|knock knock|i told my|my therapist said|fun fact:|hot take:|unpopular opinion:)/i.test(text)) return true;
+
+  // Self-labelled humour
+  if (/\b(just kidding|jk|lmao|lmfao|lol|haha|ha ha)\b/.test(t)) return true;
+  if (/😂|🤣|💀|😭/.test(text)) return true;
+
+  // Hyperbolic absurdist phrasing that is almost never a sincere claim
+  if (/\b(literally dying|this killed me|i can't even|bestie|slay|no cap fr fr|touch grass)\b/.test(t)) return true;
+
+  // Ellipsis-based trailing mockery pattern: "sure, [thing] is definitely real /s"
+  if (/\/s\b/.test(t)) return true;
+
+  // Heavy emoji stacking on short text (> 3 emojis in < 80 chars = likely meme)
+  const emojiCount = (text.match(/[\u{1F300}-\u{1FAFF}]/gu) || []).length;
+  if (emojiCount >= 4 && text.length < 80) return true;
+
+  return false;
 }
 
 // ── Axis relevance filter ───────────────────────────────────────────────────
@@ -219,6 +257,13 @@ async function draftReply(candidate, verification) {
     'GOOD: "Zero in federal tax but $2.3B in lobbying spend. The money goes somewhere -- just not to the public."\n' +
     'GOOD: "Lavrov calling Russia a stabilizer while occupying Crimea. Words only work when the record is clean."\n' +
     'GOOD: "That number is wrong. IMF data shows 2.1%, not 4.3%. The report they cited was from 2019."\n\n' +
+    '\nTONE CHECK (do this first before drafting):\n' +
+    'Carefully read the post. Is it satire, a joke, sarcastic, or clearly not meant literally?\n' +
+    '- Signs of non-serious intent: irony, hyperbole, absurdist exaggeration, self-deprecating humour,\n' +
+    '  obvious parody, shitpost format, reaction memes, joke setups, "hot take" bait.\n' +
+    '- If the post is NOT making a sincere claim or sincere opinion → return SKIP.\n' +
+    '- Engaging seriously with a joke makes Sebastian look oblivious. Skipping is always better.\n' +
+    '- Only engage if the post is clearly a sincere claim, argument, or opinion worth addressing.\n\n' +
     'Return ONLY the reply text. Nothing else. If you cannot write something genuinely worth posting, return SKIP.';
 
   const { getAccessToken, getProjectConfig } = require('./gcp_auth');
