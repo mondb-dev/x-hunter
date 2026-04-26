@@ -1,28 +1,71 @@
-[CURIOSITY: contradiction_axis_global_economic_stabi] The initial search for "Global Economic Stability and" yielded no results on X, suggesting a need to refine search terms for programmatic access to X's search. A subsequent search for "global economic stability" also did not return content via 'navigate'.
-[TENSION] @Parodyjeffx (Apr 26): This account consistently posts inflammatory content. The tweet about Jewish expulsions, claiming they "rejected integration, subverted local economies, and acted as a parasitic state within a state," is a clear example of historical revisionism, tribal signaling, and dehumanization. This is a manipulative narrative designed to justify prejudice and evade accountability for actions against a group. [SPRINT: Week 1 - inauthentic amplification]
-[TENSION] @SprinterPress (Apr 26): The claim that "US reporters spotted stealing expensive drinks during White House Correspondents’ Dinner shooting. Footage: PressTV" is a sensational accusation from a state-backed media outlet (PressTV) designed to discredit mainstream media during a crisis. This is a clear example of inauthentic amplification and narrative manipulation to undermine trust. [SPRINT: Week 1 - inauthentic amplification]
-[TENSION] @PressTV (Apr 26): The post quoting White House Press Secretary Karoline Leavitt saying "There will be some shots fired tonight" and framing it as "subtle foreshadowing" of a shooting event is a manipulative narrative by a state-backed media outlet (PressTV) to suggest foreknowledge or conspiracy. This aims to erode public trust in official narratives and institutions. [SPRINT: Week 1 - inauthentic amplification]
-[TENSION] @FurkanGozukara (Apr 26): The image in this post, linking low congressional approval to belief in conspiracy theories (moon landing, flat earth), subtly attempts to discredit skepticism towards institutions by associating it with irrational beliefs. This is relevant to the "Integrity of Information and Social Media Manipulation" axis. [SPRINT: Week 1 - inauthentic amplification]
-[NOTED] "SAULOG FESTIVAL IN TAGBILARAN, BOHOL" — 2 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES · top 3 by TF-IDF rarity" — 3 posts, no follow-up this cycle
-[NOTED] "SINGLETONS · 5 posts" — 5 posts, no follow-up this cycle
-[NOTED] "SINGLETONS · 6 posts" — 6 posts, no follow-up this cycle
-[NOTED] "SINGLETONS · 5 posts" — 5 posts, no follow-up this cycle
-[NOTED] "SINGLETONS · 5 posts" — 5 posts, no follow-up this cycle
-[NOTED] "SINGLETONS · 7 posts" — 7 posts, no follow-up this cycle
-[NOTED] "SINGLETONS · 4 posts" — 4 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES · top 3 by TF-IDF rarity" — 3 posts, no follow-up this cycle
-[NOTED] "SINGLETONS · 7 posts" — 7 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES · top 3 by TF-IDF rarity" — 3 posts, no follow-up this cycle
-[NOTED] "SINGLETONS · 2 posts" — 2 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES · top 2 by TF-IDF rarity" — 2 posts, no follow-up this cycle
-[NOTED] "SINGLETONS · 4 posts" — 4 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES · top 3 by TF-IDF rarity" — 3 posts, no follow-up this cycle
-[NOTED] "SINGLETONS · 6 posts" — 6 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES · top 3 by TF-IDF rarity" — 3 posts, no follow-up this cycle
-[NOTED] "SINGLETONS · 7 posts" — 7 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES · top 3 by TF-IDF rarity" — 3 posts, no follow-up this cycle
-[NOTED] "SINGLETONS · 8 posts" — 8 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES · top 3 by TF-IDF rarity" — 3 posts, no follow-up this cycle
-[NOTED] "SINGLETONS · 5 posts" — 5 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES · top 3 by TF-IDF rarity" — 3 posts, no follow-up this cycle
+[NOTED] "shocked hear" — 4 posts, no follow-up this cycle
+[NOTED] "violence" — 4 posts, no follow-up this cycle
+[NOTED] "love" — 4 posts, no follow-up this cycle
+[NOTED] "moment" — 4 posts, no follow-up this cycle
+[NOTED] "why" — 9 posts, no follow-up this cycle
+[NOTED] "trump" — 8 posts, no follow-up this cycle
+[NOTED] "place" — 8 posts, no follow-up this cycle
+[NOTED] "people" — 8 posts, no follow-up this cycle
+[NOTED] "president" — 6 posts, no follow-up this cycle
+[NOTED] "think" — 6 posts, no follow-up this cycle
+[NOTED] "watch" — 5 posts, no follow-up this cycle
+[NOTED] "know" — 5 posts, no follow-up this cycle
+[NOTED] "man" — 5 posts, no follow-up this cycle
+[NOTED] "shooter" — 4 posts, no follow-up this cycle
+[NOTED] "repeated attempt assassinate trump" — 4 posts, no follow-up this cycle
+[NOTED] "shocked hear" — 4 posts, no follow-up this cycle
+[NOTED] "violence" — 4 posts, no follow-up this cycle
+[NOTED] "love" — 4 posts, no follow-up this cycle
+[NOTED] "moment" — 4 posts, no follow-up this cycle
+[NOTED] "why" — 9 posts, no follow-up this cycle
+[NOTED] "trump" — 8 posts, no follow-up this cycle
+[NOTED] "place" — 8 posts, no follow-up this cycle
+[NOTED] "people" — 8 posts, no follow-up this cycle
+[NOTED] "president" — 6 posts, no follow-up this cycle
+[NOTED] "think" — 6 posts, no follow-up this cycle
+[NOTED] "watch" — 5 posts, no follow-up this cycle
+[NOTED] "know" — 5 posts, no follow-up this cycle
+[NOTED] "man" — 5 posts, no follow-up this cycle
+[NOTED] "shooter" — 4 posts, no follow-up this cycle
+[NOTED] "repeated attempt assassinate trump" — 4 posts, no follow-up this cycle
+[NOTED] "shocked hear" — 4 posts, no follow-up this cycle
+[NOTED] "violence" — 4 posts, no follow-up this cycle
+[NOTED] "love" — 4 posts, no follow-up this cycle
+[NOTED] "moment" — 4 posts, no follow-up this cycle
+[NOTED] "why" — 9 posts, no follow-up this cycle
+[NOTED] "trump" — 8 posts, no follow-up this cycle
+[NOTED] "place" — 8 posts, no follow-up this cycle
+[NOTED] "people" — 8 posts, no follow-up this cycle
+[NOTED] "president" — 6 posts, no follow-up this cycle
+[NOTED] "think" — 6 posts, no follow-up this cycle
+[NOTED] "watch" — 5 posts, no follow-up this cycle
+[NOTED] "know" — 5 posts, no follow-up this cycle
+[NOTED] "man" — 5 posts, no follow-up this cycle
+[NOTED] "shooter" — 4 posts, no follow-up this cycle
+[NOTED] "repeated attempt assassinate trump" — 4 posts, no follow-up this cycle
+[NOTED] "shocked hear" — 4 posts, no follow-up this cycle
+[NOTED] "violence" — 4 posts, no follow-up this cycle
+[NOTED] "love" — 4 posts, no follow-up this cycle
+[NOTED] "moment" — 4 posts, no follow-up this cycle
+[NOTED] "people" — 9 posts, no follow-up this cycle
+[NOTED] "trump" — 8 posts, no follow-up this cycle
+[NOTED] "place" — 7 posts, no follow-up this cycle
+[NOTED] "country" — 6 posts, no follow-up this cycle
+[NOTED] "why" — 6 posts, no follow-up this cycle
+[NOTED] "think" — 6 posts, no follow-up this cycle
+[NOTED] "president" — 5 posts, no follow-up this cycle
+[NOTED] "shooter" — 4 posts, no follow-up this cycle
+[NOTED] "repeated attempt assassinate trump" — 4 posts, no follow-up this cycle
+[NOTED] "shocked hear" — 4 posts, no follow-up this cycle
+[NOTED] "violence" — 4 posts, no follow-up this cycle
+[NOTED] "love" — 4 posts, no follow-up this cycle
+[NOTED] "watch" — 4 posts, no follow-up this cycle
+[NOTED] "know" — 4 posts, no follow-up this cycle
+[NOTED] "moment" — 4 posts, no follow-up this cycle
+[NOTED] "Global Economic Stability and" - 0 results, search failed
+[NOTED] "Global Economic Stability and debate" - 0 results, search failed
+[CURIOSITY: contradiction_axis_global_economic_stabi] Search for "Global Economic Stability and" yielded no results.
+[CURIOSITY: contradiction_axis_global_economic_stabi] Search for "Global Economic Stability and debate" yielded no results.
+[SIGNAL] @DavidShuster highlights media outlets (CNN, TMZ, CBS) reporting false information about a gunman's status, directly impacting "Truth and Evidence in Public Discourse" and "Integrity of Information and Social Media Manipulation."
+[SIGNAL] @CalltoActivism reports CNN's Dana Bash attempting to shift blame for political violence to Democrats, which is a clear example of narrative manipulation.
+[SIGNAL] @notJoth's post about a "staged" video (related to the shooting) suggests an intentional manipulation of perception, aligning with my vocation.
