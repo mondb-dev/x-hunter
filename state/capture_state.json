@@ -1,156 +1,156 @@
 {
-  "checked_at": "2026-04-25T18:02:17.459Z",
-  "evidence_24h": 56,
-  "unique_sources": 43,
+  "checked_at": "2026-04-26T18:28:17.638Z",
+  "evidence_24h": 60,
+  "unique_sources": 44,
   "status": "clean",
   "alerts": [],
-  "summary": "Evidence distribution looks healthy (56 entries across 43 sources, 13 axes).",
+  "summary": "Evidence distribution looks healthy (60 entries across 44 sources, 11 axes).",
   "source_concentration": {
-    "presstv": {
-      "username": "presstv",
-      "count": 5,
-      "share": 0.089
-    },
-    "rt_com": {
-      "username": "rt_com",
-      "count": 3,
-      "share": 0.054
-    },
     "marionawfal": {
       "username": "marionawfal",
       "count": 3,
-      "share": 0.054
+      "share": 0.05
+    },
+    "eng_china5": {
+      "username": "eng_china5",
+      "count": 3,
+      "share": 0.05
+    },
+    "joeroganhq": {
+      "username": "joeroganhq",
+      "count": 2,
+      "share": 0.033
+    },
+    "proudsocialist": {
+      "username": "proudsocialist",
+      "count": 2,
+      "share": 0.033
     },
     "atrupar": {
       "username": "atrupar",
       "count": 2,
-      "share": 0.036
+      "share": 0.033
     },
-    "acyn": {
-      "username": "acyn",
+    "ericldaugh": {
+      "username": "ericldaugh",
       "count": 2,
-      "share": 0.036
+      "share": 0.033
     },
-    "mjfree": {
-      "username": "mjfree",
+    "nicksortor": {
+      "username": "nicksortor",
       "count": 2,
-      "share": 0.036
+      "share": 0.033
     },
-    "sprinterpress": {
-      "username": "sprinterpress",
+    "magavoice": {
+      "username": "magavoice",
       "count": 2,
-      "share": 0.036
+      "share": 0.033
     },
-    "unknown": {
-      "username": "unknown",
+    "aapayes": {
+      "username": "aapayes",
       "count": 2,
-      "share": 0.036
+      "share": 0.033
     },
-    "ir_media24": {
-      "username": "ir_media24",
-      "count": 1,
-      "share": 0.018
-    },
-    "edkrassen": {
-      "username": "edkrassen",
-      "count": 1,
-      "share": 0.018
+    "ultras_antifaa": {
+      "username": "ultras_antifaa",
+      "count": 2,
+      "share": 0.033
     }
   },
   "axis_concentration": {
     "axis_epistemic_integrity": {
       "axis_id": "axis_epistemic_integrity",
       "label": "Truth and Evidence in Public Discourse",
-      "count": 10,
-      "share": 0.179
+      "count": 12,
+      "share": 0.2
     },
     "axis_geopolitical_rhetoric_v1": {
       "axis_id": "axis_geopolitical_rhetoric_v1",
       "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
-      "count": 9,
-      "share": 0.161
+      "count": 12,
+      "share": 0.2
+    },
+    "axis_global_economic_stability_v1": {
+      "axis_id": "axis_global_economic_stability_v1",
+      "label": "Global Economic Stability and Market Volatility",
+      "count": 7,
+      "share": 0.117
     },
     "axis_religion_politics_war_v1": {
       "axis_id": "axis_religion_politics_war_v1",
       "label": "Religion, Politics, and War Rhetoric",
-      "count": 9,
-      "share": 0.161
+      "count": 6,
+      "share": 0.1
     },
-    "axis_national_sovereignty_v_intl_law_v1": {
-      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "label": "National Sovereignty vs. International Law",
-      "count": 8,
-      "share": 0.143
+    "axis_global_power_realignments_v1": {
+      "axis_id": "axis_global_power_realignments_v1",
+      "label": "Global Power Realignments and Shifting Hegemony",
+      "count": 6,
+      "share": 0.1
+    },
+    "axis_power_accountability": {
+      "axis_id": "axis_power_accountability",
+      "label": "Power, Institutions, and Rule of Law",
+      "count": 4,
+      "share": 0.067
     },
     "axis_media_integrity_v1": {
       "axis_id": "axis_media_integrity_v1",
       "label": "Integrity of Information and Social Media Manipulation",
       "count": 4,
-      "share": 0.071
+      "share": 0.067
     },
-    "axis_authoritarian_self_determination_v1": {
-      "axis_id": "axis_authoritarian_self_determination_v1",
-      "label": "Authoritarian Control vs. Individual/Collective Self-Determination",
+    "axis_public_trust_safety_crisis_v1": {
+      "axis_id": "axis_public_trust_safety_crisis_v1",
+      "label": "Public Trust in Safety and Crisis Communication",
+      "count": 4,
+      "share": 0.067
+    },
+    "axis_national_sovereignty_v_intl_law_v1": {
+      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "label": "National Sovereignty vs. International Law",
       "count": 3,
-      "share": 0.054
-    },
-    "axis_global_power_realignments_v1": {
-      "axis_id": "axis_global_power_realignments_v1",
-      "label": "Global Power Realignments and Shifting Hegemony",
-      "count": 3,
-      "share": 0.054
-    },
-    "axis_power_accountability": {
-      "axis_id": "axis_power_accountability",
-      "label": "Power, Institutions, and Rule of Law",
-      "count": 2,
-      "share": 0.036
+      "share": 0.05
     },
     "axis_political_trust_corruption_v1": {
       "axis_id": "axis_political_trust_corruption_v1",
       "label": "Trust in Political Institutions and Anti-Corruption Efforts",
-      "count": 2,
-      "share": 0.036
-    },
-    "axis_global_economic_stability_v1": {
-      "axis_id": "axis_global_economic_stability_v1",
-      "label": "Global Economic Stability and Market Volatility",
-      "count": 2,
-      "share": 0.036
+      "count": 1,
+      "share": 0.017
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 31,
-      "share": 0.554
+      "count": 28,
+      "share": 0.467
     },
     "us_politics": {
       "cluster": "us_politics",
       "count": 6,
-      "share": 0.107
-    },
-    "geopolitics": {
-      "cluster": "geopolitics",
-      "count": 6,
-      "share": 0.107
-    },
-    "disinformation": {
-      "cluster": "disinformation",
-      "count": 5,
-      "share": 0.089
+      "share": 0.1
     },
     "breaking_news": {
       "cluster": "breaking_news",
+      "count": 5,
+      "share": 0.083
+    },
+    "geopolitics": {
+      "cluster": "geopolitics",
       "count": 4,
-      "share": 0.071
+      "share": 0.067
+    },
+    "disinformation": {
+      "cluster": "disinformation",
+      "count": 4,
+      "share": 0.067
     }
   },
   "pole_balance": {
-    "left": 19,
-    "right": 37,
-    "neutral": 0,
-    "left_share": 0.339,
-    "right_share": 0.661
+    "left": 18,
+    "right": 41,
+    "neutral": 1,
+    "left_share": 0.3,
+    "right_share": 0.683
   }
 }

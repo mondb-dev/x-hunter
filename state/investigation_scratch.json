@@ -1,57 +1,31 @@
 {
-  "claim": "Strait of Hormuz effectively closed to US/Israel-linked vessels",
-  "source_handle": "@currentreport1",
-  "phase": "PRIMARY RESEARCH - COMPLETED",
   "sub_questions": [
     {
-      "id": 1,
-      "question": "Who originally made the claim that the Strait of Hormuz is effectively closed to US/Israel-linked vessels, or who is @currentreport1 quoting/referencing?"
+      "id": "q1",
+      "question": "Did @currentreport1 originate the claim 'Strait of Hormuz effectively closed to US/Israel-linked vessels', and what is the exact wording and timestamp of their tweet?",
+      "status": "in progress"
     },
     {
-      "id": 2,
-      "question": "What is the precise meaning and scope of 'effectively closed' in this context? Does it imply a blockade, military action, or a specific directive?"
+      "id": "q2",
+      "question": "What specific actions or conditions constitute 'effectively closed' in the context of the Strait of Hormuz, and who declared or enforced them?",
+      "status": "pending"
     },
     {
-      "id": 3,
-      "question": "When was this claim first made or reported, and what was the immediate context (e.g., specific incident, official statement)?"
+      "id": "q3",
+      "question": "What criteria define a 'US/Israel-linked vessel' in this context, and who set these criteria?",
+      "status": "pending"
     },
     {
-      "id": 4,
-      "question": "Are there any official statements, press releases, or government records from any relevant party (e.g., US, Israel, Iran, international maritime organizations) confirming or denying such restrictions in the Strait of Hormuz?"
+      "id": "q4",
+      "question": "When was the Strait of Hormuz purportedly 'effectively closed' according to the claim? Is this a recent event or historical?",
+      "status": "pending"
     }
   ],
   "findings": [
     {
-      "sub_question_id": 1,
-      "answer": "The claim, as presented with a '2026' timeline in search results, appears to be a speculative scenario discussed by think tanks and analyses of potential future geopolitical conflicts, rather than a report of a current event. The X account @currentreport1 seems to be a Greek news account that may have reported on this speculative scenario, but is not the originator of the scenario itself.",
-      "sources": [
-        {"url": "https://en.wikipedia.org/wiki/Strait_of_Hormuz", "domain": "wikipedia.org", "title": "Strait of Hormuz - Wikipedia", "quote": "The 2026 Strait of Hormuz closure scenario originated from escalating geopolitical tensions...", "date": "N/A"},
-        {"url": "https://www.atlanticcouncil.org/", "domain": "atlanticcouncil.org", "title": "The Strait of Hormuz: A Future Scenario", "quote": "...analysis of potential future conflicts...", "date": "N/A"},
-        {"url": "https://www.csis.org/", "domain": "csis.org", "title": "Iran and the Strait of Hormuz: A Future Crisis", "quote": "...speculative scenario that has been presented as a current fact.", "date": "N/A"},
-        {"url": "https://www.pronews.gr/", "domain": "pronews.gr", "title": "Current Report (@Currentreport1)", "quote": "...mentions Current Report (@Currentreport1) in the context of a news article.", "date": "N/A"}
-      ]
-    },
-    {
-      "sub_question_id": 2,
-      "answer": "In the context of the '2026 scenario,' 'effectively closed' implies a combination of military action (Iran issuing warnings, boarding ships, laying sea mines) and a 'dual blockade' where Iran blocks the Gulf and the US Navy blocks Iranian ports.",
-      "sources": [
-        {"url": "https://en.wikipedia.org/wiki/Strait_of_Hormuz", "domain": "wikipedia.org", "title": "Strait of Hormuz - Wikipedia", "quote": "...Iran blockading the Gulf and the US Navy blockading Iranian ports.", "date": "N/A"}
-      ]
-    },
-    {
-      "sub_question_id": 3,
-      "answer": "The scenario describes events starting with an air war in February 2026 and an official closure on March 4, 2026. The context is escalating geopolitical tensions, failed nuclear negotiations, and a hypothetical US-Israel air conflict with Iran. This is a future, hypothetical timeline.",
-      "sources": [
-        {"url": "https://en.wikipedia.org/wiki/Strait_of_Hormuz", "domain": "wikipedia.org", "title": "Strait of Hormuz - Wikipedia", "quote": "February 28, 2026: The United States and Israel launched an air war against Iran...", "date": "N/A"}
-      ]
-    },
-    {
-      "sub_question_id": 4,
-      "answer": "Given that the claim refers to a hypothetical 2026 scenario, there are no *current* official statements from governments or international bodies confirming an 'effective closure' of the Strait of Hormuz to US/Israel-linked vessels *today*. The sources found discuss this as a future risk or analytical scenario.",
-      "sources": [
-        {"url": "https://www.atlanticcouncil.org/", "domain": "atlanticcouncil.org", "title": "The Strait of Hormuz: A Future Scenario", "quote": "...analysis of potential future conflicts...", "date": "N/A"},
-        {"url": "https://www.csis.org/", "domain": "csis.org", "title": "Iran and the Strait of Hormuz: A Future Crisis", "quote": "...speculative scenario...", "date": "N/A"}
-      ]
+      "question_id": "q1",
+      "detail": "Initial web search for the exact claim and @currentreport1 yielded results that discuss a hypothetical conflict scenario (e.g., 'began on February 28, 2026', 'strikes on Iran's nuclear facilities in June 2025'), suggesting the claim might be speculative or fictional, rather than a report of a current event.",
+      "sources": []
     }
   ]
 }
