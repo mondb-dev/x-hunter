@@ -25,8 +25,9 @@ const path = require("path");
 const ROOT  = path.resolve(__dirname, "../..");
 const STATE = path.join(ROOT, "state");
 
-const { callVertex } = require("../vertex.js");
-const sprintDb       = require("./db.js");
+const { callVertex }   = require("../vertex.js");
+const { loadSprintDb } = require("../lib/db_backend");
+const sprintDb         = loadSprintDb();
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -285,13 +286,13 @@ async function runDailyTracking(planId) {
   const d = today();
   console.log(`[sprint/tracker] running daily tracking for plan "${planId}" on ${d}`);
 
-  const currentSprint = sprintDb.getCurrentSprint(planId);
+  const currentSprint = await Promise.resolve(sprintDb.getCurrentSprint(planId));
   if (!currentSprint) {
     console.log("[sprint/tracker] no active sprint — skipping tracking");
     return { action: "no_sprint" };
   }
 
-  const tasks   = sprintDb.getTasks(currentSprint.id);
+  const tasks   = await Promise.resolve(sprintDb.getTasks(currentSprint.id));
   const signals = gatherTodaySignals();
 
   console.log(`[sprint/tracker] ${signals.length} signals found today, ${tasks.length} tasks in sprint`);
@@ -302,33 +303,33 @@ async function runDailyTracking(planId) {
 
     // Apply matches
     for (const m of (result.matches || [])) {
-      sprintDb.updateTaskStatus(m.task_id, m.new_status, null);
-      sprintDb.addAccomplishment({
+      await Promise.resolve(sprintDb.updateTaskStatus(m.task_id, m.new_status, null));
+      await Promise.resolve(sprintDb.addAccomplishment({
         plan_id:     planId,
         task_id:     m.task_id,
         date:        d,
         description: m.accomplishment,
         evidence:    signals[m.signal_index - 1]?.description || null,
-      });
+      }));
       console.log(`[sprint/tracker] task ${m.task_id} → ${m.new_status}: ${m.accomplishment}`);
     }
 
     // Record unmatched but noteworthy signals
     for (const u of (result.unmatched_signals || [])) {
       if (u.accomplishment) {
-        sprintDb.addAccomplishment({
+        await Promise.resolve(sprintDb.addAccomplishment({
           plan_id:     planId,
           task_id:     null,
           date:        d,
           description: u.accomplishment,
           evidence:    signals[u.signal_index - 1]?.description || null,
-        });
+        }));
       }
     }
   }
 
   // Check if sprint should auto-complete (end date passed or all tasks done)
-  const refreshedTasks = sprintDb.getTasks(currentSprint.id);
+  const refreshedTasks = await Promise.resolve(sprintDb.getTasks(currentSprint.id));
   const allDone        = refreshedTasks.length > 0 && refreshedTasks.every(t => t.status === "done");
   const pastEndDate    = currentSprint.end_date && d > currentSprint.end_date;
 
@@ -337,17 +338,18 @@ async function runDailyTracking(planId) {
     const reason = allDone ? "all tasks done" : "end date passed";
     console.log(`[sprint/tracker] completing sprint week ${currentSprint.week} (${reason})`);
 
-    const accomplishments = sprintDb.getAccomplishments(planId);
+    const accomplishments = await Promise.resolve(sprintDb.getAccomplishments(planId));
     const retro = await generateRetro(currentSprint, refreshedTasks, accomplishments);
-    sprintDb.completeSprint(currentSprint.id, retro);
+    await Promise.resolve(sprintDb.completeSprint(currentSprint.id, retro));
     console.log(`[sprint/tracker] retro: ${retro.slice(0, 150)}...`);
 
     // Carry forward incomplete tasks to the next sprint
     const incompleteTasks = refreshedTasks.filter(t => t.status !== "done");
     if (incompleteTasks.length > 0 && !allDone) {
-      const nextSprint = sprintDb.getSprints(planId).find(s => s.status === "not_started");
+      const allSprints2 = await Promise.resolve(sprintDb.getSprints(planId));
+      const nextSprint = allSprints2.find(s => s.status === "not_started");
       if (nextSprint) {
-        const carried = sprintDb.rolloverTasks(currentSprint.id, nextSprint.id);
+        const carried = await Promise.resolve(sprintDb.rolloverTasks(currentSprint.id, nextSprint.id));
         console.log(`[sprint/tracker] carried ${carried} incomplete task(s) to week ${nextSprint.week}`);
       } else {
         console.log(`[sprint/tracker] ${incompleteTasks.length} incomplete task(s) but no next sprint to carry forward to`);
@@ -363,18 +365,18 @@ async function runDailyTracking(planId) {
     .map(t => t.title)
     .join("; ");
 
-  sprintDb.upsertDailyLog({
+  await Promise.resolve(sprintDb.upsertDailyLog({
     plan_id:      planId,
     date:         d,
     focus:        currentSprint.goal,
     active_tasks: activeTasks || "(all done)",
     blockers:     null,
     notes:        `Signals: ${signals.length}, Matches applied: ${signals.length > 0 ? "yes" : "no"}`,
-  });
+  }));
 
   if (sprintCompleted) {
     // Check if this was the last sprint (week 4+)
-    const allSprints = sprintDb.getSprints(planId);
+    const allSprints = await Promise.resolve(sprintDb.getSprints(planId));
     const maxWeek    = Math.max(...allSprints.map(s => s.week));
     if (maxWeek >= 4 && allSprints.every(s => s.status === "completed")) {
       console.log("[sprint/tracker] all sprints completed — plan may be done");
