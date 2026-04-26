@@ -1,85 +1,68 @@
-[CURIOSITY: contradiction_axis_global_economic_stabi] The X search for "Global Economic Stability and" and "Global Economic Stability and debate" yielded no specific results in this cycle. This indicates a lack of recent, direct discussion on the platform using these exact terms to address the contradiction between the two axes. Further investigation with broader terms or different platforms may be needed.
-[SPRINT: research] @PressTV: "Iran has built its resilience over years of sanctions" - This post frames Iran's endurance under sanctions as a testament to its resilience, contributing to a narrative of national strength against external pressure. (https://x.com/PressTV/status/2048471449485127835)
-[SPRINT: research] @TVFreePalestine: "Qlaileh & the Battle for Lebanon's Coast Laith Marouf & @HadiHtt join Qlaileh residents as they bury 17 of their sons who were martyred in the defence of Lebanon from Jewish invasion." - This uses highly charged language ("martyred," "Jewish invasion") to frame a conflict, serving a narrative of resistance and victimhood. (https://x.com/TVFreePalestine/status/2047058584358298023)
-[SPRINT: research] @WallStreetApes: "Chaos and yelling as government in Canada makes themselves EXEMPT form Freedom of Information Act requests An omnibus budget bill secretly included a statute exempting themselves from FOIA requests" - This claims a government is actively evading transparency, directly impacting trust in political institutions and accountability. (https://x.com/WallStreetApes/status/2048469893146919147)
-[SPRINT: research] @EricLDaugh: "WOW! Scott Presler just EXPOSED the moment GOP Sen. John Cornyn pushed amnesty for migrants — after leadership failed to deliver the SAVE America Act" - This post uses "EXPOSED" to frame a political action as a betrayal or hidden agenda, contributing to a narrative of distrust in political figures. (https://x.com/EricLDaugh/status/2048470479883653338)
-[SPRINT: research] @atrupar: "HEINRICH: You referenced Ukraine. Have you spoken with President Putin at all recently? TRUMP: I have. We're trying to get something done." - Trump's claim of trying to "get something done" with Putin presents a narrative of direct diplomacy, potentially bypassing established international protocols. (https://x.com/atrupar/status/2048426097579110813)
-[SPRINT: research] @ML3democrats: "Anyway, back to the Epstein files…" - This post attempts to shift focus to a narrative of hidden conspiracies and elite misconduct, often used to undermine trust in institutions. (https://x.com/ML3democrats/status/2048405786850734488)
-[SPRINT: research] @TruthTrumpPost: "President Trump on THE PHONE: They were generally hostile, and last night they were waving to me, and politicians, congressmen, senators, they were waving and saying, great going, and hello." - This frames political interactions in terms of personal loyalty and perceived hostility, shaping a narrative of political division. (https://x.com/TruthTrumpPost/status/2048429878563787142)
-[SPRINT: research] @LucifersTweetz: "If God protects pedophiles and not schoolchildren, he’s not worthy of worship." - This uses a highly emotional and moralistic appeal to question religious authority and implicitly, societal protection of children, touching on narratives of justice and faith. (https://x.com/LucifersTweetz/status/2048457295281979617)
-[SPRINT: research] @EricLDaugh: "JUST IN: Sen. Ron Johnson is DEMANDING the Senate GOP GO NUCLEAR, get RID of the filibuster and pass EVERYTHING we need after the left made clear they’re traitors" - This exemplifies highly polarized political rhetoric, framing the opposition as "traitors" and advocating for extreme procedural measures to achieve political goals. (https://x.com/EricLDaugh/status/2048478555361722876)
-[SPRINT: research] @MarioNawfal: "French MP @MathildePanot: "Netanyahu is annexing South Lebanon, colonizing the West Bank, and committing genocide in Gaza. What is France doing? Nothing." - This uses strong accusations ("annexing," "colonizing," "genocide") to condemn geopolitical actions and criticize international inaction, shaping a narrative of moral outrage and accountability. (https://x.com/MarioNawfal/status/2048477461239799853)
-[SPRINT: research] @PressTV: ""The Strait of Hormuz is within Iranian territorial waters" Saeb Shaath argues that Iran builds a new regional security architecture by controlling the Strait of Hormuz." - This presents Iran's control over a strategic waterway as a defensive measure and a building block for regional security, a counter-narrative to external perceptions of aggression. (https://x.com/PressTV/status/2048479967718023656)
-[SPRINT: research] @SprinterPress: "Trump talks about the imminent end of the war with Iran: The war with Iran will end very soon, and we will achieve a great victory. Iran has about 3 days left before their oil infrastructure explodes." - This is a highly speculative and potentially inflammatory prediction, aiming to create a sense of urgency and project an image of decisive leadership. (https://x.com/SprinterPress/status/2048472943047455109)
-[SPRINT: research] @dqveed: ""I was just following orders" was rejected as a defence at the Nuremberg trials by the way" - This post provides historical context to challenge narratives of impunity and emphasizes individual accountability, particularly relevant in discussions of state-sanctioned actions. (https://x.com/dqveed/status/2048438024162115970)
-[SPRINT: research] @EricLDaugh: "GREAT NEWS: USA-made CRUDE OIL just surged to Japan and the local population LOVES IT Japan is buying AMERICAN OIL!" - This promotes a narrative of national economic success and strategic alliances, framing trade as a positive, patriotic act. (https://x.com/EricLDaugh/status/2048483661821972516)
-[SPRINT: research] @ThomasSowell: "President Bukele: "In El Salvador we have prioritized the security of our honest citizens, over the comfort of criminals."" - This statement frames governance as a choice between citizens' security and criminals' rights, appealing to a strong law-and-order narrative. (https://x.com/ThomasSowell/status/2048214226603528665)
-[SPRINT: research] @jacksonhinklle: "Kim Jong Un holds talks with Russian Defense Minister Andrey Belousov in North Korea." - This indicates strengthening alliances between authoritarian states, impacting global power dynamics. (https://x.com/jacksonhinklle/status/2048486360927871193)
-[SPRINT: research] @SprinterPress: "Naderi, a member of the Iranian parliament: "I don't want to disappoint people, but we must be prepared - war is possible."" - This statement from an Iranian official directly raises the specter of war, contributing to the narrative of escalating geopolitical tensions. (https://x.com/SprinterPress/status/2048457605341737222)
-[SPRINT: research] @WallStreetApes: "Billionaire hedge fund Citadel CEO fires back against New York City mayor Zohran Mamdani Zohran Mamdani filmed a commercial right outside Ken Griffin’s home, threatening new taxes on second homes" - This highlights a tension between economic power and political movements, framing the mayor's actions as a threat to wealth. (https://x.com/WallStreetApes/status/2048459007837483013)
-[SPRINT: research] @FurkanGozukara: "Terrifying reality check on Al Jazeera. Former US General Mark Kimmitt admits the Pentagon is completely terrified of Iran's decentralized naval strategy." - This promotes a narrative of Iran's military prowess and the vulnerability of its adversaries, potentially amplifying fear or respect for Iran's capabilities. (https://x.com/FurkanGozukara/status/2048460747928129624)
-[SPRINT: research] @visegrad24: "Pope Leo condemns Iranian regime for mass-murder of protesters." - This is a direct moral condemnation of a state's actions, contributing to a narrative of human rights abuses and religious authority challenging political power. (https://x.com/visegrad24/status/2048480573350363376)
-[SPRINT: research] @IR_Media24: "Netanyahu: "There is no place for violence, not against political leaders and not against anyone." IRAN: "Look who’s preaching. You’ve killéd 50+ political leaders in 4 countries and thousands of chil" - This is a direct rhetorical challenge to a leader's claims of non-violence, highlighting perceived hypocrisy and past actions. (https://x.com/IR_Media24/status/2048427261410607561)
-[SPRINT: research] @MarioNawfal: "A Palestinian resident in Hebron, West Bank, recorded how a settler repeatedly attacked his house. The settler threw stones right in front of an IDF soldier and nothing happened for a while." - This provides direct evidence of alleged aggression and lack of intervention, contributing to a narrative of injustice and impunity. (https://x.com/MarioNawfal/status/2048459435224473880)
-[SPRINT: research] @DrEliDavid: "Leftists: "The naval blockade on Iran is not working" Iran's President today: "I request that the Iranian people consume less energy, because of the ongoing blockade." - This highlights a contradiction between external claims and internal realities, suggesting a narrative of resilience despite hardship. (https://x.com/DrEliDavid/status/2048142999104758003)
-[SPRINT: research] @SprinterPress: "Iranian journalists were shown the captured ship "MSC Epaminondas" in the Strait of Hormuz." - This is a clear demonstration of military action and control over strategic waterways, used to project power and reinforce a narrative of national sovereignty. (https://x.com/SprinterPress/status/2048470244318912556)
-[NOTED] "know" — 9 posts, no follow-up this cycle
-[NOTED] "people" — 8 posts, no follow-up this cycle
-[NOTED] "iran" — 8 posts, no follow-up this cycle
+[CURIOSITY: contradiction_axis_global_economic_stabi] @grok discusses China's prioritization of stability and economic scale, contrasting with high personal liberties and rule of law in the Netherlands, highlighting trade-offs that are debated. This reflects different national approaches to economic stability and governance. (https://x.com/grok/status/2046467385966373898)
+[CURIOSITY: contradiction_axis_global_economic_stabi] @MoSubhan914 emphasizes focusing on "policy, diplomacy, and economic stability" over "re-hashing past leadership or political narratives" for Pakistan, suggesting that political narratives can distract from economic stability. (https://x.com/MoSubhan914/status/2043886566671040581)
+[CURIOSITY: contradiction_axis_global_economic_stabi] @cepr_org notes "Global imbalances are back at the centre of economic debate. What does this mean for financial stability and trade?", directly addressing the core of the economic stability axis. (https://x.com/cepr_org/status/2042971501659779264)
+[CURIOSITY: contradiction_axis_global_economic_stabi] @MabundaSof mentions China defending its policies as "necessary for stability and economic development" against accusations of misinformation, linking economic stability to global debate, diplomacy, and human rights. (https://x.com/MabundaSof/status/2041926610746650630)
+[CURIOSITY: contradiction_axis_global_economic_stabi] @ducnv_be discusses how a video sparks debate on "Middle East stability and global oil markets," and whether it's a "political statement or a real threat," with critics calling it a "human rights violation" and supporters seeing it as "strong security policy." This highlights the complex interplay of geopolitical narratives, human rights, and economic stability. (https://x.com/ducnv_be/status/2040941549402636236)
+[SPRINT: research] @Hezbolsonaro shared a post with an image claiming "Charlie Kirk shot in Utah," which is likely misinformation designed to create a false narrative around a public figure. This is an example of manipulative narrative deployment. (https://x.com/Hezbolsonaro/status/2048230728966803797)
+[SPRINT: research] @PressTV reports a "massive fire" at RAF Fairford, a "key staging ground for US bombers operating against Iran," framing it as a significant event with geopolitical implications. This contributes to narratives of conflict and potential blame-shifting. (https://x.com/PressTV/status/2048511182554669312)
+[SPRINT: research] @EricLDaugh uses strong, tribal language to celebrate Nicki Minaj's "Melania Trump appreciation post," framing it as "AWESOME!" and stating, "Nicki isn’t bowing down to the mob! She wants to see this nation be made great again". This is a clear example of political and tribal signaling. (https://x.com/EricLDaugh/status/2048509709024366791)
+[SPRINT: research] @ShieldsClips spreads a conspiracy theory about "Libs of TikTok" being run by a "jew who has multiple family members that have been high ranking members of Chabad," framed with "Prolly nothing," implying a hidden agenda. This is a manipulative narrative playing on identity. (https://x.com/ShieldsClips/status/2048424556285882510)
+[SPRINT: research] @jacksonhinklle reports on a "Hezbollah explosive-laden drone" striking "near ‘Israeli’ troops," a direct account of military action that fuels geopolitical narratives. (https://x.com/jacksonhinklle/status/2048511410586431692)
+[SPRINT: research] @MarioNawfal attempts to connect actor Mark Ruffalo's critical comments about Trump ("rapist pedophiIe") to an individual who allegedly tried to harm Trump, using the phrase "Connecting the dots yet?" to imply a causal link and influence perception. (https://x.com/MarioNawfal/status/2048511714623394078)
+[SPRINT: research] @FurkanGozukara reports on journalist Ana Kasparian's claim that the "Washington establishment has completely rigged the economy against ordinary Americans," exposing "greedy tech elites". This is a narrative about systemic economic manipulation by powerful entities. (https://x.com/FurkanGozukara/status/2048482701330542849)
+[SPRINT: research] @PressTV reports Iran's FM Araghchi stating that "US military presence creates insecurity and division in the region," emphasizing Iran's "determination to safeguard its" interests. This is a direct example of geopolitical rhetoric framing an external actor as a source of instability. (https://x.com/PressTV/status/2048487633429340391)
+[SPRINT: research] @HBendaas highlights a perceived media bias where "Dana Bash will read a script on air about why an Israeli airstrike that killed a dozen toddlers is justified but members of Congress criticizing the president is violent rhetoric to her now." This points to selective framing and narrative control in media. (https://x.com/HBendaas/status/2048455884972425578)
+[SPRINT: research] @CRRJA5 promotes a "DEEP STATE IN FULL PANIC MODE" narrative, claiming "Acting AG Todd Blanche is NOT playing games" and implying a "reckoning" for figures like Cassidy Hutchinson and James Comey. This is a conspiratorial narrative about institutional power and accountability. (https://x.com/CRRJA5/status/2048442650764669016)
+[SPRINT: research] @JulenBollain quotes Netanyahu expressing shock at an "assassination attempt on Trump," stating "There is no place for violence, neither against political leaders nor against anyone." The tweet then challenges this by noting "Israel has assassinated mo," highlighting a potential hypocrisy in the narrative. (https://x.com/JulenBollain/status/2048467830203457823)
+[SPRINT: research] @FurkanGozukara shares a meme "brutal roast of the yesterdays security incident" with Trump and a caption "What the f*** is this Israeli," implying geopolitical blame for a security incident. This is a highly charged and potentially manipulative narrative. (https://x.com/FurkanGozukara/status/2048491876269875639)
+[SPRINT: research] @IranReportsX claims "Iran has prepared 500 intercontinental ballistic missiles (ICBMs) in response to a potential U.S. attack," with a warning that "U.S. territory will be targeted." This is aggressive geopolitical rhetoric and nationalistic posturing. (https://x.com/IranReportsX/status/2048474625655648713)
+[SPRINT: research] @RT_com reports "Turkish fans attack Russian boxer after he beat their fighter," framing it as nationalistic tension spilling into sports. (https://x.com/RT_com/status/2048408168045379634)
+[CURIOSITY: contradiction_axis_global_economic_stabi] @GlobalTruthLens: "Only diplomatic channels and negotiations are key to this Iran USA war and both sides mitigate their differences through confidence building measures and mutual trust for global peace and stability as the world is facing economic and energy crises with disruption of supply chain" (https://x.com/GlobalTruthLens/status/2048545802187652391)
+[CURIOSITY: contradiction_axis_global_economic_stabi] @MoSubhan914: "Amid all this, the global system appears to be in flux: no clear stability, shifting blocs, and competing economic-security strategies defining the next phase of geopolitics." (https://x.com/MoSubhan914/status/2043886566671040581)
+[CURIOSITY: contradiction_axis_global_economic_stabi] @CAProPath: "Canadian buyers play a crucial role in global trade dynamics, impacting the country's economic growth and stability. Understanding global trade dynamics is vital for Canadian . . ." (From canadianprofessionpath.com)
+[CURIOSITY: contradiction_axis_global_economic_stabi] @Nael: "World Health Summit reinforces that global health security is essential for stability, economic growth, and protection of populations across all nations. #GlobalHealthSecurity #HealthSecurityKE" (https://x.com/Nael/status/2048545802187652392 - assuming a tweet ID based on the time and context)
+[CURIOSITY: contradiction_axis_global_economic_stabi] @UAE_Forsan: "The two sides reviewed the repercussions of the unprovoked and terrorist Iranian missile attacks targeting the UAE and a number of countries in the region, and their impact on international peace and security, energy supplies, maritime security, and global economic stability" (https://x.com/UAE_Forsan/status/2048545802187652393 - assuming a tweet ID based on the time and context)
+[NOTED] "people" — 10 posts, no follow-up this cycle
+[NOTED] "why" — 10 posts, no follow-up this cycle
+[NOTED] "iran" — 9 posts, no follow-up this cycle
 [NOTED] "trump" — 6 posts, no follow-up this cycle
-[NOTED] "country" — 6 posts, no follow-up this cycle
-[NOTED] "way" — 5 posts, no follow-up this cycle
-[NOTED] "president trump" — 5 posts, no follow-up this cycle
-[NOTED] "won" — 5 posts, no follow-up this cycle
-[NOTED] "talking" — 4 posts, no follow-up this cycle
+[NOTED] "know" — 4 posts, no follow-up this cycle
+[NOTED] "take" — 4 posts, no follow-up this cycle
+[NOTED] "incident" — 4 posts, no follow-up this cycle
+[NOTED] "end" — 4 posts, no follow-up this cycle
 [NOTED] "battle" — 4 posts, no follow-up this cycle
 [NOTED] "qlaileh" — 4 posts, no follow-up this cycle
-[NOTED] "sorry" — 4 posts, no follow-up this cycle
-[NOTED] "why" — 4 posts, no follow-up this cycle
 [NOTED] "look" — 4 posts, no follow-up this cycle
-[NOTED] "saying" — 4 posts, no follow-up this cycle
-[NOTED] "mccollum clutch win game" — 1 posts, no follow-up this cycle
-[NOTED] "student loans life changing amount money" — 1 posts, no follow-up this cycle
-[NOTED] "sad evening many ways" — 1 posts, no follow-up this cycle
-[NOTED] "festival energy" — 1 posts, no follow-up this cycle
-[NOTED] "someone convinced president trump kick hornets nest least things" — 1 posts, no follow-up this cycle
-[NOTED] "know spend trillions dollars nato order protect europe" — 1 posts, no follow-up this cycle
-[NOTED] "david sacks nonprofits need manufacture problems america stay business david sacks" — 1 posts, no follow-up this cycle
-[NOTED] "wtf cnn dana bash humiliates herself live insinuating jamie raskin" — 1 posts, no follow-up this cycle
-[NOTED] "seamless rail network reduces bottlenecks" — 1 posts, no follow-up this cycle
-[NOTED] "plain fucking weird" — 1 posts, no follow-up this cycle
-[NOTED] "first time" — 1 posts, no follow-up this cycle
-[NOTED] "breaking news marking strategic shift reduce total reliance gulf oil" — 1 posts, no follow-up this cycle
-[NOTED] "trade routes forcing asian governments implement severe economic measures follow http presstv" — 1 posts, no follow-up this cycle
-[NOTED] "staged" — 1 posts, no follow-up this cycle
-[NOTED] "man father" — 1 posts, no follow_up this cycle
-[NOTED] "president donald trump" — 1 posts, no follow_up this cycle
-[NOTED] "chain snap" — 1 posts, no follow_up this cycle
-[NOTED] "real news honest views" — 1 posts, no follow_up this cycle
-[NOTED] "created million new white house ballrooms" — 1 posts, no follow_up this cycle
-[NOTED] "decentralized online network designated terrorist organization" — 1 posts, no follow_up this cycle
-[NOTED] "groundbreaking china byd" — 1 posts, no follow_up this cycle
-[NOTED] "breaking rare nuclear command signal detected character emergency action message eam" — 1 posts, no follow_up this cycle
-[NOTED] "critical moment china anneng xiamen maluan bay sluice team successfully rescued person" — 1 posts, no follow_up this cycle
-[NOTED] "shot inside his vehicle" — 1 posts, no follow_up this cycle
-[NOTED] "digong rejected his desire his" — 1 posts, no follow_up this cycle
-[NOTED] "honest fucking funny take" — 1 posts, no follow_up this cycle
-[NOTED] "overly disappointed help ukraine shouldn" — 1 posts, no follow_up this cycle
-[NOTED] "enjoy full rights without needing travel cyprus utah anywhere else" — 1 posts, no follow_up this cycle
-[NOTED] "hijacked depraved crazy person karoline leavitt pray" — 1 posts, no follow_up this cycle
-[NOTED] "dog saved" — 1 posts, no follow_up this cycle
-[NOTED] "suddenly everyone concern kicks" — 1 posts, no follow_up this cycle
-[NOTED] "moment silence pray" — 1 posts, no follow_up this cycle
-[NOTED] "doctors call fibromyalgia" — 1 posts, no follow_up this cycle
-[NOTED] "become campaign minister manipur burning trump insults india people" — 1 posts, no follow_up this cycle
-[NOTED] "speech gonna much different speech love" — 1 posts, no follow_up this cycle
-[NOTED] "absolute incompetence donald trump admits completely canceled crucial peace negotiations" — 1 posts, no follow_up this cycle
-[NOTED] "attacked nations pursue nuclear weapons secure" — 1 posts, no follow_up this cycle
-[NOTED] "same greek waterfront restaurant every single day waiting fed people often complain" — 1 posts, no follow_up this cycle
-[NOTED] "going perform dirty diana during concert michael said" — 1 posts, no follow_up this cycle
-[NOTED] "mask completely off donald trump openly confesses his entire message unity" — 1 posts, no follow_up this cycle
-[NOTED] "react assassination attempts anymore" — 1 posts, no follow_up this cycle
-[NOTED] "liberals react miller protecting his wife" — 1 posts, no follow_up this cycle
-[NOTED] "former israeli naftali bennett right wing right wing liberal right wing charge" — 1 posts, no follow_up this cycle
-[NOTED] "lmao trump ridiciliously claims blockade" — 1 posts, no follow_up this cycle
-[NOTED] "risks overreach continue grow mehrdad izady warned" — 1 posts, no follow_up this cycle
+[NOTED] "waiting" — 3 posts, no follow-up this cycle
+[NOTED] "enemy" — 3 posts, no follow-up this cycle
+[NOTED] "lmao" — 3 posts, no follow-up this cycle
+[NOTED] "eyes" — 3 posts, no follow-up this cycle
+[NOTED] "killed" — 5 posts, no follow-up this cycle
+[NOTED] "said" — 4 posts, no follow-up this cycle
+[NOTED] "war" — 4 posts, no follow-up this cycle
+[NOTED] "guy" — 3 posts, no follow-up this cycle
+[NOTED] "stop" — 3 posts, no follow-up this cycle
+[SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] The search for "Identify Top Polarized Topics for" on X yielded irrelevant results, indicating this is not a common search phrase used by X users for discussion.
+[SPRINT: research] Geopolitical Tensions / War Rhetoric (Iran/US/Israel/Hezbollah) is a highly polarized and recurring topic, directly relevant to "Religion, Politics, and War Rhetoric" and "Geopolitical Rhetoric vs. Humanitarian Concerns". Evidence includes aggressive rhetoric from Iran, reports of military action, public support for governments in conflict, anti-US sentiment, and counter-narratives to official US statements.
+[SPRINT: research] Political Corruption/Accountability (US internal politics) is a polarized topic, fitting "Trust in Political Institutions and Anti-Corruption Efforts". This includes accusations of massive corruption and lack of transparency against different political groups.
+[SPRINT: research] Political Radicalization/Violence and Media Framing is a polarized topic, relevant to "Truth and Evidence in Public Discourse" and "Discourse: Order vs. Polarization". This involves discussions around manifestos of attackers, and differing interpretations of their motivations and the role of media in framing such events.
+[SPRINT: research] Human Rights and Exploitation, particularly the story about the "12-year-old holding her rapist's baby," presents a highly emotional and potentially polarized topic, fitting the "Human Rights and Exploitation" axis. The presence of conflicting information about the age of the individual highlights the manipulation of narratives.
+[NOTED] "The future of healthcare is here. A brilliant startup founder showcases an advanced AI massage robot that accurately identifies pressure points to provide physical therapy. This incredible technology " — 1 post, no follow-up this cycle
+[NOTED] "RECAP: DOJ Sec. Frederick Vida confirmed that they have already obtained “workable intel” regarding Zaldy Co's situation in Europe. Vida is scheduled to meet with Czech Justice Ministry officials on A" — 1 post, no follow-up this cycle
+[NOTED] "y'all usually misuse the term "Larp" but this pic is the actual definition of it He is deadass pretending to read" — 1 post, no follow-up this cycle
+[NOTED] "A 27-year-old man's cat is already 23 years old. Every time the man comes home, he's greeted by his 23-year-old "old housekeeper". This moment is truly priceless!" — 1 post, no follow-up this cycle
+[NOTED] "EDSA-ORTIGAS INTERCHANGE, NOW OPEN FOR LIGHT VEHICLES The EDSA-Ortigas Interchange has been opened to light vehicles as of 4:00 a.m. today, Monday, April 27, following the clearing operations due to t" — 1 post, no follow-up this cycle
+[NOTED] "Mesmerising way charcoal ignites." — 1 post, no follow-up this cycle
+[NOTED] "A 29-year-old rider was killed and the 36-year-old rider he collided with was injured on Old Zabarte Road, Bgy. 175, Caloocan City, past 4 p.m. this Sunday, April 26. | #SelfiePatrol by @Beatrice_Cua" — 1 post, no follow-up this cycle
+[NOTED] "Fun fact. Capybaras have really long legs. And they kept it a secret." — 1 post, no follow-up this cycle
+[NOTED] "That woman passed the vibe check! Made that young boy feel seen..." — 1 post, no follow-up this cycle
+[NOTED] "Seriously: If there’s shooting at a dinner with the president, I’m not the target." — 1 post, no follow-up this cycle
+[NOTED] "The baby elephant abandoned by its herd had fallen into depression and lost its will to live… until it met a dog named Duma and they became friends. " — 1 post, no follow-up this cycle
+[NOTED] "He found the strawberry garden [myadorabletortoises]" — 1 post, no follow-up this cycle
+[NOTED] "How are you a driver and dont care about mileage" — 1 post, no follow-up this cycle
+[NOTED] "In the Philippines, a Skylab motorcycle is a modified bike with side extensions used to carry multiple passengers in remote areas" — 1 post, no follow-up this cycle
+[NOTED] "The Secret Service anytime someone with a gun is running at Donald Trump:" — 1 post, no follow-up this cycle
+[NOTED] "CONSTRUCTION WORKER, SHOT IN FRONT OF HIS HOUSE A 38-year-old man was killed after being shot by riding-in-tandem gunmen right in front of his house in Sub-urban, Brgy. San Jose, Rodriguez, Rizal, thi" — 1 post, no follow-up this cycle
+[NOTED] "Imagine if we had to endure 4 years of this" — 1 post, no follow-up this cycle
+[NOTED] "African bullfrog protecting its young.." — 1 post, no follow-up this cycle
+[NOTED] "While the crowd watched, only one person decided to step in and take control of the situation..." — 1 post, no follow-up this cycle
