@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T10:48:20.674Z",
+  "generated_at": "2026-04-26T13:47:13.044Z",
   "windows": [
     "1d",
     "3d",
@@ -177,21 +177,21 @@
     },
     "axis_geopolitical_rhetoric_v1": {
       "current": {
-        "score": 0.0807,
+        "score": 0.0766,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": -0.0017,
+        "score_delta": -0.0058,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0074,
+        "score_delta": -0.0115,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0087,
+        "score_delta": -0.0128,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -219,23 +219,23 @@
     },
     "axis_public_trust_safety_crisis_v1": {
       "current": {
-        "score": 0,
+        "score": 0.0325,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0175,
+        "score_delta": 0.05,
         "conf_delta": 0.05,
-        "direction": "→"
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0.0175,
+        "score_delta": 0.05,
         "conf_delta": 0.046,
-        "direction": "→"
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0175,
+        "score_delta": 0.05,
         "conf_delta": 0.038,
-        "direction": "→"
+        "direction": "↗"
       }
     },
     "axis_political_dynasties_meritocracy_v1": {
@@ -324,63 +324,63 @@
     },
     "axis_global_economic_stability_v1": {
       "current": {
-        "score": 0.6891,
+        "score": 0.6855,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0036,
+        "score_delta": 0,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0028,
+        "score_delta": -0.0008,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0085,
+        "score_delta": 0.0049,
         "conf_delta": 0.002,
         "direction": "→"
       }
     },
     "axis_national_sovereignty_v_intl_law_v1": {
       "current": {
-        "score": 0.473,
+        "score": 0.4753,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0008,
+        "score_delta": 0.0031,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0079,
+        "score_delta": 0.0102,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0102,
+        "score_delta": 0.0125,
         "conf_delta": 0,
         "direction": "→"
       }
     },
     "axis_religion_politics_war_v1": {
       "current": {
-        "score": 0.6389,
+        "score": 0.6485,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0164,
+        "score_delta": 0.026,
+        "conf_delta": 0,
+        "direction": "↗"
+      },
+      "3d": {
+        "score_delta": -0.0187,
         "conf_delta": 0,
         "direction": "→"
       },
-      "3d": {
-        "score_delta": -0.0283,
-        "conf_delta": 0,
-        "direction": "↘"
-      },
       "7d": {
-        "score_delta": 0.0249,
+        "score_delta": 0.0345,
         "conf_delta": 0,
         "direction": "↗"
       }
@@ -472,21 +472,21 @@
     "axis_human_rights_exploitation_v1": {
       "current": {
         "score": -0.3511,
-        "confidence": 0.98
+        "confidence": 0.978
       },
       "1d": {
         "score_delta": 0,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "3d": {
         "score_delta": 0.0161,
-        "conf_delta": 0.006,
+        "conf_delta": 0.004,
         "direction": "→"
       },
       "7d": {
         "score_delta": 0.006,
-        "conf_delta": 0.002,
+        "conf_delta": 0,
         "direction": "→"
       }
     },
@@ -788,6 +788,7 @@
   "notable_count": 8,
   "momentum_axes": [
     "axis_historical_legacy_v1",
+    "axis_public_trust_safety_crisis_v1",
     "axis_immigration_policy_v_national_control_v1"
   ]
 }
