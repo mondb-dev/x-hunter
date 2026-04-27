@@ -1,26 +1,37 @@
-- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @HQNewsNow reports Trump denying being a rapist/pedophile in response to a reporter's question, highlighting attempts by powerful figures to control narratives and evade accountability. This is highly relevant to "Truth and Evidence in Public Discourse" and "Political Integrity and Moral Conduct in Public Service."
-- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @Realneo101 highlights a narrative around Erika Kirk's grief being called "performative," demonstrating how emotional appeals and tribal signaling are used to manipulate public opinion. This relates to "Truth and Evidence in Public Discourse" and "Authentic Participation vs. Managed Consent."
-- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @TheBritLad questions the Green Party leader Zack Polanski's claim of "absolutely no evidence asylum seekers sexually assaulting people," directly addressing a contradiction in public discourse and relating to "Truth and Evidence in Public Discourse."
-- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @RT_com reports a Congressman claiming "really shady billionaires" tried to kill him after meeting Epstein survivors, indicating potential suppression of information and evasion of accountability by powerful individuals. This is relevant to "Power, Institutions, and Rule of Law" and "Truth and Evidence in Public Discourse."
-- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @VividProwess shares an Iranian man's "truth bombs" claiming "Palestine didn't exist in history," which is a direct attempt to manipulate historical narratives. This relates to "Truth and Evidence in Public Discourse" and "Historical Legacy of Events."
-- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @RT_com quotes Trump saying the USA "shouldn't have helped Ukraine," which challenges existing geopolitical narratives. This is relevant to "Geopolitical Rhetoric vs. Humanitarian Concerns" and "Global Power Realignments."
-- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @mog_russEN reports Iran's FM meeting Putin in St. Petersburg, highlighting shifts in global power dynamics and alliances. This relates to "Global Power Realignments and Shifting Hegemony."
-- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @mohitlaws reports LoP Rahul Gandhi's statement about the BJP's delimitation bill aiming to weaken South India, Northeast, and smaller states, which highlights internal power struggles and potential manipulation of political processes. This is relevant to "Trust in Political Institutions and Anti-Corruption Efforts."
-- [NOTED] "think" — 11 posts, no follow-up this cycle
-- [NOTED] "trump" — 7 posts, no follow-up this cycle
-- [NOTED] "said" — 6 posts, no follow-up this cycle
-- [NOTED] "know" — 6 posts, no follow-up this cycle
-- [NOTED] "referring" — 5 posts, no follow-up this cycle
-- [NOTED] "white house correspondents dinner" — 4 posts, no follow-up this cycle
-- [NOTED] "why" — 4 posts, no follow-up this cycle
-- [NOTED] "truth" — 4 posts, no follow-up this cycle
-- [NOTED] "bro" — 4 posts, no follow-up this cycle
-- [NOTED] "yes" — 4 posts, no follow-up this cycle
-- [NOTED] "remember" — 4 posts, no follow-up this cycle
-- [NOTED] "man" — 4 posts, no follow-up this cycle
-- [NOTED] "iran" — 7 posts, no follow-up this cycle
-- [NOTED] "president" — 5 posts, no follow-up this cycle
-- [NOTED] "usa" — 5 posts, no follow-up this cycle
-- [NOTED] "people" — 5 posts, no follow-up this cycle
-- [NOTED] "waiting" — 4 posts, no follow-up this cycle
-- [NOTED] "read" — 4 posts, no follow-up this cycle
+[SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] Identified several polarized topics from X search:
+- Economic Issues / Cost of Living / Inflation: Political division on economic priorities. (Source: @Peoples_Pundit)
+- Trump's Popularity / Election Integrity / Threats to Democracy: Polarization around Trump, election legitimacy, and the state of democracy. (Source: @That_Bebbzy_Guy)
+- Indian Online Discourse / BJP vs. INC / Anti-Indian Sentiment: Highly polarized political landscape in India, with accusations of foreign influence and ideological battles. (Source: @TheEmissaryCo, @Royalsinghz3)
+- Israeli-Palestinian Conflict / Generational and Partisan Divide: Major ongoing polarized topic with emotional and geopolitical implications. (Source: @RoyaNewsEnglish)
+[NOTED] "trump" — 8 posts, no follow-up this cycle
+[NOTED] "think" — 7 posts, no follow-up this cycle
+[NOTED] "know" — 7 posts, no follow-up this cycle
+[NOTED] "read" — 5 posts, no follow-up this cycle
+[NOTED] "people" — 5 posts, no follow-up this cycle
+[NOTED] "pedophile" — 4 posts, no follow-up this cycle
+[NOTED] "war" — 4 posts, no follow-up this cycle
+[NOTED] "world" — 4 posts, no follow-up this cycle
+[NOTED] "referring" — 3 posts, no follow-up this cycle
+[NOTED] "look" — 3 posts, no follow_up this cycle
+[NOTED] "rapist" — 3 posts, no follow_up this cycle
+[NOTED] "israelis" — 3 posts, no follow_up this cycle
+[NOTED] "president trump" — 3 posts, no follow_up this cycle
+[NOTED] "thing" — 3 posts, no follow_up this cycle
+[NOTED] "remember" — 3 posts, no follow_up this cycle
+[NOTED] "war" — 6 posts, no follow_up this cycle
+[NOTED] "know" — 6 posts, no follow_up this cycle
+[NOTED] "trump" — 6 posts, no follow_up this cycle
+[NOTED] "people" — 5 posts, no follow_up this cycle
+[NOTED] "think" — 4 posts, no follow_up this cycle
+[NOTED] "look" — 4 posts, no follow_up this cycle
+[NOTED] "pedophile" — 4 posts, no follow_up this cycle
+[NOTED] "world" — 4 posts, no follow_up this cycle
+[NOTED] "said" — 4 posts, no follow_up this cycle
+[NOTED] "referring" — 3 posts, no follow_up this cycle
+[NOTED] "white house correspondents dinner" — 3 posts, no follow_up this cycle
+[NOTED] "israel" — 3 posts, no follow_up this cycle
+[NOTED] "rapist" — 3 posts, no follow_up this cycle
+[NOTED] "security" — 3 posts, no follow_up this cycle
+[NOTED] "israelis" — 3 posts, no follow_up this cycle
+[SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] Observation: "The US refuses to acknowledge the many problems and institutional crises confronting its democracy at home and stubbornly claims to be the template and beacon of democracy for the world." This aligns with the "Trump's Popularity / Election Integrity / Threats to Democracy" polarized topic, highlighting a narrative of institutional failure and hypocrisy. (Source: @JamesSager)
+[SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] Further evidence of polarized topics: The US's refusal to acknowledge its own democratic issues while projecting itself as a global democratic beacon feeds into the "Trump's Popularity / Election Integrity / Threats to Democracy" narrative. This post from @JamesSager highlights a key tension in how nations present themselves versus their internal realities.
