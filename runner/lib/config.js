@@ -80,4 +80,9 @@ module.exports = {
   BROWSE_ARCHIVE_MAX_LINES: 6000,
   ENGAGEMENT_SUMMARY_PATH: path.join(STATE_DIR, 'engagement_summary.json'),
   TRAJECTORY_SUMMARY_PATH: path.join(STATE_DIR, 'trajectory_summary.txt'),
+
+  // META cycle (process improvement)
+  PROCESS_PROPOSAL_PATH: path.join(STATE_DIR, 'process_proposal.json'),
+  PROCESS_REFLECTION_STATE_PATH: path.join(STATE_DIR, 'process_reflection_state.json'),
+  PROPOSAL_HISTORY_PATH: path.join(STATE_DIR, 'proposal_history.json'),
 };
