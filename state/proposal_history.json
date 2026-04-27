@@ -271,6 +271,26 @@
       "pushed_to_origin": true,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_coordinated_narrative_detection_1714246800000",
+      "title": "Implement Coordinated Narrative Detection Module",
+      "status": "failed",
+      "proposed_at": "2026-04-27T12:22:01.774Z",
+      "resolved_at": "2026-04-27T12:47:59.188Z",
+      "resolution_notes": "Target files already dirty before META apply: M state/ontology.json",
+      "files_changed": [
+        "runner/lib/coordinated_narrative_detector.js",
+        "runner/feed_analysis.js",
+        "runner/belief_update.js",
+        "runner/report.js",
+        "state/ontology.json"
+      ],
+      "branch_name": "meta/proposal_coordinated_narrative_detection_1714246800000",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }

@@ -1,23 +1,23 @@
 {
-  "id": "proposal_narrative_contestation_mapping_1713346961000",
-  "status": "merged",
-  "title": "Implement Narrative Contestation Mapping Module",
-  "problem": "My current belief formation process is effective at evaluating individual claims and seeking immediate validation, but it lacks a systematic framework for identifying, tracking, and characterizing *competing narratives* or *information operations* around contentious topics. While I recognize when claims are 'contested' or 'used to frame' a discussion, I do not systematically map the landscape of these contestations, including the actors involved, the distinct narratives they promote, or their evolution over time. This leaves me potentially vulnerable to being swayed by dominant narratives or missing crucial counter-narratives, hindering a comprehensive understanding of complex issues, especially in geopolitical and ideological contexts.",
+  "id": "proposal_coordinated_narrative_detection_1714246800000",
+  "status": "failed",
+  "title": "Implement Coordinated Narrative Detection Module",
+  "problem": "The current system can track narrative shifts and contestation but lacks a dedicated module to identify and analyze potential coordinated information campaigns, astroturfing, or state-sponsored influence operations. This limits the ability to discern organic skepticism from manufactured distrust, particularly around sensitive events.",
   "evidence": [
-    "2026-04-15 report, `axis_political_vulnerability_foreign_influence`: 'Driven by: 1. @iamufohunter's claim that Iranian protests were funded by Israel and the US, despite being conteste [@iamufohunter/status/2044135244509704686]'. The explicit mention of 'contested' indicates an awareness of conflicting views, but the current report structure doesn't detail the *nature* or *sources* of the contestation. The web search `[web_search Iranian protests funded by Israel and US]` provides some confirmation but doesn't map the full narrative landscape.",
-    "2026-04-15 report, `axis_human_rights_and_exploitation`: 'Driven by: 2. Some interpretations of Quranic verses have been used to justify domestic violence, while many schol [web_search Muslim man tortures wife Quran verses]'. Here, the web search explicitly points to 'some interpretations' vs. 'many scholars,' indicating a debate or differing narratives, but this isn't systematically tracked beyond this single instance.",
-    "2026-04-15 report, `axis_immigration_policy_open_borders_vs_national_control_and_cultural_preservation`: 'Driven by: 3. A post claiming that 95% of 'refugees' coming to Europe are military-aged Muslim men is often used t [@realMaalouf/status/2044057440455479667]'. The phrase 'often used to frame' directly points to a narrative being constructed, but I don't have a mechanism to track the broader usage or counter-arguments to this framing."
+    "2026-04-26 Belief Report: 'Public Trust in Safety and Crisis Communication' axis moved, driven by tweets questioning the legitimacy of a reported incident. While these tweets contributed to a belief shift, the system doesn't currently distinguish if these are isolated expressions or part of a coordinated effort. [@Suzierizzo1/status/2048320119424569574, @Wells_P/status/2048207658243735573, @gatesisthedevil/status/2048232969614332083]",
+    "The recently merged 'Narrative Contestation Mapping Module' identifies differing narratives but doesn't analyze the coordination or authenticity of their propagation."
   ],
-  "proposed_solution": "Implement a 'Narrative Contestation Mapping Module' within the journaling pipeline. This module would actively identify topics where significant conflicting claims or narratives are detected (e.g., via explicit 'contested' flags, keyword analysis, or divergence from established sources during web searches). For such topics, it would then attempt to: 1) identify and categorize the primary distinct narratives being pushed, 2) track the sources (users, accounts, media outlets) promoting each narrative, 3) monitor the prevalence and evolution of these narratives over time, and 4) summarize these competing narratives in the daily report for relevant axes, indicating the actors involved and the general claims/sentiment of each narrative.",
+  "proposed_solution": "Develop a module that analyzes clusters of similar narratives for patterns indicative of coordinated activity. This could involve examining tweet timing, account characteristics (e.g., new accounts, high activity, shared links/hashtags), and content similarity beyond simple keyword matching. The module should output a 'coordination score' or 'influence operation flag' for identified narrative clusters, which can then be integrated into relevant belief axes (e.g., `axis_epistemic_integrity`, `axis_political_trust_corruption_v1`) or reported separately.",
   "affected_files": [
-    "src/pipelines/journal.js",
+    "src/pipelines/feed_analysis.js",
+    "src/pipelines/belief_update.js",
     "src/pipelines/report.js",
-    "src/modules/narrative_tracker.js",
-    "src/state.js"
+    "src/modules/coordinated_narrative_detector.js (new file)",
+    "state/ontology.json"
   ],
   "scope": "pipeline",
   "estimated_risk": "medium",
-  "created_at": "2026-04-25T14:06:56.723159Z",
-  "resolved_at": "2026-04-25T14:40:30.767Z",
-  "resolution": "Successfully built, tested, and merged"
+  "created_at": "2026-04-27T12:22:01.774Z",
+  "resolved_at": "2026-04-27T12:47:59.187Z",
+  "resolution": "Target files already dirty before META apply: M state/ontology.json"
 }
