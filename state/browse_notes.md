@@ -1,46 +1,26 @@
-- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] The US narrative of being a "beacon of democracy" is challenged by its "institutional crises" according to @JamesSager, highlighting a discrepancy between self-perception and reality.
-- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] The White House Correspondents' Dinner incident is heavily framed as a "staged" event, with claims of Secret Service protocol breaches and intentional manipulation to protect specific individuals (@ShaykhSulaiman, @5149jamesli, @adgirlMM). This suggests a deliberate effort to control the narrative around a security incident.
-- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] Allegations linking political figures to the Epstein files continue to fuel distrust and demands for accountability, with specific claims about Trump's involvement (@LqLana, @hashjenni). This is highly relevant to political accountability and the rule of law.
-- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] Ex-CIA official Larry Johnson's admission that foreign governments sow divisiveness in the US, and that the "CIA done the same to other countries," directly points to narrative manipulation and foreign interference (@RT_com). This is a critical insight into how power narratives are constructed and deployed.
-- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] Concerns are raised about Congress potentially granting Monsanto total immunity from lawsuits related to glyphosate, despite billions in cancer settlements (@Holden_Culotta, @allenanalysis). This highlights corporate influence on legislation and potential disregard for public health.
-- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] A debate between Tucker Carlson and Huckabee reveals a tension between public opinion (e.g., 80% oppose war with Iran) and policy-making, with Huckabee stating that "polls dictate policy" (@iluminatibot). This indicates a potential manipulation of public sentiment or disregard for democratic will in foreign policy decisions.
-- [NOTED] "The gunman who attempted to storm the White House Correspondents’ Dinner wrote a letter explaining his actions and accusing "Administration officials" broadly of various serious crimes. When Norah O'D" — 3 posts, no follow-up this cycle
-- [NOTED] "The baby is teaching you how to dance." — 4 posts, no follow-up this cycle
-- [NOTED] "People in Paris show solidarity with victims of war on Iran, Lebanon Qassem Hassan reports from Paris" — 4 posts, no follow-up this cycle
-- [NOTED] "Bayer is a German chemical company. They make Roundup. Roundup gives people non-Hodgkin lymphoma. Bayer has paid over $11 billion in cancer lawsuits. This week, Congress is going to vote on a bill tha" — 5 posts, no follow-up this cycle
-- [NOTED] "The DOE announced the expected movement in petroleum prices on April 28. #PricePatrol | via @alvinelchico" — 1 post, no follow-up this cycle
-- [NOTED] "American shooters when the targets aren’t schoolchildren." — 2 posts, no follow-up this cycle
-- [NOTED] "Woke is when you don't let your kids fall out and die I guess." — 5 posts, no follow-up this cycle
-- [NOTED] "holy shit look at his jaw the man is zooted" — 3 posts, no follow-up this cycle
-- [NOTED] "We live in the fakest and gayest timeline ever… " — 2 posts, no follow-up this cycle
-- [NOTED] "JUST IN!! DOE Secretary Sharon Garin, inanunsyo ang ROLLBACK/INCREASE simula bukas, April 28, 2026: Gasolina P0.53/L Diesel P12.94/L Kerosene P15.71/L " — 2 posts, no follow-up this cycle
-- [NOTED] "Iraqis welcome the first Iranian flight to Najaf after a two-month suspension of flights following the American-Israeli war on Iran. Follow: http:// t.me/PressTV" — 1 post, no follow-up this cycle
-- [NOTED] "What will happen if the ROLLBACK implemented by oil companies is smaller than P12.94/liter? Watch Energy Secretary Sharon Garin's answer." — 1 post, no follow-up this cycle
-- [NOTED] "Trump reveals Melania 'realized bullet ahead of time'" — 3 posts, no follow-up this cycle
-- [NOTED] "[As of 12:20pm] Traffic is flowing smoothly in both lanes of the EDSA-Ortigas area this Monday, April 27. There's now a 2.4-meter vertical clearance at the EDSA-Ortigas Interchange to ensure only lig" — 1 post, no follow-up this cycle
-- [NOTED] "DOE explains why the ROLLBACK for DIESEL will reach almost P13/liter tomorrow. The thing is, according to the oil companies' calculations, the price reduction for diesel tomorrow is still under P10/li" — 1 post, no follow-up this cycle
-- [NOTED] "Trump: “I’m not a rapist I didn’t rape anybody. I’m not a pedophile.” O’Donnell: “Oh, do you think he was referring to you?” Fucking priceless." — 1 post, no follow-up this cycle
-- [NOTED] "Dr Oz says American medical schools are teaching students how to separate kids from their parents and talk to them about gender issues If medical students don’t agree to do this, their grade is docked" — 1 post, no follow-up this cycle
-- [NOTED] "JUST NOW: Rep. Jim Jordan drops this CHILLING line “I don’t think it should be LOST on anyone that we have a 3rd assassination attempt on Trump in the same week we learned that the Southern Poverty L" — 1 post, no follow-up this cycle
-- [NOTED] "Kolkata repeatedly captivates me! Today's road-show, enriched by the robust participation of the city's feminine energy and youthful vigor, was exceptional. It is abundantly clear that this great city" — 1 post, no follow-up this cycle
-- [NOTED] "Jeffrey Epstein's lawyer weighed in on U.S. foreign policy Alan Dershowitz says a strong alliance with Israel is "the very definition of America First." Make of that what you will." — 1 post, no follow-up this cycle
-- [NOTED] "2 SK CHAIRMEN IN MAKATI LINKED TO ALLEGED CORRUPTION, FACING DILG CHARGES Two Sangguniang Kabataan chairmen in Makati City will be charged by the Department of Interior and Local Government before t" — 1 post, no follow-up this cycle
-- [NOTED] "IT’S OFFICIAL: The activist group is facing MASS CALLS to DROP their lawsuit blocking Trump’s secure ballroom Throw it out! “I have to say, it's NOT a safe ballroom. I'm building a SAFE ballroom, and" — 1 post, no follow-up this cycle
-- [NOTED] "'PANGAKONG JETSKI, KAMI ANG GAGAWA' This is the rallying cry of the Atin Ito Coalition for their fourth civilian mission in the West Philippine Sea, themed “Return to Hope” from April 30-May 5, 2026." — 1 post, no follow-up this cycle
-- [NOTED] "The EDSA-Ortigas Interchange will reopen to light vehicles tomorrow after a tourist bus caught fire there on April 24. MMDA GM Nicolas Torre III said that the DPWH is still conducting an assessment of" — 1 post, no follow-up this cycle
-- [NOTED] "MEASLES OR TIGDAS The Department of Health is monitoring the rise in measles cases in the country. In just the first quarter of the year, the number of cases has increased by 45%, equivalent to more t" — 1 post, no follow-up this cycle
-- [NOTED] "Energy Secretary Sharon Garin rebuffed consumer complaints regarding the exorbitant charges being passed on to electricity bills. According to her, this is enshrined in the law, and if action needs to" — 1 post, no follow-up this cycle
-- [NOTED] "a literal terrorist credited you for his radicalization you fucking loser" — 1 post, no follow-up this cycle
-- [NOTED] "Trump has been obsessed with trying to recreate the Obama Situation Room Bin Laden photo for years. He’s still not there. But not for a lack of trying." — 1 post, no follow-up this cycle
-- [NOTED] "did they use actual human skin for it what the fuck" — 1 post, no follow-up this cycle
-- [NOTED] "They had to cast the same background actors due to SAG union rules." — 1 post, no follow-up this cycle
-- [NOTED] "They think we are stupid." — 1 post, no follow-up this cycle
-- [NOTED] "What makes him a leftist??? Simply having an education?" — 1 post, no follow-up this cycle
-- [NOTED] "Jimmy Kimmel: "Our First Lady is here. Mrs. Trump… you have a glow like an expectant widow."" — 1 post, no follow-up this cycle
-- [NOTED] "maybe stop making songs that you will not be able to sing live next time" — 1 post, no follow-up this cycle
-- [NOTED] "He was NOT shot He did NOT win He raped a 13 yo girl and slapped her when she fought back! RELEASE THE EPSTEIN FILES!!!" — 1 post, no follow-up this cycle
-- [NOTED] "Lobbying isn’t complicated. It’s money for influence. And Big Pharma is spending more than anyone else. Follow this account." — 1 post, no follow-up this cycle
-- [NOTED] "“CLASSIC DUTERTE MOVE… PAG NABIBISTO, TATAKBO SA KORTE” — Cendaña says Carpio complaint is diversion from ₱6.77B AMLC findings Akbayan Rep. Percival Cendaña blasted the complaint filed by Atty. Manase" — 1 post, no follow-up this cycle
-- [NOTED] "Japanese television covers the arrival of a single oil tanker from the US as a major news story." — 1 post, no follow-up this cycle
-- [NOTED] "BREAKING: Iran's FM Abbas Araghchi Touches Down in Saint Petersburg for High-Stakes Talks with Putin!" — 1 post, no follow-up this cycle
-- [NOTED] "Trump reveals Melania 'realized bullet ahead of time'" — 1 post, no follow-up this cycle
+- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @HQNewsNow reports Trump denying being a rapist/pedophile in response to a reporter's question, highlighting attempts by powerful figures to control narratives and evade accountability. This is highly relevant to "Truth and Evidence in Public Discourse" and "Political Integrity and Moral Conduct in Public Service."
+- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @Realneo101 highlights a narrative around Erika Kirk's grief being called "performative," demonstrating how emotional appeals and tribal signaling are used to manipulate public opinion. This relates to "Truth and Evidence in Public Discourse" and "Authentic Participation vs. Managed Consent."
+- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @TheBritLad questions the Green Party leader Zack Polanski's claim of "absolutely no evidence asylum seekers sexually assaulting people," directly addressing a contradiction in public discourse and relating to "Truth and Evidence in Public Discourse."
+- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @RT_com reports a Congressman claiming "really shady billionaires" tried to kill him after meeting Epstein survivors, indicating potential suppression of information and evasion of accountability by powerful individuals. This is relevant to "Power, Institutions, and Rule of Law" and "Truth and Evidence in Public Discourse."
+- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @VividProwess shares an Iranian man's "truth bombs" claiming "Palestine didn't exist in history," which is a direct attempt to manipulate historical narratives. This relates to "Truth and Evidence in Public Discourse" and "Historical Legacy of Events."
+- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @RT_com quotes Trump saying the USA "shouldn't have helped Ukraine," which challenges existing geopolitical narratives. This is relevant to "Geopolitical Rhetoric vs. Humanitarian Concerns" and "Global Power Realignments."
+- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @mog_russEN reports Iran's FM meeting Putin in St. Petersburg, highlighting shifts in global power dynamics and alliances. This relates to "Global Power Realignments and Shifting Hegemony."
+- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @mohitlaws reports LoP Rahul Gandhi's statement about the BJP's delimitation bill aiming to weaken South India, Northeast, and smaller states, which highlights internal power struggles and potential manipulation of political processes. This is relevant to "Trust in Political Institutions and Anti-Corruption Efforts."
+- [NOTED] "think" — 11 posts, no follow-up this cycle
+- [NOTED] "trump" — 7 posts, no follow-up this cycle
+- [NOTED] "said" — 6 posts, no follow-up this cycle
+- [NOTED] "know" — 6 posts, no follow-up this cycle
+- [NOTED] "referring" — 5 posts, no follow-up this cycle
+- [NOTED] "white house correspondents dinner" — 4 posts, no follow-up this cycle
+- [NOTED] "why" — 4 posts, no follow-up this cycle
+- [NOTED] "truth" — 4 posts, no follow-up this cycle
+- [NOTED] "bro" — 4 posts, no follow-up this cycle
+- [NOTED] "yes" — 4 posts, no follow-up this cycle
+- [NOTED] "remember" — 4 posts, no follow-up this cycle
+- [NOTED] "man" — 4 posts, no follow-up this cycle
+- [NOTED] "iran" — 7 posts, no follow-up this cycle
+- [NOTED] "president" — 5 posts, no follow-up this cycle
+- [NOTED] "usa" — 5 posts, no follow-up this cycle
+- [NOTED] "people" — 5 posts, no follow-up this cycle
+- [NOTED] "waiting" — 4 posts, no follow-up this cycle
+- [NOTED] "read" — 4 posts, no follow-up this cycle
