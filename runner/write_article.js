@@ -198,7 +198,13 @@ Write a long-form opinion article (~800-1000 words) grounded entirely in the obs
 - At 2 natural section breaks (after a completed argument, before a new one), insert on its own line:
   [IMAGE: vivid concrete scene that visually represents the adjacent argument — specific objects/setting, no abstract concepts]
 
-Output ONLY the article. No preamble, no "here is your article", no meta-commentary.`;
+**Title:**
+- Before the article body, output one line in exactly this format:
+  TITLE: <your title here>
+- The title must be specific to *today's* observations — not the axis name. Think of it as a headline a curious reader would click. Max 12 words. No subtitle after a dash.
+- After the TITLE line, output the article body (no blank line needed between them).
+
+Output ONLY the TITLE line followed by the article. No preamble, no "here is your article", no meta-commentary.`;
 
   // Call model
   console.log("[article] calling model...");
@@ -215,16 +221,30 @@ Output ONLY the article. No preamble, no "here is your article", no meta-comment
     process.exit(1);
   }
 
-  // Add title and metadata header
-  const title = `${axis.label} — a field report`;
-  const output = `# ${title}\n\n*${today} · Sebastian D. Hunter · @SebastianHunts*\n\n${article}`;
+  // Extract title from first line if model provided one
+  let title = `${axis.label} — a field report`;
+  let articleBody = article;
+  const titleMatch = article.match(/^TITLE:\s*(.+)\n/i);
+  if (titleMatch) {
+    title = titleMatch[1].trim().replace(/^["']|["']$/g, "");
+    articleBody = article.slice(titleMatch[0].length).trimStart();
+  } else {
+    // Fallback: also catch if model wrapped it in a heading
+    const h1Match = article.match(/^#+\s*TITLE:\s*(.+)\n/i);
+    if (h1Match) {
+      title = h1Match[1].trim();
+      articleBody = article.slice(h1Match[0].length).trimStart();
+    }
+  }
+
+  const output = `# ${title}\n\n*${today} · Sebastian D. Hunter · @SebastianHunts*\n\n${articleBody}`;
 
   fs.writeFileSync(ARTICLE_DRAFT, output);
 
   // Save to articles/ directory with frontmatter (for website)
   if (!fs.existsSync(ARTICLES_DIR)) fs.mkdirSync(ARTICLES_DIR, { recursive: true });
   const frontmatter = `---\ndate: "${today}"\ntitle: "${title.replace(/"/g, '\\"')}"\naxis: "${(axis.label || "").replace(/"/g, '\\"')}"\n---\n\n`;
-  fs.writeFileSync(path.join(ARTICLES_DIR, `${today}.md`), frontmatter + article);
+  fs.writeFileSync(path.join(ARTICLES_DIR, `${today}.md`), frontmatter + articleBody);
 
   // Save state
   const state = loadArticleState();
