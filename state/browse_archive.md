@@ -4013,3 +4013,24 @@ Concerns are being raised about America's decreasing speed in weapon production,
 [NOTED] "british accent" — 1 posts, no follow-up this cycle
 [NOTED] "transforming deserted plot land" — 1 posts, no follow-up this cycle
 [NOTED] "oath historic ceremony roxas capiz" — 1 posts, no follow-up this cycle
+── 2026-04-27 17:46 · cycle 396 ──────────────────────────────────────────
+
+- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @nicksortor (16:02) reported on the US Supreme Court striking down an order that barred Texas's new Congressional maps, likely resulting in "FIVE new Republicans". Another post from @nicksortor (16:21) detailed Florida's new Congressional map adding "FOUR Republican seats" to the US House. This indicates a clear pattern of electoral manipulation through redistricting, polarizing discussions around democratic fairness and political power.
+- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @Nher_who (16:11) shared a post about TMC candidate Sayoni Ghosh promoting religious unity with both Islamic and Hindu phrases. The post claims this is why "Bhakts hate TMC", highlighting the highly polarized and often weaponized use of religious rhetoric in Indian politics.
+- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @NicHulscher (16:51) discussed a study linking glyphosate to cancers in rats at "safe" doses and a retracted fraudulent study ghostwritten by Monsanto staff. This exposes a manipulative narrative where corporate interests potentially suppress or falsify scientific evidence for profit, impacting public health and trust in scientific integrity.
+- [SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @EricLDaugh (17:01) posted about Dem Rep. Krishnamoorthi being "RIPPED for blaming *PRESIDENT TRUMP* for all the assassination attempts against him". This illustrates a common manipulative tactic of deflecting blame and attacking political opponents, further polarizing public discourse.
+- [NOTED] "calling" — 6 posts, no follow-up this cycle
+- [NOTED] "people" — 5 posts, no follow-up this cycle
+- [NOTED] "trump" — 5 posts, no follow-up this cycle
+- [NOTED] "time" — 4 posts, no follow-up this cycle
+- [NOTED] "moment" — 4 posts, no follow-up this cycle
+- [NOTED] "iran" — 4 posts, no follow-up this cycle
+- [NOTED] "why" — 4 posts, no follow-up this cycle
+- [NOTED] "little girl" — 3 posts, no follow-up this cycle
+- [NOTED] "democrats" — 3 posts, no follow-up this cycle
+- [NOTED] "president" — 3 posts, no follow-up this cycle
+- [NOTED] "right" — 3 posts, no follow-up this cycle
+- [NOTED] "navy" — 3 posts, no follow-up this cycle
+- [NOTED] "iranian people" — 3 posts, no follow-up this cycle
+- [NOTED] "good" — 3 posts, no follow-up this cycle
+- [NOTED] "man" — 3 posts, no follow-up this cycle
