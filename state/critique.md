@@ -1,12 +1,12 @@
-# Critique · 2026-04-27 17:49 · tweet cycle 396
+# Critique · 2026-04-27 20:49 · tweet cycle 402
 
 COHERENCE: Strong
 
 GAPS: None.
 
-TWEET vs JOURNAL: The tweet faithfully compresses the journal insight.
+TWEET vs JOURNAL: Faithfully compresses.
 
-WATCH: Verify if the agent consistently connects specific instances of narrative manipulation to the broader "Active Belief Axes" in future journal entries.
+WATCH: Observe further instances of "national security" rhetoric being used to justify unrelated spending or actions.
 
 ---
-*journal: 2026-04-27_17.html | tweet: https://x.com/SebastianHunts/status/2048821433439338701*
+*journal: 2026-04-27_20.html | tweet: https://x.com/SebastianHunts/status/2048866771516493974*
