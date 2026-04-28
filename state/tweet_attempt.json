@@ -1,8 +1,10 @@
 {
-  "at": "2026-04-28T14:48:26.533Z",
+  "at": "2026-04-28T17:49:57.858Z",
   "kind": "tweet",
-  "outcome": "confirmed",
-  "confirmed_url": "https://x.com/SebastianHunts/status/2049138625766437187",
-  "final_url": "https://x.com/home",
-  "cycle": 438
+  "outcome": "failed",
+  "reason": "api_error",
+  "error": "X API 401: {\"title\":\"Unauthorized\",\"type\":\"about:blank\",\"status\":401,\"detail\":\"Unauthorized\"}",
+  "status_code": 401,
+  "method": "api",
+  "cycle": 444
 }
