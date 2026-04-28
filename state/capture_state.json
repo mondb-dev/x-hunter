@@ -1,156 +1,164 @@
 {
-  "checked_at": "2026-04-27T18:59:07.305Z",
-  "evidence_24h": 109,
-  "unique_sources": 67,
-  "status": "clean",
-  "alerts": [],
-  "summary": "Evidence distribution looks healthy (109 entries across 67 sources, 20 axes).",
+  "checked_at": "2026-04-28T19:42:33.159Z",
+  "evidence_24h": 105,
+  "unique_sources": 55,
+  "status": "warning",
+  "alerts": [
+    {
+      "type": "pole_skew",
+      "severity": "moderate",
+      "detail": "72% of evidence pushes \"right\" — risk of one-sided belief drift",
+      "dominant_pole": "right",
+      "share": 0.724
+    }
+  ],
+  "summary": "1 capture alert(s) detected:\n[MODERATE] 72% of evidence pushes \"right\" — risk of one-sided belief drift",
   "source_concentration": {
+    "sprinterpress": {
+      "username": "sprinterpress",
+      "count": 8,
+      "share": 0.076
+    },
     "presstv": {
       "username": "presstv",
-      "count": 7,
-      "share": 0.064
-    },
-    "jacksonhinklle": {
-      "username": "jacksonhinklle",
       "count": 6,
-      "share": 0.055
-    },
-    "furkangozukara": {
-      "username": "furkangozukara",
-      "count": 5,
-      "share": 0.046
-    },
-    "rt_com": {
-      "username": "rt_com",
-      "count": 5,
-      "share": 0.046
-    },
-    "marionawfal": {
-      "username": "marionawfal",
-      "count": 4,
-      "share": 0.037
-    },
-    "eng_china5": {
-      "username": "eng_china5",
-      "count": 4,
-      "share": 0.037
+      "share": 0.057
     },
     "ericldaugh": {
       "username": "ericldaugh",
-      "count": 3,
-      "share": 0.028
+      "count": 5,
+      "share": 0.048
     },
-    "unknown": {
-      "username": "unknown",
-      "count": 3,
-      "share": 0.028
+    "marionawfal": {
+      "username": "marionawfal",
+      "count": 5,
+      "share": 0.048
     },
-    "iranreportsx": {
-      "username": "iranreportsx",
-      "count": 3,
-      "share": 0.028
+    "furkangozukara": {
+      "username": "furkangozukara",
+      "count": 4,
+      "share": 0.038
     },
-    "sprinterpress": {
-      "username": "sprinterpress",
+    "whitehouse": {
+      "username": "whitehouse",
+      "count": 4,
+      "share": 0.038
+    },
+    "statedept": {
+      "username": "statedept",
+      "count": 4,
+      "share": 0.038
+    },
+    "acyn": {
+      "username": "acyn",
       "count": 3,
-      "share": 0.028
+      "share": 0.029
+    },
+    "real_jfk_jr_": {
+      "username": "real_jfk_jr_",
+      "count": 3,
+      "share": 0.029
+    },
+    "rapidresponse47": {
+      "username": "rapidresponse47",
+      "count": 3,
+      "share": 0.029
     }
   },
   "axis_concentration": {
-    "axis_geopolitical_rhetoric_v1": {
-      "axis_id": "axis_geopolitical_rhetoric_v1",
-      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
-      "count": 24,
-      "share": 0.22
-    },
     "axis_epistemic_integrity": {
       "axis_id": "axis_epistemic_integrity",
       "label": "Truth and Evidence in Public Discourse",
+      "count": 39,
+      "share": 0.371
+    },
+    "axis_geopolitical_rhetoric_v1": {
+      "axis_id": "axis_geopolitical_rhetoric_v1",
+      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
       "count": 15,
-      "share": 0.138
-    },
-    "axis_political_trust_corruption_v1": {
-      "axis_id": "axis_political_trust_corruption_v1",
-      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
-      "count": 13,
-      "share": 0.119
-    },
-    "axis_religion_politics_war_v1": {
-      "axis_id": "axis_religion_politics_war_v1",
-      "label": "Religion, Politics, and War Rhetoric",
-      "count": 10,
-      "share": 0.092
+      "share": 0.143
     },
     "axis_power_accountability": {
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
-      "count": 8,
-      "share": 0.073
+      "count": 11,
+      "share": 0.105
+    },
+    "axis_political_trust_corruption_v1": {
+      "axis_id": "axis_political_trust_corruption_v1",
+      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
+      "count": 11,
+      "share": 0.105
     },
     "axis_global_power_realignments_v1": {
       "axis_id": "axis_global_power_realignments_v1",
       "label": "Global Power Realignments and Shifting Hegemony",
-      "count": 8,
-      "share": 0.073
-    },
-    "axis_discourse_order_polarization_v1": {
-      "axis_id": "axis_discourse_order_polarization_v1",
-      "label": "Discourse: Order vs. Polarization",
-      "count": 6,
-      "share": 0.055
+      "count": 5,
+      "share": 0.048
     },
     "axis_media_integrity_v1": {
       "axis_id": "axis_media_integrity_v1",
       "label": "Integrity of Information and Social Media Manipulation",
       "count": 4,
-      "share": 0.037
+      "share": 0.038
+    },
+    "axis_discourse_order_polarization_v1": {
+      "axis_id": "axis_discourse_order_polarization_v1",
+      "label": "Discourse: Order vs. Polarization",
+      "count": 4,
+      "share": 0.038
     },
     "axis_global_economic_stability_v1": {
       "axis_id": "axis_global_economic_stability_v1",
       "label": "Global Economic Stability and Market Volatility",
-      "count": 4,
-      "share": 0.037
+      "count": 3,
+      "share": 0.029
     },
     "axis_national_sovereignty_v_intl_law_v1": {
       "axis_id": "axis_national_sovereignty_v_intl_law_v1",
       "label": "National Sovereignty vs. International Law",
-      "count": 4,
-      "share": 0.037
+      "count": 3,
+      "share": 0.029
+    },
+    "axis_human_rights_exploitation_v1": {
+      "axis_id": "axis_human_rights_exploitation_v1",
+      "label": "Human Rights and Exploitation",
+      "count": 2,
+      "share": 0.019
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 46,
-      "share": 0.422
-    },
-    "geopolitics": {
-      "cluster": "geopolitics",
-      "count": 23,
-      "share": 0.211
-    },
-    "breaking_news": {
-      "cluster": "breaking_news",
-      "count": 9,
-      "share": 0.083
-    },
-    "disinformation": {
-      "cluster": "disinformation",
-      "count": 8,
-      "share": 0.073
+      "count": 29,
+      "share": 0.276
     },
     "us_politics": {
       "cluster": "us_politics",
+      "count": 17,
+      "share": 0.162
+    },
+    "disinformation": {
+      "cluster": "disinformation",
+      "count": 13,
+      "share": 0.124
+    },
+    "geopolitics": {
+      "cluster": "geopolitics",
+      "count": 11,
+      "share": 0.105
+    },
+    "breaking_news": {
+      "cluster": "breaking_news",
       "count": 8,
-      "share": 0.073
+      "share": 0.076
     }
   },
   "pole_balance": {
-    "left": 39,
-    "right": 70,
+    "left": 29,
+    "right": 76,
     "neutral": 0,
-    "left_share": 0.358,
-    "right_share": 0.642
+    "left_share": 0.276,
+    "right_share": 0.724
   }
 }
