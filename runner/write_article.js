@@ -226,13 +226,16 @@ Output ONLY the TITLE line followed by the article. No preamble, no "here is you
   let articleBody = article;
   const titleMatch = article.match(/^TITLE:\s*(.+)\n/i);
   if (titleMatch) {
-    title = titleMatch[1].trim().replace(/^["']|["']$/g, "");
+    const raw = titleMatch[1].trim();
+    // Only strip surrounding quotes if the title is fully wrapped in them
+    title = /^(["']).*\1$/.test(raw) ? raw.slice(1, -1).trim() : raw;
     articleBody = article.slice(titleMatch[0].length).trimStart();
   } else {
     // Fallback: also catch if model wrapped it in a heading
     const h1Match = article.match(/^#+\s*TITLE:\s*(.+)\n/i);
     if (h1Match) {
-      title = h1Match[1].trim();
+      const rawH1 = h1Match[1].trim();
+      title = /^(["']).*\1$/.test(rawH1) ? rawH1.slice(1, -1).trim() : rawH1;
       articleBody = article.slice(h1Match[0].length).trimStart();
     }
   }
