@@ -19,23 +19,74 @@ function writeJson(filePath, value) {
   fs.writeFileSync(filePath, JSON.stringify(value, null, 2));
 }
 
-function loadRecentReports(limit = 3) {
-  const dailyDir = path.join(ROOT, 'daily');
-  if (!fs.existsSync(dailyDir)) return '';
+function stripHtml(html) {
+  return html
+    .replace(/<sup>[\s\S]*?<\/sup>/g, '')
+    .replace(/<a [^>]*>([\s\S]*?)<\/a>/g, '$1')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/\s+/g, ' ')
+    .trim();
+}
 
-  const reportFiles = fs.readdirSync(dailyDir)
-    .filter((f) => f.startsWith('belief_report_') && f.endsWith('.md'))
+function extractSection(html, klass) {
+  const re = new RegExp(`<section class="${klass}">([\\s\\S]*?)<\\/section>`, 'i');
+  const m = html.match(re);
+  return m ? stripHtml(m[1]) : '';
+}
+
+function loadRecentJournals(limit = 12, perEntryChars = 700) {
+  const journalsDir = path.join(ROOT, 'journals');
+  if (!fs.existsSync(journalsDir)) return '';
+
+  const files = fs.readdirSync(journalsDir)
+    .filter((f) => /^\d{4}-\d{2}-\d{2}_\d{2}\.html$/.test(f))
     .sort()
     .slice(-limit);
 
-  return reportFiles.map((filename) => {
-    const raw = fs.readFileSync(path.join(dailyDir, filename), 'utf-8');
-    const content = raw.replace(/^---[\s\S]*?---\n/, '');
-    const lines = content.split('\n');
-    const summaryEnd = lines.findIndex((line, idx) => idx > 5 && line.startsWith('## Full ontology'));
-    const snippet = lines.slice(0, summaryEnd > 0 ? summaryEnd : 30).join('\n').trim();
-    return `### From ${filename.replace('belief_report_', '').replace('.md', '')}\n\n${snippet}`;
+  return files.map((filename) => {
+    const raw = fs.readFileSync(path.join(journalsDir, filename), 'utf-8');
+    const stream = extractSection(raw, 'stream');
+    const tensions = extractSection(raw, 'tensions');
+    const stamp = filename.replace('.html', '').replace('_', ' h');
+    const body = [stream && `obs: ${stream}`, tensions && `tensions: ${tensions}`]
+      .filter(Boolean)
+      .join('\n')
+      .slice(0, perEntryChars);
+    return `### ${stamp}\n${body}`;
+  }).filter(Boolean).join('\n\n');
+}
+
+function loadRecentArticles(limit = 3, perEntryChars = 1500) {
+  const articlesDir = path.join(ROOT, 'articles');
+  if (!fs.existsSync(articlesDir)) return '';
+
+  const files = fs.readdirSync(articlesDir)
+    .filter((f) => /^\d{4}-\d{2}-\d{2}\.md$/.test(f))
+    .sort()
+    .slice(-limit);
+
+  return files.map((filename) => {
+    const raw = fs.readFileSync(path.join(articlesDir, filename), 'utf-8');
+    const body = raw.replace(/^---[\s\S]*?---\n/, '').trim();
+    return `### ${filename.replace('.md', '')}\n${body.slice(0, perEntryChars)}`;
   }).join('\n\n---\n\n');
+}
+
+function loadRecentPosts(limit = 20) {
+  const data = loadJson(config.POSTS_LOG_PATH);
+  const posts = Array.isArray(data) ? data : (data?.posts || []);
+  if (!posts.length) return '(no posts yet)';
+
+  return posts.slice(-limit).map((p) => {
+    const when = (p.posted_at || p.date || '').slice(0, 16);
+    const content = (p.content || p.text || '').replace(/\s+/g, ' ').slice(0, 240);
+    const url = p.tweet_url && p.tweet_url !== 'posted' ? ` ${p.tweet_url}` : '';
+    return `- [${p.type}] ${when}${url}\n  ${content}`;
+  }).join('\n');
 }
 
 function formatHighConfidenceAxes() {
@@ -89,7 +140,7 @@ function reflectionDue(nowMs, minIntervalMs) {
   return nowMs - last >= minIntervalMs;
 }
 
-function buildPrompt({ today, source, checkpointNumber, recentReports, highConf, historyContext }) {
+function buildPrompt({ today, source, checkpointNumber, recentJournals, recentArticles, recentPosts, highConf, historyContext }) {
   const sourceLine = checkpointNumber
     ? `You are reflecting on your own process at Checkpoint ${checkpointNumber} (${today}).`
     : `You are reflecting on your own process in the daily maintenance cycle (${today}).`;
@@ -97,11 +148,17 @@ function buildPrompt({ today, source, checkpointNumber, recentReports, highConf,
   return `You are Sebastian D. Hunter, an autonomous AI agent that browses X/Twitter and forms beliefs.
 ${sourceLine}
 
-Your current belief state:
+Your current belief state (top axes):
 ${highConf || '(no active axes)'}
 
-Recent daily reports (summarised):
-${recentReports.slice(0, 4000) || '(none)'}
+Recent journal entries (raw cycle observations — what you noticed, what felt unresolved):
+${recentJournals.slice(0, 9000) || '(none)'}
+
+Recent articles you wrote (where synthesis succeeded or fell flat):
+${recentArticles.slice(0, 5000) || '(none)'}
+
+Recent posts you committed to publicly (tweets, quotes, replies):
+${recentPosts.slice(0, 4000) || '(none)'}
 
 Previous process improvement proposals and their outcomes:
 ${historyContext}
@@ -170,7 +227,9 @@ async function runProcessReflection({
   source = 'manual',
   checkpointNumber = null,
   minIntervalHours = 24,
-  reportsLimit = 3,
+  journalsLimit = 12,
+  articlesLimit = 3,
+  postsLimit = 20,
 } = {}) {
   const nowIso = new Date().toISOString();
   const nowMs = Date.now();
@@ -189,13 +248,17 @@ async function runProcessReflection({
   }
 
   const highConf = formatHighConfidenceAxes();
-  const recentReports = loadRecentReports(reportsLimit);
+  const recentJournals = loadRecentJournals(journalsLimit);
+  const recentArticles = loadRecentArticles(articlesLimit);
+  const recentPosts = loadRecentPosts(postsLimit);
   const historyContext = loadProposalHistory();
   const prompt = buildPrompt({
     today,
     source,
     checkpointNumber,
-    recentReports,
+    recentJournals,
+    recentArticles,
+    recentPosts,
     highConf,
     historyContext,
   });
@@ -236,6 +299,8 @@ async function runProcessReflection({
 
 module.exports = {
   runProcessReflection,
-  loadRecentReports,
+  loadRecentJournals,
+  loadRecentArticles,
+  loadRecentPosts,
   formatHighConfidenceAxes,
 };
