@@ -1,23 +1,26 @@
 {
-  "id": "proposal_coordinated_narrative_detection_1714246800000",
-  "status": "failed",
-  "title": "Implement Coordinated Narrative Detection Module",
-  "problem": "The current system can track narrative shifts and contestation but lacks a dedicated module to identify and analyze potential coordinated information campaigns, astroturfing, or state-sponsored influence operations. This limits the ability to discern organic skepticism from manufactured distrust, particularly around sensitive events.",
+  "id": "proposal_accountability_tactic_tracker_1777495597391",
+  "status": "pending",
+  "title": "Implement 'Politicization of Justice Tactics' Tracking Module",
+  "problem": "The pervasive politicization of justice and accountability mechanisms is a recurring observation, directly impacting my ability to accurately score axes like `axis_power_accountability` and `axis_political_trust_corruption_v1`. I can identify that accountability is being evaded or politicized, but lack a systematic way to categorize and track the specific rhetorical tactics used to achieve this (e.g., 'security concerns' deflection, 'selective outrage' accusation, 'conservative route' justification). This makes it difficult to detect evolving patterns in narrative control strategies related to institutional integrity.",
   "evidence": [
-    "2026-04-26 Belief Report: 'Public Trust in Safety and Crisis Communication' axis moved, driven by tweets questioning the legitimacy of a reported incident. While these tweets contributed to a belief shift, the system doesn't currently distinguish if these are isolated expressions or part of a coordinated effort. [@Suzierizzo1/status/2048320119424569574, @Wells_P/status/2048207658243735573, @gatesisthedevil/status/2048232969614332083]",
-    "The recently merged 'Narrative Contestation Mapping Module' identifies differing narratives but doesn't analyze the coordination or authenticity of their propagation."
+    "2026-04-29 h04: 'pervasive politicization of justice and the struggle for institutional integrity, particularly around the James Comey indictment. The narrative surrounding this event is highly charged, with claims of \"treason\" and \"justice coming\" from one side, and suggestions of \"selective outrage theater\" from the other.'",
+    "2026-04-29 h05: 'A recurring tension involves contrasting claims of political accountability versus perceived partisan attacks. ... the ongoing debate around the Comey indictment and the Illinois Governor's database tracker for ICE agents highlight the politicization of justice and institutional processes.'",
+    "2026-04-29 h16: 'NBI's belief that VP Sara Duterte spoke with someone to kill political rivals, and the House Justice Committee's findings of probable cause for impeachment. Conversely, there's also an attempt to defend these actions, with the committee chairperson defending the decision not to open tax records, framing it as a \"conservative route.\"'",
+    "2026-04-29 h17: 'The discussion around the House Justice Committee's decision not to open VP Duterte's tax records, citing a \"conservative route,\" stands out as a direct example of institutions potentially shielding powerful figures from scrutiny.'",
+    "2026-04-27 article: 'A particularly salient instance emerged today with a prominent leader canceling a criminal trial appearance, citing \"security concerns\"... This tactic, while presented as a pragmatic necessity, stands as a prime example of how accountability is actively circumvented... This contributes to a prevailing narrative that justifies state actions, often at the expense of transparency or evidence-based discourse, by framing them as necessary for public order.'",
+    "2026-04-29 article: 'the committee chairperson defended the decision not to open her tax records, framing it as taking a \"conservative route\" [^1]. This is not merely a procedural detail; it is a direct re-contextualization of an action that shields a political figure from scrutiny, justifying it under the guise of prudence or established process.'"
   ],
-  "proposed_solution": "Develop a module that analyzes clusters of similar narratives for patterns indicative of coordinated activity. This could involve examining tweet timing, account characteristics (e.g., new accounts, high activity, shared links/hashtags), and content similarity beyond simple keyword matching. The module should output a 'coordination score' or 'influence operation flag' for identified narrative clusters, which can then be integrated into relevant belief axes (e.g., `axis_epistemic_integrity`, `axis_political_trust_corruption_v1`) or reported separately.",
+  "proposed_solution": "Develop a module that identifies and categorizes specific rhetorical tactics employed in social media discourse to politicize, deflect from, or undermine legal and accountability processes. This module would scan journal entries and extracted observations for keywords, phrases, and contextual patterns indicative of these tactics (e.g., 'security concerns,' 'witch hunt,' 'partisan attack,' 'selective outrage,' 'conservative route,' 'political theater,' 'weaponization of justice'). The identified tactics, along with their frequency and associated topics/entities, would be stored in the state for later analysis and reporting, potentially feeding into existing belief axes or generating new insights.",
   "affected_files": [
-    "src/pipelines/feed_analysis.js",
-    "src/pipelines/belief_update.js",
-    "src/pipelines/report.js",
-    "src/modules/coordinated_narrative_detector.js (new file)",
-    "state/ontology.json"
+    "src/pipelines/observation_processor.js",
+    "src/pipelines/journal_processor.js",
+    "src/state/state.json",
+    "src/reports/daily_report.js"
   ],
   "scope": "pipeline",
   "estimated_risk": "medium",
-  "created_at": "2026-04-27T12:22:01.774Z",
-  "resolved_at": "2026-04-27T12:47:59.187Z",
-  "resolution": "Target files already dirty before META apply: M state/ontology.json"
+  "created_at": "2026-04-29T20:46:37.335Z",
+  "resolved_at": null,
+  "resolution": null
 }
