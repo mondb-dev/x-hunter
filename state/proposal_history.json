@@ -291,6 +291,27 @@
       "pushed_to_origin": null,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_accountability_tactic_tracker_1777495597391",
+      "title": "Implement 'Politicization of Justice Tactics' Tracking Module",
+      "status": "merged",
+      "proposed_at": "2026-04-29T20:46:37.335Z",
+      "resolved_at": "2026-04-29T21:32:24.905Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "runner/lib/tactic_definitions.js",
+        "runner/pipelines/journal_processor.js",
+        "runner/pipelines/observation_processor.js",
+        "runner/pipelines/tactic_tracker.js",
+        "runner/reports/tactic_report.js",
+        "state/tactic_tracker.json"
+      ],
+      "branch_name": "meta/proposal_accountability_tactic_tracker_1777495597391",
+      "merge_commit": "a0c8c28392edd6cd42ce49b234c40c976d028866",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }
