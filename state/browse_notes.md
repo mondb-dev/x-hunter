@@ -1,73 +1,35 @@
-[SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @nicksortor - BREAKING: James Comey has been indicted by a grand jury for his "8647" post from last year, just DAYS after yet ANOTHER assassination attempt on President Trump MUCH deserved This clown was dogwhistli. This post is a highly sensationalized claim of an indictment and assassination attempt, potentially indicative of narrative manipulation and weaponization of legal processes for political ends. (https://x.com/nicksortor/status/2049186311878176996)
-[SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @EricLDaugh - NOW: Federal agents have just STORMED the Somali Quality Learing Center in Minneapolis, exposed by Nick Shirley for fraud, per Fox OVER 20 SPOTS RAIDED — largely “Somali-run” FOX: “22 court-approved ". This post presents a highly charged narrative of federal raids and fraud, potentially exploiting ethnic tensions and manipulating public perception. (https://x.com/EricLDaugh/status/2049114354428060111)
-[SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @epaleezeldin - The Trump EPA has ENDED the Green New Scam. We proudly rescinded what has been referred to as the “Holy Grail” for the “world is about to end” climate change zealots, the 2009 Obama EPA Endangerment F. This frames environmental policy as a "scam" and uses emotionally charged language ("climate change zealots") to discredit opposing views, a tactic of narrative control. (https://x.com/epaleezeldin/status/2048869842841940428)
-[SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @WallStreetApes - Pesticide manufacturers, corporations, are being granted immunity for causing cancer to farmers The is a very controversial provision provision in the 2026 House Farm Bill (Farm, Food, and National Se". This post highlights a potential instance of corporate power influencing legislation to evade accountability, impacting public health and pointing to corruption. (https://x.com/WallStreetApes/status/2049239963250946184)
-[SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @Chicago1Ray - Good Morning X (WATCH) How this woman just nails it. We have to keep demanding Voter ID in all (50) states She tells Schumer how easy it was to get her marriage license and an ID Schumer says blacks. This post advocates for voter ID laws, which can be a point of contention regarding voter access and potentially manipulated narratives around election integrity. (https://x.com/Chicago1Ray/status/2049081978708795744)
-[SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @MAGAVoice - JUST IN: Florida House Redistricting Committee just passed the new map adding FOUR Republican seats in Congress Florida is MAGA Red. This post suggests a potential manipulation of electoral processes through redistricting, which could impact authentic participation. (https://x.com/MAGAVoice/status/2049235804917317992)
-[SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @WallStreetApes - Dan Bongino says that America has 2 FBIs One of the FBI is full of people actually working, fighting crime and making a difference But the other FBI isn’t interested in work, their entire job seems to. This presents a narrative of institutional corruption and division within a key federal agency, undermining public trust. (https://x.com/WallStreetApes/status/2049234677131829630)
-[NOTED] "people" — 8 posts, no follow-up this cycle
-[NOTED] "why" — 6 posts, no follow-up this cycle
-[NOTED] "know" — 5 posts, no follow-up this cycle
-[NOTED] "think" — 5 posts, no follow-up this cycle
-[NOTED] "time" — 5 posts, no follow-up this cycle
-[NOTED] "man" — 5 posts, no follow-up this cycle
-[NOTED] "love" — 5 posts, no follow-up this cycle
-[NOTED] "much" — 5 posts, no follow-up this cycle
-[NOTED] "said" — 4 posts, no follow-up this cycle
-[NOTED] "world" — 4 posts, no follow-up this cycle
-[NOTED] "work" — 3 posts, no follow-up this cycle
-[NOTED] "make" — 3 posts, no follow-up this cycle
-[NOTED] "stand" — 3 posts, no follow-up this cycle
-[NOTED] "back" — 3 posts, no follow-up this cycle
-[NOTED] "king charles" — 3 posts, no follow-up this cycle
-[SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @mattvanswol - OH. MY. GOSH!!! The State of North Carolina just found over 34,000 DEAD PEOPLE still on the voter rolls. But don't worry... Election officials say this, "does not necessarily indicate that illegal vot" This post claims a large number of dead people on voter rolls, which can fuel narratives about election integrity and voter fraud, potentially manipulating public trust in democratic processes. (https://x.com/mattvanswol/status/2049204456076554545)
-[SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @LightOnLiberty - A montage of RECENT liberals cheering for the assassination of our president. Why are WE the ones being labeled extremists by the democrat party when their OWN base are the ones repeatedly carrying ou" This post uses highly charged language to portray political opponents as extremists and suggests a double standard in how political violence is perceived, a clear attempt at narrative control. (https://x.com/LightOnLiberty/status/2049159580123344928)
-[SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @SecWar - Under the previous administration, the Department of Defense’s financial reporting was a disaster — and had been for far too long. That ends today—the WAR DEPARTMENT will deliver a clean audit for our" This post suggests a lack of accountability and transparency in government financial reporting, which aligns with exposing corruption and demanding accountability. (https://x.com/SecWar/status/2049259754178965829)
-[SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @GuntherEagleman - FCC MOVING ON ABC AFTER KIMMEL’S DISGUSTING “EXPECTANT WIDOW” JOKE ABOUT MELANIA TRUMP The FCC is preparing to challenge the licenses of ABC affiliates over Jimmy Kimmel’s vile rhetoric. FIRE JIMMY K" This post highlights a perceived weaponization of regulatory bodies (FCC) for political purposes, and the use of public outrage to silence critical voices, which can be seen as a form of narrative control. (https://x.com/GuntherEagleman/status/2049168834842460630)
-[SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @sxdoc - WHAT HAPPENS WHEN WE ELECT CONGRESSMEN WHO ARE FOREIGNERS! Ilhan Omar gives a history lesson: “The last time the Alien Enemies Act was invoked it was used during World War ELEVEN.” She does not know t" This post attempts to discredit a political figure based on a perceived error, using nationalistic rhetoric to question their legitimacy. This is a common tactic in narrative manipulation. (https://x.com/sxdoc/status/2049169826325684485)
-[SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @nicksortor - JUST IN: AG Todd Blanche SHOOTS DOWN speculation that this a politically motivated case against James Comey, saying they've also charged an individual in the SAME DISTRICT for threatening the life of" This post attempts to counter claims of political motivation in a legal case, but the context of "threatening the life of Joe Biden" suggests a highly charged political environment where legal processes can be perceived as weaponized. (https://x.com/nicksortor/status/2049226875046658303)
-[SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @WallStreetApes - Leaked phone call from January 4, 2025 (3 days before the devastating Palisades Fire) The call is between Los Angeles Mayor Karen Bass and John Alle, a property manager and whistleblower in the Pacifi" This post suggests potential corruption or wrongdoing by a public official, hinting at a cover-up related to a disaster. This aligns with exposing corruption and demanding accountability. (https://x.com/WallStreetApes/status/2049135594140537193)
-[SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @BasedMikeLee - Your car should work for you Not the government Kill the kill switch!" This post expresses distrust in government overreach and advocates for individual autonomy, which touches on the theme of authentic participation versus managed consent. (https://x.com/BasedMikeLee/status/2049176331405938944)
-[SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @aprilspark1890 - Senator Thune Pass the SAVE America Act" This post advocates for specific legislation, which can be a point of political polarization and debate around national identity and policy. (https://x.com/AprilSpark1890/status/2049255798811787269)
-[SPRINT: research] [CURIOSITY: sprint_identify_top_polarized_topics_for_report] @PressTV - Iran top diplomat, Russian president meet in St. Petersburg Marina Kortunova reports from Moscow Follow: http:// t.me/PressTV" This post highlights geopolitical alignments and diplomatic efforts, which can be framed within the context of global power realignments and the integrity of international relations. (https://x.com/PressTV/status/2049121857199108364)
-[NOTED] "Goofy goldens.." — 1 posts, no follow-up this cycle
-[NOTED] "Franklin Graham says surviving three assassination attempts is not about luck for Donald Trump—it is the hand of God. Graham believes God’s protection" — 1 posts, no follow-up this cycle
-[NOTED] "Now this dog does have some strange behaviour!!!! eek!! Why does it do this face its so creepy.. Does anyone know why?" — 1 posts, no follow-up this cycle
-[NOTED] "WHOA NOW IT ALL MAKES SENSE Third assassination attempt on Trump at SAME HILTON Reagan was shot. King Charles arrives in D.C. A House Of Lords Report" — 1 posts, no follow-up this cycle
-[NOTED] "Rabies" — 1 posts, no follow-up this cycle
-[NOTED] "he is smiling....you show teeth when you smile and so do some dogs." — 1 posts, no follow-up this cycle
-[NOTED] "Not a threat. He’s just showing his Colgate smile." — 1 posts, no follow-up this cycle
-[NOTED] "That dog's been spending time in front of the mirror working on his scary face Bet he's a big softie " — 1 posts, no follow-up this cycle
-[NOTED] "Practical kitchen tips" — 1 posts, no follow-up this cycle
-[NOTED] "Paul McCartney told Howard in 2001 that he was the one who accidentally convinced Michael Jackson to buy the entire The Beatles catalog: “Don’t you love the irony?” Paul actually had first refusal on" — 1 posts, no follow-up this cycle
-[NOTED] "So Paul is a bitch…" — 1 posts, no follow-up this cycle
-[NOTED] "Christianity " — 1 posts, no follow-up this cycle
-[NOTED] "Baby chicken found a perfect spot.." — 1 posts, no follow-up this cycle
-[NOTED] "Imagine being 79 With 5 children AND 11 grandchildren Being loved by the KING and QUEEN The Left can’t stand this" — 1 posts, no follow-up this cycle
-[NOTED] "Dad buys Bitcoin for $100,000. It grows to $5,000,000. If he sells, he owes tax on a $4.9M gain. Instead, he puts it in a trust. Borrows against it. Lives tax-free. Dies holding. Kids inherit at a $5M" — 1 posts, no follow-up this cycle
-[NOTED] "Catnip is 10 times more effective than DEET at repelling mosquitoes: but cats love it. A research showed that catnip essential oil, particularly its active compound nepetalactone, is a highly effectiv" — 1 posts, no follow-up this cycle
-[NOTED] "In an era of instant gratification—swipe, tap, refresh—patience has become a relic. A generation raised on two-day delivery and algorithmic dopamine hits now expects bar service at app speed. No wonde" — 1 posts, no follow-up this cycle
-[NOTED] "This turtle behavior, often called "claw fluttering", is a courtship ritual where a male turtle rapidly vibrates or waves his long front claws (or "jazz hands") near a female's face to attract her." — 1 posts, no follow-up this cycle
-[NOTED] "During his visit to the White House, King Charles III had to catch up with Trump after the latter had moved ahead during the military review. At the beginning of the review, Trump and the monarch bump" — 1 posts, no follow-up this cycle
-[NOTED] "Her grandfather literally built a bridge connect his village to her grandmother’s " — 1 posts, no follow-up this cycle
-[NOTED] "From a mining town to a tourist attraction: in the ancient city of Zhousha in Guizhou province, old mining sites have been transformed into interactive theatrical venues." — 1 posts, no follow-up this cycle
-[NOTED] "Have you ever thought about picking up the needle and sewing? Here are some helpful tips." — 1 posts, no follow-up this cycle
-[NOTED] "A Path lit by Nature’s Magic " — 1 posts, no follow-up this cycle
-[NOTED] "A swarm of bees has settled in the center of Paris In the French capital, in just thirty minutes, a swarm of more than 10,000 bees settled under the saddle of a bicycle parked just a few steps from t" — 1 posts, no follow-up this cycle
-[NOTED] "What is Chocolate Horchata? ​For those who don’t know, Horchata is a traditional Mexican drink made from soaked rice, cinnamon, and sugar. It’s creamy, refreshing, and naturally dairy-free (depending " — 1 posts, no follow-up this cycle
-[NOTED] "Good to learn everyday " — 1 posts, no follow-up this cycle
-[NOTED] "#FrontlineTonight | Handsome Zaldy Co is reportedly seeking political asylum in France, according to the Department of Foreign Affairs (DFA). | via Maricel Halili" — 1 posts, no follow-up this cycle
-[NOTED] "China will always amaze us " — 1 posts, no follow-up this cycle
-[NOTED] "At Top Golf in Charlotte, NC, a man drank a little too much and ended up driving his suv onto the green. Instructors immediately told the patrons to stop hitting the golf balls in case it hits the man" — 1 posts, no follow-up this cycle
-[NOTED] "OMG, Toby Tiangco! The Navotas landfill is literally burning while you’re busy with interviews? Two decades in power and this is the view? Focus on the fire, please!" — 1 posts, no follow-up this cycle
-[NOTED] "The copy paste is REAL and I am not okay" — 1 posts, no follow-up this cycle
-[NOTED] "Potek sunog na sunog si Libagan #philippines #politics" — 1 posts, no follow-up this cycle
-[NOTED] "China completes major infrastructure project for the Pinglu Canal In the city of Qinzhou, in the Guangxi Zhuang Autonomous Region, the final 27 main bridges across the Pinglu Canal were put into opera" — 1 posts, no follow-up this cycle
-[NOTED] "We're off on an adventure, see you kids later! " — 1 posts, no follow-up this cycle
-[NOTED] "Construction transformation — this video is a must watch." — 1 posts, no follow-up this cycle
-[NOTED] "Dogs are like children; they are our best friends and we must protect them. " — 1 posts, no follow-up this cycle
-[NOTED] "Scottie Scheffler on Pres. Trump: "l get a call or a text from him sometimes after wins." "He treats everybody the same." "Whether you're the person serving us lunch, or the caddie on the golf cours" — 1 posts, no follow-up this cycle
-[NOTED] "Trump hosted a reception in the style of 1776, a clear message: We will no longer allow you to rule us! In the Rose Garden, musicians dressed in costumes of that era lined up, waiting for King Charles" — 1 posts, no follow-up this cycle
-[NOTED] "#FrontlineTonight | Nag-number 1 na ang Kapatid seryeng “A Secret in Prague” sa top 10 TV shows sa global streaming platform na Netlfix!" — 1 posts, no follow-up this cycle
-[NOTED] ": THE MOUNTAIN ROARED WITHOUT WARNING. In 2015, Sakurajima unleashed a violent blast hurling a towering ash column high above Kagoshima Bay in seconds. No soundtrack. No countdown. Just the raw sho" — 1 posts, no follow-up this cycle
-[NOTED] "James Comey today: “They’re back. This time about a picture of seashells on a North Carolina beach.” “I’m still innocent. I’m still not afraid.” The DOJ just indicted him for the second time. The firs" — 1 posts, no follow-up this cycle
+[SPRINT: research] Identified several highly polarized topics from the digest relevant to narrative control and accountability. These include:
+[SPRINT: research] 1. Politicization of Legal Systems and Accountability: Posts discussing James Comey's indictment (@nicksortor), Illinois Gov. Pritzker's database tracking of ICE agents (@EricLDaugh), and the Virginia Supreme Court's redistricting ruling (@officer_Lew, @BoLoudon). These highlight tensions around institutional integrity and the application of justice.
+[SPRINT: research] 2. Geopolitical Narratives and Conflict Justification: Content regarding the Israel-Hezbollah conflict (@ProudSocialist, @VividProwess), King Charles's alleged call for war with Russia (@Megatron_ron), Iran's ability to block the Strait of Hormuz (@PressTV), and Ukrainian refugees protesting Zelensky (@MarioBojic). These exemplify how international conflicts are framed and narratives are constructed.
+[SPRINT: research] 3. Economic Policy and Government Spending: Discussions around NYC's budget crisis after promises of "free stuff" (@libsoftiktok) and the federal "kill switch" in new cars (@CRRJA5). These point to tensions in how economic realities are communicated and managed.
+[SPRINT: research] 4. Immigration and National Sovereignty: Posts questioning the economic contribution of Somali immigrants (@RepBrandonGill) and the DHS flying out "illegals" (@DRPOOLQ17). These are deeply polarized topics concerning national identity, resources, and policy.
+[SPRINT: research] 5. Political Rhetoric and Incitement: Comparison of Trump's "March peacefully" statement to Hakeem Jeffries' "maximum warfare" (@Shawn_Farash) and the debate on Trump calling opponents fascists (@harryjsisson). This directly relates to the deliberate use of language to control narratives and influence public perception.
+[NOTED] "@Scavino47 on State Dinner" — 1 post, no follow-up this cycle
+[NOTED] "@Crazymoments01 on megalodon" — 1 post, no follow-up this cycle
+[NOTED] "@ABSCBNNews on Philippine Navy" — 1 post, no follow-up this cycle
+[NOTED] "@gmanews on fish dying in Davao" — 1 post, no follow-up this cycle
+[NOTED] "@PressTV on Iran blocking Strait of Hormuz" — 1 post, no follow-up this cycle
+[NOTED] "@mattvanswol on Detabian Fortenberry" — 1 post, no follow-up this cycle
+[NOTED] "@ProudSocialist on staged event" — 1 post, no follow-up this cycle
+[NOTED] "@joelpollak on Zelenskyy ballrooms" — 1 post, no follow-up this cycle
+[NOTED] "@News5PH on forced robbery" — 1 post, no follow-up this cycle
+[NOTED] "@libsoftiktok on teacher of the year" — 1 post, no follow-up this cycle
+[NOTED] "@Riley_Gaines_ on hospital bills" — 1 post, no follow-up this cycle
+[NOTED] "@MattWalshBlog on illiterate women" — 1 post, no follow-up this cycle
+[NOTED] "@newswatchplusph on Marcoleta's movie reference" — 1 post, no follow-up this cycle
+[NOTED] "@AlBuffalo2nite on inmates producing plates" — 1 post, no follow-up this cycle
+[NOTED] "@EricLDaugh on Trump's Western Culture Mode" — 1 post, no follow-up this cycle
+[NOTED] "@DRPOOLQ17 on Trump nominees" — 1 post, no follow-up this cycle
+[NOTED] "@gmanews on Sen. Bam Aquino" — 1 post, no follow-up this cycle
+[NOTED] "@AkbayanParty on Popoy" — 1 post, no follow-up this cycle
+[NOTED] "@mazemoore on Jake Tapper and Jimmy Kimmel" — 1 post, no follow-up this cycle
+[NOTED] "@maddenifico on Trump and Camilla" — 1 post, no follow-up this cycle
+[NOTED] "@MarioNawfal on King Charles to Trump" — 1 post, no follow-up this cycle
+[NOTED] "@SprinterPress on Last Generation movement" — 1 post, no follow-up this cycle
+[NOTED] "@TRobinsonNewEra on Nigerian Priest" — 1 post, no follow-up this cycle
+[NOTED] "@TheJusticeDept on threatening President's life" — 1 post, no follow-up this cycle
+[NOTED] "@mmpadellan on WHCD event" — 1 post, no follow-up this cycle
+[NOTED] "@alvinelchico on oil prices" — 1 post, no follow-up this cycle
+[NOTED] "@RealXavier011 on pranks" — 1 post, no follow-up this cycle
+[NOTED] "@bncdotph on TikTok Philippines" — 1 post, no follow-up this cycle
+[NOTED] "@bellacariaso on Lifelong Learning Education Assistance Program" — 1 post, no follow-up this cycle
