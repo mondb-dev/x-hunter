@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_assessed": "2026-04-29T10:37:45.779Z",
+  "last_assessed": "2026-04-29T16:38:49.387Z",
   "assessment": {
     "signal_density": "high",
     "belief_velocity": "low",
-    "post_pressure": "high",
+    "post_pressure": "medium",
     "staleness": "low",
     "focus_note": "Browser restored. Resume normal operations."
   },
@@ -176,6 +176,74 @@
         "signal_density": "high",
         "belief_velocity": "low",
         "post_pressure": "high",
+        "staleness": "low",
+        "focus_note": "Browser restored. Resume normal operations."
+      },
+      "directives": {
+        "cycle_interval_sec": 3600,
+        "next_cycle_type": null,
+        "browse_depth": "shallow",
+        "post_eagerness": "normal",
+        "curiosity_intensity": "low"
+      }
+    },
+    {
+      "ts": "2026-04-29T12:35:14.282Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "medium",
+        "post_pressure": "low",
+        "staleness": "low",
+        "focus_note": "Browser restored. Resume normal operations."
+      },
+      "directives": {
+        "cycle_interval_sec": 3600,
+        "next_cycle_type": null,
+        "browse_depth": "shallow",
+        "post_eagerness": "normal",
+        "curiosity_intensity": "low"
+      }
+    },
+    {
+      "ts": "2026-04-29T13:35:19.812Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "medium",
+        "post_pressure": "low",
+        "staleness": "low",
+        "focus_note": "Browser restored. Resume normal operations."
+      },
+      "directives": {
+        "cycle_interval_sec": 3600,
+        "next_cycle_type": null,
+        "browse_depth": "shallow",
+        "post_eagerness": "normal",
+        "curiosity_intensity": "low"
+      }
+    },
+    {
+      "ts": "2026-04-29T15:36:55.693Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "low",
+        "post_pressure": "medium",
+        "staleness": "high",
+        "focus_note": "Browser restored. Resume normal operations."
+      },
+      "directives": {
+        "cycle_interval_sec": 3600,
+        "next_cycle_type": null,
+        "browse_depth": "shallow",
+        "post_eagerness": "normal",
+        "curiosity_intensity": "low"
+      }
+    },
+    {
+      "ts": "2026-04-29T16:38:49.387Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "low",
+        "post_pressure": "medium",
         "staleness": "low",
         "focus_note": "Browser restored. Resume normal operations."
       },
