@@ -117,9 +117,17 @@ async function bulkInsertTasks(sprint_id, tasks) {
   await transaction(async (client) => {
     for (const t of tasks) {
       await client.query(`
-        INSERT INTO tasks (sprint_id, title, description, task_type, priority, estimated_hours)
-        VALUES ($1, $2, $3, $4, $5, $6)
-      `, [sprint_id, t.title, t.description || null, t.task_type || 'action', t.priority || 2, t.estimated_hours || null]);
+        INSERT INTO tasks (sprint_id, title, description, task_type, priority, estimated_hours, output_ref)
+        VALUES ($1, $2, $3, $4, $5, $6, $7)
+      `, [
+        sprint_id,
+        t.title,
+        t.description || null,
+        t.task_type || 'action',
+        t.priority || 2,
+        t.estimated_hours || null,
+        t.artifact || t.output_ref || null,
+      ]);
     }
   });
 }
@@ -133,10 +141,17 @@ async function rolloverTasks(fromSprintId, toSprintId) {
   await transaction(async (client) => {
     for (const t of incomplete) {
       await client.query(`
-        INSERT INTO tasks (sprint_id, title, description, task_type, priority, estimated_hours)
-        VALUES ($1, $2, $3, $4, $5, $6)
-      `, [toSprintId, `[carried] ${t.title}`, t.description || null, t.task_type,
-          Math.max(1, (t.priority || 2) - 1), t.estimated_hours || null]);
+        INSERT INTO tasks (sprint_id, title, description, task_type, priority, estimated_hours, output_ref)
+        VALUES ($1, $2, $3, $4, $5, $6, $7)
+      `, [
+        toSprintId,
+        `[carried] ${t.title}`,
+        t.description || null,
+        t.task_type,
+        Math.max(1, (t.priority || 2) - 1),
+        t.estimated_hours || null,
+        t.output_ref || null,
+      ]);
     }
   });
   return incomplete.length;

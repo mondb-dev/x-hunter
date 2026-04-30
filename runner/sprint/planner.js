@@ -162,7 +162,7 @@ ${sprintObservations}
 ## TASK
 Create a detailed 4-week sprint plan. For each week, define:
 1. A clear weekly goal (what "done" looks like)
-2. 3-6 specific tasks with type and priority
+2. 3-6 specific tasks with type, priority, and (where applicable) a concrete artifact
 
 Task types (use the most specific type — do NOT default to "research"):
 - "research" — external information gathering ONLY: browsing X, searching sources, reading new posts
@@ -175,9 +175,32 @@ Task types (use the most specific type — do NOT default to "research"):
 
 Priority: 1 (critical), 2 (important), 3 (nice-to-have)
 
-Be realistic about what one AI agent can accomplish in a week.
-Ground your choices in what you're actually seeing in discourse — pick topics that are LIVE right now.
-Each task should be concrete enough that you'd know when it's done.
+## CRITICAL RULES (read carefully — past plans have violated these)
+
+**1. No open-ended "select" tasks.** Tasks like "Identify top topic for the week" or "Pick the best
+candidate" have no closure criterion — the agent will keep researching forever. If the plan involves
+a recurring publication, frame the week as a **digest of the period**, not a deep-dive on a single
+chosen topic. Tasks become: continuous observation → end-of-week synthesis → publish artifact.
+The "topic" of a digest is "this week" — that resolves automatically.
+
+**2. Every "write" or "publish" task MUST name a concrete artifact.** Use the \`artifact\` field
+with a deterministic file path or URL pattern. Examples:
+- "articles/reports/Report_NN.md"
+- "articles/YYYY-MM-DD.md"
+- "x.com/<handle>/status/<id> (X thread)"
+The publish task only closes when the artifact exists. If you can't name the artifact path, the task
+is too vague — refine it.
+
+**3. No duplicate tasks within a sprint.** Each task must be uniquely actionable. Do NOT generate
+variants of the same task ("Draft Report" + "Draft & Publish Report" → pick one and merge).
+Before emitting a sprint, check that no two tasks share the same intent.
+
+**4. Goals must be measurable from data the system actually tracks.** "Reach 150 followers" is
+fine ONLY if follower counts are being recorded. "Establish methodology" / "Refine approach" are
+process goals, not deliverables — pair them with a concrete artifact (e.g., "methodology section
+in articles/reports/Report_1.md").
+
+**5. Be realistic.** One AI agent, one week. Ground choices in what's LIVE in discourse right now.
 
 Respond in this exact JSON format:
 {
@@ -192,7 +215,8 @@ Respond in this exact JSON format:
           "description": "What exactly to do and what 'done' looks like",
           "task_type": "research|write|publish|engage|reflect",
           "priority": 1,
-          "estimated_hours": 4
+          "estimated_hours": 4,
+          "artifact": "articles/reports/Report_1.md or null if no file output"
         }
       ]
     }
@@ -243,6 +267,21 @@ Task types (pick the most specific — do NOT default to "research"):
 - "engage" — replying, quote-tweeting
 - "reflect" — internal synthesis: collating past notes, reviewing existing findings, summarising accumulated data, adjusting approach
 
+## CRITICAL RULES
+
+**1. No open-ended "select" tasks.** Don't write "Identify top topic for Week ${nextWeek}" — that has
+no closure criterion. If this plan involves a recurring publication, treat the week itself as the
+"topic": continuous observation across the week → end-of-week synthesis → publish artifact.
+
+**2. Every "write" / "publish" task MUST name a concrete artifact** in the \`artifact\` field
+(e.g., "articles/reports/Report_${nextWeek}.md"). Without a file path, the task can't be verified done.
+
+**3. No duplicate tasks.** Each task must be uniquely actionable. Don't emit "Draft Report" and
+"Draft & Publish Report" as separate tasks — pick one.
+
+**4. Goals must be testable from data the system tracks.** Pair process goals ("refine methodology")
+with a concrete artifact section.
+
 Respond in this exact JSON format:
 {
   "week": ${nextWeek},
@@ -254,7 +293,8 @@ Respond in this exact JSON format:
       "description": "What exactly to do",
       "task_type": "research|write|publish|engage|reflect",
       "priority": 1,
-      "estimated_hours": 4
+      "estimated_hours": 4,
+      "artifact": "articles/reports/Report_${nextWeek}.md or null if no file output"
     }
   ]
 }`;

@@ -196,12 +196,20 @@ function updateTaskStatus(task_id, status, output_ref) {
 
 function bulkInsertTasks(sprint_id, tasks) {
   const insert = db.prepare(`
-    INSERT INTO tasks (sprint_id, title, description, task_type, priority, estimated_hours)
-    VALUES (?, ?, ?, ?, ?, ?)
+    INSERT INTO tasks (sprint_id, title, description, task_type, priority, estimated_hours, output_ref)
+    VALUES (?, ?, ?, ?, ?, ?, ?)
   `);
   const run = db.transaction((taskList) => {
     for (const t of taskList) {
-      insert.run(sprint_id, t.title, t.description || null, t.task_type || "action", t.priority || 2, t.estimated_hours || null);
+      insert.run(
+        sprint_id,
+        t.title,
+        t.description || null,
+        t.task_type || "action",
+        t.priority || 2,
+        t.estimated_hours || null,
+        t.artifact || t.output_ref || null,
+      );
     }
   });
   run(tasks);
@@ -219,12 +227,20 @@ function rolloverTasks(fromSprintId, toSprintId) {
   if (incomplete.length === 0) return 0;
 
   const insert = db.prepare(`
-    INSERT INTO tasks (sprint_id, title, description, task_type, priority, estimated_hours)
-    VALUES (?, ?, ?, ?, ?, ?)
+    INSERT INTO tasks (sprint_id, title, description, task_type, priority, estimated_hours, output_ref)
+    VALUES (?, ?, ?, ?, ?, ?, ?)
   `);
   const run = db.transaction((tasks) => {
     for (const t of tasks) {
-      insert.run(toSprintId, `[carried] ${t.title}`, t.description || null, t.task_type, Math.max(1, (t.priority || 2) - 1), t.estimated_hours || null);
+      insert.run(
+        toSprintId,
+        `[carried] ${t.title}`,
+        t.description || null,
+        t.task_type,
+        Math.max(1, (t.priority || 2) - 1),
+        t.estimated_hours || null,
+        t.output_ref || null,
+      );
     }
   });
   run(incomplete);
