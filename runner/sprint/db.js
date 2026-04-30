@@ -194,6 +194,16 @@ function updateTaskStatus(task_id, status, output_ref) {
   ).run(status, output_ref || null, completed_date, task_id);
 }
 
+// Strings the LLM sometimes emits in place of an actual artifact path.
+// Normalize all of these to SQL NULL so output_ref is either a real path or empty.
+const ARTIFACT_PLACEHOLDERS = new Set(["", "(none)", "none", "n/a", "na", "null", "tbd", "todo"]);
+function normalizeArtifact(v) {
+  if (v == null) return null;
+  const s = String(v).trim();
+  if (ARTIFACT_PLACEHOLDERS.has(s.toLowerCase())) return null;
+  return s;
+}
+
 function bulkInsertTasks(sprint_id, tasks) {
   const insert = db.prepare(`
     INSERT INTO tasks (sprint_id, title, description, task_type, priority, estimated_hours, output_ref)
@@ -208,7 +218,7 @@ function bulkInsertTasks(sprint_id, tasks) {
         t.task_type || "action",
         t.priority || 2,
         t.estimated_hours || null,
-        t.artifact || t.output_ref || null,
+        normalizeArtifact(t.artifact || t.output_ref),
       );
     }
   });
@@ -239,7 +249,7 @@ function rolloverTasks(fromSprintId, toSprintId) {
         t.task_type,
         Math.max(1, (t.priority || 2) - 1),
         t.estimated_hours || null,
-        t.output_ref || null,
+        normalizeArtifact(t.output_ref),
       );
     }
   });
