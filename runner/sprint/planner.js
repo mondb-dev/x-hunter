@@ -66,6 +66,100 @@ function repairJson(raw) {
   }
 }
 
+// ── Sprint validation ────────────────────────────────────────────────────────
+
+const PLACEHOLDER_ARTIFACTS = new Set(["", "(none)", "none", "n/a", "na", "null", "tbd", "todo"]);
+
+function hasRealArtifact(t) {
+  const a = String(t.artifact || t.output_ref || "").trim().toLowerCase();
+  if (PLACEHOLDER_ARTIFACTS.has(a)) return false;
+  // Reject prompt-template strings the LLM sometimes echoes back
+  if (a.startsWith("or ") || a.includes("if no file output")) return false;
+  return a.length > 0;
+}
+
+const OPEN_ENDED_TITLE_RE = /^\s*(identify|pick|select|choose|decide)\b/i;
+
+function titleFingerprint(title) {
+  return String(title || "")
+    .toLowerCase()
+    .replace(/#?\d+/g, "")          // drop "Report #2" / "Week 3" numbering
+    .replace(/[^a-z ]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .split(" ")
+    .filter(w => w.length > 3)       // drop short words (a, the, of, for)
+    .sort()                          // word-bag comparison
+    .join(" ");
+}
+
+function validateSprintTasks(tasks, weekLabel) {
+  const errors = [];
+  if (!Array.isArray(tasks) || tasks.length === 0) {
+    errors.push(`${weekLabel}: tasks array is empty or missing`);
+    return errors;
+  }
+
+  const seenFingerprints = new Map();
+  for (const t of tasks) {
+    const title = String(t.title || "").trim();
+    if (!title) {
+      errors.push(`${weekLabel}: a task is missing a title`);
+      continue;
+    }
+
+    if ((t.task_type === "write" || t.task_type === "publish") && !hasRealArtifact(t)) {
+      errors.push(`${weekLabel}: "${title}" (${t.task_type}) is missing a concrete artifact path — every write/publish task must name a file path or URL pattern`);
+    }
+
+    if (OPEN_ENDED_TITLE_RE.test(title)) {
+      errors.push(`${weekLabel}: "${title}" is an open-ended select task — rephrase as continuous observation tied to an artifact, e.g. "Curate week's polarization map" or merge into the write task`);
+    }
+
+    const fp = titleFingerprint(title);
+    if (fp && seenFingerprints.has(fp)) {
+      errors.push(`${weekLabel}: "${title}" duplicates the intent of "${seenFingerprints.get(fp)}" — merge them into one task`);
+    } else if (fp) {
+      seenFingerprints.set(fp, title);
+    }
+  }
+  return errors;
+}
+
+function validatePlannerResponse(parsed) {
+  if (!parsed) return ["response was not valid JSON"];
+  const sprints = parsed.sprints || [{ week: parsed.week, tasks: parsed.tasks }];
+  const errors = [];
+  for (const s of sprints) {
+    errors.push(...validateSprintTasks(s.tasks || [], `Week ${s.week ?? "?"}`));
+  }
+  return errors;
+}
+
+async function callPlannerWithRetry(basePrompt, maxTokens, label, maxAttempts = 3) {
+  let lastErrors = [];
+  let lastParsed = null;
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    let prompt = basePrompt;
+    if (lastErrors.length) {
+      prompt = basePrompt + `\n\n## YOUR PREVIOUS RESPONSE FAILED VALIDATION\nFix these specific issues and re-emit the same JSON shape:\n${lastErrors.map(e => "- " + e).join("\n")}\n\nRe-read the CRITICAL RULES section above. Do not repeat the same mistakes.`;
+    }
+    const raw = await callVertex(prompt, maxTokens);
+    const parsed = repairJson(raw);
+    const errors = validatePlannerResponse(parsed);
+    if (errors.length === 0) {
+      if (attempt > 1) console.log(`[sprint/planner] ${label} validated on attempt ${attempt}`);
+      return parsed;
+    }
+    console.log(`[sprint/planner] ${label} attempt ${attempt} failed validation: ${errors.length} issue(s)`);
+    for (const e of errors) console.log(`  - ${e}`);
+    lastErrors = errors;
+    lastParsed = parsed;
+  }
+  console.log(`[sprint/planner] ${label} still invalid after ${maxAttempts} attempts — accepting with warnings`);
+  return lastParsed;
+}
+
 // ── Axis context (same pattern as deep_dive.js) ──────────────────────────────
 
 function buildAxisContext() {
@@ -317,11 +411,10 @@ async function generateFullPlan(plan) {
     : "";
 
   const prompt = buildFullPlanPrompt(plan, axisContext, recentDigest, sprintObservations);
-  const raw    = await callVertex(prompt, 8000);
-  const parsed = repairJson(raw);
+  const parsed = await callPlannerWithRetry(prompt, 8000, "full-plan");
 
   if (!parsed?.sprints || !Array.isArray(parsed.sprints)) {
-    throw new Error(`[sprint/planner] invalid response — no sprints array: ${raw.slice(0, 300)}`);
+    throw new Error(`[sprint/planner] invalid response — no sprints array after retries`);
   }
 
   console.log(`[sprint/planner] assessment: ${parsed.plan_assessment || "(none)"}`);
@@ -383,11 +476,10 @@ async function generateNextSprint(plan, planId) {
     : "";
 
   const prompt = buildNextSprintPrompt(plan, completed, accomplishments, axisContext, recentDigest, sprintObservations);
-  const raw    = await callVertex(prompt, 4000);
-  const parsed = repairJson(raw);
+  const parsed = await callPlannerWithRetry(prompt, 4000, `next-sprint week-${completed.length + 1}`);
 
   if (!parsed?.goal || !parsed?.tasks) {
-    throw new Error(`[sprint/planner] invalid next-sprint response: ${raw.slice(0, 300)}`);
+    throw new Error(`[sprint/planner] invalid next-sprint response after retries`);
   }
 
   const week   = parsed.week || (completed.length + 1);
