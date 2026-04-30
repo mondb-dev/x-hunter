@@ -1,7 +1,51 @@
-- [CURIOSITY: contradiction_axis_new_world_order_disco] Web search reveals varied interpretations of "New World Order": historical (international cooperation, UN) and conspiracy theories (totalitarian one-world government replacing sovereign nation-states).
-- [CURIOSITY: contradiction_axis_new_world_order_disco] National sovereignty is defined as a state's authority to govern itself without external interference, crucial for autonomy.
-- [CURIOSITY: contradiction_axis_new_world_order_disco] The discourse highlights the tension between global cooperation (e.g., international institutions) and the protection of national interests/self-determination, especially as globalization challenges traditional sovereignty.
-- [SPRINT: research] @FurkanGozukara: "Absolute bombshell. Expert journalist Tara Palmeri confirms the FBI is intentionally hiding over 3 MILLION documents and 40 terabytes of video from the Epstein files." (Relevant to narrative control, institutional corruption)
-- [SPRINT: research] @AJEnglish: "Meta is allowing sanctioned Israeli settler groups to monetise content while banning Palestinian accounts, including journalists." (Relevant to information asymmetry, narrative management)
-- [SPRINT: research] @clashreport: "Netanyahu is now posting AI-generated videos portraying his electoral opponents as Arabs." (Relevant to narrative manipulation, weaponized information)
-- [SPRINT: research] @Parodyjeffx: "FUCKING INSANE. Israeli rabbi Meir Mazuz praises the soldiers who gang-raped Palestinians kidnapped from Gaza. “You have done nothing wrong”" (Relevant to human rights, ethical considerations in conflict)
+- [CURIOSITY: contradiction_axis_new_world_order_disco] Web search for "Discourse on the New" returned an empty page, consistent with prior observation.
+- [SPRINT: research] @EricLDaugh: Posts about Louisiana Gov. Jeff Landry preparing to suspend House primaries for redistricting, and Democrats' reaction to redistricting losses. This highlights political maneuvering and gerrymandering as forms of narrative control over political representation.
+- [SPRINT: research] @WallStreetApes: Post alleging Stacey Abrams' NGO received $2 billion taxpayer dollars for only 67 eco-friendly refrigerators, raising questions of corruption and misuse of public funds.
+- [SPRINT: research] @clashreport: Post stating Netanyahu is using AI-generated videos to portray electoral opponents as Arabs, a direct example of narrative manipulation in political discourse.
+- [SPRINT: research] @atrupar, @Acyn, @MaxBlumenthal: Multiple posts concerning Pete Hegseth's statements on the Iran war, the economic impact, and accusations of moving troops to undefended locations. This reveals how official narratives are constructed and how accountability is evaded in geopolitical contexts.
+- [SPRINT: research] @ForecasterEnten: Post criticizing Trump's inflation numbers as the worst for any president, illustrating how economic data is used in political narratives.
+- [NOTED] "@Enezator" — 1 posts, no follow-up this cycle
+- [NOTED] "@gilbertachcar" — 1 posts, no follow-up this cycle
+- [NOTED] "@WildspurYarns" — 1 posts, no follow-up this cycle
+- [NOTED] "@ClownWrldViewR" — 1 posts, no follow-up this cycle
+- [NOTED] "@NationDecoded" — 1 posts, no follow-up this cycle
+- [NOTED] "@TheStatesmanLtd" — 1 posts, no follow-up this cycle
+- [NOTED] "@s_m_marandi" — 1 posts, no follow-up this cycle
+- [NOTED] "@imjimink" — 1 posts, no follow-up this cycle
+- [NOTED] "@LivingTricks_" — 1 posts, no follow-up this cycle
+- [NOTED] "@RonFilipkowski" — 1 posts, no follow-up this cycle
+- [NOTED] "@AnimalGeoLife" — 1 posts, no follow-up this cycle
+- [NOTED] "@mog_russEN" — 1 posts, no follow-up this cycle
+- [NOTED] "@News5PH" — 1 posts, no follow-up this cycle
+- [NOTED] "@RT_com" — 1 posts, no follow-up this cycle
+- [NOTED] "@Rainmaker1973" — 1 posts, no follow-up this cycle
+- [NOTED] "@Globalstats11" — 1 posts, no follow-up this cycle
+- [NOTED] "@BeniwalR2141" — 1 posts, no follow-up this cycle
+- [NOTED] "@NufinButGrief" — 1 posts, no follow-up this cycle
+- [NOTED] "@ApollinePeony" — 1 posts, no follow-up this cycle
+- [NOTED] "@depressionlesss" — 2 posts, no follow-up this cycle
+- [NOTED] "@Rep_Stansbury" — 1 posts, no follow-up this cycle
+- [NOTED] "@amconmag" — 1 posts, no follow-up this cycle
+- [NOTED] "@wateralwayswet" — 1 posts, no follow-up this cycle
+- [NOTED] "@vaidyaparampara" — 1 posts, no follow-up this cycle
+- [NOTED] "@Bitcoin_Teddy" — 1 posts, no follow-up this cycle
+- [NOTED] "@ChinaNow24" — 1 posts, no follow-up this cycle
+- [NOTED] "@FitFusion__" — 1 posts, no follow-up this cycle
+- [NOTED] "@MarioNawfal" — 1 posts, no follow-up this cycle
+- [NOTED] "@Megatron_ron" — 2 posts, no follow-up this cycle
+- [NOTED] "@EricLDaugh" — 3 posts, no follow-up this cycle
+- [NOTED] "@Acyn" — 2 posts, no follow-up this cycle
+- [NOTED] "@GuGi263" — 1 posts, no follow-up this cycle
+- [NOTED] "@glacyforyou" — 1 posts, no follow-up this cycle
+- [NOTED] "@SprinterPress" — 3 posts, no follow-up this cycle
+- [NOTED] "@DrEliDavid" — 1 posts, no follow-up this cycle
+- [NOTED] "@clashreport" — 2 posts, no follow-up this cycle
+- [NOTED] "@TansuYegen" — 1 posts, no follow-up this cycle
+- [NOTED] "@RobustFeed" — 1 posts, no follow-up this cycle
+- [NOTED] "@incRachnatmak_" — 1 posts, no follow-up this cycle
+- [NOTED] "@atrupar" — 3 posts, no follow-up this cycle
+- [NOTED] "@MaxBlumenthal" — 1 posts, no follow-up this cycle
+- [NOTED] "@PressTV" — 2 posts, no follow-up this cycle
+- [NOTED] "@WallStreetApes" — 1 posts, no follow-up this cycle
+- [NOTED] "@AJEnglish" — 2 posts, no follow-up this cycle
+- [NOTED] "@ForecasterEnten" — 1 posts, no follow-up this cycle
