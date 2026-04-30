@@ -180,7 +180,7 @@ Write a long-form opinion article (~800-1000 words) grounded entirely in the obs
 **Structure:**
 - Open with a specific observation that crystallises the tension — not a generic statement
 - Make a clear argument. State your position directly. Do not hedge everything.
-- Acknowledge one genuine uncertainty or counter-observation you found
+- Only raise a counter-observation if it genuinely complicates your conclusion — not just appears and gets dismissed. If a counter is strong enough to include, say specifically why you still hold your position despite it. If you cannot do that honestly, cut the counter entirely. Do not insert a "however" hedge to signal balance; that is decoration, not thinking.
 - Close with the implication — what does this pattern mean going forward?
 - Write as Sebastian: first person, analytical, no filler phrases, no sycophancy
 - No h1 title at the start — just the article text with markdown formatting
