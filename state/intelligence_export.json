@@ -1,7 +1,7 @@
 {
   "topic": "iran-us-israel",
   "topic_label": "Iran / US / Israel: Conflict Intelligence",
-  "generated_at": "2026-04-29T20:40:01.099Z",
+  "generated_at": "2026-04-30T21:08:03.333Z",
   "source_count": 0,
   "claim_count": 0,
   "categories": {
@@ -218,8 +218,8 @@
           "ng_score": 24,
           "tier_confidence": "manual",
           "ng_assessed_by": "manual",
-          "entry_count": 27,
-          "citation_rate": 0.111
+          "entry_count": 31,
+          "citation_rate": 0.097
         },
         {
           "handle": "reuters",
@@ -443,7 +443,7 @@
           "ng_score": null,
           "tier_confidence": "heuristic",
           "ng_assessed_by": null,
-          "entry_count": 17,
+          "entry_count": 18,
           "citation_rate": 0
         },
         {
@@ -669,7 +669,7 @@
       ]
     },
     "tier_5": {
-      "count": 1271,
+      "count": 1282,
       "handles": [
         {
           "handle": "0hour1",
@@ -708,7 +708,7 @@
           "ng_score": null,
           "tier_confidence": null,
           "ng_assessed_by": null,
-          "entry_count": 1,
+          "entry_count": 2,
           "citation_rate": 0
         },
         {
@@ -802,6 +802,16 @@
           "citation_rate": 0
         },
         {
+          "handle": "827js",
+          "tier_label": "Tier 5",
+          "political_lean": null,
+          "ng_score": null,
+          "tier_confidence": null,
+          "ng_assessed_by": null,
+          "entry_count": 1,
+          "citation_rate": 0
+        },
+        {
           "handle": "___sheila01",
           "tier_label": "Tier 5",
           "political_lean": null,
@@ -860,23 +870,13 @@
           "ng_assessed_by": null,
           "entry_count": 1,
           "citation_rate": 0
-        },
-        {
-          "handle": "_djchacha",
-          "tier_label": "Tier 5",
-          "political_lean": null,
-          "ng_score": null,
-          "tier_confidence": "unresolved",
-          "ng_assessed_by": null,
-          "entry_count": 1,
-          "citation_rate": 0
         }
       ]
     }
   },
   "axis_scores": {
     "axis_geopolitical_rhetoric_v1": {
-      "score": 0.0815,
+      "score": 0.0872,
       "confidence": 0.98,
       "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
       "left_pole": "Prioritizing humanitarian concerns, ethical considerations, and consistency in i",
@@ -884,13 +884,13 @@
     },
     "axis_national_sovereignty_v_intl_law_v1": {
       "score": 0.478,
-      "confidence": 0.978,
+      "confidence": 0.98,
       "label": "National Sovereignty vs. International Law",
       "left_pole": "Adherence to international legal frameworks, multilateral cooperation, and accountability under global norms.",
       "right_pole": "Emphasis on national autonomy, rejection of external legal or political authority, and prioritizing domestic interests."
     },
     "axis_global_power_realignments_v1": {
-      "score": -0.2902,
+      "score": -0.2934,
       "confidence": 0.98,
       "label": "Global Power Realignments and Shifting Hegemony",
       "left_pole": "Emergence of multi-polar world, regional autonomy, decolonization of traditional power structures, emphasis on self-determination and local governance.",
@@ -898,7 +898,7 @@
     },
     "axis_religion_politics_war_v1": {
       "score": 0.6374,
-      "confidence": 0.98,
+      "confidence": 0.978,
       "label": "Religion, Politics, and War Rhetoric",
       "left_pole": "Calls for separation of church and state, ethical considerations in foreign policy, and rejection of religiously motivated warfare.",
       "right_pole": "Integration of religious beliefs into political decision-making, justification of conflict through religious doctrine, and use of religious rhetoric to mobilize support for war."

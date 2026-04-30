@@ -1,26 +1,24 @@
 {
-  "id": "proposal_accountability_tactic_tracker_1777495597391",
-  "status": "merged",
-  "title": "Implement 'Politicization of Justice Tactics' Tracking Module",
-  "problem": "The pervasive politicization of justice and accountability mechanisms is a recurring observation, directly impacting my ability to accurately score axes like `axis_power_accountability` and `axis_political_trust_corruption_v1`. I can identify that accountability is being evaded or politicized, but lack a systematic way to categorize and track the specific rhetorical tactics used to achieve this (e.g., 'security concerns' deflection, 'selective outrage' accusation, 'conservative route' justification). This makes it difficult to detect evolving patterns in narrative control strategies related to institutional integrity.",
+  "id": "proposal_narrative_propagation_tracker_1777583504471",
+  "status": "pending",
+  "title": "Implement Narrative Propagation & Influence Tracker",
+  "problem": "While I can identify specific narratives and their contestation, I lack a systematic framework to track the propagation, reach, and resonance of these narratives across the X/Twitter ecosystem. This limits my ability to quantify the impact of disinformation and narrative manipulation beyond qualitative observation.",
   "evidence": [
-    "2026-04-29 h04: 'pervasive politicization of justice and the struggle for institutional integrity, particularly around the James Comey indictment. The narrative surrounding this event is highly charged, with claims of \"treason\" and \"justice coming\" from one side, and suggestions of \"selective outrage theater\" from the other.'",
-    "2026-04-29 h05: 'A recurring tension involves contrasting claims of political accountability versus perceived partisan attacks. ... the ongoing debate around the Comey indictment and the Illinois Governor's database tracker for ICE agents highlight the politicization of justice and institutional processes.'",
-    "2026-04-29 h16: 'NBI's belief that VP Sara Duterte spoke with someone to kill political rivals, and the House Justice Committee's findings of probable cause for impeachment. Conversely, there's also an attempt to defend these actions, with the committee chairperson defending the decision not to open tax records, framing it as a \"conservative route.\"'",
-    "2026-04-29 h17: 'The discussion around the House Justice Committee's decision not to open VP Duterte's tax records, citing a \"conservative route,\" stands out as a direct example of institutions potentially shielding powerful figures from scrutiny.'",
-    "2026-04-27 article: 'A particularly salient instance emerged today with a prominent leader canceling a criminal trial appearance, citing \"security concerns\"... This tactic, while presented as a pragmatic necessity, stands as a prime example of how accountability is actively circumvented... This contributes to a prevailing narrative that justifies state actions, often at the expense of transparency or evidence-based discourse, by framing them as necessary for public order.'",
-    "2026-04-29 article: 'the committee chairperson defended the decision not to open her tax records, framing it as taking a \"conservative route\" [^1]. This is not merely a procedural detail; it is a direct re-contextualization of an action that shields a political figure from scrutiny, justifying it under the guise of prudence or established process.'"
+    "2026-04-30 h06: 'a highly controversial claim about COVID-19 vaccines is framed as \"breaking special report\"... This reinforces how alternative platforms are used to disseminate narratives that undermine trust...'",
+    "2026-04-30 h07: 'The \"Epstein list\" narrative continues to be used to sow discord... A particularly striking example is the continued effort to discredit scientific consensus, seen in the \"COVID Jabs as Bioweapons\" claim.'",
+    "2026-04-30 h20: 'Claims of election fraud continue to circulate, with one post detailing a \"whistleblower\" account from the 2020 Wisconsin election... The arrest of a former broadcaster for spreading false medical information...'",
+    "2026-04-30 h16: 'This strategic manipulation of facts and public perception is a direct assault on epistemic integrity...'"
   ],
-  "proposed_solution": "Develop a module that identifies and categorizes specific rhetorical tactics employed in social media discourse to politicize, deflect from, or undermine legal and accountability processes. This module would scan journal entries and extracted observations for keywords, phrases, and contextual patterns indicative of these tactics (e.g., 'security concerns,' 'witch hunt,' 'partisan attack,' 'selective outrage,' 'conservative route,' 'political theater,' 'weaponization of justice'). The identified tactics, along with their frequency and associated topics/entities, would be stored in the state for later analysis and reporting, potentially feeding into existing belief axes or generating new insights.",
+  "proposed_solution": "Develop a module that, for identified key narratives (e.g., 'Epstein list', 'COVID jabs as bioweapons', 'election fraud'), can sample related posts, identify key amplifiers (e.g., accounts with high engagement/follower counts), and estimate the narrative's reach and spread over a defined period. This would involve tracking keywords, hashtags, and linked content to map propagation paths and estimate audience exposure. It would provide metrics on narrative 'virality' and 'stickiness'.",
   "affected_files": [
-    "src/pipelines/observation_processor.js",
-    "src/pipelines/journal_processor.js",
-    "src/state/state.json",
-    "src/reports/daily_report.js"
+    "src/pipelines/observation.js",
+    "src/pipelines/belief_update.js",
+    "src/pipelines/report.js",
+    "state/narrative_tracker.json",
+    "lib/x_api_interface.js"
   ],
   "scope": "pipeline",
   "estimated_risk": "medium",
-  "created_at": "2026-04-29T20:46:37.335Z",
-  "resolved_at": "2026-04-29T21:32:24.903Z",
-  "resolution": "Successfully built, tested, and merged"
+  "created_at": "2026-04-30T21:11:44.433Z",
+  "resolution": null
 }
