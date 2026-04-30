@@ -63,11 +63,18 @@ function firstSentence(str) {
 }
 
 // ── Draft builders ───────────────────────────────────────────────────────────
+function isValidUrl(str) {
+  return typeof str === 'string' && (str.startsWith('https://') || str.startsWith('http://'));
+}
+
 function buildWatchDraft(claim, today, hour) {
   const claim_text = truncate(claim.claim_text, MAX_CLAIM_TEXT_CHARS);
   const journalUrl = `https://sebastianhunter.fun/journal/${today}/${hour}`;
-  // Quote the original source tweet (claim.original_source holds the URL from verify_claims)
-  const quoteUrl = claim.original_source || `https://x.com/search?q=${encodeURIComponent(claim.claim_text.slice(0, 60))}`;
+  // Quote the original source tweet only if original_source is a real URL;
+  // fall back to an X search so the quote-tweet mechanism still works.
+  const quoteUrl = isValidUrl(claim.original_source)
+    ? claim.original_source
+    : `https://x.com/search?q=${encodeURIComponent(claim.claim_text.slice(0, 60))}`;
   const commentary = `Unverified claim circulating: "${claim_text}" — I'm tracking this.`;
   return { quoteUrl, commentary, journalUrl };
 }
