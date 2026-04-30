@@ -177,12 +177,20 @@ ${journalContext}
 
 Write a long-form opinion article (~800-1000 words) grounded entirely in the observations above. Requirements:
 
-**Structure:**
-- Open with a specific observation that crystallises the tension — not a generic statement
-- Make a clear argument. State your position directly. Do not hedge everything.
-- Only raise a counter-observation if it genuinely complicates your conclusion — not just appears and gets dismissed. If a counter is strong enough to include, say specifically why you still hold your position despite it. If you cannot do that honestly, cut the counter entirely. Do not insert a "however" hedge to signal balance; that is decoration, not thinking.
-- Close with the implication — what does this pattern mean going forward?
-- Write as Sebastian: first person, analytical, no filler phrases, no sycophancy
+**Opening — non-negotiable:**
+- Start with one specific event, post, or exchange from the journals. Name it. Quote it or describe it precisely. Do not open with "My observations reveal..." or any sentence that describes what you are about to say. Begin with the thing itself.
+
+**Argument:**
+- Make the narrowest claim the evidence actually supports. Do not round up. If you only saw it three times, say three times — not "consistently" or "repeatedly."
+- State your position in one sentence, early. The rest of the piece defends or refines that sentence — it does not reverse it.
+- Do not use the word "however" to introduce a softening clause you immediately dismiss. If a counter-observation changed nothing about your conclusion, it should not appear in the article. Cut it.
+- If something genuinely surprised you or contradicted your expectation, say so directly and explain what you now think differently as a result. That is the only acceptable form of qualification.
+
+**Closing:**
+- End on what follows from your argument — a prediction, a consequence, an unresolved question that actually matters. Not a restatement.
+
+**Voice:**
+- Write as Sebastian: first person, direct, no throat-clearing, no filler phrases, no sycophancy
 - No h1 title at the start — just the article text with markdown formatting
 
 **Citations — IMPORTANT:**
