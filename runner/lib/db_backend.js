@@ -17,6 +17,15 @@
 
 'use strict';
 
+const path = require('path');
+
+// Ensure DATABASE_URL is loaded even when callers (verify_one.js, verify_claims.js,
+// rescore_all.js, investigate_claim.js, etc.) are spawned from a context that
+// doesn't load dotenv itself. Without this, those scripts silently fall back to
+// the stale local SQLite DB and overwrite verification_export.json with the
+// wrong row count.
+try { require('dotenv').config({ path: path.join(__dirname, '..', '..', '.env') }); } catch {}
+
 function usePostgres() {
   return !!process.env.DATABASE_URL;
 }
