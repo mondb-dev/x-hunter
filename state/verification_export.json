@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-29T23:18:31.758Z",
+  "generated_at": "2026-04-30T01:18:31.785Z",
   "stats": {
     "total": 50,
     "supported": 1,
     "refuted": 6,
     "contested": 0,
-    "unverified": 41,
-    "expired": 2
+    "unverified": 32,
+    "expired": 11
   },
   "claims": [
     {
@@ -617,143 +617,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_5",
-      "claim_text": "Closure of Strait of Hormuz caused US gas prices to surpass $4/gallon",
-      "status": "unverified",
-      "confidence_score": 0.69,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0.9,
-        "evidence_quality": 0.9,
-        "cross_source": 0.5,
-        "web_search": 1
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "verification_count": 146,
-      "verified_at": "2026-04-17T17:46:44.879Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": "Not specified in the prompt, but the claim refers to a specific event in early 2026.",
-      "claim_date": "2026-03",
-      "supporting_sources": [
-        {
-          "name": "CBS News",
-          "excerpt": "The average price for a gallon of regular gas is now $4.02 a gallon, AAA said, up from $3.99 on Monday and more than $1 from a month ago.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6JRvx3pkT_63elouA9agdcOMkvFMkmBudaUTFBT9iRFElzwjnwm9XAljRReJnDKY_unSsKkx6DcfXYCdJbnOxMZmg29Eo0y7tNVZHbWCb5EeNk1aShQ3927tqTSg7EYJXkuoaEM7de_4Dkksd-kIUpP1mVae0icxUlIFDNFtZyCDYwtrX9lxH1G86P_2a"
-        },
-        {
-          "name": "CBS News",
-          "excerpt": "U.S. gasoline prices, which are tied to the global price of oil, would likely keep climbing above $4 if the strait remains closed, according to Bernard Yaros, lead U.S. economist at Oxford Economics.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6JRvx3pkT_63elouA9agdcOMkvFMkmBudaUTFBT9iRFElzwjnwm9XAljRReJnDKY_unSsKkx6DcfXYCdJbnOxMZmg29Eo0y7tNVZHbWCb5EeNk1aShQ3927tqTSg7EYJXkuoaEM7de_4Dkksd-kIUpP1mVae0icxUlIFDNFtZyCDYwtrX9lxH1G86P_2a"
-        },
-        {
-          "name": "FactCheck.org",
-          "excerpt": "Since the waterway has been effectively closed – significantly reducing crude oil exports from the Persian Gulf region – oil prices have increased by double-digit percentages, which has contributed to a 50-cent-plus spike in the average price of a gallon of gasoline in the U.S.",
-          "url": null
-        },
-        {
-          "name": "TIME for Kids",
-          "excerpt": "On April 9, the average cost of a gallon in the U.S. hit $4.12.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkXRjhTyf_G9QGx_TZihqUle5qZN696vfCqbn15HtmB6fRwKNOAXTPnn5J5LR75WLQ9Z9VrTYnHzRdGzY-Ew5s7K-WfdlY21WWclNVuQ_RNT_-wuXrypH4WIcsTfVFlcoTs0WEZJPpwgB6VnNKI5Q55i8="
-        },
-        {
-          "name": "Wikipedia (2026 Strait of Hormuz crisis)",
-          "excerpt": "Amid fears of prolonged supply shortages, oil prices rose faster than during any other conflict in recent history; Brent crude oil prices surpassed US$100 per barrel on 8 March 2026 for the first time in four years, rising to US$126 per barrel at its peak.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBM-y0rkkOSS_agBuH0UNc9LOl7dLJQ1IL2HWZM9Py76cRzw-vPVFWj7mlev9x-a_wkpR5G7i80FdRv7zH18HMs-roMRqJrELcxoeM7bsmbLFCn_gDSmEVS5ds9qmWVK-hrhzn8qKC0s5ItJUfEKKBJiKWo5E="
-        },
-        {
-          "name": "Wikipedia (Economic impact of the 2026 Iran war)",
-          "excerpt": "On March 31 2026 gas prices hit 4 USD per gallon, as the war with Iran caused a surge of 30% in gas prices.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBM-y0rkkOSS_agBuH0UNc9LOl7dLJQ1IL2HWZM9Py76cRzw-vPVFWj7mlev9x-a_wkpR5G7i80FdRv7zH18HMs-roMRqJrELcxoeM7bsmbLFCn_gDSmEVS5ds9qmWVK-hrhzn8qKC0s5ItJUfEKKBJiKWo5E="
-        },
-        {
-          "name": "AP News",
-          "excerpt": "Energy prices rose sharply Monday as disruptions to tanker traffic through the Strait of Hormuz and damage to production facilities raised uncertainty about how U.S. and Israeli attacks on Iran would affect supply to the world economy.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6JRvx3pkT_63elouA9agdcOMkvFMkmBudaUTFBT9iRFElzwjnwm9XAljRReJnDKY_unSsKkx6DcfXYCdJbnOxMZmg29Eo0y7tNVZHbWCb5EeNk1aShQ3927tqTSg7EYJXkuoaEM7de_4Dkksd-kIUpP1mVae0icxUlIFDNFtZyCDYwtrX9lxH1G86P_2a"
-        },
-        {
-          "name": "Associated Press",
-          "excerpt": "U.S. gas prices jumped past an average of $4 a gallon for the first time since 2022 on Tuesday as the Iran war pushed fuel prices to soar worldwide.",
-          "url": null
-        }
-      ],
-      "dissenting_sources": [],
-      "framing_analysis": "The claim is framed validly as it directly attributes the rise in US gas prices to the closure of the Strait of Hormuz, which is supported by the provided evidence. The timing of the closure and the subsequent price increase align.",
-      "web_search_summary": "The closure of the Strait of Hormuz in late February 2026, following US-Israeli airstrikes on Iran, significantly disrupted global oil supply, leading to a sharp increase in crude oil prices. This directly caused US gas prices to surpass $4/gallon, reaching an average of $4.02 by March 31, 2026, and $4.16 by April 8, 2026.",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_9",
-      "claim_text": "American journalist Shelly Kittleson kidnapped in Baghdad, possibly by Iran-backed militia",
-      "status": "unverified",
-      "confidence_score": 0.69,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0.9,
-        "evidence_quality": 0.9,
-        "cross_source": 0.5,
-        "web_search": 1
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_power_accountability",
-      "verification_count": 146,
-      "verified_at": "2026-04-17T17:48:08.633Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": "Multiple news organizations reported on the kidnapping of Shelly Kittleson, citing Iraqi officials and sources familiar with the matter.",
-      "claim_date": "2026-03-31",
-      "supporting_sources": [
-        {
-          "name": "CBS News",
-          "excerpt": "American journalist Shelly Kittleson was kidnapped in Baghdad on Tuesday, according to two sources familiar with the matter as well as an Iraqi official.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHE6dv7wBFnHN6A3fONiQ1_V0xVxro6AwtI1QLDUTyTo657dk3jBkq7vszUUzD2nR-isoQ2vN-rUb-sktm7Lh8jRdps3VOKf17tWutUaahe1qb5kHHll9-vgMAEAqhIhtSkbqYbDLzl5jpj0y-OQNGU3-C6k1-oJAyMYA3-DZsbNi2Ois5cq53wSiM8DQ=="
-        },
-        {
-          "name": "The Washington Post",
-          "excerpt": "The Iran-backed militia that kidnapped U.S. journalist Shelly Kittleson in Baghdad freed her Tuesday in a prisoner swap with Iraq, Iraqi officials said.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBXq7d4YGsNK3HnZRvyuHDtZvLw2XAFyD_lwt6YIFo0dvCeD5cbtb2NYCzbLDjspBfa0LQZTCCqaIBMYqFXXjA1F0AAcZ9N5HxKupPUreBS2VUY085hvsWXULfn1OBArzA3kdF9PstEIuidwqDJqAZA9TBgscYybhhFJk1SP1L3sJtC5Ie58qR6_lNCAMH3Fmx3XL_1tTAnZ4Ed-QmilA="
-        },
-        {
-          "name": "PBS",
-          "excerpt": "American journalist Shelly Kittleson, who was kidnapped from a Baghdad streetcorner last week, has been released, an Iraqi official with direct knowledge of the situation said on Tuesday.",
-          "url": null
-        },
-        {
-          "name": "Democracy Now!",
-          "excerpt": "American freelance journalist Shelly Kittleson has been released after being held for one week by the Iran-backed Iraqi militia Kataib Hezbollah.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBqQaRAaIn-QU6zN-q97syl217yKaTy_z-1gXzX-2c1Np76UxKqqnKzDLMBGRnURjn1rwMf51AFSe3ouMh5Rk2w7HdGFFyLRNgGc8hNrtv-6hIGdHe3fRiVpvVMKkdWXvzk660s_aRVjykdJxOom6hjQ0Z10LxemOBu2WcGUDTvZ7WbXgp-Q2HEOK3XcGiHc04efMFb9i2-iod9mgPEAkoCTs-lgyV0ay3iQMKch4vIk--QdFyMm-4WUCKF90GbyQ="
-        },
-        {
-          "name": "The Media Line",
-          "excerpt": "American freelance journalist Shelly Kittleson was abducted in central Baghdad on Tuesday, Iraqi authorities said, triggering an immediate security operation.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERUlshIrOBkFftAWZLzsJetRQ4USwnQ1CuAaaAGz7GMIJywjc6nN2JyrBKqdqvxBgIS5bqnPJRMCDDI9r-AnBtxVgsoAh_ZKk257-V3L9ZTO3sNckn7AeDwXGPrt6V7EfFNEVetsQgRJ8Lro8kXo0NnPbFFke07kMpC5Wnw1fJ2ROMPdJ7zQRvt18XZDnSub4JYJA8B9Ejm_lnedyH_oUN1wMYsgWpZHsnx712FEUdYj_EFLDqEqva"
-        },
-        {
-          "name": "The Guardian",
-          "excerpt": "The US journalist Shelly Kittleson, who was kidnapped from a Baghdad street corner last week, has been released, the US secretary of state, Marco Rubio, announced on Tuesday.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvwinBPjzhm7EzVM1zDM2GOluYvme13xa3vOeSfXLN1LhareRbb9shmOCjs8T1zcRkBUveOIxWnOUMPpzMBwglT6ZbCewEnwnhm2kUGMt89Q64x8nwXsf-YvbDEF4U33uD90kB1tTOrP1NFl4LCVPBUVMMJG0Ir54x_LXw6HFexmk392nOpajudGVMzis-"
-        },
-        {
-          "name": "Wikipedia",
-          "excerpt": "Shelly Renee Kittleson (born 1976 or 1977) is an American freelance journalist covering conflict and security issues in the Middle East. She was abducted on March 31, 2026, in Baghdad, Iraq, while on assignment near the Baghdad Hotel.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFCPulua94sYCetlh9_TzYuOuu96NL0ygJBuB5Kk5UW7ZSJCi09L3xeRsnFuMoOBN6P5LAwgY08teqaQ1WHpbR2hzN0k1-7zEiCJFpOKLNH5q27bzr8yTqkYjaZBOAnhu7RCdHHYsxuCo="
-        }
-      ],
-      "dissenting_sources": [],
-      "framing_analysis": "The claim is framed factually and accurately reflects the events as reported by numerous credible news outlets.",
-      "web_search_summary": "American freelance journalist Shelly Kittleson was kidnapped in Baghdad on March 31, 2026. The abduction was widely attributed to Kataib Hezbollah, an Iran-backed militia, and she was subsequently released on April 7, 2026, in a prisoner swap.",
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "claim_99",
       "claim_text": "FISA Section 702 allows the U.S. government to spy on foreigners overseas without a warrant, potentially including communications with US citizens.",
       "status": "unverified",
@@ -876,286 +739,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_2",
-      "claim_text": "Israel claims >80% of Iranian air defense systems destroyed",
-      "status": "unverified",
-      "confidence_score": 0.655,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0.8,
-        "evidence_quality": 0.8,
-        "cross_source": 0.5,
-        "web_search": 1
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 147,
-      "verified_at": "2026-04-17T17:46:11.256Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": "IDF Chief of Staff Lt. Gen. Eyal Zamir, IDF spokesperson Effie Defrin, US Chairman of the Joint Chiefs of Staff Gen. Dan Caine, and US Defense Secretary Pete Hegseth.",
-      "claim_date": "2026-03-05",
-      "supporting_sources": [
-        {
-          "name": "UATV",
-          "excerpt": "The Israel Defense Forces (IDF) have initiated a new operational phase targeting Iran, successfully destroying approximately 80% of Iranian air defense systems and over 60% of its missile launchers.",
-          "url": null
-        },
-        {
-          "name": "The Times of Israel",
-          "excerpt": "IDF Chief of Staff Lt. Gen. Eyal Zamir, in a press statement, says Israel has destroyed 80% of Iran's air defense systems and achieved “almost complete air superiority” over Iran.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHManZ2IDygxSWWN_mVsUVKG5Xf8d7IyOtapDfr773J5b5UKsj7EqpaXCMWRTn0Au3sWqrAXP2AgBY0PJu6ixEnYE4cEzefoiyQksexM7uXhTbLdYNfJ1SXJAUXD_QN99WBSlxmcqRJnlhKLRlu7S9sTKIK6UkbjiLpke4WSVlb_LfV-4JeQpAd_FV-V-Zlbe_le2YY53_URd_wPTxEWzqx3BcQjAKSSu7SUBg="
-        },
-        {
-          "name": "The Media Line",
-          "excerpt": "Israel has destroyed roughly 80% of Iran's air defense systems and more than 60% of its ballistic missile launchers during the opening phase of Operation Roaring Lion, IDF Chief of Staff Lt. Gen. Eyal Zamir said in a press statement.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGg1JPo39HyWPPtHkejRBvERxp5w-GyQ4bN5w0ps0cVpGzSwq5sj8xYNCpAR35VzoZimNUCXag02ACB-oI4NfTmgsUGmKgW9ZS04WZb-69NWiICiHo7usRGJ0Hn3FJyU2YlNA3-9GjRX1KdZDFZsUU0O0BGenEw9f91xY8QMrcwgN4kkAEzaK_FB4Mc3Gkm6_OMUoztCd6zstu33GhvfW0xNQfB0fyb9LgmWpUj1N-sohfUg7FbUIn_bPsf-9_U8pwbUA=="
-        },
-        {
-          "name": "APT - YouTube",
-          "excerpt": "Israel Defense Forces claims it has destroyed around 80% of Iran's air defence systems after launching 2500 airstrikes and dropping more than 6000 munitions within 24 hours, marking a dramatic escalation in the war.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFp-l_PbyTYymaUmxF0Ejwv65WSA4XTu1OV9tnXfnWK_Chf-OqTINi-QT24L_smjaKfixalqOdgtK5Zz_qi0aHfoJe_2kQONkIDiAzgyorrNPVNnH4gDeSzFHPHALpKP3n9LQ7flw=="
-        },
-        {
-          "name": "WRAL",
-          "excerpt": "About 80% of Iran's air defense systems destroyed. Caine told reporters on Wednesday at the Pentagon that many of Iran's air defenses have been destroyed with the U.S. striking more than 1,500 air defense targets, more than 450 ballistic missile storage facilities and 800 one-way attack drone storage facilities.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyq0CYi6yLZJXO9Lul4iF9835Vcb6bGbul1zFWE04f1nSuk-C0C1sWHzLpZuz80pIh4RfnvvJHUymACc8QIQx0p11rsQAbN75IDG70Jtb_-FgQnkPUBX7KMYOoCs7M0uWiFdHZBWA8vioOKVmz_5pGDQFSrnoIoQkjcC0gSi6j8cmZ3ysMqugP5zpO-O8C0fLvPxsVWGqFO0HbM7D6CPl_MBdHBcRqikJGACzAua8="
-        },
-        {
-          "name": "AP (via The Times of Israel)",
-          "excerpt": "Gen. Dan Caine, chairman of the Joint Chiefs of Staff, this week said the US military has hit more than 13,000 targets, including about 80% of Iran's air defense systems.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHManZ2IDygxSWWN_mVsUVKG5Xf8d7IyOtapDfr773J5b5UKsj7EqpaXCMWRTn0Au3sWqrAXP2AgBY0PJu6ixEnYE4cEzefoiyQksexM7uXhTbLdYNfJ1SXJAUXD_QN99WBSlxmcqRJnlhKLRlu7S9sTKIK6UkbjiLpke4WSVlb_LfV-4JeQpAd_FV-V-Zlbe_le2YY53_URd_wPTxEWzqx3BcQjAKSSu7SUBg="
-        },
-        {
-          "name": "Xinhua",
-          "excerpt": "Israeli air force has conducted 2,500 strikes, dropped over 6,000 munitions, and destroyed roughly 60 percent of Iran's ballistic missile launchers and 80 percent of its air defense systems, Zamir said, adding that Israel has achieved near-total air superiority over Iran.",
-          "url": null
-        },
-        {
-          "name": "US Department of Defense (Press Briefing)",
-          "excerpt": "CENTCOM forces destroyed approximately 80 percent of Iran's air defense systems, striking more than 1,500 air defense targets, more than 450 ballistic missile storage facilities, 800 one-way attack drones storage facilities.",
-          "url": null
-        }
-      ],
-      "dissenting_sources": [],
-      "framing_analysis": "The claim is framed by Israeli and US officials as a significant military success, highlighting the extensive damage inflicted on Iran's air defense capabilities and asserting near-total air superiority. This framing aims to demonstrate the effectiveness of their operations and the degradation of Iran's military power.",
-      "web_search_summary": "Multiple reports from March and April 2026 indicate that Israeli and US officials have claimed that over 80% of Iran's air defense systems have been destroyed during recent military operations. These claims were made by figures such as IDF Chief of Staff Lt. Gen. Eyal Zamir, IDF spokesperson Effie Defrin, US Chairman of the Joint Chiefs of Staff Gen. Dan Caine, and US Defense Secretary Pete Hegseth. While a high percentage of destruction is claimed, some officials also acknowledged that Iran retains some capabilities and the threat has not been entirely removed.",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_6",
-      "claim_text": "Iran attacked Kuwaiti oil tanker Al-Salmi in Dubai",
-      "status": "unverified",
-      "confidence_score": 0.655,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0.8,
-        "evidence_quality": 0.8,
-        "cross_source": 0.5,
-        "web_search": 1
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 146,
-      "verified_at": "2026-04-17T17:46:58.165Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": "Kuwait Petroleum Corporation (KPC) and Kuwait News Agency (KUNA)",
-      "claim_date": "2026-03-31",
-      "supporting_sources": [
-        {
-          "name": "Gulf News",
-          "excerpt": "Kuwaiti tanker 'Al Salmi' attacked by Iran drone off Dubai coast. Hull damage, fire and spill fears after Iranian attack on Kuwaiti VLCC off Dubai.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG03lmvKbG4lY94vl8ZprhjRVdCz25g3CnX0armKaCPAh7XZyRefDUdXjtBFapprsiA4ut0kP53NsrgsuWQyZd5k5siPCfa05S5wxBUsUYpJxi_BEkON-03mNOrGtZSpDK_iXx-He0jAmzBez4t-98BsaL1QiYzmwXhuScOZpBcPMEPBSYUG9ncI9EtGqUTDYricORcYC45dIt5l_Mo-LtDRqj92KUM-TNtog=="
-        },
-        {
-          "name": "NDTV",
-          "excerpt": "Fully Loaded Kuwaiti Oil Tanker Damaged In Iranian Strike Near Dubai. Kuwait Petroleum Corporation (KPC) said early on Tuesday that the Al Salmi was struck in an Iranian attack while anchored at Dubai port in the United Arab Emirates.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkmrM7dcAl2hvrmmbqZoQnf3sYbdniAw1kWNonhEVBst1PvwmPhzhPwrMgolKQIXvODnD_qMby-xG3izObg0V_3pgnBY9PL0cv-NYPIXYZ7BcK_gbxzVGBEfbqOmm--PnMNkWGQfB9fCswRDngbMpy9EMon44ikItmPx0NE7V_DlCy2uAkOgdZL-YKJnI0P6lw9PAA6p5yLAdovOvuBSmq7lR68Fz4smpKjVdq3xWVFgC5cyn2611zxs0CPH-5"
-        },
-        {
-          "name": "Anadolu Ajansı",
-          "excerpt": "Kuwait Petroleum Corporation announced that a giant Kuwaiti crude oil tanker, Al Salmi, was attacked early Tuesday by an Iranian drone while positioned in the anchorage area of Dubai Port in the United Arab Emirates.",
-          "url": null
-        },
-        {
-          "name": "MEO",
-          "excerpt": "Iran attacked and set ablaze a fully loaded crude oil tanker off Dubai on Monday, as President Donald Trump warned the US would obliterate Iran's energy plants and oil wells if it does not open the Strait of Hormuz.",
-          "url": null
-        },
-        {
-          "name": "World News (via WION)",
-          "excerpt": "In a major escalation of the ongoing conflict in the Middle East, a fully laden Kuwaiti oil tanker was attacked by Iran in the anchorage area of Dubai's port on Tuesday, damaging the hull and triggering a fire that the Dubai authorities later said was extinguished.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG03lmvKbG4lY94vl8ZprhjRVdCz25g3CnX0armKaCPAh7XZyRefDUdXjtBFapprsiA4ut0kP53NsrgsuWQyZd5k5siPCfa05S5wxBUsUYpJxi_BEkON-03mNOrGtZSpDK_iXx-He0jAmzBez4t-98BsaL1QiYzmwXhuScOZpBcPMEPBSYUG9ncI9EtGqUTDYricORcYC45dIt5l_Mo-LtDRqj92KUM-TNtog=="
-        },
-        {
-          "name": "The Times of Israel",
-          "excerpt": "Kuwait Petroleum Corporation says a giant Kuwaiti crude oil tanker, Al Salmi, was directly targeted in what it described as an Iranian attack while anchored at Dubai port in the United Arab Emirates, causing damage to the vessel and a fire onboard, the state news agency KUNA says.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKy8gg_ymMgrrOWT5EvS48AXHZaZDMR_UBaulMKk_CAIcjG_P1gb9o41Ppc_Yp0WPubs5OoYaCW7A2a0cTQ60abhh0u14tJ2Y2l2XN72SnflxeH64RdoifMpPAn-82r0iJHphdVDqBjSxHCCHcAoybTn36At9B6pjurZRtLe-FEuZUwD9kOWAjSnYmbq1WPnFTLbPcN8ofMKaV1BTB-ThrzvpNXkmEa3DQ0MjuPExp9L3GT739GMEmUqXCwnvwhd4eF9t61P3RVB5EycAhvunqj9kL5SNtWeTGqDg57jZFkkPq9MW5Uq5fBA=="
-        },
-        {
-          "name": "The Guardian",
-          "excerpt": "When Iran attacked a fully loaded crude oil tanker anchored at Dubai port on Monday night, damaging the vessel's hull, hundreds of seafarers stranded on tankers anchored nearby were close enough to watch as the vessel burned.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfMabghBiXR-AffPteB2OVEnvdF-VDH2L1bjw7k85AHR-FBncNPAU9wJGKDEmEkkWa1ECRYBFahpdX4_1mX1xOlpYmBMrLepsJiZ0zHzV5TCvdrIG6YRGgYqRaouGMhblRubcReNEwcsVI3JBmoUJQmghsLWm0PlJyZnNmxATanGGcoyNdQ2WnYYeC6sVFJwS3SM66qPXwEv2p4aBifGZ0MMWGftLpUnDGvD5mJACzs6tEyw=="
-        },
-        {
-          "name": "Wikipedia",
-          "excerpt": "The Kuwaiti oil tanker Al Salmi was attacked by an Iranian drone, causing damage to its hull.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERiaMGf-5cwVrMC4IX0APqEqPQhi9sSkCgeIHkMo3SUsAbhTN1-11HOM124YEGjjRSe_XXhKQgegx0zAkcMFEI_KfBJWlBJ5p9HZLE2UOyllzK6f2fQnzXufFvit3Z-RO6psKV2092HRjzgln8oKmWgvE0ktg2QA=="
-        },
-        {
-          "name": "Mirror Now (YouTube)",
-          "excerpt": "An oil tanker identified as Al Salmi tanker was attacked off the coast of Dubai, reportedly set ablaze in a suspected drone strike.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZcoZ9ZiJnUMaD28GV9JVn3pbwtWSLU9nR_KEm6zBbKJh1YW1zJz3TaqncoZEzZPa9oS4N6w6pMtnSXGa4myiFNUIQutUeSux3C6ZUUDp7vhS7xtxhVtPHaud9MHcm_pOkIIUg490="
-        },
-        {
-          "name": "Times of India (YouTube)",
-          "excerpt": "a fully loaded Kuwaiti crude oil tanker has been hit in an apparent Iranian attack while anchored at Dubai port.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKy8gg_ymMgrrOWT5EvS48AXHZaZDMR_UBaulMKk_CAIcjG_P1gb9o41Ppc_Yp0WPubs5OoYaCW7A2a0cTQ60abhh0u14tJ2Y2l2XN72SnflxeH64RdoifMpPAn-82r0iJHphdVDqBjSxHCCHcAoybTn36At9B6pjurZRtLe-FEuZUwD9kOWAjSnYmbq1WPnFTLbPcN8ofMKaV1BTB-ThrzvpNXkmEa3DQ0MjuPExp9L3GT739GMEmUqXCwnvwhd4eF9t61P3RVB5EycAhvunqj9kL5SNtWeTGqDg57jZFkkPq9MW5Uq5fBA=="
-        },
-        {
-          "name": "Türkiye Today",
-          "excerpt": "Kuwait Petroleum Corporation said a giant Kuwaiti crude oil tanker was attacked early Tuesday by an Iranian drone while anchored near Dubai Port in the United Arab Emirates, raising fears of a potential oil spill.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZ0e56QMJLo99F2Eg9QoxNZHnzeXToBMqidxzhHjzUU6fnJ_DXXhem5qQCgzr_-E_CUneRTVP3mupxceyLPwZpFnau6h5_H3PMZShI2ek50fauCYuJHl9RGV4CSXbdVyrcPTHI-twLxc8njNU05EBLHMi6dfLgnjumdSFyp3IY-uz_K-4IeKrYb_sRtaiCt3NH3bpnvXbBfOI94BbOkmfAmhcOD7VYnP7-oD6z1hvg3LPHJr-hl_fDHoWcaA=="
-        },
-        {
-          "name": "WION (YouTube)",
-          "excerpt": "Kuwaiti oil tanker was struck in the Gulf shortly after Donald Trump claimed Iran had allowed oil shipments as a gift.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZcoZ9ZiJnUMaD28GV9JVn3pbwtWSLU9nR_KEm6zBbKJh1YW1zJz3TaqncoZEzZPa9oS4N6w6pMtnSXGa4myiFNUIQutUeSux3C6ZUUDp7vhS7xtxhVtPHaud9MHcm_pOkIIUg490="
-        }
-      ],
-      "dissenting_sources": [],
-      "framing_analysis": "The claim is framed factually, reporting a specific event. News reports generally present the incident as a direct Iranian attack, often contextualizing it within broader regional conflicts and escalating tensions in the Gulf.",
-      "web_search_summary": "The claim that Iran attacked the Kuwaiti oil tanker Al-Salmi in Dubai is confirmed. On March 31, 2026, the Kuwaiti oil tanker 'Al Salmi' was struck by an Iranian drone while anchored off Dubai, causing damage to its hull and a fire. Dubai authorities later confirmed the fire was extinguished, no oil spill occurred, and all 24 crew members were safe.",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_7",
-      "claim_text": ">1,500 civilians killed, up to 3.2 million displaced due to the conflict",
-      "status": "unverified",
-      "confidence_score": 0.655,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0.8,
-        "evidence_quality": 0.8,
-        "cross_source": 0.5,
-        "web_search": 1
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_human_rights_exploitation_v1",
-      "verification_count": 146,
-      "verified_at": "2026-04-17T17:47:27.891Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [
-        {
-          "name": "UN Human Rights Office",
-          "excerpt": "Civilian deaths in conflict surged 40% globally in 2024, with at least 48,384 individuals, mostly civilians, killed.",
-          "url": null
-        },
-        {
-          "name": "UN (Protection of Civilians Trends Report)",
-          "excerpt": "The UN recorded more than 36,000 civilian deaths throughout 2024, and a record 123.2 million people were displaced globally by the end of 2024.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSy8Rf_6vMcufjD58HhKEfTQ8vb9puF7GyCxp8XJGHDuQpWmZbUCA72-cHr1UXaEI7IRV_Xye8zyCco-nuaVgxgbfVUxe1tLAzSMigwRfu3yrMj8aUKZDa1iXv72_ZUpIcicEyIGoEtd5D"
-        },
-        {
-          "name": "Action on Armed Violence (AOAV)",
-          "excerpt": "In 2024, AOAV recorded 59,524 civilian casualties from explosive weapons globally, including 14,145 fatalities in Gaza.",
-          "url": null
-        },
-        {
-          "name": "ReliefWeb (Sudan Crisis Situation Analysis)",
-          "excerpt": "Over 12 million people are now displaced in Sudan, with fatality estimates ranging from 29,582 to over 150,000 people by late 2024/late 2025.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwKdxWJryPZ57uT4RKbyxNEBKlcFbJYdoVlm_uznzJxNtJX_h5WXYmJAfjyzYbHYn0mkzOY6iRW4dN7KrFkdT357v_T6CndBYUOm-Kp-mQpLIc0ygtP7qp8BC0_s_8_HX4b6WsiAJ7DQNJJgUC2cIjqrvO38Fdo1r7tgt0_p8iW-5TKD7g7DhUJa7PTgnEkxAJ"
-        },
-        {
-          "name": "OCHA (Occupied Palestinian Territory)",
-          "excerpt": "Nearly all of Gaza's current population of 2.1 million people has been displaced due to hostilities that commenced in October 2023.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGd7AprhJmNIYHm9XHoXRl3m0NaPSpvUaXkq1xW70r2w9wVdu5IwHECVNZ1xYzBH-Hzrmwkkl9jUiTZouv6syXo19PIeCoasB4EzEMdcjbTtaVUhJtZeGcl1e3umLn50cD65R8FDdmFSqgx9AOkWYE="
-        },
-        {
-          "name": "Al Jazeera Interactives",
-          "excerpt": "Over the past three years, more than 50,000 people have been reported killed across Sudan, and more than 14 million people have been forced from their homes.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHlrODLm31MJSIuKlw5NsYRiDavAM6uTozzLvSz76ftAYVm60DFGTnsqqrrBw4vKbzQR5_SjB-HDuwmr26Pkl5lijBMwH_h4Uf9INKlCTu5exXbVr5vbL4WR4jMq2junGPBJGHCGnZQ1wf6w1wc2Oys1pgOb1r1"
-        }
-      ],
-      "dissenting_sources": [],
-      "framing_analysis": "The claim, while numerically accurate as a minimum threshold, significantly understates the actual scale of civilian deaths and displacement in major ongoing conflicts globally. The lack of specificity regarding 'the conflict' also limits its contextual value.",
-      "web_search_summary": "Multiple ongoing conflicts have resulted in civilian casualties far exceeding 1,500 and displacement figures well over 3.2 million. For instance, the conflict in Sudan has led to over 50,000 reported deaths and more than 12 million displaced, while in Gaza, over 14,000 fatalities from explosive weapons were recorded in 2024 and nearly 2.1 million people have been displaced.",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_1",
-      "claim_text": "US operations in Iran could end in 2-3 weeks (Trump statement)",
-      "status": "unverified",
-      "confidence_score": 0.635,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0.8,
-        "evidence_quality": 0.8,
-        "cross_source": 0.5,
-        "web_search": 0.8
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 146,
-      "verified_at": "2026-04-17T17:42:05.480Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": "Donald Trump",
-      "claim_date": "2026-03 or 2026-04",
-      "supporting_sources": [
-        {
-          "name": "Al Jazeera",
-          "excerpt": "Donald Trump says US forces will end operations in Iran “very soon” and could be gone within two to three weeks.",
-          "url": null
-        },
-        {
-          "name": "KNKX",
-          "excerpt": "President Trump said on Tuesday that the United States will be leaving Iran very soon, giving a two to three week timetable.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwe1VzLkQeIa-I__QNcQmNhO-J9GoUgCpJK_0sTY4Li5C3xlXnc69PQLo2Dalg2m0_5pYHdEdcjvKJctHoWwesAN_VIBn0km3pKtmSnHlBc9cqplGWTw3TsMw8InBBzMOpngO9kmzhSMBHfPraEWtZbKopcQp1zBiaQgrIM7PIIWzZ5vrJBMi_J2Awu_ybMyAZlr1gZ3ac1GpD0yo-CscqECyauM51YekNx7z8Mw=="
-        }
-      ],
-      "dissenting_sources": [
-        {
-          "name": "Axios",
-          "excerpt": "President Trump said in a prime time address that the U.S. was close to ending its war in Iran but would spend the next two to three weeks bombing the country 'back to the stone ages.'",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoziMVgA1uda-JsgNNct7S1jNv_5WcVB8Nvw99cTgGmq0G040qGyEyUdUG-lTTNkkXEcpwZWka76lwz4WOcEM-hm87WwiIVGttbDG6Ek8eZkWTU9jWWzTE6zKPPtu5sUQAvQEVrDqgk8gTTD3INDzCFyH5YR5cTjlYZgS-3JKyN-gt"
-        },
-        {
-          "name": "CTV News",
-          "excerpt": "U.S. President Donald Trump said U.S. forces will keep hitting Iran 'extremely hard over the next two or three weeks' and bring the country 'back to the Stone Ages,' even though he argued that all of his administration's military objectives have been met or exceeded.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEve8xWlKIdAlOAQfr8MfrOsuD_uCldfeXD59WUE-QQJE5_LRkZqMqbWXLlRWZrQyCGvcMlm5gbfEAt_RIaxQGscFUfRsxwnKGgRKn1T567ytkVEUWYO5oxKd-hqY7vL1a5hzs-XxSbDHOMopagO2MG9P5DlBcvwllX-hi11c1nu-NFtZcmtzSAS0cfqYRwNLzx2FZpBXM7d9cDOd8vAtssCcMSLdk2Mw=="
-        },
-        {
-          "name": "France 24",
-          "excerpt": "President Donald Trump said US forces will keep hitting Iran 'very hard' in the next two or three weeks and bring the country 'back to the Stone Ages,' even as he touted the success of US operations and argued that all of Washington's objectives have so far been met or exceeded.",
-          "url": null
-        }
-      ],
-      "framing_analysis": "The claim is framed to suggest an imminent end to US operations, which is partially supported by Trump's statements. However, it omits the concurrent threats of intensified military action within the same timeframe, which provides a more complete picture of his remarks during the ongoing conflict.",
-      "web_search_summary": "Donald Trump has recently made statements, around late March and early April 2026, indicating that US operations in Iran could conclude within two to three weeks. However, during the same period, Trump also stated that the US would continue to 'hit Iran extremely hard' or bomb the country 'back to the stone ages' over the next two to three weeks, within the context of an ongoing '2026 Iran war'.",
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "claim_31",
       "claim_text": "Philippines seeking US permission to buy Russian crude due to fuel shortages and Strait of Hormuz blockade.",
       "status": "unverified",
@@ -1174,8 +757,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "verification_count": 85,
-      "verified_at": "2026-04-29T23:18:31.743Z",
+      "verification_count": 86,
+      "verified_at": "2026-04-30T01:18:31.765Z",
       "created_at": "2026-04-14T13:00:18.070Z",
       "original_source": "ABS-CBN News and Philstar.com, reporting on statements from Philippine Energy Secretary Sharon Garin.",
       "claim_date": "2026-04-14",
@@ -1229,139 +812,6 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim is framed factually, accurately reflecting the reported diplomatic efforts by the Philippines and the underlying geopolitical and economic reasons for these actions.",
       "web_search_summary": "The Philippines is actively seeking permission from the United States to purchase additional Russian crude oil. This request is driven by significant fuel shortages within the country and the ongoing disruption of oil shipments due to a blockade of the Strait of Hormuz, which has led to a declared national energy emergency.",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_3",
-      "claim_text": "US reported destroying 150 Iranian vessels",
-      "status": "unverified",
-      "confidence_score": 0.62,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0.7,
-        "evidence_quality": 0.7,
-        "cross_source": 0.5,
-        "web_search": 1
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 146,
-      "verified_at": "2026-04-17T17:46:30.320Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": "US White House Press Secretary Karoline Leavitt and CENTCOM Commander Admiral Brad Cooper, as reported by various news outlets.",
-      "claim_date": "2026-03 to 2026-04",
-      "supporting_sources": [
-        {
-          "name": "Vertex AI Search",
-          "excerpt": "The White House has said that US military operations have effectively neutralized Iran's submarine force and destroyed scores of Iranian naval vessels, including 16 warship classes, as part of a broader military campaign, Operation Epic Fury.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkbvAdIcnSEwCuL0PYC2BxnvrlwfvSMjwPBYVL4KhDthvLk3Bwo8GFMPIpjkPPQQvDYqLHtpRD3kRIpwK35o4kqUWXKA6ozaXcqhuzeuwudsUwHxdFr7hCYLisYfSdqfAuqyKG20AjCHlLSBm38l-FeLnrLbWX2eOSOzCuAg5DHtKvvdngnXhSCCV2WfdQQTTzPSFIy4U8qZp-KdnJIGxzk1u6Hzp-E9HsN60fY_7XmKv2"
-        },
-        {
-          "name": "Vertex AI Search",
-          "excerpt": "The Department reported that the combined force destroyed 150 Iranian warships, all Iranian submarines, and 97 percent of Iran's naval mine stockpile.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkbvAdIcnSEwCuL0PYC2BxnvrlwfvSMjwPBYVL4KhDthvLk3Bwo8GFMPIpjkPPQQvDYqLHtpRD3kRIpwK35o4kqUWXKA6ozaXcqhuzeuwudsUwHxdFr7hCYLisYfSdqfAuqyKG20AjCHlLSBm38l-FeLnrLbWX2eOSOzCuAg5DHtKvvdngnXhSCCV2WfdQQTTzPSFIy4U8qZp-KdnJIGxzk1u6Hzp-E9HsN60fY_7XmKv2"
-        },
-        {
-          "name": "Vertex AI Search",
-          "excerpt": "The official tally: over 10,200 US air sorties, more than 13,000 targets struck, over 150 Iranian naval vessels destroyed, and 13 American service members killed in 38 days of major combat.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkbvAdIcnSEwCuL0PYC2BxnvrlwfvSMjwPBYVL4KhDthvLk3Bwo8GFMPIpjkPPQQvDYqLHtpRD3kRIpwK35o4kqUWXKA6ozaXcqhuzeuwudsUwHxdFr7hCYLisYfSdqfAuqyKG20AjCHlLSBm38l-FeLnrLbWX2eOSOzCuAg5DHtKvvdngnXhSCCV2WfdQQTTzPSFIy4U8qZp-KdnJIGxzk1u6Hzp-E9HsN60fY_7XmKv2"
-        },
-        {
-          "name": "IBTimes UK",
-          "excerpt": "President declares 150 Iranian ships destroyed, while global oil markets brace for the impact of a total maritime shutdown in the world's most vital energy corridor.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEitPeyEP6gx-tiKdr6ZHhvpX4M6YOPD4wQPT_jP5syfpRB_dqeDREws3I6zgvYtw5WzeOKRCjoUYM7rAFCd1lgzt28nUwfKjsrPmTJyRIva-R56PL9bb9YttsOsxsZdzBYwSR6RJOZ3pRGpOHsWWBwiKiIvosmDuwseTtkBZY7fipfYVC2J4GqyQon1IAFW3-rittd1nA6HNJ_k7oyrgaO0pNc24b3weK2VTo6aLoAJcQs-YfBO4oNThVP9A=="
-        },
-        {
-          "name": "Caliber.Az",
-          "excerpt": "The United States has carried out strikes on more than 11,000 targets in Iran over the past 30 days, according to Chairman of the Joint Chiefs of Staff General Dan Caine. ... “Over the past 30 days, we have struck more than 11,000 targets in Iran. We have also destroyed more than 150 ships,” he stated.",
-          "url": null
-        },
-        {
-          "name": "Naval Today",
-          "excerpt": "In the latest updates from the Middle East conflict, the United States Central Command (CENTCOM) announced that US forces have destroyed more than 100 naval vessels belonging to the Iranian Navy.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkbvAdIcnSEwCuL0PYC2BxnvrlwfvSMjwPBYVL4KhDthvLk3Bwo8GFMPIpjkPPQQvDYqLHtpRD3kRIpwK35o4kqUWXKA6ozaXcqhuzeuwudsUwHxdFr7hCYLisYfSdqfAuqyKG20AjCHlLSBm38l-FeLnrLbWX2eOSOzCuAg5DHtKvvdngnXhSCCV2WfdQQTTzPSFIy4U8qZp-KdnJIGxzk1u6Hzp-E9HsN60fY_7XmKv2"
-        },
-        {
-          "name": "Vertex AI Search",
-          "excerpt": "Since the United States and Israel began their joint offensive against Iran on Feb. 28, the U.S. has targeted and taken out more than 60 Iranian ships, weakening Iran's naval combat power, according to U.S. Central Command Commander Adm. Brad Cooper.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkbvAdIcnSEwCuL0PYC2BxnvrlwfvSMjwPBYVL4KhDthvLk3Bwo8GFMPIpjkPPQQvDYqLHtpRD3kRIpwK35o4kqUWXKA6ozaXcqhuzeuwudsUwHxdFr7hCYLisYfSdqfAuqyKG20AjCHlLSBm38l-FeLnrLbWX2eOSOzCuAg5DHtKvvdngnXhSCCV2WfdQQTTzPSFIy4U8qZp-KdnJIGxzk1u6Hzp-E9HsN60fY_7XmKv2"
-        }
-      ],
-      "dissenting_sources": [],
-      "framing_analysis": "The claim is framed as a factual report from US military and government officials regarding the success of their operations. While the numbers are consistently reported by these sources, some reports acknowledge a lack of independent verification.",
-      "web_search_summary": "US officials have reported the destruction of over 150 Iranian naval vessels as part of 'Operation Epic Fury,' a military campaign against Iran that began in late February 2026. These claims, made by the White House and CENTCOM, indicate a significant degradation of Iran's naval capabilities, including the elimination of its submarine fleet and various classes of warships.",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_8",
-      "claim_text": "Iranian President Pezeshkian ready to end hostilities if firm guarantees against future domestic strikes received",
-      "status": "unverified",
-      "confidence_score": 0.62,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0.7,
-        "evidence_quality": 0.7,
-        "cross_source": 0.5,
-        "web_search": 1
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_political_trust_corruption_v1",
-      "verification_count": 146,
-      "verified_at": "2026-04-17T17:47:51.033Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": "Iranian President Masoud Pezeshkian",
-      "claim_date": "2026-03",
-      "supporting_sources": [
-        {
-          "name": "APT",
-          "excerpt": "Iranian President Masoud Pezeshkian says Iran will halt attacks on neighbouring countries unless they launch strikes against Iran.",
-          "url": null
-        },
-        {
-          "name": "Tfipost.com",
-          "excerpt": "“Iran will not carry out attacks or missile strikes against neighbouring countries unless an attack against Iran originates from those countries,” he said, adding that Tehran holds “no hostility toward neighbouring states”.",
-          "url": null
-        },
-        {
-          "name": "The Independent",
-          "excerpt": "Iran's president, Masoud Pezeshkian, condemned 'unprovoked military aggression' hours before Donald Trump was scheduled to address the Oval Office.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIlipo0NHCjJGxeYc7GSImBl-23qx-iRpDX09n5OEAlF_3HbRkMTnObqh4BuSJyJU8rRtKZ7iw7C3Vx483LLtFxLEXXh4Gy_NwEQJQRqG5CIG8xF6BKwoyGnzYZGGUxmjY6N7a4ZlVrl2w2_f_kAmOlOtVop-tVuY2Gy1xVOzZeBVmP6ePRicgPKHMSEwnvULRAZKQ1Vp2R8346mUiQXqWcPw="
-        },
-        {
-          "name": "Türkiye Today",
-          "excerpt": "Iranian President Masoud Pezeshkian hailed the newly achieved ceasefire as a victory rooted in the 'blood' of martyred leader Ali Khamenei, even as Tehran and Washington prepare to resume diplomatic talks following a two-week pause in hostilities.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRxwMXnFVX0GyKc7ruof9o1GtEBCraL96ARfdwUz_hC2egFVzUtD2LxNgivKGEQ1c0LSDkCbzK6z8jeR7utD_V0nBHMUKpebRuczXj4wKlf-iCAR_fkIDLTsSfZBxfUMffs6TpfYZuH3FwO00ReWRQ4JpJ-oF9Us5YNmYMyKrhyzwQvSePA5Uk3bZuNkXclSBtA8nKeNcpYV7Ge8Lx_Gw="
-        },
-        {
-          "name": "Unnamed source (reported by Google Search)",
-          "excerpt": "Pezeshkian accused senior Guards commanders of unilateral actions that have wrecked ceasefire prospects and pushed Iran toward disaster.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdKVYwZ8UL1-3bSP42GOAsC9l247Ha0rWI9dN1eZHqHWFEQ_kODm6gAhT9kgQwtlZjlimmZlCdHQ48OLZwOSadjLhEpUX9G-0a_bHOwLB52BGpyGTraKdGMW32XgUSBNqSWjqYvg=="
-        }
-      ],
-      "dissenting_sources": [
-        {
-          "name": "Time Magazine",
-          "excerpt": "Pezeshkian denied Trump's assertion that 'Iran's New Regime President' has requested a ceasefire, stating that Trump's claim was 'false and baseless.'",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBYMBL4heDBQUezfPxEzlxE8T5X0cW-Pvj6-thZ28ZgwPcrEEVRuUnOZnqTBpDh-Eu0hh1vGfi7EPKnwwFfhVUIvLSHj4tKMRbmDzscKj-4CDSUXX1dT4TomlEOLeROD1iw_X5JludKuV4CgyBMjilEbnHKfd8oTAwNlzjh2Mbt2WcV54SQOP__xQNIVI="
-        },
-        {
-          "name": "The Independent",
-          "excerpt": "Pezeshkian denied Trump's assertion that Iran's 'new regime president' had requested a ceasefire.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIlipo0NHCjJGxeYc7GSImBl-23qx-iRpDX09n5OEAlF_3HbRkMTnObqh4BuSJyJU8rRtKZ7iw7C3Vx483LLtFxLEXXh4Gy_NwEQJQRqG5CIG8xF6BKwoyGnzYZGGUxmjY6N7a4ZlVrl2w2_f_kAmOlOtVop-tVuY2Gy1xVOzZeBVmP6ePRicgPKHMSEwnvULRAZKQ1Vp2R8346mUiQXqWcPw="
-        }
-      ],
-      "framing_analysis": "The claim accurately reflects President Pezeshkian's stated position on ending hostilities, contingent on Iran not being attacked. While 'firm guarantees' is an interpretation, it aligns with his condition for halting Iranian strikes.",
-      "web_search_summary": "Iranian President Masoud Pezeshkian has expressed a readiness to end hostilities, stating in a televised address on March 7, 2026, that Iran would halt attacks on neighboring countries unless those countries launched strikes against Iran. He also apologized to regional states affected by recent hostilities and emphasized that Iran does not seek confrontation. This conditional cessation of Iranian strikes effectively serves as a demand for guarantees against future domestic strikes originating from those territories.",
       "investigation_depth": "quick"
     },
     {
@@ -1824,82 +1274,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_4",
-      "claim_text": "Strait of Hormuz effectively closed to US/Israel-linked vessels",
-      "status": "unverified",
-      "confidence_score": 0.45,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0.5,
-        "cross_source": 0.5,
-        "web_search": 1
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "verification_count": 232,
-      "verified_at": "2026-04-29T23:18:31.743Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": "Unknown",
-      "claim_date": "2026-03",
-      "supporting_sources": [
-        {
-          "name": "Wikipedia",
-          "excerpt": "Shipping traffic through the Strait of Hormuz, a major maritime choke point for world energy trade, has been largely blocked by Iran since 28 February 2026, when the United States and Israel launched an air war against Iran and assassinated its supreme leader Ali Khamenei.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4cwIpa_eNus4p-S8BPoDVGwRLHS1rrpUpcFMR8SeGD-nFSNtmwhtmSwEII7Qu9pt7j2QHHTMKUdH9268xqivJLQxR22H0XSYIc8xJeJ7s0tuiUNLVnlJZ2jlOimdQhwQU9GHHqyZP65AD4BtN8pCqzUdQcTk="
-        },
-        {
-          "name": "Al Jazeera",
-          "excerpt": "After the US and Israel launched their war on Iran on February 28, Tehran, whose territorial waters extend into the strait, closed the passage to all vessels.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxk9Cx_L2Nwg9tCyBoQsrgnkpwYqRo6swL-FRYDvbhJlzIlUE-lS634Ovd08aX3fFS-I2X9VYaf-KcjKlyh-QchGnPdI1z3LQ-RvyJR7zm0yJymzNNc5VTxf8qJrELCk-OQT07NAWaOYzUxcrNFtdBqXDWCoIueJC4yMjFJefjm_FGBHVAaJtWIvqFTFuh6NBVP3Ir"
-        },
-        {
-          "name": "Energy Digital Magazine",
-          "excerpt": "The effective closure of the strait has sent global energy prices soaring and prompted countries to implement fuel rationing and place restrictions on electricity consumption.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIkBddQH-TPOy5pe4gWKT0BnnBj9G4D1dniE4_MaA0efJ5S3YZXf8uHfW5Aeo4ESGbXkwFruHf16SvGvTkN2ZviRRsdycQj6sTqiiyRaTs6WbHFUR7OK8gDc-vMr8h_L0aWV1hBUJC7QtD4K2njVYDUux299NtC3wo77R8bBhn-JU1Hf3535lEPtRS8HUhjMVWFQ=="
-        },
-        {
-          "name": "Time Magazine",
-          "excerpt": "Iran has reported seizing two vessels in the Strait of Hormuz amid the U.S. blockade, just hours after President Donald Trump announced an extension of the cease-fire.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGubB6eyHObexuNV3jUj9ziVfAh9mHv6_D6ppBftuprzx7QRnxtHepSNLrQYg74YvzUFUfU69NgB4ecE46SuNZS1rhxJDIWuxrR1fixLZ6cqWxPxZbTy2zv4SvQbDbpvGFXXfLTFE9gzjn7JXPEWCm8vGRhqxyd7J8trqX-u36ie4O3qcN1TE2X-BxPaLmIGytbmACxGpnSX-3kScbkxHMt7T4M1q9nOcZlUuDS"
-        },
-        {
-          "name": "The Guardian",
-          "excerpt": "Iranian forces have seized two ships in the strait of Hormuz as the US and Iran doubled down on imposing separate blockades of the shipping waterway.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGITd14uTm2NQAZGOvTqohM0lJUeiNPsWkzF8p1Epik5MAxvpSdvC6m2dWoA-Q2ct3oFPxDqOTadmwTbORo1ZVYOloI4QpxomjQvX7mp4bpzwbSbGeUyUVxlmHKESi6Fu9RTMHrg23De-xGiqQK6Bl2ZM82ZoKXIhU518BNtCYGtbzgJ_YIco4jm-L7g55oMZuXS5_xMbnbnK15qbPdB6x01PzMsQ=="
-        },
-        {
-          "name": "CNA",
-          "excerpt": "Iran, which has effectively blocked the strait to ships apart from its own since the US and Israel launched the war in February, has been left in apparent control of the waterway since last-ditch peace talks were called off on Tuesday, hours before a two-week ceasefire expired.",
-          "url": null
-        },
-        {
-          "name": "Times of Israel",
-          "excerpt": "Shipping through the strategic Strait of Hormuz has been heavily restricted by Iran since the start of the war with Israel and the United States, while the US military is enforcing a counter-blockade of Iranian ports.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGubB6eyHObexuNV3jUj9ziVfAh9mHv6_D6ppBftuprzx7QRnxtHepSNLrQYg74YvzUFUfU69NgB4ecE46SuNZS1rhxJDIWuxrR1fixLZ6cqWxPxZbTy2zv4SvQbDbpvGFXXfLTFE9gzjn7JXPEWCm8vGRhqxyd7J8trqX-u36ie4O3qcN1TE2X-BxPaLmIGytbmACxGpnSX-3kScbkxHMt7T4M1q9nOcZlUuDS"
-        },
-        {
-          "name": "YouTube (What's Going on With Shipping)",
-          "excerpt": "Iran has issued a formal notice to the United Nations announcing that the Straight of Hormuz is not only closed to the United States and Israel, but also to any aggressor nations.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6fbMYh3UlkU5rrCCGiCSnbl4S8TJF9Oax5bSTjSy2kietuDUUu_K0u8cRWMbI6l_LGnvQzkITSUnKW_1JxxKH1ohY9fxKOL-n7oPzP6KZoMFtHRIGv78BnCWl5TCBWXferlR45g8="
-        },
-        {
-          "name": "Israel-Iran LIVE: Pakistan Minister, U.S. envoy discuss efforts for 2nd round of U.S.-Iran talks",
-          "excerpt": "Iran vowed it would not reopen the Strait of Hormuz as long as the United States continues to blockade its ports, in a tense standoff on Thursday (April 23, 2026) that has dominated the ceasefire in the war in West Asia.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4cwIpa_eNus4p-S8BPoDVGwRLHS1rrpUpcFMR8SeGD-nFSNtmwhtmSwEII7Qu9pt7j2QHHTMKUdH9268xqivJLQxR22H0XSYIc8xJeJ7s0tuiUNLVnlJZ2jlOimdQhwQU9GHHqyZP65AD4BtN8pCqzUdQcTk="
-        }
-      ],
-      "dissenting_sources": [],
-      "framing_analysis": "The claim is framed accurately, reflecting the current situation in the Strait of Hormuz where Iran has explicitly closed the strait to US/Israel-linked vessels and both sides are imposing blockades.",
-      "web_search_summary": "The Strait of Hormuz is effectively closed to US/Israel-linked vessels. Iran has explicitly stated that the strait is closed to vessels going to and from the ports of the US, Israel, and their allies, and has seized and attacked ships in the strait. The US has also imposed a naval blockade on Iranian ports, further complicating passage through the strait.",
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "claim_22",
       "claim_text": "Sundas \"Sunny\" Naqvi was falsely claimed to have been detained by ICE at the Dodge County Jail; this claim was amplified by Cook County Commissioner Kevin Morrison.",
       "status": "unverified",
@@ -1918,8 +1292,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_epistemic_integrity",
-      "verification_count": 85,
-      "verified_at": "2026-04-29T23:18:31.743Z",
+      "verification_count": 86,
+      "verified_at": "2026-04-30T01:18:31.765Z",
       "created_at": "2026-04-14T06:31:47.102Z",
       "original_source": "Sundas \"Sunny\" Naqvi and her family/supporters, including Cook County Commissioner Kevin Morrison",
       "claim_date": "2026-03",
@@ -1989,8 +1363,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 85,
-      "verified_at": "2026-04-29T23:18:31.743Z",
+      "verification_count": 86,
+      "verified_at": "2026-04-30T01:18:31.765Z",
       "created_at": "2026-04-14T09:57:43.868Z",
       "original_source": null,
       "claim_date": null,
@@ -2076,8 +1450,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_global_power_realignments_v1",
-      "verification_count": 82,
-      "verified_at": "2026-04-29T23:18:31.744Z",
+      "verification_count": 83,
+      "verified_at": "2026-04-30T01:18:31.765Z",
       "created_at": "2026-04-15T05:00:38.823Z",
       "original_source": "Financial Times",
       "claim_date": "2026-04-15",
@@ -2138,8 +1512,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_digital_supply_chain_security",
-      "verification_count": 82,
-      "verified_at": "2026-04-29T23:18:31.744Z",
+      "verification_count": 83,
+      "verified_at": "2026-04-30T01:18:31.765Z",
       "created_at": "2026-04-15T05:26:09.055Z",
       "original_source": "Financial Times",
       "claim_date": "2026-04-15",
@@ -2168,8 +1542,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_human_rights_exploitation_v1",
-      "verification_count": 81,
-      "verified_at": "2026-04-29T23:18:31.744Z",
+      "verification_count": 82,
+      "verified_at": "2026-04-30T01:18:31.766Z",
       "created_at": "2026-04-15T06:17:18.106Z",
       "original_source": "The Epoch Times (Falun Gong-affiliated)",
       "claim_date": "2006",
@@ -2245,8 +1619,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_power_accountability",
-      "verification_count": 85,
-      "verified_at": "2026-04-29T23:18:31.743Z",
+      "verification_count": 86,
+      "verified_at": "2026-04-30T01:18:31.765Z",
       "created_at": "2026-04-14T07:30:44.029Z",
       "original_source": "Savanah Hernandez (via X)",
       "claim_date": "2026-04-11",
@@ -2388,8 +1762,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "verification_count": 85,
-      "verified_at": "2026-04-29T23:18:31.743Z",
+      "verification_count": 86,
+      "verified_at": "2026-04-30T01:18:31.765Z",
       "created_at": "2026-04-15T00:00:47.654Z",
       "original_source": "Not specified in the provided context.",
       "claim_date": "2026-04-14",
@@ -2522,8 +1896,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 84,
-      "verified_at": "2026-04-29T23:18:31.743Z",
+      "verification_count": 85,
+      "verified_at": "2026-04-30T01:18:31.765Z",
       "created_at": "2026-04-15T00:51:47.508Z",
       "original_source": "President Trump on Fox News/Fox Business (specifically in an interview with Maria Bartiromo)",
       "claim_date": "2026-04-14",
@@ -3142,6 +2516,632 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim accurately reflects statements made by Donald Trump. The framing is valid as it directly quotes or paraphrases his threats and the associated timeframe for military action, which were conditional on Iran's actions or lack thereof.",
       "web_search_summary": "Donald Trump indeed threatened to bomb Iran \"back to the Stone Ages\" and stated that U.S. forces would hit Iran \"extremely hard over the next two to three weeks\" to achieve this. These threats were made in the context of demanding Iran's compliance, such as reopening the Strait of Hormuz, and were often linked to deadlines for such actions or for reaching a deal.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_5",
+      "claim_text": "Closure of Strait of Hormuz caused US gas prices to surpass $4/gallon",
+      "status": "expired",
+      "confidence_score": 0.69,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.9,
+        "evidence_quality": 0.9,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "verification_count": 146,
+      "verified_at": "2026-04-17T17:46:44.879Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": "Not specified in the prompt, but the claim refers to a specific event in early 2026.",
+      "claim_date": "2026-03",
+      "supporting_sources": [
+        {
+          "name": "CBS News",
+          "excerpt": "The average price for a gallon of regular gas is now $4.02 a gallon, AAA said, up from $3.99 on Monday and more than $1 from a month ago.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6JRvx3pkT_63elouA9agdcOMkvFMkmBudaUTFBT9iRFElzwjnwm9XAljRReJnDKY_unSsKkx6DcfXYCdJbnOxMZmg29Eo0y7tNVZHbWCb5EeNk1aShQ3927tqTSg7EYJXkuoaEM7de_4Dkksd-kIUpP1mVae0icxUlIFDNFtZyCDYwtrX9lxH1G86P_2a"
+        },
+        {
+          "name": "CBS News",
+          "excerpt": "U.S. gasoline prices, which are tied to the global price of oil, would likely keep climbing above $4 if the strait remains closed, according to Bernard Yaros, lead U.S. economist at Oxford Economics.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6JRvx3pkT_63elouA9agdcOMkvFMkmBudaUTFBT9iRFElzwjnwm9XAljRReJnDKY_unSsKkx6DcfXYCdJbnOxMZmg29Eo0y7tNVZHbWCb5EeNk1aShQ3927tqTSg7EYJXkuoaEM7de_4Dkksd-kIUpP1mVae0icxUlIFDNFtZyCDYwtrX9lxH1G86P_2a"
+        },
+        {
+          "name": "FactCheck.org",
+          "excerpt": "Since the waterway has been effectively closed – significantly reducing crude oil exports from the Persian Gulf region – oil prices have increased by double-digit percentages, which has contributed to a 50-cent-plus spike in the average price of a gallon of gasoline in the U.S.",
+          "url": null
+        },
+        {
+          "name": "TIME for Kids",
+          "excerpt": "On April 9, the average cost of a gallon in the U.S. hit $4.12.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkXRjhTyf_G9QGx_TZihqUle5qZN696vfCqbn15HtmB6fRwKNOAXTPnn5J5LR75WLQ9Z9VrTYnHzRdGzY-Ew5s7K-WfdlY21WWclNVuQ_RNT_-wuXrypH4WIcsTfVFlcoTs0WEZJPpwgB6VnNKI5Q55i8="
+        },
+        {
+          "name": "Wikipedia (2026 Strait of Hormuz crisis)",
+          "excerpt": "Amid fears of prolonged supply shortages, oil prices rose faster than during any other conflict in recent history; Brent crude oil prices surpassed US$100 per barrel on 8 March 2026 for the first time in four years, rising to US$126 per barrel at its peak.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBM-y0rkkOSS_agBuH0UNc9LOl7dLJQ1IL2HWZM9Py76cRzw-vPVFWj7mlev9x-a_wkpR5G7i80FdRv7zH18HMs-roMRqJrELcxoeM7bsmbLFCn_gDSmEVS5ds9qmWVK-hrhzn8qKC0s5ItJUfEKKBJiKWo5E="
+        },
+        {
+          "name": "Wikipedia (Economic impact of the 2026 Iran war)",
+          "excerpt": "On March 31 2026 gas prices hit 4 USD per gallon, as the war with Iran caused a surge of 30% in gas prices.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBM-y0rkkOSS_agBuH0UNc9LOl7dLJQ1IL2HWZM9Py76cRzw-vPVFWj7mlev9x-a_wkpR5G7i80FdRv7zH18HMs-roMRqJrELcxoeM7bsmbLFCn_gDSmEVS5ds9qmWVK-hrhzn8qKC0s5ItJUfEKKBJiKWo5E="
+        },
+        {
+          "name": "AP News",
+          "excerpt": "Energy prices rose sharply Monday as disruptions to tanker traffic through the Strait of Hormuz and damage to production facilities raised uncertainty about how U.S. and Israeli attacks on Iran would affect supply to the world economy.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6JRvx3pkT_63elouA9agdcOMkvFMkmBudaUTFBT9iRFElzwjnwm9XAljRReJnDKY_unSsKkx6DcfXYCdJbnOxMZmg29Eo0y7tNVZHbWCb5EeNk1aShQ3927tqTSg7EYJXkuoaEM7de_4Dkksd-kIUpP1mVae0icxUlIFDNFtZyCDYwtrX9lxH1G86P_2a"
+        },
+        {
+          "name": "Associated Press",
+          "excerpt": "U.S. gas prices jumped past an average of $4 a gallon for the first time since 2022 on Tuesday as the Iran war pushed fuel prices to soar worldwide.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed validly as it directly attributes the rise in US gas prices to the closure of the Strait of Hormuz, which is supported by the provided evidence. The timing of the closure and the subsequent price increase align.",
+      "web_search_summary": "The closure of the Strait of Hormuz in late February 2026, following US-Israeli airstrikes on Iran, significantly disrupted global oil supply, leading to a sharp increase in crude oil prices. This directly caused US gas prices to surpass $4/gallon, reaching an average of $4.02 by March 31, 2026, and $4.16 by April 8, 2026.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_9",
+      "claim_text": "American journalist Shelly Kittleson kidnapped in Baghdad, possibly by Iran-backed militia",
+      "status": "expired",
+      "confidence_score": 0.69,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.9,
+        "evidence_quality": 0.9,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_power_accountability",
+      "verification_count": 146,
+      "verified_at": "2026-04-17T17:48:08.633Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": "Multiple news organizations reported on the kidnapping of Shelly Kittleson, citing Iraqi officials and sources familiar with the matter.",
+      "claim_date": "2026-03-31",
+      "supporting_sources": [
+        {
+          "name": "CBS News",
+          "excerpt": "American journalist Shelly Kittleson was kidnapped in Baghdad on Tuesday, according to two sources familiar with the matter as well as an Iraqi official.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHE6dv7wBFnHN6A3fONiQ1_V0xVxro6AwtI1QLDUTyTo657dk3jBkq7vszUUzD2nR-isoQ2vN-rUb-sktm7Lh8jRdps3VOKf17tWutUaahe1qb5kHHll9-vgMAEAqhIhtSkbqYbDLzl5jpj0y-OQNGU3-C6k1-oJAyMYA3-DZsbNi2Ois5cq53wSiM8DQ=="
+        },
+        {
+          "name": "The Washington Post",
+          "excerpt": "The Iran-backed militia that kidnapped U.S. journalist Shelly Kittleson in Baghdad freed her Tuesday in a prisoner swap with Iraq, Iraqi officials said.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBXq7d4YGsNK3HnZRvyuHDtZvLw2XAFyD_lwt6YIFo0dvCeD5cbtb2NYCzbLDjspBfa0LQZTCCqaIBMYqFXXjA1F0AAcZ9N5HxKupPUreBS2VUY085hvsWXULfn1OBArzA3kdF9PstEIuidwqDJqAZA9TBgscYybhhFJk1SP1L3sJtC5Ie58qR6_lNCAMH3Fmx3XL_1tTAnZ4Ed-QmilA="
+        },
+        {
+          "name": "PBS",
+          "excerpt": "American journalist Shelly Kittleson, who was kidnapped from a Baghdad streetcorner last week, has been released, an Iraqi official with direct knowledge of the situation said on Tuesday.",
+          "url": null
+        },
+        {
+          "name": "Democracy Now!",
+          "excerpt": "American freelance journalist Shelly Kittleson has been released after being held for one week by the Iran-backed Iraqi militia Kataib Hezbollah.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBqQaRAaIn-QU6zN-q97syl217yKaTy_z-1gXzX-2c1Np76UxKqqnKzDLMBGRnURjn1rwMf51AFSe3ouMh5Rk2w7HdGFFyLRNgGc8hNrtv-6hIGdHe3fRiVpvVMKkdWXvzk660s_aRVjykdJxOom6hjQ0Z10LxemOBu2WcGUDTvZ7WbXgp-Q2HEOK3XcGiHc04efMFb9i2-iod9mgPEAkoCTs-lgyV0ay3iQMKch4vIk--QdFyMm-4WUCKF90GbyQ="
+        },
+        {
+          "name": "The Media Line",
+          "excerpt": "American freelance journalist Shelly Kittleson was abducted in central Baghdad on Tuesday, Iraqi authorities said, triggering an immediate security operation.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERUlshIrOBkFftAWZLzsJetRQ4USwnQ1CuAaaAGz7GMIJywjc6nN2JyrBKqdqvxBgIS5bqnPJRMCDDI9r-AnBtxVgsoAh_ZKk257-V3L9ZTO3sNckn7AeDwXGPrt6V7EfFNEVetsQgRJ8Lro8kXo0NnPbFFke07kMpC5Wnw1fJ2ROMPdJ7zQRvt18XZDnSub4JYJA8B9Ejm_lnedyH_oUN1wMYsgWpZHsnx712FEUdYj_EFLDqEqva"
+        },
+        {
+          "name": "The Guardian",
+          "excerpt": "The US journalist Shelly Kittleson, who was kidnapped from a Baghdad street corner last week, has been released, the US secretary of state, Marco Rubio, announced on Tuesday.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvwinBPjzhm7EzVM1zDM2GOluYvme13xa3vOeSfXLN1LhareRbb9shmOCjs8T1zcRkBUveOIxWnOUMPpzMBwglT6ZbCewEnwnhm2kUGMt89Q64x8nwXsf-YvbDEF4U33uD90kB1tTOrP1NFl4LCVPBUVMMJG0Ir54x_LXw6HFexmk392nOpajudGVMzis-"
+        },
+        {
+          "name": "Wikipedia",
+          "excerpt": "Shelly Renee Kittleson (born 1976 or 1977) is an American freelance journalist covering conflict and security issues in the Middle East. She was abducted on March 31, 2026, in Baghdad, Iraq, while on assignment near the Baghdad Hotel.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFCPulua94sYCetlh9_TzYuOuu96NL0ygJBuB5Kk5UW7ZSJCi09L3xeRsnFuMoOBN6P5LAwgY08teqaQ1WHpbR2hzN0k1-7zEiCJFpOKLNH5q27bzr8yTqkYjaZBOAnhu7RCdHHYsxuCo="
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed factually and accurately reflects the events as reported by numerous credible news outlets.",
+      "web_search_summary": "American freelance journalist Shelly Kittleson was kidnapped in Baghdad on March 31, 2026. The abduction was widely attributed to Kataib Hezbollah, an Iran-backed militia, and she was subsequently released on April 7, 2026, in a prisoner swap.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_2",
+      "claim_text": "Israel claims >80% of Iranian air defense systems destroyed",
+      "status": "expired",
+      "confidence_score": 0.655,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.8,
+        "evidence_quality": 0.8,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 147,
+      "verified_at": "2026-04-17T17:46:11.256Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": "IDF Chief of Staff Lt. Gen. Eyal Zamir, IDF spokesperson Effie Defrin, US Chairman of the Joint Chiefs of Staff Gen. Dan Caine, and US Defense Secretary Pete Hegseth.",
+      "claim_date": "2026-03-05",
+      "supporting_sources": [
+        {
+          "name": "UATV",
+          "excerpt": "The Israel Defense Forces (IDF) have initiated a new operational phase targeting Iran, successfully destroying approximately 80% of Iranian air defense systems and over 60% of its missile launchers.",
+          "url": null
+        },
+        {
+          "name": "The Times of Israel",
+          "excerpt": "IDF Chief of Staff Lt. Gen. Eyal Zamir, in a press statement, says Israel has destroyed 80% of Iran's air defense systems and achieved “almost complete air superiority” over Iran.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHManZ2IDygxSWWN_mVsUVKG5Xf8d7IyOtapDfr773J5b5UKsj7EqpaXCMWRTn0Au3sWqrAXP2AgBY0PJu6ixEnYE4cEzefoiyQksexM7uXhTbLdYNfJ1SXJAUXD_QN99WBSlxmcqRJnlhKLRlu7S9sTKIK6UkbjiLpke4WSVlb_LfV-4JeQpAd_FV-V-Zlbe_le2YY53_URd_wPTxEWzqx3BcQjAKSSu7SUBg="
+        },
+        {
+          "name": "The Media Line",
+          "excerpt": "Israel has destroyed roughly 80% of Iran's air defense systems and more than 60% of its ballistic missile launchers during the opening phase of Operation Roaring Lion, IDF Chief of Staff Lt. Gen. Eyal Zamir said in a press statement.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGg1JPo39HyWPPtHkejRBvERxp5w-GyQ4bN5w0ps0cVpGzSwq5sj8xYNCpAR35VzoZimNUCXag02ACB-oI4NfTmgsUGmKgW9ZS04WZb-69NWiICiHo7usRGJ0Hn3FJyU2YlNA3-9GjRX1KdZDFZsUU0O0BGenEw9f91xY8QMrcwgN4kkAEzaK_FB4Mc3Gkm6_OMUoztCd6zstu33GhvfW0xNQfB0fyb9LgmWpUj1N-sohfUg7FbUIn_bPsf-9_U8pwbUA=="
+        },
+        {
+          "name": "APT - YouTube",
+          "excerpt": "Israel Defense Forces claims it has destroyed around 80% of Iran's air defence systems after launching 2500 airstrikes and dropping more than 6000 munitions within 24 hours, marking a dramatic escalation in the war.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFp-l_PbyTYymaUmxF0Ejwv65WSA4XTu1OV9tnXfnWK_Chf-OqTINi-QT24L_smjaKfixalqOdgtK5Zz_qi0aHfoJe_2kQONkIDiAzgyorrNPVNnH4gDeSzFHPHALpKP3n9LQ7flw=="
+        },
+        {
+          "name": "WRAL",
+          "excerpt": "About 80% of Iran's air defense systems destroyed. Caine told reporters on Wednesday at the Pentagon that many of Iran's air defenses have been destroyed with the U.S. striking more than 1,500 air defense targets, more than 450 ballistic missile storage facilities and 800 one-way attack drone storage facilities.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyq0CYi6yLZJXO9Lul4iF9835Vcb6bGbul1zFWE04f1nSuk-C0C1sWHzLpZuz80pIh4RfnvvJHUymACc8QIQx0p11rsQAbN75IDG70Jtb_-FgQnkPUBX7KMYOoCs7M0uWiFdHZBWA8vioOKVmz_5pGDQFSrnoIoQkjcC0gSi6j8cmZ3ysMqugP5zpO-O8C0fLvPxsVWGqFO0HbM7D6CPl_MBdHBcRqikJGACzAua8="
+        },
+        {
+          "name": "AP (via The Times of Israel)",
+          "excerpt": "Gen. Dan Caine, chairman of the Joint Chiefs of Staff, this week said the US military has hit more than 13,000 targets, including about 80% of Iran's air defense systems.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHManZ2IDygxSWWN_mVsUVKG5Xf8d7IyOtapDfr773J5b5UKsj7EqpaXCMWRTn0Au3sWqrAXP2AgBY0PJu6ixEnYE4cEzefoiyQksexM7uXhTbLdYNfJ1SXJAUXD_QN99WBSlxmcqRJnlhKLRlu7S9sTKIK6UkbjiLpke4WSVlb_LfV-4JeQpAd_FV-V-Zlbe_le2YY53_URd_wPTxEWzqx3BcQjAKSSu7SUBg="
+        },
+        {
+          "name": "Xinhua",
+          "excerpt": "Israeli air force has conducted 2,500 strikes, dropped over 6,000 munitions, and destroyed roughly 60 percent of Iran's ballistic missile launchers and 80 percent of its air defense systems, Zamir said, adding that Israel has achieved near-total air superiority over Iran.",
+          "url": null
+        },
+        {
+          "name": "US Department of Defense (Press Briefing)",
+          "excerpt": "CENTCOM forces destroyed approximately 80 percent of Iran's air defense systems, striking more than 1,500 air defense targets, more than 450 ballistic missile storage facilities, 800 one-way attack drones storage facilities.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed by Israeli and US officials as a significant military success, highlighting the extensive damage inflicted on Iran's air defense capabilities and asserting near-total air superiority. This framing aims to demonstrate the effectiveness of their operations and the degradation of Iran's military power.",
+      "web_search_summary": "Multiple reports from March and April 2026 indicate that Israeli and US officials have claimed that over 80% of Iran's air defense systems have been destroyed during recent military operations. These claims were made by figures such as IDF Chief of Staff Lt. Gen. Eyal Zamir, IDF spokesperson Effie Defrin, US Chairman of the Joint Chiefs of Staff Gen. Dan Caine, and US Defense Secretary Pete Hegseth. While a high percentage of destruction is claimed, some officials also acknowledged that Iran retains some capabilities and the threat has not been entirely removed.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_6",
+      "claim_text": "Iran attacked Kuwaiti oil tanker Al-Salmi in Dubai",
+      "status": "expired",
+      "confidence_score": 0.655,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.8,
+        "evidence_quality": 0.8,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 146,
+      "verified_at": "2026-04-17T17:46:58.165Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": "Kuwait Petroleum Corporation (KPC) and Kuwait News Agency (KUNA)",
+      "claim_date": "2026-03-31",
+      "supporting_sources": [
+        {
+          "name": "Gulf News",
+          "excerpt": "Kuwaiti tanker 'Al Salmi' attacked by Iran drone off Dubai coast. Hull damage, fire and spill fears after Iranian attack on Kuwaiti VLCC off Dubai.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG03lmvKbG4lY94vl8ZprhjRVdCz25g3CnX0armKaCPAh7XZyRefDUdXjtBFapprsiA4ut0kP53NsrgsuWQyZd5k5siPCfa05S5wxBUsUYpJxi_BEkON-03mNOrGtZSpDK_iXx-He0jAmzBez4t-98BsaL1QiYzmwXhuScOZpBcPMEPBSYUG9ncI9EtGqUTDYricORcYC45dIt5l_Mo-LtDRqj92KUM-TNtog=="
+        },
+        {
+          "name": "NDTV",
+          "excerpt": "Fully Loaded Kuwaiti Oil Tanker Damaged In Iranian Strike Near Dubai. Kuwait Petroleum Corporation (KPC) said early on Tuesday that the Al Salmi was struck in an Iranian attack while anchored at Dubai port in the United Arab Emirates.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkmrM7dcAl2hvrmmbqZoQnf3sYbdniAw1kWNonhEVBst1PvwmPhzhPwrMgolKQIXvODnD_qMby-xG3izObg0V_3pgnBY9PL0cv-NYPIXYZ7BcK_gbxzVGBEfbqOmm--PnMNkWGQfB9fCswRDngbMpy9EMon44ikItmPx0NE7V_DlCy2uAkOgdZL-YKJnI0P6lw9PAA6p5yLAdovOvuBSmq7lR68Fz4smpKjVdq3xWVFgC5cyn2611zxs0CPH-5"
+        },
+        {
+          "name": "Anadolu Ajansı",
+          "excerpt": "Kuwait Petroleum Corporation announced that a giant Kuwaiti crude oil tanker, Al Salmi, was attacked early Tuesday by an Iranian drone while positioned in the anchorage area of Dubai Port in the United Arab Emirates.",
+          "url": null
+        },
+        {
+          "name": "MEO",
+          "excerpt": "Iran attacked and set ablaze a fully loaded crude oil tanker off Dubai on Monday, as President Donald Trump warned the US would obliterate Iran's energy plants and oil wells if it does not open the Strait of Hormuz.",
+          "url": null
+        },
+        {
+          "name": "World News (via WION)",
+          "excerpt": "In a major escalation of the ongoing conflict in the Middle East, a fully laden Kuwaiti oil tanker was attacked by Iran in the anchorage area of Dubai's port on Tuesday, damaging the hull and triggering a fire that the Dubai authorities later said was extinguished.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG03lmvKbG4lY94vl8ZprhjRVdCz25g3CnX0armKaCPAh7XZyRefDUdXjtBFapprsiA4ut0kP53NsrgsuWQyZd5k5siPCfa05S5wxBUsUYpJxi_BEkON-03mNOrGtZSpDK_iXx-He0jAmzBez4t-98BsaL1QiYzmwXhuScOZpBcPMEPBSYUG9ncI9EtGqUTDYricORcYC45dIt5l_Mo-LtDRqj92KUM-TNtog=="
+        },
+        {
+          "name": "The Times of Israel",
+          "excerpt": "Kuwait Petroleum Corporation says a giant Kuwaiti crude oil tanker, Al Salmi, was directly targeted in what it described as an Iranian attack while anchored at Dubai port in the United Arab Emirates, causing damage to the vessel and a fire onboard, the state news agency KUNA says.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKy8gg_ymMgrrOWT5EvS48AXHZaZDMR_UBaulMKk_CAIcjG_P1gb9o41Ppc_Yp0WPubs5OoYaCW7A2a0cTQ60abhh0u14tJ2Y2l2XN72SnflxeH64RdoifMpPAn-82r0iJHphdVDqBjSxHCCHcAoybTn36At9B6pjurZRtLe-FEuZUwD9kOWAjSnYmbq1WPnFTLbPcN8ofMKaV1BTB-ThrzvpNXkmEa3DQ0MjuPExp9L3GT739GMEmUqXCwnvwhd4eF9t61P3RVB5EycAhvunqj9kL5SNtWeTGqDg57jZFkkPq9MW5Uq5fBA=="
+        },
+        {
+          "name": "The Guardian",
+          "excerpt": "When Iran attacked a fully loaded crude oil tanker anchored at Dubai port on Monday night, damaging the vessel's hull, hundreds of seafarers stranded on tankers anchored nearby were close enough to watch as the vessel burned.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfMabghBiXR-AffPteB2OVEnvdF-VDH2L1bjw7k85AHR-FBncNPAU9wJGKDEmEkkWa1ECRYBFahpdX4_1mX1xOlpYmBMrLepsJiZ0zHzV5TCvdrIG6YRGgYqRaouGMhblRubcReNEwcsVI3JBmoUJQmghsLWm0PlJyZnNmxATanGGcoyNdQ2WnYYeC6sVFJwS3SM66qPXwEv2p4aBifGZ0MMWGftLpUnDGvD5mJACzs6tEyw=="
+        },
+        {
+          "name": "Wikipedia",
+          "excerpt": "The Kuwaiti oil tanker Al Salmi was attacked by an Iranian drone, causing damage to its hull.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERiaMGf-5cwVrMC4IX0APqEqPQhi9sSkCgeIHkMo3SUsAbhTN1-11HOM124YEGjjRSe_XXhKQgegx0zAkcMFEI_KfBJWlBJ5p9HZLE2UOyllzK6f2fQnzXufFvit3Z-RO6psKV2092HRjzgln8oKmWgvE0ktg2QA=="
+        },
+        {
+          "name": "Mirror Now (YouTube)",
+          "excerpt": "An oil tanker identified as Al Salmi tanker was attacked off the coast of Dubai, reportedly set ablaze in a suspected drone strike.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZcoZ9ZiJnUMaD28GV9JVn3pbwtWSLU9nR_KEm6zBbKJh1YW1zJz3TaqncoZEzZPa9oS4N6w6pMtnSXGa4myiFNUIQutUeSux3C6ZUUDp7vhS7xtxhVtPHaud9MHcm_pOkIIUg490="
+        },
+        {
+          "name": "Times of India (YouTube)",
+          "excerpt": "a fully loaded Kuwaiti crude oil tanker has been hit in an apparent Iranian attack while anchored at Dubai port.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKy8gg_ymMgrrOWT5EvS48AXHZaZDMR_UBaulMKk_CAIcjG_P1gb9o41Ppc_Yp0WPubs5OoYaCW7A2a0cTQ60abhh0u14tJ2Y2l2XN72SnflxeH64RdoifMpPAn-82r0iJHphdVDqBjSxHCCHcAoybTn36At9B6pjurZRtLe-FEuZUwD9kOWAjSnYmbq1WPnFTLbPcN8ofMKaV1BTB-ThrzvpNXkmEa3DQ0MjuPExp9L3GT739GMEmUqXCwnvwhd4eF9t61P3RVB5EycAhvunqj9kL5SNtWeTGqDg57jZFkkPq9MW5Uq5fBA=="
+        },
+        {
+          "name": "Türkiye Today",
+          "excerpt": "Kuwait Petroleum Corporation said a giant Kuwaiti crude oil tanker was attacked early Tuesday by an Iranian drone while anchored near Dubai Port in the United Arab Emirates, raising fears of a potential oil spill.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZ0e56QMJLo99F2Eg9QoxNZHnzeXToBMqidxzhHjzUU6fnJ_DXXhem5qQCgzr_-E_CUneRTVP3mupxceyLPwZpFnau6h5_H3PMZShI2ek50fauCYuJHl9RGV4CSXbdVyrcPTHI-twLxc8njNU05EBLHMi6dfLgnjumdSFyp3IY-uz_K-4IeKrYb_sRtaiCt3NH3bpnvXbBfOI94BbOkmfAmhcOD7VYnP7-oD6z1hvg3LPHJr-hl_fDHoWcaA=="
+        },
+        {
+          "name": "WION (YouTube)",
+          "excerpt": "Kuwaiti oil tanker was struck in the Gulf shortly after Donald Trump claimed Iran had allowed oil shipments as a gift.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZcoZ9ZiJnUMaD28GV9JVn3pbwtWSLU9nR_KEm6zBbKJh1YW1zJz3TaqncoZEzZPa9oS4N6w6pMtnSXGa4myiFNUIQutUeSux3C6ZUUDp7vhS7xtxhVtPHaud9MHcm_pOkIIUg490="
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed factually, reporting a specific event. News reports generally present the incident as a direct Iranian attack, often contextualizing it within broader regional conflicts and escalating tensions in the Gulf.",
+      "web_search_summary": "The claim that Iran attacked the Kuwaiti oil tanker Al-Salmi in Dubai is confirmed. On March 31, 2026, the Kuwaiti oil tanker 'Al Salmi' was struck by an Iranian drone while anchored off Dubai, causing damage to its hull and a fire. Dubai authorities later confirmed the fire was extinguished, no oil spill occurred, and all 24 crew members were safe.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_7",
+      "claim_text": ">1,500 civilians killed, up to 3.2 million displaced due to the conflict",
+      "status": "expired",
+      "confidence_score": 0.655,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.8,
+        "evidence_quality": 0.8,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_human_rights_exploitation_v1",
+      "verification_count": 146,
+      "verified_at": "2026-04-17T17:47:27.891Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [
+        {
+          "name": "UN Human Rights Office",
+          "excerpt": "Civilian deaths in conflict surged 40% globally in 2024, with at least 48,384 individuals, mostly civilians, killed.",
+          "url": null
+        },
+        {
+          "name": "UN (Protection of Civilians Trends Report)",
+          "excerpt": "The UN recorded more than 36,000 civilian deaths throughout 2024, and a record 123.2 million people were displaced globally by the end of 2024.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSy8Rf_6vMcufjD58HhKEfTQ8vb9puF7GyCxp8XJGHDuQpWmZbUCA72-cHr1UXaEI7IRV_Xye8zyCco-nuaVgxgbfVUxe1tLAzSMigwRfu3yrMj8aUKZDa1iXv72_ZUpIcicEyIGoEtd5D"
+        },
+        {
+          "name": "Action on Armed Violence (AOAV)",
+          "excerpt": "In 2024, AOAV recorded 59,524 civilian casualties from explosive weapons globally, including 14,145 fatalities in Gaza.",
+          "url": null
+        },
+        {
+          "name": "ReliefWeb (Sudan Crisis Situation Analysis)",
+          "excerpt": "Over 12 million people are now displaced in Sudan, with fatality estimates ranging from 29,582 to over 150,000 people by late 2024/late 2025.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwKdxWJryPZ57uT4RKbyxNEBKlcFbJYdoVlm_uznzJxNtJX_h5WXYmJAfjyzYbHYn0mkzOY6iRW4dN7KrFkdT357v_T6CndBYUOm-Kp-mQpLIc0ygtP7qp8BC0_s_8_HX4b6WsiAJ7DQNJJgUC2cIjqrvO38Fdo1r7tgt0_p8iW-5TKD7g7DhUJa7PTgnEkxAJ"
+        },
+        {
+          "name": "OCHA (Occupied Palestinian Territory)",
+          "excerpt": "Nearly all of Gaza's current population of 2.1 million people has been displaced due to hostilities that commenced in October 2023.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGd7AprhJmNIYHm9XHoXRl3m0NaPSpvUaXkq1xW70r2w9wVdu5IwHECVNZ1xYzBH-Hzrmwkkl9jUiTZouv6syXo19PIeCoasB4EzEMdcjbTtaVUhJtZeGcl1e3umLn50cD65R8FDdmFSqgx9AOkWYE="
+        },
+        {
+          "name": "Al Jazeera Interactives",
+          "excerpt": "Over the past three years, more than 50,000 people have been reported killed across Sudan, and more than 14 million people have been forced from their homes.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHlrODLm31MJSIuKlw5NsYRiDavAM6uTozzLvSz76ftAYVm60DFGTnsqqrrBw4vKbzQR5_SjB-HDuwmr26Pkl5lijBMwH_h4Uf9INKlCTu5exXbVr5vbL4WR4jMq2junGPBJGHCGnZQ1wf6w1wc2Oys1pgOb1r1"
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim, while numerically accurate as a minimum threshold, significantly understates the actual scale of civilian deaths and displacement in major ongoing conflicts globally. The lack of specificity regarding 'the conflict' also limits its contextual value.",
+      "web_search_summary": "Multiple ongoing conflicts have resulted in civilian casualties far exceeding 1,500 and displacement figures well over 3.2 million. For instance, the conflict in Sudan has led to over 50,000 reported deaths and more than 12 million displaced, while in Gaza, over 14,000 fatalities from explosive weapons were recorded in 2024 and nearly 2.1 million people have been displaced.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_1",
+      "claim_text": "US operations in Iran could end in 2-3 weeks (Trump statement)",
+      "status": "expired",
+      "confidence_score": 0.635,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.8,
+        "evidence_quality": 0.8,
+        "cross_source": 0.5,
+        "web_search": 0.8
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 146,
+      "verified_at": "2026-04-17T17:42:05.480Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": "Donald Trump",
+      "claim_date": "2026-03 or 2026-04",
+      "supporting_sources": [
+        {
+          "name": "Al Jazeera",
+          "excerpt": "Donald Trump says US forces will end operations in Iran “very soon” and could be gone within two to three weeks.",
+          "url": null
+        },
+        {
+          "name": "KNKX",
+          "excerpt": "President Trump said on Tuesday that the United States will be leaving Iran very soon, giving a two to three week timetable.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwe1VzLkQeIa-I__QNcQmNhO-J9GoUgCpJK_0sTY4Li5C3xlXnc69PQLo2Dalg2m0_5pYHdEdcjvKJctHoWwesAN_VIBn0km3pKtmSnHlBc9cqplGWTw3TsMw8InBBzMOpngO9kmzhSMBHfPraEWtZbKopcQp1zBiaQgrIM7PIIWzZ5vrJBMi_J2Awu_ybMyAZlr1gZ3ac1GpD0yo-CscqECyauM51YekNx7z8Mw=="
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "Axios",
+          "excerpt": "President Trump said in a prime time address that the U.S. was close to ending its war in Iran but would spend the next two to three weeks bombing the country 'back to the stone ages.'",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoziMVgA1uda-JsgNNct7S1jNv_5WcVB8Nvw99cTgGmq0G040qGyEyUdUG-lTTNkkXEcpwZWka76lwz4WOcEM-hm87WwiIVGttbDG6Ek8eZkWTU9jWWzTE6zKPPtu5sUQAvQEVrDqgk8gTTD3INDzCFyH5YR5cTjlYZgS-3JKyN-gt"
+        },
+        {
+          "name": "CTV News",
+          "excerpt": "U.S. President Donald Trump said U.S. forces will keep hitting Iran 'extremely hard over the next two or three weeks' and bring the country 'back to the Stone Ages,' even though he argued that all of his administration's military objectives have been met or exceeded.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEve8xWlKIdAlOAQfr8MfrOsuD_uCldfeXD59WUE-QQJE5_LRkZqMqbWXLlRWZrQyCGvcMlm5gbfEAt_RIaxQGscFUfRsxwnKGgRKn1T567ytkVEUWYO5oxKd-hqY7vL1a5hzs-XxSbDHOMopagO2MG9P5DlBcvwllX-hi11c1nu-NFtZcmtzSAS0cfqYRwNLzx2FZpBXM7d9cDOd8vAtssCcMSLdk2Mw=="
+        },
+        {
+          "name": "France 24",
+          "excerpt": "President Donald Trump said US forces will keep hitting Iran 'very hard' in the next two or three weeks and bring the country 'back to the Stone Ages,' even as he touted the success of US operations and argued that all of Washington's objectives have so far been met or exceeded.",
+          "url": null
+        }
+      ],
+      "framing_analysis": "The claim is framed to suggest an imminent end to US operations, which is partially supported by Trump's statements. However, it omits the concurrent threats of intensified military action within the same timeframe, which provides a more complete picture of his remarks during the ongoing conflict.",
+      "web_search_summary": "Donald Trump has recently made statements, around late March and early April 2026, indicating that US operations in Iran could conclude within two to three weeks. However, during the same period, Trump also stated that the US would continue to 'hit Iran extremely hard' or bomb the country 'back to the stone ages' over the next two to three weeks, within the context of an ongoing '2026 Iran war'.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_3",
+      "claim_text": "US reported destroying 150 Iranian vessels",
+      "status": "expired",
+      "confidence_score": 0.62,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.7,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 146,
+      "verified_at": "2026-04-17T17:46:30.320Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": "US White House Press Secretary Karoline Leavitt and CENTCOM Commander Admiral Brad Cooper, as reported by various news outlets.",
+      "claim_date": "2026-03 to 2026-04",
+      "supporting_sources": [
+        {
+          "name": "Vertex AI Search",
+          "excerpt": "The White House has said that US military operations have effectively neutralized Iran's submarine force and destroyed scores of Iranian naval vessels, including 16 warship classes, as part of a broader military campaign, Operation Epic Fury.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkbvAdIcnSEwCuL0PYC2BxnvrlwfvSMjwPBYVL4KhDthvLk3Bwo8GFMPIpjkPPQQvDYqLHtpRD3kRIpwK35o4kqUWXKA6ozaXcqhuzeuwudsUwHxdFr7hCYLisYfSdqfAuqyKG20AjCHlLSBm38l-FeLnrLbWX2eOSOzCuAg5DHtKvvdngnXhSCCV2WfdQQTTzPSFIy4U8qZp-KdnJIGxzk1u6Hzp-E9HsN60fY_7XmKv2"
+        },
+        {
+          "name": "Vertex AI Search",
+          "excerpt": "The Department reported that the combined force destroyed 150 Iranian warships, all Iranian submarines, and 97 percent of Iran's naval mine stockpile.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkbvAdIcnSEwCuL0PYC2BxnvrlwfvSMjwPBYVL4KhDthvLk3Bwo8GFMPIpjkPPQQvDYqLHtpRD3kRIpwK35o4kqUWXKA6ozaXcqhuzeuwudsUwHxdFr7hCYLisYfSdqfAuqyKG20AjCHlLSBm38l-FeLnrLbWX2eOSOzCuAg5DHtKvvdngnXhSCCV2WfdQQTTzPSFIy4U8qZp-KdnJIGxzk1u6Hzp-E9HsN60fY_7XmKv2"
+        },
+        {
+          "name": "Vertex AI Search",
+          "excerpt": "The official tally: over 10,200 US air sorties, more than 13,000 targets struck, over 150 Iranian naval vessels destroyed, and 13 American service members killed in 38 days of major combat.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkbvAdIcnSEwCuL0PYC2BxnvrlwfvSMjwPBYVL4KhDthvLk3Bwo8GFMPIpjkPPQQvDYqLHtpRD3kRIpwK35o4kqUWXKA6ozaXcqhuzeuwudsUwHxdFr7hCYLisYfSdqfAuqyKG20AjCHlLSBm38l-FeLnrLbWX2eOSOzCuAg5DHtKvvdngnXhSCCV2WfdQQTTzPSFIy4U8qZp-KdnJIGxzk1u6Hzp-E9HsN60fY_7XmKv2"
+        },
+        {
+          "name": "IBTimes UK",
+          "excerpt": "President declares 150 Iranian ships destroyed, while global oil markets brace for the impact of a total maritime shutdown in the world's most vital energy corridor.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEitPeyEP6gx-tiKdr6ZHhvpX4M6YOPD4wQPT_jP5syfpRB_dqeDREws3I6zgvYtw5WzeOKRCjoUYM7rAFCd1lgzt28nUwfKjsrPmTJyRIva-R56PL9bb9YttsOsxsZdzBYwSR6RJOZ3pRGpOHsWWBwiKiIvosmDuwseTtkBZY7fipfYVC2J4GqyQon1IAFW3-rittd1nA6HNJ_k7oyrgaO0pNc24b3weK2VTo6aLoAJcQs-YfBO4oNThVP9A=="
+        },
+        {
+          "name": "Caliber.Az",
+          "excerpt": "The United States has carried out strikes on more than 11,000 targets in Iran over the past 30 days, according to Chairman of the Joint Chiefs of Staff General Dan Caine. ... “Over the past 30 days, we have struck more than 11,000 targets in Iran. We have also destroyed more than 150 ships,” he stated.",
+          "url": null
+        },
+        {
+          "name": "Naval Today",
+          "excerpt": "In the latest updates from the Middle East conflict, the United States Central Command (CENTCOM) announced that US forces have destroyed more than 100 naval vessels belonging to the Iranian Navy.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkbvAdIcnSEwCuL0PYC2BxnvrlwfvSMjwPBYVL4KhDthvLk3Bwo8GFMPIpjkPPQQvDYqLHtpRD3kRIpwK35o4kqUWXKA6ozaXcqhuzeuwudsUwHxdFr7hCYLisYfSdqfAuqyKG20AjCHlLSBm38l-FeLnrLbWX2eOSOzCuAg5DHtKvvdngnXhSCCV2WfdQQTTzPSFIy4U8qZp-KdnJIGxzk1u6Hzp-E9HsN60fY_7XmKv2"
+        },
+        {
+          "name": "Vertex AI Search",
+          "excerpt": "Since the United States and Israel began their joint offensive against Iran on Feb. 28, the U.S. has targeted and taken out more than 60 Iranian ships, weakening Iran's naval combat power, according to U.S. Central Command Commander Adm. Brad Cooper.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkbvAdIcnSEwCuL0PYC2BxnvrlwfvSMjwPBYVL4KhDthvLk3Bwo8GFMPIpjkPPQQvDYqLHtpRD3kRIpwK35o4kqUWXKA6ozaXcqhuzeuwudsUwHxdFr7hCYLisYfSdqfAuqyKG20AjCHlLSBm38l-FeLnrLbWX2eOSOzCuAg5DHtKvvdngnXhSCCV2WfdQQTTzPSFIy4U8qZp-KdnJIGxzk1u6Hzp-E9HsN60fY_7XmKv2"
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed as a factual report from US military and government officials regarding the success of their operations. While the numbers are consistently reported by these sources, some reports acknowledge a lack of independent verification.",
+      "web_search_summary": "US officials have reported the destruction of over 150 Iranian naval vessels as part of 'Operation Epic Fury,' a military campaign against Iran that began in late February 2026. These claims, made by the White House and CENTCOM, indicate a significant degradation of Iran's naval capabilities, including the elimination of its submarine fleet and various classes of warships.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_8",
+      "claim_text": "Iranian President Pezeshkian ready to end hostilities if firm guarantees against future domestic strikes received",
+      "status": "expired",
+      "confidence_score": 0.62,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.7,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_political_trust_corruption_v1",
+      "verification_count": 146,
+      "verified_at": "2026-04-17T17:47:51.033Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": "Iranian President Masoud Pezeshkian",
+      "claim_date": "2026-03",
+      "supporting_sources": [
+        {
+          "name": "APT",
+          "excerpt": "Iranian President Masoud Pezeshkian says Iran will halt attacks on neighbouring countries unless they launch strikes against Iran.",
+          "url": null
+        },
+        {
+          "name": "Tfipost.com",
+          "excerpt": "“Iran will not carry out attacks or missile strikes against neighbouring countries unless an attack against Iran originates from those countries,” he said, adding that Tehran holds “no hostility toward neighbouring states”.",
+          "url": null
+        },
+        {
+          "name": "The Independent",
+          "excerpt": "Iran's president, Masoud Pezeshkian, condemned 'unprovoked military aggression' hours before Donald Trump was scheduled to address the Oval Office.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIlipo0NHCjJGxeYc7GSImBl-23qx-iRpDX09n5OEAlF_3HbRkMTnObqh4BuSJyJU8rRtKZ7iw7C3Vx483LLtFxLEXXh4Gy_NwEQJQRqG5CIG8xF6BKwoyGnzYZGGUxmjY6N7a4ZlVrl2w2_f_kAmOlOtVop-tVuY2Gy1xVOzZeBVmP6ePRicgPKHMSEwnvULRAZKQ1Vp2R8346mUiQXqWcPw="
+        },
+        {
+          "name": "Türkiye Today",
+          "excerpt": "Iranian President Masoud Pezeshkian hailed the newly achieved ceasefire as a victory rooted in the 'blood' of martyred leader Ali Khamenei, even as Tehran and Washington prepare to resume diplomatic talks following a two-week pause in hostilities.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRxwMXnFVX0GyKc7ruof9o1GtEBCraL96ARfdwUz_hC2egFVzUtD2LxNgivKGEQ1c0LSDkCbzK6z8jeR7utD_V0nBHMUKpebRuczXj4wKlf-iCAR_fkIDLTsSfZBxfUMffs6TpfYZuH3FwO00ReWRQ4JpJ-oF9Us5YNmYMyKrhyzwQvSePA5Uk3bZuNkXclSBtA8nKeNcpYV7Ge8Lx_Gw="
+        },
+        {
+          "name": "Unnamed source (reported by Google Search)",
+          "excerpt": "Pezeshkian accused senior Guards commanders of unilateral actions that have wrecked ceasefire prospects and pushed Iran toward disaster.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdKVYwZ8UL1-3bSP42GOAsC9l247Ha0rWI9dN1eZHqHWFEQ_kODm6gAhT9kgQwtlZjlimmZlCdHQ48OLZwOSadjLhEpUX9G-0a_bHOwLB52BGpyGTraKdGMW32XgUSBNqSWjqYvg=="
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "Time Magazine",
+          "excerpt": "Pezeshkian denied Trump's assertion that 'Iran's New Regime President' has requested a ceasefire, stating that Trump's claim was 'false and baseless.'",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBYMBL4heDBQUezfPxEzlxE8T5X0cW-Pvj6-thZ28ZgwPcrEEVRuUnOZnqTBpDh-Eu0hh1vGfi7EPKnwwFfhVUIvLSHj4tKMRbmDzscKj-4CDSUXX1dT4TomlEOLeROD1iw_X5JludKuV4CgyBMjilEbnHKfd8oTAwNlzjh2Mbt2WcV54SQOP__xQNIVI="
+        },
+        {
+          "name": "The Independent",
+          "excerpt": "Pezeshkian denied Trump's assertion that Iran's 'new regime president' had requested a ceasefire.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIlipo0NHCjJGxeYc7GSImBl-23qx-iRpDX09n5OEAlF_3HbRkMTnObqh4BuSJyJU8rRtKZ7iw7C3Vx483LLtFxLEXXh4Gy_NwEQJQRqG5CIG8xF6BKwoyGnzYZGGUxmjY6N7a4ZlVrl2w2_f_kAmOlOtVop-tVuY2Gy1xVOzZeBVmP6ePRicgPKHMSEwnvULRAZKQ1Vp2R8346mUiQXqWcPw="
+        }
+      ],
+      "framing_analysis": "The claim accurately reflects President Pezeshkian's stated position on ending hostilities, contingent on Iran not being attacked. While 'firm guarantees' is an interpretation, it aligns with his condition for halting Iranian strikes.",
+      "web_search_summary": "Iranian President Masoud Pezeshkian has expressed a readiness to end hostilities, stating in a televised address on March 7, 2026, that Iran would halt attacks on neighboring countries unless those countries launched strikes against Iran. He also apologized to regional states affected by recent hostilities and emphasized that Iran does not seek confrontation. This conditional cessation of Iranian strikes effectively serves as a demand for guarantees against future domestic strikes originating from those territories.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_4",
+      "claim_text": "Strait of Hormuz effectively closed to US/Israel-linked vessels",
+      "status": "expired",
+      "confidence_score": 0.45,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "verification_count": 233,
+      "verified_at": "2026-04-30T01:18:31.764Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": "Unknown",
+      "claim_date": "2026-03",
+      "supporting_sources": [
+        {
+          "name": "Wikipedia",
+          "excerpt": "Shipping traffic through the Strait of Hormuz, a major maritime choke point for world energy trade, has been largely blocked by Iran since 28 February 2026, when the United States and Israel launched an air war against Iran and assassinated its supreme leader Ali Khamenei.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4cwIpa_eNus4p-S8BPoDVGwRLHS1rrpUpcFMR8SeGD-nFSNtmwhtmSwEII7Qu9pt7j2QHHTMKUdH9268xqivJLQxR22H0XSYIc8xJeJ7s0tuiUNLVnlJZ2jlOimdQhwQU9GHHqyZP65AD4BtN8pCqzUdQcTk="
+        },
+        {
+          "name": "Al Jazeera",
+          "excerpt": "After the US and Israel launched their war on Iran on February 28, Tehran, whose territorial waters extend into the strait, closed the passage to all vessels.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxk9Cx_L2Nwg9tCyBoQsrgnkpwYqRo6swL-FRYDvbhJlzIlUE-lS634Ovd08aX3fFS-I2X9VYaf-KcjKlyh-QchGnPdI1z3LQ-RvyJR7zm0yJymzNNc5VTxf8qJrELCk-OQT07NAWaOYzUxcrNFtdBqXDWCoIueJC4yMjFJefjm_FGBHVAaJtWIvqFTFuh6NBVP3Ir"
+        },
+        {
+          "name": "Energy Digital Magazine",
+          "excerpt": "The effective closure of the strait has sent global energy prices soaring and prompted countries to implement fuel rationing and place restrictions on electricity consumption.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIkBddQH-TPOy5pe4gWKT0BnnBj9G4D1dniE4_MaA0efJ5S3YZXf8uHfW5Aeo4ESGbXkwFruHf16SvGvTkN2ZviRRsdycQj6sTqiiyRaTs6WbHFUR7OK8gDc-vMr8h_L0aWV1hBUJC7QtD4K2njVYDUux299NtC3wo77R8bBhn-JU1Hf3535lEPtRS8HUhjMVWFQ=="
+        },
+        {
+          "name": "Time Magazine",
+          "excerpt": "Iran has reported seizing two vessels in the Strait of Hormuz amid the U.S. blockade, just hours after President Donald Trump announced an extension of the cease-fire.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGubB6eyHObexuNV3jUj9ziVfAh9mHv6_D6ppBftuprzx7QRnxtHepSNLrQYg74YvzUFUfU69NgB4ecE46SuNZS1rhxJDIWuxrR1fixLZ6cqWxPxZbTy2zv4SvQbDbpvGFXXfLTFE9gzjn7JXPEWCm8vGRhqxyd7J8trqX-u36ie4O3qcN1TE2X-BxPaLmIGytbmACxGpnSX-3kScbkxHMt7T4M1q9nOcZlUuDS"
+        },
+        {
+          "name": "The Guardian",
+          "excerpt": "Iranian forces have seized two ships in the strait of Hormuz as the US and Iran doubled down on imposing separate blockades of the shipping waterway.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGITd14uTm2NQAZGOvTqohM0lJUeiNPsWkzF8p1Epik5MAxvpSdvC6m2dWoA-Q2ct3oFPxDqOTadmwTbORo1ZVYOloI4QpxomjQvX7mp4bpzwbSbGeUyUVxlmHKESi6Fu9RTMHrg23De-xGiqQK6Bl2ZM82ZoKXIhU518BNtCYGtbzgJ_YIco4jm-L7g55oMZuXS5_xMbnbnK15qbPdB6x01PzMsQ=="
+        },
+        {
+          "name": "CNA",
+          "excerpt": "Iran, which has effectively blocked the strait to ships apart from its own since the US and Israel launched the war in February, has been left in apparent control of the waterway since last-ditch peace talks were called off on Tuesday, hours before a two-week ceasefire expired.",
+          "url": null
+        },
+        {
+          "name": "Times of Israel",
+          "excerpt": "Shipping through the strategic Strait of Hormuz has been heavily restricted by Iran since the start of the war with Israel and the United States, while the US military is enforcing a counter-blockade of Iranian ports.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGubB6eyHObexuNV3jUj9ziVfAh9mHv6_D6ppBftuprzx7QRnxtHepSNLrQYg74YvzUFUfU69NgB4ecE46SuNZS1rhxJDIWuxrR1fixLZ6cqWxPxZbTy2zv4SvQbDbpvGFXXfLTFE9gzjn7JXPEWCm8vGRhqxyd7J8trqX-u36ie4O3qcN1TE2X-BxPaLmIGytbmACxGpnSX-3kScbkxHMt7T4M1q9nOcZlUuDS"
+        },
+        {
+          "name": "YouTube (What's Going on With Shipping)",
+          "excerpt": "Iran has issued a formal notice to the United Nations announcing that the Straight of Hormuz is not only closed to the United States and Israel, but also to any aggressor nations.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6fbMYh3UlkU5rrCCGiCSnbl4S8TJF9Oax5bSTjSy2kietuDUUu_K0u8cRWMbI6l_LGnvQzkITSUnKW_1JxxKH1ohY9fxKOL-n7oPzP6KZoMFtHRIGv78BnCWl5TCBWXferlR45g8="
+        },
+        {
+          "name": "Israel-Iran LIVE: Pakistan Minister, U.S. envoy discuss efforts for 2nd round of U.S.-Iran talks",
+          "excerpt": "Iran vowed it would not reopen the Strait of Hormuz as long as the United States continues to blockade its ports, in a tense standoff on Thursday (April 23, 2026) that has dominated the ceasefire in the war in West Asia.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4cwIpa_eNus4p-S8BPoDVGwRLHS1rrpUpcFMR8SeGD-nFSNtmwhtmSwEII7Qu9pt7j2QHHTMKUdH9268xqivJLQxR22H0XSYIc8xJeJ7s0tuiUNLVnlJZ2jlOimdQhwQU9GHHqyZP65AD4BtN8pCqzUdQcTk="
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed accurately, reflecting the current situation in the Strait of Hormuz where Iran has explicitly closed the strait to US/Israel-linked vessels and both sides are imposing blockades.",
+      "web_search_summary": "The Strait of Hormuz is effectively closed to US/Israel-linked vessels. Iran has explicitly stated that the strait is closed to vessels going to and from the ports of the US, Israel, and their allies, and has seized and attacked ships in the strait. The US has also imposed a naval blockade on Iranian ports, further complicating passage through the strait.",
       "investigation_depth": "quick"
     },
     {
