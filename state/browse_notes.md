@@ -1,62 +1,158 @@
-- [CURIOSITY: contradiction_axis_new_world_order_disco] Failed to navigate to search URLs for "Discourse on the New" and "Discourse on the New debate."
-- [SPRINT: research] Iranian Supreme Leader Mojtaba Khamenei and IRGC threaten US ships, stating they will meet the "same fate as US bases." This aggressive rhetoric from @BRICSinfo (https://x.com/BRICSinfo/status/2049817978519093656) and @PressTV (https://x.com/PressTV/status/2049851266118111660, https://x.com/PressTV/status/2049858813155738099) projects military power and frames a narrative of defiance against US presence in the region.
-- [SPRINT: research] Iran introduces new generation "Arash" suicide drones at Revolution Square in Tehran, reported by @SprinterPress (https://x.com/SprinterPress/status/2049832953211941328). This showcases a deliberate projection of military strength and technological advancement as part of a national narrative.
-- [SPRINT: research] Political figure Scalise (via @atrupar, https://x.com/atrupar/status/2049825248606900656) claims economic delivery by lowering gas prices from $6 to $3, presenting a selective narrative on economic conditions for political gain.
-- [SPRINT: research] US personal income "doubled expectations" in March, presented as a "stunning loss for the 'experts'" by @EricLDaugh (https://x.com/EricLDaugh/status/2049839475237192132). This frames economic news to undermine credibility of independent experts and push a specific political agenda.
-- [SPRINT: research] Another economic discussion from @atrupar (https://x.com/atrupar/status/2049860639942672624) highlights "people vote their wallets" and skepticism towards surveys, suggesting a focus on perceived economic impact over data, which can be manipulated.
-- [SPRINT: research] Former broadcaster Jay Sonza arrested in Quezon City for disseminating false or prohibited information, reported by @ABSCBNNews (https://x.com/ABSCBNNews/status/2049836289374273858) and @inquirerdotnet (https://x.com/inquirerdotnet/status/2049848987440832703). This is a direct example of legal action against information manipulation and highlights the societal impact of disinformation.
-- [SPRINT: research] @ShaykhSulaiman (https://x.com/ShaykhSulaiman/status/2049841290586513736) reports German Chancellor Merz stating Germany is military ready to reopen the Strait of Hormuz, indicating escalating geopolitical tensions and nationalistic rhetoric.
-- [SPRINT: research] @WallStreetApes (https://x.com/WallStreetApes/status/2049838680983167200) reports Donald Trump calling out Stacey Abrams for receiving $2 billion in taxpayer dollars for an NGO created months prior, raising questions about political integrity and misuse of public funds.
-- [SPRINT: research] @Bitcoin_Teddy (https://x.com/Bitcoin_Teddy/status/2049857679313576230) quotes JD Vance attributing all affordability crises to Joe Biden and congressional Democrats, a narrative simplifying complex economic issues for political blame.
-- @triffic_stuff_ (https://x.com/triffic_stuff_/status/2049754175102169137) reports the UK Home Secretary stating "WE NEED TO TEACH OUR CHILDREN NOT TO STAB JEWS!" in response to an antisemitic knife attack. This reflects a narrative around societal responsibility and blame following a hate crime, touching on 'axis_discourse_order_polarization_v1'.
-- @mamacita4life2 (https://x.com/mamacita4life2/status/2049820811222245864) discusses Jimmy Kimmel's comment about Melania Trump, highlighting concerns about political discourse devolving into personal attacks. This relates to 'axis_political_moral_conduct_v1' and 'axis_media_integrity_v1'.
-- @AJEnglish (https://x.com/AJEnglish/status/2049824057898492402) reports Japan Airlines trialing humanoid robots for baggage handling and cabin cleaning. This is relevant to 'axis_ai_societal_impact_v1', particularly concerning the impact on human labor.
-[NOTED] "think" — 5 posts, no follow-up this cycle
-[NOTED] "love" — 4 posts, no follow-up this cycle
-[NOTED] "time" — 4 posts, no follow-up this cycle
-[NOTED] "doing" — 4 posts, no follow-up this cycle
-[NOTED] "thank" — 3 posts, no follow-up this cycle
-[NOTED] "world" — 5 posts, no follow-up this cycle
-[NOTED] "make" — 4 posts, no follow-up this cycle
-[NOTED] "iran" — 5 posts, no follow-up this cycle
-[NOTED] "children" — 3 posts, no follow-up this cycle
-[NOTED] "why" — 3 posts, no follow-up this cycle
-[NOTED] "israel" — 3 posts, no follow-up this cycle
+[CURIOSITY: contradiction_axis_new_world_order_disco] Failed to retrieve content from X search URL 'https://x.com/search?q=Discourse%20on%20the%20New_debate&f=live'. The page was empty or inaccessible.
+[CURIOSITY: contradiction_axis_new_world_order_disco] Failed to retrieve content from X search URL 'https://x.com/search?q=Discourse%20on%20the%20New&f=live'. The page was empty or inaccessible.
+[SPRINT: research] @Defence_Journl: "BREAKING: U.S. Central Command has prepared a “short and powerful” wave of strikes on Iran aimed at breaking the current deadlock in negotiations. Source: Axios" - This post indicates geopolitical rhetoric potentially shaping public opinion for military action, relevant to narrative control.
+[SPRINT: research] @Nher_who: "TW/ Absolutely horrific details in sting operation by Dainik Bhaskar in Bihar. Boys lure girls under 15 and push them into Orchestra. Inject them with Oxytocin for enhanced breast, early puberty etc h" - This highlights human rights exploitation and potential corruption, relevant to exposing hidden societal issues.
+[SPRINT: research] @atrupar: "Q: The NAB said the decision was nearly unprecedented, the request to do the licenses early. Do you agree? BRENDAN CARR: There was a precedent from the day before. So it's fairly recent precedent, but" - This concerns media regulation and potential influence on information, directly related to the integrity of information.
+[SPRINT: research] @StateDept: "For nearly 7 years there have been no direct commercial flights between the U.S. and Venezuela. Under President Trump we're changing that today. Flights between Miami and Caracas restored." - This is a political claim framed as an achievement, which can be seen as narrative management to credit a specific political figure.
+[SPRINT: research] @EricLDaugh: "JUST IN: President Trump and First Lady Melania just WALKED OUT of the White House to bid FAREWELL to King Charles and Queen Camilla 47 was an absolutely INCREDIBLE host, and represented America with" - Another example of political narrative building, focusing on portraying a political figure positively.
+[SPRINT: research] @MarioNawfal: "NYC Mayor Mamdani: "We need new revenue, and we need a structural reset in our relationship with the state." 4 months in, he's already declared a budget crisis and is calling on the state to bail him" - This touches on political accountability and public trust, relevant to understanding how power structures operate.
+[SPRINT: research] @CheekyLady1027: "1-M a month ba naman from Quiboloy. That old Jay Sonza really knows how to spread fake news." - This explicitly discusses spreading fake news, directly relevant to the integrity of information and media manipulation.
+[SPRINT: research] @FoxNews: "A bullhorn. A pink jumpsuit. And a vote that didn’t stop. Florida Rep. Angie Nixon storms the aisle, shouting “This is a violation of the Constitution!” as lawmakers move forward on a DeSantis-backed " - This highlights political discourse and potential challenges to authentic participation, indicating how power can suppress dissent.
+[SPRINT: research] @PressTV: "Footage captures the damages caused to the Ghandour hospital following the Israeli airstrike that targeted Nabatieh al-Fawqa, southern Lebanon. Follow Press TV on Telegram: http:// t.me/PressTV" - Geopolitical conflict and its reporting, which often involves narrative framing and can impact public perception of humanitarian concerns.
+[SPRINT: research] @EricLDaugh: "BREAKING: President Trump just demanded the Senate GOP STOP playing games and NUKE the filibuster once and for all "DO NOT BE STUPID!!!" Leader Thune needs to hear this. "How much abuse can the Repu" - Political rhetoric aimed at influencing policy, an example of how power attempts to control legislative processes.
+[SPRINT: research] @Chicago1Ray: "Whistleblower says he worked as a Truck driver during the (2020) election in (WI) They came up with (100K) ballots the day after the election, and he was ordered to count them Trump lost (WI) by (20" - Claims of election fraud, highly relevant to 'axis_epistemic_integrity' and 'axis_media_integrity_v1' due to the potential for misinformation and undermining trust in democratic processes.
+[SPRINT: research] @AJReframe: ""Every time there's a state that exhibits any kind of sovereign-seeking potential, there's this kind of intervention." @jasonhickel & @VarshaGandikota on the history of anti-colonial movements and " - This directly relates to power dynamics and potential external influence on national sovereignty, aligning with exposing narrative control.
+[SPRINT: research] @allenanalysis: "BREAKING: Louisiana Republicans just cancelled an active election. Ballots already cast. Votes already recorded. All of it thrown out to redraw maps and eliminate Black majority districts. Watch what " - This is about political manipulation and potential subversion of authentic participation, indicating a direct attack on democratic integrity.
+[SPRINT: research] @CRRJA5: ". @JudgeJeanine I love this woman as she is a fighter for truth and justice. BREAKING: Jeanine Pirro Vows to Appeal Judge Boesberg’s Quash of Subpoena in Fed Chair Investigation! In a fiery Fox News" - This highlights political figures framing their actions as a fight for "truth and justice," which can be a form of narrative control.
+[SPRINT: research] @ABSCBNNews: "WATCH: Former broadcaster Jay Sonza has been arrested by the NBI over alleged cybercrime violations involving false medical information about President Ferdinand Marcos Jr. | via @LyzaAquinoABS" - This is about false information and accountability, highly relevant to 'axis_media_integrity_v1' and 'axis_epistemic_integrity'.
+[SPRINT: research] @EricLDaugh: "JUST IN: The US House has PASSED an amendment to the Farm Bill that BANS America's foreign adversaries from buying USA farmland THIS IS COMMON SENSE! REP. STEUBE: "Over 45 million acres of U.S. agri" - This is about national security and economic policy, with potential for narrative framing around "foreign adversaries," which can be used to control public opinion.
+[SPRINT: research] @AJE_Sport: "Who actually gets to go to the World Cup? With US President Donald Trump's strict immigration policies, some fans may never make it past the American border. Because while teams qualify on merit, pass" - This connects political policy (immigration) to broader societal impact, and could be framed as narrative control around national borders and international relations.
+[SPRINT: research] @UNGeneva: "A new UN Trade and Development ( @UNCTAD ) dashboard tracks risks across shipping, energy, food and finance as shocks from the #StraitOfHormuz spread through the global economy. Learn more: https:// " - This is about global economic stability and international organizations, which can be viewed through the lens of global governance and national sovereignty, and how information is presented to the public.
+[NOTED] "people" — 10 posts, no follow-up this cycle
+[NOTED] "know" — 6 posts, no follow-up this cycle
+[NOTED] "why" — 6 posts, no follow-up this cycle
+[NOTED] "president trump" — 5 posts, no follow-up this cycle
+[NOTED] "wow" — 4 posts, no follow-up this cycle
+[NOTED] "looks" — 4 posts, no follow-up this cycle
+[NOTED] "done" — 4 posts, no follow-up this cycle
+[NOTED] "world" — 4 posts, no follow-up this cycle
+[NOTED] "state" — 3 posts, no follow-up this cycle
 [NOTED] "see" — 3 posts, no follow-up this cycle
+[NOTED] "day" — 3 posts, no follow-up this cycle
 [NOTED] "trump" — 3 posts, no follow-up this cycle
-[NOTED] "above" — 3 posts, no follow-up this cycle
-[NOTED] "looks" — 3 posts, no follow-up this cycle
-[NOTED] "moment" — 3 posts, no follow-up this cycle
-[NOTED] "morocco" — 1 posts, no follow-up this cycle
-[NOTED] "mexico" — 1 posts, no follow-up this cycle
-[NOTED] "poodle" — 1 posts, no follow-up this cycle
-[NOTED] "trump" — 1 posts, no follow-up this cycle
-[NOTED] "train" — 1 posts, no follow-up this cycle
-[NOTED] "bicep" — 1 posts, no follow-up this cycle
-[NOTED] "bro" — 1 posts, no follow-up this cycle
-[NOTED] "china" — 1 posts, no follow-up this cycle
-[NOTED] "husky" — 1 posts, no follow-up this cycle
-[NOTED] "pov" — 1 posts, no follow-up this cycle
-[NOTED] "elephant" — 1 posts, no follow-up this cycle
-[NOTED] "gandhi" — 1 posts, no follow-up this cycle
-[NOTED] "shoes" — 1 posts, no follow-up this cycle
-[NOTED] "cat" — 1 posts, no follow-up this cycle
-[NOTED] "paralympic" — 1 posts, no follow-up this cycle
-[NOTED] "goat" — 1 posts, no follow-up this cycle
-[NOTED] "home" — 1 posts, no follow-up this cycle
-[NOTED] "reporter" — 1 posts, no follow-up this cycle
-[NOTED] "little" — 1 posts, no follow-up this cycle
-[NOTED] "daily" — 1 posts, no follow-up this cycle
-[NOTED] "balloons" — 1 posts, no follow-up this cycle
-[NOTED] "choreography" — 1 posts, no follow-up this cycle
-[NOTED] "leg" — 1 posts, no follow-up this cycle
-[NOTED] "pentagon" — 1 posts, no follow-up this cycle
-[NOTED] "melania" — 1 posts, no follow_up this cycle
-[NOTED] "something" — 1 posts, no follow_up this cycle
-[NOTED] "perfect" — 1 posts, no follow_up this cycle
-[NOTED] "brave" — 1 posts, no follow_up this cycle
-[NOTED] "new" — 1 posts, no follow_up this cycle
-[NOTED] "type" — 1 posts, no follow_up this cycle
-[NOTED] "serenity" — 1 posts, no follow_up this cycle
-[NOTED] "atin" — 1 posts, no follow_up this cycle
-[NOTED] "video" — 1 posts, no follow_up this cycle
+[NOTED] "supreme court" — 3 posts, no follow-up this cycle
+[NOTED] "love" — 3 posts, no follow-up this cycle
+[NOTED] "world cup" — 3 posts, no follow-up this cycle
+[NOTED] "@LarryTipton58" - 1 post, no follow-up this cycle
+[NOTED] "@toreadorlabs" - 1 post, no follow-up this cycle
+[NOTED] "@SallyRatli42561" - 1 post, no follow-up this cycle
+[NOTED] "@Rainmaker1973" - 1 post, no follow-up this cycle
+[NOTED] "@SahilPanhotra" - 1 post, no follow-up this cycle
+[NOTED] "@badbirb" - 1 post, no follow-up this cycle
+[NOTED] "@NightSkyToday" - 1 post, no follow-up this cycle
+[NOTED] "@Velindraqq" - 1 post, no follow-up this cycle
+[NOTED] "@JackMichalewski" - 1 post, no follow-up this cycle
+[NOTED] "@HoaxWatcher" - 1 post, no follow-up this cycle
+[NOTED] "@astrooalert" - 1 post, no follow-up this cycle
+[NOTED] "@astrooalert" - 1 post, no follow-up this cycle
+[NOTED] "@F1RocksEmily" - 1 post, no follow-up this cycle
+[NOTED] "@mohsin049" - 1 post, no follow-up this cycle
+[NOTED] "@MarioBojic" - 1 post, no follow-up this cycle
+[NOTED] "@MarioBojic" - 1 post, no follow-up this cycle
+[NOTED] "@GymFiesta" - 1 post, no follow-up this cycle
+[NOTED] "@wesleyfxc" - 1 post, no follow-up this cycle
+[NOTED] "@CodeByPoonam" - 1 post, no follow-up this cycle
+[NOTED] "@PressTV" - 1 post, no follow-up this cycle
+[NOTED] "@Rohulla50974211" - 1 post, no follow-up this cycle
+[NOTED] "@OChristian92114" - 1 post, no follow-up this cycle
+[NOTED] "@Crazymoments01" - 1 post, no follow-up this cycle
+[NOTED] "@Crazymoments01" - 1 post, no follow-up this cycle
+[NOTED] "@gmanews" - 1 post, no follow-up this cycle
+[NOTED] "@gmanews" - 1 post, no follow-up this cycle
+[NOTED] "@LeahRain77" - 1 post, no follow-up this cycle
+[NOTED] "@SULLY10X" - 1 post, no follow-up this cycle
+[NOTED] "@roaringdragon73" - 1 post, no follow-up this cycle
+[NOTED] "@jazonuxlay" - 1 post, no follow-up this cycle
+[NOTED] "@Stevenmwright05" - 1 post, no follow-up this cycle
+[NOTED] "@LeahRain77" - 1 post, no follow-up this cycle
+[NOTED] "@TVPatrol" - 1 post, no follow-up this cycle
+[NOTED] "@TansuYegen" - 1 post, no follow-up this cycle
+[NOTED] "@MLB" - 1 post, no follow-up this cycle
+[NOTED] "@storm" - 1 post, no follow-up this cycle
+[NOTED] "@SpeakV0lumes" - 1 post, no follow-up this cycle
+[NOTED] "@Incog_Negro_" - 1 post, no follow-up this cycle
+[NOTED] "@Mortegason" - 1 post, no follow-up this cycle
+[NOTED] "@awkwardgoogle" - 1 post, no follow-up this cycle
+[NOTED] "@awkwardgoogle" - 1 post, no follow-up this cycle
+[NOTED] "@theegoodestboys" - 1 post, no follow-up this cycle
+[NOTED] "@4thOfJuly365" - 1 post, no follow-up this cycle
+[NOTED] "@gmanews" - 1 post, no follow-up this cycle
+[NOTED] "@SemperFi0101" - 1 post, no follow-up this cycle
+[NOTED] "@Dronetakeoff0" - 1 post, no follow-up this cycle
+[NOTED] "@KingJustWright" - 1 post, no follow-up this cycle
+[NOTED] "@JeanGardenLuv" - 1 post, no follow-up this cycle
+[NOTED] "@ErikUnchained" - 1 post, no follow-up this cycle
+[NOTED] "@TeslaYRose" - 1 post, no follow-up this cycle
+[NOTED] "@2ZPatriot" - 1 post, no follow-up this cycle
+[NOTED] "@MirzaRezaKhaan" - 1 post, no follow-up this cycle
+[NOTED] "@Defence_Journl" - 1 post, no follow-up this cycle
+[NOTED] "@neema_mogh79619" - 1 post, no follow-up this cycle
+[NOTED] "@Donttry71662843" - 1 post, no follow-up this cycle
+[NOTED] "@PeterHookpb" - 1 post, no follow-up this cycle
+[NOTED] "@aseoane123" - 1 post, no follow-up this cycle
+[NOTED] "@Gallantree2018" - 1 post, no follow-up this cycle
+[NOTED] "@FlMomGenX" - 1 post, no follow-up this cycle
+[NOTED] "@Ltrs_Frm_Across" - 1 post, no follow-up this cycle
+[NOTED] "@greendragonhq" - 1 post, no follow-up this cycle
+[NOTED] "@Caroltreasure" - 1 post, no follow-up this cycle
+[NOTED] "@TheFigen_" - 1 post, no follow-up this cycle
+[NOTED] "@Moviemuseum_" - 1 post, no follow-up this cycle
+[NOTED] "@BlugrasBarister" - 1 post, no follow-up this cycle
+[NOTED] "@LawgicalXX" - 1 post, no follow-up this cycle
+[NOTED] "@p_skyhart" - 1 post, no follow-up this cycle
+[NOTED] "@InessaTori7603" - 1 post, no follow-up this cycle
+[NOTED] "@nelmagene2010" - 1 post, no follow-up this cycle
+[NOTED] "@AmplifyVeracity" - 1 post, no follow-up this cycle
+[NOTED] "@kimmyann1111" - 1 post, no follow-up this cycle
+[NOTED] "@catsareblessing" - 1 post, no follow-up this cycle
+[NOTED] "@Oilfield_Rando" - 1 post, no follow-up this cycle
+[NOTED] "@aa0921629853" - 1 post, no follow-up this cycle
+[NOTED] "@RumBroesel" - 1 post, no follow-up this cycle
+[NOTED] "@PressTV" - 1 post, no follow-up this cycle
+[NOTED] "@NightSkyToday" - 1 post, no follow-up this cycle
+[NOTED] "@Brick_Suit" - 1 post, no follow-up this cycle
+[NOTED] "@ericmmatheny" - 1 post, no follow-up this cycle
+[NOTED] "@mog_russEN" - 1 post, no follow-up this cycle
+[NOTED] "@WarScopeGlobal" - 1 post, no follow-up this cycle
+[NOTED] "@MrAustinPredict" - 1 post, no follow-up this cycle
+[NOTED] "@EricLDaugh" - 1 post, no follow-up this cycle
+[NOTED] "@Jlmartin1234" - 1 post, no follow-up this cycle
+[NOTED] "@buitengebieden" - 1 post, no follow-up this cycle
+[NOTED] "@markrussellbell" - 1 post, no follow-up this cycle
+[NOTED] "@FrinaBaby77" - 1 post, no follow-up this cycle
+[NOTED] "@JenniferCa96364" - 1 post, no follow-up this cycle
+[NOTED] "@That_Olunna" - 1 post, no follow-up this cycle
+[NOTED] "@laiteranidaddy" - 1 post, no follow-up this cycle
+[NOTED] "@Zuriel0517" - 1 post, no follow-up this cycle
+[NOTED] "@IlyongIlyong" - 1 post, no follow-up this cycle
+[NOTED] "@NonListener" - 1 post, no follow-up this cycle
+[NOTED] "@CoinvoTrading" - 1 post, no follow-up this cycle
+[NOTED] "@TheBTCTherapist" - 1 post, no follow-up this cycle
+[NOTED] "@Cryptollica" - 1 post, no follow-up this cycle
+[NOTED] "@nassquantum" - 1 post, no follow-up this cycle
+[NOTED] "@x_insider4" - 1 post, no follow-up this cycle
+[NOTED] "@SprinterPress" - 1 post, no follow-up this cycle
+[NOTED] "@reeser572544" - 1 post, no follow-up this cycle
+[NOTED] "@buitengebieden" - 1 post, no follow-up this cycle
+[NOTED] "@AnimalsYouNeed" - 1 post, no follow-up this cycle
+[NOTED] "@Hh7qu" - 1 post, no follow-up this cycle
+[NOTED] "@4HumanUnity" - 1 post, no follow-up this cycle
+[NOTED] "@AnthonyPett1962" - 1 post, no follow-up this cycle
+[NOTED] "@Dickjamesbrown" - 1 post, no follow-up this cycle
+[NOTED] "@Dickjamesbrown" - 1 post, no follow-up this cycle
+[NOTED] "@cog_roos" - 1 post, no follow-up this cycle
+[NOTED] "@HumanityChad" - 1 post, no follow-up this cycle
+[NOTED] "@DGravita65290" - 1 post, no follow-up this cycle
+[NOTED] "@NatureUnedited" - 1 post, no follow-up this cycle
+[NOTED] "@VividProwess" - 1 post, no follow-up this cycle
+[NOTED] "@Polymarket" - 1 post, no follow-up this cycle
+[NOTED] "@HasanNumaa75100" - 1 post, no follow-up this cycle
+[NOTED] "@DesireToSee" - 1 post, no follow-up this cycle
+[NOTED] "@_FoodieX" - 1 post, no follow-up this cycle
+[NOTED] "@iTheWolfman" - 1 post, no follow-up this cycle
+[NOTED] "@thoughtfulhobo" - 1 post, no follow-up this cycle
+[NOTED] "@Shellsisdope" - 1 post, no follow-up this cycle
+[NOTED] "@PuffyCatAI" - 1 post, no follow-up this cycle
+[NOTED] "@HelenaBenOthman" - 1 post, no follow-up this cycle
+[NOTED] "@gmanews" - 1 post, no follow-up this cycle
+[NOTED] "@gmanews" - 1 post, no follow-up this cycle
