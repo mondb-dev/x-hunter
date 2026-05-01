@@ -918,6 +918,19 @@ function runOneCycle() {
     CYCLE_TYPE: 'HEALTH',
   });
 
+  // ── META rollback watchdog — fires after all-fail BROWSE cycles ────────
+  if (cycleType === 'BROWSE' && metrics.agentExitCodes.length > 0 &&
+      metrics.agentExitCodes.every(c => c !== 0)) {
+    runScriptLog(path.join(PROJECT_ROOT, 'runner/meta_watchdog.js'), '', {
+      BROWSE_EXIT_CODES: metrics.agentExitCodes.join(','),
+    });
+  } else if (cycleType === 'BROWSE' && metrics.agentExitCodes.some(c => c === 0)) {
+    // At least one agent succeeded — signal the watchdog to reset its counter
+    runScriptLog(path.join(PROJECT_ROOT, 'runner/meta_watchdog.js'), '', {
+      BROWSE_EXIT_CODES: metrics.agentExitCodes.join(','),
+    });
+  }
+
   // ── Wait out remainder of interval + post-sleep detection ─────────────
   // Read cadence-adjusted interval (may differ from config default)
   const cadenceDir = readDirectives();

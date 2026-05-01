@@ -129,7 +129,116 @@ function findDirtyTargetPaths(paths) {
 
 // ── Smoke tests ─────────────────────────────────────────────────────────────
 
-function runSmokeTests(manifest) {
+// ── Export contract helpers ──────────────────────────────────────────────────
+
+/**
+ * Capture the exported keys of a JS module by spawning a child process.
+ * Returns an array of key names, or null if the file cannot be loaded.
+ */
+function captureExportKeys(absPath) {
+  try {
+    const out = execFileSync(process.execPath, [
+      "-e",
+      `try{const m=require(${JSON.stringify(absPath)});console.log(JSON.stringify(Object.keys(m||{})))}catch(e){process.exit(1)}`,
+    ], { stdio: ["ignore", "pipe", "pipe"], timeout: 15_000, cwd: ROOT });
+    return JSON.parse(out.toString().trim());
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Before staging is applied: snapshot the exported keys of all files
+ * that are being modified (not created). Returns Map<relPath, string[]>.
+ */
+function snapshotExportContracts(manifest) {
+  const snap = new Map();
+  for (const f of (manifest.files || [])) {
+    if (f.action === "create" || f.action === "infra_trigger") continue;
+    if (!f.path.endsWith(".js")) continue;
+    const absPath = path.join(ROOT, f.path);
+    if (!fs.existsSync(absPath)) continue;
+    const keys = captureExportKeys(absPath);
+    if (keys) snap.set(f.path, keys);
+  }
+  return snap;
+}
+
+/**
+ * After staging is applied: verify no previously-exported symbols were dropped.
+ */
+function checkExportContracts(manifest, preSnap) {
+  const failures = [];
+  for (const f of (manifest.files || [])) {
+    if (!preSnap.has(f.path)) continue;
+    const before = preSnap.get(f.path);
+    const after = captureExportKeys(path.join(ROOT, f.path));
+    if (!after) continue; // syntax check will catch load failure
+    for (const key of before) {
+      if (!after.includes(key)) {
+        failures.push(`Export dropped in ${f.path}: "${key}" was exported before but is missing after`);
+      }
+    }
+  }
+  return failures;
+}
+
+/**
+ * After staging is applied: try loading files that depend on any modified
+ * runner/lib file, plus always check the agent and key lib entry points.
+ * Skips orchestrator.js — it starts an event loop when required.
+ */
+function checkDependentChain(manifest) {
+  const failures = [];
+  const modifiedLibFiles = (manifest.files || [])
+    .filter(f => f.action !== "infra_trigger" && f.path.endsWith(".js") && f.path.startsWith("runner/lib/"))
+    .map(f => f.path);
+
+  if (modifiedLibFiles.length === 0) return failures;
+
+  // Build set of basenames to look for in require() calls
+  const modifiedBasenames = modifiedLibFiles.map(p => path.basename(p, ".js"));
+
+  // Scan runner/ and runner/lib/ for files that reference any modified module
+  const dependents = new Set();
+  for (const dir of ["runner", "runner/lib"]) {
+    const absDir = path.join(ROOT, dir);
+    if (!fs.existsSync(absDir)) continue;
+    for (const fname of fs.readdirSync(absDir)) {
+      if (!fname.endsWith(".js")) continue;
+      const absFile = path.join(absDir, fname);
+      try {
+        const content = fs.readFileSync(absFile, "utf-8");
+        if (modifiedBasenames.some(b => content.includes(`'${b}'`) || content.includes(`"${b}"`))) {
+          dependents.add(absFile);
+        }
+      } catch {}
+    }
+  }
+
+  // Always add the agent entry point
+  const agentPath = path.join(ROOT, "runner/lib/gemini_agent.js");
+  if (fs.existsSync(agentPath)) dependents.add(agentPath);
+
+  // Try loading each dependent (skip orchestrator — it starts an event loop)
+  for (const absFile of dependents) {
+    if (absFile.endsWith("orchestrator.js")) continue;
+    try {
+      execFileSync(process.execPath, ["-e", `require(${JSON.stringify(absFile)})`], {
+        stdio: "pipe",
+        timeout: 20_000,
+        cwd: ROOT,
+      });
+    } catch (e) {
+      const stderr = e.stderr ? e.stderr.toString().trim() : e.message;
+      failures.push(`Dependent load failed (${path.relative(ROOT, absFile)}): ${stderr.slice(0, 300)}`);
+    }
+  }
+
+  return failures;
+}
+
+function runSmokeTests(manifest, exportSnap) {
   const failures = [];
   const files = manifest.files || [];
 
@@ -146,14 +255,16 @@ function runSmokeTests(manifest) {
     }
   }
 
-  // 2. Import check for new runner scripts
+  // 2. Import check for ALL runner .js files (create AND modify)
   for (const f of files) {
-    if (f.action !== "create") continue;
+    if (f.action === "infra_trigger") continue;
     if (!f.path.endsWith(".js")) continue;
+    if (!f.path.startsWith("runner/")) continue;
+    if (f.path.endsWith("orchestrator.js")) continue; // starts event loop
     const realPath = path.join(ROOT, f.path);
     if (!fs.existsSync(realPath)) continue;
     try {
-      execFileSync(process.execPath, ["-e", `require('${realPath}')`], {
+      execFileSync(process.execPath, ["-e", `require(${JSON.stringify(realPath)})`], {
         stdio: "pipe",
         timeout: 15_000,
         cwd: ROOT,
@@ -163,6 +274,16 @@ function runSmokeTests(manifest) {
       failures.push(`Import failed for ${f.path}: ${stderr.slice(0, 200)}`);
     }
   }
+
+  // 3. Export contract: verify no previously-exported symbols were dropped
+  if (exportSnap && exportSnap.size > 0) {
+    const contractFailures = checkExportContracts(manifest, exportSnap);
+    for (const cf of contractFailures) failures.push(cf);
+  }
+
+  // 4. Dependent chain: load files that depend on any modified runner/lib file
+  const chainFailures = checkDependentChain(manifest);
+  for (const cf of chainFailures) failures.push(cf);
 
   // 3. Custom test commands from manifest
   for (const cmd of (manifest.test_commands || [])) {
@@ -455,13 +576,14 @@ function rollbackLocalMain(branchName, preMergeHead) {
     createBranch(branchName);
     branchCreated = true;
 
-    // 5. Apply staging files
+    // 5. Apply staging files (snapshot export contracts BEFORE applying)
     snapshot = snapshotTargetFiles(filesChanged);
+    const exportSnap = snapshotExportContracts(manifest);
     applyStagingFiles(manifest);
 
-    // 6. Run smoke tests
+    // 6. Run smoke tests (syntax + import + export contracts + dependent chain)
     log("running smoke tests...");
-    const testFailures = runSmokeTests(manifest);
+    const testFailures = runSmokeTests(manifest, exportSnap);
 
     if (testFailures.length > 0) {
       log("smoke tests FAILED:");
