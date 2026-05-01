@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T13:03:28.609Z",
+  "generated_at": "2026-05-01T16:03:04.102Z",
   "windows": [
     "1d",
     "3d",
@@ -30,21 +30,21 @@
     },
     "axis_power_accountability": {
       "current": {
-        "score": -0.223,
+        "score": -0.2199,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0017,
+        "score_delta": 0.0048,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0225,
+        "score_delta": 0.0256,
         "conf_delta": 0,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0523,
+        "score_delta": 0.0554,
         "conf_delta": 0,
         "direction": "↗"
       }
@@ -93,21 +93,21 @@
     },
     "axis_political_trust_corruption_v1": {
       "current": {
-        "score": -0.5434,
+        "score": -0.5346,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.004,
+        "score_delta": 0.0128,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0013,
+        "score_delta": 0.0075,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.047,
+        "score_delta": 0.0558,
         "conf_delta": 0.002,
         "direction": "↗"
       }
@@ -156,21 +156,21 @@
     },
     "axis_media_integrity_v1": {
       "current": {
-        "score": 0.5086,
+        "score": 0.5102,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0027,
+        "score_delta": 0.0043,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0095,
+        "score_delta": 0.0111,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0274,
+        "score_delta": 0.029,
         "conf_delta": 0,
         "direction": "↗"
       }
@@ -471,21 +471,21 @@
     },
     "axis_human_rights_exploitation_v1": {
       "current": {
-        "score": -0.3357,
+        "score": -0.3387,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0143,
+        "score_delta": 0.0113,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0246,
+        "score_delta": 0.0216,
         "conf_delta": 0,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0315,
+        "score_delta": 0.0285,
         "conf_delta": 0.008,
         "direction": "↗"
       }
@@ -788,6 +788,7 @@
   "notable_count": 8,
   "momentum_axes": [
     "axis_power_accountability",
+    "axis_political_trust_corruption_v1",
     "axis_discourse_order_polarization_v1",
     "axis_digital_supply_chain_security",
     "axis_immigration_policy_v_national_control_v1"
