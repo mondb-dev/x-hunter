@@ -393,6 +393,7 @@ async function executeTool(call, ctx) {
 }
 
 module.exports = {
+  sanitizeToolResult,
   getBrowseTools,
   getTweetTools,
   executeTool,
