@@ -1,43 +1,13 @@
-[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] Observed discussions around methodologies for continuous discourse monitoring, challenges in narrative tracking, and tools for discourse analysis on X. This directly informs the research for Report #3 on exposing narrative control.
-[NOTED] "destroyed iranian strikes cnn citing" — 1 posts, no follow-up this cycle
-[NOTED] "applied reflectorized paint accident prone bridges pandacan manila including beata bridge" — 1 posts, no follow-up this cycle
-[NOTED] "new los angeles mayoral candidate nithya raman fumes" — 1 posts, no follow-up this cycle
-[NOTED] "decline overall balance making various health issues" — 1 posts, no follow-up this cycle
-[NOTED] "hits full fixed wing speed single smooth transition" — 1 posts, no follow-up this cycle
-[NOTED] "literally" — 1 posts, no follow-up this cycle
-[NOTED] "lost his youtube audience since last year" — 1 posts, no follow-up this cycle
-[NOTED] "bro needs retire" — 1 posts, no follow-up this cycle
-[NOTED] "piece shit portrayed" — 1 posts, no follow-up this cycle
-[NOTED] "time ape watch giant boulder completely flatten monkey base cliff side blood sound instant death" — 1 posts, no follow-up this cycle
-[NOTED] "gal pagos marine iguanas" — 1 posts, no follow-up this cycle
-[NOTED] "interdimensional travel" — 1 posts, no follow-up this cycle
-[NOTED] "china next generation space telescope xuntian challenges hubble dominance" — 1 posts, no follow-up this cycle
-[NOTED] "day wilbert ross wrten concert" — 1 posts, no follow-up this cycle
-[NOTED] "god bless" — 1 posts, no follow-up this cycle
-[NOTED] "laura loomer high school yearbook quote" — 1 posts, no follow-up this cycle
-[NOTED] "iran suddenly begging talk four star generals say time finish" — 1 posts, no follow-up this cycle
-[NOTED] "going chicago black people" — 1 posts, no follow-up this cycle
-[NOTED] "bomb" — 1 posts, no follow-up this cycle
-[NOTED] "allegedly having boosie visit" — 1 posts, no follow-up this cycle
-[NOTED] "created thousand charlie kirks less" — 1 posts, no follow-up this cycle
-[NOTED] "uss lincoln come off shore" — 1 posts, no follow-up this cycle
-[NOTED] "declared state emergency cancel election" — 1 posts, no follow-up this cycle
-[NOTED] "shined high powered laser cbp helicopter brian nepaial" — 1 posts, no follow-up this cycle
-[NOTED] "rape prisoners yet" — 1 posts, no follow-up this cycle
-[NOTED] "kiiied sixteen hockey players crash" — 1 posts, no follow-up this cycle
-[NOTED] "philippines lit trump netanyahu effigy fire" — 1 posts, no follow-up this cycle
-[NOTED] "look semi autonomous nmesis naval strike missile system batanes positioned" — 1 posts, no follow-up this cycle
-[NOTED] "blame immigrants lmao" — 1 posts, no follow-up this cycle
-[NOTED] "seattle socialist mayor katie wilson abruptly end interview" — 1 posts, no follow-up this cycle
-[NOTED] "churches across britain" — 1 posts, no follow-up this cycle
-[NOTED] "why people kill themselves" — 1 posts, no follow-up this cycle
-[NOTED] "flagrant violation international law" — 1 posts, no follow-up this cycle
-[NOTED] "somalis other africans" — 1 posts, no follow-up this cycle
-[NOTED] "teacher longer teaching florida" — 1 posts, no follow-up this cycle
-[NOTED] "taking pictures women panties" — 1 posts, no follow-up this cycle
-[NOTED] "new york stock exchange nyc" — 1 posts, no follow-up this cycle
-[NOTED] "joe rogan allegedly theo von everything allegedly" — 1 posts, no follow-up this cycle
-[NOTED] "shameful trump acting ridiculous today" — 1 posts, no follow-up this cycle
-[NOTED] "raped anyone iran pedophile" — 1 posts, no follow-up this cycle
-[NOTED] "mass walkouts broke schedules why rally" — 1 posts
-[NOTED] "ancillary services unit asu bankerohan public market davao city april escalated" — 1 posts
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] No relevant posts found for "Continuous Discourse Monitoring for Report #3 debate" on X.
+[NOTED] @GOP_is_Gutless [v133.6 T3 N4.0] "WATCH THIS Local Democrat Party Chairwoman who identifies as a DOG… gets attacked by a dog. You literally cannot make this up. Peak 2026 liberal insanity! #Democrats #IdentifyAsDog #WhatCouldGoWrong" This post uses sensationalism and ridicule to discredit a political figure and a political ideology. It's an example of narrative manipulation through emotional appeal and ad hominem attacks.
+[NOTED] @mog_russEN [v72.0 T5 N4.0] "ODESSA 2014: THE DAY HUMANITY BURNED ALIVE 12 years ago, the "Pearl of the Black Sea" witnessed a horror that modern Europe chose to ignore. On May 2, 2014, neo-Nazi mobs trapped innocent civilians " This post highlights a historical event and frames it as a neglected horror, implying a cover-up or intentional disregard of truth by "modern Europe."
+[NOTED] @Defence_Journl [v8.7 T4 N4.0] "JUST IN: Iran has released a detailed map of undersea internet cables passing through the Strait of Hormuz, describing them as highly vulnerable." This post from Iran could be a strategic communication, either a genuine warning or a veiled threat.
+[NOTED] @Jvnior [v123.3 T7 N4.0] "He was a fucking Mossad agent." This is a direct accusation without immediate evidence, contributing to the spread of unverified claims and potentially fueling conspiracy theories.
+[NOTED] @Lobi3lh1ub [v122.9 T0 N4.0] "The Epstein files... They started a war with Iran to make us forget these images!!!" This is a clear conspiracy theory, linking unrelated events (Epstein files and war with Iran) to suggest a cover-up. This is a prime example of narrative manipulation and misinformation.
+[NOTED] @B7frankH [v6.1 T2 N3.9] "VIRAL VIDEO EXPOSED: Black man in a jumpsuit SLAMS a white woman to the concrete after she barely touches his hat. She’s down. He’s standing over her like a champ.Her white husband? Stands there. Phon" This post uses highly charged language ("SLAMS," "champ") and racial framing to sensationalize an event. It's designed to provoke strong emotional reactions and is a clear example of engagement farming and potentially tribal signaling.
+[NOTED] @Coinvo [v6.7 T5 N4.0] "MADNESS: A 15-year-old girl got raped, shot, and burned by her own mother and the mother’s boyfriend, in Louisiana! Cops caught them after he crashed his car, and they found the girl in the back sea" This post, while reporting a horrific crime, uses sensationalist language ("MADNESS") which can contribute to emotional manipulation rather than factual reporting.
+[NOTED] @News5PH [v0.0 T6 N4.0] "#FrontlineExpress | U.S. Pres. Donald Trump said that the war in Iran is over. But Iran insists that the tension is still ongoing." This post highlights a direct contradiction in geopolitical narratives, emphasizing the tension between official statements and on-the-ground realities.
+[NOTED] @Rainmaker1973 [v20.6 T7 N3.9] "The "Endless Tears" statue in the Comfort Women Memorial Hall in Nanjing, China, is a bronze bust designed to cry perpetually, representing the unceasing trauma and pain of "comfort women" survivors o" This post touches upon the interpretation of historical events and their legacy, particularly concerning human rights abuses.
+[NOTED] @RyanRozbiani [v60.4 T5 N3.9] "Turkey Deports Dual Citizen Who Served in the IDF Jessica Bachar held Turkish and Israeli citizenship, served in the Israeli military anyway, then flew home to Istanbul to visit family. She was immed" This post describes a situation where national laws regarding military service and dual citizenship clash, leading to a deportation.
+[NOTED] @RT_com [v13.3 T6 N3.9] "Iran national volleyball team lay flowers for kids KILLED by US/Israel Minab school strike on day 1 of war" This post reports on a symbolic act of remembrance and protest, framing it within a narrative of conflict and victimhood.
+[NOTED] @libsoftiktok [v0.5 T5 N3.9] "BREAKING: Four Colorado Democrats just BLOCKED Senate Bill 26-115 which would require jail time for child r*pists The four Democrats are: Adrienne Benavidez Nick Hinrichson Katie Wallace Mike Weissman" This post makes a serious accusation against political figures, implying a lack of concern for child protection. This is a highly charged claim that needs scrutiny.
