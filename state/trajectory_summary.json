@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T14:36:30.143Z",
+  "generated_at": "2026-05-02T20:34:06.873Z",
   "windows": [
     "1d",
     "3d",
@@ -9,42 +9,42 @@
   "axes": {
     "axis_epistemic_integrity": {
       "current": {
-        "score": 0.4105,
+        "score": 0.4112,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": -0.0002,
+        "score_delta": 0.0005,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0078,
+        "score_delta": 0.0085,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0253,
+        "score_delta": 0.026,
         "conf_delta": 0,
         "direction": "↗"
       }
     },
     "axis_power_accountability": {
       "current": {
-        "score": -0.2133,
+        "score": -0.2087,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0066,
+        "score_delta": 0.0112,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0104,
+        "score_delta": 0.015,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0652,
+        "score_delta": 0.0698,
         "conf_delta": 0,
         "direction": "↗"
       }
@@ -282,21 +282,21 @@
     },
     "axis_authoritarian_self_determination_v1": {
       "current": {
-        "score": 0.1962,
+        "score": 0.2142,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0238,
+        "score_delta": 0.0418,
         "conf_delta": 0,
         "direction": "↗"
       },
       "3d": {
-        "score_delta": 0.0304,
+        "score_delta": 0.0484,
         "conf_delta": 0.002,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0455,
+        "score_delta": 0.0635,
         "conf_delta": 0,
         "direction": "↗"
       }
@@ -345,21 +345,21 @@
     },
     "axis_national_sovereignty_v_intl_law_v1": {
       "current": {
-        "score": 0.48,
+        "score": 0.4816,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.002,
+        "score_delta": 0.0036,
         "conf_delta": 0.002,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.002,
+        "score_delta": 0.0036,
         "conf_delta": 0.002,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0078,
+        "score_delta": 0.0094,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -367,21 +367,21 @@
     "axis_religion_politics_war_v1": {
       "current": {
         "score": 0.6416,
-        "confidence": 0.98
+        "confidence": 0.978
       },
       "1d": {
         "score_delta": 0,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "3d": {
         "score_delta": 0.0042,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "7d": {
         "score_delta": 0.0191,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       }
     },
@@ -471,23 +471,23 @@
     },
     "axis_human_rights_exploitation_v1": {
       "current": {
-        "score": -0.3428,
+        "score": -0.3254,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": -0.0041,
+        "score_delta": 0.0133,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0175,
+        "score_delta": 0.0349,
         "conf_delta": 0.002,
-        "direction": "→"
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0083,
+        "score_delta": 0.0257,
         "conf_delta": 0,
-        "direction": "→"
+        "direction": "↗"
       }
     },
     "axis_digital_supply_chain_security": {
@@ -789,6 +789,7 @@
   "momentum_axes": [
     "axis_power_accountability",
     "axis_ph_geopolitics_wps_v1",
+    "axis_authoritarian_self_determination_v1",
     "axis_discourse_order_polarization_v1",
     "axis_digital_supply_chain_security",
     "axis_immigration_policy_v_national_control_v1"
