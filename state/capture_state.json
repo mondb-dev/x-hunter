@@ -1,156 +1,164 @@
 {
-  "checked_at": "2026-05-01T21:38:34.769Z",
-  "evidence_24h": 42,
-  "unique_sources": 32,
-  "status": "clean",
-  "alerts": [],
-  "summary": "Evidence distribution looks healthy (42 entries across 32 sources, 10 axes).",
+  "checked_at": "2026-05-02T22:42:54.743Z",
+  "evidence_24h": 60,
+  "unique_sources": 44,
+  "status": "warning",
+  "alerts": [
+    {
+      "type": "pole_skew",
+      "severity": "moderate",
+      "detail": "73% of evidence pushes \"right\" — risk of one-sided belief drift",
+      "dominant_pole": "right",
+      "share": 0.733
+    }
+  ],
+  "summary": "1 capture alert(s) detected:\n[MODERATE] 73% of evidence pushes \"right\" — risk of one-sided belief drift",
   "source_concentration": {
+    "rt_com": {
+      "username": "rt_com",
+      "count": 6,
+      "share": 0.1
+    },
+    "acyn": {
+      "username": "acyn",
+      "count": 4,
+      "share": 0.067
+    },
     "presstv": {
       "username": "presstv",
-      "count": 4,
-      "share": 0.095
-    },
-    "ericldaugh": {
-      "username": "ericldaugh",
-      "count": 2,
-      "share": 0.048
-    },
-    "wallstreetapes": {
-      "username": "wallstreetapes",
-      "count": 2,
-      "share": 0.048
+      "count": 3,
+      "share": 0.05
     },
     "marionawfal": {
       "username": "marionawfal",
-      "count": 2,
-      "share": 0.048
+      "count": 3,
+      "share": 0.05
     },
-    "newswatchplusph": {
-      "username": "newswatchplusph",
+    "shaykhsulaiman": {
+      "username": "shaykhsulaiman",
       "count": 2,
-      "share": 0.048
+      "share": 0.033
     },
-    "bncdotph": {
-      "username": "bncdotph",
+    "megatron_ron": {
+      "username": "megatron_ron",
       "count": 2,
-      "share": 0.048
+      "share": 0.033
     },
-    "nickknudsenus": {
-      "username": "nickknudsenus",
+    "niohberg": {
+      "username": "niohberg",
       "count": 2,
-      "share": 0.048
+      "share": 0.033
     },
-    "epppyyy": {
-      "username": "epppyyy",
+    "shaunking": {
+      "username": "shaunking",
       "count": 2,
-      "share": 0.048
+      "share": 0.033
     },
-    "atrupar": {
-      "username": "atrupar",
+    "bucksexton": {
+      "username": "bucksexton",
       "count": 1,
-      "share": 0.024
+      "share": 0.017
     },
-    "corrupcaobrnews": {
-      "username": "corrupcaobrnews",
+    "itszooqb123g": {
+      "username": "itszooqb123g",
       "count": 1,
-      "share": 0.024
+      "share": 0.017
     }
   },
   "axis_concentration": {
-    "axis_media_integrity_v1": {
-      "axis_id": "axis_media_integrity_v1",
-      "label": "Integrity of Information and Social Media Manipulation",
-      "count": 10,
-      "share": 0.238
-    },
-    "axis_political_trust_corruption_v1": {
-      "axis_id": "axis_political_trust_corruption_v1",
-      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
-      "count": 9,
-      "share": 0.214
+    "axis_geopolitical_rhetoric_v1": {
+      "axis_id": "axis_geopolitical_rhetoric_v1",
+      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
+      "count": 14,
+      "share": 0.233
     },
     "axis_epistemic_integrity": {
       "axis_id": "axis_epistemic_integrity",
       "label": "Truth and Evidence in Public Discourse",
-      "count": 8,
-      "share": 0.19
+      "count": 11,
+      "share": 0.183
     },
-    "axis_power_accountability": {
-      "axis_id": "axis_power_accountability",
-      "label": "Power, Institutions, and Rule of Law",
-      "count": 4,
-      "share": 0.095
-    },
-    "axis_geopolitical_rhetoric_v1": {
-      "axis_id": "axis_geopolitical_rhetoric_v1",
-      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
-      "count": 4,
-      "share": 0.095
+    "axis_national_sovereignty_v_intl_law_v1": {
+      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "label": "National Sovereignty vs. International Law",
+      "count": 7,
+      "share": 0.117
     },
     "axis_human_rights_exploitation_v1": {
       "axis_id": "axis_human_rights_exploitation_v1",
       "label": "Human Rights and Exploitation",
-      "count": 3,
-      "share": 0.071
-    },
-    "axis_collective_voice": {
-      "axis_id": "axis_collective_voice",
-      "label": "Authentic Participation vs. Managed Consent",
-      "count": 1,
-      "share": 0.024
+      "count": 7,
+      "share": 0.117
     },
     "axis_authoritarian_self_determination_v1": {
       "axis_id": "axis_authoritarian_self_determination_v1",
       "label": "Authoritarian Control vs. Individual/Collective Self-Determination",
-      "count": 1,
-      "share": 0.024
+      "count": 5,
+      "share": 0.083
     },
-    "axis_religion_politics_war_v1": {
-      "axis_id": "axis_religion_politics_war_v1",
-      "label": "Religion, Politics, and War Rhetoric",
-      "count": 1,
-      "share": 0.024
+    "axis_media_integrity_v1": {
+      "axis_id": "axis_media_integrity_v1",
+      "label": "Integrity of Information and Social Media Manipulation",
+      "count": 4,
+      "share": 0.067
     },
-    "axis_political_vulnerability_foreign_influence_v1": {
-      "axis_id": "axis_political_vulnerability_foreign_influence_v1",
-      "label": "Political Vulnerability & Foreign Influence",
+    "axis_power_accountability": {
+      "axis_id": "axis_power_accountability",
+      "label": "Power, Institutions, and Rule of Law",
+      "count": 3,
+      "share": 0.05
+    },
+    "axis_political_trust_corruption_v1": {
+      "axis_id": "axis_political_trust_corruption_v1",
+      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
+      "count": 3,
+      "share": 0.05
+    },
+    "axis_immigration_policy_v_national_control_v1": {
+      "axis_id": "axis_immigration_policy_v_national_control_v1",
+      "label": "Immigration Policy: Open Borders vs. National Control and Cultural Preservation",
+      "count": 3,
+      "share": 0.05
+    },
+    "axis_ph_geopolitics_wps_v1": {
+      "axis_id": "axis_ph_geopolitics_wps_v1",
+      "label": "Philippine Geopolitical Alignment in the West Philippine Sea",
       "count": 1,
-      "share": 0.024
+      "share": 0.017
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 16,
-      "share": 0.381
-    },
-    "geopolitics": {
-      "cluster": "geopolitics",
-      "count": 7,
-      "share": 0.167
-    },
-    "accountability_journalism": {
-      "cluster": "accountability_journalism",
-      "count": 4,
-      "share": 0.095
-    },
-    "breaking_news": {
-      "cluster": "breaking_news",
-      "count": 3,
-      "share": 0.071
+      "count": 24,
+      "share": 0.4
     },
     "disinformation": {
       "cluster": "disinformation",
-      "count": 3,
-      "share": 0.071
+      "count": 9,
+      "share": 0.15
+    },
+    "us_politics": {
+      "cluster": "us_politics",
+      "count": 6,
+      "share": 0.1
+    },
+    "geopolitics": {
+      "cluster": "geopolitics",
+      "count": 5,
+      "share": 0.083
+    },
+    "breaking_news": {
+      "cluster": "breaking_news",
+      "count": 5,
+      "share": 0.083
     }
   },
   "pole_balance": {
-    "left": 14,
-    "right": 28,
+    "left": 16,
+    "right": 44,
     "neutral": 0,
-    "left_share": 0.333,
-    "right_share": 0.667
+    "left_share": 0.267,
+    "right_share": 0.733
   }
 }
