@@ -1,7 +1,7 @@
 {
   "topic": "iran-us-israel",
   "topic_label": "Iran / US / Israel: Conflict Intelligence",
-  "generated_at": "2026-05-02T22:41:57.097Z",
+  "generated_at": "2026-05-03T23:10:51.251Z",
   "source_count": 0,
   "claim_count": 0,
   "categories": {
@@ -218,8 +218,8 @@
           "ng_score": 24,
           "tier_confidence": "manual",
           "ng_assessed_by": "manual",
-          "entry_count": 38,
-          "citation_rate": 0.158
+          "entry_count": 39,
+          "citation_rate": 0.154
         },
         {
           "handle": "reuters",
@@ -669,7 +669,7 @@
       ]
     },
     "tier_5": {
-      "count": 1308,
+      "count": 1318,
       "handles": [
         {
           "handle": "0hour1",
@@ -737,6 +737,16 @@
           "political_lean": null,
           "ng_score": null,
           "tier_confidence": "unresolved",
+          "ng_assessed_by": null,
+          "entry_count": 1,
+          "citation_rate": 0
+        },
+        {
+          "handle": "38divan",
+          "tier_label": "Tier 5",
+          "political_lean": null,
+          "ng_score": null,
+          "tier_confidence": null,
           "ng_assessed_by": null,
           "entry_count": 1,
           "citation_rate": 0
@@ -860,45 +870,35 @@
           "ng_assessed_by": null,
           "entry_count": 1,
           "citation_rate": 0
-        },
-        {
-          "handle": "_creer_sonador",
-          "tier_label": "Tier 5",
-          "political_lean": null,
-          "ng_score": null,
-          "tier_confidence": "unresolved",
-          "ng_assessed_by": null,
-          "entry_count": 1,
-          "citation_rate": 0
         }
       ]
     }
   },
   "axis_scores": {
     "axis_geopolitical_rhetoric_v1": {
-      "score": 0.0891,
+      "score": 0.0945,
       "confidence": 0.98,
       "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
       "left_pole": "Prioritizing humanitarian concerns, ethical considerations, and consistency in i",
       "right_pole": "Emphasizing strong national alliances and diplomatic ties, potentially overlooki"
     },
     "axis_national_sovereignty_v_intl_law_v1": {
-      "score": 0.4816,
+      "score": 0.4853,
       "confidence": 0.98,
       "label": "National Sovereignty vs. International Law",
       "left_pole": "Adherence to international legal frameworks, multilateral cooperation, and accountability under global norms.",
       "right_pole": "Emphasis on national autonomy, rejection of external legal or political authority, and prioritizing domestic interests."
     },
     "axis_global_power_realignments_v1": {
-      "score": -0.2934,
-      "confidence": 0.976,
+      "score": -0.2993,
+      "confidence": 0.98,
       "label": "Global Power Realignments and Shifting Hegemony",
       "left_pole": "Emergence of multi-polar world, regional autonomy, decolonization of traditional power structures, emphasis on self-determination and local governance.",
       "right_pole": "Maintenance of existing global hegemonic structures, continued influence of established powers, resistance to shifts in global power balance, interventions to maintain status quo."
     },
     "axis_religion_politics_war_v1": {
       "score": 0.6416,
-      "confidence": 0.978,
+      "confidence": 0.976,
       "label": "Religion, Politics, and War Rhetoric",
       "left_pole": "Calls for separation of church and state, ethical considerations in foreign policy, and rejection of religiously motivated warfare.",
       "right_pole": "Integration of religious beliefs into political decision-making, justification of conflict through religious doctrine, and use of religious rhetoric to mobilize support for war."

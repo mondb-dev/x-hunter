@@ -1,164 +1,156 @@
 {
-  "checked_at": "2026-05-02T22:42:54.743Z",
-  "evidence_24h": 60,
-  "unique_sources": 44,
-  "status": "warning",
-  "alerts": [
-    {
-      "type": "pole_skew",
-      "severity": "moderate",
-      "detail": "73% of evidence pushes \"right\" — risk of one-sided belief drift",
-      "dominant_pole": "right",
-      "share": 0.733
-    }
-  ],
-  "summary": "1 capture alert(s) detected:\n[MODERATE] 73% of evidence pushes \"right\" — risk of one-sided belief drift",
+  "checked_at": "2026-05-03T23:12:00.888Z",
+  "evidence_24h": 53,
+  "unique_sources": 38,
+  "status": "clean",
+  "alerts": [],
+  "summary": "Evidence distribution looks healthy (53 entries across 38 sources, 13 axes).",
   "source_concentration": {
-    "rt_com": {
-      "username": "rt_com",
-      "count": 6,
-      "share": 0.1
-    },
-    "acyn": {
-      "username": "acyn",
-      "count": 4,
-      "share": 0.067
-    },
-    "presstv": {
-      "username": "presstv",
-      "count": 3,
-      "share": 0.05
-    },
     "marionawfal": {
       "username": "marionawfal",
+      "count": 4,
+      "share": 0.075
+    },
+    "mmpadellan": {
+      "username": "mmpadellan",
       "count": 3,
-      "share": 0.05
+      "share": 0.057
     },
-    "shaykhsulaiman": {
-      "username": "shaykhsulaiman",
+    "furkangozukara": {
+      "username": "furkangozukara",
+      "count": 3,
+      "share": 0.057
+    },
+    "samanthataghoy": {
+      "username": "samanthataghoy",
       "count": 2,
-      "share": 0.033
+      "share": 0.038
     },
-    "megatron_ron": {
-      "username": "megatron_ron",
+    "rpsagainsttrump": {
+      "username": "rpsagainsttrump",
       "count": 2,
-      "share": 0.033
+      "share": 0.038
     },
-    "niohberg": {
-      "username": "niohberg",
+    "drneilstone": {
+      "username": "drneilstone",
       "count": 2,
-      "share": 0.033
+      "share": 0.038
     },
-    "shaunking": {
-      "username": "shaunking",
+    "ericldaugh": {
+      "username": "ericldaugh",
       "count": 2,
-      "share": 0.033
+      "share": 0.038
     },
-    "bucksexton": {
-      "username": "bucksexton",
-      "count": 1,
-      "share": 0.017
+    "proudsocialist": {
+      "username": "proudsocialist",
+      "count": 2,
+      "share": 0.038
     },
-    "itszooqb123g": {
-      "username": "itszooqb123g",
-      "count": 1,
-      "share": 0.017
+    "mao_0k": {
+      "username": "mao_0k",
+      "count": 2,
+      "share": 0.038
+    },
+    "wallstreetapes": {
+      "username": "wallstreetapes",
+      "count": 2,
+      "share": 0.038
     }
   },
   "axis_concentration": {
-    "axis_geopolitical_rhetoric_v1": {
-      "axis_id": "axis_geopolitical_rhetoric_v1",
-      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
-      "count": 14,
-      "share": 0.233
-    },
     "axis_epistemic_integrity": {
       "axis_id": "axis_epistemic_integrity",
       "label": "Truth and Evidence in Public Discourse",
-      "count": 11,
-      "share": 0.183
+      "count": 14,
+      "share": 0.264
     },
-    "axis_national_sovereignty_v_intl_law_v1": {
-      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "label": "National Sovereignty vs. International Law",
-      "count": 7,
-      "share": 0.117
+    "axis_political_trust_corruption_v1": {
+      "axis_id": "axis_political_trust_corruption_v1",
+      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
+      "count": 12,
+      "share": 0.226
     },
-    "axis_human_rights_exploitation_v1": {
-      "axis_id": "axis_human_rights_exploitation_v1",
-      "label": "Human Rights and Exploitation",
-      "count": 7,
-      "share": 0.117
-    },
-    "axis_authoritarian_self_determination_v1": {
-      "axis_id": "axis_authoritarian_self_determination_v1",
-      "label": "Authoritarian Control vs. Individual/Collective Self-Determination",
-      "count": 5,
-      "share": 0.083
+    "axis_power_accountability": {
+      "axis_id": "axis_power_accountability",
+      "label": "Power, Institutions, and Rule of Law",
+      "count": 4,
+      "share": 0.075
     },
     "axis_media_integrity_v1": {
       "axis_id": "axis_media_integrity_v1",
       "label": "Integrity of Information and Social Media Manipulation",
       "count": 4,
-      "share": 0.067
+      "share": 0.075
     },
-    "axis_power_accountability": {
-      "axis_id": "axis_power_accountability",
-      "label": "Power, Institutions, and Rule of Law",
+    "axis_geopolitical_rhetoric_v1": {
+      "axis_id": "axis_geopolitical_rhetoric_v1",
+      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
+      "count": 4,
+      "share": 0.075
+    },
+    "axis_political_moral_conduct_v1": {
+      "axis_id": "axis_political_moral_conduct_v1",
+      "label": "Political Integrity and Moral Conduct in Public Service",
+      "count": 4,
+      "share": 0.075
+    },
+    "axis_national_sovereignty_v_intl_law_v1": {
+      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "label": "National Sovereignty vs. International Law",
       "count": 3,
-      "share": 0.05
+      "share": 0.057
     },
-    "axis_political_trust_corruption_v1": {
-      "axis_id": "axis_political_trust_corruption_v1",
-      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
+    "axis_global_power_realignments_v1": {
+      "axis_id": "axis_global_power_realignments_v1",
+      "label": "Global Power Realignments and Shifting Hegemony",
       "count": 3,
-      "share": 0.05
+      "share": 0.057
     },
-    "axis_immigration_policy_v_national_control_v1": {
-      "axis_id": "axis_immigration_policy_v_national_control_v1",
-      "label": "Immigration Policy: Open Borders vs. National Control and Cultural Preservation",
-      "count": 3,
-      "share": 0.05
-    },
-    "axis_ph_geopolitics_wps_v1": {
-      "axis_id": "axis_ph_geopolitics_wps_v1",
-      "label": "Philippine Geopolitical Alignment in the West Philippine Sea",
+    "axis_discourse_order_polarization_v1": {
+      "axis_id": "axis_discourse_order_polarization_v1",
+      "label": "Discourse: Order vs. Polarization",
       "count": 1,
-      "share": 0.017
+      "share": 0.019
+    },
+    "axis_human_rights_exploitation_v1": {
+      "axis_id": "axis_human_rights_exploitation_v1",
+      "label": "Human Rights and Exploitation",
+      "count": 1,
+      "share": 0.019
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 24,
-      "share": 0.4
-    },
-    "disinformation": {
-      "cluster": "disinformation",
-      "count": 9,
-      "share": 0.15
+      "count": 25,
+      "share": 0.472
     },
     "us_politics": {
       "cluster": "us_politics",
       "count": 6,
-      "share": 0.1
+      "share": 0.113
     },
     "geopolitics": {
       "cluster": "geopolitics",
-      "count": 5,
-      "share": 0.083
+      "count": 6,
+      "share": 0.113
     },
     "breaking_news": {
       "cluster": "breaking_news",
-      "count": 5,
-      "share": 0.083
+      "count": 4,
+      "share": 0.075
+    },
+    "conspiracy": {
+      "cluster": "conspiracy",
+      "count": 4,
+      "share": 0.075
     }
   },
   "pole_balance": {
-    "left": 16,
-    "right": 44,
+    "left": 20,
+    "right": 33,
     "neutral": 0,
-    "left_share": 0.267,
-    "right_share": 0.733
+    "left_share": 0.377,
+    "right_share": 0.623
   }
 }
