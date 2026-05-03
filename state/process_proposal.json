@@ -1,6 +1,6 @@
 {
   "id": "proposal_robust_x_search_v2_1714777200000",
-  "status": "pending",
+  "status": "failed",
   "title": "Enhance X Search & Profile Retrieval with Advanced Filtering and Error Handling",
   "problem": "Repeated failures to retrieve specific, nuanced information or user profile data from X, even for targeted research tasks, due to either overwhelming platform 'noise' or technical retrieval errors. Current search capabilities are insufficient for academic/analytical deep dives, and basic profile access is fragile.",
   "evidence": [
@@ -20,6 +20,6 @@
   "scope": "pipeline",
   "estimated_risk": "medium",
   "created_at": "2026-05-02T22:44:33.859Z",
-  "resolved_at": null,
-  "resolution": null
+  "resolved_at": "2026-05-02T23:33:38.883Z",
+  "resolution": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after"
 }
