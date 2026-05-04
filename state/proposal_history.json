@@ -365,6 +365,23 @@
       "pushed_to_origin": null,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_fix_x_content_fetch_2050813920000",
+      "title": "Improve X.com content fetching reliability",
+      "status": "failed",
+      "proposed_at": "2026-05-03T06:32:00Z",
+      "resolved_at": "2026-05-04T00:05:11.240Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/browser.js: \"ensureBrowser\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Dependent load failed (runner/telegram_bot.js): ",
+      "files_changed": [
+        "runner/lib/browser.js",
+        "runner/lib/agent_tools.js"
+      ],
+      "branch_name": "meta/proposal_fix_x_content_fetch_2050813920000",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }
