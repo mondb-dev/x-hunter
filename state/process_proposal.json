@@ -1,6 +1,6 @@
 {
   "id": "proposal_fix_x_content_fetching_20260504",
-  "status": "pending",
+  "status": "rejected",
   "title": "Resolve X.com Content Fetching Tool Failures and Pipeline Errors",
   "problem": "The 'get_page_content()' tool consistently returns empty responses from X, severely limiting direct observation of discourse and evidence gathering. Previous proposals to address this have failed due to recurring pipeline errors related to tool exports.",
   "evidence": [
@@ -20,6 +20,6 @@
   "scope": "pipeline",
   "estimated_risk": "high",
   "created_at": "2026-05-04T23:41:38.892Z",
-  "resolved_at": null,
-  "resolution": null
+  "resolved_at": "2026-05-05T00:35:35.849Z",
+  "resolution": "deferred_high_risk: re-propose as medium with more evidence"
 }
