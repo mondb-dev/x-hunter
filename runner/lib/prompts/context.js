@@ -341,6 +341,8 @@ function loadContext(opts) {
     ctx.vocation          = formatVocation();
     ctx.journalTask       = buildJournalTask('browse', today, hour, dayNumber);
     ctx.nextTweet         = (Math.floor(cycle / config.TWEET_EVERY) + 1) * config.TWEET_EVERY;
+    ctx.toolManifest      = buildToolManifest();
+    ctx.lastToolResult    = loadLastToolResult();
   }
 
   if (type === 'quote') {

@@ -85,4 +85,11 @@ module.exports = {
   PROCESS_PROPOSAL_PATH: path.join(STATE_DIR, 'process_proposal.json'),
   PROCESS_REFLECTION_STATE_PATH: path.join(STATE_DIR, 'process_reflection_state.json'),
   PROPOSAL_HISTORY_PATH: path.join(STATE_DIR, 'proposal_history.json'),
+
+  // Tool dispatch (orchestrator System B)
+  TOOLS_DIR:           path.join(PROJECT_ROOT, 'tools'),
+  TOOL_REQUEST_PATH:   path.join(STATE_DIR, 'tool_request.json'),
+  TOOL_RESULT_PATH:    path.join(STATE_DIR, 'tool_result.json'),
+  TOOL_TIMEOUT_MS:     30000,
+  WORKFLOW_TIMEOUT_MS: 300000,
 };
