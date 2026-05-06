@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T19:34:42.502Z",
+  "generated_at": "2026-05-05T22:05:18.667Z",
   "windows": [
     "1d",
     "3d",
@@ -177,23 +177,23 @@
     },
     "axis_geopolitical_rhetoric_v1": {
       "current": {
-        "score": 0.1004,
+        "score": 0.1015,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0041,
+        "score_delta": 0.0052,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0113,
+        "score_delta": 0.0124,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0191,
+        "score_delta": 0.0202,
         "conf_delta": 0,
-        "direction": "→"
+        "direction": "↗"
       }
     },
     "axis_historical_legacy_v1": {
@@ -282,21 +282,21 @@
     },
     "axis_authoritarian_self_determination_v1": {
       "current": {
-        "score": 0.2007,
+        "score": 0.19,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0,
+        "score_delta": -0.0107,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0135,
+        "score_delta": -0.0242,
         "conf_delta": 0,
-        "direction": "→"
+        "direction": "↘"
       },
       "7d": {
-        "score_delta": 0.0349,
+        "score_delta": 0.0242,
         "conf_delta": 0,
         "direction": "↗"
       }
@@ -345,21 +345,21 @@
     },
     "axis_national_sovereignty_v_intl_law_v1": {
       "current": {
-        "score": 0.4868,
+        "score": 0.4884,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": -0.0024,
+        "score_delta": -0.0008,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0052,
+        "score_delta": 0.0068,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0088,
+        "score_delta": 0.0104,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -408,42 +408,42 @@
     },
     "axis_political_moral_conduct_v1": {
       "current": {
-        "score": -0.2839,
+        "score": -0.2929,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": -0.0093,
+        "score_delta": -0.0183,
         "conf_delta": 0.002,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0427,
+        "score_delta": -0.0517,
         "conf_delta": 0.004,
         "direction": "↘"
       },
       "7d": {
-        "score_delta": -0.0429,
+        "score_delta": -0.0519,
         "conf_delta": 0,
         "direction": "↘"
       }
     },
     "axis_global_power_realignments_v1": {
       "current": {
-        "score": -0.3065,
+        "score": -0.302,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": -0.0017,
+        "score_delta": 0.0028,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0131,
+        "score_delta": -0.0086,
         "conf_delta": 0.004,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0183,
+        "score_delta": -0.0138,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -788,6 +788,7 @@
   "notable_count": 8,
   "momentum_axes": [
     "axis_historical_legacy_v1",
+    "axis_political_moral_conduct_v1",
     "axis_digital_surveillance_autonomy_v1",
     "axis_immigration_policy_v_national_control_v1"
   ]

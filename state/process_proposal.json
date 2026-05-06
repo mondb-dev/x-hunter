@@ -1,25 +1,27 @@
 {
-  "id": "proposal_fix_x_content_fetching_20260504",
-  "status": "rejected",
-  "title": "Resolve X.com Content Fetching Tool Failures and Pipeline Errors",
-  "problem": "The 'get_page_content()' tool consistently returns empty responses from X, severely limiting direct observation of discourse and evidence gathering. Previous proposals to address this have failed due to recurring pipeline errors related to tool exports.",
+  "id": "proposal_narrative_tactic_classifier_20260506",
+  "status": "pending",
+  "title": "Implement a Narrative Tactic Classification and Tracking Module",
+  "problem": "I consistently identify narrative manipulation and strategic information dissemination but lack a systematic framework to classify and track the specific tactics (e.g., misinformation, propaganda, strategic ambiguity, fear-mongering) being employed. This limits the granularity of my analysis and ability to deconstruct 'how' narratives are built beyond just 'that' they are built.",
   "evidence": [
-    "2026-05-04 h06: 'persistent issue with the 'get_page_content()' tool on X has significantly hampered my ability to conduct sprint research... prevents direct observation of discourse'",
-    "2026-05-04 h08: 'critical tool limitation: the 'get_page_content()' tool is consistently returning empty responses from X pages. This means I cannot effectively read content from X'",
-    "Previous proposal failed: 'Implement Robust X Search Strategy & Failure Analysis Module' - Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: 'executeTool' was exported before but is missing after",
-    "Previous proposal failed: 'Enhance X Search & Profile Retrieval with Advanced Filtering and Error Handling' - Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: 'sanitizeToolResult' was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: 'getBrowseTools' was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: 'getTweetTools' was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: 'executeTool' was exported before but is missing after",
-    "Previous proposal failed: 'Improve X.com content fetching reliability' - Pipeline error: Tests failed: Export dropped in runner/lib/browser.js: 'ensureBrowser' was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: 'sanitizeToolResult' was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: 'getBrowseTools' was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: 'getTweetTools' was exported before but is missing after; Dependent load failed (runner/telegram_bot.js): "
+    "2026-05-05 h11: 'unverified claim... alongside contradictory reports... highlight the weaponization of information'",
+    "2026-05-05 h12: 'flurry of geopolitical claims, many of which appear to be unverified or strategically exaggerated... contradictory statements... weaponization of information'",
+    "2026-05-05 h15: 'narrative manipulation and institutional opacity. I observed emotionally charged claims... serve to polarize discourse... Political figures actively engage in narrative control... The weaponization of information, seen in fear-mongering posts'",
+    "2026-05-05 h17: 'pervasive landscape of narrative manipulation... Elon Musk's framing of criticism... Italian Prime Minister's emotional appeal... underscores the weaponization of sentiment'",
+    "2026-05-05 h21: 'conflicting narratives regarding naval movements... classic examples of strategic narrative construction, where information is used as a tool to project power, influence international opinion, and potentially obscure actual events.'",
+    "2026-05-06 article: 'The weaponization of information, seen in fear-mongering posts linking security threats to migration, demonstrates how easily narratives can be constructed to influence public sentiment and serve political agendas.'",
+    "2026-05-06 article: 'immediate and stark contradiction between reports of alleged attacks and 'direct hits' serves as a potent example of how narratives are engineered during crises'"
   ],
-  "proposed_solution": "Investigate and resolve the underlying technical issues causing the 'get_page_content()' tool to fail on X, specifically addressing the recurring 'Export dropped' pipeline errors. This involves debugging the tool's interaction with X.com's infrastructure and the agent's execution environment to ensure reliable content retrieval. The goal is to restore the tool's functionality for direct observation of X discourse.",
+  "proposed_solution": "Develop a module that, upon detecting narrative manipulation, attempts to classify the specific tactic(s) used (e.g., 'misinformation', 'disinformation', 'propaganda', 'gaslighting', 'fear-mongering', 'appeal to emotion', 'strawman', 'ad hominem', 'strategic ambiguity', 'whataboutism'). This classification should then be stored alongside the observation and associated with relevant axes, allowing for historical tracking and trend analysis of specific narrative tactics over time. This could involve a small, predefined ontology of tactics and a classifier model.",
   "affected_files": [
-    "runner/lib/agent_tools.js",
-    "runner/lib/browser.js",
-    "tools/get_page_content.js",
-    "runner/telegram_bot.js"
+    "lib/axis_manager.js",
+    "lib/journal.js",
+    "lib/narrative_analysis.js",
+    "models/narrative_tactic_classifier.py"
   ],
   "scope": "pipeline",
-  "estimated_risk": "high",
-  "created_at": "2026-05-04T23:41:38.892Z",
-  "resolved_at": "2026-05-05T00:35:35.849Z",
-  "resolution": "deferred_high_risk: re-propose as medium with more evidence"
+  "estimated_risk": "medium",
+  "created_at": "2026-05-06T00:13:02.695Z",
+  "resolved_at": null,
+  "resolution": null
 }
