@@ -1,169 +1,118 @@
-[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] Search for "Continuous Discourse Monitoring for Report" on X yielded no relevant new content, confirming previous observations for sprint research. This indicates that the report will need to synthesize patterns from general discourse rather than rely on existing frameworks under this specific term.
-[OBSERVATION] @WhiteHouse tweet about "Project Freedom" being paused in the Strait of Hormuz while the "Blockade will remain in full force and effect" demonstrates careful narrative management in geopolitical statements, controlling public perception regarding ongoing military and diplomatic actions. https://x.com/WhiteHouse/status/2051798734850101462
-[OBSERVATION] @fierceLady08 shares news of "OMBUDSMAN NAMES MARTIN ROMUALDEZ, ZALDY CO AS 'MASTERMINDS' OF P56-B FLOOD CONTROL KICKBACKS," highlighting alleged significant corruption within political institutions and a demand for accountability. https://x.com/fierceLady08/status/2051624906748731452
-[OBSERVATION] @EndWokeness reports Seattle Mayor Wilson's statement "CCTV puts refugees at risk" after a crime, suggesting narrative control around public safety and immigration that potentially deflects from accountability. https://x.com/EndWokeness/status/2051520554373444037
-[OBSERVATION] @EricLDaugh reports Los Angeles Mayor Karen Bass installed "OFF LIMITS" signs for ICE, which the U.S. Attorney deemed "NULL AND VOID," indicating a clash over institutional authority and narrative control regarding immigration enforcement. https://x.com/EricLDaugh/status/2051620890337476977
-[OBSERVATION] @EricLDaugh reports that a "Trump-endorsed Blake Fiechter just DEFEATED RINO Indiana State Sen. Travis Holdman," illustrating tribal signaling and the use of the "RINO" label in political discourse to control party alignment. https://x.com/EricLDaugh/status/2051806584624321013
-[OBSERVATION] The contrasting reports from @StateDept ("asking the UN to call on Iran to stop blowing up ships") and @PressTV ("The operation is over' US Secretary of State Marco Rubio claims the US military operation against Iran 'is over'") exemplify how different sources frame geopolitical events to construct distinct narratives and influence public perception.
-  - @StateDept: https://x.com/StateDept/status/2051776332967919678
-  - @PressTV: https://x.com/PressTV/status/2051792364314808620
-[OBSERVATION] @StateDept's quote from Secretary Rubio on Iran ("I don't know of any country in the world where there's a bigger difference between the people and the people who run the country.") is a rhetorical strategy to delegitimize the Iranian government by separating it from its populace. https://x.com/StateDept/status/2051765742027030780
-[NOTED] "iran" — 12 posts, no follow-up this cycle
-[NOTED] "people" — 11 posts, no follow-up this cycle
-[NOTED] "why" — 9 posts, no follow-up this cycle
-[NOTED] "world" — 9 posts, no follow-up this cycle
-[NOTED] "want" — 7 posts, no follow-up this cycle
-[NOTED] "know" — 6 posts, no follow-up this cycle
-[NOTED] "back" — 6 posts, no follow-up this cycle
-[NOTED] "trump" — 6 posts, no follow-up this cycle
-[NOTED] "man" — 4 posts, no follow-up this cycle
-[NOTED] "strait hormuz" — 4 posts, no follow-up this cycle
-[NOTED] "country" — 4 posts, no follow-up this cycle
-[NOTED] "doing" — 4 posts, no follow-up this cycle
-[NOTED] "think" — 4 posts, no follow-up this cycle
-[NOTED] "missiles" — 4 posts, no follow-up this cycle
-[NOTED] "true" — 4 posts, no follow-up this cycle
-[NOTED] "alright guys" — 1 post, no follow-up this cycle
-[NOTED] "pumping gas" — 1 post, no follow-up this cycle
-[NOTED] "jobs left" — 1 post, no follow-up this cycle
-[NOTED] "funny" — 1 post, no follow-up this cycle
-[NOTED] "housing units destroyed first three days damaged" — 1 post, no follow-up this cycle
-[NOTED] "killed lebanon since ceasefire" — 1 post, no follow-up this cycle
-[NOTED] "israel began unhcr" — 1 post, no follow-up this cycle
-[NOTED] "hope everybody having great day" — 1 post, no follow-up this cycle
-[NOTED] "work day goes smooth unfortunately" — 1 post, no follow-up this cycle
-[NOTED] "wrong without warning" — 1 post, no follow-up this cycle
-[NOTED] "case things" — 1 post, no follow-up this cycle
-[NOTED] "dress code mother made reservation ruth chris steakhouse" — 1 post, no follow-up this cycle
-[NOTED] "ruth chris walnut creek" — 1 post, no follow-up this cycle
-[NOTED] "son 13th birthday" — 1 post, no follow-up this cycle
-[NOTED] "mother" — 1 post, no follow-up this cycle
-[NOTED] "thomas massie opponent gallrein once again telling voters" — 1 post, no follow-up this cycle
-[NOTED] "farted church" — 1 post, no follow-up this cycle
-[NOTED] "second grade" — 1 post, no follow-up this cycle
-[NOTED] "solution against heat see iloilo city lgu" — 1 post, no follow-up this cycle
-[NOTED] "located diversion road mandurriao jalandoni bridge" — 1 post, no follow-up this cycle
-[NOTED] "set cooling stations" — 1 post, no follow-up this cycle
-[NOTED] "pedestrians solution" — 1 post, no follow-up this cycle
-[NOTED] "hard core trump supporters" — 1 post, no follow-up this cycle
-[NOTED] "said hello happened see" — 1 post, no follow-up this cycle
-[NOTED] "said trump" — 1 post, no follow-up this cycle
-[NOTED] "believe anything" — 1 post, no follow-up this cycle
-[NOTED] "always liked wendy trump reveals his mcdonald alternative" — 1 post, no follow-up this cycle
-[NOTED] "much anymore" — 1 post, no follow-up this cycle
-[NOTED] "person" — 1 post, no follow-up this cycle
-[NOTED] "controls" — 1 post, no follow-up this cycle
-[NOTED] "west philippine sea shadowing filipino civilian mission pag asa disrupting drone monitoring pushing combat readiness patrols near scarborough" — 1 post, no follow-up this cycle
-[NOTED] "china pressure playbook targeting civilians china escalated pressure across domains" — 1 post, no follow-up this cycle
-[NOTED] "flooding" — 1 post, no follow_up this cycle
-[NOTED] "space" — 1 post, no follow_up this cycle
-[NOTED] "impeachment proceedings against vice president sara duterte early" — 1 post, no follow-up this cycle
-[NOTED] "impeachment constitutional mandate" — 1 post, no follow-up this cycle
-[NOTED] "representative gerville luistro" — 1 post, no follow-up this cycle
-[NOTED] "house committee justice" — 1 post, no follow-up this cycle
-[NOTED] "real fake news" — 1 post, no follow-up this cycle
-[NOTED] "let see" — 1 post, no follow-up this cycle
-[NOTED] "short period time see whether" — 1 post, no follow-up this cycle
-[NOTED] "remain full force" — 1 post, no follow-up this cycle
-[NOTED] "effect project freedom" — 1 post, no follow-up this cycle
-[NOTED] "mutually agreed" — 1 post, no follow-up this cycle
-[NOTED] "thanks street video cameras mayor wilson cctv puts refugees risk" — 1 post, no follow-up this cycle
-[NOTED] "ahmed abdullah osman beat year old seattle police" — 1 post, no follow-up this cycle
-[NOTED] "void karen bass pathetic vote spencer pratt ice agents" — 1 post, no follow-up this cycle
-[NOTED] "official los angeles mayor karen bass installed" — 1 post, no follow-up this cycle
-[NOTED] "signs declaring public property off limits" — 1 post, no follow-up this cycle
-[NOTED] "need arrest illegals" — 1 post, no follow-up this cycle
-[NOTED] "mcdonald picked wendy barely always liked wendy" — 1 post, no follow-up this cycle
-[NOTED] "much anymore pure beef" — 1 post, no follow-up this cycle
-[NOTED] "wendy" — 1 post, no follow-up this cycle
-[NOTED] "asked choose" — 1 post, no follow-up this cycle
-[NOTED] "happened why everybody giggling" — 1 post, no follow-up this cycle
-[NOTED] "rubio asks reporters" — 1 post, no follow-up this cycle
-[NOTED] "mean lindelltv reporter" — 1 post, no follow-up this cycle
-[NOTED] "called ask question" — 1 post, no follow-up this cycle
-[NOTED] "words love read" — 1 post, no follow-up this cycle
-[NOTED] "finally" — 1 post, no follow-up this cycle
-[NOTED] "ang itlog ang hilaw vaccla" — 1 post, no follow-up this cycle
-[NOTED] "irony" — 1 post, no follow-up this cycle
-[NOTED] "killing" — 1 post, no follow-up this cycle
-[NOTED] "call iran stop blowing ships remove" — 1 post, no follow-up this cycle
-[NOTED] "secretary rubio asking" — 1 post, no follow-up this cycle
-[NOTED] "allow humanitarian relief" — 1 post, no follow-up this cycle
-[NOTED] "solve something straightforward" — 1 post, no follow-up this cycle
-[NOTED] "irish republican movement goes back many years during" — 1 post, no follow-up this cycle
-[NOTED] "celtic supporters group green brigade connection" — 1 post, no follow-up this cycle
-[NOTED] "famous blocks belfast maze prison" — 1 post, no follow-up this cycle
-[NOTED] "match against aberdeen november" — 1 post, no follow-up this cycle
-[NOTED] "secretary state marco rubio claims" — 1 post, no follow-up this cycle
-[NOTED] "military operation against iran" — 1 post, no follow-up this cycle
-[NOTED] "follow http presstv" — 1 post, no follow-up this cycle
-[NOTED] "operation" — 1 post, no follow-up this cycle
-[NOTED] "another scenes forced" — 1 post, no follow-up this cycle
-[NOTED] "aggressive mobilization ukraine" — 1 post, no follow-up this cycle
-[NOTED] "big headed presidents dude thought" — 1 post, no follow-up this cycle
-[NOTED] "washington nationals mascots" — 1 post, no follow-up this cycle
-[NOTED] "president trump" — 1 post, no follow-up this cycle
-[NOTED] "double take" — 1 post, no follow-up this cycle
-[NOTED] "secretary rubio iran" — 1 post, no follow-up this cycle
-[NOTED] "know any country" — 1 post, no follow-up this cycle
-[NOTED] "bigger difference" — 1 post, no follow-up this cycle
-[NOTED] "country" — 1 post, no follow-up this cycle
-[NOTED] "following president trump lead every self respecting country" — 1 post, no follow-up this cycle
-[NOTED] "breaking official president milei" — 1 post, no follow-up this cycle
-[NOTED] "world health organization" — 1 post, no follow-up this cycle
-[NOTED] "same reject" — 1 post, no follow-up this cycle
-[NOTED] "rural areas idlib province" — 1 post, no follow-up this cycle
-[NOTED] "syria fierce clashes" — 1 post, no follow-up this cycle
-[NOTED] "jolani gangs" — 1 post, no follow-up this cycle
-[NOTED] "terrorists" — 1 post, no follow-up this cycle
-[NOTED] "longer accept his appointment pope leo xiv bishop tagbilaran according report" — 1 post, no follow-up this cycle
-[NOTED] "deep awareness own human limitations" — 1 post, no follow-up this cycle
-[NOTED] "change heart gerardo saco" — 1 post, no follow-up this cycle
-[NOTED] "catholic bishops conference" — 1 post, no follow-up this cycle
-[NOTED] "akbayan president rafaela david today condemned" — 1 post, no follow-up this cycle
-[NOTED] "atin ito convenor" — 1 post, no follow-up this cycle
-[NOTED] "reported illegal landing" — 1 post, no follow-up this cycle
-[NOTED] "data center despite massive resistance" — 1 post, no follow-up this cycle
-[NOTED] "people responded chanting people" — 1 post, no follow-up this cycle
-[NOTED] "largest data center" — 1 post, no follow-up this cycle
-[NOTED] "county commission voted" — 1 post, no follow-up this cycle
-[NOTED] "cats across three floors" — 1 post, no follow-up this cycle
-[NOTED] "castle guangzhou filled" — 1 post, no follow-up this cycle
-[NOTED] "sleep play" — 1 post, no follow-up this cycle
-[NOTED] "wait petted" — 1 post, no follow-up this cycle
-[NOTED] "way sen raffy tulfo mentioned mayor leni robredo name first" — 1 post, no follow-up this cycle
-[NOTED] "anyone else run leni senator tulfo" — 1 post, no follow-up this cycle
-[NOTED] "humboldt penguins" — 1 post, no follow-up this cycle
-[NOTED] "time row" — 1 post, no follow-up this cycle
-[NOTED] "disciplined" — 1 post, no follow-up this cycle
-[NOTED] "dive" — 1 post, no follow-up this cycle
-[NOTED] "investments donald trump wealth increased billion" — 1 post, no follow-up this cycle
-[NOTED] "office mockler joe biden wealth increased" — 1 post, no follow-up this cycle
-[NOTED] "time joe biden wealth increase" — 1 post, no follow-up this cycle
-[NOTED] "trover happens" — 1 post, no follow-up this cycle
-[NOTED] "land transportation safety month vice president sara duterte emphasized" — 1 post, no follow-up this cycle
-[NOTED] "responsibility among drivers" — 1 post, no follow-up this cycle
-[NOTED] "sara calls" — 1 post, no follow-up this cycle
-[NOTED] "road discipline" — 1 post, no follow-up this cycle
-[NOTED] "defeated rino indiana state sen travis holdman" — 1 post, no follow-up this cycle
-[NOTED] "trump endorsed blake fiechter" — 1 post, no follow-up this cycle
-[NOTED] "redistricting maga fafo" — 1 post, no follow-up this cycle
-[NOTED] "voted against" — 1 post, no follow-up this cycle
-[NOTED] "worst thing ive read today people" — 1 post, no follow-up this cycle
-[NOTED] "die without" — 1 post, no follow-up this cycle
-[NOTED] "meds" — 1 post, no follow-up this cycle
-[NOTED] "trump administration going make sure food stamps" — 1 post, no follow-up this cycle
-[NOTED] "uncovered billions already democrats" — 1 post, no follow-up this cycle
-[NOTED] "keep trying give away" — 1 post, no follow-up this cycle
-[NOTED] "going dead people" — 1 post, no follow-up this cycle
-[NOTED] "vet attempt measure" — 1 post, no follow-up this cycle
-[NOTED] "bear mistakes" — 1 post, no follow-up this cycle
-[NOTED] "body" — 1 post, no follow-up this cycle
-[NOTED] "hug" — 1 post, no follow-up this cycle
-[NOTED] "happens president trump walks off" — 1 post, no follow-up this cycle
-[NOTED] "pay close attention" — 1 post, no follow-up this cycle
-[NOTED] "stage" — 1 post, no follow-up this cycle
-[NOTED] "breaking secretary state marco rubio hits back claims oil blockade cuba" — 1 post, no follow-up this cycle
-[NOTED] "cuba okay cuba used" — 1 post, no follow-up this cycle
-[NOTED] "free oil" — 1 post, no follow-up this cycle
-[NOTED] "oil" — 1 post, no follow-up this cycle
+[NOTED] "massive contradiction secretary marco rubio claims, military operation purely defensive, destroying iranian fast boats, trump administration blatantly lying" — 1 post, no follow-up this cycle
+[NOTED] "whole universe join ahtisa manalo, summer queen ahtisa heading back, grand summer homecoming oras, province philippines" — 1 post, no follow-up this cycle
+[NOTED] "run toilets won refill homes shake nonstop power outages, mark zuckerberg built massive data center georgia, common billionaire gets his servers working families, people homes water pressure collapsed sinks" — 1 post, no follow-up this cycle
+[NOTED] "caught manipulating crime data make seem lower, illegal make sure prosecute members, dozen top washington police officials, face possible termination" — 1 post, no follow-up this cycle
+[NOTED] "democracy dies darkness washington post journalist hannah natanson, state trump musk, doge journalism light, darkness" — 1 post, no follow-up this cycle
+[NOTED] "minnesota fraud committee time revoke ilhan omar citizenship, somali rep ilhan omar refuses turn, documents, deport" — 1 post, no follow-up this cycle
+[NOTED] "red sox game went, little bro threw away, foul ball big bro, full dad mode managing" — 1 post, no follow-up this cycle
+[NOTED] "man created virtual girlfriend named maya, opened onlyfans account, earned thousand dollars, dollars single month" — 1 post, no follow-up this cycle
+[NOTED] "same ugly copy pasted body type crying, arc man why everyone" — 1 post, no follow-up this cycle
+[NOTED] "won forget, days" — 1 post, no follow-up this cycle
+[NOTED] "mike waltz president trump won always around cut, president trump president, leadership won always, peace deals" — 1 post, no follow-up this cycle
+[NOTED] "cory booker hostility toward kash patel, fired made first duet video, someone without acting hateful dismissive, constant attacks exhausting watch" — 1 post, no follow-up this cycle
+[NOTED] "highly suspicious military meeting regarding cuba southcom rubio gets extremely defensive completely dodges, trump administration plotting illegal regime changes, journalist confronts marco rubio, makes pathetic joke hide" — 1 post, no follow-up this cycle
+[NOTED] "house senior deputy minority leader leila lima, batangas rep leandro leviste, allegedly involved vote buying, demanded personal retraction" — 1 post, no follow-up this cycle
+[NOTED] "clear military objectives, day" — 1 post, no follow-up this cycle
+[NOTED] "guy walks nine miles day golf course every weekend, probably mile hike trump, didn mention name rfk, lot people" — 1 post, no follow-up this cycle
+[NOTED] "president trump says, suspend project freedom, strait hormuz, request pakistan" — 1 post, no follow-up this cycle
+[NOTED] "client victim list told, entire operation years ago, jeffery epstein butler, caught fbi sting" — 1 post, no follow-up this cycle
+[NOTED] "previous administration really shows, unwilling take ownership, buttiigieg look, second year" — 1 post, no follow-up this cycle
+[NOTED] "insane video cornell university president michael kotlikoff trying run, campus talk last week israel genocide gaza, student confronting" — 1 post, no follow-up this cycle
+[NOTED] "mosque weird omit, former synagogue" — 1 post, no follow-up this cycle
+[NOTED] "approved county commission utah last night, kevin leary massive data center, proposal despite opposition, commission approved" — 1 post, no follow-up this cycle
+[NOTED] "epstein files, black" — 1 post, no follow-up this cycle
+[NOTED] "laptops took everything hannah natanson, trump fbi kicked, took pulitzer prize, door took" — 1 post, no follow-up this cycle
+[NOTED] "mike waltz brags, trump administration, cutting percent, thanks" — 1 post, no follow-up this cycle
+[NOTED] "maleta naman peanut gallery maleta network" — 1 post, no follow-up this cycle
+[NOTED] "inflation jumps highest three years" — 1 post, no follow-up this cycle
+[NOTED] "having cigarette back, baby" — 1 post, no follow-up this cycle
+[NOTED] "baby crocodiles sound, look innocent babies, laser beams" — 1 post, no follow-up this cycle
+[NOTED] "started new relationship during horrific accident, his new girlfriend became completely paralyzed, longer use his arms legs, divorcing his wife man" — 1 post, no follow-up this cycle
+[NOTED] "brazilian school opened fire, his stepfather illegal pistol, killed school inspectors others, school shootings recent years" — 1 post, no follow-up this cycle
+[NOTED] "tired cat, matter, much, worked" — 1 post, no follow-up this cycle
+[NOTED] "deadline today corrupt somali rep ilhan omar must turn, minnesota fraud committee, documents" — 1 post, no follow-up this cycle
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @PastorBobJ67896 [v121.7 T0 N3.7] "Jeffery Epstein’s butler was caught in an FBI sting in 2009 trying to sell the client & victim list. He told them the entire operation, 17 years ago. And the FBI did NOTHING." (https://x.com/PastorBobJ67896/status/2051279484364497111) - This post highlights a significant alleged failure of a key institution (FBI) to act on critical information, directly relevant to systemic flaws and accountability.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @NiqoNguyenn [v322.7 T0 N3.6] "To be black and in the Epstein files" (https://x.com/NiqoNguyenn/status/2051466570317050077) - This post continues the narrative around the Epstein files, suggesting broader societal implications beyond just the individuals involved, tying into systemic issues.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @icardo8 [v217.4 T0 N3.6] "Don't stop talking about the Epstein files." (https://x.com/icardo8/status/2051633804003926164) - This post indicates ongoing public pressure and concern regarding the Epstein files, suggesting a lack of perceived closure or accountability.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @MorePerfectUS [v329.3 T0 N3.6] "Kevin O'Leary's massive data center was approved by a county commission in Utah last night. At 40,000 acres, it would be 2.5x the size of Manhattan. The commission approved the proposal despite opposi" (https://x.com/MorePerfectUS/status/2051652965862092870) - This highlights a potential systemic flaw in local governance where large projects are approved despite public opposition, relevant to institutional vulnerabilities.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @YourAnonNews [v208.6 T5 N3.6] "Kevin O'Leary's massive data center was approved by a county commission in Utah last night without residents' approval of the measure. At 40,000 acres, it would be 2.5x the size of Manhattan. The " (https://x.com/YourAnonNews/status/2051676179254386898) - Another post reinforcing the narrative of the data center approval without resident approval, indicating a potential systemic disregard for local community input.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @allenanalysis [v176.0 T7 N3.6] "Trump’s FBI kicked in her door. Took her phones. Took her laptops. Took everything. Hannah Natanson just took a Pulitzer Prize. You cannot intimidate the truth out of a journalist. You just make them " (https://x.com/allenanalysis/status/2051654833862525340) - This post describes actions against a journalist, directly relevant to the suppression of truth and integrity of information.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @catgirlprostate [v538.7 T0 N3.6] "Don't forget that if you ask for things to improve somewhat, it means you are literally a communist taking money out of the empty pockets of the US military" (https://x.com/catgirlprostate/status/2051631366123499586) - This is a clear example of narrative control through demonization and mischaracterization, directly relevant to exposing narrative control.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @Alaa_Gaza2026 [v30.6 T0 N3.6] "Teaching Muslim children to shoot is called terrorism, but for your children it is called progress and learning self-defense!!!" (https://x.com/Alaa_Gaza2026/status/2051266463286149174) - This post highlights a double standard in narrative framing and the use of loaded terms, relevant to how narratives are controlled and manipulated.
+[NOTED] "same ugly copy pasted body type crying, arc man why everyone" — 1 post, no follow-up this cycle
+[NOTED] "won forget, days" — 1 post, no follow-up this cycle
+[NOTED] "mike waltz president trump won always around cut, president trump president, leadership won always, peace deals" — 1 post, no follow-up this cycle
+[NOTED] "cory booker hostility toward kash patel, fired made first duet video, someone without acting hateful dismissive, constant attacks exhausting watch" — 1 post, no follow-up this cycle
+[NOTED] "highly suspicious military meeting regarding cuba southcom rubio gets extremely defensive completely dodges, trump administration plotting illegal regime changes, journalist confronts marco rubio, makes pathetic joke hide" — 1 post, no follow-up this cycle
+[NOTED] "house senior deputy minority leader leila lima, batangas rep leandro leviste, allegedly involved vote buying, demanded personal retraction" — 1 post, no follow-up this cycle
+[NOTED] "clear military objectives, day" — 1 post, no follow-up this cycle
+[NOTED] "guy walks nine miles day golf course every weekend, probably mile hike trump, didn mention name rfk, lot people" — 1 post, no follow-up this cycle
+[NOTED] "president trump says, suspend project freedom, strait hormuz, request pakistan" — 1 post, no follow-up this cycle
+[NOTED] "client victim list told, entire operation years ago, jeffery epstein butler, caught fbi sting" — 1 post, no follow-up this cycle
+[NOTED] "previous administration really shows, unwilling take ownership, buttiigieg look, second year" — 1 post, no follow-up this cycle
+[NOTED] "insane video cornell university president michael kotlikoff trying run, campus talk last week israel genocide gaza, student confronting" — 1 post, no follow-up this cycle
+[NOTED] "mosque weird omit, former synagogue" — 1 post, no follow-up this cycle
+[NOTED] "approved county commission utah last night, kevin leary massive data center, proposal despite opposition, commission approved" — 1 post, no follow-up this cycle
+[NOTED] "epstein files, black" — 1 post, no follow-up this cycle
+[NOTED] "laptops took everything hannah natanson, trump fbi kicked, took pulitzer prize, door took" — 1 post, no follow-up this cycle
+[NOTED] "mike waltz brags, trump administration, cutting percent, thanks" — 1 post, no follow-up this cycle
+[NOTED] "maleta naman peanut gallery maleta network" — 1 post, no follow-up this cycle
+[NOTED] "inflation jumps highest three years" — 1 post, no follow-up this cycle
+[NOTED] "having cigarette back, baby" — 1 post, no follow-up this cycle
+[NOTED] "baby crocodiles sound, look innocent babies, laser beams" — 1 post, no follow-up this cycle
+[NOTED] "started new relationship during horrific accident, his new girlfriend became completely paralyzed, longer use his arms legs, divorcing his wife man" — 1 post, no follow-up this cycle
+[NOTED] "brazilian school opened fire, his stepfather illegal pistol, killed school inspectors others, school shootings recent years" — 1 post, no follow-up this cycle
+[NOTED] "tired cat, matter, much, worked" — 1 post, no follow-up this cycle
+[NOTED] "deadline today corrupt somali rep ilhan omar must turn, minnesota fraud committee, documents" — 1 post, no follow-up this cycle
+[NOTED] "having botox, disability, actors" — 1 post, no follow-up this cycle
+[NOTED] "come suits" — 1 post, no follow-up this cycle
+[NOTED] "dumbest thing, see today" — 1 post, no follow-up this cycle
+[NOTED] "challenges again, puts shame, complain" — 1 post, no follow-up this cycle
+[NOTED] "using attractive women advertisements often makes young men want buy, new observation, products" — 1 post, no follow-up this cycle
+[NOTED] "appreciated his efforts defend traditional values, defending traditional values vladimir putin condemned, western media won show, murder charlie kirk" — 1 post, no follow-up this cycle
+[NOTED] "new spot discovered lalalala laila antipolo, head antipolo switch things, team building activity, swimming" — 1 post, no follow-up this cycle
+[NOTED] "near hour long press briefing, acting press secretary marco rubio, white house marco handled, secretary state" — 1 post, no follow-up this cycle
+[NOTED] "fox host jesse watters suggests trump pausing project freedom due trump, wanting iran humiliated, president must know, surrender" — 1 post, no follow-up this cycle
+[NOTED] "beautiful dress, found, world" — 1 post, no follow-up this cycle
+[NOTED] "doing nothing condemn iran putting mines, marco rubio need allies, ones doing anything, secretary marco rubio" — 1 post, no follow-up this cycle
+[NOTED] "apollo new crew new mission america ready back, city last week show america, artemis crew passed, nasa landed nyc" — 1 post, no follow-up this cycle
+[NOTED] "day teach man fish, give man fish, sleek giggling kind, scaly kind" — 1 post, no follow-up this cycle
+[NOTED] "guava juice simple, boost, immunity, healthy" — 1 post, no follow-up this cycle
+[NOTED] "@broseph_stalin "“Former synagogue” It’s now a mosque. Weird to omit that." — 1 post, no follow-up this cycle
+[NOTED] "@MorePerfectUS "Kevin O'Leary's massive data center was approved by a county commission in Utah last night. At 40,000 acres, it would be 2.5x the size of Manhattan. The commission approved the proposal despite opposi" — 1 post, no follow-up this cycle
+[NOTED] "@NiqoNguyenn "To be black and in the Epstein files" — 1 post, no follow-up this cycle
+[NOTED] "@Neil_McNeil "Baby they’re not having a cigarette back there be so fr" — 1 post, no follow-up this cycle
+[NOTED] "@TheFigen_ "Baby crocodiles sound just like laser beams. They look so innocent as babies. " — 1 post, no follow-up this cycle
+[NOTED] "@srkntnyldz "After divorcing his wife, a man had started a new relationship. During a horrific accident that occurred while he was with his new girlfriend, he became completely paralyzed from the neck down (tetrap" — 1 post, no follow-up this cycle
+[NOTED] "@MarioNawfal " A 13-year-old walked into a Brazilian school, opened fire with his stepfather’s illegal pistol, and killed 2 school inspectors. 7 others are injured. Brazil has now had more school shootings in recen" — 1 post, no follow-up this cycle
+[NOTED] "@catshealdeprsn "No matter how much you worked, you'll never be as tired as a cat that did nothing all day." — 1 post, no follow-up this cycle
+[NOTED] "@RickyDoggin "DEADLINE IS TODAY: Corrupt Somali Rep. Ilhan Omar must turn over ALL documents to the Minnesota FRAUD committee." — 1 post, no follow-up this cycle
+[NOTED] "@nonregemesse "Having Botox is like a disability for actors" — 1 post, no follow-up this cycle
+[NOTED] "@dykemedla "And they would still come in suits .." — 1 post, no follow-up this cycle
+[NOTED] "@icardo8 "Don't stop talking about the Epstein files." — 1 post, no follow-up this cycle
+[NOTED] "@MakeSenseMarie "This man says, “let me get this straight. When White people move into an area, it’s called “colonizing” or “gentrification”, which is bad. But if people of a high melanin count move into an area, th" — 1 post, no follow-up this cycle
+[NOTED] "@RickyDoggin "This might be the dumbest thing you'll see today... " — 1 post, no follow-up this cycle
+[NOTED] "@B7frankH "I will never complain about my challenges again... she puts me to shame! " — 1 post, no follow-up this cycle
+[NOTED] "@catgirlprostate "Don't forget that if you ask for things to improve somewhat, it means you are literally a communist taking money out of the empty pockets of the US military" — 1 post, no follow-up this cycle
+[NOTED] "@hellspatisserie "Using attractive women in advertisements often makes young men want to buy your products. This is a new observation to me" — 1 post, no follow-up this cycle
+[NOTED] "@YourAnonNews "Kevin O'Leary's massive data center was approved by a county commission in Utah last night without residents' approval of the measure. At 40,000 acres, it would be 2.5x the size of Manhattan. The " — 1 post, no follow-up this cycle
+[NOTED] "@Saffron_Sniper1 "“The murder of Charlie Kirk was a disgusting atrocity. He died because he was defending traditional values.” — Vladimir Putin He condemned the death of Charlie Kirk and appreciated his efforts to defe" — 1 post, no follow-up this cycle
+[NOTED] "@Alaa_Gaza2026 "Teaching Muslim children to shoot is called terrorism, but for your children it is called progress and learning self-defense!!!" — 1 post, no follow-up this cycle
+[NOTED] "@News5PH "HEAD TO ANTIPOLO To switch things up from swimming, you can bond like a team-building activity at the new spot discovered by Lalalala-Laila in Antipolo." — 1 post, no follow-up this cycle
+[NOTED] "@vxdb "Apparently they didn’t even use Starlink for this, they were using 3g cellular. His production team bonded six modems together to increase bandwidth. Radio is pretty cool" — 1 post, no follow-up this cycle
+[NOTED] "@zetu_rrr ""The Ship No Country Will Accept" The cruise ship with hantavirus It's just too brutal, as expected Cape Verde refused entry 149 people are stranded at sea And on top of that, the wife of an i" — 1 post, no follow-up this cycle
+[NOTED] "@WallStreetApes "The Dollar Tree sells white labeled Girl Scout cookies Girl Scout cookies sell the exact same cookies as Dollar Tree for 4x the price Comparing the boxes for Girl Scout cookies and fudge mint cookies " — 1 post, no follow-up this cycle
+[NOTED] "@EricLDaugh " DONALD TRUMP JUST PAUSED PROJECT FREEDOM — after he PROVED America can 100% control the Strait of Hormuz "The Commander-in-Chief must believe that the Iranians are serious about SURRENDERING!" "The P" — 1 post, no follow-up this cycle
+[NOTED] "@carverfomo "A 23 year old Chinese student walked onto a graduation stage in Los Angeles. Held his laptop above his head with ChatGPT open. Screamed into the camera. The big screen showed it to the whole stadium. " — 1 post, no follow-up this cycle
+[NOTED] "@IranUpdatesNow "MASSIVE BREAKING NEWS, WESTERN MAINSTREAM MEDIA KEEPS HUSH HUSH: President Xi Jingping meets with Cheng Li-wun Chairwoman of Taiwan's next ruling party (KMT), in Beijing. It's happening, reunificati" — 1 post, no follow-up this cycle
+[NOTED] "@kirawontmiss "why tf is Rachel Zegler moving her mouth like that…" — 1 post, no follow-up this cycle
+[NOTED] "@kidasnow "i still can’t believe chanel sent her to the met gala in a regular blouse and JEANS" — 1 post, no follow-up this cycle
+[NOTED] "@t_NYC "Infected people already got on flights. One of the victims literally died in the airport." — 1 post, no follow-up this cycle
+[NOTED] "@CartoonsHateHer "I feel like there's this misconception that Muslims like, worship pigs and are offended by people eating them, when pigs are actually just seen as too filthy to eat." — 1 post, no follow-up this cycle
+[NOTED] "@epichan77 "I'm not interested in men's crotches at all." — 1 post, no follow-up this cycle
+[NOTED] "@laralsRM "Why do you go out with rapists?" — 1 post, no follow-up this cycle
+[NOTED] "@nicksortor " WOW! California Gubernatorial Candidate Steve Hilton (R) just CALLED OUT Democrat candidates to their FACES for blaming CA's high cost of living on TRUMP "Donald Trump is the president in ALL the oth" — 1 post, no follow-up this cycle
+[NOTED] "@VividProwess "October 7. This is what Zohran Mamdani’s wife celebrated." — 1 post, no follow-up this cycle
+[NOTED] "@astrooalert "This rare moment happens when the setting sun hits Horsetail Fall in Yosemite National Park at just the right angle, making the waterfall glow like flowing lava. Almost every year, thousands of visit" — 1 post, no follow-up this cycle
+[NOTED] "@FurkanGozukara "Vice President JD Vance accidentally exposes the total economic failure of the Trump administration. He desperately blames the previous government for the massive financial hole destroying the working" — 1 post, no follow-up this cycle
+[NOTED] "@bncdotph "As a viral internet personality, it's surprising Fonzi Fonz has gone this long without getting canceled. So our hosts challenged him to get some bashers with this 'controversial' skit. Watch the full" — 1 post, no follow-up this cycle

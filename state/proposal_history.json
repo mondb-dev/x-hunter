@@ -396,6 +396,25 @@
       "pushed_to_origin": null,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_tactic_classifier_20260506",
+      "title": "Implement a Narrative Tactic Classification and Tracking Module",
+      "status": "failed",
+      "proposed_at": "2026-05-06T00:13:02.695Z",
+      "resolved_at": "2026-05-06T01:04:51.781Z",
+      "resolution_notes": "Pipeline error: Tests failed: Dependent load failed (runner/archive.js): [archive] Irys balance too low (need 0.000031388 SOL), skipping upload for 2026-04-23_21.html\n[archive] Irys balance too low (need 0.000031388 SOL), skipping upload for 2026-04-23_22.html\n[archive] Irys balance too low (need 0.000031388 SOL), skipping upload for 2026-04-23_23.html\n[archive] Irys bal; Dependent load failed (runner/moltbook.js): ",
+      "files_changed": [
+        "runner/lib/narrative_tactic_ontology.js",
+        "runner/lib/narrative_analysis.js",
+        "runner/lib/axis_manager.js",
+        "runner/lib/journal.js"
+      ],
+      "branch_name": "meta/proposal_narrative_tactic_classifier_20260506",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }
