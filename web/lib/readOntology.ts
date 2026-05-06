@@ -3,11 +3,19 @@ import path from "path";
 import { DATA_ROOT } from "./dataRoot";
 
 export interface EvidenceEntry {
-  source: string;
+  source?: string;
+  timestamp?: string;
+  pole_alignment?: "left" | "right";
+  trust_weight?: number;
+  score_after?: number;
+  confidence_after?: number;
+  summary?: string;
+  content?: string;
+  // legacy fields
   tweet_id?: string;
-  reason: string;
-  delta: number;
-  quality: number;
+  reason?: string;
+  delta?: number;
+  quality?: number;
 }
 
 export interface Axis {

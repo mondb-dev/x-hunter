@@ -1,8 +1,11 @@
 export const dynamic = 'force-dynamic';
 
+import fs from "fs";
+import path from "path";
 import { readOntology, type Axis } from "@/lib/readOntology";
 import AxisBar from "@/components/AxisBar";
 import BeliefMap, { type MapNode, type MapEdge } from "@/components/BeliefMap";
+import BeliefDrift, { type DriftAxis } from "@/components/BeliefDrift";
 
 function buildGraph(axes: Axis[]): { nodes: MapNode[]; edges: MapEdge[] } {
   const nodes: MapNode[] = axes
@@ -36,9 +39,28 @@ function buildGraph(axes: Axis[]): { nodes: MapNode[]; edges: MapEdge[] } {
   return { nodes, edges };
 }
 
+function readDriftData(): DriftAxis[] {
+  try {
+    const raw = fs.readFileSync(
+      path.join(process.cwd(), "../web/public/data/belief_drift.json"), "utf-8"
+    );
+    return JSON.parse(raw).axes ?? [];
+  } catch {
+    try {
+      const raw = fs.readFileSync(
+        path.join(process.cwd(), "public/data/belief_drift.json"), "utf-8"
+      );
+      return JSON.parse(raw).axes ?? [];
+    } catch {
+      return [];
+    }
+  }
+}
+
 export default async function OntologyPage() {
   const ontology = readOntology();
   const axes = ontology.axes;
+  const driftAxes = readDriftData();
   const { nodes, edges } = buildGraph(axes);
 
   const activeAxes   = axes.filter(a => a.confidence > 0).sort((a, b) => b.confidence - a.confidence);
@@ -80,6 +102,15 @@ export default async function OntologyPage() {
         <p className="empty">No belief axes discovered yet. Check back after Day 3.</p>
       ) : (
         <>
+          {driftAxes.length > 0 && (
+            <div style={{ margin: "1.5rem 0", border: "1px solid #1e2022", padding: "0.75rem 0.5rem 0.5rem" }}>
+              <div style={{ fontSize: "10px", color: "#8b99aa", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.5rem", paddingLeft: "0.5rem" }}>
+                belief drift · score over time · top axes by observation count
+              </div>
+              <BeliefDrift axes={driftAxes} />
+            </div>
+          )}
+
           {nodes.length > 0 && (
             <div style={{ margin: "1.5rem 0", border: "1px solid #1e2022", padding: "0.75rem 0.5rem 0.5rem" }}>
               <div style={{ fontSize: "10px", color: "#8b99aa", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.5rem", paddingLeft: "0.5rem" }}>

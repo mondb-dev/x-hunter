@@ -829,6 +829,8 @@ while true; do
     echo "[run] ── Daily block firing (${_DAILY_ELAPSED}s since last) ──"
     # ── Daily belief report ──────────────────────────────────────────────────
     node "$PROJECT_ROOT/runner/generate_daily_report.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # ── Chart data snapshots (belief_drift.json, evidence_dist.json, posting_calendar.json) ──
+    node "$PROJECT_ROOT/runner/chart_snapshot.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     # ── Daily article: write from journals + beliefs, post to Moltbook ───────
     node "$PROJECT_ROOT/runner/write_article.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     # ── Article cover image (Imagen 4) ───────────────────────────────────────
@@ -974,7 +976,7 @@ while true; do
       fi
     done
     # ── Git commit daily outputs ───────────────────────────────────────────
-    git -C "$PROJECT_ROOT" add journals/ checkpoints/ state/ articles/ daily/ ponders/ web/public/images/articles/ 2>/dev/null || true
+    git -C "$PROJECT_ROOT" add journals/ checkpoints/ state/ articles/ daily/ ponders/ web/public/images/articles/ web/public/data/ 2>/dev/null || true
     git -C "$PROJECT_ROOT" commit -m "daily: ${TODAY}" 2>/dev/null || true
     git -C "$PROJECT_ROOT" push origin main 2>/dev/null || true
     # Trigger Vercel redeploy for new article/checkpoint
