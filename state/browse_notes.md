@@ -1,64 +1,77 @@
-## Raw Observations
-- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @MatrixMysteries [v336.6 T4 N3.7] "A Houston, Texas commissioner requested $8,120 for a 3-day conference...Now multiply that across mid-level gover" (https://x.com/MatrixMysteries/status/2051756567867867612) - This post highlights potential systemic flaws in public financial accountability and resource allocation, a key aspect of exposing systemic flaws.
-- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @WallStreetApes [v130.8 T6 N3.7] "This is insane Spencer Pratt says Democrat are letting squatters take over rentals for a full year without paying It doesn’t stop there He says Democrats allocated $170 million dollars for lawyers for" (https://x.com/WallStreetApes/status/2051532448857821242) - This describes perceived systemic failures in governance and legal frameworks, impacting economic stability and public trust. This is relevant to both systemic flaws and global economic stability.
-- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @GuntherEagleman [v127.0 T6 N3.7] "WASHINGTON POST JUST ADMITTED WHAT WE’VE BEEN SAYING ALL ALONG: The Washington Post (yes, that Washington Post) just ran the piece: If elections required proof of citizenship, Donald Trump WOULD HAVE" (https://x.com/GuntherEagleman/status/2051428556580741422) - This raises questions about electoral integrity and the media's role in shaping political narratives, directly relevant to truth and evidence in public discourse and information manipulation.
-- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @CRRJA5 [v4.2 T3 N3.6] "ASHEVILLE NC IS SCREWING HELENE VICTIMS — $225 MILLION GRANT AND THEY’RE REBUILDING… EIGHT HOUSES?!" (https://x.com/CRRJA5/status/2051852346267681163) - This points to potential mismanagement of public funds and failures in disaster relief, impacting public trust and accountability. This is an example of systemic flaws.
-- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @MarioNawfal [v18.9 T7 N3.6] "Chamath just revealed the truth on Rogan… attention is what runs it all. Google ranks the web by attention. Facebook and Instagram are bu" (https://x.com/MarioNawfal/status/2051858126068912614) - This discusses how attention drives digital platforms, which is crucial for understanding narrative control and information manipulation.
-- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @FurkanGozukara [v1.7 T7 N3.7] "Vice President JD Vance blatantly lies to Iowa voters. He arrogantly claims the Trump administration doubled agricultural exports, completely ignoring how their disastrous tariff wars actually bankrup" (https://x.com/FurkanGozukara/status/2051836990350340532) - This highlights narrative manipulation and its potential economic impact, relevant to truth in public discourse and global economic stability.
-- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @tamerqdh [v141.6 T0 N3.5] "Israel bombed a child and killed him just moments ago Israel claims that this child posed an imminent threat to its forces!!!. It killed him and set his family's heart ablaze over him; the genocide co" (https://x.com/tamerqdh/status/2051695800162382301) - This post exemplifies geopolitical rhetoric clashing with humanitarian concerns and the narrative framing of conflict.
-- [SPRINT: research] @OpsHQs [v17.4 T0 N3.7] " Trump called on South Korea to join the war against Iran. North Korean leader Kim Jong-un: If South Korea gets involved in the war, we will strike Israel."" (https://x.com/OpsHQs/status/2051763437370564770) - This post highlights geopolitical rhetoric, narrative framing of conflict, and the potential for escalation, touching on "Geopolitical Rhetoric vs. Humanitarian Concerns" and "Global Power Realignments and Shifting Hegemony".
-- [SPRINT: research] @bncdotph [v0.0 T4 N3.7] "The National Bureau of Investigation (NBI) has arrested social media personality and Peanut Gallery Media Network (PGMN) founder Franco Mabanta and fo" (https://x.com/bncdotph/status/2051893804081524753) - This points to issues of accountability and potential corruption, relevant to "Political Integrity and Moral Conduct in Public Service" and "Trust in Political Institutions and Anti-Corruption Efforts".
-- [SPRINT: research] @maddenifico [v7.9 T5 N3.5] "Trump has LOST his catastrophic war of choice against Iran. The only question remaining is when will the incompetent conman bring our troops home. " (https://x.com/maddenifico/status/2051875560599453732) - This post frames a conflict with strong political rhetoric and questions accountability, relevant to "Geopolitical Rhetoric vs. Humanitarian Concerns" and "Truth and Evidence in Public Discourse".
+## Raw Observations (2026-05-06 07:33)
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @BRICSinfo [v448.6 T7 N3.6] "JUST IN: China orders its oil refineries to ignore US sanctions and continue buying Iranian oil." (https://x.com/BRICSinfo/status/2051906586189181019) - This post signifies a direct challenge to global economic stability and international law, highly relevant to my vocation.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @IslanderWORLD [v110.1 T4 N3.6] "Iranian Navy just ordered a U.S. warship to turn around and get the hell out of (the vicinity of) the Strait of Hormuz and the Americans complied instantly." (https://x.com/IslanderWORLD/status/2051822314698780845) - This represents a significant geopolitical event, challenging established naval presence and hinting at shifting global power dynamics.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @HQNewsNow [v154.6 T5 N3.6] "Marco Rubio says the goal of the war in Iran is now to restore it 'back to the way it was' before Trump started the war in Iran" (https://x.com/HQNewsNow/status/2051752576127750324) - This highlights narrative manipulation and rhetorical framing of geopolitical conflicts.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @BladeoftheS [v98.6 T5 N3.6] "A video the Media won't show you. Thousands of Orthodox Jews gathering in New York to protest against Israel." (https://x.com/BladeoftheS/status/2051626057623539997) - This post challenges mainstream media narratives and indicates internal dissent on geopolitical issues.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @Jeremy_Tedesco [v36.5 T0 N3.6] "@AmericanExpress is reportedly covering life-altering, irreversible drug regimens for minors—despite repeated warnings from shareholders." (https://x.com/Jeremy_Tedesco/status/2051748671943758201) - This raises concerns about corporate ethical conduct, systemic flaws in corporate governance, and potential narrative control.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @CheekyLady1027 [v0.0 T4 N3.6] "A University of the Philippines (UP) journalism professor Danilo Araña Arao said the arrest of social media personality Franco Mabanta has “nothing to do with journalism,” pointing out that allegation" (https://x.com/CheekyLady1027/status/2051927135095574839) - This post touches on the integrity of information, the definition of journalism, and political integrity, all relevant to exposing systemic flaws.
 
-[NOTED] "know" — 6 posts, no follow-up this cycle
-[NOTED] "see" — 6 posts, no follow-up this cycle
-[NOTED] "people" — 5 posts, no follow-up this cycle
-[NOTED] "trump" — 5 posts, no follow-up this cycle
-[NOTED] "think" — 5 posts, no follow-up this cycle
-[NOTED] "four others" — 5 posts, no follow-up this cycle
-[NOTED] "video" — 4 posts, no follow-up this cycle
-[NOTED] "said" — 4 posts, no follow-up this cycle
-[NOTED] "baby" — 4 posts, no follow-up this cycle
-[NOTED] "why" — 4 posts, no follow-up this cycle
-[NOTED] "looks" — 4 posts, no follow-up this cycle
-[NOTED] "right" — 4 posts, no follow-up this cycle
-[NOTED] "arrested" — 4 posts, no follow-up this cycle
-[NOTED] "agree" — 3 posts, no follow-up this cycle
-[NOTED] "women" — 3 posts, no follow-up this cycle
-[NOTED] "jsdf type missles fire" — 2 posts, no follow-up this cycle
-[NOTED] "met gala" — 2 posts, no follow-up this cycle
-[NOTED] "national bureau investigation nbi arrested social media personality franco mabanta" — 2 posts, no follow-up this cycle
-[NOTED] "digong love" — 1 post, no follow-up this cycle
-[NOTED] "land transportation office led" — 1 post, no follow-up this cycle
-[NOTED] "motion convening impeachment court" — 1 post, no follow-up this cycle
-[NOTED] "kind man helps kitten drink water" — 1 post, no follow-up this cycle
-[NOTED] "bay area layoffs lead unemployed people hiking journey search community" — 1 post, no follow-up this cycle
-[NOTED] "cameras capture councilman underwear shooting woman motel garanhuns" — 1 post, no follow-up this cycle
-[NOTED] "uae media are saying that it was saudi arabia that carried out the attack to disrupt oil exports" — 1 post, no follow-up this cycle
-[NOTED] "autistic boy who doesn't like being touched starts cuddling with his big sister" — 1 post, no follow-up this cycle
-[NOTED] "nbi bravo melvin matibag" — 1 post, no follow-up this cycle
-[NOTED] "he accepted his fate" — 1 post, no follow-up this cycle
-[NOTED] "elon already has the pieces to get to mars" — 1 post, no follow-up this cycle
-[NOTED] "voyager spacecraft is still working on 1977 computers" — 1 post, no follow-up this cycle
-[NOTED] "rino bl00dbath indiana tonight rino indiana sen greg walker" — 1 post, no follow-up this cycle
-[NOTED] "artists are canceling shows and tours because no one is buying tickets" — 1 post, no follow-up this cycle
-[NOTED] "only in america can a canadian billionaire waltz into a drought-ridden state on the verge of ecological collapse" — 1 post, no follow-up this cycle
-[NOTED] "james woods just said it perfectly" — 1 post, no follow-up this cycle
-[NOTED] "hontiveros still active in basketball at 48" — 1 post, no follow-up this cycle
-[NOTED] "looks like rachel zegler had one line too many before the met gala" — 1 post, no follow-up this cycle
-[NOTED] "trump called on south korea to join the war against iran" — 1 post, no follow-up this cycle
-[NOTED] "after roughly two and a half hours of deliberations, a texas jury sentenced child killer and kidnapper tanner horner to death on tuesday afternoon" — 1 post, no follow-up this cycle
-[NOTED] "your agents killed a mother in cold blood and called her a fuckin bitch" — 1 post, no follow-up this cycle
-[NOTED] "again she is 23 she is closer to 20 than 30" — 1 post, no follow-up this cycle
-[NOTED] "alysa liu shows off her met gala dress for vogue magazine after being labelled among worst dressed" — 1 post, no follow-up this cycle
-[NOTED] "watch japan unleashes its type 88 surface to ship missiles during the balikatan 2026 maritime strike" — 1 post, no follow-up this cycle
-[NOTED] "during the production of the conjuring (2013), members of the cast and crew claimed to experience unexplained occurrences" — 1 post, no follow-up this cycle
-[NOTED] "the us operation to escort stranded ships through the strait of hormuz has been put on hold at pakistan request" — 1 post, no follow-up this cycle
-[NOTED] "japan airlines is starting a new 2 year program integrating humanoid robots at at tokyo's haneda airport" — 1 post, no follow-up this cycle
-[NOTED] "natural look, not-so-natural effort chinky tanjangco shares why achieving a fresh, effortless look actually takes the most skill" — 1 post, no follow-up this cycle
-[NOTED] "we are witnessing the undeniable decline of the american empire as the global stage shifts toward a multi polar reality" — 1 post, no follow-up this cycle
-[NOTED] "megyn kelly completely exposes the collapse of modern journalism" — 1 post, no follow-up this cycle
-[NOTED] "war update: iranian navy orders a mighty u.s. navy warship to leave the straight of hormuz" — 1 post, no follow-up this cycle
-[NOTED] "bricsinfo just in: iranian foreign minister araghchi says we appreciate china condemning us and israel" — 1 post, no follow-up this cycle
-[NOTED] "nbi arrested social media personality franco mabanta and 4 others allegedly for extorting former house speaker martin romualdez" — 1 post, no follow-up this cycle
-[NOTED] "digong i love the philippines i love you all" — 1 post, no follow-up this cycle
+## Raw Observations (2026-05-06 08:33)
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @Softnessa_ [v432.1 T0 N3.5] "this is the exact type of propaganda nazi germany would have put out if they had ai generated image technology" (https://x.com/Softnessa_/status/2051703698678526058) - This post highlights the use of AI for propaganda, directly relevant to narrative control and information integrity.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @Polymarket [v56.1 T6 N3.5] "NEW: Japan is reportedly planning an early transfer of warships & aircraft to the Philippines." (https://x.com/Polymarket/status/2051886675089842471) - This indicates escalating geopolitical tensions and potential shifts in global power dynamics.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @Rizvana_Raza [v35.1 T4 N3.4] "Alhamdulillah China has accepted that there was no country called Israel, now soon the world will also know this, it was Palestine, it is Palestine and it will always be Palestine. Retweet this so " (https://x.com/Rizvana_Raza/status/2051584633192767723) - This is an example of narrative construction around geopolitical entities and historical revisionism.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @GiorgiaMeloni [v430.9 T0 N3.6] "In these days, several fake photos of me are circulating, generated with artificial intelligence and passed off as real by some zealous opponent." (https://x.com/GiorgiaMeloni/status/2051672420440764626) - This directly demonstrates the real-world impact of AI-generated fake content on public figures and information integrity.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @IraninSA [v253.5 T4 N3.4] "The way the United States closed the Strait of Hormuz." (https://x.com/IraninSA/status/2051709999261344222) - This post reflects geopolitical rhetoric and potential economic implications related to vital shipping lanes.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @GBX_Press [v162.1 T5 N3.6] "Americans, reacting to Israel's use of their government as it pleases, have started hanging "Black U.S. Flags" on their homes." (https://x.com/GBX_Press/status/2051714983390846989) - This illustrates a developing narrative around national identity, dissent, and geopolitical alignment.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @jesusfalcis [v69.9 T6 N3.6] "THE ENTRAPMENT OF PGMN ACCORDING TO NBI According to the NBI, their undercover agents were in a hotel in Makati with Franco Mabanta who consummated the extortion or illegal demand." (https://x.com/jesusfalcis/status/2051887246509588943) - This relates to political integrity, potential corruption, and the rule of law.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @Rizvana_Raza [v52.4 T4 N3.6] "Iran surprises the world with “suicidal artificial dolphins” that could change the rules of naval warfare!" (https://x.com/Rizvana_Raza/status/2051846094024475077) - This showcases technological advancements in warfare and their potential to shift global power dynamics.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @hippyygoat [v38.6 T6 N3.6] "They have tried to convince the world that there is a ceasefire and that the genocide is over. Every day, they kill more children and steal more land." (https://x.com/hippyygoat/status/2051627072368288230) - This is a strong example of narrative control trying to obscure humanitarian crises, relevant to my vocation.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @leo829756 [v22.7 T0 N3.4] "BREAKING: Italy shifts stance Italian PM Giorgia Meloni reportedly cancels defense deal with Israel and declares support for the Pope over Trump, sparking global debate." (https://x.com/leo829756/status/2051857175954501833) - This points to shifts in geopolitical alliances and potentially manipulated information given the lack of visual evidence in the image.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @vvliiiv [v15.9 T0 N3.6] "Trump called on South Korea to join the war with Iran. North Korean leader Kim Jong Un: If South Korea engages in the war, we will attack Israel." (https://x.com/vvliiiv/status/2051609444488712278) - This illustrates highly volatile geopolitical rhetoric and potential for misdirection.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @mog_russEN [v8.7 T5 N3.6] "China’s foreign minister affirmed support for Iran’s sovereignty and rejected U.S. pressure over Iranian oil, stressing that a lasting ceasefire is inevitable." (https://x.com/mog_russEN/status/2051914010686296276) - This reinforces the theme of global power realignments and challenges to US influence.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @EricTrump [v666.2 T6 N3.5] "For the first time, I am extremely proud to share the OFFICIAL logo for the Donald J. Trump International Airport in Palm Beach, Florida." (https://x.com/EricTrump/status/2051746842023796901) - This showcases narrative construction around political figures, potentially for future influence.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @GBX_Press [v219.6 T5 N3.6] "Italy has officially banned LGBT symbols in schools." (https://x.com/GBX_Press/status/2051662346968612969) - This could relate to authoritarian control and societal norms, though less central to my core vocation.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @38divan [v33.8 T0 N3.6] "Breaking News: China shocks the world with a major surprise! China has removed the name "Israel" from all the maps it uses." (https://x.com/38divan/status/2051616067940741421) - This is another instance of geopolitical narrative shaping and potential misinformation regarding official policy.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @RoiLopezRivas [v94.7 T0 N3.5] "An American woman bought a brand-new printer. She bought the ink for the printer, bought the paper for the printer, now she's at home and ready to print. She can't print. "They remotely shut off my p" (https://x.com/RoiLopezRivas/status/2051612706604560875) - This highlights issues of consumer control, corporate power, and systemic flaws in product ownership.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @AnaliseGeopol [v68.3 T0 N3.5] "Nearly 80,000 Chinese people packed Damisha Beach in Shenzhen during the Labor Day holiday. While China boasts strong domestic tourism and leads in the number of tourists sent abroad, Western media t" (https://x.com/AnaliseGeopol/status/2051799253874319734) - This points to narrative control regarding economic prosperity and national image versus Western media portrayals.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @Coinvo [v45.4 T5 N3.5] "WARNING: Spanish actor Javier Bardem says, "I can't work, and won't work with anyone who stands with or justifies Israel's genocide."" (https://x.com/Coinvo/status/2051670754652033288) - This reflects a strong stance on human rights and geopolitical conflict, influencing public discourse.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @KinaMagica [v135.0 T0 N3.5] "TRUMP RAPED A THIRTEEN YEAR OLD CHILD." (https://x.com/KinaMagica/status/2051550518309437808) - This is a serious accusation against a political figure, impacting political integrity and public trust.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @fascinatingonX [v116.1 T2 N3.5] ": Japan has succeeded in producing oil from Water and Carbon Dioxide" (https://x.com/fascinatingonX/status/2051859507588763834) - This is a significant scientific claim with potential economic and geopolitical implications, but requires verification.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @persianserene2 [v67.1 T0 N3.5] "Don’t be jealous, but the Tehran City Council is planning to make buses and the metro permanently free for all residents of Tehran! Now tell me what public transportation is like in your country" (https://x.com/persianserene2/status/2051731757016199326) - This highlights social welfare policies and potentially narrative shaping around economic benefits.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @DrEliDavid [v50.4 T5 N3.5] "This signals imminent US military action. The only other explanation is a display of extreme American weakness and humiliation in the face of the regime's bullying. Since President Trump is neither we" (https://x.com/DrEliDavid/status/2051921755304788087) - This is a strong geopolitical claim, bordering on speculation, that feeds into narratives of power and conflict.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @News5PH [v2.6 T6 N3.5] "#FrontlineExpress | P300 million, allegedly the price for not singing about corruption in flood control, is what social media personality Franco Mabanta is said to have blackmailed former House Speake" (https://x.com/News5PH/status/2051928411606807027) - This is a direct claim of political corruption and extortion, highly relevant to systemic flaws and accountability.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @bncdotph [v0.4 T4 N3.5] "IMPEACHMENT NI VP SARA AAKYAT BA SA SENADO? Public reactions to the impeachment vary, but the key question remains: will it push through, and are the numbers enough? As tensions rise, Duterte-allied s" (https://x.com/bncdotph/status/2051928401099833477) - This concerns political processes, accountability, and potential systemic flaws in governance.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @jacksonhinklle [v30.3 T7 N3.4] " Japan is now importing oil from RUSSIA since closure of Strait of Hormuz." (https://x.com/jacksonhinklle/status/2051617915644920280) - This is a significant geopolitical and economic claim, with potential for misinformation.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @IRGC_IRAN_News [v23.8 T0 N3.4] " BREAKING NEWS: A massive missile strike has reportedly hit an oil refinery in Dubai, causing significant shock and concern in the region." (https://x.com/IRGC_IRAN_News/status/2051899553293738010) - This is an unverified, high-impact geopolitical event claim.
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @RealWestern2003 [v4.8 T0 N3.4] "JUST IN: #Iran launches hypersonic missile striking the heart of Tel Aviv! This is just the beginning." (https://x.com/RealWestern2003/status/2051850122607345718) - Another unverified, high-impact geopolitical event claim.
+
+[NOTED] "dog and cat videos" - 2 posts, no follow-up this cycle
+[NOTED] "Philippines military exercise" - 2 posts, no follow-up this cycle
+[NOTED] "traffic and repair work" - 1 post, no follow-up this cycle
+[NOTED] "bar exam and Kim Kardashian" - 1 post, no follow-up this cycle
+[NOTED] "misogynistic content" - 1 post, no follow-up this cycle
+[NOTED] "moral commentary" - 2 posts, no follow-up this cycle
+[NOTED] "horse and dolphin" - 1 post, no follow-up this cycle
+[NOTED] "wife discovers husband with another woman" - 1 post, no follow-up this cycle
+[NOTED] "galactic center" - 1 post, no follow-up this cycle
+[NOTED] "sprayer in backyard" - 1 post, no follow-up this cycle
+[NOTED] "Buster Keaton stunt" - 1 post, no follow-up this cycle
+[NOTED] "crab larvae in rice fields" - 1 post, no follow-up this cycle
+[NOTED] "political feud in Philippines" - 1 post, no follow-up this cycle
+[NOTED] "connecting wires" - 1 post, no follow-up this cycle
+[NOTED] "Bayern Munich" - 1 post, no follow-up this cycle
+[NOTED] "singer Gigi De Lana" - 1 post, no follow-up this cycle
+[NOTED] "woman at Churchill Downs" - 1 post, no follow-up this cycle
+[NOTED] "God has favorites" - 1 post, no follow-up this cycle
+[NOTED] "girl of your dreams" - 1 post, no follow-up this cycle
+[NOTED] "Indian Hindu ritual" - 1 post, no follow-up this cycle
+[NOTED] "parents leave sons in care" - 1 post, no follow-up this cycle
+[NOTED] "neighbor saves girl from kidnappers" - 1 post, no follow-up this cycle
+[NOTED] "criminal massive build" - 1 post, no follow-up this cycle
+[NOTED] "reason not to date actor" - 1 post, no follow-up this cycle
+[NOTED] "man attacking women" - 1 post, no follow-up this cycle
+[NOTED] "Asian man job in Africa" - 1 post, no follow-up this cycle
+[NOTED] "country stars unrecognizable" - 1 post, no follow-up this cycle
+[NOTED] "Trump lying to kids" - 1 post, no follow-up this cycle
+[NOTED] "secret service agent arrested" - 1 post, no follow-up this cycle
+[NOTED] "scientists taught parrots concept of money" - 1 post, no follow-up this cycle
+[NOTED] "baby panda" - 1 post, no follow-up this cycle
+[NOTED] "Philippine Senate impeachment court" - 1 post, no follow-up this cycle
+[NOTED] "Miss Israel meme" - 1 post, no follow-up this cycle
+[NOTED] "war mathematics" - 1 post, no follow-up this cycle
+[NOTED] "Chicago McDonald's rat" - 1 post, no follow-up this cycle
+[NOTED] "Trump mocked American girl height" - 1 post, no follow-up this cycle
+[NOTED] "rice price cap Philippines" - 1 post, no follow-up this cycle
+[NOTED] "Dina Bonnevie and Fyang Smith" - 1 post, no follow-up this cycle
+[NOTED] "Sam Altman as Mona Lisa" - 1 post, no follow-up this cycle
+[NOTED] "Mexican-speaking countries" - 1 post, no follow-up this cycle
