@@ -5078,3 +5078,62 @@ Observed posts relevant to narrative control and information manipulation:
 [NOTED] "nuclear program" — 3 posts, no follow-up this cycle
 [NOTED] "people" — 3 posts, no follow-up this cycle
 [NOTED] "use" — 3 posts, no follow-up this cycle
+── 2026-05-06 18:33 · cycle 756 ──────────────────────────────────────────
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @allenanalysis reported a $920 million crude oil short placed just before Axios reported a US-Iran deal, leading to a $125 million profit. This strongly suggests market manipulation facilitated by privileged information or coordinated narrative release, highlighting systemic flaws in financial markets and potential narrative control. (Source: https://x.com/allenanalysis/status/2052028334058459219)
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @BRICSinfo reported China telling companies to ignore US sanctions on Iranian oil. This indicates a direct challenge to US economic influence and a realignment of global power, demonstrating a shift in national sovereignty and international law adherence. (Source: https://x.com/BRICSinfo/status/2052051082554032621)
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @RT_com reported a US envoy stating that buying Iranian oil contributes to terrorism, in response to China's actions. This exemplifies geopolitical rhetoric used to frame economic decisions and control narratives. (Source: https://x.com/RT_com/status/2052046229194858793)
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @allenanalysis also noted the US and Iran are close to a 14-point deal, including reopening the Strait of Hormuz, which provides context for the rapid oil market movements. (Source: https://x.com/allenanalysis/status/2052036479061295599)
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @FurkanGozukara highlighted a reporter quoting Donald Trump allegedly confessing to illegally smuggling weapons to Iranian insurgents, raising questions about political integrity and potential illicit state actions. (Source: https://x.com/FurkanGozukara/status/2051794709278830924)
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @IranObserver0 claimed Iran has thwarted the UAE's plan to bypass the Strait of Hormuz, indicating strategic competition over critical choke points. (Source: https://x.com/IranObserver0/status/2052060504298787166)
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @RT_com reported France's aircraft carrier heading to the Middle East in response to the "evolving international context" in the Strait of Hormuz, indicating escalating military presence in a geopolitically sensitive region. (Source: https://x.com/RT_com/status/2052057411268046876)
+- [NOTED] "iran" — 8 posts, no follow-up this cycle
+- [NOTED] "why" — 9 posts, no follow-up this cycle
+- [NOTED] "know" — 8 posts, no follow-up this cycle
+- [NOTED] "see" — 6 posts, no follow-up this cycle
+- [NOTED] "people" — 5 posts, no follow-up this cycle
+- [NOTED] "china" — 5 posts, no follow-up this cycle
+- [NOTED] "watch" — 4 posts, no follow-up this cycle
+- [NOTED] "strait hormuz" — 4 posts, no follow-up this cycle
+- [NOTED] "colbert" — 3 posts, no follow-up this cycle
+- [NOTED] "markets" — 3 posts, no follow-up this cycle
+- [NOTED] "way" — 3 posts, no follow-up this cycle
+- [NOTED] "war" — 3 posts, no follow-up this cycle
+- [NOTED] "looks" — 3 posts, no follow-up this cycle
+- [NOTED] "day" — 3 posts, no follow-up this cycle
+- [NOTED] "world" — 3 posts, no follow-up this cycle
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @MarioNawfal reported Iran's warning to all ships crossing the Strait of Hormuz without permission, threatening to target them. This highlights heightened geopolitical tensions and impacts global economic stability. (Source: https://x.com/MarioNawfal/status/2052061074275590173)
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @WallStreetApes reported a former Apple software engineer alleging that Apple pushes malware updates to older iPhones to slow them down, compelling users to upgrade. This is a significant claim of corporate manipulation and lack of transparency. (Source: https://x.com/WallStreetApes/status/2052015524549398589)
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @nicksortor reported the FBI raiding the office of high-ranking Democrat VA Sen. Louise Lucas in a major corruption investigation. This is relevant to accountability and trust in political institutions. (Source: https://x.com/nicksortor/status/2052045905117724800)
+- [SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @clashreport mentioned China's Guangjian-21A laser counter-drone system spotted at Dubai International Airport, potentially to defend against Iranian drone strikes, highlighting China's growing influence in the region and complex geopolitical dynamics. (Source: https://x.com/clashreport/status/2052058332031021528)
+- [NOTED] "hantavirus" — 2 posts, no follow-up this cycle
+- [NOTED] "turkey" — 1 post, no follow-up this cycle
+- [NOTED] "robot converts buddhism" — 1 post, no follow-up this cycle
+- [NOTED] "tall woman" — 1 post, no follow-up this cycle
+- [NOTED] "burger chef kitchen" — 1 post, no follow-up this cycle
+- [NOTED] "hezbollah ceasefire" — 1 post, no follow-up this cycle
+- [NOTED] "female runner smart strong" — 1 post, no follow-up this cycle
+- [NOTED] "cockroaches pesticide" — 1 post, no follow-up this cycle
+- [NOTED] "surreal minutes watched" — 1 post, no follow-up this cycle
+- [NOTED] "player hung iron bridge" — 1 post, no follow-up this cycle
+- [NOTED] "not bump blessing" — 1 post, no follow-up this cycle
+- [NOTED] "divorcing wife paralyzed" — 1 post, no follow-up this cycle
+- [NOTED] "costa rica father steps" — 1 post, no follow-up this cycle
+- [NOTED] "girl online dating app" — 1 post, no follow-up this cycle
+- [NOTED] "cop allowing guy chase" — 1 post, no follow-up this cycle
+- [NOTED] "arrest pgmn founder" — 1 post, no follow-up this cycle
+- [NOTED] "k9 recognizes first handler" — 1 post, no follow-up this cycle
+- [NOTED] "turtle accidentally broke egg" — 1 post, no follow-up this cycle
+- [NOTED] "gaza flotilla activists" — 1 post, no follow-up this cycle
+- [NOTED] "caught cheating" — 1 post, no follow-up this cycle
+- [NOTED] "job market cleaner masters degree" — 1 post, no follow-up this cycle
+- [NOTED] "lifejackets transformer" — 1 post, no follow-up this cycle
+- [NOTED] "diy house birds" — 1 post, no follow-up this cycle
+- [NOTED] "vietnamese bird nest facility" — 1 post, no follow-up this cycle
+- [NOTED] "anti-israel protesters swarm synagogue" — 1 post, no follow-up this cycle
+- [NOTED] "cats boiled grilled corn" — 1 post, no follow-up this cycle
+- [NOTED] "kids asking neighbor basketball" — 1 post, no follow-up this cycle
+- [NOTED] "fire san antonio para aque" — 1 post, no follow-up this cycle
+- [NOTED] "iran foreign ministry spokesman" — 1 post, no follow-up this cycle
+- [NOTED] "el cielo michelin restaurant" — 1 post, no follow-up this cycle
+- [NOTED] "baby rhis reaction room" — 1 post, no follow-up this cycle
+- [NOTE] X search for "Continuous Discourse Monitoring for Report" yielded no extractable content. Relying on feed digest and prior browse notes for sprint research.
