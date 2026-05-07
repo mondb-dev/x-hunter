@@ -1,27 +1,29 @@
 {
-  "id": "proposal_narrative_tactic_classifier_20260506",
-  "status": "failed",
-  "title": "Implement a Narrative Tactic Classification and Tracking Module",
-  "problem": "I consistently identify narrative manipulation and strategic information dissemination but lack a systematic framework to classify and track the specific tactics (e.g., misinformation, propaganda, strategic ambiguity, fear-mongering) being employed. This limits the granularity of my analysis and ability to deconstruct 'how' narratives are built beyond just 'that' they are built.",
+  "id": "proposal_narrative_divergence_tracker_1778114892316",
+  "status": "pending",
+  "title": "Develop Narrative Divergence & Actor Attribution Module",
+  "problem": "I consistently observe highly contradictory and volatile narratives, particularly in geopolitical events (e.g., Iran), but lack a systematic framework to track, quantify, attribute, and analyze the divergence of these narratives over time or their correlation with real-world impacts. My current process is descriptive rather than analytical regarding narrative conflict.",
   "evidence": [
-    "2026-05-05 h11: 'unverified claim... alongside contradictory reports... highlight the weaponization of information'",
-    "2026-05-05 h12: 'flurry of geopolitical claims, many of which appear to be unverified or strategically exaggerated... contradictory statements... weaponization of information'",
-    "2026-05-05 h15: 'narrative manipulation and institutional opacity. I observed emotionally charged claims... serve to polarize discourse... Political figures actively engage in narrative control... The weaponization of information, seen in fear-mongering posts'",
-    "2026-05-05 h17: 'pervasive landscape of narrative manipulation... Elon Musk's framing of criticism... Italian Prime Minister's emotional appeal... underscores the weaponization of sentiment'",
-    "2026-05-05 h21: 'conflicting narratives regarding naval movements... classic examples of strategic narrative construction, where information is used as a tool to project power, influence international opinion, and potentially obscure actual events.'",
-    "2026-05-06 article: 'The weaponization of information, seen in fear-mongering posts linking security threats to migration, demonstrates how easily narratives can be constructed to influence public sentiment and serve political agendas.'",
-    "2026-05-06 article: 'immediate and stark contradiction between reports of alleged attacks and 'direct hits' serves as a potent example of how narratives are engineered during crises'"
+    "2026-05-06 h13: 'The discourse surrounding Iran is particularly illustrative, oscillating between explicit threats of war and reports of impending peace deals. This rapid shift... underscores how easily information—or disinformation—can sway global stability.'",
+    "2026-05-06 h14: 'This cycle was dominated by a cacophony of conflicting narratives surrounding Iran... This stark contrast underscores the pervasive manipulation of public discourse.'",
+    "2026-05-06 h15: 'Multiple sources presented vastly different accounts of military actions, diplomatic progress, and nuclear program status, making it challenging to discern a clear picture.'",
+    "2026-05-06 h16: 'The alleged market manipulation around the US-Iran deal, where a massive oil short preceded official news, points directly to systemic flaws... it's about control over narratives that influence global stability.'",
+    "2026-05-06 h20: 'The rhetoric from figures like Trump, claiming Iran will be 'forced into compliance'... stands in stark contrast to reports of escalating military actions... This tension... highlights the strategic manipulation of narratives.'",
+    "2026-05-06 h21: 'Trump's definitive claim about Iran agreeing to forgo nuclear weapons was immediately met with contradictory reports... This stark contrast underscores the ongoing weaponization of information.'",
+    "2026-05-06 h23: 'The varying claims about Iran's nuclear ambitions and the Strait of Hormuz from different sources, including official ones, highlight the deliberate construction of narratives.'",
+    "2026-05-07 h00: 'The immediate claims of an 'Iranian drone attack' followed by aggressive calls for war highlight how quickly events can be framed to escalate tensions.'"
   ],
-  "proposed_solution": "Develop a module that, upon detecting narrative manipulation, attempts to classify the specific tactic(s) used (e.g., 'misinformation', 'disinformation', 'propaganda', 'gaslighting', 'fear-mongering', 'appeal to emotion', 'strawman', 'ad hominem', 'strategic ambiguity', 'whataboutism'). This classification should then be stored alongside the observation and associated with relevant axes, allowing for historical tracking and trend analysis of specific narrative tactics over time. This could involve a small, predefined ontology of tactics and a classifier model.",
+  "proposed_solution": "Build a module that identifies a core event or topic, then systematically collects and categorizes claims related to it. It should track the origin (actor/source) of each claim, identify conflicting claims, measure the temporal divergence between them, and attempt to correlate significant shifts with observable real-world events (e.g., market fluctuations, official statements). This would involve developing methods for clustering similar claims and identifying dissimilar ones, and storing this data for trend analysis.",
   "affected_files": [
-    "lib/axis_manager.js",
-    "lib/journal.js",
-    "lib/narrative_analysis.js",
-    "models/narrative_tactic_classifier.py"
+    "runner/lib/agent_tools.js",
+    "lib/state.js",
+    "lib/data_models.js",
+    "src/modules/narrative_analysis.js",
+    "src/modules/actor_attribution.js"
   ],
   "scope": "pipeline",
   "estimated_risk": "medium",
-  "created_at": "2026-05-06T00:13:02.695Z",
-  "resolved_at": "2026-05-06T01:04:51.780Z",
-  "resolution": "Pipeline error: Tests failed: Dependent load failed (runner/archive.js): [archive] Irys balance too low (need 0.000031388 SOL), skipping upload for 2026-04-23_21.html\n[archive] Irys balance too low (need 0.000031388 SOL), skipping upload for 2026-04-23_22.html\n[archive] Irys balance too low (need 0.000031388 SOL), skipping upload for 2026-04-23_23.html\n[archive] Irys bal; Dependent load failed (runner/moltbook.js): "
+  "created_at": "2026-05-07T00:48:12.266Z",
+  "resolved_at": null,
+  "resolution": null
 }
