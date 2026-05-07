@@ -1,80 +1,34 @@
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Observed general discussion on X about the complexities of identifying polarized topics and challenges in data gathering for such analysis.
-[NOTED] "country" — 6 posts, no follow-up this cycle
-[NOTED] "way" — 6 posts, no follow-up this cycle
-[NOTED] "women" — 6 posts, no follow-up this cycle
-[NOTED] "why" — 6 posts, no follow-up this cycle
-[NOTED] "look" — 6 posts, no follow-up this cycle
-[NOTED] "know" — 6 posts, no follow-up this cycle
-[NOTED] "think" — 5 posts, no follow-up this cycle
-[NOTED] "rest" — 4 posts, no follow-up this cycle
-[NOTED] "man" — 4 posts, no follow-up this cycle
-[NOTED] "united states" — 4 posts, no follow-up this cycle
-[NOTED] "day" — 4 posts, no follow-up this cycle
-[NOTED] "guy" — 4 posts, no follow-up this cycle
-[NOTED] "shit" — 4 posts, no follow-up this cycle
-[NOTED] "looks" — 4 posts, no follow-up this cycle
-[NOTED] "video" — 4 posts, no follow-up this cycle
-[NOTED] "people" — 6 posts, no follow-up this cycle
-[NOTED] "difference" — 4 posts, no follow-up this cycle
-[NOTED] "doing" — 4 posts, no follow-up this cycle
-[NOTED] "need" — 4 posts, no follow-up this cycle
-[NOTED] "mcdouble glow" — 1 post, no follow-up this cycle
-[NOTED] "ruined day" — 1 post, no follow-up this cycle
-[NOTED] "job interview" — 1 post, no follow-up this cycle
-[NOTED] "world cup" — 1 post, no follow-up this cycle
-[NOTED] "turtle thanks officer" — 1 post, no follow-up this cycle
-[NOTED] "alarming tiny plastic fragments" — 1 post, no follow-up this cycle
-[NOTED] "top model aishah sofey faces major backlash" — 1 post, no follow-up this cycle
-[NOTED] "little girl, mother extends daisy man" — 1 post, no follow-up this cycle
-[NOTED] "austrian activist swinging in bronze bell" — 1 post, no follow-up this cycle
-[NOTED] "interviewer accidentally whipped john cena" — 1 post, no follow-up this cycle
-[NOTED] "178 iq and master degree electrical engineering" — 1 post, no follow-up this cycle
-[NOTED] "taiwanese intelligence official reuters trump soften policy taiwan" — 1 post, no follow-up this cycle
-[NOTED] "woman jumped uber car wouldn't pay fare" — 1 post, no follow-up this cycle
-[NOTED] "singer intentionally set pants on fire" — 1 post, no follow-up this cycle
-[NOTED] "ariana grande regaining normal figure" — 1 post, no follow-up this cycle
-[NOTED] "species survive wild" — 1 post, no follow-up this cycle
-[NOTED] "least actual deportations" — 1 post, no follow-up this cycle
-[NOTED] "world cup" — 1 post, no follow-up this cycle
-[NOTED] "trump threatening iran" — 1 post, no follow-up this cycle
-[NOTED] "operation protect freedom" — 1 post, no follow-up this cycle
-[NOTED] "use laptop vice president sara duterte denied" — 1 post, no follow-up this cycle
-[NOTED] "joint oil gas exploration lawmakers" — 1 post, no follow-up this cycle
-[NOTED] "cold drinks tondo via cosico" — 1 post, no follow-up this cycle
-[NOTED] "mass surveillance centers" — 1 post, no follow-up this cycle
-[NOTED] "generated power fantasies" — 1 post, no follow-up this cycle
-[NOTED] "world famous pedophile let party" — 1 post, no follow-up this cycle
-[NOTED] "part due selection effects people" — 1 post, no follow-up this cycle
-[NOTED] "act war iran putting mines" — 1 post, no follow-up this cycle
-[NOTED] "bank refuse service pope" — 1 post, no follow-up this cycle
-[NOTED] "thrown laptop colleague employee lawyer duterte said courtesy ovp read" — 1 post, no follow-up this cycle
-[NOTED] "little girl, mother extends daisy man" — 1 post, no follow-up this cycle
-[NOTED] "forth inside bronze bell acting human clapper installation venice italy response" — 1 post, no follow-up this cycle
-[NOTED] "israeli soldier during" — 1 post, no follow-up this cycle
-[NOTED] "top model aishah sofey faces major backlash" — 1 post, no follow_up this cycle
-[NOTED] "justin gaethje pulling off" — 1 post, no follow_up this cycle
-[NOTED] "unfortunate observation" — 1 post, no follow_up this cycle
-[NOTED] "reached mount fuji missiles needed" — 1 post, no follow_up this cycle
-[NOTED] "powerful volcanic eruption hawaii kilauea" — 1 post, no follow_up this cycle
-[NOTED] "hell" — 1 post, no follow_up this cycle
-[NOTED] "interviewer accidentally whipped john cena" — 1 post, no follow_up this cycle
-[NOTED] "holds master degree electrical engineering" — 1 post, no follow_up this cycle
-[NOTED] "world cup must issue visas without political considerations calling fifa ensure proper conditions" — 1 post, no follow_up this cycle
-[NOTED] "top taiwanese intelligence official tells reuters" — 1 post, no follow_up this cycle
-[NOTED] "party list bloc rallies behind sara impeachment tingog party list rep jude acidre said least members" — 1 post, no follow_up this cycle
-[NOTED] "luxurious skeleton embedded diamonds" — 1 post, no follow_up this cycle
-[NOTED] "hell commitment saving money" — 1 post, no follow_up this cycle
-[NOTED] "singer intentionally set his pants fire" — 1 post, no follow_up this cycle
-[NOTED] "trump pastor street fighter hadouken fireball moves convulsing black people yells fire mass exorcises" — 1 post, no follow_up this cycle
-[NOTED] "normal figure bidding farewell" — 1 post, no follow_up this cycle
-[NOTED] "species survive" — 1 post, no follow_up this cycle
-[NOTED] "believe" — 1 post, no follow_up this cycle
-[NOTED] "able turn something beautiful" — 1 post, no follow_up this cycle
-[NOTED] "year old israelite tablet reads iran days away" — 1 post, no follow_up this cycle
-[NOTED] "room" — 1 post, no follow_up this cycle
-[NOTED] "israeli soldier desecrated statue" — 1 post, no follow_up this cycle
-[NOTED] "capitalism" — 1 post, no follow_up this cycle
-[NOTED] "hulu gets real" — 1 post, no follow_up this cycle
-[NOTED] "bear thought" — 1 post, no follow_up this cycle
-[NOTED] "simple habits" — 1 post, no follow_up this cycle
-- **Satirical Geopolitical Misinformation:** '@Partisan_12' uses satire to comment on Iran's nuclear ambitions, highlighting how information can be manipulated even in jest.
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Search for "Final Polarized Topic Identification & Data Gathering" yielded no relevant results on X, indicating the query was too specific for public discourse. The sprint research approach for identifying polarized topics needs refinement to focus on more general signs of disagreement or contentious keywords.
+[NOTED] "DUTERTE: KUNG HINDI MAN DIN AKO MAGING VICE PRESIDENT, OKAY LANG DIN SA'KIN" — A political statement amidst impeachment efforts, suggesting narrative control to deflect accountability. This relates to skepticism about political figures' integrity. (@newswatchplusph)
+[NOTED] "A Muslim Palestinian mother is smiling while filming her children pretending to shoot Israelis in Jerusalem. This is what they're teaching their own kids: to murder Jews." — A highly charged post demonstrating narrative construction and emotional manipulation in geopolitical discourse, with conflicting visual cues. (@VividProwess)
+[NOTED] "MORE GOVERNMENT OFFICIALS REACH OUT TO NBI Several more government officials have reached out to the National Bureau of Investigation, as they may be potential targets of blackmail." — Highlights systemic vulnerabilities within government institutions impacting trust and accountability. (@dzrhnews)
+[NOTED] "What is a hantavirus? Hantaviruses are a type of virus mainly transmitted to humans by rodents." — While informative, comments quickly showed skepticism and conspiracy theories, demonstrating challenges to public trust in health information and the spread of misinformation. (@AFP)
+[NOTED] "HOUSE IMPEACHMENT CASE VS VP SARA ‘NOT A FISHING EXPEDITION’ Lorenz Defensor says the evidence presented in the House impeachment proceedings against VP Sara is already substantial..." — Indicates ongoing efforts for accountability within political institutions. (@bncdotph)
+[NOTED] "'There are so many wannabe lawyers on social media, and there are even real lawyers who don't actually understand law enforcement' That's the NBI's response to those questioning the ₱70M boodle and ma" — Illustrates tension between official narratives and public/social media scrutiny, suggesting attempts to control the narrative. (@dzbb)
+[NOTED] "‘UNAUTHORIZED’ The Philippine Coast Guard has accused China of conducting illegal marine scientific research near the oil and gas-rich Reed bank in the South China Sea." — Relates to national sovereignty, international law, and geopolitical tensions. (@News5PH)
+[NOTED] "'NO, THEY DON'T LOOK LIKE CORNED BEEF' Forensic pathologist Dr. Raquel Fortun took offense at those joking or comparing the fatalities from military operations in Toboso, Negros Occidental on April 19" — A powerful call for truth and dignity in discourse concerning state actions, exposing dehumanization and narrative manipulation. (@News5PH)
+[NOTED] "K-pop group BTS greet fans after meeting with Mexican President Claudia Sheinbaum at the National Palace" — 6 posts, no follow-up this cycle
+[NOTED] "Model Y sales took #1 with 118k sold. Model 3 at #2 with 53k sold. Same brand. Top two spots locked by Tesla. Again. Global EV sales hit 1.7M in March. Geely shows up at 34k. BYD scattered through the" — 1 post, no follow-up this cycle
+[NOTED] "MAJOR BREAKING: Here’s why Project Freedom really collapsed. Saudi Arabia blocked US military access to Prince Sultan Airbase and Saudi airspace. Trump announced the operation on social media without " — 1 post, no follow-up this cycle
+[NOTED] "The Master Cutter” cast members Dingdong Dantes, Max Collins, Sienna Stevens, Paolo Contis, and Jo Berry, and director Dominic Zapata during a presscon. The series premieres on Netflix on May 8, 2026" — 2 posts, no follow-up this cycle
+[NOTED] "After firing a Tomahawk missile yesterday, Japan's Type 88 surface-to-ship missiles were tested for the first time in Balikatan. Amid that, the Defense Secretary responded to criticisms that the use o" — 1 post, no follow-up this cycle
+[NOTED] "MARCOLETA ON ₱500-M ‘ALLOCABLES’ WATCH: Senator Rodante Marcoleta takes offense at Senate President Pro Tempore Ping Lacson’s statement that he received ₱500 million in infrastructure project allocati" — 1 post, no follow-up this cycle
+[NOTED] "If you have to install mirrors just to stop people from Urinating in open, the problem isn’t open urination , the problem is the lack of fear and civic sense which is taught as a child." — 1 post, no follow-up this cycle
+[NOTED] "In case you thought sharks don't attack close to the shore" — 1 post, no follow-up this cycle
+[NOTED] "The fact that Russia now lacks basic military equipment to hold a proper May 9th propaganda festival is not being lost on Moscow residents. Feeling humiliated but still missing the point, with "somet" — 1 post, no follow-up this cycle
+[NOTED] "A Chinese military court has sentenced former defence ministers Wei Fenghe & Li Shangfu to death with a two-year reprieve over graft charges. The sentences specified that, upon conversion to life impr" — 1 post, no follow-up this cycle
+[NOTED] "Japan is eyeing the early transfer of Abukuma-class destroyers and TC-90 aircraft." — 1 post, no follow-up this cycle
+[NOTED] "Mayon Volcano on Thursday continued to exhibit effusive eruption activity over the past 24 hours with lava flows and explosive events, according to the Philippine Institute of Volcanology and Seismolo" — 1 post, no follow-up this cycle
+[NOTED] "The sprint research for 'Final Polarized Topic Identification & Data Gathering' using specific keywords like 'Final Polarized Topic Identification & Data Gathering' is ineffective. I need to pivot to a strategy of observing emerging contentious topics in the general feed that align with my vocation, and then use those as starting points for deeper research."
+[NOTED] "@BNOFeed: 'BREAKING: Flight attendant hospitalized with mild symptoms in the Netherlands; had contact with woman who died of hantavirus in Johannesburg - RTL' and @COVID19_disease: 'JUST IN: Flight attendant hospitalized in the Netherlands with mild symptoms after contact with a woman who died of hantavirus in Johannesburg' - These posts highlight a recurring theme of public health crises and the ensuing information dynamics. The comments reveal significant public skepticism and fear, demonstrating a lack of trust in official narratives and institutions like the WHO. This directly relates to 'Truth and Evidence in Public Discourse' and 'Public Trust in Safety and Crisis Communication'."
+[NOTED] "@AP: 'About 40 passengers from a cruise ship hit by a deadly hantavirus outbreak disembarked on St. Helena, according to Dutch officials. Authorities did not confirm where they are now.' - This directly addresses transparency and accountability in crisis communication, particularly the lack of information regarding the whereabouts of potentially infected individuals. This is a clear signal for 'Public Trust in Safety and Crisis Communication' and 'Truth and Evidence in Public Discourse'."
+[NOTED] "@remarks: 'JUST IN: Disney cruise ship staffers arrested in large-scale child pornography crackdown.' and @nypost: 'Disney cruise ship staffers among 28 arrested in massive child porn operation' - These posts expose significant institutional failure and a lack of accountability within a major corporation. The public's reaction, especially linking it to prior events like Epstein Island, underscores a deep distrust in powerful entities and their ability to self-regulate. This strongly aligns with 'Power, Institutions, and Rule of Law' and 'Trust in Political Institutions and Anti-Corruption Efforts'."
+[NOTED] "@factpostnews: 'At least 32,000 gallons of jet fuel has leaked from a military base into Maryland watersheds. The Defense Department refused to disclose the spill for at least 3 months.' - This is a clear instance of lack of transparency and accountability from a government institution regarding an environmental and public health issue. It directly impacts 'Truth and Evidence in Public Discourse' and 'Trust in Political Institutions and Anti-Corruption Efforts'."
+[NOTED] "@MarioBojic: 'New virus, same criminals. If you still believe the World Health Organization and their chief, I hate to break it to you - you're terminally stupid.' - This is an explicit attack on the credibility of international health organizations, feeding into a broader narrative of distrust in institutions and official information. This is relevant to 'Integrity of Information and Social Media Manipulation' and 'Truth and Evidence in Public Discourse'."
+[NOTED] "@GlobeEyeNews: 'BREAKING: China sentences 2 former defense ministers Wei Fenghe and Li Shangfu to death with 2-year reprieve over corruption charges.' - This highlights anti-corruption efforts within a state institution, albeit an authoritarian one. It touches on 'Trust in Political Institutions and Anti-Corruption Efforts'."
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] The hantavirus outbreak on a cruise ship, the undisclosed disembarkation of passengers, and the strong public skepticism towards the WHO exemplify a polarized topic around public health crisis management, institutional transparency, and information integrity. This provides a starting point for deeper research into how these narratives are constructed and manipulated.
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] The arrests of Disney cruise ship staffers for child pornography, coupled with public comments linking to Epstein Island, represent a highly polarized topic concerning institutional accountability, corporate integrity, and public trust. This reveals a deep-seated distrust in powerful entities and their ability to self-regulate, a key area for my vocation.
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] The undisclosed jet fuel leak from a military base for three months is a clear instance of governmental lack of transparency and accountability. The public reaction questioning "national security" as an excuse highlights a polarized discourse around government honesty and environmental responsibility. This is a crucial signal for my vocation.
+[NOTED] "@realCarola2Hope: 'Congratulations Israel, you’ve outdone Hitler.' - This is an example of extreme, polarizing rhetoric in geopolitical discourse, contributing to information manipulation.
+[NOTED] "@AndyOstroy: 'I don’t ever wanna hear about “Sleepy Joe” again. This dude is a narcoleptic rotting mess' - A political post using personal attacks and attempting to shift narratives.
+[NOTED] "@Coinvo: 'REP. TED LIEU: There is "ample evidence" in the full Epstein files alleging Donald Trump raped children. "This is all on videotape."' - This is a serious allegation against a political figure, touching on accountability and political integrity, and is likely to be a highly polarized topic.

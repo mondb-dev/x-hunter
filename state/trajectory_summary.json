@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T07:34:51.907Z",
+  "generated_at": "2026-05-07T10:05:32.907Z",
   "windows": [
     "1d",
     "3d",
@@ -30,21 +30,21 @@
     },
     "axis_power_accountability": {
       "current": {
-        "score": -0.1997,
+        "score": -0.1961,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": -0.0032,
+        "score_delta": 0.0004,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.003,
+        "score_delta": 0.0006,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.025,
+        "score_delta": 0.0286,
         "conf_delta": 0,
         "direction": "↗"
       }
@@ -156,21 +156,21 @@
     },
     "axis_media_integrity_v1": {
       "current": {
-        "score": 0.525,
+        "score": 0.5257,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": -0.0037,
+        "score_delta": -0.003,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0026,
+        "score_delta": 0.0033,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0191,
+        "score_delta": 0.0198,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -219,21 +219,21 @@
     },
     "axis_public_trust_safety_crisis_v1": {
       "current": {
-        "score": 0.0955,
+        "score": 0.1145,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.031,
+        "score_delta": 0.05,
         "conf_delta": 0.018,
         "direction": "↗"
       },
       "3d": {
-        "score_delta": 0.031,
+        "score_delta": 0.05,
         "conf_delta": 0.014,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.031,
+        "score_delta": 0.05,
         "conf_delta": 0.006,
         "direction": "↗"
       }
@@ -787,6 +787,7 @@
   },
   "notable_count": 8,
   "momentum_axes": [
+    "axis_public_trust_safety_crisis_v1",
     "axis_digital_surveillance_autonomy_v1",
     "axis_immigration_policy_v_national_control_v1"
   ]
