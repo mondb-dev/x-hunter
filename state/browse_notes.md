@@ -1,35 +1,41 @@
-
-[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @d_valentine87 claims Israel is shamelessly committing genocide, with a content warning on the post. This is a strong, emotionally charged claim related to geopolitical rhetoric and humanitarian concerns, highlighting potential narrative manipulation. (https://x.com/d_valentine87/status/2052187383783780365)
-[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @MarioNawfal reports Israeli forces killed 10 Palestinians in Gaza, despite a "ceasefire," highlighting a direct contradiction between official narratives and on-the-ground events. (https://x.com/MarioNawfal/status/2052121590494638092)
-[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @visegrad24 reports suicide drones attacking a U.S. military base in Erbil, Iraq, "reportedly launched from Iran." This highlights geopolitical tensions and the immediate framing of attribution, which can be a point of narrative control. (https://x.com/visegrad24/status/2052153389677420829)
-[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @RT_com reports a senior Gulf Arab official stating Trump "BADLY wants the war with Iran to END" but Iran won't cooperate, presenting a narrative about intentions and obstacles in geopolitical conflict resolution. (https://x.com/RT_com/status/2052155079973613618)
-[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @awkwardgoogle shows a student using ChatGPT to cheat on exams, raising questions about information integrity and systemic flaws in academic assessment. (https://x.com/awkwardgoogle/status/2052143724805722302)
-[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @DanielTurnerPTF questions Jennifer Granholm's past statement that the president does not control gas prices, pointing to a potential narrative shift or contradiction in political accountability. (https://x.com/DanielTurnerPTF/status/2052095760498385297)
-[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @SprinterPress reports an Iranian Parliament member discussing withdrawal from the NPT, indicating a potential shift in Iran's stance on international agreements and global power dynamics. (https://x.com/SprinterPress/status/2052159366514532363)
-[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @iAnonPatriot shares Bill Gates' prediction of a "far more severe" pandemic, which can influence public perception and policy, relating to information integrity and potential fear-based narratives. (https://x.com/iAnonPatriot/status/2052126259145035903)
-[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @BRICSinfo quotes the Iranian Parliament Speaker dismissing Trump's "Operation Trust Me Bro," directly countering a geopolitical narrative and highlighting diplomatic friction. (https://x.com/BRICSinfo/status/2052150136738926661)
-[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @AP reports Trump reviving the presidential fitness test in schools, a policy shift that could be examined for its underlying political motivations and public health narrative. (https://x.com/AP/status/2052147015191068985)
-[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @RT_com reports an effigy of Nigel Farage being "STABBED, strangled, and mock EXECUTED" with the account posting the video becoming "no longer accessible," raising questions about discourse polarization and content moderation. (https://x.com/RT_com/status/2052151881720283437)
-[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @HustleBitch_ speculates about "fake hands" on President Trump, an example of social media-driven conspiracy theories impacting information integrity. (https://x.com/HustleBitch_/status/2052066284381077946)
-[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @forallcurious reports passengers on a cruise ship with suspected Hantavirus being evacuated, highlighting public trust in safety and crisis communication. (https://x.com/forallcurious/status/2052127810563760270)
-[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @RT_com reports a DOJ investigation into a "hostile incident" involving a "Jewish couple HARASSED" outside a synagogue, an event that can be framed differently depending on the narrative. (https://x.com/RT_com/status/2052166699802083453)
-
-[NOTED] "imee marcos made comment, love jhoanna reaction, filipiniana hahahahaha, right jho" — 1 posts, no follow-up this cycle
-[NOTED] "officially opened first flagship store nairobi kenya expand presence across east africa, nike" — 1 posts, no follow-up this cycle
-[NOTED] "innocent man lolz, franco mabanta" — 1 posts, no follow-up this cycle
-[NOTED] "wolves prefer women, smell testosterone irritates, learned fact, men" — 1 posts, no follow-up this cycle
-[NOTED] "genes abilities etc, stiff teenage hair, wants piss off, daughter millionaire" — 1 posts, no follow-up this cycle
-[NOTED] "guy caught camera allegedly trying haggle, read every counter offer, face lowballing way, somehow both funny" — 1 posts, no follow-up this cycle
-[NOTED] "bts talks spanish mexican army, telling, missed, much" — 1 posts, no follow-up this cycle
-[NOTED] "days cancer treatment willie finally, bell way willie, ring" — 1 posts, no follow-up this cycle
-[NOTED] "lady wins, getting hole" — 1 posts, no follow-up this cycle
-[NOTED] "his father thought his son, embarrassed" — 1 posts, no follow-up this cycle
-[NOTED] "coast guard rescue swimmers, training pool" — 1 posts, no follow-up this cycle
-[NOTED] "think, redhead, boss, usual" — 1 posts, no follow-up this cycle
-[NOTED] "forecasters predict super nino conditions during, hotter drier weather across much asia, rain parts north, https reut 4tthqkm" — 1 posts, no follow-up this cycle
-[NOTED] "jeffrey epstein, thought" — 1 posts, no follow-up this cycle
-[NOTED] "hamer tribe omo valley ethiopia, goat traditional fever cures, breath" — 1 posts, no follow-up this cycle
-[NOTED] "advertise watches" — 1 posts, no follow-up this cycle
-[NOTED] "years" — 1 posts, no follow-up this cycle
-[NOTED] "ever see shotgun hinge pops left, savage door breaching training, cops dropped, right sides" — 1 posts, no follow-up this cycle
-[NOTED] "store picked stuffed toy, people came together buy, stray dog walked" — 1 posts, no follow-up this cycle
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @gmanews reported that Iran is studying America's peace proposal to end the war in the Middle East. This is a significant geopolitical development with potential for narrative shaping around peace and conflict resolution.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @TheOfficerTatum posted about a Texas father shooting and killing a carjacker in self-defense, which Garland police ruled as justified. This touches on issues of public safety and the application of law, with a strong framing around justification.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @QuantumGuard17's post highlights concerns about a Somali Maine State Rep prioritizing taxpayer money to Somalia, raising questions about political loyalty, potential misuse of public funds, and political integrity. The post uses emotionally charged language ("INFURIATING").
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @omarsuleiman condemned the mocking of Palestinian parents, emphasizing dehumanizing rhetoric in geopolitical conflicts and humanitarian concerns. This is a strong signal for the intersection of geopolitical rhetoric and human rights.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @Its_ereko reported on President Paul Kagame and President Duma Boko signing 6 key bilateral agreements in Gaborone, indicating shifts in international relations and potentially global power realignments.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @ShitpostGate's viral post about CNN and CN being owned by the same company, with comments expressing surprise, touches on media ownership, public perception, and potential for information manipulation.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @BGatesIsaPyscho expressed suspicion about a Hantavirus cruise ship evacuation, linking it to "vaccin" comments, which reflects distrust in official narratives and concerns about public health communication.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @MarioNawfal reported on a "salty woman" calling the police on a man for catching a large fish, with the officer admiring the fish instead. This highlights public perception of authority and trivial complaints versus actual law enforcement.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @WallStreetApes reported residents near a Microsoft Data Center experiencing a constant high-pitched hum, raising questions about corporate accountability, environmental impact, and public health concerns.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @lolitascak3 shared a disturbing story about a Korean man stabbing a girl, citing boredom as the motive, which represents a breakdown of societal norms and extreme disengagement.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @CarterAva89405 reported a man being accused of stealing after an ATM glitched and dispensed money, raising questions about institutional fairness, accountability in automated systems, and how financial institutions handle errors.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @rawsalerts released a purported Jeffrey Epstein suicide note, which sparked debate about its authenticity and the ongoing narrative surrounding his death, touching on media integrity and official narratives.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @alifarhat79 posted a video metaphorically depicting "Trump threatening Iran for weeks", which is relevant to geopolitical rhetoric and the framing of international relations.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @ThayzzySmith reported on a brutal rape in India, advising women not to go there, raising serious human rights concerns and questions about societal safety and the protection of vulnerable populations. The post uses strong, emotionally charged language.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @Emmy72831 shared a video and comment about a man "following someone's butt," which could be interpreted as a commentary on inappropriate public conduct or societal expectations regarding personal space.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @Ranakas14919944 posted a video about a "dog mother" forcing her "daughter" to do "wrong things," which is a highly emotional and potentially manipulative post, touching on exploitation and human rights.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @gmanews reported that Meralco will comply with an order not to disconnect electricity for customers who cannot pay, which relates to institutional accountability and social welfare.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @EricLDaugh reported a large federal raid on a Sinaloa cartel fentanyl and meth hotbed in Los Angeles, indicating government action against organized crime and drug trafficking.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @RepFine called for the expulsion of Rep. Ilhan Omar and a ban on dual citizens serving in Congress, alleging immigration fraud. This strongly relates to political integrity, accountability, and national loyalty.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @ABSCBNNews reported VP Sara Duterte maintaining she is not a 'vindictive' politician amid questions of accountability or removing dissenters, directly addressing political integrity and power dynamics.
+[SPRINT: research] [CURIOSITY: sprint_continuous_discourse_monitoring_for_repo] @gmanews reported Sen. Marcoleta allegedly received ₱500M in 'allocables', sparking a fight with Sen. Lacson. This is a clear signal for political trust, corruption, and institutional oversight.
+[NOTED] "fire in Parañaque City" — 1 post, no follow-up this cycle
+[NOTED] "Mt. Mayon Volcano update" — 1 post, no follow-up this cycle
+[NOTED] "tropical storm Hagupit" — 1 post, no follow-up this cycle
+[NOTED] "Porsche owners tweet" — 1 post, no follow-up this cycle
+[NOTED] "superhero video" — 1 post, no follow-up this cycle
+[NOTED] "muddling video" — 1 post, no follow-up this cycle
+[NOTED] "Henry Cavill career struggles" — 1 post, no follow-up this cycle
+[NOTED] "cats don't like medicine" — 1 post, no follow-up this cycle
+[NOTED] "Tour of Luzon 2026" — 1 post, no follow-up this cycle
+[NOTED] "cat fighting lion AI-generated" — 1 post, no follow-up this cycle
+[NOTED] "Monkey saves baby rabbit" — 1 post, no follow-up this cycle
+[NOTED] "Body's Reaction After Cutting Out Sugar" — 1 post, no follow-up this cycle
+[NOTED] "love again blessing" — 1 post, no follow-up this cycle
+[NOTED] "Gaston harassment video" — 1 post, no follow-up this cycle
+[NOTED] "Pope's gay anthem Benny Hill mashup" — 1 post, no follow-up this cycle
+[NOTED] "homeless dog rescued" — 1 post, no follow-up this cycle
+[NOTED] "Marikina shoes" — 1 post, no follow-up this cycle
+[NOTED] "Critically endangered Sawfish" — 1 post, no follow-up this cycle
+[NOTED] "Street racer takeover Bay Area" — 1 post, no follow-up this cycle
+[NOTED] "poor cat" — 1 post, no follow-up this cycle

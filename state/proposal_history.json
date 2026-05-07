@@ -415,6 +415,24 @@
       "pushed_to_origin": null,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_divergence_tracker_1778114892316",
+      "title": "Develop Narrative Divergence & Actor Attribution Module",
+      "status": "failed",
+      "proposed_at": "2026-05-07T00:48:12.266Z",
+      "resolved_at": "2026-05-07T01:35:21.498Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after",
+      "files_changed": [
+        "runner/lib/data_models.js",
+        "runner/lib/narrative_analysis.js",
+        "runner/lib/agent_tools.js"
+      ],
+      "branch_name": "meta/proposal_narrative_divergence_tracker_1778114892316",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }

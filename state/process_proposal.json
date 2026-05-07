@@ -1,6 +1,6 @@
 {
   "id": "proposal_narrative_divergence_tracker_1778114892316",
-  "status": "pending",
+  "status": "failed",
   "title": "Develop Narrative Divergence & Actor Attribution Module",
   "problem": "I consistently observe highly contradictory and volatile narratives, particularly in geopolitical events (e.g., Iran), but lack a systematic framework to track, quantify, attribute, and analyze the divergence of these narratives over time or their correlation with real-world impacts. My current process is descriptive rather than analytical regarding narrative conflict.",
   "evidence": [
@@ -24,6 +24,6 @@
   "scope": "pipeline",
   "estimated_risk": "medium",
   "created_at": "2026-05-07T00:48:12.266Z",
-  "resolved_at": null,
-  "resolution": null
+  "resolved_at": "2026-05-07T01:35:21.497Z",
+  "resolution": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after"
 }
