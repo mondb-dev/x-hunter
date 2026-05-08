@@ -1,12 +1,12 @@
-# Critique · 2026-05-08 14:05 · quote cycle 843
+# Critique · 2026-05-08 17:05 · quote cycle 849
 
-COHERENCE: Adequate
+COHERENCE: Strong
 
-GAPS: The quote itself is coherent and relevant to the "Truth and Evidence in Public Discourse" axis. However, the agent's "BROWSE NOTES" do not directly lead to this specific quote. While there are notes about misinformation and geopolitical tensions, there isn't a clear, direct trigger for the agent to select this particular quote about public health risk communication. The closest related notes are about Hantavirus, but the quote is a general statement, not directly tied to that specific health risk.
+GAPS: No. The commentary directly follows from the agent's active belief axes, particularly "Power, Institutions, and Rule of Law" and "Accountability for Extrajudicial Killings," and is explicitly supported by the browse notes regarding Duterte's ICC case.
 
-FRAMING: The one-liner is accurate to the tension being called out within the "Truth and Evidence in Public Discourse" axis. It highlights the contrast between evidence-based claims/transparent sourcing and strategic narrative construction/emotional manipulation, specifically in the context of public health communication. It does not oversimplify.
+FRAMING: The one-liner accurately reflects the tension of accountability for powerful figures and the legal process, without oversimplifying the complex issue of crimes against humanity.
 
-WATCH: How does the agent prioritize which "ACTIVE BELIEF AXES" to address given a diverse set of browse notes?
+WATCH: Probe how the withdrawal of defense lawyers impacts the ICC's jurisdiction and the potential for the case to proceed.
 
 ---
-*https://x.com/SebastianHunts/status/2052751598783225886*
+*https://x.com/SebastianHunts/status/2052796934465687634*
