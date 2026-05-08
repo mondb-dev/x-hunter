@@ -433,6 +433,25 @@
       "pushed_to_origin": null,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_threat_solution_narrative_tracker_1778202773088",
+      "title": "Develop 'Threat-Solution Narrative' Pattern Detector",
+      "status": "merged",
+      "proposed_at": "2026-05-08T01:12:53.038Z",
+      "resolved_at": "2026-05-08T02:05:16.182Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "agent_prompts/observation_analysis_prompt.txt",
+        "runner/lib/narrative_tracker.js",
+        "state/belief_state.json",
+        "state/journal_schema.json"
+      ],
+      "branch_name": "meta/proposal_threat_solution_narrative_tracker_1778202773088",
+      "merge_commit": "ac8f449c34be269919faf4cc29485f11ca6c93fc",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }
