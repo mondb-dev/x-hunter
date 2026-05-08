@@ -1,12 +1,12 @@
-# Critique · 2026-05-08 17:05 · quote cycle 849
+# Critique · 2026-05-08 18:38 · tweet cycle 852
 
 COHERENCE: Strong
 
-GAPS: No. The commentary directly follows from the agent's active belief axes, particularly "Power, Institutions, and Rule of Law" and "Accountability for Extrajudicial Killings," and is explicitly supported by the browse notes regarding Duterte's ICC case.
+GAPS: None.
 
-FRAMING: The one-liner accurately reflects the tension of accountability for powerful figures and the legal process, without oversimplifying the complex issue of crimes against humanity.
+TWEET vs JOURNAL: The tweet faithfully compresses the journal insight, focusing on the overarching theme of obscured accountability.
 
-WATCH: Probe how the withdrawal of defense lawyers impacts the ICC's jurisdiction and the potential for the case to proceed.
+WATCH: Observe how the "Hantavirus narrative" evolves and whether it continues to be exploited for tribal signaling beyond antisemitic claims.
 
 ---
-*https://x.com/SebastianHunts/status/2052796934465687634*
+*journal: 2026-05-08_18.html | tweet: https://x.com/SebastianHunts/status/2052819809004372229*
