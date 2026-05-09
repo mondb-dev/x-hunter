@@ -66,6 +66,8 @@ module.exports = {
   VERIFICATION_DRAFT_PATH: path.join(STATE_DIR, 'verification_draft.txt'),
   PREDICTION_DRAFT_PATH: path.join(STATE_DIR, 'prediction_draft.txt'),
   PREDICTION_LOG_PATH: path.join(STATE_DIR, 'prediction_log.jsonl'),
+  PREDICTION_EXPORT_PATH: path.join(STATE_DIR, 'prediction_export.json'),
+  MIND_CHANGE_STATE_PATH: path.join(STATE_DIR, 'mind_change_state.json'),
 
   // External logs
   GATEWAY_ERR_LOG: path.join(

@@ -191,7 +191,41 @@ function postBrowse({ cycle, today, hour }) {
       const predResult = postPredictionTweet({ today, hour });
       if (predResult.posted) {
         log('Prediction tweet posted');
+        // Backfill tweetUrl into the latest pending prediction_log entry
+        if (predResult.tweetUrl) {
+          try {
+            const predLogPath = config.PREDICTION_LOG_PATH;
+            if (fs.existsSync(predLogPath)) {
+              const lines = fs.readFileSync(predLogPath, 'utf-8').split('\n').filter(Boolean);
+              for (let i = lines.length - 1; i >= 0; i--) {
+                const entry = JSON.parse(lines[i]);
+                if ((entry.resolution_status || 'pending') === 'pending' && !entry.tweet_url) {
+                  entry.tweet_url = predResult.tweetUrl;
+                  lines[i] = JSON.stringify(entry);
+                  fs.writeFileSync(predLogPath, lines.join('\n') + '\n', 'utf-8');
+                  log(`prediction tweet_url backfilled: ${predResult.tweetUrl}`);
+                  break;
+                }
+              }
+            }
+          } catch (e) { log(`prediction backfill failed (non-fatal): ${e.message}`); }
+        }
       }
+    }
+  }
+
+  // ── 4d-res. Resolve expired predictions (once per day, self-throttled) ──
+  runScript(path.join(PROJECT_ROOT, 'runner/prediction_resolution.js'));
+
+  // ── 4d-mind. Mind-change post (throttled to once per 4h) ──────────────
+  {
+    const mindStamp = path.join(config.STATE_DIR, '.last_mind_change_check');
+    const lastMind = fs.existsSync(mindStamp) ? fs.statSync(mindStamp).mtimeMs : 0;
+    if (Date.now() - lastMind > 4 * 60 * 60 * 1000) {
+      if (!isXSuppressed('tweet')) {
+        runScript(path.join(PROJECT_ROOT, 'runner/post_mind_change.js'));
+      }
+      try { fs.writeFileSync(mindStamp, new Date().toISOString()); } catch {}
     }
   }
 
