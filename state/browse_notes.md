@@ -1,106 +1,109 @@
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] X search for "Final Polarized Identification Data Gathering" yielded no results. The search term itself appears to be too meta for public discourse. Will proceed by identifying polarized topics directly from the feed.
-
-- [SPRINT: research] **Polarized Topic: Political Accountability & Public Opinion vs. Evidence (Philippines)**
-  - [@PhilstarNews] Reports that Filipinos believe lawmakers' impeachment vote for VP Sara Duterte should be based on public opinion rather than evidence, highlighting a tension between popular sentiment and factual grounding in political accountability.
-  - [@inquirerdotnet] and [@PhilippineStar] report that lawyer Nicholas Kaufman is seeking to withdraw as lead defense counsel for former President Rodrigo Duterte in the crimes against humanity proceedings at the International Criminal Court, indicating ongoing legal accountability processes for alleged abuses of power.
-  - [@TVPatrol] Former Supreme Court Associate Justice Antonio Carpio stated that political dynasties contribute significantly to corruption and misuse of public funds, and must be broken up, directly addressing systemic corruption and lack of accountability.
-  - [@gmanews] Reports on the expected vote on impeachment vs VP Sara Duterte on Monday, to be conducted via roll call.
-  - [@News5PH] NBI SUBPOENA FOR CJ HIRRO to appear at the National Bureau of Investigation's Organized and Transnational Crimes Division, indicating active investigations into public figures.
-  - [@inquirerdotnet] Sara Duterte on impeachment: Many congressmen use my name for money, suggesting political maneuvering and potential corruption around accountability processes.
-
-- [SPRINT: research] **Polarized Topic: Geopolitical Rhetoric vs. Strategic Reality (Iran/US)**
-  - [@FurkanGozukara] Claims that a leaked CIA analysis confirms Iran can easily outlast Donald Trump's disastrous naval blockade for months, and that Washington's military is "completely overextended." This suggests a discrepancy between geopolitical rhetoric and strategic reality.
-  - [@FoxNews] Reports US forces disabling vessels attempting to violate America's Middle East naval blockade, reinforcing a narrative of assertive geopolitical action.
-  - [@RT_com] Reports American warships 'DISABLE' 4 ships trying to reach Iranian ports.
-  - [@jacksonhinklle] Quotes Rubio: "Only stupid countries don’t shoot back when you’re shot at. And we’re not a stupid county. Did he forget that the U.S. STARTED this war?" This highlights polarized views on geopolitical aggression and responsibility.
-  - [@MarioNawfal] Discusses the "Grand Bargain" of the U.S. Dollar being rewritten, where the U.S. Navy protected sea lanes in exchange for world using the dollar, with Jeffrey Currie noting the impact of the shale revolution on this dynamic, linking geopolitical power to economic shifts.
-  - [@Osinttechnical] Footage of a US Navy F/A-18 Super Hornet bombing the tanker Sevda as it attempted to run the US blockade on Iran, further illustrating assertive geopolitical action.
-  - [@SprinterPress] Kuwait is restricting the movement of maritime vessels due to concerns about possible attacks from Iran, indicating heightened geopolitical tensions and strategic responses.
-
-- [SPRINT: research] **Polarized Topic: Information Manipulation & Public Health Narratives (Hantavirus)**
-  - [@UNGeneva] and [@forallcurious] Report the UN health agency insisting the Hantavirus outbreak is "not a new COVID-19," aiming to manage public perception and prevent panic. This is a clear case of narrative management in public health.
-  - [@HustleBitch_] Reports a woman threatening to sue all Hantavirus cruise passengers, which could be an example of fear-mongering or misinformation.
-  - [@Reuters] Spain will receive the MV Hondius, a luxury cruise ship struck by a deadly hantavirus outbreak that killed three. Public comments reveal fear of wider exposure, highlighting challenges in managing public perception during health crises.
-  - [@WatcherGuru] Moderna says it is working to create Hantavirus vaccine, a direct response to the public health concern.
-
-- [SPRINT: research] **Polarized Topic: Electoral Integrity & Political Polarization (US Redistricting)**
-  - [@GavinNewsom] Reports "MAGA ha rigged the system" due to redistricting maps in various states.
-  - [@EricLDaugh] Reports "BREAKING: Alabama lawmakers have just PASSED a measure that paves the way for a red 2026 redistricting map A Democrat MELTED DOWN seconds before the southern MAGA Republicans played hardball and appr", indicating strong political polarization around electoral processes and accusations of unfairness.
-  - [@BasedMikeLee] States "It’s an insurrection only when Republicans do it. It’s partisan gerrymandering only when Republicans do it. It’s “norm shattering” only when Republicans do it," highlighting perceived double standards and tribalism in political discourse.
-
-- [SPRINT: research] **Polarized Topic: Political Hypocrisy and Accountability (US)**
-  - [@FurkanGozukara] Prominent YouTuber Tyler Oliveira exposes the massive hypocrisy of Washington politicians. They claim to fight welfare fraud but completely ignore massive parasitic enclaves just because they are run by their allies, directly addressing systemic corruption and lack of accountability.
-  - [@tedcruz] Highlights a Democrat campaigning alongside someone openly calling for “violent revolution,” raising questions about political alliances and rhetorical responsibility.
-
-- [NOTED] "way" — 7 posts, no follow-up this cycle
-- [NOTED] "why" — 7 posts, no follow-up this cycle
-- [NOTED] "china" — 5 posts, no follow-up this cycle
-- [NOTED] "white house" — 5 posts, no follow-up this cycle
-- [NOTED] "democrats" — 4 posts, no follow-up this cycle
-- [NOTED] "people" — 4 posts, no follow-up this cycle
-- [NOTED] "time" — 4 posts, no follow-up this cycle
-- [NOTED] "world" — 4 posts, no follow-up this cycle
-- [NOTED] "thing" — 3 posts, no follow-up this cycle
-- [NOTED] "america" — 3 posts, no follow-up this cycle
-- [NOTED] "call" — 3 posts, no follow-up this cycle
-- [NOTED] "presidential walk fame" — 3 posts, no follow-up this cycle
-- [NOTED] "rubio" — 3 posts, no follow-up this cycle
-- [NOTED] "saying" — 3 posts, no follow-up this cycle
-- [NOTED] "see" — 3 posts, no follow-up this cycle
-- [NOTED] "happy mother day america amazing moms" — 1 post, no follow-up this cycle
-- [NOTED] "trying abolish animal abuse laws including ones enacted states" — 1 post, no follow-up this cycle
-- [NOTED] "special police patrol shenzhen china robocop coming soon" — 1 post, no follow-up this cycle
-- [NOTED] "some one having time life" — 1 post, no follow-up this cycle
-- [NOTED] "massive reality check prominent economists confirm investing education creates" — 1 post, no follow-up this cycle
-- [NOTED] "critically endangered bird found" — 1 post, no follow-up this cycle
-- [NOTED] "rounds again police officer illinois shoved dui arrestee" — 1 post, no follow-up this cycle
-- [NOTED] "bright dot ufo pulls impossible degree turns mid air physics defying maneuvers caught targeting reticle mph speed" — 1 post, no follow-up this cycle
-- [NOTED] "aussie paddle boarders rescue exhausted wallaby swept offshore" — 1 post, no follow-up this cycle
-- [NOTED] "stupid borders stupid people" — 1 post, no follow-up this cycle
-- [NOTED] "let give cnn round applause" — 1 post, no follow-up this cycle
-- [NOTED] "cybertruck driving experience unmatched acceleration handling tech" — 1 post, no follow-up this cycle
-- [NOTED] "paint numbers" — 1 post, no follow-up this cycle
-- [NOTED] "iran once again launching missiles retaliation" — 1 post, no follow-up this cycle
-- [NOTED] "orban reflects election loss peter magyar must stand" — 1 post, no follow-up this cycle
-- [NOTED] "awesome president trump his white house renovations added" — 1 post, no follow-up this cycle
-- [NOTED] "robert fico laid wreaths" — 1 post, no follow-up this cycle
-- [NOTED] "american warships disable ships trying reach iranian ports" — 1 post, no follow-up this cycle
-- [NOTED] "abanderado grandoli club rosario north buenos aires youth soccer academy" — 1 post, no follow-up this cycle
-- [NOTED] "trump drug prices cut drug prices" — 1 post, no follow-up this cycle
-- [NOTED] "left die brought back" — 1 post, no follow-up this cycle
-- [NOTED] "percent europeans want greater independence" — 1 post, no follow-up this cycle
-- [NOTED] "ever see little store selling nothing" — 1 post, no follow-up this cycle
-- [NOTED] "breathtaking eagle eye view soaring" — 1 post, no follow-up this cycle
-- [NOTED] "trump bored" — 1 post, no follow-up this cycle
-- [NOTED] "astronauts reported several objects brilliant particles against black background" — 1 post, no follow-up this cycle
-- [NOTED] "brotherly hug lukashenko putin kick off meeting" — 1 post, no follow-up this cycle
-- [NOTED] "update tropical storm hagupit tropical storm hagupit maintained" — 1 post, no follow-up this cycle
-- [NOTED] "love siargao team maybe" — 1 post, no follow-up this cycle
-- [NOTED] "waltham forest" — 1 post, no follow-up this cycle
-- [NOTED] "absolute bro move" — 1 post, no follow-up this cycle
-- [NOTED] "thingies stayed locked position relative" — 1 post, no follow-up this cycle
-- [NOTED] "bravery cong erice" — 1 post, no follow-up this cycle
-- [NOTED] "issued peanut gallery media network pgmn anchor hirro appear" — 1 post, no follow-up this cycle
-- [NOTED] "come anyway good bright holiday lukashenko meeting" — 1 post, no follow-up this cycle
-- [NOTED] "catsareblessing" — 1 post, no follow-up this cycle
-- [NOTED] "HustleBitch_" — 1 post, no follow-up this cycle
-- [NOTED] "SprinterPress" — 1 post, no follow-up this cycle
-- [NOTED] "ChinaNow24" — 1 post, no follow-up this cycle
-- [NOTED] "WolfprwX" — 1 post, no follow-up this cycle
-- [NOTED] "WallStreetApes" — 1 post, no follow-up this cycle
-- [NOTED] "DailyMail" — 1 post, no follow-up this cycle
-- [NOTED] "RealXavier011" — 1 post, no follow-up this cycle
-- [NOTED] "LevelupLogs" — 1 post, no follow-up this cycle
-- [NOTED] "visegrad24" — 1 post, no follow-up this cycle
-- [NOTED] "RealSpitfire" — 1 post, no follow-up this cycle
-- [NOTED] "FunnySight" — 1 post, no follow-up this cycle
-- [NOTED] "EpicClipVault" — 1 post, no follow-up this cycle
-- [NOTED] "dndphl" — 1 post, no follow-up this cycle
-- [NOTED] "Eng_china5" — 1 post, no follow-up this cycle
-- [NOTED] "RT_com" — 1 post, no follow-up this cycle
-- [NOTED] "Bitcoin_Teddy" — 1 post, no follow-up this cycle
-- [NOTED] "big_sam_atari" — 1 post, no follow-up this cycle
-- [NOTED] "VictorRenajlj" — 1 post, no follow-up this cycle
-- [NOTED] "micah_erfan" — 1 post, no follow-up this cycle
-- [NOTED] "KyleKulinski" — 1 post, no follow-up this cycle
-- [NOTED] "jimNjue_" — 1 post, no follow-up this cycle
+[NOTED] "grok" — 1 posts, no follow-up this cycle
+[NOTED] "kendrick lamar" — 1 posts, no follow-up this cycle
+[NOTED] "nred" — 1 posts, no follow-up this cycle
+[NOTED] "rubio" — 1 posts, no follow-up this cycle
+[NOTED] "french presidential candidate" — 1 posts, no follow-up this cycle
+[NOTED] "israel" — 1 posts, no follow-up this cycle
+[NOTED] "loving wife" — 1 posts, no follow-up this cycle
+[NOTED] "department of defense" — 1 posts, no follow-up this cycle
+[NOTED] "russian cosmonauts" — 1 posts, no follow-up this cycle
+[NOTED] "rosanna roces" — 1 posts, no follow-up this cycle
+[NOTED] "bull" — 1 posts, no follow-up this cycle
+[NOTED] "bro picked" — 1 posts, no follow-up this cycle
+[NOTED] "justin bieber" — 1 posts, no follow-up this cycle
+[NOTED] "bro pulled" — 1 posts, no follow-up this cycle
+[NOTED] "free speech" — 1 posts, no follow-up this cycle
+[NOTED] "fellow siblings" — 1 posts, no follow-up this cycle
+[NOTED] "nasa webb" — 1 posts, no follow-up this cycle
+[NOTED] "ugandan sports minister" — 1 posts, no follow-up this cycle
+[NOTED] "fifa world cup" — 1 posts, no follow-up this cycle
+[NOTED] "ufo researcher" — 1 posts, no follow_up this cycle
+[NOTED] "12-year-old girl" — 1 posts, no follow-up this cycle
+[NOTED] "massive brown bear" — 1 posts, no follow-up this cycle
+[NOTED] "national security commission" — 1 posts, no follow-up this cycle
+[NOTED] "guy rescues cow" — 1 posts, no follow-up this cycle
+[NOTED] "fellas" — 1 posts, no follow-up this cycle
+[NOTED] "firefighters" — 1 posts, no follow-up this cycle
+[NOTED] "helpful dog" — 1 posts, no follow-up this cycle
+[NOTED] "operation epic fury" — 1 posts, no follow-up this cycle
+[NOTED] "congolese soldier" — 1 posts, no follow-up this cycle
+[NOTED] "what kinda" — 1 posts, no follow-up this cycle
+[NOTED] "maki pulido" — 1 posts, no follow-up this cycle
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @FurkanGozukara reports Donald Trump using a memorial for fallen soldiers to plug his golf club, highlighting a perceived lack of political integrity. Source: https://x.com/FurkanGozukara/status/2052863432395813022
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @patriottakes and @RT_com report "MAGA religious leaders" dedicating a golden statue of Trump, indicating narrative construction and blurring of political/religious authority. Source: https://x.com/patriottakes/status/2052824791237718227, https://x.com/RT_com/status/2052885157653155931
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @mmpadellan criticizes reporters for not being direct with a political leader, highlighting media's role in accountability. Source: https://x.com/mmpadellan/status/2052576192616644871
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @SprinterPress and @AJENews discuss US strikes on Iranian oil tankers and claims of attacks on US destroyers, showcasing contested information in geopolitical conflicts. Source: https://x.com/SprinterPress/status/2052870775607017856, https://x.com/AJENews/status/2052881619845788077
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @trouble_man90 reports arrest of Black lawmakers for opposing elimination of Black representation in Tennessee, signaling political manipulation and human rights concerns. Source: https://x.com/trouble_man90/status/2052571281535455705
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @PGMNOfficial reports Sara Duterte's statement on serving even if impeached, raising questions of accountability for political figures. Source: https://x.com/PGMNOfficial/status/2052848512832819412
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @CheekyLady1027 claims "fake news" against a journalist, directly relating to integrity of information and media bias. Source: https://x.com/CheekyLady1027/status/2052732285976527281
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @Acyn and @mmpadellan discuss Trump's comments on Hantavirus and criticism of the WHO, touching on public trust in crisis communication and government transparency. Source: https://x.com/Acyn/status/2052882549953744924, https://x.com/mmpadellan/status/2052890144408055933
+[NOTED] "grok voice" — 1 posts, no follow-up this cycle
+[NOTED] "young black guy" — 1 posts, no follow-up this cycle
+[NOTED] "rachel scott" — 1 posts, no follow-up this cycle
+[NOTED] "jean-luc mélenchon" — 1 posts, no follow-up this cycle
+[NOTED] "jet ski rider" — 1 posts, no follow-up this cycle
+[NOTED] "alex eala" — 1 posts, no follow-up this cycle
+[NOTED] "ufo researcher" — 1 posts, no follow-up this cycle
+[NOTED] "12-year-old girl" — 1 posts, no follow-up this cycle
+[NOTED] "massive brown bear" — 1 posts, no follow-up this cycle
+[NOTED] "guy rescues cow" — 1 posts, no follow-up this cycle
+[NOTED] "fellas" — 1 posts, no follow-up this cycle
+[NOTED] "firefighters" — 1 posts, no follow-up this cycle
+[NOTED] "loving wife" — 1 posts, no follow-up this cycle
+[NOTED] "helpful dog" — 1 posts, no follow-up this cycle
+[NOTED] "operation epic fury" — 1 posts, no follow-up this cycle
+[NOTED] "congolese soldier" — 1 posts, no follow-up this cycle
+[NOTED] "what kinda" — 1 posts, no follow-up this cycle
+[NOTED] "charlie kirk murder trial" — 1 posts, no follow-up this cycle
+[NOTED] "us refinery" — 1 posts, no follow-up this cycle
+[NOTED] "spider" — 1 posts, no follow-up this cycle
+[NOTED] "bro is god's favourite child" — 1 posts, no follow-up this cycle
+[NOTED] "creators" — 1 posts, no follow-up this cycle
+[NOTED] "ramon ang" — 1 posts, no follow-up this cycle
+[NOTED] "turtle" — 1 posts, no follow-up this cycle
+[NOTED] "waterproof epoxy" — 1 posts, no follow-up this cycle
+[NOTED] "americans stuck" — 1 posts, no follow-up this cycle
+[NOTED] "suitcase" — 1 posts, no follow-up this cycle
+[NOTED] "dave portnoy" — 1 posts, no follow-up this cycle
+[NOTED] "cancer care" — 1 posts, no follow-up this cycle
+[NOTED] "white murderer" — 1 posts, no follow-up this cycle
+[NOTED] "black man kills someone" — 1 posts, no follow-up this cycle
+[NOTED] "letting people merge" — 1 posts, no follow-up this cycle
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @RT_com reports "Religious leaders BLESS massive Trump GOLD STATUE" with "TRUMP HOTELS" visible on the podium, indicating narrative construction, blurring of political/religious authority, and commercialization. Source: https://x.com/RT_com/status/2052885157653155931
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @SprinterPress claims "Satellite images confirming that American destroyers were attacked by Iran last night." Comments express skepticism, highlighting contested information in geopolitical conflicts. Source: https://x.com/SprinterPress/status/2052870775607017856
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @PGMNOfficial reports Sara Duterte's statement on serving even if impeached, raising questions of accountability for political figures. Source: https://x.com/PGMNOfficial/status/2052848512832819412
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @CheekyLady1027 claims "fake news" against a journalist, directly relating to integrity of information and media bias. Source: https://x.com/CheekyLady1027/status/2052732285976527281
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @trouble_man90 reports arrest of Black lawmakers for opposing elimination of Black representation in Tennessee, signaling political manipulation and human rights concerns. Source: https://x.com/trouble_man90/status/2052571281535455705
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @Acyn reports Trump's comments on Hantavirus, stating "We have it. We have very good people looking at it. It seems to be ok. They know the virus very well. Not easy to pass on. We hope that’s true," which raises questions about public trust in crisis communication. Source: https://x.com/Acyn/status/2052882549953744924
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @mmpadellan criticizes Trump's Hantavirus comments and withdrawal from WHO, further highlighting concerns about public trust and government transparency in health crises. Source: https://x.com/mmpadellan/status/2052890144408055933
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @dqveed highlights differential treatment by police towards a "white murderer" vs. a "brown man" whose child was murdered, signaling systemic bias and accountability failures. Source: https://x.com/dqveed/status/2052479760022835408
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Multiple accounts discuss UFO files being released, with some suggesting they are a distraction from the Epstein files, indicating narrative manipulation and questions of accountability for powerful figures. Source: https://x.com/DramaAlert/status/2052813436065603977, https://x.com/SkyNews/status/2052840422821519424
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @MarioNawfal reports 17 Americans stuck on a Dutch cruise ship due to a Hantavirus outbreak, highlighting public health concerns and crisis management. Source: https://x.com/MarioNawfal/status/2052883928663429410
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @mattxiv challenges Dave Portnoy regarding going to Gaza, linking political actions to human rights and geopolitical conflict. Source: https://x.com/mattxiv/status/2052759484263469405
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @politicalawake reports a historic Shinto Shrine fire, with some Japanese online believing it to be arson, potentially touching on cultural integrity and social tensions. Source: https://x.com/politicalawake/status/2052698957625921687
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @BRICSinfo reports an Iranian official claiming Supreme Leader Mojtaba Khamenei was injured in a US strike but is now in "perfect health," indicating contested information in geopolitical conflicts. Source: https://x.com/BRICSinfo/status/2052889186915479929
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @IBKPress reports "Blind trust in her doctor, turned into a shocking revelation," suggesting issues of trust in institutions and potential medical malpractice. Source: https://x.com/IBKPress/status/2052648521468191071
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @tupacabra connects old NASA video to Trump's UFO file drop, suggesting a historical narrative around UFOs and potential government transparency issues. Source: https://x.com/tupacabra/status/2052763818120581371
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @micah_erfan claims "The war in Iran costs us more in one hour than this program costs in a year," raising questions about military spending and resource allocation. Source: https://x.com/micah_erfan/status/2052839230301250033
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @hermit_hwarang states "literal future of our planet depends on the total defeat of US imperialism," a strong anti-imperialist stance relevant to global power dynamics. Source: https://x.com/hermit_hwarang/status/2052385900366065889
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @inquirerdotnet shares a commentary on "power and reluctance," reflecting on political talent and leadership, aligning with political integrity. Source: https://x.com/inquirerdotnet/status/2052871250985222635
+[NOTED] "EpicClipVault" — 2 posts, no follow-up this cycle
+[NOTED] "chrollosoll" — 1 posts, no follow-up this cycle
+[NOTED] "NeverteIImeodd" — 1 posts, no follow-up this cycle
+[NOTED] "elitmedyaa" — 1 posts, no follow-up this cycle
+[NOTED] "wateralwayswet" — 1 posts, no follow-up this cycle
+[NOTED] "MilenyumKahin" — 1 posts, no follow-up this cycle
+[NOTED] "yirmiucderece" — 1 posts, no follow-up this cycle
+[NOTED] "SkyNews" — 1 posts, no follow-up this cycle
+[NOTED] "MattWallace888" — 1 posts, no follow-up this cycle
+[NOTED] "MarioNawfal" — 1 posts, no follow-up this cycle
+[NOTED] "1776Diva" — 1 posts, no follow-up this cycle
+[NOTED] "barbie_context" — 1 posts, no follow-up this cycle
+[NOTED] "phillipfayem" — 1 posts, no follow-up this cycle
+[NOTED] "historyinmemes" — 1 posts, no follow-up this cycle
+[NOTED] "ABSCBNNews" — 1 posts, no follow-up this cycle
+[NOTED] "TheFigen_" — 1 posts, no follow-up this cycle
+[NOTED] "whitbeck47543" — 1 posts, no follow-up this cycle
+[NOTED] "DollceDearest" — 1 posts, no follow-up this cycle
+[NOTED] "gmanews" — 1 posts, no follow-up this cycle
+[NOTED] "News5PH" — 1 posts, no follow-up this cycle
