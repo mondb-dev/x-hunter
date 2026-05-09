@@ -1,79 +1,55 @@
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] No direct posts found for the specific sprint search query "Final Polarized Topic Identification Data Gathering" on X, indicating a need to refine search strategy for this task.
-[TENSION] Conflicting information on Hantavirus transmission. @MrImranPk reports WHO confirms 5 cases, "does not spread between humans". @A_M_R_M1 warns "may be transmitted from person to person through kissing, sharing drinks, or through coughing and sneezing." This directly impacts public trust in health information.
-[SIGNAL] Report of Israelis digging up a Palestinian grave in Jenin by @swilkinsonbc, citing proximity to an "illegal settlement". This is a highly provocative act with significant human rights and geopolitical implications.
-[SIGNAL] Report of an ongoing genocide in the Congo by @visegrad24, raising questions about selective media attention to humanitarian crises.
-[OBSERVATION] Geopolitical alignment: Russia sending drone components to Iran, as reported by @BRICSinfo and @GlobeEyeNews. This indicates shifting alliances and potential escalation.
-[OBSERVATION] Political discourse manipulation: Education Minister of Uttar Pradesh, Yogendra Upadhyay, summoned media for a "national emergency" that turned out to be a poem, as reported by @RoshanKrRaii, potentially trivializing serious issues.
-[OBSERVATION] Election integrity claims: @GavinNewsom claims Donald Trump and MAGA states are "rigging our elections and silencing voters." This is a significant accusation affecting trust in democratic processes.
-[OBSERVATION] Narrative manipulation in politics: @bncdotph claims an "effort to amplify narratives portraying VP Sara Duterte as “unstable,”" indicating a deliberate campaign to shape public perception.
-[TENSION] ICC and Duterte/Dela Rosa: Multiple posts (from @iSabongera, @JEPAYvonHOLST, @ABSCBNNews, @lahingpnoy, @EdenPelaez24, @TVPatrol, @imtheatan) discuss the International Criminal Court's involvement with former President Duterte and an alleged arrest warrant for Senator Bato dela Rosa, raising questions about accountability and national sovereignty. @PhilippineStar reports an ICC spokesperson stating "no public arrest warrants have been issued".
-[SIGNAL] Israeli settler blocks Palestinian ambulance: @IhabHassane reports a video showing an Israeli settler deliberately blocking a Palestinian ambulance in the West Bank, transporting a critically ill person. This highlights human rights concerns and geopolitical tensions.
-[OBSERVATION] ICE misconduct: @David_J_Bier reports ICE pulling a gun on a NY teenager, beating him, and then realizing they got the wrong guy, dumping him far from home, bloody and injured. This is a severe case of abuse of power and human rights violation.
-[NOTED] "UFOs piloted by aliens / Department of War released files" — 1 post, no follow-up this cycle.
-[NOTED] "Data center in New Jersey canceled due to residents" — 1 post, no follow-up this cycle.
-[NOTED] "IDF soldiers putting cigarettes in Virgin Mary statues" — 1 post, no follow-up this cycle.
-[NOTED] "North Korean troops march in Moscow" — 1 post, no follow-up this cycle.
-[NOTED] "Iran's response to US proposal" — 1 post, no follow-up this cycle.
-[NOTED] "US Congressman wants UFO videos declassified" — 1 post, no follow-up this cycle.
-[NOTED] "Pope Leo holds reliquary" — 1 post, no follow-up this cycle.
-[NOTED] "Palestinians run in central Gaza for marathon" — 1 post, no follow-up this cycle.
-[NOTED] "Military student proposes at Victory Day parade" — 1 post, no follow-up this cycle.
-[NOTED] "China produces robots for cleaning toilets" — 1 post, no follow-up this cycle.
-[NOTED] "Drone melts getting close-up of volcano" — 1 post, no follow-up this cycle.
-[NOTED] "Malaysia's King Sultan Ibrahim ENTERS Kremlin to meet Vladimir Putin" — 1 post, no follow-up this cycle.
-[NOTED] "Cat hasn't left wife's side after hospital" — 1 post, no follow-up this cycle.
-[NOTED] "Mother’s fury!!111 A crocodile learns the hard way not to mess with an elephant calf." — 1 post, no follow-up this cycle.
-[NOTED] "Two Pakistani Coast Guard personnel killed in an armed attack" — 1 post, no follow-up this cycle.
-[NOTED] "Man compares work helmets given to workers (yellow) and managers (red) in China" — 1 post, no follow-up this cycle.
-[NOTED] "Tech Expert Mervin Tan asks us to weigh the pros and cons of putting our data out there" — 1 post, no follow-up this cycle.
-[NOTED] "Cosmonaut made discovery, Soviet Union kept classified" — 1 post, no follow-up this cycle.
-[NOTED] "What happens if you chew gum everyday" — 1 post, no follow-up this cycle.
-[NOTED] "A couple was casually eating pizza on the street when an iguana wandered up" — 1 post, no follow-up this cycle.
-[NOTED] "A girl was going up in an elevator with her pet dog... Suddenly, smoke began to billow" — 1 post, no follow-up this cycle.
-[NOTED] "Packing tip from me to you" — 1 post, no follow-up this cycle.
-[NOTED] "Starbase is the greatest place on Earth!" — 1 post, no follow-up this cycle.
-[NOTED] "Botanical impression." — 1 post, no follow-up this cycle.
-[NOTED] "HES NOT EVEN FROM HERE" — 1 post, no follow-up this cycle.
-[NOTED] "ZackPolanski is spot on here, the Greens aren't splitting the left vote because this Labour party isn't left wing." — 1 post, no follow-up this cycle.
-[NOTED] "Israeli Navy commandos killing Hamas terrorists on October 7" — 1 post, no follow-up this cycle.
-[NOTED] "For the first time, a column of wives and mothers of participants in the Special Military Operation (SMO) marched through the square in Chita." — 1 post, no follow-up this cycle.
-[NOTED] "RELEASED ALREADY The founder of Peanut Gallery Media Network (PGMN), Franco Mabanta, and four others have been released" — 1 post, no follow-up this cycle.
-[NOTED] "100 years old and still the coolest person alive. Happy birthday, Sir David!" — 1 post, no follow-up this cycle.
-[NOTED] "Never thought hippo was so cute" — 1 post, no follow-up this cycle.
-[NOTED] "A prominent Buddhist monk has been arrested in Sri Lanka for allegedly sexually abusing an 11-year-old girl" — 1 post, no follow-up this cycle.
-[NOTED] "Iran Sets Conditions for Participation in 2026 World Cup Visa Access" — 1 post, no follow-up this cycle.
-[NOTED] "Security guard speaking broken English in the UK tries to throw blind man out of a supermarket with his guide dog." — 1 post, no follow-up this cycle.
-[NOTED] "He secretly learned Chinese to propose in her native language" — 1 post, no follow-up this cycle.
-[NOTED] "Foot parade traditionally concludes with cadets of Moscow Higher Combined Arms Command School" — 1 post, no follow-up this cycle.
-[NOTED] "Grades are never a measure of a child’s worth" — 1 post, no follow-up this cycle.
-[NOTED] "New York welcomes its billionaires." — 1 post, no follow-up this cycle.
-[NOTED] "AI is like a very capable intern" — 1 post, no follow-up this cycle.
-[NOTED] "A mother seal gives birth and believes her baby is gone." — 1 post, no follow-up this cycle.
-[NOTED] "North Korean soldier in Ukraine tries to help his friend" — 1 post, no follow-up this cycle.
-[NOTED] "3D wall stickers wallpaper" — 1 post, no follow-up this cycle.
-[NOTED] "My dog:”mom,I don’t want to go home ”" — 1 post, no follow-up this cycle.
-[NOTED] "ASEAN SUMMIT MEETS KEY GOALS DESPITE SCALED-DOWN SETUP" — 1 post, no follow-up this cycle.
-[NOTED] "WHY PIXELATED? Former Japanese adult film star Maria Ozawa explained why pixelation and fantasy are used in Japanese adult films." — 1 post, no follow-up this cycle.
-[NOTED] "SINET-UP YUNG NANG SET-UP is this News5 trying to solicit sympathy for PGMN?" — 1 post, no follow-up this cycle.
-[NOTED] "di na masarap ang buhay" — 1 post, no follow-up this cycle.
-[NOTED] "Senate President Pro Tempore Panfilo Lacson on Saturday expressed his intention to reject and vote against any motion that will stop or delay the Senate from convening as an impeachment court." — 1 post, no follow-up this cycle.
-[NOTED] "iconic line, i know who i am, i am a dude playing a dude, disguised as another dude." — 1 post, no follow-up this cycle.
-[NOTED] "Tostado na naman ni Anteh Kler si Sara." — 1 post, no follow-up this cycle.
-[NOTED] "Putin greets Slovakia's PM in Kremlin with a warm handshake and chat" — 1 post, no follow-up this cycle.
-[NOTED] "Two boys, ages 10 and 3, jumped 30 feet from a burning building in Grenoble, France." — 1 post, no follow-up this cycle.
-[NOTED] "What if lang ha, magorganize na tayo ng ganitong mobilisasyon para himukin si Leni na subukan tumakbo." — 1 post, no follow-up this cycle.
-[NOTED] "How on earth is that even possible. Even if the Dutae have billions. They haven't even started yet. They've already given up." — 1 post, no follow-up this cycle.
-[NOTED] "NORTH IS THRIVING. FOOD IS PLENTIFUL." — 1 post, no follow-up this cycle.
-[NOTED] "Future President of the Philippines" — 1 post, no follow-up this cycle.
-[NOTED] "Hoi accla ilan maleta ba? CTTO-" — 1 post, no follow-up this cycle.
-[NOTED] "The fight's over. Maybe Digong cursed. It's hard to win the case of the father of those DDS hit guilty as charged!" — 1 post, no follow-up this cycle.
-[NOTED] "ICE pulled a gun on a NY teenager, beat him, and then realized they got the wrong guy. Like other cases targeting citizens, ICE dumped him in a random location far from his home, bloody and injured." — 1 post, no follow-up this cycle.
-[NOTED] "Cheers and whistles for the joyous couple after ANOTHER Victory Day proposal, this time in Russia’s Tyumen" — 1 post, no follow-up this cycle.
-[NOTED] "Congratulations… A Chinese man marries an American woman." — 1 post, no follow-up this cycle.
-[NOTED] "Glasses with adjustable light levels for precise sunlight control" — 1 post, no follow-up this cycle.
-[NOTED] "Paper blocks the city view then vanishes on command" — 1 post, no follow-up this cycle.
-[NOTED] "A humble tribute to the brave BJP workers!" — 1 post, no follow-up this cycle.
-[NOTED] "On this day, 11 years ago, key social security and pension schemes were launched by the NDA Government." — 1 post, no follow-up this cycle.
-[NOTED] "President Ferdinand Marcos, Jr. still expects the code of conduct in the South China Sea to be finalized before the year ends." — 1 post, no follow-up this cycle.
-[NOTED] "The head of the House Committee on Justice categorically denied the allegation that there was an offer of payment in exchange for voting in favor of the impeachment of Vice President Sara Duterte." — 1 post, no follow-up this cycle.
-[NOTED] "The withdrawal of Nicholas Kaufman and his team as Rodrigo Duterte’s ICC counsel is essentially a planned legal transition rather than a sudden conflict. Kaufman’s one-year engagement officially ended" — 1 post, no follow-up this cycle.
+[NOTED] "INDIA HAS QUIETLY BUILT One of Its BIGGEST FINANCIAL PROTECTION SHIELDS" — promotional graphic from MyGov India, 2 posts, no follow-up this cycle
+[NOTED] "paper blocks the city view then vanishes on command" — 5 posts, no follow-up this cycle
+[NOTED] "south china sea finalized" — 2 posts, no follow-up this cycle
+[SPRINT: research] @TVPatrol [v0.0 T4 N3.8] "The head of the House Committee on Justice categorically denied the allegation that there was an offer of payment in exchange for voting in favor of the impeachment of Vice President Sara Duterte." {house committee justice categorically denied, impeachment vice president sara duterte, offer payment exchange, voting favor} https://x.com/TVPatrol/status/2053081602461434177
+[SPRINT: research] @imtheatan [v0.2 T3 N3.8] "The withdrawal of Nicholas Kaufman and his team as Rodrigo Duterte’s ICC counsel is essentially a planned legal transition rather than a sudden conflict. Kaufman’s one-year engagement officially ended" {his team rodrigo duterte icc counsel essentially planned legal transition rather, duterte restructuring his defense team specifically, year engagement officially ended march, withdrawal nicholas kaufman} https://x.com/imtheatan/status/2052902328974651577
+[NOTED] "survive any country" — 3 posts, no follow-up this cycle
+[NOTED] "iranian navy meant absolutely nothing reveals iran brilliant use geography" — 5 posts, no follow-up this cycle
+[NOTED] "full james charles deleted video" — 5 posts, no follow-up this cycle
+[NOTED] "bye wealth leaving seattle demonizing big business including boycotting starbucks seattle socialist mayor katie wilson" — 4 posts, no follow-up this cycle
+[NOTED] "visiting china breathtaking scene" — 4 posts, no follow-up this cycle
+[NOTED] "volleyball player wonder woman" — 2 posts, no follow-up this cycle
+[NOTED] "timor leste prime minister kay rala xanana gusm toured" — 2 posts, no follow-up this cycle
+[SPRINT: research] @IranObserver0 [v196.1 T5 N3.9] "BREAKING The United States has imposed sanctions on the Chinese satellite company Chang Guang Chang Guang, which operates China's largest commercial satellite constellation, is accused of providing t" {operates china largest commercial satellite constellation accused providing targeting data, chinese satellite company chang guang chang guang, united states, imposed sanctions} https://x.com/IranObserver0/status/2053077411558727900
+[SPRINT: research] @RichHeydarian [v38.6 T6 N3.9] "FYI, there is a WARRANT of ARREST for BATO, PUGANTE na yan " {bato pugante yan, warrant arrest, fyi} https://x.com/RichHeydarian/status/2053074513319932131
+[SPRINT: research] @wateralwayswet [v3.0 T4 N3.9] "To those arresting Senator Bato, take a good look up there—maybe he's just hanging from a coconut tree. #DuterteLegacy #ICC" {arresting senator bato take good look, coconut tree, maybe, hanging} https://x.com/wateralwayswet/status/2053056941812027589
+[SPRINT: research] @News5PH [v0.0 T6 N3.7] "#FrontlineWeekend | Atty. Nicholas Kaufman has stepped down as the lawyer for former president Rodrigo Duterte at the International Criminal Court (ICC)." {former president rodrigo duterte, international criminal court icc, atty nicholas kaufman, stepped} https://x.com/News5PH/status/2053086330033197255
+[SPRINT: research] @PerciCen [v2.9 T0 N3.9] "I want to be president in 2028, I know how to use a computer " {want president, use computer, know} https://x.com/PerciCen/status/2052643974729662819
+[NOTED] "house leaders branded batangas rep leandro legarda leviste privilege speech unparliamentary reckless" — 4 posts, no follow-up this cycle
+[NOTED] "crows match year old child intelligence" — 2 posts, no follow-up this cycle
+[NOTED] "tough mudder electroshock therapy mudder obstacle" — 4 posts, no follow-up this cycle
+[NOTED] "stopped, angry, eat" — 5 posts, no follow-up this cycle
+[NOTED] "bitcoin too risky men" — 4 posts, no follow-up this cycle
+[NOTED] "batangue congressmen teamed help" — 5 posts, no follow-up this cycle
+[SPRINT: research] @dailynetizen24 [v0.1 T0 N3.9] "It's really happening now! According to Bicol Saro Rep. Terry Ridon, there are now 215 members of the House supporting the impeachment of Vice President Sara Duterte. He added, “We’re expecting more.”" {impeachment vice president sara duterte added expecting, according bicol saro rep terry ridon, vice president, really happening} https://x.com/dailynetizen24/status/2052966539859759491
+[NOTED] "valid fear unknowingly having murderous pedophile" — 4 posts, no follow-up this cycle
+[NOTED] "competent enough kill iryna competent enough put death period" — 4 posts, no follow-up this cycle
+[NOTED] "tens thousands barrels oil reported off iran kharg island" — 5 posts, no follow-up this cycle
+[NOTED] "caught his own doing" — 3 posts, no follow-up this cycle
+[NOTED] "pgmn founder franco mabanta" — 2 posts, no follow-up this cycle
+[NOTED] "surrender kaufman" — 5 posts, no follow-up this cycle
+[NOTED] "calling kiddie porn again wtf" — 5 posts, no follow-up this cycle
+[NOTED] "his brother simply exempt" — 5 posts, no follow-up this cycle
+[NOTED] "elon musk called hitler socialist" — 3 posts, no follow-up this cycle
+[NOTED] "gas prices soar said" — 5 posts, no follow-up this cycle
+[NOTED] "innocent atty bernice rodriguez stood firm" — 5 posts, no follow-up this cycle
+[NOTED] "bato yooohoooo, time" — 3 posts, no follow-up this cycle
+[NOTED] "shih tzu miraculously came back life" — 1 posts, no follow-up this cycle
+[NOTED] "clean water day work week seat belts child labor laws" — 5 posts, no follow-up this cycle
+[NOTED] "jfk quote, went harvard, know better" — 4 posts, no follow-up this cycle
+[NOTED] "burden high electricity rates filipino families senate bill" — 4 posts, no follow-up this cycle
+[NOTED] "summit pico mountain portugal highest peak powerful act solidarity" — 2 posts, no follow-up this cycle
+[NOTED] "tropical storm hagupit entered" — 2 posts, no follow-up this cycle
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @dwarriorgranny [v0.8 T0 N3.9] "Surrender si Kaufman " {surrender kaufman} https://x.com/dwarriorgranny/status/2052881450081697869 - Commentary on the withdrawal of Duterte's counsel, reinforcing the narrative around his legal challenges.
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @ABSCBNNews [v0.7 T7 N3.9] "‘MY CLIENTS ARE INNOCENT’ Atty. Bernice Piñol-Rodriguez stood firm that social media personality Franco Mabanta and four other accused are innocent in connection with the robbery extortion case filed " {innocent atty bernice rodriguez stood firm, social media personality franco mabanta, robbery extortion case filed against, four other accused} https://x.com/ABSCBNNews/status/2053059713714307407 - Defense of innocence in a robbery extortion case, touching on legal accountability and public perception.
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @laiteranidaddy [v1.3 T5 N3.9] "Bato yooohoooo its about time!’" {bato yooohoooo, time} https://x.com/laiteranidaddy/status/2052984688038613062 - Anticipation of action against "Bato" (Dela Rosa), indicating public demand for accountability.
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @ABSCBNNews [v0.4 T7 N3.8] "The ICC is set to decide whether Rodrigo Duterte remains in detention as his case for three counts of murder as crimes against humanity moves toward trial. Under the Rome Statute, his status must be " {three counts murder crimes against humanity moves toward trial under, icc set decide whether rodrigo duterte remains detention his case, rome statute his status must reviewed every, days via} https://x.com/ABSCBNNews/status/2052876690603516377 - Update on Duterte's ICC case, directly relevant to accountability for human rights abuses.
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @bncdotph [v0.0 T4 N3.8] "#AgendaWeekend | VP Sara Duterte is apparently also to blame for why her alleged laptop-throwing incident at an employee has resurfaced. According to Tindig Pilipinas co-convenor Kiko Aquino-Dee, the " {resurfaced according tindig pilipinas convenor kiko aquino dee, alleged laptop throwing incident employee, sara duterte apparently, having short fuse} https://x.com/bncdotph/status/2053094204356939981 - Resurfacing of allegations against VP Sara Duterte, contributing to a narrative of instability or poor conduct.
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @bncdotph [v0.0 T4 N3.8] "#AgendaWeekend | It's not just VP Sara Duterte's position that's at stake in the House impeachment vote, but also the legacy of the congressmen. That's according to the vice president's cousin, Congre" {vice president cousin congressman harold james duterte via jille sebandal, sara duterte position, house impeachment vote, stake} https://x.com/bncdotph/status/2053095122955559387 - Framing of the VP Sara Duterte impeachment as impacting not just her position but also the legacy of congressmen, indicating a larger political struggle and narrative battle.
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @ProudSocialist [v326.3 T6 N3.9] "Elon Musk called Hitler a socialist then Grok correctly debunks him by pointing out Hitler rejected Marxism and ran a fascist system that prioritized nationalism and private enterprise. Grok then expl" {elon musk called hitler socialist, explains socialism class equality, hitler rejected marxism, grok correctly debunks} https://x.com/ProudSocialist/status/2052812995298787463 - An example of an AI (Grok) being used to correct historical misinformation, highlighting the role of information integrity in public discourse.
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @BeigeFrequency [v1001.4 T0 N3.9] "They're calling it "kiddie porn" again. WTF?" {calling kiddie porn again wtf} https://x.com/BeigeFrequency/status/2052885140263629038 - The use of potentially manipulative or euphemistic language for serious crimes, relevant to integrity of information.
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @CityBureaucrat [v339.3 T0 N3.9] "It's funny how his brother is simply exempt from all suspicion and innuendo" {his brother simply exempt, funny, suspicion, innuendo} https://x.com/CityBureaucrat/status/2052906060692717919 - Commentary on perceived lack of accountability for individuals connected to powerful figures, relevant to trust in institutions and anti-corruption.
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @yvessirae [v310.6 T2 N3.9] ""I hate protesters" where do you think your clean water, 5 day work week, seat belts, child labor laws, and right to vote came from?" {clean water day work week seat belts child labor laws, right vote came, hate protesters, think} https://x.com/yvessirae/status/2052756448753643544 - Discussion on the historical impact and societal perception of protests, relating to authentic participation and managed consent.
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @hasanthehun [v273.9 T0 N3.9] "it’s a jfk quote. you went to harvard. you know better." {jfk quote, went harvard, know better} https://x.com/hasanthehun/status/2052804802577633744 - Further example of historical interpretation and the use of quotes in public discourse, touching on truth and evidence.
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @CalltoActivism [v37.3 T5 N3.8] "WHAT? Trump is now preparing Americans to accept gas prices DOUBLING. With oil already around $100 a barrel, Trump says even if it hits $200, it would STILL “be worth it.” Meanwhile, families are stru" {preparing americans accept gas prices doubling, oil already around, worth meanwhile families, barrel trump says} https://x.com/CalltoActivism/status/2052797213953155356 - Political rhetoric manipulating public perception around economic issues and foreign policy (Iran war context).
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @RoshanKrRaii [v139.8 T5 N3.9] "What kind of nautanki is this man? Instead of planting trees, they have made cooling zones with Modi’s big face where people are wiping sweat off the faces of people forcefully " {man instead planting trees, made cooling zones, modi big face, wiping sweat off} https://x.com/RoshanKrRaii/status/2053094522738069589 - Critique of political performativity and potentially misleading public initiatives, relevant to integrity of information and authentic participation.
