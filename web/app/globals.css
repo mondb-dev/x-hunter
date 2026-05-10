@@ -1158,6 +1158,23 @@ a.verify-claim-source-link:hover { text-decoration-color: var(--accent, #60a5fa)
 .verify-tag-tab:hover { border-color: rgba(255,255,255,0.2); color: #94a3b8; }
 .verify-tag-tab--active { border-color: #60a5fa; color: #60a5fa; background: rgba(96,165,250,0.06); }
 
+/* ── Sort row ───────────────────────────────────────────────────────────────── */
+.verify-sort-row {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; margin-bottom: 1.25rem;
+}
+.verify-sort-label {
+  font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em;
+  margin-right: 0.2rem; flex-shrink: 0;
+}
+.verify-sort-tab {
+  padding: 0.15rem 0.55rem; border-radius: 4px; font-size: 0.72rem;
+  border: 1px solid rgba(255,255,255,0.07); color: #64748b;
+  background: transparent; cursor: pointer; font-family: inherit;
+  transition: border-color 0.15s, color 0.15s;
+}
+.verify-sort-tab:hover { border-color: rgba(255,255,255,0.18); color: #94a3b8; }
+.verify-sort-tab--active { border-color: rgba(255,255,255,0.3); color: var(--text); background: rgba(255,255,255,0.04); }
+
 /* ── Topic grouping ─────────────────────────────────────────────────────────── */
 .verify-grouped { display: flex; flex-direction: column; gap: 2.5rem; }
 .verify-topic-header {

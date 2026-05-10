@@ -279,33 +279,86 @@ function ClaimCard({ claim }: { claim: VerifiedClaim }) {
   );
 }
 
+// ── Sort helpers ─────────────────────────────────────────────────────────────
+type SortKey = "newest" | "oldest" | "confidence-desc" | "confidence-asc" | "verdict" | "source-tier";
+
+const SORT_LABELS: Record<SortKey, string> = {
+  "newest":          "Newest",
+  "oldest":          "Oldest",
+  "confidence-desc": "Most confident",
+  "confidence-asc":  "Least confident",
+  "verdict":         "By verdict",
+  "source-tier":     "Source tier",
+};
+
+const STATUS_ORDER: Record<string, number> = {
+  supported: 0, contested: 1, refuted: 2, unverified: 3, expired: 4,
+};
+
+function applySortAndFilter(
+  claims: VerifiedClaim[],
+  query: string,
+  activeTag: string,
+  sort: SortKey,
+): VerifiedClaim[] {
+  const q = query.trim().toLowerCase();
+  let result = activeTag === "all" ? claims : claims.filter((c) => deriveTag(c) === activeTag);
+  if (q) {
+    result = result.filter((c) => {
+      const tagLabel = TAG_LABELS[deriveTag(c)]?.toLowerCase() ?? "";
+      return c.claim_text.toLowerCase().includes(q) || tagLabel.includes(q);
+    });
+  }
+  return [...result].sort((a, b) => {
+    switch (sort) {
+      case "oldest": {
+        const aD = a.verified_at ?? a.created_at;
+        const bD = b.verified_at ?? b.created_at;
+        return new Date(aD).getTime() - new Date(bD).getTime();
+      }
+      case "confidence-desc":
+        return b.confidence_score - a.confidence_score;
+      case "confidence-asc":
+        return a.confidence_score - b.confidence_score;
+      case "verdict": {
+        const aSt = STATUS_ORDER[a.status] ?? 99;
+        const bSt = STATUS_ORDER[b.status] ?? 99;
+        if (aSt !== bSt) return aSt - bSt;
+        return b.confidence_score - a.confidence_score;
+      }
+      case "source-tier": {
+        const aT = a.source_tier ?? 99;
+        const bT = b.source_tier ?? 99;
+        if (aT !== bT) return aT - bT;
+        return b.confidence_score - a.confidence_score;
+      }
+      default: { // newest
+        const aD = a.verified_at ?? a.created_at;
+        const bD = b.verified_at ?? b.created_at;
+        return new Date(bD).getTime() - new Date(aD).getTime();
+      }
+    }
+  });
+}
+
 // ── Main export ──────────────────────────────────────────────────────────────
 export default function ClaimsSearch({ claims }: { claims: VerifiedClaim[] }) {
-  const [query, setQuery] = useState("");
+  const [query, setQuery]     = useState("");
   const [activeTag, setActiveTag] = useState("all");
+  const [sort, setSort]       = useState<SortKey>("newest");
 
   const tagCounts = useMemo(
     () => TAG_ORDER.reduce((acc, tag) => { acc[tag] = claims.filter((c) => deriveTag(c) === tag).length; return acc; }, {} as Record<string, number>),
     [claims],
   );
 
-  const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    let result = activeTag === "all" ? claims : claims.filter((c) => deriveTag(c) === activeTag);
-    if (q) {
-      result = result.filter((c) => {
-        const tagLabel = TAG_LABELS[deriveTag(c)]?.toLowerCase() ?? "";
-        return c.claim_text.toLowerCase().includes(q) || tagLabel.includes(q);
-      });
-    }
-    return [...result].sort((a, b) => {
-      const aDate = a.verified_at ?? a.created_at;
-      const bDate = b.verified_at ?? b.created_at;
-      return new Date(bDate).getTime() - new Date(aDate).getTime();
-    });
-  }, [claims, query, activeTag]);
+  const filtered = useMemo(
+    () => applySortAndFilter(claims, query, activeTag, sort),
+    [claims, query, activeTag, sort],
+  );
 
-  const showGrouped = !query.trim() && activeTag === "all";
+  // Grouped view only when: no search, all topics, default sort
+  const showGrouped = !query.trim() && activeTag === "all" && sort === "newest";
 
   const grouped = useMemo(() => {
     if (!showGrouped) return {} as Record<string, VerifiedClaim[]>;
@@ -358,7 +411,21 @@ export default function ClaimsSearch({ claims }: { claims: VerifiedClaim[] }) {
         ))}
       </div>
 
-      {/* Results */}
+      {/* Sort row */}
+      <div className="verify-sort-row">
+        <span className="verify-sort-label">Sort:</span>
+        {(Object.keys(SORT_LABELS) as SortKey[]).map((key) => (
+          <button
+            key={key}
+            className={`verify-sort-tab${sort === key ? " verify-sort-tab--active" : ""}`}
+            onClick={() => setSort(key)}
+          >
+            {SORT_LABELS[key]}
+          </button>
+        ))}
+      </div>
+
+      {/* Results meta */}
       {query.trim() && (
         <p className="verify-search-meta">
           {filtered.length} {filtered.length === 1 ? "result" : "results"} for &ldquo;{query.trim()}&rdquo;
