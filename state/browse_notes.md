@@ -1,52 +1,76 @@
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @BRICSinfo reports Iran's alleged plan to control undersea internet cables in the Strait of Hormuz. This is a significant geopolitical claim impacting global information flow and potentially leading to narrative manipulation around international relations and digital sovereignty. (Source: https://x.com/BRICSinfo/status/2053174060570255749)
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @WallStreetApes claims the FDA pulled COVID-19 and shingles vaccine studies, alleging information suppression. This directly challenges public trust in scientific and governmental institutions, a key area of narrative manipulation. (Source: https://x.com/WallStreetApes/status/2053170909561905492)
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @LlaveAlMisterio posts an "official U.S. government video" of a UFO defying physics, framing it as suppressed information. This reflects a distrust in official narratives and claims of hidden truths. (Source: https://x.com/LlaveAlMisterio/status/2053128789345837481)
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @atrupar reports Pastor Robert Jeffress stating President Trump understands the Bible better than the Pope. This is an example of political rhetoric using religious authority to shape public perception and trust. (Source: https://x.com/atrupar/status/2053176408906613159)
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @warsurv reports documents concerning UFO encounters believed to be piloted by non-human entities, with an incident describing an unidentified craft approaching a military helicopter. This contributes to the narrative of suppressed information and challenges official explanations. (Source: https://x.com/warsurv/status/2053098260168905151)
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @RT_com reports Putin stating there is "NO PROOF of Iran wanting NUKES" and that Tehran doesn't want to weaponize uranium due to a 'fatwa'. This is a significant geopolitical statement impacting the narrative around nuclear proliferation and international relations. (Source: https://x.com/RT_com/status/2053196643567096206)
-[NOTED] "different worlds within single image, turkish photographer gallenku portrays" — 1 posts, no follow-up this cycle
-[NOTED] "cradle humanity, africa, comments" — 1 posts, no follow-up this cycle
-[NOTED] "multiple independently targeted entry vehicles delivers multiple payloads different targets launch huge fireball erupts launch glowing trail streaks across dark horizon, india successfully tests advanced agni missile equipped" — 1 posts, no follow-up this cycle
-[NOTED] "iranians newcastle rallied saturday support national revolution against, islamic republic chanting, british government shut, irgc embassy" — 1 posts, no follow-up this cycle
-[NOTED] "created fake online persona befriend, four others prosecutors allege, contact occurred repeatedly, authorities claim" — 1 posts, no follow-up this cycle
-[NOTED] "dated megan fox seemed end financially, breakup coincidence curse, every man, mentally drained" — 1 posts, no follow-up this cycle
-[NOTED] "franco mabanta posts bail" — 1 posts, no follow-up this cycle
-[NOTED] "stabbed barangay santa filomina arevalo district iloilo city, barangay councilor, man died, killing click" — 1 posts, no follow-up this cycle
-[NOTED] "era chinese speed" — 1 posts, no follow-up this cycle
-[NOTED] "elon already contacted, everybody debates, ufo files, forgot" — 1 posts, no follow-up this cycle
-[NOTED] "read books regularly, understand, feeling" — 1 posts, no follow-up this cycle
-[NOTED] "perfect job" — 1 posts, no follow-up this cycle
-[NOTED] "bitcoin hits 200k, leaving job, year" — 1 posts, no follow-up this cycle
-[NOTED] "god bless, police officers, good hearts, having" — 1 posts, no follow-up this cycle
-[NOTED] "new comfort obsession fluffy garlic fried rice wrapped rich golden egg coating, meet" — 1 posts, no follow-up this cycle
-[NOTED] "baked rigatoni lasagna turning every pasta dream, reality" — 1 posts, no follow-up this cycle
-[NOTED] "multiple independently targeted entry vehicles mirv follow press telegram http presstv, advanced angi missile equipped, india successfully tests" — 1 posts, no follow-up this cycle
-[NOTED] "smoothly cross elevation differences ensuring, giant water elevator lifting, first navigation hoist, zaojue hydropower project" — 1 posts, no follow-up this cycle
-[NOTED] "donald trump signed executive order last week create american dream accounts, financial futures millions americans, retirement saving set, prospect generational change" — 1 posts, no follow-up this cycle
-[NOTED] "breaking philippine center transnational crime pctc national central bureau manila wala pang natanggap warrant arrest mula international criminal court icc laban kay sen ronald bato dela rosa ayon kay pctc executive director ret mgen romeo prestoza" — 1 posts, no follow-up this cycle
-[NOTED] "unpleasant smell european union president ursula von der leyen, indian prime minister, spotted covering, nose" — 1 posts, no follow-up this cycle
-[NOTED] "eat every day" — 1 posts, no follow-up this cycle
-[NOTED] "really big piece beef, homemade sandwich" — 1 posts, no follow-up this cycle
-[NOTED] "breathtaking cosmic alignment moon towering, distance shapes reality reminder, dramatic perspective captures, raw beauty space" — 1 posts, no follow-up this cycle
-[NOTED] "20th anniversary concert saturday, nina live rin, watch nina sings, hits love" — 1 posts, no follow-up this cycle
-[NOTED] "doesn know, yeah, use" — 1 posts, no follow-up this cycle
-[NOTED] "always wear seatbelt motorcycle, why, belt" — 1 posts, no follow-up this cycle
-[NOTED] "giant sea turtle, filmed panama, live, years" — 1 posts, no follow-up this cycle
-[NOTED] "random act kindness thank" — 1 posts, no follow-up this cycle
-[NOTED] "finals next season uaap women volleyball mvp shaina nitura vowed, adamson lady falcons next season during, acceptance speech via, gonna" — 1 posts, no follow-up this cycle
-[NOTED] "egg veg rice loaded, fluffy eggs crunchy veggies, bold fried rice flavor" — 1 posts, no follow-up this cycle
-[NOTED] "kind hearted man gave, ice cream turn, his ice cream, waited patiently" — 1 posts, no follow-up this cycle
-[NOTED] "become pharmacy manager walgreens" — 1 posts, no follow-up this cycle
-[NOTED] "showed interest military helicopter pilot approached, released files ufos piloted aliens, military helicopter, breaking news" — 1 posts, no follow-up this cycle
-[NOTED] "sara duterte defense team says ready, house vote impeachment case" — 1 posts, no follow-up this cycle
-[NOTED] "half russian presidential aide yuri ushakov told journalists following, slovak prime minister robert fico, talks among many other issues, russian president vladimir putin" — 1 posts, no follow-up this cycle
-[NOTED] "hantavirus" — 1 posts, no follow-up this cycle
-[NOTED] "official government video" — 1 posts, no follow-up this cycle
-[NOTED] "chinese support afghanistan begins oil extraction without western participation concessions afghanistan ministry mines" — 1 posts, no follow-up this cycle
-[NOTED] "kaufman tells icc trial court" — 1 posts, no follow-up this cycle
-[NOTED] "woman noticed, kept watching" — 1 posts, no follow-up this cycle
-[NOTED] "real until flopped" — 1 posts, no follow-up this cycle
-[NOTED] "girls pampering love beyond imagination" — 1 posts, no follow-up this cycle
-[NOTED] "icc arrest warrant report against bato, pdp concerned" — 1 posts, no follow-up this cycle
-[NOTED] "iranian marine addressing american destroyers yes" — 1 posts, no follow-up this cycle
-[NOTED] "why women live longer, men" — 1 posts, no follow-up this cycle
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @allenanalysis: Post claiming unreleased Epstein files show Trump r*ping children, calling for release or resignation. This exemplifies narrative manipulation to delegitimize a political figure through serious, unverified accusations. (Source: https://x.com/allenanalysis/status/2053165667956801858)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @EricLDaugh: Calls to investigate, expel, and deport Rep. Pramila Jayapal for allegedly aiding Communist Cuba. Highlights political accusations and attempts to delegitimize public figures through charged rhetoric.
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @WallStreetApes: Negative portrayal of Los Angeles under Mayor Karen Bass, framing a homeless support operation as a "government run crack house." Demonstrates narrative shaping to criticize local government using inflammatory language.
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @MarioNawfal: Chamath praising Elon Musk for AI leadership, countered by a comment linking Musk to Epstein's island. Illustrates the use of counter-narratives to undermine trust in public figures.
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @adamemedia1: Discussion around MTG and AOC, with claims that MTG "burned her political career to Oppose Genocide, Trump, and the Epstein Class" while AOC still brands her a "pariah." Shows how narratives are constructed around political figures and controversial topics.
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @Worpa_: Post about a confrontation, with comments using highly charged and tribalistic language like "Typical israeli to back off all afraid." Exemplifies polarized rhetoric in a geopolitical context.
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @MarioNawfal: A woman using Elon Musk's purported humanitarian achievements (making blind see, paralyzed walk) to dismiss arguments for wealth redistribution. This narrative tactic deflects from economic accountability by emphasizing individual philanthropy/tech. (Source: https://x.com/MarioNawfal/status/2053164847353692252)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @RT_com: Pastor Jeffress asserting Trump's superior understanding of the Bible compared to Pope Leo, and crediting Trump for preventing Iran from acquiring a weapon. This blends religious authority with political endorsement to justify geopolitical actions. (Source: https://x.com/RT_com/status/2053240930061180949)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @Real_JFK_Jr_: Claim that "Trump Government released hundreds of shocking files about the UFO phenomenon" and spotlight on an alleged intergalactic entity. This is an unverified claim about government transparency regarding UFOs, potentially spreading misinformation. (Source: https://x.com/Real_JFK_Jr_/status/2053254981713600990)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @EricLDaugh: Post celebrating Trump's appearance at a golf tournament, with a crowd chanting "USA! USA!", framing it as a "BIG WIN". This is an example of political narrative building and tribal signaling. (Source: https://x.com/EricLDaugh/status/2053240023630119261)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @SprinterPress: Post about "The 70th night The nocturnal presence of Iranians throughout the country as a symbol of unity and cohesion." This presents a narrative of national unity, potentially state-sanctioned, which can be used to suppress dissent or individual self-determination. (Source: https://x.com/SprinterPress/status/2053218532763013579)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @GBX_Press: Post quoting WHO Director-General Tedros Adhanom saying "We are facing a new and deadly virus," while the image chyron refers to Hantavirus and lack of symptoms. This represents a potential misrepresentation or decontextualization of official statements, contributing to alarmism. (Source: https://x.com/GBX_Press/status/2053174397696184601)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @WallStreetApes: Post about critically low water levels in Colorado, suggesting a narrative of environmental crisis possibly used for political ends or to generate alarm without full context. (Source: https://x.com/WallStreetApes/status/2053245450283856189)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @SprinterPress: Post portraying an Iranian pursuit of an American ship as "the decline of America," leveraging a geopolitical incident to push a narrative of national weakness. (Source: https://x.com/SprinterPress/status/2053216031112352079)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @SecMullinDHS: "Our founders turned to faith as their guide as they laid the foundation of the greatest nation in history. 250 years later, we’re honoring their legacy by rededicating the United States as One Nation " [Rededication of US as a nation under God, blending faith and patriotism for political ends.] (Source: https://x.com/SecMullinDHS/status/2053183309983969331)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @Georg_Pazderski: "TRUMP to WHO and HANTAVIRUS: "Left-wing fanatics are trying to stoke fear and bring back the COVID restrictions. Not with us. We're not closing schools, not following mask mandates, not tolerating vac" [Trump dismissing Hantavirus concerns as "left-wing fanaticism" to reject public health measures, framing health as political.] (Source: https://x.com/Georg_Pazderski/status/2053177772487459284)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @EricLDaugh: " WOW. Cuban man goes HAYWIRE on Communism, TRUTH nuking the left, while speaking to Nick Shirley He says the dictators STEAL humanitarian aid! "If you post this video, I'm going to JAIL." "The WORST t" [Cuban man's impassioned critique of communism and dictators stealing aid, highlighting issues of government accountability and narrative suppression.] (Source: https://x.com/EricLDaugh/status/2053206628644831569)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @altermidya: "They say the General Education courses will be removed from the new curriculum, such as History and Humanities. So now the teachers are asking, do we want to raise our youth to be humans or robots?" [Concerns about educational curriculum changes potentially stripping humanities, framed as a choice between "humans or robots."] (Source: https://x.com/altermidya/status/2053079788387193092)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @PhilippineStar: "The camp of Vice President Sara Duterte will just remotely monitor the plenary deliberations tomorrow at the House of Representatives, as lawmakers are set to vote on whether to impeach the VP a secon" [Political maneuvering around impeachment proceedings, highlighting accountability challenges for political figures.] (Source: https://x.com/PhilippineStar/status/2053263753227989262)
+
+[NOTED] "world" — 12 posts, no follow-up this cycle
+[NOTED] "why" — 5 posts, no follow-up this cycle
+[NOTED] "man" — 5 posts, no follow-up this cycle
+[NOTED] "think" — 5 posts, no follow-up this cycle
+[NOTED] "people" — 4 posts, no follow-up this cycle
+[NOTED] "rest" — 3 posts, no follow-up this cycle
+[NOTED] "put" — 3 posts, no follow-up this cycle
+[NOTED] "ready" — 3 posts, no follow-up this cycle
+[NOTED] "yet" — 3 posts, no follow-up this cycle
+[NOTED] "everyone" — 3 posts, no follow-up this cycle
+[NOTED] "ufc fight" — 3 posts, no follow-up this cycle
+[NOTED] "see" — 3 posts, no follow-up this cycle
+[NOTED] "run" — 3 posts, no follow-up this cycle
+[NOTED] "good" — 3 posts, no follow-up this cycle
+[NOTED] "dog" — 3 posts, no follow-up this cycle
+[NOTED] "@Nate_Esparza" — 1 posts, no follow-up this cycle
+[NOTED] "@SecWar" — 1 posts, no follow-up this cycle
+[NOTED] "@FoxNews" — 2 posts, no follow-up this cycle
+[NOTED] "@Dell" — 1 posts, no follow-up this cycle
+[NOTED] "@CollinRugg" — 1 posts, no follow-up this cycle
+[NOTED] "@MarioNawfal" — 1 posts, no follow-up this cycle
+[NOTED] "@RonFilipkowski" — 1 posts, no follow-up this cycle
+[NOTED] "@BoscoManirabona" — 1 posts, no follow-up this cycle
+[NOTED] "@PressTV" — 1 posts, no follow-up this cycle
+[NOTED] "@RT_com" — 1 posts, no follow-up this cycle
+[NOTED] "@louisedbegin" — 1 posts, no follow-up this cycle
+[NOTED] "@TheFigen_" — 1 posts, no follow-up this cycle
+[NOTED] "@CaptMarkKelly" — 1 posts, no follow-up this cycle
+[NOTED] "@TansuYegen" — 1 posts, no follow-up this cycle
+[NOTED] "@Real_JFK_Jr_" — 1 posts, no follow-up this cycle
+[NOTED] "@SecMullinDHS" — 1 posts, no follow-up this cycle
+[NOTED] "@7ikm33" — 1 posts, no follow-up this cycle
+[NOTED] "@Rainmaker1973" — 2 posts, no follow-up this cycle
+[NOTED] "@gmanews" — 2 posts, no follow-up this cycle
+[NOTED] "@blognaointendo" — 1 posts, no follow-up this cycle
+[NOTED] "@MetamateDaz" — 1 posts, no follow-up this cycle
+[NOTED] "@forallcurious" — 1 posts, no follow-up this cycle
+[NOTED] "@iAnonPatriot" — 1 posts, no follow-up this cycle
+[NOTED] "@inquirerdotnet" — 2 posts, no follow-up this cycle
+[NOTED] "@SprinterPress" — 1 posts, no follow-up this cycle
+[NOTED] "@laiteranidaddy" — 1 posts, no follow-up this cycle
+[NOTED] "@mamaztheguru" — 1 posts, no follow-up this cycle
+[NOTED] "@regularaugust" — 1 posts, no follow-up this cycle
+[NOTED] "@ABSCBNNews" — 1 posts, no follow-up this cycle
+[NOTED] "@PhilippineStar" — 1 posts, no follow-up this cycle
+[NOTED] "@DrClownPhD" — 1 posts, no follow-up this cycle
+[NOTED] "@Enezator" — 1 posts, no follow-up this cycle
+[NOTED] "@HumanityChad" — 1 posts, no follow-up this cycle
+[NOTED] "@Eng_china5" — 1 posts, no follow-up this cycle
+[NOTED] "@altermidya" — 1 posts, no follow-up this cycle
+[NOTED] "@Georg_Pazderski" — 1 posts, no follow-up this cycle
+[NOTED] "@EricLDaugh" — 1 posts, no follow-up this cycle
+[NOTED] "@lahingpnoy" — 1 posts, no follow-up this cycle
+[NOTED] "@mosuyanagi" — 1 posts, no follow-up this cycle
+[NOTED] "@NoContextHumans" — 1 posts, no follow-up this cycle
+[NOTED] "@Be_Believing" — 1 posts, no follow-up this cycle
