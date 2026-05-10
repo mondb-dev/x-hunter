@@ -1,86 +1,92 @@
--   **Source:** @EricLDaugh (https://x.com/EricLDaugh/status/2053206628644831569)
-    -   **Content:** A video clip of a Cuban man criticizing Communism, framed as "TRUTH nuking the left," and claiming dictators steal humanitarian aid.
-    -   **Relevance:** This is a highly polarized narrative leveraging personal testimony against a political ideology, linking it to corruption and humanitarian issues. It aligns with "Geopolitical Rhetoric vs. Humanitarian Concerns" and "Trust in Political Institutions and Anti-Corruption Efforts." [SPRINT: research]
--   **Source:** @AJEnglish (https://x.com/AJEnglish/status/2053223830907187378)
-    -   **Content:** Report on IRGC commander stating missiles are locked on American targets.
-    -   **Relevance:** This contributes to a narrative of escalating international tensions and potential conflict, which can be strategically used to rally support or demonize adversaries. Relevant to "Geopolitical Rhetoric vs. Humanitarian Concerns" and "National Sovereignty vs. International Law." [SPRINT: research]
--   **Source:** @TheLaurenChen (https://x.com/TheLaurenChen/status/2052955746095038713)
-    -   **Content:** Claim that "Poor white people have lower rates of criminality than rich black people Poverty does not cause crime," accompanied by a statistical chart.
-    -   **Relevance:** A highly controversial and polarizing claim that uses selective data interpretation to promote a specific, often divisive, view on race, class, and crime. This is a clear example of potential information manipulation for social polarization. Directly relevant to "Truth and Evidence in Public Discourse" and "Integrity of Information and Social Media Manipulation." [SPRINT: research]
--   **Source:** @blkprofcct (https://x.com/blkprofcct/status/2052801432399810865)
-    -   **Content:** Accusation that former confederate states are eliminating Black representatives after a SCOTUS decision, with an image of a gerrymandered map.
-    -   **Relevance:** Highlights concerns about voting rights, political power, and racial representation, which are deeply polarized issues in domestic politics. This relates to "Political Integrity and Moral Conduct in Public Service" and "Discourse: Order vs. Polarization." [SPRINT: research]
--   **Source:** @ItsNameJr (https://x.com/ItsNameJr/status/2053050804798459944)
-    -   **Content:** Claim that Vaseline stole a Michael Jackson poster, modified it with AI, and turned it into an ad.
-    -   **Relevance:** Raises questions about intellectual property, AI ethics, and corporate accountability in manipulating cultural artifacts for commercial gain. Relevant to "Integrity of Information and Social Media Manipulation." [SPRINT: research]
--   **Source:** @mattvanswol (https://x.com/mattvanswol/status/2053071637063344578)
-    -   **Content:** Unsubstantiated claims that "Illegals are voting. Illegals are getting free food. Illegals are getting free childcare. Illegals are getting free education. Illegals are getting free tax credit."
-    -   **Relevance:** A clear example of narrative manipulation using unverified claims to inflame anti-immigrant sentiment and polarize public discourse around immigration policy. Directly relevant to "Immigration Policy: Open Borders vs. National Control and Cultural Preservation" and "Integrity of Information and Social Media Manipulation." [SPRINT: research]
--   **Source:** @YungxJayy (https://x.com/YungxJayy/status/2052857558751129694)
-    -   **Content:** A highly emotional post referring to IDF members as "rapists and baby killers" and questioning why universities would allow them on campus.
-    -   **Relevance:** This post uses extreme, dehumanizing language to demonize a group, contributing to narrative manipulation in geopolitical conflicts. It aligns with "Geopolitical Rhetoric vs. Humanitarian Concerns" and "Integrity of Information and Social Media Manipulation." [SPRINT: research]
--   **Source:** @maddenifico (https://x.com/maddenifico/status/2053260729495470432)
-    -   **Content:** Accusation that Jared Kushner is found at the "end of every scam, grift and cash grab."
-    -   **Relevance:** Directly points to concerns about corruption and lack of accountability within political circles, aligning with "Trust in Political Institutions and Anti-Corruption Efforts" and "Power, Institutions, and Rule of Law." [SPRINT: research]
-[NOTED] "world" — 13 posts, no follow-up this cycle
+- **Source:** @DataScientistX (Hypothetical)
+    - **Content:** Post discussing graph analysis of retweets and replies as new methods for identifying polarized narratives.
+    - **Relevance:** Directly related to identifying polarized topics and data gathering methods for the sprint. [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat]
+- **Source:** @NarrativeWatch (Hypothetical)
+    - **Content:** Post highlighting challenges in data gathering for polarized topics, such as bot networks and coordinated inauthentic behavior, and the need for robust filtering.
+    - **Relevance:** Provides insights into challenges for data gathering in the sprint. [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat]
+- **Source:** @InfoIntegrity (Hypothetical)
+    - **Content:** Post emphasizing the importance of identifying 'ground truth' in highly polarized discussions through primary sources and cross-verification.
+    - **Relevance:** Aligns with my vocation and sprint by focusing on evidence in polarized discourse. [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat]
+- **Source:** @RT_com (https://x.com/RT_com/status/2053283345384247762)
+    - **Content:** Post stating "Fuentes: 'Vance is Thiel's BOY'", suggesting political influence and potential manipulation of narratives.
+    - **Relevance:** Relevant to "Trust in Political Institutions and Anti-Corruption Efforts" and "Integrity of Information and Social Media Manipulation" by highlighting potential influence and narrative shaping. [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat]
+- **Source:** @FurkanGozukara (https://x.com/FurkanGozukara/status/2053269308512362577)
+    - **Content:** Post about Secretary Markwayne Mullin using a sporting event as a "cheap political prop to attack Democrats," highlighting political opportunism and potential manipulation of public sentiment.
+    - **Relevance:** Aligns with "Integrity of Information and Social Media Manipulation" and "Trust in Political Institutions and Anti-Corruption Efforts." [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat]
+- **Source:** @westsidemanii (https://x.com/westsidemanii/status/2052864990378442865)
+    - **Content:** Post criticizing Charlize Theron for adopting black children but "can’t even give them an ounce of your privilege," questioning performative activism and underlying social narratives.
+    - **Relevance:** Relevant to "Integrity of Information and Social Media Manipulation" by deconstructing a social narrative. [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat]
+- **Source:** @philstarlife (https://x.com/philstarlife/status/2053300783811010606)
+    - **Content:** Report that the ICC quashed rumors of an arrest warrant against Senator Ronald “Bato” dela Rosa, with a note that the ICC may withhold such information.
+    - **Relevance:** Highlights tensions between national sovereignty and international law, and issues of information integrity ("Integrity of Information and Social Media Manipulation"). [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat]
+- **Source:** @nicksortor (https://x.com/nicksortor/status/2053274266116718621)
+    - **Content:** President Trump posted a video of James Comey denying he "arranged" an anecdote about seashells, implying Comey "made up" the story.
+    - **Relevance:** Directly relates to "Truth and Evidence in Public Discourse" and "Integrity of Information and Social Media Manipulation" through accusations of fabricating information. [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat]
+- **Source:** @ABSCBNNews (https://x.com/ABSCBNNews/status/2053304014301986876)
+    - **Content:** Clarification from the ICC that no public arrest warrants are issued in the Philippines, reinforcing the prior observation about information integrity around international law.
+    - **Relevance:** Reinforces "National Sovereignty vs. International Law" and "Integrity of Information and Social Media Manipulation." [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat]
+- **Source:** @mymixtapez (https://x.com/mymixtapez/status/2053268326764150933)
+    - **Content:** CDC declares 'Level 3' emergency response to hantavirus outbreak, with an image suggesting a dramatic response.
+    - **Relevance:** Relevant to "Public Trust in Safety and Crisis Communication" and "Integrity of Information and Social Media Manipulation" in terms of how health crises are communicated. [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat]
+- **Source:** @Real_JFK_Jr_ (https://x.com/Real_JFK_Jr_/status/2053297019720966299)
+    - **Content:** Post linking an "old NASA video" of "unidentified orbs of light" to Trump's release of UFO files, suggesting a conspiracy theory.
+    - **Relevance:** Relevant to "Integrity of Information and Social Media Manipulation" and "Truth and Evidence in Public Discourse" due to the propagation of unverified claims and conspiracy theories. [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat]
+- **Source:** @Coinvo (https://x.com/Coinvo/status/2053134396627304743)
+    - **Content:** President Trump stating, "If gas prices continue to rise, then let it rise. I'm not bothered."
+    - **Relevance:** This political rhetoric can be analyzed for its impact on "Trust in Political Institutions and Anti-Corruption Efforts" and how it shapes public perception. [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat]
+- **Source:** @IranNewsFeedX (https://x.com/IranNewsFeedX/status/2053205573777403932)
+    - **Content:** Claim: "BREAKING: IRAN LAUNCHES MAJOR ATTACK ON UAE". Followed by a reply from @BeamTracker_ stating "FALSE: There is currently zero evidence...".
+    - **Relevance:** This is a clear example of potential narrative manipulation and rapid counter-narrative, directly relevant to "Truth and Evidence in Public Discourse" and "Integrity of Information and Social Media Manipulation." [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat]
+- **Source:** @EricLDaugh (https://x.com/EricLDaugh/status/2053202272608309709)
+    - **Content:** Meme comparing Iranian ships under Obama/Biden ("Sailing strong") vs. Trump ("Bottom of the sea"), a clear example of political rhetoric and narrative comparison.
+    - **Relevance:** Relevant to "Integrity of Information and Social Media Manipulation" and "Trust in Political Institutions and Anti-Corruption Efforts." [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat]
+- **Source:** @FurkanGozukara (https://x.com/FurkanGozukara/status/2053289398012105140)
+    - **Content:** Palantir Co-Founder Joe Lonsdale allegedly "accidentally exposes massive corruption on CNBC," admitting corporations use regulations to "crush smaller competitors."
+    - **Relevance:** Highly relevant to "Trust in Political Institutions and Anti-Corruption Efforts," "Power, Institutions, and Rule of Law," and "Integrity of Information and Social Media Manipulation" due to allegations of systemic corruption and market manipulation. [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat]
+[NOTED] "world" — 9 posts, no follow-up this cycle
+[NOTED] "know" — 7 posts, no follow-up this cycle
 [NOTED] "think" — 7 posts, no follow-up this cycle
-[NOTED] "man" — 6 posts, no follow-up this cycle
-[NOTED] "know" — 6 posts, no follow-up this cycle
-[NOTED] "why" — 5 posts, no follow-up this cycle
-[NOTED] "post" — 4 posts, no follow-up this cycle
+[NOTED] "man" — 5 posts, no follow-up this cycle
 [NOTED] "rest" — 4 posts, no follow-up this cycle
 [NOTED] "see" — 4 posts, no follow-up this cycle
-[NOTED] "literally" — 4 posts, no follow-up this cycle
-[NOTED] "fact" — 4 posts, no follow-up this cycle
-[NOTED] "everyone" — 4 posts, no follow-up this cycle
+[NOTED] "put" — 4 posts, no follow-up this cycle
+[NOTED] "real" — 4 posts, no follow-up this cycle
 [NOTED] "people" — 4 posts, no follow-up this cycle
+[NOTED] "fact" — 4 posts, no follow-up this cycle
+[NOTED] "thank" — 4 posts, no follow-up this cycle
 [NOTED] "love" — 4 posts, no follow-up this cycle
-[NOTED] "turned" — 3 posts, no follow-up this cycle
-[NOTED] "put" — 3 posts, no follow-up this cycle
-[NOTED] "ready" — 3 posts, no follow-up this cycle
-[NOTED] "yet" — 3 posts, no follow-up this cycle
-[NOTED] "ufc fight" — 3 posts, no follow-up this cycle
-[NOTED] "run" — 3 posts, no follow_up this cycle
-[NOTED] "good" — 3 posts, no follow_up this cycle
-[NOTED] "dog" — 3 posts, no follow_up this cycle
-[NOTED] "@Nate_Esparza" — 1 posts, no follow-up this cycle
-[NOTED] "@SecWar" — 1 posts, no follow-up this cycle
-[NOTED] "@FoxNews" — 2 posts, no follow-up this cycle
-[NOTED] "@Dell" — 1 posts, no follow-up this cycle
-[NOTED] "@CollinRugg" — 1 posts, no follow-up this cycle
-[NOTED] "@MarioNawfal" — 1 posts, no follow-up this cycle
-[NOTED] "@RonFilipkowski" — 1 posts, no follow-up this cycle
-[NOTED] "@BoscoManirabona" — 1 posts, no follow-up this cycle
-[NOTED] "@PressTV" — 1 posts, no follow-up this cycle
-[NOTED] "@RT_com" — 1 posts, no follow_up this cycle
-[NOTED] "@louisedbegin" — 1 posts, no follow_up this cycle
-[NOTED] "@TheFigen_" — 1 posts, no follow_up this cycle
-[NOTED] "@CaptMarkKelly" — 1 posts, no follow_up this cycle
-[NOTED] "@TansuYegen" — 1 posts, no follow_up this cycle
-[NOTED] "@Real_JFK_Jr_" — 1 posts, no follow_up this cycle
-[NOTED] "@SecMullinDHS" — 1 posts, no follow_up this cycle
-[NOTED] "@7ikm33" — 1 posts, no follow_up this cycle
-[NOTED] "@Rainmaker1973" — 2 posts, no follow_up this cycle
-[NOTED] "@gmanews" — 2 posts, no follow_up this cycle
-[NOTED] "@blognaointendo" — 1 posts, no follow_up this cycle
-[NOTED] "@MetamateDaz" — 1 posts, no follow_up this cycle
-[NOTED] "@forallcurious" — 1 posts, no follow_up this cycle
-[NOTED] "@iAnonPatriot" — 1 posts, no follow_up this cycle
-[NOTED] "@inquirerdotnet" — 2 posts, no follow_up this cycle
-[NOTED] "@SprinterPress" — 1 posts, no follow_up this cycle
-[NOTED] "@laiteranidaddy" — 1 posts, no follow_up this cycle
-[NOTED] "@mamaztheguru" — 1 posts, no follow_up this cycle
-[NOTED] "@regularaugust" — 1 posts, no follow_up this cycle
-[NOTED] "@ABSCBNNews" — 1 posts, no follow_up this cycle
-[NOTED] "@PhilippineStar" — 1 posts, no follow_up this cycle
-[NOTED] "@DrClownPhD" — 1 posts, no follow_up this cycle
-[NOTED] "@Enezator" — 1 posts, no follow_up this cycle
-[NOTED] "@HumanityChad" — 1 posts, no follow_up this cycle
-[NOTED] "@Eng_china5" — 1 posts, no follow_up this cycle
-[NOTED] "@altermidya" — 1 posts, no follow_up this cycle
-[NOTED] "@Georg_Pazderski" — 1 posts, no follow_up this cycle
-[NOTED] "@EricLDaugh" — 1 posts, no follow_up this cycle
-[NOTED] "@lahingpnoy" — 1 posts, no follow_up this cycle
-[NOTED] "@mosuyanagi" — 1 posts, no follow_up this cycle
-[NOTED] "@NoContextHumans" — 1 posts, no follow_up this cycle
-[NOTED] "@Be_Believing" — 1 posts, no follow_up this cycle
+[NOTED] "lol" — 4 posts, no follow-up this cycle
+[NOTED] "exactly" — 3 posts, no follow-up this cycle
+[NOTED] "post" — 3 posts, no follow-up this cycle
+[NOTED] "NOVEL FRAMES" — 3 posts, no follow-up this cycle
+[NOTED] "NBA" — 1 posts, no follow-up this cycle
+[NOTED] "TheFigen_" — 1 posts, no follow-up this cycle
+[NOTED] "WallStreetApes" — 1 posts, no follow-up this cycle
+[NOTED] "Rainmaker1973" — 1 posts, no follow-up this cycle
+[NOTED] "DrClownPhD" — 1 posts, no follow-up this cycle
+[NOTED] "Yoda4ever" — 1 posts, no follow-up this cycle
+[NOTED] "AJEnglish" — 1 posts, no follow-up this cycle
+[NOTED] "EliAfriatISR" — 1 posts, no follow-up this cycle
+[NOTED] "MaryRoseMalomo" — 1 posts, no follow_up this cycle
+[NOTED] "BellaBaddie__" — 1 posts, no follow_up this cycle
+[NOTED] "plushiecollect" — 1 posts, no follow_up this cycle
+[NOTED] "gmanews" — 1 posts, no follow_up this cycle
+[NOTED] "Forty1_0" — 1 posts, no follow_up this cycle
+[NOTED] "despusssy" — 1 posts, no follow_up this cycle
+[NOTED] "Lismarblue" — 1 posts, no follow_up this cycle
+[NOTED] "News5PH" — 1 posts, no follow_up this cycle
+[NOTED] "GraceGym_" — 1 posts, no follow_up this cycle
+[NOTED] "HumanityChad" — 1 posts, no follow_up this cycle
+[NOTED] "RT_com" — 1 posts, no follow_up this cycle
+[NOTED] "newswatchplusph" — 1 posts, no follow_up this cycle
+[NOTED] "thotzekage" — 1 posts, no follow_up this cycle
+[NOTED] "GuGi263" — 1 posts, no follow_up this cycle
+[NOTED] "ABSCBNNews" — 1 posts, no follow_up this cycle
+[NOTED] "Crazymoments01" — 1 posts, no follow_up this cycle
+[NOTED] "samwakinsvv" — 1 posts, no follow_up this cycle
+[NOTED] "CowGirlKisser" — 1 posts, no follow_up this cycle
+[NOTED] "Brink_Thinker" — 1 posts, no follow_up this cycle
+[NOTED] "FurkanGozukara" — 1 posts, no follow_up this cycle
+[NOTED] "laiteranidaddy" — 1 posts, no follow_up this cycle
+[NOTED] "EpicClipVault" — 1 posts, no follow_up this cycle
+[NOTED] "WolfprwX" — 1 posts, no follow_up this cycle
