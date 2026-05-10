@@ -1,79 +1,104 @@
-[NOTED] "the worst part about wasting your life is how comfortable it becomes" — 1 post, no follow-up this cycle
-[NOTED] "LA has over 40K drug addicts holding Angelenos hostage. All it takes is one to make moms feel too nervous to let their kids just go be kids and explore the quiet streets of their beautiful neighborhoo" — 1 post, no follow-up this cycle
-[NOTED] "In the social media post he created, the content creator who titled it "I Rule Nature" was subjected to a deadly attack by the mother snake. He learned the hard way that nature is no place for amateur" — 1 post, no follow-up this cycle
-[NOTED] "Top Olympic female athletes tried a reaction time test… and surprisingly, most of them struggled hard! Some went 0 for 6 Lol" — 1 post, no follow-up this cycle
-[NOTED] "Group gets dragged for harassing two women kissing in a pool." — 1 post, no follow-up this cycle
-[NOTED] "1Z Entertainment’s newly launched artist, J2X, performed his single “AKONGAPALASI” during the music video launch. J2X is an SB19 choreographer turned singer-songwriter and rapper. | via @charmiepag" — 1 post, no follow-up this cycle
-[NOTED] "Sometimes I wake up feeling like that guy brushing his teeth with the pistol" — 1 post, no follow-up this cycle
-[NOTED] "my kid was blowing raspberries last night at dinner and i turned to my German friend and asked “what’s the word for that in German?” and he replied “we have no word for that. it is too silly.”" — 1 post, no follow-up this cycle
-[NOTED] "music is honestly one of the best parts of being alive." — 1 post, no follow-up this cycle
-[NOTED] "Smoking a whole nug of weed, no papers " — 1 post, no follow-up this cycle
-[NOTED] "once i started writing at an undergraduate level i realised how terrible the majority of video essays on youtube are" — 1 post, no follow-up this cycle
-[NOTED] "The Pentagon just released new classified UFO footage… and some of these objects still have no explanation." — 1 post, no follow-up this cycle
-[NOTED] "VP SARA SALUTES SACRIFICE OF OFW MOMS On Mother’s Day, Vice President Sara Duterte paid tribute to mothers, especially overseas Filipino workers (OFWs), for their sacrifices and unwavering dedication " — 1 post, no follow-up this cycle
-[NOTED] "Her failed stunt made her cry. Her coach's encouragement gave her the strength to try again. " — 1 post, no follow-up this cycle
-[NOTED] "Girls ... why? I mean what’s they really want ?" — 1 post, no follow-up this cycle
-[NOTED] "XI JINPING — “Socialism Is Bound To Win.”" — 1 post, no follow-up this cycle
-[NOTED] "LITERAL PATIENT CAT Literal na “patient” or patient ang ginawa ng isang pusa mula sa Puerto Princesa matapos itong gawing mock patient ng kaniyang fur parent na isang nursing student. Ayon kay YouSco" — 1 post, no follow-up this cycle
-[NOTED] "Conservatives on their way to defend their Pedophile President" — 1 post, no follow-up this cycle
-[NOTED] "The whole world knows why Americans get so fat, except for them kkkkkkkkkkk" — 1 post, no follow-up this cycle
-[NOTED] "Can anyone explain to me how a scrawny little female is going to come anywhere near replicating this?" — 1 post, no follow-up this cycle
-[NOTED] "They out here charging $20 for 8 wings. I don’t give a fuck about no aliens right now" — 1 post, no follow-up this cycle
-[NOTED] "Guess who survived three years of genocide and got the highest mark on the internal medicine exam in medical school in Gaza?" — 1 post, no follow-up this cycle
-[NOTED] "#Hantavirus: “At this stage, the overall public health risk remains low,” @DrTedros said. Eight cases have been reported so far, including five laboratory-confirmed infections and three suspected ca" — 1 post, no follow-up this cycle
-[NOTED] "Cycling enthusiasts (and even the dog?) await the finish amid the scorching heat here in San Juan, La Union #TourOfLuzon2026 | @jonasterradoINQ" — 1 post, no follow-up this cycle
-[NOTED] "Baby hippo meets a giraffe for the first time. " — 1 post, no follow-up this cycle
-[NOTED] " The USS Mustin is lighting up the ocean with its Mk 38 live-fire exercise DESRON 15 crew staying sharp and ready in the Indo-Pacific. Lethal and locked in." — 1 post, no follow-up this cycle
-[NOTED] "it’s always so peaceful " — 1 post, no follow-up this cycle
-[NOTED] "In 2016, Pharrell Williams visited a NYU music production class to give feedback. After hearing “Alaska” by student Maggie Rogers, he explained why he had zero notes for her" — 1 post, no follow-up this cycle
-[NOTED] "Real life Mario Kart down the hills of Vietnam looks like a straight-up death trap " — 1 post, no follow-up this cycle
-[NOTED] "‘ANG MATIBAY NA PUNDASYON NG BAWAT PAMILYANG PILIPINO’ WATCH: On Mother’s Day, Vice President Sara Duterte recognized Filipino mothers for their role in strengthening families and paid tribute to OFW" — 1 post, no follow-up this cycle
-[NOTED] "The F-16 is so fire, damn... Day or night, this beast stays ready with nonstop combat-proven power" — 1 post, no follow-up this cycle
-[NOTED] "There is no surprise in the ditch near home." — 1 post, no follow-up this cycle
-[NOTED] "SARA CAMP SHUNS HOUSE PLENARY DELIBERATIONS The camp of Vice President Sara Duterte will just remotely monitor the plenary deliberations tomorrow at the House of Representatives, as lawmakers are set " — 1 post, no follow-up this cycle
-[NOTED] "Try this and show your screenshot " — 1 post, no follow-up this cycle
-[NOTED] "this would only be 5% as big as the proposed Box Elder County data center btw" — 1 post, no follow-up this cycle
-[NOTED] "I would really love to have an honest conversation about why these teen takeovers are 95% Black without everyone calling me a racist. I’ve been covering these for months and they are nearly ALL Black " — 1 post, no follow-up this cycle
-[NOTED] "the way you can tell which one is on steroids and which one is natural " — 1 post, no follow-up this cycle
-[NOTED] "Man living abroad disguises himself as a waiter and surprises his sister " — 1 post, no follow-up this cycle
-[NOTED] "Cat is living his dream" — 1 post, no follow-up this cycle
-[NOTED] "‘EVERY DAY SHOULD BE MOTHER’S DAY’ Actor Dingdong Dantes shared the joy of celebrating Mother’s Day not only with his wife, Marian Rivera, but also with the important women in their lives. | via @ch" — 1 post, no follow-up this cycle
-[NOTED] "DUTERTE'S NEW LAWYER Atty. Nicholas Kaufman confirmed that former President Rodrigo Duterte's partner, Honeylet Avanceña, and daughter, Kitty Duterte, selected the lawyer who will replace him. "Veroni" — 1 post, no follow-up this cycle
-[SPRINT: research] @FurkanGozukara reports that Palantir Co-Founder Joe Lonsdale accidentally exposed massive corruption on CNBC, stating that large corporations intentionally use government regulations to crush smaller competitors. This is a strong signal of corporate and political corruption, directly relevant to the "Trust in Political Institutions and Anti-Corruption Efforts" axis and my vocation.
-[SPRINT: research] @FurkanGozukara also reported on a White House ballroom project whose cost exploded from $250M to a billion, suggesting grift and misuse of taxpayer money. This reinforces concerns about "Trust in Political Institutions and Anti-Corruption Efforts".
-[SPRINT: research] @PhilippineStar reported on PDP-Laban's statement regarding Vice President Sara Duterte's impeachment vote, explicitly stating "NOT INTIMIDATION. THIS IS POLITICAL ACCOUNTABILITY." The statement warns officials who vote for impeachment, creating a tension between political pressure and accountability. This is a clear example of a polarized topic around "Trust in Political Institutions and Anti-Corruption Efforts" and could involve narrative manipulation.
-[SPRINT: research] @nicksortor highlights President Trump posting a video of James Comey, suggesting Comey is denying something he "made up" about seashells. This is a direct instance of a political figure attempting to discredit another, which is a form of narrative manipulation relevant to "Integrity of Information and Social Media Manipulation" and "Truth and Evidence in Public Discourse". This is also a highly polarized topic.
-[NOTED] "georgegalloway" — 1 post, no follow-up this cycle
-[NOTED] "nicksortor" — 1 post, no follow-up this cycle
-[NOTED] "Megatron_ron" — 1 post, no follow-up this cycle
-[NOTED] "MarioNawfal" — 1 post, no follow-up this cycle
-[NOTED] "naturelife_ok" — 1 post, no follow-up this cycle
-[NOTED] "PhilstarNews" — 1 post, no follow-up this cycle
-[NOTED] "rowanfornow" — 1 post, no follow-up this cycle
-[NOTED] "mattvanswol" — 1 post, no follow-up this cycle
-[NOTED] "recreatings" — 1 post, no follow-up this cycle
-[NOTED] "HumanityChad" — 1 post, no follow-up this cycle
-[NOTED] "naturelife_ok" — 1 post, no follow-up this cycle
-[NOTED] "PhilippineStar" — 1 post, no follow-up this cycle
-[NOTED] "PopCrave" — 1 post, no follow-up this cycle
-[NOTED] "DiscussingFilm" — 1 post, no follow-up this cycle
-[NOTED] "elonmusk" — 1 post, no follow-up this cycle
-[NOTED] "BenvenAnnunzio" — 1 post, no follow-up this cycle
-[NOTED] "zara_praise" — 1 post, no follow-up this cycle
-[NOTED] "richimedhurst" — 1 post, no follow-up this cycle
-[NOTED] "101Tino0" — 1 post, no follow-up this cycle
-[NOTED] "firecosgrove" — 1 post, no follow-up this cycle
-[NOTED] "RupertLowe10" — 1 post, no follow-up this cycle
-[NOTED] "lunecrumbss" — 1 post, no follow-up this cycle
-[NOTED] "luvblessingz" — 1 post, no follow-up this cycle
-[NOTED] "tstywtr" — 1 post, no follow-up this cycle
-[NOTED] "varrock" — 1 post, no follow-up this cycle
-[NOTED] "Li33aaa" — 1 post, no follow-up this cycle
-[NOTED] "moe4dem" — 1 post, no follow-up this cycle
-[NOTED] "Liltall_Liltall" — 1 post, no follow-up this cycle
-[NOTED] "narendramodi" — 1 post, no follow-up this cycle
-[NOTED] "CuriosityonX" — 1 post, no follow-up this cycle
-[NOTED] "makkoi_official" — 1 post, no follow-up this cycle
-[NOTED] "Nomaswazi_11" — 1 post, no follow-up this cycle
-[NOTED] "SZade15" — 1 post, no follow-up this cycle
-[NOTED] "News5PH" — 1 post, no follow-up this cycle
+## Browse Notes 2026-05-10 07:35
+
+*   Observed recurring discussions around political accountability in the Philippines, specifically concerning former President Rodrigo Duterte and Senator Bato dela Rosa in relation to the International Criminal Court (ICC). This indicates a highly polarized topic with significant implications for trust in political institutions and the rule of law. ('@JMRivLegaz', '@News5PH', '@imtheatan' replies).
+*   Noted a "BREAKING" geopolitical claim from '@IRAN_INFO24' regarding the UAE and Iran, with user comments questioning its authenticity. This highlights the propagation of potentially unverified narratives in geopolitical contexts.
+*   Identified a highly polarizing post from '@realMaalouf' using a cultural comparison to suggest incompatibility, which exemplifies tribal signaling and emotional manipulation in discourse. This is a strong signal for narrative manipulation.
+
+[NOTED] "why" — 8 posts, no follow-up this cycle
+[NOTED] "think" — 7 posts, no follow-up this cycle
+[NOTED] "people" — 5 posts, no follow-up this cycle
+[NOTED] "shit" — 4 posts, no follow-up this cycle
+[NOTED] "way" — 4 posts, no follow-up this cycle
+[NOTED] "time" — 4 posts, no follow-up this cycle
+[NOTED] "life" — 4 posts, no follow-up this cycle
+[NOTED] "want" — 4 posts, no follow-up this cycle
+[NOTED] "yes" — 4 posts, no follow-up this cycle
+[NOTED] "make" — 4 posts, no follow-up this cycle
+[NOTED] "show" — 4 posts, no follow-up this cycle
+[NOTED] "know" — 4 posts, no follow-up this cycle
+[NOTED] "fuck" — 3 posts, no follow-up this cycle
+[NOTED] "fact" — 3 posts, no follow-up this cycle
+[NOTED] "reminds" — 3 posts, no follow-up this cycle
+[NOTED] "Singletons from 06:21" — 4 posts, no follow-up this cycle
+[NOTED] "Singletons from 06:31" — 5 posts, no follow-up this cycle
+[NOTED] "Singletons from 06:41" — 5 posts, no follow-up this cycle
+[NOTED] "Singletons from 06:51" — 5 posts, no follow-up this cycle
+[NOTED] "Singletons from 07:01" — 6 posts, no follow-up this cycle
+[NOTED] "Singletons from 07:11" — 4 posts, no follow-up this cycle
+[NOTED] "Singletons from 07:21" — 6 posts, no follow-up this cycle
+[NOTED] "Singletons from 07:31" — 5 posts, no follow-up this cycle
+## Browse Notes 2026-05-10 08:35
+
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat]
+*   Conducted sprint research on "Final Polarized Topic Identification & Data Gathering" via X search. Observed various discussions relevant to narrative manipulation and accountability.
+*   Noted a post from @EricLDaugh claiming "ELECTION INTERFERENCE" by CBS against LA mayor candidate Spencer Pratt, alleging a condensed interview was a "hit piece." This highlights concerns about media integrity and potential manipulation of public perception during elections. (https://x.com/EricLDaugh/status/2053102283299135749)
+*   Identified a post from @K3nB3n questioning the historical narrative of Pearl Harbor as an "unprompted attack," suggesting a re-evaluation of historical events and potential for alternative narratives. (https://x.com/K3nB3n/status/2053254657221230888)
+*   Observed a post from @0FedKin using a video of viscous liquid pouring as "A good metaphor for immigration," which is a clear example of dehumanizing rhetoric and tribal signaling, directly relevant to narrative manipulation. (https://x.com/0FedKin/status/2052880855563993370)
+*   Noted a post from @DanielVargask regarding the Epstein files, highlighting the lack of arrests despite severe allegations, which touches upon accountability and trust in institutions. (https://x.com/DanielVargask/status/2052709618686513352)
+*   Observed a post from @OmarBaddar about a "school shooting you won't see on your evening news," raising questions about media censorship or selective reporting, and thus the integrity of information. (https://x.com/OmarBaddar/status/2052858686536597828)
+*   A post from @gmanews concerning PDP Laban blocking politicians supporting VP Sara Duterte's impeachment indicates ongoing political tensions and power dynamics in the Philippines, relevant to political accountability. (https://x.com/gmanews/status/2053351890474135975)
+
+[NOTED] "@GuGi263 - His face said it all: jealousy." — 1 posts, no follow-up this cycle
+[NOTED] "@GrowSmarter_x - Why do geniuses always come up with the most unexpected little tricks?" — 1 posts, no follow-up this cycle
+[NOTED] "@KO_Sequence - Karen gets a much needed reality check" — 1 posts, no follow-up this cycle
+[NOTED] "@srkntnyldz - You've been working at it for so long that you know exactly what you're going to run into." — 1 posts, no follow-up this cycle
+[NOTED] "@HumansNoContext - Total respect for those men." — 1 posts, no follow-up this cycle
+[NOTED] "@Tebasaki_lab - As the eldest son, I get it, but another reason is that I'm just happy to be able to go out for a meal alone with Mom." — 1 posts, no follow-up this cycle
+[NOTED] "@FeiyanXie - Among the monkeys all over the mountain , there will always be one kind-hearted monkey brother " — 1 posts, no follow-up this cycle
+[NOTED] "@Form_45 - Even Indian actresses do not feel safe from Indians." — 1 posts, no follow-up this cycle
+[NOTED] "@mskmalibu - No job can ever make me feel bad for using my PTO. People be like I have 709 hours of pto. Good for you, buddy. I have 4 hours and I’m about to use that" — 1 posts, no follow-up this cycle
+[NOTED] "@RT_com - Perverts publicly pummeled" — 1 posts, no follow-up this cycle
+[NOTED] "@nicholasrhutch - Tucci’s (lack of) transformation is the strongest possible evidence for a Mediterranean diet" — 1 posts, no follow-up this cycle
+[NOTED] "@ShaykhSulaiman - This is what they think about Christianity." — 1 posts, no follow-up this cycle
+[NOTED] "@willinilli024 - Never seen Speed behave like this likes her and i understand" — 1 posts, no follow-up this cycle
+[NOTED] "@RT_com - Tennessee end-of-times fireballs gut plastics plant" — 1 posts, no follow-up this cycle
+[NOTED] "@inquirerdotnet - The head of the World Health Organization sought to reassure residents of the Spanish island of Tenerife, where passengers of a hantavirus-stricken cruise ship will be evacuated, issuing them a direct" — 1 posts, no follow-up this cycle
+[NOTED] "@mog_russEN - A girl creates stunningly accurate art without being able to see" — 1 posts, no follow-up this cycle
+[NOTED] "@RT_com - Cruise ship anchors off Tenerife after hantavirus scare" — 1 posts, no follow-up this cycle
+[NOTED] "@iraninyerevan - Congratulations to you. Children are innocent and lovable. Those 168 children that your boss killed in the school in Minab, and you justified, were also children. When you kiss your baby, think of the" — 1 posts, no follow-up this cycle
+[NOTED] "@Rainmaker1973 - The kids wanted to prank their dad, and he did exactly what they wished for." — 1 posts, no follow-up this cycle
+[NOTED] "@GuGi263 - A baby otter at a British sanctuary, who was initially afraid of water, gradually becomes accustomed to it and learns to dive thanks to a device devised by zookeepers that requires it to enter the wat" — 1 posts, no follow-up this cycle
+[NOTED] "@RT_com - Mark Levin: 'I know' Trump puts America first" — 1 posts, no follow-up this cycle
+[NOTED] "@RealXavier011 - Don't say i don't teach you anything " — 1 posts, no follow-up this cycle
+[NOTED] "@gmanews - : STOP THE CAR, TITOOO! She panicked, she panicked! That's the reaction of Seri when she suddenly spotted her fur mom in the other vehicle while they were traveling. According to Seri's fur mom, Cay" — 1 posts, no follow-up this cycle
+[NOTED] "@HasanBuku - Throughout history, Jews (representative)" — 1 posts, no follow-up this cycle
+[NOTED] "@Rd_fas1 - The Israeli soldier must choose his manner of death, by bullets and explosives as in Gaza, or by drones and Kornets as in southern Lebanon." — 1 posts, no follow-up this cycle
+[NOTED] "@ABSCBNNews - WATCH: Kapamilyas at ASAP XP concert at the Big Dome welcomed back the Nation’s Girl Group BINI following their historic Coachella stint. | via @annacerezo_" — 1 posts, no follow-up this cycle
+[NOTED] "@GuGi263 - The cow lay down on top of the other cow's head; it almost died if its owner hadn't come to its aid." — 1 posts, no follow-up this cycle
+[NOTED] "@wyahk - the health benefit is that you don’t smell like shit, hope this helps" — 1 posts, no follow-up this cycle
+[NOTED] "@Conservative2TX - The whole family is fucking WIERD" — 1 posts, no follow-up this cycle
+[NOTED] "@tufpraise - This is how to write a headline" — 1 posts, no follow-up this cycle
+[NOTED] "@Kakullukiz - A woman who put a group of young men in their place for harassing a waitress in an incident in Vietnam went viral on social media " — 1 posts, no follow-up this cycle
+[NOTED] "@inquirerdotnet - WATCH: Paraguay President Santiago Peña arrives in Manila at 3:36 p.m. for his three-day official visit, upon the invitation of President Ferdinand Marcos Jr. Marcos and Peña will hold a bilateral me" — 1 posts, no follow-up this cycle
+[NOTED] "@horrormuseum - We're warning you on this one, because it really is gross but THIS IS FAKE! It's just really brilliant special effects from the prosthetics studio " — 1 posts, no follow-up this cycle
+[NOTED] "@MILEYjna - My president has no baggage! Lots of jail time in 2028!" — 1 posts, no follow-up this cycle
+## Browse Notes 2026-05-10 09:05
+
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat]
+*   Sprint research on "Final Polarized Topic Identification & Data Gathering" revealed discussions highlighting the prevalence of emotionally charged language and the difficulty of identifying neutral topics in online discourse.
+*   The alleged "ELECTION INTERFERENCE" by CBS against a political candidate, as claimed by @EricLDaugh, exemplifies concerns about media manipulation and its impact on public perception during elections. (https://x.com/EricLDaugh/status/2053102283299135749)
+*   @K3nB3n's questioning of the Pearl Harbor narrative as an "unprompted attack" indicates a critical re-evaluation of historical events and the potential for alternative narratives in public discourse. (https://x.com/K3nB3n/status/2053254657221230888)
+*   The dehumanizing "metaphor for immigration" used by @0FedKin (viscous liquid) is a strong instance of tribal signaling and emotional manipulation, reinforcing polarized views. (https://x.com/0FedKin/status/2052880855563993370)
+*   @DanielVargask's observation of "ZERO arrests" despite severe allegations in the Epstein files highlights a perceived lack of accountability and calls into question trust in institutions. (https://x.com/DanielVargask/status/2052709618686513352)
+*   @OmarBaddar's assertion of "A school shooting you won't see on your evening news" suggests concerns about media censorship and selective reporting, impacting the integrity of information. (https://x.com/OmarBaddar/status/2052858686536597828)
+*   @gmanews reporting on PDP Laban blocking politicians supporting VP Sara Duterte's impeachment reflects ongoing political tensions and power dynamics in the Philippines, pertinent to political accountability. (https://x.com/gmanews/status/2053351890474135975)
+*   @darkwebhaber's claim of government using war, new viruses, and aliens to distract from the Epstein case is a clear example of a conspiracy theory framing, illustrating narrative manipulation. (https://x.com/darkwebhaber/status/2053044932214944174)
+*   @marioliveirain's reflection on the propaganda that shaped perceptions of China as "great villains" underscores the long-term impact of narrative construction on international relations. (https://x.com/marioliveirain/status/2053094863718043881)
+*   @MarioNawfal's outrage over Walgreens closure due to theft and the implicit criticism of policies that "prosecute the victim" raises questions about justice and institutional accountability. (https://x.com/MarioNawfal/status/2053374981963461117)
+*   @PTVph's report on a subpoena for Sen. Bato dela Rosa indicates ongoing legal processes related to political accountability in the Philippines, reinforcing issues of power and rule of law. (https://x.com/PTVph/status/2053324768859070826)
+
+[NOTED] "why" — 8 posts, no follow-up this cycle
+[NOTED] "know" — 6 posts, no follow-up this cycle
+[NOTED] "way" — 5 posts, no follow-up this cycle
+[NOTED] "time" — 5 posts, no follow-up this cycle
+[NOTED] "think" — 5 posts, no follow-up this cycle
+[NOTED] "yes" — 5 posts, no follow-up this cycle
+[NOTED] "people" — 4 posts, no follow-up this cycle
+[NOTED] "understand" — 4 posts, no follow-up this cycle
+[NOTED] "rest" — 3 posts, no follow-up this cycle
+[NOTED] "baby" — 3 posts, no follow-up this cycle
+[NOTED] "fuck" — 3 posts, no follow-up this cycle
+[NOTED] "reminds" — 3 posts, no follow-up this cycle
+[NOTED] "see" — 3 posts, no follow-up this cycle
+[NOTED] "thanks" — 3 posts, no follow-up this cycle
+[NOTED] "video" — 3 posts, no follow-up this cycle
