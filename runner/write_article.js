@@ -157,7 +157,7 @@ async function callGemini(prompt) { return callVertex(prompt, 16384, { thinkingB
     const cite = j.tx_id
       ? `[J${i + 1}] ${j.date} h${j.hour || "?"} — https://sebastianhunter.fun/arweave/${j.tx_id}`
       : `[J${i + 1}] ${j.date} h${j.hour || "?"}`;
-    return `${cite}\n${j.text_content.slice(0, 1200).trim()}`;
+    return `${cite}\n${j.text_content.slice(0, 2500).trim()}`;
   }).join("\n\n---\n\n");
 
   // Verified claims block
