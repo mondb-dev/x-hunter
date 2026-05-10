@@ -312,8 +312,8 @@ function applySortAndFilter(
   return [...result].sort((a, b) => {
     switch (sort) {
       case "oldest": {
-        const aD = a.verified_at ?? a.created_at;
-        const bD = b.verified_at ?? b.created_at;
+        const aD = a.claim_date ?? a.verified_at ?? a.created_at;
+        const bD = b.claim_date ?? b.verified_at ?? b.created_at;
         return new Date(aD).getTime() - new Date(bD).getTime();
       }
       case "confidence-desc":
@@ -332,9 +332,9 @@ function applySortAndFilter(
         if (aT !== bT) return aT - bT;
         return b.confidence_score - a.confidence_score;
       }
-      default: { // newest
-        const aD = a.verified_at ?? a.created_at;
-        const bD = b.verified_at ?? b.created_at;
+      default: { // newest — sorted by claim_date (when reported), not analysis date
+        const aD = a.claim_date ?? a.verified_at ?? a.created_at;
+        const bD = b.claim_date ?? b.verified_at ?? b.created_at;
         return new Date(bD).getTime() - new Date(aD).getTime();
       }
     }
