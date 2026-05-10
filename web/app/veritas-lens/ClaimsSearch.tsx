@@ -357,17 +357,8 @@ export default function ClaimsSearch({ claims }: { claims: VerifiedClaim[] }) {
     [claims, query, activeTag, sort],
   );
 
-  // Grouped view only when: no search, all topics, default sort
-  const showGrouped = !query.trim() && activeTag === "all" && sort === "newest";
-
-  const grouped = useMemo(() => {
-    if (!showGrouped) return {} as Record<string, VerifiedClaim[]>;
-    return TAG_ORDER.reduce((acc, tag) => {
-      const items = filtered.filter((c) => deriveTag(c) === tag);
-      if (items.length > 0) acc[tag] = items;
-      return acc;
-    }, {} as Record<string, VerifiedClaim[]>);
-  }, [filtered, showGrouped]);
+  // Grouped view only when a topic tag is not active and user explicitly requests it
+  const showGrouped = false;
 
   return (
     <>
@@ -432,30 +423,12 @@ export default function ClaimsSearch({ claims }: { claims: VerifiedClaim[] }) {
         </p>
       )}
 
-      {showGrouped ? (
-        <div className="verify-grouped">
-          {TAG_ORDER.filter((tag) => grouped[tag]).map((tag) => (
-            <div key={tag} className="verify-topic-group">
-              <div className="verify-topic-header">
-                <h3 className="verify-topic-label">{TAG_LABELS[tag]}</h3>
-                <button className="verify-topic-see-all" onClick={() => setActiveTag(tag)}>
-                  {grouped[tag].length} {grouped[tag].length === 1 ? "claim" : "claims"}
-                </button>
-              </div>
-              <div className="verify-claims">
-                {grouped[tag].map((claim) => <ClaimCard key={claim.claim_id} claim={claim} />)}
-              </div>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div className="verify-claims">
-          {filtered.length === 0 && (
-            <p className="verify-empty">No claims match your search.</p>
-          )}
-          {filtered.map((claim) => <ClaimCard key={claim.claim_id} claim={claim} />)}
-        </div>
-      )}
+      <div className="verify-claims">
+        {filtered.length === 0 && (
+          <p className="verify-empty">No claims match your search.</p>
+        )}
+        {filtered.map((claim) => <ClaimCard key={claim.claim_id} claim={claim} />)}
+      </div>
     </>
   );
 }
