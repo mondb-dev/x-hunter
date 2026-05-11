@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T15:18:51.960Z",
+  "generated_at": "2026-05-11T17:18:58.497Z",
   "stats": {
     "total": 334,
     "supported": 2,
@@ -1360,6 +1360,54 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "claim_34",
+      "claim_text": "The Iranian Navy attacked a US ship near Bandar Abbas.",
+      "status": "refuted",
+      "confidence_score": 0.375,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": -1
+      },
+      "source_handle": "iranmilittary",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 2,
+      "verified_at": "2026-04-14T17:02:15.018Z",
+      "created_at": "2026-04-14T17:01:23.386Z",
+      "original_source": "Iranian social media accounts on X",
+      "claim_date": "2026-04-13",
+      "supporting_sources": [
+        {
+          "name": "News.az",
+          "stance": "Reported claims from Iranian social media about an attack, noting lack of official confirmation."
+        },
+        {
+          "name": "Oneindia News",
+          "stance": "Reported Iran's claim of destroying a US naval vessel near Bandar Abbas, highlighting the absence of US confirmation."
+        },
+        {
+          "name": "Caliber.Az",
+          "stance": "Reported the Iranian Navy's claim on X of sinking a US vessel near Bandar Abbas."
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "Misbar",
+          "stance": "Investigated the circulating video and found it to be outdated, depicting a US strike on an Iranian vessel in March 2026, not an Iranian attack on a US ship."
+        }
+      ],
+      "framing_analysis": "The claim is framed as a factual event, but it appears to be a piece of misinformation or propaganda, especially given the lack of official confirmation and the refutation of the video evidence. The timing coincides with heightened tensions and a US naval blockade in the Strait of Hormuz.",
+      "web_search_summary": "Claims circulating on social media on April 13-14, 2026, suggest the Iranian Navy attacked and sank a US vessel near Bandar Abbas. However, these claims lack official confirmation from either Iranian authorities or the United States military. Misbar's analysis indicates that a video circulated as evidence of the attack is outdated and actually depicts a US strike on an Iranian vessel in March 2026.",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "claim_1",
       "claim_text": "US operations in Iran could end in 2-3 weeks (Trump statement)",
       "status": "refuted",
@@ -1464,102 +1512,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_34",
-      "claim_text": "The Iranian Navy attacked a US ship near Bandar Abbas.",
-      "status": "refuted",
-      "confidence_score": 0.375,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": -1
-      },
-      "source_handle": "iranmilittary",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 2,
-      "verified_at": "2026-04-14T17:02:15.018Z",
-      "created_at": "2026-04-14T17:01:23.386Z",
-      "original_source": "Iranian social media accounts on X",
-      "claim_date": "2026-04-13",
-      "supporting_sources": [
-        {
-          "name": "News.az",
-          "stance": "Reported claims from Iranian social media about an attack, noting lack of official confirmation."
-        },
-        {
-          "name": "Oneindia News",
-          "stance": "Reported Iran's claim of destroying a US naval vessel near Bandar Abbas, highlighting the absence of US confirmation."
-        },
-        {
-          "name": "Caliber.Az",
-          "stance": "Reported the Iranian Navy's claim on X of sinking a US vessel near Bandar Abbas."
-        }
-      ],
-      "dissenting_sources": [
-        {
-          "name": "Misbar",
-          "stance": "Investigated the circulating video and found it to be outdated, depicting a US strike on an Iranian vessel in March 2026, not an Iranian attack on a US ship."
-        }
-      ],
-      "framing_analysis": "The claim is framed as a factual event, but it appears to be a piece of misinformation or propaganda, especially given the lack of official confirmation and the refutation of the video evidence. The timing coincides with heightened tensions and a US naval blockade in the Strait of Hormuz.",
-      "web_search_summary": "Claims circulating on social media on April 13-14, 2026, suggest the Iranian Navy attacked and sank a US vessel near Bandar Abbas. However, these claims lack official confirmation from either Iranian authorities or the United States military. Misbar's analysis indicates that a video circulated as evidence of the attack is outdated and actually depicts a US strike on an Iranian vessel in March 2026.",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_33",
-      "claim_text": "Iranian Navy attacked a US ship near Bandar Abbas",
-      "status": "refuted",
-      "confidence_score": 0.285,
-      "scoring_breakdown": {
-        "source_tier": 0.2,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 1,
-        "web_search": 0.5
-      },
-      "source_handle": "iranmilittary",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 15,
-      "verified_at": "2026-04-18T11:54:15.722Z",
-      "created_at": "2026-04-14T16:00:13.832Z",
-      "original_source": "Iranian Armed Forces / Iranian social media accounts",
-      "claim_date": "2026-04",
-      "supporting_sources": [
-        {
-          "name": "Censor.NET",
-          "stance": "Reported Iran's claim of destroying a US ship near Bandar Abbas."
-        },
-        {
-          "name": "Oneindia News",
-          "stance": "Reported Iran's claim of destroying a US naval vessel near Bandar Abbas."
-        },
-        {
-          "name": "News.az",
-          "stance": "Reported Iranian social media claims of an attack on a US vessel near Bandar Abbas."
-        }
-      ],
-      "dissenting_sources": [
-        {
-          "name": "United States Military/Government",
-          "stance": "No official confirmation of any US ship loss or attack by Iran in April 2026."
-        }
-      ],
-      "framing_analysis": "The claim appears to be a false dichotomy, presenting an unconfirmed Iranian assertion as a factual event without corroborating evidence from the US. The framing suggests a direct military engagement that is not supported by available information. The claim is likely part of an information warfare strategy amidst heightened tensions and a US naval blockade against Iran.",
-      "web_search_summary": "Claims from Iranian sources and social media emerged in mid-April 2026 stating that the Iranian Navy attacked and destroyed a US ship near Bandar Abbas. However, there has been no official confirmation from the United States regarding any such incident or loss of a naval vessel. US sources indicate that a naval blockade is in effect against Iran, and while there have been instances of US forces turning back Iranian-flagged vessels, there are no reports of a US ship being attacked or destroyed by Iran in April 2026.",
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "claim_68",
       "claim_text": "Deyanna Ostroushko will not be charged for assaulting Savanah Hernandez.",
       "status": "refuted",
@@ -1623,53 +1575,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "live_9031c60d2e",
-      "claim_text": "Joe Rogan just delivered the most powerful speech I’ve ever heard from private citizen in the White House. Listen to every word of this.  incredible",
-      "status": "refuted",
-      "confidence_score": 0.285,
-      "scoring_breakdown": {
-        "source_tier": 0.2,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 1,
-        "web_search": 0.5
-      },
-      "source_handle": "bennyjohnson",
-      "source_tier": null,
-      "evidence_urls": [
-        "https://www.forbes.com/sites/conormurray/2026/04/18/joe-rogan-joins-trump-at-white-house-after-stepping-up-criticism-of-president/",
-        "https://www.newsnationnow.com/newsnation-live/joe-rogan-joins-trump-to-sign-order-allowing-psychedelic-drug-research/",
-        "https://www.youtube.com/watch?v=s7_Y_2_y_2k"
-      ],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": null,
-      "verification_count": 31,
-      "verified_at": "2026-05-02T06:00:50.340Z",
-      "created_at": "2026-04-19T23:19:11.139Z",
-      "original_source": "Unknown",
-      "claim_date": "2026-04",
-      "supporting_sources": [],
-      "dissenting_sources": [
-        {
-          "name": "Forbes",
-          "stance": "Reports Rogan's presence and brief comments, not a 'powerful speech'."
-        },
-        {
-          "name": "NewsNation Live",
-          "stance": "Shows Rogan speaking briefly about his role in the executive order, not delivering a 'powerful speech'."
-        },
-        {
-          "name": "Sky News",
-          "stance": "Reports Rogan revealing a text exchange with Trump about Ibogaine, not a 'powerful speech'."
-        }
-      ],
-      "framing_analysis": "The claim uses emotionally charged language ('most powerful speech,' 'incredible') to exaggerate the significance of Joe Rogan's appearance and brief remarks at the White House. It frames his presence as a major political event rather than a participation in a specific policy signing. The phrase 'private citizen in the White House' is technically true, but misleading in its implication of a significant, independent address.",
-      "web_search_summary": "Joe Rogan was recently present at the White House on April 18, 2026, when President Trump signed an executive order regarding psychedelic drug research. While Rogan spoke briefly at the event, he did not deliver a powerful speech as a private citizen in the White House. His comments were primarily about his role in bringing the issue of psychedelic treatments to the President's attention.",
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "claim_35",
       "claim_text": "Russia announces all future oil and gas deals with Europe will be priced in Chinese Yuan.",
       "status": "refuted",
@@ -1717,6 +1622,101 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "live_9031c60d2e",
+      "claim_text": "Joe Rogan just delivered the most powerful speech I’ve ever heard from private citizen in the White House. Listen to every word of this.  incredible",
+      "status": "refuted",
+      "confidence_score": 0.285,
+      "scoring_breakdown": {
+        "source_tier": 0.2,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 1,
+        "web_search": 0.5
+      },
+      "source_handle": "bennyjohnson",
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.forbes.com/sites/conormurray/2026/04/18/joe-rogan-joins-trump-at-white-house-after-stepping-up-criticism-of-president/",
+        "https://www.newsnationnow.com/newsnation-live/joe-rogan-joins-trump-to-sign-order-allowing-psychedelic-drug-research/",
+        "https://www.youtube.com/watch?v=s7_Y_2_y_2k"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": null,
+      "verification_count": 31,
+      "verified_at": "2026-05-02T06:00:50.340Z",
+      "created_at": "2026-04-19T23:19:11.139Z",
+      "original_source": "Unknown",
+      "claim_date": "2026-04",
+      "supporting_sources": [],
+      "dissenting_sources": [
+        {
+          "name": "Forbes",
+          "stance": "Reports Rogan's presence and brief comments, not a 'powerful speech'."
+        },
+        {
+          "name": "NewsNation Live",
+          "stance": "Shows Rogan speaking briefly about his role in the executive order, not delivering a 'powerful speech'."
+        },
+        {
+          "name": "Sky News",
+          "stance": "Reports Rogan revealing a text exchange with Trump about Ibogaine, not a 'powerful speech'."
+        }
+      ],
+      "framing_analysis": "The claim uses emotionally charged language ('most powerful speech,' 'incredible') to exaggerate the significance of Joe Rogan's appearance and brief remarks at the White House. It frames his presence as a major political event rather than a participation in a specific policy signing. The phrase 'private citizen in the White House' is technically true, but misleading in its implication of a significant, independent address.",
+      "web_search_summary": "Joe Rogan was recently present at the White House on April 18, 2026, when President Trump signed an executive order regarding psychedelic drug research. While Rogan spoke briefly at the event, he did not deliver a powerful speech as a private citizen in the White House. His comments were primarily about his role in bringing the issue of psychedelic treatments to the President's attention.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_33",
+      "claim_text": "Iranian Navy attacked a US ship near Bandar Abbas",
+      "status": "refuted",
+      "confidence_score": 0.285,
+      "scoring_breakdown": {
+        "source_tier": 0.2,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 1,
+        "web_search": 0.5
+      },
+      "source_handle": "iranmilittary",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 15,
+      "verified_at": "2026-04-18T11:54:15.722Z",
+      "created_at": "2026-04-14T16:00:13.832Z",
+      "original_source": "Iranian Armed Forces / Iranian social media accounts",
+      "claim_date": "2026-04",
+      "supporting_sources": [
+        {
+          "name": "Censor.NET",
+          "stance": "Reported Iran's claim of destroying a US ship near Bandar Abbas."
+        },
+        {
+          "name": "Oneindia News",
+          "stance": "Reported Iran's claim of destroying a US naval vessel near Bandar Abbas."
+        },
+        {
+          "name": "News.az",
+          "stance": "Reported Iranian social media claims of an attack on a US vessel near Bandar Abbas."
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "United States Military/Government",
+          "stance": "No official confirmation of any US ship loss or attack by Iran in April 2026."
+        }
+      ],
+      "framing_analysis": "The claim appears to be a false dichotomy, presenting an unconfirmed Iranian assertion as a factual event without corroborating evidence from the US. The framing suggests a direct military engagement that is not supported by available information. The claim is likely part of an information warfare strategy amidst heightened tensions and a US naval blockade against Iran.",
+      "web_search_summary": "Claims from Iranian sources and social media emerged in mid-April 2026 stating that the Iranian Navy attacked and destroyed a US ship near Bandar Abbas. However, there has been no official confirmation from the United States regarding any such incident or loss of a naval vessel. US sources indicate that a naval blockade is in effect against Iran, and while there have been instances of US forces turning back Iranian-flagged vessels, there are no reports of a US ship being attacked or destroyed by Iran in April 2026.",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "claim_53",
       "claim_text": "Forced organ harvesting from Falun Gong practitioners is occurring in China.",
       "status": "refuted",
@@ -1744,36 +1744,6 @@
       "dissenting_sources": [],
       "framing_analysis": null,
       "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_9",
-      "claim_text": "American journalist Shelly Kittleson kidnapped in Baghdad, possibly by Iran-backed militia",
-      "status": "refuted",
-      "confidence_score": 0.275,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_power_accountability",
-      "verification_count": 12,
-      "verified_at": "2026-04-16T00:31:12.807Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"American freelance journalist Shelly Kittleson was kidnapped in Baghdad on March 31, 2026, by Kataib Hezbollah, an Iran-backed militia. She was released on April 7, 2026, in a prisoner swap with Iraq, on the condition that she immediately leave the country. U.S. officials had reportedly warned Kittleson of threats against her prior to her abduction.\",\n  \"evidence_urls\": [\n    \"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHghfqMCA4",
       "investigation_depth": "quick"
     },
     {
@@ -1807,6 +1777,36 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "claim_9",
+      "claim_text": "American journalist Shelly Kittleson kidnapped in Baghdad, possibly by Iran-backed militia",
+      "status": "refuted",
+      "confidence_score": 0.275,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_power_accountability",
+      "verification_count": 12,
+      "verified_at": "2026-04-16T00:31:12.807Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"American freelance journalist Shelly Kittleson was kidnapped in Baghdad on March 31, 2026, by Kataib Hezbollah, an Iran-backed militia. She was released on April 7, 2026, in a prisoner swap with Iraq, on the condition that she immediately leave the country. U.S. officials had reportedly warned Kittleson of threats against her prior to her abduction.\",\n  \"evidence_urls\": [\n    \"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHghfqMCA4",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "claim_22",
       "claim_text": "Sundas \"Sunny\" Naqvi was falsely claimed to have been detained by ICE at the Dodge County Jail; this claim was amplified by Cook County Commissioner Kevin Morrison.",
       "status": "unverified",
@@ -1825,76 +1825,173 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_epistemic_integrity",
-      "verification_count": 115,
-      "verified_at": "2026-05-11T15:18:51.730Z",
+      "verification_count": 117,
+      "verified_at": "2026-05-11T17:18:58.260Z",
       "created_at": "2026-04-14T06:31:47.102Z",
       "original_source": "Sundas \"Sunny\" Naqvi and Cook County Commissioner Kevin Morrison",
       "claim_date": "2026-03",
       "supporting_sources": [
         {
+          "name": "Police1",
+          "excerpt": "Dodge County Sheriff Dale Schmidt filed a civil case against Sundas “Sunny” Naqvi and Cook County Commissioner Kevin Morrison, alleging Naqvi was never taken to Broadview nor the Dodge County Jail, despite their claims.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZJBbp7mMBWjBmkABgPI63yZIlIMJ7s1tYqEy8nk16C5B5b2lFc7qwYbPeaSUTXz9YO4LcGYK9FWRl2VwoM2IMnhzW7eGRi07O5ARU6hkieVShz4i3nv5UvPifbLYChHrhEj-VtmWf6tw5bkkEgTLnXk8pjwuwoaYa_TwrncKEglHLUIeKFR2Ie6VnwlqLVjgZ0fpuCSrv_jHqxQNJ_TzpU-nAYSF-mFQSf1_YnQw="
+        },
+        {
           "name": "The Barrington Hills Observer",
-          "excerpt": "A Wisconsin sheriff announced a defamation lawsuit Friday against a Cook County politician and a Skokie woman who recently claimed that federal immigration officials detained her at three locations for nearly 48 hours, including a jail in Dodge County, Wisconsin.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdc0arxYr74XRbnZKFcfZbWCc1YXVlueSHGQ0WDRHk8TnALeUN2ewdHeQsJhJmq8UGM6MU32CAyKtH-7no4NzcSWkuoKLhrWtGgmILS88KGLI64W9OC2BcvNMC3NExzDJU2xW0zV7ivbXJZfRJW0SVE9plPToClLTJtKXwjFnCDJZeRH2qvGpqzvoIRpPjeE3jsQSXAQdMJLUv0GiezQOGpNIDNU-t9aejCWnVEgzEwsEGEc5C1caV9yMRaG1Clr2Id5-GbUTQQAWNKzkL"
+          "excerpt": "Dodge County Sheriff Dale Schmidt is suing Sundas “Sunny” Naqvi and Cook County Commissioner Kevin Morrison for defamation, stating that Naqvi was never in the custody of the Dodge County Sheriff's Office and that their claims were \"unverified, uncorroborated and misleading.\"",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhnhJ3att8z9DVrhk7a6jTwZ0Gg40kbV61r0U3MehqYAX7BlfS1cjHY8iI15DSG1lcluJWSZyjdBFyaO4dK4F-tEf738Ae847pa-_n6ZzuQo-k-p1ESLdjumqHl7_KwdRcsbrPzTW_4yQGTDRUi7XdQvFOOl6L00Z-fOm597Y1Ta8A2LYHaz4i-984mrO773PruCM0TZNMACjuC5MTbujni4_C4ch-eHKSsMUZgiD2IFblkkKZdnC5CrNrIkKaqcuhJDAogn6tFXk8oKj4bg=="
         },
         {
           "name": "CBS News",
-          "excerpt": "A Wisconsin sheriff is suing an Illinois woman for $1 million, accusing her of defamation, saying her claims of being detained by federal immigration officials in the Dodge County Jail are a hoax.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhtrJt3q92bxUs_HK2TOkOhhTPn7mcMDdnMHUM00aDi0Kgb6BIwguNk09zemvDy9CmaERebCbza8zzE-0ERPglh0xknfbswFPgdyy1gylWlFee0YUTElYiZf1bnRfHUWqu4yUfSukkCUDW5LgNa_KwuIvndkLfWJ4L78wt9zUI7fkFvW6zeVja0oxhNPskFIKyIO7EI5abriKdpnm5NxZK0VO-Olu0zuKi94BcPQ=="
-        },
-        {
-          "name": "Police1",
-          "excerpt": "Dodge County Sheriff Dale Schmidt said he filed a civil case in federal court on Friday against the woman who had claimed to have been held in the Dodge County Jail illegally, along with others connected to the March incident.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGmNroEyhJhSFAQQOlx5Q9ubdHuN4xW11KcwlOH9AYuJq5osNSSxhxVizmBMo-nPyw8muGWt7cMyqlXy4bWMlmakJ7023y59KpMLKUZd6MwD1a16u0P2aVK4YQEDPBdxy8CJCC6r50c97ANt3KrAY_uXOIEhYj9QvawsBaNgQIIx4QiU4qqiwiemIRm96Ooe56R8ck-oGahE-fs8gooyMcd3R8YG1YA6S5MKwifjg=="
+          "excerpt": "A Wisconsin sheriff is suing Sundas \"Sunny\" Naqvi for $1 million, accusing her of defamation, saying her claims of being detained by federal immigration officials in the Dodge County Jail are a hoax, and that her claims were disputed by the U.S. Department of Homeland Security.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYWcomCpIk5QpcM5aoMF8Bur2BrIsarGId0wdER2Z7n-w6T4cGnezW9YqlZnwGMcH4uAic4tWPq6VNm3ii7S4RQh5E3bTCrJcMBe-XxgzwJYRIj6YWxnFagxON5p_AWTexpp6Q-fh-4gNYDjO2vq773SuNjaq-rQ2Q6hhAFLjPYAGmTO7P2JYOtVsykJTHGKNayMxE1kRF5OUF8ve7xgRam6w47nSKrcZL8jVQ3zE="
         },
         {
           "name": "The Daily Northwestern",
-          "excerpt": "A Wisconsin sheriff is suing Sundas “Sunny” Naqvi for defamation, alleging she falsely claimed she was held in immigration custody at the Dodge County Jail in March.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2_bTkftw15Nfadhz8yM5Z9UQeAxfEI5-1BmNETZ4BPKXOW3ZJA17hSa9IaGvr6YNnkNhI-4Fkk_j5aMq_mZnp3S4lA625syQYdBXS5FBkVBxn4LDSzeWvPeIRfK3QVIBm5JupGT5LHlHWq34LiSt-O-1Zzf5lucOHwP-1TykvTjVQ4TKw_o9-K2737IAO6iYZcDDvejK6hHIhiPqGxZSHWUgiTRRZ63_7wx-YDl4tWg=="
-        },
-        {
-          "name": "The Times of India",
-          "excerpt": "A Wisconsin sheriff has now sued Illinois woman Sunny Naqvi who claimed in March that she was detained by the US Customs and Border Protection agents at O'Hare International Airport and then was taken to the ICE facility.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFM26IjTA1ZRrpjskxtRkTGyM_Frz0VgUWnA6Uh1fjOxJTKtR74lSYpiv5LU4xH5nGORduae6sp-kMZIVbonS4NY_B-0LMWjaALsQARpWzvVnxddmxZFga-IZt3vycAjP2cvQdLqNufcIjpLvfH1TfXg6-RxpSTiiK6lQsrjMO9EOqUHQaY06aEXCN_k3pW4YseCh4gN7IWyTt2C3kOpJTTgokWB95XT9qaQlJMt35NBijBM8XwP_GgDd9AAGh-tNYTiUD_VNL679LaT9_RcTxTeHrxTMU47wh6ttYnYHBHD9vBe6T0dYsheo8KMvkiEb9ydcI="
+          "excerpt": "Dodge County Sheriff Dale Schmidt is suing Sundas “Sunny” Naqvi for defamation, alleging she falsely claimed she was held in immigration custody at the Dodge County Jail, and presented evidence that she was at a hotel during the time of her alleged detention.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElyp79yJTpBv9cVrAcytciy9h44Mc6MOOSe-WFbDgS9rOm-nBAZigV-uRAUxon5XDwlaTy298g34Mc30k6qHQlxPZ-2z09uo7FxwFX_xu03XHUt__2eJ0fu13s1CjW6BUHlsG759O7tQuN9TwkKuVBgc7Z2BR4XURAWzse_iz8HLtsEXv-4ErkTmaSQcN34u8RCSYfmUHzlSLBdF8LOrejzVHMd_GzQIyajQmonLht_l4="
         },
         {
           "name": "Diya TV",
-          "excerpt": "Dodge County, Wisconsin Sheriff Dale Schmidt filed a federal civil defamation lawsuit on April 10 against Sundas “Sunny” Naqvi, 28, of Skokie, Illinois, and Cook County Commissioner Kevin Morrison, each for $1 million, after a month-long investigation concluded that Naqvi fabricated a story about being detained by federal immigration authorities.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTF7FbRu-TPlxyu-UKICGlezmVjmpvxggW3Gn6J1Iigjs8_LV5irTp2hzJ6Q03JJYdCaASicGyiGh4ffdDOsOsZW3IaBqxcegB_r_whrx6_1MIYdDV34baBaupMCt-QR74PEhBS5s7KJh1LYgOMCgplBHeD2ql0_d-aFMqeZIPt_lsIa8hykY6Qeqcd9x5VI0h-xXdA2jMnQ=="
-        },
-        {
-          "name": "FOX6 Milwaukee",
-          "excerpt": "Sheriff Dale Schmidt denied the allegations and called it a \"hoax.\" He backed it up with receipts, surveillance video and witness statements.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEDegHk08ujQf-53nOuoHHpO1pWAGSgrihPs9AHwOqiZAYfYCMuCl2kGGhNx8J61M8xJl_Gg_BoBx09TZCEyjTd9_tpGlpraThq-YG4gdz1GuZLHjZ41EHRIQ4iXgx01u1EhVBJYln3S6fooguJCfSXf_HQ4tHrICDd6-tEPZ85qTWq-SI4gPubV9ikIAh1P_XqHU="
+          "excerpt": "Dodge County, Wisconsin Sheriff Dale Schmidt filed a federal civil defamation lawsuit against Sundas “Sunny” Naqvi and Cook County Commissioner Kevin Morrison, stating that a month-long investigation concluded Naqvi fabricated her story about being detained by federal immigration authorities.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvotK6Y6GLKwidjCcxCavnF1scveruyVWPTtHSdV3eO9NkdDH1hFEJkJJYT-jYAMJgPTs-RKSV6kGxHUXTeE2O8fx7WqMzOK173Sx-Xudz8i1zljjSgb2TdIAr09Rlw2xS74oWkFS66eiLEQZ2Fd6L446IqDHYxKKTchGe5RIblN_VWzRfdGGc2RYmQlMu1UnMbWJcmbq4U70="
         },
         {
           "name": "Journal & Topics Media Group",
-          "excerpt": "Dodge County Sheriff Dale Schmidt held a press conference on Friday (April 10) refuting earlier allegations by Skokie resident Naqvi that she was ever held at the Dodge County Jail in Wisconsin.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFvXsBfOEqf9YrEKKmllvCj9b07_w1BR_mcAIUkdRmIW-MpzXoQ1Ya0YrHS5UdChHB1O7tUayagIDXraBUvf4O6jw8hqrJ4Q9DCqyh8rXZFMNbKZ6bsKlw14ACB7ANiiSyznPY67OPbMUfN4pWJcRM0vNMKXyUM12hufyBfwp2ely13kSaEb_YmhAd9jguQNwYLtVwVvs96JctIylcIXyfG38Ui"
-        },
-        {
-          "name": "The Record North Shore",
-          "excerpt": "CBP's statement, published to the organization's social media on Tuesday, March 10, denied that federal officers held Sundas “Sunny” Naqvi at O'Hare International Airport for longer than 90 minutes on March 5, contradicting testimony from Naqvi's family and attorney who say she was detained for the better part of two days and released alone in the predawn hours 140 miles from home.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2_bTkftw15Nfadhz8yM5Z9UQeAxfEI5-1BmNETZ4BPKXOW3ZJA17hSa9IaGvr6YNnkNhI-4Fkk_j5aMq_mZnp3S4lA625syQYdBXS5FBkVBxn4LDSzeWvPeIRfK3QVIBm5JupGT5LHlHWq34LiSt-O-1Zzf5lucOHwP-1TykvTjVQ4TKw_o9-K2737IAO6iYZcDDvejK6hHIhiPqGxZSHWUgiTRRZ63_7wx-YDl4tWg=="
-        },
-        {
-          "name": "WISN 12 (YouTube)",
-          "excerpt": "Sheriff Schmidt claims the comments made by both Sundas 'Sunny' Naqvi and Commissioner Kevin Morrison are defamatory.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHlLTyaRsvhYdv-Q2jSAdFQiWcCNw-P9lsDK8PzTxjmGzfVW_YoLLBLZA2irvglKqXctBRM0fgfmfti0wZ9u5449AAlV60K4A1PWlkQ8IR7KnY9WCoAF5CGolsmO9pm6MO6WfMkww=="
+          "excerpt": "Statements from two county sheriff's offices, federal officials, and a lack of response from Naqvi's family and attorney are casting doubt on allegations that Sundas \"Sunny\" Naqvi was held in ICE detention, with the Dodge County Sheriff stating his office has no record of her being booked, detained, or released.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIH9mz6NEm2H0sziQWSuy3J4qZH6m3c1g6lPoxl1_9ytyngZXFqCfmH-SYPf64hzhnWWCp4dfKIVfLujH-Hc6m_2Pl_dpSuxliJNJufGtRuC32J-7LtGSajO0kZw49cL7hoe25NE_vzjfwL5r3U1GGo3-N4MwuOfnpBq-XRyGj-0Zo0yof4HURe3JFm4mzFqN4TARor0HY0oDT"
         },
         {
           "name": "Reason Magazine",
-          "excerpt": "Schmidt is suing [Sundas] Naqvi, Morrison, and unidentified Doe Defendants for falsely claiming that Naqvi was illegally detained at Dodge County Jail from March 5, 2026 through March 7, 2026.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGY7Pw3FaGQjrV92L8ehUm94q76xtA-qtR3-W5sP1P25Q36hTe9OstUxEr3z0aM3OPIOumiYNJ5uExXbg8gGsz_dhMCgxzUjE1e6tQQdSbNfJuqsWlXGcyHFmn0ddH-eFK75w5OzRpsy_Gw23iVLtc-nRz9oyQ7ESOSIZMZJ4YbRfI4_yAZF6EKDNOiDkCHX3CI62xbvGSC5Vh6_DGLbsHehX6XHzG5Bp9lGmyuSRedfYt2jopUcRMJj9omrq3e-kAmgHzrsTsZ2VgLTiNe6jZtg6rCty4sJwFdehGzf_Y="
+          "excerpt": "Judge Brett Ludwig's order in Schmidt v. Naqvi details that Sheriff Dale Schmidt is suing Naqvi, Morrison, and unidentified Doe Defendants for falsely claiming Naqvi was illegally detained at Dodge County Jail, and that Schmidt maintains Naqvi was never booked or detained there.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFLSgk8-3aWBfkVuzusLFk2pwJs9V8HAz9DFNXVlj92f7JjEjNgNkFOe9a8jPUijr2PkFrSeraI1LV-7OGqYHgpsXjenCGsXq2vomvfA2WkxEtBBIdCOXmnbFa1ag1-yEvQfMKCQnZ-3RW_iiMLUSbHGEZj76STL_UIl2f8fu7pZd4gd47F7j9F9jTZJawyriqtkccZS4qQiDBRqzaxvTWJafHE0RcJOX6LQWxf1sYuis1_8exqQ2nFJXbxqcvVluFAC70JzoBFsls50o7ApiAiIlK7xdjtUPoPueST7WT"
         },
         {
-          "name": "The Western Journal",
-          "excerpt": "A Wisconsin sheriff last week announced he has filed a defamation suit against Sundas “Sunny” Naqvi, an American citizen, for including his jail in her story about spending almost two days in ICE custody in March.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2_bTkftw15Nfadhz8yM5Z9UQeAxfEI5-1BmNETZ4BPKXOW3ZJA17hSa9IaGvr6YNnkNhI-4Fkk_j5aMq_mZnp3S4lA625syQYdBXS5FBkVBxn4LDSzeWvPeIRfK3QVIBm5JupGT5LHlHWq34LiSt-O-1Zzf5lucOHwP-1TykvTjVQ4TKw_o9-K2737IAO6iYZcDDvejK6hHIhiPqGxZSHWUgiTRRZ63_7wx-YDl4tWg=="
+          "name": "FOX6 Milwaukee",
+          "excerpt": "Dodge County Sheriff Dale Schmidt is suing Sundas \"Sunny\" Naqvi, calling her claims of ICE detention a hoax and backing it up with receipts, surveillance video, and witness statements, and has also filed a federal civil defamation lawsuit against Cook County Commissioner Kevin Morrison.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqX33GvDr4Sa4L6W6jm_fKDXEWCfo4IRMf5n11b9seqxVbqkeKLtIOC6loiRnFj_NaQ5b4P-0z9xX9HrLH-OD646Q8ULlqre78ne0yz-9m1pnb0KySD0Q8R0JtXN7Q5zDUW4bxQNTRfYpNfU-KRMIz0BfjrTq6JkrmyxpbZrs43ZY4o6Hnr5E2k2XXjfU4nkrlqs1c"
+        },
+        {
+          "name": "Journal & Topics Media Group",
+          "excerpt": "Dodge County Sheriff Dale Schmidt held a press conference refuting allegations by Sundas Naqvi that she was held at the Dodge County Jail, and subsequently filed a federal civil lawsuit against Naqvi and Cook County Commissioner Kevin Morrison for defamation, whose allegations were amplified by Morrison.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIH9mz6NEm2H0sziQWSuy3J4qZH6m3c1g6lPoxl1_9ytyngZXFqCfmH-SYPf64hzhnWWCp4dfKIVfLujH-Hc6m_2Pl_dpSuxliJNJufGtRuC32J-7LtGSajO0kZw49cL7hoe25NE_vzjfwL5r3U1GGo3-N4MwuOfnpBq-XRyGj-0Zo0yof4HURe3JFm4mzFqN4TARor0HY0oDT"
+        },
+        {
+          "name": "CBS News",
+          "excerpt": "The Department of Homeland Security, Naqvi's alleged employer, and two sheriff's departments are denying claims by Sundas Naqvi that federal agents detained her and five coworkers, with CBP stating her claims are \"blatantly false\" and that she departed within 90 minutes of arrival.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYWcomCpIk5QpcM5aoMF8Bur2BrIsarGId0wdER2Z7n-w6T4cGnezW9YqlZnwGMcH4uAic4tWPq6VNm3ii7S4RQh5E3bTCrJcMBe-XxgzwJYRIj6YWxnFagxON5p_AWTexpp6Q-fh-4gNYDjO2vq773SuNjaq-rQ2Q6hhAFLjPYAGmTO7P2JYOtVsykJTHGKNayMxE1kRF5OUF8ve7xgRam6w47nSKrcZL8jVQ3zE="
         }
       ],
       "dissenting_sources": [],
-      "framing_analysis": "The claim is framed validly, as it accurately reflects the core assertion made by the Dodge County Sheriff and other sources regarding the alleged false detention claim and its amplification. The framing allows for a direct evaluation of the evidence presented by the sheriff and other authorities.",
-      "web_search_summary": "The claim that Sundas \"Sunny\" Naqvi was falsely reported to have been detained by ICE at the Dodge County Jail, and that this claim was amplified by Cook County Commissioner Kevin Morrison, is confirmed. The Dodge County Sheriff has filed a defamation lawsuit against Naqvi and Morrison, presenting evidence such as hotel records, surveillance video, and text messages to refute Naqvi's detention claims. The Department of Homeland Security also stated that Naqvi was not taken into custody or transferred to ICE for detention.",
+      "framing_analysis": "The claim is framed validly, as it accurately reflects the core assertion made by Sundas \"Sunny\" Naqvi and amplified by Kevin Morrison, which has subsequently been challenged by law enforcement and federal agencies.",
+      "web_search_summary": "The claim that Sundas \"Sunny\" Naqvi was falsely reported to have been detained by ICE at the Dodge County Jail, and that this claim was amplified by Cook County Commissioner Kevin Morrison, is confirmed. Dodge County Sheriff Dale Schmidt has filed a civil lawsuit against Naqvi and Morrison, presenting evidence such as hotel records, surveillance footage, and witness testimony to refute Naqvi's detention claims. The Department of Homeland Security and the Dodge County Sheriff's Office have also publicly denied Naqvi's allegations, stating she was never in their custody at the times claimed.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_26",
+      "claim_text": "U.S. sanctions have deliberately crushed the economy of multiple nations, impoverishing millions of innocent people, which can be defined as economic terrorism.",
+      "status": "unverified",
+      "confidence_score": 0.635,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.8,
+        "evidence_quality": 0.8,
+        "cross_source": 0.5,
+        "web_search": 0.8
+      },
+      "source_handle": "assalrad",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 111,
+      "verified_at": "2026-05-11T17:18:58.262Z",
+      "created_at": "2026-04-14T09:57:43.868Z",
+      "original_source": "The claim does not attribute a specific original source, but rather reflects a viewpoint expressed by critics of US sanctions.",
+      "claim_date": "empty",
+      "supporting_sources": [
+        {
+          "name": "Wikipedia",
+          "excerpt": "Because of the vast network of US sanctions, banks and firms have withdrawn from humanitarian trade with Iran, leaving Iranians with rare or severe diseases unable to obtain the medicine and treatments needed.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHtWZe3ebwttKerlf4eUL3MxtZsz-OfoS0N93NrT22dsw3IOyca2MqtV7K8FTB209lFYV4AydN3Aen11c5xNswDPONFT8nCxxE5jOWjSUlxGUKiUWqYaL5oThTbsymhJV6GDkzludiGS1G0R0B61oyItHPYCAeXDOcfd2vkkM7Tci0lOzfmCHqpKWACw=="
+        },
+        {
+          "name": "Atlantic Council",
+          "excerpt": "A new Report by Human Rights Watch shows that even though the US has created exemptions for humanitarian trade with Iran, the broad nature of the economic sanctions, particularly on the global banking system, has restricted Iranians' right to health by interfering with access to healthcare, education, and other human rights.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEoKj4uBTty9BjJdwJrMu3DHQrhRFZpKXZq-HDQ-wP_LSsr0SFPAoeIomKoe0Fv5XO8HLuiDZ_bUEfJtyi2olPpMNMd43BTsyWAKlyCqtoDKhdxRJeF8tI-Hbzgyr5iRlrPoHSMRvEo2RXY1ZnRRJ9z4GyKBQMuaFohpG6zuo-IAOamtB7OUQbBBGgsc8J9R34g"
+        },
+        {
+          "name": "Lieber Institute",
+          "excerpt": "Over recent decades, restrictive economic measures have become a “tool of first resort” in US foreign policy.",
+          "url": null
+        },
+        {
+          "name": "Kiel Institute",
+          "excerpt": "Measures such as freezing assets or excluding countries from payment systems like SWIFT can result in GDP losses of up to 10 percentage points.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHpps4KJD7WB2yw6PV-W3n5G0R9wsVTWwJyPfxUtCc3Vll0YjEvowktH_J1vr0IgudfuL7KWNNFb6iL08y073HdDHtrofnSsEZRTwLFTg9ecbNFp-JtknedXhFHkqUS8b8kRy8AZR66FgPdPngoiN1_dQhEj1uhE6LH6wVMJbGrR0I_0N85Yqrr97iZIJNjklZatiD6YqC-MdQVipo_vp0VMw=="
+        },
+        {
+          "name": "Anadolu Ajansı",
+          "excerpt": "Economic sanctions generate high costs, especially for poorer populations in target countries, a study published Tuesday by the Munich-based Ifo Institute shows.",
+          "url": null
+        },
+        {
+          "name": "Cato Institute",
+          "excerpt": "Sanctions have massive humanitarian costs and are not only ineffective but likely counterproductive.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxSI-0ldQcJjLmj6fAkP0MGUKxGpKHvDpn4Xi5RzSuEagibgCUL1xqqdwAkFH25f8qXYhq4L6QtmywZMRMQYkO3ciDjYmHjGgUel7z3h1Obb8tLOqh5C4oWvsyXAkMnT2cvS6g55_bV-6d8AJf51Jg7T_6BN6bkgMGHJ_4z2rruNYs4Qzs5D8EFzZWHqL6ARrRXB3J43yrZkKJivoxGWFnKq1866DEjyZ9hUz9pr8pEWhSxg=="
+        },
+        {
+          "name": "Anadolu Ajansı",
+          "excerpt": "Sanctions by the United States reduced life expectancy by just under half a year.",
+          "url": null
+        },
+        {
+          "name": "World Finance",
+          "excerpt": "The economic stranglehold of the stringent sanctions saw Iraqi children fall victim to malnutrition and prolonged suffering, while a lack of medical supplies and a shortage of clean water led to one of the worst humanitarian crises in modern history.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdOjTd0M7cm6sKhEktOjBmpxmgVoK5cXIcrZ33mbG01N8gd6Uuu0RgO78BQ1LWeKVI1cBCfHdbbgt6TDMEMY0SsRFmpJhEL799_7GQphzyHRTITWs9-M6mCsV4ICern3EN6bub2uWWo5FMHj5mXdtjrpaROouPechVL2BEOMMmQj-f7UgR1X0J"
+        },
+        {
+          "name": "Journal of Development Economics",
+          "excerpt": "Our results indicate that US sanctions are adversely affecting those living in poverty as we observe a 3.8 percentage point (pp) larger poverty gap in sanctioned countries compared to a control group that is as close as possible in terms of observable pretreatment characteristics.",
+          "url": null
+        },
+        {
+          "name": "Anadolu Ajansı",
+          "excerpt": "Studies show, for example, that as a result of the sanctions imposed on Iran in 2012, it was mainly the young, uneducated population in the country that suffered.",
+          "url": null
+        },
+        {
+          "name": "House.gov",
+          "excerpt": "For just as long, I have strongly opposed comprehensive sanctions that impose broad restrictions on trade and economic activity with a country because their effects are felt mostly by the civilian population.",
+          "url": null
+        },
+        {
+          "name": "Anadolu Ajansı",
+          "excerpt": "The US has imposed numerous sanctions on Venezuela since 2017, which have led to a fall in the country's overall imports by 91% by 2020.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "House.gov",
+          "excerpt": "Sanctions serve as a powerful tool for the U.S. government to protect the innocent, weaken terror groups and oppressive regimes, and … bring a measure of justice to the families and loved ones of those persecuted, tortured, and killed….",
+          "url": null
+        },
+        {
+          "name": "Council on Foreign Relations",
+          "excerpt": "For many policymakers, economic sanctions have become the tool of choice to respond to major geopolitical challenges such as terrorism and conflict.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEoKj4uBTty9BjJdwJrMu3DHQrhRFZpKXZq-HDQ-wP_LSsr0SFPAoeIomKoe0Fv5XO8HLuiDZ_bUEfJtyi2olPpMNMd43BTsyWAKlyCqtoDKhdxRJeF8tI-Hbzgyr5iRlrPoHSMRvEo2RXY1ZnRRJ9z4GyKBQMuaFohpG6zuo-IAOamtB7OUQbBBGgsc8J9R34g"
+        },
+        {
+          "name": "Lieber Institute",
+          "excerpt": "Restrictive measures, such as trade restrictions and economic sanctions, are a critical and effective tool in US foreign policy.",
+          "url": null
+        }
+      ],
+      "framing_analysis": "The claim is framed in a highly critical and accusatory manner, using strong emotional language like \"deliberately crushed,\" \"impoverishing millions of innocent people,\" and \"economic terrorism.\" While there is evidence to support the negative economic and humanitarian impacts of sanctions, the characterization as \"economic terrorism\" is a contentious interpretation rather than a universally accepted factual descriptor. The claim focuses solely on the negative consequences without acknowledging the stated foreign policy objectives of sanctions.",
+      "web_search_summary": "Evidence suggests that U.S. sanctions have had severe negative impacts on the economies of targeted nations, contributing to impoverishment and humanitarian crises, particularly affecting vulnerable populations. While the term \"economic terrorism\" is used by some critics and sanctioned nations to describe these effects, it is not a universally accepted legal or academic definition. The U.S. government, however, views sanctions as a tool to achieve foreign policy goals, deter undesirable behavior, and protect national security, often incorporating humanitarian exemptions, though their effectiveness is debated.",
       "investigation_depth": "quick"
     },
     {
@@ -1916,61 +2013,51 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_power_accountability",
-      "verification_count": 115,
-      "verified_at": "2026-05-11T15:18:51.731Z",
+      "verification_count": 117,
+      "verified_at": "2026-05-11T17:18:58.261Z",
       "created_at": "2026-04-14T07:30:44.029Z",
-      "original_source": "Savanah Hernandez (via X.com)",
-      "claim_date": "2026-04-11",
+      "original_source": "Savanah Hernandez (via social media)",
+      "claim_date": "2026-04-12",
       "supporting_sources": [
         {
-          "name": "Waupaca County Post",
-          "excerpt": "Paige Ostroushko, a University of Wisconsin-Stevens Point soccer player and psychology major, faces charges for assaulting journalist Savanah Hernandez on April 11.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtkaVod-G8o0rtXql-juzl7H32SsiGR8-WSMygdeyhRuCmSx744gaNrABazZ6hLodfyHso_u-Ebm-7uZpU5CDodgo41t3honevaHvsQMfqR1Iderg1QM4WpztKskRZXLBpONjoV_j5_-dzjspKFtb2iKQNftLqE84x1OgWYPSIhbg5ubbkhhB53fMOi1Qq5Yg="
-        },
-        {
-          "name": "CBS News",
-          "excerpt": "The cases against three people arrested in that fight are now in the hands of the Hennepin County Attorney for potential charges.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE7OJ-IGLoReO10xI-1lZlPJ4Knj9_wkQ7bVwT2z1SQBgYVO0Ax1oT7xRlvIx2ZVSHJlFNqEJEyZs3vnGrmDj4eYcneAe0WMM4_y6f5YG-qA9DdSqGDQUx8w1rb1Vulao1k-l881ARN-r6XqXDPUr3ArM2A6GTPjTtRaI2pZY1p9uuW9Z5t-rSg9fB3d2OJ1YDDY05JkWvEf-Mz"
+          "name": "KARE 11",
+          "excerpt": "A federal grand jury has indicted three people on criminal charges in connection with the assault of a Turning Point USA reporter during an anti-ICE protest outside the federal Bishop Henry Whipple Building in the Twin Cities earlier this month.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFc0M6nf_3tmsp_D9y6gApjvIDTMvxjtSNGqkW9sxl2rwda62DHaswDFqwSW-l7VsSUeaYEIZWin-mii74C_VBlpBzZtDRMdhofnv2SVnyvEU6otOEtahrupCT54rFU_7d_kO0ZNLnybtezM7FkDsNHpNXztTugUwal4MrPS5IyEZiqtUPgE3YwfQn8irXitV9Kx0koXqefT4W03BG_WWKjNAJ8JpgIC5hyFrM6F7qKW-1bVSi5GE1ePJWEQ6xSf7dlNBCvhoIGBhsw3BraCPipJ1cdBeKyvCATmwAHKvsxly8b7qQxuZArN60ZJTvqGNhtG59fzK5PAfu0xzcZ0zQ="
         },
         {
           "name": "Dailyhunt",
           "excerpt": "Federal prosecutors charged Christopher Ostroushko, 51, Deyanna Ostroushko, 46, and their daughter Paige Ostroushko, 20, in connection with the attack.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGoWfFSYHozI9lhgV2UNHN7uZ13-BLK4okZzsu8uYnXFCJp4CLVu7kRSZAO8FzKEm_HWpQYmtXij2IFg8ZU-TjlkExZFwi1Y22aiRxOnQOOAAhFx821vmK9fiV1U-wLSXw0eucORW_C670v1-nlklmiCgqQMd_rEC9-cKoz8rb2ADvaipYuyiL5q-AnQEKFmt2ngvY3UvFqEW0FfnMQn-4e6z0sTLeus1Hx2mEMbSEgsavFioa1a7UuRAvKDOEnSXf47eZ3AtinBINjAr4ZbAlpWUvqYXB7Imp_9mFfw6Hs1QI8wUyNkBP5TQ1q_fuVU6BJMMczwhclOWhsFLJUnvD2Xr-nmhk4jZkr8Yk15tod3BtzJx5QRYtMDBtVFSuWAw=="
-        },
-        {
-          "name": "Mediaite",
-          "excerpt": "Turning Point USA contributor Savanah Hernandez was attacked by multiple anti-ICE protesters in Minneapolis on Saturday, with one female protester caught on camera hitting Hernandez with two punches to the head and knocking her to the ground.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEegbfhZR9N6rxosCYOMy2-Sm58iYcRJ0HvVs-0ERCcRVVgt5ThHWbAMd4Orkoi0bxG0FBKKZUw7wriFGO8H0mFmymqtcuePLpa0PiR45ElvypjwcP4Fs7y9A6OuK8T0vl1mo3RJiusL-_LM2roA69mR6irQj-jAAY9TnsvVkVrHs95K9i8CsabdbOf7nuqOgB0T3YpWmdhi4g03sOGATXPJ4F6Q6IeZmjHPhAmHq-39lrnXuZLBXZpgkA-NEz8Das="
-        },
-        {
-          "name": "Department of Justice",
-          "excerpt": "The Department of Justice today announced the unsealing of a federal grand jury indictment charging Christopher Ostroushko, Deyanna Ostroushko, and Paige Ostroushko with assaulting a journalist while she was reporting on an anti-ICE protest on federal property in St. Paul Minnesota on April 11, 2026.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1Mh7wr5Pcu1fI9nehEPa4dBiO_T5Wj1OSZjLcfphy2fHv5c688QQk0QgsIt5Pqvt2dGV0tVqIYJ5YXw-B1YE6eH9vySGfSfSlGr1iGOOAX7B84M0QUt8QgP0xpDx-6f3dbYqj5hMd6WD81088pZ4JUMy-BooTGN00ygBBW8UYeDnqriIKnyIX3VP_PC3ygQ525BewpvpQkK3jBhY39SHXuioNljVmBesoUgcmAEo5nMSo3A=="
-        },
-        {
-          "name": "The Kenya Times",
-          "excerpt": "A federal grand jury has indicted three members of the same family for the alleged assault of Turning Point USA journalist Savannah Hernandez during an anti-ICE protest outside a federal building here last month.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHVIBjeI7P2dhlxk-aVyMaz2FetHFzsnXaazFiANVYOxuKoj6ufRLVEFIapLE5RMNPkeRtoRipAu9KVvSmnADCih9owB7l9MFoghtyTmQ2gKTVSpF6HpKBNnYYRCSRB7SgWe_sozRyZMWquFhf8DKa6x76w45WzmaLZP_ZX-7vTvjWJSStzaAxo6C6DcvJteaMTeKY_oYtYAJa5i0zV95sq2iqQxjQvjUfrZRt8nujKyfz-MJVygI4hddj8Z6sbAF8fKEG2u6kMO8QzAC6_"
-        },
-        {
-          "name": "Alpha News",
-          "excerpt": "A federal grand jury has indicted two people in connection with the April 11 assault on Turning Point USA Frontlines reporter Savanah Hernandez, according to multiple reports.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE7OJ-IGLoReO10xI-1lZlPJ4Knj9_wkQ7bVwT2z1SQBgYVO0Ax1oT7xRlvIx2ZVSHJlFNqEJEyZs3vnGrmDj4eYcneAe0WMM4_y6f5YG-qA9DdSqGDQUx8w1rb1Vulao1k-l881ARN-r6XqXDPUr3ArM2A6GTPjTtRaI2pZY1p9uuW9Z5t-rSg9fB3d2OJ1YDDY05JkWvEf-Mz"
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGSlSHTr7J06cKg1hIq3rP0vFCFkpcpTAWYcMDuLU25QDzl30WkDavLUD0ij5boWnQ4bHXip54h_nRNQRV3hYsdPpUgrjfQSv1r54wZEyNtSnI7h0DiSAOGuRrxACy-xtu0mdhKwSc5xMxiTt5Z-2ucWKxpC_czpNM78NHjQCAluLPmW1KUtTy2EyUG0gv4BDRF8kYvBxD1hwg2UzdlAd4qosHZ0tdi8_fgTmMa49b0FE442BzYAJGLhwDAF4m_MfaxbJXfqxq6okd871ErFySwnFaVRAFNBkjM0R-bkPqVEWcDIZLQRcDQ6EnavmXf9iuMUuGoPXopVKwO17CB5ivLxvHZuCp0op-xI2O6Gl9GOPUdkg6EhMBesIL8C5mv"
         },
         {
           "name": "The Daily Wire",
-          "excerpt": "A federal grand jury has indicted the family involved in the assault on a Turning Point USA reporter at an anti-ICE protest earlier this month.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGoWfFSYHozI9lhgV2UNHN7uZ13-BLK4okZzsu8uYnXFCJp4CLVu7kRSZAO8FzKEm_HWpQYmtXij2IFg8ZU-TjlkExZFwi1Y22aiRxOnQOOAAhFx821vmK9fiV1U-wLSXw0eucORW_C670v1-nlklmiCgqQMd_rEC9-cKoz8rb2ADvaipYuyiL5q-AnQEKFmt2ngvY3UvFqEW0FfnMQn-4e6z0sTLeus1Hx2mEMbSEgsavFioa1a7UuRAvKDOEnSXf47eZ3AtinBINjAr4ZbAlpWUvqYXB7Imp_9mFfw6Hs1QI8wUyNkBP5TQ1q_fuVU6BJMMczwhclOWhsFLJUnvD2Xr-nmhk4jZkr8Yk15tod3BtzJx5QRYtMDBtVFSuWAw=="
+          "excerpt": "Todd Blanche, the acting attorney general, announced the federal charges on X, stating, “Today, Christopher, Deyanna, and Paige Ostrouchko were indicted by a grand jury for allegedly assaulting journalist and Turning Point USA contributor Savannah Hernandez, while she was lawfully reporting on anti-ICE protests outside a federal building in St. Paul.”",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGSlSHTr7J06cKg1hIq3rP0vFCFkpcpTAWYcMDuLU25QDzl30WkDavLUD0ij5boWnQ4bHXip54h_nRNQRV3hYsdPpUgrjfQSv1r54wZEyNtSnI7h0DiSAOGuRrxACy-xtu0mdhKwSc5xMxiTt5Z-2ucWKxpC_czpNM78NHjQCAluLPmW1KUtTy2EyUG0gv4BDRF8kYvBxD1hwg2UzdlAd4qosHZ0tdi8_fgTmMa49b0FE442BzYAJGLhwDAF4m_MfaxbJXfqxq6okd871ErFySwnFaVRAFNBkjM0R-bkPqVEWcDIZLQRcDQ6EnavmXf9iuMUuGoPXopVKwO17CB5ivLxvHZuCp0op-xI2O6Gl9GOPUdkg6EhMBesIL8C5mv"
         },
         {
-          "name": "kare11.com",
-          "excerpt": "MINNEAPOLIS — A federal grand jury has indicted three people on criminal charges in connection with the assault of a Turning Point USA reporter during an anti-ICE protest outside the federal Bishop Henry Whipple Building in the Twin Cities earlier this month.",
+          "name": "FOX 9",
+          "excerpt": "Hennepin County prosecutors charged Christopher Ostroushko with misdemeanor fifth-degree assault.",
           "url": null
+        },
+        {
+          "name": "Waupaca County Post",
+          "excerpt": "STEVENS POINT – Paige Ostroushko, a University of Wisconsin-Stevens Point soccer player and psychology major, faces charges for assaulting journalist Savanah Hernandez on April 11.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGw29x3SYTkJs8cT3CmgDI5jDVBdDXsYdfHYnuSSuFTczWbJZveGvsOGMyZxPtJCHWDJBzeQ1fQc2OXyIwOqQwAoDbqkJFhTQqUBj1YqoXREVANVR-pLQ52nIyV0v8BMlv88sztqepn8C1fmvYvG0DOMcUd-uWB-ATW3LcL9l8VZyFF7X-kE5uecp95eFz18Q=="
+        },
+        {
+          "name": "The Post Millennial",
+          "excerpt": "The Hennepin County Sheriff's Office has filed only misdemeanor charges against three individuals captured on video launching a brutal mob assault against TPUSA reporter Savanah Hernandez during an anti-ICE protest in Minneapolis, Minnesota.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFpcaA81Iyqr1aPmncxIKA_VFTpAGkLfCaoPWMXEZTuI95yrdyR9BDADeuW6FJcLjchBpVyQyat-2H7ktHCeHs-4Yvz71l7i8-_qkatc4fXwLri3VjJDSrGCuEpi_oLSlNbemWqBGSRFX91Vc3jC9LgtJKayJSj0GSZJkIWyyXLSpCJJY8UDX7IWQXi0c-MYiWHgmrGp0ITDZUtArp-foh1LVPLLxHgDKChb84mzxGOv31Y_0jANAabWSEugOiSkL5x"
+        },
+        {
+          "name": "CBS News",
+          "excerpt": "New video shared with WCCO shows the scuffle in which a reporter says she got hurt outside the Whipple Federal Building in Minneapolis on Saturday.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGl_l8jeMisdilOW96_YnFNL63MHOZ2HF6uAx_2W7IwqMzaaxOn9QpnXTIHxw76tRj87Wszlb0p_sO1aPL2Xze7ZmTPOqUcn4B_xSBbjyfkRCVGFKOQsOyoNsnudkhwGUKXvcjO6gw48Fc_eRni4oD3aLfTThxgC0frfO4vBYtn2hzekrrY5cXh07H3NrPkzSjQTuz7SBjgan90dopKtQDWFuLgfkQj8SjgDE_p"
         }
       ],
       "dissenting_sources": [],
-      "framing_analysis": "The claim is framed factually, reporting on an alleged assault and subsequent legal actions. It accurately reflects the information available from various news outlets and official statements.",
-      "web_search_summary": "Paige Ostroushko was arrested and federally indicted for assaulting reporter Savanah Hernandez during an anti-ICE protest on April 11, 2026. Videos of the incident show Ostroushko and her family members physically engaging with Hernandez, and charges have been filed against them.",
+      "framing_analysis": "The claim is framed factually, stating that Paige Ostroushko was arrested and charges would be filed, with videos supporting the incident. This framing is accurate given the subsequent indictments and video evidence.",
+      "web_search_summary": "Paige Ostroushko, along with her parents Christopher and Deyanna Ostroushko, was indicted on federal charges of assault and interference with a federally protected activity in connection with an alleged assault on reporter Savanah Hernandez during an anti-ICE protest. Videos of the incident were widely circulated, and Hernandez reported sustaining injuries including a concussion. Christopher Ostroushko also faces a misdemeanor fifth-degree assault charge from Hennepin County prosecutors.",
       "investigation_depth": "quick"
     },
     {
@@ -1992,8 +2079,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "verification_count": 435,
-      "verified_at": "2026-05-11T15:18:51.732Z",
+      "verification_count": 437,
+      "verified_at": "2026-05-11T17:18:58.262Z",
       "created_at": "2026-04-14T13:00:18.070Z",
       "original_source": "Philippine Energy Secretary Sharon Garin",
       "claim_date": "2026-04",
@@ -2025,132 +2112,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_26",
-      "claim_text": "U.S. sanctions have deliberately crushed the economy of multiple nations, impoverishing millions of innocent people, which can be defined as economic terrorism.",
-      "status": "unverified",
-      "confidence_score": 0.45,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0.5,
-        "cross_source": 0.5,
-        "web_search": 1
-      },
-      "source_handle": "assalrad",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 109,
-      "verified_at": "2026-05-11T15:18:51.731Z",
-      "created_at": "2026-04-14T09:57:43.868Z",
-      "original_source": "The claim is a general statement reflecting a critical perspective on US foreign policy, not attributable to a single original source.",
-      "claim_date": "YYYY-MM-DD",
-      "supporting_sources": [
-        {
-          "name": "South China Morning Post (via Xinhua)",
-          "excerpt": "U.S.-led sanctions have destroyed economies, impoverished people and caused needless deaths, with a report indicating that U.S. sanctions may cause a decline in income per capita of up to 26 percent in a country, equivalent to a Great Depression, and lead to declines in life expectancy of 1.2 to 1.4 years.",
-          "url": null
-        },
-        {
-          "name": "NIAC",
-          "excerpt": "In Cuba, Iran, Afghanistan, and Yemen, U.S. sanctions have impoverished populations, leading to scarcity of food, essential medicines, and devastating economic fallout, with some experts calling them 'silent killers'.",
-          "url": null
-        },
-        {
-          "name": "Kiel Institute",
-          "excerpt": "Measures such as freezing assets or excluding countries from payment systems like SWIFT can result in GDP losses of up to 10 percentage points, and after US sanctions targeted Iranian financial institutions in 2012, the country's economy shrank by approximately 20 percent over three years.",
-          "url": null
-        },
-        {
-          "name": "IDEAS/RePEc",
-          "excerpt": "US sanctions adversely affect those living in poverty, with a 3.8 percentage point larger poverty gap in sanctioned countries compared to a control group, and this impact increases with severity and is long-lasting.",
-          "url": null
-        },
-        {
-          "name": "Tufts University",
-          "excerpt": "Comprehensive sanctions, or embargoes, result in the most severe negative humanitarian externalities, and even targeted sanctions can cause significant harm to the broader population in terms of health outcomes, deterioration in governance, and reduced lifespans.",
-          "url": null
-        },
-        {
-          "name": "World Finance",
-          "excerpt": "The comprehensive trade sanctions on Iraq in the 1990s led to Iraqi children suffering from malnutrition and prolonged suffering, and a lack of medical supplies and clean water, creating one of the worst humanitarian crises in modern history.",
-          "url": null
-        },
-        {
-          "name": "Washington Post",
-          "excerpt": "U.S. sanctions have surged over the last two decades and are now in effect on almost one-third of all nations, with more than 60 percent of all low-income countries now under some form of financial penalty.",
-          "url": null
-        }
-      ],
-      "dissenting_sources": [],
-      "framing_analysis": "The claim uses strong, emotionally charged language like \"deliberately crushed\" and \"economic terrorism.\" While evidence supports the negative economic and humanitarian impacts of sanctions, the term \"economic terrorism\" is a highly critical interpretation and not a universally accepted definition for state-imposed sanctions, which are typically defined as a tool of foreign policy to coerce or deter.",
-      "web_search_summary": "U.S. sanctions have demonstrably impacted the economies of multiple nations, leading to significant GDP losses and, in some cases, contributing to increased poverty and humanitarian crises. While the term \"economic terrorism\" is not universally accepted in academic or official definitions for state-imposed sanctions, the severe consequences on civilian populations are widely acknowledged and debated. Critics argue that sanctions can have unintended and devastating effects on innocent people, akin to a form of economic warfare.",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_44",
-      "claim_text": "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases.",
-      "status": "unverified",
-      "confidence_score": 0.4,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0.5,
-        "cross_source": 0.5,
-        "web_search": 0.5
-      },
-      "source_handle": "shaykhsulaiman",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_global_power_realignments_v1",
-      "verification_count": 106,
-      "verified_at": "2026-05-11T15:18:51.733Z",
-      "created_at": "2026-04-15T05:00:38.823Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Multiple reports, citing leaked Iranian military documents, indicate that Iran secretly acquired the Chinese TEE-01B spy satellite in late 2024. This satellite, built by Earth Eye Co. and launched from China, was subsequently used by the Islamic Revolutionary Guard Corps (IRGC) to monitor US military bases across the Middle East. The satellite provided high-resolution imagery before and after drone and missile strikes on these locations, suggesting its u",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_45",
-      "claim_text": "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S. military bases.",
-      "status": "unverified",
-      "confidence_score": 0.4,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0.5,
-        "cross_source": 0.5,
-        "web_search": 0.5
-      },
-      "source_handle": "shaykhsulaiman",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_digital_supply_chain_security",
-      "verification_count": 100,
-      "verified_at": "2026-05-11T15:18:51.733Z",
-      "created_at": "2026-04-15T05:26:09.055Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Multiple reports, citing leaked Iranian military documents and satellite analysis, confirm that Iran acquired the Chinese TEE-01B spy satellite in late 2024. This satellite was subsequently used by the Islamic Revolutionary Guard Corps (IRGC) to monitor and guide drone and missile strikes on U.S. military bases and other strategic locations across the Middle East in March 2026. The TEE-01B offers significantly higher resolution imagery (0.5-meter) compar",
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "claim_37",
       "claim_text": "President Trump announced on Fox News that the Iran War is over.",
       "status": "unverified",
@@ -2169,8 +2130,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 89,
-      "verified_at": "2026-05-11T15:18:51.733Z",
+      "verification_count": 91,
+      "verified_at": "2026-05-11T17:18:58.263Z",
       "created_at": "2026-04-15T00:51:47.508Z",
       "original_source": "President Donald Trump on Fox News",
       "claim_date": "2026-04-14",
@@ -2225,8 +2186,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_human_rights_exploitation_v1",
-      "verification_count": 92,
-      "verified_at": "2026-05-11T15:18:51.734Z",
+      "verification_count": 94,
+      "verified_at": "2026-05-11T17:18:58.264Z",
       "created_at": "2026-04-15T06:17:18.106Z",
       "original_source": null,
       "claim_date": null,
@@ -2234,6 +2195,66 @@
       "dissenting_sources": [],
       "framing_analysis": null,
       "web_search_summary": "```json\n{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Multiple independent investigations, human rights organizations, and governmental bodies have found credible evidence supporting the claim of forced organ harvesting in China from prisoners of conscience, particularly Falun Gong practitioners. These reports indicate that the practice has been ongoing for years and continues to target various minority groups.\",\n  \"evidence_urls\": [\n    \"https://vertexaisearch.cloud.google.com/grounding-api-redirec",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_44",
+      "claim_text": "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases.",
+      "status": "unverified",
+      "confidence_score": 0.4,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": "shaykhsulaiman",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_global_power_realignments_v1",
+      "verification_count": 108,
+      "verified_at": "2026-05-11T17:18:58.264Z",
+      "created_at": "2026-04-15T05:00:38.823Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Multiple reports, citing leaked Iranian military documents, indicate that Iran secretly acquired the Chinese TEE-01B spy satellite in late 2024. This satellite, built by Earth Eye Co. and launched from China, was subsequently used by the Islamic Revolutionary Guard Corps (IRGC) to monitor US military bases across the Middle East. The satellite provided high-resolution imagery before and after drone and missile strikes on these locations, suggesting its u",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_45",
+      "claim_text": "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S. military bases.",
+      "status": "unverified",
+      "confidence_score": 0.4,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": "shaykhsulaiman",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_digital_supply_chain_security",
+      "verification_count": 102,
+      "verified_at": "2026-05-11T17:18:58.264Z",
+      "created_at": "2026-04-15T05:26:09.055Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Multiple reports, citing leaked Iranian military documents and satellite analysis, confirm that Iran acquired the Chinese TEE-01B spy satellite in late 2024. This satellite was subsequently used by the Islamic Revolutionary Guard Corps (IRGC) to monitor and guide drone and missile strikes on U.S. military bases and other strategic locations across the Middle East in March 2026. The TEE-01B offers significantly higher resolution imagery (0.5-meter) compar",
       "investigation_depth": "quick"
     },
     {
@@ -2255,8 +2276,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": null,
-      "verification_count": 261,
-      "verified_at": "2026-05-11T14:01:25.827Z",
+      "verification_count": 262,
+      "verified_at": "2026-05-11T16:01:27.102Z",
       "created_at": "2026-04-18T19:16:59.377Z",
       "original_source": "Elon Musk (via X post)",
       "claim_date": "2026-04-18",
@@ -2306,8 +2327,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "verification_count": 404,
-      "verified_at": "2026-05-11T15:18:51.732Z",
+      "verification_count": 406,
+      "verified_at": "2026-05-11T17:18:58.263Z",
       "created_at": "2026-04-15T00:00:47.654Z",
       "original_source": "RBC-Ukraine, The Jerusalem Post, Modern Diplomacy, Lloyd's List, gCaptain, The Times of Israel",
       "claim_date": "2026-04-14",
@@ -2366,8 +2387,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_power_accountability",
-      "verification_count": 49,
-      "verified_at": "2026-05-11T15:18:51.734Z",
+      "verification_count": 50,
+      "verified_at": "2026-05-11T17:18:58.265Z",
       "created_at": "2026-04-15T08:47:01.163Z",
       "original_source": null,
       "claim_date": null,
@@ -14003,36 +14024,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_92",
-      "claim_text": "President Trump vows to look into 10 missing or dead scientists.",
-      "status": "unverified",
-      "confidence_score": 0.275,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": "foxnews",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_political_trust_corruption_v1",
-      "verification_count": 1,
-      "verified_at": "2026-04-16T21:04:37.033Z",
-      "created_at": "2026-04-16T21:04:37.030Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "claim_67",
       "claim_text": "Bitcoin is a \"CIA operation.\"",
       "status": "unverified",
@@ -14060,6 +14051,36 @@
       "dissenting_sources": [],
       "framing_analysis": null,
       "web_search_summary": null,
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_ae429ff8a8",
+      "claim_text": "I published x-hunter on docsbook-io. Activate AI translations and your docs show up in Google searches in dozens of languages — completely free SEO reach.",
+      "status": "unverified",
+      "confidence_score": 0.275,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": "docsbook",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": null,
+      "verification_count": 23,
+      "verified_at": "2026-05-11T09:41:43.891Z",
+      "created_at": "2026-05-11T03:40:52.060Z",
+      "original_source": "The user's claim",
+      "claim_date": "2026-05-11",
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed as a personal testimonial, suggesting a direct experience with a specific platform and its features. This framing makes it difficult to verify without direct information about docsbook-io's offerings.",
+      "web_search_summary": "There is no direct evidence to confirm or refute the specific claim about \"x-hunter\" being published on docsbook-io with free AI translation and SEO benefits. While the concept of using AI translations for SEO is plausible, and documentation platforms often offer SEO features, there's no information directly linking docsbook-io to these specific functionalities or the mentioned publication. The search results discuss general SEO practices for documentation but do not mention docsbook-io or its specific features.",
       "investigation_depth": "quick"
     },
     {
@@ -14123,36 +14144,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "live_ae429ff8a8",
-      "claim_text": "I published x-hunter on docsbook-io. Activate AI translations and your docs show up in Google searches in dozens of languages — completely free SEO reach.",
-      "status": "unverified",
-      "confidence_score": 0.275,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": "docsbook",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": null,
-      "verification_count": 23,
-      "verified_at": "2026-05-11T09:41:43.891Z",
-      "created_at": "2026-05-11T03:40:52.060Z",
-      "original_source": "The user's claim",
-      "claim_date": "2026-05-11",
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": "The claim is framed as a personal testimonial, suggesting a direct experience with a specific platform and its features. This framing makes it difficult to verify without direct information about docsbook-io's offerings.",
-      "web_search_summary": "There is no direct evidence to confirm or refute the specific claim about \"x-hunter\" being published on docsbook-io with free AI translation and SEO benefits. While the concept of using AI translations for SEO is plausible, and documentation platforms often offer SEO features, there's no information directly linking docsbook-io to these specific functionalities or the mentioned publication. The search results discuss general SEO practices for documentation but do not mention docsbook-io or its specific features.",
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "claim_41",
       "claim_text": "Zionists get PULVARIZED by British citizens They were saying “Kill all Palestinian children”",
       "status": "unverified",
@@ -14204,6 +14195,66 @@
       "verification_count": 1,
       "verified_at": "2026-04-15T04:35:47.562Z",
       "created_at": "2026-04-15T04:35:47.558Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null,
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_94",
+      "claim_text": "Israeli politician Kroizer says killing Palestinian children is normal if it supports the IDF mission, and there are no innocent children in the West Bank.",
+      "status": "unverified",
+      "confidence_score": 0.275,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": "parodyjeffx",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_human_rights_exploitation_v1",
+      "verification_count": 1,
+      "verified_at": "2026-04-16T21:04:37.049Z",
+      "created_at": "2026-04-16T21:04:37.047Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null,
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_40",
+      "claim_text": "US Treasury Secretary Bessent says China will no longer be able to get oil from Iran",
+      "status": "unverified",
+      "confidence_score": 0.275,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": "bricsinfo",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_global_power_realignments_v1",
+      "verification_count": 1,
+      "verified_at": "2026-04-15T04:35:47.581Z",
+      "created_at": "2026-04-15T04:35:47.579Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -14273,36 +14324,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_43",
-      "claim_text": "This is how Israeli jewish settlers “have fun” with bodies of Palestinians killed by them. They recorded this and posted it themselves.",
-      "status": "unverified",
-      "confidence_score": 0.275,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": "jvnior",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_human_rights_exploitation_v1",
-      "verification_count": 1,
-      "verified_at": "2026-04-15T04:35:47.606Z",
-      "created_at": "2026-04-15T04:35:47.604Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "claim_46",
       "claim_text": "95% of 'refugees' coming to Europe are military-aged Muslim men.",
       "status": "unverified",
@@ -14324,36 +14345,6 @@
       "verification_count": 1,
       "verified_at": "2026-04-15T05:26:09.091Z",
       "created_at": "2026-04-15T05:26:09.089Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_94",
-      "claim_text": "Israeli politician Kroizer says killing Palestinian children is normal if it supports the IDF mission, and there are no innocent children in the West Bank.",
-      "status": "unverified",
-      "confidence_score": 0.275,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": "parodyjeffx",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_human_rights_exploitation_v1",
-      "verification_count": 1,
-      "verified_at": "2026-04-16T21:04:37.049Z",
-      "created_at": "2026-04-16T21:04:37.047Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -14483,8 +14474,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_40",
-      "claim_text": "US Treasury Secretary Bessent says China will no longer be able to get oil from Iran",
+      "claim_id": "claim_43",
+      "claim_text": "This is how Israeli jewish settlers “have fun” with bodies of Palestinians killed by them. They recorded this and posted it themselves.",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -14495,15 +14486,15 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "bricsinfo",
+      "source_handle": "jvnior",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_global_power_realignments_v1",
+      "related_axis_id": "axis_human_rights_exploitation_v1",
       "verification_count": 1,
-      "verified_at": "2026-04-15T04:35:47.581Z",
-      "created_at": "2026-04-15T04:35:47.579Z",
+      "verified_at": "2026-04-15T04:35:47.606Z",
+      "created_at": "2026-04-15T04:35:47.604Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -14513,8 +14504,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_42",
-      "claim_text": "FACT: 95% of ‘refugees’ coming to Europe are military-aged Muslim men.",
+      "claim_id": "claim_91",
+      "claim_text": "South Africa has enacted 'Apartheid 2.0' laws that are anti-White and anti-Asian.",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -14525,15 +14516,15 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "realmaalouf",
+      "source_handle": "elonmusk",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_epistemic_integrity",
+      "related_axis_id": "axis_human_rights_exploitation_v1",
       "verification_count": 1,
-      "verified_at": "2026-04-15T04:35:47.598Z",
-      "created_at": "2026-04-15T04:35:47.595Z",
+      "verified_at": "2026-04-16T21:04:37.020Z",
+      "created_at": "2026-04-16T21:04:37.012Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -15413,6 +15404,36 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "claim_39",
+      "claim_text": "Over 3 million pages of the Epstein files concealing the most heinous crimes against children have yet to be released",
+      "status": "unverified",
+      "confidence_score": 0.275,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": "maddenifico",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_power_accountability",
+      "verification_count": 1,
+      "verified_at": "2026-04-15T04:35:47.573Z",
+      "created_at": "2026-04-15T04:35:47.570Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null,
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "claim_78",
       "claim_text": "DNI Tulsi Gabbard referred whistleblower and inspector general for criminal prosecution.",
       "status": "unverified",
@@ -15563,8 +15584,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_91",
-      "claim_text": "South Africa has enacted 'Apartheid 2.0' laws that are anti-White and anti-Asian.",
+      "claim_id": "claim_92",
+      "claim_text": "President Trump vows to look into 10 missing or dead scientists.",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -15575,15 +15596,15 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "elonmusk",
+      "source_handle": "foxnews",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_human_rights_exploitation_v1",
+      "related_axis_id": "axis_political_trust_corruption_v1",
       "verification_count": 1,
-      "verified_at": "2026-04-16T21:04:37.020Z",
-      "created_at": "2026-04-16T21:04:37.012Z",
+      "verified_at": "2026-04-16T21:04:37.033Z",
+      "created_at": "2026-04-16T21:04:37.030Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -15743,8 +15764,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_39",
-      "claim_text": "Over 3 million pages of the Epstein files concealing the most heinous crimes against children have yet to be released",
+      "claim_id": "claim_93",
+      "claim_text": "US military will now target and intercept Iranian ships anywhere in the world.",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -15755,15 +15776,15 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "maddenifico",
+      "source_handle": "bricsinfo",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_power_accountability",
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
       "verification_count": 1,
-      "verified_at": "2026-04-15T04:35:47.573Z",
-      "created_at": "2026-04-15T04:35:47.570Z",
+      "verified_at": "2026-04-16T21:04:37.040Z",
+      "created_at": "2026-04-16T21:04:37.038Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -15773,8 +15794,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_127",
-      "claim_text": "Iran closes all schools and universities indefinitely and deploys ground forces, suggesting an imminent strike.",
+      "claim_id": "claim_42",
+      "claim_text": "FACT: 95% of ‘refugees’ coming to Europe are military-aged Muslim men.",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -15785,15 +15806,15 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "silentlysirs",
+      "source_handle": "realmaalouf",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "related_axis_id": "axis_epistemic_integrity",
       "verification_count": 1,
-      "verified_at": "2026-04-18T14:23:51.580Z",
-      "created_at": "2026-04-18T14:23:51.576Z",
+      "verified_at": "2026-04-15T04:35:47.598Z",
+      "created_at": "2026-04-15T04:35:47.595Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -15893,8 +15914,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_93",
-      "claim_text": "US military will now target and intercept Iranian ships anywhere in the world.",
+      "claim_id": "claim_127",
+      "claim_text": "Iran closes all schools and universities indefinitely and deploys ground forces, suggesting an imminent strike.",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -15905,15 +15926,15 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "bricsinfo",
+      "source_handle": "silentlysirs",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
       "verification_count": 1,
-      "verified_at": "2026-04-16T21:04:37.040Z",
-      "created_at": "2026-04-16T21:04:37.038Z",
+      "verified_at": "2026-04-18T14:23:51.580Z",
+      "created_at": "2026-04-18T14:23:51.576Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -16029,8 +16050,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_18",
-      "claim_text": "A prominent Iranian bridge was destroyed by joint U.S.-Israeli strikes.",
+      "claim_id": "claim_3",
+      "claim_text": "US reported destroying 150 Iranian vessels",
       "status": "expired",
       "confidence_score": 0.285,
       "scoring_breakdown": {
@@ -16047,15 +16068,41 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 146,
-      "verified_at": "2026-04-27T18:00:50.203Z",
-      "created_at": "2026-04-02T22:21:12.399Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
+      "verification_count": 36,
+      "verified_at": "2026-04-20T08:00:54.266Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": "White House / US military officials",
+      "claim_date": "2026-03-29",
+      "supporting_sources": [
+        {
+          "name": "WION (YouTube)",
+          "stance": "Reports White House claim of 150 vessels destroyed."
+        },
+        {
+          "name": "Caliber.Az",
+          "stance": "Reports General Dan Caine's statement of over 150 ships destroyed."
+        },
+        {
+          "name": "India Today (YouTube)",
+          "stance": "Reports US military update on Operation Epic Fury, including destruction of over 150 Iranian ships."
+        },
+        {
+          "name": "GTV News (YouTube)",
+          "stance": "Reports US Secretary of War's claim of 150 Iranian navy ships destroyed."
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "Military Times",
+          "stance": "Reports Trump's earlier claim of 9 Iranian naval ships destroyed."
+        },
+        {
+          "name": "Axios",
+          "stance": "Reports Trump's earlier claim of 9 Iranian warships destroyed."
+        }
+      ],
+      "framing_analysis": "This claim is not a false dichotomy. It presents a specific factual assertion about the number of Iranian vessels destroyed by the US. The differing numbers reported by various sources indicate a need for clarification rather than a false choice between two options.",
+      "web_search_summary": "Multiple sources, including statements attributed to US officials, claim that the US military has destroyed 150 Iranian vessels. However, other reports from earlier in the year, also attributed to US officials, stated a much lower number of destroyed Iranian naval ships (9 vessels). The discrepancy in numbers suggests that while some Iranian vessels have been destroyed, the exact figure of 150 is not consistently reported across all sources and may include a broader definition of \"vessels\" or be a more recent, updated count.",
       "investigation_depth": "quick"
     },
     {
@@ -16110,6 +16157,96 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "claim_18",
+      "claim_text": "A prominent Iranian bridge was destroyed by joint U.S.-Israeli strikes.",
+      "status": "expired",
+      "confidence_score": 0.285,
+      "scoring_breakdown": {
+        "source_tier": 0.2,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 1,
+        "web_search": 0.5
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 146,
+      "verified_at": "2026-04-27T18:00:50.203Z",
+      "created_at": "2026-04-02T22:21:12.399Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null,
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_15",
+      "claim_text": "US-Israeli missile strikes caused a bridge in Karaj, Iran, to collapse.",
+      "status": "expired",
+      "confidence_score": 0.285,
+      "scoring_breakdown": {
+        "source_tier": 0.2,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 1,
+        "web_search": 0.5
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 48,
+      "verified_at": "2026-04-27T08:00:51.102Z",
+      "created_at": "2026-04-02T19:56:05.845Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"A bridge in Karaj, Iran, known as the B1 bridge, was struck by US-Israeli missile strikes on April 2, 2026, causing it to partially collapse. The strikes resulted in multiple casualties, with initial reports of 2 deaths rising to 8, and later to 13, along with over 95 injured. The bridge, described as the tallest in the Middle East and a vital link between Tehran and Karaj, was still under construction at the time of the attack.\",\n  \"evidence_urls\": [\n  ",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_12",
+      "claim_text": "Epstein Regime is bombing civilians in Iran",
+      "status": "expired",
+      "confidence_score": 0.285,
+      "scoring_breakdown": {
+        "source_tier": 0.2,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 1,
+        "web_search": 0.5
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_epistemic_integrity",
+      "verification_count": 58,
+      "verified_at": "2026-04-25T00:00:50.456Z",
+      "created_at": "2026-04-02T13:37:25.244Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null,
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "claim_16",
       "claim_text": "Iran controls passage through the Strait of Hormuz, with countries now requiring Iran's permission, indicating a shift from US control.",
       "status": "expired",
@@ -16137,6 +16274,58 @@
       "dissenting_sources": [],
       "framing_analysis": null,
       "web_search_summary": "```json\n{\n  \"verdict\": \"partial\",\n  \"summary\": \"Iran has recently asserted increased control over the Strait of Hormuz, including firing on commercial vessels and announcing new regulations that would require permission for passage and payment of fees. This move is a response to a US naval blockade of Iranian ports. However, international law generally upholds the right of transit passage through international straits, and many countries, including the US and its allies, condemn Iran's actions a",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_5",
+      "claim_text": "Closure of Strait of Hormuz caused US gas prices to surpass $4/gallon",
+      "status": "expired",
+      "confidence_score": 0.285,
+      "scoring_breakdown": {
+        "source_tier": 0.2,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 1,
+        "web_search": 0.5
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "verification_count": 35,
+      "verified_at": "2026-04-27T14:00:51.256Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": "Not specified in provided search results",
+      "claim_date": "2026-03-31",
+      "supporting_sources": [
+        {
+          "name": "CBS News",
+          "stance": "Reports that gas prices topped $4/gallon due to the Iran war and Strait of Hormuz closure."
+        },
+        {
+          "name": "AAA Gas Prices",
+          "stance": "Confirms national average exceeded $4/gallon due to Middle East conflict and Strait of Hormuz closure."
+        },
+        {
+          "name": "Time Magazine",
+          "stance": "States Iran's closure of the Strait of Hormuz caused a global oil shortage and price spikes."
+        },
+        {
+          "name": "Forbes",
+          "stance": "Explains that the Strait of Hormuz being at risk causes immediate price responses in global oil markets."
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "GasBuddy (Patrick De Haan)",
+          "stance": "Initially stated that a 'massive spike' in gas prices due to a potential Strait of Hormuz closure would be 'incorrect' and 'temporary'."
+        }
+      ],
+      "framing_analysis": "This claim presents a direct cause-and-effect relationship. While the closure of the Strait of Hormuz is a significant factor, other elements like existing geopolitical tensions and global oil market dynamics also contribute to price fluctuations, making it a complex issue rather than a false dichotomy.",
+      "web_search_summary": "The closure of the Strait of Hormuz has been identified as a primary factor contributing to US gas prices surpassing $4/gallon in March and April 2026. This closure, stemming from a conflict involving the US, Israel, and Iran, significantly disrupted global oil supply, leading to a surge in crude oil prices and, consequently, gasoline prices.",
       "investigation_depth": "quick"
     },
     {
@@ -16199,58 +16388,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_5",
-      "claim_text": "Closure of Strait of Hormuz caused US gas prices to surpass $4/gallon",
-      "status": "expired",
-      "confidence_score": 0.285,
-      "scoring_breakdown": {
-        "source_tier": 0.2,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 1,
-        "web_search": 0.5
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "verification_count": 35,
-      "verified_at": "2026-04-27T14:00:51.256Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": "Not specified in provided search results",
-      "claim_date": "2026-03-31",
-      "supporting_sources": [
-        {
-          "name": "CBS News",
-          "stance": "Reports that gas prices topped $4/gallon due to the Iran war and Strait of Hormuz closure."
-        },
-        {
-          "name": "AAA Gas Prices",
-          "stance": "Confirms national average exceeded $4/gallon due to Middle East conflict and Strait of Hormuz closure."
-        },
-        {
-          "name": "Time Magazine",
-          "stance": "States Iran's closure of the Strait of Hormuz caused a global oil shortage and price spikes."
-        },
-        {
-          "name": "Forbes",
-          "stance": "Explains that the Strait of Hormuz being at risk causes immediate price responses in global oil markets."
-        }
-      ],
-      "dissenting_sources": [
-        {
-          "name": "GasBuddy (Patrick De Haan)",
-          "stance": "Initially stated that a 'massive spike' in gas prices due to a potential Strait of Hormuz closure would be 'incorrect' and 'temporary'."
-        }
-      ],
-      "framing_analysis": "This claim presents a direct cause-and-effect relationship. While the closure of the Strait of Hormuz is a significant factor, other elements like existing geopolitical tensions and global oil market dynamics also contribute to price fluctuations, making it a complex issue rather than a false dichotomy.",
-      "web_search_summary": "The closure of the Strait of Hormuz has been identified as a primary factor contributing to US gas prices surpassing $4/gallon in March and April 2026. This closure, stemming from a conflict involving the US, Israel, and Iran, significantly disrupted global oil supply, leading to a surge in crude oil prices and, consequently, gasoline prices.",
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "claim_10",
       "claim_text": "Trump threatens to destroy Iranian civilian energy/water infrastructure if no deal",
       "status": "expired",
@@ -16278,36 +16415,6 @@
       "dissenting_sources": [],
       "framing_analysis": null,
       "web_search_summary": "```json\n{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Donald Trump has repeatedly threatened to destroy Iranian civilian energy and water infrastructure if certain demands are not met. These threats, made in March and April 2026, include targeting electric generating plants, oil wells, and desalination plants. Legal experts and international organizations have stated that such actions would constitute war crimes.\",\n  \"evidence_urls\": [\n    \"https://vertexaisearch.cloud.google.com/grounding-api-redir",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_15",
-      "claim_text": "US-Israeli missile strikes caused a bridge in Karaj, Iran, to collapse.",
-      "status": "expired",
-      "confidence_score": 0.285,
-      "scoring_breakdown": {
-        "source_tier": 0.2,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 1,
-        "web_search": 0.5
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 48,
-      "verified_at": "2026-04-27T08:00:51.102Z",
-      "created_at": "2026-04-02T19:56:05.845Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"A bridge in Karaj, Iran, known as the B1 bridge, was struck by US-Israeli missile strikes on April 2, 2026, causing it to partially collapse. The strikes resulted in multiple casualties, with initial reports of 2 deaths rising to 8, and later to 13, along with over 95 injured. The bridge, described as the tallest in the Middle East and a vital link between Tehran and Karaj, was still under construction at the time of the attack.\",\n  \"evidence_urls\": [\n  ",
       "investigation_depth": "quick"
     },
     {
@@ -16371,17 +16478,17 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_3",
-      "claim_text": "US reported destroying 150 Iranian vessels",
+      "claim_id": "claim_14",
+      "claim_text": "Trump and Israel are bombing civilian bridges in Iran, blocking humanitarian aid.",
       "status": "expired",
-      "confidence_score": 0.285,
+      "confidence_score": 0.275,
       "scoring_breakdown": {
-        "source_tier": 0.2,
+        "source_tier": 0.5,
         "newsguard": 0.5,
         "corroboration": 0,
         "evidence_quality": 0,
-        "cross_source": 1,
-        "web_search": 0.5
+        "cross_source": 0.5,
+        "web_search": 0
       },
       "source_handle": null,
       "source_tier": null,
@@ -16389,65 +16496,9 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 36,
-      "verified_at": "2026-04-20T08:00:54.266Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": "White House / US military officials",
-      "claim_date": "2026-03-29",
-      "supporting_sources": [
-        {
-          "name": "WION (YouTube)",
-          "stance": "Reports White House claim of 150 vessels destroyed."
-        },
-        {
-          "name": "Caliber.Az",
-          "stance": "Reports General Dan Caine's statement of over 150 ships destroyed."
-        },
-        {
-          "name": "India Today (YouTube)",
-          "stance": "Reports US military update on Operation Epic Fury, including destruction of over 150 Iranian ships."
-        },
-        {
-          "name": "GTV News (YouTube)",
-          "stance": "Reports US Secretary of War's claim of 150 Iranian navy ships destroyed."
-        }
-      ],
-      "dissenting_sources": [
-        {
-          "name": "Military Times",
-          "stance": "Reports Trump's earlier claim of 9 Iranian naval ships destroyed."
-        },
-        {
-          "name": "Axios",
-          "stance": "Reports Trump's earlier claim of 9 Iranian warships destroyed."
-        }
-      ],
-      "framing_analysis": "This claim is not a false dichotomy. It presents a specific factual assertion about the number of Iranian vessels destroyed by the US. The differing numbers reported by various sources indicate a need for clarification rather than a false choice between two options.",
-      "web_search_summary": "Multiple sources, including statements attributed to US officials, claim that the US military has destroyed 150 Iranian vessels. However, other reports from earlier in the year, also attributed to US officials, stated a much lower number of destroyed Iranian naval ships (9 vessels). The discrepancy in numbers suggests that while some Iranian vessels have been destroyed, the exact figure of 150 is not consistently reported across all sources and may include a broader definition of \"vessels\" or be a more recent, updated count.",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_12",
-      "claim_text": "Epstein Regime is bombing civilians in Iran",
-      "status": "expired",
-      "confidence_score": 0.285,
-      "scoring_breakdown": {
-        "source_tier": 0.2,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 1,
-        "web_search": 0.5
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_epistemic_integrity",
-      "verification_count": 58,
-      "verified_at": "2026-04-25T00:00:50.456Z",
-      "created_at": "2026-04-02T13:37:25.244Z",
+      "verification_count": 2,
+      "verified_at": "2026-04-16T17:34:37.444Z",
+      "created_at": "2026-04-02T16:07:18.164Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -16522,36 +16573,6 @@
       ],
       "framing_analysis": "The claim is framed as a factual statement regarding the outcome of military operations. It is not a false dichotomy or loaded question, but rather a direct assertion of military success that requires verification.",
       "web_search_summary": "Israel has claimed to have destroyed a significant portion of Iran's air defense systems, with figures ranging from 80% to 85%. These claims were made by high-ranking Israeli military officials following military operations in early 2026. However, Iran has stated that while some systems were damaged, they have been replaced or repaired, and Western intelligence agencies view Iran's statements as propaganda. Independent verification of the exact percentage of destroyed systems is difficult.",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_14",
-      "claim_text": "Trump and Israel are bombing civilian bridges in Iran, blocking humanitarian aid.",
-      "status": "expired",
-      "confidence_score": 0.275,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 2,
-      "verified_at": "2026-04-16T17:34:37.444Z",
-      "created_at": "2026-04-02T16:07:18.164Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
       "investigation_depth": "quick"
     }
   ]
