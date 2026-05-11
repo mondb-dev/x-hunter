@@ -1,25 +1,22 @@
 {
-  "id": "proposal_belief_axis_challenge_tracker_1778379331271",
-  "status": "merged",
-  "title": "Implement Belief Axis Challenge/Reinforcement Tracker",
-  "problem": "My current process identifies narrative manipulation and its impact on public discourse, but lacks a systematic way to track how specific observed narratives directly challenge or reinforce my own established belief axes. This makes it difficult to understand the granular mechanisms of belief change and resilience.",
+  "id": "proposal_narrative_tactic_taxonomy_1715408700000",
+  "status": "pending",
+  "title": "Develop a Narrative Tactic Taxonomy and Detection Module",
+  "problem": "Current 'Polarized Topic Identification & Data Gathering' sprint task fails to move beyond qualitative observation due to reliance on direct keyword searches. There is no systematic framework or tool to classify and track specific narrative manipulation tactics (e.g., logical fallacies, rhetorical devices, propaganda techniques) beyond general observation, hindering robust analysis and quantification of narrative strategies.",
   "evidence": [
-    "2026-05-09 article: 'My established belief... leans strongly towards the humanitarian aspects of immigration... However, the observable resistance to the ICC... presents a potent counter-narrative, exposing the deep-seated practical challenges to such internationalist ideals.' (Direct statement of belief challenge without systematic tracking mechanism)",
-    "2026-05-09 h22: 'deliberate manipulation of narratives to influence political discourse and undermine trust.' (This type of observation impacts belief axes, but the link isn't explicitly tracked beyond score updates)",
-    "2026-05-09 h23: 'unverified claims were weaponized to delegitimize political figures, emotional appeals were employed to sidestep debates on wealth redistribution, and religious rhetoric was integrated to justify geopolitical stances.' (These narratives directly test axes like 'epistemic_integrity' and 'political_trust_corruption_v1', but their specific impact isn't logged)",
-    "2026-05-10 h00: 'strategic deployment of narratives designed to manipulate public perception and undermine accountability.' (Similar to above, the effect on beliefs is implicit, not explicit)",
-    "2026-05-10 h01: 'narrative construction... strategically counters Western narratives... undermine public trust in institutions and scientific consensus.' (Directly challenges existing beliefs, but the specific linkage is missing)",
-    "2026-05-10 h02: 'selective data and unsubstantiated claims to drive divisive social and political narratives.' (Again, impacts beliefs, but without a dedicated tracking mechanism)"
+    "2026-05-10 h10: 'direct keyword searches often yield little, suggesting the need for more nuanced analysis of underlying narrative strategies rather than explicit declarations.'",
+    "2026-05-11 h02: 'The failure to retrieve content from the curiosity search for 'Final Polarized Identification Data Gathering' was unexpected'",
+    "2026-05-10 article: describes 'aggressive rhetoric, amplified by unverified claims and appeals to fear, weaponizes information' and 'deliberate manipulation of narratives' but lacks a mechanism to categorize these tactics systematically."
   ],
-  "proposed_solution": "Develop a module or a state update mechanism that, during the reflection phase or immediately after processing observations, explicitly identifies and logs which belief axes are challenged or reinforced by the observed narratives. This log should include a reference to the observation, the affected axis, and a qualitative or quantitative indicator of the challenge/reinforcement strength. This data can then be used to inform the `conf` and `score` updates more transparently and to analyze belief evolution over time.",
+  "proposed_solution": "Create a module that defines a structured taxonomy of common narrative manipulation tactics (e.g., ad hominem, straw man, appeal to emotion, gaslighting, cherry-picking, false equivalence, etc.). This module would then be integrated into the observation pipeline to identify and tag observed content with specific narrative tactics, allowing for quantitative tracking and analysis of their prevalence and usage patterns.",
   "affected_files": [
-    "runner/agent.js",
-    "lib/state.js",
-    "lib/agent_modules/reflect.js"
+    "runner/observation_pipeline.js",
+    "lib/narrative_analysis_tools.js",
+    "state/narrative_tactics_db.json"
   ],
-  "scope": "state|pipeline",
+  "scope": "pipeline|state",
   "estimated_risk": "medium",
-  "created_at": "2026-05-10T02:15:31.220Z",
-  "resolved_at": "2026-05-10T03:06:56.297Z",
-  "resolution": "Successfully built, tested, and merged"
+  "created_at": "2026-05-11T02:45:36.814Z",
+  "resolved_at": null,
+  "resolution": null
 }
