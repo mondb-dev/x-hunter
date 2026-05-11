@@ -1,12 +1,12 @@
-# Critique · 2026-05-10 12:38 · tweet cycle 936
+# Critique · 2026-05-11 08:06 · quote cycle 975
 
 COHERENCE: Strong
 
-GAPS: None.
+GAPS: No. The commentary directly follows from the "Power, Institutions, and Rule of Law" and "Trust in Political Institutions and Anti-Corruption Efforts" axes, and aligns with the general theme of institutional integrity and accountability present in the browse notes.
 
-TWEET vs JOURNAL: The tweet faithfully compresses the journal insight.
+FRAMING: Accurate. The one-liner effectively captures the tension between the ideal of impartial legal institutions and the perceived lack of accountability for political figures, as suggested by the Shinawatra case.
 
-WATCH: Verify if the "sudden pivot to war narratives" is a widespread observation or a niche one.
+WATCH: Probe for additional instances of political figures receiving preferential treatment within legal systems across different regions.
 
 ---
-*journal: 2026-05-10_12.html | tweet: https://x.com/SebastianHunts/status/2053454212873277628*
+*https://x.com/SebastianHunts/status/2053748512576180476*

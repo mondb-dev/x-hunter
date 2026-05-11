@@ -1,12 +1,4 @@
-
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @EricLDaugh: Reports a Pentagon legal investigation into Sen. Mark Kelly for allegedly leaking classified information, highlighting potential abuse of power and institutional integrity issues. (https://x.com/EricLDaugh/status/2053623114722918818)
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @WhiteHouse: Posts a suspicious "WAR.GOV/UFO" link, potentially a distraction or misinformation attempt. (https://x.com/WhiteHouse/status/2053588939626500858)
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @mjfree: Calls for attention to Trump and Epstein's alleged sex trafficking, framing it as an accountability issue and calling out distractions. (https://x.com/mjfree/status/2053630656112705574)
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @EricLDaugh: Reports Costa Rica's new President plans to launch a "mega prison" and "REMOVE judges," raising concerns about authoritarian control. (https://x.com/EricLDaugh/status/2053527638120059386)
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @MarioNawfal: Highlights conflicting official statements on Hantavirus risk vs. isolation measures in the UK, signaling issues in public trust and crisis communication. (https://x.com/MarioNawfal/status/2053644507988574380)
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @_InfoGram_: Shares a fictionalized exchange between Trump and Meloni, previously noted as narrative fabrication. (https://x.com/_InfoGram_/status/2053391629428662994)
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @PhilippineStar: Reports subpoena served to Sen. Bato dela Rosa's office for alleged extrajudicial killings. (https://x.com/PhilippineStar/status/2053664041537855982)
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @gmanews: Reports subpoena for Sen. Bato already issued by PNP. (https://x.com/gmanews/status/2053642185988571421)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @gmanews: Reports subpoena for Sen. Bato already issued by PNP. (https://x.com/gmanews/status/205364185988571421)
 [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @dzbb: Reports Sen. Bato's office refused to sign the PNP-CIDG subpoena, indicating resistance to legal process. (https://x.com/dzbb/status/2053661623521611776)
 [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @News5PH: Reports on a "Rage Coalition" opposing impeachment proceedings against VP Sara Duterte, revealing political power struggles. (https://x.com/News5PH/status/2053668162298925496)
 [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @WallStreetApes: Reports NYC Police Captain reassigned to 911 operator after criticizing mayor, implying suppression of criticism and abuse of power. (https://x.com/WallStreetApes/status/2053495032557207665)
@@ -27,39 +19,18 @@
 [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @inquirerdotnet: Interpol red notice issued against former Bureau of Corrections chief Gerald Bantag. (https://x.com/inquirerdotnet/status/2053706753963909408)
 [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @FoxNews: "A violent "teen takeover" resulted in 22 arrests, mostly of individuals under the age of 18, in Tampa, Florida. Police seized two guns during the operation." (https://x.com/FoxNews/status/2053657097645015160)
 [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @Reuters: "Plumes of thick smoke were seen rising from southern Lebanon, following a series of Israeli airstrikes." (https://x.com/Reuters/status/2053670684593729847)
-
-[NOTED] "see" — 8 posts, no follow-up this cycle
-[NOTED] "kids" — 6 posts, no follow-up this cycle
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @EricLDaugh: Reports on Trump's post about the Lincoln Memorial Reflecting Pool and "liberals losing their minds," highlighting political polarization. (https://x.com/EricLDaugh/status/2053480588682633336)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @Reuters: Reports Thaksin Shinawatra was released from prison after "wrongfully stayed in hospital," suggesting a manipulation of legal process. (https://x.com/Reuters/status/2053713344230809822)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @AJEnglish: Reports Thailand’s former PM Thaksin Shinawatra released from prison after serving 8 months of a corruption-related charge, reinforcing concerns about accountability. (https://x.com/AJEnglish/status/2053729340588687741)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @FurkanGozukara: Reports Donald Trump's "meltdown" on Truth Social, confessing he expects the Supreme Court to act as his "obedient cartel" and threatening justices, directly challenging judicial independence. (https://x.com/FurkanGozukara/status/2053623603346669649)
+[SPRINT: research] [CURIOSITY: sprint_final_topic_identification_dat] @TheSitRepPH: Reports Senator Ronald "Bato" dela Rosa lost his temper after allegedly being blocked by NBI agents from entering the Senate, highlighting resistance to legal processes and challenges to institutional authority. (https://x.com/TheSitRepPH/status/2053741472273584240)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @inquirerdotnet: Reports Senate Minority Leader called for a change in Senate leadership, indicating internal political struggles and challenges to power structures. (https://x.com/inquirerdotnet/status/2053736838096208326)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @fierceLady08: Expresses frustration with "bangag government" and supports Sen. Bato amidst his legal challenges, reflecting public sentiment on political accountability. (https://x.com/fierceLady08/status/2053749184189325631)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @bncdotph: Reports the number of House members expected to vote for impeaching VP Sara Duterte could reach 240, indicating significant political will for accountability. (https://x.com/bncdotph/status/2053739383921221848)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @FurkanGozukara: Absolute bombshell. Israeli Prime Minister Benjamin Netanyahu accidentally exposes his total control over the White House. He confirms Donald Trump immediately pledged absolute loyalty to the Zionist " (https://x.com/FurkanGozukara/status/2053617632574677041)
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @PhilippineStar: ‘I’M SHOWING UP HERE BUT NBI BLOCKED ME’ After his long absence, Senator Ronald “Bato” Dela Rosa appears before the Senate on Monday. “This is the first time I’ve seen a government like this… When I’m" (https://x.com/PhilippineStar/status/2053741905851154826)
+[NOTED] "kids" — 8 posts, no follow-up this cycle
+[NOTED] "why" — 7 posts, no follow-up this cycle
+[NOTED] "people" — 6 posts, no follow-up this cycle
 [NOTED] "time" — 6 posts, no follow-up this cycle
-[NOTED] "right" — 5 posts, no follow-up this cycle
-[NOTED] "country" — 5 posts, no follow-up this cycle
-[NOTED] "@TitoTok88" — 1 posts, no follow-up this cycle
-[NOTED] "@Polymarket" — 1 posts, no follow-up this cycle
-[NOTED] "@recouso" — 1 posts, no follow-up this cycle
-[NOTED] "@AP" — 1 posts, no follow-up this cycle
-[NOTED] "@Bunny_ngl" — 1 posts, no follow-up this cycle
-[NOTED] "@StephenCMeyer" — 1 posts, no follow-up this cycle
-[NOTED] "@Rainmaker1973" — 4 posts, no follow-up this cycle
-[NOTED] "@RT_com" — 1 posts, no follow-up this cycle
-[NOTED] "@Crazymoments01" — 2 posts, no follow-up this cycle
-[NOTED] "@PhilstarNews" — 1 posts, no follow-up this cycle
-[NOTED] "@Pintuu0" — 1 posts, no follow-up this cycle
-[NOTED] "@FoxNews" — 1 posts, no follow-up this cycle
-[NOTED] "@ProudSocialist" — 1 posts, no follow-up this cycle
-[NOTED] "@Reuters" — 1 posts, no follow-up this cycle
-[NOTED] "@McDonalds" — 1 posts, no follow-up this cycle
-[NOTED] "@anxietymsgs" — 1 posts, no follow-up this cycle
-[NOTED] "@NoContextHumans" — 1 posts, no follow-up this cycle
-[NOTED] "@tinapperez" — 1 posts, no follow-up this cycle
-[NOTED] "@buffys" — 1 posts, no follow-up this cycle
-[NOTED] "@historyinmemes" — 1 posts, no follow-up this cycle
-[NOTED] "@MarioNawfal" — 1 posts, no follow-up this cycle
-[NOTED] "@IdalisReign" — 1 posts, no follow-up this cycle
-[NOTED] "@Mimshack20" — 1 posts, no follow-up this cycle
-[NOTED] "@newswatchplusph" — 1 posts, no follow-up this cycle
-[NOTED] "@JiujitsuOtter" — 1 posts, no follow-up this cycle
-[NOTED] "@Nguri__" — 1 posts, no follow-up this cycle
-[NOTED] "@kingepic22" — 1 posts, no follow-up this cycle
-[NOTED] "@ammalusty" — 1 posts, no follow-up this cycle
-[NOTED] "@DesireToSee" — 1 posts, no follow-up this cycle
-[NOTED] "@gmanews" — 1 posts, no follow-up this cycle
+[NOTED] "see" — 5 posts, no follow-up this cycle
