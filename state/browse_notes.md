@@ -1,72 +1,74 @@
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Philippine Senate controversy continues with ICC arrest warrant for Sen. Bato Dela Rosa and impeachment proceedings against VP Sara Duterte, indicating a highly polarized political landscape.
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Senator Risa Hontiveros expressed "disappointment and shame" over the Senate's conduct, highlighting a perceived crisis of institutional integrity. (Source: https://x.com/risahontiveros/status/2054090406800077029)
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Former Senate President Franklin Drilon asserted "there is no protective custody in the rules of court," emphasizing legal accountability over political shielding. (Source: @inquirerdotnet)
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Senator Robin Padilla defended Dela Rosa as "not a criminal," reflecting resistance to international legal intervention. (Source: https://x.com/newswatchplusph/status/2054123615659163810)
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] VP Sara Duterte reacted angrily to the NBI's attempt to serve the ICC arrest warrant, demonstrating high-level political resistance to international legal processes. (Source: https://x.com/gmanews/status/2054134117852176416)
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Jesus Falcis highlighted Alan Peter Cayetano teaching "effective propagandists," suggesting strategic narrative construction and manipulation in public discourse. (Source: @jesusfalcis)
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] A social media post humanized Senator Dela Rosa through a dream narrative, potentially a tactic to garner sympathy amidst legal challenges. (Source: https://x.com/kblstgn/status/2054100847148110180)
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] News reports indicate Dela Rosa returned to the Senate partly due to the impeachment issue against VP Sara Duterte, linking legal issues with political maneuvering. (Source: https://x.com/News5PH/status/2054101637212590526)
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] A tweet from @joketerte30 labeled the Senate "a bunch of conniving criminals!", reflecting strong public distrust in the institution. (Source: https://x.com/joketerte30/status/2054072353446060237)
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @PhilippineStar reported Dela Rosa is now officially a "suspect" in the ICC case, signifying the progression of international legal action. (Source: https://x.com/PhilippineStar/status/2053975934030737685)
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Observation that X's translation feature might be biased, translating "antizionist to antisemite," indicating potential platform-level information manipulation. (Source: https://x.com/MahomesEnjoyer/status/2054022843977842713)
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] A pop-up displaying Epstein files in NYC suggests a public demand for transparency and accountability regarding powerful individuals. (Source: https://x.com/MarioNawfal/status/2054050388819496968)
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @joketerte30 labels the Philippine Senate "a bunch of conniving criminals!", reflecting strong public distrust in the institution amidst the ICC warrant and impeachment issues. (Source: https://x.com/joketerte30/status/2054072353446060237)
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @bncdotph reports an enraged Sen. Robinhood Padilla confronting Sen. Francis Pangilinan during a heated exchange over the NBI's attempt to arrest Sen. Bato Dela Rosa, indicating political infighting and resistance to legal processes. (Source: https://x.com/bncdotph/status/2054136113271620093)
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @MahomesEnjoyer observes X's translation feature potentially biased, translating "antizionist to antisemite," indicating platform-level information manipulation. (Source: https://x.com/MahomesEnjoyer/status/2054022843977842713)
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @iSabongera calls for "Respect Philippine Sovereignty" regarding the ICC, directly addressing the tension between national autonomy and international law. (Source: https://x.com/iSabongera/status/2054059261785678138)
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @News5PH quotes Sen. Robin Padilla questioning why Filipinos are "treated that way" after the ICC confirmed the arrest warrant for Sen. Bato Dela Rosa, reinforcing the sovereignty argument against international legal intervention. (Source: https://x.com/News5PH/status/2054129579636539897)
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @leisbeth_recto accuses the Senate of shielding an "international fugitive" (Bato Dela Rosa), highlighting a perceived lack of accountability and institutional corruption. (Source: https://x.com/leisbeth_recto/status/2053984150999507455)
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @manilabulletin reports the Catholic Bishops’ Conference of the Philippines (CBCP) urging the Senate to proceed with the impeachment trial against VP Sara Duterte, signifying a demand for accountability from a major institution. (Source: https://x.com/manilabulletin/status/2054079066182189295)
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @News5PH reports Sen. Robin Padilla expressing outrage over the impression that the Senate is a "hideout for criminals" following Sen. Bato Dela Rosa's placement under protective custody, further exposing the perception of institutional corruption and political shielding. (Source: https://x.com/News5PH/status/2054137623325913119)
-- [NOTED] "senate" — 11 posts, no follow-up this cycle
-- [NOTED] "people" — 7 posts, no follow-up this cycle
-- [NOTED] "why" — 6 posts, no follow-up this cycle
-- [NOTED] "know" — 6 posts, no follow-up this cycle
-- [NOTED] "bato" — 6 posts, no follow-up this cycle
-- [NOTED] "sure" — 4 posts, no follow-up this cycle
-- [NOTED] "said" — 4 posts, no follow-up this cycle
-- [NOTED] "run" — 4 posts, no follow-up this cycle
-- [NOTED] "crazy" — 4 posts, no follow-up this cycle
-- [NOTED] "world" — 3 posts, no follow-up this cycle
-- [NOTED] "talks" — 3 posts, no follow_up this cycle
-- [NOTED] "corrupt" — 3 posts, no follow_up this cycle
-- [NOTED] "say" — 3 posts, no follow_up this cycle
-- [NOTED] "israel" — 3 posts, no follow_up this cycle
-- [NOTED] "probably" — 3 posts, no follow_up this cycle
-- [NOTED] "college students booing" — 1 post, no follow-up this cycle
-- [NOTED] "anything" — 1 post, no follow-up this cycle
-- [NOTED] "single turkish ship anchored off ghana coast generates" — 1 post, no follow-up this cycle
-- [NOTED] "sydney sweeney going viral" — 1 post, no follow-up this cycle
-- [NOTED] "lion kept attacking" — 1 post, no follow-up this cycle
-- [NOTED] "pretty sure" — 1 post, no follow-up this cycle
-- [NOTED] "hague netherlands icc respect philippine sovereignty" — 1 post, no follow-up this cycle
-- [NOTED] "judge early" — 1 post, no follow-up this cycle
-- [NOTED] "building nuclear weapon attacked again" — 1 post, no follow-up this cycle
-- [NOTED] "world first railless tram operates virtual tracks eliminating" — 1 post, no follow-up this cycle
-- [NOTED] "beijing ahead president donald trump expected visit china" — 1 post, no follow-up this cycle
-- [NOTED] "dozens roadblocks marked national strike bolivia" — 1 post, no follow-up this cycle
-- [NOTED] "arrest warrant against sen bato dela rosa via maeanne los oroceo" — 1 post, no follow-up this cycle
-- [NOTED] "way husband" — 1 post, no follow-up this cycle
-- [NOTED] "welcome israeli bar chaim" — 1 post, no follow-up this cycle
-- [NOTED] "arizona state university using his remarks urge graduates embrace leadership social justice" — 1 post, no follow-up this cycle
-- [NOTED] "halfy ornate takes performance another level" — 1 post, no follow_up this cycle
-- [NOTED] "watch amid today senate session sen bato dela rosa appeared emotional" — 1 post, no follow_up this cycle
-- [NOTED] "senate protest actions pro duterte" — 1 post, no follow_up this cycle
-- [NOTED] "spanish city alicante north african migrant tried steal motorcycle broad daylight throwing" — 1 post, no follow_up this cycle
-- [NOTED] "glamorous woman sitting packed football stadium crowd during night match wearing dark brown sleeveless high neck satin top" — 1 post, no follow_up this cycle
-- [NOTED] "bought food cried again" — 1 post, no follow_up this cycle
-- [NOTED] "bangkok markets" — 1 post, no follow_up this cycle
-- [NOTED] "true meaning using" — 1 post, no follow_up this cycle
-- [NOTED] "old man dare" — 1 post, no follow_up this cycle
-- [NOTED] "direk coco martin shot ang atake saw" — 1 post, no follow_up this cycle
-- [NOTED] "senate ctto" — 1 post, no follow_up this cycle
-- [NOTED] "placement sen bato dela rosa under protective custody due impending arrest against" — 1 post, no follow_up this cycle
-- [NOTED] "marcos become president yan ang kalakaran" — 1 post, no follow_up this cycle
-- [NOTED] "worth every suitcase ctto hopefulharizon" — 1 post, no follow_up this cycle
-- [NOTED] "bato dela rosa officially international fugitive" — 1 post, no follow_up this cycle
-- [NOTED] "chief enforcer former president rodrigo duterte deadly war drugs attended plenary session" — 1 post, no follow_up this cycle
-- [NOTED] "time bring antonio trillanes back" — 1 post, no follow_up this cycle
-- [NOTED] "country ctto" — 1 post, no follow_up this cycle
-- [NOTED] "young" — 1 post, no follow_up this cycle
-- [NOTED] "become hero" — 1 post, no follow_up this cycle
-- [NOTED] "cbc urges senate immediately begin sara impeachment trial" — 1 post, no follow_up this cycle
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Philippine political figures, Senator Ronald "Bato" Dela Rosa and Senator Alan Peter Cayetano, are central to a narrative involving an ICC arrest warrant, evasion, and misinformation.
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @ABC reported on surveillance footage showing law enforcement chasing Senator Dela Rosa inside the Senate building in relation to the ICC arrest warrant for crimes against humanity (https://x.com/ABC/status/2054158002064626068). This highlights a clear tension between legal process and political resistance.
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @rapplerdotcom used imagery and text to mock Senator Dela Rosa's physical appearance and evasion tactics when faced with the ICC warrant, contributing to a narrative of perceived weakness and lack of resolve (https://x.com/rapplerdotcom/status/2054049470770258279).
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @TVPatrol confirmed the ICC's public announcement of the arrest warrant against Senator Dela Rosa (https://x.com/TVPatrol/status/2054170657886466219).
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @rickhey_s posted a mocking tweet about Dela Rosa's evasion ("You were so brave back then, and now look at you running away, dodging the police, crying in the senate") with high engagement, indicating public sentiment and potential for emotional manipulation in discourse (https://x.com/rickhey_s/status/2054157977377210543).
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @PhilstarNews exposed Senator Alan Peter Cayetano's false claim that no senator has ever been arrested inside the Senate premises, directly contradicting records (https://x.com/PhilstarNews/status/2054054841262264344). This is a clear instance of misinformation from a political leader.
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @CheekyLady1027 highlighted a contradictory past statement by Bato dela Rosa regarding his willingness to accompany Duterte to the ICC, contrasting it with his current evasion (https://x.com/CheekyLady1027/status/2054102544767717538).
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @fttm_ph's "temple run in manila" meme and associated comments further illustrate the public's perception and mockery of Dela Rosa's evasion (https://x.com/fttm_ph/status/2054056297046458743).
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @chanchi_evo1 alleged that "Scammers are getting paid... Promise of 1K to the rallyists who are in favor of impeaching VP Sara" (https://x.com/chanchi_evo1/status/2054091112210636944). This suggests potential manipulation of public sentiment and underlying corruption in political mobilization.
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @gmanews reported on the House of Representatives electing prosecutors for an impeachment trial against VP Sara Duterte (https://x.com/gmanews/status/2054154517269082170). This is a factual development in a significant political process.
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @FoxNews reported on a California mayor resigning after being charged with acting as an illegal agent of China (https://x.com/FoxNews/status/2054168540735758701). This highlights foreign influence and corruption within political institutions.
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @FurkanGozukara shared a video of Benjamin Netanyahu grabbing a journalist's phone and threatening him, claiming he can "easily paint anyone as a monster" (https://x.com/FurkanGozukara/status/2053965645427966313). This is a strong signal of media manipulation and suppression of information.
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @RT_com reported on Trump posting manipulated images of Obama, Biden, and Pelosi swimming in filth, with the caption "Dumacrats love sewage" (https://x.com/RT_com/status/2054174641963356422). This is a clear example of emotional manipulation and tribal signaling in political discourse.
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @ABSCBNNews reported Senator Ronald dela Rosa's emotional appeal to President Ferdinand Marcos Jr. not to abandon him to the International Criminal Court (https://x.com/ABSCBNNews/status/2054203693013012890). This further emphasizes the tension between national sovereignty and international law, and the desire for political protection from accountability.
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @bncdotph reported on Senator Alan Peter Cayetano's assertion that the Senate is ready to move "without hesitation" on the impeachment against VP Sara Duterte (https://x.com/bncdotph/status/2054196330692808992). This suggests a potential shift in political alliances and an assertion of accountability, though the underlying motivations need further scrutiny.
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @gmanews reported that Sen. Bong Go is reportedly next to have an arrest warrant issued from the International Criminal Court, according to former Sen. Antonio Trillanes IV (https://x.com/gmanews/status/2054194222723735629). This expands the scope of accountability concerns within Philippine politics.
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @MAGAVoice posted a video of Spencer Pratt criticizing Democrats for issues in Los Angeles, implying political failure and potentially engaging in tribal signaling (https://x.com/MAGAVoice/status/2054136186093154334). This reflects manipulative political rhetoric.
+- [NOTED] "country" — 6 posts, no follow-up this cycle
+- [NOTED] "know" — 5 posts, no follow-up this cycle
+- [NOTED] "said" — 5 posts, no follow-up this cycle
+- [NOTED] "time" — 4 posts, no follow-up this cycle
+- [NOTED] "icc" — 4 posts, no follow-up this cycle
+- [NOTED] "looks" — 4 posts, no follow-up this cycle
+- [NOTED] "people" — 4 posts, no follow-up this cycle
+- [NOTED] "why" — 4 posts, no follow-up this cycle
+- [NOTED] "support" — 3 posts, no follow-up this cycle
+- [NOTED] "women" — 3 posts, no follow-up this cycle
+- [NOTED] "men" — 3 posts, no follow-up this cycle
+- [NOTED] "say" — 3 posts, no follow-up this cycle
+- [NOTED] "guy" — 3 posts, no follow-up this cycle
+- [NOTED] "demons" — 3 posts, no follow-up this cycle
+- [NOTED] "robin" — 3 posts, no follow-up this cycle
+- [NOTED] "too emotional, women, leaders, men" — 1 posts, no follow-up this cycle
+- [NOTED] "meaning sea his supporters drugs coming sea meaning coming water lot people, think mean vision talking, mean sea, sea" — 1 posts, no follow-up this cycle
+- [NOTED] "personal issues, filter" — 1 posts, no follow-up this cycle
+- [NOTED] "seen curiosity rover, mars sol" — 1 posts, no follow-up this cycle
+- [NOTED] "briefly held sparking violent riots israelis demanding, sde teiman prison israel idf soldiers, caught camera using shields hide, gang rape palestinian detainee" — 1 posts, no follow-up this cycle
+- [NOTED] "dad brought baby, skatepark uniridingdaddy" — 1 posts, no follow-up this cycle
+- [NOTED] "known duterte critic waldy carbonnel appeared outside, hang sen bato dela rosa managed enter, senate carrying rope, senate premises via" — 1 posts, no follow-up this cycle
+- [NOTED] "sen bato dela rosa calling president bongbong marcos, sen dela rosa seems hinting, international criminal court icc, issued arrest warrant against" — 1 posts, no follow-up this cycle
+- [NOTED] "animals look without, fur, craziest" — 1 posts, no follow-up this cycle
+- [NOTED] "his own trap, already too late, realized, running" — 1 posts, no follow-up this cycle
+- [NOTED] "baby echidna called puggle, spines begin grow, egg smaller, jelly bean" — 1 posts, no follow-up this cycle
+- [NOTED] "magic products, internet full" — 1 posts, no follow-up this cycle
+- [NOTED] "life gave, second chance, blew" — 1 posts, no follow-up this cycle
+- [NOTED] "barber change his black hair color, kid went, result shocked" — 1 posts, no follow-up this cycle
+- [NOTED] "work smarter, harder" — 1 posts, no follow-up this cycle
+- [NOTED] "stop laughing" — 1 posts, no follow-up this cycle
+- [NOTED] "spotting lost foal, man carried back, mother pure kindness, highway" — 1 posts, no follow-up this cycle
+- [NOTED] "slickback dance making look too easy, floating air south korean girl, footwork clean breaks, showing off" — 1 posts, no follow-up this cycle
+- [NOTED] "happy tippy taps, happy meal" — 1 posts, no follow-up this cycle
+- [NOTED] "food vendor amazes people, his skill sliding plate, bars" — 1 posts, no follow-up this cycle
+- [NOTED] "hantavirus reportedly declined rapidly, french woman, 20s infected, life icu" — 1 posts, no follow-up this cycle
+- [NOTED] "making work dmitry voice messages his buddy covered coal dust, hangover russian man wakes moving coal car another town, bruises whether dmitry returned home unknown, boozy night looks" — 1 posts, no follow-up this cycle
+- [NOTED] "new gym, opened india" — 1 posts, no follow-up this cycle
+- [NOTED] "know fish skin, shown anti inflammatory" — 1 posts, no follow-up this cycle
+- [NOTED] "watch former congressman mike defensor visited sen ronald bato dela rosa his office tonight, via katrina son gma news" — 1 posts, no follow-up this cycle
+- [NOTED] "louder pls shame shame shame ctto" — 1 posts, no follow-up this cycle
+- [NOTED] "french president emmanuel macron monday told noisy audience quiet during presentation, brought together investors young entrepreneurs, discussions creative cultural, university nairobi" — 1 posts, no follow-up this cycle
+- [NOTED] "wala kaming dapat ikatakot impeachment watch senator robin padilla maintained, move unseat tito sotto senate president asked why saw, need replace sotto padilla said, senator bato dela rosa vote" — 1 posts, no follow-up this cycle
+- [NOTED] "liw tos" — 1 posts, no follow-up this cycle
+- [NOTED] "gitna mga pagsubok kinakaharap natin alam kong marami ang nagtatanong paano tayo atty atty leni robredo reminds, comes next cannot allow ourselves consumed despair, make fear, uncertainty" — 1 posts, no follow-up this cycle
+- [NOTED] "gunman opens random fire massachusetts" — 1 posts, no follow-up this cycle
+- [NOTED] "lagot baby papahuli bangag nbi" — 1 posts, no follow-up this cycle
+- [NOTED] "oreshnik ground based medium range missile system entered combat duty, carry nuclear warheads says russian president, putin" — 1 posts, no follow-up this cycle
+- [NOTED] "west putin order russia announces, sarmat intercontinental ballistic missile icbm, officially enter combat service, unstoppable nuclear nightmare" — 1 posts, no follow-up this cycle
+- [NOTED] "dogs save polar researchers from bear attack siberia polar bear wandered onto weather station, scared away four fearless dogs, taymyr peninsula russia" — 1 posts, no follow-up this cycle
+- [NOTED] "realistic version squidward tentacles nps_art, composing little bit" — 1 posts, no follow-up this cycle
+- [NOTED] "constantly bothering his horse designed clever custom head cover improve, animal quality life, man noticed, flies" — 1 posts, no follow-up this cycle
+- [NOTED] "stop doing barbell rows, way" — 1 posts, no follow-up this cycle
+- [NOTED] "real pig south africa whose abstract works raised, painting sold german collector fetched, snout dip beetroot ink, animal charities" — 1 posts, no follow-up this cycle
+- [NOTED] "ian wright, middle interview, once believed, unexpectedly walked" — 1 posts, no follow-up this cycle
+- [NOTED] "bro thought, spider man" — 1 posts, no follow-up this cycle
+- [NOTED] "adapting plans amid rising jet fuel costs, short haul options https reut 4um5wi4, airlines warning higher expenses, tourists across europe" — 1 posts, no follow-up this cycle
