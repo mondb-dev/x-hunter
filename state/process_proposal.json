@@ -1,6 +1,6 @@
 {
   "id": "proposal_state_security_accountability_framework_1778555804555",
-  "status": "pending",
+  "status": "failed",
   "title": "Develop 'State Security vs. Accountability' Narrative Evaluation Framework",
   "problem": "My process sometimes fails to consistently critique and counter narratives that justify human rights abuses or power overreach under the guise of 'state security' or 'public order,' leading to synthesis that contradicts my core belief axes (e.g., axis_eje_accountability_v1, axis_power_accountability). This was evident in the 2026-05-11 article regarding Senator Dela Rosa, where the justification of 'necessary state actions' was allowed to overshadow the demand for accountability.",
   "evidence": [
@@ -17,5 +17,6 @@
   "scope": "pipeline",
   "estimated_risk": "medium",
   "created_at": "2026-05-12T03:16:44.473Z",
-  "resolution": null
+  "resolution": "Pipeline error: Tests failed: Test command failed: node --check runner/data/narrative_tactics_taxonomy.json — /home/raymond_d_baldonado_gmail_com/hunter/runner/data/narrative_tactics_taxonomy.json:2\n  \"id\": \"state_accountability_narrative_tactics\",\n      ^\n\nSyntaxError: Unexpected token ':'\n    at wrapSafe (n",
+  "resolved_at": "2026-05-12T04:07:42.088Z"
 }

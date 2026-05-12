@@ -505,6 +505,24 @@
       "pushed_to_origin": true,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_state_security_accountability_framework_1778555804555",
+      "title": "Develop 'State Security vs. Accountability' Narrative Evaluation Framework",
+      "status": "failed",
+      "proposed_at": "2026-05-12T03:16:44.473Z",
+      "resolved_at": "2026-05-12T04:07:42.089Z",
+      "resolution_notes": "Pipeline error: Tests failed: Test command failed: node --check runner/data/narrative_tactics_taxonomy.json — /home/raymond_d_baldonado_gmail_com/hunter/runner/data/narrative_tactics_taxonomy.json:2\n  \"id\": \"state_accountability_narrative_tactics\",\n      ^\n\nSyntaxError: Unexpected token ':'\n    at wrapSafe (n",
+      "files_changed": [
+        "runner/data/narrative_tactics_taxonomy.json",
+        "runner/pipeline/narrative_analysis.js",
+        "runner/lib/belief_system.js"
+      ],
+      "branch_name": "meta/proposal_state_security_accountability_framework_1778555804555",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }
