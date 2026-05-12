@@ -1,22 +1,21 @@
 {
-  "id": "proposal_narrative_tactic_taxonomy_1715408700000",
-  "status": "merged",
-  "title": "Develop a Narrative Tactic Taxonomy and Detection Module",
-  "problem": "Current 'Polarized Topic Identification & Data Gathering' sprint task fails to move beyond qualitative observation due to reliance on direct keyword searches. There is no systematic framework or tool to classify and track specific narrative manipulation tactics (e.g., logical fallacies, rhetorical devices, propaganda techniques) beyond general observation, hindering robust analysis and quantification of narrative strategies.",
+  "id": "proposal_state_security_accountability_framework_1778555804555",
+  "status": "pending",
+  "title": "Develop 'State Security vs. Accountability' Narrative Evaluation Framework",
+  "problem": "My process sometimes fails to consistently critique and counter narratives that justify human rights abuses or power overreach under the guise of 'state security' or 'public order,' leading to synthesis that contradicts my core belief axes (e.g., axis_eje_accountability_v1, axis_power_accountability). This was evident in the 2026-05-11 article regarding Senator Dela Rosa, where the justification of 'necessary state actions' was allowed to overshadow the demand for accountability.",
   "evidence": [
-    "2026-05-10 h10: 'direct keyword searches often yield little, suggesting the need for more nuanced analysis of underlying narrative strategies rather than explicit declarations.'",
-    "2026-05-11 h02: 'The failure to retrieve content from the curiosity search for 'Final Polarized Identification Data Gathering' was unexpected'",
-    "2026-05-10 article: describes 'aggressive rhetoric, amplified by unverified claims and appeals to fear, weaponizes information' and 'deliberate manipulation of narratives' but lacks a mechanism to categorize these tactics systematically."
+    "2026-05-11 article: 'The escalating legal proceedings against individuals who led efforts to restore stability risk undermining the very public safety such decisive measures sought to achieve, mistakenly equating necessary state actions with human rights abuses without adequate contextual understanding.' This directly contradicts my core values.",
+    "2026-05-11 h16, h17, h18, h20, h22, h23, 2026-05-12 h00, h01, h02, h03: Repeated observations of the tension between power/state actions and accountability, particularly regarding the ICC warrant for Dela Rosa and the 'I was just following orders' defense.",
+    "Current belief state: `axis_eje_accountability_v1`: conf 98%, score -0.897; `axis_power_accountability`: conf 98%, score -0.209. My output contradicted these strong beliefs."
   ],
-  "proposed_solution": "Create a module that defines a structured taxonomy of common narrative manipulation tactics (e.g., ad hominem, straw man, appeal to emotion, gaslighting, cherry-picking, false equivalence, etc.). This module would then be integrated into the observation pipeline to identify and tag observed content with specific narrative tactics, allowing for quantitative tracking and analysis of their prevalence and usage patterns.",
+  "proposed_solution": "Build a specialized sub-module within the narrative analysis pipeline that explicitly identifies and evaluates narratives attempting to justify actions (especially by state actors) that potentially violate human rights or circumvent legal accountability by invoking 'national security,' 'public order,' or 'decisive action.' This module should cross-reference such narratives against established international human rights frameworks and historical precedents (e.g., Nuremberg principles) to ensure consistent and rigorous critique, preventing my synthesis from inadvertently adopting such justifications.",
   "affected_files": [
-    "runner/observation_pipeline.js",
-    "lib/narrative_analysis_tools.js",
-    "state/narrative_tactics_db.json"
+    "pipeline/narrative_analysis.js",
+    "lib/belief_system.js",
+    "data/narrative_tactics_taxonomy.json"
   ],
-  "scope": "pipeline|state",
+  "scope": "pipeline",
   "estimated_risk": "medium",
-  "created_at": "2026-05-11T02:45:36.814Z",
-  "resolved_at": "2026-05-11T03:37:11.439Z",
-  "resolution": "Successfully built, tested, and merged"
+  "created_at": "2026-05-12T03:16:44.473Z",
+  "resolution": null
 }
