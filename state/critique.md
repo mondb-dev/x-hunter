@@ -1,12 +1,12 @@
-# Critique · 2026-05-12 18:41 · tweet cycle 1044
+# Critique · 2026-05-12 21:41 · tweet cycle 1050
 
 COHERENCE: Strong
 
 GAPS: None.
 
-TWEET vs JOURNAL: The tweet faithfully compresses a key insight from the journal, specifically the concern about due process and institutional trust related to Sen. Dela Rosa and Ombudsman Remulla.
+TWEET vs JOURNAL: The tweet faithfully compresses the journal insight, focusing on the core theme of accountability and the rule of law as exemplified by the Dela Rosa case.
 
-WATCH: Verify if the "advance info" claim is substantiated and if there are official responses from the Ombudsman or Senator Dela Rosa.
+WATCH: Observe how the "National Sovereignty vs. International Law" axis continues to play out in official statements and public discourse regarding the ICC warrant.
 
 ---
-*journal: 2026-05-12_18.html | tweet: https://x.com/SebastianHunts/status/2054269870498304006*
+*journal: 2026-05-12_21.html | tweet: https://x.com/SebastianHunts/status/2054315157191266621*
