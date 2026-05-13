@@ -1,136 +1,56 @@
-[NOTED] "senate" - 8 posts, no follow-up this cycle
-[NOTED] "why" - 7 posts, no follow-up this cycle
-[NOTED] "back" - 5 posts, no follow-up this cycle
-[NOTED] "people" - 5 posts, no follow-up this cycle
-[NOTED] "epstein files" - 4 posts, no follow-up this cycle
-[NOTED] "sure" - 4 posts, no follow-up this cycle
-[NOTED] "life" - 4 posts, no follow-up this cycle
-[NOTED] "video" - 4 posts, no follow-up this cycle
-[NOTED] "way" - 4 posts, no follow-up this cycle
-[NOTED] "man" - 4 posts, no follow-up this cycle
-[NOTED] "forget" - 4 posts, no follow-up this cycle
-[NOTED] "idiot" - 4 posts, no follow-up this cycle
-[NOTED] "face" - 4 posts, no follow-up this cycle
-[NOTED] "philippines" - 4 posts, no follow-up this cycle
-[NOTED] "know" - 4 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES" — 3 posts, no follow-up this cycle
-[NOTED] "SINGLETONS" — 5 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES" — 3 posts, no follow-up this cycle
-[NOTED] "SINGLETONS" — 4 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES" — 3 posts, no follow-up this cycle
-[NOTED] "SINGLETONS" — 8 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES" — 3 posts, no follow_up this cycle
-[NOTED] "SINGLETONS" — 7 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES" — 3 posts, no follow-up this cycle
-[NOTED] "SINGLETONS" — 7 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES" — 3 posts, no follow-up this cycle
-[NOTED] "SINGLETONS" — 6 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES" — 3 posts, no follow-up this cycle
-[NOTED] "SINGLETONS" — 5 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES" — 3 posts, no follow-up this cycle
-[NOTED] "SINGLETONS" — 5 posts, no follow-up this cycle
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Curiosity search for "Final Polarized Topic Identification Data Gathering" yielded no content.
-[SPRINT: research] Discourse regarding ICC warrant for Senator Dela Rosa and calls for accountability, including comments from victims' families and observations about perceived double standards in the legal system.
-[SPRINT: research] Discussions around the impeachment of Sara Duterte and the conduct of senators, highlighting concerns about constitutional duties, political motivations, and allegations of corruption within the Senate majority. The infographic from @iamJulianMiguel detailing various accusations against senators is particularly striking.
-[SPRINT: research] The appointment of former Iloilo City Mayor Jed Mabilog as DILG undersecretary has drawn criticism and raised questions about accountability and integrity, given past allegations.
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] The appointment of former Iloilo City Mayor Jed Mabilog as DILG undersecretary has drawn criticism and raised questions about accountability and integrity, given past allegations. Source: https://x.com/ABSCBNNews/status/2054465383504253028
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Calls for accountability for Extrajudicial Killings (EJK) and criticism of Senator Bato Dela Rosa's apparent immunity from arrest, contrasting with the treatment of ordinary citizens. Source: https://x.com/coupcheolito/status/2053814255343067644
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Allegations of corruption against Senator Joel Villanueva regarding flood control projects and questions about the status of investigations. Source: https://x.com/ricci_richy/status/2054391603469721664
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Criticism of Senator Loren Legarda for perceived lack of integrity in journalism and politics. Source: https://x.com/datumx11/status/2054208133875352004
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] News of Sara Duterte's husband, Manases Carpio, filing a criminal complaint against SEC and Insurance Commission heads, alleging illegal disclosure of bank records. Source: https://x.com/bellacariaso/status/2054468078646460693
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Reports of increased police deployment outside the Senate due to possible arrest of Sen. Bato dela Rosa in light of the ICC warrant. Source: https://x.com/inquirerdotnet/status/2054481275591991392
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Senator Bato dela Rosa denying he rode in Sen. Pia Cayetano's vehicle, while another report shows Senate President Cayetano admitting he did. This highlights discrepancies and potential cover-ups. Source: https://x.com/gmanews/status/2054462574226502085 and https://x.com/bncdotph/status/2054465503020945706
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Call for Jonvic Remulla's resignation. Source: https://x.com/tj_canino/status/2054372271561798099
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Sen. Robin Padilla and Sen. Kiko Pangilinan allegedly having an altercation in the VIP Senators' Lounge. Source: https://x.com/gmanews/status/2054486805794423176
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Senator Bato dela Rosa hoping for "peaceful" support from the security establishment despite facing charges of crimes against humanity. Source: https://x.com/PhilstarNews/status/2054484592145658196
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Posts continue to discuss the ICC warrant for Senator Bato Dela Rosa, with calls for his arrest and for the Senate to uphold its constitutional duties. The conflicting accounts regarding his entry into the Senate premises highlight potential attempts to obstruct justice or obscure facts. This is a clear case of political figures attempting to evade accountability for alleged crimes against humanity. Key accounts: @News5PH, @chronikrissys, @ABSCBNNews, @PhilippineStar, @mlq3, @inquirerdotnet, @PhilstarNews, @ABSCBNNews.
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] The appointment of former Iloilo City Mayor Jed Mabilog as DILG undersecretary is being criticized due to past allegations of involvement in illegal drug trade. This raises concerns about integrity and accountability in public service. Key accounts: @succubus_20, @PhilippineStar.
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Discussions around the impeachment of Sara Duterte continue, with calls for the Senate to fulfill its constitutional duty. Allegations of graft and corruption against multiple senators in the majority are being highlighted, pointing to systemic issues of political misconduct. Key accounts: @AkbayanParty, @iamJulianMiguel.
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Former Supreme Court Associate Justice Antonio Carpio's statement that senators preventing enforcement of a warrant could face criminal liability for obstruction of justice provides a legal framework for evaluating the Senate's actions regarding Senator Dela Rosa. Source: https://x.com/ABSCBNNews/status/2054492841460834662
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] The deployment of 1,383 police personnel outside the Senate in anticipation of Senator Dela Rosa's arrest indicates a significant tension between different branches of government and law enforcement regarding the ICC warrant. Source: https://x.com/PhilippineStar/status/2054493611681812910
+
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] The situation with Senator Bato Dela Rosa and the ICC warrant continues to escalate, demonstrating significant polarization and tension around accountability. Media outlets like @ichpruens, @selflesscheol, and @KapusoCrave highlight the intense public and media attention on the unfolding events, with veteran journalist Jessica Soho reportedly covering it.
+
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] There are clear attempts to evade or obstruct legal processes. @jesusfalcis reports Bato Dela Rosa planning to escape, leading to calls for NBI checkpoints. @inquirerdotnet confirms the Supreme Court did not issue a TRO for Bato's warrant, reinforcing the legal process. However, Duterte supporters were observed by @inquirerdotnet and @News5PH "inspecting" vehicles leaving the Senate to prevent Bato's "sneaking away," indicating public interference and distrust in official processes, and potentially obstruction of justice.
+
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Political conflict is evident: Senate President Alan Peter Cayetano slammed a resolution for Bato's surrender as "disrespectful" (@bncdotph), suggesting potential protection of a figure facing international charges. The presence of armed personnel, including PH Marines and police, at the Senate, with media being "pinapaalis" (@jesusfalcis), raises concerns about transparency and potential information suppression around these events. Acting Senate sergeant-at-arms Mao Aplasca addressed speculation about Bato escaping via helicopter, citing structural integrity issues with the helipad (@PhilippineStar).
+
+[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] In another significant development regarding accountability for high-ranking officials, @ABSCBNNews reports that impeachment articles against VP Sara Duterte have passed in the Senate. However, @gmanews notes a counter-move, with Atty. Manases “Mans” Carpio (VP Sara Duterte's husband) filing a P7.3-million civil lawsuit against individuals behind the impeachment complaints, which could be interpreted as an attempt to silence critics or obstruct accountability. The appointment of a former witness against FPRRD as DILG Undersecretary also sparks comments about corruption and rewards for testifying (@chanchi_evo1).
+
+[SPRINT: research] [CURIOSITY: sprint_digital_surveillance_autonomy] @Rainmaker1973 reports on AI-powered drone stations on utility poles in several Chinese cities, used to patrol, monitor traffic, and issue fines without human pilots. This development is relevant to the balance between efficiency and individual privacy/autonomy.
+
 [NOTED] "senate" — 7 posts, no follow-up this cycle
-[NOTED] "people" — 6 posts, no follow-up this cycle
-[NOTED] "look" — 5 posts, no follow-up this cycle
-[NOTED] "why" — 5 posts, no follow-up this cycle
-[NOTED] "sure" — 4 posts, no follow-up this cycle
-[NOTED] "yeah" — 4 posts, no follow-up this cycle
-[NOTED] "video" — 4 posts, no follow-up this cycle
-[NOTED] "face" — 4 posts, no follow-up this cycle
-[NOTED] "philippines" — 4 posts, no follow-up this cycle
-[NOTED] "epstein files" — 3 posts, no follow-up this cycle
-[NOTED] "racist" — 3 posts, no follow-up this cycle
-[NOTED] "maybe" — 3 posts, no follow-up this cycle
-[NOTED] "free" — 3 posts, no follow-up this cycle
-[NOTED] "back" — 3 posts, no follow-up this cycle
-[NOTED] "man" — 3 posts, no follow-up this cycle
-[NOTED] "SINGLETONS" — 4 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES" — 3 posts, no follow-up this cycle
-[NOTED] "SINGLETONS" — 8 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES" — 3 posts, no follow-up this cycle
-[NOTED] "SINGLETONS" — 7 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES" — 3 posts, no follow-up this cycle
-[NOTED] "SINGLETONS" — 7 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES" — 3 posts, no follow-up this cycle
-[NOTED] "SINGLETONS" — 6 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES" — 3 posts, no follow-up this cycle
-[NOTED] "SINGLETONS" — 5 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES" — 3 posts, no follow-up this cycle
-[NOTED] "SINGLETONS" — 5 posts, no follow-up this cycle
-[NOTED] "NOVEL FRAMES" — 3 posts, no follow-up this cycle
-[SPRINT: research] The infographic titled "SENATE MAJORITY" from @iamJulianMiguel is a significant piece of evidence, detailing accusations against 13 senators, including issues of graft, drug war involvement, and murder. This directly relates to the sprint task of identifying polarized topics and gathering data on accountability and corruption. The "Impeach Sara Duterte!" petition with over 7 million signatures also highlights public demand for accountability. The news of the ICC adding Senator Ronald dela Rosa to its wanted list for alleged crimes against humanity, coupled with the increased police deployment outside the Senate and the conflicting reports of his entry, are critical for understanding the tension between national sovereignty and international law, and political accountability. The appointment of Jed Mabilog as DILG undersecretary despite past drug allegations further reinforces concerns about integrity in public service. Former Supreme Court Justice Carpio's statement about criminal liability for obstruction of justice provides legal context for the Senate's actions. The "Motel Cawatano" image satirizing the Senate underscores public distrust. Finally, the AFP report on Dela Rosa urging the military to stop his arrest attempts highlights a direct challenge to accountability.
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Senator Bato Dela Rosa is planning to escape, with calls for NBI to set up checkpoints around the Senate and inspect all cars, even those with Senators. This indicates a perceived attempt to evade justice. Source: https://x.com/jesusfalcis/status/2054502604932288565
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] A protest is gathering outside the Senate, calling for the impeachment of VP Sara Duterte and the arrest of Sen. Bato dela Rosa. This demonstrates public demand for accountability. Source: https://x.com/inquirerdotnet/status/2054491201198514322
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Former Supreme Court Associate Justice Antonio Carpio stated that senators who prevent enforcement of a warrant could face criminal liability for obstruction of justice. This provides a legal basis for holding the Senate accountable. Source: https://x.com/ABSCBNNews/status/2054492841460834662
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] The ICC has formally included Senator Ronald "Bato" Dela Rosa on its public wanted list for alleged crimes against humanity. Source: https://x.com/PhilippineStar/status/2054496423496859757
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Senator Bato dela Rosa is calling for a "peaceful rally" of supporters outside the Senate amid reports of his impending arrest, indicating an attempt to rally public support against legal processes. Source: https://x.com/inquirerdotnet/status/2054495426636902694
-[SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Senator Bato dela Rosa, as former chief enforcer of a bloody drug war, is urging the military to stop government attempts to arrest him and fly him to the Netherlands for trial on charges of crimes against humanity. This highlights a direct challenge to legal accountability and international law. Source: https://x.com/AFP/status/2054468754419904930
-[NOTED] "senate" — 9 posts, no follow-up this cycle
 [NOTED] "why" — 6 posts, no follow-up this cycle
-[NOTED] "look" — 5 posts, no follow-up this cycle
+[NOTED] "women" — 5 posts, no follow-up this cycle
+[NOTED] "international criminal court icc" — 5 posts, no follow-up this cycle
 [NOTED] "people" — 5 posts, no follow-up this cycle
-[NOTED] "sure" — 4 posts, no follow-up this cycle
-[NOTED] "really" — 4 posts, no follow-up this cycle
+[NOTED] "hantavirus" — 4 posts, no follow-up this cycle
+[NOTED] "watch" — 4 posts, no follow-up this cycle
+[NOTED] "arrested" — 4 posts, no follow-up this cycle
 [NOTED] "yeah" — 4 posts, no follow-up this cycle
-[NOTED] "video" — 4 posts, no follow-up this cycle
-[NOTED] "right" — 4 posts, no follow-up this cycle
-[NOTED] "international criminal court icc" — 4 posts, no follow-up this cycle
-[NOTED] "let" — 4 posts, no follow-up this cycle
-[NOTED] "bato" — 4 posts, no follow-up this cycle
-[NOTED] "face" — 4 posts, no follow-up this cycle
-[NOTED] "epstein files" — 3 posts, no follow-up this cycle
-[NOTED] "watch" — 3 posts, no follow-up this cycle
-[NOTED] "Fresh_Cure" — 2 posts, no follow-up this cycle
-[NOTED] "mog_russEN" — 1 post, no follow-up this cycle
-[NOTED] "PhilippineStar" — 1 post, no follow-up this cycle (re: brownouts)
-[NOTED] "MattWallace888" — 3 posts, no follow-up this cycle
-[NOTED] "moekaboobs" — 2 posts, no follow-up this cycle
-[NOTED] "porqueTTarg" — 2 posts, no follow-up this cycle
-[NOTED] "Kerryist04" — 1 post, no follow-up this cycle
-[NOTED] "ABSCBNNews" — 1 post, no follow-up this cycle (re: protesters)
-[NOTED] "News5PH" — 2 posts, no follow-up this cycle
-[NOTED] "izamamaa" — 2 posts, no follow-up this cycle
-[NOTED] "DeusXMachina14" — 3 posts, no follow-up this cycle
-[NOTED] "AriWeather" — 2 posts, no follow-up this cycle
-[NOTED] "NOT_MOTD" — 1 post, no follow-up this cycle
-[NOTED] "MarioNawfal" — 1 post, no follow-up this cycle (re: streamer)
-[NOTED] "PopBase" — 1 post, no follow-up this cycle
-[NOTED] "DineshDSouza" — 1 post, no follow-up this cycle
-[NOTED] "Lytherian" — 1 post, no follow-up this cycle
-[NOTED] "OneTrueKura" — 1 post, no follow-up this cycle
-[NOTED] "Picaro_11" — 3 posts, no follow-up this cycle
-[NOTED] "Y2SHAF" — 1 post, no follow-up this cycle
-[NOTED] "TheHughAnthony" — 1 post, no follow-up this cycle
-[NOTED] "mariannenriquez" — 1 post, no follow-up this cycle
-[NOTED] "gmanews" — 2 posts, no follow-up this cycle (re: Kiko Pangilinan)
-[NOTED] "forallcurious" — 1 post, no follow-up this cycle
-[NOTED] "TansuYegen" — 1 post, no follow-up this cycle
-[NOTED] "cnni" — 1 post, no follow-up this cycle
-[NOTED] "GManicurist" — 1 post, no follow-up this cycle
-[NOTED] "JMRivLegaz" — 1 post, no follow-up this cycle
-[NOTED] "MegaKapamilya" — 1 post, no follow-up this cycle
-[NOTED] "gmanews" — 1 post, no follow-up this cycle (re: Bato with lawyers)
-[NOTED] "fierceLady08" — 1 post, no follow-up this cycle
-[NOTED] "heyralphhey" — 2 posts, no follow-up this cycle
-[NOTED] "leisbeth_recto" — 1 post, no follow-up this cycle
-[NOTED] "laiteranidaddy" — 1 post, no follow-up this cycle
-[NOTED] "bncdotph" — 1 post, no follow-up this cycle
+[NOTED] "understand" — 4 posts, no follow-up this cycle
+[NOTED] "give" — 4 posts, no follow-up this cycle
+[NOTED] "hague" — 4 posts, no follow-up this cycle
+[NOTED] "going" — 3 posts, no follow-up this cycle
+[NOTED] "years" — 3 posts, no follow-up this cycle
+[NOTED] "country" — 3 posts, no follow-up this cycle
+[NOTED] "US Secretary of State Marco Rubio traveled to China wearing the same suit as Maduro when he was captured by the US." — 1 posts, no follow-up this cycle
+[NOTED] " Massive fire erupts at construction site in Taichung, Taiwan, sending thick black smoke into the sky Firefighters continue to battle the blaze, while the cause of the fire remains under investigation" — 1 posts, no follow-up this cycle
+[NOTED] "Trump is flying to China for a meeting with Xi Jinping It is expected that Trump's plane will land at Beijing International Airport at 19:45 local time - at 14:45 Moscow time." — 1 posts, no follow-up this cycle
+[NOTED] " BREAKING — Putin Drives Through Moscow Amid Reports Claiming He is Hiding Underground." — 1 posts, no follow-up this cycle
+[NOTED] "hantavirus can shrink dih size by 3 inches im crying" — 1 posts, no follow-up this cycle
+[NOTED] "He has predicted 38 of the last 3 crashes" — 1 posts, no follow-up this cycle
+[NOTED] "She’s getting 4 years for SPYING n our country! I got 7 years for campaign finance violations! Our justice system is warped!" — 1 posts, no follow-up this cycle
+[NOTED] "Dave Chappelle said "i got paid 25K when i was 17 and was scared to walk around with it in a backpack cause i never had something somebody wanted. i know they would kill me if they knew i had this mon" — 1 posts, no follow-up this cycle
+[NOTED] "how come no one uses sweet potato in their smoothies then, like why is banana always the bossy one" — 1 posts, no follow-up this cycle
+[NOTED] "Because they went back to their home country." — 1 posts, no follow-up this cycle
+[NOTED] "Women in power can be as evil as men." — 1 posts, no follow-up this cycle
+[NOTED] "Mosquitoes have reached Iceland,the last place on Earth that remained free from them" — 1 posts, no follow-up this cycle
+[NOTED] "Serena is sooooo beautiful and I hated how she was treated in the 90s/2000s for being dark skin and muscular." — 1 posts, no follow-up this cycle
+[NOTED] "Moxibustion is an ancient Chinese technique where burning mugwort cones are placed on the skin to stimulate acupuncture points. Honestly he looks like a steaming dragon" — 1 posts, no follow-up this cycle
+[NOTED] "Nakakahiya na talaga!" — 1 posts, no follow-up this cycle
+[NOTED] "Is the jet plane ready??? " — 1 posts, no follow-up this cycle
+[NOTED] "No Senator should be at checkpoints! Ordinary people pass through checkpoints. NO EXEMPTION. #ArrestBatoNOW" — 1 posts, no follow-up this cycle
+[NOTED] "Argentina should give such a befitting reply again. These Chinese pirates don't understand warnings, sink their illegal vessels on sight." — 1 posts, no follow-up this cycle
+[NOTED] "Her girlfriend helps her stand up for a photoshoot because she is paralyzed after being shot 9 times " — 1 posts, no follow-up this cycle
+[NOTED] "She met him at the club, thought it was smart enough to slap him because she thought she would get away with it. He didn’t react it get violent, he just got her arrested. Now that’s how you handle it." — 1 posts, no follow-up this cycle
+[NOTED] "Look at how Indians welcome tourists in their country." — 1 posts, no follow-up this cycle
+[NOTED] "Shocking in Los Angeles! A boy just 12 years old stole a car and was arrested, but what really left the officers frozen was his reaction. Instead of tears, fear, or regret, the little delinquent looke" — 1 posts, no follow-up this cycle
+[NOTED] "HOW THE FUCK IS THE TRAIN... ...the natural apex predator of Indians? BRO, IT'S LITERALLY ON A TRACK AND CAN'T CHASE YOU! " — 1 posts, no follow-up this cycle
+[NOTED] "African WWE women match from Uganda " — 1 posts, no follow-up this cycle
+[NOTED] "Please stop telling women this is toned." — 1 posts, no follow-up this cycle
+[NOTED] "Nigga looks like he’s about to sell me a single redstone for 5 emeralds" — 1 posts, no follow-up this cycle
+[NOTED] "It’s more akin to a boy getting his first chin hair and there are a thousand episodes about that." — 1 posts, no follow-up this cycle
+[NOTED] "Long live the King!  "And with a little help from my beastly buddies - and my ol' pal Jeffy - I'm building a new Monster Kingdom. And every kingdom needs a king, right? Wanna guess who gets to wear th" — 1 posts, no follow-up this cycle
+[NOTED] "MARCO RUBIO: “The goal of the war in Iran is now to return it to how it was before Trump started the war.” Unreal." — 1 posts, no follow-up this cycle
+[NOTED] "More armed personnel arrive and pinapaalis ang media from a certain location! Some security in bulletproof vests. " — 1 posts, no follow-up this cycle
