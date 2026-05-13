@@ -523,6 +523,25 @@
       "pushed_to_origin": null,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_polarization_rhetoric_detector_1715578800000",
+      "title": "Develop 'Polarization & Sovereignty Rhetoric' Content Analysis Module",
+      "status": "merged",
+      "proposed_at": "2026-05-13T03:40:53.784Z",
+      "resolved_at": "2026-05-13T04:27:51.934Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "analyzer/content_parser.js",
+        "analyzer/rhetoric_detector.js",
+        "data/narrative_tactics_taxonomy.json",
+        "state/belief_tracker.js"
+      ],
+      "branch_name": "meta/proposal_polarization_rhetoric_detector_1715578800000",
+      "merge_commit": "7cb92b3ceba297692f91c3e30fb7abaeb0eb12c6",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }
