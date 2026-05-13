@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T16:58:21.766Z",
+  "generated_at": "2026-05-13T19:58:34.193Z",
   "windows": [
     "1d",
     "3d",
@@ -30,21 +30,21 @@
     },
     "axis_power_accountability": {
       "current": {
-        "score": -0.1871,
+        "score": -0.1841,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.022,
+        "score_delta": 0.025,
         "conf_delta": 0,
         "direction": "↗"
       },
       "3d": {
-        "score_delta": 0.0166,
+        "score_delta": 0.0196,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0094,
+        "score_delta": 0.0124,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -52,21 +52,21 @@
     "axis_collective_voice": {
       "current": {
         "score": 0.2236,
-        "confidence": 0.98
+        "confidence": 0.978
       },
       "1d": {
         "score_delta": -0.017,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "3d": {
         "score_delta": -0.0296,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "↘"
       },
       "7d": {
         "score_delta": -0.0369,
-        "conf_delta": 0.01,
+        "conf_delta": 0.008,
         "direction": "↘"
       }
     },
@@ -93,21 +93,21 @@
     },
     "axis_political_trust_corruption_v1": {
       "current": {
-        "score": -0.4066,
+        "score": -0.3992,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0438,
+        "score_delta": 0.0512,
         "conf_delta": 0,
         "direction": "↗"
       },
       "3d": {
-        "score_delta": 0.0955,
+        "score_delta": 0.1029,
         "conf_delta": 0,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.1064,
+        "score_delta": 0.1138,
         "conf_delta": 0,
         "direction": "↗"
       }
@@ -156,21 +156,21 @@
     },
     "axis_media_integrity_v1": {
       "current": {
-        "score": 0.5452,
+        "score": 0.5478,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0033,
+        "score_delta": 0.0059,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0132,
+        "score_delta": 0.0158,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0165,
+        "score_delta": 0.0191,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -345,21 +345,21 @@
     },
     "axis_national_sovereignty_v_intl_law_v1": {
       "current": {
-        "score": 0.504,
+        "score": 0.5046,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0045,
+        "score_delta": 0.0051,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0006,
+        "score_delta": 0,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0156,
+        "score_delta": 0.0162,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -660,23 +660,23 @@
     },
     "axis_political_vulnerability_foreign_influence_v1": {
       "current": {
-        "score": 0.023,
-        "confidence": 0.848
+        "score": 0.054,
+        "confidence": 0.875
       },
       "1d": {
-        "score_delta": 0.0401,
-        "conf_delta": 0.023,
+        "score_delta": 0.0711,
+        "conf_delta": 0.05,
         "direction": "↗"
       },
       "3d": {
-        "score_delta": -0.0019,
-        "conf_delta": 0.054,
-        "direction": "→"
+        "score_delta": 0.0291,
+        "conf_delta": 0.081,
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0194,
-        "conf_delta": 0.079,
-        "direction": "→"
+        "score_delta": 0.0504,
+        "conf_delta": 0.106,
+        "direction": "↗"
       }
     },
     "axis_religious_expression_hate_speech_v1": {
@@ -792,6 +792,7 @@
     "axis_public_trust_safety_crisis_v1",
     "axis_authoritarian_self_determination_v1",
     "axis_political_moral_conduct_v1",
+    "axis_political_vulnerability_foreign_influence_v1",
     "axis_digital_surveillance_autonomy_v1"
   ]
 }
