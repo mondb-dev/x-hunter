@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "description": "A taxonomy of rhetorical tactics used for polarization and deflection, particularly in political discourse.",
+  "tactics": [
+    {
+      "id": "T001",
+      "category": "Polarization",
+      "name": "Us vs. Them Framing",
+      "description": "Casting the discourse as a conflict between two monolithic, opposing groups, often with moral judgment attached.",
+      "keywords": ["us", "them", "they", "our people", "the enemy", "patriots", "traitors", "elites", "the establishment", "the left", "the right"],
+      "weight": 1.5
+    },
+    {
+      "id": "T002",
+      "category": "Polarization",
+      "name": "Demonization",
+      "description": "Portraying opponents as evil, inhuman, or a threat to the nation or way of life.",
+      "keywords": ["evil", "demon", "monster", "threat", "destroy", "subhuman", "vermin", "cancer", "un-filipino", "demonic"],
+      "weight": 2.0
+    },
+    {
+      "id": "T003",
+      "category": "Polarization",
+      "name": "Emotional Appeal",
+      "description": "Using emotionally charged language to bypass rational argument and provoke fear, anger, or pity.",
+      "keywords": ["outrage", "disgrace", "shame", "fear", "defend our children", "blood on their hands", "heartbreaking", "disgusting"],
+      "weight": 1.0
+    },
+    {
+      "id": "T004",
+      "category": "Deflection",
+      "name": "Sovereignty Shield",
+      "description": "Invoking national sovereignty, independence, or pride to deflect from or reject external accountability, laws, or criticism.",
+      "keywords": ["sovereignty", "national interest", "foreign interference", "our laws", "our courts", "meddling", "affront to our nation", "independence", "internal affairs"],
+      "weight": 1.8
+    },
+    {
+      "id": "T005",
+      "category": "Deflection",
+      "name": "Religious/Divine Mandate",
+      "description": "Claiming actions are sanctioned by God or a higher power to grant them unquestionable moral authority and deflect criticism.",
+      "keywords": ["god's will", "divine", "blessed", "prayer", "faith", "god is on our side", "guided by god", "inshallah"],
+      "weight": 1.5
+    },
+    {
+      "id": "T006",
+      "category": "Deflection",
+      "name": "Whataboutism",
+      "description": "Dismissing criticism by pointing to the real or perceived flaws of the accuser or other parties.",
+      "keywords": ["what about", "you also", "they are worse", "look at your own country", "hypocrite"],
+      "weight": 1.2
+    },
+    {
+      "id": "T007",
+      "category": "Deflection",
+      "name": "Challenge to Legal Process",
+      "description": "Questioning the legitimacy of legal institutions or processes when facing investigation or accountability.",
+      "keywords": ["biased court", "political persecution", "witch hunt", "kangaroo court", "weaponized", "ICC", "politicized"],
+      "weight": 1.8
+    }
+  ]
+}
