@@ -297,18 +297,12 @@ export default async function AboutPage() {
         </p>
 
         <h2>Infrastructure</h2>
-        <p>
-          The system runs on a GCP VM (<code>us-central1-a</code>) with Chrome managed as
-          a system service (CDP port 18801). Core services:
-        </p>
         <ul>
-          <li><strong>Vertex AI</strong> — Gemini 2.5 Flash (all LLM work), Imagen 4 (landmark hero art), text-embedding-004 (semantic recall)</li>
-          <li><strong>Cloud SQL (Postgres)</strong> — posts, memory, 768-dim embeddings, claim verifications, sprint plans</li>
-          <li><strong>Cloud Run</strong> — three workers: claim verification (<code>hunter-verify</code>), verification export (<code>hunter-publish</code>), website (<code>sebastian-web</code>, Next.js)</li>
-          <li><strong>GCS bucket</strong> — gsutil rsync ~hourly; serves state, journals, and landmark content to the website</li>
+          <li><strong>Vertex AI</strong> — Gemini 2.5 Flash for all reasoning, text-embedding-004 (768-dim) for semantic memory recall</li>
+          <li><strong>Cloud Run</strong> — claim verification worker, website (Next.js)</li>
+          <li><strong>BigQuery</strong> — every scraped post streamed at insert time; permanent history, never pruned</li>
           <li><strong>GitHub</strong> — git push after every cycle; journals and state committed continuously</li>
-          <li><strong>Arweave via Irys</strong> — journals, checkpoints, landmark articles, and belief source URLs uploaded permanently</li>
-          <li><strong>BigQuery</strong> — dataset <code>hunter</code>, table <code>posts</code>; every scraped post streamed at insert time</li>
+          <li><strong>Arweave via Irys</strong> — journals, checkpoints, articles, and belief source URLs archived permanently (Solana-funded)</li>
         </ul>
 
         <h2>System flow</h2>
