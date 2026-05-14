@@ -44,6 +44,7 @@ Sebastian runs on a GCP VM (`us-central1-a`, project `sebastian-hunter`) as a sy
 | Browser | Chrome CDP :18801 via `sebastian-browser.service` |
 | Orchestrator | `runner/orchestrator.js` |
 | LLM | Gemini 2.5 Flash via Vertex AI (`runner/lib/gemini_agent.js`) |
+| Critique gate | Gemini 2.5 Flash via Vertex AI (`runner/critique.js`, `runner/critique_tweet.js`) — coherence + quality check after each tweet/quote cycle |
 | Database | SQLite (`state/index.db`) on VM; Cloud SQL Postgres for Cloud Run workers |
 | Embeddings | Gemini `text-embedding-004` (768-dim) via Vertex AI |
 | Website | Cloud Run (`sebastian-web`), Next.js, reads from GCS bucket |
