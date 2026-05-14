@@ -82,7 +82,15 @@ main {
   height: 96px;
   opacity: 0.72;
   transform-origin: top left;
-  image-rendering: pixelated;
+}
+
+/* ── Leg stride — front/back legs alternate ── */
+.walker-leg-f { animation: walker-stride 0.44s steps(2, end) infinite; }
+.walker-leg-b { animation: walker-stride 0.44s steps(2, end) infinite; animation-delay: -0.22s; }
+
+@keyframes walker-stride {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
 }
 
 /* ── Footprint dots — spawned by JS, fade out ── */
