@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T04:10:49.231Z",
+  "generated_at": "2026-05-14T05:18:48.515Z",
   "stats": {
     "total": 353,
     "supported": 3,
@@ -1689,6 +1689,54 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "claim_34",
+      "claim_text": "The Iranian Navy attacked a US ship near Bandar Abbas.",
+      "status": "refuted",
+      "confidence_score": 0.375,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": -1
+      },
+      "source_handle": "iranmilittary",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 2,
+      "verified_at": "2026-04-14T17:02:15.018Z",
+      "created_at": "2026-04-14T17:01:23.386Z",
+      "original_source": "Iranian social media accounts on X",
+      "claim_date": "2026-04-13",
+      "supporting_sources": [
+        {
+          "name": "News.az",
+          "stance": "Reported claims from Iranian social media about an attack, noting lack of official confirmation."
+        },
+        {
+          "name": "Oneindia News",
+          "stance": "Reported Iran's claim of destroying a US naval vessel near Bandar Abbas, highlighting the absence of US confirmation."
+        },
+        {
+          "name": "Caliber.Az",
+          "stance": "Reported the Iranian Navy's claim on X of sinking a US vessel near Bandar Abbas."
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "Misbar",
+          "stance": "Investigated the circulating video and found it to be outdated, depicting a US strike on an Iranian vessel in March 2026, not an Iranian attack on a US ship."
+        }
+      ],
+      "framing_analysis": "The claim is framed as a factual event, but it appears to be a piece of misinformation or propaganda, especially given the lack of official confirmation and the refutation of the video evidence. The timing coincides with heightened tensions and a US naval blockade in the Strait of Hormuz.",
+      "web_search_summary": "Claims circulating on social media on April 13-14, 2026, suggest the Iranian Navy attacked and sank a US vessel near Bandar Abbas. However, these claims lack official confirmation from either Iranian authorities or the United States military. Misbar's analysis indicates that a video circulated as evidence of the attack is outdated and actually depicts a US strike on an Iranian vessel in March 2026.",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "claim_1",
       "claim_text": "US operations in Iran could end in 2-3 weeks (Trump statement)",
       "status": "refuted",
@@ -1745,54 +1793,6 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim is framed as a direct statement from Donald Trump regarding a specific timeline for US operations in Iran. While the statements were indeed made, the framing is misleading as it implies current, active US military operations in Iran that are nearing an end, which is not supported by current events. The statements appear to be hypothetical or part of a broader political narrative rather than a reflection of ongoing military action.",
       "web_search_summary": "The claim that \"US operations in Iran could end in 2-3 weeks\" is refuted. While Donald Trump did make statements in late March and early April 2026 suggesting a withdrawal from Iran within 2-3 weeks, these statements were made in the context of a hypothetical scenario where the US was actively engaged in military operations in Iran, which is not currently the case. There is no evidence of ongoing US military operations in Iran that would be ending in 2-3 weeks. The provided search results indicate that these statements were made in a hypothetical context, and not reflective of current events.",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_34",
-      "claim_text": "The Iranian Navy attacked a US ship near Bandar Abbas.",
-      "status": "refuted",
-      "confidence_score": 0.375,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": -1
-      },
-      "source_handle": "iranmilittary",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 2,
-      "verified_at": "2026-04-14T17:02:15.018Z",
-      "created_at": "2026-04-14T17:01:23.386Z",
-      "original_source": "Iranian social media accounts on X",
-      "claim_date": "2026-04-13",
-      "supporting_sources": [
-        {
-          "name": "News.az",
-          "stance": "Reported claims from Iranian social media about an attack, noting lack of official confirmation."
-        },
-        {
-          "name": "Oneindia News",
-          "stance": "Reported Iran's claim of destroying a US naval vessel near Bandar Abbas, highlighting the absence of US confirmation."
-        },
-        {
-          "name": "Caliber.Az",
-          "stance": "Reported the Iranian Navy's claim on X of sinking a US vessel near Bandar Abbas."
-        }
-      ],
-      "dissenting_sources": [
-        {
-          "name": "Misbar",
-          "stance": "Investigated the circulating video and found it to be outdated, depicting a US strike on an Iranian vessel in March 2026, not an Iranian attack on a US ship."
-        }
-      ],
-      "framing_analysis": "The claim is framed as a factual event, but it appears to be a piece of misinformation or propaganda, especially given the lack of official confirmation and the refutation of the video evidence. The timing coincides with heightened tensions and a US naval blockade in the Strait of Hormuz.",
-      "web_search_summary": "Claims circulating on social media on April 13-14, 2026, suggest the Iranian Navy attacked and sank a US vessel near Bandar Abbas. However, these claims lack official confirmation from either Iranian authorities or the United States military. Misbar's analysis indicates that a video circulated as evidence of the attack is outdated and actually depicts a US strike on an Iranian vessel in March 2026.",
       "investigation_depth": "quick"
     },
     {
@@ -2031,36 +2031,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_9",
-      "claim_text": "American journalist Shelly Kittleson kidnapped in Baghdad, possibly by Iran-backed militia",
-      "status": "refuted",
-      "confidence_score": 0.275,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_power_accountability",
-      "verification_count": 12,
-      "verified_at": "2026-04-16T00:31:12.807Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"American freelance journalist Shelly Kittleson was kidnapped in Baghdad on March 31, 2026, by Kataib Hezbollah, an Iran-backed militia. She was released on April 7, 2026, in a prisoner swap with Iraq, on the condition that she immediately leave the country. U.S. officials had reportedly warned Kittleson of threats against her prior to her abduction.\",\n  \"evidence_urls\": [\n    \"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHghfqMCA4",
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "claim_53",
       "claim_text": "Forced organ harvesting from Falun Gong practitioners is occurring in China.",
       "status": "refuted",
@@ -2091,33 +2061,33 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_26",
-      "claim_text": "U.S. sanctions have deliberately crushed the economy of multiple nations, impoverishing millions of innocent people, which can be defined as economic terrorism.",
-      "status": "unverified",
-      "confidence_score": 0.67,
+      "claim_id": "claim_9",
+      "claim_text": "American journalist Shelly Kittleson kidnapped in Baghdad, possibly by Iran-backed militia",
+      "status": "refuted",
+      "confidence_score": 0.275,
       "scoring_breakdown": {
         "source_tier": 0.5,
         "newsguard": 0.5,
-        "corroboration": 0.9,
-        "evidence_quality": 0.9,
+        "corroboration": 0,
+        "evidence_quality": 0,
         "cross_source": 0.5,
-        "web_search": 0.8
+        "web_search": 0
       },
-      "source_handle": "assalrad",
+      "source_handle": null,
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 172,
-      "verified_at": "2026-05-14T04:07:33.283Z",
-      "created_at": "2026-04-14T09:57:43.868Z",
-      "original_source": "The claim appears to be a general statement reflecting a critical perspective on US sanctions policy, rather than a specific report from a single original source.",
-      "claim_date": "Unknown",
+      "related_axis_id": "axis_power_accountability",
+      "verification_count": 12,
+      "verified_at": "2026-04-16T00:31:12.807Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": null,
+      "claim_date": null,
       "supporting_sources": [],
       "dissenting_sources": [],
-      "framing_analysis": "The claim is framed critically, using strong language (",
-      "web_search_summary": "There is significant evidence suggesting that U.S. sanctions have severely impacted the economies of multiple nations, leading to widespread impoverishment and humanitarian crises. However, the classification of these actions as ",
+      "framing_analysis": null,
+      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"American freelance journalist Shelly Kittleson was kidnapped in Baghdad on March 31, 2026, by Kataib Hezbollah, an Iran-backed militia. She was released on April 7, 2026, in a prisoner swap with Iraq, on the condition that she immediately leave the country. U.S. officials had reportedly warned Kittleson of threats against her prior to her abduction.\",\n  \"evidence_urls\": [\n    \"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHghfqMCA4",
       "investigation_depth": "quick"
     },
     {
@@ -2139,66 +2109,122 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_power_accountability",
-      "verification_count": 179,
-      "verified_at": "2026-05-14T04:07:33.283Z",
+      "verification_count": 180,
+      "verified_at": "2026-05-14T05:18:48.360Z",
       "created_at": "2026-04-14T07:30:44.029Z",
-      "original_source": "Savanah Hernandez (via X/Twitter)",
+      "original_source": "Savanah Hernandez (via social media and reporting for Turning Point USA)",
       "claim_date": "2026-04-11",
       "supporting_sources": [
         {
           "name": "Waupaca County Post",
           "excerpt": "Paige Ostroushko, a University of Wisconsin-Stevens Point soccer player and psychology major, faces charges for assaulting journalist Savanah Hernandez on April 11.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXouSwqpRCg1rHQ5oZKyIqt20elIkv4UVzYqMAsx9DQl6ascg_ZkhtOKNcUj3YsJUXzoaD402mrSNosjGd8SON7lJC2mHMlT1mokDTxLNgxzbWVAjak3fKGbnnHACQ3giLjOaVw8pYHnnKbz7HGyw79-76fcaKI5aGVCZRTtfX2f15EH5I2MR0IjNeBwhWLznNQsw1873Tvp0-sV-tHtZvr72fTxe8pm7Jsz7qNTsBb-wIR3bXZdlor_-MZD7V-FLATO6QutfgGCpTXJOyXzGe-ww_7A=="
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAxghoN6wYw1yYfLrZSQIy9G0VUuHhrO6K3louBKoX-1NK_8exIpyFbusd2q2ftnZe4GNzTnHokEXyl8GWn9AFJWT8TX1AhYwtzBPV2poOWFjkMzsbuMhOXQWQWYM8jva7cFY5h3mdcKkOdM_nrERj_afJhQcfICT5Nlynxve0HdEvD_9XCRYuK3CFngoefg=="
         },
         {
           "name": "CBS News",
           "excerpt": "New video shared with WCCO shows the scuffle in which a reporter says she got hurt outside the Whipple Federal Building in Minneapolis on Saturday.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkaxGp1401OooRercJXmXuqob8yNpLZ1Q5YJtXF72cgvn31mrWqwBgrxZ41wGb3wRNpfZHQ0vT5fFkZMve8JcHM5HYm08jg4BvG3ll19Eo7F_HJhyxSn_nDuPpW8xIfFtXrCjtALgN1j5bhtv7B0Sian-iX9OOc9BuBZkp12avxFLTHw-xlv2uzSUNra-STYX4o-JT702mKbneSqYY6yiqXpa1VoxGZQ4LrIFn6g=="
-        },
-        {
-          "name": "FOX 9",
-          "excerpt": "Three people have been federally indicted for attacking Turning Point USA reporter Savanah Hernandez during an anti-ICE protest at the Whipple Building in Minneapolis on April 11.",
-          "url": null
-        },
-        {
-          "name": "The Kenya Times",
-          "excerpt": "A federal grand jury has indicted three members of the same family for the alleged assault of Turning Point USA journalist Savannah Hernandez during an anti-ICE protest outside a federal building here last month.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjB6Zp4arXJdxoYmc8Z10AEDDP8YbJ8aswu-lUwsndyxXDjA52DzJI53Ygm5fmTTT0nH1YuqM-6c8scjlr_i1sBQSlURexwa4U9zfTpF6U4ir18LkB2j4OWzdDNpnAr2IYywNyg98hZNio9gM-h1ZsXKcfZk72B5NpoJmET5iInB-WMzWtyZW_pT6kvRLSBhSMzWDxFIYHITeV021ddG8Qu_qCaD2Rpxu_35F8l-A1xHbH3hQ8xPkSYAaRQqGXrsc3xjD6Ef-viVjUhXE7"
-        },
-        {
-          "name": "The Post Millennial",
-          "excerpt": "Turning Point USA Frontlines reporter Savanah Hernandez has filed a civil lawsuit against Christopher, DeYanna, and Paige Ostroushko after they were caught on video violently attacking her at an anti-ICE protest in Minneapolis, while the journalist was covering the event.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXouSwqpRCg1rHQ5oZKyIqt20elIkv4UVzYqMAsx9DQl6ascg_ZkhtOKNcUj3YsJUXzoaD402mrSNosjGd8SON7lJC2mHMlT1mokDTxLNgxzbWVAjak3fKGbnnHACQ3giLjOaVw8pYHnnKbz7HGyw79-76fcaKI5aGVCZRTtfX2f15EH5I2MR0IjNeBwhWLznNQsw1873Tvp0-sV-tHtZvr72fTxe8pm7Jsz7qNTsBb-wIR3bXZdlor_-MZD7V-FLATO6QutfgGCpTXJOyXzGe-ww_7A=="
-        },
-        {
-          "name": "Waupaca County Post",
-          "excerpt": "United States Attorney Daniel N. Rosen announced on April 29 a federal grand jury indictment charging UWSP student Page Ostroushko and her mother and father Christopher and Deyanna with assaulting a journalist while she was reporting on an anti-ICE protest on federal property in St. Paul on April 11, 2026.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXouSwqpRCg1rHQ5oZKyIqt20elIkv4UVzYqMAsx9DQl6ascg_ZkhtOKNcUj3YsJUXzoaD402mrSNosjGd8SON7lJC2mHMlT1mokDTxLNgxzbWVAjak3fKGbnnHACQ3giLjOaVw8pYHnnKbz7HGyw79-76fcaKI5aGVCZRTtfX2f15EH5I2MR0IjNeBwhWLznNQsw1873Tvp0-sV-tHtZvr72fTxe8pm7Jsz7qNTsBb-wIR3bXZdlor_-MZD7V-FLATO6QutfgGCpTXJOyXzGe-ww_7A=="
-        },
-        {
-          "name": "BroBible",
-          "excerpt": "Paige Ostroushko wiped her account on Instagram after a verbal and physical dispute with Savanah Hernandez.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZOLybfu8uk4-5rPeFYbrOACBsCgiQp8GypN56JyzDT01locRcmU-GglM42bKcPslhaC9eT08QEojIRg6jjoqdTn6O9IkNKwHYsRlZeND-pOdKMedCebxZCqDxaEaHX-2sM3J5UGZrQuJlk24E-J4MkIjCaY2YEdSWCKxZtMcJN-fV92ggsHLyuhvdOiVbUc4w6mHaam7N9ZKPPv1n3dveIoQRnFolBgLx"
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGG9lqJWmRpbzlABI3Y1uQUVE--KyxwQUDyULkbJ2UdSpoAeJs_fYKO8cdUJv2xGhwTClGIgJkTdmR76jWRiPtaVEQtnYnTDGXo7Jc6dD0CmhHCVQH9GqUhBW1sGnXmox2B1Btj5GIaumc16PRhxSy-zysPJUKsFg4F0Y-ehTpm-DHJNRb0rXcPQO3eVyO5_I2oZY-9jWdnbaZNNRtjKOZl9cPEp3RL68d6NWmH"
         },
         {
           "name": "News Radio 610 WTVN",
           "excerpt": "Turning Point USA Frontlines reporter Savannah Hernandez joined Buck to discuss a recent physical altercation in Minneapolis that led to federal charges against three members of a single family.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkaxGp1401OooRercJXmXuqob8yNpLZ1Q5YJtXF72cgvn31mrWqwBgrxZ41wGb3wRNpfZHQ0vT5fFkZMve8JcHM5HYm08jg4BvG3ll19Eo7F_HJhyxSn_nDuPpW8xIfFtXrCjtALgN1j5bhtv7B0Sian-iX9OOc9BuBZkp12avxFLTHw-xlv2uzSUNra-STYX4o-JT702mKbneSqYY6yiqXpa1VoxGZQ4LrIFn6g=="
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGG9lqJWmRpbzlABI3Y1uQUVE--KyxwQUDyULkbJ2UdSpoAeJs_fYKO8cdUJv2xGhwTClGIgJkTdmR76jWRiPtaVEQtnYnTDGXo7Jc6dD0CmhHCVQH9GqUhBW1sGnXmox2B1Btj5GIaumc16PRhxSy-zysPJUKsFg4F0Y-ehTpm-DHJNRb0rXcPQO3eVyO5_I2oZY-9jWdnbaZNNRtjKOZl9cPEp3RL68d6NWmH"
         },
         {
-          "name": "YouTube (13WHAM)",
-          "excerpt": "Three people were indicted in connection with the assault of Turning Point USA reporter Savanah Hernandez who was covering a protest in Minnesota.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGmPMy8althBNfIB7AtQNg0TMQb1fLLO7vX6YYoWMLv-QLG3TKjMeTXIzuFEZEhkjFfdghielJ6ybeN6q1Dmi9Z3t23qY-2o40L6e6RO9GAxFQwlMEiWnKgy4_CJHFZFFyo67io23A="
+          "name": "BroBible",
+          "excerpt": "Paige Ostroushko wiped her account on Instagram after a verbal and physical dispute with Savanah Hernandez.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE14x4yvW87FGCLkByt05gRLJI2hLxUbPQAWkiCmZ9Ki8ihe7B4rnVXd5HpT-Sv3Oe8BVhH_TwjJSrTpTWEJX2iQ17YEa62SbG9zHBOf7gwQUG5MrvsSegwCMRmnMTtnRZLbyv8WOK9C6h8VHqogRAxD5nPBHewba74NIpECWeEC_8xLth84c8snrP7HDXX9QWW5HWg4odju40afBnZcPW0qLNum2F1Vcc="
         },
         {
-          "name": "Unnamed Source (via Google Search)",
-          "excerpt": "A conservative influencer is suing three people she says attacked her while she was reporting on an anti-ICE protest in the Twin Cities last month.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkaxGp1401OooRercJXmXuqob8yNpLZ1Q5YJtXF72cgvn31mrWqwBgrxZ41wGb3wRNpfZHQ0vT5fFkZMve8JcHM5HYm08jg4BvG3ll19Eo7F_HJhyxSn_nDuPpW8xIfFtXrCjtALgN1j5bhtv7B0Sian-iX9OOc9BuBZkp12avxFLTHw-xlv2uzSUNra-STYX4o-JT702mKbneSqYY6yiqXpa1VoxGZQ4LrIFn6g=="
+          "name": "The Kenya Times",
+          "excerpt": "A federal grand jury has indicted three members of the same family for the alleged assault of Turning Point USA journalist Savannah Hernandez during an anti-ICE protest outside a federal building here last month.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdrx55GBHHBIVg74za0eJ1-IZ_2_7IBjggjF44JdD9Owm37NRhcRlySy58r95M1--TZN_O59yzTOp6adYrJaVW19MJheAV-ht_83kU0NMelO-cidlAWuSs3P4HgCDFvb9yRENgonkZpM_cb23xnOf_gz8NvGRXdmYqkpPGDTKici9stUp8nVT2hYHeQYks-7zw7gDSNwoGArkaivtx8oT4KdE9912vIRunj_niG0MkNp1jSGMa4NLs1ZTHa9Bgm7xArwJ1gWnibLZz40w="
+        },
+        {
+          "name": "FOX 9",
+          "excerpt": "Turning Point USA reporter Savanah Hernandez has filed a lawsuit against the three members of the Ostroushko family accused of attacking her outside the Whipple federal building as she covered an anti-ICE protest last month.",
+          "url": null
+        },
+        {
+          "name": "Waupaca County Post",
+          "excerpt": "MINNEAPOLIS – United States Attorney Daniel N. Rosen announced on April 29 a federal grand jury indictment charging UWSP student Page Ostroushko and her mother and father Christopher and Deyanna with assaulting a journalist while she was reporting on an anti-ICE protest on federal property in St. Paul on April 12, 2026.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAxghoN6wYw1yYfLrZSQIy9G0VUuHhrO6K3louBKoX-1NK_8exIpyFbusd2q2ftnZe4GNzTnHokEXyl8GWn9AFJWT8TX1AhYwtzBPV2poOWFjkMzsbuMhOXQWQWYM8jva7cFY5h3mdcKkOdM_nrERj_afJhQcfICT5Nlynxve0HdEvD_9XCRYuK3CFngoefg=="
+        },
+        {
+          "name": "The Guardian",
+          "excerpt": "The Department of Justice announced on Wednesday that three anti-ICE protesters have been charged with allegedly assaulting Savannah Hernandez, a rightwing video journalist who was shoved to the ground during a skirmish with three members of a family outside an immigration detention facility in St Paul, Minnesota this month.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpVWp2YeBxaVhbvWFCakL0vxy3A63A2EVudeEat_2qQwqbFYTzq7rgXN4HPXpbjRPgSIMZeyft-tscDFeEi2T1EK-orsLRZVCjNo_GLuUKHlljIbQLhh1MaWC_aDA6BksK_DIZuYQOTddj8gPZnIPA5d3pr4mSCvOl7yl4l4CwHNSEdvsGPJZcBaF8IGSLX0YQweB_m459uBd1RyWzO_PxUYF74FxjFgzCPHNwpQuQ2mPvxRVwcA=="
         }
       ],
       "dissenting_sources": [],
-      "framing_analysis": "The claim is framed factually, reporting on an alleged assault and subsequent legal actions. The available information supports the framing as accurate.",
-      "web_search_summary": "Paige Ostroushko, along with her parents Christopher and DeYanna Ostroushko, was indicted by a federal grand jury for allegedly assaulting reporter Savanah Hernandez during an anti-ICE protest on April 11, 2026. Videos reportedly show the incident, and federal charges have been filed, including interference with a federally protected activity and assault. Hernandez has also filed a civil lawsuit against the family.",
+      "framing_analysis": "The claim is framed factually, stating the alleged actions and the legal consequences. It accurately reflects the information reported by various news outlets regarding the incident and subsequent charges.",
+      "web_search_summary": "Paige Ostroushko, along with her parents Christopher and DeYanna Ostroushko, was indicted by a federal grand jury for allegedly assaulting reporter Savanah Hernandez during an anti-ICE protest on April 11, 2026. Videos of the incident show Paige Ostroushko engaging in physical altercations with Hernandez, including blowing a whistle in her ear, slapping at her, and shoving her. Hernandez has also filed a civil lawsuit against the Ostroushko family, claiming physical and emotional injuries.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_26",
+      "claim_text": "U.S. sanctions have deliberately crushed the economy of multiple nations, impoverishing millions of innocent people, which can be defined as economic terrorism.",
+      "status": "unverified",
+      "confidence_score": 0.6,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.7,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 0.8
+      },
+      "source_handle": "assalrad",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 173,
+      "verified_at": "2026-05-14T05:18:48.361Z",
+      "created_at": "2026-04-14T09:57:43.868Z",
+      "original_source": "The claim appears to be a statement reflecting a critical perspective on US foreign policy, rather than a claim from a single identifiable source.",
+      "claim_date": "empty",
+      "supporting_sources": [
+        {
+          "name": "Sycamore Institute",
+          "excerpt": "Sanctions are intended to disrupt the economies of target nations by restricting their access to foreign markets, cutting off financial networks, and impeding critical imports like technology and energy resources. These actions can lead to economic decline, inflation, and currency devaluation within a sanctioned country, making it more challenging for its government to finance aggressive activities.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEu6H4OUFxQAWV0Gc-C4ORmwkOE7LCLjmXLNBGNenxfL2FawFiTQz8WF8ueF0-QKkgv5-5wZnRlGjeJ8OOYS9XCZOBc-wPuzWCPPZ4F2UeCROFSyXPTVRCFYqkzs2DUfatHfQRQzEiVpdZlm_pNoeq9AQLeh7upPRJOA37sa_-pyHu8yUMt9IpFO9jJb55qh61t_TojpdtZfITdnd2-BOi_Fk_en5HLuAqsR1qo1DjZrKeqpRFbNmy5L9I="
+        },
+        {
+          "name": "Anadolu Ajansı",
+          "excerpt": "Economic sanctions generate high costs, especially for poorer populations in target countries, a study published Tuesday by the Munich-based Ifo Institute shows.",
+          "url": null
+        },
+        {
+          "name": "Kiel Institute",
+          "excerpt": "Financial sanctions can have even more severe effects and are becoming an increasingly important foreign policy tool. Measures such as freezing assets or excluding countries from payment systems like SWIFT can result in GDP losses of up to 10 percentage points.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEu6H4OUFxQAWV0Gc-C4ORmwkOE7LCLjmXLNBGNenxfL2FawFiTQz8WF8ueF0-QKkgv5-5wZnRlGjeJ8OOYS9XCZOBc-wPuzWCPPZ4F2UeCROFSyXPTVRCFYqkzs2DUfatHfQRQzEiVpdZlm_pNoeq9AQLeh7upPRJOA37sa_-pyHu8yUMt9IpFO9jJb55qh61t_TojpdtZfITdnd2-BOi_Fk_en5HLuAqsR1qo1DjZrKeqpRFbNmy5L9I="
+        },
+        {
+          "name": "World Finance",
+          "excerpt": "As the comprehensive trade sanctions on Iraq came to dominate newspaper headlines throughout the 90s, the humanitarian impact of the embargo became hard to ignore. The economic stranglehold of the stringent sanctions saw Iraqi children fall victim to malnutrition and prolonged suffering, while a lack of medical supplies and a shortage of clean water led to one of the worst humanitarian crises in modern history.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2_t8Y8Qc5qjSYj91cSKWppyyTem1s0dO1aK1JFIzFU2P7GjAsGxVAKpMmbHYvtoVk4padzUpemdHlFPfVDOj0GKIJpw0wtEG5_MgqCSEvrIKUa-dboJY-roH9VtTKbqbmxvijsHO2ul8DpT4brtEaSggWJeRs_xXj5bCwxGrsIvC8QB58w0h1"
+        },
+        {
+          "name": "Cato Institute",
+          "excerpt": "Sanctions have massive humanitarian costs and are not only ineffective but likely counterproductive. On these points, there is overwhelming agreement in the academic literature. Such policies can reduce the economic performance of the targeted state, degrade public health, and cause tens of thousands of deaths per year under the most crushing sanctions regimes.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEu6H4OUFxQAWV0Gc-C4ORmwkOE7LCLjmXLNBGNenxfL2FawFiTQz8WF8ueF0-QKkgv5-5wZnRlGjeJ8OOYS9XCZOBc-wPuzWCPPZ4F2UeCROFSyXPTVRCFYqkzs2DUfatHfQRQzEiVpdZlm_pNoeq9AQLeh7upPRJOA37sa_-pyHu8yUMt9IpFO9jJb55qh61t_TojpdtZfITdnd2-BOi_Fk_en5HLuAqsR1qo1DjZrKeqpRFbNmy5L9I="
+        },
+        {
+          "name": "The Borgen Project",
+          "excerpt": "Since the United States (U.S.) reinstated economic sanctions on Iran in May 2018, following President Donald Trump's withdrawal from a landmark nuclear deal, the country has faced a severe economic recession. These sanctions have significantly worsened poverty rates in Iran, driving inflation, devaluing the national currency and reducing access to essential goods.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQErfwNCghbu-Ivw_gtvHm00WCX_Xl8vrB8TBYGl6iAE9TahyuG17aj_6T0F36KAY50v3ymjrtf8uu63mc32AFgmRQOlCpPOamUfvKynDyJZ1NvQnQeP_sg9mwUiPGfXk6AlyVxdGF-9MqeSMg=="
+        },
+        {
+          "name": "ResearchGate",
+          "excerpt": "These sanctions kill civilians and restrict them from basic necessities like food, medicines, and employment.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEyrm5EMLccK6vTe2aGXeEYJIpr_d-UOLlXxOYRWkxFCHqjK7V-UUNMrk2rlToi79Cd9EPV7zBZ7Wx9qr-gQ6LbGIk7S37p4uN3M4ImWUW5PfarvfuPUqVLLSd4-HwFsJMEysTXp_WCROspr5oQ-pAVwr8FYId2zffEeESQX3dE9yVSnAYHAZ8TZXQKzxZw92UJkIx-UzPqoHvqu5yG5bxrWTnsdaB8j7Sji7Wjy5e11zQ0eW_CjcVloheE0sCIsdpG_Q=="
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim uses strong, emotionally charged language (\"deliberately crushed,\" \"impoverishing millions,\" \"economic terrorism\") to frame the impact of U.S. sanctions. While evidence supports the severe economic and humanitarian consequences of sanctions, the framing implies a malicious intent of \"terrorism\" which is a subjective interpretation of the available facts.",
+      "web_search_summary": "There is significant evidence that U.S. sanctions have severely impacted the economies of multiple nations, leading to impoverishment and humanitarian crises for millions of innocent people. While the term \"economic terrorism\" is a strong and often politically charged descriptor, the documented consequences of sanctions align with aspects of its definition, particularly the infliction of severe economic hardship on civilian populations to achieve political goals. However, the intent behind sanctions is typically stated as advancing U.S. foreign policy goals and national security, rather than deliberately terrorizing populations.",
       "investigation_depth": "quick"
     },
     {
@@ -2220,8 +2246,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "verification_count": 85,
-      "verified_at": "2026-05-14T04:07:33.286Z",
+      "verification_count": 86,
+      "verified_at": "2026-05-14T05:18:48.365Z",
       "created_at": "2026-04-15T12:56:25.892Z",
       "original_source": "US Central Command (CENTCOM) announcement",
       "claim_date": "2026-04-13",
@@ -2279,8 +2305,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_digital_supply_chain_security",
-      "verification_count": 161,
-      "verified_at": "2026-05-14T04:07:33.285Z",
+      "verification_count": 162,
+      "verified_at": "2026-05-14T05:18:48.363Z",
       "created_at": "2026-04-15T05:26:09.055Z",
       "original_source": null,
       "claim_date": null,
@@ -2288,36 +2314,6 @@
       "dissenting_sources": [],
       "framing_analysis": null,
       "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Multiple reports, citing leaked Iranian military documents and satellite analysis, confirm that Iran acquired the Chinese TEE-01B spy satellite in late 2024. This satellite was subsequently used by the Islamic Revolutionary Guard Corps (IRGC) to monitor and guide drone and missile strikes on U.S. military bases and other strategic locations across the Middle East in March 2026. The TEE-01B offers significantly higher resolution imagery (0.5-meter) compar",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_58",
-      "claim_text": "A 46-year-old man died working in an Amazon warehouse in Oregon, and workers were told to ignore the body and just keep working.",
-      "status": "unverified",
-      "confidence_score": 0.4,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0.5,
-        "cross_source": 0.5,
-        "web_search": 0.5
-      },
-      "source_handle": "proudsocialist",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_human_rights_exploitation_v1",
-      "verification_count": 78,
-      "verified_at": "2026-05-14T04:07:33.286Z",
-      "created_at": "2026-04-15T13:24:35.310Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"A 46-year-old man died on April 6, 2026, while working at an Amazon warehouse (PDX9) in Troutdale, Oregon. Multiple employee accounts allege that workers were instructed by a supervisor to ignore the body and continue working for over an hour after the collapse. Amazon has confirmed the death but disputes claims that operations continued around the body, stating that the area was cordoned off and employees were sent home.\",\n  \"evidence_urls\": [\n    \"http",
       "investigation_depth": "quick"
     },
     {
@@ -2339,8 +2335,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_human_rights_exploitation_v1",
-      "verification_count": 153,
-      "verified_at": "2026-05-14T04:07:33.285Z",
+      "verification_count": 154,
+      "verified_at": "2026-05-14T05:18:48.363Z",
       "created_at": "2026-04-15T06:17:18.106Z",
       "original_source": null,
       "claim_date": null,
@@ -2369,8 +2365,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_global_power_realignments_v1",
-      "verification_count": 170,
-      "verified_at": "2026-05-14T04:07:33.285Z",
+      "verification_count": 171,
+      "verified_at": "2026-05-14T05:18:48.362Z",
       "created_at": "2026-04-15T05:00:38.823Z",
       "original_source": null,
       "claim_date": null,
@@ -2378,6 +2374,36 @@
       "dissenting_sources": [],
       "framing_analysis": null,
       "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"Multiple reports, citing leaked Iranian military documents, indicate that Iran secretly acquired the Chinese TEE-01B spy satellite in late 2024. This satellite, built by Earth Eye Co. and launched from China, was subsequently used by the Islamic Revolutionary Guard Corps (IRGC) to monitor US military bases across the Middle East. The satellite provided high-resolution imagery before and after drone and missile strikes on these locations, suggesting its u",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_58",
+      "claim_text": "A 46-year-old man died working in an Amazon warehouse in Oregon, and workers were told to ignore the body and just keep working.",
+      "status": "unverified",
+      "confidence_score": 0.4,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": "proudsocialist",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_human_rights_exploitation_v1",
+      "verification_count": 79,
+      "verified_at": "2026-05-14T05:18:48.365Z",
+      "created_at": "2026-04-15T13:24:35.310Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"A 46-year-old man died on April 6, 2026, while working at an Amazon warehouse (PDX9) in Troutdale, Oregon. Multiple employee accounts allege that workers were instructed by a supervisor to ignore the body and continue working for over an hour after the collapse. Amazon has confirmed the death but disputes claims that operations continued around the body, stating that the area was cordoned off and employees were sent home.\",\n  \"evidence_urls\": [\n    \"http",
       "investigation_depth": "quick"
     },
     {
@@ -2399,8 +2425,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 153,
-      "verified_at": "2026-05-14T04:07:33.284Z",
+      "verification_count": 154,
+      "verified_at": "2026-05-14T05:18:48.362Z",
       "created_at": "2026-04-15T00:51:47.508Z",
       "original_source": "President Donald Trump on Fox News",
       "claim_date": "2026-04-14",
@@ -2455,51 +2481,118 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "verification_count": 458,
-      "verified_at": "2026-05-14T04:07:33.284Z",
+      "verification_count": 459,
+      "verified_at": "2026-05-14T05:18:48.362Z",
       "created_at": "2026-04-15T00:00:47.654Z",
-      "original_source": "Multiple shipping data providers (LSEG, MarineTraffic, Kpler) and news outlets reporting on their findings.",
+      "original_source": "Bloomberg",
       "claim_date": "2026-04-14",
       "supporting_sources": [
         {
           "name": "The Times of Israel",
           "excerpt": "A Chinese tanker sanctioned by the United States has passed through the Strait of Hormuz despite a US blockade on the chokepoint, shipping data shows.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwssWZRHQjmsARYpNJobwO8_5wQRLpyP_6qGVtolaR3-Vm7SuvegTJhj2D2okLJXcvvXaUKFOAUZVUvP7DBRbnQzbI81jwZoHrRr5vUM-qH-Elh_BaJP4EhUYAOeCF48lMqNhiq6O-4_Htt3PUkU5xs8ArT6Hsspq97QfoyzEz0t1Ua3_bhRK097UIyMtrcGBXhvJToOHlnb67sY8--s5UBTNvmLTyVggIRNTEjsUchskISScWdKqhbwyJybkmdYiVBPF9rLr1LiXiuF9hmA=="
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHbeuiwMdLYdQm-2qzD00_K4E7HUg0unDHR9E85864n4fgamcjH4QvySUkB7mrj92hdSr4AFSeAW3IMFxEL92n5zDT5woL39c5VVQHxY5AnOQdQi7j0SM-rRgUH-PqXm6YO2Xp5p3h3s8qni_3DPbJYckmqnivDKa9v7VdV2r1SquZngO_czmR96hxz7303B3E686qkSXru8ZFuNhCZSLb3Qcuiml4T2js9Q8R_qDdV4T9s0ahYmKwf8gM03k3oTZ8IiCGTav_kzb22PVn3WQ=="
         },
         {
-          "name": "The Jerusalem Post",
-          "excerpt": "A US-sanctioned Chinese tanker, Rich Starry, crosses the Strait of Hormuz, becoming the first to exit the Gulf since the US blockade began, carrying methanol from the UAE.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHXVQHCOdoQqmLyhnxLXHYuXODY-QKIzjfi3e5jMaMA0D-SmdkEcE3m8a01bsCbRZPw9L3wTetzLkavwK53N6X13Rzesw1DkICjZkzJT8HFyzbSpphpkWHcMkwlOgRju84LPzCW79e8gyXuMDY4-XRn7Tlviw=="
-        },
-        {
-          "name": "Bloomberg (via The Times of India)",
-          "excerpt": "US-sanctioned tanker, Rich Starry, has passed through the Strait of Hormuz despite Washington's newly imposed naval blockade on Iran, highlighting challenges in enforcing the restriction, according to a Bloomberg report.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwssWZRHQjmsARYpNJobwO8_5wQRLpyP_6qGVtolaR3-Vm7SuvegTJhj2D2okLJXcvvXaUKFOAUZVUvP7DBRbnQzbI81jwZoHrRr5vUM-qH-Elh_BaJP4EhUYAOeCF48lMqNhiq6O-4_Htt3PUkU5xs8ArT6Hsspq97QfoyzEz0t1Ua3_bhRK097UIyMtrcGBXhvJToOHlnb67sY8--s5UBTNvmLTyVggIRNTEjsUchskISScWdKqhbwyJybkmdYiVBPF9rLr1LiXiuF9hmA=="
-        },
-        {
-          "name": "Modern Diplomacy",
-          "excerpt": "A Chinese tanker named Rich Starry has passed through the Strait of Hormuz despite an ongoing United States blockade of the critical maritime chokepoint.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQQHC1IJk68QMRIp8sOsxdxPPi0xukcjP0MabLgb5vG8wd5YS6FuHPwckPCaz3zQjG_ptZzai-GZZSmMoP93VoTNdOJUSz3qWUaw-9KUIoOg-pXb439Qb9zj1PO_hWANXJyS9Yx_DLCVGtQGp6Dj93vljC6hlJZaDdpL8NW8VoYgIK01Mpod18A7Fe5ETne5Qm42Y3"
+          "name": "Lloyd's List",
+          "excerpt": "Falsely flagged US-sanctioned tanker that transited Hormuz earlier on Tuesday makes U-turn in Gulf of Oman; Centcom says it forced six vessels to turn around and 're-enter an Iranian port' in the Gulf of Oman; US has offered limited details on parameters of its enforcement strategy.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHh0jA9hPHxV8GDGUGm0tEmo9w0ESOeDIaFsPRAVk5TXAMCsLbzWBJGe1Npw5oYxID-ML45R2rKPlGwIuv5hLQBSBOu5cIAAnBSLJhIvByNggTh4WOiSy1hpQipnwMpzyRkvq4anzzzj1Y6AbJq6dzHdTAjfDu8PJ8CgYXM8fFYBgzoChCDt_uyKueDPwdoOoB3WuJIKKNoVA=="
         },
         {
           "name": "The Straits Times",
           "excerpt": "Another sanctioned tanker, Rich Starry, would be the first to make it through the strait and to exit the Gulf since the blockade began, data from LSEG and Kpler showed.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwssWZRHQjmsARYpNJobwO8_5wQRLpyP_6qGVtolaR3-Vm7SuvegTJhj2D2okLJXcvvXaUKFOAUZVUvP7DBRbnQzbI81jwZoHrRr5vUM-qH-Elh_BaJP4EhUYAOeCF48lMqNhiq6O-4_Htt3PUkU5xs8ArT6Hsspq97QfoyzEz0t1Ua3_bhRK097UIyMtrcGBXhvJToOHlnb67sY8--s5UBTNvmLTyVggIRNTEjsUchskISScWdKqhbwyJybkmdYiVBPF9rLr1LiXiuF9hmA=="
-        },
-        {
-          "name": "The Independent",
-          "excerpt": "A Chinese-owned oil and chemicals tanker, the Rich Starry, sailed through the Strait of Hormuz on Tuesday, appearing to defy a US blockade.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOkxsxemSL5iDKR0hCkW8hf6FzNrjDmY9DmFMqVjompoPXa3TnjYmuKRiwxPsZxLgU3LUMZb-8IMTadTe7CgdUBd_EnDkedsYMcLtp_wrhHQy9ZNHhN-XEjgTy7hk85hP7IsGqJBQvzGy9sDIZ_uSN0anH-YHFAVA13b9rkR7Pk89EyAAkq29VCaEsKJL7khqiN9Fv97wT"
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHbeuiwMdLYdQm-2qzD00_K4E7HUg0unDHR9E85864n4fgamcjH4QvySUkB7mrj92hdSr4AFSeAW3IMFxEL92n5zDT5woL39c5VVQHxY5AnOQdQi7j0SM-rRgUH-PqXm6YO2Xp5p3h3s8qni_3DPbJYckmqnivDKa9v7VdV2r1SquZngO_czmR96hxz7303B3E686qkSXru8ZFuNhCZSLb3Qcuiml4T2js9Q8R_qDdV4T9s0ahYmKwf8gM03k3oTZ8IiCGTav_kzb22PVn3WQ=="
         },
         {
           "name": "Defence Security Asia",
-          "excerpt": "The successful passage of the Chinese-linked tanker Rich Starry through the Strait of Hormuz despite its sanctions history has exposed the precise limits of Washington's maritime enforcement campaign and revealed how far the United States is willing to go to avoid a direct confrontation with China.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7g0_fqM4RpAN3Ru3glaULPjbRLbEcRi-P_MdlHhIz9_qInMxV7ykjihzCfvUi3KAlufwJoZTYBvzqQDGoc_SnPUsN8UEqNxQ3uPb3ratdwCZ8hspyDu3mzLPLvxxLf4IsH-IvUcGS7ZmQQA54WwZqlzve8ym5TJs2LBVjCaOhJGJunE13id-Ihq3zjIMIJDMWYvdQCztZw2JqBsevupbiJBzMCDJuHeaiZuRi3C2qqjYSiAo16RMUP-TG"
+          "excerpt": "The Chinese-linked tanker Rich Starry passed through the Strait of Hormuz without U.S. Navy interdiction despite a sanctions history tied to Iran, revealing Washington's real enforcement limits, exposing the true nature of the Hormuz blockade and signalling America's effort to avoid direct conflict with China.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZUFgzjPYajEMYJFB2-rLkRKCJxxyBFIBj-WeujBWaAxGf0M5qnmpUuXGaCZdP4nPcLg99MyHp38pPQm54-cz6Gl_EakjdOlfn-ftqtq9cfMU9TMYg8Eonxw-6tQYV93TqmRYzJA-n-D-jsVuZf_x5Cy_Ua8X-6XThQpLELMuQVVhFD8W5xVna7mTMBSivJQ5-Soxtk__03p7VknkNNsDWwe23GInLfmmSL4sR6851oduYgup3hqq5fDLv"
+        },
+        {
+          "name": "Bloomberg (via multiple sources)",
+          "excerpt": "US-sanctioned tanker, Rich Starry, has passed through the Strait of Hormuz despite Washington's newly imposed naval blockade on Iran, highlighting challenges in enforcing the restriction, according to a Bloomberg report.",
+          "url": null
+        },
+        {
+          "name": "vesseltracker.com",
+          "excerpt": "The 'Rich Starry' sailed unhindered through the Strait of Hormuz on the night of April 13, 2026, enroute to Sohar.",
+          "url": null
         }
       ],
       "dissenting_sources": [],
-      "framing_analysis": "The claim is framed factually, reporting on an event that occurred. The use of 'successfully transited' and 'despite US naval blockade' accurately reflects the reported outcome and context.",
-      "web_search_summary": "The US-sanctioned Chinese tanker Rich Starry successfully transited the Strait of Hormuz despite a US naval blockade that began on April 13, 2026. Shipping data from multiple sources confirmed its passage, making it one of the first, if not the first, vessels to exit the Gulf since the blockade was imposed. The tanker, owned by Shanghai Xuanrun Shipping Co Ltd, was sanctioned for dealing with Iran and was carrying methanol.",
+      "framing_analysis": "The claim is framed factually, reporting on a specific event and its implications regarding the effectiveness of the US naval blockade. It accurately reflects the reporting from various news and shipping intelligence sources.",
+      "web_search_summary": "The US-sanctioned Chinese tanker Rich Starry successfully transited the Strait of Hormuz on April 13, 2026, despite a US naval blockade. This event was widely reported by multiple news outlets and shipping data providers. The tanker, sanctioned for dealing with Iran, was among the first vessels to exit the Gulf after the blockade began, highlighting challenges in enforcing the restrictions.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_2c9346b5ae",
+      "claim_text": "Set up x-hunter docs as a hosted site that fits right into your product visually once styled. Should I share?",
+      "status": "unverified",
+      "confidence_score": 0.355,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0.8
+      },
+      "source_handle": "docsbook",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": null,
+      "verification_count": 138,
+      "verified_at": "2026-05-14T05:10:51.141Z",
+      "created_at": "2026-05-12T20:10:47.577Z",
+      "original_source": "Not specified in the claim",
+      "claim_date": "empty",
+      "supporting_sources": [
+        {
+          "name": "GitHub - anirudhmalik/xhunter-server",
+          "excerpt": "`xhunter-server` is used to communicate between attacker and victim. It is very easy to host on heroku.",
+          "url": null
+        },
+        {
+          "name": "xhunter custom server deployment on heroku #23 - GitHub",
+          "excerpt": "I am building a xhunter-custom-server that can be deployed on heroku and can be used to comunicate between attacker and victim.",
+          "url": null
+        },
+        {
+          "name": "Releases · anirudhmalik/xhunter - GitHub",
+          "excerpt": "Documentation. Doc, Purpose. README.md, Showcase, screenshots, expandable architecture & SEO notes. USAGE.md, VPS, dual binder paths, operator app, Nmap section.",
+          "url": null
+        },
+        {
+          "name": "Setting up XSSHUNTER - Web Server Config - Security Practices",
+          "excerpt": "Deploying xsshunter on Docker. xsshunter-express is a lightweight, easy-to-deploy version of XSS Hunter, designed for automated detection and exploitation of Cross-Site Scripting (XSS) vulnerabilities.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "X-Core™ | Hunter Industries",
+          "excerpt": "This entry-level residential controller offers simple operation with “smart” Solar Sync™ compatibility.",
+          "url": null
+        },
+        {
+          "name": "X (formerly Twitter) Hunter Integration - Quick Connect with TexAu",
+          "excerpt": "Connect X (formerly Twitter) and Hunter to unlock the power of Workflow automation.",
+          "url": null
+        },
+        {
+          "name": "Integrate X (Twitter) with Hunter seamlessly - Zoho Flow",
+          "excerpt": "Send information between X (Twitter) and Hunter automatically, without writing any code, using Zoho Flow.",
+          "url": null
+        },
+        {
+          "name": "Hunter Integration Partners",
+          "excerpt": "Hunter equipment integrates with leading industry partners to span the entire customer service experience.",
+          "url": null
+        }
+      ],
+      "framing_analysis": "The claim is framed as a proposition or a question about a potential setup, implying a pre-existing understanding of \"x-hunter docs.\" The framing is valid in that it asks for confirmation or discussion, but it lacks specific context about what \"x-hunter docs\" refers to, making it difficult to definitively confirm or refute without making assumptions.",
+      "web_search_summary": "The claim refers to setting up \"x-hunter docs\" as a hosted site that visually integrates with a product. While there are various projects and tools named \"Xhunter\" or \"XSS Hunter\" that involve hosting and documentation, the specific phrasing \"x-hunter docs\" as a distinct product or service that can be styled to fit visually into another product is not clearly defined or universally understood across the search results. Some projects, like `xhunter-server`, are designed for easy hosting and communication, implying a backend component that might serve documentation or integrate with other tools. Other mentions of \"Hunter\" relate to email verification services or irrigation systems, which are unrelated to the claim. The concept of styling documentation to fit a product's visual identity is a general web development practice, but it's not explicitly tied to a specific \"x-hunter docs\" product in the search results.",
       "investigation_depth": "quick"
     },
     {
@@ -2554,36 +2647,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "live_2c9346b5ae",
-      "claim_text": "Set up x-hunter docs as a hosted site that fits right into your product visually once styled. Should I share?",
-      "status": "unverified",
-      "confidence_score": 0.325,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0.5
-      },
-      "source_handle": "docsbook",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": null,
-      "verification_count": 135,
-      "verified_at": "2026-05-14T04:10:49.171Z",
-      "created_at": "2026-05-12T20:10:47.577Z",
-      "original_source": "Not specified in the claim",
-      "claim_date": "empty",
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": "The claim is framed as a question, implying a potential offering or suggestion. Without further context, it's difficult to determine if it's misleading, but it lacks specificity regarding the ",
-      "web_search_summary": "The claim refers to ",
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "claim_56",
       "claim_text": "Biden-Merrick Garland DOJ disproportionately targeted pro-life activists through biased enforcement of the FACE Act, with significantly harsher sentences for pro-life defendants compared to pro-abortion defendants.",
       "status": "unverified",
@@ -2602,8 +2665,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_power_accountability",
-      "verification_count": 83,
-      "verified_at": "2026-05-14T04:07:33.286Z",
+      "verification_count": 84,
+      "verified_at": "2026-05-14T05:18:48.363Z",
       "created_at": "2026-04-15T08:47:01.163Z",
       "original_source": null,
       "claim_date": null,
@@ -2669,8 +2732,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "live_4e0faa3fb3",
-      "claim_text": "Mesut Özil confirms Arsenal closed the door on him after he posted about the Uygur genocide to his social media. Some things are bigger than football",
+      "claim_id": "live_7669ad7d2b",
+      "claim_text": "Makes you understand why the guillotine was so popular in revolutionary France.",
       "status": "unverified",
       "confidence_score": 0.285,
       "scoring_breakdown": {
@@ -2681,52 +2744,52 @@
         "cross_source": 1,
         "web_search": 0.5
       },
-      "source_handle": "OzilThings",
+      "source_handle": "ramzpaul",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
       "related_axis_id": null,
-      "verification_count": 10,
-      "verified_at": "2026-05-08T06:01:14.538Z",
-      "created_at": "2026-04-30T03:33:12.927Z",
-      "original_source": "Mesut Özil (via Leadership in the Age of Confusion Summit)",
-      "claim_date": "2026-04",
+      "verification_count": 2,
+      "verified_at": "2026-05-06T12:00:55.634Z",
+      "created_at": "2026-05-06T11:35:56.058Z",
+      "original_source": "The claim is a general statement, no specific original source.",
+      "claim_date": null,
       "supporting_sources": [
         {
-          "name": "Middle East Eye",
-          "excerpt": "German footballer Ozil, whose parents are from Turkey, posted on Instagram lamenting the persecution of the people of East Turkestan, a name often used for the Chinese region of Xinxiang where many Uighurs live.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQ7Rle5us46wBF-5YYTNExfS-CvcQZf_PQ-lWlGJhWgNW495SJd6HfaApGwkAqqUUGeGxq6PNN6Qh5Sps5DMmucBMclxt5tRvakU0sxT9rEYAiVNYtqKyLXgek5f4ApDX2SXDZ834PP9II8oIIeeghrPd8-n28NowJwSnAlIDTam1_kE6q3BhGYqQNZ4HRkgD_y8LC2PtvH8GWqTcyFRq2pFjT"
+          "name": "Quora",
+          "excerpt": "To the French Revolutionaries of 1792, mechanizing the death penalty was a triumph of Enlightenment science and radical equality.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnlXMie2oRRsGDR-5mu4_1BHaR5rsIO_F5RqYZNEcd4nfJ8ca9OICiNWdQrXf2qWn1NYYJY8bqm3wZOiKtj4cLvvav4dchNMK0jURudDN-D7TMVIIYo72AAn6OMLcwzRUi8P7IfwCAiII2k1NdUsl9u5Eap6gPLSXF2o1I4mJnTlpX_uIkCWKg7o2Hk8JdlNFzxPC4w0yN2WiCI3m90fsRCUOxPSm7J-JvuCNUVcnny7W2uHCLJapyVnA8TrvWDEhS7giHQ7v3LKqWstVb0_vAlQ=="
         },
         {
-          "name": "Middle East Eye",
-          "excerpt": "Arsenal has sent a message to Chinese supporters distancing the soccer club from comments by one of its players, Mesut Ozil, this week condemning China's treatment of its Uighur Muslim minority.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQ7Rle5us46wBF-5YYTNExfS-CvcQZf_PQ-lWlGJhWgNW495SJd6HfaApGwkAqqUUGeGxq6PNN6Qh5Sps5DMmucBMclxt5tRvakU0sxT9rEYAiVNYtqKyLXgek5f4ApDX2SXDZ834PP9II8oIIeeghrPd8-n28NowJwSnAlIDTam1_kE6q3BhGYqQNZ4HRkgD_y8LC2PtvH8GWqTcyFRq2pFjT"
+          "name": "Age of Revolution",
+          "excerpt": "The executions were a popular form of entertainment and crowds gathered to watch.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0WQ3Vxh5BrbUy53VkBAK6zm8sLuCGP-ca3SkMmMAtPUK31q729QY59CDfLDRWxTuUa3fPNNKA4wHoHiEUrbc3GHlKFRGm0Sytd3kOQU0s9AgGwYGRwnjFPmI6QzcFOxU1iwxvbaAJwALnt_8AbAn16bLfoBXHXTupvU-y"
         },
         {
-          "name": "Daily Express",
-          "excerpt": "Mesut Ozil has opened up about his Arsenal exit, claiming he was frozen out of the first‑team squad for voicing concerns about the treatment of Uighur Muslims in China.",
-          "url": null
+          "name": "Wikipedia",
+          "excerpt": "The guillotine is best known for its use in France, particularly during the French Revolution (1789-1799), where the revolution's supporters celebrated it as the people's avenger and the revolution's opponents vilified it as the pre-eminent symbol of the violence of the Reign of Terror.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBA2ipaPDk-N0TbyiMstNgZQfXupN-sJMB0ESmP8YVgQ6KZNyoMp8D8lkbGC2ggQf1nuudVvtjwk1Pb5qwC1og5jMvlx01l2GQQjVrjWsByvsnJtjVtX0lTYx1DXCG7u0pxwI="
         },
         {
-          "name": "Daily Express",
-          "excerpt": "Speaking at the Leadership in the Age of Confusion Summit earlier this week, Ozil recalled the situation at the Emirates, saying: \"I heard about Uighur Turks and then I made my research. Then, of course, as a star, I had a voice. And I knew also if I post something about this kind of thing, I will get in trouble. But I didn't care. I posted and I am happy. So, of course, they closed [on] me the doors. They didn't let me play anymore.\"",
-          "url": null
+          "name": "EBSCO",
+          "excerpt": "The guillotine, a device designed for execution by decapitation, was adopted in France in the late 18th century as a means to create a more humane method of capital punishment.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoxGqmkjt3TY6yCINVEtO2GiJm87qsy6iBmJA4J4Aui6CmHu4YLuoqhmFue_jgkhHZ9fdJ6iU10EsgpePSVLFgnUYn-ajB7BJIsmsFZAQolFVjIKk4jz_dUnESdxPui6iqm5VHIFcO7vJzqfEMNH8N0dwGjRisFv23O35zohiulN4SZA=="
         },
         {
-          "name": "The Guardian",
-          "excerpt": "Arsenal have distanced themselves from comments made by Mesut Özil on Instagram, in which he spoke out strongly against China's persecution of the Uighur population in the north-western region of Xinjiang and criticised Muslims for not doing more to highlight the issue.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEx1OXy0S3ocrSVimIl-Npa0_TnCbXBry2NvF1AqRfR3vQ5sKAzSYaRmLenkfjvaHqykrO0mMcp1wreLcTvx89pweycFDYFvk0T09tVgocmhjZi6dKV_cbztE-v0l8YLloimSzziNpGCknSHVjm8yo6_L9S3kgfni6WQZxorC96iJA4Y71UKx7WgpropUKYR-EfPQfEhoOyksn0V2G8AugXCFCh6J1TngCSlHSMlTq3WrPyCBQ="
+          "name": "YouTube",
+          "excerpt": "Some people even treated it like entertainment bringing food and watching the events unfold This constant exposure to death had a powerful effect on society For many it became deeply disturbing The guillotine was no longer just a machine It became a symbol of bloodshed fear.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfv3Fnl3g8ta7-EDlofh7rzoLrDAAfBm4JUPUInkY-BLUhhw5vGxZmE2jYUb4MBrlFvm8cwSqlIFjszhZf6QyC8gt_GhE-s_EDqyc-Y63ZjP-JEDNy7wrYSK8kOd8E01wi5cXtKKA="
         },
         {
-          "name": "World Soccer Talk",
-          "excerpt": "In December 2019, Arsenal also distanced themselves from comments Ozil made on social media criticising China's treatment of the Uighur population.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpfMob05spvozdGCvgscgudOSD-LlgZQOZuSS5XBlCrHg0MUV0WPvWIu_yNXUjK6iv1szjw3zfQKrkkBathcdmi0gj-MMDZvz-AL_GzdwKomZTivJKmGqLN85QfjXziIaLxyIsZCNlDbFHr-6yEUMj9OiDqyYZGAHag1j7Oksm8wEkGsjTvs1SsN6IkapGZ62cRd5JpYgaDk58nYSJIk3-XP8Lqs_1hDHU"
+          "name": "Morehead State University Digital Archives",
+          "excerpt": "The Guillotine's cultural relevance lies in its symbolism of revolutionary justice and “equality”, where it was seen as a rational and effective way of justice without the cruelty and pain seen in other punitive measures.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtsyoI_WOS3e4Z8AtjteDfLCDxg4uMXXbyvakbjcm8rFVtkPgrRzp8LLw2H6U-bIP4y8yE8RiEPVvXCB_SM7xwWHvdzwTN4Oku_q4CNVYFYtkIFN2wiumvAGyOuK_Nioo7r6gUB3sR_lWKP4q1bOoxwelhNJXmi7-oe70FnUe43h8Tit3YKdXXC8ksIvACiLM35xnrdkC03EBn94zWjSOkv-cY"
         }
       ],
       "dissenting_sources": [],
-      "framing_analysis": "The claim is framed validly, as it directly quotes Mesut Özil's recent statements regarding his departure from Arsenal and the reasons behind it. The claim accurately reflects his perspective on the situation.",
-      "web_search_summary": "Mesut Özil has recently confirmed that Arsenal \"closed the doors\" on him and stopped him from playing after he posted about the Uygur genocide on social media in December 2019. Arsenal had publicly distanced themselves from Özil's comments at the time, stating that they do not involve themselves in politics. Özil's contract was eventually terminated in January 2021, and he moved to Fenerbahce.",
+      "framing_analysis": "The claim is framed validly, as historical evidence supports the idea of the guillotine's popularity during the French Revolution, particularly in its early stages and during the Reign of Terror.",
+      "web_search_summary": "The guillotine was indeed popular in revolutionary France, particularly during the Reign of Terror. It was initially introduced as a more humane and egalitarian method of execution, replacing the brutal and class-based punishments of the Ancien Régime. Public executions by guillotine drew large crowds and were seen as a form of entertainment and a symbol of revolutionary justice, though it later became a symbol of terror and oppression.",
       "investigation_depth": "quick"
     },
     {
@@ -2971,6 +3034,36 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim is framed as a direct assertion of legal interpretation regarding a specific event. It uses strong, definitive language to characterize the alleged actions as piracy and a flagrant violation of international law.",
       "web_search_summary": "The claim that an abduction in international waters constitutes piracy and a flagrant violation of international law is confirmed. International law, specifically the United Nations Convention on the Law of the Sea (UNCLOS), defines piracy to include illegal acts of violence or detention committed for private ends on the high seas or in places outside state jurisdiction. Such acts are considered offenses against the law of nations.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_43936748ac",
+      "claim_text": "In what kind of f*cking world is this considered “luxurious”? This is pure devilish journalism",
+      "status": "unverified",
+      "confidence_score": 0.285,
+      "scoring_breakdown": {
+        "source_tier": 0.2,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 1,
+        "web_search": 0.5
+      },
+      "source_handle": "abierkhatib",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": null,
+      "verification_count": 2,
+      "verified_at": "2026-05-11T04:00:33.492Z",
+      "created_at": "2026-05-11T03:07:31.457Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null,
       "investigation_depth": "quick"
     },
     {
@@ -6281,67 +6374,6 @@
       ],
       "framing_analysis": "The claim uses strong, emotionally charged language ('deliberately crushed,' 'impoverishing millions,' 'economic terrorism'). While evidence supports the negative economic and humanitarian impacts of sanctions, the term 'economic terrorism' is a political framing used by those targeted by sanctions, rather than a universally accepted legal or economic definition.",
       "web_search_summary": "Evidence suggests that U.S. sanctions have significantly damaged the economies of multiple nations, leading to widespread impoverishment and, in some cases, being labeled as 'economic terrorism' by affected countries and critics. Reports indicate that these sanctions can cause substantial declines in income per capita and life expectancy, comparable to major economic depressions or pandemics. The U.S. government itself acknowledges sanctions as a powerful tool to alter behavior, and some officials have openly discussed their intent to cripple economies to achieve political change.",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "live_7669ad7d2b",
-      "claim_text": "Makes you understand why the guillotine was so popular in revolutionary France.",
-      "status": "unverified",
-      "confidence_score": 0.285,
-      "scoring_breakdown": {
-        "source_tier": 0.2,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 1,
-        "web_search": 0.5
-      },
-      "source_handle": "ramzpaul",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": null,
-      "verification_count": 2,
-      "verified_at": "2026-05-06T12:00:55.634Z",
-      "created_at": "2026-05-06T11:35:56.058Z",
-      "original_source": "The claim is a general statement, no specific original source.",
-      "claim_date": null,
-      "supporting_sources": [
-        {
-          "name": "Quora",
-          "excerpt": "To the French Revolutionaries of 1792, mechanizing the death penalty was a triumph of Enlightenment science and radical equality.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnlXMie2oRRsGDR-5mu4_1BHaR5rsIO_F5RqYZNEcd4nfJ8ca9OICiNWdQrXf2qWn1NYYJY8bqm3wZOiKtj4cLvvav4dchNMK0jURudDN-D7TMVIIYo72AAn6OMLcwzRUi8P7IfwCAiII2k1NdUsl9u5Eap6gPLSXF2o1I4mJnTlpX_uIkCWKg7o2Hk8JdlNFzxPC4w0yN2WiCI3m90fsRCUOxPSm7J-JvuCNUVcnny7W2uHCLJapyVnA8TrvWDEhS7giHQ7v3LKqWstVb0_vAlQ=="
-        },
-        {
-          "name": "Age of Revolution",
-          "excerpt": "The executions were a popular form of entertainment and crowds gathered to watch.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0WQ3Vxh5BrbUy53VkBAK6zm8sLuCGP-ca3SkMmMAtPUK31q729QY59CDfLDRWxTuUa3fPNNKA4wHoHiEUrbc3GHlKFRGm0Sytd3kOQU0s9AgGwYGRwnjFPmI6QzcFOxU1iwxvbaAJwALnt_8AbAn16bLfoBXHXTupvU-y"
-        },
-        {
-          "name": "Wikipedia",
-          "excerpt": "The guillotine is best known for its use in France, particularly during the French Revolution (1789-1799), where the revolution's supporters celebrated it as the people's avenger and the revolution's opponents vilified it as the pre-eminent symbol of the violence of the Reign of Terror.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBA2ipaPDk-N0TbyiMstNgZQfXupN-sJMB0ESmP8YVgQ6KZNyoMp8D8lkbGC2ggQf1nuudVvtjwk1Pb5qwC1og5jMvlx01l2GQQjVrjWsByvsnJtjVtX0lTYx1DXCG7u0pxwI="
-        },
-        {
-          "name": "EBSCO",
-          "excerpt": "The guillotine, a device designed for execution by decapitation, was adopted in France in the late 18th century as a means to create a more humane method of capital punishment.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoxGqmkjt3TY6yCINVEtO2GiJm87qsy6iBmJA4J4Aui6CmHu4YLuoqhmFue_jgkhHZ9fdJ6iU10EsgpePSVLFgnUYn-ajB7BJIsmsFZAQolFVjIKk4jz_dUnESdxPui6iqm5VHIFcO7vJzqfEMNH8N0dwGjRisFv23O35zohiulN4SZA=="
-        },
-        {
-          "name": "YouTube",
-          "excerpt": "Some people even treated it like entertainment bringing food and watching the events unfold This constant exposure to death had a powerful effect on society For many it became deeply disturbing The guillotine was no longer just a machine It became a symbol of bloodshed fear.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfv3Fnl3g8ta7-EDlofh7rzoLrDAAfBm4JUPUInkY-BLUhhw5vGxZmE2jYUb4MBrlFvm8cwSqlIFjszhZf6QyC8gt_GhE-s_EDqyc-Y63ZjP-JEDNy7wrYSK8kOd8E01wi5cXtKKA="
-        },
-        {
-          "name": "Morehead State University Digital Archives",
-          "excerpt": "The Guillotine's cultural relevance lies in its symbolism of revolutionary justice and “equality”, where it was seen as a rational and effective way of justice without the cruelty and pain seen in other punitive measures.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtsyoI_WOS3e4Z8AtjteDfLCDxg4uMXXbyvakbjcm8rFVtkPgrRzp8LLw2H6U-bIP4y8yE8RiEPVvXCB_SM7xwWHvdzwTN4Oku_q4CNVYFYtkIFN2wiumvAGyOuK_Nioo7r6gUB3sR_lWKP4q1bOoxwelhNJXmi7-oe70FnUe43h8Tit3YKdXXC8ksIvACiLM35xnrdkC03EBn94zWjSOkv-cY"
-        }
-      ],
-      "dissenting_sources": [],
-      "framing_analysis": "The claim is framed validly, as historical evidence supports the idea of the guillotine's popularity during the French Revolution, particularly in its early stages and during the Reign of Terror.",
-      "web_search_summary": "The guillotine was indeed popular in revolutionary France, particularly during the Reign of Terror. It was initially introduced as a more humane and egalitarian method of execution, replacing the brutal and class-based punishments of the Ancien Régime. Public executions by guillotine drew large crowds and were seen as a form of entertainment and a symbol of revolutionary justice, though it later became a symbol of terror and oppression.",
       "investigation_depth": "quick"
     },
     {
@@ -13677,6 +13709,67 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "live_4e0faa3fb3",
+      "claim_text": "Mesut Özil confirms Arsenal closed the door on him after he posted about the Uygur genocide to his social media. Some things are bigger than football",
+      "status": "unverified",
+      "confidence_score": 0.285,
+      "scoring_breakdown": {
+        "source_tier": 0.2,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 1,
+        "web_search": 0.5
+      },
+      "source_handle": "OzilThings",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": null,
+      "verification_count": 10,
+      "verified_at": "2026-05-08T06:01:14.538Z",
+      "created_at": "2026-04-30T03:33:12.927Z",
+      "original_source": "Mesut Özil (via Leadership in the Age of Confusion Summit)",
+      "claim_date": "2026-04",
+      "supporting_sources": [
+        {
+          "name": "Middle East Eye",
+          "excerpt": "German footballer Ozil, whose parents are from Turkey, posted on Instagram lamenting the persecution of the people of East Turkestan, a name often used for the Chinese region of Xinxiang where many Uighurs live.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQ7Rle5us46wBF-5YYTNExfS-CvcQZf_PQ-lWlGJhWgNW495SJd6HfaApGwkAqqUUGeGxq6PNN6Qh5Sps5DMmucBMclxt5tRvakU0sxT9rEYAiVNYtqKyLXgek5f4ApDX2SXDZ834PP9II8oIIeeghrPd8-n28NowJwSnAlIDTam1_kE6q3BhGYqQNZ4HRkgD_y8LC2PtvH8GWqTcyFRq2pFjT"
+        },
+        {
+          "name": "Middle East Eye",
+          "excerpt": "Arsenal has sent a message to Chinese supporters distancing the soccer club from comments by one of its players, Mesut Ozil, this week condemning China's treatment of its Uighur Muslim minority.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQ7Rle5us46wBF-5YYTNExfS-CvcQZf_PQ-lWlGJhWgNW495SJd6HfaApGwkAqqUUGeGxq6PNN6Qh5Sps5DMmucBMclxt5tRvakU0sxT9rEYAiVNYtqKyLXgek5f4ApDX2SXDZ834PP9II8oIIeeghrPd8-n28NowJwSnAlIDTam1_kE6q3BhGYqQNZ4HRkgD_y8LC2PtvH8GWqTcyFRq2pFjT"
+        },
+        {
+          "name": "Daily Express",
+          "excerpt": "Mesut Ozil has opened up about his Arsenal exit, claiming he was frozen out of the first‑team squad for voicing concerns about the treatment of Uighur Muslims in China.",
+          "url": null
+        },
+        {
+          "name": "Daily Express",
+          "excerpt": "Speaking at the Leadership in the Age of Confusion Summit earlier this week, Ozil recalled the situation at the Emirates, saying: \"I heard about Uighur Turks and then I made my research. Then, of course, as a star, I had a voice. And I knew also if I post something about this kind of thing, I will get in trouble. But I didn't care. I posted and I am happy. So, of course, they closed [on] me the doors. They didn't let me play anymore.\"",
+          "url": null
+        },
+        {
+          "name": "The Guardian",
+          "excerpt": "Arsenal have distanced themselves from comments made by Mesut Özil on Instagram, in which he spoke out strongly against China's persecution of the Uighur population in the north-western region of Xinjiang and criticised Muslims for not doing more to highlight the issue.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEx1OXy0S3ocrSVimIl-Npa0_TnCbXBry2NvF1AqRfR3vQ5sKAzSYaRmLenkfjvaHqykrO0mMcp1wreLcTvx89pweycFDYFvk0T09tVgocmhjZi6dKV_cbztE-v0l8YLloimSzziNpGCknSHVjm8yo6_L9S3kgfni6WQZxorC96iJA4Y71UKx7WgpropUKYR-EfPQfEhoOyksn0V2G8AugXCFCh6J1TngCSlHSMlTq3WrPyCBQ="
+        },
+        {
+          "name": "World Soccer Talk",
+          "excerpt": "In December 2019, Arsenal also distanced themselves from comments Ozil made on social media criticising China's treatment of the Uighur population.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpfMob05spvozdGCvgscgudOSD-LlgZQOZuSS5XBlCrHg0MUV0WPvWIu_yNXUjK6iv1szjw3zfQKrkkBathcdmi0gj-MMDZvz-AL_GzdwKomZTivJKmGqLN85QfjXziIaLxyIsZCNlDbFHr-6yEUMj9OiDqyYZGAHag1j7Oksm8wEkGsjTvs1SsN6IkapGZ62cRd5JpYgaDk58nYSJIk3-XP8Lqs_1hDHU"
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed validly, as it directly quotes Mesut Özil's recent statements regarding his departure from Arsenal and the reasons behind it. The claim accurately reflects his perspective on the situation.",
+      "web_search_summary": "Mesut Özil has recently confirmed that Arsenal \"closed the doors\" on him and stopped him from playing after he posted about the Uygur genocide on social media in December 2019. Arsenal had publicly distanced themselves from Özil's comments at the time, stating that they do not involve themselves in politics. Özil's contract was eventually terminated in January 2021, and he moved to Fenerbahce.",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "live_19d2128828",
       "claim_text": "Does anyone else spend the entire modern movie turning the volume up and down because there is zero sound consistency in movies anymore?",
       "status": "unverified",
@@ -14585,38 +14678,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "live_43936748ac",
-      "claim_text": "In what kind of f*cking world is this considered “luxurious”? This is pure devilish journalism",
-      "status": "unverified",
-      "confidence_score": 0.285,
-      "scoring_breakdown": {
-        "source_tier": 0.2,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 1,
-        "web_search": 0.5
-      },
-      "source_handle": "abierkhatib",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": null,
-      "verification_count": 2,
-      "verified_at": "2026-05-11T04:00:33.492Z",
-      "created_at": "2026-05-11T03:07:31.457Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_120",
-      "claim_text": "An Indian oil tanker was fired upon by IRGC Navy gunboats and forced to turn around, after attempting to cross the Strait of Hormuz without Iranian approval.",
+      "claim_id": "claim_52",
+      "claim_text": "Iranian protests and riots were funded by Israel and US.",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -14627,15 +14690,15 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "jacksonhinklle",
+      "source_handle": "iamufohunter",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "related_axis_id": "axis_political_vulnerability_foreign_influence_v1",
       "verification_count": 1,
-      "verified_at": "2026-04-18T13:34:07.736Z",
-      "created_at": "2026-04-18T13:34:07.732Z",
+      "verified_at": "2026-04-15T06:40:41.420Z",
+      "created_at": "2026-04-15T06:40:41.416Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -14645,8 +14708,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_42",
-      "claim_text": "FACT: 95% of ‘refugees’ coming to Europe are military-aged Muslim men.",
+      "claim_id": "claim_41",
+      "claim_text": "Zionists get PULVARIZED by British citizens They were saying “Kill all Palestinian children”",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -14657,15 +14720,45 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "realmaalouf",
+      "source_handle": "jvnior",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_epistemic_integrity",
+      "related_axis_id": "axis_human_rights_exploitation_v1",
       "verification_count": 1,
-      "verified_at": "2026-04-15T04:35:47.598Z",
-      "created_at": "2026-04-15T04:35:47.595Z",
+      "verified_at": "2026-04-15T04:35:47.589Z",
+      "created_at": "2026-04-15T04:35:47.587Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null,
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_127",
+      "claim_text": "Iran closes all schools and universities indefinitely and deploys ground forces, suggesting an imminent strike.",
+      "status": "unverified",
+      "confidence_score": 0.275,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": "silentlysirs",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 1,
+      "verified_at": "2026-04-18T14:23:51.580Z",
+      "created_at": "2026-04-18T14:23:51.576Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -14705,8 +14798,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_55",
-      "claim_text": "A Muslim man tortures his wife based on verses of the Quran.",
+      "claim_id": "claim_54",
+      "claim_text": "Iranian protests and riots were funded by Israel and US.",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -14717,15 +14810,45 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "realmaalouf",
+      "source_handle": "iamufohunter",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_political_vulnerability_foreign_influence_v1",
+      "verification_count": 1,
+      "verified_at": "2026-04-15T07:08:03.534Z",
+      "created_at": "2026-04-15T07:08:03.529Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null,
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_43",
+      "claim_text": "This is how Israeli jewish settlers “have fun” with bodies of Palestinians killed by them. They recorded this and posted it themselves.",
+      "status": "unverified",
+      "confidence_score": 0.275,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": "jvnior",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_human_rights_exploitation_v1",
       "verification_count": 1,
-      "verified_at": "2026-04-15T07:08:03.543Z",
-      "created_at": "2026-04-15T07:08:03.541Z",
+      "verified_at": "2026-04-15T04:35:47.606Z",
+      "created_at": "2026-04-15T04:35:47.604Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -14735,8 +14858,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_118",
-      "claim_text": "Trump claims Iran agreed to halt nuclear program and hand over 'nuclear dust'.",
+      "claim_id": "claim_82",
+      "claim_text": "Palestinians being burnt alive by Israel in a 'holocaust' with images of fire.",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -14747,45 +14870,15 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "sprinterpress",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_epistemic_integrity",
-      "verification_count": 1,
-      "verified_at": "2026-04-18T11:52:59.896Z",
-      "created_at": "2026-04-18T11:52:59.892Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_93",
-      "claim_text": "US military will now target and intercept Iranian ships anywhere in the world.",
-      "status": "unverified",
-      "confidence_score": 0.275,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": "bricsinfo",
+      "source_handle": "philstarnews",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
       "verification_count": 1,
-      "verified_at": "2026-04-16T21:04:37.040Z",
-      "created_at": "2026-04-16T21:04:37.038Z",
+      "verified_at": "2026-04-16T10:01:17.349Z",
+      "created_at": "2026-04-16T10:01:17.347Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -14855,36 +14948,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_66",
-      "claim_text": "The South African laws are literally super racist.",
-      "status": "unverified",
-      "confidence_score": 0.275,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": "elonmusk",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_human_rights_exploitation_v1",
-      "verification_count": 1,
-      "verified_at": "2026-04-15T23:31:48.253Z",
-      "created_at": "2026-04-15T23:31:48.249Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "claim_116",
       "claim_text": "Trump inherited the highest prices in the history of our country.",
       "status": "unverified",
@@ -14945,8 +15008,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_41",
-      "claim_text": "Zionists get PULVARIZED by British citizens They were saying “Kill all Palestinian children”",
+      "claim_id": "claim_55",
+      "claim_text": "A Muslim man tortures his wife based on verses of the Quran.",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -14957,15 +15020,15 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "jvnior",
+      "source_handle": "realmaalouf",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_human_rights_exploitation_v1",
       "verification_count": 1,
-      "verified_at": "2026-04-15T04:35:47.589Z",
-      "created_at": "2026-04-15T04:35:47.587Z",
+      "verified_at": "2026-04-15T07:08:03.543Z",
+      "created_at": "2026-04-15T07:08:03.541Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -15035,8 +15098,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_47",
-      "claim_text": "Strong explosions heard in western Tehran.",
+      "claim_id": "claim_120",
+      "claim_text": "An Indian oil tanker was fired upon by IRGC Navy gunboats and forced to turn around, after attempting to cross the Strait of Hormuz without Iranian approval.",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -15047,15 +15110,15 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "osint613",
+      "source_handle": "jacksonhinklle",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
       "verification_count": 1,
-      "verified_at": "2026-04-15T05:50:57.719Z",
-      "created_at": "2026-04-15T05:50:57.715Z",
+      "verified_at": "2026-04-18T13:34:07.736Z",
+      "created_at": "2026-04-18T13:34:07.732Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -15575,36 +15638,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_92",
-      "claim_text": "President Trump vows to look into 10 missing or dead scientists.",
-      "status": "unverified",
-      "confidence_score": 0.275,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": "foxnews",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_political_trust_corruption_v1",
-      "verification_count": 1,
-      "verified_at": "2026-04-16T21:04:37.033Z",
-      "created_at": "2026-04-16T21:04:37.030Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "claim_97",
       "claim_text": "US Commander Admiral Brad Cooper openly confesses US military is completely intertwined with Israeli military and brags about meetings.",
       "status": "unverified",
@@ -15635,8 +15668,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_94",
-      "claim_text": "Israeli politician Kroizer says killing Palestinian children is normal if it supports the IDF mission, and there are no innocent children in the West Bank.",
+      "claim_id": "claim_39",
+      "claim_text": "Over 3 million pages of the Epstein files concealing the most heinous crimes against children have yet to be released",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -15647,15 +15680,15 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "parodyjeffx",
+      "source_handle": "maddenifico",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_human_rights_exploitation_v1",
+      "related_axis_id": "axis_power_accountability",
       "verification_count": 1,
-      "verified_at": "2026-04-16T21:04:37.049Z",
-      "created_at": "2026-04-16T21:04:37.047Z",
+      "verified_at": "2026-04-15T04:35:47.573Z",
+      "created_at": "2026-04-15T04:35:47.570Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -15665,8 +15698,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_52",
-      "claim_text": "Iranian protests and riots were funded by Israel and US.",
+      "claim_id": "claim_47",
+      "claim_text": "Strong explosions heard in western Tehran.",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -15677,15 +15710,15 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "iamufohunter",
+      "source_handle": "osint613",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_political_vulnerability_foreign_influence_v1",
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
       "verification_count": 1,
-      "verified_at": "2026-04-15T06:40:41.420Z",
-      "created_at": "2026-04-15T06:40:41.416Z",
+      "verified_at": "2026-04-15T05:50:57.719Z",
+      "created_at": "2026-04-15T05:50:57.715Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -15965,8 +15998,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_82",
-      "claim_text": "Palestinians being burnt alive by Israel in a 'holocaust' with images of fire.",
+      "claim_id": "claim_38",
+      "claim_text": "China classifying Islam as a 'mental illness' and destroying mosques",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -15977,15 +16010,15 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "philstarnews",
+      "source_handle": "realmaalouf",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "related_axis_id": "axis_authoritarian_self_determination_v1",
       "verification_count": 1,
-      "verified_at": "2026-04-16T10:01:17.349Z",
-      "created_at": "2026-04-16T10:01:17.347Z",
+      "verified_at": "2026-04-15T04:35:47.562Z",
+      "created_at": "2026-04-15T04:35:47.558Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -15995,8 +16028,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_40",
-      "claim_text": "US Treasury Secretary Bessent says China will no longer be able to get oil from Iran",
+      "claim_id": "claim_81",
+      "claim_text": "S&P 500 closed at an all-time historic high after President Trump gained maximum leverage over the Strait of Hormuz.",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -16007,15 +16040,15 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "bricsinfo",
+      "source_handle": "ericldaugh",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_global_power_realignments_v1",
+      "related_axis_id": "axis_epistemic_integrity",
       "verification_count": 1,
-      "verified_at": "2026-04-15T04:35:47.581Z",
-      "created_at": "2026-04-15T04:35:47.579Z",
+      "verified_at": "2026-04-16T10:01:17.338Z",
+      "created_at": "2026-04-16T10:01:17.334Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -16175,8 +16208,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_54",
-      "claim_text": "Iranian protests and riots were funded by Israel and US.",
+      "claim_id": "claim_42",
+      "claim_text": "FACT: 95% of ‘refugees’ coming to Europe are military-aged Muslim men.",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -16187,15 +16220,15 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "iamufohunter",
+      "source_handle": "realmaalouf",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_political_vulnerability_foreign_influence_v1",
+      "related_axis_id": "axis_epistemic_integrity",
       "verification_count": 1,
-      "verified_at": "2026-04-15T07:08:03.534Z",
-      "created_at": "2026-04-15T07:08:03.529Z",
+      "verified_at": "2026-04-15T04:35:47.598Z",
+      "created_at": "2026-04-15T04:35:47.595Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -16205,8 +16238,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_127",
-      "claim_text": "Iran closes all schools and universities indefinitely and deploys ground forces, suggesting an imminent strike.",
+      "claim_id": "claim_118",
+      "claim_text": "Trump claims Iran agreed to halt nuclear program and hand over 'nuclear dust'.",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -16217,15 +16250,75 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "silentlysirs",
+      "source_handle": "sprinterpress",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "related_axis_id": "axis_epistemic_integrity",
       "verification_count": 1,
-      "verified_at": "2026-04-18T14:23:51.580Z",
-      "created_at": "2026-04-18T14:23:51.576Z",
+      "verified_at": "2026-04-18T11:52:59.896Z",
+      "created_at": "2026-04-18T11:52:59.892Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null,
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_78",
+      "claim_text": "DNI Tulsi Gabbard referred whistleblower and inspector general for criminal prosecution.",
+      "status": "unverified",
+      "confidence_score": 0.275,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": "acyn",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_power_accountability",
+      "verification_count": 1,
+      "verified_at": "2026-04-16T04:01:36.058Z",
+      "created_at": "2026-04-16T04:01:36.056Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null,
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_91",
+      "claim_text": "South Africa has enacted 'Apartheid 2.0' laws that are anti-White and anti-Asian.",
+      "status": "unverified",
+      "confidence_score": 0.275,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": "elonmusk",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_human_rights_exploitation_v1",
+      "verification_count": 1,
+      "verified_at": "2026-04-16T21:04:37.020Z",
+      "created_at": "2026-04-16T21:04:37.012Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -16265,8 +16358,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_81",
-      "claim_text": "S&P 500 closed at an all-time historic high after President Trump gained maximum leverage over the Strait of Hormuz.",
+      "claim_id": "claim_93",
+      "claim_text": "US military will now target and intercept Iranian ships anywhere in the world.",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -16277,15 +16370,15 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "ericldaugh",
+      "source_handle": "bricsinfo",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_epistemic_integrity",
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
       "verification_count": 1,
-      "verified_at": "2026-04-16T10:01:17.338Z",
-      "created_at": "2026-04-16T10:01:17.334Z",
+      "verified_at": "2026-04-16T21:04:37.040Z",
+      "created_at": "2026-04-16T21:04:37.038Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -16316,6 +16409,36 @@
       "verification_count": 1,
       "verified_at": "2026-04-16T20:03:09.473Z",
       "created_at": "2026-04-16T20:03:09.469Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null,
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_94",
+      "claim_text": "Israeli politician Kroizer says killing Palestinian children is normal if it supports the IDF mission, and there are no innocent children in the West Bank.",
+      "status": "unverified",
+      "confidence_score": 0.275,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": "parodyjeffx",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_human_rights_exploitation_v1",
+      "verification_count": 1,
+      "verified_at": "2026-04-16T21:04:37.049Z",
+      "created_at": "2026-04-16T21:04:37.047Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -16505,8 +16628,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_43",
-      "claim_text": "This is how Israeli jewish settlers “have fun” with bodies of Palestinians killed by them. They recorded this and posted it themselves.",
+      "claim_id": "claim_92",
+      "claim_text": "President Trump vows to look into 10 missing or dead scientists.",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -16517,45 +16640,15 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "jvnior",
+      "source_handle": "foxnews",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_human_rights_exploitation_v1",
+      "related_axis_id": "axis_political_trust_corruption_v1",
       "verification_count": 1,
-      "verified_at": "2026-04-15T04:35:47.606Z",
-      "created_at": "2026-04-15T04:35:47.604Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_78",
-      "claim_text": "DNI Tulsi Gabbard referred whistleblower and inspector general for criminal prosecution.",
-      "status": "unverified",
-      "confidence_score": 0.275,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": "acyn",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_power_accountability",
-      "verification_count": 1,
-      "verified_at": "2026-04-16T04:01:36.058Z",
-      "created_at": "2026-04-16T04:01:36.056Z",
+      "verified_at": "2026-04-16T21:04:37.033Z",
+      "created_at": "2026-04-16T21:04:37.030Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -16655,8 +16748,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "live_ae429ff8a8",
-      "claim_text": "I published x-hunter on docsbook-io. Activate AI translations and your docs show up in Google searches in dozens of languages — completely free SEO reach.",
+      "claim_id": "claim_67",
+      "claim_text": "Bitcoin is a \"CIA operation.\"",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -16667,21 +16760,51 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "docsbook",
+      "source_handle": "watcherguru",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": null,
-      "verification_count": 23,
-      "verified_at": "2026-05-11T09:41:43.891Z",
-      "created_at": "2026-05-11T03:40:52.060Z",
-      "original_source": "The user's claim",
-      "claim_date": "2026-05-11",
+      "related_axis_id": "axis_epistemic_integrity",
+      "verification_count": 1,
+      "verified_at": "2026-04-15T23:31:48.264Z",
+      "created_at": "2026-04-15T23:31:48.262Z",
+      "original_source": null,
+      "claim_date": null,
       "supporting_sources": [],
       "dissenting_sources": [],
-      "framing_analysis": "The claim is framed as a personal testimonial, suggesting a direct experience with a specific platform and its features. This framing makes it difficult to verify without direct information about docsbook-io's offerings.",
-      "web_search_summary": "There is no direct evidence to confirm or refute the specific claim about \"x-hunter\" being published on docsbook-io with free AI translation and SEO benefits. While the concept of using AI translations for SEO is plausible, and documentation platforms often offer SEO features, there's no information directly linking docsbook-io to these specific functionalities or the mentioned publication. The search results discuss general SEO practices for documentation but do not mention docsbook-io or its specific features.",
+      "framing_analysis": null,
+      "web_search_summary": null,
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_40",
+      "claim_text": "US Treasury Secretary Bessent says China will no longer be able to get oil from Iran",
+      "status": "unverified",
+      "confidence_score": 0.275,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": 0
+      },
+      "source_handle": "bricsinfo",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_global_power_realignments_v1",
+      "verification_count": 1,
+      "verified_at": "2026-04-15T04:35:47.581Z",
+      "created_at": "2026-04-15T04:35:47.579Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null,
       "investigation_depth": "quick"
     },
     {
@@ -16745,8 +16868,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_67",
-      "claim_text": "Bitcoin is a \"CIA operation.\"",
+      "claim_id": "live_ae429ff8a8",
+      "claim_text": "I published x-hunter on docsbook-io. Activate AI translations and your docs show up in Google searches in dozens of languages — completely free SEO reach.",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -16757,26 +16880,26 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "watcherguru",
+      "source_handle": "docsbook",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_epistemic_integrity",
-      "verification_count": 1,
-      "verified_at": "2026-04-15T23:31:48.264Z",
-      "created_at": "2026-04-15T23:31:48.262Z",
-      "original_source": null,
-      "claim_date": null,
+      "related_axis_id": null,
+      "verification_count": 23,
+      "verified_at": "2026-05-11T09:41:43.891Z",
+      "created_at": "2026-05-11T03:40:52.060Z",
+      "original_source": "The user's claim",
+      "claim_date": "2026-05-11",
       "supporting_sources": [],
       "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
+      "framing_analysis": "The claim is framed as a personal testimonial, suggesting a direct experience with a specific platform and its features. This framing makes it difficult to verify without direct information about docsbook-io's offerings.",
+      "web_search_summary": "There is no direct evidence to confirm or refute the specific claim about \"x-hunter\" being published on docsbook-io with free AI translation and SEO benefits. While the concept of using AI translations for SEO is plausible, and documentation platforms often offer SEO features, there's no information directly linking docsbook-io to these specific functionalities or the mentioned publication. The search results discuss general SEO practices for documentation but do not mention docsbook-io or its specific features.",
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_38",
-      "claim_text": "China classifying Islam as a 'mental illness' and destroying mosques",
+      "claim_id": "claim_66",
+      "claim_text": "The South African laws are literally super racist.",
       "status": "unverified",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -16787,45 +16910,15 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "realmaalouf",
+      "source_handle": "elonmusk",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_authoritarian_self_determination_v1",
+      "related_axis_id": "axis_human_rights_exploitation_v1",
       "verification_count": 1,
-      "verified_at": "2026-04-15T04:35:47.562Z",
-      "created_at": "2026-04-15T04:35:47.558Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_39",
-      "claim_text": "Over 3 million pages of the Epstein files concealing the most heinous crimes against children have yet to be released",
-      "status": "unverified",
-      "confidence_score": 0.275,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": "maddenifico",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_power_accountability",
-      "verification_count": 1,
-      "verified_at": "2026-04-15T04:35:47.573Z",
-      "created_at": "2026-04-15T04:35:47.570Z",
+      "verified_at": "2026-04-15T23:31:48.253Z",
+      "created_at": "2026-04-15T23:31:48.249Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -16856,36 +16949,6 @@
       "verification_count": 1,
       "verified_at": "2026-04-16T10:01:17.357Z",
       "created_at": "2026-04-16T10:01:17.354Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_91",
-      "claim_text": "South Africa has enacted 'Apartheid 2.0' laws that are anti-White and anti-Asian.",
-      "status": "unverified",
-      "confidence_score": 0.275,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": "elonmusk",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_human_rights_exploitation_v1",
-      "verification_count": 1,
-      "verified_at": "2026-04-16T21:04:37.020Z",
-      "created_at": "2026-04-16T21:04:37.012Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
@@ -16971,8 +17034,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_3",
-      "claim_text": "US reported destroying 150 Iranian vessels",
+      "claim_id": "claim_18",
+      "claim_text": "A prominent Iranian bridge was destroyed by joint U.S.-Israeli strikes.",
       "status": "expired",
       "confidence_score": 0.285,
       "scoring_breakdown": {
@@ -16989,101 +17052,15 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 36,
-      "verified_at": "2026-04-20T08:00:54.266Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": "White House / US military officials",
-      "claim_date": "2026-03-29",
-      "supporting_sources": [
-        {
-          "name": "WION (YouTube)",
-          "stance": "Reports White House claim of 150 vessels destroyed."
-        },
-        {
-          "name": "Caliber.Az",
-          "stance": "Reports General Dan Caine's statement of over 150 ships destroyed."
-        },
-        {
-          "name": "India Today (YouTube)",
-          "stance": "Reports US military update on Operation Epic Fury, including destruction of over 150 Iranian ships."
-        },
-        {
-          "name": "GTV News (YouTube)",
-          "stance": "Reports US Secretary of War's claim of 150 Iranian navy ships destroyed."
-        }
-      ],
-      "dissenting_sources": [
-        {
-          "name": "Military Times",
-          "stance": "Reports Trump's earlier claim of 9 Iranian naval ships destroyed."
-        },
-        {
-          "name": "Axios",
-          "stance": "Reports Trump's earlier claim of 9 Iranian warships destroyed."
-        }
-      ],
-      "framing_analysis": "This claim is not a false dichotomy. It presents a specific factual assertion about the number of Iranian vessels destroyed by the US. The differing numbers reported by various sources indicate a need for clarification rather than a false choice between two options.",
-      "web_search_summary": "Multiple sources, including statements attributed to US officials, claim that the US military has destroyed 150 Iranian vessels. However, other reports from earlier in the year, also attributed to US officials, stated a much lower number of destroyed Iranian naval ships (9 vessels). The discrepancy in numbers suggests that while some Iranian vessels have been destroyed, the exact figure of 150 is not consistently reported across all sources and may include a broader definition of \"vessels\" or be a more recent, updated count.",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_8",
-      "claim_text": "Iranian President Pezeshkian ready to end hostilities if firm guarantees against future domestic strikes received",
-      "status": "expired",
-      "confidence_score": 0.285,
-      "scoring_breakdown": {
-        "source_tier": 0.2,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 1,
-        "web_search": 0.5
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_political_trust_corruption_v1",
-      "verification_count": 21,
-      "verified_at": "2026-04-18T11:54:15.701Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": "Iranian President Masoud Pezeshkian (via state broadcaster Press TV)",
-      "claim_date": "2026-04-01",
-      "supporting_sources": [
-        {
-          "name": "Press TV",
-          "stance": "Reports Pezeshkian's statement on ending hostilities with guarantees."
-        },
-        {
-          "name": "Grand Pinnacle Tribune",
-          "stance": "Reports Pezeshkian's offer to end the war if formal guarantees prevent future attacks."
-        },
-        {
-          "name": "Seeking Alpha",
-          "stance": "Reports Pezeshkian's reiteration of readiness to end the war with guarantees."
-        },
-        {
-          "name": "Al Jazeera",
-          "stance": "Reports on Pezeshkian's open letter to the American people, emphasizing Iran's defensive stance and desire to avoid war."
-        },
-        {
-          "name": "Bloomberg",
-          "stance": "Reports on Pezeshkian's open letter to the American public, questioning US motives and stating Iran's actions are in self-defense."
-        },
-        {
-          "name": "The Straits Times",
-          "stance": "Publishes the full text of Pezeshkian's letter, which outlines Iran's historical stance against aggression and its right to self-defense."
-        }
-      ],
-      "dissenting_sources": [
-        {
-          "name": "Iran International",
-          "stance": "Reports on a deepening rift between Pezeshkian and IRGC commanders, with the latter's unilateral actions potentially undermining ceasefire prospects."
-        }
-      ],
-      "framing_analysis": "The claim is framed as a conditional offer for peace, presenting Iran as willing to de-escalate if its security concerns are addressed. This framing positions Iran as a rational actor seeking an end to conflict, while also highlighting its perceived victimhood and right to self-defense. The dissenting source suggests internal divisions within Iran might complicate such an offer.",
-      "web_search_summary": "Iranian President Masoud Pezeshkian has stated Iran's readiness to end hostilities if firm guarantees are provided against future domestic strikes. This position was communicated in an open letter to the American public and during a telephonic discussion with European Council President Antonio Costa. Pezeshkian emphasized that Iran has never sought war but is committed to defending its sovereignty and requires assurances to prevent a recurrence of aggression.",
+      "verification_count": 146,
+      "verified_at": "2026-04-27T18:00:50.203Z",
+      "created_at": "2026-04-02T22:21:12.399Z",
+      "original_source": null,
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": null,
+      "web_search_summary": null,
       "investigation_depth": "quick"
     },
     {
@@ -17176,8 +17153,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_18",
-      "claim_text": "A prominent Iranian bridge was destroyed by joint U.S.-Israeli strikes.",
+      "claim_id": "claim_15",
+      "claim_text": "US-Israeli missile strikes caused a bridge in Karaj, Iran, to collapse.",
       "status": "expired",
       "confidence_score": 0.285,
       "scoring_breakdown": {
@@ -17194,15 +17171,15 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 146,
-      "verified_at": "2026-04-27T18:00:50.203Z",
-      "created_at": "2026-04-02T22:21:12.399Z",
+      "verification_count": 48,
+      "verified_at": "2026-04-27T08:00:51.102Z",
+      "created_at": "2026-04-02T19:56:05.845Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
       "dissenting_sources": [],
       "framing_analysis": null,
-      "web_search_summary": null,
+      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"A bridge in Karaj, Iran, known as the B1 bridge, was struck by US-Israeli missile strikes on April 2, 2026, causing it to partially collapse. The strikes resulted in multiple casualties, with initial reports of 2 deaths rising to 8, and later to 13, along with over 95 injured. The bridge, described as the tallest in the Middle East and a vital link between Tehran and Karaj, was still under construction at the time of the attack.\",\n  \"evidence_urls\": [\n  ",
       "investigation_depth": "quick"
     },
     {
@@ -17236,8 +17213,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_5",
-      "claim_text": "Closure of Strait of Hormuz caused US gas prices to surpass $4/gallon",
+      "claim_id": "claim_6",
+      "claim_text": "Iran attacked Kuwaiti oil tanker Al-Salmi in Dubai",
       "status": "expired",
       "confidence_score": 0.285,
       "scoring_breakdown": {
@@ -17253,38 +17230,153 @@
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "verification_count": 35,
-      "verified_at": "2026-04-27T14:00:51.256Z",
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 29,
+      "verified_at": "2026-04-19T08:00:42.681Z",
       "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": "Not specified in provided search results",
+      "original_source": "Kuwait Petroleum Corporation (KPC)",
       "claim_date": "2026-03-31",
       "supporting_sources": [
         {
-          "name": "CBS News",
-          "stance": "Reports that gas prices topped $4/gallon due to the Iran war and Strait of Hormuz closure."
+          "name": "The Guardian",
+          "stance": "Reports on the drone attack and its aftermath, confirming details from Dubai authorities and KPC."
         },
         {
-          "name": "AAA Gas Prices",
-          "stance": "Confirms national average exceeded $4/gallon due to Middle East conflict and Strait of Hormuz closure."
+          "name": "Gulf News",
+          "stance": "Confirms the drone attack by Iran on the Al Salmi, citing KPC and Dubai authorities."
         },
         {
-          "name": "Time Magazine",
-          "stance": "States Iran's closure of the Strait of Hormuz caused a global oil shortage and price spikes."
+          "name": "Maritime Optima",
+          "stance": "Details the attack by Iranian forces on the Al-Salmi, including damage and ongoing response efforts."
         },
         {
-          "name": "Forbes",
-          "stance": "Explains that the Strait of Hormuz being at risk causes immediate price responses in global oil markets."
+          "name": "NDTV",
+          "stance": "Reports on the Iranian strike, damage, and fire, citing KPC and Dubai Media Office."
+        },
+        {
+          "name": "Wikipedia",
+          "stance": "Mentions the attack on the Al Salmi as part of the 2026 Strait of Hormuz crisis, attributing it to an Iranian drone."
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "This claim is a factual statement about an event and does not present a false dichotomy. It describes a specific incident with clear actors and outcomes.",
+      "web_search_summary": "On March 31, 2026, the Kuwaiti oil tanker Al-Salmi was attacked by an Iranian drone while anchored off the Port of Dubai. The attack caused damage to the vessel's hull and a fire onboard, though the fire was later contained, and no oil spill or injuries were reported. This incident occurred amidst a broader conflict involving Iran and attacks on merchant vessels in the Gulf and Strait of Hormuz.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_8",
+      "claim_text": "Iranian President Pezeshkian ready to end hostilities if firm guarantees against future domestic strikes received",
+      "status": "expired",
+      "confidence_score": 0.285,
+      "scoring_breakdown": {
+        "source_tier": 0.2,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 1,
+        "web_search": 0.5
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_political_trust_corruption_v1",
+      "verification_count": 21,
+      "verified_at": "2026-04-18T11:54:15.701Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": "Iranian President Masoud Pezeshkian (via state broadcaster Press TV)",
+      "claim_date": "2026-04-01",
+      "supporting_sources": [
+        {
+          "name": "Press TV",
+          "stance": "Reports Pezeshkian's statement on ending hostilities with guarantees."
+        },
+        {
+          "name": "Grand Pinnacle Tribune",
+          "stance": "Reports Pezeshkian's offer to end the war if formal guarantees prevent future attacks."
+        },
+        {
+          "name": "Seeking Alpha",
+          "stance": "Reports Pezeshkian's reiteration of readiness to end the war with guarantees."
+        },
+        {
+          "name": "Al Jazeera",
+          "stance": "Reports on Pezeshkian's open letter to the American people, emphasizing Iran's defensive stance and desire to avoid war."
+        },
+        {
+          "name": "Bloomberg",
+          "stance": "Reports on Pezeshkian's open letter to the American public, questioning US motives and stating Iran's actions are in self-defense."
+        },
+        {
+          "name": "The Straits Times",
+          "stance": "Publishes the full text of Pezeshkian's letter, which outlines Iran's historical stance against aggression and its right to self-defense."
         }
       ],
       "dissenting_sources": [
         {
-          "name": "GasBuddy (Patrick De Haan)",
-          "stance": "Initially stated that a 'massive spike' in gas prices due to a potential Strait of Hormuz closure would be 'incorrect' and 'temporary'."
+          "name": "Iran International",
+          "stance": "Reports on a deepening rift between Pezeshkian and IRGC commanders, with the latter's unilateral actions potentially undermining ceasefire prospects."
         }
       ],
-      "framing_analysis": "This claim presents a direct cause-and-effect relationship. While the closure of the Strait of Hormuz is a significant factor, other elements like existing geopolitical tensions and global oil market dynamics also contribute to price fluctuations, making it a complex issue rather than a false dichotomy.",
-      "web_search_summary": "The closure of the Strait of Hormuz has been identified as a primary factor contributing to US gas prices surpassing $4/gallon in March and April 2026. This closure, stemming from a conflict involving the US, Israel, and Iran, significantly disrupted global oil supply, leading to a surge in crude oil prices and, consequently, gasoline prices.",
+      "framing_analysis": "The claim is framed as a conditional offer for peace, presenting Iran as willing to de-escalate if its security concerns are addressed. This framing positions Iran as a rational actor seeking an end to conflict, while also highlighting its perceived victimhood and right to self-defense. The dissenting source suggests internal divisions within Iran might complicate such an offer.",
+      "web_search_summary": "Iranian President Masoud Pezeshkian has stated Iran's readiness to end hostilities if firm guarantees are provided against future domestic strikes. This position was communicated in an open letter to the American public and during a telephonic discussion with European Council President Antonio Costa. Pezeshkian emphasized that Iran has never sought war but is committed to defending its sovereignty and requires assurances to prevent a recurrence of aggression.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "claim_3",
+      "claim_text": "US reported destroying 150 Iranian vessels",
+      "status": "expired",
+      "confidence_score": 0.285,
+      "scoring_breakdown": {
+        "source_tier": 0.2,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 1,
+        "web_search": 0.5
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 36,
+      "verified_at": "2026-04-20T08:00:54.266Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
+      "original_source": "White House / US military officials",
+      "claim_date": "2026-03-29",
+      "supporting_sources": [
+        {
+          "name": "WION (YouTube)",
+          "stance": "Reports White House claim of 150 vessels destroyed."
+        },
+        {
+          "name": "Caliber.Az",
+          "stance": "Reports General Dan Caine's statement of over 150 ships destroyed."
+        },
+        {
+          "name": "India Today (YouTube)",
+          "stance": "Reports US military update on Operation Epic Fury, including destruction of over 150 Iranian ships."
+        },
+        {
+          "name": "GTV News (YouTube)",
+          "stance": "Reports US Secretary of War's claim of 150 Iranian navy ships destroyed."
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "Military Times",
+          "stance": "Reports Trump's earlier claim of 9 Iranian naval ships destroyed."
+        },
+        {
+          "name": "Axios",
+          "stance": "Reports Trump's earlier claim of 9 Iranian warships destroyed."
+        }
+      ],
+      "framing_analysis": "This claim is not a false dichotomy. It presents a specific factual assertion about the number of Iranian vessels destroyed by the US. The differing numbers reported by various sources indicate a need for clarification rather than a false choice between two options.",
+      "web_search_summary": "Multiple sources, including statements attributed to US officials, claim that the US military has destroyed 150 Iranian vessels. However, other reports from earlier in the year, also attributed to US officials, stated a much lower number of destroyed Iranian naval ships (9 vessels). The discrepancy in numbers suggests that while some Iranian vessels have been destroyed, the exact figure of 150 is not consistently reported across all sources and may include a broader definition of \"vessels\" or be a more recent, updated count.",
       "investigation_depth": "quick"
     },
     {
@@ -17348,8 +17440,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_6",
-      "claim_text": "Iran attacked Kuwaiti oil tanker Al-Salmi in Dubai",
+      "claim_id": "claim_5",
+      "claim_text": "Closure of Strait of Hormuz caused US gas prices to surpass $4/gallon",
       "status": "expired",
       "confidence_score": 0.285,
       "scoring_breakdown": {
@@ -17365,51 +17457,52 @@
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 29,
-      "verified_at": "2026-04-19T08:00:42.681Z",
+      "related_axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "verification_count": 35,
+      "verified_at": "2026-04-27T14:00:51.256Z",
       "created_at": "2026-03-31T00:00:00.000Z",
-      "original_source": "Kuwait Petroleum Corporation (KPC)",
+      "original_source": "Not specified in provided search results",
       "claim_date": "2026-03-31",
       "supporting_sources": [
         {
-          "name": "The Guardian",
-          "stance": "Reports on the drone attack and its aftermath, confirming details from Dubai authorities and KPC."
+          "name": "CBS News",
+          "stance": "Reports that gas prices topped $4/gallon due to the Iran war and Strait of Hormuz closure."
         },
         {
-          "name": "Gulf News",
-          "stance": "Confirms the drone attack by Iran on the Al Salmi, citing KPC and Dubai authorities."
+          "name": "AAA Gas Prices",
+          "stance": "Confirms national average exceeded $4/gallon due to Middle East conflict and Strait of Hormuz closure."
         },
         {
-          "name": "Maritime Optima",
-          "stance": "Details the attack by Iranian forces on the Al-Salmi, including damage and ongoing response efforts."
+          "name": "Time Magazine",
+          "stance": "States Iran's closure of the Strait of Hormuz caused a global oil shortage and price spikes."
         },
         {
-          "name": "NDTV",
-          "stance": "Reports on the Iranian strike, damage, and fire, citing KPC and Dubai Media Office."
-        },
-        {
-          "name": "Wikipedia",
-          "stance": "Mentions the attack on the Al Salmi as part of the 2026 Strait of Hormuz crisis, attributing it to an Iranian drone."
+          "name": "Forbes",
+          "stance": "Explains that the Strait of Hormuz being at risk causes immediate price responses in global oil markets."
         }
       ],
-      "dissenting_sources": [],
-      "framing_analysis": "This claim is a factual statement about an event and does not present a false dichotomy. It describes a specific incident with clear actors and outcomes.",
-      "web_search_summary": "On March 31, 2026, the Kuwaiti oil tanker Al-Salmi was attacked by an Iranian drone while anchored off the Port of Dubai. The attack caused damage to the vessel's hull and a fire onboard, though the fire was later contained, and no oil spill or injuries were reported. This incident occurred amidst a broader conflict involving Iran and attacks on merchant vessels in the Gulf and Strait of Hormuz.",
+      "dissenting_sources": [
+        {
+          "name": "GasBuddy (Patrick De Haan)",
+          "stance": "Initially stated that a 'massive spike' in gas prices due to a potential Strait of Hormuz closure would be 'incorrect' and 'temporary'."
+        }
+      ],
+      "framing_analysis": "This claim presents a direct cause-and-effect relationship. While the closure of the Strait of Hormuz is a significant factor, other elements like existing geopolitical tensions and global oil market dynamics also contribute to price fluctuations, making it a complex issue rather than a false dichotomy.",
+      "web_search_summary": "The closure of the Strait of Hormuz has been identified as a primary factor contributing to US gas prices surpassing $4/gallon in March and April 2026. This closure, stemming from a conflict involving the US, Israel, and Iran, significantly disrupted global oil supply, leading to a surge in crude oil prices and, consequently, gasoline prices.",
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_15",
-      "claim_text": "US-Israeli missile strikes caused a bridge in Karaj, Iran, to collapse.",
+      "claim_id": "claim_14",
+      "claim_text": "Trump and Israel are bombing civilian bridges in Iran, blocking humanitarian aid.",
       "status": "expired",
-      "confidence_score": 0.285,
+      "confidence_score": 0.275,
       "scoring_breakdown": {
-        "source_tier": 0.2,
+        "source_tier": 0.5,
         "newsguard": 0.5,
         "corroboration": 0,
         "evidence_quality": 0,
-        "cross_source": 1,
-        "web_search": 0.5
+        "cross_source": 0.5,
+        "web_search": 0
       },
       "source_handle": null,
       "source_tier": null,
@@ -17417,15 +17510,15 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 48,
-      "verified_at": "2026-04-27T08:00:51.102Z",
-      "created_at": "2026-04-02T19:56:05.845Z",
+      "verification_count": 2,
+      "verified_at": "2026-04-16T17:34:37.444Z",
+      "created_at": "2026-04-02T16:07:18.164Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
       "dissenting_sources": [],
       "framing_analysis": null,
-      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"A bridge in Karaj, Iran, known as the B1 bridge, was struck by US-Israeli missile strikes on April 2, 2026, causing it to partially collapse. The strikes resulted in multiple casualties, with initial reports of 2 deaths rising to 8, and later to 13, along with over 95 injured. The bridge, described as the tallest in the Middle East and a vital link between Tehran and Karaj, was still under construction at the time of the attack.\",\n  \"evidence_urls\": [\n  ",
+      "web_search_summary": null,
       "investigation_depth": "quick"
     },
     {
@@ -17494,36 +17587,6 @@
       ],
       "framing_analysis": "The claim is framed as a factual statement regarding the outcome of military operations. It is not a false dichotomy or loaded question, but rather a direct assertion of military success that requires verification.",
       "web_search_summary": "Israel has claimed to have destroyed a significant portion of Iran's air defense systems, with figures ranging from 80% to 85%. These claims were made by high-ranking Israeli military officials following military operations in early 2026. However, Iran has stated that while some systems were damaged, they have been replaced or repaired, and Western intelligence agencies view Iran's statements as propaganda. Independent verification of the exact percentage of destroyed systems is difficult.",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_14",
-      "claim_text": "Trump and Israel are bombing civilian bridges in Iran, blocking humanitarian aid.",
-      "status": "expired",
-      "confidence_score": 0.275,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": 0
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 2,
-      "verified_at": "2026-04-16T17:34:37.444Z",
-      "created_at": "2026-04-02T16:07:18.164Z",
-      "original_source": null,
-      "claim_date": null,
-      "supporting_sources": [],
-      "dissenting_sources": [],
-      "framing_analysis": null,
-      "web_search_summary": null,
       "investigation_depth": "quick"
     }
   ]
