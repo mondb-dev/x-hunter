@@ -1,69 +1,83 @@
-- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] Search for "Final Polarized Identification Data Gathering" on X yielded no relevant public posts, confirming it's likely an internal or meta-topic not discussed publicly.
-- Conflicting narratives around "Bato's escape" from the Senate dominate discourse, with official reports often clashing with public suspicions of staging and manipulation, directly impacting "Integrity of Information and Social Media Manipulation" and "Trust in Political Institutions and Anti-Corruption Efforts."
-- @SaltAndReality (https://x.com/SaltAndReality/status/2054757749591072770) claims the Senate incident was "staged to start a scenario na magka mass symphaty and uprising," referencing a Facebook post by Ramon Tulfo. This post alleges that 37 shots were fired by personnel under Mao Aplasca and that Senate President Alan Peter Cayetano and Senator Bato staged the commotion to gain public sympathy and prevent VP Sara's impeachment. This is significant evidence for deliberate disinformation aimed at shielding powerful actors from accountability.
-- Replies to @SaltAndReality's post, such as "further proof of what they can actually do" and "Diversionary tactics and exploiting loophole," reinforce the public perception of strategic manipulation.
-- @bpiyaaaa (https://x.com/bpiyaaaa/status/2054783237516632127) questions whether an "NBI agent" who fired warning shots was "planted," adding to the narrative of a manipulated event.
-- @bncdotph (https://x.com/bncdotph/status/2054811425475109365) reports Senate President Cayetano dismissing rumors of a "diversionary tactic," which paradoxically highlights the prevalence and public belief in such rumors.
-- @jesusfalcis (https://x.com/jesusfalcis/status/2054769211101286486) calls for strong accountability for multiple political figures involved in the incident, reflecting a public demand for justice against perceived abuses of power.
-- @ksncoded (https://x.com/ksncoded/status/2054544089597817042) urges public engagement to counter corruption and dishonesty, aligning with the need for transparency and accountability.
-- @PilipinasToday_ (https://x.com/PilipinasToday_/status/2054435819117584604) reports "missing" documents in a Senate Blue Ribbon Committee investigation into flood control projects, suggesting potential cover-ups and a lack of transparency within political institutions.
-
-[NOTED] "senate" — 22 posts, no follow-up this cycle
-[NOTED] "why" — 9 posts, no follow-up this cycle
-[NOTED] "know" — 9 posts, no follow-up this cycle
-[NOTED] "trump" — 7 posts, no follow-up this cycle
-[NOTED] "government" — 6 posts, no follow-up this cycle
-[NOTED] "nbi" — 6 posts, no follow-up this cycle
-[NOTED] "shooting incident" — 6 posts, no follow-up this cycle
-[NOTED] "happened" — 5 posts, no follow-up this cycle
-[NOTED] "thursday" — 5 posts, no follow-up this cycle
-[NOTED] "see" — 4 posts, no follow-up this cycle
-[NOTED] "philippines" — 4 posts, no follow-up this cycle
-[NOTED] "thought" — 3 posts, no follow-up this cycle
-[NOTED] "filipino people" — 3 posts, no follow-up this cycle
-[NOTED] "understand" — 3 posts, no follow-up this cycle
-[NOTED] "going" — 3 posts, no follow-up this cycle
-[NOTED] "people" — 11 posts, no follow-up this cycle
-[NOTED] "make" — 8 posts, no follow-up this cycle
-[NOTED] "look" — 5 posts, no follow-up this cycle
-[NOTED] "life" — 5 posts, no follow-up this cycle
-[NOTED] "love" — 4 posts, no follow-up this cycle
-[NOTED] "back" — 4 posts, no follow-up this cycle
-[NOTED] "right" — 4 posts, no follow-up this cycle
-[NOTED] "imagine" — 4 posts, no follow-up this cycle
-[NOTED] "yes" — 4 posts, no follow-up this cycle
-[NOTED] "come" — 4 posts, no follow-up this cycle
-[NOTED] "sometimes" — 1 post, no follow-up this cycle
-[NOTED] "usa" — 1 post, no follow-up this cycle
-[NOTED] "guy" — 1 post, no follow-up this cycle
-[NOTED] "man" — 1 post, no follow-up this cycle
-[NOTED] "battle" — 1 post, no follow-up this cycle
-[NOTED] "sen" — 1 post, no follow-up this cycle
-[NOTED] "don" — 1 post, no follow_up this cycle
-[NOTED] "nigga" — 1 post, no follow-up this cycle
-[NOTED] "imessage" — 1 post, no follow-up this cycle
-[NOTED] "chinese" — 1 post, no follow-up this cycle
-[NOTED] "pnp" — 1 post, no follow-up this cycle
-[NOTED] "satisfaction" — 1 post, no follow-up this cycle
-[NOTED] "kiko" — 1 post, no follow-up this cycle
-[NOTED] "china" — 1 post, no follow-up this cycle
-[NOTED] "nintendo" — 1 post, no follow-up this cycle
-[NOTED] "iran" — 1 post, no follow-up this cycle
-[NOTED] "digital id" — 1 post, no follow-up this cycle
-[NOTED] "fic" — 1 post, no follow-up this cycle
-[NOTED] "bruno" — 1 post, no follow-up this cycle
-[NOTED] "xi" — 1 post, no follow-up this cycle
-[NOTED] "dds" — 1 post, no follow-up this cycle
-[NOTED] "duterte supporters" — 1 post, no follow-up this cycle
-[NOTED] "phine" — 1 post, no follow-up this cycle
-[NOTED] "troy" — 1 post, no follow-up this cycle
-[NOTED] "meatball" — 1 post, no follow-up this cycle
-[NOTED] "ai crap" — 1 post, no follow-up this cycle
-[NOTED] "ai generated" — 1 post, no follow-up this cycle
-[NOTED] "coma" — 1 post, no follow-up this cycle
-[NOTED] "nba finals" — 1 post, no follow-up this cycle
-[NOTED] "mother surfing" — 1 post, no follow-up this cycle
-[NOTED] "man sleeps" — 1 post, no follow-up this cycle
-[NOTED] "bad memory" — 1 post, no follow-up this cycle
-[NOTED] "shakira" — 1 post, no follow-up this cycle
-[NOTED] "pulis" — 1 post, no follow-up this cycle
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @MarioNawfal shares a dramatic video of a Chattanooga police officer saving a family from a burning apartment, which some commenters label as "propaganda" while others praise it as heroic. {https://x.com/MarioNawfal/status/2054620438613963166}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @ricci_richy criticizes Robin Padilla for cancelling a farmers' hearing due to a "Senate shakeup," linking it to political maneuvering. {https://x.com/ricci_richy/status/2054829444548989058}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @inquirerdotnet reports on "Rodrigo Duterte’s ICC detention center" in a novel frame, suggesting a shift in his legal status. {https://x.com/inquirerdotnet/status/2054843671011307597}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @princesalamwane criticizes a video of someone putting posters on an animal's fur, calling it "diabolical." {https://x.com/princesalamwane/status/2054629413052952893}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @stuckinrevmode shares a Women's Health magazine cover featuring Hannah Waddingham, with headlines that touch on body image and societal expectations. {https://x.com/stuckinrevmode/status/2054558607916634261}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @soigomaa shares a distorted image of a man with the caption "But nowadays they run our country," implying criticism of leadership. {https://x.com/soigomaa/status/2054649181739069912}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @plomoterap30 asks for opinions on a video showing a pig's head being held by a mechanical device, likely for industrial processing. {https://x.com/plomoterap30/status/2054405007487766534}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @Mang_INASAR suggests "ANTONIO TRILLANES FOR DILG SECRETARY!" tagging @bongbongmarcos, indicating a political proposal. {https://x.com/Mang_INASAR/status/2054787447368908847}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @MarioNawfal shares a video of a woman doing an extreme dive, with a sarcastic comment about "internal organs scrambled." {https://x.com/MarioNawfal/status/2054834104345002024}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @Eng_china5 shares a video of a bridesmaid protecting the bride, implying a supportive act. {https://x.com/Eng_china5/status/2054836660861370867}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @Vava_n11 shares a video of a man helping a woman with a stained dress, with the caption "We must learn from that young man to do good." {https://x.com/Vava_n11/status/2054610466890973418}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @chanchi_evo1 shares an infographic about senators who have "gone home before the fireworks," implying political maneuvering. {https://x.com/chanchi_evo1/status/2054773068179079679}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @krassenstein reports on leaked information about Hunter Biden's alleged travel to China with his father in 2022. {https://x.com/krassenstein/status/2054293900924174694}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @nabunturanguy criticizes Jonvic Remulla as "useless" and questions why he isn't being held accountable. {https://x.com/nabunturanguy/status/2054817443110150320}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @mlq3 questions if a record will stand, referring to Camilo Osias's shortest term as Senate President. {https://x.com/mlq3/status/2054814967464091989}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @PhilstarNews quotes Jodi Sta. Maria on "YOU BECOME THE PERSON YOU WORSHIP" amid reports of Senator Bato dela Rosa fleeing. {https://x.com/PhilstarNews/status/2054810544427970922}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @CheekyLady1027 shares Antonio Trillanes' criticism of Jonvic Remulla for allowing fugitives to be free. {https://x.com/CheekyLady1027/status/2054815985757282608}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @News5PH reports that Bato dela Rosa's wife apologized for the chaos in the Senate. {https://x.com/News5PH/status/2054848147029917860}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @Valvoline promotes a FIFA World Cup trip contest. {https://x.com/Valvoline/status/2042627572849070277}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @jesusfalcis satirically comments on Senator Robin Padilla's reaction to the "Senate under attack." {https://x.com/jesusfalcis/status/2054836834438647873}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @1eozinho01 shares a humorous photoshoot of a woman appearing as a centaur. {https://x.com/1eozinho01/status/2054144424330789329}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @22three7eleven states "The Dutertes are not Filipinos worth dying for." {https://x.com/22three7eleven/status/2054537439251968300}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @JobPablo criticizes political figures as "power-hungry, greedy" and says "the entire Philippines already knows your true colors!" {https://x.com/JobPablo/status/2054752186308219137}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @ricci_richy argues that an ICC warrant is lawful, countering a claim that Bato dela Rosa is not a fugitive. {https://x.com/ricci_richy/status/2054817581215957261}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @fierceLady08 comments "One event. Different stories." regarding the Senate situation. {https://x.com/fierceLady08/status/2054824621489435046}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @JesseBWatters reports "BREAKING: THE CIA JUST RAIDED TULSI GABBARD’S OFFICE…" {https://x.com/JesseBWatters/status/2054725929130201399}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @omoelerinjare1 shares a Ring doorbell video of a police officer saving a family from a burning apartment. {https://x.com/omoelerinjare1/status/2054473537134743669}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @blackbearpics shares a movie promotion for "In The Grey." {https://x.com/blackbearpics/status/2054615511980199973}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @belgeseIdunyasi shares a video of a bull's reaction to not being fed. {https://x.com/belgeseIdunyasi/status/2054651253834027370}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @ABSCBNNews reports "Bato dela Rosa now officially included in ICC's wanted persons list." {https://x.com/ABSCBNNews/status/2054495911464853577}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @douga111www makes an observation about skin color and shaving. {https://x.com/douga111www/status/2054572516585414822}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @SwearingSport shares a video of a woman at a sporting event with a surprising caption. {https://x.com/SwearingSport/status/2054517017886208394}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @gonegirlfriend shares a humorous text exchange about "Jewish mothers." {https://x.com/gonegirlfriend/status/2054589006512365856}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @Emarged shares a humorous post about "rice at home" in relation to China's travel statistics. {https://x.com/Emarged/status/2054552027674353863}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @JFreiress_ reports on a dog committing suicide in Brazil, which is framed as a suspicious death by commenters. {https://x.com/JFreiress_/status/2054246699590119503}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @meatymcsorley shares graffiti on a construction site with political commentary. {https://x.com/meatymcsorley/status/2054228116500062652}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @heyitsjgirly shares a collage of public figures as part of "news feed cleansing." {https://x.com/heyitsjgirly/status/2054720199304347818}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @leisbeth_recto lists several politicians as the "MOST HATED PINOYS right now." {https://x.com/leisbeth_recto/status/2054579440567640436}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @succubus_20 questions if a "shoot-out is staged" based on bullet hole placement. {https://x.com/succubus_20/status/2054850082764169308}
+- [NOTED] "senate" — 14 posts, no follow-up this cycle
+- [NOTED] "know" — 11 posts, no follow-up this cycle
+- [NOTED] "people" — 9 posts, no follow-up this cycle
+- [NOTED] "thank" — 4 posts, no follow-up this cycle
+- [NOTED] "call" — 4 posts, no follow-up this cycle
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @phtv_nocontext shares a screenshot from a Japanese news broadcast indicating Senator Dela Rosa is wanted by the ICC. {https://x.com/phtv_nocontext/status/2054788168654946316}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @_djchacha questions who will be held accountable if Bato is no longer in the Senate. {https://x.com/phtv_nocontext/status/2054788168654946316}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @gesperas questions the ballistics of a "shootout" in the Senate, implying it was staged. {https://x.com/gesperas/status/2054711333053186426}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @SenImeeMarcos calls the Senate incident an "insult to the Senate institution" and an "abuse of power." {https://x.com/SenImeeMarcos/status/2054751669502853240}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @iamJulianMiguel suggests Atty Darlene Berberabe deserves to be in the Senate more than "fucking troublemakers." {https://x.com/iamJulianMiguel/status/2054850420749840650}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @PGMNOfficial reports Malacañang's account of the Senate chaos, stating a warning shot came from Senate Sergeant-at-Arms Mao Aplasca. {https://x.com/PGMNOfficial/status/2054841176231211071}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @inquirerdotnet reports the Philippine peso hit a historic low against the US dollar. {https://x.com/inquirerdotnet/status/2054841812347429128}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @newswatchplusph reports Senate President Alan Peter Cayetano accusing the minority bloc of a "coup attempt." {https://x.com/newswatchplusph/status/2054863347166716382}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @wateralwayswet lists three things to be etched in history regarding the Senate shootout, including it being a "show." {https://x.com/wateralwayswet/status/2054841446906372607}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @jesusfalcis reports Alan Peter Cayetano getting "grilled by the journalists for inconsistencies and contradictions." {https://x.com/jesusfalcis/status/2054834801321132115}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @sam51824016070 shares a video of Xi Jinping welcoming Trump, with comments implying a strong diplomatic effort. {https://x.com/sam51824016070/status/2054820241977585797}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @joketerte30 questions if the target of a shooting was 7-footer, suggesting a staged event. {https://x.com/joketerte30/status/2054811589644296199}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @inquirerdotnet reports Senate President Alan Peter Cayetano signing a letter regarding impeachment articles against VP Sara Duterte. {https://x.com/inquirerdotnet/status/2054871930193183204}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @UnbowedVP questions the NBI after someone was caught. {https://x.com/UnbowedVP/status/2054575233668108385}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @ShaykhSulaiman reports Trump being silent when asked about Taiwan in front of President Xi. {https://x.com/ShaykhSulaiman/status/2054866932042436957}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @leisbeth_recto calls the newly installed Senate president a "TSINATOR." {https://x.com/leisbeth_recto/status/2054701094329299225}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @AJPlanetFriends suggests DILG Jonvic Remulla should resign. {https://x.com/AJPlanetFriends/status/2054838103949644040}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @inquirerdotnet reports Sen. Kiko Pangilinan shutting down rumors about being warned of Senate trouble. {https://x.com/inquirerdotnet/status/2054851773815214267}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @gmanews reports Alan Peter Cayetano responding to criticisms about his leadership. {https://x.com/gmanews/status/2054860867427033586}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @TristanNodalo reports former Senator Sonny Trillanes claiming the Senate gunfire incident was "staged" and "planned." {https://x.com/TristanNodalo/status/2054875112625913896}
+- [SPRINT: research] [CURIOSITY: sprint_final_polarized_topic_identification_dat] @PhilippineStar reports Alan Peter Cayetano reading a text message from Bato Dela Rosa's wife. {https://x.com/PhilippineStar/status/2054856721907290284}
+- [SPRINT: research] [CURIOSITY: sprint_final_topic_identification_dat] @CheekyLady1027 predicts a politician will end up "rotting in jail." {https://x.com/CheekyLady1027/status/2054875942590513613}
+- [SPRINT: research] [CURIOSITY: sprint_final_topic_identification_dat] @succubus_20 questions the staging of a shootout based on bullet hole placement. {https://x.com/succubus_20/status/2054850082764169308}
+- [SPRINT: research] [CURIOSITY: sprint_final_topic_identification_dat] @RommelFLopez asks "When aarestuhin si Alan Peter Cayetano?" (When will Alan Peter Cayetano be arrested?) {https://x.com/RommelFLopez/status/2054868375583764888}
+- [SPRINT: research] [CURIOSITY: sprint_final_topic_identification_dat] @ABSCBNNews reports that Senator Ronald dela Rosa's camp filed a very urgent manifestation for a temporary restraining order by the Supreme Court following Senate events. {https://x.com/ABSCBNNews/status/2054858353600549171}
+- [SPRINT: research] [CURIOSITY: sprint_final_topic_identification_dat] @inquirerdotnet reports DICT Secretary Henry Aguda warned that social media users spreading false information online about the Senate shooting incident will be punished. {https://x.com/inquirerdotnet/status/2054874422763225510}
+- [SPRINT: research] [CURIOSITY: sprint_final_topic_identification_dat] @dailynetizen24 discusses the "possibility" that the Senate can be held accountable for Sen. Bato dela Rosa's escape. {https://x.com/dailynetizen24/status/2054812605144088915}
+- [SPRINT: research] [CURIOSITY: sprint_final_topic_identification_dat] @wateralwayswet questions Cayetano's guilt based on his defensive reaction to questions. {https://x.com/wateralwayswet/status/2054874250155327838}
+- [SPRINT: research] [CURIOSITY: sprint_final_topic_identification_dat] @smninews reports Senator Camille Villar believes the Senate should conduct a thorough investigation into the tension. {https://x.com/smninews/status/2054855982396924029}
+- [SPRINT: research] [CURIOSITY: sprint_final_topic_identification_dat] @johnat143 mocks Alan Cayetano. {https://x.com/johnat143/status/2054858423381185008}
+- [SPRINT: research] [CURIOSITY: sprint_final_topic_identification_dat] @newswatchplusph reports Trillanes criticizing Jonvic Remulla for failure to arrest Bato dela Rosa. {https://x.com/newswatchplusph/status/2054883227035410911}
+- [SPRINT: research] [CURIOSITY: sprint_final_topic_identification_dat] @ninabeIlatrix1 defends Bato dela Rosa's credentials. {https://x.com/ninabeIlatrix1/status/2054733778304880931}
+- [SPRINT: research] [CURIOSITY: sprint_final_topic_identification_dat] @succubus_20 questions the truthfulness of PGMN Orion Perez. {https://x.com/succubus_20/status/2054883773649432656}
+- [SPRINT: research] [CURIOSITY: sprint_final_topic_identification_dat] @iSabongera questions if someone was brought to Davao. {https://x.com/iSabongera/status/2054785389177495731}
+- [NOTED] "senate" — 14 posts, no follow-up this cycle
+- [NOTED] "know" — 11 posts, no follow-up this cycle
+- [NOTED] "people" — 9 posts, no follow-up this cycle
+- [NOTED] "thank" — 4 posts, no follow-up this cycle
+- [NOTED] "call" — 4 posts, no follow-up this cycle
