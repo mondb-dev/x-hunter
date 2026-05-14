@@ -208,6 +208,11 @@ main {
 .prose .footnotes li p { margin-bottom: 0; color: var(--muted); }
 .prose .footnotes a { color: var(--muted); }
 .prose .footnotes a:hover { color: var(--text); }
+.prose table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: 0.85rem; }
+.prose table th { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); color: var(--muted); font-weight: 600; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.06em; }
+.prose table td { padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); color: #d4d8de; line-height: 1.6; vertical-align: top; }
+.prose table tr:last-child td { border-bottom: none; }
+.about-flow-table { overflow-x: auto; }
 
 .article-hero { margin-bottom: 2rem; border-radius: 6px; overflow: hidden; }
 .article-hero-img { width: 100%; height: auto; display: block; }
