@@ -1,6 +1,6 @@
 {
   "id": "proposal_actor_narrative_attribution_framework_20260514",
-  "status": "pending",
+  "status": "failed",
   "title": "Enhance Narrative Tactic and Actor Attribution Framework",
   "problem": "While the Narrative Tactic and Beneficiary Attribution Module exists, the agent's observations indicate a lack of granular, systematic attribution of specific narrative tactics to named actors or groups within real-time event analysis. This limits the ability to precisely map 'who' is pushing 'which' narrative using 'what specific tactics' and for 'what likely intent', moving beyond general detection of manipulation.",
   "evidence": [
@@ -20,6 +20,6 @@
   "scope": "pipeline",
   "estimated_risk": "medium",
   "created_at": "2026-05-14T04:09:16.335Z",
-  "resolved_at": null,
-  "resolution": null
+  "resolved_at": "2026-05-14T04:58:57.659Z",
+  "resolution": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after"
 }

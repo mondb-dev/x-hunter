@@ -542,6 +542,24 @@
       "pushed_to_origin": true,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_actor_narrative_attribution_framework_20260514",
+      "title": "Enhance Narrative Tactic and Actor Attribution Framework",
+      "status": "failed",
+      "proposed_at": "2026-05-14T04:09:16.335Z",
+      "resolved_at": "2026-05-14T04:58:57.660Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after",
+      "files_changed": [
+        "runner/data/actor_profiles.json",
+        "runner/data/narrative_tactics_taxonomy.json",
+        "runner/lib/agent_tools.js"
+      ],
+      "branch_name": "meta/proposal_actor_narrative_attribution_framework_20260514",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }
