@@ -9,33 +9,47 @@ An autonomous AI agent that observes discourse on X (Twitter), forms a worldview
 
 ## How it works
 
-The system has two layers:
+Two parallel layers run continuously:
 
 - **Mechanical layer** — Node.js scripts handle all scraping, browser automation, data processing, and posting. No LLM involved.
-- **Reasoning layer** — Gemini 2.5 Flash (via OpenClaw) reads pre-digested text, thinks, and writes text. No browser access, no shell commands.
+- **Reasoning layer** — Gemini 2.5 Flash (via Vertex AI) reads pre-digested text, forms beliefs, and writes journals and tweets. No direct browser or shell access.
 
-The agent runs continuously in ~20-minute cycles. Each cycle:
+Browse cycles run every ~20–30 minutes, auto-adjusted between 15–60 minutes by a metacognition engine (`runner/lib/cadence.js`) that reads signal density, belief velocity, post pressure, and staleness. Each cycle:
 
-1. `scraper/collect.js` ingests the X feed via CDP, scoring and clustering posts through a 12-phase analytics pipeline
-2. The LLM receives a pre-digested digest, updates `browse_notes.md`, and adjusts belief axes in `ontology.json`
-3. Every 6th cycle: the LLM drafts a tweet or quote-tweet → mechanical scripts post it via CDP
-4. Once per day: articles, daily belief reports, and ponders are generated → committed to GitHub → Vercel auto-deploys
-5. Every 3 days: a full **checkpoint** (worldview snapshot) is generated
+1. **Tier 1 — Continuous scraper** (always running independently):
+   - `scraper/collect.js` (every 10 min) — 13-phase pipeline: CDP feed fetch → sanitize → RAKE scoring → Jaccard dedup → TF-IDF novelty → Gemini enrichment (top 20 posts) → burst detection → SQLite insert + inline embedding → BigQuery stream
+   - `scraper/follows.js` (every 3h) — scores follow candidates, classifies via Vertex AI (30-label taxonomy, trust score 1–7)
+   - `scraper/reply.js` (every 30 min) — drains mention backlog, verifies claims before replying
 
-The agent started with zero ideology and discovers belief axes only when recurring tensions appear across multiple accounts and topics.
+2. **Tier 2 — AI browse cycle** (every ~20–30 min):
+   - 14-step pre-browse pipeline prepares context (FTS5 check, topic summary, memory recall, curiosity refresh, discourse scan, source selection, Chrome pre-load)
+   - `runner/lib/gemini_agent.js` — stateless Vertex AI function-calling loop reads digest + memory, browses the pre-loaded page, writes `browse_notes.md` + `ontology_delta.json`
+   - `runner/apply_ontology_delta.js` — merges evidence through an 8-gate validation pipeline (source validity, dedup, self-echo check, claim fingerprinting, stance validation, diversity constraint, confidence recompute, decay)
+
+3. **Every 3rd cycle** — quote cycle: Sebastian engages with others' content
+4. **Every 6th cycle** — tweet cycle: synthesizes browse observations into one honest post
+5. **Once per day** — articles, belief reports, checkpoints, ponders → git commit → GCS sync → Cloud Run redeploy
+
+The agent started with zero ideology. Belief axes are created only when a tension appears ≥6 times across ≥4 accounts in ≥2 topic clusters.
 
 ---
 
 ## Deployment
 
-Sebastian runs on a cloud VM as a systemd service. See [deploy/README.md](deploy/README.md) for full setup.
+Sebastian runs on a GCP VM (`us-central1-a`, project `sebastian-hunter`) as a systemd service. Chrome is managed separately as `sebastian-browser.service` on CDP port 18801.
 
 | Component | What |
 |---|---|
-| Service | systemd (Type=simple, Restart=always) |
-| Browser | Chrome via OpenClaw (CDP) |
-| Orchestrator | `runner/orchestrator.js` (Node.js, replaces bash main loop) |
-| Website | Vercel, auto-deploys on push to `main` |
+| VM runner | systemd (`sebastian-runner.service`), `Restart=always` |
+| Browser | Chrome CDP :18801 via `sebastian-browser.service` |
+| Orchestrator | `runner/orchestrator.js` |
+| LLM | Gemini 2.5 Flash via Vertex AI (`runner/lib/gemini_agent.js`) |
+| Local critique | Ollama `qwen2.5:7b` (stance validation, curiosity selection) |
+| Database | SQLite (`state/index.db`) on VM; Cloud SQL Postgres for Cloud Run workers |
+| Embeddings | Gemini `text-embedding-004` (768-dim) via Vertex AI |
+| Website | Cloud Run (`sebastian-web`), Next.js, reads from GCS bucket |
+| CI/CD | `.github/workflows/deploy.yml` — web changes → rebuild + deploy Cloud Run |
+| SSH | `gcloud compute ssh sebastian --zone=us-central1-a --project=sebastian-hunter --tunnel-through-iap` |
 
 ### Local development
 
@@ -46,7 +60,6 @@ cp .env.example .env   # fill in all values
 npm install --prefix runner
 npm install --prefix scraper
 npm install --prefix web
-bash runner/setup.sh   # one-time: installs OpenClaw, opens Chrome for X login
 bash runner/run.sh     # starts the main loop
 ```
 
@@ -56,116 +69,114 @@ See `.env.example` for the full list. Key vars:
 
 | Variable | Purpose |
 |---|---|
-| `GOOGLE_API_KEY` | Gemini API (articles, generation) |
-| `OPENAI_API_KEY` / `OPENAI_API_BASE_HOST` | OpenAI-compatible API (checkpoints, ponders) |
+| `GOOGLE_CLOUD_PROJECT` | GCP project ID (`sebastian-hunter`) |
+| `VERTEX_LOCATION` | Vertex AI region (`us-central1`) |
+| `GOOGLE_APPLICATION_CREDENTIALS` | Path to service account JSON |
 | `X_USERNAME` / `X_PASSWORD` | X account credentials |
-| `GITHUB_TOKEN` / `GITHUB_REPO` | Auto-commit + push |
-| `VERCEL_DEPLOY_HOOK` | Optional: trigger Vercel redeploy |
-| `SOLANA_PUBLIC_KEY` / `SOLANA_PRIVATE_KEY` | On-chain identity (Arweave uploads) |
+| `GITHUB_TOKEN` / `GITHUB_REPO` | Auto-commit + push each cycle |
+| `SOLANA_PUBLIC_KEY` / `SOLANA_PRIVATE_KEY` | Arweave uploads via Irys |
+| `TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID` | Admin control + alerts |
+| `DATABASE_URL` | Cloud SQL Postgres (Cloud Run workers only; VM uses SQLite) |
 
 ---
 
 ## Project structure
 
 ```
-x-hunter/
+hunter/
 ├── runner/                       ← orchestration + all mechanical scripts
-│   ├── run.sh                    ← entry point (init, then exec → orchestrator.js)
+│   ├── run.sh                    ← entry point (init → orchestrator.js)
 │   ├── orchestrator.js           ← main cycle loop (Node.js, SIGTERM-safe)
 │   ├── lib/                      ← extracted modules
-│   │   ├── agent.js              ← spawnSync wrapper for openclaw CLI
-│   │   ├── browser.js            ← CDP health, gateway, browser start/stop
-│   │   ├── config.js             ← env + paths
-│   │   ├── state.js              ← session reset, lock cleanup, backup
-│   │   ├── pre_browse.js         ← pre-cycle: query.js, recall.js, prefetch
-│   │   ├── post_browse.js        ← post-cycle: archive, curiosity, deep_dive
+│   │   ├── gemini_agent.js       ← stateless Vertex AI function-calling loop
+│   │   ├── gemini_agent_runner.js← child process wrapper (called via execFileSync)
+│   │   ├── pre_browse.js         ← 14-step pre-cycle preparation pipeline
+│   │   ├── post_browse.js        ← post-cycle: archive, claim tracker, signals
 │   │   ├── pre_tweet.js          ← pre-tweet: discourse scan, sprint update
-│   │   ├── post.js               ← post tweet/quote via CDP, log to posts_log
+│   │   ├── post.js               ← post tweet/quote via CDP
 │   │   ├── daily.js              ← daily block: report, article, checkpoint, ponder
-│   │   ├── git.js                ← commit + push + Vercel deploy hook
-│   │   └── prompts/              ← prompt builders (browse, tweet, quote, context)
-│   ├── post_tweet.js             ← CDP tweet posting
-│   ├── post_quote.js             ← CDP quote-tweet posting
-│   ├── write_article.js          ← long-form article generation (Vertex)
+│   │   ├── cadence.js            ← metacognition engine (auto-adjusts cycle timing)
+│   │   ├── git.js                ← commit + push + GCS sync
+│   │   ├── config.js             ← env + paths
+│   │   ├── db_backend.js         ← SQLite/Postgres feature-flag loader
+│   │   ├── verify_claim.js       ← shared claim verification wrapper
+│   │   └── prompts/              ← prompt builders (browse, tweet, quote, claims)
+│   ├── apply_ontology_delta.js   ← 8-gate evidence validation + belief update
+│   ├── curiosity.js              ← uncertainty-driven research directive
+│   ├── post_claims_thread.js     ← daily claims verification thread poster
+│   ├── proactive_reply.js        ← proactive engagement with high-signal posts
+│   ├── write_article.js          ← long-form article generation
 │   ├── generate_checkpoint.js    ← worldview checkpoint generation
-│   ├── generate_daily_report.js  ← daily belief report
-│   ├── ponder.js                 ← compulsion engine (vocation + action plans)
-│   ├── curiosity.js              ← uncertainty-driven browsing direction
-│   ├── deep_dive.js              ← deep-dive into specific accounts/topics
+│   ├── ponder.js                 ← conviction engine (action plans)
+│   ├── deep_dive.js              ← profile/topic deep-dive
 │   ├── voice_filter.js           ← conviction tier enforcement for tweets
-│   ├── capture_detection.js     ← daily source-capture analysis (no LLM)
-│   ├── posts_assessment.js      ← daily posting self-review (LLM)
-│   ├── watchdog.js               ← health monitoring
-│   ├── moltbook.js               ← Moltbook social protocol integration
-│   ├── archive.js                ← SQLite index + Arweave upload
-│   ├── recall.js                 ← FTS5 BM25 memory retrieval
-│   ├── llm.js                    ← Gemini REST client
-│   ├── vertex.js                 ← Vertex AI client (articles)
+│   ├── archive.js                ← SQLite memory table + Arweave upload
+│   ├── recall.js                 ← FTS5 BM25 + semantic memory retrieval
+│   ├── external_source_discovery.js ← domain trust registry builder
+│   ├── source_selector.js        ← conviction-driven + adversarial source queuing
+│   ├── reading_queue.js          ← URL queue (user-shared + conviction + adversarial)
+│   ├── prefetch_url.js           ← pre-loads target URL in Chrome before AI cycle
+│   ├── moltbook.js               ← Moltbook cross-posting
 │   └── cdp.js                    ← Chrome DevTools Protocol helpers
 │
-├── scraper/                      ← background data collection (no LLM)
-│   ├── collect.js                ← 12-phase feed analytics pipeline
-│   ├── reply.js                  ← mention processing + reply (Gemini classify)
-│   ├── follows.js                ← data-driven follow decisions
-│   ├── db.js                     ← SQLite schema + queries
-│   ├── embed.js                  ← embedding generation
-│   ├── analytics.js              ← scoring algorithms
-│   └── query.js                  ← topic summary extraction
+├── scraper/                      ← continuous background collection (no LLM)
+│   ├── collect.js                ← 13-phase feed ingestion pipeline
+│   ├── reply.js                  ← mention processing + reply drafting
+│   ├── follows.js                ← data-driven follow decisions (Vertex classification)
+│   ├── db.js                     ← SQLite schema + queries (posts, keywords, memory, embeddings)
+│   ├── embed.js                  ← Gemini text-embedding-004 via Vertex AI
+│   ├── analytics.js              ← scoring algorithms (RAKE, TF-IDF, Jaccard)
+│   ├── query.js                  ← topic summary extraction from DB
+│   └── start.sh                  ← launches collect, reply, follows loops
 │
-├── scripts/                      ← utilities + tests
-│   ├── test_phase5.js            ← orchestrator unit tests (24 tests)
-│   ├── test_phase6.js            ← structured logging tests (14 tests)
-│   ├── retroactive_event_scan.js ← historical event detection
-│   └── gen-wallet.js             ← Solana wallet generation
-│
-├── state/                        ← runtime state (28 JSON files)
-│   ├── ontology.json             ← all belief axes (scores, confidence, evidence)
-│   ├── trust_graph.json          ← per-account influence weights
-│   ├── posts_log.json            ← all tweets posted
-│   ├── vocation.json             ← discovered vocation direction
-│   ├── profile.json              ← X profile state
-│   ├── drift_state.json          ← CUSUM drift detection per axis
-│   ├── capture_state.json        ← source-capture detection alerts
-│   ├── posting_directive.txt     ← 3 rules for tomorrow's posts
-│   ├── retroactive_events.json   ← detected discourse anomalies
-│   ├── interactions.json         ← reply/mention log
-│   └── ...                       ← 20 more state files (see ARCHITECTURE.md)
+├── state/                        ← runtime state files
+│   ├── index.db                  ← SQLite: posts, keywords, accounts, memory, embeddings
+│   ├── ontology.json             ← all belief axes (scores, confidence, evidence_log)
+│   ├── trust_graph.json          ← per-account trust scores (1–7) + taxonomy label
+│   ├── feed_digest.txt           ← scored clustered digest read by AI agent
+│   ├── curiosity_directive.txt   ← active research focus + rotating search URLs
+│   ├── cadence.json              ← metacognition state (cycle_interval_sec, directives)
+│   ├── reading_queue.jsonl       ← URLs to browse (user-shared + conviction + adversarial)
+│   ├── external_sources.json     ← domain trust registry with provenance scores
+│   └── ...                       ← see docs/DATA_COLLECTION.md for full list
 │
 ├── journals/                     ← hourly HTML journals (agent-written)
 ├── daily/                        ← daily belief reports
 ├── articles/                     ← long-form field reports
-├── ponders/                      ← reflective pieces
+├── ponders/                      ← reflective pieces + action plans
 ├── checkpoints/                  ← 3-day worldview snapshots
 │
-├── AGENTS.md                     ← belief ontology rules (axis creation, update formula)
-├── SOUL.md                       ← persona, voice, safety boundaries
-├── ARCHITECTURE.md               ← full system architecture + data flow
-├── TOOLS.md                      ← agent-facing tool/command reference
-├── vocation.md                   ← agent-generated vocation statement
+├── docs/                         ← reference documentation
+│   ├── ARCHITECTURE.md           ← full system architecture + DB schema + infra
+│   ├── DATA_COLLECTION.md        ← data collection tiers, evidence pipeline, schedules
+│   ├── SYSTEM_DIAGRAM.md         ← Mermaid flow diagram + layer summary table
+│   ├── PIPELINE.md               ← pipeline status + all state files
+│   ├── VERIFICATION_PIPELINE.md  ← claim verification detail
+│   └── BUGS.md                   ← known bugs log
 │
-├── web/                          ← Next.js website → sebastianhunter.fun
-├── deploy/                       ← GCP deployment scripts + docs
-├── stream/                       ← optional live streaming
-└── docs/                         ← bug tracker, pipeline status, guides
+├── workers/                      ← Cloud Run workers
+│   ├── verify/                   ← hunter-verify: claim verification service
+│   └── publish/                  ← hunter-publish: verification export + draft storage
+│
+└── web/                          ← Next.js website → sebastianhunter.fun (Cloud Run)
 ```
 
 ---
 
 ## What gets published
 
-Every cycle commits to GitHub, triggering a Vercel redeploy:
+Every cycle commits to GitHub; CI/CD deploys `web/**` changes to Cloud Run automatically. State files are synced to GCS every ~1 hour and served to the website.
 
 | Output | Frequency | Description |
 |---|---|---|
-| `journals/YYYY-MM-DD_HH.html` | Every cycle (~20min) | Observations, tensions, footnoted sources |
+| `journals/YYYY-MM-DD_HH.html` | Every cycle (~20–30 min) | Observations, tensions, footnoted sources |
 | `daily/belief_report_YYYY-MM-DD.md` | Once per day | Full ontology snapshot, axis deltas |
-| `daily/posts_assessment_YYYY-MM-DD.md` | Once per day | Self-review of posting quality + directive |
-| `articles/YYYY-MM-DD.md` | ~Daily | Long-form field report on a belief axis |
+| `articles/YYYY-MM-DD.md` | ~Daily | Long-form opinion piece on a belief axis |
 | `ponders/latest.md` | When conviction triggers | Reflective piece + action plans |
 | `checkpoints/checkpoint_N.md` | Every 3 days | Complete worldview snapshot + drift analysis |
-| `state/ontology.json` | Every cycle | All 32 belief axes with scores + confidence |
+| `state/ontology.json` | Every cycle | All belief axes with scores, confidence, evidence |
 
-Articles are permanently archived to **Arweave** via Irys. Tweet records are logged to **Moltbook**.
+Journals and checkpoints are permanently archived to **Arweave** via Irys (Solana-funded). Evidence source URLs are archived individually so belief provenance is verifiable even if the original tweet is deleted. All scraped posts stream to **BigQuery** (`dataset: hunter, table: posts`) for permanent longitudinal history.
 
 ---
 
@@ -173,12 +184,13 @@ Articles are permanently archived to **Arweave** via Irys. Tweet records are log
 
 | File | Purpose |
 |---|---|
-| [ARCHITECTURE.md](ARCHITECTURE.md) | Full system architecture, data flow, algorithms |
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Full system architecture, DB schema, Cloud infra, LLM budget |
+| [docs/DATA_COLLECTION.md](docs/DATA_COLLECTION.md) | Two-tier data collection, evidence validation pipeline, schedules, state files |
+| [docs/SYSTEM_DIAGRAM.md](docs/SYSTEM_DIAGRAM.md) | Mermaid flow diagram + layer summary table |
+| [docs/PIPELINE.md](docs/PIPELINE.md) | Pipeline status: all automated workflows and state file reference |
+| [docs/VERIFICATION_PIPELINE.md](docs/VERIFICATION_PIPELINE.md) | Claim verification scoring and lifecycle |
 | [AGENTS.md](AGENTS.md) | Belief ontology rules: axis creation, update formula, manipulation detection |
 | [SOUL.md](SOUL.md) | Persona layer: voice, conviction tiers, safety boundaries |
-| [TOOLS.md](TOOLS.md) | Agent-facing reference for available scripts and state files |
-| [deploy/README.md](deploy/README.md) | GCP deployment: VM setup, systemd, maintenance |
-| [docs/PIPELINE.md](docs/PIPELINE.md) | Pipeline status: all automated workflows and their scripts |
 
 ---
 
@@ -186,28 +198,27 @@ Articles are permanently archived to **Arweave** via Irys. Tweet records are log
 
 **Service status**
 ```bash
-# On VM:
-systemctl status sebastian-runner
+# On VM (via IAP):
+gcloud compute ssh sebastian --zone=us-central1-a --project=sebastian-hunter --tunnel-through-iap --command="systemctl status sebastian-runner sebastian-browser"
 ```
 
 **View logs**
 ```bash
-# On VM:
-journalctl -u sebastian-runner --no-pager -n 50
+gcloud compute ssh sebastian --zone=us-central1-a --project=sebastian-hunter --tunnel-through-iap --command="journalctl -u sebastian-runner --no-pager -n 50"
 ```
 
-**Gateway not starting**
+**Browser stuck / CDP timeout**
 ```bash
-openclaw gateway status
-openclaw gateway start
-openclaw doctor
+gcloud compute ssh sebastian --zone=us-central1-a --project=sebastian-hunter --tunnel-through-iap --command="systemctl restart sebastian-browser && sleep 5 && systemctl status sebastian-browser"
+```
+
+**Force kill stale CDP port**
+```bash
+gcloud compute ssh sebastian --zone=us-central1-a --project=sebastian-hunter --tunnel-through-iap --command="fuser -k 18801/tcp; systemctl start sebastian-browser"
 ```
 
 **X session expired**
 The agent re-authenticates automatically using `X_USERNAME` / `X_PASSWORD` from `.env`.
 
-**Browser stuck / CDP timeout**
-```bash
-# On VM:
-pkill -f chrome && sleep 5 && openclaw browser --browser-profile x-hunter start
-```
+**Plain SSH returns exit 255**
+Always use `--tunnel-through-iap`. The VM is often busy under browse cycle load and plain SSH times out.
