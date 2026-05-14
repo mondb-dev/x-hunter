@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
- * runner/critique_tweet.js — quality gate for tweet drafts
+ * runner/critique_tweet.js — quality gate for tweet drafts via Gemini Flash (Vertex AI)
  *
- * Reads state/tweet_draft.txt and evaluates it via Ollama on two axes:
+ * Reads state/tweet_draft.txt and evaluates it on two axes:
  *   1. Specificity — does it reference something concrete (account, claim, statistic, event)?
  *   2. Falsifiability — could a reasonable person disagree with it?
  *
@@ -22,7 +22,7 @@ const DRAFT_FILE = path.join(ROOT, "state", "tweet_draft.txt");
 
 const { generate: llmGenerate } = require("./llm.js");
 
-async function callOllama(prompt) {
+async function callGemini(prompt) {
   return llmGenerate(prompt, { temperature: 0.0, maxTokens: 120, timeoutMs: 20_000 });
 }
 
@@ -69,13 +69,12 @@ REJECT if specificity < 2 OR falsifiability < 2.`;
 
   let result;
   try {
-    const raw_response = await callOllama(prompt);
+    const raw_response = await callGemini(prompt);
     const cleaned = raw_response.replace(/^```[a-z]*\n?/i, "").replace(/\n?```$/i, "").trim();
     const m = cleaned.match(/\{[\s\S]*?\}/);
     if (!m) throw new Error(`unparseable: "${raw_response.slice(0, 80)}"`);
     result = JSON.parse(m[0]);
   } catch (err) {
-    // Ollama unavailable or parse error — pass through (don't block on critique failure)
     console.log(`PASS (critique unavailable: ${err.message})`);
     process.exit(0);
   }

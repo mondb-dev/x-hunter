@@ -1,19 +1,16 @@
 #!/usr/bin/env node
 /**
- * runner/critique.js — coherence critique using local Ollama
+ * runner/critique.js — coherence critique via Gemini Flash (Vertex AI)
  *
  * Runs after each TWEET or QUOTE cycle.
  * Reads the latest journal + post (tweet mode) or browse_notes + post (quote mode),
- * calls qwen2.5:7b via Ollama, writes state/critique.md.
+ * calls Gemini 2.5 Flash via Vertex AI, writes state/critique.md.
  *
  * The next browse cycle reads critique.md and addresses any coherence gaps.
  *
  * Usage:
  *   node critique.js            # tweet mode (journal + tweet)
  *   node critique.js --quote    # quote mode (browse_notes + quote tweet)
- *
- * Requires: ollama running locally (brew install ollama && ollama pull qwen2.5:7b)
- * Falls back silently if Ollama is unavailable.
  */
 
 "use strict";
@@ -171,7 +168,7 @@ WATCH: [One thing to probe further in the next browse window. One sentence.]`;
 
 // ── LLM call ──────────────────────────────────────────────────────────────────
 
-async function callOllama(prompt) {
+async function callGemini(prompt) {
   return llmGenerate(prompt, { temperature: 0.2, maxTokens: 350, timeoutMs: 90_000 });
 }
 
@@ -213,12 +210,12 @@ async function main() {
 
   let result;
   try {
-    result = await callOllama(prompt);
+    result = await callGemini(prompt);
   } catch (err) {
     if (err.name === "AbortError") {
-      console.log("[critique] Ollama timed out (90s) — skipping");
+      console.log("[critique] Gemini timed out (90s) — skipping");
     } else {
-      console.log(`[critique] Ollama unavailable: ${err.message} — skipping`);
+      console.log(`[critique] Gemini unavailable: ${err.message} — skipping`);
     }
     return;
   }
