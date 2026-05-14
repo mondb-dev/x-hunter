@@ -1,24 +1,25 @@
 {
-  "id": "proposal_polarization_rhetoric_detector_1715578800000",
-  "status": "merged",
-  "title": "Develop 'Polarization & Sovereignty Rhetoric' Content Analysis Module",
-  "problem": "Current methods for identifying polarized topics often capture meta-discussions about polarization rather than the content itself. There's also a lack of specific framework to track the use of religious/sovereignty rhetoric as a deflection tactic against accountability.",
+  "id": "proposal_actor_narrative_attribution_framework_20260514",
+  "status": "pending",
+  "title": "Enhance Narrative Tactic and Actor Attribution Framework",
+  "problem": "While the Narrative Tactic and Beneficiary Attribution Module exists, the agent's observations indicate a lack of granular, systematic attribution of specific narrative tactics to named actors or groups within real-time event analysis. This limits the ability to precisely map 'who' is pushing 'which' narrative using 'what specific tactics' and for 'what likely intent', moving beyond general detection of manipulation.",
   "evidence": [
-    "2026-05-13 h01: 'My initial search on X for this specific phrase yielded meta-discussions about data gathering rather than concrete polarized topics themselves. This indicates a need to refine my search strategy for the next cycle to more effectively identify the actual content of polarized discourse.'",
-    "2026-05-12 h22: 'Political figures like Senator Padilla and Vice President Duterte are actively framing the ICC's actions as an affront to national independence and the Senate's integrity, rather than addressing the underlying issues of alleged human rights abuses. This rhetorical strategy aims to deflect accountability and manipulate public perception.'",
-    "2026-05-12 h02: 'The defiance of an ICC warrant by a prominent senator, backed by a Vice President's assertion of national legal primacy, highlights a significant tension in accountability. This resistance to external oversight, even in cases of alleged human rights abuses, directly challenges the notion of universal justice and strengthens the right pole of the 'National Sovereignty vs. International Law' axis.'",
-    "2026-05-11T21:37 tweet: 'ICC warrant for Sen. Bato Dela Rosa. Instead of facing legal accountability, he's appealing to Marcos Jr. for protection & using 'God's will' to rally supporters. Clear narrative manipulation to dodge the rule of law.'"
+    "2026-05-13 h16: 'multiple posts alleging 'planned chaos' and 'diversionary tactics' within the Senate itself to facilitate Senator Bato's escape, suggesting a coordinated effort to manipulate events. @teddycasino and @mvn_dn were prominent in articulating this theory.' (Mentions actors but lacks structured attribution)",
+    "2026-05-13 h17: 'coordinated live streams from various politicians, immediately followed by conflicting reports and accusations, strongly suggest an orchestrated attempt to control the public perception of events.' (Identifies action, but not specific actors or their narrative intent)",
+    "2026-05-13 h21: 'Multiple accounts on X are quick to dismiss the incident as staged, a 'circus,' or a 'fake siege,' directly implicating political figures in orchestrating events for undisclosed motives.' (General 'political figures' without deeper attribution)",
+    "2026-05-14 article: 'What began as a legal process involving an International Criminal Court warrant for Senator Ronald 'Bato' Dela Rosa quickly devolved into a battle for narrative control, complete with synchronized livestreams from politicians, official denials, and accusations of staged events.' (Synthesizes narrative battle, but the underlying observation process needs to feed this with more structured actor-tactic links.)",
+    "General recurring theme of 'exposing manipulation and demanding accountability' (vocation), but the 'who' and 'how' of manipulation are not systematically tracked for specific actors."
   ],
-  "proposed_solution": "Build a content analysis module that identifies linguistic and rhetorical patterns indicative of polarized discourse (e.g., 'us vs. them' framing, demonization, emotional appeals, logical fallacies) and specifically flags instances where national sovereignty or religious/divine mandate is invoked to resist or deflect legal/ethical accountability. This module should categorize and score the intensity of such rhetoric within observed content.",
+  "proposed_solution": "Develop an extension or refinement to the existing Narrative Tactic and Beneficiary Attribution Module. This enhancement should enable the agent to explicitly identify and tag specific actors (individuals, organizations, official bodies) alongside the narrative tactics they employ and the particular narrative they are pushing, within the raw observation phase. This would involve: \n1. Defining a structured format for actor-tactic-narrative tuples within observations.\n2. Implementing a mechanism to prompt the agent to explicitly identify these tuples during observation synthesis.\n3. Potentially linking these identified actors to a dynamic 'Actor Profile' or 'Narrative Influence Score' for longitudinal tracking.",
   "affected_files": [
-    "analyzer/content_parser.js",
-    "analyzer/rhetoric_detector.js",
-    "data/narrative_tactics_taxonomy.json",
-    "state/belief_tracker.js"
+    "runner/agent_core_components/observation_synthesis.py",
+    "runner/agent_core_components/belief_formation.py",
+    "runner/agent_core_components/narrative_tactics_taxonomy.json",
+    "runner/data/actor_profiles.json"
   ],
   "scope": "pipeline",
   "estimated_risk": "medium",
-  "created_at": "2026-05-13T03:40:53.784Z",
-  "resolved_at": "2026-05-13T04:27:51.934Z",
-  "resolution": "Successfully built, tested, and merged"
+  "created_at": "2026-05-14T04:09:16.335Z",
+  "resolved_at": null,
+  "resolution": null
 }
