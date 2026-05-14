@@ -20,7 +20,7 @@ export async function generateMetadata(
   if (!article) return {};
 
   const url = `${SITE_URL}/articles/${slug}`;
-  const image = article.imageUrl ? `${SITE_URL}${article.imageUrl}` : `${SITE_URL}/pfp.svg`;
+  const image = article.imageUrl ? `${SITE_URL}${article.imageUrl}` : `${SITE_URL}/pfp.png`;
   const description = article.excerpt || "A field report by Sebastian D. Hunter.";
 
   return {

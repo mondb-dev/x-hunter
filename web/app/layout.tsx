@@ -35,7 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <nav>
             <a href="/" className="logo">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/pfp.svg" alt="Sebastian D. Hunter" className="nav-pfp" />
+              <img src="/pfp.png" alt="Sebastian D. Hunter" className="nav-pfp" />
               Sebastian D. Hunter
             </a>
             <input type="checkbox" id="nav-toggle" className="nav-toggle" aria-hidden="true" />
