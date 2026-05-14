@@ -44,7 +44,7 @@ Sebastian runs on a GCP VM (`us-central1-a`, project `sebastian-hunter`) as a sy
 | Browser | Chrome CDP :18801 via `sebastian-browser.service` |
 | Orchestrator | `runner/orchestrator.js` |
 | LLM | Gemini 2.5 Flash via Vertex AI (`runner/lib/gemini_agent.js`) |
-| Local critique | Ollama `qwen2.5:7b` (stance validation, curiosity selection) |
+| Local critique | Ollama `qwen2.5:7b` (coherence critique gate after tweet/quote cycles) |
 | Database | SQLite (`state/index.db`) on VM; Cloud SQL Postgres for Cloud Run workers |
 | Embeddings | Gemini `text-embedding-004` (768-dim) via Vertex AI |
 | Website | Cloud Run (`sebastian-web`), Next.js, reads from GCS bucket |
