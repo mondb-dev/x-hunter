@@ -305,13 +305,15 @@ function appendMentionsToReplyQueue(mentions) {
     const stripped = m.text.replace(/@\w+/g, "").replace(/https?:\/\/\S+/g, "").trim();
     if (stripped.length < 8) continue;
     newItems.push(JSON.stringify({
-      id:            m.id,
-      ts:            m.ts,
-      ts_iso:        new Date(m.ts).toISOString(),
-      from_username: m.username,
-      text:          m.text,
-      queued_at:     new Date().toISOString(),
-      status:        "pending",
+      id:               m.id,
+      ts:               m.ts,
+      ts_iso:           new Date(m.ts).toISOString(),
+      from_username:    m.username,
+      text:             m.text,
+      quoted_text:      m.quotedText     || "",
+      quoted_username:  m.quotedUsername || "",
+      queued_at:        new Date().toISOString(),
+      status:           "pending",
     }));
     existingIds.add(m.id);
   }
@@ -337,8 +339,15 @@ async function extractPosts(page) {
         const username    = usernameEl?.href?.split("/").pop() || "";
         const displayName = userEl?.querySelector('span')?.innerText || username;
 
-        const textEl  = art.querySelector('[data-testid="tweetText"]');
-        const text    = textEl?.innerText || "";
+        const textEls = art.querySelectorAll('[data-testid="tweetText"]');
+        const text    = textEls[0]?.innerText || "";
+        // Quoted tweet (quote-tweet embed): X renders a second tweetText inside the same article
+        const quotedTextEl = textEls[1] || null;
+        const allUserEls   = art.querySelectorAll('[data-testid="User-Name"]');
+        const quotedUserEl = allUserEls[1] || null;
+        const quotedText     = quotedTextEl ? (quotedTextEl.innerText || "").trim() : "";
+        const quotedUsernameEl = quotedUserEl ? quotedUserEl.querySelector('a[href^="/"]') : null;
+        const quotedUsername   = quotedUsernameEl ? quotedUsernameEl.href.split("/").pop() : "";
         const externalUrls = [];
         for (const anchor of art.querySelectorAll('a[href]')) {
           const href = anchor.href || "";
@@ -367,7 +376,7 @@ async function extractPosts(page) {
                            || art.querySelector('video'));
         const mediaType = hasVideo ? "video" : hasImages ? "image" : "none";
 
-        results.push({ id, username, displayName, text, ts, likes, rts, replies, mediaType, externalUrls });
+        results.push({ id, username, displayName, text, quotedText, quotedUsername, ts, likes, rts, replies, mediaType, externalUrls });
       } catch (_) {}
     }
     return results;
@@ -462,9 +471,12 @@ function fmtPost(post) {
   const novel = (post.novelty >= 4.0 && !post._inCluster) ? "  <- novel" : "";
   const url = post.id ? `  https://x.com/${post.username}/status/${post.id}` : "";
   const media = post.mediaDescription ? `\n    📷 ${post.mediaDescription}` : "";
+  const displayText = post.quotedText
+    ? `${post.text} [↳ @${post.quotedUsername || "?"}: ${post.quotedText.slice(0, 120)}]`
+    : post.text;
   return (
     `  @${post.username} [v${v} T${post.trust} N${n}]` +
-    ` "${post.text.replace(/\n+/g, " ").slice(0, 200)}"` +
+    ` "${displayText.replace(/\n+/g, " ").slice(0, 280)}"` +
     ` ${fmtEngagement(post.likes, post.rts)}${kw}${novel}${url}${media}`
   );
 }

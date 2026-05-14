@@ -122,11 +122,22 @@ async function fetchThreadContext(page, item) {
 
     const articles = await page.$$eval('article[data-testid="tweet"]', els =>
       els.slice(0, 6).map(a => {
-        const userEl = a.querySelector('[data-testid="User-Name"]');
-        const textEl = a.querySelector('[data-testid="tweetText"]');
+        const userEl   = a.querySelector('[data-testid="User-Name"]');
+        const textEls  = a.querySelectorAll('[data-testid="tweetText"]');
+        const mainText = (textEls[0]?.innerText || "").trim();
+        // Quoted tweet embedded inside this article
+        const quotedTextEl  = textEls[1] || null;
+        const allUserEls    = a.querySelectorAll('[data-testid="User-Name"]');
+        const quotedUserEl  = allUserEls[1] || null;
+        let text = mainText;
+        if (quotedTextEl) {
+          const quotedUser = (quotedUserEl?.innerText || "").split("\n")[0].trim() || "?";
+          const quotedText = (quotedTextEl.innerText || "").trim();
+          if (quotedText) text += `\n[quoting @${quotedUser}: "${quotedText.slice(0, 200)}"]`;
+        }
         return {
           user: (userEl?.innerText || "").split("\n")[0].trim(),
-          text: (textEl?.innerText || "").trim(),
+          text,
         };
       }).filter(a => a.text.length > 0)
     );
@@ -285,7 +296,7 @@ async function geminiClassify(item, threadContext = [], memoryHints = [], userHi
 
 ${beliefBlock}${threadBlock}${memoryBlock}${accountBlock}${userBlock}${verifyBlock}
 The mention you are replying to:
-@${item.from_username}: "${item.text}"
+@${item.from_username}: "${item.text}"${item.quoted_text ? `\n[This is a quote tweet. The post they quoted (from @${item.quoted_username || "?"}): "${item.quoted_text.slice(0, 400)}"]` : ""}
 
 Instructions:
 1. Read the thread context to understand what conversation this is part of.
