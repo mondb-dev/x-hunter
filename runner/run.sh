@@ -490,9 +490,11 @@ while true; do
       --message "$AGENT_MSG" \
       --thinking low \
       --verbose on
+    _BROWSE_EXIT_1=$?
     check_and_fix_gateway_timeout "$_gw_before"
     # If agent crashed without writing a journal, retry once
     _JOURNAL_AFTER=$(git -C "$PROJECT_ROOT" status --porcelain -- "journals/${TODAY}_${HOUR}.html" 2>/dev/null | wc -l | tr -d ' ')
+    _BROWSE_EXIT_2=""
     if [ "$_JOURNAL_AFTER" = "$_JOURNAL_BEFORE" ] && [ "$_JOURNAL_BEFORE" = "0" ] && [ ! -f "$_BROWSE_JOURNAL_PATH" ]; then
       echo "[run] browse journal missing after agent run — retrying once (no thinking)"
       sleep 5
@@ -500,8 +502,22 @@ while true; do
       agent_run --agent x-hunter \
         --message "$AGENT_MSG" \
         --verbose on
+      _BROWSE_EXIT_2=$?
       check_and_fix_gateway_timeout "$_gw_before"
     fi
+
+    # ── META auto-revert watchdog ─────────────────────────────────────────
+    # If both browse attempts failed (or the single attempt did), pass exit
+    # codes to meta_watchdog so it can attribute consecutive failures to a
+    # recent META commit and revert it.
+    if [ -n "$_BROWSE_EXIT_2" ]; then
+      _BROWSE_CODES="${_BROWSE_EXIT_1},${_BROWSE_EXIT_2}"
+    else
+      _BROWSE_CODES="${_BROWSE_EXIT_1}"
+    fi
+    BROWSE_EXIT_CODES="$_BROWSE_CODES" \
+      node "$PROJECT_ROOT/runner/meta_watchdog.js" \
+      >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
     # ── Close excess Chrome tabs after browse agent (prevents memory accumulation) ─
     node "$PROJECT_ROOT/runner/cleanup_tabs.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
