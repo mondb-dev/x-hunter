@@ -50,6 +50,19 @@
         "tactic_ids": [],
         "actor": "DOJ Sec. Fredderick Vida",
         "statement": "The Department of Justice (DOJ) confirms that there is a valid ICC arrest warrant vs. Sen. Bato dela Rosa."
+      },
+      {
+        "id": "evt_e92edd81950bc1cc",
+        "logged_at": "2026-05-15T12:58:11.394Z",
+        "analysis": "This claim introduces a direct account of an incident involving a government security force and suggests a potential cover-up or conflicting narrative regarding the source of gunfire, raising questions about accountability and transparency within political institutions.",
+        "source_url": "https://x.com/succubus_20/status/2055267971514167526",
+        "tactic_ids": [
+          "obfuscation",
+          "blame_shifting"
+        ],
+        "timestamp": "2026-05-15T12:57:00Z",
+        "actor": "NBI agents (via @succubus_20)",
+        "statement": "NBI agents report gunshots were fired by OSAA from the Senate side of the exitway leading to the GSIS Building, with GSIS President Veloso having requested NBI intervention."
       }
     ]
   },
@@ -235,6 +248,43 @@
         ],
         "analysis": "The DOJ confirms the validity of the ICC arrest warrant against Senator Bato dela Rosa, indicating a potential shift in the narrative surrounding accountability for alleged extrajudicial killings.",
         "source_url": "https://x.com/gmanews/status/2055030093160804792"
+      }
+    ]
+  },
+  "cuban_aid_blockade_may2026": {
+    "title": "Cuban Aid Blockade",
+    "created_at": "2026-05-15T12:28:39.947Z",
+    "events": [
+      {
+        "id": "evt_963a2749fcb7987f",
+        "logged_at": "2026-05-15T12:28:39.947Z",
+        "actor": "Secretary Rubio",
+        "analysis": "Secretary Rubio directly attributes the lack of aid reaching the Cuban people to the Cuban regime, employing a blame-shifting tactic. This statement, from a US official, frames the Cuban government as solely responsible for humanitarian issues.",
+        "source_url": "https://x.com/StateDept/status/2055078188821463458",
+        "timestamp": "2026-05-15T12:27:00Z",
+        "tactic_ids": [
+          "blame_shifting"
+        ],
+        "statement": "The Cuban people should know there’s $100 million of food and medicine available for them right now and the only reason it’s not reaching them is because of the Cuban regime."
+      }
+    ]
+  },
+  "philippine_senate_impeachment_trial_may2026": {
+    "title": "Philippine Senate Impeachment Trial May 2026",
+    "created_at": "2026-05-15T12:58:39.608Z",
+    "events": [
+      {
+        "id": "evt_b631072d3666f4ec",
+        "logged_at": "2026-05-15T12:58:39.608Z",
+        "statement": "The Senate will not convict Vice President Sara Duterte just because of politics, according to Senate President Alan Cayetano.",
+        "analysis": "This statement from Senate President Alan Cayetano attempts to frame the upcoming impeachment trial as a fair and impartial process, despite potential political motivations. This aligns with tactics of legitimization and deflection from political influence.",
+        "source_url": "https://x.com/PhilippineStar/status/2055215192829780133",
+        "actor": "PhilippineStar",
+        "timestamp": "2026-05-15T12:42:00Z",
+        "tactic_ids": [
+          "legitimization",
+          "deflection"
+        ]
       }
     ]
   }
