@@ -1,25 +1,27 @@
 {
-  "id": "proposal_actor_narrative_attribution_framework_20260514",
-  "status": "failed",
-  "title": "Enhance Narrative Tactic and Actor Attribution Framework",
-  "problem": "While the Narrative Tactic and Beneficiary Attribution Module exists, the agent's observations indicate a lack of granular, systematic attribution of specific narrative tactics to named actors or groups within real-time event analysis. This limits the ability to precisely map 'who' is pushing 'which' narrative using 'what specific tactics' and for 'what likely intent', moving beyond general detection of manipulation.",
+  "id": "proposal_narrative_strategy_mapping_1715750390",
+  "status": "pending",
+  "title": "Develop 'Accountability Evasion Narrative Mapping' Tool",
+  "problem": "I can identify individual narrative tactics and conflicting reports, but lack a systematic way to track, compare, and analyze interlocking narratives from multiple sources over time to expose coordinated strategies for accountability evasion. This limits my ability to synthesize a comprehensive understanding of how accountability is being undermined through narrative means.",
   "evidence": [
-    "2026-05-13 h16: 'multiple posts alleging 'planned chaos' and 'diversionary tactics' within the Senate itself to facilitate Senator Bato's escape, suggesting a coordinated effort to manipulate events. @teddycasino and @mvn_dn were prominent in articulating this theory.' (Mentions actors but lacks structured attribution)",
-    "2026-05-13 h17: 'coordinated live streams from various politicians, immediately followed by conflicting reports and accusations, strongly suggest an orchestrated attempt to control the public perception of events.' (Identifies action, but not specific actors or their narrative intent)",
-    "2026-05-13 h21: 'Multiple accounts on X are quick to dismiss the incident as staged, a 'circus,' or a 'fake siege,' directly implicating political figures in orchestrating events for undisclosed motives.' (General 'political figures' without deeper attribution)",
-    "2026-05-14 article: 'What began as a legal process involving an International Criminal Court warrant for Senator Ronald 'Bato' Dela Rosa quickly devolved into a battle for narrative control, complete with synchronized livestreams from politicians, official denials, and accusations of staged events.' (Synthesizes narrative battle, but the underlying observation process needs to feed this with more structured actor-tactic links.)",
-    "General recurring theme of 'exposing manipulation and demanding accountability' (vocation), but the 'who' and 'how' of manipulation are not systematically tracked for specific actors."
+    "2026-05-14 h17: 'lack of a consistent, verifiable account from authorities is severely eroding public trust and fueling accusations of deliberate obfuscation. The incident serves as a potent illustration of how information manipulation can be deployed to shield institutions and individuals from accountability.'",
+    "2026-05-14 h18: 'clear tension emerging between official narratives and differing accounts of who initiated the violence. The conflicting reports highlight the potential for information manipulation to obscure the truth.'",
+    "2026-05-14 h21: 'shifting narratives and internal blame-shifting within the Philippine government underscore how information can be manipulated to obscure accountability.'",
+    "2026-05-14 h22: 'explicit accusations of political figures being 'liars' and 'negligent,' attempts to obfuscate accountability through legalistic maneuvering ('chose to leave' versus 'escaped'), and the NBI's conflicting statements.'",
+    "2026-05-14 h23: 'Attempts by political figures to redefine events through semantic distinctions underscore the strategic deployment of language to obscure truth and accountability.'",
+    "2026-05-15 h01: 'News outlets like Philippine Star and News5PH, along with individual accounts, presented fragmented pieces of information, with some suggesting a deliberate staging of events to shield individuals from accountability.'",
+    "2026-05-15 h04: 'Conflicting accounts from officials and media outlets highlight a struggle to control the truth, directly impacting public trust in institutions. The persistent focus on who fired the first shot, and the subsequent justifications, points to an attempt to shape public perception rather than provide transparent information.'"
   ],
-  "proposed_solution": "Develop an extension or refinement to the existing Narrative Tactic and Beneficiary Attribution Module. This enhancement should enable the agent to explicitly identify and tag specific actors (individuals, organizations, official bodies) alongside the narrative tactics they employ and the particular narrative they are pushing, within the raw observation phase. This would involve: \n1. Defining a structured format for actor-tactic-narrative tuples within observations.\n2. Implementing a mechanism to prompt the agent to explicitly identify these tuples during observation synthesis.\n3. Potentially linking these identified actors to a dynamic 'Actor Profile' or 'Narrative Influence Score' for longitudinal tracking.",
+  "proposed_solution": "Build a module or tool that allows for the mapping of narrative elements (claims, counter-claims, specific framing, semantic choices, actors promoting them) across different sources and over time, specifically focused on incidents where accountability is contested. This tool should facilitate visual or structured comparison of narrative progression from various actors, identifying patterns of coordination, deflection, or obfuscation. It should track the 'life cycle' of accountability-evading narratives.",
   "affected_files": [
-    "runner/agent_core_components/observation_synthesis.py",
-    "runner/agent_core_components/belief_formation.py",
-    "runner/agent_core_components/narrative_tactics_taxonomy.json",
-    "runner/data/actor_profiles.json"
+    "lib/agent_tools.js",
+    "runner/data/narrative_tactics_taxonomy.json",
+    "core/belief_state_manager.js",
+    "core/reflection_agent.js"
   ],
-  "scope": "pipeline",
+  "scope": "tooling|pipeline",
   "estimated_risk": "medium",
-  "created_at": "2026-05-14T04:09:16.335Z",
-  "resolved_at": "2026-05-14T04:58:57.659Z",
-  "resolution": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after"
+  "created_at": "2026-05-15T04:39:19.219Z",
+  "resolved_at": null,
+  "resolution": null
 }
