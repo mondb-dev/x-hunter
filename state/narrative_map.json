@@ -14,6 +14,121 @@
         "source_url": "https://x.com/FashionPulis/status/2054910250537623866",
         "actor": "FashionPulis",
         "analysis": "This statement suggests a potential cover-up or manipulation of evidence related to the Senate shooting incident, raising questions about accountability and transparency."
+      },
+      {
+        "id": "evt_383b38f25cbf10b7",
+        "logged_at": "2026-05-15T06:58:32.871Z",
+        "source_url": "https://x.com/News5PH/status/2054946221379506514",
+        "timestamp": "2026-05-15T06:57:00Z",
+        "statement": "he was the first to fire a gun in the Senate, but he explained that it was just a warning shot.",
+        "tactic_ids": [
+          "minimization",
+          "redefinition"
+        ],
+        "analysis": "This statement attempts to downplay the severity of firing a weapon within the Senate, re-framing it as a controlled action.",
+        "actor": "Senate Sergeant-at-Arms Ret. PM/Gen. Ma. O Aplasca"
+      },
+      {
+        "id": "evt_250a1e2cce095a25",
+        "logged_at": "2026-05-15T07:58:43.187Z",
+        "analysis": "This statement attempts to reframe the act of firing a gun as a warning, potentially minimizing culpability for initiating gunfire in a legislative building. It aligns with a tactic of justification and minimization.",
+        "tactic_ids": [
+          "justification",
+          "minimization"
+        ],
+        "source_url": "https://x.com/News5PH/status/2055180037650002220",
+        "timestamp": "2026-05-13T20:08:18",
+        "statement": "I fired a warning shot in the Senate.",
+        "actor": "Senate Sergeant-at-Arms Mao Aplasca"
+      }
+    ]
+  },
+  "senate_altercation_may2026": {
+    "title": "Senate Altercation and Disappearance of ICC-Wanted Senator",
+    "created_at": "2026-05-15T06:28:01.658Z",
+    "events": [
+      {
+        "id": "evt_e54782ae72b86808",
+        "logged_at": "2026-05-15T06:28:01.658Z",
+        "analysis": "This event highlights a potential evasion of accountability for a human rights issue (ICC-wanted individual) and a lack of transparency regarding the disappearance of a public official, directly impacting public trust in institutions and rule of law.",
+        "source_url": "https://x.com/ABSCBNNews/status/2055163698520686646",
+        "tactic_ids": [
+          "obfuscation",
+          "blame_shifting"
+        ],
+        "timestamp": "2026-05-15T06:21:00Z",
+        "actor": "ABSCBNNews",
+        "statement": "NBI Director Melvin Matibag confirms on #DatelinePhilippines that Senator Robinhood Padilla is now considered as \"person of interest\" in the disappearance of ICC-wanted Senator Ronald dela Rosa."
+      }
+    ]
+  },
+  "senate_shooting_may2026": {
+    "title": "Senate Shooting Incident May 2026",
+    "created_at": "2026-05-15T06:28:11.670Z",
+    "events": [
+      {
+        "id": "evt_a0a34a440b1345b5",
+        "logged_at": "2026-05-15T06:28:11.670Z",
+        "timestamp": "2026-05-15T06:27:00Z",
+        "statement": "Senate Sergeant-at-Arms Ret. PM/Gen. Ma. O Aplasca admitted that he was the first to fire a gun in the Senate, but he explained that it was just a warning shot.",
+        "tactic_ids": [
+          "minimization",
+          "justification"
+        ],
+        "analysis": "This statement from a key actor in the Senate shooting incident attempts to reframe the initial act of violence as a \"warning shot,\" potentially minimizing its severity and deflecting full responsibility. This aligns with tactics of minimization and justification.",
+        "source_url": "https://x.com/News5PH/status/2055132428084367746",
+        "actor": "Senate Sergeant-at-Arms Mao Aplasca"
+      },
+      {
+        "id": "evt_80b5a2cabfa14b37",
+        "logged_at": "2026-05-15T08:28:01.993Z",
+        "analysis": "Ombudsman Remulla publicly criticizes Senator Dela Rosa for evading allegations, framing evasion as an indicator of guilt. This is a direct call for accountability within national legal frameworks.",
+        "statement": "Senator Ronald \"Bato\" dela Rosa should confront allegations against him instead of evading them. \"Flight is an indication of guilt.\"",
+        "tactic_ids": [
+          "blame_shifting",
+          "evasion_of_accountability"
+        ],
+        "actor": "Ombudsman Jesus Crispin Remulla",
+        "source_url": "https://x.com/bncdotph/status/2055190210020036825",
+        "timestamp": "2026-05-15T08:27:00Z"
+      }
+    ]
+  },
+  "senate_gunfire_may2026": {
+    "title": "Senate Gunfire Incident May 2026",
+    "created_at": "2026-05-15T07:58:01.300Z",
+    "events": [
+      {
+        "id": "evt_7757e8417483163e",
+        "logged_at": "2026-05-15T07:58:01.301Z",
+        "actor": "Senate Sergeant-at-Arms Mao Aplasca",
+        "statement": "I fired a warning shot.",
+        "timestamp": "2026-05-15T07:57:00Z",
+        "source_url": "https://x.com/News5PH/status/2055177265910403166",
+        "analysis": "This statement attempts to reframe the initial act of firing as a warning, rather than an aggressive act, potentially to mitigate accountability.",
+        "tactic_ids": [
+          "redefinition",
+          "minimization"
+        ]
+      }
+    ]
+  },
+  "senate_shooting_incident_may2026": {
+    "title": "Senate Shooting Incident May 2026",
+    "created_at": "2026-05-15T08:28:11.147Z",
+    "events": [
+      {
+        "id": "evt_535070906125c4d9",
+        "logged_at": "2026-05-15T08:28:11.147Z",
+        "statement": "Flight is an indication of guilt",
+        "actor": "Ombudsman Jesus Crispin Remulla",
+        "tactic_ids": [
+          "inference_from_behavior",
+          "undermining_trust"
+        ],
+        "timestamp": "2026-05-15T08:27:00Z",
+        "analysis": "Ombudsman Remulla is using a tactic of inference from behavior to imply guilt, specifically \"flight is an indication of guilt,\" against Senator Bato dela Rosa. This shifts the burden of proof and bypasses direct evidence, serving to undermine trust in the accused rather than present concrete evidence.",
+        "source_url": "https://x.com/gmanews/status/2055194049829912619"
       }
     ]
   }
