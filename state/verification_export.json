@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-16T19:17:48.738Z",
+  "generated_at": "2026-05-16T19:45:28.184Z",
   "stats": {
     "total": 372,
     "supported": 3,
@@ -1741,6 +1741,54 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "claim_34",
+      "claim_text": "The Iranian Navy attacked a US ship near Bandar Abbas.",
+      "status": "refuted",
+      "confidence_score": 0.375,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 0.5,
+        "web_search": -1
+      },
+      "source_handle": "iranmilittary",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_geopolitical_rhetoric_v1",
+      "verification_count": 2,
+      "verified_at": "2026-04-14T17:02:15.018Z",
+      "created_at": "2026-04-14T17:01:23.386Z",
+      "original_source": "Iranian social media accounts on X",
+      "claim_date": "2026-04-13",
+      "supporting_sources": [
+        {
+          "name": "News.az",
+          "stance": "Reported claims from Iranian social media about an attack, noting lack of official confirmation."
+        },
+        {
+          "name": "Oneindia News",
+          "stance": "Reported Iran's claim of destroying a US naval vessel near Bandar Abbas, highlighting the absence of US confirmation."
+        },
+        {
+          "name": "Caliber.Az",
+          "stance": "Reported the Iranian Navy's claim on X of sinking a US vessel near Bandar Abbas."
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "Misbar",
+          "stance": "Investigated the circulating video and found it to be outdated, depicting a US strike on an Iranian vessel in March 2026, not an Iranian attack on a US ship."
+        }
+      ],
+      "framing_analysis": "The claim is framed as a factual event, but it appears to be a piece of misinformation or propaganda, especially given the lack of official confirmation and the refutation of the video evidence. The timing coincides with heightened tensions and a US naval blockade in the Strait of Hormuz.",
+      "web_search_summary": "Claims circulating on social media on April 13-14, 2026, suggest the Iranian Navy attacked and sank a US vessel near Bandar Abbas. However, these claims lack official confirmation from either Iranian authorities or the United States military. Misbar's analysis indicates that a video circulated as evidence of the attack is outdated and actually depicts a US strike on an Iranian vessel in March 2026.",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "claim_1",
       "claim_text": "US operations in Iran could end in 2-3 weeks (Trump statement)",
       "status": "refuted",
@@ -1800,17 +1848,17 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_34",
-      "claim_text": "The Iranian Navy attacked a US ship near Bandar Abbas.",
+      "claim_id": "claim_33",
+      "claim_text": "Iranian Navy attacked a US ship near Bandar Abbas",
       "status": "refuted",
-      "confidence_score": 0.375,
+      "confidence_score": 0.285,
       "scoring_breakdown": {
-        "source_tier": 0.5,
+        "source_tier": 0.2,
         "newsguard": 0.5,
         "corroboration": 0,
         "evidence_quality": 0,
-        "cross_source": 0.5,
-        "web_search": -1
+        "cross_source": 1,
+        "web_search": 0.5
       },
       "source_handle": "iranmilittary",
       "source_tier": null,
@@ -1818,33 +1866,33 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 2,
-      "verified_at": "2026-04-14T17:02:15.018Z",
-      "created_at": "2026-04-14T17:01:23.386Z",
-      "original_source": "Iranian social media accounts on X",
-      "claim_date": "2026-04-13",
+      "verification_count": 15,
+      "verified_at": "2026-04-18T11:54:15.722Z",
+      "created_at": "2026-04-14T16:00:13.832Z",
+      "original_source": "Iranian Armed Forces / Iranian social media accounts",
+      "claim_date": "2026-04",
       "supporting_sources": [
         {
-          "name": "News.az",
-          "stance": "Reported claims from Iranian social media about an attack, noting lack of official confirmation."
+          "name": "Censor.NET",
+          "stance": "Reported Iran's claim of destroying a US ship near Bandar Abbas."
         },
         {
           "name": "Oneindia News",
-          "stance": "Reported Iran's claim of destroying a US naval vessel near Bandar Abbas, highlighting the absence of US confirmation."
+          "stance": "Reported Iran's claim of destroying a US naval vessel near Bandar Abbas."
         },
         {
-          "name": "Caliber.Az",
-          "stance": "Reported the Iranian Navy's claim on X of sinking a US vessel near Bandar Abbas."
+          "name": "News.az",
+          "stance": "Reported Iranian social media claims of an attack on a US vessel near Bandar Abbas."
         }
       ],
       "dissenting_sources": [
         {
-          "name": "Misbar",
-          "stance": "Investigated the circulating video and found it to be outdated, depicting a US strike on an Iranian vessel in March 2026, not an Iranian attack on a US ship."
+          "name": "United States Military/Government",
+          "stance": "No official confirmation of any US ship loss or attack by Iran in April 2026."
         }
       ],
-      "framing_analysis": "The claim is framed as a factual event, but it appears to be a piece of misinformation or propaganda, especially given the lack of official confirmation and the refutation of the video evidence. The timing coincides with heightened tensions and a US naval blockade in the Strait of Hormuz.",
-      "web_search_summary": "Claims circulating on social media on April 13-14, 2026, suggest the Iranian Navy attacked and sank a US vessel near Bandar Abbas. However, these claims lack official confirmation from either Iranian authorities or the United States military. Misbar's analysis indicates that a video circulated as evidence of the attack is outdated and actually depicts a US strike on an Iranian vessel in March 2026.",
+      "framing_analysis": "The claim appears to be a false dichotomy, presenting an unconfirmed Iranian assertion as a factual event without corroborating evidence from the US. The framing suggests a direct military engagement that is not supported by available information. The claim is likely part of an information warfare strategy amidst heightened tensions and a US naval blockade against Iran.",
+      "web_search_summary": "Claims from Iranian sources and social media emerged in mid-April 2026 stating that the Iranian Navy attacked and destroyed a US ship near Bandar Abbas. However, there has been no official confirmation from the United States regarding any such incident or loss of a naval vessel. US sources indicate that a naval blockade is in effect against Iran, and while there have been instances of US forces turning back Iranian-flagged vessels, there are no reports of a US ship being attacked or destroyed by Iran in April 2026.",
       "investigation_depth": "quick"
     },
     {
@@ -1892,6 +1940,53 @@
       ],
       "framing_analysis": "This claim presents a false dichotomy by suggesting that Russia's only options for energy deals with Europe are either the Euro or the Chinese Yuan. The reality is that Europe is actively seeking to end its reliance on Russian fossil fuels altogether.",
       "web_search_summary": "The claim that Russia announced all future oil and gas deals with Europe will be priced in Chinese Yuan is not supported by current information. While Russia has pivoted towards China for energy deals and some payments are made in rubles and other foreign currencies, there is no evidence of a blanket announcement to price all future European oil and gas deals in Chinese Yuan. In fact, the EU is actively working to phase out Russian fossil fuel imports.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_9031c60d2e",
+      "claim_text": "Joe Rogan just delivered the most powerful speech I’ve ever heard from private citizen in the White House. Listen to every word of this.  incredible",
+      "status": "refuted",
+      "confidence_score": 0.285,
+      "scoring_breakdown": {
+        "source_tier": 0.2,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0,
+        "cross_source": 1,
+        "web_search": 0.5
+      },
+      "source_handle": "bennyjohnson",
+      "source_tier": null,
+      "evidence_urls": [
+        "https://www.forbes.com/sites/conormurray/2026/04/18/joe-rogan-joins-trump-at-white-house-after-stepping-up-criticism-of-president/",
+        "https://www.newsnationnow.com/newsnation-live/joe-rogan-joins-trump-to-sign-order-allowing-psychedelic-drug-research/",
+        "https://www.youtube.com/watch?v=s7_Y_2_y_2k"
+      ],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": null,
+      "verification_count": 31,
+      "verified_at": "2026-05-02T06:00:50.340Z",
+      "created_at": "2026-04-19T23:19:11.139Z",
+      "original_source": "Unknown",
+      "claim_date": "2026-04",
+      "supporting_sources": [],
+      "dissenting_sources": [
+        {
+          "name": "Forbes",
+          "stance": "Reports Rogan's presence and brief comments, not a 'powerful speech'."
+        },
+        {
+          "name": "NewsNation Live",
+          "stance": "Shows Rogan speaking briefly about his role in the executive order, not delivering a 'powerful speech'."
+        },
+        {
+          "name": "Sky News",
+          "stance": "Reports Rogan revealing a text exchange with Trump about Ibogaine, not a 'powerful speech'."
+        }
+      ],
+      "framing_analysis": "The claim uses emotionally charged language ('most powerful speech,' 'incredible') to exaggerate the significance of Joe Rogan's appearance and brief remarks at the White House. It frames his presence as a major political event rather than a participation in a specific policy signing. The phrase 'private citizen in the White House' is technically true, but misleading in its implication of a significant, independent address.",
+      "web_search_summary": "Joe Rogan was recently present at the White House on April 18, 2026, when President Trump signed an executive order regarding psychedelic drug research. While Rogan spoke briefly at the event, he did not deliver a powerful speech as a private citizen in the White House. His comments were primarily about his role in bringing the issue of psychedelic treatments to the President's attention.",
       "investigation_depth": "quick"
     },
     {
@@ -1958,103 +2053,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "live_9031c60d2e",
-      "claim_text": "Joe Rogan just delivered the most powerful speech I’ve ever heard from private citizen in the White House. Listen to every word of this.  incredible",
-      "status": "refuted",
-      "confidence_score": 0.285,
-      "scoring_breakdown": {
-        "source_tier": 0.2,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 1,
-        "web_search": 0.5
-      },
-      "source_handle": "bennyjohnson",
-      "source_tier": null,
-      "evidence_urls": [
-        "https://www.forbes.com/sites/conormurray/2026/04/18/joe-rogan-joins-trump-at-white-house-after-stepping-up-criticism-of-president/",
-        "https://www.newsnationnow.com/newsnation-live/joe-rogan-joins-trump-to-sign-order-allowing-psychedelic-drug-research/",
-        "https://www.youtube.com/watch?v=s7_Y_2_y_2k"
-      ],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": null,
-      "verification_count": 31,
-      "verified_at": "2026-05-02T06:00:50.340Z",
-      "created_at": "2026-04-19T23:19:11.139Z",
-      "original_source": "Unknown",
-      "claim_date": "2026-04",
-      "supporting_sources": [],
-      "dissenting_sources": [
-        {
-          "name": "Forbes",
-          "stance": "Reports Rogan's presence and brief comments, not a 'powerful speech'."
-        },
-        {
-          "name": "NewsNation Live",
-          "stance": "Shows Rogan speaking briefly about his role in the executive order, not delivering a 'powerful speech'."
-        },
-        {
-          "name": "Sky News",
-          "stance": "Reports Rogan revealing a text exchange with Trump about Ibogaine, not a 'powerful speech'."
-        }
-      ],
-      "framing_analysis": "The claim uses emotionally charged language ('most powerful speech,' 'incredible') to exaggerate the significance of Joe Rogan's appearance and brief remarks at the White House. It frames his presence as a major political event rather than a participation in a specific policy signing. The phrase 'private citizen in the White House' is technically true, but misleading in its implication of a significant, independent address.",
-      "web_search_summary": "Joe Rogan was recently present at the White House on April 18, 2026, when President Trump signed an executive order regarding psychedelic drug research. While Rogan spoke briefly at the event, he did not deliver a powerful speech as a private citizen in the White House. His comments were primarily about his role in bringing the issue of psychedelic treatments to the President's attention.",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_33",
-      "claim_text": "Iranian Navy attacked a US ship near Bandar Abbas",
-      "status": "refuted",
-      "confidence_score": 0.285,
-      "scoring_breakdown": {
-        "source_tier": 0.2,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 1,
-        "web_search": 0.5
-      },
-      "source_handle": "iranmilittary",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_geopolitical_rhetoric_v1",
-      "verification_count": 15,
-      "verified_at": "2026-04-18T11:54:15.722Z",
-      "created_at": "2026-04-14T16:00:13.832Z",
-      "original_source": "Iranian Armed Forces / Iranian social media accounts",
-      "claim_date": "2026-04",
-      "supporting_sources": [
-        {
-          "name": "Censor.NET",
-          "stance": "Reported Iran's claim of destroying a US ship near Bandar Abbas."
-        },
-        {
-          "name": "Oneindia News",
-          "stance": "Reported Iran's claim of destroying a US naval vessel near Bandar Abbas."
-        },
-        {
-          "name": "News.az",
-          "stance": "Reported Iranian social media claims of an attack on a US vessel near Bandar Abbas."
-        }
-      ],
-      "dissenting_sources": [
-        {
-          "name": "United States Military/Government",
-          "stance": "No official confirmation of any US ship loss or attack by Iran in April 2026."
-        }
-      ],
-      "framing_analysis": "The claim appears to be a false dichotomy, presenting an unconfirmed Iranian assertion as a factual event without corroborating evidence from the US. The framing suggests a direct military engagement that is not supported by available information. The claim is likely part of an information warfare strategy amidst heightened tensions and a US naval blockade against Iran.",
-      "web_search_summary": "Claims from Iranian sources and social media emerged in mid-April 2026 stating that the Iranian Navy attacked and destroyed a US ship near Bandar Abbas. However, there has been no official confirmation from the United States regarding any such incident or loss of a naval vessel. US sources indicate that a naval blockade is in effect against Iran, and while there have been instances of US forces turning back Iranian-flagged vessels, there are no reports of a US ship being attacked or destroyed by Iran in April 2026.",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "claim_9",
-      "claim_text": "American journalist Shelly Kittleson kidnapped in Baghdad, possibly by Iran-backed militia",
+      "claim_id": "claim_53",
+      "claim_text": "Forced organ harvesting from Falun Gong practitioners is occurring in China.",
       "status": "refuted",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -2065,21 +2065,21 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": null,
+      "source_handle": "epochtimes",
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_power_accountability",
-      "verification_count": 12,
-      "verified_at": "2026-04-16T00:31:12.807Z",
-      "created_at": "2026-03-31T00:00:00.000Z",
+      "related_axis_id": "axis_human_rights_exploitation_v1",
+      "verification_count": 2,
+      "verified_at": "2026-04-16T07:01:36.672Z",
+      "created_at": "2026-04-15T06:40:41.428Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
       "dissenting_sources": [],
       "framing_analysis": null,
-      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"American freelance journalist Shelly Kittleson was kidnapped in Baghdad on March 31, 2026, by Kataib Hezbollah, an Iran-backed militia. She was released on April 7, 2026, in a prisoner swap with Iraq, on the condition that she immediately leave the country. U.S. officials had reportedly warned Kittleson of threats against her prior to her abduction.\",\n  \"evidence_urls\": [\n    \"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHghfqMCA4",
+      "web_search_summary": null,
       "investigation_depth": "quick"
     },
     {
@@ -2113,8 +2113,8 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "claim_53",
-      "claim_text": "Forced organ harvesting from Falun Gong practitioners is occurring in China.",
+      "claim_id": "claim_9",
+      "claim_text": "American journalist Shelly Kittleson kidnapped in Baghdad, possibly by Iran-backed militia",
       "status": "refuted",
       "confidence_score": 0.275,
       "scoring_breakdown": {
@@ -2125,21 +2125,82 @@
         "cross_source": 0.5,
         "web_search": 0
       },
-      "source_handle": "epochtimes",
+      "source_handle": null,
       "source_tier": null,
       "evidence_urls": [],
       "tweet_url": null,
       "category": null,
-      "related_axis_id": "axis_human_rights_exploitation_v1",
-      "verification_count": 2,
-      "verified_at": "2026-04-16T07:01:36.672Z",
-      "created_at": "2026-04-15T06:40:41.428Z",
+      "related_axis_id": "axis_power_accountability",
+      "verification_count": 12,
+      "verified_at": "2026-04-16T00:31:12.807Z",
+      "created_at": "2026-03-31T00:00:00.000Z",
       "original_source": null,
       "claim_date": null,
       "supporting_sources": [],
       "dissenting_sources": [],
       "framing_analysis": null,
-      "web_search_summary": null,
+      "web_search_summary": "{\n  \"verdict\": \"confirmed\",\n  \"summary\": \"American freelance journalist Shelly Kittleson was kidnapped in Baghdad on March 31, 2026, by Kataib Hezbollah, an Iran-backed militia. She was released on April 7, 2026, in a prisoner swap with Iraq, on the condition that she immediately leave the country. U.S. officials had reportedly warned Kittleson of threats against her prior to her abduction.\",\n  \"evidence_urls\": [\n    \"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHghfqMCA4",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_a0a7c3285c",
+      "claim_text": "the joke racism did you guys get it??? [↳ @?: Tierlist of all the humans in the world   I don't accept discussions]",
+      "status": "unverified",
+      "confidence_score": 0.62,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.7,
+        "evidence_quality": 0.7,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": "Koritheaodfan",
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": null,
+      "verification_count": 50,
+      "verified_at": "2026-05-16T19:45:28.133Z",
+      "created_at": "2026-05-16T00:30:32.577Z",
+      "original_source": "@?",
+      "claim_date": "2020-08-13",
+      "supporting_sources": [
+        {
+          "name": "YouTube",
+          "excerpt": "A YouTube video titled \"The Racist Tier List..Yes It's Exactly What You Think\" discusses and creates a tier list of various individuals and groups based on their perceived racism, including historical figures and online communities.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjIuH0iUSjP0h8HtZ8iR6nOBUO_r3k7URH8FrDJk62FwjQQbGD4a_VcUtHWhHQZifJI0jRu_hmu3Lbwapb16iRBSwvp3HKWbfhBsJ-ud9bCjwns3c6CGEwgFh_0kQNyUe-vS1tUKE="
+        },
+        {
+          "name": "YouTube",
+          "excerpt": "Another YouTube video, \"racism tier list (anime edition),\" ranks anime characters based on their perceived racist tendencies, often using stereotypical interpretations of their actions or dialogue.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjIuH0iUSjP0h8HtZ8iR6nOBUO_r3k7URH8FrDJk62FwjQQbGD4a_VcUtHWhHQZifJI0jRu_hmu3Lbwapb16iRBSwvp3HKWbfhBsJ-ud9bCjwns3c6CGEwgFh_0kQNyUe-vS1tUKE="
+        },
+        {
+          "name": "Reddit",
+          "excerpt": "A Reddit thread titled \"Racist Tierlist\" shows users discussing and creating their own tier lists related to racism, often in a satirical or dark humor context.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMwkEUN1Upw00c1_rHFUAk5FISa26shIhPACdT6QdiAWOlynU8lEhtJMRD_gfggJtAe0CqLsbtMgKqXUACTdFABycHwekwrgUMvNpx6f1WDhR5pQGNAGYSWq7sL0gZEElIeak1ydiSQFW1e76jcv_Iq6OzxpjOo5ovnNC2392LuOMvSJTNVxYC5A=="
+        },
+        {
+          "name": "YouTube",
+          "excerpt": "A YouTube video titled \"Races Tier List\" initially appears to be about ranking actual races (like NASCAR), but quickly reveals itself to be a satirical ranking of human races based on how they \"taste,\" explicitly acknowledging and playing on racist tropes.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjIuH0iUSjP0h8HtZ8iR6nOBUO_r3k7URH8FrDJk62FwjQQbGD4a_VcUtHWhHQZifJI0jRu_hmu3Lbwapb16iRBSwvp3HKWbfhBsJ-ud9bCjwns3c6CGEwgFh_0kQNyUe-vS1tUKE="
+        },
+        {
+          "name": "EBSCO",
+          "excerpt": "An article on racial jokes and humor notes that such humor often reflects societal attitudes and perceptions, using stereotypes to create comedic narratives that can perpetuate harmful stereotypes, even if the intent varies.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOTcem8kVfg9deMqzj5xegdiC1E6BU5tVLvJi-EEpd1fWe63trgJOlkHJApD636xLOMVIVFtuRt2_HmmldzlZm3OaXKAMw-fYaj-JQ7eAv81aVMtMayZLztnKHvJ2QywSVIzhMHQDB2B0Ej_eS3cn_fLECS_BFYDpJjorxT6A-HgflAfBKGVSkz1oKQF86svy_Bfk59VJhHA=="
+        },
+        {
+          "name": "Jim Crow Museum",
+          "excerpt": "An essay on racist jokes discusses how such jokes, even without explicit slurs, rely on demeaning stereotypes and can be a form of hate speech, regardless of whether the teller intends them as humor.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim itself is a direct quote from an online post, indicating an awareness of the controversial nature of the content by including \"the joke racism did you guys get it???\". The phrase \"I don't accept discussions\" further frames it as a provocative statement, likely intended to elicit strong reactions and shut down debate.",
+      "web_search_summary": "The claim refers to the concept of a \"racist tier list,\" which is a known phenomenon online. These lists, often presented as jokes or satire, categorize different racial or ethnic groups based on perceived traits, often perpetuating harmful stereotypes. While some creators claim these are ironic or comedic, the content frequently aligns with established definitions of racism.",
       "investigation_depth": "quick"
     },
     {
@@ -2374,52 +2435,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "live_a0a7c3285c",
-      "claim_text": "the joke racism did you guys get it??? [↳ @?: Tierlist of all the humans in the world   I don't accept discussions]",
-      "status": "unverified",
-      "confidence_score": 0.4,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0.5,
-        "cross_source": 0.5,
-        "web_search": 0.5
-      },
-      "source_handle": "Koritheaodfan",
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": null,
-      "verification_count": 48,
-      "verified_at": "2026-05-16T19:00:09.764Z",
-      "created_at": "2026-05-16T00:30:32.577Z",
-      "original_source": "unknown",
-      "claim_date": "2020-08-13",
-      "supporting_sources": [
-        {
-          "name": "r/LeagueOfMemes - Reddit",
-          "excerpt": "A Reddit post titled \"Tier list \"Racist mains\"\" shows users creating and discussing tier lists that categorize groups based on perceived racist tendencies, often in a humorous or ironic context.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9F8yadjlBncR0YYzGoRZmzUPc6b1lrtepUkoJdcDFP8I-wznytGlcy-iWN3GX0ju0whOsG-asK9n4186GV7lse6WLQstvRSowSiRxtx9tz2S1so3wRhmJ6M3MS3PAA3OjNQgI9veq0Dk8LCWhYV3Z2tDBhpmVr91q81h6ekXHh_vy9REmumKyvA=="
-        },
-        {
-          "name": "r/MobileLegendsGame - Reddit",
-          "excerpt": "A Reddit post titled \"Racism Tierlist (The only valid tierlist)\" explicitly states it's a \"Joke post, don't take it so seriously,\" indicating the use of such tier lists for ironic or provocative humor.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9F8yadjlBncR0YYzGoRZmzUPc6b1lrtepUkoJdcDFP8I-wznytGlcy-iWN3GX0ju0whOsG-asK9n4186GV7lse6WLQstvRSowSiRxtx9tz2S1so3wRhmJ6M3MS3PAA3OjNQgI9veq0Dk8LCWhYV3Z2tDBhpmVr91q81h6ekXHh_vy9REmumKyvA=="
-        },
-        {
-          "name": "YouTube",
-          "excerpt": "A YouTube video titled \"The Racist Tier List..Yes It's Exactly What You Think\" discusses and creates a tier list ranking different groups and behaviors by their perceived level of racism, often in a satirical or observational manner.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEI7bUydAYTulhoFtSedeJSdFP2ipYXan5am5HRwMvBvxYQe00L9HPbw7PHbJvqZ5VKQyt5zZKQkKAufrS4_GhzyRq56Rb9NWcqA1Z4cSh9V3mcRz18QxxxgqaCiYtnrJmhf2QFEak="
-        }
-      ],
-      "dissenting_sources": [],
-      "framing_analysis": "The claim is framed as a rhetorical question, implying that the preceding statement is a joke about racism that should be understood as such. The phrase \"I don't accept discussions\" adds to the provocative and dismissive tone often found in internet humor, suggesting an unwillingness to engage in serious debate about the controversial content of the implied tier list.",
-      "web_search_summary": "The claim appears to be a reference to a type of internet meme or joke format, specifically a \"tier list\" that ranks different groups of people based on perceived levels of \"racism\" or other controversial traits. While the exact phrasing \"Tierlist of all the humans in the world I don't accept discussions\" isn't a widely recognized, standalone meme, the concept of creating such a tier list as a provocative or ironic joke is present in online communities. The phrase \"the joke racism did you guys get it???\" further suggests an attempt at ironic or edgy humor. Without more context, it's difficult to definitively confirm or refute the specific intent or origin of this exact phrasing. However, the general concept aligns with existing internet humor trends.",
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "claim_36",
       "claim_text": "US-sanctioned Chinese tanker Rich Starry successfully transited the Strait of Hormuz despite US naval blockade.",
       "status": "unverified",
@@ -2566,8 +2581,8 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": null,
-      "verification_count": 14,
-      "verified_at": "2026-05-16T19:10:51.286Z",
+      "verification_count": 17,
+      "verified_at": "2026-05-16T19:44:46.044Z",
       "created_at": "2026-05-16T16:41:41.644Z",
       "original_source": "unknown",
       "claim_date": null,
