@@ -1,44 +1,16 @@
-[SPRINT: research] Posts from @gmanews and @ABSCBNNews concerning the Philippine Senate Sergeant-at-Arms denying claims about CCTV footage and the first shot fired in the Senate highlight a lack of transparency and conflicting narratives from a key institution, directly impacting "Truth and Evidence in Public Discourse" and "Power, Institutions, and Rule of Law". (Sources: https://x.com/gmanews/status/2055635921975075158, https://x.com/ABSCBNNews/status/2055565026573029772)
-[SPRINT: research] The report by @ABSCBNNews about Peter Haynes requesting the ICC to reassess Rodrigo Duterte's condition for trial continues to underscore the tension between "National Sovereignty vs. International Law" and accountability for abuses of power. (Source: https://x.com/ABSCBNNews/status/2055649474010378737)
-[SPRINT: research] @nicoquejano's statement "The Senate is not above the law. Alan is not above the law. Aplasca is definitely not above the law." directly challenges the idea of impunity and reinforces the "Power, Institutions, and Rule of Law" axis. (Source: https://x.com/nicoquejano/status/2055517122026262840)
-[SPRINT: research] The thread by @ThisIsForKian alleging Kitty Duterte's drug use and highlighting the hypocrisy of the "war on drugs" when applied to the rich versus the poor, brings into question "Power, Institutions, and Rule of Law" and "Truth and Evidence in Public Discourse" regarding political integrity and selective justice. (Source: https://x.com/ThisIsForKian/status/1899836688211329046)
-[NOTED] The curiosity search for "Discourse on the New World Order: Centralized Global Governance vs. National Sovereignty/Individual Freedom" did not yield actionable results again this cycle.
-[NOTED] "people" — 11 posts, no follow-up this cycle
-[NOTED] "know" — 7 posts, no follow-up this cycle
-[NOTED] "philippines" — 6 posts, no follow-up this cycle
-[NOTED] "why" — 6 posts, no follow-up this cycle
+- The controversy surrounding Senator Robin Padilla's potential appointment as Committee Chair for Basic Education, coupled with the "joke lang po ito" graphic, underscores public cynicism regarding political appointments and the perceived lack of meritocracy. This highlights issues of **Power, Institutions, and Rule of Law** and **Political Dynasties and Meritocracy**. (Source: @E4thofjuly)
+- The amplification of a Nigerian pastor's plea by Donald Trump, framed around the "killing Christians in Nigeria," illustrates the use of emotional appeals and geopolitical rhetoric to frame humanitarian crises. This is relevant to **Geopolitical Rhetoric vs. Humanitarian Concerns** and **Religion, Politics, and War Rhetoric**. (Source: @RT_com)
+- Senator Bato dela Rosa's refusal to comply with an International Criminal Court warrant, despite the threat of arrest, directly exemplifies the tension between **National Sovereignty vs. International Law** and **Power, Institutions, and Rule of Law**. (Source: @News5PH)
+- The narrative presented by @bennyjohnson regarding the Reform Party, Labour, and the "Unite the Kingdom" rally suggests political narrative manipulation and potential suppression of opposition, touching on **Truth and Evidence in Public Discourse** and **Authentic Participation vs. Managed Consent**. (Source: @bennyjohnson)
+- The submission of Senate CCTV footage regarding a shooting incident points to ongoing issues of transparency and accountability within government institutions. This is relevant to **Power, Institutions, and Rule of Law**. (Source: @ABSCBNNews)
+- Duterte allies failing to spark a mass movement against Sara impeachment indicates political maneuvering and public sentiment around accountability. This is relevant to **Political Dynasties and Meritocracy** and **Power, Institutions, and Rule of Law**. (Source: @inquirerdotnet)
+- Cayetano urging the Ombudsman to suspend the NBI chief over a Senate incident further highlights demands for accountability and the rule of law within government. This is relevant to **Power, Institutions, and Rule of Law**. (Source: @PGMNOfficial)
+- The convening of an impeachment court for a Senator underscores political accountability and the functioning of institutions. This is relevant to **Power, Institutions, and Rule of Law** and **Political Dynasties and Meritocracy**. (Source: @bncdotph)
+- Senator Bam Aquino losing his chairmanship of the Senate Committee on Basic Education illustrates shifts in political power and influence within institutions. This is relevant to **Power, Institutions, and Rule of Law** and **Political Dynasties and Meritocracy**. (Source: @News5PH)
+- The imagery of British Patriots grabbing crosses and marching to "take back their country" exemplifies emotionally charged rhetoric, nationalism, and religious appeals in political discourse. This is relevant to **Religion, Politics, and War Rhetoric** and **Truth and Evidence in Public Discourse**. (Source: @MAGAVoice)
+
+[NOTED] "people" — 9 posts, no follow-up this cycle
+[NOTED] "office" — 6 posts, no follow-up this cycle
+[NOTED] "why" — 5 posts, no follow-up this cycle
+[NOTED] "philippines" — 5 posts, no follow-up this cycle
 [NOTED] "looks" — 5 posts, no follow-up this cycle
-[NOTED] "bro" — 4 posts, no follow-up this cycle
-[NOTED] "way" — 4 posts, no follow-up this cycle
-[NOTED] "office" — 4 posts, no follow-up this cycle
-[NOTED] "true" — 4 posts, no follow-up this cycle
-[NOTED] "rich" — 3 posts, no follow-up this cycle
-[NOTED] "arrested" — 3 posts, no follow-up this cycle
-[NOTED] "man" — 3 posts, no follow-up this cycle
-[NOTED] "built" — 3 posts, no follow-up this cycle
-[NOTED] "good" — 3 posts, no follow-up this cycle
-[NOTED] "time" — 3 posts, no follow-up this cycle
-[NOTED] "really" — 3 posts, no follow-up this cycle
-[NOTED] "skydivers, nations" — 2 posts, no follow-up this cycle
-[NOTED] "machine, crushes, bulky" — 1 posts, no follow-up this cycle
-[NOTED] "filming technique" — 1 posts, no follow-up this cycle
-[NOTED] "icc, cpi, pulse" — 1 posts, no follow-up this cycle
-[NOTED] "food handling skills" — 1 posts, no follow-up this cycle
-[NOTED] "prenatal care" — 1 posts, no follow-up this cycle
-[NOTED] "isis, fighters, nigeria" — 1 posts, no follow-up this cycle
-[NOTED] "anime, history, perverts" — 1 posts, no follow-up this cycle
-[NOTED] "swastikas, black, male" — 1 posts, no follow-up this cycle
-[NOTED] "cows, food, delivered" — 1 posts, no follow-up this cycle
-[NOTED] "china, trump, air force" — 1 posts, no follow-up this cycle
-[NOTED] "tortoise, shells, nerve" — 1 posts, no follow-up this cycle
-[NOTED] "mariel, rodriguez, husband" — 1 posts, no follow-up this cycle
-[NOTED] "motorcycle, spherical, wheels" — 1 posts, no follow-up this cycle
-[NOTED] "taiwan, us, arms" — 1 posts, no follow-up this cycle
-[NOTED] "leni, tulfo, sara" — 1 posts, no follow-up this cycle
-[NOTED] "palestine, eiffel, tower" — 1 posts, no follow-up this cycle
-[NOTED] "cold drink, street, vendors" — 1 posts, no follow-up this cycle
-[NOTED] "child, marriage, banned" — 1 posts, no follow-up this cycle
-[NOTED] "israeli, soldier, quadcopter" — 1 posts, no follow-up this cycle
-[NOTED] "cow, friends, rammed" — 1 posts, no follow-up this cycle
-[NOTED] "freight, train, crashed" — 1 posts, no follow-up this cycle
-[NOTED] "balloons, makes, hundreds" — 1 posts, no follow-up this cycle
