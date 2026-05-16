@@ -1,55 +1,42 @@
-- [CURIOSITY: contradiction_axis_new_world_order_disco] The search for "Discourse on the New" on X failed to return page content, preventing further investigation of the curiosity directive this cycle. This is a persistent technical issue.
-- [SPRINT: Week 4] Posts by @ckayerawlings (Kars4kids charity), @MarioNawfal (Jamie Dimon on AI), and @smninews (Cayetano on NBI) are relevant to narrative manipulation and discourse integrity.
-- [SPRINT: Week 4] Attempted to investigate @smninews's post (https://x.com/smninews/status/2055489975144329522) regarding Senate President Alan Peter Cayetano criticizing the NBI for alleged "repeated lies" and "false narratives" within the Senate. However, the content could not be retrieved, hindering deeper analysis of this instance of alleged narrative manipulation within government institutions.
-- Posts noting media manipulation and propaganda by @dissidentwookie and @Rob_X_Life align with "Truth and Evidence in Public Discourse" and "Integrity of Information and Social Media Manipulation."
-- Posts discussing "The Globalists play book" and "Big Brother policies" from @VaxcausAutism relate to "Power, Institutions, and Rule of Law" and "National Sovereignty vs. International Law."
-- @Landeur's post about "Restore" challenging the "establishment since Brexit" is relevant to challenging established power structures and national sovereignty.
-- @ChelDiokno's post on "ROTATIONAL BROWNOUTS" and the need for an "energy review," with comments suggesting foreign control of the power grid, touches on "Power, Institutions, and Rule of Law" and national sovereignty.
-- @inquirerdotnet's post on the SC rejecting a plea to preserve a report involving senators highlights issues of transparency and accountability within "Power, Institutions, and Rule of Law."
-- @nyaraVT's post on media demonization of trans individuals is an example of narrative manipulation relevant to "Truth and Evidence in Public Discourse."
-- @FckTitoQC's accusation of a "fabricator of so many lies" directly relates to "Truth and Evidence in Public Discourse" and "Integrity of Information and Social Media Manipulation."
-- @hippyygoat's post about a "Zionist hit a Palestine supporter" is a highly emotional post that could be an example of ragebait and narrative manipulation.
-- [NOTED] "people" — 6 posts, no follow-up this cycle
-- [NOTED] "need" — 5 posts, no follow-up this cycle
-- [NOTED] "love" — 5 posts, no follow-up this cycle
-- [NOTED] "see" — 5 posts, no follow-up this cycle
-- [NOTED] "senate" — 5 posts, no follow-up this cycle
-- [NOTED] "made" — 4 posts, no follow-up this cycle
-- [NOTED] "kids" — 4 posts, no follow-up this cycle
-- [NOTED] "why" — 4 posts, no follow-up this cycle
-- [NOTED] "right" — 4 posts, no follow-up this cycle
-- [NOTED] "thought" — 3 posts, no follow-up this cycle
-- [NOTED] "idea" — 3 posts, no follow-up this cycle
-- [NOTED] "must" — 3 posts, no follow-up this cycle
-- [NOTED] "know" — 3 posts, no follow-up this cycle
-- [NOTED] "way" — 3 posts, no follow-up this cycle
-- [NOTED] "looks" — 3 posts, no follow-up this cycle
-- [NOTED] "mother" — 3 posts, no follow-up this cycle
-- [NOTED] "moment" — 3 posts, no follow-up this cycle
-- [NOTED] "dude" — 6 posts, no follow-up this cycle
-- [NOTED] "ceo" — 1 post, no follow-up this cycle
-- [NOTED] "white" — 1 post, no follow-up this cycle
-- [NOTED] "stunning" — 2 posts, no follow-up this cycle
-- [NOTED] "sleep" — 1 post, no follow-up this cycle
-- [NOTED] "smoking" — 1 post, no follow-up this cycle
-- [NOTED] "lying" — 1 post, no follow-up this cycle
-- [NOTED] "german" — 1 post, no follow-up this cycle
-- [NOTED] "sc" — 1 post, no follow-up this cycle
-- [NOTED] "breaking" — 1 post, no follow-up this cycle
-- [NOTED] "detailed" — 1 post, no follow-up this cycle
-- [NOTED] "she" — 1 post, no follow-up this cycle
-- [NOTED] "michael" — 1 post, no follow-up this cycle
-- [NOTED] "restore" — 1 post, no follow-up this cycle
-- [NOTED] "feels" — 1 post, no follow-up this cycle
-- [NOTED] "they" — 1 post, no follow-up this cycle
-- [NOTED] "this" — 3 posts, no follow-up this cycle
-- [NOTED] "wait" — 1 post, no follow-up this cycle
-- [NOTED] "somebody" — 1 post, no follow-up this cycle
-- [NOTED] "not" — 1 post, no follow-up this cycle
-- [NOTED] "horror" — 1 post, no follow-up this cycle
-- [NOTED] "when" — 1 post, no follow-up this cycle
-- [NOTED] "fact" — 1 post, no follow-up this cycle
-- [NOTED] "apc" — 1 post, no follow-up this cycle
-- [NOTED] "leg" — 1 post, no follow-up this cycle
-- [NOTED] "dog" — 1 post, no follow-up this cycle
-- [NOTED] "kabisadon" — 1 post, no follow-up this cycle
+[Vocation] @Megatron_ron, @Jvnior, and @RT_com's repeated posts about a "Huge explosion in Israel" and "MUSHROOM CLOUD IN ISRAEL" highlight the rapid spread of unverified, sensational claims in geopolitical discourse, directly relevant to `axis_epistemic_integrity` (R: spread of unverified claims) and `axis_geopolitical_rhetoric_v1` (R: manipulative geopolitical rhetoric). (https://x.com/Megatron_ron/status/2055743012844753046, https://x.com/Jvnior/status/2055745188727775516, https://x.com/RT_com/status/2055759957195116950)
+[Vocation] The debate between "male loneliness epidemic" and "women being murdered" from @cessonmute and @julia_joestar illustrates how narratives are framed to highlight or deflect from serious issues, relevant to `axis_epistemic_integrity` (R: narrative manipulation) and `axis_human_rights_exploitation_v1` (L: protection of vulnerable populations). (https://x.com/cessonmute/status/2055657030606889130, https://x.com/julia_joestar/status/2055409340325019690)
+[Vocation] @luxeprogressive's use of "literal fascists" rhetoric to describe political opponents demonstrates extreme rhetoric and demonization tactics in political discourse, relevant to `axis_epistemic_integrity` (R: emotional manipulation, tribal signaling) and `axis_political_vulnerability_foreign_influence_v1` (R: acceptance of political vulnerabilities). (https://x.com/luxeprogressive/status/2055751666993946806)
+[Vocation] @NiohBerg's post, "You are literally an asylum seeker, your homeland is the country you left. And you should go home btw," expresses a clear stance on national control over borders and cultural preservation, aligning with `axis_immigration_policy_v_national_control_v1` (R: national control) and `axis_national_sovereignty_v_intl_law_v1` (R: national autonomy). (https://x.com/NiohBerg/status/2055719708901441597)
+[Vocation] @jimNjue_'s observation of a politician "spew[ing] tribal hatered, explaining to Luos why they should hate Uhuru and Kikuyus" exemplifies tribal signaling and divisive rhetoric for political gain, relevant to `axis_epistemic_integrity` (R: tribal signaling, manipulation) and `axis_political_trust_corruption_v1` (L: calls for transparency and accountability). (https://x.com/jimNjue_/status/2055713954723213318)
+
+[NOTED] "@TansuYegen" — 1 post, no follow-up this cycle
+[NOTED] "@CDorado75" — 1 post, no follow-up this cycle
+[NOTED] "@mutyapuspa" — 1 post, no follow-up this cycle
+[NOTED] "@Crazymoments01" — 1 post, no follow-up this cycle
+[NOTED] "@TaraBull" — 1 post, no follow-up this cycle
+[NOTED] "@TansuYegen" — 1 post, no follow-up this cycle
+[NOTED] "@ishKuba" — 1 post, no follow-up this cycle
+[NOTED] "@TansuYegen" — 1 post, no follow-up this cycle
+[NOTED] "@zoomafrika1" — 1 post, no follow-up this cycle
+[NOTED] "@EpicClipVault" — 1 post, no follow-up this cycle
+[NOTED] "@Rainmaker1973" — 1 post, no follow-up this cycle
+[NOTED] "@Yoda4ever" — 1 post, no follow-up this cycle
+[NOTED] "@eric_hz143" — 1 post, no follow-up this cycle
+[NOTED] "@EpicClipVault" — 1 post, no follow-up this cycle
+[NOTED] "@gmanews" — 1 post, no follow-up this cycle
+[NOTED] "@cinecinecine30" — 1 post, no follow-up this cycle
+[NOTED] "@MarioNawfal" — 1 post, no follow-up this cycle
+[NOTED] "@GraceGym_" — 1 post, no follow-up this cycle
+[NOTED] "@ImpactoEterno" — 1 post, no follow-up this cycle
+[NOTED] "@Crazymoments01" — 1 post, no follow-up this cycle
+[NOTED] "@camhigby" — 1 post, no follow-up this cycle
+[NOTED] "@Thebestfigen" — 1 post, no follow-up this cycle
+[NOTED] "@Rainmaker1973" — 1 post, no follow-up this cycle
+[NOTED] "@TansuYegen" — 1 post, no follow-up this cycle
+[NOTED] "@TotalBodyIQ" — 1 post, no follow-up this cycle
+[NOTED] "@inquirerdotnet" — 1 post, no follow-up this cycle
+[NOTED] "@mattvanswol" — 1 post, no follow-up this cycle
+[NOTED] "@itsme_urstruly" — 1 post, no follow-up this cycle
+[NOTED] "@TansuYegen" — 1 post, no follow-up this cycle
+[NOTED] "@anishmoonka" — 1 post, no follow-up this cycle
+[NOTED] "@only1interIude" — 1 post, no follow-up this cycle
+[NOTED] "@Yoda4ever" — 1 post, no follow-up this cycle
+[NOTED] "@l_se0m" — 1 post, no follow-up this cycle
+[NOTED] "@TansuYegen" — 1 post, no follow-up this cycle
+[NOTED] "@EpicClipVault" — 1 post, no follow-up this cycle
+[NOTED] "@mog_russEN" — 1 post, no follow-up this cycle
