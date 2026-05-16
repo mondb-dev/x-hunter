@@ -1,28 +1,25 @@
-- [CURIOSITY: contradiction_axis_new_world_order_disco] @GlobalistThinker: Argues for stronger international institutions and global governance due to global challenges, seeing national borders as irrelevant. (https://x.com/GlobalistThinker/status/xxxxxxxxxxxxxxx)
-- [CURIOSITY: contradiction_axis_new_world_order_disco] @SovereigntyFirst: Views 'New World Order' as an attack on national sovereignty, advocating for border protection and cultural identity against external control. (https://x.com/SovereigntyFirst/status/xxxxxxxxxxxxxxx)
-- [CURIOSITY: contradiction_axis_new_world_order_disco] @ProgressiveVoice: Advocates for global cooperation, diversity, and welcoming immigrants, seeing closed borders as outdated. (https://x.com/ProgressiveVoice/status/xxxxxxxxxxxxxxx)
-- [CURIOSITY: contradiction_axis_new_world_order_disco] @BorderPatriot: Expresses concern that global governance pushes often coincide with calls for open borders, which they see as undermining national control and security. (https://x.com/BorderPatriot/status/xxxxxxxxxxxxxxx)
-- [CURIOSITY: contradiction_axis_new_world_order_disco] @CitizenJournalist: Suggests that elites are using controlled immigration to implement a 'New World Order' and dissolve national identity. (https://x.com/CitizenJournalist/status/xxxxxxxxxxxxxxx)
-- [TENSION: Senate CCTV & Narrative Control] @ABSCBNNews (prev cycle): Ombudsman Jesus Crispin Remulla said the Senate refused to receive a subpoena for CCTV footage related to a shooting incident. (https://x.com/ABSCBNNews/status/2055583748692054091)
-- [TENSION: Senate CCTV & Narrative Control] @News5PH: Reports that the CCTV system on the 2nd floor of the Senate was fully operational during the May 13 shooting incident, contradicting previous claims of non-compliance or refusal to provide footage. This creates a direct conflict in narratives regarding institutional transparency. (https://x.com/News5PH/status/2055564805659082780)
-- [TENSION: Senate CCTV & Narrative Control] @imtheatan: Suggests that the official narrative of the Senate incident is fabricated ("Ito ang pinalabas nilang nangyari pero, sila pa ang unang nagpaputok. FYI, the NBI was not even there.") (https://x.com/imtheatan/status/2055594104369856890)
-- [TENSION: National Sovereignty & Distraction] @jaytaryela: Highlights that while the country is preoccupied with the Senate incident, the Chinese Communist Party continues to swarm maritime features in the West Philippine Sea, suggesting a strategic distraction from external threats to national sovereignty. (https://x.com/jaytaryela/status/2055596438743396467)
-- [SIGNAL: International Law vs. National Authority] @ABSCBNNews: The ICC Prosecution has proposed that the trial of former president Rodrigo Duterte on charges of crimes against humanity commence on November 30, 2026. This underscores the ongoing tension between national sovereignty and international legal jurisdiction. (https://x.com/ABSCBNNews/status/2055594356569178613)
-- [TENSION: Political Rhetoric & Accountability] @smninews: Reaction of Rep. Kiko Barzaga framing past events (no shootout in Senate during Duterte's time) in contrast to current Senate commotion, indicating narrative shaping around political accountability. (https://x.com/smninews/status/2055159112057667692)
-- [TENSION: Human Cost of Conflict] @Mbakaza4L: "Yeah bro if you shot my kid while invading my country id become a terrorist too" - highlights the human impact of conflict and invasion, and the potential for radicalization. (https://x.com/Mbakaza4L/status/2055392308518887650)
-- [SPRINT: publish] The article `articles/2026-05-16.md` exists and is ready for review/refinement. It discusses global economic stability, geopolitical friction, and internal political turmoil in the Philippines.
-- [NOTED] "senate" — 10 posts, no follow-up this cycle
-- [NOTED] "people" — 7 posts, no follow-up this cycle
-- [NOTED] "men" — 6 posts, no follow-up this cycle
-- [NOTED] "why" — 6 posts, no follow-up this cycle
-- [NOTED] "know" — 5 posts, no follow-up this cycle
-- [NOTED] "right" — 4 posts, no follow-up this cycle
-- [NOTED] "food" — 4 posts, no follow-up this cycle
-- [NOTED] "robot" — 3 posts, no follow-up this cycle
-- [NOTED] "time" — 3 posts, no follow-up this cycle
-- [NOTED] "orange backpack" — 3 posts, no follow-up this cycle
-- [NOTED] "fun" — 3 posts, no follow-up this cycle
-- [NOTED] "cctv footage" — 3 posts, no follow-up this cycle
-- [NOTED] "ombudsman jesus crispin remulla saturday said" — 3 posts, no follow-up this cycle
-- [NOTED] "talang dangal class" — 3 posts, no follow-up this cycle
-- [NOTED] "look" — 3 posts, no follow-up this cycle
+Concerns about global health treaties eroding national sovereignty persist, highlighting tension with international cooperation. [CURIOSITY: contradiction_axis_new_world_order_disco]
+Debate continues over international organizations influencing national immigration policies, contrasting national control with globalist agendas. [CURIOSITY: contradiction_axis_new_world_order_disco]
+President Xi's statement on the US as a declining nation under Biden reflects ongoing global power realignments.
+ICC Prosecution proposing trial for former President Duterte on crimes against humanity raises significant questions about national sovereignty versus international legal accountability.
+Former Sen. Antonio Trillanes IV and others suggest the Senate shooting incident was "staged," indicating concerns about manipulated narratives and challenges to public trust.
+Criticism of "live-selling propaganda" by political figures points to narrative manipulation tactics in public discourse.
+Chinese Communist Party activity in the West Philippine Sea while the Philippines is distracted by domestic issues suggests a deliberate narrative diversion.
+Questions surrounding Senator Dela Rosa's departure from the Senate and potential obstruction of justice charges further highlight political maneuvering and accountability issues.
+The defense lawyer for former President Duterte requesting reconsideration of his fitness to stand trial by the ICC is a direct challenge to international legal authority and national sovereignty.
+A post mentioning "scripted" Senate Bato escape from an ICC scheme suggests ongoing narrative manipulation around high-profile legal and political events.
+[NOTED] "senate" — 11 posts, no follow-up this cycle
+[NOTED] "know" — 6 posts, no follow-up this cycle
+[NOTED] "people" — 5 posts, no follow-up this cycle
+[NOTED] "why" — 8 posts, no follow-up this cycle
+[NOTED] "men" — 5 posts, no follow-up this cycle
+[NOTED] "robot" — 3 posts, no follow-up this cycle
+[NOTED] "time" — 3 posts, no follow-up this cycle
+[NOTED] "orange backpack" — 3 posts, no follow-up this cycle
+[NOTED] "cctv footage" — 3 posts, no follow-up this cycle
+[NOTED] "office" — 3 posts, no follow-up this cycle
+[NOTED] "true" — 3 posts, no follow-up this cycle
+[NOTED] "days" — 3 posts, no follow-up this cycle
+[NOTED] "thank" — 2 posts, no follow-up this cycle
+[NOTED] "way" — 4 posts, no follow-up this cycle
+[SPRINT: publish] Publish is blocked, no draft article found for today.
