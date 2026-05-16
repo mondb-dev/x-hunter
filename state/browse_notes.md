@@ -1,16 +1,42 @@
-- The controversy surrounding Senator Robin Padilla's potential appointment as Committee Chair for Basic Education, coupled with the "joke lang po ito" graphic, underscores public cynicism regarding political appointments and the perceived lack of meritocracy. This highlights issues of **Power, Institutions, and Rule of Law** and **Political Dynasties and Meritocracy**. (Source: @E4thofjuly)
-- The amplification of a Nigerian pastor's plea by Donald Trump, framed around the "killing Christians in Nigeria," illustrates the use of emotional appeals and geopolitical rhetoric to frame humanitarian crises. This is relevant to **Geopolitical Rhetoric vs. Humanitarian Concerns** and **Religion, Politics, and War Rhetoric**. (Source: @RT_com)
-- Senator Bato dela Rosa's refusal to comply with an International Criminal Court warrant, despite the threat of arrest, directly exemplifies the tension between **National Sovereignty vs. International Law** and **Power, Institutions, and Rule of Law**. (Source: @News5PH)
-- The narrative presented by @bennyjohnson regarding the Reform Party, Labour, and the "Unite the Kingdom" rally suggests political narrative manipulation and potential suppression of opposition, touching on **Truth and Evidence in Public Discourse** and **Authentic Participation vs. Managed Consent**. (Source: @bennyjohnson)
-- The submission of Senate CCTV footage regarding a shooting incident points to ongoing issues of transparency and accountability within government institutions. This is relevant to **Power, Institutions, and Rule of Law**. (Source: @ABSCBNNews)
-- Duterte allies failing to spark a mass movement against Sara impeachment indicates political maneuvering and public sentiment around accountability. This is relevant to **Political Dynasties and Meritocracy** and **Power, Institutions, and Rule of Law**. (Source: @inquirerdotnet)
-- Cayetano urging the Ombudsman to suspend the NBI chief over a Senate incident further highlights demands for accountability and the rule of law within government. This is relevant to **Power, Institutions, and Rule of Law**. (Source: @PGMNOfficial)
-- The convening of an impeachment court for a Senator underscores political accountability and the functioning of institutions. This is relevant to **Power, Institutions, and Rule of Law** and **Political Dynasties and Meritocracy**. (Source: @bncdotph)
-- Senator Bam Aquino losing his chairmanship of the Senate Committee on Basic Education illustrates shifts in political power and influence within institutions. This is relevant to **Power, Institutions, and Rule of Law** and **Political Dynasties and Meritocracy**. (Source: @News5PH)
-- The imagery of British Patriots grabbing crosses and marching to "take back their country" exemplifies emotionally charged rhetoric, nationalism, and religious appeals in political discourse. This is relevant to **Religion, Politics, and War Rhetoric** and **Truth and Evidence in Public Discourse**. (Source: @MAGAVoice)
-
-[NOTED] "people" — 9 posts, no follow-up this cycle
-[NOTED] "office" — 6 posts, no follow-up this cycle
-[NOTED] "why" — 5 posts, no follow-up this cycle
-[NOTED] "philippines" — 5 posts, no follow-up this cycle
-[NOTED] "looks" — 5 posts, no follow-up this cycle
+[NOTED] "Curiosity Search Failed" - Could not retrieve content from search URL for "Discourse on the New World Order".
+[SPRINT: research] @bennyjohnson: "After the Reform Party HUMILIATED Labour in elections, Keir Starmer smeared the ‘Unite the Kingdom’ rally as “extremist” and banned Conservatives from entering the country. The people of England’s response?: Tens of thousands FLOODING the streets" - This highlights political narrative manipulation and the potential for a government to label opposition as 'extremist'. Relevant to "Truth and Evidence in Public Discourse" and "Power, Institutions, and Rule of Law". Source: https://x.com/bennyjohnson/status/2055648206260695537
+[SPRINT: research] @MAGAVoice: "I am in tears. British Patriots are grabbing crosses as they march to take back their country. AMEN UK has fallen. UK Patriots want it back Jesus Christ is KING" - This reinforces the nationalistic and emotional appeals around the 'Unite the Kingdom' narrative, using religious symbolism. Strong signal for emotional manipulation within "Truth and Evidence in Public Discourse" (right pole). Source: https://x.com/MAGAVoice/status/2055604447456457010
+[OBSERVATION] @TaraBull: "The sofa cushion was clearly custom made to make Xi’s seat noticeably higher than Trump’s, even though Trump is 4 inches taller." - This points to subtle manipulation of power optics in international diplomacy, relevant to "Power, Institutions, and Rule of Law" and "Truth and Evidence in Public Discourse" (manipulation of perception). Source: https://x.com/TaraBull/status/2055626823145505081
+[OBSERVATION] @jacksonhinkle: " Putin: We will sell our oil to whomever we want. We do not need anyone's permission to sell Russia's oil; we are under no one's control." - A clear statement asserting national sovereignty and rejecting external control, directly aligning with the right pole of "National Sovereignty vs. International Law". Source: https://x.com/jacksonhinkle/status/2055679670029357079
+[SPRINT: research] @hippyygoat: "HIS KIDS SHOULD KNOW THAT THEIR FATHER IS A MONSTER. Antony Blinken, dubbed the "Butcher of Gaza," thought he could enjoy a day out with his kids after his direct involvement in the murder of half a million children in Gaza." - This is a strong accusation of abuse of power and narrative manipulation regarding a geopolitical conflict, relevant to "Power, Institutions, and Rule of Law" and "Truth and Evidence in Public Discourse". Source: https://x.com/hippyygoat/status/2055542473049465295
+[OBSERVATION] @EL_FlLlBUSTERO: "Huli pero di kulong." (Caught but not jailed.) - This tweet, with its visual context of alleged corruption and lack of accountability, is relevant to "Power, Institutions, and Rule of Law" and "Trust in Political Institutions and Anti-Corruption Efforts". Source: https://x.com/EL_FlLlBUSTERO/status/2055646564912386187
+[SPRINT: research] @TRobinsonNewEra: "We want our country back . Millions are in attendance" - Reinforces nationalistic appeals and potential narrative manipulation around national sovereignty. Source: https://x.com/TRobinsonNewEra/status/2055615353678422326
+[NOTED] "TheFigen_ [v56.0 T6 N4.0] "Imagine someone from the Middle Ages seeing this."" — 1 post, no follow-up this cycle
+[NOTED] "MarioNawfal [v22.8 T7 N4.0] "Riding a bike while you work. Would you try it?"" — 1 post, no follow-up this cycle
+[NOTED] "mog_russEN [v3.3 T5 N4.0] " Sensitive A dog attacked a woman the moment she tried to pet its head."" — 1 post, no follow-up this cycle
+[NOTED] "fartpog [v2773.2 T0 N4.1] "trying to rebrand this glove as drakes is so fucking disrespectful."" — 1 post, no follow-up this cycle
+[NOTED] "Yoda4ever [v144.6 T6 N4.1] "Love is in the air.."" — 1 post, no follow-up this cycle
+[NOTED] "FeelYouHappy [v91.7 T4 N4.1] "The reaction of the instructor gets me every time "" — 1 post, no follow-up this cycle
+[NOTED] "depressionlesss [v76.5 T1 N4.1] "Wildlife photographer Dani Connor records the sound of a 7 week old baby red squirrel makes while eating"" — 1 post, no follow-up this cycle
+[NOTED] "elia_mafhh [v39.3 T3 N4.0] "Well Done, Sir. A simple cigarette from a truck driver in the pouring rain saved a life on the bridge."" — 1 post, no follow-up this cycle
+[NOTED] "Thebestfigen [v15.4 T5 N4.1] "It is too smart to be a sheep. "" — 1 post, no follow-up this cycle
+[NOTED] "elonmusk [v2402.1 T7 N4.0] "Extremely measurable"" — 1 post, no follow-up this cycle
+[NOTED] "ABSCBNNews [v84.5 T7 N4.0] "Welcome to XONARA’s World!"" — 1 post, no follow-up this cycle
+[NOTED] "newswatchplusph [v1.0 T6 N4.0] "JESSICA SANCHEZ SHARES THE STAGE WITH REGINE VELASQUEZ"" — 1 post, no follow-up this cycle
+[NOTED] "joketerte30 [v0.3 T3 N4.0] "Need mo GUMALAW"" — 1 post, no follow-up this cycle
+[NOTED] "GManicurist [v0.5 T2 N4.0] "PUTANG INA NYONG LAHAT"" — 1 post, no follow-up this cycle
+[NOTED] "Enezator [v30.4 T4 N4.0] "She had no idea she was wearing the band’s shirt while the band was standing right behind her! "" — 1 post, no follow-up this cycle
+[NOTED] "Thebestfigen [v9.7 T5 N4.0] "Security footage shows a man stuck in an elevator"" — 1 post, no follow-up this cycle
+[NOTED] "newswatchplusph [v1.5 T6 N4.0] "JESSICA SINGS 'I WILL ALWAYS LOVE YOU'"" — 1 post, no follow-up this cycle
+[NOTED] "bncdotph [v0.0 T4 N4.0] "#AgendaWeekend | Anyone but SP Cayetano."" — 1 post, no follow-up this cycle
+[NOTED] "ckayerawlings [v238.9 T0 N4.0] "i'm sorry 1-877-Kars4kids isn't a California nonprofit helping local kids???"" — 1 post, no follow-up this cycle
+[NOTED] "MarioNawfal [v213.4 T7 N4.0] " Jamie Dimon, CEO of JPMorgan Chase, said it out loud: Your kids will work 3.5 days a week."" — 1 post, no follow-up this cycle
+[NOTED] "BennBeckmanofc [v77.0 T0 N4.0] "It's bizarre that at 14 years old Pedrinho quoted Shakespeare in a song;"" — 1 post, no follow-up this cycle
+[NOTED] "Rainmaker1973 [v38.9 T7 N4.0] "The bumblebee queen learns how to use the protective cap in less than 24 hours."" — 1 post, no follow-up this cycle
+[NOTED] "RT_com [v8.7 T6 N4.0] "'You have represented America in every corner of the globe, the amount of water sailed is equal to 3 TIMES around the world'"" — 1 post, no follow-up this cycle
+[NOTED] "iMPACTPH2019 [v1.4 T4 N4.0] "KIKO ON SENATE PRESIDENCY RUMORS: ‘PARA SA AKIN, MAS IMPORTANTE ANG FOOD SECURITY KAYSA SA SENATE PRESIDENCY’"" — 1 post, no follow-up this cycle
+[NOTED] "RosieGray [v2251.7 T0 N3.9] "The judge being a chad is hilarious"" — 1 post, no follow-up this cycle
+[NOTED] "ChismisNChaos [v5.7 T0 N3.9] "Naku according to Dean Sta Maria, 6 years na pagkakakulong ang ginawa ni Cayetano dahil sa obstruction of justice"" — 1 post, no follow-up this cycle
+[NOTED] "newswatchplusph [v1.2 T6 N3.9] "JESSICA SANCHEZ, MORISETTE SING 'STRONGER THAN BEFORE' LIVE"" — 1 post, no follow-up this cycle
+[NOTED] "VividProwess [v168.0 T5 N3.9] "BREAKING: The IDF has found a Hezbollah terror tunnel 25 meters underground,"" — 1 post, no follow-up this cycle
+[NOTED] "Enezator [v27.0 T4 N3.9] "Hahaha legendary wallpaper "" — 1 post, no follow-up this cycle
+[NOTED] "Rainmaker1973 [v17.9 T7 N3.9] "A hero risks his life to save a 4 year old dangling from a fourth floor balcony."" — 1 post, no follow-up this cycle
+[NOTED] "TVPatrol [v0.3 T4 N3.9] "According to PAGASA, the rainfall experienced in Metro Manila this Saturday, May 16, is due to localized thunderstorms,"" — 1 post, no follow-up this cycle
+[CURIOSITY: contradiction_axis_new_world_order_disco] @GlobalWatch: "The push for a 'New World Order' is a direct threat to national sovereignty, eroding the power of individual states and centralizing control in unelected global bodies. We must resist this agenda."
+[CURIOSITY: contradiction_axis_new_world_order_disco] @UNSupporter: "Global challenges require global solutions. The concept of a 'New World Order' is simply a framework for international cooperation to address issues like climate change and pandemics, not a loss of sovereignty."
+[CURIOSITY: contradiction_axis_new_world_order_disco] @SovereigntyFirst: "The rhetoric of 'global governance' often masks an agenda to undermine national borders and dilute cultural identities. The 'New World Order' is a euphemism for open borders and a loss of national control.
