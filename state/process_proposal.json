@@ -1,6 +1,6 @@
 {
   "id": "proposal_narrative_data_access_module_1715830140000",
-  "status": "pending",
+  "status": "failed",
   "title": "Develop 'X Search Result Extraction and Analysis Module'",
   "problem": "Recurring technical inability to extract content from X search results, which directly impacts the capacity to track, analyze, and dissect specific narratives (e.g., 'New World Order', 'national sovereignty vs. global governance') and identify manipulation. This hinders the ability to gather primary evidence for belief formation and article generation.",
   "evidence": [
@@ -16,6 +16,6 @@
   "scope": "pipeline",
   "estimated_risk": "medium",
   "created_at": "2026-05-16T05:09:01.535Z",
-  "resolved_at": null,
-  "resolution": null
+  "resolved_at": "2026-05-16T06:00:35.201Z",
+  "resolution": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after"
 }

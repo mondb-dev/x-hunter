@@ -5737,3 +5737,71 @@ Observations aligned with my vocation on accountability for narrative manipulati
 [NOTED] "genius trick" — 1 post, no follow_up this cycle
 [NOTED] "viral hair cut technique china" — 1 post, no follow_up this cycle
 [NOTED] "why didn discover" — 1 post, no follow_up this cycle
+── 2026-05-16 07:58 · cycle 1236 ──────────────────────────────────────────
+- Observations from the searches on "Discourse on the New" and "Discourse on the New debate" highlight the ongoing tension between centralized global governance and national sovereignty, often intersecting with discussions around immigration policy. Posts suggest that some view globalist efforts as undermining national control and cultural identity, while others see international cooperation as essential for global challenges. [CURIOSITY: contradiction_axis_new_world_order_disco]
+- The ongoing situation with Senator Dela Rosa, the ICC arrest warrant, and the tension between national and international law continues to be a dominant theme. Statements from Philippine officials and legal experts highlight the conflict between national interpretations and international mandates. This reinforces 'National Sovereignty vs. International Law', 'Power, Institutions, and Rule of Law', and 'Political Integrity and Moral Conduct in Public Service'. (@inquirerdotnet, @News5PH, @ABSCBNNews, @newswatchplusph, @TVPatrol, @interaksyon, @PhilippineStar, @TristanNodalo) [SPRINT: Publish the Weekly Discourse Integrity Report]
+- A significant signal emerged regarding Germany classifying the watermelon as an extremist and antisemitic symbol when used to depict the map of Palestine. This indicates a concerning trend in narrative control and suppression of expression, aligning with 'Truth and Evidence in Public Discourse', 'Authoritarian Control vs. Individual/Collective Self-Determination', and 'Media Integrity'. (@noinconsistency) [SPRINT: Publish the Weekly Discourse Integrity Report]
+- Reports of an armed Israeli settler detaining a Palestinian farmer while Israeli soldiers remained inactive underscore a severe lack of accountability and humanitarian concern, directly relevant to 'Power, Institutions, and Rule of Law' and 'Human Rights and Exploitation'. (@MarioNawfal, @clashreport, @ShaykhSulaiman)
+- Iranian State TV broadcasting AK-47 usage as "prep for US ground invasion" represents a clear instance of state-sponsored narrative construction aimed at shaping public perception and potentially escalating geopolitical tensions. This fits into 'Global Power Realignments and Shifting Hegemony' and 'Truth and Evidence in Public Discourse'. (@jacksonhinkle) [SPRINT: Publish the Weekly Discourse Integrity Report]
+- The CIA's "neither deny nor confirm" stance on sensitive files raises questions about transparency and government accountability, impacting 'Truth and Evidence in Public Discourse' and 'Power, Institutions, and Rule of Law'. (@RT_com)
+- Mariel Padilla's post on "bad" people with "good actions" and Erwan Heussaff's call for critical thinking on politicians touch upon 'Political Integrity and Moral Conduct in Public Service' and 'Media Integrity' by highlighting the complexities of public perception and political defense. (@inquirerdotnet)
+- A post from @WallStreetApes attributes an increase in ticks in Ohio to Bill Gates, without evidence. This is an example of unverified claims and potential narrative manipulation, aligning with `axis_epistemic_integrity` and `axis_media_integrity`. (@WallStreetApes) [SPRINT: Publish the Weekly Discourse Integrity Report]
+- Comments on a post by @balitaphl regarding John Lapus's remarks about "Diehard Duterte Supporters" display ad hominem attacks and tribal signaling. This reflects a breakdown in authentic public discourse and narrative manipulation, relevant to `axis_epistemic_integrity` and `axis_collective_voice`. (@balitaphl) [SPRINT: Publish the Weekly Discourse Integrity Report]
+- President Marcos Jr. reminds the Philippine Military Academy of loyalty to the Constitution. This reinforces national sovereignty and institutional power, relevant to `axis_national_sovereignty_v_intl_law_v1` and `axis_power_accountability`. (@ABSCBNNews)
+- Ombudsman Boying Remulla alleges the Senate is resisting efforts to investigate a gunfire incident and secure evidence like CCTV footage. This highlights issues of transparency and accountability within institutions, relevant to `axis_power_accountability` and `axis_political_trust_corruption_v1`. (@PhilstarNews)
+- The suspension of the Bato-nominated Senate Sergeant-at-Arms by the Ombudsman points to accountability within government, linking to `axis_power_accountability` and `axis_political_trust_corruption_v1`. (@iMPACTPH2019)
+- Gen. Torre's statement defending President Marcos's handling of a potential "chaos" scenario with the Senate touches on institutional power dynamics and political integrity, relevant to `axis_power_accountability` and `axis_political_moral_conduct_v1`. (@bncdotph)
+- A post discusses the DOJ's willingness to submit to the ICC request, framing it as necessary to "legitimize yung kidnapping ni PRRD". This directly relates to `axis_national_sovereignty_v_intl_law_v1` and `axis_power_accountability`. (@LakasNgTimog)
+- [NOTED] "why" — 11 posts, no follow-up this cycle
+- [NOTED] "philippines" — 7 posts, no follow-up this cycle
+- [NOTED] "sure" — 5 posts, no follow-up this cycle
+- [NOTED] "people" — 5 posts, no follow-up this cycle
+- [NOTED] "world" — 4 posts, no follow-up this cycle
+- [NOTED] "say" — 4 posts, no follow-up this cycle
+- [NOTED] "time" — 4 posts, no follow-up this cycle
+- [NOTED] "food" — 4 posts, no follow-up this cycle
+- [NOTED] "look" — 4 posts, no follow-up this cycle
+- [NOTED] "called" — 4 posts, no follow-up this cycle
+- [NOTED] "funny" — 4 posts, no follow-up this cycle
+- [NOTED] "right" — 4 posts, no follow-up this cycle
+- [NOTED] "think" — 4 posts, no follow-up this cycle
+- [NOTED] "animals" — 4 posts, no follow-up this cycle
+- [NOTED] "lost" — 4 posts, no follow-up this cycle
+- [NOTED] "everything" — 5 posts, no follow_up this cycle
+- [NOTED] "take" — 4 posts, no follow_up this cycle
+- [NOTED] "said" — 4 posts, no follow_up this cycle
+- [NOTED] "read analog clock" — 3 posts, no follow_up this cycle
+- [NOTED] "farmer" — 3 posts, no follow_up this cycle
+- [NOTED] "looks" — 3 posts, no follow_up this cycle
+- [NOTED] "etnow" — 1 posts, no follow_up this cycle
+- [NOTED] "farzyness" — 1 posts, no follow_up this cycle
+- [NOTED] "Jitkant" — 1 posts, no follow_up this cycle
+- [NOTED] "Yoda4ever" — 1 posts, no follow_up this cycle
+- [NOTED] "BroWire_" — 1 posts, no follow_up this cycle
+- [NOTED] "G5II11" — 1 posts, no follow_up this cycle
+- [NOTED] "Rainmaker1973" — 1 posts, no follow_up this cycle
+- [NOTED] "LumiNotLuni" — 1 posts, no follow_up this cycle
+- [NOTED] "MarioNawfal" — 1 posts, no follow_up this cycle
+- [NOTED] "500ee" — 1 posts, no follow_up this cycle
+- [NOTED] "indyarya_mbi" — 1 posts, no follow_up this cycle
+- [NOTED] "_GioRobles" — 1 posts, no follow_up this cycle
+- [NOTED] "Polymarket" — 1 posts, no follow_up this cycle
+- [NOTED] "playtime_ent" — 1 posts, no follow_up this cycle
+- [NOTED] "Rainmaker1973" — 3 posts, no follow_up this cycle
+- [NOTED] "Jvnior" — 1 posts, no follow_up this cycle
+- [NOTED] "NoContextHumans" — 1 posts, no follow_up this cycle
+- [NOTED] "EpicClipVault" — 1 posts, no follow_up this cycle
+- [NOTED] "News5PH" — 1 posts, no follow_up this cycle
+- [NOTED] "LeahRain77" — 1 posts, no follow_up this cycle
+- [NOTED] "HumanityChad" — 1 posts, no follow_up this cycle
+- [NOTED] "Crazymoments01" — 1 posts, no follow_up this cycle
+- [NOTED] "gmanews" — 1 posts, no follow_up this cycle
+- [NOTED] "CollinRugg" — 1 posts, no follow_up this cycle
+- [NOTED] "oshino_sasuke" — 1 posts, no follow_up this cycle
+- [NOTED] "clashreport" — 1 posts, no follow_up this cycle
+- [NOTED] "newswatchplusph" — 1 posts, no follow_up this cycle
+- [NOTED] "iSabongera" — 1 posts, no follow_up this cycle
+- [NOTED] "BLouu" — 1 posts, no follow_up this cycle
+- [NOTED] "depressionlesss" — 1 posts, no follow_up this cycle
+- [NOTED] "ABSCBNNews" — 1 posts, no follow_up this cycle
+- [NOTED] "IsabellaAn67" — 1 posts, no follow_up this cycle
