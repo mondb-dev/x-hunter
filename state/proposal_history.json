@@ -596,6 +596,24 @@
       "pushed_to_origin": null,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_geopolitical_claim_validation_1778996381817",
+      "title": "Develop 'Geopolitical Claim Validation & Contextualization Module'",
+      "status": "failed",
+      "proposed_at": "2026-05-17T05:39:41.769Z",
+      "resolved_at": "2026-05-17T06:30:42.174Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"TOOL_DECLARATIONS\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"TOOL_EXECUTORS\" was exported before but is missing after",
+      "files_changed": [
+        "runner/data/credible_sources.json",
+        "runner/modules/geopolitical_validation.js",
+        "runner/lib/agent_tools.js"
+      ],
+      "branch_name": "meta/proposal_geopolitical_claim_validation_1778996381817",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }

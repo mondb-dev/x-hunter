@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "generated_at": "2026-04-19T03:02:23.280Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-05-17T05:28:56.731Z",
+  "profiled_at": "2026-05-17T06:58:58.041Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -1865,16 +1865,16 @@
           ]
         },
         "profile": {
-          "score": 0.36,
+          "score": 0.27,
           "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:1",
             "opinion_marker:false"
           ]
         },
@@ -1894,15 +1894,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-14T06:57:15.174Z",
+        "fetched_at": "2026-05-17T06:58:54.239Z",
         "homepage_url": "https://falconx.io/",
         "example_url": "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
         "homepage_status": 200,
-        "example_status": 200,
+        "example_status": 502,
         "homepage_final_url": "https://www.falconx.io/",
         "example_final_url": "https://askfocal.com/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
         "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -1916,11 +1916,11 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 1,
           "opinion_marker": false
         }
       }
@@ -4038,7 +4038,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-14T06:57:16.057Z",
+        "fetched_at": "2026-05-17T06:58:54.697Z",
         "homepage_url": "https://mprnews.org/",
         "example_url": "https://www.mprnews.org/story/2023/12/19/minnesota-medicaid-fraud-prevention",
         "homepage_status": 200,
@@ -8267,7 +8267,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-14T06:57:16.267Z",
+        "fetched_at": "2026-05-17T06:58:54.897Z",
         "homepage_url": "https://cuervo.com/",
         "example_url": "https://cuervo.com/?twclid=2cw6oebezormtkrlgtaweck05m",
         "homepage_status": 200,
@@ -14395,7 +14395,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-14T06:57:21.022Z",
+        "fetched_at": "2026-05-17T06:58:58.041Z",
         "homepage_url": "https://prismmarketview.com/",
         "example_url": "https://prismmarketview.com/companies/sbc-medical-group-holdings-incorporated/?twclid=26comjr0eies8gnklzmi3odvtu",
         "homepage_status": 200,

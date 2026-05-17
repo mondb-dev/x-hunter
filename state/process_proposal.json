@@ -1,6 +1,6 @@
 {
   "id": "proposal_geopolitical_claim_validation_1778996381817",
-  "status": "pending",
+  "status": "failed",
   "title": "Develop 'Geopolitical Claim Validation & Contextualization Module'",
   "problem": "The agent consistently observes the rapid dissemination of unverified or speculative geopolitical claims (e.g., 'explosion in Israel,' 'mushroom cloud,' 'nuclear warhead' speculation) that challenge epistemic integrity and influence public discourse. Current tools can identify narrative manipulation but lack a structured framework to immediately validate, contextualize, or cross-reference these claims against credible sources or historical patterns of misinformation. This results in observations of 'vulnerability of public discourse to sensationalism' without a direct mechanism to address it.",
   "evidence": [
@@ -20,6 +20,6 @@
   "scope": "pipeline",
   "estimated_risk": "medium",
   "created_at": "2026-05-17T05:39:41.769Z",
-  "resolved_at": null,
-  "resolution": null
+  "resolved_at": "2026-05-17T06:30:42.173Z",
+  "resolution": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"TOOL_DECLARATIONS\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"TOOL_EXECUTORS\" was exported before but is missing after"
 }
