@@ -1,25 +1,21 @@
 {
-  "id": "proposal_actor_narrative_attribution_framework_20260514",
+  "id": "proposal_narrative_data_access_module_1715830140000",
   "status": "failed",
-  "title": "Enhance Narrative Tactic and Actor Attribution Framework",
-  "problem": "While the Narrative Tactic and Beneficiary Attribution Module exists, the agent's observations indicate a lack of granular, systematic attribution of specific narrative tactics to named actors or groups within real-time event analysis. This limits the ability to precisely map 'who' is pushing 'which' narrative using 'what specific tactics' and for 'what likely intent', moving beyond general detection of manipulation.",
+  "title": "Develop 'X Search Result Extraction and Analysis Module'",
+  "problem": "Recurring technical inability to extract content from X search results, which directly impacts the capacity to track, analyze, and dissect specific narratives (e.g., 'New World Order', 'national sovereignty vs. global governance') and identify manipulation. This hinders the ability to gather primary evidence for belief formation and article generation.",
   "evidence": [
-    "2026-05-13 h16: 'multiple posts alleging 'planned chaos' and 'diversionary tactics' within the Senate itself to facilitate Senator Bato's escape, suggesting a coordinated effort to manipulate events. @teddycasino and @mvn_dn were prominent in articulating this theory.' (Mentions actors but lacks structured attribution)",
-    "2026-05-13 h17: 'coordinated live streams from various politicians, immediately followed by conflicting reports and accusations, strongly suggest an orchestrated attempt to control the public perception of events.' (Identifies action, but not specific actors or their narrative intent)",
-    "2026-05-13 h21: 'Multiple accounts on X are quick to dismiss the incident as staged, a 'circus,' or a 'fake siege,' directly implicating political figures in orchestrating events for undisclosed motives.' (General 'political figures' without deeper attribution)",
-    "2026-05-14 article: 'What began as a legal process involving an International Criminal Court warrant for Senator Ronald 'Bato' Dela Rosa quickly devolved into a battle for narrative control, complete with synchronized livestreams from politicians, official denials, and accusations of staged events.' (Synthesizes narrative battle, but the underlying observation process needs to feed this with more structured actor-tactic links.)",
-    "General recurring theme of 'exposing manipulation and demanding accountability' (vocation), but the 'who' and 'how' of manipulation are not systematically tracked for specific actors."
+    "2026-05-15 h18: 'My attempt to gather evidence for the \"New World Order\" discourse... was effectively blocked. This technical limitation directly impacts my capacity to track narratives and identify manipulation... Without reliable access to the raw discourse, my ability to dissect strategic narratives and expose abuses of power is compromised.'"
   ],
-  "proposed_solution": "Develop an extension or refinement to the existing Narrative Tactic and Beneficiary Attribution Module. This enhancement should enable the agent to explicitly identify and tag specific actors (individuals, organizations, official bodies) alongside the narrative tactics they employ and the particular narrative they are pushing, within the raw observation phase. This would involve: \n1. Defining a structured format for actor-tactic-narrative tuples within observations.\n2. Implementing a mechanism to prompt the agent to explicitly identify these tuples during observation synthesis.\n3. Potentially linking these identified actors to a dynamic 'Actor Profile' or 'Narrative Influence Score' for longitudinal tracking.",
+  "proposed_solution": "Build a module that can reliably extract and parse content from X search results for specified keywords or hashtags. This module should provide structured data (e.g., tweet text, author, timestamp, engagement metrics) that can then be fed into existing narrative analysis frameworks. This would involve robust error handling for API limitations or rate limits.",
   "affected_files": [
-    "runner/agent_core_components/observation_synthesis.py",
-    "runner/agent_core_components/belief_formation.py",
-    "runner/agent_core_components/narrative_tactics_taxonomy.json",
-    "runner/data/actor_profiles.json"
+    "runner/lib/agent_tools.js",
+    "runner/tools/x_search_tool.js",
+    "runner/pipeline_config.js",
+    "runner/data_ingestion_pipeline.js"
   ],
   "scope": "pipeline",
   "estimated_risk": "medium",
-  "created_at": "2026-05-14T04:09:16.335Z",
-  "resolved_at": "2026-05-14T04:58:57.659Z",
+  "created_at": "2026-05-16T05:09:01.535Z",
+  "resolved_at": "2026-05-16T06:00:35.201Z",
   "resolution": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after"
 }

@@ -560,6 +560,42 @@
       "pushed_to_origin": null,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_strategy_mapping_1715750390",
+      "title": "Develop 'Accountability Evasion Narrative Mapping' Tool",
+      "status": "merged",
+      "proposed_at": "2026-05-15T04:39:19.219Z",
+      "resolved_at": "2026-05-15T05:28:53.542Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "runner/data/narrative_tactics_taxonomy.json",
+        "runner/lib/agent_tools.js"
+      ],
+      "branch_name": "meta/proposal_narrative_strategy_mapping_1715750390",
+      "merge_commit": "d5594fc3b227a93c485ce1c334056f76f07ce75e",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_data_access_module_1715830140000",
+      "title": "Develop 'X Search Result Extraction and Analysis Module'",
+      "status": "failed",
+      "proposed_at": "2026-05-16T05:09:01.535Z",
+      "resolved_at": "2026-05-16T06:00:35.202Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after",
+      "files_changed": [
+        "runner/pipeline_config.js",
+        "runner/tools/x_search_tool.js",
+        "runner/data_ingestion_pipeline.js",
+        "runner/lib/agent_tools.js"
+      ],
+      "branch_name": "meta/proposal_narrative_data_access_module_1715830140000",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }

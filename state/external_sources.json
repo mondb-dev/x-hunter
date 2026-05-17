@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "generated_at": "2026-04-19T03:02:23.280Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-05-14T16:57:27.235Z",
+  "profiled_at": "2026-05-17T01:29:24.980Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -95,7 +95,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T23:27:05.219Z",
+        "fetched_at": "2026-05-16T23:28:45.442Z",
         "homepage_url": "https://ojp.gov/",
         "example_url": "https://bjs.ojp.gov/library/publications/violent-victimization-race-or-hispanic-origin-2008-2012",
         "homepage_status": 200,
@@ -217,7 +217,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T11:36:14.802Z",
+        "fetched_at": "2026-05-15T12:27:49.827Z",
         "homepage_url": "https://cbp.gov/",
         "example_url": "https://careers.cbp.gov/s/connect-to-recruiter?campaignid=701SJ00000BV0tR&utm_source=X&utm_medium=paid_social&utm_campaign=MGC_B5SXtXt5J5T&twclid=2f2100ywgvzunnowbnhrpi34g1",
         "homepage_status": 200,
@@ -317,7 +317,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:27",
+            "outbound_links:33",
             "opinion_marker:false"
           ]
         },
@@ -337,7 +337,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T04:36:04.612Z",
+        "fetched_at": "2026-05-15T04:57:37.990Z",
         "homepage_url": "https://house.gov/",
         "example_url": "https://www.house.gov/",
         "homepage_status": null,
@@ -363,7 +363,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 27,
+          "outbound_links_count": 33,
           "opinion_marker": false
         }
       }
@@ -463,7 +463,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T19:06:42.584Z",
+        "fetched_at": "2026-05-15T19:58:17.946Z",
         "homepage_url": "https://washingtonpost.com/",
         "example_url": "https://www.washingtonpost.com/world/2026/04/13/us-iran-blockade-strait-hormuz-oil/",
         "homepage_status": null,
@@ -587,7 +587,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T04:36:05.260Z",
+        "fetched_at": "2026-05-15T04:57:38.417Z",
         "homepage_url": "https://theguardian.com/",
         "example_url": "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
         "homepage_status": 200,
@@ -707,7 +707,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T04:36:05.496Z",
+        "fetched_at": "2026-05-15T04:57:38.656Z",
         "homepage_url": "https://apnews.com/",
         "example_url": "https://apnews.com/hub/iran",
         "homepage_status": 200,
@@ -843,7 +843,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T04:36:06.635Z",
+        "fetched_at": "2026-05-15T04:57:39.718Z",
         "homepage_url": "https://t.co/",
         "example_url": "https://t.co/pJSE124ec4",
         "homepage_status": 200,
@@ -950,12 +950,12 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.1,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
@@ -979,15 +979,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T06:36:49.913Z",
+        "fetched_at": "2026-05-15T06:57:39.969Z",
         "homepage_url": "https://grok.com/",
         "example_url": "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
         "homepage_status": 200,
-        "example_status": null,
+        "example_status": 200,
         "homepage_final_url": "https://grok.com/",
         "example_final_url": "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
         "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -1001,7 +1001,7 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -1239,7 +1239,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T18:27:01.211Z",
+        "fetched_at": "2026-05-16T18:43:36.955Z",
         "homepage_url": "https://reuters.com/",
         "example_url": "https://www.reuters.com/site-search/?query=Evidence-based%20claims%2C%20transparent%20sourcing%2C%20honest%20uncertainty%2C%20good-faith%20argu%20Truth%20and%20Evidence%20in%20Public%20Discourse",
         "homepage_status": 401,
@@ -1389,7 +1389,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T11:36:15.111Z",
+        "fetched_at": "2026-05-15T12:27:50.172Z",
         "homepage_url": "https://google.com/",
         "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
         "homepage_status": 200,
@@ -1509,7 +1509,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T05:36:07.977Z",
+        "fetched_at": "2026-05-15T05:58:12.972Z",
         "homepage_url": "https://wikipedia.org/",
         "example_url": "https://en.wikipedia.org/wiki/2026_Iran_war",
         "homepage_status": 200,
@@ -1639,7 +1639,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T10:06:14.149Z",
+        "fetched_at": "2026-05-15T10:57:46.099Z",
         "homepage_url": "https://cbsnews.com/",
         "example_url": "https://www.cbsnews.com/news/us-naval-blockade-iran-ports-2026/",
         "homepage_status": 200,
@@ -1767,7 +1767,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T18:27:01.528Z",
+        "fetched_at": "2026-05-16T18:43:37.256Z",
         "homepage_url": "https://starlink.com/",
         "example_url": "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
         "homepage_status": 200,
@@ -2021,7 +2021,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T18:27:01.913Z",
+        "fetched_at": "2026-05-16T18:43:37.640Z",
         "homepage_url": "https://bk.com/",
         "example_url": "https://www.bk.com/menu/section/fb06fabe-a285-4fb4-994a-c617a1547ddb?utm_source=X&utm_medium=Social-Social&utm_campaign=Peppercorn-Awareness&utm_content=Peppercorn-IMG-Warning&twclid=24j7ivpacvxqbg2t5it24skrl9",
         "homepage_status": 200,
@@ -2273,7 +2273,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T05:36:08.960Z",
+        "fetched_at": "2026-05-15T05:58:13.364Z",
         "homepage_url": "https://moltbook.com/",
         "example_url": "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
         "homepage_status": 200,
@@ -2371,7 +2371,7 @@
           ]
         },
         "profile": {
-          "score": 0.54,
+          "score": 0.63,
           "confidence": 0.75,
           "basis": [
             "meta_author:true",
@@ -2380,7 +2380,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:9",
             "opinion_marker:false"
           ]
         },
@@ -2400,7 +2400,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T10:06:14.520Z",
+        "fetched_at": "2026-05-15T10:57:46.702Z",
         "homepage_url": "https://ethos.com/",
         "example_url": "https://www.ethos.com/life/life-insurance-now/?utm_source=twitter&utm_medium=cpc&utm_campaign=Broad01162026&utm_campaign_id=40806420&utm_adgroup=Broad01162026&utm_adgroup_id=54091382&utm_ad_id=2024963714831835547&ad_name=hiking+%28convert%29&twclid=2eck112qrn4y0a9og1cs3anquo",
         "homepage_status": 200,
@@ -2423,10 +2423,10 @@
           "has_meta_author": true,
           "has_published_time": false,
           "has_canonical": true,
-          "has_about_link": false,
+          "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 9,
           "opinion_marker": false
         }
       }
@@ -2527,7 +2527,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T08:36:11.996Z",
+        "fetched_at": "2026-05-15T09:27:45.879Z",
         "homepage_url": "https://framia.pro/",
         "example_url": "https://framia.pro/?utm_source=x&utm_campaign=twitter_adsmarch_framia_14_20260331&utm_medium=paid_social&twclid=2e6c8vey7aaz8sdwedu4gd0jgx",
         "homepage_status": 200,
@@ -2654,7 +2654,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T18:27:02.609Z",
+        "fetched_at": "2026-05-16T18:43:38.301Z",
         "homepage_url": "https://mottandbow.com/",
         "example_url": "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
         "homepage_status": 200,
@@ -2907,7 +2907,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T03:56:30.622Z",
+        "fetched_at": "2026-05-16T03:58:06.405Z",
         "homepage_url": "https://ironclaw.com/",
         "example_url": "https://www.ironclaw.com/?utm_source=x&utm_medium=paid_social&utm_campaign=ironclaw_marapr26&twclid=2axdpb938w7qafe76dwca4od5q",
         "homepage_status": 200,
@@ -3013,7 +3013,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:33",
+            "outbound_links:27",
             "opinion_marker:false"
           ]
         },
@@ -3033,7 +3033,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T19:57:02.607Z",
+        "fetched_at": "2026-05-16T20:13:39.856Z",
         "homepage_url": "https://bit.ly/",
         "example_url": "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q",
         "homepage_status": 200,
@@ -3059,7 +3059,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 33,
+          "outbound_links_count": 27,
           "opinion_marker": false
         }
       }
@@ -3158,7 +3158,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T00:36:35.391Z",
+        "fetched_at": "2026-05-15T00:57:34.100Z",
         "homepage_url": "https://geopoliticalfutures.com/",
         "example_url": "https://www.geopoliticalfutures.com/article/the-strait-of-hormuz-reopens-with-conditions/",
         "homepage_status": 200,
@@ -3284,7 +3284,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T05:36:09.590Z",
+        "fetched_at": "2026-05-15T05:58:13.940Z",
         "homepage_url": "https://theepochtimes.com/",
         "example_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
         "homepage_status": 200,
@@ -3410,7 +3410,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T23:27:05.764Z",
+        "fetched_at": "2026-05-16T23:28:45.849Z",
         "homepage_url": "https://absinthe.network/",
         "example_url": "https://boost.absinthe.network/8hhp-sfkk/home?utm_source=x&utm_medium=cpc&utm_campaign=Absinthe&utm_id=sero&utm_content=Mar26&twclid=25502jccgfzmkpf20p6sbvaj8t",
         "homepage_status": 200,
@@ -3536,13 +3536,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T11:36:18.321Z",
+        "fetched_at": "2026-05-15T12:27:53.082Z",
         "homepage_url": "https://com.ph/",
         "example_url": "https://c.lazada.com.ph/t/c.dp86nK?url=https%3A%2F%2Fpages.lazada.com.ph%2Fwow%2Fgcp%2Froute%2Flazada%2Fph%2Fupr_1000345_lazada%2Fchannel%2Fph%2Fupr-router%2Frender%3Fwx_navbar_transparent%3Dtrue%26hybrid%3D1%26data_prefetch%3Dtrue%26at_iframe%3D1%26lzd_navbar_hidden%3Dtrue%26pha%3Dtrue%26prefetch_replace%3D1%26wh_pid%3D%2Flazada%2Fmegascenario%2Fph%2Fmid-month-april%2FMCP-Omaf&twclid=2bcs2xs7o6kl7buuuabcgrk2d8",
         "homepage_status": null,
         "example_status": 200,
         "homepage_final_url": "https://com.ph/",
-        "example_final_url": "https://pages.lazada.com.ph/wow/gcp/route/lazada/ph/upr_1000345_lazada/channel/ph/upr-router/render?wx_navbar_transparent=true&hybrid=1&data_prefetch=true&at_iframe=1&lzd_navbar_hidden=true&pha=true&prefetch_replace=1&wh_pid=/lazada/megascenario/ph/mid-month-april/MCP-Omaf&laz_trackid=2:mm_375930618_374301503_2330951628:clk5lvf5r1jodvicmkt3bf&mkttid=clk5lvf5r1jodvicmkt3bf&exlaz=c_lzd_byr:mm_375930618_374301503_2330951628!ph4043004:clk5lvf5r1jodvicmkt3bf::",
+        "example_final_url": "https://pages.lazada.com.ph/wow/gcp/route/lazada/ph/upr_1000345_lazada/channel/ph/upr-router/render?wx_navbar_transparent=true&hybrid=1&data_prefetch=true&at_iframe=1&lzd_navbar_hidden=true&pha=true&prefetch_replace=1&wh_pid=/lazada/megascenario/ph/mid-month-april/MCP-Omaf&laz_trackid=2:mm_375930618_374301503_2330951628:clk5lvf5t1jolpn03g7qhu&mkttid=clk5lvf5t1jolpn03g7qhu&exlaz=c_lzd_byr:mm_375930618_374301503_2330951628!ph4043004:clk5lvf5t1jolpn03g7qhu::",
         "homepage_content_type": "",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -3663,7 +3663,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T19:57:03.118Z",
+        "fetched_at": "2026-05-16T20:13:40.420Z",
         "homepage_url": "https://metaphysicalarticles.org/",
         "example_url": "https://www.metaphysicalarticles.org/2025/12/ufos-uap-space-people-disclosure.html?twclid=25s2j2s4i47jn3wcdf6ujpfrmp",
         "homepage_status": 200,
@@ -3789,7 +3789,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T00:56:27.363Z",
+        "fetched_at": "2026-05-16T00:58:06.172Z",
         "homepage_url": "https://jamf.com/",
         "example_url": "https://www.jamf.com/blog/mac-management-security-trends-enterprise-it-2025/?utm_source=twitter&utm_medium=sponsored-social&utm_campaign=am_icf_smas_mms_banner_icp&utm_content=20260213_com_ent-midmkt_p_jmac_blog_6679_SIT&twclid=26vc3aicbe9m10pi19ume82b0z",
         "homepage_status": 200,
@@ -4288,7 +4288,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T03:06:04.933Z",
+        "fetched_at": "2026-05-15T03:27:37.335Z",
         "homepage_url": "https://pixelsuite.ai/",
         "example_url": "https://www.pixelsuite.ai/?twclid=21t2mc2zkr7fbld6fej146r5rz",
         "homepage_status": 200,
@@ -4414,7 +4414,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T10:06:15.594Z",
+        "fetched_at": "2026-05-15T10:57:47.600Z",
         "homepage_url": "https://enter.pro/",
         "example_url": "https://enter.pro/?utm_source=x&utm_medium=paid_social&utm_campaign=twitter_adsmarch_enter_13_0260403&twclid=21y4m3veyg3qz1wzl60cdelnk1",
         "homepage_status": 200,
@@ -4540,7 +4540,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T03:36:37.706Z",
+        "fetched_at": "2026-05-15T03:57:36.856Z",
         "homepage_url": "https://cosmos.so/",
         "example_url": "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc",
         "homepage_status": 200,
@@ -4664,7 +4664,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T05:36:10.024Z",
+        "fetched_at": "2026-05-15T05:58:14.227Z",
         "homepage_url": "https://understandingwar.org/",
         "example_url": "https://understandingwar.org/research/middle-east/the-war-in-iran-operational-progress-but-challenges-remain/",
         "homepage_status": 200,
@@ -4788,7 +4788,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T00:36:35.734Z",
+        "fetched_at": "2026-05-15T00:57:34.320Z",
         "homepage_url": "https://cloud.com/",
         "example_url": "https://vertexaisearch.cloud.com/grounding-api-redirect/AUZIYQFSWSYvOQGbg3SZ62H68s6EQ7K3SDaKjwIQHlaz9zHuvl54a0-NcWGetby_oXYGwNVVSnfjs-uuruUzZPui0CEG8-9ULvvo7uCENkdZg9q0GiDJPzMnCYR6Z1F1psILyn3cXFL6vUvygZFuGIJqVzsBU61E8mSZscgGMWoo_FZksTftzSdDpmr-Ia3xisZ-MFC2_Jqtsp-ocMfRH_jDNgyC8DoVCkyQgifZKurYqlbZNG0g_yJWE7md4E3GQ==",
         "homepage_status": 200,
@@ -4892,7 +4892,7 @@
             "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:590",
+            "outbound_links:599",
             "opinion_marker:false"
           ]
         },
@@ -4912,7 +4912,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T06:36:50.541Z",
+        "fetched_at": "2026-05-15T06:57:40.625Z",
         "homepage_url": "https://cfr.org/",
         "example_url": "https://www.cfr.org/global-conflict-tracker/conflict/confrontation-between-united-states-and-iran",
         "homepage_status": 200,
@@ -4938,7 +4938,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 590,
+          "outbound_links_count": 599,
           "opinion_marker": false
         }
       }
@@ -5036,7 +5036,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T23:26:26.333Z",
+        "fetched_at": "2026-05-15T23:28:03.117Z",
         "homepage_url": "https://jpost.com/",
         "example_url": "https://jpost.com/",
         "homepage_status": 200,
@@ -5160,7 +5160,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T17:36:19.920Z",
+        "fetched_at": "2026-05-15T18:27:57.637Z",
         "homepage_url": "https://timesofisrael.com/",
         "example_url": "https://timesofisrael.com/",
         "homepage_status": 403,
@@ -5284,7 +5284,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T11:36:18.790Z",
+        "fetched_at": "2026-05-15T12:27:53.524Z",
         "homepage_url": "https://coingecko.com/",
         "example_url": "https://www.coingecko.com/en/api/acquisition/entry-plans?utm_source=twitter&utm_medium=ad&utm_campaign=bau&utm_content=mar26-gt-brand-ad-free-v1&audience_segment=prospecting&twclid=26xrmua0k4othy65876mc0aamh",
         "homepage_status": 403,
@@ -5532,7 +5532,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T00:36:46.087Z",
+        "fetched_at": "2026-05-15T00:57:44.627Z",
         "homepage_url": "https://spr.ly/",
         "example_url": "http://spr.ly/6017B6mDnt?twclid=2ajcph2gf0va7okmqyb2o5fv6v",
         "homepage_status": 200,
@@ -5656,7 +5656,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T00:36:47.016Z",
+        "fetched_at": "2026-05-15T00:57:45.467Z",
         "homepage_url": "https://interactivebrokers.com/",
         "example_url": "https://www.interactivebrokers.com/mkt/?src=twitter1516e&url=%2Fen%2Ftrading%2Fmargin.php&twclid=26s33m7076ex8oai4uldw5cov5",
         "homepage_status": 200,
@@ -5780,7 +5780,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T01:36:03.048Z",
+        "fetched_at": "2026-05-15T01:57:34.097Z",
         "homepage_url": "https://declarenews.org/",
         "example_url": "https://declarenews.org/?twclid=2500ov9qtyoaopft1mo5mjis4t",
         "homepage_status": 200,
@@ -5904,7 +5904,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T03:06:06.406Z",
+        "fetched_at": "2026-05-15T03:27:38.822Z",
         "homepage_url": "https://deere.com/",
         "example_url": "https://www.deere.com/en/technology-products/precision-ag-technology/remote-management/operations-center-pro-golf/?twclid=24oqwc0zuejy7hkjph647og8x6",
         "homepage_status": 200,
@@ -6028,7 +6028,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T03:36:37.974Z",
+        "fetched_at": "2026-05-15T03:57:37.221Z",
         "homepage_url": "https://theograce.com/",
         "example_url": "https://www.theograce.com/products/terry-diamond-heart-necklace-with-engraved-names-in-gold-plating?utm_term=Guitar&utm_id=41178982&utm_medium=cpc&utm_campaign=US_ALL_twitter_cpc_Display_MD26_M4W_Still&utm_source=twitter&utm_content=MD26&twclid=2dnpihgths0rs7qj2dk5rkgxbo",
         "homepage_status": 200,
@@ -6154,7 +6154,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T14:36:15.314Z",
+        "fetched_at": "2026-05-15T15:27:51.934Z",
         "homepage_url": "https://varrd.com/",
         "example_url": "https://varrd.com/?twclid=222hhmjo1hjeaafibt54abkalz",
         "homepage_status": 200,
@@ -6280,13 +6280,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T03:06:08.287Z",
+        "fetched_at": "2026-05-15T03:27:40.533Z",
         "homepage_url": "https://zite.com/",
         "example_url": "https://try.zite.com/ad-integrations-1?twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.zite.com/",
-        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=qvDUFHSUFyUN4XGE&twclid=22vk5745ty6qkvlrboi0g1qhow",
+        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=fFDLpCplCeKQnDn9&twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -6406,7 +6406,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T19:57:08.136Z",
+        "fetched_at": "2026-05-16T20:13:42.552Z",
         "homepage_url": "https://byteplus.com/",
         "example_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
         "homepage_status": 200,
@@ -6775,7 +6775,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T06:36:50.881Z",
+        "fetched_at": "2026-05-15T06:57:40.931Z",
         "homepage_url": "https://britannica.com/",
         "example_url": "https://www.britannica.com/event/2026-Iran-War",
         "homepage_status": 403,
@@ -6898,7 +6898,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T10:06:15.732Z",
+        "fetched_at": "2026-05-15T10:57:47.708Z",
         "homepage_url": "https://epochtimes.com/",
         "example_url": "https://www.epochtimes.com/",
         "homepage_status": 200,
@@ -7022,7 +7022,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T19:57:08.647Z",
+        "fetched_at": "2026-05-16T20:13:42.765Z",
         "homepage_url": "https://idf.il/",
         "example_url": "https://www.idf.il/en/articles/2026/04/16/idf-finds-weapons-in-school-in-bint-jbeil-lebanon/",
         "homepage_status": null,
@@ -7147,7 +7147,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T12:06:14.854Z",
+        "fetched_at": "2026-05-15T12:57:48.476Z",
         "homepage_url": "https://github.com/",
         "example_url": "https://github.com/BlockRunAI/ClawRouter/?twclid=2bnr8zsvp3b72fbw0yuil7yilw",
         "homepage_status": 200,
@@ -7271,7 +7271,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T12:06:17.324Z",
+        "fetched_at": "2026-05-15T12:57:50.856Z",
         "homepage_url": "https://thedispatch.com/",
         "example_url": "https://thedispatch.com/article/slavery-christianity-judaism/?twclid=224n5l3gu5l6wy53cctpntxjmr",
         "homepage_status": 200,
@@ -7520,7 +7520,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T12:06:19.628Z",
+        "fetched_at": "2026-05-15T12:57:53.885Z",
         "homepage_url": "https://athena.com/",
         "example_url": "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=27k7ut43wxglvx2o2e2nj7pszs",
         "homepage_status": 200,
@@ -7645,7 +7645,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T13:06:17.713Z",
+        "fetched_at": "2026-05-15T13:57:52.137Z",
         "homepage_url": "https://manduka.com/",
         "example_url": "https://www.manduka.com/products/manduka-pro-yoga-mat?utm_source=twitter&utm_medium=cpc&utm_campaign=xconvert&utm_content=PRO+Mat+-+Rooibos+1x1&twclid=2c1i50hvb8z81u6asprj4f4oqt",
         "homepage_status": 200,
@@ -7770,7 +7770,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T08:36:12.198Z",
+        "fetched_at": "2026-05-15T09:27:46.094Z",
         "homepage_url": "https://anymark.co/",
         "example_url": "https://anymark.co/?utm_source=x&utm_campaign=x771&twclid=293t0nesyim9m91au5fqoaj5s8",
         "homepage_status": 200,
@@ -7895,7 +7895,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T13:06:18.251Z",
+        "fetched_at": "2026-05-15T13:57:52.472Z",
         "homepage_url": "https://davidprotein.com/",
         "example_url": "https://davidprotein.com/pages/meet-david-gold?utm_source=X&utm_medium=paid&utm_campaign=CPC_2026&utm_term=GOLD_CPC_2026&twclid=2beqsd3kifgmiz3bgaf4s8hcjs",
         "homepage_status": 200,
@@ -8020,7 +8020,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T20:36:24.076Z",
+        "fetched_at": "2026-05-15T21:28:01.926Z",
         "homepage_url": "https://easesourcing.com/",
         "example_url": "https://www.easesourcing.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=eu260327&twclid=2c9z6424e0kfmv2lyfp3g2o0yr",
         "homepage_status": 200,
@@ -8143,7 +8143,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T06:36:51.267Z",
+        "fetched_at": "2026-05-15T06:57:41.375Z",
         "homepage_url": "https://georgetown.edu/",
         "example_url": "https://gjia.georgetown.edu/2026/03/26/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
         "homepage_status": 200,
@@ -8390,7 +8390,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T08:36:12.623Z",
+        "fetched_at": "2026-05-15T09:27:46.502Z",
         "homepage_url": "https://ajc.org/",
         "example_url": "https://www.ajc.org/news/the-iran-strikes-explained-how-we-got-here-and-what-it-means",
         "homepage_status": 200,
@@ -8514,7 +8514,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T12:06:19.872Z",
+        "fetched_at": "2026-05-15T12:57:54.185Z",
         "homepage_url": "https://app.link/",
         "example_url": "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
         "homepage_status": 404,
@@ -8638,7 +8638,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-14T01:27:09.714Z",
+        "fetched_at": "2026-05-17T01:29:23.284Z",
         "homepage_url": "https://tickerscores.ai/",
         "example_url": "https://tickerscores.ai/?twclid=29mi9nru582fdb9vf7t1d5r9yf",
         "homepage_status": 200,
@@ -8733,14 +8733,14 @@
           ]
         },
         "profile": {
-          "score": 0.42,
-          "confidence": 0.65,
+          "score": 0.16,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:true",
-            "about:true",
-            "contact:true",
+            "about:false",
+            "contact:false",
             "corrections:false",
             "outbound_links:6",
             "opinion_marker:false"
@@ -8762,23 +8762,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T01:36:04.206Z",
+        "fetched_at": "2026-05-15T01:57:34.566Z",
         "homepage_url": "https://coindesk.com/",
         "example_url": "https://consensus.coindesk.com/?utm_source=x&utm_medium=paid&utm_campaign=CMIA26&utm_content=speakerscarousel&twclid=25wlgerig7ee1h05a2z5wafpgx",
-        "homepage_status": 200,
+        "homepage_status": 429,
         "example_status": 200,
-        "homepage_final_url": "https://www.coindesk.com/",
+        "homepage_final_url": "https://coindesk.com/",
         "example_final_url": "https://consensus.coindesk.com/?utm_source=x&utm_medium=paid&utm_campaign=CMIA26&utm_content=speakerscarousel&twclid=25wlgerig7ee1h05a2z5wafpgx",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 15,
+          "outbound_links_count": 1,
           "opinion_marker": false
         },
         "example": {
@@ -8886,7 +8886,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T03:06:08.520Z",
+        "fetched_at": "2026-05-15T03:27:40.821Z",
         "homepage_url": "https://finviz.com/",
         "example_url": "https://finviz.com/register?affilId=659201043&twclid=237p0oqyf8bhakod3naytz02qh",
         "homepage_status": 200,
@@ -9008,7 +9008,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T08:36:12.941Z",
+        "fetched_at": "2026-05-15T09:27:46.866Z",
         "homepage_url": "https://rice.edu/",
         "example_url": "https://news.rice.edu/news/2026/more-dangerous-and-unpredictable-experts-discuss-ongoing-iran-conflict",
         "homepage_status": null,
@@ -9130,7 +9130,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T13:06:20.555Z",
+        "fetched_at": "2026-05-15T13:57:55.315Z",
         "homepage_url": "https://moderndiplomacy.eu/",
         "example_url": "https://moderndiplomacy.eu/2026/03/06/alone-under-fire-irans-partners-step-back-as-war-intensifies/",
         "homepage_status": 200,
@@ -9252,7 +9252,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T13:06:21.650Z",
+        "fetched_at": "2026-05-15T13:57:55.989Z",
         "homepage_url": "https://amnesty.org/",
         "example_url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/",
         "homepage_status": 200,
@@ -9374,7 +9374,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T13:36:15.825Z",
+        "fetched_at": "2026-05-15T14:27:51.706Z",
         "homepage_url": "https://vt.edu/",
         "example_url": "https://news.vt.edu/articles/2026/03/Iran-Israel-Trump-gas-LNG-prices-Strait-Hormuz-economic-impact.html",
         "homepage_status": 200,
@@ -9497,7 +9497,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T21:27:03.327Z",
+        "fetched_at": "2026-05-16T21:28:44.218Z",
         "homepage_url": "https://edicek.com/",
         "example_url": "https://edicek.com/?twclid=2468k4sxfdut4hmixz8sdmcieh",
         "homepage_status": 200,
@@ -9743,7 +9743,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T02:26:35.569Z",
+        "fetched_at": "2026-05-16T02:28:06.504Z",
         "homepage_url": "https://arkayzeroproof.com/",
         "example_url": "https://arkayzeroproof.com/invest-in-arkay/?twclid=2an9mhmxuedo5myzer72kvy89c",
         "homepage_status": 200,
@@ -9866,7 +9866,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T21:27:04.433Z",
+        "fetched_at": "2026-05-16T21:28:45.085Z",
         "homepage_url": "https://rexshares.com/",
         "example_url": "https://www.rexshares.com/t-rex-leveraged-etfs/?twclid=29y2s8ykvzrl4imsooxujrypoa",
         "homepage_status": 200,
@@ -9989,7 +9989,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T22:57:04.467Z",
+        "fetched_at": "2026-05-16T22:58:44.819Z",
         "homepage_url": "https://degenidle.com/",
         "example_url": "https://degenidle.com/?twclid=2cjpeg7bzynm31yynzfte1vs7q",
         "homepage_status": 200,
@@ -10358,7 +10358,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T01:36:05.047Z",
+        "fetched_at": "2026-05-15T01:57:35.088Z",
         "homepage_url": "https://stanford.edu/",
         "example_url": "https://setr.stanford.edu/?utm_source=paid-social&utm_medium=x&utm_campaign=consideration&utm_term=nationwide&utm_content=general_image&twclid=24yi2v8i7akrj8uxvbrlymn90n",
         "homepage_status": 200,
@@ -10481,7 +10481,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T01:36:05.564Z",
+        "fetched_at": "2026-05-15T01:57:35.551Z",
         "homepage_url": "https://spotandtango.com/",
         "example_url": "https://www.spotandtango.com/unkibble?discount=XUNKIBBLE&utm_medium=cpc&utm_campaign=X_Convert_2026&utm_source=twitter&twclid=2adust2nkwc5tq5qj4fqfz0vb8",
         "homepage_status": 200,
@@ -10604,7 +10604,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T03:36:38.645Z",
+        "fetched_at": "2026-05-15T03:57:37.913Z",
         "homepage_url": "https://sourcebot.dev/",
         "example_url": "https://docs.sourcebot.dev/docs/features/mcp-server?twclid=24rnkjjr58b4nqm87glv1o5dr0",
         "homepage_status": 200,
@@ -10727,7 +10727,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T14:36:16.083Z",
+        "fetched_at": "2026-05-15T15:27:52.557Z",
         "homepage_url": "https://nobullproject.com/",
         "example_url": "https://nobullproject.com/collections/drive-2-shoes?utm_source=x&utm_medium=paidsocial&utm_campaign=cpatest&utm_term=drive&utm_content=white&twclid=24gy5fp678esqwxit13xmono4x",
         "homepage_status": 200,
@@ -10850,7 +10850,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T14:36:17.612Z",
+        "fetched_at": "2026-05-15T15:27:54.085Z",
         "homepage_url": "https://manageengine.com/",
         "example_url": "https://www.manageengine.com/products/service-desk/?utm_source=Twitter-X&utm_medium=ppc&utm_campaign=SDP-New+Image+Ad-Kws-sep18&twclid=23ga9f8elsw90hcyq7ijyux58l",
         "homepage_status": 200,
@@ -10973,7 +10973,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T14:36:18.186Z",
+        "fetched_at": "2026-05-15T15:27:55.679Z",
         "homepage_url": "https://eclincher.com/",
         "example_url": "https://www.eclincher.com/ai-social-media-agent?twclid=22gdnmarextv0i2rs5d53x1dzn",
         "homepage_status": 200,
@@ -11096,7 +11096,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-11T17:35:54.697Z",
+        "fetched_at": "2026-05-14T18:27:27.739Z",
         "homepage_url": "https://ro.co/",
         "example_url": "https://ro.co/lp/weight-loss/quiz/?utm_medium=paid_social&utm_source=Twitter&utm_campaign=41158458&utm_term=54579155&utm_content=Ad2&twclid=2bv3rduaz2ypp78vahy5e6wspd",
         "homepage_status": 200,
@@ -11219,7 +11219,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T02:06:03.351Z",
+        "fetched_at": "2026-05-15T02:27:34.820Z",
         "homepage_url": "https://outx.ai/",
         "example_url": "https://outx.ai/a/buyer-intent-tracking?utm_source=twitter&utm_medium=paid&utm_campaign=buyer-intent&utm_content=t-b1-first-200&twclid=28hhz80snfgnotyxefsxxmt9nc",
         "homepage_status": 200,
@@ -11342,7 +11342,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T03:36:51.306Z",
+        "fetched_at": "2026-05-15T03:57:49.898Z",
         "homepage_url": "https://statefreedomcaucus.org/",
         "example_url": "https://www.statefreedomcaucus.org/15-strong/?twclid=2epfodwob5z2m8xe9l0e1w4xfa",
         "homepage_status": null,
@@ -11465,7 +11465,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T13:36:16.161Z",
+        "fetched_at": "2026-05-15T14:27:52.258Z",
         "homepage_url": "https://gamedaymath.com/",
         "example_url": "https://www.gamedaymath.com/pricing?twclid=22wv0ellx5eqlyjtmchr7w8rag",
         "homepage_status": 200,
@@ -11588,7 +11588,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T23:26:26.756Z",
+        "fetched_at": "2026-05-15T23:28:03.663Z",
         "homepage_url": "https://patsnap.com/",
         "example_url": "https://eureka.patsnap.com/mse-landing?from=mktcampaign_mse_ads_x_formuvideo-asia2en2&twclid=29qq6c80v43jc7y7o992xnzaaf",
         "homepage_status": 200,
@@ -11711,7 +11711,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T23:27:06.089Z",
+        "fetched_at": "2026-05-16T23:28:46.287Z",
         "homepage_url": "https://moxt.ai/",
         "example_url": "https://moxt.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=x-brand-build-your-ai-team&utm_content=video-49s&utm_term=en-desktop&twclid=24fse5wprkux1ktw6we6w27x5c",
         "homepage_status": 200,
@@ -11833,13 +11833,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T13:36:17.191Z",
+        "fetched_at": "2026-05-15T14:27:53.513Z",
         "homepage_url": "https://irys.xyz/",
         "example_url": "https://gateway.irys.xyz/lZR6DY8ugYpeIkHpBQpgaNeVWmEhahjrDBNGc5Fz0EE",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://irys.xyz/",
-        "example_final_url": "https://node1.irys.xyz/lZR6DY8ugYpeIkHpBQpgaNeVWmEhahjrDBNGc5Fz0EE",
+        "example_final_url": "https://swkhudmpf2ayuxrcihuqkctandlzkwtbefvbr2ymcndhhelt2baq.legacy.datasprite-cdn.com/lZR6DY8ugYpeIkHpBQpgaNeVWmEhahjrDBNGc5Fz0EE/",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html",
         "homepage": {
@@ -11955,7 +11955,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T16:06:18.867Z",
+        "fetched_at": "2026-05-15T16:57:54.611Z",
         "homepage_url": "https://inqnews.net/",
         "example_url": "https://inqnews.net/major",
         "homepage_status": 200,
@@ -12199,7 +12199,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T16:06:19.798Z",
+        "fetched_at": "2026-05-15T16:57:56.695Z",
         "homepage_url": "https://com.cn/",
         "example_url": "https://www.chinadaily.com.cn/a/202604/15/WS661c9e83a31082690940026e.html",
         "homepage_status": null,
@@ -12443,7 +12443,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T23:26:28.296Z",
+        "fetched_at": "2026-05-15T23:28:05.364Z",
         "homepage_url": "https://newsguardtech.com/",
         "example_url": "https://www.newsguardtech.com/",
         "homepage_status": 200,
@@ -12565,7 +12565,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T02:06:03.769Z",
+        "fetched_at": "2026-05-15T02:27:35.261Z",
         "homepage_url": "https://snopes.com/",
         "example_url": "https://snopes.com/fact-check/strait-of-hormuz-oil-shorts-trump/",
         "homepage_status": 200,
@@ -12687,7 +12687,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T13:36:17.532Z",
+        "fetched_at": "2026-05-15T14:27:53.877Z",
         "homepage_url": "https://discord.gg/",
         "example_url": "https://discord.gg/JxPMkH88",
         "homepage_status": 200,
@@ -12780,7 +12780,7 @@
           ]
         },
         "profile": {
-          "score": 0.44999999999999996,
+          "score": 0.43999999999999995,
           "confidence": 0.65,
           "basis": [
             "meta_author:false",
@@ -12789,7 +12789,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:9",
+            "outbound_links:8",
             "opinion_marker:false"
           ]
         },
@@ -12809,7 +12809,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T15:06:15.896Z",
+        "fetched_at": "2026-05-15T15:57:52.189Z",
         "homepage_url": "https://ned.org/",
         "example_url": "https://www.ned.org/about/board-of-directors/",
         "homepage_status": 200,
@@ -12825,7 +12825,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 25,
+          "outbound_links_count": 24,
           "opinion_marker": false
         },
         "example": {
@@ -12835,7 +12835,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 9,
+          "outbound_links_count": 8,
           "opinion_marker": false
         }
       }
@@ -12931,7 +12931,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T15:06:16.623Z",
+        "fetched_at": "2026-05-15T15:57:52.849Z",
         "homepage_url": "https://dstack.ai/",
         "example_url": "https://sky.dstack.ai/?twclid=22u1vjb44uf96iph6oj89wot7a",
         "homepage_status": 200,
@@ -13053,7 +13053,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T15:06:19.150Z",
+        "fetched_at": "2026-05-15T15:57:54.994Z",
         "homepage_url": "https://nextinvestors.com/",
         "example_url": "https://nextinvestors.com/articles/rml-tungsten-price-running-high-grade-tungsten-sitting-in-stockpiles-plus-gold-drilling-in-may/?twclid=29vvkujdwopqjncmmhre6nbvtf",
         "homepage_status": 200,
@@ -13175,7 +13175,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T15:06:19.413Z",
+        "fetched_at": "2026-05-15T15:57:55.228Z",
         "homepage_url": "https://scitools.com/",
         "example_url": "https://scitools.com/codecheck?xad=codecheck&twclid=23owlb2i7ei44kgcykku0zs4en",
         "homepage_status": 200,
@@ -13297,7 +13297,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T16:06:21.445Z",
+        "fetched_at": "2026-05-15T16:57:58.069Z",
         "homepage_url": "https://quorum.us/",
         "example_url": "https://cpmadvocacy.quorum.us/campaign/158654/?utm_source=x&utm_medium=paid_social&utm_campaign=iowa_prediction_markets&twclid=2n7g30ite25eujoe3z8invqck",
         "homepage_status": 200,
@@ -13399,7 +13399,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:20",
+            "outbound_links:18",
             "opinion_marker:false"
           ]
         },
@@ -13419,7 +13419,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T17:36:20.297Z",
+        "fetched_at": "2026-05-15T18:27:58.135Z",
         "homepage_url": "https://fandango.com/",
         "example_url": "https://www.fandango.com/lee-cronins-the-mummy-2026-244052/movie-overview?twclid=2buocyfoltepc4nr5ab0l6j90t",
         "homepage_status": 200,
@@ -13435,7 +13435,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 23,
+          "outbound_links_count": 20,
           "opinion_marker": false
         },
         "example": {
@@ -13445,7 +13445,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 20,
+          "outbound_links_count": 18,
           "opinion_marker": false
         }
       }
@@ -13663,7 +13663,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T16:06:25.239Z",
+        "fetched_at": "2026-05-15T16:58:00.086Z",
         "homepage_url": "https://aikido.dev/",
         "example_url": "https://www.aikido.dev/attack/infinite?utm_source=twitter&utm_medium=paidsocial&utm_campaign=US_tofu&utm_content=2026-02-26-Mack-Infinte-2-A&twclid=28a2h7kzzful35m0kfwtl23x0c",
         "homepage_status": 200,
@@ -13785,7 +13785,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T21:27:08.159Z",
+        "fetched_at": "2026-05-16T21:28:49.223Z",
         "homepage_url": "https://speak4.io/",
         "example_url": "https://speak4.io/lp/hc01cshw?ts=1772120278&twclid=2dds00srijbdtkmjbi9s7cxdwr",
         "homepage_status": null,
@@ -13907,7 +13907,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-14T00:27:07.766Z",
+        "fetched_at": "2026-05-17T00:28:46.799Z",
         "homepage_url": "https://tradestation.com/",
         "example_url": "https://www.tradestation.com/born-trader-bear/?utm_source=x&utm_medium=paidsocial&utm_campaign=TS_COR-Prospecting-Traffic_Apr2026_Born-Trader+&utm_content=TSS_DSO_Bra_Awa_Pro_VID_2025_Brand_Campaign_Q1_Bear_1080x1080_15_v2&twclid=2dp5ql0qnlq22xrvygkx7ryw6t",
         "homepage_status": 200,
@@ -14883,7 +14883,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T02:06:03.940Z",
+        "fetched_at": "2026-05-15T02:27:35.444Z",
         "homepage_url": "https://soaratlas.com/",
         "example_url": "https://soaratlas.com/?twclid=2eza3sd4va29a55s5jzj2vre23",
         "homepage_status": 403,
@@ -15005,7 +15005,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T02:06:04.521Z",
+        "fetched_at": "2026-05-15T02:27:36.164Z",
         "homepage_url": "https://cumuluscoffee.com/",
         "example_url": "https://cumuluscoffee.com/products/the-cumulus-machine-1?utm_source=x&utm_medium=paidsocial&utm_campaign=convenience&utm_content=threedrinks_carousel_1x1&twclid=22ron9m7rrobkpnxtpgpyojtgw",
         "homepage_status": 200,
@@ -15127,7 +15127,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T05:06:04.498Z",
+        "fetched_at": "2026-05-15T06:27:39.627Z",
         "homepage_url": "https://oracle.com/",
         "example_url": "https://www.oracle.com/database/?source=%3Aad%3Aso%3Atw%3Adg%3Aa_nas%3A%3ARC_TWTR260205P00003C00005%3AEnd_Data_Risk&SC=%3Aad%3Aso%3Atw%3Adg%3Aa_nas%3A%3ARC_TWTR260205P00003C00005%3AEnd_Data_Risk&twclid=2b7h3vpee1s0pq1u9507vf4n1e",
         "homepage_status": 403,
@@ -15249,7 +15249,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T16:36:36.740Z",
+        "fetched_at": "2026-05-15T17:28:14.460Z",
         "homepage_url": "https://kfc.com/",
         "example_url": "https://www.kfc.com/menu?utm_source=twitter&utm_medium=social&utm_campaign=kfcvaluefeast&utm_creative=9box&twclid=250lznofqwrkd2iq53t7qffgxo",
         "homepage_status": null,
@@ -15371,7 +15371,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T16:36:37.749Z",
+        "fetched_at": "2026-05-15T17:28:15.523Z",
         "homepage_url": "https://insuranceleadsguide.com/",
         "example_url": "https://insuranceleadsguide.com/insurance-leads/insurance-agency-marketing-tools/?twclid=286vjil8sq5bkkcyaaco0b55aj",
         "homepage_status": 200,
@@ -15493,7 +15493,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T16:36:38.053Z",
+        "fetched_at": "2026-05-15T17:28:15.807Z",
         "homepage_url": "https://orangestandard.com/",
         "example_url": "https://orangestandard.com/?utm_source=Twitter&utm_medium=Tweet&utm_campaign=btcaccts&twclid=221wvicldxi1mxr7dfi4dgcd74",
         "homepage_status": 200,
@@ -15615,7 +15615,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T16:36:38.291Z",
+        "fetched_at": "2026-05-15T17:28:15.964Z",
         "homepage_url": "https://onkodex.com/",
         "example_url": "https://onkodex.com/join/?twclid=21aq9xwo1p6ea49gu5skcha56k",
         "homepage_status": 200,
@@ -15737,7 +15737,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T17:36:21.443Z",
+        "fetched_at": "2026-05-15T18:27:59.210Z",
         "homepage_url": "https://amazon.com/",
         "example_url": "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44/ref_=dvm_us_c_soc_THBY_tw_rb?twclid=2e4zyrzur7iapo7e8zxfmiz1fu",
         "homepage_status": 200,
@@ -15859,7 +15859,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T17:36:21.660Z",
+        "fetched_at": "2026-05-15T18:27:59.402Z",
         "homepage_url": "https://lambda.ai/",
         "example_url": "https://lambda.ai/?utm_source=twitter&utm_medium=paid-social&utm_campaign=2025-11-brand-remarketing&utm_content=2025-11_relaunch_superintelligence-cloud_copy3&twclid=2dr7wza1m47cxuzjqoi0dg5olo",
         "homepage_status": 200,
@@ -15981,7 +15981,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T18:06:19.885Z",
+        "fetched_at": "2026-05-15T18:57:57.201Z",
         "homepage_url": "https://gatorade.com/",
         "example_url": "https://www.gatorade.com/sports-drinks/gatorade-lower-sugar/rain-berry-00052000067774?utm_source=x&utm_medium=paidsocial&utm_campaign=gatorade_lowersugar_omd_fy26_3%2F4-9%2F6&utm_term=native&utm_content=video&twclid=2ez8pvv81gx18qn239dikznlxw",
         "homepage_status": 403,
@@ -16103,7 +16103,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T18:06:20.856Z",
+        "fetched_at": "2026-05-15T18:57:57.796Z",
         "homepage_url": "https://3c.wiki/",
         "example_url": "https://3c.wiki/3PtZuMY?twclid=2bz0sgqd5e9nj510697vwg5ap7",
         "homepage_status": 200,
@@ -16225,7 +16225,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T18:06:21.588Z",
+        "fetched_at": "2026-05-15T18:57:58.261Z",
         "homepage_url": "https://vtfy.link/",
         "example_url": "https://vtfy.link/announcing-the-vuetify0-alpha?twclid=228s56xmohhj46sz7w0iglr2ez",
         "homepage_status": 200,
@@ -16957,7 +16957,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-11T19:05:57.856Z",
+        "fetched_at": "2026-05-14T19:57:31.347Z",
         "homepage_url": "https://coastdental.com/",
         "example_url": "https://www.coastdental.com/appointments/appointment-request?twclid=2etssi0sfdgrv6914rilraey9",
         "homepage_status": 200,
@@ -17079,7 +17079,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-11T19:05:59.241Z",
+        "fetched_at": "2026-05-14T19:57:32.900Z",
         "homepage_url": "https://babbily.com/",
         "example_url": "https://platform.babbily.com/?twclid=28ntbg85b8teebnlu9ilz4yxht",
         "homepage_status": 200,
@@ -17201,7 +17201,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-11T20:36:03.867Z",
+        "fetched_at": "2026-05-14T21:27:34.775Z",
         "homepage_url": "https://googlecloudevents.com/",
         "example_url": "https://www.googlecloudevents.com/next-vegas/?utm_source=twitter&utm_medium=social_video&utm_campaign=FY26-Q2-GLOBAL-GLO27877-physicalevent-er-next26-mc-105752&utm_content=x-video&utm_term=-&twclid=2ehex7zq3t812jvfufjghnt42r",
         "homepage_status": 200,
@@ -17323,7 +17323,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T05:06:05.153Z",
+        "fetched_at": "2026-05-15T06:27:40.276Z",
         "homepage_url": "https://valvolineglobal.com/",
         "example_url": "https://www.valvolineglobal.com/en/fifa-national-sweeps/?utm_source=X&utm_medium=paidsocial&utm_campaign=WC26_GM_US_AWE&utm_content=wcsimplified&twclid=299i90helnojknptru820mqim9",
         "homepage_status": 200,
@@ -17445,7 +17445,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T05:06:06.754Z",
+        "fetched_at": "2026-05-15T06:27:41.475Z",
         "homepage_url": "https://mfaaction.com/",
         "example_url": "https://mfaaction.com/open-letter-to-congress/?twclid=2bzcexp35ec32pbxv40nq5e3in",
         "homepage_status": 200,
@@ -17567,7 +17567,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T05:06:06.896Z",
+        "fetched_at": "2026-05-15T06:27:41.644Z",
         "homepage_url": "https://fundrise.com/",
         "example_url": "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=286j5mjx6wqmg12vs5jto11lrf",
         "homepage_status": 405,
@@ -17689,7 +17689,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T18:06:22.497Z",
+        "fetched_at": "2026-05-15T18:57:59.132Z",
         "homepage_url": "https://intro.co/",
         "example_url": "https://intro.co/marketplace?topic=Career+%26+Business&tag%5B%5D=Marketing+%26+Growth&utm_source=twitter_ads&utm_campaign=Prospecting_Traffic_20260402&utm_medium=Broad_AllOS_25-54_CPC_ExpertPageView_Growth-03-26-26_20260402&utm_term=230_Static_03-26-26-Growth-Concept-20d-AI-Clueless-To-AI-Confident_PLP-Marketplace-Business-Marketing_April-2026&source=intropaid&twclid=268r32sn6j3tec3xu57anl3fij",
         "homepage_status": 200,
@@ -17811,7 +17811,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T19:06:44.017Z",
+        "fetched_at": "2026-05-15T19:58:19.138Z",
         "homepage_url": "https://nizima-action.com/",
         "example_url": "https://site.nizima-action.com/en/?twclid=2diqibk9zmfi9zdpw7jnuyzo3e",
         "homepage_status": 200,
@@ -17933,7 +17933,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T19:06:44.882Z",
+        "fetched_at": "2026-05-15T19:58:19.979Z",
         "homepage_url": "https://lumalabs.ai/",
         "example_url": "https://lumalabs.ai/app?utm_source=x&utm_medium=paid_social&utm_campaign=prospectingX&twclid=27jcpv8qkd9yiwma3uys0cthqd",
         "homepage_status": 200,
@@ -18055,7 +18055,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T19:06:45.634Z",
+        "fetched_at": "2026-05-15T19:58:22.365Z",
         "homepage_url": "https://pixo.video/",
         "example_url": "https://pixo.video/?utm_source=twitter&utm_medium=cpc&utm_campaign=promo_demo&twclid=2ciec0vuvf7pomcubmjlgoyc7c",
         "homepage_status": 200,
@@ -18177,7 +18177,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T19:36:21.579Z",
+        "fetched_at": "2026-05-15T20:27:58.872Z",
         "homepage_url": "https://applebees.com/",
         "example_url": "https://www.applebees.com/en/specials/o-m-cheeseburger?utm_medium=paid_social&utm_source=x&utm_content=&utm_campaign=c3_omcheese_x_2026&utm_term=omcheese&twclid=24c5yy50sjts1xxlnvqx3wkide",
         "homepage_status": 403,
@@ -18299,7 +18299,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T19:36:22.208Z",
+        "fetched_at": "2026-05-15T20:27:59.625Z",
         "homepage_url": "https://yeptype.com/",
         "example_url": "https://yeptype.com/?twclid=2anjxqkv18gchj0txvqb12xn2c",
         "homepage_status": 200,
@@ -18421,7 +18421,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T19:36:23.766Z",
+        "fetched_at": "2026-05-15T20:28:00.471Z",
         "homepage_url": "https://argosdns.io/",
         "example_url": "https://www.argosdns.io/?twclid=2b56poqhcqmksqee3vb6bhyxig",
         "homepage_status": 200,
@@ -18543,7 +18543,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T19:36:26.773Z",
+        "fetched_at": "2026-05-15T20:28:03.861Z",
         "homepage_url": "https://prusa3d.com/",
         "example_url": "https://www.prusa3d.com/p/core-one-plus-business?twclid=244madfj5oyples0uimdkj22es",
         "homepage_status": 200,
@@ -18665,7 +18665,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T20:36:24.640Z",
+        "fetched_at": "2026-05-15T21:28:02.384Z",
         "homepage_url": "https://frame.community/",
         "example_url": "https://frame.community/?twclid=28irkrqcy6e8k4qy0o87wprl7j",
         "homepage_status": 200,
@@ -18787,7 +18787,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T20:36:26.252Z",
+        "fetched_at": "2026-05-15T21:28:04.012Z",
         "homepage_url": "https://bimzelxhcp.com/",
         "example_url": "https://www.bimzelxhcp.com/rheumatology/Psoriatic-Arthritis/Zero-In-On-Domains?utm_medium=paid_social&utm_source=x&utm_campaign=phm_BKZHCPRheum&utm_content=Awareness-KW&utm_term=PSA_ZeroEndpoints_US_BK_2500818&utm_id=23850502164480094&twclid=2dvpthvevxfli7pfaji92p3iqa",
         "homepage_status": 200,
@@ -18909,7 +18909,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T20:36:26.832Z",
+        "fetched_at": "2026-05-15T21:28:04.595Z",
         "homepage_url": "https://netbird.io/",
         "example_url": "https://netbird.io/knowledge-hub/expose-command?utm_campaign=x-netbird-expose-non-eu&twclid=2d8u7bef0hoyccx1tucq6gyfty",
         "homepage_status": 200,
@@ -19031,7 +19031,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T21:06:26.623Z",
+        "fetched_at": "2026-05-15T21:58:01.719Z",
         "homepage_url": "https://la28.org/",
         "example_url": "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=2dvfag01sx2wxc4fmpjts9gb7p",
         "homepage_status": 200,
@@ -19153,7 +19153,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T21:06:27.129Z",
+        "fetched_at": "2026-05-15T21:58:02.228Z",
         "homepage_url": "https://zo.computer/",
         "example_url": "https://www.zo.computer/?utm_source=x&utm_medium=paid&utm_campaign=x_conversions-sign-ups_lal-followers-kwds&utm_content=image_sign-up_your-ai-companion-that-gets-things-done-v3&twclid=2bad11iepgknhoticx5sp5d7aa",
         "homepage_status": 200,
@@ -19275,7 +19275,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T21:06:27.509Z",
+        "fetched_at": "2026-05-15T21:58:02.571Z",
         "homepage_url": "https://delta.com/",
         "example_url": "https://tkpi.delta.com/redirect?id=79992&t27=TWITTER&requesttype=ad.click&t30=socp-gy3rzf&redirecturl=https%3A%2F%2Fwww.delta.com%2F%3Fmkcpgn%3Dsocp-gy3rzf&twclid=2ar82hrwkkssbehiwgfvby3mlj",
         "homepage_status": null,
@@ -19397,7 +19397,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T21:06:28.001Z",
+        "fetched_at": "2026-05-15T21:58:03.143Z",
         "homepage_url": "https://tradeodds.io/",
         "example_url": "https://www.tradeodds.io/dashboard?tab=factor-match&utm_source=twitter&utm_medium=cpc&utm_campaign=Factor+Match+Purchase+Campaign+Desk&utm_id=factor+match+purchase+campaign+desk&utm_term=factor+match+purchase+purchase+desk+us&utm_content=ad2&twclid=21dpzozj7vqb86fdz6auuzunmy",
         "homepage_status": 200,
@@ -19519,7 +19519,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T22:06:27.270Z",
+        "fetched_at": "2026-05-15T22:58:02.460Z",
         "homepage_url": "https://fastrouter.ai/",
         "example_url": "https://fastrouter.ai/?twclid=2klchluvt293aqyzsqfomqo1n",
         "homepage_status": 200,
@@ -19641,7 +19641,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T23:26:28.510Z",
+        "fetched_at": "2026-05-15T23:28:05.568Z",
         "homepage_url": "https://octra.org/",
         "example_url": "https://octra.org/?twclid=29u80pypzhs8hn0f0vi1nyosqb",
         "homepage_status": 200,
@@ -19763,7 +19763,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T23:56:27.297Z",
+        "fetched_at": "2026-05-15T23:58:34.211Z",
         "homepage_url": "https://leronx.org/",
         "example_url": "https://leronx.org/?ref=005&tw=r84nh&tw_click=tw-r84nh-r84ni&twclid=29ffsgobmrsvjmkjlmgcllypv0",
         "homepage_status": 403,
@@ -19885,7 +19885,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T00:56:27.924Z",
+        "fetched_at": "2026-05-16T00:58:06.713Z",
         "homepage_url": "https://lately.com/",
         "example_url": "http://www.lately.com/?twclid=26st81se5sstdkz28lll98t6pl",
         "homepage_status": 200,
@@ -20007,7 +20007,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T02:56:31.601Z",
+        "fetched_at": "2026-05-16T02:58:38.012Z",
         "homepage_url": "https://deepgram.com/",
         "example_url": "https://deepgram.com/state-of-voice-ai-report?utm_source=twitter&utm_medium=paidsocial&utm_campaign=Twitter_ACQ_Q42025_Evergreen_Prospecting&utm_content=state-of-voice&twclid=22an8eeru83cxpws6fqbuga3v2",
         "homepage_status": 200,
@@ -20129,7 +20129,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T04:56:33.752Z",
+        "fetched_at": "2026-05-16T04:58:08.897Z",
         "homepage_url": "https://topstocks.com/",
         "example_url": "https://topstocks.com/cvkd?twclid=2br9vd88ywgw104idmz125ag0u",
         "homepage_status": 200,
@@ -20251,7 +20251,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T04:56:33.978Z",
+        "fetched_at": "2026-05-16T04:58:09.653Z",
         "homepage_url": "https://tolt.com/",
         "example_url": "https://tolt.com/?twclid=24jeerwwldzt1cwgx3ktzfvzm5",
         "homepage_status": 200,
@@ -20373,7 +20373,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T05:26:33.074Z",
+        "fetched_at": "2026-05-16T05:28:10.415Z",
         "homepage_url": "https://monadicdna.com/",
         "example_url": "https://explorer.monadicdna.com/?twclid=23v8cbj938nxfoq8gmro6dqa1l",
         "homepage_status": 200,
@@ -20495,7 +20495,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T21:27:08.516Z",
+        "fetched_at": "2026-05-16T21:28:49.607Z",
         "homepage_url": "https://assistant-ui.com/",
         "example_url": "https://www.assistant-ui.com/?twclid=2a5qpct5qg3tzn6ul3lhnlb5j5",
         "homepage_status": 200,
@@ -20588,7 +20588,7 @@
           ]
         },
         "profile": {
-          "score": 0.5700000000000001,
+          "score": 0.5800000000000001,
           "confidence": 0.75,
           "basis": [
             "meta_author:true",
@@ -20597,7 +20597,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:3",
+            "outbound_links:4",
             "opinion_marker:false"
           ]
         },
@@ -20617,7 +20617,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T22:57:04.615Z",
+        "fetched_at": "2026-05-16T22:58:44.935Z",
         "homepage_url": "https://forminit.com/",
         "example_url": "https://forminit.com/?twclid=218m3c3ox1o2100kng6d1o9tlf",
         "homepage_status": 200,
@@ -20633,7 +20633,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 3,
+          "outbound_links_count": 4,
           "opinion_marker": false
         },
         "example": {
@@ -20643,7 +20643,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 3,
+          "outbound_links_count": 4,
           "opinion_marker": false
         }
       }
@@ -20739,7 +20739,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T22:57:04.848Z",
+        "fetched_at": "2026-05-16T22:58:45.161Z",
         "homepage_url": "https://xhawk.ai/",
         "example_url": "https://xhawk.ai/?twclid=218eppqu7okpx25fant8nuhrp1",
         "homepage_status": 200,
@@ -20861,7 +20861,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T22:57:05.300Z",
+        "fetched_at": "2026-05-16T22:58:45.563Z",
         "homepage_url": "https://bitcoinculturehub.com/",
         "example_url": "https://bitcoinculturehub.com/?twclid=296t692fyjaf8r7jqnhro0j2l3",
         "homepage_status": 200,
@@ -20983,7 +20983,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T23:27:26.094Z",
+        "fetched_at": "2026-05-16T23:29:06.295Z",
         "homepage_url": "https://cmegroup.com/",
         "example_url": "https://www.cmegroup.com/education/trading-challenge.html?utm_source=twitter&utm_medium=paid_social&utm_campaign=trading_challenge_ao&utm_kxconfid=vnl4uf4pq&twclid=2e2iv0j3zd8yhpaw544vjwsn07",
         "homepage_status": null,
@@ -21105,7 +21105,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-14T01:27:11.048Z",
+        "fetched_at": "2026-05-17T01:29:24.716Z",
         "homepage_url": "https://any.run/",
         "example_url": "https://any.run/cybersecurity-blog/anyrun-macos-sandbox/?utm_source=twitter&utm_medium=post&utm_campaign=macos_ad&utm_content=linktoblog&utm_term=300326&twclid=23x4x734jui85kqg60evobo3x3",
         "homepage_status": 200,
@@ -21349,7 +21349,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-11T17:35:54.967Z",
+        "fetched_at": "2026-05-14T18:27:27.956Z",
         "homepage_url": "https://usekeel.io/",
         "example_url": "https://usekeel.io/run?twclid=2bgfmx5me1bzmqklq02dv94p1e",
         "homepage_status": 200,
@@ -21471,7 +21471,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T22:06:28.357Z",
+        "fetched_at": "2026-05-15T22:58:04.048Z",
         "homepage_url": "https://alphacapital.pro/",
         "example_url": "https://alphacapital.pro/pages/performance/?utm_source=twitter&utm_medium=ad1&utm_campaign=ac&twclid=2b8weeqkz95cs1xc59f8v2j7ob",
         "homepage_status": 200,
@@ -21593,7 +21593,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T22:06:28.641Z",
+        "fetched_at": "2026-05-15T22:58:04.570Z",
         "homepage_url": "https://willowvoice.com/",
         "example_url": "https://willowvoice.com/developers?twclid=2ebuy7l735ljqyo9xotbgwpmp0",
         "homepage_status": 200,
@@ -21715,7 +21715,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T22:06:29.193Z",
+        "fetched_at": "2026-05-15T22:58:05.023Z",
         "homepage_url": "https://era.app/",
         "example_url": "https://era.app/?twclid=23bm7jtrc66pin9ydx0wvupecw",
         "homepage_status": 200,
@@ -21837,7 +21837,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T22:36:26.675Z",
+        "fetched_at": "2026-05-15T23:58:34.714Z",
         "homepage_url": "https://gothamist.com/",
         "example_url": "https://gothamist.com/news/mamdani-administrations-new-72nd-street-bike-lane-would-link-upper-east-and-west-sides&utm_id=571007&sfmc_id=79023345&utm_content=2026415&nypr_member=True",
         "homepage_status": 200,
@@ -21959,7 +21959,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T22:36:27.460Z",
+        "fetched_at": "2026-05-15T23:58:35.541Z",
         "homepage_url": "https://fullpath.com/",
         "example_url": "https://www.fullpath.com/ai-powered-text-message-marketing-for-car-dealers/?twclid=21jxitvmgt9jsjh3rm5bmiedxu",
         "homepage_status": 200,
@@ -22081,7 +22081,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T22:36:27.930Z",
+        "fetched_at": "2026-05-15T23:58:35.842Z",
         "homepage_url": "https://johnkennedy.com/",
         "example_url": "https://support.johnkennedy.com/just-a-little-quiz/?red=cbdb1d6f-e5fe-4aa4-a295-1dbdd471cee6&utm_source=X&utm_medium=Paid&utm_campaign=Quiz&twclid=27n7ucaicrd2diuikk5gsjxiza",
         "homepage_status": 200,
@@ -22203,7 +22203,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T00:56:28.887Z",
+        "fetched_at": "2026-05-16T00:58:07.233Z",
         "homepage_url": "https://controlweedsnotfarming.com/",
         "example_url": "https://controlweedsnotfarming.com/?utm_source=X&utm_medium=Social&utm_campaign=Remarketing&utm_term=Landing+Page.+Visitors&utm_content=Food+On+Our+Tables&twclid=2ehfqrtyrcni2wc5jyzgjr19ra",
         "homepage_status": 200,
@@ -22325,7 +22325,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T02:26:36.244Z",
+        "fetched_at": "2026-05-16T02:28:07.245Z",
         "homepage_url": "https://gunowners.org/",
         "example_url": "https://www.gunowners.org/?twclid=25jr1t1tq8terhv5da5ta78vcm",
         "homepage_status": 200,
@@ -22446,7 +22446,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T22:36:29.717Z",
+        "fetched_at": "2026-05-16T00:28:03.784Z",
         "homepage_url": "https://iranintl.com/",
         "example_url": "https://www.iranintl.com/en/202603269573",
         "homepage_status": 200,
@@ -22566,7 +22566,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T23:56:27.916Z",
+        "fetched_at": "2026-05-16T00:28:04.340Z",
         "homepage_url": "https://org.in/",
         "example_url": "https://downtoearth.org.in/governance/as-told-to-parliament-march-11-2026-country-making-efforts-to-strengthen-domestic-rare-earth-",
         "homepage_status": null,
@@ -22686,12 +22686,12 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T23:56:30.677Z",
+        "fetched_at": "2026-05-16T00:28:06.110Z",
         "homepage_url": "https://aje.news/",
         "example_url": "http://aje.news/hp81ag",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://login.bl.ink/login?state=hKFo2SBTWU1nbVhKSGlpSEtxNUl5Sjhldl9OXzNkcy12N2F3Y6FupWxvZ2luo3RpZNkgSTdFZzQ4WFJVVU9jRzQ5cEpBTGJ2VldQOGo4WmVhSTWjY2lk2SBURWV3Rm1nOVI4Vjl2TDdYakhYOVhZM0x0eDRJdVZaMA&client=TEewFmg9R8V9vL7XjHX9XY3Ltx4IuVZ0&protocol=oauth2&scope=openid%20profile%20name%20email%20email_verified&audience=https%3A%2F%2Faj%2Fapi%2Fv3%2F&response_mode=query&response_type=code&redirect_uri=https%3A%2F%2Faj.bl.ink%2Fauthenticated&host=aj.bl.ink&reset_password_link=aj.bl.ink%2Freset_password&show_reset_password=false&logo_uri=https%3A%2F%2Fblink-logos.s3.amazonaws.com%2Faj.bl.ink.png&nonce=bbc856128f6cb16246680aa681a48f20",
+        "homepage_final_url": "https://login.bl.ink/login?state=hKFo2SBqejgweU16cHI0VFN4aThtR2dfeUZfX2J6aVNDZXdrdKFupWxvZ2luo3RpZNkgd0hhdzYxak01a0g2c1pjUWJXbnh1RzZEbGdMZTVhX2ejY2lk2SBURWV3Rm1nOVI4Vjl2TDdYakhYOVhZM0x0eDRJdVZaMA&client=TEewFmg9R8V9vL7XjHX9XY3Ltx4IuVZ0&protocol=oauth2&scope=openid%20profile%20name%20email%20email_verified&audience=https%3A%2F%2Faj%2Fapi%2Fv3%2F&response_mode=query&response_type=code&redirect_uri=https%3A%2F%2Faj.bl.ink%2Fauthenticated&host=aj.bl.ink&reset_password_link=aj.bl.ink%2Freset_password&show_reset_password=false&logo_uri=https%3A%2F%2Fblink-logos.s3.amazonaws.com%2Faj.bl.ink.png&nonce=2a289d1bc14e4a9cbd2a936b1f1d18ae",
         "example_final_url": "https://www.aljazeera.com/news/liveblog/2026/3/22/iran-war-live-trump-threatens-attacks-on-power-plants-over-hormuz-strait?update=4424917",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
@@ -22806,7 +22806,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-12T23:56:31.010Z",
+        "fetched_at": "2026-05-16T00:28:06.422Z",
         "homepage_url": "https://morningstar.com/",
         "example_url": "https://www.morningstar.com/news/marketwatch/20260313199/the-iran-war-is-already-the-biggest-threat-to-global-shipping-and-supply-chains-since-covid",
         "homepage_status": 202,
@@ -22926,7 +22926,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T00:56:29.389Z",
+        "fetched_at": "2026-05-16T00:58:07.574Z",
         "homepage_url": "https://atlanticcouncil.org/",
         "example_url": "https://www.atlanticcouncil.org/dispatches/ten-lessons-from-the-first-month-of-the-iran-war/",
         "homepage_status": 200,
@@ -23046,7 +23046,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T01:26:28.390Z",
+        "fetched_at": "2026-05-16T01:28:04.714Z",
         "homepage_url": "https://argusmedia.com/",
         "example_url": "https://www.argusmedia.com/en/news-and-insights/latest-market-news/2807532-iran-attacks-us-vessel-off-oman-coast-salalah-port-hit",
         "homepage_status": 200,
@@ -23166,7 +23166,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T01:26:29.606Z",
+        "fetched_at": "2026-05-16T01:28:05.819Z",
         "homepage_url": "https://pbs.org/",
         "example_url": "https://www.pbs.org/newshour/nation/iranian-attack-on-saudi-base-injures-u-s-troops-as-more-american-forces-arrive-in-the-middle-east",
         "homepage_status": 200,
@@ -23286,7 +23286,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T01:26:30.137Z",
+        "fetched_at": "2026-05-16T01:28:06.256Z",
         "homepage_url": "https://acleddata.com/",
         "example_url": "https://acleddata.com/update/middle-east-special-issue-march-2026",
         "homepage_status": 200,
@@ -23406,7 +23406,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T01:26:31.710Z",
+        "fetched_at": "2026-05-16T01:28:07.530Z",
         "homepage_url": "https://isdglobal.org/",
         "example_url": "https://www.isdglobal.org/digital-dispatch/misleading-and-manipulated-content-goes-viral-on-x-in-middle-east-conflict/",
         "homepage_status": 200,
@@ -23526,7 +23526,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T02:26:36.848Z",
+        "fetched_at": "2026-05-16T02:28:07.845Z",
         "homepage_url": "https://scmp.com/",
         "example_url": "https://www.scmp.com/topics/israel-iran-conflict",
         "homepage_status": 200,
@@ -23646,7 +23646,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T02:26:38.146Z",
+        "fetched_at": "2026-05-16T02:28:08.969Z",
         "homepage_url": "https://yenisafak.com/",
         "example_url": "https://en.yenisafak.com/world/us-israeli-strike-on-isfahan-kills-26-half-of-them-women-and-children-3716388",
         "homepage_status": 200,
@@ -23766,7 +23766,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T02:56:32.065Z",
+        "fetched_at": "2026-05-16T02:58:38.371Z",
         "homepage_url": "https://pluralpolicy.com/",
         "example_url": "https://www.pluralpolicy.com/",
         "homepage_status": 200,
@@ -23886,7 +23886,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T02:56:32.311Z",
+        "fetched_at": "2026-05-16T02:58:38.556Z",
         "homepage_url": "https://aclu.org/",
         "example_url": "https://www.aclu.org/",
         "homepage_status": 200,
@@ -24006,7 +24006,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T02:56:32.444Z",
+        "fetched_at": "2026-05-16T02:58:38.732Z",
         "homepage_url": "https://harvardlawreview.org/",
         "example_url": "https://harvardlawreview.org/",
         "homepage_status": 200,
@@ -24126,7 +24126,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T03:56:30.906Z",
+        "fetched_at": "2026-05-16T03:58:06.671Z",
         "homepage_url": "https://brennancenter.org/",
         "example_url": "https://www.brennancenter.org/",
         "homepage_status": 200,
@@ -24246,15 +24246,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T03:56:31.489Z",
+        "fetched_at": "2026-05-16T03:58:07.246Z",
         "homepage_url": "https://mlfa.org/",
         "example_url": "https://www.mlfa.org/",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://mlfa.org/",
         "example_final_url": "https://mlfa.org/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": true,
@@ -24366,7 +24366,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T03:56:31.852Z",
+        "fetched_at": "2026-05-16T03:58:07.611Z",
         "homepage_url": "https://pewresearch.org/",
         "example_url": "https://www.pewresearch.org/",
         "homepage_status": 200,
@@ -24486,7 +24486,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T04:56:34.836Z",
+        "fetched_at": "2026-05-16T04:58:10.693Z",
         "homepage_url": "https://bleepingcomputer.com/",
         "example_url": "https://www.bleepingcomputer.com/news/security/cisco-source-code-stolen-in-trivy-linked-dev-environment-breach/",
         "homepage_status": 200,
@@ -24502,7 +24502,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 10,
+          "outbound_links_count": 12,
           "opinion_marker": false
         },
         "example": {
@@ -24606,7 +24606,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T04:56:35.254Z",
+        "fetched_at": "2026-05-16T04:58:11.194Z",
         "homepage_url": "https://securityweek.com/",
         "example_url": "https://www.securityweek.com/european-commission-confirms-data-breach-linked-to-trivy-supply-chain-attack/",
         "homepage_status": 403,
@@ -24726,7 +24726,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T23:57:37.610Z",
+        "fetched_at": "2026-05-16T23:58:45.020Z",
         "homepage_url": "https://allsides.com/",
         "example_url": "https://allsides.com/news-source/aaron-rupar",
         "homepage_status": 403,
@@ -24846,7 +24846,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T23:57:45.277Z",
+        "fetched_at": "2026-05-16T23:58:53.129Z",
         "homepage_url": "https://mediabiasfactcheck.com/",
         "example_url": "https://www.mediabiasfactcheck.com/public-notice/",
         "homepage_status": 200,
@@ -24966,7 +24966,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T23:57:46.279Z",
+        "fetched_at": "2026-05-16T23:58:54.115Z",
         "homepage_url": "https://bongino.com/",
         "example_url": "https://www.bongino.com/articles/is-aaron-rupar-the-worlds-most-dishonest-journalist",
         "homepage_status": 200,
@@ -25086,7 +25086,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T23:57:47.409Z",
+        "fetched_at": "2026-05-16T23:58:55.127Z",
         "homepage_url": "https://racketmn.com/",
         "example_url": "https://racketmn.com/local-twitter-man-aaron-rupar-beacon-for-the-truth-or-threat-to-the-free-press/",
         "homepage_status": 200,
@@ -25206,7 +25206,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-14T00:27:07.886Z",
+        "fetched_at": "2026-05-17T00:28:46.925Z",
         "homepage_url": "https://theblock.co/",
         "example_url": "https://theblock.co/post/297298/iran-bitcoin-strait-of-hormuz-transit-fees",
         "homepage_status": 403,
@@ -25306,7 +25306,7 @@
             "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:21",
+            "outbound_links:22",
             "opinion_marker:false"
           ]
         },
@@ -25326,7 +25326,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-11T17:35:55.168Z",
+        "fetched_at": "2026-05-14T18:27:28.127Z",
         "homepage_url": "https://foxbusiness.com/",
         "example_url": "https://foxbusiness.com/",
         "homepage_status": 200,
@@ -25342,7 +25342,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 21,
+          "outbound_links_count": 22,
           "opinion_marker": false
         },
         "example": {
@@ -25352,7 +25352,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 21,
+          "outbound_links_count": 22,
           "opinion_marker": false
         }
       }
@@ -25446,7 +25446,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-11T17:35:55.604Z",
+        "fetched_at": "2026-05-14T18:27:28.630Z",
         "homepage_url": "https://alarabiya.net/",
         "example_url": "https://alarabiya.net/",
         "homepage_status": 403,
@@ -25537,16 +25537,16 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.37,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
-            "published_time:false",
-            "canonical:false",
+            "published_time:true",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:9",
             "opinion_marker:false"
           ]
         },
@@ -25566,33 +25566,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-11T19:05:59.574Z",
+        "fetched_at": "2026-05-14T19:57:34.040Z",
         "homepage_url": "https://timeskuwait.com/",
         "example_url": "https://timeskuwait.com/",
-        "homepage_status": null,
-        "example_status": null,
+        "homepage_status": 200,
+        "example_status": 200,
         "homepage_final_url": "https://timeskuwait.com/",
         "example_final_url": "https://timeskuwait.com/",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
+          "has_published_time": true,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 9,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
+          "has_published_time": true,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 9,
           "opinion_marker": false
         }
       }
@@ -25806,7 +25806,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-11T19:06:01.912Z",
+        "fetched_at": "2026-05-14T19:57:37.070Z",
         "homepage_url": "https://devdiscourse.com/",
         "example_url": "https://devdiscourse.com/",
         "homepage_status": 200,
@@ -25926,7 +25926,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T05:26:33.282Z",
+        "fetched_at": "2026-05-16T05:28:10.624Z",
         "homepage_url": "https://sustainability-directory.com/",
         "example_url": "https://sustainability-directory.com/",
         "homepage_status": 200,
@@ -26048,7 +26048,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-13T05:26:33.661Z",
+        "fetched_at": "2026-05-16T05:28:10.960Z",
         "homepage_url": "https://substack.com/",
         "example_url": "https://sethmlederman.substack.com/p/taking-on-the-f-word-fibromyalgia?twclid=245fh2m6fc9w4vl63b2am7zawy",
         "homepage_status": 200,
@@ -26172,7 +26172,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-14T00:27:08.174Z",
+        "fetched_at": "2026-05-17T00:28:47.407Z",
         "homepage_url": "https://scholar.google.com/",
         "example_url": "https://scholar.google.com/scholar?q=Evidence-based%20claims%2C%20transparent%20sourcing%2C%20honest%20uncertainty%2C%20good-faith%20argu%20Truth%20and%20Evidence%20in%20Public%20Discourse",
         "homepage_status": 200,
@@ -26275,7 +26275,7 @@
             "about:false",
             "contact:true",
             "corrections:false",
-            "outbound_links:32",
+            "outbound_links:33",
             "opinion_marker:false"
           ]
         },
@@ -26295,7 +26295,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-14T00:27:08.382Z",
+        "fetched_at": "2026-05-17T00:28:47.663Z",
         "homepage_url": "https://news.ycombinator.com/",
         "example_url": "https://news.ycombinator.com/",
         "homepage_status": 200,
@@ -26311,7 +26311,7 @@
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 32,
+          "outbound_links_count": 33,
           "opinion_marker": false
         },
         "example": {
@@ -26321,7 +26321,7 @@
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 32,
+          "outbound_links_count": 33,
           "opinion_marker": false
         }
       }
@@ -26424,7 +26424,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-14T01:27:11.328Z",
+        "fetched_at": "2026-05-17T01:29:24.980Z",
         "homepage_url": "https://reddit.com/",
         "example_url": "https://www.reddit.com/search/?q=Emphasis%20individual%20merit&sort=hot&t=week",
         "homepage_status": 403,
