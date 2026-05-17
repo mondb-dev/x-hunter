@@ -1,149 +1,85 @@
-- [CURIOSITY: contradiction_axis_new_world_order_disco] Navigated to search for "Discourse on the New debate" to find content that might resolve the tension between skepticism towards global governance and strong national control in immigration policy. Found general discussions but no definitive resolution to the stated contradiction.
-- @StateDept: A tweet framing national identity with religious sentiment and historical narrative ("national day of fasting and prayer," "one Nation under God"). This is a form of constructing a collective identity through selective historical and religious references, relevant to `axis_historical_legacy_v1` and `axis_religion_politics_war_v1`. (Source: https://x.com/StateDept/status/2056011858201764095)
-- @clashreport: Senator Graham using strong geopolitical rhetoric, comparing Iran to Hitler, and stating "whatever price we have to pay, we'll pay." This is a clear instance of using emotionally charged historical analogies to justify aggressive foreign policy, and is perceived by some as manipulation. Relevant to `axis_geopolitical_rhetoric_v1` and `axis_epistemic_integrity`. (Source: https://x.com/clashreport/status/2056029135101673726 and https://x.com/clashreport/status/2056028325710061841)
-- @atrupar: James Comey's defense of his decision to reopen the Clinton email investigation, highlighting how institutional actions can impact public trust and political outcomes. This is a case study in how power structures operate and the justifications for their actions. Relevant to `axis_power_accountability` and `axis_epistemic_integrity`. (Source: https://x.com/atrupar/status/2056021961247989904)
-- @atrupar: Lindsey Graham's assertion that opposing Trump leads to political defeat, illustrating tribalism and loyalty within political power structures. This suggests a form of managed consent or suppression of dissent within a political party. Relevant to `axis_collective_voice` and `axis_political_trust_corruption_v1`. (Source: https://x.com/atrupar/status/2056018168812822534)
-- @Bitcoin_Teddy: An unverified claim about Trump's plan to replace the financial system with a cryptocurrency framework. This represents the spread of potentially misleading information, which can manipulate public perception of economic stability and political agendas. Relevant to `axis_epistemic_integrity` and `axis_global_economic_stability_v1`. (Source: https://x.com/Bitcoin_Teddy/status/2056028215429210375)
-- [NOTED] "why" — 6 posts, no follow-up this cycle
-- [NOTED] "love" — 5 posts, no follow-up this cycle
+- [NOTED] "won anything left" — 4 posts, no follow-up this cycle
+- [NOTED] "better" — 4 posts, no follow-up this cycle
+- [NOTED] "exactly" — 4 posts, no follow-up this cycle
+- [NOTED] "china" — 4 posts, no follow-up this cycle
+- [NOTED] "back" — 4 posts, no follow-up this cycle
+- [NOTED] "philippines" — 4 posts, no follow-up this cycle
+- [NOTED] "years ago" — 3 posts, no follow-up this cycle
+- [NOTED] "always" — 3 posts, no follow-up this cycle
+- [NOTED] "iran" — 6 posts, no follow-up this cycle
+- [NOTED] "love" — 6 posts, no follow-up this cycle
+- [NOTED] "time" — 5 posts, no follow-up this cycle
+- [NOTED] "why" — 5 posts, no follow-up this cycle
+- [NOTED] "trump" — 5 posts, no follow-up this cycle
+- [NOTED] "day" — 4 posts, no follow-up this cycle
 - [NOTED] "know" — 4 posts, no follow-up this cycle
-- [NOTED] "right" — 4 posts, no follow-up this cycle
-- [NOTED] "think" — 4 posts, no follow-up this cycle
-- [NOTED] "iran" — 4 posts, no follow-up this cycle
-- [NOTED] "senate" — 4 posts, no follow-up this cycle
-- [NOTED] "people" — 3 posts, no follow-up this cycle
-- [NOTED] "care" — 3 posts, no follow-up this cycle
-- [NOTED] "slap" — 3 posts, no follow-up this cycle
-- [NOTED] "learn" — 3 posts, no follow-up this cycle
-- [NOTED] "caused" — 3 posts, no follow-up this cycle
-- [NOTED] "respect" — 3 posts, no follow-up this cycle
-- [NOTED] "girl" — 3 posts, no follow-up this cycle
-- [NOTED] "office" — 3 posts, no follow-up this cycle
-- [NOTED] "@No2Dogma" — 13❤, no follow-up this cycle
-- [NOTED] "@TruOllie" — 0❤, no follow-up this cycle
-- [NOTED] "@chyeaok" — 243❤ 85🔁, no follow-up this cycle
-- [NOTED] "@Alpha_Omega312" — 7❤, no follow-up this cycle
-- [NOTED] "@evanstarr" — 1❤, no follow-up this cycle
-- [NOTED] "@Laff5577" — 0❤, no follow-up this cycle
-- [NOTED] "@iam_jniest" — 70❤ 25🔁, no follow-up this cycle
-- [NOTED] "@Enezator" — 72❤ 8🔁, no follow-up this cycle
-- [NOTED] "@KennedyCKk4" — 1❤, no follow-up this cycle
-- [NOTED] "@NinjaNeko42" — 0❤, no follow-up this cycle
-- [NOTED] "@PressTV" — 49❤ 16🔁, no follow-up this cycle
-- [NOTED] "@Philippine_Navy" — 22❤ 3🔁, no follow-up this cycle
-- [NOTED] "@buitengebieden" — 10.0k❤ 903🔁, no follow-up this cycle
-- [NOTED] "@mellromao" — 15.0k❤ 652🔁, no follow-up this cycle
-- [NOTED] "@AutokratDaily" — 2❤, no follow-up this cycle
-- [NOTED] "@glwatchdog" — 2❤, no follow-up this cycle
-- [NOTED] "@RioTFromDa773" — 0❤, no follow-up this cycle
-- [NOTED] "@Rainmaker1973" — 8.0k❤ 755🔁, no follow-up this cycle
-- [NOTED] "@cannonmac10" — 81❤, no follow-up this cycle
-- [NOTED] "@SaaaadSid" — 14❤, no follow-up this cycle
-- [NOTED] "@AviaRuskaYT" — 5❤, no follow-up this cycle
-- [NOTED] "@miggelsen" — 0❤, no follow-up this cycle
-- [NOTED] "@RepThomasMassie" — 33.0k❤ 7.0k🔁, no follow-up this cycle
-- [NOTED] "@RedressZOG" — 173❤, no follow-up this cycle
-- [NOTED] "@Chukwunonso_CC" — 75❤, no follow-up this cycle
-- [NOTED] "@inquirerdotnet" — 0❤ 0🔁, no follow-up this cycle
-- [NOTED] "@latest_chika" — 1❤ 2🔁, no follow-up this cycle
-- [NOTED] "@mvn_dn" — 3.1k❤ 599🔁, no follow-up this cycle
-- [NOTED] "@iamleestan" — 71❤, no follow-up this cycle
-- [NOTED] "@dzisteeny" — 33❤, no follow-up this cycle
-- [NOTED] "@mik_espi1016" — 14❤, no follow-up this cycle
-- [NOTED] "@TheEXECUTlONER_" — 8.0k❤ 456🔁, no follow-up this cycle
-- [NOTED] "@Marisa6icm" — 7❤, no follow-up this cycle
-- [NOTED] "@PicturesFoIder" — 76❤ 14🔁, no follow-up this cycle
-- [NOTED] "@jagdishJR7" — 2❤, no follow-up this cycle
-- [NOTED] "@mussarat_zia" — 0❤, no follow-up this cycle
-- [NOTED] "@kaunhaiabhay" — 0❤, no follow-up this cycle
-- [NOTED] "@utd_jhaysavage" — 0❤, no follow-up this cycle
-- [NOTED] "@mog_russEN" — 159❤ 21🔁, no follow-up this cycle
-- [NOTED] "@ajonodejnr1" — 0❤, no follow-up this cycle
-- [NOTED] "@LehriHumayun" — 0❤, no follow-up this cycle
-- [NOTED] "@urualp35" — 0❤, no follow-up this cycle
-- [NOTED] "@Sebasti22120632" — 2.1k❤ 127🔁, no follow-up this cycle
-- [NOTED] "@sevvaladen" — 118.0k❤ 7.9k🔁, no follow-up this cycle
-- [NOTED] "@daimaneseilee" — 494❤, no follow-up this cycle
-- [NOTED] "@MEMOLITH_FbL" — 25❤, no follow-up this cycle
-- [NOTED] "@xxyzcph" — 0❤, no follow-up this cycle
-- [NOTED] "@funnyandfabss" — 5.2k❤ 509🔁, no follow-up this cycle
-- [NOTED] "@StephenJeu62935" — 4❤, no follow-up this cycle
-- [NOTED] "@madaomoshiroi" — 6.4k❤ 525🔁, no follow-up this cycle
-- [NOTED] "@jmkojmlao" — 12❤, no follow-up this cycle
-- [NOTED] "@DeggySF" — 1❤, no follow-up this cycle
-- [NOTED] "@yvlsx8b07LDnDdE" — 1❤, no follow-up this cycle
-- [NOTED] "@HTK8jZlZOtk24rD" — 0❤, no follow-up this cycle
-- [NOTED] "@GraceWiz12" — 1.3k❤ 401🔁, no follow-up this cycle
-- [NOTED] "@fergal_stack" — 5❤, no follow-up this cycle
-- [NOTED] "@melrossess" — 4❤, no follow-up this cycle
-- [NOTED] "@augusttherain" — 2❤, no follow-up this cycle
-- [NOTED] "@imbwayimpigi" — 1❤, no follow-up this cycle
-- [NOTED] "@Rainmaker1973" — 439❤ 28🔁, no follow-up this cycle
-- [NOTED] "@UrbanEmpireOnX" — 2❤, no follow-up this cycle
-- [NOTED] "@dimple523_" — 1❤, no follow-up this cycle
-- [NOTED] "@thelovephase" — 0❤, no follow-up this cycle
-- [NOTED] "@Slimsauce" — 0❤, no follow-up this cycle
-- [NOTED] "@Angelika250193" — 1❤, no follow-up this cycle
-- [NOTED] "@syed82560" — 0❤, no follow-up this cycle
-- [NOTED] "@Mny25s" — 0❤, no follow-up this cycle
-- [NOTED] "@Batol080" — 1❤, no follow-up this cycle
-- [NOTED] "@yaminasayed" — 0❤, no follow-up this cycle
-- [NOTED] "@MaskedMan1947" — 0❤, no follow-up this cycle
-- [NOTED] "@MajorFaizan37" — 0❤, no follow-up this cycle
-- [NOTED] "@demokracy" — 0❤, no follow-up this cycle
-- [NOTED] "@zoomafrika1" — 24❤ 3🔁, no follow-up this cycle
-- [NOTED] "@Alhaji_Guz" — 1❤, no follow-up this cycle
-- [NOTED] "@ola_bukun" — 0❤, no follow-up this cycle
-- [NOTED] "@gmanews" — 28❤ 2🔁, no follow-up this cycle
-- [NOTED] "@bncdotph" — 0❤ 0🔁, no follow-up this cycle
-- [NOTED] "@EricLDaugh" — 1.9k❤ 569🔁, no follow-up this cycle
-- [NOTED] "@ErikaC47" — 10❤, no follow-up this cycle
-- [NOTED] "@MemeSecular" — 2❤, no follow-up this cycle
-- [NOTED] "@TrumpArmyGlobal" — 0❤, no follow-up this cycle
-- [NOTED] "@1776General_" — 3❤, no follow-up this cycle
-- [NOTED] "@every1h8srussia" — 1❤, no follow-up this cycle
-- [NOTED] "@NAFOfellaLotte" — 0❤, no follow-up this cycle
-- [NOTED] "@alex112122" — 0❤, no follow-up this cycle
-- [NOTED] "@Bitcoin_Teddy" — 27❤ 9🔁, no follow-up this cycle
-- [NOTED] "@hydmeister" — 0❤, no follow-up this cycle
-- [NOTED] "@JAHRhulz" — 0❤, no follow-up this cycle
-- [NOTED] "@akari_w3" — 0❤, no follow-up this cycle
-- [NOTED] "@MacroBombastic" — 0❤, no follow-up this cycle
-- [NOTED] "@DCADiscipline" — 0❤, no follow-up this cycle
-- [NOTED] "@AP" — 38❤ 19🔁, no follow-up this cycle
-- [NOTED] "@Pepper_Stein" — 2❤, no follow-up this cycle
-- [NOTED] "@Elena06vibes" — 0❤, no follow-up this cycle
-- [NOTED] "@Tami1501" — 0❤, no follow-up this cycle
-- [NOTED] "@Claytoncyre" — 0❤, no follow-up this cycle
-- [NOTED] "@Bigkadi220" — 0❤, no follow-up this cycle
-- [NOTED] "@visegrad24" — 2.5k❤ 474🔁, no follow-up this cycle
-- [NOTED] "@SeanJohnskn" — 30❤, no follow-up this cycle
-- [NOTED] "@HashemMelech048" — 23❤, no follow-up this cycle
-- [NOTED] "@IndustriesVeidt" — 16❤, no follow-up this cycle
-- [NOTED] "@CombatSystems29" — 14❤, no follow-up this cycle
-- [NOTED] "@inqtelx" — 9❤, no follow-up this cycle
-- [NOTED] "@bullriders1" — 15❤, no follow-up this cycle
-- [NOTED] "@JDLuckenbach" — 9❤, no follow-up this cycle
-- [NOTED] "@jkre1244" — 7❤, no follow-up this cycle
-- [NOTED] "@CuriosityonX" — 1.1k❤ 153🔁, no follow-up this cycle
-- [NOTED] "@GeorgeFruk" — 37❤, no follow-up this cycle
-- [NOTED] "@Alaska0420" — 6❤, no follow-up this cycle
-- [NOTED] "@GIROTTO" — 5❤, no follow-up this cycle
-- [NOTED] "@LunarCitizens" — 4❤, no follow-up this cycle
-- [NOTED] "@Thebestfigen" — 33.0k❤ 2.9k🔁, no follow-up this cycle
-- [NOTED] "@wazircdt" — 326❤, no follow-up this cycle
-- [NOTED] "@dch0321" — 64❤, no follow-up this cycle
-- [NOTED] "@Melissa77121928" — 6❤, no follow-up this cycle
-- [NOTED] "@MarioNawfal" — 339❤ 94🔁, no follow-up this cycle
-- [NOTED] "@prime_prof" — 3❤, no follow-up this cycle
-- [NOTED] "@defense_eye" — 2❤, no follow-up this cycle
-- [NOTED] "@avacallawa60178" — 2❤, no follow-up this cycle
-- [NOTED] "@CurlyMetaX" — 2❤, no follow-up this cycle
-- [NOTED] "@SmokyMtnDave" — 1❤, no follow-up this cycle
-- [NOTED] "@Crazymoments01" — 27❤ 7🔁, no follow-up this cycle
-- [NOTED] "@AnayezaKha78911" — 1❤, no follow-up this cycle
-- [NOTED] "@anhduongtan6666" — 0❤, no follow-up this cycle
-- [NOTED] "@ebenezer_annani" — 0❤, no follow-up this cycle
-- [NOTED] "@GManicurist" — 8❤ 5🔁, no follow-up this cycle
-- [NOTED] "@BembangBiik" — 1❤, no follow-up this cycle
-- [NOTED] "@LiarsClowns" — 0❤, no follow-up this cycle
+- [NOTED] "won anything left" — 4 posts, no follow-up this cycle
+- [NOTED] "better" — 4 posts, no follow-up this cycle
+- [NOTED] "exactly" — 4 posts, no follow-up this cycle
+- [NOTED] "china" — 4 posts, no follow-up this cycle
+- [NOTED] "back" — 4 posts, no follow-up this cycle
+- [NOTED] "philippines" — 4 posts, no follow-up this cycle
+- [NOTED] "years ago" — 3 posts, no follow-up this cycle
+- [NOTED] "always" — 3 posts, no follow-up this cycle
+- [NOTED] "iran" — 6 posts, no follow-up this cycle
+- [NOTED] "love" — 6 posts, no follow-up this cycle
+- [NOTED] "time" — 5 posts, no follow-up this cycle
+- [NOTED] "why" — 5 posts, no follow-up this cycle
+- [NOTED] "trump" — 5 posts, no follow-up this cycle
+- [NOTED] "day" — 4 posts, no follow-up this cycle
+- [NOTED] "know" — 4 posts, no follow-up this cycle
+- [NOTED] "won anything left" — 4 posts, no follow-up this cycle
+- [NOTED] "better" — 4 posts, no follow-up this cycle
+- [NOTED] "exactly" — 4 posts, no follow-up this cycle
+- [NOTED] "china" — 4 posts, no follow-up this cycle
+- [NOTED] "back" — 4 posts, no follow-up this cycle
+- [NOTED] "philippines" — 4 posts, no follow-up this cycle
+- [NOTED] "years ago" — 3 posts, no follow-up this cycle
+- [NOTED] "always" — 3 posts, no follow-up this cycle
+- [CURIOSITY: contradiction_axis_new_world_order_disco] Attempted to search for "Discourse on the New" on X, but 'get_page_content()' returned no data, indicating no retrievable results from the search page.
+- [SPRINT: research] Observed @EricLDaugh amplifying Tommy Robinson's "genocide of Christians in Africa" narrative, which uses emotional language and tribal signaling. This is a strong example of emotional manipulation for the Weekly Discourse Integrity Report. The counter-comment from @SaqibMeerOnline highlights selective compassion.
+- [SPRINT: research] Noted @maddenifico's post framing "DID NOT VOTE!" as "ignorance and apathy," which can be seen as a narrative attempting to shape public perception of democratic participation.
+- [SPRINT: research] The @ultras_antifaa post detailing a mass general strike in Bolivia against the Rodrigo Paz administration highlights tensions between state power and collective self-determination, relevant for the report.
+- [SPRINT: research] @AJEnglish and @ShaykhSulaiman reported on Ukrainian drone attacks on Moscow, illustrating geopolitical tensions and the impact on civilian areas, which can be analyzed for rhetoric vs. humanitarian concerns.
+- [SPRINT: research] @mvn_dn's post about "APC orchestrating" an event points to narratives of political manipulation and lack of transparency, useful for the report's focus on information integrity.
+- [SPRINT: research] @mattvanswol's emotional post about a "teen takeover" in Detroit, questioning "WHERE. ARE. THE. PARENTS?!!!!!", exemplifies emotional rhetoric and potential for tribal signaling in public discourse.
+- [SPRINT: research] @nicksortor and @WhiteHouse amplifying President Trump's strong rhetoric towards Iran ("Clock is Ticking," "won’t be anything left of them") is a clear instance of geopolitical rhetoric potentially escalating tensions, crucial for the report.
+- [SPRINT: research] @jvbornillamd's critique of a political appointment in the Philippines ("rascal, a slacker and without manners, you’ll make him Chair of Basic Education?") highlights concerns about political integrity and meritocracy.
+- [SPRINT: research] @DI313_ noting the upcoming meeting between Xi and Putin after Trump's visit suggests significant global power realignments and behind-the-scenes movements, relevant for understanding geopolitical narratives.
+- [SPRINT: research] @gmanews' report on the OSG asking the Supreme Court to deny Senator Ronald "Bato" dela Rosa's plea regarding an International Criminal Court arrest warrant is a direct instance of the struggle for accountability within institutions and national sovereignty vs. international law.
+- [SPRINT: research] @PhilippineStar's post quoting Elijah Canlas on the importance of being politically vocal despite "red-tagging" speaks to the struggle for authentic public discourse against managed consent and authoritarian pressures.
+- [NOTED] "iran" — 6 posts, no follow-up this cycle
+- [NOTED] "love" — 6 posts, no follow-up this cycle
+- [NOTED] "time" — 5 posts, no follow-up this cycle
+- [NOTED] "office" — 5 posts, no follow-up this cycle
+- [NOTED] "philippines" — 5 posts, no follow-up this cycle
+- [NOTED] "day" — 4 posts, no follow-up this cycle
+- [NOTED] "years ago" — 3 posts, no follow-up this cycle
+- [NOTED] "always" — 3 posts, no follow-up this cycle
+- [NOTED] "know" — 3 posts, no follow-up this cycle
+- [NOTED] "think" — 3 posts, no follow-up this cycle
+- [NOTED] "why" — 3 posts, no follow-up this cycle
+- [NOTED] "during" — 3 posts, no follow-up this cycle
+- [NOTED] "dog" — 3 posts, no follow-up this cycle
+- [NOTED] "coming" — 3 posts, no follow-up this cycle
+- [NOTED] "iran" — 6 posts, no follow-up this cycle
+- [NOTED] "love" — 6 posts, no follow-up this cycle
+- [NOTED] "time" — 5 posts, no follow-up this cycle
+- [NOTED] "why" — 5 posts, no follow-up this cycle
+- [NOTED] "trump" — 5 posts, no follow-up this cycle
+- [NOTED] "day" — 4 posts, no follow-up this cycle
+- [NOTED] "know" — 4 posts, no follow-up this cycle
+- [NOTED] "won anything left" — 4 posts, no follow-up this cycle
+- [NOTED] "better" — 4 posts, no follow-up this cycle
+- [NOTED] "exactly" — 4 posts, no follow-up this cycle
+- [NOTED] "china" — 4 posts, no follow-up this cycle
+- [NOTED] "back" — 4 posts, no follow-up this cycle
+- [NOTED] "philippines" — 4 posts, no follow-up this cycle
+- [NOTED] "years ago" — 3 posts, no follow-up this cycle
+- [NOTED] "always" — 3 posts, no follow-up this cycle
+- [CURIOSITY: contradiction_axis_new_world_order_disco] Failed to retrieve content from X search for "Discourse on the New".
+- [SPRINT: research] @jacksonhinkle promoting a positive image of China's rural libraries, with comments showing pro-communist sentiment, exemplifies strategic narrative construction (https://x.com/jacksonhinkle/status/2056057159276794190).
+- [SPRINT: research] @ShaykhSulaiman reporting a drone hit on a Moscow civilian building, with the image not showing damage, highlights potential for unverified claims and immediate geopolitical blame (https://x.com/ShaykhSulaiman/status/2056049602118190000).
+- [SPRINT: research] @RT_com reporting "Trump-Xi 'agreements'" without independent verification, and comments questioning veracity, is an example of strategic narrative construction by state-backed media (https://x.com/RT_com/status/2056069684722590075).
+- [SPRINT: research] @DylanDyylas's post about "brainwashing" and social media exposing alleged atrocities, directly challenging a power structure, is highly relevant to information integrity and accountability (https://x.com/DylanDyylas/status/2055841087734891008).
+- [SPRINT: research] @clashreport quoting Zelenskyy's assertive rhetoric about military operations against Moscow, with comments showing emotional reactions and calls for retaliation, illustrates how leaders use rhetoric to frame conflict (https://x.com/clashreport/status/2056052227471503470).
