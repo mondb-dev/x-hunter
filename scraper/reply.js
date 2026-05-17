@@ -20,7 +20,6 @@
 "use strict";
 
 const { connectBrowser, getXPage } = require("../runner/cdp");
-const { replyToTweet } = require("../runner/x_api");
 const { isXSuppressed, suppressionReason } = require("../runner/lib/x_control");
 const fs   = require("fs");
 const path = require("path");
@@ -373,16 +372,93 @@ or
   return parsed;
 }
 
-// ── 5. Post reply via X API ─────────────────────────────────────────────────
+// ── 5. Post reply via CDP browser ────────────────────────────────────────────
+const COMPOSE_BOX  = '[data-testid="tweetTextarea_0"]';
+const POST_BUTTON  = '[data-testid="tweetButton"], [data-testid="tweetButtonInline"]';
+
+async function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+async function humanDelay(min, max) { return sleep(min + Math.random() * (max - min)); }
+
+async function poll(page, label, selector, { attempts = 12, interval = 1_000 } = {}) {
+  for (let i = 0; i < attempts; i++) {
+    const found = await page.evaluate((sel) => !!document.querySelector(sel), selector);
+    if (found) return true;
+    if (i < attempts - 1) await sleep(interval);
+  }
+  throw new Error(`poll timeout waiting for ${label}`);
+}
+
 async function postReply(page, item, replyText) {
-  console.log(`[reply] posting reply to @${item.from_username} via API`);
+  console.log(`[reply] posting reply to @${item.from_username} via CDP`);
 
-  // Extract tweet ID from the item
-  const tweetId = item.id;
-  if (!tweetId) throw new Error("no tweet ID on queue item");
+  const tweetUrl = `https://x.com/${item.from_username}/status/${item.id}`;
 
-  const result = await replyToTweet(replyText, tweetId);
-  console.log(`[reply] posted reply to @${item.from_username}: https://x.com/SebHunts_AI/status/${result.id}`);
+  // Navigate to the tweet (fetchThreadContext may have already done this, but ensure we're there)
+  const currentUrl = page.url();
+  if (!currentUrl.includes(item.id)) {
+    await page.goto(tweetUrl, { waitUntil: "domcontentloaded", timeout: 30_000 });
+    await page.waitForSelector('article[data-testid="tweet"]', { timeout: 12_000 });
+  }
+  await humanDelay(1_000, 2_000);
+
+  // Click the reply button on the first article (the target tweet)
+  const clicked = await page.evaluate(() => {
+    const articles = document.querySelectorAll('article[data-testid="tweet"]');
+    for (const article of articles) {
+      const btn = article.querySelector('[data-testid="reply"]');
+      if (btn) { btn.click(); return true; }
+    }
+    return false;
+  });
+  if (!clicked) throw new Error("reply button not found");
+
+  // Wait for compose box to appear
+  await poll(page, "reply compose box", COMPOSE_BOX, { attempts: 15, interval: 1_000 });
+  await humanDelay(1_500, 3_000);
+
+  // Focus and insert text via execCommand
+  await page.evaluate((sel) => { const el = document.querySelector(sel); if (el) el.click(); }, COMPOSE_BOX);
+  await page.evaluate((sel) => { document.querySelector(sel)?.focus(); }, COMPOSE_BOX);
+  await sleep(500);
+  await page.evaluate((text, sel) => {
+    const el = document.querySelector(sel);
+    if (el) { el.focus(); document.execCommand("insertText", false, text); }
+  }, replyText, COMPOSE_BOX);
+  await sleep(1_000);
+
+  // Verify insertion
+  const inserted = await page.evaluate((sel) => document.querySelector(sel)?.innerText.trim() || "", COMPOSE_BOX);
+  if (!inserted || inserted.length < replyText.length * 0.9) {
+    // Fallback to keyboard.type
+    await page.evaluate((sel) => {
+      const el = document.querySelector(sel);
+      if (el) { el.focus(); document.execCommand("selectAll"); document.execCommand("delete"); }
+    }, COMPOSE_BOX);
+    await sleep(500);
+    await page.keyboard.type(replyText, { delay: 30 });
+    await sleep(1_000);
+  }
+
+  // Submit
+  const submitted = await page.evaluate((sel) => {
+    const btn = document.querySelector(sel);
+    if (btn && !btn.disabled) { btn.click(); return true; }
+    return false;
+  }, POST_BUTTON);
+  if (!submitted) throw new Error("reply submit button not found or disabled");
+
+  await sleep(2_000);
+
+  // Try to extract the posted reply URL from the page
+  let replyUrl = `https://x.com/${item.from_username}/status/${item.id}`;
+  try {
+    const newUrl = page.url();
+    if (newUrl && newUrl.includes("/status/") && !newUrl.includes(item.id)) {
+      replyUrl = newUrl;
+    }
+  } catch {}
+
+  console.log(`[reply] posted reply to @${item.from_username}: ${replyUrl}`);
 }
 
 // ── Interactions log ──────────────────────────────────────────────────────────
