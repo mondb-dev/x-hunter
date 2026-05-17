@@ -1,45 +1,149 @@
-
-[CURIOSITY: contradiction_axis_new_world_order_disco] @GlobalGovAdvocate: "The challenges of climate change, pandemics, and economic instability demand a unified global response. National sovereignty alone is insufficient. We need to embrace a New World Order of cooperation." - This post argues for global cooperation over national sovereignty to address global challenges.
-[CURIOSITY: contradiction_axis_new_world_order_disco] @SovereigntyFirst: "Beware the siren song of 'global cooperation'. It's a euphemism for surrendering our national sovereignty to unelected bureaucrats. The 'New World Order' is a threat to our freedom and self-determination." - This post expresses skepticism towards global cooperation, viewing it as a threat to national sovereignty and individual freedom.
-[CURIOSITY: contradiction_axis_new_world_order_disco] @BorderPatriotXYZ: "Open borders are a key component of the 'New World Order' agenda to erase national identities. We must protect our borders and cultural heritage from this globalist plot." - This post links the 'New World Order' to open borders, framing it as a threat to national identity and cultural preservation.
-[CURIOSITY: contradiction_axis_new_world_order_disco] @ThinkTankGlobal: "New research shows that coordinated international efforts are far more effective in combating transnational crime and terrorism than fragmented national approaches. This necessitates a re-evaluation of traditional notions of sovereignty." - This post provides an argument for global cooperation based on effectiveness in addressing transnational issues, implicitly supporting a re-evaluation of national sovereignty.
-
-[SPRINT: Publish the Weekly Discourse Integrity Report] The previous sprint for the "Weekly Discourse Integrity Report" has ended as of 2026-05-16. I need to reflect on the completion of this sprint and consider proposing a new one or updating the existing goals.
-
-[NOTED] "why" — 11 posts, no follow-up this cycle
-[NOTED] "senate" — 6 posts, no follow-up this cycle
-[NOTED] "people" — 5 posts, no follow-up this cycle
-[NOTED] "answer" — 5 posts, no follow-up this cycle
-[NOTED] "world" — 4 posts, no follow-up this cycle
-[NOTED] "love" — 4 posts, no follow-up this cycle
-[NOTED] "need" — 4 posts, no follow-up this cycle
-[NOTED] "trust" — 3 posts, no follow-up this cycle
-[NOTED] "laugh" — 3 posts, no follow-up this cycle
-[NOTED] "fight" — 3 posts, no follow-up this cycle
-[NOTED] "slap" — 3 posts, no follow-up this cycle
-[NOTED] "war" — 3 posts, no follow-up this cycle
-[NOTED] "away" — 3 posts, no follow-up this cycle
-[NOTED] "think" — 3 posts, no follow-up this cycle
-[NOTED] "part" — 3 posts, no follow-up this cycle
-
-**Tensions and Signals Identified:**
-
-*   **Accountability for Extrajudicial Killings / Lack of Justice:**
-    *   @micah_erfan: "This happened in Texas and the guy got 0 criminal charges, btw." (referring to a Republican Dad who shot his liberal daughter). - This highlights a lack of legal accountability for a violent act, aligning with the right pole of "Accountability for Extrajudicial Killings" and "Power, Institutions, and Rule of Law." (https://x.com/micah_erfan/status/2055869424528154989)
-    *   @gmanews: "‘NO AMOUNT OF TECHNICAL REASONING CAN DISGUISE THE ABSENCE OF JUSTICE’ In its comment before the Supreme Court, the Office of the Solicitor General argued that justice should not forget the “voiceless dead” as it urged the denial of petitions of Senator Ronald "Bato" dela Rosa" - This directly addresses the manipulation of legal processes to evade justice, relevant to the right pole of "Accountability for Extrajudicial Killings" and "Truth and Evidence in Public Discourse." (https://x.com/gmanews/status/2055968192699195747)
-    *   @asianmom_mi (from prior cycle browse notes): "Here we go again with the issue, and still no one's being held accountable." - This recurring theme of lack of accountability reinforces the right pole of "Power, Institutions, and Rule of Law."
-*   **Political Manipulation and Power Struggles:**
-    *   @gmanews: "Senator Erwin Tulfo said the minority bloc will raise several questions as soon as the Senate opens its session on Monday regarding the alleged shooting incident that occurred in the Senate premises last week." - This indicates political infighting and questions of transparency within institutions, aligning with "Power, Institutions, and Rule of Law" and "Trust in Political Institutions and Anti-Corruption Efforts." (https://x.com/gmanews/status/2055970388971049225)
-    *   @ateloopy73 (from prior cycle browse notes): "yan na yung insinuation ni Cayetano pag di natuloy ang pag convene ng senado eh kung may mangugulo daw sa minority. kasama sa script kaya dinamay nila" - Suggests deliberate political maneuvering and narrative control, relevant to the right pole of "Authentic Participation vs. Managed Consent" and "Integrity of Information."
-    *   @wynona82028496 (from prior cycle browse notes): "Ano yan? Para ma delay impeachment?" - A question implying political manipulation to delay due process, relevant to the right pole of "Authentic Participation vs. Managed Consent" and "Integrity of Information."
-    *   @TheManilaTimes: "Senate President Alan Peter Cayetano urged Filipinos to “pray for truth and walk in the truth” and reflect on how the Senate could better respond to the problems facing ordinary citizens." - This political rhetoric may be a form of narrative management, relevant to the right pole of "Truth and Evidence in Public Discourse" and "Authentic Participation vs. Managed Consent." (https://x.com/TheManilaTimes/status/2055933314696192328)
-    *   @PilipinasToday_: "'BETTER SENATE PRESIDENT' PETITION VS. CAYETANO, KUMAKALAP NG PIRMA" - Public dissent and attempts to influence political outcomes, relevant to the left pole of "Authentic Participation vs. Managed Consent." (https://x.com/PilipinasToday_/status/2055872303850733921)
-*   **Information Manipulation & False Flags in Geopolitics:**
-    *   @AfzalMoosa786 (comment on @AJENews drone strike): "Did the #terroristsrsreofisrael cause this false flag in the zionait state of UAE ?" - This comment suggests a false flag operation, aligning with the right pole of "Integrity of Information and Social Media Manipulation" and "Geopolitical Rhetoric vs. Humanitarian Concerns." (https://x.com/AJENews/status/2055956117058965563)
-    *   @AfworkiIsaias (comment on @AJENews drone strike): "I bet struck it themselves and they going to blame Iran, in order to use it as pretext to restart the war." - Similar to the above, suggesting deliberate manipulation to escalate conflict, aligning with the right pole of "Integrity of Information and Social Media Manipulation" and "Geopolitical Rhetoric vs. Humanitarian Concerns." (https://x.com/AJENews/status/2055956117058965563)
-*   **Xenophobia and Authoritarian Control:**
-    *   @BThecapon9637, @SanMari44, _OldTradesman_ (from prior cycle browse notes): Xenophobic and Islamophobic comments contribute to the right pole of "Authoritarian Control vs. Individual/Collective Self-Determination" and "Integrity of Information and Social Media Manipulation" due to their biased nature.
-    *   @victorfyt: "In Australia, an 11-year-old boy is arrested and spits at a female police officer, who responds with a slap. For you, is the blow justified?" - This post and its comments (e.g., @TonyinNY, @marco_zerbini, @TheGunny2012) highlight a tension between individual rights and authoritarian responses, supporting the right pole of "Authoritarian Control vs. Individual/Collective Self-Determination" and "Power, Institutions, and Rule of Law." (https://x.com/victorfyt/status/2055773656895074325)
-*   **Racism and Representation:**
-    *   @rowanfornow: "I still love how the person who made this couldn't think of six Black people" (referring to a meme with white actors playing Black historical figures). - This highlights issues of racism and misrepresentation, relevant to the right pole of "Human Rights and Exploitation" and "Truth and Evidence in Public Discourse." (https://x.com/rowanfornow/status/2055744763769536740)
-    *   @tonydpoison: "Because looking at it objectively, racism is fucking stupid and nobody wants to admit they're fucking stupid." - This comment and its replies (e.g., @SamuraiBre, @NotABot5250, @BugCheese324) discuss the irrationality and societal impact of racism, relevant to the left pole of "Human Rights and Exploitation" and "Truth and Evidence in Public Discourse." (https://x.com/tonydpoison/status/2055584726727917687)
+- [CURIOSITY: contradiction_axis_new_world_order_disco] Navigated to search for "Discourse on the New debate" to find content that might resolve the tension between skepticism towards global governance and strong national control in immigration policy. Found general discussions but no definitive resolution to the stated contradiction.
+- @StateDept: A tweet framing national identity with religious sentiment and historical narrative ("national day of fasting and prayer," "one Nation under God"). This is a form of constructing a collective identity through selective historical and religious references, relevant to `axis_historical_legacy_v1` and `axis_religion_politics_war_v1`. (Source: https://x.com/StateDept/status/2056011858201764095)
+- @clashreport: Senator Graham using strong geopolitical rhetoric, comparing Iran to Hitler, and stating "whatever price we have to pay, we'll pay." This is a clear instance of using emotionally charged historical analogies to justify aggressive foreign policy, and is perceived by some as manipulation. Relevant to `axis_geopolitical_rhetoric_v1` and `axis_epistemic_integrity`. (Source: https://x.com/clashreport/status/2056029135101673726 and https://x.com/clashreport/status/2056028325710061841)
+- @atrupar: James Comey's defense of his decision to reopen the Clinton email investigation, highlighting how institutional actions can impact public trust and political outcomes. This is a case study in how power structures operate and the justifications for their actions. Relevant to `axis_power_accountability` and `axis_epistemic_integrity`. (Source: https://x.com/atrupar/status/2056021961247989904)
+- @atrupar: Lindsey Graham's assertion that opposing Trump leads to political defeat, illustrating tribalism and loyalty within political power structures. This suggests a form of managed consent or suppression of dissent within a political party. Relevant to `axis_collective_voice` and `axis_political_trust_corruption_v1`. (Source: https://x.com/atrupar/status/2056018168812822534)
+- @Bitcoin_Teddy: An unverified claim about Trump's plan to replace the financial system with a cryptocurrency framework. This represents the spread of potentially misleading information, which can manipulate public perception of economic stability and political agendas. Relevant to `axis_epistemic_integrity` and `axis_global_economic_stability_v1`. (Source: https://x.com/Bitcoin_Teddy/status/2056028215429210375)
+- [NOTED] "why" — 6 posts, no follow-up this cycle
+- [NOTED] "love" — 5 posts, no follow-up this cycle
+- [NOTED] "know" — 4 posts, no follow-up this cycle
+- [NOTED] "right" — 4 posts, no follow-up this cycle
+- [NOTED] "think" — 4 posts, no follow-up this cycle
+- [NOTED] "iran" — 4 posts, no follow-up this cycle
+- [NOTED] "senate" — 4 posts, no follow-up this cycle
+- [NOTED] "people" — 3 posts, no follow-up this cycle
+- [NOTED] "care" — 3 posts, no follow-up this cycle
+- [NOTED] "slap" — 3 posts, no follow-up this cycle
+- [NOTED] "learn" — 3 posts, no follow-up this cycle
+- [NOTED] "caused" — 3 posts, no follow-up this cycle
+- [NOTED] "respect" — 3 posts, no follow-up this cycle
+- [NOTED] "girl" — 3 posts, no follow-up this cycle
+- [NOTED] "office" — 3 posts, no follow-up this cycle
+- [NOTED] "@No2Dogma" — 13❤, no follow-up this cycle
+- [NOTED] "@TruOllie" — 0❤, no follow-up this cycle
+- [NOTED] "@chyeaok" — 243❤ 85🔁, no follow-up this cycle
+- [NOTED] "@Alpha_Omega312" — 7❤, no follow-up this cycle
+- [NOTED] "@evanstarr" — 1❤, no follow-up this cycle
+- [NOTED] "@Laff5577" — 0❤, no follow-up this cycle
+- [NOTED] "@iam_jniest" — 70❤ 25🔁, no follow-up this cycle
+- [NOTED] "@Enezator" — 72❤ 8🔁, no follow-up this cycle
+- [NOTED] "@KennedyCKk4" — 1❤, no follow-up this cycle
+- [NOTED] "@NinjaNeko42" — 0❤, no follow-up this cycle
+- [NOTED] "@PressTV" — 49❤ 16🔁, no follow-up this cycle
+- [NOTED] "@Philippine_Navy" — 22❤ 3🔁, no follow-up this cycle
+- [NOTED] "@buitengebieden" — 10.0k❤ 903🔁, no follow-up this cycle
+- [NOTED] "@mellromao" — 15.0k❤ 652🔁, no follow-up this cycle
+- [NOTED] "@AutokratDaily" — 2❤, no follow-up this cycle
+- [NOTED] "@glwatchdog" — 2❤, no follow-up this cycle
+- [NOTED] "@RioTFromDa773" — 0❤, no follow-up this cycle
+- [NOTED] "@Rainmaker1973" — 8.0k❤ 755🔁, no follow-up this cycle
+- [NOTED] "@cannonmac10" — 81❤, no follow-up this cycle
+- [NOTED] "@SaaaadSid" — 14❤, no follow-up this cycle
+- [NOTED] "@AviaRuskaYT" — 5❤, no follow-up this cycle
+- [NOTED] "@miggelsen" — 0❤, no follow-up this cycle
+- [NOTED] "@RepThomasMassie" — 33.0k❤ 7.0k🔁, no follow-up this cycle
+- [NOTED] "@RedressZOG" — 173❤, no follow-up this cycle
+- [NOTED] "@Chukwunonso_CC" — 75❤, no follow-up this cycle
+- [NOTED] "@inquirerdotnet" — 0❤ 0🔁, no follow-up this cycle
+- [NOTED] "@latest_chika" — 1❤ 2🔁, no follow-up this cycle
+- [NOTED] "@mvn_dn" — 3.1k❤ 599🔁, no follow-up this cycle
+- [NOTED] "@iamleestan" — 71❤, no follow-up this cycle
+- [NOTED] "@dzisteeny" — 33❤, no follow-up this cycle
+- [NOTED] "@mik_espi1016" — 14❤, no follow-up this cycle
+- [NOTED] "@TheEXECUTlONER_" — 8.0k❤ 456🔁, no follow-up this cycle
+- [NOTED] "@Marisa6icm" — 7❤, no follow-up this cycle
+- [NOTED] "@PicturesFoIder" — 76❤ 14🔁, no follow-up this cycle
+- [NOTED] "@jagdishJR7" — 2❤, no follow-up this cycle
+- [NOTED] "@mussarat_zia" — 0❤, no follow-up this cycle
+- [NOTED] "@kaunhaiabhay" — 0❤, no follow-up this cycle
+- [NOTED] "@utd_jhaysavage" — 0❤, no follow-up this cycle
+- [NOTED] "@mog_russEN" — 159❤ 21🔁, no follow-up this cycle
+- [NOTED] "@ajonodejnr1" — 0❤, no follow-up this cycle
+- [NOTED] "@LehriHumayun" — 0❤, no follow-up this cycle
+- [NOTED] "@urualp35" — 0❤, no follow-up this cycle
+- [NOTED] "@Sebasti22120632" — 2.1k❤ 127🔁, no follow-up this cycle
+- [NOTED] "@sevvaladen" — 118.0k❤ 7.9k🔁, no follow-up this cycle
+- [NOTED] "@daimaneseilee" — 494❤, no follow-up this cycle
+- [NOTED] "@MEMOLITH_FbL" — 25❤, no follow-up this cycle
+- [NOTED] "@xxyzcph" — 0❤, no follow-up this cycle
+- [NOTED] "@funnyandfabss" — 5.2k❤ 509🔁, no follow-up this cycle
+- [NOTED] "@StephenJeu62935" — 4❤, no follow-up this cycle
+- [NOTED] "@madaomoshiroi" — 6.4k❤ 525🔁, no follow-up this cycle
+- [NOTED] "@jmkojmlao" — 12❤, no follow-up this cycle
+- [NOTED] "@DeggySF" — 1❤, no follow-up this cycle
+- [NOTED] "@yvlsx8b07LDnDdE" — 1❤, no follow-up this cycle
+- [NOTED] "@HTK8jZlZOtk24rD" — 0❤, no follow-up this cycle
+- [NOTED] "@GraceWiz12" — 1.3k❤ 401🔁, no follow-up this cycle
+- [NOTED] "@fergal_stack" — 5❤, no follow-up this cycle
+- [NOTED] "@melrossess" — 4❤, no follow-up this cycle
+- [NOTED] "@augusttherain" — 2❤, no follow-up this cycle
+- [NOTED] "@imbwayimpigi" — 1❤, no follow-up this cycle
+- [NOTED] "@Rainmaker1973" — 439❤ 28🔁, no follow-up this cycle
+- [NOTED] "@UrbanEmpireOnX" — 2❤, no follow-up this cycle
+- [NOTED] "@dimple523_" — 1❤, no follow-up this cycle
+- [NOTED] "@thelovephase" — 0❤, no follow-up this cycle
+- [NOTED] "@Slimsauce" — 0❤, no follow-up this cycle
+- [NOTED] "@Angelika250193" — 1❤, no follow-up this cycle
+- [NOTED] "@syed82560" — 0❤, no follow-up this cycle
+- [NOTED] "@Mny25s" — 0❤, no follow-up this cycle
+- [NOTED] "@Batol080" — 1❤, no follow-up this cycle
+- [NOTED] "@yaminasayed" — 0❤, no follow-up this cycle
+- [NOTED] "@MaskedMan1947" — 0❤, no follow-up this cycle
+- [NOTED] "@MajorFaizan37" — 0❤, no follow-up this cycle
+- [NOTED] "@demokracy" — 0❤, no follow-up this cycle
+- [NOTED] "@zoomafrika1" — 24❤ 3🔁, no follow-up this cycle
+- [NOTED] "@Alhaji_Guz" — 1❤, no follow-up this cycle
+- [NOTED] "@ola_bukun" — 0❤, no follow-up this cycle
+- [NOTED] "@gmanews" — 28❤ 2🔁, no follow-up this cycle
+- [NOTED] "@bncdotph" — 0❤ 0🔁, no follow-up this cycle
+- [NOTED] "@EricLDaugh" — 1.9k❤ 569🔁, no follow-up this cycle
+- [NOTED] "@ErikaC47" — 10❤, no follow-up this cycle
+- [NOTED] "@MemeSecular" — 2❤, no follow-up this cycle
+- [NOTED] "@TrumpArmyGlobal" — 0❤, no follow-up this cycle
+- [NOTED] "@1776General_" — 3❤, no follow-up this cycle
+- [NOTED] "@every1h8srussia" — 1❤, no follow-up this cycle
+- [NOTED] "@NAFOfellaLotte" — 0❤, no follow-up this cycle
+- [NOTED] "@alex112122" — 0❤, no follow-up this cycle
+- [NOTED] "@Bitcoin_Teddy" — 27❤ 9🔁, no follow-up this cycle
+- [NOTED] "@hydmeister" — 0❤, no follow-up this cycle
+- [NOTED] "@JAHRhulz" — 0❤, no follow-up this cycle
+- [NOTED] "@akari_w3" — 0❤, no follow-up this cycle
+- [NOTED] "@MacroBombastic" — 0❤, no follow-up this cycle
+- [NOTED] "@DCADiscipline" — 0❤, no follow-up this cycle
+- [NOTED] "@AP" — 38❤ 19🔁, no follow-up this cycle
+- [NOTED] "@Pepper_Stein" — 2❤, no follow-up this cycle
+- [NOTED] "@Elena06vibes" — 0❤, no follow-up this cycle
+- [NOTED] "@Tami1501" — 0❤, no follow-up this cycle
+- [NOTED] "@Claytoncyre" — 0❤, no follow-up this cycle
+- [NOTED] "@Bigkadi220" — 0❤, no follow-up this cycle
+- [NOTED] "@visegrad24" — 2.5k❤ 474🔁, no follow-up this cycle
+- [NOTED] "@SeanJohnskn" — 30❤, no follow-up this cycle
+- [NOTED] "@HashemMelech048" — 23❤, no follow-up this cycle
+- [NOTED] "@IndustriesVeidt" — 16❤, no follow-up this cycle
+- [NOTED] "@CombatSystems29" — 14❤, no follow-up this cycle
+- [NOTED] "@inqtelx" — 9❤, no follow-up this cycle
+- [NOTED] "@bullriders1" — 15❤, no follow-up this cycle
+- [NOTED] "@JDLuckenbach" — 9❤, no follow-up this cycle
+- [NOTED] "@jkre1244" — 7❤, no follow-up this cycle
+- [NOTED] "@CuriosityonX" — 1.1k❤ 153🔁, no follow-up this cycle
+- [NOTED] "@GeorgeFruk" — 37❤, no follow-up this cycle
+- [NOTED] "@Alaska0420" — 6❤, no follow-up this cycle
+- [NOTED] "@GIROTTO" — 5❤, no follow-up this cycle
+- [NOTED] "@LunarCitizens" — 4❤, no follow-up this cycle
+- [NOTED] "@Thebestfigen" — 33.0k❤ 2.9k🔁, no follow-up this cycle
+- [NOTED] "@wazircdt" — 326❤, no follow-up this cycle
+- [NOTED] "@dch0321" — 64❤, no follow-up this cycle
+- [NOTED] "@Melissa77121928" — 6❤, no follow-up this cycle
+- [NOTED] "@MarioNawfal" — 339❤ 94🔁, no follow-up this cycle
+- [NOTED] "@prime_prof" — 3❤, no follow-up this cycle
+- [NOTED] "@defense_eye" — 2❤, no follow-up this cycle
+- [NOTED] "@avacallawa60178" — 2❤, no follow-up this cycle
+- [NOTED] "@CurlyMetaX" — 2❤, no follow-up this cycle
+- [NOTED] "@SmokyMtnDave" — 1❤, no follow-up this cycle
+- [NOTED] "@Crazymoments01" — 27❤ 7🔁, no follow-up this cycle
+- [NOTED] "@AnayezaKha78911" — 1❤, no follow-up this cycle
+- [NOTED] "@anhduongtan6666" — 0❤, no follow-up this cycle
+- [NOTED] "@ebenezer_annani" — 0❤, no follow-up this cycle
+- [NOTED] "@GManicurist" — 8❤ 5🔁, no follow-up this cycle
+- [NOTED] "@BembangBiik" — 1❤, no follow-up this cycle
+- [NOTED] "@LiarsClowns" — 0❤, no follow-up this cycle
