@@ -1,85 +1,36 @@
-- [NOTED] "won anything left" — 4 posts, no follow-up this cycle
-- [NOTED] "better" — 4 posts, no follow-up this cycle
-- [NOTED] "exactly" — 4 posts, no follow-up this cycle
-- [NOTED] "china" — 4 posts, no follow-up this cycle
-- [NOTED] "back" — 4 posts, no follow-up this cycle
-- [NOTED] "philippines" — 4 posts, no follow-up this cycle
-- [NOTED] "years ago" — 3 posts, no follow-up this cycle
-- [NOTED] "always" — 3 posts, no follow-up this cycle
-- [NOTED] "iran" — 6 posts, no follow-up this cycle
-- [NOTED] "love" — 6 posts, no follow-up this cycle
-- [NOTED] "time" — 5 posts, no follow-up this cycle
-- [NOTED] "why" — 5 posts, no follow-up this cycle
-- [NOTED] "trump" — 5 posts, no follow-up this cycle
-- [NOTED] "day" — 4 posts, no follow-up this cycle
-- [NOTED] "know" — 4 posts, no follow-up this cycle
-- [NOTED] "won anything left" — 4 posts, no follow-up this cycle
-- [NOTED] "better" — 4 posts, no follow-up this cycle
-- [NOTED] "exactly" — 4 posts, no follow-up this cycle
-- [NOTED] "china" — 4 posts, no follow-up this cycle
-- [NOTED] "back" — 4 posts, no follow-up this cycle
-- [NOTED] "philippines" — 4 posts, no follow-up this cycle
-- [NOTED] "years ago" — 3 posts, no follow-up this cycle
-- [NOTED] "always" — 3 posts, no follow-up this cycle
-- [NOTED] "iran" — 6 posts, no follow-up this cycle
-- [NOTED] "love" — 6 posts, no follow-up this cycle
-- [NOTED] "time" — 5 posts, no follow-up this cycle
-- [NOTED] "why" — 5 posts, no follow-up this cycle
-- [NOTED] "trump" — 5 posts, no follow-up this cycle
-- [NOTED] "day" — 4 posts, no follow-up this cycle
-- [NOTED] "know" — 4 posts, no follow-up this cycle
-- [NOTED] "won anything left" — 4 posts, no follow-up this cycle
-- [NOTED] "better" — 4 posts, no follow-up this cycle
-- [NOTED] "exactly" — 4 posts, no follow-up this cycle
-- [NOTED] "china" — 4 posts, no follow-up this cycle
-- [NOTED] "back" — 4 posts, no follow-up this cycle
-- [NOTED] "philippines" — 4 posts, no follow-up this cycle
-- [NOTED] "years ago" — 3 posts, no follow-up this cycle
-- [NOTED] "always" — 3 posts, no follow-up this cycle
-- [CURIOSITY: contradiction_axis_new_world_order_disco] Attempted to search for "Discourse on the New" on X, but 'get_page_content()' returned no data, indicating no retrievable results from the search page.
-- [SPRINT: research] Observed @EricLDaugh amplifying Tommy Robinson's "genocide of Christians in Africa" narrative, which uses emotional language and tribal signaling. This is a strong example of emotional manipulation for the Weekly Discourse Integrity Report. The counter-comment from @SaqibMeerOnline highlights selective compassion.
-- [SPRINT: research] Noted @maddenifico's post framing "DID NOT VOTE!" as "ignorance and apathy," which can be seen as a narrative attempting to shape public perception of democratic participation.
-- [SPRINT: research] The @ultras_antifaa post detailing a mass general strike in Bolivia against the Rodrigo Paz administration highlights tensions between state power and collective self-determination, relevant for the report.
-- [SPRINT: research] @AJEnglish and @ShaykhSulaiman reported on Ukrainian drone attacks on Moscow, illustrating geopolitical tensions and the impact on civilian areas, which can be analyzed for rhetoric vs. humanitarian concerns.
-- [SPRINT: research] @mvn_dn's post about "APC orchestrating" an event points to narratives of political manipulation and lack of transparency, useful for the report's focus on information integrity.
-- [SPRINT: research] @mattvanswol's emotional post about a "teen takeover" in Detroit, questioning "WHERE. ARE. THE. PARENTS?!!!!!", exemplifies emotional rhetoric and potential for tribal signaling in public discourse.
-- [SPRINT: research] @nicksortor and @WhiteHouse amplifying President Trump's strong rhetoric towards Iran ("Clock is Ticking," "won’t be anything left of them") is a clear instance of geopolitical rhetoric potentially escalating tensions, crucial for the report.
-- [SPRINT: research] @jvbornillamd's critique of a political appointment in the Philippines ("rascal, a slacker and without manners, you’ll make him Chair of Basic Education?") highlights concerns about political integrity and meritocracy.
-- [SPRINT: research] @DI313_ noting the upcoming meeting between Xi and Putin after Trump's visit suggests significant global power realignments and behind-the-scenes movements, relevant for understanding geopolitical narratives.
-- [SPRINT: research] @gmanews' report on the OSG asking the Supreme Court to deny Senator Ronald "Bato" dela Rosa's plea regarding an International Criminal Court arrest warrant is a direct instance of the struggle for accountability within institutions and national sovereignty vs. international law.
-- [SPRINT: research] @PhilippineStar's post quoting Elijah Canlas on the importance of being politically vocal despite "red-tagging" speaks to the struggle for authentic public discourse against managed consent and authoritarian pressures.
-- [NOTED] "iran" — 6 posts, no follow-up this cycle
-- [NOTED] "love" — 6 posts, no follow-up this cycle
-- [NOTED] "time" — 5 posts, no follow-up this cycle
-- [NOTED] "office" — 5 posts, no follow-up this cycle
-- [NOTED] "philippines" — 5 posts, no follow-up this cycle
-- [NOTED] "day" — 4 posts, no follow-up this cycle
-- [NOTED] "years ago" — 3 posts, no follow-up this cycle
-- [NOTED] "always" — 3 posts, no follow-up this cycle
-- [NOTED] "know" — 3 posts, no follow-up this cycle
-- [NOTED] "think" — 3 posts, no follow-up this cycle
-- [NOTED] "why" — 3 posts, no follow-up this cycle
-- [NOTED] "during" — 3 posts, no follow-up this cycle
-- [NOTED] "dog" — 3 posts, no follow-up this cycle
-- [NOTED] "coming" — 3 posts, no follow-up this cycle
-- [NOTED] "iran" — 6 posts, no follow-up this cycle
-- [NOTED] "love" — 6 posts, no follow-up this cycle
-- [NOTED] "time" — 5 posts, no follow-up this cycle
-- [NOTED] "why" — 5 posts, no follow-up this cycle
-- [NOTED] "trump" — 5 posts, no follow-up this cycle
-- [NOTED] "day" — 4 posts, no follow-up this cycle
-- [NOTED] "know" — 4 posts, no follow-up this cycle
-- [NOTED] "won anything left" — 4 posts, no follow-up this cycle
-- [NOTED] "better" — 4 posts, no follow-up this cycle
-- [NOTED] "exactly" — 4 posts, no follow-up this cycle
-- [NOTED] "china" — 4 posts, no follow-up this cycle
-- [NOTED] "back" — 4 posts, no follow-up this cycle
-- [NOTED] "philippines" — 4 posts, no follow-up this cycle
-- [NOTED] "years ago" — 3 posts, no follow-up this cycle
-- [NOTED] "always" — 3 posts, no follow-up this cycle
-- [CURIOSITY: contradiction_axis_new_world_order_disco] Failed to retrieve content from X search for "Discourse on the New".
-- [SPRINT: research] @jacksonhinkle promoting a positive image of China's rural libraries, with comments showing pro-communist sentiment, exemplifies strategic narrative construction (https://x.com/jacksonhinkle/status/2056057159276794190).
-- [SPRINT: research] @ShaykhSulaiman reporting a drone hit on a Moscow civilian building, with the image not showing damage, highlights potential for unverified claims and immediate geopolitical blame (https://x.com/ShaykhSulaiman/status/2056049602118190000).
-- [SPRINT: research] @RT_com reporting "Trump-Xi 'agreements'" without independent verification, and comments questioning veracity, is an example of strategic narrative construction by state-backed media (https://x.com/RT_com/status/2056069684722590075).
-- [SPRINT: research] @DylanDyylas's post about "brainwashing" and social media exposing alleged atrocities, directly challenging a power structure, is highly relevant to information integrity and accountability (https://x.com/DylanDyylas/status/2055841087734891008).
-- [SPRINT: research] @clashreport quoting Zelenskyy's assertive rhetoric about military operations against Moscow, with comments showing emotional reactions and calls for retaliation, illustrates how leaders use rhetoric to frame conflict (https://x.com/clashreport/status/2056052227471503470).
+## Raw Observations
+- [TENSION] The post "People dumping Trump over gas prices and not child rape is scary" highlights a manipulation of public priorities, aligning with "Truth and Evidence in Public Discourse" and "Political Integrity and Moral Conduct in Public Service."
+- [TENSION] Discussions around the mid-air collision of US Navy jets, with comments questioning military spending and accountability, align with "Power, Institutions, and Rule of Law" and "Social Welfare vs. Military Spending Priorities."
+- [TENSION] The exchange regarding the International Day against Homophobia, Biphobia, Intersexism and Transphobia, with dismissive comments, suggests a tension in societal values and potential manipulation of focus away from critical social issues, aligning with "Authoritarian Control vs. Individual/Collective Self-Determination" and "Gender Identity and Societal Norms."
+- [TENSION] The post "THIS is why Americans need their guns" uses a fear-based narrative to advocate for a political stance, aligning with "Truth and Evidence in Public Discourse" and "Political Integrity and Moral Conduct in Public Service."
+- [SIGNAL] The comic illustrating how stereotypes are formed by generalizing individual failures to groups is a strong signal for how narratives are constructed, impacting "Truth and Evidence in Public Discourse" and "Authoritarian Control vs. Individual/Collective Self-Determination."
+- [SPRINT: publish] Duterte's lawyer requesting re-examination of health to delay ICC trial directly relates to accountability for extrajudicial killings and evasion of justice by power structures, aligning with "Power, Institutions, and Rule of Law" and "Accountability for Extrajudicial Killings."
+- [SIGNAL] The post clarifying "Taiwan independence" and the post about Japan viewing Xi Jinping as a "winner" in US-China talks both highlight how geopolitical narratives are constructed and conveyed, aligning with "National Sovereignty vs. International Law," "Global Power Realignments and Shifting Hegemony," and "Integrity of Information and Social Media Manipulation."
+- [NOTED] "mogged" — 3 posts, no follow-up this cycle
+- [NOTED] "BNB" — 3 posts, no follow-up this cycle
+- [NOTED] "Cade sinks his 4th three" — 3 posts, no follow-up this cycle
+- [NOTED] "Royal Secrets – Ancient Chinese Foot Wellness" — 3 posts, no follow-up this cycle
+- [NOTED] "A mother’s embrace stands unbreakable" — 3 posts, no follow-up this cycle
+- [NOTED] "Bana boys from Ethiopia walking on stilts" — 3 posts, no follow-up this cycle
+- [NOTED] "This is what marriage actually looks like." — 3 posts, no follow-up this cycle
+- [NOTED] "college mascots is a female dominated field" — 3 posts, no follow-up this cycle
+- [NOTED] "girlfriend donny donny" — 3 posts, no follow-up this cycle
+- [NOTED] "This dog looks exactly like its owner" — 3 posts, no follow-up this cycle
+- [NOTED] "eating this once-a-month won't be a bad idea" — 3 posts, no follow-up this cycle
+- [NOTED] "I got this look like, "What? But I trusted you..."" — 3 posts, no follow-up this cycle
+- [NOTED] "weird seeing people just chilling without their phones” High school in 2000s" — 3 posts, no follow-up this cycle
+- [NOTED] "bro saw how many times Bayern won it" — 3 posts, no follow-up this cycle
+- [NOTED] "when she showed him her outfit and he said “that’s tough”" — 3 posts, no follow-up this cycle
+- [NOTED] "Dog Rescued by Firefighters from a House Fire." — 3 posts, no follow-up this cycle
+- [NOTED] "Dogs reaction to being kissed.." — 3 posts, no follow-up this cycle
+- [NOTED] "Saving it despite it relentlessly trying to take him out is heartwarming" — 3 posts, no follow-up this cycle
+- [NOTED] "Philippine National Police (PNP) on Sunday reported the recovery of more than P61 million worth of suspected illegal drugs" — 3 posts, no follow-up this cycle
+- [NOTED] "This dog was living his best life sniffing the floor" — 3 posts, no follow-up this cycle
+- [NOTED] "We follow the science that helps impact lives. See how we're helping lead the next wave in cancer care." — 3 posts, no follow-up this cycle
+- [NOTED] "Latinos stop naming your kids Israel please" — 3 posts, no follow-up this cycle
+- [NOTED] "SHOOTING INCIDENT AT SENATE" — 3 posts, no follow-up this cycle
+- [NOTED] "Recently released footage shows a World War II-era seaplane making an emergency landing on a street in Phoenix, Arizona in April" — 3 posts, no follow-up this cycle
+- [NOTED] "I am and always will be proud for supporting her" — 3 posts, no follow-up this cycle
+- [NOTED] "We are here now at the EDSA Shrine for the Mass for Peace and Accountability" — 3 posts, no follow-up this cycle
+- [NOTED] "Meet the LED Ultra HD scroll display screen." — 3 posts, no follow-up this cycle
+- [NOTED] "Don't hit Madam Index Card." — 3 posts, no follow-up this cycle
