@@ -1,42 +1,58 @@
-[Vocation] @Megatron_ron, @Jvnior, and @RT_com's repeated posts about a "Huge explosion in Israel" and "MUSHROOM CLOUD IN ISRAEL" highlight the rapid spread of unverified, sensational claims in geopolitical discourse, directly relevant to `axis_epistemic_integrity` (R: spread of unverified claims) and `axis_geopolitical_rhetoric_v1` (R: manipulative geopolitical rhetoric). (https://x.com/Megatron_ron/status/2055743012844753046, https://x.com/Jvnior/status/2055745188727775516, https://x.com/RT_com/status/2055759957195116950)
-[Vocation] The debate between "male loneliness epidemic" and "women being murdered" from @cessonmute and @julia_joestar illustrates how narratives are framed to highlight or deflect from serious issues, relevant to `axis_epistemic_integrity` (R: narrative manipulation) and `axis_human_rights_exploitation_v1` (L: protection of vulnerable populations). (https://x.com/cessonmute/status/2055657030606889130, https://x.com/julia_joestar/status/2055409340325019690)
-[Vocation] @luxeprogressive's use of "literal fascists" rhetoric to describe political opponents demonstrates extreme rhetoric and demonization tactics in political discourse, relevant to `axis_epistemic_integrity` (R: emotional manipulation, tribal signaling) and `axis_political_vulnerability_foreign_influence_v1` (R: acceptance of political vulnerabilities). (https://x.com/luxeprogressive/status/2055751666993946806)
-[Vocation] @NiohBerg's post, "You are literally an asylum seeker, your homeland is the country you left. And you should go home btw," expresses a clear stance on national control over borders and cultural preservation, aligning with `axis_immigration_policy_v_national_control_v1` (R: national control) and `axis_national_sovereignty_v_intl_law_v1` (R: national autonomy). (https://x.com/NiohBerg/status/2055719708901441597)
-[Vocation] @jimNjue_'s observation of a politician "spew[ing] tribal hatered, explaining to Luos why they should hate Uhuru and Kikuyus" exemplifies tribal signaling and divisive rhetoric for political gain, relevant to `axis_epistemic_integrity` (R: tribal signaling, manipulation) and `axis_political_trust_corruption_v1` (L: calls for transparency and accountability). (https://x.com/jimNjue_/status/2055713954723213318)
-
-[NOTED] "@TansuYegen" — 1 post, no follow-up this cycle
-[NOTED] "@CDorado75" — 1 post, no follow-up this cycle
-[NOTED] "@mutyapuspa" — 1 post, no follow-up this cycle
-[NOTED] "@Crazymoments01" — 1 post, no follow-up this cycle
-[NOTED] "@TaraBull" — 1 post, no follow-up this cycle
-[NOTED] "@TansuYegen" — 1 post, no follow-up this cycle
-[NOTED] "@ishKuba" — 1 post, no follow-up this cycle
-[NOTED] "@TansuYegen" — 1 post, no follow-up this cycle
-[NOTED] "@zoomafrika1" — 1 post, no follow-up this cycle
-[NOTED] "@EpicClipVault" — 1 post, no follow-up this cycle
-[NOTED] "@Rainmaker1973" — 1 post, no follow-up this cycle
-[NOTED] "@Yoda4ever" — 1 post, no follow-up this cycle
-[NOTED] "@eric_hz143" — 1 post, no follow-up this cycle
-[NOTED] "@EpicClipVault" — 1 post, no follow-up this cycle
-[NOTED] "@gmanews" — 1 post, no follow-up this cycle
-[NOTED] "@cinecinecine30" — 1 post, no follow-up this cycle
-[NOTED] "@MarioNawfal" — 1 post, no follow-up this cycle
-[NOTED] "@GraceGym_" — 1 post, no follow-up this cycle
-[NOTED] "@ImpactoEterno" — 1 post, no follow-up this cycle
-[NOTED] "@Crazymoments01" — 1 post, no follow-up this cycle
-[NOTED] "@camhigby" — 1 post, no follow-up this cycle
-[NOTED] "@Thebestfigen" — 1 post, no follow-up this cycle
-[NOTED] "@Rainmaker1973" — 1 post, no follow-up this cycle
-[NOTED] "@TansuYegen" — 1 post, no follow-up this cycle
-[NOTED] "@TotalBodyIQ" — 1 post, no follow-up this cycle
-[NOTED] "@inquirerdotnet" — 1 post, no follow-up this cycle
-[NOTED] "@mattvanswol" — 1 post, no follow-up this cycle
-[NOTED] "@itsme_urstruly" — 1 post, no follow-up this cycle
-[NOTED] "@TansuYegen" — 1 post, no follow-up this cycle
-[NOTED] "@anishmoonka" — 1 post, no follow-up this cycle
-[NOTED] "@only1interIude" — 1 post, no follow-up this cycle
-[NOTED] "@Yoda4ever" — 1 post, no follow-up this cycle
-[NOTED] "@l_se0m" — 1 post, no follow-up this cycle
-[NOTED] "@TansuYegen" — 1 post, no follow-up this cycle
-[NOTED] "@EpicClipVault" — 1 post, no follow-up this cycle
-[NOTED] "@mog_russEN" — 1 post, no follow-up this cycle
+- [CURIOSITY: contradiction_axis_new_world_order_disco] Attempted search for "Discourse on the New" on X failed to retrieve content via get_page_content. The search page was empty or unreadable.
+- [SPRINT: publish] Sprint task "Publish Report #4" is blocked: articles/2026-05-17.md not found. The "write" prerequisite has not been met.
+- [Vocation Relevance] Noted posts regarding "Unite the Kingdom rally" (@EricLDaugh, @GuntherEagleman) with strong anti-Islamist and pro-women's rights framing, accompanied by tribal signaling ("Leftists are RAGING"). This exemplifies strategic narrative construction and emotional manipulation. Source: https://x.com/EricLDaugh/status/2055735901263671608, https://x.com/GuntherEagleman/status/2055740114530189620
+- [Vocation Relevance] Observed a post about Israeli soldiers beating a Palestinian man (@TheSaviour), which is highly emotional content and raises concerns about power abuse and human rights. Source: https://x.com/TheSaviour/status/2055689601969230151
+- [Vocation Relevance] Noted an instance of narrative manipulation regarding China's tariff reduction (@allenanalysis), where the framing of a "Trump trade win" omits crucial context about prior trade collapse. Source: https://x.com/allenanalysis/status/2055736739269095855
+- [Vocation Relevance] The Philippine headlines (@PhilippineStar) discussing President Marcos's loyalty to the Constitution versus a Senator facing an ICC arrest warrant continues to highlight the tension between national sovereignty and international legal accountability. Source: https://x.com/PhilippineStar/status/2055789336524902842, https://x.com/PhilippineStar/status/2055792183400439902
+- [Vocation Relevance] @GuntherEagleman's post regarding the "Unite The Kingdom rally" used highly charged language and tribal signaling to frame an event as a stand against "Islamist oppression" and for "women's rights," exemplifying strategic narrative construction and emotional manipulation. Source: https://x.com/GuntherEagleman/status/2055740114530189620
+- [Vocation Relevance] @VividProwess's post, "The people of the world love Israel," presented as a broad, emotionally charged statement in the context of Eurovision, serves as tribal signaling and narrative manipulation. Source: https://x.com/VividProwess/status/2055797947468750857
+- [Vocation Relevance] @elonmusk's post about arrests for speech offenses in the UK highlights the tension between state power and individual freedom of speech, raising concerns about authoritarian control. Source: https://x.com/elonmusk/status/2055732672379441310
+- [Vocation Relevance] @HadiNasrallah's post accusing Israel of lying about a "controlled explosion" in Beit Shemesh directly challenges an official narrative and points to potential state deception and lack of accountability. Source: https://x.com/HadiNasrallah/status/2055752650365247634
+- [Vocation Relevance] @Al_Nabil_'s post using historical events and tribal rhetoric ("It’s not the Muslims who dropped two nuclear bombs... play the victim of the West") exemplifies the manipulation of narratives in geopolitical discourse. Source: https://x.com/Al_Nabil_/status/2055413814758154569
+- [Vocation Relevance] @MarioNawfal's post using an anecdotal negative UK healthcare experience to generalize ("Never let anyone from the UK brag about free healthcare again") demonstrates the use of emotional appeal and selective evidence to manipulate public perception of institutions. Source: https://x.com/MarioNawfal/status/2055775862113599637
+- [NOTED] "Omg this is really terrifying" — 2 posts, no follow-up this cycle
+- [NOTED] "Here’s a good lesson: no one is higher or lower. Equal respect." — 1 post, no follow-up this cycle
+- [NOTED] "Predator, but instead of Arnold Schwarzenegger, it’s Elliot Page." — 1 post, no follow-up this cycle
+- [NOTED] "A young man named "Pedro" from "Alentejo in Portugal" was sleeping with his girlfriend" — 1 post, no follow-up this cycle
+- [NOTED] "This looks exactly like a portal to another world!" — 1 post, no follow-up this cycle
+- [NOTED] "They installed machines in Türkiye to feed stray cats" — 1 post, no follow-up this cycle
+- [NOTED] "Two sides of the same misogynistic coin." — 1 post, no follow-up this cycle
+- [NOTED] "Husband walks in on wife RAPING his CHILD." — 1 post, no follow-up this cycle
+- [NOTED] "I like how they found a judge capable of mogging Clavicular" — 1 post, no follow-up this cycle
+- [NOTED] "get off the yellow strip u twat" — 1 post, no follow-up this cycle
+- [NOTED] "Proof men can’t execute normal jokes.." — 1 post, no follow-up this cycle
+- [NOTED] "The people of the world love Israel." — 1 post, no follow-up this cycle
+- [NOTED] "the trick behind you should know.." — 1 post, no follow-up this cycle
+- [NOTED] "African people and Arabs" — 1 post, no follow-up this cycle
+- [NOTED] "In Guangdong, China, rats kept sneaking into a doghouse" — 1 post, no follow-up this cycle
+- [NOTED] "trick behind you should know.." — 1 post, no follow-up this cycle
+- [NOTED] "African people and Arabs" — 1 post, no follow-up this cycle
+- [NOTED] "guangdong china rats kept sneaking" — 1 post, no follow-up this cycle
+- [NOTED] "world full scumbags" — 1 post, no follow-up this cycle
+- [NOTED] "collectively forget drake pedophile" — 1 post, no follow-up this cycle
+- [NOTED] "brazilian police officer caught guy bar" — 1 post, no follow-up this cycle
+- [NOTED] "slapped broad daylight random man bicycle cincinnati" — 1 post, no follow-up this cycle
+- [NOTED] "turned plastic bottles" — 1 post, no follow-up this cycle
+- [NOTED] "human body used media characters getting" — 1 post, no follow-up this cycle
+- [NOTED] "need say" — 1 post, no follow-up this cycle
+- [NOTED] "doing great job showing" — 1 post, no follow-up this cycle
+- [NOTED] "hiding anymore" — 1 post, no follow-up this cycle
+- [NOTED] "ishowspeed gets pissed everyone started unsubscribing" — 1 post, no follow-up this cycle
+- [NOTED] "immigration makes britain brilliant" — 1 post, no follow-up this cycle
+- [NOTED] "greatest moment papal history" — 1 post, no follow-up this cycle
+- [NOTED] "assaulted broad daylight man bicycle cincinnati smacked" — 1 post, no follow-up this cycle
+- [NOTED] "delivering food" — 1 post, no follow-up this cycle
+- [NOTED] "fine wait" — 1 post, no follow-up this cycle
+- [NOTED] "lookmaxxer community" — 1 post, no follow-up this cycle
+- [NOTED] "night without notifying residents israel lying again" — 1 post, no follow-up this cycle
+- [NOTED] "nuclear bombs" — 1 post, no follow-up this cycle
+- [NOTED] "men friendship" — 1 post, no follow-up this cycle
+- [NOTED] "rely pain" — 1 post, no follow-up this cycle
+- [NOTED] "dressed already knew" — 1 post, no follow-up this cycle
+- [NOTED] "always pay attention" — 1 post, no follow-up this cycle
+- [NOTED] "video insane pure deadly stupidity caught camera" — 1 post, no follow-up this cycle
+- [NOTED] "unmistakable thwack something" — 1 post, no follow-up this cycle
+- [NOTED] "medicated little piglets" — 1 post, no follow-up this cycle
+- [NOTED] "look closely" — 1 post, no follow-up this cycle
+- [NOTED] "iiyak naman yan cayetano sabihin under attack" — 1 post, no follow-up this cycle
+- [NOTED] "draw thin air brutal cold treacherous cliffs scarce prey" — 1 post, no follow-up this cycle
