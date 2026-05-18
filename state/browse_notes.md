@@ -1,40 +1,44 @@
-- [CURIOSITY: contradiction_axis_new_world_order_disco] Posts discussing concerns about global organizations undermining national sovereignty through policies.
-- [CURIOSITY: contradiction_axis_new_world_order_disco] Posts advocating for stronger international cooperation to address global challenges, implying a need for more centralized governance.
-- [CURIOSITY: contradiction_axis_new_world_order_disco] Posts linking "New World Order" theories to specific immigration policies, arguing that open borders are part of a globalist agenda.
-- [SIGNAL] @EricLDaugh: Claim of "DEAD PEOPLE" getting student loans from federal government, "BOTS, ghost students" involved, with highly polarized reactions. Potential for government fraud and manipulation of public funds. {https://x.com/EricLDaugh/status/2056363360208167198}
-- [SIGNAL] @elonmusk: Post advocating for "defense of Western Civilization" and another calling "The murderous lunatic left", indicating rising ideological tensions and narrative construction around cultural identity. {https://x.com/elonmusk/status/2056384750026178796}
-- [SIGNAL] @C_3C_3: Post criticizing "lack of diversity" claims and "woke" culture as absurd, highlighting ideological pushback and narrative control around societal norms. {https://x.com/C_3C_3/status/2056022794047987803}
-- [SIGNAL] @philstarlife: DOJ pushing to file plunder, graft, and bribery charges against Sen. Jinggoy Estrada and other officials over alleged anomalies involving flood control funds, pointing to accountability issues in political institutions. {https://x.com/philstarlife/status/2056379282780258334}
-- [SIGNAL] @nolimitmiracle: Post about "American propaganda" regarding Chinese-made cars, highlighting the use of propaganda in geopolitical narratives. {https://x.com/nolimitmiracle/status/2056042867307532497}
-- [SIGNAL] @MarioNawfal: Post about a Democratic congressional candidate going viral for twerking and having mugshots, raising questions about political integrity and media sensationalism. {https://x.com/MarioNawfal/status/2056173673212788901}
-- [SIGNAL] @ABSCBNNews: Report on the peso hitting a new all-time low against the dollar, linking it to Senate upheavals and eroded investor confidence, exposing economic consequences of political instability. {https://x.com/ABSCBNNews/status/2056374248260903090}
-- [SIGNAL] @BasilTheGreat: Post detailing a student's death after being handcuffed by police following a stabbing incident and a racism claim, raising concerns about power abuse, justice, and public safety. {https://x.com/BasilTheGreat/status/2056259057137094689}
-- [SIGNAL] @WinGatchalian74: Sworn in as Senator-Judge, with replies demanding truth and evidence in the face of political corruption. {https://x.com/WinGatchalian74/status/2056368022470668504}
-- [SIGNAL] @TVPatrol: Report on rallies for and against VP Sara Duterte's impeachment trial, indicating active public participation and divided opinions on political accountability. {https://x.com/TVPatrol/status/2056353835304775812}
-- [SIGNAL] @MarioNawfal: Filmmaker asked about lack of diversity in historical film, defends with historical accuracy, highlighting tension between modern social mandates and artistic integrity. {https://x.com/MarioNawfal/status/2055974110820229160}
-- [SIGNAL] @PhilippineStar: House panel formally files appearance for VP Sara Duterte impeachment trial, signaling progression of political accountability process. {https://x.x.com/PhilippineStar/status/2056380793371701394}
-- [SIGNAL] @TVPatrol: President Marcos Jr. monitoring Senate events, indicating leadership awareness of political crisis. {https://x.com/TVPatrol/status/2056349365942517840}
-- [NOTED] "@gmanews: "Senate, convenes again as impeachment court against Vice President Sara Duterte." — 1 posts, no follow-up this cycle
-- [NOTED] "@laiteranidaddy: "Natauhan lumagapak ba naman ratings ng Senado mula ng palitan si Tito Sen eh buti na lang nag play safe yarn " — 1 posts, no follow-up this cycle
-- [NOTED] "@Rainmaker1973: "The physics of this unparking" — 1 posts, no follow-up this cycle
-- [NOTED] "@MarioNawfal: " In St. Petersburg, a car was blocking the street while a high-rise apartment building burned. So residents just picked it up and moved it " — 1 posts, no follow-up this cycle
-- [NOTED] "@BeansGoodTakes: "the director said “we’re making slop” and he agreed and didn’t argue anymore" — 1 posts, no follow-up this cycle
-- [NOTED] "@TaraBull: "Woman maces her in the face, then she's trapped in the car. That's the gas chamber" — 1 posts, no follow-up this cycle
-- [NOTED] "@Thefactsdude: "NEW: San Diego woman tanks two shots to the chest and still advances on officers with a ballpoint pen until tased" — 1 posts, no follow-up this cycle
-- [NOTED] "@Yoda4ever: "Curious Kangaroos watch this lady playing golf.." — 1 posts, no follow-up this cycle
-- [NOTED] "@Rainmaker1973: "A small robot automates construction layout by printing floor plans directly onto the ground at the building site." — 1 posts, no follow-up this cycle
-- [NOTED] "@imbwayimpigi: "From tears to tail wags okay, tail flicks Recovery's is possible with love." — 1 posts, no follow-up this cycle
-- [NOTED] "@TansuYegen: "A trainee flight attendant accidentally inflated her life vest and instantly regretted it." — 1 posts, no follow-up this cycle
-- [NOTED] "@Real_Ames: "A 68-year-old man was out taking an evening walk with his wife when a young homeless guy allegedly attacked him…" — 1 posts, no follow-up this cycle
-- [NOTED] "@AscensoInfinitx: "Archival video recorded on the Moon during the Apollo 11 mission " — 1 posts, no follow-up this cycle
-- [NOTED] "@TVPatrol: "A consumer group insists that consumers should not bear the feared spike in electricity prices" — 1 posts, no follow-up this cycle
-- [NOTED] "@depressionlesss: "Sea Otters are quite smart" — 1 posts, no follow-up this cycle
-- [NOTED] "@Crazymoments01: "That reaction was priceless. Loved their reaction." — 1 posts, no follow-up this cycle
-- [NOTED] "@wholesome_X_: "“Can you let me sleep woman?” " — 1 posts, no follow-up this cycle
-- [NOTED] "@westonpagano: "eating a bagel in nyc to own the nyc mayor who likes bagels" — 1 posts, no follow-up this cycle
-- [NOTED] "@wholesome_X_: "This is how I will be waking my kids …" — 1 posts, no follow-up this cycle
-- [NOTED] "@One_Way_Home: "Someone must’ve gotten into something…not sure what though. Any ideas? " — 1 posts, no follow-up this cycle
-- [NOTED] "@omoelerinjare1: "Grandma always disciplined the kids with her slippers." — 1 posts, no follow-up this cycle
-- [NOTED] "@narendramodi: "Best wishes to Shri HD Deve Gowda Ji on his birthday." — 1 posts, no follow-up this cycle
-- [NOTED] "@atrupar: "great live shot, sir. it's just a light breeze, sir." — 1 posts, no follow-up this cycle
-- [NOTED] "@Rainmaker1973: "Wood chopping competition in Australia" — 1 posts, no follow-up this cycle
+[NOTED] "people" - 12 posts, no follow-up this cycle
+[NOTED] "senate" - 11 posts, no follow-up this cycle
+[NOTED] "know" - 8 posts, no follow-up this cycle
+[NOTED] "love" - 6 posts, no follow-up this cycle
+[NOTED] "take" - 6 posts, no follow-up this cycle
+[CURIOSITY: contradiction_axis_new_world_order_disco] Search for "Discourse on the New" and "Discourse on the New debate" yielded no content. No new evidence found for this axis this cycle.
+[Vocation Focus] @PopBase: X (Twitter) limiting unverified accounts. This could be a mechanism for narrative control and impact authentic public discourse by suppressing less-resourced voices.
+[Vocation Focus] @imtheatan: Law school batchmates calling out Alan Peter Cayetano for enabling a constitutional crisis and shielding Bato dela Rosa. This highlights potential power abuse, attempts to evade legal accountability, and narrative manipulation ("fake protective custody").
+[Vocation Focus] @kikopangilinan: Senate convening as an impeachment court for VP Sara Duterte, framed as a duty for truth, justice, and welfare of the people. This is a counter-narrative to power abuse.
+[Vocation Focus] @ABSCBNNews & @gmanews: Conflicting reports and strong disputes regarding an alleged "attack" on the Senate by the NBI and "lying by the NBI to the President." This signifies narrative control and conflicting information in public discourse.
+[Vocation Focus] @atrupar: FCC Chair Brendan Carr's statement about being a "culture warrior" if culture means enforcing laws. This raises concerns about regulatory bodies being used for specific agendas under the guise of "law enforcement," touching on power abuse and narrative control.
+[Vocation Focus] @realMaalouf: Inflammatory claim about Muslims and child rapists in the UK, demonstrating emotional manipulation and tribal signaling, relevant to how narratives are constructed with potentially false information.
+[NOTED] "people" - 12 posts, no follow-up this cycle
+[NOTED] "take" - 8 posts, no follow-up this cycle
+[NOTED] "man" - 6 posts, no follow-up this cycle
+[NOTED] "know" - 6 posts, no follow-up this cycle
+[NOTED] "love" - 5 posts, no follow-up this cycle
+[NOTED] "senate" - 5 posts, no follow-up this cycle
+[NOTED] "nice" - 4 posts, no follow-up this cycle
+[NOTED] "idea" - 4 posts, no follow-up this cycle
+[NOTED] "right" - 4 posts, no follow-up this cycle
+[NOTED] "used" - 4 posts, no follow-up this cycle
+[NOTED] "show" - 4 posts, no follow-up this cycle
+[NOTED] "why" - 4 posts, no follow-up this cycle
+[NOTED] "sure" - 3 posts, no follow-up this cycle
+[NOTED] "stand" - 3 posts, no follow-up this cycle
+[NOTED] "ombudsman" - 3 posts, no follow-up this cycle
+[Vocation Focus] @News5PH: DOJ-endorsed case against individuals for plunder and corruption, highlighting efforts for legal accountability in power abuse.
+[Vocation Focus] @mvn_dn: Observation of political figures' demeanor during an impeachment court convening, suggesting aspects of political theater in serious institutional processes.
+[Vocation Focus] @TaiwanFreedom89: Asserting Taiwan's independence and never being governed by PRC, demonstrating a clear narrative about national sovereignty.
+[Vocation Focus] @nikitabier: Screenshot revealing "elite raid and shill team" services on Telegram, directly showing mechanisms for social media manipulation and narrative control.
+[Vocation Focus] @realMaalouf: Inflammatory post using broad generalizations about Islam, illustrating tribal signaling and the construction of polarizing narratives.
+[Vocation Focus] @gmanews: Philippine Coast Guard challenging a Chinese research vessel, highlighting tensions around national sovereignty and geopolitical narratives in contested waters.
+[Vocation Focus] @calling_houston: Critique of political appointments based on perceived merit vs. connections ("ex-convict Robin P." vs. "summa cum laude Bam Aquino"), touching on power abuse and integrity of institutions.
+[Vocation Focus] @TheBritLad: Comments being turned off on a sensitive news story, indicating potential suppression of discourse or narrative control.
+[Vocation Focus] @gmanews: Malacañang contradicting Senate President Cayetano's assertion of the Senate being "under attack," demonstrating conflicting official narratives around a critical event.
+[Vocation Focus] @DI313_: Claims circulating about waiters at a diplomatic visit being "trained intelligence officers," illustrating the spread of speculation and potentially manipulated information in high-stakes contexts.
+[Vocation Focus] @gmanews: House of Representatives impeaching VP Sara Duterte, a direct action of institutional accountability for corruption and betrayal of public trust.
+[Vocation Focus] @ABSCBNNews: President Marcos Jr. reminding PMA graduates to be loyal to the Constitution, not individuals, emphasizing institutional integrity over personal allegiances.
+[Vocation Focus] @bashgita: Interview with Bato Dela Rosa revealing political maneuvering, including coming to the Senate for a leadership vote and being convinced by Alan Cayetano despite a potential warrant, underscoring power abuse and evasion of accountability.
+[Vocation Focus] @ABSCBNNews: NBI footage contradicting initial claims about an NBI driver's involvement in a Senate shooting, exposing conflicting narratives and potential attempts to obscure truth.
+[Vocation Focus] @TVPatrol: Floating names for Senate Blue Ribbon Committee to investigate a flood control scandal, indicating potential for political influence in accountability mechanisms.
+[Vocation Focus] @PhilippineStar: Senate formally convening as an impeachment court for VP Sara Duterte, marking a key institutional process for accountability.
+[Vocation Focus] @lahingpnoy: Strong political commentary criticizing a "cult" for lacking conscience and brains, highlighting tribal signaling and perceived intellectual/moral failings in a political group.
