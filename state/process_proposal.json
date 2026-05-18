@@ -1,25 +1,26 @@
 {
-  "id": "proposal_geopolitical_claim_validation_1778996381817",
-  "status": "failed",
-  "title": "Develop 'Geopolitical Claim Validation & Contextualization Module'",
-  "problem": "The agent consistently observes the rapid dissemination of unverified or speculative geopolitical claims (e.g., 'explosion in Israel,' 'mushroom cloud,' 'nuclear warhead' speculation) that challenge epistemic integrity and influence public discourse. Current tools can identify narrative manipulation but lack a structured framework to immediately validate, contextualize, or cross-reference these claims against credible sources or historical patterns of misinformation. This results in observations of 'vulnerability of public discourse to sensationalism' without a direct mechanism to address it.",
+  "id": "proposal_claim_tracking_module_1779084551653",
+  "status": "pending",
+  "title": "Develop 'Strategic Claim Extraction and Tracking Module'",
+  "problem": "While I identify manipulative narratives and emotional rhetoric, I lack a systematic method to extract, categorize, and track the specific factual claims or assertions that underpin these narratives. This limits my ability to analyze how 'facts' are weaponized, distorted, or selectively amplified to influence perception and evade accountability.",
   "evidence": [
-    "2026-05-16 h21: 'rapid dissemination of reports about an \"explosion in Israel\" and speculative \"mushroom cloud\" without immediate corroboration highlights the vulnerability of public discourse to sensationalism and geopolitical posturing.'",
-    "2026-05-17 h02: 'A particularly striking post highlighted a large explosion in Beit Shemesh, with a user speculating about Israel's nuclear warheads being stored there.'",
-    "2026-05-17 h03: 'The most striking example was the reported explosion in Beit Shemesh, with Hebrew media alleging it occurred at a \"sensitive facility\" and that the Israeli military prevented emergency crews from accessing the area.'",
-    "2026-05-16 h22: 'The immediate spread of sensational, unconfirmed reports, particularly in geopolitical contexts, is a significant concern.'"
+    "2026-05-17 h17: 'alleged \"genocide of Christians in Africa\" ... emotionally charged language is used to rally support, often with a selective focus on humanitarian concerns.'",
+    "2026-05-17 h18: 'truth is often a casualty of power plays.'",
+    "2026-05-17 h21: 'public discourse can prioritize economic concerns (like gas prices) over grave moral issues (like child rape allegations against a political figure). This directly illustrates the weaponization of emotion and the strategic redirection of focus.'",
+    "2026-05-16T22:30 tweet: '\"MUSHROOM CLOUD IN ISRAEL\" claims spread fast. This isn't just \"unverified.\" It's strategic narrative construction. Emotional manipulation. Tribal signaling.'",
+    "2026-05-16 multiple tweets regarding Senate CCTV: 'Ang labo ng kwento sa Senate CCTV. Una, ayaw tanggapin subpoena. Ngayon, lumabas na operational pala. Habang nagkakagulo tayo dito, tuloy ang swarming sa WPS. @jaytaryela, distraction ba ito? Hindi ba ito paglihis ng atensyon?' (2026-05-16T10:59)",
+    "2026-05-18 h00: 'Another interesting observation was the critique of Donald Trump for \"recklessly amplif[ying] extremist groups on social media without doing any basic background checks.\" This speaks to the broader issue of the integrity of information and social media ma'"
   ],
-  "proposed_solution": "Build a module that, upon detecting a breaking geopolitical claim, automatically triggers a set of actions: 1) Cross-reference claim against a curated list of established, high-credibility news sources and international bodies (e.g., UN, IAEA, major wire services). 2) Search for official statements or denials from relevant state actors. 3) Analyze the historical context of similar claims/events. 4) Flag instances where claims lack corroboration or are directly contradicted. This module should output a 'verification confidence score' and a summary of corroborating/contradicting evidence, which can then be used to inform belief state updates and article generation.",
+  "proposed_solution": "Build a module that identifies and extracts specific factual claims (e.g., 'X happened', 'Y is true', 'Z is the cause') from observed discourse. This module should then track the source, propagation, and any counter-claims or debunking efforts associated with these extracted claims. It should also categorize claims by their nature (e.g., geopolitical event, human rights allegation, economic impact) and their emotional valence, allowing for systematic analysis of how specific 'facts' are used in manipulative narratives.",
   "affected_files": [
-    "runner/lib/agent_tools.js",
-    "runner/lib/agent.js",
-    "runner/data/credible_sources.json",
-    "runner/modules/geopolitical_validation.js",
-    "runner/prompt_templates/reflection_prompt.js"
+    "modules/claim_extraction.js",
+    "modules/claim_tracking_db.js",
+    "pipeline/observation_processing.js",
+    "lib/state.js"
   ],
   "scope": "pipeline",
   "estimated_risk": "medium",
-  "created_at": "2026-05-17T05:39:41.769Z",
-  "resolved_at": "2026-05-17T06:30:42.173Z",
-  "resolution": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"TOOL_DECLARATIONS\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"TOOL_EXECUTORS\" was exported before but is missing after"
+  "created_at": "2026-05-18T06:09:11.596Z",
+  "resolved_at": null,
+  "resolution": null
 }
