@@ -117,6 +117,7 @@ try {
   if (!cols.includes('framing_analysis'))   db.exec('ALTER TABLE claim_verifications ADD COLUMN framing_analysis TEXT');
   if (!cols.includes('investigation_id'))   db.exec('ALTER TABLE claim_verifications ADD COLUMN investigation_id TEXT');
   if (!cols.includes('investigation_depth')) db.exec("ALTER TABLE claim_verifications ADD COLUMN investigation_depth TEXT DEFAULT 'quick'");
+  if (!cols.includes('is_suppressed'))      db.exec('ALTER TABLE claim_verifications ADD COLUMN is_suppressed INTEGER DEFAULT 0');
 } catch {}
 
 // ── Investigation table (deep research results) ─────────────────────────────
@@ -230,6 +231,14 @@ const stmts = {
     UPDATE claim_verifications
     SET resolution_tweet_url = ?, resolution_posted_at = ?, updated_at = ?
     WHERE claim_id = ?
+  `),
+
+  suppressClaim: db.prepare(`
+    UPDATE claim_verifications SET is_suppressed = 1, updated_at = ? WHERE claim_id = ?
+  `),
+
+  unsuppressClaim: db.prepare(`
+    UPDATE claim_verifications SET is_suppressed = 0, updated_at = ? WHERE claim_id = ?
   `),
 
   // Candidates for watch-signal: unverified, has a source URL to quote, not yet watch-posted
@@ -390,6 +399,14 @@ function setResolutionTweetUrl(claimId, url) {
   stmts.setResolutionTweetUrl.run(url, now, now, claimId);
 }
 
+function suppressClaim(claimId) {
+  stmts.suppressClaim.run(new Date().toISOString(), claimId);
+}
+
+function unsuppressClaim(claimId) {
+  stmts.unsuppressClaim.run(new Date().toISOString(), claimId);
+}
+
 function getWatchCandidates() {
   return stmts.getWatchCandidates.all().map(parseRow);
 }
@@ -503,6 +520,8 @@ module.exports = {
   markExpired,
   setWatchTweetUrl,
   setResolutionTweetUrl,
+  suppressClaim,
+  unsuppressClaim,
   getWatchCandidates,
   getResolutionCandidates,
   insertInvestigation,

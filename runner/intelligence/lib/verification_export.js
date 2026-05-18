@@ -22,6 +22,23 @@ function filterStableUrls(urls) {
 }
 
 /**
+ * Composite display relevance score (0–1).
+ * Weights: confidence 30%, source tier 20%, axis-linked 20%,
+ *          tweet posted 15%, deep investigation 10%, reverification 5%.
+ */
+function computeDisplayScore(c) {
+  const tierNorm = c.source_tier ? Math.min((6 - c.source_tier) / 4, 1) : 0;
+  return (
+    0.30 * (c.confidence_score || 0) +
+    0.20 * tierNorm +
+    0.20 * (c.related_axis_id ? 1 : 0) +
+    0.15 * (c.tweet_posted ? 1 : 0) +
+    0.10 * (c.investigation_depth === 'deep' ? 1 : 0) +
+    0.05 * Math.min((c.verification_count || 0) / 3, 1)
+  );
+}
+
+/**
  * Export all claim verifications to JSON for the web frontend.
  *
  * @param {object} vdb - verification DB module (must have getAllVerifications())
@@ -31,18 +48,20 @@ function filterStableUrls(urls) {
 async function exportVerificationData(vdb, exportPath) {
   try {
     const all = await Promise.resolve(vdb.getAllVerifications());
-    const stats = { total: all.length, supported: 0, refuted: 0, contested: 0, unverified: 0, expired: 0 };
-    for (const c of all) { stats[c.status] = (stats[c.status] || 0) + 1; }
+    const visible = all.filter(c => !c.is_suppressed);
+    const stats = { total: visible.length, supported: 0, refuted: 0, contested: 0, unverified: 0, expired: 0 };
+    for (const c of visible) { stats[c.status] = (stats[c.status] || 0) + 1; }
 
     const exportData = {
       generated_at: new Date().toISOString(),
       stats,
-      claims: all.map(c => {
+      claims: visible.map(c => {
         const claim = {
           claim_id:           c.claim_id,
           claim_text:         c.claim_text,
           status:             c.status,
           confidence_score:   c.confidence_score,
+          display_score:      Math.round(computeDisplayScore(c) * 1000) / 1000,
           scoring_breakdown:  c.scoring_breakdown,
           source_handle:      c.source_handle,
           source_tier:        c.source_tier,
@@ -88,7 +107,8 @@ async function exportVerificationData(vdb, exportPath) {
     };
 
     fs.writeFileSync(exportPath, JSON.stringify(exportData, null, 2), 'utf-8');
-    log(`exported ${stats.total} claims`);
+    const suppressed = all.length - visible.length;
+    log(`exported ${stats.total} claims (${suppressed} suppressed)`);
   } catch (err) {
     log(`error: ${err.message}`);
   }

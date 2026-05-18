@@ -58,6 +58,7 @@ export interface VerifiedClaim {
   claim_text: string;
   status: "supported" | "refuted" | "contested" | "unverified" | "expired";
   confidence_score: number;
+  display_score?: number;
   scoring_breakdown: ScoringBreakdown;
   source_handle: string | null;
   source_tier: number | null;
