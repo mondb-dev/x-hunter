@@ -19,6 +19,7 @@ const STATE = path.join(ROOT, 'state');
 
 const ACTIVE_PLAN_PATH    = path.join(STATE, 'active_plan.json');
 const SPRINT_CONTEXT_PATH = path.join(STATE, 'sprint_context.txt');
+const SPRINT_SNAPSHOT_PATH = path.join(STATE, 'sprint_snapshot.json');
 
 function today() { return new Date().toISOString().slice(0, 10); }
 
@@ -52,7 +53,22 @@ async function main() {
   }
   await sprintDb.close();
 
-  // 3. Clear sprint context
+  // 3. Patch sprint_snapshot.json so the web reflects completed status immediately
+  if (fs.existsSync(SPRINT_SNAPSHOT_PATH)) {
+    try {
+      const snap = JSON.parse(fs.readFileSync(SPRINT_SNAPSHOT_PATH, 'utf-8'));
+      snap.plan_status  = 'completed';
+      snap.current_week = null;
+      snap.current_goal = null;
+      snap.current_tasks = [];
+      fs.writeFileSync(SPRINT_SNAPSHOT_PATH, JSON.stringify(snap, null, 2));
+      console.log('[close_expired_plan] sprint_snapshot.json → plan_status: completed');
+    } catch (err) {
+      console.warn(`[close_expired_plan] sprint_snapshot patch warning: ${err.message}`);
+    }
+  }
+
+  // 4. Clear sprint context
   fs.writeFileSync(SPRINT_CONTEXT_PATH, '(no active plan)');
   console.log('[close_expired_plan] sprint_context.txt cleared');
 
