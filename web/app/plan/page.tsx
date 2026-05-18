@@ -19,7 +19,8 @@ function statusClass(status: string): string {
   return "plan-pending";
 }
 
-function daysRemaining(target: string | null): string {
+function daysRemaining(target: string | null, planStatus?: string): string {
+  if (planStatus === "completed" || planStatus === "expired") return "completed";
   if (!target) return "—";
   const diff = Math.ceil(
     (new Date(target).getTime() - Date.now()) / (1000 * 60 * 60 * 24)
@@ -84,7 +85,7 @@ export default async function PlanPage() {
       {/* Stats bar */}
       <div className="about-stats">
         <div className="about-stat">
-          <span className="about-stat-val">{daysRemaining(targetEnd)}</span>
+          <span className="about-stat-val">{daysRemaining(targetEnd, status)}</span>
           <span className="about-stat-key">remaining</span>
         </div>
         <div className="about-stat">
