@@ -52,7 +52,7 @@ nav {
   padding: 1rem 2rem;
   border-bottom: 1px solid #2a2d30;
   font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
-  position: relative; z-index: 5;
+  position: sticky; top: 0; z-index: 10;
   background: #0d0f10;
 }
 nav a { color: #9baab8; }
