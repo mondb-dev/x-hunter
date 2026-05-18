@@ -97,13 +97,20 @@ function loadAxes() {
 
 // ── Check trigger conditions ──────────────────────────────────────────────────
 function checkTrigger(axes, ponderState) {
-  // Suppress while an active plan is in progress — let Sebastian focus
+  // Suppress while an active plan is in progress — let Sebastian focus.
+  // Exception: if the 30-day window has expired, close the plan and allow pondering.
   const activePlan = loadJson(ACTIVE_PLAN);
   if (activePlan && activePlan.status === "active") {
     const activated = activePlan.activated_date;
     const daysSince = activated ? daysBetween(activated, today()) : 0;
-    console.log(`[ponder] active plan "${activePlan.title}" in progress (${daysSince}d) — suppressing ponder`);
-    return { fire: false, reason: "active_plan_in_progress", qualifying: [] };
+
+    if (daysSince >= 30) {
+      console.log(`[ponder] active plan "${activePlan.title}" expired (${daysSince}d) — closing and allowing ponder`);
+      saveJson(ACTIVE_PLAN, { ...activePlan, status: "expired", expired_date: today() });
+    } else {
+      console.log(`[ponder] active plan "${activePlan.title}" in progress (${daysSince}d) — suppressing ponder`);
+      return { fire: false, reason: "active_plan_in_progress", qualifying: [] };
+    }
   }
 
   const qualifying = axes.filter(
