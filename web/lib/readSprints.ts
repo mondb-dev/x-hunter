@@ -61,10 +61,23 @@ export interface ActivePlan {
   };
 }
 
+export interface ProposedPlan {
+  id: string;
+  title: string;
+  action_type: string;
+  compulsion: string;
+  brief: string | null;
+  success_30d: string;
+  belief_axes: string[];
+  status: string;
+  created: string;
+}
+
 // ── Readers ───────────────────────────────────────────────────────────────────
 
-const SNAPSHOT_PATH = path.join(DATA_ROOT, "state/sprint_snapshot.json");
-const PLAN_PATH = path.join(DATA_ROOT, "state/active_plan.json");
+const SNAPSHOT_PATH    = path.join(DATA_ROOT, "state/sprint_snapshot.json");
+const PLAN_PATH        = path.join(DATA_ROOT, "state/active_plan.json");
+const ACTION_PLANS_PATH = path.join(DATA_ROOT, "state/action_plans.json");
 
 const EMPTY_SNAPSHOT: SprintSnapshot = {
   plan_id: "",
@@ -102,5 +115,16 @@ export function readActivePlan(): ActivePlan | null {
     return JSON.parse(raw) as ActivePlan;
   } catch {
     return null;
+  }
+}
+
+export function readProposedPlans(): ProposedPlan[] {
+  try {
+    const raw = fs.readFileSync(ACTION_PLANS_PATH, "utf-8");
+    if (!raw.trim()) return [];
+    const all = JSON.parse(raw) as ProposedPlan[];
+    return all.filter((p) => p.status === "proposed");
+  } catch {
+    return [];
   }
 }

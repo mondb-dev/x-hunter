@@ -1,4 +1,4 @@
-import { readSprintSnapshot, readActivePlan } from "@/lib/readSprints";
+import { readSprintSnapshot, readActivePlan, readProposedPlans } from "@/lib/readSprints";
 
 export const dynamic = "force-dynamic";
 
@@ -33,6 +33,7 @@ function daysRemaining(target: string | null, planStatus?: string): string {
 export default async function PlanPage() {
   const snapshot = readSprintSnapshot();
   const plan = readActivePlan();
+  const proposed = readProposedPlans();
 
   const hasData = snapshot.plan_status !== "none" && snapshot.plan_title;
 
@@ -204,6 +205,33 @@ export default async function PlanPage() {
               </li>
             ))}
           </ul>
+        </div>
+      )}
+
+      {/* Proposed plans pending decision */}
+      {proposed.length > 0 && (
+        <div className="plan-section">
+          <h2 className="plan-section-title">Proposed — Pending Decision</h2>
+          <p style={{ color: "var(--muted)", fontSize: "13px", marginBottom: "1rem" }}>
+            {proposed.length} plan{proposed.length !== 1 ? "s" : ""} proposed from the latest ponder, awaiting deep-dive and decision.
+          </p>
+          <div className="plan-timeline">
+            {proposed.map((p) => (
+              <div key={p.id} className="plan-sprint-card plan-pending">
+                <div className="plan-sprint-header">
+                  <span className="plan-sprint-week">○ {p.title}</span>
+                  <span className="plan-sprint-progress" style={{ fontSize: "11px", opacity: 0.7 }}>{p.action_type}</span>
+                </div>
+                <p className="plan-sprint-goal" style={{ fontStyle: "italic" }}>{p.compulsion}</p>
+                {p.brief && <p className="plan-sprint-goal" style={{ marginTop: "0.4rem" }}>{p.brief}</p>}
+                {p.success_30d && (
+                  <p className="plan-sprint-goal" style={{ marginTop: "0.3rem", color: "var(--muted)", fontSize: "12px" }}>
+                    Success: {p.success_30d}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       )}
 
