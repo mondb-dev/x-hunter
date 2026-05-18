@@ -1,21 +1,25 @@
 {
-  "id": "proposal_narrative_data_access_module_1715830140000",
+  "id": "proposal_geopolitical_claim_validation_1778996381817",
   "status": "failed",
-  "title": "Develop 'X Search Result Extraction and Analysis Module'",
-  "problem": "Recurring technical inability to extract content from X search results, which directly impacts the capacity to track, analyze, and dissect specific narratives (e.g., 'New World Order', 'national sovereignty vs. global governance') and identify manipulation. This hinders the ability to gather primary evidence for belief formation and article generation.",
+  "title": "Develop 'Geopolitical Claim Validation & Contextualization Module'",
+  "problem": "The agent consistently observes the rapid dissemination of unverified or speculative geopolitical claims (e.g., 'explosion in Israel,' 'mushroom cloud,' 'nuclear warhead' speculation) that challenge epistemic integrity and influence public discourse. Current tools can identify narrative manipulation but lack a structured framework to immediately validate, contextualize, or cross-reference these claims against credible sources or historical patterns of misinformation. This results in observations of 'vulnerability of public discourse to sensationalism' without a direct mechanism to address it.",
   "evidence": [
-    "2026-05-15 h18: 'My attempt to gather evidence for the \"New World Order\" discourse... was effectively blocked. This technical limitation directly impacts my capacity to track narratives and identify manipulation... Without reliable access to the raw discourse, my ability to dissect strategic narratives and expose abuses of power is compromised.'"
+    "2026-05-16 h21: 'rapid dissemination of reports about an \"explosion in Israel\" and speculative \"mushroom cloud\" without immediate corroboration highlights the vulnerability of public discourse to sensationalism and geopolitical posturing.'",
+    "2026-05-17 h02: 'A particularly striking post highlighted a large explosion in Beit Shemesh, with a user speculating about Israel's nuclear warheads being stored there.'",
+    "2026-05-17 h03: 'The most striking example was the reported explosion in Beit Shemesh, with Hebrew media alleging it occurred at a \"sensitive facility\" and that the Israeli military prevented emergency crews from accessing the area.'",
+    "2026-05-16 h22: 'The immediate spread of sensational, unconfirmed reports, particularly in geopolitical contexts, is a significant concern.'"
   ],
-  "proposed_solution": "Build a module that can reliably extract and parse content from X search results for specified keywords or hashtags. This module should provide structured data (e.g., tweet text, author, timestamp, engagement metrics) that can then be fed into existing narrative analysis frameworks. This would involve robust error handling for API limitations or rate limits.",
+  "proposed_solution": "Build a module that, upon detecting a breaking geopolitical claim, automatically triggers a set of actions: 1) Cross-reference claim against a curated list of established, high-credibility news sources and international bodies (e.g., UN, IAEA, major wire services). 2) Search for official statements or denials from relevant state actors. 3) Analyze the historical context of similar claims/events. 4) Flag instances where claims lack corroboration or are directly contradicted. This module should output a 'verification confidence score' and a summary of corroborating/contradicting evidence, which can then be used to inform belief state updates and article generation.",
   "affected_files": [
     "runner/lib/agent_tools.js",
-    "runner/tools/x_search_tool.js",
-    "runner/pipeline_config.js",
-    "runner/data_ingestion_pipeline.js"
+    "runner/lib/agent.js",
+    "runner/data/credible_sources.json",
+    "runner/modules/geopolitical_validation.js",
+    "runner/prompt_templates/reflection_prompt.js"
   ],
   "scope": "pipeline",
   "estimated_risk": "medium",
-  "created_at": "2026-05-16T05:09:01.535Z",
-  "resolved_at": "2026-05-16T06:00:35.201Z",
-  "resolution": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after"
+  "created_at": "2026-05-17T05:39:41.769Z",
+  "resolved_at": "2026-05-17T06:30:42.173Z",
+  "resolution": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"TOOL_DECLARATIONS\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"TOOL_EXECUTORS\" was exported before but is missing after"
 }

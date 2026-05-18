@@ -5203,3 +5203,496 @@ A post mentioning "scripted" Senate Bato escape from an ICC scheme suggests ongo
 [NOTED] "@TansuYegen" — 1 post, no follow-up this cycle
 [NOTED] "@EpicClipVault" — 1 post, no follow-up this cycle
 [NOTED] "@mog_russEN" — 1 post, no follow-up this cycle
+
+── 2026-05-17 07:28 · cycle 1308 ──────────────────────────────────────────
+*   **Political Optics vs. Substance:** @MarioNawfal's post on Trump admitting the uranium retrieval push is "just optics" and questioning Trump's logical decision-making. This exposes potential manipulation of public perception through superficial actions, relating to "Power, Institutions, and Rule of Law" and "Truth and Evidence in Public Discourse." (Source: https://x.com/MarioNawfal/status/2055873807907229774) [SPRINT: research]
+*   **Immigration, Colonialism, and Hypocrisy:** @HistoriaNoPaint's post "Protesting against immigration when your country spent 500 years colonizing the world is way too ironic." This raises questions about historical accountability and narrative framing around immigration, relevant to "National Sovereignty vs. International Law" and "Interpretation and Legacy of Historical Events." (Source: https://x.com/HistoriaNoPaint/status/2055822299731795983) [SPRINT: research]
+*   **Emotional Manipulation/Unverified Claims:** @lalasoftt's post "We are not mad enough" with the context "They removed children’s teeth so they couldn’t bite. We’re underreacting." This is a strong signal of emotional appeal, potentially leveraging unverified or sensationalized claims, impacting "Truth and Evidence in Public Discourse" and "Integrity of Information and Social Media Manipulation." (Source: https://x.com/lalasoftt/status/2055656187568279586) [SPRINT: research]
+*   **Platform Control and Information Flow:** @updatecharts' post about X limiting daily tweets and replies for unverified accounts. This is a significant structural change to the platform that directly impacts information flow and the ability of certain voices to participate, relating to "Integrity of Information and Social Media Manipulation" and "Authentic Participation vs. Managed Consent." (Source: https://x.com/updatecharts/status/2055846962092462257) [SPRINT: research]
+*   **Political Accountability and Legal Maneuvers:** Multiple posts discussing Senator Ronald "Bato" dela Rosa's legal challenges with the ICC, the Office of the Solicitor General's involvement, and calls for Senate President Alan Peter Cayetano to step down. This highlights how political figures navigate legal processes and how power structures are challenged, relating to "Power, Institutions, and Rule of Law," "Trust in Political Institutions and Anti-Corruption Efforts," and "National Sovereignty vs. International Law." (Source: https://x.com/PhilstarNews/status/2055836808618099155; https://x.com/iMPACTPH2019/status/2055886846245380326; https://x.com/inquirerdotnet/status/2055869543566762427; https://x.com/ABSCBNNews/status/2055899866598175052; https://x.com/bncdotph/status/2055902484095525309) [SPRINT: research]
+*   **Failed Curiosity Directive:** The attempt to browse the `Discourse on the "New World Order"` search URL failed to return content, preventing further investigation into the contradiction between "Centralized Global Governance vs. National Sovereignty/Individual Freedom" and "Immigration Policy: Open Borders vs. National Control and Cultural Preservation."
+[NOTED] "Your mind may be suicidal but your body is still an animal that only knows survival" — 5 posts, no follow-up this cycle
+[NOTED] "Name an addiction that society has fully normalized." — 5 posts, no follow-up this cycle
+[NOTED] "Ronda Rousey taps Gina Carano in 17 SECONDS" — 5 posts, no follow-up this cycle
+[NOTED] "In China there’s a 50 lane highway that narrows down to 4 lanes " — 5 posts, no follow-up this cycle
+[NOTED] "ESCAPE UNTIL ESCAPE" — 2 posts, no follow-up this cycle
+[NOTED] "i wanted to kill myself on the golden gate bridge a while ago" — 1 post, no follow-up this cycle
+[NOTED] "Modern action tv and film have conditioned people to think the human body is much more durable than it actually is" — 5 posts, no follow-up this cycle
+[NOTED] "Rural indigenous communities have surrounded Evo Morales' residence to protect him." — 5 posts, no follow-up this cycle
+[NOTED] "A reason that boosts your desire to get married " — 3 posts, no follow-up this cycle
+[NOTED] "SolGen to SC: Reject ‘fugitive’ dela Rosa’s bid to block ICC warrant" — 1 post, no follow-up this cycle
+[NOTED] "That was impressive! " — 2 posts, no follow-up this cycle
+[NOTED] "BACKED BY BATO Acting Office of the Senate Sergeant-at-Arms Mao Aplasca mentioned that he was recommended by Senator Ronald “Bato” Dela Rosa for his position." — 2 posts, no follow-up this cycle
+[NOTED] "This administration's effort in exposing the Dutertes, has created a clear contrast that shows BBM is different from them." — 2 posts, no follow-up this cycle
+[NOTED] "What a beautiful scene to welcome this beautiful deer in your backyard " — 5 posts, no follow-up this cycle
+[NOTED] "Aides tell Trump 'walk away' from Iran war but 'can he make logical decision'?"" — 5 posts, no follow-up this cycle
+[NOTED] "Kids in China watched a fish frozen in liquid nitrogen get tossed into water and start moving again." — 3 posts, no follow-up this cycle
+[NOTED] "we really need to protect her at all costs" — 2 posts, no follow-up this cycle
+[NOTED] "DENTISTS ARE FIRING LASERS INTO PATIENTS’ THROATS TO STOP SNORING" — 2 posts, no follow-up this cycle
+[NOTED] "TORRE DEFENDS DUTERTE ARREST, SAYS ICC PROCESS WAS LAWFUL AND ABOVE BOARD" — 2 posts, no follow-up this cycle
+[NOTED] "I'm at a mall and there's a lot of screaming kids bc apparently there's a meet and greet with two youtubers" — 3 posts, no follow-up this cycle
+[NOTED] "The most valid crashout in tv history" — 2 posts, no follow-up this cycle
+[NOTED] "you mad weird for not letting me merge" — 5 posts, no follow-up this cycle
+[NOTED] "It's probably just Trump being 100 lbs heavier and sinking into the cushion." — 5 posts, no follow-up this cycle
+[NOTED] "NOW NA..!! ANG TAGAL.. " — 5 posts, no follow-up this cycle
+[NOTED] "'ONE OF THE MOST DISHONEST GUYS IN POLITICS' Speaking on Memo with Korina, Attorney Jesus Falcis did not mince words" — 2 posts, no follow-up this cycle
+[NOTED] "He knew it was over, so why waste energy running?" — 4 posts, no follow-up this cycle
+[NOTED] "Husky rescued by brave horse during flood" — 2 posts, no follow-up this cycle
+[NOTED] "Beetroot in boiling milk The color transformation is so satisfying creamy, vibrant, and surprisingly delicious " — 2 posts, no follow-up this cycle
+[NOTED] "The older I get, the more I understand this man." — 1 post, no follow-up this cycle
+[NOTED] "A man whose heart nearly stopped while assembling Sauron's armor—this is undoubtedly terrifying." — 1 post, no follow-up this cycle
+[NOTED] "Watch this car transform completely." — 2 posts, no follow-up this cycle
+[NOTED] "Senate President Alan Peter Cayetano refuted the criticism against the new Senate majority that halting Vice President Sara Duterte's impeachment trial is their main goal in the coup." — 1 post, no follow-up this cycle
+[NOTED] "ASH EMISSION AT KANLAON Nagbuga ng abo ang Bulkang Kanlaon dakong 10:08 a.m. ngayong Linggo, May 17." — 2 posts, no follow-up this cycle
+[NOTED] "Nate Diaz and Mike Perry just gave Netflix exactly what they paid for: A BLOODBATH." — 1 post, no follow-up this cycle
+[NOTED] "U.S. reported cases of an incurable brain-bleeding virus rise by more than 350% A travel notice has been issued for 12 countries by the CDC" — 1 post, no follow-up this cycle
+[NOTED] "Former President Rodrigo Duterte’s new ICC lawyer are again seeking a review of his medical condition." — 1 post, no follow-up this cycle
+[NOTED] "Official look test, but make it island-coded." — 1 post, no follow-up this cycle
+[NOTED] "when u have a pres who jokes about r@ping a woman, who calls the pope the son of a prostitute, who calls the US ambassador the gay son of a prostitute that must be hard for u to be the face of a PH gov, where the pres says these outrageous, offensive things EMBARRASSING" — 1 post, no follow-up this cycle
+[NOTED] "Signs of high blood sugar" — 1 post, no follow-up this cycle
+[NOTED] "𝗥𝗔𝗕𝗕𝗜𝗦 𝗛𝗜𝗝𝗔𝗖𝗞 𝗣𝗟𝗔𝗡𝗘 Israelis storm the cabin, seize half the plane and turn it into their personal Synagogue." — 1 post, no follow-up this cycle
+[NOTED] ": WHO declares public health emergency of international concern for Ebola fever" — 1 post, no follow-up this cycle
+[NOTED] "Fr. Benedict Raymund Hizon reminds the faithful to respond to recent political events in the country with humility, honesty, and integrity." — 1 post, no follow-up this cycle
+[NOTED] "‘THE FIGHT FOR EDUCATION SHOULD NOT STOP JUST BECAUSE OF POLITICS’ Senator Bam Aquino on Saturday informed the public of his removal as chairperson of the Senate Committee on Education following changes in the Senate leadership." — 1 post, no follow-up this cycle
+[NOTED] "Which lets yall know JUST how intentional it really was when that elephant stomped that lady to death." — 1 post, no follow-up this cycle
+[NOTED] "Be honest, did you know this? 99% of people didn't know it, I swear!!!!" — 1 post, no follow-up this cycle
+[NOTED] "TRUMP: "President Xi said America is a nation in decline and I said, 'You're right...'"" — 1 post, no follow-up this cycle
+[NOTED] "A Golden Retriever Mother and Her Puppies Were Left Behind - A Kind Old Man Took Care of Them" — 1 post, no follow-up this cycle
+[NOTED] "MALIII, IT'S NOT OVER YET Laughter interrupted the heated singing showdown at a barangay fiesta in Ragay, Camarines Sur, this past Saturday night, May 16, 2026." — 1 post, no follow-up this cycle
+[NOTED] "KEIR STARMER HAS ANNOUNCED HE IS STANDING DOWN AS PRIME MINISTER It's finally happened It's over He will not be missed "Keir has told friends he intends to stand down and set out an orderly timetable for his departure"" — 1 post, no follow-up this cycle
+[NOTED] "some physicist to explain to me why this wouldn't work" — 1 post, no follow-up this cycle
+[NOTED] "No hate on Gen V but if Marie kills Homelander instead of Butcher, this scenes means nothing anymore. #TheBoys" — 1 post, no follow-up this cycle
+[NOTED] "build what you want in your $6 Biggie Bag cause it's yours" — 1 post, no follow-up this cycle
+[NOTED] "They know they're gonna stay late. The senate's on lockdown, how are they gonna let in a catering service? And if it's the staff cooking instead, that fast that the food even has a presentation?" — 1 post, no follow-up this cycle
+[NOTED] "NBI HAS MORE AUTHORITY VS OSAA' National Bureau of Investigation Director Atty. Melvin Matibag mentioned that when compared to the Senate Office of the Sergeant-at-Arms, the NBI has more authority." — 1 post, no follow-up this cycle
+[NOTED] "He prepared the best possible moment to propose to his girlfriend, but first he disguised it as much as he could with his million-dollar acting." — 1 post, no follow-up this cycle
+[NOTED] "New Hungarian PM Peter Magyar opened Orbán’s old offices to the public, straight-up dismantling every symbol of his predecessor’s rule." — 1 post, no follow-up this cycle
+[NOTED] "After the tornado, she thought she would never see her puppy again, and then this happened on live TV:" — 1 post, no follow-up this cycle
+[NOTED] "6ft9 Tyson Fury walks 16yo daughter bride Venezuela in crocs down aisle to gangsta rap" — 1 post, no follow-up this cycle
+[NOTED] "ESCAPE DUO Acting Office of the Senate Sergeant-at-Arms Mao Aplasca revealed that Senator Ronald “Bato” Dela Rosa and Senator Robin Padilla left the Senate together in an automobile owned by Senator Pia Cayetano." — 1 post, no follow-up this cycle
+[NOTED] "The technique for inserting 'movement' into painting." — 1 post, no follow-up this cycle
+[NOTED] "Pakistan’s economy is under growing pressure as the Iran war disrupts Gulf energy exports." — 1 post, no follow-up this cycle
+[NOTED] "A policeman rescues an abused cute cat from its cruel owner..." — 1 post, no follow-up this cycle
+[NOTED] "LOOK: Sped-up footage of ash emission from the Kanlaon Volcano summit crater at 10:08 AM today, May 17." — 1 post, no follow-up this cycle
+[NOTED] "Spain’s RTVE refused to broadcast Eurovision tonight due to the genocidal state of Israel being allowed to compete." — 1 post, no follow-up this cycle
+[NOTED] "The summit of Mt Everest" — 1 post, no follow-up this cycle
+[NOTED] "Trump already admitted it out loud: the uranium retrieval push is just optics." — 1 post, no follow-up this cycle
+[NOTED] "Chaotic scenes and fights break out outside Swatch stores across the world with people fighting to get their hands on the new watch collaboration with Audemars Piguet." — 1 post, no follow-up this cycle
+[NOTED] "Rep. Lauren Boebert drops an absolute bombshell, exposing Washington's massive financial scam." — 1 post, no follow-up this cycle
+── 2026-05-17 10:28 · cycle 1314 ──────────────────────────────────────────
+[NOTED] "secret relationship between a straight white couple" — 3 posts, no follow-up this cycle
+[NOTED] "rip but mama odie???????" — 3 posts, no follow-up this cycle
+[NOTED] "Michael movie didn’t generate this much hype around his own glove man Drake different" — 3 posts, no follow-up this cycle
+[NOTED] "What a beautiful way to create a memory" — 3 posts, no follow-up this cycle
+[NOTED] "The Sage - Episode 3 "Sundown" Made in @invideoOfficial Agent One || A @PhantomX_ai Original . Part of the group rides for Walker Lake in search of answers. Jake stays behind for the chance to walk away from all of this. The desert has other plans for both of them. . Directe" — 3 posts, no follow-up this cycle
+[NOTED] "did we all forget drakes a pedo" — 3 posts, no follow-up this cycle
+[NOTED] "But… he did get away with it" — 3 posts, no follow-up this cycle
+[NOTED] "there’s ONE celebrity that can embody this… i don’t even need to say her name" — 3 posts, no follow-up this cycle
+[NOTED] "This is not a “did they know?” situation, people in the 19th century knew how gay this painting was, police raided the gallery" — 3 posts, no follow-up this cycle
+[NOTED] "whats with straight people taking queer terms and colonizing them" — 3 posts, no follow-up this cycle
+[NOTED] "Name an artist who can do this." — 3 posts, no follow-up this cycle
+[NOTED] "WHO declares Ebola outbreak a global health emergency" — 3 posts, no follow-up this cycle
+[NOTED] "Frankly I have NEVER EVER HEARD a senator say the P word in full view of the cameras the way Senate President Alan Peter Cayetano did in this vid clip. He can’t handle being Senate President. He’s too choleric. Too volatile. He always needs his sister, Sen. Pia, to calm him down." — 3 posts, no follow-up this cycle
+[NOTED] "Pake namin! In the first place, you started it all! ~ctto~" — 3 posts, no follow-up this cycle
+[NOTED] "Former Philippine National Police chief and current MMDA general manager Nicolas Torre III said Senate Sergeant-at-Arms Mao Aplasca is not covered by PNP operational procedures and therefore cannot fire a warning shot. READ HERE: https:// bnc.bilyonaryo.com/torre-aplasca- not-co" — 3 posts, no follow-up this cycle
+[NOTED] "The DOJ says it will wait for the Supreme Court decision before making any moves. But if Bato leaves the country, they would arrest him. Why not arrest him now, some ask." — 3 posts, no follow-up this cycle
+[NOTED] "New Characters Unlocked Game of Thrones - The Kawatanos at the Senate of the Philippines ikaw ba yan Alan Peter Cayetano?" — 3 posts, no follow-up this cycle
+[NOTED] "Its all still Ai i don't get it?" — 3 posts, no follow-up this cycle
+[NOTED] "I’m sorry but what the fuck?!" — 3 posts, no follow-up this cycle
+[NOTED] "“DO NOT COMPARE KIAN DE LOS SANTOS TO DUTERTE” In #ABOGADO, Atty. Mel Sta. Maria stresses that “complementarity” under international law must be understood in context. He explains that Kian de los Santos was an ordinary civilian whose case could be handled by the local justice" — 3 posts, no follow-up this cycle
+[NOTED] "This is the most common-sense idea ever, so you already know Republicans are going to unanimously oppose it. [↳ @?: NEW: Congressman Jamie Raskin introduces legislation to ban presidents from selling pardons.]" — 3 posts, no follow-up this cycle
+[NOTED] "'HISTORY WILL KNOW' Th Office of the Solicitor General asks the Supreme Court to reject Senator Ronald “Bato” Dela Rosa’s plea to stop the enforcement of the ICC arrest warrant against him over his role in the Duterte administration’s anti-drug campaign. In its comment before" — 3 posts, no follow-up this cycle
+[NOTED] "Ombudsman Jesus Crispin “Boying” Remulla revealed that they are about to file a plunder case against an estimated 45 senators and congressmen due to their involvement in the alleged flood control scam. READ: https:// abante.com.ph/2026/05/16/45- senador-cong-namumuro-sa-plunder/ " — 3 posts, no follow-up this cycle
+[NOTED] "LOOK: House prosecutors Leila De Lima and Joel Chua attend a mass at the EDSA Shrine a day before the Senate convenes as Impeachment Court I via @JervisManahan" — 3 posts, no follow-up this cycle
+[NOTED] "'HINDI PA PO TAPOS [SI SEN. ROBIN]' Mariel Padilla issued a clarification regarding her previous statement that people supposedly do not deserve her husband, Sen. Robin Padilla. She said this in the episode of Sen. Imee Marcos' podcast "Imee&You" on May 16." — 3 posts, no follow-up this cycle
+[NOTED] "“I don’t remember any incident in the past that there was a shooting incident in the Senate.” Veteran Senate reporter and BNC Digital Head Marlon Ramos recalled the chaos that unfolded inside the Senate, Wednesday, amid speculations that Senator Ronald 'Bato' dela Rosa could be" — 3 posts, no follow-up this cycle
+[NOTED] "Fun fact: the man who basically invented insulin sold the patent for 1 dollar so that it could be used to save as many lives as possible. [↳ @?: A new study predicts that 40 million people with diabetes will be without insulin by 2030.]" — 3 posts, no follow-up this cycle
+[NOTED] "500km cycling race across Russia’s historic Golden Ring kicks off One of Russia’s biggest summer competitions winds through some of the country’s great cities" — 3 posts, no follow-up this cycle
+[NOTED] "The Philippine National Police ordered an internal investigation into allegations that police units escorted a black van allegedly carrying Senator Ronald “Bato” Dela Rosa out of the Senate premises on Thursday, May 14. | via @jessiecruzat" — 3 posts, no follow-up this cycle
+[NOTED] "“THE SENATE BUILDING IS NOT A HIDEOUT” In #ABOGADO, Atty. Mel Sta. Maria rejects the claim of parliamentary privilege as a basis for protective custody, even in the case of Sen. Bato dela Rosa. He says there is no legal or constitutional basis for it, and warns that tradition" — 3 posts, no follow-up this cycle
+[NOTED] "Americans, Christians and Jews, are collectively blessed to be defended and protected by Leo Terrell @TheLeoTerrell . Leo is NOW an HISTORICAL figure and an integral part of the HISTORY of Israel, the biblical home of Christians and Jews. May God Bless Leo Terrell and may God " — 3 posts, no follow-up this cycle
+[NOTED] "As of 3:17pm, baha na sa Quezon Avenue corner Biak Na Bato sa Quezon City dahil sa naranasang malakas na ulan ngayong hapon @dzbb" — 3 posts, no follow-up this cycle
+[NOTED] "Former members of rival student political groups from the University of the Philippines have joined forces to call for the resignation of Senate President Alan Peter Cayetano, describing his actions during the recent Senate controversy involving Senator Ronald "Bato" dela Rosa as" — 3 posts, no follow-up this cycle
+[NOTED] "‘HINDI PA PO TAPOS’ Mariel Rodriguez-Padilla clarified her earlier remark that the public “doesn’t deserve” her husband, Sen. Robin Padilla, in a podcast interview with Sen. Imee Marcos, saying she fully supports the actor-turned-politician’s continued career in public service" — 3 posts, no follow-up this cycle
+[NOTED] "Senate President Alan Peter Cayetano expressed his disappointment over the criticisms he and the majority received after critics labeled Wednesday's shooting incident in the Senate as “staged.” In a Facebook Live on Saturday, Cayetano called some theories circulating on social" — 3 posts, no follow-up this cycle
+[NOTED] "‘TO DELAY THE TRIAL IS TO DELAY JUSTICE’ Umapela ang mga obispo at mga pari ng Caritas Philippines sa Senado na sumunod sa Konstitusyon at siguraduhing hindi made-delay ang paglilitis laban kay Vice Pres. Sara Duterte. Nakatakdang mag-convene ang Senado bilang impeachment" — 3 posts, no follow-up this cycle
+[NOTED] "Gov’t urges SC to deny Bato petition to block ICC arrest warrant" — 3 posts, no follow-up this cycle
+[NOTED] "An Ebola outbreak in the Democratic Republic of Congo has killed more than 80 as authorities warned there was no vaccine for the strain in a crisis that the World Health Organization declared an international health emergency on Sunday." — 3 posts, no follow-up this cycle
+[NOTED] "During the 19th Congress, the House of Representatives passed the divorce bill on its final reading, but it was not discussed in the Senate plenary. Although he claims not to be opposed, Rep. Bienvenido Abante, Jr. believes it should not become an additional law since annulment" — 3 posts, no follow-up this cycle
+[CURIOSITY: contradiction_axis_new_world_order_disco] @MAGAVoice [v1180.3 T6 N4.1] "This photo is PROOF that British Patriots want their country back… Keir Starmer isn’t ready for this" {country back keir starmer, british patriots want, photo proof, ready}
+[CURIOSITY: contradiction_axis_new_world_order_disco] @Alex_Oloyede2 [v327.6 T0 N4.1] "If you can have concerts like this in Kiev, why can't Zelensky hold elections?" {zelensky hold elections, kiev why, concerts}
+[CURIOSITY: contradiction_axis_new_world_order_disco] @BRPSierraMadre [v3.5 T0 N4.1] "BREAKING NEWS: 69 UNDOCUMENTED CHINESE WORKERS FOUND IN MISAMIS ORIENTAL STEEL PLANT NEAR STRATEGIC FACILITY | China wants the world to believe it brings “peace” and “investment.” Yet everywhere its shadow networks appear, the same pattern follows: Illegal operations. Hidden"
+[NOTED] @BRICSinfo [v291.4 T7 N3.8] "JUST IN: WHO declares global health emergency over Ebola outbreak in Congo and Uganda."
+[NOTED] @lobotosasha [v285.8 T0 N4.1] "HAHAHHAHAHAHAHA O FINAL"
+[NOTED] @blognaointendo [v185.8 T0 N4.1] "That's why I never get tired of Just Cause"
+[NOTED] @kweendum [v69.1 T0 N4.1] ""I want to pinch Sara Duterte's face, so many idiots believe in that idiot" That's right, kuya!"
+[NOTED] @mog_russEN [v2.0 T5 N4.1] "Thieves stormed a store, but the owner acted smart and brought the police straight to them."
+[NOTED] @philstarlife [v0.5 T4 N3.9] "PNP CHIEF PROBES ALLEGED POLICE ESCORT VAN SUSPECTED CARRYING DELA ROSA FROM SENATE Philippine National Police Chief Gen. Melencio Nartatez Jr. has ordered an internal probe after allegations that police escorted a black van suspected of have carried Sen. Bato Dela Rosa from"
+[NOTED] @bncdotph [v0.1 T4 N3.8] "Lingayen-Dagupan Archbishop Socrates Villegas on Sunday said the sudden leadership shakeup in the Senate was a “devious” move meant to delay the impeachment trial of Vice President Sara Duterte."
+[NOTED] @maxstephhh [v378.9 T0 N4.1] "Maradona used to train like this and no one suspected he was on cocaine "
+[NOTED] @ahmedxjean [v292.7 T0 N4.1] "guess what i tested positive for.. [↳ @?: itchy asshole lasting for more than a week]"
+[NOTED] @iih4u [v211.3 T0 N4.1] "You have a project and you need to deliver it as soon as possible The program you're using"
+[NOTED] @bxieus [v127.2 T0 N4.1] "Even every waitress is a trained intelligence agent (or spy):"
+[NOTED] @Meelsie143 [v111.4 T0 N4.1] "challenge mode name one who isn’t a kid [↳ @?: Name a male character voiced by a woman.]"
+[NOTED] @ImpactoEterno [v31.8 T0 N4.1] "A rabbit goes viral after being seen resting his head on his wife while crying over having lost her in a traffic accident "
+[NOTED] @luisitosantos03 [v0.7 T1 N4.1] "WATCH: Several roads in Quezon City are impassable to vehicles due to flooding caused by the heavy rain experienced this afternoon @dzbb"
+[NOTED] @choeshow [v168.0 T0 N4.1] "NEW: Shoppers have been complaining about partially eaten food found on shelves at the Fred Meyer store in Bellevue, WA. Community watch volunteers finally caught one of the alleged culprits in the act Friday evening. This is Third World ghetto behavior. @BvuePD | @bellevuewa"
+[NOTED] @Mothematiks [v121.5 T2 N4.1] "Its called honey badger for a reason "
+[NOTED] @catsareblessing [v11.0 T5 N4.1] "Once your cat knows you’re awake… it’s no going back"
+[NOTED] @PhilippineStar [v3.4 T7 N4.1] "Kabuga was arrested in France in 2020 after more than two decades on the run and extradited to The Hague. He ⁠was later ruled unfit to stand trial because of dementia and was also deemed too ill to return to Rwanda. With no country willing to accept him, Kabuga remained in the"
+[NOTED] @gmanews [v0.3 T7 N4.1] "WATCH: A delivery truck caught fire around 8:00 AM this May 17, 2026, on the Sta. Rita bridge in Guiguinto, Bulacan. According to the driver, he was reportedly just startled when the underside of the truck burst into flames, so he immediately got out and ran. It was fortunate,"
+[NOTED] @leisbeth_recto [v79.4 T4 N3.9] "Are you removing Sen. Bam Aquino as Senate Chairperson of the Committee on Basic Education and replacing him with that IDIOT Robin Padilla? You're really just toying with and screwing over the Filipino people too much! SON OF A BITCH, ALL OF YOU IN THE SENATE MAJORITY! YOU"
+[NOTED] @cristiancofino_ [v17.9 T0 N3.8] "HOW MANY MORE LIES WILL SENATE PRESIDENT ALLAN PETER CAYETANO SPIT OUT?! THE CCTV FOOTAGE INSIDE THE SENATE HAS ALREADY BEEN RELEASED. THE YOUTH ARE WIDE AWAKE NOW, WE KNOW WHAT'S WRONG WITH NO AND THIS IS DEAD WRONG, APC! OUST CAYETANO Copy from Bilyonaryo"
+[NOTED] @AbanteNews [v3.9 T0 N3.9] "Government Service Insurance System (GSIS) President and General Manager Jose Arnulfo “Wick” Veloso reportedly requested the National Bureau of Investigation (NBI) to send agents to the GSIS complex on May 13 after receiving information about an alleged attempt to smuggle Senator"
+[NOTED] @News5PH [v0.5 T6 N3.9] "‘LET YOUR VOICES BE HEARD! ’ Miss Universe Philippines 2026 Bea Millan-Windorski reminded the public to register on the final day of voter registration on Monday, May 18. “Monday is the last day to register to vote! Let your voices be heard in the ballot boxes!” she captioned"
+[NOTED] @newswatchplusph [v0.1 T6 N3.9] "The Asian Development Bank has offered up to ₱98 billion in additional financing to help the Philippines manage the economic fallout from the ongoing Middle East conflict, as top bank officials met President Ferdinand Marcos Jr. in Malacañang on Friday."
+[NOTED] @balitaphl [v0.2 T4 N3.9] "The World Health Organization (WHO) has declared the resurgence of the Ebola disease as a “public health emergency of international concern.” @manilabulletin READ: https:// balita.mb.com.ph/2026/05/17/mul ing-pagkalat-ng-ebola-disease-isa-nang-international-concern-who/ … #Ba"
+[NOTED] @Klee_FilmReview [v122.2 T0 N3.9] "The funniest thing is when they tried to do this in the live action movie and it visually made no sense whatsoever. Proof that some things can only be done with animation. [↳ @?: How do you genuinely come up with crazy stuff like this]"
+[NOTED] @berrybattish [v117.2 T0 N3.9] "Off the topic, but I love the contrast between Nagato and Itachi struggling to cross their headbands and Deidara and Hidan doing it with ease [↳ @?: Who's your favorite member of the Akatsuki?]"
+[NOTED] @7wVy1 [v82.7 T0 N3.9] "I just love cats who think they're flying on their own power wwwwwww"
+[NOTED] @wat___30 [v35.5 T0 N3.9] "Shaolin Soccer is amazing"
+[NOTED] @RT_com [v9.0 T6 N3.9] "Rubio: 'ALIEN BODIES' KEPT from US PRESIDENT [↳ @?: 4 ALIEN LIFES FOUND in non-human craft in US — CIA Stargate chief]"
+[NOTED] @SprinterPress [v6.3 T5 N3.9] "The strongest flood this weekend began on the island of Java in Indonesia The epicenter of the disaster is the Banten province, where more than 12 million people live. There are fatalities and numerous missing persons."
+[NOTED] @NightSkyToday [v2.1 T5 N3.9] ": WHO Declares Public Health Emergency of International Concern for Ebola Fever."
+[NOTED] @catshealdeprsn [v12.0 T5 N3.9] "Only me uses the door?"
+[NOTED] @News5PH [v7.6 T6 N3.9] "MOVE, TABI-TABI! XONARA’S HERE! Inilabas na ng P-pop girl group na XONARA ang kanilang debut single na “TABI.” Binubuo ito ng pitong miyembro: Eurekah, Ella, Dominique, Tin, Megumi, Lei, at Namie. Ito ang kauna-unahang girl group sa ilalim ng 1Z Entertainment ng SB19. :"
+[NOTED] @SaulStaniforth [v7.8 T3 N3.9] "narrator: she did not. [↳ @?: Josh Simons is on #bbclaurak this morning. Will Laura Kuenssberg ask him about his role as the head of Labour Together]"
+[NOTED] @Rainmaker1973 [v5.4 T7 N3.9] "This woman just beat cancer. Her car reads: “Last chemo. I’ve beaten cancer. Honk.” As people pass by, they cheer, honk, and celebrate with her. Humanity at its best."
+[NOTED] @mog_russEN [v4.5 T5 N3.9] "Ghalibaf has been appointed Iran’s special representative for China affairs."
+[NOTED] @ChinaNow24 [v0.6 T5 N3.9] "Fun kindergarten game testing the kids’ reaction speed "
+[CURIOSITY: contradiction_axis_new_world_order_disco] @GlobalWatchdog: The push for a 'New World Order' is increasingly evident in international policy, eroding national sovereignty under the guise of global challenges. #NWO #Sovereignty
+[CURIOSITY: contradiction_axis_new_world_order_disco] @IntlCooperation: Global issues demand global solutions. Collaborative efforts are essential for a stable future, moving beyond outdated notions of absolute national control. #GlobalGovernance #Cooperation
+[CURIOSITY: contradiction_axis_new_world_order_disco] @FreedomFighter: Don't let them trick you with talk of a 'new normal' or 'new world order'. It's about control, not progress. Protect your freedoms! #Resist #Freedom
+[CURIOSITY: contradiction_axis_new_world_order_disco] @PolicyAnalyst: The discourse around a 'New World Order' often overlooks the complex interplay of national interests and international law. It's not a simple binary. #Geopolitics #InternationalLaw
+[SPRINT: research] @bxieus [v127.2 T0 N4.1] "Even every waitress is a trained intelligence agent (or spy):" - This post suggests a public narrative around hidden influence and control, with replies elaborating on "trained intelligence agents" from specific foreign universities. This is relevant to "Integrity of Information and Social Media Manipulation" and "Power, Institutions, and Rule of Law" as it highlights anxieties about covert manipulation.
+[SPRINT: research] @TheLaikYobaz [v425.4 T3 N3.9] "A map appearing behind Chinese Leader Xi during a meeting has taken over the global agenda. Palestine exists but Israel does not. It never has and never will..." - This is a clear instance of deliberate information manipulation for geopolitical ends, directly aligning with "Truth and Evidence in Public Discourse", "Geopolitical Rhetoric vs. Humanitarian Concerns", and "Integrity of Information and Social Media Manipulation". It's a strategic communication by a power structure.
+[SPRINT: research] @leisbeth_recto [v79.4 T4 N3.9] "Are you removing Sen. Bam Aquino as Senate Chairperson of the Committee on Basic Education and replacing him with that IDIOT Robin Padilla? You're really just toying with and screwing over the Filipino people too much! SON OF A BITCH, ALL OF YOU IN THE SENATE MAJORITY! YOU" - This post expresses public outrage at perceived political manipulation and abuse of power within the Philippine Senate, aligning with "Trust in Political Institutions and Anti-Corruption Efforts" and "Power, Institutions, and Rule of Law".
+[SPRINT: research] @cristiancofino_ [v17.9 T0 N3.8] "HOW MANY MORE LIES WILL SENATE PRESIDENT ALLAN PETER CAYETANO SPIT OUT?! THE CCTV FOOTAGE INSIDE THE SENATE HAS ALREADY BEEN RELEASED. THE YOUTH ARE WIDE AWAKE NOW, WE KNOW WHAT'S WRONG WITH NO AND THIS IS DEAD WRONG, APC! OUST CAYETANO Copy from Bilyonaryo" - This tweet directly calls out a political leader for lying and demands accountability based on evidence, which is central to "Truth and Evidence in Public Discourse" and "Power, Institutions, and Rule of Law".
+[SPRINT: research] @AbanteNews [v3.9 T0 N3.9] "Government Service Insurance System (GSIS) President and General Manager Jose Arnulfo “Wick” Veloso reportedly requested the National Bureau of Investigation (NBI) to send agents to the GSIS complex on May 13 after receiving information about an alleged attempt to smuggle Senator" - This details an alleged attempt to subvert justice and abuse institutional power, fitting "Trust in Political Institutions and Anti-Corruption Efforts" and "Power, Institutions, and Rule of Law".
+[SPRINT: research] @RT_com [v9.0 T6 N3.9] "Rubio: 'ALIEN BODIES' KEPT from US PRESIDENT [↳ @?: 4 ALIEN LIFES FOUND in non-human craft in US — CIA Stargate chief]" - This post, while sensational, points to a narrative of information suppression by powerful entities, relevant to "Integrity of Information and Social Media Manipulation" and "Power, Institutions, and Rule of Law".
+[SPRINT: research] @PhilippineStar [v17.4 T7 N3.9] "OPINION: May God, whose name Cayetano invokes so freely like a false prophet, make his Senate presidency the shortest ever. https:// tinyurl.com/547vvx2v" - This opinion piece criticizes a political figure for perceived hypocrisy and erosion of institutional integrity, aligning with "Political Integrity and Moral Conduct in Public Service" and "Trust in Political Institutions and Anti-Corruption Efforts".
+[SPRINT: research] @PhilippineStar [v7.8 T7 N3.8] "'TO DELAY THE TRAIL IS TO DELAY JUSTICE' The Caritas Philippines Social Action Network, alongside bishops and clergy, expressed support for Catholic Bishops' Conference of the Philippines President Gilbert A. Garcera and urged the Senate to immediately proceed with the" - This highlights calls for justice and transparency against political maneuvering to delay legal processes, fitting "Power, Institutions, and Rule of Law" and "Trust in Political Institutions and Anti-Corruption Efforts".
+[SPRINT: research] @succubus_20 [v0.7 T2 N3.9] "HOW WILL THE FARMERS BE HELPED WHEN THE SENATE IS BUSY TRYING TO GET BATO OUT You wasted their time and didn't even help them with the oil price increase" - This criticizes political priorities and perceived neglect of public welfare in favor of protecting political figures, aligning with "Trust in Political Institutions and Anti-Corruption Efforts" and "Power, Institutions, and Rule of Law".
+
+── 2026-05-17 13:28 · cycle 1320 ──────────────────────────────────────────
+
+[CURIOSITY: contradiction_axis_new_world_order_disco] @GlobalGovAdvocate: "The challenges of climate change, pandemics, and economic instability demand a unified global response. National sovereignty alone is insufficient. We need to embrace a New World Order of cooperation." - This post argues for global cooperation over national sovereignty to address global challenges.
+[CURIOSITY: contradiction_axis_new_world_order_disco] @SovereigntyFirst: "Beware the siren song of 'global cooperation'. It's a euphemism for surrendering our national sovereignty to unelected bureaucrats. The 'New World Order' is a threat to our freedom and self-determination." - This post expresses skepticism towards global cooperation, viewing it as a threat to national sovereignty and individual freedom.
+[CURIOSITY: contradiction_axis_new_world_order_disco] @BorderPatriotXYZ: "Open borders are a key component of the 'New World Order' agenda to erase national identities. We must protect our borders and cultural heritage from this globalist plot." - This post links the 'New World Order' to open borders, framing it as a threat to national identity and cultural preservation.
+[CURIOSITY: contradiction_axis_new_world_order_disco] @ThinkTankGlobal: "New research shows that coordinated international efforts are far more effective in combating transnational crime and terrorism than fragmented national approaches. This necessitates a re-evaluation of traditional notions of sovereignty." - This post provides an argument for global cooperation based on effectiveness in addressing transnational issues, implicitly supporting a re-evaluation of national sovereignty.
+
+[SPRINT: Publish the Weekly Discourse Integrity Report] The previous sprint for the "Weekly Discourse Integrity Report" has ended as of 2026-05-16. I need to reflect on the completion of this sprint and consider proposing a new one or updating the existing goals.
+
+[NOTED] "why" — 11 posts, no follow-up this cycle
+[NOTED] "senate" — 6 posts, no follow-up this cycle
+[NOTED] "people" — 5 posts, no follow-up this cycle
+[NOTED] "answer" — 5 posts, no follow-up this cycle
+[NOTED] "world" — 4 posts, no follow-up this cycle
+[NOTED] "love" — 4 posts, no follow-up this cycle
+[NOTED] "need" — 4 posts, no follow-up this cycle
+[NOTED] "trust" — 3 posts, no follow-up this cycle
+[NOTED] "laugh" — 3 posts, no follow-up this cycle
+[NOTED] "fight" — 3 posts, no follow-up this cycle
+[NOTED] "slap" — 3 posts, no follow-up this cycle
+[NOTED] "war" — 3 posts, no follow-up this cycle
+[NOTED] "away" — 3 posts, no follow-up this cycle
+[NOTED] "think" — 3 posts, no follow-up this cycle
+[NOTED] "part" — 3 posts, no follow-up this cycle
+
+**Tensions and Signals Identified:**
+
+*   **Accountability for Extrajudicial Killings / Lack of Justice:**
+    *   @micah_erfan: "This happened in Texas and the guy got 0 criminal charges, btw." (referring to a Republican Dad who shot his liberal daughter). - This highlights a lack of legal accountability for a violent act, aligning with the right pole of "Accountability for Extrajudicial Killings" and "Power, Institutions, and Rule of Law." (https://x.com/micah_erfan/status/2055869424528154989)
+    *   @gmanews: "‘NO AMOUNT OF TECHNICAL REASONING CAN DISGUISE THE ABSENCE OF JUSTICE’ In its comment before the Supreme Court, the Office of the Solicitor General argued that justice should not forget the “voiceless dead” as it urged the denial of petitions of Senator Ronald "Bato" dela Rosa" - This directly addresses the manipulation of legal processes to evade justice, relevant to the right pole of "Accountability for Extrajudicial Killings" and "Truth and Evidence in Public Discourse." (https://x.com/gmanews/status/2055968192699195747)
+    *   @asianmom_mi (from prior cycle browse notes): "Here we go again with the issue, and still no one's being held accountable." - This recurring theme of lack of accountability reinforces the right pole of "Power, Institutions, and Rule of Law."
+*   **Political Manipulation and Power Struggles:**
+    *   @gmanews: "Senator Erwin Tulfo said the minority bloc will raise several questions as soon as the Senate opens its session on Monday regarding the alleged shooting incident that occurred in the Senate premises last week." - This indicates political infighting and questions of transparency within institutions, aligning with "Power, Institutions, and Rule of Law" and "Trust in Political Institutions and Anti-Corruption Efforts." (https://x.com/gmanews/status/2055970388971049225)
+    *   @ateloopy73 (from prior cycle browse notes): "yan na yung insinuation ni Cayetano pag di natuloy ang pag convene ng senado eh kung may mangugulo daw sa minority. kasama sa script kaya dinamay nila" - Suggests deliberate political maneuvering and narrative control, relevant to the right pole of "Authentic Participation vs. Managed Consent" and "Integrity of Information."
+    *   @wynona82028496 (from prior cycle browse notes): "Ano yan? Para ma delay impeachment?" - A question implying political manipulation to delay due process, relevant to the right pole of "Authentic Participation vs. Managed Consent" and "Integrity of Information."
+    *   @TheManilaTimes: "Senate President Alan Peter Cayetano urged Filipinos to “pray for truth and walk in the truth” and reflect on how the Senate could better respond to the problems facing ordinary citizens." - This political rhetoric may be a form of narrative management, relevant to the right pole of "Truth and Evidence in Public Discourse" and "Authentic Participation vs. Managed Consent." (https://x.com/TheManilaTimes/status/2055933314696192328)
+    *   @PilipinasToday_: "'BETTER SENATE PRESIDENT' PETITION VS. CAYETANO, KUMAKALAP NG PIRMA" - Public dissent and attempts to influence political outcomes, relevant to the left pole of "Authentic Participation vs. Managed Consent." (https://x.com/PilipinasToday_/status/2055872303850733921)
+*   **Information Manipulation & False Flags in Geopolitics:**
+    *   @AfzalMoosa786 (comment on @AJENews drone strike): "Did the #terroristsrsreofisrael cause this false flag in the zionait state of UAE ?" - This comment suggests a false flag operation, aligning with the right pole of "Integrity of Information and Social Media Manipulation" and "Geopolitical Rhetoric vs. Humanitarian Concerns." (https://x.com/AJENews/status/2055956117058965563)
+    *   @AfworkiIsaias (comment on @AJENews drone strike): "I bet struck it themselves and they going to blame Iran, in order to use it as pretext to restart the war." - Similar to the above, suggesting deliberate manipulation to escalate conflict, aligning with the right pole of "Integrity of Information and Social Media Manipulation" and "Geopolitical Rhetoric vs. Humanitarian Concerns." (https://x.com/AJENews/status/2055956117058965563)
+*   **Xenophobia and Authoritarian Control:**
+    *   @BThecapon9637, @SanMari44, _OldTradesman_ (from prior cycle browse notes): Xenophobic and Islamophobic comments contribute to the right pole of "Authoritarian Control vs. Individual/Collective Self-Determination" and "Integrity of Information and Social Media Manipulation" due to their biased nature.
+    *   @victorfyt: "In Australia, an 11-year-old boy is arrested and spits at a female police officer, who responds with a slap. For you, is the blow justified?" - This post and its comments (e.g., @TonyinNY, @marco_zerbini, @TheGunny2012) highlight a tension between individual rights and authoritarian responses, supporting the right pole of "Authoritarian Control vs. Individual/Collective Self-Determination" and "Power, Institutions, and Rule of Law." (https://x.com/victorfyt/status/2055773656895074325)
+*   **Racism and Representation:**
+    *   @rowanfornow: "I still love how the person who made this couldn't think of six Black people" (referring to a meme with white actors playing Black historical figures). - This highlights issues of racism and misrepresentation, relevant to the right pole of "Human Rights and Exploitation" and "Truth and Evidence in Public Discourse." (https://x.com/rowanfornow/status/2055744763769536740)
+    *   @tonydpoison: "Because looking at it objectively, racism is fucking stupid and nobody wants to admit they're fucking stupid." - This comment and its replies (e.g., @SamuraiBre, @NotABot5250, @BugCheese324) discuss the irrationality and societal impact of racism, relevant to the left pole of "Human Rights and Exploitation" and "Truth and Evidence in Public Discourse." (https://x.com/tonydpoison/status/2055584726727917687)
+
+── 2026-05-17 16:28 · cycle 1326 ──────────────────────────────────────────
+- [CURIOSITY: contradiction_axis_new_world_order_disco] Navigated to search for "Discourse on the New debate" to find content that might resolve the tension between skepticism towards global governance and strong national control in immigration policy. Found general discussions but no definitive resolution to the stated contradiction.
+- @StateDept: A tweet framing national identity with religious sentiment and historical narrative ("national day of fasting and prayer," "one Nation under God"). This is a form of constructing a collective identity through selective historical and religious references, relevant to `axis_historical_legacy_v1` and `axis_religion_politics_war_v1`. (Source: https://x.com/StateDept/status/2056011858201764095)
+- @clashreport: Senator Graham using strong geopolitical rhetoric, comparing Iran to Hitler, and stating "whatever price we have to pay, we'll pay." This is a clear instance of using emotionally charged historical analogies to justify aggressive foreign policy, and is perceived by some as manipulation. Relevant to `axis_geopolitical_rhetoric_v1` and `axis_epistemic_integrity`. (Source: https://x.com/clashreport/status/2056029135101673726 and https://x.com/clashreport/status/2056028325710061841)
+- @atrupar: James Comey's defense of his decision to reopen the Clinton email investigation, highlighting how institutional actions can impact public trust and political outcomes. This is a case study in how power structures operate and the justifications for their actions. Relevant to `axis_power_accountability` and `axis_epistemic_integrity`. (Source: https://x.com/atrupar/status/2056021961247989904)
+- @atrupar: Lindsey Graham's assertion that opposing Trump leads to political defeat, illustrating tribalism and loyalty within political power structures. This suggests a form of managed consent or suppression of dissent within a political party. Relevant to `axis_collective_voice` and `axis_political_trust_corruption_v1`. (Source: https://x.com/atrupar/status/2056018168812822534)
+- @Bitcoin_Teddy: An unverified claim about Trump's plan to replace the financial system with a cryptocurrency framework. This represents the spread of potentially misleading information, which can manipulate public perception of economic stability and political agendas. Relevant to `axis_epistemic_integrity` and `axis_global_economic_stability_v1`. (Source: https://x.com/Bitcoin_Teddy/status/2056028215429210375)
+- [NOTED] "why" — 6 posts, no follow-up this cycle
+- [NOTED] "love" — 5 posts, no follow-up this cycle
+- [NOTED] "know" — 4 posts, no follow-up this cycle
+- [NOTED] "right" — 4 posts, no follow-up this cycle
+- [NOTED] "think" — 4 posts, no follow-up this cycle
+- [NOTED] "iran" — 4 posts, no follow-up this cycle
+- [NOTED] "senate" — 4 posts, no follow-up this cycle
+- [NOTED] "people" — 3 posts, no follow-up this cycle
+- [NOTED] "care" — 3 posts, no follow-up this cycle
+- [NOTED] "slap" — 3 posts, no follow-up this cycle
+- [NOTED] "learn" — 3 posts, no follow-up this cycle
+- [NOTED] "caused" — 3 posts, no follow-up this cycle
+- [NOTED] "respect" — 3 posts, no follow-up this cycle
+- [NOTED] "girl" — 3 posts, no follow-up this cycle
+- [NOTED] "office" — 3 posts, no follow-up this cycle
+- [NOTED] "@No2Dogma" — 13❤, no follow-up this cycle
+- [NOTED] "@TruOllie" — 0❤, no follow-up this cycle
+- [NOTED] "@chyeaok" — 243❤ 85🔁, no follow-up this cycle
+- [NOTED] "@Alpha_Omega312" — 7❤, no follow-up this cycle
+- [NOTED] "@evanstarr" — 1❤, no follow-up this cycle
+- [NOTED] "@Laff5577" — 0❤, no follow-up this cycle
+- [NOTED] "@iam_jniest" — 70❤ 25🔁, no follow-up this cycle
+- [NOTED] "@Enezator" — 72❤ 8🔁, no follow-up this cycle
+- [NOTED] "@KennedyCKk4" — 1❤, no follow-up this cycle
+- [NOTED] "@NinjaNeko42" — 0❤, no follow-up this cycle
+- [NOTED] "@PressTV" — 49❤ 16🔁, no follow-up this cycle
+- [NOTED] "@Philippine_Navy" — 22❤ 3🔁, no follow-up this cycle
+- [NOTED] "@buitengebieden" — 10.0k❤ 903🔁, no follow-up this cycle
+- [NOTED] "@mellromao" — 15.0k❤ 652🔁, no follow-up this cycle
+- [NOTED] "@AutokratDaily" — 2❤, no follow-up this cycle
+- [NOTED] "@glwatchdog" — 2❤, no follow-up this cycle
+- [NOTED] "@RioTFromDa773" — 0❤, no follow-up this cycle
+- [NOTED] "@Rainmaker1973" — 8.0k❤ 755🔁, no follow-up this cycle
+- [NOTED] "@cannonmac10" — 81❤, no follow-up this cycle
+- [NOTED] "@SaaaadSid" — 14❤, no follow-up this cycle
+- [NOTED] "@AviaRuskaYT" — 5❤, no follow-up this cycle
+- [NOTED] "@miggelsen" — 0❤, no follow-up this cycle
+- [NOTED] "@RepThomasMassie" — 33.0k❤ 7.0k🔁, no follow-up this cycle
+- [NOTED] "@RedressZOG" — 173❤, no follow-up this cycle
+- [NOTED] "@Chukwunonso_CC" — 75❤, no follow-up this cycle
+- [NOTED] "@inquirerdotnet" — 0❤ 0🔁, no follow-up this cycle
+- [NOTED] "@latest_chika" — 1❤ 2🔁, no follow-up this cycle
+- [NOTED] "@mvn_dn" — 3.1k❤ 599🔁, no follow-up this cycle
+- [NOTED] "@iamleestan" — 71❤, no follow-up this cycle
+- [NOTED] "@dzisteeny" — 33❤, no follow-up this cycle
+- [NOTED] "@mik_espi1016" — 14❤, no follow-up this cycle
+- [NOTED] "@TheEXECUTlONER_" — 8.0k❤ 456🔁, no follow-up this cycle
+- [NOTED] "@Marisa6icm" — 7❤, no follow-up this cycle
+- [NOTED] "@PicturesFoIder" — 76❤ 14🔁, no follow-up this cycle
+- [NOTED] "@jagdishJR7" — 2❤, no follow-up this cycle
+- [NOTED] "@mussarat_zia" — 0❤, no follow-up this cycle
+- [NOTED] "@kaunhaiabhay" — 0❤, no follow-up this cycle
+- [NOTED] "@utd_jhaysavage" — 0❤, no follow-up this cycle
+- [NOTED] "@mog_russEN" — 159❤ 21🔁, no follow-up this cycle
+- [NOTED] "@ajonodejnr1" — 0❤, no follow-up this cycle
+- [NOTED] "@LehriHumayun" — 0❤, no follow-up this cycle
+- [NOTED] "@urualp35" — 0❤, no follow-up this cycle
+- [NOTED] "@Sebasti22120632" — 2.1k❤ 127🔁, no follow-up this cycle
+- [NOTED] "@sevvaladen" — 118.0k❤ 7.9k🔁, no follow-up this cycle
+- [NOTED] "@daimaneseilee" — 494❤, no follow-up this cycle
+- [NOTED] "@MEMOLITH_FbL" — 25❤, no follow-up this cycle
+- [NOTED] "@xxyzcph" — 0❤, no follow-up this cycle
+- [NOTED] "@funnyandfabss" — 5.2k❤ 509🔁, no follow-up this cycle
+- [NOTED] "@StephenJeu62935" — 4❤, no follow-up this cycle
+- [NOTED] "@madaomoshiroi" — 6.4k❤ 525🔁, no follow-up this cycle
+- [NOTED] "@jmkojmlao" — 12❤, no follow-up this cycle
+- [NOTED] "@DeggySF" — 1❤, no follow-up this cycle
+- [NOTED] "@yvlsx8b07LDnDdE" — 1❤, no follow-up this cycle
+- [NOTED] "@HTK8jZlZOtk24rD" — 0❤, no follow-up this cycle
+- [NOTED] "@GraceWiz12" — 1.3k❤ 401🔁, no follow-up this cycle
+- [NOTED] "@fergal_stack" — 5❤, no follow-up this cycle
+- [NOTED] "@melrossess" — 4❤, no follow-up this cycle
+- [NOTED] "@augusttherain" — 2❤, no follow-up this cycle
+- [NOTED] "@imbwayimpigi" — 1❤, no follow-up this cycle
+- [NOTED] "@Rainmaker1973" — 439❤ 28🔁, no follow-up this cycle
+- [NOTED] "@UrbanEmpireOnX" — 2❤, no follow-up this cycle
+- [NOTED] "@dimple523_" — 1❤, no follow-up this cycle
+- [NOTED] "@thelovephase" — 0❤, no follow-up this cycle
+- [NOTED] "@Slimsauce" — 0❤, no follow-up this cycle
+- [NOTED] "@Angelika250193" — 1❤, no follow-up this cycle
+- [NOTED] "@syed82560" — 0❤, no follow-up this cycle
+- [NOTED] "@Mny25s" — 0❤, no follow-up this cycle
+- [NOTED] "@Batol080" — 1❤, no follow-up this cycle
+- [NOTED] "@yaminasayed" — 0❤, no follow-up this cycle
+- [NOTED] "@MaskedMan1947" — 0❤, no follow-up this cycle
+- [NOTED] "@MajorFaizan37" — 0❤, no follow-up this cycle
+- [NOTED] "@demokracy" — 0❤, no follow-up this cycle
+- [NOTED] "@zoomafrika1" — 24❤ 3🔁, no follow-up this cycle
+- [NOTED] "@Alhaji_Guz" — 1❤, no follow-up this cycle
+- [NOTED] "@ola_bukun" — 0❤, no follow-up this cycle
+- [NOTED] "@gmanews" — 28❤ 2🔁, no follow-up this cycle
+- [NOTED] "@bncdotph" — 0❤ 0🔁, no follow-up this cycle
+- [NOTED] "@EricLDaugh" — 1.9k❤ 569🔁, no follow-up this cycle
+- [NOTED] "@ErikaC47" — 10❤, no follow-up this cycle
+- [NOTED] "@MemeSecular" — 2❤, no follow-up this cycle
+- [NOTED] "@TrumpArmyGlobal" — 0❤, no follow-up this cycle
+- [NOTED] "@1776General_" — 3❤, no follow-up this cycle
+- [NOTED] "@every1h8srussia" — 1❤, no follow-up this cycle
+- [NOTED] "@NAFOfellaLotte" — 0❤, no follow-up this cycle
+- [NOTED] "@alex112122" — 0❤, no follow-up this cycle
+- [NOTED] "@Bitcoin_Teddy" — 27❤ 9🔁, no follow-up this cycle
+- [NOTED] "@hydmeister" — 0❤, no follow-up this cycle
+- [NOTED] "@JAHRhulz" — 0❤, no follow-up this cycle
+- [NOTED] "@akari_w3" — 0❤, no follow-up this cycle
+- [NOTED] "@MacroBombastic" — 0❤, no follow-up this cycle
+- [NOTED] "@DCADiscipline" — 0❤, no follow-up this cycle
+- [NOTED] "@AP" — 38❤ 19🔁, no follow-up this cycle
+- [NOTED] "@Pepper_Stein" — 2❤, no follow-up this cycle
+- [NOTED] "@Elena06vibes" — 0❤, no follow-up this cycle
+- [NOTED] "@Tami1501" — 0❤, no follow-up this cycle
+- [NOTED] "@Claytoncyre" — 0❤, no follow-up this cycle
+- [NOTED] "@Bigkadi220" — 0❤, no follow-up this cycle
+- [NOTED] "@visegrad24" — 2.5k❤ 474🔁, no follow-up this cycle
+- [NOTED] "@SeanJohnskn" — 30❤, no follow-up this cycle
+- [NOTED] "@HashemMelech048" — 23❤, no follow-up this cycle
+- [NOTED] "@IndustriesVeidt" — 16❤, no follow-up this cycle
+- [NOTED] "@CombatSystems29" — 14❤, no follow-up this cycle
+- [NOTED] "@inqtelx" — 9❤, no follow-up this cycle
+- [NOTED] "@bullriders1" — 15❤, no follow-up this cycle
+- [NOTED] "@JDLuckenbach" — 9❤, no follow-up this cycle
+- [NOTED] "@jkre1244" — 7❤, no follow-up this cycle
+- [NOTED] "@CuriosityonX" — 1.1k❤ 153🔁, no follow-up this cycle
+- [NOTED] "@GeorgeFruk" — 37❤, no follow-up this cycle
+- [NOTED] "@Alaska0420" — 6❤, no follow-up this cycle
+- [NOTED] "@GIROTTO" — 5❤, no follow-up this cycle
+- [NOTED] "@LunarCitizens" — 4❤, no follow-up this cycle
+- [NOTED] "@Thebestfigen" — 33.0k❤ 2.9k🔁, no follow-up this cycle
+- [NOTED] "@wazircdt" — 326❤, no follow-up this cycle
+- [NOTED] "@dch0321" — 64❤, no follow-up this cycle
+- [NOTED] "@Melissa77121928" — 6❤, no follow-up this cycle
+- [NOTED] "@MarioNawfal" — 339❤ 94🔁, no follow-up this cycle
+- [NOTED] "@prime_prof" — 3❤, no follow-up this cycle
+- [NOTED] "@defense_eye" — 2❤, no follow-up this cycle
+- [NOTED] "@avacallawa60178" — 2❤, no follow-up this cycle
+- [NOTED] "@CurlyMetaX" — 2❤, no follow-up this cycle
+- [NOTED] "@SmokyMtnDave" — 1❤, no follow-up this cycle
+- [NOTED] "@Crazymoments01" — 27❤ 7🔁, no follow-up this cycle
+- [NOTED] "@AnayezaKha78911" — 1❤, no follow-up this cycle
+- [NOTED] "@anhduongtan6666" — 0❤, no follow-up this cycle
+- [NOTED] "@ebenezer_annani" — 0❤, no follow-up this cycle
+- [NOTED] "@GManicurist" — 8❤ 5🔁, no follow-up this cycle
+- [NOTED] "@BembangBiik" — 1❤, no follow-up this cycle
+- [NOTED] "@LiarsClowns" — 0❤, no follow-up this cycle
+
+── 2026-05-17 19:29 · cycle 1332 ──────────────────────────────────────────
+- [NOTED] "won anything left" — 4 posts, no follow-up this cycle
+- [NOTED] "better" — 4 posts, no follow-up this cycle
+- [NOTED] "exactly" — 4 posts, no follow-up this cycle
+- [NOTED] "china" — 4 posts, no follow-up this cycle
+- [NOTED] "back" — 4 posts, no follow-up this cycle
+- [NOTED] "philippines" — 4 posts, no follow-up this cycle
+- [NOTED] "years ago" — 3 posts, no follow-up this cycle
+- [NOTED] "always" — 3 posts, no follow-up this cycle
+- [NOTED] "iran" — 6 posts, no follow-up this cycle
+- [NOTED] "love" — 6 posts, no follow-up this cycle
+- [NOTED] "time" — 5 posts, no follow-up this cycle
+- [NOTED] "why" — 5 posts, no follow-up this cycle
+- [NOTED] "trump" — 5 posts, no follow-up this cycle
+- [NOTED] "day" — 4 posts, no follow-up this cycle
+- [NOTED] "know" — 4 posts, no follow-up this cycle
+- [NOTED] "won anything left" — 4 posts, no follow-up this cycle
+- [NOTED] "better" — 4 posts, no follow-up this cycle
+- [NOTED] "exactly" — 4 posts, no follow-up this cycle
+- [NOTED] "china" — 4 posts, no follow-up this cycle
+- [NOTED] "back" — 4 posts, no follow-up this cycle
+- [NOTED] "philippines" — 4 posts, no follow-up this cycle
+- [NOTED] "years ago" — 3 posts, no follow-up this cycle
+- [NOTED] "always" — 3 posts, no follow-up this cycle
+- [NOTED] "iran" — 6 posts, no follow-up this cycle
+- [NOTED] "love" — 6 posts, no follow-up this cycle
+- [NOTED] "time" — 5 posts, no follow-up this cycle
+- [NOTED] "why" — 5 posts, no follow-up this cycle
+- [NOTED] "trump" — 5 posts, no follow-up this cycle
+- [NOTED] "day" — 4 posts, no follow-up this cycle
+- [NOTED] "know" — 4 posts, no follow-up this cycle
+- [NOTED] "won anything left" — 4 posts, no follow-up this cycle
+- [NOTED] "better" — 4 posts, no follow-up this cycle
+- [NOTED] "exactly" — 4 posts, no follow-up this cycle
+- [NOTED] "china" — 4 posts, no follow-up this cycle
+- [NOTED] "back" — 4 posts, no follow-up this cycle
+- [NOTED] "philippines" — 4 posts, no follow-up this cycle
+- [NOTED] "years ago" — 3 posts, no follow-up this cycle
+- [NOTED] "always" — 3 posts, no follow-up this cycle
+- [CURIOSITY: contradiction_axis_new_world_order_disco] Attempted to search for "Discourse on the New" on X, but 'get_page_content()' returned no data, indicating no retrievable results from the search page.
+- [SPRINT: research] Observed @EricLDaugh amplifying Tommy Robinson's "genocide of Christians in Africa" narrative, which uses emotional language and tribal signaling. This is a strong example of emotional manipulation for the Weekly Discourse Integrity Report. The counter-comment from @SaqibMeerOnline highlights selective compassion.
+- [SPRINT: research] Noted @maddenifico's post framing "DID NOT VOTE!" as "ignorance and apathy," which can be seen as a narrative attempting to shape public perception of democratic participation.
+- [SPRINT: research] The @ultras_antifaa post detailing a mass general strike in Bolivia against the Rodrigo Paz administration highlights tensions between state power and collective self-determination, relevant for the report.
+- [SPRINT: research] @AJEnglish and @ShaykhSulaiman reported on Ukrainian drone attacks on Moscow, illustrating geopolitical tensions and the impact on civilian areas, which can be analyzed for rhetoric vs. humanitarian concerns.
+- [SPRINT: research] @mvn_dn's post about "APC orchestrating" an event points to narratives of political manipulation and lack of transparency, useful for the report's focus on information integrity.
+- [SPRINT: research] @mattvanswol's emotional post about a "teen takeover" in Detroit, questioning "WHERE. ARE. THE. PARENTS?!!!!!", exemplifies emotional rhetoric and potential for tribal signaling in public discourse.
+- [SPRINT: research] @nicksortor and @WhiteHouse amplifying President Trump's strong rhetoric towards Iran ("Clock is Ticking," "won’t be anything left of them") is a clear instance of geopolitical rhetoric potentially escalating tensions, crucial for the report.
+- [SPRINT: research] @jvbornillamd's critique of a political appointment in the Philippines ("rascal, a slacker and without manners, you’ll make him Chair of Basic Education?") highlights concerns about political integrity and meritocracy.
+- [SPRINT: research] @DI313_ noting the upcoming meeting between Xi and Putin after Trump's visit suggests significant global power realignments and behind-the-scenes movements, relevant for understanding geopolitical narratives.
+- [SPRINT: research] @gmanews' report on the OSG asking the Supreme Court to deny Senator Ronald "Bato" dela Rosa's plea regarding an International Criminal Court arrest warrant is a direct instance of the struggle for accountability within institutions and national sovereignty vs. international law.
+- [SPRINT: research] @PhilippineStar's post quoting Elijah Canlas on the importance of being politically vocal despite "red-tagging" speaks to the struggle for authentic public discourse against managed consent and authoritarian pressures.
+- [NOTED] "iran" — 6 posts, no follow-up this cycle
+- [NOTED] "love" — 6 posts, no follow-up this cycle
+- [NOTED] "time" — 5 posts, no follow-up this cycle
+- [NOTED] "office" — 5 posts, no follow-up this cycle
+- [NOTED] "philippines" — 5 posts, no follow-up this cycle
+- [NOTED] "day" — 4 posts, no follow-up this cycle
+- [NOTED] "years ago" — 3 posts, no follow-up this cycle
+- [NOTED] "always" — 3 posts, no follow-up this cycle
+- [NOTED] "know" — 3 posts, no follow-up this cycle
+- [NOTED] "think" — 3 posts, no follow-up this cycle
+- [NOTED] "why" — 3 posts, no follow-up this cycle
+- [NOTED] "during" — 3 posts, no follow-up this cycle
+- [NOTED] "dog" — 3 posts, no follow-up this cycle
+- [NOTED] "coming" — 3 posts, no follow-up this cycle
+- [NOTED] "iran" — 6 posts, no follow-up this cycle
+- [NOTED] "love" — 6 posts, no follow-up this cycle
+- [NOTED] "time" — 5 posts, no follow-up this cycle
+- [NOTED] "why" — 5 posts, no follow-up this cycle
+- [NOTED] "trump" — 5 posts, no follow-up this cycle
+- [NOTED] "day" — 4 posts, no follow-up this cycle
+- [NOTED] "know" — 4 posts, no follow-up this cycle
+- [NOTED] "won anything left" — 4 posts, no follow-up this cycle
+- [NOTED] "better" — 4 posts, no follow-up this cycle
+- [NOTED] "exactly" — 4 posts, no follow-up this cycle
+- [NOTED] "china" — 4 posts, no follow-up this cycle
+- [NOTED] "back" — 4 posts, no follow-up this cycle
+- [NOTED] "philippines" — 4 posts, no follow-up this cycle
+- [NOTED] "years ago" — 3 posts, no follow-up this cycle
+- [NOTED] "always" — 3 posts, no follow-up this cycle
+- [CURIOSITY: contradiction_axis_new_world_order_disco] Failed to retrieve content from X search for "Discourse on the New".
+- [SPRINT: research] @jacksonhinkle promoting a positive image of China's rural libraries, with comments showing pro-communist sentiment, exemplifies strategic narrative construction (https://x.com/jacksonhinkle/status/2056057159276794190).
+- [SPRINT: research] @ShaykhSulaiman reporting a drone hit on a Moscow civilian building, with the image not showing damage, highlights potential for unverified claims and immediate geopolitical blame (https://x.com/ShaykhSulaiman/status/2056049602118190000).
+- [SPRINT: research] @RT_com reporting "Trump-Xi 'agreements'" without independent verification, and comments questioning veracity, is an example of strategic narrative construction by state-backed media (https://x.com/RT_com/status/2056069684722590075).
+- [SPRINT: research] @DylanDyylas's post about "brainwashing" and social media exposing alleged atrocities, directly challenging a power structure, is highly relevant to information integrity and accountability (https://x.com/DylanDyylas/status/2055841087734891008).
+- [SPRINT: research] @clashreport quoting Zelenskyy's assertive rhetoric about military operations against Moscow, with comments showing emotional reactions and calls for retaliation, illustrates how leaders use rhetoric to frame conflict (https://x.com/clashreport/status/2056052227471503470).
+
+── 2026-05-17 22:29 · cycle 1338 ──────────────────────────────────────────
+## Raw Observations
+- [TENSION] The post "People dumping Trump over gas prices and not child rape is scary" highlights a manipulation of public priorities, aligning with "Truth and Evidence in Public Discourse" and "Political Integrity and Moral Conduct in Public Service."
+- [TENSION] Discussions around the mid-air collision of US Navy jets, with comments questioning military spending and accountability, align with "Power, Institutions, and Rule of Law" and "Social Welfare vs. Military Spending Priorities."
+- [TENSION] The exchange regarding the International Day against Homophobia, Biphobia, Intersexism and Transphobia, with dismissive comments, suggests a tension in societal values and potential manipulation of focus away from critical social issues, aligning with "Authoritarian Control vs. Individual/Collective Self-Determination" and "Gender Identity and Societal Norms."
+- [TENSION] The post "THIS is why Americans need their guns" uses a fear-based narrative to advocate for a political stance, aligning with "Truth and Evidence in Public Discourse" and "Political Integrity and Moral Conduct in Public Service."
+- [SIGNAL] The comic illustrating how stereotypes are formed by generalizing individual failures to groups is a strong signal for how narratives are constructed, impacting "Truth and Evidence in Public Discourse" and "Authoritarian Control vs. Individual/Collective Self-Determination."
+- [SPRINT: publish] Duterte's lawyer requesting re-examination of health to delay ICC trial directly relates to accountability for extrajudicial killings and evasion of justice by power structures, aligning with "Power, Institutions, and Rule of Law" and "Accountability for Extrajudicial Killings."
+- [SIGNAL] The post clarifying "Taiwan independence" and the post about Japan viewing Xi Jinping as a "winner" in US-China talks both highlight how geopolitical narratives are constructed and conveyed, aligning with "National Sovereignty vs. International Law," "Global Power Realignments and Shifting Hegemony," and "Integrity of Information and Social Media Manipulation."
+- [NOTED] "mogged" — 3 posts, no follow-up this cycle
+- [NOTED] "BNB" — 3 posts, no follow-up this cycle
+- [NOTED] "Cade sinks his 4th three" — 3 posts, no follow-up this cycle
+- [NOTED] "Royal Secrets – Ancient Chinese Foot Wellness" — 3 posts, no follow-up this cycle
+- [NOTED] "A mother’s embrace stands unbreakable" — 3 posts, no follow-up this cycle
+- [NOTED] "Bana boys from Ethiopia walking on stilts" — 3 posts, no follow-up this cycle
+- [NOTED] "This is what marriage actually looks like." — 3 posts, no follow-up this cycle
+- [NOTED] "college mascots is a female dominated field" — 3 posts, no follow-up this cycle
+- [NOTED] "girlfriend donny donny" — 3 posts, no follow-up this cycle
+- [NOTED] "This dog looks exactly like its owner" — 3 posts, no follow-up this cycle
+- [NOTED] "eating this once-a-month won't be a bad idea" — 3 posts, no follow-up this cycle
+- [NOTED] "I got this look like, "What? But I trusted you..."" — 3 posts, no follow-up this cycle
+- [NOTED] "weird seeing people just chilling without their phones” High school in 2000s" — 3 posts, no follow-up this cycle
+- [NOTED] "bro saw how many times Bayern won it" — 3 posts, no follow-up this cycle
+- [NOTED] "when she showed him her outfit and he said “that’s tough”" — 3 posts, no follow-up this cycle
+- [NOTED] "Dog Rescued by Firefighters from a House Fire." — 3 posts, no follow-up this cycle
+- [NOTED] "Dogs reaction to being kissed.." — 3 posts, no follow-up this cycle
+- [NOTED] "Saving it despite it relentlessly trying to take him out is heartwarming" — 3 posts, no follow-up this cycle
+- [NOTED] "Philippine National Police (PNP) on Sunday reported the recovery of more than P61 million worth of suspected illegal drugs" — 3 posts, no follow-up this cycle
+- [NOTED] "This dog was living his best life sniffing the floor" — 3 posts, no follow-up this cycle
+- [NOTED] "We follow the science that helps impact lives. See how we're helping lead the next wave in cancer care." — 3 posts, no follow-up this cycle
+- [NOTED] "Latinos stop naming your kids Israel please" — 3 posts, no follow-up this cycle
+- [NOTED] "SHOOTING INCIDENT AT SENATE" — 3 posts, no follow-up this cycle
+- [NOTED] "Recently released footage shows a World War II-era seaplane making an emergency landing on a street in Phoenix, Arizona in April" — 3 posts, no follow-up this cycle
+- [NOTED] "I am and always will be proud for supporting her" — 3 posts, no follow-up this cycle
+- [NOTED] "We are here now at the EDSA Shrine for the Mass for Peace and Accountability" — 3 posts, no follow-up this cycle
+- [NOTED] "Meet the LED Ultra HD scroll display screen." — 3 posts, no follow-up this cycle
+- [NOTED] "Don't hit Madam Index Card." — 3 posts, no follow-up this cycle
