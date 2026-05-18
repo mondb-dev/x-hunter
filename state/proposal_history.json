@@ -614,6 +614,25 @@
       "pushed_to_origin": null,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_claim_tracking_module_1779084551653",
+      "title": "Develop 'Strategic Claim Extraction and Tracking Module'",
+      "status": "failed",
+      "proposed_at": "2026-05-18T06:09:11.596Z",
+      "resolved_at": "2026-05-18T07:01:12.725Z",
+      "resolution_notes": "Push to origin/main failed:  Local main rolled back to pre-merge state.",
+      "files_changed": [
+        "runner/modules/claim_extraction.js",
+        "runner/modules/claim_state.js",
+        "runner/modules/claim_tracking_db.js",
+        "runner/pipeline/observation_processing.js"
+      ],
+      "branch_name": "meta/proposal_claim_tracking_module_1779084551653",
+      "merge_commit": "2ff9e2353dc909065233e1c5b60f793b9f532a68",
+      "pushed_to_origin": false,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }

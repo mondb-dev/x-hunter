@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_assessed": "2026-05-18T06:02:13.459Z",
+  "last_assessed": "2026-05-18T06:31:56.113Z",
   "assessment": {
     "signal_density": "high",
-    "belief_velocity": "medium",
-    "post_pressure": "high",
+    "belief_velocity": "low",
+    "post_pressure": "low",
     "staleness": "low",
     "focus_note": "Troubleshooting external content access; unable to perform primary functions."
   },
@@ -57,6 +57,23 @@
         "signal_density": "high",
         "belief_velocity": "medium",
         "post_pressure": "high",
+        "staleness": "low",
+        "focus_note": "Troubleshooting external content access; unable to perform primary functions."
+      },
+      "directives": {
+        "cycle_interval_sec": 1800,
+        "next_cycle_type": null,
+        "browse_depth": "shallow",
+        "post_eagerness": "suppress",
+        "curiosity_intensity": "high"
+      }
+    },
+    {
+      "ts": "2026-05-18T06:31:56.113Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "low",
+        "post_pressure": "low",
         "staleness": "low",
         "focus_note": "Troubleshooting external content access; unable to perform primary functions."
       },
