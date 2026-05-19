@@ -29,6 +29,7 @@ try { require("dotenv").config({ path: path.join(__dirname, "..", ".env") }); } 
 
 const db   = require("./db");
 const { extractKeywords } = require("./analytics");
+const { embed, topK } = require("./embed");
 const { buildPersona, buildCoreContext } = require("../runner/lib/sebastian_respond");
 let verifyClaim = null;
 try { ({ verifyClaim } = require("../runner/lib/verify_claim")); } catch {}
@@ -152,21 +153,39 @@ async function fetchThreadContext(page, item) {
 
 // ── 3. Memory recall ──────────────────────────────────────────────────────────
 /**
- * Extract RAKE keywords from the mention text and query the local memory FTS5
- * index for relevant past journal/checkpoint entries.
- *
- * FTS5 uses implicit AND for space-separated tokens, so we join individual
- * words with OR to broaden recall (RAKE often produces multi-word phrases
- * whose AND conjunction matches almost nothing).
+ * Semantic recall first (embed mention + thread context), FTS5 fallback.
+ * Always called — returns [] on error so the pipeline never stalls.
  */
-function recallForMention(text, limit = 5) {
+async function recallForMention(text, threadContext = [], limit = 5) {
   try {
+    // Combine mention + thread context for a richer topic signal
+    const threadText = threadContext.map(t => t.text).join(' ');
+    const combinedText = [text, threadText].filter(Boolean).join(' ').slice(0, 600);
+
+    // Semantic recall
+    const queryVec = await embed(combinedText);
+    if (queryVec) {
+      const embeddings = db.allEmbeddings('memory');
+      if (embeddings.length > 0) {
+        const nearest = topK(queryVec, embeddings, limit * 2);
+        const SEM_MIN_SCORE = 0.05;
+        const rawDb = db.raw();
+        const results = [];
+        for (const hit of nearest) {
+          if ((hit.similarity ?? 0) < SEM_MIN_SCORE) continue;
+          const row = rawDb.prepare('SELECT * FROM memory WHERE id = ?').get(parseInt(hit.entity_id, 10));
+          if (row) results.push(row);
+          if (results.length >= limit) break;
+        }
+        if (results.length > 0) return results;
+      }
+    }
+
+    // FTS5 fallback
     const keywords = extractKeywords(text, 8);
     if (!keywords.length) return [];
-    // Split all RAKE phrases into individual words, dedupe, join with OR
     const words = [...new Set(keywords.flatMap(k => k.split(/\s+/)))];
-    const ftsQuery = words.join(" OR ");
-    return db.recallMemory(ftsQuery, limit);
+    return db.recallMemory(words.join(' OR '), limit);
   } catch {
     return [];
   }
@@ -618,12 +637,12 @@ function logInteraction(data, item, replyText, memoryHints) {
     console.log(`[reply] thread: ${threadContext.length} tweet(s) in view`);
 
     // ── Step 3: Memory recall + account lookup ────────────────────────────
-    const memoryHints = recallForMention(item.text);
+    const memoryHints = await recallForMention(item.text, threadContext);
     const topicAccounts = accountsForTopic(item.text);
     if (memoryHints.length > 0) {
-      console.log(`[reply] memory: ${memoryHints.length} relevant entry(s) found (${memoryHints.map(m => m.title).join(", ")})`);
+      console.log(`[reply] memory: ${memoryHints.length} relevant entry(s) (${memoryHints.map(m => m.title).join(", ")})`);
     } else {
-      console.log(`[reply] memory: no relevant past entries`);
+      console.log(`[reply] memory: no relevant past entries found`);
     }
     if (topicAccounts.length > 0) {
       console.log(`[reply] accounts: ${topicAccounts.length} relevant (${topicAccounts.slice(0,3).map(a => "@"+a.username).join(", ")})`);
