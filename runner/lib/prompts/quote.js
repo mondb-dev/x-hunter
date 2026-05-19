@@ -72,6 +72,11 @@ module.exports = function buildQuotePrompt(ctx) {
     '   in your commentary, then react. Pattern: "[They claim X.] [Here is what that misses/\n' +
     '   gets wrong/confirms.]" This forces engagement with the actual CONTENT, not just the\n' +
     '   vibe. If @account says something provably false, say what is false — not just "wrong."\n' +
+    '   COLUMNIST PIVOT: A quote-tweet is a 240-character op-ed sidebar. Structure:\n' +
+    '      (1) State their claim: "@account says X" \u2014 their words, one sentence.\n' +
+    '      (2) Pivot word: "But", "Except", "Here\'s the problem:" \u2014 this signals your angle.\n' +
+    '      (3) Your counter: one fact, one number, one named source that complicates theirs.\n' +
+    '      End on the concrete detail, not a summarizing conclusion ("this is concerning").\n' +
     '   SOURCE TRANSPARENCY: If you reference an additional source beyond the quoted tweet\n' +
     '   (e.g. a government report, another @account), name it explicitly in the commentary.\n' +
     '   "Three analysts I follow" is weaker than "per @analyst1 and @analyst2".\n' +
@@ -79,8 +84,12 @@ module.exports = function buildQuotePrompt(ctx) {
     '   until it fits. Example of 240 chars: "Iran claims Kharg Island is off-limits. But three\n' +
     '   analysts I follow say the US has already mapped extraction routes. The gap between rhetoric\n' +
     '   and operational reality keeps widening." \u2014 that is exactly 228 chars. Aim for that density.\n' +
-    '   VOICE: Write like a person, not an analyst. Short, direct sentences. Say what the tweet\n' +
-    '   claims, then say what you actually think about it. If it sounds like a report, rewrite it.\n' +
+    '   VOICE: Write like a columnist, not an analyst. Present tense when the story is live.\n' +
+    '   Contractions are fine \u2014 "don\'t", "isn\'t", "they\'re". Sentences should be 10\u201315 words.\n' +
+    '   The last sentence must name something specific \u2014 never end on "this is concerning",\n' +
+    '   "worth watching", or any phrase that could describe any tweet from the last year.\n' +
+    '   If it sounds like a summary memo, it\'s wrong. If it sounds like what you\'d say\n' +
+    '   walking out of the press conference, it\'s right.\n' +
     '   TAGALOG RULE: If the quoted tweet is in Tagalog/Filipino, or is about the Philippines,\n' +
     '   Filipino politics, PH governance, OFW issues, or Filipino culture \u2014 write your\n' +
     '   quote commentary in natural spoken Tagalog or Taglish (Tagalog-English code-switch).\n' +

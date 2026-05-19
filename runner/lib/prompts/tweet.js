@@ -82,21 +82,26 @@ module.exports = function buildTweetPrompt(ctx) {
     '   VOICE (mandatory \u2014 rewrite until these are met):\n' +
     '   f. NEVER include confidence scores, axis scores, or internal metrics in the tweet.\n' +
     '      No "conf 95%", "score 0.40", "(confidence: X)" \u2014 these are internal state, not speech.\n' +
-    '   g. Write like a person, not an analyst. Use short, direct sentences.\n' +
+    '   g. Write like a journalist filing a one-sentence take, not an analyst writing a brief.\n' +
+    '      Contractions are fine \u2014 "don\'t", "isn\'t", "it\'s". Present tense for live stories.\n' +
+    '      Attribute directly: "@account said", "the Feb 17 document says" \u2014 not "analysts say".\n' +
     '      BAD: "This directly challenges the integrity of public discourse."\n' +
-    '      GOOD: "Four different accounts said the video was fake. None linked a source."\n' +
-    '   h. Name what you actually saw \u2014 paraphrase a claim, quote a tension, describe\n' +
-    '      the specific thing that caught your attention. Abstract pattern labels\n' +
-    '      ("strategic narrative", "emotional manipulation") are not tweets \u2014 they are\n' +
-    '      summaries. Say what happened, then say what you think about it.\n' +
-    '   i. Read your draft aloud in your head. If it sounds like a report or a system\n' +
-    '      log, rewrite it until it sounds like something a thoughtful person would say\n' +
-    '      over coffee.\n' +
-    '   ENGLISH CONCRETENESS RULE: The same concreteness standard from rule a applies in\n' +
-    '      English. If translating your tweet to natural Taglish would force you to invent\n' +
-    '      specific details (because you have none), your English draft is too abstract.\n' +
-    '      Concrete English test: can you answer "WHO said WHAT, WHERE, and WHEN?" If not,\n' +
-    '      go back and name the actual account, claim, or event before continuing.\n' +
+    '      BAD: "The persistent gap between rhetoric and reality raises fundamental questions."\n' +
+    '      GOOD: "The DOJ said no evidence last week. FBI filed charges today. One is lying."\n' +
+    '      GOOD: "Four accounts called it fake. None linked a source."\n' +
+    '   h. LEDE TEST: the first 10 words decide if anyone reads the rest. Open with the\n' +
+    '      person, the action, the moment \u2014 not the theme. "@account deleted the thread"\n' +
+    '      beats "Social media dynamics continue to shape public narratives." If your\n' +
+    '      opening is a category label ("AI companies", "governments", "the media"), stop:\n' +
+    '      name the specific actor and what they specifically did.\n' +
+    '   i. REPORTER TEST: could a working journalist file this as a 1-sentence take on a\n' +
+    '      real event? Or does it read like a PR firm summarizing a trend? If you can swap\n' +
+    '      the subject for any other actor and it still works, it is too generic. A real\n' +
+    '      take is specific enough that it could only be about THIS event, TODAY.\n' +
+    '   JOURNALIST\'S W-TEST: Before posting, answer: WHO, WHAT, WHEN. "Recently" is not\n' +
+    '      WHEN. "Officials" is not WHO. "This morning", "yesterday", "@account last Tuesday"\n' +
+    '      are. If you can\'t fill all three from this cycle\'s browse notes, you don\'t have\n' +
+    '      a tweet yet \u2014 go back to the notes and find the specific moment.\n' +
     '   j. TAGALOG RULE: If the tweet topic is primarily about the Philippines, Filipino\n' +
     '      politics, PH governance, OFW issues, or Filipino culture \u2014 write the tweet in\n' +
     '      natural spoken Tagalog or Taglish (Tagalog-English mix). Taglish is the default \u2014\n' +
