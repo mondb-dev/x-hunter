@@ -1,53 +1,21 @@
-- [CURIOSITY: contradiction_axis_new_world_order_discourse_v1] No direct evidence found in the digest to resolve the tension between global governance/sovereignty and immigration/border control.
-- [SPRINT: Synthesize X observations for narrative candidate selection] Allegations of corruption in Davao City flood control projects and calls for investigation. (@newswatchplusph, @_mamamerry_, @happeea, @PbbMarcos) - Implicates political figures in financial misconduct, highlighting lack of accountability. This is a strong candidate for narrative dissection due to its specific claims and calls for accountability.
-- [SPRINT: Synthesize X observations for narrative candidate selection] NBI Director clarifying that NBI personnel were not in Senate during gunshots, countering a narrative of NBI being "under attack." (@gmanews) - Suggests attempts to manipulate public perception around institutional integrity and offers a clear counter-narrative.
-- [SPRINT: Synthesize X observations for narrative candidate selection] Questioning DILG's failure to enforce ICC warrant for Sen. Ronald “Bato” dela Rosa. (@inquirerdotnet, @Rose4GoodGov) - Directly challenges state authority and adherence to international law, implying political protection and selective justice. This presents a narrative of political evasion of justice.
-- [SPRINT: Synthesize X observations for narrative candidate selection] Speculation that DDS senators are protecting "Bato" dela Rosa to prevent him from revealing information to the ICC. (@joyphic, @ApollosA_C_MAIN) - Reinforces the narrative of political figures being shielded from accountability and information control, linking to the previous point.
-- [SPRINT: Synthesize X observations for narrative candidate selection] Sen. Imee Marcos claiming senators were offered incentives or threatened to leave the Senate majority bloc. (@bncdotph) - Aligns with narrative control and power abuse within political institutions, suggesting internal manipulation.
-- [SPRINT: Synthesize X observations for narrative candidate selection] NBI driver denying firing a shot despite testing positive for gunpowder nitrates. (@News5PH, @LakasNgTimog) - Highlights a potential contradiction in official statements and forensic evidence, suggesting an attempt to control the narrative around a specific event.
-- [SPRINT: Synthesize X observations for narrative candidate selection] Malacañang calling on Sen. Ronald “Bato” dela Rosa to present himself and face the ICC arrest warrant. (@inquirerdotnet) - This is a public call for accountability, potentially a response to the growing tension around his non-compliance, and offers a counter-narrative to political protection.
-- [SPRINT: Synthesize X observations for narrative candidate selection] @BeksMarupok post: "So this is the mastermind who created the troll army CTTO: Roxanne Lei Pagcaliwagan/FB" - This is a direct allegation of social media manipulation and creation of a "troll army," highly relevant for dissecting deceptive narratives and identifying inauthentic amplification patterns.
-- [NOTED] "DO YALL KNOW HOW WILD THIS IS?!" — 4 posts, no follow-up this cycle
-- [NOTED] "IF THAT'S THE CASE [COMMAND RESPONSIBILITY] THE BASIS, THE VERY FIRST ONE TO BE SUSPENDED SHOULD BE SENATOR ALAN PETER CAYETANO’ @ABSCBNNews" — 4 posts, no follow-up this cycle
-- [NOTED] "They tried to shoot up an Islamic Center full of children in San Diego.." — 1 post, no follow-up this cycle
-- [NOTED] "Btw you’ll never fucking guess who canceled Ebola prevention" — 1 post, no follow-up this cycle
-- [NOTED] "Indians think they are white." — 1 post, no follow-up this cycle
-- [NOTED] "A crab was seen feeding on dead skin from a person’s foot." — 1 post, no follow-up this cycle
-- [NOTED] "Actor Will Ashley encouraged the public to register as voters so they can choose the right leaders for the country." — 1 post, no follow-up this cycle
-- [NOTED] "NEDA Secretary Arsenio Balisacan said corruption and incompetence in government are deeply connected" — 1 post, no follow-up this cycle
-- [NOTED] "A teenage girl in NY County was shot dead in her home after an apparent home intruder fired a shotgun at the front door." — 1 post, no follow-up this cycle
-- [NOTED] "VINCE DIZON KEEPS ON WORKING AT DPWH" — 1 post, no follow-up this cycle
-- [NOTED] "Atty. Colet Vergara with the news broadcaster Jhoanna Robles attending hearing sa HOR." — 1 post, no follow-up this cycle
-- [NOTED] "Neymar not being called up" — 1 post, no follow-up this cycle
-- [NOTED] "Your BLOODLINE Continues through your DAUGHTER ,not your SON -but most people still believe the OPPOSITE" — 1 post, no follow-up this cycle
-- [NOTED] "CYBER WARRANT VS. FRANCO MABANTA" — 1 post, no follow-up this cycle
-- [NOTED] "The Philippine government upholds its long-standing One China policy" — 1 post, no follow-up this cycle
-- [NOTED] "Severe flooding is being experienced in some areas of Davao City" — 1 post, no follow-up this cycle
-- [NOTED] "DEPDEV CREATED TO ENSURE LONG-TERM INFRASTRUCTURE CONTINUITY" — 1 post, no follow-up this cycle
-- [NOTED] "The House of Representatives formally honored BINI on Monday" — 1 post, no follow-up this cycle
-- [NOTED] "Doorbell video appears to show the man accused of k*lling a teenage girl in York County firing a shotgun through the home’s front door." — 1 post, no follow-up this cycle
-- [NOTED] "Fuck your data centers" — 1 post, no follow-up this cycle
-- [NOTED] "The National Bureau of Investigation (NBI) has several information on the whereabouts of Sen. Ronald “Bato” dela Rosa" — 1 post, no follow-up this cycle
-- [NOTED] "The Coast Guard District Southeastern Mindanao conducted rescue operations to evacuate residents affected by severe flooding" — 1 post, no follow-up this cycle
-- [NOTED] "NBI Director Atty. Melvin Matibag rejected Senate President Alan Peter Cayetano's appeal to the Ombudsman to impose suspension on him." — 1 post, no follow-up this cycle
-- [NOTED] "Mandaluyong City Council approves Right-to-Care card and health proxy ordinance for LGBT, common-law partners" — 1 post, no follow-up this cycle
-- [NOTED] "The land collapsed and damaged the bridge connecting Brgy. Mandug and Brgy. Callawa, Davao City" — 1 post, no follow-up this cycle
-- [NOTED] "A Beluga whale enforcing the no smoking policy" — 1 post, no follow-up this cycle
-- [NOTED] "Today, a tragic incident at Dubare Elephant Camp in Kodagu district, Karnataka, India. A 33-year-old tourist died after a temporary structure collapsed during an elephant bathing session following a clash between two elephants." — 1 post, no follow-up this cycle
-- [NOTED] "Rain poured in some parts of Quezon City around 2 p.m., Tuesday afternoon, May 19. | via @darylle_marie #WeatherPatrol" — 1 post, no follow-up this cycle
-- [NOTED] "CRUZ: MOTION TO DISMISS IMPEACHMENT TRIAL MAY TRIGGER PUBLIC BACKLASH Guest Tonyo Cruz discussed the possibility of a motion to dismiss or quash an impeachment trial in the Senate, warning that it could lead to strong public backlash if the process is cut short. He noted that" — 1 post, no follow-up this cycle
-- [NOTED] "What kind of reaction would this provoke if something similar were displayed right in front of the Philippine Senate building, clearly visible to those inside? Do you think they will finally get the message?" — 1 post, no follow-up this cycle
-- [NOTED] "Bro woke up from a nap to take another nap" — 1 post, no follow-up this cycle
-- [NOTED] "nobody helped so bro said “fine, I’ll do it myself”" — 1 post, no follow-up this cycle
-- [NOTED] "NEWS ALERT: A 33-year-old tourist (Chennai) d*ed this Monday, May 18, 2026, at the Dubare camp (Karnataka). An elephant fell on her during a f*ght while bathing in the Cauvery. Her husband and their child were slightly injured. RIP" — 1 post, no follow-up this cycle
-- [NOTED] "imagine almost getting buried just because you were sleeping" — 1 post, no follow-up this cycle
-- [NOTED] "Ayon kay Senate President Alan Peter Cayetano, simula pa raw noong 2023 ay may mga hakbang na umano para “i-abolish” ang Senado at gawin umanong “Regional Senate” ito. “‘Yung attack on the Senate started naman in 2023, nung gusto nilang i-abolish ang Senate. And I really believe" — 1 post, no follow-up this cycle
-- [NOTED] "ODUCADO RESIGNS, DENIES IMPEACHMENT PRESSURE 1-Tahanan Party-list Rep. Nathaniel Oducado has resigned from Congress, citing health concerns and the need to focus on his family. Oducado denied speculation connecting his resignation to the impeachment complaint against Vice" — 1 post, no follow-up this cycle
-- [NOTED] "Start your day with this summer drink." — 1 post, no follow-up this cycle
-- [NOTED] "why do hair grow on the butthole" — 1 post, no follow-up this cycle
-- [NOTED] "Life isn't always fair" — 1 post, no follow-up this cycle
-- [NOTED] "Alex Davies-Jones says one of the reasons she resigned from the govt is the lack of delivery @LauraPidcock rightly asks, where were the resignations when the left was being purged or over the support for Israel?" — 1 post, no follow-up this cycle
-- [NOTED] "Being black in Vietnam be like." — 1 post, no follow-up this cycle
-- [NOTED] "Marcos to tackle China's gray zone tactics with Japan PM during Tokyo meeting" — 1 post, no follow-up this cycle
-- [NOTED] "Golden taught the Ferrari driver a brutal lesson" — 1 post, no follow-up this cycle
-- [NOTED] "The impeachment trial of Vice President Sara Duterte in the Senate may begin in June during the legislative break, according to Bicol Saro Rep. Terry Ridon." — 1 post, no follow-up this cycle
+[CURIOSITY: contradiction_axis_new_world_order_disco] @mog_russEN: "PUTIN'S CHINA VISIT — FULL PROGRAMME: THE BLUEPRINT FOR THE NEW WORLD ORDER! Grand Welcoming Ceremony: President Putin officially arrives" (https://x.com/mog_russEN/status/2056629769857548475) - This post suggests a "New World Order" driven by Russia and China, aligning with centralized global governance but from a non-Western perspective.
+[CURIOSITY: contradiction_axis_new_world_order_disco] @mog_russEN: "THE "TEA-TIME" POWER PLAY: Putin & Xi Set to Ink Global-Shifting Pacts in Beijing! - President Vladimir Putin lands in Beijing today, gr" (https://x.com/mog_russEN/status/2056624325760094549) - Further evidence of a perceived shift in global power dynamics.
+[CURIOSITY: contradiction_axis_new_world_order_disco] @BRICSinfo: "JUST IN: President Putin says Russia and China are working together to bring "peace and universal prosperity" to the world." (https://x.com/BRICSinfo/status/2056588573864771609) - This frames the "New World Order" as a move towards "peace and universal prosperity," which is a common narrative used to justify power shifts.
+[CURIOSITY: contradiction_axis_new_world_order_disco] @visegrad24: "Polish Border Guards raiding human smugglers bringing illegal migrants into Europe" (https://x.com/visegrad24/status/2056664328506311146) - This highlights national control over borders, which is a core aspect of national sovereignty, contrasting with any vision of open borders often associated with some forms of global governance. The tension lies in whether "global prosperity" (as mentioned by Putin) can coexist with strict national border controls.
+
+[SPRINT: publish] Draft for Analytical X Thread 1 exists in articles/2026-05-19.md and is ready for review and refinement in the next cycle.
+[NOTED] "senate" — 10 posts, no follow-up this cycle
+[NOTED] "people" — 8 posts, no follow-up this cycle
+[NOTED] "world" — 6 posts, no follow-up this cycle
+[NOTED] "wait" — 4 posts, no follow-up this cycle
+[NOTED] "think" — 4 posts, no follow-up this cycle
+[NOTED] "life" — 3 posts, no follow-up this cycle
+[NOTED] "china" — 3 posts, no follow-up this cycle
+[NOTED] "job" — 3 posts, no follow-up this cycle
+[NOTED] "senate shooting incident" — 3 posts, no follow-up this cycle
+[NOTED] "office" — 3 posts, no follow-up this cycle
+[NOTED] "why" — 3 posts, no follow-up this cycle
+[NOTED] "cheetah" — 3 posts, no follow-up this cycle
+[NOTED] "philippines" — 3 posts, no follow-up this cycle
+[NOTED] "shocked" — 3 posts, no follow-up this cycle
+[NOTED] "working together bring peace" — 2 posts, no follow-up this cycle

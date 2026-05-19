@@ -633,6 +633,24 @@
       "pushed_to_origin": false,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_tactic_taxonomy_1779172788895",
+      "title": "Develop 'Narrative Tactic Taxonomy and Attribution Module'",
+      "status": "failed",
+      "proposed_at": "2026-05-19T06:39:48.764Z",
+      "resolved_at": "2026-05-19T08:01:27.950Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after",
+      "files_changed": [
+        "runner/lib/tactic_taxonomy.js",
+        "runner/lib/narrative_analysis.js",
+        "runner/lib/agent_tools.js"
+      ],
+      "branch_name": "meta/proposal_narrative_tactic_taxonomy_1779172788895",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }
