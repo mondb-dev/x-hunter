@@ -1,8 +1,10 @@
 {
-  "at": "2026-05-19T16:31:53.045Z",
+  "at": "2026-05-19T19:33:29.358Z",
   "kind": "tweet",
   "outcome": "failed",
-  "reason": "exception",
-  "error": "Execution context was destroyed, most likely because of a navigation.",
-  "cycle": 1422
+  "reason": "api_error",
+  "error": "X API 401: {\"title\":\"Unauthorized\",\"type\":\"about:blank\",\"status\":401,\"detail\":\"Unauthorized\"}",
+  "status_code": 401,
+  "method": "api",
+  "cycle": 1428
 }
