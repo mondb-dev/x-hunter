@@ -26,29 +26,65 @@ const CHIBI = [
   "Cute friendly mood, round soft silhouette, charming and approachable.",
 ].join(" ");
 
+const GHOST_BASE = [
+  "Pixel art illustration, polished 32-bit SNES sprite aesthetic,",
+  "clean crisp pixel clusters, smooth readable silhouette, carefully dithered shading,",
+  "limited palette, hard pixel edges, no anti-aliasing. Square composition 1:1.",
+  "Chibi kawaii proportions: oversized round dome head, tiny stubby arms and legs, full body visible.",
+  "Tight centered composition, solid near-black background #0a0b0c.",
+  "Small cute robot field investigator — round dome head, wide-brim fedora hat with feather, trench coat.",
+].join(" ");
+
 const STUDIES = [
   {
-    name: "logo_32bit",
+    name: "ghost_1_ethereal",
     prompt: [
-      "Pixel art illustration, polished 32-bit SNES sprite aesthetic,",
-      "clean crisp pixel clusters, smooth readable silhouette, carefully dithered shading,",
-      "limited palette, no anti-aliasing. Square composition 1:1.",
-      "Chibi kawaii proportions: oversized round dome head taking up half the body height,",
-      "tiny stubby arms and legs, compact torso, full body visible from head to toe.",
-      "Tight centered composition — character fills most of the frame, minimal negative space.",
-      "Solid flat near-black background #0a0b0c, no backdrop scenery, no desert, no environment.",
-      "Small cute robot field investigator. Oversized round dome head, large oval visor eyes glowing warm amber #d4a830.",
-      "Wide-brim fedora hat, worn dusty tan with a plain band and a single decorative feather tucked in,",
-      "earthy brown feather with pale ivory tip.",
-      "Rugged trench coat, faded khaki-sand, dithered shading, chest pocket flaps, belt loosely tied.",
-      "Short stubby legs, heavy round boots. Upright confident stance, arms slightly relaxed at sides.",
-      "Sand, khaki, amber glow palette. Premium polished 32-bit sprite, clean icon-ready composition.",
+      GHOST_BASE,
+      "Ghostly ethereal style: body rendered as semi-transparent pale ice-blue #a8d0f0,",
+      "soft glowing white-blue outline radiating outward as if made of frozen mist,",
+      "wispy translucent coat trails dissolving into light at the hem edges,",
+      "eyes glowing soft white-cyan #c8f0ff, face faintly luminous.",
+      "Palette: pale ice blue, ghostly white, faint cyan glow. Serene haunted mood.",
+    ].join(" "),
+  },
+  {
+    name: "ghost_2_spectral",
+    prompt: [
+      GHOST_BASE,
+      "Spectral haunted style: body rendered in eerie terminal green #00ff88 tones,",
+      "glitchy scanline dithering texture across the coat and head,",
+      "eyes blazing bright toxic green #00ff44 with flicker glow effect,",
+      "dark moss-green shadows, neon green outline, spirit-energy wisps rising from shoulders.",
+      "Palette: deep black-green, bright terminal green, toxic glow. Haunted digital ghost mood.",
+    ].join(" "),
+  },
+  {
+    name: "ghost_3_void",
+    prompt: [
+      GHOST_BASE,
+      "Dark void phantom style: body near-invisible deep charcoal #1a1a2a,",
+      "defined only by a sharp electric violet #9060ff glowing outline,",
+      "eyes two burning violet orbs #b080ff casting upward light on the hat brim,",
+      "coat dissolves into darkness at edges, small floating void particles orbiting the body.",
+      "Palette: near-black void, electric violet glow, deep purple shadow. Silent phantom mood.",
+    ].join(" "),
+  },
+  {
+    name: "ghost_4_amber_spirit",
+    prompt: [
+      GHOST_BASE,
+      "Amber spirit style: body warm sepia-gold #c8a060, like an old photograph come to life,",
+      "soft warm amber #e09020 glow outlining the whole silhouette,",
+      "eyes deep burning amber #ff9900 with warm flickering light,",
+      "coat edges dissolve into golden embers and fading light trails,",
+      "slight warmth and nostalgia — a spirit that lingers, not menacing.",
+      "Palette: sepia gold, warm amber glow, burnt orange shadow. Nostalgic ghost mood.",
     ].join(" "),
   },
 ];
 
 
-async function generateImage(prompt, outputPath) {
+async function generateImage(prompt, outputPath, aspectRatio = "1:1") {
   const token = await getAccessToken();
   const { project, location } = getProjectConfig();
   const model = "imagen-4.0-generate-001";
@@ -58,7 +94,7 @@ async function generateImage(prompt, outputPath) {
     instances: [{ prompt }],
     parameters: {
       sampleCount: 1,
-      aspectRatio: "1:1",
+      aspectRatio,
       safetySetting: "block_only_high",
     },
   });
@@ -99,7 +135,7 @@ async function main() {
     const out = `branding/${s.name}.png`;
     process.stdout.write(`[${s.name}] generating... `);
     try {
-      await generateImage(s.prompt, out);
+      await generateImage(s.prompt, out, s.aspectRatio || "1:1");
       console.log(`saved → ${out}`);
     } catch (err) {
       console.log(`FAILED: ${err.message}`);
