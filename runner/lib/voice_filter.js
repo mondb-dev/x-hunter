@@ -62,6 +62,8 @@ function check(draftText) {
     { re: /\bstrategic\s+narratives?\b/i,         msg: 'Abstract phrase: "strategic narrative(s)" — name the specific claim or actor' },
     { re: /\bcalls?\s+into\s+question\b/i,        msg: 'Press-release phrase: "calls into question" — state your actual position' },
     { re: /\brain of silence\b/i,                 msg: 'Cliché: "rain of silence"' },
+    { re: /\bnarrative\s+control\b/i,             msg: 'Abstract phrase: "narrative control" — name who did what specifically' },
+    { re: /\bnarrative\s+manipulation\b/i,        msg: 'Abstract phrase: "narrative manipulation" — name the specific act' },
   ];
   for (const { re, msg } of analystPatterns) {
     if (re.test(draftText)) {
