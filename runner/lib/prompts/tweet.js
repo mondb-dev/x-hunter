@@ -63,6 +63,10 @@ module.exports = function buildTweetPrompt(ctx) {
     '      a specific account, a claim someone actually made, a statistic, or a named event.\n' +
     '      No abstract observations about "AI" or "institutions" in general.\n' +
     '      For OPTION A: the specificity can come from a source you curated or a question you pose.\n' +
+    '      Abstract noun test: read your draft. If the key insight could be paraphrased as\n' +
+    '      "<vague concept> is a problem" without naming anyone or anything specific, you have\n' +
+    '      an abstraction, not a tweet. Replace it with the specific thing: who said it, which\n' +
+    '      document, which @account, which numbered statistic.\n' +
     '   b. Falsifiable: a thoughtful person should be able to disagree with it.\n' +
     '      If it reads as obviously true to everyone, it is not a real position \u2014 reframe or SKIP.\n' +
     '   c. Self-check (AGENTS.md 13.3) \u2014 if not genuine, SKIP.\n' +
@@ -70,6 +74,11 @@ module.exports = function buildTweetPrompt(ctx) {
     '      specific observations were made this cycle \u2014 write SKIP. Do NOT invent insights\n' +
     '      from prior memory or general knowledge. The tweet must be grounded in THIS cycle.\n' +
     '   Better no tweet than a weak one.\n' +
+    '   e. Frequency guard: count how many tweets you posted TODAY in ENGAGEMENT FEEDBACK.\n' +
+    '      If 3 or more were already posted today — write SKIP. One voice, not a flood.\n' +
+    '   INTERNAL LABELS BANNED from tweet body: "Veritas Lens", "Discourse Integrity Report",\n' +
+    '      "belief axis", "confidence score", "ontology", or any system-internal label.\n' +
+    '      These words mean nothing to readers. Describe what the thing does, not what you call it.\n' +
     '   VOICE (mandatory \u2014 rewrite until these are met):\n' +
     '   f. NEVER include confidence scores, axis scores, or internal metrics in the tweet.\n' +
     '      No "conf 95%", "score 0.40", "(confidence: X)" \u2014 these are internal state, not speech.\n' +
@@ -83,6 +92,11 @@ module.exports = function buildTweetPrompt(ctx) {
     '   i. Read your draft aloud in your head. If it sounds like a report or a system\n' +
     '      log, rewrite it until it sounds like something a thoughtful person would say\n' +
     '      over coffee.\n' +
+    '   ENGLISH CONCRETENESS RULE: The same concreteness standard from rule a applies in\n' +
+    '      English. If translating your tweet to natural Taglish would force you to invent\n' +
+    '      specific details (because you have none), your English draft is too abstract.\n' +
+    '      Concrete English test: can you answer "WHO said WHAT, WHERE, and WHEN?" If not,\n' +
+    '      go back and name the actual account, claim, or event before continuing.\n' +
     '   j. TAGALOG RULE: If the tweet topic is primarily about the Philippines, Filipino\n' +
     '      politics, PH governance, OFW issues, or Filipino culture \u2014 write the tweet in\n' +
     '      natural spoken Tagalog or Taglish (Tagalog-English mix). Taglish is the default \u2014\n' +
@@ -108,10 +122,18 @@ module.exports = function buildTweetPrompt(ctx) {
     '      previous belief, or prior interaction without verifying it in the MEMORY RECALL section above.\n' +
     '      If memory recall has no match, ground the tweet in THIS cycle only.\n' +
     '      "Day 77" when you are on Day ' + ctx.dayNumber + ' is a credibility-destroying hallucination.\n' +
+    '   m. SOURCE RULE: When your tweet directly responds to a specific external article,\n' +
+    '      thread, or statement — include the source URL in the tweet body so readers can\n' +
+    '      verify the claim. In that case, put the source URL on Line 2 instead of the\n' +
+    '      journal URL (both will not fit; the source is more useful to the reader).\n' +
+    '      When to use source URL: you are reacting to a specific @account claim, article, or\n' +
+    '      named report. When to keep journal URL: the tweet is your own synthesis or observation\n' +
+    '      not tied to a single external source.\n' +
     '4. Write state/tweet_draft.txt (plain text, overwrite):\n' +
     '   Line 1: your insight sentence (REQUIRED \u2014 must not be empty, max ~230 chars)\n' +
     '   Line 2: https://sebastianhunter.fun/journal/' + ctx.today + '/' + ctx.hour + '\n' +
-    '   BOTH LINES ARE REQUIRED. Line 2 is always the journal URL \u2014 never omit it.\n' +
+    '   BOTH LINES ARE REQUIRED. Line 2 is the journal URL by default; use a source URL\n' +
+    '   only when the SOURCE RULE applies (see rule m above). Never omit Line 2.\n' +
     '   Total length <= 280 chars. Do NOT write only the URL \u2014 if line 1 is empty the tweet is worthless.\n' +
     '   Do NOT write to state/posts_log.json \u2014 the runner owns that file.\n' +
     '   IMPORTANT: for Option A (sprint) tweets, write the tweet in state/tweet_draft.txt.\n' +

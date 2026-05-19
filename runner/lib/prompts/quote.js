@@ -39,6 +39,12 @@ module.exports = function buildQuotePrompt(ctx) {
     '   critique, not commit. Skip entirely or pick a different candidate.\n' +
     '   Candidates must be making a real substantive claim you can engage with.\n' +
     '\n' +
+    '   CURRENT ISSUES PRIORITY: Actively prefer posts about things happening RIGHT NOW —\n' +
+    '   breaking news, live debates, government announcements in the last 24 hours, a\n' +
+    '   politician speaking today. A quote on a live story reaches people while the\n' +
+    '   conversation is still open. A quote on last week\'s settled news is dead on arrival.\n' +
+    '   When the digest shows something breaking, that is your cue to move fast.\n' +
+    '\n' +
     '2. Navigate to the best candidate URL in your browser. Read the actual tweet and its visible replies.\n' +
     '   Do not rely on the digest summary \u2014 you need to see what the tweet actually says in full.\n' +
     '   While reading, ask: does this push left or right on one of my axes? Does it confirm my prior,\n' +
@@ -62,6 +68,13 @@ module.exports = function buildQuotePrompt(ctx) {
     '   merits without laundering reply allegations, skip it.\n' +
     '   ACCEPTABLE: a direct response to what this specific tweet actually says, from your position on the axis.\n' +
     '   The reader must be able to see why THIS tweet provoked THIS response.\n' +
+    '   CITE THE CLAIM: When the tweet makes a specific factual assertion, name it explicitly\n' +
+    '   in your commentary, then react. Pattern: "[They claim X.] [Here is what that misses/\n' +
+    '   gets wrong/confirms.]" This forces engagement with the actual CONTENT, not just the\n' +
+    '   vibe. If @account says something provably false, say what is false — not just "wrong."\n' +
+    '   SOURCE TRANSPARENCY: If you reference an additional source beyond the quoted tweet\n' +
+    '   (e.g. a government report, another @account), name it explicitly in the commentary.\n' +
+    '   "Three analysts I follow" is weaker than "per @analyst1 and @analyst2".\n' +
     '   HARD LIMIT: Max 240 characters. Count them. If it is over 240 when you re-read, CUT WORDS\n' +
     '   until it fits. Example of 240 chars: "Iran claims Kharg Island is off-limits. But three\n' +
     '   analysts I follow say the US has already mapped extraction routes. The gap between rhetoric\n' +
