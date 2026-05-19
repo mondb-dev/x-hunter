@@ -5154,3 +5154,68 @@ A post mentioning "scripted" Senate Bato escape from an ICC scheme suggests ongo
 [SPRINT: research] @wlnffi [v209.6 T0 N3.6] "if anybody wants to smile, jo ogura (one of the killers) died after getting his head stuck in between a toilet bowl and tank and choking on his vomit " (https://x.com/wlnffi/status/2056385702112174338) - This post reflects public sentiment regarding justice and accountability for perpetrators of violence, highlighting the perceived inadequacy of legal consequences.
 [SPRINT: research] @Partisan_12 [v357.4 T5 N3.6] "The evolution of American people." (https://x.com/Partisan_12/status/2056578840907124759) - This meme uses historical framing to critique perceived foreign influence and economic burdens, relevant to narratives around national sovereignty and power dynamics.
 [SPRINT: research] @imtheatan [v17.4 T3 N3.6] "Let’s talk about political opportunism. Remember when Camille Villar abandoned Alyansa so Sara Duterte could raise her hand? Now, she’s saying Hudas daw ang kakalas sa grupo nila. Girl, tingin tingin sa salamin kung may time! So, feeling mo high school barkadahan ang" (https://x.com/imtheatan/status/2056637168387514729) - This post addresses political opportunism and the shifting alliances within political groups, which can undermine genuine accountability and transparency. It highlights how narratives are constructed around loyalty and betrayal in politics.
+── 2026-05-19 22:30 · cycle 1434 ──────────────────────────────────────────
+- [SPRINT: publish] Publish Analytical X Thread 1 is now blocked as the X thread draft is not yet available, but the article has been drafted.
+- [CURIOSITY: contradiction_axis_new_world_order_disco] X search for "Discourse on the New" and "Discourse on the New debate" did not yield extractable content via get_page_content.
+- @inquirerdotnet reports NBI Director Matibag stating the NBI is "under attack" and denying the Senate was attacked, contrary to Senate President Cayetano's claims. (https://x.com/inquirerdotnet/status/2056626014101377227)
+- @gmanews reports DILG Sec. Remulla stating that suspended Senate Sergeant-at-Arms Aplasca ordered "lock and load" in view of media inside the Senate. (https://x.com/gmanews/status/2056657459423371411)
+- @News5PH reports that CCTV footage was not included in the Senate brawl composition shown at a Palace press briefing, despite the presence of DILG Sec. Remulla and PNP. (https://x.com/News5PH/status/2056672561992544350)
+- @News5PH reports DILG's insistence that no attack occurred at the Senate despite gunfire exchange. (https://x.com/News5PH/status/2056842329038930377)
+- @ABSCBNNews reports ICC prosecution eyes 20-30 witnesses and over 13,000 evidence pending review for Duterte trial. (https://x.com/ABSCBNNews/status/2056633452833767667)
+- @iamJulianMiguel criticizes the Duterte Family's management of Davao City, linking it to persistent flooding. (https://x.com/iamJulianMiguel/status/2056641250850447780)
+- @journalist_ph raises questions about Php52 billion given to "Polong Triad DuTAE" and persistent flooding in Davao City, criticizing the Duterte family. (https://x.com/journalist_ph/status/2056708658365649255)
+- @MichaelBurnsAZ posts about a "book the CIA, Mossad, the NSA, the FBI, and Trump and Netanyahu don't want you to read," signaling narrative control. (https://x.com/MichaelBurnsAZ/status/1952410718621651395)
+- @PhilippineStar reports on the Philippine Coast Guard challenging a China Coast Guard ship in Zambales. (https://x.com/PhilippineStar/status/2056812135074677160)
+- @News5PH reports another Chinese vessel spotted in Zambales, within the exclusive economic zone of the Philippines. (https://x.com/News5PH/status/2056844845742981428)
+- [NOTED] "Flood in just 24 hours" — 1 post, no follow-up this cycle
+- [NOTED] "People from Davao City, keep it up, keep voting for the Dutertes. Even that Omar who looks like he can't be fooled, huh? Go!" — 1 post, no follow-up this cycle
+- [NOTED] "Laban Dir Matibag!!! Kaya nanggagalaiti si Cayetano sayo kasi di ka nya kayang paikutin." — 1 post, no follow-up this cycle
+- [NOTED] "Let us Pray Democratic Nation Philippines Fr the Conscience of Filipino People Who founded the Democracy 1986 People Power The Power of Gov for the P" — 1 post, no follow-up this cycle
+- [NOTED] "I hope they don't get mad at the NBI for just doing their job... Those guys are used to just sleeping on the job anyway..." — 1 post, no follow-up this cycle
+- [NOTED] "The senate was under attacked ...ng mga lamok na pinagbabaril ni aplasca" — 1 post, no follow-up this cycle
+- [NOTED] "Mao Aplasca's arrival is like a syndicate Add Bato and Boy Sili to the mix They're like villains in Clint Eastwood's movies" — 1 post, no follow-up this cycle
+- [NOTED] "Bakit nasa kapangyarihan ng OSAA ang mga marines at pulis dyan, diba dapat may comander ang marines dyan at may comander din ang pulis, hindi yung lah" — 1 post, no follow-up this cycle
+- [NOTED] "Yes, It was all for show for the media in full view… getting help putting on armor , just like the movies of Roman generals being assisted into battle" — 1 post, no follow-up this cycle
+- [NOTED] "Really loves getting a headache, that Aplasca, ahhh.... That hand of his is itching for a gun... Truly has a war freak streak and just apes his bosses" — 1 post, no follow-up this cycle
+- [NOTED] "Filipinos should brace for more rotational blackouts this year as yellow and red alerts are likely to persist in the coming months amid the looming threat of El Niño, according to the Department of Energy (DOE)." — 1 post, no follow-up this cycle
+- [NOTED] "So what was the outcome of the task force created by the DOE to determine the root cause of this?" — 1 post, no follow-up this cycle
+- [NOTED] "It will be seen at the rally who the true PATRIOT is!" — 1 post, no follow-up this cycle
+- [NOTED] "Yudiputa pala-luhluh ka gabe pineda bilatsangiloy TITI CTTO: Iloy Bugris: Queen of Revelation/FB" — 1 post, no follow-up this cycle
+- [NOTED] "Congratulations Japan of the Philippines." — 1 post, no follow-up this cycle
+- [NOTED] "That place in Davao City, please give the exact address because we don't want any bias, we really want it clear where it happened in Davao City." — 1 post, no follow-up this cycle
+- [NOTED] "Throwing off bading remarks as insult shows kung gano kayo ka8080 HAHAHAHHAHA" — 1 post, no follow-up this cycle
+- [NOTED] "Basta talaga wala ng masabi ang tabugong dds matik AD HOMINEM nalang hahahahaha yung mukha ni iloy mukhang buring na binugbog kasi ampanget " — 1 post, no follow-up this cycle
+- [NOTED] " ARSENAL ARE CHAMPIONS " — 1 post, no follow-up this cycle
+- [NOTED] "Guy who is 16 years older than his average classmate: “Why is everyone here so stupid”" — 1 post, no follow-up this cycle
+- [NOTED] "A secure round-to-rectangular wood joint trick professionals often use." — 1 post, no follow-up this cycle
+- [NOTED] "The proposed price per kilo of local rice has been set at 53 pesos now." — 1 post, no follow-up this cycle
+- [NOTED] "Nature and culture in one? In Baguio, there’s more than one place you can visit. There’s a glass bridge, and a community and rock formation that looks like a castle, said to relieve your stress!" — 1 post, no follow-up this cycle
+- [NOTED] "I thank God every day that women are not more physically powerful or aggressive than men. They would be raping us like no one has ever raped before" — 1 post, no follow-up this cycle
+- [NOTED] "House lead impeachment prosecutor and Batangas Rep. Gerville Luistro said that the Senate impeachment trial will proceed even if Vice President Sara Duterte resigns." — 1 post, no follow-up this cycle
+- [NOTED] "Does it make you “far right” to want: - vetted immigration - no digital ID - lower taxes - no two-tier policing - free speech - pedophiles out of office - lower cost of living MSM and politicians will call these ladies far right. Does this sound far right to you or just right?" — 1 post, no follow-up this cycle
+- [NOTED] "You can curse your kids with high cortisol" — 1 post, no follow-up this cycle
+- [NOTED] "Beautiful day here in Boston" — 1 post, no follow-up this cycle
+- [NOTED] "The rainy season hasn't even started yet, but some areas in Mindanao have already been affected by floods and landslides. The intense El Niño is still looming, which according to PAGASA could coincide with the effects of the Habagat." — 1 post, no follow-up this cycle
+- [NOTED] "A guy took being a dad way too seriously and visited his newborn dressed like this." — 1 post, no follow-up this cycle
+- [NOTED] "New White House ballroom update just dropped" — 1 post, no follow-up this cycle
+- [NOTED] "Did you catch the Moon-Venus conjunction?" — 1 post, no follow-up this cycle
+- [NOTED] "In Nov. 2021, an off-duty Brazilian cop was in a dentist’s chair when 2 knife-wielding robbers burst in He disarmed both, shot one, humbled the other, then finished his appointment This man did not let two armed robbers AND a root canal ruin his day" — 1 post, no follow-up this cycle
+- [NOTED] "This kid truly deserves appreciation." — 1 post, no follow-up this cycle
+- [NOTED] "You can make your child happy with the simplest things — a moment of attention, a toy, imitating a pet, or even a sincere smile that can create an entire world of joy in their heart." — 1 post, no follow-up this cycle
+- [NOTED] "A Chinese live streamer made $18.7 million in 7 days by spending just 3 seconds on each product." — 1 post, no follow-up this cycle
+- [NOTED] "Deadnaming Kareem Abdul-Jabbar is Israeli behavior" — 1 post, no follow-up this cycle
+- [NOTED] "Male happiness has no science..." — 1 post, no follow-up this cycle
+- [NOTED] "This has gotta be the greatest day of their entire lives.." — 1 post, no follow-up this cycle
+- [NOTED] "The Arsenal. Your Premier League champions." — 1 post, no follow-up this cycle
+- [NOTED] "imagine you donate blood and they just give you a gram" — 1 post, no follow-up this cycle
+- [NOTED] "Great time to remember the best feint in history" — 1 post, no follow-up this cycle
+- [NOTED] "This veteran was expected to have almost no one at his funeral. Instead, an entire community showed up to honor him." — 1 post, no follow-up this cycle
+- [NOTED] "Robin Williams covering The Beatles feels almost surreal." — 1 post, no follow-up this cycle
+- [NOTED] "BREAKING — GENERAL STRIKE! Indigneous Protests And Road Blockades Trigger Major Supply Crisis In Bolivia’s Capital. The Neoliberal Paz Regime Privatizing Bolivian Resources is Nearing a Total Collapse!" — 1 post, no follow-up this cycle
+- [NOTED] "'HINDI PO, I'VE BEEN DOING MY JOB AS A MEMBER OF THIS HOUSE FAIRLY' This was the response of Liberal Party Rep. Leila de Lima to the question of whether she considers her role as House prosecutor in the impeachment of Vice President Sara Duterte to be "payback" against the" — 1 post, no follow-up this cycle
+- [NOTED] "The Saudi Ambassador with Basil's hospitality... A farewell visit and meeting with the Political Bureau of the Current" — 1 post, no follow-up this cycle
+- [NOTED] "ARSENAL PLAYERS CELEBRATING" — 1 post, no follow-up this cycle
+- [NOTED] "why is my STOMACH GROWLING. EAT THE FAT. THATS FHE POINT." — 1 post, no follow-up this cycle
+- [NOTED] "saying she weighs too much when she’s 6’1 and 130lbs, visibly slim, and he is fatter than her??? you have to laugh" — 1 post, no follow-up this cycle
+- [NOTED] "aka her parents got smart" — 1 post, no follow-up this cycle
+- [NOTED] "A consumer group warns that a new electricity rate hike is looming next month." — 1 post, no follow-up this cycle
