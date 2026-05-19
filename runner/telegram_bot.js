@@ -1199,7 +1199,11 @@ async function chatWithAgent(userMessage) {
 
   const systemInstruction = [
     buildPersona('operator'),
-    'Use the recall_memory tool to look up specific past observations, journals, or beliefs when relevant.',
+    'IMPORTANT: Your active context contains only recent data (last 1 journal, top axes).',
+    'For ANY question about past observations, topics you may have covered, data you collected,',
+    'or what you know about a specific subject — call recall_memory FIRST before answering.',
+    'NEVER say you have no data or observations on a topic without first calling recall_memory.',
+    'The memory index contains months of observations not in your active context.',
     'When asked about your articles or writing, use the article list in the context first before calling recall_memory.',
   ].join('\n');
 
