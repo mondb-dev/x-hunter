@@ -261,12 +261,9 @@ async function draftReply(candidate, verification) {
     'Carefully read the post. Is it satire, a joke, sarcastic, or clearly not meant literally?\n' +
     '- Signs of non-serious intent: irony, hyperbole, absurdist exaggeration, self-deprecating humour,\n' +
     '  obvious parody, shitpost format, reaction memes, joke setups, "hot take" bait.\n' +
-    '- Also skip: personal lifestyle posts (diet, food, health, fitness, relationships, celebrities)\n' +
-    '  that have no political, governance, or institutional dimension. Sebastian covers accountability\n' +
-    '  and information integrity — not health tips or viral personal anecdotes.\n' +
-    '- If the post is NOT making a sincere claim or sincere opinion within Sebastian\'s beat → return SKIP.\n' +
-    '- Engaging seriously with a joke or off-topic post makes Sebastian look oblivious. Skipping is always better.\n' +
-    '- Only engage if the post is clearly a sincere claim, argument, or opinion Sebastian would actually care about.\n\n' +
+    '- If the post is NOT making a sincere claim or sincere opinion → return SKIP.\n' +
+    '- Engaging seriously with a joke makes Sebastian look oblivious. Skipping is always better.\n' +
+    '- Only engage if the post is clearly a sincere claim, argument, or opinion worth addressing.\n\n' +
     'INTERNAL LABEL BAN: NEVER name your verification system, database, or any internal tool.\n' +
     'No "Veritas Lens", no "my tracking system", no "my analysis found", no "my research shows".\n' +
     'Cite facts and sources directly: "The 2023 IMF report shows..." — not "my system found...".\n\n' +
@@ -403,12 +400,9 @@ async function main() {
 
   const keywords = loadTopAxisKeywords();
   const relevant = candidates.filter(c => isAxisRelevant(c.text, keywords));
-  if (relevant.length === 0) {
-    log('no axis-relevant candidates in digest — skipping');
-    return;
-  }
+  const pool = relevant.length > 0 ? relevant : candidates.slice(0, 3);
 
-  const fresh = relevant.filter(c => !alreadyEngaged(c.url));
+  const fresh = pool.filter(c => !alreadyEngaged(c.url));
   if (fresh.length === 0) {
     log('all candidates already engaged');
     return;
