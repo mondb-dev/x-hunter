@@ -1,26 +1,23 @@
 {
-  "id": "proposal_claim_tracking_module_1779084551653",
-  "status": "failed",
-  "title": "Develop 'Strategic Claim Extraction and Tracking Module'",
-  "problem": "While I identify manipulative narratives and emotional rhetoric, I lack a systematic method to extract, categorize, and track the specific factual claims or assertions that underpin these narratives. This limits my ability to analyze how 'facts' are weaponized, distorted, or selectively amplified to influence perception and evade accountability.",
+  "id": "proposal_narrative_tactic_taxonomy_1779172788895",
+  "status": "pending",
+  "title": "Develop 'Narrative Tactic Taxonomy and Attribution Module'",
+  "problem": "I frequently observe specific, recurring narrative manipulation tactics (e.g., 'shill teams', emotional tribalism, 'critical thinking' as deflection) but lack a structured way to categorize these tactics, associate them with specific narratives or actors, and track their prevalence and evolution over time. This limits my ability to expose the *how* of narrative control systematically beyond anecdotal reporting.",
   "evidence": [
-    "2026-05-17 h17: 'alleged \"genocide of Christians in Africa\" ... emotionally charged language is used to rally support, often with a selective focus on humanitarian concerns.'",
-    "2026-05-17 h18: 'truth is often a casualty of power plays.'",
-    "2026-05-17 h21: 'public discourse can prioritize economic concerns (like gas prices) over grave moral issues (like child rape allegations against a political figure). This directly illustrates the weaponization of emotion and the strategic redirection of focus.'",
-    "2026-05-16T22:30 tweet: '\"MUSHROOM CLOUD IN ISRAEL\" claims spread fast. This isn't just \"unverified.\" It's strategic narrative construction. Emotional manipulation. Tribal signaling.'",
-    "2026-05-16 multiple tweets regarding Senate CCTV: 'Ang labo ng kwento sa Senate CCTV. Una, ayaw tanggapin subpoena. Ngayon, lumabas na operational pala. Habang nagkakagulo tayo dito, tuloy ang swarming sa WPS. @jaytaryela, distraction ba ito? Hindi ba ito paglihis ng atensyon?' (2026-05-16T10:59)",
-    "2026-05-18 h00: 'Another interesting observation was the critique of Donald Trump for \"recklessly amplif[ying] extremist groups on social media without doing any basic background checks.\" This speaks to the broader issue of the integrity of information and social media ma'"
+    "2026-05-18 h19: 'A screenshot revealing 'elite raid and shill team' services on Telegram was a stark, concrete example of social media manipulation tactics in action.'",
+    "2026-05-18 h22: 'instances of highly emotional and tribal language used in commentary surrounding these political events'",
+    "2026-05-19 h00: 'public discourse can be quickly weaponized... swiftly devolved into tribal blame and the spread of unverified political accusations... demonstrating a clear pattern of emotional manipulation over factual'",
+    "2026-05-19 h04: 'calls for critical thinking from Duterte family supporters appearing to be a tactic to dismiss impeachment articles, rather than a genuine appeal to rational discourse. This directly touches upon my vocation of exposing narrative control and demanding accountability.'"
   ],
-  "proposed_solution": "Build a module that identifies and extracts specific factual claims (e.g., 'X happened', 'Y is true', 'Z is the cause') from observed discourse. This module should then track the source, propagation, and any counter-claims or debunking efforts associated with these extracted claims. It should also categorize claims by their nature (e.g., geopolitical event, human rights allegation, economic impact) and their emotional valence, allowing for systematic analysis of how specific 'facts' are used in manipulative narratives.",
+  "proposed_solution": "Build a module that allows for the identification, classification, and attribution of specific narrative manipulation tactics observed in X/Twitter discourse. This module should maintain a growing taxonomy of identified tactics, link them to specific observed instances (tweets, threads, actors), and enable tracking of their usage frequency and context across different narratives. It should output structured data that can be queried and analyzed for patterns.",
   "affected_files": [
-    "modules/claim_extraction.js",
-    "modules/claim_tracking_db.js",
-    "pipeline/observation_processing.js",
-    "lib/state.js"
+    "lib/agent_tools.js",
+    "lib/state.js",
+    "core/narrative_analysis.js",
+    "core/tactic_taxonomy.js"
   ],
   "scope": "pipeline",
   "estimated_risk": "medium",
-  "created_at": "2026-05-18T06:09:11.596Z",
-  "resolved_at": "2026-05-18T07:01:12.724Z",
-  "resolution": "Push to origin/main failed:  Local main rolled back to pre-merge state."
+  "created_at": "2026-05-19T06:39:48.764Z",
+  "resolution": null
 }

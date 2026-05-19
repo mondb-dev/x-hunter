@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "generated_at": "2026-04-19T03:02:23.280Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-05-19T04:30:20.088Z",
+  "profiled_at": "2026-05-19T06:29:49.398Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -20129,7 +20129,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-16T04:58:08.897Z",
+        "fetched_at": "2026-05-19T05:59:46.527Z",
         "homepage_url": "https://topstocks.com/",
         "example_url": "https://topstocks.com/cvkd?twclid=2br9vd88ywgw104idmz125ag0u",
         "homepage_status": 200,
@@ -20251,7 +20251,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-16T04:58:09.653Z",
+        "fetched_at": "2026-05-19T05:59:46.710Z",
         "homepage_url": "https://tolt.com/",
         "example_url": "https://tolt.com/?twclid=24jeerwwldzt1cwgx3ktzfvzm5",
         "homepage_status": 200,
@@ -20373,7 +20373,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-16T05:28:10.415Z",
+        "fetched_at": "2026-05-19T05:59:46.950Z",
         "homepage_url": "https://monadicdna.com/",
         "example_url": "https://explorer.monadicdna.com/?twclid=23v8cbj938nxfoq8gmro6dqa1l",
         "homepage_status": 200,
@@ -24006,7 +24006,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-16T02:58:38.732Z",
+        "fetched_at": "2026-05-19T05:59:47.080Z",
         "homepage_url": "https://harvardlawreview.org/",
         "example_url": "https://harvardlawreview.org/",
         "homepage_status": 200,
@@ -24097,7 +24097,7 @@
           ]
         },
         "profile": {
-          "score": 0.49000000000000005,
+          "score": 0.5,
           "confidence": 0.75,
           "basis": [
             "meta_author:false",
@@ -24106,7 +24106,7 @@
             "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:7",
+            "outbound_links:8",
             "opinion_marker:false"
           ]
         },
@@ -24126,7 +24126,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-16T03:58:06.671Z",
+        "fetched_at": "2026-05-19T06:29:47.631Z",
         "homepage_url": "https://brennancenter.org/",
         "example_url": "https://www.brennancenter.org/",
         "homepage_status": 200,
@@ -24142,7 +24142,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 7,
+          "outbound_links_count": 8,
           "opinion_marker": false
         },
         "example": {
@@ -24152,7 +24152,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 7,
+          "outbound_links_count": 8,
           "opinion_marker": false
         }
       }
@@ -24246,15 +24246,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-16T03:58:07.246Z",
+        "fetched_at": "2026-05-19T06:29:48.225Z",
         "homepage_url": "https://mlfa.org/",
         "example_url": "https://www.mlfa.org/",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://mlfa.org/",
         "example_final_url": "https://mlfa.org/",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": true,
@@ -24337,13 +24337,13 @@
           ]
         },
         "profile": {
-          "score": 0.43000000000000005,
-          "confidence": 0.75,
+          "score": 0.29000000000000004,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:true",
             "canonical:true",
-            "about:true",
+            "about:false",
             "contact:false",
             "corrections:false",
             "outbound_links:1",
@@ -24366,23 +24366,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-16T03:58:07.611Z",
+        "fetched_at": "2026-05-19T06:29:48.562Z",
         "homepage_url": "https://pewresearch.org/",
         "example_url": "https://www.pewresearch.org/",
-        "homepage_status": 200,
+        "homepage_status": 403,
         "example_status": 200,
-        "homepage_final_url": "https://www.pewresearch.org/",
+        "homepage_final_url": "https://pewresearch.org/",
         "example_final_url": "https://www.pewresearch.org/",
-        "homepage_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "text/html",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 1,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -24486,7 +24486,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-16T04:58:10.693Z",
+        "fetched_at": "2026-05-19T06:29:49.398Z",
         "homepage_url": "https://bleepingcomputer.com/",
         "example_url": "https://www.bleepingcomputer.com/news/security/cisco-source-code-stolen-in-trivy-linked-dev-environment-breach/",
         "homepage_status": 200,
@@ -24502,7 +24502,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 12,
+          "outbound_links_count": 11,
           "opinion_marker": false
         },
         "example": {

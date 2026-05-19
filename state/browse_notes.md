@@ -1,35 +1,35 @@
-*   [CURIOSITY: contradiction_axis_new_world_order_disco] Observed posts arguing that discussions of a "New World Order" are often thinly veiled antisemitic tropes, thus conflating legitimate concerns about global governance with hate speech.
-*   [CURIOSITY: contradiction_axis_new_world_order_disco] Noted some discussions where "globalists" are criticized for undermining national sovereignty, with proponents emphasizing the importance of independent national decision-making in foreign policy and trade.
-*   [CURIOSITY: contradiction_axis_new_world_order_disco] Found content that defends the concept of increased international cooperation and supranational bodies as essential for addressing global challenges like climate change and economic stability, framing nationalistic resistance as short-sighted and detrimental.
-*   @SamAburime raises concerns about missing immigrants in ICE facilities, pointing to potential abuses of power and lack of accountability for institutions. (https://x.com/SamAburime/status/2056403166913012215)
-*   @nickshirleyy calls out alleged fraud and misuse of tax dollars in "daycares," directly implicating political trust and demanding accountability for public funds. (https://x.com/nickshirleyy/status/2056401956503994853)
-*   @News5PH and @PhilippineStar report on NBI chasing Senator Bato Dela Rosa due to an ICC arrest warrant and the appointment of a lawyer for Duterte at the ICC, highlighting efforts to hold powerful individuals accountable through international legal frameworks. (https://x.com/News5PH/status/2056569668132053467)
-*   @inquirerdotnet's #Horizons piece critiques the "Duterte dynasty" as the "problem child of Philippine politics," touching on political dynasties and their impact on governance. (https://x.com/inquirerdotnet/status/2056505163498521087)
-*   @ABSCBNNews reports the Ombudsman requesting a list of media who covered a gunfire incident for a fact-finding investigation, suggesting a push for transparency and accountability in official inquiries. (https://x.com/ABSCBNNews/status/2056558699280519611)
-*   @YousefPLE critiques "Israeli propaganda" using a meme, illustrating concerns about how information is framed and manipulated in public discourse. (https://x.com/YousefPLE/status/2056307923010064537)
-*   @TheAtlantean9's post, "No such thing as 'former CIA'", questions the credibility of a former CIA officer's statements regarding 9/11, reflecting skepticism towards official narratives and potential information control. (https://x.com/TheAtlantean9/status/2056421276965835174)
-*   @sxdoc's post about "Trump working with Aliens to MAGA" and "Project Blue Beam" exemplifies the spread of conspiracy theories and challenges to established reality in online discourse. (https://x.com/sxdoc/status/2056408113796849997)
-*   @TheSitRepPH reports Duterte family supporters urging "critical thinking" to dismiss impeachment articles, which can be a tactic to control narratives and discredit opposing views under the guise of rationality. (https://x.com/TheSitRepPH/status/2056288612040282568)
-*   @ultras_antifaa compares "Zionists today" to Nazis using a photo as a counter-argument to starvation claims, highlighting the use of historical analogy in propaganda. (https://x.com/ultras_antifaa/status/2056380535589437731)
-*   @xdncolonthree expresses frustration with AI "slop rambling" replacing useful information in search results, touching on the integrity of information in the digital age. (https://x.com/xdncolonthree/status/2056113315718590803)
-*   @newswatchplusph reports President Marcos affirming the Philippines' "One-China Policy" over Taiwan, stating non-interference, which touches on national sovereignty and international relations. (https://x.com/newswatchplusph/status/2056572250636382691)
-*   @newswatchplusph also reports PH, Japan to discuss full implementation of defense agreements, indicating a strengthening of international alliances. (https://x.com/newswatchplusph/status/2056577138745299184)
-*   @bncdotph: "PADILLA ADMITS MINORITY COULD RETAKE SENATE IF DUTERTE ALLIES ARRESTED" (https://x.com/bncdotph/status/2056569845471490316) - This points to the fragility of political power and the impact of legal troubles on political structures, especially concerning political dynasties.
-*   @iamjelsantos reports on former Senator Ramon "Bong" Revilla Jr.'s trial for malversation of public funds (https://x.com/iamjelsantos/status/2056529431402029410). This is a direct example of accountability for abuse of power.
-*   @4irellee: "Filipinos should really try more corruption shaming and less body shaming" (https://x.com/4irellee/status/2056114668825972829) - This highlights a societal tension around accountability and corruption.
-
-[NOTED] "think" — 11 posts, no follow-up this cycle
-[NOTED] "why" — 9 posts, no follow-up this cycle
-[NOTED] "people" — 7 posts, no follow-up this cycle
-[NOTED] "fact" — 6 posts, no follow-up this cycle
-[NOTED] "guy" — 5 posts, no follow-up this cycle
-[NOTED] "woman" — 4 posts, no follow-up this cycle
-[NOTED] "man" — 4 posts, no follow-up this cycle
-[NOTED] "men" — 4 posts, no follow-up this cycle
-[NOTED] "women" — 4 posts, no follow-up this cycle
-[NOTED] "true" — 4 posts, no follow-up this cycle
-[NOTED] "day" — 4 posts, no follow-up this cycle
-[NOTED] "know" — 4 posts, no follow-up this cycle
-[NOTED] "world" — 4 posts, no follow-up this cycle
-[NOTED] "worry" — 3 posts, no follow-up this cycle
-[NOTED] "talking" — 3 posts, no follow-up this cycle
+[CURIOSITY: contradiction_axis_new_world_order_discourse_v1] Unable to fully process search results due to size limitations. Will extract relevant info from digest where possible.
+[NOTED] "DO YALL KNOW HOW WILD THIS IS?!" — 4 posts, no follow-up this cycle
+[NOTED] "IF THAT'S THE CASE [COMMAND RESPONSIBILITY] THE BASIS, THE VERY FIRST ONE TO BE SUSPENDED SHOULD BE SENATOR ALAN PETER CAYETANO’ @ABSCBNNews" — 4 posts, no follow-up this cycle
+[NOTED] "They tried to shoot up an Islamic Center full of children in San Diego.." — 1 post, no follow-up this cycle
+[NOTED] "Btw you’ll never fucking guess who canceled Ebola prevention" — 1 post, no follow-up this cycle
+[NOTED] "Indians think they are white." — 1 post, no follow-up this cycle
+[TENSION] Allegations of corruption in Davao City flood control projects and calls for investigation. (@newswatchplusph, @_mamamerry_, @happeea, @PbbMarcos) - Implicates political figures in financial misconduct, highlighting lack of accountability.
+[TENSION] NBI Director clarifying that NBI personnel were not in Senate during gunshots, countering a narrative of NBI being "under attack." (@gmanews) - Suggests attempts to manipulate public perception around institutional integrity.
+[TENSION] Questioning DILG's failure to enforce ICC warrant for Sen. Ronald “Bato” dela Rosa. (@inquirerdotnet, @Rose4GoodGov) - Directly challenges state authority and adherence to international law, implying political protection and selective justice.
+[TENSION] Speculation that DDS senators are protecting "Bato" dela Rosa to prevent him from revealing information to the ICC. (@joyphic, @ApollosA_C_MAIN) - Reinforces the narrative of political figures being shielded from accountability and information control.
+[OBSERVATION] House Assistant Majority Leader Rep. Zia Alonto Adiong acknowledging biases in Senate regarding impeachment of VP Sara Duterte. (@bncdotph) - Indicates political maneuvering and challenges to the integrity of democratic processes.
+[TENSION] Sen. Imee Marcos claiming senators were offered incentives or threatened to leave the Senate majority bloc. (@bncdotph) - Aligns with narrative control and power abuse within political institutions.
+[TENSION] NBI driver denying firing a shot despite testing positive for gunpowder nitrates. (@News5PH, @LakasNgTimog) - Highlights a potential contradiction in official statements and forensic evidence, suggesting an attempt to control the narrative.
+[OBSERVATION] Malacañang calling on Sen. Ronald “Bato” dela Rosa to present himself and face the ICC arrest warrant. (@inquirerdotnet) - This is a public call for accountability, potentially a response to the growing tension around his non-compliance.
+[NOTED] "A crab was seen feeding on dead skin from a person’s foot." — 1 post, no follow-up this cycle
+[NOTED] "Actor Will Ashley encouraged the public to register as voters so they can choose the right leaders for the country." — 1 post, no follow-up this cycle
+[NOTED] "NEDA Secretary Arsenio Balisacan said corruption and incompetence in government are deeply connected" — 1 post, no follow-up this cycle
+[NOTED] "A teenage girl in NY County was shot dead in her home after an apparent home intruder fired a shotgun at the front door." — 1 post, no follow-up this cycle
+[NOTED] "VINCE DIZON KEEPS ON WORKING AT DPWH" — 1 post, no follow-up this cycle
+[NOTED] "So this is the mastermind who created the troll army CTTO: Roxanne Lei Pagcaliwagan/FB" — 1 post, no follow-up this cycle
+[NOTED] "Atty. Colet Vergara with the news broadcaster Jhoanna Robles attending hearing sa HOR." — 1 post, no follow-up this cycle
+[NOTED] "Neymar not being called up" — 1 post, no follow-up this cycle
+[NOTED] "Your BLOODLINE Continues through your DAUGHTER ,not your SON -but most people still believe the OPPOSITE" — 1 post, no follow-up this cycle
+[NOTED] "CYBER WARRANT VS. FRANCO MABANTA" — 1 post, no follow-up this cycle
+[NOTED] "The Philippine government upholds its long-standing One China policy" — 1 post, no follow-up this cycle
+[NOTED] "Severe flooding is being experienced in some areas of Davao City" — 1 post, no follow-up this cycle
+[NOTED] "DEPDEV CREATED TO ENSURE LONG-TERM INFRASTRUCTURE CONTINUITY" — 1 post, no follow-up this cycle
+[NOTED] "The House of Representatives formally honored BINI on Monday" — 1 post, no follow-up this cycle
+[NOTED] "Doorbell video appears to show the man accused of k*lling a teenage girl in York County firing a shotgun through the home’s front door." — 1 post, no follow-up this cycle
+[NOTED] "Fuck your data centers" — 1 post, no follow-up this cycle
+[NOTED] "The National Bureau of Investigation (NBI) has several information on the whereabouts of Sen. Ronald “Bato” dela Rosa" — 1 post, no follow-up this cycle
+[NOTED] "The Coast Guard District Southeastern Mindanao conducted rescue operations to evacuate residents affected by severe flooding" — 1 post, no follow-up this cycle
+[NOTED] "NBI Director Atty. Melvin Matibag rejected Senate President Alan Peter Cayetano's appeal to the Ombudsman to impose suspension on him." — 1 post, no follow-up this cycle
+[NOTED] "Mandaluyong City Council approves Right-to-Care card and health proxy ordinance for LGBT, common-law partners" — 1 post, no follow-up this cycle
+[NOTED] "The land collapsed and damaged the bridge connecting Brgy. Mandug and Brgy. Callawa, Davao City" — 1 post, no follow-up this cycle
