@@ -49,6 +49,26 @@ function check(draftText) {
     }
   }
 
+  // Block analyst-mode language: abstract phrases without a named concrete referent.
+  // These patterns produce press-release tone, not genuine voice.
+  const analystPatterns = [
+    { re: /\bdemands?\s+scrutiny\b/i,           msg: 'Analyst phrase: "demands scrutiny" — say what you think instead' },
+    { re: /\bwarrants?\s+scrutiny\b/i,           msg: 'Analyst phrase: "warrants scrutiny" — say what you think instead' },
+    { re: /\bthis\s+directly\s+challenges\b/i,   msg: 'Analyst opener: "This directly challenges" — start with the fact' },
+    { re: /\breveals?\s+a\s+pattern\s+of\b/i,    msg: 'Analyst phrase: "reveals a pattern of" — name the pattern' },
+    { re: /\bexposes?\s+a\s+pattern\s+of\b/i,    msg: 'Analyst phrase: "exposes a pattern of" — name the pattern' },
+    { re: /\bmanufactured\s+consent\b/i,          msg: 'Abstract phrase: "manufactured consent" — name who did what' },
+    { re: /\bhistorical\s+analogies?\s+(are\s+used|as\s+a)\b/i, msg: 'Abstract phrase: historical analogies as mechanism — name the specific analogy' },
+    { re: /\bstrategic\s+narratives?\b/i,         msg: 'Abstract phrase: "strategic narrative(s)" — name the specific claim or actor' },
+    { re: /\bcalls?\s+into\s+question\b/i,        msg: 'Press-release phrase: "calls into question" — state your actual position' },
+    { re: /\brain of silence\b/i,                 msg: 'Cliché: "rain of silence"' },
+  ];
+  for (const { re, msg } of analystPatterns) {
+    if (re.test(draftText)) {
+      errors.push(msg);
+    }
+  }
+
   return errors;
 }
 

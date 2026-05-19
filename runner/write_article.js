@@ -290,6 +290,21 @@ Output ONLY the TITLE line followed by the article. No preamble. No meta-comment
     }
   }
 
+  // Voice lint — warn on analyst-mode openers in the first two paragraphs.
+  // Hard violations in opening paragraphs erode the article's credibility.
+  const openingParas = articleBody.split('\n\n').slice(0, 2).join(' ');
+  const analystOpeners = [
+    { re: /\bstrategic\s+(construction|manipulation|use)\s+of\s+narratives?\b/i, label: 'abstract narrative framing' },
+    { re: /\bpower\s+structures?\b/i, label: '"power structures" without named actor' },
+    { re: /\bmanufactured\s+consent\b/i, label: '"manufactured consent"' },
+    { re: /\bstrategic\s+narrative\s+control\b/i, label: '"strategic narrative control"' },
+  ];
+  const voiceWarnings = analystOpeners.filter(({ re }) => re.test(openingParas));
+  if (voiceWarnings.length) {
+    console.warn(`[article] voice lint: opening paragraphs contain abstract language — ${voiceWarnings.map(w => w.label).join(', ')}`);
+    console.warn('[article] article saved but consider making the opening more concrete next cycle');
+  }
+
   const output = `# ${title}\n\n*${today} · Sebastian D. Hunter · @SebastianHunts*\n\n${articleBody}`;
   fs.writeFileSync(ARTICLE_DRAFT, output);
 

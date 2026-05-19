@@ -354,6 +354,47 @@ function rotateLog(fp, maxLines) {
   } catch {}
 }
 
+/**
+ * 6. Weekly discourse thread: generate draft + post 4-tweet thread.
+ * Self-gated to once per 7 days via thread_state.json (draft generator also checks).
+ * Runs after reports() so today's article and digest are ready.
+ */
+function weeklyThread() {
+  const stateFile = path.join(config.STATE_DIR, 'thread_state.json');
+  try {
+    const state = JSON.parse(fs.readFileSync(stateFile, 'utf-8'));
+    if (state.last_posted) {
+      const elapsed = Date.now() - new Date(state.last_posted).getTime();
+      const days = elapsed / 86400000;
+      if (days < 7) {
+        log(`weekly thread: last posted ${days.toFixed(1)}d ago — skipping`);
+        return;
+      }
+    }
+  } catch {} // no state yet = proceed
+
+  log('weekly thread: generating draft...');
+  runScript('generate_thread_draft.js');
+
+  if (!exists(path.join(config.STATE_DIR, 'thread_draft.json'))) {
+    log('weekly thread: no draft produced — skipping post');
+    return;
+  }
+
+  log('weekly thread: posting...');
+  ensureBrowser();
+  sleepSec(3);
+  try {
+    execSync(`node "${path.join(config.RUNNER_DIR, 'post_thread.js')}"`, {
+      stdio: 'inherit',
+      timeout: 120_000,
+    });
+    log('weekly thread: posted');
+  } catch (e) {
+    log(`weekly thread: post failed — ${e.message}`);
+  }
+}
+
 // ── Main entry point ─────────────────────────────────────────────────────────
 
 /**
@@ -371,6 +412,7 @@ function runDaily({ today, vercelDeployHook }) {
   checkpoint();
   ponder();
   sprint();
+  weeklyThread();
   housekeeping({ today, vercelDeployHook });
 
   markComplete();
@@ -385,6 +427,7 @@ module.exports = {
   checkpoint,
   ponder,
   sprint,
+  weeklyThread,
   housekeeping,
   trimFile,
   rotateLog,
