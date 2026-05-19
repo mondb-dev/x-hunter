@@ -66,18 +66,60 @@ TIMING WINDOW:
 
 ---
 
-## Belief Axes
+## Belief Axes — Architecture
 
-| Axis | Left pole | Right pole |
+**Unlike Sebastian, axes are manually seeded, not discovered.**
+
+Sebastian starts from zero because his research question is open-ended — he doesn't
+know in advance what he'll find. The memecoin domain is bounded: we already know what
+dimensions matter. Pre-seeding means the agent scores on day one, every coin is
+comparable against every other, and the historical profiler builds a consistent
+pattern library immediately.
+
+**Three-tier structure:**
+
+### Tier 1 — Locked Core Axes
+Always scored. Never dropped. Used for all historical comparability.
+Changing these breaks the pattern library — treat as immutable once confirmed.
+
+| Axis | Left pole (safe) | Right pole (danger) |
 |---|---|---|
-| `contract_safety` | renounced, no mint | owner retained, mintable |
-| `liquidity_health` | locked deep, adequate depth | unlocked, thin |
-| `holder_distribution` | organic spread | whale concentrated |
+| `contract_safety` | renounced, no mint/pause | owner retained, mintable |
+| `liquidity_health` | locked ≥90d, adequate depth | unlocked or thin |
+| `holder_distribution` | organic spread, top 10 < 28% | whale concentrated, rising |
 | `narrative_authenticity` | organic community formation | coordinated shill burst |
-| `influencer_stage` | early organic | late paid amplification |
-| `trading_pattern` | genuine buy/sell balance | bot/wash pattern |
-| `stated_vs_onchain` | claims match reality | claims diverge from chain |
+| `influencer_stage` | early organic mentions | late paid amplification |
+| `trading_pattern` | genuine buy/sell balance 1.2–2.5x | bot/wash or extreme spike |
+| `stated_vs_onchain` | project claims match chain reality | claims diverge from data |
 | `timeline_risk` | past rug window, momentum building | inside rug window or dead |
+
+### Tier 2 — Extension Axes
+Proposed by the agent when it detects a pattern not covered by core axes.
+Requires 3+ confirmed instances across separate coins before activation.
+Versioned with discovery date — historical profiles before discovery are marked
+`pre-[axis_id]` so comparisons remain honest.
+
+Current extensions (none yet — populated as patterns emerge):
+```
+(empty — will grow from Phase 1 historical analysis)
+```
+
+### Tier 3 — Coin-Specific Context
+Ephemeral per-coin axes that don't generalize: team identity signals,
+chain-specific mechanics, ecosystem context (Solana vs. Base vs. ETH).
+Scored per coin, not stored in the global pattern library.
+
+---
+
+### Axis Versioning Rule
+
+When a new rug tactic or shill mechanic is confirmed and formalized into a Tier 2 axis:
+- All historical profiles ingested before that date are tagged `pre-[axis_id]`
+- The pattern library splits into pre/post cohorts for that axis
+- Historical match confidence scores show which cohort they draw from
+
+This keeps the profiler honest — a 73% match rate from pre-discovery data
+is not the same as 73% from data where the axis was active.
 
 ---
 
