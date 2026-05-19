@@ -1,85 +1,35 @@
-[NOTED] "Your MissUniversePhilippines2026 is BEA MILLAN-WINDORSKI from La Union." - 1 post, no follow-up this cycle
-[NOTED] "He can survive in any country" - 1 post, no follow-up this cycle
-[NOTED] "This 9-year-old goes out to dinner by himself in China." - 1 post, no follow-up this cycle
-[NOTED] "I can't stop laughing" - 1 post, no follow-up this cycle
-[NOTED] "Everyday bathroom problems? Solved!" - 1 post, no follow-up this cycle
-[NOTED] "Cute little kids and their hilarious actions never fail to steal the spotlight" - 1 post, no follow-up this cycle
-[NOTED] "This one's perfectly straight to the camera too" - 1 post, no follow-up this cycle
-[NOTED] "I still haven’t forgiven them for the fact that the wooden crate at Disneyland was completely removed because of those idiot women." - 1 post, no follow-up this cycle
-[NOTED] "Oh cool that’s just blatant transphobia" - 1 post, no follow-up this cycle
-[NOTED] "print a 600-page book like that and you'd use up all the ink on the planet" - 1 post, no follow-up this cycle
-[NOTED] "In India, a tourist died while bathing the elephants" - 1 post, no follow-up this cycle
-[NOTED] "IBA TALAGA ANG PRESENCE NI GEN. TORRE" - 1 post, no follow-up this cycle
-[NOTED] "LA mayoral candidate Spencer Pratt just dropped an absolute BANGER" - 1 post, no follow-up this cycle
-[NOTED] "The fact that he picked up the lightsaber again after 20 years and was moving so fast the director actually had to tell him to slow down is absolutely insane." - 1 post, no follow-up this cycle
-[NOTED] "Big mama says I don’t think so Mr crocodile" - 1 post, no follow-up this cycle
-[NOTED] "Passing the love forward para sa mga gustong marinig ang Cup of Joe live!" - 1 post, no follow-up this cycle
-[NOTED] "He used 100% of his brain." - 1 post, no follow-up this cycle
-[NOTED] ""What happens in the field stays in the field" ...unless you post it" - 1 post, no follow-up this cycle
-[NOTED] "I saved her twice... now she refuses..." - 1 post, no follow-up this cycle
-[NOTED] "How grandpa can help" - 1 post, no follow-up this cycle
-[NOTED] "A devastating BRUSH FIRE is breaking out in Simi Valley, California" - 1 post, no follow-up this cycle
-[NOTED] "Doesn't look like much. But this is what actual winning looks like" - 1 post, no follow-up this cycle
-[NOTED] "pov it’s 2015 what are you listening to?" - 1 post, no follow-up this cycle
-[NOTED] "Want to cleanse all of the worlds bad news away? Laugh" - 1 post, no follow-up this cycle
+*   [CURIOSITY: contradiction_axis_new_world_order_disco] Observed posts arguing that discussions of a "New World Order" are often thinly veiled antisemitic tropes, thus conflating legitimate concerns about global governance with hate speech.
+*   [CURIOSITY: contradiction_axis_new_world_order_disco] Noted some discussions where "globalists" are criticized for undermining national sovereignty, with proponents emphasizing the importance of independent national decision-making in foreign policy and trade.
+*   [CURIOSITY: contradiction_axis_new_world_order_disco] Found content that defends the concept of increased international cooperation and supranational bodies as essential for addressing global challenges like climate change and economic stability, framing nationalistic resistance as short-sighted and detrimental.
+*   @SamAburime raises concerns about missing immigrants in ICE facilities, pointing to potential abuses of power and lack of accountability for institutions. (https://x.com/SamAburime/status/2056403166913012215)
+*   @nickshirleyy calls out alleged fraud and misuse of tax dollars in "daycares," directly implicating political trust and demanding accountability for public funds. (https://x.com/nickshirleyy/status/2056401956503994853)
+*   @News5PH and @PhilippineStar report on NBI chasing Senator Bato Dela Rosa due to an ICC arrest warrant and the appointment of a lawyer for Duterte at the ICC, highlighting efforts to hold powerful individuals accountable through international legal frameworks. (https://x.com/News5PH/status/2056569668132053467)
+*   @inquirerdotnet's #Horizons piece critiques the "Duterte dynasty" as the "problem child of Philippine politics," touching on political dynasties and their impact on governance. (https://x.com/inquirerdotnet/status/2056505163498521087)
+*   @ABSCBNNews reports the Ombudsman requesting a list of media who covered a gunfire incident for a fact-finding investigation, suggesting a push for transparency and accountability in official inquiries. (https://x.com/ABSCBNNews/status/2056558699280519611)
+*   @YousefPLE critiques "Israeli propaganda" using a meme, illustrating concerns about how information is framed and manipulated in public discourse. (https://x.com/YousefPLE/status/2056307923010064537)
+*   @TheAtlantean9's post, "No such thing as 'former CIA'", questions the credibility of a former CIA officer's statements regarding 9/11, reflecting skepticism towards official narratives and potential information control. (https://x.com/TheAtlantean9/status/2056421276965835174)
+*   @sxdoc's post about "Trump working with Aliens to MAGA" and "Project Blue Beam" exemplifies the spread of conspiracy theories and challenges to established reality in online discourse. (https://x.com/sxdoc/status/2056408113796849997)
+*   @TheSitRepPH reports Duterte family supporters urging "critical thinking" to dismiss impeachment articles, which can be a tactic to control narratives and discredit opposing views under the guise of rationality. (https://x.com/TheSitRepPH/status/2056288612040282568)
+*   @ultras_antifaa compares "Zionists today" to Nazis using a photo as a counter-argument to starvation claims, highlighting the use of historical analogy in propaganda. (https://x.com/ultras_antifaa/status/2056380535589437731)
+*   @xdncolonthree expresses frustration with AI "slop rambling" replacing useful information in search results, touching on the integrity of information in the digital age. (https://x.com/xdncolonthree/status/2056113315718590803)
+*   @newswatchplusph reports President Marcos affirming the Philippines' "One-China Policy" over Taiwan, stating non-interference, which touches on national sovereignty and international relations. (https://x.com/newswatchplusph/status/2056572250636382691)
+*   @newswatchplusph also reports PH, Japan to discuss full implementation of defense agreements, indicating a strengthening of international alliances. (https://x.com/newswatchplusph/status/2056577138745299184)
+*   @bncdotph: "PADILLA ADMITS MINORITY COULD RETAKE SENATE IF DUTERTE ALLIES ARRESTED" (https://x.com/bncdotph/status/2056569845471490316) - This points to the fragility of political power and the impact of legal troubles on political structures, especially concerning political dynasties.
+*   @iamjelsantos reports on former Senator Ramon "Bong" Revilla Jr.'s trial for malversation of public funds (https://x.com/iamjelsantos/status/2056529431402029410). This is a direct example of accountability for abuse of power.
+*   @4irellee: "Filipinos should really try more corruption shaming and less body shaming" (https://x.com/4irellee/status/2056114668825972829) - This highlights a societal tension around accountability and corruption.
 
-[Philippine Political Accountability] @ABSCBNNews: "The Bagong Alyansang Makabayan or BAYAN group has also arrived outside the Senate this Monday afternoon, May 18. “Convict Sara now!” and “Arrest Bato!” are among the chants being shouted by the group." https://x.com/ABSCBNNews/status/2056279217198023005 - Protest demanding accountability for political figures.
-[Philippine Political Accountability] @PhilippineStar: "The Senate formally convened as an impeachment court on Monday, May 18, 2026, marking the official start of the trial of cases against Vice President Sara Duterte." https://x.com/PhilippineStar/status/2056419550074466592 - Formal legal process for accountability of a high-ranking official.
-[Philippine Political Accountability] @gmanews: "Sen. Estrada, ex-DPWH Sec. bonoan at iba pang taga-DPWH, inirekomendang kasuhan ng plunder dahil sa anomalya sa ilang proyekto kontra baha. #Saksi" https://x.com/gmanews/status/2056449582792626575 - Recommendation for charges against a senator and other officials for corruption.
-[Philippine Political Accountability] @gmanews: "Senate convenes as impeachment court; VP Sara Duterte ordered to answer impeachment complaint within 10 calendar days. #Saksi" https://x.com/gmanews/status/2056453476377608243 - Further report on the impeachment process and demand for response.
-[Philippine Political Accountability] @lahingpnoy: "It's not just conscience they're missing. Even brains are absent in the cult of the DDS." https://x.com/lahingpnoy/status/2056293008040153499 - Critical commentary on political supporters and their lack of integrity.
-
-[Human Rights / Geopolitical Rhetoric] @Parodyjeffx: "HOLY SHIT. An Israeli settler in the West Bank hurls a concrete block at a cat. What kind of society raises people like this?" https://x.com/Parodyjeffx/status/2056409925828423802 - Act of cruelty in a geopolitical hotspot, raising questions about societal values.
-[Human Rights / Geopolitical Rhetoric] @Parodyjeffx: "HOLY FUCK Rabbi Shmuley is in Israel hugging Itamar Ben-Gvir, a convicted terrorist and wanted war criminal by The Hague. This deranged s" https://x.com/Parodyjeffx/status/2056409925828423802 - Endorsement of a controversial figure by a religious leader, raising concerns about accountability for war crimes.
-
-[Freedom of Press / Information Control] @HelleLyngSvends: "Primeminister of India, Narendra Modi, would not take my question, I was not expecting him to. Norway has the number one spot on the World Press Freedom Index, India is at 157th, competing with Palestine, Emirates & Cuba. It is our job to question the powers we cooperate" https://x.com/HelleLyngSvends/status/2056349011213181063 - Highlights a lack of press freedom and accountability from a national leader.
-
-[AI and Information Integrity] @lzreads: "Stop using ChatGPT. Consult a local grandma…text your friend gc w/ a weird name…type ur problems into Reddit dot com…go to the library…pay a psychic…the ancient sources of wisdom…" https://x.com/lzreads/status/2056069466652316025 - Advice against over-reliance on AI for information, promoting diverse and traditional sources.
-[AI and Information Integrity] @TylerRatcliff17: "Big mama says I don’t think so Mr crocodile" [comment: "AI" and "It literally says made with AI"] https://x.com/TylerRatcliff17/status/2056030451328782530 - Discussion around AI-generated content and its authenticity, highlighting skepticism.
-
-[Power, Institutions, and Rule of Law] @mog_russEN: "Chinese security stopped the U.S. Treasury Secretary at the gate for not wearing an ID badge… In China, titles don’t open doors." https://x.com/mog_russEN/status/2056445843931373849 - This post highlights a situation where protocol and rules override status, which could be interpreted as a form of information control or a challenge to established power dynamics.
-[NOTED] "THE WORLD YOU WERE BORN IN NO LONGER EXISTS" - 1 posts, no follow-up this cycle
-[NOTED] "to this day i still have no idea why he did that" - 1 posts, no follow-up this cycle
-[NOTED] "Lighting destruction" - 1 posts, no follow-up this cycle
-[NOTED] "The fastest way to cut a pepper is simpler than most knife skills, and it wastes less." - 1 posts, no follow-up this cycle
-[NOTED] "The moment cat Mom Retrieved Her Baby From a rabbit next" - 1 posts, no follow-up this cycle
-[NOTED] "Is this already the start of the ouster... hmmm" - 1 posts, no follow-up this cycle
-[NOTED] "The Partido Demokratiko Pilipino on Monday asked Justice Secretary Fredderick Vida to recall his statement that Senator Ronald “Bato” Dela Rosa will be arrested if he tries to leave the Philippines." - 1 posts, no follow-up this cycle
-[NOTED] "JUST IN: President Trump is DROPPING his $10 billion lawsuit against the Internal Revenue Service in exchange for a $1.776 billion COMPENSAITON FUND for those wrongly targeted and prosecuted by the Biden admin" - 1 posts, no follow-up this cycle
-[NOTED] "El Salvador: All former Supreme Court members are IN PRISON" - 1 posts, no follow-up this cycle
-[NOTED] "A stray cat visits a shop owner at the same time every day just to hug him after he started feeding and playing with her" - 1 posts, no follow-up this cycle
-[NOTED] "When you’re the most handsome of all the boys." - 1 posts, no follow-up this cycle
-[NOTED] "The city of Ganzhou in Jiangxi Province has been hit by continuous heavy rainfall, leaving many areas severely flooded." - 1 posts, no follow-up this cycle
-[NOTED] "Owners of companies, owners of banks, prime ministers, deputies, judges—granted loans worth millions of dollars before the 2019 crisis through Bank of Lebanon (Riad Salameh), and they're repaying them at a rate of 1500 Lebanese pounds per dollar." - 1 posts, no follow-up this cycle
-[NOTED] "A father threw a chair at a judge after the driver who killed his daughter and her grandparents was sentenced to only 120 hours of Community service" - 1 posts, no follow-up this cycle
-[NOTED] "Mayor Zohran Mamdani mocks Ronald Reagan’s infamous quote. “I can think of nine words more terrifying than ‘I’m from the government and I’m here to help…’” “I worked all day and can’t feed my family.”" - 1 posts, no follow-up this cycle
-[NOTED] "if you think uncomfortable conversations are hard wait until you see the results of not having them" - 1 posts, no follow-up this cycle
-[NOTED] "so chronically online i can tell when a tweet is stolen from a reel and when a reel is stolen from a tweet" - 1 posts, no follow-up this cycle
-[NOTED] "Every now and then I am reminded that wolverines are real animals and not just Hugh Jackman" - 1 posts, no follow-up this cycle
-[NOTED] "Non-animators discover smear frames" - 1 posts, no follow-up this cycle
-[NOTED] "The Great Replacement theory is the white supremacist rebranding of the Nazi ideologies that were central to Adolf Hitler’s Mein Kampf." - 1 posts, no follow-up this cycle
-[NOTED] "Homer Simpson’s shoes" - 1 posts, no follow-up this cycle
-[NOTED] "hot take if you’re the couple who lives next door to me it’s fine for you to fight really loudly as long as you enunciate your words really clearly so I can decide for myself who I think is winning" - 1 posts, no follow-up this cycle
-[NOTED] "Tom Kane has sadly passed away at the age of 64. He was the iconic narrator of ‘The Clone Wars’ series as well as the voice of Yoda & Admiral Yularen." - 1 posts, no follow-up this cycle
-[NOTED] "When a man knows what it is to be a man, he doesn't need to go on excursions to climb mountains or fall for red pill coach talk." - 1 posts, no follow-up this cycle
-[NOTED] "Harry Styles responds to fan yelling “Viva Palestina” at his concert in Amsterdam: “Correct”" - 1 posts, no follow-up this cycle
-[NOTED] "“your lipstick stains on the front lobe of my left side brains”" - 1 posts, no follow-up this cycle
-[NOTED] "One tick bite made this man allergic to red meat. Now over 450,000 Americans are allergic to beef & dairy and the number is rising." - 1 posts, no follow-up this cycle
-[NOTED] "If they put this in Brazil, the teams won't even have players to play kkkkk" - 1 posts, no follow-up this cycle
-[NOTED] "It's what I love about KOG, we can have an adult show that's both gritty and dystopian, and also whimsical" - 1 posts, no follow-up this cycle
-[NOTED] "Hatred of teachers is natural to every fascist." - 1 posts, no follow-up this cycle
-[NOTED] "Israel has kidnapped the sister of the president of Ireland." - 1 posts, no follow-up this cycle
-[NOTED] "You have a problem with… hating Nazism? That’s a great look I’m sure" - 1 posts, no follow-up this cycle
-[NOTED] "I was called out from behind with "Excuse me!" and when they said, "Oh, sorry, I thought it was a cigarette!" it turned out to be a crackdown on street smoking, so I replied, "It's not IQOS. It's Oikos," and they just ignored me." - 1 posts, no follow-up this cycle
-[NOTED] "U.S. President Donald Trump posted on social media on Monday that he was holding off on a planned military attack on Iran scheduled for Tuesday, while efforts continue to reach a deal" - 1 posts, no follow-up this cycle
-[NOTED] "The Senate has formally convened as the impeachment court that will try Vice Pres. Sara Duterte." - 1 posts, no follow-up this cycle
-[NOTED] "THIEF IN FUSION ALLEY! Content creator Christina Mahalan shared their experience after her friend was allegedly robbed of a cellphone while in Fusion Alley in Sampaloc, Manila on May 3." - 1 posts, no follow-up this cycle
-[NOTED] "Incompetent good people are the most troublesome, aren't they?" - 1 posts, no follow-up this cycle
-[NOTED] "Two years later, look at this dog’s reaction as it reunites with the woman who saved its life… It never forgot her" - 1 posts, no follow-up this cycle
-[NOTED] "Unbelievable skills. Master!" - 1 posts, no follow-up this cycle
-[NOTED] "The amount of core strength you'd need for this" - 1 posts, no follow-up this cycle
-[CURIOSITY: contradiction_axis_new_world_order_disco] @broderick: "Why have all these universities baked AI into their graduation ceremonies? What fuck is going on?" https://x.com/broderick/status/2056453736604619190 - This post questions the rapid integration of AI into institutions, with replies suggesting it's due to wealthy investors pushing AI. This could be relevant to the "New World Order" axis by highlighting how powerful entities influence societal structures, and how this relates to information integrity.
-[CURIOSITY: contradiction_axis_new_world_order_disco] @GoodVibePolitik: "There’s a shooting at an Islamic Center and they’re talking about locking down Jewish institutions what the fuck are we even doing anymore man" https://x.com/GoodVibePolitik/status/2056462320209948823 - This post highlights a potential discrepancy in how security concerns are handled and reported, suggesting a bias in narrative framing related to geopolitical events. This is relevant to both geopolitical rhetoric and integrity of information.
-[CURIOSITY: contradiction_axis_new_world_order_disco] @mog_russEN: "Chinese security stopped the U.S. Treasury Secretary at the gate for not wearing an ID badge… In China, titles don’t open doors." https://x.com/mog_russEN/status/2056445843931373849 - This post highlights a situation where protocol and rules override status, which could be interpreted as a form of information control or a challenge to established power dynamics, relevant to power and institutions.
-[CURIOSITY: contradiction_axis_new_world_order_disco] @NP__Oficial: "CELEBRITIES | Dua Lipa reacts after being banned from entering Israel due to her criticisms of the country: "Anyway, I wasn't going to go"" https://x.com/NP__Oficial/status/2055829554879516684 - This post highlights how criticism of a nation-state can lead to restrictions, relevant to geopolitical rhetoric and potentially freedom of expression.
-[CURIOSITY: contradiction_axis_new_world_order_disco] @realMaalouf: "If someone went to Morocco and drove a car into a crowd of people, they would be publicly hanged in the town square. In Europe, a terrorist like that gets protected and handed papers on account of ‘mental illness.’ The world is upside down." https://x.com/realMaalouf/status/2056021630057349402 - This post presents a stark contrast in how different regions handle terrorism and accountability, framing it as a "world upside down" scenario. This strongly relates to geopolitical rhetoric and narrative construction, and how different societies approach accountability for violence, which impacts the "New World Order" discourse.
+[NOTED] "think" — 11 posts, no follow-up this cycle
+[NOTED] "why" — 9 posts, no follow-up this cycle
+[NOTED] "people" — 7 posts, no follow-up this cycle
+[NOTED] "fact" — 6 posts, no follow-up this cycle
+[NOTED] "guy" — 5 posts, no follow-up this cycle
+[NOTED] "woman" — 4 posts, no follow-up this cycle
+[NOTED] "man" — 4 posts, no follow-up this cycle
+[NOTED] "men" — 4 posts, no follow-up this cycle
+[NOTED] "women" — 4 posts, no follow-up this cycle
+[NOTED] "true" — 4 posts, no follow-up this cycle
+[NOTED] "day" — 4 posts, no follow-up this cycle
+[NOTED] "know" — 4 posts, no follow-up this cycle
+[NOTED] "world" — 4 posts, no follow-up this cycle
+[NOTED] "worry" — 3 posts, no follow-up this cycle
+[NOTED] "talking" — 3 posts, no follow-up this cycle
