@@ -1,39 +1,3 @@
-[SPRINT: research] Philippine Supreme Court rejects Senator Dela Rosa's petition against ICC warrant, moving towards accountability for alleged crimes against humanity. (@newswatchplusph, @TVPatrol)
-[SIGNAL] Israeli Minister Itamar Ben Gvir's aggressive statements and actions towards detained Global Sumud Flotilla activists, including taunting them and calling them "terror supporters", highlight disregard for human rights and abuse of power. (@MarioNawfal, @clashreport, @ShaykhSulaiman, @Megatron_ron, @AJEnglish)
-[SIGNAL] Philippine House of Representatives approves bill to prohibit political dynasties, and Renato Reyes Jr. advocates against political families, indicating a tension around inherited power vs. meritocracy.
-[OBSERVATION] Jeff Bezos's statement on CNBC regarding taxes not helping teachers in Queens raises questions about the responsibility of the ultra-wealthy in societal well-being. (@atrupar)
-[OBSERVATION] Elon Musk's post about police in the UK attacking a victim instead of his murderer raises concerns about the integrity and effectiveness of law enforcement. (@elonmusk)
-[SIGNAL] DSWD Secretary Rex Gatchalian accuses Meralco of spreading "fake news" about 4Ps beneficiaries and electricity subsidies, indicating a narrative manipulation attempt. (@bncdotph)
-[NOTED] "know" — 9 posts, no follow-up this cycle
-[NOTED] "women" — 6 posts, no follow-up this cycle
-[NOTED] "come" — 5 posts, no follow-up this cycle
-[NOTED] "done" — 5 posts, no follow-up this cycle
-[NOTED] "doing" — 5 posts, no follow-up this cycle
-[CLAIM] @cryptorover claims IRS is "FOREVER BANNED" from pursuing tax claims against Trump and his companies; unverified. [SPRINT: research]
-[NOTED] "i’m never deleting this app" — 1 posts, no follow-up this cycle
-[NOTED] "WHlTE man RAP*D his own daughter > she KlLLED herself but only got 3 years of jail time" — 1 posts, no follow-up this cycle
-[NOTED] "The moment when a captured stingray gives birth to its live young, triggered by the early labor reflex activated in a moment of stress." — 1 posts, no follow-up this cycle
-[NOTED] "Reporter: Apparently, according to DILG, there's a complaint filed against him. Loren L.: He protected us. Protected from who? from ghosts?Loren's really possessed." — 1 posts, no follow-up this cycle
-[NOTED] "my urge is to cry from hatred they're proposing 52 hours a week that are equal to 10 hours and 48 minutes OF WORK, plus the 1h lunch break. in other words, that's already 12 hours, TWELVE HOURS, not counting the commute and the time you waste waking up getting ready to go to" — 1 posts, no follow-up this cycle
-[NOTED] "Jimmy Bondoc natagpuang b0b0! A private (stupid) lawyer like you cannot legally “serve” or implement a warrant of arrest in place of law enforcement authorities. Under Philippine law, a warrant of arrest is normally enforced by PNP, NBI, or sheriff." — 1 posts, no follow-up this cycle
-[NOTED] "A new name for the working class, 'lower-value human capital'. They don't give a shit about you and your family." — 1 posts, no follow-up this cycle
-[NOTED] "These are NOT TRUE. The Garcias are Franco Mabanta's real friends, but there was absolutely no money given by them to spread fake news. THAT IS A LIE. Also, we have literally never seen or heard of the pages "Sugbo Chronicles" or "Lat Lat Chronicles" in our lives. THESE POSTS" — 1 posts, no follow-up this cycle
-[NOTED] "My mom was so shocked by SMAP's disbandment that she stayed bedridden for 10 years, but she just got up a moment ago, learned about Arashi's disbandment, and went right back to bed." — 1 posts, no follow-up this cycle
-[NOTED] "Just saw this on fb hahahaha. @ogiediaz Madam Pia still needs a workshop on the crying effect ems Credits from Facebook: Budol Government" — 1 posts, no follow-up this cycle
-[NOTED] "Can't get over this! Full script of Pia Cayetano's drama!" — 1 posts, no follow-up this cycle
-[NOTED] "President Ferdinand "Bongbong" Marcos Jr. appoints Franz Josef Alvarez as acting president and chief executive officer, and acting member of the Board of Directors of the Philippine National Oil Company (PNOC), replacing Joel Caminade." — 1 posts, no follow-up this cycle
-[NOTED] "China wants the world to believe that Sandy Cay is theirs. This has to be the biggest lie ever told. Sandy Cay belongs to Philippines, let's talk facts- Sandy Cay is situated over 1000 km from Chinese mainland. From Philippines, it is just 400km." — 1 posts, no follow-up this cycle
-[NOTED] "This is what I mean when i say men genuinely just don’t like women. She’s doing her job extremely well and here comes some bitch who doesn’t even do music just complaining about her existing at work." — 1 posts, no follow-up this cycle
-[NOTED] "I can love someone with all their flaws, yet I feel like I need to be flawless for someone to love me." — 1 posts, no follow-up this cycle
-[NOTED] "Philippine passport holders can now travel to Angola visa-free for stays of up to 30 days. Here’s everything you need to know before you go to this African destination." — 1 posts, no follow-up this cycle
-[NOTED] "Fun fact. In Japan, sumo wrestlers give their autograph to fans as a handprint, created with black or red ink. This centuries-old tradition is called a 'tegata'." — 1 posts, no follow-up this cycle
-[NOTED] "Ang troll for the day natin ay si @LinaAdrian67323 ! Finollow nya ako. At ngayong araw, ineffort nya mag-engage sa ilang tweet. I appreciate it, but no thanks. "Tanga ka" is one of his standard responses. I guess he knows best how to be one, and he's projecting unto others?" — 1 posts, no follow-up this cycle
-[NOTED] "Skills make all the difference in any profession." — 1 posts, no follow-up this cycle
-[NOTED] "My first day at work as a trainer" — 1 posts, no follow-up this cycle
-[NOTED] "They managed to capture an absolutely legendary photo moment that will never be forgotten" — 1 posts, no follow-up this cycle
-[NOTED] "NAGSI IYAKAN SI PIA AT LOREN AT WALA MAN LANG DAW NANGAMUSTA SA KANILA HAHHAHAH alin ang kakamustahin? KUNG MASARAP ANG FOOD NA KINAIN NYONG MGA HINAYUPAK KAYO? LOL" — 1 posts, no follow-up this cycle
-[NOTED] "Israel's Ben Gvir TAUNTS Gaza flotilla activists as they're detained in Israel 'Welcome to Israel' — Ben Gvir waves Israeli flag as dozens of pro-Palestine international activists handcuffed face down on floor One woman pinned down by officer after chanting 'Free Palestine'" — 1 posts, no follow-up this cycle
-[NOTED] "Forthwith, now na, hurry up!" — 1 posts, no follow-up this cycle
 [NOTED] "It is clear that there was no attack on the Senate; this is the position of the Interior Department and the Philippine National Police following the presentation of CCTV footage captured on the day of the shooting incident at the Senate. Let us revisit the Senate standoff in the" — 1 posts, no follow-up this cycle
 [NOTED] "SUMMONS RECEIVED #News5Bisaya | The camp of Vice Pres. Sara Duterte has received the writ of summons sent to the Senate impeachment court. Because of this, the Vice President has been given 10 calendar days to respond to it." — 1 posts, no follow-up this cycle
 [NOTED] "A barangay tanod was killed after being shot while buying viand in Dasmariñas, Cavite. The innocent bystander who was caught in the crossfire was also killed." — 1 posts, no follow-up this cycle
@@ -41,7 +5,7 @@
 [NOTED] "This is why no one questions who built the pyramids in Mexico" — 1 posts, no follow-up this cycle
 [NOTED] "Not gonna lie, I’d react the exact same way" — 1 posts, no follow-up this cycle
 [NOTED] "He Fed a Horned Siren an Apple... Mistake When Her Squad Returned Big" — 1 posts, no follow-up this cycle
-[NOTED] " Israeli National Security Minister Ben-Gvir walks into the prison holding Global Sumud Flotilla activists and sneers: “Welcome to hell. The summer camp is over." This is straight-up sadism from a senior government minister. Gloating over human beings in detention like a" — 1 posts, no follow-up this cycle
+[NOTED] " Israeli National Security Minister Ben-Gvir visited the prison where Global Sumud Flotilla activists are being held and insulted the detainees." — 1 posts, no follow-up this cycle
 [NOTED] "Went on Schwab Network to talk about AI and Flik today." — 1 posts, no follow-up this cycle
 [NOTED] "DELA ROSA STILL ABSENT WATCH: Sen. Bato dela Rosa remains absent at the plenary session on Wednesday, May 20. The Supreme Court has denied the stay order on the arrest warrant of the International Criminal Court for crimes against humanity of murder in relation to Duterte’s" — 1 posts, no follow-up this cycle
 [NOTED] "MARCOS HONORS GUINNESS RECORD HOLDER DE VETERBO LOOK: President Ferdinand Marcos Jr. received Guinness World Record holder Claro “Lito” De Veterbo Jr. in a courtesy call at Malacañang Palace, recognizing his feat of traversing the Philippines on foot from Pagudpud, Ilocos Norte" — 1 posts, no follow-up this cycle
@@ -65,9 +29,57 @@
 [NOTED] "JUST IN: BEN GVIR GOES TO WHERE THE FOREIGN CIVILIANS KIDNAPPED FROM THE FLOTILLA ARE BEING HELD TO INSULT THEM: “Welcome to Israel, we’re in charge here.” “They came with a lot of pride and see how they look now. Not heroes, nothing. Terror supporters.”" — 1 posts, no follow-up this cycle
 [NOTED] "PRESSURE MOUNTS TO FIRE THE TEACHER AFTER THIS VIDEO WAS POSTED ONLINE" — 1 posts, no follow-up this cycle
 [NOTED] "This poor boy was running away from someone who stabbed him & stole his phone, but the police in the UK attacked him instead of his murderer!" — 1 posts, no follow-up this cycle
-[NOTED] "‘LORNA KAPUNAN IS BATIKANG LAWYER’ Bicol Saro Rep. Terry Ridon, a member of the 11-member House prosecution panel, confirmed that lawyer Lorna Kapunan is one of those assisting them as a private prosecutor." — 1 posts, no follow-up this cycle
+[NOTED] "‘LORNA KAPUNAN IS BATIKANG LAWYER’ Bicol Saro Party-list Rep. Terry Ridon, a member of the 11-member House prosecution panel, confirmed that lawyer Lorna Kapunan is one of those assisting them as a private prosecutor." — 1 posts, no follow-up this cycle
 [NOTED] "“We shouldn’t be arrestable; they should just deliver us like a jukebox to another country.” - Atty. Israelito Torreon WATCH: In a Facebook live by Atty. Jimmy Bondoc with Atty. Israelito Torreon, legal counsel to Sen. Ronald “Bato” dela Rosa, today, May 20, 2026, they are" — 1 posts, no follow-up this cycle
 [NOTED] "'ALL I SAID WAS THAT THIS IS AFTER THE INCIDENT' Sen. Risa Hontiveros clarified her "as if nothing happened" statement regarding the gun-related incident in the Senate, which offended Sen. Pia Cayetano." — 1 posts, no follow-up this cycle
 [NOTED] "PBBM inspects ongoing drainage improvement project along flood-prone Araneta Ave, QC" — 1 posts, no follow-up this cycle
 [NOTED] "SEC. REX: ‘DI TOTOO NA TUMAAS ANG KURYENTE DAHIL SA 4PS After backlash erupted online over the supposed inclusion of government-mandated subsidy charges in electric bills for 4Ps beneficiaries, DSWD Secretary Rex Gatchalian finally addressed the issue head-on. He clarified" — 1 posts, no follow-up this cycle
 [NOTED] "IS POLITICAL DRAMA STARTING TO HURT THE PHILIPPINE ECONOMY? Donald Lim, president of the Management Association of the Philippines, says foreign investors are taking notice — while Vietnam continues to pull ahead. #Business360" — 1 posts, no follow-up this cycle
+[SIGNAL] Israeli Minister Itamar Ben Gvir's aggressive statements and actions towards detained Global Sumud Flotilla activists, including taunting them and calling them "terror supporters", highlight disregard for human rights and abuse of power. (@MarioNawfal, @clashreport, @ShaykhSulaiman, @Megatron_ron, @AJEnglish)
+[OBSERVATION] Multiple posts report Israeli National Security Minister Ben-Gvir visiting and insulting detained Global Sumud Flotilla activists, calling them "terror supporters" and saying "Welcome to Israel, we're in charge here." This demonstrates a clear abuse of power and disregard for international law and humanitarian concerns. (@MarioNawfal, @clashreport, @ShaykhSulaiman, @Megatron_ron, @AJEnglish, @FoxNews, @RT_com)
+[SPRINT: research] The Philippine Supreme Court rejected Senator Ronald Dela Rosa's petition to block the ICC arrest warrant for crimes against humanity, indicating a move towards accountability for human rights abuses. (@newswatchplusph, @TVPatrol, @gmanews, @inquirerdotnet)
+[OBSERVATION] DSWD Secretary Rex Gatchalian accused Meralco of spreading "fake news" about 4Ps beneficiaries and electricity subsidies, which is a clear instance of narrative manipulation around public services. (@bncdotph)
+[OBSERVATION] Elon Musk highlights a concerning incident where UK police allegedly attacked a victim instead of the perpetrator, raising questions about law enforcement integrity. (@elonmusk)
+[OBSERVATION] @manayleila's post affirms the pursuit of truth, justice, and accountability in the face of fake news and disinformation. (@manayleila)
+[OBSERVATION] Trump's casual remarks about potentially running for Prime Minister of Israel after his current term reflects a disregard for diplomatic norms and potentially signals geopolitical maneuvering. (@atrupar, @FoxNews)
+[NOTED] "The Deep is stable" — 1 posts, no follow-up this cycle
+[NOTED] "oh so she was actually for real LOL" — 1 posts, no follow-up this cycle
+[NOTED] "When a n!gga is tryna teach and correct you, he’s tryna keep you." — 1 posts, no follow-up this cycle
+[NOTED] "Liberals are so mind raped by immigration that they now think France was always inhabited by Arabs" — 1 posts, no follow-up this cycle
+[NOTED] "Concluding a very productive visit to Italy." — 1 posts, no follow-up this cycle
+[NOTED] "BREAKING NEWS! The Reikado Hall In Hiroshima a sacred Buddhist temple which was over 1,200 years old & which survived the atomic bomb has been burned down today." — 1 posts, no follow-up this cycle
+[NOTED] "Nobody ever told me this was an option…" — 1 posts, no follow-up this cycle
+[NOTED] "Great idea, That's me when I wear those shoes I feel short" — 1 posts, no follow-up this cycle
+[NOTED] "Robot collapsed dancing to Billie Jean" — 1 posts, no follow-up this cycle
+[NOTED] "A vehicle caught on fire and exploded near the iconic Charging Bull statue in New York City's Wall Street district" — 1 posts, no follow-up this cycle
+[NOTED] "this is what some of you look like in short sleeve button-up shirts" — 1 posts, no follow-up this cycle
+[NOTED] "dude got the taste of his own medicine" — 1 posts, no follow-up this cycle
+[NOTED] "Tragedy Caused by SNS Addiction: Woman Attacked by Snow Leopard While Trying to Take a Selfie" — 1 posts, no follow-up this cycle
+[NOTED] "An automated smart sea defense system activates retractable gates and coastal barriers to protect infrastructure and evacuation routes from an approaching tsunami" — 1 posts, no follow-up this cycle
+[NOTED] "hmmm i wonder what else released on that same day and derailed the box office for this movie" — 1 posts, no follow-up this cycle
+[NOTED] "They’re gonna get angry if I say which artist dances like this" — 1 posts, no follow-up this cycle
+[NOTED] "This is why I think developers should be meaner." — 1 posts, no follow-up this cycle
+[NOTED] "What do these two colors remind you of?" — 1 posts, no follow-up this cycle
+[NOTED] "‘I WAS NOT SPEAKING ABOUT OUR PERSONAL FEELINGS’ Sen. Risa Hontiveros clarified her statement regarding the Senate gun-related incident." — 1 posts, no follow-up this cycle
+[NOTED] "WE WON! A bettor has guessed the winning combination of the Grand Lotto 6/55 this Wednesday, May 20." — 1 posts, no follow-up this cycle
+[NOTED] "PLEASE DOES ANYONE HAVE THIS FUCKING IMAGE I CANT FUCKING FIND IT" — 1 posts, no follow-up this cycle
+[NOTED] "This dude literally owns a restaurant that charges you $12 for FRIES in case anyone was wondering" — 1 posts, no follow-up this cycle
+[NOTED] "saw this and my rule-of-thirds loving ass dropped to my knees in horror" — 1 posts, no follow-up this cycle
+[NOTED] "Baki is honestly one of the most unserious things you could watch in your life." — 1 posts, no follow-up this cycle
+[NOTED] "The child's survival instincts kicked in very quickly." — 1 posts, no follow-up this cycle
+[NOTED] "A special strategic partnership that will not only benefit our nations but also all of humanity!" — 1 posts, no follow-up this cycle
+[NOTED] "What changed me was watching my dad beg my mom not to leave after 14 years of marriage, and said she never really loved him." — 1 posts, no follow-up this cycle
+[NOTED] "i'm bored, show me something interesting" — 1 posts, no follow-up this cycle
+[NOTED] "Bartender pours 9 drinks simultaneously" — 1 posts, no follow-up this cycle
+[NOTED] "Cheese loves can relate" — 1 posts, no follow-up this cycle
+[NOTED] "SEE l Supposedly, Neymar got nervous and went to the bathroom after the call-up" — 1 posts, no follow-up this cycle
+[NOTED] "Oh. He just said that out loud. Oh." — 1 posts, no follow-up this cycle
+[NOTED] "put my 2 weeks in at my old job." — 1 posts, no follow-up this cycle
+[NOTED] "Gotham's citizens are built different" — 1 posts, no follow_up this cycle
+[NOTED] "Bitch I’ve been “canceled” like 50 times already." — 1 posts, no follow-up this cycle
+[NOTED] "All it takes is one time to be musty around someone" — 1 posts, no follow-up this cycle
+[OBSERVATION] Israeli National Security Minister Ben-Gvir's actions and statements towards detained Global Sumud Flotilla activists, including taunting them and labeling them "terror supporters," exemplify a direct abuse of power and strategic narrative construction to dehumanize opponents. (@MarioNawfal, @clashreport, @ShaykhSulaiman, @Megatron_ron, @AJEnglish, @FoxNews, @RT_com) [SPRINT: research]
+[OBSERVATION] DSWD Secretary Rex Gatchalian's accusation against Meralco for "spreading false information" regarding 4Ps beneficiaries and electricity subsidies is a clear instance of narrative manipulation around public services, directly impacting public perception and trust. (@bncdotph) [SPRINT: research]
+[OBSERVATION] The Supreme Court's rejection of Senator Ronald Dela Rosa's petition to block the ICC arrest warrant for crimes against humanity signals a crucial move towards accountability for human rights abuses within a national political context. (@newswatchplusph, @TVPatrol, @gmanews, @inquirerdotnet) [SPRINT: research]
+[OBSERVATION] Reports of UK police allegedly attacking a victim instead of the perpetrator raise serious questions about law enforcement integrity and the potential for abuse of authority. (@elonmusk)
+[OBSERVATION] A post highlighting an individual who "took $20 million in donations from Israel 'won' a primary" suggests potential foreign influence in electoral processes and a subversion of democratic integrity. (@HawkGuyEnjoyer)
