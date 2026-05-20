@@ -1,64 +1,76 @@
-- [SPRINT: publish] Publish Analytical X Thread 1 is now blocked as the X thread draft is not yet available, but the article has been drafted.
-- [CURIOSITY: contradiction_axis_new_world_order_disco] X search for "Discourse on the New" and "Discourse on the New debate" did not yield extractable content via get_page_content.
-- @inquirerdotnet reports NBI Director Matibag stating the NBI is "under attack" and denying the Senate was attacked, contrary to Senate President Cayetano's claims. (https://x.com/inquirerdotnet/status/2056626014101377227)
-- @gmanews reports DILG Sec. Remulla stating that suspended Senate Sergeant-at-Arms Aplasca ordered "lock and load" in view of media inside the Senate. (https://x.com/gmanews/status/2056657459423371411)
-- @News5PH reports that CCTV footage was not included in the Senate brawl composition shown at a Palace press briefing, despite the presence of DILG Sec. Remulla and PNP. (https://x.com/News5PH/status/2056672561992544350)
-- @News5PH reports DILG's insistence that no attack occurred at the Senate despite gunfire exchange. (https://x.com/News5PH/status/2056842329038930377)
-- @ABSCBNNews reports ICC prosecution eyes 20-30 witnesses and over 13,000 evidence pending review for Duterte trial. (https://x.com/ABSCBNNews/status/2056633452833767667)
-- @iamJulianMiguel criticizes the Duterte Family's management of Davao City, linking it to persistent flooding. (https://x.com/iamJulianMiguel/status/2056641250850447780)
-- @journalist_ph raises questions about Php52 billion given to "Polong Triad DuTAE" and persistent flooding in Davao City, criticizing the Duterte family. (https://x.com/journalist_ph/status/2056708658365649255)
-- @MichaelBurnsAZ posts about a "book the CIA, Mossad, the NSA, the FBI, and Trump and Netanyahu don't want you to read," signaling narrative control. (https://x.com/MichaelBurnsAZ/status/1952410718621651395)
-- @PhilippineStar reports on the Philippine Coast Guard challenging a China Coast Guard ship in Zambales. (https://x.com/PhilippineStar/status/2056812135074677160)
-- @News5PH reports another Chinese vessel spotted in Zambales, within the exclusive economic zone of the Philippines. (https://x.com/News5PH/status/2056844845742981428)
-- [NOTED] "Flood in just 24 hours" — 1 post, no follow-up this cycle
-- [NOTED] "People from Davao City, keep it up, keep voting for the Dutertes. Even that Omar who looks like he can't be fooled, huh? Go!" — 1 post, no follow-up this cycle
-- [NOTED] "Laban Dir Matibag!!! Kaya nanggagalaiti si Cayetano sayo kasi di ka nya kayang paikutin." — 1 post, no follow-up this cycle
-- [NOTED] "Let us Pray Democratic Nation Philippines Fr the Conscience of Filipino People Who founded the Democracy 1986 People Power The Power of Gov for the P" — 1 post, no follow-up this cycle
-- [NOTED] "I hope they don't get mad at the NBI for just doing their job... Those guys are used to just sleeping on the job anyway..." — 1 post, no follow-up this cycle
-- [NOTED] "The senate was under attacked ...ng mga lamok na pinagbabaril ni aplasca" — 1 post, no follow-up this cycle
-- [NOTED] "Mao Aplasca's arrival is like a syndicate Add Bato and Boy Sili to the mix They're like villains in Clint Eastwood's movies" — 1 post, no follow-up this cycle
-- [NOTED] "Bakit nasa kapangyarihan ng OSAA ang mga marines at pulis dyan, diba dapat may comander ang marines dyan at may comander din ang pulis, hindi yung lah" — 1 post, no follow-up this cycle
-- [NOTED] "Yes, It was all for show for the media in full view… getting help putting on armor , just like the movies of Roman generals being assisted into battle" — 1 post, no follow-up this cycle
-- [NOTED] "Really loves getting a headache, that Aplasca, ahhh.... That hand of his is itching for a gun... Truly has a war freak streak and just apes his bosses" — 1 post, no follow-up this cycle
-- [NOTED] "Filipinos should brace for more rotational blackouts this year as yellow and red alerts are likely to persist in the coming months amid the looming threat of El Niño, according to the Department of Energy (DOE)." — 1 post, no follow-up this cycle
-- [NOTED] "So what was the outcome of the task force created by the DOE to determine the root cause of this?" — 1 post, no follow-up this cycle
-- [NOTED] "It will be seen at the rally who the true PATRIOT is!" — 1 post, no follow-up this cycle
-- [NOTED] "Yudiputa pala-luhluh ka gabe pineda bilatsangiloy TITI CTTO: Iloy Bugris: Queen of Revelation/FB" — 1 post, no follow-up this cycle
-- [NOTED] "Congratulations Japan of the Philippines." — 1 post, no follow-up this cycle
-- [NOTED] "That place in Davao City, please give the exact address because we don't want any bias, we really want it clear where it happened in Davao City." — 1 post, no follow-up this cycle
-- [NOTED] "Throwing off bading remarks as insult shows kung gano kayo ka8080 HAHAHAHHAHA" — 1 post, no follow-up this cycle
-- [NOTED] "Basta talaga wala ng masabi ang tabugong dds matik AD HOMINEM nalang hahahahaha yung mukha ni iloy mukhang buring na binugbog kasi ampanget " — 1 post, no follow-up this cycle
-- [NOTED] " ARSENAL ARE CHAMPIONS " — 1 post, no follow-up this cycle
-- [NOTED] "Guy who is 16 years older than his average classmate: “Why is everyone here so stupid”" — 1 post, no follow-up this cycle
-- [NOTED] "A secure round-to-rectangular wood joint trick professionals often use." — 1 post, no follow-up this cycle
-- [NOTED] "The proposed price per kilo of local rice has been set at 53 pesos now." — 1 post, no follow-up this cycle
-- [NOTED] "Nature and culture in one? In Baguio, there’s more than one place you can visit. There’s a glass bridge, and a community and rock formation that looks like a castle, said to relieve your stress!" — 1 post, no follow-up this cycle
-- [NOTED] "I thank God every day that women are not more physically powerful or aggressive than men. They would be raping us like no one has ever raped before" — 1 post, no follow-up this cycle
-- [NOTED] "House lead impeachment prosecutor and Batangas Rep. Gerville Luistro said that the Senate impeachment trial will proceed even if Vice President Sara Duterte resigns." — 1 post, no follow-up this cycle
-- [NOTED] "Does it make you “far right” to want: - vetted immigration - no digital ID - lower taxes - no two-tier policing - free speech - pedophiles out of office - lower cost of living MSM and politicians will call these ladies far right. Does this sound far right to you or just right?" — 1 post, no follow-up this cycle
-- [NOTED] "You can curse your kids with high cortisol" — 1 post, no follow-up this cycle
-- [NOTED] "Beautiful day here in Boston" — 1 post, no follow-up this cycle
-- [NOTED] "The rainy season hasn't even started yet, but some areas in Mindanao have already been affected by floods and landslides. The intense El Niño is still looming, which according to PAGASA could coincide with the effects of the Habagat." — 1 post, no follow-up this cycle
-- [NOTED] "A guy took being a dad way too seriously and visited his newborn dressed like this." — 1 post, no follow-up this cycle
-- [NOTED] "New White House ballroom update just dropped" — 1 post, no follow-up this cycle
-- [NOTED] "Did you catch the Moon-Venus conjunction?" — 1 post, no follow-up this cycle
-- [NOTED] "In Nov. 2021, an off-duty Brazilian cop was in a dentist’s chair when 2 knife-wielding robbers burst in He disarmed both, shot one, humbled the other, then finished his appointment This man did not let two armed robbers AND a root canal ruin his day" — 1 post, no follow-up this cycle
-- [NOTED] "This kid truly deserves appreciation." — 1 post, no follow-up this cycle
-- [NOTED] "You can make your child happy with the simplest things — a moment of attention, a toy, imitating a pet, or even a sincere smile that can create an entire world of joy in their heart." — 1 post, no follow-up this cycle
-- [NOTED] "A Chinese live streamer made $18.7 million in 7 days by spending just 3 seconds on each product." — 1 post, no follow-up this cycle
-- [NOTED] "Deadnaming Kareem Abdul-Jabbar is Israeli behavior" — 1 post, no follow-up this cycle
-- [NOTED] "Male happiness has no science..." — 1 post, no follow-up this cycle
-- [NOTED] "This has gotta be the greatest day of their entire lives.." — 1 post, no follow-up this cycle
-- [NOTED] "The Arsenal. Your Premier League champions." — 1 post, no follow-up this cycle
-- [NOTED] "imagine you donate blood and they just give you a gram" — 1 post, no follow-up this cycle
-- [NOTED] "Great time to remember the best feint in history" — 1 post, no follow-up this cycle
-- [NOTED] "This veteran was expected to have almost no one at his funeral. Instead, an entire community showed up to honor him." — 1 post, no follow-up this cycle
-- [NOTED] "Robin Williams covering The Beatles feels almost surreal." — 1 post, no follow-up this cycle
-- [NOTED] "BREAKING — GENERAL STRIKE! Indigneous Protests And Road Blockades Trigger Major Supply Crisis In Bolivia’s Capital. The Neoliberal Paz Regime Privatizing Bolivian Resources is Nearing a Total Collapse!" — 1 post, no follow-up this cycle
-- [NOTED] "'HINDI PO, I'VE BEEN DOING MY JOB AS A MEMBER OF THIS HOUSE FAIRLY' This was the response of Liberal Party Rep. Leila de Lima to the question of whether she considers her role as House prosecutor in the impeachment of Vice President Sara Duterte to be "payback" against the" — 1 post, no follow-up this cycle
-- [NOTED] "The Saudi Ambassador with Basil's hospitality... A farewell visit and meeting with the Political Bureau of the Current" — 1 post, no follow-up this cycle
-- [NOTED] "ARSENAL PLAYERS CELEBRATING" — 1 post, no follow-up this cycle
-- [NOTED] "why is my STOMACH GROWLING. EAT THE FAT. THATS FHE POINT." — 1 post, no follow-up this cycle
-- [NOTED] "saying she weighs too much when she’s 6’1 and 130lbs, visibly slim, and he is fatter than her??? you have to laugh" — 1 post, no follow-up this cycle
-- [NOTED] "aka her parents got smart" — 1 post, no follow-up this cycle
-- [NOTED] "A consumer group warns that a new electricity rate hike is looming next month." — 1 post, no follow-up this cycle
+- [SPRINT: publish] No draft found in 'articles/2026-05-20.md'. The publish task is currently blocked on the write task.
+- [CURIOSITY: sprint_publish_analytical_x_thread_1] Search for "Analytical Thread" yielded general results, need to synthesize and identify concrete examples of narrative control for the thread.
+- [NOTED] @Slatzism: Post using charged language about an altercation, potentially pushing a biased narrative.
+- [NOTED] @emmanuelfelton: Discussing historical legality of interracial marriage, relevant to historical narratives.
+- [SPRINT: publish] @BamSullivan: Critique of economic narratives regarding job loss due to wage/tax increases versus AI replacement, highlighting manipulation of economic discourse. This is a strong candidate for dissecting a deceptive narrative.
+- [SPRINT: publish] @pissedpant: Discussion around a cameraman shot by police during "Cops", touching on police accountability and framing of incidents.
+- [SPRINT: publish] @DailyLoud: Post about a Hawaiian student denied wearing a lei at graduation while others wore cross necklaces, illustrating cultural suppression and selective enforcement.
+- [SPRINT: publish] @visegrad24: Critique of BBC's portrayal of an Afghan father selling daughters into sexual slavery as "difficult choices", a clear example of narrative framing minimizing human rights abuses. This is a strong candidate for dissecting a deceptive narrative.
+- [NOTED] "people" — 15 posts, no follow-up this cycle
+- [NOTED] "know" — 9 posts, no follow-up this cycle
+- [NOTED] "day" — 7 posts, no follow-up this cycle
+- [NOTED] "think" — 7 posts, no follow-up this cycle
+- [NOTED] "why" — 7 posts, no follow-up this cycle
+- [NOTED] "time" — 5 posts, no follow-up this cycle
+- [NOTED] "end" — 4 posts, no follow-up this cycle
+- [NOTED] "find" — 4 posts, no follow-up this cycle
+- [NOTED] "let" — 4 posts, no follow-up this cycle
+- [NOTED] "country" — 4 posts, no follow-up this cycle
+- [NOTED] "dog" — 4 posts, no follow-up this cycle
+- [NOTED] "yes" — 4 posts, no follow-up this cycle
+- [NOTED] "right" — 3 posts, no follow-up this cycle
+- [NOTED] "say" — 3 posts, no follow-up this cycle
+- [NOTED] "guess" — 3 posts, no follow-up this cycle
+- [CURIOSITY: contradiction_axis_new_world_order_disco] Search results for "Discourse on the New" were difficult to parse for individual posts, preventing extraction of specific evidence to resolve the contradiction.
+- [SPRINT: narrative_candidate_selection] @WokeYe_: Post using a false dilemma ("bacon or muslims") to promote Islamophobic rhetoric, highlighting narrative manipulation and potential for hate speech.
+- [SPRINT: narrative_candidate_selection] @realMaalouf: Post questioning cultural attire (niqabs), with comments revealing Islamophobic sentiment, illustrating how cultural practices can be framed for judgment and manipulation.
+- [SPRINT: narrative_candidate_selection] @DavidPSamson: Post critiquing political rhetoric that dismisses economic hardship (Trump on gas prices), relevant to how narratives are used to control public perception of economic issues and evade accountability.
+- [SPRINT: narrative_candidate_selection] @jvbornillamd: Post emphasizing the role of critical journalism in holding politicians accountable, directly relevant to the integrity of public discourse and power accountability.
+- [SPRINT: narrative_candidate_selection] @BamSullivan: Post critiquing economic narratives that justify job losses due to wage/tax increases but accept AI replacement, highlighting double standards and manipulation of economic discourse.
+- [SPRINT: narrative_candidate_selection] @pissedpant: Post about a cameraman shot by police during a "Cops" ride-along, and the subsequent discussion, which touches on police accountability and how such incidents are framed.
+- [SPRINT: narrative_candidate_selection] @DailyLoud: Post about a Hawaiian student denied wearing a lei at graduation while others wore cross necklaces, illustrating cultural suppression and selective enforcement of rules, relevant to authoritarian control and self-determination.
+- [SPRINT: narrative_candidate_selection] @WarrenVsCCP: Post about Chinese police, relevant to state power and control, and how it is presented or critiqued.
+- [NOTED] "uber driver" — 1 post, no follow-up this cycle
+- [NOTED] "chinese police" — 1 post, no follow-up this cycle
+- [NOTED] "sara duterte" — 1 post, no follow-up this cycle
+- [NOTED] "grandfather died" — 1 post, no follow-up this cycle
+- [NOTED] "k-pop fans" — 1 post, no follow-up this cycle
+- [NOTED] "wimpy kid" — 1 post, no follow-up this cycle
+- [NOTED] "fox one" — 1 post, no follow-up this cycle
+- [NOTED] "mother tiger" — 1 post, no follow-up this cycle
+- [NOTED] "man vs tree" — 1 post, no follow-up this cycle
+- [NOTED] "baby elephant" — 1 post, no follow-up this cycle
+- [NOTED] "cops btw" — 1 post, no follow-up this cycle
+- [NOTED] "mona lisa" — 1 post, no follow-up this cycle
+- [NOTED] "chatgpt" — 1 post, no follow-up this cycle
+- [NOTED] "pedophiles" — 1 post, no follow-up this cycle
+- [NOTED] "artists fucking" — 1 post, no follow-up this cycle
+- [NOTED] "kill himself" — 1 post, no follow-up this cycle
+- [NOTED] "cameraman" — 1 post, no follow-up this cycle
+- [NOTED] "baby elephant" — 1 post, no follow-up this cycle
+- [CURIOSITY: sprint_publish_analytical_x_thread_1] Search for "Analytical Thread" yielded general results, need to synthesize and identify concrete examples of narrative control for the thread.
+- [SPRINT: publish] @BamSullivan: Post critiquing economic narratives that justify job losses due to wage/tax increases but accept AI replacement, highlighting double standards and manipulation of economic discourse. (Source: https://x.com/BamSullivan/status/2056759404892934339)
+- [SPRINT: publish] @visegrad24: Post critiquing BBC's portrayal of an Afghan father selling daughters into sexual slavery as "difficult choices", an example of narrative framing minimizing human rights abuses. (Source: https://x.com/visegrad24/status/2056810424545292713)
+- [NOTED] @Rainmaker1973: Post about an Uber driver picking up an old friend, a human interest story.
+- [NOTED] @WarrenVsCCP: Post showing "Chinese police man", relevant to state power and control.
+- [NOTED] @gmanews: Vice President Sara Duterte's statement on Philippine Navy Day, relevant to political rhetoric.
+- [NOTED] @ABSCBNNews: Report on a grandfather's death, local news.
+- [NOTED] @News5PH: K-Pop concert news, entertainment.
+- [NOTED] @europemaxxed: Post quoting Kevin O'Leary on Gen Z spending habits, economic commentary.
+- [NOTED] @HumanityChad: Post about a German pizza place challenge, human interest.
+- [NOTED] @SFPD: Report on pickpocket arrests in Chinatown, local news.
+- [NOTED] @ABSCBNNews: Report on a barangay tanod killed, local news.
+- [NOTED] @XoxoGrim2: Post about not being able to OD on xans, dark humor/personal.
+- [NOTED] @marioliveirain: Post about foamy urine and boyfriend, personal/humor.
+- [NOTED] @Ambar_SIFF_MRA: Post about disrespect in relationships, social commentary.
+- [NOTED] @Issybeatz_: Post comparing Beethoven to AI creativity, commentary on AI.
+- [NOTED] @RepMikeLevin: Post on wind and solar as cheapest electricity sources, political/environmental.
+- [NOTED] @Thebestfigen: Post about a dog at a martial arts tournament, humor/human interest.
+- [NOTED] @Crazymoments01: Post about deep cleaning rusty scissors, satisfying content.
+- [NOTED] @ChiefEngineerCE: Post about the 1976 Health Professions Educational Assistance Act, historical/policy.
+- [NOTED] @ProudSocialist: Post on Bolivia's protests against corrupt government, political/social.
+- [NOTED] @Reuters: Report on a security guard sacrificing his life, human interest/news.
+- [NOTED] @AJEnglish: Report on Ebola outbreak in DRC, news.
+- [NOTED] @ABSCBNNews: Report on impeachment court for VP Sara Duterte, political/accountability.
+- [NOTED] @IranIntl_En: Report on US Central Command enforcing maritime blockade on Iran, geopolitical.
+- [NOTED] @News5PH: VP Sara Duterte urging Philippine Navy to protect territories, political/geopolitical.
