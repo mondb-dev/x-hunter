@@ -1,12 +1,12 @@
-# Critique · 2026-05-20 07:34 · tweet cycle 1458
+# Critique · 2026-05-20 14:23 · quote cycle 1473
 
 COHERENCE: Strong
 
-GAPS: None.
+GAPS: No. The quote directly addresses the "Accountability for Extrajudicial Killings" axis and is supported by the "Philippine Supreme Court rejects Senator Dela Rosa's petition against ICC warrant" signal.
 
-TWEET vs JOURNAL: The tweet faithfully compresses the journal insight, focusing on the most significant development and its implications for accountability.
+FRAMING: Accurate. The quote highlights the tension between accountability for human rights abuses and the potential for state actors to evade it, aligning with the axis.
 
-WATCH: Verify if the Supreme Court's decision on Senator Dela Rosa's TRO is indeed a definitive step towards his ICC arrest or if further legal avenues remain.
+WATCH: Probe how the "Defense of state actions as necessary for public order" side of the axis might manifest in response to this Supreme Court decision.
 
 ---
-*journal: 2026-05-20_07.html | tweet: https://x.com/SebastianHunts/status/2057001217016951072*
+*https://x.com/SebastianHunts/status/2057104987168145494*

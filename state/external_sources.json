@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "generated_at": "2026-04-19T03:02:23.280Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-05-20T11:52:52.206Z",
+  "profiled_at": "2026-05-20T14:53:14.890Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -7395,7 +7395,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-17T13:59:23.141Z",
+        "fetched_at": "2026-05-20T14:53:11.023Z",
         "homepage_url": "https://newsmax.com/",
         "example_url": "https://www.newsmax.com/ruddy/chris-ruddy-scott-bessent-donald-trump/2026/01/19/id/1242743/?twclid=26mj7qjkmqd4eerrni08qzffox",
         "homepage_status": null,
@@ -12048,16 +12048,16 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.58,
+          "confidence": 0.75,
           "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:25",
             "opinion_marker:false"
           ]
         },
@@ -12077,33 +12077,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-17T13:59:23.384Z",
+        "fetched_at": "2026-05-20T14:53:11.569Z",
         "homepage_url": "https://elpais.com/",
         "example_url": "https://elpais.com/",
-        "homepage_status": 403,
-        "example_status": 403,
+        "homepage_status": 200,
+        "example_status": 200,
         "homepage_final_url": "https://elpais.com/",
         "example_final_url": "https://elpais.com/",
-        "homepage_content_type": "text/html;charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 25,
           "opinion_marker": false
         },
         "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 25,
           "opinion_marker": false
         }
       }
@@ -13541,7 +13541,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-17T12:29:01.367Z",
+        "fetched_at": "2026-05-20T13:22:46.445Z",
         "homepage_url": "https://wsj.com/",
         "example_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
         "homepage_status": 401,
@@ -14761,7 +14761,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-17T13:59:23.568Z",
+        "fetched_at": "2026-05-20T14:53:11.779Z",
         "homepage_url": "https://fooletfs.com/",
         "example_url": "https://fooletfs.com/our-funds/mfig?utm_source=x&utm_medium=paid_social&utm_campaign=mfig&utm_term=mfig-orange-v1&twclid=29gqh1517fetrd30y8lm22lkth",
         "homepage_status": 200,
@@ -16347,7 +16347,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-17T12:29:02.728Z",
+        "fetched_at": "2026-05-20T13:22:47.431Z",
         "homepage_url": "https://marketrebellion.com/",
         "example_url": "https://marketrebellion.com/cboe-summit-virtual/?utm_campaign=38086833-Cboe+Summit+2026&utm_medium=paidsocial&utm_source=twitterads&utm_term=buyerinitials&twclid=29q0f3ecmiglui4ryyj5up2c3i",
         "homepage_status": 200,
@@ -16440,14 +16440,14 @@
           ]
         },
         "profile": {
-          "score": 0.4,
-          "confidence": 0.65,
+          "score": 0.66,
+          "confidence": 0.75,
           "basis": [
             "meta_author:false",
             "published_time:true",
             "canonical:true",
-            "about:false",
-            "contact:false",
+            "about:true",
+            "contact:true",
             "corrections:false",
             "outbound_links:33",
             "opinion_marker:false"
@@ -16469,23 +16469,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-17T12:29:05.865Z",
+        "fetched_at": "2026-05-20T13:22:48.102Z",
         "homepage_url": "https://tradethepool.com/",
         "example_url": "https://tradethepool.com/?twclid=29o6hooskerzcfyefiqi7kcgrh",
-        "homepage_status": null,
+        "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://tradethepool.com/",
         "example_final_url": "https://tradethepool.com/?twclid=29o6hooskerzcfyefiqi7kcgrh",
-        "homepage_content_type": "",
+        "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 33,
           "opinion_marker": false
         },
         "example": {
@@ -16591,7 +16591,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-17T13:59:25.572Z",
+        "fetched_at": "2026-05-20T14:53:14.890Z",
         "homepage_url": "https://artprice.com/",
         "example_url": "https://www.artprice.com/artprice-news/14183/world-record-a-painting-by-raja-ravi-varma-sold-for-nearly-18-million-dollars-in-mumbai?utm_medium=artprice-news&utm_source=X&utm_campaign=news&utm_content=14183&twclid=23wn7ayvhifg7vr11g3elt7wk3",
         "homepage_status": 200,
@@ -21227,7 +21227,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-17T12:29:07.240Z",
+        "fetched_at": "2026-05-20T13:22:49.563Z",
         "homepage_url": "https://surething.io/",
         "example_url": "https://surething.io/chat-index?utm_source=xads&twclid=27yqtzrn5j3zjmadm486py1wgi",
         "homepage_status": 200,
