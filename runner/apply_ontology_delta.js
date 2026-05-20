@@ -573,10 +573,20 @@ for (const axis of onto.axes) {
   // Apply daily drift cap — score cannot move more than ±0.05 from start-of-day value
   axis.score = parseFloat(applyDriftCap(axis.id, rawScore, driftState).toFixed(4));
 
-  // Confidence: count unique sources in the full log (not total weight) so that
-  // pseudo-replicated sources don't inflate confidence artificially (#2)
-  const uniqueSources = new Set(log.filter(e => e && e.source).map(e => e.source)).size;
-  axis.confidence = parseFloat(Math.min(0.98, uniqueSources * 0.025).toFixed(4));
+  // Confidence: trust-weighted unique-source count. Per unique source URL, take the
+  // max trust_weight across its entries (handles diversity dampening variation).
+  // Neutral/unknown sources (weight=1.0) behave identically to the old formula.
+  // Entries missing trust_weight default to 1.0 (backward-compatible).
+  const sourceWeights = new Map();
+  for (const e of log) {
+    if (!e || !e.source) continue;
+    const w = e.trust_weight ?? 1.0;
+    if (!sourceWeights.has(e.source) || sourceWeights.get(e.source) < w) {
+      sourceWeights.set(e.source, w);
+    }
+  }
+  const weightedSources = [...sourceWeights.values()].reduce((s, w) => s + w, 0);
+  axis.confidence = parseFloat(Math.min(0.98, weightedSources * 0.025).toFixed(4));
   if (axis.score !== rawScore) axesCapped++;
 
   // ── Stamp score_after + confidence_after on newly added evidence entries ──
