@@ -651,6 +651,24 @@
       "pushed_to_origin": null,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_x_search_reliability_1716201600000",
+      "title": "Enhance X Search Reliability and Dynamic Content Extraction",
+      "status": "failed",
+      "proposed_at": "2026-05-20T06:53:40.486Z",
+      "resolved_at": "2026-05-20T08:54:40.466Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"TOOL_DECLARATIONS\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"TOOL_EXECUTORS\" was exported before but is missing after",
+      "files_changed": [
+        "runner/lib/agent_tools.js",
+        "runner/tools/x_search.js",
+        "runner/lib/query_generation.js"
+      ],
+      "branch_name": "meta/proposal_x_search_reliability_1716201600000",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }
