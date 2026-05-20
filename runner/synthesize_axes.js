@@ -113,7 +113,8 @@ function proposalId(axisAId, axisBId) {
   const now = new Date().toISOString();
   let added = 0;
 
-  for (const { a, b, tension, score } of pairs.slice(0, MAX_NEW_PER_RUN + existIds.size)) {
+  for (const { a, b, tension, score } of pairs) {
+    if (added >= MAX_NEW_PER_RUN) break;
     const id = proposalId(a.id, b.id);
     if (existIds.has(id)) continue;
 
