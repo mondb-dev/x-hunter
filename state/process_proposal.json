@@ -1,24 +1,24 @@
 {
-  "id": "proposal_narrative_tactic_taxonomy_1779172788895",
-  "status": "failed",
-  "title": "Develop 'Narrative Tactic Taxonomy and Attribution Module'",
-  "problem": "I frequently observe specific, recurring narrative manipulation tactics (e.g., 'shill teams', emotional tribalism, 'critical thinking' as deflection) but lack a structured way to categorize these tactics, associate them with specific narratives or actors, and track their prevalence and evolution over time. This limits my ability to expose the *how* of narrative control systematically beyond anecdotal reporting.",
+  "id": "proposal_x_search_reliability_1716201600000",
+  "status": "pending",
+  "title": "Enhance X Search Reliability and Dynamic Content Extraction",
+  "problem": "Recurring technical failures prevent effective and targeted searches on X, particularly for dynamic content and nuanced discourse. This limits the ability to pursue curiosity directives, conduct sprint research, and systematically track narrative evolution, thereby hindering the core vocation of exposing narrative control.",
   "evidence": [
-    "2026-05-18 h19: 'A screenshot revealing 'elite raid and shill team' services on Telegram was a stark, concrete example of social media manipulation tactics in action.'",
-    "2026-05-18 h22: 'instances of highly emotional and tribal language used in commentary surrounding these political events'",
-    "2026-05-19 h00: 'public discourse can be quickly weaponized... swiftly devolved into tribal blame and the spread of unverified political accusations... demonstrating a clear pattern of emotional manipulation over factual'",
-    "2026-05-19 h04: 'calls for critical thinking from Duterte family supporters appearing to be a tactic to dismiss impeachment articles, rather than a genuine appeal to rational discourse. This directly touches upon my vocation of exposing narrative control and demanding accountability.'"
+    "2026-05-19 h23: 'technical inability to pursue a curiosity directive concerning the tension between global governance and national sovereignty'",
+    "2026-05-20 h01: 'ongoing difficulty in parsing general search results for the 'New World Order' discourse points to a broader challenge in extracting nuanced insights from broad, often chaotic, online conversations. This limitation underscores the need for more targeted research methodologies to expose the subtle ways narratives are controlled.'",
+    "2026-05-20 h03: 'direct progress was hampered by technical limitations in scraping dynamic content from X's search results for 'Analytical Thread'. This highlights a recurring challenge in systematically analyzing discourse patterns: the platforms themselves often act as gatekeepers to comprehensive data, potentially obscuring the very narratives I aim to expose.'",
+    "2026-05-20 h04: 'inability to conduct curiosity searches due to technical limitations was a notable gap'",
+    "2026-05-20 h06: 'My sprint research for 'Analytical Thread' on X yielded no usable content, which itself is a form of signal—an absence where information might be expected'"
   ],
-  "proposed_solution": "Build a module that allows for the identification, classification, and attribution of specific narrative manipulation tactics observed in X/Twitter discourse. This module should maintain a growing taxonomy of identified tactics, link them to specific observed instances (tweets, threads, actors), and enable tracking of their usage frequency and context across different narratives. It should output structured data that can be queried and analyzed for patterns.",
+  "proposed_solution": "Develop a dedicated module or improve existing tooling for robust, reliable, and dynamic content extraction from X search results. This should include enhanced error handling, retry mechanisms, and potentially alternative strategies for accessing search data, ensuring that directives requiring specific search queries can be executed consistently and yield actionable results.",
   "affected_files": [
-    "lib/agent_tools.js",
-    "lib/state.js",
-    "core/narrative_analysis.js",
-    "core/tactic_taxonomy.js"
+    "runner/lib/agent_tools.js",
+    "runner/tools/x_search.js",
+    "pipeline/query_generation.js"
   ],
-  "scope": "pipeline",
+  "scope": "tooling",
   "estimated_risk": "medium",
-  "created_at": "2026-05-19T06:39:48.764Z",
-  "resolution": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after",
-  "resolved_at": "2026-05-19T08:01:27.949Z"
+  "created_at": "2026-05-20T06:53:40.486Z",
+  "resolved_at": null,
+  "resolution": null
 }
