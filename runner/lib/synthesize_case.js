@@ -53,12 +53,19 @@ function parseJsonLoose(raw) {
   return JSON.parse(cleaned.slice(start, end + 1));
 }
 
+function journalUrl(j) {
+  if (j.tx_id) return `https://sebastianhunter.fun/arweave/${j.tx_id}`;
+  if (j.source_url) return j.source_url;
+  return null;
+}
+
 function formatJournalsForPrompt(journals) {
   return journals.map((j, i) => {
-    const cite = j.tx_id
-      ? `[J${i + 1}] ${j.date} h${j.hour ?? '?'} — https://sebastianhunter.fun/arweave/${j.tx_id}`
+    const url = journalUrl(j);
+    const header = url
+      ? `[J${i + 1}] ${j.date} h${j.hour ?? '?'} — ${url}`
       : `[J${i + 1}] ${j.date} h${j.hour ?? '?'}`;
-    return `${cite}\n${(j.text_content || '').slice(0, 2500).trim()}`;
+    return `${header}\n${(j.text_content || '').slice(0, 2500).trim()}`;
   }).join('\n\n---\n\n');
 }
 
@@ -141,7 +148,7 @@ Rules:
   const journalMap = {};
   journals.forEach((j, i) => {
     const id = `J${i + 1}`;
-    journalMap[id] = j.tx_id ? `https://sebastianhunter.fun/arweave/${j.tx_id}` : null;
+    journalMap[id] = journalUrl(j);
   });
   const resolveSource = (entry) => {
     const ref = entry.source_journal;

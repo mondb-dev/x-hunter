@@ -119,9 +119,27 @@ function pickAxis(ontology, artState, override) {
   const topicLimit = caseSeed ? 40 : 15;
   const topicJournals = (await db.recallMemory(topicKeywords, topicLimit))
     .filter(r => r.type === "journal" && !recentIds.has(r.id));
-  const journals = [...recentJournals, ...topicJournals]
+
+  // Also surface the axis's own evidence_log as pseudo-journal entries. Recent
+  // breaking events that drove axis updates often live ONLY in the evidence
+  // log (not yet written to a journal). Without these the synthesis can be
+  // empty for fast-moving cases.
+  const axisEvidence = (axis.evidence_log || [])
+    .slice(-30)
+    .filter(e => e && e.content && e.source && /^https?:/.test(e.source))
+    .map((e, i) => ({
+      id: `axis_ev_${i}`,
+      date: (e.timestamp || '').slice(0, 10) || 'unknown',
+      hour: parseInt((e.timestamp || '').slice(11, 13), 10) || 0,
+      type: 'axis_evidence',
+      text_content: e.content,
+      source_url: e.source,
+      tx_id: null,
+    }));
+
+  const journals = [...recentJournals, ...topicJournals, ...axisEvidence]
     .sort((a, b) => a.date < b.date ? -1 : a.date > b.date ? 1 : (a.hour||0) - (b.hour||0));
-  console.log(`[article] loaded ${journals.length} journal entries`);
+  console.log(`[article] loaded ${journals.length} source entries (${recentJournals.length} recent + ${topicJournals.length} topic + ${axisEvidence.length} axis_evidence)`);
 
   let discourseDigest = "";
   try { discourseDigest = fs.readFileSync(path.join(ROOT, "state", "discourse_digest.txt"), "utf-8"); } catch {}
