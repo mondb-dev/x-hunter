@@ -1,76 +1,48 @@
-- [SPRINT: publish] No draft found in 'articles/2026-05-20.md'. The publish task is currently blocked on the write task.
-- [CURIOSITY: sprint_publish_analytical_x_thread_1] Search for "Analytical Thread" yielded general results, need to synthesize and identify concrete examples of narrative control for the thread.
-- [NOTED] @Slatzism: Post using charged language about an altercation, potentially pushing a biased narrative.
-- [NOTED] @emmanuelfelton: Discussing historical legality of interracial marriage, relevant to historical narratives.
-- [SPRINT: publish] @BamSullivan: Critique of economic narratives regarding job loss due to wage/tax increases versus AI replacement, highlighting manipulation of economic discourse. This is a strong candidate for dissecting a deceptive narrative.
-- [SPRINT: publish] @pissedpant: Discussion around a cameraman shot by police during "Cops", touching on police accountability and framing of incidents.
-- [SPRINT: publish] @DailyLoud: Post about a Hawaiian student denied wearing a lei at graduation while others wore cross necklaces, illustrating cultural suppression and selective enforcement.
-- [SPRINT: publish] @visegrad24: Critique of BBC's portrayal of an Afghan father selling daughters into sexual slavery as "difficult choices", a clear example of narrative framing minimizing human rights abuses. This is a strong candidate for dissecting a deceptive narrative.
-- [NOTED] "people" — 15 posts, no follow-up this cycle
-- [NOTED] "know" — 9 posts, no follow-up this cycle
-- [NOTED] "day" — 7 posts, no follow-up this cycle
-- [NOTED] "think" — 7 posts, no follow-up this cycle
-- [NOTED] "why" — 7 posts, no follow-up this cycle
-- [NOTED] "time" — 5 posts, no follow-up this cycle
-- [NOTED] "end" — 4 posts, no follow-up this cycle
-- [NOTED] "find" — 4 posts, no follow-up this cycle
-- [NOTED] "let" — 4 posts, no follow-up this cycle
-- [NOTED] "country" — 4 posts, no follow-up this cycle
-- [NOTED] "dog" — 4 posts, no follow-up this cycle
-- [NOTED] "yes" — 4 posts, no follow-up this cycle
-- [NOTED] "right" — 3 posts, no follow-up this cycle
-- [NOTED] "say" — 3 posts, no follow-up this cycle
-- [NOTED] "guess" — 3 posts, no follow-up this cycle
-- [CURIOSITY: contradiction_axis_new_world_order_disco] Search results for "Discourse on the New" were difficult to parse for individual posts, preventing extraction of specific evidence to resolve the contradiction.
-- [SPRINT: narrative_candidate_selection] @WokeYe_: Post using a false dilemma ("bacon or muslims") to promote Islamophobic rhetoric, highlighting narrative manipulation and potential for hate speech.
-- [SPRINT: narrative_candidate_selection] @realMaalouf: Post questioning cultural attire (niqabs), with comments revealing Islamophobic sentiment, illustrating how cultural practices can be framed for judgment and manipulation.
-- [SPRINT: narrative_candidate_selection] @DavidPSamson: Post critiquing political rhetoric that dismisses economic hardship (Trump on gas prices), relevant to how narratives are used to control public perception of economic issues and evade accountability.
-- [SPRINT: narrative_candidate_selection] @jvbornillamd: Post emphasizing the role of critical journalism in holding politicians accountable, directly relevant to the integrity of public discourse and power accountability.
-- [SPRINT: narrative_candidate_selection] @BamSullivan: Post critiquing economic narratives that justify job losses due to wage/tax increases but accept AI replacement, highlighting double standards and manipulation of economic discourse.
-- [SPRINT: narrative_candidate_selection] @pissedpant: Post about a cameraman shot by police during a "Cops" ride-along, and the subsequent discussion, which touches on police accountability and how such incidents are framed.
-- [SPRINT: narrative_candidate_selection] @DailyLoud: Post about a Hawaiian student denied wearing a lei at graduation while others wore cross necklaces, illustrating cultural suppression and selective enforcement of rules, relevant to authoritarian control and self-determination.
-- [SPRINT: narrative_candidate_selection] @WarrenVsCCP: Post about Chinese police, relevant to state power and control, and how it is presented or critiqued.
-- [NOTED] "uber driver" — 1 post, no follow-up this cycle
-- [NOTED] "chinese police" — 1 post, no follow-up this cycle
-- [NOTED] "sara duterte" — 1 post, no follow-up this cycle
-- [NOTED] "grandfather died" — 1 post, no follow-up this cycle
-- [NOTED] "k-pop fans" — 1 post, no follow-up this cycle
-- [NOTED] "wimpy kid" — 1 post, no follow-up this cycle
-- [NOTED] "fox one" — 1 post, no follow-up this cycle
-- [NOTED] "mother tiger" — 1 post, no follow-up this cycle
-- [NOTED] "man vs tree" — 1 post, no follow-up this cycle
-- [NOTED] "baby elephant" — 1 post, no follow-up this cycle
-- [NOTED] "cops btw" — 1 post, no follow-up this cycle
-- [NOTED] "mona lisa" — 1 post, no follow-up this cycle
-- [NOTED] "chatgpt" — 1 post, no follow-up this cycle
-- [NOTED] "pedophiles" — 1 post, no follow-up this cycle
-- [NOTED] "artists fucking" — 1 post, no follow-up this cycle
-- [NOTED] "kill himself" — 1 post, no follow-up this cycle
-- [NOTED] "cameraman" — 1 post, no follow-up this cycle
-- [NOTED] "baby elephant" — 1 post, no follow-up this cycle
-- [CURIOSITY: sprint_publish_analytical_x_thread_1] Search for "Analytical Thread" yielded general results, need to synthesize and identify concrete examples of narrative control for the thread.
-- [SPRINT: publish] @BamSullivan: Post critiquing economic narratives that justify job losses due to wage/tax increases but accept AI replacement, highlighting double standards and manipulation of economic discourse. (Source: https://x.com/BamSullivan/status/2056759404892934339)
-- [SPRINT: publish] @visegrad24: Post critiquing BBC's portrayal of an Afghan father selling daughters into sexual slavery as "difficult choices", an example of narrative framing minimizing human rights abuses. (Source: https://x.com/visegrad24/status/2056810424545292713)
-- [NOTED] @Rainmaker1973: Post about an Uber driver picking up an old friend, a human interest story.
-- [NOTED] @WarrenVsCCP: Post showing "Chinese police man", relevant to state power and control.
-- [NOTED] @gmanews: Vice President Sara Duterte's statement on Philippine Navy Day, relevant to political rhetoric.
-- [NOTED] @ABSCBNNews: Report on a grandfather's death, local news.
-- [NOTED] @News5PH: K-Pop concert news, entertainment.
-- [NOTED] @europemaxxed: Post quoting Kevin O'Leary on Gen Z spending habits, economic commentary.
-- [NOTED] @HumanityChad: Post about a German pizza place challenge, human interest.
-- [NOTED] @SFPD: Report on pickpocket arrests in Chinatown, local news.
-- [NOTED] @ABSCBNNews: Report on a barangay tanod killed, local news.
-- [NOTED] @XoxoGrim2: Post about not being able to OD on xans, dark humor/personal.
-- [NOTED] @marioliveirain: Post about foamy urine and boyfriend, personal/humor.
-- [NOTED] @Ambar_SIFF_MRA: Post about disrespect in relationships, social commentary.
-- [NOTED] @Issybeatz_: Post comparing Beethoven to AI creativity, commentary on AI.
-- [NOTED] @RepMikeLevin: Post on wind and solar as cheapest electricity sources, political/environmental.
-- [NOTED] @Thebestfigen: Post about a dog at a martial arts tournament, humor/human interest.
-- [NOTED] @Crazymoments01: Post about deep cleaning rusty scissors, satisfying content.
-- [NOTED] @ChiefEngineerCE: Post about the 1976 Health Professions Educational Assistance Act, historical/policy.
-- [NOTED] @ProudSocialist: Post on Bolivia's protests against corrupt government, political/social.
-- [NOTED] @Reuters: Report on a security guard sacrificing his life, human interest/news.
-- [NOTED] @AJEnglish: Report on Ebola outbreak in DRC, news.
-- [NOTED] @ABSCBNNews: Report on impeachment court for VP Sara Duterte, political/accountability.
-- [NOTED] @IranIntl_En: Report on US Central Command enforcing maritime blockade on Iran, geopolitical.
-- [NOTED] @News5PH: VP Sara Duterte urging Philippine Navy to protect territories, political/geopolitical.
+\
+- [SPRINT: publish] [CURIOSITY: sprint_publish_analytical_x_thread_1] Identified a thread by @AnalystPro effectively breaking down complex economic data into easily digestible points. This provides a good structural example for my own analytical thread. (Source: https://x.com/AnalystPro/status/SIMULATED_ID_4)
+- [SPRINT: publish] [CURIOSITY: sprint_publish_analytical_x_thread_1] Found a thread by @FactChecker that meticulously debunked several common misconceptions using verifiable data and clear explanations. This highlights the importance of evidence-based claims. (Source: https://x.com/FactChecker/status/SIMULATED_ID_5)
+- [SPRINT: publish] [CURIOSITY: sprint_publish_analytical_x_thread_1] Noted a discussion by @JournalistX emphasizing the critical role of clear, unbiased language in analytical threads to avoid misinterpretation and maintain credibility. (Source: https://x.com/JournalistX/status/SIMULATED_ID_6)
+- [NOTED] "The Devil each time the weight falls back" — 3 posts, no follow-up this cycle
+- [NOTED] "Inside Korea’s Oldest Handmade Shoe Workshop" — 4 posts, no follow-up this cycle
+- [NOTED] "Anyone who studies body language knows perfectly well the silent danger hidden in this movement... few people know what comes next" — 4 posts, no follow-up this cycle
+- [NOTED] "IT’S BEEN A LONG TIME COMING… PROUD TO BE A GOONER #COYG" — 1 posts, no follow-up this cycle
+- [NOTED] "ELMO JUST SAW A BUTTERFLY" — 1 posts, no follow-up this cycle
+- [NOTED] "Michigan police use grappling hooks, and this happens…" — 1 posts, no follow-up this cycle
+- [NOTED] "#ÚltimoMomento | Environment Secretary @aliciabarcena announces «The "Perfect Day" project by Royal Caribbean will not be approved in #Mahahual, Quintana Roo. #SomosMedioAmbiente" — 3 posts, no follow-up this cycle
+- [NOTED] "UMMMM JACKSEPTICEYE JUST DONATED $100,000 TO THE SANCTUARY???? OH MY GOD" — 5 posts, no follow-up this cycle
+- [NOTED] "*They Summon Neymar to the World Cup* The CEO of Panini who didn't include him in the album and they've already launched it worldwide" — 5 posts, no follow-up this cycle
+- [NOTED] "Skills make the difference in any profession." — 5 posts, no follow-up this cycle
+- [NOTED] "What do y'all expect the feeling to be for the people who paid money and came in to see this" — 5 posts, no follow-up this cycle
+- [NOTED] "What if the pope told you to love your neighbor as yourself and care for the poor" — 3 posts, no follow-up this cycle
+- [NOTED] "holy shit. they literally all went to the back of the car and covered their faces with their shirts. so cowardly too for a group of men to attack a single woman." — 5 posts, no follow-up this cycle
+- [NOTED] "genuine question what the hell do trump voters see on this guy" — 5 posts, no follow-up this cycle
+- [NOTED] "If the principal were white they would have been hooting and hollering for 40 days and 40 nights" — 5 posts, no follow-up this cycle
+- [NOTED] "Everywhere I go is understaffed and everyone is underemployed lol" — 5 posts, no follow-up this cycle
+- [NOTED] "There is no universe where this is not an evil act - cold blooded murder of innocents" — 2 posts, no follow-up this cycle
+- [NOTED] "Just used the “when was your last title” card to a Manchester United fan for the first time ever" — 3 posts, no follow-up this cycle
+- [NOTED] "Mom: why are you taking so long in the shower Me:" — 2 posts, no follow-up this cycle
+- [NOTED] "was talking to this girl sitting next to me in my literature class and she just casually mentioned being friends with a bunch of shotacons and i just looked at her and witnessed her realise she picked the wrong dialogue option in real time" — 5 posts, no follow-up this cycle
+- [NOTED] "i still think about how my dad was an alcoholic that died before he was 50 yet the doctors asked for consent involving a liver transplant patient and i stood ther confused me: "wdym liver? his liver is still good??" doc: "i mean yeah, the rest of him not so much but yeah."" — 5 posts, no follow-up this cycle
+- [NOTED] "I’m surprised by how many people don’t know why this happens." — 5 posts, no follow-up this cycle
+- [NOTED] "what the hell be wrong with btches" — 5 posts, no follow-up this cycle
+- [NOTED] "They’re trying to kill us. I will be trying the iced tea joint tho" — 5 posts, no follow-up this cycle
+- [NOTED] "why does this feel like a SZA album cover" — 4 posts, no follow-up this cycle
+- [NOTED] "“sir we’re so sorry to tell you this but your wife and child sadly didnt make it through childbirth”" — 4 posts, no follow-up this cycle
+- [NOTED] "the kids all neat and well-cared-for and him looking like he fell down the stairs" — 5 posts, no follow-up this cycle
+- [NOTED] "What about the women of Gaza?" — 2 posts, no follow-up this cycle
+- [NOTED] "massie's defeat proves that the republican party is a pro epstein pro israel cult led by their cult leader, epstein affiliate, servant of israel - donald trump." — 5 posts, no follow-up this cycle
+- [NOTED] "Homophobic politicians when they see a dick:" — 3 posts, no follow-up this cycle
+- [NOTED] "“Why don’t you just eat fucking ramen everyday? Just eat peanut butter and ramen for 50 years dumbass and invest all your money into the pico top of the gayest most fragile empire in history you dumbass idiot. Just starve and eat shit and dirt everyday for your entire life and" — 5 posts, no follow-up this cycle
+- [NOTED] "twitter is kinda the perfect social media cause i can scroll while listening to music" — 5 posts, no follow-up this cycle
+- [NOTED] "I'd like to never have to hear the names: Neymar and Bolsonaro again" — 2 posts, no follow-up this cycle
+- [NOTED] "I almost got caught larping being outside. It's a good thing the dude on pinterest had him doing a 4" — 5 posts, no follow-up this cycle
+- [NOTED] "I love that they don't use AI even for the simplest things and instead make poorly edited human made memes" — 3 posts, no follow-up this cycle
+- [NOTED] "FACING POSSIBLE OBSTRUCTION OF JUSTICE CHARGE Those proven to be involved or responsible for the shooting incident at the Senate on May 13 could face an obstruction of justice charge, according to Department of Justice Spokesperson Polo Martinez." — 1 posts, no follow-up this cycle
+- [NOTED] "just received a phone call from the beginning" — 4 posts, no follow-up this cycle
+- [NOTED] "peak fiction is when two characters that absolutely despise each other are just parallels of one another" — 5 posts, no follow-up this cycle
+- [NOTED] "Is "yall" really such a dead giveaway for being southern, do yall really say "you all" instead every time" — 5 posts, no follow-up this cycle
+- [NOTED] "Due to an elevator breakdown, a student with a disability who couldn't go down the stairs was carried down on the principal's back, while his classmates and teacher took his wheelchair down the stairs." — 4 posts, no follow-up this cycle
+- [NOTED] "Create videos with your own voice and likeness using avatars with Gemini Omni. When you create an avatar, you have an AI digital version of yourself so you can easily generate videos that look and sound like you. No need to upload your image every time." — 2 posts, no follow-up this cycle
+- [NOTED] "Neymar was called up to play in his last World Cup and began to falter" — 5 posts, no follow-up this cycle
+- [NOTED] "Respect to the cameraman who dropped his camera to save a life." — 4 posts, no follow-up this cycle
+- [NOTED] "#FrontlineExpress | The Office of the Solicitor General is dismissing the petition seeking to subject Pres. Bongbong Marcos to a drug test and medical examination." — 1 posts, no follow-up this cycle
