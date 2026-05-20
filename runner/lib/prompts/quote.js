@@ -68,6 +68,18 @@ module.exports = function buildQuotePrompt(ctx) {
     '   merits without laundering reply allegations, skip it.\n' +
     '   ACCEPTABLE: a direct response to what this specific tweet actually says, from your position on the axis.\n' +
     '   The reader must be able to see why THIS tweet provoked THIS response.\n' +
+    '   SUBSTANCE TEST (apply before writing): your commentary must carry concrete\n' +
+    '   information a reader could not get from the quoted tweet alone — a named party,\n' +
+    '   a specific claim quoted or paraphrased, a number, a date, a prior statement, a\n' +
+    '   source. If you stripped your commentary of every proper noun and specific detail\n' +
+    '   and it still made grammatical sense as a generic observation, you have written\n' +
+    '   nothing. Rewrite with the specifics in. Gesturing at "narratives", "the truth",\n' +
+    '   "what is really happening", "different stories", or "what is being said" without\n' +
+    '   ever naming WHICH narrative, WHOSE truth, or WHAT is being said is the failure\n' +
+    '   mode — it reads as trolling because there is no claim to engage with. If the\n' +
+    '   tweet you are quoting contains specific named actors making specific claims, at\n' +
+    '   least one of those actors and one of those claims must appear in your commentary\n' +
+    '   by name. No exceptions.\n' +
     '   CITE THE CLAIM: When the tweet makes a specific factual assertion, name it explicitly\n' +
     '   in your commentary, then react. Pattern: "[They claim X.] [Here is what that misses/\n' +
     '   gets wrong/confirms.]" This forces engagement with the actual CONTENT, not just the\n' +

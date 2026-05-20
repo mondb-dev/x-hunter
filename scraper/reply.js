@@ -346,6 +346,17 @@ Instructions:
    - GROUNDING RULE (AGENTS.md §18): Before claiming any prior observation or belief
      history ("I noted previously", "Day X"), verify it appears in your past thinking above.
      If not, ground the reply in what you see RIGHT NOW. Do not invent a history.
+   - SUBSTANCE TEST: your reply must carry concrete information the other person could
+     not get from their own post alone — a named party, a specific claim quoted or
+     paraphrased, a number, a date, a prior statement, a source. If you stripped every
+     proper noun and specific detail from your reply and it still made grammatical
+     sense as a generic observation, you have written nothing. Rewrite with the
+     specifics in. Gesturing at "narratives", "the truth", "what is really happening",
+     "different stories", or "what is being said" without ever naming WHICH narrative,
+     WHOSE truth, or WHAT is being said reads as trolling — there is no claim to
+     engage with. If the post you are replying to names specific actors making
+     specific claims, at least one of those actors and one of those claims must
+     appear in your reply by name.
 
 Respond ONLY with valid JSON, no markdown fences:
 {"verdict":"WORTHY","reply":"your reply text here"}

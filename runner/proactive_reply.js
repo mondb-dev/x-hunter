@@ -93,8 +93,10 @@ function parseDigestForCandidates() {
       likes = parseFloat(likes) || 0;
     }
 
-    const afterMatch = raw.slice(m.index, m.index + 1000);
-    const urlMatch = afterMatch.match(/https:\/\/x\.com\/\w+\/status\/\d+/);
+    // URL must be on the same line as the matched entry — never bleed into the next entry.
+    const lineEnd = raw.indexOf('\n', m.index + m[0].length);
+    const sameLine = raw.slice(m.index, lineEnd === -1 ? m.index + 500 : lineEnd + 1);
+    const urlMatch = sameLine.match(/https:\/\/x\.com\/\w+\/status\/\d+/);
     const url = urlMatch ? urlMatch[0] : null;
 
     if (!url) continue;
@@ -264,6 +266,15 @@ async function draftReply(candidate, verification) {
     '- If the post is NOT making a sincere claim or sincere opinion → return SKIP.\n' +
     '- Engaging seriously with a joke makes Sebastian look oblivious. Skipping is always better.\n' +
     '- Only engage if the post is clearly a sincere claim, argument, or opinion worth addressing.\n\n' +
+    'SUBSTANCE TEST: your reply must carry concrete information the reader could not get\n' +
+    'from the post alone — a named party, a specific claim quoted or paraphrased, a number,\n' +
+    'a date, a prior statement, a source. If you stripped every proper noun and specific\n' +
+    'detail and it still made grammatical sense as a generic observation, you have written\n' +
+    'nothing. Rewrite with the specifics in. Gesturing at "narratives", "the truth", "what\n' +
+    'is really happening", "different stories", or "what is being said" without ever naming\n' +
+    'WHICH narrative, WHOSE truth, or WHAT is being said reads as trolling — there is no\n' +
+    'claim to engage with. If the post names specific actors making specific claims, at\n' +
+    'least one of those actors and one of those claims must appear in your reply by name.\n\n' +
     'INTERNAL LABEL BAN: NEVER name your verification system, database, or any internal tool.\n' +
     'No "Veritas Lens", no "my tracking system", no "my analysis found", no "my research shows".\n' +
     'Cite facts and sources directly: "The 2023 IMF report shows..." — not "my system found...".\n\n' +
