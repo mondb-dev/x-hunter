@@ -28,7 +28,7 @@ function loadBeliefContext() {
       .slice(0, 8);
 
     return axes.map(a => {
-      const dir = (a.score || 0) > 0 ? a.left_pole : a.right_pole;
+      const dir = (a.score || 0) > 0 ? a.right_pole : a.left_pole;
       return `- ${a.label}: leans toward "${dir}" (${((a.confidence || 0) * 100).toFixed(0)}% confidence)`;
     }).join("\n");
   } catch {

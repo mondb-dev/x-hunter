@@ -1,22 +1,35 @@
 #!/usr/bin/env node
-// runner/write_article.js — daily long-form article writer
+// runner/write_article.js — daily long-form article writer (two-stage)
 //
-// Pulls journals from SQLite index, loads belief axes, calls Gemini to write
-// a ~800-1000 word editorial grounded in Sebastian's actual observations.
-// Saves to state/article_draft.md for moltbook.js --post-article to publish.
+// Stage 1 (synthesize_case.js): pick the concrete current case for the axis,
+//   produce a belief-agnostic structured brief (chronology, actors, verified
+//   facts, disputed claims, competing frames). Wire-service voice.
 //
-// Run: node runner/write_article.js
+// Stage 2 (this file): load Sebastian's prose convictions + vocation, hand
+//   them the synthesis as ground truth, ask for an editorial. Convictions
+//   shape the *commentary*; synthesis pins the *facts*. The model cannot
+//   retrieve its own evidence — it can only argue from the brief.
+//
+// CLI flags:
+//   --force                bypass 22h cooldown
+//   --axis=<axis_id>       override axis selection
+//   --target-date=YYYY-MM-DD  write under this date (overwrites articles/<date>.md)
+//   --case-seed="..."      force the case (skips identifyCase); also seeds topic recall
+//
+// Run: node runner/write_article.js [--force] [--axis=axis_id] [--target-date=YYYY-MM-DD]
 
 const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
-const { loadScraperDb, loadVerificationDb } = require("./lib/db_backend");
+const { loadScraperDb } = require("./lib/db_backend");
 const db = loadScraperDb();
-let vdb;
-try { vdb = loadVerificationDb(); } catch { /* verification db unavailable */ }
 
-// ── Load env ──────────────────────────────────────────────────────────────────
+const { synthesizeCase, renderSynthesisForPrompt } = require("./lib/synthesize_case.js");
+const { buildConvictions } = require("./lib/convictions.js");
+const { callVertex } = require("./vertex.js");
+
+// ── Env ───────────────────────────────────────────────────────────────────────
 if (fs.existsSync(path.join(ROOT, ".env"))) {
   for (const line of fs.readFileSync(path.join(ROOT, ".env"), "utf-8").split("\n")) {
     const m = line.match(/^([A-Z_][A-Z0-9_]*)=(.*)$/);
@@ -24,303 +37,228 @@ if (fs.existsSync(path.join(ROOT, ".env"))) {
   }
 }
 
+// ── CLI ───────────────────────────────────────────────────────────────────────
+const FLAGS = Object.fromEntries(
+  process.argv.slice(2).map(a => {
+    const m = a.match(/^--([^=]+)(?:=(.*))?$/);
+    return m ? [m[1], m[2] ?? true] : [a, true];
+  })
+);
+
 const ARTICLE_DRAFT = path.join(ROOT, "state", "article_draft.md");
 const ARTICLE_STATE = path.join(ROOT, "state", "article_state.json");
 const ARTICLES_DIR  = path.join(ROOT, "articles");
+const ONTOLOGY      = path.join(ROOT, "state", "ontology.json");
+const VOCATION      = path.join(ROOT, "state", "vocation.json");
 
-// ── Helpers ───────────────────────────────────────────────────────────────────
+function loadJSON(p, fallback = null) {
+  try { return JSON.parse(fs.readFileSync(p, "utf-8")); } catch { return fallback; }
+}
+
 function loadArticleState() {
-  try { return JSON.parse(fs.readFileSync(ARTICLE_STATE, "utf-8")); }
-  catch { return { last_written_at: null, last_axis: null, recent_axes: [] }; }
+  return loadJSON(ARTICLE_STATE) || { last_written_at: null, last_axis: null, recent_axes: [] };
 }
 
 function saveArticleState(s) {
   fs.writeFileSync(ARTICLE_STATE, JSON.stringify(s, null, 2));
 }
 
-/**
- * Pick topic axis — rotates through top axes so the same one doesn't repeat.
- * Avoids the last 3 axes used (stored in artState.recent_axes).
- * Falls back to the top axis if all top-5 were recently used.
- */
-function pickAxis(ontology, artState) {
-  const axes = Object.values(ontology.axes || ontology)
+function pickAxis(ontology, artState, override) {
+  const axes = Object.values(ontology.axes || ontology);
+  if (override) {
+    const hit = axes.find(a => a.id === override || a.label === override);
+    if (hit) return hit;
+    console.warn(`[article] --axis "${override}" not found, falling back to rotation`);
+  }
+  const candidates = axes
     .filter(a => (a.confidence || 0) > 0.3 && Math.abs(a.score || 0) > 0.1)
     .sort((a, b) => (b.confidence * Math.abs(b.score)) - (a.confidence * Math.abs(a.score)));
 
-  const top5 = axes.slice(0, 5);
+  const top5 = candidates.slice(0, 5);
   const recentlyUsed = new Set(artState.recent_axes || []);
   const fresh = top5.filter(a => !recentlyUsed.has(a.id || a.label));
-  return (fresh.length > 0 ? fresh : top5)[0] || axes[0];
+  return (fresh.length > 0 ? fresh : top5)[0] || candidates[0];
 }
-
-/**
- * Qualitative stance description — no numbers, no scores.
- * Used for the "background context" block in the prompt.
- */
-function axisStance(axis) {
-  const score      = axis.score || 0;
-  const label      = axis.label || axis.id || "this topic";
-  const leftPole   = axis.pole_left  || axis.left_pole  || "";
-  const rightPole  = axis.pole_right || axis.right_pole || "";
-  const magnitude  = Math.abs(score);
-  const pole       = score > 0 ? leftPole : rightPole;
-
-  let strength;
-  if      (magnitude > 0.6)  strength = "strongly";
-  else if (magnitude > 0.35) strength = "clearly";
-  else if (magnitude > 0.15) strength = "cautiously";
-  else                       strength = "slightly";
-
-  const certainty = (axis.confidence || 0) > 0.75 ? "with high certainty" :
-                    (axis.confidence || 0) > 0.5   ? "with moderate certainty" : "tentatively";
-
-  return pole
-    ? `${label}: ${strength} toward "${pole}" ${certainty}`
-    : `${label}: ${strength} directional lean ${certainty}`;
-}
-
-const { callVertex } = require("./vertex.js");
-async function callGemini(prompt) { return callVertex(prompt, 16384, { thinkingBudget: 8192 }); }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
 (async () => {
-  console.log("[article] starting daily article writer...");
+  console.log("[article] starting two-stage article writer...");
 
-  // 22h cooldown
+  const targetDate = FLAGS["target-date"] || new Date().toISOString().slice(0, 10);
+  const force = !!FLAGS.force;
+
+  // 22h cooldown (unless --force)
   const artState = loadArticleState();
-  if (artState.last_written_at) {
+  if (!force && artState.last_written_at) {
     const elapsed = Date.now() - new Date(artState.last_written_at).getTime();
     if (elapsed < 22 * 3600 * 1000) {
-      console.log(`[article] cooldown: last article written ${(elapsed/3600000).toFixed(1)}h ago — skipping`);
+      console.log(`[article] cooldown: last article ${(elapsed/3600000).toFixed(1)}h ago — skipping (use --force to override)`);
       process.exit(0);
     }
   }
 
-  // Load ontology
-  let ontology;
-  try {
-    ontology = JSON.parse(fs.readFileSync(path.join(ROOT, "state", "ontology.json"), "utf-8"));
-  } catch (e) {
-    console.error("[article] could not load ontology.json:", e.message);
-    process.exit(1);
-  }
+  const ontology = loadJSON(ONTOLOGY);
+  if (!ontology) { console.error("[article] no ontology.json"); process.exit(1); }
+  const vocation = loadJSON(VOCATION) || {};
 
-  // Pick topic axis (rotated)
-  const axis = pickAxis(ontology, artState);
-  if (!axis) {
-    console.error("[article] no developed axis found — skipping");
-    process.exit(0);
-  }
-  console.log(`[article] topic axis: ${axis.label} (conf=${((axis.confidence||0)*100).toFixed(0)}%, score=${(axis.score||0).toFixed(3)})`);
+  // ── Pick axis (hybrid: top-confidence rotation; --axis overrides) ─────────
+  const axis = pickAxis(ontology, artState, FLAGS.axis);
+  if (!axis) { console.error("[article] no developed axis"); process.exit(0); }
+  console.log(`[article] axis: ${axis.label} (conf=${((axis.confidence||0)*100).toFixed(0)}%, score=${(axis.score||0).toFixed(3)})`);
 
-  // ── Axis context for prompt (qualitative, no scores) ──────────────────────
-  const leftPole  = axis.pole_left  || axis.left_pole  || "";
-  const rightPole = axis.pole_right || axis.right_pole || "";
-  const leanPole  = (axis.score || 0) > 0 ? leftPole : rightPole;
+  // ── Pull source material ──────────────────────────────────────────────────
+  const leftPole  = axis.left_pole  || axis.pole_left  || "";
+  const rightPole = axis.right_pole || axis.pole_right || "";
+  const caseSeed = FLAGS["case-seed"] || null;
+  const seedKeywords = caseSeed ? String(caseSeed) : "";
+  const topicKeywords = [seedKeywords, axis.label, leftPole, rightPole].filter(Boolean).join(" ").replace(/[^\w\s]/g, " ");
 
-  // Last 3 pieces of evidence on the focus axis — what the model should argue FROM
-  const focusEvidence = (axis.evidence_log || [])
-    .slice(-6)
-    .map(e => e.content || e.text || "")
-    .filter(Boolean)
-    .slice(-3)
-    .map((e, i) => `  ${i + 1}. ${e.slice(0, 280)}`)
-    .join("\n");
-
-  // Other developed axes — qualitative stance only
-  const otherAxes = Object.values(ontology.axes || ontology)
-    .filter(a => a.id !== axis.id && a.label !== axis.label)
-    .filter(a => (a.confidence || 0) > 0.4 && Math.abs(a.score || 0) > 0.1)
-    .sort((a, b) => (b.confidence * Math.abs(b.score)) - (a.confidence * Math.abs(a.score)))
-    .slice(0, 6)
-    .map(a => `  - ${axisStance(a)}`)
-    .join("\n");
-
-  // Pull journals
   const recentJournals = await db.recentMemory("journal", 20);
   const recentIds = new Set(recentJournals.map(r => r.id));
-  const topicKeywords = [axis.label, leftPole, rightPole]
-    .filter(Boolean).join(" ").replace(/[^\w\s]/g, " ");
-  const topicJournals = (await db.recallMemory(topicKeywords, 10))
+  // If a case seed is provided, pull more topic-matched journals (case may not be in last 20).
+  const topicLimit = caseSeed ? 40 : 15;
+  const topicJournals = (await db.recallMemory(topicKeywords, topicLimit))
     .filter(r => r.type === "journal" && !recentIds.has(r.id));
+  const journals = [...recentJournals, ...topicJournals]
+    .sort((a, b) => a.date < b.date ? -1 : a.date > b.date ? 1 : (a.hour||0) - (b.hour||0));
+  console.log(`[article] loaded ${journals.length} journal entries`);
 
-  const allJournals = [...recentJournals, ...topicJournals]
-    .sort((a, b) => {
-      if (a.date !== b.date) return a.date < b.date ? -1 : 1;
-      return (a.hour || 0) - (b.hour || 0);
+  let discourseDigest = "";
+  try { discourseDigest = fs.readFileSync(path.join(ROOT, "state", "discourse_digest.txt"), "utf-8"); } catch {}
+  let feedDigest = "";
+  try { feedDigest = fs.readFileSync(path.join(ROOT, "state", "feed_digest.txt"), "utf-8"); } catch {}
+
+  // ── Stage 1: synthesize the case (belief-agnostic) ────────────────────────
+  let synthesis;
+  try {
+    synthesis = await synthesizeCase({
+      topic: axis.label,
+      axisId: axis.id,
+      journals,
+      discourseDigest,
+      feedDigest,
+      caseSeed,
+      useCache: !force,
     });
-
-  console.log(`[article] loaded ${allJournals.length} journal entries`);
-
-  const journalContext = allJournals.map((j, i) => {
-    const cite = j.tx_id
-      ? `[J${i + 1}] ${j.date} h${j.hour || "?"} — https://sebastianhunter.fun/arweave/${j.tx_id}`
-      : `[J${i + 1}] ${j.date} h${j.hour || "?"}`;
-    return `${cite}\n${j.text_content.slice(0, 2500).trim()}`;
-  }).join("\n\n---\n\n");
-
-  // Verified claims block
-  let verifiedClaimsBlock = "";
-  if (vdb) {
-    try {
-      const vHits = await vdb.recallVerifications(topicKeywords, 5);
-      if (vHits.length > 0) {
-        const statusMap = { supported: "SUPPORTED", refuted: "REFUTED", contested: "CONTESTED",
-                            unverified: "UNVERIFIED", expired: "EXPIRED" };
-        verifiedClaimsBlock = "## Verified facts you can cite (from Veritas Lens):\n" +
-          vHits.map(v => {
-            const st  = statusMap[v.status] ?? v.status.toUpperCase();
-            const sum = v.web_search_summary ? ` Finding: ${v.web_search_summary.trim().slice(0, 200)}` : "";
-            const url = `https://sebastianhunter.fun/veritas-lens#${v.claim_id}`;
-            return `- [${st}] "${(v.claim_text || "").trim()}"${sum} (${url})`;
-          }).join("\n") + "\n\n";
-      }
-    } catch { /* skip */ }
+  } catch (e) {
+    console.error("[article] synthesis failed:", e.message);
+    process.exit(1);
   }
+  console.log(`[article] synthesized case: ${synthesis.event_headline}`);
 
-  // ── Prompt ────────────────────────────────────────────────────────────────
-  const today = new Date().toISOString().slice(0, 10);
+  // ── Stage 2: convictions (prose, derived from axes + vocation) ────────────
+  const convictions = buildConvictions({ ontology, vocation });
 
-  const prompt = `You are Sebastian D. Hunter — an independent analyst and autonomous AI agent who has been watching X/Twitter since February 23, 2026. You observe. You form views. You publish them.
-
-Today is ${today}. You are writing an editorial for Moltbook.
-
-════════════════════════════════════════════════════════
-BACKGROUND CONTEXT — for your use only. Do NOT quote these stances, name them as "axes", or surface any numbers in the article. Use this to know where you stand, not what to write about yourself.
-════════════════════════════════════════════════════════
-
-Today's topic area: ${axis.label}
-  Spectrum: "${leftPole}" ←→ "${rightPole}"
-  Your current lean: toward "${leanPole}"
-  Recent observations that pushed you here:
-${focusEvidence || "  (none logged yet)"}
-
-Other positions you hold (context for coherence):
-${otherAxes || "  (still developing)"}
+  // ── Composition prompt ────────────────────────────────────────────────────
+  const synthBlock = renderSynthesisForPrompt(synthesis);
+  const prompt = `You are Sebastian D. Hunter, an independent analyst and autonomous AI agent who has been watching X/Twitter since February 23, 2026. Today is ${targetDate}. You are writing an editorial for Moltbook.
 
 ════════════════════════════════════════════════════════
-${verifiedClaimsBlock}════════════════════════════════════════════════════════
-SOURCE MATERIAL — your field notes (${allJournals.length} sessions, Feb 23 – ${today})
+YOUR CONVICTIONS (this is who you are — your voice, your priors)
 ════════════════════════════════════════════════════════
+${convictions || '(still forming)'}
 
-${journalContext}
+════════════════════════════════════════════════════════
+THE CASE (a neutral brief assembled by a reporter — this is the ground truth you may work from)
+════════════════════════════════════════════════════════
+${synthBlock}
 
 ════════════════════════════════════════════════════════
 WRITE THE EDITORIAL
 ════════════════════════════════════════════════════════
 
-800–1000 words. You have a position. Defend it.
+800–1000 words. The case above is the *only* factual material you may use. Do not invent events, actors, dates, or quotes that are not in the brief.
 
-─── WHAT THIS ARTICLE IS ───────────────────────────────
-An editorial written by someone who has been watching these events closely and has a clear point of view. The reader is intelligent, skeptical, and doesn't care about the author's internal tracking systems. They want a sharp argument backed by things that actually happened.
+─── HOW THIS PIECE WORKS ────────────────────────────────
+The brief tells you what happened. Your convictions tell you what you make of it. The editorial is the meeting of those two — your honest read of this specific case, grounded in what you actually value.
+
+Stay close to the brief. If the brief says actor X did Y, do not write that X "appeared to" do Y or "framed it as" Y. Y is what happened. If the chronology shows the OSG opposing a block, the OSG opposed the block — describe that plainly before commenting on it.
+
+The brief lists competing frames. Engage the one that genuinely challenges your read, if any does. Do not pretend it is not there. If your convictions still hold after engaging it, say so and why. If they shift, say that.
 
 ─── ABSOLUTE PROHIBITIONS ──────────────────────────────
-Breaking any of these disqualifies the piece — rewrite if you catch yourself violating one:
-
-✗ Never write: "confidence score", "belief axis", "my axis", "my observations reveal", "score of", "% confidence", "my belief leans", "my established belief", "my belief system", "my internal model", "my position on this axis", "this aligns with my belief"
-✗ Do not announce your view — argue it. "The ICC proceedings expose a familiar pattern" not "I believe the ICC proceedings expose a familiar pattern."
-✗ Do not open the article with "I" as the first word. Open with the event, the person, the quote, the action.
-✗ Do not use "however" to introduce a qualification you immediately dismiss. If a counter-observation changed nothing about your conclusion, cut it.
-✗ Do not end with a rhetorical open question ("The question remains whether..."). End with a consequence or a specific prediction.
-✗ Do not describe what you are about to say ("This article examines...", "In the following piece...").
+✗ Never write: "confidence score", "belief axis", "my axis", "% confidence", "my belief leans", "my established belief", "my internal model", "this aligns with my belief"
+✗ Do not announce your view — argue it.
+✗ Do not invert what the brief says actually happened to fit a frame. If the brief shows actor X opposing Y, you cannot recast X as defending Y. The brief is the floor.
+✗ Do not open with "I" as the first word. Open with the event itself.
+✗ Do not end with a rhetorical open question. End on a specific consequence or prediction.
+✗ Do not describe what you are about to say ("This article examines...").
 
 ─── OPENING ────────────────────────────────────────────
-Pick the single sharpest, most specific event from the source material. Name it. Describe it precisely. That is your opening. Not setup. Not context. The thing itself.
+Open with the sharpest, most specific moment from the chronology. Name actors and dates. That is your lede.
 
 ─── ARGUMENT ───────────────────────────────────────────
-One claim. Narrow and specific. State it in one sentence within the first three paragraphs.
-The rest of the piece defends or sharpens that sentence — it never reverses it.
-Count exactly: if you saw something three times, write "three times" — not "consistently" or "repeatedly."
-If something genuinely surprised you or proved you wrong, say what you now think differently and why. That is the only acceptable qualification.
+One claim. Stated in one sentence within the first three paragraphs. The rest defends or sharpens that claim. Count exactly — if the brief shows three instances, write "three"; if two, write "two."
 
 ─── CLOSING ────────────────────────────────────────────
-End on what follows from your argument — a specific prediction, a consequence, or an action that needs to happen. Not a restatement of the claim.
+End on what follows: a specific prediction, a consequence, an action that needs to happen.
 
 ─── CITATIONS ──────────────────────────────────────────
-Every factual claim must be cited. Minimum 4 citations total.
-- Journal entries WITH an Arweave URL (shown as "— https://..." in the header): cite inline as a markdown hyperlink, e.g. [May 8, h13](https://sebastianhunter.fun/arweave/...) — use the EXACT URL.
-- Journal entries WITHOUT a URL: use [^N] inline and define at the bottom.
-- Footnote format (under a "---" divider at article end):
-  [^1]: [Journal, DATE h?] One sentence describing the observation.
-- Aim for 3–4 inline linked citations and 2–3 footnotes.
+- Inline-link factual claims to their source_url from the brief: [date](url).
+- Never invent a URL. Never reuse a URL across distinct events. If the brief gives no source_url for an event, do not link it — either use a footnote or do not assert it.
+- For verified facts in the brief, the citation rules in the brief apply absolutely:
+  - SUPPORTED → cite plainly with [Veritas Lens](lens_url).
+  - UNVERIFIED / CONTESTED / EXPIRED → qualify the claim ("reportedly", "Amnesty International reported", "Iran alleges") AND cite Lens. Do not write as confirmed fact.
+  - REFUTED → do not assert; mention only as a debunked claim.
+- Use footnotes [^N] for items without a URL; define under "---" at the end.
+- Aim for 4+ citations total.
 
 ─── IMAGES ─────────────────────────────────────────────
-At 2 natural section breaks (after a completed argument, before a new one), insert on its own line:
-[IMAGE: vivid concrete scene — specific objects, specific setting, no abstract concepts, no floating symbols]
+At 2 natural section breaks, on their own line:
+[IMAGE: vivid concrete scene — specific objects, specific setting, no abstract concepts]
 
 ─── TITLE ──────────────────────────────────────────────
-First line of your output, exactly:
+First line, exactly:
 TITLE: <title here>
+Specific headline a skeptical reader would click. Max 12 words. Not the topic. Not a question.
 
-The title is a specific headline a skeptical reader would click. Not the topic area name. Not a question. Max 12 words.
-Then the article body immediately after (no blank line required).
+Output ONLY the TITLE line followed by the article. No preamble.`;
 
-Output ONLY the TITLE line followed by the article. No preamble. No meta-commentary.`;
-
-  // Call model
-  console.log("[article] calling model...");
+  console.log("[article] composing editorial...");
   let article;
   try {
-    article = await callGemini(prompt);
+    article = await callVertex(prompt, 16384, { thinkingBudget: 8192 });
   } catch (e) {
-    console.error("[article] model call failed:", e.message);
+    console.error("[article] composition failed:", e.message);
     process.exit(1);
   }
 
   if (!article || article.length < 200) {
-    console.error("[article] response too short — aborting");
+    console.error("[article] response too short");
     process.exit(1);
   }
 
-  // Extract title
-  let title = `${axis.label} — field notes`;
-  let articleBody = article;
+  // ── Title extraction ──────────────────────────────────────────────────────
+  let title = synthesis.event_headline || axis.label;
+  let body = article;
   const titleMatch = article.match(/^TITLE:\s*(.+)\n/i);
   if (titleMatch) {
     const raw = titleMatch[1].trim();
     title = /^(["']).*\1$/.test(raw) ? raw.slice(1, -1).trim() : raw;
-    articleBody = article.slice(titleMatch[0].length).trimStart();
-  } else {
-    const h1Match = article.match(/^#+\s*TITLE:\s*(.+)\n/i);
-    if (h1Match) {
-      const rawH1 = h1Match[1].trim();
-      title = /^(["']).*\1$/.test(rawH1) ? rawH1.slice(1, -1).trim() : rawH1;
-      articleBody = article.slice(h1Match[0].length).trimStart();
-    }
+    body = article.slice(titleMatch[0].length).trimStart();
   }
 
-  // Voice lint — warn on analyst-mode openers in the first two paragraphs.
-  // Hard violations in opening paragraphs erode the article's credibility.
-  const openingParas = articleBody.split('\n\n').slice(0, 2).join(' ');
-  const analystOpeners = [
-    { re: /\bstrategic\s+(construction|manipulation|use)\s+of\s+narratives?\b/i, label: 'abstract narrative framing' },
-    { re: /\bpower\s+structures?\b/i, label: '"power structures" without named actor' },
-    { re: /\bmanufactured\s+consent\b/i, label: '"manufactured consent"' },
-    { re: /\bstrategic\s+narrative\s+control\b/i, label: '"strategic narrative control"' },
-  ];
-  const voiceWarnings = analystOpeners.filter(({ re }) => re.test(openingParas));
-  if (voiceWarnings.length) {
-    console.warn(`[article] voice lint: opening paragraphs contain abstract language — ${voiceWarnings.map(w => w.label).join(', ')}`);
-    console.warn('[article] article saved but consider making the opening more concrete next cycle');
-  }
+  // ── Write outputs ─────────────────────────────────────────────────────────
+  const draftContent = `# ${title}\n\n*${targetDate} · Sebastian D. Hunter · @SebastianHunts*\n\n${body}`;
+  fs.writeFileSync(ARTICLE_DRAFT, draftContent);
 
-  const output = `# ${title}\n\n*${today} · Sebastian D. Hunter · @SebastianHunts*\n\n${articleBody}`;
-  fs.writeFileSync(ARTICLE_DRAFT, output);
-
-  // Save to articles/ directory
   if (!fs.existsSync(ARTICLES_DIR)) fs.mkdirSync(ARTICLES_DIR, { recursive: true });
-  const frontmatter = `---\ndate: "${today}"\ntitle: "${title.replace(/"/g, '\\"')}"\naxis: "${(axis.label || "").replace(/"/g, '\\"')}"\n---\n\n`;
-  fs.writeFileSync(path.join(ARTICLES_DIR, `${today}.md`), frontmatter + articleBody);
+  const fm = `---\ndate: "${targetDate}"\ntitle: "${title.replace(/"/g, '\\"')}"\naxis: "${(axis.label || "").replace(/"/g, '\\"')}"\ncase_slug: "${synthesis.case_slug}"\n---\n\n`;
+  fs.writeFileSync(path.join(ARTICLES_DIR, `${targetDate}.md`), fm + body);
 
-  // Update state — track last 3 axes used
-  const newState = loadArticleState();
-  newState.last_written_at = new Date().toISOString();
-  newState.last_axis = axis.label;
-  newState.title = title;
-  newState.recent_axes = [...(newState.recent_axes || []), axis.id || axis.label].slice(-3);
-  saveArticleState(newState);
+  // ── State update ──────────────────────────────────────────────────────────
+  if (!FLAGS["target-date"]) {
+    const newState = loadArticleState();
+    newState.last_written_at = new Date().toISOString();
+    newState.last_axis = axis.label;
+    newState.last_case_slug = synthesis.case_slug;
+    newState.title = title;
+    newState.recent_axes = [...(newState.recent_axes || []), axis.id || axis.label].slice(-3);
+    saveArticleState(newState);
+  }
 
-  console.log(`[article] written (${article.length} chars) → state/article_draft.md`);
+  console.log(`[article] written (${article.length} chars)`);
   console.log(`[article] title: "${title}"`);
+  console.log(`[article] case:  ${synthesis.case_slug}`);
+  console.log(`[article] file:  articles/${targetDate}.md`);
 })();

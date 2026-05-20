@@ -39,8 +39,8 @@ function formatAxes() {
       .slice(0, 10);
     if (!axes.length) return "(no axes yet)";
     return axes.map(a => {
-      const dir = (a.score || 0) > 0 ? a.left_pole  || "LEFT"
-                                      : a.right_pole || "RIGHT";
+      const dir = (a.score || 0) > 0 ? a.right_pole || "RIGHT"
+                                      : a.left_pole  || "LEFT";
       const mag = Math.abs(a.score || 0).toFixed(2);
       const conf = ((a.confidence || 0) * 100).toFixed(0);
       return `  [${a.id}] ${a.label} → ${dir} (score:${mag}, conf:${conf}%, ev:${(a.evidence_log||[]).length})`;
