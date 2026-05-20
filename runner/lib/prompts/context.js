@@ -49,6 +49,27 @@ function formatCurrentAxes() {
 }
 
 /**
+ * Load pending synthesis proposals and format as a text block for the browse prompt.
+ * Returns empty string if no pending proposals exist.
+ */
+function loadSynthesisProposals() {
+  try {
+    const raw = JSON.parse(fs.readFileSync(config.SYNTHESIS_PROPOSALS_PATH, 'utf-8'));
+    const pending = (raw.proposals || []).filter(p => p.status === 'pending')
+      .sort((a, b) => (b.score || 0) - (a.score || 0))
+      .slice(0, 3);
+    if (pending.length === 0) return '';
+    return pending.map(p =>
+      '  [' + p.id + ']\n' +
+      '  ' + p.axis_a_label + ' (score: ' + p.axis_a_score + ')  \u2194  ' +
+      p.axis_b_label + ' (score: ' + p.axis_b_score + ')  tension: ' + p.tension
+    ).join('\n');
+  } catch {
+    return '';
+  }
+}
+
+/**
  * Format top belief axes with evidence — for quote prompt.
  * Filters confidence >= 0.65, sorts desc, takes top 6.
  */
@@ -330,7 +351,8 @@ function loadContext(opts) {
     ctx.digest            = readState(config.FEED_DIGEST_PATH, { tail: digestTailLines, fallback: '(not yet generated)' });
     ctx.critique          = readState(config.CRITIQUE_PATH, { tail: 12, fallback: '' });
     ctx.articleMeta       = readState(config.ARTICLE_META_PATH, { fallback: '' });
-    ctx.curiosityDirective = readState(config.CURIOSITY_DIRECTIVE_PATH, { fallback: '' });
+    ctx.curiosityDirective  = readState(config.CURIOSITY_DIRECTIVE_PATH, { fallback: '' });
+    ctx.synthesisPending    = loadSynthesisProposals();
     ctx.commentCandidates = readState(config.COMMENT_CANDIDATES_PATH, { fallback: '' });
     ctx.discourseDigest   = readState(config.DISCOURSE_DIGEST_PATH, { fallback: '' });
     ctx.sprintContext     = readState(config.SPRINT_CONTEXT_PATH, { fallback: '(no active plan)' });

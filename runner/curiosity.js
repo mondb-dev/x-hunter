@@ -4,8 +4,11 @@
  *
  * Driver priority (highest first):
  *   1. discourse  — someone provided substantive counter-reasoning in a reply exchange
- *   2. uncertainty_axis — a belief axis has partial evidence but low confidence
- *   3. trending   — local Ollama picks the most interesting keyword from top 5 scraped
+ *   2. agent_hint — agent flagged a mid-cycle discovery worth follow-up
+ *   3. sprint_research — silent hours + active sprint research task
+ *   4. contradiction — two established axes pulling in opposing directions
+ *   5. uncertainty_axis — a belief axis has partial evidence but low confidence
+ *   6. trending   — local Ollama picks the most interesting keyword from top 5 scraped
  *
  * Writes state/curiosity_directive.txt — a persistent research focus read by
  * every browse cycle for ~12 cycles (~4h). Also appends one line to
@@ -551,7 +554,60 @@ function markAnchorProcessed(postId) {
     process.exit(0);
   }
 
-  // ── Path 1b: Sprint research (silent hours only) ────────────────────────────
+  // ── Path 2: agent hint — agent flagged something mid-cycle worth follow-up ──
+  const HINT_PATH = path.join(ROOT, "state", "curiosity_hint.json");
+  if (fs.existsSync(HINT_PATH)) {
+    let hint = null;
+    try { hint = JSON.parse(fs.readFileSync(HINT_PATH, "utf-8")); } catch {}
+    if (hint && hint.suggested_query) {
+      const topicSlug  = toSlug(hint.suggested_query);
+      const expireLine = CURRENT_CYCLE > 0
+        ? `refreshes at cycle ${EXPIRES_CYCLE}`
+        : `refreshes in ~${CURIOSITY_EVERY} cycles`;
+      const hintAngles = buildSearchAngles(hint.suggested_query, null, null);
+      const angleLines = hintAngles.map((u, i) => `  SEARCH_URL_${i + 1}: ${u}`).join("\n");
+      const urgencyLine = hint.urgency ? `  Urgency: ${hint.urgency}` : null;
+      const axisLine    = hint.axis_id  ? `  Related axis: ${hint.axis_id}` : null;
+      const lines = [
+        `── curiosity directive · ${tsHuman} ${HR.slice(tsHuman.length + 25)}`,
+        `RESEARCH FOCUS: Agent flagged — "${hint.suggested_query}"`,
+        urgencyLine,
+        axisLine,
+        `  Reason: ${hint.reason || "(none given)"}`,
+        ``,
+        `ACTIVE SEARCH (rotates each cycle — prefetch picks automatically):`,
+        angleLines,
+        ...(hint.suggested_url ? [`  Suggested URL: ${hint.suggested_url}`] : []),
+        `  Read 3-5 posts. Look for context, counter-evidence, or sources for belief axes.`,
+        ``,
+        `AMBIENT FOCUS (all browse cycles until directive refreshes):`,
+        `  Follow up on the signal flagged from the prior cycle.`,
+        `  Tag: [CURIOSITY: ${topicSlug}]`,
+        ``,
+        `── end directive (${expireLine}) ${HR.slice(expireLine.length + 22)}`,
+      ].filter(l => l !== null);
+
+      fs.writeFileSync(DIRECTIVE, lines.join("\n"), "utf-8");
+      fs.unlinkSync(HINT_PATH); // consumed — one-shot
+
+      appendLog({
+        cycle:            CURRENT_CYCLE,
+        ts,
+        driver:           "agent_hint",
+        suggested_query:  hint.suggested_query,
+        urgency:          hint.urgency,
+        axis_id:          hint.axis_id,
+        expires_at_cycle: EXPIRES_CYCLE,
+      });
+
+      console.log(`[curiosity] driver: agent_hint — "${hint.suggested_query.slice(0, 80)}"`);
+      process.exit(0);
+    } else {
+      fs.unlinkSync(HINT_PATH); // malformed — clean up
+    }
+  }
+
+  // ── Path 3: Sprint research (silent hours only) ────────────────────────────
   // During silent hours (UTC 23-07), if there's an active sprint with pending tasks,
   // direct curiosity toward sprint-relevant research instead of generic uncertainty.
   if (isSilentHours()) {

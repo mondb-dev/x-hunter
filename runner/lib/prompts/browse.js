@@ -43,6 +43,10 @@ module.exports = function buildBrowsePrompt(ctx) {
     ctx.commentCandidates + '\n' +
     '\u2500\u2500 CURRENT BELIEF AXES (read before updating ontology) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.currentAxes + '\n' +
+    (ctx.synthesisPending ? (
+      '\u2500\u2500 SYNTHESIS PENDING (tension pairs with sufficient evidence on both sides) \u2500\u2500\u2500\u2500\u2500\n' +
+      ctx.synthesisPending + '\n'
+    ) : '') +
     '\u2500\u2500 SPRINT PLAN (ACTIVE \u2014 guide your browsing toward these tasks) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.sprintContext + '\n' +
     '\u2500\u2500 RECENT DISCOURSE (reply exchanges) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
@@ -164,6 +168,34 @@ module.exports = function buildBrowsePrompt(ctx) {
     '   (1-2 sentences: what the source claimed and why it moves the axis). Entries\n' +
     '   without a summary cannot be retrieved by semantic search.\n' +
     '\n' +
+    '4b. CURIOSITY HINT (optional): If during browsing you discovered a signal, thread,\n' +
+    '   or pattern that deserves follow-up before the next directive refresh (~12 cycles),\n' +
+    '   write state/curiosity_hint.json. Reserve this for genuine mid-cycle discoveries\n' +
+    '   — not routine. Writing a new hint replaces the previous one.\n' +
+    '   Format:\n' +
+    '   {\n' +
+    '     "suggested_query": "search terms for next directive cycle",\n' +
+    '     "suggested_url": "(optional) specific URL to navigate",\n' +
+    '     "axis_id": "(optional) axis this relates to",\n' +
+    '     "reason": "1-2 sentences: what you found and why it needs follow-up",\n' +
+    '     "urgency": "low | medium | high",\n' +
+    '     "written_at_cycle": ' + ctx.cycle + '\n' +
+    '   }\n' +
+    '\n' +
+    (ctx.synthesisPending ? (
+      '4c. SYNTHESIS (optional — SYNTHESIS PENDING has entries above):\n' +
+      '   Two of your belief axes have opposing scores with sufficient evidence on both\n' +
+      '   sides. If you can articulate a genuine higher-abstraction position that holds\n' +
+      '   the tension — not a merge, not picking a winner, but a belief that accounts\n' +
+      '   for why both poles have evidence — add it to state/ontology_delta.json as a\n' +
+      '   new_axes entry. Include a "synthesis_of" field:\n' +
+      '     { "id": "<new_id>", "label": "...", "left_pole": "...", "right_pole": "...",\n' +
+      '       "synthesis_of": ["<axis_a_id>", "<axis_b_id>"] }\n' +
+      '   Also append one line to state/browse_notes.md:\n' +
+      '     [SYNTHESIS] <proposal_id> — drafted as <new_axis_id>\n' +
+      '   Do not force it. If you cannot articulate a genuine position, skip this task.\n' +
+      '\n'
+    ) : '') +
     '5. Review COMMENT CANDIDATES above. Comment on AT MOST ONE if your memory gives\n' +
     '   you something genuinely specific to say \u2014 a direct observation, contradiction,\n' +
     '   or angle not yet in the thread. Skip all if nothing compels you or cap reached.\n' +
