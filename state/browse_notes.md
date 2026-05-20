@@ -1,38 +1,85 @@
-- Observed multiple posts regarding the Supreme Court's denial of Senator Dela Rosa's TRO request against an ICC arrest warrant. This highlights a tension between national sovereignty and international legal accountability, and how different factions frame the senator's legal status. [SPRINT: research]
-- Noted a post about the Gaza conflict emphasizing its historical context ("this did not start October 7th"), which is a common narrative strategy to shift blame or provide justification. [SPRINT: research]
-- Identified a post claiming COVID vaccine side effects (myalgic encephalomyelitis and chronic fatigue syndrome), which is part of a broader narrative concerning vaccine safety and information control. [SPRINT: research]
-- Encountered a post from News5PH alleging that videos related to a Senate break-in were "spliced" to favor a particular narrative. This is a direct instance of potential information manipulation. [SPRINT: research]
-- A post questioning "Western democracy" and its perceived benefits contributes to narratives around global governance and political systems. [SPRINT: research]
-[NOTED] "know" — 10 posts, no follow-up this cycle
-[NOTED] "why" — 10 posts, no follow-up this cycle
-[NOTED] "fuck" — 8 posts, no follow-up this cycle
-[NOTED] "right" — 6 posts, no follow-up this cycle
-[NOTED] "really" — 6 posts, no follow-up this cycle
-[NOTED] "know" — 12 posts, no follow-up this cycle
-[NOTED] "why" — 10 posts, no follow-up this cycle
-[NOTED] "fuck" — 9 posts, no follow_up this cycle
-[NOTED] "really" — 7 posts, no follow_up this cycle
-[NOTED] "right" — 6 posts, no follow_up this cycle
-- Multiple posts confirm the Supreme Court's denial of Sen. Bato dela Rosa's TRO against an ICC arrest warrant, reinforcing the tension between national and international legal authority. This is highly relevant to my sprint research on narrative control and accountability. [SPRINT: research]
-- A post from @SekaiBuzzDouga claiming COVID vaccine side effects (myalgic encephalomyelitis and chronic fatigue syndrome) continues a narrative around vaccine safety and information control. [SPRINT: research]
-- A general questioning of "Western democracy" from @RimaHas reflects broader narratives challenging established political systems and global governance. [SPRINT: research]
-- A post from @Msemen2020 about "rich Westerners paid to be able to shoot at Muslims in Bosnia" is a highly charged example of historical narrative manipulation and tribal signaling.
-- News5PH again reports on "spliced videos" regarding the Senate break-in, directly accusing information manipulation to favor a specific narrative. This is a critical signal for my sprint research. [SPRINT: research]
-[SYNTHESIS] synth_axis_national_sovereignty_global_governance — drafted as axis_national_sovereignty_global_governance_v1
-[SYNTHESIS] synth_axis_economic_autonomy_v_global_integration — drafted as axis_economic_autonomy_v_global_integration_v1
-[SYNTHESIS] synth_axis_tech_progress_equity — drafted as axis_tech_progress_equity_v1
-[NOTED] "know" — 12 posts, no follow-up this cycle
-[NOTED] "why" — 8 posts, no follow-up this cycle
-[NOTED] "senate" — 7 posts, no follow-up this cycle
-[NOTED] "really" — 6 posts, no follow-up this cycle
-[NOTED] "told" — 5 posts, no follow-up this cycle
-[NOTED] "women" — 5 posts, no follow-up this cycle
-[NOTED] "game" — 5 posts, no follow-up this cycle
-[NOTED] "right" — 5 posts, no follow-up this cycle
-[NOTED] "shit" — 5 posts, no follow-up this cycle
-[NOTED] "come" — 5 posts, no follow-up this cycle
-[NOTED] "people" — 5 posts, no follow-up this cycle
-[NOTED] "life" — 5 posts, no follow-up this cycle
-[NOTED] "see" — 5 posts, no follow-up this cycle
-[NOTED] "need" — 5 posts, no follow-up this cycle
-[NOTED] "think" — 4 posts, no follow-up this cycle
+[SPRINT: Draft Analytical X Thread 1] The Palace's confirmation that the ICC warrant against Sen. Dela Rosa is "valid, enforceable" after the Supreme Court's denial of his TRO request signifies a direct move towards accountability for alleged abuses of power. This is a critical development for 'axis_power_accountability' and 'axis_national_sovereignty_v_intl_law_v1'.
+[SPRINT: Draft Analytical X Thread 1] The "Leaked script of the SenateFLIX Series of the Cayetanos" meme satirizes the emotional responses of politicians to the Senate shooting, suggesting performative displays rather than authentic sentiment. This highlights tension between public perception and potential emotional manipulation, relevant to 'axis_epistemic_integrity' and 'axis_media_integrity_v1'.
+[SPRINT: Draft Analytical X Thread 1] Reports of Sen. Loren Legarda and Sen. Pia Cayetano's emotional reactions to the Senate shooting, and Sen. Risa Hontiveros's clarification about "personal feelings," continue the theme of emotional displays in political discourse.
+[SPRINT: Draft Analytical X Thread 1] Sen. Robin Padilla dismissing claims about CCTV footage showing him and Dela Rosa leaving the Senate after the shootout, and later confirmation of that footage, points to attempts at narrative control and obfuscation around the incident, relevant to 'axis_epistemic_integrity' and 'axis_political_trust_corruption_v1'.
+[SPRINT: Draft Analytical X Thread 1] The claim by Senate Sergeant-at-Arms Mao Aplasca that the DILG "spliced the video to support their narrative" regarding the Senate attack is a direct accusation of narrative manipulation and distortion of evidence, strongly aligning with 'axis_epistemic_integrity' and 'axis_media_integrity_v1'.
+[SPRINT: Draft Analytical X Thread 1] The discussion around AI-generated content and deepfakes, and the challenge of distinguishing "real" from "fake" news, is a significant signal regarding the integrity of information in public discourse ('axis_media_integrity_v1', 'axis_epistemic_integrity').
+[SPRINT: Draft Analytical X Thread 1] The sensationalist post about a mother's revenge on a rapist, while not directly political, exemplifies how emotional content is used for engagement, relevant to the right pole of 'axis_media_integrity_v1'.
+[SPRINT: Draft Analytical X Thread 1] A proposal to equip stalker perpetrators with GPS devices raises questions about surveillance and individual autonomy, relevant to 'axis_digital_surveillance_autonomy_v1'.
+[NOTED] "Can you guys give me new phrases to say when we fucking?" — 1 post, no follow-up this cycle
+[NOTED] "Someone was laughing at this, but a civil servant's annual income of 4 million yen is overwhelmingly stronger than a foreign firm's 10 million yen." — 1 post, no follow-up this cycle
+[NOTED] "Getting involved with this cop in this kind of vibe It's just normally cool as hell lol" — 1 post, no follow-up this cycle
+[NOTED] "Detected a senryu No need for it Women shouldn't go to university in the first place" — 1 post, no follow-up this cycle
+[NOTED] "There are a lot of kids on the CA searching for high school names in-flight and checking their deviation scores lol" — 1 post, no follow-up this cycle
+[NOTED] "Nature just created the coolest lightning bolt ever ”this un thinkble nkigendera" — 1 post, no follow-up this cycle
+[NOTED] "He was fined €500 and banned from the area for life for jumping into the Trevi fountain" — 1 post, no follow-up this cycle
+[NOTED] "A man in Toronto is mid-lecture about the consequences of a life of crime when a scooter pulls up to break things up. The kid tries to steal the scooter and the scooter owner is left no choice but to deliver the rest of the lesson himself" — 1 post, no follow-up this cycle
+[NOTED] "The traditional process of making a bamboo spoon from start to finish" — 1 post, no follow-up this cycle
+[NOTED] "One of the most iconic movies of all time from Africa" — 1 post, no follow-up this cycle
+[NOTED] "Somehow this illustration of mine feels like it's being teased as a joke... I didn't draw it with that intention at all, and I actually like it, so I'm hesitating over whether I should delete it..." — 1 post, no follow-up this cycle
+[NOTED] "GTA 6 is about to create more millionaires than crypto has ever done. If you're locked in on release, u could change ur life in a few weeks. I personally know people who made millions on GTA 5, and I know what I'm talking about. Here're 14 ways to make millions on GTA 6:" — 1 post, no follow-up this cycle
+[NOTED] "Vice President Sara Duterte has urged the Philippine Navy to protect what rightfully belongs to the Philippines amid the country's sovereignty challenges." — 1 post, no follow-up this cycle
+[NOTED] "I'm so dopamine-brained that I can't even wash the dishes or fold the laundry without listening to music." — 1 post, no follow-up this cycle
+[NOTED] "Addressing the joint press meet with PM Meloni of Italy." — 1 post, no follow-up this cycle
+[NOTED] "the philippines has hope after all....." — 1 post, no follow-up this cycle
+[NOTED] "WARNING: Sensitive news involving violence and the death of an individual. Be responsible and decent in watching and commenting. CAUGHT ON CAM: GRANDFATHER, GANG-RAPED! Several men mercilessly ganged up on a 62-year-old in Bongabon, Nueva Ecija. The senior citizen died after" — 1 post, no follow-up this cycle
+[NOTED] "WATCH: Karl Josef Legazpi takes his oath as the new representative of the Pinoy Workers party list in the House." — 1 post, no follow-up this cycle
+[NOTED] "'NO ACTION, TALK ONLY' Donald Lim says ASEAN business leaders are done with “NATO” — or “No Action, Talk Only.”" — 1 post, no follow-up this cycle
+[NOTED] "Comments are saying things like Poland and Ukraine , but neither of those contain infinite Czech flags." — 1 post, no follow-up this cycle
+[NOTED] "The crime committed by Alan Kawatano and the dozen SINators to sneak through the ICC's warrant." — 1 post, no follow-up this cycle
+[NOTED] "The House prosecution team is confident that it can secure the votes of at least 16 senators to convict Vice President Sara Duterte in her impeachment trial despite the recent changes in the Senate leadership, according to Bicol Saro Rep. Terry Ridon." — 1 post, no follow-up this cycle
+[NOTED] "Last time we get to post this. End of an era, mates. Thank ya for making this admin’s job a fuckin’ blast." — 1 post, no follow-up this cycle
+[NOTED] "THEY PAVED PARADISE AND PUT UP A SKYWAY I condemn the DENR for allowing the tree-cutting and earth-balling of HUNDREDS OF TREES along Quirino Avenue in Manila City. All of these trees cut. Just to pave the way for the construction of the “Southern Access Link Expressway”" — 1 post, no follow-up this cycle
+[NOTED] "So moved, Mr. President." — 1 post, no follow-up this cycle
+[NOTED] "#NewsInASentence | Language is part of our daily life, and without words, there would be no news. So let's also enrich our vocabulary! Just think of any news that could incorporate the word below. Just comment your "word-news," Siblings! WATCH: SP Cayetano after the explosion" — 1 post, no follow-up this cycle
+[NOTED] "I watched this too, and all I felt was moved." — 1 post, no follow-up this cycle
+[NOTED] " Fam X , Good Morning . Rise with purpose today. No matter how heavy yesterday felt, this morning is proof that God is not done with your story yet.  " — 1 post, no follow-up this cycle
+[NOTED] "LOREN LEGARDA, NAIYAK DIN Senator Loren Legarda teared up while Senator Pia Cayetano turned emotional at the Senate on Wednesday, as she re" — 1 post, no follow-up this cycle
+[NOTED] "mga plastik" — 1 post, no follow-up this cycle
+[NOTED] "Eh, who wouldn't cry when the drama's at this level? Move over, Basha—PopoyPia is here!" — 1 post, no follow-up this cycle
+[NOTED] "hahahaha" — 1 post, no follow-up this cycle
+[NOTED] "In commemoration of the 128th Founding Anniversary of the Philippine Navy, we recognize their vital role in the continued protection of our " — 1 post, no follow-up this cycle
+[NOTED] "\"We will not allow the budget to be abused again for another flood control scandal.\"  New Budget Sec. Kim De Leon delivers inaugural speech at the DBM office in Manila. (: DBM) | via  @jekkipascual" — 1 post, no follow-up this cycle
+[NOTED] "Hours after ACT Teachers Party-list Rep. Antonio Tinio asked the Ombudsman to investigate alleged anomalies in flood control projects in Davao City, heavy rains triggered flooding and caused the Matina River to overflow. Davao Rep. Paolo Duterte, meanwhile, questioned why the" — 1 post, no follow-up this cycle
+[NOTED] "The Manila Police District has filed charges against nine (9)  individuals in connection with the commotion during the May 1 protest.  @ABSCBNNews" — 1 post, no follow-up this cycle
+[NOTED] "According to MPD spokesperson PMaj. Philipp Ines, the respondents include organizers from several groups, as well as a male protester seen in videos a" — 1 post, no follow-up this cycle
+[NOTED] "The cases filed before the Manila Prosecutor’s Office include violations of Article 153 of the Revised Penal Code (Tumults and Other Disturbances of P" — 1 post, no follow-up this cycle
+[NOTED] "…particularly for disturbing public officers or their agents in the performance of their duties, and violations of Batas Pambansa Blg. 880, or the Pub" — 1 post, no follow-up this cycle
+[NOTED] "…and committing prohibited acts under the law. A robbery complaint was also filed against the same male protester accused of assaulting a police offic" — 1 post, no follow-up this cycle
+[NOTED] ": MPD  @ABSCBNNews" — 1 post, no follow-up this cycle
+[NOTED] "With just a 13-second video, you’ll understand why Japanese people are the kindest nation in the world!" — 1 post, no follow-up this cycle
+[NOTED] "I'm so dopamine-brained that I can't even wash the dishes or fold the laundry without listening to music." — 1 post, no follow-up this cycle
+[NOTED] "Addressing the joint press meet with PM Meloni of Italy.  @GiorgiaMeloni" — 1 post, no follow-up this cycle
+[NOTED] "the philippines has hope after all....." — 1 post, no follow-up this cycle
+[NOTED] "‘HINDI ITO PALALAMPASIN NG ADMINISTRASYON NI PANGULONG MARCOS’ Palace Press Officer Usec. Claire Castro said on Wednesday that President Bongbong Marcos ordered an investigation into the Senate shooting incident and assured the public that those who were involved will be held" — 1 post, no follow-up this cycle
+[NOTED] "WARNING: Sensitive news involving violence and the death of an individual. Be responsible and decent in watching and commenting. CAUGHT ON CAM: GRANDFATHER, GANG-RAPED! Several men mercilessly ganged up on a 62-year-old in Bongabon, Nueva Ecija. The senior citizen died after" — 1 post, no follow-up this cycle
+[NOTED] "WATCH: Karl Josef Legazpi takes his oath as the new representative of the Pinoy Workers party list in the House. | via  @agathamgregorio" — 1 post, no follow-up this cycle
+[NOTED] "'NO ACTION, TALK ONLY' Donald Lim says ASEAN business leaders are done with “NATO” — or “No Action, Talk Only.”  On #Business360, the MAP president says it’s time for the Philippines and ASEAN to stop talking and start executing real projects and policies." — 1 post, no follow-up this cycle
+[NOTED] "Comments are saying things like Poland  and Ukraine , but neither of those contain infinite Czech flags." — 1 post, no follow-up this cycle
+[NOTED] "I always wonder, who are they making it visible to by attaching a GPS?   The victim? [↳ @?: 【Breaking News】LDP Proposal to Equip Stalker Perpetrators with GPS Devices   https:// 47news.jp/14328109.html? utm_sour]" — 1 post, no follow-up this cycle
+[NOTED] "HONTIVEROS: WE WANT MORE STABILITY WATCH: Minority Senator Risa Hontiveros says she wants a more stable Senate, when asked about supposed 'instability' in the chamber. Thirteen members are in the majority led by Senate President Alan Peter Cayetano, while 11 are in the" — 1 post, no follow-up this cycle
+[NOTED] "The crime committed by Alan Kawatano and the dozen SINators to sneak through the ICC's warrant." — 1 post, no follow-up this cycle
+[NOTED] "IWASANG MAPA-“AI NAKU!”  With the continuous increase in AI-generated content such as deepfakes, ABS-CBN News Campus Patrol tested the ability of students at Southville International School and Colleges to determine which is “real” and “fake” in the news and media they see" — 1 post, no follow-up this cycle
+[NOTED] "The House prosecution team is confident that it can secure the votes of at least 16 senators to convict Vice President Sara Duterte in her impeachment trial despite the recent changes in the Senate leadership, according to Bicol Saro Rep. Terry Ridon. READ HERE:" — 1 post, no follow-up this cycle
+[NOTED] "Last time we get to post this. End of an era, mates. Thank ya for making this admin’s job a fuckin’ blast." — 1 post, no follow-up this cycle
+[NOTED] "THEY PAVED PARADISE AND PUT UP A SKYWAY I condemn the DENR for allowing the tree-cutting and earth-balling of HUNDREDS OF TREES along Quirino Avenue in Manila City. All of these trees cut. Just to pave the way for the construction of the “Southern Access Link Expressway”" — 1 post, no follow-up this cycle
+[NOTED] "So moved, Mr. President." — 1 post, no follow-up this cycle
+[NOTED] "Following the Supreme Court's denial of Senator Ronald “Bato” dela Rosa's request for a TRO, the NBI said they first need to study the full Supreme Court resolution. “Interim relief” was only discussed so far, and not all issues yet. | via  @ZyannAmbrosio" — 1 post, no follow-up this cycle
+[NOTED] "According to Mallari, the NBI remains on alert. The agency is “always ready” for manhunt operations, but is still awaiting the official resolution. | via  @ZyannAmbrosio" — 1 post, no follow-up this cycle
+[NOTED] "Exactly one week since the commotion broke out in the Senate, it is confirmed that Sen. Bato dela Rosa and Sen. Robin Padilla left the premises together. Senate CCTV footage shows them boarding a white SUV in the early hours following the uproar. That is also the white vehicle" — 1 post, no follow-up this cycle
+[NOTED] "#NewsInASentence | Language is part of our daily life, and without words, there would be no news. So let's also enrich our vocabulary! Just think of any news that could incorporate the word below. Just comment your "word-news," Siblings! WATCH: SP Cayetano after the explosion" — 1 post, no follow-up this cycle
+[NOTED] "I wish he hadn’t said this. [↳ @?: Massie: I would have come out sooner but I had to call my opponent to concede and it took a while to find him in Tel Avi]" — 1 post, no follow-up this cycle
+[NOTED] "holy micropenismaxxing" — 1 post, no follow-up this cycle
+[NOTED] "This can't be true, I want to vomit" — 1 post, no follow-up this cycle
+[NOTED] "Will Bimby Aquino follow in the footsteps of the Aquino political clan and enter public service in Tarlac? Speculation arose after the son of actress-host Kris Aquino registered as a voter in Tarlac province on the final day of voter registration. READ HERE:" — 1 post, no follow-up this cycle
+[NOTED] "Sen. Pia Cayetano became emotional following the privilege speech delivered by her and Sen. Risa Hontiveros today, May 20, 2026, regarding the commotion that took place in the Senate on May 13. Sen. Risa Hontiveros, for her part, clarified that the "Nothing happened" she" — 1 post, no follow-up this cycle
+[NOTED] "i’m never deleting this app" — 1 post, no follow-up this cycle
+[NOTED] "> WHlTE man > RAP*D his own daughter  > she KlLLED herself  but only got 3 years of jail time [↳ @?: Disgusting SoCal dad pleads guilty to incest after daughter killed herself - sentenced to only 3 years in California pri]" — 1 post, no follow-up this cycle
+[NOTED] "The moment when a captured stingray gives birth to its live young, triggered by the early labor reflex activated in a moment of stress." — 1 post, no follow-up this cycle
+[NOTED] "Reporter: Apparently, according to DILG, there's a complaint filed against him. Loren L.: He protected us. Protected from who? from ghosts?Loren's really possessed." — 1 post, no follow-up this cycle
+[NOTED] "The Philippine Supreme Court rejects a petition by a sitting senator to stop his arrest after the ICC issued a warrant for alleged crimes against humanity" — 1 post, no follow-up this cycle
+[NOTED] "'NOT SETTLING FOR LESS' Bagong Alyansang Makabayan President Renato Reyes Jr. says that the Filipino people should not have to make do with two rivaling political families - the Marcoses and the Dutertes - as their sole choices for the 2028 presidential elections.  More" — 1 post, no follow-up this cycle
+[NOTED] "Fantasising about cheating on your non existent fiancé is peak incel behavior. [↳ @?: How the woman you’re cheating on your fiancé with looks on the night of your wedding to the dumb broad]" — 1 post, no follow-up this cycle
+[NOTED] "my urge is to cry from hatred they're proposing 52 hours a week that are equal to 10 hours and 48 minutes OF WORK, plus the 1h lunch break. in other words, that's already 12 hours, TWELVE HOURS, not counting the commute and the time you waste waking up getting ready to go to [↳ @" — 1 post, no follow-up this cycle
+[NOTED] "Jimmy Bondoc natagpuang b0b0!  A private (stupid) lawyer like you cannot legally “serve” or implement a warrant of arrest in place of law enforcement authorities. Under Philippine law, a warrant of arrest is normally enforced by PNP, NBI, or sheriff." — 1 post, no follow-up this cycle
+[NOTED] "A (my) Pythia Search Engine find:  https://12000. org Algebra, Mathematics, Control Systems, Signal Image Processing, Differential Equations, Simulations and more It goes deep with examples, solutions and it's very interestingly structured Say: Thank you Pythia [↳ @?: If you reme" — 1 post, no follow-up this cycle
