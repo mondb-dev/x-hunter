@@ -843,6 +843,17 @@ async function postArticle() {
     return;
   }
 
+  // Freshness gate: if the draft was not written today, do not repost.
+  // write_article.js may exit early (empty-brief guard, cooldown) leaving a
+  // stale draft from a previous day — posting that would re-publish yesterday's
+  // article under today's daily slot.
+  const today = new Date().toISOString().slice(0, 10);
+  const draftMtime = fs.statSync(ARTICLE_DRAFT).mtime.toISOString().slice(0, 10);
+  if (draftMtime !== today) {
+    console.log(`[moltbook] article_draft.md last modified ${draftMtime} (not today=${today}) — skipping`);
+    return;
+  }
+
   const raw = fs.readFileSync(ARTICLE_DRAFT, "utf-8").trim();
   if (!raw || raw.length < 200) {
     console.log("[moltbook] article draft too short — skipping");
@@ -858,7 +869,6 @@ async function postArticle() {
 
   // Prefer the processed articles/{today}.md over the draft — article_art.js replaces
   // [IMAGE: ...] markers with real image tags in that file but never updates article_draft.md.
-  const today = new Date().toISOString().slice(0, 10);
   const articleFile = path.join(PROJECT_ROOT, "articles", `${today}.md`);
   if (fs.existsSync(articleFile)) {
     const processed = fs.readFileSync(articleFile, "utf-8");
