@@ -117,13 +117,25 @@ axis.confidence = parseFloat(Math.min(0.98, weightedSources * 0.025).toFixed(4))
 
 ---
 
-#### 2.2 Reflection cycle (separate from browse)
+#### 2.2 Reflection cycle ✓
 
 **Gap:** The journal synthesis narrative is written by the same model in the same cycle as browsing. There is zero temporal distance between observation and reflection. The agent is simultaneously navigating, noting, and synthesising — these compete for attention.
 
-**Fix:** Add a `REFLECT` cycle type to `run.sh`, scheduled daily (e.g., 06:00). No browser tools. Input: last 7 days of journal section 1 narratives + current `ontology.json`. Task: identify cross-cycle patterns, what shifted, what is unresolved, what the agent got wrong. Output: `state/reflection_notes.md` (appended), injected into the next browse cycle's context as `ctx.lastReflection`.
+**Implemented:**
 
-**Files to change:** `run.sh` (add REFLECT block), `runner/lib/prompts/context.js` (inject `lastReflection`), new prompt file `runner/lib/prompts/reflect.js`.
+- `runner/reflect.js` — new daily script (no browser, no function-calling). Pulls last 7 days of journals from SQLite (`db.recentMemory("journal", 28)`, filtered to last 7 calendar days). Reads current `ontology.json` for axis context. Calls `callVertex` directly (same pattern as `write_article.js`). Appends a dated entry to `state/reflection_notes.md`.
+- `runner/lib/config.js` — `REFLECTION_NOTES_PATH` added
+- `runner/lib/prompts/context.js` — `ctx.lastReflection` injected for browse cycles (last 40 lines of `reflection_notes.md`)
+- `runner/lib/prompts/browse.js` — `── LAST REFLECTION ──` section (conditional on `ctx.lastReflection`) injected after the `── LAST CRITIQUE ──` block
+- `runner/run.sh` — `reflect.js` scheduled in daily maintenance block after `synthesize_axes.js`
+
+Reflection prompt tasks:
+1. PATTERN: cross-cycle structural pattern only visible across the full week
+2. SHIFTED: which belief axis moved most and what drove it
+3. UNRESOLVED: open claim or unresolved axis tension
+4. WRONG: specific thing the agent got wrong or was hasty about
+
+Output format: prose ~150 words appended as `## Reflection: YYYY-MM-DD` entry.
 
 ---
 
@@ -159,6 +171,6 @@ The prompt change is in `context.js:196-206`.
 | 1.1 Agent curiosity hints | **Done** | 2026-05-20 |
 | 1.2 Cross-axis synthesis pass | **Done** | 2026-05-20 |
 | 2.1 Trust-weighted confidence | **Done** | 2026-05-20 |
-| 2.2 Reflection cycle | Pending | — |
+| 2.2 Reflection cycle | **Done** | 2026-05-20 |
 | 3.1 browse_notes rotation | Pending | — |
 | 3.2 Journal section 2 cleanup | Pending | — |

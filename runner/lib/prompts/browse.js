@@ -28,6 +28,10 @@ module.exports = function buildBrowsePrompt(ctx) {
     ctx.browseNotes + '\n' +
     '\u2500\u2500 LAST CRITIQUE \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.critique + '\n' +
+    (ctx.lastReflection ? (
+      '\u2500\u2500 LAST REFLECTION (cross-cycle synthesis, prior day) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
+      ctx.lastReflection + '\n'
+    ) : '') +
     (ctx.articleMeta ? (
       '\u2500\u2500 ARTICLE META PROPOSAL (from last landmark article) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
       'This is what emerged from the last published landmark. Use these threads to guide your curiosity search and observations.\n' +

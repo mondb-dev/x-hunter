@@ -353,6 +353,7 @@ function loadContext(opts) {
     ctx.articleMeta       = readState(config.ARTICLE_META_PATH, { fallback: '' });
     ctx.curiosityDirective  = readState(config.CURIOSITY_DIRECTIVE_PATH, { fallback: '' });
     ctx.synthesisPending    = loadSynthesisProposals();
+    ctx.lastReflection      = readState(config.REFLECTION_NOTES_PATH, { tail: 40, fallback: '' });
     ctx.commentCandidates = readState(config.COMMENT_CANDIDATES_PATH, { fallback: '' });
     ctx.discourseDigest   = readState(config.DISCOURSE_DIGEST_PATH, { fallback: '' });
     ctx.sprintContext     = readState(config.SPRINT_CONTEXT_PATH, { fallback: '(no active plan)' });

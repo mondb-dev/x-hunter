@@ -43,6 +43,7 @@ module.exports = {
   CURIOSITY_DIRECTIVE_PATH: path.join(STATE_DIR, 'curiosity_directive.txt'),
   CURIOSITY_HINT_PATH:      path.join(STATE_DIR, 'curiosity_hint.json'),
   SYNTHESIS_PROPOSALS_PATH: path.join(STATE_DIR, 'synthesis_proposals.json'),
+  REFLECTION_NOTES_PATH:    path.join(STATE_DIR, 'reflection_notes.md'),
   SPRINT_CONTEXT_PATH: path.join(STATE_DIR, 'sprint_context.txt'),
   DISCOURSE_DIGEST_PATH: path.join(STATE_DIR, 'discourse_digest.txt'),
   READING_URL_PATH: path.join(STATE_DIR, 'reading_url.txt'),

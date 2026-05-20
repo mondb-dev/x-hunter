@@ -960,6 +960,8 @@ while true; do
     node "$PROJECT_ROOT/runner/sprint_manager.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     # ── Synthesis: identify tension pairs → queue proposals for browse agent ──
     node "$PROJECT_ROOT/runner/synthesize_axes.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # ── Daily reflection: synthesise patterns across last 7 days of journals ──
+    node "$PROJECT_ROOT/runner/reflect.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     # ── Sprint update: generate tweet + Moltbook post if milestone reached ──
     node "$PROJECT_ROOT/runner/sprint_update.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     # Post sprint progress tweet if sprint_update.js wrote a draft
