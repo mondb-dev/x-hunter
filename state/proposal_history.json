@@ -669,6 +669,24 @@
       "pushed_to_origin": null,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_tactic_catalog_20260521",
+      "title": "Develop 'Narrative Tactic Cataloging Module'",
+      "status": "merged",
+      "proposed_at": "2026-05-21T07:06:37.287Z",
+      "resolved_at": "2026-05-21T09:06:43.055Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "runner/lib/narrative_tactics.js",
+        "runner/tools/catalog_narrative_tactic.js",
+        "runner/tools/get_narrative_tactics.js"
+      ],
+      "branch_name": "meta/proposal_narrative_tactic_catalog_20260521",
+      "merge_commit": "ffc8e91696c015bc05fd2d55c457abde0346ece8",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }
