@@ -15,6 +15,7 @@ for (const d of dirs) {
   const exists = fs.existsSync(src);
   console.log(`[prebuild] ${d}: src=${src} exists=${exists}`);
   if (exists) {
+    fs.rmSync(dst, { recursive: true, force: true });
     fs.mkdirSync(dst, { recursive: true });
     fs.cpSync(src, dst, { recursive: true, force: true });
     const count = fs.readdirSync(dst).length;
