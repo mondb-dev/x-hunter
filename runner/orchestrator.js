@@ -692,7 +692,7 @@ function runOneCycle() {
     if (cycle % config.TWEET_EVERY === 0) {
       log('periodic full commit (checkpoints, articles, ponders, state)');
       commitAndPush({
-        paths: ['journals/', 'checkpoints/', 'state/', 'articles/', 'daily/', 'ponders/'],
+        paths: ['journals/', 'checkpoints/', 'state/', 'articles/', 'daily/', 'ponders/', 'web/public/images/articles/', 'web/public/data/'],
         message: `cycle ${cycle}: ${today} ${now}`,
       });
       const vercelHook = process.env.VERCEL_DEPLOY_HOOK || '';
@@ -863,7 +863,7 @@ function runOneCycle() {
 
     // Git commit + push
     commitAndPush({
-      paths: ['journals/', 'checkpoints/', 'state/', 'articles/', 'daily/', 'ponders/'],
+      paths: ['journals/', 'checkpoints/', 'state/', 'articles/', 'daily/', 'ponders/', 'web/public/images/articles/', 'web/public/data/'],
       message: `cycle ${cycle}: ${today} ${now}`,
     });
 
