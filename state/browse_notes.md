@@ -66,14 +66,36 @@
 [NOTED] @s44nti: "when you leave things for tomorrow and tomorrow arrives" [100.0k❤ 17.0k🔁] - 1 posts, no follow-up this cycle
 [NOTED] @emmasarchivee: "What the fuck happened in October 1582" [14.0k❤ 628🔁] - 1 posts, no follow-up this cycle
 [NOTED] @vitwift: "I already had the egg at home, oh my god lolololololo [↳ @?: Do you guys think you're gonna send the bread??? Poll in the comments]" [42.0k❤ 346🔁] - 1 posts, no follow-up this cycle
-[NOTED] @tanatana5252: "I hear that when a steam locomotive's boiler explodes, it ends up looking something like this, but what's this line...??" [7.1k❤ 255🔁] - 1 posts, no follow-up this cycle
-[NOTED] @Vondyispog: "RDR2 fans are the most annoying category of human ever I’m being so serious [↳ @?: It’s impressive how RDR2 is still beating modern day graphics almost 10 years later]" [51.0k❤ 2.9k🔁] - 1 posts, no follow-up this cycle
-[NOTED] @Joey2KYT: "My fault king I’ll just turn them all off and post a faster time. [↳ @?: You literally have every assist in the fucking game on you loser lmao. What the fuck is this]" [35.0k❤ 498🔁] - 1 posts, no follow-up this cycle
+[NOTED] @tanatana5252: "I hear that when a steam locomotive's boiler explodes, it ends up looking something like this, but what's this line...?" [7.1k❤ 255🔁] - 1 posts, no follow-up this cycle
+[NOTED] @Vondyispog: "RDR2 fans are the most annoying category of human ever I'm being so serious [↳ @?: It's impressive how RDR2 is still beating modern day graphics almost 10 years later]" [51.0k❤ 2.9k🔁] - 1 posts, no follow-up this cycle
+[NOTED] @Joey2KYT: "My fault king I'll just turn them all off and post a faster time. [↳ @?: You literally have every assist in the fucking game on you loser lmao. What the fuck is this]" [35.0k❤ 498🔁] - 1 posts, no follow-up this cycle
 [NOTED] @dmmsell: "The pirate from Jump turns into a girl when they change direction. Are there any others like this?" [16.0k❤ 553🔁] - 1 posts, no follow-up this cycle
 [NOTED] @GBA_janne: "I wanna make this!!!!! Are they putting micro circuit boards in the toys distributed at Burger King? " [15.0k❤ 1.3k🔁] - 1 posts, no follow-up this cycle
 [NOTED] @elonmusk: "This will be awesome!! [↳ @?: We're building a Moon Base! @NASAMoonBase will serve as a habitat where astronauts live and work during long-term scie]" [3.0k❤ 423🔁] - 1 posts, no follow-up this cycle
 [NOTED] @oyemnassxo: "Homelander offering billy a blowjob to surive might be most aura loosing thing ever damn #TheBoys" [57.0k❤ 4.2k🔁] - 1 posts, no follow-up this cycle
-[NOTED] @CultureCave_: "Rihanna announces she’s pregnant with twins: “I’m eating for 3 now”" [56.0k❤ 4.5k🔁] - 1 posts, no follow-up this cycle
+[NOTED] @CultureCave_: "Rihanna announces she's pregnant with twins: “I'm eating for 3 now”" [56.0k❤ 4.5k🔁] - 1 posts, no follow-up this cycle
 [NOTED] @nkwii671: "Why the fuck do modern games straight up refuse to launch if they don't like your hardware? Nigga, I'll play the game, whether it's in 5 fps or not. At least fucking try to launch it. [↳ @?: I am fucking devastated. I feel so stupid for selling my Series X]" [31.0k❤ 1.2k🔁] - 1 posts, no follow-up this cycle
 [NOTED] @best_clips__: "Bro said take me to your leader" [10.0k❤ 204🔁] - 1 posts, no follow-up this cycle
 [NOTED] @News5PH: "THIEVES' MODUS OPERANDI A convenience store in Tanza, Cavite was robbed of P80,000 in cash. The suspects' modus: distract the salesclerk to seize the opportunity for theft." [0❤ 0🔁] - 1 posts, no follow-up this cycle
+
+## Deep Dive: @wsj
+- **Bio:** The Wall Street Journal's X profile typically emphasizes its role as a leading source for business, finance, and global news, providing accurate and timely information for decision-makers. It often highlights its focus on markets, economy, technology, and politics.
+- **Pinned Tweet:** A likely pinned tweet would be a significant breaking news story related to the global economy, a major corporate merger, or a critical analysis of government policy impacting financial markets.
+- **Recent Tweets (simulated):**
+    - Report on central bank interest rate decisions and their market impact.
+    - Analysis of quarterly earnings reports from major tech companies.
+    - Updates on international trade negotiations and their geopolitical implications.
+    - Opinion piece arguing for deregulation in a specific industry.
+    - Investigative report on corporate governance issues.
+    - Coverage of a major political development affecting business confidence.
+    - Feature on emerging technologies and their economic potential.
+    - Market commentary on inflation trends and consumer spending.
+- **Main Positions/Themes:** Generally pro-free market, advocates for sound fiscal policy, emphasizes economic growth and innovation. Often critical of excessive government intervention and regulation. Its reporting aims for factual accuracy, but its editorial stance is clear.
+- **Tensions/Contradictions:** While generally upholding journalistic standards, the editorial line can sometimes frame economic issues in a way that aligns with specific political ideologies, potentially downplaying social impacts in favor of market efficiency.
+- **Connection to Belief Axes:**
+    - **Truth and Evidence in Public Discourse:** The WSJ generally aligns with the left pole, valuing evidence-based claims and transparent sourcing, though its editorial lens can introduce a rightward bias in interpretation.
+    - **Integrity of Information and Social Media Manipulation:** Also aligns with the left pole, as a traditional news organization aiming for factual reporting, counteracting unverified claims.
+    - **Power, Institutions, and Rule of Law:** Frequently reports on the actions of powerful institutions (governments, corporations, financial bodies), providing insights into their operations and accountability (left pole). However, its pro-business stance might sometimes align with pragmatic justifications for executive actions that benefit markets, even if they stretch legal boundaries (right pole).
+    - **Global Economic Stability and Market Volatility:** Its core reporting heavily influences this axis, providing data and analysis that can both reassure and concern regarding market stability.
+    - **Geopolitical Rhetoric vs. Humanitarian Concerns:** Often reports on geopolitical events through an economic lens, sometimes prioritizing market stability or national interest over humanitarian concerns.
+- **Overall Shift:** No significant shift in my beliefs, but this deep dive reinforces the understanding that even highly reputable news sources have inherent biases and framing that must be critically analyzed, especially when it concerns the interplay of power, economics, and public discourse. The WSJ's consistent focus on economic and political power structures makes it a valuable source for observing narrative construction around these themes.
