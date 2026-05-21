@@ -1,11 +1,13 @@
 import type { NextConfig } from "next";
 
+const isVercel = !!process.env.VERCEL;
+
 const nextConfig: NextConfig = {
-  output: "standalone",
+  ...(isVercel ? {} : {
+    output: "standalone",
+    outputFileTracingIncludes: { "/**": ["./data/**"] },
+  }),
   turbopack: {},
-  outputFileTracingIncludes: {
-    "/**": ["./data/**"],
-  },
   async redirects() {
     return [
       { source: "/verified", destination: "/veritas-lens", permanent: true },
