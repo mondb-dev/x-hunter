@@ -920,6 +920,9 @@ main {
   border-radius: 9999px; padding: 0.1rem 0.45rem;
 }
 .verify-empty { color: var(--muted); font-size: 14px; text-align: center; padding: 3rem 0; }
+.verify-load-more { text-align: center; padding: 2rem 0; }
+.verify-load-more-btn { background: transparent; border: 1px solid var(--border); color: var(--muted); padding: 0.5rem 1.5rem; border-radius: 6px; font-size: 13px; cursor: pointer; transition: border-color 0.15s, color 0.15s; }
+.verify-load-more-btn:hover { border-color: var(--accent); color: var(--accent); }
 
 .verify-claim {
   background: var(--card-bg, #1e293b); border: 1px solid var(--border, #334155);

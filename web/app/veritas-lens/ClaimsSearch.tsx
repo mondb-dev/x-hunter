@@ -341,11 +341,14 @@ function applySortAndFilter(
   });
 }
 
+const PAGE_SIZE = 20;
+
 // ── Main export ──────────────────────────────────────────────────────────────
 export default function ClaimsSearch({ claims }: { claims: VerifiedClaim[] }) {
-  const [query, setQuery]     = useState("");
+  const [query, setQuery]         = useState("");
   const [activeTag, setActiveTag] = useState("all");
-  const [sort, setSort]       = useState<SortKey>("newest");
+  const [sort, setSort]           = useState<SortKey>("newest");
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const tagCounts = useMemo(
     () => TAG_ORDER.reduce((acc, tag) => { acc[tag] = claims.filter((c) => deriveTag(c) === tag).length; return acc; }, {} as Record<string, number>),
@@ -357,8 +360,14 @@ export default function ClaimsSearch({ claims }: { claims: VerifiedClaim[] }) {
     [claims, query, activeTag, sort],
   );
 
-  // Grouped view only when a topic tag is not active and user explicitly requests it
-  const showGrouped = false;
+  // Reset visible count when filters/sort change
+  const visible = filtered.slice(0, visibleCount);
+  const hasMore = visibleCount < filtered.length;
+
+  function handleFilterChange(fn: () => void) {
+    fn();
+    setVisibleCount(PAGE_SIZE);
+  }
 
   return (
     <>
@@ -373,11 +382,11 @@ export default function ClaimsSearch({ claims }: { claims: VerifiedClaim[] }) {
             type="search"
             placeholder="Search claims or topics…"
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => handleFilterChange(() => setQuery(e.target.value))}
             autoComplete="off"
           />
           {query && (
-            <button className="verify-search-clear" onClick={() => setQuery("")} aria-label="Clear search">×</button>
+            <button className="verify-search-clear" onClick={() => handleFilterChange(() => setQuery(""))} aria-label="Clear search">×</button>
           )}
         </div>
       </div>
@@ -386,7 +395,7 @@ export default function ClaimsSearch({ claims }: { claims: VerifiedClaim[] }) {
       <div className="verify-tag-filters">
         <button
           className={`verify-tag-tab${activeTag === "all" ? " verify-tag-tab--active" : ""}`}
-          onClick={() => setActiveTag("all")}
+          onClick={() => handleFilterChange(() => setActiveTag("all"))}
         >
           All topics
         </button>
@@ -394,7 +403,7 @@ export default function ClaimsSearch({ claims }: { claims: VerifiedClaim[] }) {
           <button
             key={tag}
             className={`verify-tag-tab${activeTag === tag ? " verify-tag-tab--active" : ""}`}
-            onClick={() => setActiveTag(tag)}
+            onClick={() => handleFilterChange(() => setActiveTag(tag))}
           >
             {TAG_LABELS[tag]}
             <span className="verify-filter-count">{tagCounts[tag]}</span>
@@ -409,7 +418,7 @@ export default function ClaimsSearch({ claims }: { claims: VerifiedClaim[] }) {
           <button
             key={key}
             className={`verify-sort-tab${sort === key ? " verify-sort-tab--active" : ""}`}
-            onClick={() => setSort(key)}
+            onClick={() => handleFilterChange(() => setSort(key as SortKey))}
           >
             {SORT_LABELS[key]}
           </button>
@@ -417,18 +426,30 @@ export default function ClaimsSearch({ claims }: { claims: VerifiedClaim[] }) {
       </div>
 
       {/* Results meta */}
-      {query.trim() && (
-        <p className="verify-search-meta">
-          {filtered.length} {filtered.length === 1 ? "result" : "results"} for &ldquo;{query.trim()}&rdquo;
-        </p>
-      )}
+      <p className="verify-search-meta">
+        {query.trim()
+          ? <>{filtered.length} {filtered.length === 1 ? "result" : "results"} for &ldquo;{query.trim()}&rdquo;</>
+          : <>Showing {Math.min(visibleCount, filtered.length)} of {filtered.length} claims</>
+        }
+      </p>
 
       <div className="verify-claims">
         {filtered.length === 0 && (
           <p className="verify-empty">No claims match your search.</p>
         )}
-        {filtered.map((claim) => <ClaimCard key={claim.claim_id} claim={claim} />)}
+        {visible.map((claim) => <ClaimCard key={claim.claim_id} claim={claim} />)}
       </div>
+
+      {hasMore && (
+        <div className="verify-load-more">
+          <button
+            className="verify-load-more-btn"
+            onClick={() => setVisibleCount((n) => n + PAGE_SIZE)}
+          >
+            Load more ({filtered.length - visibleCount} remaining)
+          </button>
+        </div>
+      )}
     </>
   );
 }
