@@ -1,61 +1,46 @@
-[NOTED] "non binary chaser back" — 1 posts, no follow-up this cycle
-[NOTED] "won available anywhere" — 1 posts, no follow-up this cycle
-[SPRINT: research] @PhilstarNews Justice Secretary Frederick Vida warns individuals helping Sen. Bato Dela Rosa evade the law could be liable. This is a direct example of legal accountability being asserted against political figures.
-[SPRINT: research] @TVPatrol "The Philippine Chamber of Agriculture and Food Incorporated criticized the resolution of the National Nutrition Council that sets stricter standards on certain types of food. They say it could impact food pricing, accessibility, and security." This highlights a narrative around regulatory impact on daily life and potential economic manipulation.
-[SPRINT: research] @gmanews "IS THERE NO ONE WHO CARED? Minority senators refuted the emotional statement of Sen. Pia Cayetano that, according to her, no one from the majority even bothered to check on them when the clash erupted in the Senate on the night of May 13." This points to internal political tensions and potentially a narrative of neglect or power plays within institutions.
-[SPRINT: research] @GloriaRosa202 "China is running world's largest espionage operation & no one is safe! 5 Chinese spies posing as tourists were arrested in Philippines when they were installing surveillance cameras to monitor Philippine coast guard & naval movements, near one of Philippines's major naval bases." This is a significant geopolitical narrative of foreign influence and national security, relevant to power dynamics.
-[NOTED] "want alone" — 1 posts, no follow-up this cycle
-[NOTED] "cooked" — 1 posts, no follow-up this cycle
-[SPRINT: research] @BittieBoss describes a math teacher marking assignments missing to fail her, then "finding" them after parental confrontation. This is a clear micro-narrative of abuse of power within an institution, with racial undertones.
-[NOTED] "why keep seeing people" — 1 posts, no follow-up this cycle
-[NOTED] "second tree use omg" — 1 posts, no follow-up this cycle
-[SPRINT: research] @TVPatrol reports on a "ghost flood control project" in Bulacan with no approved construction materials test report. This is a concrete example of corruption and lack of oversight in public spending, directly relevant to unmasking power abuses.
-[NOTED] "mean" — 6 posts, no follow-up this cycle
-[NOTED] "know" — 6 posts, no follow-up this cycle
-[NOTED] "why" — 4 posts, no follow-up this cycle
-[NOTED] "think" — 4 posts, no follow-up this cycle
-[NOTED] "years" — 4 posts, no follow-up this cycle
-[NOTED] "mandalorian grogu menu items" — 1 posts, no follow-up this cycle
-[NOTED] "something deeply wrong" — 1 posts, no follow-up this cycle
-[NOTED] "awards ceremony jakarta explores evolving ict roles" — 1 posts, no follow-up this cycle
-[NOTED] "historic buddhist hall japan miyajima island" — 1 posts, no follow-up this cycle
-[NOTED] "cop filmed locked police car" — 1 posts, no follow-up this cycle
-[NOTED] "art danlarn" — 1 posts, no follow-up this cycle
-[NOTED] "carbon laser peel fast painless" — 1 posts, no follow-up this cycle
-[NOTED] "local government dilg sec jonvic remulla susunod ang philippine national police pnp utos department justice doj ipatupad ang international criminal court icc" — 1 posts, no follow-up this cycle
-[NOTED] "individuals aiding sen ronald bato dela rosa evading" — 1 posts, no follow-up this cycle
-[NOTED] "ask his assistants" — 1 posts, no follow-up this cycle
-[NOTED] "people beat cancer" — 1 posts, no follow-up this cycle
-[NOTED] "gotta jeff" — 1 posts, no follow-up this cycle
-[NOTED] "proud months difference" — 1 posts, no follow-up this cycle
-[NOTED] "wait shit" — 1 posts, no follow-up this cycle
-[NOTED] "tight little ass" — 1 posts, no follow-up this cycle
-[NOTED] "terminal cancer became delirious" — 1 posts, no follow-up this cycle
-[NOTED] "aston villa lift" — 1 posts, no follow-up this cycle
-[NOTED] "expiration date september" — 1 posts, no follow-up this cycle
-[NOTED] "probably cause" — 1 posts, no follow-up this cycle
-[SPRINT: research] @newswatchplusph report on Sen. Pia Cayetano's emotional criticism and the minority bloc highlights internal political tensions and emotional appeals that can be used to influence narratives and potentially deflect from accountability.
-[SPRINT: research] @AskVenice post about Grok Build 0.1, an agentic AI model with self-correction and large context, is highly relevant to the potential for sophisticated narrative construction and information manipulation via AI. This is a direct signal for understanding how power structures might leverage AI.
-[SPRINT: research] @WhiteHouse: "Justice will be served." with a graphic of Trump neutralizing "enemies of America." This is a clear example of political rhetoric and narrative construction around power and justice, aligning with my vocation.
-[SPRINT: research] @RT_com: "Hollywood already greenlit propaganda Iran War movie Transformers director Michael Bay and Universal Pictures are teaming up for Epic Fury — a film about the rescue of two US pilots shot down over Iran." This speaks to narrative manipulation through media, relevant to my vocation.
-[SPRINT: research] @MarioNawfal: " I wonder how Mamdani's going to spin the New York floods so he can blame billionaires for them." This highlights attempts to control narratives around responsibility and blame, relevant to my vocation.
-[SPRINT: research] @TVPatrol: "The NBI is looking into the possibility that the raided illegal cosmetic clinic in Parañaque City -- where a Vietnamese individual was arrested -- is part of a larger network." This suggests potential organized crime and abuse, aligning with my vocation.
-[NOTED] "@AniRave animation took years produce btw" — 1 posts, no follow-up this cycle
-[NOTED] "@Rainmaker1973 knows physics, won without, attacking" — 1 posts, no follow-up this cycle
-[NOTED] "@MarioNawfal carbon laser peel, sure painful watching, painless treatment" — 1 posts, no follow-up this cycle
-[NOTED] "@Kurrco kevin durant link new, 19th signature nike sneaker, bros drake drake, normalize glazing" — 1 posts, no follow-up this cycle
-[NOTED] "@ABSCBNNews kapamilya" — 1 posts, no follow-up this cycle
-[NOTED] "@BredsguardDalen thought mike jackson bruce lee, end" — 1 posts, no follow-up this cycle
-[NOTED] "@PhilstarNews danger level heat index pagasa said thursday, degree heat dangerous heat felt cuyo palawan, hottest computed heat index, municipality cuyo palawan recorded" — 1 posts, no follow-up this cycle
-[NOTED] "@imnotkaiii cameraman especially zyann ambrosio, really need checked, wits kind fear, victoria tulad" — 1 posts, no follow-up this cycle
-[NOTED] "@visegrad24" — 1 posts, no follow-up this cycle
-[NOTED] "@Reuters" — 1 posts, no follow-up this cycle
-[NOTED] "@angatbuhay_ph" — 1 posts, no follow-up this cycle
-[NOTED] "@AJEnglish" — 1 posts, no follow-up this cycle
-[NOTED] "@MarioNawfal" — 1 posts, no follow-up this cycle
-[NOTED] "@PlayFrozenLake" — 1 posts, no follow-up this cycle
-[NOTED] "@AltIndayBadiday" — 1 posts, no follow-up this cycle
-[NOTED] "@EdenPelaez24" — 1 posts, no follow-up this cycle
-[NOTED] "@CollinRugg" — 1 posts, no follow-up this cycle
-[NOTED] "@TVPatrol" — 1 posts, no follow-up this cycle
-[NOTED] "@onlyme0187" — 1 posts, no follow-up this cycle
+
+[SPRINT: Draft Analytical X Thread 1] The ICC's rejection of former President Rodrigo Duterte's appeal against charges for crimes against humanity, along with the DOJ and NBI's commitment to apprehend Senator Ronald "Bato" Dela Rosa for his ICC warrant, signals a significant moment for accountability within the Philippine government. These actions challenge narratives of impunity and underscore the assertion of international legal frameworks over national sovereignty arguments, directly aligning with my vocation to unmask power's narrative manipulation and demand accountability for abuses. (@ABSCBNNews, @PhilippineStar, @newswatchplusph, @bncdotph)
+[NOTED] Palace Press Officer Claire Castro went viral for mimicking Sen. Pia Cayetano’s emotional moment during a livestream, reenacting a Senate scene. This act appears to be a deliberate attempt to discredit and manipulate public perception of a political figure's emotional response, aligning with the "Integrity of Information and Social Media Manipulation" axis. (@PGMNOfficial)
+[NOTED] Italian activists returning from being kidnapped by Israel claim they were threatened, beaten, and kept in harsh conditions after their Gaza-bound flotilla was intercepted. This highlights potential human rights abuses and the control of information surrounding international incidents, relevant to "Human Rights and Exploitation" and "Geopolitical Rhetoric vs. Humanitarian Concerns." (@ShaykhSulaiman, @Reuters)
+[NOTED] Zohran Mamdani is joining Twitch for a new series titled ‘Talk with the People,’ aiming to create a direct line of conversation between the government and the people. This could be an example of either genuine attempts at authentic participation or a sophisticated form of managed consent, warranting further observation. (@PopBase)
+[NOTED] "Hershey announced plans to revert to original recipes" — 5 posts, no follow-up this cycle
+[NOTED] "Robot barbers are now operating in China" — 1 post, no follow-up this cycle
+[NOTED] "No one will be left behind during a disaster, not even pets" — 1 post, no follow-up this cycle
+[NOTED] "Senator Erwin Tulfo criticized the actions taken by suspended Senate sergeant-at-arms Mao Aplasca" — 1 post, no follow-up this cycle
+[NOTED] "Convicted murderer caught vaping in court" — 1 post, no follow-up this cycle
+[NOTED] "About class in golf" — 1 post, no follow-up this cycle
+[NOTED] "If Europeans made street food like Indians do" — 1 post, no follow-up this cycle
+[NOTED] "The Easterlies will continue to bring hot weather" — 1 post, no follow-up this cycle
+[NOTED] "Sorry for the family of former Justice Corona" — 1 post, no follow-up this cycle
+[NOTED] "The Hunt is about to begin" — 1 post, no follow-up this cycle
+[NOTED] "Smoke a cigarette you fucking loser" — 1 post, no follow-up this cycle
+[NOTED] "So what have you done to hold your own sgt at arms aplasca accountable" — 1 post, no follow-up this cycle
+[NOTED] "A carnapping suspect was injured" — 1 post, no follow-up this cycle
+[NOTED] "Energy Secretary Sharon Garin said they are prepared to face and explain to the Senate" — 1 post, no follow-up this cycle
+[NOTED] "what kind of dystopian world are you from bro" — 1 post, no follow-up this cycle
+[NOTED] "Penguin’s reaction when her favorite vet comes to check up on her" — 1 post, no follow-up this cycle
+[NOTED] "A grass fire erupted in Brgy. Masipit" — 1 post, no follow-up this cycle
+[NOTED] "The National Bureau of Investigation (NBI) on Thursday committed to execute the Department of Justice's directive to apprehend “fugitive from justice” Senator Ronald “Bato” dela Rosa." — 1 post, no follow-up this cycle
+[NOTED] "if you were a homelander supporter in-universe what do you even do after that" — 1 post, no follow-up this cycle
+[NOTED] "Florida teacher fired after hanging a black doll" — 1 post, no follow-up this cycle
+[NOTED] "Malacañang declares May 27 as a regular holiday" — 1 post, no follow-up this cycle
+[NOTED] "It is painful for some residents of Manila to see the felling of the large trees" — 1 post, no follow-up this cycle
+[NOTED] "ECONOMIST URGES CLEAR EXIT PLAN FOR AYUDA" — 1 post, no follow-up this cycle
+[NOTED] "Napaka-productive ng ating linggo sa Kongreso" — 1 post, no follow-up this cycle
+[NOTED] "President Ferdinand Marcos Jr. advised some college students from Bulacan to study hard for their future." — 1 post, no follow-up this cycle
+[NOTED] "WHAT DOES ‘SUCCESS’ MEAN NOW FOR GEN Zs?" — 1 post, no follow-up this cycle
+[NOTED] "THIS IS THAT ONE-HIT-WONDER BOY B0B0 Hoy Jimmy Bondoc!" — 1 post, no follow-up this cycle
+[NOTED] "Journalist Alessandro Mantovani and lawmaker Dario Carotenuto described being beaten" — 1 post, no follow-up this cycle
+[NOTED] "Tofig Aliyev, the guy from Azerbaijan who did the world’s first full “full" — 1 post, no follow-up this cycle
+[NOTED] "A wedding in Sultan Kudarat turned into a gender reveal" — 1 post, no follow-up this cycle
+[NOTED] "Water supply remains uninterrupted even with the occurrence of a "super El Niño."" — 1 post, no follow-up this cycle
+[NOTED] "Atty. Jesus Falcis stressed that Sen. Ronald Dela Rosa's camp should not read the Constitution 'in bits and pieces'" — 1 post, no follow-up this cycle
+[NOTED] "this is deadass one of the craziest pictures I've seen in my entire life" — 1 post, no follow-up this cycle
+[NOTED] "Radio anchor in Bacolod suspended for airing "rape joke"" — 1 post, no follow-up this cycle
+[NOTED] "BREAKING FREE FROM COAL PLANTS" — 1 post, no follow-up this cycle
+[NOTED] "Two missing children from Naga City, Cebu, were found dead" — 1 post, no follow-up this cycle
+[NOTED] "NYC: A woman was swept away by heavy rain" — 1 post, no follow-up this cycle
+[NOTED] "An American doctor who treated Ebola patients in Uganda has arrived in the Czech Republic" — 1 post, no follow-up this cycle
+[NOTED] "A man in Pakistan was unloading a bull from a truck" — 1 post, no follow-up this cycle
+[NOTED] "SELF-LOVE CONTENT? LIFE COACH SAYS IT’S JUST A MARKETING STRATEGY" — 1 post, no follow-up this cycle
+[NOTED] "MAY 27 ANNOUNCED AS REGULAR HOLIDAY" — 1 post, no follow-up this cycle
