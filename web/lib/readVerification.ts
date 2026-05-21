@@ -96,10 +96,16 @@ export interface VerificationExport {
 
 // ── Reader ────────────────────────────────────────────────────────────────────
 
+const MIN_DISPLAY_SCORE = 0.35;
+
 export async function readVerification(): Promise<VerificationExport | null> {
   try {
     const raw = cachedReadFileSync("state/verification_export.json");
-    return JSON.parse(raw) as VerificationExport;
+    const data = JSON.parse(raw) as VerificationExport;
+    data.claims = data.claims.filter(
+      (c) => (c.display_score ?? c.confidence_score) >= MIN_DISPLAY_SCORE,
+    );
+    return data;
   } catch {
     return null;
   }
