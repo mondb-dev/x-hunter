@@ -1,37 +1,46 @@
-[CURIOSITY: irs_ban_trump_tax_claims_debate] "IRS ban Trump tax claims debate" search on X yielded no content, indicating a lack of active discussion on this specific query.
-[SPRINT: research] @saintdutchess comments on the French Revolution and the disparity between the ruling class and citizens, noting that "non-violence is preached in a sort of Pavlovian manner to keep us all subdued," directly relevant to narrative manipulation and power. https://x.com/saintdutchess/status/2057514932661338252
-[SPRINT: research] @Study_tas discusses the potential for authorities to withhold information about an asteroid collision to prevent panic, illustrating deliberate narrative control by power structures. https://x.com/Study_tas/status/2057225746255675497
-[SPRINT: research] @hachitori_kuri uses the example of Mary Magdalene to question judgment and hypocrisy, with a comment explicitly stating "there's plenty of readings to it i just choose what's most convenient to my agenda lmao," highlighting the construction of narratives. https://x.com/hachitori_kuri/status/2057537864293105906
-[SPRINT: research] @naruko_aiart directly accuses a post of being "fake news" and intentional misrepresentation to shift blame, which is highly relevant to information integrity and deceptive narratives. https://x.com/naruko_aiart/status/2057400961220637109
-[SPRINT: research] @News5PH reports on the ICC dismissing former President Duterte's appeal, highlighting international legal accountability for powerful figures and relevant to "Power, Institutions, and Rule of Law." https://x.com/News5PH/status/2057735491358011432
-[SPRINT: research] @IsabellaAn67 reports on China allegedly using LRADs against Filipinos in the South China Sea, raising concerns about geopolitical power, human rights, and abuses of power. https://x.com/IsabellaAn67/status/2057714036675142112
-[SPRINT: research] @DarnaImpakta critiques the potential negative environmental impact of data center construction using sarcasm, relevant to corporate power, public trust, and resource exploitation. https://x.com/DarnaImpakta/status/2057548959980355720
-[SPRINT: research] @mog_russEN reports on the mandatory mobilization of women in Kharkiv, which, if true, indicates a desperate situation and can be analyzed for how such events are framed and narratives are constructed during conflict. https://x.com/mog_russEN/status/2057709953578905823
-[SPRINT: research] @GuntherEagleman reports on the brutal beating of a "Trump House" owner, framing it as "heartbreaking" and using language that suggests political violence. This is relevant to how political events are framed to elicit emotional responses and shape narratives. https://x.com/GuntherEagleman/status/2057609447342809350
-[SPRINT: research] @mog_russEN also reports on an arrest for alleged sabotage of an energy facility, relevant to how security incidents are reported and potentially used to justify actions. https://x.com/mog_russEN/status/2057736600872702351
-[SPRINT: research] @rachrach43's post about "gay people on your wedding day" and the ensuing discussion, particularly the comment "Idk you’re the one picturing men having sex so..", highlights how personal beliefs and biases are projected and used in public discourse, and the manipulation of religious texts for specific agendas. https://x.com/rachrach43/status/2057492861860397318
-[NOTED] "@TQSherwood - Because the entire ocean is ready to kill him you absolute potato" — 1 post, no follow-up this cycle
-[NOTED] "@1eozinho01 - And hair on the asshole is a sign of what?" — 1 post, no follow-up this cycle
-[NOTED] "@__mirachan__ - It's raining so much it feels like it thinks it'll be forgiven if it cries." — 1 post, no follow-up this cycle
-[NOTED] "@dddddoraemoon - My grandma once gave me a huge ice cream too, so I was thrilled and opened it up, and it was stuffed with onigiri." — 1 post, no follow-up this cycle
-[NOTED] "@sxzBST - 【Breaking News】Renho's Political Career Ends Renho, facing off in a one-on-one race against an unknown Musashino city councilor in the Constitutional Democratic Party of Japan Tokyo chapter's presidential election ↓ A certain Tokyo assembly member, out of concern, advised" — 1 post, no follow-up this cycle
-[NOTED] "@ctctweets - Save your summer plans from the group chat graveyard. Low-maintenance San Juan food crawls (featuring a resto list by content creator Remy Eats/Cody Yap, like Oista and Shari Shari!) are the ultimate budget hack. Make planning stress-free and split your bills seamlessly with" — 1 post, no follow-up this cycle
-[NOTED] "@TheLOKII_ - Camila Cabello at a beach in Miami" — 1 post, no follow-up this cycle
-[NOTED] "@metropolmedya_ - An athlete showed the method to get rid of fat in the waist area in a short time:" — 1 post, no follow-up this cycle
-[NOTED] "@alin_daline - Who's gonna know? Her boyfriend helped her to make this" — 1 post, no follow-up this cycle
-[NOTED] "@sekansnews - The nurse, struggling to put on her work clothes due to the size of her breasts, captured those moments like this." — 1 post, no follow-up this cycle
-[NOTED] "@NocheSinRostroX - What happens if you stop m*sturbating for an entire year??" — 1 post, no follow-up this cycle
-[NOTED] "@KerwinAlva17406 - The 30 TV series with the most sex scenes in history..." — 1 post, no follow-up this cycle
-[NOTED] "@HumanityChad - Pig’s friends were super concerned while he was getting medical treatment" — 1 post, no follow-up this cycle
-[NOTED] "@playtime_ent - BEAutiful just got a whole new meaning! Your crowned MissUniversePhilippines 2026 is BEA MILLAN-WINDORKSI from La Union. Drop a if you’re obsessed with our new queen!" — 1 post, no follow-up this cycle
-[NOTED] "@forallcurious - : Scientists develop VIZZ eye drops that can restore near vision without glasses" — 1 post, no follow-up this cycle
-[NOTED] "@Rainmaker1973 - A 36-inch shell firework at the Nagaoka Fireworks Festival, Japan" — 1 post, no follow-up this cycle
-[NOTED] "@ModernLiving_X - Old jeans can change into a beautiful hand bag ." — 1 post, no follow-up this cycle
-[NOTED] "@Dr_Paiwan - What would you do if you suddenly met this snake on your path? " — 1 post, no follow-up this cycle
-[NOTED] "@bncdotph - Asha Angeles gets creative as she talks about turning rugs into cute works of art on #TheDailyDish " — 1 post, no follow-up this cycle
-[NOTED] "@NoContextHumans - “That’ll be $250 please sir.”" — 1 post, no follow-up this cycle
-[NOTED] "@joselyinechap - Dogs are really smart! Look at this, lol " — 1 post, no follow-up this cycle
-[NOTED] "@iTheWolfman - Instead of viewing skin pigmentation loss as a flaw to be hidden, it's about using it as a canvas and transforming it into art..." — 1 post, no follow-up this cycle
-[NOTED] "@TotalBodyIQ - Consistency actually pays off " — 1 post, no follow-up this cycle
-[NOTED] "@GlobeEyeNews - Nearly 1.2 billion people worldwide had mental disorders in 2023, a new study finds." — 1 post, no follow-up this cycle
-[NOTED] "@News5PH - MOUNT KANLAON, ASH ERUPTION DOST-PHIVOLCS shared the sped-up camera footage of the ash emission from the summit crater of Mount Kanlaon at 4:01 p.m. this Friday, May 22. The height of the grayish ash plumes it emitted reached 200 meters. Alert Level 2 remains raised for the" — 1 post, no follow-up this cycle
+[CURIOSITY: irs_ban_trump_tax_claims_debate] Attempted to search for "IRS ban Trump tax claims debate" but the search page returned empty content again. Cannot fulfill directive this cycle.
+[SIGNAL] @RT_com's post "EU that was intended to improve Europeans' life is 'no longer much different from NATO' — Lavrov" presents a geopolitical narrative aimed at influencing perceptions of international alliances. (https://x.com/RT_com/status/2057723927622830843)
+[SIGNAL] @gmanews's post "‘WHEN THE PRESIDENT GIVES THE ORDER, IT’S AUTOMATIC, NO CHOICE’ MMDA General Manager Nicolas Torre III jokingly responded when asked if he would comply if his help were needed in arresting Sen. Ronald "Bato" dela Rosa" indicates a potential erosion of independent institutional authority. (https://x.com/gmanews/status/2057640824020873350)
+[SIGNAL] @mog_russEN's post "The mayor of Peru’s capital tested a new police taser on his adviser, who “voluntarily agreed” to the demonstration" shows a concerning display of power and potentially coerced consent. (https://x.com/mog_russEN/status/2057763283265085949)
+[SIGNAL] @News5PH's post "Some senators oppose the proposal for online voting for the impeachment of Vice Pres. Sara Duterte" highlights tensions around democratic participation and accountability mechanisms. (https://x.com/News5PH/status/2057772566098727215)
+[NOTED] "know" — 6 posts, no follow-up this cycle
+[NOTED] "friends" — 4 posts, no follow-up this cycle
+[NOTED] "see" — 4 posts, no follow-up this cycle
+[NOTED] "beautiful" — 3 posts, no follow-up this cycle
+[NOTED] "thought" — 3 posts, no follow-up this cycle
+[SIGNAL] @GlobeEyeNews post on mental disorders and the comment by @BigBroGuide framing it as a consequence of feminism. This is a clear example of manipulating a societal issue for ideological narrative.
+[SIGNAL] @RepAOC's post regarding Meta's data center impacting drinking water in Georgia. This directly addresses corporate accountability and potential information manipulation.
+[SIGNAL] @RT_com's post about "Locals SMASH Zelensky's goons van". This is a prime example of narrative framing in geopolitical discourse, likely intended to fuel anti-government sentiment.
+[NOTED] "creamy mushroom steak sandwich" — 1 posts, no follow-up this cycle
+[NOTED] "new house maid, baby" — 1 posts, no follow-up this cycle
+[NOTED] "madonna released major dance hit, pain eight broken bones, performing" — 1 posts, no follow-up this cycle
+[NOTED] "father recognized his daughter, despite his dementia, wedding day" — 1 posts, no follow-up this cycle
+[NOTED] "family rescued baby marmoset alone, road" — 1 posts, no follow-up this cycle
+[NOTED] "gone viral online showing person putting ultra realistic silicone mask completely transforming, viral fox broadcast video, few seconds, against" — 1 posts, no follow-up this cycle
+[NOTED] "powers fortnite blockbuster films architecture simulation, unreal turns today released, visually impressive games, unreal engine" — 1 posts, no follow-up this cycle
+[SIGNAL] @RT_com's post "Locals SMASH Zelensky's goons van after draftee snatched from yard in Ukraine's Dnepropetrovsk" exemplifies narrative framing to elicit anti-government sentiment.
+[NOTED] "organic makeup, toddlers" — 1 posts, no follow-up this cycle
+[SIGNAL] @nadaa01012's post "Can I ask you a favor? Don't stop talking about Palestine ،،" highlights the ongoing effort to maintain narrative focus on humanitarian concerns.
+[NOTED] "store manager greeting customers responding voice commands suggesting products, shanghai robot manages entire store new smart store, offering assistance processing payments, robot acts" — 1 posts, no follow-up this cycle
+[SIGNAL] @SprinterPress's post "US Naval Operations Chief Daryl Codl tactfully explained why it's impossible for the US Navy to escort civilian (cargo) ships in the Strait of Hormuz during military operations" discusses military limitations, potentially shaping public understanding of global power dynamics.
+[NOTED] "chopped steak salad, queso fresco, tostones" — 1 posts, no follow-up this cycle
+[SIGNAL] @News5PH's post "Itinanggi ni Sen. Robin Padilla na itinakas niya si Sen. Bato dela Rosa mula sa Senado" concerns political accountability and the rule of law.
+[NOTED] "new mushroom growth psilodivine, start growing mushrooms, mushroom spores, microscopic size" — 1 posts, no follow-up this cycle
+[NOTED] "tested real life, tortoise story, looks, rabbit" — 1 posts, no follow-up this cycle
+[NOTED] "bangladesh albino buffalo nicknamed trump due, gone viral boosting, owner family income, former president" — 1 posts, no follow-up this cycle
+[NOTED] "man subduing lion, slippers" — 1 posts, no follow-up this cycle
+[SIGNAL] @MarioNawfal's post "This lady is really out here sharing her boba tea with a macaque… And we wonder how these viruses spread?" raises questions about public health messaging and potential misinformation about disease transmission.
+[SIGNAL] @GloriaRosa202's post "Indian army stopped Chinese PLA soldiers from trespassing into Indian territory & asked them to go back. When they refuse some solid punches come their way. PLA soldiers were thrashed badly" is a highly framed geopolitical narrative.
+[NOTED] "love, things" — 1 posts, no follow-up this cycle
+[NOTED] "barangay tanods barangay san nicolas hagonoy bulacan placed sandbags filled, strong river current causing flooding, allocated flood control project, large stones along" — 1 posts, no follow-up this cycle
+[NOTED] "didn expect" — 1 posts, no follow-up this cycle
+[SIGNAL] @mohitlaws's post "Arpit Sharma: Follow my Instagram account... Meanwhile, Chad Congressis are fighting for the future of India in 50°C heat outside the NTA office" frames political activism in a way that can influence public perception of legitimacy and engagement.
+[NOTED] "person discovers bright little bird tucked inside dried bloom" — 1 posts, no follow-up this cycle
+[NOTED] "dafen national park china jiangsu province experiencing, calf per year park staff monitor, melo deer birthing season, rarest protected species" — 1 posts, no follow-up this cycle
+[NOTED] "accidentally brushed against, resulted complete chaos, feline hotel, totally unbothered" — 1 posts, no follow-up this cycle
+[NOTED] "massive flame burst indonesia huge fire suddenly erupted, old pipeline atjeh terkini reports, borehole indonesia aceh province, cause believed gas release" — 1 posts, no follow-up this cycle
+[SIGNAL] @newswatchplusph's post "GORDON TO DELA ROSA: MAN UP, FACE THE ICC WATCH: Former Senator Richard Gordon urges Senator Bato Dela Rosa to “man up” and face the International Criminal Court" is a direct call for accountability from a political figure to an international body.
+[NOTED] "third thumb created researchers, university cambridge robotic prosthetics, significantly enhances hand functionality" — 1 posts, no follow-up this cycle
+[NOTED] "correct way take off medical gloves, turns" — 1 posts, no follow-up this cycle
+[SIGNAL] @News5PH's post "‘SOMETIMES I THINK ABOUT RESIGNING’ It was said that the thought of stepping down from his position occasionally crossed Sen. Ping Lacson's mind due to the "muddy as can be" situation in the Senate" highlights concerns about the integrity and functionality of political institutions.
+[NOTED] "expected happen, exactly" — 1 posts, no follow-up this cycle

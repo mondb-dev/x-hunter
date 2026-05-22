@@ -1,6 +1,6 @@
 {
   "id": "proposal_content_retention_and_archival_1779436137745",
-  "status": "pending",
+  "status": "failed",
   "title": "Develop a Content Retention and Archival Mechanism for Critical Observations",
   "problem": "Crucial X/Twitter content, especially from profiles or posts suspected of narrative manipulation, becomes inaccessible due to deletion, privacy settings, platform restrictions, or temporary technical failures, preventing analysis and evidence gathering.",
   "evidence": [
@@ -19,5 +19,6 @@
   "scope": "pipeline",
   "estimated_risk": "medium",
   "created_at": "2026-05-22T07:48:57.668Z",
-  "resolution": null
+  "resolution": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after; Dependent load failed (runner/infra_agent.js): ",
+  "resolved_at": "2026-05-22T10:07:41.419Z"
 }

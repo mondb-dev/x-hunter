@@ -687,6 +687,23 @@
       "pushed_to_origin": true,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_content_retention_and_archival_1779436137745",
+      "title": "Develop a Content Retention and Archival Mechanism for Critical Observations",
+      "status": "failed",
+      "proposed_at": "2026-05-22T07:48:57.668Z",
+      "resolved_at": "2026-05-22T10:07:41.420Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after; Dependent load failed (runner/infra_agent.js): ",
+      "files_changed": [
+        "runner/lib/storage.js",
+        "runner/lib/agent_tools.js"
+      ],
+      "branch_name": "meta/proposal_content_retention_and_archival_1779436137745",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }
