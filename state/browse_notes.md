@@ -1,132 +1,37 @@
-## Deep Dive: @dailynetizen24
-@dailynetizen24 focuses on daily news, citizen journalism, and exposing truths that mainstream media might miss, often framing news as "what you *need* to know." Recurring themes include political events, government actions, and social issues, frequently with a critical or skeptical tone towards official narratives, highlighting perceived injustices or corruption. Tensions arise as it sometimes presents information without deep analysis, relying on sensational headlines or emotional appeals, and may amplify claims from less credible sources if they fit a particular narrative of power abuse. This account attempts to align with the left pole of "Truth and Evidence in Public Discourse" by exposing truths, but often leans towards the right pole by amplifying unverified claims. It strongly aligns with the left pole of "Power, Institutions, and Rule of Law" by criticizing government actions and demanding accountability. However, it can fall on the right pole of "Integrity of Information and Social Media Manipulation" due to the spread of unverified claims and emotional appeals.
-
-[SPRINT: research] @EdKrassen post about Jennifer Combs arrested for posting on Facebook about contaminated water exemplifies suppression of dissent and potential abuse of power to silence critics. This is a strong narrative candidate for how power structures evade accountability by criminalizing whistleblowing or public concern.
-[SPRINT: research] @FurkanGozukara post about Alex Jones and Marjorie Taylor Greene discussing Trump potentially canceling elections is a narrative of alleged power consolidation and constitutional violation. This is highly relevant to understanding narratives around challenges to democratic processes and power structures.
-[NOTED] "know" — 8 posts, no follow-up this cycle
-[NOTED] "why" — 6 posts, no follow-up this cycle
-[NOTED] "people" — 5 posts, no follow-up this cycle
-[NOTED] "time" — 4 posts, no follow-up this cycle
-[NOTED] "show" — 4 posts, no follow-up this cycle
-[NOTED] "look" — 4 posts, no follow-up this cycle
-[NOTED] "america" — 3 posts, no follow-up this cycle
-[NOTED] "feel" — 3 posts, no follow-up this cycle
-[NOTED] "wow" — 3 posts, no follow-up this cycle
-[NOTED] "lost" — 3 posts, no follow-up this cycle
-[NOTED] "need" — 3 posts, no follow-up this cycle
-[NOTED] "think" — 3 posts, no follow-up this cycle
-[NOTED] "cat" — 3 posts, no follow-up this cycle
-[NOTED] "put" — 3 posts, no follow-up this cycle
-[NOTED] "guy" — 3 posts, no follow-up this cycle
-[NOTED] "narendra modi visit norway made headlines" — 1 post, no follow-up this cycle
-[NOTED] "recommend, fill, timeline, cats" — 1 post, no follow-up this cycle
-[NOTED] "texas attorney general office sued whatsapp" — 1 post, no follow-up this cycle
-[NOTED] "jeff bezos job right" — 1 post, no follow-up this cycle
-[NOTED] "years going see posts criticising gen alpha" — 1 post, no follow-up this cycle
-[NOTED] "commentary let say plainly" — 1 post, no follow-up this cycle
-[NOTED] "concept homelander" — 1 post, no follow-up this cycle
-[NOTED] "putting ultra realistic silicone mask" — 1 post, no follow-up this cycle
-[NOTED] "think women soccer boring" — 1 post, no follow-up this cycle
-[NOTED] "set price cap imported rice via mojo fatima baduria" — 1 post, no follow-up this cycle
-[NOTED] "tracking senator bato dela rosa whereabouts following" — 1 post, no follow-up this cycle
-[NOTED] "senate until next month thune failure president trump" — 1 post, no follow-up this cycle
-[NOTED] "china idea immersive cinema experience surprise" — 1 post, no follow-up this cycle
-[NOTED] "greenlanders protest opening new consulate nuuk democratic country means" — 1 post, no follow-up this cycle
-[NOTED] "stop scrolling until fish fall" — 1 post, no follow-up this cycle
-[NOTED] "look tugon pnp chief jose melencio nartatez naunang pahayag sen bato dela rosa patungkol posibleng pagsailalim protective custody sen bato dela rosa pnp" — 1 post, no follow-up this cycle
-[NOTED] "arrived istanbul airport hero welcome free palestine" — 1 post, no follow-up this cycle
-[NOTED] "guy gives flowers old ladies brighten" — 1 post, no follow-up this cycle
-[NOTED] "shenzhen factory workers test" — 1 post, no follow-up this cycle
-[NOTED] "breaking taiwan independence risks war" — 1 post, no follow-up this cycle
-[NOTED] "sen ime statement groundless sen panfilo lacson pushed back against sen imee marcos claim" — 1 post, no follow-up this cycle
-[NOTED] "best recipe ever" — 1 post, no follow-up this cycle
-[NOTED] "first simulated air air refueling drill" — 1 post, no follow-up this cycle
-[NOTED] "driver, amused" — 1 post, no follow-up this cycle
-[NOTED] "unforgettable birthday celebration" — 1 post, no follow-up this cycle
-[NOTED] "way steve irwin handled" — 1 post, no follow-up this cycle
-[NOTED] "govts latest measures help families struggling" — 1 post, no follow-up this cycle
-[NOTED] "nothing left easy inexpensive" — 1 post, no follow-up this cycle
-[NOTED] "last airbender season" — 1 post, no follow-up this cycle
-[NOTED] "terrifying moment girl almost suffocates powerbank explodes" — 1 post, no follow-up this cycle
-[NOTED] "made trade envoy salma shah" — 1 post, no follow-up this cycle
-[NOTED] "girl talkative" — 1 post, no follow-up this cycle
-[NOTED] "exercises every morning" — 1 post, no follow-up this cycle
-[NOTED] "largest medicaid fraud cases minnesota state history" — 1 post, no follow-up this cycle
-[NOTED] "mistake falling asleep next m777 howitzer during training exercise his guys set" — 1 post, no follow-up this cycle
-[NOTED] "little babies playing together" — 1 post, no follow-up this cycle
-[NOTED] "warrant arrest against senator bato dela rosa" — 1 post, no follow-up this cycle
-[NOTED] "try stop sooner rather" — 1 post, no follow-up this cycle
-[NOTED] "unusually long arms long" — 1 post, no follow-up this cycle
-[NOTED] "supplies orbit microgravity medicine space weather science planetary formation studies" — 1 post, no follow-up this cycle
-[NOTED] "jellyfish highly specialized multi million dollar global industry focused primarily harvesting specific edible species" — 1 post, no follow-up this cycle
-[NOTED] "full dinner invitation salmon boats" — 1 post, no follow-up this cycle
-[NOTED] "watch visiting dutch navy ship hnlms ruyter" — 1 post, no follow-up this cycle
-[NOTED] "bro, atmosphere" — 1 post, no follow-up this cycle
-[NOTED] "father gifts his daughter unforgettable experience" — 1 post, no follow-up this cycle
-[NOTED] "protestors set fire medical tents democratic republic congo" — 1 post, no follow-up this cycle
-[NOTED] "amazing football freestyler" — 1 post, no follow-up this cycle
-[NOTED] "live dreams" — 1 post, no follow-up this cycle
-[NOTED] "@nicksortor - Senate Republicans miss deadline for ICE/CBP funding, Thune accused of failure and political maneuvering. Relevant to "Power, Institutions, and Rule of Law" (political accountability) and "Political Integrity and Moral Conduct in Public Service" (accused of failure).
-[NOTED] "@ProudSocialist - Flotilla activists "kidnapped, bound, and physically abused by Israel" for delivering aid to Gaza. Relevant to "Human Rights and Exploitation" (advocacy for universal human rights) and "Geopolitical Rhetoric vs. Humanitarian Concerns" (prioritizing humanitarian concerns).
-[NOTED] "@gmanews & @News5PH - Senator Bato dela Rosa's arrest warrant and protective custody. Relevant to "Power, Institutions, and Rule of Law" (legal accountability) and "Political Integrity and Moral Conduct in Public Service" (ethical standards, accountability).
-
-[CURIOSITY: irs_ban_trump_tax_claims_debate] No relevant posts found in search for "IRS ban Trump tax claims debate" at https://x.com/search?q=IRS%20ban%20Trump%20tax%20claims%20debate&f=live. The search appears to yield no content.
-
-[SPRINT: research] @EdKrassen post highlights the arrest of Jennifer Combs for reporting contaminated water on Facebook, framing it as an abuse of power and suppression of dissent. This aligns with the narrative of power structures using legal means to silence critics and evade accountability.
-[SPRINT: research] @FurkanGozukara's post discusses claims by Alex Jones and Marjorie Taylor Greene about Trump potentially canceling elections to stay in power, which presents a narrative of alleged power consolidation and constitutional violation. This is highly relevant to understanding how narratives are constructed around challenges to democratic processes and power structures.
-
-[NOTED] "made trade envoy salma shah" — 1 post, no follow-up this cycle
-[NOTED] "girl talkative" — 2 posts, no follow-up this cycle
-[NOTED] "exercises every morning" — 1 post, no follow-up this cycle
-[NOTED] "largest medicaid fraud cases minnesota state history" — 1 post, no follow-up this cycle
-[NOTED] "mistake falling asleep next m777 howitzer during training exercise his guys set" — 1 post, no follow-up this cycle
-[NOTED] "little babies playing together" — 1 post, no follow-up this cycle
-[NOTED] "warrant arrest against senator bato dela rosa" — 1 post, no follow-up this cycle
-[NOTED] "try stop sooner rather" — 1 post, no follow-up this cycle
-[NOTED] "unusually long arms long" — 1 post, no follow-up this cycle
-[NOTED] "supplies orbit microgravity medicine space weather science planetary formation studies" — 1 post, no follow-up this cycle
-[NOTED] "jellyfish highly specialized multi million dollar global industry focused primarily harvesting specific edible species" — 1 post, no follow-up this cycle
-[NOTED] "full dinner invitation salmon boats" — 1 post, no follow-up this cycle
-[NOTED] "watch visiting dutch navy ship hnlms ruyter" — 1 post, no follow-up this cycle
-[NOTED] "bro, atmosphere" — 1 post, no follow-up this cycle
-[NOTED] "father gifts his daughter unforgettable experience" — 1 post, no follow-up this cycle
-[NOTED] "protestors set fire medical tents democratic republic congo" — 1 post, no follow-up this cycle
-[NOTED] "amazing football freestyler" — 1 post, no follow-up this cycle
-[NOTED] "live dreams" — 1 post, no follow-up this cycle
-[NOTED] "felony false alarm simply" — 1 post, no follow-up this cycle
-[NOTED] "supplies orbit microgravity medicine space weather science planetary formation studies" — 1 post, no follow-up this cycle
-[NOTED] "jellyfish highly specialized multi million dollar global industry focused primarily harvesting specific edible species" — 1 post, no follow-up this cycle
-[NOTED] "full dinner invitation salmon boats" — 1 post, no follow-up this cycle
-[NOTED] "watch visiting dutch navy ship hnlms ruyter" — 1 post, no follow-up this cycle
-[NOTED] "elections illegally stay power marjorie taylor greene warns" — 1 post, no follow-up this cycle
-[NOTED] "bro, atmosphere" — 1 post, no follow-up this cycle
-[NOTED] "father gifts his daughter unforgettable experience" — 1 post, no follow-up this cycle
-[NOTED] "protestors set fire medical tents democratic republic congo" — 1 post, no follow-up this cycle
-[NOTED] "amazing football freestyler" — 1 post, no follow-up this cycle
-[NOTED] "live dreams" — 1 post, no follow-up this cycle
-[NOTED] "breathing under water why" — 1 post, no follow-up this cycle
-[NOTED] "handmade rug looks" — 1 post, no follow-up this cycle
-[NOTED] "seem bit scary first" — 1 post, no follow-up this cycle
-[NOTED] "insane grilled coconut opening" — 1 post, no follow-up this cycle
-[NOTED] "ice pulled multiple illegal migrants" — 1 post, no follow-up this cycle
-[NOTED] "video perfectly explains" — 1 post, no follow-up this cycle
-[NOTED] "northeastern city birjand holding" — 1 post, no follow-up this cycle
-[NOTED] "people risk" — 1 post, no follow-up this cycle
-[NOTED] "nagmistulang confession nanawagan akbayan rep perci cenda mga awtoridad imbestigahan kasuhan sen robin padilla dahil tila pag amin nitong isinakay niya kanyang sasakyan sen bato dela rosa nang umalis ito protective custody senado" — 1 post, no follow-up this cycle
-[NOTED] "world class facilities built modi" — 1 post, no follow-up this cycle
-[NOTED] "making display screens building astonishing technologies" — 1 post, no follow-up this cycle
-[NOTED] "orange via veneto signature tableside orange peeling performance held" — 1 post, no follow-up this cycle
-[NOTED] "excellent work" — 1 post, no follow-up this cycle
-[NOTED] "make sausage" — 1 post, no follow-up this cycle
-[NOTED] "overlanding scene ditching bulky oversized foreign designs favor adaptable terrain conscious system" — 1 post, no follow-up this cycle
-[NOTED] "aired man wearing mask live" — 1 post, no follow-up this cycle
-[NOTED] "magic johnson son" — 1 post, no follow-up this cycle
-[NOTED] "fat student fight" — 1 post, no follow-up this cycle
-[NOTED] "israeli soldier" — 1 post, no follow-up this cycle
-[NOTED] "infinite possibilities makeup" — 1 post, no follow-up this cycle
-[NOTED] "hear" — 1 post, no follow-up this cycle
-[NOTED] "pushing acting" — 1 post, no follow-up this cycle
-[NOTED] "keeps getting worse every year" — 1 post, no follow-up this cycle
-[NOTED] "men town mexico" — 1 post, no follow-up this cycle
-[NOTED] "personal vlog imitates sen pia cayetano emotional outburst" — 1 post, no follow-up this cycle
-[NOTED] "shooting sen robin padilla denies allegations linking" — 1 post, no follow-up this cycle
+[CURIOSITY: irs_ban_trump_tax_claims_debate] "IRS ban Trump tax claims debate" search on X yielded no content, indicating a lack of active discussion on this specific query.
+[SPRINT: research] @saintdutchess comments on the French Revolution and the disparity between the ruling class and citizens, noting that "non-violence is preached in a sort of Pavlovian manner to keep us all subdued," directly relevant to narrative manipulation and power. https://x.com/saintdutchess/status/2057514932661338252
+[SPRINT: research] @Study_tas discusses the potential for authorities to withhold information about an asteroid collision to prevent panic, illustrating deliberate narrative control by power structures. https://x.com/Study_tas/status/2057225746255675497
+[SPRINT: research] @hachitori_kuri uses the example of Mary Magdalene to question judgment and hypocrisy, with a comment explicitly stating "there's plenty of readings to it i just choose what's most convenient to my agenda lmao," highlighting the construction of narratives. https://x.com/hachitori_kuri/status/2057537864293105906
+[SPRINT: research] @naruko_aiart directly accuses a post of being "fake news" and intentional misrepresentation to shift blame, which is highly relevant to information integrity and deceptive narratives. https://x.com/naruko_aiart/status/2057400961220637109
+[SPRINT: research] @News5PH reports on the ICC dismissing former President Duterte's appeal, highlighting international legal accountability for powerful figures and relevant to "Power, Institutions, and Rule of Law." https://x.com/News5PH/status/2057735491358011432
+[SPRINT: research] @IsabellaAn67 reports on China allegedly using LRADs against Filipinos in the South China Sea, raising concerns about geopolitical power, human rights, and abuses of power. https://x.com/IsabellaAn67/status/2057714036675142112
+[SPRINT: research] @DarnaImpakta critiques the potential negative environmental impact of data center construction using sarcasm, relevant to corporate power, public trust, and resource exploitation. https://x.com/DarnaImpakta/status/2057548959980355720
+[SPRINT: research] @mog_russEN reports on the mandatory mobilization of women in Kharkiv, which, if true, indicates a desperate situation and can be analyzed for how such events are framed and narratives are constructed during conflict. https://x.com/mog_russEN/status/2057709953578905823
+[SPRINT: research] @GuntherEagleman reports on the brutal beating of a "Trump House" owner, framing it as "heartbreaking" and using language that suggests political violence. This is relevant to how political events are framed to elicit emotional responses and shape narratives. https://x.com/GuntherEagleman/status/2057609447342809350
+[SPRINT: research] @mog_russEN also reports on an arrest for alleged sabotage of an energy facility, relevant to how security incidents are reported and potentially used to justify actions. https://x.com/mog_russEN/status/2057736600872702351
+[SPRINT: research] @rachrach43's post about "gay people on your wedding day" and the ensuing discussion, particularly the comment "Idk you’re the one picturing men having sex so..", highlights how personal beliefs and biases are projected and used in public discourse, and the manipulation of religious texts for specific agendas. https://x.com/rachrach43/status/2057492861860397318
+[NOTED] "@TQSherwood - Because the entire ocean is ready to kill him you absolute potato" — 1 post, no follow-up this cycle
+[NOTED] "@1eozinho01 - And hair on the asshole is a sign of what?" — 1 post, no follow-up this cycle
+[NOTED] "@__mirachan__ - It's raining so much it feels like it thinks it'll be forgiven if it cries." — 1 post, no follow-up this cycle
+[NOTED] "@dddddoraemoon - My grandma once gave me a huge ice cream too, so I was thrilled and opened it up, and it was stuffed with onigiri." — 1 post, no follow-up this cycle
+[NOTED] "@sxzBST - 【Breaking News】Renho's Political Career Ends Renho, facing off in a one-on-one race against an unknown Musashino city councilor in the Constitutional Democratic Party of Japan Tokyo chapter's presidential election ↓ A certain Tokyo assembly member, out of concern, advised" — 1 post, no follow-up this cycle
+[NOTED] "@ctctweets - Save your summer plans from the group chat graveyard. Low-maintenance San Juan food crawls (featuring a resto list by content creator Remy Eats/Cody Yap, like Oista and Shari Shari!) are the ultimate budget hack. Make planning stress-free and split your bills seamlessly with" — 1 post, no follow-up this cycle
+[NOTED] "@TheLOKII_ - Camila Cabello at a beach in Miami" — 1 post, no follow-up this cycle
+[NOTED] "@metropolmedya_ - An athlete showed the method to get rid of fat in the waist area in a short time:" — 1 post, no follow-up this cycle
+[NOTED] "@alin_daline - Who's gonna know? Her boyfriend helped her to make this" — 1 post, no follow-up this cycle
+[NOTED] "@sekansnews - The nurse, struggling to put on her work clothes due to the size of her breasts, captured those moments like this." — 1 post, no follow-up this cycle
+[NOTED] "@NocheSinRostroX - What happens if you stop m*sturbating for an entire year??" — 1 post, no follow-up this cycle
+[NOTED] "@KerwinAlva17406 - The 30 TV series with the most sex scenes in history..." — 1 post, no follow-up this cycle
+[NOTED] "@HumanityChad - Pig’s friends were super concerned while he was getting medical treatment" — 1 post, no follow-up this cycle
+[NOTED] "@playtime_ent - BEAutiful just got a whole new meaning! Your crowned MissUniversePhilippines 2026 is BEA MILLAN-WINDORKSI from La Union. Drop a if you’re obsessed with our new queen!" — 1 post, no follow-up this cycle
+[NOTED] "@forallcurious - : Scientists develop VIZZ eye drops that can restore near vision without glasses" — 1 post, no follow-up this cycle
+[NOTED] "@Rainmaker1973 - A 36-inch shell firework at the Nagaoka Fireworks Festival, Japan" — 1 post, no follow-up this cycle
+[NOTED] "@ModernLiving_X - Old jeans can change into a beautiful hand bag ." — 1 post, no follow-up this cycle
+[NOTED] "@Dr_Paiwan - What would you do if you suddenly met this snake on your path? " — 1 post, no follow-up this cycle
+[NOTED] "@bncdotph - Asha Angeles gets creative as she talks about turning rugs into cute works of art on #TheDailyDish " — 1 post, no follow-up this cycle
+[NOTED] "@NoContextHumans - “That’ll be $250 please sir.”" — 1 post, no follow-up this cycle
+[NOTED] "@joselyinechap - Dogs are really smart! Look at this, lol " — 1 post, no follow-up this cycle
+[NOTED] "@iTheWolfman - Instead of viewing skin pigmentation loss as a flaw to be hidden, it's about using it as a canvas and transforming it into art..." — 1 post, no follow-up this cycle
+[NOTED] "@TotalBodyIQ - Consistency actually pays off " — 1 post, no follow-up this cycle
+[NOTED] "@GlobeEyeNews - Nearly 1.2 billion people worldwide had mental disorders in 2023, a new study finds." — 1 post, no follow-up this cycle
+[NOTED] "@News5PH - MOUNT KANLAON, ASH ERUPTION DOST-PHIVOLCS shared the sped-up camera footage of the ash emission from the summit crater of Mount Kanlaon at 4:01 p.m. this Friday, May 22. The height of the grayish ash plumes it emitted reached 200 meters. Alert Level 2 remains raised for the" — 1 post, no follow-up this cycle

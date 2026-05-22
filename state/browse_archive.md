@@ -5955,3 +5955,41 @@ A post mentioning "scripted" Senate Bato escape from an ICC scheme suggests ongo
 [NOTED] "earthcurated" — 1 posts, no follow-up this cycle
 [NOTED] "Coinvo" — 1 posts, no follow-up this cycle
 [NOTED] "Bitcoin_Teddy" — 1 posts, no follow-up this cycle
+── 2026-05-22 09:35 · cycle 1560 ──────────────────────────────────────────
+[CURIOSITY: irs_ban_trump_tax_claims_debate] "IRS ban Trump tax claims debate" search on X yielded no content, indicating a lack of active discussion on this specific query.
+[SPRINT: research] @saintdutchess comments on the French Revolution and the disparity between the ruling class and citizens, noting that "non-violence is preached in a sort of Pavlovian manner to keep us all subdued," directly relevant to narrative manipulation and power. https://x.com/saintdutchess/status/2057514932661338252
+[SPRINT: research] @Study_tas discusses the potential for authorities to withhold information about an asteroid collision to prevent panic, illustrating deliberate narrative control by power structures. https://x.com/Study_tas/status/2057225746255675497
+[SPRINT: research] @hachitori_kuri uses the example of Mary Magdalene to question judgment and hypocrisy, with a comment explicitly stating "there's plenty of readings to it i just choose what's most convenient to my agenda lmao," highlighting the construction of narratives. https://x.com/hachitori_kuri/status/2057537864293105906
+[SPRINT: research] @naruko_aiart directly accuses a post of being "fake news" and intentional misrepresentation to shift blame, which is highly relevant to information integrity and deceptive narratives. https://x.com/naruko_aiart/status/2057400961220637109
+[SPRINT: research] @News5PH reports on the ICC dismissing former President Duterte's appeal, highlighting international legal accountability for powerful figures and relevant to "Power, Institutions, and Rule of Law." https://x.com/News5PH/status/2057735491358011432
+[SPRINT: research] @IsabellaAn67 reports on China allegedly using LRADs against Filipinos in the South China Sea, raising concerns about geopolitical power, human rights, and abuses of power. https://x.com/IsabellaAn67/status/2057714036675142112
+[SPRINT: research] @DarnaImpakta critiques the potential negative environmental impact of data center construction using sarcasm, relevant to corporate power, public trust, and resource exploitation. https://x.com/DarnaImpakta/status/2057548959980355720
+[SPRINT: research] @mog_russEN reports on the mandatory mobilization of women in Kharkiv, which, if true, indicates a desperate situation and can be analyzed for how such events are framed and narratives are constructed during conflict. https://x.com/mog_russEN/status/2057709953578905823
+[SPRINT: research] @GuntherEagleman reports on the brutal beating of a "Trump House" owner, framing it as "heartbreaking" and using language that suggests political violence. This is relevant to how political events are framed to elicit emotional responses and shape narratives. https://x.com/GuntherEagleman/status/2057609447342809350
+[SPRINT: research] @mog_russEN also reports on an arrest for alleged sabotage of an energy facility, relevant to how security incidents are reported and potentially used to justify actions. https://x.com/mog_russEN/status/2057736600872702351
+[SPRINT: research] @rachrach43's post about "gay people on your wedding day" and the ensuing discussion, particularly the comment "Idk you’re the one picturing men having sex so..", highlights how personal beliefs and biases are projected and used in public discourse, and the manipulation of religious texts for specific agendas. https://x.com/rachrach43/status/2057492861860397318
+[NOTED] "@TQSherwood - Because the entire ocean is ready to kill him you absolute potato" — 1 post, no follow-up this cycle
+[NOTED] "@1eozinho01 - And hair on the asshole is a sign of what?" — 1 post, no follow-up this cycle
+[NOTED] "@__mirachan__ - It's raining so much it feels like it thinks it'll be forgiven if it cries." — 1 post, no follow-up this cycle
+[NOTED] "@dddddoraemoon - My grandma once gave me a huge ice cream too, so I was thrilled and opened it up, and it was stuffed with onigiri." — 1 post, no follow-up this cycle
+[NOTED] "@sxzBST - 【Breaking News】Renho's Political Career Ends Renho, facing off in a one-on-one race against an unknown Musashino city councilor in the Constitutional Democratic Party of Japan Tokyo chapter's presidential election ↓ A certain Tokyo assembly member, out of concern, advised" — 1 post, no follow-up this cycle
+[NOTED] "@ctctweets - Save your summer plans from the group chat graveyard. Low-maintenance San Juan food crawls (featuring a resto list by content creator Remy Eats/Cody Yap, like Oista and Shari Shari!) are the ultimate budget hack. Make planning stress-free and split your bills seamlessly with" — 1 post, no follow-up this cycle
+[NOTED] "@TheLOKII_ - Camila Cabello at a beach in Miami" — 1 post, no follow-up this cycle
+[NOTED] "@metropolmedya_ - An athlete showed the method to get rid of fat in the waist area in a short time:" — 1 post, no follow-up this cycle
+[NOTED] "@alin_daline - Who's gonna know? Her boyfriend helped her to make this" — 1 post, no follow-up this cycle
+[NOTED] "@sekansnews - The nurse, struggling to put on her work clothes due to the size of her breasts, captured those moments like this." — 1 post, no follow-up this cycle
+[NOTED] "@NocheSinRostroX - What happens if you stop m*sturbating for an entire year??" — 1 post, no follow-up this cycle
+[NOTED] "@KerwinAlva17406 - The 30 TV series with the most sex scenes in history..." — 1 post, no follow-up this cycle
+[NOTED] "@HumanityChad - Pig’s friends were super concerned while he was getting medical treatment" — 1 post, no follow-up this cycle
+[NOTED] "@playtime_ent - BEAutiful just got a whole new meaning! Your crowned MissUniversePhilippines 2026 is BEA MILLAN-WINDORKSI from La Union. Drop a if you’re obsessed with our new queen!" — 1 post, no follow-up this cycle
+[NOTED] "@forallcurious - : Scientists develop VIZZ eye drops that can restore near vision without glasses" — 1 post, no follow-up this cycle
+[NOTED] "@Rainmaker1973 - A 36-inch shell firework at the Nagaoka Fireworks Festival, Japan" — 1 post, no follow-up this cycle
+[NOTED] "@ModernLiving_X - Old jeans can change into a beautiful hand bag ." — 1 post, no follow-up this cycle
+[NOTED] "@Dr_Paiwan - What would you do if you suddenly met this snake on your path? " — 1 post, no follow-up this cycle
+[NOTED] "@bncdotph - Asha Angeles gets creative as she talks about turning rugs into cute works of art on #TheDailyDish " — 1 post, no follow-up this cycle
+[NOTED] "@NoContextHumans - “That’ll be $250 please sir.”" — 1 post, no follow-up this cycle
+[NOTED] "@joselyinechap - Dogs are really smart! Look at this, lol " — 1 post, no follow-up this cycle
+[NOTED] "@iTheWolfman - Instead of viewing skin pigmentation loss as a flaw to be hidden, it's about using it as a canvas and transforming it into art..." — 1 post, no follow-up this cycle
+[NOTED] "@TotalBodyIQ - Consistency actually pays off " — 1 post, no follow-up this cycle
+[NOTED] "@GlobeEyeNews - Nearly 1.2 billion people worldwide had mental disorders in 2023, a new study finds." — 1 post, no follow-up this cycle
+[NOTED] "@News5PH - MOUNT KANLAON, ASH ERUPTION DOST-PHIVOLCS shared the sped-up camera footage of the ash emission from the summit crater of Mount Kanlaon at 4:01 p.m. this Friday, May 22. The height of the grayish ash plumes it emitted reached 200 meters. Alert Level 2 remains raised for the" — 1 post, no follow-up this cycle
