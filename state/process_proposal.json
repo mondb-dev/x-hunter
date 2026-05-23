@@ -1,24 +1,29 @@
 {
-  "id": "proposal_content_retention_and_archival_1779436137745",
-  "status": "failed",
-  "title": "Develop a Content Retention and Archival Mechanism for Critical Observations",
-  "problem": "Crucial X/Twitter content, especially from profiles or posts suspected of narrative manipulation, becomes inaccessible due to deletion, privacy settings, platform restrictions, or temporary technical failures, preventing analysis and evidence gathering.",
+  "id": "proposal_narrative_tactic_attribution_1779524316867",
+  "status": "pending",
+  "title": "Develop 'Narrative Tactic Identification and Attribution Module'",
+  "problem": "My current process identifies general narrative manipulation but lacks a granular framework to systematically identify specific narrative tactics (e.g., diversion, legitimation by association, strategic ambiguity) and attribute them to the actors employing them. This limits my ability to track patterns of tactical usage and the specific entities responsible.",
   "evidence": [
-    "2026-05-22 h01: 'I was unable to retrieve the page content, which effectively blocked this crucial observation. This highlights a critical vulnerability in my ability to unmask power's narrative manipulation when direct access to content is hindered.'",
-    "Recurring instances where links in older journal entries or articles become dead, indicating content removal or inaccessibility over time."
+    "2026-05-22 h20: 'ambiguity can be leveraged to control public perception and direct attention'",
+    "2026-05-22 h21: 'ambiguous events are co-opted to serve pre-existing agendas'",
+    "2026-05-22 h22: 'debate itself becomes a tool for narrative manipulation'",
+    "2026-05-23 h03: 'misidentification of a college athlete as an NFL quarterback by a major news outlet to legitimize a political event demonstrates a subtle but effective tactic of media manipulation'",
+    "2026-05-23 h04: 'Fox News report about 'Jaxson Dart' further exemplifies how media can be used to legitimize political events through fabricated associations'",
+    "2026-05-23 h05: 'Pentagon's release of 'alien floats midair' videos raises questions'",
+    "2026-05-23 h07: 'UFO narratives being used by administrations... suggests a recurring pattern of using s'",
+    "Journal entries consistently refer to 'narrative manipulation' without specific tactical labels or actor attribution beyond general descriptions."
   ],
-  "proposed_solution": "Implement a mechanism to automatically capture and store the raw HTML or text content of X/Twitter profiles and individual posts identified as critical observations, particularly those flagged for potential narrative manipulation or significant political/corporate discourse. This archival should occur at the point of initial observation, ensuring a local copy is retained even if the original source becomes unavailable. The mechanism should prioritize content from deep dives and specific URLs mentioned in journal entries.",
+  "proposed_solution": "Build a module that, upon identifying an instance of narrative manipulation, attempts to classify the specific tactic employed (e.g., 'appeal to emotion', 'straw man', 'false dilemma', 'ad hominem', 'gaslighting', 'diversion', 'legitimation by association', 'strategic ambiguity', 'scapegoating') and identify the actor(s) (individual, organization, state) employing it. This module would leverage an evolving taxonomy of narrative tactics (potentially building on the 'Narrative Tactic Cataloging Module') and feed into a database for tracking. It should also attempt to extract the specific 'claim' or 'narrative' being pushed.",
   "affected_files": [
-    "runner/lib/agent_tools.js",
-    "runner/lib/tweet_tools.js",
-    "runner/lib/browse_tools.js",
-    "lib/state.js",
+    "orchestrator.js",
+    "lib/agent_tools.js",
     "lib/journal.js",
-    "lib/storage.js"
+    "lib/state.js",
+    "agent_modules/narrative_analysis.js"
   ],
   "scope": "pipeline",
   "estimated_risk": "medium",
-  "created_at": "2026-05-22T07:48:57.668Z",
-  "resolution": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after; Dependent load failed (runner/infra_agent.js): ",
-  "resolved_at": "2026-05-22T10:07:41.419Z"
+  "created_at": "2026-05-23T08:18:36.802Z",
+  "resolved_at": null,
+  "resolution": null
 }
