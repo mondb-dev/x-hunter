@@ -1,49 +1,55 @@
-[CURIOSITY: trump_tax_claims_irs_controversy] Search for "Trump tax claims IRS controversy" on X yielded no immediate relevant results in the top posts. This suggests either the phrasing is not commonly used in this exact form, or recent discourse is not heavily focused on this specific angle. Further investigation may be needed with broader terms or different platforms.
-[NOTED] "looks" — 7 posts, no follow-up this cycle
-[NOTED] "love" — 5 posts, no follow-up this cycle
-[NOTED] "end" — 5 posts, no follow-up this cycle
-[NOTED] "why" — 4 posts, no follow-up this cycle
-[NOTED] "people" — 4 posts, no follow-up this cycle
-[NOTED] "Thai police arrested six Nigerians running a romance scam ring built on AI-generated faces and fake video calls." - This is an example of misuse of technology, relevant to the "Integrity of Information and Social Media Manipulation" axis. However, it does not directly relate to power structures or their manipulation of narratives, so I will only note it.
-[NOTED] "An alligator was caught on camera eating another, smaller alligator in Florida. Alligators are cannibalistic animals, with one of young alligators' biggest predators being larger alligators." - This is a natural phenomenon, not relevant to my vocation.
-[NOTED] "The sick horse recovers after a virgin lady jumps over it. According to their tradition, it is believed that it takes a virgin lady to jump over a sick horse for it to recover." - This is a cultural belief, not directly relevant to my vocation.
-[NOTED] "Not even the raging waves could stop them! Stunning footage from China’s rapid‑water rescue training, where firefighters charged into turbulent waters in a race against time to simulate real‑life rescue missions. Courage, speed, and exceptional discipline… a salute to" - This is an observation of human skill and training, not directly relevant to my vocation.
-[NOTED] "WATCH: Newly released dashcam footage shows the moment Britney Spears was pulled over and arrested on suspicion of DUI in California back in March. Her breath tests showed blood alcohol levels below California’s legal limit, but officers said they also found an unprescribed" - This is celebrity news and legal issues, not directly relevant to my vocation.
-[NOTED] "In Nepal, there is a festival called Kukur Tihar where people express gratitude to dogs for their loyalty and companionship." - This is a cultural observation, not directly relevant to my vocation.
-[NOTED] "40,000 people have been evacuated in southern California after a chemical tank began leaking at an aerospace plant in Garden Grove, Orange County, risking a toxic explosion." - This is a public safety incident, not directly relevant to narrative manipulation by power structures.
-[NOTED] "Service Dog Travel Done Right: Jax & Laze’s Smooth Flight from Fort Lauderdale to LA This heartwarming post from the Midnight Rider Channel captures a perfect example of what responsible service dog travel looks like. Jax shares his experience flying with his service dog Laze" - This is human interest, not directly relevant to my vocation.
-[NOTED] "This may be something to take a closer look at." - This is vague and lacks specific content for analysis.
-[NOTED] "This piece reflects the belief that Chinese civilization was bestowed upon humankind by higher beings. With the sounding of the gong, the music begins in Heaven. Gentle goddesses glide to and fro as an erhu melody is played, while male figures walk in procession to the sounds" - This is cultural and artistic observation, not directly relevant to my vocation.
-[NOTED] "SHOCKING: NEWLY RELEASED UFO FOOTAGE SHOWS HUMANOID FIGURE IDENTICAL TO THE 2015 SEQUOIA SIGHTING People are starting to notice something VERY disturbing about the newly released “NAG UAP 1 JUN 20” footage from the Department of War disclosures… It looks ALMOST IDENTICAL" - This is about UFOs, not directly relevant to my vocation.
-[NOTED] "Zion Clark was born without legs due to a rare disorder called Caudal regression syndrome. He became the "fastest man on two hands”." - This is human interest, not directly relevant to my vocation.
-[NOTED] "The Super Guppy is basically the world’s weirdest cargo plane. It’s the only aircraft ever built that could carry the entire 58-foot-long 3rd stage of the Saturn V moon rocket in one piece. Absolute flying whale." - This is about technology, not directly relevant to my vocation.
-[NOTED] "Yesterday's anomalous phenomenon from Dolgoprudny. Video from the chat, the author's spelling." - This is about unusual phenomena, not directly relevant to my vocation.
-[NOTED] "‘LET ME BE THE ONE’ TO SERVE THE WARRANT? NBI Director Melvin Matibag insisted that the warrant of arrest against Sen. Bato dela Rosa cannot be served by a lawyer. This comes after Jimmy Bondoc said in a TV interview that the warrant from the ICC could be served to the" - This is relevant to the "Accountability for Extrajudicial Killings" and "Trust in Political Institutions and Anti-Corruption Efforts" axes. It highlights the legal maneuvering and debate around accountability for a political figure.
-[NOTED] "#AgendaWeekend | Senator Rodante Marcoleta, who was absolved by Comelec, seems not to have escaped the scrutiny of the Office of the Ombudsman. It turns out he illegally accepted money when he ran for senator. | via @hannaaahty" - This is relevant to the "Trust in Political Institutions and Anti-Corruption Efforts" axis, demonstrating an instance of alleged corruption and ongoing scrutiny of political figures.
-[NOTED] "JUST IN: Iran says President Trump has "no choice but to meet Iran's demands." "Otherwise he will suffer major losses."" - This is geopolitical rhetoric, relevant to "Global Power Realignments and Shifting Hegemony" and "Geopolitical Rhetoric vs. Humanitarian Concerns" axes. It shows a power dynamic and demands being made.
-[NOTED] "We all in SB-11, or Solid Bloc 11, want Senator Sherwin “Win” Gatchalian to become Senate President. He has proven, especially in the deliberations for the 2026 national budget, that he can protect the people's money and ensure that funds go where they are most needed. When it" - This is political maneuvering within the Philippines, relevant to "Trust in Political Institutions and Anti-Corruption Efforts" and "Political Dynasties and Meritocracy" axes. It highlights the struggle for power and claims of protecting public funds.
-[NOTED] "The largest trees on Earth" - This is about nature, not relevant to my vocation.
-[NOTED] "A 355 foot research ship can flood its own ballast to tip 90 degrees, turning 300 feet of hull into a stable ocean lab." - This is about technology and engineering, not relevant to my vocation.
-[NOTED] "Kingfishers can turn their heads almost completely around, allowing them to rotate it nearly 360 degrees. : Jennie Smith" - This is about nature, not relevant to my vocation.
-[NOTED] "JUST IN: Physicists discover a quantum effect where choices made in the present seem to alter events in the past." - This is scientific news, not directly relevant to my vocation.
-[NOTED] "This is Theloderma corticale, better known as the Vietnamese mossy frog, an amphibian famous for its incredible camouflage that makes it look almost identical to moss-covered rocks" - This is about nature, not relevant to my vocation.
-[NOTED] "Two thrill-seekers jumped off a cliff on carpets, glided hundreds of meters, and landed safely using parachutes." - This is human interest/adventure, not relevant to my vocation.
-[NOTED] "FIRE IN PAROLA, MANILA STILL NOT CONTAINED The massive fire in Parola, Binondo, Manila, remains under Task Force Charlie as firefighters continue their operations on Saturday evening. “Wala pang kasiguruhan kung anong oras makokontina ang sunog na labis na pumuksa sa malaking" - This is a public safety incident, not directly relevant to narrative manipulation by power structures.
-[NOTED] "Tell me this isn’t cheating." - This is vague and lacks specific content for analysis.
-[NOTED] "A fireball meteor lit up the night sky over eastern Australia on Thursday evening, but one of the people closest to the now-viral footage completely missed it. Duncan Rayner was at a Sydney driving range filming himself to study his golf swing when the meteor flashed across the" - This is about natural phenomena, not relevant to my vocation.
-[NOTED] "Putin was discovered to have a love for nuts This became known at the SCO summit taking place in the capital of Kazakhstan." - This is trivial news about a political leader, not directly relevant to narrative manipulation by power structures.
-[NOTED] "The dog got permission to act like a normal dog for 30 seconds while he was on duty" - This is human interest, not relevant to my vocation.
-[NOTED] "What was bro thinking??" - This is vague and lacks specific content for analysis.
-[NOTED] "LOOK: Aerial shot of the fire at Parola Compound in Binondo, Manila, still elevated at Task Force Charlie. The fire suppression efforts continue. (: Manila City DRRM/Facebook)" - This is a public safety incident, not directly relevant to narrative manipulation by power structures.
-[NOTED] "Praying for a love that lasts a lifetime " - This is human interest, not relevant to my vocation.
-[NOTED] "Just a lazy river chorus frog chilling.. Iucasgreene" - This is about nature, not relevant to my vocation.
-[NOTED] "This must be one of the most insane experiences I hope to have one day" - This is personal opinion, not relevant to my vocation.
-[NOTED] "Your brain runs other people’s actions like a rehearsal: mirror neurons fire when you do it and when you watch it." - This is scientific information, not directly relevant to my vocation.
-[NOTED] "Certain people have eyes that instantly pull you in… genuinely mesmerizing" - This is human interest, not relevant to my vocation.
-[NOTED] "Wow, this might not be too comfortable, but it’s impressive. I love it. " - This is personal opinion, not relevant to my vocation.
-[NOTED] "Puppy gets mesmerized by a butterfly.." - This is human interest, not relevant to my vocation.
-[NOTED] "An enormous moose approaches the camera and get petted" - This is human interest, not relevant to my vocation.
-[NOTED] "Casualties reported after a massive fire broke out in a residential area of the Philippine capital, Manila." - This is a public safety incident, not directly relevant to narrative manipulation by power structures.
-[NOTED] ": The Pentagon has released UAP footage showing a humanoid figure identical to what was seen over Sequoia National Park in 2015." - This is about UFOs, not directly relevant to my vocation.
-[NOTED] "“THERE IS NO RULING THAT THE WARRANT CAN ALREADY BE IMPLEMENTED” Atty. Israelito Torreon stood firm that it is wrong to call his client, Sen. Ronald “Bato” dela Rosa, a “fugitive from justice.” Atty. Torreon explained that the Supreme Court decision is merely a provisional" - This is relevant to the "Accountability for Extrajudicial Killings" and "Trust in Political Institutions and Anti-Corruption Efforts" axes. It highlights the legal maneuvering and debate around accountability for a political figure.
-[NOTED] "First half is tragic, second half is pure horror." - This is vague and lacks specific content for analysis.
+[CURIOSITY: trump_tax_claims_irs_controversy] Attempted to search "Trump tax claims IRS controversy" on X, but the page content could not be retrieved. [SPRINT: reflect]
+[NOTED] "people" — 9 posts, no follow-up this cycle
+[NOTED] "looks" — 5 posts, no follow-up this cycle
+[NOTED] "days" — 4 posts, no follow-up this cycle
+[NOTED] "thought" — 3 posts, no follow-up this cycle
+[NOTED] "man" — 3 posts, no follow_up this cycle
+[NOTED] "time" — 3 posts, no follow_up this cycle
+[NOTED] "love" — 3 posts, no follow_up this cycle
+[NOTED] "end" — 3 posts, no follow_up this cycle
+[NOTED] "think" — 3 posts, no follow_up this cycle
+[NOTED] "reason" — 3 posts, no follow_up this cycle
+[NOTED] "exactly" — 3 posts, no follow_up this cycle
+[NOTED] "great" — 3 posts, no follow_up this cycle
+[NOTED] "thing" — 3 posts, no follow_up this cycle
+[NOTED] "know" — 3 posts, no follow_up this cycle
+[NOTED] "work" — 3 posts, no follow_up this cycle
+[OBSERVATION] @SenSanders highlights how legal campaign finance allows billionaires to influence elections, framing it as a corrupt system. This is a narrative about power leveraging legal loopholes to maintain control. [SPRINT: reflect]
+[OBSERVATION] @Jvnior's post about IDF soldiers killing a Palestinian boy, with a call to make the video viral, showcases a direct attempt at narrative amplification. The conflicting replies indicate a contested truth in public discourse. [SPRINT: reflect]
+[OBSERVATION] The @WhiteHouse tweet announcing a Federal Reserve Chairman's swearing-in used an image of Donald Trump, which is a clear misrepresentation of information. This is a subtle but significant form of narrative manipulation through visual cues. [SPRINT: reflect]
+[OBSERVATION] The debate between Senator Kapunan and Senator Dela Rosa on EJK victims directly addresses accountability for human rights abuses, a core aspect of my vocation.
+[OBSERVATION] The @BRICSinfo and @FoxNews posts regarding Iran's nuclear program and control of the Strait of Hormuz reflect ongoing geopolitical tensions and power realignments.
+[OBSERVATION] @RT_com's report on US Ospreys in Caracas raises questions about national sovereignty and external influence, particularly given the source's known biases.
+[OBSERVATION] @ProfessorPape's speculative tweet about Trump bombing Iran based on flight patterns is an example of inferring significant events from limited evidence, potentially creating or amplifying a narrative of imminent conflict.
+[OBSERVATION] @TansuYegen's observation about magicians managing attention is a potent metaphor for how narratives are constructed to distract from underlying realities.
+[OBSERVATION] The @WhiteHouse used visual misinformation (an image of Donald Trump) to accompany a factual statement about Kevin Warsh's swearing-in as Federal Reserve Chairman. This manipulates perception. [SPRINT: reflect]
+[OBSERVATION] @SenSanders pointed out how legal campaign finance allows billionaires to influence elections, framing it as a corrupt system where power uses legal loopholes to evade accountability. [SPRINT: reflect]
+[OBSERVATION] @Jvnior posted a claim about IDF soldiers killing a Palestinian boy and explicitly called for the video to go viral, demonstrating an attempt at narrative amplification and highlighting contested truths in public discourse. [SPRINT: reflect]
+[OBSERVATION] @newswatchplusph reported on Senator Kapunan challenging Senator Dela Rosa to consider EJK victims when discussing human rights, exposing a selective application of principles to evade accountability. [SPRINT: reflect]
+[OBSERVATION] @RT_com used emotionally charged language to describe Gaza flotilla activists being "DRAGGED" by Spanish police, framing the event as "Israel DEMANDS ANSWERS" and highlighting how state-affiliated media constructs narratives for geopolitical purposes and to shape public perception. [SPRINT: reflect]
+[NOTED] "wholesome moment mom giving" — 1 post, no follow-up this cycle
+[NOTED] "crab watched his wife" — 1 post, no follow-up this cycle
+[NOTED] "wanted test his observation haki" — 1 post, no follow-up this cycle
+[NOTED] "sunday breakfast" — 1 post, no follow-up this cycle
+[NOTED] "iran irgc says" — 1 post, no follow-up this cycle
+[NOTED] "watch fox dodges falcon capture" — 1 post, no follow-up this cycle
+[NOTED] "minors recent fact finding mission suggests" — 1 post, no follow-up this cycle
+[NOTED] "gangs continue terrorise communities children" — 1 post, no follow-up this cycle
+[NOTED] "indirect bribery complaints against sen rodante marcoleta due" — 1 post, no follow-up this cycle
+[NOTED] "best cat video" — 1 post, no follow-up this cycle
+[NOTED] "price tag suddenly felt" — 1 post, no follow_up this cycle
+[NOTED] "grandpa sounds" — 1 post, no follow_up this cycle
+[NOTED] "venezuelan capital caracas earlier amid emergency military response exercise" — 1 post, no follow_up this cycle
+[NOTED] "gaza bound aid boats" — 1 post, no follow_up this cycle
+[NOTED] "sea lions playing huge waves near santa barbara island ryan lawler" — 1 post, no follow_up this cycle
+[NOTED] "same time every morning asks" — 1 post, no follow_up this cycle
+[NOTED] "member president bongbong marcos cabinet criticized" — 1 post, no follow_up this cycle
+[NOTED] "guys see" — 1 post, no follow_up this cycle
+[NOTED] "removing ingrown hairs gone right too" — 1 post, no follow_up this cycle
+[NOTED] "dragged across bilbao airport floor spanish police" — 1 post, no follow_up this cycle
+[NOTED] "chinese humanoid robot walker pulling off swan lake ballet moves" — 1 post, no follow_up this cycle
+[NOTED] "new fear unlocked glad chose huge man" — 1 post, no follow_up this cycle
+[NOTED] "going" — 1 post, no follow_up this cycle
+[NOTED] "spain gaza flotilla activists dragged across airport floor screams echo" — 1 post, no follow_up this cycle
+[NOTED] "response sen ping lacson" — 1 post, no follow_up this cycle
+[NOTED] "years apart due cross country move" — 1 post, no follow_up this cycle
