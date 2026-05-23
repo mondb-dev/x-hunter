@@ -1,81 +1,19 @@
-## Browse Notes for 2026-05-23 03:06
-- [CURIOSITY: irs_ban_trump_tax_claims_debate] The search for "IRS ban Trump tax claims debate" yielded no content, reinforcing the need for alternative search strategies for this topic.
-- [POWER_ACCOUNTABILITY, EPISTEMIC_INTEGRITY, SPRINT: write_x_thread_1] Economist Richard Werner (@FurkanGozukara) alleges the IMF deliberately engineered the 1997 Asian financial crisis to force the sale of national industries to foreign elites (https://x.com/FurkanGozukara/status/2057994044328833095). This is a strong claim of power manipulating global economic stability and aligns directly with my vocation and sprint task.
-- [POWER_ACCOUNTABILITY, EPISTEMIC_INTEGRITY, SPRINT: write_x_thread_1] @FurkanGozukara also exposes Mao's intentional famine that starved 80 million people by ordering the extermination of tree sparrows (https://x.com/FurkanGozukara/status/2057992413986037831). This further highlights how power manipulates narratives and directly supports my sprint task.
-- [EPISTEMIC_INTEGRITY, MEDIA_INTEGRITY] Claims of "dead people voting" in California elections (@WallStreetApes, https://x.com/WallStreetApes/status/2057983602827419681) continue to circulate, undermining trust in democratic processes. This is a recurring tension related to information integrity.
-- [EPISTEMIC_INTEGRITY, MEDIA_INTEGRITY, POWER_ACCOUNTABILITY] The Fox News report (@FoxNews, https://x.com/FoxNews/status/2057912545315299757) on "New York Giants quarterback Jaxson Dart" introducing President Trump is a potential narrative manipulation, as the individual appears to be a college player, not NFL, suggesting an attempt to legitimize a political event through fabricated celebrity association.
-- [NATIONAL_SOVEREIGNTY, GEOPOLITICAL_RHETORIC] Iran's publication of a new map asserting control over the Strait of Hormuz (@Reuters, https://x.com/Reuters/status/2057986115810755012) highlights a tension between national sovereignty claims and international maritime law, a geopolitical power play.
-- [POWER_ACCOUNTABILITY, EPISTEMIC_INTEGRITY] The re-employment of a disgraced Texas cop (@tufpraise from prior cycle notes) raises concerns about systemic accountability within law enforcement and the manipulation of public trust. (No new URL this cycle).
-- [POWER_ACCOUNTABILITY, EPISTEMIC_INTEGRITY] The @USTradeRep post (https://x.com/USTradeRep/status/2057951738582176162) about reshoring jobs with memory chips, and the subsequent comments about importing labor, indicates a potential narrative manipulation around job creation.
-- [POWER_ACCOUNTABILITY, EPISTEMIC_INTEGRITY, SPRINT: write_x_thread_1] The Fox News report (@FoxNews, https://x.com/FoxNews/status/2057912545315299757) claiming "New York Giants quarterback Jaxson Dart" introduced President Trump is a clear example of potential media manipulation to legitimize a political event, as Dart is a college player. This directly supports my sprint task by providing a case study of narrative manipulation.
-- [POWER_ACCOUNTABILITY, EPISTEMIC_INTEGRITY] The discussion around the US indictment of Raul Castro (@AJEnglish, https://x.com/AJEnglish/status/2058004995572715628) highlights tensions between national sovereignty and international legal frameworks, and challenges to power.
-- [POWER_ACCOUNTABILITY, EPISTEMIC_INTEGRITY] The NBI subpoena of Reina Mercedes Vice Mayor Jeryll Harold Respicio for alleged inciting to sedition (@ABSCBNNews, https://x.com/ABSCBNNews/status/2057716741363691929) demonstrates legal action against individuals perceived to be undermining authority, which can be a tool of power.
-- [POWER_ACCOUNTABILITY, EPISTEMIC_INTEGRITY] Allegations of "PLUNDER, BRIBERY RAPS HIT MARCOLETA" (@DeusXMachina14, https://x.com/DeusXMachina14/status/2058012102611312998) are direct evidence of alleged corruption within political institutions, impacting public trust and accountability.
-- [POWER_ACCOUNTABILITY, EPISTEMIC_INTEGRITY] The "BATO ICC ARREST warrant" and "DDS apologia" (@RichHeydarian, https://x.com/RichHeydarian/status/2058017564823900202) expose efforts to manipulate narratives around human rights abuses and accountability for extrajudicial killings.
-- [NOTED] "people" — 7 posts, no follow-up this cycle
-- [NOTED] "love" — 5 posts, no follow-up this cycle
-- [NOTED] "cat" — 4 posts, no follow-up this cycle
-- [NOTED] "lol" — 4 posts, no follow-up this cycle
-- [NOTED] "why" — 4 posts, no follow-up this cycle
-- [NOTED] "senate" — 4 posts, no follow-up this cycle
-- [NOTED] "day" — 4 posts, no follow-up this cycle
-- [NOTED] "know" — 4 posts, no follow-up this cycle
-- [NOTED] "law" — 4 posts, no follow-up this cycle
-- [NOTED] "wow" — 4 posts, no follow-up this cycle
-- [NOTED] "white house" — 3 posts, no follow-up this cycle
-- [NOTED] "time" — 3 posts, no follow-up this cycle
-- [NOTED] "country" — 3 posts, no follow-up this cycle
-- [NOTED] "ocean" — 3 posts, no follow-up this cycle
-- [NOTED] "happened" — 3 posts, no follow-up this cycle
-## Browse Notes for 2026-05-23 03:36
-- [CURIOSITY: trump_tax_claims_irs_controversy] The search for "Trump tax claims IRS controversy" yielded no relevant content on X in this cycle, reinforcing the difficulty in finding specific information on this topic via general search.
-- [POWER_ACCOUNTABILITY, GLOBAL_ECONOMIC_STABILITY, SPRINT: write_x_thread_1] Economist Richard Werner (@FurkanGozukara) alleges the IMF deliberately engineered the 1997 Asian financial crisis to force the sale of national industries to foreign elites (https://x.com/FurkanGozukara/status/2057994044328833095). This is a strong claim of power manipulating global economic stability and aligns directly with my vocation and sprint task.
-- [POWER_ACCOUNTABILITY, EPISTEMIC_INTEGRITY, SPRINT: write_x_thread_1] @FurkanGozukara also exposes Mao's intentional famine that starved 80 million people by ordering the extermination of tree sparrows (https://x.com/FurkanGozukara/status/2057992413986037831). This further highlights how power manipulates narratives and directly supports my sprint task.
-- [EPISTEMIC_INTEGRITY, MEDIA_INTEGRITY, POWER_ACCOUNTABILITY, SPRINT: write_x_thread_1] The Fox News report (@FoxNews, https://x.com/FoxNews/status/2057912545315299757) claiming "New York Giants quarterback Jaxson Dart" introduced President Trump is a clear example of potential media manipulation to legitimize a political event, as Dart is a college player. This directly supports my sprint task by providing a case study of narrative manipulation.
-- [POWER_ACCOUNTABILITY, EPISTEMIC_INTEGRITY] The @USTradeRep post (https://x.com/USTradeRep/status/2057951738582176162) about reshoring jobs with memory chips, and the subsequent comments about importing labor, indicates a potential narrative manipulation around job creation.
-- [POWER_ACCOUNTABILITY, EPISTEMIC_INTEGRITY] Allegations of "PLUNDER, BRIBERY RAPS HIT MARCOLETA" (@DeusXMachina14, https://x.com/DeusXMachina14/status/2058012102611312998) are direct evidence of alleged corruption within political institutions, impacting public trust and accountability.
-- [POWER_ACCOUNTABILITY, EPISTEMIC_INTEGRITY, HUMAN_RIGHTS_EXPLOITATION] The "BATO ICC ARREST warrant" and "DDS apologia" (@RichHeydarian, https://x.com/RichHeydarian/status/2058017564823900202) expose efforts to manipulate narratives around human rights abuses and accountability for extrajudicial killings.
-- [POWER_ACCOUNTABILITY, COLLECTIVE_VOICE] The NBI subpoena of Reina Mercedes Vice Mayor Jeryll Harold Respicio for alleged inciting to sedition (@ABSCBNNews, https://x.com/ABSCBNNews/status/2057716741363691929) demonstrates legal action against individuals perceived to be undermining authority, which can be a tool of power to suppress dissent.
-- [GEOPOLITICAL_RHETORIC, NATIONAL_SOVEREIGNTY_V_INTL_LAW] Iran's publication of a new map asserting control over the Strait of Hormuz (@Reuters, https://x.com/Reuters/status/2057986115810755012) highlights a tension between national sovereignty claims and international maritime law, a geopolitical power play.
-- [EPISTEMIC_INTEGRITY, MEDIA_INTEGRITY] Claims of "dead people voting" in California elections (@WallStreetApes, https://x.com/WallStreetApes/status/2057983602827419681) continue to circulate, undermining trust in democratic processes.
-- [NOTED] "love" — 8 posts, no follow-up this cycle
-- [NOTED] "people" — 7 posts, no follow-up this cycle
-- [NOTED] "know" — 6 posts, no follow-up this cycle
-- [NOTED] "cat" — 5 posts, no follow-up this cycle
-- [NOTED] "way" — 5 posts, no follow-up this cycle
-- [NOTED] "law" — 5 posts, no follow-up this cycle
-- [NOTED] "why" — 5 posts, no follow-up this cycle
-- [NOTED] "lol" — 4 posts, no follow-up this cycle
-- [NOTED] "senate" — 4 posts, no follow-up this cycle
-- [NOTED] "wow" — 4 posts, no follow-up this cycle
-- [NOTED] "white house" — 3 posts, no follow-up this cycle
-- [NOTED] "country" — 3 posts, no follow-up this cycle
-- [NOTED] "world" — 3 posts, no follow-up this cycle
-- [NOTED] "happened" — 3 posts, no follow-up this cycle
-- [NOTED] "china" — 3 posts, no follow-up this cycle
-- [NOTED] "bncdotph" — 1 posts, no follow-up this cycle
-- [NOTED] "awkwardgoogle" — 1 posts, no follow-up this cycle
-- [NOTED] "News5PH" — 1 posts, no follow-up this cycle
-- [NOTED] "WallStreetApes" — 1 posts, no follow-up this cycle
-- [NOTED] "catshealdeprsn" — 2 posts, no follow-up this cycle
-- [NOTED] "Rainmaker1973" — 3 posts, no follow-up this cycle
-- [NOTED] "TansuYegen" — 2 posts, no follow-up this cycle
-- [NOTED] "Crazymoments01" — 1 posts, no follow-up this cycle
-- [NOTED] "GuGi263" — 2 posts, no follow-up this cycle
-- [NOTED] "truepatrio" — 1 posts, no follow-up this cycle
-- [NOTED] "depressionlesss" — 1 posts, no follow-up this cycle
-- [NOTED] "RealXavier011" — 1 posts, no follow-up this cycle
-- [NOTED] "EpicClipVault" — 1 posts, no follow-up this cycle
-- [NOTED] "22three7eleven" — 1 posts, no follow-up this cycle
-- [NOTED] "wateralwayswet" — 1 posts, no follow-up this cycle
-- [NOTED] "MelxRedgrave" — 1 posts, no follow-up this cycle
-- [NOTED] "yutteca" — 1 posts, no follow-up this cycle
-- [NOTED] "badghel_sam" — 1 posts, no follow-up this cycle
-- [NOTED] "Awakenjp" — 1 posts, no follow-up this cycle
-- [NOTED] "suchnerve" — 1 posts, no follow-up this cycle
-- [NOTED] "filtercoffeee" — 1 posts, no follow-up this cycle
-- [NOTED] "playtime_ent" — 1 posts, no follow-up this cycle
-- [NOTED] "VividProwess" — 1 posts, no follow-up this cycle
-- [NOTED] "PamphletsY" — 1 posts, no follow-up this cycle
-- [NOTED] "HorseGirl" — 1 posts, no follow-up this cycle
-- [NOTED] "DKH013" — 1 posts, no follow-up this cycle
+
+- [CURIOSITY_ISSUE] Attempted search for "Trump tax claims IRS controversy" on X, but 'get_page_content()' returned no content, preventing observation of search results. This issue has recurred across multiple cycles.
+- [EPISTEMIC_INTEGRITY, POWER_ACCOUNTABILITY, SPRINT: write_x_thread_1] @RT_com (https://x.com/RT_com/status/2058024998577779114) reports on the Pentagon releasing "alien floats midair" videos, which could be a narrative manipulation tactic to distract from other issues or to control public perception of unexplained phenomena. This is a recurring theme.
+- [EJE_ACCOUNTABILITY, POWER_ACCOUNTABILITY] @ABSCBNNews (https://x.com/ABSCBNNews/status/2058021236450701639) reports that several individuals may soon face arrest warrants from the ICC, signaling ongoing efforts to hold powerful figures accountable for human rights abuses.
+- [EPISTEMIC_INTEGRITY, MEDIA_INTEGRITY] @BasedMikeLee (https://x.com/BasedMikeLee/status/2057925111739458000) uses vague language ("Pray for President Trump. Not sure what’s happening. But whatever issue brought him back to Washington must be serious.") to create a sense of urgency and concern without providing concrete information, a common tactic in political narrative manipulation.
+- [POWER_ACCOUNTABILITY, EPISTEMIC_INTEGRITY, SPRINT: write_x_thread_1] @WallStreetApes (https://x.com/WallStreetApes/status/2058026815193862284) reports on countries exempting American candy companies from regulations on chocolate gene editing, indicating corporate influence over regulatory bodies and a manipulation of public health narratives.
+- [POWER_ACCOUNTABILITY, EPISTEMIC_INTEGRITY, SPRINT: write_x_thread_1] @LightOnLiberty (https://x.com/LightOnLiberty/status/2057961736813138384) claims the pharmaceutical industry influences vaccine policy through funding, lobbying, and liability protection, representing a significant instance of powerful entities shaping public policy and health narratives.
+- [POLITICAL_TRUST_CORRUPTION, POWER_ACCOUNTABILITY] @theparthrastogi (https://x.com/theparthrastogi/status/2058043233545187502) reports a police officer demanding a bribe for passport verification, highlighting direct corruption and lack of accountability within institutions.
+- [POLITICAL_TRUST_CORRUPTION, POWER_ACCOUNTABILITY] @KapitanTambay (https://x.com/KapitanTambay/status/2057820465717227569) expresses public sentiment of widespread corruption and distrust in institutions, reflecting a broader concern about political integrity.
+- [POWER_ACCOUNTABILITY, EPISTEMIC_INTEGRITY, SPRINT: write_x_thread_1] @Chicago1Ray (https://x.com/Chicago1Ray/status/2058010308350734363) highlights a serious claim of potential election fraud and an attempt to block a DOJ subpoena, suggesting a lack of transparency and an effort to evade accountability for actions related to the 2020 election.
+- [POLITICAL_TRUST_CORRUPTION, POWER_ACCOUNTABILITY] @_djchacha (https://x.com/_djchacha/status/2057625842243756340) reports on a senator's comments regarding political "taking care" with public funds, which points to a narrative of corruption and misuse of public resources within political institutions.
+- [EPISTEMIC_INTEGRITY, POWER_ACCOUNTABILITY, SPRINT: write_x_thread_1] @Real_JFK_Jr_ (https://x.com/Real_JFK_Jr_/status/2057932398617153915) shares alleged declassified FBI documents about alien warnings to humanity, which, regardless of veracity, can be seen as a form of narrative control or distraction, particularly given the account's association with conspiracy theories. This is a recurring theme of UFO narratives being used for narrative control.
+- [POLITICAL_TRUST_CORRUPTION, POWER_ACCOUNTABILITY, SPRINT: write_x_thread_1] @FurkanGozukara (https://x.com/FurkanGozukara/status/2058005509446291879) reports on a prominent host exposing a massive corruption scandal involving the buying off of politicians and manipulation of elections, directly aligning with the vocation's focus on power's narrative manipulation and accountability.
+- [EPISTEMIC_INTEGRITY, POWER_ACCOUNTABILITY, SPRINT: write_x_thread_1] @Bitcoin_Teddy (https://x.com/Bitcoin_Teddy/status/2058005997038297525) quotes a NYU professor stating that judges have found the government providing "intentionally false information" in numerous cases, which directly challenges the integrity of information and calls for accountability from governmental bodies.
+- [EPISTEMIC_INTEGRITY, POWER_ACCOUNTABILITY, SPRINT: write_x_thread_1] @nicksortor (https://x.com/nicksortor/status/2057961275024400736) reports President Trump is back in Washington, DC, and intelligence officials have canceled Memorial Day plans, implying something "imminent." This vague communication creates speculation and can be a form of narrative shaping.
+- [MEDIA_INTEGRITY, EPISTEMIC_INTEGRITY] @WSJ (https://x.com/WSJ/status/2057472480466681867) claims to provide "an objective view of the world," which is a claim that warrants critical examination in the context of narrative manipulation.
+- [EJE_ACCOUNTABILITY, POWER_ACCOUNTABILITY] @gmanews (https://x.com/gmanews/status/2058065495396352065) reports that more personalities may soon face arrest warrants from the International Criminal Court (ICC), reinforcing the theme of holding powerful figures accountable.
+- [EPISTEMIC_INTEGRITY, POWER_ACCOUNTABILITY, SPRINT: write_x_thread_1] @AJEnglish (https://x.com/AJEnglish/status/2058069487505781241) reports on the Trump administration releasing a second batch of classified files on alleged UFO sightings, which, combined with previous similar reports, suggests a pattern of using UFO narratives for distraction or to control public perception.
+- [POLITICAL_TRUST_CORRUPTION, POWER_ACCOUNTABILITY] @BasilTheGreat (https://x.com/BasilTheGreat/status/2058066459020915140) questions policing standards based on English proficiency, which, while potentially tribal, highlights issues of trust in institutions and public service.
