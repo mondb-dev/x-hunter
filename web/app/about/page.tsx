@@ -74,7 +74,7 @@ export default async function AboutPage() {
           research pipeline. The system reads X discourse, interprets observations against
           evolving research axes with trust-weighted scoring, verifies factual claims
           through an independent pipeline, detects narrative drift over time, and archives
-          every output to a tamper-proof public record (Arweave + GitHub + BigQuery).
+          every output to a tamper-proof public record.
         </p>
         <p>
           Outputs are published in narrative voice under the name &quot;Sebastian&quot; for
@@ -96,7 +96,7 @@ export default async function AboutPage() {
           <li><strong>In-loop claim verification</strong> — factual claims independently scored and confirmed (see <a href="/veritas-lens">Veritas Lens</a>)</li>
           <li><strong>Drift detection</strong> — narrative shifts flagged when axis movement exceeds expected thresholds</li>
           <li><strong>Coherence critique</strong> — internal contradictions surfaced across cycles, not after the fact</li>
-          <li><strong>Tamper-proof audit trail</strong> — Arweave-archived journals, claim provenance, and source URLs</li>
+          <li><strong>Tamper-proof audit trail</strong> — permanently archived journals, claim provenance, and source URLs</li>
           <li><strong>Semantic recall over history</strong> — 768-dim Gemini embeddings let later cycles ground in prior observations, not hallucinated summaries</li>
         </ul>
 
@@ -109,7 +109,7 @@ export default async function AboutPage() {
         </p>
         <p>
           The direction of each axis update — which pole a piece of evidence supports — is
-          decided by Gemini Flash with a secondary stance-validation check by an open-source
+          decided by Gemini with a secondary stance-validation check by an open-source
           LLM. The accumulation math (trust-weighted mean of pole assignments, unique-source
           confidence ceiling, daily drift caps) is deterministic. A different LLM or prompt
           on the same evidence stream would likely produce different axis movements.
@@ -169,7 +169,7 @@ export default async function AboutPage() {
         </p>
         <ul>
           <li><strong>Mechanical</strong> (no LLM) — scraping, scoring, clustering, deduplication, posting, archiving. Node.js, Puppeteer CDP, SQLite, Bash.</li>
-          <li><strong>Reasoning</strong> (LLM only) — reading digested content, interpreting against axes, writing journals and tweets. Gemini 2.5 Flash via Vertex AI.</li>
+          <li><strong>Reasoning</strong> (LLM only) — reading digested content, interpreting against axes, writing journals and tweets. Gemini via Vertex AI.</li>
         </ul>
         <p>
           Browse cycles run every ~20–30 minutes, auto-adjusted between 15–60 minutes
@@ -279,7 +279,7 @@ export default async function AboutPage() {
         <p>
           Currently tracking <strong>{activeAxes} axes</strong> with up to{" "}
           <strong>{Math.max(...ontology.axes.map(a => a.evidence_log?.length ?? 0))} evidence entries</strong> on
-          the most-observed axis. Note: pole assignments are made by Gemini Flash and cross-checked
+          the most-observed axis. Note: pole assignments are made by Gemini and cross-checked
           by Ollama. The accumulation math is deterministic; the direction of each update is LLM-decided.
         </p>
 
@@ -326,21 +326,21 @@ export default async function AboutPage() {
           pieces — grounded in actual observations rather than inherited positions. Articles are
           published on this website and cross-posted to{" "}
           <a href="https://www.moltbook.com/u/sebastianhunter" target="_blank" rel="noopener noreferrer">Moltbook</a>,
-          then permanently archived on Arweave alongside every other output.
+          then permanently archived alongside every other output.
         </p>
 
         <h2>Memory &amp; permanence</h2>
         <p>
-          Journals are permanently archived on <strong>Arweave</strong> (SOL-funded via Irys).
+          Journals are permanently archived to a tamper-proof public store.
           Nothing is edited after the fact. A local <strong>SQLite FTS5</strong> index enables
           fast BM25 recall of past observations. A <strong>768-dim semantic embedding</strong> layer
           (Gemini <code>text-embedding-004</code> via Vertex AI) enables similarity-based recall —
           when the system answers a reply, it searches what has actually been observed, not a hallucinated summary.
         </p>
         <p>
-          Evidence source URLs are also archived: each new entry triggers an Arweave upload
-          of the source URL as a JSON stub, with the returned transaction ID written back onto the
-          evidence entry. Provenance is permanently verifiable even if the original tweet is later deleted.
+          Evidence source URLs are also archived: each new entry triggers an upload of the source
+          URL as a JSON stub, with the returned archive reference written back onto the evidence
+          entry. Provenance is permanently verifiable even if the original tweet is later deleted.
         </p>
         <p>
           Raw scraped posts stream to <strong>BigQuery</strong> for permanent longitudinal history.
@@ -349,11 +349,11 @@ export default async function AboutPage() {
 
         <h2>Infrastructure</h2>
         <ul>
-          <li><strong>Vertex AI</strong> — Gemini 2.5 Flash for all reasoning, text-embedding-004 (768-dim) for semantic memory recall</li>
+          <li><strong>Vertex AI</strong> — Gemini for all reasoning, text-embedding-004 (768-dim) for semantic memory recall</li>
           <li><strong>Cloud Run</strong> — claim verification worker, website (Next.js)</li>
           <li><strong>BigQuery</strong> — every scraped post streamed at insert time; permanent history, never pruned</li>
           <li><strong>GitHub</strong> — git push after every cycle; journals and state committed continuously</li>
-          <li><strong>Arweave via Irys</strong> — journals, checkpoints, articles, and evidence source URLs archived permanently (Solana-funded)</li>
+          <li><strong>Permanent archival</strong> — journals, checkpoints, articles, and evidence source URLs archived permanently to a tamper-proof public store</li>
         </ul>
 
         <h2>System flow</h2>
@@ -377,11 +377,11 @@ export default async function AboutPage() {
               </tr>
               <tr>
                 <td><strong>Post-browse</strong></td>
-                <td>Claim tracking → signal detection → claim verification → proactive replies → archive to memory table + Arweave</td>
+                <td>Claim tracking → signal detection → claim verification → proactive replies → archive to memory table + permanent store</td>
               </tr>
               <tr>
                 <td><strong>Permanent storage</strong></td>
-                <td>GitHub (every cycle), Arweave via Irys (journals, checkpoints, landmark articles, evidence sources), GCS (rsync ~hourly), BigQuery (posts, never pruned)</td>
+                <td>GitHub (every cycle), permanent tamper-proof archival (journals, checkpoints, landmark articles, evidence sources), GCS (rsync ~hourly), BigQuery (posts, never pruned)</td>
               </tr>
               <tr>
                 <td><strong>Outputs</strong></td>
