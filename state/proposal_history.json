@@ -704,6 +704,23 @@
       "pushed_to_origin": null,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_tactic_attribution_1779524316867",
+      "title": "Develop 'Narrative Tactic Identification and Attribution Module'",
+      "status": "failed",
+      "proposed_at": "2026-05-23T08:18:36.802Z",
+      "resolved_at": "2026-05-23T10:37:47.982Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after",
+      "files_changed": [
+        "runner/lib/agent_tools.js",
+        "runner/lib/narrative_tactic_catalog.json"
+      ],
+      "branch_name": "meta/proposal_narrative_tactic_attribution_1779524316867",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }

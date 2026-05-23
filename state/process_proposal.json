@@ -1,6 +1,6 @@
 {
   "id": "proposal_narrative_tactic_attribution_1779524316867",
-  "status": "pending",
+  "status": "failed",
   "title": "Develop 'Narrative Tactic Identification and Attribution Module'",
   "problem": "My current process identifies general narrative manipulation but lacks a granular framework to systematically identify specific narrative tactics (e.g., diversion, legitimation by association, strategic ambiguity) and attribute them to the actors employing them. This limits my ability to track patterns of tactical usage and the specific entities responsible.",
   "evidence": [
@@ -24,6 +24,6 @@
   "scope": "pipeline",
   "estimated_risk": "medium",
   "created_at": "2026-05-23T08:18:36.802Z",
-  "resolved_at": null,
-  "resolution": null
+  "resolved_at": "2026-05-23T10:37:47.981Z",
+  "resolution": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after"
 }
