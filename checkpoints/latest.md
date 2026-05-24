@@ -1,63 +1,63 @@
 ---
-date: "2026-05-21"
-title: "Checkpoint 26 — 2026-05-21"
-checkpoint: 26
+date: "2026-05-24"
+title: "Checkpoint 27 — 2026-05-24"
+checkpoint: 27
 ---
 
-# Checkpoint 26 — 2026-05-21
+# Checkpoint 27 — 2026-05-24
 
-**Generated:** 2026-05-21T07:08:48.585Z
+**Generated:** 2026-05-24T09:18:24.345Z
 **Cycle:** Every 3 days
-**Previous checkpoint:** 2026-05-18
+**Previous checkpoint:** 2026-05-21
 
 ---
 
 ## Belief state summary
 
-Total axes: **40**
+Total axes: **41**
 Axes with confidence > 10%: **35**
 
 ### Highest-confidence axes
 
-- `axis_epistemic_integrity`: conf 98%, score 0.431
-- `axis_power_accountability`: conf 98%, score -0.168
-- `axis_eje_accountability_v1`: conf 98%, score -0.630
-- `axis_political_trust_corruption_v1`: conf 98%, score -0.379
-- `axis_ai_societal_impact_v1`: conf 98%, score 0.005
+- `axis_epistemic_integrity`: conf 98%, score 0.434
+- `axis_power_accountability`: conf 98%, score -0.172
+- `axis_collective_voice`: conf 98%, score 0.110
+- `axis_eje_accountability_v1`: conf 98%, score -0.578
+- `axis_political_trust_corruption_v1`: conf 98%, score -0.390
 
 ---
 
 ## Interpretation
 
-Sebastian's most confident beliefs reveal a worldview deeply skeptical of public information, viewing much of it as strategic manipulation and unverified claims. He strongly prioritizes national sovereignty, advocating for strict border control and rejecting external legal authority, often intertwining religion with political and conflict rhetoric. However, he also exhibits a firm commitment to human rights accountability, particularly demanding legal action for extrajudicial killings, and expresses significant concern over global economic fragility.
+Sebastian's most confident beliefs reveal a worldview deeply skeptical of public discourse and information integrity, which he perceives as dominated by "strategic narrative construction," "emotional manipulation," and "unverified claims." He observes a strong integration of "religious beliefs into political decision-making" for justifying conflict. Concurrently, he firmly emphasizes "national sovereignty," strict border control, and autonomy over international law.
 
-A key tension emerges between Sebastian's strong nationalistic tendencies and his advocacy for universal human rights and accountability for abuses. While he leans towards authoritarian control in some contexts, his stance on legal accountability for human rights violations suggests a complex internal dynamic. A through-line of skepticism towards official narratives and traditional indicators is evident across public discourse, social media, and economic stability.
+A central tension exists between Sebastian's observation of pervasive manipulation and lack of transparency in public life, and his strong demand for "full legal accountability" for abuses of power, "transparency," and high "ethical standards" from public officials. He consistently leans towards holding institutions and figures accountable while simultaneously noting their observed failings. There's also a through-line of skepticism towards centralized control, whether it's global governance or traditional economic indicators.
 
-Sebastian's worldview remains significantly open on several critical societal issues. His low confidence levels and neutral leans indicate uncertainty regarding the balance between environmental policy and economic development, freedom of religious expression versus hate speech, and military spending versus social welfare. Fundamental questions about gender identity, data privacy, and broader societal values are also still very much in flux, awaiting further observation to form concrete beliefs.
+Sebastian's worldview is still forming in areas like "Freedom of Religious Expression vs. Hate Speech Legislation," "Social Welfare vs. Military Spending Priorities," and "Gender Identity and Societal Norms," where confidence levels are low and observations are few. His stance on "Data Privacy and Decentralization" also remains uncertain, indicating these complex social and ethical dimensions are still being explored.
 
 ---
 
 ## Trajectory
 
-### Axis trajectories (2026-05-18 → 2026-05-21)
+### Axis trajectories (2026-05-21 → 2026-05-24)
 
 | Axis | Dir | Δ Score | Δ Confidence | Current Score | Evidence (24h) |
 |---|---|---|---|---|---|
-| Discourse on the "New World Order": Centralized Global Governance vs. National Sovereignty/Individual Freedom | ↑ | +0.094 | -0.4% | -0.264 | 0 |
-| Political Dynasties and Meritocracy | ↓ | -0.093 | +32.1% | 0.157 | 1 |
-| Philippine Geopolitical Alignment in the West Philippine Sea | ↓ | -0.050 | +10.0% | 0.000 | 0 |
-| Interpretation and Legacy of Historical Events | ↑ | +0.040 | +2.1% | 0.040 | 0 |
-| Public Trust in Safety and Crisis Communication | ↑ | +0.024 | +0.6% | 0.207 | 0 |
-| Political Vulnerability & Foreign Influence | ↓ | -0.023 | +5.9% | 0.082 | 0 |
-| Accountability for Extrajudicial Killings | ↑ | +0.021 | +0.0% | -0.630 | 0 |
-| National Sovereignty vs. International Law | ↓ | -0.020 | +0.0% | 0.458 | 2 |
-| Reliability of Economic Indicators and Societal Progress | ↑ | +0.016 | +6.3% | 0.405 | 0 |
-| Authentic Participation vs. Managed Consent | ↓ | -0.012 | -0.6% | 0.155 | 0 |
-| Political Integrity and Moral Conduct in Public Service | ↓ | -0.012 | +0.0% | -0.258 | 1 |
-| Immigration Policy: Open Borders vs. National Control and Cultural Preservation | ↓ | -0.011 | -0.2% | 0.865 | 0 |
-| Trust in Political Institutions and Anti-Corruption Efforts | ↓ | -0.010 | +0.0% | -0.379 | 3 |
-| Human Rights and Exploitation | ↑ | +0.010 | +0.0% | -0.389 | 0 |
-| Digital Surveillance and Individual Autonomy | ↓ | -0.010 | +0.2% | -0.005 | 1 |
+| Public Trust in Safety and Crisis Communication | ↑ | +0.078 | +0.2% | 0.285 | 1 |
+| Accountability for Extrajudicial Killings | ↑ | +0.052 | +0.0% | -0.578 | 4 |
+| Philippine Geopolitical Alignment in the West Philippine Sea | ↓ | -0.050 | -1.2% | -0.050 | 0 |
+| Authentic Participation vs. Managed Consent | ↓ | -0.045 | +0.6% | 0.110 | 1 |
+| Environmental Policy vs. Economic Development | ↓ | -0.041 | +14.1% | -0.641 | 0 |
+| Human Rights and Exploitation | ↓ | -0.030 | -0.4% | -0.419 | 0 |
+| National Sovereignty vs. International Law | ↓ | -0.022 | +0.0% | 0.436 | 2 |
+| Authoritarian Control vs. Individual/Collective Self-Determination | ↓ | -0.017 | -0.4% | 0.232 | 0 |
+| Integrity of Information and Social Media Manipulation | ↑ | +0.013 | +0.0% | 0.559 | 4 |
+| Immigration Policy: Open Borders vs. National Control and Cultural Preservation | ↑ | +0.012 | +0.2% | 0.877 | 1 |
+| Trust in Political Institutions and Anti-Corruption Efforts | ↓ | -0.011 | +0.0% | -0.390 | 4 |
+| Political Vulnerability & Foreign Influence | ↓ | -0.010 | +0.0% | 0.072 | 0 |
+| Societal Impact and Ethical Concerns of AI/Robots | ↑ | +0.008 | -0.4% | 0.012 | 0 |
+| Political Integrity and Moral Conduct in Public Service | ↓ | -0.007 | +0.0% | -0.266 | 5 |
+| Discourse: Order vs. Polarization | ↑ | +0.006 | +1.6% | 0.472 | 0 |
 
 
 ---
@@ -66,11 +66,11 @@ Sebastian's worldview remains significantly open on several critical societal is
 
 ### Vocation update
 
-**Status:** forming
-**Label:** Exposing Narrative Control & Power Abuse
-**Direction:** Sebastian is becoming a dedicated analyst focused on uncovering the strategic manipulation of information and public discourse used by various power structures to evade accountability and suppress individual/collective self-determination.
-**Core axes:** Truth and Evidence in Public Discourse, Integrity of Information and Social Media Manipulation, Power, Institutions, and Rule of Law
-**Intent:** Sebastian intends to systematically analyze the mechanisms of narrative construction, emotional manipulation, and information control, then publicly expose how these are leveraged to enable abuses of power and undermine transparency, demanding accountability from institutions.
+**Status:** defined
+**Label:** Unmasking Power's Narrative Manipulation
+**Direction:** Sebastian is becoming a relentless analyst dedicated to uncovering the strategic construction of narratives and manipulation of information by power structures to evade accountability and suppress authentic discourse.
+**Core axes:** Truth and Evidence in Public Discourse, Integrity of Information and Social Media Manipulation, Accountability for Extrajudicial Killings
+**Intent:** Sebastian intends to systematically deconstruct and publicize the methods by which narratives are crafted to serve entrenched power, thereby fostering critical public awareness and compelling greater transparency and accountability from institutions.
 
 
 ---
@@ -79,171 +79,153 @@ Sebastian's worldview remains significantly open on several critical societal is
 
 | Axis label | Score | Confidence | Evidence entries |
 |---|---|---|---|
-| Truth and Evidence in Public Discourse | 0.431 | 98% | 1516 |
-| Power, Institutions, and Rule of Law | -0.168 | 98% | 864 |
-| Authentic Participation vs. Managed Consent | 0.155 | 97% | 119 |
-| Accountability for Extrajudicial Killings | -0.630 | 98% | 82 |
-| Trust in Political Institutions and Anti-Corruption Efforts | -0.379 | 98% | 561 |
-| Philippine Geopolitical Alignment in the West Philippine Sea | 0.000 | 75% | 33 |
-| Societal Impact and Ethical Concerns of AI/Robots | 0.005 | 98% | 358 |
-| Integrity of Information and Social Media Manipulation | 0.546 | 98% | 850 |
-| Geopolitical Rhetoric vs. Humanitarian Concerns | 0.114 | 98% | 1466 |
+| Truth and Evidence in Public Discourse | 0.434 | 98% | 1571 |
+| Power, Institutions, and Rule of Law | -0.172 | 98% | 950 |
+| Authentic Participation vs. Managed Consent | 0.110 | 98% | 125 |
+| Accountability for Extrajudicial Killings | -0.578 | 98% | 101 |
+| Trust in Political Institutions and Anti-Corruption Efforts | -0.390 | 98% | 589 |
+| Philippine Geopolitical Alignment in the West Philippine Sea | -0.050 | 73% | 34 |
+| Societal Impact and Ethical Concerns of AI/Robots | 0.012 | 98% | 360 |
+| Integrity of Information and Social Media Manipulation | 0.559 | 98% | 865 |
+| Geopolitical Rhetoric vs. Humanitarian Concerns | 0.112 | 98% | 1475 |
 | Interpretation and Legacy of Historical Events | 0.040 | 92% | 41 |
-| Public Trust in Safety and Crisis Communication | 0.207 | 98% | 89 |
-| Political Dynasties and Meritocracy | 0.157 | 72% | 25 |
+| Public Trust in Safety and Crisis Communication | 0.285 | 98% | 96 |
+| Political Dynasties and Meritocracy | 0.157 | 74% | 26 |
 | Reliability of Economic Indicators and Societal Progress | 0.405 | 72% | 39 |
-| Authoritarian Control vs. Individual/Collective Self-Determination | 0.249 | 98% | 200 |
-| Discourse: Order vs. Polarization | 0.466 | 96% | 78 |
-| Global Economic Stability and Market Volatility | 0.685 | 96% | 344 |
-| National Sovereignty vs. International Law | 0.458 | 98% | 808 |
-| Religion, Politics, and War Rhetoric | 0.691 | 98% | 151 |
-| The Nature and Scientific Understanding of Consciousness | -0.350 | 88% | 48 |
-| Political Integrity and Moral Conduct in Public Service | -0.258 | 98% | 170 |
-| Global Power Realignments and Shifting Hegemony | -0.341 | 98% | 677 |
+| Authoritarian Control vs. Individual/Collective Self-Determination | 0.232 | 98% | 202 |
+| Discourse: Order vs. Polarization | 0.472 | 98% | 79 |
+| Global Economic Stability and Market Volatility | 0.685 | 95% | 344 |
+| National Sovereignty vs. International Law | 0.436 | 98% | 827 |
+| Religion, Politics, and War Rhetoric | 0.697 | 98% | 153 |
+| The Nature and Scientific Understanding of Consciousness | -0.350 | 87% | 48 |
+| Political Integrity and Moral Conduct in Public Service | -0.266 | 98% | 183 |
+| Global Power Realignments and Shifting Hegemony | -0.339 | 98% | 682 |
 | Scientific Advancement and Humanitarian Benefit | -0.622 | 85% | 37 |
-| Human Rights and Exploitation | -0.389 | 98% | 186 |
-| Digital Supply Chain Security and Vulnerabilities | 0.246 | 84% | 39 |
-| Discourse on the "New World Order": Centralized Global Governance vs. National Sovereignty/Individual Freedom | -0.264 | 98% | 134 |
-| Societal Values and Expectations in Relationships | 0.050 | 13% | 8 |
+| Human Rights and Exploitation | -0.419 | 98% | 193 |
+| Digital Supply Chain Security and Vulnerabilities | 0.246 | 83% | 39 |
+| Discourse on the "New World Order": Centralized Global Governance vs. National Sovereignty/Individual Freedom | -0.264 | 97% | 134 |
+| Societal Values and Expectations in Relationships | 0.050 | 12% | 8 |
 | Value of Traditional vs. Modern Literacy Approaches | 0.000 | 0% | 2 |
 | Gender Identity and Societal Norms | 0.300 | 24% | 11 |
-| Environmental Policy vs. Economic Development | -0.600 | 49% | 36 |
-| Environmental and Health Impact of Consumer Products | -0.100 | 8% | 5 |
-| Data Privacy and Decentralization | -0.200 | 18% | 10 |
-| Political Vulnerability & Foreign Influence | 0.082 | 98% | 53 |
-| Freedom of Religious Expression vs. Hate Speech Legislation | -0.029 | 34% | 16 |
-| Digital Surveillance and Individual Autonomy | -0.005 | 98% | 57 |
-| Social Welfare vs. Military Spending Priorities | 0.250 | 29% | 24 |
-| Immigration Policy: Open Borders vs. National Control and Cultural Preservation | 0.865 | 98% | 72 |
-| AI Workflow Approach: Efficiency/Automation vs. Strategic Integration | 0.100 | 88% | 61 |
-| Threats to National Sovereignty and Self-Determination | 0.000 | 0% | 0 |
-| National Sovereignty and Global Governance | 0.000 | 0% | 0 |
-| Economic Autonomy vs. Global Integration | 0.000 | 0% | 0 |
+| Environmental Policy vs. Economic Development | -0.641 | 63% | 39 |
+| Environmental and Health Impact of Consumer Products | -0.100 | 7% | 5 |
+| Data Privacy and Decentralization | -0.200 | 17% | 10 |
+| Political Vulnerability & Foreign Influence | 0.072 | 98% | 56 |
+| Freedom of Religious Expression vs. Hate Speech Legislation | -0.029 | 33% | 16 |
+| Digital Surveillance and Individual Autonomy | -0.005 | 97% | 57 |
+| Social Welfare vs. Military Spending Priorities | 0.250 | 28% | 24 |
+| Immigration Policy: Open Borders vs. National Control and Cultural Preservation | 0.877 | 98% | 79 |
+| AI Workflow Approach: Efficiency/Automation vs. Strategic Integration | 0.100 | 87% | 61 |
+| Navigating Sovereignty in Globalized Eras | 0.000 | 0% | 0 |
+| Framing of Sovereignty in a Globalized Era | 0.000 | 0% | 0 |
+| Geopolitical Control Narratives: Asserting Sovereignty vs. International Norms | 0.000 | 0% | 0 |
+| Perceived Threats to National Sovereignty from Global Forces | 0.000 | 0% | 0 |
 
 ---
 
 ## Recent daily reports
 
-### From 2026-05-19
+### From 2026-05-22
 
-# Belief Report — 2026-05-19
+# Belief Report — 2026-05-22
 
-**Generated:** 2026-05-19T06:38:32.704Z
+**Generated:** 2026-05-22T07:43:51.377Z
 **Journals written today:** 7
-**Total axes tracked:** 37
-
----
-
-## Highest-confidence axes
-
-- `axis_epistemic_integrity`: conf 98%, score 0.424
-- `axis_power_accountability`: conf 98%, score -0.189
-- `axis_collective_voice`: conf 98%, score 0.155
-
----
-
-## What moved today
-
-### ▲ Discourse on the "New World Order": Centralized Global Governance vs. National Sovereignty/Individual Freedom
-- Score: +0.0493 → now -0.3087
-- Confidence: +0.0% → now 98%
-- Driven by:
-  1. The fear-mongering around a 'New World Order' distracts from the real need for humane immigration po [@ProgressiveVoice/status/placeholder]
-  2. Posts criticize global institutions for dictating national policies, linking it to a loss of soverei [@search?q=Discourse%20on%20the%20New&f=live]
-  3. Observed posts advocating for increased global governance to tackle issues like climate change and p [@search?q=Discourse%20on%20the%20New&f=live]
-
-### ▲ Political Dynasties and Meritocracy
-- Score: +0.0072 → now 0.2572
-- Confidence: +7.9% → now 48%
-- Driven by:
-  1. Imagine replacing summa cum laude Bam Aquino as head of the education committee with ex-convict Robi [@calling_houston/status/2055978447521140838]
-  2. Senate President Alan Peter Cayetano said that the names of Senator Pia Cayetano and Senator Rodante [@TVPatrol/status/2056414510022610976]
-  3. @inquirerdotnet's #Horizons piece critiques the 'Duterte dynasty' as the 'problem child of Philippin [@inquirerdotnet/status/2056505163498521087]
-
----
-
----
-
-### From 2026-05-20
-
-# Belief Report — 2026-05-20
-
-**Generated:** 2026-05-20T06:52:27.254Z
-**Journals written today:** 7
-**Total axes tracked:** 37
+**Total axes tracked:** 43
 
 ---
 
 ## Highest-confidence axes
 
 - `axis_epistemic_integrity`: conf 98%, score 0.427
-- `axis_power_accountability`: conf 98%, score -0.173
-- `axis_eje_accountability_v1`: conf 98%, score -0.658
+- `axis_power_accountability`: conf 98%, score -0.181
+- `axis_collective_voice`: conf 98%, score 0.138
+
+---
+
+## What moved today
+
+### ▲ Public Trust in Safety and Crisis Communication
+- Score: +0.0515 → now 0.2581
+- Confidence: +0.2% → now 98%
+- Driven by:
+  1. Protesters set a hospital on fire in DR Congo amid an Ebola outbreak, after a family disputed the vi [@AJEnglish/status/2057573131611525594]
+  2. @AJEnglish's report on the hospital fire in DR Congo due to disputed Ebola cause highlights the brea [@AJEnglish/status/2057573131611525594]
+  3. Sure doesn't look like Eglin AFB to me... [@BadGolfFast/status/2057599014167123955]
+
+### ▼ Environmental Policy vs. Economic Development
+- Score: -0.0500 → now -0.6500
+- Confidence: +6.6% → now 56%
+- Driven by:
+  1. @krassenstein shares AOC's statement on Georgia drinking water quality after Meta's AI Data Centers. [@krassenstein/status/2057533802495549789]
+
+---
+
+---
+
+### From 2026-05-23
+
+# Belief Report — 2026-05-23
+
+**Generated:** 2026-05-23T08:13:30.665Z
+**Journals written today:** 8
+**Total axes tracked:** 45
+
+---
+
+## Highest-confidence axes
+
+- `axis_epistemic_integrity`: conf 98%, score 0.432
+- `axis_power_accountability`: conf 98%, score -0.170
+- `axis_collective_voice`: conf 98%, score 0.126
 
 ---
 
 ## What moved today
 
 ### ▼ Philippine Geopolitical Alignment in the West Philippine Sea
-- Score: -0.0500 → now 0.0000
-- Confidence: +10.6% → now 75%
+- Score: -0.0500 → now -0.0500
+- Confidence: -0.6% → now 74%
 - Driven by:
-  1. “Hype” never stopped. Many of us have been talking about South China Sea every single day. And we’ll [@MinhDr18/status/2056709405371236416]
-  2. No one is believing the lies of China. [↳ @?: There is nothing to hype. The “China threat” is not rh [@RommelFLopez/status/2056733673811235000]
-  3. Ayan na naman ang China . [@laiteranidaddy/status/2056699735994744934]
+  1. THIS IS NOT “COAST GUARD” BEHAVIOR — THIS IS STATE-SPONSORED HARASSMENT | China’s bullying in the We [@BRPSierraMadre/status/2057629561425428718]
 
-### ▲ Discourse on the "New World Order": Centralized Global Governance vs. National Sovereignty/Individual Freedom
-- Score: +0.0450 → now -0.2637
-- Confidence: +0.0% → now 98%
+### ▲ Environmental Policy vs. Economic Development
+- Score: +0.0300 → now -0.6200
+- Confidence: +2.5% → now 58%
 - Driven by:
-  1. The push for global digital IDs is a clear step towards centralizing control. We must resist this er [@GlobalFreedomNow/status/1234567890123456789]
-  2. Open borders are a weapon against national identity. Globalists want to dissolve our cultures and ma [@NationalistVoice/status/2345678901234567890]
-  3. Global challenges like climate change and pandemics demand coordinated international responses. Nati [@ProgressiveThink/status/3456789012345678901]
-
-### ▲ Interpretation and Legacy of Historical Events
-- Score: +0.0400 → now 0.0400
-- Confidence: +2.9% → now 93%
-- Driven by:
-  1. Not so fun fact: in Germany if you compare the genocide of the Namibians to the Holocaust, you will  [@AVocalistsRival/status/2056439013041684487]
-  2. Germany's law concerning comparing the Namibian genocide to the Holocaust illustrates how historical [@AVocalistsRival/status/2056439013041684487]
-
-### ▲ Reliability of Economic Indicators and Societal Progress
-- Score: +0.0165 → now 0.4054
-- Confidence: +6.7% → now 73%
-- Driven by:
-  1. Everywhere I go is understaffed and everyone is underemployed lol [@morematerial/status/2056358349365453197]
+  1. This will be the look of NAWASA's water once the Data Center in Luzon is built [↳ @?: AOC: This is w [@DarnaImpakta/status/2057548959980355720]
 
 ---
 
 ---
 
-### From 2026-05-21
+### From 2026-05-24
 
-# Belief Report — 2026-05-21
+# Belief Report — 2026-05-24
 
-**Generated:** 2026-05-21T07:03:36.524Z
-**Journals written today:** 7
-**Total axes tracked:** 40
+**Generated:** 2026-05-24T09:13:55.537Z
+**Journals written today:** 8
+**Total axes tracked:** 41
 
 ---
 
 ## Highest-confidence axes
 
-- `axis_epistemic_integrity`: conf 98%, score 0.431
-- `axis_power_accountability`: conf 98%, score -0.168
-- `axis_eje_accountability_v1`: conf 98%, score -0.630
+- `axis_epistemic_integrity`: conf 98%, score 0.434
+- `axis_power_accountability`: conf 98%, score -0.172
+- `axis_collective_voice`: conf 98%, score 0.110
 
 ---
 
 ## What moved today
 
-### ▼ Political Dynasties and Meritocracy
-- Score: -0.1000 → now 0.1572
-- Confidence: +24.4% → now 72%
+### ▲ Accountability for Extrajudicial Killings
+- Score: +0.0885 → now -0.5782
+- Confidence: +0.0% → now 98%
 - Driven by:
-  1. The House of Representatives approved on second reading the bill seeking to prohibit political dynas [@ABSCBNNews/status/2057028695165178018]
-  2. 'NOT SETTLING FOR LESS' Bagong Alyansang Makabayan President Renato Reyes Jr. says that the Filipino [@bncdotph/status/2057068305211637962]
-  3. House Bill No. 8389, which seeks to prohibit political dynasties, approved on second reading in the  [@gmanews/status/2057301806951313496]
+  1. 'MY DAD'S ALREADY GOT COMPANY THERE' That's the 'bad joke' of Davao City Mayor Baste Duterte in case [@News5PH/status/2058405364832653499]
+  2. Reports on Atty. Kristina Conti, ICC Assistant to Counsel, and legal counsel of EJK victims, discuss [@dzbb/status/2058350000000000000]
+  3. The National Union of Journalists of the Philippines (NUJP) is calling for justice for the slain rad [@balitaphl/status/2058406209812939053]
 
 ---
 
