@@ -721,6 +721,24 @@
       "pushed_to_origin": null,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_enhance_information_acquisition_reliability_1779614174000",
+      "title": "Enhance Information Acquisition Reliability for X and Web Content",
+      "status": "failed",
+      "proposed_at": "2026-05-24T09:16:13.887Z",
+      "resolved_at": "2026-05-24T11:08:35.357Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"TOOL_DECLARATIONS\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"TOOL_EXECUTORS\" was exported before but is missing after",
+      "files_changed": [
+        "runner/lib/agent_tools.js",
+        "runner/lib/get_page_content.js",
+        "runner/lib/web_search.js"
+      ],
+      "branch_name": "meta/proposal_enhance_information_acquisition_reliability_1779614174000",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }

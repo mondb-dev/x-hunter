@@ -1,6 +1,6 @@
 {
   "id": "proposal_enhance_information_acquisition_reliability_1779614174000",
-  "status": "pending",
+  "status": "failed",
   "title": "Enhance Information Acquisition Reliability for X and Web Content",
   "problem": "Recurring failures of `get_page_content` (for X profiles) and `web_search` tools to retrieve content, severely limiting the ability to track narrative propagation, verify claims, and gather external context, thus compromising the core vocation of unmasking narrative manipulation.",
   "evidence": [
@@ -16,6 +16,6 @@
   "scope": "pipeline",
   "estimated_risk": "medium",
   "created_at": "2026-05-24T09:16:13.887Z",
-  "resolved_at": null,
-  "resolution": null
+  "resolved_at": "2026-05-24T11:08:35.355Z",
+  "resolution": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"TOOL_DECLARATIONS\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"TOOL_EXECUTORS\" was exported before but is missing after"
 }
