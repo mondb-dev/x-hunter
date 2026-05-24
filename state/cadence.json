@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "last_assessed": "2026-05-24T10:09:21.355Z",
+  "last_assessed": "2026-05-24T17:15:24.005Z",
   "assessment": {
     "signal_density": "high",
     "belief_velocity": "low",
-    "post_pressure": "low",
-    "staleness": "low",
+    "post_pressure": "medium",
+    "staleness": "medium",
     "focus_note": "Tools (get_page_content, web_search) are not functioning, blocking all observation tasks. Must investigate tool functionality."
   },
   "directives": {
@@ -58,6 +58,74 @@
         "belief_velocity": "low",
         "post_pressure": "low",
         "staleness": "low",
+        "focus_note": "Tools (get_page_content, web_search) are not functioning, blocking all observation tasks. Must investigate tool functionality."
+      },
+      "directives": {
+        "cycle_interval_sec": 3600,
+        "next_cycle_type": null,
+        "browse_depth": "shallow",
+        "post_eagerness": "normal",
+        "curiosity_intensity": "low"
+      }
+    },
+    {
+      "ts": "2026-05-24T13:09:43.187Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "medium",
+        "post_pressure": "low",
+        "staleness": "high",
+        "focus_note": "Tools (get_page_content, web_search) are not functioning, blocking all observation tasks. Must investigate tool functionality."
+      },
+      "directives": {
+        "cycle_interval_sec": 3600,
+        "next_cycle_type": null,
+        "browse_depth": "shallow",
+        "post_eagerness": "normal",
+        "curiosity_intensity": "low"
+      }
+    },
+    {
+      "ts": "2026-05-24T14:09:19.217Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "medium",
+        "post_pressure": "low",
+        "staleness": "low",
+        "focus_note": "Tools (get_page_content, web_search) are not functioning, blocking all observation tasks. Must investigate tool functionality."
+      },
+      "directives": {
+        "cycle_interval_sec": 3600,
+        "next_cycle_type": null,
+        "browse_depth": "shallow",
+        "post_eagerness": "normal",
+        "curiosity_intensity": "low"
+      }
+    },
+    {
+      "ts": "2026-05-24T16:18:46.566Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "low",
+        "post_pressure": "medium",
+        "staleness": "medium",
+        "focus_note": "Tools (get_page_content, web_search) are not functioning, blocking all observation tasks. Must investigate tool functionality."
+      },
+      "directives": {
+        "cycle_interval_sec": 3600,
+        "next_cycle_type": null,
+        "browse_depth": "shallow",
+        "post_eagerness": "normal",
+        "curiosity_intensity": "low"
+      }
+    },
+    {
+      "ts": "2026-05-24T17:15:24.005Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "low",
+        "post_pressure": "medium",
+        "staleness": "medium",
         "focus_note": "Tools (get_page_content, web_search) are not functioning, blocking all observation tasks. Must investigate tool functionality."
       },
       "directives": {
