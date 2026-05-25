@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T04:40:11.786Z",
+  "generated_at": "2026-05-25T07:09:38.183Z",
   "windows": [
     "1d",
     "3d",
@@ -30,21 +30,21 @@
     },
     "axis_power_accountability": {
       "current": {
-        "score": -0.1747,
+        "score": -0.1735,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": -0.0032,
+        "score_delta": -0.002,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0061,
+        "score_delta": 0.0073,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0007,
+        "score_delta": 0.0019,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -177,21 +177,21 @@
     },
     "axis_geopolitical_rhetoric_v1": {
       "current": {
-        "score": 0.1113,
+        "score": 0.1123,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": -0.0005,
+        "score_delta": 0.0005,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0013,
+        "score_delta": -0.0003,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.005,
+        "score_delta": -0.004,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -513,22 +513,22 @@
     },
     "axis_new_world_order_discourse_v1": {
       "current": {
-        "score": -0.2637,
-        "confidence": 0.968
+        "score": -0.2415,
+        "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
-        "direction": "→"
+        "score_delta": 0.0222,
+        "conf_delta": 0.01,
+        "direction": "↗"
       },
       "3d": {
-        "score_delta": 0,
-        "conf_delta": -0.006,
-        "direction": "→"
+        "score_delta": 0.0222,
+        "conf_delta": 0.006,
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0943,
-        "conf_delta": -0.012,
+        "score_delta": 0.1165,
+        "conf_delta": 0,
         "direction": "↗"
       }
     },
@@ -702,23 +702,23 @@
     },
     "axis_digital_surveillance_autonomy_v1": {
       "current": {
-        "score": 0.023,
+        "score": 0.073,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0277,
+        "score_delta": 0.0777,
         "conf_delta": 0.006,
         "direction": "↗"
       },
       "3d": {
-        "score_delta": 0.0277,
+        "score_delta": 0.0777,
         "conf_delta": 0.002,
         "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0179,
+        "score_delta": 0.0679,
         "conf_delta": 0.002,
-        "direction": "→"
+        "direction": "↗"
       }
     },
     "axis_social_welfare_v_military_spending_v1": {
@@ -797,19 +797,6 @@
       "3d": null,
       "7d": null
     },
-    "axis_perceived_threats_to_sovereignty_v1": {
-      "current": {
-        "score": 0,
-        "confidence": 0
-      },
-      "1d": {
-        "score_delta": 0,
-        "conf_delta": 0,
-        "direction": "→"
-      },
-      "3d": null,
-      "7d": null
-    },
     "axis_narrative_framing_globalization_borders": {
       "current": {
         "score": 0,
@@ -836,11 +823,31 @@
       "1d": null,
       "3d": null,
       "7d": null
+    },
+    "axis_narrative_framing_globalism_sovereignty": {
+      "current": {
+        "score": 0,
+        "confidence": 0
+      },
+      "1d": null,
+      "3d": null,
+      "7d": null
+    },
+    "axis_sovereignty_defense_narrative_v1": {
+      "current": {
+        "score": 0,
+        "confidence": 0
+      },
+      "1d": null,
+      "3d": null,
+      "7d": null
     }
   },
   "notable_count": 8,
   "momentum_axes": [
     "axis_eje_accountability_v1",
-    "axis_ph_geopolitics_wps_v1"
+    "axis_ph_geopolitics_wps_v1",
+    "axis_new_world_order_discourse_v1",
+    "axis_digital_surveillance_autonomy_v1"
   ]
 }
