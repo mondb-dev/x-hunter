@@ -1,43 +1,41 @@
-[CURIOSITY: contradiction_axis_new_world_order_disco] @GlobalHealthOrg: "The interconnectedness of global health crises demands a unified response. Nationalistic approaches impede progress. #GlobalHealth #OneWorld" - This post promotes global governance and unified responses to crises, aligning with the "Acceptance or active promotion of global governance" pole.
-[CURIOSITY: contradiction_axis_new_world_order_disco] @SovereigntyNow: "Beware of those pushing for 'global solutions.' They seek to dismantle national borders and individual liberties. Protect your nation! #Sovereignty #Resist" - This post expresses strong skepticism towards global solutions and advocates for national sovereignty, aligning with the "Skepticism towards a centralized global order" pole.
-[CURIOSITY: contradiction_axis_new_world_order_disco] @TechFuture: "Digital identity systems are key to secure global commerce and efficient public services. The benefits far outweigh the privacy concerns. #DigitalID #Future" - This promotes digital identity systems as a component of global efficiency, aligning with the "Acceptance or active promotion of global governance" pole.
-[CURIOSITY: contradiction_axis_new_world_order_disco] @CitizenWatch: "The push for digital ID is a slippery slope to total surveillance. We must defend our privacy and autonomy from these 'benevolent' systems. #Privacy #NoDigitalID" - This expresses skepticism towards digital identity systems, aligning with the "Skepticism towards a centralized global order" pole.
-[SPRINT: research] @Emolclause: "Rep Massie: “I think the biggest crime I committed against the swamp…was showing the American people that somebody on the right could join somebody on the left and get something done, which is releasing the #Epstein files, that everybody knew needed to be done. That’s" (https://x.com/Emolclause/status/2058691799795863628) - This post highlights a political figure framing the release of sensitive information as a challenge to an entrenched system, relevant to understanding narratives around accountability and "the swamp."
-[SPRINT: research] @robinmonotti: "Data centers supply the massive computing power, storage, and AI analytics needed for the "inventory and control" of all land, resources, energy, information, and people that Rosa Koire describes in Agenda 21/2030." (https://x.com/robinmonotti/status/2058814560090386523) - This directly links data infrastructure to narratives of centralized control and surveillance, crucial for dissecting power's manipulation of information and autonomy.
-[SPRINT: research] @News5PH: "'THEY STILL WILL NOT WIN’ Senator Rodante Marcoleta spoke on the Senate floor to address the plunder and indirect bribery charges filed against him with the Ombudsman." (https://x.com/News5PH/status/2058838558954463636) - This exemplifies a political figure publicly addressing and potentially deflecting serious corruption charges, illustrating narrative management in the face of accountability.
-[SPRINT: research] @GloriaRosa202: "Watch this China Coast Guard Ship deliberately & forcefully colliding into a Bureau of Fisheries & Aquatic Resources vessel inside Filipino waters! And then China accuses Philippines of aggression & trespassing! This is BULLYING!" (https://x.com/GloriaRosa202/status/2058828006563647584) - This highlights a clear instance of geopolitical aggression followed by a narrative of blame-shifting, a common tactic for powerful entities to evade responsibility.
-[SPRINT: research] @Nher_who: "Auto Driver: "Earlier I used to earn 2000,now I earn 500,the rest is taken by the Govt My wife's medicine used to cost 1000, now it costs 2600 The Govt is useless and is looting the common public" This is the condition of common people while Modi enjoys Melody & Jhalmuri" (https://x.com/Nher_who/status/2058846404744008107) - This post presents a narrative of government corruption and public discontent over resource allocation, relevant to how power is perceived to manipulate public trust and resources.
-[SPRINT: research] @Jvnior: "Never forget when Alan Dershowitz, a jewish lawyer, said Epstein’s victims were antisemitic. I think it’s time for this video to go viral again." (https://x.com/Jvnior/status/2058635477196980589) - This post exposes an attempt to manipulate public perception and discredit victims by labeling them, a tactic used to shield powerful individuals from accountability.
-[SPRINT: research] @MarioNawfal: " Cops in Vancouver pulled this guy over and told him he had to come with them because a psychiatrist certified him under the Mental Health Act. "What is going on? I've never been given a psych eval. He just looked at me and said you're certified."" (https://x.com/MarioNawfal/status/2058807025232937329) - This illustrates a narrative of state power asserting control over an individual through mental health certification, raising concerns about individual autonomy versus institutional authority.
-[NOTED] "The entire Western world in 13 seconds" — 1 posts, no follow-up this cycle
-[NOTED] "Her name was Isabella Stroupe. She was 19. She loved books. Her family called her Bella. She was tied to a bed with a tow strap and tortured for months in an east Charlotte NC apartment. Multiple broken bones. St*b wounds. R*ped repeatedly. Her mother said she screamed and" — 1 posts, no follow-up this cycle
-[NOTED] "Repost if you love your Mom " — 1 posts, no follow-up this cycle
-[NOTED] "Thousands of Muslim pilgrims performed Tawaf at Mecca's Grand Mosque on May 24 ahead of the start of Hajj" — 1 posts, no follow-up this cycle
-[NOTED] "Woman falls into manhole during dog walk in Brazil 21 y.o Juliana Schiel stepped on a pavement slab, plunged into a hole, broke her teeth, injured her shoulder and ankle — but survived Her frantic dog alerted passers‑by, who pulled her out minutes later" — 1 posts, no follow-up this cycle
-[NOTED] "Someone 3D printed a working booze dispenser shaped like a cephalopod, and it actually functions. " — 1 posts, no follow-up this cycle
-[NOTED] "Chinese Principal EXPLODES in Singapore! School bus illegally parks on double yellow lines → Principal goes FULL RAGE mode at female security guards! Even though the bus is dropping students at a double line, a big no no in law abiding Singapore. A group of 34 Chinese" — 1 posts, no follow-up this cycle
-[NOTED] "HOLY SH*T: The Korean Community is calling OUT Karen Bass for being RACIST. The strongly support Spencer Pratt Would be a shame if everyone in California saw this TIME TO GET LOUD MAGA" — 1 posts, no follow-up this cycle
-[NOTED] "Xi Jinping welcomes Serbian President Aleksandar Vucic in Beijing The Serbian president is in China on a state visit until May 28 Vucic previously called his visit to Beijing 'the most important of his career'" — 1 posts, no follow-up this cycle
-[NOTED] "In South Korea , the solar panels in the middle of the highway have a bicycle path underneath - cyclists are protected from the sun, isolated from traffic, and the country can produce clean energy." — 1 posts, no follow-up this cycle
-[NOTED] "Mother opossum with her babies" — 1 posts, no follow-up this cycle
-[NOTED] "Two Turkish friends traveled 6,500 kilometers across three countries on a motorcycle, reaching Mecca in 17 days to perform Umrah. Follow: http://t.me/PressTV" — 1 posts, no follow-up this cycle
-[NOTED] "Twelve competitors scrambled up a 46-foot tower of buns in the first minutes, marking the climax of Hong Kong’s annual Cheung Chau Bun Festival" — 1 posts, no follow-up this cycle
-[NOTED] "Anti-riot police lobbed tear gas yesterday to disperse a political rally by former Meru Governor Kawira Mwangaza. The incident sparked chaos as she addressed the crowd." — 1 posts, no follow-up this cycle
-[NOTED] "‘SAD AKO KANINA KASI WALA KA, NGAYON HAPPY NA AKO’ WATCH: A two-year-old toddler melted hearts online after footage of her eagerly welcoming her father home from work went viral. : Jeanne Rio Mabag Panangui | @xharayaa #BeAnINQUIRER #BAIxINQ" — 1 posts, no follow-up this cycle
-[NOTED] "My cat doesn't know what why is going to mean!?" — 1 posts, no follow-up this cycle
-[NOTED] "He Sat Outside A Closed City Hall Building To Charge His Phone A Police Officer Arrested Him" — 1 posts, no follow-up this cycle
-[NOTED] "Bruce Springsteen just went ballistic against MAGA and Trump, and DOGE in Boston during his concert. “Wanna talk about snowflakes? We have a president who can’t tell the truth.”" — 1 posts, no follow-up this cycle
-[NOTED] "The best hottest liquid [↳ @?: The teacher said XXX is a Roman number, but when I went back home I searched on Google, I found out that Roman number do]" — 1 posts, no follow-up this cycle
-[NOTED] "He thought he was clever for setting the woman up... until the moment he saw her badge and realized he had made the biggest mistake of his life." — 1 posts, no follow-up this cycle
-[NOTED] "“Sorry I don’t talk in an uwu voice” then created one of the most viral sounds of 2021." — 1 posts, no follow-up this cycle
-[NOTED] "The man in the black t-shirt saved the day." — 1 posts, no follow-up this cycle
-[NOTED] "Genuine question, are cave explorers not worried about the water down there in regards to bacteria and diseases? I can't imagine pools of probably stagnant water probably full of bat shit is very good for you." — 1 posts, no follow-up this cycle
-[NOTED] "Thanks to the @oasishealthapp I’ve switched from poisonous FairLife Protein Milk to Bourbon and I can’t even begin to explain how much healthier I feel." — 1 posts, no follow-up this cycle
-[NOTED] "Forget smuggling cocaine or ivory, the money's now in... ants! Kenyan authorities arrested a Chinese man trying to take 2,200 live ants in his luggage. Sounds wild, but these are queens valued at about $225 each" — 1 posts, no follow-up this cycle
-[NOTED] "Australian hero! Watch as Australian surfer Mikey Wright rushes into the Hawaiian sea to rescue a struggling swimmer" — 1 posts, no follow-up this cycle
-[NOTED] "Never confuse kindness with weakness " — 1 posts, no follow-up this cycle
-[NOTED] "S’mores toastie with homemade honeycomb crunch" — 1 posts, no follow-up this cycle
-[NOTED] "Trump every time his ratings go down [↳ @?: BREAKING: White House locked down after as many as 30 shots fired in vicinity.]" — 1 posts, no follow-up this cycle
-[NOTED] "Fans of Italy’s Lucchese club raised a banner in solidarity with the victims of the Starobilsk strike during the club’s annual supporters festival." — 1 posts, no follow-up this cycle
-[NOTED] "The little girl jumping with joy when her father arrived and the lamb accompanying her." — 1 posts, no follow-up this cycle
-[NOTED] "Infer... Pogi ni Sen Migz " — 1 posts, no follow-up this cycle
+- [NOTED] "why" — 9 posts, no follow-up this cycle
+- [NOTED] "time" — 5 posts, no follow-up this cycle
+- [NOTED] "people" — 5 posts, no follow-up this cycle
+- [NOTED] "country" — 5 posts, no follow-up this cycle
+- [NOTED] "exactly" — 4 posts, no follow-up this cycle
+- [NOTED] "world" — 4 posts, no follow-up this cycle
+- [NOTED] "see" — 4 posts, no follow-up this cycle
+- [NOTED] "guy" — 3 posts, no follow-up this cycle
+- [NOTED] "right" — 3 posts, no follow-up this cycle
+- [NOTED] "tell" — 3 posts, no follow-up this cycle
+- [NOTED] "truth" — 3 posts, no follow-up this cycle
+- [NOTED] "china" — 3 posts, no follow-up this cycle
+- [NOTED] "know" — 3 posts, no follow-up this cycle
+- [NOTED] "stop" — 3 posts, no follow-up this cycle
+- [NOTED] "road" — 3 posts
+- [NOTED] "@EpicClipVault" — 1 post, no follow-up this cycle
+- [NOTED] "@News5PH" — 2 posts, no follow-up this cycle
+- [NOTED] "@Pinas4321" — 1 post, no follow-up this cycle
+- [NOTED] "@Nher_who" — 1 post, no follow-up this cycle
+- [NOTED] "@WallStreetApes" — 2 posts, no follow-up this cycle
+- [NOTED] "@krassenstein" — 1 post, no follow-up this cycle
+- [NOTED] "@RT_com" — 3 posts, no follow-up this cycle
+- [NOTED] "@Reuters" — 2 posts, no follow-up this cycle
+- [NOTED] "@zoomafrika1" — 2 posts, no follow-up this cycle
+- [NOTED] "@jesusfalcis" — 1 post, no follow-up this cycle
+- [NOTED] "@GraceGym_" — 1 post, no follow-up this cycle
+- [NOTED] "@SprinterPress" — 1 post, no follow-up this cycle
+- [NOTED] "@hippyygoat" — 1 post, no follow-up this cycle
+- [NOTED] "@ChinaNow24" — 2 posts, no follow-up this cycle
+- [NOTED] "@visegrad24" — 1 post, no follow-up this cycle
+- [NOTED] "@ricwe123" — 1 post, no follow-up this cycle
+- [NOTED] "@lahingpnoy" — 1 post, no follow-up this cycle
+- [NOTED] "@NatureUnedited" — 2 posts, no follow-up this cycle
+- [NOTED] "@Megatron_ron" — 1 post, no follow-up this cycle
+- [NOTED] "@RoshanKrRaii" — 1 post, no follow-up this cycle
+- [NOTED] "@jimNjue_" — 1 post, no follow-up this cycle
+- [NOTED] "@imbwayimpigi" — 1 post, no follow-up this cycle
+- [NOTED] "@xtian_mano" — 1 post, no follow-up this cycle
+- [NOTED] "@MAGAVoice" — 1 post, no follow-up this cycle
+- [NOTED] "@wholesome_X_" — 1 post, no follow-up this cycle
+- [NOTED] "@DrPaiwanFan" — 1 post, no follow-up this cycle

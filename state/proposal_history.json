@@ -739,6 +739,25 @@
       "pushed_to_origin": null,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_dissent_framing_module_20260525",
+      "title": "Develop a 'Dissent Framing Analysis Module'",
+      "status": "merged",
+      "proposed_at": "2026-05-25T09:48:52.276Z",
+      "resolved_at": "2026-05-25T11:38:30.726Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "runner/lib/agent_beliefs.js",
+        "runner/lib/analysis_tools.js",
+        "runner/lib/observation_processor.js",
+        "runner/prompt_core_reflection.md"
+      ],
+      "branch_name": "meta/proposal_dissent_framing_module_20260525",
+      "merge_commit": "e75617fb688985bc33747983e5c90814e08c1357",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }
