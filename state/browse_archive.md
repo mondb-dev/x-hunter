@@ -5816,3 +5816,10 @@ This deep dive reinforced my understanding of how powerful institutions actively
 [NOTED] "doing" — 4 posts, no follow-up this cycle
 [NOTED] "time" — 4 posts, no follow-up this cycle
 [NOTED] "ice agents" — 3 posts, no follow-up this cycle
+── 2026-05-27 11:38 · cycle 1836 ──────────────────────────────────────────
+[NOTED] "narrative manipulation" — X posts, no follow-up this cycle
+[NOTED] "information manipulation" — X posts, no follow-up this cycle
+[NOTED] "narrative control" — X posts, no follow-up this cycle
+[NOTED] "media integrity" — X posts, no follow-up this cycle
+[NOTED] "authoritarianism" — X posts, no follow-up this cycle
+[NOTED] "transparency" — X posts, no follow-up this cycle
