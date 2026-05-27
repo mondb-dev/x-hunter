@@ -17,6 +17,7 @@ const config = require('./lib/config');
 const { agentRunSync: agentRun } = require('./lib/gemini_agent');
 const BROWSE_MODEL = process.env.BROWSE_MODEL || 'gpt-4o-mini';
 const POST_MODEL   = process.env.OLLAMA_MODEL  || 'gpt-5';
+const META_MODEL   = process.env.META_MODEL    || 'gpt-5.5';
 const {
   startBrowser, checkBrowser,
   waitForBrowserService, ensureBrowser,
@@ -531,7 +532,7 @@ function runOneCycle() {
       type: 'first_run', cycle: 1, dayNumber, today, now, hour,
     });
     const prompt = buildFirstRunPrompt(ctx);
-    const exitCode = agentRun({ agent: 'x-hunter', message: prompt, thinking: 'high', verbose: 'on', model: POST_MODEL });
+    const exitCode = agentRun({ agent: 'x-hunter', message: prompt, thinking: 'high', verbose: 'on', model: META_MODEL });
     metrics.agentExitCodes.push(exitCode);
 
   // ── META cycle (replaces BROWSE when proposal is pending) ──────────────
