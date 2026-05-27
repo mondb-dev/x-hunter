@@ -1,105 +1,112 @@
 'use strict';
 
 /**
- * runner/lib/gemini_agent.js — Vertex AI Gemini function-calling agent loop
+ * runner/lib/gemini_agent.js — Ollama local LLM function-calling agent loop
  *
- * Replaces OpenClaw CLI. Sends prompts to Gemini via Vertex AI, handles
- * tool-use loops (LLM requests tool -> execute -> return result -> repeat),
- * and manages browser lifecycle per agent run.
+ * Drop-in replacement for the Vertex AI Gemini backend.
+ * Uses Ollama's OpenAI-compatible /v1/chat/completions endpoint.
  *
- * Uses:
- *   - gcp_auth.js for Vertex AI OAuth2 tokens
- *   - cdp.js for browser connection (puppeteer-core)
- *   - agent_tools.js for tool declarations and executors
+ * Same exports: agentRun, agentRunSync
  */
 
 const fs = require('fs');
 const path = require('path');
-const { getAccessToken, getProjectConfig } = require('../gcp_auth');
 const { connectBrowser, getXPage } = require('../cdp');
 const { TOOL_EXECUTORS, getBrowseTools, getTweetTools, sanitizeToolResult } = require('./agent_tools');
 const config = require('./config');
 
-const MODEL = 'gemini-2.5-flash';
-const MAX_TURNS = 40;           // max tool-use round-trips before force-stop
-const MAX_TIMEOUT_MS = 900_000; // 15 min hard timeout (matches old openclaw limit)
+const OLLAMA_BASE_URL = process.env.OLLAMA_BASE_URL || 'http://localhost:11434';
+const MODEL = process.env.OLLAMA_MODEL || 'gpt-4o-mini';
+function resolveApiKey() {
+  const url = OLLAMA_BASE_URL;
+  if (url.includes('openai.com')) return process.env.OPENAI_API_KEY || process.env.OPEN_AI_API_KEY || '';
+  if (url.includes('x.ai'))      return process.env.GROK_API_KEY || '';
+  return ''; // local Ollama — no key needed
+}
+const API_KEY = resolveApiKey();
+const MAX_TURNS = 40;
+const MAX_TIMEOUT_MS = 900_000; // 15 min
 
 function log(msg) {
   console.log(`[gemini-agent] ${msg}`);
 }
 
-// ── System prompt ────────────────────────────────────────────────────────────
+// ── System prompt ─────────────────────────────────────────────────────────────
 
 function loadSystemPrompt() {
   const agentsPath = path.join(config.PROJECT_ROOT, 'AGENTS.md');
+  let base = '';
   try {
-    return fs.readFileSync(agentsPath, 'utf-8');
+    base = fs.readFileSync(agentsPath, 'utf-8');
   } catch {
-    return '';
+    base = '';
   }
+  return base + '\n\n---\n' +
+    'CRITICAL — TOOL USE RULES:\n' +
+    '1. You MUST call write_file() to save every file. Never output file contents as text or markdown.\n' +
+    '2. Files are NOT saved unless you explicitly call write_file(path, content).\n' +
+    '3. After completing all observations, call write_file for each required file, then stop.\n' +
+    '4. Do not explain what you would write — just call write_file and write it.\n';
 }
 
-// ── Vertex AI API call ───────────────────────────────────────────────────────
+// ── Tool schema conversion (Gemini → OpenAI format) ───────────────────────────
 
-/**
- * Call Gemini generateContent on Vertex AI.
- * @param {object} opts
- * @param {Array} opts.contents - conversation messages
- * @param {string} opts.systemInstruction - system prompt text
- * @param {Array} opts.tools - tool declarations
- * @param {string} [opts.thinking] - thinking level: 'high'|'low' or omit
- * @returns {Promise<object>} raw API response
- */
-async function callGemini({ contents, systemInstruction, tools, thinking }) {
-  const token = await getAccessToken();
-  const { project, location } = getProjectConfig();
-
-  const url = `https://${location}-aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/google/models/${MODEL}:generateContent`;
-
-  const generationConfig = {
-    temperature: 0.7,
-    maxOutputTokens: 8192,
-  };
-
-  // Map thinking level to budget
-  if (thinking === 'high') {
-    generationConfig.thinkingConfig = { thinkingBudget: 8192 };
-  } else if (thinking === 'low') {
-    generationConfig.thinkingConfig = { thinkingBudget: 2048 };
-  } else {
-    generationConfig.thinkingConfig = { thinkingBudget: 0 };
+function convertSchema(schema) {
+  if (!schema || typeof schema !== 'object') return schema;
+  const out = { ...schema };
+  if (out.type && typeof out.type === 'string') out.type = out.type.toLowerCase();
+  if (out.properties) {
+    out.properties = Object.fromEntries(
+      Object.entries(out.properties).map(([k, v]) => [k, convertSchema(v)])
+    );
   }
+  if (out.items) out.items = convertSchema(out.items);
+  return out;
+}
 
+function toOpenAITools(geminiDeclarations) {
+  return geminiDeclarations.map(t => ({
+    type: 'function',
+    function: {
+      name: t.name,
+      description: t.description,
+      parameters: convertSchema(t.parameters) || { type: 'object', properties: {} },
+    },
+  }));
+}
+
+// ── Ollama API call ───────────────────────────────────────────────────────────
+
+async function callOllama({ messages, tools }) {
+  const isOllama = OLLAMA_BASE_URL.includes('localhost') || OLLAMA_BASE_URL.includes('127.0.0.1');
   const body = {
-    contents,
-    generationConfig,
+    model: MODEL,
+    messages,
+    stream: false,
+    ...(isOllama ? { options: { temperature: 0.7 } } : {}),
   };
-
-  if (systemInstruction) {
-    body.systemInstruction = { parts: [{ text: systemInstruction }] };
-  }
 
   if (tools && tools.length > 0) {
-    body.tools = [{ functionDeclarations: tools }];
+    body.tools = tools;
   }
 
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 120_000); // 2 min per API call
+  const timer = setTimeout(() => controller.abort(), 180_000); // 3 min per call
 
   try {
-    const res = await fetch(url, {
+    const headers = { 'Content-Type': 'application/json' };
+    if (API_KEY) headers['Authorization'] = 'Bearer ' + API_KEY;
+
+    const res = await fetch(`${OLLAMA_BASE_URL}/v1/chat/completions`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`,
-      },
+      headers,
       signal: controller.signal,
       body: JSON.stringify(body),
     });
 
     if (!res.ok) {
       const errBody = await res.text().catch(() => '');
-      throw new Error(`Vertex API HTTP ${res.status}: ${errBody.slice(0, 500)}`);
+      throw new Error(`Ollama HTTP ${res.status}: ${errBody.slice(0, 300)}`);
     }
 
     return await res.json();
@@ -108,55 +115,19 @@ async function callGemini({ contents, systemInstruction, tools, thinking }) {
   }
 }
 
-// ── Extract response parts ───────────────────────────────────────────────────
+// ── Main agent run ─────────────────────────────────────────────────────────────
 
-function extractParts(response) {
-  const candidate = response?.candidates?.[0];
-  if (!candidate?.content?.parts) return { text: '', functionCalls: [], parts: [] };
-
-  const parts = candidate.content.parts;
-  const textParts = parts.filter(p => p.text && !p.thought).map(p => p.text);
-  const functionCalls = parts.filter(p => p.functionCall);
-
-  return {
-    text: textParts.join(''),
-    functionCalls,
-    parts,
-    finishReason: candidate.finishReason,
-  };
-}
-
-// ── Main agent run ───────────────────────────────────────────────────────────
-
-/**
- * agentRun — replacement for openclaw agent CLI.
- *
- * Runs a Gemini function-calling loop:
- *   1. Send prompt + system instruction + tool declarations
- *   2. If Gemini returns function calls, execute them and send results back
- *   3. Repeat until Gemini returns text-only (no more tool calls) or max turns
- *
- * @param {object} opts
- * @param {string} opts.agent    - agent name (for logging, e.g. 'x-hunter')
- * @param {string} opts.message  - user prompt
- * @param {string} [opts.thinking] - 'high' | 'low' | undefined
- * @param {boolean} [opts.useBrowser] - whether to connect browser (default true)
- * @param {string} [opts.verbose] - 'on' for verbose logging
- * @returns {Promise<number>} exit code (0 = success)
- */
 async function agentRun({ agent, message, thinking, useBrowser = true, verbose }) {
   const startTs = Date.now();
   const deadline = startTs + MAX_TIMEOUT_MS;
 
   log(`starting agent=${agent} thinking=${thinking || 'none'} browser=${useBrowser}`);
 
-  // Load system prompt
   const systemInstruction = loadSystemPrompt();
+  const geminiTools = useBrowser ? getBrowseTools() : getTweetTools();
+  const tools = toOpenAITools(geminiTools);
 
-  // Select tools based on whether browser is needed
-  const tools = useBrowser ? getBrowseTools() : getTweetTools();
-
-  // Connect browser if needed
+  // Connect browser
   let browser = null;
   let page = null;
   if (useBrowser) {
@@ -181,18 +152,21 @@ async function agentRun({ agent, message, thinking, useBrowser = true, verbose }
 
   const toolCtx = { page };
 
-  // Build initial conversation
-  const contents = [
-    { role: 'user', parts: [{ text: message }] },
-  ];
+  // Build initial messages (OpenAI format)
+  const messages = [];
+  if (systemInstruction) {
+    messages.push({ role: 'system', content: systemInstruction });
+  }
+  messages.push({ role: 'user', content: message });
 
   let turn = 0;
   let exitCode = 0;
   let allText = '';
+  let writeFileCalled = false;
+  let toolNudgeSent = false; // only nudge once
 
   try {
     while (turn < MAX_TURNS) {
-      // Check timeout
       if (Date.now() > deadline) {
         log(`WARNING: exceeded ${MAX_TIMEOUT_MS / 1000}s — force-stopping`);
         exitCode = 1;
@@ -200,31 +174,24 @@ async function agentRun({ agent, message, thinking, useBrowser = true, verbose }
       }
 
       turn++;
-      if (verbose === 'on') {
-        log(`turn ${turn}/${MAX_TURNS}`);
-      }
+      log(`turn ${turn}/${MAX_TURNS}`);
 
-      // Call Gemini
+      // Call Ollama
       let response;
       try {
-        response = await callGemini({
-          contents,
-          systemInstruction,
-          tools: useBrowser ? getBrowseTools() : getTweetTools(),
-          thinking,
+        response = await callOllama({
+          messages,
+          tools: useBrowser ? toOpenAITools(getBrowseTools()) : toOpenAITools(getTweetTools()),
         });
       } catch (err) {
-        log(`ERROR: Gemini API call failed: ${err.message}`);
-        // Retry once after a short delay
+        log(`ERROR: Ollama API call failed: ${err.message}`);
         if (turn === 1) {
           log('retrying in 5s...');
           await new Promise(r => setTimeout(r, 5000));
           try {
-            response = await callGemini({
-              contents,
-              systemInstruction,
-              tools: useBrowser ? getBrowseTools() : getTweetTools(),
-              thinking,
+            response = await callOllama({
+              messages,
+              tools: useBrowser ? toOpenAITools(getBrowseTools()) : toOpenAITools(getTweetTools()),
             });
           } catch (retryErr) {
             log(`ERROR: retry failed: ${retryErr.message}`);
@@ -237,60 +204,86 @@ async function agentRun({ agent, message, thinking, useBrowser = true, verbose }
         }
       }
 
-      const { text, functionCalls, parts, finishReason } = extractParts(response);
-
-      // Log any text output
-      if (text && verbose === 'on') {
-        allText += text;
-        // Print to stdout like openclaw did
-        process.stdout.write(text);
-        if (!text.endsWith('\n')) process.stdout.write('\n');
+      const choice = response?.choices?.[0];
+      if (!choice) {
+        log('ERROR: empty response from Ollama');
+        exitCode = 1;
+        break;
       }
 
-      // If no function calls, we're done
-      if (functionCalls.length === 0) {
+      const { content, tool_calls, finish_reason } = choice.message;
+
+      if (content) {
+        allText += content;
+        if (verbose === 'on') {
+          process.stdout.write(content);
+          if (!content.endsWith('\n')) process.stdout.write('\n');
+        }
+      }
+
+      // No tool calls — check if we should nudge the model to use write_file
+      if (!tool_calls || tool_calls.length === 0) {
+        if (!writeFileCalled && !toolNudgeSent && allText.length > 200) {
+          // Model produced text but no tool calls — nudge it to call write_file
+          toolNudgeSent = true;
+          log('nudge: model produced text without calling write_file — requesting tool calls');
+          messages.push({ role: 'assistant', content: content || '' });
+          messages.push({
+            role: 'user',
+            content: 'You described file contents but did not call write_file(). ' +
+              'Now call write_file() for EACH file you described. ' +
+              'Do NOT repeat the file contents as text — call write_file() directly for each one.',
+          });
+          continue;
+        }
         log(`completed in ${turn} turn(s), ${Math.floor((Date.now() - startTs) / 1000)}s`);
         break;
       }
 
-      // Add assistant's response to conversation
-      contents.push({ role: 'model', parts });
+      // Add assistant message (with tool calls)
+      messages.push({
+        role: 'assistant',
+        content: content || null,
+        tool_calls,
+      });
 
-      // Execute function calls
-      const functionResponses = [];
-      for (const fc of functionCalls) {
-        const { name, args } = fc.functionCall;
-        log(`tool: ${name}(${JSON.stringify(args).slice(0, 100)})`);
+      // Execute tool calls and collect results
+      for (const tc of tool_calls) {
+        const fnName = tc.function?.name;
+        let fnArgs = {};
+        try {
+          fnArgs = JSON.parse(tc.function?.arguments || '{}');
+        } catch {
+          fnArgs = {};
+        }
 
-        const executor = TOOL_EXECUTORS[name];
+        log(`tool: ${fnName}(${JSON.stringify(fnArgs).slice(0, 100)})`);
+        if (fnName === 'write_file') writeFileCalled = true;
+
+        const executor = TOOL_EXECUTORS[fnName];
         let result;
         if (!executor) {
-          result = `Unknown tool: ${name}`;
+          result = `Unknown tool: ${fnName}`;
         } else {
           try {
-            result = await executor(args || {}, toolCtx);
+            result = await executor(fnArgs, toolCtx);
           } catch (err) {
             result = `Tool error: ${err.message}`;
           }
         }
 
-        // Truncate large results
         if (typeof result === 'string' && result.length > 20000) {
           result = result.slice(0, 20000) + '\n...(truncated)';
         }
 
-        // Sanitize external tool results to block prompt injection
         const safeResult = sanitizeToolResult(result);
-        functionResponses.push({
-          functionResponse: {
-            name,
-            response: { result: safeResult },
-          },
+
+        messages.push({
+          role: 'tool',
+          tool_call_id: tc.id,
+          content: typeof safeResult === 'string' ? safeResult : JSON.stringify(safeResult),
         });
       }
-
-      // Add tool results to conversation
-      contents.push({ role: 'user', parts: functionResponses });
     }
 
     if (turn >= MAX_TURNS) {
@@ -301,38 +294,111 @@ async function agentRun({ agent, message, thinking, useBrowser = true, verbose }
     log(`ERROR: unexpected: ${err.message}`);
     exitCode = 1;
   } finally {
-    // Disconnect browser (don't close — Chrome stays running for other scripts)
     if (browser) {
       try { browser.disconnect(); } catch {}
     }
   }
 
+  // Auto-save: parse model text output for files the model described but didn't write via tools
+  if (agent === 'x-hunter' && !writeFileCalled && allText.length > 200) {
+    // 1. Save state files from markdown code blocks: #### state/path.ext\n```lang\ncontent\n```
+    const stateBlockRe = /####\s+state\/([^\n]+)\n```[^\n]*\n([\s\S]*?)```/g;
+    let stateMatch;
+    while ((stateMatch = stateBlockRe.exec(allText)) !== null) {
+      const relPath = 'state/' + stateMatch[1].trim();
+      const content = stateMatch[2];
+      const fullPath = path.join(config.PROJECT_ROOT, relPath);
+      try {
+        fs.mkdirSync(path.dirname(fullPath), { recursive: true });
+        fs.writeFileSync(fullPath, content);
+        log('auto-saved from text: ' + relPath);
+      } catch (e) {
+        log('WARNING: auto-save failed for ' + relPath + ': ' + e.message);
+      }
+    }
 
-  // Auto-save journal if agent wrote it as text output instead of calling write_file
-  if (agent === 'x-hunter' && allText.includes('<article class="journal-entry">')) {
+    // 2. Save journal — look for expected path in the prompt message, then extract content
+    const jPathMatch = message && message.match(/journals\/((\d{4}-\d{2}-\d{2})_(\d{2}))\.html/);
+    if (jPathMatch) {
+      const jSlug = jPathMatch[1]; // e.g. "2026-05-27_12"
+      const jDate = jPathMatch[2];
+      const jHour = jPathMatch[3];
+      const jPath = path.join(config.JOURNALS_DIR, jSlug + '.html');
+      if (!fs.existsSync(jPath)) {
+        let journalContent = null;
+
+        // Try <article class="journal-entry">...</article>
+        const artMatch = allText.match(/<article[^>]*>[\s\S]*?<\/article>/i);
+        if (artMatch) journalContent = artMatch[0];
+
+        // Try markdown journal section: ### Journal for Day X
+        if (!journalContent) {
+          const mdMatch = allText.match(/###\s+Journal(?:\s+(?:for|entry)[^\n]*)?\n([\s\S]+?)(?=\n###|\n---|\n\*\*\*|$)/i);
+          if (mdMatch && mdMatch[1].length > 100) {
+            const dayMatch = allText.match(/Day\s+(\d+)/i);
+            const dayNum = dayMatch ? dayMatch[1] : '?';
+            const bodyHtml = mdMatch[1]
+              .replace(/^#{4}\s+(.+)$/gm, '<h4>$1</h4>')
+              .replace(/^#{3}\s+(.+)$/gm, '<h3>$1</h3>')
+              .replace(/^\[([^\]]+)\]\s+-.*$/gm, '<li>$1</li>')
+              .replace(/^-\s+(.+)$/gm, '<li>$1</li>')
+              .replace(/\n{2,}/g, '</p><p>')
+              .trim();
+            journalContent =
+              '<article class="journal-entry">\n' +
+              '  <header><h2>Day ' + dayNum + ' · Hour ' + jHour + '</h2></header>\n' +
+              '  <section class="stream"><p>' + bodyHtml + '</p></section>\n' +
+              '</article>';
+          }
+        }
+
+        if (journalContent) {
+          const dayMatch = allText.match(/Day\s+(\d+)/i);
+          const dayNum = dayMatch ? dayMatch[1] : '?';
+          const html = [
+            '<!DOCTYPE html>',
+            '<html lang="en">',
+            '<head>',
+            '  <meta charset="UTF-8">',
+            '  <meta name="x-hunter-date" content="' + jDate + '">',
+            '  <meta name="x-hunter-hour" content="' + jHour + '">',
+            '  <meta name="x-hunter-day" content="' + dayNum + '">',
+            '  <title>Journal — ' + jDate + ' ' + jHour + ':00</title>',
+            '</head>',
+            '<body>',
+            journalContent,
+            '</body>',
+            '</html>',
+          ].join('\n');
+          try {
+            fs.mkdirSync(path.dirname(jPath), { recursive: true });
+            fs.writeFileSync(jPath, html);
+            log('auto-saved journal from text output: ' + jPath);
+          } catch (writeErr) {
+            log('WARNING: auto-save journal failed: ' + writeErr.message);
+          }
+        }
+      }
+    }
+  } else if (agent === 'x-hunter' && !writeFileCalled && allText.includes('<article class="journal-entry">')) {
+    // Legacy fallback: HTML article in text
     const now = new Date();
     const jToday = now.toISOString().slice(0, 10);
     const jHour = String(now.getUTCHours()).padStart(2, '0');
-    const jPath = require('path').join(config.JOURNALS_DIR, jToday + '_' + jHour + '.html');
+    const jPath = path.join(config.JOURNALS_DIR, jToday + '_' + jHour + '.html');
     if (!fs.existsSync(jPath)) {
       const artMatch = allText.match(/<article class="journal-entry">[\s\S]*?<\/article>/);
       if (artMatch) {
         const dayMatch = allText.match(/Day (\d+)/);
         const dayNum = dayMatch ? dayMatch[1] : '?';
         const html = [
-          '<!DOCTYPE html>',
-          '<html lang="en">',
-          '<head>',
+          '<!DOCTYPE html>', '<html lang="en">', '<head>',
           '  <meta charset="UTF-8">',
           '  <meta name="x-hunter-date" content="' + jToday + '">',
           '  <meta name="x-hunter-hour" content="' + jHour + '">',
           '  <meta name="x-hunter-day" content="' + dayNum + '">',
           '  <title>Journal — ' + jToday + ' ' + jHour + ':00</title>',
-          '</head>',
-          '<body>',
-          artMatch[0],
-          '</body>',
-          '</html>',
+          '</head>', '<body>', artMatch[0], '</body>', '</html>',
         ].join('\n');
         try {
           fs.writeFileSync(jPath, html);
@@ -343,23 +409,17 @@ async function agentRun({ agent, message, thinking, useBrowser = true, verbose }
       }
     }
   }
+
   const elapsed = Math.floor((Date.now() - startTs) / 1000);
   log(`agent=${agent} exit=${exitCode} elapsed=${elapsed}s turns=${turn}`);
   return exitCode;
 }
 
-// ── Sync wrapper ─────────────────────────────────────────────────────────────
+// ── Sync wrapper ──────────────────────────────────────────────────────────────
 
-/**
- * agentRunSync — synchronous wrapper matching the old openclaw agent interface.
- *
- * The orchestrator calls this synchronously. We run the async agentRun
- * in a child process to avoid blocking the event loop.
- */
 function agentRunSync({ agent, message, thinking, verbose }) {
   const { execFileSync } = require('child_process');
 
-  // Write prompt to a temp file to avoid shell escaping issues
   const tmpPrompt = path.join(config.STATE_DIR, '.agent_prompt.tmp');
   fs.writeFileSync(tmpPrompt, message);
 
@@ -375,7 +435,7 @@ function agentRunSync({ agent, message, thinking, verbose }) {
     execFileSync('node', args, {
       stdio: 'inherit',
       env: process.env,
-      timeout: MAX_TIMEOUT_MS + 30_000, // extra 30s grace
+      timeout: MAX_TIMEOUT_MS + 30_000,
       killSignal: 'SIGKILL',
     });
     return 0;

@@ -34,8 +34,15 @@ function readState(filePath, opts = {}) {
 function formatCurrentAxes() {
   try {
     const d = JSON.parse(fs.readFileSync(config.ONTOLOGY_PATH, 'utf-8'));
-    const axes = d.axes || [];
+    let axes = d.axes || [];
     if (axes.length === 0) return '  (none yet)';
+    // For local models, cap to top 15 axes by evidence count to keep prompt manageable
+    const isLocalModel = !!process.env.OLLAMA_BASE_URL;
+    if (isLocalModel && axes.length > 15) {
+      axes = axes.slice().sort((a, b) =>
+        (b.evidence_log || []).length - (a.evidence_log || []).length
+      ).slice(0, 15);
+    }
     return axes.map(a => {
       const ev = (a.evidence_log || []).length;
       const conf = ((a.confidence || 0) * 100).toFixed(0);
@@ -341,7 +348,10 @@ function loadContext(opts) {
       signalDensity = cad?.assessment?.signal_density  || 'medium';
       browseDepth   = cad?.directives?.browse_depth    || 'normal';
     } catch {}
-    const digestTailLines = signalDensity === 'high' ? 300 : signalDensity === 'low' ? 80 : 160;
+    // Local Ollama models can't handle large contexts — cap digest at 60 lines
+    const isLocalModel = !!process.env.OLLAMA_BASE_URL;
+    const digestTailLines = isLocalModel ? 60
+      : signalDensity === 'high' ? 300 : signalDensity === 'low' ? 80 : 160;
     ctx.maxNavUrls  = browseDepth === 'shallow' ? 0 : browseDepth === 'deep' ? 3 : 1;
     ctx.browseDepth = browseDepth;
 

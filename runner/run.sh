@@ -54,9 +54,13 @@ if ! curl -sf "http://127.0.0.1:${CDP_PORT:-18801}/json/version" -o /dev/null --
   if sudo systemctl restart sebastian-browser.service 2>/dev/null; then
     sleep 5
   else
-    CHROME_BIN=$(command -v google-chrome-stable || command -v google-chrome || command -v chromium || echo "")
+    CHROME_BIN=$(command -v google-chrome-stable || command -v google-chrome || command -v chromium \
+      || echo "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
     CHROME_PROFILE="${CHROME_USER_DATA_DIR:-$HOME/.config/google-chrome/x-hunter}"
-    if [ -n "$CHROME_BIN" ]; then
+    if [ -f "$CHROME_BIN" ] || command -v "$CHROME_BIN" &>/dev/null; then
+      # Kill any stale CDP instance on this port (Mac: lsof; Linux: fuser)
+      lsof -ti:"${CDP_PORT:-18801}" 2>/dev/null | xargs kill -9 2>/dev/null || \
+        fuser -k "${CDP_PORT:-18801}/tcp" 2>/dev/null || true
       "$CHROME_BIN" --remote-debugging-port="${CDP_PORT:-18801}" \
         --user-data-dir="$CHROME_PROFILE" \
         --no-first-run --no-default-browser-check --headless=new \
@@ -132,20 +136,43 @@ reset_session() {
 # (openclaw can loop on gateway reconnect indefinitely after embedded completes)
 # If the agent exits in under 45s (likely a transient model/gateway error), retry once.
 agent_run() {
+  # Parse --message from args and write to temp file; pass rest through
+  local _agent="" _message="" _thinking="" _verbose="" _tmpfile=""
+  local _args=()
+  while [ $# -gt 0 ]; do
+    case "$1" in
+      --agent)    _agent="$2";    shift 2 ;;
+      --message)  _message="$2"; shift 2 ;;
+      --thinking) _thinking="$2"; shift 2 ;;
+      --verbose)  _verbose="$2";  shift 2 ;;
+      *)          _args+=("$1");  shift ;;
+    esac
+  done
+
+  _tmpfile=$(mktemp /tmp/agent_prompt.XXXXXX)
+  printf '%s' "$_message" > "$_tmpfile"
+
+  local _runner_args=("$PROJECT_ROOT/runner/lib/gemini_agent_runner.js")
+  [ -n "$_agent" ]    && _runner_args+=(--agent "$_agent")
+  _runner_args+=(--prompt-file "$_tmpfile")
+  [ -n "$_thinking" ] && _runner_args+=(--thinking "$_thinking")
+  [ -n "$_verbose" ]  && _runner_args+=(--verbose "$_verbose")
+
   local attempt=0
   while [ $attempt -lt 2 ]; do
     attempt=$(( attempt + 1 ))
     local start_ts elapsed
     start_ts=$(date +%s)
-    openclaw agent "$@" &
+    node "${_runner_args[@]}" &
     local PID=$!
     elapsed=0
     while kill -0 "$PID" 2>/dev/null; do
       sleep 5
       elapsed=$(( elapsed + 5 ))
       if [ "$elapsed" -ge 900 ]; then
-        echo "[run] WARNING: openclaw agent exceeded 900s — force-killing (pid $PID)"
+        echo "[run] WARNING: agent exceeded 900s — force-killing (pid $PID)"
         kill -9 "$PID" 2>/dev/null
+        rm -f "$_tmpfile"
         return 1
       fi
     done
@@ -156,41 +183,40 @@ agent_run() {
       echo "[run] agent exited in ${elapsed}s with error — retrying once (attempt $attempt/2)"
       sleep 5
     else
+      rm -f "$_tmpfile"
       return $exit_code
     fi
   done
+  rm -f "$_tmpfile"
 }
 
 # Restart gateway: kill directly + start + poll health (avoids openclaw's 60s internal timeout)
 restart_gateway() {
-  echo "[run] restarting gateway..."
-  # Prefer the managed systemd unit on the VM so the runner is not racing
-  # with process supervision when it needs to cycle the gateway.
-  if sudo systemctl restart openclaw-gateway.service 2>/dev/null; then
-    :
-  else
-    # Fallback for non-systemd environments.
-    pkill -f "openclaw-gateway" 2>/dev/null || true
-    sleep 2
-    openclaw gateway start 2>/dev/null || true
-  fi
-  # Poll HTTP health — faster than openclaw's internal 60s wait
-  local i=0
-  while [ $i -lt 15 ]; do
-    sleep 2; i=$(( i + 1 ))
-    if curl -sf "http://127.0.0.1:${GATEWAY_PORT}/" -o /dev/null 2>&1; then
-      echo "[run] gateway healthy (${i}x2s)"
-      return 0
-    fi
-  done
-  echo "[run] WARNING: gateway not healthy after 30s — proceeding"
+  # No-op: openclaw gateway removed. Agent uses gemini_agent.js (direct Vertex/Ollama API).
+  # Chrome restart is handled by start_browser() — called separately by ensure_browser().
+  echo "[run] restarting gateway (no-op — openclaw removed)..."
 }
 
 # Start browser + poll Chrome CDP port until responsive (replaces fixed sleeps)
 start_browser() {
-  openclaw browser --browser-profile x-hunter stop 2>/dev/null || true
+  # Kill stale Chrome on the CDP port then restart it
+  local CHROME_BIN
+  CHROME_BIN=$(command -v google-chrome-stable || command -v google-chrome || command -v chromium \
+    || echo "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
+  local CHROME_PROFILE="${CHROME_USER_DATA_DIR:-$HOME/.config/google-chrome/x-hunter}"
+  lsof -ti:"${CDP_PORT:-18801}" 2>/dev/null | xargs kill -9 2>/dev/null || \
+    fuser -k "${CDP_PORT:-18801}/tcp" 2>/dev/null || true
   sleep 1
-  openclaw browser --browser-profile x-hunter start 2>/dev/null || true
+  if [ -f "$CHROME_BIN" ] || command -v "$CHROME_BIN" &>/dev/null; then
+    "$CHROME_BIN" --remote-debugging-port="${CDP_PORT:-18801}" \
+      --user-data-dir="$CHROME_PROFILE" \
+      --no-first-run --no-default-browser-check --headless=new \
+      --disable-dev-shm-usage --disable-background-networking \
+      --disable-sync --disable-extensions &
+    echo "[run] Chrome started (pid $!)"
+  else
+    echo "[run] WARNING: Chrome binary not found — cannot restart browser"
+  fi
   # Poll Chrome's CDP port directly — gateway-independent readiness check
   local i=0
   while [ $i -lt 15 ]; do
