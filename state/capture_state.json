@@ -1,156 +1,97 @@
 {
-  "checked_at": "2026-05-26T09:56:04.071Z",
-  "evidence_24h": 88,
-  "unique_sources": 57,
-  "status": "clean",
-  "alerts": [],
-  "summary": "Evidence distribution looks healthy (88 entries across 57 sources, 14 axes).",
+  "checked_at": "2026-05-27T10:07:54.799Z",
+  "evidence_24h": 6,
+  "unique_sources": 6,
+  "status": "warning",
+  "alerts": [
+    {
+      "type": "axis_concentration",
+      "severity": "moderate",
+      "detail": "\"Integrity of Information and Social Media Manipulation\" received 67% of today's evidence (4/6)",
+      "axis_id": "axis_media_integrity_v1",
+      "share": 0.667
+    }
+  ],
+  "summary": "1 capture alert(s) detected:\n[MODERATE] \"Integrity of Information and Social Media Manipulation\" received 67% of today's evidence (4/6)",
   "source_concentration": {
-    "wallstreetapes": {
-      "username": "wallstreetapes",
-      "count": 8,
-      "share": 0.091
+    "tarabull": {
+      "username": "tarabull",
+      "count": 1,
+      "share": 0.167
     },
-    "nher_who": {
-      "username": "nher_who",
-      "count": 5,
-      "share": 0.057
+    "reuters": {
+      "username": "reuters",
+      "count": 1,
+      "share": 0.167
     },
-    "inquirerdotnet": {
-      "username": "inquirerdotnet",
-      "count": 5,
-      "share": 0.057
-    },
-    "gmanews": {
-      "username": "gmanews",
-      "count": 3,
-      "share": 0.034
-    },
-    "marionawfal": {
-      "username": "marionawfal",
-      "count": 3,
-      "share": 0.034
-    },
-    "proudsocialist": {
-      "username": "proudsocialist",
-      "count": 3,
-      "share": 0.034
-    },
-    "unknown": {
-      "username": "unknown",
-      "count": 3,
-      "share": 0.034
-    },
-    "ricwe123": {
-      "username": "ricwe123",
-      "count": 2,
-      "share": 0.023
+    "iranintl_en": {
+      "username": "iranintl_en",
+      "count": 1,
+      "share": 0.167
     },
     "sprinterpress": {
       "username": "sprinterpress",
-      "count": 2,
-      "share": 0.023
+      "count": 1,
+      "share": 0.167
     },
-    "pamphletsy": {
-      "username": "pamphletsy",
-      "count": 2,
-      "share": 0.023
+    "mog_russen": {
+      "username": "mog_russen",
+      "count": 1,
+      "share": 0.167
+    },
+    "inquirerdotnet": {
+      "username": "inquirerdotnet",
+      "count": 1,
+      "share": 0.167
     }
   },
   "axis_concentration": {
-    "axis_power_accountability": {
-      "axis_id": "axis_power_accountability",
-      "label": "Power, Institutions, and Rule of Law",
-      "count": 28,
-      "share": 0.318
-    },
-    "axis_political_trust_corruption_v1": {
-      "axis_id": "axis_political_trust_corruption_v1",
-      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
-      "count": 12,
-      "share": 0.136
+    "axis_media_integrity_v1": {
+      "axis_id": "axis_media_integrity_v1",
+      "label": "Integrity of Information and Social Media Manipulation",
+      "count": 4,
+      "share": 0.667
     },
     "axis_epistemic_integrity": {
       "axis_id": "axis_epistemic_integrity",
       "label": "Truth and Evidence in Public Discourse",
-      "count": 10,
-      "share": 0.114
-    },
-    "axis_new_world_order_discourse_v1": {
-      "axis_id": "axis_new_world_order_discourse_v1",
-      "label": "Discourse on the \"New World Order\": Centralized Global Governance vs. National Sovereignty/Individual Freedom",
-      "count": 8,
-      "share": 0.091
-    },
-    "axis_media_integrity_v1": {
-      "axis_id": "axis_media_integrity_v1",
-      "label": "Integrity of Information and Social Media Manipulation",
-      "count": 7,
-      "share": 0.08
-    },
-    "axis_immigration_policy_v_national_control_v1": {
-      "axis_id": "axis_immigration_policy_v_national_control_v1",
-      "label": "Immigration Policy: Open Borders vs. National Control and Cultural Preservation",
-      "count": 6,
-      "share": 0.068
-    },
-    "axis_geopolitical_rhetoric_v1": {
-      "axis_id": "axis_geopolitical_rhetoric_v1",
-      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
-      "count": 4,
-      "share": 0.045
-    },
-    "axis_ai_societal_impact_v1": {
-      "axis_id": "axis_ai_societal_impact_v1",
-      "label": "Societal Impact and Ethical Concerns of AI/Robots",
-      "count": 3,
-      "share": 0.034
+      "count": 1,
+      "share": 0.167
     },
     "axis_national_sovereignty_v_intl_law_v1": {
       "axis_id": "axis_national_sovereignty_v_intl_law_v1",
       "label": "National Sovereignty vs. International Law",
-      "count": 3,
-      "share": 0.034
-    },
-    "axis_global_power_realignments_v1": {
-      "axis_id": "axis_global_power_realignments_v1",
-      "label": "Global Power Realignments and Shifting Hegemony",
-      "count": 3,
-      "share": 0.034
+      "count": 1,
+      "share": 0.167
     }
   },
   "cluster_concentration": {
-    "unknown": {
-      "cluster": "unknown",
-      "count": 24,
-      "share": 0.273
-    },
-    "geopolitics": {
-      "cluster": "geopolitics",
-      "count": 23,
-      "share": 0.261
-    },
     "breaking_news": {
       "cluster": "breaking_news",
-      "count": 16,
-      "share": 0.182
+      "count": 2,
+      "share": 0.333
     },
-    "us_politics": {
-      "cluster": "us_politics",
-      "count": 6,
-      "share": 0.068
+    "middle_east": {
+      "cluster": "middle_east",
+      "count": 2,
+      "share": 0.333
+    },
+    "humor_memes": {
+      "cluster": "humor_memes",
+      "count": 1,
+      "share": 0.167
     },
     "disinformation": {
       "cluster": "disinformation",
-      "count": 4,
-      "share": 0.045
+      "count": 1,
+      "share": 0.167
     }
   },
   "pole_balance": {
-    "left": 29,
-    "right": 59,
+    "left": 3,
+    "right": 3,
     "neutral": 0,
-    "left_share": 0.33,
-    "right_share": 0.67
+    "left_share": 0.5,
+    "right_share": 0.5
   }
 }

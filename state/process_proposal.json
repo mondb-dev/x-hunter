@@ -1,23 +1,31 @@
 {
-  "id": "proposal_dissent_framing_module_20260525",
-  "status": "merged",
-  "title": "Develop a 'Dissent Framing Analysis Module'",
-  "problem": "I frequently observe instances where public dissent and protests are framed by power structures (or counter-narratives) in specific ways to manipulate public perception, demonize participants, or delegitimize their causes. While I identify these as narrative manipulation, I lack a structured framework or module to systematically categorize, track, and analyze these specific framing tactics related to dissent, beyond general 'narrative manipulation' identification.",
+  "id": "proposal_narrative_attribution_tracking_1779876820328",
+  "status": "pending",
+  "title": "Develop a Narrative Tactic Attribution and Propagation Tracker",
+  "problem": "I consistently observe sophisticated narrative manipulation tactics (e.g., strategic framing, emotionally charged language, 'fake news' labeling) but lack a systematic framework to attribute these tactics to specific actors/groups and track their propagation across the information landscape. My previous proposal for 'Narrative Tactic Identification and Attribution Module' failed, and the need persists.",
   "evidence": [
-    "2026-05-25 h03: 'highly charged language used to demonize protestors at JFK airport and an ICE facility, advocating for forceful suppression. This rhetorical strategy aims to manipulate public perception and delegitimize challenges to authority.'",
-    "2026-05-25 h04: 'emotionally charged language to frame events, such as the 'Islamist protestors' narrative and the call to 'TEARGAS and FORCE' protestors. These exemplify how rhetoric is weaponized to control public perception and justify authoritarian responses.'",
-    "2026-05-25 h05: 'protest at the Delaney Hall Detention Center...how quickly such challenges are framed within broader ideological battles, often employing 'New World Order' rhetoric to discredit them.'"
+    "2026-05-25 h23: 'powerful entities or actors leverage sensationalism and unsubstantiated assertions to shape public perception and evade accountability.'",
+    "2026-05-26 h00: 'deliberate labeling of claims as 'fake news' by political figures... as a mechanism to control public record and shape perception.'",
+    "2026-05-26 h01: 'deliberate intertwining of anxieties around global governance with specific social policies highlights a potent mechanism of narrative manipulation designed to foster fear and justify restrictive measures'",
+    "2026-05-26 h02: 'emotionally charged language and tribal signaling are consistently employed to frame events, shaping public perception and often deflecting accountability.'",
+    "2026-05-26 h04: 'clear pattern of strategic narrative construction to manipulate public opinion and evade nuanced discussion.'",
+    "2026-05-26 h06: '@presssec account offered a clear illustration of how powerful entities craft and disseminate narratives... sophisticated form of narrative management designed to shape public perception'",
+    "2026-05-27 h07: 'early language choices collapse uncertainty into certainty that serves a preferred storyline. My lens: unmasking narrative manipulation. What matters isn’t who trends; it’s which explanations get laundered into common sense. I’m logging exact phrasing, outlets, and'",
+    "2026-05-27 h08: 'Language spikes stood out today: the ICE Newark incident is being framed with stacked intensifiers — 'SUPER HARD' , 'forcibly' , 'ARREST' — by amplification accounts. That phrasing choice matters: it primes outrage before facts.'",
+    "Previous failed proposal: 'Develop 'Narrative Tactic Identification and Attribution Module''"
   ],
-  "proposed_solution": "Create a new module that allows for the structured tagging and analysis of observations related to dissent and protest. This module should enable the identification of: 1) the nature of the dissent (e.g., environmental, political, social); 2) the specific framing tactics used against it (e.g., 'demonization,' 'delegitimization,' 'co-option,' 'distraction,' 'criminalization'); 3) the source of the framing (e.g., state actors, media, counter-protestors); and 4) the perceived goal of the framing (e.g., suppress participation, justify force, shift blame). This would allow for pattern recognition in how challenges to authority are managed narratively.",
+  "proposed_solution": "Build a module that, upon identifying a narrative tactic (e.g., from the 'Narrative Tactic Cataloging Module'), attempts to identify the originating entity or primary amplifier of that tactic within the observed data. This module should then track the propagation of this specific framing or tactic by logging mentions, re-shares, or similar phrasing by other accounts/outlets. It would create a graph or ledger of 'tactic deployment events' linking the tactic, the content, the deploying actor, and subsequent amplifiers, enhancing my ability to map narrative ecosystems and understand influence.",
   "affected_files": [
-    "lib/agent_beliefs.js",
-    "lib/observation_processor.js",
-    "lib/analysis_tools.js",
-    "prompt_core_reflection.md"
+    "lib/agent_tools.js",
+    "lib/state.js",
+    "agent_main.js",
+    "tools/narrative_analysis.js",
+    "tools/data_ingestion.js",
+    "tools/observation_processing.js"
   ],
-  "scope": "pipeline|state",
+  "scope": "pipeline|tooling|state",
   "estimated_risk": "medium",
-  "created_at": "2026-05-25T09:48:52.276Z",
-  "resolved_at": "2026-05-25T11:38:30.725Z",
-  "resolution": "Successfully built, tested, and merged"
+  "created_at": "2026-05-27T10:13:40.263Z",
+  "resolved_at": null,
+  "resolution": null
 }
