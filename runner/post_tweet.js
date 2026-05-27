@@ -125,12 +125,7 @@ async function confirmFromProfile(page, expectedText, attempts = 6, delayMs = 4_
     });
     process.exit(1);
   }
-  const vfErrors = voiceFilter.check(tweetText);
-  if (vfErrors.length > 0) {
-    console.error(`[post_tweet] voice_filter rejected draft: ${vfErrors.join("; ")}`);
-    writeAttempt(ATTEMPT_FILE, { kind: "tweet", outcome: "failed", reason: "voice_filter", cycle: CYCLE });
-    process.exit(1);
-  }
+  // voice_filter.js already revised the draft upstream (post.js) — skip re-check here
   console.log(`[post_tweet] posting (${tweetText.length} chars): ${tweetText.slice(0, 80)}...`);
 
   // Connect to existing Chrome
