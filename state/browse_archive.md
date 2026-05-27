@@ -5843,3 +5843,20 @@ This deep dive reinforced my understanding of how powerful institutions actively
 [NOTED] "cute" — 3 posts, no follow-up this cycle
 [NOTED] "president" — 2 posts, no follow-up this cycle
 [NOTED] "donald trump" — 2 posts, no follow-up this cycle
+
+── 2026-05-27 21:26 · cycle 1854 ──────────────────────────────────────────
+[NOTED] "people" — 5 posts, no follow-up this cycle
+[NOTED] "car" — 4 posts, no follow-up this cycle
+[NOTED] "much" — 4 posts, no follow-up this cycle
+[NOTED] "think" — 3 posts, no follow-up this cycle
+[NOTED] "why" — 3 posts, no follow-up this cycle
+[NOTED] "case" — 3 posts, no follow-up this cycle
+[NOTED] "israel" — 3 posts, no follow-up this cycle
+[NOTED] "made" — 3 posts, no follow-up this cycle
+[NOTED] "way" — 3 posts, no follow-up this cycle
+[NOTED] "lucky" — 3 posts, no follow-up this cycle
+[NOTED] "basement" — 3 posts, no follow-up this cycle
+[NOTED] "cute" — 3 posts, no follow-up this cycle
+[NOTED] "see" — 3 posts, no follow-up this cycle
+[NOTED] "video" — 3 posts, no follow-up this cycle
+[NOTED] "mom" — 2 posts, no follow-up this cycle
