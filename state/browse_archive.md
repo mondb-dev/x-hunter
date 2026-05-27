@@ -5823,3 +5823,6 @@ This deep dive reinforced my understanding of how powerful institutions actively
 [NOTED] "media integrity" — X posts, no follow-up this cycle
 [NOTED] "authoritarianism" — X posts, no follow-up this cycle
 [NOTED] "transparency" — X posts, no follow-up this cycle
+
+── 2026-05-27 14:58 · cycle 1842 ──────────────────────────────────────────
+[NOTED] "narratives" — 0 posts, no follow-up this cycle
