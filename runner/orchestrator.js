@@ -69,11 +69,11 @@ function canRunMeta() {
     }
   } catch { return false; }
 
-  // 2. Max 1 META per 24h
+  // 2. Max 1 META per 7 days
   try {
     const lastRun = fs.readFileSync(META_STATE_PATH, 'utf-8').trim();
     const elapsed = Date.now() - new Date(lastRun).getTime();
-    if (elapsed < 24 * 60 * 60 * 1000) return false;
+    if (elapsed < 7 * 24 * 60 * 60 * 1000) return false;
   } catch {} // file missing = never run → OK
 
   // 3. Block if HEALTH check found CRITICAL errors in the last 2h

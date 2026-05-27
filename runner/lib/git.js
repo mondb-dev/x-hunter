@@ -59,14 +59,14 @@ function commitAndPush({ paths, message }) {
   if (pushOk) {
     let stashed = false;
     try {
-      execSync(`git -C "${root}" fetch origin`, { stdio: 'ignore', timeout: 20000 });
+      execSync(`git -C "${root}" fetch origin`, { stdio: 'ignore', timeout: 60000 });
       // Stash any leftover working-tree changes so rebase isn't blocked by unstaged files
       try {
         execSync(`git -C "${root}" stash --include-untracked`, { stdio: 'pipe', timeout: 15000 });
         stashed = true;
       } catch {}
       // -Xtheirs: VM state files always win over remote code-push changes
-      execSync(`git -C "${root}" rebase -Xtheirs origin/main`, { stdio: 'ignore', timeout: 30000 });
+      execSync(`git -C "${root}" rebase -Xtheirs origin/main`, { stdio: 'ignore', timeout: 60000 });
     } catch (e) {
       // Rebase conflict — abort and log; push will likely fail too but that's ok
       try { execSync(`git -C "${root}" rebase --abort`, { stdio: 'ignore', timeout: 10000 }); } catch {}
@@ -80,7 +80,7 @@ function commitAndPush({ paths, message }) {
   }
   try {
     if (pushOk) {
-      execSync(`git -C "${root}" push origin main`, { stdio: 'pipe', timeout: 30000 });
+      execSync(`git -C "${root}" push origin main`, { stdio: 'pipe', timeout: 60000 });
     }
   } catch (e) {
     pushOk = false;
