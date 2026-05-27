@@ -283,7 +283,9 @@ async function agentRun({ agent, message, thinking, useBrowser = true, verbose, 
         messages.push({
           role: 'tool',
           tool_call_id: tc.id,
-          content: typeof safeResult === 'string' ? safeResult : JSON.stringify(safeResult),
+          content: typeof safeResult === 'string'
+            ? safeResult
+            : (JSON.stringify(safeResult) ?? 'null'),
         });
       }
     }
