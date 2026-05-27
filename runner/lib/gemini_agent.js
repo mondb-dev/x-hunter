@@ -243,7 +243,7 @@ async function agentRun({ agent, message, thinking, useBrowser = true, verbose }
       // Add assistant message (with tool calls)
       messages.push({
         role: 'assistant',
-        content: content || null,
+        content: content || '',
         tool_calls,
       });
 
