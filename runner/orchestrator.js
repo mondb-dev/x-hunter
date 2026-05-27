@@ -15,6 +15,8 @@ const { execSync, spawn } = require('child_process');
 
 const config = require('./lib/config');
 const { agentRunSync: agentRun } = require('./lib/gemini_agent');
+const BROWSE_MODEL = process.env.BROWSE_MODEL || 'gpt-4o-mini';
+const POST_MODEL   = process.env.OLLAMA_MODEL  || 'gpt-5';
 const {
   startBrowser, checkBrowser,
   waitForBrowserService, ensureBrowser,
@@ -529,7 +531,7 @@ function runOneCycle() {
       type: 'first_run', cycle: 1, dayNumber, today, now, hour,
     });
     const prompt = buildFirstRunPrompt(ctx);
-    const exitCode = agentRun({ agent: 'x-hunter', message: prompt, thinking: 'high', verbose: 'on' });
+    const exitCode = agentRun({ agent: 'x-hunter', message: prompt, thinking: 'high', verbose: 'on', model: POST_MODEL });
     metrics.agentExitCodes.push(exitCode);
 
   // ── META cycle (replaces BROWSE when proposal is pending) ──────────────
@@ -672,7 +674,7 @@ function runOneCycle() {
     }
     const journalBefore = journalInGit(today, hour);
 
-    const browseExit = agentRun({ agent: 'x-hunter', message: prompt, thinking: 'low', verbose: 'on' });
+    const browseExit = agentRun({ agent: 'x-hunter', message: prompt, thinking: 'low', verbose: 'on', model: BROWSE_MODEL });
     metrics.agentExitCodes.push(browseExit);
 
     // Retry if journal missing
@@ -680,7 +682,7 @@ function runOneCycle() {
     if (!journalAfter && !journalBefore && !fileExists(journalPath)) {
       log('browse journal missing after agent run — retrying once (no thinking)');
       sleepSec(5);
-      const retryExit = agentRun({ agent: 'x-hunter', message: prompt, verbose: 'on' });
+      const retryExit = agentRun({ agent: 'x-hunter', message: prompt, verbose: 'on', model: BROWSE_MODEL });
       metrics.agentExitCodes.push(retryExit);
     }
 
@@ -758,7 +760,7 @@ function runOneCycle() {
     try { fs.unlinkSync(path.join(config.STATE_DIR, 'quote_result.txt')); } catch {}
     try { fs.unlinkSync(path.join(config.STATE_DIR, 'quote_attempt.json')); } catch {}
 
-    const quoteExit = agentRun({ agent: 'x-hunter', message: prompt, thinking: 'low', verbose: 'on' });
+    const quoteExit = agentRun({ agent: 'x-hunter', message: prompt, thinking: 'low', verbose: 'on', model: POST_MODEL });
     metrics.agentExitCodes.push(quoteExit);
 
     // Restore state
@@ -820,14 +822,14 @@ function runOneCycle() {
       try { fs.unlinkSync(path.join(config.STATE_DIR, 'tweet_result.txt')); } catch {}
       try { fs.unlinkSync(path.join(config.STATE_DIR, 'tweet_attempt.json')); } catch {}
 
-      const tweetExit = agentRun({ agent: 'x-hunter-tweet', message: prompt, thinking: 'low', verbose: 'on' });
+      const tweetExit = agentRun({ agent: 'x-hunter-tweet', message: prompt, thinking: 'low', verbose: 'on', model: POST_MODEL });
       metrics.agentExitCodes.push(tweetExit);
 
       // Retry if tweet_draft.txt missing
       if (!fileExists(config.TWEET_DRAFT_PATH)) {
         log('tweet_draft.txt missing after agent run — retrying once (no thinking)');
         sleepSec(5);
-        const retryExit = agentRun({ agent: 'x-hunter-tweet', message: prompt, verbose: 'on' });
+        const retryExit = agentRun({ agent: 'x-hunter-tweet', message: prompt, verbose: 'on', model: POST_MODEL });
         metrics.agentExitCodes.push(retryExit);
       }
     }

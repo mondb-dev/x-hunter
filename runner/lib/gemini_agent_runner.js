@@ -37,6 +37,7 @@ const agent = getArg('agent') || 'x-hunter';
 const promptFile = getArg('prompt-file');
 const thinking = getArg('thinking');
 const verbose = getArg('verbose');
+const model = getArg('model');
 
 if (!promptFile || !fs.existsSync(promptFile)) {
   console.error('[gemini-agent-runner] --prompt-file is required and must exist');
@@ -51,7 +52,7 @@ const useBrowser = agent !== 'x-hunter-tweet' && !message.includes('No browser t
 
 (async () => {
   try {
-    const exitCode = await agentRun({ agent, message, thinking, useBrowser, verbose });
+    const exitCode = await agentRun({ agent, message, thinking, useBrowser, verbose, model });
     process.exit(exitCode);
   } catch (err) {
     console.error(`[gemini-agent-runner] fatal: ${err.message}`);

@@ -77,10 +77,10 @@ function toOpenAITools(geminiDeclarations) {
 
 // ── Ollama API call ───────────────────────────────────────────────────────────
 
-async function callOllama({ messages, tools }) {
+async function callOllama({ messages, tools, model }) {
   const isOllama = OLLAMA_BASE_URL.includes('localhost') || OLLAMA_BASE_URL.includes('127.0.0.1');
   const body = {
-    model: MODEL,
+    model: model || MODEL,
     messages,
     stream: false,
     ...(isOllama ? { options: { temperature: 0.7 } } : {}),
@@ -117,11 +117,11 @@ async function callOllama({ messages, tools }) {
 
 // ── Main agent run ─────────────────────────────────────────────────────────────
 
-async function agentRun({ agent, message, thinking, useBrowser = true, verbose }) {
+async function agentRun({ agent, message, thinking, useBrowser = true, verbose, model }) {
   const startTs = Date.now();
   const deadline = startTs + MAX_TIMEOUT_MS;
 
-  log(`starting agent=${agent} thinking=${thinking || 'none'} browser=${useBrowser}`);
+  log(`starting agent=${agent} thinking=${thinking || 'none'} browser=${useBrowser} model=${model || MODEL}`);
 
   const systemInstruction = loadSystemPrompt();
   const geminiTools = useBrowser ? getBrowseTools() : getTweetTools();
@@ -182,6 +182,7 @@ async function agentRun({ agent, message, thinking, useBrowser = true, verbose }
         response = await callOllama({
           messages,
           tools: useBrowser ? toOpenAITools(getBrowseTools()) : toOpenAITools(getTweetTools()),
+          model,
         });
       } catch (err) {
         log(`ERROR: Ollama API call failed: ${err.message}`);
@@ -192,6 +193,7 @@ async function agentRun({ agent, message, thinking, useBrowser = true, verbose }
             response = await callOllama({
               messages,
               tools: useBrowser ? toOpenAITools(getBrowseTools()) : toOpenAITools(getTweetTools()),
+              model,
             });
           } catch (retryErr) {
             log(`ERROR: retry failed: ${retryErr.message}`);
@@ -417,7 +419,7 @@ async function agentRun({ agent, message, thinking, useBrowser = true, verbose }
 
 // ── Sync wrapper ──────────────────────────────────────────────────────────────
 
-function agentRunSync({ agent, message, thinking, verbose }) {
+function agentRunSync({ agent, message, thinking, verbose, model }) {
   const { execFileSync } = require('child_process');
 
   const tmpPrompt = path.join(config.STATE_DIR, '.agent_prompt.tmp');
@@ -430,6 +432,7 @@ function agentRunSync({ agent, message, thinking, verbose }) {
   ];
   if (thinking) args.push('--thinking', thinking);
   if (verbose) args.push('--verbose', verbose);
+  if (model) args.push('--model', model);
 
   try {
     execFileSync('node', args, {
