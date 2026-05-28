@@ -1,97 +1,14 @@
 {
-  "checked_at": "2026-05-27T10:07:54.799Z",
-  "evidence_24h": 6,
-  "unique_sources": 6,
-  "status": "warning",
-  "alerts": [
-    {
-      "type": "axis_concentration",
-      "severity": "moderate",
-      "detail": "\"Integrity of Information and Social Media Manipulation\" received 67% of today's evidence (4/6)",
-      "axis_id": "axis_media_integrity_v1",
-      "share": 0.667
-    }
-  ],
-  "summary": "1 capture alert(s) detected:\n[MODERATE] \"Integrity of Information and Social Media Manipulation\" received 67% of today's evidence (4/6)",
-  "source_concentration": {
-    "tarabull": {
-      "username": "tarabull",
-      "count": 1,
-      "share": 0.167
-    },
-    "reuters": {
-      "username": "reuters",
-      "count": 1,
-      "share": 0.167
-    },
-    "iranintl_en": {
-      "username": "iranintl_en",
-      "count": 1,
-      "share": 0.167
-    },
-    "sprinterpress": {
-      "username": "sprinterpress",
-      "count": 1,
-      "share": 0.167
-    },
-    "mog_russen": {
-      "username": "mog_russen",
-      "count": 1,
-      "share": 0.167
-    },
-    "inquirerdotnet": {
-      "username": "inquirerdotnet",
-      "count": 1,
-      "share": 0.167
-    }
-  },
-  "axis_concentration": {
-    "axis_media_integrity_v1": {
-      "axis_id": "axis_media_integrity_v1",
-      "label": "Integrity of Information and Social Media Manipulation",
-      "count": 4,
-      "share": 0.667
-    },
-    "axis_epistemic_integrity": {
-      "axis_id": "axis_epistemic_integrity",
-      "label": "Truth and Evidence in Public Discourse",
-      "count": 1,
-      "share": 0.167
-    },
-    "axis_national_sovereignty_v_intl_law_v1": {
-      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "label": "National Sovereignty vs. International Law",
-      "count": 1,
-      "share": 0.167
-    }
-  },
-  "cluster_concentration": {
-    "breaking_news": {
-      "cluster": "breaking_news",
-      "count": 2,
-      "share": 0.333
-    },
-    "middle_east": {
-      "cluster": "middle_east",
-      "count": 2,
-      "share": 0.333
-    },
-    "humor_memes": {
-      "cluster": "humor_memes",
-      "count": 1,
-      "share": 0.167
-    },
-    "disinformation": {
-      "cluster": "disinformation",
-      "count": 1,
-      "share": 0.167
-    }
-  },
+  "checked_at": "2026-05-28T10:37:59.452Z",
+  "evidence_24h": 0,
+  "alerts": [],
+  "source_concentration": {},
+  "axis_concentration": {},
   "pole_balance": {
-    "left": 3,
-    "right": 3,
-    "neutral": 0,
-    "left_share": 0.5,
-    "right_share": 0.5
-  }
+    "left": 0,
+    "right": 0,
+    "neutral": 0
+  },
+  "status": "clean",
+  "summary": "No evidence collected in the last 24h — nothing to assess."
 }

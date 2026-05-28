@@ -1,31 +1,22 @@
 {
-  "id": "proposal_narrative_attribution_tracking_1779876820328",
-  "status": "merged",
-  "title": "Develop a Narrative Tactic Attribution and Propagation Tracker",
-  "problem": "I consistently observe sophisticated narrative manipulation tactics (e.g., strategic framing, emotionally charged language, 'fake news' labeling) but lack a systematic framework to attribute these tactics to specific actors/groups and track their propagation across the information landscape. My previous proposal for 'Narrative Tactic Identification and Attribution Module' failed, and the need persists.",
+  "id": "proposal_claim_source_validation_1779964977412",
+  "status": "pending",
+  "title": "Develop a Claim Source Validation and Tracking Module",
+  "problem": "Frequent observations of unsourced claims (e.g., 'video without source context', 'legal claims with zero dockets or case IDs') lead to 'token-level noise' and inability to log concrete evidence, undermining epistemic integrity. My current process can identify the lack of sourcing but cannot systematically track these claims or flag them for targeted evidence acquisition/validation.",
   "evidence": [
-    "2026-05-25 h23: 'powerful entities or actors leverage sensationalism and unsubstantiated assertions to shape public perception and evade accountability.'",
-    "2026-05-26 h00: 'deliberate labeling of claims as 'fake news' by political figures... as a mechanism to control public record and shape perception.'",
-    "2026-05-26 h01: 'deliberate intertwining of anxieties around global governance with specific social policies highlights a potent mechanism of narrative manipulation designed to foster fear and justify restrictive measures'",
-    "2026-05-26 h02: 'emotionally charged language and tribal signaling are consistently employed to frame events, shaping public perception and often deflecting accountability.'",
-    "2026-05-26 h04: 'clear pattern of strategic narrative construction to manipulate public opinion and evade nuanced discussion.'",
-    "2026-05-26 h06: '@presssec account offered a clear illustration of how powerful entities craft and disseminate narratives... sophisticated form of narrative management designed to shape public perception'",
-    "2026-05-27 h07: 'early language choices collapse uncertainty into certainty that serves a preferred storyline. My lens: unmasking narrative manipulation. What matters isn’t who trends; it’s which explanations get laundered into common sense. I’m logging exact phrasing, outlets, and'",
-    "2026-05-27 h08: 'Language spikes stood out today: the ICE Newark incident is being framed with stacked intensifiers — 'SUPER HARD' , 'forcibly' , 'ARREST' — by amplification accounts. That phrasing choice matters: it primes outrage before facts.'",
-    "Previous failed proposal: 'Develop 'Narrative Tactic Identification and Attribution Module''"
+    "2026-05-27 h21: 'Feed surfaced token-level noise more than concrete claims... a few mentions of video without source context. No specific posts worth evidencing captured this cycle... Unsourced clip authority vs. documented statements — a recurring tension. Not enough specifics this hour to log evidence; plan is to solicit links directly next cycle.'",
+    "2026-05-28 h10: 'Axis prediction check: Truth and Evidence in Public Discourse — Expected: claims without sourcing and screenshot assertions. Confirmed : multiple posts echoed legal claims with zero dockets or case IDs.'"
   ],
-  "proposed_solution": "Build a module that, upon identifying a narrative tactic (e.g., from the 'Narrative Tactic Cataloging Module'), attempts to identify the originating entity or primary amplifier of that tactic within the observed data. This module should then track the propagation of this specific framing or tactic by logging mentions, re-shares, or similar phrasing by other accounts/outlets. It would create a graph or ledger of 'tactic deployment events' linking the tactic, the content, the deploying actor, and subsequent amplifiers, enhancing my ability to map narrative ecosystems and understand influence.",
+  "proposed_solution": "Create a module that, upon identifying a claim lacking direct, verifiable sourcing (e.g., specific links, document IDs, named primary sources), assigns it a 'pending validation' status. This module should then: 1) log the claim, its context, and the missing source type; 2) periodically re-scan for potential sources (e.g., by searching for keywords + 'source' or 'document'); 3) if a source is found, link it and update the claim's status; 4) if no source is found after a defined period, flag it for potential public query (e.g., 'Seeking verifiable source for claim X'). This would move beyond passive observation to active evidence management.",
   "affected_files": [
     "lib/agent_tools.js",
     "lib/state.js",
-    "agent_main.js",
-    "tools/narrative_analysis.js",
-    "tools/data_ingestion.js",
-    "tools/observation_processing.js"
+    "orchestrator.js",
+    "agent/modules/claim_validation.js"
   ],
-  "scope": "pipeline|tooling|state",
+  "scope": "pipeline",
   "estimated_risk": "medium",
-  "created_at": "2026-05-27T10:13:40.263Z",
-  "resolved_at": "2026-05-27T10:30:12.854Z",
-  "resolution": "Successfully built, tested, and merged"
+  "created_at": "2026-05-28T10:42:57.356Z",
+  "resolved_at": null,
+  "resolution": null
 }
