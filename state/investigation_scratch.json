@@ -1,21 +1,47 @@
 {
   "claim": "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed.",
   "source_handle": "@savsays",
-  "phase": "PHASE 3 — CROSS-REFERENCE",
   "sub_questions": [
-    {"id": 1, "question": "Did an incident occur in which reporter Savanah Hernandez was assaulted during an anti-ICE protest?", "status": "unresolved"},
-    {"id": 2, "question": "Are there videos clearly showing the incident, and can we verify their date, location, and authenticity?", "status": "unresolved"},
-    {"id": 3, "question": "Was a person named Paige Ostroushko identified and arrested in connection with the incident? If so, by which police department and when?", "status": "unresolved"},
-    {"id": 4, "question": "Were criminal charges filed (or announced to be filed) against Paige Ostroushko, and what are the specific charges?", "status": "unresolved"},
-    {"id": 5, "question": "What is the attribution chain? Did @savsays originate the claim, and have independent outlets (police statements, court records, mainstream news) confirmed it?", "status": "unresolved"}
+    "Did an incident occur at an anti-ICE protest in which reporter Savanah (Sav) Hernandez was assaulted on camera?",
+    "Is the person in the video(s) who allegedly assaulted Hernandez identified as Paige Ostroushko?",
+    "Was Paige Ostroushko arrested in connection with this incident (date, agency, location)?",
+    "Are there official records (police statement, booking record, court filing) confirming arrest and charges?",
+    "What is the original source of the identity/arrest claim (e.g., Hernandez tweet, police release), and when/where did it happen?"
   ],
-  "contradiction_searches": [
-    "Search: 'Paige Ostroushko denied', 'Paige Ostroushko hoax', 'Paige Ostroushko false' (no retrievable results)",
-    "Search: 'Savanah Hernandez assault false', 'Savanah Hernandez hoax' (no retrievable results)",
-    "Looked for mainstream coverage (AP, Reuters, local TV in likely cities) — no results found in this session"
+  "queries_tried": [
+    "Paige Ostroushko arrested assaulting reporter Savanah Hernandez anti-ICE protest",
+    "\"Paige Ostroushko\"",
+    "\"Paige Ostroushko\" arrest",
+    "Savanah Hernandez assaulted anti-ICE protest video arrest",
+    "Paige Ostroushko Savanah Hernandez ICE protest",
+    "Savannah Hernandez assaulted protest ICE",
+    "\"assaulted\" \"Savanah Hernandez\"",
+    "\"SavSays\" assault video protest",
+    "\"Savanah\" Hernandez assault video",
+    "\"Savannah Hernandez\" protest assaulted",
+    "Ostroushko Minneapolis arrest",
+    "\"Paige Ostruszko\"",
+    "Paige Ostroshko",
+    "\"Ostroushko\" Paige site:x.com",
+    "\"Ostroushko\" arrest protest",
+    "Sav Says Savanah Hernandez assaulted protest arrested"
+  ],
+  "navigation_attempts": [
+    {"url": "https://x.com/savsays", "status": "no_content_returned"},
+    {"url": "https://x.com/search?q=Paige%20Ostroushko&src=typed_query&f=live", "status": "no_content_returned"},
+    {"url": "https://www.google.com/search?q=%5C%22Paige+Ostroushko%5C%22", "status": "no_content_returned"},
+    {"url": "https://duckduckgo.com/?q=%5C%22Paige+Ostroushko%5C%22", "status": "no_content_returned"}
+  ],
+  "findings": [
+    "Could not retrieve content from @savsays profile or search results due to tool limitations in this session.",
+    "Web searches for the exact name 'Paige Ostroushko' and variant spellings returned no accessible results via tools.",
+    "No independent confirmation (news articles, police press releases, court records) could be located with available tools."
+  ],
+  "attribution_chain": [
+    {"level": 0, "description": "Original claim attributed to @savsays on X; page could not be loaded in this session", "url": "https://x.com/savsays"}
   ],
   "notes": [
-    "Absence of corroboration across multiple searches suggests either the incident is very recent/localized with limited indexing, the name is misspelled, or the claim may be unverified.",
-    "Next step if tools allowed: check @savsays tweet for exact wording, date, and video; identify the city and police department; query that department's arrest logs and press releases by date; search local court docket for 'Ostroushko'."
+    "The surname 'Ostroushko' is uncommon; lack of search hits may indicate misspelling or that the claim is very recent/local.",
+    "Further verification would require viewing the specific @savsays post and locating a police department statement or booking record."
   ]
 }
