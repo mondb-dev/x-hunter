@@ -97,4 +97,10 @@ module.exports = {
   TOOL_RESULT_PATH:    path.join(STATE_DIR, 'tool_result.json'),
   TOOL_TIMEOUT_MS:     30000,
   WORKFLOW_TIMEOUT_MS: 300000,
+
+  // Sandbox
+  SANDBOXES_DIR:            path.join(PROJECT_ROOT, 'sandboxes'),
+  SANDBOX_MAX_OLD_SPACE_MB: 256,
+  SANDBOX_REAP_MAX_AGE_MS:  3600000,
+  SANDBOX_STDIO_MAX_BYTES:  1048576,
 };

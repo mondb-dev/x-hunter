@@ -90,29 +90,53 @@ async function callOllama({ messages, tools, model }) {
     body.tools = tools;
   }
 
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 180_000); // 3 min per call
+  const headers = { 'Content-Type': 'application/json' };
+  if (API_KEY) headers['Authorization'] = 'Bearer ' + API_KEY;
 
-  try {
-    const headers = { 'Content-Type': 'application/json' };
-    if (API_KEY) headers['Authorization'] = 'Bearer ' + API_KEY;
+  const MAX_RETRIES = 4;
+  let lastErr;
 
-    const res = await fetch(`${OLLAMA_BASE_URL}/v1/chat/completions`, {
-      method: 'POST',
-      headers,
-      signal: controller.signal,
-      body: JSON.stringify(body),
-    });
+  for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 180_000);
 
-    if (!res.ok) {
-      const errBody = await res.text().catch(() => '');
-      throw new Error(`Ollama HTTP ${res.status}: ${errBody.slice(0, 300)}`);
+    try {
+      const res = await fetch(`${OLLAMA_BASE_URL}/v1/chat/completions`, {
+        method: 'POST',
+        headers,
+        signal: controller.signal,
+        body: JSON.stringify(body),
+      });
+      clearTimeout(timer);
+
+      if (res.status === 429) {
+        const errBody = await res.text().catch(() => '');
+        const waitMatch = errBody.match(/try again in ([\d.]+)s/i);
+        const waitMs = waitMatch ? Math.ceil(parseFloat(waitMatch[1]) * 1000) + 1000 : (attempt + 1) * 8000;
+        log(`429 rate limit — waiting ${waitMs}ms (attempt ${attempt + 1}/${MAX_RETRIES + 1})`);
+        lastErr = new Error(`Ollama HTTP 429: ${errBody.slice(0, 300)}`);
+        if (attempt < MAX_RETRIES) {
+          await new Promise(r => setTimeout(r, waitMs));
+          continue;
+        }
+        throw lastErr;
+      }
+
+      if (!res.ok) {
+        clearTimeout(timer);
+        const errBody = await res.text().catch(() => '');
+        throw new Error(`Ollama HTTP ${res.status}: ${errBody.slice(0, 300)}`);
+      }
+
+      return await res.json();
+    } catch (err) {
+      clearTimeout(timer);
+      if (err.message && err.message.startsWith('Ollama HTTP')) throw err;
+      throw err;
     }
-
-    return await res.json();
-  } finally {
-    clearTimeout(timer);
   }
+
+  throw lastErr;
 }
 
 // ── Main agent run ─────────────────────────────────────────────────────────────
@@ -186,24 +210,8 @@ async function agentRun({ agent, message, thinking, useBrowser = true, verbose, 
         });
       } catch (err) {
         log(`ERROR: Ollama API call failed: ${err.message}`);
-        if (turn === 1) {
-          log('retrying in 5s...');
-          await new Promise(r => setTimeout(r, 5000));
-          try {
-            response = await callOllama({
-              messages,
-              tools: useBrowser ? toOpenAITools(getBrowseTools()) : toOpenAITools(getTweetTools()),
-              model,
-            });
-          } catch (retryErr) {
-            log(`ERROR: retry failed: ${retryErr.message}`);
-            exitCode = 1;
-            break;
-          }
-        } else {
-          exitCode = 1;
-          break;
-        }
+        exitCode = 1;
+        break;
       }
 
       const choice = response?.choices?.[0];
