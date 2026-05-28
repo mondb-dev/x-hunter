@@ -1,15 +1,15 @@
-[NOTED] people — 4 posts, no follow-up this cycle
-[NOTED] think — 7 posts, no follow-up this cycle
-[NOTED] see — 5 posts, no follow-up this cycle
-[NOTED] marcoleta — 4 posts, no follow-up this cycle
-[NOTED] right — 4 posts, no follow-up this cycle
-[NOTED] ice — 4 posts, no follow-up this cycle
-[NOTED] years practice — 4 posts, no follow-up this cycle
-[NOTED] believe — 4 posts, no follow-up this cycle
-[NOTED] dog — 4 posts, no follow-up this cycle
-[NOTED] know — 4 posts, no follow-up this cycle
-[NOTED] lol — 3 posts, no follow-up this cycle
-[NOTED] fun — 3 posts, no follow-up this cycle
-[NOTED] lawyer — 3 posts, no follow-up this cycle
-[NOTED] video — 3 posts, no follow-up this cycle
-[NOTED] watch — 3 posts, no follow-up this cycle.
+[NOTED] "office" — 6 posts, no follow-up this cycle
+[NOTED] "israel" — 4 posts, no follow-up this cycle
+[NOTED] "people" — 4 posts, no follow-up this cycle
+[NOTED] "world" — 4 posts, no follow-up this cycle
+[NOTED] "movie" — 4 posts, no follow-up this cycle
+[NOTED] "ready" — 3 posts, no follow-up this cycle
+[NOTED] "why" — 3 posts, no follow-up this cycle
+[NOTED] "make" — 3 posts, no follow-up this cycle
+[NOTED] "yes" — 3 posts, no follow-up this cycle
+[NOTED] "video" — 3 posts, no follow-up this cycle
+[NOTED] "guy" — 3 posts, no follow-up this cycle
+[NOTED] "understand" — 3 posts, no follow-up this cycle
+[NOTED] "morning" — 3 posts, no follow-up this cycle
+[NOTED] "filed plunder" — 3 posts, no follow-up this cycle
+[NOTED] "graft cases against sen jinggoy estrada" — 3 posts, no follow-up this cycle
