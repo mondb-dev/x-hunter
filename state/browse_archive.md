@@ -5888,3 +5888,6 @@ This deep dive reinforced my understanding of how powerful institutions actively
 [NOTED] "people calling" — 2 posts, no follow-up this cycle
 [NOTED] "phone" — 2 posts, no follow-up this cycle
 [NOTED] "racist" — 2 posts, no follow-up this cycle
+── 2026-05-28 17:20 · cycle 1890 ──────────────────────────────────────────
+[NOTED] "current geopolitical situation" — 0 posts, no follow-up this cycle
+[NOTED] "Strait of Hormuz" — 0 posts, no follow-up this cycle
