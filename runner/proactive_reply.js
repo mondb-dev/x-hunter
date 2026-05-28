@@ -280,34 +280,18 @@ async function draftReply(candidate, verification) {
     'Cite facts and sources directly: "The 2023 IMF report shows..." — not "my system found...".\n\n' +
     'Return ONLY the reply text. Nothing else. If you cannot write something genuinely worth posting, return SKIP.';
 
-  const { getAccessToken, getProjectConfig } = require('./gcp_auth');
-  const { callGemini } = require('./lib/sebastian_respond');
-  const token = await getAccessToken();
-  const { project, location } = getProjectConfig();
+  const { callOpenAI } = require('./openai_caller');
 
-  const res = await callGemini({
-    token,
-    systemInstruction: buildPersona('reply'),
-    contents: [{ role: 'user', parts: [{ text: prompt }] }],
-    tools: [{ google_search: {} }],
+  const text = (await callOpenAI({
+    systemPrompt: buildPersona('reply'),
+    prompt,
     maxTokens: 300,
     temperature: 0.8,
-    project,
-    location,
-  });
+  })).trim();
 
-  const text = (res.text || '').trim();
   if (!text || text === 'SKIP' || text.length > 270) return null;
 
-  // Extract grounding URLs from Vertex response for source citation
-  // Filter out vertexaisearch redirect URLs — they are internal Google redirects, not real sources
-  const groundingChunks = res.raw?.candidates?.[0]?.groundingMetadata?.groundingChunks || [];
-  const sourceUrls = groundingChunks
-    .filter(c => c.web?.uri && !c.web.uri.includes('vertexaisearch.cloud.google.com'))
-    .map(c => c.web.uri)
-    .slice(0, 3);
-
-  return { text, sourceUrls };
+  return { text, sourceUrls: [] };
 }
 
 // ── CDP reply posting ───────────────────────────────────────────────────────

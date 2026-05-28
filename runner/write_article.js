@@ -27,7 +27,7 @@ const db = loadScraperDb();
 
 const { synthesizeCase, renderSynthesisForPrompt } = require("./lib/synthesize_case.js");
 const { buildConvictions } = require("./lib/convictions.js");
-const { callVertex } = require("./vertex.js");
+const { callOpenAI } = require("./openai_caller");
 
 // ── Env ───────────────────────────────────────────────────────────────────────
 if (fs.existsSync(path.join(ROOT, ".env"))) {
@@ -235,7 +235,7 @@ Output ONLY the TITLE line followed by the article. No preamble.`;
   console.log("[article] composing editorial...");
   let article;
   try {
-    article = await callVertex(prompt, 16384, { thinkingBudget: 8192 });
+    article = await callOpenAI({ prompt, maxTokens: 16384, temperature: 0.7 });
   } catch (e) {
     console.error("[article] composition failed:", e.message);
     process.exit(1);

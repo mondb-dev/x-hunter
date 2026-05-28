@@ -245,9 +245,7 @@ function loadBeliefContext() {
 
 // ── 5. Gemini: classify + draft with full context ─────────────────────────────
 async function geminiClassify(item, threadContext = [], memoryHints = [], userHistory = null, topicAccounts = [], verifiedHints = [], liveVerification = null) {
-  const { getAccessToken, getProjectConfig } = require("../runner/gcp_auth");
-  const token = await getAccessToken();
-  const { project, location } = getProjectConfig();
+  const { callOpenAI } = require("../runner/openai_caller");
 
   // Build thread context block
   let threadBlock = "";
@@ -363,42 +361,14 @@ Respond ONLY with valid JSON, no markdown fences:
 or
 {"verdict":"SKIP","reason":"brief reason"}`;
 
-  const res = await fetch(
-    `https://${location}-aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/google/models/gemini-2.5-flash:generateContent`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}`,
-      },
-      body: JSON.stringify({
-        contents: [{ role: "user", parts: [{ text: prompt }] }],
-        tools: [{ google_search: {} }],
-        generationConfig: { temperature: 0.7, maxOutputTokens: 2048 },
-      }),
-    }
-  );
-
-  if (!res.ok) {
-    const body = await res.text().catch(() => "");
-    throw new Error(`Gemini API ${res.status}: ${body.slice(0, 200)}`);
-  }
-
-  const data = await res.json();
-  const text = data.candidates?.[0]?.content?.parts?.[0]?.text || "";
-  // Extract grounding URLs from Vertex response
-  const groundingChunks = data?.candidates?.[0]?.groundingMetadata?.groundingChunks || [];
-  const sourceUrls = groundingChunks
-    .filter(c => c.web?.uri)
-    .map(c => c.web.uri)
-    .slice(0, 3);
+  const text = await callOpenAI({ prompt, maxTokens: 2048, temperature: 0.7 });
 
   // Strip optional markdown fences, then extract the JSON object (greedy match)
   const stripped = text.replace(/```(?:json)?\s*/gi, "").replace(/```\s*/g, "").trim();
   const match = stripped.match(/\{[\s\S]*\}/);
-  if (!match) throw new Error(`Gemini returned no JSON. Raw: ${text.slice(0, 300)}`);
+  if (!match) throw new Error(`OpenAI returned no JSON. Raw: ${text.slice(0, 300)}`);
   const parsed = JSON.parse(match[0]);
-  parsed.sourceUrls = sourceUrls;
+  parsed.sourceUrls = [];
   return parsed;
 }
 
