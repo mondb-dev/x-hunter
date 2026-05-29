@@ -1,25 +1,19 @@
 {
   "claim": "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed.",
   "source_handle": "@savsays",
-  "phase": "CROSS_REFERENCE",
+  "phase": "primary_research",
   "sub_questions": [
-    "When and where did the alleged incident occur (date, city, event)?",
-    "Do videos clearly show an assault on reporter Savanah Hernandez, and is the assailant identified as Paige Ostroushko?",
-    "Was Paige Ostroushko arrested in connection with this incident? If so, by which agency and when?",
-    "Were charges filed or referred for prosecution, and what are the specific charges?",
-    "What are the primary sources for these claims (original posts, police reports, court records)?"
+    "Did @savsays (Savanah Hernandez) publicly claim that Paige Ostroushko assaulted her at an anti-ICE protest and was arrested? When and where?",
+    "Is there an official record (police report, booking, court docket, press release) confirming the arrest of Paige Ostroushko related to this incident?",
+    "Do videos exist showing the alleged assault during an anti-ICE protest, and do they clearly identify the assailant as Paige Ostroushko?",
+    "Were charges filed or announced as forthcoming by authorities (police, DA/County Attorney)?",
+    "Context verification: When and where did the anti-ICE protest occur, and was Hernandez present as a reporter?"
   ],
-  "cross_reference_attempts": [
-    "Search: 'Paige Ostroushko denied'",
-    "Search: 'Savanah Hernandez assault false'",
-    "Search: 'anti-ICE protest reporter attack disputed'",
-    "Search on outlets with varied perspectives (attempted via web_search/navigate)"
-  ],
-  "findings": [
-    {
-      "sub_question": "Contradictions",
-      "result": "No accessible pages loaded; unable to locate denials or disputes in this session.",
-      "status": "no contradicting evidence found due to access issues"
-    }
+  "notes": [
+    "Attempted multiple web_search queries for 'Paige Ostroushko' and related terms — no results returned due to tool limitations (web_search returned null).",
+    "Tried navigating to https://x.com/savsays and alternative front-ends (nitter, farside) — navigate returned null or failed to load page content.",
+    "Tried Google/DuckDuckGo/Bing searches via navigate/fetch_url — all returned null. Unable to retrieve any articles or official records.",
+    "Because external browsing appears unavailable, cannot confirm existence of videos, arrest records, or official statements at this time.",
+    "No primary sources (police press releases, court dockets) could be accessed within this environment."
   ]
 }
