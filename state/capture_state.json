@@ -1,14 +1,66 @@
 {
-  "checked_at": "2026-05-28T10:37:59.452Z",
-  "evidence_24h": 0,
-  "alerts": [],
-  "source_concentration": {},
-  "axis_concentration": {},
-  "pole_balance": {
-    "left": 0,
-    "right": 0,
-    "neutral": 0
+  "checked_at": "2026-05-29T10:55:09.480Z",
+  "evidence_24h": 1,
+  "unique_sources": 1,
+  "status": "captured",
+  "alerts": [
+    {
+      "type": "source_dominance",
+      "severity": "high",
+      "detail": "@ericldaugh accounts for 100% of today's evidence (1/1)",
+      "username": "ericldaugh",
+      "share": 1
+    },
+    {
+      "type": "cluster_dominance",
+      "severity": "high",
+      "detail": "Cluster \"us_politics\" accounts for 100% of today's evidence (1/1)",
+      "cluster": "us_politics",
+      "share": 1
+    },
+    {
+      "type": "pole_skew",
+      "severity": "high",
+      "detail": "100% of evidence pushes \"left\" — risk of one-sided belief drift",
+      "dominant_pole": "left",
+      "share": 1
+    },
+    {
+      "type": "axis_concentration",
+      "severity": "high",
+      "detail": "\"Integrity of Information and Social Media Manipulation\" received 100% of today's evidence (1/1)",
+      "axis_id": "axis_media_integrity_v1",
+      "share": 1
+    }
+  ],
+  "summary": "4 capture alert(s) detected:\n[HIGH] @ericldaugh accounts for 100% of today's evidence (1/1)\n[HIGH] Cluster \"us_politics\" accounts for 100% of today's evidence (1/1)\n[HIGH] 100% of evidence pushes \"left\" — risk of one-sided belief drift\n[HIGH] \"Integrity of Information and Social Media Manipulation\" received 100% of today's evidence (1/1)",
+  "source_concentration": {
+    "ericldaugh": {
+      "username": "ericldaugh",
+      "count": 1,
+      "share": 1
+    }
   },
-  "status": "clean",
-  "summary": "No evidence collected in the last 24h — nothing to assess."
+  "axis_concentration": {
+    "axis_media_integrity_v1": {
+      "axis_id": "axis_media_integrity_v1",
+      "label": "Integrity of Information and Social Media Manipulation",
+      "count": 1,
+      "share": 1
+    }
+  },
+  "cluster_concentration": {
+    "us_politics": {
+      "cluster": "us_politics",
+      "count": 1,
+      "share": 1
+    }
+  },
+  "pole_balance": {
+    "left": 1,
+    "right": 0,
+    "neutral": 0,
+    "left_share": 1,
+    "right_share": 0
+  }
 }
