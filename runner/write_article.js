@@ -235,7 +235,7 @@ Output ONLY the TITLE line followed by the article. No preamble.`;
   console.log("[article] composing editorial...");
   let article;
   try {
-    article = await callOpenAI({ prompt, maxTokens: 16384, temperature: 0.7 });
+    article = await callOpenAI({ prompt, maxTokens: 8192, temperature: 0.7 });
   } catch (e) {
     console.error("[article] composition failed:", e.message);
     process.exit(1);

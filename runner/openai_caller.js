@@ -33,24 +33,60 @@ async function callOpenAI({ prompt, systemPrompt, model, maxTokens = 4096, tempe
     temperature,
   };
 
-  const res = await fetch(`${OPENAI_BASE}/v1/chat/completions`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${API_KEY}`,
-    },
-    body: JSON.stringify(body),
-  });
+  const MAX_RETRIES = 3;
+  let lastErr;
 
-  if (!res.ok) {
-    const err = await res.text().catch(() => '');
-    throw new Error(`OpenAI ${res.status}: ${err.slice(0, 300)}`);
+  for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 180_000); // 3 min
+
+    try {
+      const res = await fetch(`${OPENAI_BASE}/v1/chat/completions`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${API_KEY}`,
+        },
+        signal: controller.signal,
+        body: JSON.stringify(body),
+      });
+      clearTimeout(timer);
+
+      if (res.status === 429) {
+        const errBody = await res.text().catch(() => '');
+        const waitMatch = errBody.match(/try again in ([\d.]+)s/i);
+        const waitMs = waitMatch ? Math.ceil(parseFloat(waitMatch[1]) * 1000) + 1000 : (attempt + 1) * 8000;
+        lastErr = new Error(`OpenAI 429: ${errBody.slice(0, 200)}`);
+        if (attempt < MAX_RETRIES) { await new Promise(r => setTimeout(r, waitMs)); continue; }
+        throw lastErr;
+      }
+
+      if (!res.ok) {
+        const err = await res.text().catch(() => '');
+        throw new Error(`OpenAI ${res.status}: ${err.slice(0, 300)}`);
+      }
+
+      const data = await res.json();
+      const text = data.choices?.[0]?.message?.content || '';
+      if (!text) throw new Error(`OpenAI returned empty response`);
+      return text.trim();
+    } catch (err) {
+      clearTimeout(timer);
+      // Retry on network errors (socket hang up, ECONNRESET, abort)
+      const isRetryable = err.name === 'AbortError' ||
+        /socket hang up|ECONNRESET|ECONNREFUSED|fetch failed/i.test(err.message);
+      if (isRetryable && attempt < MAX_RETRIES) {
+        const waitMs = (attempt + 1) * 5000;
+        console.error(`[openai] attempt ${attempt + 1} failed (${err.message}) — retrying in ${waitMs}ms`);
+        lastErr = err;
+        await new Promise(r => setTimeout(r, waitMs));
+        continue;
+      }
+      throw err;
+    }
   }
 
-  const data = await res.json();
-  const text = data.choices?.[0]?.message?.content || '';
-  if (!text) throw new Error(`OpenAI returned empty response`);
-  return text.trim();
+  throw lastErr;
 }
 
 /**
