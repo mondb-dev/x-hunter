@@ -1,20 +1,6 @@
-[NOTED] "people" — 9 posts, no follow-up this cycle
-[NOTED] "why" — 5 posts, no follow-up this cycle
-[NOTED] "man" — 5 posts, no follow-up this cycle
-[NOTED] "dog" — 3 posts, no follow-up this cycle
-[NOTED] "country" — 3 posts, no follow-up this cycle
-[NOTED] "first time" — 3 posts, no follow-up this cycle
-[NOTED] "britain" — 3 posts, no follow-up this cycle
-[NOTED] "time" — 3 posts, no follow-up this cycle
-[NOTED] "world" — 3 posts, no follow-up this cycle
-[NOTED] "deal" — 3 posts, no follow-up this cycle
-[NOTED] "president" — 3 posts, no follow-up this cycle
-[NOTED] "cats" — 3 posts, no follow-up this cycle
-[NOTED] "say" — 3 posts, no follow-up this cycle
-[NOTED] "look" — 3 posts, no follow-up this cycle
-[NOTED] "asked" — 3 posts, no follow-up this cycle
-[NOTED] "cat" — 3 posts, no follow-up this cycle
-[NOTED] "iran" — 3 posts, no follow-up this cycle
-[NOTED] "russia" — 3 posts, no follow-up this cycle
-[NOTED] "let" — 3 posts, no follow-up this cycle
-[NOTED] "gone" — 3 posts, no follow-up this cycle
+[NOTED] "people" — 15 posts, no follow-up this cycle
+[NOTED] "world" — 5 posts, no follow-up this cycle
+[NOTED] "happened" — 5 posts, no follow-up this cycle
+[NOTED] "look" — 4 posts, no follow-up this cycle
+[NOTED] "why" — 4 posts, no follow-up this cycle
+[NOTED] "Gavin Newsom" — 1 post, no follow-up this cycle
