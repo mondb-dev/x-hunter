@@ -245,7 +245,7 @@ function loadBeliefContext() {
 
 // ── 5. Gemini: classify + draft with full context ─────────────────────────────
 async function geminiClassify(item, threadContext = [], memoryHints = [], userHistory = null, topicAccounts = [], verifiedHints = [], liveVerification = null) {
-  const { callOpenAI } = require("../runner/openai_caller");
+  const { callOpenAISearch } = require("../runner/openai_caller");
 
   // Build thread context block
   let threadBlock = "";
@@ -361,14 +361,14 @@ Respond ONLY with valid JSON, no markdown fences:
 or
 {"verdict":"SKIP","reason":"brief reason"}`;
 
-  const text = await callOpenAI({ prompt, maxTokens: 2048, temperature: 0.7 });
+  const { text, sourceUrls } = await callOpenAISearch({ prompt, maxTokens: 2048 });
 
   // Strip optional markdown fences, then extract the JSON object (greedy match)
   const stripped = text.replace(/```(?:json)?\s*/gi, "").replace(/```\s*/g, "").trim();
   const match = stripped.match(/\{[\s\S]*\}/);
   if (!match) throw new Error(`OpenAI returned no JSON. Raw: ${text.slice(0, 300)}`);
   const parsed = JSON.parse(match[0]);
-  parsed.sourceUrls = [];
+  parsed.sourceUrls = sourceUrls;
   return parsed;
 }
 
