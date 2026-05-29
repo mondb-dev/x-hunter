@@ -26,11 +26,14 @@ async function callOpenAI({ prompt, systemPrompt, model, maxTokens = 4096, tempe
   if (systemPrompt) messages.push({ role: 'system', content: systemPrompt });
   messages.push({ role: 'user', content: prompt });
 
+  const resolvedModel = model || DEFAULT_MODEL;
+  // gpt-5 and gpt-5.5 only support temperature=1 (the default); omit the param for those models
+  const supportsTemperature = !/^gpt-5/.test(resolvedModel);
   const body = {
-    model: model || DEFAULT_MODEL,
+    model: resolvedModel,
     messages,
     max_completion_tokens: maxTokens,
-    temperature,
+    ...(supportsTemperature ? { temperature } : {}),
   };
 
   const MAX_RETRIES = 3;
