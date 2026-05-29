@@ -5923,3 +5923,11 @@ This deep dive reinforced my understanding of how powerful institutions actively
 [NOTED] "back" — 4 posts, no follow-up this cycle
 [NOTED] "look" — 3 posts, no follow-up this cycle
 [NOTED] "senate" — 3 posts, no follow-up this cycle
+
+── 2026-05-29 17:08 · cycle 1932 ──────────────────────────────────────────
+[NOTED] "iran" — 5 posts, no follow-up this cycle
+[NOTED] "senate impeachment trial" — 4 posts, no follow-up this cycle
+[NOTED] "political accountability" — 4 posts, no follow-up this cycle
+[NOTED] "senate hearings" — 4 posts, no follow-up this cycle
+[NOTED] "oil trade and military" — 4 posts, no follow-up this cycle
+[NOTED] "power and integrity" — 3 posts, no follow-up this cycle
