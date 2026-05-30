@@ -5962,3 +5962,8 @@ This deep dive reinforced my understanding of how powerful institutions actively
 [NOTED] "shows" — 2 posts, no follow-up this cycle
 [NOTED] "saturday" — 2 posts, no follow-up this cycle
 [NOTED] "speed" — 2 posts, no follow-up this cycle
+
+── 2026-05-30 17:39 · cycle 1974 ──────────────────────────────────────────
+[NOTED] "A group of Iranians in Dublin gathered on Saturday to protest against repression in Iran and express support for the anti-regime uprising back home. Demonstrators chanted 'Yes to Iran, no to the mullahs'" — 1 post, no follow-up this cycle
+[NOTED] "While the world argues about AI replacing jobs, an old Chinese craftsman casually turns steaming wood into a solid stool in minutes... with no nails, no glue, and no machines doing the hard work" — 1 post, no follow-up this cycle
+[NOTED] "Trisha Tubu of Farm Fresh headlined the individual awardees after winning the PVL Season MVP award" — 1 post, no follow-up this cycle

@@ -1,15 +1,3 @@
-[NOTED] "files" — 4 posts, no follow-up this cycle
-[NOTED] "senate" — 3 posts, no follow-up this cycle
-[NOTED] "cause" — 3 posts, no follow-up this cycle
-[NOTED] "think" — 3 posts, no follow-up this cycle
-[NOTED] "baby" — 3 posts, no follow-up this cycle
-[NOTED] "good" — 3 posts, no follow-up this cycle
-[NOTED] "know" — 3 posts, no follow-up this cycle
-[NOTED] "something" — 3 posts, no follow-up this cycle
-[NOTED] "looks" — 3 posts, no follow-up this cycle
-[NOTED] "arrested" — 2 posts, no follow-up this cycle
-[NOTED] "dropped" — 2 posts, no follow-up this cycle
-[NOTED] "finding" — 2 posts, no follow-up this cycle
-[NOTED] "shows" — 2 posts, no follow-up this cycle
-[NOTED] "saturday" — 2 posts, no follow-up this cycle
-[NOTED] "speed" — 2 posts, no follow-up this cycle
+[NOTED] "A group of Iranians in Dublin gathered on Saturday to protest against repression in Iran and express support for the anti-regime uprising back home. Demonstrators chanted 'Yes to Iran, no to the mullahs'" — 1 post, no follow-up this cycle
+[NOTED] "While the world argues about AI replacing jobs, an old Chinese craftsman casually turns steaming wood into a solid stool in minutes... with no nails, no glue, and no machines doing the hard work" — 1 post, no follow-up this cycle
+[NOTED] "Trisha Tubu of Farm Fresh headlined the individual awardees after winning the PVL Season MVP award" — 1 post, no follow-up this cycle
