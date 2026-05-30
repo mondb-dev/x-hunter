@@ -285,7 +285,7 @@ async function draftReply(candidate, verification) {
   const { text: raw, sourceUrls } = await callOpenAISearch({
     systemPrompt: buildPersona('reply'),
     prompt,
-    maxTokens: 300,
+    maxTokens: 2000,
   });
   const text = raw.trim();
 
