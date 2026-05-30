@@ -1,43 +1,45 @@
 {
   "sub_questions": [
     {
-      "question": "Did @savsays (Savanah Hernandez) publicly claim that Paige Ostroushko assaulted her at an anti-ICE protest and was arrested? When and where?",
-      "answer": "Inconclusive. I was unable to access @savsays's posts or any archived mirrors due to browsing tool failures, so I could not verify the original claim or its timestamp.",
+      "question": "Did an incident occur at an anti-ICE protest where reporter Savanah Hernandez was assaulted, and is there video evidence?",
+      "answer": "Unable to verify. I could not retrieve the alleged video or any independent article confirming the incident due to page load limitations and lack of corroborating coverage found via search.",
       "confidence": 0.2,
       "sources": []
     },
     {
-      "question": "Is there an official record (police report, booking, court docket, press release) confirming the arrest of Paige Ostroushko related to this incident?",
-      "answer": "Inconclusive. Searches for the name returned no retrievable results within this environment; I could not load any police press releases, court records, or credible reporting.",
-      "confidence": 0.2,
+      "question": "Is the alleged assailant identified as Paige Ostroushko, and by whom (self-ID, police, media)?",
+      "answer": "Not confirmed. Searches for the proper name returned no accessible results corroborating identity attribution from police or media.",
+      "confidence": 0.15,
       "sources": []
     },
     {
-      "question": "Do videos exist showing the alleged assault during an anti-ICE protest, and do they clearly identify the assailant as Paige Ostroushko?",
-      "answer": "Inconclusive. I could not load X/Twitter posts or alternative front-ends, and no third-party articles or mirrors loaded to confirm video existence or identification.",
-      "confidence": 0.2,
+      "question": "Was Paige Ostroushko arrested in relation to the incident? When, by which agency, and under what charges?",
+      "answer": "Not confirmed. No accessible police statement, jail roster entry, or media report confirming an arrest associated with this name and incident.",
+      "confidence": 0.15,
       "sources": []
     },
     {
-      "question": "Were charges filed or announced as forthcoming by authorities (police, DA/County Attorney)?",
-      "answer": "Inconclusive. Could not retrieve any official statements or reporting confirming charges or intent to file.",
-      "confidence": 0.2,
+      "question": "Were charges filed (or to be filed)? What specific charges and case docket details?",
+      "answer": "Not confirmed. I found no accessible prosecutor statement, court docket, or filing referencing this name and event.",
+      "confidence": 0.15,
       "sources": []
     },
     {
-      "question": "Context verification: When and where did the anti-ICE protest occur, and was Hernandez present as a reporter?",
-      "answer": "Inconclusive. Unable to load event coverage or posts establishing date, location, or Hernandez's role at the scene.",
-      "confidence": 0.2,
+      "question": "When and where did this occur, and what is the original source of the claim?",
+      "answer": "Partially established: The origin appears to be a tweet by @savsays, but I could not load the post to capture specifics (date, location) in this environment.",
+      "confidence": 0.25,
       "sources": []
     }
   ],
   "attribution_chain": [
-    { "level": 0, "description": "Claim attributed to a tweet by @savsays (unverified due to access issues)", "url": "https://x.com/savsays" }
+    { "level": 0, "description": "Tweet by @savsays referencing the claim (original source per prompt)", "url": "https://x.com/savsays" },
+    { "level": 1, "description": "Attempted checks for official records (county jail roster / sheriff) — page did not load fully in this environment", "url": "https://www.hennepinsheriff.org/jail-warrants/jail-roster" },
+    { "level": 1, "description": "General web and news search attempts for the named individual and incident (no corroborating results retrieved)", "url": "https://www.google.com/search?q=Paige+Ostroushko+Savanah+Hernandez+assault+arrest" }
   ],
   "supporting_evidence": [],
   "contradicting_evidence": [],
   "overall_verdict": "inconclusive",
-  "confidence": 0.15,
-  "summary": "Due to repeated failures in retrieving web search results and loading social media pages, I could not verify the claim that Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez at an anti-ICE protest. No primary or secondary sources could be accessed to confirm the arrest, the existence of videos, or statements about charges. As a result, the investigation remains inconclusive pending accessible sources.",
-  "key_finding": "The investigation could not access any verifiable sources; thus, no confirmation or refutation of the claim is currently possible within this environment."
+  "confidence": 0.2,
+  "summary": "I attempted to locate primary and secondary sources confirming the claim that Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez at an anti-ICE protest. I could not retrieve the alleged original tweet or any video in this environment, and I found no accessible police, jail, court, or mainstream media records corroborating the name, arrest, or charges. Due to tool limitations and a lack of corroboration in accessible searches, the claim remains unverified at this time.",
+  "key_finding": "No independent confirmation of an arrest or identity attribution for 'Paige Ostroushko' was accessible; without primary records or retrievable media, the claim cannot be confirmed."
 }
