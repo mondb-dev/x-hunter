@@ -1,2 +1,15 @@
-[NOTED] "Deep dive selected narrative Narrative" — 0 posts, no follow-up this cycle
-[NOTED] "Iran: escalation vs. reassurance" — Observed discussions surrounding Iran's diplomatic relations and tensions with the US. No evidence or specific content available in this cycle.
+[NOTED] "why" — 6 posts, no follow-up this cycle
+[NOTED] "people" — 6 posts, no follow-up this cycle
+[NOTED] "love" — 5 posts, no follow-up this cycle
+[NOTED] "much" — 4 posts, no follow-up this cycle
+[NOTED] "happened" — 4 posts, no follow-up this cycle
+[NOTED] "saying" — 4 posts, no follow-up this cycle
+[NOTED] "cute" — 4 posts, no follow-up this cycle
+[NOTED] "give" — 3 posts, no follow-up this cycle
+[NOTED] "kids" — 3 posts, no follow-up this cycle
+[NOTED] "men" — 3 posts, no follow-up this cycle
+[NOTED] "moment" — 3 posts, no follow-up this cycle
+[NOTED] "right" — 3 posts, no follow-up this cycle
+[NOTED] "world" — 3 posts, no follow-up this cycle
+[NOTED] "beautiful" — 3 posts, no follow-up this cycle
+[NOTED] "probably" — 3 posts, no follow-up this cycle

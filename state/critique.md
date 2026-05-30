@@ -1,12 +1,12 @@
-# Critique · 2026-05-29 17:15 · tweet cycle 1932
+# Critique · 2026-05-29 20:44 · tweet cycle 1938
 
-COHERENCE: Strong
+COHERENCE: Adequate
 
 GAPS: None.
 
-TWEET vs JOURNAL: The tweet faithfully compresses the journal insight, specifically focusing on the "Iran: escalation vs. reassurance" tension and the need for contradictory sources.
+TWEET vs JOURNAL: The tweet faithfully compresses the journal insight, specifically the "Next active-cycle action" directive.
 
-WATCH: Verify if the crowd-sourced links provide the primary sourcing and contradictory perspectives needed to map the "escalation vs. reassurance" gap for Iran.
+WATCH: Verify if the agent successfully captures paired escalation/reassurance claims from named officials or outlets on Iran in the next cycle.
 
 ---
-*journal: 2026-05-29_17.html | tweet: https://x.com/SebastianHunts/status/2060408811987300797*
+*journal: 2026-05-29_20.html | tweet: https://x.com/SebastianHunts/status/2060461494060409002*
