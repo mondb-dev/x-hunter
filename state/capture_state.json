@@ -1,22 +1,36 @@
 {
-  "checked_at": "2026-05-29T10:55:09.480Z",
-  "evidence_24h": 1,
-  "unique_sources": 1,
+  "checked_at": "2026-05-30T11:27:27.434Z",
+  "evidence_24h": 2,
+  "unique_sources": 2,
   "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "high",
-      "detail": "@ericldaugh accounts for 100% of today's evidence (1/1)",
-      "username": "ericldaugh",
-      "share": 1
+      "detail": "@gmanews accounts for 50% of today's evidence (1/2)",
+      "username": "gmanews",
+      "share": 0.5
+    },
+    {
+      "type": "source_dominance",
+      "severity": "high",
+      "detail": "@allenanalysis accounts for 50% of today's evidence (1/2)",
+      "username": "allenanalysis",
+      "share": 0.5
     },
     {
       "type": "cluster_dominance",
-      "severity": "high",
-      "detail": "Cluster \"us_politics\" accounts for 100% of today's evidence (1/1)",
-      "cluster": "us_politics",
-      "share": 1
+      "severity": "moderate",
+      "detail": "Cluster \"breaking_news\" accounts for 50% of today's evidence (1/2)",
+      "cluster": "breaking_news",
+      "share": 0.5
+    },
+    {
+      "type": "cluster_dominance",
+      "severity": "moderate",
+      "detail": "Cluster \"geopolitics\" accounts for 50% of today's evidence (1/2)",
+      "cluster": "geopolitics",
+      "share": 0.5
     },
     {
       "type": "pole_skew",
@@ -24,40 +38,49 @@
       "detail": "100% of evidence pushes \"left\" — risk of one-sided belief drift",
       "dominant_pole": "left",
       "share": 1
-    },
-    {
-      "type": "axis_concentration",
-      "severity": "high",
-      "detail": "\"Integrity of Information and Social Media Manipulation\" received 100% of today's evidence (1/1)",
-      "axis_id": "axis_media_integrity_v1",
-      "share": 1
     }
   ],
-  "summary": "4 capture alert(s) detected:\n[HIGH] @ericldaugh accounts for 100% of today's evidence (1/1)\n[HIGH] Cluster \"us_politics\" accounts for 100% of today's evidence (1/1)\n[HIGH] 100% of evidence pushes \"left\" — risk of one-sided belief drift\n[HIGH] \"Integrity of Information and Social Media Manipulation\" received 100% of today's evidence (1/1)",
+  "summary": "5 capture alert(s) detected:\n[HIGH] @gmanews accounts for 50% of today's evidence (1/2)\n[HIGH] @allenanalysis accounts for 50% of today's evidence (1/2)\n[MODERATE] Cluster \"breaking_news\" accounts for 50% of today's evidence (1/2)\n[MODERATE] Cluster \"geopolitics\" accounts for 50% of today's evidence (1/2)\n[HIGH] 100% of evidence pushes \"left\" — risk of one-sided belief drift",
   "source_concentration": {
-    "ericldaugh": {
-      "username": "ericldaugh",
+    "gmanews": {
+      "username": "gmanews",
       "count": 1,
-      "share": 1
+      "share": 0.5
+    },
+    "allenanalysis": {
+      "username": "allenanalysis",
+      "count": 1,
+      "share": 0.5
     }
   },
   "axis_concentration": {
-    "axis_media_integrity_v1": {
-      "axis_id": "axis_media_integrity_v1",
-      "label": "Integrity of Information and Social Media Manipulation",
+    "axis_power_accountability": {
+      "axis_id": "axis_power_accountability",
+      "label": "Power, Institutions, and Rule of Law",
       "count": 1,
-      "share": 1
+      "share": 0.5
+    },
+    "axis_geopolitical_rhetoric_v1": {
+      "axis_id": "axis_geopolitical_rhetoric_v1",
+      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
+      "count": 1,
+      "share": 0.5
     }
   },
   "cluster_concentration": {
-    "us_politics": {
-      "cluster": "us_politics",
+    "breaking_news": {
+      "cluster": "breaking_news",
       "count": 1,
-      "share": 1
+      "share": 0.5
+    },
+    "geopolitics": {
+      "cluster": "geopolitics",
+      "count": 1,
+      "share": 0.5
     }
   },
   "pole_balance": {
-    "left": 1,
+    "left": 2,
     "right": 0,
     "neutral": 0,
     "left_share": 1,

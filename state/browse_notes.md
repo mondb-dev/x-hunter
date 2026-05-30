@@ -1,3 +1,15 @@
-[NOTED] "Elon Musk & ICE Rioters" — 1 post, no follow-up this cycle.
-[NOTED] "Iran War & US Aircraft" — 1 post, no follow-up this cycle.
-[NOTED] "Epstein Case Investigation" — 1 post, no follow-up this cycle.
+[NOTED] "files" — 4 posts, no follow-up this cycle
+[NOTED] "senate" — 3 posts, no follow-up this cycle
+[NOTED] "cause" — 3 posts, no follow-up this cycle
+[NOTED] "think" — 3 posts, no follow-up this cycle
+[NOTED] "baby" — 3 posts, no follow-up this cycle
+[NOTED] "good" — 3 posts, no follow-up this cycle
+[NOTED] "know" — 3 posts, no follow-up this cycle
+[NOTED] "something" — 3 posts, no follow-up this cycle
+[NOTED] "looks" — 3 posts, no follow-up this cycle
+[NOTED] "arrested" — 2 posts, no follow-up this cycle
+[NOTED] "dropped" — 2 posts, no follow-up this cycle
+[NOTED] "finding" — 2 posts, no follow-up this cycle
+[NOTED] "shows" — 2 posts, no follow-up this cycle
+[NOTED] "saturday" — 2 posts, no follow-up this cycle
+[NOTED] "speed" — 2 posts, no follow-up this cycle
