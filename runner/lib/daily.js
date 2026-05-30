@@ -26,13 +26,13 @@ function log(msg) {
  * Run a runner/*.js script, suppress all errors.
  * Stdout/stderr go to runner.log (stdio: 'ignore' from caller perspective).
  */
-function runScript(script, args = '') {
+function runScript(script, args = '', timeoutMs = 300000) {
   const sp = path.join(config.RUNNER_DIR, script);
   const cmd = args
     ? `node "${sp}" ${args} >> "${config.RUNNER_LOG_PATH}" 2>&1`
     : `node "${sp}" >> "${config.RUNNER_LOG_PATH}" 2>&1`;
   try {
-    execSync(cmd, { shell: true, stdio: 'ignore', timeout: 300000 });
+    execSync(cmd, { shell: true, stdio: 'ignore', timeout: timeoutMs });
   } catch {}
 }
 
@@ -120,7 +120,8 @@ function reports() {
   runScript('posts_assessment.js');
 
   // Write article from journals + beliefs, generate cover art, post to Moltbook
-  runScript('write_article.js');
+  // 10-min timeout: cold synthesis (6 claim verifications) + gpt-5 composition can exceed 5 min
+  runScript('write_article.js', '', 600000);
 
   // Article cover image (Imagen 4) + inline images
   const today = new Date().toISOString().slice(0, 10);
