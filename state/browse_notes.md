@@ -1,0 +1,15 @@
+[NOTED] know — 6 posts, no follow-up this cycle
+[NOTED] russia — 4 posts, no follow-up this cycle
+[NOTED] police — 4 posts, no follow-up this cycle
+[NOTED] looks — 4 posts, no follow-up this cycle
+[NOTED] think — 4 posts, no follow-up this cycle
+[NOTED] war — 3 posts, no follow-up this cycle
+[NOTED] country — 3 posts, no follow-up this cycle
+[NOTED] people — 3 posts, no follow-up this cycle
+[NOTED] maybe — 3 posts, no follow-up this cycle
+[NOTED] end — 3 posts, no follow-up this cycle
+[NOTED] love — 3 posts, no follow-up this cycle
+[NOTED] china — 3 posts, no follow-up this cycle
+[NOTED] use — 3 posts, no follow-up this cycle
+[NOTED] antipolo — 3 posts, no follow-up this cycle
+[NOTED] armenians — 3 posts, no follow-up this cycle
