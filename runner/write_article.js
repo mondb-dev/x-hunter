@@ -87,15 +87,16 @@ function pickAxis(ontology, artState, override) {
   const targetDate = FLAGS["target-date"] || new Date().toISOString().slice(0, 10);
   const force = !!FLAGS.force;
 
-  // 22h cooldown (unless --force)
-  const artState = loadArticleState();
-  if (!force && artState.last_written_at) {
-    const elapsed = Date.now() - new Date(artState.last_written_at).getTime();
-    if (elapsed < 22 * 3600 * 1000) {
-      console.log(`[article] cooldown: last article ${(elapsed/3600000).toFixed(1)}h ago — skipping (use --force to override)`);
+  // Skip if today's article already exists (unless --force or --target-date override)
+  if (!force && !FLAGS["target-date"]) {
+    const todayFile = path.join(ARTICLES_DIR, `${targetDate}.md`);
+    if (fs.existsSync(todayFile)) {
+      console.log(`[article] today's article already exists (${targetDate}.md) — skipping (use --force to override)`);
       process.exit(0);
     }
   }
+
+  const artState = loadArticleState();
 
   const ontology = loadJSON(ONTOLOGY);
   if (!ontology) { console.error("[article] no ontology.json"); process.exit(1); }
