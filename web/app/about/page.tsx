@@ -1,4 +1,3 @@
-export const dynamic = 'force-dynamic';
 
 import { readOntology } from "@/lib/readOntology";
 import { getAllJournalDays } from "@/lib/readJournals";

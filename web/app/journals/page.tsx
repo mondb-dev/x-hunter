@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getAllJournalDays } from "@/lib/readJournals";
 
-export const dynamic = "force-dynamic";
+
 
 export default async function JournalsPage() {
   const days = await getAllJournalDays();

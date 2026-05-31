@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { readPredictions } from "../../lib/readPredictions";
 import type { ResolutionStatus, Prediction } from "../../lib/readPredictions";
 
-export const dynamic = "force-dynamic";
+
 
 const STATUS_LABEL: Record<ResolutionStatus, string> = {
   pending: "Pending",

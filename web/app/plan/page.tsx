@@ -1,6 +1,6 @@
 import { readSprintSnapshot, readActivePlan, readProposedPlans } from "@/lib/readSprints";
 
-export const dynamic = "force-dynamic";
+
 
 export const metadata = {
   title: "Plan — Sebastian D. Hunter",
