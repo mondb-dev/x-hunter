@@ -17,13 +17,16 @@ const config = require('./config');
 
 const OLLAMA_BASE_URL = process.env.OLLAMA_BASE_URL || 'http://localhost:11434';
 const MODEL = process.env.OLLAMA_MODEL || 'gpt-4o-mini';
+const IS_VERTEX = OLLAMA_BASE_URL.includes('aiplatform.googleapis.com');
 function resolveApiKey() {
+  if (IS_VERTEX) return ''; // Vertex uses ADC tokens, fetched per-request
   const url = OLLAMA_BASE_URL;
   if (url.includes('openai.com')) return process.env.OPENAI_API_KEY || process.env.OPEN_AI_API_KEY || '';
   if (url.includes('x.ai'))      return process.env.GROK_API_KEY || '';
   return ''; // local Ollama — no key needed
 }
 const API_KEY = resolveApiKey();
+const { getAccessToken } = IS_VERTEX ? require('../gcp_auth') : { getAccessToken: null };
 const MAX_TURNS = 40;
 const MAX_TIMEOUT_MS = 900_000; // 15 min
 
@@ -91,7 +94,12 @@ async function callOllama({ messages, tools, model }) {
   }
 
   const headers = { 'Content-Type': 'application/json' };
-  if (API_KEY) headers['Authorization'] = 'Bearer ' + API_KEY;
+  if (IS_VERTEX) {
+    const token = await getAccessToken();
+    headers['Authorization'] = 'Bearer ' + token;
+  } else if (API_KEY) {
+    headers['Authorization'] = 'Bearer ' + API_KEY;
+  }
 
   const MAX_RETRIES = 4;
   let lastErr;

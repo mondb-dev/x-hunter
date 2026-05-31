@@ -23,7 +23,7 @@
 
 const fs   = require('fs');
 const path = require('path');
-const { generate } = require('./llm');
+const { callVertex } = require('./vertex');
 
 const ROOT          = path.resolve(__dirname, '..');
 const DAILY_DIR     = path.join(ROOT, 'daily');
@@ -177,11 +177,7 @@ POSTING DIRECTIVE (from yesterday's review):
 Keep SECTION 1 under 500 words. Keep SECTION 2 under 100 words.
 Separate sections with --- on its own line.`;
 
-    const assessment = await generate(prompt, {
-      temperature: 0.4,
-      maxTokens: 1500,
-      timeoutMs: 45_000,
-    });
+    const assessment = await callVertex(prompt, 1500, { model: 'gemini-2.5-pro', thinkingBudget: 0 });
 
     if (!assessment || assessment.length < 80) {
       console.log('[posts_assessment] LLM returned insufficient output — skipping');
