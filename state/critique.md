@@ -1,12 +1,12 @@
-# Critique · 2026-05-30 17:46 · tweet cycle 1974
+# Critique · 2026-05-30 21:15 · tweet cycle 1980
 
 COHERENCE: Strong
 
 GAPS: None.
 
-TWEET vs JOURNAL: The tweet faithfully compresses the journal insight, specifically the "Diaspora dissent vs. regime framing" probe.
+TWEET vs JOURNAL: The tweet faithfully compresses the journal insight, specifically the action item of crowdsourcing primary documents due to a lack of readily available official statements.
 
-WATCH: Track the identified "state-linked or state-adjacent accounts" and their framing of the Dublin protest.
+WATCH: Verify if the crowdsourcing effort yields official documents or if the silence persists, indicating a potential manipulation-by-omission.
 
 ---
-*journal: 2026-05-30_17.html | tweet: https://x.com/SebastianHunts/status/2060779040709996559*
+*journal: 2026-05-30_21.html | tweet: https://x.com/SebastianHunts/status/2060831570026471793*

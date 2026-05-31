@@ -2,72 +2,14 @@
   "claim": "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed.",
   "source_handle": "@savsays",
   "sub_questions": [
-    {
-      "id": 1,
-      "question": "Did an incident occur at an anti-ICE protest where reporter Savanah Hernandez was assaulted, and is there video evidence?",
-      "status": "searched",
-      "notes": "Attempted multiple searches for video evidence linking Savanah Hernandez to an anti-ICE protest assault. Could not load or retrieve any results via available tools; no pages loaded to confirm video existence.",
-      "attempts": [
-        "web_search: Savanah Hernandez attacked protest ICE video",
-        "navigate: https://x.com/savsays (page did not load in this environment)",
-        "navigate: https://nitter.net/search?f=tweets&q=%5C%22Paige%20Ostroushko%5C%22 (no load)"
-      ]
-    },
-    {
-      "id": 2,
-      "question": "Is the alleged assailant identified as Paige Ostroushko, and by whom (self-ID, police, media)?",
-      "status": "no_results",
-      "notes": "Searches for the proper name returned no retrievable results; could not verify identity attribution from any primary or secondary source.",
-      "attempts": [
-        "web_search: 'Paige Ostroushko'",
-        "web_search: 'Ostroushko protest'",
-        "web_search: 'Ostroushko assault'"
-      ]
-    },
-    {
-      "id": 3,
-      "question": "Was Paige Ostroushko arrested in relation to the incident? When, by which agency, and under what charges?",
-      "status": "no_primary_records",
-      "notes": "Attempted to locate police statements, jail roster, or court docket; no accessible records via tool. Hennepin County/Jail roster queries returned no retrievable pages.",
-      "attempts": [
-        "web_search: Hennepin County jail roster Ostroushko Paige",
-        "web_search: Minneapolis protest arrest Ostroushko"
-      ]
-    },
-    {
-      "id": 4,
-      "question": "Were charges filed (or to be filed)? What specific charges and case docket details?",
-      "status": "no_primary_records",
-      "notes": "Could not access any court filing or prosecutor statement confirming charges filed or pending.",
-      "attempts": [
-        "web_search: court records Paige Ostroushko Minnesota",
-        "web_search: prosecutor statement Paige Ostroushko"
-      ]
-    },
-    {
-      "id": 5,
-      "question": "When and where did this occur, and what is the original source of the claim?",
-      "status": "partial",
-      "notes": "Original source appears to be a tweet by @savsays per prompt; attempted to load profile but page did not render in this environment. No independent outlet located.",
-      "attempts": [
-        "navigate: https://x.com/savsays",
-        "web_search: anti-ICE protest reporter attacked Savanah Hernandez location date"
-      ]
-    }
+    "Did an assault on reporter Savanah Hernandez occur at an anti-ICE protest, and are there videos of the incident?",
+    "Is the alleged perpetrator identified as Paige Ostroushko?",
+    "Was Paige Ostroushko arrested in connection with this incident? If so, when and by which jurisdiction?",
+    "Were charges filed (or stated as pending) against Paige Ostroushko? What are the official records?",
+    "What exactly did @savsays claim (date/time, wording), and what primary sources does she cite?",
+    "Are there corroborating reports from police, court records, or independent news outlets?"
   ],
-  "findings": [
-    "No independent confirmation accessible for the named individual 'Paige Ostroushko'.",
-    "No accessible police or court records found via available searches.",
-    "Could not retrieve the purported original tweet or video due to environment limitations; therefore cannot authenticate media."
-  ],
-  "attribution_chain": [
-    {
-      "level": 0,
-      "description": "Claim referenced as originating from a tweet by @savsays (per user-provided source handle).",
-      "url": "https://x.com/savsays"
-    }
-  ],
-  "contradictions": [
-    "Absence of retrievable public records or mainstream reporting on a named-arrest claim suggests the need for caution; potential misidentification cannot be ruled out."
-  ]
+  "timeline_notes": [],
+  "findings": [],
+  "sources_checked": []
 }
