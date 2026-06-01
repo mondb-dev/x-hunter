@@ -109,7 +109,10 @@ async function callOllama({ messages, tools, model }) {
     const timer = setTimeout(() => controller.abort(), 180_000);
 
     try {
-      const res = await fetch(`${OLLAMA_BASE_URL}/v1/chat/completions`, {
+      // Vertex OpenAI-compatible endpoint already includes the full path up to /openapi
+      // so we append /chat/completions only; other providers need /v1/chat/completions
+      const chatPath = IS_VERTEX ? '/chat/completions' : '/v1/chat/completions';
+      const res = await fetch(`${OLLAMA_BASE_URL}${chatPath}`, {
         method: 'POST',
         headers,
         signal: controller.signal,
