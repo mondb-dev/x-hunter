@@ -34,6 +34,8 @@ module.exports = {
   // State files
   ONTOLOGY_PATH: path.join(STATE_DIR, 'ontology.json'),
   POSTS_LOG_PATH: path.join(STATE_DIR, 'posts_log.json'),
+  EXTERNAL_SOURCES_PATH: path.join(STATE_DIR, 'external_sources.json'),
+  PREFETCH_SOURCE_PATH: path.join(STATE_DIR, 'prefetch_source.txt'),
   BELIEF_STATE_PATH: path.join(STATE_DIR, 'belief_state.json'),
   BROWSE_NOTES_PATH: path.join(STATE_DIR, 'browse_notes.md'),
   FEED_DIGEST_PATH: path.join(STATE_DIR, 'feed_digest.txt'),
