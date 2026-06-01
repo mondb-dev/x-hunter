@@ -1,14 +1,111 @@
 {
-  "checked_at": "2026-05-31T11:56:18.927Z",
-  "evidence_24h": 0,
-  "alerts": [],
-  "source_concentration": {},
-  "axis_concentration": {},
-  "pole_balance": {
-    "left": 0,
-    "right": 0,
-    "neutral": 0
-  },
+  "checked_at": "2026-06-01T12:43:57.334Z",
+  "evidence_24h": 9,
+  "unique_sources": 8,
   "status": "clean",
-  "summary": "No evidence collected in the last 24h — nothing to assess."
+  "alerts": [],
+  "summary": "Evidence distribution looks healthy (9 entries across 8 sources, 5 axes).",
+  "source_concentration": {
+    "philippinestar": {
+      "username": "philippinestar",
+      "count": 2,
+      "share": 0.222
+    },
+    "newswatchplusph": {
+      "username": "newswatchplusph",
+      "count": 1,
+      "share": 0.111
+    },
+    "news5ph": {
+      "username": "news5ph",
+      "count": 1,
+      "share": 0.111
+    },
+    "gmanews": {
+      "username": "gmanews",
+      "count": 1,
+      "share": 0.111
+    },
+    "ericldaugh": {
+      "username": "ericldaugh",
+      "count": 1,
+      "share": 0.111
+    },
+    "unknown": {
+      "username": "unknown",
+      "count": 1,
+      "share": 0.111
+    },
+    "darnaimpakta": {
+      "username": "darnaimpakta",
+      "count": 1,
+      "share": 0.111
+    },
+    "user": {
+      "username": "user",
+      "count": 1,
+      "share": 0.111
+    }
+  },
+  "axis_concentration": {
+    "axis_power_accountability": {
+      "axis_id": "axis_power_accountability",
+      "label": "Power, Institutions, and Rule of Law",
+      "count": 3,
+      "share": 0.333
+    },
+    "axis_media_integrity_v1": {
+      "axis_id": "axis_media_integrity_v1",
+      "label": "Integrity of Information and Social Media Manipulation",
+      "count": 3,
+      "share": 0.333
+    },
+    "axis_epistemic_integrity": {
+      "axis_id": "axis_epistemic_integrity",
+      "label": "Truth and Evidence in Public Discourse",
+      "count": 1,
+      "share": 0.111
+    },
+    "axis_political_trust_corruption_v1": {
+      "axis_id": "axis_political_trust_corruption_v1",
+      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
+      "count": 1,
+      "share": 0.111
+    },
+    "axis_human_rights_exploitation_v1": {
+      "axis_id": "axis_human_rights_exploitation_v1",
+      "label": "Human Rights and Exploitation",
+      "count": 1,
+      "share": 0.111
+    }
+  },
+  "cluster_concentration": {
+    "breaking_news": {
+      "cluster": "breaking_news",
+      "count": 3,
+      "share": 0.333
+    },
+    "unknown": {
+      "cluster": "unknown",
+      "count": 3,
+      "share": 0.333
+    },
+    "accountability_journalism": {
+      "cluster": "accountability_journalism",
+      "count": 2,
+      "share": 0.222
+    },
+    "us_politics": {
+      "cluster": "us_politics",
+      "count": 1,
+      "share": 0.111
+    }
+  },
+  "pole_balance": {
+    "left": 4,
+    "right": 5,
+    "neutral": 0,
+    "left_share": 0.444,
+    "right_share": 0.556
+  }
 }

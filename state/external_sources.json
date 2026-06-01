@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-01T09:29:10.105Z",
+  "generated_at": "2026-06-01T12:34:59.314Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-01T09:29:37.872Z",
+  "profiled_at": "2026-06-01T12:35:30.518Z",
   "sources": [
     {
       "domain": "justice.gov",
@@ -871,9 +871,9 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-05-26T21:40:02.000Z",
+      "last_seen_at": "2026-06-01T09:12:35.000Z",
       "discovery": {
-        "distinct_urls": 176,
+        "distinct_urls": 177,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
@@ -884,14 +884,15 @@
         "origin_counts": {
           "ontology_evidence": 131,
           "claim_tracker": 15,
-          "feed_buffer_reply": 25,
+          "feed_buffer_reply": 26,
           "feed_buffer": 2,
           "journals": 63
         },
-        "distinct_referring_accounts": 4,
+        "distinct_referring_accounts": 5,
         "sample_referring_accounts": [
           "fabrice_mayrand",
           "geminiapp",
+          "imbue_ai",
           "oshikoi_",
           "smartmark_app"
         ],
@@ -940,15 +941,15 @@
         "breadth": {
           "score": 1,
           "basis": [
-            "distinct_urls:176",
+            "distinct_urls:177",
             "distinct_axes:18",
             "origin_types:5"
           ]
         },
         "corroboration": {
-          "score": 0.7833333333333333,
+          "score": 0.8916666666666667,
           "basis": [
-            "referring_accounts:4",
+            "referring_accounts:5",
             "origin_types:5"
           ]
         },
@@ -975,16 +976,16 @@
           ]
         },
         "overall": {
-          "score": 0.5229642857142858,
-          "confidence": 0.9804999999999999,
+          "score": 0.5310892857142857,
+          "confidence": 0.99025,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:176",
+            "distinct_urls:177",
             "distinct_axes:18",
             "origin_types:5",
-            "referring_accounts:4",
+            "referring_accounts:5",
             "origin_types:5",
             "supported:3",
             "refuted:4",
@@ -1280,9 +1281,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-01T07:40:00.000Z",
+      "last_seen_at": "2026-06-01T11:30:00.000Z",
       "discovery": {
-        "distinct_urls": 3862,
+        "distinct_urls": 3870,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1291,10 +1292,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 2252,
-          "feed_buffer_reply": 2425
+          "feed_buffer": 2259,
+          "feed_buffer_reply": 2430
         },
-        "distinct_referring_accounts": 1510,
+        "distinct_referring_accounts": 1512,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1332,7 +1333,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:3862",
+            "distinct_urls:3870",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1340,7 +1341,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1510",
+            "referring_accounts:1512",
             "origin_types:2"
           ]
         },
@@ -1370,10 +1371,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:3862",
+            "distinct_urls:3870",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1510",
+            "referring_accounts:1512",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1652,7 +1653,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-29T12:29:00.493Z",
+        "fetched_at": "2026-06-01T12:35:27.691Z",
         "homepage_url": "https://steampowered.com/",
         "example_url": "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
         "homepage_status": 200,
@@ -3237,7 +3238,7 @@
       "first_seen_at": "2026-04-03T03:15:49.569Z",
       "last_seen_at": "2026-06-01T07:40:38.000Z",
       "discovery": {
-        "distinct_urls": 61,
+        "distinct_urls": 62,
         "example_urls": [
           "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=27k7ut43wxglvx2o2e2nj7pszs",
           "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=XConvert&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=29yx7u26d9gsggltzzuo1ae67n",
@@ -3247,7 +3248,7 @@
         ],
         "origin_counts": {
           "feed_buffer": 4,
-          "feed_buffer_reply": 57
+          "feed_buffer_reply": 58
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -3278,7 +3279,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:61",
+            "distinct_urls:62",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3316,7 +3317,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:61",
+            "distinct_urls:62",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -4125,9 +4126,9 @@
       "entity": "Amazon",
       "kind": "unknown",
       "first_seen_at": "2026-04-09T03:23:02.000Z",
-      "last_seen_at": "2026-05-29T22:15:25.000Z",
+      "last_seen_at": "2026-06-01T03:05:46.000Z",
       "discovery": {
-        "distinct_urls": 112,
+        "distinct_urls": 118,
         "example_urls": [
           "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44/ref_=dvm_us_c_soc_THBY_tw_rb?twclid=2e4zyrzur7iapo7e8zxfmiz1fu",
           "https://www.amazon.com/dp/B0FV7FDY4Q?ref_=ptw_spv01_d403b2f0b3e432606b1c05fdabe45376&ascsubtag=ptw-X-1-9-zcxw79gmhbmhdzve&mcid=abeb628a6893350285c8588b9c699eff&twclid=2c1qv8ps4iujtsy9sniyy94eix&tag=twemermanu-us-20",
@@ -4136,7 +4137,7 @@
           "https://www.amazon.com/dp/B08FDGTGJT?ref_=ptw_spv01_74f4c9a5cd9e611fbf921e6c5a2f7acc&ascsubtag=ptw-X-1-9-zcxw79gmhbmhdzve&mcid=abeb628a6893350285c8588b9c699eff&twclid=2c1qv8ps4iujtsy9sniyy94eix&tag=twemermanu-us-20"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 112
+          "feed_buffer_reply": 118
         },
         "distinct_referring_accounts": 3,
         "sample_referring_accounts": [
@@ -4169,7 +4170,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:112",
+            "distinct_urls:118",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -4207,7 +4208,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:112",
+            "distinct_urls:118",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:3",
@@ -5013,9 +5014,9 @@
       "entity": "Byteplus",
       "kind": "unknown",
       "first_seen_at": "2026-04-15T13:30:37.000Z",
-      "last_seen_at": "2026-05-27T23:40:01.000Z",
+      "last_seen_at": "2026-06-01T09:32:18.000Z",
       "discovery": {
-        "distinct_urls": 34,
+        "distinct_urls": 37,
         "example_urls": [
           "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
           "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=2dnuttry4m02uyeswjtnkyw6cq",
@@ -5024,7 +5025,7 @@
           "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_video_codingplan&utm_content=tecdo&twclid=25cpjoe66peh1858zv8hf438l2"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 34
+          "feed_buffer_reply": 37
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -5055,7 +5056,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:34",
+            "distinct_urls:37",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -5093,7 +5094,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:34",
+            "distinct_urls:37",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:1",
@@ -5265,9 +5266,9 @@
       "entity": "Nizima-Action",
       "kind": "unknown",
       "first_seen_at": "2026-04-14T12:30:35.000Z",
-      "last_seen_at": "2026-05-24T16:42:00.000Z",
+      "last_seen_at": "2026-05-30T14:57:17.000Z",
       "discovery": {
-        "distinct_urls": 23,
+        "distinct_urls": 24,
         "example_urls": [
           "https://site.nizima-action.com/en/?twclid=2diqibk9zmfi9zdpw7jnuyzo3e",
           "https://site.nizima-action.com/en/?twclid=29ay2vpagiag1c9uvrmhmobjgw",
@@ -5276,7 +5277,7 @@
           "https://site.nizima-action.com/en/?twclid=22rja37tjl8abapm6f2apazed6"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 23
+          "feed_buffer_reply": 24
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -5307,7 +5308,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:23",
+            "distinct_urls:24",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -5345,7 +5346,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:23",
+            "distinct_urls:24",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:1",
@@ -5451,20 +5452,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.417421875,
-          "confidence": 0.553725,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:20",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.019999999999999997,
           "confidence": 0.55,
@@ -5477,6 +5464,20 @@
             "corrections:false",
             "outbound_links:2",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.417421875,
+          "confidence": 0.553725,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:20",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -5703,20 +5704,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.417421875,
-          "confidence": 0.486225,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:16",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.15000000000000002,
           "confidence": 0.55,
@@ -5729,6 +5716,20 @@
             "corrections:false",
             "outbound_links:5",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.417421875,
+          "confidence": 0.486225,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:16",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -5829,20 +5830,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.417421875,
-          "confidence": 0.486225,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:16",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.1,
           "confidence": 0.55,
@@ -5855,6 +5842,20 @@
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.417421875,
+          "confidence": 0.486225,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:16",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -5955,20 +5956,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.417421875,
-          "confidence": 0.486225,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:16",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.26,
           "confidence": 0.55,
@@ -5981,6 +5968,20 @@
             "corrections:false",
             "outbound_links:4",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.417421875,
+          "confidence": 0.486225,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:16",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -6333,6 +6334,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.417421875,
           "confidence": 0.39622500000000005,
@@ -6346,6 +6361,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-01T10:15:23.417Z",
+        "homepage_url": "https://teslahubs.com/",
+        "example_url": "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://teslahubs.com/",
+        "example_final_url": "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -6414,6 +6460,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.12,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:2",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.417421875,
           "confidence": 0.39622500000000005,
@@ -6427,6 +6487,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-01T10:15:23.771Z",
+        "homepage_url": "https://guardianbikes.com/",
+        "example_url": "https://guardianbikes.com/products/balance-bike?variant=41102033158237&utm_source=twitter&twclid=2dhmyi0k26r61jxbnc07720qis&utm_content=dpa_carousel&utm_campaign=X_2026_DPA_Remarketing_Campaign+&utm_medium=cpc",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://guardianbikes.com/",
+        "example_final_url": "https://guardianbikes.com/products/balance-bike?variant=41102033158237&utm_source=twitter&twclid=2dhmyi0k26r61jxbnc07720qis&utm_content=dpa_carousel&utm_campaign=X_2026_DPA_Remarketing_Campaign+&utm_medium=cpc",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
         }
       }
     },
@@ -6497,6 +6588,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.6100000000000001,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:7",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.4170052083333334,
           "confidence": 0.305825,
@@ -6510,6 +6615,37 @@
             "origin_types:2",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-01T10:15:25.249Z",
+        "homepage_url": "https://onelink.me/",
+        "example_url": "https://vix.onelink.me/Z4oU/hyuh928w?twclid=24s36ffdjwv85ew8o2yfteqmxu",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.appsflyer.com/products/deep-linking/",
+        "example_final_url": "https://vix.com/es-es/deportes?pid=Twitter_Paid&twclid=24s36ffdjwv85ew8o2yfteqmxu&c=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&af_adset=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&af_dp=vixapp%3A%2F%2Fes-es%2Fdeportes&source_caller=ui&shortlink=hyuh928w&af_xp=social&af_ad=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 120,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
         }
       }
     },
@@ -6580,6 +6716,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:75",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.4154166666666667,
           "confidence": 0.23679999999999998,
@@ -6593,6 +6743,37 @@
             "origin_types:3",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-01T10:15:25.950Z",
+        "homepage_url": "https://tinyurl.com/",
+        "example_url": "https://tinyurl.com/yc8xxez5?twclid=2dnd76jy9k71tnu9ve267e0uz7",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://tinyurl.com/",
+        "example_final_url": "https://store.steampowered.com/app/3301010/?utm_source=X&utm_campaign=X_EN_Teaser_01&utm_medium=link&utm_content=video&utm_term=wishlist_now_on_steam&twclid=2dnd76jy9k71tnu9ve267e0uz7",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 75,
+          "opinion_marker": false
         }
       }
     },
@@ -6663,6 +6844,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:15",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.4147135416666667,
           "confidence": 0.216325,
@@ -6677,6 +6872,37 @@
             "origin_types:2",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-01T10:50:27.990Z",
+        "homepage_url": "https://huawei.com/",
+        "example_url": "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
+        "homepage_status": null,
+        "example_status": 200,
+        "homepage_final_url": "https://huawei.com/",
+        "example_final_url": "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
+        "homepage_content_type": "",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 15,
+          "opinion_marker": false
         }
       }
     },
@@ -7377,6 +7603,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.42000000000000004,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.40466145833333333,
           "confidence": 0.338975,
@@ -7390,6 +7630,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-01T10:50:29.101Z",
+        "homepage_url": "https://kubit.ai/",
+        "example_url": "https://kubit.ai/agent-analytics-landing/?utm_source=x_ads&utm_medium=paid_social&utm_campaign=claude_group&twclid=2eb9hv62es2e93pzc1qorbclgf",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://kubit.ai/",
+        "example_final_url": "https://kubit.ai/agent-analytics-landing/?utm_source=x_ads&utm_medium=paid_social&utm_campaign=claude_group&twclid=2eb9hv62es2e93pzc1qorbclgf",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -7837,6 +8108,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.39828125000000003,
           "confidence": 0.31035,
@@ -7850,6 +8135,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-01T10:50:29.549Z",
+        "homepage_url": "https://h-tech.space/",
+        "example_url": "https://teamlore.h-tech.space/?twclid=21cpesmzgsrh5ius8yd25zbe9t",
+        "homepage_status": null,
+        "example_status": 200,
+        "homepage_final_url": "https://h-tech.space/",
+        "example_final_url": "https://teamlore.h-tech.space/?twclid=21cpesmzgsrh5ius8yd25zbe9t",
+        "homepage_content_type": "",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -7918,6 +8234,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.39828125000000003,
           "confidence": 0.31035,
@@ -7931,6 +8261,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-01T10:50:30.517Z",
+        "homepage_url": "https://darkhours-thegame.com/",
+        "example_url": "https://www.darkhours-thegame.com/xbox?utm_source=twitter&utm_campaign=XboxLaunch&utm_medium=pc&utm_content=Diftborn&utm_term=us&twclid=271vf2o4bu11vai5qyjclxea1r",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://darkhours-thegame.com/",
+        "example_final_url": "https://www.darkhours-thegame.com/xbox?utm_source=twitter&utm_campaign=XboxLaunch&utm_medium=pc&utm_content=Diftborn&utm_term=us&twclid=271vf2o4bu11vai5qyjclxea1r",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -7999,6 +8360,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.45,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:true",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:5",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.39828125000000003,
           "confidence": 0.31035,
@@ -8012,6 +8387,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-01T12:00:33.240Z",
+        "homepage_url": "https://zavu.dev/",
+        "example_url": "https://www.zavu.dev/?twclid=28xrbkfqjxo8t4gl13yvgj5wa8",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.zavu.dev/en",
+        "example_final_url": "https://www.zavu.dev/en?twclid=28xrbkfqjxo8t4gl13yvgj5wa8",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
         }
       }
     },
@@ -8714,6 +9120,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.28,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:true",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.39190104166666667,
           "confidence": 0.281725,
@@ -8727,6 +9147,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-01T12:00:33.917Z",
+        "homepage_url": "https://artyfacts.ai/",
+        "example_url": "https://www.artyfacts.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=waitlist_traffic&utm_content=capture_demo&utm_term=variantA&twclid=2e7ew786ao2fxw0qm1wxfdqe3b",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://artyfacts.ai/",
+        "example_final_url": "https://artyfacts.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=waitlist_traffic&utm_content=capture_demo&utm_term=variantA&twclid=2e7ew786ao2fxw0qm1wxfdqe3b",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -8795,6 +9246,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.17,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:7",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.39190104166666667,
           "confidence": 0.281725,
@@ -8808,6 +9273,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-01T12:00:34.456Z",
+        "homepage_url": "https://subspace.build/",
+        "example_url": "https://subspace.build/?utm_source=x&utm_campaign=memory_card_trick&twclid=26pw69bugqoexf6jq5nzgivo8r",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.subspace.build/",
+        "example_final_url": "https://www.subspace.build/?utm_source=x&utm_campaign=memory_card_trick&twclid=26pw69bugqoexf6jq5nzgivo8r",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
         }
       }
     },
@@ -8876,6 +9372,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.4,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:25",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.39190104166666667,
           "confidence": 0.281725,
@@ -8889,6 +9399,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-01T12:00:35.272Z",
+        "homepage_url": "https://merck.com/",
+        "example_url": "https://www.merck.com/stories/were-pursuing-innovative-science-with-antibody-drug-conjugate-adc-research/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=na_NA_VID_18s&twclid=2ashs3kuiq7isb412ax3cbgusn",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.merck.com/",
+        "example_final_url": "https://www.merck.com/stories/were-pursuing-innovative-science-with-antibody-drug-conjugate-adc-research/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=na_NA_VID_18s&twclid=2ashs3kuiq7isb412ax3cbgusn",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 23,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 25,
+          "opinion_marker": false
         }
       }
     },
@@ -9221,6 +9762,51 @@
             "origin_types:2",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0.26,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-01T12:35:29.293Z",
+        "homepage_url": "https://dlvr.it/",
+        "example_url": "http://dlvr.it/TRwWsL",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://dlvrit.com/",
+        "example_final_url": "https://www.youtube.com/shorts/X59-djGf504?utm_source=dlvr.it&utm_medium=twitter",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -10058,6 +10644,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0.26,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:4",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-01T12:35:29.785Z",
+        "homepage_url": "https://raybrowser.com/",
+        "example_url": "https://raybrowser.com/?twclid=2f1xntsosgc648xbloi17s8fyh",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://raybrowser.com/",
+        "example_final_url": "https://raybrowser.com/?twclid=2f1xntsosgc648xbloi17s8fyh",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
         }
       }
     },
@@ -10139,6 +10770,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0.39999999999999997,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:4",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-01T12:35:30.518Z",
+        "homepage_url": "https://propfirm.compare/",
+        "example_url": "https://propfirm.compare/loyalty-program?twclid=2d4zyj9jmkiff93u6ux1kjpg32",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://propfirm.compare/",
+        "example_final_url": "https://propfirm.compare/loyalty-program?twclid=2d4zyj9jmkiff93u6ux1kjpg32",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 13,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
         }
       }
     },
