@@ -114,10 +114,31 @@ function gatherTodaySignals() {
       const pd = (p.date || p.posted_at || "").slice(0, 10);
       return pd === d || pd === yesterday;
     });
+
+    // Group consecutive thread tweets so they register as one thread signal,
+    // not N separate tweet signals (prevents over-counting against publish tasks).
+    const threadGroups = {};
     for (const p of recentPosts) {
+      if (p.type === "thread" || p.thread_id) {
+        const key = p.thread_id || `thread_${(p.date || p.posted_at || "").slice(0, 10)}`;
+        if (!threadGroups[key]) threadGroups[key] = [];
+        threadGroups[key].push(p);
+      } else {
+        signals.push({
+          source: `tweet:${p.type || "post"}`,
+          description: `Posted ${p.type || "tweet"}: "${(p.content || "").slice(0, 100)}"`,
+        });
+      }
+    }
+
+    // Emit one signal per thread group
+    for (const [key, tweets] of Object.entries(threadGroups)) {
+      const firstTweet = tweets[0];
       signals.push({
-        source: `tweet:${p.type || "post"}`,
-        description: `Posted ${p.type || "tweet"}: "${(p.content || "").slice(0, 100)}"`,
+        source: "tweet:thread",
+        description: `Posted thread (${tweets.length} tweets): "${(firstTweet.content || "").slice(0, 100)}"`,
+        thread_id: key,
+        tweet_count: tweets.length,
       });
     }
   }

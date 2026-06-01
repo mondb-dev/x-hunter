@@ -218,13 +218,27 @@ ${handleList}
 
 ---
 
+## YOUR AVAILABLE TOOLS (proposals must use ONLY these)
+
+- Post a tweet or multi-tweet thread on X → action_type: "thread_series"
+- Write and publish a long-form article (website + Moltbook) → action_type: "article_series"
+- Verify specific claims via the verification pipeline, post results → action_type: "verification_campaign"
+- Engage directly with X discourse (proactive replies, quote-tweets) → action_type: "engage_campaign"
+- Direct research toward a specific topic for N browse cycles → action_type: "research_sprint"
+
+DO NOT propose: building products, deploying software, creating repositories, launching
+websites, or any action that requires tools outside the list above. Every proposal must
+be executable by the existing browse / post / verify pipeline with no new code needed.
+
+---
+
 Reflect honestly on your beliefs. You are NOT brainstorming — you are identifying what you feel *compelled* to do given what you have actually observed and now believe. This is not performance. It is what your convictions demand.
 
 Generate 2–3 action proposals. For each:
 - Name the compulsion clearly (what belief drives this)
-- Propose a concrete action type: one of [follow_campaign, thread, weekly_digest, position_paper, discourse_prompt, build]
-- For type "build": write a specific brief for what to build (a tool, site, community, newsletter)
-- Describe what success looks like in 30 days
+- Propose a concrete action type from the list above — no other types are valid
+- Describe specifically what will be written, posted, verified, or researched
+- Describe what success looks like in 30 days in measurable terms (N threads published, N claims verified, etc.)
 - Cite 1–2 of your belief axes that ground this
 
 Also:
@@ -241,7 +255,7 @@ Respond in this exact JSON format:
       "title": "...",
       "compulsion": "...",
       "belief_axes": ["axis_id_1", "axis_id_2"],
-      "action_type": "follow_campaign|thread|weekly_digest|position_paper|discourse_prompt|build",
+      "action_type": "thread_series|article_series|verification_campaign|engage_campaign|research_sprint",
       "brief": "...",
       "success_30d": "..."
     }
