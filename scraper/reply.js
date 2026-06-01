@@ -687,10 +687,16 @@ function logInteraction(data, item, replyText, memoryHints) {
       continue;
     }
 
-    // Append one grounding source URL if it fits (X shortens to ~23 chars via t.co)
-    const sourceUrls = verdict.sourceUrls || [];
-    if (sourceUrls.length > 0 && replyText.length <= 247) {
-      replyText = replyText + '\n' + sourceUrls[0];
+    // Append Veritas Lens URL when verification was run (X shortens to ~23 chars via t.co)
+    // lens_url is ~55 chars; with \n that leaves 223 chars for the reply text
+    if (liveVerification && liveVerification.lens_url && replyText.length <= 223) {
+      replyText = replyText + '\n' + liveVerification.lens_url;
+    } else {
+      // Fallback: append first source URL if available and fits
+      const sourceUrls = verdict.sourceUrls || [];
+      if (sourceUrls.length > 0 && replyText.length <= 247) {
+        replyText = replyText + '\n' + sourceUrls[0];
+      }
     }
 
     // ── Step 5: Post reply (page already on tweet URL) ────────────────────
