@@ -637,14 +637,28 @@ function logInteraction(data, item, replyText, memoryHints) {
 
     // ── Step 3b: Live claim verification ──────────────────────────────────
     let liveVerification = null;
-    if (verifyClaim && item.text.length > 40) {
-      try {
-        liveVerification = verifyClaim({ claim: item.text, handle: item.from_username });
-        if (liveVerification) {
-          console.log(`[reply] live verify: ${liveVerification.verdict_label} (${Math.round((liveVerification.confidence || 0) * 100)}%)`);
+    if (verifyClaim) {
+      // If the message is a short "verify this" intent, extract claim from the
+      // parent post (threadContext[0]) instead of the user's own short message.
+      const isVerifyIntent = /\b(verify|fact.?check|is this true|check this|true or false)\b/i.test(item.text)
+        && item.text.length <= 80;
+      const claimSource = isVerifyIntent && threadContext.length > 0
+        ? threadContext[0].text
+        : item.text;
+      const claimHandle = isVerifyIntent && threadContext.length > 0
+        ? threadContext[0].user
+        : item.from_username;
+
+      if (claimSource && claimSource.length > 40) {
+        try {
+          if (isVerifyIntent) console.log(`[reply] verify intent detected — checking parent post claim`);
+          liveVerification = verifyClaim({ claim: claimSource, handle: claimHandle });
+          if (liveVerification) {
+            console.log(`[reply] live verify: ${liveVerification.verdict_label} (${Math.round((liveVerification.confidence || 0) * 100)}%)`);
+          }
+        } catch (err) {
+          console.warn(`[reply] live verify failed (non-fatal): ${err.message}`);
         }
-      } catch (err) {
-        console.warn(`[reply] live verify failed (non-fatal): ${err.message}`);
       }
     }
 
