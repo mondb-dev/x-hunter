@@ -32,7 +32,7 @@ const STATE_FILE   = path.join(STATE_DIR, "source_followup_state.json");
 const REVISIT_HOURS  = 72;    // minimum hours between revisits of the same domain
 const MAX_PER_RUN    = 3;     // max URLs to queue in one run
 const ELIGIBLE_KINDS = new Set(["news", "academic", "official"]);
-const MIN_DISTINCT   = 2;     // domain must have been seen in >= N distinct URLs to qualify
+const MIN_DISTINCT   = 1;     // domain must have been seen in >= N distinct URLs to qualify
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 

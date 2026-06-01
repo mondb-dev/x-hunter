@@ -54,10 +54,10 @@ const FETCH_COOLDOWN  = 3600;  // minimum seconds between fetches of same feed (
 // tier: 1 = wire service / official, 2 = major news, 3 = regional / specialist
 
 const FEEDS = [
-  // Global wire services
-  { url: "https://feeds.reuters.com/reuters/topNews", name: "Reuters", tier: 1, axis_hint: "global_news" },
+  // Global news — tier 1 wire/authority sources
   { url: "https://feeds.bbci.co.uk/news/world/rss.xml", name: "BBC World", tier: 1, axis_hint: "global_news" },
-  { url: "https://rss.cnn.com/rss/edition_world.rss", name: "CNN World", tier: 2, axis_hint: "global_news" },
+  { url: "https://www.theguardian.com/world/rss", name: "The Guardian", tier: 1, axis_hint: "global_news" },
+  { url: "https://rss.nytimes.com/services/xml/rss/nyt/World.xml", name: "NYT World", tier: 1, axis_hint: "global_news" },
 
   // Philippine news (axis_hint: PH governance, power accountability)
   { url: "https://newsinfo.inquirer.net/feed", name: "Inquirer", tier: 2, axis_hint: "ph_governance_accountability" },
@@ -65,7 +65,6 @@ const FEEDS = [
   { url: "https://rappler.com/feed/", name: "Rappler", tier: 2, axis_hint: "ph_governance_accountability" },
 
   // Geopolitics & international relations
-  { url: "https://foreignpolicy.com/feed/", name: "Foreign Policy", tier: 2, axis_hint: "geopolitics_power" },
   { url: "https://www.aljazeera.com/xml/rss/all.xml", name: "Al Jazeera", tier: 2, axis_hint: "geopolitics_power" },
 
   // AI and technology (axis_hint: ai_societal_impact)
