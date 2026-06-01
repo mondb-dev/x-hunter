@@ -222,16 +222,21 @@ function buildJournalTask(type, today, hour, dayNumber) {
       '   <section class="images">, <section class="footnotes"> as usual.\n' +
       '\n' +
       '   SECTION 2 — raw observations (required): Read state/browse_notes.md RIGHT NOW\n' +
-      '   and include ALL entries as-is inside a <section class="browse-notes"> block\n' +
-      '   at the END of the article, just before </article>. Format:\n' +
+      '   and include SIGNIFICANT entries inside a <section class="browse-notes"> block\n' +
+      '   at the END of the article, just before </article>.\n' +
+      '   INCLUDE entries tagged: [ONTOLOGY], [CLAIM], [CURIOSITY], [SPRINT], [SIGNAL],\n' +
+      '     [SYNTHESIS], [CRITIQUE], [VERIFIED], [REFUTED], [DRIFT], [LANDMARK].\n' +
+      '   EXCLUDE entries tagged [NOTED] — passive observations with no belief or action impact.\n' +
+      '   If no significant entries exist, write a single <li>(no significant observations this cycle)</li>.\n' +
+      '   Format:\n' +
       '     <section class="browse-notes">\n' +
       '       <h2>Raw Observations</h2>\n' +
       '       <ul>\n' +
       '         <li>[TAG] text of observation</li>\n' +
-      '         ... one <li> per line from browse_notes.md ...\n' +
+      '         ... one <li> per significant line from browse_notes.md ...\n' +
       '       </ul>\n' +
       '     </section>\n' +
-      '   This section is mandatory. Do not skip it or summarise — copy the raw lines.\n' +
+      '   This section is mandatory. Do not skip it — but do filter out [NOTED] noise.\n' +
       '\n' +
       '   Use standard HTML journal format. In the HTML metadata use content="' + dayNumber + '"\n' +
       '   for x-hunter-day and "Day ' + dayNumber + ' \u00b7 Hour ' + hour + '" in the header.\n' +

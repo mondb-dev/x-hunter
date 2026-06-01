@@ -480,6 +480,8 @@ while true; do
     if [ $(( CYCLE % CURIOSITY_EVERY )) -eq 0 ]; then
       CURIOSITY_CYCLE=$CYCLE CURIOSITY_EVERY=$CURIOSITY_EVERY \
         node "$PROJECT_ROOT/runner/curiosity.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+      # ── Web-search curiosity: add top search results for directive topic ──
+      node "$PROJECT_ROOT/runner/search_curiosity.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
       # Axis clustering: detect semantically redundant belief axes, propose merges
       node "$PROJECT_ROOT/runner/cluster_axes.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
@@ -503,6 +505,8 @@ while true; do
     if [ $(( CYCLE % 6 )) -eq 0 ]; then
       READING_CYCLE=$CYCLE node "$PROJECT_ROOT/runner/deep_dive_detector.js" \
         >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+      # RSS feed collector: fetch news/research feeds, append to feed_digest.txt
+      node "$PROJECT_ROOT/scraper/rss_collect.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     fi
 
     # Pre-fetch curiosity search URL in browser (non-blocking — page ready when agent starts)
@@ -616,6 +620,12 @@ while true; do
 
     # ── Proactive outbound replies (no time gate — run during silent hours too) ─
     node "$PROJECT_ROOT/runner/proactive_reply.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+
+    # ── Mind-change post: fires when axis score delta >= 0.20 (max 1/week) ─
+    node "$PROJECT_ROOT/runner/post_mind_change.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+
+    # ── Source follow-up: queue trusted external sources for periodic revisit ─
+    node "$PROJECT_ROOT/runner/source_followup.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
 
   # ── Quote cycle: find one post worth quoting + sharp commentary ──────────
   elif [ "$CYCLE_TYPE" = "QUOTE" ]; then
@@ -988,6 +998,11 @@ while true; do
     node "$PROJECT_ROOT/runner/synthesize_axes.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     # ── Daily reflection: synthesise patterns across last 7 days of journals ──
     node "$PROJECT_ROOT/runner/reflect.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    # ── Thread draft: generate weekly discourse thread (gated by thread_state.json) ──
+    node "$PROJECT_ROOT/runner/generate_thread_draft.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    if [ -f "$PROJECT_ROOT/state/thread_draft.json" ]; then
+      node "$PROJECT_ROOT/runner/post_thread.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
+    fi
     # ── Sprint update: generate tweet + Moltbook post if milestone reached ──
     node "$PROJECT_ROOT/runner/sprint_update.js" >> "$PROJECT_ROOT/runner/runner.log" 2>&1 || true
     # Post sprint progress tweet if sprint_update.js wrote a draft
@@ -1021,6 +1036,19 @@ while true; do
         fi
       fi
     done
+    # ── Weekly: rotate browse_archive.md into timestamped archive file ────
+    _DOW=$(date -u +%u 2>/dev/null || date +%u)   # 1=Mon … 7=Sun
+    if [ "$_DOW" = "1" ]; then
+      _WEEK_LABEL=$(date -u +%G-W%V 2>/dev/null || date +%G-W%V)
+      _ARCH_DIR="$PROJECT_ROOT/state/browse_notes_archive"
+      mkdir -p "$_ARCH_DIR"
+      _ARCH_TARGET="$_ARCH_DIR/${_WEEK_LABEL}.md"
+      if [ ! -f "$_ARCH_TARGET" ] && [ -s "$PROJECT_ROOT/state/browse_archive.md" ]; then
+        cp "$PROJECT_ROOT/state/browse_archive.md" "$_ARCH_TARGET"
+        printf "" > "$PROJECT_ROOT/state/browse_archive.md"
+        echo "[run] weekly rotation: browse_archive.md → browse_notes_archive/${_WEEK_LABEL}.md"
+      fi
+    fi
     # ── Git commit daily outputs ───────────────────────────────────────────
     git -C "$PROJECT_ROOT" add journals/ checkpoints/ state/ articles/ daily/ ponders/ web/public/images/articles/ web/public/data/ 2>/dev/null || true
     git -C "$PROJECT_ROOT" commit -m "daily: ${TODAY}" 2>/dev/null || true
