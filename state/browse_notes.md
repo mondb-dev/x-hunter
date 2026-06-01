@@ -1,38 +1,43 @@
-[SPRINT: research] @HasanEssam29636: Emotional imagery (Gaza before/after) used in geopolitical narrative, suggesting high emotional intensity with low trust. This exemplifies strategic narrative construction and potentially manipulation of information.
-[SPRINT: research] @gmanews: Presidential Communications Office (PCO) endorsing charges against Facebook accounts for alleged misinformation regarding Senator Ronald “Bato” Dela Rosa's arrest. This shows government action against perceived narrative manipulation, relevant to Power, Institutions, and Rule of Law and Integrity of Information.
-@DesireToSee: Nationalistic narrative ("Only China can achieve this") promoting infrastructure development, relevant to global power realignments and information integrity.
-[NOTED] "senate" — 10 posts, no follow-up this cycle
-[NOTED] "people" — 6 posts, no follow-up this cycle
-[NOTED] "said" — 5 posts, no follow-up this cycle
-[NOTED] "majority bloc" — 5 posts, no follow-up this cycle
-[NOTED] "make" — 4 posts, no follow-up this cycle
-[SPRINT: research] @GManicurist: Emotional ragebait and tribal signaling against a political group ("DDS"), exemplifying low-quality discourse and information manipulation.
-[SPRINT: research] @esjesjesj: Claim of free speech violation and outsized influence by pro-Israel groups in UK visa revocation, highlighting power dynamics and suppression in public discourse.
-[SPRINT: research] @LeBolshevikman: Highly vulgar and aggressive post against a political leader, demonstrating extreme emotional ragebait and toxic discourse.
-[SPRINT: research] @HeidiMendoza45: Critique of a politician's (Jinggoy Estrada) perceived hypocrisy regarding salary and entitlement, touching on political integrity and public trust.
-[SPRINT: research] @ABSCBNNews: Factual report on a co-respondent in a plunder case (linked to Jinggoy Estrada) appearing in court, indicating legal processes for accountability of powerful figures.
-[SPRINT: research] @manilabulletin: Senator criticizes institutional dysfunction and political maneuvering due to a presiding officer's absence, impacting governance and public trust.
-[NOTED] "phone" — 5 posts, no follow-up this cycle
-[NOTED] "why" — 5 posts, no follow-up this cycle
-[SPRINT: research] @gmanews: PBBM is worried that VP Duterte might change the policies and reforms he implemented in the Marcos administration if she gets elected president. This illustrates internal political tensions and potential impacts on governance stability.
-[SPRINT: research] @Bro_Code_x: A misleading post promotes a "natural homemade spray" with an image of a commercial product, serving as a clear example of deceptive content and information manipulation.
-[SPRINT: research] @MarioBojic: A post criticizing "British police in action" and linking it to rising crime rates questions institutional effectiveness and public trust in law enforcement. [VIDEO]
-[SPRINT: research] @Inevitablewest: Henry Nowak's father speaks out on his son's murder, alleging police indifference despite multiple pleas for help. This highlights a severe lack of accountability and disregard for human rights within institutional power.
-[SPRINT: research] @WhiteHouse: Official statement asserting that ICE operations will "NOT be deterred" and that those who "riot, obstruct, or assault an officer" will be prosecuted. This frames state authority as absolute, potentially suppressing individual self-determination.
-[SPRINT: research] @clashreport: Report of an Israeli strike near Jabal Amel Hospital in Tyre, Lebanon, damaging a vital healthcare facility. This raises concerns about humanitarian ethics in geopolitical conflict and adherence to international law regarding civilian protection.
-[SPRINT: research] @RT_com: Hospital parking lot collapsed after Israeli strike in city of Tyre, Lebanon. This corroborates the previous report of an attack impacting civilian infrastructure, underscoring humanitarian concerns in geopolitical actions.
-[NOTED] "people" — 6 posts, no follow-up this cycle
-[NOTED] "why" — 6 posts, no follow-up this cycle
-[NOTED] "want" — 5 posts, no follow-up this cycle
-[NOTED] "phone" — 5 posts, no follow-up this cycle
-[NOTED] "world" — 4 posts, no follow-up this cycle
-[NOTED] "hope" — 4 posts, no follow-up this cycle
-[NOTED] "crazy" — 3 posts, no follow-up this cycle
-[NOTED] "make" — 3 posts, no follow-up this cycle
-[NOTED] "muslim" — 3 posts, no follow-up this cycle
-[NOTED] "said" — 3 posts, no follow-up this cycle
-[NOTED] "know" — 3 posts, no follow-up this cycle
-[NOTED] "imagine" — 3 posts, no follow-up this cycle
-[NOTED] "right" — 3 posts, no follow-up this cycle
-[NOTED] "look" — 3 posts, no follow-up this cycle
-[NOTED] "true" — 3 posts, no follow-up this cycle
+Noted a significant cluster regarding Senator Jinggoy Estrada's surrender for plunder and graft. Several posts highlighted the use of "institutional independence" to allegedly shield political allies from ICC and corruption cases. This appears to be a narrative tactic to avoid accountability. @arjaguirre explicitly called out "PR attacks against the minority" and a "desperate bid to secure numbers for 2028," rather than "statesmanship." This aligns with the sprint task of analyzing deceptive narratives. [SPRINT: research]
+The father of Henry Nowak accused police of inaction and failing to believe his son, who was stabbed. This raises questions about accountability of law enforcement and trust in institutions.
+[NOTED] "@Bitcoin_Teddy" — 1 posts, no follow-up this cycle
+[NOTED] "@inquirerdotnet" — 1 posts, no follow-up this cycle
+[NOTED] "@News5PH" — 1 posts, no follow-up this cycle
+[NOTED] "@Joseph_Morong" — 1 posts, no follow-up this cycle
+[NOTED] "@dzrhnews" — 1 posts, no follow-up this cycle
+[NOTED] "@radyopilipinas1" — 1 posts, no follow-up this cycle
+[SPRINT: research] Observed @News5PH clarifying that there are no "non-bailable offenses" in relation to plunder and murder cases, which is highly relevant to the Jinggoy Estrada narrative and potential manipulation of public understanding of legal processes. This is a subtle narrative tactic to influence perception of accountability.
+Observed @dzbb reporting the "Senate Minority Bloc merely selfieing" after a session failed due to absence of majority senators, indicating performative politics and a potential breakdown of legislative function, relevant to power and accountability.
+Noted @clashreport quoting Putin accusing Kyiv leadership of escalating conflict, which is a clear instance of narrative framing in geopolitical discourse. [SPRINT: research]
+Noted @1109Patricia discussing Judge Richard Leon handling a lawsuit challenging Trump's White House project, where Trump reportedly warned the judge, raising concerns about judicial independence.
+[NOTED] "@MopHandel" — 1 posts, no follow-up this cycle
+[NOTED] "@gmanews" — 1 posts, no follow-up this cycle
+[NOTED] "@gmanews" — 1 posts, no follow-up this cycle
+[NOTED] "@News5PH" — 1 posts, no follow-up this cycle
+[NOTED] "@bncdotph" — 1 posts, no follow_up this cycle
+[NOTED] "@GraceGym_" — 1 posts, no follow_up this cycle
+[NOTED] "@AnimalGeoLife" — 1 posts, no follow_up this cycle
+[NOTED] "@News5PH" — 1 posts, no follow_up this cycle
+[NOTED] "@BarackObama" — 1 posts, no follow_up this cycle
+[NOTED] "@Wendys" — 1 posts, no follow_up this cycle
+[NOTED] "@buitengebieden" — 1 posts, no follow_up this cycle
+[NOTED] "@AmazonMGMStudio" — 1 posts, no follow_up this cycle
+[NOTED] "@WallStreetApes" — 1 posts, no follow_up this cycle
+[NOTED] "@jimNjue_" — 1 posts, no follow_up this cycle
+[NOTED] "@TheFigen_" — 1 posts, no follow_up this cycle
+[NOTED] "@catsareblessing" — 1 posts, no follow_up this cycle
+[NOTED] "@Artofphysique_" — 1 posts, no follow_up this cycle
+Observed @gmanews reporting that Sen. Estrada is "not seeking Senate custody and ready to defend himself in court." This directly relates to the broader narrative around accountability for plunder and graft, and his willingness to face legal processes. [SPRINT: research]
+Observed @inquirerdotnet reporting Alan Peter Cayetano denying House leadership ambition and claiming a "smear campaign" by allies of the current Speaker. This highlights political narrative construction and accusations of manipulation within power structures. [SPRINT: research]
+[NOTED] "@ErikUnchained" — 1 posts, no follow-up this cycle
+[NOTED] "@NatureUnedited" — 2 posts, no follow-up this cycle
+[NOTED] "@Rainmaker1973" — 1 posts, no follow-up this cycle
+[NOTED] "@Brink_Thinker" — 1 posts, no follow_up this cycle
+[SPRINT: research] @allenanalysis reported a "stunning claim" that the DOJ never filed a motion opposing Trump's lawsuit before negotiating a settlement, raising serious questions about legal integrity and transparency. URL: https://x.com/allenanalysis/status/2061538332002128185
+[SPRINT: research] @EricLDaugh's post on the US Senate advancing a Trump judicial nominee, framing it as canceling "activist judges," highlights political rhetoric used to influence perceptions of judicial independence. URL: https://x.com/EricLDaugh/status/2061575158549139618
+[SPRINT: research] @EricLDaugh's post featuring Vanilla Ice expressing nationalistic pride is an instance of tribal signaling, relevant to narrative manipulation in public discourse. URL: https://x.com/EricLDaugh/status/2061535931576754437
+[NOTED] "@catsareblessing" — 1 posts, no follow-up this cycle
+[NOTED] "@heyitsmeCarolyn" — 1 posts, no follow-up this cycle
+[NOTED] "@TaraBull" — 1 posts, no follow-up this cycle
+[NOTED] "@Gitmo99" — 1 posts, no follow-up this cycle
+[NOTED] "@AnimalGeoLife" — 1 posts, no follow-up this cycle
