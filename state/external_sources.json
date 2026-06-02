@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-02T12:45:29.488Z",
+  "generated_at": "2026-06-02T14:15:30.384Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-02T12:46:03.085Z",
+  "profiled_at": "2026-06-02T14:15:59.998Z",
   "sources": [
     {
       "domain": "justice.gov",
@@ -1282,9 +1282,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-02T12:10:37.000Z",
+      "last_seen_at": "2026-06-02T13:58:28.000Z",
       "discovery": {
-        "distinct_urls": 3979,
+        "distinct_urls": 3982,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1293,8 +1293,8 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 2314,
-          "feed_buffer_reply": 2509
+          "feed_buffer": 2317,
+          "feed_buffer_reply": 2510
         },
         "distinct_referring_accounts": 1542,
         "sample_referring_accounts": [
@@ -1334,7 +1334,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:3979",
+            "distinct_urls:3982",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1372,7 +1372,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:3979",
+            "distinct_urls:3982",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1542",
@@ -1554,9 +1554,9 @@
       "entity": "Steampowered",
       "kind": "unknown",
       "first_seen_at": "2026-04-04T23:34:51.000Z",
-      "last_seen_at": "2026-06-01T09:04:30.000Z",
+      "last_seen_at": "2026-06-01T22:00:02.000Z",
       "discovery": {
-        "distinct_urls": 173,
+        "distinct_urls": 174,
         "example_urls": [
           "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
           "https://store.steampowered.com/app/3321460?utm_campaign=launching&utm_source=X&utm_term=20260319_traffic&utm_medium=us&utm_content=Trailer_view&twclid=22351un15xjmtu22gjwnjp292d",
@@ -1565,7 +1565,7 @@
           "https://store.steampowered.com/app/2479810/Gray_Zone_Warfare/?utm_source=X&utm_medium=paid&utm_campaign=US_Phase_2_Traffic&utm_content=GAMEPLAY_LOOP_15sec_FINAL_1x1_CTA3_33_OFF&twclid=2c4pby13s9ks6s1nyr9c6bq6se"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 170,
+          "feed_buffer_reply": 171,
           "feed_buffer": 3
         },
         "distinct_referring_accounts": 29,
@@ -1606,7 +1606,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:173",
+            "distinct_urls:174",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1644,7 +1644,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:173",
+            "distinct_urls:174",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:29",
@@ -3868,6 +3868,133 @@
       }
     },
     {
+      "domain": "wsj.com",
+      "entity": "Wsj",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-05T05:24:00.718Z",
+      "last_seen_at": "2026-06-02T05:24:50.000Z",
+      "discovery": {
+        "distinct_urls": 12,
+        "example_urls": [
+          "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
+          "https://www.wsj.com/video/how-humanoid-robots-joined-this-south-carolina-factory-workforce/F2B22E19-0016-4AA1-A593-57AD7BDBA3CA?mod=WSJvidctr_watchnow_pos0%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_HRS_NAP&twclid=26gyjjgbduwn3fjrxna80o7n4o",
+          "https://www.wsj.com/?trackingCode=ae31bfee&ucid=WSJ_SMD_TWT_BRA_NAP_WIP_NAP_NAP_IP3_NAP&n2IKsaD9=n2IKsaD9&Pg9aWOPT=Pg9aWOPT&Cp5dKJWb=Cp5dKJWb&APCc9OU1=APCc9OU1&twclid=2f1tyrg571oijyoeta9g3ceq19",
+          "https://www.wsj.com/?trackingCode=a2d5061b&ucid=WSJ_SMD_TWT_BRA_NAP_WIP_NAP_NAP_IP2_NAP&n2IKsaD9=n2IKsaD9&Pg9aWOPT=Pg9aWOPT&Cp5dKJWb=Cp5dKJWb&APCc9OU1=APCc9OU1&twclid=26qserrpfzbdx6jqefklwvver1",
+          "https://www.wsj.com/?trackingCode=a2d5061b&ucid=WSJ_SMD_TWT_BRA_NAP_WIP_NAP_NAP_IP2_NAP&n2IKsaD9=n2IKsaD9&Pg9aWOPT=Pg9aWOPT&Cp5dKJWb=Cp5dKJWb&APCc9OU1=APCc9OU1&twclid=23idx6kceuofz1vj4a3vkda9vz"
+        ],
+        "origin_counts": {
+          "feed_buffer": 5,
+          "feed_buffer_reply": 7
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "wsj"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:12",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.4167,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:12",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-01T14:20:30.799Z",
+        "homepage_url": "https://wsj.com/",
+        "example_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
+        "homepage_status": 401,
+        "example_status": 401,
+        "homepage_final_url": "https://www.wsj.com/",
+        "example_final_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
+        "homepage_content_type": "text/html;charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "valvolineglobal.com",
       "entity": "Valvolineglobal",
       "kind": "unknown",
@@ -3963,7 +4090,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-30T13:34:22.643Z",
+        "fetched_at": "2026-06-02T13:45:59.967Z",
         "homepage_url": "https://valvolineglobal.com/",
         "example_url": "https://www.valvolineglobal.com/en/fifa-national-sweeps/?utm_source=X&utm_medium=paidsocial&utm_campaign=WC26_GM_US_AWE&utm_content=wcsimplified&twclid=299i90helnojknptru820mqim9",
         "homepage_status": 200,
@@ -4500,133 +4627,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "wsj.com",
-      "entity": "Wsj",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-05T05:24:00.718Z",
-      "last_seen_at": "2026-05-29T04:48:48.817Z",
-      "discovery": {
-        "distinct_urls": 11,
-        "example_urls": [
-          "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
-          "https://www.wsj.com/video/how-humanoid-robots-joined-this-south-carolina-factory-workforce/F2B22E19-0016-4AA1-A593-57AD7BDBA3CA?mod=WSJvidctr_watchnow_pos0%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_HRS_NAP&twclid=26gyjjgbduwn3fjrxna80o7n4o",
-          "https://www.wsj.com/?trackingCode=ae31bfee&ucid=WSJ_SMD_TWT_BRA_NAP_WIP_NAP_NAP_IP3_NAP&n2IKsaD9=n2IKsaD9&Pg9aWOPT=Pg9aWOPT&Cp5dKJWb=Cp5dKJWb&APCc9OU1=APCc9OU1&twclid=2f1tyrg571oijyoeta9g3ceq19",
-          "https://www.wsj.com/?trackingCode=a2d5061b&ucid=WSJ_SMD_TWT_BRA_NAP_WIP_NAP_NAP_IP2_NAP&n2IKsaD9=n2IKsaD9&Pg9aWOPT=Pg9aWOPT&Cp5dKJWb=Cp5dKJWb&APCc9OU1=APCc9OU1&twclid=26qserrpfzbdx6jqefklwvver1",
-          "https://www.wsj.com/?trackingCode=a2d5061b&ucid=WSJ_SMD_TWT_BRA_NAP_WIP_NAP_NAP_IP2_NAP&n2IKsaD9=n2IKsaD9&Pg9aWOPT=Pg9aWOPT&Cp5dKJWb=Cp5dKJWb&APCc9OU1=APCc9OU1&twclid=23idx6kceuofz1vj4a3vkda9vz"
-        ],
-        "origin_counts": {
-          "feed_buffer": 5,
-          "feed_buffer_reply": 6
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "wsj"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.4408333333333333,
-          "basis": [
-            "distinct_urls:11",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43236979166666667,
-          "confidence": 0.388075,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:11",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-01T14:20:30.799Z",
-        "homepage_url": "https://wsj.com/",
-        "example_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
-        "homepage_status": 401,
-        "example_status": 401,
-        "homepage_final_url": "https://www.wsj.com/",
-        "example_final_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
-        "homepage_content_type": "text/html;charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -5522,9 +5522,9 @@
       "entity": "Omgskills",
       "kind": "unknown",
       "first_seen_at": "2026-05-07T22:45:00.000Z",
-      "last_seen_at": "2026-05-29T22:41:57.000Z",
+      "last_seen_at": "2026-06-02T06:53:10.000Z",
       "discovery": {
-        "distinct_urls": 20,
+        "distinct_urls": 21,
         "example_urls": [
           "https://omgskills.com/?twclid=2ewu2vd054idb44rsf4bgvksa8",
           "https://omgskills.com/?twclid=23ccmn54chrrjd1oeibpjfc3i7",
@@ -5533,7 +5533,7 @@
           "https://omgskills.com/?twclid=2dpvi5grpw845krt3uxp8zor7f"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 20
+          "feed_buffer_reply": 21
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -5564,7 +5564,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:20",
+            "distinct_urls:21",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -5602,7 +5602,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:20",
+            "distinct_urls:21",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:1",
@@ -7003,7 +7003,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-30T13:34:24.458Z",
+        "fetched_at": "2026-06-02T13:46:00.107Z",
         "homepage_url": "https://fundrise.com/",
         "example_url": "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=286j5mjx6wqmg12vs5jto11lrf",
         "homepage_status": 405,
@@ -8518,7 +8518,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-30T13:34:22.075Z",
+        "fetched_at": "2026-06-02T13:46:00.606Z",
         "homepage_url": "https://oracle.com/",
         "example_url": "https://www.oracle.com/database/?source=%3Aad%3Aso%3Atw%3Adg%3Aa_nas%3A%3ARC_TWTR260205P00003C00005%3AEnd_Data_Risk&SC=%3Aad%3Aso%3Atw%3Adg%3Aa_nas%3A%3ARC_TWTR260205P00003C00005%3AEnd_Data_Risk&twclid=2b7h3vpee1s0pq1u9507vf4n1e",
         "homepage_status": 403,
@@ -24460,7 +24460,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-30T12:59:35.121Z",
+        "fetched_at": "2026-06-02T13:46:13.569Z",
         "homepage_url": "https://statefreedomcaucus.org/",
         "example_url": "https://www.statefreedomcaucus.org/15-strong/?twclid=2epfodwob5z2m8xe9l0e1w4xfa",
         "homepage_status": null,
@@ -30209,20 +30209,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.34984375,
-          "confidence": 0.10635,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0,
           "confidence": 0.55,
@@ -30235,6 +30221,20 @@
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.34984375,
+          "confidence": 0.10635,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -30331,20 +30331,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.34984375,
-          "confidence": 0.10635,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.14,
           "confidence": 0.65,
@@ -30357,6 +30343,20 @@
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.34984375,
+          "confidence": 0.10635,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -30453,20 +30453,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.34984375,
-          "confidence": 0.10635,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.58,
           "confidence": 0.75,
@@ -30479,6 +30465,20 @@
             "corrections:false",
             "outbound_links:12",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.34984375,
+          "confidence": 0.10635,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -30575,20 +30575,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.34984375,
-          "confidence": 0.06135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:1",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.58,
           "confidence": 0.75,
@@ -30601,6 +30587,20 @@
             "corrections:false",
             "outbound_links:22",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.34984375,
+          "confidence": 0.06135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -30698,16 +30698,16 @@
           ]
         },
         "profile": {
-          "score": 0.58,
-          "confidence": 0.75,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:26",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -30727,33 +30727,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-29T15:59:21.959Z",
+        "fetched_at": "2026-06-02T14:15:57.854Z",
         "homepage_url": "https://elpais.com/",
         "example_url": "https://elpais.com/",
-        "homepage_status": 200,
-        "example_status": 200,
+        "homepage_status": 403,
+        "example_status": 403,
         "homepage_final_url": "https://elpais.com/",
         "example_final_url": "https://elpais.com/",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "text/html;charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
         "homepage": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 26,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 26,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -30954,6 +30954,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0.4,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:91",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-02T14:15:59.113Z",
+        "homepage_url": "https://trib.al/",
+        "example_url": "https://trib.al/etqydoJ",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://trib.al/",
+        "example_final_url": "https://nypost.com/2026/04/20/us-news/netanyahu-promises-harsh-discipline-for-idf-soldier-caught-smashing-jesus-statue-in-lebanon/?utm_medium=social&utm_source=twitter&utm_campaign=nypost",
+        "homepage_content_type": "text/html;charset=utf8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 91,
+          "opinion_marker": false
         }
       }
     },
@@ -31170,7 +31215,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-30T12:59:35.540Z",
+        "fetched_at": "2026-06-02T14:15:59.557Z",
         "homepage_url": "https://snopes.com/",
         "example_url": "https://snopes.com/fact-check/strait-of-hormuz-oil-shorts-trump/",
         "homepage_status": 200,
@@ -32512,7 +32557,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-29T10:43:57.191Z",
+        "fetched_at": "2026-06-02T14:15:59.998Z",
         "homepage_url": "https://thefp.com/",
         "example_url": "https://www.thefp.com/p/the-radicalization-of-calla-walsh?utm_source=x&utm_medium=paid-social&utm_campaign=content&utm_content=callawalsh&utm_adgroup=ret&utm_adid=&twclid=28og7mgurhtluup81u6899c5o6",
         "homepage_status": null,
