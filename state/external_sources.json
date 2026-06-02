@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-02T11:15:28.058Z",
+  "generated_at": "2026-06-02T12:45:29.488Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-02T11:15:58.282Z",
+  "profiled_at": "2026-06-02T12:46:03.085Z",
   "sources": [
     {
       "domain": "justice.gov",
@@ -1282,9 +1282,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-02T11:05:00.000Z",
+      "last_seen_at": "2026-06-02T12:10:37.000Z",
       "discovery": {
-        "distinct_urls": 3972,
+        "distinct_urls": 3979,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1293,10 +1293,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 2309,
-          "feed_buffer_reply": 2505
+          "feed_buffer": 2314,
+          "feed_buffer_reply": 2509
         },
-        "distinct_referring_accounts": 1541,
+        "distinct_referring_accounts": 1542,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1334,7 +1334,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:3972",
+            "distinct_urls:3979",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1342,7 +1342,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1541",
+            "referring_accounts:1542",
             "origin_types:2"
           ]
         },
@@ -1372,10 +1372,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:3972",
+            "distinct_urls:3979",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1541",
+            "referring_accounts:1542",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -2983,9 +2983,9 @@
       "entity": "Ro Co",
       "kind": "unknown",
       "first_seen_at": "2026-04-14T14:38:53.968Z",
-      "last_seen_at": "2026-06-01T19:42:12.000Z",
+      "last_seen_at": "2026-06-02T08:47:01.000Z",
       "discovery": {
-        "distinct_urls": 196,
+        "distinct_urls": 197,
         "example_urls": [
           "https://ro.co/lp/weight-loss/quiz/?utm_medium=paid_social&utm_source=Twitter&utm_campaign=41158458&utm_term=54579155&utm_content=Ad2&twclid=2bv3rduaz2ypp78vahy5e6wspd",
           "https://ro.co/lp/weight-loss/quiz/?utm_medium=paid_social&utm_source=Twitter&utm_campaign=41158458&utm_term=54579155&utm_content=Ad3&twclid=2ciibjygsukfsjs5qv5hiat5v2",
@@ -2995,7 +2995,7 @@
         ],
         "origin_counts": {
           "feed_buffer": 2,
-          "feed_buffer_reply": 194
+          "feed_buffer_reply": 195
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -3026,7 +3026,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:196",
+            "distinct_urls:197",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3064,7 +3064,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:196",
+            "distinct_urls:197",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -13671,7 +13671,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-30T11:49:27.880Z",
+        "fetched_at": "2026-06-02T12:15:56.638Z",
         "homepage_url": "https://sourcebot.dev/",
         "example_url": "https://docs.sourcebot.dev/docs/features/mcp-server?twclid=24rnkjjr58b4nqm87glv1o5dr0",
         "homepage_status": 200,
@@ -20514,7 +20514,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-30T11:49:28.446Z",
+        "fetched_at": "2026-06-02T12:15:57.183Z",
         "homepage_url": "https://outx.ai/",
         "example_url": "https://outx.ai/a/buyer-intent-tracking?utm_source=twitter&utm_medium=paid&utm_campaign=buyer-intent&utm_content=t-b1-first-200&twclid=28hhz80snfgnotyxefsxxmt9nc",
         "homepage_status": 200,
@@ -20638,7 +20638,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-30T11:49:26.929Z",
+        "fetched_at": "2026-06-02T12:15:57.438Z",
         "homepage_url": "https://finviz.com/",
         "example_url": "https://finviz.com/register?affilId=659201043&twclid=237p0oqyf8bhakod3naytz02qh",
         "homepage_status": 200,
@@ -22248,7 +22248,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-30T11:49:27.268Z",
+        "fetched_at": "2026-06-02T12:15:57.733Z",
         "homepage_url": "https://rice.edu/",
         "example_url": "https://news.rice.edu/news/2026/more-dangerous-and-unpredictable-experts-discuss-ongoing-iran-conflict",
         "homepage_status": null,
@@ -30222,6 +30222,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-02T12:45:57.302Z",
+        "homepage_url": "https://twimg.com/",
+        "example_url": "https://pbs.twimg.com/media/GMB52q8X0AA0k_e?format=jpg&name=large",
+        "homepage_status": null,
+        "example_status": 404,
+        "homepage_final_url": "https://twimg.com/",
+        "example_final_url": "https://pbs.twimg.com/media/GMB52q8X0AA0k_e?format=jpg&name=large",
+        "homepage_content_type": "",
+        "example_content_type": "",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -30299,6 +30344,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0.14,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-02T12:45:58.390Z",
+        "homepage_url": "https://t.me/",
+        "example_url": "http://t.me/PressTV",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://telegram.org/",
+        "example_final_url": "https://t.me/PressTV",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -30376,6 +30466,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0.58,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:12",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-02T12:46:02.433Z",
+        "homepage_url": "https://gmanetwork.com/",
+        "example_url": "https://gmanetwork.com/news/topstories/nation/987975/pnp-on-alert-as-senate-may-convene-as-impeachment-court",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.gmanetwork.com/",
+        "example_final_url": "https://www.gmanetwork.com/news/topstories/nation/987975/pnp-on-alert-as-senate-may-convene-as-impeachment-court-vs-sara-duterte/story/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 12,
+          "opinion_marker": false
         }
       }
     },
@@ -30453,6 +30588,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0.58,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:22",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-02T12:46:03.085Z",
+        "homepage_url": "https://abcnews.link/",
+        "example_url": "https://abcnews.link/SAFHg1K",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://abcnews.link/",
+        "example_final_url": "https://abcnews.com/US/trade-court-trumps-10-global-tariffs-unlawful/story?id=132761523&cid=social_twitter_abcn",
+        "homepage_content_type": "text/html;charset=utf8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 22,
+          "opinion_marker": false
         }
       }
     },
