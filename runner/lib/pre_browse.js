@@ -158,9 +158,17 @@ function preBrowse(cycle) {
       env: { CURIOSITY_CYCLE: String(cycle), CURIOSITY_EVERY: String(config.CURIOSITY_EVERY) },
     });
 
+    // ── 4b. search_curiosity.js — web search for directive topic ─────────
+    // Co-fires with curiosity; adds top search result URLs to reading_queue
+    runScript(path.join(PROJECT_ROOT, 'runner/search_curiosity.js'));
+
     // ── 5. cluster_axes.js (co-fires with curiosity) ────────────────────
     runScript(path.join(PROJECT_ROOT, 'runner/cluster_axes.js'));
   }
+
+  // ── 4c. rss_collect.js — pull news RSS feeds into feed_digest ────────
+  // Runs every browse cycle; self-gated internally (1h cooldown per feed)
+  runScript(path.join(PROJECT_ROOT, 'scraper/rss_collect.js'));
 
   // ── 6. comment_candidates.js ──────────────────────────────────────────
   runScript(path.join(PROJECT_ROOT, 'runner/comment_candidates.js'));

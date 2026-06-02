@@ -296,6 +296,30 @@ function housekeeping({ today, vercelDeployHook }) {
   // This is a safety-net line cap in case the trim stamp gets stale.
   trimFile(config.FEED_DIGEST_PATH, config.DIGEST_MAX_LINES);
 
+  // browse_archive.md — weekly rotation into state/browse_notes_archive/YYYY-WNN.md
+  // Prevents unbounded growth; agent only sees last 80 lines of browse_notes.md anyway
+  try {
+    const archiveSrc = path.join(config.STATE_DIR, 'browse_archive.md');
+    if (fs.existsSync(archiveSrc) && fs.statSync(archiveSrc).size > 0) {
+      const now = new Date();
+      const dayOfWeek = now.getUTCDay(); // 0 = Sunday
+      if (dayOfWeek === 1) { // Monday — rotate previous week's archive
+        const year = now.getUTCFullYear();
+        const startOfYear = new Date(Date.UTC(year, 0, 1));
+        const weekNo = Math.ceil(((now - startOfYear) / 86400000 + startOfYear.getUTCDay() + 1) / 7);
+        const weekLabel = `${year}-W${String(weekNo).padStart(2, '0')}`;
+        const archiveDir = path.join(config.STATE_DIR, 'browse_notes_archive');
+        if (!fs.existsSync(archiveDir)) fs.mkdirSync(archiveDir, { recursive: true });
+        const dest = path.join(archiveDir, `${weekLabel}.md`);
+        if (!fs.existsSync(dest)) {
+          fs.copyFileSync(archiveSrc, dest);
+          fs.writeFileSync(archiveSrc, ''); // clear after archiving
+          log(`weekly rotation: browse_archive.md → browse_notes_archive/${weekLabel}.md`);
+        }
+      }
+    }
+  } catch (e) { log(`browse_archive rotation failed: ${e.message}`); }
+
   // Rotate logs (inode-preserving)
   rotateLog(config.RUNNER_LOG_PATH, config.RUNNER_LOG_MAX_LINES);
   rotateLog(

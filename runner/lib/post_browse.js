@@ -229,6 +229,10 @@ function postBrowse({ cycle, today, hour }) {
     }
   }
 
+  // ── 4d-followup. Source followup — revisit trusted external sources ───
+  // Self-gated internally (72h per domain); adds URLs to reading_queue
+  runScript(path.join(PROJECT_ROOT, 'runner/source_followup.js'));
+
   // ── 4d-traj. Axis trajectory summary (throttled to once per 2h) ───────────
   {
     const trajStamp = path.join(config.STATE_DIR, '.last_trajectory');
