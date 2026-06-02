@@ -274,10 +274,9 @@ function scanDir(dir, pattern) {
           console.warn(`[archive] mtime drift on ${path.basename(filePath)} (+${Math.round(driftMs/1000)}s) — file modified after indexing, re-uploading`);
           const parsed = parseJournal(filePath, relPath);
           const keywords = extractKeywords(parsed.text_content, 10).join(", ");
-          await db.raw().query(
-            "UPDATE memory SET text_content=$1, keywords=$2, indexed_at=$3 WHERE file_path=$4",
-            [parsed.text_content, keywords, Date.now(), relPath]
-          );
+          db.raw().prepare(
+            "UPDATE memory SET text_content=?, keywords=?, indexed_at=? WHERE file_path=?"
+          ).run(parsed.text_content, keywords, Date.now(), relPath);
           if (irys) {
             const ok = await tryUpload(irys, filePath, relPath, parsed);
             if (ok) try { fs.chmodSync(filePath, 0o444); } catch { /* ignore */ }
