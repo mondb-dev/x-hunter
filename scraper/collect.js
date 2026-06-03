@@ -557,31 +557,35 @@ function formatClusteredDigest(selected, clusters, now, options = {}) {
 }
 
 // ── Notifications / mentions scraper ─────────────────────────────────────────
-async function scrapeNotifications(page) {
+// Opens a FRESH page for the notification check — the collect page can get
+// detached by cleanup_tabs.js running in parallel before this point.
+async function scrapeNotifications(browser) {
   console.log("[scraper] checking notifications/mentions...");
 
+  let notifPage = null;
   try {
-    // Navigate directly to the Mentions tab URL — avoids relying on tab click
-    // which can fail if the tab label changed or the click timing is off.
-    await page.goto("https://x.com/notifications/mentions", { waitUntil: "domcontentloaded", timeout: 30_000 });
+    notifPage = await browser.newPage();
+    await notifPage.goto("https://x.com/notifications/mentions", { waitUntil: "domcontentloaded", timeout: 30_000 });
     await new Promise(r => setTimeout(r, 2_500));
 
     // Confirm we landed on the right page
-    const landedUrl = page.url();
+    const landedUrl = notifPage.url();
     if (!landedUrl.includes("notifications")) {
       console.warn(`[scraper] notifications: unexpected URL ${landedUrl} — skipping`);
       return;
     }
 
-    await page.evaluate(() => window.scrollBy(0, 800));
+    await notifPage.evaluate(() => window.scrollBy(0, 800));
     await new Promise(r => setTimeout(r, 1_000));
 
-    const mentions = await extractPosts(page);
+    const mentions = await extractPosts(notifPage);
     console.log(`[scraper] notifications: found ${mentions.length} items on mentions page`);
     const queued = appendMentionsToReplyQueue(mentions);
     console.log(`[scraper] notifications: queued ${queued} new mention(s)`);
   } catch (err) {
     console.error(`[scraper] notifications scrape failed: ${err.message}`);
+  } finally {
+    if (notifPage) await notifPage.close().catch(() => {});
   }
 }
 
@@ -932,7 +936,7 @@ async function scrapeNotificationsApi() {
 
   // ── Phase 12: Scrape notifications / mentions ─────────────────────────────
   if (browserReady) {
-    await scrapeNotifications(page);
+    await scrapeNotifications(browser);
   } else {
     await scrapeNotificationsApi();
   }
