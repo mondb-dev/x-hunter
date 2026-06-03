@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-03T11:15:57.201Z",
+  "generated_at": "2026-06-03T12:45:57.759Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-03T11:16:25.559Z",
+  "profiled_at": "2026-06-03T12:46:28.757Z",
   "sources": [
     {
       "domain": "justice.gov",
@@ -1282,9 +1282,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-03T10:29:58.816Z",
+      "last_seen_at": "2026-06-03T12:19:58.974Z",
       "discovery": {
-        "distinct_urls": 4074,
+        "distinct_urls": 4083,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1293,10 +1293,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 2377,
-          "feed_buffer_reply": 2562
+          "feed_buffer": 2385,
+          "feed_buffer_reply": 2567
         },
-        "distinct_referring_accounts": 1563,
+        "distinct_referring_accounts": 1564,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1334,7 +1334,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:4074",
+            "distinct_urls:4083",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1342,7 +1342,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1563",
+            "referring_accounts:1564",
             "origin_types:2"
           ]
         },
@@ -1372,10 +1372,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:4074",
+            "distinct_urls:4083",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1563",
+            "referring_accounts:1564",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -4888,6 +4888,132 @@
       }
     },
     {
+      "domain": "byteplus.com",
+      "entity": "Byteplus",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-15T13:30:37.000Z",
+      "last_seen_at": "2026-06-03T07:08:51.000Z",
+      "discovery": {
+        "distinct_urls": 49,
+        "example_urls": [
+          "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
+          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=2dnuttry4m02uyeswjtnkyw6cq",
+          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=29q4voamvbgxgyt2c5thxlhg3x",
+          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=29ug61xxzesjlbg5gzuvre58jz",
+          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_video_codingplan&utm_content=tecdo&twclid=25cpjoe66peh1858zv8hf438l2"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 49
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "byteplusglobal"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.41,
+          "basis": [
+            "distinct_urls:49",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.12,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.417421875,
+          "confidence": 0.553725,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:49",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-05-31T22:14:53.891Z",
+        "homepage_url": "https://byteplus.com/",
+        "example_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.byteplus.com/en",
+        "example_final_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "tradeodds.io",
       "entity": "Tradeodds Io",
       "kind": "unknown",
@@ -5005,132 +5131,6 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "byteplus.com",
-      "entity": "Byteplus",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-15T13:30:37.000Z",
-      "last_seen_at": "2026-06-03T07:00:39.000Z",
-      "discovery": {
-        "distinct_urls": 48,
-        "example_urls": [
-          "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
-          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=2dnuttry4m02uyeswjtnkyw6cq",
-          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=29q4voamvbgxgyt2c5thxlhg3x",
-          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=29ug61xxzesjlbg5gzuvre58jz",
-          "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_video_codingplan&utm_content=tecdo&twclid=25cpjoe66peh1858zv8hf438l2"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 48
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "byteplusglobal"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.41,
-          "basis": [
-            "distinct_urls:48",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.12,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.417421875,
-          "confidence": 0.553725,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:48",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-05-31T22:14:53.891Z",
-        "homepage_url": "https://byteplus.com/",
-        "example_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.byteplus.com/en",
-        "example_final_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 5,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -22412,6 +22412,130 @@
       }
     },
     {
+      "domain": "gobob.xyz",
+      "entity": "Gobob Xyz",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-02T22:37:20.000Z",
+      "last_seen_at": "2026-06-03T08:39:03.000Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://app.gobob.xyz/?utm_campaign=stables&utm_medium=paidads&utm_source=x&twclid=21mgv5jwnbc2895vpeqnlit4hv",
+          "https://app.gobob.xyz/?utm_campaign=stables&utm_medium=paidads&utm_source=x&twclid=29doqij85lhvqssxkks5lz3v7b",
+          "https://app.gobob.xyz/?utm_campaign=stables&utm_medium=paidads&utm_source=x&twclid=2djrck5615dv2wg12lr9zwrveg"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "build_on_bob"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.26,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:2",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.36000000000000004,
+          "confidence": 0.1386,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-03T12:16:26.127Z",
+        "homepage_url": "https://gobob.xyz/",
+        "example_url": "https://app.gobob.xyz/?utm_campaign=stables&utm_medium=paidads&utm_source=x&twclid=21mgv5jwnbc2895vpeqnlit4hv",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.gobob.xyz/",
+        "example_final_url": "https://app.gobob.xyz/en/geoblock?utm_campaign=stables&utm_medium=paidads&utm_source=x&twclid=21mgv5jwnbc2895vpeqnlit4hv",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 10,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "rice.edu",
       "entity": "Rice",
       "kind": "unknown",
@@ -23115,7 +23239,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T12:19:44.912Z",
+        "fetched_at": "2026-06-03T12:46:26.398Z",
         "homepage_url": "https://substack.com/",
         "example_url": "https://sethmlederman.substack.com/p/taking-on-the-f-word-fibromyalgia?twclid=245fh2m6fc9w4vl63b2am7zawy",
         "homepage_status": 200,
@@ -41931,20 +42055,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.38,
           "confidence": 0.55,
@@ -41957,6 +42067,20 @@
             "corrections:true",
             "outbound_links:0",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -42053,20 +42177,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.28,
           "confidence": 0.65,
@@ -42079,6 +42189,20 @@
             "corrections:false",
             "outbound_links:10",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -42175,20 +42299,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0,
           "confidence": 0.55,
@@ -42201,6 +42311,20 @@
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -42297,20 +42421,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0,
           "confidence": 0.55,
@@ -42323,6 +42433,20 @@
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -42419,6 +42543,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:59",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3472395833333333,
           "confidence": 0.08135,
@@ -42432,6 +42570,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-03T12:16:30.117Z",
+        "homepage_url": "https://preml.ge/",
+        "example_url": "https://preml.ge/9faimd64",
+        "homepage_status": null,
+        "example_status": 200,
+        "homepage_final_url": "https://preml.ge/",
+        "example_final_url": "https://www.premierleague.com/en/match/2562241/leeds-united-vs-burnley/table?utm_source=x&utm_medium=organic-social&utm_campaign=news&utm_content=leeds_table",
+        "homepage_content_type": "",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 59,
+          "opinion_marker": false
         }
       }
     },
@@ -42496,6 +42665,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.03,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:3",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3472395833333333,
           "confidence": 0.08135,
@@ -42509,6 +42692,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-03T12:16:31.409Z",
+        "homepage_url": "https://rampartscan.com/",
+        "example_url": "https://rampartscan.com/?twclid=2ai9p1x5s7uq2nxfejjrncxaqd",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.rampartscan.com/",
+        "example_final_url": "https://www.rampartscan.com/?twclid=2ai9p1x5s7uq2nxfejjrncxaqd",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
         }
       }
     },
@@ -42573,6 +42787,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3472395833333333,
           "confidence": 0.08135,
@@ -42586,6 +42814,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-03T12:16:31.602Z",
+        "homepage_url": "https://hol.org/",
+        "example_url": "https://hol.org/points/giveaways/10000-points?twclid=2cyx13cbkwh241v00yt9b2tv3d",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://hol.org/",
+        "example_final_url": "https://hol.org/points/giveaways/10000-points?twclid=2cyx13cbkwh241v00yt9b2tv3d",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -42663,6 +42922,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-03T12:46:27.259Z",
+        "homepage_url": "https://lobehub.com/",
+        "example_url": "https://app.lobehub.com/?utm_source=xads&twclid=2a8w4di9ndgin31yq4qot97zvn",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://lobehub.com/",
+        "example_final_url": "https://app.lobehub.com/signin?callbackUrl=https%3A%2F%2Fapp.lobehub.com%2F%3Futm_source%3Dxads%26twclid%3D2a8w4di9ndgin31yq4qot97zvn&utm_source=xads&twclid=2a8w4di9ndgin31yq4qot97zvn",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -42740,6 +43044,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-03T12:46:28.449Z",
+        "homepage_url": "https://pixbench.com/",
+        "example_url": "https://pixbench.com/?twclid=2c5hamd2c3ryrrl87tknolj31b",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://pixbench.com/",
+        "example_final_url": "https://pixbench.com/?twclid=2c5hamd2c3ryrrl87tknolj31b",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -42817,6 +43166,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0.33999999999999997,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:13",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-03T12:46:28.757Z",
+        "homepage_url": "https://tradeify.co/",
+        "example_url": "https://tradeify.co/grandcup2?ref=TWITTER&utm_source=x&utm_medium=cpc&utm_campaign=takeover1&utm_content=15scommercial--15scommercial--takeover1--takeover1--takeover&twclid=282e8rm2j4kmrfs6p577pudbhx",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://tradeify.co/",
+        "example_final_url": "https://tradeify.co/grandcup2a",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 22,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 13,
+          "opinion_marker": false
         }
       }
     },
@@ -49366,22 +49760,22 @@
       }
     },
     {
-      "domain": "gobob.xyz",
-      "entity": "Gobob Xyz",
+      "domain": "pwgam.es",
+      "entity": "Pwgam Es",
       "kind": "unknown",
-      "first_seen_at": "2026-06-02T22:37:20.000Z",
-      "last_seen_at": "2026-06-02T22:37:20.000Z",
+      "first_seen_at": "2026-06-03T08:43:30.000Z",
+      "last_seen_at": "2026-06-03T08:43:30.000Z",
       "discovery": {
         "distinct_urls": 1,
         "example_urls": [
-          "https://app.gobob.xyz/?utm_campaign=stables&utm_medium=paidads&utm_source=x&twclid=21mgv5jwnbc2895vpeqnlit4hv"
+          "https://pwgam.es/4u9gMhe?twclid=21noniqp3uvsfhhqfa4vp30r3n"
         ],
         "origin_counts": {
           "feed_buffer_reply": 1
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
-          "build_on_bob"
+          "nte_gl"
         ],
         "distinct_axes": []
       },

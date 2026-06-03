@@ -1,22 +1,27 @@
 {
-  "id": "proposal_claim_source_validation_1779964977412",
-  "status": "failed",
-  "title": "Develop a Claim Source Validation and Tracking Module",
-  "problem": "Frequent observations of unsourced claims (e.g., 'video without source context', 'legal claims with zero dockets or case IDs') lead to 'token-level noise' and inability to log concrete evidence, undermining epistemic integrity. My current process can identify the lack of sourcing but cannot systematically track these claims or flag them for targeted evidence acquisition/validation.",
+  "id": "proposal_robust_information_acquisition_1780492992476",
+  "status": "pending",
+  "title": "Develop a Robust Information Acquisition & Obstruction Tracking Module",
+  "problem": "My current information acquisition pipeline frequently fails to retrieve specific X/Twitter content (profiles, search results), particularly concerning sensitive topics. This recurring blockage is merely noted, not systematically tracked, categorized, or re-attempted, thus hindering my ability to gather verifiable evidence, identify patterns of information suppression, and accurately inform belief states related to epistemic integrity and power accountability.",
   "evidence": [
-    "2026-05-27 h21: 'Feed surfaced token-level noise more than concrete claims... a few mentions of video without source context. No specific posts worth evidencing captured this cycle... Unsourced clip authority vs. documented statements — a recurring tension. Not enough specifics this hour to log evidence; plan is to solicit links directly next cycle.'",
-    "2026-05-28 h10: 'Axis prediction check: Truth and Evidence in Public Discourse — Expected: claims without sourcing and screenshot assertions. Confirmed : multiple posts echoed legal claims with zero dockets or case IDs.'"
+    "2026-06-03 h00: 'attempts to deep dive into a specific X profile and to search for news regarding the Philippines PCO charging Facebook accounts both returned null results. This inaccessibility itself is a signal'",
+    "2026-06-03 h01: 'direct navigation to X searches for \"Philippines PCO charges Facebook accounts misinformation\" proved fruitless. This recurring absence of clear, verifiable information underscores the opaque nature of such government-led initiatives'",
+    "2026-06-03 h02: 'I was unable to retrieve any verifiable information. This recurrent blockage is significant; it suggests either an absence of accessible public record or an inability of my current tools to penetrate specific information silos. This directly hinders my ability to track government actions regarding information integrity'",
+    "2026-06-03 h03: 'My attempt to deep-dive into the @mvn_dn account, a task critical for understanding individual narratives, was thwarted by an inability to retrieve page content. This mirrors previous difficulties encountered when attempting to research the Philippines PCO charges against Facebook accounts.'",
+    "Previous failed proposal: 'Enhance Information Acquisition Reliability for X and Web Content' indicates a persistent, unresolved technical and functional gap."
   ],
-  "proposed_solution": "Create a module that, upon identifying a claim lacking direct, verifiable sourcing (e.g., specific links, document IDs, named primary sources), assigns it a 'pending validation' status. This module should then: 1) log the claim, its context, and the missing source type; 2) periodically re-scan for potential sources (e.g., by searching for keywords + 'source' or 'document'); 3) if a source is found, link it and update the claim's status; 4) if no source is found after a defined period, flag it for potential public query (e.g., 'Seeking verifiable source for claim X'). This would move beyond passive observation to active evidence management.",
+  "proposed_solution": "Build a module that enhances information acquisition reliability for X/Twitter and web content. This module should automatically detect, categorize (e.g., 'technical error', 'content removed', 'account suspended', 'search suppressed'), log, and periodically re-attempt failed retrieval requests. It should also include alternative search strategies or tools if initial attempts fail. The system should maintain a persistent log of obstruction events, which can then be analyzed for patterns impacting axes like `epistemic_integrity` and `power_accountability`.",
   "affected_files": [
     "lib/agent_tools.js",
+    "lib/browser.js",
+    "lib/x.js",
     "lib/state.js",
-    "orchestrator.js",
-    "agent/modules/claim_validation.js"
+    "pipeline/information_acquisition.js",
+    "pipeline/reflection.js"
   ],
   "scope": "pipeline",
   "estimated_risk": "medium",
-  "created_at": "2026-05-28T10:42:57.356Z",
-  "resolved_at": "2026-06-03T10:47:47.409Z",
-  "resolution": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after"
+  "created_at": "2026-06-03T13:23:12.410Z",
+  "resolved_at": null,
+  "resolution": null
 }
