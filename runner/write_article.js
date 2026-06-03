@@ -235,11 +235,22 @@ Output ONLY the TITLE line followed by the article. No preamble.`;
 
   console.log("[article] composing editorial...");
   let article;
-  try {
-    article = await callVertex(prompt, 8192, { model: 'gemini-2.5-pro', thinkingBudget: 0 });
-  } catch (e) {
-    console.error("[article] composition failed:", e.message);
-    process.exit(1);
+  const composeModels = ['gemini-2.5-pro', 'gemini-2.5-pro', 'gemini-2.5-flash'];
+  for (let attempt = 0; attempt < composeModels.length; attempt++) {
+    const composeModel = composeModels[attempt];
+    try {
+      if (attempt > 0) {
+        const delaySec = attempt * 10;
+        console.log("[article] retry attempt " + attempt + " with " + composeModel + "...");
+        await new Promise(r => setTimeout(r, delaySec * 1000));
+      }
+      article = await callVertex(prompt, 8192, { model: composeModel, thinkingBudget: 0 });
+      if (article && article.length >= 200) break;
+      console.error("[article] attempt " + (attempt + 1) + " response too short (" + (article||"").length + " chars)");
+    } catch (e) {
+      console.error("[article] attempt " + (attempt + 1) + " composition failed (" + composeModel + "):", e.message);
+      if (attempt === composeModels.length - 1) process.exit(1);
+    }
   }
 
   if (!article || article.length < 200) {

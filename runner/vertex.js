@@ -41,8 +41,8 @@ async function callVertex(prompt, maxTokens = 2000, options = {}) {
     generationConfig.maxOutputTokens = maxTokens + thinkingBudget;
     generationConfig.thinkingConfig = { thinkingBudget };
   } else {
+    // Do NOT set thinkingConfig when budget=0 — gemini-2.5-pro rejects it
     generationConfig.maxOutputTokens = maxTokens;
-    generationConfig.thinkingConfig = { thinkingBudget: 0 };
   }
 
   const body     = JSON.stringify({
@@ -80,6 +80,9 @@ async function callVertex(prompt, maxTokens = 2000, options = {}) {
           resolve(text.trim());
         } catch (e) { reject(e); }
       });
+    });
+    req.setTimeout(300000, () => {
+      req.destroy(new Error('vertex request timeout (300s)'));
     });
     req.on("error", reject);
     req.write(body);
