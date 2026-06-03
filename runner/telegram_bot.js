@@ -866,28 +866,71 @@ async function cmdErrors() {
 async function cmdBrief(rawText = '') {
   const topic = rawText.replace(/^\/brief\s*/i, '').trim();
   if (!topic) {
-    return sendMessage('<b>/brief [topic]</b>\nExample: /brief immigration Philippines\nExample: /brief media manipulation\n\nReturns: matched axes, recent drift signals, verified claims, and past observations.');
+    return sendMessage('<b>/brief [topic]</b>\n\nExample: <code>/brief immigration Philippines</code>\nExample: <code>/brief media manipulation</code>\n\nReturns: matched axes, recent drift signals, verified claims, and past observations.');
   }
 
-  await sendMessage(`🔍 Gathering intelligence brief on: <i>${escapeHtml(topic)}</i>...`);
+  await sendMessage(`🔍 Gathering intelligence brief on: <b>${escapeHtml(topic)}</b>...`);
 
   try {
     const brief = gatherBrief(topic);
-    const text  = formatBriefForHuman(brief);
 
-    // Telegram has a 4096 char limit per message
-    const chunks = [];
+    // Build HTML output (safer than Markdown — no unbalanced marker risk)
+    const lines = [];
+    lines.push(`<b>Intelligence brief: ${escapeHtml(brief.topic)}</b>\n`);
+
+    if (brief.axes.length) {
+      lines.push('<b>Relevant axes:</b>');
+      for (const ax of brief.axes) {
+        const dir  = ax.score > 0.1 ? '↑' : ax.score < -0.1 ? '↓' : '·';
+        const conf = (ax.confidence * 100).toFixed(0);
+        lines.push(`${dir} <b>${escapeHtml(ax.label)}</b> — ${conf}% conf, score ${(ax.score||0).toFixed(3)}, ${ax.evidence} entries`);
+        if (ax.stance) lines.push(`  <i>${escapeHtml(ax.stance)}</i>`);
+      }
+      lines.push('');
+    }
+
+    if (brief.drift.length) {
+      lines.push('<b>Recent drift signals:</b>');
+      for (const d of brief.drift) {
+        const ago = Math.round((Date.now() - new Date(d.ts).getTime()) / 3_600_000);
+        lines.push(`⚡ ${escapeHtml(d.axis_label)} shifted ${d.direction} (${ago}h ago)`);
+      }
+      lines.push('');
+    }
+
+    if (brief.claims.length) {
+      lines.push('<b>Verified claims:</b>');
+      for (const c of brief.claims) {
+        const icon = c.status === 'supported' ? '✅' : c.status === 'refuted' ? '❌' : '⚠️';
+        const conf = (c.confidence * 100).toFixed(0);
+        lines.push(`${icon} <b>${c.status.toUpperCase()}</b> (${conf}%) — ${escapeHtml(c.claim.slice(0, 120))}`);
+        if (c.summary) lines.push(`  ${escapeHtml(c.summary.slice(0, 150))}`);
+        if (c.lens_url) lines.push(`  ${c.lens_url}`);
+      }
+      lines.push('');
+    }
+
+    if (brief.memory) {
+      lines.push('<b>Past observations:</b>');
+      lines.push(escapeHtml(brief.memory.slice(0, 800)));
+    }
+
+    if (!brief.axes.length && !brief.claims.length && !brief.memory) {
+      lines.push('No specific findings indexed for this topic yet.');
+      lines.push('Try a broader term, or check back after more observation cycles.');
+    }
+
+    const text = lines.join('\n');
+
+    // Split into ≤4000 char chunks (Telegram limit is 4096)
     let remaining = text;
     while (remaining.length > 0) {
-      chunks.push(remaining.slice(0, 4000));
+      await sendMessage(remaining.slice(0, 4000));
       remaining = remaining.slice(4000);
-    }
-    for (const chunk of chunks) {
-      await sendMessage(chunk, { parse_mode: 'Markdown' });
     }
   } catch (err) {
     console.error('[tg/brief] error:', err.message);
-    await sendMessage(`Brief failed: ${err.message}`);
+    await sendMessage(`Brief failed: ${escapeHtml(err.message)}`);
   }
 }
 
