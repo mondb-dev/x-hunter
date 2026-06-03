@@ -420,10 +420,16 @@ async function postReply(page, item, replyText) {
   await poll(page, "reply compose box", COMPOSE_BOX, { attempts: 15, interval: 1_000 });
   await humanDelay(1_500, 3_000);
 
-  // Focus and insert text via execCommand
+  // Focus, clear any pre-filled content (e.g. X pre-fills @username), then insert our text.
+  // We always include @from_username in replyText so clearing is safe.
   await page.evaluate((sel) => { const el = document.querySelector(sel); if (el) el.click(); }, COMPOSE_BOX);
   await page.evaluate((sel) => { document.querySelector(sel)?.focus(); }, COMPOSE_BOX);
   await sleep(500);
+  await page.evaluate((sel) => {
+    const el = document.querySelector(sel);
+    if (el) { el.focus(); document.execCommand("selectAll"); document.execCommand("delete"); }
+  }, COMPOSE_BOX);
+  await sleep(300);
   await page.evaluate((text, sel) => {
     const el = document.querySelector(sel);
     if (el) { el.focus(); document.execCommand("insertText", false, text); }
@@ -697,10 +703,23 @@ function logInteraction(data, item, replyText, memoryHints) {
     }
 
     let replyText = verdict.reply;
-    if (!replyText || replyText.length > 280) {
+    if (!replyText) {
       item.status = "skipped";
-      item.skip_reason = "reply text invalid or too long";
+      item.skip_reason = "reply text empty";
       continue;
+    }
+
+    // Always prepend @from_username so the person gets a mention notification.
+    // Gemini omits it; X may pre-fill it in the compose box but the CDP
+    // insertion path clears the box, losing the pre-fill.
+    const mentionPrefix = `@${item.from_username} `;
+    if (!replyText.startsWith(mentionPrefix)) {
+      replyText = mentionPrefix + replyText;
+    }
+
+    // Truncate to 280 chars if needed
+    if (replyText.length > 280) {
+      replyText = replyText.slice(0, 277) + "…";
     }
 
     // Append Veritas Lens URL when verification was run (X shortens to ~23 chars via t.co)
