@@ -46,6 +46,7 @@ const path = require('path');
 const { execSync, execFileSync, spawnSync, spawn } = require('child_process');
 const config = require('./lib/config');
 const { buildPersona, buildCoreContext, callGemini } = require('./lib/sebastian_respond');
+const { gatherBrief, formatBriefForHuman } = require('./lib/intelligence_brief');
 
 // ── Config ──────────────────────────────────────────────────────────────────
 
@@ -862,6 +863,34 @@ async function cmdErrors() {
   await sendMessage(msg);
 }
 
+async function cmdBrief(rawText = '') {
+  const topic = rawText.replace(/^\/brief\s*/i, '').trim();
+  if (!topic) {
+    return sendMessage('<b>/brief [topic]</b>\nExample: /brief immigration Philippines\nExample: /brief media manipulation\n\nReturns: matched axes, recent drift signals, verified claims, and past observations.');
+  }
+
+  await sendMessage(`🔍 Gathering intelligence brief on: <i>${escapeHtml(topic)}</i>...`);
+
+  try {
+    const brief = gatherBrief(topic);
+    const text  = formatBriefForHuman(brief);
+
+    // Telegram has a 4096 char limit per message
+    const chunks = [];
+    let remaining = text;
+    while (remaining.length > 0) {
+      chunks.push(remaining.slice(0, 4000));
+      remaining = remaining.slice(4000);
+    }
+    for (const chunk of chunks) {
+      await sendMessage(chunk, { parse_mode: 'Markdown' });
+    }
+  } catch (err) {
+    console.error('[tg/brief] error:', err.message);
+    await sendMessage(`Brief failed: ${err.message}`);
+  }
+}
+
 async function cmdDrift() {
   const driftPath = config.SIGNAL_LOG_PATH || path.join(config.STATE_DIR, 'signal_log.jsonl');
   const alertsPath = path.join(config.STATE_DIR, 'drift_alerts.jsonl');
@@ -1468,6 +1497,7 @@ async function handleMessage(msg) {
     case '/infra':    return cmdInfra();
     case '/vm':       return cmdVM();
     case '/errors':   return cmdErrors();
+    case '/brief':    return cmdBrief(text);
     case '/drift':    return cmdDrift();
     case '/cycle':    return cmdCycle();
     case '/restart':  return cmdRestart(text);
@@ -1490,6 +1520,7 @@ async function handleMessage(msg) {
       '/troubleshoot — diagnose issues\n' +
       '/troubleshoot fix — diagnose + apply safe fixes\n' +
       '\n<b>Content:</b>\n' +
+      '/brief [topic] — intelligence brief on a topic (axes, drift, claims, memory)\n' +
       '/ontology — belief axes overview\n' +
       '/posts — recent X posts\n' +
       '/journal — latest journal entry\n' +

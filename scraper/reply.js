@@ -31,6 +31,7 @@ const db   = require("./db");
 const { extractKeywords } = require("./analytics");
 const { embed, topK } = require("./embed");
 const { buildPersona, buildCoreContext } = require("../runner/lib/sebastian_respond");
+const { gatherBrief, formatBriefForPrompt } = require("../runner/lib/intelligence_brief");
 let verifyClaim = null;
 try { ({ verifyClaim } = require("../runner/lib/verify_claim")); } catch {}
 
@@ -244,7 +245,7 @@ function loadBeliefContext() {
 }
 
 // ── 5. Gemini: classify + draft with full context ─────────────────────────────
-async function geminiClassify(item, threadContext = [], memoryHints = [], userHistory = null, topicAccounts = [], verifiedHints = [], liveVerification = null) {
+async function geminiClassify(item, threadContext = [], memoryHints = [], userHistory = null, topicAccounts = [], verifiedHints = [], liveVerification = null, intelligenceBrief = null) {
   const { callVertex } = require("../runner/vertex");
 
   // Build thread context block
@@ -306,7 +307,10 @@ async function geminiClassify(item, threadContext = [], memoryHints = [], userHi
   }
 
   // Build belief axes + vocation context
-  const beliefBlock = loadBeliefContext();
+  // If a topic-matched intelligence brief was provided, use it — otherwise fall back to global top axes
+  const beliefBlock = intelligenceBrief
+    ? formatBriefForPrompt(intelligenceBrief)
+    : loadBeliefContext();
 
   const prompt = `${buildPersona('reply')}
 
@@ -662,9 +666,21 @@ function logInteraction(data, item, replyText, memoryHints) {
       }
     }
 
+    // Gather topic-matched intelligence brief (axes, drift, claims, memory) for this mention
+    let intelligenceBrief = null;
+    try {
+      const briefQuery = [item.text, item.quoted_text].filter(Boolean).join(" ").slice(0, 300);
+      intelligenceBrief = gatherBrief(briefQuery);
+      if (intelligenceBrief.axes.length) {
+        console.log(`[reply] intelligence brief: ${intelligenceBrief.axes.length} axes, ${intelligenceBrief.drift.length} drift alerts, ${intelligenceBrief.claims.length} claims`);
+      }
+    } catch (err) {
+      console.warn(`[reply] intelligence brief failed (non-fatal): ${err.message}`);
+    }
+
     let verdict;
     try {
-      verdict = await geminiClassify(item, threadContext, memoryHints, userHistory, topicAccounts, [], liveVerification);
+      verdict = await geminiClassify(item, threadContext, memoryHints, userHistory, topicAccounts, [], liveVerification, intelligenceBrief);
     } catch (err) {
       console.error(`[reply] Gemini error: ${err.message}`);
       item.status = "error";
