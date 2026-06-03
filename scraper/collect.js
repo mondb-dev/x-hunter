@@ -303,7 +303,8 @@ function appendMentionsToReplyQueue(mentions) {
   for (const m of mentions) {
     if (!m.text || !m.id || existingIds.has(m.id)) continue;
     const stripped = m.text.replace(/@\w+/g, "").replace(/https?:\/\/\S+/g, "").trim();
-    if (stripped.length < 8) continue;
+    // Lower threshold: a bare @mention with 1-2 words is still worth replying to
+    if (stripped.length < 2) continue;
     newItems.push(JSON.stringify({
       id:               m.id,
       ts:               m.ts,
@@ -560,21 +561,23 @@ async function scrapeNotifications(page) {
   console.log("[scraper] checking notifications/mentions...");
 
   try {
-    await page.goto("https://x.com/notifications", { waitUntil: "domcontentloaded", timeout: 30_000 });
-    await new Promise(r => setTimeout(r, 2_000));
+    // Navigate directly to the Mentions tab URL — avoids relying on tab click
+    // which can fail if the tab label changed or the click timing is off.
+    await page.goto("https://x.com/notifications/mentions", { waitUntil: "domcontentloaded", timeout: 30_000 });
+    await new Promise(r => setTimeout(r, 2_500));
 
-    try {
-      const tabs = await page.$$('[role="tab"]');
-      for (const tab of tabs) {
-        const label = await tab.evaluate(el => el.innerText).catch(() => "");
-        if (/mentions/i.test(label)) { await tab.click(); await new Promise(r => setTimeout(r, 1_500)); break; }
-      }
-    } catch {}
+    // Confirm we landed on the right page
+    const landedUrl = page.url();
+    if (!landedUrl.includes("notifications")) {
+      console.warn(`[scraper] notifications: unexpected URL ${landedUrl} — skipping`);
+      return;
+    }
 
     await page.evaluate(() => window.scrollBy(0, 800));
     await new Promise(r => setTimeout(r, 1_000));
 
     const mentions = await extractPosts(page);
+    console.log(`[scraper] notifications: found ${mentions.length} items on mentions page`);
     const queued = appendMentionsToReplyQueue(mentions);
     console.log(`[scraper] notifications: queued ${queued} new mention(s)`);
   } catch (err) {
