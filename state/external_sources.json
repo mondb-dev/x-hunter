@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-03T05:46:21.761Z",
+  "generated_at": "2026-06-03T08:15:53.999Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-03T05:46:49.968Z",
+  "profiled_at": "2026-06-03T08:16:24.305Z",
   "sources": [
     {
       "domain": "justice.gov",
@@ -1282,9 +1282,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-03T03:59:26.000Z",
+      "last_seen_at": "2026-06-03T07:41:31.000Z",
       "discovery": {
-        "distinct_urls": 4049,
+        "distinct_urls": 4066,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1293,10 +1293,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 2357,
-          "feed_buffer_reply": 2549
+          "feed_buffer": 2368,
+          "feed_buffer_reply": 2558
         },
-        "distinct_referring_accounts": 1558,
+        "distinct_referring_accounts": 1560,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1334,7 +1334,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:4049",
+            "distinct_urls:4066",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1342,7 +1342,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1558",
+            "referring_accounts:1560",
             "origin_types:2"
           ]
         },
@@ -1372,10 +1372,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:4049",
+            "distinct_urls:4066",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1558",
+            "referring_accounts:1560",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1418,9 +1418,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-06-03T03:39:59.722Z",
+      "last_seen_at": "2026-06-03T07:20:23.000Z",
       "discovery": {
-        "distinct_urls": 346,
+        "distinct_urls": 348,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -1429,10 +1429,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 323,
+          "feed_buffer_reply": 325,
           "feed_buffer": 47
         },
-        "distinct_referring_accounts": 235,
+        "distinct_referring_accounts": 236,
         "sample_referring_accounts": [
           "100ohiostate",
           "2by32",
@@ -1470,7 +1470,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:346",
+            "distinct_urls:348",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1478,7 +1478,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:235",
+            "referring_accounts:236",
             "origin_types:2"
           ]
         },
@@ -1508,10 +1508,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:346",
+            "distinct_urls:348",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:235",
+            "referring_accounts:236",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -5018,9 +5018,9 @@
       "entity": "Byteplus",
       "kind": "unknown",
       "first_seen_at": "2026-04-15T13:30:37.000Z",
-      "last_seen_at": "2026-06-02T18:07:23.000Z",
+      "last_seen_at": "2026-06-02T21:48:39.000Z",
       "discovery": {
-        "distinct_urls": 45,
+        "distinct_urls": 47,
         "example_urls": [
           "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
           "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=2dnuttry4m02uyeswjtnkyw6cq",
@@ -5029,7 +5029,7 @@
           "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_video_codingplan&utm_content=tecdo&twclid=25cpjoe66peh1858zv8hf438l2"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 45
+          "feed_buffer_reply": 47
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -5060,7 +5060,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:45",
+            "distinct_urls:47",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -5098,7 +5098,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:45",
+            "distinct_urls:47",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:1",
@@ -5738,7 +5738,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T07:04:39.418Z",
+        "fetched_at": "2026-06-03T07:16:19.093Z",
         "homepage_url": "https://era.app/",
         "example_url": "https://era.app/?twclid=23bm7jtrc66pin9ydx0wvupecw",
         "homepage_status": 200,
@@ -6368,7 +6368,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T05:54:37.230Z",
+        "fetched_at": "2026-06-03T06:16:19.432Z",
         "homepage_url": "https://leronx.org/",
         "example_url": "https://leronx.org/?ref=005&tw=r84nh&tw_click=tw-r84nh-r84ni&twclid=29ffsgobmrsvjmkjlmgcllypv0",
         "homepage_status": 403,
@@ -15291,7 +15291,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T06:29:38.984Z",
+        "fetched_at": "2026-06-03T06:46:18.183Z",
         "homepage_url": "https://tolt.com/",
         "example_url": "https://tolt.com/?twclid=24jeerwwldzt1cwgx3ktzfvzm5",
         "homepage_status": 200,
@@ -21138,7 +21138,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T08:14:40.213Z",
+        "fetched_at": "2026-06-03T08:16:20.942Z",
         "homepage_url": "https://controlweedsnotfarming.com/",
         "example_url": "https://controlweedsnotfarming.com/?utm_source=X&utm_medium=Social&utm_campaign=Remarketing&utm_term=Landing+Page.+Visitors&utm_content=Food+On+Our+Tables&twclid=2ehfqrtyrcni2wc5jyzgjr19ra",
         "homepage_status": 200,
@@ -24958,7 +24958,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T06:29:39.295Z",
+        "fetched_at": "2026-06-03T06:46:18.417Z",
         "homepage_url": "https://monadicdna.com/",
         "example_url": "https://explorer.monadicdna.com/?twclid=23v8cbj938nxfoq8gmro6dqa1l",
         "homepage_status": 200,
@@ -25204,7 +25204,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T05:54:39.718Z",
+        "fetched_at": "2026-06-03T06:16:20.510Z",
         "homepage_url": "https://alphacapital.pro/",
         "example_url": "https://alphacapital.pro/pages/performance/?utm_source=twitter&utm_medium=ad1&utm_campaign=ac&twclid=2b8weeqkz95cs1xc59f8v2j7ob",
         "homepage_status": 200,
@@ -25327,7 +25327,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T06:29:39.643Z",
+        "fetched_at": "2026-06-03T06:46:18.934Z",
         "homepage_url": "https://willowvoice.com/",
         "example_url": "https://willowvoice.com/developers?twclid=2ebuy7l735ljqyo9xotbgwpmp0",
         "homepage_status": 200,
@@ -36346,7 +36346,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T05:54:37.775Z",
+        "fetched_at": "2026-06-03T06:16:21.049Z",
         "homepage_url": "https://lately.com/",
         "example_url": "http://www.lately.com/?twclid=26st81se5sstdkz28lll98t6pl",
         "homepage_status": 200,
@@ -36468,7 +36468,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T05:54:38.326Z",
+        "fetched_at": "2026-06-03T06:16:21.531Z",
         "homepage_url": "https://deepgram.com/",
         "example_url": "https://deepgram.com/state-of-voice-ai-report?utm_source=twitter&utm_medium=paidsocial&utm_campaign=Twitter_ACQ_Q42025_Evergreen_Prospecting&utm_content=state-of-voice&twclid=22an8eeru83cxpws6fqbuga3v2",
         "homepage_status": 200,
@@ -36590,7 +36590,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T06:29:37.835Z",
+        "fetched_at": "2026-06-03T06:46:19.176Z",
         "homepage_url": "https://topstocks.com/",
         "example_url": "https://topstocks.com/cvkd?twclid=2br9vd88ywgw104idmz125ag0u",
         "homepage_status": 200,
@@ -37200,7 +37200,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T07:04:39.853Z",
+        "fetched_at": "2026-06-03T07:16:19.680Z",
         "homepage_url": "https://gothamist.com/",
         "example_url": "https://gothamist.com/news/mamdani-administrations-new-72nd-street-bike-lane-would-link-upper-east-and-west-sides&utm_id=571007&sfmc_id=79023345&utm_content=2026415&nypr_member=True",
         "homepage_status": 200,
@@ -37322,7 +37322,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T07:04:40.754Z",
+        "fetched_at": "2026-06-03T07:16:20.480Z",
         "homepage_url": "https://fullpath.com/",
         "example_url": "https://www.fullpath.com/ai-powered-text-message-marketing-for-car-dealers/?twclid=21jxitvmgt9jsjh3rm5bmiedxu",
         "homepage_status": 200,
@@ -37444,7 +37444,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T07:04:41.071Z",
+        "fetched_at": "2026-06-03T07:16:20.832Z",
         "homepage_url": "https://johnkennedy.com/",
         "example_url": "https://support.johnkennedy.com/just-a-little-quiz/?red=cbdb1d6f-e5fe-4aa4-a295-1dbdd471cee6&utm_source=X&utm_medium=Paid&utm_campaign=Quiz&twclid=27n7ucaicrd2diuikk5gsjxiza",
         "homepage_status": 200,
@@ -37566,7 +37566,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T08:14:40.897Z",
+        "fetched_at": "2026-06-03T08:16:21.682Z",
         "homepage_url": "https://gunowners.org/",
         "example_url": "https://www.gunowners.org/?twclid=25jr1t1tq8terhv5da5ta78vcm",
         "homepage_status": 200,
@@ -40220,6 +40220,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.11,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3472395833333333,
           "confidence": 0.08135,
@@ -40233,6 +40247,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-03T07:46:19.789Z",
+        "homepage_url": "https://up-nstranscontinental.com/",
+        "example_url": "https://www.up-nstranscontinental.com/?utm_source=x&utm_medium=paid_social&utm_campaign=national_phase2&utm_content=pro_business&twclid=23k0v948320d3qk6vqkggc73ru",
+        "homepage_status": null,
+        "example_status": 200,
+        "homepage_final_url": "https://up-nstranscontinental.com/",
+        "example_final_url": "https://www.up-nstranscontinental.com/?utm_source=x&utm_medium=paid_social&utm_campaign=national_phase2&utm_content=pro_business&twclid=23k0v948320d3qk6vqkggc73ru",
+        "homepage_content_type": "",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
         }
       }
     },
@@ -40297,6 +40342,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3472395833333333,
           "confidence": 0.08135,
@@ -40310,6 +40369,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-03T07:46:20.244Z",
+        "homepage_url": "https://lets.shop/",
+        "example_url": "https://lets.shop/2948/FuelGoodFeelGood-TW-ATT/?utm_medium=social&utm_source=twitter&utm_campaign=1H26_FGFG&utm_content=FGFG&utm_term=Native&twclid=2738mck7r6rdjnyker6nhf1z82",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://destini.co/",
+        "example_final_url": "https://lets.shop/2948/FuelGoodFeelGood-TW-ATT/?utm_medium=social&utm_source=twitter&utm_campaign=1H26_FGFG&utm_content=FGFG&utm_term=Native&twclid=2738mck7r6rdjnyker6nhf1z82",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -40374,6 +40464,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.009999999999999998,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3472395833333333,
           "confidence": 0.08135,
@@ -40387,6 +40491,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-03T07:46:20.474Z",
+        "homepage_url": "https://fulfil.io/",
+        "example_url": "https://www.fulfil.io/merchants/dbrand/?twclid=243ecvpsf0p6ki2xlq4h98ksb7",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://www.fulfil.io/",
+        "example_final_url": "https://www.fulfil.io/merchants/dbrand/?twclid=243ecvpsf0p6ki2xlq4h98ksb7",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
         }
       }
     },
@@ -40451,6 +40586,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.11,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3472395833333333,
           "confidence": 0.08135,
@@ -40464,6 +40613,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-03T07:46:20.805Z",
+        "homepage_url": "https://proudpatriots.com/",
+        "example_url": "https://proudpatriots.com/pages/200-page-america-s-250th-anniversary-coffee-table-book-v2?utm_source=twitter-ads&utm_campaign=41258612&utm_content=NewAmerica250BookRound2Image2&twt_id=54708689&twclid=25tg7sp10bjjfr42szs9p9jca",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://proudpatriots.com/",
+        "example_final_url": "https://proudpatriots.com/pages/200-page-america-s-250th-anniversary-coffee-table-book-v2?utm_source=twitter-ads&utm_campaign=41258612&utm_content=NewAmerica250BookRound2Image2&twt_id=54708689&twclid=25tg7sp10bjjfr42szs9p9jca",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
         }
       }
     },
@@ -40541,6 +40721,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-03T08:16:23.956Z",
+        "homepage_url": "https://grifterolympics.com/",
+        "example_url": "https://www.grifterolympics.com/?twclid=28u7u1l2mcue7ai4t73e0m25z1",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.grifterolympics.com/",
+        "example_final_url": "https://www.grifterolympics.com/?twclid=28u7u1l2mcue7ai4t73e0m25z1",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -40618,6 +40843,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-03T08:16:24.305Z",
+        "homepage_url": "https://bridgestonegolf.com/",
+        "example_url": "https://www.bridgestonegolf.com/en-us/index?twclid=27b9nricn7ry3j2ax25jvh1pql",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://www.bridgestonegolf.com/",
+        "example_final_url": "https://www.bridgestonegolf.com/en-us/index?twclid=27b9nricn7ry3j2ax25jvh1pql",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -48415,6 +48685,83 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "honkaistarrail"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "apple.com",
+      "entity": "Apple",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-03T05:49:58.616Z",
+      "last_seen_at": "2026-06-03T05:49:58.616Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://apps.apple.com/us/app/oceanhorn-3/id1539411904?twclid=25zyeamc9kepxd6rdpaddxcmui"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "cornfox"
         ],
         "distinct_axes": []
       },
