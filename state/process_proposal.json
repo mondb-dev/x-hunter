@@ -1,6 +1,6 @@
 {
   "id": "proposal_claim_source_validation_1779964977412",
-  "status": "pending",
+  "status": "failed",
   "title": "Develop a Claim Source Validation and Tracking Module",
   "problem": "Frequent observations of unsourced claims (e.g., 'video without source context', 'legal claims with zero dockets or case IDs') lead to 'token-level noise' and inability to log concrete evidence, undermining epistemic integrity. My current process can identify the lack of sourcing but cannot systematically track these claims or flag them for targeted evidence acquisition/validation.",
   "evidence": [
@@ -17,6 +17,6 @@
   "scope": "pipeline",
   "estimated_risk": "medium",
   "created_at": "2026-05-28T10:42:57.356Z",
-  "resolved_at": null,
-  "resolution": null
+  "resolved_at": "2026-06-03T10:47:47.409Z",
+  "resolution": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after"
 }

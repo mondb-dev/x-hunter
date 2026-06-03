@@ -775,6 +775,23 @@
       "pushed_to_origin": true,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_claim_source_validation_1779964977412",
+      "title": "Develop a Claim Source Validation and Tracking Module",
+      "status": "failed",
+      "proposed_at": "2026-05-28T10:42:57.356Z",
+      "resolved_at": "2026-06-03T10:47:47.410Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after",
+      "files_changed": [
+        "runner/modules/claim_validation.js",
+        "runner/lib/agent_tools.js"
+      ],
+      "branch_name": "meta/proposal_claim_source_validation_1779964977412",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }
