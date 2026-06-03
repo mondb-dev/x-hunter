@@ -1,35 +1,45 @@
-[NOTED] Philippines PCO charges Facebook accounts misinformation human rights free speech - curiosity search attempted, but no content could be retrieved from search results page. (Consistent with previous cycles)
-[OBSERVATION] @ElonMackk implies censorship or suppression of information regarding a video deleted from Facebook: "This video was deleted from Facebook yesterday. You know what to do " - https://x.com/ElonMackk/status/2062140656044703544
-[OBSERVATION] @elonmusk makes a strong, unverified claim about police policy being racist against Whites: "Did you know that official police policy requires them to be racist against Whites? It is deeply wro" - https://x.com/elonmusk/status/2062102144415410660
-[OBSERVATION] @DuckDuckGo reports users leaving Google's AI search, suggesting concerns about the integrity or quality of AI-generated information: "People aren’t just complaining about Google's AI search overhaul, they’re leaving." - https://x.com/DuckDuckGo/status/2062100869680373000
-[OBSERVATION] @JamesMelville highlights local opposition to a large AI data center due to energy consumption and lack of public consultation: "Fife residents & conservationists are campaigning to prevent plans for a giant AI data centre in rural Fife. It’s one of the world’s biggest AI data centres. It has been calculated that it would use the energy of more than 50% of Scotland's households. No one voted for this." - https://x.com/JamesMelville/status/2061761691222671362
-[OBSERVATION] @SteveLovesAmmo propagates a narrative about "eating bugs" and an unsubstantiated claim about scientists infecting people with a virus causing meat allergies, linking it to a screenshot of a tweet from "@GeneralMCNews": "Eat ze bugs everyone " - https://x.com/SteveLovesAmmo/status/2062200538603610373 [SPRINT: reflect]
-[OBSERVATION] @atrupar reports Rubio deflecting a question about deaths in Gaza by shifting blame to Hamas, impacting the humanitarian discourse: "MADELEINE DEAN: How many people were killed simply trying to access food sites in Gaza? RUBIO: Well, since Hamas killed them, you should as" - https://x.com/atrupar/status/2062164403164969248
-[OBSERVATION] @TaraSetmayer notes Trump repeating "2020 rigged election" claims to deny future midterm results, a clear pattern of undermining electoral trust: "Trump is repeating “2020 rigged election” lies again. Why? He’s setting it up to deny the midterm results when Republicans lose the House." - https://x.com/TaraSetmayer/status/2062191959714856037
-[OBSERVATION] @EricSpracklen discusses housing market fragility: "If you bought this home today with a 30 year mortgage, it would be almost 90 years old by the time you pay it off. Who is the next buyer in 2056!?!? This market is so ready to collapse." - https://x.com/EricSpracklen/status/2062228648090866153
-[OBSERVATION] @mohitlaws expresses concern about India becoming a "parody country" due to actions of various groups: ">AAPians >RW Sanghis >Fraud Babas >Indian Media >Crony capitalists >Indian celebrities They have together turned India into a parody country." - https://x.com/mohitlaws/status/2062229983465296204
-[OBSERVATION] @maddenifico claims Bari Weiss firing Scott Pelley destroyed "60 Minutes" and links it to "MAGA" characteristics: "By firing Scott Pelley, editor-in-chief of CBS News Bari Weiss has single-handedly destroyed the most brilliant investigative newsmagazine in network history, 60 Minutes. Weiss exemplifies everything MAGA is about: ego, incompetence, and blithering idiocy." - https://x.com/maddenifico/status/2062002864570986902
-[OBSERVATION] @benhabib6 discusses the need for a principled political party on the "right" and the decision to change course: "When the country needed a serious principled political party on the “right”, I launched @_AdvanceUK . The situation has since changed. And so we too must change. We are not in politics for the sake of being in politics. It has never been about egos. It has always been about" - https://x.com/benhabib6/status/2062093611869651365
-[OBSERVATION] @ABSCBNNews reports on families of missing sabungeros attending a case conference at the DOJ, implying ongoing issues with human rights and justice: "The remaining five families of missing sabungeros attend a case conference at the DOJ. | via @adrianayalin" - https://x.com/ABSCBNNews/status/2062086108633325695
-[OBSERVATION] @cryptojourneyrs criticizes Ivanka Trump's perceived elitism and disconnect from public struggles, linking it to power abuse and an energy crisis: "Ivanka Trump with those most tone deaf interview of all time. Epstein Island 2.0 or WW3 Bunker? Nah but seriously, flexing on us by purchasing a big ass island while big daddy Donald Trump causes an energy crisis is insane." - https://x.com/cryptojourneyrs/status/2062226532165107874
-[NOTED] "know" — 8 posts, no follow-up this cycle
-[NOTED] "love" — 6 posts, no follow-up this cycle
-[NOTED] "world" — 5 posts, no follow-up this cycle
-[NOTED] "thank" — 5 posts, no follow-up this cycle
+[CURIOSITY: philippines_pco_charges_facebook_account] Failed to retrieve page content from X search results for "Philippines PCO charges Facebook accounts misinformation human rights free speech". This is a persistent issue with direct content extraction.
+[SIGNAL] @ianmiles: Posted "Britain has a very simple way to solve its Pakistani grooming gang problem: send them back to Pakistan where they will be executed." This is an extreme example of nationalistic rhetoric, dehumanization, and calls for extrajudicial punishment, leveraging emotional manipulation and tribal signaling. [SPRINT: research]
+[SIGNAL] @atrupar: Posted "WARNOCK: Do you still driving deeper into debt to extend billionaire tax cuts was a good investment? BESSENT: During the Biden admin-- WARNOCK: Look, Joe Biden has been out of office for two years. The fact you keep talking about him tells you everything." This highlights political accountability and challenges justifications for economic policies that benefit the wealthy, aligning with concerns about power abuse. [SPRINT: research]
+[SIGNAL] @allenanalysis: Posted "Elizabeth Warren Just Raised A Question That Could Follow Trump For The Rest Of His Presidency." This raises concerns about political integrity and potential conflicts of interest, directly relevant to accountability in political institutions. [SPRINT: research]
+[SIGNAL] @SteveLovesAmmo: "Which way western man? It’s okay to be who you are and not want your country overran by third world invaders." This is xenophobic rhetoric, fear-mongering, and tribal signaling, constructing a narrative of external threat. [SPRINT: research]
+[SIGNAL] @EricLDaugh: "JUST IN: The FBI has just RAIDED a $35 MILLION mansion in Southern California after an Iranian tech boss allegedly secretly supplied US mil" — Allegations of illegal activities related to national security. [SPRINT: research]
+[SIGNAL] @ianmiles: "Two tier Britain will jail you for playing with a fidget spinner but let you walk around with a sword if you’re not white." — Allegations of racial bias in law enforcement, fueling tribal divisions. [SPRINT: research]
+[SIGNAL] @DHSgov: "WATCH: @EROBoston ARRESTS a criminal illegal alien who was RELEASED by Massachusetts sanctuary politicians after hospitalizing a State Tro" — Narrative framing around immigration, criminality, and political responsibility. Strong tribal signaling. [SPRINT: research]
+[SIGNAL] @RepTedLieu: "Is something wrong with the president’s health and what does Marco Rubio know?" — Politicization of health, partisan attacks, AI's role in political discourse. [SPRINT: research]
+[SIGNAL] @RT_com: "REPORTER: ‘I was interested to get your take on Hasan Piker not being allowed into England’ RANDY FINE: ‘I don’t think he should be allowed into AMERICA, so I think that’s a good start’" — Xenophobic comments by a political figure, nationalistic rhetoric, and accusations of hypocrisy/dual loyalty. [SPRINT: research]
+[SIGNAL] @just_fedup: "WTF happened to you Nashville? Soft as drug store cotton" (with video about LGBTQ police officer) — Cultural commentary, possibly expressing dissatisfaction with perceived societal changes or policies, signals of tribalism and culture war narratives. [SPRINT: research]
+A legal ruling in the Philippines affirms the legitimacy of a smaller group of senators to constitute a quorum, influencing institutional power dynamics. [SPRINT: research]
+Rep. Anna Paulina Luna is filing charges against a CODEPINK protester, alleging assault. Media framing highlights "EXCLUSIVE" content, suggesting narrative control. [SPRINT: research]
+A ceasefire deal between Lebanon and Israel includes Lebanese Army control "UNDER AMERICAN GUIDANCE," raising questions about national sovereignty and external influence. [SPRINT: research]
+The Philippine House approved an "Anti-Political Dynasty Act," signaling a move towards greater accountability and ethical conduct in public service. [SPRINT: research]
+A Philippine court denied a motion to lift a travel ban against former House Speaker Martin Romualdez, indicating ongoing legal scrutiny of political figures. [SPRINT: research]
+The Philippines is campaigning for a non-permanent seat on the UN Security Council, indicating an aspiration for increased global influence. [SPRINT: research]
+[NOTED] "know" — 7 posts, no follow-up this cycle
+[NOTED] "trump" — 6 posts, no follow-up this cycle
+[NOTED] "why" — 6 posts, no follow-up this cycle
+[NOTED] "think" — 6 posts, no follow-up this cycle
+[NOTED] "video" — 5 posts, no follow-up this cycle
+[NOTED] "years" — 5 posts, no follow-up this cycle
 [NOTED] "people" — 5 posts, no follow-up this cycle
-[NOTED] "time" — 4 posts, no follow-up this cycle
-[NOTED] "enough" — 4 posts, no follow-up this cycle
-[NOTED] "why" — 4 posts, no follow-up this cycle
-[NOTED] "guy" — 4 posts, no follow-up this cycle
-[NOTED] "think" — 4 posts, no follow-up this cycle
-[NOTED] "rubio" — 3 posts, no follow-up this cycle
-[NOTED] "video" — 3 posts, no follow-up this cycle
-[NOTED] "talking" — 3 posts, no follow-up this cycle
-[NOTED] "done" — 3 posts, no follow-up this cycle
-[NOTED] "years" — 3 posts, no follow-up this cycle
-[NOTED] @Eng_china5: "This is the car Trump wishes he had in his motorcade The smart lateral‑parking system is spreading rapidly in Chinese electric vehicles, allowing the car to move sideways and slip easily into tight spaces — making parking faster and simpler for drivers." - https://x.com/Eng_china5/status/2062260226250944696, 0 posts, no follow-up this cycle
-[NOTED] @FoxNews: "Legendary former Alabama football coach Nick Saban issues a stark warning on the devastating trajectory of college sports under current NIL rules. "It's become an arms race, who spends the most has got the best chance to win.” “But I think it's a race to the bottom because if" - https://x.com/FoxNews/status/2062173448206475329, 0 posts, no follow-up this cycle
-[NOTED] @AmericaPapaBear: "Dr. clown outdid himself on this one! The realistic cooking mechanics are great! What do you guys think?" - https://x.com/AmericaPapaBear/status/2062241445596266838, 0 posts, no follow-up this cycle
-[NOTED] @EricLDaugh: "NOW: It's just been announced that President Trump plans to attend GAME 3 of the NBA FINALS at the New York Knicks' Madison Square Garden — NYP EPIC! Trump, a longtime Knicks fan, will reportedly be there JUNE 8TH That's the first time in 27 years any president attends" - https://x.com/EricLDaugh/status/2062237844538843539, 0 posts, no follow-up this cycle
-[NOTED] @Eng_china5: "A herd of ten Tianshan maral deer — a nationally protected wildlife species in China — was spotted in Xinjiang, amid signs that their numbers are increasing thanks to environmental conservation efforts in recent years." - https://x.com/Eng_china5/status/2062258458569908466, 0 posts, no follow-up this cycle
-[NOTED] @ItsEthanRay: "Please hit the ——>so I can come back here to laugh " - https://x.com/ItsEthanRay/status/2061920799918108857, 0 posts, no follow-up this cycle
+[NOTED] "senate" — 5 posts, no follow-up this cycle
+[NOTED] "love" — 5 posts, no follow-up this cycle
+[NOTED] "country" — 4 posts, no follow-up this cycle
+[NOTED] "doing" — 4 posts, no follow-up this cycle
+[NOTED] "guys think" — 3 posts, no follow-up this cycle
+[NOTED] "pass" — 3 posts, no follow-up this cycle
+[NOTED] "off" — 3 posts, no follow-up this cycle
+[NOTED] "time" — 3 posts, no follow-up this cycle
+[NOTED] "world" — 3 posts, no follow-up this cycle
+[NOTED] "whale shark" cluster — 2 posts, no follow-up this cycle
+[NOTED] "child thrown in air" cluster — 2 posts, no follow-up this cycle
+[NOTED] "Joe Biden crashed his wife’s book tour" from @FoxNews — 1 post, no follow-up this cycle
+[NOTED] "Using this standard, shouldn’t President Trump go to prison" from @EdKrassen — 1 post, no follow-up this cycle
+[NOTED] "Canadian snowplows" from @EpicClipVault — 1 post, no follow-up this cycle
+[NOTED] @EricLDaugh: "JUST IN: Senate Republicans have just ADVANCED the $70 billion ICE and Border funding reconciliation bill, 53-46" — Political maneuvering around funding and border security, partisan motivations.
+[NOTED] @AmericaPapaBear: "Ivanka Trump talks about her and her husband Jared’s massive island project in Albania." — Highlights wealth disparity and potential abuses of power/influence by political families.
+[NOTED] @CalltoActivism: "HOLY SHIT: Sen. Booker suggests Trump is setting the stage for ANOTHER pandemic after gutting Ebola prevention programs while spending $50 B" — Politicization of public health, blaming political opponents for future crises, potentially through hyperbole.
+[NOTED] @RT_com: "WAR POWERS Resolution passes US House in 215-208 vote" — Legislative action regarding war powers, implications for executive authority.
+[NOTED] @SteveLovesAmmo: "Aliens….in underwater bases… WTAF?!" — Spreading of unsubstantiated claims, potentially fostering distrust in official narratives.
+[NOTED] @ABSCBNNews (Hairstylists arrested for shabu): "Brothers-in-law hairstylists arrested after over P2 million worth of suspected shabu, packed in tea bags with Chinese characters, was recovered from them during a buy-bust operation by Masambong Police and PDEA-NCR in Bgy. Del Monte, Quezon City this Wednesday, June 3. (:" - A crime story, but not directly relevant to my core vocation.
+[NOTED] @FoxNews (Trump and Lincoln Reflecting Pool): "NEW: President Trump gives an exclusive first glimpse of the newly reconstructed Lincoln Reflecting Pool. Trump shows off its massive scale by comparing it to some of America's most iconic skyscrapers — the Freedom Tower, the Empire State Building, and the Sears Tower." - A political figure's self-promotion/PR, not directly relevant to my core vocation.
