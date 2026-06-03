@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-02T23:46:14.046Z",
+  "generated_at": "2026-06-03T02:46:18.308Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-02T23:47:03.287Z",
+  "profiled_at": "2026-06-03T02:46:47.848Z",
   "sources": [
     {
       "domain": "justice.gov",
@@ -871,9 +871,9 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-06-01T09:12:35.000Z",
+      "last_seen_at": "2026-06-02T17:43:56.000Z",
       "discovery": {
-        "distinct_urls": 177,
+        "distinct_urls": 178,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
@@ -884,7 +884,7 @@
         "origin_counts": {
           "ontology_evidence": 131,
           "claim_tracker": 15,
-          "feed_buffer_reply": 26,
+          "feed_buffer_reply": 27,
           "feed_buffer": 2,
           "journals": 63
         },
@@ -941,7 +941,7 @@
         "breadth": {
           "score": 1,
           "basis": [
-            "distinct_urls:177",
+            "distinct_urls:178",
             "distinct_axes:18",
             "origin_types:5"
           ]
@@ -982,7 +982,7 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:177",
+            "distinct_urls:178",
             "distinct_axes:18",
             "origin_types:5",
             "referring_accounts:5",
@@ -1282,9 +1282,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-02T23:29:12.000Z",
+      "last_seen_at": "2026-06-03T02:39:10.000Z",
       "discovery": {
-        "distinct_urls": 4014,
+        "distinct_urls": 4034,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1293,10 +1293,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 2341,
-          "feed_buffer_reply": 2523
+          "feed_buffer": 2350,
+          "feed_buffer_reply": 2536
         },
-        "distinct_referring_accounts": 1550,
+        "distinct_referring_accounts": 1552,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1334,7 +1334,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:4014",
+            "distinct_urls:4034",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1342,7 +1342,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1550",
+            "referring_accounts:1552",
             "origin_types:2"
           ]
         },
@@ -1372,10 +1372,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:4014",
+            "distinct_urls:4034",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1550",
+            "referring_accounts:1552",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1418,9 +1418,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-06-01T17:39:11.000Z",
+      "last_seen_at": "2026-06-03T02:08:06.000Z",
       "discovery": {
-        "distinct_urls": 345,
+        "distinct_urls": 346,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -1429,10 +1429,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 322,
+          "feed_buffer_reply": 323,
           "feed_buffer": 46
         },
-        "distinct_referring_accounts": 233,
+        "distinct_referring_accounts": 234,
         "sample_referring_accounts": [
           "100ohiostate",
           "2by32",
@@ -1470,7 +1470,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:345",
+            "distinct_urls:346",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1478,7 +1478,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:233",
+            "referring_accounts:234",
             "origin_types:2"
           ]
         },
@@ -1508,10 +1508,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:345",
+            "distinct_urls:346",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:233",
+            "referring_accounts:234",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3201,7 +3201,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T01:49:37.452Z",
+        "fetched_at": "2026-06-03T02:16:12.683Z",
         "homepage_url": "https://jamf.com/",
         "example_url": "https://www.jamf.com/blog/mac-management-security-trends-enterprise-it-2025/?utm_source=twitter&utm_medium=sponsored-social&utm_campaign=am_icf_smas_mms_banner_icp&utm_content=20260213_com_ent-midmkt_p_jmac_blog_6679_SIT&twclid=26vc3aicbe9m10pi19ume82b0z",
         "homepage_status": 200,
@@ -4346,7 +4346,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T02:24:36.471Z",
+        "fetched_at": "2026-06-03T02:46:46.839Z",
         "homepage_url": "https://amazon.com/",
         "example_url": "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44/ref_=dvm_us_c_soc_THBY_tw_rb?twclid=2e4zyrzur7iapo7e8zxfmiz1fu",
         "homepage_status": 200,
@@ -5018,9 +5018,9 @@
       "entity": "Byteplus",
       "kind": "unknown",
       "first_seen_at": "2026-04-15T13:30:37.000Z",
-      "last_seen_at": "2026-06-02T15:30:00.000Z",
+      "last_seen_at": "2026-06-02T17:00:01.000Z",
       "discovery": {
-        "distinct_urls": 42,
+        "distinct_urls": 44,
         "example_urls": [
           "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
           "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=2dnuttry4m02uyeswjtnkyw6cq",
@@ -5029,7 +5029,7 @@
           "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_video_codingplan&utm_content=tecdo&twclid=25cpjoe66peh1858zv8hf438l2"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 42
+          "feed_buffer_reply": 44
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -5060,7 +5060,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:42",
+            "distinct_urls:44",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -5098,7 +5098,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:42",
+            "distinct_urls:44",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:1",
@@ -8013,7 +8013,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T00:40:05.248Z",
+        "fetched_at": "2026-06-03T00:46:09.858Z",
         "homepage_url": "https://scitools.com/",
         "example_url": "https://scitools.com/codecheck?xad=codecheck&twclid=23owlb2i7ei44kgcykku0zs4en",
         "homepage_status": 200,
@@ -8418,6 +8418,132 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 5,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "makofy.com",
+      "entity": "Makofy",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-29T07:37:00.000Z",
+      "last_seen_at": "2026-06-02T18:09:54.000Z",
+      "discovery": {
+        "distinct_urls": 9,
+        "example_urls": [
+          "https://makofy.com/openclaw?twclid=217okoej56crajhkd22b6nsfzf",
+          "https://makofy.com/openclaw?twclid=2doqar6i1yyf4h64mqtw1u8n37",
+          "https://makofy.com/?twclid=24qtjd9ufbwa4ytjxvzl7dfkcs",
+          "https://makofy.com/?twclid=28m3tx9eyy73kjtcgnwps5gbtk",
+          "https://makofy.com/?twclid=28ayd38hyih0li25ozjdx7exp0"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 9
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "makofy_official"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.32249999999999995,
+          "basis": [
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.39828125000000003,
+          "confidence": 0.31035,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-01T23:05:40.229Z",
+        "homepage_url": "https://makofy.com/",
+        "example_url": "https://makofy.com/openclaw?twclid=217okoej56crajhkd22b6nsfzf",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://makofy.com/",
+        "example_final_url": "https://makofy.com/openclaw?twclid=217okoej56crajhkd22b6nsfzf",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -9562,132 +9688,6 @@
       }
     },
     {
-      "domain": "makofy.com",
-      "entity": "Makofy",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-29T07:37:00.000Z",
-      "last_seen_at": "2026-06-02T18:09:54.000Z",
-      "discovery": {
-        "distinct_urls": 8,
-        "example_urls": [
-          "https://makofy.com/openclaw?twclid=217okoej56crajhkd22b6nsfzf",
-          "https://makofy.com/openclaw?twclid=2doqar6i1yyf4h64mqtw1u8n37",
-          "https://makofy.com/?twclid=24qtjd9ufbwa4ytjxvzl7dfkcs",
-          "https://makofy.com/?twclid=28m3tx9eyy73kjtcgnwps5gbtk",
-          "https://makofy.com/?twclid=28ayd38hyih0li25ozjdx7exp0"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 8
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "makofy_official"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.29333333333333333,
-          "basis": [
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.1,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.39190104166666667,
-          "confidence": 0.281725,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-01T23:05:40.229Z",
-        "homepage_url": "https://makofy.com/",
-        "example_url": "https://makofy.com/openclaw?twclid=217okoej56crajhkd22b6nsfzf",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://makofy.com/",
-        "example_final_url": "https://makofy.com/openclaw?twclid=217okoej56crajhkd22b6nsfzf",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "geopoliticalfutures.com",
       "entity": "Geopoliticalfutures",
       "kind": "unknown",
@@ -10663,7 +10663,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T01:49:38.044Z",
+        "fetched_at": "2026-06-03T02:16:13.222Z",
         "homepage_url": "https://patsnap.com/",
         "example_url": "https://eureka.patsnap.com/mse-landing?from=mktcampaign_mse_ads_x_formuvideo-asia2en2&twclid=29qq6c80v43jc7y7o992xnzaaf",
         "homepage_status": 200,
@@ -12957,6 +12957,132 @@
       }
     },
     {
+      "domain": "ridge.com",
+      "entity": "Ridge",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-19T19:20:24.000Z",
+      "last_seen_at": "2026-06-01T18:07:22.000Z",
+      "discovery": {
+        "distinct_urls": 6,
+        "example_urls": [
+          "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+%28IO%29&utm_term=5.17+-+PCH+-+FDAY+-+IMGs+-+FDAY-RINGS-3RLP&utm_content=05250b_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_The-gift-your-man-actually-wants-%28we-asked%29_RINGS-FDAY-Branded__META_NN_IH_DR__FDAY-RINGS-3RLP_5-12-26%3Fnb_platform%3Dtwitter&twclid=2cpbcoko2qkg7u5nrw2y5g1wdo",
+          "https://ridge.com/pages/edc-smart-wallet-5rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+EDC+%7C+PCH+%7C+MDS+%2B+FDAY26+%28IO%29&utm_term=5.15+-+PCH+-+MDS+-+IMGs+-+EDC-SMART-5RLP&utm_content=05315d_CORE_MDS_EDC_WALLET_MIX-COLOR_OFFER-%25OFF_Lighter%2C-slimmer%2C-Built-for-life_MDS-EDC-GENERAL__META_NN_IH_DR_US_EDC-SMART-6RLP_05-12-29&twclid=2co7344umxvtut5ptdz9xfjnv9",
+          "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+%28IO%29&utm_term=5.17+-+PCH+-+FDAY+-+IMGs+-+FDAY-RINGS-3RLP&utm_content=05250a_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_Designed-by-husbands%2C-For-Husbands._RINGS-FDAY-Branded__META_IT_IH_DR__FDAY-RINGS-3RLP_5-12-26%3Fnb_platform%3Dtwitter%E2%80%A8&twclid=2dk6e9gzhd50k576djlwgelfoa",
+          "https://ridge.com/pages/edc-fday-founder-dad?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+EDC+%7C+PCH+%7C+MDS+%2B+FDAY26+%28IO%29&utm_term=5.26+-+PCH+-+FDAY+-+IMGs+-+Fday-founder-LP&utm_content=04671a_GIFT_FDAY_EDC_WALLET_TOBACCO-BROWN-LEATHER_OFFER-%25OFF_Father%27s-Day-Sale-%7C-Up-to-30%25-off_FDAY-Gifting-EDC-Phase2__META_NN_IH_DR_US_Fday-Founder-LP_05-26-25&twclid=28o88x6j7qql786cdyglfqpgf8",
+          "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+NEW+%28IO%29&utm_term=5.27+-+PCH+-+FDAY+-+IMGs+-+fday-rings-3rlp&utm_content=05250a_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_Designed-by-husbands%2C-For-Husbands._RINGS-FDAY-Branded__META_IT_IH_DR__FDAY-RINGS-3RLP_5-12-26&twclid=2ex4df6wa4zvgkrftiv86ikg4d"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 6
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "ridgewallet"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.235,
+          "basis": [
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.009999999999999998,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.379140625,
+          "confidence": 0.22447499999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-01T19:35:46.793Z",
+        "homepage_url": "https://ridge.com/",
+        "example_url": "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+%28IO%29&utm_term=5.17+-+PCH+-+FDAY+-+IMGs+-+FDAY-RINGS-3RLP&utm_content=05250b_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_The-gift-your-man-actually-wants-%28we-asked%29_RINGS-FDAY-Branded__META_NN_IH_DR__FDAY-RINGS-3RLP_5-12-26%3Fnb_platform%3Dtwitter&twclid=2cpbcoko2qkg7u5nrw2y5g1wdo",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://ridge.com/",
+        "example_final_url": "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+%28IO%29&utm_term=5.17+-+PCH+-+FDAY+-+IMGs+-+FDAY-RINGS-3RLP&utm_content=05250b_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_The-gift-your-man-actually-wants-%28we-asked%29_RINGS-FDAY-Branded__META_NN_IH_DR__FDAY-RINGS-3RLP_5-12-26%3Fnb_platform%3Dtwitter&twclid=2cpbcoko2qkg7u5nrw2y5g1wdo",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "seotrends.pro",
       "entity": "Seotrends Pro",
       "kind": "unknown",
@@ -13078,6 +13204,132 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "alppouch.com",
+      "entity": "Alppouch",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-01T16:21:32.000Z",
+      "last_seen_at": "2026-06-01T16:21:32.000Z",
+      "discovery": {
+        "distinct_urls": 6,
+        "example_urls": [
+          "https://alppouch.com/products/drifters-lemon-raspberry-nicotine-pouches?variant=45695862079684&utm_source=twitter&twclid=2f0tn2lk34ykymzkyz3xx7lfzj&tw_adsetid=55002677&tw_campaign=41318448&utm_content=dpa-carousel-drifters&utm_campaign=cs-dpa-carousel-sales-alp-pouch&utm_medium=paid_social&tw_source=twitter&utm_term=55002677",
+          "https://alppouch.com/products/drifters-combo-pack?variant=46102780117188&utm_source=twitter&twclid=2f0tn2lk34ykymzkyz3xx7lfzj&tw_adsetid=55002677&tw_campaign=41318448&utm_content=dpa-carousel-drifters&utm_campaign=cs-dpa-carousel-sales-alp-pouch&utm_medium=paid_social&tw_source=twitter&utm_term=55002677",
+          "https://alppouch.com/products/drifters-island-peach-nicotine-pouches?variant=45695866863812&utm_source=twitter&twclid=2f0tn2lk34ykymzkyz3xx7lfzj&tw_adsetid=55002677&tw_campaign=41318448&utm_content=dpa-carousel-drifters&utm_campaign=cs-dpa-carousel-sales-alp-pouch&utm_medium=paid_social&tw_source=twitter&utm_term=55002677",
+          "https://alppouch.com/products/drifters-blueberry-lemonade-ice-nicotine-pouches?variant=45695850873028&utm_source=twitter&twclid=2f0tn2lk34ykymzkyz3xx7lfzj&tw_adsetid=55002677&tw_campaign=41318448&utm_content=dpa-carousel-drifters&utm_campaign=cs-dpa-carousel-sales-alp-pouch&utm_medium=paid_social&tw_source=twitter&utm_term=55002677",
+          "https://alppouch.com/products/drifters-mango-freeze-nicotine-pouches?variant=45695859654852&utm_source=twitter&twclid=2f0tn2lk34ykymzkyz3xx7lfzj&tw_adsetid=55002677&tw_campaign=41318448&utm_content=dpa-carousel-drifters&utm_campaign=cs-dpa-carousel-sales-alp-pouch&utm_medium=paid_social&tw_source=twitter&utm_term=55002677"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 6
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "alppouch"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.235,
+          "basis": [
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.26,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:4",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.379140625,
+          "confidence": 0.22447499999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-03T00:46:10.476Z",
+        "homepage_url": "https://alppouch.com/",
+        "example_url": "https://alppouch.com/products/drifters-lemon-raspberry-nicotine-pouches?variant=45695862079684&utm_source=twitter&twclid=2f0tn2lk34ykymzkyz3xx7lfzj&tw_adsetid=55002677&tw_campaign=41318448&utm_content=dpa-carousel-drifters&utm_campaign=cs-dpa-carousel-sales-alp-pouch&utm_medium=paid_social&tw_source=twitter&utm_term=55002677",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://alppouch.com/",
+        "example_final_url": "https://alppouch.com/products/drifters-lemon-raspberry-nicotine-pouches?variant=45695862079684&utm_source=twitter&twclid=2f0tn2lk34ykymzkyz3xx7lfzj&tw_adsetid=55002677&tw_campaign=41318448&utm_content=dpa-carousel-drifters&utm_campaign=cs-dpa-carousel-sales-alp-pouch&utm_medium=paid_social&tw_source=twitter&utm_term=55002677",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
           "opinion_marker": false
         }
       }
@@ -13547,7 +13799,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T01:49:37.591Z",
+        "fetched_at": "2026-06-03T02:16:13.358Z",
         "homepage_url": "https://jpost.com/",
         "example_url": "https://jpost.com/",
         "homepage_status": 200,
@@ -14047,7 +14299,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T00:40:09.446Z",
+        "fetched_at": "2026-06-03T00:46:12.519Z",
         "homepage_url": "https://aikido.dev/",
         "example_url": "https://www.aikido.dev/attack/infinite?utm_source=twitter&utm_medium=paidsocial&utm_campaign=US_tofu&utm_content=2026-02-26-Mack-Infinte-2-A&twclid=28a2h7kzzful35m0kfwtl23x0c",
         "homepage_status": 200,
@@ -14295,7 +14547,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T01:14:54.658Z",
+        "fetched_at": "2026-06-03T01:16:10.801Z",
         "homepage_url": "https://onkodex.com/",
         "example_url": "https://onkodex.com/join/?twclid=21aq9xwo1p6ea49gu5skcha56k",
         "homepage_status": 200,
@@ -16820,132 +17072,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "ridge.com",
-      "entity": "Ridge",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-19T19:20:24.000Z",
-      "last_seen_at": "2026-05-29T10:00:18.000Z",
-      "discovery": {
-        "distinct_urls": 5,
-        "example_urls": [
-          "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+%28IO%29&utm_term=5.17+-+PCH+-+FDAY+-+IMGs+-+FDAY-RINGS-3RLP&utm_content=05250b_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_The-gift-your-man-actually-wants-%28we-asked%29_RINGS-FDAY-Branded__META_NN_IH_DR__FDAY-RINGS-3RLP_5-12-26%3Fnb_platform%3Dtwitter&twclid=2cpbcoko2qkg7u5nrw2y5g1wdo",
-          "https://ridge.com/pages/edc-smart-wallet-5rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+EDC+%7C+PCH+%7C+MDS+%2B+FDAY26+%28IO%29&utm_term=5.15+-+PCH+-+MDS+-+IMGs+-+EDC-SMART-5RLP&utm_content=05315d_CORE_MDS_EDC_WALLET_MIX-COLOR_OFFER-%25OFF_Lighter%2C-slimmer%2C-Built-for-life_MDS-EDC-GENERAL__META_NN_IH_DR_US_EDC-SMART-6RLP_05-12-29&twclid=2co7344umxvtut5ptdz9xfjnv9",
-          "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+%28IO%29&utm_term=5.17+-+PCH+-+FDAY+-+IMGs+-+FDAY-RINGS-3RLP&utm_content=05250a_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_Designed-by-husbands%2C-For-Husbands._RINGS-FDAY-Branded__META_IT_IH_DR__FDAY-RINGS-3RLP_5-12-26%3Fnb_platform%3Dtwitter%E2%80%A8&twclid=2dk6e9gzhd50k576djlwgelfoa",
-          "https://ridge.com/pages/edc-fday-founder-dad?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+EDC+%7C+PCH+%7C+MDS+%2B+FDAY26+%28IO%29&utm_term=5.26+-+PCH+-+FDAY+-+IMGs+-+Fday-founder-LP&utm_content=04671a_GIFT_FDAY_EDC_WALLET_TOBACCO-BROWN-LEATHER_OFFER-%25OFF_Father%27s-Day-Sale-%7C-Up-to-30%25-off_FDAY-Gifting-EDC-Phase2__META_NN_IH_DR_US_Fday-Founder-LP_05-26-25&twclid=28o88x6j7qql786cdyglfqpgf8",
-          "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+NEW+%28IO%29&utm_term=5.27+-+PCH+-+FDAY+-+IMGs+-+fday-rings-3rlp&utm_content=05250a_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_Designed-by-husbands%2C-For-Husbands._RINGS-FDAY-Branded__META_IT_IH_DR__FDAY-RINGS-3RLP_5-12-26&twclid=2ex4df6wa4zvgkrftiv86ikg4d"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 5
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "ridgewallet"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.20583333333333334,
-          "basis": [
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.009999999999999998,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:1",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.37276041666666665,
-          "confidence": 0.19585000000000002,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-01T19:35:46.793Z",
-        "homepage_url": "https://ridge.com/",
-        "example_url": "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+%28IO%29&utm_term=5.17+-+PCH+-+FDAY+-+IMGs+-+FDAY-RINGS-3RLP&utm_content=05250b_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_The-gift-your-man-actually-wants-%28we-asked%29_RINGS-FDAY-Branded__META_NN_IH_DR__FDAY-RINGS-3RLP_5-12-26%3Fnb_platform%3Dtwitter&twclid=2cpbcoko2qkg7u5nrw2y5g1wdo",
-        "homepage_status": 403,
-        "example_status": 403,
-        "homepage_final_url": "https://ridge.com/",
-        "example_final_url": "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+%28IO%29&utm_term=5.17+-+PCH+-+FDAY+-+IMGs+-+FDAY-RINGS-3RLP&utm_content=05250b_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_The-gift-your-man-actually-wants-%28we-asked%29_RINGS-FDAY-Branded__META_NN_IH_DR__FDAY-RINGS-3RLP_5-12-26%3Fnb_platform%3Dtwitter&twclid=2cpbcoko2qkg7u5nrw2y5g1wdo",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
           "opinion_marker": false
         }
       }
@@ -19629,7 +19755,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:22",
+            "outbound_links:20",
             "opinion_marker:false"
           ]
         },
@@ -19649,7 +19775,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T00:40:06.946Z",
+        "fetched_at": "2026-06-03T00:46:12.968Z",
         "homepage_url": "https://fandango.com/",
         "example_url": "https://www.fandango.com/lee-cronins-the-mummy-2026-244052/movie-overview?twclid=2buocyfoltepc4nr5ab0l6j90t",
         "homepage_status": 200,
@@ -19665,7 +19791,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 25,
+          "outbound_links_count": 21,
           "opinion_marker": false
         },
         "example": {
@@ -19675,7 +19801,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 22,
+          "outbound_links_count": 20,
           "opinion_marker": false
         }
       }
@@ -24340,7 +24466,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T02:24:37.538Z",
+        "fetched_at": "2026-06-03T02:46:47.295Z",
         "homepage_url": "https://3c.wiki/",
         "example_url": "https://3c.wiki/3PtZuMY?twclid=2bz0sgqd5e9nj510697vwg5ap7",
         "homepage_status": 200,
@@ -31096,7 +31222,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T01:49:39.620Z",
+        "fetched_at": "2026-06-03T02:16:14.901Z",
         "homepage_url": "https://newsguardtech.com/",
         "example_url": "https://www.newsguardtech.com/",
         "homepage_status": 200,
@@ -31340,7 +31466,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T00:04:31.808Z",
+        "fetched_at": "2026-06-03T00:16:08.999Z",
         "homepage_url": "https://discord.gg/",
         "example_url": "https://discord.gg/JxPMkH88",
         "homepage_status": 200,
@@ -31462,7 +31588,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T00:04:32.068Z",
+        "fetched_at": "2026-06-03T00:16:09.286Z",
         "homepage_url": "https://ned.org/",
         "example_url": "https://www.ned.org/about/board-of-directors/",
         "homepage_status": 200,
@@ -31584,7 +31710,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T00:04:32.743Z",
+        "fetched_at": "2026-06-03T00:16:10.104Z",
         "homepage_url": "https://dstack.ai/",
         "example_url": "https://sky.dstack.ai/?twclid=22u1vjb44uf96iph6oj89wot7a",
         "homepage_status": 200,
@@ -31706,7 +31832,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T00:04:34.740Z",
+        "fetched_at": "2026-06-03T00:16:13.062Z",
         "homepage_url": "https://nextinvestors.com/",
         "example_url": "https://nextinvestors.com/articles/rml-tungsten-price-running-high-grade-tungsten-sitting-in-stockpiles-plus-gold-drilling-in-may/?twclid=29vvkujdwopqjncmmhre6nbvtf",
         "homepage_status": 200,
@@ -31828,7 +31954,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T00:40:06.458Z",
+        "fetched_at": "2026-06-03T01:16:11.987Z",
         "homepage_url": "https://quorum.us/",
         "example_url": "https://cpmadvocacy.quorum.us/campaign/158654/?utm_source=x&utm_medium=paid_social&utm_campaign=iowa_prediction_markets&twclid=2n7g30ite25eujoe3z8invqck",
         "homepage_status": 200,
@@ -33170,7 +33296,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T01:14:52.321Z",
+        "fetched_at": "2026-06-03T01:16:31.992Z",
         "homepage_url": "https://kfc.com/",
         "example_url": "https://www.kfc.com/menu?utm_source=twitter&utm_medium=social&utm_campaign=kfcvaluefeast&utm_creative=9box&twclid=250lznofqwrkd2iq53t7qffgxo",
         "homepage_status": null,
@@ -33292,7 +33418,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T01:14:53.258Z",
+        "fetched_at": "2026-06-03T01:16:32.908Z",
         "homepage_url": "https://insuranceleadsguide.com/",
         "example_url": "https://insuranceleadsguide.com/insurance-leads/insurance-agency-marketing-tools/?twclid=286vjil8sq5bkkcyaaco0b55aj",
         "homepage_status": 200,
@@ -33414,7 +33540,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T01:14:53.571Z",
+        "fetched_at": "2026-06-03T01:46:11.732Z",
         "homepage_url": "https://orangestandard.com/",
         "example_url": "https://orangestandard.com/?utm_source=Twitter&utm_medium=Tweet&utm_campaign=btcaccts&twclid=221wvicldxi1mxr7dfi4dgcd74",
         "homepage_status": 200,
@@ -33536,7 +33662,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T02:24:36.639Z",
+        "fetched_at": "2026-06-03T02:46:47.466Z",
         "homepage_url": "https://lambda.ai/",
         "example_url": "https://lambda.ai/?utm_source=twitter&utm_medium=paid-social&utm_campaign=2025-11-brand-remarketing&utm_content=2025-11_relaunch_superintelligence-cloud_copy3&twclid=2dr7wza1m47cxuzjqoi0dg5olo",
         "homepage_status": 200,
@@ -33658,7 +33784,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-05-31T02:24:36.992Z",
+        "fetched_at": "2026-06-03T02:46:47.848Z",
         "homepage_url": "https://gatorade.com/",
         "example_url": "https://www.gatorade.com/sports-drinks/gatorade-lower-sugar/rain-berry-00052000067774?utm_source=x&utm_medium=paidsocial&utm_campaign=gatorade_lowersugar_omd_fy26_3%2F4-9%2F6&utm_term=native&utm_content=video&twclid=2ez8pvv81gx18qn239dikznlxw",
         "homepage_status": 403,
@@ -39240,6 +39366,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3472395833333333,
           "confidence": 0.08135,
@@ -39253,6 +39393,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-03T01:46:11.976Z",
+        "homepage_url": "https://etsy.com/",
+        "example_url": "https://www.etsy.com/uk/listing/1660419760/personalised-bag-of-reasons-why-i-love?ref=shop_home_feat_2&sr_prefetch=1&pf_from=shop_home&pro=1&sts=1&logging_key=554a7bcb2c808ecf99a9e3d68872b5af4ecb1d3f%3A1660419760&twclid=2e5zgu06991vkl8s62fs0146ic",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://www.etsy.com/",
+        "example_final_url": "https://www.etsy.com/uk/listing/1660419760/personalised-bag-of-reasons-why-i-love?ref=shop_home_feat_2&sr_prefetch=1&pf_from=shop_home&pro=1&sts=1&logging_key=554a7bcb2c808ecf99a9e3d68872b5af4ecb1d3f%3A1660419760&twclid=2e5zgu06991vkl8s62fs0146ic",
+        "homepage_content_type": "text/html;charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -39317,6 +39488,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3472395833333333,
           "confidence": 0.08135,
@@ -39330,6 +39515,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-03T01:46:12.787Z",
+        "homepage_url": "https://sling.com/",
+        "example_url": "https://www.sling.com/sports/basketball?sc=1&utm_medium=social&utm_source=x&utm_campaign=2026_q2_sling_gm_x_soc_postseason_sales&utm_content=2026_Q2_Sling_GM_X_SOC_Basketball_NBAPlayoffsv1S&twclid=2e7arnq15un6t71smhb72lns3b",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.sling.com/",
+        "example_final_url": "https://www.sling.com/sports/basketball?sc=1&utm_medium=social&utm_source=x&utm_campaign=2026_q2_sling_gm_x_soc_postseason_sales&utm_content=2026_Q2_Sling_GM_X_SOC_Basketball_NBAPlayoffsv1S&twclid=2e7arnq15un6t71smhb72lns3b",
+        "homepage_content_type": "text/html;charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -39394,6 +39610,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3472395833333333,
           "confidence": 0.08135,
@@ -39407,6 +39637,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-03T01:46:12.994Z",
+        "homepage_url": "https://nationwide.com/",
+        "example_url": "https://nationwide.com/?twclid=294pdnbf5jdk527ocpc06sbbq6",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://nationwide.com/",
+        "example_final_url": "https://nationwide.com/?twclid=294pdnbf5jdk527ocpc06sbbq6",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
