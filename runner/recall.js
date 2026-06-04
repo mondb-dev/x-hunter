@@ -114,8 +114,7 @@ async function semanticRecall(queryText, typeFilter, limitN) {
 
   const results = [];
   for (const hit of nearest) {
-    const { rows: memRows } = await db.raw().query("SELECT * FROM memory WHERE id = $1", [parseInt(hit.entity_id, 10)]);
-    const row = memRows[0];
+    const row = db.raw().prepare("SELECT * FROM memory WHERE id = ?").get(parseInt(hit.entity_id, 10));
     if (!row) continue;
     if (typeFilter && row.type !== typeFilter) continue;
     results.push({ ...row, _similarity: hit.similarity });

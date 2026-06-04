@@ -869,7 +869,9 @@ async function cmdBrief(rawText = '') {
     return sendMessage('<b>/brief [topic]</b>\n\nExample: <code>/brief immigration Philippines</code>\nExample: <code>/brief media manipulation</code>\n\nReturns: matched axes, recent drift signals, verified claims, and past observations.');
   }
 
-  await sendMessage(`🔍 Gathering intelligence brief on: <b>${escapeHtml(topic)}</b>...`);
+  try {
+    await sendMessage(`🔍 Gathering intelligence brief on: <b>${escapeHtml(topic)}</b>...`);
+  } catch { /* non-fatal */ }
 
   try {
     const brief = gatherBrief(topic);
