@@ -67,47 +67,13 @@ main {
   background: var(--bg);
 }
 
-/* ── Floating walker ── */
+/* ── Chicken footprint walker ── */
 .crab-float-wrap {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 2;   /* above body bg, below nav/main (z-index 5) */
   overflow: visible;
-}
-.crab-float {
-  position: absolute;
-  top: 0; left: 0;
-  width: 96px;
-  height: 96px;
-  opacity: 0.72;
-  transform-origin: top left;
-}
-
-/* ── Leg stride — front/back legs alternate ── */
-.walker-leg-f { animation: walker-stride 0.44s steps(2, end) infinite; }
-.walker-leg-b { animation: walker-stride 0.44s steps(2, end) infinite; animation-delay: -0.22s; }
-
-@keyframes walker-stride {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-10px); }
-}
-
-/* ── Footprint dots — spawned by JS, fade out ── */
-.crab-print-dot {
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: #c84820;
-  pointer-events: none;
-  animation: print-fade 3.8s ease-out forwards;
-}
-
-@keyframes print-fade {
-  0%   { opacity: 0.5; }
-  25%  { opacity: 0.42; }
-  100% { opacity: 0; }
 }
 
 /* ── Hero particle canvas ── */
