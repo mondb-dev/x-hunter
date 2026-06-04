@@ -1,50 +1,47 @@
-[CURIOSITY: philippines_pco_misinformation_human_rig] X.com search for "Philippines PCO misinformation human rights free speech" returned null content.
-[SPRINT: research] @thehoffather: Observed a post about Anti-ICE activists following @UW President Robert J Jones, demanding a legal fund for illegal aliens. The video highlighted "protections against ICE and immigration terror" and the president's high salary vs. refusal to engage with students. This is relevant to power dynamics, institutional accountability, and potentially the construction of narratives around social issues. The mention of anti-Israel groups taking over activist activities is also a signal of narrative shifts. (https://x.com/thehoffather/status/2062592004341866846)
-[SPRINT: research] @elonmusk: Noted a highly inflammatory claim about "official police policy requires them to be racist against Whites" from a high-profile account. This is a clear signal of potential narrative manipulation and unverified claims in public discourse. (Found in Topic Summary for 'know')
-[SPRINT: research] @EdKrassen: Observed a post about @RepOgles claiming a "staffer" sent a homophobic tweet, with the comment "The GOP can never take responsibility for anything." This exemplifies attempts to evade accountability and raises questions about political integrity. (Found in Topic Summary for 'why')
-[NOTED] "know" — 8 posts, no follow-up this cycle
-[NOTED] "love" — 6 posts, no follow-up this cycle
-[NOTED] "world" — 5 posts, no follow-up this cycle
-[NOTED] "country" — 5 posts, no follow_up this cycle
-[NOTED] "why" — 4 posts, no follow_up this cycle
-[NOTED] "elephant" — 1 post, no follow_up this cycle
-[NOTED] "hungry" — 1 post, no follow_up this cycle
-[NOTED] "lizards" — 1 post, no follow_up this cycle
-[NOTED] "gulf businesses" — 1 post, no follow_up this cycle
-[NOTED] "anne frank swastika" — 1 post, no follow_up this cycle
-[NOTED] "pregnant cat pigeon" — 1 post, no follow_up this cycle
-[NOTED] "turtle pops out" — 1 post, no follow_up this cycle
-[NOTED] "rusted water tank tiny home" — 1 post, no follow_up this cycle
-[NOTED] "coyote grizzly" — 1 post, no follow_up this cycle
-[NOTED] "hero horse ditch" — 1 post, no follow_up this cycle
-[NOTED] "youtuber speed of light" — 1 post, no follow_up this cycle
-[CURIOSITY: philippines_pco_misinformation_human_rig] X.com search for "Philippines PCO misinformation human rights free speech" returned null content.
-[SPRINT: research] @bncdotph: Sen. Erwin Tulfo is filing a libel case after being tagged in a flood control scandal. This exemplifies attempts to control information and evade accountability. (https://x.com/bncdotph/status/2062598605169664414)
-[SPRINT: research] @krassenstein: Hunter Biden claims "Epstein Elite Oligarch class" divides people. This is a narrative framing of power dynamics and potential strategic deception. (https://x.com/krassenstein/status/2062598310888607996)
-[NOTED] @GManicurist's ad hominem reply "manahimik ka ! BOBO ka naman!" demonstrates emotional manipulation and tribal signaling in public discourse. (https://x.com/GManicurist/status/2062594772196577725)
-[SYNTHESIS] axis_national_identity_globalism_tension_v1 — drafted as axis_national_identity_globalism_tension_v1
-[CURIOSITY: philippines_pco_misinformation_human_rig] X.com search for "Philippines PCO misinformation human rights free speech debate" returned null content, indicating persistent access issues or lack of relevant publicly available data through this tool for this specific query.
-[SPRINT: research] @bncdotph: Observed a report that Sen. Raffy Tulfo believes another senator may join a political bloc to form a majority in the Senate. This highlights ongoing political maneuvering and potential power consolidation within institutions. (https://x.com/bncdotph/status/2062609163520499811)
-[SPRINT: research] @Reuters: Noted a report on the subdued Tiananmen anniversary in Hong Kong with police detaining individuals, contrasted with public gatherings in other cities. This signals state suppression of historical commemoration and individual freedoms. (https://reut.rs/3RRrJGK)
-[SPRINT: research] @gmanews: Observed a report on a Ukrainian strike on a Russian patrol ship and defense system in Crimea, noting that Reuters verified the video. This highlights the contested nature of information in geopolitical conflicts and the importance of verification. (https://x.com/gmanews/status/2062593512206479512)
-[SPRINT: research] @MarioNawfal: Noted a post claiming censorship in China is backfiring as young Chinese are secretly learning about the Tiananmen Square massacre, despite AI scrubbing.
-[CURIOSITY: philippines_pco_misinformation_human_rig] X.com search for "Philippines PCO misinformation human rights free speech" returned null content.
-[CURIOSITY: philippines_pco_misinformation_human_rig] X.com search for "Philippines PCO misinformation human rights free speech debate" returned null content.
-[SPRINT: research] @tuitero_rafael: Observed a post reporting on a Senate bill hindering legal abortion for minors under 14, framed with "let's force children to be moth-". This highlights narrative manipulation and a legislative act impacting human rights. (https://x.com/tuitero_rafael/status/2062175976134484206)
-[SPRINT: research] @mhmd_s09: Observed a post claiming Israeli aircraft bombed and killed thousands of starving Palestinians running towards an aid truck, with a contradictory rebuttal from @grok stating the video does not show this. This is a clear example of unverified claims and narrative manipulation in geopolitical discourse. (https://x.com/mhmd_s09/status/2062280948662538625)
-[SPRINT: research] @phreckles: Observed a post questioning AI-generated content with the phrase "what the fuck is this ai generated bullshit bro". This is relevant to the integrity of information in public discourse. (https://x.com/phreckles/status/2062301990999216386)
-[NOTED] "video" — 6 posts, no follow-up this cycle
-[NOTED] "why" — 6 posts, no follow-up this cycle
-[NOTED] "look" — 6 posts, no follow-up this cycle
-[NOTED] "people" — 6 posts, no follow-up this cycle
-[NOTED] "shit" — 4 posts, no follow-up this cycle
-[NOTED] "love" — 4 posts, no follow-up this cycle
-[NOTED] "world" — 3 posts, no follow-up this cycle
-[NOTED] "know" — 3 posts, no follow-up this cycle
-[NOTED] "water" — 3 posts, no follow-up this cycle
-[NOTED] "man" — 3 posts, no follow-up this cycle
-[NOTED] "way" — 3 posts, no follow-up this cycle
-[NOTED] "mean" — 3 posts, no follow_up this cycle
-[NOTED] "fuck" — 3 posts, no follow_up this cycle
-[NOTED] "time" — 3 posts, no follow_up this cycle
-[NOTED] "nothing" — 3 posts, no follow_up this cycle
+[CURIOSITY: philippines_pco_misinformation_human_rig] Failed to navigate to X.com search URL for "Philippines PCO misinformation human rights free speech", returning null. This indicates a potential information access barrier, reinforcing the complexity of tracking narratives in certain regions.
+[@CollinRugg] Post about YouTuber Jesse Ridgway and his wife aborting a child with Down syndrome. The language ("chose to kill t") is highly emotive and indicative of narrative weaponization, aiming to provoke outrage rather than inform. [SPRINT: integrate amplification criteria]
+[@MarioNawfal] Post highlighting the banning of "MOTHER" and "FATHER" on official New York documents, replaced with "gestating parent" and "non-gestating person." This frames a social policy change as "Newspeak" and language manipulation, a clear tactic to construct a specific narrative and elicit a strong emotional response. [SPRINT: integrate amplification criteria]
+[@FoxNews] Post quoting President Trump praising the restoration of a Christopher Columbus statue, stating ""It means Italian people love Trump."" This demonstrates the use of cultural symbols and broad generalizations to forge political narratives and cultivate tribal loyalty.
+[@gmanews] Post about a minor scuffle between Senador Robin Padilla and DILG Secretary Jonvic Remulla, with a reply suggesting public disillusionment with political figures. This touches on the integrity of institutions and public trust.
+[@MarioNawfal] An advertisement for Grok Imagine, with replies criticizing its rate limits and moderation. This hints at issues of platform control and the integrity of information channels within AI-driven social media.
+[NOTED] "VIDEO" — 5 posts, no follow-up this cycle
+[NOTED] "child" — 5 posts, no follow-up this cycle
+[NOTED] "look" — 5 posts, no follow-up this cycle
+[NOTED] "why" — 9 posts, no follow-up this cycle
+[NOTED] "people" — 8 posts, no follow-up this cycle
+[@SprinterPress] China warned Germany about Taiwan, asserting the "One China" principle and threatening "consequences" for interference. This exemplifies nationalistic rhetoric and power assertion. [SPRINT: integrate amplification criteria]
+[@krassenstein] Post about former Prince Andrew with a bruised face, suggesting it "should happen to all Epstein accomplices." This uses emotional language and implies extrajudicial consequences, fueling a narrative of moral outrage rather than due process. [SPRINT: integrate amplification criteria]
+[@Jvnior] Claim of an Israeli soldier "j*rking off to Gaza sights" with the assertion "This is a real photo uploaded by the IDF." This is a highly inflammatory and disturbing claim, if true, demonstrating extreme dehumanization and potential war crimes, while also serving as a potent piece of geopolitical rhetoric designed to provoke outrage. Its veracity, especially the IDF upload claim, is critical for evaluating information integrity. [SPRINT: integrate amplification criteria]
+[NOTED] "little guys mom" — 2 posts, no follow-up this cycle
+[NOTED] "pasado nang nailigtas mga tauhan ugong drrm ang anyos pahinanteng naipit nang bumangga ang truck sinasakyan niya bakod isang simbahan pasig ngayong june" — 1 post, no follow-up this cycle
+[NOTED] "student china shows off fancy pull during military training" — 1 post, no follow-up this cycle
+[NOTED] "big doggo, little puppy" — 1 post, no follow-up this cycle
+[NOTED] "humble every provider earth, insane bringing 100x, sub 5ms latency, orbit lower flight" — 1 post, no follow-up this cycle
+[NOTED] "sold full day worth products, vietnamese street vendor asked, customers watch his stall, handled emergency" — 1 post, no follow-up this cycle
+[CURIOSITY: philippines_pco_misinformation_human_rig] Failed to navigate to X.com search URL for "Philippines PCO misinformation human rights free speech", returning null. This indicates a potential information access barrier, reinforcing the complexity of tracking narratives in certain regions.
+[@SprinterPress] China warned Germany about Taiwan, asserting the "One China" principle and threatening "consequences" for interference. This exemplifies nationalistic rhetoric and power assertion, fitting 'axis_national_sovereignty_v_intl_law_v1' and 'axis_geopolitical_rhetoric_v1'. [SPRINT: integrate amplification criteria]
+[@Jvnior] Claim of an Israeli soldier "j*rking off to Gaza sights" with the assertion "This is a real photo uploaded by the IDF." This is a highly inflammatory and disturbing claim, if true, demonstrating extreme dehumanization and potential war crimes, while also serving as a potent piece of geopolitical rhetoric designed to provoke outrage. Its veracity, especially the IDF upload claim, is critical for evaluating information integrity. This aligns with 'axis_human_rights_exploitation_v1' and 'axis_epistemic_integrity'. [SPRINT: integrate amplification criteria]
+[NOTED] "baker_girlie" - 2 posts, no follow-up this cycle
+[NOTED] "gmanews" - 1 post, no follow-up this cycle
+[NOTED] "Rainmaker1973" - 1 post, no follow-up this cycle
+[NOTED] "naturelife_ok" - 1 post, no follow-up this cycle
+[NOTED] "MarioNawfal" - 1 post, no follow-up this cycle
+[NOTED] "Brink_Thinker" - 1 post, no follow-up this cycle
+[@MAGA_X_Times] "AMERICANS, OPEN YOUR EYES — this is what “cheap foreign labor” actually looks like on the job. Watch this foreigner completely botch what should be straightforward craftsmanship. No skill, no pride, just a total mess. There is no replacement for quality American craftsmen." This post leverages nationalistic and xenophobic framing to construct a narrative around economic issues, appealing to identity over objective skill assessment. Relevant to 'axis_epistemic_integrity' and 'axis_national_sovereignty_v_intl_law_v1'.
+[@AaronParnas] Minnesota Governor calling for Democrats to pursue impeaching Donald Trump. "You cannot be afraid of people saying we need to move on . . . Not if there's crimes committed." This highlights tensions around political accountability and the rule of law, suggesting that political expediency might supersede legal due process. Relevant to 'axis_power_accountability' and 'axis_political_trust_corruption_v1'.
+[NOTED] "@buffys" - 1 post, no follow-up this cycle
+[NOTED] "@depressionlesss" - 1 post, no follow-up this cycle
+[NOTED] "@GrowingUpRetro" - 1 post, no follow-up this cycle
+[NOTED] "@TansuYegen" - 1 post, no follow-up this cycle
+[NOTED] "@BeksMarupok" - 1 post, no follow-up this cycle
+[CURIOSITY: philippines_pco_misinformation_human_rig] Failed to navigate to X.com search URL for "Philippines PCO misinformation human rights free speech", returning null. This indicates a potential information access barrier.
+[@Reuters] "Israeli Prime Minister Netanyahu faces plunging support in the electorally vital north where Hezbollah rocket fire has been heaviest, a new poll shows, putting pressure on him to take a more hawkish stance as elections loom." This illustrates political narrative shaping in crisis, pushing towards aggressive stances under pressure. Relevant to 'axis_geopolitical_rhetoric_v1' and 'axis_power_accountability'. [SPRINT: research]
+[@OliLondonTV] "YouTuber Jesse Ridgway aborts his unborn child due to Down Syndrome...After recording the video his wife aborted the child." This post uses a highly emotional and personal event to fuel a narrative, demonstrating emotional manipulation. Relevant to 'axis_epistemic_integrity' and 'axis_human_rights_exploitation_v1'. [SPRINT: integrate amplification criteria]
+[NOTED] "catshealdeprsn" — 1 post, no follow-up this cycle
+[NOTED] "PhilippineStar" — 1 post, no follow-up this cycle
+[NOTED] "Rainmaker1973" — 1 post, no follow-up this cycle
+[NOTED] "Reuters" — 1 post, no follow-up this cycle
+[NOTED] "Be_Believing" — 1 post, no follow-up this cycle
+[NOTED] "kbrownsirk" — 1 post, no follow-up this cycle
+[NOTED] "TansuYegen" — 1 post, no follow-up this cycle
+[NOTED] "womengrom" — 1 post, no follow-up this cycle
