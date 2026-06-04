@@ -163,18 +163,18 @@ async function recallForMention(text, threadContext = [], limit = 5) {
     const threadText = threadContext.map(t => t.text).join(' ');
     const combinedText = [text, threadText].filter(Boolean).join(' ').slice(0, 600);
 
-    // Semantic recall
+    // Semantic recall — await allEmbeddings (async on Postgres, sync on SQLite)
     const queryVec = await embed(combinedText);
     if (queryVec) {
-      const embeddings = db.allEmbeddings('memory');
+      const embeddings = await Promise.resolve(db.allEmbeddings('memory'));
       if (embeddings.length > 0) {
         const nearest = topK(queryVec, embeddings, limit * 2);
         const SEM_MIN_SCORE = 0.05;
-        const rawDb = db.raw();
         const results = [];
         for (const hit of nearest) {
           if ((hit.similarity ?? 0) < SEM_MIN_SCORE) continue;
-          const row = rawDb.prepare('SELECT * FROM memory WHERE id = ?').get(parseInt(hit.entity_id, 10));
+          // getMemoryById works on both SQLite (sync) and Postgres (async)
+          const row = await Promise.resolve(db.getMemoryById(hit.entity_id));
           if (row) results.push(row);
           if (results.length >= limit) break;
         }
