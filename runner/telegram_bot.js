@@ -1271,6 +1271,16 @@ async function chatWithAgent(userMessage) {
     includeSprint: true,
   });
 
+  // Pre-gather intelligence brief for the message topic (axes + drift + claims)
+  // Injected directly into context so agent has it without needing a tool call
+  let briefContext = '';
+  try {
+    const brief = gatherBrief(userMessage.slice(0, 300));
+    if (brief.axes.length || brief.drift.length || brief.claims.length) {
+      briefContext = formatBriefForPrompt(brief);
+    }
+  } catch { /* non-fatal */ }
+
   const systemInstruction = [
     buildPersona('operator'),
     'IMPORTANT: Your active context contains only recent data (last 1 journal, top axes).',
@@ -1279,27 +1289,41 @@ async function chatWithAgent(userMessage) {
     'NEVER say you have no data or observations on a topic without first calling recall_memory.',
     'The memory index contains months of observations not in your active context.',
     'When asked about your articles or writing, use the article list in the context first before calling recall_memory.',
-  ].join('\n');
+    briefContext ? 'An intelligence brief for this topic has been pre-loaded below. Use it.' : '',
+  ].filter(Boolean).join('\n');
 
   const tools = [{
-    functionDeclarations: [{
-      name: 'recall_memory',
-      description: 'Search your memory index (past journals, checkpoints, belief reports) for relevant past observations. Returns the total count of matching journal files plus a sample of the top 10 entries. Use the total count when asked "how many" — do not count the sample entries.',
-      parameters: {
-        type: 'OBJECT',
-        properties: {
-          query: { type: 'STRING', description: 'Search query — keywords or a question about past observations' },
+    functionDeclarations: [
+      {
+        name: 'recall_memory',
+        description: 'Search your memory index (past journals, checkpoints, belief reports) for relevant past observations. Returns the total count of matching journal files plus a sample of the top 10 entries. Use the total count when asked "how many" — do not count the sample entries.',
+        parameters: {
+          type: 'OBJECT',
+          properties: {
+            query: { type: 'STRING', description: 'Search query — keywords or a question about past observations' },
+          },
+          required: ['query'],
         },
-        required: ['query'],
       },
-    }],
+      {
+        name: 'intelligence_brief',
+        description: 'Get a topic-matched intelligence brief: belief axes relevant to the topic with current scores, recent CUSUM drift signals, verified/refuted claims, and memory excerpts. More structured than recall_memory — use for "what do you believe about X" or "what has been happening with X" questions.',
+        parameters: {
+          type: 'OBJECT',
+          properties: {
+            topic: { type: 'STRING', description: 'Topic or question to get intelligence brief for' },
+          },
+          required: ['topic'],
+        },
+      },
+    ],
   }];
 
   const { getAccessToken, getProjectConfig } = require('./gcp_auth');
 
   // Multi-turn tool loop (max 4 turns)
   const contents = [
-    { role: 'user', parts: [{ text: `${coreContext}\n\nOperator message: ${userMessage}` }] },
+    { role: 'user', parts: [{ text: `${coreContext}${briefContext ? '\n' + briefContext : ''}\n\nOperator message: ${userMessage}` }] },
   ];
 
   let finalText = null;
@@ -1337,6 +1361,13 @@ async function chatWithAgent(userMessage) {
           let toolResult = '(unknown tool)';
           if (name === 'recall_memory') {
             toolResult = execRecallTool(args.query || userMessage);
+          } else if (name === 'intelligence_brief') {
+            try {
+              const brief = gatherBrief(args.topic || userMessage);
+              toolResult = formatBriefForPrompt(brief) || '(no matching intelligence found for this topic)';
+            } catch (e) {
+              toolResult = `(intelligence_brief error: ${e.message})`;
+            }
           }
           responseParts.push({ functionResponse: { name, response: { output: toolResult } } });
         }
