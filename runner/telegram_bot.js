@@ -1207,10 +1207,13 @@ function cleanRecallQuery(query) {
 function execRecallTool(query) {
   const effectiveQuery = cleanRecallQuery(query);
   try {
-    // Get total count via grep on journals dir (fast, not limited by recall index)
+    // Count matching journals using per-keyword grep (not full-phrase, which finds nothing)
     let totalCount = null;
     try {
-      const grepResult = spawnSync('grep', ['-ril', effectiveQuery, path.join(__dirname, '..', 'journals')], {
+      // Extract meaningful keywords (>3 chars, not stop words) for the file count
+      const keywords = effectiveQuery.split(/\s+/).filter(w => w.length > 3);
+      const primaryKeyword = keywords[0] || effectiveQuery;
+      const grepResult = spawnSync('grep', ['-ril', primaryKeyword, path.join(__dirname, '..', 'journals')], {
         stdio: ['ignore', 'pipe', 'ignore'],
         timeout: 5000,
       });
@@ -1220,10 +1223,14 @@ function execRecallTool(query) {
       }
     } catch {}
 
+    // Force FTS5 search: embedding coverage is ~10% (214/2133 rows).
+    // Semantic search only finds recent embedded entries and skips older content.
+    // FTS5 covers all 2133 rows reliably. Switch back to semantic once backfill completes.
     const result = spawnSync(process.execPath, [
       path.join(__dirname, 'recall.js'),
       '--query', effectiveQuery,
       '--limit', '10',
+      '--fts',   // force FTS5 until embedding backfill is complete
       '--print',
     ], {
       stdio: ['ignore', 'pipe', 'pipe'],
