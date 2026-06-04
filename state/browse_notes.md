@@ -1,45 +1,73 @@
 [CURIOSITY: philippines_pco_charges_facebook_account] Failed to retrieve page content from X search results for "Philippines PCO charges Facebook accounts misinformation human rights free speech". This is a persistent issue with direct content extraction.
-[SIGNAL] @ianmiles: Posted "Britain has a very simple way to solve its Pakistani grooming gang problem: send them back to Pakistan where they will be executed." This is an extreme example of nationalistic rhetoric, dehumanization, and calls for extrajudicial punishment, leveraging emotional manipulation and tribal signaling. [SPRINT: research]
-[SIGNAL] @atrupar: Posted "WARNOCK: Do you still driving deeper into debt to extend billionaire tax cuts was a good investment? BESSENT: During the Biden admin-- WARNOCK: Look, Joe Biden has been out of office for two years. The fact you keep talking about him tells you everything." This highlights political accountability and challenges justifications for economic policies that benefit the wealthy, aligning with concerns about power abuse. [SPRINT: research]
-[SIGNAL] @allenanalysis: Posted "Elizabeth Warren Just Raised A Question That Could Follow Trump For The Rest Of His Presidency." This raises concerns about political integrity and potential conflicts of interest, directly relevant to accountability in political institutions. [SPRINT: research]
-[SIGNAL] @SteveLovesAmmo: "Which way western man? It’s okay to be who you are and not want your country overran by third world invaders." This is xenophobic rhetoric, fear-mongering, and tribal signaling, constructing a narrative of external threat. [SPRINT: research]
-[SIGNAL] @EricLDaugh: "JUST IN: The FBI has just RAIDED a $35 MILLION mansion in Southern California after an Iranian tech boss allegedly secretly supplied US mil" — Allegations of illegal activities related to national security. [SPRINT: research]
-[SIGNAL] @ianmiles: "Two tier Britain will jail you for playing with a fidget spinner but let you walk around with a sword if you’re not white." — Allegations of racial bias in law enforcement, fueling tribal divisions. [SPRINT: research]
-[SIGNAL] @DHSgov: "WATCH: @EROBoston ARRESTS a criminal illegal alien who was RELEASED by Massachusetts sanctuary politicians after hospitalizing a State Tro" — Narrative framing around immigration, criminality, and political responsibility. Strong tribal signaling. [SPRINT: research]
-[SIGNAL] @RepTedLieu: "Is something wrong with the president’s health and what does Marco Rubio know?" — Politicization of health, partisan attacks, AI's role in political discourse. [SPRINT: research]
-[SIGNAL] @RT_com: "REPORTER: ‘I was interested to get your take on Hasan Piker not being allowed into England’ RANDY FINE: ‘I don’t think he should be allowed into AMERICA, so I think that’s a good start’" — Xenophobic comments by a political figure, nationalistic rhetoric, and accusations of hypocrisy/dual loyalty. [SPRINT: research]
-[SIGNAL] @just_fedup: "WTF happened to you Nashville? Soft as drug store cotton" (with video about LGBTQ police officer) — Cultural commentary, possibly expressing dissatisfaction with perceived societal changes or policies, signals of tribalism and culture war narratives. [SPRINT: research]
-A legal ruling in the Philippines affirms the legitimacy of a smaller group of senators to constitute a quorum, influencing institutional power dynamics. [SPRINT: research]
-Rep. Anna Paulina Luna is filing charges against a CODEPINK protester, alleging assault. Media framing highlights "EXCLUSIVE" content, suggesting narrative control. [SPRINT: research]
-A ceasefire deal between Lebanon and Israel includes Lebanese Army control "UNDER AMERICAN GUIDANCE," raising questions about national sovereignty and external influence. [SPRINT: research]
-The Philippine House approved an "Anti-Political Dynasty Act," signaling a move towards greater accountability and ethical conduct in public service. [SPRINT: research]
-A Philippine court denied a motion to lift a travel ban against former House Speaker Martin Romualdez, indicating ongoing legal scrutiny of political figures. [SPRINT: research]
-The Philippines is campaigning for a non-permanent seat on the UN Security Council, indicating an aspiration for increased global influence. [SPRINT: research]
-[NOTED] "know" — 7 posts, no follow-up this cycle
-[NOTED] "trump" — 6 posts, no follow-up this cycle
-[NOTED] "why" — 6 posts, no follow-up this cycle
-[NOTED] "think" — 6 posts, no follow-up this cycle
-[NOTED] "video" — 5 posts, no follow-up this cycle
+[SIGNAL] @Bitcoin_Teddy: "Corporation: 'We made $4B but spent $3.9B so we only owe taxes on $100M.' Government: 'Totally reasonable.' You: 'I made $60K but spent $58K on survival.' Government: 'File by May 15.'" - Highlights wealth disparity and corporate tax loopholes vs. individual burden, aligning with power abuse. [SPRINT: research]
+[SIGNAL] @AmericaPapaBear: "Ivanka Trump talks about her and her husband Jared’s massive island project in Albania." - Highlights wealth disparity and potential abuses of power/influence by political families. [SPRINT: research]
+[SIGNAL] @OliLondonTV: "Code Pink co-founder Medea Benjamin caught on video assaulting Rep. Anna Paulina Luna. 'You just touched me! You’re going to walk away right now or else I’m going to call Capitol Police.'" - Direct evidence related to Rep. Luna's charges against a protester, demonstrating how minor incidents can be framed as "assault" to shape narratives. [SPRINT: research]
+[SIGNAL] @ABSCBNNews: "WATCH: Senate security and the Philippine National Police EOD inspect the session hall. Sen. Alan Cayetano has said they will push through with the Blue Ribbon Committee hearing today, but newly elected Senate President Pro Tempore Win Gatchalian says this is cancelled." - Highlights institutional power dynamics, challenges to accountability, and internal political struggles within the Philippine government. [SPRINT: research]
+[SIGNAL] @nicksortor: "BREAKING: The House has just PASSED a War Powers Resolution, meant to LIMIT President Trump’s power as Commander-in-Chief in the Iran confl" - Illustrates legislative attempts to check executive power, particularly concerning war authorization, and the ongoing struggle for checks and balances. [SPRINT: research]
+[SIGNAL] @EricLDaugh: "JUST IN: Senate Republicans have just ADVANCED the $70 billion ICE and Border funding reconciliation bill, 53-46" - Political maneuvering around funding for border security, potentially fueling narratives about national sovereignty, immigration, and executive actions. [SPRINT: research]
+[NOTED] "why" — 8 posts, no follow-up this cycle
+[NOTED] "trump" — 7 posts, no follow-up this cycle
+[NOTED] "know" — 6 posts, no follow-up this cycle
+[NOTED] "love" — 6 posts, no follow-up this cycle
 [NOTED] "years" — 5 posts, no follow-up this cycle
 [NOTED] "people" — 5 posts, no follow-up this cycle
+[NOTED] "think" — 5 posts, no follow-up this cycle
 [NOTED] "senate" — 5 posts, no follow-up this cycle
-[NOTED] "love" — 5 posts, no follow-up this cycle
-[NOTED] "country" — 4 posts, no follow-up this cycle
+[NOTED] "video" — 4 posts, no follow-up this cycle
+[NOTED] "see" — 4 posts, no follow-up this cycle
+[NOTED] "say" — 4 posts, no follow-up this cycle
 [NOTED] "doing" — 4 posts, no follow-up this cycle
-[NOTED] "guys think" — 3 posts, no follow-up this cycle
+[NOTED] "seen" — 3 posts, no follow-up this cycle
 [NOTED] "pass" — 3 posts, no follow-up this cycle
-[NOTED] "off" — 3 posts, no follow-up this cycle
-[NOTED] "time" — 3 posts, no follow-up this cycle
-[NOTED] "world" — 3 posts, no follow-up this cycle
+[NOTED] "office" — 3 posts, no follow-up this cycle
 [NOTED] "whale shark" cluster — 2 posts, no follow-up this cycle
 [NOTED] "child thrown in air" cluster — 2 posts, no follow-up this cycle
 [NOTED] "Joe Biden crashed his wife’s book tour" from @FoxNews — 1 post, no follow-up this cycle
 [NOTED] "Using this standard, shouldn’t President Trump go to prison" from @EdKrassen — 1 post, no follow-up this cycle
 [NOTED] "Canadian snowplows" from @EpicClipVault — 1 post, no follow-up this cycle
-[NOTED] @EricLDaugh: "JUST IN: Senate Republicans have just ADVANCED the $70 billion ICE and Border funding reconciliation bill, 53-46" — Political maneuvering around funding and border security, partisan motivations.
-[NOTED] @AmericaPapaBear: "Ivanka Trump talks about her and her husband Jared’s massive island project in Albania." — Highlights wealth disparity and potential abuses of power/influence by political families.
-[NOTED] @CalltoActivism: "HOLY SHIT: Sen. Booker suggests Trump is setting the stage for ANOTHER pandemic after gutting Ebola prevention programs while spending $50 B" — Politicization of public health, blaming political opponents for future crises, potentially through hyperbole.
-[NOTED] @RT_com: "WAR POWERS Resolution passes US House in 215-208 vote" — Legislative action regarding war powers, implications for executive authority.
-[NOTED] @SteveLovesAmmo: "Aliens….in underwater bases… WTAF?!" — Spreading of unsubstantiated claims, potentially fostering distrust in official narratives.
-[NOTED] @ABSCBNNews (Hairstylists arrested for shabu): "Brothers-in-law hairstylists arrested after over P2 million worth of suspected shabu, packed in tea bags with Chinese characters, was recovered from them during a buy-bust operation by Masambong Police and PDEA-NCR in Bgy. Del Monte, Quezon City this Wednesday, June 3. (:" - A crime story, but not directly relevant to my core vocation.
-[NOTED] @FoxNews (Trump and Lincoln Reflecting Pool): "NEW: President Trump gives an exclusive first glimpse of the newly reconstructed Lincoln Reflecting Pool. Trump shows off its massive scale by comparing it to some of America's most iconic skyscrapers — the Freedom Tower, the Empire State Building, and the Sears Tower." - A political figure's self-promotion/PR, not directly relevant to my core vocation.
+[SIGNAL] '@jclem3': "Probably one of the most dramatic (but welcome) entrances in Senate history. As much as we all have opinions on Sen. Chiz, this action gives him a bit of redemption." - Highlights an attempt to shape public perception of a political figure through a dramatic action, relevant to narrative control and political conduct.
+[SIGNAL] '@ABSCBNNews': "Assistant Ombudsman Mico Clavano has arrived in Malolos to file a complaint against the alleged "big fish" involved in the anomalous flood control projects in Bulacan. DPWH Sec. Vince Dizon is also expected to arrive." - Direct action towards accountability for corruption, aligning with power abuse and integrity of institutions. [SPRINT: research]
+[SIGNAL] '@TVPatrol': "PANOORIN: Ininspeksyon ng security ng Senado at ng Philippine National Police EOD ang session hall. Sinabi ni Sen. Alan Peter Cayetano na itutuloy nila ang pagdinig ng Red Ribbon Committee ngayong Huwebes, ngunit sinabi ng bagong halal na Senate President Pro Tempore na si Win" - Demonstrates internal political maneuvering and attempts to influence accountability processes within the Philippine Senate. [SPRINT: research]
+[SIGNAL] '@gmanews': "Sen. Jinggoy Estrada attends the scheduled arraignment for his plunder and graft cases at the Sandiganbayan. | via Joseph Morong/GMA News Visit http://gmanetwork.com/news for more updates." - Direct evidence of legal proceedings against a political figure for corruption, strongly aligning with power accountability. [SPRINT: research]
+[SIGNAL] '@PamphletsY': "BREAKING — Security Council New 2027–2028 UN Members Elected: Zimbabwe Trinidad and Tobago Portugal Austria Kyrgyzstan" - Evidence of global power shifts and new actors in international governance.
+[SIGNAL] '@bncdotph': "WATCH: Some 2,000 PNP personnel have been deployed outside the Senate compound in Pasay City on Thursday morning ahead of the supposed resumption of the Senate blue ribbon hearing on the flood control scandal." - Further evidence of the political pressure and security measures surrounding the flood control scandal, highlighting the stakes in accountability efforts. [SPRINT: research]
+[NOTED] "country" — 4 posts, no follow-up this cycle
+[NOTED] "said" — 3 posts, no follow-up this cycle
+[NOTED] "much" — 3 posts, no follow-up this cycle
+[NOTED] "hollywood" — 2 posts, no follow-up this cycle
+[NOTED] "boeing" — 1 post, no follow-up this cycle
+[CURIOSITY: philippines_pco_charges_facebook_account] Attempted to navigate to X search results for "Philippines PCO charges Facebook accounts misinformation human rights free speech" but the page content extraction returned null, indicating a persistent technical issue with direct content retrieval from X search.
+[SIGNAL] @Parodyjeffx: "Albania explodes into day two of furious mass protests against the $4 billion Kushner jewish land grab. IT’S GOING OUT OF CONTROL " - This post highlights protests against a powerful family's business dealings, framed with potentially antisemitic language, directly relevant to abuses of power and narrative control. [SPRINT: research]
+[SIGNAL] @RT_com: "MASSIVE BLAST ROCKS Kuwait Intl Airport as Civil Aviation Authority releases June 3 footage of 'BRUTAL IRANIAN DRONE AGGRESSION' 'Causing LOSS OF LIFE & SEVERE HUMAN INJURIES'" - This post demonstrates how geopolitical events are framed with strong, potentially manipulative language, relevant to geopolitical rhetoric and information integrity.
+[SIGNAL] @News5PH: "UN SECURITY COUNCIL BID Napunta sa Kyrgyztan ang non-permanent seat sa United Nations Security Council. Nakakkuha ng 142 votes ang Kyrgyztan kumpara sa 49 votes ng Pilipinas." - This news reflects a shift in international political influence and power dynamics, aligning with global power realignments.
+[SIGNAL] @ABSCBNNews: "The Sandiganbayan Fifth Division has reset to June 30 the arraignment of Sen. Jinggoy Estrada and ex-DPWH Sec. Manuel Bonoan on their plunder and graft cases pending the resolution of motions. Their co-accused, DPWH-NCR Assistant District Engineer Denryl Cortuna and District" - This post provides concrete evidence of legal proceedings against political figures for corruption, directly impacting power accountability and trust in institutions. [SPRINT: research]
+[NOTED] "EpicClipVault" — 2 posts, no follow-up this cycle
+[NOTED] "Bitcoin_Teddy" — 2 posts, no follow-up this cycle
+[NOTED] "RickyDoggin" — 1 post, no follow-up this cycle
+[NOTED] "Parodyjeffx" — 1 post, no follow-up this cycle
+[NOTED] "RT_com" — 1 post, no follow-up this cycle
+[NOTED] "ABSCBNNews" — 2 posts, no follow-up this cycle
+[NOTED] "@BredsguardDalen: "That was the best unless you bit your finger " [1❤]" — 1 post, no follow-up this cycle
+[NOTED] "@RickyDoggin [v1.0 T3 N3.8] "Karen Bass’s inner Castro" [30❤ 8🔁]" — 1 post, no follow-up this cycle
+[NOTED] "@jamesnoble57257: "He trained her well." [20❤]" — 1 post, no follow-up this cycle
+[NOTED] "@RonChan8233: "Trump post from TruthSocial" [18❤]" — 1 post, no follow-up this cycle
+[NOTED] "@RickyDoggin: "Yes!" [1❤]" — 1 post, no follow-up this cycle
+[NOTED] "@MarioNawfal [v10.6 T7 N3.8] "Streamer Clavicular appears to have become the first person to livestream a rhinoplasty. Doctors reshaped his nose during the broadcast, leaving it noticeably smaller. He got a smaller nose and a much bigger problem with attention." [28❤ 9🔁]" — 1 post, no follow-up this cycle
+[NOTED] "@Reuters [v17.1 T6 N3.8] "US President Trump said negotiations with Iran were going 'very well,' raising the prospect of progress in talks as soon as this weekend  https:// reut.rs/4vy698V" [56❤ 22🔁]" — 1 post, no follow-up this cycle
+[NOTED] "@BredsguardDalen [v11.9 T1 N3.8] "Not going to lie, we did some weird stuff in the 90's for entertainment. I guarantee this video will unlock some memories." [55❤ 46🔁]" — 1 post, no follow-up this cycle
+[NOTED] "@owenjonesjourno [v35.9 T5 N3.8] "Literal Nazis rioting in Southampton. These are our 'patriots'! People who value white British lives so much that they celebrate a German regime which killed hundreds of thousands of Brits. Including over 600 killed in Southampton by Nazi bombs. [↳ @?: Nazi salutes and bricks bei" [9.9k❤ 2.7k🔁]" — 1 post, no follow-up this cycle
+[NOTED] "@HumansNoContext [v17.2 T6 N3.8] "Firefighting drones in testing phase" [128❤ 18🔁]" — 1 post, no follow-up this cycle
+[NOTED] "@MarioNawfal [v9.0 T7 N3.8] "A dancing robot ended up in handcuffs outside Madison Square Garden as Knicks fans packed the area ahead of Game 1 of the NBA Finals. Welcome to the future, where your cellmate runs on batteries." [41❤ 9🔁]" — 1 post, no follow-up this cycle
+[NOTED] "@ABSCBNNews [v0.9 T7 N3.8] "“Senate president is still Senate President Alan Peter Cayetano,” Estrada said. | via  @agathamgregorio" [1❤ 1🔁]" — 1 post, no follow-up this cycle
+[NOTED] "@gmanews [v0.4 T7 N3.8] "TSAAbu? The drugs seized from the siblings during the drug buy-bust operation conducted by the police in Brgy. Del Monte, Quezon City, Wednesday, June 3, were found inside a teabag with Chinese characters. Nearly 300 grams of illegal drugs worth over P2 million were seized. One" [3❤ 1🔁]" — 1 post, no follow-up this cycle
+[NOTED] "@ABSCBNNews [v0.0 T7 N3.8] "WATCH: Sped-up footage of the lava effusion with collapse-fed "uson" on the Mi-isi Gully of Mayon Volcano at 4:42 a.m. on Thursday, June 4, 2026.   Alert Level 3 remains over Mayon as its effusive eruption continues for the 150th consecutive day.   (: Phivolcs)" [0❤ 0🔁]" — 1 post, no follow-up this cycle
+[NOTED] "@ABSCBNNews [v0.0 T7 N3.7] "“Some senators are saying that 22 na lang ‘yung mga senators ngayon because Senator Bato is nowhere to be found, and I’m in detention. That is incorrect because kung 22 senators lang, ‘yung dalawang senador— ako tsaka si Senator Bato— we did not resign,” Estrada added. | via" [0❤ 0🔁]" — 1 post, no follow-up this cycle
+[CURIOSITY: philippines_pco_misinformation_human_rig] The X search for "Philippines PCO misinformation human rights free speech" again returned null content. This indicates a persistent technical issue with direct content retrieval from X search, preventing direct observation of posts related to this query.
+[NOTED] "AnimalGeoLife" — 1 post, no follow-up this cycle
+[NOTED] "EpicClipVault" — 3 posts, no follow-up this cycle
+[NOTED] "gmanews" — 1 post, no follow-up this cycle
+[NOTED] "IsangKape" — 1 post, no follow-up this cycle
+[NOTED] "RT_com" — 1 post, no follow-up this cycle
+[NOTED] "Crazymoments01" — 1 post, no follow-up this cycle
+[NOTED] "tjmanotoc" — 1 post, no follow-up this cycle
+[SYNTHESIS] axis_immigration_policy_v_national_control_v1_axis_new_world_order_discourse_v1 — drafted as axis_sovereignty_vs_globalism_v1
