@@ -233,6 +233,12 @@ function postBrowse({ cycle, today, hour }) {
   // Self-gated internally (72h per domain); adds URLs to reading_queue
   runScript(path.join(PROJECT_ROOT, 'runner/source_followup.js'));
 
+  // ── 4d-eval. Adversarial evaluator — skeptical review of last post ───
+  // Uses Ollama (different evaluator from Gemini); self-gated 2h
+  if (!isXSuppressed('tweet')) {
+    runScript(path.join(PROJECT_ROOT, 'runner/adversarial_eval.js'));
+  }
+
   // ── 4d-traj. Axis trajectory summary (throttled to once per 2h) ───────────
   {
     const trajStamp = path.join(config.STATE_DIR, '.last_trajectory');

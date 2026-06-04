@@ -25,7 +25,7 @@ const BROWSE_NOTES = path.join(ROOT, "state", "browse_notes.md");
 const ONTOLOGY     = path.join(ROOT, "state", "ontology.json");
 const CRITIQUE_OUT = path.join(ROOT, "state", "critique.md");
 
-const { callOpenAI } = require("./openai_caller");
+const { generate: llmGenerate } = require("./llm.js");
 const HISTORY_OUT   = path.join(ROOT, "state", "critique_history.jsonl");
 
 const isQuoteMode   = process.argv.includes("--quote");
@@ -169,7 +169,7 @@ WATCH: [One thing to probe further in the next browse window. One sentence.]`;
 // ── LLM call ──────────────────────────────────────────────────────────────────
 
 async function callGemini(prompt) {
-  return callOpenAI({ prompt, maxTokens: 350 });
+  return llmGenerate(prompt, { maxTokens: 350, temperature: 0.2, timeoutMs: 30_000 });
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────

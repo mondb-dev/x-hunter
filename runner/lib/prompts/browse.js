@@ -28,6 +28,10 @@ module.exports = function buildBrowsePrompt(ctx) {
     ctx.browseNotes + '\n' +
     '\u2500\u2500 LAST CRITIQUE \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
     ctx.critique + '\n' +
+    (ctx.adversarialFlag ? (
+      '── ADVERSARIAL EVAL FLAG ────────────────────────────────────────────────────\n' +
+      ctx.adversarialFlag + '\n'
+    ) : '') +
     (ctx.lastReflection ? (
       '\u2500\u2500 LAST REFLECTION (cross-cycle synthesis, prior day) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n' +
       ctx.lastReflection + '\n'

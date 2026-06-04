@@ -365,6 +365,21 @@ function loadContext(opts) {
     ctx.topicSummary      = readState(config.TOPIC_SUMMARY_PATH, { fallback: '(not yet generated)' });
     ctx.digest            = readState(config.FEED_DIGEST_PATH, { tail: digestTailLines, fallback: '(not yet generated)' });
     ctx.critique          = readState(config.CRITIQUE_PATH, { tail: 12, fallback: '' });
+
+    // Adversarial eval — inject only when flagged (overclaim or axis mismatch)
+    try {
+      const evalLast = path.join(config.STATE_DIR, 'adversarial_eval_last.json');
+      if (fs.existsSync(evalLast)) {
+        const ev = JSON.parse(fs.readFileSync(evalLast, 'utf-8'));
+        if (ev.flagged) {
+          ctx.adversarialFlag = [
+            ev.overclaim ? `⚠️  Your last post was flagged as OVERCLAIM by the adversarial evaluator.` : '',
+            !ev.axis_match ? `⚠️  Your last post AXIS MISMATCH — position inconsistent with your tracked axes.` : '',
+            ev.counter_argument ? `  Strongest counter-argument: "${ev.counter_argument}"` : '',
+          ].filter(Boolean).join('\n');
+        }
+      }
+    } catch { /* non-fatal */ }
     ctx.articleMeta       = readState(config.ARTICLE_META_PATH, { fallback: '' });
     ctx.curiosityDirective  = readState(config.CURIOSITY_DIRECTIVE_PATH, { fallback: '' });
     ctx.synthesisPending    = loadSynthesisProposals();
