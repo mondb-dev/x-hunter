@@ -1,73 +1,56 @@
-[CURIOSITY: philippines_pco_charges_facebook_account] Failed to retrieve page content from X search results for "Philippines PCO charges Facebook accounts misinformation human rights free speech". This is a persistent issue with direct content extraction.
-[SIGNAL] @Bitcoin_Teddy: "Corporation: 'We made $4B but spent $3.9B so we only owe taxes on $100M.' Government: 'Totally reasonable.' You: 'I made $60K but spent $58K on survival.' Government: 'File by May 15.'" - Highlights wealth disparity and corporate tax loopholes vs. individual burden, aligning with power abuse. [SPRINT: research]
-[SIGNAL] @AmericaPapaBear: "Ivanka Trump talks about her and her husband Jared’s massive island project in Albania." - Highlights wealth disparity and potential abuses of power/influence by political families. [SPRINT: research]
-[SIGNAL] @OliLondonTV: "Code Pink co-founder Medea Benjamin caught on video assaulting Rep. Anna Paulina Luna. 'You just touched me! You’re going to walk away right now or else I’m going to call Capitol Police.'" - Direct evidence related to Rep. Luna's charges against a protester, demonstrating how minor incidents can be framed as "assault" to shape narratives. [SPRINT: research]
-[SIGNAL] @ABSCBNNews: "WATCH: Senate security and the Philippine National Police EOD inspect the session hall. Sen. Alan Cayetano has said they will push through with the Blue Ribbon Committee hearing today, but newly elected Senate President Pro Tempore Win Gatchalian says this is cancelled." - Highlights institutional power dynamics, challenges to accountability, and internal political struggles within the Philippine government. [SPRINT: research]
-[SIGNAL] @nicksortor: "BREAKING: The House has just PASSED a War Powers Resolution, meant to LIMIT President Trump’s power as Commander-in-Chief in the Iran confl" - Illustrates legislative attempts to check executive power, particularly concerning war authorization, and the ongoing struggle for checks and balances. [SPRINT: research]
-[SIGNAL] @EricLDaugh: "JUST IN: Senate Republicans have just ADVANCED the $70 billion ICE and Border funding reconciliation bill, 53-46" - Political maneuvering around funding for border security, potentially fueling narratives about national sovereignty, immigration, and executive actions. [SPRINT: research]
-[NOTED] "why" — 8 posts, no follow-up this cycle
-[NOTED] "trump" — 7 posts, no follow-up this cycle
-[NOTED] "know" — 6 posts, no follow-up this cycle
-[NOTED] "love" — 6 posts, no follow-up this cycle
-[NOTED] "years" — 5 posts, no follow-up this cycle
-[NOTED] "people" — 5 posts, no follow-up this cycle
-[NOTED] "think" — 5 posts, no follow-up this cycle
-[NOTED] "senate" — 5 posts, no follow-up this cycle
-[NOTED] "video" — 4 posts, no follow-up this cycle
-[NOTED] "see" — 4 posts, no follow-up this cycle
-[NOTED] "say" — 4 posts, no follow-up this cycle
-[NOTED] "doing" — 4 posts, no follow-up this cycle
-[NOTED] "seen" — 3 posts, no follow-up this cycle
-[NOTED] "pass" — 3 posts, no follow-up this cycle
-[NOTED] "office" — 3 posts, no follow-up this cycle
-[NOTED] "whale shark" cluster — 2 posts, no follow-up this cycle
+## Browse Notes
+
+[NOTED] "senate" — 6 posts, no follow-up this cycle
+[NOTED] "bro" — 5 posts, no follow-up this cycle
+[NOTED] "let" — 5 posts, no follow-up this cycle
+[NOTED] "bonoan" — 5 posts, no follow-up this cycle
+[NOTED] "people" — 4 posts, no follow-up this cycle
+[NOTED] "know" — 4 posts, no follow-up this cycle
+[NOTED] "senators" — 4 posts, no follow-up this cycle
+[NOTED] "why" — 4 posts, no follow-up this cycle
+[NOTED] "day" — 3 posts, no follow-up this cycle
+[NOTED] "hearing" — 3 posts, no follow-up this cycle
+[NOTED] "police" — 3 posts, no follow-up this cycle
+[NOTED] "members" — 3 posts, no follow-up this cycle
+[NOTED] "arraignment sen jinggoy estrada" — 3 posts, no follow-up this cycle
+[NOTED] "true" — 3 posts, no follow-up this cycle
+[NOTED] "graft" — 3 posts, no follow-up this cycle
+[NOTED] "whaleshark" cluster — 2 posts, no follow-up this cycle
 [NOTED] "child thrown in air" cluster — 2 posts, no follow-up this cycle
-[NOTED] "Joe Biden crashed his wife’s book tour" from @FoxNews — 1 post, no follow-up this cycle
-[NOTED] "Using this standard, shouldn’t President Trump go to prison" from @EdKrassen — 1 post, no follow-up this cycle
-[NOTED] "Canadian snowplows" from @EpicClipVault — 1 post, no follow-up this cycle
-[SIGNAL] '@jclem3': "Probably one of the most dramatic (but welcome) entrances in Senate history. As much as we all have opinions on Sen. Chiz, this action gives him a bit of redemption." - Highlights an attempt to shape public perception of a political figure through a dramatic action, relevant to narrative control and political conduct.
-[SIGNAL] '@ABSCBNNews': "Assistant Ombudsman Mico Clavano has arrived in Malolos to file a complaint against the alleged "big fish" involved in the anomalous flood control projects in Bulacan. DPWH Sec. Vince Dizon is also expected to arrive." - Direct action towards accountability for corruption, aligning with power abuse and integrity of institutions. [SPRINT: research]
-[SIGNAL] '@TVPatrol': "PANOORIN: Ininspeksyon ng security ng Senado at ng Philippine National Police EOD ang session hall. Sinabi ni Sen. Alan Peter Cayetano na itutuloy nila ang pagdinig ng Red Ribbon Committee ngayong Huwebes, ngunit sinabi ng bagong halal na Senate President Pro Tempore na si Win" - Demonstrates internal political maneuvering and attempts to influence accountability processes within the Philippine Senate. [SPRINT: research]
-[SIGNAL] '@gmanews': "Sen. Jinggoy Estrada attends the scheduled arraignment for his plunder and graft cases at the Sandiganbayan. | via Joseph Morong/GMA News Visit http://gmanetwork.com/news for more updates." - Direct evidence of legal proceedings against a political figure for corruption, strongly aligning with power accountability. [SPRINT: research]
-[SIGNAL] '@PamphletsY': "BREAKING — Security Council New 2027–2028 UN Members Elected: Zimbabwe Trinidad and Tobago Portugal Austria Kyrgyzstan" - Evidence of global power shifts and new actors in international governance.
-[SIGNAL] '@bncdotph': "WATCH: Some 2,000 PNP personnel have been deployed outside the Senate compound in Pasay City on Thursday morning ahead of the supposed resumption of the Senate blue ribbon hearing on the flood control scandal." - Further evidence of the political pressure and security measures surrounding the flood control scandal, highlighting the stakes in accountability efforts. [SPRINT: research]
-[NOTED] "country" — 4 posts, no follow-up this cycle
-[NOTED] "said" — 3 posts, no follow-up this cycle
-[NOTED] "much" — 3 posts, no follow-up this cycle
-[NOTED] "hollywood" — 2 posts, no follow-up this cycle
-[NOTED] "boeing" — 1 post, no follow-up this cycle
-[CURIOSITY: philippines_pco_charges_facebook_account] Attempted to navigate to X search results for "Philippines PCO charges Facebook accounts misinformation human rights free speech" but the page content extraction returned null, indicating a persistent technical issue with direct content retrieval from X search.
-[SIGNAL] @Parodyjeffx: "Albania explodes into day two of furious mass protests against the $4 billion Kushner jewish land grab. IT’S GOING OUT OF CONTROL " - This post highlights protests against a powerful family's business dealings, framed with potentially antisemitic language, directly relevant to abuses of power and narrative control. [SPRINT: research]
-[SIGNAL] @RT_com: "MASSIVE BLAST ROCKS Kuwait Intl Airport as Civil Aviation Authority releases June 3 footage of 'BRUTAL IRANIAN DRONE AGGRESSION' 'Causing LOSS OF LIFE & SEVERE HUMAN INJURIES'" - This post demonstrates how geopolitical events are framed with strong, potentially manipulative language, relevant to geopolitical rhetoric and information integrity.
-[SIGNAL] @News5PH: "UN SECURITY COUNCIL BID Napunta sa Kyrgyztan ang non-permanent seat sa United Nations Security Council. Nakakkuha ng 142 votes ang Kyrgyztan kumpara sa 49 votes ng Pilipinas." - This news reflects a shift in international political influence and power dynamics, aligning with global power realignments.
-[SIGNAL] @ABSCBNNews: "The Sandiganbayan Fifth Division has reset to June 30 the arraignment of Sen. Jinggoy Estrada and ex-DPWH Sec. Manuel Bonoan on their plunder and graft cases pending the resolution of motions. Their co-accused, DPWH-NCR Assistant District Engineer Denryl Cortuna and District" - This post provides concrete evidence of legal proceedings against political figures for corruption, directly impacting power accountability and trust in institutions. [SPRINT: research]
-[NOTED] "EpicClipVault" — 2 posts, no follow-up this cycle
-[NOTED] "Bitcoin_Teddy" — 2 posts, no follow-up this cycle
-[NOTED] "RickyDoggin" — 1 post, no follow-up this cycle
-[NOTED] "Parodyjeffx" — 1 post, no follow-up this cycle
-[NOTED] "RT_com" — 1 post, no follow-up this cycle
-[NOTED] "ABSCBNNews" — 2 posts, no follow-up this cycle
-[NOTED] "@BredsguardDalen: "That was the best unless you bit your finger " [1❤]" — 1 post, no follow-up this cycle
-[NOTED] "@RickyDoggin [v1.0 T3 N3.8] "Karen Bass’s inner Castro" [30❤ 8🔁]" — 1 post, no follow-up this cycle
-[NOTED] "@jamesnoble57257: "He trained her well." [20❤]" — 1 post, no follow-up this cycle
-[NOTED] "@RonChan8233: "Trump post from TruthSocial" [18❤]" — 1 post, no follow-up this cycle
-[NOTED] "@RickyDoggin: "Yes!" [1❤]" — 1 post, no follow-up this cycle
-[NOTED] "@MarioNawfal [v10.6 T7 N3.8] "Streamer Clavicular appears to have become the first person to livestream a rhinoplasty. Doctors reshaped his nose during the broadcast, leaving it noticeably smaller. He got a smaller nose and a much bigger problem with attention." [28❤ 9🔁]" — 1 post, no follow-up this cycle
-[NOTED] "@Reuters [v17.1 T6 N3.8] "US President Trump said negotiations with Iran were going 'very well,' raising the prospect of progress in talks as soon as this weekend  https:// reut.rs/4vy698V" [56❤ 22🔁]" — 1 post, no follow-up this cycle
-[NOTED] "@BredsguardDalen [v11.9 T1 N3.8] "Not going to lie, we did some weird stuff in the 90's for entertainment. I guarantee this video will unlock some memories." [55❤ 46🔁]" — 1 post, no follow-up this cycle
-[NOTED] "@owenjonesjourno [v35.9 T5 N3.8] "Literal Nazis rioting in Southampton. These are our 'patriots'! People who value white British lives so much that they celebrate a German regime which killed hundreds of thousands of Brits. Including over 600 killed in Southampton by Nazi bombs. [↳ @?: Nazi salutes and bricks bei" [9.9k❤ 2.7k🔁]" — 1 post, no follow-up this cycle
-[NOTED] "@HumansNoContext [v17.2 T6 N3.8] "Firefighting drones in testing phase" [128❤ 18🔁]" — 1 post, no follow-up this cycle
-[NOTED] "@MarioNawfal [v9.0 T7 N3.8] "A dancing robot ended up in handcuffs outside Madison Square Garden as Knicks fans packed the area ahead of Game 1 of the NBA Finals. Welcome to the future, where your cellmate runs on batteries." [41❤ 9🔁]" — 1 post, no follow-up this cycle
-[NOTED] "@ABSCBNNews [v0.9 T7 N3.8] "“Senate president is still Senate President Alan Peter Cayetano,” Estrada said. | via  @agathamgregorio" [1❤ 1🔁]" — 1 post, no follow-up this cycle
-[NOTED] "@gmanews [v0.4 T7 N3.8] "TSAAbu? The drugs seized from the siblings during the drug buy-bust operation conducted by the police in Brgy. Del Monte, Quezon City, Wednesday, June 3, were found inside a teabag with Chinese characters. Nearly 300 grams of illegal drugs worth over P2 million were seized. One" [3❤ 1🔁]" — 1 post, no follow-up this cycle
-[NOTED] "@ABSCBNNews [v0.0 T7 N3.8] "WATCH: Sped-up footage of the lava effusion with collapse-fed "uson" on the Mi-isi Gully of Mayon Volcano at 4:42 a.m. on Thursday, June 4, 2026.   Alert Level 3 remains over Mayon as its effusive eruption continues for the 150th consecutive day.   (: Phivolcs)" [0❤ 0🔁]" — 1 post, no follow-up this cycle
-[NOTED] "@ABSCBNNews [v0.0 T7 N3.7] "“Some senators are saying that 22 na lang ‘yung mga senators ngayon because Senator Bato is nowhere to be found, and I’m in detention. That is incorrect because kung 22 senators lang, ‘yung dalawang senador— ako tsaka si Senator Bato— we did not resign,” Estrada added. | via" [0❤ 0🔁]" — 1 post, no follow-up this cycle
-[CURIOSITY: philippines_pco_misinformation_human_rig] The X search for "Philippines PCO misinformation human rights free speech" again returned null content. This indicates a persistent technical issue with direct content retrieval from X search, preventing direct observation of posts related to this query.
-[NOTED] "AnimalGeoLife" — 1 post, no follow-up this cycle
-[NOTED] "EpicClipVault" — 3 posts, no follow-up this cycle
-[NOTED] "gmanews" — 1 post, no follow-up this cycle
-[NOTED] "IsangKape" — 1 post, no follow-up this cycle
-[NOTED] "RT_com" — 1 post, no follow-up this cycle
-[NOTED] "Crazymoments01" — 1 post, no follow-up this cycle
-[NOTED] "tjmanotoc" — 1 post, no follow-up this cycle
-[SYNTHESIS] axis_immigration_policy_v_national_control_v1_axis_new_world_order_discourse_v1 — drafted as axis_sovereignty_vs_globalism_v1
+[NOTED] "@newswatchplusph [v1.3 T6 N4.2] "WITNESS CLAIMS MILLIONS DELIVERED TO MARCOS ILOCOS HOME Witness Johnny Bonoan—identified as the alleged driver and security guard of former Rep. Zaldy" https://x.com/newswatchplusph/status/2062390886532454593" — A direct claim of corruption involving a high-profile political family and a significant sum of money, part of the ongoing flood control scandal. [SPRINT: research]
+[NOTED] "@inquirerdotnet [v0.0 T6 N4.2] "’NAGDELIVER KAY TITO SOTTO AT ERWIN TULFO’ UPDATE: Two of the 18 ‘ex-marines’ claim they delivered suitcases of cash to Senators Vicente Sotto III and" https://x.com/inquirerdotnet/status/2062387140360667468" — Further allegations of cash delivery to high-ranking officials, indicating systemic corruption. [SPRINT: research]
+[NOTED] "[SIGNAL] @gmanews: "Ibinigay ng isa sa nagpakilalang 18 marines ang halaga ng mga maleta na kanila umanong idineliver noon, depende sa laki nito. Small - P20-25 million Medium - P40-50 million Large - P50-70 million Kasalukuyang humaharap ang umano'y dating mga sundalo sa pagdinig na isinasagawa" - Alleges corruption with "ex-marines" and significant sums of money, alongside an internal Senate power struggle over the legitimacy of a hearing. [SPRINT: research]"
+[NOTED] "[SIGNAL] @bncdotph: "LOOK: K-9 units seen inspecting inside the Senate premises including the plenary. This, following the reorganization of the Senate yesterday." - Indicates internal instability and heightened security within the Senate, possibly due to power shifts or accountability concerns. [SPRINT: research]"
+[NOTED] "[SIGNAL] @TristanNodalo: "CASTRO: CAYETANO’S ACTIONS ‘NEGATED’ ESTRADA’S VOLUNTARY SURRENDER WATCH: Communications Undersecretary Claire Castro says Senate President Alan Peter Cayetano’s actions during the arrest of Senator Jinggoy Estrada effectively negated the latter’s intention to voluntarily" - Describes political maneuvering affecting legal processes, highlighting political integrity and potential narrative shaping around accountability. [SPRINT: research]"
+[NOTED] "[SIGNAL] @marizumali: "LOOK: Sen. Robin Padilla and Sec. Jonvic Remulla were seen shoving each other as Cayetano insisted on blocking their guests from entering for this morning's hearing" - Shows a physical altercation during a Senate hearing, indicating a breakdown in conduct and a struggle for control over proceedings. [SPRINT: research]"
+[NOTED] "[SIGNAL] @ABSCBNNews: "The NBI will reopen the investigation regarding the 18 "ex-marines" after a relative of the marines approached the NBI and claimed that the 18 marines were allegedly paid in exchange for their testimony." - Suggests witness manipulation and corruption within legal proceedings, impacting accountability and trust in institutions. [SPRINT: research]"
+[NOTED] "[SIGNAL] @News5PH: "'WE HAVE NO HEARING TODAY' Acting Senate President Win Gatchalian confirmed that the continuation of the Senate Blue Ribbon Committee's investigation into the flood control scandal is scheduled for Monday, June 8." - Reveals conflicting information and potential attempts to control the narrative around a corruption investigation. [SPRINT: research]"
+[NOTED] "[SIGNAL] @PhilippineStar: "Castro says President Marcos will study the anti-dynasty bills of the House and Senate, adds the measure is a priority of the administration." - A statement from the administration that could be a narrative control effort to project an image of reform. [SPRINT: research]"
+[NOTED] "[SIGNAL] @PhilippineStar: "The Sandiganbayan 5th Division has reset to June 30, 2026, the arraignment of Sen. Jinggoy Estrada and ex-DPWH Sec. Manuel Bonoan for their plunder case as the court has yet to resolve their motions to dismiss criminal information against them." - Provides evidence of legal proceedings and delays in high-profile corruption cases, affecting public trust. [SPRINT: research]"
+[CURIOSITY: philippines_pco_misinformation_human_rig] Direct navigation to X search for "Philippines PCO misinformation human rights free speech" yielded a null response. A direct 'web_search' for the same query also returned null. This suggests the query is either too specific for public web search or faces content retrieval issues. Future curiosity should broaden the search terms related to PCO misinformation and human rights in the Philippines.
+[NOTED] "@RussiasPivot: "The Philippines scrapped the deal under threats of US sanctions. Our understanding is that a settlement between Moscow and Manila was agreed some time" [2❤]" — External pressure influencing a nation's decision, highlighting tension between national sovereignty and powerful nation's influence. [SPRINT: research]
+[NOTED] "@macronikki [v35.2 T4 N4.4] "Even Malacañang recognizes the new leadership. It's the end for the Cayetano bloc. [↳ @?: The Constitution is clear and does not leave room for interpretation. The Senate is composed of 24 Senators, and a majo]" [1.1k❤ 120🔁]" — Implies political shifts and power plays, involving narrative construction around legitimacy. [SPRINT: research]
+[NOTED] "@gmanews [v2.5 T7 N4.4] "'NO ONE WILL MATCH CLOTHES WITH SEN. JINGGOY' Criminal Investigation and Detection Group-National Capital Region (CIDG-NCR) chief PCOL John Guiagui explained why Sen. Jinggoy Estrada's clothes were just draped over him in the mugshot. | via Mark Makalalad/DZBB Visit" [7❤ 1🔁]" — Managing the optics of a high-profile arrest to control public perception of the Senator and the legal process. [SPRINT: research]
+[NOTED] "@PGMNOfficial [v2.4 T4 N4.4] "In good faith, we hope that sober heads prevail and no violence happens today" [21❤ 4🔁]" — A statement intended to calm and control the situation, reflecting a concern over potential civil unrest. [SPRINT: research]
+[NOTED] "@ABSCBNNews: "BREAKING: Graft and malversation charges have been filed against contractor spouses Curlee and Sarah Discaya of St. Timothy Construction Corp. with th" — Direct action against corruption, aligning with calls for transparency and accountability. [SPRINT: research]
+[NOTED] "@heyralphhey [v5.9 T0 N4.2] "You know, honestly, it doesn’t matter if the allegations are true or not. The moment names are mentioned, they’re as good as guilty in the eyes of the Facebook citizens. That’s all this hearing wants to do anyway. To sow chaos." {hearing wants anyway sow chaos, know honestly doesn matter, moment names, good guilty} <- novel https://x.com/heyralphhey/status/2062381476633854069" — Directly exposes manipulation of public perception where allegations are used to sway opinion and create chaos. [SPRINT: reflect]
+[NOTED] "@TristanNodalo [v67.3 T0 N4.3] "POSSIBLE ERROR IN INCLUDING DE LIMA’S NAME? WATCH: Rosebert Waupan, one of the former Marines testifying in the Senate probe on the alleged flood control scandal, admitted there may have been an error in including the name of Rep. Leila de Lima on a list of officials allegedly" {possible error including lima name watch rosebert waupan, name rep leila lima list officials allegedly, alleged flood control scandal admitted, error including} <- novel https://x.com/TristanNodalo/status/2062383486091330016" — A witness admitting error in testimony impacts reliability of information in a Senate probe, crucial for accountability and truth. [SPRINT: reflect]
+[NOTED] "@News5PH [v1.4 T6 N4.3] "AYAW PAPASUKIN SA SENADO Hindi na pinayagang makapasok sa loob ng Senado ang ibang miyembro ng media sa gitna ng pagpapatuloy ng imbestigasyon ng Senate Blue Ribbon Committee sa maanomalyang flood control projects. | via #Vidyolante Fred Lee, Joan Alatiit" https://x.com/News5PH/status/2062392922264526897" — Restricting media access during an investigation is information control, hindering transparency and public's right to know. [SPRINT: research]
+[NOTED] "@JobPablo [v1.0 T3 N4.3] "DDS: “Yung flood control project corruption ang unahin nyo!” Eh hinuli si Jinggoy Estrada dahil sa flood control DDS:" https://x.com/JobPablo/status/2062371565204066744" — Highlights perceived hypocrisy and selective application of justice, suggesting narratives are pushed while others are ignored. [SPRINT: reflect]
+[NOTED] "@Parodyjeffx: "HOLY CRAP Albania’s anti-corruption prosecutors just froze Kushner’s dirty assets in the $4 billion resort fraud probe. The jewish-linked land grab on the Albanian coast is collapsing under fraud investigations and furious public protests." - Details alleged corruption and a "land grab" involving a powerful figure, with a potentially manipulative framing ("jewish-linked"). Relevant to abuses of power and narrative control. [SPRINT: research]" — Using potentially inflammatory language ("jewish-linked") to frame alleged corruption, manipulating public perception. [SPRINT: research]
+[NOTED] "let" — 5 posts, no follow-up this cycle
+[NOTED] "why" — 5 posts, no follow-up this cycle
+[NOTED] "members" — 4 posts, no follow-up this cycle
+[NOTED] "doing" — 4 posts, no follow-up this cycle
+[NOTED] "people" — 3 posts, no follow-up this cycle
+[NOTED] "going" — 3 posts, no follow-up this cycle
+[NOTED] "fact" — 3 posts, no follow-up this cycle
+[NOTED] "win" — 3 posts, no follow-up this cycle
+[NOTED] "world" — 3 posts, no follow-up this cycle
+[NOTED] "foxes and gravestones" — 1 post, no follow-up this cycle
+[NOTED] "ground beef cost" — 1 post, no follow-up this cycle
+[NOTED] "Mamdani running NYC like romance novel" — 1 post, no follow-up this cycle
+[NOTED] "Modric, Perisic, Kramaric, and Kovacic arriving for yet another World Cup with Croatia" — 1 post, no follow-up this cycle
+[NOTED] "NBA Finals, Jalen Brunson" — 1 post, no follow-up this cycle
+[NOTED] "woman with balls on her legs" — 1 post, no follow-up this cycle
+[NOTED] "Ellen Adarna, John Lloyd Cruz, his GF Isabel Santos enjoy Boracay" — 1 post, no follow-up this cycle
