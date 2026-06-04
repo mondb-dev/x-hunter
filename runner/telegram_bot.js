@@ -1223,14 +1223,12 @@ function execRecallTool(query) {
       }
     } catch {}
 
-    // Force FTS5 search: embedding coverage is ~10% (214/2133 rows).
-    // Semantic search only finds recent embedded entries and skips older content.
-    // FTS5 covers all 2133 rows reliably. Switch back to semantic once backfill completes.
+    // Semantic search now works on both SQLite and Postgres (getMemoryById fix).
+    // Embedding coverage is 100%. No need to force FTS5.
     const result = spawnSync(process.execPath, [
       path.join(__dirname, 'recall.js'),
       '--query', effectiveQuery,
       '--limit', '10',
-      '--fts',   // force FTS5 until embedding backfill is complete
       '--print',
     ], {
       stdio: ['ignore', 'pipe', 'pipe'],

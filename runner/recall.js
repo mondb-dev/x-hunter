@@ -114,7 +114,8 @@ async function semanticRecall(queryText, typeFilter, limitN) {
 
   const results = [];
   for (const hit of nearest) {
-    const row = db.raw().prepare("SELECT * FROM memory WHERE id = ?").get(parseInt(hit.entity_id, 10));
+    // getMemoryById works on both SQLite (sync) and Postgres (async)
+    const row = await Promise.resolve(db.getMemoryById(hit.entity_id));
     if (!row) continue;
     if (typeFilter && row.type !== typeFilter) continue;
     results.push({ ...row, _similarity: hit.similarity });

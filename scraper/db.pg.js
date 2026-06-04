@@ -241,6 +241,11 @@ async function getMemoryByPath(filePath) {
   return rows[0] || undefined;
 }
 
+async function getMemoryById(id) {
+  const { rows } = await query('SELECT * FROM memory WHERE id = $1', [parseInt(id, 10)]);
+  return rows[0] || undefined;
+}
+
 async function recentMemory(type = null, limit = 10) {
   const { rows } = await query(`
     SELECT * FROM memory
@@ -307,7 +312,7 @@ module.exports = {
   topNovelPosts, updateMediaDescription,
   upsertAccount, followCandidates, markFollowed, getAccount, postsByUser, postsInWindow,
   getPostById,
-  insertMemory, updateMemoryTxId, recallMemory, getMemoryByPath, recentMemory,
+  insertMemory, updateMemoryTxId, recallMemory, getMemoryByPath, getMemoryById, recentMemory,
   storeEmbedding, getEmbedding, allEmbeddings, embeddedIds,
   checkAndHealFts,
   rebuildFtsIfNeeded,

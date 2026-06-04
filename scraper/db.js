@@ -338,6 +338,10 @@ const stmtGetMemoryByPath = _db.prepare(`
   SELECT * FROM memory WHERE file_path = @file_path
 `);
 
+const stmtGetMemoryById = _db.prepare(`
+  SELECT * FROM memory WHERE id = ?
+`);
+
 const stmtRecentMemory = _db.prepare(`
   SELECT * FROM memory
   WHERE  (@type IS NULL OR type = @type)
@@ -536,6 +540,10 @@ function getMemoryByPath(filePath) {
   return stmtGetMemoryByPath.get({ file_path: filePath });
 }
 
+function getMemoryById(id) {
+  return stmtGetMemoryById.get(parseInt(id, 10));
+}
+
 /**
  * Recent memory entries, optionally filtered by type.
  * @param {string|null} type - null = all types
@@ -679,7 +687,7 @@ module.exports = {
   topNovelPosts, updateMediaDescription,
   upsertAccount, followCandidates, markFollowed, getAccount, postsByUser, postsInWindow,
   getPostById,
-  insertMemory, updateMemoryTxId, recallMemory, getMemoryByPath, recentMemory,
+  insertMemory, updateMemoryTxId, recallMemory, getMemoryByPath, getMemoryById, recentMemory,
   storeEmbedding, getEmbedding, allEmbeddings, embeddedIds,
   checkAndHealFts,
   rebuildFtsIfNeeded,
