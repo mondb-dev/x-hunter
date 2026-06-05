@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-05T11:16:53.390Z",
+  "generated_at": "2026-06-05T14:16:56.118Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-05T11:17:22.431Z",
+  "profiled_at": "2026-06-05T14:17:26.723Z",
   "sources": [
     {
       "domain": "justice.gov",
@@ -1283,9 +1283,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-05T10:39:12.000Z",
+      "last_seen_at": "2026-06-05T11:59:23.000Z",
       "discovery": {
-        "distinct_urls": 4297,
+        "distinct_urls": 4318,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1294,10 +1294,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 2531,
-          "feed_buffer_reply": 2701
+          "feed_buffer": 2547,
+          "feed_buffer_reply": 2707
         },
-        "distinct_referring_accounts": 1612,
+        "distinct_referring_accounts": 1615,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1335,7 +1335,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:4297",
+            "distinct_urls:4318",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1343,7 +1343,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1612",
+            "referring_accounts:1615",
             "origin_types:2"
           ]
         },
@@ -1373,10 +1373,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:4297",
+            "distinct_urls:4318",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1612",
+            "referring_accounts:1615",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -4092,7 +4092,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-02T13:45:59.967Z",
+        "fetched_at": "2026-06-05T13:47:24.895Z",
         "homepage_url": "https://valvolineglobal.com/",
         "example_url": "https://www.valvolineglobal.com/en/fifa-national-sweeps/?utm_source=X&utm_medium=paidsocial&utm_campaign=WC26_GM_US_AWE&utm_content=wcsimplified&twclid=299i90helnojknptru820mqim9",
         "homepage_status": 200,
@@ -7257,7 +7257,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-02T13:46:00.107Z",
+        "fetched_at": "2026-06-05T13:47:25.045Z",
         "homepage_url": "https://fundrise.com/",
         "example_url": "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=286j5mjx6wqmg12vs5jto11lrf",
         "homepage_status": 405,
@@ -9152,7 +9152,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-02T13:46:00.606Z",
+        "fetched_at": "2026-06-05T13:47:25.446Z",
         "homepage_url": "https://oracle.com/",
         "example_url": "https://www.oracle.com/database/?source=%3Aad%3Aso%3Atw%3Adg%3Aa_nas%3A%3ARC_TWTR260205P00003C00005%3AEnd_Data_Risk&SC=%3Aad%3Aso%3Atw%3Adg%3Aa_nas%3A%3ARC_TWTR260205P00003C00005%3AEnd_Data_Risk&twclid=2b7h3vpee1s0pq1u9507vf4n1e",
         "homepage_status": 403,
@@ -12962,6 +12962,257 @@
       }
     },
     {
+      "domain": "mexc.com",
+      "entity": "Mexc",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-22T03:21:42.000Z",
+      "last_seen_at": "2026-06-05T13:10:01.588Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://www.mexc.com/register?utm_source=brandad&utm_medium=twitter&utm_campaign=pizza_register&twclid=22vw5h310hr1lnaz6krw03u5v2",
+          "https://www.mexc.com/campaigns/SpaceX-Airdrop?utm_source=brandad&utm_medium=twitter&utm_campaign=stocks_spot&twclid=27s1s3kta2izsonhfa4dvy6z9o",
+          "https://www.mexc.com/events/stocks/2?utm_source=brandad&utm_medium=twitter&utm_campaign=stocks_spot&twclid=2a9lz50qsu85ldpc46tipixhls"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2,
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "mexc"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.2075,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.381328125,
+          "confidence": 0.15907500000000002,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-03T09:16:22.911Z",
+        "homepage_url": "https://mexc.com/",
+        "example_url": "https://www.mexc.com/register?utm_source=brandad&utm_medium=twitter&utm_campaign=pizza_register&twclid=22vw5h310hr1lnaz6krw03u5v2",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.mexc.com/",
+        "example_final_url": "https://www.mexc.com/register?utm_source=brandad&utm_medium=twitter&utm_campaign=pizza_register&twclid=22vw5h310hr1lnaz6krw03u5v2",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "openinfer.io",
+      "entity": "Openinfer Io",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-04T13:00:26.000Z",
+      "last_seen_at": "2026-06-05T03:35:14.000Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://openinfer.io/news/2026-06-02-nvidia-dynamo-proved-inference-needs-a-control-plane/?twclid=27dzvvpluhv8xln5kqrwwhmmra",
+          "https://openinfer.io/news/2026-06-02-nvidia-dynamo-proved-inference-needs-a-control-plane/?twclid=29z8nw335ekmgahgz4mnn1cn1w",
+          "https://openinfer.io/news/2026-06-02-nvidia-dynamo-proved-inference-needs-a-control-plane/?twclid=2cy5cdb1rc2th3ska3a4kzd6kk"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "bastani_behnam"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.55,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.380625,
+          "confidence": 0.1386,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-05T11:17:21.991Z",
+        "homepage_url": "https://openinfer.io/",
+        "example_url": "https://openinfer.io/news/2026-06-02-nvidia-dynamo-proved-inference-needs-a-control-plane/?twclid=27dzvvpluhv8xln5kqrwwhmmra",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://openinfer.io/",
+        "example_final_url": "https://openinfer.io/news/2026-06-02-nvidia-dynamo-proved-inference-needs-a-control-plane/?twclid=27dzvvpluhv8xln5kqrwwhmmra",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "zite.com",
       "entity": "Zite",
       "kind": "unknown",
@@ -14936,7 +15187,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-02T12:15:56.638Z",
+        "fetched_at": "2026-06-05T12:17:23.155Z",
         "homepage_url": "https://sourcebot.dev/",
         "example_url": "https://docs.sourcebot.dev/docs/features/mcp-server?twclid=24rnkjjr58b4nqm87glv1o5dr0",
         "homepage_status": 200,
@@ -16825,131 +17076,6 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 12,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "openinfer.io",
-      "entity": "Openinfer Io",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-04T14:25:43.000Z",
-      "last_seen_at": "2026-06-05T03:35:14.000Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://openinfer.io/news/2026-06-02-nvidia-dynamo-proved-inference-needs-a-control-plane/?twclid=27dzvvpluhv8xln5kqrwwhmmra",
-          "https://openinfer.io/news/2026-06-02-nvidia-dynamo-proved-inference-needs-a-control-plane/?twclid=29z8nw335ekmgahgz4mnn1cn1w"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "bastani_behnam"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3742447916666667,
-          "confidence": 0.10997499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
-        "profile": {
-          "score": 0.55,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:1",
-            "opinion_marker:false"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-05T11:17:21.991Z",
-        "homepage_url": "https://openinfer.io/",
-        "example_url": "https://openinfer.io/news/2026-06-02-nvidia-dynamo-proved-inference-needs-a-control-plane/?twclid=27dzvvpluhv8xln5kqrwwhmmra",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://openinfer.io/",
-        "example_final_url": "https://openinfer.io/news/2026-06-02-nvidia-dynamo-proved-inference-needs-a-control-plane/?twclid=27dzvvpluhv8xln5kqrwwhmmra",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 2,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
           "opinion_marker": false
         }
       }
@@ -21407,7 +21533,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-02T11:15:58.282Z",
+        "fetched_at": "2026-06-05T12:17:23.560Z",
         "homepage_url": "https://ajc.org/",
         "example_url": "https://www.ajc.org/news/the-iran-strikes-explained-how-we-got-here-and-what-it-means",
         "homepage_status": 200,
@@ -21779,7 +21905,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-02T12:15:57.183Z",
+        "fetched_at": "2026-06-05T12:17:24.134Z",
         "homepage_url": "https://outx.ai/",
         "example_url": "https://outx.ai/a/buyer-intent-tracking?utm_source=twitter&utm_medium=paid&utm_campaign=buyer-intent&utm_content=t-b1-first-200&twclid=28hhz80snfgnotyxefsxxmt9nc",
         "homepage_status": 200,
@@ -21903,7 +22029,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-02T12:15:57.438Z",
+        "fetched_at": "2026-06-05T12:17:24.373Z",
         "homepage_url": "https://finviz.com/",
         "example_url": "https://finviz.com/register?affilId=659201043&twclid=237p0oqyf8bhakod3naytz02qh",
         "homepage_status": 200,
@@ -23513,7 +23639,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-02T12:15:57.733Z",
+        "fetched_at": "2026-06-05T12:47:22.853Z",
         "homepage_url": "https://rice.edu/",
         "example_url": "https://news.rice.edu/news/2026/more-dangerous-and-unpredictable-experts-discuss-ongoing-iran-conflict",
         "homepage_status": null,
@@ -24125,7 +24251,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-02T12:46:02.433Z",
+        "fetched_at": "2026-06-05T12:47:28.865Z",
         "homepage_url": "https://gmanetwork.com/",
         "example_url": "https://gmanetwork.com/news/topstories/nation/987975/pnp-on-alert-as-senate-may-convene-as-impeachment-court",
         "homepage_status": 200,
@@ -25848,7 +25974,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-02T13:46:13.569Z",
+        "fetched_at": "2026-06-05T13:47:36.973Z",
         "homepage_url": "https://statefreedomcaucus.org/",
         "example_url": "https://www.statefreedomcaucus.org/15-strong/?twclid=2epfodwob5z2m8xe9l0e1w4xfa",
         "homepage_status": null,
@@ -30308,129 +30434,6 @@
       }
     },
     {
-      "domain": "mexc.com",
-      "entity": "Mexc",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-22T03:21:42.000Z",
-      "last_seen_at": "2026-06-02T09:33:49.000Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://www.mexc.com/register?utm_source=brandad&utm_medium=twitter&utm_campaign=pizza_register&twclid=22vw5h310hr1lnaz6krw03u5v2",
-          "https://www.mexc.com/campaigns/SpaceX-Airdrop?utm_source=brandad&utm_medium=twitter&utm_campaign=stocks_spot&twclid=27s1s3kta2izsonhfa4dvy6z9o"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "mexc"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.1,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3536197916666667,
-          "confidence": 0.10997499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-03T09:16:22.911Z",
-        "homepage_url": "https://mexc.com/",
-        "example_url": "https://www.mexc.com/register?utm_source=brandad&utm_medium=twitter&utm_campaign=pizza_register&twclid=22vw5h310hr1lnaz6krw03u5v2",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.mexc.com/",
-        "example_final_url": "https://www.mexc.com/register?utm_source=brandad&utm_medium=twitter&utm_campaign=pizza_register&twclid=22vw5h310hr1lnaz6krw03u5v2",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "interserver.net",
       "entity": "Interserver",
       "kind": "unknown",
@@ -31260,7 +31263,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-02T08:15:54.585Z",
+        "fetched_at": "2026-06-05T12:47:29.524Z",
         "homepage_url": "https://agentstatus.dev/",
         "example_url": "https://agentstatus.dev/?twclid=25rbfxkgyh0s8w6dbsvrb25thd",
         "homepage_status": 200,
@@ -31504,7 +31507,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-02T12:45:57.302Z",
+        "fetched_at": "2026-06-05T12:47:29.761Z",
         "homepage_url": "https://twimg.com/",
         "example_url": "https://pbs.twimg.com/media/GMB52q8X0AA0k_e?format=jpg&name=large",
         "homepage_status": null,
@@ -31626,7 +31629,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-02T12:45:58.390Z",
+        "fetched_at": "2026-06-05T14:17:24.853Z",
         "homepage_url": "https://t.me/",
         "example_url": "http://t.me/PressTV",
         "homepage_status": 200,
@@ -31748,7 +31751,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-02T12:46:03.085Z",
+        "fetched_at": "2026-06-05T14:17:25.332Z",
         "homepage_url": "https://abcnews.link/",
         "example_url": "https://abcnews.link/SAFHg1K",
         "homepage_status": 200,
@@ -31870,7 +31873,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-02T14:15:57.854Z",
+        "fetched_at": "2026-06-05T14:17:25.458Z",
         "homepage_url": "https://elpais.com/",
         "example_url": "https://elpais.com/",
         "homepage_status": 403,
@@ -32114,7 +32117,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-02T14:15:59.113Z",
+        "fetched_at": "2026-06-05T14:17:26.723Z",
         "homepage_url": "https://trib.al/",
         "example_url": "https://trib.al/etqydoJ",
         "homepage_status": 200,
