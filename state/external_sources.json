@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-06T05:47:46.229Z",
+  "generated_at": "2026-06-06T08:17:18.889Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-06T05:48:14.768Z",
+  "profiled_at": "2026-06-06T08:17:46.933Z",
   "sources": [
     {
       "domain": "justice.gov",
@@ -1026,6 +1026,140 @@
       }
     },
     {
+      "domain": "com.ph",
+      "entity": "Com Ph",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-15T09:58:55.036Z",
+      "last_seen_at": "2026-06-06T07:22:45.314Z",
+      "discovery": {
+        "distinct_urls": 18,
+        "example_urls": [
+          "https://x.tv5.com.ph/news/national/read/arrest-warrants-issued-vs-discayas-over-malversation-graft-charges-tied-to-flood-control-projects-malolos-court",
+          "https://c.lazada.com.ph/t/c.dp86nK?url=https%3A%2F%2Fpages.lazada.com.ph%2Fwow%2Fgcp%2Froute%2Flazada%2Fph%2Fupr_1000345_lazada%2Fchannel%2Fph%2Fupr-router%2Frender%3Fwx_navbar_transparent%3Dtrue%26hybrid%3D1%26data_prefetch%3Dtrue%26at_iframe%3D1%26lzd_navbar_hidden%3Dtrue%26pha%3Dtrue%26prefetch_replace%3D1%26wh_pid%3D%2Flazada%2Fmegascenario%2Fph%2Fmid-month-april%2FMCP-Omaf&twclid=2bcs2xs7o6kl7buuuabcgrk2d8",
+          "https://pages.lazada.com.ph/wow/gcp/route/lazada/ph/upr_1000345_lazada/channel/ph/upr-router/render?hybrid=1&data_prefetch=true&at_iframe=1&prefetch_replace=1&wx_navbar_transparent=true&wh_pid=/lazada/superseries/ph/PH_LazTMall_Multi-Brand_Campaign_Apr_2026/zE7myizE8n",
+          "https://c.lazada.com.ph/t/c.dp86nK?url=https%3A%2F%2Fpages.lazada.com.ph%2Fwow%2Fgcp%2Froute%2Flazada%2Fph%2Fupr_1000345_lazada%2Fchannel%2Fph%2Fupr-router%2Frender%3Fwx_navbar_transparent%3Dtrue%26hybrid%3D1%26data_prefetch%3Dtrue%26at_iframe%3D1%26lzd_navbar_hidden%3Dtrue%26pha%3Dtrue%26prefetch_replace%3D1%26wh_pid%3D%2Flazada%2Fmegascenario%2Fph%2Fmid-month-april%2FMCP-Omaf",
+          "https://c.lazada.com.ph/t/c.Ys6kWB?ulink=false&deeplink=false&intent=false&disable_smb=true&url=https%3A%2F%2Fpages.lazada.com.ph%2Fwow%2Fgcp%2Froute%2Flazada%2Fph%2Fupr_1000345_lazada%2Fchannel%2Fph%2Fupr-router%2Frender%3Fhybrid%3D1%26data_prefetch%3Dtrue%26prefetch_replace%3D1%26at_iframe%3D1%26wh_pid%3D%2Flazada%2Fchannel%2Fph%2Fhomepage%2Flazsubsidy%26wx_navbar_transparent%3Dtrue%26lzd_navbar_hidden%3Dtrue&twclid=25oibdc5ormovb5clviko4s747"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 2,
+          "feed_buffer": 6,
+          "feed_buffer_reply": 5,
+          "journals": 11
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "lazadaph"
+        ],
+        "distinct_axes": [
+          "axis_political_trust_corruption_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.7066666666666666,
+          "basis": [
+            "distinct_urls:18",
+            "distinct_axes:2",
+            "origin_types:4"
+          ]
+        },
+        "corroboration": {
+          "score": 0.4583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:4"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.12,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:18",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.5275520833333333,
+          "confidence": 0.61715,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:18",
+            "distinct_axes:2",
+            "origin_types:4",
+            "referring_accounts:1",
+            "origin_types:4",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-05T15:47:30.414Z",
+        "homepage_url": "https://com.ph/",
+        "example_url": "https://c.lazada.com.ph/t/c.dp86nK?url=https%3A%2F%2Fpages.lazada.com.ph%2Fwow%2Fgcp%2Froute%2Flazada%2Fph%2Fupr_1000345_lazada%2Fchannel%2Fph%2Fupr-router%2Frender%3Fwx_navbar_transparent%3Dtrue%26hybrid%3D1%26data_prefetch%3Dtrue%26at_iframe%3D1%26lzd_navbar_hidden%3Dtrue%26pha%3Dtrue%26prefetch_replace%3D1%26wh_pid%3D%2Flazada%2Fmegascenario%2Fph%2Fmid-month-april%2FMCP-Omaf&twclid=2bcs2xs7o6kl7buuuabcgrk2d8",
+        "homepage_status": null,
+        "example_status": 200,
+        "homepage_final_url": "https://com.ph/",
+        "example_final_url": "https://pages.lazada.com.ph/wow/gcp/route/lazada/ph/upr_1000345_lazada/channel/ph/upr-router/render?wx_navbar_transparent=true&hybrid=1&data_prefetch=true&at_iframe=1&lzd_navbar_hidden=true&pha=true&prefetch_replace=1&wh_pid=/lazada/megascenario/ph/mid-month-april/MCP-Omaf&laz_trackid=2:mm_375930618_374301503_2330951628:clk5ghhjb1jqc7fitbehhm&mkttid=clk5ghhjb1jqc7fitbehhm&exlaz=c_lzd_byr:mm_375930618_374301503_2330951628!ph4043004:clk5ghhjb1jqc7fitbehhm::",
+        "homepage_content_type": "",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 18,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "apnews.com",
       "entity": "Apnews",
       "kind": "news",
@@ -1283,9 +1417,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-06T05:23:22.000Z",
+      "last_seen_at": "2026-06-06T08:00:42.000Z",
       "discovery": {
-        "distinct_urls": 4429,
+        "distinct_urls": 4466,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1294,10 +1428,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 2627,
-          "feed_buffer_reply": 2776
+          "feed_buffer": 2655,
+          "feed_buffer_reply": 2801
         },
-        "distinct_referring_accounts": 1628,
+        "distinct_referring_accounts": 1629,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1335,7 +1469,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:4429",
+            "distinct_urls:4466",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1343,7 +1477,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1628",
+            "referring_accounts:1629",
             "origin_types:2"
           ]
         },
@@ -1373,10 +1507,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:4429",
+            "distinct_urls:4466",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1628",
+            "referring_accounts:1629",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -2079,136 +2213,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "com.ph",
-      "entity": "Com Ph",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-15T09:58:55.036Z",
-      "last_seen_at": "2026-06-06T05:21:09.952Z",
-      "discovery": {
-        "distinct_urls": 15,
-        "example_urls": [
-          "https://c.lazada.com.ph/t/c.dp86nK?url=https%3A%2F%2Fpages.lazada.com.ph%2Fwow%2Fgcp%2Froute%2Flazada%2Fph%2Fupr_1000345_lazada%2Fchannel%2Fph%2Fupr-router%2Frender%3Fwx_navbar_transparent%3Dtrue%26hybrid%3D1%26data_prefetch%3Dtrue%26at_iframe%3D1%26lzd_navbar_hidden%3Dtrue%26pha%3Dtrue%26prefetch_replace%3D1%26wh_pid%3D%2Flazada%2Fmegascenario%2Fph%2Fmid-month-april%2FMCP-Omaf&twclid=2bcs2xs7o6kl7buuuabcgrk2d8",
-          "https://pages.lazada.com.ph/wow/gcp/route/lazada/ph/upr_1000345_lazada/channel/ph/upr-router/render?hybrid=1&data_prefetch=true&at_iframe=1&prefetch_replace=1&wx_navbar_transparent=true&wh_pid=/lazada/superseries/ph/PH_LazTMall_Multi-Brand_Campaign_Apr_2026/zE7myizE8n",
-          "https://c.lazada.com.ph/t/c.dp86nK?url=https%3A%2F%2Fpages.lazada.com.ph%2Fwow%2Fgcp%2Froute%2Flazada%2Fph%2Fupr_1000345_lazada%2Fchannel%2Fph%2Fupr-router%2Frender%3Fwx_navbar_transparent%3Dtrue%26hybrid%3D1%26data_prefetch%3Dtrue%26at_iframe%3D1%26lzd_navbar_hidden%3Dtrue%26pha%3Dtrue%26prefetch_replace%3D1%26wh_pid%3D%2Flazada%2Fmegascenario%2Fph%2Fmid-month-april%2FMCP-Omaf",
-          "https://c.lazada.com.ph/t/c.Ys6kWB?ulink=false&deeplink=false&intent=false&disable_smb=true&url=https%3A%2F%2Fpages.lazada.com.ph%2Fwow%2Fgcp%2Froute%2Flazada%2Fph%2Fupr_1000345_lazada%2Fchannel%2Fph%2Fupr-router%2Frender%3Fhybrid%3D1%26data_prefetch%3Dtrue%26prefetch_replace%3D1%26at_iframe%3D1%26wh_pid%3D%2Flazada%2Fchannel%2Fph%2Fhomepage%2Flazsubsidy%26wx_navbar_transparent%3Dtrue%26lzd_navbar_hidden%3Dtrue&twclid=25oibdc5ormovb5clviko4s747",
-          "https://c.lazada.com.ph/t/c.Ys6kWB?ulink=false&deeplink=false&intent=false&disable_smb=true&url=https%3A%2F%2Fpages.lazada.com.ph%2Fwow%2Fgcp%2Froute%2Flazada%2Fph%2Fupr_1000345_lazada%2Fchannel%2Fph%2Fupr-router%2Frender%3Fhybrid%3D1%26data_prefetch%3Dtrue%26prefetch_replace%3D1%26at_iframe%3D1%26wh_pid%3D%2Flazada%2Fchannel%2Fph%2Fhomepage%2Flazsubsidy%26wx_navbar_transparent%3Dtrue%26lzd_navbar_hidden%3Dtrue&twclid=2529ju9hqrk4z0b4emdni6dwxx"
-        ],
-        "origin_counts": {
-          "feed_buffer": 6,
-          "feed_buffer_reply": 5,
-          "journals": 7
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "lazadaph"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.53,
-          "basis": [
-            "distinct_urls:15",
-            "distinct_axes:0",
-            "origin_types:3"
-          ]
-        },
-        "corroboration": {
-          "score": 0.3708333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:3"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.12,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:18",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.480703125,
-          "confidence": 0.504675,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:15",
-            "distinct_axes:0",
-            "origin_types:3",
-            "referring_accounts:1",
-            "origin_types:3",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-05T15:47:30.414Z",
-        "homepage_url": "https://com.ph/",
-        "example_url": "https://c.lazada.com.ph/t/c.dp86nK?url=https%3A%2F%2Fpages.lazada.com.ph%2Fwow%2Fgcp%2Froute%2Flazada%2Fph%2Fupr_1000345_lazada%2Fchannel%2Fph%2Fupr-router%2Frender%3Fwx_navbar_transparent%3Dtrue%26hybrid%3D1%26data_prefetch%3Dtrue%26at_iframe%3D1%26lzd_navbar_hidden%3Dtrue%26pha%3Dtrue%26prefetch_replace%3D1%26wh_pid%3D%2Flazada%2Fmegascenario%2Fph%2Fmid-month-april%2FMCP-Omaf&twclid=2bcs2xs7o6kl7buuuabcgrk2d8",
-        "homepage_status": null,
-        "example_status": 200,
-        "homepage_final_url": "https://com.ph/",
-        "example_final_url": "https://pages.lazada.com.ph/wow/gcp/route/lazada/ph/upr_1000345_lazada/channel/ph/upr-router/render?wx_navbar_transparent=true&hybrid=1&data_prefetch=true&at_iframe=1&lzd_navbar_hidden=true&pha=true&prefetch_replace=1&wh_pid=/lazada/megascenario/ph/mid-month-april/MCP-Omaf&laz_trackid=2:mm_375930618_374301503_2330951628:clk5ghhjb1jqc7fitbehhm&mkttid=clk5ghhjb1jqc7fitbehhm&exlaz=c_lzd_byr:mm_375930618_374301503_2330951628!ph4043004:clk5ghhjb1jqc7fitbehhm::",
-        "homepage_content_type": "",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 18,
           "opinion_marker": false
         }
       }
@@ -4894,7 +4898,7 @@
       "entity": "Tinyurl",
       "kind": "unknown",
       "first_seen_at": "2026-05-14T17:51:43.000Z",
-      "last_seen_at": "2026-06-06T05:21:09.952Z",
+      "last_seen_at": "2026-06-06T06:21:08.788Z",
       "discovery": {
         "distinct_urls": 6,
         "example_urls": [
@@ -4907,7 +4911,7 @@
         "origin_counts": {
           "feed_buffer": 1,
           "feed_buffer_reply": 1,
-          "journals": 9
+          "journals": 10
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -5868,7 +5872,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T07:16:19.093Z",
+        "fetched_at": "2026-06-06T07:17:43.609Z",
         "homepage_url": "https://era.app/",
         "example_url": "https://era.app/?twclid=23bm7jtrc66pin9ydx0wvupecw",
         "homepage_status": 200,
@@ -6624,7 +6628,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T06:16:19.432Z",
+        "fetched_at": "2026-06-06T06:17:42.283Z",
         "homepage_url": "https://leronx.org/",
         "example_url": "https://leronx.org/?ref=005&tw=r84nh&tw_click=tw-r84nh-r84ni&twclid=29ffsgobmrsvjmkjlmgcllypv0",
         "homepage_status": 403,
@@ -9183,6 +9187,133 @@
       }
     },
     {
+      "domain": "inqnews.net",
+      "entity": "Inqnews",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-15T11:14:00Z",
+      "last_seen_at": "2026-06-06T07:22:45.314Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://inqnews.net/major",
+          "https://inqnews.net/ErwanOnPoliticians",
+          "https://inqnews.net/Chizsaidtoretu",
+          "https://inqnews.net/AplascaContestsFootage",
+          "https://inqnews.net/FilAmfugitives"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 1,
+          "journals": 7
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.32416666666666666,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:1",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.39669270833333337,
+          "confidence": 0.196325,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:1",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-05T23:48:27.425Z",
+        "homepage_url": "https://inqnews.net/",
+        "example_url": "https://inqnews.net/major",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://inqnews.net/login.php",
+        "example_final_url": "https://inqnews.net/major",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "oracle.com",
       "entity": "Oracle",
       "kind": "unknown",
@@ -10694,132 +10825,6 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 6,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "inqnews.net",
-      "entity": "Inqnews",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-15T11:14:00Z",
-      "last_seen_at": "2026-05-20T20:53:50.843Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://inqnews.net/major",
-          "https://inqnews.net/ErwanOnPoliticians",
-          "https://inqnews.net/Chizsaidtoretu",
-          "https://inqnews.net/AplascaContestsFootage"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 1,
-          "journals": 5
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.295,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:1",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3903125,
-          "confidence": 0.16770000000000002,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:1",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-05T23:48:27.425Z",
-        "homepage_url": "https://inqnews.net/",
-        "example_url": "https://inqnews.net/major",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://inqnews.net/login.php",
-        "example_final_url": "https://inqnews.net/major",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -16555,7 +16560,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T06:46:18.183Z",
+        "fetched_at": "2026-06-06T06:47:43.099Z",
         "homepage_url": "https://tolt.com/",
         "example_url": "https://tolt.com/?twclid=24jeerwwldzt1cwgx3ktzfvzm5",
         "homepage_status": 200,
@@ -21568,11 +21573,135 @@
       }
     },
     {
+      "domain": "abscbn.news",
+      "entity": "Abscbn News",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-08T05:06:14.266Z",
+      "last_seen_at": "2026-06-06T07:22:45.314Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://abscbn.news/4cXfLnd",
+          "https://abscbn.news/4tOmvJk",
+          "https://abscbn.news/49kbEiJ",
+          "https://abscbn.news/4e0l0Sn",
+          "https://abscbn.news/49GIRFj"
+        ],
+        "origin_counts": {
+          "journals": 8
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.20583333333333334,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.36260416666666667,
+          "confidence": 0.1636,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-05T05:47:45.919Z",
+        "homepage_url": "https://abscbn.news/",
+        "example_url": "https://abscbn.news/4cXfLnd",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://news.abs-cbn.com/",
+        "example_final_url": "https://www.abs-cbn.com/news/health-science/2026/5/8/hantavirus-not-like-covid-doctor-treating-patient-in-netherlands-0724",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "gmanetwork.com",
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T01:32:00.745Z",
-      "last_seen_at": "2026-06-06T05:21:09.952Z",
+      "last_seen_at": "2026-06-06T07:22:45.314Z",
       "discovery": {
         "distinct_urls": 5,
         "example_urls": [
@@ -21583,7 +21712,7 @@
           "https://gmanetwork.com/news/showbiz/chikaminute/990341/kaye-abad-gets-pink-ribbon-tattoo-as-she-celebrates-cancer-survivors-month"
         ],
         "origin_counts": {
-          "journals": 15
+          "journals": 17
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -22527,7 +22656,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T08:16:20.942Z",
+        "fetched_at": "2026-06-06T08:17:45.502Z",
         "homepage_url": "https://controlweedsnotfarming.com/",
         "example_url": "https://controlweedsnotfarming.com/?utm_source=X&utm_medium=Social&utm_campaign=Remarketing&utm_term=Landing+Page.+Visitors&utm_content=Food+On+Our+Tables&twclid=2ehfqrtyrcni2wc5jyzgjr19ra",
         "homepage_status": 200,
@@ -24406,129 +24535,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 19,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "abscbn.news",
-      "entity": "Abscbn News",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-08T05:06:14.266Z",
-      "last_seen_at": "2026-06-02T05:19:55.890Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://abscbn.news/4cXfLnd",
-          "https://abscbn.news/4tOmvJk",
-          "https://abscbn.news/49kbEiJ",
-          "https://abscbn.news/4e0l0Sn"
-        ],
-        "origin_counts": {
-          "journals": 6
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.17666666666666664,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3562239583333333,
-          "confidence": 0.134975,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-05T05:47:45.919Z",
-        "homepage_url": "https://abscbn.news/",
-        "example_url": "https://abscbn.news/4cXfLnd",
-        "homepage_status": 403,
-        "example_status": 403,
-        "homepage_final_url": "https://news.abs-cbn.com/",
-        "example_final_url": "https://www.abs-cbn.com/news/health-science/2026/5/8/hantavirus-not-like-covid-doctor-treating-patient-in-netherlands-0724",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -26471,7 +26477,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T06:46:18.417Z",
+        "fetched_at": "2026-06-06T06:47:43.406Z",
         "homepage_url": "https://monadicdna.com/",
         "example_url": "https://explorer.monadicdna.com/?twclid=23v8cbj938nxfoq8gmro6dqa1l",
         "homepage_status": 200,
@@ -26717,7 +26723,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T06:16:20.510Z",
+        "fetched_at": "2026-06-06T06:17:43.428Z",
         "homepage_url": "https://alphacapital.pro/",
         "example_url": "https://alphacapital.pro/pages/performance/?utm_source=twitter&utm_medium=ad1&utm_campaign=ac&twclid=2b8weeqkz95cs1xc59f8v2j7ob",
         "homepage_status": 200,
@@ -26840,7 +26846,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T06:46:18.934Z",
+        "fetched_at": "2026-06-06T06:47:43.742Z",
         "homepage_url": "https://willowvoice.com/",
         "example_url": "https://willowvoice.com/developers?twclid=2ebuy7l735ljqyo9xotbgwpmp0",
         "homepage_status": 200,
@@ -37491,7 +37497,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T06:16:21.049Z",
+        "fetched_at": "2026-06-06T06:17:43.992Z",
         "homepage_url": "https://lately.com/",
         "example_url": "http://www.lately.com/?twclid=26st81se5sstdkz28lll98t6pl",
         "homepage_status": 200,
@@ -37613,7 +37619,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T06:16:21.531Z",
+        "fetched_at": "2026-06-06T06:17:44.806Z",
         "homepage_url": "https://deepgram.com/",
         "example_url": "https://deepgram.com/state-of-voice-ai-report?utm_source=twitter&utm_medium=paidsocial&utm_campaign=Twitter_ACQ_Q42025_Evergreen_Prospecting&utm_content=state-of-voice&twclid=22an8eeru83cxpws6fqbuga3v2",
         "homepage_status": 200,
@@ -37735,7 +37741,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T06:46:19.176Z",
+        "fetched_at": "2026-06-06T06:47:44.050Z",
         "homepage_url": "https://topstocks.com/",
         "example_url": "https://topstocks.com/cvkd?twclid=2br9vd88ywgw104idmz125ag0u",
         "homepage_status": 200,
@@ -38345,7 +38351,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T07:16:19.680Z",
+        "fetched_at": "2026-06-06T07:17:44.074Z",
         "homepage_url": "https://gothamist.com/",
         "example_url": "https://gothamist.com/news/mamdani-administrations-new-72nd-street-bike-lane-would-link-upper-east-and-west-sides&utm_id=571007&sfmc_id=79023345&utm_content=2026415&nypr_member=True",
         "homepage_status": 200,
@@ -38467,7 +38473,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T07:16:20.480Z",
+        "fetched_at": "2026-06-06T07:17:44.942Z",
         "homepage_url": "https://fullpath.com/",
         "example_url": "https://www.fullpath.com/ai-powered-text-message-marketing-for-car-dealers/?twclid=21jxitvmgt9jsjh3rm5bmiedxu",
         "homepage_status": 200,
@@ -38589,7 +38595,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T07:16:20.832Z",
+        "fetched_at": "2026-06-06T07:17:45.226Z",
         "homepage_url": "https://johnkennedy.com/",
         "example_url": "https://support.johnkennedy.com/just-a-little-quiz/?red=cbdb1d6f-e5fe-4aa4-a295-1dbdd471cee6&utm_source=X&utm_medium=Paid&utm_campaign=Quiz&twclid=27n7ucaicrd2diuikk5gsjxiza",
         "homepage_status": 200,
@@ -38711,7 +38717,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T08:16:21.682Z",
+        "fetched_at": "2026-06-06T08:17:46.225Z",
         "homepage_url": "https://gunowners.org/",
         "example_url": "https://www.gunowners.org/?twclid=25jr1t1tq8terhv5da5ta78vcm",
         "homepage_status": 200,
@@ -41029,7 +41035,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T05:16:17.504Z",
+        "fetched_at": "2026-06-06T07:47:43.669Z",
         "homepage_url": "https://bitcoinmagazine.com/",
         "example_url": "https://bitcoinmagazine.com/sponsored/how-does-borrowing-against-bitcoin-actually-work?twclid=2a0s8fadkcmnax1qcvr537zyb6",
         "homepage_status": 200,
@@ -41151,7 +41157,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T05:16:17.713Z",
+        "fetched_at": "2026-06-06T07:47:43.875Z",
         "homepage_url": "https://strategy.com/",
         "example_url": "https://www.strategy.com/strc/learn?utm_source=xads&utm_medium=paid_display&utm_campaign=industry_april&twclid=28xpw7etvxzmes0ivvfppcbml4",
         "homepage_status": 403,
@@ -41273,7 +41279,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T05:16:17.971Z",
+        "fetched_at": "2026-06-06T07:47:44.171Z",
         "homepage_url": "https://masterpics.com/",
         "example_url": "https://masterpics.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=TW_MP_US_Mday_26_videos&twclid=29m23hby3m62dvvffl6do9x4mo",
         "homepage_status": 200,
@@ -41395,7 +41401,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T07:46:19.789Z",
+        "fetched_at": "2026-06-06T07:47:44.928Z",
         "homepage_url": "https://up-nstranscontinental.com/",
         "example_url": "https://www.up-nstranscontinental.com/?utm_source=x&utm_medium=paid_social&utm_campaign=national_phase2&utm_content=pro_business&twclid=23k0v948320d3qk6vqkggc73ru",
         "homepage_status": null,
@@ -41517,7 +41523,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T07:46:20.244Z",
+        "fetched_at": "2026-06-06T08:17:46.689Z",
         "homepage_url": "https://lets.shop/",
         "example_url": "https://lets.shop/2948/FuelGoodFeelGood-TW-ATT/?utm_medium=social&utm_source=twitter&utm_campaign=1H26_FGFG&utm_content=FGFG&utm_term=Native&twclid=2738mck7r6rdjnyker6nhf1z82",
         "homepage_status": 200,
@@ -41639,7 +41645,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T07:46:20.474Z",
+        "fetched_at": "2026-06-06T08:17:46.933Z",
         "homepage_url": "https://fulfil.io/",
         "example_url": "https://www.fulfil.io/merchants/dbrand/?twclid=243ecvpsf0p6ki2xlq4h98ksb7",
         "homepage_status": 403,
@@ -56044,6 +56050,160 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "atlassian"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "energyalert.org",
+      "entity": "Energyalert",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-06T06:50:07.620Z",
+      "last_seen_at": "2026-06-06T06:50:07.620Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://energyalert.org/speed-to-power/?twclid=29c3xdnaadwruhur8bny93vxj7"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "alertenergyusa"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "ib.barclays",
+      "entity": "Ib Barclays",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-06T02:33:11.000Z",
+      "last_seen_at": "2026-06-06T02:33:11.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.ib.barclays/our-insights/the-flip-side-podcast/is-US-equities-exceptionalism-finally-cracking.html?cid=social-single-carousel_twitter_bcib-2023-twitter--emea-en_1x1_standard_r__2602fs80r__carousel_content_1x1_soc-carousel_na_vid_na_na_social-single-carousel_32978842&twclid=276vz5nrdrhpo1aff0ac343mzs"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "barclayscib"
         ],
         "distinct_axes": []
       },
