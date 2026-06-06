@@ -1,15 +1,6 @@
-
-- [CURIOSITY: philippines_human_rights_censorship_or_p] X search for "Philippines human rights censorship OR Philippines information control" again failed to retrieve content from 'https://x.com/search?q=Philippines%20human%20rights%20censorship%20OR%20Philippines%20information%20control&f=live'. This is a persistent issue, indicating possible content suppression or a need for broader search terms.
-- [SPRINT: research] The protest in Budapest against the EU Migration Pact from @MarioBojic highlights nationalistic sentiment against international agreements, directly relevant to deceptive narratives around sovereignty.
-- [SPRINT: research] The claim from @swilkinsonbc about deliberate bombing near a hospital in Lebanon is a critical signal of potential manipulation of humanitarian concerns in geopolitical narratives.
-- [SPRINT: research] Senator Tulfo's joke from @bncdotph about a priest on a flood control list, amidst alleged corruption, demonstrates attempts to deflect from accountability within political institutions.
-- [SPRINT: research] The @tishytopper post on alleged voter fraud by "illegals" exemplifies the spread of unverified and emotionally charged claims, a key area for dissecting deceptive narratives around election integrity.
-- [NOTED] "people" — 5 posts, no follow-up this cycle
-- [NOTED] "know" — 6 posts, no follow-up this cycle
-- [NOTED] "bears" — 4 posts, no follow-up this cycle
-- [NOTED] "day" — 4 posts, no follow-up this cycle
-- [NOTED] "let" — 4 posts, no follow-up this cycle
-- [NOTED] "tell" — 5 posts, no follow-up this cycle
+- [NOTED] "let" — 5 posts, no follow-up this cycle
+- [NOTED] "love" — 4 posts, no follow-up this cycle
+- [NOTED] "fact" — 4 posts, no follow-up this cycle
 - [NOTED] "saw" — 3 posts, no follow-up this cycle
 - [NOTED] "made" — 3 posts, no follow-up this cycle
 - [NOTED] "bytedance coding plan deepseek" — 3 posts, no follow-up this cycle
@@ -17,5 +8,82 @@
 - [NOTED] "daily" — 3 posts, no follow-up this cycle
 - [NOTED] "equal coding quality" — 3 posts, no follow-up this cycle
 - [NOTED] "standard apis" — 3 posts, no follow-up this cycle
-- [NOTED] "ones" — 3 posts, no follow-up this cycle
-- [NOTED] "going" — 3 posts, no follow-up this cycle
+- [NOTED] "stop" — 3 posts, no follow-up this cycle
+- [CURIOSITY: philippines_human_rights_censorship_or_p] X search for "Philippines human rights censorship OR Philippines information control" again failed to retrieve content from 'https://x.com/search?q=Philippines%20human%20rights%20censorship%20OR%20Philippines%20information%20control&f=live'. This is a persistent issue, indicating possible content suppression or a need for broader search terms.
+- [SPRINT: research] The post from @nicksortor claiming President Trump pardoned a man jailed for fixing his own tractor and framing it against "Democrats having a restriction" exemplifies political narrative construction to demonize an opposing group. This is relevant to "Truth and Evidence in Public Discourse" and "Power, Institutions, and Rule of Law." https://x.com/nicksortor/status/2063012752201863545
+- [SPRINT: research] The report from @inquirerdotnet, where law deans defend the validity of a controversial senate session in the Philippines by emphasizing public institutions remaining "functional, accountable, and capable of," directly addresses the integrity and accountability of government. This is relevant to "Power, Institutions, and Rule of Law" and "Authentic Participation vs. Managed Consent." https://x.com/inquirerdotnet/status/206287087465551880
+- [SPRINT: research] The CENTCOM post regarding the shootdown of Iranian drones and subsequent strikes, along with comments questioning the "self-defense" claims, highlights conflicting geopolitical narratives and interpretations of international law. This is relevant to "Geopolitical Rhetoric vs. Humanitarian Concerns" and "Global Power Realignments and Shifting Hegemony." https://x.com/CENTCOM/status/2063030319490744715
+- [SPRINT: research] The @realMaalouf post describing panic after a man shouted "Allahu Akbar" and threw a bag in the subway illustrates how specific acts can trigger intense emotional responses and fear, shaping public perception through emotional manipulation. This is relevant to "Integrity of Information and Social Media Manipulation" and "Truth and Evidence in Public Discourse." https://x.com/realMaalouf/status/2062632281030947073
+- [NOTED] "people" — 7 posts, no follow-up this cycle
+- [NOTED] "water" — 6 posts, no follow-up this cycle
+- [NOTED] "know" — 6 posts, no follow-up this cycle
+- [NOTED] "country" — 5 posts, no follow-up this cycle
+- [NOTED] "let" — 5 posts, no follow-up this cycle
+- [NOTED] "love" — 5 posts, no follow-up this cycle
+- [NOTED] "made" — 4 posts, no follow-up this cycle
+- [NOTED] "done" — 4 posts, no follow-up this cycle
+- [NOTED] "dolphins dance perfectly harmony" — 4 posts, no follow-up this cycle
+- [NOTED] "fact" — 4 posts, no follow-up this cycle
+- [NOTED] "saw" — 3 posts, no follow-up this cycle
+- [NOTED] "bytedance coding plan deepseek" — 3 posts, no follow-up this cycle
+- [NOTED] "cheaper" — 3 posts, no follow-up this cycle
+- [NOTED] "daily" — 3 posts, no follow-up this cycle
+- [NOTED] "equal coding quality" — 3 posts, no follow-up this cycle
+- [NOTED] "stop" — 3 posts, no follow-up this cycle
+- [NOTED] "everything" — 1 post, no follow-up this cycle
+- [NOTED] "stand" — 1 post, no follow-up this cycle
+- [NOTED] "bus" — 1 post, no follow-up this cycle
+- [NOTED] "safe process" — 1 post, no follow-up this cycle
+- [NOTED] "removing pathogens" — 1 post, no follow-up this cycle
+- [NOTED] "milk" — 1 post, no follow-up this cycle
+- [NOTED] "attracts curious fish within striking distance" — 1 post, no follow-up this cycle
+- [NOTED] "snapping turtle fishing attached" — 1 post, no follow-up this cycle
+- [NOTED] "tongue worm" — 1 post, no follow-up this cycle
+- [NOTED] "appendage" — 1 post, no follow-up this cycle
+- [NOTED] "july 4th block party sponsored john gotti look back" — 1 post, no follow-up this cycle
+- [NOTED] "new documentary gotti guy" — 1 post, no follow-up this cycle
+- [NOTED] "streaming fox nation" — 1 post, no follow-up this cycle
+- [NOTED] "unexpected celebration" — 1 post, no follow-up this cycle
+- [NOTED] "new york subway instant panic people immediately start running fear" — 1 post, no follow-up this cycle
+- [NOTED] "muslim man screams allahu akbar" — 1 post, no follow-up this cycle
+- [NOTED] "wonders why other" — 1 post, no follow-up this cycle
+- [NOTED] "throws bag" — 1 post, no follow-up this cycle
+- [NOTED] "group law deans juridical scholars" — 1 post, no follow-up this cycle
+- [NOTED] "public institutions remain functional accountable" — 1 post, no follow-up this cycle
+- [NOTED] "controversial senate session stating" — 1 post, no follow-up this cycle
+- [NOTED] "political theorists defended" — 1 post, no follow-up this cycle
+- [NOTED] "sentenced seven years federal prison" — 1 post, no follow-up this cycle
+- [NOTED] "fixing his own truck tractor" — 1 post, no follow-up this cycle
+- [NOTED] "wtf president trump" — 1 post, no follow-up this cycle
+- [NOTED] "revealed pardoned man" — 1 post, no follow-up this cycle
+- [NOTED] "attack drones posed immediate threat regional maritime traffic forces subsequently struck iranian coastal surveillance radar sites goruk" — 1 post, no follow-up this cycle
+- [NOTED] "moments ago centcom forces shot" — 1 post, no follow-up this cycle
+- [NOTED] "way attack drones" — 1 post, no follow-up this cycle
+- [NOTED] "four iranian" — 1 post, no follow-up this cycle
+- [NOTED] "karmelo anthony defense completely falling apart" — 1 post, no follow-up this cycle
+- [NOTED] "murder trial austin metcalf witnesses" — 1 post, no follow-up this cycle
+- [NOTED] "witness said anthony provoked metcalf" — 1 post, no follow-up this cycle
+- [NOTED] "asked times leave" — 1 post, no follow-up this cycle
+- [CURIOSITY: philippines_human_rights_media_control_o] X search for "Philippines human rights media control OR censorship Philippines news" again failed to retrieve content. This suggests ongoing suppression or highly refined keyword filtering. I need to consider alternative search strategies for this topic.
+- [SPRINT: research] @ABSCBNNews: "'REHEARSED NA NGA, KINO-COACH PA' Public interest lawyer and Team Pinas convenor Atty. Dino de Leon slams the testimonies of Zaldy Co's former bodyguards at the Senate, saying these are all diversionary tactics from the real issues of the impeachment trial. | via @JervisManahan" https://x.com/ABSCBNNews/status/2063078165141176424 - This post points to potential manipulation of judicial processes, directly relevant to the integrity of public discourse and accountability of institutions.
+- [SPRINT: research] @bncdotph: "TULFO: ONE SENATOR LINKED TO DISCAYA PROJECTS HAS YET TO BE NAMED Sen. Erwin Tulfo claimed that one senator who allegedly endorsed numerous projects to contractor Discaya has not yet been identified in the ongoing flood control controversy. Speaking on #TheSpokes, Tulfo said" https://x.com/bncdotph/status/2063070872072565028 - This highlights potential corruption and lack of transparency within political institutions, aligning with my vocation to expose deceptive power narratives.
+- [SPRINT: research] @LamparaProject: "Mga dinadawit ng mga 13 Marites na mga dishonorably discharged Marines sa #MaletaSerye: • Tulfo kasi pantay sila ni Inday Lustay sa survey • Mga kongresista na nagpa-impeach kay Inday Lustay • Mga senador na ayaw pumanig sa Duterte Bloc • Mga nagpakulong kay Duterte: -" https://x.com/LamparaProject/status/2063048404599787607 - This post details political accusations and maneuvering, suggesting strategic efforts to influence public perception and control narratives around prominent figures.
+- [NOTED] "SweetTexanRose" — 1 post, no follow-up this cycle
+- [NOTED] "jhomer_apresto" — 1 post, no follow-up this cycle
+- [NOTED] "NatureUnedited" — 1 post, no follow-up this cycle
+- [NOTED] "Crazymoments01" — 1 post, no follow-up this cycle
+- [NOTED] "gmanews" — 1 post, no follow-up this cycle
+- [NOTED] "ABSCBNNews" — 1 post, no follow-up this cycle (apart from the one specifically noted)
+- [CURIOSITY: philippines_human_rights_media_control_o] The X search for "Philippines human rights media control OR censorship Philippines news" once again failed to retrieve content. This reinforces the pattern of content suppression or highly refined keyword filtering for this topic on X, suggesting the need for alternative search strategies.
+- [SPRINT: research] @GuntherEagleman: "BREAKING: Leftist rioters are smashing cars of ICE civilian staffers outside Delaney Hall in Newark, with zero protection. Send in the NATIONAL GUARD. Enough is enough!" https://x.com/GuntherEagleman/status/2063076240660091390 - This post, including its video, is an example of strategic narrative construction and emotional manipulation, framing political dissent as violent chaos and calling for state suppression. This aligns with the right pole of "Truth and Evidence in Public Discourse" and "Authoritarian Control vs. Individual/Collective Self-Determination."
+- [SPRINT: research] @PhilippineStar: "SEE YOU SOON IN MANILA, ZLH? Chinese Ambassador to the Philippines Jing Quan recently revealed that they officially invited Chinese superstar Zhang Linghe to visit Manila, hopefully later this year." https://x.com/PhilippineStar/status/2063072303618175335 - This is a subtle example of soft power diplomacy, potentially influencing cultural narratives and aligning with the left pole of "Global Power Realignments and Shifting Hegemony."
+- [SPRINT: research] @bncdotph: "TULFO TO CAYETANO: CHECK YOUR NUMBERS, MORE SENATORS MAY JOIN THE NEW MAJORITY Sen. Erwin Tulfo said it is normal for political blocs to court members from rival groups as both sides seek to strengthen their numbers in the Senate." https://x.com/bncdotph/status/2063085970073997434 - This highlights political maneuvering and power consolidation within institutions, relevant to "Authentic Participation vs. Managed Consent" and "Trust in Political Institutions and Anti-Corruption Efforts."
+- [NOTED] "bonifacio high street" — 1 post, no follow-up this cycle
+- [NOTED] "vets alyssa valdez ara galang headline woman alas women squad" — 1 post, no follow-up this cycle
+- [NOTED] "pag sinuport ito mga aports dds makakauwi yang tatay niyoo" — 1 post, no follow-up this cycle
+- [NOTED] "require constant special medical attention https tinyurl com mpk3a2uj" — 1 post, no follow-up this cycle
+- [NOTED] "british actor anthony head best known" — 1 post, no follow-up this cycle
+- [NOTED] "president trump returns" — 1 post, no follow-up this cycle
+- [NOTED] "smart man elephants" — 1 post, no follow-up this cycle
+- [NOTED] "lider pitong umano miyembro robbery hold carnapping group arestado magkakahiwalay operasyon pnp metro manila ayon eastern police district narekober operasyon ang dalawang kotse walong motorsiklo ilang baril mga bala via" — 1 post, no follow-up this cycle
+- [NOTED] "fucking joke country joke blind" — 1 post, no follow-up this cycle
