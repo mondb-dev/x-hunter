@@ -320,6 +320,10 @@ async function postReplyViaCDP(page, tweetUrl, replyText) {
     const el = document.querySelector(sel);
     if (!el) return;
     el.focus();
+    // Clear any leftover draft X persists in the composer (stale unsent text
+    // would otherwise leave the cursor mid-text and splice our reply into it).
+    document.execCommand('selectAll');
+    document.execCommand('delete');
     document.execCommand('insertText', false, txt);
   }, replyText, COMPOSE_BOX);
   await sleep(1200); // wait for React to process the DOM mutation
@@ -329,8 +333,12 @@ async function postReplyViaCDP(page, tweetUrl, replyText) {
     return el ? el.innerText.trim() : '';
   }, COMPOSE_BOX);
 
-  if (!inserted || inserted.length < replyText.length * 0.9) {
-    log(`reply text truncated: ${inserted.length}/${replyText.length} chars — retrying with keyboard`);
+  // Box content must EQUAL the reply (allowing minor trailing whitespace).
+  // A length-only "≥90%" check let spliced wrapper text (box longer than the
+  // reply) pass and post garbage. Require an exact match instead.
+  const insertedOk = inserted === replyText.trim();
+  if (!insertedOk) {
+    log(`reply text mismatch: got ${inserted.length}/${replyText.length} chars — retrying with keyboard`);
     await page.evaluate((sel) => {
       const el = document.querySelector(sel);
       if (el) { el.focus(); document.execCommand('selectAll'); document.execCommand('delete'); }
@@ -361,9 +369,8 @@ async function postReplyViaCDP(page, tweetUrl, replyText) {
       const el = document.querySelector(sel);
       return el ? el.innerText.trim() : '';
     }, COMPOSE_BOX);
-    const firstMatch = retryText.substring(0, 20) === replyText.substring(0, 20);
-    if (!retryText || retryText.length < replyText.length * 0.95 || !firstMatch) {
-      throw new Error(`Reply text insertion failed after retry: got ${retryText.length}/${replyText.length} chars, first20=${firstMatch}`);
+    if (retryText !== replyText.trim()) {
+      throw new Error(`Reply text insertion failed after retry: got ${retryText.length}/${replyText.length} chars, exact=false`);
     }
   }
 

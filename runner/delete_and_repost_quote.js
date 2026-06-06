@@ -148,9 +148,19 @@ async function main() {
   await page.evaluate((sel) => { document.querySelector(sel)?.focus(); }, COMPOSE_BOX);
   await sleep(600);
 
-  await page.evaluate((text) => document.execCommand("insertText", false, text), commentary + "\n" + SOURCE_URL);
+  const repostText = commentary + "\n" + SOURCE_URL;
+  // Clear leftover draft before insert so text is not spliced into stale content.
+  await page.evaluate((text, sel) => {
+    const el = document.querySelector(sel);
+    if (el) { el.focus(); document.execCommand("selectAll"); document.execCommand("delete"); document.execCommand("insertText", false, text); }
+  }, repostText, COMPOSE_BOX);
 
   await sleep(2_000);
+  const repostInserted = await page.evaluate((sel) => {
+    const el = document.querySelector(sel);
+    return el ? el.innerText.trim() : "";
+  }, COMPOSE_BOX);
+  if (repostInserted !== repostText.trim()) throw new Error(`delete_and_repost_quote: compose text mismatch (${repostInserted.length}/${repostText.length} chars) — aborting to avoid spliced post`);
 
   // Check Post button
   await page.waitForSelector(POST_BUTTON, { timeout: 10_000 });

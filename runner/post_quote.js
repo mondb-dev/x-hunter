@@ -305,16 +305,18 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
     console.log("[post_quote] inserting commentary via execCommand...");
     await page.evaluate((text, sel) => {
       const el = document.querySelector(sel);
-      if (el) { el.focus(); document.execCommand("insertText", false, text); }
+      // Clear leftover draft before insert so text is not spliced into stale content.
+      if (el) { el.focus(); document.execCommand("selectAll"); document.execCommand("delete"); document.execCommand("insertText", false, text); }
     }, quoteText, COMPOSE_BOX);
     await sleep(1_500);
 
-    // Verify text was inserted correctly — retry once with keyboard fallback if not
+    // Verify text matches EXACTLY — retry once with keyboard fallback if not
+    // (length-only checks let spliced wrapper text pass and post garbage).
     const insertedText = await page.evaluate((sel) => {
       const el = document.querySelector(sel);
       return el ? el.innerText.trim() : "";
     }, COMPOSE_BOX);
-    if (!insertedText || insertedText.length < quoteText.length * 0.95) {
+    if (insertedText !== quoteText.trim()) {
       console.log(`[post_quote] text verification: got ${insertedText.length}/${quoteText.length} chars — retrying with keyboard`);
       // Clear compose box completely
       await page.evaluate((sel) => {
@@ -353,9 +355,9 @@ async function poll(page, label, selectorOrFn, { attempts = 10, interval = 1_000
         return el ? el.innerText.trim() : "";
       }, COMPOSE_BOX);
       const retryLen = retryText.length;
-      const firstCharsMatch = retryText.substring(0, 20) === quoteText.substring(0, 20);
-      console.log(`[post_quote] retry verification: ${retryLen}/${quoteText.length} chars, first-20-match: ${firstCharsMatch}`);
-      if (!retryText || retryLen < quoteText.length * 0.98 || !firstCharsMatch) {
+      const exactMatch = retryText === quoteText.trim();
+      console.log(`[post_quote] retry verification: ${retryLen}/${quoteText.length} chars, exact-match: ${exactMatch}`);
+      if (!exactMatch) {
         console.error(`[post_quote] text insertion failed after retry — got "${retryText.substring(0, 40)}..." — aborting`);
         browser.disconnect();
         process.exit(1);

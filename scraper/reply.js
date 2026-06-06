@@ -436,9 +436,10 @@ async function postReply(page, item, replyText) {
   }, replyText, COMPOSE_BOX);
   await sleep(1_000);
 
-  // Verify insertion
+  // Verify insertion — require an EXACT match (length-only checks let spliced
+  // wrapper text from a stale draft pass and post garbage).
   const inserted = await page.evaluate((sel) => document.querySelector(sel)?.innerText.trim() || "", COMPOSE_BOX);
-  if (!inserted || inserted.length < replyText.length * 0.9) {
+  if (inserted !== replyText.trim()) {
     // Fallback to keyboard.type
     await page.evaluate((sel) => {
       const el = document.querySelector(sel);
@@ -447,6 +448,10 @@ async function postReply(page, item, replyText) {
     await sleep(500);
     await page.keyboard.type(replyText, { delay: 30 });
     await sleep(1_000);
+    const retry = await page.evaluate((sel) => document.querySelector(sel)?.innerText.trim() || "", COMPOSE_BOX);
+    if (retry !== replyText.trim()) {
+      throw new Error(`reply text insertion failed after retry: got ${retry.length}/${replyText.length} chars — aborting to avoid spliced post`);
+    }
   }
 
   // Submit

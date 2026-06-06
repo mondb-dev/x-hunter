@@ -35,6 +35,9 @@ async function typeIntoCompose(page, text, selector) {
     const el = document.querySelector(sel);
     if (!el) return;
     el.focus();
+    // Clear leftover draft before insert so text is not spliced into stale content.
+    document.execCommand('selectAll');
+    document.execCommand('delete');
     document.execCommand('insertText', false, txt);
   }, text, selector);
   await sleep(1200);
@@ -42,7 +45,7 @@ async function typeIntoCompose(page, text, selector) {
     const el = document.querySelector(sel);
     return el ? el.innerText.trim() : '';
   }, selector);
-  if (!inserted || inserted.length < text.length * 0.95) {
+  if (inserted !== text.trim()) {
     await page.evaluate((sel) => {
       const el = document.querySelector(sel);
       if (el) { el.focus(); document.execCommand('selectAll'); document.execCommand('delete'); }

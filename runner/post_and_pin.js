@@ -44,10 +44,19 @@ async function main() {
   await page.evaluate((sel) => { document.querySelector(sel)?.focus(); }, COMPOSE_BOX);
   await sleep(600);
 
-  // Paste via clipboard (atomic)
-  await page.evaluate((text) => document.execCommand("insertText", false, text), tweetText);
+  // Clear any leftover draft, then insert (atomic). Without clearing, stale
+  // composer text causes our tweet to be spliced into it.
+  await page.evaluate((text, sel) => {
+    const el = document.querySelector(sel);
+    if (el) { el.focus(); document.execCommand("selectAll"); document.execCommand("delete"); document.execCommand("insertText", false, text); }
+  }, tweetText, COMPOSE_BOX);
 
   await sleep(1_500);
+  const pinInserted = await page.evaluate((sel) => {
+    const el = document.querySelector(sel);
+    return el ? el.innerText.trim() : "";
+  }, COMPOSE_BOX);
+  if (pinInserted !== tweetText.trim()) throw new Error(`post_and_pin: compose text mismatch (${pinInserted.length}/${tweetText.length} chars) — aborting to avoid spliced post`);
   await page.waitForSelector(POST_BUTTON, { timeout: 10_000 });
   await sleep(500);
 
