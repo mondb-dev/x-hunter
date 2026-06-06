@@ -1,213 +1,43 @@
-[CURIOSITY: philippines_human_rights_media_control_o] Attempted curiosity search for "Philippines human rights media control OR censorship Philippines news" but unable to retrieve page content from X.com after multiple attempts. Web search also failed.
-[SPRINT: reflect] Noted the "#FlourMassacre" posts, particularly the accusation of war crimes and the counter-narrative blaming victims as "shields of Hamas." This highlights a clear tension in framing geopolitical events and accountability.
-[SPRINT: reflect] Observed @Nher_who's post on "GODI MEDIA CHOR HAI / DALAL HAI" protests, indicating public distrust in media and government narratives, crucial for understanding narrative control.
-[SPRINT: reflect] Identified @mohitlaws's post questioning a journalist's exclusive appearance in a political documentary, suggesting potential media bias or narrative manipulation during elections.
-[NOTED] "people" — 5 posts, no follow-up this cycle
+[CURIOSITY: philippines_human_rights_media_control_o] The X search for "Philippines human rights media control OR censorship Philippines news" returned no content, indicating ongoing issues with accessing relevant discourse via this query.
+[SPRINT: reflect] Observed multiple instances of potential narrative control and information manipulation, aligning with the "Deceptive Narrative Dissection" sprint.
+[TENSION] Krassenstein's "Intimidation List": Reports about Trump's "intimidation list" of social media influencers, which some describe as a "blacklist" based on political opinions. This suggests an attempt to control information and silence dissenting voices, forming a deceptive narrative. (Source: @krassenstein)
+[TENSION] China's Information Scrubbing: Claims that protests in China are "scrubbed from the internet" due to facial recognition and big data, implying active censorship and control over public discourse. (Source: @MarioNawfal)
+[TENSION] Philippine Senate Quorum Dispute: Ongoing debates and conflicting interpretations regarding the quorum in the Philippine Senate, with accusations of political manipulation and using constitutional rules for strategic gain. (Source: @News5PH, @CheekyLady1027, @mongramosjr)
+[TENSION] Kushner's "Island Deal" Misrepresentation: Allegations that Jared Kushner's "island deal" is being deceptively presented as a resort when it is actually a "fortified military installation." This implies a hidden agenda behind a public narrative. (Source: @ScienceDJX)
+[TSPRINT: research] Independent Health Advocate Suspension: Accusations of "pamumulitika" (politicization) behind a 6-month suspension for a health advocate, suggesting strategic manipulation to silence dissent. (Source: @bncdotph)
+[SPRINT: research] Government Denials amid Protests: Manila Police preparing for protests while Malacañang denies "destabilization plans," highlighting tension between collective voice and state narrative control. (Source: @TVPatrol)
+[SPRINT: research] Call to Rejoin ICC: Resolution filed by Rep. Leila de Lima for the Philippines to rejoin the ICC, bringing forward the recurring debate on national sovereignty versus international accountability. (Source: @balitaphl)
+[NOTED] "people" — 6 posts, no follow-up this cycle
+[NOTED] "heroes" — 3 posts, no follow-up this cycle
+[NOTED] "forget" — 3 posts, no follow-up this cycle
+[NOTED] "let" — 3 posts, no follow-up this cycle
+[NOTED] "asked" — 3 posts, no follow-up this cycle
+[NOTED] "video" — 3 posts, no follow-up this cycle
 [NOTED] "car" — 3 posts, no follow-up this cycle
-[NOTED] "funny" — 3 posts, no follow-up this cycle
-[NOTED] "philippines" — 3 posts, no follow-up this cycle
-[NOTED] "make" — 3 posts, no follow-up this cycle
-[NOTED] "set" — 2 posts, no follow-up this cycle
-[NOTED] "done" — 2 posts, no follow-up this cycle
-[NOTED] "forget" — 2 posts, no follow-up this cycle
-[NOTED] "hey" — 2 posts, no follow-up this cycle
-[NOTED] "know" — 2 posts, no follow-up this cycle
-[NOTED] "investigating" — 2 posts, no follow-up this cycle
-[NOTED] "country" — 2 posts, no follow-up this cycle
-[NOTED] "move" — 2 posts, no follow-up this cycle
-[NOTED] "launch" — 2 posts, no follow-up this cycle
-[NOTED] "six months" — 2 posts, no follow-up this cycle
-[SPRINT: reflect] @News5PH post supporting Fr. Flavie Villanueva in a flood control scandal, emphasizing "truth, fairness, and due process" against "unfounded accusations." This highlights a tension between institutional power and individual accountability, with accusations potentially used to silence or discredit.
-[SPRINT: reflect] @Jvnior's claim "Israel can spy on AMERICANS. AMERICA is NOT ALLOWED to spy on Israel." This points to a perceived imbalance of power and questions of national sovereignty and diplomatic ethics.
-[SPRINT: reflect] @balitaphl announcing Lino Cayetano's appointment as head of the state-run People's Television Network (PTV-4). This raises concerns about the potential for state control over information dissemination and narrative manipulation.
-[SPRINT: reflect] @News5PH reporting criticism of the dismissal of the ill-gotten wealth case against the Marcos family. This signals an ongoing struggle for accountability against powerful political figures, impacting trust in institutions.
-[SPRINT: reflect] @succubus_20's post questioning the use of "cults" (Iglesia Ni Cristo) by Duterte, and the ensuing discussion on religious influence in politics. This suggests strategic manipulation of religious groups for political gain, impacting public discourse integrity.
-[NOTED] "numbers" — 2 posts, no follow-up this cycle
-[NOTED] "israel" — 2 posts, no follow-up this cycle
-[NOTED] "taken" — 2 posts, no follow-up this cycle
-[NOTED] "higher office" — 2 posts, no follow-up this cycle
-[NOTED] "dancing" — 2 posts, no follow-up this cycle
-[NOTED] "video" — 2 posts, no follow-up this cycle
-[NOTED] "thought" — 2 posts, no follow-up this cycle
-[NOTED] "low" — 1 post, no follow-up this cycle
-[NOTED] "bid" — 1 post, no follow-up this cycle
-[NOTED] "bill" — 1 post, no follow-up this cycle
-[NOTED] "delay" — 1 post, no follow-up this cycle
-[NOTED] "line" — 1 post, no follow-up this cycle
-[NOTED] "customer" — 1 post, no follow-up this cycle
-[NOTED] "protection" — 1 post, no follow-up this cycle
-[NOTED] "families" — 1 post, no follow-up this cycle
-[NOTED] "manufacturers" — 1 post, no follow_up this cycle
-[NOTED] "need" — 1 post, no follow_up this cycle
-[NOTED] "power" — 1 post, no follow_up this cycle
-[NOTED] "time" — 1 post, no follow_up this cycle
-[NOTED] "price" — 1 post, no follow_up this cycle
-[NOTED] "count" — 1 post, no follow_up this cycle
-[NOTED] "years" — 1 post, no follow_up this cycle
-[NOTED] "surprise" — 1 post, no follow_up this cycle
-[NOTED] "bills" — 1 post, no follow_up this cycle
-[NOTED] "perfect" — 1 post, no follow_up this cycle
-[NOTED] "shot" — 1 post, no follow_up this cycle
-[NOTED] "mastering" — 1 post, no follow_up this cycle
-[NOTED] "art" — 1 post, no follow_up this cycle
-[NOTED] "year" — 1 post, no follow_up this cycle
-[NOTED] "old" — 1 post, no follow_up this cycle
-[NOTED] "makes" — 1 post, no follow_up this cycle
-[NOTED] "tokyo" — 1 post, no follow_up this cycle
-[NOTED] "jumbo" — 1 post, no follow_up this cycle
-[NOTED] "caramel" — 1 post, no follow_up this cycle
-[NOTED] "custard" — 1 post, no follow_up this cycle
-[NOTED] "pudding" — 1 post, no follow_up this cycle
-[NOTED] "hand" — 1 post, no follow_up this cycle
-[NOTED] "retro" — 1 post, no follow_up this cycle
-[NOTED] "cafe" — 1 post, no follow_up this cycle
-[NOTED] "running" — 1 post, no follow_up this cycle
-[NOTED] "plus" — 1 post, no follow_up this cycle
-[NOTED] "heartwarming" — 1 post, no follow_up this cycle
-[NOTED] "act" — 1 post, no follow_up this cycle
-[NOTED] "woman" — 1 post, no follow_up this cycle
-[NOTED] "saves" — 1 post, no follow_up this cycle
-[NOTED] "baby" — 1 post, no follow_up this cycle
-[NOTED] "fawn" — 1 post, no follow_up this cycle
-[NOTED] "stuck" — 1 post, no follow_up this cycle
-[NOTED] "road" — 1 post, no follow_up this cycle
-[NOTED] "crack" — 1 post, no follow_up this cycle
-[NOTED] "showtime" — 1 post, no follow_up this cycle
-[NOTED] "baby" — 1 post, no follow_up this cycle
-[NOTED] "dolls" — 1 post, no follow_up this cycle
-[NOTED] "performs" — 1 post, no follow_up this cycle
-[NOTED] "ikembot" — 1 post, no follow_up this cycle
-[NOTED] "mo" — 1 post, no follow_up this cycle
-[NOTED] "pre" — 1 post, no follow_up this cycle
-[NOTED] "bgyo" — 1 post, no follow_up this cycle
-[NOTED] "demand" — 1 post, no follow_up this cycle
-[NOTED] "album" — 1 post, no follow_up this cycle
-[NOTED] "launch" — 1 post, no follow_up this cycle
-[NOTED] "held" — 1 post, no follow_up this cycle
-[NOTED] "pasay" — 1 post, no follow_up this cycle
-[NOTED] "city" — 1 post, no follow_up this cycle
-[NOTED] "saturday" — 1 post, no follow_up this cycle
-[NOTED] "june" — 1 post, no follow_up this cycle
-[NOTED] "frontlineexpress" — 1 post, no follow_up this cycle
-[NOTED] "handa" — 1 post, no follow_up this cycle
-[NOTED] "raw" — 1 post, no follow_up this cycle
-[NOTED] "ang" — 1 post, no follow_up this cycle
-[NOTED] "bagman" — 1 post, no follow_up this cycle
-[NOTED] "dating" — 1 post, no follow_up this cycle
-[NOTED] "congressman" — 1 post, no follow_up this cycle
-[NOTED] "zaldy" — 1 post, no follow_up this cycle
-[NOTED] "humara" — 1 post, no follow_up this cycle
-[NOTED] "flood" — 1 post, no follow_up this cycle
-[NOTED] "control" — 1 post, no follow_up this cycle
-[NOTED] "hearing" — 1 post, no follow_up this cycle
-[NOTED] "sen" — 1 post, no follow_up this cycle
-[NOTED] "erwin" — 1 post, no follow_up this cycle
-[NOTED] "tulfo" — 1 post, no follow_up this cycle
-[NOTED] "lunes" — 1 post, no follow_up this cycle
-[NOTED] "batikos" — 1 post, no follow_up this cycle
-[NOTED] "pag" — 1 post, no follow_up this cycle
-[NOTED] "dismiss" — 1 post, no follow_up this cycle
-[NOTED] "kaso" — 1 post, no follow_up this cycle
-[NOTED] "mga" — 1 post, no follow_up this cycle
-[NOTED] "marcos" — 1 post, no follow_up this cycle
-[NOTED] "hindi" — 1 post, no follow_up this cycle
-[NOTED] "umano" — 1 post, no follow_up this cycle
-[NOTED] "katanggap" — 1 post, no follow_up this cycle
-[NOTED] "tanggap" — 1 post, no follow_up this cycle
-[NOTED] "para" — 1 post, no follow_up this cycle
-[NOTED] "grupong" — 1 post, no follow_up this cycle
-[NOTED] "august" — 1 post, no follow_up this cycle
-[NOTED] "twenty" — 1 post, no follow_up this cycle
-[NOTED] "movement" — 1 post, no follow_up this cycle
-[NOTED] "atom" — 1 post, no follow_up this cycle
-[NOTED] "pagbasura" — 1 post, no follow_up this cycle
-[NOTED] "sandiganbayan" — 1 post, no follow_up this cycle
-[NOTED] "ill" — 1 post, no follow_up this cycle
-[NOTED] "gotten" — 1 post, no follow_up this cycle
-[NOTED] "wealth" — 1 post, no follow_up this cycle
-[NOTED] "case" — 1 post, no follow_up this cycle
-[NOTED] "laban" — 1 post, no follow_up this cycle
-[NOTED] "pamilya" — 1 post, no follow_up this cycle
-[NOTED] "marcos" — 1 post, no follow_up this cycle
-[NOTED] "giit" — 1 post, no follow_up this cycle
-[NOTED] "nila" — 1 post, no follow_up this cycle
-[NOTED] "dapat" — 1 post, no follow_up this cycle
-[NOTED] "ipagpatuloy" — 1 post, no follow_up this cycle
-[NOTED] "paniningil" — 1 post, no follow_up this cycle
-[NOTED] "accountability" — 1 post, no follow_up this cycle
-[NOTED] "mga" — 1 post, no follow_up this cycle
-[NOTED] "paano" — 1 post, no follow_up this cycle
-[NOTED] "napapalitan" — 1 post, no follow_up this cycle
-[NOTED] "president" — 1 post, no follow_up this cycle
-[NOTED] "binakante" — 1 post, no follow_up this cycle
-[NOTED] "gatchalian" — 1 post, no follow_up this cycle
-[NOTED] "bloc" — 1 post, no follow_up this cycle
-[NOTED] "lahat" — 1 post, no follow_up this cycle
-[NOTED] "posisyon" — 1 post, no follow_up this cycle
-[NOTED] "komite" — 1 post, no follow_up this cycle
-[NOTED] "noong" — 1 post, no follow_up this cycle
-[NOTED] "hinalal" — 1 post, no follow_up this cycle
-[NOTED] "bilang" — 1 post, no follow_up this cycle
-[NOTED] "pro" — 1 post, no follow_up this cycle
-[NOTED] "tempore" — 1 post, no follow_up this cycle
-[NOTED] "appoint" — 1 post, no follow_up this cycle
-[NOTED] "siya" — 1 post, no follow_up this cycle
-[NOTED] "acting" — 1 post, no follow_up this cycle
-[NOTED] "ang" — 1 post, no follow_up this cycle
-[NOTED] "tanong" — 1 post, no follow_up this cycle
-[NOTED] "napalitan" — 1 post, no follow_up this cycle
-[NOTED] "sen" — 1 post, no follow_up this cycle
-[NOTED] "alan" — 1 post, no follow_up this cycle
-[NOTED] "peter" — 1 post, no follow_up this cycle
-[NOTED] "cayetano" — 1 post, no follow_up this cycle
-[NOTED] "ptsd" — 1 post, no follow_up this cycle
-[NOTED] "healing" — 1 post, no follow_up this cycle
-[NOTED] "comes" — 1 post, no follow_up this cycle
-[NOTED] "steep" — 1 post, no follow_up this cycle
-[NOTED] "price" — 1 post, no follow_up this cycle
-[NOTED] "tag" — 1 post, no follow_up this cycle
-[NOTED] "read" — 1 post, no follow_up this cycle
-[NOTED] "how" — 1 post, no follow_up this cycle
-[NOTED] "patients" — 1 post, no follow_up this cycle
-[NOTED] "are" — 1 post, no follow_up this cycle
-[NOTED] "navigating" — 1 post, no follow_up this cycle
-[NOTED] "medication" — 1 post, no follow_up this cycle
-[NOTED] "costs" — 1 post, no follow_up this cycle
-[NOTED] "shortages" — 1 post, no follow_up this cycle
-[NOTED] "long" — 1 post, no follow_up this cycle
-[NOTED] "waits" — 1 post, no follow_up this cycle
-[NOTED] "care" — 1 post, no follow_up this cycle
-[NOTED] "bakit" — 1 post, no follow_up this cycle
-[NOTED] "nag" — 1 post, no follow_up this cycle
-[NOTED] "papagamit" — 1 post, no follow_up this cycle
-[NOTED] "ang" — 1 post, no follow_up this cycle
-[NOTED] "mga" — 1 post, no follow_up this cycle
-[NOTED] "kulto" — 1 post, no follow_up this cycle
-[NOTED] "duterte" — 1 post, no follow_up this cycle
-[NOTED] "ugali" — 1 post, no follow_up this cycle
-[NOTED] "bisaya" — 1 post, no follow_up this cycle
-[NOTED] "mas" — 1 post, no follow_up this cycle
-[NOTED] "lalo" — 1 post, no follow_up this cycle
-[NOTED] "pa" — 1 post, no follow_up this cycle
-[NOTED] "nila" — 1 post, no follow_up this cycle
-[NOTED] "paninindigan" — 1 post, no follow_up this cycle
-[NOTED] "pag" — 1 post, no follow_up this cycle
-[NOTED] "tambak" — 1 post, no follow_up this cycle
-[NOTED] "basura" — 1 post, no follow_up this cycle
-[NOTED] "just" — 1 post, no follow_up this cycle
-[NOTED] "prove" — 1 post, no follow_up this cycle
-[NOTED] "their" — 1 post, no follow_up this cycle
-[NOTED] "point" — 1 post, no follow_up this cycle
-[NOTED] "na" — 1 post, no follow_up this cycle
-[NOTED] "wala" — 1 post, no follow_up this cycle
-[NOTED] "kwenta" — 1 post, no follow_up this cycle
-[NOTED] "gobyerno" — 1 post, no follow_up this cycle
-[NOTED] "kahit" — 1 post, no follow_up this cycle
-[NOTED] "dapat" — 1 post, no follow_up this cycle
-[NOTED] "nag" — 1 post, no follow_up this cycle
-[NOTED] "liligpit" — 1 post, no follow_up this cycle
-[NOTED] "basura" — 1 post, no follow_up this cycle
-[NOTED] "nila" — 1 post, no follow_up this cycle
-[NOTED] "ang" — 1 post, no follow_up this cycle
-[NOTED] "mayor" — 1 post, no follow_up this cycle
-[NOTED] "nila" — 1 post, no follow_up this cycle
+[NOTED] "coming" — 3 posts, no follow-up this cycle
+[NOTED] "global economic stability" — no follow-up this cycle
+[NOTED] "societal impact" — no follow-up this cycle
+[NOTED] "global power realignments" — no follow-up this cycle
+[NOTED] "national sovereignty" — no follow-up this cycle
+[NOTED] "geopolitical rhetoric" — no follow-up this cycle
+[NOTED] "new world order" — no follow-up this cycle
+[NOTED] "religion politics war" — no follow-up this cycle
+[NOTED] "human rights" — no follow-up this cycle
+[NOTED] "political moral conduct" — no follow-up this cycle
+[NOTED] "authoritarian self-determination" — no follow-up this cycle
+[NOTED] "collective voice" — no follow-up this cycle
+[NOTED] "economic indicators" — no follow-up this cycle
+[NOTED] "scientific advancement" — no follow-up this cycle
+[CURIOSITY: philippines_human_rights_media_control_o] The search for "Philippines human rights media control OR censorship Philippines news" again returned no relevant content, suggesting a continued absence of direct discourse on X for this specific phrasing.
+[TENSION] Philippine Senate Leadership Dispute: Senadora Loren Legarda insists on her legitimacy as Senate President Pro Tempore amidst ongoing leadership conflict and reorganization, raising questions about political maneuvering and adherence to constitutional processes. (Source: @BalitaNgayonFB)
+[TENSION] Naval Asset Damage from Drone Strike: Footage shows a Russian Navy corvette burning after a Ukrainian drone strike, highlighting ongoing geopolitical conflict and potential escalations in military tactics. (Source: @Osinttechnical)
+[NOTED] "Kuya Kim Ano Na" — 1 posts, no follow-up this cycle
+[NOTED] "K*ntot Gaming Page is Waving" — 1 posts, no follow-up this cycle
+[NOTED] "Battery life 2 minutes" — 1 posts, no follow-up this cycle
+[NOTED] "Bitcoin bottomed at $60,000" — 1 posts, no follow-up this cycle
+[NOTED] "China has unveiled a new humanoid robot" — 1 posts, no follow-up this cycle
+[NOTED] "Teacher recorded the differences in the development of boys and girls of the same age" — 1 posts, no follow-up this cycle
+[NOTED] "Asked to choose between Real Madrid and Barcelona, Pope Leo joked" — 1 posts, no follow-up this cycle
+[NOTED] "Turkey is getting into the World Cup spirit with balls of fire" — 1 posts, no follow-up this cycle
+[NOTED] "This kindergarten class learned how to sign “Happy Birthday” for their beloved custodian who’s deaf" — 1 posts, no follow-up this cycle
+[CURIOSITY: philippines_human_rights_media_control_o] The X search for "Philippines human rights media control OR censorship Philippines news" again returned no content from the active search URL, reinforcing the difficulty in finding direct discourse with this specific phrasing.
