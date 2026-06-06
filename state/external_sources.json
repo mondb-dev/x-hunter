@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-06T08:17:18.889Z",
+  "generated_at": "2026-06-06T11:17:20.401Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-06T08:17:46.933Z",
+  "profiled_at": "2026-06-06T11:17:50.504Z",
   "sources": [
     {
       "domain": "justice.gov",
@@ -1030,7 +1030,7 @@
       "entity": "Com Ph",
       "kind": "unknown",
       "first_seen_at": "2026-04-15T09:58:55.036Z",
-      "last_seen_at": "2026-06-06T07:22:45.314Z",
+      "last_seen_at": "2026-06-06T08:48:49.319Z",
       "discovery": {
         "distinct_urls": 18,
         "example_urls": [
@@ -1044,7 +1044,7 @@
           "ontology_evidence": 2,
           "feed_buffer": 6,
           "feed_buffer_reply": 5,
-          "journals": 11
+          "journals": 12
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -1417,9 +1417,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-06T08:00:42.000Z",
+      "last_seen_at": "2026-06-06T10:32:25.000Z",
       "discovery": {
-        "distinct_urls": 4466,
+        "distinct_urls": 4499,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1428,10 +1428,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 2655,
-          "feed_buffer_reply": 2801
+          "feed_buffer": 2683,
+          "feed_buffer_reply": 2822
         },
-        "distinct_referring_accounts": 1629,
+        "distinct_referring_accounts": 1630,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1469,7 +1469,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:4466",
+            "distinct_urls:4499",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1477,7 +1477,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1629",
+            "referring_accounts:1630",
             "origin_types:2"
           ]
         },
@@ -1507,10 +1507,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:4466",
+            "distinct_urls:4499",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1629",
+            "referring_accounts:1630",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3112,6 +3112,133 @@
       }
     },
     {
+      "domain": "athena.com",
+      "entity": "Athena",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-03T03:15:49.569Z",
+      "last_seen_at": "2026-06-05T18:06:17.000Z",
+      "discovery": {
+        "distinct_urls": 77,
+        "example_urls": [
+          "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=27k7ut43wxglvx2o2e2nj7pszs",
+          "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=XConvert&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=29yx7u26d9gsggltzzuo1ae67n",
+          "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=XConvert&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=24fb59s2ah10v8fmy4d7cwljmo",
+          "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=21lms5h2evbz8tnlkfrp7rpsvp",
+          "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid-social&utm_campaign=XConvert&utm_content=002_1_Two_Steps_Ahead_founder_mot-reputation_s&utm_term=Sales-Web-Only&twclid=2c8ko8boa4n91s9k98minqigx9"
+        ],
+        "origin_counts": {
+          "feed_buffer": 4,
+          "feed_buffer_reply": 73
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "athenago"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:77",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.24000000000000002,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.5742,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:77",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-05T17:17:28.605Z",
+        "homepage_url": "https://athena.com/",
+        "example_url": "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=27k7ut43wxglvx2o2e2nj7pszs",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.athena.com/",
+        "example_final_url": "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=27k7ut43wxglvx2o2e2nj7pszs",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "jamf.com",
       "entity": "Jamf",
       "kind": "unknown",
@@ -3234,133 +3361,6 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 9,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "athena.com",
-      "entity": "Athena",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-03T03:15:49.569Z",
-      "last_seen_at": "2026-06-03T11:20:14.000Z",
-      "discovery": {
-        "distinct_urls": 76,
-        "example_urls": [
-          "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=27k7ut43wxglvx2o2e2nj7pszs",
-          "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=XConvert&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=29yx7u26d9gsggltzzuo1ae67n",
-          "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=XConvert&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=24fb59s2ah10v8fmy4d7cwljmo",
-          "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=21lms5h2evbz8tnlkfrp7rpsvp",
-          "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid-social&utm_campaign=XConvert&utm_content=002_1_Two_Steps_Ahead_founder_mot-reputation_s&utm_term=Sales-Web-Only&twclid=2c8ko8boa4n91s9k98minqigx9"
-        ],
-        "origin_counts": {
-          "feed_buffer": 4,
-          "feed_buffer_reply": 72
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "athenago"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:76",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.24000000000000002,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.5742,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:76",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-05T17:17:28.605Z",
-        "homepage_url": "https://athena.com/",
-        "example_url": "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=27k7ut43wxglvx2o2e2nj7pszs",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.athena.com/",
-        "example_final_url": "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=27k7ut43wxglvx2o2e2nj7pszs",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -6786,6 +6786,132 @@
       }
     },
     {
+      "domain": "teslahubs.com",
+      "entity": "Teslahubs",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-08T23:54:52.000Z",
+      "last_seen_at": "2026-06-06T04:00:00.000Z",
+      "discovery": {
+        "distinct_urls": 13,
+        "example_urls": [
+          "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
+          "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Consolidated_Men_25_34_Web_02_05_2026&utm_term=Static_PG_IMG_265_1.1&twclid=2d5hitta46kxxtcm1ycnikqynw",
+          "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Consolidated_Men_25_34_Web_02_05_2026&utm_term=Static_PG_IMG_265_1.1&twclid=23gx6wx8w8rda0ii0ue3b45e11",
+          "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=297m3am6766kanctu22rfzzzmy",
+          "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Consolidated_Men_25_34_Web_02_05_2026&utm_term=Static_PG_IMG_265_1.1&twclid=2e4005choav5tmwwrlg8gsyx8b"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 13
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "teslahubs"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.41,
+          "basis": [
+            "distinct_urls:13",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.417421875,
+          "confidence": 0.418725,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:13",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-04T11:16:52.754Z",
+        "homepage_url": "https://teslahubs.com/",
+        "example_url": "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://teslahubs.com/",
+        "example_final_url": "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "h-tech.space",
       "entity": "H-Tech Space",
       "kind": "unknown",
@@ -6905,132 +7031,6 @@
           "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "teslahubs.com",
-      "entity": "Teslahubs",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-08T23:54:52.000Z",
-      "last_seen_at": "2026-05-22T13:17:32.000Z",
-      "discovery": {
-        "distinct_urls": 12,
-        "example_urls": [
-          "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
-          "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Consolidated_Men_25_34_Web_02_05_2026&utm_term=Static_PG_IMG_265_1.1&twclid=2d5hitta46kxxtcm1ycnikqynw",
-          "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Consolidated_Men_25_34_Web_02_05_2026&utm_term=Static_PG_IMG_265_1.1&twclid=23gx6wx8w8rda0ii0ue3b45e11",
-          "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=297m3am6766kanctu22rfzzzmy",
-          "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Consolidated_Men_25_34_Web_02_05_2026&utm_term=Static_PG_IMG_265_1.1&twclid=2e4005choav5tmwwrlg8gsyx8b"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 12
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "teslahubs"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.41,
-          "basis": [
-            "distinct_urls:12",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.22,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.417421875,
-          "confidence": 0.39622500000000005,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:12",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-04T11:16:52.754Z",
-        "homepage_url": "https://teslahubs.com/",
-        "example_url": "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://teslahubs.com/",
-        "example_final_url": "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 0,
           "opinion_marker": false
@@ -9191,7 +9191,7 @@
       "entity": "Inqnews",
       "kind": "unknown",
       "first_seen_at": "2026-04-15T11:14:00Z",
-      "last_seen_at": "2026-06-06T07:22:45.314Z",
+      "last_seen_at": "2026-06-06T08:48:49.319Z",
       "discovery": {
         "distinct_urls": 5,
         "example_urls": [
@@ -9203,7 +9203,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "journals": 7
+          "journals": 8
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -13283,12 +13283,12 @@
           ]
         },
         "profile": {
-          "score": 0.1,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:false",
             "contact:false",
             "corrections:false",
@@ -13312,7 +13312,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T09:16:22.911Z",
+        "fetched_at": "2026-06-06T09:17:46.460Z",
         "homepage_url": "https://mexc.com/",
         "example_url": "https://www.mexc.com/register?utm_source=brandad&utm_medium=twitter&utm_campaign=pizza_register&twclid=22vw5h310hr1lnaz6krw03u5v2",
         "homepage_status": 200,
@@ -13334,7 +13334,7 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -21577,7 +21577,7 @@
       "entity": "Abscbn News",
       "kind": "unknown",
       "first_seen_at": "2026-05-08T05:06:14.266Z",
-      "last_seen_at": "2026-06-06T07:22:45.314Z",
+      "last_seen_at": "2026-06-06T08:48:49.319Z",
       "discovery": {
         "distinct_urls": 5,
         "example_urls": [
@@ -21588,7 +21588,7 @@
           "https://abscbn.news/49GIRFj"
         ],
         "origin_counts": {
-          "journals": 8
+          "journals": 9
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -21701,7 +21701,7 @@
       "entity": "Gmanetwork",
       "kind": "unknown",
       "first_seen_at": "2026-05-18T01:32:00.745Z",
-      "last_seen_at": "2026-06-06T07:22:45.314Z",
+      "last_seen_at": "2026-06-06T08:48:49.319Z",
       "discovery": {
         "distinct_urls": 5,
         "example_urls": [
@@ -21712,7 +21712,7 @@
           "https://gmanetwork.com/news/showbiz/chikaminute/990341/kaye-abad-gets-pink-ribbon-tattoo-as-she-celebrates-cancer-survivors-month"
         ],
         "origin_counts": {
-          "journals": 17
+          "journals": 18
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -41767,7 +41767,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T07:46:20.805Z",
+        "fetched_at": "2026-06-06T09:17:46.811Z",
         "homepage_url": "https://proudpatriots.com/",
         "example_url": "https://proudpatriots.com/pages/200-page-america-s-250th-anniversary-coffee-table-book-v2?utm_source=twitter-ads&utm_campaign=41258612&utm_content=NewAmerica250BookRound2Image2&twt_id=54708689&twclid=25tg7sp10bjjfr42szs9p9jca",
         "homepage_status": 200,
@@ -41889,7 +41889,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T08:16:23.956Z",
+        "fetched_at": "2026-06-06T09:17:48.157Z",
         "homepage_url": "https://grifterolympics.com/",
         "example_url": "https://www.grifterolympics.com/?twclid=28u7u1l2mcue7ai4t73e0m25z1",
         "homepage_status": 200,
@@ -42011,7 +42011,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T08:16:24.305Z",
+        "fetched_at": "2026-06-06T09:17:48.563Z",
         "homepage_url": "https://bridgestonegolf.com/",
         "example_url": "https://www.bridgestonegolf.com/en-us/index?twclid=27b9nricn7ry3j2ax25jvh1pql",
         "homepage_status": 403,
@@ -42133,7 +42133,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T09:16:24.135Z",
+        "fetched_at": "2026-06-06T09:47:45.809Z",
         "homepage_url": "https://fuser.studio/",
         "example_url": "https://fuser.studio/teams?utm_source=x&utm_medium=paid&utm_campaign=q2_teams&twclid=24eb4pjwdb3ypvpc9de5b0904q",
         "homepage_status": 200,
@@ -42255,7 +42255,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T09:16:24.815Z",
+        "fetched_at": "2026-06-06T09:47:46.775Z",
         "homepage_url": "https://genesissystems.com/",
         "example_url": "https://www.genesissystems.com/contact?utm_source=x&utm_campaign=genericwebtrafficdavead4-4-26&twclid=2av31c1xlvmnruxepagyndsvf6",
         "homepage_status": 200,
@@ -42377,7 +42377,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T09:16:25.439Z",
+        "fetched_at": "2026-06-06T09:47:47.489Z",
         "homepage_url": "https://pinecone.io/",
         "example_url": "https://www.pinecone.io/launch-week/?twclid=2byfe8ukr8oijvt1d199vg80m5",
         "homepage_status": 200,
@@ -42499,7 +42499,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T09:46:25.933Z",
+        "fetched_at": "2026-06-06T09:47:50.198Z",
         "homepage_url": "https://bandainamcoent.com/",
         "example_url": "https://www.bandainamcoent.com/games/little-nightmares-altered-echoes?utm_source=x&utm_medium=ppc&utm_campaign=little-nightmares-altered-echoes-2026-04-launch-us-traffic&twclid=225d0loj5ejgazzwzusoj9tjl",
         "homepage_status": 200,
@@ -42621,7 +42621,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T09:46:27.413Z",
+        "fetched_at": "2026-06-06T10:47:49.604Z",
         "homepage_url": "https://make-it.run/",
         "example_url": "https://make-it.run/products/nextjs-performance-hacks?twclid=2bszv0ylvf9w62ap8iytgk0tww",
         "homepage_status": 200,
@@ -42743,7 +42743,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T09:46:28.177Z",
+        "fetched_at": "2026-06-06T10:47:50.453Z",
         "homepage_url": "https://memorybase.app/",
         "example_url": "https://www.memorybase.app/?twclid=22wo2zgr0s2jx2d07d9hsczbyn",
         "homepage_status": 200,
@@ -42865,7 +42865,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T09:46:28.452Z",
+        "fetched_at": "2026-06-06T10:47:50.627Z",
         "homepage_url": "https://fightbets.com/",
         "example_url": "https://fightbets.com/lineup/ufc/free?twclid=250fs0rv65xvcmsh5gy8n9fd5s",
         "homepage_status": 200,
@@ -42987,7 +42987,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T11:16:24.331Z",
+        "fetched_at": "2026-06-06T11:17:48.793Z",
         "homepage_url": "https://forbes.com/",
         "example_url": "https://www.forbes.com/profile/donald-trump/",
         "homepage_status": 200,
@@ -43109,7 +43109,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T11:16:25.311Z",
+        "fetched_at": "2026-06-06T11:17:49.465Z",
         "homepage_url": "https://adjust.com/",
         "example_url": "https://app.adjust.com/1zbd03n1?campaign=X_D90NA_1_all_US_sales_260429-0513_dt_CPC_leihuoua_branding&adgroup=US-pic+vid&creative=%E6%8D%8F%E8%84%B8Vid+%E6%8D%8F%E8%84%B8Pic&cross_device_tracking=1&twclid=25wqttszpha1giwsadazr7s78y",
         "homepage_status": 429,
@@ -43231,7 +43231,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T11:16:25.437Z",
+        "fetched_at": "2026-06-06T11:17:49.979Z",
         "homepage_url": "https://xn--tldmorg-tz6d/",
         "example_url": "https://www.xn--tldmorg-tz6d/Directives/d349.htm",
         "homepage_status": null,
@@ -43353,7 +43353,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T11:16:25.559Z",
+        "fetched_at": "2026-06-06T11:17:50.504Z",
         "homepage_url": "https://xn--fatimaorg-qo2f/",
         "example_url": "https://www.xn--fatimaorg-qo2f/the-benefits-of-action/",
         "homepage_status": null,
@@ -55401,6 +55401,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.019999999999999997,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:2",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3472395833333333,
           "confidence": 0.08135,
@@ -55414,6 +55428,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-06T10:47:51.259Z",
+        "homepage_url": "https://fantasypresidentcareer.com/",
+        "example_url": "https://fantasypresidentcareer.com/?twclid=26ywosi9rwkmxtbexxopd6t1ko",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://fantasypresidentcareer.com/",
+        "example_final_url": "https://fantasypresidentcareer.com/?twclid=26ywosi9rwkmxtbexxopd6t1ko",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
         }
       }
     },

@@ -1,85 +1,213 @@
-[SPRINT: research] @jeremysmiles: "would you live in a jail cell for 37 days to win $835,000" is like your average Mr Beast challenge [↳ @?: A man in Tennessee who was arrested and jailed for 37 days after refusing to take down memes about Charlie Kirk’s death ]" https://x.com/jeremysmiles/status/2062413356745523469 - Highlights issues of freedom of speech and potential overreach of authority in controlling public expression.
-[SPRINT: research] @PhilippineStar: "OPINION: The inflation rate for May turned out a bit more merciful." - An opinion piece criticizing government and highlighting loss of credibility, tying into institutional trust.
-[SPRINT: research] @MAGAVoice: "NIKITA IS RIGHT: 𝕏 is the ONLY place in the world where users across the globe can come together THANK GOD Elon Musk created 𝕏" https://x.com/MAGAVoice/status/2063092303951278479 - An example of tribal signaling and narrative construction to praise a platform and its owner, relevant to social media manipulation.
-[SPRINT: research] @mmpadellan: "I LOVE how @NicolleDWallace is covering this... trump was OUT. He is a total laughingstock. 25th Amendment NOW" https://x.com/mmpadellan/status/2063026418078953841 - Demonstrates strong political rhetoric and tribal signaling, often used to discredit opponents.
-[SPRINT: research] @bncdotph: "Arestado ng NBI ang higit 200 empleyado na konektado umano sa isang lending app. Nangha-harass daw ang mga ito at nagpapanggap pang pulis para makapaningil sa mga biktima." https://x.com/bncdotph/status/2062877938652197127 - NBI arresting individuals impersonating police, raising concerns about rule of law and corruption within systems.
-[SPRINT: research] @gmanews: "Arestado ang umano'y lider at pitong miyembro ng isang robbery holdap at carnapping group nitong Biyernes ng gabi sa ikinasang magkakahiwalay na operasyon ng Philippine National Police (PNP) sa Metro Manila at Rizal. Basahin:" https://x.com/gmanews/status/2063078198913675510 - Report on police operations against a criminal group, relating to power, institutions, and law enforcement.
-[SPRINT: research] @newswatchplusph: "North Korean leader Kim Jong Un visited the naval destroyer Kang Kon to supervise the vessel’s navigation test, stressing the need to enhance naval capabilities to deter a nuclear war, the country’s Rodong Sinmun newspaper reported on Saturday." https://x.com/newswatchplusph/status/2063101622260212050 - North Korean state media report on military buildup, highlighting geopolitical rhetoric and national security concerns.
-[SPRINT: research] @bncdotph: "TULFO SLAMS CAYETANO-BLOC FLOOD PROBE: 'A PRESS CONFERENCE, NOT AN INQUIRY' Sen. Erwin Tulfo downplayed the flood control proceedings conducted by the Cayetano bloc, arguing that it did not qualify as an official Senate inquiry." https://x.com/bncdotph/status/2063116170157539490 - A senator questioning the legitimacy of a legislative inquiry, pointing to issues of political integrity and accountability.
-[SPRINT: research] @News5PH: "ARREST WARRANT VS DISCAYAS A Malolos court issued arrest warrants against Curlee and Sarah Discaya and nine others over non-bailable malversation and graft charges tied to flood-control projects." https://x.tv5.com.ph/news/national/read/arrest-warrants-issued-vs-discayas-over-malversation-graft-charges-tied-to-flood-projects-malolos-court - Arrest warrants issued for malversation and graft, relating to corruption and rule of law.
-[SPRINT: research] @balitaphl: "Ibinida sa publiko ni Bicol Saro Party-list Rep. Terry Ridon ang laman na mga mangga at peluka ng inilabas niyang maleta para tuligsain ang mga alegasyong binabato laban sa kaniya." https://x.com/balitaphl/status/2063109306598482395 - A political figure using props to counter allegations and manage public perception, illustrating narrative construction.
-[SPRINT: research] @jacksonhinkle: "ISRAEL DID THIS TO GAZA! ZIONIONISM IS EVIL!" https://x.com/jacksonhinkle/status/2062882128455721361 - Highly charged rhetoric regarding geopolitical conflict, relevant to how narratives are constructed around international events.
-[SPRINT: research] @bncdotph: "The U.S. Senate has approved a $70 billion funding package for Immigration and Customs Enforcement (ICE) and the Border Patrol in a narrow 52-47 vote." https://x.com/bncdotph/status/2063108623153373494 - US Senate approval of funding for border security, relevant to national sovereignty and control, and how resource allocation reflects policy.
-[SPRINT: research] @succubus_20: "Hindi man lang nag isip ng solusyon kahit pinag bawalan na ng DENR PANGHE NG DAVAO... YUCK" https://x.com/succubus_20/status/2063121801899659424 - Criticism of local government's failure to address environmental issues, highlighting concerns about accountability and governance.
-[SPRINT: research] @heartofemmaus: "Kung ano ang baho nyan, ganun din kabaho si Baste. Ang akala nya, ikakasikat nya ang ganung gawain, hinde! sikat kayo sa paggawa ng katiwalian." https://x.com/heartofemmaus/status/2063104977682448853 - Accusations of corruption and political misconduct against a political figure, central to exposing deceptive power narratives.
-[SPRINT: research] @gmanews: "KUMPIYANSA KAY SEN. WIN House Prosecution Team, kumpiyansa kay Senator Win Gatchalian na pamunuan ang Senate impeachment court para sa impeachment trial ni Vice President Sara Duterte." https://x.com/gmanews/status/2063129600608071812 - Discussion of an impeachment trial, highlighting political accountability and institutional power dynamics.
-[SPRINT: research] @ABSCBNNews: "Napapaligiran pa rin ng mga konkretong harang at razor wire ang bukana ng Mendiola Peach Arch sa Maynila. Sa kabila ito ng mga impormasyon tungkol sa mga ikakasang kilos-protesta ng iba’t ibang grupo sa pagdiriwang ng Araw ng Kalayaan sa Hunyo 12." https://x.com/ABSCBNNews/status/2063129313906663512 - Physical barriers in anticipation of protests, indicating potential state control over public assembly and freedom of expression.
-[SPRINT: research] @ABSCBNNews: "Patuloy ang pagkondena ng ilang grupo ng mga mamamahayad sa naging pahayag ni Sen. Rodante Marcoleta kung saan inakusahan niyang bayaran ang ilang miyembro ng midya." https://x.com/ABSCBNNews/status/2063099811281432654 - Journalists condemn Senator Marcoleta's claim that some media members are paid, highlighting issues of media integrity and political trust.
-[SPRINT: research] @bncdotph: "WALA NAMANG KAPARARAKAN ITONG SARSWELA NA ’TO’ Rep. Joel Chua brushed aside the recent committee proceedings led by Sen. Alan Cayetano’s bloc, saying his focus remains on the impeachment case rather than what he described as political theatrics." https://x.com/bncdotph/status/2063154733741978016 - A representative dismisses committee proceedings as political theatrics, focusing instead on an impeachment case, relevant to political accountability and integrity.
-[SPRINT: research] @bncdotph: "Former Senate President Franklin Drilon said that the recent Senate leadership shakeup, in which Sen. Sherwin Gatchalian was appointed acting Senate President, is valid." https://x.com/bncdotph/status/2062893307047313523 - Former Senate President validates the recent Senate leadership change, relevant to power accountability and institutional legitimacy.
-[SPRINT: research] @PbbMarcos: "Malacañang officially respects the Senate's decision to name Sherwin Gatchalian as the acting Senate President and President pro tempore." https://x.com/PbbMarcos/status/2063104021465018548 - Malacañang's official respect for the Senate's decision on leadership, pertinent to power dynamics and political transitions.
-[NOTED] "China's Air pollution is at all time low due to massive investment in Renewable Energy." — 5 posts, no follow_up this cycle
-[NOTED] "@Amatadidy: "You think you’re smart bro" — 5 posts, no follow_up this cycle
-[NOTED] "@adskals: "My analytics for the past 2 weeks and the number of replies + posts per day... I reply like crazy on average 320 times a day,   Most posts 13x per day, but the bare minimum 9. Impressions? As usual.. cute lololol I never chase impressions... If I chase impressions, the" — 4 posts, no follow_up this cycle
-[NOTED] "@bncdotph: "Players from Iran's World Cup team have been granted visas to enter the United States, Reuters reported on Friday." — 2 posts, no follow_up this cycle
-[NOTED] "@bncdotph: "Santiago also gave her predictions on some of the most controversial issues facing the country right now. Watch the full episode on #TheDailyDish" — 2 posts, no follow_up this cycle
-[NOTED] "@problemetik: "Memang verified mutual sepengaruh itu" — 2 posts, no follow_up this cycle
-[NOTED] "@Rainmaker1973: "The way they’re all waiting, silently supporting him it’s so heartwarming." — 1 post, no follow_up this cycle
-[NOTED] "@jacksonhinkle: " Oil Crisis:  China’s Massive Renewable Energy Investment Begins Paying Off." — 1 post, no follow_up this cycle
-[NOTED] "@inquirersports: "IT’S 2019 ALL OVER AGAIN! Alyssa Valdez, Ces Molina, and Jovelyn Gonzaga start with Kyle Negrito, Thea Gagate, and Niña Ytang. Libero: Kyla Atienza. #AVCWomensCup |  @LanceAgcaoilINQ" — 2 posts, no follow_up this cycle
-[NOTED] @ABSCBNNews: "TINGNAN: Nakuhanan ang pagdaloy ng lava sa summit crater ng Mayon Volcano nitong 1:52 a.m. ng Sabado, June 6, 2026. Nakataas pa rin ang Alert Level 3 sa Mayon at ipinagbabawal pa rin ang pagpasok sa 6-km permanent danger zone. (Courtesy: Phivolvics)" - Environmental news update, noted.
-[NOTED] @DerrickEvans4WV: "It’s hard to comprehend some of these numbers until you actually break it down. $434,000 PER HOUR" - Vague post about numbers, noted.
-[NOTED] @erenfromtargets: "the way hantavirus saw nobody giving af and just left" [606.0k❤ 44.0k🔁] - Not directly relevant to deceptive power narratives, so noted.
-[NOTED] @FurkanGozukara: " AWESOME! alphafox, with 867,633 followers, drops a major algorithm tip. He reveals actively interacting with specific accounts is the absolute best way to appear in their feeds. I also had noticed this :) [↳ @?: WOW! Starter Packs explained by famous ShadowofEzra who has 900,935" - Relevant to "Integrity of Information and Social Media Manipulation" but I will prioritize other posts.
-[NOTED] @EpicClipVault: "How different hair shades react to lasers" [3❤ 0🔁] - Not relevant.
-[NOTED] @News5PH: "LAVA EFFUSION SA MAYON Nagbuga ng lava ang Bulkang Mayon bandang 1:52 a.m. ngayong Sabado, June 6. Patuloy ang pag-agos ng lava sa bulkan sa ika-152 magkakasunod na araw, gayundin ang pyroclastic density currents (PDCs) o uson at rockfalls. Nananatili sa Alert Level 3 ang" [0❤ 0🔁] - Not relevant.
-[NOTED] @Debrajfw: "These videos are so fake first and foremost why in the hell would she get out of the fucking car second and foremost when she seen it? Why didn’t she " — 1 post, no follow_up this cycle
-[NOTED] @israelights: "Tiger seems like it just wanted to mess around with them lol" — 1 post, no follow_up this cycle
-[NOTED] "One day mom’s gonna pick a favorite… and it won’t be him" — 1 post, no follow_up this cycle
-[NOTED] @PhilippineStar: "Sisi Rondina and Bernadeth Pons downed Jasmine Fleming and Elizabeth Alchin of Australia, 21-18, 33-31, to barge into the semifinals of the AVC Beach " — 1 post, no follow_up this cycle
-[NOTED] @IThinkItsArt: "Good Morning, 𝕏-Family! Power Is Calm Not Loud " — 1 post, no follow_up this cycle
-[NOTED] @gmanews: "Kaye Abad, who recently revealed that she battled breast cancer, got a pink ribbon tattoo as she celebrates Cancer Survivors Month this June. READ: https://gmanetwork.com/news/showbiz/chikaminute/990341/kaye-abad-gets-pink-ribbon-tattoo-as-she-celebrates-cancer-survivors-month" — 1 post, no follow_up this cycle
-[NOTED] @inquirerdotnet: "‘Eskwela Kultura’ returns to Carson for PH Independence Day celebration" — 1 post, no follow_up this cycle
-[NOTED] @latest_chika: ""Kyle and I are friends and kapwa Cebuanos, so no malice po," the P-pop idol commented on a viral TikTok video of them together." — 1 post, no follow_up this cycle
-[NOTED] @treyfive_ — 1 post, no follow_up this cycle
-[NOTED] @TKainZero — 1 post, no follow_up this cycle
-[NOTED] @Matt_Graham_ — 1 post, no follow_up this cycle
-[NOTED] @TrendFeedHQ — 1 post, no follow_up this cycle
-[NOTED] @kevishie — 1 post, no follow_up this cycle
-[NOTED] @greatness__o — 1 post, no follow_up this cycle
-[NOTED] @wildfreakouts — 1 post, no follow_up this cycle
-[NOTED] @PETTYBO0P — 1 post, no follow_up this cycle
-[NOTED] @IDeboneless — 1 post, no follow_up this cycle
-[NOTED] @umxhosa — 1 post, no follow_up this cycle
-[NOTED] @alexblac_ink — 1 post, no follow_up this cycle
-[NOTED] @VibesNChill — 1 post, no follow_up this cycle
-[NOTED] @Bitdefender — 1 post, no follow_up this cycle
-[NOTED] @dqveed — 1 post, no follow_up this cycle
-[NOTED] @Lytherian — 1 post, no follow_up this cycle
-[NOTED] @adrenaIinIendnz — 1 post, no follow_up this cycle
-[NOTED] @inquirerdotnet: "Filipino Sakadas’ legacy honored 120 years after their arrival in Hawaii" https://x.com/inquirerdotnet/status/2063070867492307170 - Historical/cultural, not directly relevant.
-[NOTED] @EpicClipVault: "The reaction of that man in the back is priceless " https://x.com/EpicClipVault/status/2063095632332546299 - Not relevant.
-[NOTED] @PhilstarNews: "At the Toyota booth, visitors can see featured models up close and explore the Toyota Choice theme through the many ways Toyota supports every journey, from choosing the right vehicle and powertrain to enjoying after-sales care through its trusted quality and the country’s" https://x.com/PhilstarNews/status/2063101070725820429 - Not relevant.
-[NOTED] @bncdotph: "Life coach and tarot reader Ana Santiago explains how her forecasts differ from those of the manghuhula. Watch the full episode on #TheDailyDish" https://x.com/bncdotph/status/2063114911874777275 - Not relevant.
-[NOTED] @Shipsnapx: "The 'tit-for-tat' in the Gulf is quickly turning into 'tit-for-missile-salvo'. Iran is using an offensive way to invite support and may turn other way" — 1 post, no follow_up this cycle
-[NOTED] @SinhaleseSavage: "whoever made the flirting vs harassment meme needs a PhD in psychology" [192.0k❤ 7.4k🔁] {flirting harassment meme needs phd psychology, whoever made} <- novel https://x.com/SinhaleseSavage/status/2062412733526741237 - Social phenomenon, not directly relevant to power narratives.
-[NOTED] @heytaraaa: "People have preferences and that's okay. Also, the most important part is consent. Nobody wants someone staring at them if they're not comfortable wit" — 1 post, no follow_up this cycle
-[NOTED] @ezeugbonna1389: "Flirting vs harassment is basically: attractive = romance, ugly = court case " — 1 post, no follow_up this cycle
-[NOTED] @edenmelons: "people are acting like he's the problem when he's literally just standing there, and he's a good-looking dude too" — 1 post, no follow_up this cycle
-[NOTED] @celebfries: "for real, Because it’s clear that this is about handsomeness not about flirting or harassment" — 1 post, no follow_up this cycle
-[NOTED] @News5PH: "'HINDI LAHAT NG MALETA, MAY PERA. 'YUNG IBA, MAY MANGGA AT PELUKA' Nagdala ng maleta na may lamang mangga at peluka si Bicol Saro Rep. Terry Ridon sa" — 1 post, no follow_up this cycle
-[NOTED] @gmanews: "The Philippines’ gross international reserves (GIR) declined to its lowest level in 16 months in May, data from the Bangko Sentral ng Pilipinas (BSP) showed on Saturday. Read:" [0❤ 0🔁] {bangko sentral pilipinas bsp showed saturday june, philippines gross international reserves gir declined, lowest level months, data} <- novel https://x.com/gmanews/status/2063083501939999139 - Economic news, not directly relevant.
-[NOTED] @gmanews: "TINGNAN: Nagpakita ng maletang may lamang mangga at peluka si House Impeachment Prosecution Panel member Rep. Terry Ridon, sabay sating hindi sila mat" — 1 post, no follow_up this cycle
-[NOTED] @balitaphl: "Mariing nagbabala si Sen. Erwin Tulfo kay SP Alan Peter Cayetano na personal niya raw bibitbitin ang huli palabas ng session hall kapag muli itong nag" — 1 post, no follow_up this cycle
-[NOTED] @TVPatrol: "Batay sa pag-amin ng isa sa mga suspek, simula noong 2023 ay mahigit 100 na motorsiklo na ang natangay ng kanilang grupo. Buong ulat: https://abscbn.news/49GIRFj" [1❤ 0🔁] {motorsiklo ang natangay kanilang grupo buong ulat https abscbn news 49girfj, batay pag amin isa mga suspek simula noong, mahigit} <- novel https://x.com/TVPatrol/status/2063104844366491694 - Crime report, not directly relevant.
-[NOTED] @TVPatrol: "Nagbigay ng mensahe si acting Senate President Sherwin Gatchalian sa mga kapwa senador sa gitna ng tunggalian ng dalawang panig sa Senado. Buong ulat:" — 1 post, no follow_up this cycle
-[NOTED] @parsshadi: "Are unhappy with the results of the war you began? I’ll tell IDF customer service to contact you!" — 1 post, no follow_up this cycle
-[NOTED] @Sigmatic1980: "That's because Israel is a terror state. They're terrorists that terrorize. I testify my television televised them telling lies. This is not a war, it" — 1 post, no follow_up this cycle
-[NOTED] @Brynjar02535796: "It’s not like Israel started the war!" — 1 post, no follow_up this cycle
-[NOTED] @inquirerdotnet: "Filipino Americans are among the fugitives on the FBI’s newly launched “Most Wanted Fraudsters” list, aimed at helping authorities track down individuals accused of fraud. READ MORE: https://inqnews.net/FilAmfugitives" — 1 post, no follow_up this cycle
-[NOTED] @gmanews: "Nagpapatuloy pa rin ang Senate leadership row sa pagitan ng tinatawag na Cayetano bloc sa ilalim ni Sen. Alan Peter Cayetano at Gatchalian bloc sa ilalim ni Sen. Sherwin Gatchalian. Nitong June 5, umabot na sa Korte Suprema ang usapin ng pagresolba sa Senate leadership row" [0❤ 0🔁] {nagpapatuloy rin ang senate leadership row pagitan tinatawag cayetano bloc ilalim sen alan peter cayetano gatchalian bloc ilalim sen sherwin gatchalian nitong june umabot korte suprema ang usapin pagresolba senate leadership row} <- novel https://x.com/gmanews/status/2063165865273749940 - Highlights ongoing political power struggle within the Senate, relevant to Power, Institutions, and Rule of Law.
-[NOTED] @wanakopake: "San galing ang pera ni Mike Defensor? [↳ @?: 'KAHIT MAGBIGAY AKO NG LAGPAS SA P5-MILLION... HINDI 'YON PROBLEMA' Inamin ni dating congressman Mike Defensor na tumut]" [117❤ 16🔁] {san galing ang pera mike defensor} <- novel https://x.com/wanakopake/status/2062888728230519097 - Accusation of corruption against a political figure, central to Trust in Political Institutions and Anti-Corruption Efforts and Political Integrity and Moral Conduct in Public Service.
-[NOTED] @ABSCBNNews: "Patuloy ang pagkondena ng ilang grupo ng mga mamamahayad sa naging pahayag ni Sen. Rodante Marcoleta kung saan inakusahan niyang bayaran ang ilang miyembro ng midya." https://x.com/ABSCBNNews/status/2063099811281432654 - Journalists condemning accusations of being paid, highly relevant to Integrity of Information and Social Media Manipulation and Truth and Evidence in Public Discourse.
-[NOTED] @ABSCBNNews: "Napapaligiran pa rin ng mga konkretong harang at razor wire ang bukana ng Mendiola Peach Arch sa Maynila. Sa kabila ito ng mga impormasyon tungkol sa mga ikakasang kilos-protesta ng iba’t ibang grupo sa pagdiriwang ng Araw ng Kalayaan sa Hunyo 12." https://x.com/ABSCBNNews/status/2063129313906663512 - Physical barriers in anticipation of protests, indicating potential state control over public assembly and freedom of expression.
-[NOTED] @bncdotph: "TULFO SLAMS CAYETANO-BLOC FLOOD PROBE: 'A PRESS CONFERENCE, NOT AN INQUIRY' Sen. Erwin Tulfo downplayed the flood control proceedings conducted by the Cayetano bloc, arguing that it did not qualify as an official Senate inquiry." https://x.com/bncdotph/status/2063116170157539490 - A senator questioning the legitimacy of a legislative inquiry, pointing to issues of political integrity and accountability.
-[NOTED] @YaniYanCruz: "Dami kaso nadismiss against s mga Marcos noong panahon ni Duterte... Sino ung pumalakpak? Yes beh. Mga DDS. Sino mga nanahimik ng naglibing ang gobie" [47❤] {dami kaso nadismiss against s mga marcos noong panahon ni duterte sino ung pumalakpak yes beh mga dds sino mga nanahimik ng naglibing ang gobie} <- novel https://x.com/YaniYanCruz/status/2063138448811368472 - Raises questions about political influence and dismissed cases, relevant to Power, Institutions, and Rule of Law and Trust in Political Institutions and Anti-Corruption Efforts.
+[CURIOSITY: philippines_human_rights_media_control_o] Attempted curiosity search for "Philippines human rights media control OR censorship Philippines news" but unable to retrieve page content from X.com after multiple attempts. Web search also failed.
+[SPRINT: reflect] Noted the "#FlourMassacre" posts, particularly the accusation of war crimes and the counter-narrative blaming victims as "shields of Hamas." This highlights a clear tension in framing geopolitical events and accountability.
+[SPRINT: reflect] Observed @Nher_who's post on "GODI MEDIA CHOR HAI / DALAL HAI" protests, indicating public distrust in media and government narratives, crucial for understanding narrative control.
+[SPRINT: reflect] Identified @mohitlaws's post questioning a journalist's exclusive appearance in a political documentary, suggesting potential media bias or narrative manipulation during elections.
+[NOTED] "people" — 5 posts, no follow-up this cycle
+[NOTED] "car" — 3 posts, no follow-up this cycle
+[NOTED] "funny" — 3 posts, no follow-up this cycle
+[NOTED] "philippines" — 3 posts, no follow-up this cycle
+[NOTED] "make" — 3 posts, no follow-up this cycle
+[NOTED] "set" — 2 posts, no follow-up this cycle
+[NOTED] "done" — 2 posts, no follow-up this cycle
+[NOTED] "forget" — 2 posts, no follow-up this cycle
+[NOTED] "hey" — 2 posts, no follow-up this cycle
+[NOTED] "know" — 2 posts, no follow-up this cycle
+[NOTED] "investigating" — 2 posts, no follow-up this cycle
+[NOTED] "country" — 2 posts, no follow-up this cycle
+[NOTED] "move" — 2 posts, no follow-up this cycle
+[NOTED] "launch" — 2 posts, no follow-up this cycle
+[NOTED] "six months" — 2 posts, no follow-up this cycle
+[SPRINT: reflect] @News5PH post supporting Fr. Flavie Villanueva in a flood control scandal, emphasizing "truth, fairness, and due process" against "unfounded accusations." This highlights a tension between institutional power and individual accountability, with accusations potentially used to silence or discredit.
+[SPRINT: reflect] @Jvnior's claim "Israel can spy on AMERICANS. AMERICA is NOT ALLOWED to spy on Israel." This points to a perceived imbalance of power and questions of national sovereignty and diplomatic ethics.
+[SPRINT: reflect] @balitaphl announcing Lino Cayetano's appointment as head of the state-run People's Television Network (PTV-4). This raises concerns about the potential for state control over information dissemination and narrative manipulation.
+[SPRINT: reflect] @News5PH reporting criticism of the dismissal of the ill-gotten wealth case against the Marcos family. This signals an ongoing struggle for accountability against powerful political figures, impacting trust in institutions.
+[SPRINT: reflect] @succubus_20's post questioning the use of "cults" (Iglesia Ni Cristo) by Duterte, and the ensuing discussion on religious influence in politics. This suggests strategic manipulation of religious groups for political gain, impacting public discourse integrity.
+[NOTED] "numbers" — 2 posts, no follow-up this cycle
+[NOTED] "israel" — 2 posts, no follow-up this cycle
+[NOTED] "taken" — 2 posts, no follow-up this cycle
+[NOTED] "higher office" — 2 posts, no follow-up this cycle
+[NOTED] "dancing" — 2 posts, no follow-up this cycle
+[NOTED] "video" — 2 posts, no follow-up this cycle
+[NOTED] "thought" — 2 posts, no follow-up this cycle
+[NOTED] "low" — 1 post, no follow-up this cycle
+[NOTED] "bid" — 1 post, no follow-up this cycle
+[NOTED] "bill" — 1 post, no follow-up this cycle
+[NOTED] "delay" — 1 post, no follow-up this cycle
+[NOTED] "line" — 1 post, no follow-up this cycle
+[NOTED] "customer" — 1 post, no follow-up this cycle
+[NOTED] "protection" — 1 post, no follow-up this cycle
+[NOTED] "families" — 1 post, no follow-up this cycle
+[NOTED] "manufacturers" — 1 post, no follow_up this cycle
+[NOTED] "need" — 1 post, no follow_up this cycle
+[NOTED] "power" — 1 post, no follow_up this cycle
+[NOTED] "time" — 1 post, no follow_up this cycle
+[NOTED] "price" — 1 post, no follow_up this cycle
+[NOTED] "count" — 1 post, no follow_up this cycle
+[NOTED] "years" — 1 post, no follow_up this cycle
+[NOTED] "surprise" — 1 post, no follow_up this cycle
+[NOTED] "bills" — 1 post, no follow_up this cycle
+[NOTED] "perfect" — 1 post, no follow_up this cycle
+[NOTED] "shot" — 1 post, no follow_up this cycle
+[NOTED] "mastering" — 1 post, no follow_up this cycle
+[NOTED] "art" — 1 post, no follow_up this cycle
+[NOTED] "year" — 1 post, no follow_up this cycle
+[NOTED] "old" — 1 post, no follow_up this cycle
+[NOTED] "makes" — 1 post, no follow_up this cycle
+[NOTED] "tokyo" — 1 post, no follow_up this cycle
+[NOTED] "jumbo" — 1 post, no follow_up this cycle
+[NOTED] "caramel" — 1 post, no follow_up this cycle
+[NOTED] "custard" — 1 post, no follow_up this cycle
+[NOTED] "pudding" — 1 post, no follow_up this cycle
+[NOTED] "hand" — 1 post, no follow_up this cycle
+[NOTED] "retro" — 1 post, no follow_up this cycle
+[NOTED] "cafe" — 1 post, no follow_up this cycle
+[NOTED] "running" — 1 post, no follow_up this cycle
+[NOTED] "plus" — 1 post, no follow_up this cycle
+[NOTED] "heartwarming" — 1 post, no follow_up this cycle
+[NOTED] "act" — 1 post, no follow_up this cycle
+[NOTED] "woman" — 1 post, no follow_up this cycle
+[NOTED] "saves" — 1 post, no follow_up this cycle
+[NOTED] "baby" — 1 post, no follow_up this cycle
+[NOTED] "fawn" — 1 post, no follow_up this cycle
+[NOTED] "stuck" — 1 post, no follow_up this cycle
+[NOTED] "road" — 1 post, no follow_up this cycle
+[NOTED] "crack" — 1 post, no follow_up this cycle
+[NOTED] "showtime" — 1 post, no follow_up this cycle
+[NOTED] "baby" — 1 post, no follow_up this cycle
+[NOTED] "dolls" — 1 post, no follow_up this cycle
+[NOTED] "performs" — 1 post, no follow_up this cycle
+[NOTED] "ikembot" — 1 post, no follow_up this cycle
+[NOTED] "mo" — 1 post, no follow_up this cycle
+[NOTED] "pre" — 1 post, no follow_up this cycle
+[NOTED] "bgyo" — 1 post, no follow_up this cycle
+[NOTED] "demand" — 1 post, no follow_up this cycle
+[NOTED] "album" — 1 post, no follow_up this cycle
+[NOTED] "launch" — 1 post, no follow_up this cycle
+[NOTED] "held" — 1 post, no follow_up this cycle
+[NOTED] "pasay" — 1 post, no follow_up this cycle
+[NOTED] "city" — 1 post, no follow_up this cycle
+[NOTED] "saturday" — 1 post, no follow_up this cycle
+[NOTED] "june" — 1 post, no follow_up this cycle
+[NOTED] "frontlineexpress" — 1 post, no follow_up this cycle
+[NOTED] "handa" — 1 post, no follow_up this cycle
+[NOTED] "raw" — 1 post, no follow_up this cycle
+[NOTED] "ang" — 1 post, no follow_up this cycle
+[NOTED] "bagman" — 1 post, no follow_up this cycle
+[NOTED] "dating" — 1 post, no follow_up this cycle
+[NOTED] "congressman" — 1 post, no follow_up this cycle
+[NOTED] "zaldy" — 1 post, no follow_up this cycle
+[NOTED] "humara" — 1 post, no follow_up this cycle
+[NOTED] "flood" — 1 post, no follow_up this cycle
+[NOTED] "control" — 1 post, no follow_up this cycle
+[NOTED] "hearing" — 1 post, no follow_up this cycle
+[NOTED] "sen" — 1 post, no follow_up this cycle
+[NOTED] "erwin" — 1 post, no follow_up this cycle
+[NOTED] "tulfo" — 1 post, no follow_up this cycle
+[NOTED] "lunes" — 1 post, no follow_up this cycle
+[NOTED] "batikos" — 1 post, no follow_up this cycle
+[NOTED] "pag" — 1 post, no follow_up this cycle
+[NOTED] "dismiss" — 1 post, no follow_up this cycle
+[NOTED] "kaso" — 1 post, no follow_up this cycle
+[NOTED] "mga" — 1 post, no follow_up this cycle
+[NOTED] "marcos" — 1 post, no follow_up this cycle
+[NOTED] "hindi" — 1 post, no follow_up this cycle
+[NOTED] "umano" — 1 post, no follow_up this cycle
+[NOTED] "katanggap" — 1 post, no follow_up this cycle
+[NOTED] "tanggap" — 1 post, no follow_up this cycle
+[NOTED] "para" — 1 post, no follow_up this cycle
+[NOTED] "grupong" — 1 post, no follow_up this cycle
+[NOTED] "august" — 1 post, no follow_up this cycle
+[NOTED] "twenty" — 1 post, no follow_up this cycle
+[NOTED] "movement" — 1 post, no follow_up this cycle
+[NOTED] "atom" — 1 post, no follow_up this cycle
+[NOTED] "pagbasura" — 1 post, no follow_up this cycle
+[NOTED] "sandiganbayan" — 1 post, no follow_up this cycle
+[NOTED] "ill" — 1 post, no follow_up this cycle
+[NOTED] "gotten" — 1 post, no follow_up this cycle
+[NOTED] "wealth" — 1 post, no follow_up this cycle
+[NOTED] "case" — 1 post, no follow_up this cycle
+[NOTED] "laban" — 1 post, no follow_up this cycle
+[NOTED] "pamilya" — 1 post, no follow_up this cycle
+[NOTED] "marcos" — 1 post, no follow_up this cycle
+[NOTED] "giit" — 1 post, no follow_up this cycle
+[NOTED] "nila" — 1 post, no follow_up this cycle
+[NOTED] "dapat" — 1 post, no follow_up this cycle
+[NOTED] "ipagpatuloy" — 1 post, no follow_up this cycle
+[NOTED] "paniningil" — 1 post, no follow_up this cycle
+[NOTED] "accountability" — 1 post, no follow_up this cycle
+[NOTED] "mga" — 1 post, no follow_up this cycle
+[NOTED] "paano" — 1 post, no follow_up this cycle
+[NOTED] "napapalitan" — 1 post, no follow_up this cycle
+[NOTED] "president" — 1 post, no follow_up this cycle
+[NOTED] "binakante" — 1 post, no follow_up this cycle
+[NOTED] "gatchalian" — 1 post, no follow_up this cycle
+[NOTED] "bloc" — 1 post, no follow_up this cycle
+[NOTED] "lahat" — 1 post, no follow_up this cycle
+[NOTED] "posisyon" — 1 post, no follow_up this cycle
+[NOTED] "komite" — 1 post, no follow_up this cycle
+[NOTED] "noong" — 1 post, no follow_up this cycle
+[NOTED] "hinalal" — 1 post, no follow_up this cycle
+[NOTED] "bilang" — 1 post, no follow_up this cycle
+[NOTED] "pro" — 1 post, no follow_up this cycle
+[NOTED] "tempore" — 1 post, no follow_up this cycle
+[NOTED] "appoint" — 1 post, no follow_up this cycle
+[NOTED] "siya" — 1 post, no follow_up this cycle
+[NOTED] "acting" — 1 post, no follow_up this cycle
+[NOTED] "ang" — 1 post, no follow_up this cycle
+[NOTED] "tanong" — 1 post, no follow_up this cycle
+[NOTED] "napalitan" — 1 post, no follow_up this cycle
+[NOTED] "sen" — 1 post, no follow_up this cycle
+[NOTED] "alan" — 1 post, no follow_up this cycle
+[NOTED] "peter" — 1 post, no follow_up this cycle
+[NOTED] "cayetano" — 1 post, no follow_up this cycle
+[NOTED] "ptsd" — 1 post, no follow_up this cycle
+[NOTED] "healing" — 1 post, no follow_up this cycle
+[NOTED] "comes" — 1 post, no follow_up this cycle
+[NOTED] "steep" — 1 post, no follow_up this cycle
+[NOTED] "price" — 1 post, no follow_up this cycle
+[NOTED] "tag" — 1 post, no follow_up this cycle
+[NOTED] "read" — 1 post, no follow_up this cycle
+[NOTED] "how" — 1 post, no follow_up this cycle
+[NOTED] "patients" — 1 post, no follow_up this cycle
+[NOTED] "are" — 1 post, no follow_up this cycle
+[NOTED] "navigating" — 1 post, no follow_up this cycle
+[NOTED] "medication" — 1 post, no follow_up this cycle
+[NOTED] "costs" — 1 post, no follow_up this cycle
+[NOTED] "shortages" — 1 post, no follow_up this cycle
+[NOTED] "long" — 1 post, no follow_up this cycle
+[NOTED] "waits" — 1 post, no follow_up this cycle
+[NOTED] "care" — 1 post, no follow_up this cycle
+[NOTED] "bakit" — 1 post, no follow_up this cycle
+[NOTED] "nag" — 1 post, no follow_up this cycle
+[NOTED] "papagamit" — 1 post, no follow_up this cycle
+[NOTED] "ang" — 1 post, no follow_up this cycle
+[NOTED] "mga" — 1 post, no follow_up this cycle
+[NOTED] "kulto" — 1 post, no follow_up this cycle
+[NOTED] "duterte" — 1 post, no follow_up this cycle
+[NOTED] "ugali" — 1 post, no follow_up this cycle
+[NOTED] "bisaya" — 1 post, no follow_up this cycle
+[NOTED] "mas" — 1 post, no follow_up this cycle
+[NOTED] "lalo" — 1 post, no follow_up this cycle
+[NOTED] "pa" — 1 post, no follow_up this cycle
+[NOTED] "nila" — 1 post, no follow_up this cycle
+[NOTED] "paninindigan" — 1 post, no follow_up this cycle
+[NOTED] "pag" — 1 post, no follow_up this cycle
+[NOTED] "tambak" — 1 post, no follow_up this cycle
+[NOTED] "basura" — 1 post, no follow_up this cycle
+[NOTED] "just" — 1 post, no follow_up this cycle
+[NOTED] "prove" — 1 post, no follow_up this cycle
+[NOTED] "their" — 1 post, no follow_up this cycle
+[NOTED] "point" — 1 post, no follow_up this cycle
+[NOTED] "na" — 1 post, no follow_up this cycle
+[NOTED] "wala" — 1 post, no follow_up this cycle
+[NOTED] "kwenta" — 1 post, no follow_up this cycle
+[NOTED] "gobyerno" — 1 post, no follow_up this cycle
+[NOTED] "kahit" — 1 post, no follow_up this cycle
+[NOTED] "dapat" — 1 post, no follow_up this cycle
+[NOTED] "nag" — 1 post, no follow_up this cycle
+[NOTED] "liligpit" — 1 post, no follow_up this cycle
+[NOTED] "basura" — 1 post, no follow_up this cycle
+[NOTED] "nila" — 1 post, no follow_up this cycle
+[NOTED] "ang" — 1 post, no follow_up this cycle
+[NOTED] "mayor" — 1 post, no follow_up this cycle
+[NOTED] "nila" — 1 post, no follow_up this cycle
