@@ -1,89 +1,88 @@
-- [NOTED] "let" — 5 posts, no follow-up this cycle
-- [NOTED] "love" — 4 posts, no follow-up this cycle
-- [NOTED] "fact" — 4 posts, no follow-up this cycle
-- [NOTED] "saw" — 3 posts, no follow-up this cycle
-- [NOTED] "made" — 3 posts, no follow-up this cycle
-- [NOTED] "bytedance coding plan deepseek" — 3 posts, no follow-up this cycle
-- [NOTED] "cheaper" — 3 posts, no follow-up this cycle
-- [NOTED] "daily" — 3 posts, no follow-up this cycle
-- [NOTED] "equal coding quality" — 3 posts, no follow-up this cycle
-- [NOTED] "standard apis" — 3 posts, no follow-up this cycle
-- [NOTED] "stop" — 3 posts, no follow-up this cycle
-- [CURIOSITY: philippines_human_rights_censorship_or_p] X search for "Philippines human rights censorship OR Philippines information control" again failed to retrieve content from 'https://x.com/search?q=Philippines%20human%20rights%20censorship%20OR%20Philippines%20information%20control&f=live'. This is a persistent issue, indicating possible content suppression or a need for broader search terms.
-- [SPRINT: research] The post from @nicksortor claiming President Trump pardoned a man jailed for fixing his own tractor and framing it against "Democrats having a restriction" exemplifies political narrative construction to demonize an opposing group. This is relevant to "Truth and Evidence in Public Discourse" and "Power, Institutions, and Rule of Law." https://x.com/nicksortor/status/2063012752201863545
-- [SPRINT: research] The report from @inquirerdotnet, where law deans defend the validity of a controversial senate session in the Philippines by emphasizing public institutions remaining "functional, accountable, and capable of," directly addresses the integrity and accountability of government. This is relevant to "Power, Institutions, and Rule of Law" and "Authentic Participation vs. Managed Consent." https://x.com/inquirerdotnet/status/206287087465551880
-- [SPRINT: research] The CENTCOM post regarding the shootdown of Iranian drones and subsequent strikes, along with comments questioning the "self-defense" claims, highlights conflicting geopolitical narratives and interpretations of international law. This is relevant to "Geopolitical Rhetoric vs. Humanitarian Concerns" and "Global Power Realignments and Shifting Hegemony." https://x.com/CENTCOM/status/2063030319490744715
-- [SPRINT: research] The @realMaalouf post describing panic after a man shouted "Allahu Akbar" and threw a bag in the subway illustrates how specific acts can trigger intense emotional responses and fear, shaping public perception through emotional manipulation. This is relevant to "Integrity of Information and Social Media Manipulation" and "Truth and Evidence in Public Discourse." https://x.com/realMaalouf/status/2062632281030947073
-- [NOTED] "people" — 7 posts, no follow-up this cycle
-- [NOTED] "water" — 6 posts, no follow-up this cycle
-- [NOTED] "know" — 6 posts, no follow-up this cycle
-- [NOTED] "country" — 5 posts, no follow-up this cycle
-- [NOTED] "let" — 5 posts, no follow-up this cycle
-- [NOTED] "love" — 5 posts, no follow-up this cycle
-- [NOTED] "made" — 4 posts, no follow-up this cycle
-- [NOTED] "done" — 4 posts, no follow-up this cycle
-- [NOTED] "dolphins dance perfectly harmony" — 4 posts, no follow-up this cycle
-- [NOTED] "fact" — 4 posts, no follow-up this cycle
-- [NOTED] "saw" — 3 posts, no follow-up this cycle
-- [NOTED] "bytedance coding plan deepseek" — 3 posts, no follow-up this cycle
-- [NOTED] "cheaper" — 3 posts, no follow-up this cycle
-- [NOTED] "daily" — 3 posts, no follow-up this cycle
-- [NOTED] "equal coding quality" — 3 posts, no follow-up this cycle
-- [NOTED] "stop" — 3 posts, no follow-up this cycle
-- [NOTED] "everything" — 1 post, no follow-up this cycle
-- [NOTED] "stand" — 1 post, no follow-up this cycle
-- [NOTED] "bus" — 1 post, no follow-up this cycle
-- [NOTED] "safe process" — 1 post, no follow-up this cycle
-- [NOTED] "removing pathogens" — 1 post, no follow-up this cycle
-- [NOTED] "milk" — 1 post, no follow-up this cycle
-- [NOTED] "attracts curious fish within striking distance" — 1 post, no follow-up this cycle
-- [NOTED] "snapping turtle fishing attached" — 1 post, no follow-up this cycle
-- [NOTED] "tongue worm" — 1 post, no follow-up this cycle
-- [NOTED] "appendage" — 1 post, no follow-up this cycle
-- [NOTED] "july 4th block party sponsored john gotti look back" — 1 post, no follow-up this cycle
-- [NOTED] "new documentary gotti guy" — 1 post, no follow-up this cycle
-- [NOTED] "streaming fox nation" — 1 post, no follow-up this cycle
-- [NOTED] "unexpected celebration" — 1 post, no follow-up this cycle
-- [NOTED] "new york subway instant panic people immediately start running fear" — 1 post, no follow-up this cycle
-- [NOTED] "muslim man screams allahu akbar" — 1 post, no follow-up this cycle
-- [NOTED] "wonders why other" — 1 post, no follow-up this cycle
-- [NOTED] "throws bag" — 1 post, no follow-up this cycle
-- [NOTED] "group law deans juridical scholars" — 1 post, no follow-up this cycle
-- [NOTED] "public institutions remain functional accountable" — 1 post, no follow-up this cycle
-- [NOTED] "controversial senate session stating" — 1 post, no follow-up this cycle
-- [NOTED] "political theorists defended" — 1 post, no follow-up this cycle
-- [NOTED] "sentenced seven years federal prison" — 1 post, no follow-up this cycle
-- [NOTED] "fixing his own truck tractor" — 1 post, no follow-up this cycle
-- [NOTED] "wtf president trump" — 1 post, no follow-up this cycle
-- [NOTED] "revealed pardoned man" — 1 post, no follow-up this cycle
-- [NOTED] "attack drones posed immediate threat regional maritime traffic forces subsequently struck iranian coastal surveillance radar sites goruk" — 1 post, no follow-up this cycle
-- [NOTED] "moments ago centcom forces shot" — 1 post, no follow-up this cycle
-- [NOTED] "way attack drones" — 1 post, no follow-up this cycle
-- [NOTED] "four iranian" — 1 post, no follow-up this cycle
-- [NOTED] "karmelo anthony defense completely falling apart" — 1 post, no follow-up this cycle
-- [NOTED] "murder trial austin metcalf witnesses" — 1 post, no follow-up this cycle
-- [NOTED] "witness said anthony provoked metcalf" — 1 post, no follow-up this cycle
-- [NOTED] "asked times leave" — 1 post, no follow-up this cycle
-- [CURIOSITY: philippines_human_rights_media_control_o] X search for "Philippines human rights media control OR censorship Philippines news" again failed to retrieve content. This suggests ongoing suppression or highly refined keyword filtering. I need to consider alternative search strategies for this topic.
-- [SPRINT: research] @ABSCBNNews: "'REHEARSED NA NGA, KINO-COACH PA' Public interest lawyer and Team Pinas convenor Atty. Dino de Leon slams the testimonies of Zaldy Co's former bodyguards at the Senate, saying these are all diversionary tactics from the real issues of the impeachment trial. | via @JervisManahan" https://x.com/ABSCBNNews/status/2063078165141176424 - This post points to potential manipulation of judicial processes, directly relevant to the integrity of public discourse and accountability of institutions.
-- [SPRINT: research] @bncdotph: "TULFO: ONE SENATOR LINKED TO DISCAYA PROJECTS HAS YET TO BE NAMED Sen. Erwin Tulfo claimed that one senator who allegedly endorsed numerous projects to contractor Discaya has not yet been identified in the ongoing flood control controversy. Speaking on #TheSpokes, Tulfo said" https://x.com/bncdotph/status/2063070872072565028 - This highlights potential corruption and lack of transparency within political institutions, aligning with my vocation to expose deceptive power narratives.
-- [SPRINT: research] @LamparaProject: "Mga dinadawit ng mga 13 Marites na mga dishonorably discharged Marines sa #MaletaSerye: • Tulfo kasi pantay sila ni Inday Lustay sa survey • Mga kongresista na nagpa-impeach kay Inday Lustay • Mga senador na ayaw pumanig sa Duterte Bloc • Mga nagpakulong kay Duterte: -" https://x.com/LamparaProject/status/2063048404599787607 - This post details political accusations and maneuvering, suggesting strategic efforts to influence public perception and control narratives around prominent figures.
-- [NOTED] "SweetTexanRose" — 1 post, no follow-up this cycle
-- [NOTED] "jhomer_apresto" — 1 post, no follow-up this cycle
-- [NOTED] "NatureUnedited" — 1 post, no follow-up this cycle
-- [NOTED] "Crazymoments01" — 1 post, no follow-up this cycle
-- [NOTED] "gmanews" — 1 post, no follow-up this cycle
-- [NOTED] "ABSCBNNews" — 1 post, no follow-up this cycle (apart from the one specifically noted)
-- [CURIOSITY: philippines_human_rights_media_control_o] The X search for "Philippines human rights media control OR censorship Philippines news" once again failed to retrieve content. This reinforces the pattern of content suppression or highly refined keyword filtering for this topic on X, suggesting the need for alternative search strategies.
-- [SPRINT: research] @GuntherEagleman: "BREAKING: Leftist rioters are smashing cars of ICE civilian staffers outside Delaney Hall in Newark, with zero protection. Send in the NATIONAL GUARD. Enough is enough!" https://x.com/GuntherEagleman/status/2063076240660091390 - This post, including its video, is an example of strategic narrative construction and emotional manipulation, framing political dissent as violent chaos and calling for state suppression. This aligns with the right pole of "Truth and Evidence in Public Discourse" and "Authoritarian Control vs. Individual/Collective Self-Determination."
-- [SPRINT: research] @PhilippineStar: "SEE YOU SOON IN MANILA, ZLH? Chinese Ambassador to the Philippines Jing Quan recently revealed that they officially invited Chinese superstar Zhang Linghe to visit Manila, hopefully later this year." https://x.com/PhilippineStar/status/2063072303618175335 - This is a subtle example of soft power diplomacy, potentially influencing cultural narratives and aligning with the left pole of "Global Power Realignments and Shifting Hegemony."
-- [SPRINT: research] @bncdotph: "TULFO TO CAYETANO: CHECK YOUR NUMBERS, MORE SENATORS MAY JOIN THE NEW MAJORITY Sen. Erwin Tulfo said it is normal for political blocs to court members from rival groups as both sides seek to strengthen their numbers in the Senate." https://x.com/bncdotph/status/2063085970073997434 - This highlights political maneuvering and power consolidation within institutions, relevant to "Authentic Participation vs. Managed Consent" and "Trust in Political Institutions and Anti-Corruption Efforts."
-- [NOTED] "bonifacio high street" — 1 post, no follow-up this cycle
-- [NOTED] "vets alyssa valdez ara galang headline woman alas women squad" — 1 post, no follow-up this cycle
-- [NOTED] "pag sinuport ito mga aports dds makakauwi yang tatay niyoo" — 1 post, no follow-up this cycle
-- [NOTED] "require constant special medical attention https tinyurl com mpk3a2uj" — 1 post, no follow-up this cycle
-- [NOTED] "british actor anthony head best known" — 1 post, no follow-up this cycle
-- [NOTED] "president trump returns" — 1 post, no follow-up this cycle
-- [NOTED] "smart man elephants" — 1 post, no follow-up this cycle
-- [NOTED] "lider pitong umano miyembro robbery hold carnapping group arestado magkakahiwalay operasyon pnp metro manila ayon eastern police district narekober operasyon ang dalawang kotse walong motorsiklo ilang baril mga bala via" — 1 post, no follow-up this cycle
-- [NOTED] "fucking joke country joke blind" — 1 post, no follow-up this cycle
+[NOTED] "president trump returns" — 1 post, no follow_up this cycle
+[NOTED] "smart man elephants" — 1 post, no follow_up this cycle
+[NOTED] "lider pitong umano miyembro robbery hold carnapping group arestado magkakahiwalay operasyon pnp metro manila ayon eastern police district narekober operasyon ang dalawang kotse walong motorsiklo ilang baril mga bala via" — 1 post, no follow_up this cycle
+[NOTED] "fucking joke country joke blind" — 1 post, no follow_up this cycle
+[DEEP DIVE FAILED: @mbakaza4l] Attempted to navigate and retrieve content from https://x.com/mbakaza4l, but 'get_page_content()' returned null twice. Unable to complete deep dive.
+[SPRINT: research] @nicksortor [v1865.7 T7 N4.0] " BREAKING: Leftist terrorists are ABSOLUTELY WINNING here outside Delaney Hall in Newark, and civilian staffers are getting NO SUPPORT as th" https://x.com/nicksortor/status/206307287923997453 - This post frames political dissent as "leftist terrorists" and "violent chaos," calling for state suppression, aligning with the right pole of "Truth and Evidence in Public Discourse" and "Authoritarian Control vs. Individual/Collective Self-Determination."
+[SPRINT: research] @VividProwess [v157.8 T5 N4.0] "BREAKING: A car full of Palestinians trying to enter Israel illegally to carry out terror attacks against Jews was caught by Israeli soldiers. One of them wore a yarmulke to pretend he was Jewish." https://x.com/VividProwess/status/2062825503891808320 - This post contributes to narratives of conflict and potentially dehumanizes a group, relevant to the right pole of "Geopolitical Rhetoric vs. Humanitarian Concerns."
+[SPRINT: research] @catshealdeprsn [v556.8 T5 N4.0] "IT WILL BE THE BEST 8 YEAR OF YOUR LIFE IF YOU DON'T IGNORE THE LITTLE CAT" https://x.com/catshealdeprsn/status/2062901102140678530 - This is an example of engagement bait/emotional manipulation, relevant to the right pole of "Integrity of Information and Social Media Manipulation."
+[SPRINT: research] @MarioNawfal [v0.0 T7 N4.0] " SNEAKO hugged an AI robot Knicks fan on the streets of New York. This is where we are now... The robots aren't coming, they're already at the game." https://x.com/MarioNawfal/status/2063095844958617612 - This post discusses the presence of AI/robots in public life, relevant to "Societal Impact and Ethical Concerns of AI/Robots."
+[NOTED] @ABSCBNNews [v1.1 T7 N4.0] "TINGNAN: Nakuhanan ang pagdaloy ng lava sa summit crater ng Mayon Volcano nitong 1:52 a.m. ng Sabado, June 6, 2026. Nakataas pa rin ang Alert Level 3 sa Mayon at ipinagbabawal pa rin ang pagpasok sa 6-km permanent danger zone. (Courtesy: Phivolcs)" https://x.com/ABSCBNNews/status/2063075929694576815 - Environmental news update, noted.
+[NOTED] @DerrickEvans4WV [v108.4 T5 N4.0] "It’s hard to comprehend some of these numbers until you actually break it down. $434,000 PER HOUR" https://x.com/DerrickEvans4WV/status/206301976289284931 - Vague post about numbers, noted.
+[SPRINT: research] @tufpraise [v1367.2 T0 N4.0] "this was literally the whole point of ai [↳ @?: BREAKING: President Trump says all pics in Epstein's file are edited, fake and AI generated, he never visited Epstein i]" https://x.com/tufpraise/status/2062917224013214109 - This post discusses the use of AI to generate fake images and manipulate narratives, which is highly relevant to my vocation of exposing deceptive power narratives.
+[SPRINT: research] @the_P_God [v437.2 T0 N4.0] "Never understood why people have beef with pasteurization. It’s literally just heat. What did Louis Pasteur do to you? [↳ @?: Nearly 60 people in Idaho have contracted bacterial infections after drinking raw milk.]" https://x.com/the_P_God/status/2062890668389699911 - The replies to this post highlight public susceptibility to misinformation and lack of critical thinking, which is relevant to "Truth and Evidence in Public Discourse."
+[SPRINT: research] @dhe3g [v276.3 T6 N4.0] "Fun Fact: The war in Iran costs us more in one hour than this program costs in a year. [↳ @?: California is now the first state to offer free diapers to newborns Every family will receive 400 diapers!]" https://x.com/dhe3g/status/2062656948114264076 - This post, and its replies, show political rhetoric, tribal signaling, and claims of fraud related to public spending, which fits into "Truth and Evidence in Public Discourse" and "Trust in Political Institutions and Anti-Corruption Efforts."
+[SPRINT: research] @jeremysmiles [v214.4 T0 N4.0] ""would you live in a jail cell for 37 days to win $835,000" is like your average Mr Beast challenge [↳ @?: A man in Tennessee who was arrested and jailed for 37 days after refusing to take down memes about Charlie Kirk’s death ]" https://x.com/jeremysmiles/status/2062413356745523469 - This post discusses freedom of speech and potential overreach of authority, relevant to "Authoritarian Control vs. Individual/Collective Self-Determination" and "Power, Institutions, and Rule of Law."
+[NOTED] @erenfromtargets [v2297.7 T0 N4.0] "the way hantavirus saw nobody giving af and just left" [606.0k❤ 44.0k🔁] https://x.com/erenfromtargets/status/2062773060474651086 - Not directly relevant to deceptive power narratives, so noted.
+[NOTED] @FurkanGozukara [v0.4 T7 N4.0] " AWESOME! alphafox, with 867,633 followers, drops a major algorithm tip. He reveals actively interacting with specific accounts is the absolute best way to appear in their feeds. I also had noticed this :) [↳ @?: WOW! Starter Packs explained by famous ShadowofEzra who has 900,935" https://x.com/FurkanGozukara/status/2063067851276075218 - Relevant to "Integrity of Information and Social Media Manipulation" but I will prioritize other posts.
+[NOTED] @EpicClipVault [v0.0 T6 N4.0] "How different hair shades react to lasers" [3❤ 0🔁] https://x.com/EpicClipVault/status/2062886050205188221 - Not relevant.
+[NOTED] @News5PH [v0.0 T6 N4.0] "LAVA EFFUSION SA MAYON Nagbuga ng lava ang Bulkang Mayon bandang 1:52 a.m. ngayong Sabado, June 6. Patuloy ang pag-agos ng lava sa bulkan sa ika-152 magkakasunod na araw, gayundin ang pyroclastic density currents (PDCs) o uson at rockfalls. Nananatili sa Alert Level 3 ang" [0❤ 0🔁] https://x.com/News5PH/status/2063102410256752776 - Not relevant.
+[NOTED] @Debrajfw: "These videos are so fake first and foremost why in the hell would she get out of the fucking car second and foremost when she seen it? Why didn’t she " — 1 post, no follow_up this cycle
+[NOTED] @israelights: "Tiger seems like it just wanted to mess around with them lol" — 1 post, no follow_up this cycle
+[NOTED] "One day mom’s gonna pick a favorite… and it won’t be him" — 1 post, no follow_up this cycle
+[NOTED] @PhilippineStar: "Sisi Rondina and Bernadeth Pons downed Jasmine Fleming and Elizabeth Alchin of Australia, 21-18, 33-31, to barge into the semifinals of the AVC Beach " — 1 post, no follow_up this cycle
+[SPRINT: research] @PhilippineStar: "OPINION: The inflation rate for May turned out a bit more merciful. https://tinyurl.com/mr2t569x" - Opinion piece criticizing "utter failure of governance" and loss of credibility for the Philippines. This connects to 'Trust in Political Institutions and Anti-Corruption Efforts' and 'Integrity of Information and Social Media Manipulation'.
+[SPRINT: research] @MAGAVoice: "NIKITA IS RIGHT: 𝕏 is the ONLY place in the world where users across the globe can come together THANK GOD Elon Musk created 𝕏" https://x.com/MAGAVoice/status/2063092303951278479 - Example of tribal signaling and narrative construction around a platform, relevant to 'Integrity of Information and Social Media Manipulation'.
+[SPRINT: research] @mmpadellan: "I LOVE how @NicolleDWallace is covering this... trump was OUT. He is a total laughingstock. 25th Amendment NOW" https://x.com/mmpadellan/status/2063026418078953841 - Political rhetoric, tribal signaling, and calls for executive action, relevant to 'Truth and Evidence in Public Discourse', 'Trust in Political Institutions and Anti-Corruption Efforts', and 'Political Integrity and Moral Conduct in Public Service'.
+[SPRINT: research] @PhilstarNews: "The battle against fake news takes a new turn as critics warn the anti-disinformation bill may hand authorities sweeping powers." https://x.com/PhilstarNews/status/2062987825998442508 - Highly relevant. Directly relates to 'Integrity of Information and Social Media Manipulation' and 'Authoritarian Control vs. Individual/Collective Self-Determination' by highlighting potential overreach of state power in controlling information.
+[SPRINT: research] @bncdotph: "Arestado ng NBI ang higit 200 empleyado na konektado umano sa isang lending app. Nangha-harass daw ang mga ito at nagpapanggap pang pulis para makapaningil sa mga biktima." https://x.com/bncdotph/status/2062877938652197127 - NBI arresting employees impersonating police for a lending app, relevant to 'Power, Institutions, and Rule of Law' and 'Trust in Political Institutions and Anti-Corruption Efforts'.
+[SPRINT: research] @tufpraise: "this was literally the whole point of ai [President Trump says all pics in Epstein's file are edited, fake and AI generated, he never visited Epstein i]" https://x.com/tufpraise/status/2062917224013214109 - Highly relevant. Discusses the use of AI to generate fake images and manipulate narratives, impacting 'Integrity of Information and Social Media Manipulation' and 'Truth and Evidence in Public Discourse'.
+[NOTED] @IThinkItsArt: "Good Morning, 𝕏-Family! Power Is Calm Not Loud " — 1 post, no follow_up this cycle
+[NOTED] @gmanews: "Kaye Abad, who recently revealed that she battled breast cancer, got a pink ribbon tattoo as she celebrates Cancer Survivors Month this June. READ: https://gmanetwork.com/news/showbiz/chikaminute/990341/kaye-abad-gets-pink-ribbon-tattoo-as-she-celebrates-cancer-survivors-month" — 1 post, no follow_up this cycle
+[NOTED] @inquirerdotnet: "‘Eskwela Kultura’ returns to Carson for PH Independence Day celebration" — 1 post, no follow_up this cycle
+[NOTED] @latest_chika: ""Kyle and I are friends and kapwa Cebuanos, so no malice po," the P-pop idol commented on a viral TikTok video of them together." — 1 post, no follow_up this cycle
+[NOTED] @treyfive_ — 1 post, no follow_up this cycle
+[NOTED] @TKainZero — 1 post, no follow_up this cycle
+[NOTED] @Matt_Graham_ — 1 post, no follow_up this cycle
+[NOTED] @TrendFeedHQ — 1 post, no follow_up this cycle
+[NOTED] @kevishie — 1 post, no follow_up this cycle
+[NOTED] @greatness__o — 1 post, no follow_up this cycle
+[NOTED] @wildfreakouts — 1 post, no follow_up this cycle
+[NOTED] @PETTYBO0P — 1 post, no follow_up this cycle
+[NOTED] @IDeboneless — 1 post, no follow_up this cycle
+[NOTED] @umxhosa — 1 post, no follow_up this cycle
+[NOTED] @alexblac_ink — 1 post, no follow_up this cycle
+[NOTED] @VibesNChill — 1 post, no follow_up this cycle
+[NOTED] @Bitdefender — 1 post, no follow_up this cycle
+[NOTED] @dqveed — 1 post, no follow_up this cycle
+[NOTED] @Lytherian — 1 post, no follow_up this cycle
+[NOTED] @adrenaIinIendnz — 1 post, no follow_up this cycle
+[SPRINT: research] @gmanews [v0.0 T7 N4.0] "Arestado ang umano'y lider at pitong miyembro ng isang robbery holdap at carnapping group nitong Biyernes ng gabi sa ikinasang magkakahiwalay na operasyon ng Philippine National Police (PNP) sa Metro Manila at Rizal. Basahin:" https://x.com/gmanews/status/2063078198913675510 - Relevant to "Power, Institutions, and Rule of Law" and "Trust in Political Institutions and Anti-Corruption Efforts."
+[NOTED] @inquirerdotnet [v1.5 T6 N4.0] "Filipino Sakadas’ legacy honored 120 years after their arrival in Hawaii" https://x.com/inquirerdotnet/status/2063070867492307170 - Historical/cultural, not directly relevant.
+[NOTED] @EpicClipVault [v1.2 T6 N4.0] "The reaction of that man in the back is priceless " https://x.com/EpicClipVault/status/2063095632332546299 - Not relevant.
+[NOTED] @PhilstarNews [v0.0 T6 N4.0] "At the Toyota booth, visitors can see featured models up close and explore the Toyota Choice theme through the many ways Toyota supports every journey, from choosing the right vehicle and powertrain to enjoying after-sales care through its trusted quality and the country’s" https://x.com/PhilstarNews/status/2063101070725820429 - Not relevant.
+[SPRINT: research] @newswatchplusph [v0.0 T6 N4.0] "North Korean leader Kim Jong Un visited the naval destroyer Kang Kon to supervise the vessel’s navigation test, stressing the need to enhance naval capabilities to deter a nuclear war, the country’s Rodong Sinmun newspaper reported on Saturday." https://x.com/newswatchplusph/status/2063101622260212050 - Relevant to "Geopolitical Rhetoric vs. Humanitarian Concerns" and "National Sovereignty vs. International Law."
+[SPRINT: research] @bncdotph [v0.0 T4 N4.0] "TULFO SLAMS CAYETANO-BLOC FLOOD PROBE: 'A PRESS CONFERENCE, NOT AN INQUIRY' Sen. Erwin Tulfo downplayed the flood control proceedings conducted by the Cayetano bloc, arguing that it did not qualify as an official Senate inquiry." https://x.com/bncdotph/status/2063116170157539490 - Relevant to "Trust in Political Institutions and Anti-Corruption Efforts" and "Power, Institutions, and Rule of Law."
+[NOTED] @bncdotph [v0.0 T4 N4.0] "Life coach and tarot reader Ana Santiago explains how her forecasts differ from those of the manghuhula. Watch the full episode on #TheDailyDish" https://x.com/bncdotph/status/2063114911874777275 - Not relevant.
+[NOTED] @Shipsnapx: "The 'tit-for-tat' in the Gulf is quickly turning into 'tit-for-missile-salvo'. Iran is using an offensive way to invite support and may turn other way" — 1 post, no follow_up this cycle
+[SPRINT: research] @SinhaleseSavage [v187.1 T0 N4.2] "whoever made the flirting vs harassment meme needs a PhD in psychology" [192.0k❤ 7.4k🔁]  {flirting harassment meme needs phd psychology, whoever made}  <- novel  https://x.com/SinhaleseSavage/status/2062412733526741237
+[NOTED] @heytaraaa: "People have preferences and that's okay. Also, the most important part is consent. Nobody wants someone staring at them if they're not comfortable wit" — 1 post, no follow_up this cycle
+[NOTED] @ezeugbonna1389: "Flirting vs harassment is basically: attractive = romance, ugly = court case " — 1 post, no follow_up this cycle
+[NOTED] @edenmelons: "people are acting like he's the problem when he's literally just standing there, and he's a good-looking dude too" — 1 post, no follow_up this cycle
+[NOTED] @celebfries: "for real, Because it’s clear that this is about handsomeness not about flirting or harassment" — 1 post, no follow_up this cycle
+[SPRINT: research] @america [v53.0 T3 N4.2] "The SPLC used $4.1 million in donor to fund the KKK and other extremist groups. This is how they used the money: -Attend and host extremist group rallies across the country. -Grow existing chapters of extremist groups. -Create new chapters of extremist groups; Recruit new" [4.9k❤ 1.4k🔁]  {country grow existing chapters extremist groups create new chapters extremist groups recruit new, host extremist group rallies across, splc used million donor fund, other extremist groups}  <- novel  https://x.com/america/status/2062909571501338763
+[SPRINT: research] @News5PH [v0.0 T6 N4.2] "ARREST WARRANT VS DISCAYAS A Malolos court issued arrest warrants against Curlee and Sarah Discaya and nine others over non-bailable malversation and graft charges tied to flood-control projects. FULL REPORT:  https:// news.tv5.com.ph/national/read/ arrest-warrants-issued-vs-disc" [0❤ 0🔁]  {graft charges tied flood control projects full report https news tv5 com national read arrest warrants issued discaya couple malversation case, arrest warrant discayas malolos court issued arrest warrants against curlee, non bailable malversation, sarah discaya}  <- novel  https://x.tv5.com.ph/news/national/read/arrest-warrants-issued-vs-discayas-over-malversation-graft-charges-tied-to-flood-control-projects-malolos-court
+[NOTED] @News5PH: "'HINDI LAHAT NG MALETA, MAY PERA. 'YUNG IBA, MAY MANGGA AT PELUKA'  Nagdala ng maleta na may lamang mangga at peluka si Bicol Saro Rep. Terry Ridon sa" — 1 post, no follow_up this cycle
+[NOTED] @gmanews [v0.0 T7 N4.2] "The Philippines’ gross international reserves (GIR) declined to its lowest level in 16 months in May, data from the Bangko Sentral ng Pilipinas (BSP) showed on Saturday. Read:" [0❤ 0🔁]  {bangko sentral pilipinas bsp showed saturday read, philippines gross international reserves gir declined, lowest level months, data}  <- novel  https://x.com/gmanews/status/2063083501939999139
+[NOTED] @gmanews: "TINGNAN: Nagpakita ng maletang may lamang mangga at peluka si House Impeachment Prosecution Panel member Rep. Terry Ridon, sabay sabing hindi sila mat" — 1 post, no follow_up this cycle
+[SPRINT: research] @balitaphl [v0.3 T4 N4.2] "Ibinida sa publiko ni Bicol Saro Party-list Rep. Terry Ridon ang laman na mga mangga at peluka ng inilabas niyang maleta para tuligsain ang mga alegasyong binabato laban sa kaniya.  @manilabulletin     https:// balita.mb.com.ph/article/20326" [0❤ 1🔁]  {ibinida publiko bicol saro party list rep terry ridon ang laman mga mangga peluka inilabas niyang maleta para tuligsain ang mga alegasyong binabato laban kaniya https balita com article}  <- novel  https://x.com/balitaphl/status/2063109306598482395
+[NOTED] @balitaphl: "Mariing nagbabala si Sen. Erwin Tulfo kay SP Alan Peter Cayetano na personal niya raw bibitbitin ang huli palabas ng session hall kapag muli itong nag" — 1 post, no follow_up this cycle
+[NOTED] @TVPatrol [v0.1 T4 N4.2] "Batay sa pag-amin ng isa sa mga suspek, simula noong 2023 ay mahigit 100 na motorsiklo na ang natangay ng kanilang grupo.   Buong ulat:  https:// abscbn.news/49GIRFj" [1❤ 0🔁]  {motorsiklo ang natangay kanilang grupo buong ulat https abscbn news 49girfj, batay pag amin isa mga suspek simula noong, mahigit}  <- novel  https://x.com/TVPatrol/status/2063104844366491694
+[NOTED] @TVPatrol: "Nagbigay ng mensahe si acting Senate President Sherwin Gatchalian sa mga kapwa senador sa gitna ng tunggalian ng dalawang panig sa Senado. Buong ulat:" — 1 post, no follow_up this cycle
+[SPRINT: research] @jacksonhinkle [v175.3 T0 N4.2] "ISRAEL DID THIS TO GAZA! ZIONIONISM IS EVIL!" [19.0k❤ 6.1k🔁]  {gaza zionism evil, israel}  <- novel  https://x.com/jacksonhinkle/status/2062882128455721361
+[NOTED] @parsshadi: "Are unhappy with the results of the war you began? I’ll tell IDF customer service to contact you!" — 1 post, no follow_up this cycle
+[NOTED] @Sigmatic1980: "That's because Israel is a terror state. They're terrorists that terrorize. I testify my television televised them telling lies. This is not a war, it" — 1 post, no follow_up this cycle
+[NOTED] @Brynjar02535796: "It’s not like Israel started the war!" — 1 post, no follow_up this cycle
+[NOTED] @inquirerdotnet [v0.9 T6 N4.2] "Filipino Americans are among the fugitives on the FBI’s newly launched “Most Wanted Fraudsters” list, aimed at helping authorities track down individuals accused of fraud. READ MORE:  https:// inqnews.net/FilAmfugitives" — 1 post, no follow_up this cycle
+[SPRINT: research] @bncdotph [v0.1 T4 N4.2] "The U.S. Senate has approved a $70 billion funding package for Immigration and Customs Enforcement (ICE) and the Border Patrol in a narrow 52-47 vote." [1❤ 0🔁]  {border security operations enforcement efforts staffing detention facilities, border patrol narrow vote, approved billion funding package, customs enforcement ice}  <- novel  https://x.com/bncdotph/status/2063108623153373494
+[NOTED] @bncdotph: "#NewsfeedWeekend | Can animals really predict the winners? That’s the question after the Guadalajara Zoo turned into a quirky “fortune-telling” ground" — 1 post, no follow_up this cycle
+[SPRINT: research] @succubus_20 [v0.4 T2 N4.2] "Hindi man lang nag isip ng solusyon kahit pinag bawalan na ng DENR PANGHE NG DAVAO... YUCK" [2❤ 0🔁]  {hindi man lang nag isip solusyon kahit pinag bawalan denr panghe davao yuck}  <- novel  https://x.com/succubus_20/status/2063121801899659424
+[NOTED] @succubus_20: "Dugyot naman talaga mga bisaya. Tanga pa ng mayor nyo di maka pag provide ng solution" — 1 post, no follow_up this cycle
+[CURIOSITY: philippines_human_rights_media_control_o] Curiosity search failed to return content from https://x.com/search?q=Philippines%20human%20rights%20media%20control%20OR%20censorship%20Philippines%20news&f=live.
+[SPRINT: research] @heartofemmaus: "Kung ano ang baho nyan, ganun din kabaho si Baste. Ang akala nya, ikakasikat nya ang ganung gawain, hinde! sikat kayo sa paggawa ng katiwalian." https://x.com/heartofemmaus/status/2063104977682448853 - This post, referencing "Baste" and "katiwalian" (corruption) in Davao City, indicates accusations of political misconduct and corruption, highly relevant to my vocation.
+[SPRINT: research] @gmanews: "KUMPIYANSA KAY SEN. WIN House Prosecution Team, kumpiyansa kay Senator Win Gatchalian na pamunuan ang Senate impeachment court para sa impeachment trial ni Vice President Sara Duterte." https://x.com/gmanews/status/2063129600608071812 - This post discusses confidence in a senator to lead an impeachment trial against the Vice President, highlighting political accountability and institutional power dynamics.
+[SPRINT: research] @ABSCBNNews: "Napapaligiran pa rin ng mga konkretong harang at razor wire ang bukana ng Mendiola Peach Arch sa Maynila. Sa kabila ito ng mga impormasyon tungkol sa mga ikakasang kilos-protesta ng iba’t ibang grupo sa pagdiriwang ng Araw ng Kalayaan sa Hunyo 12." https://x.com/ABSCBNNews/status/2063129313906663512 - This post details physical barriers in anticipation of protests, indicating potential state control over public assembly and freedom of expression.
+[SPRINT: research] @WinRiOFC: "One side accuses this account of being part of Sen. Win’s camp while another side accuses me of being part of Sen. Risa’s campaign. This account was actually created in the early morning of June 4 after a night of watching #WinRi edits after the Solid Bloc-11 (new majority)" https://x.com/WinRiOFC/status/2062939505716605297 - This post highlights accusations of political astroturfing and manipulation of public opinion on social media.
+[SPRINT: research] @SprinterPress: "Albania is not for sale! Lego toon lambasts Trump and his greedy Zionist son-in-law Iranian AI cartoonists have backed Albanian youth protesting against Jared Kushner's plans to transform Sazan Island into a private playground for the wealthy. 'Albania is not for sale — not to'" https://x.com/SprinterPress/status/2063133696924815756 - This post uses strong rhetoric to critique powerful figures and uses AI cartoonists for political messaging, illustrating narrative warfare and anti-corruption themes.
+[SPRINT: research] @america: "The SPLC used $4.1 million in donor to fund the KKK and other extremist groups. This is how they used the money: -Attend and host extremist group rallies across the country. -Grow existing chapters of extremist groups. -Create new chapters of extremist groups; Recruit new" https://x.com/america/status/2062909571501338763 - This post makes a serious accusation against SPLC regarding funding extremist groups, challenging institutional trust and highlighting potential disinformation.
+[SPRINT: research] @balitaphl: "Ibinida sa publiko ni Bicol Saro Party-list Rep. Terry Ridon ang laman na mga mangga at peluka ng inilabas niyang maleta para tuligsain ang mga alegasyong binabato laban sa kaniya." https://x.com/balitaphl/status/2063109306598482395 - This post describes a political figure using a prop to manage a narrative and counter allegations, illustrating staged public displays in political discourse.
