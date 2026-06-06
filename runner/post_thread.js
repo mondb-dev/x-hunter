@@ -31,25 +31,28 @@ function humanDelay(min, max) { return sleep(min + Math.floor(Math.random() * (m
 async function typeIntoCompose(page, text, selector) {
   await page.click(selector);
   await sleep(300);
-  await page.evaluate((txt, sel) => {
-    const el = document.querySelector(sel);
-    if (!el) return;
-    el.focus();
-    // Clear leftover draft before insert so text is not spliced into stale content.
-    document.execCommand('selectAll');
-    document.execCommand('delete');
-    document.execCommand('insertText', false, txt);
-  }, text, selector);
+  // Clear via keyboard (Ctrl+A, Delete) — fires events React handles
+  await page.keyboard.down('Control');
+  await page.keyboard.press('a');
+  await page.keyboard.up('Control');
+  await sleep(200);
+  await page.keyboard.press('Delete');
+  await sleep(400);
+  // Insert via CDP Input.insertText — Chrome 136+ broke execCommand for React contenteditable
+  const _cdpIns = await page.createCDPSession();
+  await _cdpIns.send('Input.insertText', { text });
+  await _cdpIns.detach();
   await sleep(1200);
   const inserted = await page.evaluate((sel) => {
     const el = document.querySelector(sel);
     return el ? el.innerText.trim() : '';
   }, selector);
   if (inserted !== text.trim()) {
-    await page.evaluate((sel) => {
-      const el = document.querySelector(sel);
-      if (el) { el.focus(); document.execCommand('selectAll'); document.execCommand('delete'); }
-    }, selector);
+    // keyboard.type fallback
+    await page.keyboard.down('Control');
+    await page.keyboard.press('a');
+    await page.keyboard.up('Control');
+    await page.keyboard.press('Delete');
     await sleep(300);
     await page.click(selector);
     await page.keyboard.type(text, { delay: 20 });

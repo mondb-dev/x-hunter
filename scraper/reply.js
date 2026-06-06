@@ -425,15 +425,17 @@ async function postReply(page, item, replyText) {
   await page.evaluate((sel) => { const el = document.querySelector(sel); if (el) el.click(); }, COMPOSE_BOX);
   await page.evaluate((sel) => { document.querySelector(sel)?.focus(); }, COMPOSE_BOX);
   await sleep(500);
-  await page.evaluate((sel) => {
-    const el = document.querySelector(sel);
-    if (el) { el.focus(); document.execCommand("selectAll"); document.execCommand("delete"); }
-  }, COMPOSE_BOX);
-  await sleep(300);
-  await page.evaluate((text, sel) => {
-    const el = document.querySelector(sel);
-    if (el) { el.focus(); document.execCommand("insertText", false, text); }
-  }, replyText, COMPOSE_BOX);
+  // Clear via keyboard (Ctrl+A, Delete) — fires events React handles
+  await page.keyboard.down("Control");
+  await page.keyboard.press("a");
+  await page.keyboard.up("Control");
+  await sleep(200);
+  await page.keyboard.press("Delete");
+  await sleep(400);
+  // Insert via CDP Input.insertText — Chrome 136+ broke execCommand for React contenteditable
+  const _cdpIns = await page.createCDPSession();
+  await _cdpIns.send("Input.insertText", { text: replyText });
+  await _cdpIns.detach();
   await sleep(1_000);
 
   // Verify insertion — require an EXACT match (length-only checks let spliced

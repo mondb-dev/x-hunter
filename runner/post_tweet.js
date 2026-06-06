@@ -177,14 +177,27 @@ async function confirmFromProfile(page, expectedText, attempts = 6, delayMs = 4_
     }, COMPOSE_BOX);
     await humanDelay(2_000, 4_000); // wait for React editor to fully initialise before inserting text
 
-    // Insert via execCommand — most reliable for React contenteditable (no clipboard perms needed)
-    console.log("[post_tweet] inserting tweet via execCommand...");
-    await page.evaluate((text, sel) => {
+    // Insert via CDP Input.insertText — Chrome 136+ broke execCommand for React
+    // contenteditable: text appears in DOM but React state does not update,
+    // so the Post button stays disabled. Input.insertText fires browser-level
+    // events that React's synthetic event system properly handles.
+    console.log("[post_tweet] inserting tweet via CDP Input.insertText...");
+    // Clear any leftover draft via keyboard shortcuts (fires events React handles)
+    await page.evaluate((sel) => {
       const el = document.querySelector(sel);
-      // Clear any leftover draft X persists in the shared composer before insert
-      // (otherwise the cursor sits mid-draft and our text gets spliced in).
-      if (el) { el.focus(); document.execCommand("selectAll"); document.execCommand("delete"); document.execCommand("insertText", false, text); }
-    }, tweetText, COMPOSE_BOX);
+      if (el) { el.click(); el.focus(); }
+    }, COMPOSE_BOX);
+    await sleep(300);
+    await page.keyboard.down("Control");
+    await page.keyboard.press("a");
+    await page.keyboard.up("Control");
+    await sleep(200);
+    await page.keyboard.press("Delete");
+    await sleep(400);
+    // Insert text at browser level — React state updates correctly
+    const _cdpInsert = await page.createCDPSession();
+    await _cdpInsert.send("Input.insertText", { text: tweetText });
+    await _cdpInsert.detach();
     await sleep(1_500);
 
     // Verify text was inserted correctly — retry with keyboard fallback if it

@@ -316,17 +316,18 @@ async function postReplyViaCDP(page, tweetUrl, replyText) {
   await page.click(COMPOSE_BOX);
   await sleep(300);
 
-  await page.evaluate((txt, sel) => {
-    const el = document.querySelector(sel);
-    if (!el) return;
-    el.focus();
-    // Clear any leftover draft X persists in the composer (stale unsent text
-    // would otherwise leave the cursor mid-text and splice our reply into it).
-    document.execCommand('selectAll');
-    document.execCommand('delete');
-    document.execCommand('insertText', false, txt);
-  }, replyText, COMPOSE_BOX);
-  await sleep(1200); // wait for React to process the DOM mutation
+  // Clear via keyboard (Ctrl+A, Delete) — fires events React handles
+  await page.keyboard.down('Control');
+  await page.keyboard.press('a');
+  await page.keyboard.up('Control');
+  await sleep(200);
+  await page.keyboard.press('Delete');
+  await sleep(400);
+  // Insert via CDP Input.insertText — Chrome 136+ broke execCommand for React contenteditable
+  const _cdpIns = await page.createCDPSession();
+  await _cdpIns.send('Input.insertText', { text: replyText });
+  await _cdpIns.detach();
+  await sleep(1200); // wait for React to process the input
 
   const inserted = await page.evaluate((sel) => {
     const el = document.querySelector(sel);
