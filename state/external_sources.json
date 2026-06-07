@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-06T23:48:08.206Z",
+  "generated_at": "2026-06-07T02:48:12.488Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-06T23:48:42.054Z",
+  "profiled_at": "2026-06-07T02:48:43.300Z",
   "sources": [
     {
       "domain": "justice.gov",
@@ -345,7 +345,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T00:16:41.361Z",
+        "fetched_at": "2026-06-07T00:18:04.783Z",
         "homepage_url": "https://ojp.gov/",
         "example_url": "https://bjs.ojp.gov/library/publications/violent-victimization-race-or-hispanic-origin-2008-2012",
         "homepage_status": 200,
@@ -1417,9 +1417,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-06T23:29:21.000Z",
+      "last_seen_at": "2026-06-07T02:18:50.000Z",
       "discovery": {
-        "distinct_urls": 4569,
+        "distinct_urls": 4594,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1428,10 +1428,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 2742,
-          "feed_buffer_reply": 2855
+          "feed_buffer": 2759,
+          "feed_buffer_reply": 2870
         },
-        "distinct_referring_accounts": 1638,
+        "distinct_referring_accounts": 1641,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1469,7 +1469,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:4569",
+            "distinct_urls:4594",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1477,7 +1477,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1638",
+            "referring_accounts:1641",
             "origin_types:2"
           ]
         },
@@ -1507,10 +1507,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:4569",
+            "distinct_urls:4594",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1638",
+            "referring_accounts:1641",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1553,9 +1553,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-06-06T15:01:19.000Z",
+      "last_seen_at": "2026-06-06T21:18:40.000Z",
       "discovery": {
-        "distinct_urls": 367,
+        "distinct_urls": 369,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -1565,7 +1565,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 341,
-          "feed_buffer": 52
+          "feed_buffer": 54
         },
         "distinct_referring_accounts": 244,
         "sample_referring_accounts": [
@@ -1605,7 +1605,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:367",
+            "distinct_urls:369",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1643,7 +1643,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:367",
+            "distinct_urls:369",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:244",
@@ -2727,6 +2727,135 @@
       }
     },
     {
+      "domain": "theepochtimes.com",
+      "entity": "Theepochtimes",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-15T03:48:55.844Z",
+      "last_seen_at": "2026-06-06T14:35:00.000Z",
+      "discovery": {
+        "distinct_urls": 11,
+        "example_urls": [
+          "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
+          "https://www.theepochtimes.com/health/the-pill-for-everything-why-off-label-gabapentin-prescriptions-are-soaring-5922719?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_Health02_traffic-karen-20250930&utm_term=new-hi2&gl=reg&utm_content=img-3_ThePillfor_karen_20251130&twclid=271v83i5qo6pdfho8oq2tts57h",
+          "https://www.theepochtimes.com/health/the-pill-for-everything-why-off-label-gabapentin-prescriptions-are-soaring-5922719?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_Health02_traffic-karen-20250930&utm_term=new-hi2&gl=reg&utm_content=img-3_ThePillfor_karen_20251130&twclid=2xrqi74zmv4i009phs8h25cs0",
+          "https://www.theepochtimes.com/health/the-pill-for-everything-why-off-label-gabapentin-prescriptions-are-soaring-5922719?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_Health02_traffic-karen-20250930&utm_term=new-hi2&gl=reg&utm_content=img-3_ThePillfor_karen_20251130&twclid=2a2c5vuama7gcxj5v1ctbb2onl",
+          "https://www.theepochtimes.com/bright/going-no-contact-how-can-we-counter-the-trend-of-family-estrangement-5973727?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_Bright_sub-karen-20260318&utm_term=new-Family&gl=reg&utm_content=img-v6_GoingNoContact_karen_20260311&twclid=2cpfvrmyhwdsk9pqzg9z70yy7o"
+        ],
+        "origin_counts": {
+          "feed_buffer": 3,
+          "feed_buffer_reply": 8
+        },
+        "distinct_referring_accounts": 3,
+        "sample_referring_accounts": [
+          "epochhealth",
+          "epochinspired",
+          "epochtimes"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.4408333333333333,
+          "basis": [
+            "distinct_urls:11",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.5,
+          "basis": [
+            "referring_accounts:3",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.29000000000000004,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.4526822916666666,
+          "confidence": 0.45257499999999995,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:11",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:3",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-05T09:17:20.896Z",
+        "homepage_url": "https://theepochtimes.com/",
+        "example_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.theepochtimes.com/",
+        "example_final_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 22,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "cbsnews.com",
       "entity": "Cbsnews",
       "kind": "unknown",
@@ -2857,142 +2986,13 @@
       }
     },
     {
-      "domain": "theepochtimes.com",
-      "entity": "Theepochtimes",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-15T03:48:55.844Z",
-      "last_seen_at": "2026-05-27T15:40:08.000Z",
-      "discovery": {
-        "distinct_urls": 10,
-        "example_urls": [
-          "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
-          "https://www.theepochtimes.com/health/the-pill-for-everything-why-off-label-gabapentin-prescriptions-are-soaring-5922719?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_Health02_traffic-karen-20250930&utm_term=new-hi2&gl=reg&utm_content=img-3_ThePillfor_karen_20251130&twclid=271v83i5qo6pdfho8oq2tts57h",
-          "https://www.theepochtimes.com/health/the-pill-for-everything-why-off-label-gabapentin-prescriptions-are-soaring-5922719?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_Health02_traffic-karen-20250930&utm_term=new-hi2&gl=reg&utm_content=img-3_ThePillfor_karen_20251130&twclid=2xrqi74zmv4i009phs8h25cs0",
-          "https://www.theepochtimes.com/health/the-pill-for-everything-why-off-label-gabapentin-prescriptions-are-soaring-5922719?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_Health02_traffic-karen-20250930&utm_term=new-hi2&gl=reg&utm_content=img-3_ThePillfor_karen_20251130&twclid=2a2c5vuama7gcxj5v1ctbb2onl",
-          "https://www.theepochtimes.com/bright/going-no-contact-how-can-we-counter-the-trend-of-family-estrangement-5973727?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_Bright_sub-karen-20260318&utm_term=new-Family&gl=reg&utm_content=img-v6_GoingNoContact_karen_20260311&twclid=2cpfvrmyhwdsk9pqzg9z70yy7o"
-        ],
-        "origin_counts": {
-          "feed_buffer": 3,
-          "feed_buffer_reply": 7
-        },
-        "distinct_referring_accounts": 3,
-        "sample_referring_accounts": [
-          "epochhealth",
-          "epochinspired",
-          "epochtimes"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.4116666666666667,
-          "basis": [
-            "distinct_urls:10",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.5,
-          "basis": [
-            "referring_accounts:3",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.29000000000000004,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:1",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.4463020833333334,
-          "confidence": 0.42395000000000005,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:10",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:3",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-05T09:17:20.896Z",
-        "homepage_url": "https://theepochtimes.com/",
-        "example_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.theepochtimes.com/",
-        "example_final_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 22,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "ro.co",
       "entity": "Ro Co",
       "kind": "unknown",
       "first_seen_at": "2026-04-14T14:38:53.968Z",
       "last_seen_at": "2026-06-06T12:01:06.000Z",
       "discovery": {
-        "distinct_urls": 203,
+        "distinct_urls": 204,
         "example_urls": [
           "https://ro.co/lp/weight-loss/quiz/?utm_medium=paid_social&utm_source=Twitter&utm_campaign=41158458&utm_term=54579155&utm_content=Ad2&twclid=2bv3rduaz2ypp78vahy5e6wspd",
           "https://ro.co/lp/weight-loss/quiz/?utm_medium=paid_social&utm_source=Twitter&utm_campaign=41158458&utm_term=54579155&utm_content=Ad3&twclid=2ciibjygsukfsjs5qv5hiat5v2",
@@ -3002,7 +3002,7 @@
         ],
         "origin_counts": {
           "feed_buffer": 2,
-          "feed_buffer_reply": 201
+          "feed_buffer_reply": 202
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -3033,7 +3033,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:203",
+            "distinct_urls:204",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3071,7 +3071,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:203",
+            "distinct_urls:204",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -3119,7 +3119,7 @@
       "first_seen_at": "2026-04-03T03:15:49.569Z",
       "last_seen_at": "2026-06-06T22:03:20.000Z",
       "discovery": {
-        "distinct_urls": 85,
+        "distinct_urls": 87,
         "example_urls": [
           "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=27k7ut43wxglvx2o2e2nj7pszs",
           "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=XConvert&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=29yx7u26d9gsggltzzuo1ae67n",
@@ -3129,7 +3129,7 @@
         ],
         "origin_counts": {
           "feed_buffer": 4,
-          "feed_buffer_reply": 81
+          "feed_buffer_reply": 83
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -3160,7 +3160,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:85",
+            "distinct_urls:87",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3198,7 +3198,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:85",
+            "distinct_urls:87",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -5154,9 +5154,9 @@
       "entity": "Byteplus",
       "kind": "unknown",
       "first_seen_at": "2026-04-15T13:30:37.000Z",
-      "last_seen_at": "2026-06-06T18:46:20.000Z",
+      "last_seen_at": "2026-06-06T20:15:09.000Z",
       "discovery": {
-        "distinct_urls": 72,
+        "distinct_urls": 74,
         "example_urls": [
           "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
           "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=2dnuttry4m02uyeswjtnkyw6cq",
@@ -5165,7 +5165,7 @@
           "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_video_codingplan&utm_content=tecdo&twclid=25cpjoe66peh1858zv8hf438l2"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 72
+          "feed_buffer_reply": 74
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -5196,7 +5196,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:72",
+            "distinct_urls:74",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -5234,7 +5234,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:72",
+            "distinct_urls:74",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:1",
@@ -11051,7 +11051,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T00:16:41.869Z",
+        "fetched_at": "2026-06-07T00:18:05.205Z",
         "homepage_url": "https://absinthe.network/",
         "example_url": "https://boost.absinthe.network/8hhp-sfkk/home?utm_source=x&utm_medium=cpc&utm_campaign=Absinthe&utm_id=sero&utm_content=Mar26&twclid=25502jccgfzmkpf20p6sbvaj8t",
         "homepage_status": 200,
@@ -11934,7 +11934,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T00:46:41.436Z",
+        "fetched_at": "2026-06-07T00:48:06.931Z",
         "homepage_url": "https://xhawk.ai/",
         "example_url": "https://xhawk.ai/?twclid=218eppqu7okpx25fant8nuhrp1",
         "homepage_status": 200,
@@ -13341,6 +13341,131 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "smart.link",
+      "entity": "Smart Link",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-07T06:11:24.204Z",
+      "last_seen_at": "2026-06-06T18:42:15.000Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
+          "https://smart.link/sdh2x9q4dptrg?twclid=24aw0ljxdznhulueu1l8o9x2fi",
+          "https://smart.link/ogdqjam4y4mcs?twclid=2dtao7qsbh0cu3icl0wn64ffvg"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2,
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "mcdonalds"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.2075,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:15",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.381328125,
+          "confidence": 0.15907500000000002,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-05T04:17:13.605Z",
+        "homepage_url": "https://smart.link/",
+        "example_url": "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://smart.link/",
+        "example_final_url": "https://www.mcdonalds.com/us/en-us/download-app.html",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 15,
           "opinion_marker": false
         }
       }
@@ -17559,7 +17684,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T00:16:42.290Z",
+        "fetched_at": "2026-06-07T00:18:05.643Z",
         "homepage_url": "https://moxt.ai/",
         "example_url": "https://moxt.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=x-brand-build-your-ai-team&utm_content=video-49s&utm_term=en-desktop&twclid=24fse5wprkux1ktw6we6w27x5c",
         "homepage_status": 200,
@@ -20302,7 +20427,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T02:47:16.531Z",
+        "fetched_at": "2026-06-07T02:48:41.132Z",
         "homepage_url": "https://tickerscores.ai/",
         "example_url": "https://tickerscores.ai/?twclid=29mi9nru582fdb9vf7t1d5r9yf",
         "homepage_status": 200,
@@ -26726,7 +26851,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T02:47:17.914Z",
+        "fetched_at": "2026-06-07T02:48:42.598Z",
         "homepage_url": "https://any.run/",
         "example_url": "https://any.run/cybersecurity-blog/anyrun-macos-sandbox/?utm_source=twitter&utm_medium=post&utm_campaign=macos_ad&utm_content=linktoblog&utm_term=300326&twclid=23x4x734jui85kqg60evobo3x3",
         "homepage_status": 200,
@@ -28721,129 +28846,6 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "smart.link",
-      "entity": "Smart Link",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-07T06:11:24.204Z",
-      "last_seen_at": "2026-05-11T05:21:08.307Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
-          "https://smart.link/sdh2x9q4dptrg?twclid=24aw0ljxdznhulueu1l8o9x2fi"
-        ],
-        "origin_counts": {
-          "feed_buffer": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "mcdonalds"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.22,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:15",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3536197916666667,
-          "confidence": 0.10997499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-05T04:17:13.605Z",
-        "homepage_url": "https://smart.link/",
-        "example_url": "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://smart.link/",
-        "example_final_url": "https://www.mcdonalds.com/us/en-us/download-app.html",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 15,
           "opinion_marker": false
         }
       }
@@ -33598,7 +33600,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T01:16:41.671Z",
+        "fetched_at": "2026-06-07T01:18:05.679Z",
         "homepage_url": "https://tradestation.com/",
         "example_url": "https://www.tradestation.com/born-trader-bear/?utm_source=x&utm_medium=paidsocial&utm_campaign=TS_COR-Prospecting-Traffic_Apr2026_Born-Trader+&utm_content=TSS_DSO_Bra_Awa_Pro_VID_2025_Brand_Campaign_Q1_Bear_1080x1080_15_v2&twclid=2dp5ql0qnlq22xrvygkx7ryw6t",
         "homepage_status": 200,
@@ -38112,7 +38114,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T00:16:42.636Z",
+        "fetched_at": "2026-06-07T00:18:05.999Z",
         "homepage_url": "https://assistant-ui.com/",
         "example_url": "https://www.assistant-ui.com/?twclid=2a5qpct5qg3tzn6ul3lhnlb5j5",
         "homepage_status": 200,
@@ -38234,7 +38236,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T00:46:41.568Z",
+        "fetched_at": "2026-06-07T00:48:07.060Z",
         "homepage_url": "https://forminit.com/",
         "example_url": "https://forminit.com/?twclid=218m3c3ox1o2100kng6d1o9tlf",
         "homepage_status": 200,
@@ -38356,7 +38358,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T00:46:42.030Z",
+        "fetched_at": "2026-06-07T00:48:07.584Z",
         "homepage_url": "https://bitcoinculturehub.com/",
         "example_url": "https://bitcoinculturehub.com/?twclid=296t692fyjaf8r7jqnhro0j2l3",
         "homepage_status": 200,
@@ -38478,7 +38480,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T00:47:02.035Z",
+        "fetched_at": "2026-06-07T00:48:27.589Z",
         "homepage_url": "https://cmegroup.com/",
         "example_url": "https://www.cmegroup.com/education/trading-challenge.html?utm_source=twitter&utm_medium=paid_social&utm_campaign=trading_challenge_ao&utm_kxconfid=vnl4uf4pq&twclid=2e2iv0j3zd8yhpaw544vjwsn07",
         "homepage_status": null,
@@ -49702,7 +49704,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T23:16:39.793Z",
+        "fetched_at": "2026-06-07T01:18:06.149Z",
         "homepage_url": "https://propscore.co/",
         "example_url": "https://propscore.co/?utm_source=x&utm_medium=paid_social&utm_campaign=propscore_compare&twclid=2ev7lrftqjnv4rqcllrjuddo5t",
         "homepage_status": 200,
@@ -49824,7 +49826,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-03T23:16:42.000Z",
+        "fetched_at": "2026-06-07T01:18:07.590Z",
         "homepage_url": "https://superai.com/",
         "example_url": "https://www.superai.com/?twclid=2coiqjyj72q0i963w4vk0ao6bg",
         "homepage_status": 200,
@@ -49946,7 +49948,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T01:17:01.674Z",
+        "fetched_at": "2026-06-07T01:18:27.592Z",
         "homepage_url": "https://46.224/",
         "example_url": "https://0.0.46.224/",
         "homepage_status": null,
@@ -50068,7 +50070,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T01:17:11.842Z",
+        "fetched_at": "2026-06-07T01:48:16.762Z",
         "homepage_url": "https://factorialenergy.com/",
         "example_url": "https://ir.factorialenergy.com/?twclid=23qvp1zi8fliwejp1g90xrmxci",
         "homepage_status": 200,
@@ -50190,7 +50192,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T01:17:12.351Z",
+        "fetched_at": "2026-06-07T01:48:17.453Z",
         "homepage_url": "https://serus.ai/",
         "example_url": "https://www.serus.ai/?twclid=29v4lxmzvo39j1dtelbj405bc3",
         "homepage_status": 200,
@@ -50312,7 +50314,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T01:46:41.557Z",
+        "fetched_at": "2026-06-07T01:48:18.057Z",
         "homepage_url": "https://xreplyai.com/",
         "example_url": "https://xreplyai.com/lp/ai-reply?utm_source=x&utm_medium=paid&utm_campaign=sales_ai-reply&utm_content=reply-time&twclid=25ltv9snjvnawlmhjivxk1op2j",
         "homepage_status": 200,
@@ -50434,7 +50436,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T01:46:42.356Z",
+        "fetched_at": "2026-06-07T01:48:18.908Z",
         "homepage_url": "https://lentrox.com/",
         "example_url": "https://lentrox.com/?x=cpmau1&tw=rcgk3&tw_click=tw-rcgk3-rcgkc&twclid=23mto8x2s1tqm6nmtxdbnlji40",
         "homepage_status": 200,
@@ -50527,7 +50529,7 @@
           ]
         },
         "profile": {
-          "score": 0.28,
+          "score": 0.34,
           "confidence": 0.65,
           "basis": [
             "meta_author:true",
@@ -50536,7 +50538,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:6",
             "opinion_marker:false"
           ]
         },
@@ -50556,7 +50558,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T01:46:43.494Z",
+        "fetched_at": "2026-06-07T02:18:07.575Z",
         "homepage_url": "https://fastloanadvance.com/",
         "example_url": "https://loans.fastloanadvance.com/?aid=505508&acid=1&subid=%7B%5Bad_group_id%7D%7D&twclid=24pt75umwn8h0pynsled729e1a",
         "homepage_status": 200,
@@ -50582,7 +50584,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 6,
           "opinion_marker": false
         }
       }
@@ -50678,7 +50680,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T01:46:44.698Z",
+        "fetched_at": "2026-06-07T02:18:08.755Z",
         "homepage_url": "https://axlabs.com/",
         "example_url": "https://go.axlabs.com/gitmyabi-pioneers?twclid=2748j7ycvef789xq3ta5i8cygh",
         "homepage_status": 200,
@@ -50800,7 +50802,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T02:16:44.159Z",
+        "fetched_at": "2026-06-07T02:18:11.138Z",
         "homepage_url": "https://utspaycashback.com/",
         "example_url": "https://www.utspaycashback.com/?twclid=2650deq3k4trsekhk3xdbpt9o7",
         "homepage_status": 200,
@@ -50922,7 +50924,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T02:16:44.382Z",
+        "fetched_at": "2026-06-07T02:18:11.394Z",
         "homepage_url": "https://play-asia.com/",
         "example_url": "https://www.play-asia.com/en/shikhondo-blue-pieta/13/70jxj9?ref=soc_x_di_ad_ga_shikh&twclid=216zt9553f8jvl6p2avsi94wxs",
         "homepage_status": 403,
@@ -51044,7 +51046,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T02:16:44.908Z",
+        "fetched_at": "2026-06-07T02:48:43.124Z",
         "homepage_url": "https://minervaconsole.com/",
         "example_url": "https://minervaconsole.com/?twclid=2ct1cd0vbj3x45kyvn9m9mhpuy",
         "homepage_status": 200,
@@ -51166,7 +51168,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T02:16:45.210Z",
+        "fetched_at": "2026-06-07T02:48:43.300Z",
         "homepage_url": "https://avianca.com/",
         "example_url": "https://www.avianca.com/pt/ofertas-destinos/voos-promocionais/?poscode=BR&utm_source=twitter&utm_medium=adb&utm_campaign=sam_br_20260514_conmebol_twitter_cpm_marca_adb&utm_term=sam_br_inter_marca_twitter_cpm_20260514_conmebol_adb&utm_content=prt_sam_br_inter_marca_vid_twitter_cpm_20260514_conmebol_adb_conmebol_grupos&twclid=26t4yexldc4l4dfzzbbn09ndbc",
         "homepage_status": 403,
