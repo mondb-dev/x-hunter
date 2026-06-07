@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-07T05:48:16.054Z",
+  "generated_at": "2026-06-07T08:17:45.704Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-07T05:48:45.312Z",
+  "profiled_at": "2026-06-07T08:18:18.721Z",
   "sources": [
     {
       "domain": "justice.gov",
@@ -1417,9 +1417,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-07T05:30:12.000Z",
+      "last_seen_at": "2026-06-07T08:00:00.000Z",
       "discovery": {
-        "distinct_urls": 4625,
+        "distinct_urls": 4653,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1428,10 +1428,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 2784,
-          "feed_buffer_reply": 2886
+          "feed_buffer": 2805,
+          "feed_buffer_reply": 2906
         },
-        "distinct_referring_accounts": 1641,
+        "distinct_referring_accounts": 1642,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1469,7 +1469,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:4625",
+            "distinct_urls:4653",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1477,7 +1477,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1641",
+            "referring_accounts:1642",
             "origin_types:2"
           ]
         },
@@ -1507,10 +1507,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:4625",
+            "distinct_urls:4653",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1641",
+            "referring_accounts:1642",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3621,6 +3621,133 @@
       }
     },
     {
+      "domain": "wsj.com",
+      "entity": "Wsj",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-05T05:24:00.718Z",
+      "last_seen_at": "2026-06-07T01:00:01.000Z",
+      "discovery": {
+        "distinct_urls": 14,
+        "example_urls": [
+          "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
+          "https://www.wsj.com/video/how-humanoid-robots-joined-this-south-carolina-factory-workforce/F2B22E19-0016-4AA1-A593-57AD7BDBA3CA?mod=WSJvidctr_watchnow_pos0%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_HRS_NAP&twclid=26gyjjgbduwn3fjrxna80o7n4o",
+          "https://www.wsj.com/?trackingCode=ae31bfee&ucid=WSJ_SMD_TWT_BRA_NAP_WIP_NAP_NAP_IP3_NAP&n2IKsaD9=n2IKsaD9&Pg9aWOPT=Pg9aWOPT&Cp5dKJWb=Cp5dKJWb&APCc9OU1=APCc9OU1&twclid=2f1tyrg571oijyoeta9g3ceq19",
+          "https://www.wsj.com/?trackingCode=a2d5061b&ucid=WSJ_SMD_TWT_BRA_NAP_WIP_NAP_NAP_IP2_NAP&n2IKsaD9=n2IKsaD9&Pg9aWOPT=Pg9aWOPT&Cp5dKJWb=Cp5dKJWb&APCc9OU1=APCc9OU1&twclid=26qserrpfzbdx6jqefklwvver1",
+          "https://www.wsj.com/?trackingCode=a2d5061b&ucid=WSJ_SMD_TWT_BRA_NAP_WIP_NAP_NAP_IP2_NAP&n2IKsaD9=n2IKsaD9&Pg9aWOPT=Pg9aWOPT&Cp5dKJWb=Cp5dKJWb&APCc9OU1=APCc9OU1&twclid=23idx6kceuofz1vj4a3vkda9vz"
+        ],
+        "origin_counts": {
+          "feed_buffer": 5,
+          "feed_buffer_reply": 9
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "wsj"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:14",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.4617,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:14",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-04T15:16:57.580Z",
+        "homepage_url": "https://wsj.com/",
+        "example_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
+        "homepage_status": 401,
+        "example_status": 401,
+        "homepage_final_url": "https://www.wsj.com/",
+        "example_final_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
+        "homepage_content_type": "text/html;charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "app.link",
       "entity": "App Link",
       "kind": "unknown",
@@ -3743,133 +3870,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "wsj.com",
-      "entity": "Wsj",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-05T05:24:00.718Z",
-      "last_seen_at": "2026-06-03T07:42:31.000Z",
-      "discovery": {
-        "distinct_urls": 13,
-        "example_urls": [
-          "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
-          "https://www.wsj.com/video/how-humanoid-robots-joined-this-south-carolina-factory-workforce/F2B22E19-0016-4AA1-A593-57AD7BDBA3CA?mod=WSJvidctr_watchnow_pos0%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_HRS_NAP&twclid=26gyjjgbduwn3fjrxna80o7n4o",
-          "https://www.wsj.com/?trackingCode=ae31bfee&ucid=WSJ_SMD_TWT_BRA_NAP_WIP_NAP_NAP_IP3_NAP&n2IKsaD9=n2IKsaD9&Pg9aWOPT=Pg9aWOPT&Cp5dKJWb=Cp5dKJWb&APCc9OU1=APCc9OU1&twclid=2f1tyrg571oijyoeta9g3ceq19",
-          "https://www.wsj.com/?trackingCode=a2d5061b&ucid=WSJ_SMD_TWT_BRA_NAP_WIP_NAP_NAP_IP2_NAP&n2IKsaD9=n2IKsaD9&Pg9aWOPT=Pg9aWOPT&Cp5dKJWb=Cp5dKJWb&APCc9OU1=APCc9OU1&twclid=26qserrpfzbdx6jqefklwvver1",
-          "https://www.wsj.com/?trackingCode=a2d5061b&ucid=WSJ_SMD_TWT_BRA_NAP_WIP_NAP_NAP_IP2_NAP&n2IKsaD9=n2IKsaD9&Pg9aWOPT=Pg9aWOPT&Cp5dKJWb=Cp5dKJWb&APCc9OU1=APCc9OU1&twclid=23idx6kceuofz1vj4a3vkda9vz"
-        ],
-        "origin_counts": {
-          "feed_buffer": 5,
-          "feed_buffer_reply": 8
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "wsj"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:13",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.4392,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:13",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-04T15:16:57.580Z",
-        "homepage_url": "https://wsj.com/",
-        "example_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
-        "homepage_status": 401,
-        "example_status": 401,
-        "homepage_final_url": "https://www.wsj.com/",
-        "example_final_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
-        "homepage_content_type": "text/html;charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -4097,7 +4097,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T07:46:47.319Z",
+        "fetched_at": "2026-06-07T07:48:13.843Z",
         "homepage_url": "https://combos.fun/",
         "example_url": "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2aswwo64b7owkoq09axl1gyba6",
         "homepage_status": 403,
@@ -4607,7 +4607,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T07:46:48.091Z",
+        "fetched_at": "2026-06-07T07:48:14.755Z",
         "homepage_url": "https://falconx.io/",
         "example_url": "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
         "homepage_status": 200,
@@ -5154,9 +5154,9 @@
       "entity": "Byteplus",
       "kind": "unknown",
       "first_seen_at": "2026-04-15T13:30:37.000Z",
-      "last_seen_at": "2026-06-06T23:24:36.000Z",
+      "last_seen_at": "2026-06-07T04:30:25.000Z",
       "discovery": {
-        "distinct_urls": 75,
+        "distinct_urls": 78,
         "example_urls": [
           "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
           "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=2dnuttry4m02uyeswjtnkyw6cq",
@@ -5165,7 +5165,7 @@
           "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_video_codingplan&utm_content=tecdo&twclid=25cpjoe66peh1858zv8hf438l2"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 75
+          "feed_buffer_reply": 78
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -5196,7 +5196,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:75",
+            "distinct_urls:78",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -5234,7 +5234,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:75",
+            "distinct_urls:78",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:1",
@@ -12939,7 +12939,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T07:46:49.478Z",
+        "fetched_at": "2026-06-07T07:48:15.494Z",
         "homepage_url": "https://mprnews.org/",
         "example_url": "https://www.mprnews.org/story/2023/12/19/minnesota-medicaid-fraud-prevention",
         "homepage_status": 200,
@@ -21668,7 +21668,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T07:46:50.519Z",
+        "fetched_at": "2026-06-07T07:48:16.715Z",
         "homepage_url": "https://cuervo.com/",
         "example_url": "https://cuervo.com/?twclid=2cw6oebezormtkrlgtaweck05m",
         "homepage_status": 200,
@@ -25621,7 +25621,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T08:16:48.286Z",
+        "fetched_at": "2026-06-07T08:18:13.539Z",
         "homepage_url": "https://cointracker.io/",
         "example_url": "https://www.cointracker.io/?utm_source=x&utm_medium=paid_social&utm_campaign=PDM_PaidSocial_X_Awareness_Reach&twclid=2db4ytuyg7wyekq6zcdaap0vjo",
         "homepage_status": 403,
@@ -33967,7 +33967,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T08:16:49.920Z",
+        "fetched_at": "2026-06-07T08:18:14.860Z",
         "homepage_url": "https://atr.org/",
         "example_url": "https://atr.org/mfn/?utm_source=x&utm_medium=cpm&utm_campaign=20260220&utm_content=mfn_v2&twclid=2dracnytvfda9fekosdp3ini9y",
         "homepage_status": 200,
@@ -33983,7 +33983,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 9,
+          "outbound_links_count": 10,
           "opinion_marker": false
         },
         "example": {
@@ -34089,7 +34089,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T08:16:53.036Z",
+        "fetched_at": "2026-06-07T08:18:18.074Z",
         "homepage_url": "https://prismmarketview.com/",
         "example_url": "https://prismmarketview.com/companies/sbc-medical-group-holdings-incorporated/?twclid=26comjr0eies8gnklzmi3odvtu",
         "homepage_status": 200,
@@ -53853,7 +53853,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T05:47:19.555Z",
+        "fetched_at": "2026-06-07T06:18:15.780Z",
         "homepage_url": "https://instacart.com/",
         "example_url": "https://www.instacart.com/store/brands/budweiser?ic_source=social&ic_campaignid=2026&twclid=2dlv3d1a0x9ht77bw7gqwrn3ou",
         "homepage_status": 200,
@@ -53975,7 +53975,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T05:47:20.428Z",
+        "fetched_at": "2026-06-07T06:18:16.506Z",
         "homepage_url": "https://actblue.com/",
         "example_url": "https://secure.actblue.com/donate/sh-jfp-iranwar-thanks&link_id=2&can_id=bc082effd7113aeffae8d4af79711bb7&source=email-the-vote-is-coming-is-your-rep-ready&email_referrer=email_3250247&email_subject=trump-personally-approved-israeli-strikes-on-lebanon-did-you-know-that&&&refcodeEmailReferrer=email_3250247",
         "homepage_status": 200,
@@ -54097,7 +54097,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T06:16:47.281Z",
+        "fetched_at": "2026-06-07T06:18:18.084Z",
         "homepage_url": "https://artboard.studio/",
         "example_url": "https://artboard.studio/iphone-mockup?twclid=23mlmsf3cbdppkungbuqr8ajee",
         "homepage_status": 200,
@@ -54219,7 +54219,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T06:16:47.812Z",
+        "fetched_at": "2026-06-07T06:18:18.356Z",
         "homepage_url": "https://liverpoolfc.com/",
         "example_url": "https://www.liverpoolfc.com/news/sir-kenny-dalglish-confirms-cancer-diagnosis",
         "homepage_status": 200,
@@ -54341,13 +54341,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T06:16:49.611Z",
+        "fetched_at": "2026-06-07T06:48:14.252Z",
         "homepage_url": "https://hoyo.link/",
         "example_url": "https://hoyo.link/LKIZksSJK?twclid=27mgvuyecyjivm5t3u8g2xew84",
         "homepage_status": 404,
         "example_status": 200,
         "homepage_final_url": "https://hoyo.link/",
-        "example_final_url": "https://hsr.hoyoverse.com/pcbranding?utm_source=SNS&utm_medium=CM_Twitter&utm_campaign=Blade&is_retargeting=true&af_adset=CMv43&af_dp=honkaistarrail%3A%2F%2F&af_reengagement_window=lifetime&c=Blade&pid=CM_Twitter",
+        "example_final_url": "https://hsr.hoyoverse.com/pcbranding?utm_source=SNS&utm_medium=CM_Twitter&utm_campaign=Blade&af_reengagement_window=lifetime&af_dp=honkaistarrail%3A%2F%2F&pid=CM_Twitter&c=Blade&af_adset=CMv43&is_retargeting=true",
         "homepage_content_type": "text/plain; charset=utf-8",
         "example_content_type": "text/html",
         "homepage": {
@@ -54463,7 +54463,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T06:16:50.428Z",
+        "fetched_at": "2026-06-07T06:48:14.945Z",
         "homepage_url": "https://apple.com/",
         "example_url": "https://apps.apple.com/us/app/oceanhorn-3/id1539411904?twclid=25zyeamc9kepxd6rdpaddxcmui",
         "homepage_status": 200,
@@ -54585,7 +54585,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T06:46:47.577Z",
+        "fetched_at": "2026-06-07T06:48:15.561Z",
         "homepage_url": "https://pwgam.es/",
         "example_url": "https://pwgam.es/4u9gMhe?twclid=21noniqp3uvsfhhqfa4vp30r3n",
         "homepage_status": 200,
@@ -54707,7 +54707,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T06:46:48.147Z",
+        "fetched_at": "2026-06-07T06:48:16.080Z",
         "homepage_url": "https://thealabaster.one/",
         "example_url": "https://thealabaster.one/giveaways?twclid=250zuicbclg404si4krs5p8zd4",
         "homepage_status": 200,
@@ -54829,7 +54829,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T06:46:49.049Z",
+        "fetched_at": "2026-06-07T08:18:18.721Z",
         "homepage_url": "https://affordablecarenc.com/",
         "example_url": "https://www.affordablecarenc.com/news/sen-amy-galey-champions-bill-targeting-ai-driven-healthcare-upcoding?twclid=26nalubpz34rgx8p9wla8gax7d",
         "homepage_status": 200,
