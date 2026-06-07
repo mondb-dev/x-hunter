@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-07T15:17:55.486Z",
+  "generated_at": "2026-06-07T17:17:57.640Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-07T15:18:23.677Z",
+  "profiled_at": "2026-06-07T17:18:25.542Z",
   "sources": [
     {
       "domain": "justice.gov",
@@ -1417,9 +1417,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-07T13:51:45.000Z",
+      "last_seen_at": "2026-06-07T16:00:00.000Z",
       "discovery": {
-        "distinct_urls": 4707,
+        "distinct_urls": 4724,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1428,10 +1428,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 2847,
-          "feed_buffer_reply": 2935
+          "feed_buffer": 2861,
+          "feed_buffer_reply": 2948
         },
-        "distinct_referring_accounts": 1648,
+        "distinct_referring_accounts": 1649,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1469,7 +1469,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:4707",
+            "distinct_urls:4724",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1477,7 +1477,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1648",
+            "referring_accounts:1649",
             "origin_types:2"
           ]
         },
@@ -1507,10 +1507,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:4707",
+            "distinct_urls:4724",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1648",
+            "referring_accounts:1649",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1553,9 +1553,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-06-06T21:18:40.000Z",
+      "last_seen_at": "2026-06-07T14:16:54.000Z",
       "discovery": {
-        "distinct_urls": 370,
+        "distinct_urls": 371,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -1564,10 +1564,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 342,
+          "feed_buffer_reply": 343,
           "feed_buffer": 54
         },
-        "distinct_referring_accounts": 244,
+        "distinct_referring_accounts": 245,
         "sample_referring_accounts": [
           "100ohiostate",
           "2by32",
@@ -1605,7 +1605,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:370",
+            "distinct_urls:371",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1613,7 +1613,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:244",
+            "referring_accounts:245",
             "origin_types:2"
           ]
         },
@@ -1643,10 +1643,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:370",
+            "distinct_urls:371",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:244",
+            "referring_accounts:245",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3117,9 +3117,9 @@
       "entity": "Athena",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T03:15:49.569Z",
-      "last_seen_at": "2026-06-07T12:22:20.000Z",
+      "last_seen_at": "2026-06-07T14:10:00.000Z",
       "discovery": {
-        "distinct_urls": 90,
+        "distinct_urls": 92,
         "example_urls": [
           "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=27k7ut43wxglvx2o2e2nj7pszs",
           "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=XConvert&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=29yx7u26d9gsggltzzuo1ae67n",
@@ -3129,7 +3129,7 @@
         ],
         "origin_counts": {
           "feed_buffer": 4,
-          "feed_buffer_reply": 86
+          "feed_buffer_reply": 88
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -3160,7 +3160,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:90",
+            "distinct_urls:92",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3198,7 +3198,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:90",
+            "distinct_urls:92",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -3748,6 +3748,133 @@
       }
     },
     {
+      "domain": "mottandbow.com",
+      "entity": "Mottandbow",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-06T22:25:00.000Z",
+      "last_seen_at": "2026-06-07T12:40:00.000Z",
+      "discovery": {
+        "distinct_urls": 14,
+        "example_urls": [
+          "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
+          "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-flexible-highquality-D795-V4-A-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=22mpw1zi0m3wgrq6uu36az1dqv",
+          "https://www.mottandbow.com/collections/classic-tee-perfected2?utm_source=twitter&utm_medium=twitter&utm_campaign=utm_campaign%3Dxconvert&utm_content=img-mt-juliana-stack-confidence-D57-V1-B-h163-p210-LP_MTCT2-c%2FNone-irl&twclid=2670d02ikxb9ux5a9633nrgyyd",
+          "https://www.mottandbow.com/collections/md-onlyjeans-worth-buying-v1?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-crotchshot-compliments-D910-V1-C-h27-p2-LP_MDOJV2-c%2FNone-irl&twclid=21euztwnudbibfpdsv69m9lwsf",
+          "https://www.mottandbow.com/pages/mens-tee?utm_medium=twitter&utm_campaign=%28M%29+Tees+-+USA+-+Prospecting+-+ABO+20+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Tees+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-mt-agus-mosaic-fit-D534-V1-F-h135-p141-LP_MT-c%2Fnone-irl&twclid=2cstma7gynu4m1yzxiy0bk24cg"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2,
+          "feed_buffer_reply": 12
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "mottandbow"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:14",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.11,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.4617,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:14",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-06T21:18:06.025Z",
+        "homepage_url": "https://mottandbow.com/",
+        "example_url": "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.mottandbow.com/",
+        "example_final_url": "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "app.link",
       "entity": "App Link",
       "kind": "unknown",
@@ -3866,133 +3993,6 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "mottandbow.com",
-      "entity": "Mottandbow",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-06T22:25:00.000Z",
-      "last_seen_at": "2026-05-20T02:38:43.000Z",
-      "discovery": {
-        "distinct_urls": 13,
-        "example_urls": [
-          "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
-          "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-flexible-highquality-D795-V4-A-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=22mpw1zi0m3wgrq6uu36az1dqv",
-          "https://www.mottandbow.com/collections/classic-tee-perfected2?utm_source=twitter&utm_medium=twitter&utm_campaign=utm_campaign%3Dxconvert&utm_content=img-mt-juliana-stack-confidence-D57-V1-B-h163-p210-LP_MTCT2-c%2FNone-irl&twclid=2670d02ikxb9ux5a9633nrgyyd",
-          "https://www.mottandbow.com/collections/md-onlyjeans-worth-buying-v1?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-crotchshot-compliments-D910-V1-C-h27-p2-LP_MDOJV2-c%2FNone-irl&twclid=21euztwnudbibfpdsv69m9lwsf",
-          "https://www.mottandbow.com/pages/mens-tee?utm_medium=twitter&utm_campaign=%28M%29+Tees+-+USA+-+Prospecting+-+ABO+20+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Tees+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-mt-agus-mosaic-fit-D534-V1-F-h135-p141-LP_MT-c%2Fnone-irl&twclid=2cstma7gynu4m1yzxiy0bk24cg"
-        ],
-        "origin_counts": {
-          "feed_buffer": 2,
-          "feed_buffer_reply": 11
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "mottandbow"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:13",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.11,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:1",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.4392,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:13",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-06T21:18:06.025Z",
-        "homepage_url": "https://mottandbow.com/",
-        "example_url": "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.mottandbow.com/",
-        "example_final_url": "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -5118,7 +5118,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T15:46:58.494Z",
+        "fetched_at": "2026-06-07T15:48:22.160Z",
         "homepage_url": "https://sofi.com/",
         "example_url": "https://sofi.com/crypto?twclid=2ykrysimqbgqvsp6rfph8v1n3",
         "homepage_status": 403,
@@ -5154,9 +5154,9 @@
       "entity": "Byteplus",
       "kind": "unknown",
       "first_seen_at": "2026-04-15T13:30:37.000Z",
-      "last_seen_at": "2026-06-07T07:20:35.000Z",
+      "last_seen_at": "2026-06-07T10:40:00.000Z",
       "discovery": {
-        "distinct_urls": 82,
+        "distinct_urls": 84,
         "example_urls": [
           "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
           "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=2dnuttry4m02uyeswjtnkyw6cq",
@@ -5165,7 +5165,7 @@
           "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_video_codingplan&utm_content=tecdo&twclid=25cpjoe66peh1858zv8hf438l2"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 82
+          "feed_buffer_reply": 84
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -5196,7 +5196,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:82",
+            "distinct_urls:84",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -5234,7 +5234,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:82",
+            "distinct_urls:84",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:1",
@@ -8526,7 +8526,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T16:47:19.545Z",
+        "fetched_at": "2026-06-07T16:48:43.795Z",
         "homepage_url": "https://newsmax.com/",
         "example_url": "https://www.newsmax.com/ruddy/chris-ruddy-scott-bessent-donald-trump/2026/01/19/id/1242743/?twclid=26mj7qjkmqd4eerrni08qzffox",
         "homepage_status": null,
@@ -14194,7 +14194,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T15:46:59.097Z",
+        "fetched_at": "2026-06-07T15:48:22.778Z",
         "homepage_url": "https://getpolyscope.com/",
         "example_url": "https://getpolyscope.com/?twclid=23d1n8q57spajkavshlbwt8gzs",
         "homepage_status": 200,
@@ -14320,7 +14320,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T15:46:59.402Z",
+        "fetched_at": "2026-06-07T15:48:22.958Z",
         "homepage_url": "https://simple.life/",
         "example_url": "https://simple.life/survey/tai-chi-walking?utm_source=twitter&utm_medium=cpc&utm_campaign=MB%3AOS_Web_All_Main_Purchase_Auto_US_w%2Fo_30.04.26_TaiChiWalkingGS_NewAds_9x16_Broad_25_CPM&twclid=29t6xjk72sn6e9tdvqx781kng4",
         "homepage_status": 200,
@@ -14446,7 +14446,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T15:47:00.751Z",
+        "fetched_at": "2026-06-07T15:48:24.398Z",
         "homepage_url": "https://seotrends.pro/",
         "example_url": "https://www.seotrends.pro/register?ref=promo&twclid=2boi27d8dao8t8jau1ht2f5vjk",
         "homepage_status": 200,
@@ -15570,7 +15570,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T16:47:20.403Z",
+        "fetched_at": "2026-06-07T16:48:44.599Z",
         "homepage_url": "https://mikmak.ai/",
         "example_url": "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2dqu9rpgpoqo0mblvt9uebl5t7",
         "homepage_status": 200,
@@ -16192,7 +16192,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T16:47:22.942Z",
+        "fetched_at": "2026-06-07T16:48:46.592Z",
         "homepage_url": "https://artprice.com/",
         "example_url": "https://www.artprice.com/artprice-news/14183/world-record-a-painting-by-raja-ravi-varma-sold-for-nearly-18-million-dollars-in-mumbai?utm_medium=artprice-news&utm_source=X&utm_campaign=news&utm_content=14183&twclid=23wn7ayvhifg7vr11g3elt7wk3",
         "homepage_status": 200,
@@ -16936,7 +16936,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T16:47:23.408Z",
+        "fetched_at": "2026-06-07T16:48:47.048Z",
         "homepage_url": "https://clubwptgold.com/",
         "example_url": "https://clubwptgold.com/login?promo=TWT&utm_source=x&twclid=2awu25myk6xgwlkhdjuj2acwh4",
         "homepage_status": 200,
@@ -17060,7 +17060,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T17:16:59.935Z",
+        "fetched_at": "2026-06-07T17:18:23.535Z",
         "homepage_url": "https://tuckercarlson.com/",
         "example_url": "https://tuckercarlson.com/watchthebibifiles?utm_source=twitter&utm_medium=paid&twclid=2csdk0gcbb1wulo0j0y7zfkr8h",
         "homepage_status": 403,
@@ -17184,7 +17184,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T17:17:00.412Z",
+        "fetched_at": "2026-06-07T17:18:23.912Z",
         "homepage_url": "https://suno.com/",
         "example_url": "https://suno.com/?wpsrc=Twitter&utm_source=Twitter&utm_medium=cpc&twclid=262jn9t05wzgtlibjiyo9sypsn",
         "homepage_status": 200,
@@ -17308,7 +17308,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T17:17:01.166Z",
+        "fetched_at": "2026-06-07T17:18:24.963Z",
         "homepage_url": "https://thefabulous.co/",
         "example_url": "https://start.thefabulous.co/onboarding/fab-initial-tw?utm_source=twitter&utm_medium=paid&utm_campaign=41232969&utm_content=54677002&twclid=2sflbfppx41vhym58cf0xiqtt",
         "homepage_status": 200,
@@ -17432,7 +17432,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T17:17:01.670Z",
+        "fetched_at": "2026-06-07T17:18:25.542Z",
         "homepage_url": "https://focusfeatures.com/",
         "example_url": "https://www.focusfeatures.com/obsession?twclid=2edvdkjskb18lt46rkzi6fpirn",
         "homepage_status": 200,
