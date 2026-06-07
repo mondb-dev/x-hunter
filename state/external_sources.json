@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-07T14:17:54.143Z",
+  "generated_at": "2026-06-07T15:17:55.486Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-07T14:18:21.649Z",
+  "profiled_at": "2026-06-07T15:18:23.677Z",
   "sources": [
     {
       "domain": "justice.gov",
@@ -1419,7 +1419,7 @@
       "first_seen_at": "2016-05-05T18:57:30.000Z",
       "last_seen_at": "2026-06-07T13:51:45.000Z",
       "discovery": {
-        "distinct_urls": 4703,
+        "distinct_urls": 4707,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1428,10 +1428,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 2845,
-          "feed_buffer_reply": 2932
+          "feed_buffer": 2847,
+          "feed_buffer_reply": 2935
         },
-        "distinct_referring_accounts": 1647,
+        "distinct_referring_accounts": 1648,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1469,7 +1469,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:4703",
+            "distinct_urls:4707",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1477,7 +1477,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1647",
+            "referring_accounts:1648",
             "origin_types:2"
           ]
         },
@@ -1507,10 +1507,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:4703",
+            "distinct_urls:4707",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1647",
+            "referring_accounts:1648",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3117,9 +3117,9 @@
       "entity": "Athena",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T03:15:49.569Z",
-      "last_seen_at": "2026-06-07T08:40:00.000Z",
+      "last_seen_at": "2026-06-07T12:22:20.000Z",
       "discovery": {
-        "distinct_urls": 88,
+        "distinct_urls": 90,
         "example_urls": [
           "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=27k7ut43wxglvx2o2e2nj7pszs",
           "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=XConvert&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=29yx7u26d9gsggltzzuo1ae67n",
@@ -3129,7 +3129,7 @@
         ],
         "origin_counts": {
           "feed_buffer": 4,
-          "feed_buffer_reply": 84
+          "feed_buffer_reply": 86
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -3160,7 +3160,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:88",
+            "distinct_urls:90",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3198,7 +3198,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:88",
+            "distinct_urls:90",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -3625,9 +3625,9 @@
       "entity": "Wsj",
       "kind": "unknown",
       "first_seen_at": "2026-04-05T05:24:00.718Z",
-      "last_seen_at": "2026-06-07T01:00:01.000Z",
+      "last_seen_at": "2026-06-07T14:50:06.037Z",
       "discovery": {
-        "distinct_urls": 14,
+        "distinct_urls": 15,
         "example_urls": [
           "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
           "https://www.wsj.com/video/how-humanoid-robots-joined-this-south-carolina-factory-workforce/F2B22E19-0016-4AA1-A593-57AD7BDBA3CA?mod=WSJvidctr_watchnow_pos0%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_HRS_NAP&twclid=26gyjjgbduwn3fjrxna80o7n4o",
@@ -3636,7 +3636,7 @@
           "https://www.wsj.com/?trackingCode=a2d5061b&ucid=WSJ_SMD_TWT_BRA_NAP_WIP_NAP_NAP_IP2_NAP&n2IKsaD9=n2IKsaD9&Pg9aWOPT=Pg9aWOPT&Cp5dKJWb=Cp5dKJWb&APCc9OU1=APCc9OU1&twclid=23idx6kceuofz1vj4a3vkda9vz"
         ],
         "origin_counts": {
-          "feed_buffer": 5,
+          "feed_buffer": 6,
           "feed_buffer_reply": 9
         },
         "distinct_referring_accounts": 1,
@@ -3668,7 +3668,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:14",
+            "distinct_urls:15",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3702,11 +3702,11 @@
         },
         "overall": {
           "score": 0.43875,
-          "confidence": 0.4617,
+          "confidence": 0.4842,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:14",
+            "distinct_urls:15",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -3716,7 +3716,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T15:16:57.580Z",
+        "fetched_at": "2026-06-07T15:18:21.599Z",
         "homepage_url": "https://wsj.com/",
         "example_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
         "homepage_status": 401,
@@ -13314,7 +13314,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T15:16:58.271Z",
+        "fetched_at": "2026-06-07T15:18:22.192Z",
         "homepage_url": "https://kurate.org/",
         "example_url": "https://kurate.org/?twclid=297nodwqt8tc962gjnxn3ym0jb",
         "homepage_status": 200,
@@ -13942,7 +13942,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T15:16:59.137Z",
+        "fetched_at": "2026-06-07T15:18:22.651Z",
         "homepage_url": "https://grayzonewarfare.com/",
         "example_url": "https://www.grayzonewarfare.com/?twclid=230bsti1ugak1ht0ipkmwplfde",
         "homepage_status": 200,
@@ -14068,7 +14068,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-04T15:17:00.145Z",
+        "fetched_at": "2026-06-07T15:18:23.677Z",
         "homepage_url": "https://bron.org/",
         "example_url": "https://go.bron.org/analytics?twclid=21xfmrfi5gvde5oc65teiw0ea1",
         "homepage_status": 200,
@@ -31799,6 +31799,84 @@
           "has_corrections_link": false,
           "outbound_links_count": 0,
           "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "cisco.com",
+      "entity": "Cisco",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-06T23:52:24.000Z",
+      "last_seen_at": "2026-06-07T07:31:00.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://www.cisco.com/site/us/en/solutions/artificial-intelligence/agentic-ops/cisco-cloud-control/index.html?twclid=2duz592pw3kdegqcvwn4z7b0qh",
+          "https://www.cisco.com/site/us/en/solutions/artificial-intelligence/agentic-ops/cisco-cloud-control/index.html?twclid=280sse5xfg55x7t0scf67nmqp8"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "ciscoai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
         }
       }
     },
@@ -56732,83 +56810,6 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "scuderiaferrari"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "cisco.com",
-      "entity": "Cisco",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-07T07:31:00.000Z",
-      "last_seen_at": "2026-06-07T07:31:00.000Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://www.cisco.com/site/us/en/solutions/artificial-intelligence/agentic-ops/cisco-cloud-control/index.html?twclid=2duz592pw3kdegqcvwn4z7b0qh"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "ciscoai"
         ],
         "distinct_axes": []
       },
