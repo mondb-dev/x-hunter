@@ -206,31 +206,6 @@ function redeployWeb() {
   }
 }
 
-// ── syncToGCS ───────────────────────────────────────────────────────────────
-/**
- * Sync state/journals/checkpoints/articles/daily/ponders/landmarks to GCS bucket,
- * then trigger a Cloud Run redeploy so the new pod picks up all fresh files.
- */
-function syncToGCS() {
-  const bucket = process.env.GCS_DATA_BUCKET || 'sebastian-hunter-data';
-  const root = config.PROJECT_ROOT;
-  const dirs = ['state', 'journals', 'checkpoints', 'articles', 'daily', 'ponders', 'landmarks'];
-  try {
-    generateManifests();
-    for (const d of dirs) {
-      const src = path.join(root, d);
-      if (fs.existsSync(src)) {
-        execSync(`gsutil -m -q rsync -r "${src}/" "gs://${bucket}/${d}/"`, {
-          stdio: 'ignore', timeout: 120000, cwd: root,
-        });
-      }
-    }
-    log('GCS data sync complete');
-  } catch (err) {
-    log(`GCS sync error: ${err.message}`);
-  }
-}
-
 // ── Branch management (META cycle) ──────────────────────────────────────────
 
 /**
@@ -379,7 +354,6 @@ function lastMergeCommit() {
 module.exports = {
   commitAndPush,
   triggerVercelDeploy,
-  syncToGCS,
   redeployWeb,
   createBranch,
   mergeBranch,

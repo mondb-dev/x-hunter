@@ -16,7 +16,7 @@ const path = require('path');
 const config = require('./config');
 const { ensureBrowser } = require('./browser');
 const { postLinkTweet, postSimpleTweet } = require('./post');
-const { commitAndPush, triggerVercelDeploy, syncToGCS } = require('./git');
+const { commitAndPush, triggerVercelDeploy } = require('./git');
 
 function log(msg) {
   console.log(`[daily] ${msg}`);
@@ -335,7 +335,6 @@ function housekeeping({ today, vercelDeployHook }) {
 
   // Deploy: Vercel (legacy) + GCS sync for Cloud Run
   triggerVercelDeploy(vercelDeployHook);
-  syncToGCS();
 }
 
 // ── File maintenance helpers ─────────────────────────────────────────────────

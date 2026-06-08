@@ -2609,3 +2609,16 @@ _dbg_full_text: ```json
 [verify_claims] investigation: cooldown active (6.0h remaining)
 [verification_export] exported 592 claims (0 suppressed)
 [verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.670 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 6 stale claims
+[verify_claims] investigation: cooldown active (4.0h remaining)
+[verification_export] exported 592 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub

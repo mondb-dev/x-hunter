@@ -70,9 +70,8 @@ if (fs.existsSync(manifesto)) {
 
 
 // Article image manifest — small JSON listing which slugs have images.
-// Images live in GCS; we only need the slug list so readArticles.ts can
-// generate imageUrls without fs.existsSync on the actual image files
-// (which would cause Next.js file-tracing to bundle 200+ MB of images).
+// Small JSON listing which slugs have cover images.
+// Images served directly from GitHub raw content.
 const imagesDir = path.resolve(cwd, 'data', 'articles', 'images');
 if (fs.existsSync(imagesDir)) {
   const imageSlugs = fs.readdirSync(imagesDir)
@@ -83,5 +82,7 @@ if (fs.existsSync(imagesDir)) {
     JSON.stringify(imageSlugs)
   );
   console.log('[prebuild] article_images.json: ' + imageSlugs.length + ' entries');
+  // Remove images from data/ — not needed at runtime, images served from GitHub raw.
+  fs.rmSync(imagesDir, { recursive: true, force: true });
 }
 console.log("[prebuild] done");

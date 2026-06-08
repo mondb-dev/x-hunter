@@ -77,8 +77,9 @@ function getImageSet(): Set<string> {
   return _imageSet;
 }
 
+const GH_RAW = 'https://raw.githubusercontent.com/mondb-dev/x-hunter/main';
 function getImageUrl(slug: string): string | undefined {
-  return getImageSet().has(slug) ? `/images/articles/${slug}.png` : undefined;
+  return getImageSet().has(slug) ? `${GH_RAW}/articles/images/${slug}.png` : undefined;
 }
 
 export async function getAllArticles(): Promise<Article[]> {

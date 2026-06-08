@@ -28,7 +28,6 @@
 'use strict';
 
 const http = require('http');
-const { Storage } = require('@google-cloud/storage');
 
 // ── Structured logging (Cloud Logging format) ──────────────────────────────
 function structLog(severity, message, fields = {}) {
@@ -58,17 +57,6 @@ const pool = new Pool({
 
 async function query(text, params = []) {
   return pool.query(text, params);
-}
-
-// ── GCS ─────────────────────────────────────────────────────────────────────
-
-const storage = new Storage({ projectId: process.env.GCP_PROJECT || 'sebastian-hunter' });
-const bucket = storage.bucket(process.env.GCS_DATA_BUCKET || 'sebastian-hunter-data');
-
-async function uploadToGCS(remotePath, content) {
-  const file = bucket.file(remotePath);
-  await file.save(content, { contentType: 'application/json', resumable: false });
-  log.info('uploaded to GCS', { path: remotePath });
 }
 
 // ── Draft generation ────────────────────────────────────────────────────────
@@ -213,8 +201,6 @@ async function generateExport() {
 
   const json = JSON.stringify(exportData, null, 2);
 
-  // Upload to GCS for Cloud Run site
-  await uploadToGCS('state/verification_export.json', json);
 
   log.info('export generated', { total: stats.total, supported: stats.supported, refuted: stats.refuted, contested: stats.contested });
   return exportData;

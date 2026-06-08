@@ -14,7 +14,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const config = require('./config');
-const { triggerVercelDeploy, syncToGCS } = require('./git');
+const { triggerVercelDeploy } = require('./git');
 const { isXSuppressed, suppressionReason } = require('./x_control');
 
 const PROJECT_ROOT = config.PROJECT_ROOT;
@@ -302,7 +302,6 @@ function postBrowse({ cycle, today, hour }) {
   const changes = execSync('git status --porcelain=v1', { encoding: 'utf-8' });
   if (changes.length > 0) {
     log('Changes detected, triggering sync...');
-    syncToGCS();
     triggerVercelDeploy();
   } else {
     log('No changes to sync.');
