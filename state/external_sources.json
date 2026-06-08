@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-08T06:18:12.182Z",
+  "generated_at": "2026-06-08T14:18:19.912Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-08T06:18:43.397Z",
+  "profiled_at": "2026-06-08T14:18:51.315Z",
   "sources": [
     {
       "domain": "justice.gov",
@@ -466,7 +466,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T07:47:17.065Z",
+        "fetched_at": "2026-06-08T07:48:41.956Z",
         "homepage_url": "https://house.gov/",
         "example_url": "https://www.house.gov/",
         "homepage_status": null,
@@ -836,7 +836,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T07:47:17.478Z",
+        "fetched_at": "2026-06-08T07:48:42.623Z",
         "homepage_url": "https://theguardian.com/",
         "example_url": "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
         "homepage_status": 200,
@@ -1249,7 +1249,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T07:47:17.718Z",
+        "fetched_at": "2026-06-08T07:48:42.863Z",
         "homepage_url": "https://apnews.com/",
         "example_url": "https://apnews.com/hub/iran",
         "homepage_status": 200,
@@ -1418,9 +1418,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-08T05:39:02.000Z",
+      "last_seen_at": "2026-06-08T13:32:02.000Z",
       "discovery": {
-        "distinct_urls": 4792,
+        "distinct_urls": 4827,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1429,10 +1429,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 2906,
-          "feed_buffer_reply": 2987
+          "feed_buffer": 2926,
+          "feed_buffer_reply": 3007
         },
-        "distinct_referring_accounts": 1664,
+        "distinct_referring_accounts": 1676,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1470,7 +1470,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:4792",
+            "distinct_urls:4827",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1478,7 +1478,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1664",
+            "referring_accounts:1676",
             "origin_types:2"
           ]
         },
@@ -1508,17 +1508,17 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:4792",
+            "distinct_urls:4827",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1664",
+            "referring_accounts:1676",
             "origin_types:2",
             "track_record_unavailable"
           ]
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T07:47:18.630Z",
+        "fetched_at": "2026-06-08T07:48:43.828Z",
         "homepage_url": "https://t.co/",
         "example_url": "https://t.co/pJSE124ec4",
         "homepage_status": 200,
@@ -1654,7 +1654,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T09:47:19.086Z",
+        "fetched_at": "2026-06-08T09:48:44.395Z",
         "homepage_url": "https://grok.com/",
         "example_url": "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
         "homepage_status": 200,
@@ -1826,9 +1826,9 @@
       "entity": "Doubleclick",
       "kind": "unknown",
       "first_seen_at": "2026-04-14T11:38:54.154Z",
-      "last_seen_at": "2026-06-02T22:49:58.930Z",
+      "last_seen_at": "2026-06-08T12:40:08.627Z",
       "discovery": {
-        "distinct_urls": 24,
+        "distinct_urls": 25,
         "example_urls": [
           "https://ad.doubleclick.net/ddm/trackclk/N117602.5126432X/B34540950.438517562;dc_trk_aid=631787244;dc_trk_cid=249093288;dc_dbm_token=$%7BDC_DBM_TOKEN%7D;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D;gpp=$%7BGPP_STRING_755%7D;gpp_sid=$%7BGPP_SID%7D;ltd=;dc_tdv=1?twclid=292cdwzoayexun1iu6o4fsk10z",
           "https://ad.doubleclick.net/ddm/trackclk/N424004.2061500TWITTER-OFFICIAL/B34815449.442181294;dc_trk_aid=635540198;dc_trk_cid=163408886?twclid=229wqdp9n1aljc0uj6dfw6r91e",
@@ -1837,7 +1837,7 @@
           "https://ad.doubleclick.net/ddm/trackclk/N1153793.2061500TWITTER-OFFICIAL/B35592624.443721335;dc_trk_aid=637029215;dc_trk_cid=252638233?twclid=2azp958vdx3j3lfhljr3wb4etv"
         ],
         "origin_counts": {
-          "feed_buffer": 20,
+          "feed_buffer": 21,
           "feed_buffer_reply": 4
         },
         "distinct_referring_accounts": 8,
@@ -1876,7 +1876,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:24",
+            "distinct_urls:25",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1914,7 +1914,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:24",
+            "distinct_urls:25",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:8",
@@ -2347,9 +2347,9 @@
       "entity": "Starlink",
       "kind": "unknown",
       "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-06-05T22:16:16.000Z",
+      "last_seen_at": "2026-06-08T08:38:12.000Z",
       "discovery": {
-        "distinct_urls": 66,
+        "distinct_urls": 70,
         "example_urls": [
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
@@ -2358,7 +2358,7 @@
           "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 64,
+          "feed_buffer_reply": 68,
           "feed_buffer": 5
         },
         "distinct_referring_accounts": 4,
@@ -2393,7 +2393,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:66",
+            "distinct_urls:70",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2431,7 +2431,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:66",
+            "distinct_urls:70",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:4",
@@ -2608,6 +2608,135 @@
       }
     },
     {
+      "domain": "theepochtimes.com",
+      "entity": "Theepochtimes",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-15T03:48:55.844Z",
+      "last_seen_at": "2026-06-08T01:33:26.000Z",
+      "discovery": {
+        "distinct_urls": 12,
+        "example_urls": [
+          "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
+          "https://www.theepochtimes.com/health/the-pill-for-everything-why-off-label-gabapentin-prescriptions-are-soaring-5922719?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_Health02_traffic-karen-20250930&utm_term=new-hi2&gl=reg&utm_content=img-3_ThePillfor_karen_20251130&twclid=271v83i5qo6pdfho8oq2tts57h",
+          "https://www.theepochtimes.com/health/the-pill-for-everything-why-off-label-gabapentin-prescriptions-are-soaring-5922719?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_Health02_traffic-karen-20250930&utm_term=new-hi2&gl=reg&utm_content=img-3_ThePillfor_karen_20251130&twclid=2xrqi74zmv4i009phs8h25cs0",
+          "https://www.theepochtimes.com/health/the-pill-for-everything-why-off-label-gabapentin-prescriptions-are-soaring-5922719?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_Health02_traffic-karen-20250930&utm_term=new-hi2&gl=reg&utm_content=img-3_ThePillfor_karen_20251130&twclid=2a2c5vuama7gcxj5v1ctbb2onl",
+          "https://www.theepochtimes.com/bright/going-no-contact-how-can-we-counter-the-trend-of-family-estrangement-5973727?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_Bright_sub-karen-20260318&utm_term=new-Family&gl=reg&utm_content=img-v6_GoingNoContact_karen_20260311&twclid=2cpfvrmyhwdsk9pqzg9z70yy7o"
+        ],
+        "origin_counts": {
+          "feed_buffer": 3,
+          "feed_buffer_reply": 9
+        },
+        "distinct_referring_accounts": 3,
+        "sample_referring_accounts": [
+          "epochhealth",
+          "epochinspired",
+          "epochtimes"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:12",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.5,
+          "basis": [
+            "referring_accounts:3",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.29000000000000004,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.4590625,
+          "confidence": 0.4812,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:12",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:3",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-08T09:18:44.661Z",
+        "homepage_url": "https://theepochtimes.com/",
+        "example_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.theepochtimes.com/",
+        "example_final_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 22,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "wikipedia.org",
       "entity": "Wikipedia",
       "kind": "reference",
@@ -2696,7 +2825,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T09:17:20.282Z",
+        "fetched_at": "2026-06-08T09:18:44.051Z",
         "homepage_url": "https://wikipedia.org/",
         "example_url": "https://en.wikipedia.org/wiki/2026_Iran_war",
         "homepage_status": 200,
@@ -2723,135 +2852,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 4,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "theepochtimes.com",
-      "entity": "Theepochtimes",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-15T03:48:55.844Z",
-      "last_seen_at": "2026-06-06T14:35:00.000Z",
-      "discovery": {
-        "distinct_urls": 11,
-        "example_urls": [
-          "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
-          "https://www.theepochtimes.com/health/the-pill-for-everything-why-off-label-gabapentin-prescriptions-are-soaring-5922719?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_Health02_traffic-karen-20250930&utm_term=new-hi2&gl=reg&utm_content=img-3_ThePillfor_karen_20251130&twclid=271v83i5qo6pdfho8oq2tts57h",
-          "https://www.theepochtimes.com/health/the-pill-for-everything-why-off-label-gabapentin-prescriptions-are-soaring-5922719?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_Health02_traffic-karen-20250930&utm_term=new-hi2&gl=reg&utm_content=img-3_ThePillfor_karen_20251130&twclid=2xrqi74zmv4i009phs8h25cs0",
-          "https://www.theepochtimes.com/health/the-pill-for-everything-why-off-label-gabapentin-prescriptions-are-soaring-5922719?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_Health02_traffic-karen-20250930&utm_term=new-hi2&gl=reg&utm_content=img-3_ThePillfor_karen_20251130&twclid=2a2c5vuama7gcxj5v1ctbb2onl",
-          "https://www.theepochtimes.com/bright/going-no-contact-how-can-we-counter-the-trend-of-family-estrangement-5973727?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_Bright_sub-karen-20260318&utm_term=new-Family&gl=reg&utm_content=img-v6_GoingNoContact_karen_20260311&twclid=2cpfvrmyhwdsk9pqzg9z70yy7o"
-        ],
-        "origin_counts": {
-          "feed_buffer": 3,
-          "feed_buffer_reply": 8
-        },
-        "distinct_referring_accounts": 3,
-        "sample_referring_accounts": [
-          "epochhealth",
-          "epochinspired",
-          "epochtimes"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.4408333333333333,
-          "basis": [
-            "distinct_urls:11",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.5,
-          "basis": [
-            "referring_accounts:3",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.29000000000000004,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:1",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.4526822916666666,
-          "confidence": 0.45257499999999995,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:11",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:3",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-05T09:17:20.896Z",
-        "homepage_url": "https://theepochtimes.com/",
-        "example_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.theepochtimes.com/",
-        "example_final_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 22,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
           "opinion_marker": false
         }
       }
@@ -2993,7 +2993,7 @@
       "first_seen_at": "2026-04-14T14:38:53.968Z",
       "last_seen_at": "2026-06-07T17:10:06.000Z",
       "discovery": {
-        "distinct_urls": 207,
+        "distinct_urls": 209,
         "example_urls": [
           "https://ro.co/lp/weight-loss/quiz/?utm_medium=paid_social&utm_source=Twitter&utm_campaign=41158458&utm_term=54579155&utm_content=Ad2&twclid=2bv3rduaz2ypp78vahy5e6wspd",
           "https://ro.co/lp/weight-loss/quiz/?utm_medium=paid_social&utm_source=Twitter&utm_campaign=41158458&utm_term=54579155&utm_content=Ad3&twclid=2ciibjygsukfsjs5qv5hiat5v2",
@@ -3003,7 +3003,7 @@
         ],
         "origin_counts": {
           "feed_buffer": 2,
-          "feed_buffer_reply": 205
+          "feed_buffer_reply": 207
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -3034,7 +3034,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:207",
+            "distinct_urls:209",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3072,7 +3072,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:207",
+            "distinct_urls:209",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -4225,7 +4225,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T13:47:24.895Z",
+        "fetched_at": "2026-06-08T13:48:48.274Z",
         "homepage_url": "https://valvolineglobal.com/",
         "example_url": "https://www.valvolineglobal.com/en/fifa-national-sweeps/?utm_source=X&utm_medium=paidsocial&utm_campaign=WC26_GM_US_AWE&utm_content=wcsimplified&twclid=299i90helnojknptru820mqim9",
         "homepage_status": 200,
@@ -5155,9 +5155,9 @@
       "entity": "Byteplus",
       "kind": "unknown",
       "first_seen_at": "2026-04-15T13:30:37.000Z",
-      "last_seen_at": "2026-06-07T19:35:59.000Z",
+      "last_seen_at": "2026-06-08T07:03:02.000Z",
       "discovery": {
-        "distinct_urls": 90,
+        "distinct_urls": 95,
         "example_urls": [
           "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
           "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=2dnuttry4m02uyeswjtnkyw6cq",
@@ -5166,7 +5166,7 @@
           "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_video_codingplan&utm_content=tecdo&twclid=25cpjoe66peh1858zv8hf438l2"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 90
+          "feed_buffer_reply": 95
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -5197,7 +5197,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:90",
+            "distinct_urls:95",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -5235,7 +5235,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:90",
+            "distinct_urls:95",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:1",
@@ -5749,7 +5749,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T11:17:20.400Z",
+        "fetched_at": "2026-06-08T11:18:45.133Z",
         "homepage_url": "https://anymark.co/",
         "example_url": "https://anymark.co/?utm_source=x&utm_campaign=x771&twclid=293t0nesyim9m91au5fqoaj5s8",
         "homepage_status": 200,
@@ -6789,6 +6789,258 @@
       }
     },
     {
+      "domain": "spacex.com",
+      "entity": "Spacex",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-22T01:29:21.000Z",
+      "last_seen_at": "2026-06-07T15:08:51.000Z",
+      "discovery": {
+        "distinct_urls": 15,
+        "example_urls": [
+          "https://shop.spacex.com/products/spacex-mission-ready-sunglasses?variant=44537843744847&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44537843744847&twclid=298d45vmtw4pu78lan6k2cs4ha",
+          "https://shop.spacex.com/products/unisex-launch-work-jacket?variant=44497171906639&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44497171906639&twclid=23qnr6aad9uvnmrvqa2wqo5511",
+          "https://shop.spacex.com/products/unisex-lucky-launch-t-shirt?variant=44526025015375&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44526025015375&twclid=23qnr6aad9uvnmrvqa2wqo5511",
+          "https://shop.spacex.com/products/lucky-launch-adjustable-cap?variant=44581538431055&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44581538431055&twclid=23qnr6aad9uvnmrvqa2wqo5511",
+          "https://shop.spacex.com/products/spacex-mission-ready-sunglasses?variant=44537843744847&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44537843744847&twclid=23qnr6aad9uvnmrvqa2wqo5511"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 15
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "spacex"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.41,
+          "basis": [
+            "distinct_urls:15",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.417421875,
+          "confidence": 0.46372500000000005,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:15",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-06T19:48:00.078Z",
+        "homepage_url": "https://spacex.com/",
+        "example_url": "https://shop.spacex.com/products/spacex-mission-ready-sunglasses?variant=44537843744847&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44537843744847&twclid=298d45vmtw4pu78lan6k2cs4ha",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.spacex.com/",
+        "example_final_url": "https://shop.spacex.com/products/spacex-mission-ready-sunglasses?variant=44537843744847&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44537843744847&twclid=298d45vmtw4pu78lan6k2cs4ha",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "teslahubs.com",
+      "entity": "Teslahubs",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-08T23:54:52.000Z",
+      "last_seen_at": "2026-06-08T02:09:28.000Z",
+      "discovery": {
+        "distinct_urls": 14,
+        "example_urls": [
+          "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
+          "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Consolidated_Men_25_34_Web_02_05_2026&utm_term=Static_PG_IMG_265_1.1&twclid=2d5hitta46kxxtcm1ycnikqynw",
+          "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Consolidated_Men_25_34_Web_02_05_2026&utm_term=Static_PG_IMG_265_1.1&twclid=23gx6wx8w8rda0ii0ue3b45e11",
+          "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=297m3am6766kanctu22rfzzzmy",
+          "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Consolidated_Men_25_34_Web_02_05_2026&utm_term=Static_PG_IMG_265_1.1&twclid=2e4005choav5tmwwrlg8gsyx8b"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 14
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "teslahubs"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.41,
+          "basis": [
+            "distinct_urls:14",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.417421875,
+          "confidence": 0.44122500000000003,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:14",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-07T11:18:23.256Z",
+        "homepage_url": "https://teslahubs.com/",
+        "example_url": "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://teslahubs.com/",
+        "example_final_url": "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "hypemarkets.xyz",
       "entity": "Hypemarkets Xyz",
       "kind": "unknown",
@@ -6908,132 +7160,6 @@
           "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "teslahubs.com",
-      "entity": "Teslahubs",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-08T23:54:52.000Z",
-      "last_seen_at": "2026-06-06T04:00:00.000Z",
-      "discovery": {
-        "distinct_urls": 13,
-        "example_urls": [
-          "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
-          "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Consolidated_Men_25_34_Web_02_05_2026&utm_term=Static_PG_IMG_265_1.1&twclid=2d5hitta46kxxtcm1ycnikqynw",
-          "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Consolidated_Men_25_34_Web_02_05_2026&utm_term=Static_PG_IMG_265_1.1&twclid=23gx6wx8w8rda0ii0ue3b45e11",
-          "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=297m3am6766kanctu22rfzzzmy",
-          "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Consolidated_Men_25_34_Web_02_05_2026&utm_term=Static_PG_IMG_265_1.1&twclid=2e4005choav5tmwwrlg8gsyx8b"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 13
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "teslahubs"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.41,
-          "basis": [
-            "distinct_urls:13",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.22,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.417421875,
-          "confidence": 0.418725,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:13",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-07T11:18:23.256Z",
-        "homepage_url": "https://teslahubs.com/",
-        "example_url": "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://teslahubs.com/",
-        "example_final_url": "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 0,
           "opinion_marker": false
@@ -7517,7 +7643,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T13:47:25.045Z",
+        "fetched_at": "2026-06-08T13:48:48.421Z",
         "homepage_url": "https://fundrise.com/",
         "example_url": "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=286j5mjx6wqmg12vs5jto11lrf",
         "homepage_status": 405,
@@ -8146,7 +8272,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T09:17:21.335Z",
+        "fetched_at": "2026-06-08T09:18:45.127Z",
         "homepage_url": "https://moltbook.com/",
         "example_url": "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
         "homepage_status": 200,
@@ -8273,7 +8399,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T11:17:21.752Z",
+        "fetched_at": "2026-06-08T11:18:47.238Z",
         "homepage_url": "https://framia.pro/",
         "example_url": "https://framia.pro/?utm_source=x&utm_campaign=twitter_adsmarch_framia_14_20260331&utm_medium=paid_social&twclid=2e6c8vey7aaz8sdwedu4gd0jgx",
         "homepage_status": 200,
@@ -9442,132 +9568,6 @@
       }
     },
     {
-      "domain": "spacex.com",
-      "entity": "Spacex",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-22T01:29:21.000Z",
-      "last_seen_at": "2026-06-07T12:20:00.000Z",
-      "discovery": {
-        "distinct_urls": 9,
-        "example_urls": [
-          "https://shop.spacex.com/products/spacex-mission-ready-sunglasses?variant=44537843744847&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44537843744847&twclid=298d45vmtw4pu78lan6k2cs4ha",
-          "https://shop.spacex.com/products/unisex-launch-work-jacket?variant=44497171906639&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44497171906639&twclid=23qnr6aad9uvnmrvqa2wqo5511",
-          "https://shop.spacex.com/products/unisex-lucky-launch-t-shirt?variant=44526025015375&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44526025015375&twclid=23qnr6aad9uvnmrvqa2wqo5511",
-          "https://shop.spacex.com/products/lucky-launch-adjustable-cap?variant=44581538431055&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44581538431055&twclid=23qnr6aad9uvnmrvqa2wqo5511",
-          "https://shop.spacex.com/products/spacex-mission-ready-sunglasses?variant=44537843744847&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44537843744847&twclid=23qnr6aad9uvnmrvqa2wqo5511"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 9
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "spacex"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.32249999999999995,
-          "basis": [
-            "distinct_urls:9",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.1,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.39828125000000003,
-          "confidence": 0.31035,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:9",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-06T19:48:00.078Z",
-        "homepage_url": "https://spacex.com/",
-        "example_url": "https://shop.spacex.com/products/spacex-mission-ready-sunglasses?variant=44537843744847&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44537843744847&twclid=298d45vmtw4pu78lan6k2cs4ha",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.spacex.com/",
-        "example_final_url": "https://shop.spacex.com/products/spacex-mission-ready-sunglasses?variant=44537843744847&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44537843744847&twclid=298d45vmtw4pu78lan6k2cs4ha",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "inqnews.net",
       "entity": "Inqnews",
       "kind": "unknown",
@@ -9790,7 +9790,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T13:47:25.446Z",
+        "fetched_at": "2026-06-08T13:48:48.848Z",
         "homepage_url": "https://oracle.com/",
         "example_url": "https://www.oracle.com/database/?source=%3Aad%3Aso%3Atw%3Adg%3Aa_nas%3A%3ARC_TWTR260205P00003C00005%3AEnd_Data_Risk&SC=%3Aad%3Aso%3Atw%3Adg%3Aa_nas%3A%3ARC_TWTR260205P00003C00005%3AEnd_Data_Risk&twclid=2b7h3vpee1s0pq1u9507vf4n1e",
         "homepage_status": 403,
@@ -10298,7 +10298,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T09:47:19.648Z",
+        "fetched_at": "2026-06-08T09:48:45.055Z",
         "homepage_url": "https://cosmos.so/",
         "example_url": "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc",
         "homepage_status": 200,
@@ -12973,6 +12973,131 @@
       }
     },
     {
+      "domain": "nobullproject.com",
+      "entity": "Nobullproject",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-09T04:34:34.845Z",
+      "last_seen_at": "2026-06-08T11:14:46.000Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://nobullproject.com/collections/drive-2-shoes?utm_source=x&utm_medium=paidsocial&utm_campaign=cpatest&utm_term=drive&utm_content=white&twclid=24gy5fp678esqwxit13xmono4x",
+          "https://nobullproject.com/collections/drive-2-shoes?utm_source=x&utm_medium=paidsocial&utm_campaign=cpatest&utm_term=drive&utm_content=drivetwo&twclid=2bfyvm9p47l7mgbawc8npzdwvw",
+          "https://nobullproject.com/collections/journey-2-shoes?utm_source=X&utm_medium=paidsocial&utm_campaign=cpatest&utm_term=journey2&utm_content=zestpearl&twclid=22opceb7n94r6gt5622ntaaa6h"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2,
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "nobull"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.2075,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.381328125,
+          "confidence": 0.15907500000000002,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-05T21:17:34.496Z",
+        "homepage_url": "https://nobullproject.com/",
+        "example_url": "https://nobullproject.com/collections/drive-2-shoes?utm_source=x&utm_medium=paidsocial&utm_campaign=cpatest&utm_term=drive&utm_content=white&twclid=24gy5fp678esqwxit13xmono4x",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://nobullproject.com/",
+        "example_final_url": "https://nobullproject.com/collections/drive-2-shoes?utm_source=x&utm_medium=paidsocial&utm_campaign=cpatest&utm_term=drive&utm_content=white&twclid=24gy5fp678esqwxit13xmono4x",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "pixelsuite.ai",
       "entity": "Pixelsuite Ai",
       "kind": "unknown",
@@ -13066,7 +13191,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T09:17:21.843Z",
+        "fetched_at": "2026-06-08T09:18:45.539Z",
         "homepage_url": "https://pixelsuite.ai/",
         "example_url": "https://www.pixelsuite.ai/?twclid=21t2mc2zkr7fbld6fej146r5rz",
         "homepage_status": 200,
@@ -13191,7 +13316,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T10:47:20.841Z",
+        "fetched_at": "2026-06-08T10:48:45.106Z",
         "homepage_url": "https://theograce.com/",
         "example_url": "https://www.theograce.com/products/terry-diamond-heart-necklace-with-engraved-names-in-gold-plating?utm_term=Guitar&utm_id=41178982&utm_medium=cpc&utm_campaign=US_ALL_twitter_cpc_Display_MD26_M4W_Still&utm_source=twitter&utm_content=MD26&twclid=2dnpihgths0rs7qj2dk5rkgxbo",
         "homepage_status": 200,
@@ -13817,7 +13942,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T11:17:21.991Z",
+        "fetched_at": "2026-06-08T11:18:47.427Z",
         "homepage_url": "https://openinfer.io/",
         "example_url": "https://openinfer.io/news/2026-06-02-nvidia-dynamo-proved-inference-needs-a-control-plane/?twclid=27dzvvpluhv8xln5kqrwwhmmra",
         "homepage_status": 200,
@@ -13943,13 +14068,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T10:47:22.923Z",
+        "fetched_at": "2026-06-08T10:48:46.920Z",
         "homepage_url": "https://zite.com/",
         "example_url": "https://try.zite.com/ad-integrations-1?twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.zite.com/",
-        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=oy3O54c1VMQdigTG&twclid=22vk5745ty6qkvlrboi0g1qhow",
+        "example_final_url": "https://www.zite.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=xcred&utm_term=integrations&dub_id=sn8xCyB5q9J3iAPD&twclid=22vk5745ty6qkvlrboi0g1qhow",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -14949,7 +15074,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T09:47:19.896Z",
+        "fetched_at": "2026-06-08T09:48:45.321Z",
         "homepage_url": "https://understandingwar.org/",
         "example_url": "https://understandingwar.org/research/middle-east/the-war-in-iran-operational-progress-but-challenges-remain/",
         "homepage_status": 200,
@@ -15177,7 +15302,7 @@
             "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:509",
+            "outbound_links:485",
             "opinion_marker:false"
           ]
         },
@@ -15197,7 +15322,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T09:47:20.255Z",
+        "fetched_at": "2026-06-08T09:48:47.002Z",
         "homepage_url": "https://cfr.org/",
         "example_url": "https://www.cfr.org/global-conflict-tracker/conflict/confrontation-between-united-states-and-iran",
         "homepage_status": 200,
@@ -15223,7 +15348,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 509,
+          "outbound_links_count": 485,
           "opinion_marker": false
         }
       }
@@ -15571,7 +15696,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T12:17:23.155Z",
+        "fetched_at": "2026-06-08T12:18:46.871Z",
         "homepage_url": "https://sourcebot.dev/",
         "example_url": "https://docs.sourcebot.dev/docs/features/mcp-server?twclid=24rnkjjr58b4nqm87glv1o5dr0",
         "homepage_status": 200,
@@ -16815,7 +16940,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T10:47:23.841Z",
+        "fetched_at": "2026-06-08T10:48:48.052Z",
         "homepage_url": "https://deere.com/",
         "example_url": "https://www.deere.com/en/technology-products/precision-ag-technology/remote-management/operations-center-pro-golf/?twclid=24oqwc0zuejy7hkjph647og8x6",
         "homepage_status": 200,
@@ -19440,7 +19565,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T10:47:24.113Z",
+        "fetched_at": "2026-06-08T10:48:48.369Z",
         "homepage_url": "https://britannica.com/",
         "example_url": "https://www.britannica.com/event/2026-Iran-War",
         "homepage_status": 403,
@@ -19934,7 +20059,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T12:47:28.865Z",
+        "fetched_at": "2026-06-08T12:48:50.235Z",
         "homepage_url": "https://gmanetwork.com/",
         "example_url": "https://gmanetwork.com/news/topstories/nation/987975/pnp-on-alert-as-senate-may-convene-as-impeachment-court",
         "homepage_status": 200,
@@ -21179,7 +21304,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T08:17:19.057Z",
+        "fetched_at": "2026-06-08T08:18:43.341Z",
         "homepage_url": "https://angel.com/",
         "example_url": "https://www.angel.com/tickets/young-washington?twclid=27mi12v89i7upcqxfvv5wwjfcz",
         "homepage_status": 200,
@@ -21195,7 +21320,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 9,
+          "outbound_links_count": 8,
           "opinion_marker": false
         },
         "example": {
@@ -21302,7 +21427,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T11:17:22.431Z",
+        "fetched_at": "2026-06-08T11:18:47.876Z",
         "homepage_url": "https://georgetown.edu/",
         "example_url": "https://gjia.georgetown.edu/2026/03/26/the-war-against-iran-and-global-risks-tell-me-how-this-ends/",
         "homepage_status": 200,
@@ -22415,7 +22540,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T12:17:23.560Z",
+        "fetched_at": "2026-06-08T12:18:47.282Z",
         "homepage_url": "https://ajc.org/",
         "example_url": "https://www.ajc.org/news/the-iran-strikes-explained-how-we-got-here-and-what-it-means",
         "homepage_status": 200,
@@ -22787,7 +22912,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T12:17:24.134Z",
+        "fetched_at": "2026-06-08T12:18:47.882Z",
         "homepage_url": "https://outx.ai/",
         "example_url": "https://outx.ai/a/buyer-intent-tracking?utm_source=twitter&utm_medium=paid&utm_campaign=buyer-intent&utm_content=t-b1-first-200&twclid=28hhz80snfgnotyxefsxxmt9nc",
         "homepage_status": 200,
@@ -22911,7 +23036,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T12:17:24.373Z",
+        "fetched_at": "2026-06-08T12:18:48.160Z",
         "homepage_url": "https://finviz.com/",
         "example_url": "https://finviz.com/register?affilId=659201043&twclid=237p0oqyf8bhakod3naytz02qh",
         "homepage_status": 200,
@@ -24645,7 +24770,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T12:47:22.853Z",
+        "fetched_at": "2026-06-08T12:48:50.568Z",
         "homepage_url": "https://rice.edu/",
         "example_url": "https://news.rice.edu/news/2026/more-dangerous-and-unpredictable-experts-discuss-ongoing-iran-conflict",
         "homepage_status": null,
@@ -26274,129 +26399,6 @@
       }
     },
     {
-      "domain": "nobullproject.com",
-      "entity": "Nobullproject",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-09T04:34:34.845Z",
-      "last_seen_at": "2026-04-14T09:34:08.904Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://nobullproject.com/collections/drive-2-shoes?utm_source=x&utm_medium=paidsocial&utm_campaign=cpatest&utm_term=drive&utm_content=white&twclid=24gy5fp678esqwxit13xmono4x",
-          "https://nobullproject.com/collections/drive-2-shoes?utm_source=x&utm_medium=paidsocial&utm_campaign=cpatest&utm_term=drive&utm_content=drivetwo&twclid=2bfyvm9p47l7mgbawc8npzdwvw"
-        ],
-        "origin_counts": {
-          "feed_buffer": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "nobull"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.1,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3536197916666667,
-          "confidence": 0.10997499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-05T21:17:34.496Z",
-        "homepage_url": "https://nobullproject.com/",
-        "example_url": "https://nobullproject.com/collections/drive-2-shoes?utm_source=x&utm_medium=paidsocial&utm_campaign=cpatest&utm_term=drive&utm_content=white&twclid=24gy5fp678esqwxit13xmono4x",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://nobullproject.com/",
-        "example_final_url": "https://nobullproject.com/collections/drive-2-shoes?utm_source=x&utm_medium=paidsocial&utm_campaign=cpatest&utm_term=drive&utm_content=white&twclid=24gy5fp678esqwxit13xmono4x",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "3c.wiki",
       "entity": "3c Wiki",
       "kind": "unknown",
@@ -26734,7 +26736,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T13:47:36.973Z",
+        "fetched_at": "2026-06-08T13:49:00.696Z",
         "homepage_url": "https://statefreedomcaucus.org/",
         "example_url": "https://www.statefreedomcaucus.org/15-strong/?twclid=2epfodwob5z2m8xe9l0e1w4xfa",
         "homepage_status": null,
@@ -31039,7 +31041,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T06:47:16.316Z",
+        "fetched_at": "2026-06-08T06:48:41.337Z",
         "homepage_url": "https://litmas.ai/",
         "example_url": "https://litmas.ai/litigation-ai-workflows-sign-up/?utm_source=x&utm_medium=paid-social&utm_campaign=x_pr_wv_follower-lals_us_si&utm_content=summary-judgment-overnight_lp-efficiency&twclid=2632rgrwnlsjvtuax0q5tz2iba",
         "homepage_status": 200,
@@ -31162,7 +31164,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T06:47:16.481Z",
+        "fetched_at": "2026-06-08T06:48:41.520Z",
         "homepage_url": "https://interserver.net/",
         "example_url": "https://www.interserver.net/vps/?twclid=29rh8w2who6jt1ovqguffmygqn",
         "homepage_status": 403,
@@ -31285,7 +31287,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T06:47:17.317Z",
+        "fetched_at": "2026-06-08T06:48:42.426Z",
         "homepage_url": "https://lightmode.io/",
         "example_url": "https://spacesuit.lightmode.io/?v=1&twclid=2bqubo5q18jt2furhls28u3oq5",
         "homepage_status": 200,
@@ -31408,7 +31410,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T06:47:17.908Z",
+        "fetched_at": "2026-06-08T06:48:42.876Z",
         "homepage_url": "https://tricentis.com/",
         "example_url": "https://www.tricentis.com/?utm_medium=cpc&utm_source=twitter&utm_campaign=na_ai_ai_ams_en_2025-05&utmc_placement=x-lookalike&utmc_product=na&twclid=25fxem9k6nigygx2hl5nz8o3z3",
         "homepage_status": null,
@@ -31531,7 +31533,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T08:17:19.350Z",
+        "fetched_at": "2026-06-08T08:18:43.635Z",
         "homepage_url": "https://dailywire.com/",
         "example_url": "https://www.dailywire.com/show/real-history-with-matt-walsh?utm_campaign=realhistory&utm_medium=paid&utm_source=twitter&utm_content=creative05179_reach&twclid=2c3hzj16zya19zmm7vtu0j66ed",
         "homepage_status": 200,
@@ -31654,7 +31656,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T08:17:20.047Z",
+        "fetched_at": "2026-06-08T08:18:44.364Z",
         "homepage_url": "https://consideramazon.com/",
         "example_url": "https://www.consideramazon.com/title/fallout?twclid=2b9bx4ja40aa12y4txqnk316o3",
         "homepage_status": 200,
@@ -31777,7 +31779,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T08:17:21.470Z",
+        "fetched_at": "2026-06-08T08:18:45.732Z",
         "homepage_url": "https://rsvlts.com/",
         "example_url": "https://www.rsvlts.com/collections/rocky/products/rocky-hearts-on-fire-swim-trunks?utm_source=twitter&utm_medium=cpc&utm_campaign=rocky&utm_term=3878448&twclid=29acb84lz8x1f7nqu7wna0a5zi",
         "homepage_status": 200,
@@ -31900,7 +31902,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T12:47:29.524Z",
+        "fetched_at": "2026-06-08T12:48:51.192Z",
         "homepage_url": "https://agentstatus.dev/",
         "example_url": "https://agentstatus.dev/?twclid=25rbfxkgyh0s8w6dbsvrb25thd",
         "homepage_status": 200,
@@ -32513,7 +32515,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T12:47:29.761Z",
+        "fetched_at": "2026-06-08T12:48:51.420Z",
         "homepage_url": "https://twimg.com/",
         "example_url": "https://pbs.twimg.com/media/GMB52q8X0AA0k_e?format=jpg&name=large",
         "homepage_status": null,
@@ -32635,7 +32637,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T14:17:24.853Z",
+        "fetched_at": "2026-06-08T14:18:49.105Z",
         "homepage_url": "https://t.me/",
         "example_url": "http://t.me/PressTV",
         "homepage_status": 200,
@@ -32757,7 +32759,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T14:17:25.332Z",
+        "fetched_at": "2026-06-08T14:18:49.807Z",
         "homepage_url": "https://abcnews.link/",
         "example_url": "https://abcnews.link/SAFHg1K",
         "homepage_status": 200,
@@ -32850,16 +32852,16 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.58,
+          "confidence": 0.75,
           "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:25",
             "opinion_marker:false"
           ]
         },
@@ -32879,33 +32881,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T14:17:25.458Z",
+        "fetched_at": "2026-06-08T14:18:50.073Z",
         "homepage_url": "https://elpais.com/",
         "example_url": "https://elpais.com/",
-        "homepage_status": 403,
-        "example_status": 403,
+        "homepage_status": 200,
+        "example_status": 200,
         "homepage_final_url": "https://elpais.com/",
         "example_final_url": "https://elpais.com/",
-        "homepage_content_type": "text/html;charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 25,
           "opinion_marker": false
         },
         "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 25,
           "opinion_marker": false
         }
       }
@@ -33123,7 +33125,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T14:17:26.723Z",
+        "fetched_at": "2026-06-08T14:18:51.315Z",
         "homepage_url": "https://trib.al/",
         "example_url": "https://trib.al/etqydoJ",
         "homepage_status": 200,
@@ -57525,6 +57527,314 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "altfragrances"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "statefarm.com",
+      "entity": "Statefarm",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-08T06:20:09.579Z",
+      "last_seen_at": "2026-06-08T06:20:09.579Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.statefarm.com/lp/getstatefarm?cmpid=soc%3Aomd&camp=100000904&site=x&plac=200000904&crea=300000904&twclid=24cmx2d7zq9uhrq1lzj54oo09o"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "statefarm"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "kiierr.com",
+      "entity": "Kiierr",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-07T22:17:10.000Z",
+      "last_seen_at": "2026-06-07T22:17:10.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://kiierr.com/regrow-your-hair-new/?twclid=23i2gackvanp24oqqrs1z7o7zb"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "kiierrhairgrow"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "seatofgodsthrone.com",
+      "entity": "Seatofgodsthrone",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-08T03:17:11.000Z",
+      "last_seen_at": "2026-06-08T03:17:11.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://seatofgodsthrone.com/?twclid=2gshk821oci4bnde0x4fbdgss"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "godsseat"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "lend.xyz",
+      "entity": "Lend Xyz",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-08T07:23:42.000Z",
+      "last_seen_at": "2026-06-08T07:23:42.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://app.lend.xyz/op/3?twclid=238nk3jmrq3apwjk6xspl8fcb8"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "lendxyz"
         ],
         "distinct_axes": []
       },
