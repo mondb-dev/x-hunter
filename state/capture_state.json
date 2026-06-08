@@ -1,58 +1,58 @@
 {
-  "checked_at": "2026-06-07T15:27:29.878Z",
+  "checked_at": "2026-06-08T15:57:34.682Z",
   "evidence_24h": 64,
-  "unique_sources": 47,
+  "unique_sources": 40,
   "status": "clean",
   "alerts": [],
-  "summary": "Evidence distribution looks healthy (64 entries across 47 sources, 11 axes).",
+  "summary": "Evidence distribution looks healthy (64 entries across 40 sources, 10 axes).",
   "source_concentration": {
-    "gmanews": {
-      "username": "gmanews",
-      "count": 6,
-      "share": 0.094
-    },
-    "nicksortor": {
-      "username": "nicksortor",
+    "news5ph": {
+      "username": "news5ph",
       "count": 4,
       "share": 0.063
     },
-    "rt_com": {
-      "username": "rt_com",
-      "count": 2,
-      "share": 0.031
-    },
-    "gemoraaudie": {
-      "username": "gemoraaudie",
-      "count": 2,
-      "share": 0.031
-    },
-    "marionawfal": {
-      "username": "marionawfal",
-      "count": 2,
-      "share": 0.031
-    },
-    "ajenglish": {
-      "username": "ajenglish",
-      "count": 2,
-      "share": 0.031
-    },
-    "furkangozukara": {
-      "username": "furkangozukara",
-      "count": 2,
-      "share": 0.031
-    },
     "bncdotph": {
       "username": "bncdotph",
-      "count": 2,
-      "share": 0.031
+      "count": 4,
+      "share": 0.063
     },
-    "laiteranidaddy": {
-      "username": "laiteranidaddy",
-      "count": 2,
-      "share": 0.031
+    "gmanews": {
+      "username": "gmanews",
+      "count": 3,
+      "share": 0.047
     },
     "philippinestar": {
       "username": "philippinestar",
+      "count": 3,
+      "share": 0.047
+    },
+    "rvrslio": {
+      "username": "rvrslio",
+      "count": 3,
+      "share": 0.047
+    },
+    "unusual_whales": {
+      "username": "unusual_whales",
+      "count": 3,
+      "share": 0.047
+    },
+    "tparsi": {
+      "username": "tparsi",
+      "count": 3,
+      "share": 0.047
+    },
+    "americapapabear": {
+      "username": "americapapabear",
+      "count": 2,
+      "share": 0.031
+    },
+    "iranobserver0": {
+      "username": "iranobserver0",
+      "count": 2,
+      "share": 0.031
+    },
+    "abscbnnews": {
+      "username": "abscbnnews",
       "count": 2,
       "share": 0.031
     }
@@ -73,38 +73,32 @@
     "axis_political_trust_corruption_v1": {
       "axis_id": "axis_political_trust_corruption_v1",
       "label": "Trust in Political Institutions and Anti-Corruption Efforts",
-      "count": 9,
-      "share": 0.141
+      "count": 7,
+      "share": 0.109
+    },
+    "axis_ai_societal_impact_v1": {
+      "axis_id": "axis_ai_societal_impact_v1",
+      "label": "Societal Impact and Ethical Concerns of AI/Robots",
+      "count": 7,
+      "share": 0.109
+    },
+    "axis_geopolitical_rhetoric_v1": {
+      "axis_id": "axis_geopolitical_rhetoric_v1",
+      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
+      "count": 7,
+      "share": 0.109
     },
     "axis_media_integrity_v1": {
       "axis_id": "axis_media_integrity_v1",
       "label": "Integrity of Information and Social Media Manipulation",
-      "count": 6,
-      "share": 0.094
+      "count": 4,
+      "share": 0.063
     },
-    "axis_national_sovereignty_v_intl_law_v1": {
-      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "label": "National Sovereignty vs. International Law",
-      "count": 6,
-      "share": 0.094
-    },
-    "axis_human_rights_exploitation_v1": {
-      "axis_id": "axis_human_rights_exploitation_v1",
-      "label": "Human Rights and Exploitation",
+    "axis_global_power_realignments_v1": {
+      "axis_id": "axis_global_power_realignments_v1",
+      "label": "Global Power Realignments and Shifting Hegemony",
       "count": 3,
       "share": 0.047
-    },
-    "axis_authoritarian_self_determination_v1": {
-      "axis_id": "axis_authoritarian_self_determination_v1",
-      "label": "Authoritarian Control vs. Individual/Collective Self-Determination",
-      "count": 2,
-      "share": 0.031
-    },
-    "axis_political_moral_conduct_v1": {
-      "axis_id": "axis_political_moral_conduct_v1",
-      "label": "Political Integrity and Moral Conduct in Public Service",
-      "count": 2,
-      "share": 0.031
     },
     "axis_collective_voice": {
       "axis_id": "axis_collective_voice",
@@ -112,9 +106,15 @@
       "count": 1,
       "share": 0.016
     },
-    "axis_ai_societal_impact_v1": {
-      "axis_id": "axis_ai_societal_impact_v1",
-      "label": "Societal Impact and Ethical Concerns of AI/Robots",
+    "axis_national_sovereignty_v_intl_law_v1": {
+      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "label": "National Sovereignty vs. International Law",
+      "count": 1,
+      "share": 0.016
+    },
+    "axis_political_moral_conduct_v1": {
+      "axis_id": "axis_political_moral_conduct_v1",
+      "label": "Political Integrity and Moral Conduct in Public Service",
       "count": 1,
       "share": 0.016
     }
@@ -122,28 +122,28 @@
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 17,
-      "share": 0.266
+      "count": 27,
+      "share": 0.422
     },
     "breaking_news": {
       "cluster": "breaking_news",
-      "count": 15,
-      "share": 0.234
+      "count": 11,
+      "share": 0.172
     },
-    "us_politics": {
-      "cluster": "us_politics",
-      "count": 10,
-      "share": 0.156
+    "accountability_journalism": {
+      "cluster": "accountability_journalism",
+      "count": 7,
+      "share": 0.109
+    },
+    "geopolitics": {
+      "cluster": "geopolitics",
+      "count": 5,
+      "share": 0.078
     },
     "asia_pacific": {
       "cluster": "asia_pacific",
       "count": 5,
       "share": 0.078
-    },
-    "disinformation": {
-      "cluster": "disinformation",
-      "count": 4,
-      "share": 0.063
     }
   },
   "pole_balance": {
