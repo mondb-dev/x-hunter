@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-08T17:18:27.313Z",
+  "generated_at": "2026-06-08T20:18:27.144Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-08T17:18:56.471Z",
+  "profiled_at": "2026-06-08T20:18:58.841Z",
   "sources": [
     {
       "domain": "justice.gov",
@@ -1418,9 +1418,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-08T14:46:48.000Z",
+      "last_seen_at": "2026-06-08T19:00:01.000Z",
       "discovery": {
-        "distinct_urls": 4837,
+        "distinct_urls": 4849,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1429,10 +1429,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 2927,
-          "feed_buffer_reply": 3016
+          "feed_buffer": 2932,
+          "feed_buffer_reply": 3028
         },
-        "distinct_referring_accounts": 1681,
+        "distinct_referring_accounts": 1686,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1470,7 +1470,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:4837",
+            "distinct_urls:4849",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1478,7 +1478,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1681",
+            "referring_accounts:1686",
             "origin_types:2"
           ]
         },
@@ -1508,10 +1508,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:4837",
+            "distinct_urls:4849",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1681",
+            "referring_accounts:1686",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1554,9 +1554,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-06-07T14:16:54.000Z",
+      "last_seen_at": "2026-06-08T12:57:20.000Z",
       "discovery": {
-        "distinct_urls": 372,
+        "distinct_urls": 373,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -1565,7 +1565,7 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 344,
+          "feed_buffer_reply": 345,
           "feed_buffer": 54
         },
         "distinct_referring_accounts": 245,
@@ -1606,7 +1606,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:372",
+            "distinct_urls:373",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1644,7 +1644,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:372",
+            "distinct_urls:373",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:245",
@@ -3971,7 +3971,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T18:17:30.257Z",
+        "fetched_at": "2026-06-08T18:18:54.559Z",
         "homepage_url": "https://app.link/",
         "example_url": "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
         "homepage_status": 404,
@@ -4389,9 +4389,9 @@
       "entity": "Amazon",
       "kind": "unknown",
       "first_seen_at": "2026-04-09T03:23:02.000Z",
-      "last_seen_at": "2026-06-05T00:32:37.000Z",
+      "last_seen_at": "2026-06-07T01:14:22.000Z",
       "discovery": {
-        "distinct_urls": 203,
+        "distinct_urls": 204,
         "example_urls": [
           "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44/ref_=dvm_us_c_soc_THBY_tw_rb?twclid=2e4zyrzur7iapo7e8zxfmiz1fu",
           "https://www.amazon.com/dp/B0FV7FDY4Q?ref_=ptw_spv01_d403b2f0b3e432606b1c05fdabe45376&ascsubtag=ptw-X-1-9-zcxw79gmhbmhdzve&mcid=abeb628a6893350285c8588b9c699eff&twclid=2c1qv8ps4iujtsy9sniyy94eix&tag=twemermanu-us-20",
@@ -4400,7 +4400,7 @@
           "https://www.amazon.com/dp/B08FDGTGJT?ref_=ptw_spv01_74f4c9a5cd9e611fbf921e6c5a2f7acc&ascsubtag=ptw-X-1-9-zcxw79gmhbmhdzve&mcid=abeb628a6893350285c8588b9c699eff&twclid=2c1qv8ps4iujtsy9sniyy94eix&tag=twemermanu-us-20"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 203
+          "feed_buffer_reply": 204
         },
         "distinct_referring_accounts": 3,
         "sample_referring_accounts": [
@@ -4433,7 +4433,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:203",
+            "distinct_urls:204",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -4471,7 +4471,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:203",
+            "distinct_urls:204",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:3",
@@ -5157,7 +5157,7 @@
       "first_seen_at": "2026-04-15T13:30:37.000Z",
       "last_seen_at": "2026-06-08T13:15:37.000Z",
       "discovery": {
-        "distinct_urls": 96,
+        "distinct_urls": 97,
         "example_urls": [
           "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
           "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=2dnuttry4m02uyeswjtnkyw6cq",
@@ -5166,7 +5166,7 @@
           "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_video_codingplan&utm_content=tecdo&twclid=25cpjoe66peh1858zv8hf438l2"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 96
+          "feed_buffer_reply": 97
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -5197,7 +5197,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:96",
+            "distinct_urls:97",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -5235,7 +5235,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:96",
+            "distinct_urls:97",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:1",
@@ -7928,6 +7928,132 @@
       }
     },
     {
+      "domain": "ridge.com",
+      "entity": "Ridge",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-19T19:20:24.000Z",
+      "last_seen_at": "2026-06-07T17:26:10.000Z",
+      "discovery": {
+        "distinct_urls": 11,
+        "example_urls": [
+          "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+%28IO%29&utm_term=5.17+-+PCH+-+FDAY+-+IMGs+-+FDAY-RINGS-3RLP&utm_content=05250b_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_The-gift-your-man-actually-wants-%28we-asked%29_RINGS-FDAY-Branded__META_NN_IH_DR__FDAY-RINGS-3RLP_5-12-26%3Fnb_platform%3Dtwitter&twclid=2cpbcoko2qkg7u5nrw2y5g1wdo",
+          "https://ridge.com/pages/edc-smart-wallet-5rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+EDC+%7C+PCH+%7C+MDS+%2B+FDAY26+%28IO%29&utm_term=5.15+-+PCH+-+MDS+-+IMGs+-+EDC-SMART-5RLP&utm_content=05315d_CORE_MDS_EDC_WALLET_MIX-COLOR_OFFER-%25OFF_Lighter%2C-slimmer%2C-Built-for-life_MDS-EDC-GENERAL__META_NN_IH_DR_US_EDC-SMART-6RLP_05-12-29&twclid=2co7344umxvtut5ptdz9xfjnv9",
+          "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+%28IO%29&utm_term=5.17+-+PCH+-+FDAY+-+IMGs+-+FDAY-RINGS-3RLP&utm_content=05250a_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_Designed-by-husbands%2C-For-Husbands._RINGS-FDAY-Branded__META_IT_IH_DR__FDAY-RINGS-3RLP_5-12-26%3Fnb_platform%3Dtwitter%E2%80%A8&twclid=2dk6e9gzhd50k576djlwgelfoa",
+          "https://ridge.com/pages/edc-fday-founder-dad?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+EDC+%7C+PCH+%7C+MDS+%2B+FDAY26+%28IO%29&utm_term=5.26+-+PCH+-+FDAY+-+IMGs+-+Fday-founder-LP&utm_content=04671a_GIFT_FDAY_EDC_WALLET_TOBACCO-BROWN-LEATHER_OFFER-%25OFF_Father%27s-Day-Sale-%7C-Up-to-30%25-off_FDAY-Gifting-EDC-Phase2__META_NN_IH_DR_US_Fday-Founder-LP_05-26-25&twclid=28o88x6j7qql786cdyglfqpgf8",
+          "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+NEW+%28IO%29&utm_term=5.27+-+PCH+-+FDAY+-+IMGs+-+fday-rings-3rlp&utm_content=05250a_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_Designed-by-husbands%2C-For-Husbands._RINGS-FDAY-Branded__META_IT_IH_DR__FDAY-RINGS-3RLP_5-12-26&twclid=2ex4df6wa4zvgkrftiv86ikg4d"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 11
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "ridgewallet"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.3808333333333333,
+          "basis": [
+            "distinct_urls:11",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.009999999999999998,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.41104166666666664,
+          "confidence": 0.3676,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:11",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-07T19:48:37.463Z",
+        "homepage_url": "https://ridge.com/",
+        "example_url": "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+%28IO%29&utm_term=5.17+-+PCH+-+FDAY+-+IMGs+-+FDAY-RINGS-3RLP&utm_content=05250b_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_The-gift-your-man-actually-wants-%28we-asked%29_RINGS-FDAY-Branded__META_NN_IH_DR__FDAY-RINGS-3RLP_5-12-26%3Fnb_platform%3Dtwitter&twclid=2cpbcoko2qkg7u5nrw2y5g1wdo",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://ridge.com/",
+        "example_final_url": "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+%28IO%29&utm_term=5.17+-+PCH+-+FDAY+-+IMGs+-+FDAY-RINGS-3RLP&utm_content=05250b_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_The-gift-your-man-actually-wants-%28we-asked%29_RINGS-FDAY-Branded__META_NN_IH_DR__FDAY-RINGS-3RLP_5-12-26%3Fnb_platform%3Dtwitter&twclid=2cpbcoko2qkg7u5nrw2y5g1wdo",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "makofy.com",
       "entity": "Makofy",
       "kind": "unknown",
@@ -8526,7 +8652,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T18:17:30.682Z",
+        "fetched_at": "2026-06-08T18:18:54.916Z",
         "homepage_url": "https://davidprotein.com/",
         "example_url": "https://davidprotein.com/pages/meet-david-gold?utm_source=X&utm_medium=paid&utm_campaign=CPC_2026&utm_term=GOLD_CPC_2026&twclid=2beqsd3kifgmiz3bgaf4s8hcjs",
         "homepage_status": 200,
@@ -8806,132 +8932,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "ridge.com",
-      "entity": "Ridge",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-19T19:20:24.000Z",
-      "last_seen_at": "2026-06-07T02:00:00.000Z",
-      "discovery": {
-        "distinct_urls": 10,
-        "example_urls": [
-          "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+%28IO%29&utm_term=5.17+-+PCH+-+FDAY+-+IMGs+-+FDAY-RINGS-3RLP&utm_content=05250b_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_The-gift-your-man-actually-wants-%28we-asked%29_RINGS-FDAY-Branded__META_NN_IH_DR__FDAY-RINGS-3RLP_5-12-26%3Fnb_platform%3Dtwitter&twclid=2cpbcoko2qkg7u5nrw2y5g1wdo",
-          "https://ridge.com/pages/edc-smart-wallet-5rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+EDC+%7C+PCH+%7C+MDS+%2B+FDAY26+%28IO%29&utm_term=5.15+-+PCH+-+MDS+-+IMGs+-+EDC-SMART-5RLP&utm_content=05315d_CORE_MDS_EDC_WALLET_MIX-COLOR_OFFER-%25OFF_Lighter%2C-slimmer%2C-Built-for-life_MDS-EDC-GENERAL__META_NN_IH_DR_US_EDC-SMART-6RLP_05-12-29&twclid=2co7344umxvtut5ptdz9xfjnv9",
-          "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+%28IO%29&utm_term=5.17+-+PCH+-+FDAY+-+IMGs+-+FDAY-RINGS-3RLP&utm_content=05250a_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_Designed-by-husbands%2C-For-Husbands._RINGS-FDAY-Branded__META_IT_IH_DR__FDAY-RINGS-3RLP_5-12-26%3Fnb_platform%3Dtwitter%E2%80%A8&twclid=2dk6e9gzhd50k576djlwgelfoa",
-          "https://ridge.com/pages/edc-fday-founder-dad?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+EDC+%7C+PCH+%7C+MDS+%2B+FDAY26+%28IO%29&utm_term=5.26+-+PCH+-+FDAY+-+IMGs+-+Fday-founder-LP&utm_content=04671a_GIFT_FDAY_EDC_WALLET_TOBACCO-BROWN-LEATHER_OFFER-%25OFF_Father%27s-Day-Sale-%7C-Up-to-30%25-off_FDAY-Gifting-EDC-Phase2__META_NN_IH_DR_US_Fday-Founder-LP_05-26-25&twclid=28o88x6j7qql786cdyglfqpgf8",
-          "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+NEW+%28IO%29&utm_term=5.27+-+PCH+-+FDAY+-+IMGs+-+fday-rings-3rlp&utm_content=05250a_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_Designed-by-husbands%2C-For-Husbands._RINGS-FDAY-Branded__META_IT_IH_DR__FDAY-RINGS-3RLP_5-12-26&twclid=2ex4df6wa4zvgkrftiv86ikg4d"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 10
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "ridgewallet"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.3516666666666667,
-          "basis": [
-            "distinct_urls:10",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.009999999999999998,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:1",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.40466145833333333,
-          "confidence": 0.338975,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:10",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-07T19:48:37.463Z",
-        "homepage_url": "https://ridge.com/",
-        "example_url": "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+%28IO%29&utm_term=5.17+-+PCH+-+FDAY+-+IMGs+-+FDAY-RINGS-3RLP&utm_content=05250b_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_The-gift-your-man-actually-wants-%28we-asked%29_RINGS-FDAY-Branded__META_NN_IH_DR__FDAY-RINGS-3RLP_5-12-26%3Fnb_platform%3Dtwitter&twclid=2cpbcoko2qkg7u5nrw2y5g1wdo",
-        "homepage_status": 403,
-        "example_status": 403,
-        "homepage_final_url": "https://ridge.com/",
-        "example_final_url": "https://ridge.com/collections/fday-rings-3rlp?utm_source=social&utm_medium=twitter&utm_campaign=TW+%7C+ACQ+%7C+RINGS+%7C+PCH+%7C+FDAY26+%28IO%29&utm_term=5.17+-+PCH+-+FDAY+-+IMGs+-+FDAY-RINGS-3RLP&utm_content=05250b_GIFT_FDAY_JEWELRY_WEDDING-RINGS_MIX-COLOR_OFFER-%25OFF_The-gift-your-man-actually-wants-%28we-asked%29_RINGS-FDAY-Branded__META_NN_IH_DR__FDAY-RINGS-3RLP_5-12-26%3Fnb_platform%3Dtwitter&twclid=2cpbcoko2qkg7u5nrw2y5g1wdo",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
           "opinion_marker": false
         }
       }
@@ -20931,7 +20931,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T18:17:31.258Z",
+        "fetched_at": "2026-06-08T18:18:55.465Z",
         "homepage_url": "https://manduka.com/",
         "example_url": "https://www.manduka.com/products/manduka-pro-yoga-mat?utm_source=twitter&utm_medium=cpc&utm_campaign=xconvert&utm_content=PRO+Mat+-+Rooibos+1x1&twclid=2c1i50hvb8z81u6asprj4f4oqt",
         "homepage_status": 200,
@@ -24807,6 +24807,130 @@
       }
     },
     {
+      "domain": "lend.xyz",
+      "entity": "Lend Xyz",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-08T07:23:42.000Z",
+      "last_seen_at": "2026-06-08T17:51:48.000Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://app.lend.xyz/op/3?twclid=238nk3jmrq3apwjk6xspl8fcb8",
+          "https://app.lend.xyz/op/3?twclid=21e163fh2smhoj90368bv3jqff",
+          "https://app.lend.xyz/op/3?twclid=22r4wdu8bntkblaqeyjziqlejg"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "lendxyz"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.36000000000000004,
+          "confidence": 0.1386,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-08T18:48:55.400Z",
+        "homepage_url": "https://lend.xyz/",
+        "example_url": "https://app.lend.xyz/op/3?twclid=238nk3jmrq3apwjk6xspl8fcb8",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://lend.xyz/",
+        "example_final_url": "https://app.lend.xyz/op/3?twclid=238nk3jmrq3apwjk6xspl8fcb8",
+        "homepage_content_type": "text/html;charset=utf-8",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 8,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "rice.edu",
       "entity": "Rice",
       "kind": "unknown",
@@ -25019,7 +25143,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T18:17:34.532Z",
+        "fetched_at": "2026-06-08T18:18:58.044Z",
         "homepage_url": "https://moderndiplomacy.eu/",
         "example_url": "https://moderndiplomacy.eu/2026/03/06/alone-under-fire-irans-partners-step-back-as-war-intensifies/",
         "homepage_status": 200,
@@ -26521,6 +26645,129 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 5,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "kfc.com",
+      "entity": "Kfc",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-09T00:59:55.169Z",
+      "last_seen_at": "2026-06-08T17:30:08.853Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://www.kfc.com/menu?utm_source=twitter&utm_medium=social&utm_campaign=kfcvaluefeast&utm_creative=9box&twclid=250lznofqwrkd2iq53t7qffgxo",
+          "https://www.kfc.com/menu?utm_source=twitter&utm_medium=social&utm_campaign=supergirlultimatemeal&utm_creative=kryptoniankoolerstatic&twclid=295dmoddlxybhgaspy4ca6aye4"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "kfc"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-06T01:17:57.519Z",
+        "homepage_url": "https://kfc.com/",
+        "example_url": "https://www.kfc.com/menu?utm_source=twitter&utm_medium=social&utm_campaign=kfcvaluefeast&utm_creative=9box&twclid=250lznofqwrkd2iq53t7qffgxo",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://kfc.com/",
+        "example_final_url": "https://www.kfc.com/menu?utm_source=twitter&utm_medium=social&utm_campaign=kfcvaluefeast&utm_creative=9box&twclid=250lznofqwrkd2iq53t7qffgxo",
+        "homepage_content_type": "",
+        "example_content_type": "",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -28609,6 +28856,129 @@
           "has_published_time": false,
           "has_canonical": false,
           "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 8,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "genesissystems.com",
+      "entity": "Genesissystems",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-28T12:23:40.000Z",
+      "last_seen_at": "2026-06-08T14:16:24.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://www.genesissystems.com/contact?utm_source=x&utm_campaign=genericwebtrafficdavead4-4-26&twclid=2av31c1xlvmnruxepagyndsvf6",
+          "https://www.genesissystems.com/?utm_source=x&utm_campaign=genericwebtrafficwctestimonialA4-4-26&twclid=2ecmlap31ub4pzv28gldex73fh"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "_genesissystems"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.33999999999999997,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:8",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-06T09:47:46.775Z",
+        "homepage_url": "https://genesissystems.com/",
+        "example_url": "https://www.genesissystems.com/contact?utm_source=x&utm_campaign=genericwebtrafficdavead4-4-26&twclid=2av31c1xlvmnruxepagyndsvf6",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.genesissystems.com/",
+        "example_final_url": "https://www.genesissystems.com/contact?utm_source=x&utm_campaign=genericwebtrafficdavead4-4-26&twclid=2av31c1xlvmnruxepagyndsvf6",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 8,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 8,
@@ -35204,7 +35574,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T18:47:29.126Z",
+        "fetched_at": "2026-06-08T18:48:55.579Z",
         "homepage_url": "https://soaratlas.com/",
         "example_url": "https://soaratlas.com/?twclid=2eza3sd4va29a55s5jzj2vre23",
         "homepage_status": 403,
@@ -35326,7 +35696,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T18:47:29.516Z",
+        "fetched_at": "2026-06-08T18:48:55.960Z",
         "homepage_url": "https://cumuluscoffee.com/",
         "example_url": "https://cumuluscoffee.com/products/the-cumulus-machine-1?utm_source=x&utm_medium=paidsocial&utm_campaign=convenience&utm_content=threedrinks_carousel_1x1&twclid=22ron9m7rrobkpnxtpgpyojtgw",
         "homepage_status": 200,
@@ -35350,128 +35720,6 @@
           "has_published_time": false,
           "has_canonical": true,
           "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "kfc.com",
-      "entity": "Kfc",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-09T00:59:55.169Z",
-      "last_seen_at": "2026-04-09T00:59:55.169Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://www.kfc.com/menu?utm_source=twitter&utm_medium=social&utm_campaign=kfcvaluefeast&utm_creative=9box&twclid=250lznofqwrkd2iq53t7qffgxo"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "kfc"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-06T01:17:57.519Z",
-        "homepage_url": "https://kfc.com/",
-        "example_url": "https://www.kfc.com/menu?utm_source=twitter&utm_medium=social&utm_campaign=kfcvaluefeast&utm_creative=9box&twclid=250lznofqwrkd2iq53t7qffgxo",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://kfc.com/",
-        "example_final_url": "https://www.kfc.com/menu?utm_source=twitter&utm_medium=social&utm_campaign=kfcvaluefeast&utm_creative=9box&twclid=250lznofqwrkd2iq53t7qffgxo",
-        "homepage_content_type": "",
-        "example_content_type": "",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
@@ -36180,7 +36428,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T18:47:30.591Z",
+        "fetched_at": "2026-06-08T18:48:56.950Z",
         "homepage_url": "https://marketrebellion.com/",
         "example_url": "https://marketrebellion.com/cboe-summit-virtual/?utm_campaign=38086833-Cboe+Summit+2026&utm_medium=paidsocial&utm_source=twitterads&utm_term=buyerinitials&twclid=29q0f3ecmiglui4ryyj5up2c3i",
         "homepage_status": 200,
@@ -36282,7 +36530,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:34",
+            "outbound_links:33",
             "opinion_marker:false"
           ]
         },
@@ -36302,7 +36550,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T18:47:31.257Z",
+        "fetched_at": "2026-06-08T19:48:55.597Z",
         "homepage_url": "https://tradethepool.com/",
         "example_url": "https://tradethepool.com/?twclid=29o6hooskerzcfyefiqi7kcgrh",
         "homepage_status": 200,
@@ -36318,7 +36566,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 34,
+          "outbound_links_count": 33,
           "opinion_marker": false
         },
         "example": {
@@ -36328,7 +36576,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 34,
+          "outbound_links_count": 33,
           "opinion_marker": false
         }
       }
@@ -36424,7 +36672,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T19:47:31.442Z",
+        "fetched_at": "2026-06-08T19:48:56.610Z",
         "homepage_url": "https://hubs.la/",
         "example_url": "https://hubs.la/Q044Rgs40?twclid=2dj6mgj4wttl7kn2ssc6dwffaw",
         "homepage_status": 200,
@@ -36546,7 +36794,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T19:47:33.103Z",
+        "fetched_at": "2026-06-08T19:48:58.187Z",
         "homepage_url": "https://coastdental.com/",
         "example_url": "https://www.coastdental.com/appointments/appointment-request?twclid=2etssi0sfdgrv6914rilraey9",
         "homepage_status": 200,
@@ -36668,7 +36916,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T19:47:38.763Z",
+        "fetched_at": "2026-06-08T19:49:03.469Z",
         "homepage_url": "https://googlecloudevents.com/",
         "example_url": "https://www.googlecloudevents.com/next-vegas/?utm_source=twitter&utm_medium=social_video&utm_campaign=FY26-Q2-GLOBAL-GLO27877-physicalevent-er-next26-mc-105752&utm_content=x-video&utm_term=-&twclid=2ehex7zq3t812jvfufjghnt42r",
         "homepage_status": 200,
@@ -36790,7 +37038,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T19:47:40.802Z",
+        "fetched_at": "2026-06-08T20:18:57.534Z",
         "homepage_url": "https://mfaaction.com/",
         "example_url": "https://mfaaction.com/open-letter-to-congress/?twclid=2bzcexp35ec32pbxv40nq5e3in",
         "homepage_status": 200,
@@ -39718,7 +39966,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T20:17:31.811Z",
+        "fetched_at": "2026-06-08T20:18:58.101Z",
         "homepage_url": "https://nicnac.com/",
         "example_url": "https://www.nicnac.com/?twclid=29mqpg78thfw9vfk59xwsnupbc",
         "homepage_status": 200,
@@ -39840,7 +40088,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T20:17:32.402Z",
+        "fetched_at": "2026-06-08T20:18:58.680Z",
         "homepage_url": "https://freshstartinfo.org/",
         "example_url": "https://apply.freshstartinfo.org/?utm_source=twitter&utm_medium=paid_social&utm_campaign=FSI_Social_X_Deadline_Broad&utm_content=FSI_X_Deadline_Image_USCapNews_04172026&source=TW&brand=FSI&camp_id=41209135&adset_id=54646468&creative_id=2045223212514979923&twcrid=2045223210636251136&twclid=2fc79anpvgomecghgv84o862",
         "homepage_status": 200,
@@ -39962,7 +40210,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T20:17:32.573Z",
+        "fetched_at": "2026-06-08T20:18:58.841Z",
         "homepage_url": "https://hamradioprep.com/",
         "example_url": "https://hamradioprep.com/?twclid=232p2wfbs7v1e5zxq4p7bhczux",
         "homepage_status": 403,
@@ -42915,128 +43163,6 @@
           "has_canonical": false,
           "has_about_link": true,
           "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 8,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "genesissystems.com",
-      "entity": "Genesissystems",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-28T12:23:40.000Z",
-      "last_seen_at": "2026-04-28T12:23:40.000Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://www.genesissystems.com/contact?utm_source=x&utm_campaign=genericwebtrafficdavead4-4-26&twclid=2av31c1xlvmnruxepagyndsvf6"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "_genesissystems"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.33999999999999997,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:8",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-06T09:47:46.775Z",
-        "homepage_url": "https://genesissystems.com/",
-        "example_url": "https://www.genesissystems.com/contact?utm_source=x&utm_campaign=genericwebtrafficdavead4-4-26&twclid=2av31c1xlvmnruxepagyndsvf6",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.genesissystems.com/",
-        "example_final_url": "https://www.genesissystems.com/contact?utm_source=x&utm_campaign=genericwebtrafficdavead4-4-26&twclid=2av31c1xlvmnruxepagyndsvf6",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 8,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": true,
-          "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 8,
           "opinion_marker": false
@@ -57824,83 +57950,6 @@
       }
     },
     {
-      "domain": "lend.xyz",
-      "entity": "Lend Xyz",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-08T07:23:42.000Z",
-      "last_seen_at": "2026-06-08T07:23:42.000Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://app.lend.xyz/op/3?twclid=238nk3jmrq3apwjk6xspl8fcb8"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "lendxyz"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
       "domain": "aicolk.com",
       "entity": "Aicolk",
       "kind": "unknown",
@@ -57994,6 +58043,160 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "xendurance"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "revise.io",
+      "entity": "Revise Io",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-08T15:00:26.000Z",
+      "last_seen_at": "2026-06-08T15:00:26.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://revise.io/?twclid=27qndue1we8eruodnlelf8llz3"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "reviseio"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "leandromaya.com",
+      "entity": "Leandromaya",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-08T07:56:23.000Z",
+      "last_seen_at": "2026-06-08T07:56:23.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://leandromaya.com/abundance-series/the-age-of-abundance?twclid=21h28w2j30vi17dqpq3le52ppy"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "leandrozmaya"
         ],
         "distinct_axes": []
       },

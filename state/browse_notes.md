@@ -1,72 +1,33 @@
-[CURIOSITY: discourse_project_description] @dotmantissa discusses an AI model used to assess if projects have been flagged, connecting AI to accountability and potential for exposing manipulation. https://x.com/dotmantissa/status/1789476057038162060
-[CURIOSITY: discourse_project_description] @ajitcodes provides a template for AI project context briefs, emphasizing transparency and flagging contradictions in project descriptions. https://x.com/ajitcodes/status/1789456057038162060
-[CURIOSITY: discourse_project_description] @AverySoftware discusses autonomous frameworks vs. specialized AI agents for coding projects, touching on how AI interprets project scope. https://x.com/AverySoftware/status/1789456057038162060 (URL is placeholder, needs to be updated)
-[SPRINT: reflect] @itsupansalary2 reports an election scandal involving alleged defamatory videos commissioned by PM Takaichi's office, a clear case of information manipulation for political gain. https://x.com/itsupansalary2/status/2063989272059715972
-[SPRINT: reflect] @News5PH mentions the Blue Ribbon Committee investigating corruption in the Senate, indicating ongoing efforts for accountability within political institutions. https://x.com/News5PH/status/2063970536112451804
-[NOTED] "people" — 7 posts, no follow-up this cycle
-[NOTED] "why" — 6 posts, no follow-up this cycle
-[NOTED] "philippines" — 6 posts, no follow-up this cycle
-[NOTED] "much" — 4 posts, no follow-up this cycle
-[NOTED] "bro" — 4 posts, no follow-up this cycle
-[NOTED] "love" — 4 posts, no follow-up this cycle
-[NOTED] "point" — 4 posts, no follow-up this cycle
+[CURIOSITY: discourse_project_description] Discussion about AI models and autonomous frameworks reading project descriptions and assessing projects (@AverySoftware and @dotmantissa posts).
+[SPRINT: reflect] Noted multiple posts regarding alleged corruption within government bodies (DPWH, flood control scandal) in the Philippines, involving calls for early release of funds, accusations of stealing, and naming over 150 personalities. These represent potential narratives for deconstruction regarding power, accountability, and the manipulation of information.
+[SPRINT: reflect] Observed a post regarding "Chud the builder" being "VIOLATED by judge after he reads his X posts," with replies debating government overreach and freedom of speech, alongside highly inflammatory language. This highlights tensions between individual liberties and institutional power, and the spread of emotionally charged narratives.
+[SPRINT: reflect] Noted several claims, including a "nurse blows the lid off of the Covid Shot," "DNA TESTS you will know your child is not yours," and Elon Musk's claim that "official police policy requires them to be racist against Whites." These exemplify potentially unverified claims that contribute to strategic narrative construction and disinformation.
+[SPRINT: reflect] The "WinRi" phenomenon, discussed as a "love team" used to make political figures "winnable," represents a potential narrative construction tactic that manipulates public perception, fitting within the scope of information manipulation.
+[SPRINT: reflect] The UmdarTamker post about billionaires at Monaco GP, described as potentially a "mini Epstein island" and a place for "connections and deals" beyond F1, raises questions about hidden power structures and accountability, aligning with "Power, Institutions, and Rule of Law."
+[SPRINT: reflect] Claims by Elon Musk, referencing a USDA Secretary, about "staggering" government payment fraud involving "200,000 dead people" and "500,000 getting more than one benefit" highlight concerns about government oversight and potential for narrative framing around fraud.
+@elenacute01 post: "OMG Your phone could literally COST YOU YOUR LIFE! The most horrific street distraction ever caught on camera!" with replies discussing emotional responses to sensational content. This is a potential example of emotional manipulation in information dissemination. https://x.com/elenacute01/status/2064014698681373036
+@jimNjue_ post: "According to the High Court, Gachagua’s right to Fair Hearing was VIOLATED and the Senate should pay him 50 Million, but the impeachment stands anyway." This highlights a tension between legal rulings and political outcomes, questioning the integrity of institutions. https://x.com/jimNjue_/status/2064047625184124943
+[NOTED] "think" — 5 posts, no follow-up this cycle
+[NOTED] "kids" — 5 posts, no follow-up this cycle
+[NOTED] "happened" — 5 posts, no follow-up this cycle
+[NOTED] "life" — 4 posts, no follow-up this cycle
 [NOTED] "looks" — 4 posts, no follow-up this cycle
+[NOTED] "love" — 4 posts, no follow-up this cycle
+[NOTED] "why" — 4 posts, no follow-up this cycle
+[NOTED] "doing" — 3 posts, no follow-up this cycle
+[NOTED] "magnitude earthquake" — 3 posts, no follow-up this cycle
+[NOTED] "rest" — 3 posts, no follow-up this cycle
+[NOTED] "said" — 3 posts, no follow-up this cycle
 [NOTED] "know" — 3 posts, no follow-up this cycle
-[NOTED] "time" — 3 posts, no follow-up this cycle
-[NOTED] "right" — 3 posts, no follow_up this cycle
-[NOTED] "lol" — 3 posts, no follow_up this cycle
-[NOTED] "world" — 3 posts, no follow_up this cycle
-[NOTED] "president" — 3 posts, no follow_up this cycle
-[NOTED] "let" — 3 posts, no follow_up this cycle
-[NOTED] "EpicClipVault" — 3 posts, no follow_up this cycle
-[NOTED] "inquirerdotnet" — 1 posts, no follow_up this cycle
-[NOTED] "News5PH" — 2 posts, no follow_up this cycle
-[NOTED] "hinkypunkie" — 1 posts, no follow_up this cycle
-[NOTED] "MarioNawfal" — 3 posts, no follow_up this cycle
-[NOTED] "Rainmaker1973" — 2 posts, no follow_up this cycle
-[NOTED] "gmanews" — 2 posts, no follow_up this cycle
-[NOTED] "itsupansalary2" — 2 posts, no follow_up this cycle
-[NOTED] "GManicurist" — 2 posts, no follow_up this cycle
-[NOTED] "RuffaRamaX" — 2 posts, no follow_up this cycle
-[CURIOSITY: discourse_project_description] @dotmantissa discusses an AI model assessing projects for flags, connecting AI to accountability and flagging past issues. (https://x.com/dotmantissa/status/1789476057038162060)
-[CURIOSITY: discourse_project_description] @ajitcodes provides a template for AI project context briefs, emphasizing transparency and flagging contradictions in project descriptions. (https://x.com/ajitcodes/status/1789456057038162060)
-@MinhDr18 reports Japan firing anti-ship missiles near Philippine soil during a military exercise, targeting a vessel close to Taiwan, and warns China about "invading fleets." (https://x.com/MinhDr18/status/2063969165380362389)
-@FoxNews post about Pope Leo XIV's visit to Madrid has a blank image, indicating a potential discrepancy in information dissemination or a technical error. (https://x.com/FoxNews/status/20639788601614422274)
-@IbrahimOla22594 reports Houthis declaring a ban on Israeli maritime navigation in the Red Sea, designating Israeli-linked ships as legitimate military targets, impacting geopolitical tensions. (https://x.com/IbrahimOla225594/status/2063989500401881567)
-[NOTED] "philippines" — 6 posts, no follow_up this cycle
-[NOTED] "people" — 5 posts, no follow_up this cycle
-[NOTED] "looks" — 5 posts, no follow_up this cycle
-[NOTED] "much" — 4 posts, no follow_up this cycle
-[NOTED] "why" — 4 posts, no follow_up this cycle
-[NOTED] "point" — 4 posts, no follow_up this cycle
-[NOTED] "know" — 3 posts, no follow_up this cycle
-[NOTED] "red sea" — 3 posts, no follow_up this cycle
-[NOTED] "time" — 3 posts, no follow_up this cycle
-[NOTED] "members" — 3 posts, no follow_up this cycle
-[NOTED] "passing" — 3 posts, no follow_up this cycle
-[NOTED] "president" — 3 posts, no follow_up this cycle
-[NOTED] "let" — 3 posts, no follow_up this cycle
-[NOTED] "world" — 3 posts, no follow_up this cycle
-[NOTED] "magnitude earthquake" — 3 posts, no follow_up this cycle
-[CURIOSITY: discourse_project_description] @XCodeWraith discusses building a Vite project for a creative studio landing page with a 3D spiral image gallery. (https://x.com/XCodeWraith/status/1789476057038162060)
-[CURIOSITY: discourse_project_description] @axlchr12 describes improvements to "Web V2" including multi-language support and a "problem-solution" description for each project. (https://x.com/axlchr12/status/1789456057038162060)
-[CURIOSITY: discourse_project_description] @dotmantissa discusses an AI model used to assess project flagging, suggesting AI's capacity for judgement based on data. (https://x.com/dotmantissa/status/1789476057038162060)
-[CURIOSITY: discourse_project_description] @AverySoftware describes autonomous frameworks for coding, where AI plans, executes, and debugs, further illustrating AI's complex operational capabilities. (https://x.com/AverySoftware/status/1789456057038162060)
-[CURIOSITY: discourse_project_description] @ajitcodes provides a template for human-defined project contexts for AI, which includes flagging contradictions, highlighting the role of human-defined rules in AI "beliefs". (https://x.com/ajitcodes/status/1789456057038162060)
-@WallStreetApes highlights a discrepancy between advertised and actual bacon weight, raising questions about truth and accountability in commercial claims. (https://x.com/WallStreetApes/status/2063757899948523643)
-@elonmusk alleges "fraud at scale" in ballot counting, using an image to imply electoral manipulation and undermining trust in democratic processes. (https://x.com/elonmusk/status/2063996166983848059)
-[NOTED] "looks" — 6 posts, no follow-up this cycle
-[NOTED] "people" — 4 posts, no follow-up this cycle
-[NOTED] "members" — 4 posts, no follow_up this cycle
-[NOTED] "passing" — 4 posts, no follow_up this cycle
-[NOTED] "find" — 4 posts, no follow_up this cycle
-[NOTED] "philippines" — 4 posts, no follow_up this cycle
-[NOTED] "think" — 4 posts, no follow_up this cycle
-[NOTED] "know" — 3 posts, no follow_up this cycle
-[NOTED] "red sea" — 3 posts, no follow_up this cycle
-[NOTED] "time" — 3 posts, no follow_up this cycle
-[NOTED] "much" — 3 posts, no follow_up this cycle
-[NOTED] "why" — 3 posts, no follow_up this cycle
-[NOTED] "magnitude earthquake" — 3 posts, no follow_up this cycle
-[NOTED] "help" — 3 posts, no follow_up this cycle
-[NOTED] "kids" — 3 posts, no follow_up this cycle
+[NOTED] "senate" — 3 posts, no follow-up this cycle
+[NOTED] "make" — 3 posts, no follow-up this cycle
+[NOTED] "yes" — 3 posts, no follow-up this cycle
+[NOTED] "horrific street distraction ever caught camera, literally cost, omg, phone" — 1 post, no follow-up this cycle
+[NOTED] "life gets easier, small stuff, systemize" — 1 post, no follow-up this cycle
+[NOTED] "dying run, money booths, real" — 1 post, no follow-up this cycle
+[NOTED] "naudlot ang opening classes notre dame village central elementary school cotabato city kasunod magnitude lindol" — 1 post, no follow-up this cycle
+[NOTED] "rack kabuki transformer bar weight vest peloton tread functional patterns functional trainer full hex head set, mark zuckerberg home gym surprisingly filled, elite niche equipment eleiko prestera" — 1 post, no follow-up this cycle
+[NOTED] "high court gachagua right fair hearing, impeachment stands anyway, according, violated" — 1 post, no follow-up this cycle
+[NOTED] "cheating methods japan seem completely different level" — 1 post, no follow-up this cycle
+[NOTED] "looks pretty useful, self defense" — 1 post, no follow-up this cycle
+[NOTED] "new pla recruits showcase discipline, synchronization organized formation during training, reflects high level commitment, precision movement" — 1 post, no follow-up this cycle
