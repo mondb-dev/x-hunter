@@ -68,14 +68,20 @@ if (fs.existsSync(manifesto)) {
   console.log("[prebuild] manifesto.md copied");
 }
 
-// Article cover images
-const articleImages = path.resolve(cwd, "..", "articles", "images");
-if (fs.existsSync(articleImages)) {
-  const dst = path.resolve(cwd, "public", "images", "articles");
-  fs.rmSync(dst, { recursive: true, force: true });
-  fs.mkdirSync(dst, { recursive: true });
-  fs.cpSync(articleImages, dst, { recursive: true, force: true });
-  console.log(`[prebuild] article images: copied → ${dst} (${fs.readdirSync(dst).length} items)`);
-}
 
+// Article image manifest — small JSON listing which slugs have images.
+// Images live in GCS; we only need the slug list so readArticles.ts can
+// generate imageUrls without fs.existsSync on the actual image files
+// (which would cause Next.js file-tracing to bundle 200+ MB of images).
+const imagesDir = path.resolve(cwd, 'data', 'articles', 'images');
+if (fs.existsSync(imagesDir)) {
+  const imageSlugs = fs.readdirSync(imagesDir)
+    .filter(f => /\.(png|jpg|jpeg|webp)$/i.test(f))
+    .map(f => f.replace(/\.[^.]+$/, ''));
+  fs.writeFileSync(
+    path.resolve(cwd, 'data', 'article_images.json'),
+    JSON.stringify(imageSlugs)
+  );
+  console.log('[prebuild] article_images.json: ' + imageSlugs.length + ' entries');
+}
 console.log("[prebuild] done");

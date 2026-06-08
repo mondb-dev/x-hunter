@@ -193,3 +193,2419 @@ _dbg_full_text: ```json
 [verify_claims] starting verification pipeline
 [verify_claims] loaded 106 unverified/contested claims (106 tracker, 0 intel)
 [verify_claims] web searching: "$760,000,000 worth of oil shorts were reportedly placed 20 minutes before Presid"
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[web_search] HTTP 403: {
+  "error": {
+    "code": 403,
+    "message": "This API method requires billing to be enabled. Please enable billing on project #sebastian-hunter by visiting https://console.developers.google.com/bil
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] HTTP 403: {
+  "error": {
+    "code": 403,
+    "message": "This API method requires billing to be enabled. Please enable billing on project #sebastian-hunter by visiting https://console.developers.google.com/bil
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[web_search] HTTP 403: {
+  "error": {
+    "code": 403,
+    "message": "This API method requires billing to be enabled. Please enable billing on project #sebastian-hunter by visiting https://console.developers.google.com/bil
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 9 stale claims
+[verify_claims] investigation: no eligible candidates this cycle
+[verification_export] exported 471 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 3 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpnur4xn)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 215s with exit=0
+[investigate] verdict: inconclusive, confidence: 0.1
+[investigate] sub-questions: 5, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed. --claim-id claim_23 --source-handle savsays
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpnur4xn)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 215s with exit=0
+[investigate] verdict: inconclusive, confidence: 0.1
+[investigate] sub-questions: 5, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 472 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: inconclusive → confidence 0.400 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (11.3h remaining)
+[verification_export] exported 472 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[web_search] error: This operation was aborted
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 4 stale claims
+[verify_claims] investigation: cooldown active (10.0h remaining)
+[verification_export] exported 478 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 9 stale claims
+[verify_claims] investigation: cooldown active (8.1h remaining)
+[verification_export] exported 478 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 4 stale claims
+[verify_claims] investigation: cooldown active (6.0h remaining)
+[verification_export] exported 478 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (4.0h remaining)
+[verification_export] exported 478 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 6 stale claims
+[verify_claims] investigation: cooldown active (2.1h remaining)
+[verification_export] exported 478 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.690 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (0.1h remaining)
+[verification_export] exported 478 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 2 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpoor34w)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 272s with exit=0
+[investigate] verdict: inconclusive, confidence: 0.18
+[investigate] sub-questions: 5, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed. --claim-id claim_23 --source-handle savsays
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpoor34w)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 272s with exit=0
+[investigate] verdict: inconclusive, confidence: 0.18
+[investigate] sub-questions: 5, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 478 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 10 stale claims
+[verify_claims] investigation: cooldown active (10.1h remaining)
+[verification_export] exported 478 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 3 stale claims
+[verify_claims] investigation: cooldown active (8.1h remaining)
+[verification_export] exported 478 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (6.1h remaining)
+[verification_export] exported 478 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.430 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 3 stale claims
+[verify_claims] investigation: cooldown active (4.1h remaining)
+[verification_export] exported 478 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: partial → confidence 0.670 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (2.1h remaining)
+[verification_export] exported 478 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 3 stale claims
+[verify_claims] investigation: cooldown active (0.8h remaining)
+[verification_export] exported 478 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (0.1h remaining)
+[verification_export] exported 484 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.430 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 4 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mppirdqc)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 227s with exit=0
+[investigate] verdict: inconclusive, confidence: 0.18
+[investigate] sub-questions: 5, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed. --claim-id claim_23 --source-handle savsays
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mppirdqc)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 227s with exit=0
+[investigate] verdict: inconclusive, confidence: 0.18
+[investigate] sub-questions: 5, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 486 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: partial → confidence 0.670 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 9 stale claims
+[verify_claims] investigation: cooldown active (10.1h remaining)
+[verification_export] exported 488 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 3 stale claims
+[verify_claims] investigation: cooldown active (8.1h remaining)
+[verification_export] exported 489 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (6.1h remaining)
+[verification_export] exported 490 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: partial → confidence 0.670 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 3 stale claims
+[verify_claims] investigation: cooldown active (4.1h remaining)
+[verification_export] exported 490 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (2.1h remaining)
+[verification_export] exported 491 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 4 stale claims
+[verify_claims] investigation: cooldown active (0.1h remaining)
+[verification_export] exported 496 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 10 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpqcsvje)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 168s with exit=0
+[investigate] verdict: inconclusive, confidence: 0.1
+[investigate] sub-questions: 5, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed. --claim-id claim_23 --source-handle savsays
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpqcsvje)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 168s with exit=0
+[investigate] verdict: inconclusive, confidence: 0.1
+[investigate] sub-questions: 5, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 504 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: cooldown active (10.1h remaining)
+[verification_export] exported 504 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 4 stale claims
+[verify_claims] investigation: cooldown active (8.1h remaining)
+[verification_export] exported 504 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (6.1h remaining)
+[verification_export] exported 504 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: cooldown active (4.5h remaining)
+[verification_export] exported 504 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: partial → confidence 0.670 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: cooldown active (4.0h remaining)
+[verification_export] exported 504 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: cooldown active (2.1h remaining)
+[verification_export] exported 505 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: cooldown active (0.1h remaining)
+[verification_export] exported 505 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.670 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 6 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 6 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mprb0ugw)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 250s with exit=0
+[investigate] verdict: inconclusive, confidence: 0.15
+[investigate] sub-questions: 5, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed. --claim-id claim_23 --source-handle savsays
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mprb0ugw)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 250s with exit=0
+[investigate] verdict: inconclusive, confidence: 0.15
+[investigate] sub-questions: 5, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 505 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: daily limit reached (2/2)
+[verification_export] exported 505 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 6 stale claims
+[verify_claims] investigation: daily limit reached (2/2)
+[verification_export] exported 505 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.690 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: cooldown active (6.1h remaining)
+[verification_export] exported 505 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: cooldown active (4.1h remaining)
+[verification_export] exported 506 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 9 stale claims
+[verify_claims] investigation: cooldown active (2.1h remaining)
+[verification_export] exported 507 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: cooldown active (0.1h remaining)
+[verification_export] exported 507 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mps52h1y)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 266s with exit=0
+[investigate] verdict: inconclusive, confidence: 0.2
+[investigate] sub-questions: 5, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed. --claim-id claim_23 --source-handle savsays
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mps52h1y)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 266s with exit=0
+[investigate] verdict: inconclusive, confidence: 0.2
+[investigate] sub-questions: 5, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 507 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: inconclusive → confidence 0.400 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 9 stale claims
+[verify_claims] investigation: cooldown active (10.1h remaining)
+[verification_export] exported 508 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 4 stale claims
+[verify_claims] investigation: cooldown active (9.9h remaining)
+[verification_export] exported 508 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: partial → confidence 0.430 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (8.1h remaining)
+[verification_export] exported 508 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 4 stale claims
+[verify_claims] investigation: cooldown active (6.1h remaining)
+[verification_export] exported 508 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 9 stale claims
+[verify_claims] investigation: cooldown active (4.1h remaining)
+[verification_export] exported 513 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.690 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 4 stale claims
+[verify_claims] investigation: cooldown active (2.1h remaining)
+[verification_export] exported 513 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (0.1h remaining)
+[verification_export] exported 513 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 3 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 10 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpt3cy34)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 221s with exit=0
+[investigate] verdict: inconclusive, confidence: 0.2
+[investigate] sub-questions: 5, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed. --claim-id claim_23 --source-handle savsays
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpt3cy34)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 221s with exit=0
+[investigate] verdict: inconclusive, confidence: 0.2
+[investigate] sub-questions: 5, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 513 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: partial → confidence 0.670 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: cooldown active (10.1h remaining)
+[verification_export] exported 513 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 9 stale claims
+[verify_claims] investigation: cooldown active (8.1h remaining)
+[verification_export] exported 514 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (6.1h remaining)
+[verification_export] exported 514 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: cooldown active (4.0h remaining)
+[verification_export] exported 515 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: cooldown active (2.1h remaining)
+[verification_export] exported 515 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.670 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 4 stale claims
+[verify_claims] investigation: cooldown active (1.4h remaining)
+[verification_export] exported 515 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: partial → confidence 0.670 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: cooldown active (0.1h remaining)
+[verification_export] exported 520 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mptxd8s9)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 1s with exit=1
+[investigate] failed to parse investigation_result.json: ENOENT: no such file or directory, open '/home/raymond_d_baldonado_gmail_com/hunter/state/investigation_result.json'
+[investigate] no valid investigation result found
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed. --claim-id claim_23 --source-handle savsays
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mptxd8s9)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 1s with exit=1
+[investigate] failed to parse investigation_result.json: ENOENT: no such file or directory, open '/home/raymond_d_baldonado_gmail_com/hunter/state/investigation_result.json'
+[investigate] no valid investigation result found
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 521 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 4 stale claims
+[verify_claims] investigation: daily limit reached (2/2)
+[verification_export] exported 522 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: daily limit reached (2/2)
+[verification_export] exported 522 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: daily limit reached (2/2)
+[verification_export] exported 522 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 6 stale claims
+[verify_claims] investigation: daily limit reached (2/2)
+[verification_export] exported 522 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 6 stale claims
+[verify_claims] investigation: cooldown active (2.0h remaining)
+[verification_export] exported 522 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpun4dkq)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 0s with exit=1
+[investigate] failed to parse investigation_result.json: ENOENT: no such file or directory, open '/home/raymond_d_baldonado_gmail_com/hunter/state/investigation_result.json'
+[investigate] no valid investigation result found
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed. --claim-id claim_23 --source-handle savsays
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpun4dkq)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 0s with exit=1
+[investigate] failed to parse investigation_result.json: ENOENT: no such file or directory, open '/home/raymond_d_baldonado_gmail_com/hunter/state/investigation_result.json'
+[investigate] no valid investigation result found
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 523 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: partial → confidence 0.430 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 6 stale claims
+[verify_claims] investigation: cooldown active (10.0h remaining)
+[verification_export] exported 524 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.670 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: cooldown active (8.0h remaining)
+[verification_export] exported 524 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: inconclusive → confidence 0.400 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: cooldown active (6.0h remaining)
+[verification_export] exported 524 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: cooldown active (4.0h remaining)
+[verification_export] exported 524 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (2.6h remaining)
+[verification_export] exported 524 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 6 stale claims
+[verify_claims] investigation: cooldown active (2.0h remaining)
+[verification_export] exported 524 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (0.0h remaining)
+[verification_export] exported 526 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.670 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 4 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpvh3dk6)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 17s with exit=0
+[investigate] verdict: inconclusive, confidence: 0
+[investigate] sub-questions: 6, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed. --claim-id claim_23 --source-handle savsays
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpvh3dk6)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 17s with exit=0
+[investigate] verdict: inconclusive, confidence: 0
+[investigate] sub-questions: 6, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 529 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: inconclusive → confidence 0.400 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: daily limit reached (2/2)
+[verification_export] exported 530 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 4 stale claims
+[verify_claims] investigation: daily limit reached (2/2)
+[verification_export] exported 530 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: daily limit reached (2/2)
+[verification_export] exported 530 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.430 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 4 stale claims
+[verify_claims] investigation: cooldown active (4.0h remaining)
+[verification_export] exported 532 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (2.0h remaining)
+[verification_export] exported 534 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.690 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: cooldown active (0.0h remaining)
+[verification_export] exported 535 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 9 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpwb2ifm)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 11s with exit=0
+[investigate] verdict: inconclusive, confidence: 0
+[investigate] sub-questions: 6, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed. --claim-id claim_23 --source-handle savsays
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpwb2ifm)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 11s with exit=0
+[investigate] verdict: inconclusive, confidence: 0
+[investigate] sub-questions: 6, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 538 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: partial → confidence 0.670 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: cooldown active (10.0h remaining)
+[verification_export] exported 538 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.430 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 9 stale claims
+[verify_claims] investigation: cooldown active (8.0h remaining)
+[verification_export] exported 538 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.430 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 2 stale claims
+[verify_claims] investigation: cooldown active (6.4h remaining)
+[verification_export] exported 538 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (6.0h remaining)
+[verification_export] exported 542 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 2 stale claims
+[verify_claims] investigation: cooldown active (4.0h remaining)
+[verification_export] exported 542 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (2.0h remaining)
+[verification_export] exported 542 claims (0 suppressed)
+[verify_claims] push failed (will be picked up by next orchestrator commit): Command failed: git -C "/home/raymond_d_baldonado_gmail_com/hunter" push origin main
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.670 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 3 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpx0tk11)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 15s with exit=0
+[investigate] verdict: inconclusive, confidence: 0
+[investigate] sub-questions: 6, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed. --claim-id claim_23 --source-handle savsays
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpx0tk11)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 15s with exit=0
+[investigate] verdict: inconclusive, confidence: 0
+[investigate] sub-questions: 6, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 542 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: inconclusive → confidence 0.400 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: daily limit reached (2/2)
+[verification_export] exported 542 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 2 stale claims
+[verify_claims] investigation: daily limit reached (2/2)
+[verification_export] exported 542 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 9 stale claims
+[verify_claims] investigation: cooldown active (6.0h remaining)
+[verification_export] exported 544 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: cooldown active (4.0h remaining)
+[verification_export] exported 546 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: partial → confidence 0.670 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 9 stale claims
+[verify_claims] investigation: cooldown active (2.0h remaining)
+[verification_export] exported 547 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 3 stale claims
+[verify_claims] investigation: cooldown active (0.0h remaining)
+[verification_export] exported 550 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: inconclusive → confidence 0.400 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 9 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpxuseik)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 21s with exit=0
+[investigate] verdict: inconclusive, confidence: 0
+[investigate] sub-questions: 6, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed. --claim-id claim_23 --source-handle savsays
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpxuseik)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 21s with exit=0
+[investigate] verdict: inconclusive, confidence: 0
+[investigate] sub-questions: 6, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 551 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.690 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 2 stale claims
+[verify_claims] investigation: cooldown active (10.0h remaining)
+[verification_export] exported 551 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 9 stale claims
+[verify_claims] investigation: cooldown active (8.0h remaining)
+[verification_export] exported 551 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.430 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 3 stale claims
+[verify_claims] investigation: cooldown active (7.9h remaining)
+[verification_export] exported 551 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (6.0h remaining)
+[verification_export] exported 551 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 3 stale claims
+[verify_claims] investigation: cooldown active (4.0h remaining)
+[verification_export] exported 551 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (2.0h remaining)
+[verification_export] exported 551 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: cooldown active (0.0h remaining)
+[verification_export] exported 551 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 6 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpyou3td)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 6s with exit=0
+[investigate] failed to parse investigation_result.json: ENOENT: no such file or directory, open '/home/raymond_d_baldonado_gmail_com/hunter/state/investigation_result.json'
+[investigate] no valid investigation result found
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed. --claim-id claim_23 --source-handle savsays
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpyou3td)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 6s with exit=0
+[investigate] failed to parse investigation_result.json: ENOENT: no such file or directory, open '/home/raymond_d_baldonado_gmail_com/hunter/state/investigation_result.json'
+[investigate] no valid investigation result found
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 551 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: cooldown active (10.0h remaining)
+[verification_export] exported 552 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: cooldown active (8.0h remaining)
+[verification_export] exported 552 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.430 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: cooldown active (6.0h remaining)
+[verification_export] exported 552 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: cooldown active (4.0h remaining)
+[verification_export] exported 552 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 4 stale claims
+[verify_claims] investigation: cooldown active (2.0h remaining)
+[verification_export] exported 552 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: cooldown active (0.0h remaining)
+[verification_export] exported 552 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 4 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpziuhen)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 24s with exit=0
+[investigate] verdict: inconclusive, confidence: 0
+[investigate] sub-questions: 5, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed. --claim-id claim_23 --source-handle savsays
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mpziuhen)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 24s with exit=0
+[investigate] verdict: inconclusive, confidence: 0
+[investigate] sub-questions: 5, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 552 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.690 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: cooldown active (11.4h remaining)
+[verification_export] exported 552 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: cooldown active (10.0h remaining)
+[verification_export] exported 558 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: cooldown active (8.0h remaining)
+[verification_export] exported 559 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: cooldown active (6.0h remaining)
+[verification_export] exported 560 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.430 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 6 stale claims
+[verify_claims] investigation: cooldown active (4.0h remaining)
+[verification_export] exported 561 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.430 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: cooldown active (2.0h remaining)
+[verification_export] exported 563 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 9 stale claims
+[verify_claims] investigation: cooldown active (0.0h remaining)
+[verification_export] exported 565 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 6 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mq0cuigl)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 14s with exit=0
+[investigate] verdict: inconclusive, confidence: 0
+[investigate] sub-questions: 6, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed. --claim-id claim_23 --source-handle savsays
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mq0cuigl)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 14s with exit=0
+[investigate] verdict: inconclusive, confidence: 0
+[investigate] sub-questions: 6, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 567 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: cooldown active (10.0h remaining)
+[verification_export] exported 567 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: cooldown active (8.0h remaining)
+[verification_export] exported 569 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: cooldown active (6.0h remaining)
+[verification_export] exported 571 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: cooldown active (4.0h remaining)
+[verification_export] exported 571 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 9 stale claims
+[verify_claims] investigation: cooldown active (2.0h remaining)
+[verification_export] exported 572 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: partial → confidence 0.670 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 4 stale claims
+[verify_claims] investigation: cooldown active (0.9h remaining)
+[verification_export] exported 572 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mq12lspa)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 13s with exit=0
+[investigate] verdict: inconclusive, confidence: 0
+[investigate] sub-questions: 6, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed. --claim-id claim_23 --source-handle savsays
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mq12lspa)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 13s with exit=0
+[investigate] verdict: inconclusive, confidence: 0
+[investigate] sub-questions: 6, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 572 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 4 stale claims
+[verify_claims] investigation: daily limit reached (2/2)
+[verification_export] exported 572 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 6 stale claims
+[verify_claims] investigation: daily limit reached (2/2)
+[verification_export] exported 572 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: partial → confidence 0.670 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: daily limit reached (2/2)
+[verification_export] exported 572 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: daily limit reached (2/2)
+[verification_export] exported 572 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: inconclusive → confidence 0.400 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (2.0h remaining)
+[verification_export] exported 573 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: partial → confidence 0.670 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: cooldown active (0.0h remaining)
+[verification_export] exported 575 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mq1wkojp)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 19s with exit=0
+[investigate] verdict: inconclusive, confidence: 0
+[investigate] sub-questions: 7, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed. --claim-id claim_23 --source-handle savsays
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mq1wkojp)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 19s with exit=0
+[investigate] verdict: inconclusive, confidence: 0
+[investigate] sub-questions: 7, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 579 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.430 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 6 stale claims
+[verify_claims] investigation: cooldown active (10.0h remaining)
+[verification_export] exported 581 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: cooldown active (8.0h remaining)
+[verification_export] exported 583 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 6 stale claims
+[verify_claims] investigation: cooldown active (6.0h remaining)
+[verification_export] exported 583 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: inconclusive → confidence 0.400 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: cooldown active (4.0h remaining)
+[verification_export] exported 583 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.690 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: cooldown active (2.4h remaining)
+[verification_export] exported 583 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 6 stale claims
+[verify_claims] investigation: cooldown active (2.0h remaining)
+[verification_export] exported 584 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: inconclusive → confidence 0.400 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: cooldown active (0.0h remaining)
+[verification_export] exported 584 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.430 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 6 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mq2qkwmg)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 12s with exit=0
+[investigate] verdict: inconclusive, confidence: 0
+[investigate] sub-questions: 7, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed. --claim-id claim_23 --source-handle savsays
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mq2qkwmg)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 12s with exit=0
+[investigate] verdict: inconclusive, confidence: 0
+[investigate] sub-questions: 7, supporting: 0, contradicting: 0
+[investigate] score: 0.325 -> unverified
+[investigate] fatal: vdb.insertInvestigation is not a function
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 584 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 4 stale claims
+[verify_claims] investigation: daily limit reached (2/2)
+[verification_export] exported 584 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.430 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 6 stale claims
+[verify_claims] investigation: daily limit reached (2/2)
+[verification_export] exported 584 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.690 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (6.0h remaining)
+[verification_export] exported 585 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.430 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 10 stale claims
+[verify_claims] investigation: cooldown active (4.0h remaining)
+[verification_export] exported 587 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: partial → confidence 0.430 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 13 stale claims
+[verify_claims] investigation: cooldown active (2.0h remaining)
+[verification_export] exported 588 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.430 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 4 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mq3gc3ez)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 10s with exit=0
+[investigate] failed to parse investigation_result.json: ENOENT: no such file or directory, open '/home/raymond_d_baldonado_gmail_com/hunter/state/investigation_result.json'
+[investigate] no valid investigation result found
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed. --claim-id claim_23 --source-handle savsays
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mq3gc3ez)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 10s with exit=0
+[investigate] failed to parse investigation_result.json: ENOENT: no such file or directory, open '/home/raymond_d_baldonado_gmail_com/hunter/state/investigation_result.json'
+[investigate] no valid investigation result found
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 588 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.600 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 9 stale claims
+[verify_claims] investigation: cooldown active (10.0h remaining)
+[verification_export] exported 588 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.450 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.670 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 4 stale claims
+[verify_claims] investigation: cooldown active (8.0h remaining)
+[verification_export] exported 588 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (6.0h remaining)
+[verification_export] exported 588 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 3 stale claims
+[verify_claims] investigation: cooldown active (4.0h remaining)
+[verification_export] exported 588 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: inconclusive → confidence 0.400 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (3.9h remaining)
+[verification_export] exported 588 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.690 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 3 stale claims
+[verify_claims] investigation: cooldown active (2.0h remaining)
+[verification_export] exported 591 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 8 stale claims
+[verify_claims] investigation: cooldown active (0.0h remaining)
+[verification_export] exported 592 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[web_search] failed to parse JSON, using regex fallback
+[verify_claims]   web result: confirmed → confidence 0.690 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 4 stale claims
+[verify_claims] investigation: starting deep investigation for "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mq4acjlp)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 101s with exit=0
+[investigate] verdict: partial, confidence: 0.85
+[investigate] sub-questions: 5, supporting: 2, contradicting: 2
+[investigate] score: 0.600 -> contested
+[investigate] fatal: vdb.insertInvestigation is not a function
+[verify_claim] investigateClaimSync error: Command failed: node runner/intelligence/investigate_claim.js --claim Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during an anti-ICE protest, with videos showing the incident and charges to be filed. --claim-id claim_23 --source-handle savsays
+[investigate] investigating: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a..." (claim=claim_23, inv=inv_claim_23_mq4acjlp)
+[investigate] using builder SA: sebastian-builder-vertex.json
+[investigate] agent finished in 101s with exit=0
+[investigate] verdict: partial, confidence: 0.85
+[investigate] sub-questions: 5, supporting: 2, contradicting: 2
+[investigate] score: 0.600 -> contested
+[investigate] fatal: vdb.insertInvestigation is not a function
+
+[verify_claims] investigation: failed or timed out
+[verification_export] exported 592 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: confirmed → confidence 0.655 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 7 stale claims
+[verify_claims] investigation: daily limit reached (2/2)
+[verification_export] exported 592 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.430 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 5 stale claims
+[verify_claims] investigation: cooldown active (8.1h remaining)
+[verification_export] exported 592 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
+[verify_claims] starting verification pipeline
+[verify_claims] loaded 112 unverified/contested claims (112 tracker, 0 intel)
+[verify_claims] web searching: "Paige Ostroushko was arrested for assaulting reporter Savanah Hernandez during a"
+[verify_claims]   web result: confirmed → confidence 0.620 → unverified
+[verify_claims] web searching: "U.S. sanctions have deliberately crushed the economy of multiple nations, impove"
+[verify_claims]   web result: partial → confidence 0.430 → unverified
+[verify_claims] web searching: "Iran used Chinese spy satellite TEE-01B to guide strikes on U.S military bases."
+[verify_claims]   web result: partial → confidence 0.635 → unverified
+[verify_claims] scored 10 claims, web-searched 3
+[verify_claims] expired 9 stale claims
+[verify_claims] investigation: cooldown active (6.0h remaining)
+[verification_export] exported 592 claims (0 suppressed)
+[verify_claims] pushed verification export to GitHub
