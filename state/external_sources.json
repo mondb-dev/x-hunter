@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-09T15:48:50.008Z",
+  "generated_at": "2026-06-09T17:18:51.123Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-09T15:49:22.973Z",
+  "profiled_at": "2026-06-09T17:19:21.764Z",
   "sources": [
     {
       "domain": "cbp.gov",
@@ -1418,9 +1418,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-09T14:55:38.000Z",
+      "last_seen_at": "2026-06-09T16:03:38.000Z",
       "discovery": {
-        "distinct_urls": 4963,
+        "distinct_urls": 4966,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1429,10 +1429,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3000,
-          "feed_buffer_reply": 3109
+          "feed_buffer": 3004,
+          "feed_buffer_reply": 3114
         },
-        "distinct_referring_accounts": 1702,
+        "distinct_referring_accounts": 1703,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1470,7 +1470,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:4963",
+            "distinct_urls:4966",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1478,7 +1478,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1702",
+            "referring_accounts:1703",
             "origin_types:2"
           ]
         },
@@ -1508,10 +1508,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:4963",
+            "distinct_urls:4966",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1702",
+            "referring_accounts:1703",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1554,9 +1554,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-06-09T05:38:16.000Z",
+      "last_seen_at": "2026-06-09T15:45:07.000Z",
       "discovery": {
-        "distinct_urls": 381,
+        "distinct_urls": 382,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -1565,7 +1565,7 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 353,
+          "feed_buffer_reply": 354,
           "feed_buffer": 54
         },
         "distinct_referring_accounts": 248,
@@ -1606,7 +1606,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:381",
+            "distinct_urls:382",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1644,7 +1644,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:381",
+            "distinct_urls:382",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:248",
@@ -8310,9 +8310,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-16T09:36:45.269Z",
-      "last_seen_at": "2026-06-08T16:03:28.977Z",
+      "last_seen_at": "2026-06-09T16:31:24.785Z",
       "discovery": {
-        "distinct_urls": 63,
+        "distinct_urls": 64,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -8321,7 +8321,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 63
+          "articles": 64
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -8350,7 +8350,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:63",
+            "distinct_urls:64",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -8388,7 +8388,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:63",
+            "distinct_urls:64",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -15579,7 +15579,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T16:47:55.494Z",
+        "fetched_at": "2026-06-09T16:49:20.102Z",
         "homepage_url": "https://happyseeds.ai/",
         "example_url": "https://link.happyseeds.ai/hs2?twclid=23gsc44gehebnjbbfpce6085rj",
         "homepage_status": 200,
@@ -46205,7 +46205,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T14:17:54.863Z",
+        "fetched_at": "2026-06-09T16:49:21.246Z",
         "homepage_url": "https://surveymonkey.com/",
         "example_url": "https://www.surveymonkey.com/r/RXMZYPF?twclid=252z7ijl13qn2so8u4p821ogkx",
         "homepage_status": 200,
@@ -46327,7 +46327,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T14:17:57.856Z",
+        "fetched_at": "2026-06-09T16:49:23.229Z",
         "homepage_url": "https://energyx.com/",
         "example_url": "https://invest.energyx.com/?utm_source=twitter&utm_medium=paid-social&utm_campaign=twitterretargeting-41265666-DMR_EnergyX_Twitter_RTG_US_ABO_AutBid_Funded_RegA_id4007_BAU-New&utm_content=54718817-042826_HiFi-Commodity-Culture_Video_US_FullFunnel_18%20_All_All_AutBid_Funded_x%20&utm_term=2048902573357244715-042826_HiFi-Commodity-Culture_V46-M46-LearnMore_Rotation_Video_LearnMore_LP-Invest_x&twclid=25e388zosvb4kqbie3xren0lwt",
         "homepage_status": 200,
@@ -46449,7 +46449,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T15:17:53.591Z",
+        "fetched_at": "2026-06-09T16:49:23.587Z",
         "homepage_url": "https://a24films.com/",
         "example_url": "https://app.a24films.com/ticketing/backrooms/522?twclid=24mghux79f287c9u7b5rd948i5",
         "homepage_status": 200,
@@ -46571,7 +46571,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T15:17:53.906Z",
+        "fetched_at": "2026-06-09T17:19:19.840Z",
         "homepage_url": "https://inthegrey.film/",
         "example_url": "https://inthegrey.film/?twclid=27f088zf1o715tosep9p3mwxjy",
         "homepage_status": 200,
@@ -46693,7 +46693,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T15:17:54.365Z",
+        "fetched_at": "2026-06-09T17:19:20.208Z",
         "homepage_url": "https://freeflickfootball.com/",
         "example_url": "https://www.freeflickfootball.com/?twclid=25ot3m51mdmkvdjc3db1ukp3j7",
         "homepage_status": 200,
@@ -46815,7 +46815,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T15:47:53.728Z",
+        "fetched_at": "2026-06-09T17:19:20.756Z",
         "homepage_url": "https://ai-scanclaw.org/",
         "example_url": "https://ai-scanclaw.org/?twclid=2eknfzk2d9zgxwrsorj3rgjr03",
         "homepage_status": null,
@@ -46937,7 +46937,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T15:47:54.846Z",
+        "fetched_at": "2026-06-09T17:19:21.764Z",
         "homepage_url": "https://fors.market/",
         "example_url": "https://app.fors.market/?twclid=2a9nuy5568hqmlaww5o5fyl72t",
         "homepage_status": 200,
