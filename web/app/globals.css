@@ -246,7 +246,7 @@ main {
 .top-claims-link:last-child .top-claim-row { border-bottom: none; }
 .top-claim-left { display: flex; align-items: flex-start; gap: 0.6rem; flex: 1; min-width: 0; }
 .top-claim-status { flex-shrink: 0; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.2em 0.5em; border-radius: 2px; margin-top: 3px; display: none; }
-.top-claim-text { font-size: 13px; line-height: 1.5; color: var(--text); margin: 0; }
+.top-claim-text { font-size: 13px; line-height: 1.5; color: var(--text); margin: 0; font-family: var(--font-prose); }
 .top-claim-right { display: flex; flex-direction: column; align-items: flex-end; gap: 0.2rem; flex-shrink: 0; padding-left: 0.5rem; }
 .top-claim-source { font-size: 10px; color: var(--muted); white-space: nowrap; }
 .top-claim-conf { font-size: 11px; font-weight: 700; }
@@ -850,7 +850,7 @@ main {
 }
 
 /* ── Verification page ──────────────────────────────────────────────────── */
-.verify-page { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+.verify-page { max-width: 860px; margin: 0 auto; padding: 0 0 4rem; }
 .verify-header { margin-bottom: 2rem; }
 .verify-eyebrow {
   font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
@@ -910,6 +910,7 @@ main {
 }
 .verify-claim-text {
   font-size: 14px; line-height: 1.6; margin: 0 0 0.8rem; color: var(--fg, #e2e8f0);
+  font-family: var(--font-prose);
 }
 
 .verify-confidence { margin-bottom: 0.8rem; }
@@ -954,6 +955,7 @@ main {
   font-size: 13px; line-height: 1.6; color: var(--fg, #e2e8f0);
   background: rgba(148,163,184,0.08); border-left: 2px solid var(--muted);
   padding: 0.5rem 0.75rem; margin-bottom: 0.6rem; border-radius: 0 4px 4px 0;
+  font-family: var(--font-prose);
 }
 .verify-claim-summary p { margin: 0; }
 

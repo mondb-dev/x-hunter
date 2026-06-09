@@ -61,8 +61,8 @@ function pushExport() {
 }
 
 // ── Configuration ───────────────────────────────────────────────────────────
-const MAX_CLAIMS_PER_CYCLE   = 10;
-const WEB_SEARCH_PER_CYCLE   = 3;
+const MAX_CLAIMS_PER_CYCLE   = 15;
+const WEB_SEARCH_PER_CYCLE   = 8;
 const STALE_HOURS            = 48;
 const MAX_INVESTIGATIONS_PER_DAY = 2;
 const INVESTIGATION_COOLDOWN_MS  = 12 * 3600_000; // 12h between investigations

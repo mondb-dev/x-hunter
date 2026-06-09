@@ -21,7 +21,7 @@ export default async function VerifiedPage() {
         <h1 className="verify-title">Claim Verification</h1>
         <p className="verify-description">
           Claims observed during research, scored for credibility using source tier,
-          corroboration, evidence quality, and web search verification.
+          corroboration, evidence quality, and web search verification.{" "}
           {claims.length} claims tracked · avg confidence {avgConfidence}%
           {data.generated_at && (
             <> · updated {new Date(data.generated_at).toLocaleString("en-US", {

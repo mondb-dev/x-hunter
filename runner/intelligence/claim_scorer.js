@@ -32,7 +32,7 @@ const WEIGHTS = {
 
 // ── Thresholds ──────────────────────────────────────────────────────────────
 const STATUS_THRESHOLDS = {
-  supported: 0.75,   // >= this + web search confirms → supported
+  supported: 0.60,   // >= this + web search confirms → supported
   refuted:   0.25,   // <= this or web search refutes → refuted
 };
 
@@ -190,19 +190,31 @@ function applyWebSearchBoost(breakdown, claim) {
   const tier = claim.source_tier;
   if (tier && tier >= 4) return;  // low-credibility source, don't boost
 
-  // Count how many evidence sources are from high-tier domains
+  // Count how many evidence sources are from high-tier domains.
+  // Use partial/fuzzy matching because Gemini grounding returns names like
+  // "Reuters" or "bbc.co.uk" that won't exact-match "reuters.com" or "bbc.com".
   let highTierCount = 0;
+  const highTierArr = [...HIGH_TIER_DOMAINS];
+
+  function matchesHighTier(str) {
+    if (!str) return false;
+    const clean = str.replace(/^www\./, '').toLowerCase();
+    // Exact match
+    if (HIGH_TIER_DOMAINS.has(clean)) return true;
+    // Partial match: known domain contains the string or vice versa
+    return highTierArr.some(d => d.includes(clean) || clean.includes(d.split('.')[0]));
+  }
+
   // Check actual URLs
   for (const url of evidenceUrls) {
     try {
       const domain = new URL(url).hostname.replace(/^www\./, '');
-      if (HIGH_TIER_DOMAINS.has(domain)) highTierCount++;
+      if (matchesHighTier(domain)) highTierCount++;
     } catch {}
   }
-  // Check domain names from grounding metadata (covers redirect URLs)
+  // Check domain names / titles from grounding metadata (covers redirect URLs)
   for (const d of evidenceDomains) {
-    const clean = d.replace(/^www\./, '').toLowerCase();
-    if (HIGH_TIER_DOMAINS.has(clean)) highTierCount++;
+    if (matchesHighTier(d)) highTierCount++;
   }
 
   // Strong boost: confirmed + multiple high-tier sources
