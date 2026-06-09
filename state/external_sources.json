@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-08T23:49:03.937Z",
+  "generated_at": "2026-06-09T02:49:10.887Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-08T23:49:54.983Z",
+  "profiled_at": "2026-06-09T02:49:41.827Z",
   "sources": [
     {
       "domain": "cbp.gov",
@@ -1418,9 +1418,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-08T22:33:04.000Z",
+      "last_seen_at": "2026-06-09T02:18:56.000Z",
       "discovery": {
-        "distinct_urls": 4865,
+        "distinct_urls": 4876,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1429,10 +1429,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 2944,
-          "feed_buffer_reply": 3041
+          "feed_buffer": 2949,
+          "feed_buffer_reply": 3052
         },
-        "distinct_referring_accounts": 1691,
+        "distinct_referring_accounts": 1692,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1470,7 +1470,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:4865",
+            "distinct_urls:4876",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1478,7 +1478,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1691",
+            "referring_accounts:1692",
             "origin_types:2"
           ]
         },
@@ -1508,10 +1508,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:4865",
+            "distinct_urls:4876",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1691",
+            "referring_accounts:1692",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3336,7 +3336,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T02:17:37.861Z",
+        "fetched_at": "2026-06-09T02:19:05.149Z",
         "homepage_url": "https://jamf.com/",
         "example_url": "https://www.jamf.com/blog/mac-management-security-trends-enterprise-it-2025/?utm_source=twitter&utm_medium=sponsored-social&utm_campaign=am_icf_smas_mms_banner_icp&utm_content=20260213_com_ent-midmkt_p_jmac_blog_6679_SIT&twclid=26vc3aicbe9m10pi19ume82b0z",
         "homepage_status": 200,
@@ -4389,9 +4389,9 @@
       "entity": "Amazon",
       "kind": "unknown",
       "first_seen_at": "2026-04-09T03:23:02.000Z",
-      "last_seen_at": "2026-06-07T01:14:22.000Z",
+      "last_seen_at": "2026-06-08T20:53:53.000Z",
       "discovery": {
-        "distinct_urls": 204,
+        "distinct_urls": 210,
         "example_urls": [
           "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44/ref_=dvm_us_c_soc_THBY_tw_rb?twclid=2e4zyrzur7iapo7e8zxfmiz1fu",
           "https://www.amazon.com/dp/B0FV7FDY4Q?ref_=ptw_spv01_d403b2f0b3e432606b1c05fdabe45376&ascsubtag=ptw-X-1-9-zcxw79gmhbmhdzve&mcid=abeb628a6893350285c8588b9c699eff&twclid=2c1qv8ps4iujtsy9sniyy94eix&tag=twemermanu-us-20",
@@ -4400,7 +4400,7 @@
           "https://www.amazon.com/dp/B08FDGTGJT?ref_=ptw_spv01_74f4c9a5cd9e611fbf921e6c5a2f7acc&ascsubtag=ptw-X-1-9-zcxw79gmhbmhdzve&mcid=abeb628a6893350285c8588b9c699eff&twclid=2c1qv8ps4iujtsy9sniyy94eix&tag=twemermanu-us-20"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 204
+          "feed_buffer_reply": 210
         },
         "distinct_referring_accounts": 3,
         "sample_referring_accounts": [
@@ -4433,7 +4433,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:204",
+            "distinct_urls:210",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -4471,7 +4471,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:204",
+            "distinct_urls:210",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:3",
@@ -4481,19 +4481,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T02:48:11.163Z",
+        "fetched_at": "2026-06-09T02:49:40.625Z",
         "homepage_url": "https://amazon.com/",
         "example_url": "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44/ref_=dvm_us_c_soc_THBY_tw_rb?twclid=2e4zyrzur7iapo7e8zxfmiz1fu",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.amazon.com/",
         "example_final_url": "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44",
-        "homepage_content_type": "text/html;charset=UTF-8",
+        "homepage_content_type": "text/html",
         "example_content_type": "text/html;charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -5155,9 +5155,9 @@
       "entity": "Byteplus",
       "kind": "unknown",
       "first_seen_at": "2026-04-15T13:30:37.000Z",
-      "last_seen_at": "2026-06-08T13:15:37.000Z",
+      "last_seen_at": "2026-06-08T18:07:16.000Z",
       "discovery": {
-        "distinct_urls": 98,
+        "distinct_urls": 99,
         "example_urls": [
           "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
           "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_image_codingplan&utm_content=tecdo&twclid=2dnuttry4m02uyeswjtnkyw6cq",
@@ -5166,7 +5166,7 @@
           "https://www.byteplus.com/en/activity/codingplan?utm_source=x&utm_medium=cpc&utm_campaign=codingplan_signup_eu_english_20260415_yuki&utm_term=20260415_video_codingplan&utm_content=tecdo&twclid=25cpjoe66peh1858zv8hf438l2"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 98
+          "feed_buffer_reply": 99
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -5197,7 +5197,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:98",
+            "distinct_urls:99",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -5235,7 +5235,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:98",
+            "distinct_urls:99",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:1",
@@ -9158,7 +9158,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T00:47:35.789Z",
+        "fetched_at": "2026-06-09T00:49:02.770Z",
         "homepage_url": "https://scitools.com/",
         "example_url": "https://scitools.com/codecheck?xad=codecheck&twclid=23owlb2i7ei44kgcykku0zs4en",
         "homepage_status": 200,
@@ -12188,7 +12188,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T02:17:38.380Z",
+        "fetched_at": "2026-06-09T02:19:05.609Z",
         "homepage_url": "https://patsnap.com/",
         "example_url": "https://eureka.patsnap.com/mse-landing?from=mktcampaign_mse_ads_x_formuvideo-asia2en2&twclid=29qq6c80v43jc7y7o992xnzaaf",
         "homepage_status": 200,
@@ -15046,16 +15046,16 @@
           ]
         },
         "profile": {
-          "score": 0.12,
+          "score": 0.26,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
             "contact:true",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:4",
             "opinion_marker:false"
           ]
         },
@@ -15075,15 +15075,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T00:47:36.448Z",
+        "fetched_at": "2026-06-09T00:49:03.340Z",
         "homepage_url": "https://alppouch.com/",
         "example_url": "https://alppouch.com/products/drifters-lemon-raspberry-nicotine-pouches?variant=45695862079684&utm_source=twitter&twclid=2f0tn2lk34ykymzkyz3xx7lfzj&tw_adsetid=55002677&tw_campaign=41318448&utm_content=dpa-carousel-drifters&utm_campaign=cs-dpa-carousel-sales-alp-pouch&utm_medium=paid_social&tw_source=twitter&utm_term=55002677",
         "homepage_status": 200,
-        "example_status": 503,
+        "example_status": 200,
         "homepage_final_url": "https://alppouch.com/",
         "example_final_url": "https://alppouch.com/products/drifters-lemon-raspberry-nicotine-pouches?variant=45695862079684&utm_source=twitter&twclid=2f0tn2lk34ykymzkyz3xx7lfzj&tw_adsetid=55002677&tw_campaign=41318448&utm_content=dpa-carousel-drifters&utm_campaign=cs-dpa-carousel-sales-alp-pouch&utm_medium=paid_social&tw_source=twitter&utm_term=55002677",
         "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -15097,11 +15097,11 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": false,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 4,
           "opinion_marker": false
         }
       }
@@ -15697,7 +15697,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T02:17:38.502Z",
+        "fetched_at": "2026-06-09T02:19:05.771Z",
         "homepage_url": "https://jpost.com/",
         "example_url": "https://jpost.com/",
         "homepage_status": 200,
@@ -15974,6 +15974,132 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 14,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "celsius.com",
+      "entity": "Celsius",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-26T18:10:47.457Z",
+      "last_seen_at": "2026-06-09T01:20:08.935Z",
+      "discovery": {
+        "distinct_urls": 4,
+        "example_urls": [
+          "https://www.celsius.com/buy-locate/?utm_medium=paidsocial&utm_campaign=pillars&utm_content=musicfestival&twclid=2ejkfis7fdkuksuqyzg68f5wfq",
+          "https://www.celsius.com/buy-locate/?utm_medium=paidsocial&utm_source=x&utm_campaign=grandprix&utm_content=racing&twclid=2571m0xo2u5vsfcgvy2tqbtuhm",
+          "https://www.celsius.com/buy-locate/?utm_medium=paidsocial&utm_campaign=evergreen&utm_content=electricvibe&twclid=28cpfi11ry3nldoed8sbbdw3zd",
+          "https://www.celsius.com/buy-locate/?utm_medium=paidsocial&utm_source=x&utm_campaign=xamplifycmafest&utm_content=national&twclid=249ny9bulet84vs637jauhypa3"
+        ],
+        "origin_counts": {
+          "feed_buffer": 4
+        },
+        "distinct_referring_accounts": 2,
+        "sample_referring_accounts": [
+          "billboard",
+          "celsiusofficial"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.17666666666666664,
+          "basis": [
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.3041666666666667,
+          "basis": [
+            "referring_accounts:2",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.48000000000000004,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:6",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3765364583333333,
+          "confidence": 0.199475,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:2",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-08T00:18:33.210Z",
+        "homepage_url": "https://celsius.com/",
+        "example_url": "https://www.celsius.com/buy-locate/?utm_medium=paidsocial&utm_campaign=pillars&utm_content=musicfestival&twclid=2ejkfis7fdkuksuqyzg68f5wfq",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.celsius.com/",
+        "example_final_url": "https://www.celsius.com/buy-locate/?utm_medium=paidsocial&utm_campaign=pillars&utm_content=musicfestival&twclid=2ejkfis7fdkuksuqyzg68f5wfq",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 8,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 6,
           "opinion_marker": false
         }
       }
@@ -16323,7 +16449,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T00:47:39.022Z",
+        "fetched_at": "2026-06-09T00:49:05.859Z",
         "homepage_url": "https://aikido.dev/",
         "example_url": "https://www.aikido.dev/attack/infinite?utm_source=twitter&utm_medium=paidsocial&utm_campaign=US_tofu&utm_content=2026-02-26-Mack-Infinte-2-A&twclid=28a2h7kzzful35m0kfwtl23x0c",
         "homepage_status": 200,
@@ -16571,7 +16697,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T01:17:36.406Z",
+        "fetched_at": "2026-06-09T01:19:04.810Z",
         "homepage_url": "https://onkodex.com/",
         "example_url": "https://onkodex.com/join/?twclid=21aq9xwo1p6ea49gu5skcha56k",
         "homepage_status": 200,
@@ -22029,7 +22155,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:19",
+            "outbound_links:21",
             "opinion_marker:false"
           ]
         },
@@ -22049,7 +22175,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T00:47:39.499Z",
+        "fetched_at": "2026-06-09T00:49:06.867Z",
         "homepage_url": "https://fandango.com/",
         "example_url": "https://www.fandango.com/lee-cronins-the-mummy-2026-244052/movie-overview?twclid=2buocyfoltepc4nr5ab0l6j90t",
         "homepage_status": 200,
@@ -22065,7 +22191,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 24,
+          "outbound_links_count": 25,
           "opinion_marker": false
         },
         "example": {
@@ -22075,7 +22201,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 19,
+          "outbound_links_count": 21,
           "opinion_marker": false
         }
       }
@@ -23687,130 +23813,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "celsius.com",
-      "entity": "Celsius",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-26T18:10:47.457Z",
-      "last_seen_at": "2026-05-27T07:12:29.729Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://www.celsius.com/buy-locate/?utm_medium=paidsocial&utm_campaign=pillars&utm_content=musicfestival&twclid=2ejkfis7fdkuksuqyzg68f5wfq",
-          "https://www.celsius.com/buy-locate/?utm_medium=paidsocial&utm_source=x&utm_campaign=grandprix&utm_content=racing&twclid=2571m0xo2u5vsfcgvy2tqbtuhm",
-          "https://www.celsius.com/buy-locate/?utm_medium=paidsocial&utm_campaign=evergreen&utm_content=electricvibe&twclid=28cpfi11ry3nldoed8sbbdw3zd"
-        ],
-        "origin_counts": {
-          "feed_buffer": 3
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "celsiusofficial"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.1475,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.48000000000000004,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:6",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.36000000000000004,
-          "confidence": 0.1386,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-08T00:18:33.210Z",
-        "homepage_url": "https://celsius.com/",
-        "example_url": "https://www.celsius.com/buy-locate/?utm_medium=paidsocial&utm_campaign=pillars&utm_content=musicfestival&twclid=2ejkfis7fdkuksuqyzg68f5wfq",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.celsius.com/",
-        "example_final_url": "https://www.celsius.com/buy-locate/?utm_medium=paidsocial&utm_campaign=pillars&utm_content=musicfestival&twclid=2ejkfis7fdkuksuqyzg68f5wfq",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 8,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 6,
           "opinion_marker": false
         }
       }
@@ -26742,7 +26744,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T01:17:57.519Z",
+        "fetched_at": "2026-06-09T01:19:24.826Z",
         "homepage_url": "https://kfc.com/",
         "example_url": "https://www.kfc.com/menu?utm_source=twitter&utm_medium=social&utm_campaign=kfcvaluefeast&utm_creative=9box&twclid=250lznofqwrkd2iq53t7qffgxo",
         "homepage_status": null,
@@ -26865,7 +26867,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T02:48:11.652Z",
+        "fetched_at": "2026-06-09T02:49:41.116Z",
         "homepage_url": "https://3c.wiki/",
         "example_url": "https://3c.wiki/3PtZuMY?twclid=2bz0sgqd5e9nj510697vwg5ap7",
         "homepage_status": 200,
@@ -32801,6 +32803,129 @@
       }
     },
     {
+      "domain": "gopuff.com",
+      "entity": "Gopuff",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-04T23:10:07.000Z",
+      "last_seen_at": "2026-06-08T13:59:12.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://www.gopuff.com/go/ai?twclid=2df5moz835ertdpa0tqci700x9",
+          "https://www.gopuff.com/go/ai?twclid=29rk731cyres95bjdm3onsgnax"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "gopuff"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-09T01:49:04.688Z",
+        "homepage_url": "https://gopuff.com/",
+        "example_url": "https://www.gopuff.com/go/ai?twclid=2df5moz835ertdpa0tqci700x9",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://www.gopuff.com/",
+        "example_final_url": "https://www.gopuff.com/go/ai?twclid=2df5moz835ertdpa0tqci700x9",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "irys.xyz",
       "entity": "Irys Xyz",
       "kind": "unknown",
@@ -33745,7 +33870,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T02:17:39.824Z",
+        "fetched_at": "2026-06-09T02:19:07.319Z",
         "homepage_url": "https://newsguardtech.com/",
         "example_url": "https://www.newsguardtech.com/",
         "homepage_status": 200,
@@ -33989,7 +34114,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T00:17:35.587Z",
+        "fetched_at": "2026-06-09T00:19:01.924Z",
         "homepage_url": "https://discord.gg/",
         "example_url": "https://discord.gg/JxPMkH88",
         "homepage_status": 200,
@@ -34111,7 +34236,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T00:17:35.836Z",
+        "fetched_at": "2026-06-09T00:19:02.229Z",
         "homepage_url": "https://ned.org/",
         "example_url": "https://www.ned.org/about/board-of-directors/",
         "homepage_status": 200,
@@ -34233,7 +34358,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T00:17:36.673Z",
+        "fetched_at": "2026-06-09T00:19:03.151Z",
         "homepage_url": "https://dstack.ai/",
         "example_url": "https://sky.dstack.ai/?twclid=22u1vjb44uf96iph6oj89wot7a",
         "homepage_status": 200,
@@ -34355,7 +34480,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T00:17:39.445Z",
+        "fetched_at": "2026-06-09T00:19:05.911Z",
         "homepage_url": "https://nextinvestors.com/",
         "example_url": "https://nextinvestors.com/articles/rml-tungsten-price-running-high-grade-tungsten-sitting-in-stockpiles-plus-gold-drilling-in-may/?twclid=29vvkujdwopqjncmmhre6nbvtf",
         "homepage_status": 200,
@@ -34477,7 +34602,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T01:17:37.514Z",
+        "fetched_at": "2026-06-09T01:19:26.041Z",
         "homepage_url": "https://quorum.us/",
         "example_url": "https://cpmadvocacy.quorum.us/campaign/158654/?utm_source=x&utm_medium=paid_social&utm_campaign=iowa_prediction_markets&twclid=2n7g30ite25eujoe3z8invqck",
         "homepage_status": 200,
@@ -35819,7 +35944,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T01:17:58.339Z",
+        "fetched_at": "2026-06-09T01:19:27.008Z",
         "homepage_url": "https://insuranceleadsguide.com/",
         "example_url": "https://insuranceleadsguide.com/insurance-leads/insurance-agency-marketing-tools/?twclid=286vjil8sq5bkkcyaaco0b55aj",
         "homepage_status": 200,
@@ -35941,7 +36066,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T01:47:36.458Z",
+        "fetched_at": "2026-06-09T01:49:05.091Z",
         "homepage_url": "https://orangestandard.com/",
         "example_url": "https://orangestandard.com/?utm_source=Twitter&utm_medium=Tweet&utm_campaign=btcaccts&twclid=221wvicldxi1mxr7dfi4dgcd74",
         "homepage_status": 200,
@@ -36063,7 +36188,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T02:48:11.843Z",
+        "fetched_at": "2026-06-09T02:49:41.328Z",
         "homepage_url": "https://lambda.ai/",
         "example_url": "https://lambda.ai/?utm_source=twitter&utm_medium=paid-social&utm_campaign=2025-11-brand-remarketing&utm_content=2025-11_relaunch_superintelligence-cloud_copy3&twclid=2dr7wza1m47cxuzjqoi0dg5olo",
         "homepage_status": 200,
@@ -36185,7 +36310,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T02:48:12.167Z",
+        "fetched_at": "2026-06-09T02:49:41.827Z",
         "homepage_url": "https://gatorade.com/",
         "example_url": "https://www.gatorade.com/sports-drinks/gatorade-lower-sugar/rain-berry-00052000067774?utm_source=x&utm_medium=paidsocial&utm_campaign=gatorade_lowersugar_omd_fy26_3%2F4-9%2F6&utm_term=native&utm_content=video&twclid=2ez8pvv81gx18qn239dikznlxw",
         "homepage_status": 403,
@@ -41187,7 +41312,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-05T23:17:36.549Z",
+        "fetched_at": "2026-06-09T01:49:05.457Z",
         "homepage_url": "https://flova.ai/",
         "example_url": "https://flova.ai/?twclid=29hnc0f969c98ywipq384z0vww",
         "homepage_status": 200,
@@ -41309,7 +41434,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T01:47:37.196Z",
+        "fetched_at": "2026-06-09T01:49:06.336Z",
         "homepage_url": "https://a16z.com/",
         "example_url": "https://speedrun007.a16z.com/x2?twclid=2f5k6tant5xm94nvwscv68y8k7",
         "homepage_status": 200,
@@ -56812,83 +56937,6 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "galaxyhq"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "gopuff.com",
-      "entity": "Gopuff",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-04T23:10:07.000Z",
-      "last_seen_at": "2026-06-04T23:10:07.000Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://www.gopuff.com/go/ai?twclid=2df5moz835ertdpa0tqci700x9"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "gopuff"
         ],
         "distinct_axes": []
       },
