@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-09T11:18:45.565Z",
+  "generated_at": "2026-06-09T14:18:48.333Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-09T11:19:19.901Z",
+  "profiled_at": "2026-06-09T14:19:22.086Z",
   "sources": [
     {
       "domain": "cbp.gov",
@@ -1418,9 +1418,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-09T10:36:06.000Z",
+      "last_seen_at": "2026-06-09T11:54:09.000Z",
       "discovery": {
-        "distinct_urls": 4943,
+        "distinct_urls": 4958,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1429,8 +1429,8 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 2989,
-          "feed_buffer_reply": 3094
+          "feed_buffer": 2998,
+          "feed_buffer_reply": 3104
         },
         "distinct_referring_accounts": 1700,
         "sample_referring_accounts": [
@@ -1470,7 +1470,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:4943",
+            "distinct_urls:4958",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1508,7 +1508,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:4943",
+            "distinct_urls:4958",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1700",
@@ -4389,9 +4389,9 @@
       "entity": "Amazon",
       "kind": "unknown",
       "first_seen_at": "2026-04-09T03:23:02.000Z",
-      "last_seen_at": "2026-06-08T20:53:53.000Z",
+      "last_seen_at": "2026-06-09T09:05:14.000Z",
       "discovery": {
-        "distinct_urls": 216,
+        "distinct_urls": 222,
         "example_urls": [
           "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44/ref_=dvm_us_c_soc_THBY_tw_rb?twclid=2e4zyrzur7iapo7e8zxfmiz1fu",
           "https://www.amazon.com/dp/B0FV7FDY4Q?ref_=ptw_spv01_d403b2f0b3e432606b1c05fdabe45376&ascsubtag=ptw-X-1-9-zcxw79gmhbmhdzve&mcid=abeb628a6893350285c8588b9c699eff&twclid=2c1qv8ps4iujtsy9sniyy94eix&tag=twemermanu-us-20",
@@ -4400,7 +4400,7 @@
           "https://www.amazon.com/dp/B08FDGTGJT?ref_=ptw_spv01_74f4c9a5cd9e611fbf921e6c5a2f7acc&ascsubtag=ptw-X-1-9-zcxw79gmhbmhdzve&mcid=abeb628a6893350285c8588b9c699eff&twclid=2c1qv8ps4iujtsy9sniyy94eix&tag=twemermanu-us-20"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 216
+          "feed_buffer_reply": 222
         },
         "distinct_referring_accounts": 3,
         "sample_referring_accounts": [
@@ -4433,7 +4433,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:216",
+            "distinct_urls:222",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -4471,7 +4471,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:216",
+            "distinct_urls:222",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:3",
@@ -8274,7 +8274,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T12:17:51.067Z",
+        "fetched_at": "2026-06-09T12:19:15.163Z",
         "homepage_url": "https://gobob.xyz/",
         "example_url": "https://app.gobob.xyz/?utm_campaign=stables&utm_medium=paidads&utm_source=x&twclid=21mgv5jwnbc2895vpeqnlit4hv",
         "homepage_status": 200,
@@ -8779,7 +8779,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T14:17:52.060Z",
+        "fetched_at": "2026-06-09T14:19:19.662Z",
         "homepage_url": "https://cocainecoffee.com/",
         "example_url": "https://cocainecoffee.com/?twclid=27twwbqquoqevtoxgztpejovrb",
         "homepage_status": 200,
@@ -20318,7 +20318,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T12:47:49.948Z",
+        "fetched_at": "2026-06-09T12:49:15.563Z",
         "homepage_url": "https://substack.com/",
         "example_url": "https://sethmlederman.substack.com/p/taking-on-the-f-word-fibromyalgia?twclid=245fh2m6fc9w4vl63b2am7zawy",
         "homepage_status": 200,
@@ -24691,6 +24691,130 @@
       }
     },
     {
+      "domain": "clerk.com",
+      "entity": "Clerk",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-13T13:05:55.000Z",
+      "last_seen_at": "2026-06-08T19:15:12.000Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://go.clerk.com/XbAnXL8?twclid=25h7j7u67opstbas3v7totl1up",
+          "https://go.clerk.com/PgZApej?twclid=2eq4c3fumcwcanmtzmmgvynkct",
+          "https://go.clerk.com/THtKSnU?twclid=299pznyl4jour3f9g7yzssxekd"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "clerk"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.4,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:20",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.36000000000000004,
+          "confidence": 0.1386,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-08T04:48:38.917Z",
+        "homepage_url": "https://clerk.com/",
+        "example_url": "https://go.clerk.com/XbAnXL8?twclid=25h7j7u67opstbas3v7totl1up",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://clerk.com/",
+        "example_final_url": "https://clerk.com/docs/guides/ai/skills?utm_source=paid_social&utm_medium=twitter&utm_campaign=skills-v2&utm_content=cdocs-02&dub_id=1vEi6oiJq1OAbu3h&twclid=25h7j7u67opstbas3v7totl1up",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 20,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "newsmaxplus.com",
       "entity": "Newsmaxplus",
       "kind": "unknown",
@@ -25497,20 +25621,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.36000000000000004,
-          "confidence": 0.1386,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.14,
           "confidence": 0.65,
@@ -25523,6 +25633,20 @@
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.36000000000000004,
+          "confidence": 0.1386,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -30352,129 +30476,6 @@
       }
     },
     {
-      "domain": "clerk.com",
-      "entity": "Clerk",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-13T13:05:55.000Z",
-      "last_seen_at": "2026-06-01T09:30:00.000Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://go.clerk.com/XbAnXL8?twclid=25h7j7u67opstbas3v7totl1up",
-          "https://go.clerk.com/PgZApej?twclid=2eq4c3fumcwcanmtzmmgvynkct"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "clerk"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.4,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:20",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3536197916666667,
-          "confidence": 0.10997499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-08T04:48:38.917Z",
-        "homepage_url": "https://clerk.com/",
-        "example_url": "https://go.clerk.com/XbAnXL8?twclid=25h7j7u67opstbas3v7totl1up",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://clerk.com/",
-        "example_final_url": "https://clerk.com/docs/guides/ai/skills?utm_source=paid_social&utm_medium=twitter&utm_campaign=skills-v2&utm_content=cdocs-02&dub_id=1vEi6oiJq1OAbu3h&twclid=25h7j7u67opstbas3v7totl1up",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 20,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "bruntworkwear.com",
       "entity": "Bruntworkwear",
       "kind": "unknown",
@@ -33162,6 +33163,129 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "kiierr.com",
+      "entity": "Kiierr",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-07T22:17:10.000Z",
+      "last_seen_at": "2026-06-08T15:05:59.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://kiierr.com/regrow-your-hair-new/?twclid=23i2gackvanp24oqqrs1z7o7zb",
+          "https://kiierr.com/regrow-your-hair-new/?twclid=23hndb12c4sh0zpojdt8t9trig"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "kiierrhairgrow"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-09T12:49:16.975Z",
+        "homepage_url": "https://kiierr.com/",
+        "example_url": "https://kiierr.com/regrow-your-hair-new/?twclid=23i2gackvanp24oqqrs1z7o7zb",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://kiierr.com/",
+        "example_final_url": "https://kiierr.com/regrow-your-hair-new/?twclid=23i2gackvanp24oqqrs1z7o7zb",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -43885,7 +44009,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T10:47:49.604Z",
+        "fetched_at": "2026-06-09T12:19:16.249Z",
         "homepage_url": "https://make-it.run/",
         "example_url": "https://make-it.run/products/nextjs-performance-hacks?twclid=2bszv0ylvf9w62ap8iytgk0tww",
         "homepage_status": 200,
@@ -44007,7 +44131,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T10:47:50.453Z",
+        "fetched_at": "2026-06-09T12:19:16.971Z",
         "homepage_url": "https://memorybase.app/",
         "example_url": "https://www.memorybase.app/?twclid=22wo2zgr0s2jx2d07d9hsczbyn",
         "homepage_status": 200,
@@ -44129,7 +44253,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T10:47:50.627Z",
+        "fetched_at": "2026-06-09T12:19:17.185Z",
         "homepage_url": "https://fightbets.com/",
         "example_url": "https://fightbets.com/lineup/ufc/free?twclid=250fs0rv65xvcmsh5gy8n9fd5s",
         "homepage_status": 200,
@@ -44251,7 +44375,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T11:17:48.793Z",
+        "fetched_at": "2026-06-09T12:49:17.257Z",
         "homepage_url": "https://forbes.com/",
         "example_url": "https://www.forbes.com/profile/donald-trump/",
         "homepage_status": 200,
@@ -44373,7 +44497,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T11:17:49.465Z",
+        "fetched_at": "2026-06-09T12:49:18.410Z",
         "homepage_url": "https://adjust.com/",
         "example_url": "https://app.adjust.com/1zbd03n1?campaign=X_D90NA_1_all_US_sales_260429-0513_dt_CPC_leihuoua_branding&adgroup=US-pic+vid&creative=%E6%8D%8F%E8%84%B8Vid+%E6%8D%8F%E8%84%B8Pic&cross_device_tracking=1&twclid=25wqttszpha1giwsadazr7s78y",
         "homepage_status": 429,
@@ -44495,7 +44619,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T11:17:49.979Z",
+        "fetched_at": "2026-06-09T13:49:19.619Z",
         "homepage_url": "https://xn--tldmorg-tz6d/",
         "example_url": "https://www.xn--tldmorg-tz6d/Directives/d349.htm",
         "homepage_status": null,
@@ -44617,7 +44741,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T11:17:50.504Z",
+        "fetched_at": "2026-06-09T13:49:19.778Z",
         "homepage_url": "https://xn--fatimaorg-qo2f/",
         "example_url": "https://www.xn--fatimaorg-qo2f/the-benefits-of-action/",
         "homepage_status": null,
@@ -44739,7 +44863,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T12:17:55.015Z",
+        "fetched_at": "2026-06-09T13:49:23.709Z",
         "homepage_url": "https://preml.ge/",
         "example_url": "https://preml.ge/9faimd64",
         "homepage_status": null,
@@ -44861,7 +44985,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T12:17:56.155Z",
+        "fetched_at": "2026-06-09T13:49:24.950Z",
         "homepage_url": "https://rampartscan.com/",
         "example_url": "https://rampartscan.com/?twclid=2ai9p1x5s7uq2nxfejjrncxaqd",
         "homepage_status": 200,
@@ -44983,7 +45107,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T12:17:56.313Z",
+        "fetched_at": "2026-06-09T14:19:19.865Z",
         "homepage_url": "https://hol.org/",
         "example_url": "https://hol.org/points/giveaways/10000-points?twclid=2cyx13cbkwh241v00yt9b2tv3d",
         "homepage_status": 403,
@@ -45076,12 +45200,12 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.1,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
@@ -45105,7 +45229,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T12:47:50.742Z",
+        "fetched_at": "2026-06-09T14:19:20.886Z",
         "homepage_url": "https://lobehub.com/",
         "example_url": "https://app.lobehub.com/?utm_source=xads&twclid=2a8w4di9ndgin31yq4qot97zvn",
         "homepage_status": 200,
@@ -45127,7 +45251,7 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -45227,7 +45351,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T12:47:51.968Z",
+        "fetched_at": "2026-06-09T14:19:22.086Z",
         "homepage_url": "https://pixbench.com/",
         "example_url": "https://pixbench.com/?twclid=2c5hamd2c3ryrrl87tknolj31b",
         "homepage_status": 200,
@@ -58039,83 +58163,6 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "statefarm"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "kiierr.com",
-      "entity": "Kiierr",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-07T22:17:10.000Z",
-      "last_seen_at": "2026-06-07T22:17:10.000Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://kiierr.com/regrow-your-hair-new/?twclid=23i2gackvanp24oqqrs1z7o7zb"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "kiierrhairgrow"
         ],
         "distinct_axes": []
       },
