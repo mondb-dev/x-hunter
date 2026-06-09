@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-09T17:18:51.123Z",
+  "generated_at": "2026-06-09T20:18:55.941Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-09T17:19:21.764Z",
+  "profiled_at": "2026-06-09T20:19:26.221Z",
   "sources": [
     {
       "domain": "cbp.gov",
@@ -1418,9 +1418,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-09T16:03:38.000Z",
+      "last_seen_at": "2026-06-09T18:20:00.000Z",
       "discovery": {
-        "distinct_urls": 4966,
+        "distinct_urls": 4973,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1429,10 +1429,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3004,
-          "feed_buffer_reply": 3114
+          "feed_buffer": 3008,
+          "feed_buffer_reply": 3118
         },
-        "distinct_referring_accounts": 1703,
+        "distinct_referring_accounts": 1705,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1470,7 +1470,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:4966",
+            "distinct_urls:4973",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1478,7 +1478,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1703",
+            "referring_accounts:1705",
             "origin_types:2"
           ]
         },
@@ -1508,10 +1508,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:4966",
+            "distinct_urls:4973",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1703",
+            "referring_accounts:1705",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -6883,7 +6883,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T19:48:00.078Z",
+        "fetched_at": "2026-06-09T19:49:23.255Z",
         "homepage_url": "https://spacex.com/",
         "example_url": "https://shop.spacex.com/products/spacex-mission-ready-sunglasses?variant=44537843744847&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44537843744847&twclid=298d45vmtw4pu78lan6k2cs4ha",
         "homepage_status": 200,
@@ -10076,6 +10076,133 @@
       }
     },
     {
+      "domain": "la28.org",
+      "entity": "La28",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-15T07:28:54.507Z",
+      "last_seen_at": "2026-06-09T04:00:00.000Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=2dvfag01sx2wxc4fmpjts9gb7p",
+          "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=23q6waeu32f50wdqdx449zoqyh",
+          "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=2d95e0vatguwglscsu1ij7r506",
+          "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=21oew2qluzhr0zj9511cxic55r",
+          "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=2bzhdmhfjs542dbkhrcbv84pfb"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2,
+          "feed_buffer_reply": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "olympicshosp"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.26583333333333337,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.14,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.39408854166666674,
+          "confidence": 0.216325,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-09T04:49:08.448Z",
+        "homepage_url": "https://la28.org/",
+        "example_url": "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=2dvfag01sx2wxc4fmpjts9gb7p",
+        "homepage_status": 200,
+        "example_status": null,
+        "homepage_final_url": "https://la28.org/",
+        "example_final_url": "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=2dvfag01sx2wxc4fmpjts9gb7p",
+        "homepage_content_type": "text/html;charset=utf-8",
+        "example_content_type": "",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 14,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "aramco.com",
       "entity": "Aramco",
       "kind": "unknown",
@@ -11585,132 +11712,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 3,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "la28.org",
-      "entity": "La28",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-15T07:28:54.507Z",
-      "last_seen_at": "2026-05-27T03:15:46.059Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=2dvfag01sx2wxc4fmpjts9gb7p",
-          "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=23q6waeu32f50wdqdx449zoqyh",
-          "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=2d95e0vatguwglscsu1ij7r506",
-          "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=21oew2qluzhr0zj9511cxic55r"
-        ],
-        "origin_counts": {
-          "feed_buffer": 2,
-          "feed_buffer_reply": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "olympicshosp"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.23666666666666664,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.14,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3877083333333334,
-          "confidence": 0.18769999999999998,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-09T04:49:08.448Z",
-        "homepage_url": "https://la28.org/",
-        "example_url": "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=2dvfag01sx2wxc4fmpjts9gb7p",
-        "homepage_status": 200,
-        "example_status": null,
-        "homepage_final_url": "https://la28.org/",
-        "example_final_url": "https://hospitality.la28.org/en?utm_source=x&utm_medium=paid_social&utm_campaign=emg_onlocation_la-olympics-b2c_aw_ecomm_paid-social_x_x_nu_us&twclid=2dvfag01sx2wxc4fmpjts9gb7p",
-        "homepage_content_type": "text/html;charset=utf-8",
-        "example_content_type": "",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 14,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -47059,7 +47060,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T15:47:56.199Z",
+        "fetched_at": "2026-06-09T18:19:22.468Z",
         "homepage_url": "https://predle.com/",
         "example_url": "https://predle.com/?twclid=281545wq7xlj7icbrjtgmt469e",
         "homepage_status": 200,
@@ -47181,7 +47182,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T16:47:56.766Z",
+        "fetched_at": "2026-06-09T18:19:23.585Z",
         "homepage_url": "https://republicen.org/",
         "example_url": "https://republicen.org/petition-x?twclid=2euy6ki9rbdehj6wv2ogyto6xe",
         "homepage_status": 200,
@@ -47303,7 +47304,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T16:47:57.627Z",
+        "fetched_at": "2026-06-09T18:19:24.340Z",
         "homepage_url": "https://coinversa.ai/",
         "example_url": "https://developers.coinversa.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=developer_api&utm_content=mcp_native&twclid=2124p9kgv52anecn3ksmek81n4",
         "homepage_status": 200,
@@ -47425,7 +47426,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T16:47:58.232Z",
+        "fetched_at": "2026-06-09T18:19:25.387Z",
         "homepage_url": "https://onrender.com/",
         "example_url": "https://editedmusic.onrender.com/?twclid=2d55shf5rbth87uf35vrsj5s7v",
         "homepage_status": 200,
@@ -47547,7 +47548,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T17:17:55.848Z",
+        "fetched_at": "2026-06-09T18:49:23.906Z",
         "homepage_url": "https://nintendo.com/",
         "example_url": "https://nintendo.com/us/store/products/nero-and-sci-integral-edition-switch?utm_source=X&utm_campaign=PreorderDesktop&utm_medium=ads&utm_content=Math_Variant_2&twclid=22ctbnud22bkdyu2z78mundbwr",
         "homepage_status": 200,
@@ -47669,7 +47670,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T17:17:56.005Z",
+        "fetched_at": "2026-06-09T18:49:24.084Z",
         "homepage_url": "https://pocketchange.gg/",
         "example_url": "https://pocketchange.gg/?utm_source=x&utm_medium=paid_social&utm_campaign=pc_4&utm_content=adgroup_1_ambassador_v3&pcid=pc4_ag1_ambassador_v4&twclid=22ov7ac68spfwo58x5g8njetfs",
         "homepage_status": 403,
@@ -47791,7 +47792,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T17:17:56.722Z",
+        "fetched_at": "2026-06-09T18:49:24.566Z",
         "homepage_url": "https://advanced.gg/",
         "example_url": "https://advanced.gg/pages/partner-with-advanced?twclid=2cguzkxfmrovj5lb0v799o9ghh",
         "homepage_status": 200,
@@ -47913,7 +47914,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T17:17:56.877Z",
+        "fetched_at": "2026-06-09T18:49:24.756Z",
         "homepage_url": "https://capcut.sale/",
         "example_url": "https://capcut.sale/?twclid=2e7i6xy6uufbldu6noghw4cl3i",
         "homepage_status": 403,
@@ -48035,7 +48036,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T18:17:58.392Z",
+        "fetched_at": "2026-06-09T19:49:26.543Z",
         "homepage_url": "https://wyndo.app/",
         "example_url": "https://wyndo.app/?utm_source=x&utm_medium=cpc&utm_campaign=decision_v1&twclid=24etrz18sq5o4juq6q7x1p396f",
         "homepage_status": 200,
@@ -48157,7 +48158,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T18:17:59.219Z",
+        "fetched_at": "2026-06-09T19:49:27.461Z",
         "homepage_url": "https://chinaswaronfaith.com/",
         "example_url": "https://chinaswaronfaith.com/?twclid=27lzeeef43quvbjv0jkjqwy5ya",
         "homepage_status": 200,
@@ -48279,7 +48280,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T18:17:59.673Z",
+        "fetched_at": "2026-06-09T19:49:28.129Z",
         "homepage_url": "https://xrphtoken.com/",
         "example_url": "https://xrphtoken.com/swap-xrp-to-xrphai?twclid=22iusa6snqrzh6itqpd5qdj51n",
         "homepage_status": 200,
@@ -48401,7 +48402,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T18:18:00.860Z",
+        "fetched_at": "2026-06-09T20:19:24.422Z",
         "homepage_url": "https://puffco.com/",
         "example_url": "https://www.puffco.com/products/pivot?variant=41821292986427&utm_source=x&utm_medium=image&utm_campaign=pivotperformance&twclid=22js3uwacrdv5fujiqoibvb4yl",
         "homepage_status": 200,
@@ -48523,7 +48524,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T18:47:57.181Z",
+        "fetched_at": "2026-06-09T20:19:24.898Z",
         "homepage_url": "https://g4skins.com/",
         "example_url": "https://g4skins.com/ref/XG4AD?twclid=29mxyaiqlwyr8ut522b1sft0ju",
         "homepage_status": 403,
@@ -48645,7 +48646,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T18:47:57.877Z",
+        "fetched_at": "2026-06-09T20:19:25.526Z",
         "homepage_url": "https://generalbuttnakedfilm.com/",
         "example_url": "https://generalbuttnakedfilm.com/?twclid=24etj7z3ue14elnvvn2a1g59lt",
         "homepage_status": 200,
@@ -48767,7 +48768,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T18:47:58.355Z",
+        "fetched_at": "2026-06-09T20:19:26.221Z",
         "homepage_url": "https://tryvext.com/",
         "example_url": "https://tryvext.com/lens?twclid=2607kz7zdobn24wel2ctf34xcz",
         "homepage_status": 200,
@@ -58625,6 +58626,83 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "lenovo"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "coderabbit.ai",
+      "entity": "Coderabbit Ai",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-09T09:50:16.000Z",
+      "last_seen_at": "2026-06-09T09:50:16.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "coderabbitai"
         ],
         "distinct_axes": []
       },
