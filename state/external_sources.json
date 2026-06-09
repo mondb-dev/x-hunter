@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-09T08:18:41.031Z",
+  "generated_at": "2026-06-09T11:18:45.565Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-09T08:19:11.085Z",
+  "profiled_at": "2026-06-09T11:19:19.901Z",
   "sources": [
     {
       "domain": "cbp.gov",
@@ -1418,9 +1418,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-09T07:48:50.000Z",
+      "last_seen_at": "2026-06-09T10:36:06.000Z",
       "discovery": {
-        "distinct_urls": 4918,
+        "distinct_urls": 4943,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1429,10 +1429,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 2974,
-          "feed_buffer_reply": 3077
+          "feed_buffer": 2989,
+          "feed_buffer_reply": 3094
         },
-        "distinct_referring_accounts": 1697,
+        "distinct_referring_accounts": 1700,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1470,7 +1470,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:4918",
+            "distinct_urls:4943",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1478,7 +1478,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1697",
+            "referring_accounts:1700",
             "origin_types:2"
           ]
         },
@@ -1508,10 +1508,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:4918",
+            "distinct_urls:4943",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1697",
+            "referring_accounts:1700",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -14194,7 +14194,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T09:17:46.460Z",
+        "fetched_at": "2026-06-09T09:19:10.995Z",
         "homepage_url": "https://mexc.com/",
         "example_url": "https://www.mexc.com/register?utm_source=brandad&utm_medium=twitter&utm_campaign=pizza_register&twclid=22vw5h310hr1lnaz6krw03u5v2",
         "homepage_status": 200,
@@ -15092,6 +15092,132 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 4,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "huggies.com",
+      "entity": "Huggies",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-18T08:51:14.864Z",
+      "last_seen_at": "2026-06-09T08:20:07.349Z",
+      "discovery": {
+        "distinct_urls": 6,
+        "example_urls": [
+          "https://www.huggies.com/en-us/diapers/little-movers?twclid=21yw19hs9bynwsphlmw5vod8rj",
+          "https://www.huggies.com/en-us/diapers/little-movers?twclid=2d3psl81g1jlmbhz1g687pfy3h",
+          "https://www.huggies.com/en-us/diapers/little-movers?twclid=263aco7f3z0dx92gjdctmrq6uv",
+          "https://www.huggies.com/en-us/diapers/little-movers?twclid=23sil8mw50m41gl6c11cb2x09e",
+          "https://www.huggies.com/en-us/diapers/little-movers?twclid=2ar4q58x5xnulx7mll24rw1eon"
+        ],
+        "origin_counts": {
+          "feed_buffer": 6
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "nba"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.235,
+          "basis": [
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.379140625,
+          "confidence": 0.22447499999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-07T20:18:32.526Z",
+        "homepage_url": "https://huggies.com/",
+        "example_url": "https://www.huggies.com/en-us/diapers/little-movers?twclid=21yw19hs9bynwsphlmw5vod8rj",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://huggies.com/",
+        "example_final_url": "https://www.huggies.com/en-us/diapers/little-movers?twclid=21yw19hs9bynwsphlmw5vod8rj",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -19105,132 +19231,6 @@
       }
     },
     {
-      "domain": "huggies.com",
-      "entity": "Huggies",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-18T08:51:14.864Z",
-      "last_seen_at": "2026-05-29T15:48:49.478Z",
-      "discovery": {
-        "distinct_urls": 5,
-        "example_urls": [
-          "https://www.huggies.com/en-us/diapers/little-movers?twclid=21yw19hs9bynwsphlmw5vod8rj",
-          "https://www.huggies.com/en-us/diapers/little-movers?twclid=2d3psl81g1jlmbhz1g687pfy3h",
-          "https://www.huggies.com/en-us/diapers/little-movers?twclid=263aco7f3z0dx92gjdctmrq6uv",
-          "https://www.huggies.com/en-us/diapers/little-movers?twclid=23sil8mw50m41gl6c11cb2x09e",
-          "https://www.huggies.com/en-us/diapers/little-movers?twclid=2ar4q58x5xnulx7mll24rw1eon"
-        ],
-        "origin_counts": {
-          "feed_buffer": 5
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "nba"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.20583333333333334,
-          "basis": [
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.37276041666666665,
-          "confidence": 0.19585000000000002,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-07T20:18:32.526Z",
-        "homepage_url": "https://huggies.com/",
-        "example_url": "https://www.huggies.com/en-us/diapers/little-movers?twclid=21yw19hs9bynwsphlmw5vod8rj",
-        "homepage_status": 403,
-        "example_status": 403,
-        "homepage_final_url": "https://huggies.com/",
-        "example_final_url": "https://www.huggies.com/en-us/diapers/little-movers?twclid=21yw19hs9bynwsphlmw5vod8rj",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "robinhood.com",
       "entity": "Robinhood",
       "kind": "unknown",
@@ -20219,6 +20219,132 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 61,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "substack.com",
+      "entity": "Substack",
+      "kind": "newsletter_blog",
+      "first_seen_at": "2026-04-18T00:20:00.000Z",
+      "last_seen_at": "2026-06-08T18:28:00.000Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://sethmlederman.substack.com/p/taking-on-the-f-word-fibromyalgia?twclid=245fh2m6fc9w4vl63b2am7zawy",
+          "https://sethmlederman.substack.com/p/what-do-you-call-it-a-common-condition?twclid=2770hq4pywc55ha6fo2sd8z19r",
+          "https://giottodf.substack.com/?utm_source=x&utm_medium=social&utm_campaign=addressable&twclid=2bl9ik67j16lrrzcjtw3tj4hpm"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2,
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 2,
+        "sample_referring_accounts": [
+          "giottodf",
+          "sethlederman"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.42,
+          "basis": [
+            "newsletter_blog_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.2075,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.39166666666666666,
+          "basis": [
+            "referring_accounts:2",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.69,
+          "confidence": 0.85,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:9",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.370859375,
+          "confidence": 0.191325,
+          "method": "mechanical_v1",
+          "basis": [
+            "newsletter_blog_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:2",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-06T12:47:49.948Z",
+        "homepage_url": "https://substack.com/",
+        "example_url": "https://sethmlederman.substack.com/p/taking-on-the-f-word-fibromyalgia?twclid=245fh2m6fc9w4vl63b2am7zawy",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://substack.com/",
+        "example_final_url": "https://sethmlederman.substack.com/p/taking-on-the-f-word-fibromyalgia?twclid=245fh2m6fc9w4vl63b2am7zawy",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 9,
           "opinion_marker": false
         }
       }
@@ -22206,6 +22332,129 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 44,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "abs-cbn.com",
+      "entity": "Abs-Cbn",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-09T08:49:57.427Z",
+      "last_seen_at": "2026-06-09T08:49:57.427Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://news.abs-cbn.com/news/2026/06/09/nbi-dismisses-kickback-claims-as-hearsay",
+          "https://news.abs-cbn.com/news/2026/06/09/former-police-lieutenant-colonel-rafael-dumlao-iii-arrested-for-kidnapping-murder"
+        ],
+        "origin_counts": {
+          "journals": 2
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3640885416666667,
+          "confidence": 0.07772499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-09T09:19:11.219Z",
+        "homepage_url": "https://abs-cbn.com/",
+        "example_url": "https://news.abs-cbn.com/news/2026/06/09/nbi-dismisses-kickback-claims-as-hearsay",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://abs-cbn.com/",
+        "example_final_url": "https://news.abs-cbn.com/news/2026/06/09/nbi-dismisses-kickback-claims-as-hearsay",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -25186,6 +25435,130 @@
       }
     },
     {
+      "domain": "microsoft.com",
+      "entity": "Microsoft",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-09T10:50:07.129Z",
+      "last_seen_at": "2026-06-09T10:50:07.129Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://aiskillsnavigator.microsoft.com/playlists/precreated/precreatedplaylist-5c7b0157552e5e3c61288a3e006a0769d854dc7f8417860644dad0857f93285e",
+          "https://aiskillsnavigator.microsoft.com/playlists/3b3f1588-005c-4643-aa7a-1f8a7d70d6e2",
+          "https://aiskillsnavigator.microsoft.com/playlists/precreated/precreatedplaylist-aa4c9b4550a118f4e46fc56f0dbff511840ee302b8a30ffa2c4f8ffa153faf5d"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "microsoftlearn"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.36000000000000004,
+          "confidence": 0.1386,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.14,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-09T11:19:14.289Z",
+        "homepage_url": "https://microsoft.com/",
+        "example_url": "https://aiskillsnavigator.microsoft.com/playlists/precreated/precreatedplaylist-5c7b0157552e5e3c61288a3e006a0769d854dc7f8417860644dad0857f93285e",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.microsoft.com/en-us",
+        "example_final_url": "https://aiskillsnavigator.microsoft.com/playlists/precreated/precreatedplaylist-5c7b0157552e5e3c61288a3e006a0769d854dc7f8417860644dad0857f93285e",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "rice.edu",
       "entity": "Rice",
       "kind": "unknown",
@@ -25669,130 +26042,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 19,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "substack.com",
-      "entity": "Substack",
-      "kind": "newsletter_blog",
-      "first_seen_at": "2026-04-18T00:20:00.000Z",
-      "last_seen_at": "2026-04-26T18:20:43.719Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://sethmlederman.substack.com/p/taking-on-the-f-word-fibromyalgia?twclid=245fh2m6fc9w4vl63b2am7zawy",
-          "https://sethmlederman.substack.com/p/what-do-you-call-it-a-common-condition?twclid=2770hq4pywc55ha6fo2sd8z19r"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1,
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "sethlederman"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.42,
-          "basis": [
-            "newsletter_blog_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.17833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.69,
-          "confidence": 0.85,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:9",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3543229166666667,
-          "confidence": 0.13045,
-          "method": "mechanical_v1",
-          "basis": [
-            "newsletter_blog_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-06T12:47:49.948Z",
-        "homepage_url": "https://substack.com/",
-        "example_url": "https://sethmlederman.substack.com/p/taking-on-the-f-word-fibromyalgia?twclid=245fh2m6fc9w4vl63b2am7zawy",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://substack.com/",
-        "example_final_url": "https://sethmlederman.substack.com/p/taking-on-the-f-word-fibromyalgia?twclid=245fh2m6fc9w4vl63b2am7zawy",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 9,
           "opinion_marker": false
         }
       }
@@ -29210,7 +29459,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T09:47:46.775Z",
+        "fetched_at": "2026-06-09T09:49:11.601Z",
         "homepage_url": "https://genesissystems.com/",
         "example_url": "https://www.genesissystems.com/contact?utm_source=x&utm_campaign=genericwebtrafficdavead4-4-26&twclid=2av31c1xlvmnruxepagyndsvf6",
         "homepage_status": 200,
@@ -42172,7 +42421,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T07:47:43.669Z",
+        "fetched_at": "2026-06-09T09:19:11.450Z",
         "homepage_url": "https://bitcoinmagazine.com/",
         "example_url": "https://bitcoinmagazine.com/sponsored/how-does-borrowing-against-bitcoin-actually-work?twclid=2a0s8fadkcmnax1qcvr537zyb6",
         "homepage_status": 200,
@@ -42294,7 +42543,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T07:47:43.875Z",
+        "fetched_at": "2026-06-09T09:19:11.668Z",
         "homepage_url": "https://strategy.com/",
         "example_url": "https://www.strategy.com/strc/learn?utm_source=xads&utm_medium=paid_display&utm_campaign=industry_april&twclid=28xpw7etvxzmes0ivvfppcbml4",
         "homepage_status": 403,
@@ -42416,7 +42665,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T07:47:44.171Z",
+        "fetched_at": "2026-06-09T09:49:11.875Z",
         "homepage_url": "https://masterpics.com/",
         "example_url": "https://masterpics.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=TW_MP_US_Mday_26_videos&twclid=29m23hby3m62dvvffl6do9x4mo",
         "homepage_status": 200,
@@ -42538,7 +42787,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T07:47:44.928Z",
+        "fetched_at": "2026-06-09T09:49:12.683Z",
         "homepage_url": "https://up-nstranscontinental.com/",
         "example_url": "https://www.up-nstranscontinental.com/?utm_source=x&utm_medium=paid_social&utm_campaign=national_phase2&utm_content=pro_business&twclid=23k0v948320d3qk6vqkggc73ru",
         "homepage_status": null,
@@ -42660,7 +42909,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T08:17:46.689Z",
+        "fetched_at": "2026-06-09T09:49:13.014Z",
         "homepage_url": "https://lets.shop/",
         "example_url": "https://lets.shop/2948/FuelGoodFeelGood-TW-ATT/?utm_medium=social&utm_source=twitter&utm_campaign=1H26_FGFG&utm_content=FGFG&utm_term=Native&twclid=2738mck7r6rdjnyker6nhf1z82",
         "homepage_status": 200,
@@ -42782,7 +43031,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T08:17:46.933Z",
+        "fetched_at": "2026-06-09T10:49:13.166Z",
         "homepage_url": "https://fulfil.io/",
         "example_url": "https://www.fulfil.io/merchants/dbrand/?twclid=243ecvpsf0p6ki2xlq4h98ksb7",
         "homepage_status": 403,
@@ -42904,7 +43153,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T09:17:46.811Z",
+        "fetched_at": "2026-06-09T10:49:13.517Z",
         "homepage_url": "https://proudpatriots.com/",
         "example_url": "https://proudpatriots.com/pages/200-page-america-s-250th-anniversary-coffee-table-book-v2?utm_source=twitter-ads&utm_campaign=41258612&utm_content=NewAmerica250BookRound2Image2&twt_id=54708689&twclid=25tg7sp10bjjfr42szs9p9jca",
         "homepage_status": 200,
@@ -43026,7 +43275,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T09:17:48.157Z",
+        "fetched_at": "2026-06-09T10:49:14.961Z",
         "homepage_url": "https://grifterolympics.com/",
         "example_url": "https://www.grifterolympics.com/?twclid=28u7u1l2mcue7ai4t73e0m25z1",
         "homepage_status": 200,
@@ -43148,7 +43397,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T09:17:48.563Z",
+        "fetched_at": "2026-06-09T10:49:15.366Z",
         "homepage_url": "https://bridgestonegolf.com/",
         "example_url": "https://www.bridgestonegolf.com/en-us/index?twclid=27b9nricn7ry3j2ax25jvh1pql",
         "homepage_status": 403,
@@ -43270,7 +43519,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T09:47:45.809Z",
+        "fetched_at": "2026-06-09T11:19:15.585Z",
         "homepage_url": "https://fuser.studio/",
         "example_url": "https://fuser.studio/teams?utm_source=x&utm_medium=paid&utm_campaign=q2_teams&twclid=24eb4pjwdb3ypvpc9de5b0904q",
         "homepage_status": 200,
@@ -43392,7 +43641,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T09:47:47.489Z",
+        "fetched_at": "2026-06-09T11:19:16.301Z",
         "homepage_url": "https://pinecone.io/",
         "example_url": "https://www.pinecone.io/launch-week/?twclid=2byfe8ukr8oijvt1d199vg80m5",
         "homepage_status": 200,
@@ -43514,7 +43763,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T09:47:50.198Z",
+        "fetched_at": "2026-06-09T11:19:19.901Z",
         "homepage_url": "https://bandainamcoent.com/",
         "example_url": "https://www.bandainamcoent.com/games/little-nightmares-altered-echoes?utm_source=x&utm_medium=ppc&utm_campaign=little-nightmares-altered-echoes-2026-04-launch-us-traffic&twclid=225d0loj5ejgazzwzusoj9tjl",
         "homepage_status": 200,
