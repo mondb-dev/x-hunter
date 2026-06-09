@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-09T20:18:55.941Z",
+  "generated_at": "2026-06-09T23:49:34.890Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-09T20:19:26.221Z",
+  "profiled_at": "2026-06-09T23:50:08.462Z",
   "sources": [
     {
       "domain": "cbp.gov",
@@ -872,9 +872,9 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-06-02T17:43:56.000Z",
+      "last_seen_at": "2026-06-09T21:48:00Z",
       "discovery": {
-        "distinct_urls": 178,
+        "distinct_urls": 179,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
@@ -883,7 +883,7 @@
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxs1cM8PTd_QtRaKpYmDBqTaoVyKJalJfIuu-PaW2zHSU-BfWPq7hhOb9M8JgfyL1usSQ2-naI-6KBvJwgBMdVAh7IQ_yAgTaqqSsLNjBtonmwJ6ztGpNPEWFY0XBLj3YCtCkXYl9FqA=="
         ],
         "origin_counts": {
-          "ontology_evidence": 131,
+          "ontology_evidence": 132,
           "claim_tracker": 15,
           "feed_buffer_reply": 27,
           "feed_buffer": 2,
@@ -942,7 +942,7 @@
         "breadth": {
           "score": 1,
           "basis": [
-            "distinct_urls:178",
+            "distinct_urls:179",
             "distinct_axes:18",
             "origin_types:5"
           ]
@@ -983,7 +983,7 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:178",
+            "distinct_urls:179",
             "distinct_axes:18",
             "origin_types:5",
             "referring_accounts:5",
@@ -1418,9 +1418,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-09T18:20:00.000Z",
+      "last_seen_at": "2026-06-09T20:50:00.000Z",
       "discovery": {
-        "distinct_urls": 4973,
+        "distinct_urls": 4985,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1429,10 +1429,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3008,
-          "feed_buffer_reply": 3118
+          "feed_buffer": 3011,
+          "feed_buffer_reply": 3127
         },
-        "distinct_referring_accounts": 1705,
+        "distinct_referring_accounts": 1711,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1470,7 +1470,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:4973",
+            "distinct_urls:4985",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1478,7 +1478,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1705",
+            "referring_accounts:1711",
             "origin_types:2"
           ]
         },
@@ -1508,10 +1508,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:4973",
+            "distinct_urls:4985",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1705",
+            "referring_accounts:1711",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -1556,7 +1556,7 @@
       "first_seen_at": "2026-04-03T01:20:27.000Z",
       "last_seen_at": "2026-06-09T15:45:07.000Z",
       "discovery": {
-        "distinct_urls": 382,
+        "distinct_urls": 383,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -1565,7 +1565,7 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 354,
+          "feed_buffer_reply": 355,
           "feed_buffer": 54
         },
         "distinct_referring_accounts": 248,
@@ -1606,7 +1606,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:382",
+            "distinct_urls:383",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1644,7 +1644,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:382",
+            "distinct_urls:383",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:248",
@@ -2056,7 +2056,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T22:48:03.446Z",
+        "fetched_at": "2026-06-09T22:49:27.985Z",
         "homepage_url": "https://bit.ly/",
         "example_url": "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q",
         "homepage_status": 200,
@@ -2311,7 +2311,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T21:18:04.507Z",
+        "fetched_at": "2026-06-09T21:19:24.669Z",
         "homepage_url": "https://reuters.com/",
         "example_url": "https://www.reuters.com/site-search/?query=Evidence-based%20claims%2C%20transparent%20sourcing%2C%20honest%20uncertainty%2C%20good-faith%20argu%20Truth%20and%20Evidence%20in%20Public%20Discourse",
         "homepage_status": 401,
@@ -2441,7 +2441,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T21:18:04.823Z",
+        "fetched_at": "2026-06-09T21:19:24.993Z",
         "homepage_url": "https://starlink.com/",
         "example_url": "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
         "homepage_status": 200,
@@ -3590,7 +3590,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T21:18:05.422Z",
+        "fetched_at": "2026-06-09T21:19:25.477Z",
         "homepage_url": "https://bk.com/",
         "example_url": "https://www.bk.com/menu/section/fb06fabe-a285-4fb4-994a-c617a1547ddb?utm_source=X&utm_medium=Social-Social&utm_campaign=Peppercorn-Awareness&utm_content=Peppercorn-IMG-Warning&twclid=24j7ivpacvxqbg2t5it24skrl9",
         "homepage_status": 200,
@@ -3844,7 +3844,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T21:18:06.025Z",
+        "fetched_at": "2026-06-09T21:19:26.245Z",
         "homepage_url": "https://mottandbow.com/",
         "example_url": "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
         "homepage_status": 200,
@@ -4353,7 +4353,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T22:48:03.812Z",
+        "fetched_at": "2026-06-09T22:49:28.738Z",
         "homepage_url": "https://metaphysicalarticles.org/",
         "example_url": "https://www.metaphysicalarticles.org/2025/12/ufos-uap-space-people-disclosure.html?twclid=25s2j2s4i47jn3wcdf6ujpfrmp",
         "homepage_status": 200,
@@ -5245,7 +5245,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T22:48:05.614Z",
+        "fetched_at": "2026-06-09T22:49:30.297Z",
         "homepage_url": "https://byteplus.com/",
         "example_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
         "homepage_status": 200,
@@ -14320,7 +14320,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T23:18:04.474Z",
+        "fetched_at": "2026-06-09T23:19:29.699Z",
         "homepage_url": "https://atlassian.com/",
         "example_url": "https://www.atlassian.com/software/rovo?utm_source=twitter&utm_medium=paid-social&utm_campaign=P%3Arovo%7CO%3Appm%7CV%3Atwitter%7CG%3Aus%7CL%3Aen%7CF%3Aaware%7CT%3Aprospecting%7CZ%3Astandard-image%7CI%3Aimc-rovo-iyryk%7CA%3Aimage%7CD%3Aalld&utm_content=P%3Arovo%7CO%3Appm%7CV%3Atwitter%7CG%3Aus%7CL%3Aen%7CF%3Aaware%7CT%3Aprospecting%7CZ%3Astandard-image%7CI%3Aimc-rovo-iyryk%7CA%3Aimage%7CD%3Aalld%7CU%3Ahandles_image-core-brand-default-onepromptaway-1200x628-na-na-aipowered&twclid=256sbqrmpm1kmygbwj39syq8d2",
         "homepage_status": 200,
@@ -18224,6 +18224,130 @@
       }
     },
     {
+      "domain": "lenovo.com",
+      "entity": "Lenovo",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-08T23:40:08.819Z",
+      "last_seen_at": "2026-06-09T13:34:38.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://www.lenovo.com/fifa?twclid=28bun2tvvdii9atmnb69jedydn",
+          "https://www.lenovo.com/fifa?twclid=263970ccqwxuvpqxv73nx9zwdt"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1,
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "lenovo"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.17833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.37494791666666666,
+          "confidence": 0.13045,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-09T22:49:30.690Z",
+        "homepage_url": "https://lenovo.com/",
+        "example_url": "https://www.lenovo.com/fifa?twclid=28bun2tvvdii9atmnb69jedydn",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://www.lenovo.com/",
+        "example_final_url": "https://www.lenovo.com/fifa?twclid=28bun2tvvdii9atmnb69jedydn",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "varrd.com",
       "entity": "Varrd",
       "kind": "unknown",
@@ -20443,7 +20567,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T22:48:05.827Z",
+        "fetched_at": "2026-06-09T23:19:29.936Z",
         "homepage_url": "https://idf.il/",
         "example_url": "https://www.idf.il/en/articles/2026/04/16/idf-finds-weapons-in-school-in-bint-jbeil-lebanon/",
         "homepage_status": null,
@@ -26234,7 +26358,7 @@
           ]
         },
         "profile": {
-          "score": 0.13999999999999999,
+          "score": 0.15,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -26243,7 +26367,7 @@
             "about:false",
             "contact:true",
             "corrections:false",
-            "outbound_links:2",
+            "outbound_links:3",
             "opinion_marker:false"
           ]
         },
@@ -26263,7 +26387,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T23:48:36.102Z",
+        "fetched_at": "2026-06-09T23:50:02.529Z",
         "homepage_url": "https://edicek.com/",
         "example_url": "https://edicek.com/?twclid=2468k4sxfdut4hmixz8sdmcieh",
         "homepage_status": 200,
@@ -26279,7 +26403,7 @@
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 2,
+          "outbound_links_count": 3,
           "opinion_marker": false
         },
         "example": {
@@ -26289,7 +26413,7 @@
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 2,
+          "outbound_links_count": 3,
           "opinion_marker": false
         }
       }
@@ -26632,7 +26756,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T23:48:37.025Z",
+        "fetched_at": "2026-06-09T23:50:03.509Z",
         "homepage_url": "https://rexshares.com/",
         "example_url": "https://www.rexshares.com/t-rex-leveraged-etfs/?twclid=29y2s8ykvzrl4imsooxujrypoa",
         "homepage_status": 200,
@@ -26755,7 +26879,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T23:48:37.652Z",
+        "fetched_at": "2026-06-09T23:50:04.134Z",
         "homepage_url": "https://degenidle.com/",
         "example_url": "https://degenidle.com/?twclid=2cjpeg7bzynm31yynzfte1vs7q",
         "homepage_status": 200,
@@ -35104,7 +35228,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T23:48:42.054Z",
+        "fetched_at": "2026-06-09T23:50:08.462Z",
         "homepage_url": "https://speak4.io/",
         "example_url": "https://speak4.io/lp/hc01cshw?ts=1772120278&twclid=2dds00srijbdtkmjbi9s7cxdwr",
         "homepage_status": null,
@@ -48890,7 +49014,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T18:47:58.884Z",
+        "fetched_at": "2026-06-09T21:49:25.827Z",
         "homepage_url": "https://flyhermes.ai/",
         "example_url": "https://flyhermes.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=hermes_aware_activation&utm_content=saved_never_tried&utm_term=saved_posts&twclid=242qnbngkqs5yjyufgwpg99nl2",
         "homepage_status": 200,
@@ -49012,7 +49136,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T19:48:02.975Z",
+        "fetched_at": "2026-06-09T21:49:27.533Z",
         "homepage_url": "https://blotout.io/",
         "example_url": "https://www.blotout.io/?utm_source=x&utm_medium=paidsocial&utm_campaign=X-BrandAwareness-May2026&twclid=2e1xsqg9vxwwowjgtv2mj1i54c",
         "homepage_status": 200,
@@ -49134,7 +49258,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T19:48:06.737Z",
+        "fetched_at": "2026-06-09T21:49:31.146Z",
         "homepage_url": "https://ambitioninnovationcreativity.com/",
         "example_url": "https://www.ambitioninnovationcreativity.com/?twclid=24yz326eu9lxy32ml6ppdfadjq",
         "homepage_status": 200,
@@ -49256,7 +49380,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T19:48:07.284Z",
+        "fetched_at": "2026-06-09T21:49:31.544Z",
         "homepage_url": "https://prepbaseballreport.com/",
         "example_url": "https://www.prepbaseballreport.com/news/PBR/2026-mlb-draft--may-s-mock-draft?twclid=2cyi2ntexpjfc305c11uqpetzv",
         "homepage_status": 200,
@@ -49378,7 +49502,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T20:17:59.914Z",
+        "fetched_at": "2026-06-09T23:19:30.446Z",
         "homepage_url": "https://wassonwatch.com/",
         "example_url": "https://wassonwatch.com/collections/dive-watch?twclid=26v12ucn89idkiyhci0ifq1yab",
         "homepage_status": 200,
@@ -49500,7 +49624,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-06T20:18:01.289Z",
+        "fetched_at": "2026-06-09T23:19:32.137Z",
         "homepage_url": "https://tradermap.io/",
         "example_url": "https://tradermap.io/?twclid=26qi3vq4he7bubu0mglff7omyp",
         "homepage_status": 200,
@@ -58549,83 +58673,6 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "leandrozmaya"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "lenovo.com",
-      "entity": "Lenovo",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-08T23:40:08.819Z",
-      "last_seen_at": "2026-06-08T23:40:08.819Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://www.lenovo.com/fifa?twclid=28bun2tvvdii9atmnb69jedydn"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "lenovo"
         ],
         "distinct_axes": []
       },
