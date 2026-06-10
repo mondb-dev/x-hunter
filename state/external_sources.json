@@ -1,9 +1,135 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-10T05:49:38.799Z",
+  "generated_at": "2026-06-10T08:19:08.683Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-10T05:50:10.359Z",
+  "profiled_at": "2026-06-10T08:19:42.441Z",
   "sources": [
+    {
+      "domain": "ojp.gov",
+      "entity": "Ojp",
+      "kind": "official",
+      "first_seen_at": "2026-06-10T07:19:30.429Z",
+      "last_seen_at": "2026-06-10T07:19:30.429Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://bjs.ojp.gov/library/publications/violent-victimization-race-or-hispanic-origin-2008-2012"
+        ],
+        "origin_counts": {
+          "claim_tracker": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_epistemic_integrity"
+        ]
+      },
+      "claims": {
+        "total": 1,
+        "supported": 1,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 1
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.95,
+          "basis": [
+            "official_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": 1,
+          "basis": [
+            "supported:1",
+            "refuted:0",
+            "contested:0"
+          ]
+        },
+        "profile": {
+          "score": 0.64,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:true",
+            "outbound_links:18",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.754875,
+          "confidence": 0.31135,
+          "method": "mechanical_v1",
+          "basis": [
+            "official_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "supported:1",
+            "refuted:0",
+            "contested:0"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-10T00:19:30.397Z",
+        "homepage_url": "https://ojp.gov/",
+        "example_url": "https://bjs.ojp.gov/library/publications/violent-victimization-race-or-hispanic-origin-2008-2012",
+        "homepage_status": 200,
+        "example_status": 404,
+        "homepage_final_url": "https://www.ojp.gov/",
+        "example_final_url": "https://bjs.ojp.gov/library/publications/violent-victimization-race-or-hispanic-origin-2008-2012",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": true,
+          "outbound_links_count": 20,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": true,
+          "outbound_links_count": 18,
+          "opinion_marker": false
+        }
+      }
+    },
     {
       "domain": "cbp.gov",
       "entity": "Cbp",
@@ -251,128 +377,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "ojp.gov",
-      "entity": "Ojp",
-      "kind": "official",
-      "first_seen_at": "2026-04-16T21:04:37.052Z",
-      "last_seen_at": "2026-04-16T21:04:37.052Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://bjs.ojp.gov/library/publications/violent-victimization-race-or-hispanic-origin-2008-2012"
-        ],
-        "origin_counts": {
-          "claim_tracker": 1
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_epistemic_integrity"
-        ]
-      },
-      "claims": {
-        "total": 1,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 1,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.95,
-          "basis": [
-            "official_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.1475,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:1",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.64,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:true",
-            "corrections:true",
-            "outbound_links:18",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.69359375,
-          "confidence": 0.06135,
-          "method": "mechanical_v1",
-          "basis": [
-            "official_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:1",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-10T00:19:30.397Z",
-        "homepage_url": "https://ojp.gov/",
-        "example_url": "https://bjs.ojp.gov/library/publications/violent-victimization-race-or-hispanic-origin-2008-2012",
-        "homepage_status": 200,
-        "example_status": 404,
-        "homepage_final_url": "https://www.ojp.gov/",
-        "example_final_url": "https://bjs.ojp.gov/library/publications/violent-victimization-race-or-hispanic-origin-2008-2012",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": true,
-          "outbound_links_count": 20,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": true,
-          "outbound_links_count": 18,
           "opinion_marker": false
         }
       }
@@ -744,6 +748,165 @@
       }
     },
     {
+      "domain": "google.com",
+      "entity": "Google",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-01T05:04:23.454Z",
+      "last_seen_at": "2026-06-10T07:19:30.440Z",
+      "discovery": {
+        "distinct_urls": 180,
+        "example_urls": [
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhrrJr3WPg88204g2HFcoXBcTZ9UoQP5MWiY2yVVvKkxqvuCqwXYPNGFdRvk-cE4ETb8aMNX-7geP3uswA9gubI_KcHJ99oFa-RdMEbkrfSi-SNnGh-uiV4mCRK5AV6KSINrJ-9Gxx0HwhksMTkNCVsGLgpiQ4bdbDOBvrrMwINLQ5puNeK020c94Y2klh",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWmv7XQq8NF2ZrB-sdgKWQ6QN6UNvtV8pLRwBMSJ7-DULRbvDsU4Vg3bd7RCV-Y6y2w0ZvEeBmeRMkJVgrQrC9QkZzTlPgw9JzQmY_vRQ8D2AqGNPWRxRQ_YhUKCKn5myQrmY8zSzKcLmUV5L8u-52s06SvpTdRXYZ4ukjmjVvSYUkr_o9EnhIAp0bQNch_ziE4neJcBfAVLyta269bnpMGDwWsHRSag=",
+          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxs1cM8PTd_QtRaKpYmDBqTaoVyKJalJfIuu-PaW2zHSU-BfWPq7hhOb9M8JgfyL1usSQ2-naI-6KBvJwgBMdVAh7IQ_yAgTaqqSsLNjBtonmwJ6ztGpNPEWFY0XBLj3YCtCkXYl9FqA=="
+        ],
+        "origin_counts": {
+          "ontology_evidence": 132,
+          "claim_tracker": 15,
+          "feed_buffer_reply": 27,
+          "feed_buffer": 2,
+          "journals": 64
+        },
+        "distinct_referring_accounts": 5,
+        "sample_referring_accounts": [
+          "fabrice_mayrand",
+          "geminiapp",
+          "imbue_ai",
+          "oshikoi_",
+          "smartmark_app"
+        ],
+        "distinct_axes": [
+          "axis_data_privacy_decentralization_v1",
+          "axis_digital_supply_chain_security",
+          "axis_digital_surveillance_autonomy_v1",
+          "axis_economic_indicators_reliability_v1",
+          "axis_epistemic_integrity",
+          "axis_geopolitical_rhetoric_v1",
+          "axis_global_economic_stability_v1",
+          "axis_global_power_realignments_v1",
+          "axis_human_rights_exploitation_v1",
+          "axis_immigration_policy_v_national_control_v1",
+          "axis_media_integrity_v1",
+          "axis_national_sovereignty_v_intl_law_v1",
+          "axis_new_world_order_discourse_v1",
+          "axis_ph_geopolitics_wps_v1",
+          "axis_political_trust_corruption_v1",
+          "axis_power_accountability",
+          "axis_religious_expression_hate_speech_v1",
+          "axis_social_welfare_v_military_spending_v1"
+        ]
+      },
+      "claims": {
+        "total": 15,
+        "supported": 8,
+        "refuted": 5,
+        "contested": 0,
+        "unverified": 2,
+        "resolved_count": 13
+      },
+      "structural_features": {
+        "has_search_paths": true,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.37,
+          "basis": [
+            "unknown_domain_pattern",
+            "search_results_seen"
+          ]
+        },
+        "breadth": {
+          "score": 1,
+          "basis": [
+            "distinct_urls:180",
+            "distinct_axes:18",
+            "origin_types:5"
+          ]
+        },
+        "corroboration": {
+          "score": 0.8916666666666667,
+          "basis": [
+            "referring_accounts:5",
+            "origin_types:5"
+          ]
+        },
+        "track_record": {
+          "score": 0.6153846153846154,
+          "basis": [
+            "supported:8",
+            "refuted:5",
+            "contested:0"
+          ]
+        },
+        "profile": {
+          "score": 0.14,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.5684519230769232,
+          "confidence": 0.99025,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "search_results_seen",
+            "distinct_urls:180",
+            "distinct_axes:18",
+            "origin_types:5",
+            "referring_accounts:5",
+            "origin_types:5",
+            "supported:8",
+            "refuted:5",
+            "contested:0"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-08T15:18:50.505Z",
+        "homepage_url": "https://google.com/",
+        "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
+        "homepage_status": 200,
+        "example_status": 404,
+        "homepage_final_url": "https://www.google.com/",
+        "example_final_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
+        "homepage_content_type": "text/html; charset=ISO-8859-1",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "cbsnews.com",
       "entity": "Cbsnews",
       "kind": "unknown",
@@ -997,165 +1160,6 @@
           "has_contact_link": false,
           "has_corrections_link": true,
           "outbound_links_count": 4,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "google.com",
-      "entity": "Google",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-06-10T05:20:47.804Z",
-      "discovery": {
-        "distinct_urls": 180,
-        "example_urls": [
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhrrJr3WPg88204g2HFcoXBcTZ9UoQP5MWiY2yVVvKkxqvuCqwXYPNGFdRvk-cE4ETb8aMNX-7geP3uswA9gubI_KcHJ99oFa-RdMEbkrfSi-SNnGh-uiV4mCRK5AV6KSINrJ-9Gxx0HwhksMTkNCVsGLgpiQ4bdbDOBvrrMwINLQ5puNeK020c94Y2klh",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWmv7XQq8NF2ZrB-sdgKWQ6QN6UNvtV8pLRwBMSJ7-DULRbvDsU4Vg3bd7RCV-Y6y2w0ZvEeBmeRMkJVgrQrC9QkZzTlPgw9JzQmY_vRQ8D2AqGNPWRxRQ_YhUKCKn5myQrmY8zSzKcLmUV5L8u-52s06SvpTdRXYZ4ukjmjVvSYUkr_o9EnhIAp0bQNch_ziE4neJcBfAVLyta269bnpMGDwWsHRSag=",
-          "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxs1cM8PTd_QtRaKpYmDBqTaoVyKJalJfIuu-PaW2zHSU-BfWPq7hhOb9M8JgfyL1usSQ2-naI-6KBvJwgBMdVAh7IQ_yAgTaqqSsLNjBtonmwJ6ztGpNPEWFY0XBLj3YCtCkXYl9FqA=="
-        ],
-        "origin_counts": {
-          "ontology_evidence": 132,
-          "claim_tracker": 15,
-          "feed_buffer_reply": 27,
-          "feed_buffer": 2,
-          "journals": 64
-        },
-        "distinct_referring_accounts": 5,
-        "sample_referring_accounts": [
-          "fabrice_mayrand",
-          "geminiapp",
-          "imbue_ai",
-          "oshikoi_",
-          "smartmark_app"
-        ],
-        "distinct_axes": [
-          "axis_data_privacy_decentralization_v1",
-          "axis_digital_supply_chain_security",
-          "axis_digital_surveillance_autonomy_v1",
-          "axis_economic_indicators_reliability_v1",
-          "axis_epistemic_integrity",
-          "axis_geopolitical_rhetoric_v1",
-          "axis_global_economic_stability_v1",
-          "axis_global_power_realignments_v1",
-          "axis_human_rights_exploitation_v1",
-          "axis_immigration_policy_v_national_control_v1",
-          "axis_media_integrity_v1",
-          "axis_national_sovereignty_v_intl_law_v1",
-          "axis_new_world_order_discourse_v1",
-          "axis_ph_geopolitics_wps_v1",
-          "axis_political_trust_corruption_v1",
-          "axis_power_accountability",
-          "axis_religious_expression_hate_speech_v1",
-          "axis_social_welfare_v_military_spending_v1"
-        ]
-      },
-      "claims": {
-        "total": 15,
-        "supported": 5,
-        "refuted": 5,
-        "contested": 0,
-        "unverified": 5,
-        "resolved_count": 10
-      },
-      "structural_features": {
-        "has_search_paths": true,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.37,
-          "basis": [
-            "unknown_domain_pattern",
-            "search_results_seen"
-          ]
-        },
-        "breadth": {
-          "score": 1,
-          "basis": [
-            "distinct_urls:180",
-            "distinct_axes:18",
-            "origin_types:5"
-          ]
-        },
-        "corroboration": {
-          "score": 0.8916666666666667,
-          "basis": [
-            "referring_accounts:5",
-            "origin_types:5"
-          ]
-        },
-        "track_record": {
-          "score": 0.5,
-          "basis": [
-            "supported:5",
-            "refuted:5",
-            "contested:0"
-          ]
-        },
-        "profile": {
-          "score": 0.14,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.545375,
-          "confidence": 0.99025,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "search_results_seen",
-            "distinct_urls:180",
-            "distinct_axes:18",
-            "origin_types:5",
-            "referring_accounts:5",
-            "origin_types:5",
-            "supported:5",
-            "refuted:5",
-            "contested:0"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-08T15:18:50.505Z",
-        "homepage_url": "https://google.com/",
-        "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
-        "homepage_status": 200,
-        "example_status": 404,
-        "homepage_final_url": "https://www.google.com/",
-        "example_final_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
-        "homepage_content_type": "text/html; charset=ISO-8859-1",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -1802,13 +1806,141 @@
       }
     },
     {
+      "domain": "idf.il",
+      "entity": "Idf Il",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-10T07:19:30.422Z",
+      "last_seen_at": "2026-06-10T07:19:30.422Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.idf.il/en/articles/2026/04/16/idf-finds-weapons-in-school-in-bint-jbeil-lebanon/"
+        ],
+        "origin_counts": {
+          "claim_tracker": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_epistemic_integrity"
+        ]
+      },
+      "claims": {
+        "total": 1,
+        "supported": 1,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 1
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": 1,
+          "basis": [
+            "supported:1",
+            "refuted:0",
+            "contested:0"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.496375,
+          "confidence": 0.31135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "supported:1",
+            "refuted:0",
+            "contested:0"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-09T23:19:29.936Z",
+        "homepage_url": "https://idf.il/",
+        "example_url": "https://www.idf.il/en/articles/2026/04/16/idf-finds-weapons-in-school-in-bint-jbeil-lebanon/",
+        "homepage_status": null,
+        "example_status": 200,
+        "homepage_final_url": "https://idf.il/",
+        "example_final_url": "https://www.idf.il/en/articles/2026/04/16/idf-finds-weapons-in-school-in-bint-jbeil-lebanon/",
+        "homepage_content_type": "",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "t.co",
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-10T04:30:07.514Z",
+      "last_seen_at": "2026-06-10T08:04:43.000Z",
       "discovery": {
-        "distinct_urls": 5010,
+        "distinct_urls": 5025,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1817,10 +1949,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3023,
-          "feed_buffer_reply": 3147
+          "feed_buffer": 3032,
+          "feed_buffer_reply": 3155
         },
-        "distinct_referring_accounts": 1721,
+        "distinct_referring_accounts": 1723,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1858,7 +1990,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5010",
+            "distinct_urls:5025",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1866,7 +1998,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1721",
+            "referring_accounts:1723",
             "origin_types:2"
           ]
         },
@@ -1896,10 +2028,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5010",
+            "distinct_urls:5025",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1721",
+            "referring_accounts:1723",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -2728,6 +2860,132 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 9,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "snopes.com",
+      "entity": "Snopes",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-10T07:19:30.436Z",
+      "last_seen_at": "2026-06-10T07:19:30.436Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://snopes.com/fact-check/strait-of-hormuz-oil-shorts-trump/"
+        ],
+        "origin_counts": {
+          "claim_tracker": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_political_moral_conduct_v1"
+        ]
+      },
+      "claims": {
+        "total": 1,
+        "supported": 1,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 1
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": 1,
+          "basis": [
+            "supported:1",
+            "refuted:0",
+            "contested:0"
+          ]
+        },
+        "profile": {
+          "score": 0.11,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.47987500000000005,
+          "confidence": 0.31135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "supported:1",
+            "refuted:0",
+            "contested:0"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-08T16:48:52.499Z",
+        "homepage_url": "https://snopes.com/",
+        "example_url": "https://snopes.com/fact-check/strait-of-hormuz-oil-shorts-trump/",
+        "homepage_status": 200,
+        "example_status": 404,
+        "homepage_final_url": "https://www.snopes.com/",
+        "example_final_url": "https://www.snopes.com/fact-check/strait-of-hormuz-oil-shorts-trump/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
           "opinion_marker": false
         }
       }
@@ -4482,7 +4740,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T07:48:13.843Z",
+        "fetched_at": "2026-06-10T07:49:37.308Z",
         "homepage_url": "https://combos.fun/",
         "example_url": "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2aswwo64b7owkoq09axl1gyba6",
         "homepage_status": 403,
@@ -4992,7 +5250,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T07:48:14.755Z",
+        "fetched_at": "2026-06-10T07:49:38.243Z",
         "homepage_url": "https://falconx.io/",
         "example_url": "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
         "homepage_status": 200,
@@ -5530,6 +5788,133 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 76,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "xhawk.ai",
+      "entity": "Xhawk Ai",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-16T04:00:01.000Z",
+      "last_seen_at": "2026-06-09T22:47:24.000Z",
+      "discovery": {
+        "distinct_urls": 9,
+        "example_urls": [
+          "https://xhawk.ai/?twclid=218eppqu7okpx25fant8nuhrp1",
+          "https://xhawk.ai/system-of-context?twclid=2f4g4lk7gi9y2sje6g75c6ky8a",
+          "https://xhawk.ai/?utm_source=X&utm_medium=social&utm_campaign=factory2&twclid=2e06g8osldizgtzcttl4e93sa4",
+          "https://xhawk.ai/?utm_source=X&utm_medium=social&utm_campaign=factory2&twclid=2d51g1ltc6lpyasrwqmoxcr94i",
+          "https://xhawk.ai/?utm_source=X&utm_medium=social&utm_campaign=factory2&twclid=25srr0ghfoggp9dl6ghfzxxjwc"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 8,
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "xhawkceo"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.38249999999999995,
+          "basis": [
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.35000000000000003,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:true",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:7",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.419609375,
+          "confidence": 0.330825,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-10T00:49:29.922Z",
+        "homepage_url": "https://xhawk.ai/",
+        "example_url": "https://xhawk.ai/?twclid=218eppqu7okpx25fant8nuhrp1",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://xhawk.ai/",
+        "example_final_url": "https://xhawk.ai/?twclid=218eppqu7okpx25fant8nuhrp1",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
           "opinion_marker": false
         }
       }
@@ -8054,133 +8439,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "xhawk.ai",
-      "entity": "Xhawk Ai",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-16T04:00:01.000Z",
-      "last_seen_at": "2026-06-07T22:40:07.005Z",
-      "discovery": {
-        "distinct_urls": 8,
-        "example_urls": [
-          "https://xhawk.ai/?twclid=218eppqu7okpx25fant8nuhrp1",
-          "https://xhawk.ai/system-of-context?twclid=2f4g4lk7gi9y2sje6g75c6ky8a",
-          "https://xhawk.ai/?utm_source=X&utm_medium=social&utm_campaign=factory2&twclid=2e06g8osldizgtzcttl4e93sa4",
-          "https://xhawk.ai/?utm_source=X&utm_medium=social&utm_campaign=factory2&twclid=2d51g1ltc6lpyasrwqmoxcr94i",
-          "https://xhawk.ai/?utm_source=X&utm_medium=social&utm_campaign=factory2&twclid=25srr0ghfoggp9dl6ghfzxxjwc"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 7,
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "xhawkceo"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.3533333333333333,
-          "basis": [
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.35000000000000003,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:true",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:7",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.41322916666666665,
-          "confidence": 0.30219999999999997,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-10T00:49:29.922Z",
-        "homepage_url": "https://xhawk.ai/",
-        "example_url": "https://xhawk.ai/?twclid=218eppqu7okpx25fant8nuhrp1",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://xhawk.ai/",
-        "example_final_url": "https://xhawk.ai/?twclid=218eppqu7okpx25fant8nuhrp1",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 7,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 7,
           "opinion_marker": false
         }
       }
@@ -13580,7 +13838,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T07:48:15.494Z",
+        "fetched_at": "2026-06-10T07:49:38.719Z",
         "homepage_url": "https://mprnews.org/",
         "example_url": "https://www.mprnews.org/story/2023/12/19/minnesota-medicaid-fraud-prevention",
         "homepage_status": 200,
@@ -20614,130 +20872,6 @@
       }
     },
     {
-      "domain": "idf.il",
-      "entity": "Idf Il",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-16T17:05:26.485Z",
-      "last_seen_at": "2026-04-16T17:05:26.485Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://www.idf.il/en/articles/2026/04/16/idf-finds-weapons-in-school-in-bint-jbeil-lebanon/"
-        ],
-        "origin_counts": {
-          "claim_tracker": 1
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_epistemic_integrity"
-        ]
-      },
-      "claims": {
-        "total": 1,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 1,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.1475,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:1",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.37046874999999996,
-          "confidence": 0.06135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:1",
-            "distinct_axes:1",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-09T23:19:29.936Z",
-        "homepage_url": "https://idf.il/",
-        "example_url": "https://www.idf.il/en/articles/2026/04/16/idf-finds-weapons-in-school-in-bint-jbeil-lebanon/",
-        "homepage_status": null,
-        "example_status": 200,
-        "homepage_final_url": "https://idf.il/",
-        "example_final_url": "https://www.idf.il/en/articles/2026/04/16/idf-finds-weapons-in-school-in-bint-jbeil-lebanon/",
-        "homepage_content_type": "",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "gmanetwork.com",
       "entity": "Gmanetwork",
       "kind": "unknown",
@@ -22325,7 +22459,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T06:18:15.780Z",
+        "fetched_at": "2026-06-10T06:19:37.826Z",
         "homepage_url": "https://instacart.com/",
         "example_url": "https://www.instacart.com/store/brands/budweiser?ic_source=social&ic_campaignid=2026&twclid=2dlv3d1a0x9ht77bw7gqwrn3ou",
         "homepage_status": 200,
@@ -23314,7 +23448,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T07:48:16.715Z",
+        "fetched_at": "2026-06-10T07:49:38.922Z",
         "homepage_url": "https://cuervo.com/",
         "example_url": "https://cuervo.com/?twclid=2cw6oebezormtkrlgtaweck05m",
         "homepage_status": 200,
@@ -27267,7 +27401,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T08:18:13.539Z",
+        "fetched_at": "2026-06-10T08:19:37.919Z",
         "homepage_url": "https://cointracker.io/",
         "example_url": "https://www.cointracker.io/?utm_source=x&utm_medium=paid_social&utm_campaign=PDM_PaidSocial_X_Awareness_Reach&twclid=2db4ytuyg7wyekq6zcdaap0vjo",
         "homepage_status": 403,
@@ -34426,128 +34560,6 @@
       }
     },
     {
-      "domain": "snopes.com",
-      "entity": "Snopes",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-17T22:34:46.645Z",
-      "last_seen_at": "2026-04-17T22:34:46.645Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://snopes.com/fact-check/strait-of-hormuz-oil-shorts-trump/"
-        ],
-        "origin_counts": {
-          "claim_tracker": 1
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_political_moral_conduct_v1"
-        ]
-      },
-      "claims": {
-        "total": 1,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 1,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.1475,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:1",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.11,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:1",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.34984375,
-          "confidence": 0.06135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:1",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-08T16:48:52.499Z",
-        "homepage_url": "https://snopes.com/",
-        "example_url": "https://snopes.com/fact-check/strait-of-hormuz-oil-shorts-trump/",
-        "homepage_status": 200,
-        "example_status": 404,
-        "homepage_final_url": "https://www.snopes.com/",
-        "example_final_url": "https://www.snopes.com/fact-check/strait-of-hormuz-oil-shorts-trump/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "discord.gg",
       "entity": "Discord Gg",
       "kind": "unknown",
@@ -35614,7 +35626,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T08:18:14.860Z",
+        "fetched_at": "2026-06-10T08:19:39.215Z",
         "homepage_url": "https://atr.org/",
         "example_url": "https://atr.org/mfn/?utm_source=x&utm_medium=cpm&utm_campaign=20260220&utm_content=mfn_v2&twclid=2dracnytvfda9fekosdp3ini9y",
         "homepage_status": 200,
@@ -35736,7 +35748,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T08:18:18.074Z",
+        "fetched_at": "2026-06-10T08:19:42.374Z",
         "homepage_url": "https://prismmarketview.com/",
         "example_url": "https://prismmarketview.com/companies/sbc-medical-group-holdings-incorporated/?twclid=26comjr0eies8gnklzmi3odvtu",
         "homepage_status": 200,
@@ -53914,7 +53926,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T04:48:11.374Z",
+        "fetched_at": "2026-06-10T06:19:38.269Z",
         "homepage_url": "https://armoryhub.app/",
         "example_url": "https://www.armoryhub.app/?twclid=260qgaxi7pla6ab7ccc356ptt2",
         "homepage_status": 200,
@@ -54036,7 +54048,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T04:48:11.927Z",
+        "fetched_at": "2026-06-10T06:19:38.803Z",
         "homepage_url": "https://issuerdirect.com/",
         "example_url": "https://feeds.issuerdirect.com/news-release.html?newsid=5904799341441979&symbol=AWHL&twclid=2bblefxnfrpmrk8g43amr2530z",
         "homepage_status": 200,
@@ -54158,7 +54170,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T04:48:12.769Z",
+        "fetched_at": "2026-06-10T06:19:39.631Z",
         "homepage_url": "https://unchained.com/",
         "example_url": "https://www.unchained.com/p/find-your-bitcoin-number?utm_source=twitter&utm_medium=paid_social&utm_campaign=2026q2_retirement_calculator_consult&twclid=2o00zhzf6zfhx92zzd1y7hzic",
         "homepage_status": 200,
@@ -54280,7 +54292,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T05:18:23.001Z",
+        "fetched_at": "2026-06-10T06:49:36.770Z",
         "homepage_url": "https://beyondalpha.co/",
         "example_url": "https://beyondalpha.co/pages/get-your-masculine-look?tw_source=twitter&tw_campaign=41360778&tw_adsetid=54845036&utm_term=54845036&twclid=2ammecik6erwqmm5rxttavmt08",
         "homepage_status": 200,
@@ -54402,7 +54414,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T05:18:23.985Z",
+        "fetched_at": "2026-06-10T06:49:37.963Z",
         "homepage_url": "https://308hoover.com/",
         "example_url": "https://308hoover.com/?twclid=28xxpcwbcmx55gwl4ay6moy0y0",
         "homepage_status": 200,
@@ -54524,7 +54536,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T05:48:43.783Z",
+        "fetched_at": "2026-06-10T06:49:38.213Z",
         "homepage_url": "https://i18nexus.com/",
         "example_url": "https://i18nexus.com/getting-started?twclid=2dmbe4fbwim03ofxvb8wnw1kvi",
         "homepage_status": 200,
@@ -54646,7 +54658,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T05:48:44.297Z",
+        "fetched_at": "2026-06-10T06:49:38.588Z",
         "homepage_url": "https://hensonshaving.com/",
         "example_url": "https://hensonshaving.com/?utm_source=twitter&utm_medium=paid&utm_campaign=spring26&utm_term=may2026&utm_content=d21crapitalism2&tw_source=twitter&tw_campaign=41354017&tw_adsetid=54835377&twclid=2e6zx94flwb0tws3kwllj3nmno",
         "homepage_status": 200,
@@ -54768,7 +54780,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T05:48:44.760Z",
+        "fetched_at": "2026-06-10T08:19:42.441Z",
         "homepage_url": "https://paypal/",
         "example_url": "http://paypal/",
         "homepage_status": null,
