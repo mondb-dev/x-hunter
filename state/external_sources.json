@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-10T08:19:08.683Z",
+  "generated_at": "2026-06-10T11:19:14.950Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-10T08:19:42.441Z",
+  "profiled_at": "2026-06-10T11:19:44.825Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -350,7 +350,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T09:18:14.729Z",
+        "fetched_at": "2026-06-10T09:19:42.209Z",
         "homepage_url": "https://justice.gov/",
         "example_url": "https://www.justice.gov/usao-ri/pr/two-business-executives-plead-guilty-tech-support-fraud-scheme?twclid=2f42440xock41qvr5cwo18o539",
         "homepage_status": 200,
@@ -590,7 +590,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T09:18:14.971Z",
+        "fetched_at": "2026-06-10T09:19:42.474Z",
         "homepage_url": "https://trumprx.gov/",
         "example_url": "http://trumprx.gov/",
         "homepage_status": 200,
@@ -1520,7 +1520,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T09:18:15.499Z",
+        "fetched_at": "2026-06-10T09:19:42.978Z",
         "homepage_url": "https://reut.rs/",
         "example_url": "https://reut.rs/42N9gxi",
         "homepage_status": 401,
@@ -1938,9 +1938,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-10T08:04:43.000Z",
+      "last_seen_at": "2026-06-10T11:08:07.000Z",
       "discovery": {
-        "distinct_urls": 5025,
+        "distinct_urls": 5039,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1949,8 +1949,8 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3032,
-          "feed_buffer_reply": 3155
+          "feed_buffer": 3043,
+          "feed_buffer_reply": 3168
         },
         "distinct_referring_accounts": 1723,
         "sample_referring_accounts": [
@@ -1990,7 +1990,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5025",
+            "distinct_urls:5039",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2028,7 +2028,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5025",
+            "distinct_urls:5039",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1723",
@@ -2707,7 +2707,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T09:18:16.330Z",
+        "fetched_at": "2026-06-10T09:19:43.992Z",
         "homepage_url": "https://youtube.com/",
         "example_url": "https://www.youtube.com/watch?v=jK0pvigonSQ&twclid=2p81plhcgyzwohsr9rfa62lnp",
         "homepage_status": 200,
@@ -3348,15 +3348,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T09:48:34.489Z",
+        "fetched_at": "2026-06-10T09:49:40.626Z",
         "homepage_url": "https://relaylab.us/",
         "example_url": "https://relaylab.us/?twclid=26u9kccij1307faosstalj2w2",
-        "homepage_status": null,
-        "example_status": null,
+        "homepage_status": 200,
+        "example_status": 200,
         "homepage_final_url": "https://relaylab.us/",
         "example_final_url": "https://relaylab.us/?twclid=26u9kccij1307faosstalj2w2",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -4105,7 +4105,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T09:48:35.225Z",
+        "fetched_at": "2026-06-10T09:49:41.349Z",
         "homepage_url": "https://hyperagent.com/",
         "example_url": "https://www.hyperagent.com/?promo=FIRST1000&utm_source=twitter&utm_medium=paidsocial&utm_campaign=hyperagent_conversions&utm_content=ag3_fleet&utm_term=ag3_ai_dev_followers&utm_id=recNjFFq2Yg5747V4&twclid=2dzs7nc78iuf64njs9fxab27tl",
         "homepage_status": 200,
@@ -5377,7 +5377,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T09:48:35.743Z",
+        "fetched_at": "2026-06-10T09:49:41.852Z",
         "homepage_url": "https://avenorigin.com/",
         "example_url": "https://avenorigin.com/?x=twg11&tw=rcafs&tw_click=tw-rcafs-rcafv&twclid=27a9svqvmxrds3k2j1qq8l2dy6",
         "homepage_status": 200,
@@ -5476,14 +5476,14 @@
           ]
         },
         "profile": {
-          "score": 0.48,
-          "confidence": 0.65,
+          "score": 0.22,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:true",
-            "about:true",
-            "contact:true",
+            "about:false",
+            "contact:false",
             "corrections:false",
             "outbound_links:15",
             "opinion_marker:false"
@@ -5506,23 +5506,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T11:18:22.293Z",
+        "fetched_at": "2026-06-10T11:19:43.616Z",
         "homepage_url": "https://huawei.com/",
         "example_url": "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
-        "homepage_status": 200,
+        "homepage_status": null,
         "example_status": 200,
-        "homepage_final_url": "https://www.huawei.com/en/",
+        "homepage_final_url": "https://huawei.com/",
         "example_final_url": "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
-        "homepage_content_type": "text/html",
+        "homepage_content_type": "",
         "example_content_type": "text/html",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 14,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -6266,13 +6266,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T09:48:37.136Z",
+        "fetched_at": "2026-06-10T09:49:43.501Z",
         "homepage_url": "https://poly.market/",
         "example_url": "https://poly.market/X0q565H?twclid=24x365380zub6d85j7s6xd212w",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://polymarket.com/",
-        "example_final_url": "https://polymarket.com/event/bnb-updown-5m-1780794300",
+        "example_final_url": "https://polymarket.com/event/bnb-updown-5m-1781077800",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -6644,7 +6644,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T10:48:17.139Z",
+        "fetched_at": "2026-06-10T11:19:43.791Z",
         "homepage_url": "https://omgskills.com/",
         "example_url": "https://omgskills.com/?twclid=2ewu2vd054idb44rsf4bgvksa8",
         "homepage_status": 200,
@@ -6896,7 +6896,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T11:18:22.660Z",
+        "fetched_at": "2026-06-10T11:19:44.236Z",
         "homepage_url": "https://guardianbikes.com/",
         "example_url": "https://guardianbikes.com/products/balance-bike?variant=41102033158237&utm_source=twitter&twclid=2dhmyi0k26r61jxbnc07720qis&utm_content=dpa_carousel&utm_campaign=X_2026_DPA_Remarketing_Campaign+&utm_medium=cpc",
         "homepage_status": 200,
@@ -7022,7 +7022,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T10:48:17.901Z",
+        "fetched_at": "2026-06-10T11:19:44.825Z",
         "homepage_url": "https://lovart.ai/",
         "example_url": "https://www.lovart.ai/?sourceId=910062&sourceid=910062&utm_source=twitter&utm_medium=paid_social&utm_campaign=Lovart_910062_Meta_US_AIModel_ag_260416_lead&twclid=2a5k8izlnshoxgoxi52b1tnd45",
         "homepage_status": 200,
@@ -17870,6 +17870,130 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 7,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "hubs.la",
+      "entity": "Hubs La",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-14T13:18:54.124Z",
+      "last_seen_at": "2026-06-10T04:15:09.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://hubs.la/Q044Rgs40?twclid=2dj6mgj4wttl7kn2ssc6dwffaw",
+          "https://hubs.la/Q044Rcx50?twclid=2d5u5ruuges6ka5k30bjy3w8df"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1,
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "guardsquare"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.17833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.48,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:47",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.37494791666666666,
+          "confidence": 0.13045,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-08T19:48:56.610Z",
+        "homepage_url": "https://hubs.la/",
+        "example_url": "https://hubs.la/Q044Rgs40?twclid=2dj6mgj4wttl7kn2ssc6dwffaw",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://policy.hubspot.com/abuse-prevention",
+        "example_final_url": "https://www.guardsquare.com/quote-ppc?utm_campaign=4215991-Paid%20Digital&utm_source=twitter&utm_medium=paidsocial&utm_content=R2-26-X-KEYWORD-Infeed-Video-3",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 47,
           "opinion_marker": false
         }
       }
@@ -37239,128 +37363,6 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 33,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "hubs.la",
-      "entity": "Hubs La",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-14T13:18:54.124Z",
-      "last_seen_at": "2026-04-14T13:18:54.124Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://hubs.la/Q044Rgs40?twclid=2dj6mgj4wttl7kn2ssc6dwffaw"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "guardsquare"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.48,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:47",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-08T19:48:56.610Z",
-        "homepage_url": "https://hubs.la/",
-        "example_url": "https://hubs.la/Q044Rgs40?twclid=2dj6mgj4wttl7kn2ssc6dwffaw",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://policy.hubspot.com/abuse-prevention",
-        "example_final_url": "https://www.guardsquare.com/quote-ppc?utm_campaign=4215991-Paid%20Digital&utm_source=twitter&utm_medium=paidsocial&utm_content=R2-26-X-KEYWORD-Infeed-Video-3",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 7,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 47,
           "opinion_marker": false
         }
       }

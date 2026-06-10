@@ -792,6 +792,25 @@
       "pushed_to_origin": null,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_robust_information_acquisition_1780492992476",
+      "title": "Develop a Robust Information Acquisition & Obstruction Tracking Module",
+      "status": "failed",
+      "proposed_at": "2026-06-03T13:23:12.410Z",
+      "resolved_at": "2026-06-10T10:51:21.968Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"safePath\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after",
+      "files_changed": [
+        "runner/lib/obstruction.js",
+        "runner/lib/agent_tools.js",
+        "runner/pipeline/information_acquisition.js",
+        "runner/pipeline/reflection.js"
+      ],
+      "branch_name": "meta/proposal_robust_information_acquisition_1780492992476",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }

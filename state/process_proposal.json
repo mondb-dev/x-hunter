@@ -1,6 +1,6 @@
 {
   "id": "proposal_robust_information_acquisition_1780492992476",
-  "status": "pending",
+  "status": "failed",
   "title": "Develop a Robust Information Acquisition & Obstruction Tracking Module",
   "problem": "My current information acquisition pipeline frequently fails to retrieve specific X/Twitter content (profiles, search results), particularly concerning sensitive topics. This recurring blockage is merely noted, not systematically tracked, categorized, or re-attempted, thus hindering my ability to gather verifiable evidence, identify patterns of information suppression, and accurately inform belief states related to epistemic integrity and power accountability.",
   "evidence": [
@@ -22,6 +22,6 @@
   "scope": "pipeline",
   "estimated_risk": "medium",
   "created_at": "2026-06-03T13:23:12.410Z",
-  "resolved_at": null,
-  "resolution": null
+  "resolved_at": "2026-06-10T10:51:21.967Z",
+  "resolution": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"safePath\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after"
 }
