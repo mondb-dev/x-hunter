@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-10T02:49:36.285Z",
+  "generated_at": "2026-06-10T05:49:38.799Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-10T02:50:38.037Z",
+  "profiled_at": "2026-06-10T05:50:10.359Z",
   "sources": [
     {
       "domain": "cbp.gov",
@@ -744,6 +744,140 @@
       }
     },
     {
+      "domain": "cbsnews.com",
+      "entity": "Cbsnews",
+      "kind": "unknown",
+      "first_seen_at": "2026-03-27T23:18:50.928Z",
+      "last_seen_at": "2026-06-10T03:21:52.915Z",
+      "discovery": {
+        "distinct_urls": 6,
+        "example_urls": [
+          "https://www.cbsnews.com/news/us-naval-blockade-iran-ports-2026/",
+          "https://www.cbsnews.com/news/us-naval-blockade-iranian-ports-april-2026/",
+          "https://www.cbsnews.com/news/strait-of-hormuz-us-blockade-iran-ports-april-2026/",
+          "https://www.cbsnews.com/news/iran-war-recession-risk-oil-prices-inflation/",
+          "https://www.cbsnews.com/us-iran-tensions/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 2,
+          "claim_tracker": 1,
+          "journals": 5
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_global_economic_stability_v1",
+          "axis_national_sovereignty_v_intl_law_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 1,
+        "supported": 1,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 1
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.53,
+          "basis": [
+            "distinct_urls:6",
+            "distinct_axes:3",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.26249999999999996,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": 1,
+          "basis": [
+            "supported:1",
+            "refuted:0",
+            "contested:0"
+          ]
+        },
+        "profile": {
+          "score": 0.36,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:14",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.5599375,
+          "confidence": 0.519925,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:6",
+            "distinct_axes:3",
+            "origin_types:3",
+            "referring_accounts:0",
+            "origin_types:3",
+            "supported:1",
+            "refuted:0",
+            "contested:0"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-08T15:18:51.080Z",
+        "homepage_url": "https://cbsnews.com/",
+        "example_url": "https://www.cbsnews.com/news/us-naval-blockade-iran-ports-2026/",
+        "homepage_status": 200,
+        "example_status": 404,
+        "homepage_final_url": "https://www.cbsnews.com/",
+        "example_final_url": "https://www.cbsnews.com/news/us-naval-blockade-iran-ports-2026/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 21,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 14,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
@@ -872,7 +1006,7 @@
       "entity": "Google",
       "kind": "unknown",
       "first_seen_at": "2026-04-01T05:04:23.454Z",
-      "last_seen_at": "2026-06-09T23:51:41.661Z",
+      "last_seen_at": "2026-06-10T05:20:47.804Z",
       "discovery": {
         "distinct_urls": 180,
         "example_urls": [
@@ -920,11 +1054,11 @@
       },
       "claims": {
         "total": 15,
-        "supported": 3,
-        "refuted": 4,
+        "supported": 5,
+        "refuted": 5,
         "contested": 0,
-        "unverified": 8,
-        "resolved_count": 7
+        "unverified": 5,
+        "resolved_count": 10
       },
       "structural_features": {
         "has_search_paths": true,
@@ -955,10 +1089,10 @@
           ]
         },
         "track_record": {
-          "score": 0.42857142857142855,
+          "score": 0.5,
           "basis": [
-            "supported:3",
-            "refuted:4",
+            "supported:5",
+            "refuted:5",
             "contested:0"
           ]
         },
@@ -977,7 +1111,7 @@
           ]
         },
         "overall": {
-          "score": 0.5310892857142857,
+          "score": 0.545375,
           "confidence": 0.99025,
           "method": "mechanical_v1",
           "basis": [
@@ -988,8 +1122,8 @@
             "origin_types:5",
             "referring_accounts:5",
             "origin_types:5",
-            "supported:3",
-            "refuted:4",
+            "supported:5",
+            "refuted:5",
             "contested:0"
           ]
         }
@@ -1414,13 +1548,267 @@
       }
     },
     {
+      "domain": "brobible.com",
+      "entity": "Brobible",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-14T07:29:00Z",
+      "last_seen_at": "2026-06-10T05:20:47.787Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://brobible.com/culture/paige-ostroushko-savanah-hernandez-anti-ice-protest-arrest/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 1,
+          "claim_tracker": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 1,
+        "supported": 1,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 1
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.2075,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": 1,
+          "basis": [
+            "supported:1",
+            "refuted:0",
+            "contested:0"
+          ]
+        },
+        "profile": {
+          "score": 0.31,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:5",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.49693750000000003,
+          "confidence": 0.33182500000000004,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "supported:1",
+            "refuted:0",
+            "contested:0"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-07T21:48:31.350Z",
+        "homepage_url": "https://brobible.com/",
+        "example_url": "https://brobible.com/culture/paige-ostroushko-savanah-hernandez-anti-ice-protest-arrest/",
+        "homepage_status": 200,
+        "example_status": 404,
+        "homepage_final_url": "https://brobible.com/",
+        "example_final_url": "https://brobible.com/culture/paige-ostroushko-savanah-hernandez-anti-ice-protest-arrest/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "epochtimes.com",
+      "entity": "Epochtimes",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-15T06:17:13.995Z",
+      "last_seen_at": "2026-06-10T03:21:52.912Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.epochtimes.com/"
+        ],
+        "origin_counts": {
+          "claim_tracker": 1,
+          "journals": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_human_rights_exploitation_v1"
+        ]
+      },
+      "claims": {
+        "total": 1,
+        "supported": 1,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 1
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.2075,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": 1,
+          "basis": [
+            "supported:1",
+            "refuted:0",
+            "contested:0"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:61",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.49693750000000003,
+          "confidence": 0.33182500000000004,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "supported:1",
+            "refuted:0",
+            "contested:0"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-08T15:48:51.240Z",
+        "homepage_url": "https://epochtimes.com/",
+        "example_url": "https://www.epochtimes.com/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.epochtimes.com/",
+        "example_final_url": "https://www.epochtimes.com/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 61,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 61,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "t.co",
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-10T01:51:49.000Z",
+      "last_seen_at": "2026-06-10T04:30:07.514Z",
       "discovery": {
-        "distinct_urls": 4999,
+        "distinct_urls": 5010,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1429,10 +1817,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3018,
-          "feed_buffer_reply": 3141
+          "feed_buffer": 3023,
+          "feed_buffer_reply": 3147
         },
-        "distinct_referring_accounts": 1719,
+        "distinct_referring_accounts": 1721,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1470,7 +1858,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:4999",
+            "distinct_urls:5010",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1478,7 +1866,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1719",
+            "referring_accounts:1721",
             "origin_types:2"
           ]
         },
@@ -1508,10 +1896,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:4999",
+            "distinct_urls:5010",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1719",
+            "referring_accounts:1721",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -2219,6 +2607,132 @@
       }
     },
     {
+      "domain": "newsguardtech.com",
+      "entity": "Newsguardtech",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-10T05:20:47.799Z",
+      "last_seen_at": "2026-06-10T05:20:47.799Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.newsguardtech.com/"
+        ],
+        "origin_counts": {
+          "claim_tracker": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_epistemic_integrity"
+        ]
+      },
+      "claims": {
+        "total": 1,
+        "supported": 1,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 1
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": 1,
+          "basis": [
+            "supported:1",
+            "refuted:0",
+            "contested:0"
+          ]
+        },
+        "profile": {
+          "score": 0.63,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:9",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.47987500000000005,
+          "confidence": 0.31135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "supported:1",
+            "refuted:0",
+            "contested:0"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-09T02:19:07.319Z",
+        "homepage_url": "https://newsguardtech.com/",
+        "example_url": "https://www.newsguardtech.com/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.newsguardtech.com/",
+        "example_final_url": "https://www.newsguardtech.com/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 9,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 9,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "reuters.com",
       "entity": "Reuters",
       "kind": "news",
@@ -2852,136 +3366,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 4,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "cbsnews.com",
-      "entity": "Cbsnews",
-      "kind": "unknown",
-      "first_seen_at": "2026-03-27T23:18:50.928Z",
-      "last_seen_at": "2026-04-17T18:00:00Z",
-      "discovery": {
-        "distinct_urls": 6,
-        "example_urls": [
-          "https://www.cbsnews.com/news/us-naval-blockade-iran-ports-2026/",
-          "https://www.cbsnews.com/news/us-naval-blockade-iranian-ports-april-2026/",
-          "https://www.cbsnews.com/news/strait-of-hormuz-us-blockade-iran-ports-april-2026/",
-          "https://www.cbsnews.com/news/iran-war-recession-risk-oil-prices-inflation/",
-          "https://www.cbsnews.com/us-iran-tensions/"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 2,
-          "claim_tracker": 1,
-          "journals": 5
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_global_economic_stability_v1",
-          "axis_national_sovereignty_v_intl_law_v1",
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 1,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 1,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.53,
-          "basis": [
-            "distinct_urls:6",
-            "distinct_axes:3",
-            "origin_types:3"
-          ]
-        },
-        "corroboration": {
-          "score": 0.26249999999999996,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:3"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.36,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:14",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.449921875,
-          "confidence": 0.26992499999999997,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:6",
-            "distinct_axes:3",
-            "origin_types:3",
-            "referring_accounts:0",
-            "origin_types:3",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-08T15:18:51.080Z",
-        "homepage_url": "https://cbsnews.com/",
-        "example_url": "https://www.cbsnews.com/news/us-naval-blockade-iran-ports-2026/",
-        "homepage_status": 200,
-        "example_status": 404,
-        "homepage_final_url": "https://www.cbsnews.com/",
-        "example_final_url": "https://www.cbsnews.com/news/us-naval-blockade-iran-ports-2026/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 21,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 14,
           "opinion_marker": false
         }
       }
@@ -4389,9 +4773,9 @@
       "entity": "Amazon",
       "kind": "unknown",
       "first_seen_at": "2026-04-09T03:23:02.000Z",
-      "last_seen_at": "2026-06-09T09:05:14.000Z",
+      "last_seen_at": "2026-06-10T00:37:40.000Z",
       "discovery": {
-        "distinct_urls": 222,
+        "distinct_urls": 228,
         "example_urls": [
           "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44/ref_=dvm_us_c_soc_THBY_tw_rb?twclid=2e4zyrzur7iapo7e8zxfmiz1fu",
           "https://www.amazon.com/dp/B0FV7FDY4Q?ref_=ptw_spv01_d403b2f0b3e432606b1c05fdabe45376&ascsubtag=ptw-X-1-9-zcxw79gmhbmhdzve&mcid=abeb628a6893350285c8588b9c699eff&twclid=2c1qv8ps4iujtsy9sniyy94eix&tag=twemermanu-us-20",
@@ -4400,7 +4784,7 @@
           "https://www.amazon.com/dp/B08FDGTGJT?ref_=ptw_spv01_74f4c9a5cd9e611fbf921e6c5a2f7acc&ascsubtag=ptw-X-1-9-zcxw79gmhbmhdzve&mcid=abeb628a6893350285c8588b9c699eff&twclid=2c1qv8ps4iujtsy9sniyy94eix&tag=twemermanu-us-20"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 222
+          "feed_buffer_reply": 228
         },
         "distinct_referring_accounts": 3,
         "sample_referring_accounts": [
@@ -4433,7 +4817,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:222",
+            "distinct_urls:228",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -4471,7 +4855,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:222",
+            "distinct_urls:228",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:3",
@@ -7135,7 +7519,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T03:18:08.552Z",
+        "fetched_at": "2026-06-10T03:19:33.135Z",
         "homepage_url": "https://hypemarkets.xyz/",
         "example_url": "https://hypemarkets.xyz/?twclid=27lmvj7zap2yyfs7n0ndgenluy",
         "homepage_status": 200,
@@ -9064,6 +9448,133 @@
       }
     },
     {
+      "domain": "aramco.com",
+      "entity": "Aramco",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-22T17:43:51.000Z",
+      "last_seen_at": "2026-06-10T03:20:08.855Z",
+      "discovery": {
+        "distinct_urls": 6,
+        "example_urls": [
+          "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_football-fans&utm_content=en_4x5_vid_6s_global_fifa-whatif_na_m3&twclid=2f1bxdfhmr1if32n1ssvcc3xtc",
+          "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_market-influencers&utm_content=en_16x9_vid_30s_global_fifa-rlntlss_na_m1&twclid=2b6bkiqxqvmhv9tycqp5ma5uj",
+          "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_market-influencers&utm_content=en_16x9_vid_30s_global_fifa-rlntlss_na_m1&twclid=2ey59zdh375v9eo466ckr6r8f4",
+          "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_img_cpm_inf-ftbl_na_football-fans&utm_content=en_1x1_img_na_global_fifa_na_m4&twclid=24043e2z8f9ms0xtx92fzmf1rl",
+          "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_img_cpm_inf-ftbl_na_football-fans&utm_content=en_1x1_img_na_global_fifa_na_m1&twclid=26uzq5n1tixa0c7cip836uuk2q"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 3,
+          "feed_buffer": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "aramco"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.295,
+          "basis": [
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:15",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.40046875,
+          "confidence": 0.24495,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-08T00:48:35.058Z",
+        "homepage_url": "https://aramco.com/",
+        "example_url": "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_football-fans&utm_content=en_4x5_vid_6s_global_fifa-whatif_na_m3&twclid=2f1bxdfhmr1if32n1ssvcc3xtc",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.aramco.com/",
+        "example_final_url": "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_football-fans&utm_content=en_4x5_vid_6s_global_fifa-whatif_na_m3&twclid=2f1bxdfhmr1if32n1ssvcc3xtc",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 15,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "scitools.com",
       "entity": "Scitools",
       "kind": "unknown",
@@ -10203,27 +10714,27 @@
       }
     },
     {
-      "domain": "aramco.com",
-      "entity": "Aramco",
+      "domain": "wptgold.com",
+      "entity": "Wptgold",
       "kind": "unknown",
-      "first_seen_at": "2026-05-22T17:43:51.000Z",
-      "last_seen_at": "2026-06-09T08:00:09.421Z",
+      "first_seen_at": "2026-04-19T12:02:56.000Z",
+      "last_seen_at": "2026-06-09T20:15:34.000Z",
       "discovery": {
         "distinct_urls": 5,
         "example_urls": [
-          "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_football-fans&utm_content=en_4x5_vid_6s_global_fifa-whatif_na_m3&twclid=2f1bxdfhmr1if32n1ssvcc3xtc",
-          "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_market-influencers&utm_content=en_16x9_vid_30s_global_fifa-rlntlss_na_m1&twclid=2b6bkiqxqvmhv9tycqp5ma5uj",
-          "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_market-influencers&utm_content=en_16x9_vid_30s_global_fifa-rlntlss_na_m1&twclid=2ey59zdh375v9eo466ckr6r8f4",
-          "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_img_cpm_inf-ftbl_na_football-fans&utm_content=en_1x1_img_na_global_fifa_na_m4&twclid=24043e2z8f9ms0xtx92fzmf1rl",
-          "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_img_cpm_inf-ftbl_na_football-fans&utm_content=en_1x1_img_na_global_fifa_na_m1&twclid=26uzq5n1tixa0c7cip836uuk2q"
+          "https://wptgold.com/subscription-3?twclid=26ckzizem3j5r9q8uf2y0hd1k6",
+          "https://wptgold.com/summer-gold-3?twclid=2i3xaomh4te4p4js60vr85xvx",
+          "https://wptgold.com/summer-gold-3?twclid=2c420iyvfx3jeronmsfwpsbj0s",
+          "https://wptgold.com/summer-gold-3?twclid=2azgr2xvr37igzur4776r0p7f3",
+          "https://wptgold.com/summer-gold-3?twclid=23v0knx4imaruz51mu2il2c2f"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 3,
-          "feed_buffer": 2
+          "feed_buffer_reply": 4,
+          "feed_buffer": 1
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
-          "aramco"
+          "clubwptgold"
         ],
         "distinct_axes": []
       },
@@ -10269,7 +10780,7 @@
           ]
         },
         "profile": {
-          "score": 0.22,
+          "score": 0.1,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -10278,7 +10789,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:15",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -10298,15 +10809,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-08T00:48:35.058Z",
-        "homepage_url": "https://aramco.com/",
-        "example_url": "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_football-fans&utm_content=en_4x5_vid_6s_global_fifa-whatif_na_m3&twclid=2f1bxdfhmr1if32n1ssvcc3xtc",
+        "fetched_at": "2026-06-08T01:48:37.583Z",
+        "homepage_url": "https://wptgold.com/",
+        "example_url": "https://wptgold.com/subscription-3?twclid=26ckzizem3j5r9q8uf2y0hd1k6",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://www.aramco.com/",
-        "example_final_url": "https://www.aramco.com/en/what-we-do/energy-innovation/innovation-ecosystem/aramco-fifa-partnership?utm_source=x&utm_medium=cpm&utm_term=en_vid_cpm_inf-ftbl_na_football-fans&utm_content=en_4x5_vid_6s_global_fifa-whatif_na_m3&twclid=2f1bxdfhmr1if32n1ssvcc3xtc",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
+        "homepage_final_url": "https://www.wptgold.com/",
+        "example_final_url": "https://www.wptgold.com/subscription-3?twclid=26ckzizem3j5r9q8uf2y0hd1k6",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -10314,7 +10825,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 1,
           "opinion_marker": false
         },
         "example": {
@@ -10324,7 +10835,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 15,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -11712,132 +12223,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 3,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "wptgold.com",
-      "entity": "Wptgold",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-19T12:02:56.000Z",
-      "last_seen_at": "2026-06-08T04:38:48.000Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://wptgold.com/subscription-3?twclid=26ckzizem3j5r9q8uf2y0hd1k6",
-          "https://wptgold.com/summer-gold-3?twclid=2i3xaomh4te4p4js60vr85xvx",
-          "https://wptgold.com/summer-gold-3?twclid=2c420iyvfx3jeronmsfwpsbj0s",
-          "https://wptgold.com/summer-gold-3?twclid=2azgr2xvr37igzur4776r0p7f3"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 3,
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "clubwptgold"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.23666666666666664,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.1,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3877083333333334,
-          "confidence": 0.18769999999999998,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-08T01:48:37.583Z",
-        "homepage_url": "https://wptgold.com/",
-        "example_url": "https://wptgold.com/subscription-3?twclid=26ckzizem3j5r9q8uf2y0hd1k6",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.wptgold.com/",
-        "example_final_url": "https://www.wptgold.com/subscription-3?twclid=26ckzizem3j5r9q8uf2y0hd1k6",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -19857,129 +20242,6 @@
       }
     },
     {
-      "domain": "brobible.com",
-      "entity": "Brobible",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-14T07:29:00Z",
-      "last_seen_at": "2026-04-14T07:30:44.029Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://brobible.com/culture/paige-ostroushko-savanah-hernandez-anti-ice-protest-arrest/"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 1,
-          "claim_tracker": 1
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 1,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 1,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.2075,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:1",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.31,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:5",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.371171875,
-          "confidence": 0.081825,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:1",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-07T21:48:31.350Z",
-        "homepage_url": "https://brobible.com/",
-        "example_url": "https://brobible.com/culture/paige-ostroushko-savanah-hernandez-anti-ice-protest-arrest/",
-        "homepage_status": 200,
-        "example_status": 404,
-        "homepage_final_url": "https://brobible.com/",
-        "example_final_url": "https://brobible.com/culture/paige-ostroushko-savanah-hernandez-anti-ice-protest-arrest/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 5,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 5,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "britannica.com",
       "entity": "Britannica",
       "kind": "unknown",
@@ -20221,129 +20483,6 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 13,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "epochtimes.com",
-      "entity": "Epochtimes",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-15T06:17:13.995Z",
-      "last_seen_at": "2026-04-15T06:17:18.106Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://www.epochtimes.com/"
-        ],
-        "origin_counts": {
-          "claim_tracker": 1,
-          "journals": 1
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_human_rights_exploitation_v1"
-        ]
-      },
-      "claims": {
-        "total": 1,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 1,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.2075,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:1",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.22,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:61",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.371171875,
-          "confidence": 0.081825,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:1",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-08T15:48:51.240Z",
-        "homepage_url": "https://epochtimes.com/",
-        "example_url": "https://www.epochtimes.com/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.epochtimes.com/",
-        "example_final_url": "https://www.epochtimes.com/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 61,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 61,
           "opinion_marker": false
         }
       }
@@ -22093,6 +22232,131 @@
       }
     },
     {
+      "domain": "instacart.com",
+      "entity": "Instacart",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-01T05:28:53.401Z",
+      "last_seen_at": "2026-06-10T05:00:08.415Z",
+      "discovery": {
+        "distinct_urls": 4,
+        "example_urls": [
+          "https://www.instacart.com/store/brands/budweiser?ic_source=social&ic_campaignid=2026&twclid=2dlv3d1a0x9ht77bw7gqwrn3ou",
+          "https://www.instacart.com/store/brands/budweiser?ic_source=social&ic_campaignid=2026&twclid=26m3ucw64mys7i3vf4q8nqhyzr",
+          "https://www.instacart.com/store/brands/budweiser?ic_source=social&ic_campaignid=2026&twclid=220fvn5sjrg44xdszbbzld1imx",
+          "https://www.instacart.com/store/brands/budweiser?ic_source=social&ic_campaignid=2026&twclid=2d2pxtiuh51tyttlzm9j5ypewv"
+        ],
+        "origin_counts": {
+          "feed_buffer": 4
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "mlb"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.17666666666666664,
+          "basis": [
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3663802083333333,
+          "confidence": 0.16722499999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-07T06:18:15.780Z",
+        "homepage_url": "https://instacart.com/",
+        "example_url": "https://www.instacart.com/store/brands/budweiser?ic_source=social&ic_campaignid=2026&twclid=2dlv3d1a0x9ht77bw7gqwrn3ou",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.instacart.com/",
+        "example_final_url": "https://www.instacart.com/store/brands/budweiser?ic_source=social&ic_campaignid=2026&twclid=2dlv3d1a0x9ht77bw7gqwrn3ou",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 11,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "lend.xyz",
       "entity": "Lend Xyz",
       "kind": "unknown",
@@ -22926,7 +23190,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T05:18:12.458Z",
+        "fetched_at": "2026-06-10T05:19:34.584Z",
         "homepage_url": "https://typeform.com/",
         "example_url": "https://form.typeform.com/to/rQ99Fjtn?utm_source=mediabuyer&twclid=294n0eht0qoq4ibz93o6uvw95v",
         "homepage_status": 200,
@@ -25308,130 +25572,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 12,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "instacart.com",
-      "entity": "Instacart",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-01T05:28:53.401Z",
-      "last_seen_at": "2026-06-09T07:50:07.797Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://www.instacart.com/store/brands/budweiser?ic_source=social&ic_campaignid=2026&twclid=2dlv3d1a0x9ht77bw7gqwrn3ou",
-          "https://www.instacart.com/store/brands/budweiser?ic_source=social&ic_campaignid=2026&twclid=26m3ucw64mys7i3vf4q8nqhyzr",
-          "https://www.instacart.com/store/brands/budweiser?ic_source=social&ic_campaignid=2026&twclid=220fvn5sjrg44xdszbbzld1imx"
-        ],
-        "origin_counts": {
-          "feed_buffer": 3
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "mlb"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.1475,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.22,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.36000000000000004,
-          "confidence": 0.1386,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-07T06:18:15.780Z",
-        "homepage_url": "https://instacart.com/",
-        "example_url": "https://www.instacart.com/store/brands/budweiser?ic_source=social&ic_campaignid=2026&twclid=2dlv3d1a0x9ht77bw7gqwrn3ou",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.instacart.com/",
-        "example_final_url": "https://www.instacart.com/store/brands/budweiser?ic_source=social&ic_campaignid=2026&twclid=2dlv3d1a0x9ht77bw7gqwrn3ou",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 11,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -34286,128 +34426,6 @@
       }
     },
     {
-      "domain": "newsguardtech.com",
-      "entity": "Newsguardtech",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-15T20:31:26.914Z",
-      "last_seen_at": "2026-04-15T20:31:26.914Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://www.newsguardtech.com/"
-        ],
-        "origin_counts": {
-          "claim_tracker": 1
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_epistemic_integrity"
-        ]
-      },
-      "claims": {
-        "total": 1,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 1,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.1475,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:1",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.63,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:9",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.34984375,
-          "confidence": 0.06135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:1",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-09T02:19:07.319Z",
-        "homepage_url": "https://newsguardtech.com/",
-        "example_url": "https://www.newsguardtech.com/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.newsguardtech.com/",
-        "example_final_url": "https://www.newsguardtech.com/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 9,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 9,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "snopes.com",
       "entity": "Snopes",
       "kind": "unknown",
@@ -35474,7 +35492,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T05:18:22.630Z",
+        "fetched_at": "2026-06-10T05:19:44.760Z",
         "homepage_url": "https://lilly.com/",
         "example_url": "https://investor.lilly.com/news-releases/news-release-details/fda-approves-lillys-foundayotm-orforglipron-only-glp-1-pill?utm_source=x&utm_medium=paid-social&utm_campaign=ofg&twclid=2cjo2nvm4795lnrgsam2zxeoce",
         "homepage_status": 403,
@@ -51334,7 +51352,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T01:48:17.453Z",
+        "fetched_at": "2026-06-10T03:19:33.693Z",
         "homepage_url": "https://serus.ai/",
         "example_url": "https://www.serus.ai/?twclid=29v4lxmzvo39j1dtelbj405bc3",
         "homepage_status": 200,
@@ -51456,7 +51474,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T01:48:18.057Z",
+        "fetched_at": "2026-06-10T03:19:34.384Z",
         "homepage_url": "https://xreplyai.com/",
         "example_url": "https://xreplyai.com/lp/ai-reply?utm_source=x&utm_medium=paid&utm_campaign=sales_ai-reply&utm_content=reply-time&twclid=25ltv9snjvnawlmhjivxk1op2j",
         "homepage_status": 200,
@@ -51578,7 +51596,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T01:48:18.908Z",
+        "fetched_at": "2026-06-10T03:19:35.247Z",
         "homepage_url": "https://lentrox.com/",
         "example_url": "https://lentrox.com/?x=cpmau1&tw=rcgk3&tw_click=tw-rcgk3-rcgkc&twclid=23mto8x2s1tqm6nmtxdbnlji40",
         "homepage_status": 200,
@@ -51671,7 +51689,7 @@
           ]
         },
         "profile": {
-          "score": 0.34,
+          "score": 0.28,
           "confidence": 0.65,
           "basis": [
             "meta_author:true",
@@ -51680,7 +51698,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:6",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -51700,7 +51718,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T02:18:07.575Z",
+        "fetched_at": "2026-06-10T03:49:33.962Z",
         "homepage_url": "https://fastloanadvance.com/",
         "example_url": "https://loans.fastloanadvance.com/?aid=505508&acid=1&subid=%7B%5Bad_group_id%7D%7D&twclid=24pt75umwn8h0pynsled729e1a",
         "homepage_status": 200,
@@ -51726,7 +51744,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 6,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -51822,7 +51840,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T02:18:08.755Z",
+        "fetched_at": "2026-06-10T03:49:35.032Z",
         "homepage_url": "https://axlabs.com/",
         "example_url": "https://go.axlabs.com/gitmyabi-pioneers?twclid=2748j7ycvef789xq3ta5i8cygh",
         "homepage_status": 200,
@@ -51838,7 +51856,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 13,
+          "outbound_links_count": 18,
           "opinion_marker": false
         },
         "example": {
@@ -51944,7 +51962,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T02:18:11.138Z",
+        "fetched_at": "2026-06-10T03:49:37.103Z",
         "homepage_url": "https://utspaycashback.com/",
         "example_url": "https://www.utspaycashback.com/?twclid=2650deq3k4trsekhk3xdbpt9o7",
         "homepage_status": 200,
@@ -52066,7 +52084,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T02:18:11.394Z",
+        "fetched_at": "2026-06-10T03:49:37.354Z",
         "homepage_url": "https://play-asia.com/",
         "example_url": "https://www.play-asia.com/en/shikhondo-blue-pieta/13/70jxj9?ref=soc_x_di_ad_ga_shikh&twclid=216zt9553f8jvl6p2avsi94wxs",
         "homepage_status": 403,
@@ -52188,7 +52206,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T02:48:43.124Z",
+        "fetched_at": "2026-06-10T04:19:33.879Z",
         "homepage_url": "https://minervaconsole.com/",
         "example_url": "https://minervaconsole.com/?twclid=2ct1cd0vbj3x45kyvn9m9mhpuy",
         "homepage_status": 200,
@@ -52310,7 +52328,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T02:48:43.300Z",
+        "fetched_at": "2026-06-10T04:19:34.101Z",
         "homepage_url": "https://avianca.com/",
         "example_url": "https://www.avianca.com/pt/ofertas-destinos/voos-promocionais/?poscode=BR&utm_source=twitter&utm_medium=adb&utm_campaign=sam_br_20260514_conmebol_twitter_cpm_marca_adb&utm_term=sam_br_inter_marca_twitter_cpm_20260514_conmebol_adb&utm_content=prt_sam_br_inter_marca_vid_twitter_cpm_20260514_conmebol_adb_conmebol_grupos&twclid=26t4yexldc4l4dfzzbbn09ndbc",
         "homepage_status": 403,
@@ -52432,7 +52450,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T03:18:09.080Z",
+        "fetched_at": "2026-06-10T04:19:34.745Z",
         "homepage_url": "https://restraineddepth.com/",
         "example_url": "https://restraineddepth.com/es/?twclid=21w3hhon812ejdm3d28l4smhwe",
         "homepage_status": 200,
@@ -52448,7 +52466,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 2,
+          "outbound_links_count": 4,
           "opinion_marker": false
         },
         "example": {
@@ -52554,7 +52572,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T03:18:09.733Z",
+        "fetched_at": "2026-06-10T04:19:35.417Z",
         "homepage_url": "https://nexuscosmicus.com/",
         "example_url": "https://nexuscosmicus.com/defensa-planetaria-realidad-o-ficcion/?twclid=217bgg9bi9kconn0kz0gg2l3fi",
         "homepage_status": 200,
@@ -52676,7 +52694,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T03:18:10.887Z",
+        "fetched_at": "2026-06-10T04:49:34.896Z",
         "homepage_url": "https://multilogin.com/",
         "example_url": "https://multilogin.com/multilogin-mobile-and-browser-account-management-platform-40?utm_source=x&utm_medium=cpc&utm_campaign=promo_website_pp_visitors_new_image_4&twclid=21lxefwjki4pcdp60wvaq4xwr3",
         "homepage_status": 200,
@@ -52798,7 +52816,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T03:48:08.367Z",
+        "fetched_at": "2026-06-10T04:49:35.538Z",
         "homepage_url": "https://oasis.net/",
         "example_url": "https://oasis.net/challenge-hub?utm_source=x&utm_medium=cpc&utm_campaign=appointment&twclid=25t72d003voplz0wvurf04c2e2",
         "homepage_status": 200,
@@ -52920,13 +52938,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T03:48:09.078Z",
+        "fetched_at": "2026-06-10T04:49:36.299Z",
         "homepage_url": "https://dsctrk.com/",
         "example_url": "https://link.dsctrk.com/b0da2fef-6ac6-48b3-87f4-efc0c56a8b6f?adv=adv1x&twclid=2aw1bxup4osgqhqh8esj1ex79g",
         "homepage_status": null,
         "example_status": 200,
         "homepage_final_url": "https://dsctrk.com/",
-        "example_final_url": "https://healthylifestyle101.com/usa-vsl-gh-h2-002-vt?modal=yes&cpid=b0da2fef-6ac6-48b3-87f4-efc0c56a8b6f&mcid=2aw1bxup4osgqhqh8esj1ex79g&vcid=wpk32k54d3a4hrui33b2l5ab&cep=5lGXbJKjJJjU1T-1XjcOghibxIKunAlFzRP5PE92SXk_fVVqNnGAfSGrzYmMKMm6h6kZFslx1l765E_rR3IYOib03VG-EYcQoM6HswIv3xThxJ2s1xaQ5W7g_FJNLeAJJIvwyPLvc4u9W7lSvgAGTtm5voGhLNCnYzZPT0v4s_aN6BOhcJfixRdMb6gOOBdJCIlauG6LjSpCuiv0Z7UWrJMKK2q32bMt8lgD8Q6QIpxSLvidWMSLg_OGZb0aOj234P1ixWNXDgSTT_QOgliAwFLBU_TjSuT2m2epU744GNKxX3sqyjIeIA-XYFp3DQ-f7pgIt5xhlw36nEhFe6aD1uyiYN0qvnRALCw0vmbTVqzxJBUt14BFxsTlEv_CmU7Bde6Pgl6DraaDk4S31PTU_RIG4uC4Jmz3bFm9HkrMvSQb-6O_zFnnafnPr6bz_poMGG5AEz0hUcIHqmraPxjJkQ&lptoken=1765808e80e8587688ec&adv=adv1x&twclid=2aw1bxup4osgqhqh8esj1ex79g",
+        "example_final_url": "https://healthylifestyle101.com/usa-vsl-gh-h2-002-vt?modal=yes&cpid=b0da2fef-6ac6-48b3-87f4-efc0c56a8b6f&mcid=2aw1bxup4osgqhqh8esj1ex79g&vcid=wih2qn29lcmmu41j3via8cpm&cep=07x5PE7TXFdbCzoZk3YRnFS4BlthdWtJ46HWYdJhHIMQ9uMstNk3lLWbGEBvzRywVyf3cSG5xC-tNgFvBuMhKW8V_P3pe3mlj70OlfPHOUz-X8RtdQivw_K8XWmYu7maX8VAGnAnh2o_3Y7VspZwie-dJ8ZLbzuv2NGxNP4B2LxKxOyriMVIxbe-6ANDZ5kHsipwi417NIwq9T1_ZSn26qmnXzrygEmcg1-lpwQ066_oXqBEMLPuUd0zft-7mGg2Z8CSwczaj-xUaXSbGeaSMi31TvhHMZQAgoUrKdeRpIwONlce-EEjnt3tWdY8HBqLpybEWVvjk3zYaGoIBlB8qyc55wbQjdfDiM9IaoSMC5-YPxAIR0R1oxS69UPgwFi3bHjI9WVTe0_ioktCfWmCMsIdlM1Gc_jfUpUwk-GEUfikcCFCOAh0L398FLMEAHIoidUYv3ZrQgjw57RgSw3jyg&lptoken=17fe8120063c87ae75e2&adv=adv1x&twclid=2aw1bxup4osgqhqh8esj1ex79g",
         "homepage_content_type": "",
         "example_content_type": "text/html",
         "homepage": {
@@ -53042,7 +53060,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T03:48:09.820Z",
+        "fetched_at": "2026-06-10T04:49:36.965Z",
         "homepage_url": "https://tracebit.com/",
         "example_url": "https://community.tracebit.com/supplychainattacks?utm_source=x&utm_medium=paid_social&utm_campaign=supply_chain_ce&utm_content=x_ad_1&twclid=24rad2yo4ut9ws5v7xoqlbgytb",
         "homepage_status": 200,
@@ -53164,7 +53182,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T03:48:11.386Z",
+        "fetched_at": "2026-06-10T05:19:45.950Z",
         "homepage_url": "https://airbyte.com/",
         "example_url": "https://airbyte.com/?utm_source=xads&utm_medium=ppc&utm_campaign=xa_us_aw_social_prospecting_ai_static&utm_content=context_layer&twclid=25eb8dc5nfnts5isczvrqu9xtu",
         "homepage_status": 200,
@@ -53286,7 +53304,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T04:18:09.954Z",
+        "fetched_at": "2026-06-10T05:19:46.191Z",
         "homepage_url": "https://bradfordexchange.com/",
         "example_url": "https://www.bradfordexchange.com/products/924258_.html?utm_source=NCB&utm_medium=Twitter&utm_campaign=BEX_CVR_%C2%A0HarryPotter&utm_term=54717141&tw_source=Twitter&tw_campaign=41264089&tw_adsetid=54717141&twclid=2c9wk0mwgaqqlwwt4efcvihqlq",
         "homepage_status": 403,
@@ -53408,7 +53426,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T04:18:11.282Z",
+        "fetched_at": "2026-06-10T05:50:07.856Z",
         "homepage_url": "https://useltai.com/",
         "example_url": "https://useltai.com/?twclid=26i4snmseo5u0ddqb9pws3o4mf",
         "homepage_status": 200,
@@ -53530,7 +53548,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T04:18:11.763Z",
+        "fetched_at": "2026-06-10T05:50:08.251Z",
         "homepage_url": "https://fetchapro.com/",
         "example_url": "https://www.fetchapro.com/baths/la/?tg_ref=x_rec_june_fetch&camp_id=all_t&keyword=black_seniors&sub2=0outofpocket&twclid=2dqs5znpqw5by3dwqc6l83asj1",
         "homepage_status": 200,
@@ -53652,7 +53670,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T04:18:12.166Z",
+        "fetched_at": "2026-06-10T05:50:08.686Z",
         "homepage_url": "https://reactsummit.us/",
         "example_url": "https://reactsummit.us/?utm_source=twitter&utm_medium=React_Summit_US_2026_General&utm_campaign=Features_carousel&twclid=2az0o1ih9r8cs854jjocwzjypd",
         "homepage_status": 200,
@@ -53774,12 +53792,12 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T04:48:10.820Z",
+        "fetched_at": "2026-06-10T05:50:10.359Z",
         "homepage_url": "https://primevideo.com/",
         "example_url": "https://www.primevideo.com/detail/amzn1.dv.gti.f5b53647-e608-46ed-8228-a609fd9b2d7e?ref_=dvm_atl_twi_ph_OD_s_SpiderNoir_PreLaunch_M18-44_Infeed_TeaserColour_30s&twclid=26inyqzcduabzcxw4lwkavuuox",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://www.primevideo.com/offers/nonprimehomepage/ref=dv_web_force_root",
+        "homepage_final_url": "https://www.primevideo.com/",
         "example_final_url": "https://www.primevideo.com/detail/0TPA7F48GEJVGD8KKM1NC6QQ9Q",
         "homepage_content_type": "text/html;charset=UTF-8",
         "example_content_type": "text/html;charset=UTF-8",
@@ -53790,7 +53808,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 2,
+          "outbound_links_count": 1,
           "opinion_marker": false
         },
         "example": {
@@ -58813,6 +58831,83 @@
       }
     },
     {
+      "domain": "fly.io",
+      "entity": "Fly Io",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-09T16:00:01.000Z",
+      "last_seen_at": "2026-06-09T16:00:01.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://fly.io/docs/blueprints/deploy-openclaw?utm_source=twitter&utm_medium=cpc&utm_campaign=fly-openclaw&twclid=2290rk668s5xjiqlbe984nyecz"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "flydotio"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
       "domain": "aje.news",
       "entity": "Aje News",
       "kind": "unknown",
@@ -63100,6 +63195,81 @@
         "distinct_urls": 1,
         "example_urls": [
           "https://fb.watch/HdrRgRXORH/"
+        ],
+        "origin_counts": {
+          "journals": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3370833333333333,
+          "confidence": 0.0491,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "buff.ly",
+      "entity": "Buff Ly",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-10T03:22:59.488Z",
+      "last_seen_at": "2026-06-10T03:22:59.488Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://buff.ly/vkuqV7f"
         ],
         "origin_counts": {
           "journals": 1
