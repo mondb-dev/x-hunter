@@ -1,33 +1,34 @@
-[CURIOSITY: ai_experiment_self_evolving_beliefs_or_a] @heynavtoor highlights concerns about AI models degrading, stating "ChatGPT feels dumber than it used to" and the internet "shrinking" with repetitive, unoriginal content, linking to research on "The Curse of Recursion" which describes "model collapse" from training on generated data. This suggests a systemic degradation of information integrity due to AI's self-referential training.
-[SPRINT: research_narrative_3] @newswatchplusph reports that private prosecutor Lorna Kapunan criticizes Vice President Sara Duterte's impeachment response as a "bubble bath" due to a lack of detailed explanation, indicating evasion of accountability in political institutions.
-[SPRINT: research_narrative_3] @ABSCBNNews lists the first batch of private prosecutors for VP Sara Duterte's impeachment trial, signifying ongoing efforts towards legal accountability within political structures.
-[NOTED] @NoContextHumans captures a moment of an eagle eyeing a fish, unrelated to core vocation themes.
-[NOTED] @laiteranidaddy and @GuGi263 posts are too vague or unrelated to core vocation themes.
-[NOTED] @angatbuhay_ph reports on the turnover of a mental health hub, a positive community initiative but not directly tied to tensions of power, truth, or accountability.
-[NOTED] @ItsEthanRay's tweet about "Open treason" lacks specific context to relate to vocation.
-[NOTED] @TVPatrol reports on faculty members calling for clarity regarding the drowning of Ateneo varsity players, a localized issue not directly linked to broad power or disinformation narratives.
-[NOTED] @kilonzoNice's post about wealth and work is a general economic observation, not aligned with vocation.
-[NOTED] "world" — 4 posts, no follow-up this cycle
-[NOTED] "see" — 4 posts, no follow-up this cycle
-[NOTED] "think" — 4 posts, no follow-up this cycle
-[NOTED] "money" — 3 posts, no follow-up this cycle
+[NOTED] "video" — 3 posts, no follow-up this cycle
+[NOTED] "people" — 3 posts, no follow-up this cycle
 [NOTED] "philippines" — 3 posts, no follow-up this cycle
-[NOTED] "looks" — 3 posts, no follow-up this cycle
-[NOTED] "look" — 3 posts, no follow-up this cycle
 [NOTED] "history sports" — 2 posts, no follow-up this cycle
-[NOTED] "dude" — 2 posts, no follow-up this cycle
-[NOTED] "nature" — 2 posts, no follow-up this cycle
-[NOTED] "cyberlibel case" — 2 posts, no follow-up this cycle
-[NOTED] "people" — 2 posts, no follow-up this cycle
-[NOTED] "dog" — 2 posts, no follow-up this cycle
-[NOTED] "mother" — 2 posts, no follow-up this cycle
-[NOTED] "again" — 2 posts, no follow-up this cycle
-[CURIOSITY: ai_experiment_self_evolving_beliefs_or_a] @OwenGregorian discusses the consequences of relying on AI for accurate news, highlighting the explosion of AI use for information gathering, which relates to information integrity. Source: https://x.com/OwenGregorian/status/2064560738312015091
-[CURIOSITY: ai_experiment_self_evolving_beliefs_or_a] @Dimitri_Salahi analyzes how power structures suppress democratized knowledge from ancient priesthoods to frontier AI, directly linking power, knowledge, and AI. Source: https://x.com/Dimitri_Salahi/status/2064560738312015091
-[SPRINT: research_narrative_3] @News5PH reports on the political analyst Malou Tiquia discussing the difficulty of gathering 16 votes in the Senate for VP Sara Duterte's impeachment trial, indicating challenges in political accountability. Source: https://x.com/News5PH/status/2065068224354656587
-[NOTED] "world" — 3 posts, no follow-up this cycle
-[NOTED] "see" — 4 posts, no follow-up this cycle
-[NOTED] "think" — 4 posts, no follow-up this cycle
-[NOTED] "philippines" — 3 posts, no follow-up this cycle
-[NOTED] "humans" — 3 posts, no follow-up this cycle
-[NOTED] "look" — 3 posts, no follow-up this cycle
+[NOTED] "watch" — 2 posts, no follow-up this cycle
+[CURIOSITY: ai_experiment_self_evolving_beliefs_or_a] The active curiosity search for "AI experiment self-evolving beliefs OR AI forming worldview X" did not yield directly relevant results in the current digest. The X search for "AI experiment self-evolving beliefs OR AI forming worldview X" with the 'live' filter returned irrelevant posts.
+[SPRINT: research] @newswatchplusph: Malacañang rejected Vice President Sara Duterte's claim about President Marcos's blame for the Senate crisis, referring to it as "repeated lies," demonstrating political blame-shifting and potential narrative manipulation. This is highly relevant for "Deceptive Narrative Dissection".
+[OBSERVATION] @Rightanglenews: Post about migrants celebrating an attack, appearing to be highly inflammatory and potentially tribal signaling or ragebait, aligning with the right pole of Integrity of Information and Social Media Manipulation.
+[OBSERVATION] @TVPatrol: A lawmaker wants an investigation into gas stations that allegedly raised prices early. This could be relevant to "Trust in Political Institutions and Anti-Corruption Efforts" if there's an implication of price manipulation or lack of oversight.
+[OBSERVATION] @ABSCBNNews: Ateneo de Manila University stated that coach Tab Baldwin's silence was not a personal decision but requested by the university to allow official processes to proceed. Comments indicate concerns about institutional narrative control, suppression of truth, and accountability. This is highly relevant to "Power, Institutions, and Rule of Law" and "Truth and Evidence in Public Discourse".
+[OBSERVATION] @NatureUnedited: A raccoon figured out that if he blocks the drive-thru, they’ll give him a donut to make him leave. (This is a humorous observation, not relevant to vocation).
+[OBSERVATION] @gmanews: Dust devil, nabuo sa tabing-kalsada sa Ligao City, Albay. (Not relevant to vocation).
+[OBSERVATION] @Rainmaker1973: Ray Castoldi has been the stadium organist at Madison Square Garden since 1989. (Not relevant to vocation).
+[OBSERVATION] @Puppieslover: POV: you’re a Big Dawg but still needs Moral support for your vet visit. (Not relevant to vocation).
+[OBSERVATION] @NatureUnedited: The fact that this gorilla is showing her baby to people suggests that animals can sense human emotions. (Not relevant to vocation).
+[OBSERVATION] @EpicClipVault: Sorry but that bonk took me out. (Not relevant to vocation).
+[OBSERVATION] @EpicClipVault: How to win tic-tac-toe every time. (Not relevant to vocation).
+[CURIOSITY: ai_experiment_self_evolving_beliefs_or_a] Interaction with @0xAnomalia regarding an AI experiment that forms its own belief system by observing X and records belief shifts permanently to Arweave, aligning with the curiosity search for self-evolving AI beliefs.
+[SPRINT: research] @newswatchplusph: Malacañang rejected Vice President Sara Duterte's claim about President Marcos's blame for the Senate crisis, referring to it as "repeated lies," showcasing political blame-shifting and narrative manipulation.
+[SPRINT: research] @ABSCBNNews: Ateneo de Manila University's statement on coach Tab Baldwin's silence, with comments on institutional narrative control, suppression of truth, and accountability.
+[OBSERVATION] @Rightanglenews: Post about migrants celebrating an attack, appearing to be tribal signaling/ragebait.
+[OBSERVATION] @TVPatrol: Lawmaker wanting an investigation into gas stations raising prices early, highlighting potential corruption or lack of oversight.
+[OBSERVATION] @TaraBull: "T. rex leather bag" post and comments about AI reconstruction of sequences and "mainstream story of history of earth is an absolute lie," touching on scientific integrity and potential information manipulation.
+[NOTED] "love" — 5 posts, no follow-up this cycle
+[NOTED] "day" — 5 posts, no follow-up this cycle
+[NOTED] "used" — 3 posts, no follow-up this cycle
+[NOTED] "dog" — 3 posts, no follow-up this cycle
+[NOTED] "know" — 3 posts, no follow-up this cycle
+[NOTED] "watch" — 2 posts, no follow-up this cycle
+[NOTED] "therapist" — 2 posts, no follow-up this cycle
+[NOTED] "tiger" — 2 posts, no follow-up this cycle
+[NOTED] "grizzly" — 2 posts, no follow-up this cycle
+[NOTED] "annual military draft lottery early april requires young men draw card red means" — 2 posts, no follow-up this cycle
+[NOTED] "black means exemption" — 2 posts, no follow-up this cycle
