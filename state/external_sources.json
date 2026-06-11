@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-11T20:21:52.913Z",
+  "generated_at": "2026-06-11T23:52:28.648Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-11T20:22:29.852Z",
+  "profiled_at": "2026-06-11T23:53:19.312Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -716,7 +716,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-08T23:49:52.274Z",
+        "fetched_at": "2026-06-11T23:53:17.310Z",
         "homepage_url": "https://washingtonpost.com/",
         "example_url": "https://www.washingtonpost.com/world/2026/04/13/us-iran-blockade-strait-hormuz-oil/",
         "homepage_status": null,
@@ -1938,9 +1938,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-11T20:00:56.000Z",
+      "last_seen_at": "2026-06-11T22:07:51.000Z",
       "discovery": {
-        "distinct_urls": 5130,
+        "distinct_urls": 5136,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1950,9 +1950,9 @@
         ],
         "origin_counts": {
           "feed_buffer": 3089,
-          "feed_buffer_reply": 3234
+          "feed_buffer_reply": 3240
         },
-        "distinct_referring_accounts": 1743,
+        "distinct_referring_accounts": 1748,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1990,7 +1990,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5130",
+            "distinct_urls:5136",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1998,7 +1998,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1743",
+            "referring_accounts:1748",
             "origin_types:2"
           ]
         },
@@ -2028,10 +2028,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5130",
+            "distinct_urls:5136",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1743",
+            "referring_accounts:1748",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -10432,7 +10432,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-08T23:49:52.969Z",
+        "fetched_at": "2026-06-11T23:53:17.914Z",
         "homepage_url": "https://inqnews.net/",
         "example_url": "https://inqnews.net/major",
         "homepage_status": 200,
@@ -11447,7 +11447,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-08T23:49:53.864Z",
+        "fetched_at": "2026-06-11T23:53:19.100Z",
         "homepage_url": "https://easesourcing.com/",
         "example_url": "https://www.easesourcing.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=eu260327&twclid=2c9z6424e0kfmv2lyfp3g2o0yr",
         "homepage_status": 200,
@@ -14214,7 +14214,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-08T21:18:58.311Z",
+        "fetched_at": "2026-06-11T21:22:25.589Z",
         "homepage_url": "https://nobullproject.com/",
         "example_url": "https://nobullproject.com/collections/drive-2-shoes?utm_source=x&utm_medium=paidsocial&utm_campaign=cpatest&utm_term=drive&utm_content=white&twclid=24gy5fp678esqwxit13xmono4x",
         "homepage_status": 200,
@@ -16844,7 +16844,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-08T21:18:58.478Z",
+        "fetched_at": "2026-06-11T21:22:25.806Z",
         "homepage_url": "https://timesofisrael.com/",
         "example_url": "https://timesofisrael.com/",
         "homepage_status": 403,
@@ -18987,6 +18987,130 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 12,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "energyalert.org",
+      "entity": "Energyalert",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-06T06:50:07.620Z",
+      "last_seen_at": "2026-06-11T12:29:09.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://energyalert.org/speed-to-power/?twclid=29c3xdnaadwruhur8bny93vxj7",
+          "https://energyalert.org/speed-to-power/?twclid=2cr6ui4mljzr9xrs9ag383a3w1"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1,
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "alertenergyusa"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.17833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.37494791666666666,
+          "confidence": 0.13045,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.26,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:4",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-11T23:53:19.312Z",
+        "homepage_url": "https://energyalert.org/",
+        "example_url": "https://energyalert.org/speed-to-power/?twclid=29c3xdnaadwruhur8bny93vxj7",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://energyalert.org/",
+        "example_final_url": "https://energyalert.org/speed-to-power/?twclid=29c3xdnaadwruhur8bny93vxj7",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
           "opinion_marker": false
         }
       }
@@ -22084,7 +22208,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-08T21:48:58.847Z",
+        "fetched_at": "2026-06-11T21:52:25.429Z",
         "homepage_url": "https://eclincher.com/",
         "example_url": "https://www.eclincher.com/ai-social-media-agent?twclid=22gdnmarextv0i2rs5d53x1dzn",
         "homepage_status": 200,
@@ -24192,7 +24316,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-08T21:49:00.306Z",
+        "fetched_at": "2026-06-11T21:52:26.066Z",
         "homepage_url": "https://manageengine.com/",
         "example_url": "https://www.manageengine.com/products/service-desk/?utm_source=Twitter-X&utm_medium=ppc&utm_campaign=SDP-New+Image+Ad-Kws-sep18&twclid=23ga9f8elsw90hcyq7ijyux58l",
         "homepage_status": 200,
@@ -26666,7 +26790,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-08T21:18:59.028Z",
+        "fetched_at": "2026-06-11T21:22:26.655Z",
         "homepage_url": "https://amnesty.org/",
         "example_url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/",
         "homepage_status": 200,
@@ -26788,7 +26912,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-08T21:18:59.528Z",
+        "fetched_at": "2026-06-11T21:22:27.221Z",
         "homepage_url": "https://vt.edu/",
         "example_url": "https://news.vt.edu/articles/2026/03/Iran-Israel-Trump-gas-LNG-prices-Strait-Hormuz-economic-impact.html",
         "homepage_status": 200,
@@ -28510,7 +28634,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-08T21:49:00.838Z",
+        "fetched_at": "2026-06-11T21:52:26.628Z",
         "homepage_url": "https://gamedaymath.com/",
         "example_url": "https://www.gamedaymath.com/pricing?twclid=22wv0ellx5eqlyjtmchr7w8rag",
         "homepage_status": 200,
@@ -29617,7 +29741,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-08T23:19:00.457Z",
+        "fetched_at": "2026-06-11T23:22:25.050Z",
         "homepage_url": "https://qodo.ai/",
         "example_url": "https://www.qodo.ai/qodo-lp-ticket-integrations?utm_source=x&utm_medium=paid-social&utm_campaign=feature-ticket-context&utm_content=ad00-jira-context&twclid=26dl4v15r8qnhxeh30sqq0a16f",
         "homepage_status": 200,
@@ -33921,7 +34045,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-08T21:49:01.645Z",
+        "fetched_at": "2026-06-11T21:52:27.477Z",
         "homepage_url": "https://irys.xyz/",
         "example_url": "https://gateway.irys.xyz/lZR6DY8ugYpeIkHpBQpgaNeVWmEhahjrDBNGc5Fz0EE",
         "homepage_status": 200,
@@ -40753,7 +40877,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-08T20:18:58.680Z",
+        "fetched_at": "2026-06-11T22:52:25.513Z",
         "homepage_url": "https://freshstartinfo.org/",
         "example_url": "https://apply.freshstartinfo.org/?utm_source=twitter&utm_medium=paid_social&utm_campaign=FSI_Social_X_Deadline_Broad&utm_content=FSI_X_Deadline_Image_USCapNews_04172026&source=TW&brand=FSI&camp_id=41209135&adset_id=54646468&creative_id=2045223212514979923&twcrid=2045223210636251136&twclid=2fc79anpvgomecghgv84o862",
         "homepage_status": 200,
@@ -40875,7 +40999,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-08T20:18:58.841Z",
+        "fetched_at": "2026-06-11T22:52:25.696Z",
         "homepage_url": "https://hamradioprep.com/",
         "example_url": "https://hamradioprep.com/?twclid=232p2wfbs7v1e5zxq4p7bhczux",
         "homepage_status": 403,
@@ -40997,7 +41121,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-08T22:49:00.200Z",
+        "fetched_at": "2026-06-11T22:52:26.422Z",
         "homepage_url": "https://scsp.ai/",
         "example_url": "https://expo.scsp.ai/attend-aiexpo/?utm_medium=paid_social&utm_source=x&utm_campaign=aiexpo26&twclid=2ds8dmcipu3juam31i83nrm7k6",
         "homepage_status": 200,
@@ -41090,7 +41214,7 @@
           ]
         },
         "profile": {
-          "score": 0.29000000000000004,
+          "score": 0.28,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -41099,7 +41223,7 @@
             "about:false",
             "contact:true",
             "corrections:false",
-            "outbound_links:7",
+            "outbound_links:6",
             "opinion_marker:false"
           ]
         },
@@ -41119,7 +41243,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-08T22:49:01.902Z",
+        "fetched_at": "2026-06-11T22:52:27.875Z",
         "homepage_url": "https://defianceetfs.com/",
         "example_url": "https://www.defianceetfs.com/qtum/?utm_source=x&utm_medium=paid_social&utm_campaign=qtum&utm_term=qtum-v2-1&twclid=283g0r804olumr11o83bl4ufd1",
         "homepage_status": 200,
@@ -41135,7 +41259,7 @@
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 6,
+          "outbound_links_count": 5,
           "opinion_marker": false
         },
         "example": {
@@ -41145,7 +41269,7 @@
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 7,
+          "outbound_links_count": 6,
           "opinion_marker": false
         }
       }
@@ -41241,7 +41365,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-08T22:49:02.482Z",
+        "fetched_at": "2026-06-11T23:22:25.493Z",
         "homepage_url": "https://smartmove.us/",
         "example_url": "https://www.smartmove.us/?ccode=SMXMT002&utm_source=x&utm_medium=social&utm_term=mover&utm_content=SMXMT002&twclid=2ap3frny1rgghylrdciedrfuwk",
         "homepage_status": 200,
@@ -41363,7 +41487,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-08T22:49:03.042Z",
+        "fetched_at": "2026-06-11T23:22:26.433Z",
         "homepage_url": "https://stiiizy.com/",
         "example_url": "https://www.stiiizy.com/pages/locations/?utm_source=x&utm_medium=ads&utm_campaign=sr&twclid=25gtk4t1onct87pup5gp18e0ac",
         "homepage_status": 200,
@@ -41485,7 +41609,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-08T23:19:02.075Z",
+        "fetched_at": "2026-06-11T23:22:27.931Z",
         "homepage_url": "https://mystrika.com/",
         "example_url": "https://mystrika.com/?utm_source=twitter&twclid=2dp5rnt5f8pfum4y34zv28l3yz",
         "homepage_status": 200,
@@ -57306,83 +57430,6 @@
       }
     },
     {
-      "domain": "energyalert.org",
-      "entity": "Energyalert",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-06T06:50:07.620Z",
-      "last_seen_at": "2026-06-06T06:50:07.620Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://energyalert.org/speed-to-power/?twclid=29c3xdnaadwruhur8bny93vxj7"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "alertenergyusa"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
       "domain": "ib.barclays",
       "entity": "Ib Barclays",
       "kind": "unknown",
@@ -58939,6 +58986,160 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "sumsub"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "uefa.com",
+      "entity": "Uefa",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-11T13:05:00.000Z",
+      "last_seen_at": "2026-06-11T13:05:00.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.uefa.com/news-media/news/02a6-20d7ce07703f-bee983e79921-1000--top-african-referee-omar-artan-to-officiate-2026-uefa-super/"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "uefa"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "shockwavemedical.com",
+      "entity": "Shockwavemedical",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-11T14:21:00.000Z",
+      "last_seen_at": "2026-06-11T14:21:00.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://shockwavemedical.com/products/shockwave-javelin-peripheral/?twclid=2bt743ni8q0uop3n4z1rfd9sut"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "shockwaveivl"
         ],
         "distinct_axes": []
       },
