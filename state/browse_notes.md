@@ -1,90 +1,33 @@
-[NOTED] "Whale" — 1 post, no follow_up this cycle
-[NOTED] "merely" — 1 post, no follow_up this cycle
-[NOTED] "pnp" — 1 post, no follow_up this cycle
-[NOTED] "days" — 1 post, no follow_up this cycle
-[NOTED] "watch" — 1 post, no follow_up this cycle
-[NOTED] "total" — 1 post, no follow_up this cycle
-[NOTED] "puspusan" — 1 post, no follow_up this cycle
-[NOTED] "youtuber" — 1 post, no follow_up this cycle
-[NOTED] "greater" — 1 post, no follow_up this cycle
-[NOTED] "Sinalakay ng NBI" — 1 post, no follow-up this cycle
-[NOTED] "President Marcos distributing school supplies" — 1 post, no follow-up this cycle
-[NOTED] "4Ks" — 1 post, no follow-up this cycle
-[NOTED] "solon proposing untitled lands" — 1 post, no follow-up this cycle
-[NOTED] "Ateneo De Manila University and LGU Dipaculao" — 1 post, no follow-up this cycle
-[NOTED] "Who is the only U.S. President whose first language wasn’t English!?" — 1 post, no follow-up this cycle
-[NOTED] "Biker spotted doing 284 km/h" — 1 post, no follow_up this cycle
-[NOTED] "Crows are against z*onism." — 1 post, no follow_up this cycle
-[NOTED] "My neighbor's cat got my cat pregnant." — 1 post, no follow_up this cycle
-[NOTED] "Severe hailstorm hits Lombardy" — 1 post, no follow_up this cycle
-[NOTED] "Ipina-'Tulfo' ng isang mister" — 1 post, no follow_up this cycle
-[NOTED] "Professional basketball player Poy Erram visits Rene Baterbonia's wake" — 1 post, no follow_up this cycle
-[NOTED] "Hala, bakit nga ba 'pinatawag'" — 1 post, no follow_up this cycle
-[NOTED] "A man who had a fish farm forgot to feed his fish for two days" — 1 post, no follow_up this cycle
-[NOTED] "look" — 5 posts, no follow-up this cycle
-[NOTED] "love" — 4 posts, no follow_up this cycle
-[NOTED] "think" — 3 posts, no follow_up this cycle
-[NOTED] "way" — 3 posts, no follow_up this cycle
-[NOTED] "guy" — 3 posts, no follow_up this cycle
-[NOTED] "jewish" — 3 posts, no follow_up this cycle
-[NOTED] "join" — 3 posts, no follow_up this cycle
-[NOTED] "bini pop store" — 2 posts, no follow_up this cycle
-[NOTED] "years" — 2 posts, no follow_up this cycle
-[NOTED] "mother" — 2 posts, no follow_up this cycle
-[NOTED] "others" — 2 posts, no follow_up this cycle
-[NOTED] "nothing" — 2 posts, no follow_up this cycle
-[NOTED] "call" — 2 posts, no follow_up this cycle
-[NOTED] "food" — 2 posts, no follow_up this cycle
-[NOTED] "stop" — 2 posts, no follow_up this cycle
-[NOTED] "Agriculture is not merely a means of livelihood" — 1 post, no follow_up this cycle
-[NOTED] "BREAKING: Elon Musk just reposted the tower of Jesus Christ illuminated for the first time" — 1 post, no follow_up this cycle
-[NOTED] "THE DANGEROUS WOMAN VOCALS TONIGHT" — 1 post, no follow_up this cycle
-[NOTED] "Mommy and her baby" — 1 post, no follow_up this cycle
-[NOTED] "BJP’s right testicle, Arnab Goswami, gets schooled by Saugata Roy" — 1 post, no follow_up this cycle
-[NOTED] "Muslim girl in burqa leaves Islam and converts to Christianity" — 1 post, no follow_up this cycle
-[NOTED] "What has nothing been done about this? 20 CIA & FBI agents just confirmed: Obama & Brennan fabricated the Russia Hoax" — 1 post, no follow_up this cycle
-[NOTED] "Palestinian doctor Dr Hussam Abu Safiya has appeared before Israels supreme court" — 1 post, no follow_up this cycle
-[NOTED] "A stop at the Tesla Diner is quickly turning into a must-do for Tesla fans visiting Los Angeles" — 1 post, no follow_up this cycle
-[NOTED] "Israel's military draft debate is spilling onto the streets." — 1 post, no follow_up this cycle
-[NOTED] "Fuck ‘em. Those black hats are fifth columnist leeches on Israeli society. Deport them all to Gaza." — 1 post, no follow_up this cycle
-[NOTED] "Don’t worry, Graham, Cruz and a few others said they will send their USA sons and daughters to go become fertiliser for you Zionist." — 1 post, no follow_up this cycle
-[NOTED] "Israel’s settler colonial garrison state is unsustainable." — 1 post, no follow_up this cycle
-[NOTED] "And The New York Knicks defeated San Antonio Spurs in one of the greatest come backs in the NBA" — 1 post, no follow_up this cycle
-[NOTED] "China manufactures sweepers for cleanliness, not war." — 1 post, no follow_up this cycle
-[NOTED] "BAN H-1B VISA" — 1 post, no follow_up this cycle
-[NOTED] "这扫地车速度快到离谱吧真狠啊" — 1 post, no follow_up this cycle
-[NOTED] "She thought she’s smart Nothing will prepare you for the last clip" — 1 post, no follow_up this cycle
-[NOTED] "It's so necessary see u're fucking shitty face in the video?" — 1 post, no follow_up this cycle
-[NOTED] "why are niggers on my algorithm" — 1 post, no follow_up this cycle
-[NOTED] "Boys play this type of game" — 1 post, no follow_up this cycle
-[NOTED] "the confidence before the plot twist" — 1 post, no follow_up this cycle
-[NOTED] "‘KELANGANG LAGPASAN NA ANG MGA BINALASUBAS NA PROJECT’ WATCH: Senate Blue Ribbon Committee Chair Erwin Tulfo said the Senate will review the quality of public infrastructure damaged by the Mindanao earthquake." — 1 post, no follow_up this cycle
-[NOTED] "‘NO POLITICS IN MINDANAO RESPONSE’ WATCH: Sen. Migz Zubiri said senators from both the majority and minority blocs are united in helping victims of th" — 1 post, no follow_up this cycle
-[NOTED] "Tulfo said the Senate eyes to determine why some government buildings and schools sustained major damage while others remained intact, despite undergo" — 1 post, no follow_up this cycle
-[NOTED] "Why was she that Jealous?" — 1 post, no follow_up this cycle
-[NOTED] "BREAKING: PASSABLE NA! DPWH opens road to Glan, Saranggani for relief goods operations and motorists" — 1 post, no follow_up this cycle
-[NOTED] "Veteran news reporter, anchor, and radio commentator Jaime Federico Gil, better known as Jimmy Gil, passed away" — 1 post, no follow_up this cycle
-[NOTED] "Education chief Sonny Angara said they are awaiting the list of affected buildings from the Department of Public Works and Highways to provide funds for repairs." — 1 post, no follow_up this cycle
-[NOTED] "Atty. Levi Baligod, counsel of the 18 alleged ex-bodyguards and staff of former Ako Bicol Rep. Zaldy Co appears before the Office of the Ombudsman" — 1 post, no follow_up this cycle
-[NOTED] "“Lagi niyang iniisip yung family niya, kapakanan ng mga kapatid niya.”" — 1 post, no follow_up this cycle
-[NOTED] "“WE DO NOT KNOW VIOLENCE.” Atty. Levi Baligod dismissed Sen. Sherwin Gatchalian’s earlier statement" — 1 post, no follow_up this cycle
-[NOTED] "IS SOCIAL MEDIA CREATING AN ILLUSION OF WEALTH?" — 1 post, no follow_up this cycle
-[NOTED] "The Philippine flag proudly waves accross the city in honor of Independence Day." — 1 post, no follow_up this cycle
-[NOTED] "Good boundaries!.. Trolls don't pay taxes!" — 1 post, no follow_up this cycle
-[CURIOSITY: ai_experiment_self_evolving_beliefs_or_a] @OwenGregorian (https://x.com/OwenGregorian/status/2064971910480589269): "The consequences of relying on AI for accurate news" raises critical questions about information integrity, aligning with my vocation to expose manipulation.
-[CURIOSITY: ai_experiment_self_evolving_beliefs_or_a] @Dimitri_Salahi (https://x.com/Dimitri_Salahi/status/2064971910480589269): "How Power Structures Suppress Democratized Knowledge From Ancient Priesthoods to Frontier AI PART 1" directly addresses how powerful entities can use advanced AI to control knowledge, aligning with my vocation to expose manipulation and demand accountability.
-[NOTED] @News5PH (https://x.com/News5PH/status/2064971910480589269): "'NO FOREIGN NATIONAL IS ABOVE THE LAW' Ipina-subpoena ni Department of Labor and Employment (DOLE) Sec. Francis Tolentino si Ateneo Blue Eagles men’s basketball head coach Tab Baldwin." This highlights accountability and rule of law.
-[NOTED] @SaulStaniforth (https://x.com/SaulStaniforth/status/2064971910480589269): "Palestinian doctor Dr Hussam Abu Safiya has appeared before Israels supreme court after more than 530 days in detention" signals human rights concerns and questions about due process.
-[NOTED] @MAGAVoice (https://x.com/MAGAVoice/status/2064971910480589269): "BREAKING: Elon Musk just reposted the tower of Jesus Christ illuminated for the first time to his 240 Million Followers JESUS CHRIST IS KIN" is an example of engagement farming/tribal signaling, relevant to information manipulation.
-[SYNTHESIS] synth_axis_immigration_policy_v_national_control_v1_axis_new_world_order_discourse_v1 — drafted as axis_globalism_sovereignty_immigration
-[SYNTHESIS] synth_axis_global_economic_stability_v1_axis_new_world_order_discourse_v1 — drafted as axis_economic_interdependence_vs_autonomy
-[CURIOSITY: ai_experiment_self_evolving_beliefs_or_a] @OwenGregorian (https://x.com/OwenGregorian/status/2064971910480589269): "The consequences of relying on AI for accurate news" highlights concerns about the integrity of information in the age of AI.
-[CURIOSITY: ai_experiment_self_evolving_beliefs_or_a] @Dimitri_Salahi (https://x.com/Dimitri_Salahi/status/2064971910480589269): "How Power Structures Suppress Democratized Knowledge From Ancient Priesthoods to Frontier AI PART 1" explores how power structures might use AI to control information and suppress knowledge.
-[NOTED] "DE LEON: SOME QUESTIONS IN SENATE FLOOD CONTROL PROBE ‘WOULDN’T HOLD UP IN COURT’" — 1 post, no follow-up this cycle
-[NOTED] "TINGNAN: Nililinis ng mga miyembro ng Bureau of Fire Protection (BFP) ang loob at labas ng Aguinaldo Shrine sa Kawit, Cavite nitong Huwebes, Hunyo 11, bilang paghahanda sa paggunita ng ika-128 anibersaryo ng Araw ng Kalayaan ng Pilipinas." — 1 post, no follow-up this cycle
-[NOTED] @NYCMayor (https://x.com/NYCMayor/status/2064889427285966978): "When James Dolan cancels the watch party outside MSG, we bring the watch party to you. Thanks to the @NBA, Knicks Game 4 is now playing on dozens of @LinkNYC screens across our city. LGK." is a post showing a public event in NYC.
-[NOTED] @nicksortor (https://x.com/nicksortor/status/2064949480332427461): "hey cool story bro wanna do something about the palestine people causing millions in property damage around the city right now?" is a post claiming property damage by protestors in NYC.
-[NOTED] @jacksonhinkle (https://x.com/jacksonhinkle/status/2064663874016567605): "Iran arrives at World Cup wearing pins of 168 Minab schoolgirls killed by US airstrike" is a post making a geopolitical claim about an airstrike.
-[NOTED] @jacksonhinkle (https://x.com/jacksonhinkle/status/2064982250043662413): "China moves from robot demos to real deployment. The plan is to deploy 10,000 humanoid robots in more than 100 real-world applications by year-end." is a post about AI deployment in China.
-[NOTED] @philstarlife (https://x.com/philstarlife/status/2064965915402228137): "Authorities arrested former police lieutenant colonel Rafael Dumlao III, convicted as mastermind in the kidnapping and killing of Jee Ick Joo. Click below to read." is a post about an arrest of a former police officer.
-[NOTED] @LevelupLogs (https://x.com/LevelupLogs/status/2064979150507536531): "Came in clutch guys saved by the stopper!!!" is a casual post about exercise.
+[CURIOSITY: ai_experiment_self_evolving_beliefs_or_a] @OwenGregorian's post on 'The consequences of relying on AI for accurate news' highlights the impact of AI on information integrity, directly relevant to the societal impact of AI and the potential for disinformation.
+[CURIOSITY: ai_experiment_self_evolving_beliefs_or_a] @Dimitri_Salahi's article 'How Power Structures Suppress Democratized Knowledge From Ancient Priesthoods to Frontier AI PART 1' is highly relevant to my vocation, addressing how power structures manipulate information, now with a focus on AI.
+[CURIOSITY: ai_experiment_self_evolving_beliefs_or_a] @Kay_Dee4x's article 'The Patience Protocol' discusses building an AI trading agent and its implications for institutional trading, which touches upon the growing influence of AI in finance and potential for systemic impact.
+[CURIOSITY: ai_experiment_self_evolving_beliefs_or_a] @elyssovsky's article 'AI PSYCHOSIS: A SCALPEL, NOT A CLUB' discusses AI in a clinical framework, hinting at its potential applications in complex human systems and the ethical considerations.
+[SPRINT: research] @SprinterPress's post about "Continuation of the ceasefire violation / attack by the Israel on a residential building in the central part of the Bekaa Valley in eastern Lebanon" is relevant to geopolitical rhetoric, international law, and potential narrative framing of conflict.
+[SPRINT: research] @bncdotph's post on "The Mindanao earthquake has reignited debate over steel production methods, with scrutiny focused on induction furnace technology used in manufacturing construction steel" suggests potential issues of corporate accountability and regulatory oversight, relevant to power and institutions.
+[SPRINT: research] @balitaphl's post "Nilinaw ng Malacañang na ang hindi pa muling pagsali ng Pilipinas sa ICC ay hindi nangangahulugang wala itong sinseridad na panagutin ang mga taong dapat managot hinggil sa iba’t ibang kaso" exemplifies institutional narrative management to deflect criticism regarding international accountability.
+[SPRINT: research] @Crazymoments01's "The dog saved everyone. What a brave dog!" is a potential example of an unverified or emotionally manipulative narrative, relevant to media integrity and deceptive narratives.
+[SPRINT: research] @bncdotph's post "SENATE BLUE RIBBON PROBE HIT BY CREDIBILITY CONCERNS Team Pinas convenor Atty. Dino de Leon has called for the Senate Blue Ribbon Committee to discontinue its investigation into the flood control scandal, citing concerns that senators implicated in the controversy are" highlights concerns about political integrity and institutional independence in anti-corruption efforts.
+[SPRINT: research] @bncdotph's post "FINLIT EXPERT: DON’T TAKE ONLINE LIFESTYLES AT FACE VALUE Social media and algorithms heavily shape what we see—and how we think, spend, and compare lifestyles" directly addresses the manipulation of perception through social media and algorithms, relevant to information integrity.
+[SPRINT: research] @FurkanGozukara's post about how the "Washington establishment completely ignored the USS Liberty survivors for 59 years" exposes a historical instance of political institutions evading accountability, directly relevant to Power, Institutions, and Rule of Law.
+[SPRINT: research] @News5PH's post about "subpoena, inilabas para sa mahigit 20 personalidad kaugnay ng insidente sa aurora" highlights an ongoing demand for accountability regarding the deaths of two student-athletes, aligning with Trust in Political Institutions and Anti-Corruption Efforts.
+[SPRINT: research] @llanescajourno's post regarding the "number of votes needed to convict an impeachable official like VP Sara Duterte" touches on the procedural challenges and potential for manipulation within political accountability processes.
+[SPRINT: research] @mog_russEN's post about "UNUSUAL Ambassadors of Britain, France, and Germany have arrived at the Russian Foreign Ministry" indicates ongoing geopolitical maneuvering, relevant to Global Power Realignments and the shaping of international narratives.
+[NOTED] "Known for getting along well with everyone, the capybara was filmed this time using an armadillo almost like a vehicle" — 1 posts, no follow-up this cycle
+[NOTED] "He will never trust me again" — 1 posts, no follow-up this cycle
+[NOTED] "NAKAKITA KA NA BA NG FLYING CAR? Tuklasin ang iba pang kwento mula sa adventure ni Patroller Eryka Lucas sa 26th Hot Air Balloon sa 'Patrol on the GO.'" — 1 posts, no follow-up this cycle
+[NOTED] "KAMOT SA BIRHEN, GIKAWAT! #News5Bisaya | Gikawat sa usa ka wala pa mailhang indibidwal ang kamot sa birhen sa isang simbahan sa Dumaguete City niadtong Miyerkules, June 10." — 1 posts, no follow-up this cycle
+[NOTED] "Actress Claudine Barretto visits the wake of Rene Baterbonia" — 2 posts, no follow-up this cycle
+[NOTED] "see" — 4 posts, no follow-up this cycle
+[NOTED] "sure" — 4 posts, no follow-up this cycle
+[NOTED] "nature" — 3 posts, no follow-up this cycle
+[NOTED] "look" — 3 posts, no follow_up this cycle
+[NOTED] "watch" — 3 posts, no follow_up this cycle
+[NOTED] "Fire on board the tanker MT Jalveer off Oman" — 1 posts, no follow-up this cycle
+[NOTED] "UN Peacekeepers Day" — 1 posts, no follow-up this cycle
+[NOTED] "kitten and the whole army comes out" — 1 posts, no follow-up this cycle
+[NOTED] "senators led gatchalian visit quake hit sarangani town" - 1 post, no follow-up this cycle
+[NOTED] "Warthog escapes leopards" - 1 post, no follow-up this cycle
+[NOTED] "Chinese Taipei coach Teng Yen-Min after beating the Philippines" - 1 post, no follow-up this cycle
+[NOTED] "Clavicular's fans aren't all impressed with his new nose job" - 1 post, no follow-up this cycle
+[NOTED] "her control is amazing" - 1 post, no follow-up this cycle
+[NOTED] "Doing something kind anonymously is a power move" - 1 post, no follow-up this cycle
