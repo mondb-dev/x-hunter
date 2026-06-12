@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-12T17:22:13.991Z",
+  "generated_at": "2026-06-12T20:22:17.867Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-12T17:22:47.714Z",
+  "profiled_at": "2026-06-12T20:22:50.246Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -1938,9 +1938,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-12T15:38:19.000Z",
+      "last_seen_at": "2026-06-12T17:40:12.000Z",
       "discovery": {
-        "distinct_urls": 5177,
+        "distinct_urls": 5183,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1949,10 +1949,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3099,
-          "feed_buffer_reply": 3293
+          "feed_buffer": 3100,
+          "feed_buffer_reply": 3299
         },
-        "distinct_referring_accounts": 1763,
+        "distinct_referring_accounts": 1767,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1990,7 +1990,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5177",
+            "distinct_urls:5183",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1998,7 +1998,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1763",
+            "referring_accounts:1767",
             "origin_types:2"
           ]
         },
@@ -2028,10 +2028,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5177",
+            "distinct_urls:5183",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1763",
+            "referring_accounts:1767",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -4776,9 +4776,9 @@
       "entity": "Valvolineglobal",
       "kind": "unknown",
       "first_seen_at": "2026-04-14T18:48:55.769Z",
-      "last_seen_at": "2026-05-29T22:00:00.000Z",
+      "last_seen_at": "2026-06-12T14:31:10.000Z",
       "discovery": {
-        "distinct_urls": 12,
+        "distinct_urls": 13,
         "example_urls": [
           "https://www.valvolineglobal.com/en/fifa-national-sweeps/?utm_source=X&utm_medium=paidsocial&utm_campaign=WC26_GM_US_AWE&utm_content=wcsimplified&twclid=299i90helnojknptru820mqim9",
           "https://www.valvolineglobal.com/en/fifa-national-sweeps/?utm_source=X&utm_medium=paidsocial&utm_campaign=WC26_GM_US_AWE&utm_content=wcsimplified&twclid=2a6ppr0b6wqx1dzq8m3o9uf61y",
@@ -4788,7 +4788,7 @@
         ],
         "origin_counts": {
           "feed_buffer": 5,
-          "feed_buffer_reply": 7
+          "feed_buffer_reply": 8
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -4819,7 +4819,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:12",
+            "distinct_urls:13",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4853,11 +4853,11 @@
         },
         "overall": {
           "score": 0.43875,
-          "confidence": 0.4167,
+          "confidence": 0.4392,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:12",
+            "distinct_urls:13",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -5538,6 +5538,133 @@
       }
     },
     {
+      "domain": "fundrise.com",
+      "entity": "Fundrise",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-14T21:28:55.961Z",
+      "last_seen_at": "2026-06-11T19:38:36.000Z",
+      "discovery": {
+        "distinct_urls": 10,
+        "example_urls": [
+          "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=286j5mjx6wqmg12vs5jto11lrf",
+          "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=2e01hfcn4gc54bzd6xhwt5qtv",
+          "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=2bj6f6zj7bywjaibg5cifzrd5f",
+          "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=23a9g5kkryfw8conf2waatbcon",
+          "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=2admlw1gopcvymq1zlkn0uqkq9"
+        ],
+        "origin_counts": {
+          "feed_buffer": 3,
+          "feed_buffer_reply": 7
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "fundrise"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.4116666666666667,
+          "basis": [
+            "distinct_urls:10",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.42598958333333337,
+          "confidence": 0.35945000000000005,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:10",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-11T13:50:11.785Z",
+        "homepage_url": "https://fundrise.com/",
+        "example_url": "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=286j5mjx6wqmg12vs5jto11lrf",
+        "homepage_status": 405,
+        "example_status": 405,
+        "homepage_final_url": "https://fundrise.com/",
+        "example_final_url": "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=286j5mjx6wqmg12vs5jto11lrf",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "xhawk.ai",
       "entity": "Xhawk Ai",
       "kind": "unknown",
@@ -5915,133 +6042,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 76,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "fundrise.com",
-      "entity": "Fundrise",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-14T21:28:55.961Z",
-      "last_seen_at": "2026-06-10T09:51:34.000Z",
-      "discovery": {
-        "distinct_urls": 9,
-        "example_urls": [
-          "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=286j5mjx6wqmg12vs5jto11lrf",
-          "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=2e01hfcn4gc54bzd6xhwt5qtv",
-          "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=2bj6f6zj7bywjaibg5cifzrd5f",
-          "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=23a9g5kkryfw8conf2waatbcon",
-          "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=2admlw1gopcvymq1zlkn0uqkq9"
-        ],
-        "origin_counts": {
-          "feed_buffer": 3,
-          "feed_buffer_reply": 6
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "fundrise"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.38249999999999995,
-          "basis": [
-            "distinct_urls:9",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.419609375,
-          "confidence": 0.330825,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:9",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-11T13:50:11.785Z",
-        "homepage_url": "https://fundrise.com/",
-        "example_url": "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=286j5mjx6wqmg12vs5jto11lrf",
-        "homepage_status": 405,
-        "example_status": 405,
-        "homepage_final_url": "https://fundrise.com/",
-        "example_final_url": "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=286j5mjx6wqmg12vs5jto11lrf",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -7779,7 +7779,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T19:49:23.255Z",
+        "fetched_at": "2026-06-12T19:52:46.319Z",
         "homepage_url": "https://spacex.com/",
         "example_url": "https://shop.spacex.com/products/spacex-mission-ready-sunglasses?variant=44537843744847&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44537843744847&twclid=298d45vmtw4pu78lan6k2cs4ha",
         "homepage_status": 200,
@@ -8952,9 +8952,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-16T09:36:45.269Z",
-      "last_seen_at": "2026-06-11T17:44:49.545Z",
+      "last_seen_at": "2026-06-12T18:10:30.701Z",
       "discovery": {
-        "distinct_urls": 65,
+        "distinct_urls": 66,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -8963,7 +8963,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 65
+          "articles": 66
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -8992,7 +8992,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:65",
+            "distinct_urls:66",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -9030,7 +9030,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:65",
+            "distinct_urls:66",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -46982,7 +46982,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T16:49:23.587Z",
+        "fetched_at": "2026-06-12T18:22:44.588Z",
         "homepage_url": "https://a24films.com/",
         "example_url": "https://app.a24films.com/ticketing/backrooms/522?twclid=24mghux79f287c9u7b5rd948i5",
         "homepage_status": 200,
@@ -47104,7 +47104,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T17:19:19.840Z",
+        "fetched_at": "2026-06-12T18:22:44.982Z",
         "homepage_url": "https://inthegrey.film/",
         "example_url": "https://inthegrey.film/?twclid=27f088zf1o715tosep9p3mwxjy",
         "homepage_status": 200,
@@ -47226,7 +47226,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T17:19:20.208Z",
+        "fetched_at": "2026-06-12T18:22:45.354Z",
         "homepage_url": "https://freeflickfootball.com/",
         "example_url": "https://www.freeflickfootball.com/?twclid=25ot3m51mdmkvdjc3db1ukp3j7",
         "homepage_status": 200,
@@ -47348,7 +47348,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T17:19:20.756Z",
+        "fetched_at": "2026-06-12T18:22:45.910Z",
         "homepage_url": "https://ai-scanclaw.org/",
         "example_url": "https://ai-scanclaw.org/?twclid=2eknfzk2d9zgxwrsorj3rgjr03",
         "homepage_status": null,
@@ -47470,7 +47470,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T17:19:21.764Z",
+        "fetched_at": "2026-06-12T18:52:45.438Z",
         "homepage_url": "https://fors.market/",
         "example_url": "https://app.fors.market/?twclid=2a9nuy5568hqmlaww5o5fyl72t",
         "homepage_status": 200,
@@ -47592,7 +47592,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T18:19:22.468Z",
+        "fetched_at": "2026-06-12T18:52:45.839Z",
         "homepage_url": "https://predle.com/",
         "example_url": "https://predle.com/?twclid=281545wq7xlj7icbrjtgmt469e",
         "homepage_status": 200,
@@ -47714,7 +47714,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T18:19:23.585Z",
+        "fetched_at": "2026-06-12T18:52:47.036Z",
         "homepage_url": "https://republicen.org/",
         "example_url": "https://republicen.org/petition-x?twclid=2euy6ki9rbdehj6wv2ogyto6xe",
         "homepage_status": 200,
@@ -47836,7 +47836,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T18:19:24.340Z",
+        "fetched_at": "2026-06-12T18:52:47.525Z",
         "homepage_url": "https://coinversa.ai/",
         "example_url": "https://developers.coinversa.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=developer_api&utm_content=mcp_native&twclid=2124p9kgv52anecn3ksmek81n4",
         "homepage_status": 200,
@@ -47958,7 +47958,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T18:19:25.387Z",
+        "fetched_at": "2026-06-12T19:52:46.878Z",
         "homepage_url": "https://onrender.com/",
         "example_url": "https://editedmusic.onrender.com/?twclid=2d55shf5rbth87uf35vrsj5s7v",
         "homepage_status": 200,
@@ -48080,7 +48080,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T18:49:23.906Z",
+        "fetched_at": "2026-06-12T19:52:48.914Z",
         "homepage_url": "https://nintendo.com/",
         "example_url": "https://nintendo.com/us/store/products/nero-and-sci-integral-edition-switch?utm_source=X&utm_campaign=PreorderDesktop&utm_medium=ads&utm_content=Math_Variant_2&twclid=22ctbnud22bkdyu2z78mundbwr",
         "homepage_status": 200,
@@ -48202,7 +48202,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T18:49:24.084Z",
+        "fetched_at": "2026-06-12T19:52:49.074Z",
         "homepage_url": "https://pocketchange.gg/",
         "example_url": "https://pocketchange.gg/?utm_source=x&utm_medium=paid_social&utm_campaign=pc_4&utm_content=adgroup_1_ambassador_v3&pcid=pc4_ag1_ambassador_v4&twclid=22ov7ac68spfwo58x5g8njetfs",
         "homepage_status": 403,
@@ -48295,14 +48295,14 @@
           ]
         },
         "profile": {
-          "score": 0.27,
+          "score": 0.15000000000000002,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:true",
             "about:false",
-            "contact:true",
+            "contact:false",
             "corrections:false",
             "outbound_links:5",
             "opinion_marker:false"
@@ -48324,7 +48324,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T18:49:24.566Z",
+        "fetched_at": "2026-06-12T20:22:47.124Z",
         "homepage_url": "https://advanced.gg/",
         "example_url": "https://advanced.gg/pages/partner-with-advanced?twclid=2cguzkxfmrovj5lb0v799o9ghh",
         "homepage_status": 200,
@@ -48338,9 +48338,9 @@
           "has_published_time": false,
           "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 6,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -48446,7 +48446,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T18:49:24.756Z",
+        "fetched_at": "2026-06-12T20:22:47.414Z",
         "homepage_url": "https://capcut.sale/",
         "example_url": "https://capcut.sale/?twclid=2e7i6xy6uufbldu6noghw4cl3i",
         "homepage_status": 403,
@@ -48568,7 +48568,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T19:49:26.543Z",
+        "fetched_at": "2026-06-12T20:22:49.445Z",
         "homepage_url": "https://wyndo.app/",
         "example_url": "https://wyndo.app/?utm_source=x&utm_medium=cpc&utm_campaign=decision_v1&twclid=24etrz18sq5o4juq6q7x1p396f",
         "homepage_status": 200,
@@ -48690,7 +48690,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T19:49:27.461Z",
+        "fetched_at": "2026-06-12T20:22:50.246Z",
         "homepage_url": "https://chinaswaronfaith.com/",
         "example_url": "https://chinaswaronfaith.com/?twclid=27lzeeef43quvbjv0jkjqwy5ya",
         "homepage_status": 200,
