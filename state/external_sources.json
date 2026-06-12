@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-12T05:52:33.468Z",
+  "generated_at": "2026-06-12T08:22:04.673Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-12T05:53:03.574Z",
+  "profiled_at": "2026-06-12T08:22:35.345Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -1938,9 +1938,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-12T04:30:00.000Z",
+      "last_seen_at": "2026-06-12T08:01:38.000Z",
       "discovery": {
-        "distinct_urls": 5156,
+        "distinct_urls": 5158,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1949,10 +1949,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3092,
-          "feed_buffer_reply": 3262
+          "feed_buffer": 3093,
+          "feed_buffer_reply": 3266
         },
-        "distinct_referring_accounts": 1759,
+        "distinct_referring_accounts": 1760,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1990,7 +1990,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5156",
+            "distinct_urls:5158",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1998,7 +1998,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1759",
+            "referring_accounts:1760",
             "origin_types:2"
           ]
         },
@@ -2028,10 +2028,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5156",
+            "distinct_urls:5158",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1759",
+            "referring_accounts:1760",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -6897,7 +6897,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T07:49:10.675Z",
+        "fetched_at": "2026-06-12T07:52:32.810Z",
         "homepage_url": "https://era.app/",
         "example_url": "https://era.app/?twclid=23bm7jtrc66pin9ydx0wvupecw",
         "homepage_status": 200,
@@ -7653,7 +7653,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T06:19:07.931Z",
+        "fetched_at": "2026-06-12T06:22:32.098Z",
         "homepage_url": "https://leronx.org/",
         "example_url": "https://leronx.org/?ref=005&tw=r84nh&tw_click=tw-r84nh-r84ni&twclid=29ffsgobmrsvjmkjlmgcllypv0",
         "homepage_status": 403,
@@ -11099,6 +11099,133 @@
       }
     },
     {
+      "domain": "smart.link",
+      "entity": "Smart Link",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-07T06:11:24.204Z",
+      "last_seen_at": "2026-06-12T03:26:01.000Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
+          "https://smart.link/sdh2x9q4dptrg?twclid=24aw0ljxdznhulueu1l8o9x2fi",
+          "https://smart.link/ogdqjam4y4mcs?twclid=2dtao7qsbh0cu3icl0wn64ffvg",
+          "https://smart.link/q693v84a2mlhw?twclid=2du2cpv4hg5bnvla5csn2ws1uc",
+          "https://smart.link/d48st4cf87ymx?twclid=22gw0y3bgoat1tou4y8uestgbv"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2,
+          "feed_buffer_reply": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "mcdonalds"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.26583333333333337,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:15",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.39408854166666674,
+          "confidence": 0.216325,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-11T04:20:02.300Z",
+        "homepage_url": "https://smart.link/",
+        "example_url": "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://smart.link/",
+        "example_final_url": "https://www.mcdonalds.com/us/en-us/download-app.html",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 15,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "github.com",
       "entity": "Github",
       "kind": "unknown",
@@ -12481,132 +12608,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 3,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "smart.link",
-      "entity": "Smart Link",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-07T06:11:24.204Z",
-      "last_seen_at": "2026-06-10T17:28:06.000Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
-          "https://smart.link/sdh2x9q4dptrg?twclid=24aw0ljxdznhulueu1l8o9x2fi",
-          "https://smart.link/ogdqjam4y4mcs?twclid=2dtao7qsbh0cu3icl0wn64ffvg",
-          "https://smart.link/q693v84a2mlhw?twclid=2du2cpv4hg5bnvla5csn2ws1uc"
-        ],
-        "origin_counts": {
-          "feed_buffer": 2,
-          "feed_buffer_reply": 2
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "mcdonalds"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.23666666666666664,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.22,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:15",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3877083333333334,
-          "confidence": 0.18769999999999998,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-11T04:20:02.300Z",
-        "homepage_url": "https://smart.link/",
-        "example_url": "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://smart.link/",
-        "example_final_url": "https://www.mcdonalds.com/us/en-us/download-app.html",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 15,
           "opinion_marker": false
         }
       }
@@ -18464,7 +18465,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T06:49:08.151Z",
+        "fetched_at": "2026-06-12T06:52:32.981Z",
         "homepage_url": "https://tolt.com/",
         "example_url": "https://tolt.com/?twclid=24jeerwwldzt1cwgx3ktzfvzm5",
         "homepage_status": 200,
@@ -24936,7 +24937,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T08:19:10.022Z",
+        "fetched_at": "2026-06-12T08:22:33.903Z",
         "homepage_url": "https://controlweedsnotfarming.com/",
         "example_url": "https://controlweedsnotfarming.com/?utm_source=X&utm_medium=Social&utm_campaign=Remarketing&utm_term=Landing+Page.+Visitors&utm_content=Food+On+Our+Tables&twclid=2ehfqrtyrcni2wc5jyzgjr19ra",
         "homepage_status": 200,
@@ -28728,7 +28729,7 @@
           ]
         },
         "profile": {
-          "score": 0.4,
+          "score": 0.41000000000000003,
           "confidence": 0.75,
           "basis": [
             "meta_author:true",
@@ -28737,7 +28738,7 @@
             "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:8",
+            "outbound_links:9",
             "opinion_marker:false"
           ]
         },
@@ -28757,7 +28758,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T06:49:08.414Z",
+        "fetched_at": "2026-06-12T06:52:33.257Z",
         "homepage_url": "https://monadicdna.com/",
         "example_url": "https://explorer.monadicdna.com/?twclid=23v8cbj938nxfoq8gmro6dqa1l",
         "homepage_status": 200,
@@ -28783,7 +28784,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 8,
+          "outbound_links_count": 9,
           "opinion_marker": false
         }
       }
@@ -29003,7 +29004,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T06:19:09.021Z",
+        "fetched_at": "2026-06-12T06:22:33.197Z",
         "homepage_url": "https://alphacapital.pro/",
         "example_url": "https://alphacapital.pro/pages/performance/?utm_source=twitter&utm_medium=ad1&utm_campaign=ac&twclid=2b8weeqkz95cs1xc59f8v2j7ob",
         "homepage_status": 200,
@@ -29126,7 +29127,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T06:49:08.879Z",
+        "fetched_at": "2026-06-12T06:52:33.565Z",
         "homepage_url": "https://willowvoice.com/",
         "example_url": "https://willowvoice.com/developers?twclid=2ebuy7l735ljqyo9xotbgwpmp0",
         "homepage_status": 200,
@@ -33946,6 +33947,129 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "coderabbit.ai",
+      "entity": "Coderabbit Ai",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-09T09:50:16.000Z",
+      "last_seen_at": "2026-06-11T12:10:02.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
+          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=289waaptg8g5p8kt9nmjdhtmdm"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "coderabbitai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-12T07:52:33.221Z",
+        "homepage_url": "https://coderabbit.ai/",
+        "example_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.coderabbit.ai/",
+        "example_final_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -39413,7 +39537,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T06:19:09.575Z",
+        "fetched_at": "2026-06-12T06:22:33.750Z",
         "homepage_url": "https://lately.com/",
         "example_url": "http://www.lately.com/?twclid=26st81se5sstdkz28lll98t6pl",
         "homepage_status": 200,
@@ -39535,7 +39659,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T06:19:10.321Z",
+        "fetched_at": "2026-06-12T06:22:34.084Z",
         "homepage_url": "https://deepgram.com/",
         "example_url": "https://deepgram.com/state-of-voice-ai-report?utm_source=twitter&utm_medium=paidsocial&utm_campaign=Twitter_ACQ_Q42025_Evergreen_Prospecting&utm_content=state-of-voice&twclid=22an8eeru83cxpws6fqbuga3v2",
         "homepage_status": 200,
@@ -39657,7 +39781,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T06:49:09.512Z",
+        "fetched_at": "2026-06-12T06:52:33.871Z",
         "homepage_url": "https://topstocks.com/",
         "example_url": "https://topstocks.com/cvkd?twclid=2br9vd88ywgw104idmz125ag0u",
         "homepage_status": 200,
@@ -40267,7 +40391,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T07:49:11.369Z",
+        "fetched_at": "2026-06-12T07:52:33.764Z",
         "homepage_url": "https://gothamist.com/",
         "example_url": "https://gothamist.com/news/mamdani-administrations-new-72nd-street-bike-lane-would-link-upper-east-and-west-sides&utm_id=571007&sfmc_id=79023345&utm_content=2026415&nypr_member=True",
         "homepage_status": 200,
@@ -40389,7 +40513,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T07:49:12.204Z",
+        "fetched_at": "2026-06-12T07:52:34.576Z",
         "homepage_url": "https://fullpath.com/",
         "example_url": "https://www.fullpath.com/ai-powered-text-message-marketing-for-car-dealers/?twclid=21jxitvmgt9jsjh3rm5bmiedxu",
         "homepage_status": 200,
@@ -40511,7 +40635,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T07:49:12.525Z",
+        "fetched_at": "2026-06-12T08:22:34.259Z",
         "homepage_url": "https://johnkennedy.com/",
         "example_url": "https://support.johnkennedy.com/just-a-little-quiz/?red=cbdb1d6f-e5fe-4aa4-a295-1dbdd471cee6&utm_source=X&utm_medium=Paid&utm_campaign=Quiz&twclid=27n7ucaicrd2diuikk5gsjxiza",
         "homepage_status": 200,
@@ -40613,7 +40737,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:14",
+            "outbound_links:13",
             "opinion_marker:false"
           ]
         },
@@ -40633,7 +40757,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T08:19:10.685Z",
+        "fetched_at": "2026-06-12T08:22:34.977Z",
         "homepage_url": "https://gunowners.org/",
         "example_url": "https://www.gunowners.org/?twclid=25jr1t1tq8terhv5da5ta78vcm",
         "homepage_status": 200,
@@ -40649,7 +40773,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 14,
+          "outbound_links_count": 13,
           "opinion_marker": false
         },
         "example": {
@@ -40659,7 +40783,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 14,
+          "outbound_links_count": 13,
           "opinion_marker": false
         }
       }
@@ -42219,7 +42343,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T05:19:08.461Z",
+        "fetched_at": "2026-06-12T08:22:35.345Z",
         "homepage_url": "https://magbak.com/",
         "example_url": "https://magbak.com/products/magbak-rimcase-for-tesla?utm_medium=paidsocial&utm_source=twitter&utm_campaign=ACQ_Rimcase_Q2_Budget&utm_content=54646690&twclid=2f5a650s5ao8hxxgjocovvxdyk",
         "homepage_status": 200,
@@ -58816,83 +58940,6 @@
       }
     },
     {
-      "domain": "coderabbit.ai",
-      "entity": "Coderabbit Ai",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-09T09:50:16.000Z",
-      "last_seen_at": "2026-06-09T09:50:16.000Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "coderabbitai"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
       "domain": "fly.io",
       "entity": "Fly Io",
       "kind": "unknown",
@@ -59217,6 +59264,83 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "amukrcommittee"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "lookforther.realtor",
+      "entity": "Lookforther Realtor",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-12T02:00:01.000Z",
+      "last_seen_at": "2026-06-12T02:00:01.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://lookforther.realtor/?CID=psm_CAC_X_IF_ETHICS&twclid=22auirinqzzr62nnn2m30ol8h8"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "realtors"
         ],
         "distinct_axes": []
       },
