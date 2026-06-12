@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-12T08:22:04.673Z",
+  "generated_at": "2026-06-12T11:22:08.119Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-12T08:22:35.345Z",
+  "profiled_at": "2026-06-12T11:22:38.143Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -1938,9 +1938,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-12T08:01:38.000Z",
+      "last_seen_at": "2026-06-12T11:05:51.000Z",
       "discovery": {
-        "distinct_urls": 5158,
+        "distinct_urls": 5165,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1950,7 +1950,7 @@
         ],
         "origin_counts": {
           "feed_buffer": 3093,
-          "feed_buffer_reply": 3266
+          "feed_buffer_reply": 3278
         },
         "distinct_referring_accounts": 1760,
         "sample_referring_accounts": [
@@ -1990,7 +1990,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5158",
+            "distinct_urls:5165",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2028,7 +2028,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5158",
+            "distinct_urls:5165",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1760",
@@ -14840,7 +14840,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T09:19:10.995Z",
+        "fetched_at": "2026-06-12T09:22:36.731Z",
         "homepage_url": "https://mexc.com/",
         "example_url": "https://www.mexc.com/register?utm_source=brandad&utm_medium=twitter&utm_campaign=pizza_register&twclid=22vw5h310hr1lnaz6krw03u5v2",
         "homepage_status": 200,
@@ -16490,6 +16490,130 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 3,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "foreigninterference.org",
+      "entity": "Foreigninterference",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-12T09:22:00Z",
+      "last_seen_at": "2026-06-12T09:24:20.524Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://foreigninterference.org/p/cia-disinformation-operations-compromise",
+          "https://foreigninterference.org/p/foreign-state-actors-deploy-ai-enhanced"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 1,
+          "journals": 2
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_political_trust_corruption_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.23666666666666664,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:1",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.14,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3775520833333333,
+          "confidence": 0.11044999999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:1",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-12T09:52:36.950Z",
+        "homepage_url": "https://foreigninterference.org/",
+        "example_url": "https://foreigninterference.org/p/cia-disinformation-operations-compromise",
+        "homepage_status": 200,
+        "example_status": 404,
+        "homepage_final_url": "https://foreigninterference.org/",
+        "example_final_url": "https://foreigninterference.org/p/cia-disinformation-operations-compromise",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 2,
           "opinion_marker": false
         },
         "example": {
@@ -20123,6 +20247,132 @@
       }
     },
     {
+      "domain": "betterstack.com",
+      "entity": "Betterstack",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-16T09:46:55.000Z",
+      "last_seen_at": "2026-06-10T17:19:46.000Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://betterstack.com/incident-management?twclid=23e9xf4wt9fpugvwab34523yyy",
+          "https://betterstack.com/vs-datadog?twclid=2efierv2a67y6kjxnmf4n7nhlj",
+          "https://betterstack.com/vs-datadog?twclid=29p5h4eg2pivfadeywmumlogay",
+          "https://betterstack.com/vs-datadog?twclid=27qhom05i4d7bsrr2yolyftopo",
+          "https://betterstack.com/vs-datadog?twclid=26z7313uy2ftln7dc3uekxemov"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 5
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "betterstackhq"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.20583333333333334,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:18",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.37276041666666665,
+          "confidence": 0.19585000000000002,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-11T04:50:04.526Z",
+        "homepage_url": "https://betterstack.com/",
+        "example_url": "https://betterstack.com/incident-management?twclid=23e9xf4wt9fpugvwab34523yyy",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://betterstack.com/",
+        "example_final_url": "https://betterstack.com/incident-management?twclid=23e9xf4wt9fpugvwab34523yyy",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 19,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 18,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "propercloth.com",
       "entity": "Propercloth",
       "kind": "unknown",
@@ -22366,131 +22616,6 @@
       }
     },
     {
-      "domain": "betterstack.com",
-      "entity": "Betterstack",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-16T09:46:55.000Z",
-      "last_seen_at": "2026-06-10T01:00:01.000Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://betterstack.com/incident-management?twclid=23e9xf4wt9fpugvwab34523yyy",
-          "https://betterstack.com/vs-datadog?twclid=2efierv2a67y6kjxnmf4n7nhlj",
-          "https://betterstack.com/vs-datadog?twclid=29p5h4eg2pivfadeywmumlogay",
-          "https://betterstack.com/vs-datadog?twclid=27qhom05i4d7bsrr2yolyftopo"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 4
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "betterstackhq"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.17666666666666664,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.22,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:18",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3663802083333333,
-          "confidence": 0.16722499999999998,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-11T04:50:04.526Z",
-        "homepage_url": "https://betterstack.com/",
-        "example_url": "https://betterstack.com/incident-management?twclid=23e9xf4wt9fpugvwab34523yyy",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://betterstack.com/",
-        "example_final_url": "https://betterstack.com/incident-management?twclid=23e9xf4wt9fpugvwab34523yyy",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 19,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 18,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "angel.com",
       "entity": "Angel",
       "kind": "unknown",
@@ -23326,7 +23451,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T09:19:11.219Z",
+        "fetched_at": "2026-06-12T09:22:37.051Z",
         "homepage_url": "https://abs-cbn.com/",
         "example_url": "https://news.abs-cbn.com/news/2026/06/09/nbi-dismisses-kickback-claims-as-hearsay",
         "homepage_status": 403,
@@ -26425,7 +26550,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T11:19:14.289Z",
+        "fetched_at": "2026-06-12T11:22:37.225Z",
         "homepage_url": "https://microsoft.com/",
         "example_url": "https://aiskillsnavigator.microsoft.com/playlists/precreated/precreatedplaylist-5c7b0157552e5e3c61288a3e006a0769d854dc7f8417860644dad0857f93285e",
         "homepage_status": 200,
@@ -30357,7 +30482,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T09:49:11.601Z",
+        "fetched_at": "2026-06-12T09:52:37.649Z",
         "homepage_url": "https://genesissystems.com/",
         "example_url": "https://www.genesissystems.com/contact?utm_source=x&utm_campaign=genericwebtrafficdavead4-4-26&twclid=2av31c1xlvmnruxepagyndsvf6",
         "homepage_status": 200,
@@ -42465,7 +42590,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T05:19:08.676Z",
+        "fetched_at": "2026-06-12T09:22:37.260Z",
         "homepage_url": "https://etsy.com/",
         "example_url": "https://www.etsy.com/uk/listing/1660419760/personalised-bag-of-reasons-why-i-love?ref=shop_home_feat_2&sr_prefetch=1&pf_from=shop_home&pro=1&sts=1&logging_key=554a7bcb2c808ecf99a9e3d68872b5af4ecb1d3f%3A1660419760&twclid=2e5zgu06991vkl8s62fs0146ic",
         "homepage_status": 403,
@@ -42587,7 +42712,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T05:19:09.359Z",
+        "fetched_at": "2026-06-12T09:22:37.772Z",
         "homepage_url": "https://sling.com/",
         "example_url": "https://www.sling.com/sports/basketball?sc=1&utm_medium=social&utm_source=x&utm_campaign=2026_q2_sling_gm_x_soc_postseason_sales&utm_content=2026_Q2_Sling_GM_X_SOC_Basketball_NBAPlayoffsv1S&twclid=2e7arnq15un6t71smhb72lns3b",
         "homepage_status": 200,
@@ -42709,7 +42834,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T08:19:10.871Z",
+        "fetched_at": "2026-06-12T09:52:37.848Z",
         "homepage_url": "https://nationwide.com/",
         "example_url": "https://nationwide.com/?twclid=294pdnbf5jdk527ocpc06sbbq6",
         "homepage_status": 403,
@@ -42831,7 +42956,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T08:19:11.085Z",
+        "fetched_at": "2026-06-12T09:52:38.075Z",
         "homepage_url": "https://lusha.com/",
         "example_url": "https://www.lusha.com/lp/revops-lp/?utm_source=X&utm_campaign=_sg__builders__all_cpc&utm_medium=cpc&twclid=2bltl6th8k2jdcashy0xeb7fqp",
         "homepage_status": 403,
@@ -42953,7 +43078,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T09:19:11.450Z",
+        "fetched_at": "2026-06-12T10:52:36.462Z",
         "homepage_url": "https://bitcoinmagazine.com/",
         "example_url": "https://bitcoinmagazine.com/sponsored/how-does-borrowing-against-bitcoin-actually-work?twclid=2a0s8fadkcmnax1qcvr537zyb6",
         "homepage_status": 200,
@@ -43075,7 +43200,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T09:19:11.668Z",
+        "fetched_at": "2026-06-12T10:52:36.691Z",
         "homepage_url": "https://strategy.com/",
         "example_url": "https://www.strategy.com/strc/learn?utm_source=xads&utm_medium=paid_display&utm_campaign=industry_april&twclid=28xpw7etvxzmes0ivvfppcbml4",
         "homepage_status": 403,
@@ -43197,7 +43322,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T09:49:11.875Z",
+        "fetched_at": "2026-06-12T10:52:36.945Z",
         "homepage_url": "https://masterpics.com/",
         "example_url": "https://masterpics.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=TW_MP_US_Mday_26_videos&twclid=29m23hby3m62dvvffl6do9x4mo",
         "homepage_status": 200,
@@ -43319,7 +43444,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T09:49:12.683Z",
+        "fetched_at": "2026-06-12T10:52:38.228Z",
         "homepage_url": "https://up-nstranscontinental.com/",
         "example_url": "https://www.up-nstranscontinental.com/?utm_source=x&utm_medium=paid_social&utm_campaign=national_phase2&utm_content=pro_business&twclid=23k0v948320d3qk6vqkggc73ru",
         "homepage_status": null,
@@ -43441,7 +43566,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T09:49:13.014Z",
+        "fetched_at": "2026-06-12T11:22:37.539Z",
         "homepage_url": "https://lets.shop/",
         "example_url": "https://lets.shop/2948/FuelGoodFeelGood-TW-ATT/?utm_medium=social&utm_source=twitter&utm_campaign=1H26_FGFG&utm_content=FGFG&utm_term=Native&twclid=2738mck7r6rdjnyker6nhf1z82",
         "homepage_status": 200,
@@ -43563,7 +43688,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T10:49:13.166Z",
+        "fetched_at": "2026-06-12T11:22:37.725Z",
         "homepage_url": "https://fulfil.io/",
         "example_url": "https://www.fulfil.io/merchants/dbrand/?twclid=243ecvpsf0p6ki2xlq4h98ksb7",
         "homepage_status": 403,
@@ -43685,7 +43810,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-09T10:49:13.517Z",
+        "fetched_at": "2026-06-12T11:22:38.143Z",
         "homepage_url": "https://proudpatriots.com/",
         "example_url": "https://proudpatriots.com/pages/200-page-america-s-250th-anniversary-coffee-table-book-v2?utm_source=twitter-ads&utm_campaign=41258612&utm_content=NewAmerica250BookRound2Image2&twt_id=54708689&twclid=25tg7sp10bjjfr42szs9p9jca",
         "homepage_status": 200,

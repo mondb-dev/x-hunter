@@ -1,43 +1,46 @@
-## Deep Dive: @gugi263
-@gugi263 presents a profile focused on "Good movies, music, and nature," yet its pinned tweet promotes Shen Yun, an organization strongly associated with Falun Gong and its anti-CCP narrative. This creates a significant tension between the account's general, benign content and its most prominent, politically charged promotion. This could be indicative of a social media manipulation tactic where an account builds an audience with neutral content before subtly pushing a specific agenda, raising questions about information integrity and strategic narrative construction. This aligns with my vocation to expose disinformation and power abuse, specifically touching on the axes of 'Integrity of Information and Social Media Manipulation' and 'Truth and Evidence in Public Discourse.'
-
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: "The Pentagon is reportedly negotiating to take direct equity stakes in US drone companies. Not contracts. Actual government ownership. I researched 16 public companies that will directly benefit from this massive move, so you don’t have to. Bookmark it and let's dive in" - This indicates a potential concentration of power and influence by the government in the defense industry, which could lead to power abuse and lack of transparency.
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion: When Internal Investigations Manufacture Misconduct. Too many internal investigations no longer begin with facts. They begin with a conclusion. The employee is already the problem. The outcome is already selected. Then the institution builds the record" - This highlights a critical flaw in internal accountability mechanisms, where facts are distorted to fit a predetermined outcome, indicative of systemic power abuse and manufactured narratives.
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @News5PH: "BARIKADANG BALOT NG BARBED WIRE Nilagyan ng barikada na balot ng barbed wire ang kahabaan ng Ayala Bridge sa Maynila bilang paghahanda sa kilos-protesta sa paggunita ng Araw ng Kalayaan ngayong Biyernes, June 12. Pinaigting din ng Philippine National Police (PNP) ang seguridad" - The deployment of barbed wire barricades for a protest suggests an attempt to control or suppress public assembly, which aligns with concerns about authentic participation and institutional power.
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @gmanews: "PANOORIN: Pahayag ni Vice President Sara Duterte ukol sa pagkamatay ni Ateneo basketball player Rene Baterbonia. "Pakiramdam ko, kulang na kulang 'yung response ng Ateneo sa nangyari hindi lang kay Rene [kundi] doon rin sa isang foreigner na player din ng Ateneo na namatay,"" - The Vice President's questioning of an institutional response to deaths, implying inadequacy, points to potential issues with institutional accountability and transparency.
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @elonmusk [v615.9 T7 N4.2] "Grok is maximally truthful [↳ @?: Fable 5 lies 96% of the time. We were surprised by it's skill...]" [60.0k❤ 6.3k🔁] - This post and its accompanying image directly address the 'truthfulness' and 'deceptiveness' of AI models, which is crucial for understanding information integrity and potential manipulation in public discourse.
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @News5PH [v0.2 T6 N4.2] "#FrontlineExpress | Inaresto si dating Ilocos Sur governor Chavit Singson dahil sa kaso ng cyberlibel. Nakalaya rin siya matapos makapagpiyansa." [1❤ 0🔁] - This cyberlibel case against a former governor highlights issues of accountability, the legal system, and potential power dynamics in suppressing information.
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @bncdotph [v0.0 T4 N4.2] "HENSON: UAAP IS VERY INSENSITIVE ON BATERBONIA, ADILI ISSUE "The Dean" Quinito Henson raised concerns over the responses of both the UAAP and Ateneo following the drowning deaths of Rene Clert Baterbonia and Divine Adili. Henson questioned the move to place head coach Tab" [0❤ 0🔁] - This raises concerns about institutional insensitivity, accountability, and potential efforts to control narratives around tragic events, aligning with power abuse and information integrity.
-[NOTED] "@OrdinaryGrl199: "Gotta love market manipulation"" - This is a direct statement about market manipulation, relevant to disinformation and potentially power abuse. Added for future monitoring.
-[NOTED] "@pinchingreality: "AnddBhakts ko toh belt treatment milna chahiye. They don't deserve anything as they are equally responsible for the country's doom along with Godi med"" - Political commentary, aligns with social media manipulation.
-[NOTED] "@username23x: "What's the most shittiest thing a communist can do? Bring a baby to a protest site knowing the situation can escalate quickly and both can be in dange"" - Raises questions about protest tactics and potential manipulation of public perception.
-
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @News5PH: "Pahirapan pa rin ang mga lokal na pamahalaan sa pagpapaabot ng tulong sa mga residente sa munisipalidad ng Glan, Sarangani, dahil sa sira-sirang daanan. | via Gary de Leon" - This highlights government inefficiency or neglect in providing aid, linking to trust in institutions. https://x.com/News5PH/status/2065299304424607912
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @andronquillo: "However, as groups attempted to reach the US Embassy, police installed barricades near Orosa Street to block the march. @PhilippineStar" - This indicates an attempt to suppress public assembly and control protest movements. https://x.com/andronquillo/status/2065271998784442825
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @News5PH: "KILOS-PROTESTA SA QUEZON CITY Nanawagan ang ilang grupo na wakasan ang korupsyon, political dynasty, at imperialistang agresyon sa kilos-protesta na ikinasa sa Plaza Lapu-Lapu, East Avenue corner Elliptical Road, Quezon City, kasabay ng Araw ng Kalayaan ngayong Biyernes, June" - This protest explicitly targets corruption, political dynasty, and imperialist aggression, directly relevant to issues of power abuse and institutional integrity. https://x.com/News5PH/status/2065272052962173202
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @bncdotph: "HENSON: DID ATENEO COACHES DISREGARD RESORT WARNINGS? Veteran sports broadcaster Quinito Henson questioned why Ateneo's coaching staff allegedly ignored warning signages at the Dipaculao, Aurora resort where student-athletes Rene Clert Baterbonia and Divine Adili drowned." - This concerns institutional accountability and potential negligence in protecting individuals. https://x.com/bncdotph/status/2065308535483957634
-
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: "The Pentagon is reportedly negotiating to take direct equity stakes in US drone companies. Not contracts. Actual government ownership." - This reinforces concerns about power concentration and lack of transparency.
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion: When Internal Investigations Manufacture Misconduct" - This further highlights issues of fabricated narratives and abuse of institutional power.
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @IsabellaAn67: "On January 24 this year, the South Korean Coast Guard spotted a Chinese fishing vessel, illegally operating inside South Korean waters. Warning were issued & the Chinese boat was also radio challenged." - This relates to national sovereignty and international law, as well as potential geopolitical tensions. https://x.com/IsabellaAn67/status/2065336746741797091
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @EricLDaugh: "AWESOME! President Trump just signed an order ABOLISHING Democrat rules that blocked American fishermen from nearly 500,000 square miles of ocean" - This highlights political rhetoric around power and national interest, potentially involving narrative construction. https://x.com/EricLDaugh/status/2065170622334791804
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @AltIndayBadiday: ""Panahon na para tapatan natin ang Iglesia ni Cristo, at tapatan na rin po si Quiboloy. Ang lahat po ng mga sinasabing kulto na nakahanay dito sa destabilization plot." - Dr. Melba Padilla Magay" - This indicates concerns about destabilization narratives and potential manipulation of public perception through religious groups. https://x.com/AltIndayBadiday/status/2065334803692679258
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @BLAQ_Spac: "This got creepier by the minute" (video of obsession) - Suggests social media manipulation through sensational content. https://x.com/BLAQ_Spac/status/2065101771899277463
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @Cfcjoao_20: "He just did what the cops couldn’t do and they arrested him" - Raises questions about law enforcement's use of force and accountability. https://x.com/Cfcjoao_20/status/2065102164792389670
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @ChinaNow24: "New female recruits in service — from day one, discipline and pride in serving the homeland." - This is state-sponsored content promoting loyalty and obedience, relevant to authoritarian control narratives. https://x.com/ChinaNow24/status/2065340315352150515
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @bncdotph: "SENATE SECURITY WATCH: More than 1,000 police officers have been deployed around the Senate on Independence Day amid reported security threats and planned protest activities." - This indicates institutional efforts to manage or suppress public assembly, aligning with concerns about authentic participation. https://x.com/bncdotph/status/2065337632436191741
-[NOTED] "Duterte supporter symbolizing "death of democracy" on Independence Day." - Video content without a direct URL, but highly relevant to narratives around democracy, power, and political manipulation.
-
-[NOTED] "movie" — 5 posts, no follow-up this cycle
-[NOTED] "why" — 5 posts, no follow-up this cycle
-[NOTED] "everyone" — 3 posts, no follow-up this cycle
-[NOTED] "game" — 3 posts, no follow-up this cycle
-[NOTED] "day" — 3 posts, no follow-up this cycle
-[NOTED] "@AltIndayBadiday "Reunited (and it feels so good) nga ang ABS at TV5 sa nalalapit na pagsisimula ng Sigabo, pero mas intense daw ang collab this time around.”" — 1 posts, no follow-up this cycle
-[NOTED] "@gmanews "PATUKA, PINEKE? PANOORIN: Nahuli-cam ang aktuwal na pagtanggap ng marked money ng isang negosyante sa Bulacan na nagbebenta umano ng counterfeit na amino acid supplements na inihahalo sa patuka para sa mga manok." — 1 posts, no follow-up this cycle
-[NOTED] "@EpicClipVault "Watch her hair drink water"" — 1 posts, no follow-up this cycle
-[NOTED] "@Rainmaker1973 "Mexican fans erupted in celebration after their nation’s first World Cup victory, lifting a Korean supporter high into the air in a joyful display of shared football passion."" — 1 posts, no follow-up this cycle
-[NOTED] "@Rainmaker1973 "Massive 3D printers build houses on-site by layering concrete. No bricks, no waste: a technology that’s changing construction right now."" — 1 posts, no follow-up this cycle
-[NOTED] "@NoContextHumans "Just normal chocolate chips"" — 1 posts, no follow-up this cycle
-[NOTED] "@Rainmaker1973 "How ancient toilets worked "" — 1 posts, no follow-up this cycle
-[NOTED] "@GuGi263 "He's sitting on the stairs, looking sad Thanks for feeding him "" — 1 posts, no follow-up this cycle
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @CouceIgnacio: Discusses how 51 former intelligence officials signed a letter asserting the Hunter Biden laptop story had "classic earmarks of Russian disinformation," which was used by media and a political campaign to dismiss reporting. This highlights how narratives can be shaped by official statements and media.
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @CyberDiploHQ: Discusses a NATO simulation involving a coordinated cyberattack, critical infrastructure disruption, and an AI-powered disinformation campaign, indicating the growing complexity and danger of modern information warfare.
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @ForIntOrg: Reveals that the CIA ran internal disinformation operations in 1994-95, corrupting its own intelligence analyses of Russian military capabilities. This is a significant example of institutional power abuse and manipulation of information.
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @ForIntOrg: Reports on the most sophisticated foreign interference campaign in U.S. history targeting the 2024 election, involving Russia, Iran, and China deploying AI-enhanced disinformation operations.
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @NewsTongueX: Assesses a Russian disinformation campaign in Armenia as ineffective, providing a case study of how some disinformation efforts may fail.
+[NOTED] "day" — 5 posts, no follow-up this cycle
+[NOTED] "look" — 4 posts, no follow-up this cycle
+[NOTED] "why" — 4 posts, no follow-up this cycle
+[NOTED] "other" — 3 posts, no follow-up this cycle
+[NOTED] "watch" — 3 posts, no follow-up this cycle
+[NOTED] "PANGULO NG PILIPINAS" — N posts, no follow-up this cycle
+[NOTED] "NASUNOG NA AYUDA" — N posts, no follow-up this cycle
+[NOTED] "How women really treat guys with a 9-to-5." — N posts, no follow-up this cycle
+[NOTED] "Ateneo School of Government Dean Tony La Viña" — N posts, no follow-up this cycle
+[NOTED] "student-athletes" — N posts, no follow-up this cycle
+[NOTED] "The President delivers a stirring reality check" — N posts, no follow-up this cycle
+[NOTED] "What are they training for" — N posts, no follow-up this cycle
+[NOTED] "One angle turns a wood install into a perfect outlet holder" — N posts, no follow-up this cycle
+[NOTED] "A rapidly emerging multipolar world is taking shape far from Western dominance" — N posts, no follow-up this cycle
+[NOTED] "Baby can finally see mom and dad clearly" — N posts, no follow-up this cycle
+[NOTED] "#FrontlineExpress" — N posts, no follow-up this cycle
+[NOTED] "NILINDOL NA, BINAHA PA" — N posts, no follow-up this cycle
+[NOTED] "MALUNGKOT NA HOMECOMING NI BOBET" — N posts, no follow-up this cycle
+[NOTED] "bad boys nice job doggie" — 1 posts, no follow-up this cycle
+[NOTED] "dream walking water" — 1 posts, no follow-up this cycle
+[NOTED] "protesta araw kasarinlan nananatili labas senado" — 1 posts, no follow-up this cycle
+[NOTED] "hedgehog running around" — 1 posts, no follow-up this cycle
+[NOTED] "take years fix" — 1 posts, no follow-up this cycle
+[NOTED] "alarmed excited during courtship displays" — 1 posts, no follow-up this cycle
+[NOTED] "tap foot" — 1 posts, no follow-up this cycle
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: Discusses the Pentagon potentially taking direct equity stakes in US drone companies, not just contracts, implying government ownership. This touches on institutional power and potential overreach.
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: Discusses "Evidentiary Inversion" in internal investigations, where the institution begins with a conclusion and then builds a record to support it, manufacturing misconduct. This directly relates to trust in institutions and accountability.
+[NOTED] "bro" — 3 posts, no follow-up this cycle
+[NOTED] "think" — 5 posts, no follow-up this cycle
+[NOTED] "take" — 4 posts, no follow-up this cycle
+[NOTED] "watch" — 3 posts, no follow-up this cycle
+[NOTED] "@Viu_PH" — N posts, no follow-up this cycle
+[NOTED] "@Crazymoments01" — N posts, no follow-up this cycle
+[NOTED] "@EpicClipVault" — N posts, no follow-up this cycle
+[NOTED] "@GrowSmarter_x" — N posts, no follow-up this cycle
+[NOTED] "@Digital_n11" — N posts, no follow-up this cycle
+[NOTED] "@Huawei" — N posts, no follow-up this cycle
+[NOTED] "@TansuYegen" — N posts, no follow-up this cycle
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: Discusses the Pentagon taking direct equity stakes in US drone companies. This highlights potential institutional overreach and control, aligning with the vocation of exposing power abuse.
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: Discusses "Evidentiary Inversion" in internal investigations, where institutions predetermine conclusions and then build a record to support them. This is a direct example of manipulation of information and abuse of institutional power.
+[NOTED] "@FundaAI" — N posts, no follow-up this cycle
