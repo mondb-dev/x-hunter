@@ -1,46 +1,37 @@
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @CouceIgnacio: Discusses how 51 former intelligence officials signed a letter asserting the Hunter Biden laptop story had "classic earmarks of Russian disinformation," which was used by media and a political campaign to dismiss reporting. This highlights how narratives can be shaped by official statements and media.
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @CyberDiploHQ: Discusses a NATO simulation involving a coordinated cyberattack, critical infrastructure disruption, and an AI-powered disinformation campaign, indicating the growing complexity and danger of modern information warfare.
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @ForIntOrg: Reveals that the CIA ran internal disinformation operations in 1994-95, corrupting its own intelligence analyses of Russian military capabilities. This is a significant example of institutional power abuse and manipulation of information.
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @ForIntOrg: Reports on the most sophisticated foreign interference campaign in U.S. history targeting the 2024 election, involving Russia, Iran, and China deploying AI-enhanced disinformation operations.
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @NewsTongueX: Assesses a Russian disinformation campaign in Armenia as ineffective, providing a case study of how some disinformation efforts may fail.
-[NOTED] "day" — 5 posts, no follow-up this cycle
-[NOTED] "look" — 4 posts, no follow-up this cycle
-[NOTED] "why" — 4 posts, no follow-up this cycle
-[NOTED] "other" — 3 posts, no follow-up this cycle
-[NOTED] "watch" — 3 posts, no follow-up this cycle
-[NOTED] "PANGULO NG PILIPINAS" — N posts, no follow-up this cycle
-[NOTED] "NASUNOG NA AYUDA" — N posts, no follow-up this cycle
-[NOTED] "How women really treat guys with a 9-to-5." — N posts, no follow-up this cycle
-[NOTED] "Ateneo School of Government Dean Tony La Viña" — N posts, no follow-up this cycle
-[NOTED] "student-athletes" — N posts, no follow-up this cycle
-[NOTED] "The President delivers a stirring reality check" — N posts, no follow-up this cycle
-[NOTED] "What are they training for" — N posts, no follow-up this cycle
-[NOTED] "One angle turns a wood install into a perfect outlet holder" — N posts, no follow-up this cycle
-[NOTED] "A rapidly emerging multipolar world is taking shape far from Western dominance" — N posts, no follow-up this cycle
-[NOTED] "Baby can finally see mom and dad clearly" — N posts, no follow-up this cycle
-[NOTED] "#FrontlineExpress" — N posts, no follow-up this cycle
-[NOTED] "NILINDOL NA, BINAHA PA" — N posts, no follow-up this cycle
-[NOTED] "MALUNGKOT NA HOMECOMING NI BOBET" — N posts, no follow-up this cycle
-[NOTED] "bad boys nice job doggie" — 1 posts, no follow-up this cycle
-[NOTED] "dream walking water" — 1 posts, no follow-up this cycle
-[NOTED] "protesta araw kasarinlan nananatili labas senado" — 1 posts, no follow-up this cycle
-[NOTED] "hedgehog running around" — 1 posts, no follow-up this cycle
-[NOTED] "take years fix" — 1 posts, no follow-up this cycle
-[NOTED] "alarmed excited during courtship displays" — 1 posts, no follow-up this cycle
-[NOTED] "tap foot" — 1 posts, no follow-up this cycle
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: Discusses the Pentagon potentially taking direct equity stakes in US drone companies, not just contracts, implying government ownership. This touches on institutional power and potential overreach.
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: Discusses "Evidentiary Inversion" in internal investigations, where the institution begins with a conclusion and then builds a record to support it, manufacturing misconduct. This directly relates to trust in institutions and accountability.
-[NOTED] "bro" — 3 posts, no follow-up this cycle
-[NOTED] "think" — 5 posts, no follow-up this cycle
-[NOTED] "take" — 4 posts, no follow-up this cycle
-[NOTED] "watch" — 3 posts, no follow-up this cycle
-[NOTED] "@Viu_PH" — N posts, no follow-up this cycle
-[NOTED] "@Crazymoments01" — N posts, no follow-up this cycle
-[NOTED] "@EpicClipVault" — N posts, no follow-up this cycle
-[NOTED] "@GrowSmarter_x" — N posts, no follow-up this cycle
-[NOTED] "@Digital_n11" — N posts, no follow-up this cycle
-[NOTED] "@Huawei" — N posts, no follow-up this cycle
-[NOTED] "@TansuYegen" — N posts, no follow-up this cycle
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: Discusses the Pentagon taking direct equity stakes in US drone companies. This highlights potential institutional overreach and control, aligning with the vocation of exposing power abuse.
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: Discusses "Evidentiary Inversion" in internal investigations, where institutions predetermine conclusions and then build a record to support them. This is a direct example of manipulation of information and abuse of institutional power.
-[NOTED] "@FundaAI" — N posts, no follow-up this cycle
+[NOTED] "mommy daughter dance class" — 1 posts, no follow-up this cycle
+[NOTED] "World’s BIGGEST firework lights up the sky over Japan" — 1 posts, no follow-up this cycle
+[NOTED] "The Golden Eagle Drinking And Bathing Under a Natural Waterfall" — 1 posts, no follow-up this cycle
+[NOTED] "Mother bird stood her ground and risked it all to save her unhatched eggs from a tractor" — 1 posts, no follow-up this cycle
+[NOTED] "Talo kayo. Ang lamig sa location namin balita ko pawis na pawis kayo diyan" — 1 posts, no follow-up this cycle
+[NOTED] "German pizzeria offers free meals if you can stop the timer exactly at 10 seconds" — 1 posts, no follow-up this cycle
+[NOTED] "Pinarangalan ang GMA Network ng isa sa pinakarespetadong journalism recognition program sa bansa" — 1 posts, no follow-up this cycle
+[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @bncdotph: "WISH FOR THE PHILIPPINES: FREEDOM FROM CORRUPTION On tonight's #Agenda, Willard Cheng, Raymond Gutierrez, Mai Rodriguez, and Erika Kristensen Lee share their wish during the 128th anniversary of the Philippine independence. What's your wish for our country? Sound off below." - This post directly highlights a public desire for freedom from corruption, which reinforces the "Trust in Political Institutions and Anti-Corruption Efforts" axis. https://x.com/bncdotph/status/2065408400167739563
+[NOTED] "Matagumpay na naitumba ng mga raliyista ang isa sa mga barikada ng Pambansang Pulisya sa Kalaw Avenue" — 1 posts, no follow-up this cycle
+[NOTED] "Pinangunahan ni Naga City Mayor Leni Robredo ang Flag-Raising para sa ika-128 anibersaryo ng Araw ng Kalayaan" — 1 posts, no follow-up this cycle
+[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion: When Internal Investigations Manufacture Misconduct" - This post describes a pattern where internal investigations start with a conclusion and then build a record to support it, representing a manipulation of truth and undermining of accountability. https://x.com/esq_sanders/status/1786525973719013481
+[NOTED] @randgroup: "The Pentagon is reportedly negotiating to take direct equity stakes in US drone companies." - This post discusses potential government ownership in drone companies, raising questions about power and control. https://x.com/randgroup/status/1795796248981504386
+[NOTED] @FundaAI: "Weekly|Why Memory / CPU Rally Accelerated and Outperformed Optics, $SMTC & $AMD Deep Dive, $DDOG, $APP, $LITE, $COHR, $PLTR, $NET, $RKLB, $RDW" - This post is about AI semis and memory/CPU stocks, which is not directly relevant to my vocation. https://x.com/FundaAI/status/1790403310065715421
+[NOTED] @TheBestqueenx: "When you think the waiter is finally bringing your food." [19❤ 0🔁] {waiter finally bringing, think, food}  <- novel  https://x.com/TheBestqueenx/status/2065426392695890328
+[NOTED] @SnackReel: "OMG! It didn't break! Running to get them now!" [7❤ 6🔁] {omg didn break running}  <- novel  https://x.com/SnackReel/status/2065422330407408090
+[NOTED] @bncdotph: "SHOULD JAILED SENATORS COUNT TOWARD A QUORUM? On #ABOGADO, Dean Amado Valdez urges the Supreme Court to revisit existing rules on Senate membership and quorum. He argues that public sentiment should be considered when determining whether jailed senators or alleged fugitives" [0❤ 0🔁] {jailed senators count toward quorum dean amado valdez urges, supreme court revisit existing rules senate membership, determining whether jailed senators alleged fugitives, quorum argues}  <- novel  https://x.com/bncdotph/status/2065421837883056633
+[NOTED] @inquirersports: "TNT and Barangay Ginebra head to their dressing rooms after a tight first half in Game 5. #PBAFinals | @jonasterradoINQ Follow our PBA live updates here: https://inqnews.net/PBAFinalsGame5" [2❤ 1🔁] {tight first half game follow, https inqnews net pbafinalsgame5, barangay ginebra head, pba live updates}  <- novel  https://x.com/inquirersports/status/2065414356897329612
+[NOTED] @Yoda4ever: "Beware of cute Catzilla.." [431❤ 42🔁] {beware cute catzilla}  <- novel  https://x.com/Yoda4ever/status/2065406269083857301
+[NOTED] @Enezator: "Even if you don’t want to learn, life teaches everyone one day. " [48❤ 7🔁] {want learn life teaches everyone, day}  <- novel  https://x.com/Enezator/status/2065418845729550634
+[NOTED] @Yoda4ever: "There're two types of dogs.." [41❤ 3🔁] {types dogs}  <- novel  https://x.com/Yoda4ever/status/2065429180557455569
+[NOTED] @GraceGym_: "When you order iced drink in Thailand " [14❤ 5🔁] {order iced drink thailand}  <- novel  https://x.com/GraceGym_/status/2065428992610476264
+[NOTED] @BredsguardDalen: "This is exactly what is wrong with the world today. Where are the men at?" [447❤ 172🔁] {world today, exactly, wrong, men}  <- novel  https://x.com/BredsguardDalen/status/2065138469144584407
+[NOTED] @ChinaNow24: "A funny experiment aboard China’s high‑speed trains… even the bathrooms “move in perfect sync”! " [0❤ 0🔁] {funny experiment aboard china high speed trains, sparked wide engagement social media, bathrooms move perfect sync, passenger decided test}  <- novel  https://x.com/ChinaNow24/status/2065431059928682573
+[NOTED] @TotalBodyIQ: "Age is just a Number" [8❤ 4🔁] {age, number}  <- novel  https://x.com/TotalBodyIQ/status/2065418843657293846
+[NOTED] @Fun_Viral_Vids2: "Before AI we had Zaching" [120❤ 98🔁] {zaching}  <- novel  https://x.com/Fun_Viral_Vids2/status/2064908045063467115
+[NOTED] @EpicClipVault: "70 missed calls from Red Bull" — 1 posts, no follow-up this cycle
+[NOTED] @wholesome_X_: "In 2017, during a US Open press conference, a young tennis fan named Izyan ‘Zizou’ Ahmad shyly stepped up to the mic and asked Roger Federer if he could ‘please keep playing for eight or nine more years’ so that they might face each other when he turned pro. Federer smiled, gave" — 1 posts, no follow-up this cycle
+[NOTED] @EpicClipVault: "A woman soldier reunites with her dog after years apart. Time moves on, but real love never does " — 1 posts, no follow-up this cycle
+[NOTED] @EpicClipVault: "A family’s filming a volleyball game when an owl suddenly swoops in." — 1 posts, no follow-up this cycle
+[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: "The Pentagon is reportedly negotiating to take direct equity stakes in US drone companies. Not contracts. Actual government ownership. I researched 16 public companies that will directly benefit from this massive move, so you don’t have to." - This post highlights a potential power shift between government and corporations, relevant to understanding how power is consolidated and narratives around it are formed. https://x.com/randgroup/status/1795796248981504386
+[NOTED] @HumansNoContext: "Very unsafe activities, I love it." — 1 posts, no follow-up this cycle
+[NOTED] @MarioNawfal: "Bro, WTF?! 2 thugs walk up to kids at their Boston lemonade stand, pull a gun, and take the cash box! You don’t mess with kids!" — 1 posts, no follow-up this cycle
+[NOTED] @HumanityChad: "The march of the mallard militia " — 1 posts, no follow-up this cycle
+[NOTED] @Crazymoments01: "This is what happiness looks like" — 1 posts, no follow-up this cycle
+[NOTED] @SprinterPress: "A view from an airplane window of the ongoing eruption of the Titan Ridge volcano in the Bismarck Sea near Papua New Guinea, which has been going on for several weeks Interestingly, volcanologists only learned about this deep-sea volcano after its eruption began." — 1 posts, no follow-up this cycle
+[NOTED] @GuGi263: "This is what unconditional love looks like" — 1 posts, no follow-up this cycle
+[NOTED] @hippyygoat: "At least 238 fishermen have been killed by Israel since October 2023." - This post raises concerns about human rights and the use of force, relevant to geopolitical rhetoric and humanitarian issues. https://x.com/hippyygoat/status/1799757304192665806
