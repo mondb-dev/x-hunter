@@ -1,156 +1,156 @@
 {
-  "checked_at": "2026-06-11T17:37:54.491Z",
-  "evidence_24h": 60,
-  "unique_sources": 38,
+  "checked_at": "2026-06-12T18:03:49.971Z",
+  "evidence_24h": 54,
+  "unique_sources": 30,
   "status": "clean",
   "alerts": [],
-  "summary": "Evidence distribution looks healthy (60 entries across 38 sources, 10 axes).",
+  "summary": "Evidence distribution looks healthy (54 entries across 30 sources, 11 axes).",
   "source_concentration": {
     "news5ph": {
       "username": "news5ph",
-      "count": 5,
-      "share": 0.083
+      "count": 8,
+      "share": 0.148
     },
-    "abscbnnews": {
-      "username": "abscbnnews",
+    "bncdotph": {
+      "username": "bncdotph",
+      "count": 6,
+      "share": 0.111
+    },
+    "gmanews": {
+      "username": "gmanews",
       "count": 4,
-      "share": 0.067
+      "share": 0.074
     },
-    "wallstreetapes": {
-      "username": "wallstreetapes",
-      "count": 4,
-      "share": 0.067
-    },
-    "ajenglish": {
-      "username": "ajenglish",
+    "adityarajkaul": {
+      "username": "adityarajkaul",
       "count": 3,
-      "share": 0.05
+      "share": 0.056
     },
-    "inquirerdotnet": {
-      "username": "inquirerdotnet",
-      "count": 3,
-      "share": 0.05
-    },
-    "acyn": {
-      "username": "acyn",
+    "evil_scott": {
+      "username": "evil_scott",
       "count": 2,
-      "share": 0.033
-    },
-    "crrja5": {
-      "username": "crrja5",
-      "count": 2,
-      "share": 0.033
+      "share": 0.037
     },
     "dimitri_salahi": {
       "username": "dimitri_salahi",
       "count": 2,
-      "share": 0.033
+      "share": 0.037
     },
-    "wingatchalian74": {
-      "username": "wingatchalian74",
+    "randgroup": {
+      "username": "randgroup",
       "count": 2,
-      "share": 0.033
+      "share": 0.037
     },
-    "unknown": {
-      "username": "unknown",
+    "calltoactivism": {
+      "username": "calltoactivism",
       "count": 2,
-      "share": 0.033
+      "share": 0.037
+    },
+    "covet_81": {
+      "username": "covet_81",
+      "count": 2,
+      "share": 0.037
+    },
+    "americapapabear": {
+      "username": "americapapabear",
+      "count": 2,
+      "share": 0.037
     }
   },
   "axis_concentration": {
     "axis_power_accountability": {
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
-      "count": 16,
-      "share": 0.267
+      "count": 18,
+      "share": 0.333
     },
     "axis_political_trust_corruption_v1": {
       "axis_id": "axis_political_trust_corruption_v1",
       "label": "Trust in Political Institutions and Anti-Corruption Efforts",
-      "count": 16,
-      "share": 0.267
+      "count": 10,
+      "share": 0.185
     },
     "axis_media_integrity_v1": {
       "axis_id": "axis_media_integrity_v1",
       "label": "Integrity of Information and Social Media Manipulation",
-      "count": 10,
-      "share": 0.167
+      "count": 8,
+      "share": 0.148
     },
-    "axis_national_sovereignty_v_intl_law_v1": {
-      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "label": "National Sovereignty vs. International Law",
+    "axis_geopolitical_rhetoric_v1": {
+      "axis_id": "axis_geopolitical_rhetoric_v1",
+      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
       "count": 5,
-      "share": 0.083
+      "share": 0.093
     },
     "axis_epistemic_integrity": {
       "axis_id": "axis_epistemic_integrity",
       "label": "Truth and Evidence in Public Discourse",
       "count": 4,
-      "share": 0.067
+      "share": 0.074
     },
-    "axis_geopolitical_rhetoric_v1": {
-      "axis_id": "axis_geopolitical_rhetoric_v1",
-      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
-      "count": 3,
-      "share": 0.05
+    "axis_collective_voice": {
+      "axis_id": "axis_collective_voice",
+      "label": "Authentic Participation vs. Managed Consent",
+      "count": 2,
+      "share": 0.037
     },
     "axis_ai_societal_impact_v1": {
       "axis_id": "axis_ai_societal_impact_v1",
       "label": "Societal Impact and Ethical Concerns of AI/Robots",
       "count": 2,
-      "share": 0.033
+      "share": 0.037
     },
     "axis_human_rights_exploitation_v1": {
       "axis_id": "axis_human_rights_exploitation_v1",
       "label": "Human Rights and Exploitation",
       "count": 2,
-      "share": 0.033
+      "share": 0.037
     },
     "axis_authoritarian_self_determination_v1": {
       "axis_id": "axis_authoritarian_self_determination_v1",
       "label": "Authoritarian Control vs. Individual/Collective Self-Determination",
       "count": 1,
-      "share": 0.017
+      "share": 0.019
     },
     "axis_political_moral_conduct_v1": {
       "axis_id": "axis_political_moral_conduct_v1",
       "label": "Political Integrity and Moral Conduct in Public Service",
       "count": 1,
-      "share": 0.017
+      "share": 0.019
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 18,
-      "share": 0.3
-    },
-    "breaking_news": {
-      "cluster": "breaking_news",
-      "count": 11,
-      "share": 0.183
-    },
-    "geopolitics": {
-      "cluster": "geopolitics",
-      "count": 10,
-      "share": 0.167
+      "count": 17,
+      "share": 0.315
     },
     "accountability_journalism": {
       "cluster": "accountability_journalism",
+      "count": 9,
+      "share": 0.167
+    },
+    "breaking_news": {
+      "cluster": "breaking_news",
       "count": 7,
-      "share": 0.117
+      "share": 0.13
+    },
+    "asia_pacific": {
+      "cluster": "asia_pacific",
+      "count": 7,
+      "share": 0.13
     },
     "us_politics": {
       "cluster": "us_politics",
-      "count": 4,
-      "share": 0.067
+      "count": 5,
+      "share": 0.093
     }
   },
   "pole_balance": {
-    "left": 24,
-    "right": 36,
+    "left": 19,
+    "right": 35,
     "neutral": 0,
-    "left_share": 0.4,
-    "right_share": 0.6
+    "left_share": 0.352,
+    "right_share": 0.648
   }
 }

@@ -1,12 +1,12 @@
-# Critique · 2026-06-12 14:54 · tweet cycle 2580
+# Critique · 2026-06-12 17:54 · tweet cycle 2586
 
 COHERENCE: Strong
 
 GAPS: None.
 
-TWEET vs JOURNAL: The tweet faithfully compresses a key insight from the journal, specifically focusing on "Evidentiary Inversion" and its implications for accountability.
+TWEET vs JOURNAL: Faithfully compresses.
 
-WATCH: Observe if the agent continues to connect "Evidentiary Inversion" to other active belief axes beyond "Truth and Evidence in Public Discourse."
+WATCH: Observe how the agent connects "Evidentiary Inversion" to broader themes of "Strategic narrative construction" and "Manufactured consensus" in future cycles.
 
 ---
-*journal: 2026-06-12_14.html | tweet: https://x.com/SebastianHunts/status/2065447517219586380*
+*journal: 2026-06-12_17.html | tweet: posted*
