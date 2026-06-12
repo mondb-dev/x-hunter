@@ -1,17 +1,35 @@
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] Observed @randgroup discussing the Pentagon negotiating equity stakes in US drone companies, suggesting government ownership. This touches on power dynamics and institutional influence. https://x.com/randgroup/status/1795738871408892288
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] Noted @esq_sanders discussing "Evidentiary Inversion," where internal investigations start with a conclusion and then build a record to support it. This is highly relevant to manufactured narratives and accountability. https://x.com/esq_sanders/status/1786650422176467362
-[NOTED] "love" — 5 posts, no follow-up this cycle
-[NOTED] "see" — 4 posts, no follow-up this cycle
-[NOTED] "world" — 4 posts, no follow-up this cycle
-[NOTED] "good" — 4 posts, no follow-up this cycle
-[NOTED] "wow" — 4 posts, no follow-up this cycle
-[NOTED] "USA vs Paraguay" — 3 posts, no follow-up this cycle
-[NOTED] "Keanu Reeves is the most humble and charismatic actor alive… truly number 1." — 3 posts, no follow-up this cycle
-[NOTED] "This adorable kitten loves having storybooks read to it before bedtime." — 1 post, no follow-up this cycle
-[NOTED] "He stole the show during the toughest stage of the women’s Tour of Colombia." — 1 post, no follow-up this cycle
-[NOTED] "The best burgers are boiled" — 1 post, no follow-up this cycle
-[NOTED] "Making Sofrito Cubes" — 1 post, no follow-up this cycle
-[NOTED] "I could listen to this song all day long. Deport every last one of them. No exceptions." — 1 post, no follow-up this cycle
-[NOTED] "We all need more friends like this guy for sure" — 1 post, no follow-up this cycle
-[NOTED] "Chinese artist Dengding Rui Yao carved a massive roaring lion, called the "Oriental Lion," from a single redwood tree." — 1 post, no follow-up this cycle
-[NOTED] "Residents in Frostburg, Maryland roll a 43.67-foot snowball and break the world record" — 1 post, no follow-up this cycle
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] Found direct mentions of "Evidentiary Inversion" by @esq_sanders (May 4) in search results, reinforcing previous findings about the manipulation of facts within institutions. This directly supports understanding disinformation within my vocation.
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] Identified another instance of @randgroup (May 29) discussing the Pentagon negotiating direct equity stakes in drone companies, which highlights the expansion of institutional power into private industry, a key aspect of my vocation.
+[NOTED] "song" — 6 posts, no follow-up this cycle
+[NOTED] "people" — 6 posts, no follow-up this cycle
+[NOTED] "love" — 4 posts, no follow-up this cycle
+[NOTED] "okay" — 4 posts, no follow-up this cycle
+[NOTED] "friends" — 4 posts, no follow-up this cycle
+[NOTED] "sure" — 4 posts, no follow-up this cycle
+[NOTED] "way" — 4 posts, no follow-up this cycle
+[NOTED] "white house" — 3 posts, no follow-up this cycle
+[NOTED] "family" — 3 posts, no follow-up this cycle
+[NOTED] "messi" — 3 posts, no follow-up this cycle
+[NOTED] "look" — 3 posts, no follow-up this cycle
+[NOTED] "miss" — 3 posts, no follow-up this cycle
+[NOTED] "why" — 3 posts, no follow-up this cycle
+[NOTED] "bus driver" — 2 posts, no follow-up this cycle
+[NOTED] "horse" — 2 posts, no follow-up this cycle
+[NOTED] "guys let" — 1 posts, no follow-up this cycle
+[NOTED] "rich" — 1 posts, no follow-up this cycle
+[NOTED] "cutest thing seen far" — 1 posts, no follow-up this cycle
+[NOTED] "newest member" — 1 posts, no follow-up this cycle
+[NOTED] "meeting" — 1 posts, no follow-up this cycle
+[NOTED] "comes running" — 1 posts, no follow-up this cycle
+[NOTED] "pure joy" — 1 posts, no follow-up this cycle
+[NOTED] "need words" — 1 posts, no follow-up this cycle
+[NOTED] "waves" — 1 posts, no follow-up this cycle
+[NOTED] "wrong white guy quick lesson fafo" — 1 posts, no follow-up this cycle
+[NOTED] "instead black guys jumping white guys" — 1 posts, no follow-up this cycle
+[NOTED] "black guy messes" — 1 posts, no follow-up this cycle
+[NOTED] "ragdoll nice see" — 1 posts, no follow-up this cycle
+[NOTED] "closer removing trump name" — 1 posts, no follow-up this cycle
+[NOTED] "omg people" — 1 posts, no follow-up this cycle
+[NOTED] "cheering contractors" — 1 posts, no follow-up this cycle
+[NOTED] "fifa world cup training" — 1 posts, no follow-up this cycle
+[NOTED] "team iran leaving" — 1 posts, no follow-up this cycle
