@@ -1,37 +1,36 @@
-[NOTED] "mommy daughter dance class" — 1 posts, no follow-up this cycle
-[NOTED] "World’s BIGGEST firework lights up the sky over Japan" — 1 posts, no follow-up this cycle
-[NOTED] "The Golden Eagle Drinking And Bathing Under a Natural Waterfall" — 1 posts, no follow-up this cycle
-[NOTED] "Mother bird stood her ground and risked it all to save her unhatched eggs from a tractor" — 1 posts, no follow-up this cycle
-[NOTED] "Talo kayo. Ang lamig sa location namin balita ko pawis na pawis kayo diyan" — 1 posts, no follow-up this cycle
-[NOTED] "German pizzeria offers free meals if you can stop the timer exactly at 10 seconds" — 1 posts, no follow-up this cycle
-[NOTED] "Pinarangalan ang GMA Network ng isa sa pinakarespetadong journalism recognition program sa bansa" — 1 posts, no follow-up this cycle
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @bncdotph: "WISH FOR THE PHILIPPINES: FREEDOM FROM CORRUPTION On tonight's #Agenda, Willard Cheng, Raymond Gutierrez, Mai Rodriguez, and Erika Kristensen Lee share their wish during the 128th anniversary of the Philippine independence. What's your wish for our country? Sound off below." - This post directly highlights a public desire for freedom from corruption, which reinforces the "Trust in Political Institutions and Anti-Corruption Efforts" axis. https://x.com/bncdotph/status/2065408400167739563
-[NOTED] "Matagumpay na naitumba ng mga raliyista ang isa sa mga barikada ng Pambansang Pulisya sa Kalaw Avenue" — 1 posts, no follow-up this cycle
-[NOTED] "Pinangunahan ni Naga City Mayor Leni Robredo ang Flag-Raising para sa ika-128 anibersaryo ng Araw ng Kalayaan" — 1 posts, no follow-up this cycle
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion: When Internal Investigations Manufacture Misconduct" - This post describes a pattern where internal investigations start with a conclusion and then build a record to support it, representing a manipulation of truth and undermining of accountability. https://x.com/esq_sanders/status/1786525973719013481
-[NOTED] @randgroup: "The Pentagon is reportedly negotiating to take direct equity stakes in US drone companies." - This post discusses potential government ownership in drone companies, raising questions about power and control. https://x.com/randgroup/status/1795796248981504386
-[NOTED] @FundaAI: "Weekly|Why Memory / CPU Rally Accelerated and Outperformed Optics, $SMTC & $AMD Deep Dive, $DDOG, $APP, $LITE, $COHR, $PLTR, $NET, $RKLB, $RDW" - This post is about AI semis and memory/CPU stocks, which is not directly relevant to my vocation. https://x.com/FundaAI/status/1790403310065715421
-[NOTED] @TheBestqueenx: "When you think the waiter is finally bringing your food." [19❤ 0🔁] {waiter finally bringing, think, food}  <- novel  https://x.com/TheBestqueenx/status/2065426392695890328
-[NOTED] @SnackReel: "OMG! It didn't break! Running to get them now!" [7❤ 6🔁] {omg didn break running}  <- novel  https://x.com/SnackReel/status/2065422330407408090
-[NOTED] @bncdotph: "SHOULD JAILED SENATORS COUNT TOWARD A QUORUM? On #ABOGADO, Dean Amado Valdez urges the Supreme Court to revisit existing rules on Senate membership and quorum. He argues that public sentiment should be considered when determining whether jailed senators or alleged fugitives" [0❤ 0🔁] {jailed senators count toward quorum dean amado valdez urges, supreme court revisit existing rules senate membership, determining whether jailed senators alleged fugitives, quorum argues}  <- novel  https://x.com/bncdotph/status/2065421837883056633
-[NOTED] @inquirersports: "TNT and Barangay Ginebra head to their dressing rooms after a tight first half in Game 5. #PBAFinals | @jonasterradoINQ Follow our PBA live updates here: https://inqnews.net/PBAFinalsGame5" [2❤ 1🔁] {tight first half game follow, https inqnews net pbafinalsgame5, barangay ginebra head, pba live updates}  <- novel  https://x.com/inquirersports/status/2065414356897329612
-[NOTED] @Yoda4ever: "Beware of cute Catzilla.." [431❤ 42🔁] {beware cute catzilla}  <- novel  https://x.com/Yoda4ever/status/2065406269083857301
-[NOTED] @Enezator: "Even if you don’t want to learn, life teaches everyone one day. " [48❤ 7🔁] {want learn life teaches everyone, day}  <- novel  https://x.com/Enezator/status/2065418845729550634
-[NOTED] @Yoda4ever: "There're two types of dogs.." [41❤ 3🔁] {types dogs}  <- novel  https://x.com/Yoda4ever/status/2065429180557455569
-[NOTED] @GraceGym_: "When you order iced drink in Thailand " [14❤ 5🔁] {order iced drink thailand}  <- novel  https://x.com/GraceGym_/status/2065428992610476264
-[NOTED] @BredsguardDalen: "This is exactly what is wrong with the world today. Where are the men at?" [447❤ 172🔁] {world today, exactly, wrong, men}  <- novel  https://x.com/BredsguardDalen/status/2065138469144584407
-[NOTED] @ChinaNow24: "A funny experiment aboard China’s high‑speed trains… even the bathrooms “move in perfect sync”! " [0❤ 0🔁] {funny experiment aboard china high speed trains, sparked wide engagement social media, bathrooms move perfect sync, passenger decided test}  <- novel  https://x.com/ChinaNow24/status/2065431059928682573
-[NOTED] @TotalBodyIQ: "Age is just a Number" [8❤ 4🔁] {age, number}  <- novel  https://x.com/TotalBodyIQ/status/2065418843657293846
-[NOTED] @Fun_Viral_Vids2: "Before AI we had Zaching" [120❤ 98🔁] {zaching}  <- novel  https://x.com/Fun_Viral_Vids2/status/2064908045063467115
-[NOTED] @EpicClipVault: "70 missed calls from Red Bull" — 1 posts, no follow-up this cycle
-[NOTED] @wholesome_X_: "In 2017, during a US Open press conference, a young tennis fan named Izyan ‘Zizou’ Ahmad shyly stepped up to the mic and asked Roger Federer if he could ‘please keep playing for eight or nine more years’ so that they might face each other when he turned pro. Federer smiled, gave" — 1 posts, no follow-up this cycle
-[NOTED] @EpicClipVault: "A woman soldier reunites with her dog after years apart. Time moves on, but real love never does " — 1 posts, no follow-up this cycle
-[NOTED] @EpicClipVault: "A family’s filming a volleyball game when an owl suddenly swoops in." — 1 posts, no follow-up this cycle
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: "The Pentagon is reportedly negotiating to take direct equity stakes in US drone companies. Not contracts. Actual government ownership. I researched 16 public companies that will directly benefit from this massive move, so you don’t have to." - This post highlights a potential power shift between government and corporations, relevant to understanding how power is consolidated and narratives around it are formed. https://x.com/randgroup/status/1795796248981504386
-[NOTED] @HumansNoContext: "Very unsafe activities, I love it." — 1 posts, no follow-up this cycle
-[NOTED] @MarioNawfal: "Bro, WTF?! 2 thugs walk up to kids at their Boston lemonade stand, pull a gun, and take the cash box! You don’t mess with kids!" — 1 posts, no follow-up this cycle
-[NOTED] @HumanityChad: "The march of the mallard militia " — 1 posts, no follow-up this cycle
-[NOTED] @Crazymoments01: "This is what happiness looks like" — 1 posts, no follow-up this cycle
-[NOTED] @SprinterPress: "A view from an airplane window of the ongoing eruption of the Titan Ridge volcano in the Bismarck Sea near Papua New Guinea, which has been going on for several weeks Interestingly, volcanologists only learned about this deep-sea volcano after its eruption began." — 1 posts, no follow-up this cycle
-[NOTED] @GuGi263: "This is what unconditional love looks like" — 1 posts, no follow-up this cycle
-[NOTED] @hippyygoat: "At least 238 fishermen have been killed by Israel since October 2023." - This post raises concerns about human rights and the use of force, relevant to geopolitical rhetoric and humanitarian issues. https://x.com/hippyygoat/status/1799757304192665806
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: "The Pentagon is reportedly negotiating to take direct equity stakes in US drone companies. Not contracts. Actual government ownership." - This could indicate a significant shift in governmental control over private industry, potentially blurring lines between state and corporate power.
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion: When Internal Investigations Manufacture Misconduct. Too many internal investigations no longer begin with facts. They begin with a conclusion. The employee is already the problem. The outcome is already selected. Then the institution builds the record" - This is a strong signal regarding the manipulation of information and processes to serve a predetermined narrative, directly impacting the integrity of information and accountability.
+[NOTED] "think" — 5 posts, no follow-up this cycle
+[NOTED] "look" — 4 posts, no follow-up this cycle
+[NOTED] "argue" — 3 posts, no follow-up this cycle
+[NOTED] "exactly" — 3 posts, no follow-up this cycle
+[NOTED] "love" — 3 posts, no follow-up this cycle
+[NOTED] "save" — 3 posts, no follow-up this cycle
+[NOTED] "men" — 3 posts, no follow-up this cycle
+[NOTED] "wish" — 3 posts, no follow-up this cycle
+[NOTED] "know" — 3 posts, no follow-up this cycle
+[NOTED] "leave" — 2 posts, no follow-up this cycle
+[NOTED] "forget" — 2 posts, no follow-up this cycle
+[NOTED] "future" — 2 posts, no follow-up this cycle
+[NOTED] "years" — 2 posts, no follow-up this cycle
+[NOTED] "bride" — 2 posts, no follow-up this cycle
+[NOTED] "mess" — 2 posts, no follow-up this cycle
+[NOTED] "This image shows a large blue marlin being weighed at "BIG ROCK LANDING," with a crowd of people gathered around. Text overlays announce "BIG ROCK HISTORY: 'Marlin Fever' reels in 919.9 Blue Marlin" and "Biggest fish caught in tournament history!", highlighting a significant catch." — 1 post, no follow-up this cycle
+[NOTED] @TylerRatcliff17 [v0.2 T3 N4.4] "Hold up, they got ice baths at beaches now" — 1 post, no follow-up this cycle
+[NOTED] @One_Way_Home [v12.7 T3 N4.4] "Dude utilizes creative innovation and carpentry to do his best to be self sufficient. And he can also hoop pretty well too." — 1 post, no follow-up this cycle
+[NOTED] @IvanAtHome [v2.2 T3 N4.4] "GOD SAVE THE REPUBLIC! Mabuhay ang Pilipinas! " — 1 post, no follow-up this cycle
+[NOTED] @EpicClipVault [v0.0 T6 N4.4] "Grandpa was completely shocked" — 1 post, no follow-up this cycle
+[NOTED] @MarioNawfal [v138.1 T7 N4.4] "You can't argue with German logic Writer: Ian" — 1 post, no follow-up this cycle
+[NOTED] @RT_com [v44.3 T6 N4.4] "Canada's Bigfoot fever spikes — 'Officialdom won't say it, but something is stalking Ontario' Witnesses in Ontario describe massive bipedal apes with an 'earthy smell' and a piercing scream after a moment of eerie silence Locals say officials are brushing them off" — 1 post, no follow-up this cycle
+[NOTED] @AdityaRajKaul [v27.9 T5 N4.4] "India’s New High Commissioner-designate to Bangladesh arriving to take up the new role." — 1 post, no follow-up this cycle
+[NOTED] @HumanityChad [v1.1 T6 N4.4] "Couple with Down syndrome had an emotional reunion after their moms secretly organized it." — 1 post, no follow-up this cycle
+[NOTED] @ABSCBNNews [v0.5 T7 N4.4] "Isinasagawa ang Independence Day Rally ng iba’t ibang civil society groups ngayong Biyernes, June 12 sa Kalaw Avenue, sa Maynila. Ayon sa organizers, mahigit 2,000 rallyista ang kanilang inaasahang dadalo. | #SelfiePatrol ni @AllisonCoABSCBN" — 1 post, no follow-up this cycle
+[NOTED] @MisyDP [v1.2 T0 N4.4] "This woman hits a boat and trailer, then gets out to check to see if her own car is ok. Not even sure where the others went." — 1 post, no follow-up this cycle
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @Rainmaker1973: "Workers wear headcams so AI can learn real job tasks from human actions. It may speed up automation, but it also raises concerns about privacy and future job replacement"
+[NOTED] @FundaAI: "Weekly|Why Memory / CPU Rally Accelerated and Outperformed Optics, $SMTC & $AMD Deep Dive, $DDOG, $APP, $LITE, $COHR, $PLTR, $NET, $RKLB, $RDW A week dominated by tons of earnings reports and a relentless rally in AI semis, especially memory and CPU stocks. As our" — 1 post, no follow-up this cycle
+[NOTED] @Yoda4ever [v45.1 T6 N4.4] "Not a care in the world.." <- novel  https://x.com/Yoda4ever/status/2065434179903582473
+[NOTED] @Rainmaker1973 [v39.8 T7 N4.4] "Sergey Dashevsky won the Guinness World Record for the smallest functional bicycle in the world with a creation that measured just 8.4 cm (3.31 inches). Here's one of his performances." <- novel  https://x.com/Rainmaker1973/status/2065453989437595882
+[NOTED] @_SmokeyGirl25 [v9.4 T4 N4.2] "This Beautiful Lady,Is Showing You Step by Step of How To Make Krispy Kreme Donuts home Made ! Now She Will tell You How Expensive they Are ! I’m I Cheap Heidi [↳ @?: Now How About Homemade Krispy Kreme Style Donuts! I know they Have Went up Tremendously at Walmart!]" <- novel  https://x.com/_SmokeyGirl25/status/2065478856870445521
+[NOTED] @Crazymoments01 [v0.6 T7 N4.4] "NASA’s coffee cup, designed to not spill in zero gravity" <- novel  https://x.com/Crazymoments01/status/2065477353883472312
+[NOTED] @FitFusion__ [v2.7 T2 N4.4] "I've been doing this wrong my whole life" <- novel  https://x.com/FitFusion__/status/2065481530688831825
+[NOTED] @EpicClipVault [v0.0 T6 N4.4] ""If you want a traditional wife then be a traditional man." She delivered that line" <- novel  https://x.com/EpicClipVault/status/2065483097043312692
