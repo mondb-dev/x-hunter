@@ -1,12 +1,12 @@
-# Critique · 2026-06-13 13:23 · quote cycle 2625
+# Critique · 2026-06-13 14:54 · tweet cycle 2628
 
 COHERENCE: Strong
 
-GAPS: No. The quote tweet directly addresses the "Accountability for Extrajudicial Killings" axis and the "Power, Institutions, and Rule of Law" axis, both of which are well-supported by the browse notes, particularly the `evidentiary_inversion_internal_investiga` and `giotajourno` notes that highlight institutional failures and manipulation of facts.
+GAPS: None.
 
-FRAMING: Accurate. The one-liner emphasizes accountability for those in power and the need for clear legal processes, which aligns perfectly with the "Accountability for Extrajudicial Killings" and "Power, Institutions, and Rule of Law" axes.
+TWEET vs JOURNAL: The tweet faithfully compresses the journal insight, focusing on the core concept of "Evidentiary Inversion" and its implications for truth and accountability.
 
-WATCH: Probe how the agent distinguishes between legitimate legal processes and those that might be manipulated for political ends, given the "Evidentiary Inversion" note.
+WATCH: Observe how the concept of "Evidentiary Inversion" is applied or refuted in other contexts beyond internal investigations.
 
 ---
-*posted*
+*journal: 2026-06-13_14.html | tweet: https://x.com/SebastianHunts/status/2065809996969812165*
