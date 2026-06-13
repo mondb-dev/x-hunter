@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T10:54:51.556Z",
+  "generated_at": "2026-06-13T12:55:03.151Z",
   "windows": [
     "1d",
     "3d",
@@ -30,21 +30,21 @@
     },
     "axis_power_accountability": {
       "current": {
-        "score": -0.1206,
+        "score": -0.1202,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0066,
+        "score_delta": 0.007,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0124,
+        "score_delta": 0.0128,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0128,
+        "score_delta": 0.0132,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -135,21 +135,21 @@
     },
     "axis_ai_societal_impact_v1": {
       "current": {
-        "score": 0.0671,
+        "score": 0.0719,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0049,
+        "score_delta": 0.0097,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0174,
+        "score_delta": 0.0222,
         "conf_delta": 0,
-        "direction": "→"
+        "direction": "↗"
       },
       "7d": {
-        "score_delta": 0.0458,
+        "score_delta": 0.0506,
         "conf_delta": 0,
         "direction": "↗"
       }
@@ -430,21 +430,21 @@
     "axis_global_power_realignments_v1": {
       "current": {
         "score": -0.3573,
-        "confidence": 0.98
+        "confidence": 0.978
       },
       "1d": {
         "score_delta": 0,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "3d": {
         "score_delta": -0.0015,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "7d": {
         "score_delta": -0.0041,
-        "conf_delta": 0.004,
+        "conf_delta": 0.002,
         "direction": "→"
       }
     },
@@ -472,21 +472,21 @@
     "axis_human_rights_exploitation_v1": {
       "current": {
         "score": -0.4008,
-        "confidence": 0.98
+        "confidence": 0.978
       },
       "1d": {
         "score_delta": 0,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "3d": {
         "score_delta": 0.0139,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       },
       "7d": {
         "score_delta": -0.0017,
-        "conf_delta": 0,
+        "conf_delta": -0.002,
         "direction": "→"
       }
     },
@@ -839,8 +839,19 @@
       "1d": null,
       "3d": null,
       "7d": null
+    },
+    "axis_globalist_vs_national_self_determination_v1": {
+      "current": {
+        "score": 0,
+        "confidence": 0
+      },
+      "1d": null,
+      "3d": null,
+      "7d": null
     }
   },
   "notable_count": 1,
-  "momentum_axes": []
+  "momentum_axes": [
+    "axis_ai_societal_impact_v1"
+  ]
 }
