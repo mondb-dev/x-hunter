@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-13T20:22:49.767Z",
+  "generated_at": "2026-06-13T23:53:24.912Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-13T20:23:22.918Z",
+  "profiled_at": "2026-06-13T23:53:57.475Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -1647,7 +1647,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T21:49:55.219Z",
+        "fetched_at": "2026-06-13T21:53:21.054Z",
         "homepage_url": "https://brobible.com/",
         "example_url": "https://brobible.com/culture/paige-ostroushko-savanah-hernandez-anti-ice-protest-arrest/",
         "homepage_status": 200,
@@ -1938,9 +1938,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-13T17:14:00.000Z",
+      "last_seen_at": "2026-06-13T22:19:10.000Z",
       "discovery": {
-        "distinct_urls": 5264,
+        "distinct_urls": 5271,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1949,10 +1949,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3136,
-          "feed_buffer_reply": 3365
+          "feed_buffer": 3137,
+          "feed_buffer_reply": 3373
         },
-        "distinct_referring_accounts": 1789,
+        "distinct_referring_accounts": 1791,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1990,7 +1990,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5264",
+            "distinct_urls:5271",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1998,7 +1998,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1789",
+            "referring_accounts:1791",
             "origin_types:2"
           ]
         },
@@ -2028,10 +2028,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5264",
+            "distinct_urls:5271",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1789",
+            "referring_accounts:1791",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3725,7 +3725,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T21:19:53.951Z",
+        "fetched_at": "2026-06-13T21:23:19.334Z",
         "homepage_url": "https://ro.co/",
         "example_url": "https://ro.co/lp/weight-loss/quiz/?utm_medium=paid_social&utm_source=Twitter&utm_campaign=41158458&utm_term=54579155&utm_content=Ad2&twclid=2bv3rduaz2ypp78vahy5e6wspd",
         "homepage_status": 200,
@@ -4265,6 +4265,133 @@
       }
     },
     {
+      "domain": "app.link",
+      "entity": "App Link",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-03T04:05:48.185Z",
+      "last_seen_at": "2026-06-13T21:31:53.000Z",
+      "discovery": {
+        "distinct_urls": 16,
+        "example_urls": [
+          "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
+          "https://chipotle.app.link/CFCROzYFA1b?%243p=a_twitter&twclid=2cc0rz9d8z8z95tfghmhm1chq0",
+          "https://chipotle.app.link/tdp4iw0eVXb?%243p=a_twitter&twclid=25qutie3ig60a3z2imw7z57a5w",
+          "https://chipotle.app.link/Hki0traYz2b?%243p=a_twitter&twclid=22dzf00tz6ibmeenvsjblzs0e5",
+          "https://chipotle.app.link/Hki0traYz2b?%243p=a_twitter&twclid=2awomhjx2bvzllndeeenbh10hb"
+        ],
+        "origin_counts": {
+          "feed_buffer": 7,
+          "feed_buffer_reply": 9
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "chipotletweets"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:16",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.009999999999999998,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.5066999999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:16",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-11T18:22:19.765Z",
+        "homepage_url": "https://app.link/",
+        "example_url": "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
+        "homepage_status": 404,
+        "example_status": 200,
+        "homepage_final_url": "https://app.link/",
+        "example_final_url": "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "wsj.com",
       "entity": "Wsj",
       "kind": "unknown",
@@ -4387,133 +4514,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "app.link",
-      "entity": "App Link",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-03T04:05:48.185Z",
-      "last_seen_at": "2026-06-13T02:30:00.000Z",
-      "discovery": {
-        "distinct_urls": 15,
-        "example_urls": [
-          "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
-          "https://chipotle.app.link/CFCROzYFA1b?%243p=a_twitter&twclid=2cc0rz9d8z8z95tfghmhm1chq0",
-          "https://chipotle.app.link/tdp4iw0eVXb?%243p=a_twitter&twclid=25qutie3ig60a3z2imw7z57a5w",
-          "https://chipotle.app.link/Hki0traYz2b?%243p=a_twitter&twclid=22dzf00tz6ibmeenvsjblzs0e5",
-          "https://chipotle.app.link/Hki0traYz2b?%243p=a_twitter&twclid=2awomhjx2bvzllndeeenbh10hb"
-        ],
-        "origin_counts": {
-          "feed_buffer": 7,
-          "feed_buffer_reply": 8
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "chipotletweets"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:15",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.009999999999999998,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:1",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.4842,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:15",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-11T18:22:19.765Z",
-        "homepage_url": "https://app.link/",
-        "example_url": "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
-        "homepage_status": 404,
-        "example_status": 200,
-        "homepage_final_url": "https://app.link/",
-        "example_final_url": "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
           "opinion_marker": false
         }
       }
@@ -7528,7 +7528,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T21:49:56.079Z",
+        "fetched_at": "2026-06-13T21:53:21.666Z",
         "homepage_url": "https://babbily.com/",
         "example_url": "https://platform.babbily.com/?twclid=28ntbg85b8teebnlu9ilz4yxht",
         "homepage_status": 200,
@@ -8791,7 +8791,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T23:19:56.841Z",
+        "fetched_at": "2026-06-13T23:23:21.603Z",
         "homepage_url": "https://makofy.com/",
         "example_url": "https://makofy.com/openclaw?twclid=217okoej56crajhkd22b6nsfzf",
         "homepage_status": 200,
@@ -12835,7 +12835,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T21:49:57.372Z",
+        "fetched_at": "2026-06-13T21:53:22.651Z",
         "homepage_url": "https://youtu.be/",
         "example_url": "https://youtu.be/JCrEvr1IIkg",
         "homepage_status": 200,
@@ -19713,7 +19713,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T21:19:54.154Z",
+        "fetched_at": "2026-06-13T21:23:19.541Z",
         "homepage_url": "https://usekeel.io/",
         "example_url": "https://usekeel.io/run?twclid=2bgfmx5me1bzmqklq02dv94p1e",
         "homepage_status": 200,
@@ -20595,7 +20595,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T23:19:57.173Z",
+        "fetched_at": "2026-06-13T23:23:21.944Z",
         "homepage_url": "https://robinhood.com/",
         "example_url": "https://robinhood.com/us/en/about/crypto/?twclid=29pd7fgrhb1gsdhy8smyxe6kbg",
         "homepage_status": 200,
@@ -20721,7 +20721,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T21:19:56.163Z",
+        "fetched_at": "2026-06-13T21:23:21.028Z",
         "homepage_url": "https://novelmint.ai/",
         "example_url": "https://novelmint.ai/?twclid=24swsjnpk4f6tjvwc81a9jb0ee",
         "homepage_status": 200,
@@ -20950,7 +20950,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:19",
+            "outbound_links:18",
             "opinion_marker:false"
           ]
         },
@@ -20970,7 +20970,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T21:19:56.661Z",
+        "fetched_at": "2026-06-13T21:23:21.549Z",
         "homepage_url": "https://straitstimes.com/",
         "example_url": "https://straitstimes.com/",
         "homepage_status": 200,
@@ -20986,7 +20986,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 19,
+          "outbound_links_count": 18,
           "opinion_marker": false
         },
         "example": {
@@ -20996,7 +20996,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 19,
+          "outbound_links_count": 18,
           "opinion_marker": false
         }
       }
@@ -21063,6 +21063,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.6000000000000001,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:6",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.371171875,
           "confidence": 0.081825,
@@ -21076,6 +21090,37 @@
             "origin_types:2",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-13T21:53:26.322Z",
+        "homepage_url": "https://thesandersfirmpc.com/",
+        "example_url": "https://thesandersfirmpc.com/evidentiary-inversion-when-internal-investigations-manufacture-misconduct/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.thesandersfirmpc.com/",
+        "example_final_url": "https://www.thesandersfirmpc.com/evidentiary-inversion-when-internal-investigations-manufacture-misconduct/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 6,
+          "opinion_marker": false
         }
       }
     },
@@ -21792,7 +21837,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T21:49:58.040Z",
+        "fetched_at": "2026-06-13T22:53:21.051Z",
         "homepage_url": "https://scienceandculture.com/",
         "example_url": "https://scienceandculture.com/2026/04/cosmic-orphans-no-more-stephen-meyer-on-the-meaning-of-the-artemis-ii-mission/?twclid=2rnhdm9vyiuko1egq7pyr6uby",
         "homepage_status": 200,
@@ -21916,7 +21961,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T22:49:56.918Z",
+        "fetched_at": "2026-06-13T22:53:21.771Z",
         "homepage_url": "https://19fortyfive.com/",
         "example_url": "https://www.19fortyfive.com/2026/04/we-touched-the-super-guppy-nasas-whale-shaped-cargo-plane-has-a-25-foot-wide-internal-diameter-swallowed-apollo-rocket-stages-whole-and-only-one-still-flies/?twclid=23xrrcgqxanqbvkiqbsyzs1ox8",
         "homepage_status": 200,
@@ -22040,7 +22085,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T22:49:57.199Z",
+        "fetched_at": "2026-06-13T22:53:21.968Z",
         "homepage_url": "https://usatoday.com/",
         "example_url": "https://www.usatoday.com/story/sponsor-story/collegium-pharmaceutical/2026/05/05/paris-hilton-on-adhd-advocacy-and-support-in-the-workplace/89244166007/?twclid=28p40ybg70zs0nzujyc1b1b5mt",
         "homepage_status": 200,
@@ -22164,7 +22209,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T22:49:57.414Z",
+        "fetched_at": "2026-06-13T22:53:22.187Z",
         "homepage_url": "https://axios.com/",
         "example_url": "https://www.axios.com/2026/04/21/axios-event-future-of-health-summit-2026?twclid=26ijftyq8roj3woqxoi4hprufc",
         "homepage_status": 403,
@@ -22664,7 +22709,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T22:49:57.800Z",
+        "fetched_at": "2026-06-13T23:23:22.349Z",
         "homepage_url": "https://tcgsherpa.com/",
         "example_url": "https://www.tcgsherpa.com/?utm_source=x&utm_medium=paid_social&utm_campaign=tcg-sherpa-launch-apr26&utm_content=What_Does_static&twclid=2c6bdjexgck8vqk1pzn57lvtb7",
         "homepage_status": 200,
@@ -23410,7 +23455,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T23:19:57.306Z",
+        "fetched_at": "2026-06-13T23:23:22.452Z",
         "homepage_url": "https://x.xom/",
         "example_url": "https://x.xom/EricLDaugh/status/2049914155461652916",
         "homepage_status": null,
@@ -23512,7 +23557,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:44",
+            "outbound_links:35",
             "opinion_marker:false"
           ]
         },
@@ -23533,7 +23578,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T23:19:59.887Z",
+        "fetched_at": "2026-06-13T23:53:55.954Z",
         "homepage_url": "https://philstar.com/",
         "example_url": "https://philstar.com/headlines/2026/05/19/2528923/fleeing-bato-says-hes-willing-be-jaile",
         "homepage_status": 200,
@@ -23559,7 +23604,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 44,
+          "outbound_links_count": 35,
           "opinion_marker": false
         }
       }
@@ -24152,7 +24197,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T23:50:28.894Z",
+        "fetched_at": "2026-06-13T23:53:56.344Z",
         "homepage_url": "https://americanexpress.com/",
         "example_url": "https://www.americanexpress.com/en-us/benefits/membership/experiences/nba/?extlink=dw-us-GABM-PLATSOC_CH_sm-CU_us-BU_GABM-REF_TST_EEP_URL_g_psoc&cpid_g_psoc=&twclid=2dpgv5hu2sysfpt5ld9o2y2ukf",
         "homepage_status": 200,
@@ -24276,7 +24321,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T23:50:29.666Z",
+        "fetched_at": "2026-06-13T23:53:56.385Z",
         "homepage_url": "https://proalgo.fun/",
         "example_url": "https://proalgo.fun/chat?rez=sy24ria&twclid=29ce9rs2p6qobknj46cgwzi02y",
         "homepage_status": null,
@@ -25143,7 +25188,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T23:50:30.467Z",
+        "fetched_at": "2026-06-13T23:53:57.475Z",
         "homepage_url": "https://surething.io/",
         "example_url": "https://surething.io/chat-index?utm_source=xads&twclid=27yqtzrn5j3zjmadm486py1wgi",
         "homepage_status": 200,
