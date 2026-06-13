@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-13T08:22:34.269Z",
+  "generated_at": "2026-06-13T11:22:37.415Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-13T08:23:08.506Z",
+  "profiled_at": "2026-06-13T11:23:08.692Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -350,7 +350,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T09:19:42.209Z",
+        "fetched_at": "2026-06-13T09:23:04.394Z",
         "homepage_url": "https://justice.gov/",
         "example_url": "https://www.justice.gov/usao-ri/pr/two-business-executives-plead-guilty-tech-support-fraud-scheme?twclid=2f42440xock41qvr5cwo18o539",
         "homepage_status": 200,
@@ -590,7 +590,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T09:19:42.474Z",
+        "fetched_at": "2026-06-13T09:23:04.811Z",
         "homepage_url": "https://trumprx.gov/",
         "example_url": "http://trumprx.gov/",
         "homepage_status": 200,
@@ -1520,7 +1520,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T09:19:42.978Z",
+        "fetched_at": "2026-06-13T09:23:05.358Z",
         "homepage_url": "https://reut.rs/",
         "example_url": "https://reut.rs/42N9gxi",
         "homepage_status": 401,
@@ -1938,9 +1938,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-13T07:48:42.000Z",
+      "last_seen_at": "2026-06-13T10:43:12.000Z",
       "discovery": {
-        "distinct_urls": 5222,
+        "distinct_urls": 5229,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1949,8 +1949,8 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3112,
-          "feed_buffer_reply": 3334
+          "feed_buffer": 3116,
+          "feed_buffer_reply": 3338
         },
         "distinct_referring_accounts": 1780,
         "sample_referring_accounts": [
@@ -1990,7 +1990,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5222",
+            "distinct_urls:5229",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2028,7 +2028,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5222",
+            "distinct_urls:5229",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1780",
@@ -2707,7 +2707,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T09:19:43.992Z",
+        "fetched_at": "2026-06-13T09:23:06.203Z",
         "homepage_url": "https://youtube.com/",
         "example_url": "https://www.youtube.com/watch?v=jK0pvigonSQ&twclid=2p81plhcgyzwohsr9rfa62lnp",
         "homepage_status": 200,
@@ -2991,6 +2991,137 @@
       }
     },
     {
+      "domain": "starlink.com",
+      "entity": "Starlink",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-07T03:51:50.000Z",
+      "last_seen_at": "2026-06-12T16:11:10.000Z",
+      "discovery": {
+        "distinct_urls": 70,
+        "example_urls": [
+          "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
+          "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
+          "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-perform-pointy-roof-scroll&twclid=2ce5a580pj831lcqe7626u3hna",
+          "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=2k8xeld028phnl8w6bxc7nd9z",
+          "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 69,
+          "feed_buffer": 5
+        },
+        "distinct_referring_accounts": 5,
+        "sample_referring_accounts": [
+          "cb_doge",
+          "marionawfal",
+          "mattvanswol",
+          "sawyermerritt",
+          "starlink"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:70",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.7166666666666668,
+          "basis": [
+            "referring_accounts:5",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.47937500000000005,
+          "confidence": 0.6132,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:70",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:5",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-12T21:22:49.239Z",
+        "homepage_url": "https://starlink.com/",
+        "example_url": "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://starlink.com/",
+        "example_final_url": "https://starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "reuters.com",
       "entity": "Reuters",
       "kind": "news",
@@ -3092,136 +3223,6 @@
         "example_final_url": "https://www.reuters.com/site-search/?query=Evidence-based%20claims%2C%20transparent%20sourcing%2C%20honest%20uncertainty%2C%20good-faith%20argu%20Truth%20and%20Evidence%20in%20Public%20Discourse",
         "homepage_content_type": "text/html;charset=utf-8",
         "example_content_type": "text/html;charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "starlink.com",
-      "entity": "Starlink",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-07T03:51:50.000Z",
-      "last_seen_at": "2026-06-08T08:38:12.000Z",
-      "discovery": {
-        "distinct_urls": 70,
-        "example_urls": [
-          "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
-          "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-yourhome&twclid=2216n7j93v9absqn77762mm626",
-          "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-perform-pointy-roof-scroll&twclid=2ce5a580pj831lcqe7626u3hna",
-          "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=2k8xeld028phnl8w6bxc7nd9z",
-          "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-avail-sat-arrived&twclid=21pi7t0qs8tgw0wgnh5mvmdu2g"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 68,
-          "feed_buffer": 5
-        },
-        "distinct_referring_accounts": 4,
-        "sample_referring_accounts": [
-          "cb_doge",
-          "marionawfal",
-          "sawyermerritt",
-          "starlink"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:70",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.6083333333333334,
-          "basis": [
-            "referring_accounts:4",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.46921875,
-          "confidence": 0.60345,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:70",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:4",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-12T21:22:49.239Z",
-        "homepage_url": "https://starlink.com/",
-        "example_url": "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://starlink.com/",
-        "example_final_url": "https://starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -3348,7 +3349,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T09:49:40.626Z",
+        "fetched_at": "2026-06-13T09:53:03.711Z",
         "homepage_url": "https://relaylab.us/",
         "example_url": "https://relaylab.us/?twclid=26u9kccij1307faosstalj2w2",
         "homepage_status": 200,
@@ -4105,7 +4106,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T09:49:41.349Z",
+        "fetched_at": "2026-06-13T09:53:04.690Z",
         "homepage_url": "https://hyperagent.com/",
         "example_url": "https://www.hyperagent.com/?promo=FIRST1000&utm_source=twitter&utm_medium=paidsocial&utm_campaign=hyperagent_conversions&utm_content=ag3_fleet&utm_term=ag3_ai_dev_followers&utm_id=recNjFFq2Yg5747V4&twclid=2dzs7nc78iuf64njs9fxab27tl",
         "homepage_status": 200,
@@ -5377,7 +5378,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T09:49:41.852Z",
+        "fetched_at": "2026-06-13T09:53:05.099Z",
         "homepage_url": "https://avenorigin.com/",
         "example_url": "https://avenorigin.com/?x=twg11&tw=rcafs&tw_click=tw-rcafs-rcafv&twclid=27a9svqvmxrds3k2j1qq8l2dy6",
         "homepage_status": 200,
@@ -5506,7 +5507,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T11:19:43.616Z",
+        "fetched_at": "2026-06-13T11:23:07.397Z",
         "homepage_url": "https://huawei.com/",
         "example_url": "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
         "homepage_status": null,
@@ -6393,13 +6394,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T09:49:43.501Z",
+        "fetched_at": "2026-06-13T09:53:06.414Z",
         "homepage_url": "https://poly.market/",
         "example_url": "https://poly.market/X0q565H?twclid=24x365380zub6d85j7s6xd212w",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://polymarket.com/",
-        "example_final_url": "https://polymarket.com/event/bnb-updown-5m-1781077800",
+        "example_final_url": "https://polymarket.com/event/bnb-updown-5m-1781316000",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -6771,7 +6772,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T11:19:43.791Z",
+        "fetched_at": "2026-06-13T11:23:07.625Z",
         "homepage_url": "https://omgskills.com/",
         "example_url": "https://omgskills.com/?twclid=2ewu2vd054idb44rsf4bgvksa8",
         "homepage_status": 200,
@@ -7023,7 +7024,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T11:19:44.236Z",
+        "fetched_at": "2026-06-13T11:23:08.011Z",
         "homepage_url": "https://guardianbikes.com/",
         "example_url": "https://guardianbikes.com/products/balance-bike?variant=41102033158237&utm_source=twitter&twclid=2dhmyi0k26r61jxbnc07720qis&utm_content=dpa_carousel&utm_campaign=X_2026_DPA_Remarketing_Campaign+&utm_medium=cpc",
         "homepage_status": 200,
@@ -7149,7 +7150,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T11:19:44.825Z",
+        "fetched_at": "2026-06-13T11:23:08.692Z",
         "homepage_url": "https://lovart.ai/",
         "example_url": "https://www.lovart.ai/?sourceId=910062&sourceid=910062&utm_source=twitter&utm_medium=paid_social&utm_campaign=Lovart_910062_Meta_US_AIModel_ag_260416_lead&twclid=2a5k8izlnshoxgoxi52b1tnd45",
         "homepage_status": 200,
@@ -55156,7 +55157,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-10T08:19:42.441Z",
+        "fetched_at": "2026-06-13T10:53:05.162Z",
         "homepage_url": "https://paypal/",
         "example_url": "http://paypal/",
         "homepage_status": null,
@@ -55278,7 +55279,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T05:48:45.312Z",
+        "fetched_at": "2026-06-13T10:53:05.765Z",
         "homepage_url": "https://mercor.com/",
         "example_url": "https://mercor.com/apex?utm_source=twitter&utm_medium=paid_social&utm_campaign=mercor_apex_x_newsletter-promotion_us&utm_content=join-newsletter-dark&twclid=24wdagj0l7oeozlzxsklrytes5",
         "homepage_status": 200,
@@ -55400,7 +55401,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T06:18:16.506Z",
+        "fetched_at": "2026-06-13T10:53:06.522Z",
         "homepage_url": "https://actblue.com/",
         "example_url": "https://secure.actblue.com/donate/sh-jfp-iranwar-thanks&link_id=2&can_id=bc082effd7113aeffae8d4af79711bb7&source=email-the-vote-is-coming-is-your-rep-ready&email_referrer=email_3250247&email_subject=trump-personally-approved-israeli-strikes-on-lebanon-did-you-know-that&&&refcodeEmailReferrer=email_3250247",
         "homepage_status": 200,
@@ -55522,7 +55523,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T06:18:18.084Z",
+        "fetched_at": "2026-06-13T10:53:11.338Z",
         "homepage_url": "https://artboard.studio/",
         "example_url": "https://artboard.studio/iphone-mockup?twclid=23mlmsf3cbdppkungbuqr8ajee",
         "homepage_status": 200,
@@ -59620,6 +59621,83 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "lowes"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "dell.com",
+      "entity": "Dell",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-13T06:34:56.000Z",
+      "last_seen_at": "2026-06-13T06:34:56.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.dell.com/en-us/shop/dell-laptops/xps-14-laptop/spd/xps-da14260-laptop?twclid=2b95mzwodix16nm7kii2sz7zvh"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "dell"
         ],
         "distinct_axes": []
       },
