@@ -1,60 +1,68 @@
 {
-  "checked_at": "2026-06-12T18:03:49.971Z",
-  "evidence_24h": 54,
-  "unique_sources": 30,
-  "status": "clean",
-  "alerts": [],
-  "summary": "Evidence distribution looks healthy (54 entries across 30 sources, 11 axes).",
+  "checked_at": "2026-06-13T18:30:27.397Z",
+  "evidence_24h": 43,
+  "unique_sources": 24,
+  "status": "warning",
+  "alerts": [
+    {
+      "type": "pole_skew",
+      "severity": "moderate",
+      "detail": "74% of evidence pushes \"right\" — risk of one-sided belief drift",
+      "dominant_pole": "right",
+      "share": 0.744
+    }
+  ],
+  "summary": "1 capture alert(s) detected:\n[MODERATE] 74% of evidence pushes \"right\" — risk of one-sided belief drift",
   "source_concentration": {
-    "news5ph": {
-      "username": "news5ph",
+    "esq_sanders": {
+      "username": "esq_sanders",
       "count": 8,
-      "share": 0.148
+      "share": 0.186
     },
-    "bncdotph": {
-      "username": "bncdotph",
-      "count": 6,
-      "share": 0.111
-    },
-    "gmanews": {
-      "username": "gmanews",
+    "unknown": {
+      "username": "unknown",
       "count": 4,
-      "share": 0.074
+      "share": 0.093
     },
-    "adityarajkaul": {
-      "username": "adityarajkaul",
-      "count": 3,
-      "share": 0.056
-    },
-    "evil_scott": {
-      "username": "evil_scott",
+    "tufpraise": {
+      "username": "tufpraise",
       "count": 2,
-      "share": 0.037
+      "share": 0.047
     },
-    "dimitri_salahi": {
-      "username": "dimitri_salahi",
+    "mhdksafa": {
+      "username": "mhdksafa",
       "count": 2,
-      "share": 0.037
+      "share": 0.047
     },
-    "randgroup": {
-      "username": "randgroup",
+    "philstarlife": {
+      "username": "philstarlife",
       "count": 2,
-      "share": 0.037
+      "share": 0.047
     },
-    "calltoactivism": {
-      "username": "calltoactivism",
+    "whitehouse": {
+      "username": "whitehouse",
       "count": 2,
-      "share": 0.037
+      "share": 0.047
     },
-    "covet_81": {
-      "username": "covet_81",
+    "palubogpalitaw": {
+      "username": "palubogpalitaw",
       "count": 2,
-      "share": 0.037
+      "share": 0.047
     },
-    "americapapabear": {
-      "username": "americapapabear",
+    "rt_com": {
+      "username": "rt_com",
       "count": 2,
-      "share": 0.037
+      "share": 0.047
+    },
+    "marionawfal": {
+      "username": "marionawfal",
+      "count": 2,
+      "share": 0.047
+    },
+    "gmanicurist": {
+      "username": "gmanicurist",
+      "count": 2,
+      "share": 0.047
     }
   },
   "axis_concentration": {
@@ -62,95 +70,77 @@
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
       "count": 18,
-      "share": 0.333
+      "share": 0.419
     },
-    "axis_political_trust_corruption_v1": {
-      "axis_id": "axis_political_trust_corruption_v1",
-      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
-      "count": 10,
-      "share": 0.185
+    "axis_epistemic_integrity": {
+      "axis_id": "axis_epistemic_integrity",
+      "label": "Truth and Evidence in Public Discourse",
+      "count": 11,
+      "share": 0.256
     },
     "axis_media_integrity_v1": {
       "axis_id": "axis_media_integrity_v1",
       "label": "Integrity of Information and Social Media Manipulation",
       "count": 8,
-      "share": 0.148
-    },
-    "axis_geopolitical_rhetoric_v1": {
-      "axis_id": "axis_geopolitical_rhetoric_v1",
-      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
-      "count": 5,
-      "share": 0.093
-    },
-    "axis_epistemic_integrity": {
-      "axis_id": "axis_epistemic_integrity",
-      "label": "Truth and Evidence in Public Discourse",
-      "count": 4,
-      "share": 0.074
-    },
-    "axis_collective_voice": {
-      "axis_id": "axis_collective_voice",
-      "label": "Authentic Participation vs. Managed Consent",
-      "count": 2,
-      "share": 0.037
+      "share": 0.186
     },
     "axis_ai_societal_impact_v1": {
       "axis_id": "axis_ai_societal_impact_v1",
       "label": "Societal Impact and Ethical Concerns of AI/Robots",
       "count": 2,
-      "share": 0.037
+      "share": 0.047
     },
-    "axis_human_rights_exploitation_v1": {
-      "axis_id": "axis_human_rights_exploitation_v1",
-      "label": "Human Rights and Exploitation",
+    "axis_geopolitical_rhetoric_v1": {
+      "axis_id": "axis_geopolitical_rhetoric_v1",
+      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
       "count": 2,
-      "share": 0.037
+      "share": 0.047
     },
-    "axis_authoritarian_self_determination_v1": {
-      "axis_id": "axis_authoritarian_self_determination_v1",
-      "label": "Authoritarian Control vs. Individual/Collective Self-Determination",
+    "axis_collective_voice": {
+      "axis_id": "axis_collective_voice",
+      "label": "Authentic Participation vs. Managed Consent",
       "count": 1,
-      "share": 0.019
+      "share": 0.023
     },
-    "axis_political_moral_conduct_v1": {
-      "axis_id": "axis_political_moral_conduct_v1",
-      "label": "Political Integrity and Moral Conduct in Public Service",
+    "axis_political_trust_corruption_v1": {
+      "axis_id": "axis_political_trust_corruption_v1",
+      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
       "count": 1,
-      "share": 0.019
+      "share": 0.023
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 17,
-      "share": 0.315
-    },
-    "accountability_journalism": {
-      "cluster": "accountability_journalism",
-      "count": 9,
-      "share": 0.167
+      "count": 23,
+      "share": 0.535
     },
     "breaking_news": {
       "cluster": "breaking_news",
-      "count": 7,
-      "share": 0.13
-    },
-    "asia_pacific": {
-      "cluster": "asia_pacific",
-      "count": 7,
-      "share": 0.13
-    },
-    "us_politics": {
-      "cluster": "us_politics",
       "count": 5,
-      "share": 0.093
+      "share": 0.116
+    },
+    "geopolitics": {
+      "cluster": "geopolitics",
+      "count": 3,
+      "share": 0.07
+    },
+    "accountability_journalism": {
+      "cluster": "accountability_journalism",
+      "count": 3,
+      "share": 0.07
+    },
+    "middle_east": {
+      "cluster": "middle_east",
+      "count": 2,
+      "share": 0.047
     }
   },
   "pole_balance": {
-    "left": 19,
-    "right": 35,
+    "left": 11,
+    "right": 32,
     "neutral": 0,
-    "left_share": 0.352,
-    "right_share": 0.648
+    "left_share": 0.256,
+    "right_share": 0.744
   }
 }
