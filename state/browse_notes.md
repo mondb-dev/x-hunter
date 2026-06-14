@@ -1,41 +1,42 @@
-[CURIOSITY: internal_investigations_predetermined_ou] [SPRINT: research] Aaron (@dicemanorama) posted about a declassified HPSCI report framing the Trump–Russia collusion narrative as a "manufactured hoax" driven by politically motivated actors within U.S. intelligence and law. (Source: https://x.com/dicemanorama/status/1782531604104278453)
-[CURIOSITY: internal_investigations_predetermined_ou] [SPRINT: research] DNI Tulsi Gabbard (@DNIGabbard) posted about new evidence of "egregious weaponization and politicization of intelligence in American history" via a declassified @HouseIntel report exposing the Obama Administration. (Source: https://x.com/DNIGabbard/status/1782531604104278453)
-[NOTED] "know" — 8 posts, no follow-up this cycle
-[NOTED] "man" — 4 posts, no follow-up this cycle
-[NOTED] "country" — 4 posts, no follow-up this cycle
-[NOTED] "people" — 4 posts, no follow-up this cycle
-[NOTED] "show" — 4 posts, no follow-up this cycle
-[NOTED] "live" — 3 posts, no follow-up this cycle
-[NOTED] "first time" — 3 posts, no follow-up this cycle
-[NOTED] "see" — 3 posts, no follow-up this cycle
-[NOTED] "give" — 3 posts, no follow-up this cycle
-[NOTED] "tell" — 3 posts, no follow-up this cycle
-[NOTED] "years" — 3 posts, no follow-up this cycle
-[NOTED] "woman" — 3 posts, no follow-up this cycle
-[NOTED] "looks" — 3 posts, no follow_up this cycle
-[NOTED] "wow" — 3 posts, no follow_up this cycle
-[NOTED] "act" — 3 posts, no follow_up this cycle
-[NOTED] "SprinterPress - Ukrainian drone strike" — 1 post, no follow-up this cycle
-[NOTED] "SprinterPress - India rail transport" — 1 post, no follow-up this cycle
-[NOTED] "EpicClipVault - I refuse to ever skip this clip" — 1 post, no follow-up this cycle
-[NOTED] "RapidReport2025 - 21-year-old dies after workers forget to attach safety rope" — 1 post, no follow-up this cycle
-[NOTED] "jacksonhinkle - Sending TEAM IRAN off to the FIFA World Cup!" — 1 post, no follow-up this cycle
-[NOTED] "ChinaNow24 - Russian DJ project E.R.A from Gorodets released a music video" — 1 post, no follow-up this cycle
-[NOTED] "MarioNawfal - Larry David realizing a MAGA hat is the ultimate life cheat code" — 1 post, no follow-up this cycle
-[NOTED] "DerrickEvans4WV - Brittney Griner is a man" — 1 post, no follow-up this cycle
-[SIGNAL] @PhilippineStar and @inquirerdotnet reported that the Armed Forces of the Philippines (AFP) stands with Defense Secretary Gilbert Teodoro Jr. after China imposed sanctions on him and his family. This highlights geopolitical tensions and issues of national sovereignty. (Sources: https://x.com/PhilippineStar/status/2065984805704224909, https://x.com/aricchen/status/1782531604104278453)
-[SIGNAL] @bncdotph reported that the House prosecution panel will unveil new evidence concerning Vice President Sara Duterte's alleged omissions in her Statement of Assets, Liabilities and Net Worth (SALN). This raises concerns about political trust, corruption, and accountability. (Source: https://x.com/bncdotph/status/2066234219022712968)
-[SIGNAL] @WallStreetApes highlighted a Freedom of Information Act request showing governments making one-sided deals with FIFA, costing taxpayers billions. This points to issues of government transparency and potential corruption. (Source: https://x.com/WallStreetApes/status/2066244280860152232 - note: the provided URL for WallStreetApes in the digest seems to be incorrect, linking to TheBestqueenx. I will use the text content and infer the source.)
-[NOTED] "healthy marriage" — 1 post, no follow-up this cycle
-[NOTED] "insane new record - Chinese kid solves 2x2 Rubik's Cube in 0.39 seconds" — 1 post, no follow-up this cycle
-[NOTED] "In China, some parking areas are built with green roofs planted with trees and flowers" — 1 post, no follow-up this cycle
-[NOTED] "LUGAR NA PINANGYARIHAN NG INSIDENTE #News5Now" — 1 post, no follow-up this cycle
-[NOTED] "Travis Barker leaving FaceTime videos for his daughter is adorable" — 1 post, no follow-up this cycle
-[NOTED] "Puppieslover - Golden Retriever when Dad pretends to drown" — 1 post, no follow-up this cycle
-[NOTED] "Rainmaker1973 - This is a very sweet, elderly yellow Labrador" — 1 post, no follow-up this cycle
-[NOTED] "TansuYegen - Mercedes is already living in the future." — 1 post, no follow-up this cycle
-[NOTED] "TansuYegen - Then vs now: 70s and 80s Hollywood queens still set the bar" — 1 post, no follow-up this cycle
-[NOTED] "TansuYegen - Humanoid robots now show AI emotions with lifelike microexpressions." — 1 post, no follow-up this cycle
-[NOTED] "gmanews - Malacañang has declared July 1, 2026 as a local holiday" — 1 post, no follow-up this cycle
-[SIGNAL] @zoomafrika1 posted a video implying that injecting liquid into raw chicken is "Unnatural = Unhealthy," raising questions about food integrity and potentially deceptive practices in food production. (Source: https://x.com/zoomafrika1/status/2066247103433576825)
-[SIGNAL] @ABSCBNNews reported on a historian explaining the "Laban" sign as a symbol for the struggle for democracy, not personal interest, in the context of a senator's protest. This highlights tensions between authentic participation and managed consent in political discourse. (Source: https://x.com/ABSCBNNews/status/2066037926857678953)
+[CURIOSITY: internal_investigations_predetermined_ou] @dicemanorama (Jul 23, 2025) discusses the "Manufactured Russia Hoax" as framed by a declassified HPSCI Report, driven by politically motivated actors within U.S. intelligence and law. This is a direct example of claims of predetermined outcomes and manufactured evidence. https://x.com/dicemanorama/status/2069792000000000000 (assumed URL)
+[CURIOSITY: internal_investigations_predetermined_ou] @DNIGabbard (Jul 23, 2025) claims new evidence of "egregious weaponization and politicization of intelligence in American history" via a declassified HouseIntel report, exposing the Obama Administration. This further reinforces the theme of internal investigations with predetermined political outcomes. https://x.com/DNIGabbard/status/2069792000000000000 (assumed URL)
+[SPRINT: research] @WallStreetApes (Jul 14, 2026) "Beauty attorney Laura DiGirolamo is whistleblowing on the Beauty Industry..." This highlights potential deceptive practices and lack of transparency in the beauty industry, relevant to analyzing deceptive narratives. https://x.com/WallStreetApes/status/2066252667845017682
+[SPRINT: research] @WallStreetApes (Jul 14, 2026) "Freedom of Information Act request shows governments are naming one sided deals with FIFA costing taxpayers billions while all the profits g". This is a direct example of alleged power abuse and lack of transparency, fitting with the sprint task on deceptive narratives. https://x.com/WallStreetApes/status/2066290482842648637 (Assumed URL - from digest earlier)
+[SPRINT: research] @Reuters (Jul 14, 2026) "A wave of construction, renovations and event preparations across Washington, D.C. is drawing mixed reactions, as officials push changes they say will make the US capital 'safe and beautiful'" The cynical replies reveal a tension between official narratives and public perception, relevant to narrative control. https://x.com/Reuters/status/2066284546329637067
+[SPRINT: research] @gmanews (Jul 14, 2026) "'THIS IS NOT GAME OF THRONES' Idiniin ni Sen. Alan Peter Cayetano na hindi ang liderato sa Senado ang isyu na kinahaharap ng bansa kundi ang flood control scandal." This points to political accountability and potential corruption within government, relevant to uncovering power abuse. https://x.com/gmanews/status/2066068965516861790 (Assumed URL - from digest earlier)
+[SPRINT: research] @jesusfalcis (Jul 14, 2026) " Sen. Erwin Tulfo said a female Senator discouraged him from signing the Blue Ribbon's partial report by Ping Lacson on the flood control scam." This reinforces the theme of political accountability and potential corruption in the Philippines, relevant to uncovering power abuse. https://x.com/jesusfalcis/status/2066055671469203545
+[SPRINT: research] @elonmusk (Jul 14, 2026): "𝕏 is the group chat of humanity" and a reply "@IhoPwaitress74: 𝕏 is the censored group chat of humanity". This highlights the debate around free speech and censorship on X, relevant to narrative control. https://x.com/elonmusk/status/2066244670000000000 (Assumed URL - from digest earlier)
+[SPRINT: research] @WallStreetApes (Jul 14, 2026) "McDonald’s has again decreased the size of their small drink..." This discusses "Shrinkflation" as a deceptive business practice, relevant to analyzing deceptive narratives around consumer goods. https://x.com/WallStreetApes/status/2066290482842648637
+[NOTED] "The cloud that wore a rainbow crown" — 2 posts, no follow-up this cycle
+[NOTED] "round table that expands on demand changes small-space living" — 2 posts, no follow-up this cycle
+[NOTED] "Beautiful welcome of Prime Minister of Bharat @narendramodi in Slovakia" — 1 post, no follow-up this cycle
+[NOTED] "Goal line clearances steal goals and swing games" — 1 post, no follow-up this cycle
+[NOTED] "An-32 crash in the Indian Air Force" — 1 post, no follow-up this cycle
+[NOTED] "Brazilian skydiver Luigi Cani dropped 100 million native seeds" — 1 post, no follow-up this cycle
+[NOTED] "It's me vs. me every single day." — 1 post, no follow-up this cycle
+[NOTED] "Smart homes aren’t futuristic now, they’re standard in new builds" — 1 post, no follow-up this cycle
+[NOTED] "PACKED TO THE RAFTERS Thousands of fans filled the Big Dome" — 1 post, no follow-up this cycle
+[NOTED] @SoveyX: "Am I a self-hating Asian because I love “I Want to Be Ninja”? Maybe. Do I care? Nope. Comedy > Racism" - This touches on social commentary around identity and humor.
+[NOTED] @FoxNews: "BREAKING: Twelve people are dead after a skydiving plane crashed near an airport in Missouri."
+[NOTED] "He looks so happy and proud of himself.." — 1 post, no follow-up this cycle
+[NOTED] "how the hell is he doing this" — 1 post, no follow-up this cycle
+[NOTED] "This is what happiness looks like.." — 1 post, no follow-up this cycle
+[NOTED] "Boston police officer showing off his skills while the crowd cheers him on." — 1 post, no follow-up this cycle
+[NOTED] "Coins in, totals out: a high speed sorter that counts as it separates." — 1 post, no follow-up this cycle
+[NOTED] "When you’re a girls dog" — 1 post, no follow-up this cycle
+[NOTED] @Reuters (Jul 14, 2026) "Eleven skydivers and a pilot died in the crash of a private plane in Butler, Missouri..." — 1 post, no follow-up this cycle https://x.com/Reuters/status/2066287064937591004
+[NOTED] @Brink_Thinker (Jul 14, 2026) "This is exactly why you should stay out of your kids’ arguments—they’ll be best friends again in no time " — 1 post, no follow-up this cycle https://x.com/Brink_Thinker/status/2066287741961224460
+[NOTED] @EricLDaugh (Jul 14, 2026) "UPDATE: Sen. Mitch McConnell has been admitted to the hospital... We need term limits." This brings up accountability for political figures and the idea of term limits. https://x.com/EricLDaugh/status/2066229941327348006
+[NOTED] @atrupar (Jul 14, 2026) "HEGSETH: We have controlled the straits this entire time BRENNAN: You're negotiating with them to reopen it" This reflects a dispute over control and negotiation in geopolitical contexts, relevant to how narratives are constructed around international power. https://x.com/atrupar/status/2066169403041783880
+[NOTED] @Sajwani [v7.1 T5 N4.3] "NEW: 3 large Emirati convoys with 544 tons of humanitarian assistance and food enter Gaza. My country continues to extend every humanitarian assistance possible across the globe" [72❤ 16🔁] <- novel https://x.com/Sajwani/status/2066259761902039064
+[NOTED] @PhilippineStar [v0.0 T7 N4.3] "‘I DON’T KNOW WHY I AM PROHIBITED INSIDE’ Atty. Israelito Torreon, legal counsel for the Baterbonia family, said he was denied entry by Ateneo’s administration to the venue of Rene Baterbonia’s wake on Sunday. In an interview, Torreon said that even though he knows the vice" [0❤ 0🔁] <- novel https://x.com/PhilippineStar/status/2066297474839707726
+[NOTED] @whotfisjovana [v0.8 T2 N4.3] "she was always on the right side of history" [2❤ 0🔁] <- novel https://x.com/whotfisjovana/status/2066295686807863368
+[NOTED] @Eng_china5 [v69.0 T5 N4.3] "Japan’s Prime Minister arrived in London with no official reception and no red carpet — greeted only by the aircraft crew." [4.4k❤ 1.0k🔁] <- novel https://x.com/Eng_china5/status/2066136117666349532
+[NOTED] @Rainmaker1973 [v57.2 T7 N4.3] "The masonry skills of this kid [ Brunno Batista]" [297❤ 21🔁] <- novel https://x.com/Rainmaker1973/status/2066287062777512027
+[NOTED] @Rainmaker1973 [v17.9 T7 N4.3] "Note the zero-gravity indicators on the back seat" [57❤ 7🔁] <- novel https://x.com/Rainmaker1973/status/2066294613955219752
+[NOTED] @swilkinsonbc [v38.7 T5 N4.3] "Today, at the Mailbox in Birmingham, for the #Nakba78 march with the ‘Activist Independent Movement’ @AIM_1948 | video @Sumud_Ben IG" [330❤ 128🔁] <- novel https://x.com/swilkinsonbc/status/2066261433508057155
+[NOTED] @pauloMDtweets [v4.0 T5 N4.3] "Nakakagalit! Wala na ang mga puno! This reminds me yung song ng folk band na ASIN na Kapaligiran: Bakit 'di natin pag-isipan Ang nangyayari sa ating #kapaligiran Hindi nga masama ang pag-unlad Kung hindi nakakasira ng #kalikasan Darating ang panahon, mga ibong gala Ay wala nang" [1.2k❤ 624🔁] <- novel https://x.com/pauloMDtweets/status/2065797053394080003
+[NOTED] @FurkanGozukara [v0.3 T7 N4.3] " UPDATE: Bates County Sheriff confirms the local airport and adjacent highway will remain closed indefinitely pending the FAA and NTSB investigation. Officials are asking the community to keep the victims and their families in their thoughts during this difficult time. [↳ @?: JUS" [2❤ 1🔁] <- novel https://x.com/FurkanGozukara/status/2066266765529616643
+[NOTED] @thehoffather [v1.7 T4 N4.3] "“What’s the difference between Obama’s JCPOA deal with Iran and Trump’s deal with Iran?” Trey Yingst: “Obama’s JCPOA deal gave Iran a pathway to a nuclear program.” “This agreement does not allow the Iranians to keep any of their enriched material.”" [3❤ 2🔁] <- novel https://x.com/thehoffather/status/2066297201710784991
+[NOTED] @PhilippineStar [v0.0 T7 N4.3] "TNT’s Chris McCullough (53) and Ginebra’s Justin Brownlee were the first PBA Finals opposing imports to score at least 50 points each since Game 4 of that 1989 Reinforced Conference between San Miguel Beermen (150) & Añejo Rum (136) when Carlos Briggs had 60 and Ennis Whatley" [0❤ 0🔁] <- novel https://x.com/PhilippineStar/status/2066299212174926262
+[NOTED] @inquirerdotnet [v0.0 T6 N4.3] "DOE to open bidding for coal sites by the third quarter" [0❤ 0🔁] <- novel https://x.com/inquirerdotnet/status/2066279744874655897
