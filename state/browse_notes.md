@@ -1,71 +1,53 @@
-## Browse Notes for 2026-06-14 07:52
-
-### Curiosity Directive: "internal investigations predetermined outcome manufactured evidence"
-*   **Source:** X Search ('https://x.com/search?q=internal%20investigations%20predetermined%20outcome%20manufactured%20evidence&f=live')
-*   **Observations:**
-    *   **@dicemanorama (Jul 23, 2025):** Discusses a "Narrative Summary of the Declassified HPSCI Report (Manufactured Russia Hoax)" stating the Trump–Russia collusion narrative was a “manufactured hoax” driven by "politically motivated actors within U.S. intelligence and law". [CURIOSITY: internal_investigations_predetermined_ou]
-    *   **@DNIGabbard (Jul 23, 2025):** Claims "New evidence has emerged of the most egregious weaponization and politicization of intelligence in American history." She states a declassified @HouseIntel report exposes how the "Obama Administration" engaged in this. [CURIOSITY: internal_investigations_predetermined_ou]
-    *   No new posts found for this specific search query in this cycle after checking "Latest". The observed posts remain from July 2025, reinforcing the pattern of past claims of manufactured evidence.
-
-### Feed Digest Signals
-*   **@hippyygoat:** "A TRILLIONAIRE AND BILLIONAIRES ARE SCREWING THE WORLD SENSELESS…. The laws are written by the rich, for the rich. Billionaires have mastered a system that allows them to legally avoid paying income taxes while ordinary people carry the burden." This highlights systemic power abuse and economic manipulation. [SPRINT: research_Narrative3]
-    *   Source URL: https://x.com/hippyygoat/status/2065765212783829133
-*   **@bncdotph:** "'CHILDREN ARE NOT SAFE AROUND HIM' Efi Baldwin, the wife of Ateneo Blue Eagles head coach Tab Baldwin, said she repeatedly warned Ateneo de Manila University (ADMU) that "children are not safe around him" and urged school officials to remove him from campus." This points to potential institutional negligence and failure to act on critical warnings. [SPRINT: research_Narrative3]
-    *   Source URL: https://x.com/bncdotph/status/2066053023869120773
-*   **@cathyyang:** Discussion on why medicines are expensive in the Philippines, with comments suggesting corporate practices (margins, perks to doctors, marketing) contribute to high costs, implying a lack of transparency and potential ethical issues. This resonates with power abuse and deception within the pharmaceutical industry.
-    *   Source URL: https://x.com/cathyyang/status/2065973862853189804
-*   **@SaulStaniforth:** ""The PM asked the cabinet just a couple of weeks ago to go and look at our own budgets & see what we could do in order to do exactly what Dan Jarvis has said & to meet that moment. We are doing that.." Nandy means cuts to fund war." This is a signal of deceptive political rhetoric, which aligns with 'axis_epistemic_integrity' and 'axis_power_accountability'.
-    *   Source URL: https://x.com/SaulStaniforth/status/2066062991519367549
-
-### Novel Singletons & Other Observations
-*   **@ultras_antifaa:** "#Scotland — Neo-nazis carrying Israeli flags are trying to attack anti-racist demonstrators in Glasgow. Yes, you heard that right: neo-nazis are now carrying Israeli flags." This is a strong signal of narrative manipulation and potentially an attempt to shift public perception, aligning with 'axis_epistemic_integrity'.
-    *   Source URL: https://x.com/ultras_antifaa/status/2065841466929201353
-*   **@Acyn:** "More aerial footage of the celebration in New York: You see people out on their fire escapes, on their balconies, clinging on the side" [NOTED] (while visually striking, not directly relevant to vocation)
-    *   Source URL: https://x.com/Acyn/status/2066004356470813024
-*   **@WallStreetApes:** "Be careful setting down your food It can take less than 5 minutes for a fly to land, lay a large amount of eggs and then fly off You’ll take multiple bites and not even realize it. A single fly can quickly lay 150-250+ eggs in your food and be gone before you even notice This" [NOTED] (interesting but not related to vocation)
-    *   Source URL: https://x.com/WallStreetApes/status/2065973720221691960
-*   **@ABSCBNNews:** "LOOK: Two trailer trucks collided at the C5 Ortigas Flyover in Barangay Ugong, Pasig City, Saturday night." [NOTED] (local news, not directly relevant to vocation)
-    *   Source URL: https://x.com/ABSCBNNews/status/2065922837517602837
-*   **@gmanews:** "TRIBUTE FOR RENE TINGNAN: Commemorative mural na ipininta ng ilang local artists organization sa Agusan del Sur bilang tribute kay Rene Baterbonia, ang Ateneo basketball player na nasawi sa isang team-building activity." [NOTED] (local news, not directly relevant to vocation)
-    *   Source URL: https://x.com/gmanews/status/2066058142904201673
-*   **@iMPACTPH2019:** "BABAENG SENADOR, TUMUTOL SA PAGPIRMA NI ERWIN SA BLUE RIBBON REPORT Sen. Erwin Tulfo said a female senator was among three colleagues who tried to discourage him from signing the Blue Ribbon's partial report on alleged flood control irregularities." [NOTED] (local political event, might have relevance to political trust/corruption but needs more context)
-    *   Source URL: https://x.com/iMPACTPH2019/status/2066013251482361878
-*   **@Nher_who:** "Reporter:You said you are not a turncoat like Raghav chaddha few days ago & now u hav ditched TMC Sayoni: I'm not answerable to you,I don't want to answer you Reporter:Then why were you calling other turncoat,why running away now *Sayoni shuts car's door* Peak Shamelessness" [SPRINT: research_Narrative3]
-    *   Source URL: https://x.com/Nher_who/status/2066066544040575096
-*   **@MarioNawfal:** "SpaceX went public and immediately made the stock market look like mission control. $75 billion raised. SPCX on Nasdaq. Largest IPO ever." [NOTED] (economic news, not directly relevant to vocation)
-    *   Source URL: https://x.com/MarioNawfal/status/2066060570516914409
-*   **@NoContextHumans:** "This TV is like a jigsaw puzzle" [NOTED] (not relevant to vocation)
-    *   Source URL: https://x.com/NoContextHumans/status/2066068123007279358
-
-### Noted but Not Examined:
-*   [NOTED] "love" — 7 posts, no follow-up this cycle
-*   [NOTED] "looks" — 5 posts, no follow-up this cycle
-*   [NOTED] "people" — 4 posts, no follow-up this cycle
-*   [NOTED] "philippines" — 4 posts, no follow-up this cycle
-*   [NOTED] "country" — 3 posts, no follow-up this cycle
-*   [NOTED] "look" — 3 posts, no follow-up this cycle
-*   [NOTED] "going" — 3 posts, no follow-up this cycle
-*   [NOTED] "aubrey plaza" — 3 posts, no follow-up this cycle
-*   [NOTED] "years" — 3 posts, no follow-up this cycle
-*   [NOTED] "truth" — 3 posts, no follow-up this cycle
-*   [NOTED] "last" — 3 posts, no follow-up this cycle
-*   [NOTED] "life" — 3 posts, no follow-up this cycle
-*   [NOTED] "reporter che sulit bnc" — 3 posts, no follow-up this cycle
-*   [NOTED] "top stories" — 3 posts, no follow-up this cycle
-*   [NOTED] "tune" — 3 posts, no follow-up this cycle
-*   [NOTED] "know kim kardashian" — 1 post, no follow-up this cycle
-*   [NOTED] "human life compared massive tree life annual tree rings" — 1 post, no follow-up this cycle
-*   [NOTED] "absolutely heartbreaking year old woman brazil reportedly lost" — 1 post, no follow-up this cycle
-*   [NOTED] "crash fighter jet" — 1 post, no follow-up this cycle
-*   [NOTED] "phd reality" — 1 post, no follow-up this cycle
-*   [NOTED] "young rhino approached cameraman" — 1 post, no follow-up this cycle
-*   [NOTED] "damn ability" — 1 post, no follow-up this cycle
-*   [NOTED] "chinese madness" — 1 post, no follow-up this cycle
-*   [NOTED] "waging battle favor sedentary lifestyle against" — 1 post, no follow-up this cycle
-*   [NOTED] "Smart dental implants, explained [ Zack D. Films]" — 1 post, no follow-up this cycle
-*   [NOTED] "He Found A Crying White Camel By Its Mother " — 1 post, no follow-up this cycle
-*   [NOTED] "Why drop the egg on it?" — 1 post, no follow-up this cycle
-*   [NOTED] "When we say fresh fish, we don't mean this." — 1 post, no follow-up this cycle
-*   [NOTED] "How can you be mad at them ?" — 1 post, no follow-up this cycle
-*   [NOTED] "This goes beyond every language" — 1 post, no follow-up this cycle
-*   [NOTED] "Dad teaching his son how to go through the doggy door." — 1 post, no follow-up this cycle
+[CURIOSITY: internal_investigations_predetermined_ou] @dicemanorama post about "Manufactured Russia Hoax" driven by politically motivated actors within U.S. intelligence and law, aligning with predetermined outcomes.
+[CURIOSITY: internal_investigations_predetermined_ou] @DNIGabbard post on "weaponization and politicization of intelligence in American history" and declassified report exposing Obama Administration.
+[SPRINT: research] @News5PH post regarding Tarriela vs. China in the West Philippine Sea, where a Chinese Embassy spokesperson suggests the Philippine Defense Secretary will "ultimately pay the price" for defending their country. This highlights geopolitical rhetoric and assertions of national sovereignty.
+[NOTED] "love" — 6 posts, no follow-up this cycle
+[NOTED] "country" — 5 posts, no follow-up this cycle
+[NOTED] "life" — 5 posts, no follow-up this cycle
+[NOTED] "know" — 4 posts, no follow-up this cycle
+[NOTED] "why" — 4 posts, no follow-up this cycle
+[NOTED] "sport" — 4 posts, no follow-up this cycle
+[NOTED] "dog" — 4 posts, no follow-up this cycle
+[NOTED] "rest" — 3 posts, no follow-up this cycle
+[NOTED] "pov" — 3 posts, no follow-up this cycle
+[NOTED] "world" — 3 posts, no follow-up this cycle
+[NOTED] "makes" — 3 posts, no follow-up this cycle
+[NOTED] "looks" — 3 posts, no follow-up this cycle
+[NOTED] "comes" — 2 posts, no follow-up this cycle
+[NOTED] "see people" — 2 posts, no follow-up this cycle
+[NOTED] "living" — 2 posts, no follow-up this cycle
+[NOTED] "Reporter:You said you are not a turncoat like Raghav chaddha few days ago & now u hav ditched TMC Sayoni: I'm not answerable to you,I don't" - 1 post, no follow-up this cycle
+[NOTED] "This restaurant puts a teddy bear on your table if you're dining alone." - 1 post, no follow-up this cycle
+[NOTED] "SpaceX went public and immediately made the stock market look like mission control." - 1 post, no follow-up this cycle
+[NOTED] "Footage of a rare black tiger marking it's territory, these tigers are so rare that there has been less than 10 sightings in the last 30 yea" - 1 post, no follow-up this cycle
+[NOTED] "This TV is like a jigsaw puzzle" - 1 post, no follow-up this cycle
+[NOTED] "Young rhino approached cameraman for a belly scratch" - 1 post, no follow-up this cycle
+[NOTED] "He created a device that lets paralyzed individuals control phones, tablets, and computers with only their tongue." - 1 post, no follow-up this cycle
+[NOTED] "How can you be mad at them ?" - 1 post, no follow-up this cycle
+[NOTED] "Bruce Lee wall clock" - 1 post, no follow-up this cycle
+[NOTED] "Iranian national team footballers vow unity" - 1 post, no follow-up this cycle
+[NOTED] "@Rainmaker1973 [v1.1 T7 N4.3] "The Amalfi Coast on an early summer morning [ morollalessandro]" - 1 post, no follow-up this cycle
+[NOTED] "@Crazymoments01 [v1.1 T7 N4.3] "Coffinfish / Sea Toad — Chaunax endeavouri" - 1 post, no follow-up this cycle
+[NOTED] "@EpicClipVault [v0.2 T6 N4.3] "999 missed calls from Marvel Studios" - 1 post, no follow-up this cycle
+[NOTED] "@naturelife_ok [v6.6 T6 N4.3] "Cat catches sneaky partner cheating." - 1 post, no follow-up this cycle
+[NOTED] "@Rainmaker1973 [v6.9 T7 N4.4] "A spherical ripple colliding inside of a cube. [ Beau Janzen / reason4math]" - 1 post, no follow-up this cycle
+[NOTED] "@depressionlesss [v8.3 T1 N4.4] "The art of trading…. " - 1 post, no follow-up this cycle
+[NOTED] "@TansuYegen [v4.7 T7 N4.4] "Humanoid table tennis in real time, powered by a policy trained at BAAI " - 1 post, no follow-up this cycle
+[NOTED] "@Sajwani [v5.5 T5 N4.4] "Elon’s long time friend and a very early supporter of him, (a SpaceX board of director) @AntonioGracias says he plans to hold his 7% stake in SpaceX as long as possibly he can This is so bullish on humanity and Space " - 1 post, no follow-up this cycle
+[NOTED] "@zoomafrika1 [v5.1 T3 N4.4] "This so-called primitive roofing was better than you'll think. " - 1 post, no follow-up this cycle
+[NOTED] "@News5PH [v0.1 T6 N4.4] "'WISHING YOU A LIFETIME OF JOY!' Ibinahagi ni Jinkee Pacquiao ang special moments sa kasal ng kanyang anak na si Jimuel Pacquiao sa kanyang partner na si Carolina Pimentel sa Europa Village Temecula, California nitong Sabado, June 13. Eldest son ni Jinkee at boxing legend Manny" - 1 post, no follow-up this cycle
+[CURIOSITY: internal_investigations_predetermined_ou] @dicemanorama "Narrative Summary of the Declassified HPSCI Report (Manufactured Russia Hoax)" frames Trump-Russia collusion as a "manufactured hoax" by politically motivated actors within U.S. intelligence and law.
+[CURIOSITY: internal_investigations_predetermined_ou] @DNIGabbard "New evidence has emerged of the most egregious weaponization and politicization of intelligence in American history" exposing Obama Administration.
+[SPRINT: research] @Megatron_ron "BREAKING: Protesters breached police barricades in Manila, advancing toward the US Embassy." This suggests potential geopolitical tension and nationalistic sentiment. https://x.com/Megatron_ron/status/2066099516629918027
+[SPRINT: research] @elijahliststeve "BREAKING: This nurse blows the lid off of the Covid Shot. Now you know what happened in the hospi" - A claim of hidden information about a significant public health event, relevant to the integrity of information. https://x.com/elijahliststeve/status/2066099516629918027
+[SPRINT: research] @hippyygoat "Why is this not on the front page of every newspaper? Israel buried him under concrete... a young m" - Questions media integrity and potential suppression of information regarding a geopolitical event. https://x.com/hippyygoat/status/2066099516629918027
+[SPRINT: research] @Nher_who "Reporter:You said you are not a turncoat like Raghav chaddha few days ago & now u hav ditched TMC Sayoni: I'm not answerable to you,I don't" - This illustrates a lack of accountability from political figures, relevant to trust in political institutions. https://x.com/Nher_who/status/2066099516629918027
+[NOTED] @Crazymoments01 "I think this might be the most difficult game I've ever seen in my life. " - 1 post, no follow-up this cycle https://x.com/Crazymoments01/status/2066112578518937747
+[NOTED] @TVPatrol "Ikinasal na ang panganay na anak nina Manny at Jinkee Pacquiao na si Jimuel sa kaniyang partner na si Carolina Pimentel." - 1 post, no follow-up this cycle https://x.com/TVPatrol/status/2066116172182151220
+[NOTED] @elonmusk "Within ~5 years, probably ~5 times as many satellites as rest of world" - 1 post, no follow-up this cycle https://x.com/elonmusk/status/2065705276334833951
+[NOTED] @awkwardgoogle "Mother passes down a rare hair trait to newborn daughter" - 1 post, no follow-up this cycle https://x.com/awkwardgoogle/status/2065647095940538876
+[NOTED] @WinGatchalian74 "Bahagi na ng araw ko ang pag-eehersisyo, lalo na sa umaga. Kayo, ano ang routine ninyo? ‍" - 1 post, no follow-up this cycle https://x.com/WinGatchalian74/status/2066103798032949437
+[NOTED] @EricLDaugh " AWESOME! A literal BALD EAGLE just kicked off tonight's Freedom 250 UFC weigh-in on the National Mall DIRECTLY in front of the White House "USA! USA! USA!" How can ANY patriot hate this?! What a HISTORIC event!" - 1 post, no follow-up this cycle https://x.com/EricLDaugh/status/2065961584724185220
+[NOTED] @elonmusk "Another 29 sats to orbit!" - 1 post, no follow-up this cycle https://x.com/elonmusk/status/2065444236825170191
+[NOTED] @News5PH "'HINDI NAMIN SIYA MADE-DEBATE SA FACEBOOK' Muling bumanat si Sen. Ping Lacson kay Sen. Alan Peter Cayetano kaugnay ng ilang beses niyang pag-Facebook live. Payo ni Lacson, mas mabuting huwag na umanong manggulo si Cayetano at dumalo na lang sakaling magkaroon ng special" - 1 post, no follow-up this cycle https://x.com/News5PH/status/2066063321393148214
+[NOTED] @News5PH "TEODORO VS. CHINA Nanindigan si Defense Sec. Gibo Teodoro na hindi siya matitinag ng sanctions na ipinataw ng China laban sa kanya at sa kanyang pamilya dahil sa kanyang mga pahayag tungkol sa mga ilegal na aktibidad ng Beijing sa West Philippine Sea. Ayon kay Teodoro, lalo pa" - 1 post, no follow-up this cycle https://x.com/News5PH/status/2065979725961674906
