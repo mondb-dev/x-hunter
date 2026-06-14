@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-14T02:53:30.559Z",
+  "generated_at": "2026-06-14T05:53:33.024Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-14T02:54:01.007Z",
+  "profiled_at": "2026-06-14T05:54:03.351Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -1169,18 +1169,18 @@
       "entity": "Com Ph",
       "kind": "unknown",
       "first_seen_at": "2026-04-15T09:58:55.036Z",
-      "last_seen_at": "2026-06-11T10:52:05.882Z",
+      "last_seen_at": "2026-06-14T04:22:00Z",
       "discovery": {
-        "distinct_urls": 19,
+        "distinct_urls": 20,
         "example_urls": [
           "https://x.tv5.com.ph/news/national/read/arrest-warrants-issued-vs-discayas-over-malversation-graft-charges-tied-to-flood-control-projects-malolos-court",
           "https://balita.mb.com.ph/2026/06/11/di-pagbalik-ng-ph-sa-icc-di-nagpapakita-n",
+          "https://balita.mb.com.ph/2026/06/14/babae-timbog-matapos-kumubra-ng-higit-38m-corporate-funds/",
           "https://c.lazada.com.ph/t/c.dp86nK?url=https%3A%2F%2Fpages.lazada.com.ph%2Fwow%2Fgcp%2Froute%2Flazada%2Fph%2Fupr_1000345_lazada%2Fchannel%2Fph%2Fupr-router%2Frender%3Fwx_navbar_transparent%3Dtrue%26hybrid%3D1%26data_prefetch%3Dtrue%26at_iframe%3D1%26lzd_navbar_hidden%3Dtrue%26pha%3Dtrue%26prefetch_replace%3D1%26wh_pid%3D%2Flazada%2Fmegascenario%2Fph%2Fmid-month-april%2FMCP-Omaf&twclid=2bcs2xs7o6kl7buuuabcgrk2d8",
-          "https://pages.lazada.com.ph/wow/gcp/route/lazada/ph/upr_1000345_lazada/channel/ph/upr-router/render?hybrid=1&data_prefetch=true&at_iframe=1&prefetch_replace=1&wx_navbar_transparent=true&wh_pid=/lazada/superseries/ph/PH_LazTMall_Multi-Brand_Campaign_Apr_2026/zE7myizE8n",
-          "https://c.lazada.com.ph/t/c.dp86nK?url=https%3A%2F%2Fpages.lazada.com.ph%2Fwow%2Fgcp%2Froute%2Flazada%2Fph%2Fupr_1000345_lazada%2Fchannel%2Fph%2Fupr-router%2Frender%3Fwx_navbar_transparent%3Dtrue%26hybrid%3D1%26data_prefetch%3Dtrue%26at_iframe%3D1%26lzd_navbar_hidden%3Dtrue%26pha%3Dtrue%26prefetch_replace%3D1%26wh_pid%3D%2Flazada%2Fmegascenario%2Fph%2Fmid-month-april%2FMCP-Omaf"
+          "https://pages.lazada.com.ph/wow/gcp/route/lazada/ph/upr_1000345_lazada/channel/ph/upr-router/render?hybrid=1&data_prefetch=true&at_iframe=1&prefetch_replace=1&wx_navbar_transparent=true&wh_pid=/lazada/superseries/ph/PH_LazTMall_Multi-Brand_Campaign_Apr_2026/zE7myizE8n"
         ],
         "origin_counts": {
-          "ontology_evidence": 3,
+          "ontology_evidence": 4,
           "feed_buffer": 6,
           "feed_buffer_reply": 5,
           "journals": 13
@@ -1218,7 +1218,7 @@
         "breadth": {
           "score": 0.7066666666666666,
           "basis": [
-            "distinct_urls:19",
+            "distinct_urls:20",
             "distinct_axes:2",
             "origin_types:4"
           ]
@@ -1257,7 +1257,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:19",
+            "distinct_urls:20",
             "distinct_axes:2",
             "origin_types:4",
             "referring_accounts:1",
@@ -1938,9 +1938,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-13T23:25:06.000Z",
+      "last_seen_at": "2026-06-14T05:10:13.000Z",
       "discovery": {
-        "distinct_urls": 5275,
+        "distinct_urls": 5294,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1949,10 +1949,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3139,
-          "feed_buffer_reply": 3376
+          "feed_buffer": 3150,
+          "feed_buffer_reply": 3391
         },
-        "distinct_referring_accounts": 1793,
+        "distinct_referring_accounts": 1795,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1990,7 +1990,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5275",
+            "distinct_urls:5294",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1998,7 +1998,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1793",
+            "referring_accounts:1795",
             "origin_types:2"
           ]
         },
@@ -2028,10 +2028,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5275",
+            "distinct_urls:5294",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1793",
+            "referring_accounts:1795",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -2074,9 +2074,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-06-13T08:55:25.000Z",
+      "last_seen_at": "2026-06-14T01:54:51.000Z",
       "discovery": {
-        "distinct_urls": 388,
+        "distinct_urls": 389,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -2085,10 +2085,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 361,
+          "feed_buffer_reply": 362,
           "feed_buffer": 54
         },
-        "distinct_referring_accounts": 253,
+        "distinct_referring_accounts": 254,
         "sample_referring_accounts": [
           "100ohiostate",
           "2by32",
@@ -2126,7 +2126,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:388",
+            "distinct_urls:389",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2134,7 +2134,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:253",
+            "referring_accounts:254",
             "origin_types:2"
           ]
         },
@@ -2164,10 +2164,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:388",
+            "distinct_urls:389",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:253",
+            "referring_accounts:254",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -4396,9 +4396,9 @@
       "entity": "Wsj",
       "kind": "unknown",
       "first_seen_at": "2026-04-05T05:24:00.718Z",
-      "last_seen_at": "2026-06-09T02:30:00.000Z",
+      "last_seen_at": "2026-06-12T17:33:32.000Z",
       "discovery": {
-        "distinct_urls": 16,
+        "distinct_urls": 17,
         "example_urls": [
           "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
           "https://www.wsj.com/video/how-humanoid-robots-joined-this-south-carolina-factory-workforce/F2B22E19-0016-4AA1-A593-57AD7BDBA3CA?mod=WSJvidctr_watchnow_pos0%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_HRS_NAP&twclid=26gyjjgbduwn3fjrxna80o7n4o",
@@ -4408,7 +4408,7 @@
         ],
         "origin_counts": {
           "feed_buffer": 6,
-          "feed_buffer_reply": 10
+          "feed_buffer_reply": 11
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -4439,7 +4439,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:16",
+            "distinct_urls:17",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4473,11 +4473,11 @@
         },
         "overall": {
           "score": 0.43875,
-          "confidence": 0.5066999999999999,
+          "confidence": 0.5292,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:16",
+            "distinct_urls:17",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -9834,6 +9834,133 @@
       }
     },
     {
+      "domain": "wptgold.com",
+      "entity": "Wptgold",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-19T12:02:56.000Z",
+      "last_seen_at": "2026-06-14T01:27:15.000Z",
+      "discovery": {
+        "distinct_urls": 6,
+        "example_urls": [
+          "https://wptgold.com/subscription-3?twclid=26ckzizem3j5r9q8uf2y0hd1k6",
+          "https://wptgold.com/summer-gold-3?twclid=2i3xaomh4te4p4js60vr85xvx",
+          "https://wptgold.com/summer-gold-3?twclid=2c420iyvfx3jeronmsfwpsbj0s",
+          "https://wptgold.com/summer-gold-3?twclid=2azgr2xvr37igzur4776r0p7f3",
+          "https://wptgold.com/summer-gold-3?twclid=23v0knx4imaruz51mu2il2c2f"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 5,
+          "feed_buffer": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "clubwptgold"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.295,
+          "basis": [
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.40046875,
+          "confidence": 0.24495,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-14T01:53:27.751Z",
+        "homepage_url": "https://wptgold.com/",
+        "example_url": "https://wptgold.com/subscription-3?twclid=26ckzizem3j5r9q8uf2y0hd1k6",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.wptgold.com/",
+        "example_final_url": "https://www.wptgold.com/subscription-3?twclid=26ckzizem3j5r9q8uf2y0hd1k6",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "aramco.com",
       "entity": "Aramco",
       "kind": "unknown",
@@ -10814,7 +10941,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T03:20:00.437Z",
+        "fetched_at": "2026-06-14T03:23:26.602Z",
         "homepage_url": "https://declarenews.org/",
         "example_url": "https://declarenews.org/?twclid=2500ov9qtyoaopft1mo5mjis4t",
         "homepage_status": 200,
@@ -10973,133 +11100,6 @@
       }
     },
     {
-      "domain": "wptgold.com",
-      "entity": "Wptgold",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-19T12:02:56.000Z",
-      "last_seen_at": "2026-06-09T20:15:34.000Z",
-      "discovery": {
-        "distinct_urls": 5,
-        "example_urls": [
-          "https://wptgold.com/subscription-3?twclid=26ckzizem3j5r9q8uf2y0hd1k6",
-          "https://wptgold.com/summer-gold-3?twclid=2i3xaomh4te4p4js60vr85xvx",
-          "https://wptgold.com/summer-gold-3?twclid=2c420iyvfx3jeronmsfwpsbj0s",
-          "https://wptgold.com/summer-gold-3?twclid=2azgr2xvr37igzur4776r0p7f3",
-          "https://wptgold.com/summer-gold-3?twclid=23v0knx4imaruz51mu2il2c2f"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 4,
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "clubwptgold"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.26583333333333337,
-          "basis": [
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.1,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.39408854166666674,
-          "confidence": 0.216325,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-14T01:53:27.751Z",
-        "homepage_url": "https://wptgold.com/",
-        "example_url": "https://wptgold.com/subscription-3?twclid=26ckzizem3j5r9q8uf2y0hd1k6",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.wptgold.com/",
-        "example_final_url": "https://www.wptgold.com/subscription-3?twclid=26ckzizem3j5r9q8uf2y0hd1k6",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "smart.link",
       "entity": "Smart Link",
       "kind": "unknown",
@@ -11195,7 +11195,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T04:20:02.300Z",
+        "fetched_at": "2026-06-14T04:23:30.811Z",
         "homepage_url": "https://smart.link/",
         "example_url": "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
         "homepage_status": 200,
@@ -17475,7 +17475,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T05:20:05.847Z",
+        "fetched_at": "2026-06-14T05:23:29.824Z",
         "homepage_url": "https://e.lilly/",
         "example_url": "https://e.lilly/4alH5c4?twclid=2ctpaufet268794kpf0u2aweev",
         "homepage_status": 200,
@@ -17491,7 +17491,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 69,
+          "outbound_links_count": 70,
           "opinion_marker": false
         },
         "example": {
@@ -20343,7 +20343,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T04:50:04.526Z",
+        "fetched_at": "2026-06-14T04:53:28.398Z",
         "homepage_url": "https://betterstack.com/",
         "example_url": "https://betterstack.com/incident-management?twclid=23e9xf4wt9fpugvwab34523yyy",
         "homepage_status": 200,
@@ -24445,7 +24445,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T05:50:38.596Z",
+        "fetched_at": "2026-06-14T05:54:02.066Z",
         "homepage_url": "https://abscbn.news/",
         "example_url": "https://abscbn.news/4cXfLnd",
         "homepage_status": 403,
@@ -24816,7 +24816,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T03:20:01.607Z",
+        "fetched_at": "2026-06-14T03:23:27.436Z",
         "homepage_url": "https://coindesk.com/",
         "example_url": "https://consensus.coindesk.com/?utm_source=x&utm_medium=paid&utm_campaign=CMIA26&utm_content=speakerscarousel&twclid=25wlgerig7ee1h05a2z5wafpgx",
         "homepage_status": 200,
@@ -24832,7 +24832,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 15,
+          "outbound_links_count": 16,
           "opinion_marker": false
         },
         "example": {
@@ -26036,7 +26036,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:20",
+            "outbound_links:23",
             "opinion_marker:false"
           ]
         },
@@ -26056,13 +26056,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T04:50:06.767Z",
+        "fetched_at": "2026-06-14T04:53:29.312Z",
         "homepage_url": "https://clerk.com/",
         "example_url": "https://go.clerk.com/XbAnXL8?twclid=25h7j7u67opstbas3v7totl1up",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://clerk.com/",
-        "example_final_url": "https://clerk.com/docs/guides/ai/skills?utm_source=paid_social&utm_medium=twitter&utm_campaign=skills-v2&utm_content=cdocs-02&dub_id=KNCo6osUSouDekvr&twclid=25h7j7u67opstbas3v7totl1up",
+        "example_final_url": "https://clerk.com/docs/guides/ai/skills?utm_source=paid_social&utm_medium=twitter&utm_campaign=skills-v2&utm_content=cdocs-02&dub_id=tcBGiUhKTVaj1eoz&twclid=25h7j7u67opstbas3v7totl1up",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -26082,7 +26082,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 20,
+          "outbound_links_count": 23,
           "opinion_marker": false
         }
       }
@@ -28148,7 +28148,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T03:20:02.210Z",
+        "fetched_at": "2026-06-14T03:23:27.953Z",
         "homepage_url": "https://stanford.edu/",
         "example_url": "https://setr.stanford.edu/?utm_source=paid-social&utm_medium=x&utm_campaign=consideration&utm_term=nationwide&utm_content=general_image&twclid=24yi2v8i7akrj8uxvbrlymn90n",
         "homepage_status": 200,
@@ -28271,7 +28271,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T03:20:02.850Z",
+        "fetched_at": "2026-06-14T03:23:28.604Z",
         "homepage_url": "https://spotandtango.com/",
         "example_url": "https://www.spotandtango.com/unkibble?discount=XUNKIBBLE&utm_medium=cpc&utm_campaign=X_Convert_2026&utm_source=twitter&twclid=2adust2nkwc5tq5qj4fqfz0vb8",
         "homepage_status": 200,
@@ -30362,7 +30362,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T02:50:36.970Z",
+        "fetched_at": "2026-06-14T03:53:27.403Z",
         "homepage_url": "https://tosso.app/",
         "example_url": "https://tosso.app/?twclid=2cvvvss1n13fvd1weioaoinc1",
         "homepage_status": 200,
@@ -30485,7 +30485,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T03:50:00.975Z",
+        "fetched_at": "2026-06-14T03:53:27.721Z",
         "homepage_url": "https://lunazultequila.com/",
         "example_url": "https://lunazultequila.com/?twclid=25655dk265tpvvyjnscalst7y",
         "homepage_status": 200,
@@ -30731,7 +30731,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T03:50:01.358Z",
+        "fetched_at": "2026-06-14T03:53:27.969Z",
         "homepage_url": "https://vibespace.build/",
         "example_url": "https://vibespace.build/?twclid=29xq7i3v7v3uomihgdn4fscjca",
         "homepage_status": 200,
@@ -30854,7 +30854,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T03:50:01.790Z",
+        "fetched_at": "2026-06-14T03:53:28.340Z",
         "homepage_url": "https://creativefabrica.com/",
         "example_url": "https://studio.creativefabrica.com/?utm_source=x&utm_medium=tweet&utm_campaign=upscaler-tweet&twclid=27bja55r9p6h4r6hc80bhoqdfs",
         "homepage_status": 403,
@@ -30977,7 +30977,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T03:50:02.527Z",
+        "fetched_at": "2026-06-14T04:23:31.275Z",
         "homepage_url": "https://weco.ai/",
         "example_url": "https://weco.ai/?twclid=25gaiie710qdx1lq1t1mo2af5v",
         "homepage_status": 200,
@@ -31100,7 +31100,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T04:20:03.825Z",
+        "fetched_at": "2026-06-14T04:23:32.588Z",
         "homepage_url": "https://simplagents.com/",
         "example_url": "https://simplagents.com/tools/couple-name-mixer/69aa4d444064edf1e4ea388e?twclid=2834nkqxlwo1g7vcbstbjxw4iq",
         "homepage_status": 200,
@@ -31223,7 +31223,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T04:20:04.639Z",
+        "fetched_at": "2026-06-14T04:23:33.184Z",
         "homepage_url": "https://caffeinecommerce.com/",
         "example_url": "https://caffeinecommerce.com/agentready?twclid=2orlib5m54ns2zjcb4ulkpik",
         "homepage_status": 200,
@@ -31246,7 +31246,7 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": true,
-          "has_about_link": false,
+          "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 1,
@@ -31346,7 +31346,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T04:20:05.035Z",
+        "fetched_at": "2026-06-14T04:53:29.711Z",
         "homepage_url": "https://topoready.com/",
         "example_url": "https://topoready.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=topoready_early_access&utm_content=image_with_titles&twclid=26mope2cwejyke6epnanupsaz3",
         "homepage_status": 200,
@@ -31592,7 +31592,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T04:50:07.189Z",
+        "fetched_at": "2026-06-14T04:53:29.994Z",
         "homepage_url": "https://bruntworkwear.com/",
         "example_url": "https://bruntworkwear.com/collections/fathers-day?utm_source=twitter&utm_medium=cpc&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&hpt_source=twitter&hpt_campaign_id=%7B%7Bcampaign_id%7D%7D&hpt_adgroup_id=%7B%7Badgroup_id%7D%7D&hpt_ad_id=%7B%7Bad_id%7D%7D&twclid=27cbkia972xnwru1wrcn3n1z0q",
         "homepage_status": 200,
@@ -31715,7 +31715,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T04:50:07.628Z",
+        "fetched_at": "2026-06-14T05:23:30.246Z",
         "homepage_url": "https://paramountplus.com/",
         "example_url": "https://www.paramountplus.com/shows/dutton-ranch/?ftag=PPM-07-10cbi9g&twclid=2dm265hhtvlky8rqv8df36ol4k",
         "homepage_status": 200,
@@ -31838,7 +31838,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T05:20:06.216Z",
+        "fetched_at": "2026-06-14T05:23:30.352Z",
         "homepage_url": "https://layerproof.app/",
         "example_url": "https://layerproof.app/?twclid=29okmi15onkidmv5cn3td30tzd",
         "homepage_status": 200,
@@ -31961,14 +31961,14 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T05:20:07.295Z",
+        "fetched_at": "2026-06-14T05:23:31.109Z",
         "homepage_url": "https://openevidence.com/",
         "example_url": "https://www.openevidence.com/announcements/openevidence-and-society-of-surgical-oncology-announce-strategic-partnership-to-advance-surgical-cancer-care-and-launch-sso-innovator-grant?twclid=27t9tuhebi4a7qdj9mza3igdkn",
-        "homepage_status": 200,
+        "homepage_status": 403,
         "example_status": 200,
         "homepage_final_url": "https://www.openevidence.com/",
         "example_final_url": "https://www.openevidence.com/announcements/openevidence-and-society-of-surgical-oncology-announce-strategic-partnership-to-advance-surgical-cancer-care-and-launch-sso-innovator-grant?twclid=27t9tuhebi4a7qdj9mza3igdkn",
-        "homepage_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "text/html;charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
@@ -31977,7 +31977,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 2,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -32084,7 +32084,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T05:20:07.659Z",
+        "fetched_at": "2026-06-14T05:54:02.385Z",
         "homepage_url": "https://peacocktv.com/",
         "example_url": "https://www.peacocktv.com/sports/nba?cid=2604sptnp1rsfnbsppdsocial307218&utm_campaign=2604sptnp1rsf&utm_source=nbcs_tw_tw&utm_medium=pd_social_awa_sclpst&utm_term=na_na&utm_content=na&twclid=2befc20y7q2m509tapnzd2kkq0",
         "homepage_status": 200,
@@ -32207,7 +32207,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T05:50:39.181Z",
+        "fetched_at": "2026-06-14T05:54:02.804Z",
         "homepage_url": "https://delltechnologies.com/",
         "example_url": "https://www.delltechnologies.com/en-us/dt/corporate/newsroom/announcements/detailpage.press-releases~usa~2026~05~dell-technologies-closes-the-gap-between-ai-ambition-and-ai-outcomes.htm?twclid=29cpu05ap6qcdleom7dgr5tatw",
         "homepage_status": 404,
@@ -32330,7 +32330,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T05:50:39.857Z",
+        "fetched_at": "2026-06-14T05:54:03.351Z",
         "homepage_url": "https://burga.us/",
         "example_url": "https://burga.us/?utm_source=twitter&utm_medium=paid&utm_campaign=US+-+TOF+%7C+ABO+%7C+1+DC+%7C+Broad+%7C+Evergreen+Ultimate+Winners+%7C+AI+%7C+2026.05.05+%7C+%24200&utm_term=Batch+%231+%7C+2026.05.05&utm_content=Marius+225v3&twclid=252b1spdlruezd1plpkesujsz5",
         "homepage_status": 200,
