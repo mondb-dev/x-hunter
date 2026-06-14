@@ -107,6 +107,62 @@ function getOperatorXHistory() {
   } catch { return ''; }
 }
 
+// Keyword recall — searches full tg_chat_history.jsonl for relevant past exchanges
+const RECALL_STOP_WORDS = new Set([
+  'what','that','this','with','from','have','been','will','about','your','when',
+  'there','their','which','would','could','should','does','just','like','more',
+  'also','some','than','then','them','they','were','into','over','such','much',
+  'very','well','even','back','after','most','only','same','each','make','made',
+  'know','think','said','says','tell','told','need','want','here','time','year',
+  'long','down','come','look','good','used','many','way','may','how','not','but',
+  'for','are','was','has','had','the','and','can','its','you','him','his','her',
+  'our','who','why','any','the','get','got','let','put','set','see','saw','use',
+]);
+
+function extractKeywords(text) {
+  return text.toLowerCase()
+    .replace(/[^\w\s]/g, ' ')
+    .split(/\s+/)
+    .filter(w => w.length > 3 && !RECALL_STOP_WORDS.has(w))
+    .slice(0, 6);
+}
+
+function searchTgChatHistory(userMessage, recentTexts) {
+  const keywords = extractKeywords(userMessage);
+  if (!keywords.length) return '';
+  try {
+    if (!fs.existsSync(TG_CHAT_HISTORY_PATH)) return '';
+    const lines = fs.readFileSync(TG_CHAT_HISTORY_PATH, 'utf-8')
+      .trim().split('\n').filter(Boolean)
+      .map(l => { try { return JSON.parse(l); } catch { return null; } })
+      .filter(Boolean);
+
+    // Group into [user, assistant] pairs
+    const pairs = [];
+    for (let i = 0; i + 1 < lines.length; i += 2) {
+      const u = lines[i], a = lines[i + 1];
+      if (u?.role === 'user' && a?.role === 'assistant') pairs.push([u, a]);
+    }
+
+    const recentSet = new Set(recentTexts);
+    const matches = pairs.filter(([u, a]) => {
+      if (recentSet.has(u.text) || recentSet.has(a.text)) return false;
+      const combined = (u.text + ' ' + a.text).toLowerCase();
+      return keywords.some(kw => combined.includes(kw));
+    });
+
+    const top10 = matches.slice(-10);
+    if (!top10.length) return '';
+
+    const formatted = top10.map(([u, a]) => {
+      const date = (u.ts || '').slice(0, 10);
+      return `[${date}] You: "${u.text.slice(0, 160).replace(/\n/g, ' ')}"\n         Sebastian: "${a.text.slice(0, 160).replace(/\n/g, ' ')}"`;
+    }).join('\n---\n');
+
+    return `\nRelevant past exchanges on this topic (keywords: ${keywords.join(', ')}):\n${formatted}\n`;
+  } catch { return ''; }
+}
+
 // In-memory session history — pre-populated from disk on startup
 let chatSessionHistory = loadTgChatHistory();
 
@@ -1381,11 +1437,14 @@ async function chatWithAgent(userMessage) {
     parts: [{ text: h.text }],
   }));
   const xHistoryBlock = getOperatorXHistory();
+  // Keyword recall: find up to 10 relevant past exchanges outside the rolling window
+  const recentTexts = chatSessionHistory.slice(-(CHAT_HISTORY_MAX_TURNS * 2)).map(h => h.text);
+  const recalledBlock = searchTgChatHistory(userMessage, recentTexts);
 
   // Multi-turn tool loop (max 4 turns)
   const contents = [
     ...historyTurns,
-    { role: 'user', parts: [{ text: `${coreContext}${xHistoryBlock}${briefContext ? '\n' + briefContext : ''}\n\nOperator message: ${userMessage}` }] },
+    { role: 'user', parts: [{ text: `${coreContext}${xHistoryBlock}${recalledBlock}${briefContext ? '\n' + briefContext : ''}\n\nOperator message: ${userMessage}` }] },
   ];
 
   let finalText = null;
