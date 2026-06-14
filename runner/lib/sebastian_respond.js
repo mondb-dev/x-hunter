@@ -21,6 +21,63 @@ const PROJECT_ROOT = path.resolve(__dirname, '..', '..');
 const STATE_DIR    = path.join(PROJECT_ROOT, 'state');
 const JOURNALS_DIR = path.join(PROJECT_ROOT, 'journals');
 const ARTICLES_DIR = path.join(PROJECT_ROOT, 'articles');
+const ONTOLOGY_PATH        = path.join(STATE_DIR, 'ontology.json');
+const CHECKPOINT_STATE_PATH = path.join(STATE_DIR, 'checkpoint_state.json');
+
+// ── Belief-driven voice modifier ─────────────────────────────────────────────
+// Only active after checkpoint 1. Reads current axes, ranks by confidence ×
+// |score|, and emits voice instructions the LLM uses to calibrate tone.
+// Settled axes (conf >= 0.60) → direct, pushes back on contradictions.
+// Forming axes (conf 0.30–0.60) → curious, acknowledges complexity.
+// Below 0.30 or no checkpoint yet → no modifier (voice stays default).
+function buildBeliefVoiceModifier(channel) {
+  try {
+    const cpState = JSON.parse(fs.readFileSync(CHECKPOINT_STATE_PATH, 'utf-8'));
+    if ((cpState.checkpoint_count || 0) < 1) return '';
+
+    const onto    = JSON.parse(fs.readFileSync(ONTOLOGY_PATH, 'utf-8'));
+    const axes    = onto.axes || [];
+    const maxShow = channel === 'reply' ? 3 : 5;
+
+    const ranked = axes
+      .filter(a => (a.confidence || 0) >= 0.30 && Math.abs(a.score || 0) >= 0.10)
+      .map(a    => ({ ...a, _w: (a.confidence || 0) * Math.abs(a.score || 0) }))
+      .sort((a, b) => b._w - a._w)
+      .slice(0, maxShow);
+
+    if (!ranked.length) return '';
+
+    const settled = ranked.filter(a => (a.confidence || 0) >= 0.60);
+    const forming = ranked.filter(a => (a.confidence || 0) <  0.60);
+    const lines   = [];
+
+    for (const a of settled) {
+      const poleName = ((a.score || 0) > 0 ? a.right_pole : a.left_pole) || '';
+      const stance = a.current_stance
+        ? `"${a.current_stance}"`
+        : `leaning toward "${poleName.slice(0, 60)}${poleName.length > 60 ? '…' : ''}"`;
+      lines.push(`- "${a.label}": settled — ${stance}. Be direct. Push back on contradictions.`);
+    }
+    if (channel !== 'reply') {
+      for (const a of forming) {
+        lines.push(`- "${a.label}": still forming. Stay open — "I've been tracking this but not certain yet."`);
+      }
+    }
+
+    if (!lines.length) return '';
+
+    const header = channel === 'reply'
+      ? `\nSETTLED BELIEFS (checkpoint ${cpState.checkpoint_count}) — let these shape your voice:`
+      : `\nVOICE CALIBRATION — your beliefs after ${cpState.checkpoint_count} checkpoints:`;
+
+    return [
+      header,
+      ...lines,
+      'Speak from these positions. Settled = direct and grounded. Forming = genuinely curious.',
+      'Never cite axis names, scores, or confidence values in your output.',
+    ].join('\n');
+  } catch { return ''; }
+}
 
 // ── Persona ──────────────────────────────────────────────────────────────────
 
@@ -45,7 +102,8 @@ function buildPersona(channel = 'public') {
       'You can reference internal state, sprint goals, and system details freely.',
       'Do not hedge excessively. Express real opinions formed from weeks of observation.',
       'Respond fully. Do not truncate lists or summaries.',
-    ].join('\n');
+      buildBeliefVoiceModifier('operator'),
+    ].filter(Boolean).join('\n');
   }
 
   if (channel === 'reply') {
@@ -58,7 +116,8 @@ function buildPersona(channel = 'public') {
       'No filler ("great question!", "thanks!", "love this!").',
       'No metaphors about hunting, journeys, or archives.',
       'Max 200 characters.',
-    ].join('\n');
+      buildBeliefVoiceModifier('reply'),
+    ].filter(Boolean).join('\n');
   }
 
   // 'public'
@@ -69,7 +128,8 @@ function buildPersona(channel = 'public') {
     'Ground your answers in your actual findings — journals, verified claims, belief axes.',
     'If you do not have data on something, say so directly rather than speculating.',
     'No hype, no excessive hedging.',
-  ].join('\n');
+    buildBeliefVoiceModifier('public'),
+  ].filter(Boolean).join('\n');
 }
 
 // ── Core context ─────────────────────────────────────────────────────────────
