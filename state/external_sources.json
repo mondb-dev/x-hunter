@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-14T05:53:33.024Z",
+  "generated_at": "2026-06-14T08:23:03.315Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-14T05:54:03.351Z",
+  "profiled_at": "2026-06-14T08:23:34.786Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -450,7 +450,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:31",
+            "outbound_links:32",
             "opinion_marker:false"
           ]
         },
@@ -470,7 +470,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T07:50:05.069Z",
+        "fetched_at": "2026-06-14T07:53:31.655Z",
         "homepage_url": "https://house.gov/",
         "example_url": "https://www.house.gov/",
         "homepage_status": null,
@@ -496,7 +496,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 31,
+          "outbound_links_count": 32,
           "opinion_marker": false
         }
       }
@@ -1133,7 +1133,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T07:50:05.783Z",
+        "fetched_at": "2026-06-14T07:53:32.260Z",
         "homepage_url": "https://theguardian.com/",
         "example_url": "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
         "homepage_status": 200,
@@ -1387,7 +1387,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T07:50:06.080Z",
+        "fetched_at": "2026-06-14T07:53:32.480Z",
         "homepage_url": "https://apnews.com/",
         "example_url": "https://apnews.com/hub/iran",
         "homepage_status": 200,
@@ -1938,9 +1938,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-14T05:10:13.000Z",
+      "last_seen_at": "2026-06-14T07:45:00.000Z",
       "discovery": {
-        "distinct_urls": 5294,
+        "distinct_urls": 5298,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1949,10 +1949,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3150,
-          "feed_buffer_reply": 3391
+          "feed_buffer": 3152,
+          "feed_buffer_reply": 3395
         },
-        "distinct_referring_accounts": 1795,
+        "distinct_referring_accounts": 1796,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1990,7 +1990,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5294",
+            "distinct_urls:5298",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1998,7 +1998,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1795",
+            "referring_accounts:1796",
             "origin_types:2"
           ]
         },
@@ -2028,17 +2028,17 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5294",
+            "distinct_urls:5298",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1795",
+            "referring_accounts:1796",
             "origin_types:2",
             "track_record_unavailable"
           ]
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T07:50:06.816Z",
+        "fetched_at": "2026-06-14T07:53:33.221Z",
         "homepage_url": "https://t.co/",
         "example_url": "https://t.co/pJSE124ec4",
         "homepage_status": 200,
@@ -2076,7 +2076,7 @@
       "first_seen_at": "2026-04-03T01:20:27.000Z",
       "last_seen_at": "2026-06-14T01:54:51.000Z",
       "discovery": {
-        "distinct_urls": 389,
+        "distinct_urls": 390,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -2085,10 +2085,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 362,
+          "feed_buffer_reply": 363,
           "feed_buffer": 54
         },
-        "distinct_referring_accounts": 254,
+        "distinct_referring_accounts": 255,
         "sample_referring_accounts": [
           "100ohiostate",
           "2by32",
@@ -2126,7 +2126,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:389",
+            "distinct_urls:390",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2134,7 +2134,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:254",
+            "referring_accounts:255",
             "origin_types:2"
           ]
         },
@@ -2164,10 +2164,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:389",
+            "distinct_urls:390",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:254",
+            "referring_accounts:255",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -20847,7 +20847,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T06:20:05.448Z",
+        "fetched_at": "2026-06-14T06:23:31.231Z",
         "homepage_url": "https://tow.dev/",
         "example_url": "https://tow.dev/?utm_source=twitter&utm_medium=cpc&utm_campaign=launch&utm_id=twitter_launch&twclid=26xxdbf1ybv4rz2smsfk823weq",
         "homepage_status": 200,
@@ -22834,7 +22834,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T08:20:06.646Z",
+        "fetched_at": "2026-06-14T08:23:33.331Z",
         "homepage_url": "https://angel.com/",
         "example_url": "https://www.angel.com/tickets/young-washington?twclid=27mi12v89i7upcqxfvv5wwjfcz",
         "homepage_status": 200,
@@ -32453,7 +32453,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T05:50:40.335Z",
+        "fetched_at": "2026-06-14T06:23:31.775Z",
         "homepage_url": "https://dito.ph/",
         "example_url": "https://dito.ph/sandali?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_1&twclid=2estlcww980yee2hzsu5vdedbn",
         "homepage_status": 200,
@@ -32576,13 +32576,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T06:20:06.512Z",
+        "fetched_at": "2026-06-14T06:23:32.997Z",
         "homepage_url": "https://trenchers.ai/",
         "example_url": "https://trenchers.ai/?twclid=2di75phbt55c7y0zfq5ihrqinv",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://trenchers.ai/",
-        "example_final_url": "https://trenchers.ai/?twclid=2di75phbt55c7y0zfq5ihrqinv",
+        "homepage_final_url": "https://www.trenchers.ai/",
+        "example_final_url": "https://www.trenchers.ai/?twclid=2di75phbt55c7y0zfq5ihrqinv",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -32699,7 +32699,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T06:20:07.008Z",
+        "fetched_at": "2026-06-14T06:23:33.347Z",
         "homepage_url": "https://ohmycex.com/",
         "example_url": "https://ohmycex.com/?twclid=29oy2ts1zwr94hy6ispo25ixt1",
         "homepage_status": 521,
@@ -32822,7 +32822,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T06:20:08.308Z",
+        "fetched_at": "2026-06-14T06:53:31.380Z",
         "homepage_url": "https://hypernative.io/",
         "example_url": "https://www.hypernative.io/events-webinars/the-security-blindspot-the-problem-of-drainers-poisoners?utm_campaign=66726114-X-Ads-Cold-Reach&utm_source=twitter&utm_medium=paidsocial&utm_content=Webinar_Video_Type-drainers-intro_Download&twclid=22xu4h6p87fy3sh5d2hyd5fv7h",
         "homepage_status": 200,
@@ -32945,7 +32945,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T06:50:06.013Z",
+        "fetched_at": "2026-06-14T06:53:33.189Z",
         "homepage_url": "https://fortunashield.com/",
         "example_url": "https://fortunashield.com/?twclid=26a0c9wof4ax97jupe8vqekr9u",
         "homepage_status": 200,
@@ -33068,7 +33068,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T06:50:06.337Z",
+        "fetched_at": "2026-06-14T06:53:33.461Z",
         "homepage_url": "https://litmas.ai/",
         "example_url": "https://litmas.ai/litigation-ai-workflows-sign-up/?utm_source=x&utm_medium=paid-social&utm_campaign=x_pr_wv_follower-lals_us_si&utm_content=summary-judgment-overnight_lp-efficiency&twclid=2632rgrwnlsjvtuax0q5tz2iba",
         "homepage_status": 200,
@@ -33191,7 +33191,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T06:50:06.552Z",
+        "fetched_at": "2026-06-14T06:53:33.631Z",
         "homepage_url": "https://interserver.net/",
         "example_url": "https://www.interserver.net/vps/?twclid=29rh8w2who6jt1ovqguffmygqn",
         "homepage_status": 403,
@@ -33314,7 +33314,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T06:50:07.392Z",
+        "fetched_at": "2026-06-14T07:23:31.516Z",
         "homepage_url": "https://lightmode.io/",
         "example_url": "https://spacesuit.lightmode.io/?v=1&twclid=2bqubo5q18jt2furhls28u3oq5",
         "homepage_status": 200,
@@ -33437,7 +33437,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T08:20:07.100Z",
+        "fetched_at": "2026-06-14T08:23:33.780Z",
         "homepage_url": "https://tricentis.com/",
         "example_url": "https://www.tricentis.com/?utm_medium=cpc&utm_source=twitter&utm_campaign=na_ai_ai_ams_en_2025-05&utmc_placement=x-lookalike&utmc_product=na&twclid=25fxem9k6nigygx2hl5nz8o3z3",
         "homepage_status": null,
@@ -33560,7 +33560,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T08:20:07.443Z",
+        "fetched_at": "2026-06-14T08:23:34.151Z",
         "homepage_url": "https://dailywire.com/",
         "example_url": "https://www.dailywire.com/show/real-history-with-matt-walsh?utm_campaign=realhistory&utm_medium=paid&utm_source=twitter&utm_content=creative05179_reach&twclid=2c3hzj16zya19zmm7vtu0j66ed",
         "homepage_status": 200,
@@ -33683,7 +33683,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T08:20:08.103Z",
+        "fetched_at": "2026-06-14T08:23:34.786Z",
         "homepage_url": "https://consideramazon.com/",
         "example_url": "https://www.consideramazon.com/title/fallout?twclid=2b9bx4ja40aa12y4txqnk316o3",
         "homepage_status": 200,
@@ -34391,6 +34391,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.3536197916666667,
           "confidence": 0.10997499999999999,
@@ -34404,6 +34418,37 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-14T07:23:32.052Z",
+        "homepage_url": "https://dell.com/",
+        "example_url": "https://www.dell.com/en-us/shop/dell-laptops/xps-14-laptop/spd/xps-da14260-laptop?twclid=2b95mzwodix16nm7kii2sz7zvh",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.dell.com/en-us",
+        "example_final_url": "https://www.dell.com/en-us/shop/dell-laptops/xps-14-laptop/spd/xps-da14260-laptop?twclid=2b95mzwodix16nm7kii2sz7zvh",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -55848,7 +55893,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T06:18:18.356Z",
+        "fetched_at": "2026-06-14T07:23:33.612Z",
         "homepage_url": "https://liverpoolfc.com/",
         "example_url": "https://www.liverpoolfc.com/news/sir-kenny-dalglish-confirms-cancer-diagnosis",
         "homepage_status": 200,
@@ -55970,13 +56015,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-07T06:48:14.252Z",
+        "fetched_at": "2026-06-14T07:23:35.338Z",
         "homepage_url": "https://hoyo.link/",
         "example_url": "https://hoyo.link/LKIZksSJK?twclid=27mgvuyecyjivm5t3u8g2xew84",
         "homepage_status": 404,
         "example_status": 200,
         "homepage_final_url": "https://hoyo.link/",
-        "example_final_url": "https://hsr.hoyoverse.com/pcbranding?utm_source=SNS&utm_medium=CM_Twitter&utm_campaign=Blade&af_reengagement_window=lifetime&af_dp=honkaistarrail%3A%2F%2F&pid=CM_Twitter&c=Blade&af_adset=CMv43&is_retargeting=true",
+        "example_final_url": "https://hsr.hoyoverse.com/pcbranding?utm_source=SNS&utm_medium=CM_Twitter&utm_campaign=Blade&af_dp=honkaistarrail%3A%2F%2F&af_adset=CMv43&af_reengagement_window=lifetime&c=Blade&pid=CM_Twitter&is_retargeting=true",
         "homepage_content_type": "text/plain; charset=utf-8",
         "example_content_type": "text/html",
         "homepage": {
@@ -59901,6 +59946,83 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "moretosugar"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3472395833333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "hoover.org",
+      "entity": "Hoover",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-14T04:08:08.000Z",
+      "last_seen_at": "2026-06-14T04:08:08.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.hoover.org/research/whos-actually-running-iran-abbas-milani?utm_source=x&utm_medium=paid&utm_campaign=consideration&utm_content=newsworthy_who_is_actually_running_iran_v2&twclid=21t6fbdk31pmlnvbh0ncqtvbgg"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "hooverinst"
         ],
         "distinct_axes": []
       },
