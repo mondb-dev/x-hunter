@@ -600,6 +600,52 @@ for (const axis of onto.axes) {
   }
 }
 
+// ── Generate current_stance for updated axes with confidence >= 0.4 ───────────
+// Produces a first-person sentence summarising Sebastian's actual position.
+// Used by buildCoreContext() to enrich axis context in all reply/chat prompts.
+// Non-blocking: a failed LLM call leaves the existing stance (or no stance).
+const STANCE_GEN_MIN_CONF = 0.40;
+const stanceGenAxes = onto.axes.filter(
+  a => axesUpdated.has(a.id) && (a.confidence || 0) >= STANCE_GEN_MIN_CONF
+);
+for (const axis of stanceGenAxes) {
+  const recentEvidence = (axis.evidence_log || [])
+    .slice(-8)
+    .map(e => (e.content || e.summary || "").trim())
+    .filter(Boolean)
+    .slice(0, 5);
+  if (!recentEvidence.length) continue;
+
+  const dirWord = (axis.score || 0) > 0.15
+    ? `leaning toward "${axis.right_pole}"`
+    : (axis.score || 0) < -0.15
+      ? `leaning toward "${axis.left_pole}"`
+      : "conflicted between both poles";
+
+  const stancePrompt =
+`You are Sebastian D. Hunter's internal narrator.
+Axis: "${axis.label}"
+Left pole: "${axis.left_pole}"
+Right pole: "${axis.right_pole}"
+Current direction: ${dirWord}
+
+Recent evidence (${recentEvidence.length} entries):
+${recentEvidence.map((e, i) => `${i + 1}. ${e.slice(0, 120)}`).join("\n")}
+
+In one direct sentence (15–30 words), state Sebastian's current position on this axis.
+Write in first person. Be specific to the evidence. No score numbers, no hedging markers.
+Return ONLY the sentence.`;
+
+  try {
+    const stance = await llmGenerate(stancePrompt, { temperature: 0.3, maxTokens: 60, timeoutMs: 8_000 });
+    const cleaned = stance.replace(/^["']|["']$/g, "").trim();
+    if (cleaned.length > 10 && cleaned.length < 200) {
+      axis.current_stance = cleaned;
+      console.log(`[apply_delta] stance generated for ${axis.id}: "${cleaned.slice(0, 80)}"`);
+    }
+  } catch { /* non-fatal */ }
+}
+
 // Persist updated drift cap state (scores reflect the clamped values for today)
 saveDriftCapState(driftState);
 

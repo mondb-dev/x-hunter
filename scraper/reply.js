@@ -241,7 +241,14 @@ function memoryWebUrl(filePath) {
 
 // ── 4. Belief & vocation context — delegated to sebastian_respond ─────────────
 function loadBeliefContext() {
-  return buildCoreContext({ maxAxes: 6, journalCount: 0 });
+  return buildCoreContext({
+    maxAxes: 10,
+    journalCount: 2,
+    journalChars: 500,
+    includeCheckpoint: true,
+    checkpointChars: 500,
+    includeClaims: true,
+  });
 }
 
 // ── 5. Gemini: classify + draft with full context ─────────────────────────────

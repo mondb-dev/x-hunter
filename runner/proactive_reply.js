@@ -203,15 +203,30 @@ function alreadyEngaged(url) {
 
 async function draftReply(candidate, verification) {
   const coreContext = buildCoreContext({
-    maxAxes: 6,
-    journalCount: 0,
-    journalChars: 0,
+    maxAxes: 10,
+    journalCount: 2,
+    journalChars: 500,
+    includeCheckpoint: true,
+    checkpointChars: 500,
+    includeClaims: true,
     includeArticles: false,
     includeSprint: false,
   });
 
-  const recallBlock = '';  // recallForTopic removed — memory API handles recall
+  const recallBlock = '';
 
+  // Prior exchanges with this specific user (avoid repeating ourselves)
+  let userHistoryBlock = '';
+  try {
+    const idata = JSON.parse(fs.readFileSync(INTERACTIONS, 'utf-8'));
+    const udata = idata.users?.[candidate.handle];
+    if (udata?.exchanges?.length) {
+      const prior = udata.exchanges.slice(-3).map(e =>
+        `  @${candidate.handle}: "${(e.their_text || '').slice(0, 100).replace(/\n/g, ' ')}"\n  You replied: "${(e.our_reply || '').slice(0, 100).replace(/\n/g, ' ')}"`
+      ).join('\n---\n');
+      userHistoryBlock = `\nPrior exchanges with @${candidate.handle} (${udata.reply_count} total):\n${prior}\nDo not repeat what was already said.\n`;
+    }
+  } catch { /* non-fatal */ }
 
   let verificationBlock = '';
   if (verification) {
@@ -234,6 +249,7 @@ async function draftReply(candidate, verification) {
   const prompt = buildPersona('reply') + '\n\n' +
     coreContext +
     recallBlock +
+    userHistoryBlock +
     verificationBlock +
     '\n\nYou are proactively engaging with a post on X. This is outbound -- nobody asked you.\n' +
     'Your goal: insert Sebastian\'s voice into a high-visibility conversation, especially to correct\n' +
@@ -282,8 +298,7 @@ async function draftReply(candidate, verification) {
 
   const { callVertex } = require('./vertex');
 
-  const fullPrompt = buildPersona('reply') + '\n\n' + prompt;
-  const raw = await callVertex(fullPrompt, 2000, { model: 'gemini-2.5-flash', thinkingBudget: 0 });
+  const raw = await callVertex(prompt, 2000, { model: 'gemini-2.5-flash', thinkingBudget: 0 });
   const sourceUrls = [];
   const text = raw.trim();
 

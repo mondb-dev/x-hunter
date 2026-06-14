@@ -64,6 +64,52 @@ const INFRA_CHECK_INTERVAL_MS = 60_000;  // check for pending infra requests eve
 let lastUpdateId = 0;
 let lastInfraCheckAt = 0;
 
+// ── Conversation memory ─────────────────────────────────────────────────────
+const TG_CHAT_HISTORY_PATH = path.join(config.STATE_DIR, 'tg_chat_history.jsonl');
+const INTERACTIONS_PATH    = path.join(config.STATE_DIR, 'interactions.json');
+const OPERATOR_X_HANDLE    = process.env.OPERATOR_X_HANDLE || '';
+const CHAT_HISTORY_MAX_TURNS = 8; // exchanges kept in active context
+
+function loadTgChatHistory() {
+  try {
+    if (!fs.existsSync(TG_CHAT_HISTORY_PATH)) return [];
+    const lines = fs.readFileSync(TG_CHAT_HISTORY_PATH, 'utf-8')
+      .trim().split('\n').filter(Boolean);
+    return lines.slice(-(CHAT_HISTORY_MAX_TURNS * 2)).map(l => JSON.parse(l));
+  } catch { return []; }
+}
+
+function appendTgChatHistory(userMsg, agentReply) {
+  const ts = new Date().toISOString();
+  const entry = [
+    JSON.stringify({ ts, role: 'user',      text: userMsg }),
+    JSON.stringify({ ts, role: 'assistant', text: agentReply }),
+  ].join('\n') + '\n';
+  try { fs.appendFileSync(TG_CHAT_HISTORY_PATH, entry); } catch { /* non-fatal */ }
+  chatSessionHistory.push({ role: 'user', text: userMsg });
+  chatSessionHistory.push({ role: 'assistant', text: agentReply });
+  if (chatSessionHistory.length > CHAT_HISTORY_MAX_TURNS * 2) {
+    chatSessionHistory = chatSessionHistory.slice(-(CHAT_HISTORY_MAX_TURNS * 2));
+  }
+}
+
+// Returns a text block summarising recent X exchanges with the operator
+function getOperatorXHistory() {
+  if (!OPERATOR_X_HANDLE) return '';
+  try {
+    const data = JSON.parse(fs.readFileSync(INTERACTIONS_PATH, 'utf-8'));
+    const user = data.users?.[OPERATOR_X_HANDLE];
+    if (!user?.exchanges?.length) return '';
+    const recent = user.exchanges.slice(-3).map(e =>
+      `  @${OPERATOR_X_HANDLE}: "${(e.their_text || '').slice(0, 120).replace(/\n/g, ' ')}"\n  You replied: "${(e.our_reply || '').slice(0, 120).replace(/\n/g, ' ')}"`
+    ).join('\n');
+    return `\nYour recent X exchanges with @${OPERATOR_X_HANDLE} (${user.reply_count} total on X):\n${recent}\n`;
+  } catch { return ''; }
+}
+
+// In-memory session history — pre-populated from disk on startup
+let chatSessionHistory = loadTgChatHistory();
+
 // ── Telegram helpers ────────────────────────────────────────────────────────
 
 function telegramAPI(method, body) {
@@ -1272,6 +1318,9 @@ async function chatWithAgent(userMessage) {
     maxAxes: 12,
     journalCount: 1,
     journalChars: 1200,
+    includeCheckpoint: true,
+    checkpointChars: 800,
+    includeClaims: true,
     includeArticles: true,
     includeSprint: true,
   });
@@ -1326,9 +1375,17 @@ async function chatWithAgent(userMessage) {
 
   const { getAccessToken, getProjectConfig } = require('./gcp_auth');
 
+  // Build multi-turn history (Gemini user/model turns from past exchanges)
+  const historyTurns = chatSessionHistory.slice(-(CHAT_HISTORY_MAX_TURNS * 2)).map(h => ({
+    role: h.role === 'user' ? 'user' : 'model',
+    parts: [{ text: h.text }],
+  }));
+  const xHistoryBlock = getOperatorXHistory();
+
   // Multi-turn tool loop (max 4 turns)
   const contents = [
-    { role: 'user', parts: [{ text: `${coreContext}${briefContext ? '\n' + briefContext : ''}\n\nOperator message: ${userMessage}` }] },
+    ...historyTurns,
+    { role: 'user', parts: [{ text: `${coreContext}${xHistoryBlock}${briefContext ? '\n' + briefContext : ''}\n\nOperator message: ${userMessage}` }] },
   ];
 
   let finalText = null;
@@ -1389,6 +1446,7 @@ async function chatWithAgent(userMessage) {
     try { fs.unlinkSync(CYCLE_LOCK_PATH); } catch {}
 
     await sendMessage((finalText || '<i>Agent produced no output</i>').slice(0, 4000));
+    if (finalText) appendTgChatHistory(userMessage, finalText);
 
   } catch (e) {
     try { fs.unlinkSync(CYCLE_LOCK_PATH); } catch {}
