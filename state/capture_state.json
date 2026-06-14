@@ -1,146 +1,158 @@
 {
-  "checked_at": "2026-06-13T18:30:27.397Z",
-  "evidence_24h": 43,
+  "checked_at": "2026-06-14T19:02:55.013Z",
+  "evidence_24h": 51,
   "unique_sources": 24,
   "status": "warning",
   "alerts": [
     {
       "type": "pole_skew",
       "severity": "moderate",
-      "detail": "74% of evidence pushes \"right\" — risk of one-sided belief drift",
+      "detail": "73% of evidence pushes \"right\" — risk of one-sided belief drift",
       "dominant_pole": "right",
-      "share": 0.744
+      "share": 0.725
     }
   ],
-  "summary": "1 capture alert(s) detected:\n[MODERATE] 74% of evidence pushes \"right\" — risk of one-sided belief drift",
+  "summary": "1 capture alert(s) detected:\n[MODERATE] 73% of evidence pushes \"right\" — risk of one-sided belief drift",
   "source_concentration": {
-    "esq_sanders": {
-      "username": "esq_sanders",
+    "dnigabbard": {
+      "username": "dnigabbard",
       "count": 8,
-      "share": 0.186
+      "share": 0.157
+    },
+    "dicemanorama": {
+      "username": "dicemanorama",
+      "count": 7,
+      "share": 0.137
     },
     "unknown": {
       "username": "unknown",
-      "count": 4,
-      "share": 0.093
+      "count": 5,
+      "share": 0.098
     },
-    "tufpraise": {
-      "username": "tufpraise",
-      "count": 2,
-      "share": 0.047
+    "news5ph": {
+      "username": "news5ph",
+      "count": 3,
+      "share": 0.059
     },
-    "mhdksafa": {
-      "username": "mhdksafa",
-      "count": 2,
-      "share": 0.047
+    "americapapabear": {
+      "username": "americapapabear",
+      "count": 3,
+      "share": 0.059
     },
-    "philstarlife": {
-      "username": "philstarlife",
+    "jesusfalcis": {
+      "username": "jesusfalcis",
       "count": 2,
-      "share": 0.047
+      "share": 0.039
     },
-    "whitehouse": {
-      "username": "whitehouse",
+    "esq_sanders": {
+      "username": "esq_sanders",
       "count": 2,
-      "share": 0.047
+      "share": 0.039
     },
-    "palubogpalitaw": {
-      "username": "palubogpalitaw",
+    "derrickevans4wv": {
+      "username": "derrickevans4wv",
       "count": 2,
-      "share": 0.047
+      "share": 0.039
     },
-    "rt_com": {
-      "username": "rt_com",
+    "bncdotph": {
+      "username": "bncdotph",
       "count": 2,
-      "share": 0.047
+      "share": 0.039
     },
-    "marionawfal": {
-      "username": "marionawfal",
+    "dzbb": {
+      "username": "dzbb",
       "count": 2,
-      "share": 0.047
-    },
-    "gmanicurist": {
-      "username": "gmanicurist",
-      "count": 2,
-      "share": 0.047
+      "share": 0.039
     }
   },
   "axis_concentration": {
     "axis_power_accountability": {
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
-      "count": 18,
-      "share": 0.419
-    },
-    "axis_epistemic_integrity": {
-      "axis_id": "axis_epistemic_integrity",
-      "label": "Truth and Evidence in Public Discourse",
-      "count": 11,
-      "share": 0.256
+      "count": 25,
+      "share": 0.49
     },
     "axis_media_integrity_v1": {
       "axis_id": "axis_media_integrity_v1",
       "label": "Integrity of Information and Social Media Manipulation",
-      "count": 8,
-      "share": 0.186
+      "count": 10,
+      "share": 0.196
     },
-    "axis_ai_societal_impact_v1": {
-      "axis_id": "axis_ai_societal_impact_v1",
-      "label": "Societal Impact and Ethical Concerns of AI/Robots",
-      "count": 2,
-      "share": 0.047
+    "axis_national_sovereignty_v_intl_law_v1": {
+      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "label": "National Sovereignty vs. International Law",
+      "count": 5,
+      "share": 0.098
     },
-    "axis_geopolitical_rhetoric_v1": {
-      "axis_id": "axis_geopolitical_rhetoric_v1",
-      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
-      "count": 2,
-      "share": 0.047
-    },
-    "axis_collective_voice": {
-      "axis_id": "axis_collective_voice",
-      "label": "Authentic Participation vs. Managed Consent",
-      "count": 1,
-      "share": 0.023
+    "axis_epistemic_integrity": {
+      "axis_id": "axis_epistemic_integrity",
+      "label": "Truth and Evidence in Public Discourse",
+      "count": 4,
+      "share": 0.078
     },
     "axis_political_trust_corruption_v1": {
       "axis_id": "axis_political_trust_corruption_v1",
       "label": "Trust in Political Institutions and Anti-Corruption Efforts",
+      "count": 2,
+      "share": 0.039
+    },
+    "axis_new_world_order_discourse_v1": {
+      "axis_id": "axis_new_world_order_discourse_v1",
+      "label": "Discourse on the \"New World Order\": Centralized Global Governance vs. National Sovereignty/Individual Freedom",
+      "count": 2,
+      "share": 0.039
+    },
+    "axis_ai_societal_impact_v1": {
+      "axis_id": "axis_ai_societal_impact_v1",
+      "label": "Societal Impact and Ethical Concerns of AI/Robots",
       "count": 1,
-      "share": 0.023
+      "share": 0.02
+    },
+    "axis_geopolitical_rhetoric_v1": {
+      "axis_id": "axis_geopolitical_rhetoric_v1",
+      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
+      "count": 1,
+      "share": 0.02
+    },
+    "axis_political_moral_conduct_v1": {
+      "axis_id": "axis_political_moral_conduct_v1",
+      "label": "Political Integrity and Moral Conduct in Public Service",
+      "count": 1,
+      "share": 0.02
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 23,
-      "share": 0.535
-    },
-    "breaking_news": {
-      "cluster": "breaking_news",
-      "count": 5,
-      "share": 0.116
-    },
-    "geopolitics": {
-      "cluster": "geopolitics",
-      "count": 3,
-      "share": 0.07
+      "count": 34,
+      "share": 0.667
     },
     "accountability_journalism": {
       "cluster": "accountability_journalism",
-      "count": 3,
-      "share": 0.07
+      "count": 5,
+      "share": 0.098
     },
-    "middle_east": {
-      "cluster": "middle_east",
+    "human_rights": {
+      "cluster": "human_rights",
       "count": 2,
-      "share": 0.047
+      "share": 0.039
+    },
+    "asia_pacific": {
+      "cluster": "asia_pacific",
+      "count": 2,
+      "share": 0.039
+    },
+    "military": {
+      "cluster": "military",
+      "count": 2,
+      "share": 0.039
     }
   },
   "pole_balance": {
-    "left": 11,
-    "right": 32,
+    "left": 14,
+    "right": 37,
     "neutral": 0,
-    "left_share": 0.256,
-    "right_share": 0.744
+    "left_share": 0.275,
+    "right_share": 0.725
   }
 }

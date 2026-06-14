@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-14T17:23:16.920Z",
+  "generated_at": "2026-06-14T18:53:17.434Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-14T17:23:49.344Z",
+  "profiled_at": "2026-06-14T18:53:47.683Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -1938,9 +1938,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-14T15:35:10.000Z",
+      "last_seen_at": "2026-06-14T17:30:05.000Z",
       "discovery": {
-        "distinct_urls": 5318,
+        "distinct_urls": 5321,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1949,7 +1949,7 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3166,
+          "feed_buffer": 3170,
           "feed_buffer_reply": 3413
         },
         "distinct_referring_accounts": 1797,
@@ -1990,7 +1990,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5318",
+            "distinct_urls:5321",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2028,7 +2028,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5318",
+            "distinct_urls:5321",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1797",
@@ -4011,6 +4011,133 @@
       }
     },
     {
+      "domain": "bk.com",
+      "entity": "Bk",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-07T08:31:32.129Z",
+      "last_seen_at": "2026-06-14T16:35:00.000Z",
+      "discovery": {
+        "distinct_urls": 22,
+        "example_urls": [
+          "https://www.bk.com/menu/section/fb06fabe-a285-4fb4-994a-c617a1547ddb?utm_source=X&utm_medium=Social-Social&utm_campaign=Peppercorn-Awareness&utm_content=Peppercorn-IMG-Warning&twclid=24j7ivpacvxqbg2t5it24skrl9",
+          "https://www.bk.com/menu/section/4aa502d4-7f9b-445a-b509-35a807b6aa85?utm_source=X&utm_medium=Social-Social&utm_campaign=Elevation-WhopperWednesday-Takeover-2&utm_content=Elevation-WhopperWednesday-VID-WW-15S&twclid=2cm1gaz4u45tdcrp9vbag3lg0j",
+          "https://www.bk.com/menu/section/4aa502d4-7f9b-445a-b509-35a807b6aa85?utm_source=X&utm_medium=Social-Social&utm_campaign=Elevation-WhopperWednesday-Takeover-2&utm_content=Elevation-WhopperWednesday-VID-WW-15S&twclid=2dvlel0njnh2abui231fyzp6a7",
+          "https://www.bk.com/menu/section/4aa502d4-7f9b-445a-b509-35a807b6aa85?utm_source=X&utm_medium=Social-Social&utm_campaign=Elevation-WhopperWednesday-Takeover-2&utm_content=Elevation-WhopperWednesday-VID-WW-15S&twclid=227b9h9fcr1j6xsqu6g0t74nnz",
+          "https://www.bk.com/menu/section/4aa502d4-7f9b-445a-b509-35a807b6aa85?utm_source=X&utm_medium=Social-Social&utm_campaign=Elevation-WhopperWednesday-Takeover-2&utm_content=Elevation-WhopperWednesday-VID-WW-15S&twclid=2adqhncte64iryf795sfs10trm"
+        ],
+        "origin_counts": {
+          "feed_buffer": 4,
+          "feed_buffer_reply": 18
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "burgerking"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:22",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.5742,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:22",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-12T21:22:49.748Z",
+        "homepage_url": "https://bk.com/",
+        "example_url": "https://www.bk.com/menu/section/fb06fabe-a285-4fb4-994a-c617a1547ddb?utm_source=X&utm_medium=Social-Social&utm_campaign=Peppercorn-Awareness&utm_content=Peppercorn-IMG-Warning&twclid=24j7ivpacvxqbg2t5it24skrl9",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.bk.com/",
+        "example_final_url": "https://www.bk.com/menu/section/fb06fabe-a285-4fb4-994a-c617a1547ddb?utm_source=X&utm_medium=Social-Social&utm_campaign=Peppercorn-Awareness&utm_content=Peppercorn-IMG-Warning&twclid=24j7ivpacvxqbg2t5it24skrl9",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "hyperagent.com",
       "entity": "Hyperagent",
       "kind": "unknown",
@@ -4138,133 +4265,6 @@
       }
     },
     {
-      "domain": "bk.com",
-      "entity": "Bk",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-07T08:31:32.129Z",
-      "last_seen_at": "2026-06-13T07:31:43.000Z",
-      "discovery": {
-        "distinct_urls": 21,
-        "example_urls": [
-          "https://www.bk.com/menu/section/fb06fabe-a285-4fb4-994a-c617a1547ddb?utm_source=X&utm_medium=Social-Social&utm_campaign=Peppercorn-Awareness&utm_content=Peppercorn-IMG-Warning&twclid=24j7ivpacvxqbg2t5it24skrl9",
-          "https://www.bk.com/menu/section/4aa502d4-7f9b-445a-b509-35a807b6aa85?utm_source=X&utm_medium=Social-Social&utm_campaign=Elevation-WhopperWednesday-Takeover-2&utm_content=Elevation-WhopperWednesday-VID-WW-15S&twclid=2cm1gaz4u45tdcrp9vbag3lg0j",
-          "https://www.bk.com/menu/section/4aa502d4-7f9b-445a-b509-35a807b6aa85?utm_source=X&utm_medium=Social-Social&utm_campaign=Elevation-WhopperWednesday-Takeover-2&utm_content=Elevation-WhopperWednesday-VID-WW-15S&twclid=2dvlel0njnh2abui231fyzp6a7",
-          "https://www.bk.com/menu/section/4aa502d4-7f9b-445a-b509-35a807b6aa85?utm_source=X&utm_medium=Social-Social&utm_campaign=Elevation-WhopperWednesday-Takeover-2&utm_content=Elevation-WhopperWednesday-VID-WW-15S&twclid=227b9h9fcr1j6xsqu6g0t74nnz",
-          "https://www.bk.com/menu/section/4aa502d4-7f9b-445a-b509-35a807b6aa85?utm_source=X&utm_medium=Social-Social&utm_campaign=Elevation-WhopperWednesday-Takeover-2&utm_content=Elevation-WhopperWednesday-VID-WW-15S&twclid=2adqhncte64iryf795sfs10trm"
-        ],
-        "origin_counts": {
-          "feed_buffer": 4,
-          "feed_buffer_reply": 17
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "burgerking"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:21",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.5742,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:21",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-12T21:22:49.748Z",
-        "homepage_url": "https://bk.com/",
-        "example_url": "https://www.bk.com/menu/section/fb06fabe-a285-4fb4-994a-c617a1547ddb?utm_source=X&utm_medium=Social-Social&utm_campaign=Peppercorn-Awareness&utm_content=Peppercorn-IMG-Warning&twclid=24j7ivpacvxqbg2t5it24skrl9",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.bk.com/",
-        "example_final_url": "https://www.bk.com/menu/section/fb06fabe-a285-4fb4-994a-c617a1547ddb?utm_source=X&utm_medium=Social-Social&utm_campaign=Peppercorn-Awareness&utm_content=Peppercorn-IMG-Warning&twclid=24j7ivpacvxqbg2t5it24skrl9",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "app.link",
       "entity": "App Link",
       "kind": "unknown",
@@ -4360,7 +4360,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T18:22:19.765Z",
+        "fetched_at": "2026-06-14T18:23:45.675Z",
         "homepage_url": "https://app.link/",
         "example_url": "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
         "homepage_status": 404,
@@ -9295,7 +9295,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T18:22:20.220Z",
+        "fetched_at": "2026-06-14T18:23:46.049Z",
         "homepage_url": "https://davidprotein.com/",
         "example_url": "https://davidprotein.com/pages/meet-david-gold?utm_source=X&utm_medium=paid&utm_campaign=CPC_2026&utm_term=GOLD_CPC_2026&twclid=2beqsd3kifgmiz3bgaf4s8hcjs",
         "homepage_status": 200,
@@ -22334,7 +22334,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T18:22:20.895Z",
+        "fetched_at": "2026-06-14T18:23:46.841Z",
         "homepage_url": "https://manduka.com/",
         "example_url": "https://www.manduka.com/products/manduka-pro-yoga-mat?utm_source=twitter&utm_medium=cpc&utm_campaign=xconvert&utm_content=PRO+Mat+-+Rooibos+1x1&twclid=2c1i50hvb8z81u6asprj4f4oqt",
         "homepage_status": 200,
@@ -23209,7 +23209,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T18:52:23.649Z",
+        "fetched_at": "2026-06-14T18:53:46.724Z",
         "homepage_url": "https://lend.xyz/",
         "example_url": "https://app.lend.xyz/op/3?twclid=238nk3jmrq3apwjk6xspl8fcb8",
         "homepage_status": 200,
@@ -23221,7 +23221,7 @@
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
@@ -26920,7 +26920,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T18:22:23.238Z",
+        "fetched_at": "2026-06-14T18:23:49.415Z",
         "homepage_url": "https://moderndiplomacy.eu/",
         "example_url": "https://moderndiplomacy.eu/2026/03/06/alone-under-fire-irans-partners-step-back-as-war-intensifies/",
         "homepage_status": 200,
@@ -26936,7 +26936,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 2,
+          "outbound_links_count": 6,
           "opinion_marker": false
         },
         "example": {
@@ -31747,6 +31747,129 @@
       }
     },
     {
+      "domain": "puffco.com",
+      "entity": "Puffco",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-16T20:32:38.000Z",
+      "last_seen_at": "2026-06-14T15:46:06.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://www.puffco.com/products/pivot?variant=41821292986427&utm_source=x&utm_medium=image&utm_campaign=pivotperformance&twclid=22js3uwacrdv5fujiqoibvb4yl",
+          "https://www.puffco.com/products/pivot?variant=41821292986427&utm_source=x&utm_medium=image&utm_campaign=pivotperformance&twclid=23a8vr1739w7bpy5mz5o7qaw4p"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "puffco"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.36,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-12T21:52:49.756Z",
+        "homepage_url": "https://puffco.com/",
+        "example_url": "https://www.puffco.com/products/pivot?variant=41821292986427&utm_source=x&utm_medium=image&utm_campaign=pivotperformance&twclid=22js3uwacrdv5fujiqoibvb4yl",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.puffco.com/",
+        "example_final_url": "https://www.puffco.com/products/pivot?variant=41821292986427&utm_source=x&utm_medium=image&utm_campaign=pivotperformance&twclid=22js3uwacrdv5fujiqoibvb4yl",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "layerproof.app",
       "entity": "Layerproof App",
       "kind": "unknown",
@@ -34330,6 +34453,129 @@
       }
     },
     {
+      "domain": "lookforther.realtor",
+      "entity": "Lookforther Realtor",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-12T02:00:01.000Z",
+      "last_seen_at": "2026-06-14T15:45:50.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://lookforther.realtor/?CID=psm_CAC_X_IF_ETHICS&twclid=22auirinqzzr62nnn2m30ol8h8",
+          "https://lookforther.realtor/?CID=psm_CAC_X_IF_EXPERT&twclid=2cao76chpox0d3ch7hi8ebyv94"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "realtors"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.33,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:5",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-14T18:53:47.330Z",
+        "homepage_url": "https://lookforther.realtor/",
+        "example_url": "https://lookforther.realtor/?CID=psm_CAC_X_IF_ETHICS&twclid=22auirinqzzr62nnn2m30ol8h8",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://lookforther.realtor/",
+        "example_final_url": "https://lookforther.realtor/?CID=psm_CAC_X_IF_ETHICS&twclid=22auirinqzzr62nnn2m30ol8h8",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "dell.com",
       "entity": "Dell",
       "kind": "unknown",
@@ -36739,7 +36985,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T18:52:23.815Z",
+        "fetched_at": "2026-06-14T18:53:47.508Z",
         "homepage_url": "https://america250fl.com/",
         "example_url": "https://america250fl.com/roadtrip/?twclid=2bkxank7seynqry2vcwbavv6w6",
         "homepage_status": 403,
@@ -36861,7 +37107,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-11T18:52:23.969Z",
+        "fetched_at": "2026-06-14T18:53:47.683Z",
         "homepage_url": "https://fooletfs.com/",
         "example_url": "https://fooletfs.com/our-funds/mfig?utm_source=x&utm_medium=paid_social&utm_campaign=mfig&utm_term=mfig-orange-v1&twclid=29gqh1517fetrd30y8lm22lkth",
         "homepage_status": 200,
@@ -49093,128 +49339,6 @@
       }
     },
     {
-      "domain": "puffco.com",
-      "entity": "Puffco",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-16T20:32:38.000Z",
-      "last_seen_at": "2026-05-16T20:32:38.000Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://www.puffco.com/products/pivot?variant=41821292986427&utm_source=x&utm_medium=image&utm_campaign=pivotperformance&twclid=22js3uwacrdv5fujiqoibvb4yl"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "puffco"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.36,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-12T21:52:49.756Z",
-        "homepage_url": "https://puffco.com/",
-        "example_url": "https://www.puffco.com/products/pivot?variant=41821292986427&utm_source=x&utm_medium=image&utm_campaign=pivotperformance&twclid=22js3uwacrdv5fujiqoibvb4yl",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.puffco.com/",
-        "example_final_url": "https://www.puffco.com/products/pivot?variant=41821292986427&utm_source=x&utm_medium=image&utm_campaign=pivotperformance&twclid=22js3uwacrdv5fujiqoibvb4yl",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 7,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "g4skins.com",
       "entity": "G4skins",
       "kind": "unknown",
@@ -59638,83 +59762,6 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "amukrcommittee"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "lookforther.realtor",
-      "entity": "Lookforther Realtor",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-12T02:00:01.000Z",
-      "last_seen_at": "2026-06-12T02:00:01.000Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://lookforther.realtor/?CID=psm_CAC_X_IF_ETHICS&twclid=22auirinqzzr62nnn2m30ol8h8"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "realtors"
         ],
         "distinct_axes": []
       },

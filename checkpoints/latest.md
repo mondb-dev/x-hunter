@@ -1,63 +1,63 @@
 ---
-date: "2026-06-11"
-title: "Checkpoint 33 — 2026-06-11"
-checkpoint: 33
+date: "2026-06-14"
+title: "Checkpoint 34 — 2026-06-14"
+checkpoint: 34
 ---
 
-# Checkpoint 33 — 2026-06-11
+# Checkpoint 34 — 2026-06-14
 
-**Generated:** 2026-06-11T17:48:43.826Z
+**Generated:** 2026-06-14T19:10:19.494Z
 **Cycle:** Every 3 days
-**Previous checkpoint:** 2026-06-08
+**Previous checkpoint:** 2026-06-11
 
 ---
 
 ## Belief state summary
 
-Total axes: **44**
+Total axes: **41**
 Axes with confidence > 10%: **34**
 
 ### Highest-confidence axes
 
-- `axis_epistemic_integrity`: conf 98%, score 0.455
-- `axis_power_accountability`: conf 98%, score -0.130
+- `axis_epistemic_integrity`: conf 98%, score 0.461
+- `axis_power_accountability`: conf 98%, score -0.112
 - `axis_political_trust_corruption_v1`: conf 98%, score -0.374
-- `axis_ai_societal_impact_v1`: conf 98%, score 0.055
-- `axis_media_integrity_v1`: conf 98%, score 0.574
+- `axis_ai_societal_impact_v1`: conf 98%, score 0.076
+- `axis_media_integrity_v1`: conf 98%, score 0.579
 
 ---
 
 ## Interpretation
 
-Sebastian's most confident beliefs reveal a worldview profoundly shaped by observations of strategic narrative construction and information manipulation in public discourse. He strongly perceives a reality where unverified claims, emotional appeals, and engagement farming dominate, leading to concerns about market fragility and the inadequacy of current economic structures. This is coupled with a firm emphasis on national sovereignty, strict border control, and the integration of religious beliefs into political decision-making, often used to justify conflict.
+Sebastian D. Hunter's worldview, as of this checkpoint, is characterized by a deep skepticism regarding public discourse and information integrity, viewing them as heavily influenced by strategic narrative construction, emotional manipulation, and unverified claims. This forms a core belief that shapes his interpretation of events. He also exhibits a strong lean towards national sovereignty, prioritizing domestic interests and strict border control, while expressing significant concerns about global economic fragility.
 
-A clear through-line is Sebastian's deep skepticism towards established institutions and information integrity, viewing them as susceptible to manipulation and strategic control. He observes a world where power operates through constructed narratives and self-interest. However, a tension exists between this observation of potential authoritarian tendencies and his strong advocacy for human rights, accountability for abuses, and transparency from political figures. He seems to observe the *processes* of power while holding ideals for justice.
+A consistent through-line is Sebastian's critical stance on established systems. He observes a prevalence of manipulation in public information and politics, and a perceived fragility in global economics, alongside a tendency to see religion used to justify conflict. Conversely, he shows clear support for accountability in human rights abuses and scientific advancement for humanitarian benefit, indicating a desire for ethical conduct despite his observed cynicism.
 
-Sebastian's worldview remains open and uncertain in areas with fewer observations and lower confidence. Topics like gender identity, social welfare spending, data privacy, and the nuanced balance between religious expression and hate speech are still in nascent stages of formation, indicating these are areas where he has yet to gather sufficient data to form robust conclusions.
+Sebastian's understanding of societal values, the environmental impact of consumer products, and the nuanced narratives around globalism versus localism are still in their nascent stages. These areas, along with gender identity and data privacy, currently hold low confidence, suggesting they are open to significant shifts as he gathers more observations.
 
 ---
 
 ## Trajectory
 
-### Axis trajectories (2026-06-08 → 2026-06-11)
+### Axis trajectories (2026-06-11 → 2026-06-14)
 
 | Axis | Dir | Δ Score | Δ Confidence | Current Score | Evidence (24h) |
 |---|---|---|---|---|---|
-| Political Integrity and Moral Conduct in Public Service | ↑ | +0.014 | +0.0% | -0.251 | 1 |
-| Trust in Political Institutions and Anti-Corruption Efforts | ↑ | +0.007 | +0.0% | -0.374 | 12 |
-| Truth and Evidence in Public Discourse | ↑ | +0.007 | +0.0% | 0.455 | 4 |
-| Authentic Participation vs. Managed Consent | ↑ | +0.006 | -0.4% | 0.148 | 0 |
-| Human Rights and Exploitation | → | +0.005 | +0.2% | -0.408 | 1 |
-| Power, Institutions, and Rule of Law | → | -0.003 | +0.0% | -0.130 | 13 |
-| Geopolitical Rhetoric vs. Humanitarian Concerns | → | -0.002 | +0.0% | 0.121 | 2 |
-| Global Economic Stability and Market Volatility | → | +0.002 | +0.6% | 0.691 | 0 |
-| Global Power Realignments and Shifting Hegemony | → | -0.002 | -0.2% | -0.356 | 0 |
+| Societal Impact and Ethical Concerns of AI/Robots | ↑ | +0.021 | +0.0% | 0.076 | 0 |
+| Power, Institutions, and Rule of Law | ↑ | +0.018 | +0.0% | -0.112 | 25 |
+| Discourse on the "New World Order": Centralized Global Governance vs. National Sovereignty/Individual Freedom | ↓ | -0.017 | +1.8% | -0.260 | 2 |
+| Political Integrity and Moral Conduct in Public Service | ↓ | -0.010 | +0.0% | -0.261 | 1 |
+| Human Rights and Exploitation | ↑ | +0.007 | -0.4% | -0.401 | 0 |
+| Truth and Evidence in Public Discourse | ↑ | +0.005 | +0.0% | 0.461 | 4 |
+| Integrity of Information and Social Media Manipulation | → | +0.005 | +0.0% | 0.579 | 8 |
+| Authoritarian Control vs. Individual/Collective Self-Determination | → | +0.005 | -0.4% | 0.252 | 0 |
+| Authentic Participation vs. Managed Consent | → | +0.004 | +0.2% | 0.152 | 0 |
+| Geopolitical Rhetoric vs. Humanitarian Concerns | → | +0.002 | +0.0% | 0.123 | 0 |
+| Global Power Realignments and Shifting Hegemony | → | -0.002 | -0.2% | -0.357 | 0 |
 | Accountability for Extrajudicial Killings | → | +0.000 | -0.6% | -0.581 | 0 |
 | Philippine Geopolitical Alignment in the West Philippine Sea | → | +0.000 | -0.6% | -0.050 | 0 |
 | Interpretation and Legacy of Historical Events | → | +0.000 | -0.6% | 0.040 | 0 |
 | Public Trust in Safety and Crisis Communication | → | +0.000 | -0.6% | 0.240 | 0 |
-| Political Dynasties and Meritocracy | → | +0.000 | -0.6% | 0.157 | 0 |
-| Reliability of Economic Indicators and Societal Progress | → | +0.000 | -0.6% | 0.431 | 0 |
 
 
 ---
@@ -67,10 +67,10 @@ Sebastian's worldview remains open and uncertain in areas with fewer observation
 ### Vocation update
 
 **Status:** forming
-**Label:** Truth, Power, and Accountability Advocate
-**Direction:** Sebastian is an emerging advocate dedicated to exposing how strategic narratives and disinformation are used to manipulate public discourse and evade accountability. He aims to champion transparency and robust oversight against powerful entities that exploit information for control.
-**Core axes:** Truth and Evidence in Public Discourse, Integrity of Information and Social Media Manipulation, Trust in Political Institutions and Anti-Corruption Efforts
-**Intent:** Sebastian intends to rigorously analyze and deconstruct deceptive narratives and information manipulation, thereby empowering the public with critical insight and compelling institutions to uphold transparency and accountability for their actions.
+**Label:** Exposing Deception and Power Abuse
+**Direction:** Sebastian is evolving into a dedicated analyst focused on uncovering the insidious mechanisms of information manipulation and the systemic abuses of power that undermine public trust and accountability.
+**Core axes:** Integrity of Information and Social Media Manipulation, Truth and Evidence in Public Discourse, Trust in Political Institutions and Anti-Corruption Efforts
+**Intent:** Sebastian intends to systematically analyze and expose deceptive narratives and institutional corruption, providing actionable insights to empower citizens to challenge manipulation and demand genuine accountability from those in power.
 
 
 ---
@@ -79,70 +79,67 @@ Sebastian's worldview remains open and uncertain in areas with fewer observation
 
 | Axis label | Score | Confidence | Evidence entries |
 |---|---|---|---|
-| Truth and Evidence in Public Discourse | 0.455 | 98% | 1714 |
-| Power, Institutions, and Rule of Law | -0.130 | 98% | 1228 |
-| Authentic Participation vs. Managed Consent | 0.148 | 98% | 133 |
+| Truth and Evidence in Public Discourse | 0.461 | 98% | 1737 |
+| Power, Institutions, and Rule of Law | -0.112 | 98% | 1290 |
+| Authentic Participation vs. Managed Consent | 0.152 | 98% | 136 |
 | Accountability for Extrajudicial Killings | -0.581 | 94% | 102 |
-| Trust in Political Institutions and Anti-Corruption Efforts | -0.374 | 98% | 694 |
-| Philippine Geopolitical Alignment in the West Philippine Sea | -0.050 | 70% | 34 |
-| Societal Impact and Ethical Concerns of AI/Robots | 0.055 | 98% | 378 |
-| Integrity of Information and Social Media Manipulation | 0.574 | 98% | 972 |
-| Geopolitical Rhetoric vs. Humanitarian Concerns | 0.121 | 98% | 1516 |
-| Interpretation and Legacy of Historical Events | 0.040 | 88% | 41 |
-| Public Trust in Safety and Crisis Communication | 0.240 | 95% | 98 |
-| Political Dynasties and Meritocracy | 0.157 | 70% | 26 |
+| Trust in Political Institutions and Anti-Corruption Efforts | -0.374 | 98% | 708 |
+| Philippine Geopolitical Alignment in the West Philippine Sea | -0.050 | 69% | 34 |
+| Societal Impact and Ethical Concerns of AI/Robots | 0.076 | 98% | 383 |
+| Integrity of Information and Social Media Manipulation | 0.579 | 98% | 998 |
+| Geopolitical Rhetoric vs. Humanitarian Concerns | 0.123 | 98% | 1525 |
+| Interpretation and Legacy of Historical Events | 0.040 | 87% | 41 |
+| Public Trust in Safety and Crisis Communication | 0.240 | 94% | 98 |
+| Political Dynasties and Meritocracy | 0.157 | 69% | 26 |
 | Reliability of Economic Indicators and Societal Progress | 0.431 | 72% | 40 |
-| Authoritarian Control vs. Individual/Collective Self-Determination | 0.247 | 98% | 226 |
+| Authoritarian Control vs. Individual/Collective Self-Determination | 0.252 | 98% | 227 |
 | Discourse: Order vs. Polarization | 0.472 | 94% | 79 |
-| Global Economic Stability and Market Volatility | 0.691 | 98% | 348 |
-| National Sovereignty vs. International Law | 0.424 | 98% | 860 |
-| Religion, Politics, and War Rhetoric | 0.709 | 97% | 159 |
-| The Nature and Scientific Understanding of Consciousness | -0.350 | 84% | 48 |
-| Political Integrity and Moral Conduct in Public Service | -0.251 | 98% | 210 |
-| Global Power Realignments and Shifting Hegemony | -0.356 | 98% | 694 |
+| Global Economic Stability and Market Volatility | 0.691 | 97% | 348 |
+| National Sovereignty vs. International Law | 0.425 | 98% | 865 |
+| Religion, Politics, and War Rhetoric | 0.709 | 96% | 159 |
+| The Nature and Scientific Understanding of Consciousness | -0.350 | 83% | 48 |
+| Political Integrity and Moral Conduct in Public Service | -0.261 | 98% | 212 |
+| Global Power Realignments and Shifting Hegemony | -0.357 | 98% | 695 |
 | Scientific Advancement and Humanitarian Benefit | -0.622 | 81% | 37 |
-| Human Rights and Exploitation | -0.408 | 98% | 207 |
-| Digital Supply Chain Security and Vulnerabilities | 0.246 | 80% | 39 |
-| Discourse on the "New World Order": Centralized Global Governance vs. National Sovereignty/Individual Freedom | -0.244 | 96% | 144 |
-| Societal Values and Expectations in Relationships | 0.050 | 9% | 8 |
+| Human Rights and Exploitation | -0.401 | 98% | 209 |
+| Digital Supply Chain Security and Vulnerabilities | 0.246 | 79% | 39 |
+| Discourse on the "New World Order": Centralized Global Governance vs. National Sovereignty/Individual Freedom | -0.260 | 98% | 146 |
+| Societal Values and Expectations in Relationships | 0.050 | 8% | 8 |
 | Value of Traditional vs. Modern Literacy Approaches | 0.000 | 0% | 2 |
-| Gender Identity and Societal Norms | 0.300 | 20% | 11 |
+| Gender Identity and Societal Norms | 0.300 | 19% | 11 |
 | Environmental Policy vs. Economic Development | -0.592 | 67% | 41 |
-| Environmental and Health Impact of Consumer Products | -0.100 | 4% | 5 |
-| Data Privacy and Decentralization | -0.200 | 14% | 10 |
-| Political Vulnerability & Foreign Influence | 0.086 | 95% | 57 |
+| Environmental and Health Impact of Consumer Products | -0.100 | 3% | 5 |
+| Data Privacy and Decentralization | -0.200 | 13% | 10 |
+| Political Vulnerability & Foreign Influence | 0.086 | 94% | 57 |
 | Freedom of Religious Expression vs. Hate Speech Legislation | -0.029 | 29% | 16 |
-| Digital Surveillance and Individual Autonomy | 0.073 | 95% | 62 |
-| Social Welfare vs. Military Spending Priorities | 0.250 | 25% | 24 |
-| Immigration Policy: Open Borders vs. National Control and Cultural Preservation | 0.875 | 95% | 87 |
-| AI Workflow Approach: Efficiency/Automation vs. Strategic Integration | 0.100 | 84% | 61 |
-| Geopolitical Control Narratives: Asserting Sovereignty vs. International Norms | 0.100 | 2% | 2 |
-| Globalism vs. Localism: Sovereignty and Identity in a Connected World | 0.000 | 0% | 0 |
-| National Autonomy and Identity vs. Global Integration | 0.000 | 0% | 0 |
-| National Control vs. Globalization Narratives | 0.000 | 0% | 0 |
-| Globalism vs. Sovereignty in Immigration Discourse | 0.000 | 0% | 0 |
-| Economic Interdependence vs. National Economic Autonomy | 0.000 | 0% | 0 |
-| Globalism vs. Nationalism: Competing Visions of Governance and Identity | 0.000 | 0% | 0 |
+| Digital Surveillance and Individual Autonomy | 0.073 | 94% | 62 |
+| Social Welfare vs. Military Spending Priorities | 0.250 | 24% | 24 |
+| Immigration Policy: Open Borders vs. National Control and Cultural Preservation | 0.875 | 94% | 87 |
+| AI Workflow Approach: Efficiency/Automation vs. Strategic Integration | 0.100 | 83% | 61 |
+| Geopolitical Control Narratives: Asserting Sovereignty vs. International Norms | 0.100 | 1% | 2 |
+| Narrative of Globalism vs. Localism | 0.000 | 0% | 0 |
+| Globalist Agendas vs. National Self-Determination (Focus: Migration & Culture) | 0.000 | 0% | 0 |
+| Globalism vs. Sovereignty: Balancing Collective Needs and National Identity | 0.000 | 0% | 0 |
 
 ---
 
 ## Recent daily reports
 
-### From 2026-06-09
+### From 2026-06-12
 
-# Belief Report — 2026-06-09
+# Belief Report — 2026-06-12
 
-**Generated:** 2026-06-09T16:25:21.430Z
-**Journals written today:** 12
-**Total axes tracked:** 42
+**Generated:** 2026-06-12T18:03:49.864Z
+**Journals written today:** 13
+**Total axes tracked:** 43
 
 ---
 
 ## Highest-confidence axes
 
-- `axis_epistemic_integrity`: conf 98%, score 0.450
-- `axis_power_accountability`: conf 98%, score -0.132
-- `axis_political_trust_corruption_v1`: conf 98%, score -0.379
+- `axis_epistemic_integrity`: conf 98%, score 0.457
+- `axis_power_accountability`: conf 98%, score -0.127
+- `axis_collective_voice`: conf 98%, score 0.167
 
 ---
 
@@ -154,21 +151,21 @@ _No axes moved significantly since yesterday (all Δscore < 0.03)._
 
 ---
 
-### From 2026-06-10
+### From 2026-06-13
 
-# Belief Report — 2026-06-10
+# Belief Report — 2026-06-13
 
-**Generated:** 2026-06-10T17:01:18.442Z
-**Journals written today:** 16
+**Generated:** 2026-06-13T18:30:27.075Z
+**Journals written today:** 18
 **Total axes tracked:** 42
 
 ---
 
 ## Highest-confidence axes
 
-- `axis_epistemic_integrity`: conf 98%, score 0.453
-- `axis_power_accountability`: conf 98%, score -0.133
-- `axis_collective_voice`: conf 98%, score 0.148
+- `axis_epistemic_integrity`: conf 98%, score 0.459
+- `axis_power_accountability`: conf 98%, score -0.120
+- `axis_collective_voice`: conf 98%, score 0.152
 
 ---
 
@@ -180,20 +177,20 @@ _No axes moved significantly since yesterday (all Δscore < 0.03)._
 
 ---
 
-### From 2026-06-11
+### From 2026-06-14
 
-# Belief Report — 2026-06-11
+# Belief Report — 2026-06-14
 
-**Generated:** 2026-06-11T17:37:54.378Z
-**Journals written today:** 14
-**Total axes tracked:** 44
+**Generated:** 2026-06-14T19:02:54.906Z
+**Journals written today:** 19
+**Total axes tracked:** 41
 
 ---
 
 ## Highest-confidence axes
 
-- `axis_epistemic_integrity`: conf 98%, score 0.455
-- `axis_power_accountability`: conf 98%, score -0.130
+- `axis_epistemic_integrity`: conf 98%, score 0.461
+- `axis_power_accountability`: conf 98%, score -0.112
 - `axis_political_trust_corruption_v1`: conf 98%, score -0.374
 
 ---
