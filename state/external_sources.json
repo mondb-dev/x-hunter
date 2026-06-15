@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-15T11:23:37.857Z",
+  "generated_at": "2026-06-15T14:23:40.439Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-15T11:24:07.885Z",
+  "profiled_at": "2026-06-15T14:24:12.583Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -1938,9 +1938,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-15T10:44:45.000Z",
+      "last_seen_at": "2026-06-15T13:37:44.000Z",
       "discovery": {
-        "distinct_urls": 5410,
+        "distinct_urls": 5426,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1949,10 +1949,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3241,
-          "feed_buffer_reply": 3460
+          "feed_buffer": 3250,
+          "feed_buffer_reply": 3471
         },
-        "distinct_referring_accounts": 1804,
+        "distinct_referring_accounts": 1807,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1990,7 +1990,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5410",
+            "distinct_urls:5426",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1998,7 +1998,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1804",
+            "referring_accounts:1807",
             "origin_types:2"
           ]
         },
@@ -2028,10 +2028,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5410",
+            "distinct_urls:5426",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1804",
+            "referring_accounts:1807",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -8917,7 +8917,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T12:22:41.301Z",
+        "fetched_at": "2026-06-15T12:24:08.657Z",
         "homepage_url": "https://gobob.xyz/",
         "example_url": "https://app.gobob.xyz/?utm_campaign=stables&utm_medium=paidads&utm_source=x&twclid=21mgv5jwnbc2895vpeqnlit4hv",
         "homepage_status": 200,
@@ -9676,7 +9676,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T14:22:40.925Z",
+        "fetched_at": "2026-06-15T14:24:09.884Z",
         "homepage_url": "https://cocainecoffee.com/",
         "example_url": "https://cocainecoffee.com/?twclid=27twwbqquoqevtoxgztpejovrb",
         "homepage_status": 200,
@@ -21466,7 +21466,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T12:52:39.807Z",
+        "fetched_at": "2026-06-15T12:54:08.358Z",
         "homepage_url": "https://substack.com/",
         "example_url": "https://sethmlederman.substack.com/p/taking-on-the-f-word-fibromyalgia?twclid=245fh2m6fc9w4vl63b2am7zawy",
         "homepage_status": 200,
@@ -22737,6 +22737,131 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 6,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "doordash.com",
+      "entity": "Doordash",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-04T18:00:58.366Z",
+      "last_seen_at": "2026-06-15T12:53:08.840Z",
+      "discovery": {
+        "distinct_urls": 4,
+        "example_urls": [
+          "https://www.doordash.com/browse/list/7e5f3a06-8f84-4d8f-b1f9-dd2f7871459a?twclid=2expxmm8nilk7hhcpg2qwpcu7n",
+          "https://www.doordash.com/browse/list/7e5f3a06-8f84-4d8f-b1f9-dd2f7871459a?twclid=2a44fleytktdukanoue6620t2i",
+          "https://www.doordash.com/browse/list/7e5f3a06-8f84-4d8f-b1f9-dd2f7871459a?twclid=23n5h18ggr7erpu0pfik2bqjri",
+          "https://www.doordash.com/browse/list/7e5f3a06-8f84-4d8f-b1f9-dd2f7871459a?twclid=25b32f87hu5gui8nbp2by3an1c"
+        ],
+        "origin_counts": {
+          "feed_buffer": 4
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "nba"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.17666666666666664,
+          "basis": [
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3663802083333333,
+          "confidence": 0.16722499999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-14T00:23:23.806Z",
+        "homepage_url": "https://doordash.com/",
+        "example_url": "https://www.doordash.com/browse/list/7e5f3a06-8f84-4d8f-b1f9-dd2f7871459a?twclid=2expxmm8nilk7hhcpg2qwpcu7n",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://www.doordash.com/",
+        "example_final_url": "https://www.doordash.com/browse/list/7e5f3a06-8f84-4d8f-b1f9-dd2f7871459a?twclid=2expxmm8nilk7hhcpg2qwpcu7n",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -25588,130 +25713,6 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 3,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "doordash.com",
-      "entity": "Doordash",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-04T18:00:58.366Z",
-      "last_seen_at": "2026-05-17T20:51:18.529Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://www.doordash.com/browse/list/7e5f3a06-8f84-4d8f-b1f9-dd2f7871459a?twclid=2expxmm8nilk7hhcpg2qwpcu7n",
-          "https://www.doordash.com/browse/list/7e5f3a06-8f84-4d8f-b1f9-dd2f7871459a?twclid=2a44fleytktdukanoue6620t2i",
-          "https://www.doordash.com/browse/list/7e5f3a06-8f84-4d8f-b1f9-dd2f7871459a?twclid=23n5h18ggr7erpu0pfik2bqjri"
-        ],
-        "origin_counts": {
-          "feed_buffer": 3
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "nba"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.1475,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.36000000000000004,
-          "confidence": 0.1386,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-14T00:23:23.806Z",
-        "homepage_url": "https://doordash.com/",
-        "example_url": "https://www.doordash.com/browse/list/7e5f3a06-8f84-4d8f-b1f9-dd2f7871459a?twclid=2expxmm8nilk7hhcpg2qwpcu7n",
-        "homepage_status": 403,
-        "example_status": 403,
-        "homepage_final_url": "https://www.doordash.com/",
-        "example_final_url": "https://www.doordash.com/browse/list/7e5f3a06-8f84-4d8f-b1f9-dd2f7871459a?twclid=2expxmm8nilk7hhcpg2qwpcu7n",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -34299,7 +34300,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T12:52:41.152Z",
+        "fetched_at": "2026-06-15T12:54:10.061Z",
         "homepage_url": "https://kiierr.com/",
         "example_url": "https://kiierr.com/regrow-your-hair-new/?twclid=23i2gackvanp24oqqrs1z7o7zb",
         "homepage_status": 200,
@@ -44307,7 +44308,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T11:22:37.725Z",
+        "fetched_at": "2026-06-15T12:24:08.993Z",
         "homepage_url": "https://fulfil.io/",
         "example_url": "https://www.fulfil.io/merchants/dbrand/?twclid=243ecvpsf0p6ki2xlq4h98ksb7",
         "homepage_status": 403,
@@ -44429,7 +44430,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T11:22:38.143Z",
+        "fetched_at": "2026-06-15T12:24:09.376Z",
         "homepage_url": "https://proudpatriots.com/",
         "example_url": "https://proudpatriots.com/pages/200-page-america-s-250th-anniversary-coffee-table-book-v2?utm_source=twitter-ads&utm_campaign=41258612&utm_content=NewAmerica250BookRound2Image2&twt_id=54708689&twclid=25tg7sp10bjjfr42szs9p9jca",
         "homepage_status": 200,
@@ -44551,7 +44552,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T12:22:43.285Z",
+        "fetched_at": "2026-06-15T12:24:11.374Z",
         "homepage_url": "https://grifterolympics.com/",
         "example_url": "https://www.grifterolympics.com/?twclid=28u7u1l2mcue7ai4t73e0m25z1",
         "homepage_status": 200,
@@ -44673,7 +44674,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T12:22:43.628Z",
+        "fetched_at": "2026-06-15T12:54:10.460Z",
         "homepage_url": "https://bridgestonegolf.com/",
         "example_url": "https://www.bridgestonegolf.com/en-us/index?twclid=27b9nricn7ry3j2ax25jvh1pql",
         "homepage_status": 403,
@@ -44795,7 +44796,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T12:22:44.971Z",
+        "fetched_at": "2026-06-15T12:54:11.010Z",
         "homepage_url": "https://fuser.studio/",
         "example_url": "https://fuser.studio/teams?utm_source=x&utm_medium=paid&utm_campaign=q2_teams&twclid=24eb4pjwdb3ypvpc9de5b0904q",
         "homepage_status": 200,
@@ -44917,7 +44918,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T12:52:42.100Z",
+        "fetched_at": "2026-06-15T13:54:08.389Z",
         "homepage_url": "https://pinecone.io/",
         "example_url": "https://www.pinecone.io/launch-week/?twclid=2byfe8ukr8oijvt1d199vg80m5",
         "homepage_status": 200,
@@ -45039,7 +45040,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T12:52:44.795Z",
+        "fetched_at": "2026-06-15T13:54:11.063Z",
         "homepage_url": "https://bandainamcoent.com/",
         "example_url": "https://www.bandainamcoent.com/games/little-nightmares-altered-echoes?utm_source=x&utm_medium=ppc&utm_campaign=little-nightmares-altered-echoes-2026-04-launch-us-traffic&twclid=225d0loj5ejgazzwzusoj9tjl",
         "homepage_status": 200,
@@ -45161,7 +45162,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T13:52:40.719Z",
+        "fetched_at": "2026-06-15T13:54:13.479Z",
         "homepage_url": "https://make-it.run/",
         "example_url": "https://make-it.run/products/nextjs-performance-hacks?twclid=2bszv0ylvf9w62ap8iytgk0tww",
         "homepage_status": 200,
@@ -45283,7 +45284,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T13:52:41.895Z",
+        "fetched_at": "2026-06-15T13:54:14.340Z",
         "homepage_url": "https://memorybase.app/",
         "example_url": "https://www.memorybase.app/?twclid=22wo2zgr0s2jx2d07d9hsczbyn",
         "homepage_status": 200,
@@ -45405,7 +45406,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T13:52:42.118Z",
+        "fetched_at": "2026-06-15T14:24:10.144Z",
         "homepage_url": "https://fightbets.com/",
         "example_url": "https://fightbets.com/lineup/ufc/free?twclid=250fs0rv65xvcmsh5gy8n9fd5s",
         "homepage_status": 200,
@@ -45527,7 +45528,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T13:52:42.350Z",
+        "fetched_at": "2026-06-15T14:24:11.449Z",
         "homepage_url": "https://forbes.com/",
         "example_url": "https://www.forbes.com/profile/donald-trump/",
         "homepage_status": 200,
@@ -45649,7 +45650,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T14:22:41.864Z",
+        "fetched_at": "2026-06-15T14:24:12.583Z",
         "homepage_url": "https://adjust.com/",
         "example_url": "https://app.adjust.com/1zbd03n1?campaign=X_D90NA_1_all_US_sales_260429-0513_dt_CPC_leihuoua_branding&adgroup=US-pic+vid&creative=%E6%8D%8F%E8%84%B8Vid+%E6%8D%8F%E8%84%B8Pic&cross_device_tracking=1&twclid=25wqttszpha1giwsadazr7s78y",
         "homepage_status": 429,

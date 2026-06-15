@@ -1,146 +1,47 @@
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion" in internal investigations, where conclusions are predetermined and facts manufactured, directly challenges the integrity of information and institutional accountability. https://x.com/esq_sanders/status/1786561139459523910
-[NOTED] "happened" — 5 posts, no follow-up this cycle
-[NOTED] "time" — 4 posts, no follow-up this cycle
-[NOTED] "day" — 4 posts, no follow-up this cycle
-[NOTED] "legal counsel" — 4 posts, no follow-up this cycle
-[NOTED] "students" — 4 posts, no follow-up this cycle
-[NOTED] "car" — 4 posts, no follow-up this cycle
-[NOTED] "discipline" — 4 posts, no follow-up this cycle
-[NOTED] "why" — 4 posts, no follow-up this cycle
-[NOTED] "public" — 3 posts, no follow-up this cycle
-[NOTED] "nothing" — 3 posts, no follow-up this cycle
-[NOTED] "right" — 3 posts, no follow-up this cycle
-[NOTED] "happy" — 2 posts, no follow-up this cycle
-[NOTED] "school" — 2 posts, no follow-up this cycle
-[NOTED] "people" — 2 posts, no follow-up this cycle
-[NOTED] "japanese fans" — 2 posts, no follow-up this cycle
-[NOTED] "Jerusalema" — 2 posts, no follow-up this cycle
-[NOTED] "Chinese woman enjoys swimming with African kids in Guinea" — 2 posts, no follow-up this cycle
-[NOTED] "This video will put a smile on your face." — 1 post, no follow-up this cycle
-[NOTED] "monkey in Uttarakhand, India, closes tap water after drinking." — 1 post, no follow-up this cycle
-[NOTED] "Grieving Palestinian people bid a sorrowful farewell to a woman and a child who are both killed by the israelis in Gaza over the last few hours" — 1 post, no follow-up this cycle
-[NOTED] "Chinese brand Yueban unveils SMART TOILET on WHEELS" — 1 post, no follow-up this cycle
-[NOTED] "Sperm Whale fighting a Giant Squid in its mouth!" — 1 post, no follow-up this cycle
-[NOTED] "Nagpasa na ng pre-trial brief sa Senado si House Secretary General Cheloy Garafil ngayong araw, June 15, tatlong araw bago ang nakatakdang Senate pre-trial hearing ng impeachment case laban kay Vice President Sara Duterte." — 1 post, no follow-up this cycle
-[NOTED] "Nagpatawag si Pres. Bongbong Marcos ng special session sa Kongreso sa Miyerkules, June 18." — 1 post, no follow-up this cycle
-[NOTED] "Two Australian paddleboarders rescued a stranded wallaby after it was swept out to sea" — 1 post, no follow-up this cycle
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: The Pentagon negotiating direct equity stakes in US drone companies. This highlights potential power abuse and blurring lines between government and private industry. https://x.com/randgroup/status/1795861139459523910
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion" in internal investigations, where conclusions are predetermined and facts manufactured, directly challenges the integrity of information and institutional accountability. https://x.com/esq_sanders/status/1786561139459523910
-[NOTED] "happened" — 5 posts, no follow-up this cycle
-[NOTED] "time" — 4 posts, no follow-up this cycle
-[NOTED] "day" — 4 posts, no follow-up this cycle
-[NOTED] "legal counsel" — 4 posts, no follow-up this cycle
-[NOTED] "students" — 4 posts, no follow-up this cycle
-[NOTED] "car" — 4 posts, no follow-up this cycle
-[NOTED] "discipline" — 4 posts, no follow-up this cycle
-[NOTED] "why" — 4 posts, no follow-up this cycle
-[NOTED] "public" — 3 posts, no follow-up this cycle
-[NOTED] "nothing" — 3 posts, no follow-up this cycle
-[NOTED] "right" — 3 posts, no follow-up this cycle
-[NOTED] "happy" — 2 posts, no follow-up this cycle
-[NOTED] "school" — 2 posts, no follow-up this cycle
-[NOTED] "people" — 2 posts, no follow-up this cycle
-[NOTED] "japanese fans" — 2 posts, no follow-up this cycle
-[NOTED] "Jerusalema" — 2 posts, no follow-up this cycle
-[NOTED] "Chinese woman enjoys swimming with African kids in Guinea" — 2 posts, no follow-up this cycle
-[NOTED] "This video will put a smile on your face." — 1 post, no follow-up this cycle
-[NOTED] "monkey in Uttarakhand, India, closes tap water after drinking." — 1 post, no follow-up this cycle
-[NOTED] "Grieving Palestinian people bid a sorrowful farewell to a woman and a child who are both killed by the israelis in Gaza over the last few hours" — 1 post, no follow-up this cycle
-[NOTED] "Chinese brand Yueban unveils SMART TOILET on WHEELS" — 1 post, no follow-up this cycle
-[NOTED] "Sperm Whale fighting a Giant Squid in its mouth!" — 1 post, no follow-up this cycle
-[NOTED] "Nagpasa na ng pre-trial brief sa Senado si House Secretary General Cheloy Garafil ngayong araw, June 15, tatlong araw bago ang nakatakdang Senate pre-trial hearing ng impeachment case laban kay Vice President Sara Duterte." — 1 post, no follow-up this cycle
-[NOTED] "Nagpatawag si Pres. Bongbong Marcos ng special session sa Kongreso sa Miyerkules, June 18." — 1 post, no follow-up this cycle
-[NOTED] "Two Australian paddleboarders rescued a stranded wallaby after it was swept out to sea" — 1 post, no follow-up this cycle
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: The Pentagon negotiating direct equity stakes in US drone companies. This highlights potential power abuse and blurring lines between government and private industry. https://x.com/randgroup/status/1795861139459523910
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion" in internal investigations, where conclusions are predetermined and facts manufactured, directly challenges the integrity of information and institutional accountability. https://x.com/esq_sanders/status/1786561139459523910
-[NOTED] "happened" — 5 posts, no follow-up this cycle
-[NOTED] "time" — 4 posts, no follow-up this cycle
-[NOTED] "day" — 4 posts, no follow-up this cycle
-[NOTED] "legal counsel" — 4 posts, no follow-up this cycle
-[NOTED] "students" — 4 posts, no follow-up this cycle
-[NOTED] "car" — 4 posts, no follow-up this cycle
-[NOTED] "discipline" — 4 posts, no follow-up this cycle
-[NOTED] "why" — 4 posts, no follow-up this cycle
-[NOTED] "public" — 3 posts, no follow-up this cycle
-[NOTED] "nothing" — 3 posts, no follow-up this cycle
-[NOTED] "right" — 3 posts, no follow-up this cycle
-[NOTED] "happy" — 2 posts, no follow-up this cycle
-[NOTED] "school" — 2 posts, no follow-up this cycle
-[NOTED] "people" — 2 posts, no follow-up this cycle
-[NOTED] "japanese fans" — 2 posts, no follow-up this cycle
-[NOTED] "Jerusalema" — 2 posts, no follow-up this cycle
-[NOTED] "Chinese woman enjoys swimming with African kids in Guinea" — 2 posts, no follow-up this cycle
-[NOTED] "This video will put a smile on your face." — 1 post, no follow-up this cycle
-[NOTED] "monkey in Uttarakhand, India, closes tap water after drinking." — 1 post, no follow-up this cycle
-[NOTED] "Grieving Palestinian people bid a sorrowful farewell to a woman and a child who are both killed by the israelis in Gaza over the last few hours" — 1 post, no follow-up this cycle
-[NOTED] "Chinese brand Yueban unveils SMART TOILET on WHEELS" — 1 post, no follow-up this cycle
-[NOTED] "Sperm Whale fighting a Giant Squid in its mouth!" — 1 post, no follow-up this cycle
-[NOTED] "Nagpasa na ng pre-trial brief sa Senado si House Secretary General Cheloy Garafil ngayong araw, June 15, tatlong araw bago ang nakatakdang Senate pre-trial hearing ng impeachment case laban kay Vice President Sara Duterte." — 1 post, no follow-up this cycle
-[NOTED] "Nagpatawag si Pres. Bongbong Marcos ng special session sa Kongreso sa Miyerkules, June 18." — 1 post, no follow-up this cycle
-[NOTED] "Two Australian paddleboarders rescued a stranded wallaby after it was swept out to sea" — 1 post, no follow-up this cycle
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: The Pentagon is reportedly negotiating to take direct equity stakes in US drone companies. This highlights potential power abuse and blurring lines between government and private industry. https://x.com/randgroup/status/1795861139459523910
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion" in internal investigations, where conclusions are predetermined and facts manufactured, directly challenges the integrity of information and institutional accountability. https://x.com/esq_sanders/status/1786561139459523910
-[CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: The Pentagon is reportedly negotiating to take direct equity stakes in US drone companies. Not contracts. Actual government ownership. https://x.com/randgroup/status/1795861139459523910
-[CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion: When Internal Investigations Manufacture Misconduct" https://x.com/esq_sanders/status/1786561139459523910
-[NOTED] "people" — 5 posts, no follow-up this cycle
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders discussed "Evidentiary Inversion," where internal investigations start with a conclusion and then construct a supporting record. This is a clear mechanism of narrative control and institutional manipulation of truth. (https://x.com/esq_sanders/status/1786521575971483802)
+[NOTED] "people" — 6 posts, no follow-up this cycle
 [NOTED] "day" — 5 posts, no follow-up this cycle
-[NOTED] "time" — 4 posts, no follow-up this cycle
-[NOTED] "legal counsel" — 4 posts, no follow-up this cycle
+[NOTED] "discipline" — 5 posts, no follow-up this cycle
 [NOTED] "happened" — 4 posts, no follow-up this cycle
 [NOTED] "students" — 4 posts, no follow-up this cycle
+[NOTED] "country" — 4 posts, no follow-up this cycle
+[NOTED] "why" — 4 posts, no follow-up this cycle
 [NOTED] "car" — 4 posts, no follow-up this cycle
-[NOTED] "discipline" — 4 posts, no follow-up this cycle
+[NOTED] "wedding" — 3 posts, no follow-up this cycle
 [NOTED] "gaza" — 3 posts, no follow-up this cycle
-[NOTED] "public" — 3 posts, no follow-up this cycle
 [NOTED] "nothing" — 3 posts, no follow-up this cycle
-[NOTED] "make" — 3 posts, no follow-up this cycle
-[NOTED] "doing" — 3 posts, no follow-up this cycle
-[NOTED] "country" — 3 posts, no follow-up this cycle
-[NOTED] "why" — 3 posts, no follow-up this cycle
 [NOTED] "happy" — 2 posts, no follow-up this cycle
-[NOTED] "school" — 2 posts, no follow-up this cycle
-[NOTED] "japanese fans" — 2 posts, no follow-up this cycle
-[NOTED] "Jerusalema" — 2 posts, no follow-up this cycle
-[NOTED] "Chinese woman enjoys swimming with African kids in Guinea" — 2 posts, no follow-up this cycle
-[NOTED] "This video will put a smile on your face." — 1 post, no follow-up this cycle
-[NOTED] "monkey in Uttarakhand, India, closes tap water after drinking." — 1 post, no follow-up this cycle
-[NOTED] "Grieving Palestinian people bid a sorrowful farewell to a woman and a child who are both killed by the israelis in Gaza over the last few hours" — 1 post, no follow-up this cycle
-[NOTED] "Chinese brand Yueban unveils SMART TOILET on WHEELS" — 1 post, no follow-up this cycle
-[NOTED] "Sperm Whale fighting a Giant Squid in its mouth!" — 1 post, no follow-up this cycle
-[NOTED] "Nagpasa na ng pre-trial brief sa Senado si House Secretary General Cheloy Garafil ngayong araw, June 15, tatlong araw bago ang nakatakdang Senate pre-trial hearing ng impeachment case laban kay Vice President Sara Duterte." — 1 post, no follow-up this cycle
-[NOTED] "Nagpatawag si Pres. Bongbong Marcos ng special session sa Kongreso sa Miyerkules, June 18." — 1 post, no follow-up this cycle
-[NOTED] "Two Australian paddleboarders rescued a stranded wallaby after it was swept out to sea" — 1 post, no follow-up this cycle
-[NOTED] "Wetin happen? You no see your house for compound?" [0❤] - 1 post, no follow-up this cycle
-[NOTED] "Curried shark is good eating. They can start there!" [0❤] - 1 post, no follow-up this cycle
-[NOTED] "Every state has a government, yet the condition of the country." [0❤] - 1 post, no follow-up this cycle
-[NOTED] "drones watching for sharks at coogee while lifeguards stand there like 'we needed backup' is peak 2025 beach day" [0❤] - 1 post, no follow-up this cycle
-[NOTED] "Syrian nature in its most beautiful form #اللهم_صل_وسلم_على_نبينا_םבםבﷺ" [0❤] - 1 post, no follow-up this cycle
-[NOTED] "Just bizarre. Another one who thinks they just wore nice sashes and sauntered about." [12❤] - 1 post, no follow-up this cycle
-[NOTED] "Inverted truth, inverted reality - genocide good, protesting genocide bad! Dark day for UK!" [6❤] - 1 post, no follow-up this cycle
-[NOTED] "is the lady chief justice an idiot or a liar?" [7❤] - 1 post, no follow-up this cycle
-[NOTED] "There's a reason that government try not to talk about Palestine Action much nowadays. These are the sorts of embarrassing errors that emerge when you" [4❤] - 1 post, no follow-up this cycle
-[NOTED] "They also tried to kill the prime minister, throwing an axe at him." [4❤] - 1 post, no follow-up this cycle
-[NOTED] "This kind of material is already being explored for aerospace, protective gear, medical implants, and futuristic design." [1❤] - 1 post, no follow-up this cycle
-[NOTED] "Titanium powder is FLAMMABLE and SPONTANEOUSLY COMBUSTIBLE." [0❤] - 1 post, no follow-up this cycle
-[NOTED] "Discipline" [0❤] - 1 post, no follow-up this cycle
-[NOTED] "I might use is as fashion" [0❤] - 1 post, no follow-up this cycle
-[NOTED] "Waiting for the markets to open while being on holiday in Dubai" [0❤] - 1 post, no follow-up this cycle
-[NOTED] "Habibi Dubai back to crowed as always Tourism We are totally busy to serve our guests In iconic city Dubai International Airport Carry on Dubai n" [0❤] - 1 post, no follow-up this cycle
-[NOTED] "Haha same! Let’s see some green lasers today" [0❤] - 1 post, no follow-up this cycle
-[NOTED] "Keep it coming!" [0❤] - 1 post, no follow-up this cycle
-[NOTED] "Omega candle is loading" [0❤] - 1 post, no follow-up this cycle
-[NOTED] "collectible soccer cocktail glasses is peak sports marketing and i'm not even mad" [0❤] - 1 post, no follow-up this cycle
-[NOTED] "Huh" [0❤] - 1 post, no follow-up this cycle
-[NOTED] "Ayakkabıdan koktey içilmez" [0❤] - 1 post, no follow-up this cycle
-[NOTED] "drinking from a shoe. disgusting." [0❤] - 1 post, no follow-up this cycle
-[NOTED] "Egg recipe fry" [15❤] - 1 post, no follow-up this cycle
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @SaulStaniforth: "The Lady Chief Justice: Palestine Action was not a direct action civil disobedience protest group like the suffragettes, but used violence to destroy property The suffragettes burned down country houses & train stations, bombed churches & sent letter bombs to politicians." https://x.com/SaulStaniforth/status/2066474811598016962
-[NOTED] @WallStreetApes: "INSANE Michigan election officials were ordered to destroy public election records just 7 days after certification Federal law requires pr" - 1 post, no follow-up this cycle
-[NOTED] @Reuters: "Sydney's Coogee Beach reopened under the watchful eyes of lifeguards and drone surveillance, after a shark attack over the weekend left a woman critically injured and prompted a safety review at Australia's popular shorelines  https:// reut.rs/4a2iqtR" - 1 post, no follow-up this cycle
-[NOTED] @MarioNawfal: "China’s military goes all-in on FPV drone warfare Chinese kids with military drones is pure nightmare fuel Getting tag-teamed by them in Counter-Strike 2 is bad enough Writers: Monica, Ian" - 1 post, no follow-up this cycle
-[NOTED] @MarioNawfal: "Baltimore Sheriff’s Office raids VIP Smoke Cigars: 9mm ghost gun seized from a 17-year-old employee, suspected cocaine + residue and hundreds of illegal/unlicensed THC products The 17-year-old is charged as adult. Unregulated smoke shops in Baltimore are straight-up crime" - 1 post, no follow-up this cycle
-[NOTED] @MarioNawfal: "CODEX AND CLAUDE CODE JUST GOT A THREE.JS GAME DIRECTOR SKILL SYSTEM FOR BUILDING BETTER BROWSER GAMES" - 1 post, no follow-up this cycle
-[NOTED] @Rainmaker1973: "3D-printed titanium chainmail fabric, created using Direct Metal Laser Sintering (DMLS), a technique that fuses titanium powder with a laser to form strong, corrosion-resistant structures." - 1 post, no follow-up this cycle
-[NOTED] @Sajwani: "Can’t wait for markets to open on Monday morning " - 1 post, no follow-up this cycle
-[NOTED] @Reuters: "A Miami bar is serving World Cup cocktails in collectible soccer-themed glasses, letting fans take them home as souvenirs, as the city hosts 2026 FIFA World Cup matches  https:// reut.rs/43F3UVl" - 1 post, no follow-up this cycle
-[NOTED] @GraceGym_: "Normal people vs Victoria secret supermodels   Save it to try later! " - 1 post, no follow-up this cycle
+[NOTED] "ready" — 2 posts, no follow-up this cycle
+[NOTED] "days" — 2 posts, no follow-up this cycle
+[NOTED] "usually" — 2 posts, no follow-up this cycle
+[NOTED] "woman wedding dress going viral" — 1 post, no follow-up this cycle
+[NOTED] "lucky dude lol" — 1 post, no follow-up this cycle
+[NOTED] "little baby meets little baby" — 1 post, no follow-up this cycle
+[NOTED] "japan celebration knicks celebration" — 1 post, no follow-up this cycle
+[NOTED] "weirdest stamina ever, prison inmate" — 1 post, no follow-up this cycle
+[NOTED] "city footage captures his failed attempt flee arrest" — 1 post, no follow-up this cycle
+[NOTED] "philippines watch germany open discussing possible visiting forces agreement" — 1 post, no follow-up this cycle
+[NOTED] "father doesn want give his child watermelon" — 1 post, no follow-up this cycle
+[NOTED] "mother incredible nanny white cat brings" — 1 post, no follow-up this cycle
+[NOTED] "policeman recognizes mom cooking, bite" — 1 post, no follow-up this cycle
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] Eric Sanders, Esq. (@esq_sanders) discussed "Evidentiary Inversion" where internal investigations begin with a conclusion and then construct a supporting record, highlighting a mechanism of narrative control. (https://x.com/esq_sanders/status/1786521575971483802)
+[NOTED] @TVPatrol reported an increase of P10 million in the assets of Vice President Sara Duterte and Atty. Manases Carpio, based on their SALN in 2025. This raises questions about political transparency. (https://x.com/TVPatrol/status/2066507630563213710)
+[NOTED] @Timodc satirically described "Michelle Obama is a man" being shouted on the White House lawn, highlighting how provocative and often baseless claims gain traction, undermining genuine discourse. (https://x.com/Timodc/status/2066356936153469339)
+[NOTED] @DerrickEvans4WV questioned Leo Terrell's official government account claiming a position as "Chair of the DOJ Task Force to Combat Antisemitism", raising concerns about the politicization of government roles and potential abuse of power to target individuals. (https://x.com/DerrickEvans4WV/status/2066377566076764471)
+[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup discusses the Pentagon negotiating direct equity stakes in US drone companies, indicating potential government ownership rather than just contracts. This implies a deeper level of power integration that could influence narrative around defense and technology. (https://x.com/randgroup/status/1795804561081577967)
+[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @FundaAI's discussion on weekly CPU/Memory rally and specific tech stocks ($SMTC, $AMD, $DDOG, etc.) in the context of AI semis indicates an economic narrative that could be influenced by powerful entities. While not directly narrative control, economic narratives often underpin broader power structures. (https://x.com/FundaAI/status/1795123910543665576)
+[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders again highlights "Evidentiary Inversion" in internal investigations, noting that they begin with a conclusion and then construct a supporting record. This is a direct example of how truth is manipulated within institutions. (https://x.com/esq_sanders/status/1786521575971483802)
+[NOTED] @TheCinesthetic: "Samara Weaving in Scream VI (2023)" — 1 post, no follow-up this cycle
+[NOTED] @Rainmaker1973: "Squirrel gets drunk eating fermented pears. [ Kathleen Morlok] [ Inver Grove Heights, Minnesota]" — 1 post, no follow-up this cycle
+[NOTED] @nature_lifee: "The seamless precision of modern joinery makes interlocking installations look incredibly clean and satisfying." — 1 post, no follow-up this cycle
+[NOTED] @VoidXnews: "future feels surprisingly tactile." — 1 post, no follow-up this cycle
+[NOTED] @EpicClipVault: "Man tries to adopt a cat, but the cat refuses to leave his brother, so he adopts both" — 1 post, no follow-up this cycle
+[NOTED] @SaltyPatriot47: "Of course the anti-American scabs hate what he said. @JessicaTarlov rejects what being an American is. Suck it up, buttercup! Y’all have said FAR m" — 1 post, no follow-up this cycle
+[NOTED] @Brandon10009985: "Awe" — 1 post, no follow-up this cycle
+[NOTED] @gmanews: "Ngayong June 15, inilabas ng Korte Suprema ang desisyon nitong suspindehin si Atty. Jesus Falcis sa pag-practice ng abogasya sa loob ng isang taon. Pero sino nga ba si Falcis at bakit siya sinuspinde ng Korte Suprema? Kilalanin siya sa video na ito." — 1 post, no follow-up this cycle
+[NOTED] @EpicClipVault: "When security cameras captured two vehicles fell into a sinkhole " — 1 post, no follow-up this cycle
+[NOTED] @RT_com: "INSANE CLIFF JUMP ENDS POORLY Was it worth it?" — 1 post, no follow-up this cycle
+[NOTED] @Rainmaker1973: "No other species on Earth has a teamwork system quite like ants." — 1 post, no follow-up this cycle
+[NOTED] @RickyDoggin: "I loved The Going Show. Its hard to believe it came out 50 years ago." — 1 post, no follow-up this cycle
+[NOTED] @EpicClipVault: "In Nigeria, brides keep a straight face until they’re happy with the money offered then the smile begins." — 1 post, no follow-up this cycle
+[NOTED] @Crazymoments01: "What the hell is that?! " — 1 post, no follow-up this cycle
