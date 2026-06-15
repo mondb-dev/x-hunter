@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-15T05:54:00.210Z",
+  "generated_at": "2026-06-15T08:23:35.625Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-15T05:54:30.219Z",
+  "profiled_at": "2026-06-15T08:24:04.408Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -1938,9 +1938,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-15T05:24:32.000Z",
+      "last_seen_at": "2026-06-15T07:31:17.000Z",
       "discovery": {
-        "distinct_urls": 5386,
+        "distinct_urls": 5401,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1949,10 +1949,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3228,
-          "feed_buffer_reply": 3448
+          "feed_buffer": 3236,
+          "feed_buffer_reply": 3455
         },
-        "distinct_referring_accounts": 1802,
+        "distinct_referring_accounts": 1803,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1990,7 +1990,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5386",
+            "distinct_urls:5401",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1998,7 +1998,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1802",
+            "referring_accounts:1803",
             "origin_types:2"
           ]
         },
@@ -2028,10 +2028,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5386",
+            "distinct_urls:5401",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1802",
+            "referring_accounts:1803",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -6898,7 +6898,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T07:52:32.810Z",
+        "fetched_at": "2026-06-15T07:54:00.467Z",
         "homepage_url": "https://era.app/",
         "example_url": "https://era.app/?twclid=23bm7jtrc66pin9ydx0wvupecw",
         "homepage_status": 200,
@@ -7625,16 +7625,16 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.63,
+          "confidence": 0.75,
           "basis": [
-            "meta_author:false",
+            "meta_author:true",
             "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:9",
             "opinion_marker:false"
           ]
         },
@@ -7654,33 +7654,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T06:22:32.098Z",
+        "fetched_at": "2026-06-15T06:23:59.390Z",
         "homepage_url": "https://leronx.org/",
         "example_url": "https://leronx.org/?ref=005&tw=r84nh&tw_click=tw-r84nh-r84ni&twclid=29ffsgobmrsvjmkjlmgcllypv0",
-        "homepage_status": 403,
-        "example_status": 403,
+        "homepage_status": 200,
+        "example_status": 200,
         "homepage_final_url": "https://leronx.org/",
         "example_final_url": "https://leronx.org/?ref=005&tw=r84nh&tw_click=tw-r84nh-r84ni&twclid=29ffsgobmrsvjmkjlmgcllypv0",
         "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
-          "has_meta_author": false,
+          "has_meta_author": true,
           "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 9,
           "opinion_marker": false
         },
         "example": {
-          "has_meta_author": false,
+          "has_meta_author": true,
           "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 9,
           "opinion_marker": false
         }
       }
@@ -18718,7 +18718,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T06:52:32.981Z",
+        "fetched_at": "2026-06-15T06:53:59.849Z",
         "homepage_url": "https://tolt.com/",
         "example_url": "https://tolt.com/?twclid=24jeerwwldzt1cwgx3ktzfvzm5",
         "homepage_status": 200,
@@ -25313,7 +25313,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T08:22:33.903Z",
+        "fetched_at": "2026-06-15T08:24:02.863Z",
         "homepage_url": "https://controlweedsnotfarming.com/",
         "example_url": "https://controlweedsnotfarming.com/?utm_source=X&utm_medium=Social&utm_campaign=Remarketing&utm_term=Landing+Page.+Visitors&utm_content=Food+On+Our+Tables&twclid=2ehfqrtyrcni2wc5jyzgjr19ra",
         "homepage_status": 200,
@@ -29010,7 +29010,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T06:52:33.257Z",
+        "fetched_at": "2026-06-15T06:54:00.148Z",
         "homepage_url": "https://monadicdna.com/",
         "example_url": "https://explorer.monadicdna.com/?twclid=23v8cbj938nxfoq8gmro6dqa1l",
         "homepage_status": 200,
@@ -29256,7 +29256,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T06:22:33.197Z",
+        "fetched_at": "2026-06-15T06:24:00.437Z",
         "homepage_url": "https://alphacapital.pro/",
         "example_url": "https://alphacapital.pro/pages/performance/?utm_source=twitter&utm_medium=ad1&utm_campaign=ac&twclid=2b8weeqkz95cs1xc59f8v2j7ob",
         "homepage_status": 200,
@@ -29350,7 +29350,7 @@
           ]
         },
         "profile": {
-          "score": 0.1,
+          "score": 0.11,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -29359,7 +29359,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:1",
             "opinion_marker:false"
           ]
         },
@@ -29379,7 +29379,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T06:52:33.565Z",
+        "fetched_at": "2026-06-15T06:54:00.431Z",
         "homepage_url": "https://willowvoice.com/",
         "example_url": "https://willowvoice.com/developers?twclid=2ebuy7l735ljqyo9xotbgwpmp0",
         "homepage_status": 200,
@@ -29395,7 +29395,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 1,
           "opinion_marker": false
         },
         "example": {
@@ -29405,7 +29405,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 1,
           "opinion_marker": false
         }
       }
@@ -34422,7 +34422,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T07:52:33.221Z",
+        "fetched_at": "2026-06-15T07:54:00.951Z",
         "homepage_url": "https://coderabbit.ai/",
         "example_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
         "homepage_status": 200,
@@ -40281,7 +40281,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T06:22:33.750Z",
+        "fetched_at": "2026-06-15T06:24:01.082Z",
         "homepage_url": "https://lately.com/",
         "example_url": "http://www.lately.com/?twclid=26st81se5sstdkz28lll98t6pl",
         "homepage_status": 200,
@@ -40403,7 +40403,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T06:22:34.084Z",
+        "fetched_at": "2026-06-15T06:24:01.660Z",
         "homepage_url": "https://deepgram.com/",
         "example_url": "https://deepgram.com/state-of-voice-ai-report?utm_source=twitter&utm_medium=paidsocial&utm_campaign=Twitter_ACQ_Q42025_Evergreen_Prospecting&utm_content=state-of-voice&twclid=22an8eeru83cxpws6fqbuga3v2",
         "homepage_status": 200,
@@ -40525,7 +40525,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T06:52:33.871Z",
+        "fetched_at": "2026-06-15T06:54:00.693Z",
         "homepage_url": "https://topstocks.com/",
         "example_url": "https://topstocks.com/cvkd?twclid=2br9vd88ywgw104idmz125ag0u",
         "homepage_status": 200,
@@ -41135,7 +41135,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T07:52:33.764Z",
+        "fetched_at": "2026-06-15T07:54:01.385Z",
         "homepage_url": "https://gothamist.com/",
         "example_url": "https://gothamist.com/news/mamdani-administrations-new-72nd-street-bike-lane-would-link-upper-east-and-west-sides&utm_id=571007&sfmc_id=79023345&utm_content=2026415&nypr_member=True",
         "homepage_status": 200,
@@ -41257,7 +41257,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T07:52:34.576Z",
+        "fetched_at": "2026-06-15T07:54:02.280Z",
         "homepage_url": "https://fullpath.com/",
         "example_url": "https://www.fullpath.com/ai-powered-text-message-marketing-for-car-dealers/?twclid=21jxitvmgt9jsjh3rm5bmiedxu",
         "homepage_status": 200,
@@ -41379,7 +41379,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T08:22:34.259Z",
+        "fetched_at": "2026-06-15T08:24:03.255Z",
         "homepage_url": "https://johnkennedy.com/",
         "example_url": "https://support.johnkennedy.com/just-a-little-quiz/?red=cbdb1d6f-e5fe-4aa4-a295-1dbdd471cee6&utm_source=X&utm_medium=Paid&utm_campaign=Quiz&twclid=27n7ucaicrd2diuikk5gsjxiza",
         "homepage_status": 200,
@@ -41501,7 +41501,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T08:22:34.977Z",
+        "fetched_at": "2026-06-15T08:24:04.064Z",
         "homepage_url": "https://gunowners.org/",
         "example_url": "https://www.gunowners.org/?twclid=25jr1t1tq8terhv5da5ta78vcm",
         "homepage_status": 200,
@@ -42843,7 +42843,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T05:22:30.818Z",
+        "fetched_at": "2026-06-15T08:24:04.408Z",
         "homepage_url": "https://flova.ai/",
         "example_url": "https://flova.ai/?twclid=29hnc0f969c98ywipq384z0vww",
         "homepage_status": 200,
