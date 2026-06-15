@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-15T18:53:47.284Z",
+  "generated_at": "2026-06-15T20:23:55.412Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-15T18:54:37.659Z",
+  "profiled_at": "2026-06-15T20:24:23.222Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -1940,7 +1940,7 @@
       "first_seen_at": "2016-05-05T18:57:30.000Z",
       "last_seen_at": "2026-06-15T16:49:07.000Z",
       "discovery": {
-        "distinct_urls": 5434,
+        "distinct_urls": 5439,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1949,10 +1949,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3250,
-          "feed_buffer_reply": 3480
+          "feed_buffer": 3251,
+          "feed_buffer_reply": 3484
         },
-        "distinct_referring_accounts": 1809,
+        "distinct_referring_accounts": 1813,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1990,7 +1990,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5434",
+            "distinct_urls:5439",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1998,7 +1998,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1809",
+            "referring_accounts:1813",
             "origin_types:2"
           ]
         },
@@ -2028,10 +2028,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5434",
+            "distinct_urls:5439",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1809",
+            "referring_accounts:1813",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -4269,9 +4269,9 @@
       "entity": "App Link",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T04:05:48.185Z",
-      "last_seen_at": "2026-06-13T21:31:53.000Z",
+      "last_seen_at": "2026-06-15T11:26:50.000Z",
       "discovery": {
-        "distinct_urls": 17,
+        "distinct_urls": 18,
         "example_urls": [
           "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
           "https://chipotle.app.link/CFCROzYFA1b?%243p=a_twitter&twclid=2cc0rz9d8z8z95tfghmhm1chq0",
@@ -4281,7 +4281,7 @@
         ],
         "origin_counts": {
           "feed_buffer": 7,
-          "feed_buffer_reply": 10
+          "feed_buffer_reply": 11
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -4312,7 +4312,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:17",
+            "distinct_urls:18",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4346,11 +4346,11 @@
         },
         "overall": {
           "score": 0.43875,
-          "confidence": 0.5292,
+          "confidence": 0.5517,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:17",
+            "distinct_urls:18",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -7780,7 +7780,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T19:52:46.319Z",
+        "fetched_at": "2026-06-15T19:54:16.555Z",
         "homepage_url": "https://spacex.com/",
         "example_url": "https://shop.spacex.com/products/spacex-mission-ready-sunglasses?variant=44537843744847&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44537843744847&twclid=298d45vmtw4pu78lan6k2cs4ha",
         "homepage_status": 200,
@@ -9080,9 +9080,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-16T09:36:45.269Z",
-      "last_seen_at": "2026-06-14T19:08:30.553Z",
+      "last_seen_at": "2026-06-15T19:37:39.694Z",
       "discovery": {
-        "distinct_urls": 68,
+        "distinct_urls": 69,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -9091,7 +9091,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 68
+          "articles": 69
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -9120,7 +9120,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:68",
+            "distinct_urls:69",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -9158,7 +9158,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:68",
+            "distinct_urls:69",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -48334,7 +48334,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T18:52:47.036Z",
+        "fetched_at": "2026-06-15T19:54:19.049Z",
         "homepage_url": "https://republicen.org/",
         "example_url": "https://republicen.org/petition-x?twclid=2euy6ki9rbdehj6wv2ogyto6xe",
         "homepage_status": 200,
@@ -48456,7 +48456,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T18:52:47.525Z",
+        "fetched_at": "2026-06-15T19:54:19.610Z",
         "homepage_url": "https://coinversa.ai/",
         "example_url": "https://developers.coinversa.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=developer_api&utm_content=mcp_native&twclid=2124p9kgv52anecn3ksmek81n4",
         "homepage_status": 200,
@@ -48578,7 +48578,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T19:52:46.878Z",
+        "fetched_at": "2026-06-15T19:54:20.530Z",
         "homepage_url": "https://onrender.com/",
         "example_url": "https://editedmusic.onrender.com/?twclid=2d55shf5rbth87uf35vrsj5s7v",
         "homepage_status": 200,
@@ -48700,7 +48700,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T19:52:48.914Z",
+        "fetched_at": "2026-06-15T20:24:22.336Z",
         "homepage_url": "https://nintendo.com/",
         "example_url": "https://nintendo.com/us/store/products/nero-and-sci-integral-edition-switch?utm_source=X&utm_campaign=PreorderDesktop&utm_medium=ads&utm_content=Math_Variant_2&twclid=22ctbnud22bkdyu2z78mundbwr",
         "homepage_status": 200,
@@ -48822,7 +48822,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T19:52:49.074Z",
+        "fetched_at": "2026-06-15T20:24:22.506Z",
         "homepage_url": "https://pocketchange.gg/",
         "example_url": "https://pocketchange.gg/?utm_source=x&utm_medium=paid_social&utm_campaign=pc_4&utm_content=adgroup_1_ambassador_v3&pcid=pc4_ag1_ambassador_v4&twclid=22ov7ac68spfwo58x5g8njetfs",
         "homepage_status": 403,
@@ -48944,7 +48944,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T20:22:47.124Z",
+        "fetched_at": "2026-06-15T20:24:23.031Z",
         "homepage_url": "https://advanced.gg/",
         "example_url": "https://advanced.gg/pages/partner-with-advanced?twclid=2cguzkxfmrovj5lb0v799o9ghh",
         "homepage_status": 200,
@@ -49066,7 +49066,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T20:22:47.414Z",
+        "fetched_at": "2026-06-15T20:24:23.222Z",
         "homepage_url": "https://capcut.sale/",
         "example_url": "https://capcut.sale/?twclid=2e7i6xy6uufbldu6noghw4cl3i",
         "homepage_status": 403,
