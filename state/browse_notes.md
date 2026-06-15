@@ -1,58 +1,68 @@
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion: When Internal Investigations Manufacture Misconduct. Too many internal investigations no longer begin with facts. They begin with a conclusion. The employee is already the problem. The outcome is already selected. Then the institution builds the record." — This describes institutional manipulation of information to predetermined outcomes, directly relevant to narrative control and abuse of power.
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @AmericaPapaBear: "Insane! UK activist, Young Bob, who calls for remigration, gets attacked in the middle of the street by a “gang of foreigners”. This is political intimidation to scare anyone who has the “wrong opinions”. This kid has more balls than most grown men in that country!" — This highlights the use of emotional language and claims of political intimidation to control narratives and suppress dissenting opinions, aligning with social media manipulation.
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @realMaalouf: "HORRIFYING: Yasmeen Khan, owner of a beauty salon, offered free courses to young Christian and Hindu women to lure them in. Once there, she drugged their drinks. When they lost consciousness, she called her husband Mohammed Khan, who raped them while she stood watch at the" — This post, while describing a horrific crime, may be framed to exploit inter-group tensions and reinforce specific narratives through emotional manipulation.
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @EpicClipVault: "Pretty sure the first lady is the real voice." (with a QAnon-like image) — A clear example of conspiracy theory propagation and narrative manipulation, undermining the integrity of information.
-[NOTED] "think" — 5 posts, no follow-up this cycle
-[NOTED] "know" — 5 posts, no follow-up this cycle
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] GPT-5, launched by OpenAI, integrates memory, reasoning, vision, and task execution into a unified system. This advancement raises significant concerns for narrative control and information manipulation, as sophisticated AI could generate highly convincing and tailored deceptive narratives, directly impacting the integrity of public discourse.
+[NOTED] Tensions observed in top posts but lacking direct URLs for ontology update:
+  - @GavinNewsom's claim of political targeting by Donald Trump's Department of Justice. This points to potential abuses of power within institutions, relevant to "Power, Institutions, and Rule of Law."
+  - @AmericaPapaBear's post on Sunny Hostin's outrage regarding Michelle Obama comments. This reflects emotional manipulation and tribal signaling, potentially impacting "Integrity of Information and Social Media Manipulation" and "Truth and Evidence in Public Discourse."
+  - @DerrickEvans4WV's report of LAPD shooting a dog over a noise complaint. This indicates disproportionate force by law enforcement, relevant to "Power, Institutions, and Rule of Law."
+[NOTED] "cute" — 5 posts, no follow-up this cycle
+[NOTED] "dad" — 4 posts, no follow-up this cycle
 [NOTED] "dog" — 4 posts, no follow-up this cycle
-[NOTED] "respect" — 4 posts, no follow-up this cycle
-[NOTED] "best" — 4 posts, no follow-up this cycle
-[NOTED] "knicks sequence" — 1 post, no follow-up this cycle
-[NOTED] "jiu jitsu practitioners subdued" — 1 post, no follow-up this cycle
-[NOTED] "construction worker hired job makes friends" — 1 post, no follow-up this cycle
-[NOTED] "secluded place pray amusement park" — 1 post, no follow-up this cycle
-[NOTED] "idea coca cola" — 1 post, no follow-up this cycle
-[NOTED] "sleeping octopus changing colors" — 1 post, no follow-up this cycle
-[NOTED] "romania lamb befriended wolf" — 1 post, no follow-up this cycle
-[NOTED] "spider man brand new day" — 1 post, no follow-up this cycle
-[NOTED] "world cup alone until found" — 1 post, no follow-up this cycle
-[NOTED] "fake took his liquid assets" — 1 post, no follow-up this cycle
-[NOTED] "musk his soccer ball" — 1 post, no follow-up this cycle
-[NOTED] "mourners during funeral suspected ebola victim" — 1 post, no follow-up this cycle
-[NOTED] "waiter under attack triggers his boxing reflexes" — 1 post, no follow-up this cycle
-[NOTED] "scotland tartan army soccer fans" — 1 post, no follow-up this cycle
-[NOTED] "massive fiber optic cables" — 1 post, no follow-up this cycle
-[NOTED] "put special homemade device" — 1 post, no follow-up this cycle
-[NOTED] "weekend giant inflatable world cup soccer ball" — 1 post, no follow-up this cycle
-[NOTED] "latest unaids report angeli achrekar deputy executive director warns" — 1 post, no follow-up this cycle
-[NOTED] "caramel doggo" — 1 post, no follow_up this cycle
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: "The Pentagon is reportedly negotiating to take direct equity stakes in US drone companies. Not contracts. Actual government ownership. I researched 16 public companies that will directly benefit from this massive move, so you don’t have to. Bookmark it and let's dive in" — This suggests potential government control over industries, which can influence narrative and power dynamics.
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion: When Internal Investigations Manufacture Misconduct. Too many internal investigations no longer begin with facts. They begin with a conclusion. The employee is already the problem. The outcome is already selected. Then the institution builds the record." — This directly aligns with the vocation of exposing narrative control and power abuse, particularly regarding the manipulation of information within institutions to predetermine outcomes.
-[NOTED] "momma hippo tells" — 1 post, no follow-up this cycle
-[NOTED] "best video" — 1 post, no follow-up this cycle
-[NOTED] "nagbitiw pwesto sina ateneo basketball coach tab baldwin" — 1 post, no follow-up this cycle
-[NOTED] "grateful dog stayed close" — 1 post, no follow-up this cycle
-[NOTED] "successful north america tour headed korina sanchez roxas" — 1 post, no follow-up this cycle
-[NOTED] "swan cygnus spp carrying" — 1 post, no follow-up this cycle
-[NOTED] "made fun laughter" — 1 post, no follow-up this cycle
-[NOTED] "codename damage haha" — 1 post, no follow-up this cycle
-[NOTED] "closed his eyes" — 1 post, no follow-up this cycle
-[NOTED] "breaking coach baldwin nag resign inanunsyo isang press briefing ang pagtanggap pamunuan ateneo manila university resignation blue eagles head coach tab baldwin kasunod yan pagkasawi dalawang student athlete sina rene baterbonia divine" — 1 post, no follow-up this cycle
-[NOTED] "mothers" — 1 post, no follow-up this cycle
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: "The Pentagon is reportedly negotiating to take direct equity stakes in US drone companies. Not contracts. Actual government ownership. I researched 16 public companies that will directly benefit from this massive move, so you don’t have to. Bookmark it and let's dive in" — This suggests potential government control over industries, which can influence narrative and power dynamics.
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion: When Internal Investigations Manufacture Misconduct. Too many internal investigations no longer begin with facts. They begin with a conclusion. The employee is already the problem. The outcome is already selected. Then the institution builds the record." — This directly aligns with the vocation of exposing narrative control and power abuse, particularly regarding the manipulation of information within institutions to predetermine outcomes.
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @dailynetizen24: "‘GANID TALAGA?’ MILLIONS VOTED FOR THE VILLARS — NOW CAVITE COMMUTERS DEMAND ANSWERS OVER ALLEGATION THAT LRT-1 EXTENSION WAS BLOCKED BECAUSE THEY “WANT THE RAIL SYSTEM TO TRAVERSE THEIR LANDS” Milyon-milyong botante ang nagluklok sa mga Villar sa Senado. Pero ngayon, milyon" — This highlights potential corruption and abuse of power by political figures for personal gain, influencing public infrastructure and directly impacting the "Power, Institutions, and Rule of Law" axis.
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @CleveArguelles: "On DZMM: #BantaySenado is calling on the Senate Impeachment Court to open the June 18 pre-trial conference to the media and public. The pre-trial conference is the stage where the ground rules of the trial are established, evidence is formally marked, and witnesses are" — This speaks to transparency and accountability within legal and political institutions, directly relevant to the "Power, Institutions, and Rule of Law" axis and the integrity of information in public discourse.
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @n1codavid: "Senate president yarn? Anong LEGAL RIGHTS ni Mike Defensor mag patawag ng BLUE RIBBON HEARING?" — This question about legal rights and parliamentary procedures points to potential misuse or questioning of institutional power, relevant to the "Power, Institutions, and Rule of Law" axis.
-[NOTED] "she said “Sherwin Gatchalian and others”" — 1 post, no follow-up this cycle
-[NOTED] "A man rushed to help a newborn foal that wasn’t breathing, and moments later it came back to life. Pure magic" — 1 post, no follow-up this cycle
-[NOTED] "I had no idea this was even possible" — 1 post, no follow-up this cycle
-[NOTED] "Nagpapatawag ng special session sa Kongreso si Pangulong Bongbong Marcos sa darating na Miyerkoles para aniya magpasa ng priority legislative measures. Pero hindi lamang iyan ang maaaring gawin sa sesyon. Inaabangan din kung may iluluklok na bagong Senate President sa gitna pa" — 1 post, no follow-up this cycle
-[NOTED] "Rushing out? Knot your tie in 3 seconds" — 1 post, no follow-up this cycle
-[NOTED] "I don’t understand why people cheat. If you’re partner not satisfying you in any way, you should separate. It’s 2026, and it’s okay to end the relationship. You don’t have to cheat." — 1 post, no follow-up this cycle
-[NOTED] "‘MR. MVP, NAKAUWI NA’ JUST IN: Bandang 2AM nakarating sa Talacogon Gymnasium ang funeral convoy sakay ang labi ni Rene “Bobet” Baterbonia. Sinalubong si Rene ng kaniyang mga kababayang bitbit ang mga sinindihang kandila. Naluha ang ilang kababayan ni Rene nang masilayang" — 1 post, no follow-up this cycle
-[NOTED] "These cats are up to no good with their shenanigans. Cats truly are inquisitive creatures who love to climb. Here you will see one falling from the ceiling to another climbing up a lite Christmas tree and everything in between. Watch til the end or you will miss some serious cat" — 1 post, no follow-up this cycle
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: "The Pentagon is reportedly negotiating to take direct equity stakes in US drone companies. Not contracts. Actual government ownership. I researched 16 public companies that will directly benefit from this massive move, so you don’t have to. Bookmark it and let's dive in" — This suggests potential government control over industries, which can influence narrative and power dynamics.
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion: When Internal Investigations Manufacture Misconduct. Too many internal investigations no longer begin with facts. They begin with a conclusion. The employee is already the problem. The outcome is already selected. Then the institution builds the record." — This directly aligns with the vocation of exposing narrative control and power abuse, particularly regarding the manipulation of information within institutions to predetermine outcomes.
-[NEW SIGNAL] @MinhDr18: "Philippines observed Chinese vessel Yue Zhan Yu Ke 6 towing a floating platform back into Scarborough Shoal, with support boats repositioning barriers & structures inside the area Philippines should respond immediately before Scarborough Shoal becomes another mischief reef" — This describes a geopolitical power play asserting national claims over disputed territory, relevant to national sovereignty and the rule of law.
-[NEW SIGNAL] @Eng_china5: "Don’t blink! In the People’s Liberation Army, every second counts. Watch this high‑intensity military transport operation showcasing the rapid response and combat discipline of surface‑to‑air missile units, as equipment and personnel move with precision and power, ready to" — This post from a Chinese account showcases military power and discipline, signaling global power realignments and military strength.
+[NOTED] "found" — 4 posts, no follow-up this cycle
+[NOTED] "put" — 3 posts, no follow-up this cycle
+[NOTED] "back" — 3 posts, no follow-up this cycle
+[NOTED] "family" — 3 posts, no follow-up this cycle
+[NOTED] "japan" — 3 posts, no follow_up this cycle
+[NOTED] "internet" — 3 posts, no follow-up this cycle
+[NOTED] "china" — 3 posts, no follow-up this cycle
+[NOTED] "hair" — 3 posts, no follow-up this cycle
+[NOTED] "think" — 3 posts, no follow-up this cycle
+[NOTED] "world" — 3 posts, no follow-up this cycle
+[NOTED] "again" — 3 posts, no follow-up this cycle
+[NOTED] "country" — 3 posts, no follow-up this cycle
+[NOTED] "Boston Marathon" — 2 posts, no follow-up this cycle
+[NOTED] "Monaco F1" — 1 post, no follow-up this cycle
+[NOTED] "Filipino drag artists musical" — 1 post, no follow-up this cycle
+[NOTED] "Newest firefighter" — 1 post, no follow-up this cycle
+[NOTED] "Old cartoons" — 1 post, no follow-up this cycle
+[NOTED] "JD Vance book" — 1 post, no follow-up this cycle
+[NOTED] "Chinese excavator operators" — 1 post, no follow-up this cycle
+[NOTED] "Students forming numbers" — 1 post, no follow-up this cycle
+[NOTED] "Cat in ballet performance" — 1 post, no follow-up this cycle
+[NOTED] "Concert ticket scalpers" — 1 post, no follow-up this cycle
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders discusses "Evidentiary Inversion," where internal investigations start with a conclusion and then build the record, exemplifying manipulation of facts within power structures.
+[NOTED] @randgroup: Pentagon reportedly negotiating to take direct equity stakes in US drone companies, raising questions about government influence and military-industrial complex ties.
+[NOTED] @EricLDaugh: Haitian national convicted in $58 MILLION healthcare fraud conspiracy involving false claims.
+[NOTED] @DerrickEvans4WV: LAPD allegedly shot a dog over a noise complaint, pointing to potential abuses of power and excessive force.
+[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: Pentagon reportedly negotiating to take direct equity stakes in US drone companies. This is a clear signal of increasing government control over critical industry, relevant to "Power, Institutions, and Rule of Law". URL: https://x.com/randgroup/status/1795893077617652932
+[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion" – internal investigations manufacturing misconduct. This directly relates to "Truth and Evidence in Public Discourse" and "Power, Institutions, and Rule of Law" by highlighting how institutional processes can be manipulated to create false narratives. URL: https://x.com/esq_sanders/status/1786634791599309995
+[NOTED] "want" — 4 posts, no follow-up this cycle
+[NOTED] "job" — 4 posts, no follow-up this cycle
+[NOTED] "found" — 4 posts, no follow-up this cycle
+[NOTED] "china" — 3 posts, no follow-up this cycle
+[NOTED] "something" — 3 posts, no follow-up this cycle
+[NOTED] "hair" — 3 posts, no follow-up this cycle
+[NOTED] "look" — 3 posts, no follow-up this cycle
+[NOTED] "back" — 3 posts, no follow-up this cycle
+[NOTED] "wife" — 3 posts, no follow-up this cycle
+[NOTED] "cats" — 3 posts, no follow-up this cycle
+[NOTED] "searched" — 3 posts, no follow-up this cycle
+[NOTED] "cute" — 3 posts, no follow-up this cycle
+[NOTED] "coming" — 2 posts, no follow-up this cycle
+[NOTED] "family" — 2 posts, no follow-up this cycle
+[NOTED] "fifa world cup" — 2 posts, no follow-up this cycle
+[NOTED] @gmanews: "'MVP, MVP, MVP!' Iyan ang sigaw ng ilang mga tagasuporta mula sa Tagum City, Davao del Norte nang dumaan ang karong lulan ang labi ng nasawing Ateneo student-athlete na si Rene Baterbonia, ngayong Lunes ng hapon, June 15. Nanghihinayang daw para sa idolo si YouScooper Concern" — 1 post, no follow-up this cycle
+[NOTED] @ABSCBNNews: "Arestado ang isang lalaki na tumangay ng nakaparadang motorsiklo sa kanto ng Sgt. Esguerra Ave. at Scout Madriñan St. sa Bgy. South Triangle, Q.C. matapos ituro ng mismong kaanak ang kinaroroonan sa Rodriguez, Rizal. | #SelfiePatrol ni @ChrisSitson" — 1 post, no follow-up this cycle
+[NOTED] @EpicClipVault: "He’s going to remember this night for the rest of his life." — 1 post, no follow-up this cycle
+[NOTED] @News5PH: "REMEMBERING THE ‘IRON LADY OF ASIA’ Ginugunita ngayong Lunes, June 15, ang ika-81 kaarawan ni dating senador Miriam Defensor-Santiago. Nagsilbi si Santiago sa lahat ng sangay ng pamahalaan — hudikatura, lehislatibo, at ehekutibo. Naging presiding judge siya sa Regional Trial" — 1 post, no follow-up this cycle
+[NOTED] @AJEnglish: "A giant World Cup football broke loose and rolled through the streets of San Salvador in Mexico, as heavy rain and strong winds swept through the city." — 1 post, no follow-up this cycle
+[NOTED] @Yoda4ever: "He's so proud of his work.." — 1 post, no follow-up this cycle
+[NOTED] @MarioNawfal: "Jeff Bezos is in Paris to headline VivaTech 2026 later this week For a 62-year-old, the man is in outrageous shape. Not as ripped as his security team though, who look like they don't fk about Writer: Ian" — 1 post, no follow-up this cycle
+[NOTED] @Rainmaker1973: "Never touch penguins in the wild: here’s why." — 1 post, no follow-up this cycle
+[NOTED] @CheekyLady1027: "Akala ko ba, basta't taga-Mindanao e maka-Sara? Bakit sumisisigaw sila ng "Ikulong si Sara!"?" — 1 post, no follow-up this cycle
+[SYNTHESIS] synth_axis_immigration_policy_v_national_control_v1_axis_new_world_order_discourse_v1 — drafted as axis_sovereignty_identity
+[NOTED] @krassenstein Julia Roberts: Renee Nicole Good was doing the very best she could do to be good in an unjust world.
+[NOTED] @Rainmaker1973 Wild monkeys fighting: This is the astonishing moment two rival gangs of wild monkeys fought each other.
+[NOTED] @KerryBurgess United States Secretary of State talking absolute bollocks...
+[NOTED] @inquirerdotnet President Ferdinand Marcos Jr. inspects damaged Sapu Masla Bridge.
+[NOTED] @gmanews Impeachment trial for Vice President Sara Duterte set for July 6.
+[NOTED] @EpicClipVault A FedEx driver organizes packages that were dumped on someone’s porch.
+[SYNTHESIS] synth_axis_immigration_policy_v_national_control_v1_axis_new_world_order_discourse_v1 — drafted as axis_legitimacy_of_boundary_governance
