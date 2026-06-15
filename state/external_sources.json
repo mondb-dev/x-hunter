@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-15T14:23:40.439Z",
+  "generated_at": "2026-06-15T17:23:43.765Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-15T14:24:12.583Z",
+  "profiled_at": "2026-06-15T17:24:15.388Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -1938,9 +1938,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-15T13:37:44.000Z",
+      "last_seen_at": "2026-06-15T16:43:10.488Z",
       "discovery": {
-        "distinct_urls": 5426,
+        "distinct_urls": 5431,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1950,9 +1950,9 @@
         ],
         "origin_counts": {
           "feed_buffer": 3250,
-          "feed_buffer_reply": 3471
+          "feed_buffer_reply": 3476
         },
-        "distinct_referring_accounts": 1807,
+        "distinct_referring_accounts": 1808,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1990,7 +1990,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5426",
+            "distinct_urls:5431",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1998,7 +1998,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1807",
+            "referring_accounts:1808",
             "origin_types:2"
           ]
         },
@@ -2028,10 +2028,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5426",
+            "distinct_urls:5431",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1807",
+            "referring_accounts:1808",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -8445,6 +8445,133 @@
       }
     },
     {
+      "domain": "smart.link",
+      "entity": "Smart Link",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-07T06:11:24.204Z",
+      "last_seen_at": "2026-06-15T12:00:27.000Z",
+      "discovery": {
+        "distinct_urls": 8,
+        "example_urls": [
+          "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
+          "https://smart.link/sdh2x9q4dptrg?twclid=24aw0ljxdznhulueu1l8o9x2fi",
+          "https://smart.link/ogdqjam4y4mcs?twclid=2dtao7qsbh0cu3icl0wn64ffvg",
+          "https://smart.link/q693v84a2mlhw?twclid=2du2cpv4hg5bnvla5csn2ws1uc",
+          "https://smart.link/d48st4cf87ymx?twclid=22gw0y3bgoat1tou4y8uestgbv"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2,
+          "feed_buffer_reply": 6
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "mcdonalds"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.3533333333333333,
+          "basis": [
+            "distinct_urls:8",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:15",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.41322916666666665,
+          "confidence": 0.30219999999999997,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:8",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-14T04:23:30.811Z",
+        "homepage_url": "https://smart.link/",
+        "example_url": "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://smart.link/",
+        "example_final_url": "https://www.mcdonalds.com/us/en-us/download-app.html",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 15,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "kubit.ai",
       "entity": "Kubit Ai",
       "kind": "unknown",
@@ -9449,133 +9576,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "smart.link",
-      "entity": "Smart Link",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-07T06:11:24.204Z",
-      "last_seen_at": "2026-06-14T10:00:57.000Z",
-      "discovery": {
-        "distinct_urls": 7,
-        "example_urls": [
-          "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
-          "https://smart.link/sdh2x9q4dptrg?twclid=24aw0ljxdznhulueu1l8o9x2fi",
-          "https://smart.link/ogdqjam4y4mcs?twclid=2dtao7qsbh0cu3icl0wn64ffvg",
-          "https://smart.link/q693v84a2mlhw?twclid=2du2cpv4hg5bnvla5csn2ws1uc",
-          "https://smart.link/d48st4cf87ymx?twclid=22gw0y3bgoat1tou4y8uestgbv"
-        ],
-        "origin_counts": {
-          "feed_buffer": 2,
-          "feed_buffer_reply": 5
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "mcdonalds"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.32416666666666666,
-          "basis": [
-            "distinct_urls:7",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.22,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:15",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.4068489583333333,
-          "confidence": 0.273575,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:7",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-14T04:23:30.811Z",
-        "homepage_url": "https://smart.link/",
-        "example_url": "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://smart.link/",
-        "example_final_url": "https://www.mcdonalds.com/us/en-us/download-app.html",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 15,
           "opinion_marker": false
         }
       }
@@ -13876,6 +13876,132 @@
       }
     },
     {
+      "domain": "huggies.com",
+      "entity": "Huggies",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-18T08:51:14.864Z",
+      "last_seen_at": "2026-06-15T16:43:10.488Z",
+      "discovery": {
+        "distinct_urls": 7,
+        "example_urls": [
+          "https://www.huggies.com/en-us/diapers/little-movers?twclid=21yw19hs9bynwsphlmw5vod8rj",
+          "https://www.huggies.com/en-us/diapers/little-movers?twclid=2d3psl81g1jlmbhz1g687pfy3h",
+          "https://www.huggies.com/en-us/diapers/little-movers?twclid=263aco7f3z0dx92gjdctmrq6uv",
+          "https://www.huggies.com/en-us/diapers/little-movers?twclid=23sil8mw50m41gl6c11cb2x09e",
+          "https://www.huggies.com/en-us/diapers/little-movers?twclid=2ar4q58x5xnulx7mll24rw1eon"
+        ],
+        "origin_counts": {
+          "feed_buffer": 7
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "nba"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.26416666666666666,
+          "basis": [
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3855208333333333,
+          "confidence": 0.2531,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-13T20:23:20.528Z",
+        "homepage_url": "https://huggies.com/",
+        "example_url": "https://www.huggies.com/en-us/diapers/little-movers?twclid=21yw19hs9bynwsphlmw5vod8rj",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://huggies.com/",
+        "example_final_url": "https://www.huggies.com/en-us/diapers/little-movers?twclid=21yw19hs9bynwsphlmw5vod8rj",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "sedaily.com",
       "entity": "Sedaily",
       "kind": "unknown",
@@ -15882,132 +16008,6 @@
       }
     },
     {
-      "domain": "huggies.com",
-      "entity": "Huggies",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-18T08:51:14.864Z",
-      "last_seen_at": "2026-06-09T08:20:07.349Z",
-      "discovery": {
-        "distinct_urls": 6,
-        "example_urls": [
-          "https://www.huggies.com/en-us/diapers/little-movers?twclid=21yw19hs9bynwsphlmw5vod8rj",
-          "https://www.huggies.com/en-us/diapers/little-movers?twclid=2d3psl81g1jlmbhz1g687pfy3h",
-          "https://www.huggies.com/en-us/diapers/little-movers?twclid=263aco7f3z0dx92gjdctmrq6uv",
-          "https://www.huggies.com/en-us/diapers/little-movers?twclid=23sil8mw50m41gl6c11cb2x09e",
-          "https://www.huggies.com/en-us/diapers/little-movers?twclid=2ar4q58x5xnulx7mll24rw1eon"
-        ],
-        "origin_counts": {
-          "feed_buffer": 6
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "nba"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.235,
-          "basis": [
-            "distinct_urls:6",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.379140625,
-          "confidence": 0.22447499999999998,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:6",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-13T20:23:20.528Z",
-        "homepage_url": "https://huggies.com/",
-        "example_url": "https://www.huggies.com/en-us/diapers/little-movers?twclid=21yw19hs9bynwsphlmw5vod8rj",
-        "homepage_status": 403,
-        "example_status": 403,
-        "homepage_final_url": "https://huggies.com/",
-        "example_final_url": "https://www.huggies.com/en-us/diapers/little-movers?twclid=21yw19hs9bynwsphlmw5vod8rj",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "seotrends.pro",
       "entity": "Seotrends Pro",
       "kind": "unknown",
@@ -16354,7 +16354,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T16:52:43.763Z",
+        "fetched_at": "2026-06-15T16:54:13.830Z",
         "homepage_url": "https://happyseeds.ai/",
         "example_url": "https://link.happyseeds.ai/hs2?twclid=23gsc44gehebnjbbfpce6085rj",
         "homepage_status": 200,
@@ -21340,7 +21340,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T15:52:42.300Z",
+        "fetched_at": "2026-06-15T15:54:11.743Z",
         "homepage_url": "https://icc-cpi.int/",
         "example_url": "https://icc-cpi.int/news/icc-concludes-confirmation-charges-hearing-el-hishri-case",
         "homepage_status": 200,
@@ -31471,7 +31471,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T15:22:42.494Z",
+        "fetched_at": "2026-06-15T15:24:10.074Z",
         "homepage_url": "https://hexclad.com/",
         "example_url": "https://hexclad.com/pages/12-pc-landing-page?utm_source=twitter&utm_medium=paid&utm_campaign=HEX+01+%7C+Q2+26%27+Chargeable+%7C+4.6.26&utm_term=US+-+M%2FF+-+21-65%2B+-+Interest-Based+-+4.6.26&utm_content=HEX%23763_V3&twclid=2bnrkgftya8pykff4uwp59b29d",
         "homepage_status": 200,
@@ -45772,7 +45772,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T14:22:41.994Z",
+        "fetched_at": "2026-06-15T15:24:10.592Z",
         "homepage_url": "https://xn--tldmorg-tz6d/",
         "example_url": "https://www.xn--tldmorg-tz6d/Directives/d349.htm",
         "homepage_status": null,
@@ -45894,7 +45894,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T14:22:42.527Z",
+        "fetched_at": "2026-06-15T15:24:10.708Z",
         "homepage_url": "https://xn--fatimaorg-qo2f/",
         "example_url": "https://www.xn--fatimaorg-qo2f/the-benefits-of-action/",
         "homepage_status": null,
@@ -46016,7 +46016,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T15:22:46.953Z",
+        "fetched_at": "2026-06-15T15:24:14.749Z",
         "homepage_url": "https://preml.ge/",
         "example_url": "https://preml.ge/9faimd64",
         "homepage_status": null,
@@ -46138,7 +46138,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T15:22:48.205Z",
+        "fetched_at": "2026-06-15T15:54:12.896Z",
         "homepage_url": "https://rampartscan.com/",
         "example_url": "https://rampartscan.com/?twclid=2ai9p1x5s7uq2nxfejjrncxaqd",
         "homepage_status": 200,
@@ -46260,7 +46260,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T15:22:48.398Z",
+        "fetched_at": "2026-06-15T15:54:13.076Z",
         "homepage_url": "https://hol.org/",
         "example_url": "https://hol.org/points/giveaways/10000-points?twclid=2cyx13cbkwh241v00yt9b2tv3d",
         "homepage_status": 403,
@@ -46353,12 +46353,12 @@
           ]
         },
         "profile": {
-          "score": 0.1,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:true",
+            "canonical:false",
             "about:false",
             "contact:false",
             "corrections:false",
@@ -46382,29 +46382,29 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T15:52:43.035Z",
+        "fetched_at": "2026-06-15T15:54:13.469Z",
         "homepage_url": "https://lobehub.com/",
         "example_url": "https://app.lobehub.com/?utm_source=xads&twclid=2a8w4di9ndgin31yq4qot97zvn",
-        "homepage_status": 200,
+        "homepage_status": 429,
         "example_status": 200,
         "homepage_final_url": "https://lobehub.com/",
         "example_final_url": "https://app.lobehub.com/signin?callbackUrl=https%3A%2F%2Fapp.lobehub.com%2F%3Futm_source%3Dxads%26twclid%3D2a8w4di9ndgin31yq4qot97zvn&utm_source=xads&twclid=2a8w4di9ndgin31yq4qot97zvn",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
-          "has_meta_author": true,
+          "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 1,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -46504,7 +46504,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T15:52:44.261Z",
+        "fetched_at": "2026-06-15T16:54:15.155Z",
         "homepage_url": "https://pixbench.com/",
         "example_url": "https://pixbench.com/?twclid=2c5hamd2c3ryrrl87tknolj31b",
         "homepage_status": 200,
@@ -46626,7 +46626,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T15:52:44.590Z",
+        "fetched_at": "2026-06-15T16:54:15.506Z",
         "homepage_url": "https://tradeify.co/",
         "example_url": "https://tradeify.co/grandcup2?ref=TWITTER&utm_source=x&utm_medium=cpc&utm_campaign=takeover1&utm_content=15scommercial--15scommercial--takeover1--takeover1--takeover&twclid=282e8rm2j4kmrfs6p577pudbhx",
         "homepage_status": 200,
@@ -46748,7 +46748,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T16:52:44.504Z",
+        "fetched_at": "2026-06-15T16:54:16.308Z",
         "homepage_url": "https://nexusaigo.fun/",
         "example_url": "https://nexusaigo.fun/?twclid=28x65o109tpr4mu410p3qyg7x2",
         "homepage_status": null,
@@ -46870,7 +46870,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T16:52:45.575Z",
+        "fetched_at": "2026-06-15T17:24:13.058Z",
         "homepage_url": "https://afrlhorizons.com/",
         "example_url": "http://www.afrlhorizons.com/Briefs/Jun04/DE0401.html",
         "homepage_status": 200,
@@ -46992,7 +46992,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T16:52:45.877Z",
+        "fetched_at": "2026-06-15T17:24:13.391Z",
         "homepage_url": "https://macsolution.online/",
         "example_url": "https://macsolution.online/?twclid=2c8ez919zmxlkfof9vt4rcyhz5",
         "homepage_status": 200,
@@ -47114,7 +47114,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T17:22:43.019Z",
+        "fetched_at": "2026-06-15T17:24:13.726Z",
         "homepage_url": "https://riyadhair.com/",
         "example_url": "https://www.riyadhair.com/en/experience/cabin",
         "homepage_status": 403,
@@ -47236,7 +47236,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-12T17:22:44.643Z",
+        "fetched_at": "2026-06-15T17:24:15.388Z",
         "homepage_url": "https://netflix.com/",
         "example_url": "https://www.netflix.com/title/82194570?twclid=288robac53sjknqkogkgmxy2as",
         "homepage_status": 200,

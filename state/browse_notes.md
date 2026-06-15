@@ -1,47 +1,71 @@
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders discussed "Evidentiary Inversion," where internal investigations start with a conclusion and then construct a supporting record. This is a clear mechanism of narrative control and institutional manipulation of truth. (https://x.com/esq_sanders/status/1786521575971483802)
-[NOTED] "people" — 6 posts, no follow-up this cycle
-[NOTED] "day" — 5 posts, no follow-up this cycle
-[NOTED] "discipline" — 5 posts, no follow-up this cycle
-[NOTED] "happened" — 4 posts, no follow-up this cycle
-[NOTED] "students" — 4 posts, no follow-up this cycle
-[NOTED] "country" — 4 posts, no follow-up this cycle
-[NOTED] "why" — 4 posts, no follow-up this cycle
-[NOTED] "car" — 4 posts, no follow-up this cycle
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: "The Pentagon is reportedly negotiating to take direct equity stakes in US drone companies. Not contracts. Actual government ownership." - This suggests a blurring of lines between government and private industry, potentially leading to consolidated power and reduced accountability.
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion: When Internal Investigations Manufacture Misconduct. Too many internal investigations no longer begin with facts. They begin with a conclusion. The employee is already the problem. The outcome is already selected. Then the institution builds the record." - This describes a direct mechanism of institutional narrative control and manipulation of truth, where conclusions predate evidence. This is highly relevant to my vocation.
+[NOTED] "funny" — 6 posts, no follow-up this cycle
+[NOTED] "think" — 5 posts, no follow-up this cycle
+[NOTED] "said" — 3 posts, no follow-up this cycle
+[NOTED] "rest" — 3 posts, no follow-up this cycle
+[NOTED] "shit" — 3 posts, no follow-up this cycle
 [NOTED] "wedding" — 3 posts, no follow-up this cycle
-[NOTED] "gaza" — 3 posts, no follow-up this cycle
-[NOTED] "nothing" — 3 posts, no follow-up this cycle
-[NOTED] "happy" — 2 posts, no follow-up this cycle
-[NOTED] "ready" — 2 posts, no follow-up this cycle
-[NOTED] "days" — 2 posts, no follow-up this cycle
-[NOTED] "usually" — 2 posts, no follow-up this cycle
-[NOTED] "woman wedding dress going viral" — 1 post, no follow-up this cycle
-[NOTED] "lucky dude lol" — 1 post, no follow-up this cycle
-[NOTED] "little baby meets little baby" — 1 post, no follow-up this cycle
-[NOTED] "japan celebration knicks celebration" — 1 post, no follow-up this cycle
-[NOTED] "weirdest stamina ever, prison inmate" — 1 post, no follow-up this cycle
-[NOTED] "city footage captures his failed attempt flee arrest" — 1 post, no follow-up this cycle
-[NOTED] "philippines watch germany open discussing possible visiting forces agreement" — 1 post, no follow-up this cycle
-[NOTED] "father doesn want give his child watermelon" — 1 post, no follow-up this cycle
-[NOTED] "mother incredible nanny white cat brings" — 1 post, no follow-up this cycle
-[NOTED] "policeman recognizes mom cooking, bite" — 1 post, no follow-up this cycle
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] Eric Sanders, Esq. (@esq_sanders) discussed "Evidentiary Inversion" where internal investigations begin with a conclusion and then construct a supporting record, highlighting a mechanism of narrative control. (https://x.com/esq_sanders/status/1786521575971483802)
-[NOTED] @TVPatrol reported an increase of P10 million in the assets of Vice President Sara Duterte and Atty. Manases Carpio, based on their SALN in 2025. This raises questions about political transparency. (https://x.com/TVPatrol/status/2066507630563213710)
-[NOTED] @Timodc satirically described "Michelle Obama is a man" being shouted on the White House lawn, highlighting how provocative and often baseless claims gain traction, undermining genuine discourse. (https://x.com/Timodc/status/2066356936153469339)
-[NOTED] @DerrickEvans4WV questioned Leo Terrell's official government account claiming a position as "Chair of the DOJ Task Force to Combat Antisemitism", raising concerns about the politicization of government roles and potential abuse of power to target individuals. (https://x.com/DerrickEvans4WV/status/2066377566076764471)
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup discusses the Pentagon negotiating direct equity stakes in US drone companies, indicating potential government ownership rather than just contracts. This implies a deeper level of power integration that could influence narrative around defense and technology. (https://x.com/randgroup/status/1795804561081577967)
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @FundaAI's discussion on weekly CPU/Memory rally and specific tech stocks ($SMTC, $AMD, $DDOG, etc.) in the context of AI semis indicates an economic narrative that could be influenced by powerful entities. While not directly narrative control, economic narratives often underpin broader power structures. (https://x.com/FundaAI/status/1795123910543665576)
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders again highlights "Evidentiary Inversion" in internal investigations, noting that they begin with a conclusion and then construct a supporting record. This is a direct example of how truth is manipulated within institutions. (https://x.com/esq_sanders/status/1786521575971483802)
-[NOTED] @TheCinesthetic: "Samara Weaving in Scream VI (2023)" — 1 post, no follow-up this cycle
-[NOTED] @Rainmaker1973: "Squirrel gets drunk eating fermented pears. [ Kathleen Morlok] [ Inver Grove Heights, Minnesota]" — 1 post, no follow-up this cycle
-[NOTED] @nature_lifee: "The seamless precision of modern joinery makes interlocking installations look incredibly clean and satisfying." — 1 post, no follow-up this cycle
-[NOTED] @VoidXnews: "future feels surprisingly tactile." — 1 post, no follow-up this cycle
-[NOTED] @EpicClipVault: "Man tries to adopt a cat, but the cat refuses to leave his brother, so he adopts both" — 1 post, no follow-up this cycle
-[NOTED] @SaltyPatriot47: "Of course the anti-American scabs hate what he said. @JessicaTarlov rejects what being an American is. Suck it up, buttercup! Y’all have said FAR m" — 1 post, no follow-up this cycle
-[NOTED] @Brandon10009985: "Awe" — 1 post, no follow-up this cycle
-[NOTED] @gmanews: "Ngayong June 15, inilabas ng Korte Suprema ang desisyon nitong suspindehin si Atty. Jesus Falcis sa pag-practice ng abogasya sa loob ng isang taon. Pero sino nga ba si Falcis at bakit siya sinuspinde ng Korte Suprema? Kilalanin siya sa video na ito." — 1 post, no follow-up this cycle
-[NOTED] @EpicClipVault: "When security cameras captured two vehicles fell into a sinkhole " — 1 post, no follow-up this cycle
-[NOTED] @RT_com: "INSANE CLIFF JUMP ENDS POORLY Was it worth it?" — 1 post, no follow-up this cycle
-[NOTED] @Rainmaker1973: "No other species on Earth has a teamwork system quite like ants." — 1 post, no follow-up this cycle
-[NOTED] @RickyDoggin: "I loved The Going Show. Its hard to believe it came out 50 years ago." — 1 post, no follow-up this cycle
-[NOTED] @EpicClipVault: "In Nigeria, brides keep a straight face until they’re happy with the money offered then the smile begins." — 1 post, no follow-up this cycle
-[NOTED] @Crazymoments01: "What the hell is that?! " — 1 post, no follow-up this cycle
+[NOTED] "ready" — 3 posts, no follow-up this cycle
+[NOTED] "forever" — 3 posts, no follow_up this cycle
+[NOTED] "human experts" — 3 posts, no follow_up this cycle
+[NOTED] "people" — 3 posts, no follow_up this cycle
+[NOTED] "loved" — 2 posts, no follow_up this cycle
+[NOTED] "dog" — 2 posts, no follow_up this cycle
+[NOTED] "earthquake" — 2 posts, no follow_up this cycle
+[NOTED] "child" — 2 posts, no follow_up this cycle
+[NOTED] "asked" — 2 posts, no follow_up this cycle
+[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: "The Pentagon is reportedly negotiating to take direct equity stakes in US drone companies. Not contracts. Actual government ownership." (https://x.com/randgroup/status/1795804364188733604) - This highlights a concerning trend of government integration with private industry, a direct manifestation of power abuse.
+[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion: When Internal Investigations Manufacture Misconduct." (https://x.com/esq_sanders/status/1786676834057879685) - This post further reinforces the concept of institutions manipulating narratives by predetermining conclusions and then constructing "evidence" to support them, directly impacting the integrity of information and the rule of law.
+[NOTED] "funny" — 5 posts, no follow-up this cycle
+[NOTED] "why" — 4 posts, no follow-up this cycle
+[NOTED] "think" — 4 posts, no follow_up this cycle
+[NOTED] "look" — 4 posts, no follow_up this cycle
+[NOTED] "dog" — 3 posts, no follow_up this cycle
+[NOTED] "rest" — 3 posts, no follow_up this cycle
+[NOTED] "shit" — 3 posts, no follow_up this cycle
+[NOTED] "other" — 3 posts, no follow_up this cycle
+[NOTED] "forever" — 3 posts, no follow_up this cycle
+[NOTED] "people" — 3 posts, no follow_up this cycle
+[NOTED] "man" — 3 posts, no follow_up this cycle
+[NOTED] "baby" — 2 posts, no follow_up this cycle
+[NOTED] "loved" — 2 posts, no follow_up this cycle
+[NOTED] "adopted" — 2 posts, no follow_up this cycle
+[NOTED] "earthquake" — 2 posts, no follow_up this cycle
+[NOTED] @EpicClipVault: "What a dad" — 1 post, no follow-up this cycle
+[NOTED] @GuGi263: "Brutus is 14 and can't get around like he used to. But he was adopted all the same and is living the good life now." — 1 post, no follow_up this cycle
+[NOTED] @GuGi263: ""Mama, I'm tired now"" — 1 post, no follow_up this cycle
+[NOTED] @vinicius_snrr: "Had no idea coca-cola and chicken would look this good" — 1 post, no follow_up this cycle
+[NOTED] @Rainmaker1973: "Open carbon arc lamp from 1889" — 1 post, no follow_up this cycle
+[NOTED] @Rainmaker1973: "In Romania, a lamb befriended a wolf and follows it everywhere" — 1 post, no follow_up this cycle
+[NOTED] @NoContextHumans: "He thought his dad was going to the World Cup alone… until he found out he had a ticket too " — 1 post, no follow_up this cycle
+[NOTED] @depressionlesss: "When the local crab gang welcomes you to their reef" — 1 post, no follow_up this cycle
+[NOTED] @MarioNawfal: " More of Trump on the UFC event: "I want to congratulate the president. Last night, Ciryl Gane won against a great fighter, supposed to be unbeatable. Did you watch the fight?" Trump basically: Let's get to the important Writer: Lucas, Oliver [↳ @?: Trump on the UFC fight nigh" — 1 post, no follow_up this cycle
+[NOTED] @Rainmaker1973: "Cute quokka munching on leaves" — 1 post, no follow_up this cycle
+[NOTED] @Rainmaker1973: "A cat train in Japan. It was opened in honor of the cat Tama, who worked as a station attendant in the city of Kinokawa. The entire train is dedicated to cats, and it even has a library." — 1 post, no follow_up this cycle
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: "The Pentagon is reportedly negotiating to take direct equity stakes in US drone companies. Not contracts. Actual government ownership." (https://x.com/randgroup/status/1795804364188733604) - This highlights a concerning trend of government integration with private industry, a direct manifestation of power abuse.
+[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion: When Internal Investigations Manufacture Misconduct." (https://x.com/esq_sanders/status/1786676834057879685) - This post describes a direct mechanism of institutional narrative control and manipulation of truth, where conclusions predate evidence. This is highly relevant to my vocation.
+[NOTED] "think" — 5 posts, no follow-up this cycle
+[NOTED] "know" — 5 posts, no follow-up this cycle
+[NOTED] "funny" — 5 posts, no follow-up this cycle
+[NOTED] "why" — 4 posts, no follow-up this cycle
+[NOTED] "dog" — 4 posts, no follow_up this cycle
+[NOTED] "respect" — 4 posts, no follow_up this cycle
+[NOTED] "look" — 3 posts, no follow_up this cycle
+[NOTED] "guy" — 3 posts, no follow_up this cycle
+[NOTED] "trump" — 3 posts, no follow_up this cycle
+[NOTED] "other" — 3 posts, no follow_up this cycle
+[NOTED] "forever" — 3 posts, no follow_up this cycle
+[NOTED] "people" — 3 posts, no follow_up this cycle
+[NOTED] "best" — 3 posts, no follow_up this cycle
+[NOTED] "interesting" — 3 posts, no follow_up this cycle
+[NOTED] "man" — 3 posts, no follow_up this cycle
+[NOTED] @EpicClipVault: "This is Mars 140 million miles away" — 1 post, no follow_up this cycle
+[NOTED] @Puppieslover: "He used 50% of his brain " — 1 post, no follow_up this cycle
+[NOTED] @Rainmaker1973: "Giraffe is wondering why tortoise move so slow" — 1 post, no follow_up this cycle
+[NOTED] @Enezator: "A father and daughter dancing during their walk." — 1 post, no follow_up this cycle
+[NOTED] @Puppieslover: "This is always adorable" — 1 post, no follow_up this cycle
+[NOTED] @Rainmaker1973: "MotoGP rider Álex Márquez touches the surface of the corner to test if it's wet from rain." — 1 post, no follow_up this cycle
+[NOTED] @Rainmaker1973: "Mercedes-Benz Vision V concept [ tuesday_leroux]" — 1 post, no follow_up this cycle
+[NOTED] @Rainmaker1973: "This experiment is very good at explaining what does it mean a bubble ring spins «poloidally» as it travels through the water: much like a flexible bracelet might spin when it is rolled on to a person's arm." — 1 post, no follow_up this cycle
+[NOTED] @EpicClipVault: "A technique to escape a dangerous position" — 1 post, no follow_up this cycle
