@@ -13,7 +13,7 @@
 [SPRINT: Deep dive analysis of selected narrative (Narrative 3)] @GuntherEagleman and @thetrumptoken promoting a narrative of economic success (low recession odds, high markets) attributed to political leadership. This demonstrates a specific method of narrative construction using economic indicators. https://x.com/GuntherEagleman/status/2066946608340541903
 [NOTED] "Indian/European relations" — 3 posts, no follow-up this cycle
 [NOTED] "Scarves" — 2 posts, no follow-up this cycle
-[NOTED] "Dad noticed his baby laughed" — 2 posts, no follow-up this cycle
+[NOTED] "Dad noticed his baby laughed" — 1 post, no follow-up this cycle
 [NOTED] "He hugged everyone" — 1 post, no follow-up this cycle
 [NOTED] "Real-life video game" — 1 post, no follow-up this cycle
 [NOTED] "Stork in Ukraine" — 5 posts, no follow-up this cycle
@@ -30,3 +30,16 @@
 [NOTED] "JD Vance mic drop" — @AmericaPapaBear, 1 post, no follow-up this cycle
 [NOTED] "Chester Zoo aardvark" — @AMAZlNGNATURE, 1 post, no follow-up this cycle
 [NOTED] "Nuclear powered rover" — @CuriosityonX, 1 post, no follow-up this cycle
+[CURIOSITY: evidentiary_inversion_institutional_mani] Search for "evidentiary inversion institutional manipulation" on X resulted in posts from @SebastianHunts and @MegaMobileNews, affirming the concept's relevance to institutional power structures.
+[SPRINT: research] @FurkanGozukara presents China rejecting G7 invitation to maintain economic sovereignty, indicating a shift in global power dynamics and a challenge to Western economic rules. https://x.com/FurkanGozukara/status/2066951026846892053
+[CURIOSITY: Global Power Realignments and Shifting Hegemony] @Eng_china5's post showing Japan's prime minister alone at the G7 summit could subtly reflect the G7's diminishing influence or a sense of geopolitical isolation. https://x.com/Eng_china5/status/2066945121925668901
+[CURIOSITY: Integrity of Information and Social Media Manipulation] @EpicClipVault suggests ending social media "influencers" in public, raising questions about the authenticity and impact of online influence. https://x.com/EpicClipVault/status/2066978088106258847
+[CURIOSITY: Truth and Evidence in Public Discourse] @Reuters links a decline in migratory birds directly to climate volatility in an annual report, illustrating how evidence is presented to support environmental narratives. https://x.com/Reuters/status/2066955215576727949
+[CURIOSITY: Power, Institutions, and Rule of Law] @kumerjgarcia's post about a "fake Blue Ribbon" and legal cases in the Philippine Senate touches on issues of institutional integrity and accountability. https://x.com/kumerjgarcia/status/2066805968290426887
+[CURIOSITY: Trust in Political Institutions and Anti-Corruption Efforts] @DWAR1494 reports on a sworn affidavit at the NBI in the Philippines, reflecting ongoing legal processes and public scrutiny of official actions. https://x.com/DWAR1494/status/2066759034200535389
+[NOTED] "Divorce lawyer James Sexton reveals a client won $50,000,000 and his wife immediately filed for divorce" — 1 post, no follow-up this cycle
+[NOTED] "A mom finds body parts in her son’s room—his explanation is straight out of a horror movie" — 1 post, no follow-up this cycle
+[NOTED] "I’ve watched this an unhealthy amount of times" — 1 post, no follow-up this cycle
+[NOTED] "And the Oscar goes toooooo…EVERYONE" — 1 post, no follow-up this cycle
+[NOTED] "Hand layup fiberglass: simple hands, surprisingly strong parts." — 1 post, no follow-up this cycle
+[NOTED] "Only kindness can heal the world" — 1 post, no follow-up this cycle
