@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-16T11:24:04.847Z",
+  "generated_at": "2026-06-16T14:24:09.602Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-16T11:24:36.453Z",
+  "profiled_at": "2026-06-16T14:24:40.668Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -1938,9 +1938,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-16T10:43:49.000Z",
+      "last_seen_at": "2026-06-16T14:01:40.000Z",
       "discovery": {
-        "distinct_urls": 5489,
+        "distinct_urls": 5498,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1949,10 +1949,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3282,
-          "feed_buffer_reply": 3512
+          "feed_buffer": 3286,
+          "feed_buffer_reply": 3519
         },
-        "distinct_referring_accounts": 1816,
+        "distinct_referring_accounts": 1818,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -1990,7 +1990,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5489",
+            "distinct_urls:5498",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -1998,7 +1998,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1816",
+            "referring_accounts:1818",
             "origin_types:2"
           ]
         },
@@ -2028,10 +2028,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5489",
+            "distinct_urls:5498",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1816",
+            "referring_accounts:1818",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -2310,7 +2310,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T12:53:08.178Z",
+        "fetched_at": "2026-06-16T12:54:36.871Z",
         "homepage_url": "https://steampowered.com/",
         "example_url": "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
         "homepage_status": 200,
@@ -2346,9 +2346,9 @@
       "entity": "Doubleclick",
       "kind": "unknown",
       "first_seen_at": "2026-04-14T11:38:54.154Z",
-      "last_seen_at": "2026-06-10T22:40:08.181Z",
+      "last_seen_at": "2026-06-16T13:13:10.665Z",
       "discovery": {
-        "distinct_urls": 27,
+        "distinct_urls": 28,
         "example_urls": [
           "https://ad.doubleclick.net/ddm/trackclk/N117602.5126432X/B34540950.438517562;dc_trk_aid=631787244;dc_trk_cid=249093288;dc_dbm_token=$%7BDC_DBM_TOKEN%7D;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D;gpp=$%7BGPP_STRING_755%7D;gpp_sid=$%7BGPP_SID%7D;ltd=;dc_tdv=1?twclid=292cdwzoayexun1iu6o4fsk10z",
           "https://ad.doubleclick.net/ddm/trackclk/N424004.2061500TWITTER-OFFICIAL/B34815449.442181294;dc_trk_aid=635540198;dc_trk_cid=163408886?twclid=229wqdp9n1aljc0uj6dfw6r91e",
@@ -2357,16 +2357,17 @@
           "https://ad.doubleclick.net/ddm/trackclk/N1153793.2061500TWITTER-OFFICIAL/B35592624.443721335;dc_trk_aid=637029215;dc_trk_cid=252638233?twclid=2azp958vdx3j3lfhljr3wb4etv"
         ],
         "origin_counts": {
-          "feed_buffer": 23,
+          "feed_buffer": 24,
           "feed_buffer_reply": 4
         },
-        "distinct_referring_accounts": 8,
+        "distinct_referring_accounts": 9,
         "sample_referring_accounts": [
           "att",
           "billboard",
           "chase",
           "dell",
           "delltech",
+          "etrade",
           "foxone",
           "hpe",
           "variety"
@@ -2396,7 +2397,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:27",
+            "distinct_urls:28",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2404,7 +2405,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:8",
+            "referring_accounts:9",
             "origin_types:2"
           ]
         },
@@ -2434,10 +2435,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:27",
+            "distinct_urls:28",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:8",
+            "referring_accounts:9",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -4269,9 +4270,9 @@
       "entity": "App Link",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T04:05:48.185Z",
-      "last_seen_at": "2026-06-15T15:40:01.000Z",
+      "last_seen_at": "2026-06-16T04:40:54.000Z",
       "discovery": {
-        "distinct_urls": 19,
+        "distinct_urls": 20,
         "example_urls": [
           "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
           "https://chipotle.app.link/CFCROzYFA1b?%243p=a_twitter&twclid=2cc0rz9d8z8z95tfghmhm1chq0",
@@ -4281,7 +4282,7 @@
         ],
         "origin_counts": {
           "feed_buffer": 7,
-          "feed_buffer_reply": 12
+          "feed_buffer_reply": 13
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -4312,7 +4313,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:19",
+            "distinct_urls:20",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4350,7 +4351,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:19",
+            "distinct_urls:20",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -5359,7 +5360,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:75",
+            "outbound_links:76",
             "opinion_marker:false"
           ]
         },
@@ -5379,7 +5380,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T12:23:07.600Z",
+        "fetched_at": "2026-06-16T12:24:35.839Z",
         "homepage_url": "https://tinyurl.com/",
         "example_url": "https://tinyurl.com/yc8xxez5?twclid=2dnd76jy9k71tnu9ve267e0uz7",
         "homepage_status": 200,
@@ -5405,7 +5406,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 75,
+          "outbound_links_count": 76,
           "opinion_marker": false
         }
       }
@@ -7276,7 +7277,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T12:23:07.911Z",
+        "fetched_at": "2026-06-16T12:24:36.139Z",
         "homepage_url": "https://heylemon.ai/",
         "example_url": "https://heylemon.ai/?utm_source=paid_X_all1&twclid=2bprvotipsebt2ywwd413k1c6r",
         "homepage_status": 200,
@@ -7402,7 +7403,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T12:23:08.264Z",
+        "fetched_at": "2026-06-16T12:24:36.909Z",
         "homepage_url": "https://wavedash.com/",
         "example_url": "https://wavedash.com/?twclid=29k171tm7pjzrxbob4j7cmjl3o",
         "homepage_status": 200,
@@ -7906,7 +7907,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T12:23:08.862Z",
+        "fetched_at": "2026-06-16T12:24:37.289Z",
         "homepage_url": "https://teslahubs.com/",
         "example_url": "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
         "homepage_status": 200,
@@ -8158,7 +8159,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T12:53:09.021Z",
+        "fetched_at": "2026-06-16T12:54:37.163Z",
         "homepage_url": "https://h-tech.space/",
         "example_url": "https://teamlore.h-tech.space/?twclid=21cpesmzgsrh5ius8yd25zbe9t",
         "homepage_status": null,
@@ -8286,13 +8287,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T12:53:10.557Z",
+        "fetched_at": "2026-06-16T12:54:39.125Z",
         "homepage_url": "https://onelink.me/",
         "example_url": "https://vix.onelink.me/Z4oU/hyuh928w?twclid=24s36ffdjwv85ew8o2yfteqmxu",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.appsflyer.com/products/deep-linking/",
-        "example_final_url": "https://vix.com/es-es/deportes?source_caller=ui&pid=Twitter_Paid&af_xp=social&c=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&af_dp=vixapp%3A%2F%2Fes-es%2Fdeportes&af_ad=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&twclid=24s36ffdjwv85ew8o2yfteqmxu&af_adset=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&shortlink=hyuh928w",
+        "example_final_url": "https://vix.com/es-es/deportes?c=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&af_adset=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&af_ad=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&source_caller=ui&twclid=24s36ffdjwv85ew8o2yfteqmxu&shortlink=hyuh928w&af_dp=vixapp%3A%2F%2Fes-es%2Fdeportes&af_xp=social&pid=Twitter_Paid",
         "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -8666,7 +8667,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T12:53:11.636Z",
+        "fetched_at": "2026-06-16T12:54:40.214Z",
         "homepage_url": "https://kubit.ai/",
         "example_url": "https://kubit.ai/agent-analytics-landing/?utm_source=x_ads&utm_medium=paid_social&utm_campaign=claude_group&twclid=2eb9hv62es2e93pzc1qorbclgf",
         "homepage_status": 200,
@@ -9802,7 +9803,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T13:53:10.259Z",
+        "fetched_at": "2026-06-16T13:54:36.701Z",
         "homepage_url": "https://fabletics.com/",
         "example_url": "https://www.fabletics.com/dmg/926C08?utm_medium=paid_social_media&utm_source=twitter&utm_campaign=twitter_campaign_id_FLM56&utm_content=twitter_adgroup_id_FLM56-1&utm_term=twitter_ad_id_FLM56-1-11&twclid=21tkc8gfxmeyk2zkude4aqtxx0",
         "homepage_status": 403,
@@ -10688,7 +10689,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T13:53:11.144Z",
+        "fetched_at": "2026-06-16T13:54:37.561Z",
         "homepage_url": "https://darkhours-thegame.com/",
         "example_url": "https://www.darkhours-thegame.com/xbox?utm_source=twitter&utm_campaign=XboxLaunch&utm_medium=pc&utm_content=Diftborn&utm_term=us&twclid=271vf2o4bu11vai5qyjclxea1r",
         "homepage_status": 200,
@@ -10814,7 +10815,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T13:53:12.191Z",
+        "fetched_at": "2026-06-16T13:54:38.725Z",
         "homepage_url": "https://zavu.dev/",
         "example_url": "https://www.zavu.dev/?twclid=28xrbkfqjxo8t4gl13yvgj5wa8",
         "homepage_status": 200,
@@ -11828,7 +11829,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T13:53:12.973Z",
+        "fetched_at": "2026-06-16T13:54:39.398Z",
         "homepage_url": "https://artyfacts.ai/",
         "example_url": "https://www.artyfacts.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=waitlist_traffic&utm_content=capture_demo&utm_term=variantA&twclid=2e7ew786ao2fxw0qm1wxfdqe3b",
         "homepage_status": 200,
@@ -11954,7 +11955,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T14:23:11.116Z",
+        "fetched_at": "2026-06-16T14:24:37.527Z",
         "homepage_url": "https://subspace.build/",
         "example_url": "https://subspace.build/?utm_source=x&utm_campaign=memory_card_trick&twclid=26pw69bugqoexf6jq5nzgivo8r",
         "homepage_status": 200,
@@ -12080,7 +12081,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T14:23:12.675Z",
+        "fetched_at": "2026-06-16T14:24:38.621Z",
         "homepage_url": "https://merck.com/",
         "example_url": "https://www.merck.com/stories/were-pursuing-innovative-science-with-antibody-drug-conjugate-adc-research/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=na_NA_VID_18s&twclid=2ashs3kuiq7isb412ax3cbgusn",
         "homepage_status": 200,
@@ -12457,7 +12458,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T14:23:14.167Z",
+        "fetched_at": "2026-06-16T14:24:40.082Z",
         "homepage_url": "https://dlvr.it/",
         "example_url": "http://dlvr.it/TRwWsL",
         "homepage_status": 200,
@@ -13340,7 +13341,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T14:23:16.567Z",
+        "fetched_at": "2026-06-16T14:24:40.668Z",
         "homepage_url": "https://raybrowser.com/",
         "example_url": "https://raybrowser.com/?twclid=2f1xntsosgc648xbloi17s8fyh",
         "homepage_status": 200,
@@ -23366,6 +23367,131 @@
       }
     },
     {
+      "domain": "cisco.com",
+      "entity": "Cisco",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-06T23:52:24.000Z",
+      "last_seen_at": "2026-06-15T19:40:03.000Z",
+      "discovery": {
+        "distinct_urls": 4,
+        "example_urls": [
+          "https://www.cisco.com/site/us/en/solutions/artificial-intelligence/agentic-ops/cisco-cloud-control/index.html?twclid=2duz592pw3kdegqcvwn4z7b0qh",
+          "https://www.cisco.com/site/us/en/solutions/artificial-intelligence/agentic-ops/cisco-cloud-control/index.html?twclid=280sse5xfg55x7t0scf67nmqp8",
+          "https://www.cisco.com/site/us/en/solutions/artificial-intelligence/agentic-ops/cisco-cloud-control/index.html?twclid=2ez40ph9qi4hcm6xmcx8arkyer",
+          "https://blogs.cisco.com/ai/enterprise-agentic-security-built-for-platform-builders?v=UF7FfDnYf-U&t=752s&twclid=283d1d373swmsgbta62s8v29td"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 4
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "ciscoai"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.17666666666666664,
+          "basis": [
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.29000000000000004,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:5",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3663802083333333,
+          "confidence": 0.16722499999999998,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-14T01:23:25.446Z",
+        "homepage_url": "https://cisco.com/",
+        "example_url": "https://www.cisco.com/site/us/en/solutions/artificial-intelligence/agentic-ops/cisco-cloud-control/index.html?twclid=2duz592pw3kdegqcvwn4z7b0qh",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.cisco.com/",
+        "example_final_url": "https://www.cisco.com/site/us/en/solutions/artificial-intelligence/agentic-ops/cisco-cloud-control/index.html?twclid=2duz592pw3kdegqcvwn4z7b0qh",
+        "homepage_content_type": "text/html;charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 5,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "lend.xyz",
       "entity": "Lend Xyz",
       "kind": "unknown",
@@ -26582,130 +26708,6 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 4,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "cisco.com",
-      "entity": "Cisco",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-06T23:52:24.000Z",
-      "last_seen_at": "2026-06-07T08:00:01.000Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://www.cisco.com/site/us/en/solutions/artificial-intelligence/agentic-ops/cisco-cloud-control/index.html?twclid=2duz592pw3kdegqcvwn4z7b0qh",
-          "https://www.cisco.com/site/us/en/solutions/artificial-intelligence/agentic-ops/cisco-cloud-control/index.html?twclid=280sse5xfg55x7t0scf67nmqp8",
-          "https://www.cisco.com/site/us/en/solutions/artificial-intelligence/agentic-ops/cisco-cloud-control/index.html?twclid=2ez40ph9qi4hcm6xmcx8arkyer"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 3
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "ciscoai"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.1475,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.29000000000000004,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:5",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.36000000000000004,
-          "confidence": 0.1386,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-14T01:23:25.446Z",
-        "homepage_url": "https://cisco.com/",
-        "example_url": "https://www.cisco.com/site/us/en/solutions/artificial-intelligence/agentic-ops/cisco-cloud-control/index.html?twclid=2duz592pw3kdegqcvwn4z7b0qh",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.cisco.com/",
-        "example_final_url": "https://www.cisco.com/site/us/en/solutions/artificial-intelligence/agentic-ops/cisco-cloud-control/index.html?twclid=2duz592pw3kdegqcvwn4z7b0qh",
-        "homepage_content_type": "text/html;charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 7,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 5,
           "opinion_marker": false
         }
       }
