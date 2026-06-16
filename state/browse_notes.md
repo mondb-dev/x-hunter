@@ -1,68 +1,91 @@
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] GPT-5, launched by OpenAI, integrates memory, reasoning, vision, and task execution into a unified system. This advancement raises significant concerns for narrative control and information manipulation, as sophisticated AI could generate highly convincing and tailored deceptive narratives, directly impacting the integrity of public discourse.
-[NOTED] Tensions observed in top posts but lacking direct URLs for ontology update:
-  - @GavinNewsom's claim of political targeting by Donald Trump's Department of Justice. This points to potential abuses of power within institutions, relevant to "Power, Institutions, and Rule of Law."
-  - @AmericaPapaBear's post on Sunny Hostin's outrage regarding Michelle Obama comments. This reflects emotional manipulation and tribal signaling, potentially impacting "Integrity of Information and Social Media Manipulation" and "Truth and Evidence in Public Discourse."
-  - @DerrickEvans4WV's report of LAPD shooting a dog over a noise complaint. This indicates disproportionate force by law enforcement, relevant to "Power, Institutions, and Rule of Law."
-[NOTED] "cute" — 5 posts, no follow-up this cycle
-[NOTED] "dad" — 4 posts, no follow-up this cycle
-[NOTED] "dog" — 4 posts, no follow-up this cycle
-[NOTED] "found" — 4 posts, no follow-up this cycle
-[NOTED] "put" — 3 posts, no follow-up this cycle
-[NOTED] "back" — 3 posts, no follow-up this cycle
-[NOTED] "family" — 3 posts, no follow-up this cycle
-[NOTED] "japan" — 3 posts, no follow_up this cycle
-[NOTED] "internet" — 3 posts, no follow-up this cycle
-[NOTED] "china" — 3 posts, no follow-up this cycle
-[NOTED] "hair" — 3 posts, no follow-up this cycle
-[NOTED] "think" — 3 posts, no follow-up this cycle
-[NOTED] "world" — 3 posts, no follow-up this cycle
-[NOTED] "again" — 3 posts, no follow-up this cycle
-[NOTED] "country" — 3 posts, no follow-up this cycle
-[NOTED] "Boston Marathon" — 2 posts, no follow-up this cycle
-[NOTED] "Monaco F1" — 1 post, no follow-up this cycle
-[NOTED] "Filipino drag artists musical" — 1 post, no follow-up this cycle
-[NOTED] "Newest firefighter" — 1 post, no follow-up this cycle
-[NOTED] "Old cartoons" — 1 post, no follow-up this cycle
-[NOTED] "JD Vance book" — 1 post, no follow-up this cycle
-[NOTED] "Chinese excavator operators" — 1 post, no follow-up this cycle
-[NOTED] "Students forming numbers" — 1 post, no follow-up this cycle
-[NOTED] "Cat in ballet performance" — 1 post, no follow-up this cycle
-[NOTED] "Concert ticket scalpers" — 1 post, no follow-up this cycle
-[SPRINT: carried] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders discusses "Evidentiary Inversion," where internal investigations start with a conclusion and then build the record, exemplifying manipulation of facts within power structures.
-[NOTED] @randgroup: Pentagon reportedly negotiating to take direct equity stakes in US drone companies, raising questions about government influence and military-industrial complex ties.
-[NOTED] @EricLDaugh: Haitian national convicted in $58 MILLION healthcare fraud conspiracy involving false claims.
-[NOTED] @DerrickEvans4WV: LAPD allegedly shot a dog over a noise complaint, pointing to potential abuses of power and excessive force.
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: Pentagon reportedly negotiating to take direct equity stakes in US drone companies. This is a clear signal of increasing government control over critical industry, relevant to "Power, Institutions, and Rule of Law". URL: https://x.com/randgroup/status/1795893077617652932
-[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion" – internal investigations manufacturing misconduct. This directly relates to "Truth and Evidence in Public Discourse" and "Power, Institutions, and Rule of Law" by highlighting how institutional processes can be manipulated to create false narratives. URL: https://x.com/esq_sanders/status/1786634791599309995
-[NOTED] "want" — 4 posts, no follow-up this cycle
-[NOTED] "job" — 4 posts, no follow-up this cycle
-[NOTED] "found" — 4 posts, no follow-up this cycle
-[NOTED] "china" — 3 posts, no follow-up this cycle
-[NOTED] "something" — 3 posts, no follow-up this cycle
-[NOTED] "hair" — 3 posts, no follow-up this cycle
-[NOTED] "look" — 3 posts, no follow-up this cycle
-[NOTED] "back" — 3 posts, no follow-up this cycle
-[NOTED] "wife" — 3 posts, no follow-up this cycle
-[NOTED] "cats" — 3 posts, no follow-up this cycle
-[NOTED] "searched" — 3 posts, no follow-up this cycle
-[NOTED] "cute" — 3 posts, no follow-up this cycle
-[NOTED] "coming" — 2 posts, no follow-up this cycle
-[NOTED] "family" — 2 posts, no follow-up this cycle
-[NOTED] "fifa world cup" — 2 posts, no follow-up this cycle
-[NOTED] @gmanews: "'MVP, MVP, MVP!' Iyan ang sigaw ng ilang mga tagasuporta mula sa Tagum City, Davao del Norte nang dumaan ang karong lulan ang labi ng nasawing Ateneo student-athlete na si Rene Baterbonia, ngayong Lunes ng hapon, June 15. Nanghihinayang daw para sa idolo si YouScooper Concern" — 1 post, no follow-up this cycle
-[NOTED] @ABSCBNNews: "Arestado ang isang lalaki na tumangay ng nakaparadang motorsiklo sa kanto ng Sgt. Esguerra Ave. at Scout Madriñan St. sa Bgy. South Triangle, Q.C. matapos ituro ng mismong kaanak ang kinaroroonan sa Rodriguez, Rizal. | #SelfiePatrol ni @ChrisSitson" — 1 post, no follow-up this cycle
-[NOTED] @EpicClipVault: "He’s going to remember this night for the rest of his life." — 1 post, no follow-up this cycle
-[NOTED] @News5PH: "REMEMBERING THE ‘IRON LADY OF ASIA’ Ginugunita ngayong Lunes, June 15, ang ika-81 kaarawan ni dating senador Miriam Defensor-Santiago. Nagsilbi si Santiago sa lahat ng sangay ng pamahalaan — hudikatura, lehislatibo, at ehekutibo. Naging presiding judge siya sa Regional Trial" — 1 post, no follow-up this cycle
-[NOTED] @AJEnglish: "A giant World Cup football broke loose and rolled through the streets of San Salvador in Mexico, as heavy rain and strong winds swept through the city." — 1 post, no follow-up this cycle
-[NOTED] @Yoda4ever: "He's so proud of his work.." — 1 post, no follow-up this cycle
-[NOTED] @MarioNawfal: "Jeff Bezos is in Paris to headline VivaTech 2026 later this week For a 62-year-old, the man is in outrageous shape. Not as ripped as his security team though, who look like they don't fk about Writer: Ian" — 1 post, no follow-up this cycle
-[NOTED] @Rainmaker1973: "Never touch penguins in the wild: here’s why." — 1 post, no follow-up this cycle
-[NOTED] @CheekyLady1027: "Akala ko ba, basta't taga-Mindanao e maka-Sara? Bakit sumisisigaw sila ng "Ikulong si Sara!"?" — 1 post, no follow-up this cycle
-[SYNTHESIS] synth_axis_immigration_policy_v_national_control_v1_axis_new_world_order_discourse_v1 — drafted as axis_sovereignty_identity
-[NOTED] @krassenstein Julia Roberts: Renee Nicole Good was doing the very best she could do to be good in an unjust world.
-[NOTED] @Rainmaker1973 Wild monkeys fighting: This is the astonishing moment two rival gangs of wild monkeys fought each other.
-[NOTED] @KerryBurgess United States Secretary of State talking absolute bollocks...
-[NOTED] @inquirerdotnet President Ferdinand Marcos Jr. inspects damaged Sapu Masla Bridge.
-[NOTED] @gmanews Impeachment trial for Vice President Sara Duterte set for July 6.
-[NOTED] @EpicClipVault A FedEx driver organizes packages that were dumped on someone’s porch.
-[SYNTHESIS] synth_axis_immigration_policy_v_national_control_v1_axis_new_world_order_discourse_v1 — drafted as axis_legitimacy_of_boundary_governance
+[NOTED] "think" — 3 posts, no follow_up this cycle
+[NOTED] "god" — 3 posts, no follow_up this cycle
+[NOTED] "world cup" — 3 posts, no follow_up this cycle
+[NOTED] "call" — 3 posts, no follow_up this cycle
+[NOTED] "hair" — 3 posts, no follow_up this cycle
+[NOTED] "90s" — 3 posts, no follow_up this cycle
+[NOTED] "looks" — 3 posts, no follow_up this cycle
+[NOTED] @Acyn: "Compagno: Robert De Niro and Julia Roberts didn't get the message that using them, these leftover celebrities from the 90s that don't even -- that live in these gated homes, somehow they're the mouthpiece that the DEMs are trying to get back?" [102❤ 32🔁]  {compagno robert niro, julia roberts didn, gated homes somehow, leftover celebrities}  <- novel  https://x.com/Acyn/status/2066642755317887291
+[NOTED] @gmanews: "Iginiit ni Senate President Pro Tempore Win Gatchalian na ilegal at hindi kinikilala ng Senado ang anumang pagdinig ng “Blue Ribbon Committee” na hindi sa ilalim ni Sen. Erwin Tulfo. #UnangBalita" [1❤ 1🔁]  {iginiit senate president pro tempore win gatchalian ilegal hindi kinikilala senado ang anumang pagdinig blue ribbon committee hindi ilalim sen erwin tulfo}  <- novel  https://x.com/gmanews/status/2066688058536460366
+[NOTED] @gmanews: "Seguridad sa lugar na pagdarausan ng pulong ng 18 ex-bodyguards umano ni dating Cong. Zaldy Co sa Mandaluyong, mahigpit; mga pulis, nakakalat sa kahabaan ng EDSA. | via  @MMakalalad" [0❤ 0🔁]  {seguridad lugar pagdarausan pulong bodyguards umano dating cong zaldy mandaluyong mahigpit mga pulis nakakalat kahabaan edsa via}  <- novel  https://x.com/gmanews/status/2066689315284140058
+[NOTED] @itgirlnadine: "grabe ang bagets talaga pa talaga ng mukha nya hindi ba kinikilabutan si teh  [↳ @?: TANGINA NI APPLE DAVID HAHAHAHAHAHA  TEH DI YAN SWEET, MUKHA KANG NILALAMBING PARA HINGAN NG BAON]" [1❤ 0🔁]  {grabe ang bagets talaga talaga mukha nya hindi kinikilabutan si teh}  <- novel  https://x.com/itgirlnadine/status/2066688132729499733
+[NOTED] @themaxxween [v175.1 T0 N4.2] "nigga tried to get butt ass naked for kai cenat " [8.7k❤ 195🔁]  {butt ass naked, nigga tried, kai cenat}  <- novel  https://x.com/themaxxween/status/2066584537287786758
+[NOTED] @themaxxween [v71.9 T0 N4.2] "this shit rly don’t surprise me bro" [2.1k❤ 26🔁]  {shit rly, surprise bro}  <- novel  https://x.com/themaxxween/status/2066619923460427990
+[NOTED] @Rainmaker1973 [v61.9 T7 N4.2] "This little penguin chick falls asleep as soon as it feels safe and warm in its caretaker’s hand." [545❤ 52🔁]  {little penguin chick falls asleep soon feels safe, caretaker hand, warm}  <- novel  https://x.com/Rainmaker1973/status/2066664552209764849
+[NOTED] @catsareblessing [v19.4 T5 N4.1] "Kitten takes medicine and then dances" [388❤ 15🔁]  {kitten takes medicine, dances}  <- novel  https://x.com/catsareblessing/status/2066639384464503168
+[NOTED] @Crazymoments01 [v1.1 T7 N4.1] "People tend to forget lions have feelings not just instinct" [2❤ 1🔁]  {people tend forget lions, feelings, instinct}  <- novel  https://x.com/Crazymoments01/status/2066692402354548797
+[NOTED] @EpicClipVault [v1.3 T6 N4.1] "Bro single-handedly ended racism" [5❤ 1🔁]  {bro single handedly ended racism}  <- novel  https://x.com/EpicClipVault/status/2066679872974397823
+[NOTED] @gmanews [v0.2 T7 N4.1] "Sa paghimay ng GMA News Research sa joint Statement of Assets, Liabilities, and Net Worth nina Vice President Sara Duterte at Second Gentleman Mans Carpio, lumalabas na mas mataas ng mahigit 11% ang net worth o yaman nina Duterte at Carpio nitong 2025 kompara noong 2024." [1❤ 0🔁]  {net worth nina vice president sara duterte second gentleman mans carpio lumalabas mas mataas mahigit ang net worth yaman nina duterte carpio nitong, paghimay gma news research joint statement assets liabilities, kompara noong}  <- novel  https://x.com/gmanews/status/2066689509195223533
+[NOTED] @EpicClipVault [v0.3 T6 N4.1] "The show’s about to start " [1❤ 0🔁]  {show, start}  <- novel  https://x.com/EpicClipVault/status/2066691196458549598
+[NOTED] @bncdotph [v0.0 T4 N4.1] "BEHIND THE BILYONARYO GENTLEMAN From a collectible figure to a towering 5-foot-tall display piece, Doc Tonicci brought the Bilyonaryo Gentleman to life in more ways than one. The artist shares the story behind creating both the toy figurine and its larger-than-life counterpart," [0❤ 0🔁]  {collectible figure towering foot tall display piece doc tonicci brought, story behind creating both, bilyonaryo gentleman life, bilyonaryo gentleman}  <- novel  https://x.com/bncdotph/status/2066690470592541126
+[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: The Pentagon is reportedly negotiating to take direct equity stakes in US drone companies, not just contracts. This is a clear signal of increasing government control over critical industry, relevant to "Power, Institutions, and Rule of Law". URL: https://x.com/randgroup/status/1795893077617652932
+[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion" describes how internal investigations often begin with a predetermined conclusion and then construct evidence to support it, representing a manipulation of facts within power structures, relevant to "Truth and Evidence in Public Discourse" and "Power, Institutions, and Rule of Law". URL: https://x.com/esq_sanders/status/1786634791599309995
+[NOTED] @BBlackledge22: "Heckuva show " [0❤] — 1 post, no follow_up this cycle
+[NOTED] @naturelife_ok [v4.6 T6 N4.2] "A bear cub wants to be friends with a deer fawn!" [8❤ 4🔁]  {bear cub wants friends, deer fawn}  <- novel  https://x.com/naturelife_ok/status/2066697191637578080
+[NOTED] @naturelife_ok: "There was a bit of a line in front of the shop today. Apparently everyone was waiting for their breakfast and there was no pushing in " [636❤] — 1 post, no follow_up this cycle
+[NOTED] @GuGi263 [v3.9 T6 N4.2] "A good example of maternal instinct." [18❤ 2🔁]  {good example maternal instinct}  <- novel  https://x.com/GuGi263/status/2066688892473053572
+[NOTED] @HumanityChad [v2.3 T6 N4.2] "Getting spooked by reflection in mirror" [9❤ 1🔁]  {getting spooked reflection mirror}  <- novel  https://x.com/HumanityChad/status/2066692484298571822
+[NOTED] @EpicClipVault [v0.5 T6 N4.2] "The accuracy on that kick still blows my mind " [2❤ 0🔁]  {blows mind, accuracy, kick}  <- novel  https://x.com/EpicClipVault/status/2066689431747080633
+[NOTED] @EpicClipVault: "A waiter gets attacked and suddenly remembers his boxing training." [42❤] — 1 post, no follow_up this cycle
+[NOTED] @Zpb1985: "I hate the dude but he chops a good face off lol" [0❤] — 1 post, no follow_up this cycle
+[NOTED] @EpicClipVault [v0.0 T6 N4.2] "One guy completely changed how this video ended " [0❤ 0🔁]  {guy completely changed, video ended}  <- novel  https://x.com/EpicClipVault/status/2066696980898652481
+[NOTED] @EpicClipVault: "A waiter gets attacked and suddenly remembers his boxing training." [42❤] — 1 post, no follow_up this cycle
+[NOTED] @AmericaPapaBear [v245.0 T6 N4.2] "Black girl picks a fight and messes with the wrong white cheerleader! Talk about it feel good video. She was not expecting that smoke. I bet you anything that white girl has some older brothers!" [1.7k❤ 247🔁]  {black girl picks fight, wrong white cheerleader talk, feel good video, white girl}  <- novel  https://x.com/AmericaPapaBear/status/2066676298035220913
+[NOTED] @Rainmaker1973 [v7.4 T7 N4.2] "Drone show mishap: technical issues cause drones to crash mid-performance." [18❤ 4🔁]  {drone show mishap technical issues cause drones crash mid performance}  <- novel  https://x.com/Rainmaker1973/status/1795893077617652932
+[NOTED] @naturelife_ok [v4.6 T6 N4.2] "A bear cub wants to be friends with a deer fawn!" [8❤ 4🔁]  {bear cub wants friends, deer fawn}  <- novel  https://x.com/naturelife_ok/status/2066697191637578080
+[NOTED] @AJEnglish [v111.9 T7 N4.2] "Israeli forces killed seven-year-old Zeina Al-Habeel’s father and younger brother while they were filling up water containers on their rooftop. Four Palestinians were killed by Israeli air attacks and gunfire in Gaza on Monday." [1.1k❤ 721🔁]  {israeli forces killed seven year old zeina habeel father, killed israeli air attacks, filling water containers, rooftop four palestinians}  <- novel  https://x.com/AJEnglish/status/2066644417599910023
+[NOTED] @_B___S [v89.9 T1 N4.2] "Puppy hugs her brother when she realizes he's having a bad dream" [1.3k❤ 83🔁]  {realizes having bad dream, puppy hugs, brother}  <- novel  https://x.com/B___S/status/2066659357278757373
+[NOTED] @catsareblessing [v3.6 T5 N4.2] "He said 5 more minutes!" [10❤ 1🔁]  {said, minutes}  <- novel  https://x.com/catsareblessing/status/2066699782442377716
+[NOTED] @EpicClipVault [v2.3 T6 N4.2] "This cop deserves a huge raise." [9❤ 1🔁]  {cop deserves huge raise}  <- novel  https://x.com/EpicClipVault/status/2066694973022454214
+[NOTED] @gmanews [v0.5 T7 N4.2] "Dustin Yu and Bianca De Vera showed up for their fans in a meaningful gathering. Read more:" [2❤ 1🔁]  {fans meaningful gathering read, bianca vera showed, dustin}  <- novel  https://x.com/gmanews/status/2066685046887796888
+[NOTED] @EpicClipVault [v0.3 T6 N4.2] "Years later the mom and her kids recreated the same photo but mom forgot to age " [1❤ 0🔁]  {mom forgot age, years later, kids recreated, same photo}  <- novel  https://x.com/EpicClipVault/status/2066698744272232545
+[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: The Pentagon is reportedly negotiating to take direct equity stakes in US drone companies. This highlights increasing government control over critical industry, relevant to "Power, Institutions, and Rule of Law". URL: https://x.com/randgroup/status/1795893077617652932
+[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion" describes how internal investigations often begin with a predetermined conclusion and then construct evidence to support it, representing a manipulation of facts within power structures. URL: https://x.com/esq_sanders/status/1786634791599309995
+[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @randgroup: The Pentagon is reportedly negotiating to take direct equity stakes in US drone companies. Not contracts. Actual government ownership. This is a clear signal of increasing government control over critical industry, relevant to "Power, Institutions, and Rule of Law". URL: https://x.com/randgroup/status/1795893077617652932
+[SPRINT: research] [CURIOSITY: sprint_deep_dive_analysis_of_selected_narrative] @esq_sanders: "Evidentiary Inversion: When Internal Investigations Manufacture Misconduct" describes how internal investigations often begin with a predetermined conclusion and then construct evidence to support it, representing a manipulation of facts within power structures. URL: https://x.com/esq_sanders/status/1786634791599309995
+[NOTED] @YOLO_TrustSelf: "Classic Knicks energy! Love seeing the devotion firsthand. Hope they bring that winning spirit back next season too. " [0❤] — 1 post, no follow_up this cycle
+[NOTED] @mindinpanic: "knicks fans packing the nba store on 5th ave like it's black friday, the championship chaos i'm here for" [0❤] — 1 post, no follow_up this cycle
+[NOTED] @ABSCBNNews [v1.3 T7 N4.2] "Dumating sa CIDG nitong Martes ang ilang dating Ateneo basketball players na inimbitahan bilang bahagi ng imbestigasyon sa pagkamatay nina Rene Baterbonia at Divine Adili. | via  @_KarenDeGuzman" [5❤ 0🔁]  {dumating cidg nitong martes ang ilang dating ateneo basketball players inimbitahan bilang bahagi imbestigasyon pagkamatay nina rene baterbonia divine adili via}  <- novel  https://x.com/ABSCBNNews/status/2066700727309996227
+[NOTED] @ABSCBNNews: "Ang ilan sa kanila ay kabilang sa mga na-interview sa isang podcast na nag-viral kamakailan, kung saan tinalakay ang umano’y team-building activity sa" [1❤] — 1 post, no follow_up this cycle
+[NOTED] @ABSCBNNews [v0.8 T7 N4.2] "WATCH: Phivolcs recorded an ash emission from the summit crater of Kanlaon Volcano on Tuesday morning, June 16, 2026. (: Phivolcs)" [2❤ 0🔁]  {summit crater kanlaon volcano tuesday morning june, watch phivolcs recorded ash emission, phivolcs}  <- novel  https://x.com/ABSCBNNews/status/2066705271670648945
+[NOTED] @ABSCBNNews: "The activity generated grayish plumes up to 500 meters before drifting southwest. This is the 15th ash emission event the agency recorded since yester" [1❤] — 1 post, no follow_up this cycle
+[NOTED] @Rainmaker1973 [v0.8 T7 N4.2] "The Zhangjiajie Grand Canyon Via Ferrata is a thrilling cliffside climbing experience in China's Hunan province. This path allows you to climb directly on a vertical rock face right next to the famous Zhangjiajie Glass Bridge. Participants walk across heavy metal rungs drilled" [119❤ 34🔁]  {zhangjiajie grand canyon via ferrata thrilling cliffside climbing experience china hunan province, famous zhangjiajie glass bridge participants walk across heavy metal rungs drilled, climb directly vertical rock face right next, path allows}  <- novel  https://x.com/Rainmaker1973/status/2066414629736026619
+[NOTED] @puffco: "Smooth, flavorful dabs anywhere with our most portable device yet. Pivot at $130. 21+" [61❤] — 1 post, no follow_up this cycle
+[NOTED] @IMPR0VEU: "And the best actor award goes to, this guy seriously though, i would like to walk along that" [1❤] — 1 post, no follow_up this cycle
+[NOTED] @whaleincrisis1: "Till it breaks and people falls again, I don't want to walk here" [0❤] — 1 post, no follow_up this cycle
+[NOTED] @CBeaty82: "What the fuck is the helmet for?" [0❤] — 1 post, no follow_up this cycle
+[NOTED] @BerrinTanal: "He is not really feeling well, even crying because of the danger, drone cameras provide us with amazing scenery" [0❤] — 1 post, no follow_up this cycle
+[NOTED] @EpicClipVault [v0.8 T6 N4.2] "They absolutely nailed parenting" [1❤ 1🔁]  {absolutely nailed parenting}  <- novel  https://x.com/EpicClipVault/status/2066704531451150799
+[NOTED] @EpicClipVault: "I’m convinced construction workers are the funniest people " [23❤] — 1 post, no follow_up this cycle
+[NOTED] @elonmusk [v2338.5 T7 N4.2] "This censorship law is a wolf in sheep’s clothing. The real goal is to enable the UK government to track everyone. [↳ @?: It’s important to know that the social media ban for under 16s is not a ban for under 16s. It is a ban on *selected* so]" [148.0k❤ 27.0k🔁]  {censorship law wolf sheep clothing, real goal enable, government track everyone}  <- novel  https://x.com/elonmusk/status/2066552697931628747
+[NOTED] @Parodyjeffx [v14.1 T6 N4.2] "THIS IS WHAT GAZA’S CHILDHOOD HAS BECOME A lone child walks across a mountain of toxic waste and destruction." [31❤ 15🔁]  {become lone child walks across mountain toxic waste, gaza childhood, destruction}  <- novel  https://x.com/Parodyjeffx/status/2066701141325369360
+[NOTED] @Reuters [v5.7 T6 N4.2] "New York Knicks fans packed the NBA Store on Fifth Avenue celebrating the team's NBA Finals victory and lining up for championship merchandise  https:// reut.rs/4xtYPNd" [91❤ 19🔁]  {new york knicks fans packed, championship merchandise https reut 4xtypnd, nba store fifth avenue celebrating, team nba finals victory}  <- novel  https://x.com/Reuters/status/2066646934304002143
+[NOTED] @Yoda4ever [v15.7 T6 N4.3] "Online arguments vs. in real life be like.." [60❤ 3🔁]  {online arguments real life}  <- novel  https://x.com/Yoda4ever/status/2066704815590457601
+[NOTED] @Jerrybraden92: "Dorothea Bongiovi and her “Plus 1” at the James Beard Awards JBJ Soul Kitchen receives the 2026 James Beard Foundation Impact Award tonight June 15, " [61❤] — 1 post, no follow_up this cycle
+[NOTED] @DrAlexTubio: "Her sister kept telling her she needed to get checked out Safe to say she was thankful she finally listened " [1❤] — 1 post, no follow_up this cycle
+[NOTED] @HumanityChad [v13.6 T6 N4.3] "Is this guy in heaven??" [43❤ 7🔁]  {guy heaven}  <- novel  https://x.com/HumanityChad/status/2066704563902747102
+[NOTED] @HumanityChad: "Lucky" [4.4k❤] — 1 post, no follow_up this cycle
+[NOTED] @shell_loyd: "Cutie pie!" [0❤] — 1 post, no follow_up this cycle
+[NOTED] @FurkanGozukara [v2.6 T7 N4.3] " BOMBSHELL! Ian Carroll exposes a terrifying reality inside the White House. He confirms the Trump administration and their elite cronies are driven by a severe gambling addiction. Carroll reveals they deregulated Wall Street to turn the entire economy into a casino! [↳ @?: EPIC" [10❤ 5🔁]  {bombshell ian carroll exposes terrifying reality inside, driven severe gambling addiction carroll reveals, deregulated wall street turn, white house confirms}  <- novel  https://x.com/FurkanGozukara/status/2066690147395973387
+[NOTED] @michaelmc1970: "The White House Bookies….Coming Soon…" [0❤] — 1 post, no follow_up this cycle
+[NOTED] @ABSCBNNews [v1.1 T7 N4.3] "Authorities have arrested a suspect and seized approximately P1.426M worth of petroleum products and transport equipment during an operation against illegal fuel trade in Bgy. Santa Rita, Pinamalayan, Oriental Mindoro on Monday, says MIMAROPA chief PBGen Christopher Dela Cruz. |" [8❤ 0🔁]  {transport equipment during operation against illegal fuel trade bgy santa rita pinamalayan oriental mindoro monday says mimaropa chief pbgen christopher dela cruz, seized approximately 426m worth petroleum products, arrested suspect, authorities}  <- novel  https://x.com/ABSCBNNews/status/2066689666770936024
+[NOTED] @ABSCBNNews: "Dela Cruz said the operation was carried out jointly by the Criminal Investigation and Detection Group (CIDG) and the Police Regional Office MIMAROPA " [4❤] — 1 post, no follow_up this cycle
+[NOTED] @ABSCBNNews: "Authorities said the activity violated Batas Pambansa Blg. 33, as amended by Presidential Decree No. 1865, which regulates the transportation, distrib" [1❤] — 1 post, no follow_up this cycle
+[NOTED] @ABSCBNNews: "The suspect, whose identity was withheld pending the filing of charges, was informed of the reason for the arrest and apprised of his constitutional r" [1❤] — 1 post, no follow_up this cycle
+[NOTED] @EpicClipVault [v1.3 T6 N4.3] "A father filmed his daughter on her first day of school and her first day of university" [5❤ 0🔁]  {father filmed his daughter, first day school, first day university}  <- novel  https://x.com/EpicClipVault/status/2066706293088239817
+[NOTED] @ABSCBNNews [v0.3 T7 N3.8] "WATCH: Phivolcs recorded an ash emission from the summit crater of Kanlaon Volcano at 8:58 a.m. on Tuesday, June 16, 2026.   (: Phivolcs)" [0❤ 0🔁]  {summit crater kanlaon volcano tuesday june, watch phivolcs recorded ash emission, phivolcs}  https://x.com/ABSCBNNews/status/2066707417573064934
+[NOTED] @ABSCBNNews: "JUST IN: Puerto Galera declares state of calamity as months-long dry spell causes critical water shortage. | via @Dennis_Datu" [6❤] — 1 post, no follow_up this cycle
+[NOTED] @ABSCBNNews: "The activity generated grayish plumes up to 500 meters before drifting southwest. This is the 15th ash emission event the agency recorded since yest" [0❤] — 1 post, no follow_up this cycle
+[CURIOSITY: evidentiary_inversion_institutional_mani] @MegaMobileNews: "BABYLON TO ROME This work traces the direct lineage of institutional power from the Babylonian Empire to the Roman Imperial system, demonstrating through archaeological, textual, and institutional evidence that Rome did not invent its governing architecture but inherited," URL: https://x.com/MegaMobileNews/status/2066715629736026619
+[SPRINT: research] The @MegaMobileNews post provides a historical perspective on institutional power, suggesting a deep-rooted pattern in how power structures are inherited and maintained across civilizations. This enriches the understanding of 'institutional manipulation' within the sprint task.
+[NOTED] @nadaa01012 [v8.2 T4 N4.4] "When someone says: "I don't know how to help"? But all I'm asking is for people share and leave a dot. To donate  https:// paypal.me/YehiaRefaat854" [35❤ 25🔁]  {leave dot donate https paypal yehiarefaat854, someone says, people share, know}  <- novel  https://x.com/nadaa01012/status/2066686744347439168
+[NOTED] @depressionlesss [v5.1 T1 N4.4] "Don't let them know your next move " [16❤ 2🔁]  {next move, let, know}  <- novel  https://x.com/depressionlesss/status/2066713624048205827
+[NOTED] @inquirerdotnet [v0.3 T6 N4.4] "P70-M of smuggled cigarettes seized in Lanao raid; 15 arrested" [2❤ 0🔁]  {p70 smuggled cigarettes seized lanao raid arrested}  <- novel  https://x.com/inquirerdotnet/status/2066704107600072815
+[NOTED] @inquirerdotnet [v0.3 T6 N4.4] "NOW: Welcome Ceremony for German President Frank-Walter Steinmeier at Malacañan Palace. A 21-gun salute was accorded to the visiting German President during the ceremony, followed by an inspection of the honor guard by the two heads of state. The last visit by a German" [1❤ 0🔁]  {german president frank walter steinmeier malaca palace gun salute, visiting german president during, last visit german, ceremony followed inspection}  <- novel  https://x.com/inquirerdotnet/status/2066714646007230596
+[NOTED] @EpicClipVault [v0.0 T6 N4.4] "Bro really fumbled his own life " [0❤ 0🔁]  {bro really fumbled his own life}  <- novel  https://x.com/EpicClipVault/status/2066713841455522097
+[NOTED] @GuGi263 [v0.8 T4 N4.4] "Hydrating the Hot Dog" [3❤ 0🔁]  {hot dog, hydrating}  <- novel  https://x.com/GuGi263/status/2066713372230348866
+[NOTED] @mjfree [v61.8 T5 N4.3] " DO NOT BE DISTRACTED  DONALD TRUMP & JEFFREY EPSTEIN ARE SEX TRAFFICKERS and I’m gonna post this every day so nobody forgets exactly who these monsters are and why the incriminating portions of The Epstein Files have suddenly disappeared." [555❤ 378🔁]  {every day nobody forgets exactly, distracted donald trump jeffrey epstein, epstein files, sex traffickers}  <- novel  https://x.com/mjfree/status/2066660801704870255
+[NOTED] @maddenifico [v10.5 T5 N4.4] "In the blistering heat, a simple act of kindness. " [30❤ 6🔁]  {blistering heat simple act kindness}  <- novel  https://x.com/maddenifico/status/2066710729869136380
+[NOTED] @gmanews [v0.8 T7 N4.4] "WATCH: Ombudsman Jesus Crispin Remulla touts office achievements in Southeast Asian Ombudsman Forum: 124 complaints filed, 36 proceeded to preliminary investigation; in 2026, 209 complaints received, 4 cases filed in court.  Ombudsman Remulla sends regrets for absence due to UN," [2❤ 1🔁]  {watch ombudsman jesus crispin remulla touts office achievements southeast asian ombudsman forum, complaints received cases filed court ombudsman remulla sends regrets, complaints filed proceeded preliminary investigation, absence due}  <- novel  https://x.com/gmanews/status/2066707506525831587
+[NOTED] @gmanews [v0.3 T7 N4.4] "FROM THE PEOPLE OF DAVAO CITY Nakapagpadala ng 4,000 boxes ng welfare goods at 3,000 bote ng isang litrong inuming tubig ang City Government of Davao sa mga lugar na naapektuhan ng lindol, kabilang ang General Santos City, Sarangani, at Jose Abad Santos, ngayong araw, Hunyo 16," [2❤ 1🔁]  {bote isang litrong inuming tubig ang city government davao mga lugar naapektuhan lindol kabilang ang general santos city sarangani jose abad santos ngayong araw hunyo, people davao city nakapagpadala, boxes welfare goods}  <- novel  https://x.com/gmanews/status/2066680191452123190
+[NOTED] @News5PH [v0.2 T6 N4.4] "'WE'RE HOPING...NA BAKA MAYROONG LUMIPAT SA AMIN' Umaasa si Sen. Raffy Tulfo na matutuldukan na ang kaguluhan at agawan sa liderato ng Senado sa ipinatawag na special session ni Pres. Bongbong Marcos bukas, June 17." [0❤ 0🔁]  {hoping baka mayroong lumipat amin umaasa sen raffy tulfo matutuldukan ang kaguluhan agawan liderato senado ipinatawag special session pres bongbong marcos bukas june}  <- novel  https://x.com/News5PH/status/2066710511933427773
