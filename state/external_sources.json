@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-16T05:54:29.911Z",
+  "generated_at": "2026-06-16T08:24:05.881Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-16T05:55:01.914Z",
+  "profiled_at": "2026-06-16T08:24:37.508Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -1938,9 +1938,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-16T05:45:00.000Z",
+      "last_seen_at": "2026-06-16T07:55:30.000Z",
       "discovery": {
-        "distinct_urls": 5464,
+        "distinct_urls": 5480,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1949,8 +1949,8 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3267,
-          "feed_buffer_reply": 3496
+          "feed_buffer": 3276,
+          "feed_buffer_reply": 3504
         },
         "distinct_referring_accounts": 1816,
         "sample_referring_accounts": [
@@ -1990,7 +1990,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5464",
+            "distinct_urls:5480",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2028,7 +2028,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5464",
+            "distinct_urls:5480",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1816",
@@ -4741,7 +4741,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T07:53:00.473Z",
+        "fetched_at": "2026-06-16T07:54:32.386Z",
         "homepage_url": "https://combos.fun/",
         "example_url": "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2aswwo64b7owkoq09axl1gyba6",
         "homepage_status": 403,
@@ -5251,7 +5251,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T07:53:01.257Z",
+        "fetched_at": "2026-06-16T07:54:33.360Z",
         "homepage_url": "https://falconx.io/",
         "example_url": "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
         "homepage_status": 200,
@@ -5278,6 +5278,134 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "tinyurl.com",
+      "entity": "Tinyurl",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-14T17:51:43.000Z",
+      "last_seen_at": "2026-06-16T07:56:29.949Z",
+      "discovery": {
+        "distinct_urls": 7,
+        "example_urls": [
+          "https://tinyurl.com/yc8xxez5?twclid=2dnd76jy9k71tnu9ve267e0uz7",
+          "https://tinyurl.com/yc8xxez5?twclid=28ent5spk729peh6pohu95lvmu",
+          "https://tinyurl.com/bdfcdsp5",
+          "https://tinyurl.com/3ufm734z",
+          "https://tinyurl.com/mryh8uru"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1,
+          "feed_buffer_reply": 1,
+          "journals": 11
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "playfrozenlake"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.38416666666666666,
+          "basis": [
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.3708333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:75",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.4281770833333333,
+          "confidence": 0.29405000000000003,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:3",
+            "referring_accounts:1",
+            "origin_types:3",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-13T12:23:07.600Z",
+        "homepage_url": "https://tinyurl.com/",
+        "example_url": "https://tinyurl.com/yc8xxez5?twclid=2dnd76jy9k71tnu9ve267e0uz7",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://tinyurl.com/",
+        "example_final_url": "https://store.steampowered.com/app/3301010/?utm_source=X&utm_campaign=X_EN_Teaser_01&utm_medium=link&utm_content=video&utm_term=wishlist_now_on_steam&twclid=2dnd76jy9k71tnu9ve267e0uz7",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 75,
           "opinion_marker": false
         }
       }
@@ -5915,134 +6043,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 5,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "tinyurl.com",
-      "entity": "Tinyurl",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-14T17:51:43.000Z",
-      "last_seen_at": "2026-06-06T06:21:08.788Z",
-      "discovery": {
-        "distinct_urls": 6,
-        "example_urls": [
-          "https://tinyurl.com/yc8xxez5?twclid=2dnd76jy9k71tnu9ve267e0uz7",
-          "https://tinyurl.com/yc8xxez5?twclid=28ent5spk729peh6pohu95lvmu",
-          "https://tinyurl.com/bdfcdsp5",
-          "https://tinyurl.com/3ufm734z",
-          "https://tinyurl.com/mryh8uru"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1,
-          "feed_buffer_reply": 1,
-          "journals": 10
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "playfrozenlake"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.355,
-          "basis": [
-            "distinct_urls:6",
-            "distinct_axes:0",
-            "origin_types:3"
-          ]
-        },
-        "corroboration": {
-          "score": 0.3708333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:3"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.22,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:75",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.42179687499999996,
-          "confidence": 0.26542499999999997,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:6",
-            "distinct_axes:0",
-            "origin_types:3",
-            "referring_accounts:1",
-            "origin_types:3",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-13T12:23:07.600Z",
-        "homepage_url": "https://tinyurl.com/",
-        "example_url": "https://tinyurl.com/yc8xxez5?twclid=2dnd76jy9k71tnu9ve267e0uz7",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://tinyurl.com/",
-        "example_final_url": "https://store.steampowered.com/app/3301010/?utm_source=X&utm_campaign=X_EN_Teaser_01&utm_medium=link&utm_content=video&utm_term=wishlist_now_on_steam&twclid=2dnd76jy9k71tnu9ve267e0uz7",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 75,
           "opinion_marker": false
         }
       }
@@ -14219,7 +14219,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T07:53:01.763Z",
+        "fetched_at": "2026-06-16T07:54:34.033Z",
         "homepage_url": "https://mprnews.org/",
         "example_url": "https://www.mprnews.org/story/2023/12/19/minnesota-medicaid-fraud-prevention",
         "homepage_status": 200,
@@ -21498,6 +21498,130 @@
       }
     },
     {
+      "domain": "abs-cbn.com",
+      "entity": "Abs-Cbn",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-09T08:49:57.427Z",
+      "last_seen_at": "2026-06-16T07:56:29.949Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://news.abs-cbn.com/news/2026/06/09/nbi-dismisses-kickback-claims-as-hearsay",
+          "https://news.abs-cbn.com/news/2026/06/09/former-police-lieutenant-colonel-rafael-dumlao-iii-arrested-for-kidnapping-murder",
+          "https://abs-cbn.com/entertainment/showbiz/celebrities/2026/6/16/michael-pac"
+        ],
+        "origin_counts": {
+          "journals": 4
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.37046874999999996,
+          "confidence": 0.10635,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-15T09:24:06.111Z",
+        "homepage_url": "https://abs-cbn.com/",
+        "example_url": "https://news.abs-cbn.com/news/2026/06/09/nbi-dismisses-kickback-claims-as-hearsay",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://abs-cbn.com/",
+        "example_final_url": "https://news.abs-cbn.com/news/2026/06/09/nbi-dismisses-kickback-claims-as-hearsay",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "gmanetwork.com",
       "entity": "Gmanetwork",
       "kind": "unknown",
@@ -23085,7 +23209,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T06:23:01.283Z",
+        "fetched_at": "2026-06-16T06:24:31.652Z",
         "homepage_url": "https://instacart.com/",
         "example_url": "https://www.instacart.com/store/brands/budweiser?ic_source=social&ic_campaignid=2026&twclid=2dlv3d1a0x9ht77bw7gqwrn3ou",
         "homepage_status": 200,
@@ -23736,129 +23860,6 @@
       }
     },
     {
-      "domain": "abs-cbn.com",
-      "entity": "Abs-Cbn",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-09T08:49:57.427Z",
-      "last_seen_at": "2026-06-09T08:49:57.427Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://news.abs-cbn.com/news/2026/06/09/nbi-dismisses-kickback-claims-as-hearsay",
-          "https://news.abs-cbn.com/news/2026/06/09/former-police-lieutenant-colonel-rafael-dumlao-iii-arrested-for-kidnapping-murder"
-        ],
-        "origin_counts": {
-          "journals": 2
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3640885416666667,
-          "confidence": 0.07772499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-15T09:24:06.111Z",
-        "homepage_url": "https://abs-cbn.com/",
-        "example_url": "https://news.abs-cbn.com/news/2026/06/09/nbi-dismisses-kickback-claims-as-hearsay",
-        "homepage_status": 403,
-        "example_status": 403,
-        "homepage_final_url": "https://abs-cbn.com/",
-        "example_final_url": "https://news.abs-cbn.com/news/2026/06/09/nbi-dismisses-kickback-claims-as-hearsay",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "fandango.com",
       "entity": "Fandango",
       "kind": "unknown",
@@ -24199,7 +24200,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T07:53:03.002Z",
+        "fetched_at": "2026-06-16T07:54:35.158Z",
         "homepage_url": "https://cuervo.com/",
         "example_url": "https://cuervo.com/?twclid=2cw6oebezormtkrlgtaweck05m",
         "homepage_status": 200,
@@ -28028,7 +28029,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T08:23:02.084Z",
+        "fetched_at": "2026-06-16T08:24:32.663Z",
         "homepage_url": "https://cointracker.io/",
         "example_url": "https://www.cointracker.io/?utm_source=x&utm_medium=paid_social&utm_campaign=PDM_PaidSocial_X_Awareness_Reach&twclid=2db4ytuyg7wyekq6zcdaap0vjo",
         "homepage_status": 403,
@@ -36745,7 +36746,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T08:23:02.995Z",
+        "fetched_at": "2026-06-16T08:24:33.827Z",
         "homepage_url": "https://atr.org/",
         "example_url": "https://atr.org/mfn/?utm_source=x&utm_medium=cpm&utm_campaign=20260220&utm_content=mfn_v2&twclid=2dracnytvfda9fekosdp3ini9y",
         "homepage_status": 200,
@@ -36867,7 +36868,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T08:23:07.977Z",
+        "fetched_at": "2026-06-16T08:24:37.017Z",
         "homepage_url": "https://prismmarketview.com/",
         "example_url": "https://prismmarketview.com/companies/sbc-medical-group-holdings-incorporated/?twclid=26comjr0eies8gnklzmi3odvtu",
         "homepage_status": 200,
@@ -53947,7 +53948,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T05:53:31.875Z",
+        "fetched_at": "2026-06-16T06:24:32.365Z",
         "homepage_url": "https://tracebit.com/",
         "example_url": "https://community.tracebit.com/supplychainattacks?utm_source=x&utm_medium=paid_social&utm_campaign=supply_chain_ce&utm_content=x_ad_1&twclid=24rad2yo4ut9ws5v7xoqlbgytb",
         "homepage_status": 200,
@@ -54069,7 +54070,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T05:53:33.151Z",
+        "fetched_at": "2026-06-16T06:24:33.676Z",
         "homepage_url": "https://airbyte.com/",
         "example_url": "https://airbyte.com/?utm_source=xads&utm_medium=ppc&utm_campaign=xa_us_aw_social_prospecting_ai_static&utm_content=context_layer&twclid=25eb8dc5nfnts5isczvrqu9xtu",
         "homepage_status": 200,
@@ -54191,7 +54192,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T06:23:01.571Z",
+        "fetched_at": "2026-06-16T06:24:33.928Z",
         "homepage_url": "https://bradfordexchange.com/",
         "example_url": "https://www.bradfordexchange.com/products/924258_.html?utm_source=NCB&utm_medium=Twitter&utm_campaign=BEX_CVR_%C2%A0HarryPotter&utm_term=54717141&tw_source=Twitter&tw_campaign=41264089&tw_adsetid=54717141&twclid=2c9wk0mwgaqqlwwt4efcvihqlq",
         "homepage_status": 403,
@@ -54313,7 +54314,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T06:23:02.213Z",
+        "fetched_at": "2026-06-16T06:54:32.955Z",
         "homepage_url": "https://useltai.com/",
         "example_url": "https://useltai.com/?twclid=26i4snmseo5u0ddqb9pws3o4mf",
         "homepage_status": 200,
@@ -54435,7 +54436,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T06:23:02.593Z",
+        "fetched_at": "2026-06-16T06:54:33.350Z",
         "homepage_url": "https://fetchapro.com/",
         "example_url": "https://www.fetchapro.com/baths/la/?tg_ref=x_rec_june_fetch&camp_id=all_t&keyword=black_seniors&sub2=0outofpocket&twclid=2dqs5znpqw5by3dwqc6l83asj1",
         "homepage_status": 200,
@@ -54557,7 +54558,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T06:53:00.855Z",
+        "fetched_at": "2026-06-16T06:54:33.994Z",
         "homepage_url": "https://reactsummit.us/",
         "example_url": "https://reactsummit.us/?utm_source=twitter&utm_medium=React_Summit_US_2026_General&utm_campaign=Features_carousel&twclid=2az0o1ih9r8cs854jjocwzjypd",
         "homepage_status": 200,
@@ -54679,7 +54680,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T06:53:02.505Z",
+        "fetched_at": "2026-06-16T06:54:35.461Z",
         "homepage_url": "https://primevideo.com/",
         "example_url": "https://www.primevideo.com/detail/amzn1.dv.gti.f5b53647-e608-46ed-8228-a609fd9b2d7e?ref_=dvm_atl_twi_ph_OD_s_SpiderNoir_PreLaunch_M18-44_Infeed_TeaserColour_30s&twclid=26inyqzcduabzcxw4lwkavuuox",
         "homepage_status": 200,
@@ -54801,7 +54802,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T06:53:03.038Z",
+        "fetched_at": "2026-06-16T08:24:37.508Z",
         "homepage_url": "https://armoryhub.app/",
         "example_url": "https://www.armoryhub.app/?twclid=260qgaxi7pla6ab7ccc356ptt2",
         "homepage_status": 200,
