@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-16T02:54:26.724Z",
+  "generated_at": "2026-06-16T05:54:29.911Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-16T02:54:59.605Z",
+  "profiled_at": "2026-06-16T05:55:01.914Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -1938,9 +1938,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-16T02:20:41.000Z",
+      "last_seen_at": "2026-06-16T05:45:00.000Z",
       "discovery": {
-        "distinct_urls": 5456,
+        "distinct_urls": 5464,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -1949,8 +1949,8 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3262,
-          "feed_buffer_reply": 3493
+          "feed_buffer": 3267,
+          "feed_buffer_reply": 3496
         },
         "distinct_referring_accounts": 1816,
         "sample_referring_accounts": [
@@ -1990,7 +1990,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5456",
+            "distinct_urls:5464",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2028,7 +2028,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5456",
+            "distinct_urls:5464",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1816",
@@ -2074,9 +2074,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-06-15T09:31:03.000Z",
+      "last_seen_at": "2026-06-15T18:00:01.000Z",
       "discovery": {
-        "distinct_urls": 397,
+        "distinct_urls": 398,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -2085,7 +2085,7 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 369,
+          "feed_buffer_reply": 370,
           "feed_buffer": 55
         },
         "distinct_referring_accounts": 259,
@@ -2126,7 +2126,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:397",
+            "distinct_urls:398",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2164,7 +2164,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:397",
+            "distinct_urls:398",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:259",
@@ -4269,9 +4269,9 @@
       "entity": "App Link",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T04:05:48.185Z",
-      "last_seen_at": "2026-06-15T11:26:50.000Z",
+      "last_seen_at": "2026-06-15T15:40:01.000Z",
       "discovery": {
-        "distinct_urls": 18,
+        "distinct_urls": 19,
         "example_urls": [
           "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
           "https://chipotle.app.link/CFCROzYFA1b?%243p=a_twitter&twclid=2cc0rz9d8z8z95tfghmhm1chq0",
@@ -4281,7 +4281,7 @@
         ],
         "origin_counts": {
           "feed_buffer": 7,
-          "feed_buffer_reply": 11
+          "feed_buffer_reply": 12
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -4312,7 +4312,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:18",
+            "distinct_urls:19",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4346,11 +4346,11 @@
         },
         "overall": {
           "score": 0.43875,
-          "confidence": 0.5517,
+          "confidence": 0.5742,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:18",
+            "distinct_urls:19",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1",
@@ -8032,7 +8032,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T03:22:56.278Z",
+        "fetched_at": "2026-06-16T03:24:24.532Z",
         "homepage_url": "https://hypemarkets.xyz/",
         "example_url": "https://hypemarkets.xyz/?twclid=27lmvj7zap2yyfs7n0ndgenluy",
         "homepage_status": 200,
@@ -24075,7 +24075,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T05:22:58.992Z",
+        "fetched_at": "2026-06-16T05:24:28.959Z",
         "homepage_url": "https://typeform.com/",
         "example_url": "https://form.typeform.com/to/rQ99Fjtn?utm_source=mediabuyer&twclid=294n0eht0qoq4ibz93o6uvw95v",
         "homepage_status": 200,
@@ -36623,7 +36623,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T05:23:09.149Z",
+        "fetched_at": "2026-06-16T05:24:39.126Z",
         "homepage_url": "https://lilly.com/",
         "example_url": "https://investor.lilly.com/news-releases/news-release-details/fda-approves-lillys-foundayotm-orforglipron-only-glp-1-pill?utm_source=x&utm_medium=paid-social&utm_campaign=ofg&twclid=2cjo2nvm4795lnrgsam2zxeoce",
         "homepage_status": 403,
@@ -51385,7 +51385,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T02:53:30.823Z",
+        "fetched_at": "2026-06-16T03:24:25.760Z",
         "homepage_url": "https://restorefast.com/",
         "example_url": "https://restorefast.com/?twclid=2a98h9j80p6kqmb4rxmmie8d30",
         "homepage_status": 200,
@@ -51507,7 +51507,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T02:53:30.881Z",
+        "fetched_at": "2026-06-16T03:24:25.810Z",
         "homepage_url": "https://vide/",
         "example_url": "https://vide/",
         "homepage_status": null,
@@ -51629,7 +51629,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T03:22:57.623Z",
+        "fetched_at": "2026-06-16T03:24:29.285Z",
         "homepage_url": "https://bill.com/",
         "example_url": "https://www.bill.com/ap-offers/demo-gift-card?utm_source=x&utm_medium=paid-social&utm_campaign=acc-pro-demo-acct-cas-keywords-t-x-pilot-amazon-gc-100promo-lgf&utm_content=amazon100-white&twclid=22wgublmb7t4pg4b6gr53tztt9",
         "homepage_status": 200,
@@ -51751,7 +51751,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T03:22:57.963Z",
+        "fetched_at": "2026-06-16T03:54:23.875Z",
         "homepage_url": "https://propscore.co/",
         "example_url": "https://propscore.co/?utm_source=x&utm_medium=paid_social&utm_campaign=propscore_compare&twclid=2ev7lrftqjnv4rqcllrjuddo5t",
         "homepage_status": 200,
@@ -51873,7 +51873,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T03:23:01.147Z",
+        "fetched_at": "2026-06-16T03:54:25.292Z",
         "homepage_url": "https://superai.com/",
         "example_url": "https://www.superai.com/?twclid=2coiqjyj72q0i963w4vk0ao6bg",
         "homepage_status": 200,
@@ -51995,7 +51995,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T03:53:16.043Z",
+        "fetched_at": "2026-06-16T03:54:45.294Z",
         "homepage_url": "https://46.224/",
         "example_url": "https://0.0.46.224/",
         "homepage_status": null,
@@ -52117,7 +52117,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T03:53:26.215Z",
+        "fetched_at": "2026-06-16T03:54:55.451Z",
         "homepage_url": "https://factorialenergy.com/",
         "example_url": "https://ir.factorialenergy.com/?twclid=23qvp1zi8fliwejp1g90xrmxci",
         "homepage_status": 200,
@@ -52239,7 +52239,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T03:53:26.773Z",
+        "fetched_at": "2026-06-16T04:24:26.929Z",
         "homepage_url": "https://serus.ai/",
         "example_url": "https://www.serus.ai/?twclid=29v4lxmzvo39j1dtelbj405bc3",
         "homepage_status": 200,
@@ -52361,7 +52361,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T03:53:27.693Z",
+        "fetched_at": "2026-06-16T04:24:28.369Z",
         "homepage_url": "https://xreplyai.com/",
         "example_url": "https://xreplyai.com/lp/ai-reply?utm_source=x&utm_medium=paid&utm_campaign=sales_ai-reply&utm_content=reply-time&twclid=25ltv9snjvnawlmhjivxk1op2j",
         "homepage_status": 200,
@@ -52483,7 +52483,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T04:22:57.514Z",
+        "fetched_at": "2026-06-16T04:24:29.156Z",
         "homepage_url": "https://lentrox.com/",
         "example_url": "https://lentrox.com/?x=cpmau1&tw=rcgk3&tw_click=tw-rcgk3-rcgkc&twclid=23mto8x2s1tqm6nmtxdbnlji40",
         "homepage_status": 200,
@@ -52605,7 +52605,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T04:22:58.506Z",
+        "fetched_at": "2026-06-16T04:24:30.157Z",
         "homepage_url": "https://fastloanadvance.com/",
         "example_url": "https://loans.fastloanadvance.com/?aid=505508&acid=1&subid=%7B%5Bad_group_id%7D%7D&twclid=24pt75umwn8h0pynsled729e1a",
         "homepage_status": 200,
@@ -52727,7 +52727,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T04:22:59.398Z",
+        "fetched_at": "2026-06-16T04:54:26.248Z",
         "homepage_url": "https://axlabs.com/",
         "example_url": "https://go.axlabs.com/gitmyabi-pioneers?twclid=2748j7ycvef789xq3ta5i8cygh",
         "homepage_status": 200,
@@ -52849,7 +52849,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T04:23:03.939Z",
+        "fetched_at": "2026-06-16T04:54:28.903Z",
         "homepage_url": "https://utspaycashback.com/",
         "example_url": "https://www.utspaycashback.com/?twclid=2650deq3k4trsekhk3xdbpt9o7",
         "homepage_status": 200,
@@ -52971,7 +52971,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T04:52:57.876Z",
+        "fetched_at": "2026-06-16T04:54:29.153Z",
         "homepage_url": "https://play-asia.com/",
         "example_url": "https://www.play-asia.com/en/shikhondo-blue-pieta/13/70jxj9?ref=soc_x_di_ad_ga_shikh&twclid=216zt9553f8jvl6p2avsi94wxs",
         "homepage_status": 403,
@@ -53093,7 +53093,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T04:52:58.373Z",
+        "fetched_at": "2026-06-16T04:54:29.675Z",
         "homepage_url": "https://minervaconsole.com/",
         "example_url": "https://minervaconsole.com/?twclid=2ct1cd0vbj3x45kyvn9m9mhpuy",
         "homepage_status": 200,
@@ -53215,7 +53215,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T04:52:58.547Z",
+        "fetched_at": "2026-06-16T05:24:39.389Z",
         "homepage_url": "https://avianca.com/",
         "example_url": "https://www.avianca.com/pt/ofertas-destinos/voos-promocionais/?poscode=BR&utm_source=twitter&utm_medium=adb&utm_campaign=sam_br_20260514_conmebol_twitter_cpm_marca_adb&utm_term=sam_br_inter_marca_twitter_cpm_20260514_conmebol_adb&utm_content=prt_sam_br_inter_marca_vid_twitter_cpm_20260514_conmebol_adb_conmebol_grupos&twclid=26t4yexldc4l4dfzzbbn09ndbc",
         "homepage_status": 403,
@@ -53337,7 +53337,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T04:52:59.462Z",
+        "fetched_at": "2026-06-16T05:24:39.926Z",
         "homepage_url": "https://restraineddepth.com/",
         "example_url": "https://restraineddepth.com/es/?twclid=21w3hhon812ejdm3d28l4smhwe",
         "homepage_status": 200,
@@ -53459,7 +53459,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T05:23:09.827Z",
+        "fetched_at": "2026-06-16T05:54:59.234Z",
         "homepage_url": "https://nexuscosmicus.com/",
         "example_url": "https://nexuscosmicus.com/defensa-planetaria-realidad-o-ficcion/?twclid=217bgg9bi9kconn0kz0gg2l3fi",
         "homepage_status": 200,
@@ -53581,7 +53581,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T05:23:10.954Z",
+        "fetched_at": "2026-06-16T05:55:00.528Z",
         "homepage_url": "https://multilogin.com/",
         "example_url": "https://multilogin.com/multilogin-mobile-and-browser-account-management-platform-40?utm_source=x&utm_medium=cpc&utm_campaign=promo_website_pp_visitors_new_image_4&twclid=21lxefwjki4pcdp60wvaq4xwr3",
         "homepage_status": 200,
@@ -53703,7 +53703,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T05:53:30.444Z",
+        "fetched_at": "2026-06-16T05:55:01.145Z",
         "homepage_url": "https://oasis.net/",
         "example_url": "https://oasis.net/challenge-hub?utm_source=x&utm_medium=cpc&utm_campaign=appointment&twclid=25t72d003voplz0wvurf04c2e2",
         "homepage_status": 200,
@@ -53825,13 +53825,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-13T05:53:31.155Z",
+        "fetched_at": "2026-06-16T05:55:01.914Z",
         "homepage_url": "https://dsctrk.com/",
         "example_url": "https://link.dsctrk.com/b0da2fef-6ac6-48b3-87f4-efc0c56a8b6f?adv=adv1x&twclid=2aw1bxup4osgqhqh8esj1ex79g",
         "homepage_status": null,
         "example_status": 200,
         "homepage_final_url": "https://dsctrk.com/",
-        "example_final_url": "https://healthylifestyle101.com/usa-vsl-gh-h2-002-vt?modal=yes&cpid=b0da2fef-6ac6-48b3-87f4-efc0c56a8b6f&mcid=2aw1bxup4osgqhqh8esj1ex79g&vcid=wfcegme512oi2d3j3k0m2i37&cep=kRf1OcjBNw6SFm272_cfipQPReLjaUerugH3xIeYMrv8BiU9L-j4yLNmfqqmQljjONQSm-SURk8R0QfstiZVq6Zj1DGv7B3IKe2hCX5hYtXCXuxjxsGCFeqst7XYwvzmhJCovFsitlRomvyiYtdux5iJXD6hwBruNlilsTj0qIZN1R0oBEsF2OKLe9RHi2xXf2t3tvjXBqC0tkE36Yj4xGAoc5vTYMex0x44u-un-4BaAmZ_B7mTXiF9EOJ5v_LFh507iwMGw-wIemH_d5i8W_zLh74a3O-cGuJopuWBPSIuwtj_rz1BBxGoJa04OYyqHRVUg1uF7sjatmegLjbszLBlierYwynqPEseYtsF1oxHQEjScb5_8s1b5NtT_hfTQC3YkigyY8JY3Rxb-ykDFoO0QzdUlU-q-h9ItvX_jYtyWL4ThrUsSGsO-Lac_cxwD8HOg07jWBNfxBTa9Iw9lw&lptoken=17f58124334d18b41052&adv=adv1x&twclid=2aw1bxup4osgqhqh8esj1ex79g",
+        "example_final_url": "https://healthylifestyle101.com/usa-vsl-gh-h2-002-vt?modal=yes&cpid=b0da2fef-6ac6-48b3-87f4-efc0c56a8b6f&mcid=2aw1bxup4osgqhqh8esj1ex79g&vcid=w14p26gqddidul5jjlncfl68&cep=csG8q2JLMFfbXa6nOa99Cc5kxLKIpPrXKTDR-3cJ5guUwCdscIIUAqgeJ3ZoWvL7HZtF6XJDdSXviF0HkHcOubex79zSK5MA5CZ2ulFGAkf8sd3no6jcRyNJ2p2_SV8_4qCPAaqHK89fKZ2aeu7tmjYgr0raNsNOJDY-Gxxvcp8OBNkCcqigjjdoX07gXVsHT09qR3zvfvfbQtGqRDLimAstqAxZJbPdso3ovDRSQaY-TVzljhrdX7ZP-PaeT7Gavsm_U3lMNXbV-IrStpwzHsTZwhtnDD7aEphHWwHWht_EWJw5cJMOsmUYu7tTKKHv1c1tk9jzPkINWGEbEuv_mrdN8zrHanZhxAO7NZnFunvOLh5-QPQUr6tOFZ8sl5AF2_Dncnf1DW9JVHZmAqV1rlbngZVN1sUejZv3SgjI_8kkdNxhI-pG16P5niE8yoDSjy-2kIBcgV8kXYhnDCLUhw&lptoken=17a4811759981151016a&adv=adv1x&twclid=2aw1bxup4osgqhqh8esj1ex79g",
         "homepage_content_type": "",
         "example_content_type": "text/html",
         "homepage": {
