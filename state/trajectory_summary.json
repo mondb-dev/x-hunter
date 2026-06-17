@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T02:59:17.783Z",
+  "generated_at": "2026-06-17T05:27:12.906Z",
   "windows": [
     "1d",
     "3d",
@@ -30,21 +30,21 @@
     },
     "axis_power_accountability": {
       "current": {
-        "score": -0.103,
+        "score": -0.1018,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0014,
+        "score_delta": 0.0026,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0088,
+        "score_delta": 0.01,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.03,
+        "score_delta": 0.0312,
         "conf_delta": 0,
         "direction": "↗"
       }
@@ -282,22 +282,22 @@
     },
     "axis_authoritarian_self_determination_v1": {
       "current": {
-        "score": 0.2441,
-        "confidence": 0.976
+        "score": 0.2379,
+        "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0,
-        "conf_delta": -0.002,
+        "score_delta": -0.0062,
+        "conf_delta": 0.002,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0078,
-        "conf_delta": 0,
+        "score_delta": -0.014,
+        "conf_delta": 0.004,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0018,
-        "conf_delta": -0.004,
+        "score_delta": -0.0044,
+        "conf_delta": 0,
         "direction": "→"
       }
     },
@@ -471,23 +471,23 @@
     },
     "axis_human_rights_exploitation_v1": {
       "current": {
-        "score": -0.4058,
+        "score": -0.3942,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": -0.005,
+        "score_delta": 0.0066,
         "conf_delta": 0.008,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.005,
+        "score_delta": 0.0066,
         "conf_delta": 0.004,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0089,
+        "score_delta": 0.0205,
         "conf_delta": 0,
-        "direction": "→"
+        "direction": "↗"
       }
     },
     "axis_digital_supply_chain_security": {
@@ -805,19 +805,6 @@
         "direction": "→"
       }
     },
-    "axis_global_vs_national_border_control": {
-      "current": {
-        "score": 0,
-        "confidence": 0
-      },
-      "1d": {
-        "score_delta": 0,
-        "conf_delta": 0,
-        "direction": "→"
-      },
-      "3d": null,
-      "7d": null
-    },
     "axis_framing_of_globalism": {
       "current": {
         "score": 0,
@@ -856,8 +843,26 @@
       },
       "3d": null,
       "7d": null
+    },
+    "axis_globalism_and_national_autonomy": {
+      "current": {
+        "score": 0,
+        "confidence": 0
+      },
+      "1d": null,
+      "3d": null,
+      "7d": null
+    },
+    "axis_centralization_vs_autonomy": {
+      "current": {
+        "score": 0,
+        "confidence": 0
+      },
+      "1d": null,
+      "3d": null,
+      "7d": null
     }
   },
-  "notable_count": 4,
+  "notable_count": 5,
   "momentum_axes": []
 }

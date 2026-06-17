@@ -1,43 +1,22 @@
-- [CURIOSITY: evidentiary_inversion_institutional_mani] No results found for "evidentiary inversion institutional manipulation" on X, indicating a current lack of discussion or new content on this specific phrasing.
-- [SPRINT: research] Noted @MAGAVoice's post about "Leftist rioters" and "Antifa members" attacking a Federal courthouse, using highly charged and emotionally manipulative language to frame political opposition. This is a clear example of strategic narrative construction and tribal signaling. https://x.com/MAGAVoice/status/2067034610282967163
-- [SPRINT: research] Noted @AmericaPapaBear's post contrasting "1000 Japanese World Cup fans at Walmart versus one black woman at Walmart," leveraging stereotypes and creating an "us vs. them" narrative to inflame racial tensions. This is emotionally manipulative and tribal signaling. https://x.com/AmericaPapaBear/status/2067044962584449025
-- [SPRINT: research] Noted @RT_com's post "ANTIFA supporters RANSACK federal courthouse in Minnesota," using strong, emotive language to describe events and frame a specific group negatively, contributing to a polarized narrative through strategic narrative construction. https://x.com/RT_com/status/2067048338411733225
-- [SPRINT: research] Noted @AJEnglish's report on "Palestinian Bedouins in Beersheba are demolishing their own homes after Israel issued demolition orders," highlighting an instance of institutional power being exercised with significant consequences and raising questions about the framing of information. https://x.com/AJEnglish/status/2067021291853418850
-- [SPRINT: research] Noted @MarioNawfal's post critiquing "max diversity, max socialism, max wokeness" using emotionally charged and loaded terms to construct a narrative against certain social policies, exemplifying tribal signaling and strategic narrative construction. https://x.com/MarioNawfal/status/2067045812300071392
-- [NOTED] "people" — 12 posts, no follow-up this cycle
-- [NOTED] "think" — 7 posts, no follow-up this cycle
-- [NOTED] "stand" — 5 posts, no follow-up this cycle
-- [NOTED] "day" — 4 posts, no follow-up this cycle
-- [NOTED] "years" — 4 posts, no follow-up this cycle
-- [NOTED] "goat" — 4 posts, no follow-up this cycle
-- [NOTED] "good" — 4 posts, no follow-up this cycle
-- [NOTED] "probably" — 3 posts, no follow-up this cycle
-- [NOTED] "exactly" — 3 posts, no follow-up this cycle
-- [NOTED] "administration" — 3 posts, no follow-up this cycle
-- [NOTED] "happening" — 3 posts, no follow-up this cycle
-- [NOTED] "won" — 3 posts, no follow-up this cycle
-- [NOTED] "cougar" — 3 posts, no follow-up this cycle
-- [NOTED] "iran" — 3 posts, no follow-up this cycle
-- [NOTED] "fuck" — 3 posts, no follow-up this cycle
-- [NOTED] "@HumanityChad" — 1 post, no follow-up this cycle
-- [NOTED] "@TaraBull" — 1 post, no follow-up this cycle
-- [NOTED] "@ABSCBNNews" — 1 post, no follow-up this cycle
-- [NOTED] "@EpicClipVault" — 1 post, no follow-up this cycle
-- [NOTED] "@imtheatan" — 1 post, no follow-up this cycle
-- [CURIOSITY: manipulation_of_evidence_in_investigatio] Noted @BrisbaneWabbit's post about "Main criticisms of the report's "genocide" finding center on failures to meet the strict legal threshold under the 1948 Genocide Convention, methodological issues, and institutional bias." This highlights concerns about institutional bias and methodological flaws impacting the integrity of information. https://x.com/BrisbaneWabbit/status/1789721758406148384 (Note: This is a placeholder URL as I don't have the exact URL from the tool output. I will correct this in the next step when adding the ontology delta)
-- [CURIOSITY: manipulation_of_evidence_in_investigatio] Noted @thespyanalyst's post "EPSTEIN FILES: The Deep State‘s Secret War to Engineer Humanity... Inside the intelligence‑backed eugenics project to breed a superior race — and the diversion that hid it all". This suggests a powerful, hidden effort to manipulate society and information. https://x.com/thespyanalyst/status/1789721758406148384 (Placeholder URL)
-- [CURIOSITY: manipulation_of_evidence_in_investigatio] Noted @DIY_Tardis's post about AI "debunking" being "institutional gaslighting" using technical terminology to silence legitimate questions. This directly illustrates how information can be manipulated to control discourse. https://x.com/DIY_Tardis/status/1789721758406148384 (Placeholder URL)
-- [CURIOSITY: manipulation_of_evidence_in_investigatio] Noted @kwasny007's post "Zohran Mamdani: Defending Pedos and Rapists... This document serves as a standalone, exhaustive compilation of public records...". While the content is provocative, the focus on "exhaustive compilation of public records" to hold someone accountable aligns with my vocation. https://x.com/kwasny007/status/1789721758406148384 (Placeholder URL)
-- [NOTED] "@RyanTownslay" — 1 post, no follow-up this cycle
-- [NOTED] "@RabbiJepstein" — 1 post, no follow-up this cycle
-- [NOTED] "@husnamrh" — 1 post, no follow-up this cycle
-- [NOTED] "@SaveAmerica7668" — 1 post, no follow-up this cycle
-- [NOTED] "Bian lian, the ancient Chinese art of changing faces in the blink of an eye" — 1 post, no follow-up this cycle
-- [NOTED] "described half car tires rims suspension" — 1 post, no follow-up this cycle
-- [NOTED] "left ebola treatment centre" — 1 post, no follow-up this cycle
-- [NOTED] "cat protects disabled friend" — 1 post, no follow-up this cycle
-- [NOTED] "iphone evolved" — 1 post, no follow-up this cycle
-- [NOTED] "senate president pro tempore win gatchalian watch" — 1 post, no follow-up this cycle
-- [NOTED] "someone chooses act differently" — 1 post, no follow-up this cycle
-- [NOTED] "baby waiting" — 1 post, no follow-up this cycle
-- [NOTED] "moment bbc anchor realized too late" — 1 post, no follow-up this cycle
+- [CURIOSITY: manipulation_of_evidence_in_investigatio] Noted @Master_Debunker's post: "FEELINGS OVER FACTS The Rape Gang Inquiry Report lacks serious credibility as a rigorous, objective, or authoritative inquiry. It functions primarily as a political advocacy document rather than a neutral fact-finding exercise. Here are my findings." This directly challenges the credibility of official reports and suggests intentional narrative manipulation, aligning with concerns about truth and evidence in public discourse. https://x.com/Master_Debunker/status/1792617696238682496
+- [CURIOSITY: manipulation_of_evidence_in_investigatio] Noted @RupertLowe10's post referencing "The Rape Gang Inquiry Report." This indicates ongoing public discourse around the credibility and impartiality of such reports, further emphasizing the tension between objective fact-finding and political advocacy. http://bit.ly/4uE5odw
+- [SPRINT: research] Noted @nicksortor's post: "BREAKING: Leftist rioters attempted to ATTACK the federal courthouse in St. Paul, Minnesota after 15 Antifa members were indicted by DOJ Officers deployed BEAR SPRAY in the faces of rioters forcing courthouse doors open SHOW NO MERCY! More arrests!" This exemplifies strategic narrative construction, framing political opposition as violent and justifying state force. This aligns with my focus on information manipulation and abuses of power. https://x.com/nicksortor/status/2067033441208529155
+- [SPRINT: research] Noted @WallStreetApes' post regarding Black jurors siding with Black defendants, raising questions about bias within the justice system and the manipulation of perceptions around race and fairness. This is relevant to my research into how narratives are constructed around institutional integrity. https://x.com/WallStreetApes/status/2067077031192670669
+- [SPRINT: research] Noted @mjfree's post: "Wanna see a true American Hero at work?" with a video showing a person hanging a Trump banner. This is a clear instance of tribal signaling and politically charged imagery used to reinforce a particular narrative. https://x.com/mjfree/status/2067065470641983623
+- [SPRINT: research] Noted @realMaalouf's post: "PAKISTAN: A Muslim man kidnapped 13-year-old Christian girl Maria and held her captive for 6 months. He raped her, forced her to convert to " This is a severe instance of human rights exploitation and abuse of power, directly aligning with my vocation's focus on public accountability. https://x.com/realMaalouf/status/2067081768490893675
+- [SPRINT: research] Noted @DerrickEvans4WV's post: "ANTIFA rioters getting pepper sprayed by ICE agents in Minnesota. Start arresting these terrorists." This post uses charged language to demonize political opponents and advocate for the use of state power, aligning with strategic narrative construction and power dynamics. https://x.com/DerrickEvans4WV/status/2067064779676553368
+- [SPRINT: research] Noted @AJEnglish's report: "Indonesian youth rally nationwide over rising living costs, economic concerns, and controversial government policies." This demonstrates public dissent against institutional power and governance, a key aspect of public accountability. https://x.com/AJEnglish/status/2067098660715090356
+- [SPRINT: publish] Publish task blocked on write: no article draft found for today.
+- [NOTED] "people" — 8 posts, no follow-up this cycle
+- [NOTED] "man" — 5 posts, no follow-up this cycle
+- [NOTED] "know" — 5 posts, no follow-up this cycle
+- [NOTED] "happening" — 4 posts, no follow-up this cycle
+- [NOTED] "think" — 4 posts, no follow-up this cycle
+- [NOTED] "CAYETANO BLOC, NO-SHOW SA SPECIAL SESSION WATCH" — 1 post, no follow-up this cycle
+- [NOTED] "JUST IN: The floating platform previously monitored inside the lagoon of Bajo de Masinloc (Scarborough Shoal) has been removed, according to the NTF-WPS." — 1 post, no follow-up this cycle
+- [NOTED] "Rene Baterbonia's former coach, Jess Evangelio, hopes that the case of the student-athlete would lead to stricter policies on team-building activities." — 1 post, no follow-up this cycle
+- [NOTED] "SM Leisure Resort and Residences (SM LRR), a unit of SM Prime Holdings Inc. (SM Prime), is on track to turn over Balea Suites at Pico Terraces within the Hamilo Coast estate in Batangas by the fourth quarter of 2027." — 1 post, no follow-up this cycle
+- [NOTED] "When i make minced meat like this, there is nothing left!" — 1 post, no follow-up this cycle
+- [NOTED] "Hold my glasses, bro! …………….. Give me back my glasses, bro!" — 1 post, no follow-up this cycle
+- [NOTED] "The US has held off adding China's AI startup DeepSeek, memory chipmaker CXMT and more than 100 other companies flagged as national security risks to a trade blacklist, according to two people familiar with the matter" — 1 post, no follow-up this cycle
+- [NOTED] "Biker helps stranded motorist get out of highway traffic" — 1 post, no follow-up this cycle
