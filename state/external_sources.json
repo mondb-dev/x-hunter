@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-17T05:54:57.175Z",
+  "generated_at": "2026-06-17T08:24:27.887Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-17T05:55:27.629Z",
+  "profiled_at": "2026-06-17T08:25:00.111Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -470,7 +470,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T07:53:31.655Z",
+        "fetched_at": "2026-06-17T07:54:56.127Z",
         "homepage_url": "https://house.gov/",
         "example_url": "https://www.house.gov/",
         "homepage_status": null,
@@ -1133,7 +1133,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T07:53:32.260Z",
+        "fetched_at": "2026-06-17T07:54:56.525Z",
         "homepage_url": "https://theguardian.com/",
         "example_url": "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
         "homepage_status": 200,
@@ -1387,7 +1387,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T07:53:32.480Z",
+        "fetched_at": "2026-06-17T07:54:56.730Z",
         "homepage_url": "https://apnews.com/",
         "example_url": "https://apnews.com/hub/iran",
         "homepage_status": 200,
@@ -1423,7 +1423,7 @@
       "entity": "Bit Ly",
       "kind": "unknown",
       "first_seen_at": "2026-04-06T16:33:36.000Z",
-      "last_seen_at": "2026-06-17T05:27:04.516Z",
+      "last_seen_at": "2026-06-17T07:57:21.148Z",
       "discovery": {
         "distinct_urls": 15,
         "example_urls": [
@@ -1436,7 +1436,7 @@
         "origin_counts": {
           "feed_buffer_reply": 12,
           "feed_buffer": 2,
-          "journals": 1
+          "journals": 7
         },
         "distinct_referring_accounts": 6,
         "sample_referring_accounts": [
@@ -2071,9 +2071,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-17T05:36:28.000Z",
+      "last_seen_at": "2026-06-17T07:45:32.000Z",
       "discovery": {
-        "distinct_urls": 5545,
+        "distinct_urls": 5549,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2082,8 +2082,8 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3313,
-          "feed_buffer_reply": 3553
+          "feed_buffer": 3317,
+          "feed_buffer_reply": 3557
         },
         "distinct_referring_accounts": 1826,
         "sample_referring_accounts": [
@@ -2123,7 +2123,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5545",
+            "distinct_urls:5549",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2161,7 +2161,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5545",
+            "distinct_urls:5549",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1826",
@@ -2171,7 +2171,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T07:53:33.221Z",
+        "fetched_at": "2026-06-17T07:54:57.520Z",
         "homepage_url": "https://t.co/",
         "example_url": "https://t.co/pJSE124ec4",
         "homepage_status": 200,
@@ -20850,7 +20850,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T06:23:31.231Z",
+        "fetched_at": "2026-06-17T06:24:54.907Z",
         "homepage_url": "https://tow.dev/",
         "example_url": "https://tow.dev/?utm_source=twitter&utm_medium=cpc&utm_campaign=launch&utm_id=twitter_launch&twclid=26xxdbf1ybv4rz2smsfk823weq",
         "homepage_status": 200,
@@ -22368,6 +22368,130 @@
       }
     },
     {
+      "domain": "trendmicro.com",
+      "entity": "Trendmicro",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-16T15:04:48.000Z",
+      "last_seen_at": "2026-06-16T15:04:48.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://newsroom.trendmicro.com/2026-03-23-Trend-Micros-Enterprise-Business-is-now-TrendAI-TM?utm_source=twitter_paid&utm_medium=social&utm_campaign=ent_corporate_aw_gl_int_rebrand&utm_content=carouse&twclid=2cmz9tfo72r6gek4sy5lql8osu"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "trendaisecurity"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.36786458333333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.48,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:16",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-17T08:24:58.117Z",
+        "homepage_url": "https://trendmicro.com/",
+        "example_url": "https://newsroom.trendmicro.com/2026-03-23-Trend-Micros-Enterprise-Business-is-now-TrendAI-TM?utm_source=twitter_paid&utm_medium=social&utm_campaign=ent_corporate_aw_gl_int_rebrand&utm_content=carouse&twclid=2cmz9tfo72r6gek4sy5lql8osu",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.trendmicro.com/en_us/business.html",
+        "example_final_url": "https://newsroom.trendmicro.com/2026-03-23-Trend-Micros-Enterprise-Business-is-now-TrendAI-TM?utm_source=twitter_paid&utm_medium=social&utm_campaign=ent_corporate_aw_gl_int_rebrand&utm_content=carouse&twclid=2cmz9tfo72r6gek4sy5lql8osu",
+        "homepage_content_type": "text/html;charset=utf-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 14,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 16,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "manduka.com",
       "entity": "Manduka",
       "kind": "unknown",
@@ -23086,13 +23210,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T08:23:33.331Z",
+        "fetched_at": "2026-06-17T08:24:59.288Z",
         "homepage_url": "https://angel.com/",
         "example_url": "https://www.angel.com/tickets/young-washington?twclid=27mi12v89i7upcqxfvv5wwjfcz",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.angel.com/",
-        "example_final_url": "https://www.angel.com/tickets/young-washington?twclid=27mi12v89i7upcqxfvv5wwjfcz",
+        "example_final_url": "https://www.angel.com/tickets/young-washington?twclid=27mi12v89i7upcqxfvv5wwjfcz&date=2026-07-04",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -26930,7 +27054,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T07:23:32.052Z",
+        "fetched_at": "2026-06-17T08:24:59.997Z",
         "homepage_url": "https://dell.com/",
         "example_url": "https://www.dell.com/en-us/shop/dell-laptops/xps-14-laptop/spd/xps-da14260-laptop?twclid=2b95mzwodix16nm7kii2sz7zvh",
         "homepage_status": 200,
@@ -27445,6 +27569,128 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 19,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "x.m",
+      "entity": "X M",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-17T06:57:03.721Z",
+      "last_seen_at": "2026-06-17T07:57:21.148Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://x.m/mjfree/status/2067065470641983623"
+        ],
+        "origin_counts": {
+          "journals": 2
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": true
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "doi_or_identifier_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.35770833333333335,
+          "confidence": 0.0491,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "doi_or_identifier_path_seen",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-17T08:25:00.110Z",
+        "homepage_url": "https://x.m/",
+        "example_url": "https://x.m/mjfree/status/2067065470641983623",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://x.m/",
+        "example_final_url": "https://x.m/mjfree/status/2067065470641983623",
+        "homepage_content_type": "",
+        "example_content_type": "",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -32707,7 +32953,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T06:23:31.775Z",
+        "fetched_at": "2026-06-17T06:24:55.458Z",
         "homepage_url": "https://dito.ph/",
         "example_url": "https://dito.ph/sandali?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_1&twclid=2estlcww980yee2hzsu5vdedbn",
         "homepage_status": 200,
@@ -32830,7 +33076,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T06:23:32.997Z",
+        "fetched_at": "2026-06-17T06:24:56.841Z",
         "homepage_url": "https://trenchers.ai/",
         "example_url": "https://trenchers.ai/?twclid=2di75phbt55c7y0zfq5ihrqinv",
         "homepage_status": 200,
@@ -32953,7 +33199,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T06:23:33.347Z",
+        "fetched_at": "2026-06-17T06:24:57.215Z",
         "homepage_url": "https://ohmycex.com/",
         "example_url": "https://ohmycex.com/?twclid=29oy2ts1zwr94hy6ispo25ixt1",
         "homepage_status": 521,
@@ -33076,7 +33322,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T06:53:31.380Z",
+        "fetched_at": "2026-06-17T06:54:55.747Z",
         "homepage_url": "https://hypernative.io/",
         "example_url": "https://www.hypernative.io/events-webinars/the-security-blindspot-the-problem-of-drainers-poisoners?utm_campaign=66726114-X-Ads-Cold-Reach&utm_source=twitter&utm_medium=paidsocial&utm_content=Webinar_Video_Type-drainers-intro_Download&twclid=22xu4h6p87fy3sh5d2hyd5fv7h",
         "homepage_status": 200,
@@ -33199,7 +33445,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T06:53:33.189Z",
+        "fetched_at": "2026-06-17T06:54:57.894Z",
         "homepage_url": "https://fortunashield.com/",
         "example_url": "https://fortunashield.com/?twclid=26a0c9wof4ax97jupe8vqekr9u",
         "homepage_status": 200,
@@ -33322,7 +33568,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T06:53:33.461Z",
+        "fetched_at": "2026-06-17T06:54:58.309Z",
         "homepage_url": "https://litmas.ai/",
         "example_url": "https://litmas.ai/litigation-ai-workflows-sign-up/?utm_source=x&utm_medium=paid-social&utm_campaign=x_pr_wv_follower-lals_us_si&utm_content=summary-judgment-overnight_lp-efficiency&twclid=2632rgrwnlsjvtuax0q5tz2iba",
         "homepage_status": 200,
@@ -33445,7 +33691,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T06:53:33.631Z",
+        "fetched_at": "2026-06-17T06:54:58.474Z",
         "homepage_url": "https://interserver.net/",
         "example_url": "https://www.interserver.net/vps/?twclid=29rh8w2who6jt1ovqguffmygqn",
         "homepage_status": 403,
