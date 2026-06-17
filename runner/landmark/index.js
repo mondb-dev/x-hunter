@@ -143,9 +143,13 @@ async function main() {
   if (!fs.existsSync(manifestDir)) fs.mkdirSync(manifestDir, { recursive: true });
 
   const editorialValidation = validateEditorialForMint(event, content);
+  // The canonical landmark page is served from the committed landmarks/ dir,
+  // so it only exists once a prior run has published + deployed this landmark.
+  // The old hardcoded `true` let the mint gate pass before the page was live.
+  const canonicalPagePublished = fs.existsSync(path.join(manifestDir, "editorial.html"));
   const finalEval = evaluateLandmark(event, {
     editorialValidationPass: editorialValidation.passed,
-    canonicalLandmarkPageExists: true,
+    canonicalLandmarkPageExists: canonicalPagePublished,
   });
   const tier = finalEval.tier;
   const supply = tier.editionSupply;
@@ -161,7 +165,7 @@ async function main() {
     `[landmark] Tier: ${tier.name} | Supply: ${supply} | Stage: ${finalEval.stage} | Landmark #${landmarkNumber}`
   );
   if (!editorialValidation.passed) {
-    console.log(`[landmark] Tier 1 validation pending: ${editorialValidation.reasons.join("; ")}`);
+    console.log(`[landmark] Editorial validation issues (blocks publish): ${editorialValidation.reasons.join("; ")}`);
   }
 
   if (DRY_RUN) {
@@ -184,6 +188,27 @@ async function main() {
     fs.writeFileSync(path.join(manifestDir, "editorial.html"), editorialHtml);
     fs.writeFileSync(path.join(manifestDir, "event.json"), JSON.stringify(event, null, 2));
     console.log(`[landmark] Dry run artifacts saved to ${manifestDir}`);
+    return;
+  }
+
+  // ── 3b. Editorial validation gate (hard — blocks publication) ───────────
+  // Never publish an X Article that fails validation. This blocks: tagging
+  // @accounts that never appeared in the source posts, articles that don't
+  // reference the detected topic, and missing/too-short content. Without this
+  // gate a fabricated editorial could go live and notify real, uninvolved
+  // users. Artifacts are saved for review instead of published.
+  if (!editorialValidation.passed) {
+    console.warn(
+      `[landmark] Editorial validation FAILED — NOT publishing. Reasons: ${editorialValidation.reasons.join("; ")}`
+    );
+    const editorialHtml = buildArweaveHtml(event, content, { landmarkNumber });
+    fs.writeFileSync(path.join(manifestDir, "editorial.html"), editorialHtml);
+    fs.writeFileSync(path.join(manifestDir, "event.json"), JSON.stringify(event, null, 2));
+    fs.writeFileSync(
+      path.join(manifestDir, "validation_failed.json"),
+      JSON.stringify(editorialValidation, null, 2)
+    );
+    console.log(`[landmark] Unpublished artifacts saved to ${manifestDir} for review.`);
     return;
   }
 

@@ -23,6 +23,7 @@ function loadState() {
     return {
       enabled: false,              // pipeline disabled until explicitly turned on
       last_detection_at: null,     // ISO timestamp of last successful detection
+      last_publish_at: null,       // ISO timestamp of last published article
       last_mint_at: null,          // ISO timestamp of last successful mint
       total_landmarks: 0,
       total_mints: 0,
@@ -56,12 +57,21 @@ function appendLog(entry) {
 // ── Cooldown checks ───────────────────────────────────────────────────────────
 
 /**
- * Returns true if enough time has passed since last mint.
+ * Returns true if enough time has passed since the last landmark was
+ * published or minted (whichever is more recent).
+ *
+ * Note: this previously keyed only off `last_mint_at`. Because minting is
+ * disabled, that timestamp is never set, which silently disabled the cooldown
+ * entirely. Publication now drives the cooldown too.
  */
 function isCooldownClear() {
   const state = loadState();
-  if (!state.last_mint_at) return true;
-  const elapsed = Date.now() - new Date(state.last_mint_at).getTime();
+  const stamps = [state.last_publish_at, state.last_mint_at]
+    .filter(Boolean)
+    .map(t => new Date(t).getTime())
+    .filter(t => !Number.isNaN(t));
+  if (stamps.length === 0) return true;
+  const elapsed = Date.now() - Math.max(...stamps);
   return elapsed >= COOLDOWN_MS;
 }
 
@@ -97,6 +107,7 @@ function recordLandmark(event, mintResult, meta = {}) {
   const now = new Date().toISOString();
 
   state.last_detection_at = now;
+  state.last_publish_at = meta.published ? now : (state.last_publish_at || null);
   state.last_mint_at = mintResult ? now : state.last_mint_at;
   state.total_landmarks++;
   state.total_candidates = (state.total_candidates || 0) + 1;
