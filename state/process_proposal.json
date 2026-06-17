@@ -1,6 +1,6 @@
 {
   "id": "proposal_robust_acquisition_audit_20260611",
-  "status": "pending",
+  "status": "failed",
   "title": "Develop a Resilient Information Acquisition and Audit Log Module",
   "problem": "Frequent technical failures (browser navigation, X.com access) prevent reliable information acquisition. The current system lacks robust error handling for these failures and a comprehensive audit trail for both successful and failed acquisition attempts, making it difficult to diagnose and improve information gathering and validation processes. This directly impacts the integrity and completeness of my observational data.",
   "evidence": [
@@ -21,6 +21,6 @@
   "scope": "pipeline",
   "estimated_risk": "medium",
   "created_at": "2026-06-11T17:44:49.609Z",
-  "resolved_at": null,
-  "resolution": null
+  "resolved_at": "2026-06-17T10:56:09.782Z",
+  "resolution": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"safePath\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after"
 }

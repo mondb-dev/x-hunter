@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-17T08:24:27.887Z",
+  "generated_at": "2026-06-17T11:24:32.041Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-17T08:25:00.111Z",
+  "profiled_at": "2026-06-17T11:25:05.131Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -1423,7 +1423,7 @@
       "entity": "Bit Ly",
       "kind": "unknown",
       "first_seen_at": "2026-04-06T16:33:36.000Z",
-      "last_seen_at": "2026-06-17T07:57:21.148Z",
+      "last_seen_at": "2026-06-17T08:27:30.993Z",
       "discovery": {
         "distinct_urls": 15,
         "example_urls": [
@@ -1436,7 +1436,7 @@
         "origin_counts": {
           "feed_buffer_reply": 12,
           "feed_buffer": 2,
-          "journals": 7
+          "journals": 10
         },
         "distinct_referring_accounts": 6,
         "sample_referring_accounts": [
@@ -2071,9 +2071,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-17T07:45:32.000Z",
+      "last_seen_at": "2026-06-17T10:41:47.000Z",
       "discovery": {
-        "distinct_urls": 5549,
+        "distinct_urls": 5556,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2082,8 +2082,8 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3317,
-          "feed_buffer_reply": 3557
+          "feed_buffer": 3320,
+          "feed_buffer_reply": 3564
         },
         "distinct_referring_accounts": 1826,
         "sample_referring_accounts": [
@@ -2123,7 +2123,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5549",
+            "distinct_urls:5556",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2161,7 +2161,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5549",
+            "distinct_urls:5556",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1826",
@@ -2307,7 +2307,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T09:53:34.047Z",
+        "fetched_at": "2026-06-17T09:54:58.906Z",
         "homepage_url": "https://grok.com/",
         "example_url": "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
         "homepage_status": 200,
@@ -3480,7 +3480,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T09:23:33.163Z",
+        "fetched_at": "2026-06-17T09:24:58.398Z",
         "homepage_url": "https://theepochtimes.com/",
         "example_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
         "homepage_status": 200,
@@ -3600,7 +3600,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T09:23:33.668Z",
+        "fetched_at": "2026-06-17T09:24:58.898Z",
         "homepage_url": "https://wikipedia.org/",
         "example_url": "https://en.wikipedia.org/wiki/2026_Iran_war",
         "homepage_status": 200,
@@ -6775,15 +6775,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T11:23:38.064Z",
+        "fetched_at": "2026-06-17T11:25:00.785Z",
         "homepage_url": "https://anymark.co/",
         "example_url": "https://anymark.co/?utm_source=x&utm_campaign=x771&twclid=293t0nesyim9m91au5fqoaj5s8",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://anymark.co/",
         "example_final_url": "https://anymark.co/?utm_source=x&utm_campaign=x771&twclid=293t0nesyim9m91au5fqoaj5s8",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -9170,7 +9170,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T09:23:34.233Z",
+        "fetched_at": "2026-06-17T09:25:01.870Z",
         "homepage_url": "https://moltbook.com/",
         "example_url": "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
         "homepage_status": 200,
@@ -9268,7 +9268,7 @@
           ]
         },
         "profile": {
-          "score": 0.5900000000000001,
+          "score": 0.55,
           "confidence": 0.75,
           "basis": [
             "meta_author:true",
@@ -9277,7 +9277,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:5",
+            "outbound_links:1",
             "opinion_marker:false"
           ]
         },
@@ -9297,7 +9297,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T11:23:42.064Z",
+        "fetched_at": "2026-06-17T11:25:04.558Z",
         "homepage_url": "https://framia.pro/",
         "example_url": "https://framia.pro/?utm_source=x&utm_campaign=twitter_adsmarch_framia_14_20260331&utm_medium=paid_social&twclid=2e6c8vey7aaz8sdwedu4gd0jgx",
         "homepage_status": 200,
@@ -9313,17 +9313,17 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 5,
+          "outbound_links_count": 3,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": true,
           "has_published_time": false,
           "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
+          "has_about_link": false,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 5,
+          "outbound_links_count": 1,
           "opinion_marker": false
         }
       }
@@ -11578,7 +11578,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T09:53:34.597Z",
+        "fetched_at": "2026-06-17T09:54:59.686Z",
         "homepage_url": "https://cosmos.so/",
         "example_url": "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc",
         "homepage_status": 200,
@@ -14596,7 +14596,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T09:23:34.717Z",
+        "fetched_at": "2026-06-17T09:25:02.261Z",
         "homepage_url": "https://pixelsuite.ai/",
         "example_url": "https://www.pixelsuite.ai/?twclid=21t2mc2zkr7fbld6fej146r5rz",
         "homepage_status": 200,
@@ -14721,7 +14721,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T10:53:38.124Z",
+        "fetched_at": "2026-06-17T11:25:04.926Z",
         "homepage_url": "https://theograce.com/",
         "example_url": "https://www.theograce.com/products/terry-diamond-heart-necklace-with-engraved-names-in-gold-plating?utm_term=Guitar&utm_id=41178982&utm_medium=cpc&utm_campaign=US_ALL_twitter_cpc_Display_MD26_M4W_Still&utm_source=twitter&utm_content=MD26&twclid=2dnpihgths0rs7qj2dk5rkgxbo",
         "homepage_status": 200,
@@ -15222,7 +15222,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T11:23:42.246Z",
+        "fetched_at": "2026-06-17T11:25:05.131Z",
         "homepage_url": "https://openinfer.io/",
         "example_url": "https://openinfer.io/news/2026-06-02-nvidia-dynamo-proved-inference-needs-a-control-plane/?twclid=27dzvvpluhv8xln5kqrwwhmmra",
         "homepage_status": 200,
@@ -16480,7 +16480,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T09:53:34.912Z",
+        "fetched_at": "2026-06-17T09:54:59.993Z",
         "homepage_url": "https://understandingwar.org/",
         "example_url": "https://understandingwar.org/research/middle-east/the-war-in-iran-operational-progress-but-challenges-remain/",
         "homepage_status": 200,
@@ -16832,7 +16832,7 @@
             "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:443",
+            "outbound_links:425",
             "opinion_marker:false"
           ]
         },
@@ -16852,7 +16852,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-14T09:53:35.381Z",
+        "fetched_at": "2026-06-17T09:55:00.521Z",
         "homepage_url": "https://cfr.org/",
         "example_url": "https://www.cfr.org/global-conflict-tracker/conflict/confrontation-between-united-states-and-iran",
         "homepage_status": 200,
@@ -16878,7 +16878,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 443,
+          "outbound_links_count": 425,
           "opinion_marker": false
         }
       }
@@ -22429,6 +22429,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.48,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:16",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.36786458333333333,
           "confidence": 0.08135,
@@ -22442,20 +22456,6 @@
             "referring_accounts:1",
             "origin_types:1",
             "track_record_unavailable"
-          ]
-        },
-        "profile": {
-          "score": 0.48,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:16",
-            "opinion_marker:false"
           ]
         }
       },
@@ -22488,6 +22488,85 @@
           "has_corrections_link": false,
           "outbound_links_count": 16,
           "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "nigerianobservernews.com",
+      "entity": "Nigerianobservernews",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-17T10:21:56.000Z",
+      "last_seen_at": "2026-06-17T10:21:56.000Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://nigerianobservernews.com/2026/06/igbinedion-university-stuns-world-clinches-huawei-ict-global-crown-women-in-tech-award/"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "huawei"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.36786458333333333,
+          "confidence": 0.08135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
         }
       }
     },
@@ -27578,14 +27657,14 @@
       "entity": "X M",
       "kind": "unknown",
       "first_seen_at": "2026-06-17T06:57:03.721Z",
-      "last_seen_at": "2026-06-17T07:57:21.148Z",
+      "last_seen_at": "2026-06-17T08:27:30.993Z",
       "discovery": {
         "distinct_urls": 1,
         "example_urls": [
           "https://x.m/mjfree/status/2067065470641983623"
         ],
         "origin_counts": {
-          "journals": 2
+          "journals": 3
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -27633,6 +27712,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.35770833333333335,
           "confidence": 0.0491,
@@ -27646,20 +27739,6 @@
             "referring_accounts:0",
             "origin_types:1",
             "track_record_unavailable"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
           ]
         }
       },

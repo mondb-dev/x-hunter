@@ -811,6 +811,25 @@
       "pushed_to_origin": null,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_robust_acquisition_audit_20260611",
+      "title": "Develop a Resilient Information Acquisition and Audit Log Module",
+      "status": "failed",
+      "proposed_at": "2026-06-11T17:44:49.609Z",
+      "resolved_at": "2026-06-17T10:56:09.782Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"safePath\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after",
+      "files_changed": [
+        "runner/lib/acquisition.js",
+        "runner/lib/audit_log.js",
+        "runner/lib/agent_tools.js",
+        "state/acquisition_log.json"
+      ],
+      "branch_name": "meta/proposal_robust_acquisition_audit_20260611",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }
