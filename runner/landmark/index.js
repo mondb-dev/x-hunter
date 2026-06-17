@@ -38,6 +38,7 @@ const { loadState, saveState, isCooldownClear, isDuplicate, recordLandmark } = r
 const { detect } = require("./detect");
 const { generateEditorial, buildArweaveHtml } = require("./editorial");
 const { evaluateLandmark, validateEditorialForMint } = require("./tiering");
+const { checkGrounding } = require("./grounding");
 const { generateHeroArt } = require("./art");
 const { renderAndSave }   = require("./render");
 const { critiqueArticle } = require("./critique");
@@ -211,6 +212,35 @@ async function main() {
     console.log(`[landmark] Unpublished artifacts saved to ${manifestDir} for review.`);
     return;
   }
+
+  // ── 3c. Grounding gate (hard — blocks fabricated editorials) ────────────
+  // Verifies the editorial only asserts real-world facts present in the source
+  // posts. The structural gate above cannot catch an editorial that invents an
+  // event while still citing real contributors and the detected keywords (the
+  // "Iran flotilla" failure mode). Fails closed: if grounding can't be
+  // confirmed, the editorial is not published.
+  console.log("\n── STEP 3c: Grounding Check ──");
+  const grounding = await checkGrounding(event, content);
+  event.grounding = grounding;
+  if (!grounding.grounded) {
+    console.warn(
+      `[landmark] Grounding check FAILED (${grounding.verdict || "unparsed"}) — NOT publishing.`
+    );
+    if (grounding.reason) console.warn(`[landmark] Reason: ${grounding.reason}`);
+    if (grounding.fabrications.length) {
+      console.warn(`[landmark] Unsupported claims: ${grounding.fabrications.join(" | ")}`);
+    }
+    const editorialHtml = buildArweaveHtml(event, content, { landmarkNumber });
+    fs.writeFileSync(path.join(manifestDir, "editorial.html"), editorialHtml);
+    fs.writeFileSync(path.join(manifestDir, "event.json"), JSON.stringify(event, null, 2));
+    fs.writeFileSync(
+      path.join(manifestDir, "grounding_failed.json"),
+      JSON.stringify(grounding, null, 2)
+    );
+    console.log(`[landmark] Unpublished artifacts saved to ${manifestDir} for review.`);
+    return;
+  }
+  console.log("[landmark] Grounding check passed — editorial claims supported by source posts.");
 
   // ── 4. Hero Art Generation (cover image for X Article) ──────────────────
 
