@@ -33,7 +33,7 @@ const NOVELTY_USER_MIN         = 3;
 const NOVELTY_PRIOR_RATE_MAX   = 0.1;
 const NOVELTY_KEYWORD_MIN      = 2;
 const MULTI_AXIS_MIN           = 2;
-const SENTIMENT_MULTIPLIER     = 3.0;
+const ENGAGEMENT_MULTIPLIER    = 3.0;   // engagement (likes+rts) spike vs rolling avg
 
 // ── Deduplication ─────────────────────────────────────────────────────────────
 
@@ -150,7 +150,7 @@ module.exports = {
   NOVELTY_PRIOR_RATE_MAX,
   NOVELTY_KEYWORD_MIN,
   MULTI_AXIS_MIN,
-  SENTIMENT_MULTIPLIER,
+  ENGAGEMENT_MULTIPLIER,
   DEDUP_WINDOW_MS,
   COOLDOWN_MS,
   COLLECT_PRICE_SOL,

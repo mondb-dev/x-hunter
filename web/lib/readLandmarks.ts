@@ -31,8 +31,16 @@ export function getAllLandmarks(): LandmarkEvent[] {
   const entries = fs
     .readdirSync(LANDMARKS_DIR)
     .filter((name) => {
-      const evPath = path.join(LANDMARKS_DIR, name, "event.json");
-      return fs.existsSync(evPath);
+      // Only render real, PUBLISHED landmarks: a `landmark_<n>` directory that
+      // has both a published manifest and event data. Dry-run / rejected
+      // artifacts (e.g. under `_review/`) and never-published dirs lack
+      // manifest.json and are excluded.
+      if (!/^landmark_\d+$/.test(name)) return false;
+      const dir = path.join(LANDMARKS_DIR, name);
+      return (
+        fs.existsSync(path.join(dir, "manifest.json")) &&
+        fs.existsSync(path.join(dir, "event.json"))
+      );
     })
     .sort() // landmark_1, landmark_2, ... — sort ascending, reverse for newest
     .reverse();

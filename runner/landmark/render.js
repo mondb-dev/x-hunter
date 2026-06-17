@@ -68,6 +68,44 @@ function renderCardSvg(event, content, artBuf, opts = {}) {
  * @returns {Promise<Buffer>} PNG buffer
  */
 async function svgToPng(svg) {
+  const html = `
+      <!DOCTYPE html>
+      <html><head><style>
+        * { margin: 0; padding: 0; }
+        body { width: 600px; height: 840px; overflow: hidden; }
+      </style></head>
+      <body>${svg}</body></html>
+    `;
+
+  async function renderWithPage(page) {
+    await page.setViewport({ width: 600, height: 840, deviceScaleFactor: 2 });
+    await page.setContent(html, { waitUntil: "networkidle0" });
+    const buf = await page.screenshot({
+      type: "png",
+      clip: { x: 0, y: 0, width: 600, height: 840 },
+    });
+    return Buffer.from(buf);
+  }
+
+  // Prefer the already-running CDP-managed Chrome so we don't spawn a second
+  // browser competing for resources on the VM. Disconnect (not close) when done
+  // so the shared browser keeps running.
+  try {
+    const { connectBrowser } = require("../cdp");
+    const browser = await connectBrowser();
+    let page;
+    try {
+      page = await browser.newPage();
+      return await renderWithPage(page);
+    } finally {
+      if (page) { try { await page.close(); } catch { /* ignore */ } }
+      try { browser.disconnect(); } catch { /* ignore */ }
+    }
+  } catch (cdpErr) {
+    console.warn(`[render] CDP render unavailable (${cdpErr.message}) — launching standalone Chrome`);
+  }
+
+  // Fallback: standalone headless Chrome (only when CDP is unreachable).
   let puppeteer;
   try {
     puppeteer = require("puppeteer-core");
@@ -75,7 +113,6 @@ async function svgToPng(svg) {
     throw new Error("[render] puppeteer-core not available — cannot render PNG");
   }
 
-  // Find Chrome/Chromium
   const executablePath = findChrome();
   if (!executablePath) {
     throw new Error("[render] No Chrome/Chromium binary found");
@@ -88,26 +125,7 @@ async function svgToPng(svg) {
   });
 
   try {
-    const page = await browser.newPage();
-    await page.setViewport({ width: 600, height: 840, deviceScaleFactor: 2 });
-
-    // Render SVG as a page
-    const html = `
-      <!DOCTYPE html>
-      <html><head><style>
-        * { margin: 0; padding: 0; }
-        body { width: 600px; height: 840px; overflow: hidden; }
-      </style></head>
-      <body>${svg}</body></html>
-    `;
-
-    await page.setContent(html, { waitUntil: "networkidle0" });
-    const buf = await page.screenshot({
-      type: "png",
-      clip: { x: 0, y: 0, width: 600, height: 840 },
-    });
-
-    return Buffer.from(buf);
+    return await renderWithPage(await browser.newPage());
   } finally {
     await browser.close();
   }

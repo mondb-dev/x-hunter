@@ -34,7 +34,7 @@ const path = require("path");
 // ── Module imports ────────────────────────────────────────────────────────────
 
 const { PATHS } = require("./config");
-const { loadState, saveState, isCooldownClear, isDuplicate, recordLandmark } = require("./state");
+const { loadState, saveState, isCooldownClear, isDuplicate, recordLandmark, recordAttempt } = require("./state");
 const { detect } = require("./detect");
 const { generateEditorial, buildArweaveHtml } = require("./editorial");
 const { evaluateLandmark, validateEditorialForMint } = require("./tiering");
@@ -140,8 +140,23 @@ async function main() {
   // Attach headline to event for downstream use
   event.headline = content.headline;
   const landmarkNumber = (state.total_landmarks || 0) + 1;
+
+  // Canonical dir for a PUBLISHED landmark. Created lazily, only when we
+  // actually proceed to publish — so dry-runs and rejected events never create
+  // or overwrite a landmark_N dir (which the website renders).
   const manifestDir = path.join(PATHS.LANDMARKS_DIR, `landmark_${landmarkNumber}`);
-  if (!fs.existsSync(manifestDir)) fs.mkdirSync(manifestDir, { recursive: true });
+
+  // Scratch location for non-publishing outcomes (dry-run + gate failures),
+  // keyed by the event window so distinct rejected events don't overwrite each
+  // other. Nested under `_review/`, which the web reader ignores.
+  const reviewDir = path.join(PATHS.LANDMARKS_DIR, "_review", `evt_${event.windowTs}`);
+  function saveReviewArtifacts(extraName, extraObj) {
+    fs.mkdirSync(reviewDir, { recursive: true });
+    fs.writeFileSync(path.join(reviewDir, "editorial.html"), buildArweaveHtml(event, content, { landmarkNumber }));
+    fs.writeFileSync(path.join(reviewDir, "event.json"), JSON.stringify(event, null, 2));
+    if (extraName) fs.writeFileSync(path.join(reviewDir, extraName), JSON.stringify(extraObj, null, 2));
+    return reviewDir;
+  }
 
   const editorialValidation = validateEditorialForMint(event, content);
   // The canonical landmark page is served from the committed landmarks/ dir,
@@ -184,11 +199,9 @@ async function main() {
       topKeywords: event.topKeywords,
     }, null, 2));
 
-    // Still write editorial to disk for review
-    const editorialHtml = buildArweaveHtml(event, content, { landmarkNumber });
-    fs.writeFileSync(path.join(manifestDir, "editorial.html"), editorialHtml);
-    fs.writeFileSync(path.join(manifestDir, "event.json"), JSON.stringify(event, null, 2));
-    console.log(`[landmark] Dry run artifacts saved to ${manifestDir}`);
+    // Write artifacts to the review dir (never the canonical landmark_N dir)
+    const dir = saveReviewArtifacts();
+    console.log(`[landmark] Dry run artifacts saved to ${dir}`);
     return;
   }
 
@@ -202,14 +215,9 @@ async function main() {
     console.warn(
       `[landmark] Editorial validation FAILED — NOT publishing. Reasons: ${editorialValidation.reasons.join("; ")}`
     );
-    const editorialHtml = buildArweaveHtml(event, content, { landmarkNumber });
-    fs.writeFileSync(path.join(manifestDir, "editorial.html"), editorialHtml);
-    fs.writeFileSync(path.join(manifestDir, "event.json"), JSON.stringify(event, null, 2));
-    fs.writeFileSync(
-      path.join(manifestDir, "validation_failed.json"),
-      JSON.stringify(editorialValidation, null, 2)
-    );
-    console.log(`[landmark] Unpublished artifacts saved to ${manifestDir} for review.`);
+    recordAttempt(event, "validation_failed", editorialValidation.reasons.join("; "));
+    const dir = saveReviewArtifacts("validation_failed.json", editorialValidation);
+    console.log(`[landmark] Unpublished artifacts saved to ${dir} for review.`);
     return;
   }
 
@@ -230,17 +238,15 @@ async function main() {
     if (grounding.fabrications.length) {
       console.warn(`[landmark] Unsupported claims: ${grounding.fabrications.join(" | ")}`);
     }
-    const editorialHtml = buildArweaveHtml(event, content, { landmarkNumber });
-    fs.writeFileSync(path.join(manifestDir, "editorial.html"), editorialHtml);
-    fs.writeFileSync(path.join(manifestDir, "event.json"), JSON.stringify(event, null, 2));
-    fs.writeFileSync(
-      path.join(manifestDir, "grounding_failed.json"),
-      JSON.stringify(grounding, null, 2)
-    );
-    console.log(`[landmark] Unpublished artifacts saved to ${manifestDir} for review.`);
+    recordAttempt(event, "grounding_failed", grounding.reason || grounding.fabrications.join(" | "));
+    const dir = saveReviewArtifacts("grounding_failed.json", grounding);
+    console.log(`[landmark] Unpublished artifacts saved to ${dir} for review.`);
     return;
   }
   console.log("[landmark] Grounding check passed — editorial claims supported by source posts.");
+
+  // We are committed to publishing — create the canonical landmark dir now.
+  fs.mkdirSync(manifestDir, { recursive: true });
 
   // ── 4. Hero Art Generation (cover image for X Article) ──────────────────
 
@@ -269,7 +275,10 @@ async function main() {
       landmarkNumber: landmarkNumber,
       editionSupply:  supply,
       outputDir:      manifestDir,
-      png:            true,
+      // PNG is only needed for NFT minting (currently disabled) and the raster
+      // step is the only thing that touches a browser here. Keep it off until
+      // minting is enabled to avoid the render cost; the SVG card is still saved.
+      png:            false,
     });
     console.log(`[landmark] Card SVG: ${cardPaths.svgPath}`);
     if (cardPaths.pngPath) console.log(`[landmark] Card PNG: ${cardPaths.pngPath}`);
@@ -299,8 +308,15 @@ async function main() {
 
     browser.disconnect();
   } catch (err) {
+    // Do NOT throw (the old behavior crashed the whole pipeline AFTER paying for
+    // editorial + art). Record the attempt so the dedup window prevents
+    // re-detecting and re-generating this same event every scan. Art/card remain
+    // in manifestDir for inspection but, without a manifest.json, the website
+    // will not render the dir.
     console.error(`[landmark] X Article publication failed: ${err.message}`);
-    throw err;
+    recordAttempt(event, "publish_failed", err.message);
+    console.warn("[landmark] Recorded failed attempt — this event is suppressed for the dedup window.");
+    return;
   }
 
   // ── 6. Record ───────────────────────────────────────────────────────────

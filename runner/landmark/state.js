@@ -14,6 +14,8 @@ const fs   = require("fs");
 const path = require("path");
 const { PATHS, COOLDOWN_MS, DEDUP_WINDOW_MS } = require("./config");
 
+const ATTEMPTS_PATH = path.join(PATHS.STATE, "landmark_attempts.json");
+
 // ── Landmark state (detection metadata) ───────────────────────────────────────
 
 function loadState() {
@@ -54,6 +56,36 @@ function appendLog(entry) {
   fs.writeFileSync(PATHS.LANDMARK_LOG, JSON.stringify(log, null, 2));
 }
 
+// ── Attempt ledger (non-publishing outcomes) ──────────────────────────────────
+//
+// Records events that were processed but did NOT publish (validation/grounding
+// failure, publish failure). The published-landmark log only records successes,
+// so without this ledger a failed event would be re-detected and re-generated
+// (re-paying for editorial + art) on every scan until it aged out of the
+// candidate window.
+
+function loadAttempts() {
+  try {
+    return JSON.parse(fs.readFileSync(ATTEMPTS_PATH, "utf-8"));
+  } catch {
+    return { attempts: [] };
+  }
+}
+
+function recordAttempt(event, status, reason) {
+  const data = loadAttempts();
+  data.attempts.push({
+    detected_at: new Date().toISOString(),
+    window_ts: event.windowTs || null,
+    top_keywords: event.topKeywords || [],
+    status,                       // validation_failed | grounding_failed | publish_failed
+    reason: reason || null,
+  });
+  // Bound file growth — keep the most recent 200 attempts.
+  if (data.attempts.length > 200) data.attempts = data.attempts.slice(-200);
+  fs.writeFileSync(ATTEMPTS_PATH, JSON.stringify(data, null, 2));
+}
+
 // ── Cooldown checks ───────────────────────────────────────────────────────────
 
 /**
@@ -75,27 +107,43 @@ function isCooldownClear() {
   return elapsed >= COOLDOWN_MS;
 }
 
+/** True if `topKeywords` overlaps a prior entry's keywords by >50%. */
+function keywordOverlapDuplicate(kwSet, entryKeywords) {
+  const entryKws = new Set((entryKeywords || []).map(k => String(k).toLowerCase()));
+  let overlap = 0;
+  for (const kw of kwSet) {
+    if (entryKws.has(kw)) overlap++;
+  }
+  return overlap >= Math.ceil(kwSet.size * 0.5);
+}
+
 /**
- * Returns true if a similar event was already landed within the dedup window.
- * Similarity is checked by overlapping top keywords.
+ * Returns true if a similar event was already published OR recently attempted
+ * (and failed) within the dedup window. Similarity is >50% top-keyword overlap.
+ *
+ * Previously this only consulted the published-landmark log, so a failed-publish
+ * event was re-detected and re-processed every scan. It now also consults the
+ * attempt ledger.
  */
 function isDuplicate(topKeywords) {
-  const log = loadLog();
   const now = Date.now();
-  const kwSet = new Set(topKeywords.map(k => k.toLowerCase()));
+  const kwSet = new Set((topKeywords || []).map(k => k.toLowerCase()));
+  if (kwSet.size === 0) return false;
 
-  for (const entry of log.landmarks) {
+  // Published landmarks
+  for (const entry of loadLog().landmarks) {
     const entryTs = new Date(entry.detected_at).getTime();
     if (now - entryTs > DEDUP_WINDOW_MS) continue;
-
-    const entryKws = new Set((entry.top_keywords || []).map(k => k.toLowerCase()));
-    let overlap = 0;
-    for (const kw of kwSet) {
-      if (entryKws.has(kw)) overlap++;
-    }
-    // >50% keyword overlap = duplicate
-    if (overlap >= Math.ceil(kwSet.size * 0.5)) return true;
+    if (keywordOverlapDuplicate(kwSet, entry.top_keywords)) return true;
   }
+
+  // Recent non-publishing attempts
+  for (const a of loadAttempts().attempts) {
+    const ts = new Date(a.detected_at).getTime();
+    if (now - ts > DEDUP_WINDOW_MS) continue;
+    if (keywordOverlapDuplicate(kwSet, a.top_keywords)) return true;
+  }
+
   return false;
 }
 
@@ -138,6 +186,8 @@ module.exports = {
   saveState,
   loadLog,
   appendLog,
+  loadAttempts,
+  recordAttempt,
   isCooldownClear,
   isDuplicate,
   recordLandmark,

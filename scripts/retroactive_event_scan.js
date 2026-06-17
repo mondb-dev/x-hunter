@@ -214,11 +214,11 @@ for (let i = ROLLING_WINDOWS; i < windowList.length; i++) {
     }
   }
   const rollingAvgEng = rollingEngCount > 0 ? rollingEngSum / rollingEngCount : 1;
-  const sentimentExtreme = avgEngagement > rollingAvgEng * 3;
-  
+  const engagementExtreme = avgEngagement > rollingAvgEng * 3;
+
   // Count signals
   const signals = [
-    volumeAnomaly, crossCluster, velocitySpike, novelty, multiAxis, sentimentExtreme
+    volumeAnomaly, crossCluster, velocitySpike, novelty, multiAxis, engagementExtreme
   ];
   const signalCount = signals.filter(Boolean).length;
   
@@ -236,7 +236,7 @@ for (let i = ROLLING_WINDOWS; i < windowList.length; i++) {
         velocity: velocitySpike,
         novelty,
         multiAxis,
-        sentiment: sentimentExtreme,
+        engagement: engagementExtreme,
       },
       topKeywords: topKws.slice(0, 5).map(([kw, u]) => `${kw} (${u.size} users)`),
       crossClusterTopics: crossClusterTopics.slice(0, 3).map(t => `${t.keyword} (${t.clusters} clusters)`),

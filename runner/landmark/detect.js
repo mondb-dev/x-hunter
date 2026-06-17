@@ -10,7 +10,7 @@
  *   3. Velocity — rate of posts accelerating vs previous window
  *   4. Novelty — low-prior-frequency keywords suddenly spiking
  *   5. Multi-axis impact — topic maps to ≥2 belief axes
- *   6. Sentiment extremity — engagement spikes above 3x rolling average
+ *   6. Engagement extremity — engagement (likes+rts) spikes above 3x rolling average
  *
  * Pure function: takes DB handle, returns event objects. No side effects.
  */
@@ -32,7 +32,7 @@ const {
   NOVELTY_PRIOR_RATE_MAX,
   NOVELTY_KEYWORD_MIN,
   MULTI_AXIS_MIN,
-  SENTIMENT_MULTIPLIER,
+  ENGAGEMENT_MULTIPLIER,
   DEDUP_WINDOW_MS,
   STOP,
   PATHS,
@@ -65,14 +65,49 @@ function extractTopics(text) {
 }
 
 /**
- * Build cluster map from trust graph.
+ * Build cluster map for cross-cluster detection.
  * Returns { username_lower: cluster_label }
+ *
+ * Trust-graph labels are authoritative but only exist for followed/classified
+ * accounts — which made the cross-cluster signal blind to organic/unfollowed
+ * communities (the dominant share of the feed). For accounts not in the trust
+ * graph, derive a coarse fallback cluster from their stored top_keywords mapped
+ * to the dominant ontology axis. Fallback labels are namespaced ("axis:<id>")
+ * so they never collide with the trust-graph taxonomy labels.
  */
-function buildClusterMap() {
+function buildClusterMap(dbRaw, axisKeywords = {}) {
   const tg = loadJson(PATHS.TRUST_GRAPH, { accounts: {} });
   const map = {};
   for (const [user, data] of Object.entries(tg.accounts || {})) {
     if (data.cluster) map[user.toLowerCase()] = data.cluster;
+  }
+
+  const axisEntries = Object.entries(axisKeywords);
+  if (dbRaw && axisEntries.length) {
+    let rows = [];
+    try {
+      rows = dbRaw.prepare(
+        "SELECT username, top_keywords FROM accounts WHERE top_keywords != ''"
+      ).all();
+    } catch { rows = []; }
+
+    for (const row of rows) {
+      const user = String(row.username || "").toLowerCase();
+      if (!user || map[user]) continue;   // trust-graph label wins
+      const kws = String(row.top_keywords || "")
+        .toLowerCase()
+        .split(/[,\s]+/)
+        .filter(w => w.length > 3 && !STOP.has(w));
+      if (!kws.length) continue;
+
+      let bestAxis = null, bestOverlap = 0;
+      for (const [axisId, terms] of axisEntries) {
+        let overlap = 0;
+        for (const w of kws) if (terms.has(w)) overlap++;
+        if (overlap > bestOverlap) { bestOverlap = overlap; bestAxis = axisId; }
+      }
+      if (bestAxis && bestOverlap > 0) map[user] = `axis:${bestAxis}`;
+    }
   }
   return map;
 }
@@ -143,10 +178,10 @@ function computeMultiAxis(topKwStrings, axisKeywords) {
   return { axes: Array.from(impacted), fired: impacted.size >= MULTI_AXIS_MIN };
 }
 
-function computeSentiment(posts, rollingAvgEng) {
+function computeEngagement(posts, rollingAvgEng) {
   const total = posts.reduce((s, p) => s + (p.likes || 0) + (p.rts || 0), 0);
   const avg = total / (posts.length || 1);
-  return { avg, fired: avg > rollingAvgEng * SENTIMENT_MULTIPLIER };
+  return { avg, fired: avg > rollingAvgEng * ENGAGEMENT_MULTIPLIER };
 }
 
 // ── Main detection function ───────────────────────────────────────────────────
@@ -208,9 +243,9 @@ function detect(dbRaw, opts = {}) {
   // Adaptive rolling window: 1/3 of available data
   const rollingSize = Math.min(84, Math.max(3, Math.floor(windowList.length / 3)));
 
-  // 3. Load context (cluster map + axis keywords)
-  const clusterMap = buildClusterMap();
+  // 3. Load context (axis keywords first — feeds the cluster fallback)
   const axisKws = buildAxisKeywords();
+  const clusterMap = buildClusterMap(dbRaw, axisKws);
 
   // 4. Determine signal gate from daily volume
   const totalPosts = posts.length;
@@ -260,7 +295,7 @@ function detect(dbRaw, opts = {}) {
     const velocity  = computeVelocity(win.posts.length, windowList[i - 1].posts.length);
     const novelty   = computeNovelty(topKws, rollingKwFreq, rollingSize);
     const multiAxis = computeMultiAxis(topKwStrings, axisKws);
-    const sentiment = computeSentiment(win.posts, rollingAvgEng);
+    const engagement = computeEngagement(win.posts, rollingAvgEng);
 
     const signalFlags = {
       volume:       volume.fired,
@@ -268,7 +303,7 @@ function detect(dbRaw, opts = {}) {
       velocity:     velocity.fired,
       novelty:      novelty.fired,
       multiAxis:    multiAxis.fired,
-      sentiment:    sentiment.fired,
+      engagement:   engagement.fired,
     };
     const signalCount = Object.values(signalFlags).filter(Boolean).length;
 
@@ -288,7 +323,7 @@ function detect(dbRaw, opts = {}) {
           velocityRatio: parseFloat(velocity.ratio.toFixed(2)),
           noveltyCount: novelty.count,
           axesImpacted: multiAxis.axes,
-          sentimentAvg: parseFloat(sentiment.avg.toFixed(2)),
+          engagementAvg: parseFloat(engagement.avg.toFixed(2)),
           crossClusterTopics: cluster.topics.slice(0, 5),
         },
         topKeywords: topKws.slice(0, 5).map(([kw, u]) => kw),
