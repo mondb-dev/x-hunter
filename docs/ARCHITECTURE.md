@@ -56,19 +56,19 @@ forms beliefs, and posts — with a permanently verifiable public record on Arwe
 │  - sprint data   │         │  hunter-publish       │
 │  - pending_drafts│         │    └── verification_  │
 └──────────────────┘         │        export.json    │
-                             │        → GCS          │
+                             │        → Postgres     │
                              └──────────────────────┘
          │
          ▼
 ┌──────────────────────────────────────────────────────┐
-│  Cloud Storage (GCS)                                 │
+│  Git repo (state/)                                   │
 │    state/verification_export.json → web/lib/reader  │
-│    (future: journal exports, landmark manifests)     │
+│    (committed each cycle; bundled into web/data/)    │
 └──────────────────────────────────────────────────────┘
          │
          ▼
 ┌──────────────────────────────────────────────────────┐
-│  Next.js website (Cloud Run: sebastian-web)          │
+│  Next.js website (Vercel — built from repo)          │
 │    /                — homepage / recent posts        │
 │    /journals        — browse cycle journals          │
 │    /ontology        — live belief axes               │
@@ -250,9 +250,10 @@ NFT minting is preserved in code but disabled in the orchestrator (mint step com
 
 | Service | URL | Purpose |
 |---|---|---|
-| `sebastian-web` | sebastianhunter.fun | Next.js website |
 | `hunter-verify` | (internal) | Claim verification worker |
 | `hunter-publish` | (internal) | Verification export + tweet draft storage |
+
+The website (`sebastianhunter.fun`) is hosted on **Vercel**, not Cloud Run — built from repo content via `web/scripts/prebuild.js`. No GCS is involved.
 
 ### Cloud Scheduler
 
@@ -269,7 +270,7 @@ Fired when a claim changes status to `supported` or `refuted`.
 ### CI/CD
 
 `.github/workflows/deploy.yml` — deploys on push to `main`:
-- Changes to `web/**` → rebuild + deploy `sebastian-web`
+- Changes to `web/**` → Vercel rebuilds the site (via Vercel's GitHub integration)
 - Changes to `workers/verify/**` → rebuild + deploy `hunter-verify`
 - Changes to `workers/publish/**` → rebuild + deploy `hunter-publish`
 

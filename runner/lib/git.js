@@ -132,8 +132,7 @@ function triggerVercelDeploy(hookUrl) {
 // ── generateManifests ────────────────────────────────────────────────────────
 /**
  * Write articles/manifest.json and journals/manifest.json so the web app can
- * list files without relying on GCS FUSE directory listing cache (which is
- * stale for up to 60s after new files land in GCS).
+ * list files deterministically instead of relying on a directory scan at build.
  *
  * Each manifest: { generated: ISO string, files: string[] } — sorted newest-first.
  * The web readers fall back to readdirSync if manifests are missing.

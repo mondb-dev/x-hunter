@@ -21,7 +21,6 @@
  * Env vars:
  *   DATABASE_URL           — Postgres connection string
  *   GCP_PROJECT            — GCP project ID
- *   GCS_DATA_BUCKET        — GCS bucket for data sync (default: sebastian-hunter-data)
  *   PG_SSL                 — set to 'false' for same-VPC connections
  */
 

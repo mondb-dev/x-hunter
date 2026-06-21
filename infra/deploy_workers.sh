@@ -8,14 +8,12 @@
 #   GCP_PROJECT       — GCP project ID (default: sebastian-hunter)
 #   GCP_REGION        — Region (default: us-central1)
 #   DATABASE_URL      — Postgres connection string
-#   GCS_DATA_BUCKET   — GCS bucket (default: sebastian-hunter-data)
 
 set -euo pipefail
 
 PROJECT="${GCP_PROJECT:-sebastian-hunter}"
 REGION="${GCP_REGION:-us-central1}"
 REGISTRY="${REGION}-docker.pkg.dev/${PROJECT}/hunter"
-BUCKET="${GCS_DATA_BUCKET:-sebastian-hunter-data}"
 
 # Ensure Artifact Registry repo exists
 gcloud artifacts repositories describe hunter \
@@ -74,7 +72,7 @@ deploy_publish() {
     --max-instances=3 \
     --min-instances=0 \
     --timeout=60 \
-    --set-env-vars="DATABASE_URL=${DATABASE_URL},GCP_PROJECT=${PROJECT},GCS_DATA_BUCKET=${BUCKET},PG_SSL=false" \
+    --set-env-vars="DATABASE_URL=${DATABASE_URL},GCP_PROJECT=${PROJECT},PG_SSL=false" \
     --service-account="sebastian-hunter-ai@${PROJECT}.iam.gserviceaccount.com"
 
   cd ../..

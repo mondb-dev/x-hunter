@@ -262,7 +262,7 @@ archive.js (post-cycle)
 Daily (once/24h via runner/lib/daily.js)
   → daily_snapshot + article + checkpoint + ponder + sprint
   → trust recalibration (accounts.trust ± 0.5, last 7d performance)
-  → git commit + push → Vercel deploy + GCS sync
+  → git commit + push → Vercel rebuild
 ```
 
 ---
