@@ -333,7 +333,7 @@ function housekeeping({ today, vercelDeployHook }) {
     message: `daily: ${today}`,
   });
 
-  // Deploy: Vercel (legacy) + GCS sync for Cloud Run
+  // Deploy: trigger Vercel rebuild
   triggerVercelDeploy(vercelDeployHook);
 }
 

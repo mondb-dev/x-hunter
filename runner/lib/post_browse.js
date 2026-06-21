@@ -298,7 +298,7 @@ function postBrowse({ cycle, today, hour }) {
     runScript(path.join(PROJECT_ROOT, 'runner/proactive_reply.js'));
   }
 
-    // ── 9. Vercel deploy + GCS sync (if changes were committed) ───────────
+    // ── 9. Vercel deploy (if changes were committed) ───────────
   const changes = execSync('git status --porcelain=v1', { encoding: 'utf-8' });
   if (changes.length > 0) {
     log('Changes detected, triggering sync...');

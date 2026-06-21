@@ -1,0 +1,6 @@
+[Unit]
+Description=Sebastian runner hang-guard (restart if orchestrator.log is stale)
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/sebastian-watchdog.sh
