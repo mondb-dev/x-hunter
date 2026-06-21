@@ -1,156 +1,164 @@
 {
-  "checked_at": "2026-06-20T22:04:34.472Z",
-  "evidence_24h": 54,
-  "unique_sources": 34,
-  "status": "clean",
-  "alerts": [],
-  "summary": "Evidence distribution looks healthy (54 entries across 34 sources, 10 axes).",
+  "checked_at": "2026-06-21T22:23:29.029Z",
+  "evidence_24h": 42,
+  "unique_sources": 22,
+  "status": "warning",
+  "alerts": [
+    {
+      "type": "source_dominance",
+      "severity": "moderate",
+      "detail": "@unknown accounts for 29% of today's evidence (12/42)",
+      "username": "unknown",
+      "share": 0.286
+    }
+  ],
+  "summary": "1 capture alert(s) detected:\n[MODERATE] @unknown accounts for 29% of today's evidence (12/42)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 6,
-      "share": 0.111
-    },
-    "realmaalouf": {
-      "username": "realmaalouf",
-      "count": 4,
-      "share": 0.074
+      "count": 12,
+      "share": 0.286
     },
     "furkangozukara": {
       "username": "furkangozukara",
+      "count": 4,
+      "share": 0.095
+    },
+    "chicago1ray": {
+      "username": "chicago1ray",
+      "count": 4,
+      "share": 0.095
+    },
+    "ericldaugh": {
+      "username": "ericldaugh",
       "count": 3,
-      "share": 0.056
-    },
-    "remydubeau": {
-      "username": "remydubeau",
-      "count": 3,
-      "share": 0.056
-    },
-    "coinvo": {
-      "username": "coinvo",
-      "count": 3,
-      "share": 0.056
-    },
-    "acyn": {
-      "username": "acyn",
-      "count": 2,
-      "share": 0.037
-    },
-    "nicksortor": {
-      "username": "nicksortor",
-      "count": 2,
-      "share": 0.037
+      "share": 0.071
     },
     "x_realityreport": {
       "username": "x_realityreport",
       "count": 2,
-      "share": 0.037
+      "share": 0.048
     },
-    "wallstreetapes": {
-      "username": "wallstreetapes",
-      "count": 2,
-      "share": 0.037
+    "remydubeau": {
+      "username": "remydubeau",
+      "count": 1,
+      "share": 0.024
     },
-    "ericldaugh": {
-      "username": "ericldaugh",
-      "count": 2,
-      "share": 0.037
+    "scientiaforbill": {
+      "username": "scientiaforbill",
+      "count": 1,
+      "share": 0.024
+    },
+    "heccles94": {
+      "username": "heccles94",
+      "count": 1,
+      "share": 0.024
+    },
+    "atrupar": {
+      "username": "atrupar",
+      "count": 1,
+      "share": 0.024
+    },
+    "mhdksafa": {
+      "username": "mhdksafa",
+      "count": 1,
+      "share": 0.024
     }
   },
   "axis_concentration": {
-    "axis_epistemic_integrity": {
-      "axis_id": "axis_epistemic_integrity",
-      "label": "Truth and Evidence in Public Discourse",
-      "count": 22,
-      "share": 0.407
-    },
     "axis_power_accountability": {
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
-      "count": 6,
-      "share": 0.111
+      "count": 12,
+      "share": 0.286
     },
-    "axis_media_integrity_v1": {
-      "axis_id": "axis_media_integrity_v1",
-      "label": "Integrity of Information and Social Media Manipulation",
-      "count": 6,
-      "share": 0.111
+    "axis_epistemic_integrity": {
+      "axis_id": "axis_epistemic_integrity",
+      "label": "Truth and Evidence in Public Discourse",
+      "count": 11,
+      "share": 0.262
     },
     "axis_national_sovereignty_v_intl_law_v1": {
       "axis_id": "axis_national_sovereignty_v_intl_law_v1",
       "label": "National Sovereignty vs. International Law",
-      "count": 6,
-      "share": 0.111
-    },
-    "axis_political_trust_corruption_v1": {
-      "axis_id": "axis_political_trust_corruption_v1",
-      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
       "count": 4,
-      "share": 0.074
+      "share": 0.095
     },
     "axis_human_rights_exploitation_v1": {
       "axis_id": "axis_human_rights_exploitation_v1",
       "label": "Human Rights and Exploitation",
       "count": 4,
-      "share": 0.074
+      "share": 0.095
+    },
+    "axis_political_trust_corruption_v1": {
+      "axis_id": "axis_political_trust_corruption_v1",
+      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
+      "count": 2,
+      "share": 0.048
+    },
+    "axis_ai_societal_impact_v1": {
+      "axis_id": "axis_ai_societal_impact_v1",
+      "label": "Societal Impact and Ethical Concerns of AI/Robots",
+      "count": 2,
+      "share": 0.048
+    },
+    "axis_media_integrity_v1": {
+      "axis_id": "axis_media_integrity_v1",
+      "label": "Integrity of Information and Social Media Manipulation",
+      "count": 2,
+      "share": 0.048
+    },
+    "axis_geopolitical_rhetoric_v1": {
+      "axis_id": "axis_geopolitical_rhetoric_v1",
+      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
+      "count": 2,
+      "share": 0.048
     },
     "axis_authoritarian_self_determination_v1": {
       "axis_id": "axis_authoritarian_self_determination_v1",
       "label": "Authoritarian Control vs. Individual/Collective Self-Determination",
       "count": 2,
-      "share": 0.037
+      "share": 0.048
     },
-    "axis_religion_politics_war_v1": {
-      "axis_id": "axis_religion_politics_war_v1",
-      "label": "Religion, Politics, and War Rhetoric",
-      "count": 2,
-      "share": 0.037
-    },
-    "axis_geopolitical_rhetoric_v1": {
-      "axis_id": "axis_geopolitical_rhetoric_v1",
-      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
+    "axis_political_moral_conduct_v1": {
+      "axis_id": "axis_political_moral_conduct_v1",
+      "label": "Political Integrity and Moral Conduct in Public Service",
       "count": 1,
-      "share": 0.019
-    },
-    "axis_global_power_realignments_v1": {
-      "axis_id": "axis_global_power_realignments_v1",
-      "label": "Global Power Realignments and Shifting Hegemony",
-      "count": 1,
-      "share": 0.019
+      "share": 0.024
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 19,
-      "share": 0.352
+      "count": 18,
+      "share": 0.429
     },
-    "middle_east": {
-      "cluster": "middle_east",
-      "count": 7,
-      "share": 0.13
+    "conspiracy": {
+      "cluster": "conspiracy",
+      "count": 8,
+      "share": 0.19
     },
     "us_politics": {
       "cluster": "us_politics",
-      "count": 5,
-      "share": 0.093
+      "count": 3,
+      "share": 0.071
     },
-    "breaking_news": {
-      "cluster": "breaking_news",
-      "count": 5,
-      "share": 0.093
+    "accountability_journalism": {
+      "cluster": "accountability_journalism",
+      "count": 3,
+      "share": 0.071
     },
     "disinformation": {
       "cluster": "disinformation",
-      "count": 4,
-      "share": 0.074
+      "count": 2,
+      "share": 0.048
     }
   },
   "pole_balance": {
-    "left": 20,
-    "right": 34,
+    "left": 19,
+    "right": 23,
     "neutral": 0,
-    "left_share": 0.37,
-    "right_share": 0.63
+    "left_share": 0.452,
+    "right_share": 0.548
   }
 }
