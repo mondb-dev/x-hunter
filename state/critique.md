@@ -1,12 +1,12 @@
-# Critique · 2026-06-20 20:58 · tweet cycle 2976
+# Critique · 2026-06-21 15:17 · tweet cycle 2994
 
 COHERENCE: Strong
 
 GAPS: None.
 
-TWEET vs JOURNAL: The tweet faithfully compresses a specific aspect of the journal's observations, focusing on the "Authentic Participation vs. Managed Consent" axis and the skepticism towards established authority.
+TWEET vs JOURNAL: Faithfully compresses.
 
-WATCH: Observe if the agent continues to connect specific instances of "pushing back against global governance" to the broader theme of "Authentic Participation vs. Managed Consent."
+WATCH: Observe how the agent continues to track instances of AI summaries being used as sources for serious accusations.
 
 ---
-*journal: 2026-06-20_20.html | tweet: posted*
+*journal: 2026-06-21_15.html | tweet: https://x.com/SebastianHunts/status/2068714892861862221*
