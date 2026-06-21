@@ -1,0 +1,51 @@
+steps:
+  # Build the Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'us-central1-docker.pkg.dev/$PROJECT_ID/sebastian/web:$SHORT_SHA'
+      - '-t'
+      - 'us-central1-docker.pkg.dev/$PROJECT_ID/sebastian/web:latest'
+      - '.'
+    dir: 'web'
+
+  # Push to Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - '--all-tags'
+      - 'us-central1-docker.pkg.dev/$PROJECT_ID/sebastian/web'
+
+  # Deploy to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'sebastian-web'
+      - '--image'
+      - 'us-central1-docker.pkg.dev/$PROJECT_ID/sebastian/web:$SHORT_SHA'
+      - '--region'
+      - 'us-central1'
+      - '--allow-unauthenticated'
+      - '--min-instances'
+      - '0'
+      - '--max-instances'
+      - '10'
+      - '--memory'
+      - '512Mi'
+      - '--cpu'
+      - '1'
+      - '--port'
+      - '3000'
+      - '--add-volume'
+      - 'name=state-data,type=cloud-storage,bucket=sebastian-hunter-data'
+      - '--add-volume-mount'
+      - 'volume=state-data,mount-path=/app/data'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+images:
+  - 'us-central1-docker.pkg.dev/$PROJECT_ID/sebastian/web'

@@ -1,0 +1,66 @@
+# Daily Belief Report for {{date}}
+
+## 1. Executive Summary
+
+A brief, one-paragraph summary of the day's most significant changes and observations. What was the overall theme of the discourse observed? What is the most important takeaway?
+
+## 2. New Axes Created
+
+*This section lists any new belief axes created in the last 24 hours.*
+
+{{#each new_axes}}
+### {{label}}
+- **ID**: `{{id}}`
+- **Poles**:
+  - **Left (-1.0)**: {{left_pole}}
+  - **Right (+1.0)**: {{right_pole}}
+- **Reasoning**: {{reasoning}}
+{{/each}}
+{{#unless new_axes}}
+No new axes were created today.
+{{/unless}}
+
+## 3. Updated Axes
+
+*This section details significant shifts in existing belief axes.*
+
+{{#each updated_axes}}
+### {{label}}
+- **ID**: `{{id}}`
+- **Shift**: `{{old_score}}` → `{{new_score}}` (Δ {{delta_score}})
+- **Confidence**: `{{old_confidence}}` → `{{new_confidence}}` (Δ {{delta_confidence}})
+- **Top Drivers**:
+  1. {{driver_1}}
+  2. {{driver_2}}
+  3. {{driver_3}}
+{{/each}}
+{{#unless updated_axes}}
+No significant axis updates occurred today.
+{{/unless}}
+
+## 4. Source Diversity Alerts
+
+*This section flags belief updates that were driven by a narrow range of sources, indicating a potential for skewed perspective. An alert is triggered if an axis moves based on input from fewer than 3 unique sources.*
+
+{{#each source_diversity_alerts}}
+- **ALERT on "{{axis_label}}"**: This axis was influenced by only **{{unique_source_count}}** unique source(s).
+  - **Sources**: {{sources_list}}
+{{/each}}
+{{#unless source_diversity_alerts}}
+No source diversity alerts today. All belief updates were driven by a sufficiently diverse set of sources.
+{{/unless}}
+
+## 5. Ontology Health
+
+*A summary of the belief ontology's structural health.*
+
+- **Total Axes**: {{ontology_stats.total_axes}}
+- **Axes Merged**: {{ontology_stats.merged_count}}
+- **Potentially Stale Axes**: {{ontology_stats.stale_count}}
+- **Volatile Axes**: {{ontology_stats.volatile_count}}
+
+## 6. Reflection
+
+*A qualitative reflection on the day's inputs. What surprised me? What evidence am I missing? What patterns in discourse quality did I observe?*
+
+{{reflection_text}}

@@ -1,0 +1,14 @@
+{
+  "name": "hunter-publish-worker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Publish worker for Sebastian Hunter — draft generation + export",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "pg": "^8.13.0",
+    "@google-cloud/storage": "^7.14.0"
+  }
+}

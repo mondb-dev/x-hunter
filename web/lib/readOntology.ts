@@ -1,0 +1,70 @@
+import fs from "fs";
+import path from "path";
+import { DATA_ROOT } from "./dataRoot";
+
+export interface EvidenceEntry {
+  source?: string;
+  timestamp?: string;
+  pole_alignment?: "left" | "right";
+  trust_weight?: number;
+  score_after?: number;
+  confidence_after?: number;
+  summary?: string;
+  content?: string;
+  // legacy fields
+  tweet_id?: string;
+  reason?: string;
+  delta?: number;
+  quality?: number;
+}
+
+export interface Axis {
+  id: string;
+  label: string;
+  left_pole: string;
+  right_pole: string;
+  score: number;
+  confidence: number;
+  topics: string[];
+  created_at: string;
+  last_updated: string;
+  evidence_log: EvidenceEntry[];
+}
+
+export interface Ontology {
+  axes: Axis[];
+  axis_creation_rules_version: string;
+  created_at: string | null;
+  last_updated: string | null;
+}
+
+const EMPTY_ONTOLOGY: Ontology = {
+  axes: [],
+  axis_creation_rules_version: "",
+  created_at: null,
+  last_updated: null,
+};
+
+export function readOntology(): Ontology {
+  const filePath = path.join(DATA_ROOT, "state/ontology.json");
+  try {
+    const raw = fs.readFileSync(filePath, "utf-8");
+    if (!raw.trim()) return EMPTY_ONTOLOGY;
+    return JSON.parse(raw) as Ontology;
+  } catch (err) {
+    console.error("[readOntology] failed to read/parse ontology.json:", err);
+    return EMPTY_ONTOLOGY;
+  }
+}
+
+export function readBeliefState() {
+  const filePath = path.join(DATA_ROOT, "state/belief_state.json");
+  try {
+    const raw = fs.readFileSync(filePath, "utf-8");
+    if (!raw.trim()) return null;
+    return JSON.parse(raw);
+  } catch (err) {
+    console.error("[readBeliefState] failed to read/parse belief_state.json:", err);
+    return null;
+  }
+}

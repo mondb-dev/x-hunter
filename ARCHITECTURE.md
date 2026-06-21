@@ -1,0 +1,598 @@
+# Sebastian D. Hunter — System Architecture
+
+## Overview
+
+An autonomous AI agent that reads X (Twitter), tracks evidence and interprets discourse, journals,
+tweets, and publishes to sebastianhunter.fun. The system runs continuously
+on a cloud VM as a systemd service.
+
+There are two distinct layers:
+
+- **Mechanical layer** — Node.js scripts that handle all scraping, browser
+  navigation, data processing, posting, and git. No LLM.
+- **Reasoning layer** — Gemini 2.5 Flash (via runner/lib/gemini_agent.js — stateless Vertex AI function-calling) that reads pre-digested
+  text files, thinks, and writes text files. No browser access, no shell commands.
+
+All posting (tweets, quote-tweets, replies) is handled mechanically via CDP.
+The LLM writes draft text files; `post_tweet.js` and `post_quote.js` post them.
+Git commit/push is handled by `runner/lib/git.js`. The LLM has no direct
+access to the browser or shell.
+
+---
+
+## Process Map
+
+```
+  ┌─────────────────────────────────────────────────────────────────┐
+  │   runner/run.sh (init) → exec → runner/orchestrator.js         │
+  │                   (main orchestration loop)                     │
+  └──────────┬──────────────────────────┬───────────────────────────┘
+             │ starts                   │ runs
+             ▼                          ▼
+  ┌─────────────────────┐    ┌──────────────────────────────────────┐
+  │  scraper/start.sh   │    │     Agent cycle (every ~20 min)      │
+  │  (background loops) │    │  BROWSE (×5) → TWEET (×1) → repeat  │
+  └──────────┬──────────┘    └──────────────────────────────────────┘
+             │
+    ┌────────┼────────────────┐
+    ▼        ▼                ▼
+collect.js  reply.js     follows.js
+(10 min)   (30 min)      (3 hours)
+```
+
+---
+
+## Background Loops (Mechanical — No LLM)
+
+### `scraper/collect.js` — every 10 min
+
+Scrapes the X feed via CDP (puppeteer-core connects to existing Chrome).
+Runs a 12-phase analytics pipeline:
+
+```
+CDP extract raw posts
+  → sanitizePost()          filter ads, short, emoji-spam, non-English
+  → seenSet dedup           skip posts already indexed this session
+  → extractKeywords()       RAKE — extract top keyphrases per post
+  → base score              velocity (HN-gravity) + trust×0.5 + alignment×0.3
+  → deduplicateByJaccard()  remove near-duplicates (keyword Jaccard ≥ 0.65)
+  → computeIDF()            corpus IDF over last 4h
+  → noveltyBoost()          TF-IDF novelty per post [0–5]
+  → re-score                total += novelty × 0.4 → keep top 25
+  → fetch replies           top 5 replies for the 8 highest-scoring posts
+  → SQLite write            posts table + keywords table + FTS5 index
+  → upsertAccount()         rolling per-account stats (avg_score, velocity)
+  → clusterPosts()          greedy single-linkage clustering by keyword Jaccard
+  → detectBursts()          compare keyword freq vs previous 4h window
+  → formatClusteredDigest() write state/feed_digest.txt
+```
+
+Output: `state/feed_digest.txt`, `state/index.db`
+
+---
+
+### `scraper/reply.js` — every 30 min
+
+Processes `state/reply_queue.jsonl` (FIFO, oldest-first). For each pending
+mention:
+
+```
+1. Spam pre-filter          algorithmic regex — no API call wasted
+2. fetchThreadContext()     CDP navigates to tweet URL, extracts ≤6 articles
+                            (ancestor tweets + the mention itself)
+                            → page stays on tweet URL for step 5
+3. recallForMention()       RAKE keywords from mention text
+                            → db.recallMemory() → ≤3 relevant past entries
+                            from journals/checkpoints (FTS5 BM25)
+4. geminiClassify()         gemini-2.5-flash via Vertex AI with full context:
+                              - Thread context
+                              - Past thinking from memory
+                              - The mention text
+                            Returns WORTHY+reply or SKIP+reason
+5. postReply()              CDP posts reply (page already on tweet URL —
+                            no re-navigation)
+6. logInteraction()         state/interactions.json (records memory_used)
+```
+
+Rate limits: 3/run · 5 min between posts · 10/day cap
+
+---
+
+### `scraper/follows.js` — every 3 hours
+
+Data-driven follow module. Scores accounts from the `accounts` table:
+
+```
+follow_score = avg_velocity × 0.35
+             + avg_score    × 0.30
+             + topic_affinity × 0.25   (keyword overlap with ontology axes)
+             + recency_factor × 0.10   (10 × exp(-ageHours/48))
+
+→ followCandidates()     top unfollow'd accounts above threshold
+→ CDP follow action      navigate x.com/<username>, click Follow
+→ markFollowed()         accounts.followed = 1
+→ trust_graph.json       logged with trust_score:3, follow_reason
+```
+
+Rate limits: 3/run · 1 min between follows · 10/day cap
+
+---
+
+## Agent Cycle (Reasoning — LLM Only)
+
+Runs every 20 minutes. Every 6th cycle is a tweet cycle (every 2 hours).
+
+### Before each browse cycle — `run.sh` prepares context:
+
+```bash
+node scraper/query.js --hours 4     → state/topic_summary.txt
+node runner/recall.js --limit 5     → state/memory_recall.txt
+node runner/prefetch_url.js         → state/reading_url.txt (if queued item exists)
+```
+
+### Browsing Direction Signals (priority order: Deep Dive > Curiosity > X Trending)
+
+Each browse cycle is directed by one of three signals. The highest-priority
+available signal wins.
+
+```
+1. DEEP DIVE (highest priority)
+   ─────────────────────────────
+   Source: state/reading_url.txt (populated by prefetch_url.js)
+   Trigger:
+     a) Manual: user replies @sebastianhunts with an X link → reading_queue.js queues it
+     b) Auto:   deep_dive_detector.js (runs every 6 cycles) scans browse_notes.md +
+                ontology evidence_log for @handles that appear ≥ 3 times — queues top candidate
+     c) Reply:  reading_queue.js extracts @mentions from reply text → queues as x.com/<handle>
+
+   If URL is an x.com/<handle> profile → agent gets rich instructions:
+     - Read ≥ 8 tweets from the profile
+     - Cross-reference observed positions against ontology axes
+     - Note patterns, tensions, and epistemics
+     - Write a dedicated "DEEP DIVE: @handle" section in browse_notes.md
+
+   If URL is an article/thread → agent reads and journals normally.
+
+   Full browse cycle is consumed by deep dive; curiosity search suppressed.
+
+2. CURIOSITY (normal cycles)
+   ──────────────────────────
+   Source: state/curiosity_directive.txt (written by runner/curiosity.js, every 6 cycles)
+   Trigger: axis uncertainty gain — selects axis with highest evidence-to-confidence gap,
+            skipping axes at confidence ≥ 0.82 and adding a staleness boost for axes
+            not updated in 2+ days.
+
+   Curiosity generates 3 search angles per directive (rotated across cycles):
+     SEARCH_URL_1: main term search (core claim)
+     SEARCH_URL_2: counter-narrative search (challenge the emerging view)
+     SEARCH_URL_3: pole-tension search (left vs right pole of the axis)
+
+   prefetch_url.js rotates through angles using PREFETCH_CYCLE % numAngles,
+   so consecutive curiosity cycles hit different facets of the same question.
+
+   Priority selection within curiosity:
+     a) Discourse counter-argument (someone challenged a specific axis via @reply)
+     b) Uncertainty-gain axis (most evidence potential)
+     c) X Trending keyword (burst detected by collect.js)
+
+3. X TRENDING (fallback)
+   ──────────────────────
+   Source: burst keywords in state/feed_digest.txt (★ TRENDING markers)
+   Used when no deep dive is queued and no curiosity directive is active.
+   Agent browses normally; trending clusters get priority attention.
+```
+
+### Browse cycle (×5 of every 6)
+
+LLM reads pre-digested files, thinks, writes notes. No browser.
+
+```
+Reads:
+  state/browse_notes.md        prior notes from this window
+  state/topic_summary.txt      top keywords + topic clusters (last 4h)
+  state/feed_digest.txt        scored clustered digest
+  state/reading_url.txt        URL/profile to deep dive (if set)
+  state/curiosity_directive.txt  search direction (if set, no deep dive)
+
+Digest format:
+  CLUSTER N · "label" · M posts [· ★ TRENDING]
+    @user [vSCORE TTRUST NNOVELTY] "text" [engagement] {keywords}
+    > @reply: "reply text"
+  SINGLETONS · M posts
+
+  v = HN-gravity velocity
+  T = trust score 0–10 (from trust_graph.json)
+  N = TF-IDF novelty 0–5 (5 = rarest topic this window)
+  ★ TRENDING = keyword frequency >2× vs previous 4h window
+  ← novel = singleton with N ≥ 4.0
+
+Writes:
+  state/browse_notes.md        appends tensions, quotes, patterns
+  state/ontology.json          update axis scores if axis-worthy
+```
+
+### Axes Development Feedback Loop
+
+```
+Browsing Direction
+       │
+       ▼
+  BROWSE CYCLE
+  (observe → journal → update axes)
+       │
+       ├─→ ontology.json (axes: score, confidence, evidence_log)
+       │                     │
+       │                     ▼
+       └─────────── curiosity.js reads axis state
+                   → picks lowest-confidence high-uncertainty axis
+                   → generates new directive (multi-angle search)
+                   → deep_dive_detector.js checks evidence sources for recurring handles
+                   → both feed back into next browsing direction
+```
+
+The loop is self-reinforcing: browsing adds evidence to axes, which changes
+which axis curiosity selects, which changes what is browsed next.
+
+### Checkpoint cycle (every 3 days — `generate_checkpoint.js` self-gates)
+
+Runs inside the daily-report block. Produces a structured axis-state snapshot.
+
+```
+Reads:
+  state/ontology.json          all axes + confidence + directional scores
+  daily/belief_report_*.md     last 3 reports
+
+Writes:
+  checkpoints/checkpoint_N.md  numbered axis-state snapshot
+  checkpoints/latest.md        always overwritten (alias for current checkpoint)
+  state/checkpoint_state.json  last date + file reference
+```
+
+After checkpoint writes, `ponder.js` runs immediately.
+
+---
+
+### Ponder cycle (tied to checkpoint, fires when evidence threshold met)
+
+An evidence-threshold-triggered action-proposal step. Asks: *given the current axis state, what action does the evidence support?*
+
+**Trigger conditions (all must pass):**
+```
+1. axes where (confidence ≥ 0.72 AND |score| ≥ 0.15) ≥ 2   — real directional lean, not just attention
+2. days_since_last_ponder ≥ 7                               — cooldown
+3. max axis shift ≥ 0.08 since last ponder, OR first ponder — axis scores have actually moved
+```
+
+The `|score| ≥ 0.15` requirement is critical: it ensures the engine has a *directional* lean,
+not just identified a topic as important. High confidence alone (0.95) without a lean means
+the topic is well-observed but the axis has no directional lean yet — action is not proposed.
+
+**What ponder does:**
+
+```
+Reads:
+  state/ontology.json          qualifying axes (confidence + score) + axis names
+  state/vocation.json          current vocation status
+  state/browse_notes.md        recent tensions + observed @handles
+  checkpoints/latest.md        axis-state snapshot
+
+Writes:
+  state/action_plans.json      2–3 new action proposals grounded in belief axes
+  state/vocation.json          updated vocation statement + aligned_accounts
+  state/ponder_tweet.txt       public declaration tweet (auto-posted by run.sh)
+  state/ponder_state.json      last date + axis snapshots for next delta check
+```
+
+**Action types Sebastian can propose:**
+
+| Type | What it means |
+|---|---|
+| `follow_campaign` | Systematically engage 10–15 high-trust accounts aligned with an axis |
+| `thread` | A multi-part post stating a position grounded in evidence |
+| `weekly_digest` | Curated round-up from aligned accounts, posted every Sunday |
+| `position_paper` | Long-form article (Moltbook + website) on a hardened belief |
+| `discourse_prompt` | A tweet designed to start a conversation, not just broadcast |
+| `build` | Brief for a builder agent — a tool, site, community, or newsletter |
+
+**The ponder tweet:**
+When ponder fires, Sebastian posts a declaration: vocation statement + first action + @mentions
+of 1–2 accounts observed in browse notes that align with the action axes. This is a public
+announcement and an invitation in one shot.
+
+**Ponder fires** once 2+ axes break `|score| ≥ 0.15` (and the cooldown + delta conditions pass).
+
+---
+
+### Tweet cycle (every 6th = every ~2 hours)
+
+```
+Reads:
+  state/browse_notes.md        all notes from the last 5 browse cycles
+  state/feed_digest.txt        latest digest for final context
+  state/memory_recall.txt      relevant past journal/checkpoint excerpts
+                               (ask: have I said this before? has my view evolved?)
+
+Writes:
+  journals/YYYY-MM-DD_HH.html  journal entry for this synthesis window
+  state/tweet_draft.txt        tweet text
+  state/quote_draft.txt        quote-tweet text (if quoting)
+  state/ontology.json          update axis scores
+
+Then (mechanical — via orchestrator.js):
+  → post_tweet.js / post_quote.js posts via CDP
+  → posts_log.js logs to state/posts_log.json
+  → git add / commit / push (lib/git.js)
+  → archive.js indexes new journals/checkpoints → SQLite memory
+                → attempt Irys/Arweave upload if SOL balance ok
+```
+
+---
+
+## Memory System
+
+Two-tier: Arweave = permanent truth store, SQLite = fast local recall index.
+
+```
+journals/YYYY-MM-DD_HH.html
+checkpoints/checkpoint_N.md          source files
+daily/belief_report_YYYY-MM-DD.md
+         │
+         ▼
+runner/archive.js
+  stripHtml() / read markdown
+  extractKeywords() RAKE
+  db.insertMemory()            → state/index.db  memory table + memory_fts FTS5
+  irys.upload()                → Arweave (permanent, funded by SOL)
+  state/arweave_log.json       → TX ID record (git-tracked)
+         │
+         ▼
+runner/recall.js --query "terms"
+  db.recallMemory()            FTS5 BM25 search over text_content + keywords
+  → state/memory_recall.txt    formatted excerpts for agent context
+```
+
+`arweave_log.json` is committed to git. It's the rebuild record — if the
+local SQLite index is lost, the TX IDs in this file let you re-fetch every
+uploaded file from `https://gateway.irys.xyz/<tx_id>`.
+
+---
+
+## State Files
+
+| File | Written by | Read by | Gitignored |
+|---|---|---|---|
+| `state/feed_digest.txt` | collect.js | LLM browse | yes |
+| `state/feed_buffer.jsonl` | collect.js | collect.js | yes |
+| `state/topic_summary.txt` | query.js | LLM browse | yes |
+| `state/memory_recall.txt` | recall.js | LLM tweet | yes |
+| `state/browse_notes.md` | LLM browse | LLM tweet, deep_dive_detector.js | no |
+| `state/index.db` | collect.js, archive.js | reply.js, recall.js, query.js | yes |
+| `state/reply_queue.jsonl` | collect.js | reply.js | yes |
+| `state/follow_queue.jsonl` | follows.js | follows.js | yes |
+| `state/interactions.json` | reply.js | — | no |
+| `state/trust_graph.json` | follows.js, LLM | collect.js (trust score) | no |
+| `state/arweave_log.json` | archive.js, moltbook.js | moltbook.js (journal URL) | **no** (git-tracked) |
+| `state/ontology.json` | LLM | collect.js (scoring), curiosity.js, deep_dive_detector.js | no |
+| `state/posts_log.json` | post_tweet.js, post_quote.js | archive.js | no |
+| `state/curiosity_directive.txt` | curiosity.js | prefetch_url.js, LLM browse | yes |
+| `state/reading_queue.jsonl` | reading_queue.js, deep_dive_detector.js | prefetch_url.js | no |
+| `state/reading_url.txt` | prefetch_url.js | LLM browse | yes |
+| `state/checkpoint_pending` | moltbook.js | run.sh (retry flag) | yes |
+| `state/drift_state.json` | LLM (CUSUM) | curiosity.js | no |
+| `state/moltbook_state.json` | moltbook.js | moltbook.js (rate limiting) | no |
+| `state/vocation.json` | ponder.js | ponder.js, run.sh | no |
+| `state/action_plans.json` | ponder.js | ponder.js (context), act.js | no |
+| `state/ponder_state.json` | ponder.js | ponder.js (cooldown + delta) | yes |
+| `state/ponder_tweet.txt` | ponder.js | run.sh → post_tweet.js | yes |
+| `state/capture_state.json` | capture_detection.js | posts_assessment.js, LLM browse/tweet | no |
+| `state/posting_directive.txt` | posts_assessment.js | LLM tweet/quote prompts | no |
+| `state/cadence.json` | LLM browse (task #6) | orchestrator.js (via cadence.js) | no |
+
+---
+
+## Metacognition Pipeline
+
+Two daily scripts that run during the `reports()` block in `daily.js`
+(after `generate_daily_report.js`, before `write_article.js`).
+
+### Capture Detection (`runner/capture_detection.js`)
+
+Mechanical analysis (no LLM). Scans `ontology.json` evidence_log entries
+for the last 24h and computes source concentration metrics.
+
+```
+Detects:
+  1. Source dominance   — any single account driving >25% of today’s evidence
+  2. Cluster dominance  — any single topic cluster driving >40% of evidence
+  3. Pole skew          — >70% of evidence pushing in the same direction
+  4. Axis concentration — >50% of evidence landing on a single axis
+
+Reads:  state/ontology.json, state/trust_graph.json
+Writes: state/capture_state.json  (status: clean/warning/captured)
+```
+
+The capture status is surfaced in browse and tweet prompts via
+`context.js → formatCaptureStatus()`. If status is `warning` or `captured`,
+the agent sees the specific alerts before composing posts.
+
+### Posts Assessment (`runner/posts_assessment.js`)
+
+LLM-assisted daily self-review. Evaluates today’s posts against five criteria:
+
+| Criterion | What it checks |
+|---|---|
+| Goal-aligned | Does the post connect to vocation and active belief axes? |
+| Not repetitive | Does it say something new vs. the last 5 days of posts? |
+| Reflective of knowledge | Does it show evidence of having read and absorbed material? |
+| Reflective of conviction | Does the tone match the actual confidence on the relevant axes? |
+| Engaging | Does it name a specific tension or ask a genuine question? |
+
+```
+Reads:  state/posts_log.json, state/ontology.json, state/capture_state.json,
+        state/vocation.json
+Writes: daily/posts_assessment_YYYY-MM-DD.md   (full critique, archived)
+        state/posting_directive.txt            (3 specific rules for tomorrow)
+```
+
+The posting directive is injected into tweet and quote-tweet prompts the
+following day, so Sebastian reads it before composing.
+
+### Silent-Hours Sprint Execution
+
+During silent hours (UTC 23-07), browse cycles are redirected toward sprint
+deliverable work instead of low-value feed observation.
+
+**Detection** (in `runner/lib/prompts/context.js`):
+- `isSilentHours`: Current UTC hour < 7 or ≥ 23
+- `hasActiveSprint`: `sprint_context.txt` contains pending tasks
+
+**Browse prompt override** (in `runner/lib/prompts/browse.js`):
+When both flags are true, the normal 8-task browse list is replaced with a
+6-task sprint-focused list. Task 0 becomes "SPRINT RESEARCH" (primary — 60%
+of cycle) with type-specific instructions for [research], [write], [engage],
+and [publish] tasks. Normal observation, comment candidates, and deep dives
+are deprioritized.
+
+**Sprint-aware curiosity** (in `runner/curiosity.js`):
+During silent hours, a new "sprint_research" driver fires after discourse
+anchors but before uncertainty-axis exploration. It extracts search terms
+from the current sprint task title and generates sprint-directed search URLs.
+
+```
+Active hours (UTC 07-23):        Silent hours (UTC 23-07):
+  Browse → observe feed            Browse → sprint work
+  Curiosity → uncertainty axes     Curiosity → sprint research
+  Post → tweet/quote               Post → suppressed
+```
+
+---
+
+## Data Flow (End-to-End)
+
+```
+X feed (raw HTML)
+    │
+    ▼ CDP (puppeteer-core)
+collect.js — 12-phase pipeline — scored + clustered digest
+    │                                │
+    ▼                                ▼
+state/index.db               state/feed_digest.txt
+(posts, keywords,                    │
+ accounts, memory,                   ▼
+ memory_fts)             query.js → topic_summary.txt
+    │                                │
+    │   recall.js ←──────────────────┘
+    │       │
+    │       ▼
+    │   memory_recall.txt
+    │
+    ├── reply.js → fetchThreadContext (CDP) → geminiClassify → postReply (CDP)
+    │
+    └── follows.js → computeFollowScore → CDP follow → trust_graph.json
+                                               │
+                              ┌────────────────┴────────────────┐
+                              ▼                                 ▼
+                     LLM browse agent                   LLM tweet agent
+                     (reads digest +                    (reads notes +
+                      topic summary +                    digest + memory)
+                      memory recall)                           │
+                             │                                 ▼
+                             ▼                      journals/YYYY-MM-DD_HH.html
+                    state/browse_notes.md            tweet → x.com
+                    state/ontology.json              git push
+                                                          │
+                                                          ▼
+                                                   archive.js
+                                                   (index + Arweave upload)
+```
+
+---
+
+## Key Algorithms
+
+### HN-Gravity velocity score
+```
+velocity = likes / (age_hours + 2)^1.8
+```
+Decays engagement weight over time. A 1-hour-old post with 100 likes
+scores higher than a 24-hour-old post with the same likes.
+
+### RAKE keyword extraction
+Splits text on stop words. Scores phrases by `(degree + freq) / freq`
+where degree = co-occurrence with other words in the same phrase.
+Top N phrases become the post's keyword tags.
+
+### TF-IDF novelty boost
+`IDF = log((N+1) / (df+1))` across the 4h corpus.
+Post novelty = mean IDF of its keywords, capped at 5.0.
+High novelty = rare topic this window. Low = commonly recurring.
+
+### Jaccard deduplication / clustering
+`similarity = |A ∩ B| / |A ∪ B|` on keyword sets.
+- Dedup threshold: ≥ 0.65 (same story, different accounts)
+- Cluster threshold: ≥ 0.25 (related topic, same conversation)
+
+### Burst detection
+A keyword bursts if `currentFreq ≥ 2 AND currentFreq > prevFreq × 2.0`
+comparing current 4h window vs previous 4h window.
+
+### Follow score
+```
+follow_score = avg_velocity × 0.35
+             + avg_score    × 0.30
+             + topic_affinity × 0.25
+             + recency_factor × 0.10
+```
+`topic_affinity` = proportion of account keywords matching ontology axis labels × 10.
+`recency_factor` = `10 × exp(-ageHours / 48)`.
+
+---
+
+## Technology Stack
+
+| Component | Technology |
+|---|---|
+| Browser automation | puppeteer-core CDP (connects to existing Chrome) |
+| Database | SQLite via `better-sqlite3` — WAL mode, FTS5 full-text search |
+| LLM (browse + tweet) | Gemini 2.5 Flash via runner/lib/gemini_agent.js (stateless Vertex AI function-calling) |
+| LLM (reply filter) | gemini-2.5-flash via Vertex AI |
+| LLM (local critique) | Ollama `qwen2.5:7b` — no API cost, post-cycle consistency check |
+| Permanent storage | Arweave via Irys L2 (SOL-funded, `@irys/sdk`) — journals, checkpoints, tweet records |
+| Web frontend | Next.js at sebastianhunter.fun |
+| Orchestration | `run.sh` (init) → `orchestrator.js` (Node.js main loop, SIGTERM-safe); systemd |
+
+---
+
+## Posting Pipeline
+
+The LLM writes drafts; mechanical scripts handle all posting actions.
+
+```
+LLM tweet cycle writes:
+  state/tweet_draft.txt        → post_tweet.js posts via CDP, logs to posts_log.json
+  state/quote_draft.txt        → post_quote.js posts via CDP, logs to posts_log.json
+
+After posting:
+  runner/moltbook.js           → publishes to Moltbook (social log):
+    - Uploads post record to Arweave (individual markdown doc per tweet/quote)
+    - Includes: journal URL (sebastianhunter.fun) + Arweave TX URL + checkpoint URL
+    - Rate limit: 32-min window enforced; checkpoint_pending flag for retry next cycle
+
+run.sh handles git after all posts:
+  git add / commit / push      (agent has no git access)
+
+Ponder tweet (when ponder fires):
+  state/ponder_tweet.txt       → copied to tweet_draft.txt → post_tweet.js
+                               → announces vocation + first action + @mentions aligned accounts
+```
+
+## Stability and Recovery
+
+- systemd `TimeoutStopSec=20` ensures graceful shutdown within 20s
+- `orchestrator.js` uses `setTimeout`-based inter-cycle sleep (SIGTERM-safe)
+- Post-sleep detection: if `ELAPSED > 2 × BROWSE_INTERVAL` (machine was suspended),
+  orchestrator triggers a browser stop/start before the next cycle
+- `clean_stale_locks()` removes dead-PID lock files each cycle
+- `agent_run()` has a 900s timeout to prevent a hung gemini_agent_runner.js child process from blocking forever
+- The Vertex AI reasoning loop is stateless per cycle (no session accumulation); the browser session is reset every 6 cycles (prevents CDP compaction rate-limit deadlock)
+- Gemini `--thinking low` flag is omitted on retry (different quota path avoids "unknown error")

@@ -1,0 +1,835 @@
+{
+  "proposals": [
+    {
+      "id": "proposal_credibility_tracking_1743292800",
+      "title": "Claim credibility tracking in evidence evaluation",
+      "status": "merged",
+      "proposed_at": "2026-03-29T00:00:00.000Z",
+      "resolved_at": "2026-03-31T07:47:57.786Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "runner/lib/prompts/browse.js"
+      ],
+      "branch_name": "meta/proposal_credibility_tracking_1743292800",
+      "merge_commit": "50861cfdcf94de56f96bf9badff9c0b5f4c1f84a",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_emergent_theme_tracker_1775263325533",
+      "title": "System for Tracking and Clustering Untracked Themes",
+      "status": "merged",
+      "proposed_at": "2026-04-04T00:42:05.514Z",
+      "resolved_at": "2026-04-04T02:42:29.625Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "pipelines/main_pipeline.js",
+        "lib/evidence_processor.js",
+        "lib/theme_clusterer.js",
+        "state/emergent_themes.json",
+        "prompts/daily_reflection.md"
+      ],
+      "branch_name": "meta/proposal_emergent_theme_tracker_1775263325533",
+      "merge_commit": "b0cf88cf8cd059616d83b598b341bf59c68b5867",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_stagnation_detector_1775438289842",
+      "title": "Build a Belief Stagnation Detector and Axis Health Report",
+      "status": "failed",
+      "proposed_at": "2026-04-06T01:18:09.820Z",
+      "resolved_at": "2026-04-06T01:57:41.707Z",
+      "resolution_notes": "Pipeline error: Tests failed: Import failed for src/tools/axis_health_reporter.js: node:internal/modules/cjs/loader:1459\n  throw err;\n  ^\n\nError: Cannot find module '../../../lib/belief_system'\nRequire stack:\n- /home/raymond_d_baldonado_gmail_com/hunter/src/tools/axis_health_reporte; Blocked test command (unsafe): echo 'NOTE: This test requires mock state files (e.g., state/ontology.json) to run successfully.'; Blocked test command (unsafe): echo 'It will gracefully handle a missing state/belief_history.jsonl.'; Test command failed: node pipelines/daily_maintenance.js --dry-run — Daily maintenance failed: Error: Cannot find module '../../../lib/belief_system'\nRequire stack:\n- /home/raymond_d_baldonado_gmail_com/hunter/src/tools/axis_health_reporter.js\n- /home/raymond_d_baldona",
+      "files_changed": [
+        "pipelines/daily_maintenance.js",
+        "lib/belief_system.js",
+        "src/tools/axis_health_reporter.js",
+        "state/schemas.js"
+      ],
+      "branch_name": "meta/proposal_stagnation_detector_1775438289842",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_belief_change_attribution_1775525313479",
+      "title": "Belief Change Attribution in Daily Reports",
+      "status": "merged",
+      "proposed_at": "2026-04-07T01:28:33.454Z",
+      "resolved_at": "2026-04-07T02:23:23.175Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "pipelines/daily_maintenance.js",
+        "src/schemas/belief_report.schema.json",
+        "src/tools/belief_reporter.js"
+      ],
+      "branch_name": "meta/proposal_belief_change_attribution_1775525313479",
+      "merge_commit": "afb131ff9329ef2ba749e12a3596d3232ce321a6",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_reimplement_stagnation_detector_1775699819773",
+      "title": "Re-implement Axis Health and Stagnation Monitoring",
+      "status": "failed",
+      "proposed_at": "2026-04-09T01:56:59.745Z",
+      "resolved_at": "2026-04-09T02:06:58.600Z",
+      "resolution_notes": "Pipeline error: Tests failed: Test command failed: node src/tools/axis_health_monitor.js --dry-run — /home/raymond_d_baldonado_gmail_com/hunter/src/tools/axis_health_monitor.js:180\n  run({ dryRun }).catch(err => {\n        ^\n\nReferenceError: dryRun is not defined\n    at Object.<anonymous> (/home/raymo",
+      "files_changed": [
+        "src/tools/axis_health_monitor.js",
+        "pipelines/daily_maintenance.js"
+      ],
+      "branch_name": "meta/proposal_reimplement_stagnation_detector_1775699819773",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_integrate_axis_health_audit_1775786791464",
+      "title": "Integrate Formalized Axis Health and Stagnation Audit into Daily Pipeline",
+      "status": "merged",
+      "proposed_at": "2026-04-10T02:06:31.436Z",
+      "resolved_at": "2026-04-10T02:21:00.209Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "pipelines/daily_maintenance.js",
+        "src/tools/axis_health_auditor.js",
+        "state/protocols/reflection_protocol.md"
+      ],
+      "branch_name": "meta/proposal_integrate_axis_health_audit_1775786791464",
+      "merge_commit": "29a2fc6713ea87278f845222c8e12b006d653d2c",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_source_diversity_audit_1775873873752",
+      "title": "Build a Belief Update Source Diversity Audit",
+      "status": "merged",
+      "proposed_at": "2026-04-11T02:17:53.723Z",
+      "resolved_at": "2026-04-11T02:32:04.681Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "pipelines/daily_maintenance.js",
+        "src/tools/source_diversity_auditor.js",
+        "src/prompts/daily_report.txt",
+        "state/belief_history.jsonl"
+      ],
+      "branch_name": "meta/proposal_source_diversity_audit_1775873873752",
+      "merge_commit": "bcd916ccc96a8e16d0ac74e30193e98894934898",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_surface_diversity_audit_in_reflection_1775961947495",
+      "title": "Surface Source Diversity Audit in Daily Reflection Context",
+      "status": "failed",
+      "proposed_at": "2026-04-12T02:45:47.468Z",
+      "resolved_at": "2026-04-12T03:09:43.094Z",
+      "resolution_notes": "Push to origin/main failed: To https://github.com/mondb-dev/x-hunter.git\n ! [rejected]          main -> main (fetch first)\nerror: failed to push some refs to 'https://github.com/mondb-dev/x-hunter.git'\nhint: Updates were rejected because the remote contains work that you do\nhint: not have locally. This is usually caused by ano Local main rolled back to pre-merge state.",
+      "files_changed": [
+        "pipelines/daily_maintenance.js",
+        "src/tools/source_diversity_audit.js",
+        "prompts/agent_reflection.txt"
+      ],
+      "branch_name": "meta/proposal_surface_diversity_audit_in_reflection_1775961947495",
+      "merge_commit": "41cc65fcc2b062339ed6b24360b1b4bc6099131c",
+      "pushed_to_origin": false,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_valence_audit_in_journaling_1776049973134",
+      "title": "Introduce Adversarial Valence Audit in Journaling Pipeline",
+      "status": "merged",
+      "proposed_at": "2026-04-13T03:12:52.944Z",
+      "resolved_at": "2026-04-13T03:35:16.662Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "src/pipelines/journaling_pipeline.js",
+        "src/prompts/journal_entry_generator.txt",
+        "src/prompts/journal_valence_auditor.txt"
+      ],
+      "branch_name": "meta/proposal_valence_audit_in_journaling_1776049973134",
+      "merge_commit": "a1561a2139c494dc41753e7c65ebcf0204e61232",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_redundancy_damper_1776137953167",
+      "title": "Implement Belief Update Redundancy Damper",
+      "status": "failed",
+      "proposed_at": "2026-04-14T03:39:13.103Z",
+      "resolved_at": "2026-04-14T03:45:55.672Z",
+      "resolution_notes": "Pipeline error: Tests failed: Test command failed: node src/pipelines/journal.js — node:internal/modules/cjs/loader:1459\n  throw err;\n  ^\n\nError: Cannot find module 'mock-fs'\nRequire stack:\n- /home/raymond_d_baldonado_gmail_com/hunter/src/pipelines/journal.js\n    at Module._resolveF",
+      "files_changed": [
+        "src/tools/redundancy_damper.js",
+        "src/lib/belief_updater.js",
+        "src/pipelines/journal.js"
+      ],
+      "branch_name": "meta/proposal_redundancy_damper_1776137953167",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_redundancy_damper_1776137953167",
+      "title": "Implement Belief Update Redundancy Damper",
+      "status": "merged",
+      "proposed_at": "2026-04-14T03:39:13.103Z",
+      "resolved_at": "2026-04-15T04:10:51.274Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "runner/lib/post_browse.js",
+        "runner/tools/redundancy_damper.js"
+      ],
+      "branch_name": "meta/proposal_redundancy_damper_1776137953167",
+      "merge_commit": "63f6ff7e11fcb720ed69b21d8b41de8750c6125b",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_deduplicate_journal_drivers_1776326713159",
+      "title": "Implement Journal Driver De-duplication",
+      "status": "failed",
+      "proposed_at": "2026-04-16T08:05:13.124Z",
+      "resolved_at": "2026-04-16T08:30:52.000Z",
+      "resolution_notes": "Pipeline error: Tests failed: Blocked test command (unsafe): # This change introduces library files, not a directly executable script.; Blocked test command (unsafe): # To test, a new test script would be needed, for example:; Blocked test command (unsafe): # node tests/test_journal_deduplication.js",
+      "files_changed": [
+        "src/lib/belief_state.js",
+        "src/pipelines/journal.js"
+      ],
+      "branch_name": "meta/proposal_deduplicate_journal_drivers_1776326713159",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_contestation_mapping_1713346961000",
+      "title": "Implement Narrative Contestation Mapping Module",
+      "status": "failed",
+      "proposed_at": "2026-04-17T08:35:58.066Z",
+      "resolved_at": "2026-04-17T09:02:14.541Z",
+      "resolution_notes": "Pipeline error: Tests failed: Blocked test command (disallowed flags: -e \"const fs = require('fs'); if (!fs.existsSync('state')) fs.mkdirSync('state'); fs.writeFileSync('state/feed_digest.txt', '---\\ncluster_id: c1\\nkeywords: iran, protest, funding, israel\\n - id: 123\\n author: @userA\\n text: Protests in Iran are funded by the US and Israel.\\n---\\ncluster_id: c2\\nkeywords: quran, violence, scholars\\n - id: 456\\n author: @userB\\n text: Some use the Quran to justify violence.\\n - id: 789\\n author: @userC\\n text: But many scholars say that is a misinterpretation.\\n',): node -e \"const fs = require('fs'); if (!fs.existsSync('state')) fs.mkdirSync('state'); fs.writeFileSync('state/feed_digest.txt', '---\\ncluster_id: c1\\nkeywords: iran, protest, funding, israel\\n  - id: 123\\n    author: @userA\\n    text: Protests in Iran are funded by the US and Israel.\\n---\\ncluster_id: c2\\nkeywords: quran, violence, scholars\\n  - id: 456\\n    author: @userB\\n    text: Some use the Quran to justify violence.\\n  - id: 789\\n    author: @userC\\n    text: But many scholars say that is a misinterpretation.\\n', 'utf8');\"; Blocked test command (disallowed flags: -e \"const fs = require('fs'); if (!fs.existsSync('daily')) fs.mkdirSync('daily'); const d=new Date().toISOString().split('T')[0]; fs.writeFileSync('daily/belief_report_'+d+'.md', '# Report\\n', 'utf8'); fs.writeFileSync('state/ontology.json', '{\\\"axes\\\":[{\\\"id\\\":\\\"axis_iran_protest\\\",\\\"label\\\":\\\"Iranian Protests: Foreign-backed vs. Grassroots\\\",\\\"topics\\\":[\\\"iran\\\"]}]}',): node -e \"const fs = require('fs'); if (!fs.existsSync('daily')) fs.mkdirSync('daily'); const d=new Date().toISOString().split('T')[0]; fs.writeFileSync('daily/belief_report_'+d+'.md', '# Report\\n', 'utf8'); fs.writeFileSync('state/ontology.json', '{\\\"axes\\\":[{\\\"id\\\":\\\"axis_iran_protest\\\",\\\"label\\\":\\\"Iranian Protests: Foreign-backed vs. Grassroots\\\",\\\"topics\\\":[\\\"iran\\\"]}]}', 'utf8');\"; Blocked test command (not a node command): echo 'Narrative mapping module test run complete. Check journal and report files.'",
+      "files_changed": [
+        "src/modules/narrative_tracker.js",
+        "src/pipelines/journal.js",
+        "src/pipelines/report.js",
+        "src/state.js"
+      ],
+      "branch_name": "meta/proposal_narrative_contestation_mapping_1713346961000",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_contestation_mapping_1713346961000",
+      "title": "Implement Narrative Contestation Mapping Module",
+      "status": "failed",
+      "proposed_at": "2026-04-17T08:35:58.066Z",
+      "resolved_at": "2026-04-18T09:12:29.175Z",
+      "resolution_notes": "Pipeline error: Tests failed: Blocked test command (disallowed flags: -e \"const fs = require('fs'); const path = require('path'); const stateDir = path.join(process.cwd(), 'state'); if (!fs.existsSync(stateDir)) fs.mkdirSync(stateDir); fs.writeFileSync(path.join(stateDir, 'feed_digest.txt'), '---\\ncluster_id: c1\\nkeywords: iran, protest, funding, israel\\n - id: 123\\n author: @userA\\n text: Protests in Iran are funded by the US and Israel.\\n---\\ncluster_id: c2\\nkeywords: iran, protest, grassroots, people\\n - id: 456\\n author: @userB\\n text: These are grassroots protests by the people.\\n',): node -e \"const fs = require('fs'); const path = require('path'); const stateDir = path.join(process.cwd(), 'state'); if (!fs.existsSync(stateDir)) fs.mkdirSync(stateDir); fs.writeFileSync(path.join(stateDir, 'feed_digest.txt'), '---\\ncluster_id: c1\\nkeywords: iran, protest, funding, israel\\n - id: 123\\n   author: @userA\\n   text: Protests in Iran are funded by the US and Israel.\\n---\\ncluster_id: c2\\nkeywords: iran, protest, grassroots, people\\n - id: 456\\n   author: @userB\\n   text: These are grassroots protests by the people.\\n', 'utf8');\"; Blocked test command (disallowed flags: -e \"const fs = require('fs'); const path = require('path'); const journalDir = path.join(process.cwd(), 'journals'); if (!fs.existsSync(journalDir)) fs.mkdirSync(journalDir); const d = new Date(); const f = path.join(journalDir, d.toISOString().split('T')[0] + '_' + d.getUTCHours().toString().padStart(2, '0') + '.html'); fs.writeFileSync(f, '<html><body></body></html>',): node -e \"const fs = require('fs'); const path = require('path'); const journalDir = path.join(process.cwd(), 'journals'); if (!fs.existsSync(journalDir)) fs.mkdirSync(journalDir); const d = new Date(); const f = path.join(journalDir, d.toISOString().split('T')[0] + '_' + d.getUTCHours().toString().padStart(2, '0') + '.html'); fs.writeFileSync(f, '<html><body></body></html>', 'utf8');\"; Test command failed: node src/pipelines/report.js — /home/raymond_d_baldonado_gmail_com/hunter/src/pipelines/report.js:12\n    const topics = Object.values(state.contested_topics);\n                          ^\n\nTypeError: Cannot convert undefined or null; Blocked test command (disallowed flags: -e \"const fs = require('fs'); const assert = require('assert'); const report = fs.readFileSync('daily/belief_report_' + new Date().toISOString().split('T')[0] + '.md', 'utf8'); assert(report.includes('## Narrative Contestation Map'), 'Report should contain narrative map'); assert(report.includes('Topic: iran, protest'), 'Report should contain iran protest topic'); console.log('Tests): node -e \"const fs = require('fs'); const assert = require('assert'); const report = fs.readFileSync('daily/belief_report_' + new Date().toISOString().split('T')[0] + '.md', 'utf8'); assert(report.includes('## Narrative Contestation Map'), 'Report should contain narrative map'); assert(report.includes('Topic: iran, protest'), 'Report should contain iran protest topic'); console.log('Tests passed');\"",
+      "files_changed": [
+        "src/modules/narrative_tracker.js",
+        "src/pipelines/journal.js",
+        "src/pipelines/report.js",
+        "src/state.js"
+      ],
+      "branch_name": "meta/proposal_narrative_contestation_mapping_1713346961000",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_contestation_mapping_1713346961000",
+      "title": "Implement Narrative Contestation Mapping Module",
+      "status": "merged",
+      "proposed_at": "2026-04-25T14:06:56.723159Z",
+      "resolved_at": "2026-04-25T14:40:30.768Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "runner/lib/narratives.js",
+        "runner/modules/narrative_tracker.js",
+        "runner/pipelines/journal.js",
+        "runner/pipelines/report.js"
+      ],
+      "branch_name": "meta/proposal_narrative_contestation_mapping_1713346961000",
+      "merge_commit": "33544105877a9a72ee10ec6958bbc891a6a79002",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_coordinated_narrative_detection_1714246800000",
+      "title": "Implement Coordinated Narrative Detection Module",
+      "status": "failed",
+      "proposed_at": "2026-04-27T12:22:01.774Z",
+      "resolved_at": "2026-04-27T12:47:59.188Z",
+      "resolution_notes": "Target files already dirty before META apply: M state/ontology.json",
+      "files_changed": [
+        "runner/lib/coordinated_narrative_detector.js",
+        "runner/feed_analysis.js",
+        "runner/belief_update.js",
+        "runner/report.js",
+        "state/ontology.json"
+      ],
+      "branch_name": "meta/proposal_coordinated_narrative_detection_1714246800000",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_accountability_tactic_tracker_1777495597391",
+      "title": "Implement 'Politicization of Justice Tactics' Tracking Module",
+      "status": "merged",
+      "proposed_at": "2026-04-29T20:46:37.335Z",
+      "resolved_at": "2026-04-29T21:32:24.905Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "runner/lib/tactic_definitions.js",
+        "runner/pipelines/journal_processor.js",
+        "runner/pipelines/observation_processor.js",
+        "runner/pipelines/tactic_tracker.js",
+        "runner/reports/tactic_report.js",
+        "state/tactic_tracker.json"
+      ],
+      "branch_name": "meta/proposal_accountability_tactic_tracker_1777495597391",
+      "merge_commit": "a0c8c28392edd6cd42ce49b234c40c976d028866",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_propagation_tracker_1777583504471",
+      "title": "Implement Narrative Propagation & Influence Tracker",
+      "status": "merged",
+      "proposed_at": "2026-04-30T21:11:44.433Z",
+      "resolved_at": "2026-04-30T22:03:05.743Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "state/narrative_tracker.json",
+        "runner/lib/agent_tools.js"
+      ],
+      "branch_name": "meta/proposal_narrative_propagation_tracker_1777583504471",
+      "merge_commit": "710133e899a8bf81f529497d24a21a04abb71ea2",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_robust_search_strategy_1714601600000",
+      "title": "Implement Robust X Search Strategy & Failure Analysis Module",
+      "status": "failed",
+      "proposed_at": "2026-05-01T21:39:41.487Z",
+      "resolved_at": "2026-05-01T22:33:16.362Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after",
+      "files_changed": [
+        "runner/lib/agent_tools.js",
+        "runner/lib/search_strategy_adapter.js",
+        "state/search_failure_log.jsonl"
+      ],
+      "branch_name": "meta/proposal_robust_search_strategy_1714601600000",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_robust_x_search_v2_1714777200000",
+      "title": "Enhance X Search & Profile Retrieval with Advanced Filtering and Error Handling",
+      "status": "failed",
+      "proposed_at": "2026-05-02T22:44:33.859Z",
+      "resolved_at": "2026-05-02T23:33:38.883Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after",
+      "files_changed": [
+        "runner/lib/advanced_search.js",
+        "runner/lib/agent_tools.js",
+        "state/search_parameters.json"
+      ],
+      "branch_name": "meta/proposal_robust_x_search_v2_1714777200000",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_fix_x_content_fetch_2050813920000",
+      "title": "Improve X.com content fetching reliability",
+      "status": "failed",
+      "proposed_at": "2026-05-03T06:32:00Z",
+      "resolved_at": "2026-05-04T00:05:11.240Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/browser.js: \"ensureBrowser\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Dependent load failed (runner/telegram_bot.js): ",
+      "files_changed": [
+        "runner/lib/browser.js",
+        "runner/lib/agent_tools.js"
+      ],
+      "branch_name": "meta/proposal_fix_x_content_fetch_2050813920000",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_fix_x_content_fetching_20260504",
+      "title": "Resolve X.com Content Fetching Tool Failures and Pipeline Errors",
+      "status": "deferred_high_risk",
+      "proposed_at": "2026-05-04T23:41:38.892Z",
+      "resolved_at": "2026-05-05T00:35:35.856Z",
+      "resolution_notes": "High-risk proposal deferred",
+      "files_changed": [],
+      "branch_name": null,
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_tactic_classifier_20260506",
+      "title": "Implement a Narrative Tactic Classification and Tracking Module",
+      "status": "failed",
+      "proposed_at": "2026-05-06T00:13:02.695Z",
+      "resolved_at": "2026-05-06T01:04:51.781Z",
+      "resolution_notes": "Pipeline error: Tests failed: Dependent load failed (runner/archive.js): [archive] Irys balance too low (need 0.000031388 SOL), skipping upload for 2026-04-23_21.html\n[archive] Irys balance too low (need 0.000031388 SOL), skipping upload for 2026-04-23_22.html\n[archive] Irys balance too low (need 0.000031388 SOL), skipping upload for 2026-04-23_23.html\n[archive] Irys bal; Dependent load failed (runner/moltbook.js): ",
+      "files_changed": [
+        "runner/lib/narrative_tactic_ontology.js",
+        "runner/lib/narrative_analysis.js",
+        "runner/lib/axis_manager.js",
+        "runner/lib/journal.js"
+      ],
+      "branch_name": "meta/proposal_narrative_tactic_classifier_20260506",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_divergence_tracker_1778114892316",
+      "title": "Develop Narrative Divergence & Actor Attribution Module",
+      "status": "failed",
+      "proposed_at": "2026-05-07T00:48:12.266Z",
+      "resolved_at": "2026-05-07T01:35:21.498Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after",
+      "files_changed": [
+        "runner/lib/data_models.js",
+        "runner/lib/narrative_analysis.js",
+        "runner/lib/agent_tools.js"
+      ],
+      "branch_name": "meta/proposal_narrative_divergence_tracker_1778114892316",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_threat_solution_narrative_tracker_1778202773088",
+      "title": "Develop 'Threat-Solution Narrative' Pattern Detector",
+      "status": "merged",
+      "proposed_at": "2026-05-08T01:12:53.038Z",
+      "resolved_at": "2026-05-08T02:05:16.182Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "agent_prompts/observation_analysis_prompt.txt",
+        "runner/lib/narrative_tracker.js",
+        "state/belief_state.json",
+        "state/journal_schema.json"
+      ],
+      "branch_name": "meta/proposal_threat_solution_narrative_tracker_1778202773088",
+      "merge_commit": "ac8f449c34be269919faf4cc29485f11ca6c93fc",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_tactic_attribution_1778290973823",
+      "title": "Develop Narrative Tactic and Beneficiary Attribution Module",
+      "status": "merged",
+      "proposed_at": "2026-05-09T01:42:53.778Z",
+      "resolved_at": "2026-05-09T02:35:57.856Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "runner/agent/belief_updater.js",
+        "runner/agent/observation_processor.js",
+        "runner/lib/schemas.js"
+      ],
+      "branch_name": "meta/proposal_narrative_tactic_attribution_1778290973823",
+      "merge_commit": "edf234a308f0f8f370afddf4d1be23fca25481d7",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_belief_axis_challenge_tracker_1778379331271",
+      "title": "Implement Belief Axis Challenge/Reinforcement Tracker",
+      "status": "merged",
+      "proposed_at": "2026-05-10T02:15:31.220Z",
+      "resolved_at": "2026-05-10T03:06:56.298Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "runner/lib/belief_impact.js",
+        "runner/claim_tracker.js"
+      ],
+      "branch_name": "meta/proposal_belief_axis_challenge_tracker_1778379331271",
+      "merge_commit": "6c834c456ef72fb9372c54c5c7716e61a141ec74",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_tactic_taxonomy_1715408700000",
+      "title": "Develop a Narrative Tactic Taxonomy and Detection Module",
+      "status": "merged",
+      "proposed_at": "2026-05-11T02:45:36.814Z",
+      "resolved_at": "2026-05-11T03:37:11.440Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "runner/lib/narrative_analysis_tools.js",
+        "runner/observation_pipeline.js",
+        "state/narrative_tactics_db.json"
+      ],
+      "branch_name": "meta/proposal_narrative_tactic_taxonomy_1715408700000",
+      "merge_commit": "dae12f458879ec936edd76f4a34ee2e01e557cb2",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_state_security_accountability_framework_1778555804555",
+      "title": "Develop 'State Security vs. Accountability' Narrative Evaluation Framework",
+      "status": "failed",
+      "proposed_at": "2026-05-12T03:16:44.473Z",
+      "resolved_at": "2026-05-12T04:07:42.089Z",
+      "resolution_notes": "Pipeline error: Tests failed: Test command failed: node --check runner/data/narrative_tactics_taxonomy.json — /home/raymond_d_baldonado_gmail_com/hunter/runner/data/narrative_tactics_taxonomy.json:2\n  \"id\": \"state_accountability_narrative_tactics\",\n      ^\n\nSyntaxError: Unexpected token ':'\n    at wrapSafe (n",
+      "files_changed": [
+        "runner/data/narrative_tactics_taxonomy.json",
+        "runner/pipeline/narrative_analysis.js",
+        "runner/lib/belief_system.js"
+      ],
+      "branch_name": "meta/proposal_state_security_accountability_framework_1778555804555",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_polarization_rhetoric_detector_1715578800000",
+      "title": "Develop 'Polarization & Sovereignty Rhetoric' Content Analysis Module",
+      "status": "merged",
+      "proposed_at": "2026-05-13T03:40:53.784Z",
+      "resolved_at": "2026-05-13T04:27:51.934Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "analyzer/content_parser.js",
+        "analyzer/rhetoric_detector.js",
+        "data/narrative_tactics_taxonomy.json",
+        "state/belief_tracker.js"
+      ],
+      "branch_name": "meta/proposal_polarization_rhetoric_detector_1715578800000",
+      "merge_commit": "7cb92b3ceba297692f91c3e30fb7abaeb0eb12c6",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_actor_narrative_attribution_framework_20260514",
+      "title": "Enhance Narrative Tactic and Actor Attribution Framework",
+      "status": "failed",
+      "proposed_at": "2026-05-14T04:09:16.335Z",
+      "resolved_at": "2026-05-14T04:58:57.660Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after",
+      "files_changed": [
+        "runner/data/actor_profiles.json",
+        "runner/data/narrative_tactics_taxonomy.json",
+        "runner/lib/agent_tools.js"
+      ],
+      "branch_name": "meta/proposal_actor_narrative_attribution_framework_20260514",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_strategy_mapping_1715750390",
+      "title": "Develop 'Accountability Evasion Narrative Mapping' Tool",
+      "status": "merged",
+      "proposed_at": "2026-05-15T04:39:19.219Z",
+      "resolved_at": "2026-05-15T05:28:53.542Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "runner/data/narrative_tactics_taxonomy.json",
+        "runner/lib/agent_tools.js"
+      ],
+      "branch_name": "meta/proposal_narrative_strategy_mapping_1715750390",
+      "merge_commit": "d5594fc3b227a93c485ce1c334056f76f07ce75e",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_data_access_module_1715830140000",
+      "title": "Develop 'X Search Result Extraction and Analysis Module'",
+      "status": "failed",
+      "proposed_at": "2026-05-16T05:09:01.535Z",
+      "resolved_at": "2026-05-16T06:00:35.202Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after",
+      "files_changed": [
+        "runner/pipeline_config.js",
+        "runner/tools/x_search_tool.js",
+        "runner/data_ingestion_pipeline.js",
+        "runner/lib/agent_tools.js"
+      ],
+      "branch_name": "meta/proposal_narrative_data_access_module_1715830140000",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_geopolitical_claim_validation_1778996381817",
+      "title": "Develop 'Geopolitical Claim Validation & Contextualization Module'",
+      "status": "failed",
+      "proposed_at": "2026-05-17T05:39:41.769Z",
+      "resolved_at": "2026-05-17T06:30:42.174Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"TOOL_DECLARATIONS\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"TOOL_EXECUTORS\" was exported before but is missing after",
+      "files_changed": [
+        "runner/data/credible_sources.json",
+        "runner/modules/geopolitical_validation.js",
+        "runner/lib/agent_tools.js"
+      ],
+      "branch_name": "meta/proposal_geopolitical_claim_validation_1778996381817",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_claim_tracking_module_1779084551653",
+      "title": "Develop 'Strategic Claim Extraction and Tracking Module'",
+      "status": "failed",
+      "proposed_at": "2026-05-18T06:09:11.596Z",
+      "resolved_at": "2026-05-18T07:01:12.725Z",
+      "resolution_notes": "Push to origin/main failed:  Local main rolled back to pre-merge state.",
+      "files_changed": [
+        "runner/modules/claim_extraction.js",
+        "runner/modules/claim_state.js",
+        "runner/modules/claim_tracking_db.js",
+        "runner/pipeline/observation_processing.js"
+      ],
+      "branch_name": "meta/proposal_claim_tracking_module_1779084551653",
+      "merge_commit": "2ff9e2353dc909065233e1c5b60f793b9f532a68",
+      "pushed_to_origin": false,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_tactic_taxonomy_1779172788895",
+      "title": "Develop 'Narrative Tactic Taxonomy and Attribution Module'",
+      "status": "failed",
+      "proposed_at": "2026-05-19T06:39:48.764Z",
+      "resolved_at": "2026-05-19T08:01:27.950Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after",
+      "files_changed": [
+        "runner/lib/tactic_taxonomy.js",
+        "runner/lib/narrative_analysis.js",
+        "runner/lib/agent_tools.js"
+      ],
+      "branch_name": "meta/proposal_narrative_tactic_taxonomy_1779172788895",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_x_search_reliability_1716201600000",
+      "title": "Enhance X Search Reliability and Dynamic Content Extraction",
+      "status": "failed",
+      "proposed_at": "2026-05-20T06:53:40.486Z",
+      "resolved_at": "2026-05-20T08:54:40.466Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"TOOL_DECLARATIONS\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"TOOL_EXECUTORS\" was exported before but is missing after",
+      "files_changed": [
+        "runner/lib/agent_tools.js",
+        "runner/tools/x_search.js",
+        "runner/lib/query_generation.js"
+      ],
+      "branch_name": "meta/proposal_x_search_reliability_1716201600000",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_tactic_catalog_20260521",
+      "title": "Develop 'Narrative Tactic Cataloging Module'",
+      "status": "merged",
+      "proposed_at": "2026-05-21T07:06:37.287Z",
+      "resolved_at": "2026-05-21T09:06:43.055Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "runner/lib/narrative_tactics.js",
+        "runner/tools/catalog_narrative_tactic.js",
+        "runner/tools/get_narrative_tactics.js"
+      ],
+      "branch_name": "meta/proposal_narrative_tactic_catalog_20260521",
+      "merge_commit": "ffc8e91696c015bc05fd2d55c457abde0346ece8",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_content_retention_and_archival_1779436137745",
+      "title": "Develop a Content Retention and Archival Mechanism for Critical Observations",
+      "status": "failed",
+      "proposed_at": "2026-05-22T07:48:57.668Z",
+      "resolved_at": "2026-05-22T10:07:41.420Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after; Dependent load failed (runner/infra_agent.js): ",
+      "files_changed": [
+        "runner/lib/storage.js",
+        "runner/lib/agent_tools.js"
+      ],
+      "branch_name": "meta/proposal_content_retention_and_archival_1779436137745",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_tactic_attribution_1779524316867",
+      "title": "Develop 'Narrative Tactic Identification and Attribution Module'",
+      "status": "failed",
+      "proposed_at": "2026-05-23T08:18:36.802Z",
+      "resolved_at": "2026-05-23T10:37:47.982Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after",
+      "files_changed": [
+        "runner/lib/agent_tools.js",
+        "runner/lib/narrative_tactic_catalog.json"
+      ],
+      "branch_name": "meta/proposal_narrative_tactic_attribution_1779524316867",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_enhance_information_acquisition_reliability_1779614174000",
+      "title": "Enhance Information Acquisition Reliability for X and Web Content",
+      "status": "failed",
+      "proposed_at": "2026-05-24T09:16:13.887Z",
+      "resolved_at": "2026-05-24T11:08:35.357Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"getBrowseTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"getTweetTools\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"TOOL_DECLARATIONS\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"TOOL_EXECUTORS\" was exported before but is missing after",
+      "files_changed": [
+        "runner/lib/agent_tools.js",
+        "runner/lib/get_page_content.js",
+        "runner/lib/web_search.js"
+      ],
+      "branch_name": "meta/proposal_enhance_information_acquisition_reliability_1779614174000",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_dissent_framing_module_20260525",
+      "title": "Develop a 'Dissent Framing Analysis Module'",
+      "status": "merged",
+      "proposed_at": "2026-05-25T09:48:52.276Z",
+      "resolved_at": "2026-05-25T11:38:30.726Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "runner/lib/agent_beliefs.js",
+        "runner/lib/analysis_tools.js",
+        "runner/lib/observation_processor.js",
+        "runner/prompt_core_reflection.md"
+      ],
+      "branch_name": "meta/proposal_dissent_framing_module_20260525",
+      "merge_commit": "e75617fb688985bc33747983e5c90814e08c1357",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_attribution_tracking_1779876820328",
+      "title": "Develop a Narrative Tactic Attribution and Propagation Tracker",
+      "status": "merged",
+      "proposed_at": "2026-05-27T10:13:40.263Z",
+      "resolved_at": "2026-05-27T10:30:12.855Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "runner/lib/narrative_tracker_utils.js",
+        "tools/narrative_tracker.js"
+      ],
+      "branch_name": "meta/proposal_narrative_attribution_tracking_1779876820328",
+      "merge_commit": "3bb7b4b349b35f386050ffc9e0830d86cf52356e",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_claim_source_validation_1779964977412",
+      "title": "Develop a Claim Source Validation and Tracking Module",
+      "status": "failed",
+      "proposed_at": "2026-05-28T10:42:57.356Z",
+      "resolved_at": "2026-06-03T10:47:47.410Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"executeTool\" was exported before but is missing after",
+      "files_changed": [
+        "runner/modules/claim_validation.js",
+        "runner/lib/agent_tools.js"
+      ],
+      "branch_name": "meta/proposal_claim_source_validation_1779964977412",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_robust_information_acquisition_1780492992476",
+      "title": "Develop a Robust Information Acquisition & Obstruction Tracking Module",
+      "status": "failed",
+      "proposed_at": "2026-06-03T13:23:12.410Z",
+      "resolved_at": "2026-06-10T10:51:21.968Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"safePath\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after",
+      "files_changed": [
+        "runner/lib/obstruction.js",
+        "runner/lib/agent_tools.js",
+        "runner/pipeline/information_acquisition.js",
+        "runner/pipeline/reflection.js"
+      ],
+      "branch_name": "meta/proposal_robust_information_acquisition_1780492992476",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    },
+    {
+      "id": "proposal_robust_acquisition_audit_20260611",
+      "title": "Develop a Resilient Information Acquisition and Audit Log Module",
+      "status": "failed",
+      "proposed_at": "2026-06-11T17:44:49.609Z",
+      "resolved_at": "2026-06-17T10:56:09.782Z",
+      "resolution_notes": "Pipeline error: Tests failed: Export dropped in runner/lib/agent_tools.js: \"safePath\" was exported before but is missing after; Export dropped in runner/lib/agent_tools.js: \"sanitizeToolResult\" was exported before but is missing after",
+      "files_changed": [
+        "runner/lib/acquisition.js",
+        "runner/lib/audit_log.js",
+        "runner/lib/agent_tools.js",
+        "state/acquisition_log.json"
+      ],
+      "branch_name": "meta/proposal_robust_acquisition_audit_20260611",
+      "merge_commit": null,
+      "pushed_to_origin": null,
+      "reverted": false,
+      "revert_reason": null
+    }
+  ]
+}

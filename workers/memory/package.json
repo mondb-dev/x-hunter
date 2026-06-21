@@ -1,0 +1,13 @@
+{
+  "name": "hunter-memory",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Memory API service for Sebastian Hunter — recall + context endpoints",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "pg": "^8.13.0"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "version": "1.0.0",
+  "description": "A taxonomy of narrative manipulation tactics for analysis.",
+  "tactics": [
+    {
+      "id": "ad_hominem",
+      "name": "Ad Hominem",
+      "description": "Attacking the opponent's character or personal traits in an attempt to undermine their argument, rather than addressing the substance of the argument itself.",
+      "category": "Logical Fallacy",
+      "indicators": [
+        "\\bis an idiot\\b",
+        "\\bis a shill\\b",
+        "\\bis corrupt\\b",
+        "\\bis a puppet\\b",
+        "\\bis a hack\\b",
+        "\\bwhat a clown\\b",
+        "of course \\w+ would say that",
+        "look at their history"
+      ]
+    },
+    {
+      "id": "straw_man",
+      "name": "Straw Man",
+      "description": "Misrepresenting someone's argument to make it easier to attack. This involves exaggerating, misrepresenting, or completely fabricating someone's argument.",
+      "category": "Logical Fallacy",
+      "indicators": [
+        "so you're saying",
+        "so what you're arguing is",
+        "is basically claiming that",
+        "wants to destroy",
+        "hates our country"
+      ]
+    },
+    {
+      "id": "appeal_to_emotion",
+      "name": "Appeal to Emotion",
+      "description": "Manipulating an emotional response in place of a valid or compelling argument. This includes appeals to fear, anger, pity, or patriotism.",
+      "category": "Rhetorical Device",
+      "indicators": [
+        "think of the children",
+        "an outrageous assault on",
+        "this is disgusting",
+        "i am horrified",
+        "our way of life is under attack",
+        "this is a national tragedy",
+        "how dare they"
+      ]
+    },
+    {
+      "id": "whataboutism",
+      "name": "Whataboutism",
+      "description": "Attempting to discredit an opponent's position by charging them with hypocrisy without directly refuting or disproving their argument. It's a variant of the tu quoque fallacy.",
+      "category": "Propaganda Technique",
+      "indicators": [
+        "what about",
+        "but you didn't complain when",
+        "where was the outrage when",
+        "yeah but what about"
+      ]
+    },
+    {
+      "id": "gaslighting",
+      "name": "Gaslighting",
+      "description": "Psychologically manipulating someone into questioning their own sanity, perception of reality, or memories. In discourse, it involves denying or distorting reality to sow confusion.",
+      "category": "Manipulation Technique",
+      "indicators": [
+        "that never happened",
+        "you're imagining things",
+        "you're being hysterical",
+        "you're too sensitive",
+        "it's not a big deal",
+        "i was just joking",
+        "you're crazy"
+      ]
+    },
+    {
+      "id": "cherry_picking",
+      "name": "Cherry-Picking (Suppressed Evidence)",
+      "description": "The act of pointing to individual cases or data that seem to confirm a particular position, while ignoring a significant portion of related cases or data that may contradict that position.",
+      "category": "Logical Fallacy",
+      "indicators": [
+        "the one study that shows",
+        "ignoring the fact that",
+        "conveniently leaves out"
+      ]
+    },
+    {
+      "id": "false_dichotomy",
+      "name": "False Dichotomy (False Dilemma)",
+      "description": "Presenting two alternative states as the only possibilities, when in fact more possibilities exist. It frames an issue as an 'either/or' choice, when it's more complex.",
+      "category": "Logical Fallacy",
+      "indicators": [
+        "you're either with us, or",
+        "it's either .* or .*",
+        "the choice is simple",
+        "we can either [^\\s]+ or"
+      ]
+    },
+    {
+      "id": "slippery_slope",
+      "name": "Slippery Slope",
+      "description": "Arguing that a relatively small first step will inevitably lead to a chain of related events culminating in some significant (usually negative) effect.",
+      "category": "Logical Fallacy",
+      "indicators": [
+        "if we allow this, then",
+        "this is just the beginning",
+        "next thing you know",
+        "it starts with .*, then leads to",
+        "this will open the floodgates"
+      ]
+    },
+    {
+      "id": "fear_mongering",
+      "name": "Fear-mongering",
+      "description": "The deliberate use of fear to influence public opinion or achieve a political goal. It often involves exaggerating dangers and arousing public alarm.",
+      "category": "Propaganda Technique",
+      "indicators": [
+        "they are coming for your",
+        "be afraid, be very afraid",
+        "a threat to our safety",
+        "endangering our children",
+        "will destroy our society"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,927 @@
+#!/usr/bin/env node
+/**
+ * runner/curiosity.js — epistemic curiosity directive generator
+ *
+ * Driver priority (highest first):
+ *   1. discourse  — someone provided substantive counter-reasoning in a reply exchange
+ *   2. agent_hint — agent flagged a mid-cycle discovery worth follow-up
+ *   3. sprint_research — silent hours + active sprint research task
+ *   4. contradiction — two established axes pulling in opposing directions
+ *   5. uncertainty_axis — a belief axis has partial evidence but low confidence
+ *   6. trending   — local Ollama picks the most interesting keyword from top 5 scraped
+ *
+ * Writes state/curiosity_directive.txt — a persistent research focus read by
+ * every browse cycle for ~12 cycles (~4h). Also appends one line to
+ * state/curiosity_log.jsonl for later analysis of curiosity decision behavior.
+ *
+ * Usage: node runner/curiosity.js
+ * Called by run.sh every 12th BROWSE cycle (CURIOSITY_EVERY=12).
+ * Env: CURIOSITY_CYCLE=<n>  CURIOSITY_EVERY=<n>
+ */
+
+"use strict";
+
+const fs   = require("fs");
+const path = require("path");
+const { loadScraperDb } = require("./lib/db_backend");
+const db = loadScraperDb();
+
+const ROOT         = path.resolve(__dirname, "..");
+const DIRECTIVE    = path.join(ROOT, "state", "curiosity_directive.txt");
+const LOG          = path.join(ROOT, "state", "curiosity_log.jsonl");
+const ONTOLOGY     = path.join(ROOT, "state", "ontology.json");
+const BELIEF       = path.join(ROOT, "state", "belief_state.json");
+const BROWSE_NOTES = path.join(ROOT, "state", "browse_notes.md");
+const ANCHORS      = path.join(ROOT, "state", "discourse_anchors.jsonl");
+const SPRINT_CTX   = path.join(ROOT, "state", "sprint_context.txt");
+
+const config = require("./lib/config");
+const { createSelfEchoDetector } = require("./lib/self_echo.js");
+
+const { generate: llmGenerate } = require("./llm.js");
+
+// Env vars passed by run.sh so curiosity.js can compute directive expiry
+const CURRENT_CYCLE  = parseInt(process.env.CURIOSITY_CYCLE  || "0",  10);
+const CURIOSITY_EVERY = parseInt(process.env.CURIOSITY_EVERY || "12", 10);
+const EXPIRES_CYCLE  = CURRENT_CYCLE + CURIOSITY_EVERY;
+
+// Axis must have at least this many evidence entries to qualify for curiosity
+const UNCERTAINTY_EVIDENCE_MIN = 1;
+const CONFIDENCE_CEILING = 0.82; // skip axes already well understood
+
+// ── Active learning gain formula ──────────────────────────────────────────────
+// gain = (1 - confidence) × polarization × recency_decay
+// polarization = 0.3 + 0.7 × |score|  (neutral axes still get 30% weight)
+// recency_decay = exp(-age_days / 14)  (14-day half-life; recently updated = higher gain)
+// This prioritises axes that are: uncertain, have strong existing beliefs, and are current.
+
+function computeGain(axis) {
+  const confidence    = axis.confidence || 0;
+  // Skip axes that are already well-understood — no curiosity value
+  if (confidence >= CONFIDENCE_CEILING) return -1;
+
+  const absscore      = Math.abs(axis.score || 0);
+  const polarization  = 0.3 + 0.7 * absscore;
+
+  const lastUpdated   = axis.last_updated ? new Date(axis.last_updated) : new Date(0);
+  const ageDays       = (Date.now() - lastUpdated.getTime()) / 86_400_000;
+  const recencyDecay  = Math.exp(-ageDays / 14);
+
+  // Staleness boost: axes not updated in 2+ days get extra weight (revisit neglected questions)
+  const stalenessBoost = ageDays > 2 ? 1 + Math.min(ageDays / 7, 1.0) : 1;
+
+  return (1 - confidence) * polarization * recencyDecay * stalenessBoost;
+}
+
+// ── Ontology readers ──────────────────────────────────────────────────────────
+
+function getUncertainAxes() {
+  if (!fs.existsSync(ONTOLOGY)) return [];
+  try {
+    const data = JSON.parse(fs.readFileSync(ONTOLOGY, "utf-8"));
+    return (data.axes || [])
+      .filter(a => (a.evidence_log || []).length >= UNCERTAINTY_EVIDENCE_MIN)
+      .map(a => ({ ...a, _gain: computeGain(a) }))
+      .sort((a, b) => b._gain - a._gain); // highest gain first
+  } catch { return []; }
+}
+
+function getAllAxes() {
+  if (!fs.existsSync(ONTOLOGY)) return "(no axes yet)";
+  try {
+    const data = JSON.parse(fs.readFileSync(ONTOLOGY, "utf-8"));
+    return (data.axes || []).slice(0, 6)
+      .map(a => `- ${a.label}: ${a.left_pole} <-> ${a.right_pole}`)
+      .join("\n") || "(no axes yet)";
+  } catch { return "(no axes yet)"; }
+}
+
+function getBeliefSummary() {
+  if (!fs.existsSync(BELIEF)) return "";
+  try {
+    const data = JSON.parse(fs.readFileSync(BELIEF, "utf-8"));
+    // belief_state schema: { created_at, axes: [{id, score, confidence}] }
+    const axes = (data.axes || [])
+      .filter(a => (a.confidence || 0) > 0)
+      .sort((a, b) => (b.confidence || 0) - (a.confidence || 0))
+      .slice(0, 3);
+    if (!axes.length) return "";
+    return "Highest-confidence axes: " + axes.map(a =>
+      `${a.id} (conf:${((a.confidence || 0) * 100).toFixed(0)}%, score:${(a.score || 0) >= 0 ? "+" : ""}${(a.score || 0).toFixed(2)})`
+    ).join(", ");
+  } catch { return ""; }
+}
+
+function getBrowseNotesSummary() {
+  if (!fs.existsSync(BROWSE_NOTES)) return "";
+  const text = fs.readFileSync(BROWSE_NOTES, "utf-8").trim();
+  if (!text) return "";
+  return text.slice(0, 400).replace(/\s+/g, " ");
+}
+
+// ── LLM call (trending fallback) ─────────────────────────────────────────────
+
+async function callOllama(prompt) {
+  return llmGenerate(prompt, { temperature: 0.1, maxTokens: 60, timeoutMs: 60_000 });
+}
+
+// ── Slug helper (for ambient focus tag) ───────────────────────────────────────
+
+function toSlug(str) {
+  return str.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "").slice(0, 40);
+}
+const STOP_POLE = new Set(["of","and","in","the","a","an","for","to","vs","or","with","at","by","from","on","is","are","was","were","be","been","has","have","that","this","it","but","not","more","less","over","their","its","will","can","do","does"]);
+
+function poleKeywords(poleText, max = 2) {
+  return (poleText || "")
+    .replace(/[^a-zA-Z0-9 ]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .split(" ")
+    .filter(w => w.length > 3 && !STOP_POLE.has(w.toLowerCase()))
+    .slice(0, max)
+    .join(" ");
+}
+
+// Build search angles for a topic: main + counter-pole + pole-tension
+function buildSearchAngles(mainTerms, leftPole, rightPole) {
+  const angles = [];
+
+  // Angle 1: main terms (already clean)
+  angles.push(`https://x.com/search?q=${encodeURIComponent(mainTerms)}&f=live`);
+
+  // Angle 2: counter angle — use left pole keywords (skeptical / critical perspective)
+  if (leftPole) {
+    const counterTerms = poleKeywords(leftPole, 3) || `${mainTerms.split(" ")[0]} criticism`;
+    angles.push(`https://x.com/search?q=${encodeURIComponent(counterTerms)}&f=live`);
+  } else {
+    // No pole available — prefix main terms with "not" for opposition
+    const counterTerms = `${mainTerms.split(" ").slice(0, 2).join(" ")} NOT`;
+    angles.push(`https://x.com/search?q=${encodeURIComponent(mainTerms + " debate")}&f=live`);
+  }
+
+  // Angle 3: right pole keywords (affirmative perspective)
+  if (rightPole) {
+    const poleTension = poleKeywords(rightPole, 3) || mainTerms;
+    angles.push(`https://x.com/search?q=${encodeURIComponent(poleTension)}&f=live`);
+  }
+
+  return angles;
+}
+
+// ── Silent-hours sprint helpers ───────────────────────────────────────────────
+
+/**
+ * Check if current UTC hour is in silent period (outside active posting hours).
+ */
+function isSilentHours() {
+  const h = new Date().getUTCHours();
+  return h < config.TWEET_START || h >= config.TWEET_END;
+}
+
+/**
+ * Read sprint_context.txt and extract the first actionable task (▸ or ○).
+ * Returns { type, title, status } or null.
+ */
+// Generic process words that indicate a task title has no real search topic.
+const META_TASK_WORDS = new Set([
+  "select", "choose", "pick", "decide", "determine", "topic", "subject",
+  "case", "study", "execute", "perform", "complete", "start", "begin",
+  "setup", "set", "up", "plan", "outline", "organise", "organize",
+  "gather", "collection", "curation", "curate", "initial", "draft",
+  "write", "publish", "post", "promote", "monitor", "review", "reflect",
+  "feedback", "engage", "community", "announce", "announcement",
+]);
+
+/**
+ * Returns true if this task title is purely meta process language with no
+ * real topical content (e.g. "Select Topic for Case Study #2").
+ */
+function isMetaTaskTitle(title) {
+  const words = title
+    .replace(/[^a-zA-Z0-9 ]/g, " ")
+    .trim()
+    .split(/\s+/)
+    .filter(w => w.length > 2);
+  if (words.length === 0) return true;
+  const metaCount = words.filter(w => META_TASK_WORDS.has(w.toLowerCase())).length;
+  return metaCount / words.length >= 0.6;
+}
+
+function extractSprintTask() {
+  if (!fs.existsSync(SPRINT_CTX)) return null;
+  try {
+    const text = fs.readFileSync(SPRINT_CTX, "utf-8");
+    if (!text.trim() || text.includes("(no active plan)") || text.includes("(no active sprint)")) return null;
+
+    const lines = text.split("\n");
+    const tasks = [];
+
+    // Collect sprint goal line for fallback
+    let sprintGoal = "";
+    for (const line of lines) {
+      const gm = line.match(/^Current:\s+Week\s+\d+\s+[—–-]\s+(.+)/);
+      if (gm) { sprintGoal = gm[1].trim(); break; }
+    }
+
+    // Collect all actionable tasks
+    for (const line of lines) {
+      const m = line.match(/^\s*[▸○]\s*(?:\[\w+\]\s*)*\[(\w+)\]\s+(?:\[carried\]\s*)*(.+)/);
+      if (m) {
+        tasks.push({
+          type:      m[1].trim(),
+          title:     m[2].trim(),
+          status:    line.includes("▸") ? "in_progress" : "not_started",
+          sprintGoal,
+        });
+      }
+    }
+
+    if (tasks.length === 0) return null;
+
+    // Prefer: in_progress first; then first non-meta task; then first task
+    const inProgress = tasks.find(t => t.status === "in_progress");
+    if (inProgress && !isMetaTaskTitle(inProgress.title)) return inProgress;
+
+    const nonMeta = tasks.find(t => !isMetaTaskTitle(t.title));
+    if (nonMeta) return nonMeta;
+
+    // All tasks are meta — return first but flag it
+    const first = tasks[0];
+    first.isMeta = true;
+    return first;
+
+  } catch {}
+  return null;
+}
+
+/**
+ * Extract search terms from a sprint task title.
+ * Strips generic verbs and task-type prefixes, returns clean keywords.
+ */
+function sprintSearchTerms(task) {
+  const STRIP = new Set([
+    "research", "write", "draft", "publish", "engage", "create", "build",
+    "update", "monitor", "review", "check", "start", "complete", "finish",
+    "select", "choose", "execute", "perform", "gather", "curate", "initial",
+    "topic", "case", "study", "analysis", "week", "carried",
+  ]);
+
+  // If the task is flagged as meta, fall through immediately to richer sources
+  if (!task.isMeta) {
+    const words = task.title
+      .replace(/[^a-zA-Z0-9 ]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+      .split(" ")
+      .filter(w => w.length > 2 && !STRIP.has(w.toLowerCase()));
+
+    const candidate = words.slice(0, 5).join(" ");
+    // Only use if we have at least 2 meaningful words left
+    if (candidate.trim().split(/\s+/).length >= 2) return candidate;
+  }
+
+  // Fallback 1: sprint week goal (e.g. "Publish a second case study to demonstrate...")
+  if (task.sprintGoal) {
+    const goalWords = task.sprintGoal
+      .replace(/[^a-zA-Z0-9 ]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+      .split(" ")
+      .filter(w => w.length > 3 && !STRIP.has(w.toLowerCase()));
+    const goalCandidate = goalWords.slice(0, 5).join(" ");
+    if (goalCandidate.trim().split(/\s+/).length >= 2) return goalCandidate;
+  }
+
+  // Fallback 2: plan compulsion (read from active_plan.json)
+  try {
+    const planPath = path.join(ROOT, "state", "active_plan.json");
+    if (fs.existsSync(planPath)) {
+      const plan = JSON.parse(fs.readFileSync(planPath, "utf-8"));
+      const compulsion = (plan.compulsion || plan.title || "").replace(/[^a-zA-Z0-9 ]/g, " ");
+      const cWords = compulsion.split(/\s+/)
+        .filter(w => w.length > 4 && !STRIP.has(w.toLowerCase()));
+      const cCandidate = cWords.slice(0, 5).join(" ");
+      if (cCandidate.trim().split(/\s+/).length >= 2) return cCandidate;
+    }
+  } catch {}
+
+  // Last resort: raw title first 4 words
+  return task.title.split(" ").slice(0, 4).join(" ");
+}
+
+
+
+// ── Curiosity hit rate ────────────────────────────────────────────────────────
+//
+// After each directive expires, check whether the target axis actually gained
+// new evidence. Append a {type:'result'} entry to the log. Show running rate
+// in new directives so the agent knows if its research is productive.
+
+function evaluatePreviousDirective() {
+  if (!fs.existsSync(LOG)) return;
+  try {
+    const lines = fs.readFileSync(LOG, 'utf-8').split('\n').filter(l => l.trim());
+    const entries = lines.map(l => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
+
+    // Find most recent directive entry (axis-based) that doesn't yet have a result
+    const resultedCycles = new Set(
+      entries.filter(e => e.type === 'result').map(e => e.directive_cycle)
+    );
+    const prev = [...entries]
+      .reverse()
+      .find(e => !e.type && e.axis_id && e.cycle !== undefined && !resultedCycles.has(e.cycle));
+
+    if (!prev) return;
+
+    // Check if current cycle has passed the expiry of that directive
+    if (CURRENT_CYCLE < (prev.expires_at_cycle || 0)) return;
+
+    // Count evidence entries on that axis added after the directive was issued
+    let evidenceGained = 0;
+    if (fs.existsSync(ONTOLOGY)) {
+      const onto = JSON.parse(fs.readFileSync(ONTOLOGY, 'utf-8'));
+      const axis = (onto.axes || []).find(a => a.id === prev.axis_id);
+      if (axis) {
+        evidenceGained = (axis.evidence_log || [])
+          .filter(e => (e.timestamp || '') > prev.ts)
+          .length;
+      }
+    }
+
+    appendLog({
+      type:             'result',
+      directive_cycle:  prev.cycle,
+      directive_ts:     prev.ts,
+      axis_id:          prev.axis_id,
+      axis_label:       prev.axis_label,
+      evidence_gained:  evidenceGained,
+      hit:              evidenceGained > 0,
+    });
+    console.log(`[curiosity] hit-rate eval: "${prev.axis_label}" → ${evidenceGained} new evidence (${evidenceGained > 0 ? 'HIT' : 'MISS'})`);
+  } catch (err) {
+    console.error(`[curiosity] hit-rate eval error: ${err.message}`);
+  }
+}
+
+function computeHitRate() {
+  if (!fs.existsSync(LOG)) return null;
+  try {
+    const lines = fs.readFileSync(LOG, 'utf-8').split('\n').filter(l => l.trim());
+    const results = lines
+      .map(l => { try { return JSON.parse(l); } catch { return null; } })
+      .filter(e => e?.type === 'result')
+      .slice(-5); // last 5 directives with results
+    if (results.length < 2) return null;
+    const hits = results.filter(r => r.hit).length;
+    return { hits, total: results.length, rate: (hits / results.length).toFixed(2) };
+  } catch { return null; }
+}
+
+// ── Cross-axis contradiction detection ────────────────────────────────────────
+//
+// Finds pairs of axes with opposing score directions and overlapping topics.
+// Returns the strongest contradiction pair, or null if none found.
+
+function detectContradiction(axes) {
+  // Filter to axes with meaningful, well-established scores
+  const significant = axes.filter(a =>
+    Math.abs(a.score || 0) > 0.15 &&
+    (a.confidence || 0) > 0.5 &&
+    (a.evidence_log || []).length >= 3
+  );
+  if (significant.length < 2) return null;
+
+  // Tokenize labels into significant word sets for overlap detection
+  const STOP = new Set(['of','and','in','the','a','an','for','to','vs','or','with','at','by','from','on']);
+  function tokens(str) {
+    return new Set(
+      (str || '').toLowerCase().replace(/[^a-z0-9 ]/g, ' ').split(/\s+/)
+        .filter(w => w.length > 3 && !STOP.has(w))
+    );
+  }
+
+  let best = null;
+  let bestScore = 0;
+
+  for (let i = 0; i < significant.length; i++) {
+    for (let j = i + 1; j < significant.length; j++) {
+      const a = significant[i];
+      const b = significant[j];
+      // Must point in opposing directions
+      if (Math.sign(a.score) === Math.sign(b.score)) continue;
+
+      // Check label/pole keyword overlap
+      const tokA = new Set([...tokens(a.label), ...tokens(a.left_pole), ...tokens(a.right_pole)]);
+      const tokB = new Set([...tokens(b.label), ...tokens(b.left_pole), ...tokens(b.right_pole)]);
+      const overlap = [...tokA].filter(t => tokB.has(t)).length;
+      if (overlap === 0) continue;
+
+      // Score: magnitude of both scores × overlap × combined confidence
+      const tension = Math.abs(a.score) + Math.abs(b.score);
+      const confAvg = ((a.confidence || 0) + (b.confidence || 0)) / 2;
+      const score   = tension * overlap * confAvg;
+
+      if (score > bestScore) {
+        bestScore = score;
+        best = { a, b, overlap, tension };
+      }
+    }
+  }
+  return best;
+}
+
+// ── Log ───────────────────────────────────────────────────────────────────────
+
+function appendLog(entry) {
+  const line = JSON.stringify(entry) + "\n";
+  fs.appendFileSync(LOG, line, "utf-8");
+}
+
+// ── Discourse anchor reader ───────────────────────────────────────────────────
+
+function getUnprocessedDiscourseAnchor() {
+  if (!fs.existsSync(ANCHORS)) return null;
+  const lines = fs.readFileSync(ANCHORS, "utf-8")
+    .split("\n")
+    .filter(l => l.trim());
+  const selfEchoDetector = createSelfEchoDetector();
+
+  const processedIds = new Set();
+  const anchors      = [];
+
+  for (const line of lines) {
+    try {
+      const entry = JSON.parse(line);
+      if (entry.processed_at && entry.post_id) {
+        processedIds.add(entry.post_id);
+      } else if (entry.post_id && entry.summary) {
+        anchors.push(entry);
+      }
+    } catch { /* skip malformed lines */ }
+  }
+
+  // Return most recent unprocessed anchor (anchors are appended chronologically)
+  for (let i = anchors.length - 1; i >= 0; i--) {
+    if (processedIds.has(anchors[i].post_id)) continue;
+    if (selfEchoDetector.findMatch(anchors[i].their_text || '')) continue;
+    return anchors[i];
+  }
+  return null;
+}
+
+function markAnchorProcessed(postId) {
+  const marker = JSON.stringify({ post_id: postId, processed_at: new Date().toISOString() });
+  fs.appendFileSync(ANCHORS, marker + "\n", "utf-8");
+}
+
+// ── Main ──────────────────────────────────────────────────────────────────────
+
+(async () => {
+  const ts       = new Date().toISOString();
+  const tsHuman  = ts.replace("T", " ").slice(0, 16);
+  const HR       = "─".repeat(70);
+  const stateDir = path.join(ROOT, "state");
+  if (!fs.existsSync(stateDir)) fs.mkdirSync(stateDir, { recursive: true });
+
+  // ── Evaluate previous directive hit rate ────────────────────────────────────
+  evaluatePreviousDirective();
+  const hitRate = computeHitRate();
+  const hitRateLine = hitRate
+    ? `Curiosity hit rate: ${hitRate.hits}/${hitRate.total} directives produced new evidence (${(hitRate.rate * 100).toFixed(0)}% over last ${hitRate.total})`
+    : '';
+
+  // ── Load all axes once (used by contradiction + uncertainty paths) ───────────
+  const allAxesData = (() => {
+    if (!fs.existsSync(ONTOLOGY)) return [];
+    try { return JSON.parse(fs.readFileSync(ONTOLOGY, 'utf-8')).axes || []; } catch { return []; }
+  })();
+
+  // ── Path 1: discourse-triggered — someone challenged Hunter's thinking ───────
+  const discourseAnchor = getUnprocessedDiscourseAnchor();
+
+  if (discourseAnchor) {
+    const searchTerms = (discourseAnchor.topic || discourseAnchor.summary.split(" ").slice(0, 3).join(" "));
+    const searchUrl   = `https://x.com/search?q=${encodeURIComponent(searchTerms)}&f=live`;
+    const topicSlug   = toSlug(discourseAnchor.topic || searchTerms);
+    const expireLine  = CURRENT_CYCLE > 0
+      ? `refreshes at cycle ${EXPIRES_CYCLE}`
+      : `refreshes in ~${CURIOSITY_EVERY} cycles`;
+
+    const theirExcerpt = (discourseAnchor.their_text || "").slice(0, 180).replace(/\n/g, " ");
+
+    const discourseAngles = buildSearchAngles(searchTerms, null, null);
+    const allAngleLines = discourseAngles.map((u, i) => `  SEARCH_URL_${i + 1}: ${u}`).join("\n");
+    const lines = [
+      `── curiosity directive · ${tsHuman} ${HR.slice(tsHuman.length + 25)}`,
+      `RESEARCH FOCUS: Discourse challenge — "${discourseAnchor.topic || "see below"}"`,
+      `  @${discourseAnchor.username} raised a counter-argument worth sitting with:`,
+      `  "${theirExcerpt}"`,
+      ``,
+      `  Summary: ${discourseAnchor.summary}`,
+      `  This is an invitation to reconsider, not just defend.`,
+      ``,
+      `ACTIVE SEARCH (rotates each cycle — prefetch picks automatically):`,
+      allAngleLines,
+      `  Read 3-5 posts per cycle. Look for evidence on BOTH sides of this question.`,
+      `  Are you finding anything that shifts your view?`,
+      ``,
+      `AMBIENT FOCUS (all browse cycles until directive refreshes):`,
+      `  Stay alert to posts that speak to this tension.`,
+      `  Be genuinely open to revising your position.`,
+      `  Tag: [CURIOSITY: discourse_${topicSlug}]`,
+      ``,
+      `── end directive (${expireLine}) ${HR.slice(expireLine.length + 22)}`,
+    ];
+
+    fs.writeFileSync(DIRECTIVE, lines.join("\n"), "utf-8");
+    markAnchorProcessed(discourseAnchor.post_id);
+
+    appendLog({
+      cycle:            CURRENT_CYCLE,
+      ts,
+      driver:           "discourse",
+      post_id:          discourseAnchor.post_id,
+      username:         discourseAnchor.username,
+      summary:          discourseAnchor.summary,
+      topic:            discourseAnchor.topic,
+      expires_at_cycle: EXPIRES_CYCLE,
+    });
+
+    console.log(
+      `[curiosity] driver: discourse — @${discourseAnchor.username}: "${(discourseAnchor.summary || "").slice(0, 80)}"`
+    );
+    process.exit(0);
+  }
+
+  // ── Path 2: agent hint — agent flagged something mid-cycle worth follow-up ──
+  const HINT_PATH = path.join(ROOT, "state", "curiosity_hint.json");
+  if (fs.existsSync(HINT_PATH)) {
+    let hint = null;
+    try { hint = JSON.parse(fs.readFileSync(HINT_PATH, "utf-8")); } catch {}
+    if (hint && hint.suggested_query) {
+      const topicSlug  = toSlug(hint.suggested_query);
+      const expireLine = CURRENT_CYCLE > 0
+        ? `refreshes at cycle ${EXPIRES_CYCLE}`
+        : `refreshes in ~${CURIOSITY_EVERY} cycles`;
+      const hintAngles = buildSearchAngles(hint.suggested_query, null, null);
+      const angleLines = hintAngles.map((u, i) => `  SEARCH_URL_${i + 1}: ${u}`).join("\n");
+      const urgencyLine = hint.urgency ? `  Urgency: ${hint.urgency}` : null;
+      const axisLine    = hint.axis_id  ? `  Related axis: ${hint.axis_id}` : null;
+      const lines = [
+        `── curiosity directive · ${tsHuman} ${HR.slice(tsHuman.length + 25)}`,
+        `RESEARCH FOCUS: Agent flagged — "${hint.suggested_query}"`,
+        urgencyLine,
+        axisLine,
+        `  Reason: ${hint.reason || "(none given)"}`,
+        ``,
+        `ACTIVE SEARCH (rotates each cycle — prefetch picks automatically):`,
+        angleLines,
+        ...(hint.suggested_url ? [`  Suggested URL: ${hint.suggested_url}`] : []),
+        `  Read 3-5 posts. Look for context, counter-evidence, or sources for belief axes.`,
+        ``,
+        `AMBIENT FOCUS (all browse cycles until directive refreshes):`,
+        `  Follow up on the signal flagged from the prior cycle.`,
+        `  Tag: [CURIOSITY: ${topicSlug}]`,
+        ``,
+        `── end directive (${expireLine}) ${HR.slice(expireLine.length + 22)}`,
+      ].filter(l => l !== null);
+
+      fs.writeFileSync(DIRECTIVE, lines.join("\n"), "utf-8");
+      fs.unlinkSync(HINT_PATH); // consumed — one-shot
+
+      appendLog({
+        cycle:            CURRENT_CYCLE,
+        ts,
+        driver:           "agent_hint",
+        suggested_query:  hint.suggested_query,
+        urgency:          hint.urgency,
+        axis_id:          hint.axis_id,
+        expires_at_cycle: EXPIRES_CYCLE,
+      });
+
+      console.log(`[curiosity] driver: agent_hint — "${hint.suggested_query.slice(0, 80)}"`);
+      process.exit(0);
+    } else {
+      fs.unlinkSync(HINT_PATH); // malformed — clean up
+    }
+  }
+
+  // ── Path 3: Sprint research (silent hours only) ────────────────────────────
+  // During silent hours (UTC 23-07), if there's an active sprint with pending tasks,
+  // direct curiosity toward sprint-relevant research instead of generic uncertainty.
+  if (isSilentHours()) {
+    const sprintTask = extractSprintTask();
+    // [reflect] tasks are local-only — no external search needed. Fall through
+    // to normal curiosity paths so prefetch navigates to something useful.
+    if (sprintTask && sprintTask.type !== 'reflect') {
+      const searchTerms = sprintSearchTerms(sprintTask);
+      const taskSlug    = toSlug(sprintTask.title);
+      const expireLine  = CURRENT_CYCLE > 0
+        ? `refreshes at cycle ${EXPIRES_CYCLE}`
+        : `refreshes in ~${CURIOSITY_EVERY} cycles`;
+
+      const sprintAngles = buildSearchAngles(searchTerms, null, null);
+      const sprintAngleLines = sprintAngles.map((u, i) => `  SEARCH_URL_${i + 1}: ${u}`).join("\n");
+
+      const lines = [
+        `── curiosity directive · ${tsHuman} ${HR.slice(tsHuman.length + 25)}`,
+        `RESEARCH FOCUS: Sprint — "${sprintTask.title}"`,
+        `  Why: Silent hours sprint work — advancing [${sprintTask.type}] task`,
+        `  Status: ${sprintTask.status === "in_progress" ? "in progress" : "not yet started"}`,
+        ``,
+        `ACTIVE SEARCH (rotates each cycle — prefetch picks automatically):`,
+        sprintAngleLines,
+        `  This is sprint research time. Search deeply for:`,
+        `  - Specific factual claims (with or without evidence)`,
+        `  - Contradictions between sources on this topic`,
+        `  - High-quality analytical threads or primary sources`,
+        `  - Data or evidence that could anchor your analysis`,
+        ``,
+        `AMBIENT FOCUS (all browse cycles until directive refreshes):`,
+        `  Everything this cycle serves the sprint. Tag all findings:`,
+        `    [SPRINT: ${sprintTask.type}] [CURIOSITY: sprint_${taskSlug}]`,
+        ``,
+        `── end directive (${expireLine}) ${HR.slice(expireLine.length + 22)}`,
+      ];
+
+      fs.writeFileSync(DIRECTIVE, lines.join("\n"), "utf-8");
+
+      appendLog({
+        cycle:            CURRENT_CYCLE,
+        ts,
+        driver:           "sprint_research",
+        task_type:        sprintTask.type,
+        task_title:       sprintTask.title,
+        task_status:      sprintTask.status,
+        search_terms:     searchTerms,
+        expires_at_cycle: EXPIRES_CYCLE,
+      });
+
+      console.log(
+        `[curiosity] driver: sprint_research — [${sprintTask.type}] "${sprintTask.title}" (silent hours)`
+      );
+      process.exit(0);
+    }
+  }
+
+  // ── Path 1c: cross-axis contradiction ───────────────────────────────────────
+  // Fire when two established axes point in opposing directions on overlapping
+  // topics. Research goal: find evidence that resolves or explains the tension.
+  const contradiction = detectContradiction(allAxesData);
+
+  if (contradiction) {
+    const { a, b } = contradiction;
+    const topic = [a.label, b.label]
+      .join(' vs ')
+      .replace(/[^a-zA-Z0-9 ]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+    const searchTerms = topic.split(' ').slice(0, 4).join(' ');
+    const searchUrl   = `https://x.com/search?q=${encodeURIComponent(searchTerms)}&f=live`;
+    const contSlug    = toSlug(`contradiction_${a.id}_${b.id}`).slice(0, 40);
+    const expireLine  = CURRENT_CYCLE > 0
+      ? `refreshes at cycle ${EXPIRES_CYCLE}`
+      : `refreshes in ~${CURIOSITY_EVERY} cycles`;
+
+    const contAngles = buildSearchAngles(searchTerms, null, null);
+    const contAngleLines = contAngles.map((u, i) => `  SEARCH_URL_${i + 1}: ${u}`).join('\n');
+
+    const lines = [
+      `── curiosity directive · ${tsHuman} ${HR.slice(tsHuman.length + 25)}`,
+      `CONTRADICTION DETECTED: two established axes point in opposing directions`,
+      ``,
+      `  Axis A: "${a.label}" — score ${(a.score).toFixed(3)} → ${a.score > 0 ? a.right_pole : a.left_pole}`,
+      `  Axis B: "${b.label}" — score ${(b.score).toFixed(3)} → ${b.score > 0 ? b.right_pole : b.left_pole}`,
+      ``,
+      `  These beliefs share overlapping territory but pull different directions.`,
+      `  Can both be true? Is one wrong? Find evidence that resolves this tension.`,
+      ``,
+      `ACTIVE SEARCH:`,
+      contAngleLines,
+      `  Look for: primary sources, credible analysis, data that speaks to BOTH axes.`,
+      `  Tag findings: [CURIOSITY: ${contSlug}]`,
+      ``,
+      hitRateLine ? `NOTE: ${hitRateLine}` : '',
+      `── end directive (${expireLine}) ${HR.slice(expireLine.length + 22)}`,
+    ].filter(l => l !== null);
+
+    fs.writeFileSync(DIRECTIVE, lines.join('\n'), 'utf-8');
+
+    appendLog({
+      cycle:            CURRENT_CYCLE,
+      ts,
+      driver:           'contradiction',
+      axis_a_id:        a.id,
+      axis_a_label:     a.label,
+      axis_a_score:     a.score,
+      axis_b_id:        b.id,
+      axis_b_label:     b.label,
+      axis_b_score:     b.score,
+      search_terms:     searchTerms,
+      expires_at_cycle: EXPIRES_CYCLE,
+    });
+
+    console.log(`[curiosity] driver: contradiction — "${a.label}" (${a.score.toFixed(3)}) vs "${b.label}" (${b.score.toFixed(3)})`);
+    process.exit(0);
+  }
+
+  // ── Path 2: uncertainty-driven ──────────────────────────────────────────────
+  const uncertainAxes = getUncertainAxes();
+
+  if (uncertainAxes.length > 0) {
+    const axis          = uncertainAxes[0];
+    const confidence    = axis.confidence || 0;
+    const evidenceCount = (axis.evidence_log || []).length;
+    const gain          = axis._gain || 0;
+
+    // Build search terms: prefer axis.topics (clean keywords set by agent),
+    // then axis label — strip stop words and take at most 3 significant words.
+    const STOP = new Set(["of","and","in","the","a","an","for","to","vs","or","with","at","by","from","on","its","their","our","is","are","was","were","be","been","has","have","had","that","this","it","as","but","not","so","if","then","than","over","under","via","per","vs."]);
+    const topicWords = (axis.topics || []).filter(t => t && t.trim());
+    let searchTerms;
+    if (topicWords.length >= 1) {
+      searchTerms = topicWords.slice(0, 2).join(" ");
+    } else {
+      // Extract significant words from axis label (skip stop words, max 3)
+      searchTerms = (axis.label || "")
+        .replace(/[^a-zA-Z0-9 ]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim()
+        .split(" ")
+        .filter(w => w.length > 2 && !STOP.has(w.toLowerCase()))
+        .slice(0, 3)
+        .join(" ");
+      // Final fallback: first 3 raw words if filtering left nothing
+      if (!searchTerms.trim()) {
+        searchTerms = (axis.label || "").split(" ").slice(0, 3).join(" ");
+      }
+    }
+
+    const searchUrl  = `https://x.com/search?q=${encodeURIComponent(searchTerms)}&f=live`;
+    const axisSlug   = toSlug(axis.id || axis.label);
+    const expireLine = CURRENT_CYCLE > 0
+      ? `refreshes at cycle ${EXPIRES_CYCLE}`
+      : `refreshes in ~${CURIOSITY_EVERY} cycles`;
+
+    const axisAngles = buildSearchAngles(searchTerms, axis.left_pole, axis.right_pole);
+
+    // Adversarial injection: every 12 curiosity log entries, force a counter-argument angle
+    const logCount = fs.existsSync(LOG)
+      ? fs.readFileSync(LOG, 'utf8').trim().split('\n').filter(Boolean).length
+      : 0;
+    const needsAdversarial = logCount > 0 && logCount % 12 === 0;
+    if (needsAdversarial && axis && (axis.score || 0) !== 0) {
+      const counterPole = (axis.score || 0) > 0
+        ? (axis.left_pole || '')
+        : (axis.right_pole || '');
+      if (counterPole) {
+        const counterTerms = counterPole + ' evidence arguments';
+        axisAngles.push(`https://x.com/search?q=${encodeURIComponent(counterTerms)}&f=live`);
+        console.log(`[curiosity] adversarial angle injected for "${axis.label}": "${counterPole}"`);
+      }
+    }
+
+    const axisAngleLines = axisAngles.map((u, i) => `  SEARCH_URL_${i + 1}: ${u}`).join("\n");
+    const lines = [
+      `── curiosity directive · ${tsHuman} ${HR.slice(tsHuman.length + 25)}`,
+      `RESEARCH FOCUS: "${axis.label}"`,
+      `  Why: Uncertain belief axis — ${(confidence * 100).toFixed(0)}% confidence, ${evidenceCount} evidence entries`,
+      `  Axis: "${axis.left_pole}" ↔ "${axis.right_pole}"`,
+      ``,
+      `ACTIVE SEARCH (rotates each cycle — prefetch picks automatically):`,
+      axisAngleLines,
+      `  Read top 3-5 posts. Note anything that confirms or contradicts your current`,
+      `  position on this axis. Be open to evidence that shifts you either direction.`,
+      ``,
+      `AMBIENT FOCUS (all browse cycles until directive refreshes):`,
+      `  While browsing the feed, pay attention to posts that speak to this tension.`,
+      `  When you find something relevant, tag your browse_notes entry:`,
+      `    [CURIOSITY: ${axisSlug}]`,
+      ``,
+      hitRateLine ? `NOTE: ${hitRateLine}` : ``,
+      `── end directive (${expireLine}) ${HR.slice(expireLine.length + 22)}`,
+    ].filter(l => l !== null);
+
+    fs.writeFileSync(DIRECTIVE, lines.join("\n"), "utf-8");
+
+    appendLog({
+      cycle:          CURRENT_CYCLE,
+      ts,
+      driver:         "uncertainty_axis",
+      axis_id:        axis.id || axisSlug,
+      axis_label:     axis.label,
+      confidence,
+      evidence_count: evidenceCount,
+      gain:           parseFloat(gain.toFixed(4)),
+      search_terms:   searchTerms,
+      expires_at_cycle: EXPIRES_CYCLE,
+    });
+
+    console.log(
+      `[curiosity] driver: uncertainty_axis — "${axis.label}" ` +
+      `(${(confidence * 100).toFixed(0)}% confidence, ${evidenceCount} entries, gain=${gain.toFixed(3)})`
+    );
+    process.exit(0);
+  }
+
+  // ── Path 2: trending — Ollama picks from top 5 scraped keywords ───────────
+  const top = (await db.topKeywords(4, 20)).slice(0, 5);
+
+  if (!top || top.length === 0) {
+    console.log("[curiosity] no uncertain axes, no trending keywords — skipping");
+    process.exit(0);
+  }
+
+  const axes  = getAllAxes();
+  const brief = getBeliefSummary();
+  const notes = getBrowseNotesSummary();
+
+  const candidateList = top
+    .map((kw, i) => `${i + 1}. "${kw.keyword}" (${kw.count} posts, avg score ${kw.avg_score?.toFixed(1) ?? "?"})`)
+    .join("\n");
+
+  const prompt =
+`You are helping a political-commentary AI agent decide what to search on X (Twitter).
+
+Agent ontology axes:
+${axes}
+${brief ? `\n${brief}` : ""}
+${notes ? `\nCurrent browse notes (excerpt): "${notes}"` : ""}
+
+Top scraped keywords from the last 4 hours:
+${candidateList}
+
+Which single keyword is MOST worth searching beyond what the digest already shows?
+Prefer keywords that connect to the agent's axes, reveal tension, or are genuinely novel.
+Reply with ONLY the number (1-${top.length}) of your choice. Nothing else.`;
+
+  let chosen     = top[0];
+  let chosenIdx  = 0;
+  let pickedByLLM = false;
+
+  try {
+    const raw = await callOllama(prompt);
+    const m   = raw.match(/\b([1-5])\b/);
+    if (m) {
+      const idx = parseInt(m[1], 10) - 1;
+      if (idx >= 0 && idx < top.length) {
+        chosenIdx   = idx;
+        chosen      = top[idx];
+        pickedByLLM = true;
+      } else {
+        console.log(`[curiosity] LLM returned out-of-range index (${m[1]}) — using top keyword`);
+      }
+    } else {
+      console.log(`[curiosity] LLM response unparseable ("${raw.slice(0, 40)}") — using top keyword`);
+    }
+    if (pickedByLLM) console.log(`[curiosity] LLM picked #${chosenIdx + 1}: "${chosen.keyword}"`);
+  } catch (err) {
+    console.log(`[curiosity] Ollama unavailable (${err.message}) — using top keyword`);
+  }
+
+  const searchUrl  = `https://x.com/search?q=${encodeURIComponent(chosen.keyword)}&f=live`;
+  const keySlug    = toSlug(chosen.keyword);
+  const expireLine = CURRENT_CYCLE > 0
+    ? `refreshes at cycle ${EXPIRES_CYCLE}`
+    : `refreshes in ~${CURIOSITY_EVERY} cycles`;
+
+  const trendAngles = buildSearchAngles(chosen.keyword, null, null);
+  const trendAngleLines = trendAngles.slice(0, 2).map((u, i) => `  SEARCH_URL_${i + 1}: ${u}`).join("\n");
+  const lines = [
+    `── curiosity directive · ${tsHuman} ${HR.slice(tsHuman.length + 25)}`,
+    `RESEARCH FOCUS: "${chosen.keyword}"`,
+    `  Why: Trending topic — ${chosen.count} posts in last 4h, avg score ${chosen.avg_score?.toFixed(1) ?? "?"}`,
+    ``,
+    `ACTIVE SEARCH (rotates each cycle — prefetch picks automatically):`,
+    trendAngleLines,
+    `  Read top 3-5 posts. Note the different angles and positions people are taking.`,
+    ``,
+    `AMBIENT FOCUS (all browse cycles until directive refreshes):`,
+    `  While browsing the feed, pay attention to posts related to this topic.`,
+    `  When you find something relevant, tag your browse_notes entry:`,
+    `    [CURIOSITY: ${keySlug}]`,
+    ``,
+    `── end directive (${expireLine}) ${HR.slice(expireLine.length + 22)}`,
+  ];
+
+  fs.writeFileSync(DIRECTIVE, lines.join("\n"), "utf-8");
+
+  appendLog({
+    cycle:            CURRENT_CYCLE,
+    ts,
+    driver:           "trending",
+    keyword:          chosen.keyword,
+    count:            chosen.count,
+    avg_score:        chosen.avg_score,
+    picked_by_llm:    pickedByLLM,
+    candidates:       top.map(k => k.keyword),
+    expires_at_cycle: EXPIRES_CYCLE,
+  });
+
+  console.log(`[curiosity] driver: trending — wrote directive for "${chosen.keyword}"`);
+  process.exit(0);
+})().catch(err => {
+  console.error(`[curiosity] fatal: ${err.message}`);
+  process.exit(1);
+});

@@ -1,0 +1,15 @@
+{
+  "name": "hunter-verify-worker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Claim verification worker for Sebastian Hunter",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "pg": "^8.13.0",
+    "@google-cloud/pubsub": "^4.9.0",
+    "google-auth-library": "^9.14.0"
+  }
+}

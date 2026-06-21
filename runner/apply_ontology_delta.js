@@ -1,0 +1,779 @@
+#!/usr/bin/env node
+/**
+ * runner/apply_ontology_delta.js — merge agent-written evidence deltas into ontology.json
+ *
+ * The browse/tweet agent writes state/ontology_delta.json with only NEW evidence
+ * entries and/or new axes. This script merges them into state/ontology.json safely:
+ *   - Validates pole_alignment via Ollama stance detection (skips low-confidence entries)
+ *   - Appends validated evidence to existing axis evidence_logs (never clears)
+ *   - Recomputes confidence and score from the full evidence_log after append
+ *   - Adds new axes with proper initial state
+ *   - Deletes ontology_delta.json after successful apply
+ *
+ * Stance detection: for each evidence entry with content >= 30 chars, calls Ollama
+ * to confirm the pole_alignment is genuinely supported. Entries with confidence < 0.5
+ * are rejected (logged). Ollama unavailable → accept entry (non-fatal fallback).
+ *
+ * Delta format (state/ontology_delta.json):
+ * {
+ *   "evidence": [
+ *     { "axis_id": "axis_power_accountability",
+ *       "source": "https://x.com/...",
+ *       "content": "one-line description",
+ *       "timestamp": "2026-02-28T13:00:00Z",
+ *       "pole_alignment": "left" | "right"
+ *     }, ...
+ *   ],
+ *   "new_axes": [
+ *     { "id": "axis_new_thing", "label": "...", "left_pole": "...", "right_pole": "..." }
+ *   ]
+ * }
+ *
+ * Both "evidence" and "new_axes" are optional.
+ * Unknown axis_ids in evidence are logged and skipped (not an error).
+ */
+
+"use strict";
+
+const fs   = require("fs");
+const path = require("path");
+
+const ROOT       = path.resolve(__dirname, "..");
+const ONTO       = path.join(ROOT, "state", "ontology.json");
+const DELTA      = path.join(ROOT, "state", "ontology_delta.json");
+const TRUST      = path.join(ROOT, "state", "trust_graph.json");
+const DRIFT_CAP  = path.join(ROOT, "state", "drift_cap_state.json");
+const AXIS_GUARD = path.join(ROOT, "state", "axis_creation_state.json");
+const DIVERSITY  = path.join(ROOT, "state", "diversity_state.json");
+const EVIDENCE_URL_QUEUE = path.join(ROOT, "state", "evidence_url_queue.jsonl");
+
+const { generate: llmGenerate } = require("./llm.js");
+const { parseOntologyDelta } = require("./lib/ontology_delta.js");
+const { OWN_HANDLES, createSelfEchoDetector } = require("./lib/self_echo.js");
+const crypto = require("crypto");
+
+// ── Diversity constraint (AGENTS.md §7) ───────────────────────────────────────
+// Per 24h rolling window per axis:
+//   dominant pole ≤ 70%  → diversity_weight = 1.0 (healthy)
+//   dominant pole > 70%  → diversity_weight = 0.5 (dampen)
+//   dominant pole > 90%  → pause updates entirely for that axis
+// "Dominant" = whichever pole (left/right) has more evidence entries today.
+const DIVERSITY_DAMPEN_THRESHOLD = 0.70;  // dominant > 70% → weight 0.5
+const DIVERSITY_PAUSE_THRESHOLD  = 0.90;  // dominant > 90% → skip entry
+const DIVERSITY_DAMPEN_WEIGHT    = 0.5;
+const DIVERSITY_MIN_ENTRIES      = 4;     // need ≥4 entries to evaluate ratio
+
+// Minimum evidence content length to warrant stance validation
+const STANCE_MIN_CHARS = 30;
+// Minimum Ollama-reported confidence to accept the alignment
+const STANCE_MIN_CONF  = 0.50;
+
+// Default trust score for unknown accounts (neutral prior)
+const DEFAULT_TRUST = 3;
+// Trust score of 3 = weight 1.0 (normalised to mean)
+const TRUST_NORM    = DEFAULT_TRUST;
+
+// ── Trust graph loader ────────────────────────────────────────────────────────
+
+function loadTrustMap() {
+  try {
+    const data = JSON.parse(fs.readFileSync(TRUST, "utf-8"));
+    const map  = new Map();
+    for (const [username, acct] of Object.entries(data.accounts || {})) {
+      map.set(username.toLowerCase(), acct.trust_score ?? DEFAULT_TRUST);
+    }
+    return map;
+  } catch {
+    return new Map();
+  }
+}
+
+/** Extract @username from an x.com/status URL, or null. */
+function usernameFromUrl(url) {
+  if (!url) return null;
+  const m = String(url).match(/x\.com\/([^\/?\s]+)\/status\//i);
+  return m ? m[1].toLowerCase() : null;
+}
+
+/** Return trust weight [0.5, 2.0] normalised so default trust = 1.0. */
+function trustWeight(username, trustMap) {
+  const score = username ? (trustMap.get(username) ?? DEFAULT_TRUST) : DEFAULT_TRUST;
+  // Clamp to [1, 5], normalise, clamp weight to [0.5, 2.0]
+  return Math.min(2.0, Math.max(0.5, score / TRUST_NORM));
+}
+
+// ── Daily drift cap state ─────────────────────────────────────────────────────
+// Tracks the score of each axis at the start of the current day.
+// Prevents axis scores from moving more than ±0.05 per axis per day.
+
+const DRIFT_CAP_PER_DAY = 0.05;
+const TODAY_DATE = new Date().toISOString().slice(0, 10); // "YYYY-MM-DD"
+
+function loadDriftCapState(axes) {
+  let state = { date: TODAY_DATE, scores: {} };
+  try {
+    const raw = JSON.parse(fs.readFileSync(DRIFT_CAP, "utf-8"));
+    if (raw.date === TODAY_DATE) {
+      state = raw;
+    } else {
+      // New day — seed from current axis scores
+      for (const a of axes) state.scores[a.id] = a.score ?? 0;
+      fs.writeFileSync(DRIFT_CAP, JSON.stringify(state, null, 2), "utf-8");
+    }
+  } catch {
+    // File missing — seed from current axis scores
+    for (const a of axes) state.scores[a.id] = a.score ?? 0;
+    fs.writeFileSync(DRIFT_CAP, JSON.stringify(state, null, 2), "utf-8");
+  }
+  return state;
+}
+
+function saveDriftCapState(state) {
+  fs.writeFileSync(DRIFT_CAP, JSON.stringify(state, null, 2), "utf-8");
+}
+
+/** Clamp newScore so it does not move more than DRIFT_CAP_PER_DAY from baseScore. */
+function applyDriftCap(axisId, newScore, driftState) {
+  const base = driftState.scores[axisId] ?? 0;
+  const clamped = Math.min(base + DRIFT_CAP_PER_DAY, Math.max(base - DRIFT_CAP_PER_DAY, newScore));
+  if (clamped !== newScore) {
+    console.log(
+      `[apply_delta] drift cap hit on ${axisId}: ${newScore.toFixed(4)} → ${clamped.toFixed(4)}` +
+      ` (base ${base.toFixed(4)} ±${DRIFT_CAP_PER_DAY})`
+    );
+  }
+  return clamped;
+}
+
+// ── Axis creation guard ───────────────────────────────────────────────────────
+// Enforces: max 3 new axes per day, semantic dedup (similarity > 0.86 → skip).
+
+const MAX_AXES_PER_DAY = 3;
+
+function loadAxisGuardState() {
+  try {
+    const raw = JSON.parse(fs.readFileSync(AXIS_GUARD, "utf-8"));
+    if (raw.date === TODAY_DATE) return raw;
+  } catch { /* ignore */ }
+  // New day or missing file — reset
+  const state = { date: TODAY_DATE, count: 0 };
+  fs.writeFileSync(AXIS_GUARD, JSON.stringify(state, null, 2), "utf-8");
+  return state;
+}
+
+function saveAxisGuardState(state) {
+  fs.writeFileSync(AXIS_GUARD, JSON.stringify(state, null, 2), "utf-8");
+}
+
+/**
+ * Tokenize a string into a set of lowercase words (stop-words stripped).
+ * Used for Jaccard-based similarity as a proxy for cosine similarity on embeddings.
+ */
+const STOP = new Set(["the","a","an","and","or","of","in","is","are","that","to","for","with","on","by","at","from","as","this","it","its","which","vs","versus"]);
+/**
+ * Compute a 12-char SHA-1 fingerprint of claim text for cross-source dedup (#7).
+ */
+function computeClaimFingerprint(text) {
+  if (!text || text.length < 20) return null;
+  const tokens = text.toLowerCase()
+    .replace(/[^a-z0-9 ]/g, " ")
+    .split(/s+/)
+    .filter(w => w.length > 2 && !STOP.has(w))
+    .sort();
+  if (tokens.length < 3) return null;
+  return crypto.createHash("sha1").update(tokens.join(" ")).digest("hex").slice(0, 12);
+}
+
+function tokenSet(str) {
+  return new Set(
+    (str || "").toLowerCase().replace(/[^a-z0-9 ]/g, " ").split(/\s+/)
+      .filter(w => w.length > 2 && !STOP.has(w))
+  );
+}
+
+/** Jaccard similarity between two token sets. */
+function jaccardSim(setA, setB) {
+  if (!setA.size && !setB.size) return 1;
+  let intersection = 0;
+  for (const t of setA) if (setB.has(t)) intersection++;
+  return intersection / (setA.size + setB.size - intersection);
+}
+
+/**
+ * Compute combined text similarity between two axes based on label + left_pole + right_pole.
+ * Returns a value in [0, 1]. Threshold 0.35 approximates cosine 0.86 on normalized text.
+ */
+const AXIS_SIMILARITY_THRESHOLD = 0.35;
+
+function axisSimilarity(axisA, axisB) {
+  const textA = `${axisA.label} ${axisA.left_pole} ${axisA.right_pole}`;
+  const textB = `${axisB.label} ${axisB.left_pole} ${axisB.right_pole}`;
+  return jaccardSim(tokenSet(textA), tokenSet(textB));
+}
+
+// ── Diversity constraint state ────────────────────────────────────────────────
+// Tracks per-axis pole counts for the rolling 24h window.
+// Loaded once per run; updated as evidence entries are accepted.
+
+function loadDiversityState() {
+  try {
+    const raw = JSON.parse(fs.readFileSync(DIVERSITY, "utf-8"));
+    if (raw.date === TODAY_DATE) return raw;
+  } catch { /* ignore */ }
+  // New day or missing — reset
+  return { date: TODAY_DATE, axes: {} };
+}
+
+function saveDiversityState(state) {
+  fs.writeFileSync(DIVERSITY, JSON.stringify(state, null, 2), "utf-8");
+}
+
+/**
+ * Seed diversity state from existing evidence_log entries timestamped today.
+ * Called once after loading ontology so the first run of the day starts with
+ * accurate counts (evidence may have been added in earlier cycles today).
+ */
+function seedDiversityFromLogs(diversityState, axes) {
+  for (const axis of axes) {
+    if (diversityState.axes[axis.id]) continue; // already seeded
+    const log = axis.evidence_log || [];
+    let left = 0, right = 0;
+    for (const e of log) {
+      if (e.timestamp && String(e.timestamp).startsWith(TODAY_DATE)) {
+        if (e.pole_alignment === "left") left++;
+        else if (e.pole_alignment === "right") right++;
+      }
+    }
+    if (left + right > 0) {
+      diversityState.axes[axis.id] = { left, right };
+    }
+  }
+}
+
+/**
+ * Check the diversity constraint for a given axis and incoming pole_alignment.
+ * Returns: { action: "accept"|"dampen"|"pause", weight: number, reason: string }
+ */
+function checkDiversity(axisId, poleAlignment, diversityState) {
+  const counts = diversityState.axes[axisId] || { left: 0, right: 0 };
+  const total  = counts.left + counts.right;
+
+  // Not enough data to evaluate — accept at full weight
+  if (total < DIVERSITY_MIN_ENTRIES) {
+    return { action: "accept", weight: 1.0, reason: null };
+  }
+
+  const dominant    = Math.max(counts.left, counts.right);
+  const dominantPole = counts.left >= counts.right ? "left" : "right";
+  const ratio       = dominant / total;
+
+  // If the incoming entry is on the dominant side AND ratio is skewed, act
+  if (poleAlignment === dominantPole) {
+    if (ratio >= DIVERSITY_PAUSE_THRESHOLD) {
+      return {
+        action: "pause",
+        weight: 0,
+        reason: `${dominantPole} pole at ${(ratio * 100).toFixed(0)}% (${dominant}/${total}) — paused`,
+      };
+    }
+    if (ratio >= DIVERSITY_DAMPEN_THRESHOLD) {
+      return {
+        action: "dampen",
+        weight: DIVERSITY_DAMPEN_WEIGHT,
+        reason: `${dominantPole} pole at ${(ratio * 100).toFixed(0)}% (${dominant}/${total}) — dampened to ${DIVERSITY_DAMPEN_WEIGHT}`,
+      };
+    }
+  }
+
+  // Opposing pole or ratio is healthy — accept at full weight
+  return { action: "accept", weight: 1.0, reason: null };
+}
+
+/** Record an accepted evidence entry in the diversity state. */
+function recordDiversity(axisId, poleAlignment, diversityState) {
+  if (!diversityState.axes[axisId]) diversityState.axes[axisId] = { left: 0, right: 0 };
+  if (poleAlignment === "left") diversityState.axes[axisId].left++;
+  else if (poleAlignment === "right") diversityState.axes[axisId].right++;
+}
+
+if (!fs.existsSync(DELTA)) {
+  // Nothing to do — agent chose not to update ontology this cycle
+  process.exit(0);
+}
+
+// ── Stance validation via Ollama ──────────────────────────────────────────────
+
+async function validateStance(axis, content, poleAlignment) {
+  const prompt =
+`You are a fact-checker for an ontological belief system.
+
+Axis: "${axis.label}"
+Left pole: "${axis.left_pole}"
+Right pole: "${axis.right_pole}"
+
+Evidence: "${content}"
+Claimed alignment: "${poleAlignment}" (${poleAlignment === "left" ? axis.left_pole : axis.right_pole})
+
+Does this evidence genuinely support the claimed pole alignment?
+Reply with JSON only, no other text:
+{"confidence":0.0,"reasoning":"one sentence"}
+
+confidence is 0.0–1.0 (1.0 = clearly supports the claimed alignment).`;
+
+  try {
+    const text = await llmGenerate(prompt, { temperature: 0.0, maxTokens: 80, timeoutMs: 10_000 });
+
+    // Extract JSON from response (may have markdown fences)
+    const jsonMatch = text.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) throw new Error("no JSON in response");
+    const parsed = JSON.parse(jsonMatch[0]);
+
+    const conf = typeof parsed.confidence === "number" ? parsed.confidence : null;
+    if (conf === null) throw new Error("confidence missing");
+
+    return { confidence: conf, reasoning: parsed.reasoning || "" };
+  } catch (err) {
+    // LLM error → accept entry (non-fatal)
+    return null;
+  }
+}
+
+// ── Main ──────────────────────────────────────────────────────────────────────
+
+(async () => {
+
+// ── Load trust graph ──────────────────────────────────────────────────────────
+const trustMap = loadTrustMap();
+
+// ── Load files ────────────────────────────────────────────────────────────────
+
+let delta;
+try {
+  const raw = fs.readFileSync(DELTA, "utf-8");
+  const parsed = parseOntologyDelta(raw);
+  delta = parsed.delta;
+  if (parsed.repaired) {
+    console.log(
+      `[apply_delta] repaired ontology_delta.json via ${parsed.method}` +
+      ` (evidence=${delta.evidence.length}, new_axes=${delta.new_axes.length})`
+    );
+  }
+} catch (e) {
+  console.error(`[apply_delta] could not parse ontology_delta.json: ${e.message}`);
+  fs.unlinkSync(DELTA);
+  process.exit(0);
+}
+
+let onto;
+try {
+  onto = JSON.parse(fs.readFileSync(ONTO, "utf-8"));
+} catch (e) {
+  console.error(`[apply_delta] could not parse ontology.json: ${e.message}`);
+  fs.unlinkSync(DELTA);
+  process.exit(1);
+}
+
+if (!Array.isArray(onto.axes)) onto.axes = [];
+
+const now = new Date().toISOString();
+let evidenceAdded      = 0;
+let evidenceRejected   = 0;
+let evidencePaused     = 0;
+let evidenceDampened   = 0;
+let evidenceSelfEcho   = 0;
+let evidenceDeduped    = 0;
+let evidenceInvalid    = 0;
+let axesAdded          = 0;
+let axesCapped         = 0;
+const axesUpdated      = new Set(); // tracks which axes got new evidence this run
+const seenSourcesThisRun = new Set(); // global source dedup: one URL per run across all axes
+
+// Invalid sources that should never update ontology (#12)
+const INVALID_SOURCES = new Set(['browse_notes', 'web_search', 'internal', '']);
+
+// ── Load daily drift cap + axis creation guard + diversity state ───────────────
+const driftState     = loadDriftCapState(onto.axes);
+const axisGuardState = loadAxisGuardState();
+const diversityState = loadDiversityState();
+seedDiversityFromLogs(diversityState, onto.axes);
+const selfEchoDetector = createSelfEchoDetector();
+
+// ── Apply evidence entries ────────────────────────────────────────────────────
+
+const axisById = {};
+for (const a of onto.axes) axisById[a.id] = a;
+// Pre-build set of claim fingerprints from evidence in the last 6h (#7)
+const CLAIM_DEDUP_WINDOW_MS = 6 * 3_600_000;
+const claimDedupNowMs = Date.now();
+const recentClaimIds = new Set(
+  onto.axes.flatMap(a =>
+    (a.evidence_log || []).filter(e => {
+      if (!e.claim_id) return false;
+      const ts = e.timestamp ? Date.parse(e.timestamp) : 0;
+      return (claimDedupNowMs - ts) < CLAIM_DEDUP_WINDOW_MS;
+    }).map(e => e.claim_id)
+  )
+);
+let evidenceClaimDeduped = 0;
+
+
+
+for (const entry of (delta.evidence || [])) {
+  const { axis_id, source, content, timestamp, pole_alignment } = entry;
+
+  if (!axis_id || !pole_alignment) {
+    console.log(`[apply_delta] skipping malformed evidence entry (missing axis_id or pole_alignment)`);
+    continue;
+  }
+
+  const axis = axisById[axis_id];
+  if (!axis) {
+    console.log(`[apply_delta] unknown axis_id "${axis_id}" — skipping evidence entry`);
+    continue;
+  }
+
+  // ── Invalid source check (#12) ─────────────────────────────────────────────
+  // Reject internal/non-URL sources — they cannot be validated or retrieved later
+  const sourceStr = (source || "").trim();
+  if (INVALID_SOURCES.has(sourceStr) || (!sourceStr.startsWith("http://") && !sourceStr.startsWith("https://"))) {
+    console.log(`[apply_delta] invalid source rejected for ${axis_id}: "${sourceStr.slice(0, 80)}"`);
+    evidenceInvalid++;
+    continue;
+  }
+
+  // ── Per-session source dedup (#1) ──────────────────────────────────────────
+  // One URL may update at most one axis per browse session to prevent pseudo-replication
+  if (seenSourcesThisRun.has(sourceStr)) {
+    console.log(`[apply_delta] source dedup: "${sourceStr.slice(0, 80)}" already used this session`);
+    evidenceDeduped++;
+    continue;
+  }
+  seenSourcesThisRun.add(sourceStr);
+
+  // Cross-source claim fingerprint dedup (#7)
+  const claimFp = computeClaimFingerprint(content || "");
+  if (claimFp) {
+    if (recentClaimIds.has(claimFp)) {
+      console.log("[apply_delta] claim dedup: fp " + claimFp + " already seen in 6h window");
+      evidenceClaimDeduped++;
+      continue;
+    }
+    recentClaimIds.add(claimFp);
+    entry.claim_id = claimFp;
+  }
+
+  const sourceUser = usernameFromUrl(sourceStr);
+  if (sourceUser && OWN_HANDLES.has(sourceUser)) {
+    console.log(
+      `[apply_delta] self-echo rejected: source ${sourceStr} is Sebastian's own post`
+    );
+    evidenceSelfEcho++;
+    continue;
+  }
+
+  const selfEchoMatch = selfEchoDetector.findMatch(content);
+  if (selfEchoMatch) {
+    console.log(
+      `[apply_delta] self-echo rejected on ${axis_id}: content mirrors ` +
+      `${selfEchoMatch.source_type} ${selfEchoMatch.reference} ` +
+      `(score=${selfEchoMatch.score.toFixed(3)})`
+    );
+    evidenceSelfEcho++;
+    continue;
+  }
+
+  // ── Stance validation ───────────────────────────────────────────────────────
+  let stanceConf = null;
+  if ((content || "").length >= STANCE_MIN_CHARS) {
+    const result = await validateStance(axis, content, pole_alignment);
+    if (result !== null) {
+      stanceConf = result.confidence;
+      if (stanceConf < STANCE_MIN_CONF) {
+        console.log(
+          `[apply_delta] stance rejected (conf=${stanceConf.toFixed(2)}): ` +
+          `"${(content || "").slice(0, 60)}" → ${pole_alignment} ` +
+          `on "${axis.label}" — ${result.reasoning}`
+        );
+        evidenceRejected++;
+        continue;
+      }
+    }
+  }
+
+  if (!Array.isArray(axis.evidence_log)) axis.evidence_log = [];
+
+  // ── Diversity constraint (AGENTS.md §7) ───────────────────────────────────
+  const divCheck = checkDiversity(axis_id, pole_alignment, diversityState);
+  if (divCheck.action === "pause") {
+    console.log(
+      `[apply_delta] diversity PAUSED on ${axis_id}: ${divCheck.reason} — ` +
+      `"${(content || "").slice(0, 50)}"`
+    );
+    evidencePaused++;
+    continue;
+  }
+  if (divCheck.action === "dampen") {
+    console.log(
+      `[apply_delta] diversity DAMPENED on ${axis_id}: ${divCheck.reason}`
+    );
+    evidenceDampened++;
+  }
+
+  // Compute trust weight from source URL account
+  const rawWeight  = trustWeight(sourceUser, trustMap);
+  const weight     = parseFloat((rawWeight * divCheck.weight).toFixed(3));
+
+  const logEntry = {
+    source:         sourceStr,
+    content:        content   || "",
+    summary:        entry.summary || "",
+    timestamp:      timestamp || now,
+    pole_alignment: pole_alignment,
+    trust_weight:   parseFloat(weight.toFixed(3)),
+    ...(entry.claim_id ? { claim_id: entry.claim_id } : {}),
+  };
+  if (stanceConf !== null) logEntry.stance_confidence = parseFloat(stanceConf.toFixed(3));
+
+  axis.evidence_log.push(logEntry);
+  // Queue source URL for Arweave archiving (issue #14)
+  try {
+    fs.appendFileSync(EVIDENCE_URL_QUEUE,
+      JSON.stringify({ url: sourceStr, axis_id: axis.id, ts: now }) + "\n");
+  } catch { /* non-blocking */ }
+  evidenceAdded++;
+  axis.last_updated = now;
+  axesUpdated.add(axis.id);
+  recordDiversity(axis.id, pole_alignment, diversityState);
+
+  // ── Deferred: score_after + confidence_after added after recompute below ──
+}
+
+// Recompute confidence and score using trust-weighted Bayesian update.
+// Only run on axes that received new evidence this call — axes with no new entries
+// retain their accumulated score/confidence (the log may not contain the full history).
+// score      = Σ(w_i × ±1) / Σ(w_i)     — trust-weighted mean
+// confidence = min(0.98, uniqueSources × 0.025) — unique source count drives confidence
+//              (not total weight — prevents pseudo-replication from inflating confidence)
+for (const axis of onto.axes) {
+  if (!axesUpdated.has(axis.id)) continue;
+  const log = axis.evidence_log || [];
+  if (!log.length) continue;
+
+  let weightedSum = 0;
+  let totalWeight = 0;
+  for (const e of log) {
+    const w    = typeof e === "object" ? (e.trust_weight ?? 1.0) : 1.0;
+    const sign = typeof e === "object" ? (e.pole_alignment === "right" ? 1 : -1)
+                                       : (e >= 0 ? 1 : -1);
+    weightedSum += w * sign;
+    totalWeight += w;
+  }
+
+  const rawScore = parseFloat((weightedSum / totalWeight).toFixed(4));
+  // Apply daily drift cap — score cannot move more than ±0.05 from start-of-day value
+  axis.score = parseFloat(applyDriftCap(axis.id, rawScore, driftState).toFixed(4));
+
+  // Confidence: trust-weighted unique-source count. Per unique source URL, take the
+  // max trust_weight across its entries (handles diversity dampening variation).
+  // Neutral/unknown sources (weight=1.0) behave identically to the old formula.
+  // Entries missing trust_weight default to 1.0 (backward-compatible).
+  const sourceWeights = new Map();
+  for (const e of log) {
+    if (!e || !e.source) continue;
+    const w = e.trust_weight ?? 1.0;
+    if (!sourceWeights.has(e.source) || sourceWeights.get(e.source) < w) {
+      sourceWeights.set(e.source, w);
+    }
+  }
+  const weightedSources = [...sourceWeights.values()].reduce((s, w) => s + w, 0);
+  axis.confidence = parseFloat(Math.min(0.98, weightedSources * 0.025).toFixed(4));
+  if (axis.score !== rawScore) axesCapped++;
+
+  // ── Stamp score_after + confidence_after on newly added evidence entries ──
+  // Walk backwards through evidence_log to find entries added this cycle (those
+  // without score_after). This gives each entry the post-recompute snapshot.
+  for (let i = log.length - 1; i >= 0; i--) {
+    const e = log[i];
+    if (e.score_after !== undefined) break; // hit previously stamped entries
+    e.score_after      = axis.score;
+    e.confidence_after = axis.confidence;
+  }
+}
+
+// ── Generate current_stance for updated axes with confidence >= 0.4 ───────────
+// Produces a first-person sentence summarising Sebastian's actual position.
+// Used by buildCoreContext() to enrich axis context in all reply/chat prompts.
+// Non-blocking: a failed LLM call leaves the existing stance (or no stance).
+const STANCE_GEN_MIN_CONF = 0.40;
+const stanceGenAxes = onto.axes.filter(
+  a => axesUpdated.has(a.id) && (a.confidence || 0) >= STANCE_GEN_MIN_CONF
+);
+for (const axis of stanceGenAxes) {
+  const recentEvidence = (axis.evidence_log || [])
+    .slice(-8)
+    .map(e => (e.content || e.summary || "").trim())
+    .filter(Boolean)
+    .slice(0, 5);
+  if (!recentEvidence.length) continue;
+
+  const dirWord = (axis.score || 0) > 0.15
+    ? `leaning toward "${axis.right_pole}"`
+    : (axis.score || 0) < -0.15
+      ? `leaning toward "${axis.left_pole}"`
+      : "conflicted between both poles";
+
+  const stancePrompt =
+`You are Sebastian D. Hunter's internal narrator.
+Axis: "${axis.label}"
+Left pole: "${axis.left_pole}"
+Right pole: "${axis.right_pole}"
+Current direction: ${dirWord}
+
+Recent evidence (${recentEvidence.length} entries):
+${recentEvidence.map((e, i) => `${i + 1}. ${e.slice(0, 120)}`).join("\n")}
+
+In one direct sentence (15–30 words), state Sebastian's current position on this axis.
+Write in first person. Be specific to the evidence. No score numbers, no hedging markers.
+Return ONLY the sentence.`;
+
+  try {
+    const stance = await llmGenerate(stancePrompt, { temperature: 0.3, maxTokens: 60, timeoutMs: 8_000 });
+    const cleaned = stance.replace(/^["']|["']$/g, "").trim();
+    if (cleaned.length > 10 && cleaned.length < 200) {
+      axis.current_stance = cleaned;
+      console.log(`[apply_delta] stance generated for ${axis.id}: "${cleaned.slice(0, 80)}"`);
+    }
+  } catch { /* non-fatal */ }
+}
+
+// Persist updated drift cap state (scores reflect the clamped values for today)
+saveDriftCapState(driftState);
+
+// ── Confidence decay for axes not updated this run (#2) ───────────────────────
+// Axes with no new evidence lose 0.002 confidence per elapsed calendar day.
+// Gated by axis.last_decayed_at (YYYY-MM-DD): at most one decay tick per day,
+// regardless of how many times apply_ontology_delta.js runs.
+let axesDecayed = 0;
+const ONE_DAY_MS = 86_400_000;
+for (const axis of onto.axes) {
+  if (axesUpdated.has(axis.id)) continue; // recomputed fresh above
+  if (!axis.last_updated || !(axis.confidence > 0)) continue;
+  if (axis.last_decayed_at === TODAY_DATE) continue; // already decayed today
+  const daysSince = (Date.now() - new Date(axis.last_updated).getTime()) / ONE_DAY_MS;
+  if (daysSince < 1) continue; // less than 1 day stale — no decay yet
+  // Apply exactly one tick (0.002) per calendar day
+  const newConf = parseFloat(Math.max(0, (axis.confidence || 0) - 0.002).toFixed(4));
+  if (newConf < axis.confidence) {
+    console.log(`[apply_delta] decay ${axis.id}: confidence ${axis.confidence} → ${newConf} (${Math.floor(daysSince)}d since last evidence)`);
+    axis.confidence = newConf;
+    axis.last_decayed_at = TODAY_DATE;
+    axesDecayed++;
+  }
+}
+
+// Persist diversity state (pole counts for today's rolling window)
+saveDiversityState(diversityState);
+
+// ── Apply new axes (with creation guard) ──────────────────────────────────────
+
+for (const raw of (delta.new_axes || [])) {
+  if (!raw.id || !raw.label || !raw.left_pole || !raw.right_pole) {
+    console.log(`[apply_delta] skipping malformed new_axis (missing required fields)`);
+    continue;
+  }
+
+  if (axisById[raw.id]) {
+    console.log(`[apply_delta] axis "${raw.id}" already exists — skipping new_axis`);
+    continue;
+  }
+
+  // ── Guard: max 3 new axes per day ─────────────────────────────────────────
+  if (axisGuardState.count >= MAX_AXES_PER_DAY) {
+    console.log(
+      `[apply_delta] axis creation guard: daily limit (${MAX_AXES_PER_DAY}) reached — ` +
+      `skipping new axis "${raw.id}"`
+    );
+    continue;
+  }
+
+  // ── Guard: semantic dedup — similarity > threshold → skip creation ─────────
+  const nearDuplicate = onto.axes.find(existing => axisSimilarity(existing, raw) >= AXIS_SIMILARITY_THRESHOLD);
+  if (nearDuplicate) {
+    console.log(
+      `[apply_delta] axis creation guard: "${raw.id}" is semantically similar to ` +
+      `"${nearDuplicate.id}" (Jaccard >= ${AXIS_SIMILARITY_THRESHOLD}) — ` +
+      `attach evidence to existing axis instead of creating a new one`
+    );
+    continue;
+  }
+
+  const newAxis = {
+    id:           raw.id,
+    label:        raw.label,
+    left_pole:    raw.left_pole,
+    right_pole:   raw.right_pole,
+    score:        0,
+    confidence:   0,
+    topics:       Array.isArray(raw.topics) ? raw.topics : [],
+    created_at:   now,
+    last_updated: now,
+    evidence_log: [],
+  };
+
+  onto.axes.push(newAxis);
+  axisById[newAxis.id] = newAxis;
+  axesAdded++;
+  axisGuardState.count++;
+}
+
+// Persist updated axis creation guard state
+saveAxisGuardState(axisGuardState);
+
+// ── Reap dead axes: 0 evidence after 48h since creation ───────────────────────
+const REAP_HOURS = 48;
+const GRAVEYARD = path.join(ROOT, "state", "axes_graveyard.json");
+const nowMs = Date.now();
+const reaped = [];
+onto.axes = onto.axes.filter(a => {
+  const age = nowMs - new Date(a.created_at || now).getTime();
+  const ageHours = age / (1000 * 60 * 60);
+  if (ageHours >= REAP_HOURS && (a.evidence_log || []).length === 0) {
+    reaped.push(a);
+    return false;
+  }
+  return true;
+});
+if (reaped.length > 0) {
+  let graveyard = [];
+  try { graveyard = JSON.parse(fs.readFileSync(GRAVEYARD, "utf-8")); } catch {}
+  graveyard.push(...reaped.map(a => ({ ...a, reaped_at: now })));
+  fs.writeFileSync(GRAVEYARD, JSON.stringify(graveyard, null, 2), "utf-8");
+  console.log(`[apply_delta] reaped ${reaped.length} dead axis(es): ${reaped.map(a => a.id).join(", ")}`);
+}
+
+// ── Write back + cleanup ──────────────────────────────────────────────────────
+
+onto.last_updated = now;
+
+fs.writeFileSync(ONTO, JSON.stringify(onto, null, 2), "utf-8");
+fs.unlinkSync(DELTA);
+
+const rejMsg    = evidenceRejected ? `, ${evidenceRejected} rejected by stance check` : "";
+const echoMsg   = evidenceSelfEcho ? `, ${evidenceSelfEcho} rejected as self-echo` : "";
+const dedupMsg  = evidenceDeduped  ? `, ${evidenceDeduped} deduped (same source)` : "";
+const claimMsg  = evidenceClaimDeduped ? `, ${evidenceClaimDeduped} claim-deduped` : "";
+const invMsg    = evidenceInvalid  ? `, ${evidenceInvalid} invalid source` : "";
+const cappedMsg = axesCapped ? `, ${axesCapped} drift-capped` : "";
+const reapMsg   = reaped.length ? `, ${reaped.length} reaped` : "";
+const pausedMsg = evidencePaused ? `, ${evidencePaused} paused by diversity` : "";
+const dampenMsg = evidenceDampened ? `, ${evidenceDampened} dampened by diversity` : "";
+const decayMsg  = axesDecayed ? `, ${axesDecayed} axes confidence-decayed` : "";
+console.log(
+  `[apply_delta] applied: ${evidenceAdded} evidence entry(ies)${rejMsg}${echoMsg}${dedupMsg}${claimMsg}${invMsg}${pausedMsg}${dampenMsg}${cappedMsg}${reapMsg}${decayMsg}, ${axesAdded} new axis(es)` +
+  ` — total axes: ${onto.axes.length} (axes created today: ${axisGuardState.count}/${MAX_AXES_PER_DAY})`
+);
+
+})().catch(err => {
+  console.error(`[apply_delta] fatal: ${err.message}`);
+  process.exit(1);
+});

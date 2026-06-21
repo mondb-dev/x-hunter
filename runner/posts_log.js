@@ -1,0 +1,201 @@
+#!/usr/bin/env node
+/**
+ * runner/posts_log.js — shared helper for writing to state/posts_log.json
+ *
+ * Called by post_tweet.js and post_quote.js immediately after a successful post.
+ * Single source of truth — run.sh inline patchers removed.
+ */
+
+"use strict";
+
+const fs   = require("fs");
+const path = require("path");
+
+const ROOT     = path.resolve(__dirname, "..");
+const LOG_FILE = path.join(ROOT, "state", "posts_log.json");
+
+function readLog() {
+  try {
+    if (!fs.existsSync(LOG_FILE)) return { total_posts: 0, posts: [] };
+    const raw = fs.readFileSync(LOG_FILE, "utf-8").trim();
+    if (!raw) return { total_posts: 0, posts: [] };
+    const data = JSON.parse(raw);
+    // Normalise: accept both array and { posts: [] } formats
+    const posts = Array.isArray(data) ? data : (data.posts ?? []);
+    return { total_posts: posts.length, posts };
+  } catch {
+    return { total_posts: 0, posts: [] };
+  }
+}
+
+function writeLog(log) {
+  log.total_posts = log.posts.length;
+  fs.writeFileSync(LOG_FILE, JSON.stringify(log, null, 2));
+}
+
+/**
+ * Append a tweet entry. Skips if a tweet entry with the same content already exists.
+ */
+function logTweet({ content, tweet_url, date, cycle }) {
+  const log = readLog();
+  // Avoid duplicate: same content already logged (agent may write with type "observation"/"question")
+  const dup = log.posts.find(p => p.content === content);
+  if (dup) {
+    // Patch URL if it was missing
+    if (!dup.tweet_url && tweet_url) {
+      dup.tweet_url = tweet_url;
+      writeLog(log);
+      console.log("[posts_log] patched existing entry with URL");
+    }
+    // Normalize type to "tweet" if runner is calling logTweet
+    if (dup.type !== "tweet") {
+      dup.type = "tweet";
+      writeLog(log);
+      console.log("[posts_log] normalized entry type to tweet");
+    }
+    return;
+  }
+  log.posts.push({
+    type: "tweet",
+    content,
+    tweet_url: tweet_url || "",
+    date: date || new Date().toISOString().slice(0, 10),
+    cycle: cycle || null,
+    posted_at: new Date().toISOString(),
+  });
+  writeLog(log);
+  console.log(`[posts_log] logged tweet (${content.length} chars)`);
+}
+
+/**
+ * Append a quote entry. Upserts if agent already wrote an entry with same source_url.
+ */
+function logQuote({ source_url, content, tweet_url, date, cycle, mode }) {
+  const log = readLog();
+  // Upsert: if a quote entry with same source_url exists without a tweet_url, patch it
+  const existing = source_url ? log.posts.find(p =>
+    p.type === "quote" &&
+    p.source_url === source_url &&
+    !p.tweet_url
+  ) : null;
+  if (existing) {
+    existing.type = "quote";
+    existing.tweet_url = tweet_url || "";
+    existing.content = content || existing.content || existing.text || "";
+    existing.posted_at = new Date().toISOString();
+    writeLog(log);
+    console.log("[posts_log] updated existing quote entry");
+    return;
+  }
+
+  // Dedup: reject if same content (first 80 chars) was posted in last 2 hours
+  const cutoff = Date.now() - 2 * 60 * 60 * 1000;
+  const needle = (content || "").substring(0, 80);
+  if (needle) {
+    const dup = log.posts.find(p => {
+      if (!p.posted_at) return false;
+      const ts = new Date(p.posted_at).getTime();
+      if (ts < cutoff) return false;
+      return (p.content || p.text || "").substring(0, 80) === needle;
+    });
+    if (dup) {
+      console.log("[posts_log] DEDUP — quote content matches recent post, skipping log entry");
+      return;
+    }
+  }
+
+  log.posts.push({
+    type: "quote",
+    source_url,
+    content,
+    mode: mode || "quote_tweet",
+    tweet_url: tweet_url || "",
+    date: date || new Date().toISOString().slice(0, 10),
+    cycle: cycle || null,
+    posted_at: new Date().toISOString(),
+  });
+  writeLog(log);
+  console.log(`[posts_log] logged quote (source: ${source_url})`);
+}
+
+/**
+ * Append an article entry (X Articles long-form).
+ */
+function logArticle({ title, content, article_url, date, landmark_number }) {
+  const log = readLog();
+  // Dedupe on title
+  const dup = log.posts.find(p => p.type === "article" && p.title === title);
+  if (dup) {
+    if (!dup.article_url && article_url) {
+      dup.article_url = article_url;
+      writeLog(log);
+      console.log("[posts_log] patched existing article entry with URL");
+    }
+    return;
+  }
+  log.posts.push({
+    type: "article",
+    title: title || "",
+    content: (content || "").slice(0, 500),
+    article_url: article_url || "",
+    landmark_number: landmark_number || null,
+    date: date || new Date().toISOString().slice(0, 10),
+    posted_at: new Date().toISOString(),
+  });
+  writeLog(log);
+  console.log(`[posts_log] logged article: "${(title || "").slice(0, 60)}"`);
+}
+
+/**
+ * Append a signal entry (cross-axis anomaly detection).
+ */
+function logSignal({ content, tweet_url, date, cycle, spike_count, strength, axes }) {
+  const log = readLog();
+  log.posts.push({
+    type: "signal",
+    content,
+    tweet_url: tweet_url || "",
+    date: date || new Date().toISOString().slice(0, 10),
+    cycle: cycle || null,
+    spike_count: spike_count || 0,
+    strength: strength || "moderate",
+    axes: axes || [],
+    posted_at: new Date().toISOString(),
+  });
+  writeLog(log);
+  console.log(`[posts_log] logged signal (${spike_count} axes, ${strength})`);
+}
+
+module.exports = { logTweet, logQuote, logArticle, logSignal, logVerification };
+
+/**
+ * Append a verification post entry (watch signal or resolution).
+ * type: 'verification_watch' | 'verification_resolution'
+ */
+function logVerification({ claim_id, source_url, content, tweet_url, date, cycle, verification_type }) {
+  const log = readLog();
+  // Dedup: same claim_id + same type already logged today
+  const todayStr = new Date().toISOString().slice(0, 10);
+  const dup = log.posts.find(p =>
+    (p.type === 'verification_watch' || p.type === 'verification_resolution') &&
+    p.claim_id === claim_id &&
+    p.type === ('verification_' + verification_type) &&
+    (p.posted_at || '').startsWith(todayStr)
+  );
+  if (dup) {
+    console.log(`[posts_log] DEDUP — ${verification_type} for ${claim_id} already logged today`);
+    return;
+  }
+  log.posts.push({
+    type: 'verification_' + verification_type,
+    claim_id: claim_id || null,
+    source_url: source_url || '',
+    content,
+    tweet_url: tweet_url || '',
+    date: date || new Date().toISOString().slice(0, 10),
+    cycle: cycle || null,
+    posted_at: new Date().toISOString(),
+  });
+  writeLog(log);
+  console.log(`[posts_log] logged verification ${verification_type} for ${claim_id}`);
+}

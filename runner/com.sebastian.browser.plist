@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.sebastian.browser</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Applications/Google Chrome.app/Contents/MacOS/Google Chrome</string>
+        <string>--remote-debugging-port=18801</string>
+        <string>--user-data-dir=/Users/mondb/.config/google-chrome/x-hunter</string>
+        <string>--no-first-run</string>
+        <string>--no-default-browser-check</string>
+        <string>--headless=new</string>
+        <string>--disable-dev-shm-usage</string>
+        <string>--disable-background-networking</string>
+        <string>--disable-sync</string>
+        <string>--disable-extensions</string>
+    </array>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>HOME</key>
+        <string>/Users/mondb</string>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/mondb/Documents/Projects/hunter/runner/browser.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/mondb/Documents/Projects/hunter/runner/browser.log</string>
+</dict>
+</plist>

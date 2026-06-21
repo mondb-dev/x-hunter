@@ -1,0 +1,446 @@
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
+const config = require('../config');
+const { buildToolManifest, loadLastToolResult } = require('../tools');
+
+// ── Helpers ─────────────────────────────────────────────────────────────────
+
+/**
+ * Read a state file with optional tail-N-lines and backtick sanitisation.
+ * Backticks → apostrophes for prompt safety (matches bash sed behaviour).
+ */
+function readState(filePath, opts = {}) {
+  const { tail, fallback = '' } = opts;
+  try {
+    let content = fs.readFileSync(filePath, 'utf-8');
+    if (tail) {
+      const lines = content.split('\n');
+      content = lines.slice(-tail).join('\n');
+    }
+    return content.replace(/`/g, "'") || fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+/**
+ * Format ontology axes — compact form for browse + tweet prompts.
+ *   [axis_id] label (conf:XX%, ev:N)
+ *     L: left_pole (truncated 80 chars)
+ *     R: right_pole (truncated 80 chars)
+ */
+function formatCurrentAxes() {
+  try {
+    const d = JSON.parse(fs.readFileSync(config.ONTOLOGY_PATH, 'utf-8'));
+    let axes = d.axes || [];
+    if (axes.length === 0) return '  (none yet)';
+    // For local models, cap to top 15 axes by evidence count to keep prompt manageable
+    const isLocalModel = !!process.env.OLLAMA_BASE_URL;
+    if (isLocalModel && axes.length > 15) {
+      axes = axes.slice().sort((a, b) =>
+        (b.evidence_log || []).length - (a.evidence_log || []).length
+      ).slice(0, 15);
+    }
+    return axes.map(a => {
+      const ev = (a.evidence_log || []).length;
+      const conf = ((a.confidence || 0) * 100).toFixed(0);
+      return '  [' + a.id + '] ' + a.label + ' (conf:' + conf + '%, ev:' + ev + ')\n' +
+             '    L: ' + a.left_pole.slice(0, 80) + '\n' +
+             '    R: ' + a.right_pole.slice(0, 80);
+    }).join('\n');
+  } catch (e) {
+    return '  (could not read ontology.json: ' + e.message + ')';
+  }
+}
+
+/**
+ * Load pending synthesis proposals and format as a text block for the browse prompt.
+ * Returns empty string if no pending proposals exist.
+ */
+function loadSynthesisProposals() {
+  try {
+    const raw = JSON.parse(fs.readFileSync(config.SYNTHESIS_PROPOSALS_PATH, 'utf-8'));
+    const pending = (raw.proposals || []).filter(p => p.status === 'pending')
+      .sort((a, b) => (b.score || 0) - (a.score || 0))
+      .slice(0, 3);
+    if (pending.length === 0) return '';
+    return pending.map(p =>
+      '  [' + p.id + ']\n' +
+      '  ' + p.axis_a_label + ' (score: ' + p.axis_a_score + ')  \u2194  ' +
+      p.axis_b_label + ' (score: ' + p.axis_b_score + ')  tension: ' + p.tension
+    ).join('\n');
+  } catch {
+    return '';
+  }
+}
+
+/**
+ * Format top belief axes with evidence — for quote prompt.
+ * Filters confidence >= 0.65, sorts desc, takes top 6.
+ */
+function formatTopAxes() {
+  try {
+    const o = JSON.parse(fs.readFileSync(config.ONTOLOGY_PATH, 'utf-8'));
+    const raw = Array.isArray(o.axes) ? o.axes : Object.values(o.axes || {});
+    const axes = raw
+      .filter(a => a.confidence >= 0.65)
+      .sort((a, b) => b.confidence - a.confidence)
+      .slice(0, 6);
+    if (axes.length === 0) return '(unavailable)';
+    return axes.map(a => {
+      const ev = (a.evidence_log || []).slice(-2)
+        .map(e => '    * ' + e.content.slice(0, 120)).join('\n');
+      return '- ' + a.label + ' (conf: ' + (a.confidence * 100).toFixed(0) + '%)\n' +
+             '  LEFT: ' + a.left_pole + '\n' +
+             '  RIGHT: ' + a.right_pole +
+             (ev ? '\n  Recent evidence:\n' + ev : '');
+    }).join('\n\n');
+  } catch {
+    return '(unavailable)';
+  }
+}
+
+/**
+ * Build compact list of already-quoted source URLs (quote prompt dedup).
+ */
+function formatQuotedSources() {
+  try {
+    const posts = JSON.parse(fs.readFileSync(config.POSTS_LOG_PATH, 'utf-8')).posts || [];
+    const quotes = posts.filter(p => p.type === 'quote' && p.source_url);
+    if (quotes.length === 0) return '(none yet)';
+    return quotes.map(q => '- ' + q.source_url).join('\n');
+  } catch {
+    return '(none yet)';
+  }
+}
+
+/**
+ * Load sprint context with active_plan.json fallback (tweet prompt).
+ */
+function loadActivePlanContext() {
+  // Primary: sprint_context.txt (written by sprint_manager.js)
+  try {
+    const content = fs.readFileSync(config.SPRINT_CONTEXT_PATH, 'utf-8');
+    if (content.trim()) return content.replace(/`/g, "'");
+  } catch {}
+
+  // Fallback: active_plan.json
+  try {
+    const a = JSON.parse(fs.readFileSync(config.ACTIVE_PLAN_PATH, 'utf-8'));
+    if (a && a.status === 'active') {
+      const days = Math.floor((Date.now() - new Date(a.activated_date).getTime()) / 86400000);
+      return 'ACTIVE PLAN: ' + a.title + '\n' +
+             'Goal: ' + (a.first_sprint?.week_1_goal || '(none)') + '\n' +
+             'Day ' + days + ' of 30';
+    }
+  } catch {}
+
+  return '(no active plan)';
+}
+
+/**
+ * Parse reading_url.txt → reading block for browse prompt.
+ * Detects X profile deep dive vs article/content link.
+ */
+function buildReadingBlock() {
+  const NONE = '(no reading queue item this cycle)';
+  let url = '', from = '', context = '';
+  try {
+    const raw = fs.readFileSync(config.READING_URL_PATH, 'utf-8');
+    if (!raw.trim()) return NONE;
+    const m1 = raw.match(/^URL:\s*(.+)/m);
+    const m2 = raw.match(/^FROM:\s*(.+)/m);
+    const m3 = raw.match(/^CONTEXT:\s*(.+)/m);
+    url     = (m1 ? m1[1].trim() : '').replace(/`/g, "'");
+    from    = (m2 ? m2[1].trim() : '').replace(/`/g, "'");
+    context = (m3 ? m3[1].trim() : '').replace(/`/g, "'");
+  } catch { return NONE; }
+  if (!url) return NONE;
+
+  if (from === 'conviction_source') {
+    return 'Regular source collection selected an off-platform source for this cycle.\n' +
+      '  URL: ' + url + '\n' +
+      '  Context: ' + context + '\n\n' +
+      '  Treat this as a first-class browse task, not a fallback.\n' +
+      '  Read for concrete facts, named sources, missing evidence, and points that could\n' +
+      '  either sharpen or challenge the relevant belief axis.\n' +
+      "  Write findings in browse_notes.md under '## Conviction Source: " + url + "'";
+  }
+
+  // Profile deep dive
+  if (/^https:\/\/x\.com\/[A-Za-z0-9_]+\/?$/.test(url)) {
+    const h = url.replace('https://x.com/', '').replace(/\/$/, '');
+    return from + ' asked you to learn about @' + h +
+      '. DEEP DIVE \u2014 this is your primary task this cycle:\n' +
+      '  URL: ' + url + '\n' +
+      '  Context: ' + context + '\n\n' +
+      '  Do all of the following:\n' +
+      '  1. Navigate to their profile. Read their pinned tweet and bio.\n' +
+      '  2. Scroll their timeline \u2014 read at least 8 recent tweets. Note their main positions,\n' +
+      '     recurring themes, and any tensions or contradictions.\n' +
+      '  3. Check if their views connect to any of your current belief axes. Note evidence.\n' +
+      "  4. Search for '@" + h + "' to see how others engage with them (optional if time allows).\n" +
+      "  5. Write a dedicated section in browse_notes.md: '## Deep Dive: @" + h + "'\n" +
+      '     Summarise what you learned and whether it shifted any of your beliefs.';
+  }
+
+  // Article / content URL
+  return from + ' recommended a link. Navigate to it as your FIRST task:\n' +
+    '  ' + url + '\n' +
+    '  Context: ' + context + '\n' +
+    '  Read it carefully. Note key claims, evidence quality, and any tensions with your current axes.\n' +
+    "  Write findings in browse_notes.md under '## Reading: " + url + "'";
+}
+
+/**
+ * Build journal task string (browse or tweet cycle).
+ */
+function buildJournalTask(type, today, hour, dayNumber) {
+  const jPath = path.join(config.JOURNALS_DIR, today + '_' + hour + '.html');
+  if (fs.existsSync(jPath)) {
+    if (type === 'browse') {
+      return 'journals/' + today + '_' + hour +
+        '.html ALREADY EXISTS. DO NOT write or overwrite this file under any circumstances \u2014 it has been permanently archived to Arweave and cannot be changed.';
+    }
+    return 'journals/' + today + '_' + hour +
+      '.html ALREADY EXISTS. DO NOT write or overwrite this file \u2014 it has been permanently archived to Arweave.';
+  }
+  if (type === 'browse') {
+    return 'Use the write_file tool to write journals/' + today + '_' + hour + '.html now. This is Day ' + dayNumber + '.\n' +
+      '   The journal has TWO required sections inside <article>:\n' +
+      '\n' +
+      '   SECTION 1 — synthesis (required): Your interpretive narrative for this cycle.\n' +
+      '   Write as Sebastian D. Hunter: a digital watchdog for public integrity.\n' +
+      '   Your vocation (WHO YOU ARE above) is the lens. What you choose to notice,\n' +
+      '   what you find significant, and how you frame it should reflect that identity.\n' +
+      '   One or two key tensions or signals you noticed. What is new or surprising.\n' +
+      '   Where does what you observed connect to disinformation, accountability, power, or\n' +
+      '   the integrity of public information? That is the thread. Pull on it.\n' +
+      '   ~150-200 words. Use <section class="stream">, <section class="tensions">,\n' +
+      '   <section class="images">, <section class="footnotes"> as usual.\n' +
+      '\n' +
+      '   SECTION 2 — raw observations (required): Read state/browse_notes.md RIGHT NOW\n' +
+      '   and include SIGNIFICANT entries inside a <section class="browse-notes"> block\n' +
+      '   at the END of the article, just before </article>.\n' +
+      '   INCLUDE entries tagged: [ONTOLOGY], [CLAIM], [CURIOSITY], [SPRINT], [SIGNAL],\n' +
+      '     [SYNTHESIS], [CRITIQUE], [VERIFIED], [REFUTED], [DRIFT], [LANDMARK].\n' +
+      '   EXCLUDE entries tagged [NOTED] — passive observations with no belief or action impact.\n' +
+      '   If no significant entries exist, write a single <li>(no significant observations this cycle)</li>.\n' +
+      '   Format:\n' +
+      '     <section class="browse-notes">\n' +
+      '       <h2>Raw Observations</h2>\n' +
+      '       <ul>\n' +
+      '         <li>[TAG] text of observation</li>\n' +
+      '         ... one <li> per significant line from browse_notes.md ...\n' +
+      '       </ul>\n' +
+      '     </section>\n' +
+      '   This section is mandatory. Do not skip it — but do filter out [NOTED] noise.\n' +
+      '\n' +
+      '   Use standard HTML journal format. In the HTML metadata use content="' + dayNumber + '"\n' +
+      '   for x-hunter-day and "Day ' + dayNumber + ' \u00b7 Hour ' + hour + '" in the header.\n' +
+      '   This is the public record of what you observed. Keep it honest and specific.';
+  }
+  // tweet
+  return 'Write journals/' + today + '_' + hour + '.html (Day ' + dayNumber +
+    '). Use x-hunter-day content="' + dayNumber + '" and "Day ' + dayNumber +
+    ' \u00b7 Hour ' + hour + '" in the header.';
+}
+
+/**
+ * Format vocation — Sebastian's current purpose, label, statement, and defining axes.
+ * Returns a short block for injection into all prompt preambles.
+ */
+function formatVocation() {
+  try {
+    const v = JSON.parse(fs.readFileSync(path.join(config.STATE_DIR, 'vocation.json'), 'utf-8'));
+    const label       = v.label       || '(forming)';
+    const description = v.description || '';
+    const statement   = v.statement   || '';
+    const intent      = v.intent      || '';
+
+    // Resolve core axis IDs to labels from the ontology
+    let axisLabels = [];
+    try {
+      const o = JSON.parse(fs.readFileSync(config.ONTOLOGY_PATH, 'utf-8'));
+      const axisMap = {};
+      (o.axes || []).forEach(a => { axisMap[a.id] = a.label; });
+      axisLabels = (v.core_axes || []).map(id => axisMap[id] || id);
+    } catch {}
+
+    let out = 'Vocation: ' + label + ' [' + (v.status || 'forming') + ']\n';
+    if (description) out += description + '\n';
+    if (statement)   out += 'In my words: ' + statement + '\n';
+    if (intent)      out += 'What I do: ' + intent + '\n';
+    if (axisLabels.length) {
+      out += 'Core belief axes that define this vocation:\n';
+      axisLabels.forEach(l => { out += '  - ' + l + '\n'; });
+      out += 'When deciding what to write about or how to frame an observation, these axes\n';
+      out += 'are your primary filter. Prioritise signals that touch them.';
+    }
+    return out.trim();
+  } catch {
+    return '(vocation not yet formed)';
+  }
+}
+
+function formatUnresolvedClaims() {
+  try {
+    const raw = fs.readFileSync(config.CLAIM_TRACKER_PATH, 'utf-8');
+    const tracker = JSON.parse(raw);
+    const open = (tracker.claims || []).filter(c => c.status === 'unverified' || c.status === 'contested');
+    if (!open.length) return '(no open claims)';
+    return open.slice(0, 10).map(c =>
+      `[${c.id}] ${c.claim_text} — status: ${c.status}` +
+      (c.related_axis_id ? ` | axis: ${c.related_axis_id}` : '') +
+      (c.notes ? ` | notes: ${c.notes}` : '')
+    ).join('\n');
+  } catch { return '(no open claims)'; }
+}
+
+function formatEngagementSummary() {
+  try {
+    const p = config.ENGAGEMENT_SUMMARY_PATH;
+    if (!fs.existsSync(p)) return '(engagement data not yet collected)';
+    const eng = JSON.parse(fs.readFileSync(p, 'utf-8'));
+    const s = eng.stats || {};
+    const age = eng.generated_at
+      ? Math.round((Date.now() - new Date(eng.generated_at).getTime()) / 60_000)
+      : null;
+    const ageStr = age !== null ? ` (${age}m ago)` : '';
+    const best = eng.best;
+    const bestStr = best
+      ? ` Best: "${best.text_preview.slice(0, 60)}" — ${best.likes}❤ ${best.replies}↩`
+      : '';
+    return [
+      `Recent engagement${ageStr}: avg ${s.avg_likes ?? '?'}❤ ${s.avg_replies ?? '?'}↩ per post`,
+      `Trend: ${s.trend ?? '?'} | Followers: ${eng.followers ?? '?'}`,
+      bestStr,
+    ].filter(Boolean).join('\n');
+  } catch { return '(engagement data unavailable)'; }
+}
+
+// ── Main loader ─────────────────────────────────────────────────────────────
+
+/**
+ * Load all context needed for a given prompt type.
+ *
+ * @param {Object} opts
+ * @param {string} opts.type   - 'browse' | 'tweet' | 'quote' | 'first_run'
+ * @param {number} opts.cycle  - current cycle number
+ * @param {number} opts.dayNumber
+ * @param {string} opts.today  - YYYY-MM-DD
+ * @param {string} opts.now    - HH:MM
+ * @param {string} opts.hour   - HH (zero-padded)
+ * @returns {Object} ctx
+ */
+function loadContext(opts) {
+  const { type, cycle, dayNumber, today, now, hour } = opts;
+  const ctx = { type, cycle, dayNumber, today, now, hour };
+
+  if (type === 'first_run') return ctx;
+
+  if (type === 'browse') {
+    // Digest window and max nav URLs scale with cadence assessment signals.
+    // signal_density drives how much of the digest the agent sees.
+    // browse_depth (agent-set directive) controls URL navigation budget.
+    let signalDensity = 'medium';
+    let browseDepth   = 'normal';
+    try {
+      const cad = JSON.parse(fs.readFileSync(
+        require('path').join(config.STATE_DIR, 'cadence.json'), 'utf-8'));
+      signalDensity = cad?.assessment?.signal_density  || 'medium';
+      browseDepth   = cad?.directives?.browse_depth    || 'normal';
+    } catch {}
+    // Local Ollama models can't handle large contexts — cap digest at 60 lines
+    const isLocalModel = !!process.env.OLLAMA_BASE_URL;
+    const digestTailLines = isLocalModel ? 60
+      : signalDensity === 'high' ? 300 : signalDensity === 'low' ? 80 : 160;
+    ctx.maxNavUrls  = browseDepth === 'shallow' ? 0 : browseDepth === 'deep' ? 3 : 1;
+    ctx.browseDepth = browseDepth;
+
+    ctx.trajectoryContext = readState(config.TRAJECTORY_SUMMARY_PATH, { fallback: '' });
+    ctx.browseNotes       = readState(config.BROWSE_NOTES_PATH, { tail: 80, fallback: '(empty)' });
+    ctx.topicSummary      = readState(config.TOPIC_SUMMARY_PATH, { fallback: '(not yet generated)' });
+    ctx.digest            = readState(config.FEED_DIGEST_PATH, { tail: digestTailLines, fallback: '(not yet generated)' });
+    ctx.critique          = readState(config.CRITIQUE_PATH, { tail: 12, fallback: '' });
+
+    // Adversarial eval — inject only when flagged (overclaim or axis mismatch)
+    try {
+      const evalLast = path.join(config.STATE_DIR, 'adversarial_eval_last.json');
+      if (fs.existsSync(evalLast)) {
+        const ev = JSON.parse(fs.readFileSync(evalLast, 'utf-8'));
+        if (ev.flagged) {
+          ctx.adversarialFlag = [
+            ev.overclaim ? `⚠️  Your last post was flagged as OVERCLAIM by the adversarial evaluator.` : '',
+            !ev.axis_match ? `⚠️  Your last post AXIS MISMATCH — position inconsistent with your tracked axes.` : '',
+            ev.counter_argument ? `  Strongest counter-argument: "${ev.counter_argument}"` : '',
+          ].filter(Boolean).join('\n');
+        }
+      }
+    } catch { /* non-fatal */ }
+    ctx.articleMeta       = readState(config.ARTICLE_META_PATH, { fallback: '' });
+    ctx.curiosityDirective  = readState(config.CURIOSITY_DIRECTIVE_PATH, { fallback: '' });
+    ctx.synthesisPending    = loadSynthesisProposals();
+    ctx.lastReflection      = readState(config.REFLECTION_NOTES_PATH, { tail: 40, fallback: '' });
+    ctx.commentCandidates = readState(config.COMMENT_CANDIDATES_PATH, { fallback: '' });
+    ctx.discourseDigest   = readState(config.DISCOURSE_DIGEST_PATH, { fallback: '' });
+    ctx.sprintContext     = readState(config.SPRINT_CONTEXT_PATH, { fallback: '(no active plan)' });
+    ctx.readingBlock      = buildReadingBlock();
+    ctx.prefetchSource    = readState(config.PREFETCH_SOURCE_PATH, { fallback: '' }).trim();
+    ctx.unresolvedClaims  = formatUnresolvedClaims();
+    ctx.currentAxes       = formatCurrentAxes();
+    ctx.vocation          = formatVocation();
+    ctx.journalTask       = buildJournalTask('browse', today, hour, dayNumber);
+    ctx.nextTweet         = (Math.floor(cycle / config.TWEET_EVERY) + 1) * config.TWEET_EVERY;
+    ctx.toolManifest      = buildToolManifest();
+    ctx.lastToolResult    = loadLastToolResult();
+  }
+
+  if (type === 'quote') {
+    ctx.vocation          = formatVocation();
+    ctx.sprintContext     = readState(config.SPRINT_CONTEXT_PATH, { fallback: '(no active plan)' });
+    ctx.quotedSources     = formatQuotedSources();
+    ctx.digest            = readState(config.FEED_DIGEST_PATH, { tail: 120, fallback: '(not available)' });
+    ctx.topAxes           = formatTopAxes();
+    ctx.lastToolResult    = loadLastToolResult();
+  }
+
+  if (type === 'tweet') {
+    ctx.browseNotesFull   = readState(config.BROWSE_NOTES_PATH, { fallback: '(empty)' });
+    ctx.memoryRecall      = readState(config.MEMORY_RECALL_PATH, { fallback: '(empty)' });
+    ctx.discourseDigest   = readState(config.DISCOURSE_DIGEST_PATH, { fallback: '(no discourse yet)' });
+    ctx.activePlanContext = loadActivePlanContext();
+    ctx.currentAxes       = formatCurrentAxes();
+    ctx.vocation          = formatVocation();
+    ctx.journalTask       = buildJournalTask('tweet', today, hour, dayNumber);
+    ctx.toolManifest      = buildToolManifest();
+    ctx.lastToolResult    = loadLastToolResult();
+    ctx.engagementSummary = formatEngagementSummary();
+  }
+
+  return ctx;
+}
+
+module.exports = loadContext;
+module.exports.readState = readState;
+module.exports.formatCurrentAxes = formatCurrentAxes;
+module.exports.formatTopAxes = formatTopAxes;
+module.exports.formatQuotedSources = formatQuotedSources;
+module.exports.loadActivePlanContext = loadActivePlanContext;
+module.exports.buildReadingBlock = buildReadingBlock;
+module.exports.buildJournalTask = buildJournalTask;
+
+// CLI: dump context as JSON for debugging
+if (require.main === module) {
+  const ctx = loadContext({
+    type:      process.env.PROMPT_TYPE || 'browse',
+    cycle:     parseInt(process.env.CYCLE || '1', 10),
+    dayNumber: parseInt(process.env.DAY_NUMBER || '1', 10),
+    today:     process.env.TODAY || new Date().toISOString().slice(0, 10),
+    now:       process.env.NOW   || new Date().toTimeString().slice(0, 5),
+    hour:      process.env.HOUR  || String(new Date().getHours()).padStart(2, '0'),
+  });
+  console.log(JSON.stringify(ctx, null, 2));
+}

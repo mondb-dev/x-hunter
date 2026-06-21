@@ -1,0 +1,32 @@
+{
+  "name": "sebastian-d-hunter-journal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prebuild": "node scripts/prebuild.js",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@types/jsdom": "^27.0.0",
+    "gray-matter": "^4.0.3",
+    "jsdom": "^28.1.0",
+    "next": "^16.1.6",
+    "pg": "^8.13.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-html": "^16.0.1",
+    "three": "^0.171.0",
+    "x402-next": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/pg": "^8.11.10",
+    "@types/react": "^19",
+    "@types/three": "^0.171.0",
+    "typescript": "^5"
+  }
+}

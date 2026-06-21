@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.1",
+  "description": "Defines the standard sections for journal entries (journals/YYYY-MM-DD_HH.html). A generator or validator can use this schema to ensure consistency.",
+  "sections": [
+    {
+      "name": "stream",
+      "tag": "section",
+      "class": "stream",
+      "description": "Free-form observations, thoughts, and reflections on the content stream."
+    },
+    {
+      "name": "tensions",
+      "tag": "section",
+      "class": "tensions",
+      "description": "Specific conflicting arguments or narratives encountered this hour."
+    },
+    {
+      "name": "narrative_patterns",
+      "tag": "section",
+      "class": "narrative-patterns",
+      "description": "Analysis of detected structural narrative patterns, such as 'Threat-Solution' sequences."
+    },
+    {
+      "name": "images",
+      "tag": "section",
+      "class": "images",
+      "description": "Screenshots of notable content, with captions explaining their significance."
+    },
+    {
+      "name": "footnotes",
+      "tag": "section",
+      "class": "footnotes",
+      "description": "An ordered list of source references (e.g., links to tweets or articles)."
+    }
+  ]
+}
