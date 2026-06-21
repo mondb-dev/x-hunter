@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-21T17:45:34.923Z",
+  "generated_at": "2026-06-21T20:45:35.624Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-21T17:46:02.836Z",
+  "profiled_at": "2026-06-21T20:46:05.177Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -627,6 +627,135 @@
       }
     },
     {
+      "domain": "theguardian.com",
+      "entity": "Theguardian",
+      "kind": "news",
+      "first_seen_at": "2026-03-27T23:17:00Z",
+      "last_seen_at": "2026-03-27T23:17:00Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
+          "https://www.theguardian.com/society/2026/jun/21/therapy-ferrets-kill-rats-uk-largest-children-prison-wetherby",
+          "https://www.theguardian.com/world/2026/jun/21/us-iran-talks-jd-vance-switzerland-strait-of-hormuz-lebanon",
+          "https://www.theguardian.com/us-news/2026/jun/21/man-dies-madison-square-garden-concert",
+          "https://www.theguardian.com/uk-news/2026/jun/21/taxi-uber-rider-targeted-suspected-anti-muslim-attacks-edinburgh-witnesses"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 1,
+          "reading_queue": 5
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_global_power_realignments_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.75,
+          "basis": [
+            "newsroom_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.32416666666666666,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:1",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.66,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:true",
+            "outbound_links:4",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.6029427083333333,
+          "confidence": 0.196325,
+          "method": "mechanical_v1",
+          "basis": [
+            "newsroom_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:5",
+            "distinct_axes:1",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-20T07:56:20.653Z",
+        "homepage_url": "https://theguardian.com/",
+        "example_url": "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.theguardian.com/us",
+        "example_final_url": "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": true
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": true,
+          "outbound_links_count": 4,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "washingtonpost.com",
       "entity": "Washingtonpost",
       "kind": "news",
@@ -749,133 +878,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "theguardian.com",
-      "entity": "Theguardian",
-      "kind": "news",
-      "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-03-27T23:17:00Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
-          "https://www.theguardian.com/society/2026/jun/21/therapy-ferrets-kill-rats-uk-largest-children-prison-wetherby",
-          "https://www.theguardian.com/world/2026/jun/21/us-iran-talks-jd-vance-switzerland-strait-of-hormuz-lebanon"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 1,
-          "reading_queue": 3
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_global_power_realignments_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.75,
-          "basis": [
-            "newsroom_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.2658333333333333,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:1",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.66,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:true",
-            "outbound_links:4",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.5901822916666667,
-          "confidence": 0.139075,
-          "method": "mechanical_v1",
-          "basis": [
-            "newsroom_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:3",
-            "distinct_axes:1",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-20T07:56:20.653Z",
-        "homepage_url": "https://theguardian.com/",
-        "example_url": "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.theguardian.com/us",
-        "example_final_url": "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": true
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": true,
-          "outbound_links_count": 4,
           "opinion_marker": false
         }
       }
@@ -1040,6 +1042,131 @@
       }
     },
     {
+      "domain": "nytimes.com",
+      "entity": "Nytimes",
+      "kind": "news",
+      "first_seen_at": null,
+      "last_seen_at": null,
+      "discovery": {
+        "distinct_urls": 4,
+        "example_urls": [
+          "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
+          "https://www.nytimes.com/2026/06/21/world/middleeast/vance-iran-talks-trump.html",
+          "https://www.nytimes.com/2026/06/21/world/europe/ukraine-poland-alliance-russia.html",
+          "https://www.nytimes.com/2026/06/21/world/middleeast/iran-nuclear-talks-questions.html"
+        ],
+        "origin_counts": {
+          "reading_queue": 5
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.75,
+          "basis": [
+            "newsroom_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.17666666666666664,
+          "basis": [
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.16,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:true",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.5624739583333334,
+          "confidence": 0.134975,
+          "method": "mechanical_v1",
+          "basis": [
+            "newsroom_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:4",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-21T15:47:58.759Z",
+        "homepage_url": "https://nytimes.com/",
+        "example_url": "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
+        "homepage_status": 200,
+        "example_status": 403,
+        "homepage_final_url": "https://www.nytimes.com/",
+        "example_final_url": "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": true,
+          "outbound_links_count": 5,
+          "opinion_marker": true
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "cbsnews.com",
       "entity": "Cbsnews",
       "kind": "unknown",
@@ -1174,142 +1301,19 @@
       }
     },
     {
-      "domain": "nytimes.com",
-      "entity": "Nytimes",
+      "domain": "apnews.com",
+      "entity": "Apnews",
       "kind": "news",
-      "first_seen_at": null,
-      "last_seen_at": null,
+      "first_seen_at": "2026-03-29T03:13:05.200Z",
+      "last_seen_at": "2026-03-29T03:13:05.200Z",
       "discovery": {
-        "distinct_urls": 2,
+        "distinct_urls": 1,
         "example_urls": [
-          "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
-          "https://www.nytimes.com/2026/06/21/world/middleeast/vance-iran-talks-trump.html"
+          "https://apnews.com/hub/iran"
         ],
         "origin_counts": {
-          "reading_queue": 3
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.75,
-          "basis": [
-            "newsroom_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.16,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:true",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.5497135416666666,
-          "confidence": 0.07772499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "newsroom_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-21T15:47:58.759Z",
-        "homepage_url": "https://nytimes.com/",
-        "example_url": "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
-        "homepage_status": 200,
-        "example_status": 403,
-        "homepage_final_url": "https://www.nytimes.com/",
-        "example_final_url": "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": true,
-          "outbound_links_count": 5,
-          "opinion_marker": true
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "bbc.com",
-      "entity": "Bbc",
-      "kind": "news",
-      "first_seen_at": null,
-      "last_seen_at": null,
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
-          "https://www.bbc.com/news/articles/cwy0gjqv783o?at_medium=RSS&amp;at_campaign=rss"
-        ],
-        "origin_counts": {
-          "reading_queue": 3
+          "reading_queue": 1,
+          "journals": 1
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1336,9 +1340,132 @@
           ]
         },
         "breadth": {
-          "score": 0.11833333333333332,
+          "score": 0.14916666666666667,
           "basis": [
-            "distinct_urls:2",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.36,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:15",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.5440364583333333,
+          "confidence": 0.069575,
+          "method": "mechanical_v1",
+          "basis": [
+            "newsroom_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-20T07:56:20.893Z",
+        "homepage_url": "https://apnews.com/",
+        "example_url": "https://apnews.com/hub/iran",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://apnews.com/",
+        "example_final_url": "https://apnews.com/hub/iran",
+        "homepage_content_type": "text/html;charset=UTF-8",
+        "example_content_type": "text/html;charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 15,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 15,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "bbc.com",
+      "entity": "Bbc",
+      "kind": "news",
+      "first_seen_at": null,
+      "last_seen_at": null,
+      "discovery": {
+        "distinct_urls": 4,
+        "example_urls": [
+          "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.com/news/articles/cwy0gjqv783o?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.com/news/videos/c802denngxeo?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.com/news/articles/cwylx1vq18zo?at_medium=RSS&amp;at_campaign=rss"
+        ],
+        "origin_counts": {
+          "reading_queue": 5
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.72,
+          "basis": [
+            "newsroom_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.17666666666666664,
+          "basis": [
+            "distinct_urls:4",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -1371,12 +1498,12 @@
           ]
         },
         "overall": {
-          "score": 0.5290885416666666,
-          "confidence": 0.07772499999999999,
+          "score": 0.5418489583333334,
+          "confidence": 0.134975,
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:2",
+            "distinct_urls:4",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -1686,126 +1813,6 @@
       }
     },
     {
-      "domain": "apnews.com",
-      "entity": "Apnews",
-      "kind": "news",
-      "first_seen_at": "2026-03-29T03:13:05.200Z",
-      "last_seen_at": "2026-03-29T03:13:05.200Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://apnews.com/hub/iran"
-        ],
-        "origin_counts": {
-          "journals": 1
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.72,
-          "basis": [
-            "newsroom_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.36,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:15",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.5227083333333333,
-          "confidence": 0.0491,
-          "method": "mechanical_v1",
-          "basis": [
-            "newsroom_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-20T07:56:20.893Z",
-        "homepage_url": "https://apnews.com/",
-        "example_url": "https://apnews.com/hub/iran",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://apnews.com/",
-        "example_final_url": "https://apnews.com/hub/iran",
-        "homepage_content_type": "text/html;charset=UTF-8",
-        "example_content_type": "text/html;charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 15,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 15,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "bit.ly",
       "entity": "Bit Ly",
       "kind": "unknown",
@@ -2067,6 +2074,138 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "hrw.org",
+      "entity": "Hrw",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-21T15:45:00Z",
+      "last_seen_at": "2026-06-21T20:18:36.826Z",
+      "discovery": {
+        "distinct_urls": 14,
+        "example_urls": [
+          "https://www.hrw.org/news/2026/06/18/support-builds-to-protect-children-from-crimes-against-humanity",
+          "https://www.hrw.org/news/2026/06/18/uzbekistan-activist-held-in-trumped-up-case",
+          "https://www.hrw.org/news/2026/06/18/bulgaria-licensed-surveillance-exports-to-rights-violators",
+          "https://www.hrw.org/news/2026/06/17/gig-workers-in-china-need-more-than-promises",
+          "https://www.hrw.org/news/2026/06/17/japans-flag-desecration-bill-threatens-rights"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 10,
+          "journals": 17
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_authoritarian_self_determination_v1",
+          "axis_human_rights_exploitation_v1",
+          "axis_national_sovereignty_v_intl_law_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.7033333333333333,
+          "basis": [
+            "distinct_urls:14",
+            "distinct_axes:4",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.8200000000000001,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:true",
+            "outbound_links:20",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.5002604166666667,
+          "confidence": 0.47845,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:14",
+            "distinct_axes:4",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-21T17:18:02.556Z",
+        "homepage_url": "https://hrw.org/",
+        "example_url": "https://www.hrw.org/news/2026/06/18/support-builds-to-protect-children-from-crimes-against-humanity",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.hrw.org/",
+        "example_final_url": "https://www.hrw.org/news/2026/06/18/support-builds-to-protect-children-from-crimes-against-humanity",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": true,
+          "outbound_links_count": 11,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": true,
+          "outbound_links_count": 20,
           "opinion_marker": false
         }
       }
@@ -2458,9 +2597,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-21T16:00:02.000Z",
+      "last_seen_at": "2026-06-21T18:10:06.000Z",
       "discovery": {
-        "distinct_urls": 5798,
+        "distinct_urls": 5810,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2469,10 +2608,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3459,
-          "feed_buffer_reply": 3757
+          "feed_buffer": 3463,
+          "feed_buffer_reply": 3765
         },
-        "distinct_referring_accounts": 1876,
+        "distinct_referring_accounts": 1882,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -2510,7 +2649,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5798",
+            "distinct_urls:5810",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2518,7 +2657,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1876",
+            "referring_accounts:1882",
             "origin_types:2"
           ]
         },
@@ -2548,10 +2687,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5798",
+            "distinct_urls:5810",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1876",
+            "referring_accounts:1882",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -2594,9 +2733,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-06-20T22:45:00.000Z",
+      "last_seen_at": "2026-06-21T17:29:12.000Z",
       "discovery": {
-        "distinct_urls": 412,
+        "distinct_urls": 414,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -2605,8 +2744,8 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 386,
-          "feed_buffer": 55
+          "feed_buffer_reply": 387,
+          "feed_buffer": 56
         },
         "distinct_referring_accounts": 267,
         "sample_referring_accounts": [
@@ -2646,7 +2785,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:412",
+            "distinct_urls:414",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2684,7 +2823,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:412",
+            "distinct_urls:414",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:267",
@@ -2992,137 +3131,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "hrw.org",
-      "entity": "Hrw",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-21T15:45:00Z",
-      "last_seen_at": "2026-06-21T17:20:40.004Z",
-      "discovery": {
-        "distinct_urls": 12,
-        "example_urls": [
-          "https://www.hrw.org/news/2026/06/18/support-builds-to-protect-children-from-crimes-against-humanity",
-          "https://www.hrw.org/news/2026/06/18/uzbekistan-activist-held-in-trumped-up-case",
-          "https://www.hrw.org/news/2026/06/17/japans-flag-desecration-bill-threatens-rights",
-          "https://www.hrw.org/news/2026/06/18/bulgaria-licensed-surveillance-exports-to-rights-violators",
-          "https://www.hrw.org/news/2026/06/17/gig-workers-in-china-need-more-than-promises"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 4,
-          "journals": 10
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_authoritarian_self_determination_v1",
-          "axis_human_rights_exploitation_v1",
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.6449999999999999,
-          "basis": [
-            "distinct_urls:12",
-            "distinct_axes:3",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.8200000000000001,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:true",
-            "corrections:true",
-            "outbound_links:20",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.4875,
-          "confidence": 0.4212,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:12",
-            "distinct_axes:3",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-21T17:18:02.556Z",
-        "homepage_url": "https://hrw.org/",
-        "example_url": "https://www.hrw.org/news/2026/06/18/support-builds-to-protect-children-from-crimes-against-humanity",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.hrw.org/",
-        "example_final_url": "https://www.hrw.org/news/2026/06/18/support-builds-to-protect-children-from-crimes-against-humanity",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": true,
-          "outbound_links_count": 11,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": true,
-          "outbound_links_count": 20,
           "opinion_marker": false
         }
       }
@@ -3522,7 +3530,7 @@
           "https://www.reuters.com/site-search/?query=Evidence-based%20claims%2C%20transparent%20sourcing%2C%20honest%20uncertainty%2C%20good-faith%20argu%20Truth%20and%20Evidence%20in%20Public%20Discourse"
         ],
         "origin_counts": {
-          "reading_queue": 1
+          "reading_queue": 2
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -8561,7 +8569,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T19:55:39.029Z",
+        "fetched_at": "2026-06-21T20:18:02.647Z",
         "homepage_url": "https://spacex.com/",
         "example_url": "https://shop.spacex.com/products/spacex-mission-ready-sunglasses?variant=44537843744847&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44537843744847&twclid=298d45vmtw4pu78lan6k2cs4ha",
         "homepage_status": 200,
@@ -10362,6 +10370,132 @@
       }
     },
     {
+      "domain": "merck.com",
+      "entity": "Merck",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-07T07:41:26.898Z",
+      "last_seen_at": "2026-06-21T19:25:29.047Z",
+      "discovery": {
+        "distinct_urls": 10,
+        "example_urls": [
+          "https://www.merck.com/stories/were-pursuing-innovative-science-with-antibody-drug-conjugate-adc-research/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=na_NA_VID_18s&twclid=2ashs3kuiq7isb412ax3cbgusn",
+          "https://www.merck.com/research/oncology/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=US-NON-20083_NA_VID_30s&twclid=27zl72uvjx6mebwcjence62y0y",
+          "https://www.merck.com/research/oncology/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=US-NON-19805_NA_VID_25s&twclid=262evfed9kbay3n59odfvwhsc2",
+          "https://www.merck.com/research/oncology/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=US-NON-19805_NA_VID_25s&twclid=25auir9hsl7j26liqfvy7rpvqo",
+          "https://www.merck.com/stories/were-pursuing-innovative-science-with-antibody-drug-conjugate-adc-research/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=na_NA_VID_18s&twclid=28ag45lwmcpct7fzofz0crax6r"
+        ],
+        "origin_counts": {
+          "feed_buffer": 10
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "merck"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.3516666666666667,
+          "basis": [
+            "distinct_urls:10",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.4,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:25",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.40466145833333333,
+          "confidence": 0.338975,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:10",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-19T14:26:01.237Z",
+        "homepage_url": "https://merck.com/",
+        "example_url": "https://www.merck.com/stories/were-pursuing-innovative-science-with-antibody-drug-conjugate-adc-research/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=na_NA_VID_18s&twclid=2ashs3kuiq7isb412ax3cbgusn",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.merck.com/",
+        "example_final_url": "https://www.merck.com/stories/were-pursuing-innovative-science-with-antibody-drug-conjugate-adc-research/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=na_NA_VID_18s&twclid=2ashs3kuiq7isb412ax3cbgusn",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 23,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 25,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "fabletics.com",
       "entity": "Fabletics",
       "kind": "unknown",
@@ -11369,132 +11503,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "merck.com",
-      "entity": "Merck",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-07T07:41:26.898Z",
-      "last_seen_at": "2026-06-21T16:05:29.185Z",
-      "discovery": {
-        "distinct_urls": 9,
-        "example_urls": [
-          "https://www.merck.com/stories/were-pursuing-innovative-science-with-antibody-drug-conjugate-adc-research/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=na_NA_VID_18s&twclid=2ashs3kuiq7isb412ax3cbgusn",
-          "https://www.merck.com/research/oncology/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=US-NON-20083_NA_VID_30s&twclid=27zl72uvjx6mebwcjence62y0y",
-          "https://www.merck.com/research/oncology/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=US-NON-19805_NA_VID_25s&twclid=262evfed9kbay3n59odfvwhsc2",
-          "https://www.merck.com/research/oncology/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=US-NON-19805_NA_VID_25s&twclid=25auir9hsl7j26liqfvy7rpvqo",
-          "https://www.merck.com/stories/were-pursuing-innovative-science-with-antibody-drug-conjugate-adc-research/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=na_NA_VID_18s&twclid=28ag45lwmcpct7fzofz0crax6r"
-        ],
-        "origin_counts": {
-          "feed_buffer": 9
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "merck"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.32249999999999995,
-          "basis": [
-            "distinct_urls:9",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.4,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:25",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.39828125000000003,
-          "confidence": 0.31035,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:9",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-19T14:26:01.237Z",
-        "homepage_url": "https://merck.com/",
-        "example_url": "https://www.merck.com/stories/were-pursuing-innovative-science-with-antibody-drug-conjugate-adc-research/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=na_NA_VID_18s&twclid=2ashs3kuiq7isb412ax3cbgusn",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.merck.com/",
-        "example_final_url": "https://www.merck.com/stories/were-pursuing-innovative-science-with-antibody-drug-conjugate-adc-research/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=na_NA_VID_18s&twclid=2ashs3kuiq7isb412ax3cbgusn",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 23,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 25,
           "opinion_marker": false
         }
       }
@@ -27581,7 +27589,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T07:55:25.838Z",
+        "fetched_at": "2026-06-21T18:48:00.357Z",
         "homepage_url": "https://coderabbit.ai/",
         "example_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
         "homepage_status": 200,
@@ -30160,7 +30168,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T06:55:24.341Z",
+        "fetched_at": "2026-06-21T18:48:00.604Z",
         "homepage_url": "https://monadicdna.com/",
         "example_url": "https://explorer.monadicdna.com/?twclid=23v8cbj938nxfoq8gmro6dqa1l",
         "homepage_status": 200,
@@ -30406,7 +30414,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T06:25:23.931Z",
+        "fetched_at": "2026-06-21T18:48:01.689Z",
         "homepage_url": "https://alphacapital.pro/",
         "example_url": "https://alphacapital.pro/pages/performance/?utm_source=twitter&utm_medium=ad1&utm_campaign=ac&twclid=2b8weeqkz95cs1xc59f8v2j7ob",
         "homepage_status": 200,
@@ -30529,7 +30537,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T06:55:24.770Z",
+        "fetched_at": "2026-06-21T18:48:01.962Z",
         "homepage_url": "https://willowvoice.com/",
         "example_url": "https://willowvoice.com/developers?twclid=2ebuy7l735ljqyo9xotbgwpmp0",
         "homepage_status": 200,
@@ -31759,7 +31767,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T09:55:29.692Z",
+        "fetched_at": "2026-06-21T19:16:03.631Z",
         "homepage_url": "https://genesissystems.com/",
         "example_url": "https://www.genesissystems.com/contact?utm_source=x&utm_campaign=genericwebtrafficdavead4-4-26&twclid=2av31c1xlvmnruxepagyndsvf6",
         "homepage_status": 200,
@@ -32620,7 +32628,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T15:25:33.809Z",
+        "fetched_at": "2026-06-21T19:16:03.966Z",
         "homepage_url": "https://hexclad.com/",
         "example_url": "https://hexclad.com/pages/12-pc-landing-page?utm_source=twitter&utm_medium=paid&utm_campaign=HEX+01+%7C+Q2+26%27+Chargeable+%7C+4.6.26&utm_term=US+-+M%2FF+-+21-65%2B+-+Interest-Based+-+4.6.26&utm_content=HEX%23763_V3&twclid=2bnrkgftya8pykff4uwp59b29d",
         "homepage_status": 200,
@@ -35326,7 +35334,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T12:55:32.458Z",
+        "fetched_at": "2026-06-21T19:16:05.478Z",
         "homepage_url": "https://kiierr.com/",
         "example_url": "https://kiierr.com/regrow-your-hair-new/?twclid=23i2gackvanp24oqqrs1z7o7zb",
         "homepage_status": 200,
@@ -41062,7 +41070,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T06:25:24.493Z",
+        "fetched_at": "2026-06-21T19:16:06.015Z",
         "homepage_url": "https://lately.com/",
         "example_url": "http://www.lately.com/?twclid=26st81se5sstdkz28lll98t6pl",
         "homepage_status": 200,
@@ -41184,7 +41192,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T06:25:24.844Z",
+        "fetched_at": "2026-06-21T20:18:03.232Z",
         "homepage_url": "https://deepgram.com/",
         "example_url": "https://deepgram.com/state-of-voice-ai-report?utm_source=twitter&utm_medium=paidsocial&utm_campaign=Twitter_ACQ_Q42025_Evergreen_Prospecting&utm_content=state-of-voice&twclid=22an8eeru83cxpws6fqbuga3v2",
         "homepage_status": 200,
@@ -41306,7 +41314,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T06:55:25.010Z",
+        "fetched_at": "2026-06-21T20:18:03.537Z",
         "homepage_url": "https://topstocks.com/",
         "example_url": "https://topstocks.com/cvkd?twclid=2br9vd88ywgw104idmz125ag0u",
         "homepage_status": 200,
@@ -41916,7 +41924,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T07:55:26.269Z",
+        "fetched_at": "2026-06-21T20:18:04.312Z",
         "homepage_url": "https://gothamist.com/",
         "example_url": "https://gothamist.com/news/mamdani-administrations-new-72nd-street-bike-lane-would-link-upper-east-and-west-sides&utm_id=571007&sfmc_id=79023345&utm_content=2026415&nypr_member=True",
         "homepage_status": 200,
@@ -42038,7 +42046,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T07:55:27.056Z",
+        "fetched_at": "2026-06-21T20:46:03.366Z",
         "homepage_url": "https://fullpath.com/",
         "example_url": "https://www.fullpath.com/ai-powered-text-message-marketing-for-car-dealers/?twclid=21jxitvmgt9jsjh3rm5bmiedxu",
         "homepage_status": 200,
@@ -42160,7 +42168,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T08:25:26.011Z",
+        "fetched_at": "2026-06-21T20:46:03.657Z",
         "homepage_url": "https://johnkennedy.com/",
         "example_url": "https://support.johnkennedy.com/just-a-little-quiz/?red=cbdb1d6f-e5fe-4aa4-a295-1dbdd471cee6&utm_source=X&utm_medium=Paid&utm_campaign=Quiz&twclid=27n7ucaicrd2diuikk5gsjxiza",
         "homepage_status": 200,
@@ -42282,7 +42290,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T08:25:26.759Z",
+        "fetched_at": "2026-06-21T20:46:04.429Z",
         "homepage_url": "https://gunowners.org/",
         "example_url": "https://www.gunowners.org/?twclid=25jr1t1tq8terhv5da5ta78vcm",
         "homepage_status": 200,
@@ -42526,7 +42534,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T08:25:27.378Z",
+        "fetched_at": "2026-06-21T20:46:05.177Z",
         "homepage_url": "https://freshstartinfo.org/",
         "example_url": "https://apply.freshstartinfo.org/?utm_source=twitter&utm_medium=paid_social&utm_campaign=FSI_Social_X_Deadline_Broad&utm_content=FSI_X_Deadline_Image_USCapNews_04172026&source=TW&brand=FSI&camp_id=41209135&adset_id=54646468&creative_id=2045223212514979923&twcrid=2045223210636251136&twclid=2fc79anpvgomecghgv84o862",
         "homepage_status": 200,
