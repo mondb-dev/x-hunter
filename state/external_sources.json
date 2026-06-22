@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-21T22:15:36.751Z",
+  "generated_at": "2026-06-22T00:18:10.749Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-21T22:16:08.012Z",
+  "profiled_at": "2026-06-22T00:18:44.945Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -633,7 +633,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-03-27T23:17:00Z",
       "discovery": {
-        "distinct_urls": 6,
+        "distinct_urls": 8,
         "example_urls": [
           "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
           "https://www.theguardian.com/society/2026/jun/21/therapy-ferrets-kill-rats-uk-largest-children-prison-wetherby",
@@ -643,7 +643,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "reading_queue": 6
+          "reading_queue": 8
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -673,9 +673,9 @@
           ]
         },
         "breadth": {
-          "score": 0.3533333333333333,
+          "score": 0.4116666666666666,
           "basis": [
-            "distinct_urls:6",
+            "distinct_urls:8",
             "distinct_axes:1",
             "origin_types:2"
           ]
@@ -708,13 +708,13 @@
           ]
         },
         "overall": {
-          "score": 0.6093229166666666,
-          "confidence": 0.22494999999999998,
+          "score": 0.6220833333333333,
+          "confidence": 0.2822,
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:6",
+            "distinct_urls:8",
             "distinct_axes:1",
             "origin_types:2",
             "referring_accounts:0",
@@ -889,7 +889,7 @@
       "first_seen_at": null,
       "last_seen_at": null,
       "discovery": {
-        "distinct_urls": 5,
+        "distinct_urls": 7,
         "example_urls": [
           "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
           "https://www.nytimes.com/2026/06/21/world/middleeast/vance-iran-talks-trump.html",
@@ -898,7 +898,7 @@
           "https://www.nytimes.com/2026/06/21/world/infantino-trump-fifa-iran-talks.html"
         ],
         "origin_counts": {
-          "reading_queue": 6
+          "reading_queue": 8
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -926,9 +926,9 @@
           ]
         },
         "breadth": {
-          "score": 0.20583333333333334,
+          "score": 0.26416666666666666,
           "basis": [
-            "distinct_urls:5",
+            "distinct_urls:7",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -961,13 +961,13 @@
           ]
         },
         "overall": {
-          "score": 0.5688541666666667,
-          "confidence": 0.1636,
+          "score": 0.5816145833333334,
+          "confidence": 0.22085,
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:5",
+            "distinct_urls:7",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -1168,6 +1168,130 @@
       }
     },
     {
+      "domain": "bbc.com",
+      "entity": "Bbc",
+      "kind": "news",
+      "first_seen_at": null,
+      "last_seen_at": null,
+      "discovery": {
+        "distinct_urls": 7,
+        "example_urls": [
+          "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.com/news/articles/cwy0gjqv783o?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.com/news/videos/c802denngxeo?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.com/news/articles/cwylx1vq18zo?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.com/news/articles/cp3xqkxp3x5o?at_medium=RSS&amp;at_campaign=rss"
+        ],
+        "origin_counts": {
+          "reading_queue": 8
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.72,
+          "basis": [
+            "newsroom_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.26416666666666666,
+          "basis": [
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.34,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:6",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.5609895833333334,
+          "confidence": 0.22085,
+          "method": "mechanical_v1",
+          "basis": [
+            "newsroom_domain_pattern",
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-21T15:47:58.961Z",
+        "homepage_url": "https://bbc.com/",
+        "example_url": "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.bbc.com/",
+        "example_final_url": "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 6,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "cbsnews.com",
       "entity": "Cbsnews",
       "kind": "unknown",
@@ -1297,130 +1421,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 14,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "bbc.com",
-      "entity": "Bbc",
-      "kind": "news",
-      "first_seen_at": null,
-      "last_seen_at": null,
-      "discovery": {
-        "distinct_urls": 5,
-        "example_urls": [
-          "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
-          "https://www.bbc.com/news/articles/cwy0gjqv783o?at_medium=RSS&amp;at_campaign=rss",
-          "https://www.bbc.com/news/videos/c802denngxeo?at_medium=RSS&amp;at_campaign=rss",
-          "https://www.bbc.com/news/articles/cwylx1vq18zo?at_medium=RSS&amp;at_campaign=rss",
-          "https://www.bbc.com/news/articles/cp3xqkxp3x5o?at_medium=RSS&amp;at_campaign=rss"
-        ],
-        "origin_counts": {
-          "reading_queue": 6
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.72,
-          "basis": [
-            "newsroom_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.20583333333333334,
-          "basis": [
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.34,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:6",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.5482291666666667,
-          "confidence": 0.1636,
-          "method": "mechanical_v1",
-          "basis": [
-            "newsroom_domain_pattern",
-            "distinct_urls:5",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-21T15:47:58.961Z",
-        "homepage_url": "https://bbc.com/",
-        "example_url": "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.bbc.com/",
-        "example_final_url": "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 6,
           "opinion_marker": false
         }
       }
@@ -1916,7 +1916,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T22:55:42.014Z",
+        "fetched_at": "2026-06-21T23:18:05.103Z",
         "homepage_url": "https://bit.ly/",
         "example_url": "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q",
         "homepage_status": 200,
@@ -2563,7 +2563,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T23:25:44.177Z",
+        "fetched_at": "2026-06-21T23:46:05.882Z",
         "homepage_url": "https://idf.il/",
         "example_url": "https://www.idf.il/en/articles/2026/04/16/idf-finds-weapons-in-school-in-bint-jbeil-lebanon/",
         "homepage_status": null,
@@ -2601,7 +2601,7 @@
       "first_seen_at": "2016-05-05T18:57:30.000Z",
       "last_seen_at": "2026-06-21T21:00:15.000Z",
       "discovery": {
-        "distinct_urls": 5816,
+        "distinct_urls": 5822,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2610,10 +2610,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3467,
-          "feed_buffer_reply": 3767
+          "feed_buffer": 3471,
+          "feed_buffer_reply": 3770
         },
-        "distinct_referring_accounts": 1882,
+        "distinct_referring_accounts": 1884,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -2651,7 +2651,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5816",
+            "distinct_urls:5822",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2659,7 +2659,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1882",
+            "referring_accounts:1884",
             "origin_types:2"
           ]
         },
@@ -2689,10 +2689,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5816",
+            "distinct_urls:5822",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1882",
+            "referring_accounts:1884",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -2735,9 +2735,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-06-21T17:29:12.000Z",
+      "last_seen_at": "2026-06-21T20:09:22.000Z",
       "discovery": {
-        "distinct_urls": 414,
+        "distinct_urls": 416,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -2746,10 +2746,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 387,
+          "feed_buffer_reply": 389,
           "feed_buffer": 56
         },
-        "distinct_referring_accounts": 267,
+        "distinct_referring_accounts": 268,
         "sample_referring_accounts": [
           "100ohiostate",
           "2by32",
@@ -2787,7 +2787,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:414",
+            "distinct_urls:416",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2795,7 +2795,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:267",
+            "referring_accounts:268",
             "origin_types:2"
           ]
         },
@@ -2825,10 +2825,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:414",
+            "distinct_urls:416",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:267",
+            "referring_accounts:268",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -5660,7 +5660,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T22:55:42.605Z",
+        "fetched_at": "2026-06-21T23:18:05.662Z",
         "homepage_url": "https://metaphysicalarticles.org/",
         "example_url": "https://www.metaphysicalarticles.org/2025/12/ufos-uap-space-people-disclosure.html?twclid=25s2j2s4i47jn3wcdf6ujpfrmp",
         "homepage_status": 200,
@@ -6933,7 +6933,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T22:55:44.710Z",
+        "fetched_at": "2026-06-21T23:18:07.464Z",
         "homepage_url": "https://byteplus.com/",
         "example_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
         "homepage_status": 200,
@@ -9871,9 +9871,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-16T09:36:45.269Z",
-      "last_seen_at": "2026-06-20T22:08:13.594Z",
+      "last_seen_at": "2026-06-21T22:29:27.287Z",
       "discovery": {
-        "distinct_urls": 73,
+        "distinct_urls": 74,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -9882,7 +9882,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 73
+          "articles": 74
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -9911,7 +9911,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:73",
+            "distinct_urls:74",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -9949,7 +9949,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:73",
+            "distinct_urls:74",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -12112,7 +12112,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T23:25:45.347Z",
+        "fetched_at": "2026-06-21T23:46:07.099Z",
         "homepage_url": "https://atlassian.com/",
         "example_url": "https://www.atlassian.com/software/rovo?utm_source=twitter&utm_medium=paid-social&utm_campaign=P%3Arovo%7CO%3Appm%7CV%3Atwitter%7CG%3Aus%7CL%3Aen%7CF%3Aaware%7CT%3Aprospecting%7CZ%3Astandard-image%7CI%3Aimc-rovo-iyryk%7CA%3Aimage%7CD%3Aalld&utm_content=P%3Arovo%7CO%3Appm%7CV%3Atwitter%7CG%3Aus%7CL%3Aen%7CF%3Aaware%7CT%3Aprospecting%7CZ%3Astandard-image%7CI%3Aimc-rovo-iyryk%7CA%3Aimage%7CD%3Aalld%7CU%3Ahandles_image-core-brand-default-onepromptaway-1200x628-na-na-aipowered&twclid=256sbqrmpm1kmygbwj39syq8d2",
         "homepage_status": 200,
@@ -20001,7 +20001,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T22:55:45.113Z",
+        "fetched_at": "2026-06-21T23:18:08.261Z",
         "homepage_url": "https://lenovo.com/",
         "example_url": "https://www.lenovo.com/fifa?twclid=28bun2tvvdii9atmnb69jedydn",
         "homepage_status": 403,
@@ -28448,7 +28448,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T23:56:17.372Z",
+        "fetched_at": "2026-06-22T00:18:40.329Z",
         "homepage_url": "https://edicek.com/",
         "example_url": "https://edicek.com/?twclid=2468k4sxfdut4hmixz8sdmcieh",
         "homepage_status": 200,
@@ -28817,7 +28817,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T23:56:18.312Z",
+        "fetched_at": "2026-06-22T00:18:41.195Z",
         "homepage_url": "https://rexshares.com/",
         "example_url": "https://www.rexshares.com/t-rex-leveraged-etfs/?twclid=29y2s8ykvzrl4imsooxujrypoa",
         "homepage_status": 200,
@@ -28940,7 +28940,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T23:56:18.909Z",
+        "fetched_at": "2026-06-22T00:18:41.612Z",
         "homepage_url": "https://degenidle.com/",
         "example_url": "https://degenidle.com/?twclid=2cjpeg7bzynm31yynzfte1vs7q",
         "homepage_status": 200,
@@ -37168,7 +37168,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T23:56:22.438Z",
+        "fetched_at": "2026-06-22T00:18:44.945Z",
         "homepage_url": "https://speak4.io/",
         "example_url": "https://speak4.io/lp/hc01cshw?ts=1772120278&twclid=2dds00srijbdtkmjbi9s7cxdwr",
         "homepage_status": null,
@@ -43024,7 +43024,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T09:55:31.839Z",
+        "fetched_at": "2026-06-21T23:46:07.529Z",
         "homepage_url": "https://smartmove.us/",
         "example_url": "https://www.smartmove.us/?ccode=SMXMT002&utm_source=x&utm_medium=social&utm_term=mover&utm_content=SMXMT002&twclid=2ap3frny1rgghylrdciedrfuwk",
         "homepage_status": 200,
@@ -43146,7 +43146,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T10:55:28.236Z",
+        "fetched_at": "2026-06-21T23:46:08.596Z",
         "homepage_url": "https://stiiizy.com/",
         "example_url": "https://www.stiiizy.com/pages/locations/?utm_source=x&utm_medium=ads&utm_campaign=sr&twclid=25gtk4t1onct87pup5gp18e0ac",
         "homepage_status": 200,

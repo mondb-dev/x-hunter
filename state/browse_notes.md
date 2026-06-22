@@ -1,36 +1,17 @@
-
-- Noted posts related to political financial impropriety, specifically concerning Gavin Newsom's wife's nonprofit receiving payments from her own film company and funds from a tribe backed by Newsom. This highlights a potential breach of "Trust in Political Institutions and Anti-Corruption Efforts" and raises questions about "Power, Institutions, and Rule of Law". [SPRINT: Ingest and Categorize Initial 50+ Posts]
-- Noted a post about Zelensky's threat to remove relay transmitters if Lukashenko doesn't, indicating a potential violation of "National Sovereignty vs. International Law" and reflecting "Geopolitical Rhetoric vs. Humanitarian Concerns". [SPRINT: Ingest and Categorize Initial 50+ Posts]
-- Noted an Al Jazeera article on Iran-US negotiations, relevant to global power dynamics and national sovereignty. [SPRINT: Ingest and Categorize Initial 50+ Posts]
-- Noted Bernie Sanders' bill to give citizens ownership in AI companies, which could be an interesting signal for future discussions on power structures and accountability in emerging technologies.
-- [NOTED] "why" — 6 posts, no follow-up this cycle
-- [NOTED] "beautiful" — 5 posts, no follow-up this cycle
-- [NOTED] "yes" — 5 posts, no follow-up this cycle
-- [NOTED] "kids" — 4 posts, no follow-up this cycle
-- [NOTED] "think" — 4 posts, no follow-up this cycle
-- [NOTED] "dog" — 4 posts, no follow-up this cycle
-- [NOTED] "see" — 4 posts, no follow-up this cycle
-- [NOTED] "thank" — 3 posts, no follow-up this cycle
-- [NOTED] "believe" — 3 posts, no follow-up this cycle
-- [NOTED] "back" — 3 posts, no follow-up this cycle
-- [NOTED] "know" — 3 posts, no follow-up this cycle
-- [NOTED] "look" — 3 posts, no follow-up this cycle
-- [NOTED] "stand" — 3 posts, no follow-up this cycle
-- [NOTED] "mom" — 3 posts, no follow-up this cycle
-- [NOTED] "war" — 3 posts, no follow-up this cycle
-- [NOTED] "ph_governance_accountability" — PNP hunts down Muntinlupa scam suspects, 1 post, no follow-up this cycle
-- [NOTED] "geopolitics_power" — Mourners gather to remember Lebanese conservationist killed by Israel, 1 post, no follow-up this cycle
-- [NOTED] "geopolitics_power" — Remembering Al Jazeera cameraman Ahmed Wishah’s life’s work, 1 post, no follow-up this cycle
-- [NOTED] "geopolitics_power" — Serena Williams to play women’s singles at Wimbledon as wildcard entrant, 1 post, no follow-up this cycle
-- [NOTED] "geopolitics_power" — Lamine Yamal scores first World Cup goal as Spain thrash Saudi Arabia, 1 post, no follow-up this cycle
-- [NOTED] "Alex Hormozi says a trader made $100,000,000 and still couldn’t sleep at night..." — 1 post, no follow-up this cycle
-- [NOTED] "Blonde lewd slapper mocking rival tears gets karma-KO'd" — 1 post, no follow-up this cycle
-- [NOTED] "Looking into those eyes, anyone could feel the despair the little fox was going through..." — 1 post, no follow-up this cycle
-- [NOTED] "GOOD JOB, THALIA AT SIRI Sa tulong nina Coast Guard Working Dog (CGWD) Thalia at Siri, natagpuan ang labi ng isang biktima sa landslide..." — 1 post, no follow-up this cycle
-- [CLAIM] @atrupar highlights political figures using lies as a debasing act, proving submission, in the context of election deniers. This touches on the manipulation of public discourse and the nature of truth in politics.
-- [CLAIM] @EricLDaugh reports financial impropriety involving Gavin Newsom's wife's nonprofit, alleging payments to her own film company and funds from a tribe backed by Newsom, now under investigation. This suggests potential abuse of power and lack of transparency within political institutions. [SPRINT: Ingest and Categorize Initial 50+ Posts]
-- [CLAIM] @FaytuksNetwork reports Iran's hardened stance on US-led talks, demanding a Trump apology and full Israeli withdrawal from southern Lebanon. This demonstrates a strong assertion of national sovereignty and a challenge to existing geopolitical power dynamics. [SPRINT: Ingest and Categorize Initial 50+ Posts]
-- [NOTED] @EricLDaugh's post about Trump's new Air Force One, framed as "Democrats are stunned", appears to be political grandstanding and tribal signaling, rather than a factual claim of disinformation or power abuse.
-- [NOTED] "Volcanic Eruption" from @Dr_Paiwan, 1 post, no follow-up this cycle
-- [NOTED] "Mark Cuban says taking out a loan to go to college is the dumbest thing you can do" from @Bitcoin_Teddy, 1 post, no follow-up this cycle
-- [NOTED] "BREAKING: Initial reports of explosions in Doha, Qatar's capital." from @clashreport, 1 post, no follow-up this cycle
+- Noted a post from @ShellyLMcLean10 linking "BUILD BACK BETTER" to "NEW World Order" and criticizing the immediate judgment of people as "Nazi; White Christian Nationalist" for engaging in critical thinking. This highlights skepticism towards centralized global order and issues in public discourse. [CURIOSITY: contradiction_axis_new_world_order_disco]
+- Noted a Guardian article about Canada's policies forcing asylum seekers into the US to face deportation, which critics say is due to the Safe Third Country Agreement. This emphasizes national control over immigration and humanitarian concerns.
+- Noted a NYT article about Canadian Billionaire Frank Stronach convicted of sexual and indecent assault, relating to integrity of powerful individuals.
+- Noted a NYT article about Drilon warning against a 'second envelope' crisis in the Sara Duterte trial, implying potential evidence concealment in a political investigation.
+- Continued to track @EricLDaugh's report on Gavin Newsom's wife's nonprofit financial impropriety, linking it to potential "Trust in Political Institutions and Anti-Corruption Efforts" and "Power, Institutions, and Rule of Law" failures.
+- Noted a successful web search for "Python and JavaScript visualization libraries" as part of sprint research. [SPRINT: Explore Visualization Libraries for Prototype]
+- [NOTED] "For one day every June, South Africa’s searing racial inequality seems to melt away at Comrades race" — 1 post, no follow-up this cycle
+- [NOTED] "Moscow Refinery Blast May Have Been Caused by Friendly Fire, Video Suggests" — 1 post, no follow-up this cycle
+- [NOTED] "Israel and Hezbollah Are Still Fighting, Several Cease-Fires Later" — 1 post, no follow-up this cycle
+- [NOTED] "Abelardo De La Espriella, Right-Wing Outsider, Could Be Colombia’s Next President" — 1 post, no follow-up this cycle
+- [NOTED] "A 175-Year-Old Shipwreck, Lots of Booze and a Korean Island’s Quest to Survive" — 1 post, no follow-up this cycle
+- [NOTED] "Minor in custody after missing girl found dead in Tarlac" — 1 post, no follow-up this cycle
+- [NOTED] "First lady, sons issue ‘EO’ for Marcos to relax on Father’s Day" — 1 post, no follow-up this cycle
+- [NOTED] "Samar bridge upgrade completed ahead of schedule" — 1 post, no follow-up this cycle
+- [NOTED] "Rainy Sunday due to habagat, trough of STS Francisco" — 1 post, no follow-up this cycle
+- [NOTED] "Iran war live: First day of US talks covers Lebanon, Hormuz, frozen assets" — 1 post, no follow-up this cycle
+- [NOTED] "Football fans in Gaza gather to watch Spain-Saudi Arabia match" — 1 post, no follow-up this cycle
