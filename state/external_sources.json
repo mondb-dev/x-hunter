@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-22T00:18:10.749Z",
+  "generated_at": "2026-06-22T03:16:11.177Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-22T00:18:44.945Z",
+  "profiled_at": "2026-06-22T03:16:42.556Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -69,16 +69,16 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.64,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
+            "canonical:true",
+            "about:true",
+            "contact:true",
+            "corrections:true",
+            "outbound_links:18",
             "opinion_marker:false"
           ]
         },
@@ -100,33 +100,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T00:26:03.478Z",
+        "fetched_at": "2026-06-22T00:46:07.000Z",
         "homepage_url": "https://ojp.gov/",
         "example_url": "https://bjs.ojp.gov/library/publications/violent-victimization-race-or-hispanic-origin-2008-2012",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://ojp.gov/",
+        "homepage_status": 200,
+        "example_status": 404,
+        "homepage_final_url": "https://www.ojp.gov/",
         "example_final_url": "https://bjs.ojp.gov/library/publications/violent-victimization-race-or-hispanic-origin-2008-2012",
-        "homepage_content_type": "",
-        "example_content_type": "",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": true,
+          "has_corrections_link": true,
+          "outbound_links_count": 20,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
+          "has_canonical": true,
+          "has_about_link": true,
           "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "has_corrections_link": true,
+          "outbound_links_count": 18,
           "opinion_marker": false
         }
       }
@@ -631,24 +631,25 @@
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-03-27T23:17:00Z",
+      "last_seen_at": "2026-06-22T00:15:00Z",
       "discovery": {
-        "distinct_urls": 8,
+        "distinct_urls": 11,
         "example_urls": [
           "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
+          "https://www.theguardian.com/world/2026/jun/21/canada-immigration-us-deportation",
           "https://www.theguardian.com/society/2026/jun/21/therapy-ferrets-kill-rats-uk-largest-children-prison-wetherby",
           "https://www.theguardian.com/world/2026/jun/21/us-iran-talks-jd-vance-switzerland-strait-of-hormuz-lebanon",
-          "https://www.theguardian.com/us-news/2026/jun/21/man-dies-madison-square-garden-concert",
-          "https://www.theguardian.com/uk-news/2026/jun/21/taxi-uber-rider-targeted-suspected-anti-muslim-attacks-edinburgh-witnesses"
+          "https://www.theguardian.com/us-news/2026/jun/21/man-dies-madison-square-garden-concert"
         ],
         "origin_counts": {
-          "ontology_evidence": 1,
-          "reading_queue": 8
+          "ontology_evidence": 2,
+          "reading_queue": 10
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
         "distinct_axes": [
-          "axis_global_power_realignments_v1"
+          "axis_global_power_realignments_v1",
+          "axis_immigration_policy_v_national_control_v1"
         ]
       },
       "claims": {
@@ -673,10 +674,10 @@
           ]
         },
         "breadth": {
-          "score": 0.4116666666666666,
+          "score": 0.5574999999999999,
           "basis": [
-            "distinct_urls:8",
-            "distinct_axes:1",
+            "distinct_urls:11",
+            "distinct_axes:2",
             "origin_types:2"
           ]
         },
@@ -708,14 +709,14 @@
           ]
         },
         "overall": {
-          "score": 0.6220833333333333,
-          "confidence": 0.2822,
+          "score": 0.653984375,
+          "confidence": 0.38032499999999997,
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:8",
-            "distinct_axes:1",
+            "distinct_urls:11",
+            "distinct_axes:2",
             "origin_types:2",
             "referring_accounts:0",
             "origin_types:2",
@@ -751,6 +752,135 @@
           "has_contact_link": false,
           "has_corrections_link": true,
           "outbound_links_count": 4,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "nytimes.com",
+      "entity": "Nytimes",
+      "kind": "news",
+      "first_seen_at": "2026-06-22T00:15:00Z",
+      "last_seen_at": "2026-06-22T00:15:00Z",
+      "discovery": {
+        "distinct_urls": 9,
+        "example_urls": [
+          "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
+          "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
+          "https://www.nytimes.com/2026/06/21/world/middleeast/vance-iran-talks-trump.html",
+          "https://www.nytimes.com/2026/06/21/world/europe/ukraine-poland-alliance-russia.html",
+          "https://www.nytimes.com/2026/06/21/world/middleeast/iran-nuclear-talks-questions.html"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 1,
+          "reading_queue": 10
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.75,
+          "basis": [
+            "newsroom_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.4408333333333333,
+          "basis": [
+            "distinct_urls:9",
+            "distinct_axes:1",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.16,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:true",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.6284635416666667,
+          "confidence": 0.310825,
+          "method": "mechanical_v1",
+          "basis": [
+            "newsroom_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:9",
+            "distinct_axes:1",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-21T15:47:58.759Z",
+        "homepage_url": "https://nytimes.com/",
+        "example_url": "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
+        "homepage_status": 200,
+        "example_status": 403,
+        "homepage_final_url": "https://www.nytimes.com/",
+        "example_final_url": "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": true,
+          "outbound_links_count": 5,
+          "opinion_marker": true
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -883,26 +1013,25 @@
       }
     },
     {
-      "domain": "nytimes.com",
-      "entity": "Nytimes",
+      "domain": "aljazeera.com",
+      "entity": "Aljazeera",
       "kind": "news",
-      "first_seen_at": null,
-      "last_seen_at": null,
+      "first_seen_at": "2026-06-22T02:45:00Z",
+      "last_seen_at": "2026-06-22T02:51:13.362Z",
       "discovery": {
-        "distinct_urls": 7,
+        "distinct_urls": 1,
         "example_urls": [
-          "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
-          "https://www.nytimes.com/2026/06/21/world/middleeast/vance-iran-talks-trump.html",
-          "https://www.nytimes.com/2026/06/21/world/europe/ukraine-poland-alliance-russia.html",
-          "https://www.nytimes.com/2026/06/21/world/middleeast/iran-nuclear-talks-questions.html",
-          "https://www.nytimes.com/2026/06/21/world/infantino-trump-fifa-iran-talks.html"
+          "https://www.aljazeera.com/economy/2026/6/22/shipping-stalls-in-strait-of-hormuz-after-iran-declares-key-waterway-shut?traffic_source=rss"
         ],
         "origin_counts": {
-          "reading_queue": 8
+          "ontology_evidence": 1,
+          "journals": 2
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
-        "distinct_axes": []
+        "distinct_axes": [
+          "axis_global_power_realignments_v1"
+        ]
       },
       "claims": {
         "total": 0,
@@ -926,9 +1055,134 @@
           ]
         },
         "breadth": {
-          "score": 0.26416666666666666,
+          "score": 0.2075,
           "basis": [
-            "distinct_urls:7",
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.577421875,
+          "confidence": 0.081825,
+          "method": "mechanical_v1",
+          "basis": [
+            "newsroom_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.72,
+          "confidence": 0.85,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:26",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-22T03:16:40.022Z",
+        "homepage_url": "https://aljazeera.com/",
+        "example_url": "https://www.aljazeera.com/economy/2026/6/22/shipping-stalls-in-strait-of-hormuz-after-iran-declares-key-waterway-shut?traffic_source=rss",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.aljazeera.com/",
+        "example_final_url": "https://www.aljazeera.com/economy/2026/6/22/shipping-stalls-in-strait-of-hormuz-after-iran-declares-key-waterway-shut?traffic_source=rss",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 23,
+          "opinion_marker": true
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 26,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "bbc.com",
+      "entity": "Bbc",
+      "kind": "news",
+      "first_seen_at": null,
+      "last_seen_at": null,
+      "discovery": {
+        "distinct_urls": 9,
+        "example_urls": [
+          "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.com/news/articles/cwy0gjqv783o?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.com/news/videos/c802denngxeo?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.com/news/articles/cwylx1vq18zo?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.com/news/articles/cp3xqkxp3x5o?at_medium=RSS&amp;at_campaign=rss"
+        ],
+        "origin_counts": {
+          "reading_queue": 10
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.72,
+          "basis": [
+            "newsroom_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.32249999999999995,
+          "basis": [
+            "distinct_urls:9",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -947,27 +1201,26 @@
           ]
         },
         "profile": {
-          "score": 0.16,
-          "confidence": 0.55,
+          "score": 0.34,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
-            "published_time:false",
-            "canonical:false",
+            "published_time:true",
+            "canonical:true",
             "about:false",
             "contact:false",
-            "corrections:true",
-            "outbound_links:0",
+            "corrections:false",
+            "outbound_links:6",
             "opinion_marker:false"
           ]
         },
         "overall": {
-          "score": 0.5816145833333334,
-          "confidence": 0.22085,
+          "score": 0.57375,
+          "confidence": 0.2781,
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:7",
+            "distinct_urls:9",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -977,33 +1230,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T15:47:58.759Z",
-        "homepage_url": "https://nytimes.com/",
-        "example_url": "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
+        "fetched_at": "2026-06-21T15:47:58.961Z",
+        "homepage_url": "https://bbc.com/",
+        "example_url": "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
         "homepage_status": 200,
-        "example_status": 403,
-        "homepage_final_url": "https://www.nytimes.com/",
-        "example_final_url": "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
+        "example_status": 200,
+        "homepage_final_url": "https://www.bbc.com/",
+        "example_final_url": "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
         "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": true,
-          "outbound_links_count": 5,
-          "opinion_marker": true
-        },
-        "example": {
-          "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 6,
           "opinion_marker": false
         }
       }
@@ -1163,130 +1416,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "bbc.com",
-      "entity": "Bbc",
-      "kind": "news",
-      "first_seen_at": null,
-      "last_seen_at": null,
-      "discovery": {
-        "distinct_urls": 7,
-        "example_urls": [
-          "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
-          "https://www.bbc.com/news/articles/cwy0gjqv783o?at_medium=RSS&amp;at_campaign=rss",
-          "https://www.bbc.com/news/videos/c802denngxeo?at_medium=RSS&amp;at_campaign=rss",
-          "https://www.bbc.com/news/articles/cwylx1vq18zo?at_medium=RSS&amp;at_campaign=rss",
-          "https://www.bbc.com/news/articles/cp3xqkxp3x5o?at_medium=RSS&amp;at_campaign=rss"
-        ],
-        "origin_counts": {
-          "reading_queue": 8
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.72,
-          "basis": [
-            "newsroom_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.26416666666666666,
-          "basis": [
-            "distinct_urls:7",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.34,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:6",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.5609895833333334,
-          "confidence": 0.22085,
-          "method": "mechanical_v1",
-          "basis": [
-            "newsroom_domain_pattern",
-            "distinct_urls:7",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-21T15:47:58.961Z",
-        "homepage_url": "https://bbc.com/",
-        "example_url": "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.bbc.com/",
-        "example_final_url": "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 6,
           "opinion_marker": false
         }
       }
@@ -2601,7 +2730,7 @@
       "first_seen_at": "2016-05-05T18:57:30.000Z",
       "last_seen_at": "2026-06-21T21:00:15.000Z",
       "discovery": {
-        "distinct_urls": 5822,
+        "distinct_urls": 5826,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2610,10 +2739,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3471,
-          "feed_buffer_reply": 3770
+          "feed_buffer": 3472,
+          "feed_buffer_reply": 3773
         },
-        "distinct_referring_accounts": 1884,
+        "distinct_referring_accounts": 1887,
         "sample_referring_accounts": [
           "0808iveta",
           "0xanomalia",
@@ -2651,7 +2780,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5822",
+            "distinct_urls:5826",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2659,7 +2788,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1884",
+            "referring_accounts:1887",
             "origin_types:2"
           ]
         },
@@ -2689,10 +2818,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5822",
+            "distinct_urls:5826",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1884",
+            "referring_accounts:1887",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -2735,9 +2864,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-06-21T20:09:22.000Z",
+      "last_seen_at": "2026-06-21T20:30:31.000Z",
       "discovery": {
-        "distinct_urls": 416,
+        "distinct_urls": 417,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -2746,21 +2875,21 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 389,
+          "feed_buffer_reply": 390,
           "feed_buffer": 56
         },
-        "distinct_referring_accounts": 268,
+        "distinct_referring_accounts": 269,
         "sample_referring_accounts": [
           "100ohiostate",
           "2by32",
+          "3reecrossing",
           "4freespeak",
           "50hidalgo47",
           "55sweetthing",
           "60milliards",
           "_just__jj",
           "acdiamond0123",
-          "afk500595388855",
-          "ah_lorelei"
+          "afk500595388855"
         ],
         "distinct_axes": []
       },
@@ -2787,7 +2916,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:416",
+            "distinct_urls:417",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2795,7 +2924,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:268",
+            "referring_accounts:269",
             "origin_types:2"
           ]
         },
@@ -2825,10 +2954,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:416",
+            "distinct_urls:417",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:268",
+            "referring_accounts:269",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -6524,7 +6653,7 @@
           ]
         },
         "profile": {
-          "score": 0.35000000000000003,
+          "score": 0.31000000000000005,
           "confidence": 0.65,
           "basis": [
             "meta_author:true",
@@ -6533,7 +6662,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:7",
+            "outbound_links:3",
             "opinion_marker:false"
           ]
         },
@@ -6553,7 +6682,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T00:55:44.018Z",
+        "fetched_at": "2026-06-22T01:16:09.870Z",
         "homepage_url": "https://xhawk.ai/",
         "example_url": "https://xhawk.ai/?twclid=218eppqu7okpx25fant8nuhrp1",
         "homepage_status": 200,
@@ -6569,7 +6698,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 7,
+          "outbound_links_count": 3,
           "opinion_marker": false
         },
         "example": {
@@ -6579,7 +6708,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 7,
+          "outbound_links_count": 3,
           "opinion_marker": false
         }
       }
@@ -13375,7 +13504,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T00:26:03.858Z",
+        "fetched_at": "2026-06-22T00:46:07.547Z",
         "homepage_url": "https://absinthe.network/",
         "example_url": "https://boost.absinthe.network/8hhp-sfkk/home?utm_source=x&utm_medium=cpc&utm_campaign=Absinthe&utm_id=sero&utm_content=Mar26&twclid=25502jccgfzmkpf20p6sbvaj8t",
         "homepage_status": 200,
@@ -14662,6 +14791,131 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "inquirer.net",
+      "entity": "Inquirer",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-09T01:05:59.567Z",
+      "last_seen_at": "2026-06-22T00:15:00Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://newsinfo.inquirer.net/2249755/drilon-warns-vs-second-envelope-crisis-in-vp-trial",
+          "http://opinion.inquirer.net/",
+          "http://inquirer.net/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 1,
+          "journals": 15
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_political_trust_corruption_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.2658333333333333,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:1",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.88,
+          "confidence": 0.85,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:true",
+            "outbound_links:20",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.38393229166666665,
+          "confidence": 0.139075,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:1",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-22T00:46:09.792Z",
+        "homepage_url": "https://inquirer.net/",
+        "example_url": "https://newsinfo.inquirer.net/2249755/drilon-warns-vs-second-envelope-crisis-in-vp-trial",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.inquirer.net/",
+        "example_final_url": "https://newsinfo.inquirer.net/2249755/drilon-warns-vs-second-envelope-crisis-in-vp-trial",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 17,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": true,
+          "outbound_links_count": 20,
           "opinion_marker": false
         }
       }
@@ -20253,7 +20507,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T00:26:04.322Z",
+        "fetched_at": "2026-06-22T00:46:10.319Z",
         "homepage_url": "https://moxt.ai/",
         "example_url": "https://moxt.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=x-brand-build-your-ai-team&utm_content=video-49s&utm_term=en-desktop&twclid=24fse5wprkux1ktw6we6w27x5c",
         "homepage_status": 200,
@@ -23621,7 +23875,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T02:56:19.482Z",
+        "fetched_at": "2026-06-22T03:16:41.440Z",
         "homepage_url": "https://tickerscores.ai/",
         "example_url": "https://tickerscores.ai/?twclid=29mi9nru582fdb9vf7t1d5r9yf",
         "homepage_status": 200,
@@ -30293,7 +30547,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T02:56:20.259Z",
+        "fetched_at": "2026-06-22T03:16:42.250Z",
         "homepage_url": "https://any.run/",
         "example_url": "https://any.run/cybersecurity-blog/anyrun-macos-sandbox/?utm_source=twitter&utm_medium=post&utm_campaign=macos_ad&utm_content=linktoblog&utm_term=300326&twclid=23x4x734jui85kqg60evobo3x3",
         "homepage_status": 200,
@@ -37290,7 +37544,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T01:25:44.675Z",
+        "fetched_at": "2026-06-22T01:48:08.422Z",
         "homepage_url": "https://tradestation.com/",
         "example_url": "https://www.tradestation.com/born-trader-bear/?utm_source=x&utm_medium=paidsocial&utm_campaign=TS_COR-Prospecting-Traffic_Apr2026_Born-Trader+&utm_content=TSS_DSO_Bra_Awa_Pro_VID_2025_Brand_Campaign_Q1_Bear_1080x1080_15_v2&twclid=2dp5ql0qnlq22xrvygkx7ryw6t",
         "homepage_status": 200,
@@ -41438,7 +41692,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T00:26:04.692Z",
+        "fetched_at": "2026-06-22T01:16:10.330Z",
         "homepage_url": "https://assistant-ui.com/",
         "example_url": "https://www.assistant-ui.com/?twclid=2a5qpct5qg3tzn6ul3lhnlb5j5",
         "homepage_status": 200,
@@ -41560,7 +41814,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T00:55:44.164Z",
+        "fetched_at": "2026-06-22T01:16:10.508Z",
         "homepage_url": "https://forminit.com/",
         "example_url": "https://forminit.com/?twclid=218m3c3ox1o2100kng6d1o9tlf",
         "homepage_status": 200,
@@ -41682,7 +41936,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T00:55:44.622Z",
+        "fetched_at": "2026-06-22T01:16:10.983Z",
         "homepage_url": "https://bitcoinculturehub.com/",
         "example_url": "https://bitcoinculturehub.com/?twclid=296t692fyjaf8r7jqnhro0j2l3",
         "homepage_status": 200,
@@ -41804,7 +42058,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T00:56:04.625Z",
+        "fetched_at": "2026-06-22T01:48:28.429Z",
         "homepage_url": "https://cmegroup.com/",
         "example_url": "https://www.cmegroup.com/education/trading-challenge.html?utm_source=twitter&utm_medium=paid_social&utm_campaign=trading_challenge_ao&utm_kxconfid=vnl4uf4pq&twclid=2e2iv0j3zd8yhpaw544vjwsn07",
         "homepage_status": null,
@@ -43268,7 +43522,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T10:55:29.445Z",
+        "fetched_at": "2026-06-22T01:48:29.588Z",
         "homepage_url": "https://mystrika.com/",
         "example_url": "https://mystrika.com/?utm_source=twitter&twclid=2dp5rnt5f8pfum4y34zv28l3yz",
         "homepage_status": 200,
@@ -43390,7 +43644,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T10:55:29.787Z",
+        "fetched_at": "2026-06-22T01:48:29.915Z",
         "homepage_url": "https://carrd.co/",
         "example_url": "https://arnoldsnewsletter.carrd.co/?utm_source=x_ads_pumpclub&utm_medium=paid&twclid=21vow4bj4um9z2ap6em53f2adf",
         "homepage_status": 200,
@@ -43512,7 +43766,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T10:55:29.933Z",
+        "fetched_at": "2026-06-22T02:16:08.240Z",
         "homepage_url": "https://unusualwhales.com/",
         "example_url": "https://unusualwhales.com/public-api/mcp?utm_source=twitter&utm_medium=paid&utm_campaign=mcp&twclid=23v6ae8gv46yrlx1esr57hvmck",
         "homepage_status": 200,
@@ -43634,7 +43888,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T11:25:32.857Z",
+        "fetched_at": "2026-06-22T02:16:08.655Z",
         "homepage_url": "https://flova.ai/",
         "example_url": "https://flova.ai/?twclid=29hnc0f969c98ywipq384z0vww",
         "homepage_status": 200,
@@ -43756,7 +44010,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T11:25:33.653Z",
+        "fetched_at": "2026-06-22T02:16:09.585Z",
         "homepage_url": "https://a16z.com/",
         "example_url": "https://speedrun007.a16z.com/x2?twclid=2f5k6tant5xm94nvwscv68y8k7",
         "homepage_status": 200,
@@ -43878,7 +44132,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T11:25:34.280Z",
+        "fetched_at": "2026-06-22T02:16:10.016Z",
         "homepage_url": "https://magbak.com/",
         "example_url": "https://magbak.com/products/magbak-rimcase-for-tesla?utm_medium=paidsocial&utm_source=twitter&utm_campaign=ACQ_Rimcase_Q2_Budget&utm_content=54646690&twclid=2f5a650s5ao8hxxgjocovvxdyk",
         "homepage_status": 200,
@@ -44000,7 +44254,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T12:25:33.363Z",
+        "fetched_at": "2026-06-22T02:48:08.417Z",
         "homepage_url": "https://etsy.com/",
         "example_url": "https://www.etsy.com/uk/listing/1660419760/personalised-bag-of-reasons-why-i-love?ref=shop_home_feat_2&sr_prefetch=1&pf_from=shop_home&pro=1&sts=1&logging_key=554a7bcb2c808ecf99a9e3d68872b5af4ecb1d3f%3A1660419760&twclid=2e5zgu06991vkl8s62fs0146ic",
         "homepage_status": 403,
@@ -44122,7 +44376,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T12:25:33.959Z",
+        "fetched_at": "2026-06-22T02:48:09.114Z",
         "homepage_url": "https://sling.com/",
         "example_url": "https://www.sling.com/sports/basketball?sc=1&utm_medium=social&utm_source=x&utm_campaign=2026_q2_sling_gm_x_soc_postseason_sales&utm_content=2026_Q2_Sling_GM_X_SOC_Basketball_NBAPlayoffsv1S&twclid=2e7arnq15un6t71smhb72lns3b",
         "homepage_status": 200,
@@ -44244,7 +44498,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T12:25:34.176Z",
+        "fetched_at": "2026-06-22T02:48:09.327Z",
         "homepage_url": "https://nationwide.com/",
         "example_url": "https://nationwide.com/?twclid=294pdnbf5jdk527ocpc06sbbq6",
         "homepage_status": 403,
@@ -44366,7 +44620,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T12:55:32.731Z",
+        "fetched_at": "2026-06-22T02:48:09.584Z",
         "homepage_url": "https://lusha.com/",
         "example_url": "https://www.lusha.com/lp/revops-lp/?utm_source=X&utm_campaign=_sg__builders__all_cpc&utm_medium=cpc&twclid=2bltl6th8k2jdcashy0xeb7fqp",
         "homepage_status": 403,
@@ -44488,7 +44742,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T12:55:32.971Z",
+        "fetched_at": "2026-06-22T03:16:42.556Z",
         "homepage_url": "https://bitcoinmagazine.com/",
         "example_url": "https://bitcoinmagazine.com/sponsored/how-does-borrowing-against-bitcoin-actually-work?twclid=2a0s8fadkcmnax1qcvr537zyb6",
         "homepage_status": 200,
@@ -61750,82 +62004,6 @@
       }
     },
     {
-      "domain": "inquirer.net",
-      "entity": "Inquirer",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-09T01:05:59.567Z",
-      "last_seen_at": "2026-06-15T04:26:33.296Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "http://opinion.inquirer.net/",
-          "http://inquirer.net/"
-        ],
-        "origin_counts": {
-          "journals": 15
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.34346354166666665,
-          "confidence": 0.07772499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
       "domain": "worldprimepost.com",
       "entity": "Worldprimepost",
       "kind": "unknown",
@@ -66024,6 +66202,81 @@
         ],
         "origin_counts": {
           "journals": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3370833333333333,
+          "confidence": 0.0491,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "rappler.com",
+      "entity": "Rappler",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-22T02:51:13.362Z",
+      "last_seen_at": "2026-06-22T02:51:13.362Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.rappler.com/world/middle-east/us-iran-peace-talks-updates-june-22-2026/"
+        ],
+        "origin_counts": {
+          "journals": 2
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
