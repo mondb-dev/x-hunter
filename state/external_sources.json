@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-22T12:01:30.931Z",
+  "generated_at": "2026-06-22T15:01:30.050Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-22T12:01:35.505Z",
+  "profiled_at": "2026-06-22T15:01:34.375Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -633,7 +633,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-06-22T00:15:00Z",
       "discovery": {
-        "distinct_urls": 16,
+        "distinct_urls": 18,
         "example_urls": [
           "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
           "https://www.theguardian.com/world/2026/jun/21/canada-immigration-us-deportation",
@@ -643,7 +643,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 2,
-          "reading_queue": 15
+          "reading_queue": 17
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -676,7 +676,7 @@
         "breadth": {
           "score": 0.5866666666666667,
           "basis": [
-            "distinct_urls:16",
+            "distinct_urls:18",
             "distinct_axes:2",
             "origin_types:2"
           ]
@@ -710,12 +710,12 @@
         },
         "overall": {
           "score": 0.6603645833333334,
-          "confidence": 0.49895,
+          "confidence": 0.54395,
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:16",
+            "distinct_urls:18",
             "distinct_axes:2",
             "origin_types:2",
             "referring_accounts:0",
@@ -763,7 +763,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-06-22T00:15:00Z",
       "discovery": {
-        "distinct_urls": 14,
+        "distinct_urls": 16,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
@@ -773,7 +773,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "reading_queue": 15
+          "reading_queue": 17
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -805,7 +805,7 @@
         "breadth": {
           "score": 0.5283333333333333,
           "basis": [
-            "distinct_urls:14",
+            "distinct_urls:16",
             "distinct_axes:1",
             "origin_types:2"
           ]
@@ -839,12 +839,12 @@
         },
         "overall": {
           "score": 0.6476041666666666,
-          "confidence": 0.4417,
+          "confidence": 0.4867,
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:14",
+            "distinct_urls:16",
             "distinct_axes:1",
             "origin_types:2",
             "referring_accounts:0",
@@ -890,22 +890,24 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-06-22T04:56:00Z",
+      "last_seen_at": "2026-06-22T13:04:11.532Z",
       "discovery": {
-        "distinct_urls": 2,
+        "distinct_urls": 3,
         "example_urls": [
+          "https://www.aljazeera.com/opinions/2026/6/22/the-icc-must-investigate-israels-genocidal-use-of-sexual?traffic_source=rss",
           "https://www.aljazeera.com/economy/2026/6/22/shipping-stalls-in-strait-of-hormuz-after-iran-declares-key-waterway-shut?traffic_source=rss",
           "https://www.aljazeera.com/video/newsfeed/2026/6/22/encouraging-progress-made-as-first-round-us-iran-talks-end?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 2,
+          "ontology_evidence": 3,
           "reading_queue": 1,
-          "journals": 2
+          "journals": 3
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
         "distinct_axes": [
-          "axis_global_power_realignments_v1"
+          "axis_global_power_realignments_v1",
+          "axis_power_accountability"
         ]
       },
       "claims": {
@@ -930,10 +932,10 @@
           ]
         },
         "breadth": {
-          "score": 0.29666666666666663,
+          "score": 0.38416666666666666,
           "basis": [
-            "distinct_urls:2",
-            "distinct_axes:1",
+            "distinct_urls:3",
+            "distinct_axes:2",
             "origin_types:3"
           ]
         },
@@ -965,14 +967,14 @@
           ]
         },
         "overall": {
-          "score": 0.6051302083333333,
-          "confidence": 0.13092499999999999,
+          "score": 0.6242708333333333,
+          "confidence": 0.1718,
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:2",
-            "distinct_axes:1",
+            "distinct_urls:3",
+            "distinct_axes:2",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -1146,7 +1148,7 @@
       "first_seen_at": null,
       "last_seen_at": null,
       "discovery": {
-        "distinct_urls": 12,
+        "distinct_urls": 14,
         "example_urls": [
           "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
           "https://www.bbc.com/news/articles/cwy0gjqv783o?at_medium=RSS&amp;at_campaign=rss",
@@ -1155,7 +1157,7 @@
           "https://www.bbc.com/news/articles/cp3xqkxp3x5o?at_medium=RSS&amp;at_campaign=rss"
         ],
         "origin_counts": {
-          "reading_queue": 13
+          "reading_queue": 15
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1184,7 +1186,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:12",
+            "distinct_urls:14",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -1218,11 +1220,11 @@
         },
         "overall": {
           "score": 0.592890625,
-          "confidence": 0.363975,
+          "confidence": 0.408975,
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:12",
+            "distinct_urls:14",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -2731,9 +2733,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-22T10:29:39.000Z",
+      "last_seen_at": "2026-06-22T13:02:07.000Z",
       "discovery": {
-        "distinct_urls": 5856,
+        "distinct_urls": 5860,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2742,8 +2744,8 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3486,
-          "feed_buffer_reply": 3791
+          "feed_buffer": 3490,
+          "feed_buffer_reply": 3792
         },
         "distinct_referring_accounts": 1893,
         "sample_referring_accounts": [
@@ -2783,7 +2785,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5856",
+            "distinct_urls:5860",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2821,7 +2823,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5856",
+            "distinct_urls:5860",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1893",
@@ -3103,7 +3105,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T12:55:57.724Z",
+        "fetched_at": "2026-06-22T13:03:31.360Z",
         "homepage_url": "https://steampowered.com/",
         "example_url": "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
         "homepage_status": 200,
@@ -4421,6 +4423,137 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 5,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "amnesty.org",
+      "entity": "Amnesty",
+      "kind": "unknown",
+      "first_seen_at": "2026-03-31T01:46:38.493Z",
+      "last_seen_at": "2026-06-22T13:04:11.532Z",
+      "discovery": {
+        "distinct_urls": 6,
+        "example_urls": [
+          "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
+          "https://www.amnesty.org/en/latest/news/2026/06/car-bozize/",
+          "https://www.amnesty.org/en/latest/campaigns/2026/06/how-do-us-third-country-removals-work-and-are-they-legal/",
+          "https://www.amnesty.org/en/latest/news/2026/06/lebanon-israel-radically-expands-use-of-unlawful-mass-evacuation-orders-and-commits-war-crime-of-unlawful-transfer/",
+          "https://www.amnesty.org/en/latest/news/2026/06/drc-amnesty-international-launches-6-million-voices-for-justice-for-congo-campaign-in-renewed-push-for-accountability-for-crimes-under-international-law/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 5,
+          "journals": 2
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_human_rights_exploitation_v1",
+          "axis_national_sovereignty_v_intl_law_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:6",
+            "distinct_axes:3",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.44921875,
+          "confidence": 0.24945,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:6",
+            "distinct_axes:3",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-20T21:26:35.997Z",
+        "homepage_url": "https://amnesty.org/",
+        "example_url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://www.amnesty.org/en/",
+        "example_final_url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -5952,136 +6085,6 @@
       }
     },
     {
-      "domain": "amnesty.org",
-      "entity": "Amnesty",
-      "kind": "unknown",
-      "first_seen_at": "2026-03-31T01:46:38.493Z",
-      "last_seen_at": "2026-06-22T04:08:00Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
-          "https://www.amnesty.org/en/latest/campaigns/2026/06/how-do-us-third-country-removals-work-and-are-they-legal/",
-          "https://www.amnesty.org/en/latest/news/2026/06/drc-amnesty-international-launches-6-million-voices-for-justice-for-congo-campaign-in-renewed-push-for-accountability-for-crimes-under-international-law/",
-          "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 3,
-          "journals": 1
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_human_rights_exploitation_v1",
-          "axis_national_sovereignty_v_intl_law_v1",
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.4116666666666666,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:3",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43645833333333334,
-          "confidence": 0.19219999999999998,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:4",
-            "distinct_axes:3",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-20T21:26:35.997Z",
-        "homepage_url": "https://amnesty.org/",
-        "example_url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/",
-        "homepage_status": 403,
-        "example_status": 403,
-        "homepage_final_url": "https://www.amnesty.org/en/",
-        "example_final_url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "huawei.com",
       "entity": "Huawei",
       "kind": "unknown",
@@ -6688,7 +6691,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T12:25:57.752Z",
+        "fetched_at": "2026-06-22T13:03:32.031Z",
         "homepage_url": "https://tinyurl.com/",
         "example_url": "https://tinyurl.com/yc8xxez5?twclid=2dnd76jy9k71tnu9ve267e0uz7",
         "homepage_status": 200,
@@ -8329,7 +8332,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T12:25:58.054Z",
+        "fetched_at": "2026-06-22T13:03:32.352Z",
         "homepage_url": "https://heylemon.ai/",
         "example_url": "https://heylemon.ai/?utm_source=paid_X_all1&twclid=2bprvotipsebt2ywwd413k1c6r",
         "homepage_status": 200,
@@ -8455,7 +8458,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T12:25:58.772Z",
+        "fetched_at": "2026-06-22T13:03:32.728Z",
         "homepage_url": "https://wavedash.com/",
         "example_url": "https://wavedash.com/?twclid=29k171tm7pjzrxbob4j7cmjl3o",
         "homepage_status": 200,
@@ -8959,7 +8962,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T12:25:59.381Z",
+        "fetched_at": "2026-06-22T13:31:33.886Z",
         "homepage_url": "https://teslahubs.com/",
         "example_url": "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
         "homepage_status": 200,
@@ -9211,7 +9214,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T12:55:58.012Z",
+        "fetched_at": "2026-06-22T13:31:34.182Z",
         "homepage_url": "https://h-tech.space/",
         "example_url": "https://teamlore.h-tech.space/?twclid=21cpesmzgsrh5ius8yd25zbe9t",
         "homepage_status": null,
@@ -9339,13 +9342,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T12:56:00.637Z",
+        "fetched_at": "2026-06-22T13:31:36.540Z",
         "homepage_url": "https://onelink.me/",
         "example_url": "https://vix.onelink.me/Z4oU/hyuh928w?twclid=24s36ffdjwv85ew8o2yfteqmxu",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.appsflyer.com/products/deep-linking/",
-        "example_final_url": "https://vix.com/es-es/deportes?af_ad=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&af_adset=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&twclid=24s36ffdjwv85ew8o2yfteqmxu&shortlink=hyuh928w&af_dp=vixapp%3A%2F%2Fes-es%2Fdeportes&af_xp=social&pid=Twitter_Paid&source_caller=ui&c=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026",
+        "example_final_url": "https://vix.com/es-es/deportes?af_ad=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&shortlink=hyuh928w&af_adset=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&source_caller=ui&twclid=24s36ffdjwv85ew8o2yfteqmxu&c=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&pid=Twitter_Paid&af_xp=social&af_dp=vixapp%3A%2F%2Fes-es%2Fdeportes",
         "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -9719,7 +9722,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T12:56:01.943Z",
+        "fetched_at": "2026-06-22T13:31:37.953Z",
         "homepage_url": "https://kubit.ai/",
         "example_url": "https://kubit.ai/agent-analytics-landing/?utm_source=x_ads&utm_medium=paid_social&utm_campaign=claude_group&twclid=2eb9hv62es2e93pzc1qorbclgf",
         "homepage_status": 200,
@@ -10728,7 +10731,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T14:26:01.237Z",
+        "fetched_at": "2026-06-22T14:33:33.505Z",
         "homepage_url": "https://merck.com/",
         "example_url": "https://www.merck.com/stories/were-pursuing-innovative-science-with-antibody-drug-conjugate-adc-research/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=na_NA_VID_18s&twclid=2ashs3kuiq7isb412ax3cbgusn",
         "homepage_status": 200,
@@ -10854,7 +10857,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T13:55:59.811Z",
+        "fetched_at": "2026-06-22T14:33:33.732Z",
         "homepage_url": "https://fabletics.com/",
         "example_url": "https://www.fabletics.com/dmg/926C08?utm_medium=paid_social_media&utm_source=twitter&utm_campaign=twitter_campaign_id_FLM56&utm_content=twitter_adgroup_id_FLM56-1&utm_term=twitter_ad_id_FLM56-1-11&twclid=21tkc8gfxmeyk2zkude4aqtxx0",
         "homepage_status": 403,
@@ -11740,7 +11743,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T13:56:00.680Z",
+        "fetched_at": "2026-06-22T14:33:34.610Z",
         "homepage_url": "https://darkhours-thegame.com/",
         "example_url": "https://www.darkhours-thegame.com/xbox?utm_source=twitter&utm_campaign=XboxLaunch&utm_medium=pc&utm_content=Diftborn&utm_term=us&twclid=271vf2o4bu11vai5qyjclxea1r",
         "homepage_status": 200,
@@ -11866,7 +11869,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T13:56:01.823Z",
+        "fetched_at": "2026-06-22T14:33:35.518Z",
         "homepage_url": "https://zavu.dev/",
         "example_url": "https://www.zavu.dev/?twclid=28xrbkfqjxo8t4gl13yvgj5wa8",
         "homepage_status": 200,
@@ -13008,7 +13011,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T13:56:02.869Z",
+        "fetched_at": "2026-06-22T15:01:31.111Z",
         "homepage_url": "https://artyfacts.ai/",
         "example_url": "https://www.artyfacts.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=waitlist_traffic&utm_content=capture_demo&utm_term=variantA&twclid=2e7ew786ao2fxw0qm1wxfdqe3b",
         "homepage_status": 200,
@@ -13134,7 +13137,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T14:25:59.794Z",
+        "fetched_at": "2026-06-22T15:01:31.688Z",
         "homepage_url": "https://subspace.build/",
         "example_url": "https://subspace.build/?utm_source=x&utm_campaign=memory_card_trick&twclid=26pw69bugqoexf6jq5nzgivo8r",
         "homepage_status": 200,
@@ -13511,7 +13514,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T14:26:02.721Z",
+        "fetched_at": "2026-06-22T15:01:33.757Z",
         "homepage_url": "https://dlvr.it/",
         "example_url": "http://dlvr.it/TRwWsL",
         "homepage_status": 200,
@@ -14267,7 +14270,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T14:26:03.262Z",
+        "fetched_at": "2026-06-22T15:01:34.375Z",
         "homepage_url": "https://raybrowser.com/",
         "example_url": "https://raybrowser.com/?twclid=2f1xntsosgc648xbloi17s8fyh",
         "homepage_status": 200,
