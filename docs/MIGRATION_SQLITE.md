@@ -40,11 +40,13 @@ Cloud SQL + workers. Reversible until Cloud SQL is deleted (Phase 5).
   - migrator fixes found during commit: exclude `id` on append (autoincrement collision); `INSERT OR IGNORE` for unique constraints; `replace` strategy for relational sprint tables (FK-safe, PG authoritative)
   - `.env`: commented `DATABASE_URL` + `MEMORY_API_URL` (backup `.env.precutover`); runner restarted, **active on SQLite, zero PG errors**, cycling
   - binary state DBs untracked+gitignored so they don't churn `.git`
-  - [ ] confirm first full post-cutover cycle completes + posts + regenerates verification_export.json from SQLite
+  - [x] **VERIFIED:** post-cutover cycles complete; cycle 3024 TWEET `postSuccess=true` (agent posted at 09:32); zero PG/SQLite/FK errors; verification_export.json regenerated from SQLite (754 entries); git commits clean, no db bloat; all services active. **Final QA PASS — agent fully functional on SQLite.**
   - **revert** = uncomment the two .env vars + restart (PG still intact)
   - **NOTE:** Cloud Run verify worker still writes to PG every 2h until Phase 5 — do a final migrate sync right before deleting Cloud SQL.
-- [ ] **Phase 5 — decommission** *(GATED on explicit go — irreversible)*: backup Cloud SQL, then delete Scheduler jobs, Pub/Sub, Cloud Run workers, **Cloud SQL instance** (kills public-IP/sslmode debt).
-- [ ] **Phase 6 — repo cleanup**: delete `*.pg.js`, `lib/pg.js`, `workers/`, dead `deploy.yml` worker jobs, `web/Dockerfile`+`cloudbuild.yaml`; collapse `db_backend`; strip DATABASE_URL/pg/GCS from `.env.example` + docs; update ARCHITECTURE/SYSTEM_DIAGRAM.
+- [ ] **Phase 5 — decommission** 🔒 *GATED — irreversible, needs explicit go + a stability window (~1–2 days running clean on SQLite first)*: do a **final `migrate --commit`** (the Cloud Run verify worker keeps writing PG every 2h until stopped) → backup Cloud SQL → delete Scheduler jobs, Pub/Sub, Cloud Run workers (verify/publish/memory), then the **Cloud SQL instance** (kills public-IP/sslmode debt). The web "ask Sebastian" goes dormant here (deferred per decision).
+- [ ] **Phase 6 — repo cleanup** *(defer destructive parts until post-stability)*: deleting `*.pg.js`/`lib/pg.js` removes the easy PG-revert path, so do it only after Phase 5. Then: delete `workers/`, dead `deploy.yml` deploy-web job, `web/Dockerfile`+`cloudbuild.yaml`; collapse `db_backend`; strip DATABASE_URL/pg/GCS from `.env.example` + docs; update ARCHITECTURE/SYSTEM_DIAGRAM to single-spine.
+
+## STATUS: cutover DONE + verified (2026-06-22). Agent live on SQLite, PG retained as fallback. Phases 5–6 gated on stability + explicit go.
 
 ## Findings / open items
 - **Tracked binary DBs:** `state/{intelligence,sprints,verification,hunter}.db` (+ intelligence `-wal/-shm`) are committed to git. Dormant now; once Option A makes them live they'd churn `.git`. **Phase 6: untrack + gitignore them** (like `index.db`).
