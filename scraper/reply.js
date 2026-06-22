@@ -35,9 +35,9 @@ const { gatherBrief, formatBriefForPrompt } = require("../runner/lib/intelligenc
 let verifyClaim = null;
 try { ({ verifyClaim } = require("../runner/lib/verify_claim")); } catch {}
 
-// Postgres interactions store (optional — non-fatal if unavailable)
+// Interactions store (SQLite or Postgres via db_backend; non-fatal if unavailable)
 let interactionsDb = null;
-try { interactionsDb = require("../runner/intelligence/interactions_db.pg"); } catch {}
+try { interactionsDb = require("../runner/lib/db_backend").loadInteractionsDb(); } catch {}
 
 // ── Paths ─────────────────────────────────────────────────────────────────────
 const ROOT         = path.resolve(__dirname, "..");

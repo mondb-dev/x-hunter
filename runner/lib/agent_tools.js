@@ -578,7 +578,7 @@ const TOOL_EXECUTORS = {
     const safeLimit = Math.min(Math.max(1, parseInt(args.limit) || 10), 20);
     log(`query_engagement → "${queryStr}" limit=${safeLimit}`);
     try {
-      const { searchInteractions, getByUser } = require('../intelligence/interactions_db.pg');
+      const { searchInteractions, getByUser } = require('./db_backend').loadInteractionsDb();
       let rows;
       // If query looks like a @handle, look up by user instead
       if (/^@?[A-Za-z0-9_]{1,50}$/.test(queryStr)) {

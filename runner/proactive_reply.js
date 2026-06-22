@@ -22,9 +22,9 @@ const { buildPersona, buildCoreContext } = require('./lib/sebastian_respond');
 const { verifyClaim } = require('./lib/verify_claim');
 const config = require('./lib/config');
 
-// Postgres interactions store (optional — non-fatal if unavailable)
+// Interactions store (SQLite or Postgres via db_backend; non-fatal if unavailable)
 let interactionsDb = null;
-try { interactionsDb = require('./intelligence/interactions_db.pg'); } catch {}
+try { interactionsDb = require('./lib/db_backend').loadInteractionsDb(); } catch {}
 
 const ROOT = path.resolve(__dirname, '..');
 const STATE_FILE = path.join(config.STATE_DIR, 'proactive_reply_state.json');
