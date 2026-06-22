@@ -38,7 +38,24 @@ const PLAN = [
   { pg: 'claim_verifications', file: 'intelligence.db', table: 'claim_verifications', strategy: 'upsert', key: null },
   { pg: 'sources',             file: 'intelligence.db', table: 'sources',             strategy: 'upsert', key: null },
   { pg: 'claim_audit_log',     file: 'intelligence.db', table: 'claim_audit_log',     strategy: 'append', key: ['claim_id', 'created_at', 'new_status'] },
-  { pg: 'interactions',        file: 'intelligence.db', table: 'interactions',        strategy: 'append', key: ['from_username', 'our_reply', 'interaction_at'] },
+  { pg: 'interactions',        file: 'intelligence.db', table: 'interactions',        strategy: 'append', key: ['from_username', 'our_reply', 'interaction_at'],
+    // Full schema (mirrors interactions_db.js) so the table exists at migrate time AND
+    // inserts populate the FTS index via triggers.
+    ensure: `
+      CREATE TABLE IF NOT EXISTS interactions (
+        id INTEGER PRIMARY KEY AUTOINCREMENT, tweet_id TEXT,
+        interaction_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now')),
+        type TEXT NOT NULL DEFAULT 'reply', from_username TEXT NOT NULL, from_display TEXT,
+        their_text TEXT, our_reply TEXT NOT NULL, memory_used TEXT NOT NULL DEFAULT '[]', cycle INTEGER);
+      CREATE INDEX IF NOT EXISTS interactions_at_idx   ON interactions (interaction_at DESC);
+      CREATE INDEX IF NOT EXISTS interactions_user_idx ON interactions (from_username);
+      CREATE INDEX IF NOT EXISTS interactions_type_idx ON interactions (type);
+      CREATE VIRTUAL TABLE IF NOT EXISTS interactions_fts USING fts5(
+        their_text, our_reply, from_username, content='interactions', content_rowid='id');
+      CREATE TRIGGER IF NOT EXISTS interactions_ai AFTER INSERT ON interactions BEGIN
+        INSERT INTO interactions_fts(rowid, their_text, our_reply, from_username)
+        VALUES (new.id, new.their_text, new.our_reply, new.from_username); END;
+    ` },
   { pg: 'sprints',             file: 'sprints.db',      table: 'sprints',             strategy: 'append', key: null },
   { pg: 'tasks',               file: 'sprints.db',      table: 'tasks',               strategy: 'append', key: null },
   { pg: 'accomplishments',     file: 'sprints.db',      table: 'accomplishments',     strategy: 'append', key: null },
@@ -76,7 +93,8 @@ async function main() {
   const summary = [];
   for (const m of PLAN) {
     const db = openDb(m.file);
-    const scols = sqliteCols(db, m.table);
+    let scols = sqliteCols(db, m.table);
+    if (!scols.length && m.ensure) { db.exec(m.ensure); scols = sqliteCols(db, m.table); }
     if (!scols.length) { summary.push(`${m.pg} → ${m.file}/${m.table}: SQLite table MISSING — skipped`); continue; }
 
     let pgRows;

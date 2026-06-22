@@ -22,9 +22,15 @@ Cloud SQL + workers. Reversible until Cloud SQL is deleted (Phase 5).
   - [x] `loadInteractionsDb()` added to `db_backend.js`; consumers (proactive_reply, agent_tools, scraper/reply) switched off hard `.pg` require
   - [x] confirmed SQLite targets exist: `verification_db.js` (claim_verifications PK=claim_id, claim_audit_log, claim_investigations), `intelligence/db.js` (sources PK=handle, claims), `sprint/db.js` (plans/sprints/tasks/accomplishments/daily_logs)
   - [x] `pending_drafts` decision: **skip** — publish-worker-transient (8 in-flight), no SQLite home; runner owns posting via state files
-- [~] **Phase 2 — PG→SQLite merge migrator**
-  - [x] built `runner/intelligence/migrate_pg_to_sqlite.js` — self-introspecting (discovers PG+SQLite cols at runtime, migrates intersection, JSON/ISO/bool coercion); DRY-RUN by default; `--commit`, `--state <dir>` for copies; strategies: `upsert` (claim_verifications/sources, PK-keyed, PG-wins) + `append` (audit_log/interactions/sprint tables, content-key dedup, never deletes); syntax-checked ✓
-  - [ ] **run dry-run on the VM** (against live PG + the real SQLite dbs, read-only) → review counts/overlaps → tune strategies → then `--commit --state <copy>` and verify before cutover
+- [x] **Phase 2 — PG→SQLite merge migrator** ✅ built + dry-run validated on VM
+  - migrator self-introspecting; DRY-RUN default; `--commit` / `--state <dir>`; embeds interactions schema (table+FTS+triggers) so it migrates + indexes
+  - **Dry-run result (vs copies of real dbs + live PG), all clean, no data loss:**
+    - claim_verifications [upsert/claim_id]: pg754 + sqlite52 → **763** (43 PG-wins overlaps, 9 sqlite-only kept)
+    - sources [upsert/handle]: **1923** kept, 948 refreshed from PG
+    - claim_audit_log [append]: 168 + 9736 → **9904**
+    - interactions [append]: 0 + 393 → **393** (cols 10/11, excludes PG `tsv`)
+    - sprints 20 / tasks 192 / accomplishments 963 / plans 6 / daily_logs 85 (append, dedup caught 4/40/81/0/28)
+  - minor caveat: append on mutable sprint/task rows can leave a near-dupe if a row changed post-cutover; harmless at this volume (~20 sprints). Re-run `--commit` for the real write at cutover.
 - [ ] **Phase 3 — fold worker logic onto VM** (verify-cycle, /export, claim-resolved, interactions; **re-host memory API + repoint MEMORY_API_URL**; test with DATABASE_URL unset)
 - [ ] **Phase 4 — cutover** (pause runner → re-run migrator for latest → unset DATABASE_URL → restart → verify full cycle, zero PG calls). *Reversible: re-set DATABASE_URL.*
 - [ ] **Phase 5 — decommission** *(GATED on explicit go — irreversible)*: backup Cloud SQL, then delete Scheduler jobs, Pub/Sub, Cloud Run workers, **Cloud SQL instance** (kills public-IP/sslmode debt).
