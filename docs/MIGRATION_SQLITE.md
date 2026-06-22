@@ -35,7 +35,14 @@ Cloud SQL + workers. Reversible until Cloud SQL is deleted (Phase 5).
   - verify scoring (`daily.js`→`verify_claims.js`), export regen + verification posting (`post_verification.js` per browse cycle) **already run on the VM via `db_backend`** → switch to SQLite automatically at cutover. Cloud Run verify/publish workers are a **redundant parallel path** → decommission after cutover, nothing to fold.
   - runner memory: `sebastian_respond.recallViaMemoryAPI` returns null when `MEMORY_API_URL` unset → callers fall back to **local SQLite recall**. So decoupling the runner = just unset `MEMORY_API_URL` at cutover (no code).
   - **OPEN DECISION — `hunter-memory` web API:** `MEMORY_API_URL` IS set; the **web "ask Sebastian"** is the only true remote consumer (Vercel can't read VM SQLite). Options: (1) re-host on VM public endpoint (firewall+TLS+auth — infra exposure, outward-facing) ; (2) **[recommended]** let web Q&A go dormant at cutover, build the public "ask-the-AI" API later as a deliberate project (full 81k-embedding data, proper TLS/auth) — keeps the migration clean + reduces exposure ; (3) keep a minimal Cloud SQL alive just for memory+embeddings (defeats consolidation — not recommended).
-- [ ] **Phase 4 — cutover** (pause runner → re-run migrator for latest → unset DATABASE_URL → restart → verify full cycle, zero PG calls). *Reversible: re-set DATABASE_URL.*
+- [~] **Phase 4 — cutover** ✅ executed
+  - migrator `--commit` run on VM → SQLite now holds: claim_verifications 763, sources 1923, claim_audit_log 9923, interactions 393, plans 4, sprints 16, tasks 140, accomplishments 872, daily_logs 78
+  - migrator fixes found during commit: exclude `id` on append (autoincrement collision); `INSERT OR IGNORE` for unique constraints; `replace` strategy for relational sprint tables (FK-safe, PG authoritative)
+  - `.env`: commented `DATABASE_URL` + `MEMORY_API_URL` (backup `.env.precutover`); runner restarted, **active on SQLite, zero PG errors**, cycling
+  - binary state DBs untracked+gitignored so they don't churn `.git`
+  - [ ] confirm first full post-cutover cycle completes + posts + regenerates verification_export.json from SQLite
+  - **revert** = uncomment the two .env vars + restart (PG still intact)
+  - **NOTE:** Cloud Run verify worker still writes to PG every 2h until Phase 5 — do a final migrate sync right before deleting Cloud SQL.
 - [ ] **Phase 5 — decommission** *(GATED on explicit go — irreversible)*: backup Cloud SQL, then delete Scheduler jobs, Pub/Sub, Cloud Run workers, **Cloud SQL instance** (kills public-IP/sslmode debt).
 - [ ] **Phase 6 — repo cleanup**: delete `*.pg.js`, `lib/pg.js`, `workers/`, dead `deploy.yml` worker jobs, `web/Dockerfile`+`cloudbuild.yaml`; collapse `db_backend`; strip DATABASE_URL/pg/GCS from `.env.example` + docs; update ARCHITECTURE/SYSTEM_DIAGRAM.
 
