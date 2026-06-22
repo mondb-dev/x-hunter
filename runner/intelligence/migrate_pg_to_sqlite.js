@@ -56,11 +56,14 @@ const PLAN = [
         INSERT INTO interactions_fts(rowid, their_text, our_reply, from_username)
         VALUES (new.id, new.their_text, new.our_reply, new.from_username); END;
     ` },
-  { pg: 'sprints',             file: 'sprints.db',      table: 'sprints',             strategy: 'append', key: null },
-  { pg: 'tasks',               file: 'sprints.db',      table: 'tasks',               strategy: 'append', key: null },
-  { pg: 'accomplishments',     file: 'sprints.db',      table: 'accomplishments',     strategy: 'append', key: null },
-  { pg: 'plans',               file: 'sprints.db',      table: 'plans',               strategy: 'append', key: null },
-  { pg: 'daily_logs',          file: 'sprints.db',      table: 'daily_logs',          strategy: 'append', key: null },
+  // sprint tables are relational (FK: tasks/accomplishments -> sprints -> plans). PG is the
+  // authoritative + more-complete set, so replace wholesale preserving PG ids (FK-consistent).
+  // Drops a few stale SQLite-only pre-cutover rows — acceptable for operational logs.
+  { pg: 'plans',               file: 'sprints.db',      table: 'plans',               strategy: 'replace', key: null },
+  { pg: 'sprints',             file: 'sprints.db',      table: 'sprints',             strategy: 'replace', key: null },
+  { pg: 'tasks',               file: 'sprints.db',      table: 'tasks',               strategy: 'replace', key: null },
+  { pg: 'accomplishments',     file: 'sprints.db',      table: 'accomplishments',     strategy: 'replace', key: null },
+  { pg: 'daily_logs',          file: 'sprints.db',      table: 'daily_logs',          strategy: 'replace', key: null },
 ];
 
 function coerce(v) {
@@ -88,7 +91,14 @@ async function main() {
   const pg = new Client({ connectionString: url, ssl: false });
   await pg.connect();
   const dbs = {};
-  const openDb = (f) => (dbs[f] = dbs[f] || new Database(path.join(STATE, f)));
+  const openDb = (f) => {
+    if (!dbs[f]) {
+      const d = new Database(path.join(STATE, f));
+      d.pragma('foreign_keys = OFF'); // bulk migration; source data is internally consistent
+      dbs[f] = d;
+    }
+    return dbs[f];
+  };
 
   const summary = [];
   for (const m of PLAN) {
@@ -109,32 +119,31 @@ async function main() {
     const existing = db.prepare(`SELECT COUNT(*) n FROM ${m.table}`).get().n;
 
     let toInsert = 0, toReplace = 0, skipped = 0;
-    // append lets SQLite assign fresh autoincrement ids — never carry PG's id (collides);
-    // upsert keeps all shared cols (its PK is a stable natural key like claim_id/handle).
+    // append: fresh autoincrement ids (never carry PG id — collides). upsert/replace keep all cols.
     const cols = m.strategy === 'append' ? shared.filter(c => c !== 'id') : shared;
     const placeholders = cols.map(() => '?').join(',');
-    // append: OR IGNORE so a unique/PK constraint collision (e.g. sprints UNIQUE(plan_id,week))
-    // is skipped rather than fatal — union semantics, never deletes, never errors.
-    const verb = m.strategy === 'upsert' ? 'INSERT OR REPLACE' : 'INSERT OR IGNORE';
+    // upsert: PK-keyed, PG-wins. append: OR IGNORE skips unique/PK collisions (union, never errors).
+    // replace: wipe + reinsert PG verbatim incl. ids → FK-consistent for relational sprint tables.
+    const verb = m.strategy === 'upsert' ? 'INSERT OR REPLACE' : m.strategy === 'append' ? 'INSERT OR IGNORE' : 'INSERT';
     const stmt = db.prepare(`${verb} INTO ${m.table} (${cols.join(',')}) VALUES (${placeholders})`);
-    const existsStmt = keyCols.length
+    const existsStmt = (m.strategy === 'append' && keyCols.length)
       ? db.prepare(`SELECT 1 FROM ${m.table} WHERE ${keyCols.map(k => `${k} IS ?`).join(' AND ')} LIMIT 1`)
       : null;
 
     const run = db.transaction(() => {
+      if (m.strategy === 'replace') db.prepare(`DELETE FROM ${m.table}`).run();
       for (const row of pgRows) {
         const vals = cols.map(c => coerce(row[c]));
         if (m.strategy === 'append' && existsStmt) {
-          const keyVals = keyCols.map(k => coerce(row[k]));
-          if (existsStmt.get(...keyVals)) { skipped++; continue; }
+          if (existsStmt.get(...keyCols.map(k => coerce(row[k])))) { skipped++; continue; }
           toInsert++;
-        } else { // upsert
+        } else if (m.strategy === 'upsert') {
           const pk = sqlitePk(db, m.table);
           const present = pk.length && pk.every(k => shared.includes(k))
             ? db.prepare(`SELECT 1 FROM ${m.table} WHERE ${pk.map(k => `${k} IS ?`).join(' AND ')} LIMIT 1`).get(...pk.map(k => coerce(row[k])))
             : false;
           if (present) toReplace++; else toInsert++;
-        }
+        } else { toInsert++; } // replace
         if (COMMIT) stmt.run(...vals);
       }
       if (!COMMIT) throw new Error('__rollback_dry_run__'); // abort tx so nothing persists
