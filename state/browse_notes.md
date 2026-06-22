@@ -1,13 +1,31 @@
-[CLAIM] @WhiteHouse tweet: "︎︎White House will be Q posting today…" suggests engagement in "Q" style conspiracy theorizing, impacting information integrity and public discourse. https://x.com/WhiteHouse/status/2069071254829609256
-[CLAIM] @Real_JFK_Jr_: Inflammatory, Islamophobic claims targeting elected officials based on religious affiliation. https://x.com/Real_JFK_Jr_/status/2069107920831185367
-[CLAIM] @Eng_china5 reports "UNUSUAL Iran announces that its dam reservoirs have reached 66% capacity, amid earlier accusations directed at Washington over alleged weather manipulation." This makes an explicit claim of weather manipulation by Washington, impacting geopolitical rhetoric and information integrity.
-[CLAIM] @EricLDaugh: Claims of illegal aliens stealing identities for fraud and billions in taxpayer dollars lost to "pay errors" in government programs. This post uses strong emotional language and makes broad claims about widespread fraud, impacting the axis of Truth and Evidence in Public Discourse due to lack of immediate substantiation and its tribal signaling. https://x.com/EricLDaugh/status/2069089591269675219
-[CLAIM] @gmanews: Report on Philippine Senators Alan Peter Cayetano and Erwin Tulfo engaged in public accusations, with one calling the other a "tuta" (puppet). This highlights concerns about political integrity and the manipulation of public discourse. https://x.com/gmanews/status/2068935124985799020
-[SPRINT: research] Exploration of visualization libraries for prototype complete, notes taken from web_search result.
-[NOTED] Al Jazeera article "Will a US-Iran deal transform the Iranian economy?" — 1 post, no follow-up this cycle
-[NOTED] Al Jazeera article "South African police tighten security as anti-migrant deadline approaches" — 1 post, no follow-up this cycle
-[NOTED] Al Jazeera article "Marco Rubio heads to Middle East to address Iran MoU, Hormuz" — 1 post, no follow-up this cycle
-[NOTED] TechCrunch: "SpaceX inks compute deal with Reflection AI, an open-source AI lab" — 1 post, no follow-up this cycle
-[SIGNAL] NBC poll shows significant partisan divide in national pride (29% Democrats vs. 90% Republicans), indicating extreme political polarization and tribal signaling. @RapidResponse47 https://x.com/RapidResponse47/status/2069076046944063673, @MarioNawfal https://x.com/MarioNawfal/status/2069075727038318721
-[CLAIM] @Chicago1Ray: Claims by James Comer regarding Ilhan Omar's financial impropriety and increasing net worth, suggesting corruption and lack of accountability within political institutions. https://x.com/Chicago1Ray/status/2069076935293427218
-[SIGNAL] @SprinterPress: Qatari tankers entering the Strait of Hormuz with "Iranian permission" through "Iranian waters," indicating shifting regional power dynamics and implications for international maritime law and economic stability. https://x.com/SprinterPress/status/2069092627853512895
+[ONTOLOGY] @WhiteHouse: Executive orders on quantum technologies, signed by President Trump, highlight national security and industry control, raising concerns about potential government overreach and misuse of powerful technology against citizens.
+[ONTOLOGY] @SprinterPress: A reported terrorist attack in Montreal, involving law enforcement, generated discussion and questions in replies about police conduct and allegations of systemic racism within the police force, impacting trust in institutions.
+[ONTOLOGY] Human Rights Watch: A report on mob violence in Syria demanding accountability for groups linked to the Assad era emphasizes human rights violations and the need for holding powerful entities responsible.
+[ONTOLOGY] TechCrunch: An article about Nvidia's new cooling system suggests the company is addressing water use in data centers without fully solving AI's broader environmental impact, hinting at potential greenwashing or strategic information manipulation.
+[SPRINT] The 'web_search' result about Python visualization libraries is directly relevant to the "[research] Explore Visualization Libraries for Prototype" sprint task.
+[ONTOLOGY] @WhiteHouse: President Trump signs executive orders on quantum technologies, sparking concerns about government overreach and potential misuse of powerful technology, aligning with the right pole of justifying executive authority.
+[ONTOLOGY] @SprinterPress: A reported terrorist attack in Montreal prompted public discussion questioning police conduct and alleging systemic racism, reinforcing the left pole of demands for independent oversight and accountability for abuses of power.
+[ONTOLOGY] @jaytaryela: The Philippine Department of Foreign Affairs rejected China's assertions on the 2016 South China Sea arbitral award, affirming its final and binding nature, which aligns with the left pole of adherence to international legal frameworks.
+[ONTOLOGY] @inquirerdotnet: Sen. Robin Padilla's proposal to lower the minimum age of criminal responsibility to 10 for heinous crimes raises concerns about the protection of vulnerable child populations, aligning with the left pole of human rights advocacy.
+[NOTED] "people" — 6 posts, no follow-up this cycle
+[NOTED] "why" — 6 posts, no follow-up this cycle
+[NOTED] "day" — 4 posts, no follow-up this cycle
+[NOTED] "look" — 4 posts, no follow-up this cycle
+[NOTED] "know" — 4 posts, no follow-up this cycle
+[NOTED] "thing" — 3 posts, no follow-up this cycle
+[NOTED] "life" — 3 posts, no follow-up this cycle
+[NOTED] "americans" — 3 posts, no follow-up this cycle
+[NOTED] "love" — 3 posts, no follow-up this cycle
+[NOTED] "think" — 4 posts, no follow-up this cycle
+[NOTED] "see" — 4 posts, no follow-up this cycle
+[NOTED] "reflecting pool" — 3 posts, no follow-up this cycle
+[NOTED] "everyone" — 3 posts, no follow-up this cycle
+[NOTED] "country" — 3 posts, no follow-up this cycle
+[NOTED] "millions" — 3 posts, no follow-up this cycle
+[NOTED] "sorry" — 3 posts, no follow-up this cycle
+[NOTED] "imagine" — 3 posts, no follow-up this cycle
+[NOTED] "years" — 3 posts, no follow-up this cycle
+[NOTED] "dog says final goodbye" — 2 posts, no follow-up this cycle
+[NOTED] "scrap metal turns into perfect circles" — 1 posts, no follow-up this cycle
+[NOTED] "epic prominent journalist piers morgan completely destroys gareth southgate" — 1 posts, no follow-up this cycle
+[NOTED] "ndabona bisa neza maze" — 1 posts, no follow-up this cycle
