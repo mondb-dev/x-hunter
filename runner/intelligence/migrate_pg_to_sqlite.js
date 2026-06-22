@@ -113,7 +113,9 @@ async function main() {
     // upsert keeps all shared cols (its PK is a stable natural key like claim_id/handle).
     const cols = m.strategy === 'append' ? shared.filter(c => c !== 'id') : shared;
     const placeholders = cols.map(() => '?').join(',');
-    const verb = m.strategy === 'upsert' ? 'INSERT OR REPLACE' : 'INSERT';
+    // append: OR IGNORE so a unique/PK constraint collision (e.g. sprints UNIQUE(plan_id,week))
+    // is skipped rather than fatal — union semantics, never deletes, never errors.
+    const verb = m.strategy === 'upsert' ? 'INSERT OR REPLACE' : 'INSERT OR IGNORE';
     const stmt = db.prepare(`${verb} INTO ${m.table} (${cols.join(',')}) VALUES (${placeholders})`);
     const existsStmt = keyCols.length
       ? db.prepare(`SELECT 1 FROM ${m.table} WHERE ${keyCols.map(k => `${k} IS ?`).join(' AND ')} LIMIT 1`)
