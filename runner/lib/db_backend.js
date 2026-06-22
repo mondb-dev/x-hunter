@@ -54,4 +54,10 @@ function loadVerificationDb() {
     : require('../intelligence/verification_db');
 }
 
-module.exports = { usePostgres, loadIntelligenceDb, loadScraperDb, loadSprintDb, loadVerificationDb };
+function loadInteractionsDb() {
+  return usePostgres()
+    ? require('../intelligence/interactions_db.pg')
+    : require('../intelligence/interactions_db');
+}
+
+module.exports = { usePostgres, loadIntelligenceDb, loadScraperDb, loadSprintDb, loadVerificationDb, loadInteractionsDb };
