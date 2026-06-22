@@ -109,16 +109,19 @@ async function main() {
     const existing = db.prepare(`SELECT COUNT(*) n FROM ${m.table}`).get().n;
 
     let toInsert = 0, toReplace = 0, skipped = 0;
-    const placeholders = shared.map(() => '?').join(',');
+    // append lets SQLite assign fresh autoincrement ids — never carry PG's id (collides);
+    // upsert keeps all shared cols (its PK is a stable natural key like claim_id/handle).
+    const cols = m.strategy === 'append' ? shared.filter(c => c !== 'id') : shared;
+    const placeholders = cols.map(() => '?').join(',');
     const verb = m.strategy === 'upsert' ? 'INSERT OR REPLACE' : 'INSERT';
-    const stmt = db.prepare(`${verb} INTO ${m.table} (${shared.join(',')}) VALUES (${placeholders})`);
+    const stmt = db.prepare(`${verb} INTO ${m.table} (${cols.join(',')}) VALUES (${placeholders})`);
     const existsStmt = keyCols.length
       ? db.prepare(`SELECT 1 FROM ${m.table} WHERE ${keyCols.map(k => `${k} IS ?`).join(' AND ')} LIMIT 1`)
       : null;
 
     const run = db.transaction(() => {
       for (const row of pgRows) {
-        const vals = shared.map(c => coerce(row[c]));
+        const vals = cols.map(c => coerce(row[c]));
         if (m.strategy === 'append' && existsStmt) {
           const keyVals = keyCols.map(k => coerce(row[k]));
           if (existsStmt.get(...keyVals)) { skipped++; continue; }
