@@ -17,11 +17,14 @@ Cloud SQL + workers. Reversible until Cloud SQL is deleted (Phase 5).
 
 ## Phases
 - [x] **Phase 0 — inventory & decisions** (done; see above + capacity check: e2-medium, 2vCPU/3.8GB near-idle, 15GB free — ample).
-- [~] **Phase 1 — build missing SQLite pieces**
+- [x] **Phase 1 — build missing SQLite pieces**
   - [x] `runner/intelligence/interactions_db.js` (SQLite sibling; FTS5; functional-tested ✓)
   - [x] `loadInteractionsDb()` added to `db_backend.js`; consumers (proactive_reply, agent_tools, scraper/reply) switched off hard `.pg` require
-  - [ ] confirm intelligence.db has verification schema (verification_db.js create-if-not-exists) + sprints.db schema complete
-- [ ] **Phase 2 — PG→SQLite merge migrator** (reconcile per rules above; dry-run into copies; verify)
+  - [x] confirmed SQLite targets exist: `verification_db.js` (claim_verifications PK=claim_id, claim_audit_log, claim_investigations), `intelligence/db.js` (sources PK=handle, claims), `sprint/db.js` (plans/sprints/tasks/accomplishments/daily_logs)
+  - [x] `pending_drafts` decision: **skip** — publish-worker-transient (8 in-flight), no SQLite home; runner owns posting via state files
+- [~] **Phase 2 — PG→SQLite merge migrator**
+  - [x] built `runner/intelligence/migrate_pg_to_sqlite.js` — self-introspecting (discovers PG+SQLite cols at runtime, migrates intersection, JSON/ISO/bool coercion); DRY-RUN by default; `--commit`, `--state <dir>` for copies; strategies: `upsert` (claim_verifications/sources, PK-keyed, PG-wins) + `append` (audit_log/interactions/sprint tables, content-key dedup, never deletes); syntax-checked ✓
+  - [ ] **run dry-run on the VM** (against live PG + the real SQLite dbs, read-only) → review counts/overlaps → tune strategies → then `--commit --state <copy>` and verify before cutover
 - [ ] **Phase 3 — fold worker logic onto VM** (verify-cycle, /export, claim-resolved, interactions; **re-host memory API + repoint MEMORY_API_URL**; test with DATABASE_URL unset)
 - [ ] **Phase 4 — cutover** (pause runner → re-run migrator for latest → unset DATABASE_URL → restart → verify full cycle, zero PG calls). *Reversible: re-set DATABASE_URL.*
 - [ ] **Phase 5 — decommission** *(GATED on explicit go — irreversible)*: backup Cloud SQL, then delete Scheduler jobs, Pub/Sub, Cloud Run workers, **Cloud SQL instance** (kills public-IP/sslmode debt).
