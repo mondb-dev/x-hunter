@@ -51,3 +51,69 @@ Cloud SQL + workers. Reversible until Cloud SQL is deleted (Phase 5).
 ## Findings / open items
 - **Tracked binary DBs:** `state/{intelligence,sprints,verification,hunter}.db` (+ intelligence `-wal/-shm`) are committed to git. Dormant now; once Option A makes them live they'd churn `.git`. **Phase 6: untrack + gitignore them** (like `index.db`).
 - **Reversibility:** nothing irreversible before Phase 5. Keep PG backup. Cutover is a one-line env revert.
+
+---
+
+# Stability watch (do this for ~1–2 days before giving the Phase 5 go)
+
+Goal: confirm the agent runs clean on SQLite before deleting Postgres. Run the daily health check below; everything green for ~2 days = safe to decommission.
+
+**Daily health check (paste-ready):**
+```bash
+gcloud compute ssh sebastian --zone=us-central1-a --project=sebastian-hunter --tunnel-through-iap --command='
+H=/home/raymond_d_baldonado_gmail_com/hunter; cd $H
+echo "services:"; systemctl is-active sebastian-runner sebastian-browser sebastian-watchdog.timer | tr "\n" " "; echo
+echo "last 3 cycles:"; tail -3 $H/runner/orchestrator.log | grep -oE "\"cycle\":[0-9]+,\"type\":\"[A-Z]+\",\"durationSec\":[0-9]+,.*\"postSuccess\":(true|false|null)"
+echo "errors (should be empty):"; tail -400 $H/runner/runner.log | grep -iE "postgres|DATABASE_URL|ECONNREFUSED|no such table|SqliteError|FOREIGN KEY|relation .* does not" | tail -5
+echo "export fresh:"; ls -la --time-style=+%m-%d_%H:%M $H/state/verification_export.json | awk "{print \$6}"
+echo "SQLite growing (verifications):"; python3 -c "import sqlite3;print(sqlite3.connect(\"$H/state/intelligence.db\").execute(\"select count(*) from claim_verifications\").fetchone()[0])"
+echo "git .git size + no db commits:"; du -sh $H/.git | cut -f1; git -C $H log -3 --name-only --pretty=format:%h | grep -E "\.db$" && echo "!! DB COMMITTED" || echo "  no db in commits OK"
+'
+```
+
+**What healthy looks like:** services `active active active`; cycles completing with periodic `postSuccess:true`; **error grep EMPTY**; export timestamp advancing; `claim_verifications` count slowly rising (new claims scored into SQLite); `.git` ~350M and **no `.db` in commits**.
+
+**Red flags → response:**
+| Symptom | Meaning | Action |
+|---|---|---|
+| `postgres`/`ECONNREFUSED`/`DATABASE_URL` in errors | something still calling PG | find the script not going through `db_backend`; fix before decommission |
+| `no such table` / `SqliteError` | a SQLite sibling missing a table | inspect which table; add create-if-not-exists |
+| runner inactive or no new cycle >2h | hang | watchdog should auto-restart within 15min; else `sudo systemctl restart sebastian-runner` |
+| `!! DB COMMITTED` | a `state/*.db` slipped back into git | confirm `.gitignore` has `state/*.db`; `git rm --cached` it |
+| posting stopped but no errors | likely a voice/x_control/critique gate, not DB | not a migration issue |
+
+**REVERT (only if SQLite proves broken):**
+```bash
+gcloud compute ssh sebastian --zone=us-central1-a --project=sebastian-hunter --tunnel-through-iap --command='
+H=/home/raymond_d_baldonado_gmail_com/hunter
+cp $H/.env.precutover $H/.env && sudo systemctl restart sebastian-runner'
+```
+→ restores `DATABASE_URL` + `MEMORY_API_URL` → back on Postgres. PG data is current (the verify worker kept writing it). The extra rows in SQLite are harmless.
+
+---
+
+# AI HANDOFF — executing Phase 5 (decommission) & Phase 6 (cleanup) when the go is given
+
+**State you're inheriting:** cutover is DONE + verified. The agent runs on SQLite (`DATABASE_URL` + `MEMORY_API_URL` commented in VM `~/.env`, backup `~/.env.precutover`). Branch `consolidate-sqlite` is merged to `main`. Postgres (`sebastian-db`, public IP `35.223.112.4`) + Cloud Run workers (`hunter-verify`, `hunter-publish`, `hunter-memory`) + Cloud Scheduler + Pub/Sub still exist as the fallback. Do NOT start until the user explicitly says the stability window passed.
+
+**VM access:** `gcloud compute ssh sebastian --zone=us-central1-a --project=sebastian-hunter --tunnel-through-iap --command="…"` (always `--tunnel-through-iap`). Migrator is at `runner/intelligence/migrate_pg_to_sqlite.js`; run it with `DATABASE_URL` passed inline from `.env.precutover` (it's commented in live `.env`): `DBURL=$(grep '^#CUTOVER DATABASE_URL' ~/hunter/.env.precutover | sed 's/^#CUTOVER //;s/DATABASE_URL=//'); DATABASE_URL="$DBURL" node ...`.
+
+**Phase 5 — decommission (IRREVERSIBLE; one step at a time, verify between):**
+1. **Final sync:** the verify worker has been writing PG every 2h since cutover. Run `migrate_pg_to_sqlite.js --commit` once more (with DATABASE_URL inline) to pull those last rows into SQLite. Verify counts rose.
+2. **Stop the inflow first:** pause/delete Cloud Scheduler jobs (`verify-claims-schedule`, `export-verification`) and Pub/Sub push subs (`claim-resolved-push`, `cycle-complete-push`) so nothing writes PG anymore.
+3. **Backup Cloud SQL:** `gcloud sql export sql sebastian-db gs://… ` — NO GCS, so instead `pg_dump` to a local file on the VM and copy it off (or `gcloud sql backups create`). Keep the dump.
+4. **Delete Cloud Run workers:** `gcloud run services delete hunter-verify hunter-publish hunter-memory --region=us-central1`.
+5. **Delete Cloud SQL:** `gcloud sql instances delete sebastian-db` — this kills the public-IP/sslmode=disable security debt. Point of no return.
+6. Verify the runner is unaffected (it doesn't touch any of these post-cutover).
+
+**Phase 6 — repo cleanup (after Phase 5 only; `.pg.js` is the revert path so don't delete earlier):**
+- `git rm`: all `*.pg.js` (`scraper/db.pg.js`, `runner/intelligence/{db,verification_db,interactions_db}.pg.js`, `runner/sprint/db.pg.js`), `runner/lib/pg.js`, `runner/intelligence/migrate_pg_to_sqlite.js` (one-off, done), `workers/` (verify/publish/memory), `web/Dockerfile` + `web/cloudbuild.yaml` (dead Cloud-Run/GCS-FUSE), the `deploy-web` job in `.github/workflows/deploy.yml` (dead — also flagged as task `task_19f5e050`).
+- Collapse `runner/lib/db_backend.js` to SQLite-only (or delete it and have consumers require the SQLite modules directly).
+- Remove `DATABASE_URL`/`MEMORY_API_URL`/pg/GCS from `.env.example` + scrub remaining refs in docs (`docs/ARCHITECTURE.md`, `docs/SYSTEM_DIAGRAM.md`) to a single-SQLite spine.
+- Remove the now-dead `DATABASE_URL`/`MEMORY_API_URL` lines from the VM `.env` + `.env.precutover` once you're sure no revert is wanted.
+
+**Gotchas already hit (so you don't repeat them):**
+- VM `git pull` of the DB-untrack commit DELETES the working-tree `state/*.db` → **back them up before any VM pull/reset, restore after** (`/tmp/db_backup`).
+- Migrator append must exclude autoincrement `id` (collision) — already fixed; relational sprint tables use `replace` with FK off.
+- Deeply-nested `gcloud ssh --command="node -e \"…\""` quoting is fragile (the `$1`/`$()` escaping breaks silently) — prefer `scp` a script then run it, or pass values via inline env vars.
+- The runner pushes to `main` every ~30min with `pull --rebase -Xtheirs`; expect to rebase your local before pushing.
