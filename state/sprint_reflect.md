@@ -1,51 +1,21 @@
-## Sprint Reflection: Sovereignty & Global Governance Discourse Map (Week 1)
+Key Findings:
+- The tension between national sovereignty and international law is a consistently high-signal area, with clear opposing narratives advocating for national autonomy or global cooperation.
+- Geopolitical events, such as the US-Iran naval incident, are heavily subjected to narrative manipulation, utilizing conflicting claims, misleading visuals, and re-contextualized information to shape public perception.
+- Religious and nationalist rhetoric are frequently weaponized to justify political actions, promote anti-immigrant sentiment, and inflame geopolitical tensions.
+- Persistent claims of election fraud and political corruption contribute significantly to distrust in democratic institutions and accountability.
+- Economic disparity and corporate accountability are recurring themes, raising questions about fairness and institutional integrity.
 
-### Key Findings
-- Observed numerous instances of information manipulation, particularly around political events and geopolitical narratives, directly aligning with the sprint's focus on information integrity.
-- Identified recurring discussions around national sovereignty, international agreements, and global economic shifts, which will be crucial for categorizing discourse related to global governance.
-- The distinction between verified and unverified claims remains a critical challenge, highlighting the need for robust mechanisms to assess information sources.
+Themes:
+- Polarized Narratives: Discourse is often framed in highly binary terms, making nuanced understanding challenging.
+- Disinformation Tactics: Intentional use of misleading visuals, selective information, and emotional appeals to manipulate public opinion.
+- Erosion of Trust: A continuous undermining of public confidence in political bodies, media, and democratic processes.
+- Interconnectedness of Axes: Various belief axes frequently intersect and reinforce each other, forming complex narrative webs.
 
-### Themes
-- **Information Weaponization**: Repeated instances of unverified political claims and propagandistic framing underscore how information is strategically deployed to influence public perception.
-- **Institutional Accountability**: Calls for transparency and accountability, particularly in political and international contexts, persist as a significant undercurrent in discourse.
-- **Geopolitical Realignments**: Discussions around shifting economic powers and international relations indicate an evolving global landscape, which necessitates careful tracking of sovereignty and international law.
+Gaps:
+- While claims are identified, a more structured approach to analyzing the actors propagating these claims and their specific manipulative strategies is needed for deeper sprint insights.
+- The current categorization needs to be further refined to precisely map posts to the specific poles of the "Sovereignty/Int. Law/Global Governance" tension.
 
-### Gaps
-- Lack of a structured data schema for systematically extracting and storing these observations beyond free-form notes.
-- Absence of a clearly defined categorization logic that can be consistently applied to new posts to sort them into 'Sovereignty', 'International Law', or 'Global Governance'.
-- Limited ability to automatically ingest and process a large volume of X posts, currently relying on manual observation.
-
-### Next Steps (Proposals for subsequent sprint tasks)
-1. **Define Data Schema & Ingestion Script**: Develop a formal JSON schema for storing extracted features from X posts (e.g., `post_id`, `author`, `content`, `category`, `manipulation_tactic`, `geopolitical_actor`). Prioritize creating a script to parse raw X data into this schema.
-2. **Develop Preliminary Categorization Logic**: Formalize rules and keywords for categorizing posts into `Sovereignty`, `International Law`, `Global Governance`, `Manipulation`, `Misinformation`, and `Accountability`. This logic should be explicit enough for automated or semi-automated application.
-3. **Ingest and Categorize Initial 50+ Posts**: Apply the developed schema and categorization logic to a sample dataset of X posts to test and refine the process, aiming to reach the Week 1 goal of 50+ categorized posts.
-4. **Explore Visualization Libraries for Prototype**: Begin researching suitable Python/JavaScript libraries (e.g., Matplotlib, D3.js, Plotly) for visualizing the categorized and analyzed discourse data. This will inform future sprint tasks on prototype development.
-
-This reflection identifies the core components needed to move from raw observation to structured data, enabling the mapping of sovereignty and global governance discourse.
-
-## Proposed Data Schema for X Post Analysis:
-
-```json
-{
-  "post_id": "string",
-  "timestamp": "ISO timestamp",
-  "author": "string",
-  "content": "string",
-  "url": "string (https://x.com/user/status/ID)",
-  "keywords": ["string"],
-  "sentiment": "string (Positive|Negative|Neutral)",
-  "category": ["string (Sovereignty|International Law|Global Governance|Manipulation|Misinformation|Accountability)"],
-  "related_axes": ["string (axis_id)"],
-  "manipulation_tactic": "string (e.g., emotional appeal, unverified claim, propaganda) - nullable",
-  "geopolitical_actor": "string (e.g., Country, Organization, Political Figure) - nullable"
-}
-```
-
-## Preliminary Categorization Logic:
-
-- **Sovereignty**: Keywords: "national borders", "immigration policy", "national defense", "internal control", "independence", "national identity", "self-determination", "autonomy".
-- **International Law**: Keywords: "treaties", "international agreements", "war crimes", "human rights", "UN resolutions", "international court", "multilateral cooperation".
-- **Global Governance**: Keywords: "international organizations", "UN", "WHO", "WEF", "global cooperation", "new world order", "global institutions", "world bank", "IMF".
-- **Manipulation**: Keywords: "unverified claim", "emotional appeal", "propaganda", "narrative framing", "misleading", "disinformation", "fake news", "engagement bait".
-- **Misinformation**: Explicit identification of factually incorrect or intentionally misleading information.
-- **Accountability**: Keywords: "transparency", "investigation", "corruption", "oversight", "justice", "ethics", "integrity".
+Next Steps for Sprint:
+- Refine Categorization Logic: Develop more precise rules and keywords for categorizing posts into the "National Sovereignty/Autonomy" versus "International Law/Cooperation" poles.
+- Actor Identification: Begin to identify and log key accounts that are consistently driving narratives within the sprint's domain.
+- Structured Ingestion: Continue ingesting posts, applying the refined categorization, and extracting specific claims and rhetorical strategies used.
