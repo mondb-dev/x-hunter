@@ -1,29 +1,13 @@
-- [SIGNAL] @EricLDaugh reports further arrests at the Reflecting Pool, framed as "leftists" and "PSYCHO WITH TDS!", highlighting narrative manipulation and tribal signaling surrounding law enforcement actions.
-- [SIGNAL] @realMaalouf shares a highly charged incident of an "Islamic migrant" praying in a Monaco restaurant, generating discussion on individual expression vs. societal norms and underlying xenophobic sentiments, relevant to individual freedoms vs. control.
-- [SIGNAL] @MarioBojic posts Jordan Bardella's rhetoric on "stopping France's collapse" and "reconquering lost territories," indicative of narratives around national sovereignty, societal breakdown, and potential authoritarian control.
-- [SIGNAL] @Real_JFK_Jr_ uses Australia's gun control as a narrative of a "free country" lost, framing it as a government overreach and promoting distrust.
-- [SIGNAL] @EricLDaugh reports police arresting "another leftist" at the Lincoln Reflecting Pool, with the President claiming 5 are in custody, indicating continued narrative control around perceived dissent.
-- [SIGNAL] @WhiteHouse issues a stark warning of "RECORD HIGH DEPORTATIONS," threatening immediate arrest and deportation for undocumented individuals, a clear assertion of state power that impacts individual autonomy.
-- [SIGNAL] @MarioNawfal highlights the use of "plainclothes informants" by U.S. Park Police at the Reflecting Pool to catch "degenerates screwing with the sealant," suggesting surveillance and control tactics against perceived dissent.
-- [SPRINT: research] Exploration of visualization libraries for prototype is complete. Both Python and JavaScript offer powerful options, depending on complexity and interactivity needs.
-- [SIGNAL] @nicksortor reports President Trump signing executive orders to secure the US as the "WORLD LEADER in Quantum Computing," highlighting national competition and the exercise of technological power. (https://x.com/nicksortor/status/2069149995526496478)
-- [SIGNAL] @Reuters reports protests in Albania against luxury developments, one backed by Jared Kushner, connecting powerful figures to public discontent and potential abuses of influence. (https://x.com/Reuters/status/2069181132764303763)
-- [SIGNAL] @Real_JFK_Jr_ claims Barack Obama ordered the Mar-a-Lago raid to recover a "falsified intelligence report" used to frame Trump, indicating allegations of deep-state manipulation and political weaponization. (https://x.com/Real_JFK_Jr_/status/2069192828480028872)
-- [NOTED] "reflecting pool" — 6 posts, no follow-up this cycle
-- [NOTED] "police" — 6 posts, no follow-up this cycle
-- [NOTED] "why" — 6 posts, no follow-up this cycle
-- [NOTED] "world" — 4 posts, no follow-up this cycle
-- [NOTED] "jail" — 3 posts, no follow-up this cycle
-- [NOTED] "YULO BROTHERS DOMINATING WORLD GYMNASTICS" - 1 post, no follow-up this cycle
-- [NOTED] "This is Paris, France today!" - 1 post, no follow-up this cycle
-- [NOTED] "Guy had insane awareness of his surroundings" - 1 post, no follow-up this cycle
-- [NOTED] "Tacloban tightens curfew, security after deadly school shooting" — 2 posts, no follow-up this cycle
-- [NOTED] "Super typhoon Francisco moves slowly near Cagayan; Signal No. 1 still up" — 1 post, no follow-up this cycle
-- [NOTED] "Rappler Recap: Education, livelihoods on hold in Mindanao quake’s aftermath" — 1 post, no follow-up this cycle
-- [NOTED] "Alex Eala falls to Elise Mertens anew in Bad Homburg Open exit" — 1 post, no follow-up this cycle
-- [NOTED] "[ANALYSIS] A day at the UN: What does AI mean for humanity?" — 1 post, no follow-up this cycle
-- [NOTED] "Sarangani principal shows makeshift office in Mindanao quake’s aftermath" — 1 post, no follow-up this cycle
-- [NOTED] "Stop genocide’: Activist stopped by police at Tokyo’s Israeli Embassy" — 1 post, no follow-up this cycle
-- [NOTED] "Why has Keir Starmer resigned as UK prime minister?" — 1 post, no follow-up this cycle
-- [NOTED] "15 killed after a fire ignited in a coaching centre in Lucknow, India" — 1 post, no follow-up this cycle
-- [NOTED] "OpenAI launches new initiative to help find and patch open-source bugs" — 1 post, no follow-up this cycle
+## Signals and Tensions - Day 121, Hour 03
+- [SIGNAL] @EricLDaugh reports the US Senate passing legislation to block Wall Street firms from buying single-family homes. This signifies a tension between corporate power and legislative efforts to protect individual property rights, aligning with "Power, Institutions, and Rule of Law." [SPRINT: research] (https://x.com/EricLDaugh/status/2069208001370608081)
+- [SIGNAL] @Nher_who shares a video where a family questioning a political leader (CM Yogi) about a student's death is allegedly silenced by a mic muting. This highlights potential information suppression and evasion of accountability by powerful figures, directly relevant to "Truth and Evidence in Public Discourse" and "Power, Institutions, and Rule of Law." [SPRINT: research] (https://x.com/Nher_who/status/2069248763768803563)
+- [SIGNAL] Human Rights Watch reports on the need for robust global action to curb Sudan atrocities. This points to humanitarian concerns and the role of international bodies in holding states accountable, aligning with "Geopolitical Rhetoric vs. Humanitarian Concerns" and "Human Rights and Exploitation." [SPRINT: research] (https://www.hrw.org/news/2026/06/22/robust-global-action-is-key-to-curbing-sudan-atrocities)
+- [SIGNAL] Rappler reports that BARMM minorities are pushing for true representation and opposing 'crayon politics'. This reflects a struggle for authentic democratic participation and against political manipulation within institutions, relevant to "Power, Institutions, and Rule of Law" and "Authentic Participation vs. Managed Consent." [SPRINT: research] (https://www.rappler.com/philippines/barmm-minories-demand-genuine-representation-parliamentary-elections/)
+- [CURIOSITY: contradiction_axis_new_world_order_disco] Searched for "Discourse on the New" on X, but results were not relevant to geopolitical "New World Order" or related to the contradiction with immigration policy. (https://x.com/search?q=Discourse%20on%20the%20New&f=live)
+- [SIGNAL] @ruicharadrius expresses concern over Israel's influence in Australian and New Zealand politics, citing an image with Israeli and NZ flags and a cross. This suggests tensions around national sovereignty and foreign influence. (https://x.com/ruicharadrius/status/2068926250765463574)
+- [SIGNAL] @mb_ghalibaf uses a soccer image with the caption "This is how we protect our land," which, combined with subsequent replies about killing Iranian football fans, could imply a narrative of fierce national defense potentially at odds with human rights. (https://x.com/mb_ghalibaf/status/2068813904390590639)
+- [SIGNAL] @kikopangilinan advocates for accountability for minors who commit crimes, highlighting a societal concern about justice and protection of vulnerable spaces. (https://x.com/kikopangilinan/status/2069256843302670529)
+- [SIGNAL] @JDVance reports on a $3.7 billion Medicare fraud scheme and the apprehension of the fraudster, emphasizing justice for crimes against the American people. This speaks to concerns about corruption and accountability. (https://x.com/JDVance/status/2069227951678185823)
+- [SIGNAL] @narendramodi claims Maoist terrorism is in its "final breaths" due to development efforts and a "Nation First" spirit. This frames state action as a success in maintaining control and promoting national interests. (https://x.com/narendramodi/status/2069103973894590675)
+- [SIGNAL] @Acyn reports on a politician, Khanna, denying insider trading allegations from Musk and advocating for a ban on stock trading in Congress. This highlights issues of political integrity and accusations of corruption. (https://x.com/Acyn/status/2069238927408693291)
+- [SIGNAL] @FurkanGozukara shares claims by Candace Owens about a "terrifying psychological operation" involving a fake obituary to silence her investigation. This aligns with concerns about information manipulation and attempts to suppress inconvenient narratives. (https://x.com/FurkanGozukara/status/2069223795072602326)
