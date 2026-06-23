@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-22T22:31:42.290Z",
+  "generated_at": "2026-06-23T00:34:15.308Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-22T22:31:45.871Z",
+  "profiled_at": "2026-06-23T00:34:16.849Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -633,7 +633,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-06-22T00:15:00Z",
       "discovery": {
-        "distinct_urls": 23,
+        "distinct_urls": 25,
         "example_urls": [
           "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
           "https://www.theguardian.com/world/2026/jun/21/canada-immigration-us-deportation",
@@ -643,7 +643,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 2,
-          "reading_queue": 22
+          "reading_queue": 24
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -676,7 +676,7 @@
         "breadth": {
           "score": 0.5866666666666667,
           "basis": [
-            "distinct_urls:23",
+            "distinct_urls:25",
             "distinct_axes:2",
             "origin_types:2"
           ]
@@ -715,7 +715,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:23",
+            "distinct_urls:25",
             "distinct_axes:2",
             "origin_types:2",
             "referring_accounts:0",
@@ -757,13 +757,145 @@
       }
     },
     {
+      "domain": "aljazeera.com",
+      "entity": "Aljazeera",
+      "kind": "news",
+      "first_seen_at": "2026-06-22T02:45:00Z",
+      "last_seen_at": "2026-06-22T23:31:00Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://www.aljazeera.com/opinions/2026/6/22/the-icc-must-investigate-israels-genocidal-use-of-sexual?traffic_source=rss",
+          "https://www.aljazeera.com/economy/2026/6/22/us-house-committee-reaches-bipartisan-deal-on-social-media-rules-for-kids?traffic_source=rss",
+          "https://www.aljazeera.com/video/the-take-2/2026/6/22/what-the-world-cup-looks-like-from-gaza?traffic_source=rss",
+          "https://www.aljazeera.com/economy/2026/6/22/shipping-stalls-in-strait-of-hormuz-after-iran-declares-key-waterway-shut?traffic_source=rss",
+          "https://www.aljazeera.com/video/newsfeed/2026/6/22/encouraging-progress-made-as-first-round-us-iran-talks-end?traffic_source=rss"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 5,
+          "reading_queue": 1,
+          "journals": 3
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_geopolitical_rhetoric_v1",
+          "axis_global_power_realignments_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.75,
+          "basis": [
+            "newsroom_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.5008333333333332,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:3",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.26249999999999996,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.72,
+          "confidence": 0.85,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:26",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.6497916666666667,
+          "confidence": 0.24129999999999996,
+          "method": "mechanical_v1",
+          "basis": [
+            "newsroom_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:5",
+            "distinct_axes:3",
+            "origin_types:3",
+            "referring_accounts:0",
+            "origin_types:3",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-22T03:16:40.022Z",
+        "homepage_url": "https://aljazeera.com/",
+        "example_url": "https://www.aljazeera.com/economy/2026/6/22/shipping-stalls-in-strait-of-hormuz-after-iran-declares-key-waterway-shut?traffic_source=rss",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.aljazeera.com/",
+        "example_final_url": "https://www.aljazeera.com/economy/2026/6/22/shipping-stalls-in-strait-of-hormuz-after-iran-declares-key-waterway-shut?traffic_source=rss",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 23,
+          "opinion_marker": true
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 26,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "nytimes.com",
       "entity": "Nytimes",
       "kind": "news",
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-06-22T00:15:00Z",
       "discovery": {
-        "distinct_urls": 21,
+        "distinct_urls": 22,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
@@ -773,7 +905,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "reading_queue": 22
+          "reading_queue": 23
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -805,7 +937,7 @@
         "breadth": {
           "score": 0.5283333333333333,
           "basis": [
-            "distinct_urls:21",
+            "distinct_urls:22",
             "distinct_axes:1",
             "origin_types:2"
           ]
@@ -844,7 +976,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:21",
+            "distinct_urls:22",
             "distinct_axes:1",
             "origin_types:2",
             "referring_accounts:0",
@@ -881,137 +1013,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "aljazeera.com",
-      "entity": "Aljazeera",
-      "kind": "news",
-      "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-06-22T16:01:00Z",
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://www.aljazeera.com/opinions/2026/6/22/the-icc-must-investigate-israels-genocidal-use-of-sexual?traffic_source=rss",
-          "https://www.aljazeera.com/video/the-take-2/2026/6/22/what-the-world-cup-looks-like-from-gaza?traffic_source=rss",
-          "https://www.aljazeera.com/economy/2026/6/22/shipping-stalls-in-strait-of-hormuz-after-iran-declares-key-waterway-shut?traffic_source=rss",
-          "https://www.aljazeera.com/video/newsfeed/2026/6/22/encouraging-progress-made-as-first-round-us-iran-talks-end?traffic_source=rss"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 4,
-          "reading_queue": 1,
-          "journals": 3
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_geopolitical_rhetoric_v1",
-          "axis_global_power_realignments_v1",
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.75,
-          "basis": [
-            "newsroom_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.4716666666666666,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:3",
-            "origin_types:3"
-          ]
-        },
-        "corroboration": {
-          "score": 0.26249999999999996,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:3"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.72,
-          "confidence": 0.85,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:26",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.6434114583333334,
-          "confidence": 0.212675,
-          "method": "mechanical_v1",
-          "basis": [
-            "newsroom_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:4",
-            "distinct_axes:3",
-            "origin_types:3",
-            "referring_accounts:0",
-            "origin_types:3",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-22T03:16:40.022Z",
-        "homepage_url": "https://aljazeera.com/",
-        "example_url": "https://www.aljazeera.com/economy/2026/6/22/shipping-stalls-in-strait-of-hormuz-after-iran-declares-key-waterway-shut?traffic_source=rss",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.aljazeera.com/",
-        "example_final_url": "https://www.aljazeera.com/economy/2026/6/22/shipping-stalls-in-strait-of-hormuz-after-iran-declares-key-waterway-shut?traffic_source=rss",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 23,
-          "opinion_marker": true
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 26,
           "opinion_marker": false
         }
       }
@@ -1954,9 +1955,9 @@
       "entity": "Hrw",
       "kind": "unknown",
       "first_seen_at": "2026-06-21T15:45:00Z",
-      "last_seen_at": "2026-06-22T20:36:06.591Z",
+      "last_seen_at": "2026-06-22T23:31:00Z",
       "discovery": {
-        "distinct_urls": 16,
+        "distinct_urls": 17,
         "example_urls": [
           "https://www.hrw.org/news/2026/06/18/support-builds-to-protect-children-from-crimes-against-humanity",
           "https://www.hrw.org/news/2026/06/18/uzbekistan-activist-held-in-trumped-up-case",
@@ -1965,8 +1966,8 @@
           "https://www.hrw.org/news/2026/06/17/japans-flag-desecration-bill-threatens-rights"
         ],
         "origin_counts": {
-          "ontology_evidence": 10,
-          "reading_queue": 2,
+          "ontology_evidence": 11,
+          "reading_queue": 3,
           "journals": 18
         },
         "distinct_referring_accounts": 0,
@@ -2002,7 +2003,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:16",
+            "distinct_urls:17",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -2036,12 +2037,12 @@
         },
         "overall": {
           "score": 0.5215885416666666,
-          "confidence": 0.543925,
+          "confidence": 0.566425,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:16",
+            "distinct_urls:17",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -2735,9 +2736,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-22T19:53:04.000Z",
+      "last_seen_at": "2026-06-22T21:57:00.000Z",
       "discovery": {
-        "distinct_urls": 5873,
+        "distinct_urls": 5875,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2747,9 +2748,9 @@
         ],
         "origin_counts": {
           "feed_buffer": 3497,
-          "feed_buffer_reply": 3801
+          "feed_buffer_reply": 3803
         },
-        "distinct_referring_accounts": 1896,
+        "distinct_referring_accounts": 1897,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -2787,7 +2788,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5873",
+            "distinct_urls:5875",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2795,7 +2796,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1896",
+            "referring_accounts:1897",
             "origin_types:2"
           ]
         },
@@ -2825,10 +2826,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5873",
+            "distinct_urls:5875",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1896",
+            "referring_accounts:1897",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -9976,7 +9977,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T23:26:09.784Z",
+        "fetched_at": "2026-06-22T23:33:40.171Z",
         "homepage_url": "https://makofy.com/",
         "example_url": "https://makofy.com/openclaw?twclid=217okoej56crajhkd22b6nsfzf",
         "homepage_status": 200,
@@ -10138,9 +10139,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-16T09:36:45.269Z",
-      "last_seen_at": "2026-06-21T22:29:27.287Z",
+      "last_seen_at": "2026-06-22T22:40:13.993Z",
       "discovery": {
-        "distinct_urls": 74,
+        "distinct_urls": 75,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -10149,7 +10150,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 74
+          "articles": 75
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -10178,7 +10179,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:74",
+            "distinct_urls:75",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -10216,7 +10217,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:74",
+            "distinct_urls:75",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -10886,6 +10887,133 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "techcrunch.com",
+      "entity": "Techcrunch",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-22T20:36:06.591Z",
+      "last_seen_at": "2026-06-22T23:31:00Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
+          "https://techcrunch.com/2026/06/22/nvidia-wants-to-cut-data-center-water-use-but-thats-not-the-same-as-fixing-ais-water-problem/",
+          "https://techcrunch.com/2026/06/22/microsoft-and-chevron-plan-one-of-the-largest-gas-powered-data-center-projects-in-us/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 1,
+          "journals": 2
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.2658333333333333,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:1",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.57,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:11",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.40455729166666665,
+          "confidence": 0.139075,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:3",
+            "distinct_axes:1",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-23T00:01:45.208Z",
+        "homepage_url": "https://techcrunch.com/",
+        "example_url": "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://techcrunch.com/",
+        "example_final_url": "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 11,
           "opinion_marker": false
         }
       }
@@ -18407,7 +18535,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T00:26:10.243Z",
+        "fetched_at": "2026-06-23T00:34:15.894Z",
         "homepage_url": "https://celsius.com/",
         "example_url": "https://www.celsius.com/buy-locate/?utm_medium=paidsocial&utm_campaign=pillars&utm_content=musicfestival&twclid=2ejkfis7fdkuksuqyzg68f5wfq",
         "homepage_status": 200,
@@ -21527,7 +21655,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T23:26:10.034Z",
+        "fetched_at": "2026-06-22T23:33:40.516Z",
         "homepage_url": "https://robinhood.com/",
         "example_url": "https://robinhood.com/us/en/about/crypto/?twclid=29pd7fgrhb1gsdhy8smyxe6kbg",
         "homepage_status": 200,
@@ -23143,7 +23271,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T22:56:09.523Z",
+        "fetched_at": "2026-06-22T23:01:43.229Z",
         "homepage_url": "https://scienceandculture.com/",
         "example_url": "https://scienceandculture.com/2026/04/cosmic-orphans-no-more-stephen-meyer-on-the-meaning-of-the-artemis-ii-mission/?twclid=2rnhdm9vyiuko1egq7pyr6uby",
         "homepage_status": 200,
@@ -23267,7 +23395,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T22:56:10.562Z",
+        "fetched_at": "2026-06-22T23:01:44.056Z",
         "homepage_url": "https://19fortyfive.com/",
         "example_url": "https://www.19fortyfive.com/2026/04/we-touched-the-super-guppy-nasas-whale-shaped-cargo-plane-has-a-25-foot-wide-internal-diameter-swallowed-apollo-rocket-stages-whole-and-only-one-still-flies/?twclid=23xrrcgqxanqbvkiqbsyzs1ox8",
         "homepage_status": 200,
@@ -23391,7 +23519,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T22:56:10.743Z",
+        "fetched_at": "2026-06-22T23:01:44.416Z",
         "homepage_url": "https://usatoday.com/",
         "example_url": "https://www.usatoday.com/story/sponsor-story/collegium-pharmaceutical/2026/05/05/paris-hilton-on-adhd-advocacy-and-support-in-the-workplace/89244166007/?twclid=28p40ybg70zs0nzujyc1b1b5mt",
         "homepage_status": 200,
@@ -23515,7 +23643,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T22:56:10.957Z",
+        "fetched_at": "2026-06-22T23:01:44.728Z",
         "homepage_url": "https://axios.com/",
         "example_url": "https://www.axios.com/2026/04/21/axios-event-future-of-health-summit-2026?twclid=26ijftyq8roj3woqxoi4hprufc",
         "homepage_status": 403,
@@ -24263,7 +24391,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T23:26:10.424Z",
+        "fetched_at": "2026-06-22T23:33:41.359Z",
         "homepage_url": "https://tcgsherpa.com/",
         "example_url": "https://www.tcgsherpa.com/?utm_source=x&utm_medium=paid_social&utm_campaign=tcg-sherpa-launch-apr26&utm_content=What_Does_static&twclid=2c6bdjexgck8vqk1pzn57lvtb7",
         "homepage_status": 200,
@@ -24388,7 +24516,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T00:26:10.462Z",
+        "fetched_at": "2026-06-23T00:34:16.114Z",
         "homepage_url": "https://doordash.com/",
         "example_url": "https://www.doordash.com/browse/list/7e5f3a06-8f84-4d8f-b1f9-dd2f7871459a?twclid=2expxmm8nilk7hhcpg2qwpcu7n",
         "homepage_status": 403,
@@ -25009,7 +25137,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T23:26:10.538Z",
+        "fetched_at": "2026-06-22T23:33:41.458Z",
         "homepage_url": "https://x.xom/",
         "example_url": "https://x.xom/EricLDaugh/status/2049914155461652916",
         "homepage_status": null,
@@ -25111,7 +25239,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:31",
+            "outbound_links:42",
             "opinion_marker:false"
           ]
         },
@@ -25132,7 +25260,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T23:56:44.179Z",
+        "fetched_at": "2026-06-23T00:01:47.366Z",
         "homepage_url": "https://philstar.com/",
         "example_url": "https://philstar.com/headlines/2026/05/19/2528923/fleeing-bato-says-hes-willing-be-jaile",
         "homepage_status": 200,
@@ -25148,7 +25276,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 72,
+          "outbound_links_count": 75,
           "opinion_marker": false
         },
         "example": {
@@ -25158,86 +25286,8 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 31,
+          "outbound_links_count": 42,
           "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "techcrunch.com",
-      "entity": "Techcrunch",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-22T20:36:06.591Z",
-      "last_seen_at": "2026-06-22T22:04:09.960Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://techcrunch.com/2026/06/22/nvidia-wants-to-cut-data-center-water-use-but-thats-not-the-same-as-fixing-ais-water-problem/",
-          "https://techcrunch.com/2026/06/22/microsoft-and-chevron-plan-one-of-the-largest-gas-powered-data-center-projects-in-us/"
-        ],
-        "origin_counts": {
-          "journals": 2
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3640885416666667,
-          "confidence": 0.07772499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
         }
       }
     },
@@ -25582,7 +25632,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T07:55:55.514Z",
+        "fetched_at": "2026-06-23T00:01:47.629Z",
         "homepage_url": "https://cuervo.com/",
         "example_url": "https://cuervo.com/?twclid=2cw6oebezormtkrlgtaweck05m",
         "homepage_status": 200,
@@ -25706,7 +25756,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T23:56:44.620Z",
+        "fetched_at": "2026-06-23T00:01:48.025Z",
         "homepage_url": "https://americanexpress.com/",
         "example_url": "https://www.americanexpress.com/en-us/benefits/membership/experiences/nba/?extlink=dw-us-GABM-PLATSOC_CH_sm-CU_us-BU_GABM-REF_TST_EEP_URL_g_psoc&cpid_g_psoc=&twclid=2dpgv5hu2sysfpt5ld9o2y2ukf",
         "homepage_status": 200,
@@ -25830,7 +25880,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T23:56:44.660Z",
+        "fetched_at": "2026-06-23T00:34:16.169Z",
         "homepage_url": "https://proalgo.fun/",
         "example_url": "https://proalgo.fun/chat?rez=sy24ria&twclid=29ce9rs2p6qobknj46cgwzi02y",
         "homepage_status": null,
@@ -26573,7 +26623,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T23:56:45.858Z",
+        "fetched_at": "2026-06-23T00:34:16.849Z",
         "homepage_url": "https://surething.io/",
         "example_url": "https://surething.io/chat-index?utm_source=xads&twclid=27yqtzrn5j3zjmadm486py1wgi",
         "homepage_status": 200,
@@ -35958,6 +36008,84 @@
           "has_corrections_link": false,
           "outbound_links_count": 9,
           "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "oneleet.com",
+      "entity": "Oneleet",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-14T13:08:00.000Z",
+      "last_seen_at": "2026-06-22T19:21:33.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://oneleet.com/?utm_source=twitter&utm_medium=paid_social&utm_campaign=compliance_theater&twclid=2a67j2m5wa6dh7oxzhxot0zwu2",
+          "https://www.oneleet.com/book-demo?utm_source=twitter&utm_medium=paid_social&utm_campaign=book_demo&utm_content=image_ad&twclid=2611ns1ir665ovs4yd74bnvuhx"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "oneleet"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
         }
       }
     },
@@ -61333,83 +61461,6 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "moomoo"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "oneleet.com",
-      "entity": "Oneleet",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-14T13:08:00.000Z",
-      "last_seen_at": "2026-06-14T13:08:00.000Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://oneleet.com/?utm_source=twitter&utm_medium=paid_social&utm_campaign=compliance_theater&twclid=2a67j2m5wa6dh7oxzhxot0zwu2"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "oneleet"
         ],
         "distinct_axes": []
       },

@@ -1,8 +1,29 @@
 - [SIGNAL] @EricLDaugh reports further arrests at the Reflecting Pool, framed as "leftists" and "PSYCHO WITH TDS!", highlighting narrative manipulation and tribal signaling surrounding law enforcement actions.
 - [SIGNAL] @realMaalouf shares a highly charged incident of an "Islamic migrant" praying in a Monaco restaurant, generating discussion on individual expression vs. societal norms and underlying xenophobic sentiments, relevant to individual freedoms vs. control.
 - [SIGNAL] @MarioBojic posts Jordan Bardella's rhetoric on "stopping France's collapse" and "reconquering lost territories," indicative of narratives around national sovereignty, societal breakdown, and potential authoritarian control.
-- [SIGNAL] @Real_JFK_Jr_ uses Australia's gun control as a narrative of a "free country" lost, framing it as a government overreach and promoting distrust, tying into individual self-determination and political trust.
-[NOTED] "school shooting in Tacloban City, Philippines" — 1 post, no follow-up this cycle
-[NOTED] "Woodworking tips" — 1 post, no follow-up this cycle
-[NOTED] "diesel with water in Philippines" — 1 post, no follow-up this cycle
-[NOTED] "dollar bill under microscope" — 1 post, no follow-up this cycle
+- [SIGNAL] @Real_JFK_Jr_ uses Australia's gun control as a narrative of a "free country" lost, framing it as a government overreach and promoting distrust.
+- [SIGNAL] @EricLDaugh reports police arresting "another leftist" at the Lincoln Reflecting Pool, with the President claiming 5 are in custody, indicating continued narrative control around perceived dissent.
+- [SIGNAL] @WhiteHouse issues a stark warning of "RECORD HIGH DEPORTATIONS," threatening immediate arrest and deportation for undocumented individuals, a clear assertion of state power that impacts individual autonomy.
+- [SIGNAL] @MarioNawfal highlights the use of "plainclothes informants" by U.S. Park Police at the Reflecting Pool to catch "degenerates screwing with the sealant," suggesting surveillance and control tactics against perceived dissent.
+- [SPRINT: research] Exploration of visualization libraries for prototype is complete. Both Python and JavaScript offer powerful options, depending on complexity and interactivity needs.
+- [SIGNAL] @nicksortor reports President Trump signing executive orders to secure the US as the "WORLD LEADER in Quantum Computing," highlighting national competition and the exercise of technological power. (https://x.com/nicksortor/status/2069149995526496478)
+- [SIGNAL] @Reuters reports protests in Albania against luxury developments, one backed by Jared Kushner, connecting powerful figures to public discontent and potential abuses of influence. (https://x.com/Reuters/status/2069181132764303763)
+- [SIGNAL] @Real_JFK_Jr_ claims Barack Obama ordered the Mar-a-Lago raid to recover a "falsified intelligence report" used to frame Trump, indicating allegations of deep-state manipulation and political weaponization. (https://x.com/Real_JFK_Jr_/status/2069192828480028872)
+- [NOTED] "reflecting pool" — 6 posts, no follow-up this cycle
+- [NOTED] "police" — 6 posts, no follow-up this cycle
+- [NOTED] "why" — 6 posts, no follow-up this cycle
+- [NOTED] "world" — 4 posts, no follow-up this cycle
+- [NOTED] "jail" — 3 posts, no follow-up this cycle
+- [NOTED] "YULO BROTHERS DOMINATING WORLD GYMNASTICS" - 1 post, no follow-up this cycle
+- [NOTED] "This is Paris, France today!" - 1 post, no follow-up this cycle
+- [NOTED] "Guy had insane awareness of his surroundings" - 1 post, no follow-up this cycle
+- [NOTED] "Tacloban tightens curfew, security after deadly school shooting" — 2 posts, no follow-up this cycle
+- [NOTED] "Super typhoon Francisco moves slowly near Cagayan; Signal No. 1 still up" — 1 post, no follow-up this cycle
+- [NOTED] "Rappler Recap: Education, livelihoods on hold in Mindanao quake’s aftermath" — 1 post, no follow-up this cycle
+- [NOTED] "Alex Eala falls to Elise Mertens anew in Bad Homburg Open exit" — 1 post, no follow-up this cycle
+- [NOTED] "[ANALYSIS] A day at the UN: What does AI mean for humanity?" — 1 post, no follow-up this cycle
+- [NOTED] "Sarangani principal shows makeshift office in Mindanao quake’s aftermath" — 1 post, no follow-up this cycle
+- [NOTED] "Stop genocide’: Activist stopped by police at Tokyo’s Israeli Embassy" — 1 post, no follow-up this cycle
+- [NOTED] "Why has Keir Starmer resigned as UK prime minister?" — 1 post, no follow-up this cycle
+- [NOTED] "15 killed after a fire ignited in a coaching centre in Lucknow, India" — 1 post, no follow-up this cycle
+- [NOTED] "OpenAI launches new initiative to help find and patch open-source bugs" — 1 post, no follow-up this cycle
