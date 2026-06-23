@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-23T21:02:04.564Z",
+  "generated_at": "2026-06-23T23:02:04.414Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-23T21:02:07.363Z",
+  "profiled_at": "2026-06-23T23:02:05.367Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -389,9 +389,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-06-23T20:36:16.486Z",
+      "last_seen_at": "2026-06-23T22:06:31.518Z",
       "discovery": {
-        "distinct_urls": 20,
+        "distinct_urls": 21,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/22/the-icc-must-investigate-israels-genocidal-use-of-sexual?traffic_source=rss",
           "https://www.aljazeera.com/economy/2026/6/22/us-house-committee-reaches-bipartisan-deal-on-social-media-rules-for-kids?traffic_source=rss",
@@ -400,9 +400,9 @@
           "https://www.aljazeera.com/video/the-take-2/2026/6/22/what-the-world-cup-looks-like-from-gaza?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 15,
+          "ontology_evidence": 16,
           "reading_queue": 1,
-          "journals": 26
+          "journals": 27
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -438,7 +438,7 @@
         "breadth": {
           "score": 0.8216666666666665,
           "basis": [
-            "distinct_urls:20",
+            "distinct_urls:21",
             "distinct_axes:5",
             "origin_types:3"
           ]
@@ -477,7 +477,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:20",
+            "distinct_urls:21",
             "distinct_axes:5",
             "origin_types:3",
             "referring_accounts:0",
@@ -761,13 +761,143 @@
       }
     },
     {
+      "domain": "nytimes.com",
+      "entity": "Nytimes",
+      "kind": "news",
+      "first_seen_at": "2026-06-22T00:15:00Z",
+      "last_seen_at": "2026-06-23T22:06:31.518Z",
+      "discovery": {
+        "distinct_urls": 34,
+        "example_urls": [
+          "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
+          "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
+          "https://www.nytimes.com/2026/06/21/world/middleeast/vance-iran-talks-trump.html",
+          "https://www.nytimes.com/2026/06/21/world/europe/ukraine-poland-alliance-russia.html",
+          "https://www.nytimes.com/2026/06/21/world/middleeast/iran-nuclear-talks-questions.html"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 1,
+          "reading_queue": 34,
+          "journals": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.75,
+          "basis": [
+            "newsroom_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.5883333333333334,
+          "basis": [
+            "distinct_urls:34",
+            "distinct_axes:1",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.26249999999999996,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.16,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:true",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.6689322916666666,
+          "confidence": 0.597175,
+          "method": "mechanical_v1",
+          "basis": [
+            "newsroom_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:34",
+            "distinct_axes:1",
+            "origin_types:3",
+            "referring_accounts:0",
+            "origin_types:3",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-21T15:47:58.759Z",
+        "homepage_url": "https://nytimes.com/",
+        "example_url": "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
+        "homepage_status": 200,
+        "example_status": 403,
+        "homepage_final_url": "https://www.nytimes.com/",
+        "example_final_url": "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": true,
+          "outbound_links_count": 5,
+          "opinion_marker": true
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-06-22T00:15:00Z",
       "discovery": {
-        "distinct_urls": 39,
+        "distinct_urls": 40,
         "example_urls": [
           "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
           "https://www.theguardian.com/world/2026/jun/21/canada-immigration-us-deportation",
@@ -777,7 +907,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 2,
-          "reading_queue": 38
+          "reading_queue": 39
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -810,7 +940,7 @@
         "breadth": {
           "score": 0.5866666666666667,
           "basis": [
-            "distinct_urls:39",
+            "distinct_urls:40",
             "distinct_axes:2",
             "origin_types:2"
           ]
@@ -849,7 +979,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:39",
+            "distinct_urls:40",
             "distinct_axes:2",
             "origin_types:2",
             "referring_accounts:0",
@@ -886,135 +1016,6 @@
           "has_contact_link": false,
           "has_corrections_link": true,
           "outbound_links_count": 4,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "nytimes.com",
-      "entity": "Nytimes",
-      "kind": "news",
-      "first_seen_at": "2026-06-22T00:15:00Z",
-      "last_seen_at": "2026-06-22T00:15:00Z",
-      "discovery": {
-        "distinct_urls": 32,
-        "example_urls": [
-          "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
-          "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
-          "https://www.nytimes.com/2026/06/21/world/middleeast/vance-iran-talks-trump.html",
-          "https://www.nytimes.com/2026/06/21/world/europe/ukraine-poland-alliance-russia.html",
-          "https://www.nytimes.com/2026/06/21/world/middleeast/iran-nuclear-talks-questions.html"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 1,
-          "reading_queue": 33
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.75,
-          "basis": [
-            "newsroom_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.5283333333333333,
-          "basis": [
-            "distinct_urls:32",
-            "distinct_axes:1",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.16,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:true",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.6476041666666666,
-          "confidence": 0.5767,
-          "method": "mechanical_v1",
-          "basis": [
-            "newsroom_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:32",
-            "distinct_axes:1",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-21T15:47:58.759Z",
-        "homepage_url": "https://nytimes.com/",
-        "example_url": "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
-        "homepage_status": 200,
-        "example_status": 403,
-        "homepage_final_url": "https://www.nytimes.com/",
-        "example_final_url": "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": true,
-          "outbound_links_count": 5,
-          "opinion_marker": true
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -1271,6 +1272,130 @@
       }
     },
     {
+      "domain": "bbc.co.uk",
+      "entity": "Bbc",
+      "kind": "news",
+      "first_seen_at": null,
+      "last_seen_at": null,
+      "discovery": {
+        "distinct_urls": 9,
+        "example_urls": [
+          "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.co.uk/news/articles/c4gy6vk44pwo?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.co.uk/news/articles/c8r2yryr5mvo?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.co.uk/news/articles/cd95yd1y050o?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.co.uk/news/articles/cx247v39r1no?at_medium=RSS&amp;at_campaign=rss"
+        ],
+        "origin_counts": {
+          "reading_queue": 10
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.72,
+          "basis": [
+            "newsroom_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.32249999999999995,
+          "basis": [
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.58,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:16",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.57375,
+          "confidence": 0.2781,
+          "method": "mechanical_v1",
+          "basis": [
+            "newsroom_domain_pattern",
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-23T10:03:56.951Z",
+        "homepage_url": "https://bbc.co.uk/",
+        "example_url": "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.bbc.co.uk/",
+        "example_final_url": "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 13,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 16,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "google.com",
       "entity": "Google",
       "kind": "unknown",
@@ -1425,130 +1550,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "bbc.co.uk",
-      "entity": "Bbc",
-      "kind": "news",
-      "first_seen_at": null,
-      "last_seen_at": null,
-      "discovery": {
-        "distinct_urls": 8,
-        "example_urls": [
-          "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
-          "https://www.bbc.co.uk/news/articles/c4gy6vk44pwo?at_medium=RSS&amp;at_campaign=rss",
-          "https://www.bbc.co.uk/news/articles/c8r2yryr5mvo?at_medium=RSS&amp;at_campaign=rss",
-          "https://www.bbc.co.uk/news/articles/cd95yd1y050o?at_medium=RSS&amp;at_campaign=rss",
-          "https://www.bbc.co.uk/news/articles/cx247v39r1no?at_medium=RSS&amp;at_campaign=rss"
-        ],
-        "origin_counts": {
-          "reading_queue": 9
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.72,
-          "basis": [
-            "newsroom_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.29333333333333333,
-          "basis": [
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.58,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:16",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.5673697916666667,
-          "confidence": 0.249475,
-          "method": "mechanical_v1",
-          "basis": [
-            "newsroom_domain_pattern",
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-23T10:03:56.951Z",
-        "homepage_url": "https://bbc.co.uk/",
-        "example_url": "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.bbc.co.uk/",
-        "example_final_url": "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 13,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 16,
           "opinion_marker": false
         }
       }
@@ -2863,9 +2864,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-23T20:33:41.000Z",
+      "last_seen_at": "2026-06-23T22:00:14.000Z",
       "discovery": {
-        "distinct_urls": 5934,
+        "distinct_urls": 5939,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2874,10 +2875,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3537,
-          "feed_buffer_reply": 3830
+          "feed_buffer": 3538,
+          "feed_buffer_reply": 3834
         },
-        "distinct_referring_accounts": 1906,
+        "distinct_referring_accounts": 1910,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -2915,7 +2916,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5934",
+            "distinct_urls:5939",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2923,7 +2924,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1906",
+            "referring_accounts:1910",
             "origin_types:2"
           ]
         },
@@ -2953,10 +2954,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5934",
+            "distinct_urls:5939",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1906",
+            "referring_accounts:1910",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3472,16 +3473,16 @@
           ]
         },
         "profile": {
-          "score": 0,
-          "confidence": 0.55,
+          "score": 0.52,
+          "confidence": 0.65,
           "basis": [
             "meta_author:false",
-            "published_time:false",
-            "canonical:false",
+            "published_time:true",
+            "canonical:true",
             "about:false",
-            "contact:false",
+            "contact:true",
             "corrections:false",
-            "outbound_links:0",
+            "outbound_links:30",
             "opinion_marker:false"
           ]
         },
@@ -3502,33 +3503,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T21:26:35.997Z",
+        "fetched_at": "2026-06-23T22:04:08.898Z",
         "homepage_url": "https://amnesty.org/",
-        "example_url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/",
-        "homepage_status": 403,
-        "example_status": 403,
+        "example_url": "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
+        "homepage_status": 200,
+        "example_status": 200,
         "homepage_final_url": "https://www.amnesty.org/en/",
-        "example_final_url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/",
+        "example_final_url": "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
         "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
+          "has_published_time": true,
+          "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": false,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 7,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
+          "has_published_time": true,
+          "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": false,
+          "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 30,
           "opinion_marker": false
         }
       }
@@ -4311,19 +4312,19 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T01:05:59.567Z",
-      "last_seen_at": "2026-06-23T20:36:16.486Z",
+      "last_seen_at": "2026-06-23T22:06:31.518Z",
       "discovery": {
-        "distinct_urls": 12,
+        "distinct_urls": 15,
         "example_urls": [
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
           "https://newsinfo.inquirer.net/2251519/chr-carries-out-motu-proprio-probe-into-tacloban-cavite-school-incidents",
+          "https://newsinfo.inquirer.net/2251594/army-instructor-probing-for-allegedly-assaulting-national-guard-trainees",
           "https://newsinfo.inquirer.net/2249755/drilon-warns-vs-second-envelope-crisis-in-vp-trial",
-          "https://newsinfo.inquirer.net/2251572/10-nabbed-over-alleged-paihi-scheme-in-navotas-city-p12-m-fuel-seized",
-          "https://newsinfo.inquirer.net/2251316/alcantaras-driver-tells-court-he-delivers-boxes-for-2-ex-solons"
+          "https://newsinfo.inquirer.net/2251572/10-nabbed-over-alleged-paihi-scheme-in-navotas-city-p12-m-fuel-seized"
         ],
         "origin_counts": {
-          "ontology_evidence": 9,
-          "journals": 36
+          "ontology_evidence": 10,
+          "journals": 40
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -4356,7 +4357,7 @@
         "breadth": {
           "score": 0.6449999999999999,
           "basis": [
-            "distinct_urls:12",
+            "distinct_urls:15",
             "distinct_axes:3",
             "origin_types:2"
           ]
@@ -4390,11 +4391,11 @@
         },
         "overall": {
           "score": 0.466875,
-          "confidence": 0.4212,
+          "confidence": 0.4887,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:12",
+            "distinct_urls:15",
             "distinct_axes:3",
             "origin_types:2",
             "referring_accounts:0",
@@ -4697,6 +4698,136 @@
       }
     },
     {
+      "domain": "techcrunch.com",
+      "entity": "Techcrunch",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-22T20:36:06.591Z",
+      "last_seen_at": "2026-06-23T22:06:31.518Z",
+      "discovery": {
+        "distinct_urls": 9,
+        "example_urls": [
+          "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
+          "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
+          "https://techcrunch.com/2026/06/23/meta-debuts-new-cheaper-smart-glasses-under-its-own-brand/",
+          "https://techcrunch.com/2026/06/23/meta-debuts-new-cheaper-smart_glasses-under-its-own-brand/",
+          "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 5,
+          "journals": 13
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_ai_societal_impact_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.4991666666666666,
+          "basis": [
+            "distinct_urls:9",
+            "distinct_axes:2",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.57,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:11",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.45559895833333336,
+          "confidence": 0.323075,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:9",
+            "distinct_axes:2",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-23T00:01:45.208Z",
+        "homepage_url": "https://techcrunch.com/",
+        "example_url": "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://techcrunch.com/",
+        "example_final_url": "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 11,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "wikipedia.org",
       "entity": "Wikipedia",
       "kind": "reference",
@@ -4945,136 +5076,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 5,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "techcrunch.com",
-      "entity": "Techcrunch",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-22T20:36:06.591Z",
-      "last_seen_at": "2026-06-23T20:36:16.486Z",
-      "discovery": {
-        "distinct_urls": 8,
-        "example_urls": [
-          "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
-          "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
-          "https://techcrunch.com/2026/06/23/meta-debuts-new-cheaper-smart-glasses-under-its-own-brand/",
-          "https://techcrunch.com/2026/06/23/meta-debuts-new-cheaper-smart_glasses-under-its-own-brand/",
-          "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 5,
-          "journals": 12
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_ai_societal_impact_v1",
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:8",
-            "distinct_axes:2",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.57,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:11",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.44921875,
-          "confidence": 0.29445,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:8",
-            "distinct_axes:2",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-23T00:01:45.208Z",
-        "homepage_url": "https://techcrunch.com/",
-        "example_url": "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://techcrunch.com/",
-        "example_final_url": "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 3,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 11,
           "opinion_marker": false
         }
       }
@@ -16178,7 +16179,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T21:26:35.323Z",
+        "fetched_at": "2026-06-23T22:04:09.535Z",
         "homepage_url": "https://nobullproject.com/",
         "example_url": "https://nobullproject.com/collections/drive-2-shoes?utm_source=x&utm_medium=paidsocial&utm_campaign=cpatest&utm_term=drive&utm_content=white&twclid=24gy5fp678esqwxit13xmono4x",
         "homepage_status": 200,
@@ -18807,7 +18808,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T21:26:35.476Z",
+        "fetched_at": "2026-06-23T22:04:09.735Z",
         "homepage_url": "https://timesofisrael.com/",
         "example_url": "https://timesofisrael.com/",
         "homepage_status": 403,
@@ -24788,7 +24789,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T21:56:36.789Z",
+        "fetched_at": "2026-06-23T22:04:11.499Z",
         "homepage_url": "https://eclincher.com/",
         "example_url": "https://www.eclincher.com/ai-social-media-agent?twclid=22gdnmarextv0i2rs5d53x1dzn",
         "homepage_status": 200,
@@ -26403,7 +26404,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T21:56:38.246Z",
+        "fetched_at": "2026-06-23T22:32:05.710Z",
         "homepage_url": "https://manageengine.com/",
         "example_url": "https://www.manageengine.com/products/service-desk/?utm_source=Twitter-X&utm_medium=ppc&utm_campaign=SDP-New+Image+Ad-Kws-sep18&twclid=23ga9f8elsw90hcyq7ijyux58l",
         "homepage_status": 200,
@@ -28877,7 +28878,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T21:26:36.517Z",
+        "fetched_at": "2026-06-23T22:32:06.263Z",
         "homepage_url": "https://vt.edu/",
         "example_url": "https://news.vt.edu/articles/2026/03/Iran-Israel-Trump-gas-LNG-prices-Strait-Hormuz-economic-impact.html",
         "homepage_status": 200,
@@ -30721,7 +30722,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T21:56:38.803Z",
+        "fetched_at": "2026-06-23T22:32:06.742Z",
         "homepage_url": "https://gamedaymath.com/",
         "example_url": "https://www.gamedaymath.com/pricing?twclid=22wv0ellx5eqlyjtmchr7w8rag",
         "homepage_status": 200,
@@ -36256,7 +36257,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T22:56:36.533Z",
+        "fetched_at": "2026-06-23T23:02:04.874Z",
         "homepage_url": "https://sugar.org/",
         "example_url": "https://sugar.org/?twclid=21ib4ppr4qv4sw7b4fcgpqz36w",
         "homepage_status": 200,
@@ -36501,7 +36502,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T21:56:39.604Z",
+        "fetched_at": "2026-06-23T22:32:07.526Z",
         "homepage_url": "https://irys.xyz/",
         "example_url": "https://gateway.irys.xyz/lZR6DY8ugYpeIkHpBQpgaNeVWmEhahjrDBNGc5Fz0EE",
         "homepage_status": 200,
@@ -38697,7 +38698,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T22:56:36.700Z",
+        "fetched_at": "2026-06-23T23:02:05.030Z",
         "homepage_url": "https://america250fl.com/",
         "example_url": "https://america250fl.com/roadtrip/?twclid=2bkxank7seynqry2vcwbavv6w6",
         "homepage_status": 403,
@@ -38819,7 +38820,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T22:56:36.969Z",
+        "fetched_at": "2026-06-23T23:02:05.210Z",
         "homepage_url": "https://fooletfs.com/",
         "example_url": "https://fooletfs.com/our-funds/mfig?utm_source=x&utm_medium=paid_social&utm_campaign=mfig&utm_term=mfig-orange-v1&twclid=29gqh1517fetrd30y8lm22lkth",
         "homepage_status": 200,
@@ -38941,7 +38942,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T22:56:37.117Z",
+        "fetched_at": "2026-06-23T23:02:05.367Z",
         "homepage_url": "https://soaratlas.com/",
         "example_url": "https://soaratlas.com/?twclid=2eza3sd4va29a55s5jzj2vre23",
         "homepage_status": 403,
