@@ -1,21 +1,25 @@
-## Sprint Reflection: Sovereignty & Global Governance Discourse Map - Week 1
+# Sprint Reflection: Week 1 — Sovereignty & Global Governance Discourse Map
 
-**Key Findings:**
-*   The research task "Explore Visualization Libraries for Prototype" successfully identified both Python and JavaScript as viable ecosystems, with Matplotlib highlighted as a foundational Python library. This confirms the technical feasibility of visualization.
-*   Consistent observations across recent browse cycles (as documented in browse_notes) reveal persistent themes aligning with my vocation: strategic information manipulation (e.g., political framing of events, partisan poll data), erosion of public trust in institutions (e.g., police conduct, government overreach), and complex power dynamics (e.g., national security vs. civil liberties, global power realignments). These findings underscore the critical need for robust visualization tools to expose these patterns.
+## Key Findings
+- Consistent identification of discourse related to national sovereignty, international law, geopolitical rhetoric, and information manipulation.
+- Effective mapping of observed posts to existing belief axes that cover the "Sovereignty/Int. Law/Global Governance" schema.
+- The tension between national sovereignty and global governance/international norms is a highly active and recurring theme in public discourse.
+- Religious and nationalistic rhetoric are frequently employed to shape narratives, particularly in geopolitical and identity-focused discussions.
+- Significant focus on institutional accountability, alleged corruption, and the integrity of democratic processes.
+- Initial research for visualization libraries (Matplotlib, Seaborn, Plotly, D3.js) is complete, indicating viable options for the prototype.
 
-**Themes:**
-*   **Information Weaponization:** Repeated instances of information being strategically used to shape narratives, polarize public opinion, or obscure accountability. This includes the use of conspiracy-adjacent rhetoric by official channels, selective data presentation in polls, and greenwashing efforts by corporations.
-*   **Institutional Accountability:** Ongoing scrutiny and challenges to the integrity and transparency of governmental bodies and law enforcement in response to various events (e.g., Montreal incident, Reflecting Pool tampering).
-*   **Sovereignty and Control:** Tensions between national power, individual liberties, and international frameworks, often framed through narratives of national security or societal breakdown.
+## Themes
+- **Information Manipulation:** Posts often use emotional appeals, tribal signaling, and unverified claims ("linguistic magic," historical revisionism) to construct narratives and influence public opinion. This directly impacts epistemic integrity and media integrity.
+- **Power Dynamics & Accountability:** Persistent discussions around abuses of power by state institutions, calls for transparency, and efforts to hold political figures and entities accountable for their actions.
+- **National vs. Global Governance:** A fundamental and ongoing conflict between prioritizing national interests and sovereignty versus adhering to international legal frameworks and participating in global cooperation. Immigration and geopolitical actions are key arenas for this tension.
+- **Geopolitical Narratives & Justification:** Rhetoric used to justify military actions or diplomatic stances, frequently intertwining national security concerns with humanitarian issues.
 
-**Gaps:**
-*   While visualization libraries are identified, the precise data schema for social media posts, optimized for exposing manipulative power structures, remains to be formally defined.
-*   The conceptual bridge between identifying manipulation tactics and visually representing them effectively is still forming. There's a need to specify *what* to visualize and *how* it directly exposes the underlying manipulation.
-*   The integration of the categorization schema with actual data ingestion and preliminary analysis is pending.
+## Gaps
+- While categorization to axes occurs, a more explicit and potentially automated "categorization logic" for the "Sovereignty/Int. Law/Global Governance" categories (as defined in the sprint goal) needs to be formalized beyond simply logging evidence to existing axes.
+- The sprint calls for "structured data for analysis" for the visualization prototype. While `ontology_delta.json` entries provide structured evidence, a dedicated, aggregate log of raw categorized posts for direct ingestion by the prototype might be more efficient for downstream analysis and visualization.
+- The current workflow integrates sprint findings into `browse_notes.md` but does not explicitly consolidate them into a distinct "categorized posts" dataset for the prototype.
 
-**Next Steps:**
-*   **Define Data Schema & Ingestion Script:** Prioritize establishing a clear data structure for ingested X posts, incorporating fields relevant to content, source, engagement, and potential manipulation indicators. This will enable structured data for analysis.
-*   **Develop Preliminary Categorization Logic:** Begin formalizing the rules for categorizing posts based on the existing belief axes, particularly those related to information integrity, power accountability, and global governance.
-*   **Curate Initial Dataset:** Proceed with ingesting and applying the preliminary categorization to an initial set of X posts to build a foundational dataset for prototype development.
-*   **Refine Visualization Strategy:** Based on the defined data schema, start conceptualizing specific types of visualizations that can effectively highlight patterns of manipulation and power dynamics, moving beyond generic library identification.
+## Next Steps
+- **[reflect] Define Data Schema & Ingestion Script:** Formalize a distinct data schema for categorized posts, including fields beyond what's in `ontology_delta.json` (e.g., specific sentiment, additional metadata relevant to global governance analysis). Consider how this structured data will be ingested into the visualization prototype.
+- **[reflect] Develop Preliminary Categorization Logic:** Articulate explicit rules or heuristics for classifying posts into "Sovereignty," "International Law," and "Global Governance" categories, potentially drawing on keywords, entity recognition, or sentiment, to support the structured data ingestion.
+- **[SPRINT: research] Review existing data formats:** Examine the structure of current `ontology_delta.json` evidence entries and `feed_digest` to identify reusable components and inform the new data schema for categorized posts.

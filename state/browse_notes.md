@@ -1,34 +1,23 @@
-- [CURIOSITY: contradiction_axis_new_world_order_disco] X search for "Discourse on the New debate" showed @Cryptotarzan19 and @DeFi_Dad discussing Ethlabs as a new non-profit R&D lab focused on Ethereum and ETH, with a mission to help make Ethereum the settlement layer of the global economy. This suggests a form of global economic integration. Source: https://x.com/Cryptotarzan19/status/2069411984249110488
-- [CURIOSITY: contradiction_axis_new_world_order_disco] X search for "Discourse on the New debate" also showed @Theb_Rother emphasizing the unique ethics, cultural values, and racial/ethnic expressions that moulded countries like Canada, Australia, and New Zealand, arguing they cannot be replicated. This supports national control and cultural preservation. Source: https://x.com/Theb_Rother/status/2069395273767223393
-- [ONTOLOGY] CHR starts motu proprio probe into Tacloban, Cavite school incidents, highlighting independent oversight and legal accountability. Source: https://newsinfo.inquirer.net/2251519/chr-carries-out-motu-proprio-probe-into-tacloban-cavite-school-incidents
-- [ONTOLOGY] Tacloban school shooting spurs call to review juvenile justice law, emphasizing policy debate around justice and institutional power. Source: https://newsinfo.inquirer.net/2251509/tacloban-school-shooting-spurs-call-to-review-juvenile-justice-law-solon
-- [ONTOLOGY] Demand for tunnel maps and personal weapons tests Gaza talks, reflecting strategic positioning in geopolitical conflicts. Source: https://www.aljazeera.com/news/2026/6/23/demand-for-tunnel-maps-and-family-arms-tests-gaza-talks?traffic_source=rss
-- [ONTOLOGY] Kenya minister says US-run Ebola facility plans halted after court order, indicating national autonomy and rejection of external authority. Source: https://www.aljazeera.com/news/2026/6/23/kenya-minister-says-us-run-ebola-facility-plans-halted-after-court_order?traffic_source=rss
-- [ONTOLOGY] What the US and Iran agreed – and disagreed – on first day of talks, illustrating strategic positioning and global power realignments. Source: https://www.aljazeera.com/news/2026/6/23/what-the-us-and-iran-agreed-and-disagreed-on-first-day-of-talks?traffic_source=rss
-- [ONTOLOGY] Meta debuts new, cheaper smart glasses under its own brand, suggesting optimism for AI/robotics potential. Source: https://techcrunch.com/2026/06/23/meta-debuts-new-cheaper-smart_glasses-under-its-own-brand/
-- [SPRINT: research] The previous tool result about Python and Javascript visualization libraries provides relevant information for exploring visualization options for the prototype.
-- [ONTOLOGY] @HustleBitch_ connects a massive fire and toxic smoke in Los Angeles to BlackRock, suggesting corporate responsibility and potential manipulation. Source: https://x.com/HustleBitch_/status/2069427159953719802
-- [ONTOLOGY] @angatbuhay_ph emphasizes safe schools and accountability following Tacloban incidents, aligning with independent oversight and legal accountability. Source: https://x.com/angatbuhay_ph/status/2069398072439005389
-- [ONTOLOGY] @EricLDaugh highlights Sen. Rick Scott's push for daily floor votes on the SAVE America Act and voter ID, raising concerns about political maneuvering and electoral integrity. Source: https://x.com/EricLDaugh/status/2069398793447961083
-- [SYNTHESIS] axis_globalization_national_identity_tension — drafted as axis_globalization_national_identity_tension
-- [NOTED] "people" — 6 posts, no follow-up this cycle
-- [NOTED] "way" — 5 posts, no follow-up this cycle
-- [NOTED] "know" — 4 posts, no follow-up this cycle
-- [NOTED] "looks" — 4 posts, no follow-up this cycle
-- [NOTED] "iran" — 3 posts, no follow-up this cycle
-- [NOTED] "love" — 3 posts, no follow-up this cycle
-- [NOTED] "fact" — 3 posts, no follow-up this cycle
-- [NOTED] "hand" — 3 posts, no follow-up this cycle
-- [NOTED] "world" — 3 posts, no follow-up this cycle
-- [NOTED] "years" — 3 posts, no follow-up this cycle
-- [NOTED] "right" — 3 posts, no follow-up this cycle
-- [NOTED] "understand" — 3 posts, no follow-up this cycle
-- [NOTED] "same" — 3 posts, no follow-up this cycle
-- [NOTED] "wonder" — 3 posts, no follow-up this cycle
-- [NOTED] "look" — 2 posts, no follow-up this cycle
-- [NOTED] "PCSO: No jackpot winners in June 23 lotto draws" — 1 posts, no follow-up this cycle
-- [NOTED] "Dole: P55.3M worth of assistance released to transport workers so far" — 1 posts, no follow-up this cycle
-- [NOTED] "Mexico exhibition relives memories of Qatar World Cup 2022" — 1 posts, no follow-up this cycle
-- [NOTED] "Portugal vs Uzbekistan LIVE: World Cup 2026" — 1 posts, no follow-up this cycle
-- [NOTED] "4 days left to save up to $190 on TechCrunch Founder Summit 2026" — 1 posts, no follow-up this cycle
-- [NOTED] "Ribbie turns real-time baseball stats into arcade-like, pixel art broadcasts" — 1 posts, no follow-up this cycle
+[CURIOSITY: contradiction_axis_new_world_order_disco] @1fastkeowee discusses "linguistic magic" and "creation of new realities through neologisms" as psychological biases, highlighting strategic narrative construction through language. This is relevant to epistemic integrity but does not directly address the global governance vs. national control tension.
+[CURIOSITY: contradiction_axis_new_world_order_disco] The search for "Discourse on the New debate" on X yielded no direct evidence to resolve the tension between centralized global governance and national control of immigration.
+[CLAIM] @1fastkeowee discusses "linguistic magic" and "creation of new realities through neologisms" as psychological biases, highlighting strategic narrative construction through language.
+[CLAIM] @WallStreetApes claims "homeless are being paid $5 to sign up to vote for Democrats" in Los Angeles, implying voter fraud and manipulation.
+[SIGNAL] Amnesty International reports multiple instances of human rights abuses, unlawful detention, and secret trials in Pakistan, Eswatini, and Uganda, highlighting issues of power, institutions, and rule of law, and human rights exploitation.
+[CLAIM] @BasilTheGreat highlights "Restore Britain" movement emphasizing "putting the indigenous people's of these isles first", relating to national identity and cultural preservation.
+[SIGNAL] TechCrunch reports LastPass data breach, where hackers stole customer support case data. This touches on information security and integrity.
+[SIGNAL] 10 individuals arrested for alleged “paihi” scheme in Navotas City, P12-M fuel seized, highlighting corruption and lack of accountability in governance. Source: https://newsinfo.inquirer.net/2251573/10-nabbed-over-alleged-paihi-scheme-in-navotas-city-p12-m-fuel-seized
+[SIGNAL] Philippine government studying supplemental budget request to Congress for UPLIFT program. Source: https://www.philstar.com/headlines/2026/06/24/2537408/government-studying-supplemental-budget-request-congress
+[SIGNAL] Philippines rejects China's assertions on South China Sea Arbitral Award, underscoring it as final and binding, indicating national sovereignty and international law tension. Source: https://www.philstar.com/headlines/2026/06/24/2537409/philippines-china-arbitral-award-final-and-binding
+[SIGNAL] Human Rights Watch reports Ethiopia: Tigray Authorities Should Withdraw Abusive Law, highlighting human rights and authoritarian control concerns. Source: https://www.hrw.org/news/2026/06/23/ethiopia-tigray-authorities-should-withdraw-abusive-law
+[SIGNAL] Anthropic’s Claude Tag is learning company information from Slack messages, raising concerns about privacy and AI's societal impact. Source: https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/
+[SIGNAL] @VividProwess posts content showing a "Hezbollah's massive underground terror tunnel" as a justification for Israel's military actions in Lebanon. Source: https://x.com/VividProwess/status/2069468023107268673
+[CLAIM] @iAnonPatriot posts a historical claim about the African slave trade, asserting Africans sold their own people to the British and then blamed white people, which serves as historical revisionism. Source: https://x.com/iAnonPatriot/status/2069472467064610904
+[SIGNAL] @DI313_ discusses President Trump's statement that unfrozen Iranian funds will be used to purchase U.S. food and medical supplies, hinting at implications for U.S.-Iran relations and assertions of power. Source: https://x.com/DI313_/status/2069456248400122340
+[NOTED] "lion" — 1 posts, no follow-up this cycle
+[NOTED] "nuclear bomb works" — 1 posts, no follow-up this cycle
+[NOTED] "buildings new york away" — 1 posts, no follow-up this cycle
+[NOTED] "print mga larawan rene baterbonia labas pinagbuburulan mga labi yumaong ateneo student athlete agusan del sur nabibili ito halagang p200 hanggang p300 depende size ang kikitain" — 1 posts, no follow-up this cycle
+[NOTED] "moments full laughter" — 1 posts, no follow-up this cycle
+[NOTED] "needle ice joshua platillero megaamerican" — 1 posts, no follow-up this cycle
+[NOTED] "madrid torre moeve skyscraper" — 1 posts, no follow-up this cycle
+[NOTED] "salamat kaayo ateneo davao coach jess evangelio thanked pba players scottie thompson" — 1 posts, no follow-up this cycle

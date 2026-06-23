@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-23T15:01:56.423Z",
+  "generated_at": "2026-06-23T18:02:01.054Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-23T15:02:10.194Z",
+  "profiled_at": "2026-06-23T18:02:05.907Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -227,13 +227,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T15:26:28.291Z",
+        "fetched_at": "2026-06-23T16:04:02.383Z",
         "homepage_url": "https://cbp.gov/",
-        "example_url": "https://careers.cbp.gov/s/connect-to-recruiter?campaignid=701SJ00000BV0tR&utm_source=X&utm_medium=paid_social&utm_campaign=MGC_B5SXtXt5J5T&twclid=2f2100ywgvzunnowbnhrpi34g1",
+        "example_url": "https://careers.cbp.gov/s/connect-to-recruiter?campaignid=701SJ00000BV0tR&utm_source=X&utm_medium=paid_social&utm_campaign=MGC_C5SXt125J11T&twclid=24uhcrvlvs0lo9d4mk5w8lgcjg",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.cbp.gov/",
-        "example_final_url": "https://careers.cbp.gov/s/connect-to-recruiter?campaignid=701SJ00000BV0tR&utm_source=X&utm_medium=paid_social&utm_campaign=MGC_B5SXtXt5J5T&twclid=2f2100ywgvzunnowbnhrpi34g1",
+        "example_final_url": "https://careers.cbp.gov/s/connect-to-recruiter?campaignid=701SJ00000BV0tR&utm_source=X&utm_medium=paid_social&utm_campaign=MGC_C5SXt125J11T&twclid=24uhcrvlvs0lo9d4mk5w8lgcjg",
         "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html;charset=UTF-8",
         "homepage": {
@@ -389,9 +389,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-06-23T14:36:39.155Z",
+      "last_seen_at": "2026-06-23T15:31:00Z",
       "discovery": {
-        "distinct_urls": 15,
+        "distinct_urls": 17,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/22/the-icc-must-investigate-israels-genocidal-use-of-sexual?traffic_source=rss",
           "https://www.aljazeera.com/economy/2026/6/22/us-house-committee-reaches-bipartisan-deal-on-social-media-rules-for-kids?traffic_source=rss",
@@ -400,9 +400,9 @@
           "https://www.aljazeera.com/news/liveblog/2026/6/23/iran-war-live-tehran-to-access-billions-in-frozen-funds?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 11,
+          "ontology_evidence": 13,
           "reading_queue": 1,
-          "journals": 17
+          "journals": 20
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -410,6 +410,7 @@
           "axis_geopolitical_rhetoric_v1",
           "axis_global_power_realignments_v1",
           "axis_human_rights_exploitation_v1",
+          "axis_national_sovereignty_v_intl_law_v1",
           "axis_power_accountability"
         ]
       },
@@ -435,10 +436,10 @@
           ]
         },
         "breadth": {
-          "score": 0.7633333333333332,
+          "score": 0.8216666666666665,
           "basis": [
-            "distinct_urls:15",
-            "distinct_axes:4",
+            "distinct_urls:17",
+            "distinct_axes:5",
             "origin_types:3"
           ]
         },
@@ -470,14 +471,14 @@
           ]
         },
         "overall": {
-          "score": 0.7072135416666666,
-          "confidence": 0.521425,
+          "score": 0.7199739583333333,
+          "confidence": 0.5786749999999999,
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:15",
-            "distinct_axes:4",
+            "distinct_urls:17",
+            "distinct_axes:5",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -766,7 +767,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-06-22T00:15:00Z",
       "discovery": {
-        "distinct_urls": 35,
+        "distinct_urls": 37,
         "example_urls": [
           "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
           "https://www.theguardian.com/world/2026/jun/21/canada-immigration-us-deportation",
@@ -776,7 +777,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 2,
-          "reading_queue": 34
+          "reading_queue": 36
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -809,7 +810,7 @@
         "breadth": {
           "score": 0.5866666666666667,
           "basis": [
-            "distinct_urls:35",
+            "distinct_urls:37",
             "distinct_axes:2",
             "origin_types:2"
           ]
@@ -848,7 +849,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:35",
+            "distinct_urls:37",
             "distinct_axes:2",
             "origin_types:2",
             "referring_accounts:0",
@@ -896,7 +897,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-06-22T00:15:00Z",
       "discovery": {
-        "distinct_urls": 28,
+        "distinct_urls": 30,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
@@ -906,7 +907,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "reading_queue": 29
+          "reading_queue": 31
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -938,7 +939,7 @@
         "breadth": {
           "score": 0.5283333333333333,
           "basis": [
-            "distinct_urls:28",
+            "distinct_urls:30",
             "distinct_axes:1",
             "origin_types:2"
           ]
@@ -977,7 +978,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:28",
+            "distinct_urls:30",
             "distinct_axes:1",
             "origin_types:2",
             "referring_accounts:0",
@@ -1397,7 +1398,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T15:26:28.616Z",
+        "fetched_at": "2026-06-23T16:04:02.732Z",
         "homepage_url": "https://google.com/",
         "example_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
         "homepage_status": 200,
@@ -1531,7 +1532,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T15:26:29.086Z",
+        "fetched_at": "2026-06-23T16:04:03.221Z",
         "homepage_url": "https://cbsnews.com/",
         "example_url": "https://www.cbsnews.com/news/us-naval-blockade-iran-ports-2026/",
         "homepage_status": 200,
@@ -1558,6 +1559,130 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 14,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "bbc.co.uk",
+      "entity": "Bbc",
+      "kind": "news",
+      "first_seen_at": null,
+      "last_seen_at": null,
+      "discovery": {
+        "distinct_urls": 6,
+        "example_urls": [
+          "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.co.uk/news/articles/c4gy6vk44pwo?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.co.uk/news/articles/c8r2yryr5mvo?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.co.uk/news/articles/cd95yd1y050o?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.co.uk/news/articles/cx247v39r1no?at_medium=RSS&amp;at_campaign=rss"
+        ],
+        "origin_counts": {
+          "reading_queue": 7
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.72,
+          "basis": [
+            "newsroom_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.235,
+          "basis": [
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.58,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:16",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.554609375,
+          "confidence": 0.192225,
+          "method": "mechanical_v1",
+          "basis": [
+            "newsroom_domain_pattern",
+            "distinct_urls:6",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-23T10:03:56.951Z",
+        "homepage_url": "https://bbc.co.uk/",
+        "example_url": "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.bbc.co.uk/",
+        "example_final_url": "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 13,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 16,
           "opinion_marker": false
         }
       }
@@ -1684,136 +1809,13 @@
       }
     },
     {
-      "domain": "bbc.co.uk",
-      "entity": "Bbc",
-      "kind": "news",
-      "first_seen_at": null,
-      "last_seen_at": null,
-      "discovery": {
-        "distinct_urls": 4,
-        "example_urls": [
-          "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
-          "https://www.bbc.co.uk/news/articles/c4gy6vk44pwo?at_medium=RSS&amp;at_campaign=rss",
-          "https://www.bbc.co.uk/news/articles/c8r2yryr5mvo?at_medium=RSS&amp;at_campaign=rss",
-          "https://www.bbc.co.uk/news/articles/cd95yd1y050o?at_medium=RSS&amp;at_campaign=rss"
-        ],
-        "origin_counts": {
-          "reading_queue": 5
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.72,
-          "basis": [
-            "newsroom_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.17666666666666664,
-          "basis": [
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.58,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:16",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.5418489583333334,
-          "confidence": 0.134975,
-          "method": "mechanical_v1",
-          "basis": [
-            "newsroom_domain_pattern",
-            "distinct_urls:4",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-23T10:03:56.951Z",
-        "homepage_url": "https://bbc.co.uk/",
-        "example_url": "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.bbc.co.uk/",
-        "example_final_url": "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
-        "homepage_content_type": "text/html",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 13,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 16,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "hrw.org",
       "entity": "Hrw",
       "kind": "unknown",
       "first_seen_at": "2026-06-21T15:45:00Z",
-      "last_seen_at": "2026-06-23T09:02:43.438Z",
+      "last_seen_at": "2026-06-23T17:35:38.216Z",
       "discovery": {
-        "distinct_urls": 21,
+        "distinct_urls": 22,
         "example_urls": [
           "https://www.hrw.org/news/2026/06/18/support-builds-to-protect-children-from-crimes-against-humanity",
           "https://www.hrw.org/news/2026/06/18/uzbekistan-activist-held-in-trumped-up-case",
@@ -1824,7 +1826,7 @@
         "origin_counts": {
           "ontology_evidence": 14,
           "reading_queue": 6,
-          "journals": 23
+          "journals": 25
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1860,7 +1862,7 @@
         "breadth": {
           "score": 0.8216666666666665,
           "basis": [
-            "distinct_urls:21",
+            "distinct_urls:22",
             "distinct_axes:5",
             "origin_types:3"
           ]
@@ -1899,7 +1901,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:21",
+            "distinct_urls:22",
             "distinct_axes:5",
             "origin_types:3",
             "referring_accounts:0",
@@ -2043,7 +2045,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T15:56:28.067Z",
+        "fetched_at": "2026-06-23T16:04:03.401Z",
         "homepage_url": "https://com.ph/",
         "example_url": "https://x.tv5.com.ph/news/national/read/arrest-warrants-issued-vs-discayas-over-malversation-graft-charges-tied-to-flood-control-projects-malolos-court",
         "homepage_status": null,
@@ -2697,7 +2699,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T15:56:28.219Z",
+        "fetched_at": "2026-06-23T16:32:02.973Z",
         "homepage_url": "https://epochtimes.com/",
         "example_url": "https://www.epochtimes.com/",
         "homepage_status": 200,
@@ -2861,9 +2863,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-23T13:30:01.000Z",
+      "last_seen_at": "2026-06-23T16:00:00.000Z",
       "discovery": {
-        "distinct_urls": 5923,
+        "distinct_urls": 5929,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2872,10 +2874,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3528,
-          "feed_buffer_reply": 3825
+          "feed_buffer": 3534,
+          "feed_buffer_reply": 3827
         },
-        "distinct_referring_accounts": 1904,
+        "distinct_referring_accounts": 1905,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -2913,7 +2915,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5923",
+            "distinct_urls:5929",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2921,7 +2923,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1904",
+            "referring_accounts:1905",
             "origin_types:2"
           ]
         },
@@ -2951,10 +2953,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5923",
+            "distinct_urls:5929",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1904",
+            "referring_accounts:1905",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -2997,9 +2999,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-06-22T23:14:59.000Z",
+      "last_seen_at": "2026-06-23T16:17:58.000Z",
       "discovery": {
-        "distinct_urls": 423,
+        "distinct_urls": 424,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -3008,10 +3010,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 396,
+          "feed_buffer_reply": 397,
           "feed_buffer": 56
         },
-        "distinct_referring_accounts": 273,
+        "distinct_referring_accounts": 274,
         "sample_referring_accounts": [
           "100ohiostate",
           "2by32",
@@ -3049,7 +3051,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:423",
+            "distinct_urls:424",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3057,7 +3059,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:273",
+            "referring_accounts:274",
             "origin_types:2"
           ]
         },
@@ -3087,10 +3089,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:423",
+            "distinct_urls:424",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:273",
+            "referring_accounts:274",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3404,9 +3406,9 @@
       "entity": "Amnesty",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T01:46:38.493Z",
-      "last_seen_at": "2026-06-23T10:06:36.269Z",
+      "last_seen_at": "2026-06-23T16:06:21.811Z",
       "discovery": {
-        "distinct_urls": 9,
+        "distinct_urls": 10,
         "example_urls": [
           "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
           "https://www.amnesty.org/en/latest/news/2026/06/car-bozize/",
@@ -3416,7 +3418,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 7,
-          "journals": 4
+          "journals": 5
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3449,9 +3451,9 @@
           ]
         },
         "breadth": {
-          "score": 0.6158333333333332,
+          "score": 0.645,
           "basis": [
-            "distinct_urls:9",
+            "distinct_urls:10",
             "distinct_axes:4",
             "origin_types:2"
           ]
@@ -3484,13 +3486,13 @@
           ]
         },
         "overall": {
-          "score": 0.48111979166666663,
-          "confidence": 0.34757499999999997,
+          "score": 0.4875,
+          "confidence": 0.3762,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:9",
+            "distinct_urls:10",
             "distinct_axes:4",
             "origin_types:2",
             "referring_accounts:0",
@@ -3752,7 +3754,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T16:56:29.493Z",
+        "fetched_at": "2026-06-23T17:34:03.011Z",
         "homepage_url": "https://snopes.com/",
         "example_url": "https://snopes.com/fact-check/strait-of-hormuz-oil-shorts-trump/",
         "homepage_status": 200,
@@ -4819,6 +4821,136 @@
       }
     },
     {
+      "domain": "techcrunch.com",
+      "entity": "Techcrunch",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-22T20:36:06.591Z",
+      "last_seen_at": "2026-06-23T17:35:38.216Z",
+      "discovery": {
+        "distinct_urls": 7,
+        "example_urls": [
+          "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
+          "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
+          "https://techcrunch.com/2026/06/23/meta-debuts-new-cheaper-smart-glasses-under-its-own-brand/",
+          "https://techcrunch.com/2026/06/23/meta-debuts-new-cheaper-smart_glasses-under-its-own-brand/",
+          "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 5,
+          "journals": 8
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_ai_societal_impact_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.4408333333333333,
+          "basis": [
+            "distinct_urls:7",
+            "distinct_axes:2",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.57,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:11",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.44283854166666664,
+          "confidence": 0.265825,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:7",
+            "distinct_axes:2",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-23T00:01:45.208Z",
+        "homepage_url": "https://techcrunch.com/",
+        "example_url": "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://techcrunch.com/",
+        "example_final_url": "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 11,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "ro.co",
       "entity": "Ro Co",
       "kind": "unknown",
@@ -5041,7 +5173,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T17:26:31.338Z",
+        "fetched_at": "2026-06-23T17:34:04.440Z",
         "homepage_url": "https://athena.com/",
         "example_url": "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=27k7ut43wxglvx2o2e2nj7pszs",
         "homepage_status": 200,
@@ -6855,28 +6987,28 @@
       }
     },
     {
-      "domain": "techcrunch.com",
-      "entity": "Techcrunch",
+      "domain": "inquirer.net",
+      "entity": "Inquirer",
       "kind": "unknown",
-      "first_seen_at": "2026-06-22T20:36:06.591Z",
-      "last_seen_at": "2026-06-23T14:36:39.155Z",
+      "first_seen_at": "2026-05-09T01:05:59.567Z",
+      "last_seen_at": "2026-06-23T17:35:38.216Z",
       "discovery": {
-        "distinct_urls": 5,
+        "distinct_urls": 8,
         "example_urls": [
-          "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
-          "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
-          "https://techcrunch.com/2026/06/23/meta-debuts-new-cheaper-smart-glasses-under-its-own-brand/",
-          "https://techcrunch.com/2026/06/22/nvidia-wants-to-cut-data-center-water-use-but-thats-not-the-same-as-fixing-ais-water-problem/",
-          "https://techcrunch.com/2026/06/22/microsoft-and-chevron-plan-one-of-the-largest-gas-powered-data-center-projects-in-us/"
+          "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
+          "https://newsinfo.inquirer.net/2251519/chr-carries-out-motu-proprio-probe-into-tacloban-cavite-school-incidents",
+          "https://newsinfo.inquirer.net/2249755/drilon-warns-vs-second-envelope-crisis-in-vp-trial",
+          "https://newsinfo.inquirer.net/2251572/10-nabbed-over-alleged-paihi-scheme-in-navotas-city-p12-m-fuel-seized",
+          "http://opinion.inquirer.net/"
         ],
         "origin_counts": {
-          "ontology_evidence": 3,
-          "journals": 5
+          "ontology_evidence": 7,
+          "journals": 28
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
         "distinct_axes": [
-          "axis_ai_societal_impact_v1",
+          "axis_political_trust_corruption_v1",
           "axis_power_accountability"
         ]
       },
@@ -6890,21 +7022,20 @@
       },
       "structural_features": {
         "has_search_paths": false,
-        "has_article_paths": true,
+        "has_article_paths": false,
         "has_doi_paths": false
       },
       "ratings": {
         "provenance": {
-          "score": 0.48,
+          "score": 0.45,
           "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
+            "unknown_domain_pattern"
           ]
         },
         "breadth": {
-          "score": 0.3825,
+          "score": 0.47,
           "basis": [
-            "distinct_urls:5",
+            "distinct_urls:8",
             "distinct_axes:2",
             "origin_types:2"
           ]
@@ -6923,27 +7054,26 @@
           ]
         },
         "profile": {
-          "score": 0.57,
-          "confidence": 0.75,
+          "score": 0.88,
+          "confidence": 0.85,
           "basis": [
             "meta_author:true",
             "published_time:true",
             "canonical:true",
-            "about:false",
+            "about:true",
             "contact:false",
-            "corrections:false",
-            "outbound_links:11",
+            "corrections:true",
+            "outbound_links:20",
             "opinion_marker:false"
           ]
         },
         "overall": {
-          "score": 0.430078125,
-          "confidence": 0.208575,
+          "score": 0.42859375000000005,
+          "confidence": 0.29445,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:5",
+            "distinct_urls:8",
             "distinct_axes:2",
             "origin_types:2",
             "referring_accounts:0",
@@ -6953,33 +7083,33 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-23T00:01:45.208Z",
-        "homepage_url": "https://techcrunch.com/",
-        "example_url": "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
+        "fetched_at": "2026-06-22T00:46:09.792Z",
+        "homepage_url": "https://inquirer.net/",
+        "example_url": "https://newsinfo.inquirer.net/2249755/drilon-warns-vs-second-envelope-crisis-in-vp-trial",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://techcrunch.com/",
-        "example_final_url": "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
+        "homepage_final_url": "https://www.inquirer.net/",
+        "example_final_url": "https://newsinfo.inquirer.net/2249755/drilon-warns-vs-second-envelope-crisis-in-vp-trial",
         "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
-          "has_published_time": true,
+          "has_published_time": false,
           "has_canonical": true,
-          "has_about_link": false,
+          "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 3,
+          "outbound_links_count": 17,
           "opinion_marker": false
         },
         "example": {
           "has_meta_author": true,
           "has_published_time": true,
           "has_canonical": true,
-          "has_about_link": false,
+          "has_about_link": true,
           "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 11,
+          "has_corrections_link": true,
+          "outbound_links_count": 20,
           "opinion_marker": false
         }
       }
@@ -7489,134 +7619,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 5,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "inquirer.net",
-      "entity": "Inquirer",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-09T01:05:59.567Z",
-      "last_seen_at": "2026-06-23T14:36:39.155Z",
-      "discovery": {
-        "distinct_urls": 7,
-        "example_urls": [
-          "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
-          "https://newsinfo.inquirer.net/2251519/chr-carries-out-motu-proprio-probe-into-tacloban-cavite-school-incidents",
-          "https://newsinfo.inquirer.net/2249755/drilon-warns-vs-second-envelope-crisis-in-vp-trial",
-          "http://opinion.inquirer.net/",
-          "http://inquirer.net/"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 5,
-          "journals": 24
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_political_trust_corruption_v1",
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.4408333333333333,
-          "basis": [
-            "distinct_urls:7",
-            "distinct_axes:2",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.88,
-          "confidence": 0.85,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:true",
-            "outbound_links:20",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.4222135416666667,
-          "confidence": 0.265825,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:7",
-            "distinct_axes:2",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-22T00:46:09.792Z",
-        "homepage_url": "https://inquirer.net/",
-        "example_url": "https://newsinfo.inquirer.net/2249755/drilon-warns-vs-second-envelope-crisis-in-vp-trial",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.inquirer.net/",
-        "example_final_url": "https://newsinfo.inquirer.net/2249755/drilon-warns-vs-second-envelope-crisis-in-vp-trial",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 17,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": true,
-          "outbound_links_count": 20,
           "opinion_marker": false
         }
       }
@@ -10114,7 +10116,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T15:26:29.696Z",
+        "fetched_at": "2026-06-23T16:32:03.557Z",
         "homepage_url": "https://ethos.com/",
         "example_url": "https://www.ethos.com/life/life-insurance-now/?utm_source=twitter&utm_medium=cpc&utm_campaign=Broad01162026&utm_campaign_id=40806420&utm_adgroup=Broad01162026&utm_adgroup_id=54091382&utm_ad_id=2024963714831835547&ad_name=hiking+%28convert%29&twclid=2eck112qrn4y0a9og1cs3anquo",
         "homepage_status": 200,
@@ -10645,6 +10647,134 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 2,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "philstar.com",
+      "entity": "Philstar",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-19T10:31:49.581Z",
+      "last_seen_at": "2026-06-23T17:35:38.216Z",
+      "discovery": {
+        "distinct_urls": 4,
+        "example_urls": [
+          "https://www.philstar.com/headlines/2026/06/24/2537409/philippines-china-arbitral-award-final-and-binding",
+          "https://philstar.com/headlines/2026/05/19/2528923/fleeing-bato-says-hes-willing-be-jaile",
+          "https://philstar.com/headlines/2026",
+          "https://www.philstar.com/headlines/2026/06/24/2537408/government-studying-supplemental-budget-request-congress"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 1,
+          "journals": 6
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_national_sovereignty_v_intl_law_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.295,
+          "basis": [
+            "distinct_urls:4",
+            "distinct_axes:1",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.58,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:42",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.41093749999999996,
+          "confidence": 0.16770000000000002,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:4",
+            "distinct_axes:1",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-23T00:01:47.366Z",
+        "homepage_url": "https://philstar.com/",
+        "example_url": "https://philstar.com/headlines/2026/05/19/2528923/fleeing-bato-says-hes-willing-be-jaile",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.philstar.com/",
+        "example_final_url": "https://www.philstar.com/headlines/2026/05/19/2528923/fleeing-bato-says-hes-willing-be-jailed-if-duterte",
+        "homepage_content_type": "text/html; charset=utf8",
+        "example_content_type": "text/html; charset=utf8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 75,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 42,
           "opinion_marker": false
         }
       }
@@ -13151,7 +13281,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T17:26:32.098Z",
+        "fetched_at": "2026-06-23T17:34:05.244Z",
         "homepage_url": "https://github.com/",
         "example_url": "https://github.com/BlockRunAI/ClawRouter/?twclid=2bnr8zsvp3b72fbw0yuil7yilw",
         "homepage_status": 200,
@@ -14538,7 +14668,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T15:56:29.336Z",
+        "fetched_at": "2026-06-23T16:32:04.955Z",
         "homepage_url": "https://enter.pro/",
         "example_url": "https://enter.pro/?utm_source=x&utm_medium=paid_social&utm_campaign=twitter_adsmarch_enter_13_0260403&twclid=21y4m3veyg3qz1wzl60cdelnk1",
         "homepage_status": 200,
@@ -19050,7 +19180,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T15:56:29.771Z",
+        "fetched_at": "2026-06-23T16:32:05.545Z",
         "homepage_url": "https://coingecko.com/",
         "example_url": "https://www.coingecko.com/en/api/acquisition/entry-plans?utm_source=twitter&utm_medium=ad&utm_campaign=bau&utm_content=mar26-gt-brand-ad-free-v1&audience_segment=prospecting&twclid=26xrmua0k4othy65876mc0aamh",
         "homepage_status": 403,
@@ -20912,7 +21042,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T17:26:32.280Z",
+        "fetched_at": "2026-06-23T17:34:05.480Z",
         "homepage_url": "https://varrd.com/",
         "example_url": "https://varrd.com/?twclid=222hhmjo1hjeaafibt54abkalz",
         "homepage_status": 200,
@@ -23536,7 +23666,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T17:26:34.799Z",
+        "fetched_at": "2026-06-23T18:02:04.460Z",
         "homepage_url": "https://thedispatch.com/",
         "example_url": "https://thedispatch.com/article/slavery-christianity-judaism/?twclid=224n5l3gu5l6wy53cctpntxjmr",
         "homepage_status": 200,
@@ -25430,129 +25560,6 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 33,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "philstar.com",
-      "entity": "Philstar",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-19T10:31:49.581Z",
-      "last_seen_at": "2026-05-23T12:07:47.334Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://philstar.com/headlines/2026/05/19/2528923/fleeing-bato-says-hes-willing-be-jaile",
-          "https://philstar.com/headlines/2026"
-        ],
-        "origin_counts": {
-          "journals": 3
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.58,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:42",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3640885416666667,
-          "confidence": 0.07772499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-23T00:01:47.366Z",
-        "homepage_url": "https://philstar.com/",
-        "example_url": "https://philstar.com/headlines/2026/05/19/2528923/fleeing-bato-says-hes-willing-be-jaile",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.philstar.com/",
-        "example_final_url": "https://www.philstar.com/headlines/2026/05/19/2528923/fleeing-bato-says-hes-willing-be-jailed-if-duterte",
-        "homepage_content_type": "text/html; charset=utf8",
-        "example_content_type": "text/html; charset=utf8",
-        "homepage": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 75,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 42,
           "opinion_marker": false
         }
       }
@@ -35262,7 +35269,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T16:56:29.932Z",
+        "fetched_at": "2026-06-23T18:02:04.917Z",
         "homepage_url": "https://tricentis.com/",
         "example_url": "https://www.tricentis.com/?utm_medium=cpc&utm_source=twitter&utm_campaign=na_ai_ai_ams_en_2025-05&utmc_placement=x-lookalike&utmc_product=na&twclid=25fxem9k6nigygx2hl5nz8o3z3",
         "homepage_status": null,
@@ -35385,7 +35392,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T16:56:30.195Z",
+        "fetched_at": "2026-06-23T18:02:05.179Z",
         "homepage_url": "https://dailywire.com/",
         "example_url": "https://www.dailywire.com/show/real-history-with-matt-walsh?utm_campaign=realhistory&utm_medium=paid&utm_source=twitter&utm_content=creative05179_reach&twclid=2c3hzj16zya19zmm7vtu0j66ed",
         "homepage_status": 200,
@@ -35508,7 +35515,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T16:56:30.871Z",
+        "fetched_at": "2026-06-23T18:02:05.907Z",
         "homepage_url": "https://consideramazon.com/",
         "example_url": "https://www.consideramazon.com/title/fallout?twclid=2b9bx4ja40aa12y4txqnk316o3",
         "homepage_status": 200,
