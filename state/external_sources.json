@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-23T06:34:17.801Z",
+  "generated_at": "2026-06-23T09:01:52.785Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-23T06:34:22.023Z",
+  "profiled_at": "2026-06-23T09:01:56.452Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -474,7 +474,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T07:56:20.045Z",
+        "fetched_at": "2026-06-23T08:33:54.268Z",
         "homepage_url": "https://house.gov/",
         "example_url": "https://www.house.gov/",
         "homepage_status": null,
@@ -627,13 +627,146 @@
       }
     },
     {
+      "domain": "aljazeera.com",
+      "entity": "Aljazeera",
+      "kind": "news",
+      "first_seen_at": "2026-06-22T02:45:00Z",
+      "last_seen_at": "2026-06-23T08:38:47.296Z",
+      "discovery": {
+        "distinct_urls": 9,
+        "example_urls": [
+          "https://www.aljazeera.com/opinions/2026/6/22/the-icc-must-investigate-israels-genocidal-use-of-sexual?traffic_source=rss",
+          "https://www.aljazeera.com/economy/2026/6/22/us-house-committee-reaches-bipartisan-deal-on-social-media-rules-for-kids?traffic_source=rss",
+          "https://www.aljazeera.com/video/the-take-2/2026/6/22/what-the-world-cup-looks-like-from-gaza?traffic_source=rss",
+          "https://www.aljazeera.com/news/liveblog/2026/6/23/iran-war-live-tehran-to-access-billions-in-frozen-funds?traffic_source=rss",
+          "https://www.aljazeera.com/economy/2026/6/22/shipping-stalls-in-strait-of-hormuz-after-iran-declares-key-waterway-shut?traffic_source=rss"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 7,
+          "reading_queue": 1,
+          "journals": 8
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_geopolitical_rhetoric_v1",
+          "axis_global_power_realignments_v1",
+          "axis_human_rights_exploitation_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.75,
+          "basis": [
+            "newsroom_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.6758333333333333,
+          "basis": [
+            "distinct_urls:9",
+            "distinct_axes:4",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.26249999999999996,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.72,
+          "confidence": 0.85,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:26",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.6880729166666666,
+          "confidence": 0.36805,
+          "method": "mechanical_v1",
+          "basis": [
+            "newsroom_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:9",
+            "distinct_axes:4",
+            "origin_types:3",
+            "referring_accounts:0",
+            "origin_types:3",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-22T03:16:40.022Z",
+        "homepage_url": "https://aljazeera.com/",
+        "example_url": "https://www.aljazeera.com/economy/2026/6/22/shipping-stalls-in-strait-of-hormuz-after-iran-declares-key-waterway-shut?traffic_source=rss",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.aljazeera.com/",
+        "example_final_url": "https://www.aljazeera.com/economy/2026/6/22/shipping-stalls-in-strait-of-hormuz-after-iran-declares-key-waterway-shut?traffic_source=rss",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 23,
+          "opinion_marker": true
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 26,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "theguardian.com",
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-06-22T00:15:00Z",
       "discovery": {
-        "distinct_urls": 30,
+        "distinct_urls": 31,
         "example_urls": [
           "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
           "https://www.theguardian.com/world/2026/jun/21/canada-immigration-us-deportation",
@@ -643,7 +776,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 2,
-          "reading_queue": 29
+          "reading_queue": 30
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -676,7 +809,7 @@
         "breadth": {
           "score": 0.5866666666666667,
           "basis": [
-            "distinct_urls:30",
+            "distinct_urls:31",
             "distinct_axes:2",
             "origin_types:2"
           ]
@@ -715,7 +848,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:30",
+            "distinct_urls:31",
             "distinct_axes:2",
             "origin_types:2",
             "referring_accounts:0",
@@ -725,7 +858,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T07:56:20.653Z",
+        "fetched_at": "2026-06-23T08:33:54.930Z",
         "homepage_url": "https://theguardian.com/",
         "example_url": "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
         "homepage_status": 200,
@@ -752,138 +885,6 @@
           "has_contact_link": false,
           "has_corrections_link": true,
           "outbound_links_count": 4,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "aljazeera.com",
-      "entity": "Aljazeera",
-      "kind": "news",
-      "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-06-23T00:31:00Z",
-      "discovery": {
-        "distinct_urls": 6,
-        "example_urls": [
-          "https://www.aljazeera.com/opinions/2026/6/22/the-icc-must-investigate-israels-genocidal-use-of-sexual?traffic_source=rss",
-          "https://www.aljazeera.com/economy/2026/6/22/us-house-committee-reaches-bipartisan-deal-on-social-media-rules-for-kids?traffic_source=rss",
-          "https://www.aljazeera.com/video/the-take-2/2026/6/22/what-the-world-cup-looks-like-from-gaza?traffic_source=rss",
-          "https://www.aljazeera.com/news/liveblog/2026/6/23/iran-war-live-tehran-to-access-billions-in-frozen-funds?traffic_source=rss",
-          "https://www.aljazeera.com/economy/2026/6/22/shipping-stalls-in-strait-of-hormuz-after-iran-declares-key-waterway-shut?traffic_source=rss"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 6,
-          "reading_queue": 1,
-          "journals": 3
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_geopolitical_rhetoric_v1",
-          "axis_global_power_realignments_v1",
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.75,
-          "basis": [
-            "newsroom_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.53,
-          "basis": [
-            "distinct_urls:6",
-            "distinct_axes:3",
-            "origin_types:3"
-          ]
-        },
-        "corroboration": {
-          "score": 0.26249999999999996,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:3"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.72,
-          "confidence": 0.85,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:26",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.6561718750000001,
-          "confidence": 0.26992499999999997,
-          "method": "mechanical_v1",
-          "basis": [
-            "newsroom_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:6",
-            "distinct_axes:3",
-            "origin_types:3",
-            "referring_accounts:0",
-            "origin_types:3",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-22T03:16:40.022Z",
-        "homepage_url": "https://aljazeera.com/",
-        "example_url": "https://www.aljazeera.com/economy/2026/6/22/shipping-stalls-in-strait-of-hormuz-after-iran-declares-key-waterway-shut?traffic_source=rss",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.aljazeera.com/",
-        "example_final_url": "https://www.aljazeera.com/economy/2026/6/22/shipping-stalls-in-strait-of-hormuz-after-iran-declares-key-waterway-shut?traffic_source=rss",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 23,
-          "opinion_marker": true
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 26,
           "opinion_marker": false
         }
       }
@@ -1151,7 +1152,7 @@
       "first_seen_at": null,
       "last_seen_at": null,
       "discovery": {
-        "distinct_urls": 17,
+        "distinct_urls": 18,
         "example_urls": [
           "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&amp;at_campaign=rss",
           "https://www.bbc.com/news/articles/cwy0gjqv783o?at_medium=RSS&amp;at_campaign=rss",
@@ -1160,7 +1161,7 @@
           "https://www.bbc.com/news/articles/cp3xqkxp3x5o?at_medium=RSS&amp;at_campaign=rss"
         ],
         "origin_counts": {
-          "reading_queue": 18
+          "reading_queue": 19
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1189,7 +1190,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:17",
+            "distinct_urls:18",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -1223,11 +1224,11 @@
         },
         "overall": {
           "score": 0.592890625,
-          "confidence": 0.476475,
+          "confidence": 0.498975,
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:17",
+            "distinct_urls:18",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -1651,7 +1652,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T07:56:20.893Z",
+        "fetched_at": "2026-06-23T08:33:55.158Z",
         "homepage_url": "https://apnews.com/",
         "example_url": "https://apnews.com/hub/iran",
         "homepage_status": 200,
@@ -1687,9 +1688,9 @@
       "entity": "Hrw",
       "kind": "unknown",
       "first_seen_at": "2026-06-21T15:45:00Z",
-      "last_seen_at": "2026-06-23T03:34:00.661Z",
+      "last_seen_at": "2026-06-23T08:38:47.296Z",
       "discovery": {
-        "distinct_urls": 19,
+        "distinct_urls": 21,
         "example_urls": [
           "https://www.hrw.org/news/2026/06/18/support-builds-to-protect-children-from-crimes-against-humanity",
           "https://www.hrw.org/news/2026/06/18/uzbekistan-activist-held-in-trumped-up-case",
@@ -1698,9 +1699,9 @@
           "https://www.hrw.org/news/2026/06/17/japans-flag-desecration-bill-threatens-rights"
         ],
         "origin_counts": {
-          "ontology_evidence": 13,
-          "reading_queue": 5,
-          "journals": 20
+          "ontology_evidence": 14,
+          "reading_queue": 6,
+          "journals": 22
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1736,7 +1737,7 @@
         "breadth": {
           "score": 0.8216666666666665,
           "basis": [
-            "distinct_urls:19",
+            "distinct_urls:21",
             "distinct_axes:5",
             "origin_types:3"
           ]
@@ -1770,12 +1771,12 @@
         },
         "overall": {
           "score": 0.5343489583333333,
-          "confidence": 0.623675,
+          "confidence": 0.6461749999999999,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:19",
+            "distinct_urls:21",
             "distinct_axes:5",
             "origin_types:3",
             "referring_accounts:0",
@@ -2737,9 +2738,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-23T06:00:01.000Z",
+      "last_seen_at": "2026-06-23T08:28:21.000Z",
       "discovery": {
-        "distinct_urls": 5888,
+        "distinct_urls": 5899,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2748,10 +2749,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3505,
-          "feed_buffer_reply": 3810
+          "feed_buffer": 3512,
+          "feed_buffer_reply": 3815
         },
-        "distinct_referring_accounts": 1898,
+        "distinct_referring_accounts": 1902,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -2789,7 +2790,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5888",
+            "distinct_urls:5899",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2797,7 +2798,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1898",
+            "referring_accounts:1902",
             "origin_types:2"
           ]
         },
@@ -2827,17 +2828,17 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5888",
+            "distinct_urls:5899",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1898",
+            "referring_accounts:1902",
             "origin_types:2",
             "track_record_unavailable"
           ]
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T07:56:21.289Z",
+        "fetched_at": "2026-06-23T08:33:55.518Z",
         "homepage_url": "https://t.co/",
         "example_url": "https://t.co/pJSE124ec4",
         "homepage_status": 200,
@@ -4305,6 +4306,136 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "rappler.com",
+      "entity": "Rappler",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-22T02:51:13.362Z",
+      "last_seen_at": "2026-06-23T08:38:47.296Z",
+      "discovery": {
+        "distinct_urls": 8,
+        "example_urls": [
+          "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
+          "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
+          "https://www.rappler.com/philippines/barmm-minories-demand-genuine-representation-parliamentary-elections/",
+          "https://www.rappler.com/five-eyes-intelligence-alliance-warns-that-new-ai-models-pose-urgent-cyber-risk",
+          "https://www.rappler.com/world/middle-east/us-iran-peace-talks-updates-june-22-2026/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 7,
+          "journals": 12
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_ai_societal_impact_v1",
+          "axis_epistemic_integrity",
+          "axis_media_integrity_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.5866666666666667,
+          "basis": [
+            "distinct_urls:8",
+            "distinct_axes:4",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.61,
+          "confidence": 0.85,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.4541145833333333,
+          "confidence": 0.31895,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:8",
+            "distinct_axes:4",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-23T03:32:21.303Z",
+        "homepage_url": "https://rappler.com/",
+        "example_url": "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.rappler.com/",
+        "example_final_url": "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
           "opinion_marker": false
         }
       }
@@ -10265,6 +10396,134 @@
       }
     },
     {
+      "domain": "inquirer.net",
+      "entity": "Inquirer",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-09T01:05:59.567Z",
+      "last_seen_at": "2026-06-23T08:38:47.296Z",
+      "discovery": {
+        "distinct_urls": 5,
+        "example_urls": [
+          "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
+          "https://newsinfo.inquirer.net/2249755/drilon-warns-vs-second-envelope-crisis-in-vp-trial",
+          "http://opinion.inquirer.net/",
+          "http://inquirer.net/",
+          "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force]"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 3,
+          "journals": 19
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_political_trust_corruption_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.3825,
+          "basis": [
+            "distinct_urls:5",
+            "distinct_axes:2",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.88,
+          "confidence": 0.85,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:true",
+            "outbound_links:20",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.40945312500000003,
+          "confidence": 0.208575,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:5",
+            "distinct_axes:2",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-22T00:46:09.792Z",
+        "homepage_url": "https://inquirer.net/",
+        "example_url": "https://newsinfo.inquirer.net/2249755/drilon-warns-vs-second-envelope-crisis-in-vp-trial",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.inquirer.net/",
+        "example_final_url": "https://newsinfo.inquirer.net/2249755/drilon-warns-vs-second-envelope-crisis-in-vp-trial",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 17,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": true,
+          "outbound_links_count": 20,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "moltbook.com",
       "entity": "Moltbook",
       "kind": "unknown",
@@ -15188,256 +15447,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "rappler.com",
-      "entity": "Rappler",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-22T02:51:13.362Z",
-      "last_seen_at": "2026-06-23T03:34:00.661Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
-          "https://www.rappler.com/philippines/barmm-minories-demand-genuine-representation-parliamentary-elections/",
-          "https://www.rappler.com/world/middle-east/us-iran-peace-talks-updates-june-22-2026/"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 2,
-          "journals": 4
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.2658333333333333,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:1",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.61,
-          "confidence": 0.85,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:1",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.38393229166666665,
-          "confidence": 0.139075,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:1",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-23T03:32:21.303Z",
-        "homepage_url": "https://rappler.com/",
-        "example_url": "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.rappler.com/",
-        "example_final_url": "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "inquirer.net",
-      "entity": "Inquirer",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-09T01:05:59.567Z",
-      "last_seen_at": "2026-06-22T00:15:00Z",
-      "discovery": {
-        "distinct_urls": 3,
-        "example_urls": [
-          "https://newsinfo.inquirer.net/2249755/drilon-warns-vs-second-envelope-crisis-in-vp-trial",
-          "http://opinion.inquirer.net/",
-          "http://inquirer.net/"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 1,
-          "journals": 15
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_political_trust_corruption_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.2658333333333333,
-          "basis": [
-            "distinct_urls:3",
-            "distinct_axes:1",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.88,
-          "confidence": 0.85,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:true",
-            "outbound_links:20",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.38393229166666665,
-          "confidence": 0.139075,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:3",
-            "distinct_axes:1",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-22T00:46:09.792Z",
-        "homepage_url": "https://inquirer.net/",
-        "example_url": "https://newsinfo.inquirer.net/2249755/drilon-warns-vs-second-envelope-crisis-in-vp-trial",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.inquirer.net/",
-        "example_final_url": "https://newsinfo.inquirer.net/2249755/drilon-warns-vs-second-envelope-crisis-in-vp-trial",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 17,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": true,
-          "outbound_links_count": 20,
           "opinion_marker": false
         }
       }
@@ -22813,6 +22822,130 @@
       }
     },
     {
+      "domain": "x.xom",
+      "entity": "X Xom",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-01T05:03:12.382Z",
+      "last_seen_at": "2026-06-23T08:38:47.296Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://x.xom/EricLDaugh/status/2049914155461652916",
+          "https://x.xom/hamburger317/status/2057208504184881241",
+          "https://x.xom/Reuters/status/2069303186955878779]"
+        ],
+        "origin_counts": {
+          "journals": 4
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": true
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "doi_or_identifier_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.37046874999999996,
+          "confidence": 0.10635,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "doi_or_identifier_path_seen",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-22T23:33:41.458Z",
+        "homepage_url": "https://x.xom/",
+        "example_url": "https://x.xom/EricLDaugh/status/2049914155461652916",
+        "homepage_status": null,
+        "example_status": null,
+        "homepage_final_url": "https://x.xom/",
+        "example_final_url": "https://x.xom/EricLDaugh/status/2049914155461652916",
+        "homepage_content_type": "",
+        "example_content_type": "",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "abs-cbn.com",
       "entity": "Abs-Cbn",
       "kind": "unknown",
@@ -23897,7 +24030,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T08:26:20.336Z",
+        "fetched_at": "2026-06-23T09:01:54.447Z",
         "homepage_url": "https://trendmicro.com/",
         "example_url": "https://newsroom.trendmicro.com/2026-03-23-Trend-Micros-Enterprise-Business-is-now-TrendAI-TM?utm_source=twitter_paid&utm_medium=social&utm_campaign=ent_corporate_aw_gl_int_rebrand&utm_content=carouse&twclid=2cmz9tfo72r6gek4sy5lql8osu",
         "homepage_status": 200,
@@ -24771,7 +24904,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T08:26:21.575Z",
+        "fetched_at": "2026-06-23T09:01:55.813Z",
         "homepage_url": "https://angel.com/",
         "example_url": "https://www.angel.com/tickets/young-washington?twclid=27mi12v89i7upcqxfvv5wwjfcz",
         "homepage_status": 200,
@@ -25171,129 +25304,6 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 33,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "x.xom",
-      "entity": "X Xom",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-01T05:03:12.382Z",
-      "last_seen_at": "2026-05-21T21:36:31.439Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://x.xom/EricLDaugh/status/2049914155461652916",
-          "https://x.xom/hamburger317/status/2057208504184881241"
-        ],
-        "origin_counts": {
-          "journals": 3
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": true
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "doi_or_identifier_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3640885416666667,
-          "confidence": 0.07772499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "doi_or_identifier_path_seen",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-22T23:33:41.458Z",
-        "homepage_url": "https://x.xom/",
-        "example_url": "https://x.xom/EricLDaugh/status/2049914155461652916",
-        "homepage_status": null,
-        "example_status": null,
-        "homepage_final_url": "https://x.xom/",
-        "example_final_url": "https://x.xom/EricLDaugh/status/2049914155461652916",
-        "homepage_content_type": "",
-        "example_content_type": "",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -28365,7 +28375,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T08:26:22.396Z",
+        "fetched_at": "2026-06-23T09:01:56.352Z",
         "homepage_url": "https://dell.com/",
         "example_url": "https://www.dell.com/en-us/shop/dell-laptops/xps-14-laptop/spd/xps-da14260-laptop?twclid=2b95mzwodix16nm7kii2sz7zvh",
         "homepage_status": 200,
@@ -28853,7 +28863,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T08:26:22.529Z",
+        "fetched_at": "2026-06-23T09:01:56.451Z",
         "homepage_url": "https://x.m/",
         "example_url": "https://x.m/mjfree/status/2067065470641983623",
         "homepage_status": null,
@@ -34019,7 +34029,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T05:56:50.444Z",
+        "fetched_at": "2026-06-23T07:01:49.991Z",
         "homepage_url": "https://burga.us/",
         "example_url": "https://burga.us/?utm_source=twitter&utm_medium=paid&utm_campaign=US+-+TOF+%7C+ABO+%7C+1+DC+%7C+Broad+%7C+Evergreen+Ultimate+Winners+%7C+AI+%7C+2026.05.05+%7C+%24200&utm_term=Batch+%231+%7C+2026.05.05&utm_content=Marius+225v3&twclid=252b1spdlruezd1plpkesujsz5",
         "homepage_status": 200,
@@ -34142,7 +34152,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T06:26:19.858Z",
+        "fetched_at": "2026-06-23T07:01:50.414Z",
         "homepage_url": "https://dito.ph/",
         "example_url": "https://dito.ph/sandali?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_1&twclid=2estlcww980yee2hzsu5vdedbn",
         "homepage_status": 200,
@@ -34265,7 +34275,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T06:26:21.051Z",
+        "fetched_at": "2026-06-23T07:01:51.914Z",
         "homepage_url": "https://trenchers.ai/",
         "example_url": "https://trenchers.ai/?twclid=2di75phbt55c7y0zfq5ihrqinv",
         "homepage_status": 200,
@@ -34388,7 +34398,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T06:26:21.404Z",
+        "fetched_at": "2026-06-23T07:01:52.310Z",
         "homepage_url": "https://ohmycex.com/",
         "example_url": "https://ohmycex.com/?twclid=29oy2ts1zwr94hy6ispo25ixt1",
         "homepage_status": 521,
@@ -34511,7 +34521,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T06:56:19.059Z",
+        "fetched_at": "2026-06-23T07:31:56.222Z",
         "homepage_url": "https://hypernative.io/",
         "example_url": "https://www.hypernative.io/events-webinars/the-security-blindspot-the-problem-of-drainers-poisoners?utm_campaign=66726114-X-Ads-Cold-Reach&utm_source=twitter&utm_medium=paidsocial&utm_content=Webinar_Video_Type-drainers-intro_Download&twclid=22xu4h6p87fy3sh5d2hyd5fv7h",
         "homepage_status": 200,
@@ -34634,7 +34644,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T06:56:20.767Z",
+        "fetched_at": "2026-06-23T07:31:57.113Z",
         "homepage_url": "https://fortunashield.com/",
         "example_url": "https://fortunashield.com/?twclid=26a0c9wof4ax97jupe8vqekr9u",
         "homepage_status": 200,
@@ -34757,7 +34767,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T06:56:22.408Z",
+        "fetched_at": "2026-06-23T07:31:57.444Z",
         "homepage_url": "https://litmas.ai/",
         "example_url": "https://litmas.ai/litigation-ai-workflows-sign-up/?utm_source=x&utm_medium=paid-social&utm_campaign=x_pr_wv_follower-lals_us_si&utm_content=summary-judgment-overnight_lp-efficiency&twclid=2632rgrwnlsjvtuax0q5tz2iba",
         "homepage_status": 200,
@@ -34880,7 +34890,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T06:56:22.560Z",
+        "fetched_at": "2026-06-23T07:31:57.639Z",
         "homepage_url": "https://interserver.net/",
         "example_url": "https://www.interserver.net/vps/?twclid=29rh8w2who6jt1ovqguffmygqn",
         "homepage_status": 403,
