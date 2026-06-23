@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-23T09:01:52.785Z",
+  "generated_at": "2026-06-23T12:01:57.766Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-23T09:01:56.452Z",
+  "profiled_at": "2026-06-23T12:02:05.785Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -631,9 +631,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-06-23T08:38:47.296Z",
+      "last_seen_at": "2026-06-23T10:06:36.269Z",
       "discovery": {
-        "distinct_urls": 9,
+        "distinct_urls": 11,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/22/the-icc-must-investigate-israels-genocidal-use-of-sexual?traffic_source=rss",
           "https://www.aljazeera.com/economy/2026/6/22/us-house-committee-reaches-bipartisan-deal-on-social-media-rules-for-kids?traffic_source=rss",
@@ -642,9 +642,9 @@
           "https://www.aljazeera.com/economy/2026/6/22/shipping-stalls-in-strait-of-hormuz-after-iran-declares-key-waterway-shut?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 7,
+          "ontology_evidence": 10,
           "reading_queue": 1,
-          "journals": 8
+          "journals": 11
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -677,9 +677,9 @@
           ]
         },
         "breadth": {
-          "score": 0.6758333333333333,
+          "score": 0.7341666666666666,
           "basis": [
-            "distinct_urls:9",
+            "distinct_urls:11",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -712,13 +712,13 @@
           ]
         },
         "overall": {
-          "score": 0.6880729166666666,
-          "confidence": 0.36805,
+          "score": 0.7008333333333333,
+          "confidence": 0.4253,
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:9",
+            "distinct_urls:11",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -766,7 +766,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-06-22T00:15:00Z",
       "discovery": {
-        "distinct_urls": 31,
+        "distinct_urls": 33,
         "example_urls": [
           "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
           "https://www.theguardian.com/world/2026/jun/21/canada-immigration-us-deportation",
@@ -776,7 +776,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 2,
-          "reading_queue": 30
+          "reading_queue": 32
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -809,7 +809,7 @@
         "breadth": {
           "score": 0.5866666666666667,
           "basis": [
-            "distinct_urls:31",
+            "distinct_urls:33",
             "distinct_axes:2",
             "origin_types:2"
           ]
@@ -848,7 +848,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:31",
+            "distinct_urls:33",
             "distinct_axes:2",
             "origin_types:2",
             "referring_accounts:0",
@@ -896,7 +896,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-06-22T00:15:00Z",
       "discovery": {
-        "distinct_urls": 24,
+        "distinct_urls": 26,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
@@ -906,7 +906,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "reading_queue": 25
+          "reading_queue": 27
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -938,7 +938,7 @@
         "breadth": {
           "score": 0.5283333333333333,
           "basis": [
-            "distinct_urls:24",
+            "distinct_urls:26",
             "distinct_axes:1",
             "origin_types:2"
           ]
@@ -977,7 +977,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:24",
+            "distinct_urls:26",
             "distinct_axes:1",
             "origin_types:2",
             "referring_accounts:0",
@@ -1688,7 +1688,7 @@
       "entity": "Hrw",
       "kind": "unknown",
       "first_seen_at": "2026-06-21T15:45:00Z",
-      "last_seen_at": "2026-06-23T08:38:47.296Z",
+      "last_seen_at": "2026-06-23T09:02:43.438Z",
       "discovery": {
         "distinct_urls": 21,
         "example_urls": [
@@ -1701,7 +1701,7 @@
         "origin_counts": {
           "ontology_evidence": 14,
           "reading_queue": 6,
-          "journals": 22
+          "journals": 23
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1813,6 +1813,127 @@
           "has_contact_link": true,
           "has_corrections_link": true,
           "outbound_links_count": 20,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "bbc.co.uk",
+      "entity": "Bbc",
+      "kind": "news",
+      "first_seen_at": null,
+      "last_seen_at": null,
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
+          "https://www.bbc.co.uk/news/articles/c4gy6vk44pwo?at_medium=RSS&amp;at_campaign=rss"
+        ],
+        "origin_counts": {
+          "reading_queue": 3
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.72,
+          "basis": [
+            "newsroom_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.58,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:16",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.5290885416666666,
+          "confidence": 0.07772499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "newsroom_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-23T10:03:56.951Z",
+        "homepage_url": "https://bbc.co.uk/",
+        "example_url": "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.bbc.co.uk/",
+        "example_final_url": "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 13,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 16,
           "opinion_marker": false
         }
       }
@@ -2738,9 +2859,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-23T08:28:21.000Z",
+      "last_seen_at": "2026-06-23T11:40:43.000Z",
       "discovery": {
-        "distinct_urls": 5899,
+        "distinct_urls": 5915,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2749,10 +2870,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3512,
-          "feed_buffer_reply": 3815
+          "feed_buffer": 3522,
+          "feed_buffer_reply": 3822
         },
-        "distinct_referring_accounts": 1902,
+        "distinct_referring_accounts": 1904,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -2790,7 +2911,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5899",
+            "distinct_urls:5915",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2798,7 +2919,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1902",
+            "referring_accounts:1904",
             "origin_types:2"
           ]
         },
@@ -2828,10 +2949,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5899",
+            "distinct_urls:5915",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1902",
+            "referring_accounts:1904",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -2974,7 +3095,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T09:56:21.561Z",
+        "fetched_at": "2026-06-23T10:04:00.563Z",
         "homepage_url": "https://grok.com/",
         "example_url": "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
         "homepage_status": 200,
@@ -3262,6 +3383,138 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 27,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "amnesty.org",
+      "entity": "Amnesty",
+      "kind": "unknown",
+      "first_seen_at": "2026-03-31T01:46:38.493Z",
+      "last_seen_at": "2026-06-23T10:06:36.269Z",
+      "discovery": {
+        "distinct_urls": 9,
+        "example_urls": [
+          "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
+          "https://www.amnesty.org/en/latest/news/2026/06/car-bozize/",
+          "https://www.amnesty.org/en/latest/news/2026/06/cuba-a-cuatro-anos-de-una-condena-injusta-artistas-afrocubanos-siguen-encarcelados-por-expresars/",
+          "https://www.amnesty.org/en/latest/campaigns/2026/06/how-do-us-third-country-removals-work-and-are-they-legal/",
+          "https://www.amnesty.org/en/latest/news/2026/06/lebanon-israel-radically-expands-use-of-unlawful-mass-evacuation-orders-and-commits-war-crime-of-unlawful-transfer/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 7,
+          "journals": 4
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_authoritarian_self_determination_v1",
+          "axis_human_rights_exploitation_v1",
+          "axis_national_sovereignty_v_intl_law_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.6158333333333332,
+          "basis": [
+            "distinct_urls:9",
+            "distinct_axes:4",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.48111979166666663,
+          "confidence": 0.34757499999999997,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:9",
+            "distinct_axes:4",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-20T21:26:35.997Z",
+        "homepage_url": "https://amnesty.org/",
+        "example_url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/",
+        "homepage_status": 403,
+        "example_status": 403,
+        "homepage_final_url": "https://www.amnesty.org/en/",
+        "example_final_url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -3784,6 +4037,137 @@
       }
     },
     {
+      "domain": "rappler.com",
+      "entity": "Rappler",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-22T02:51:13.362Z",
+      "last_seen_at": "2026-06-23T10:06:36.269Z",
+      "discovery": {
+        "distinct_urls": 9,
+        "example_urls": [
+          "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
+          "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
+          "https://www.rappler.com/philippines/barmm-minories-demand-genuine-representation-parliamentary-elections/",
+          "https://www.rappler.com/philippines/visayas/borbon-cebu-vice-mayor-noel-dotillos-graft-charges/",
+          "https://www.rappler.com/five-eyes-intelligence-alliance-warns-that-new-ai-models-pose-urgent-cyber-risk"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 9,
+          "journals": 15
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_ai_societal_impact_v1",
+          "axis_epistemic_integrity",
+          "axis_media_integrity_v1",
+          "axis_political_trust_corruption_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.6741666666666667,
+          "basis": [
+            "distinct_urls:9",
+            "distinct_axes:5",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.61,
+          "confidence": 0.85,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.47325520833333334,
+          "confidence": 0.359825,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:9",
+            "distinct_axes:5",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-23T03:32:21.303Z",
+        "homepage_url": "https://rappler.com/",
+        "example_url": "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.rappler.com/",
+        "example_final_url": "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "relaylab.us",
       "entity": "Relaylab Us",
       "kind": "unknown",
@@ -4148,7 +4532,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T09:26:21.044Z",
+        "fetched_at": "2026-06-23T10:04:01.135Z",
         "homepage_url": "https://theepochtimes.com/",
         "example_url": "https://www.theepochtimes.com/china/former-chinese-military-doctor-leaks-ccp-plan-to-use-taiwanese-troops-as-organ-bank-5871639?utm_medium=DigitalMkt&utm_source=twitter&utm_campaign=content_FormerChineseMilitary-karen-20250827&utm_content=img-2_FormerChineseMilitary&utm_term=new-pagevisitor&gl=reg&twclid=2387x75uji9nq8gmjpy9cer691",
         "homepage_status": 200,
@@ -4172,267 +4556,6 @@
           "has_published_time": true,
           "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "amnesty.org",
-      "entity": "Amnesty",
-      "kind": "unknown",
-      "first_seen_at": "2026-03-31T01:46:38.493Z",
-      "last_seen_at": "2026-06-22T16:01:00Z",
-      "discovery": {
-        "distinct_urls": 7,
-        "example_urls": [
-          "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
-          "https://www.amnesty.org/en/latest/news/2026/06/car-bozize/",
-          "https://www.amnesty.org/en/latest/campaigns/2026/06/how-do-us-third-country-removals-work-and-are-they-legal/",
-          "https://www.amnesty.org/en/latest/news/2026/06/lebanon-israel-radically-expands-use-of-unlawful-mass-evacuation-orders-and-commits-war-crime-of-unlawful-transfer/",
-          "https://www.amnesty.org/en/latest/news/2026/06/eu-must-abandon-afghanistan-deportation-plans-and-stop-readmission-talks-with-the-taliban/"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 6,
-          "journals": 2
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_human_rights_exploitation_v1",
-          "axis_national_sovereignty_v_intl_law_v1",
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.49916666666666665,
-          "basis": [
-            "distinct_urls:7",
-            "distinct_axes:3",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.45559895833333336,
-          "confidence": 0.27807499999999996,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:7",
-            "distinct_axes:3",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-20T21:26:35.997Z",
-        "homepage_url": "https://amnesty.org/",
-        "example_url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/",
-        "homepage_status": 403,
-        "example_status": 403,
-        "homepage_final_url": "https://www.amnesty.org/en/",
-        "example_final_url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "rappler.com",
-      "entity": "Rappler",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-22T02:51:13.362Z",
-      "last_seen_at": "2026-06-23T08:38:47.296Z",
-      "discovery": {
-        "distinct_urls": 8,
-        "example_urls": [
-          "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
-          "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
-          "https://www.rappler.com/philippines/barmm-minories-demand-genuine-representation-parliamentary-elections/",
-          "https://www.rappler.com/five-eyes-intelligence-alliance-warns-that-new-ai-models-pose-urgent-cyber-risk",
-          "https://www.rappler.com/world/middle-east/us-iran-peace-talks-updates-june-22-2026/"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 7,
-          "journals": 12
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_ai_societal_impact_v1",
-          "axis_epistemic_integrity",
-          "axis_media_integrity_v1",
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.5866666666666667,
-          "basis": [
-            "distinct_urls:8",
-            "distinct_axes:4",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.61,
-          "confidence": 0.85,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:1",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.4541145833333333,
-          "confidence": 0.31895,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:8",
-            "distinct_axes:4",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-23T03:32:21.303Z",
-        "homepage_url": "https://rappler.com/",
-        "example_url": "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.rappler.com/",
-        "example_final_url": "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 1,
@@ -4529,7 +4652,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T09:26:21.593Z",
+        "fetched_at": "2026-06-23T10:04:01.631Z",
         "homepage_url": "https://wikipedia.org/",
         "example_url": "https://en.wikipedia.org/wiki/2026_Iran_war",
         "homepage_status": 200,
@@ -7966,7 +8089,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T11:26:23.215Z",
+        "fetched_at": "2026-06-23T11:34:04.104Z",
         "homepage_url": "https://anymark.co/",
         "example_url": "https://anymark.co/?utm_source=x&utm_campaign=x771&twclid=293t0nesyim9m91au5fqoaj5s8",
         "homepage_status": 200,
@@ -10400,7 +10523,7 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T01:05:59.567Z",
-      "last_seen_at": "2026-06-23T08:38:47.296Z",
+      "last_seen_at": "2026-06-23T09:31:00Z",
       "discovery": {
         "distinct_urls": 5,
         "example_urls": [
@@ -10411,8 +10534,8 @@
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force]"
         ],
         "origin_counts": {
-          "ontology_evidence": 3,
-          "journals": 19
+          "ontology_evidence": 4,
+          "journals": 20
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -10616,7 +10739,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T09:26:21.861Z",
+        "fetched_at": "2026-06-23T10:32:05.798Z",
         "homepage_url": "https://moltbook.com/",
         "example_url": "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
         "homepage_status": 200,
@@ -10743,7 +10866,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T11:26:28.246Z",
+        "fetched_at": "2026-06-23T11:34:06.871Z",
         "homepage_url": "https://framia.pro/",
         "example_url": "https://framia.pro/?utm_source=x&utm_campaign=twitter_adsmarch_framia_14_20260331&utm_medium=paid_social&twclid=2e6c8vey7aaz8sdwedu4gd0jgx",
         "homepage_status": 200,
@@ -13279,7 +13402,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T09:56:22.274Z",
+        "fetched_at": "2026-06-23T10:32:06.407Z",
         "homepage_url": "https://cosmos.so/",
         "example_url": "https://cosmos.so/?twclid=27q4rkz0yboutgym0rd9nr51gc",
         "homepage_status": 200,
@@ -16044,7 +16167,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T09:26:22.379Z",
+        "fetched_at": "2026-06-23T10:32:06.848Z",
         "homepage_url": "https://pixelsuite.ai/",
         "example_url": "https://www.pixelsuite.ai/?twclid=21t2mc2zkr7fbld6fej146r5rz",
         "homepage_status": 200,
@@ -16169,7 +16292,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T11:26:28.594Z",
+        "fetched_at": "2026-06-23T11:34:07.313Z",
         "homepage_url": "https://theograce.com/",
         "example_url": "https://www.theograce.com/products/terry-diamond-heart-necklace-with-engraved-names-in-gold-plating?utm_term=Guitar&utm_id=41178982&utm_medium=cpc&utm_campaign=US_ALL_twitter_cpc_Display_MD26_M4W_Still&utm_source=twitter&utm_content=MD26&twclid=2dnpihgths0rs7qj2dk5rkgxbo",
         "homepage_status": 200,
@@ -16670,7 +16793,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T11:26:28.783Z",
+        "fetched_at": "2026-06-23T11:34:07.492Z",
         "homepage_url": "https://openinfer.io/",
         "example_url": "https://openinfer.io/news/2026-06-02-nvidia-dynamo-proved-inference-needs-a-control-plane/?twclid=27dzvvpluhv8xln5kqrwwhmmra",
         "homepage_status": 200,
@@ -17928,7 +18051,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T09:56:22.575Z",
+        "fetched_at": "2026-06-23T10:32:07.170Z",
         "homepage_url": "https://understandingwar.org/",
         "example_url": "https://understandingwar.org/research/middle-east/the-war-in-iran-operational-progress-but-challenges-remain/",
         "homepage_status": 200,
@@ -18280,7 +18403,7 @@
             "about:true",
             "contact:false",
             "corrections:false",
-            "outbound_links:387",
+            "outbound_links:373",
             "opinion_marker:false"
           ]
         },
@@ -18300,7 +18423,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T09:56:23.144Z",
+        "fetched_at": "2026-06-23T12:01:59.785Z",
         "homepage_url": "https://cfr.org/",
         "example_url": "https://www.cfr.org/global-conflict-tracker/conflict/confrontation-between-united-states-and-iran",
         "homepage_status": 200,
@@ -18326,7 +18449,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 387,
+          "outbound_links_count": 373,
           "opinion_marker": false
         }
       }
@@ -22826,7 +22949,7 @@
       "entity": "X Xom",
       "kind": "unknown",
       "first_seen_at": "2026-05-01T05:03:12.382Z",
-      "last_seen_at": "2026-06-23T08:38:47.296Z",
+      "last_seen_at": "2026-06-23T09:02:43.438Z",
       "discovery": {
         "distinct_urls": 3,
         "example_urls": [
@@ -22835,7 +22958,7 @@
           "https://x.xom/Reuters/status/2069303186955878779]"
         ],
         "origin_counts": {
-          "journals": 4
+          "journals": 5
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -36226,6 +36349,51 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-23T12:02:00.351Z",
+        "homepage_url": "https://oneleet.com/",
+        "example_url": "https://oneleet.com/?utm_source=twitter&utm_medium=paid_social&utm_campaign=compliance_theater&twclid=2a67j2m5wa6dh7oxzhxot0zwu2",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.oneleet.com/",
+        "example_final_url": "https://www.oneleet.com/?utm_source=twitter&utm_medium=paid_social&utm_campaign=compliance_theater&twclid=2a67j2m5wa6dh7oxzhxot0zwu2",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
         }
       }
     },
@@ -38150,7 +38318,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T08:25:53.555Z",
+        "fetched_at": "2026-06-23T12:02:01.535Z",
         "homepage_url": "https://atr.org/",
         "example_url": "https://atr.org/mfn/?utm_source=x&utm_medium=cpm&utm_campaign=20260220&utm_content=mfn_v2&twclid=2dracnytvfda9fekosdp3ini9y",
         "homepage_status": 200,
@@ -38272,7 +38440,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T08:25:57.199Z",
+        "fetched_at": "2026-06-23T12:02:05.785Z",
         "homepage_url": "https://prismmarketview.com/",
         "example_url": "https://prismmarketview.com/companies/sbc-medical-group-holdings-incorporated/?twclid=26comjr0eies8gnklzmi3odvtu",
         "homepage_status": 200,
