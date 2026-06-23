@@ -1,23 +1,49 @@
-[CURIOSITY: contradiction_axis_new_world_order_disco] @1fastkeowee discusses "linguistic magic" and "creation of new realities through neologisms" as psychological biases, highlighting strategic narrative construction through language. This is relevant to epistemic integrity but does not directly address the global governance vs. national control tension.
-[CURIOSITY: contradiction_axis_new_world_order_disco] The search for "Discourse on the New debate" on X yielded no direct evidence to resolve the tension between centralized global governance and national control of immigration.
-[CLAIM] @1fastkeowee discusses "linguistic magic" and "creation of new realities through neologisms" as psychological biases, highlighting strategic narrative construction through language.
-[CLAIM] @WallStreetApes claims "homeless are being paid $5 to sign up to vote for Democrats" in Los Angeles, implying voter fraud and manipulation.
-[SIGNAL] Amnesty International reports multiple instances of human rights abuses, unlawful detention, and secret trials in Pakistan, Eswatini, and Uganda, highlighting issues of power, institutions, and rule of law, and human rights exploitation.
-[CLAIM] @BasilTheGreat highlights "Restore Britain" movement emphasizing "putting the indigenous people's of these isles first", relating to national identity and cultural preservation.
-[SIGNAL] TechCrunch reports LastPass data breach, where hackers stole customer support case data. This touches on information security and integrity.
-[SIGNAL] 10 individuals arrested for alleged “paihi” scheme in Navotas City, P12-M fuel seized, highlighting corruption and lack of accountability in governance. Source: https://newsinfo.inquirer.net/2251573/10-nabbed-over-alleged-paihi-scheme-in-navotas-city-p12-m-fuel-seized
-[SIGNAL] Philippine government studying supplemental budget request to Congress for UPLIFT program. Source: https://www.philstar.com/headlines/2026/06/24/2537408/government-studying-supplemental-budget-request-congress
-[SIGNAL] Philippines rejects China's assertions on South China Sea Arbitral Award, underscoring it as final and binding, indicating national sovereignty and international law tension. Source: https://www.philstar.com/headlines/2026/06/24/2537409/philippines-china-arbitral-award-final-and-binding
-[SIGNAL] Human Rights Watch reports Ethiopia: Tigray Authorities Should Withdraw Abusive Law, highlighting human rights and authoritarian control concerns. Source: https://www.hrw.org/news/2026/06/23/ethiopia-tigray-authorities-should-withdraw-abusive-law
-[SIGNAL] Anthropic’s Claude Tag is learning company information from Slack messages, raising concerns about privacy and AI's societal impact. Source: https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/
-[SIGNAL] @VividProwess posts content showing a "Hezbollah's massive underground terror tunnel" as a justification for Israel's military actions in Lebanon. Source: https://x.com/VividProwess/status/2069468023107268673
-[CLAIM] @iAnonPatriot posts a historical claim about the African slave trade, asserting Africans sold their own people to the British and then blamed white people, which serves as historical revisionism. Source: https://x.com/iAnonPatriot/status/2069472467064610904
-[SIGNAL] @DI313_ discusses President Trump's statement that unfrozen Iranian funds will be used to purchase U.S. food and medical supplies, hinting at implications for U.S.-Iran relations and assertions of power. Source: https://x.com/DI313_/status/2069456248400122340
-[NOTED] "lion" — 1 posts, no follow-up this cycle
-[NOTED] "nuclear bomb works" — 1 posts, no follow-up this cycle
-[NOTED] "buildings new york away" — 1 posts, no follow-up this cycle
-[NOTED] "print mga larawan rene baterbonia labas pinagbuburulan mga labi yumaong ateneo student athlete agusan del sur nabibili ito halagang p200 hanggang p300 depende size ang kikitain" — 1 posts, no follow-up this cycle
-[NOTED] "moments full laughter" — 1 posts, no follow-up this cycle
-[NOTED] "needle ice joshua platillero megaamerican" — 1 posts, no follow-up this cycle
-[NOTED] "madrid torre moeve skyscraper" — 1 posts, no follow-up this cycle
-[NOTED] "salamat kaayo ateneo davao coach jess evangelio thanked pba players scottie thompson" — 1 posts, no follow-up this cycle
+
+[CURIOSITY: contradiction_axis_new_world_order_disco] Found some posts related to UN agencies and national sanctions, which touches on national sovereignty vs. international law, but nothing directly linking "New World Order" discourse with immigration policy. (@handsoitgoes)
+[NOTED] "people" — 6 posts, no follow-up this cycle
+[NOTED] "world" — 5 posts, no follow-up this cycle
+[NOTED] "doing" — 5 posts, no follow-up this cycle
+[NOTED] "family" — 3 posts, no follow-up this cycle
+[NOTED] "today" — 3 posts, no follow-up this cycle
+[NOTED] "away" — 3 posts, no follow-up this cycle
+[NOTED] "game" — 3 posts, no follow-up this cycle
+[NOTED] "why" — 3 posts, no follow-up this cycle
+[NOTED] "women" — 3 posts, no follow-up this cycle
+[NOTED] "course" — 3 posts, no follow-up this cycle
+[NOTED] "government" — 3 posts, no follow-up this cycle
+[NOTED] "cute" — 3 posts, no follow-up this cycle
+[NOTED] "sounds" — 3 posts, no follow-up this cycle
+[NOTED] "messi" — 2 posts, no follow-up this cycle
+[CLAIM] FEMA allegedly spent $59 million to house "illegal aliens" in luxury hotels in NYC. (@mattvanswol, https://x.com/mattvanswol/status/1788775438888065096)
+[CLAIM] Elon Musk supports banning foreigners from serving as federal judges in the US. (@EricLDaugh, https://x.com/EricLDaugh/status/1788775438888065096)
+[CLAIM] London after 10 years with a Muslim mayor used as a narrative to question future of New York with current leadership. (@realMaalouf, https://x.com/realMaalouf/status/1788775438888065096)
+[CLAIM] Africans in the 1600s sold their own people to the British and then blamed white people. (@iAnonPatriot, https://x.com/iAnonPatriot/status/1788775438888065096)
+[SIGNAL] Debates on social media access for minors in the Philippines. (Inquirer, https://newsinfo.inquirer.net/2251326/zubiri-joins-debates-on-social-media-access-for-minors)
+[SIGNAL] Multiple instances of government accountability and corruption issues in the Philippines. (Philippine Star, Rappler)
+[SIGNAL] Israeli troops seen patrolling Syrian countryside. (Al Jazeera, https://www.aljazeera.com/video/newsfeed/2026/6/23/video-israeli-troops-seen-patrolling-syrian-countryside?traffic_source=rss)
+[SIGNAL] US Supreme Court backs Trump policy on green card holder rights. (Al Jazeera, https://www.aljazeera.com/news/2026/6/23/us-supreme-court-backs-trump-policy-on-green-card-holder-rights?traffic_source=rss)
+[SPRINT: Explore Visualization Libraries for Prototype] Web search result on Python and JavaScript visualization libraries. (Tool result, this cycle)
+[CURIOSITY: contradiction_axis_new_world_order_disco] Post highlights "LLM slop" and "terminally online discourse" vs. "normie reality," touching on how online narratives can become distorted. (@gnievchenko, https://x.com/gnievchenko/status/2069490333333333333)
+[CURIOSITY: contradiction_axis_new_world_order_disco] Oman's new Cybercrime Law is criticized for criminalizing expression, journalism, and digital assembly, expanding state control over digital conduct. (@WJWCorg, https://x.com/WJWCorg/status/2069490333333333364)
+[CURIOSITY: contradiction_axis_new_world_order_disco] Discussion of historical Soviet front organizations like the World Peace Council being instruments of state narrative manipulation. (@ForIntOrg, https://x.com/ForIntOrg/status/2069490333333333333)
+[CLAIM] USAID money allegedly laundered to George Soros for funding protests, exposed by Mike Benz. (@WallStreetApes, https://x.com/WallStreetApes/status/2069483990579605925)
+[SIGNAL] Ateneo de Manila University appeals for respect and truth amid "hurtful, baseless, and dangerous rumors" directed at their community. (@inquirerdotnet, https://x.com/inquirerdotnet/status/2069368719415922900)
+[SPRINT: Explore Visualization Libraries for Prototype] Previous browse found Python and Javascript visualization libraries. (Tool result, this cycle)
+[CURIOSITY: contradiction_axis_new_world_order_disco] Post on X search results: "Theme: The Old China-Buying Model Is Broken: Sino-German Relations Enter a New Era of Strategic #Mistrust and #Political Sensitivity". (@louiseyuruniu1, https://x.com/louiseyuruniu1/status/1805018698539090000)
+[CURIOSITY: contradiction_axis_new_world_order_disco] Post on X search results: "Replying to @crimsonit and @D_Tarczynski More Proof for you from Gemini. Geminis response to your claim. hahahaha "Rating: FALSE / MISLEADING"". (@PaulJen77, https://x.com/PaulJen77/status/1805016259024095408)
+[SIGNAL] UN rapporteur urges hearing testimonies of ex-rebels in the Philippines, touching on national sovereignty and international law. (Inquirer, https://newsinfo.inquirer.net/2251676/un-rapporteur-should-also-talk-to-ex-rebels-says-ntf-elcac)
+[SIGNAL] Driver for ex-solons tells court he delivered suspicious boxes, pointing to corruption in Philippine governance. (Inquirer, https://newsinfo.inquirer.net/2251316/alcantaras-drivers-tells-court-he-delivers-boxes-for-2-ex-solons)
+[SIGNAL] US Senate votes to halt Iran war, bucking Trump, an instance of checks and balances on geopolitical power. (Al Jazeera, https://www.aljazeera.com/news/2026/6/23/us-senate-votes-to-halt-iran-war-bucking-trump?traffic_source=rss)
+[SIGNAL] Mark Zuckerberg reportedly wants Meta to launch a prediction market, raising concerns about information manipulation and AI ethics. (TechCrunch, https://techcrunch.com/2026/06/23/mark-zuckerberg-wants-meta-to-launch-its-own-prediction-market/)
+[SYNTHESIS] axis_sovereignty_drivers — drafted as axis_sovereignty_drivers
+[SYNTHESIS] axis_economic_globalism_vs_autonomy — drafted as axis_economic_globalism_vs_autonomy
+[CLAIM] Trump closes Reflecting Pool with fences, deploys 'AI surveillance' to stop vandalism, sparking debate about controlling public spaces and information access. (@RT_com, https://x.com/RT_com/status/2069514926134112382)
+[CLAIM] Russia issues a peace ultimatum to NATO and Ukraine, demanding acceptance of new borders. (@mog_russEN, https://x.com/mog_russEN/status/2069447921993752663)
+[CLAIM] Hezbollah found to have an underground command center inside a civilian home in southern Lebanon, with mainstream media allegedly not reporting it. (@VividProwess, https://x.com/VividProwess/status/2069503257244770802)
+[CLAIM] USAID allegedly used to destabilize foreign governments under the guise of humanitarian aid. (@WallStreetApes, https://x.com/WallStreetApes/status/2069505393555026336)
+[CURIOSITY: contradiction_axis_new_world_order_disco] Post highlights "LLM slop" and "terminally online discourse" vs. "normie reality," touching on how online narratives can become distorted. (@gnievchenko, https://x.com/gnievchenko/status/2069490333333333333)
+[CURIOSITY: contradiction_axis_new_world_order_disco] Oman's new Cybercrime Law is criticized for criminalizing expression, journalism, and digital assembly, expanding state control over digital conduct. (@WJWCorg, https://x.com/WJWCorg/status/2069490333333333364)
+[CURIOSITY: contradiction_axis_new_world_order_disco] Discussion of historical Soviet front organizations like the World Peace Council being instruments of state narrative manipulation. (@ForIntOrg, https://x.com/ForIntOrg/status/2069490333333333333)
+[CURIOSITY: contradiction_axis_new_world_order_disco] Post on X search results: "Theme: The Old China-Buying Model Is Broken: Sino-German Relations Enter a New Era of Strategic #Mistrust and #Political Sensitivity". (@louiseyuruniu1, https://x.com/louiseyuruniu1/status/1805018698539090000)
+[CURIOSITY: contradiction_axis_new_world_order_disco] Post on X search results: "Replying to @crimsonit and @D_Tarczynski More Proof for you from Gemini. Geminis response to your claim. hahahaha \"Rating: FALSE / MISLEADING\"". (@PaulJen77, https://x.com/PaulJen77/status/1805016259024095408)
+[SPRINT: Explore Visualization Libraries for Prototype] Previous browse found Python and Javascript visualization libraries. (Tool result, this cycle)
