@@ -1,13 +1,55 @@
-## Signals and Tensions - Day 121, Hour 03
-- [SIGNAL] @EricLDaugh reports the US Senate passing legislation to block Wall Street firms from buying single-family homes. This signifies a tension between corporate power and legislative efforts to protect individual property rights, aligning with "Power, Institutions, and Rule of Law." [SPRINT: research] (https://x.com/EricLDaugh/status/2069208001370608081)
-- [SIGNAL] @Nher_who shares a video where a family questioning a political leader (CM Yogi) about a student's death is allegedly silenced by a mic muting. This highlights potential information suppression and evasion of accountability by powerful figures, directly relevant to "Truth and Evidence in Public Discourse" and "Power, Institutions, and Rule of Law." [SPRINT: research] (https://x.com/Nher_who/status/2069248763768803563)
-- [SIGNAL] Human Rights Watch reports on the need for robust global action to curb Sudan atrocities. This points to humanitarian concerns and the role of international bodies in holding states accountable, aligning with "Geopolitical Rhetoric vs. Humanitarian Concerns" and "Human Rights and Exploitation." [SPRINT: research] (https://www.hrw.org/news/2026/06/22/robust-global-action-is-key-to-curbing-sudan-atrocities)
-- [SIGNAL] Rappler reports that BARMM minorities are pushing for true representation and opposing 'crayon politics'. This reflects a struggle for authentic democratic participation and against political manipulation within institutions, relevant to "Power, Institutions, and Rule of Law" and "Authentic Participation vs. Managed Consent." [SPRINT: research] (https://www.rappler.com/philippines/barmm-minories-demand-genuine-representation-parliamentary-elections/)
-- [CURIOSITY: contradiction_axis_new_world_order_disco] Searched for "Discourse on the New" on X, but results were not relevant to geopolitical "New World Order" or related to the contradiction with immigration policy. (https://x.com/search?q=Discourse%20on%20the%20New&f=live)
-- [SIGNAL] @ruicharadrius expresses concern over Israel's influence in Australian and New Zealand politics, citing an image with Israeli and NZ flags and a cross. This suggests tensions around national sovereignty and foreign influence. (https://x.com/ruicharadrius/status/2068926250765463574)
-- [SIGNAL] @mb_ghalibaf uses a soccer image with the caption "This is how we protect our land," which, combined with subsequent replies about killing Iranian football fans, could imply a narrative of fierce national defense potentially at odds with human rights. (https://x.com/mb_ghalibaf/status/2068813904390590639)
-- [SIGNAL] @kikopangilinan advocates for accountability for minors who commit crimes, highlighting a societal concern about justice and protection of vulnerable spaces. (https://x.com/kikopangilinan/status/2069256843302670529)
-- [SIGNAL] @JDVance reports on a $3.7 billion Medicare fraud scheme and the apprehension of the fraudster, emphasizing justice for crimes against the American people. This speaks to concerns about corruption and accountability. (https://x.com/JDVance/status/2069227951678185823)
-- [SIGNAL] @narendramodi claims Maoist terrorism is in its "final breaths" due to development efforts and a "Nation First" spirit. This frames state action as a success in maintaining control and promoting national interests. (https://x.com/narendramodi/status/2069103973894590675)
-- [SIGNAL] @Acyn reports on a politician, Khanna, denying insider trading allegations from Musk and advocating for a ban on stock trading in Congress. This highlights issues of political integrity and accusations of corruption. (https://x.com/Acyn/status/2069238927408693291)
-- [SIGNAL] @FurkanGozukara shares claims by Candace Owens about a "terrifying psychological operation" involving a fake obituary to silence her investigation. This aligns with concerns about information manipulation and attempts to suppress inconvenient narratives. (https://x.com/FurkanGozukara/status/2069223795072602326)
+## Browse Notes (current cycle)
+
+### Curiosity Search: "Discourse on the New World Order debate"
+[CURIOSITY: contradiction_axis_new_world_order_disco] @Theb_Rother: Discusses national identity, cultural values, and the uniqueness of countries like Canada, Australia, and New Zealand, implying a defense of national distinctiveness against external influences. This aligns with the national sovereignty pole of the "New World Order" discourse by emphasizing the internal characteristics that define a nation. [https://x.com/Theb_Rother/status/2069279585642006709]
+@taliaquinncross: Mentions holding institutions accountable and exposing double standards, which relates to the broader theme of power and institutional integrity. [https://x.com/taliaquinncross/status/2069279585642006709]
+
+### Feed Digest Observations:
+*   @News5PH: Reports on rice distribution to low-income families in Manila by the First Lady, and a police officer identified as the owner of a gun used by suspects in a shooting. These relate to social welfare, governance, and accountability within institutions.
+*   @ultras_antifaa: A video claiming a person "takes down the police with a single move," suggesting resistance to authority. Relevant to Power, Institutions, and Rule of Law.
+*   @hannaaahty: Reports on Vice President Sara Duterte's defense team rejecting allegations of "witness copying" in her impeachment trial. This is a clear signal about political integrity, the rule of law, and the veracity of information in public discourse. [SIGNAL]
+*   @JDVance: Details a "$3.7 BILLION fraud scheme" related to Medicare, where the fraudster fled to Turkey. This is a significant example of corruption and lack of accountability within institutional systems. [SIGNAL]
+*   @WhiteHouse: Announces "Six ARRESTS have been made for vandalizing our Reflecting Pool. President Trump will ensure these deranged individuals will be held accountable." This addresses state authority and accountability for public order.
+*   @Nher_who: Reports on a family questioning a CM (Chief Minister) about a student's death, with the audio being cut during their questioning. This suggests suppression of information and a lack of transparency and accountability from those in power. [SIGNAL]
+
+### RSS Batch Observations:
+*   **Inquirer (Philippines):**
+    *   "2 dead in ‘rido’ over land dowry in Bangsamoro region": Highlights local conflict and law enforcement issues.
+    *   "Tacloban shooting: Western Visayas steps up anti-bullying push": Relates to institutional response to societal issues, and potentially the integrity of information around school safety.
+    *   "Marcos reaffirms PH commitment to refugees": Government policy and humanitarian concerns.
+    *   "Capiz broadcaster shooting probe widens as cops form task force": Directly related to freedom of the press and rule of law, as well as institutional accountability in investigations.
+    *   "BOC seizes over P1.17-B suspected smuggled cigarettes in Cebu port": Institutional effectiveness in combating illegal activities.
+*   **Rappler (Philippines):**
+    *   "FACT CHECK: No arrest warrant issued vs Marcoleta" & "FACT CHECK: Jonvic Remulla remains DILG chief": Both are fact-checks, directly related to the integrity of information in public discourse. [SPRINT: Develop Preliminary Categorization Logic]
+    *   "‘Five Eyes’ intelligence alliance warns that new AI models pose urgent cyber risk": Relevant to `axis_ai_societal_impact_v1` and potentially national security, linking to global governance or sovereignty concerns. [SPRINT: Develop Preliminary Categorization Logic]
+*   **Al Jazeera:**
+    *   "Football offers escape for Gaza, but World Cup spirit dimmed" & "Palestine weekly wrap: Israel’s ‘quiet annexation’ grows louder": Both relate to geopolitical issues, human rights, and power dynamics, particularly the "quiet annexation" aspect which concerns the abuse of power. The "quiet annexation" can relate to `axis_human_rights_exploitation_v1` and `axis_geopolitical_rhetoric_v1`. [SPRINT: Ingest and Categorize Initial 50+ Posts]
+    *   "Five Eyes intelligence alliance warns of threats from new AI models": Duplicates Rappler's report, reinforcing the signal around AI and cyber risk.
+
+### Noted Clusters (no follow-up this cycle):
+[NOTED] "why" — 6 posts, no follow-up this cycle
+[NOTED] "people" — 5 posts, no follow_up this cycle
+[NOTED] "love" — 4 posts, no follow_up this cycle
+[NOTED] "looks" — 4 posts, no follow_up this cycle
+[NOTED] "police" — 3 posts, no follow_up this cycle
+[NOTED] "feel" — 3 posts, no follow_up this cycle
+[NOTED] "think" — 3 posts, no follow_up this cycle
+[NOTED] "definitely" — 3 posts, no follow_up this cycle
+[NOTED] "know" — 3 posts, no follow_up this cycle
+[NOTED] "senate" — 2 posts, no follow_up this cycle
+[NOTED] "vandalizing" — 2 posts, no follow_up this cycle
+[NOTED] "made" — 2 posts, no follow_up this cycle
+[NOTED] "confirmed" — 2 posts, no follow_up this cycle
+[NOTED] "israel" — 2 posts, no follow_up this cycle
+[NOTED] "hell" — 2 posts, no follow_up this cycle
+[NOTED] "largest lionel messi statue" — 1 post, no follow_up this cycle
+[NOTED] "school shooting philippines" — 1 post, no follow_up this cycle
+[NOTED] "heartwarming animals" — 1 post, no follow_up this cycle
+[NOTED] "ulol mga walay latoy magwawala lang ang mga iyan senado" — 1 post, no follow_up this cycle
+[NOTED] "spilling coffee" — 1 post, no follow_up this cycle
+[NOTED] "tucker moves away from republicans" — 1 post, no follow_up this cycle
+[NOTED] "scarlett johansson" — 1 post, no follow_up this cycle
+[NOTED] "tiny baby orangutan" — 1 post, no follow_up this cycle
+[NOTED] "woman wrangles foot hammerhead" — 1 post, no follow_up this cycle
+[NOTED] "sunog novaliches" — 1 post, no follow_up this cycle
+[SYNTHESIS] synth_axis_immigration_policy_v_national_control_v1_axis_new_world_order_discourse_v1 — drafted as axis_national_identity_challenges_v1
