@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-24T00:34:38.697Z",
+  "generated_at": "2026-06-24T03:32:47.930Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-24T00:34:41.564Z",
+  "profiled_at": "2026-06-24T03:32:58.721Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -389,9 +389,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-06-24T00:06:26.500Z",
+      "last_seen_at": "2026-06-24T03:05:43.210Z",
       "discovery": {
-        "distinct_urls": 24,
+        "distinct_urls": 26,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/22/the-icc-must-investigate-israels-genocidal-use-of-sexual?traffic_source=rss",
           "https://www.aljazeera.com/economy/2026/6/22/us-house-committee-reaches-bipartisan-deal-on-social-media-rules-for-kids?traffic_source=rss",
@@ -400,9 +400,9 @@
           "https://www.aljazeera.com/video/the-take-2/2026/6/22/what-the-world-cup-looks-like-from-gaza?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 17,
+          "ontology_evidence": 20,
           "reading_queue": 1,
-          "journals": 30
+          "journals": 35
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -438,7 +438,7 @@
         "breadth": {
           "score": 0.8216666666666665,
           "basis": [
-            "distinct_urls:24",
+            "distinct_urls:26",
             "distinct_axes:5",
             "origin_types:3"
           ]
@@ -477,7 +477,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:24",
+            "distinct_urls:26",
             "distinct_axes:5",
             "origin_types:3",
             "referring_accounts:0",
@@ -514,6 +514,139 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 26,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "theguardian.com",
+      "entity": "Theguardian",
+      "kind": "news",
+      "first_seen_at": "2026-03-27T23:17:00Z",
+      "last_seen_at": "2026-06-24T03:05:43.210Z",
+      "discovery": {
+        "distinct_urls": 46,
+        "example_urls": [
+          "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
+          "https://www.theguardian.com/global-development/2026/jun/23/uk-ties-uae-mass-atrocities-sudan-mps-select-committee-nathaniel-raymond",
+          "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
+          "https://www.theguardian.com/world/2026/jun/21/canada-immigration-us-deportation",
+          "https://www.theguardian.com/society/2026/jun/21/therapy-ferrets-kill-rats-uk-largest-children-prison-wetherby"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 6,
+          "reading_queue": 43,
+          "journals": 9
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_geopolitical_rhetoric_v1",
+          "axis_global_power_realignments_v1",
+          "axis_immigration_policy_v_national_control_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.75,
+          "basis": [
+            "newsroom_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.7633333333333332,
+          "basis": [
+            "distinct_urls:46",
+            "distinct_axes:4",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.26249999999999996,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.66,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:true",
+            "outbound_links:4",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.7072135416666666,
+          "confidence": 0.633925,
+          "method": "mechanical_v1",
+          "basis": [
+            "newsroom_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:46",
+            "distinct_axes:4",
+            "origin_types:3",
+            "referring_accounts:0",
+            "origin_types:3",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-23T08:33:54.930Z",
+        "homepage_url": "https://theguardian.com/",
+        "example_url": "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.theguardian.com/us",
+        "example_final_url": "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": true
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": true,
+          "outbound_links_count": 4,
           "opinion_marker": false
         }
       }
@@ -886,136 +1019,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "theguardian.com",
-      "entity": "Theguardian",
-      "kind": "news",
-      "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-06-22T00:15:00Z",
-      "discovery": {
-        "distinct_urls": 42,
-        "example_urls": [
-          "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
-          "https://www.theguardian.com/world/2026/jun/21/canada-immigration-us-deportation",
-          "https://www.theguardian.com/society/2026/jun/21/therapy-ferrets-kill-rats-uk-largest-children-prison-wetherby",
-          "https://www.theguardian.com/world/2026/jun/21/us-iran-talks-jd-vance-switzerland-strait-of-hormuz-lebanon",
-          "https://www.theguardian.com/us-news/2026/jun/21/man-dies-madison-square-garden-concert"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 2,
-          "reading_queue": 41
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_global_power_realignments_v1",
-          "axis_immigration_policy_v_national_control_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.75,
-          "basis": [
-            "newsroom_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.5866666666666667,
-          "basis": [
-            "distinct_urls:42",
-            "distinct_axes:2",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.66,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:true",
-            "outbound_links:4",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.6603645833333334,
-          "confidence": 0.58895,
-          "method": "mechanical_v1",
-          "basis": [
-            "newsroom_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:42",
-            "distinct_axes:2",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-23T08:33:54.930Z",
-        "homepage_url": "https://theguardian.com/",
-        "example_url": "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.theguardian.com/us",
-        "example_final_url": "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": true
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": true,
-          "outbound_links_count": 4,
           "opinion_marker": false
         }
       }
@@ -1402,7 +1405,7 @@
       "first_seen_at": "2026-04-01T05:04:23.454Z",
       "last_seen_at": "2026-06-21T00:57:54.372Z",
       "discovery": {
-        "distinct_urls": 187,
+        "distinct_urls": 190,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
@@ -1413,6 +1416,7 @@
         "origin_counts": {
           "ontology_evidence": 138,
           "claim_tracker": 15,
+          "reading_queue": 3,
           "feed_buffer_reply": 27,
           "feed_buffer": 2,
           "journals": 67
@@ -1470,16 +1474,16 @@
         "breadth": {
           "score": 1,
           "basis": [
-            "distinct_urls:187",
+            "distinct_urls:190",
             "distinct_axes:18",
-            "origin_types:5"
+            "origin_types:6"
           ]
         },
         "corroboration": {
           "score": 0.8916666666666667,
           "basis": [
             "referring_accounts:5",
-            "origin_types:5"
+            "origin_types:6"
           ]
         },
         "track_record": {
@@ -1511,11 +1515,11 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:187",
+            "distinct_urls:190",
             "distinct_axes:18",
-            "origin_types:5",
+            "origin_types:6",
             "referring_accounts:5",
-            "origin_types:5",
+            "origin_types:6",
             "supported:8",
             "refuted:5",
             "contested:0"
@@ -2860,13 +2864,144 @@
       }
     },
     {
+      "domain": "rappler.com",
+      "entity": "Rappler",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-22T02:51:13.362Z",
+      "last_seen_at": "2026-06-24T03:05:43.210Z",
+      "discovery": {
+        "distinct_urls": 15,
+        "example_urls": [
+          "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
+          "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
+          "https://www.rappler.com/philippines/barmm-minories-demand-genuine-representation-parliamentary-elections/",
+          "https://www.rappler.com/philippines/visayas/borbon-cebu-vice-mayor-noel-dotillos-graft-charges/",
+          "https://www.rappler.com/five-eyes-intelligence-alliance-warns-that-new-ai-models-pose-urgent-cyber-risk"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 11,
+          "journals": 23
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_ai_societal_impact_v1",
+          "axis_epistemic_integrity",
+          "axis_media_integrity_v1",
+          "axis_political_trust_corruption_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.7616666666666666,
+          "basis": [
+            "distinct_urls:15",
+            "distinct_axes:5",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.61,
+          "confidence": 0.85,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.49239583333333337,
+          "confidence": 0.5132,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:15",
+            "distinct_axes:5",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-23T03:32:21.303Z",
+        "homepage_url": "https://rappler.com/",
+        "example_url": "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.rappler.com/",
+        "example_final_url": "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "t.co",
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-23T23:22:34.000Z",
+      "last_seen_at": "2026-06-24T03:30:17.000Z",
       "discovery": {
-        "distinct_urls": 5945,
+        "distinct_urls": 5951,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2875,8 +3010,8 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3541,
-          "feed_buffer_reply": 3837
+          "feed_buffer": 3544,
+          "feed_buffer_reply": 3842
         },
         "distinct_referring_accounts": 1913,
         "sample_referring_accounts": [
@@ -2916,7 +3051,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5945",
+            "distinct_urls:5951",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2954,7 +3089,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5945",
+            "distinct_urls:5951",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:1913",
@@ -3629,7 +3764,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T02:26:43.543Z",
+        "fetched_at": "2026-06-24T02:32:10.468Z",
         "homepage_url": "https://newsguardtech.com/",
         "example_url": "https://www.newsguardtech.com/",
         "homepage_status": 200,
@@ -3780,137 +3915,6 @@
           "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "rappler.com",
-      "entity": "Rappler",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-22T02:51:13.362Z",
-      "last_seen_at": "2026-06-24T00:06:26.500Z",
-      "discovery": {
-        "distinct_urls": 10,
-        "example_urls": [
-          "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
-          "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
-          "https://www.rappler.com/philippines/barmm-minories-demand-genuine-representation-parliamentary-elections/",
-          "https://www.rappler.com/philippines/visayas/borbon-cebu-vice-mayor-noel-dotillos-graft-charges/",
-          "https://www.rappler.com/five-eyes-intelligence-alliance-warns-that-new-ai-models-pose-urgent-cyber-risk"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 10,
-          "journals": 16
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_ai_societal_impact_v1",
-          "axis_epistemic_integrity",
-          "axis_media_integrity_v1",
-          "axis_political_trust_corruption_v1",
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.7033333333333334,
-          "basis": [
-            "distinct_urls:10",
-            "distinct_axes:5",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.61,
-          "confidence": 0.85,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:1",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.4796354166666667,
-          "confidence": 0.38845,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:10",
-            "distinct_axes:5",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-23T03:32:21.303Z",
-        "homepage_url": "https://rappler.com/",
-        "example_url": "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.rappler.com/",
-        "example_final_url": "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 1,
           "opinion_marker": false
@@ -4312,19 +4316,19 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T01:05:59.567Z",
-      "last_seen_at": "2026-06-23T22:06:31.518Z",
+      "last_seen_at": "2026-06-24T03:05:43.210Z",
       "discovery": {
-        "distinct_urls": 15,
+        "distinct_urls": 21,
         "example_urls": [
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
           "https://newsinfo.inquirer.net/2251519/chr-carries-out-motu-proprio-probe-into-tacloban-cavite-school-incidents",
           "https://newsinfo.inquirer.net/2251594/army-instructor-probing-for-allegedly-assaulting-national-guard-trainees",
-          "https://newsinfo.inquirer.net/2249755/drilon-warns-vs-second-envelope-crisis-in-vp-trial",
-          "https://newsinfo.inquirer.net/2251572/10-nabbed-over-alleged-paihi-scheme-in-navotas-city-p12-m-fuel-seized"
+          "https://newsinfo.inquirer.net/2251702/chr-seeks-swift-passage-of-bills-creating-detention-monitoring-body",
+          "https://newsinfo.inquirer.net/2249755/drilon-warns-vs-second-envelope-crisis-in-vp-trial"
         ],
         "origin_counts": {
-          "ontology_evidence": 10,
-          "journals": 40
+          "ontology_evidence": 11,
+          "journals": 49
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -4357,7 +4361,7 @@
         "breadth": {
           "score": 0.6449999999999999,
           "basis": [
-            "distinct_urls:15",
+            "distinct_urls:21",
             "distinct_axes:3",
             "origin_types:2"
           ]
@@ -4391,11 +4395,11 @@
         },
         "overall": {
           "score": 0.466875,
-          "confidence": 0.4887,
+          "confidence": 0.6012,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:15",
+            "distinct_urls:21",
             "distinct_axes:3",
             "origin_types:2",
             "referring_accounts:0",
@@ -5430,7 +5434,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T02:26:43.898Z",
+        "fetched_at": "2026-06-24T02:32:10.805Z",
         "homepage_url": "https://jamf.com/",
         "example_url": "https://www.jamf.com/blog/mac-management-security-trends-enterprise-it-2025/?utm_source=twitter&utm_medium=sponsored-social&utm_campaign=am_icf_smas_mms_banner_icp&utm_content=20260213_com_ent-midmkt_p_jmac_blog_6679_SIT&twclid=26vc3aicbe9m10pi19ume82b0z",
         "homepage_status": 200,
@@ -6673,12 +6677,12 @@
           ]
         },
         "profile": {
-          "score": 0,
+          "score": 0.1,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
-            "canonical:false",
+            "canonical:true",
             "about:false",
             "contact:false",
             "corrections:false",
@@ -6702,15 +6706,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T02:57:15.989Z",
+        "fetched_at": "2026-06-24T03:04:12.487Z",
         "homepage_url": "https://amazon.com/",
         "example_url": "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44/ref_=dvm_us_c_soc_THBY_tw_rb?twclid=2e4zyrzur7iapo7e8zxfmiz1fu",
-        "homepage_status": 503,
-        "example_status": 500,
+        "homepage_status": 200,
+        "example_status": 200,
         "homepage_final_url": "https://www.amazon.com/",
-        "example_final_url": "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44/ref_=dvm_us_c_soc_THBY_tw_rb?twclid=2e4zyrzur7iapo7e8zxfmiz1fu",
+        "example_final_url": "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44",
         "homepage_content_type": "text/html",
-        "example_content_type": "",
+        "example_content_type": "text/html;charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -6724,7 +6728,7 @@
         "example": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -8228,7 +8232,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T03:26:44.658Z",
+        "fetched_at": "2026-06-24T03:32:50.329Z",
         "homepage_url": "https://nizima-action.com/",
         "example_url": "https://site.nizima-action.com/en/?twclid=2diqibk9zmfi9zdpw7jnuyzo3e",
         "homepage_status": 200,
@@ -12271,7 +12275,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T00:56:41.104Z",
+        "fetched_at": "2026-06-24T01:02:08.150Z",
         "homepage_url": "https://scitools.com/",
         "example_url": "https://scitools.com/codecheck?xad=codecheck&twclid=23owlb2i7ei44kgcykku0zs4en",
         "homepage_status": 200,
@@ -14924,7 +14928,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T02:26:44.333Z",
+        "fetched_at": "2026-06-24T02:32:11.340Z",
         "homepage_url": "https://patsnap.com/",
         "example_url": "https://eureka.patsnap.com/mse-landing?from=mktcampaign_mse_ads_x_formuvideo-asia2en2&twclid=29qq6c80v43jc7y7o992xnzaaf",
         "homepage_status": 200,
@@ -15805,7 +15809,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T02:26:44.439Z",
+        "fetched_at": "2026-06-24T02:32:11.483Z",
         "homepage_url": "https://jpost.com/",
         "example_url": "https://jpost.com/",
         "homepage_status": 200,
@@ -16179,7 +16183,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T00:56:44.764Z",
+        "fetched_at": "2026-06-24T01:02:10.395Z",
         "homepage_url": "https://aikido.dev/",
         "example_url": "https://www.aikido.dev/attack/infinite?utm_source=twitter&utm_medium=paidsocial&utm_campaign=US_tofu&utm_content=2026-02-26-Mack-Infinte-2-A&twclid=28a2h7kzzful35m0kfwtl23x0c",
         "homepage_status": 200,
@@ -18063,7 +18067,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T00:56:45.334Z",
+        "fetched_at": "2026-06-24T01:02:11.025Z",
         "homepage_url": "https://alppouch.com/",
         "example_url": "https://alppouch.com/products/drifters-lemon-raspberry-nicotine-pouches?variant=45695862079684&utm_source=twitter&twclid=2f0tn2lk34ykymzkyz3xx7lfzj&tw_adsetid=55002677&tw_campaign=41318448&utm_content=dpa-carousel-drifters&utm_campaign=cs-dpa-carousel-sales-alp-pouch&utm_medium=paid_social&tw_source=twitter&utm_term=55002677",
         "homepage_status": 200,
@@ -19309,7 +19313,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T01:26:40.362Z",
+        "fetched_at": "2026-06-24T01:32:10.413Z",
         "homepage_url": "https://onkodex.com/",
         "example_url": "https://onkodex.com/join/?twclid=21aq9xwo1p6ea49gu5skcha56k",
         "homepage_status": 200,
@@ -25290,7 +25294,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T01:56:41.206Z",
+        "fetched_at": "2026-06-24T02:04:10.892Z",
         "homepage_url": "https://gopuff.com/",
         "example_url": "https://www.gopuff.com/go/ai?twclid=2df5moz835ertdpa0tqci700x9",
         "homepage_status": 403,
@@ -25642,7 +25646,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:18",
+            "outbound_links:20",
             "opinion_marker:false"
           ]
         },
@@ -25662,7 +25666,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T00:56:45.909Z",
+        "fetched_at": "2026-06-24T01:02:11.427Z",
         "homepage_url": "https://fandango.com/",
         "example_url": "https://www.fandango.com/lee-cronins-the-mummy-2026-244052/movie-overview?twclid=2buocyfoltepc4nr5ab0l6j90t",
         "homepage_status": 200,
@@ -25688,7 +25692,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 18,
+          "outbound_links_count": 20,
           "opinion_marker": false
         }
       }
@@ -28141,7 +28145,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T03:26:45.552Z",
+        "fetched_at": "2026-06-24T03:32:51.494Z",
         "homepage_url": "https://bitdefender.com/",
         "example_url": "https://www.bitdefender.com/en-us/blog/labs/inside-the-apac-malvertising-ecosystem?cid=soc%7Cc%7Ctw%7Ch4slab&twclid=24ele6gmae6psqawfai2l9njkb",
         "homepage_status": 200,
@@ -29370,7 +29374,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T03:26:51.473Z",
+        "fetched_at": "2026-06-24T03:32:58.245Z",
         "homepage_url": "https://arkayzeroproof.com/",
         "example_url": "https://arkayzeroproof.com/invest-in-arkay/?twclid=2an9mhmxuedo5myzer72kvy89c",
         "homepage_status": 200,
@@ -30231,7 +30235,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T01:27:00.366Z",
+        "fetched_at": "2026-06-24T01:32:30.418Z",
         "homepage_url": "https://kfc.com/",
         "example_url": "https://www.kfc.com/menu?utm_source=twitter&utm_medium=social&utm_campaign=kfcvaluefeast&utm_creative=9box&twclid=250lznofqwrkd2iq53t7qffgxo",
         "homepage_status": null,
@@ -30354,7 +30358,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T02:57:16.431Z",
+        "fetched_at": "2026-06-24T03:04:13.038Z",
         "homepage_url": "https://3c.wiki/",
         "example_url": "https://3c.wiki/3PtZuMY?twclid=2bz0sgqd5e9nj510697vwg5ap7",
         "homepage_status": 200,
@@ -37723,7 +37727,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T01:27:02.715Z",
+        "fetched_at": "2026-06-24T01:32:33.235Z",
         "homepage_url": "https://nextinvestors.com/",
         "example_url": "https://nextinvestors.com/articles/rml-tungsten-price-running-high-grade-tungsten-sitting-in-stockpiles-plus-gold-drilling-in-may/?twclid=29vvkujdwopqjncmmhre6nbvtf",
         "homepage_status": 200,
@@ -37845,7 +37849,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T01:27:03.906Z",
+        "fetched_at": "2026-06-24T01:32:34.494Z",
         "homepage_url": "https://quorum.us/",
         "example_url": "https://cpmadvocacy.quorum.us/campaign/158654/?utm_source=x&utm_medium=paid_social&utm_campaign=iowa_prediction_markets&twclid=2n7g30ite25eujoe3z8invqck",
         "homepage_status": 200,
@@ -39187,7 +39191,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T01:56:42.220Z",
+        "fetched_at": "2026-06-24T02:04:12.456Z",
         "homepage_url": "https://insuranceleadsguide.com/",
         "example_url": "https://insuranceleadsguide.com/insurance-leads/insurance-agency-marketing-tools/?twclid=286vjil8sq5bkkcyaaco0b55aj",
         "homepage_status": 200,
@@ -39309,7 +39313,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T01:56:42.685Z",
+        "fetched_at": "2026-06-24T02:04:12.928Z",
         "homepage_url": "https://orangestandard.com/",
         "example_url": "https://orangestandard.com/?utm_source=Twitter&utm_medium=Tweet&utm_campaign=btcaccts&twclid=221wvicldxi1mxr7dfi4dgcd74",
         "homepage_status": 200,
@@ -39431,7 +39435,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T02:57:16.648Z",
+        "fetched_at": "2026-06-24T03:04:13.293Z",
         "homepage_url": "https://lambda.ai/",
         "example_url": "https://lambda.ai/?utm_source=twitter&utm_medium=paid-social&utm_campaign=2025-11-brand-remarketing&utm_content=2025-11_relaunch_superintelligence-cloud_copy3&twclid=2dr7wza1m47cxuzjqoi0dg5olo",
         "homepage_status": 200,
@@ -39553,7 +39557,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T02:57:17.053Z",
+        "fetched_at": "2026-06-24T03:04:13.665Z",
         "homepage_url": "https://gatorade.com/",
         "example_url": "https://www.gatorade.com/sports-drinks/gatorade-lower-sugar/rain-berry-00052000067774?utm_source=x&utm_medium=paidsocial&utm_campaign=gatorade_lowersugar_omd_fy26_3%2F4-9%2F6&utm_term=native&utm_content=video&twclid=2ez8pvv81gx18qn239dikznlxw",
         "homepage_status": 403,
@@ -39675,7 +39679,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T03:26:52.244Z",
+        "fetched_at": "2026-06-24T03:32:58.721Z",
         "homepage_url": "https://vtfy.link/",
         "example_url": "https://vtfy.link/announcing-the-vuetify0-alpha?twclid=228s56xmohhj46sz7w0iglr2ez",
         "homepage_status": 200,
@@ -40041,7 +40045,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T01:56:44.334Z",
+        "fetched_at": "2026-06-24T02:04:14.620Z",
         "homepage_url": "https://coastdental.com/",
         "example_url": "https://www.coastdental.com/appointments/appointment-request?twclid=2etssi0sfdgrv6914rilraey9",
         "homepage_status": 200,
