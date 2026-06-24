@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-24T18:02:26.686Z",
+  "generated_at": "2026-06-24T21:02:27.962Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-24T18:02:29.796Z",
+  "profiled_at": "2026-06-24T21:02:30.393Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -389,9 +389,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-06-24T14:35:36.945Z",
+      "last_seen_at": "2026-06-24T19:33:00Z",
       "discovery": {
-        "distinct_urls": 36,
+        "distinct_urls": 37,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/opinions/2026/6/22/the-icc-must-investigate-israels-genocidal-use-of-sexual?traffic_source=rss",
@@ -400,7 +400,7 @@
           "https://www.aljazeera.com/news/2026/6/23/us-senate-votes-to-halt-iran-war-bucking-trump?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 30,
+          "ontology_evidence": 31,
           "reading_queue": 1,
           "journals": 49
         },
@@ -440,7 +440,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:36",
+            "distinct_urls:37",
             "distinct_axes:7",
             "origin_types:3"
           ]
@@ -479,7 +479,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:36",
+            "distinct_urls:37",
             "distinct_axes:7",
             "origin_types:3",
             "referring_accounts:0",
@@ -527,7 +527,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-06-24T03:05:43.210Z",
       "discovery": {
-        "distinct_urls": 56,
+        "distinct_urls": 58,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/global-development/2026/jun/23/uk-ties-uae-mass-atrocities-sudan-mps-select-committee-nathaniel-raymond",
@@ -537,7 +537,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 54,
+          "reading_queue": 56,
           "journals": 9
         },
         "distinct_referring_accounts": 0,
@@ -573,7 +573,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:56",
+            "distinct_urls:58",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -612,7 +612,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:56",
+            "distinct_urls:58",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -902,7 +902,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-06-23T22:06:31.518Z",
       "discovery": {
-        "distinct_urls": 41,
+        "distinct_urls": 43,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
@@ -912,7 +912,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "reading_queue": 42,
+          "reading_queue": 44,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -945,7 +945,7 @@
         "breadth": {
           "score": 0.5883333333333334,
           "basis": [
-            "distinct_urls:41",
+            "distinct_urls:43",
             "distinct_axes:1",
             "origin_types:3"
           ]
@@ -984,7 +984,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:41",
+            "distinct_urls:43",
             "distinct_axes:1",
             "origin_types:3",
             "referring_accounts:0",
@@ -1706,7 +1706,7 @@
           "https://apnews.com/hub/iran"
         ],
         "origin_counts": {
-          "reading_queue": 1,
+          "reading_queue": 2,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -3001,9 +3001,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-24T14:08:02.000Z",
+      "last_seen_at": "2026-06-24T18:30:00.000Z",
       "discovery": {
-        "distinct_urls": 5996,
+        "distinct_urls": 6002,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3012,10 +3012,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3566,
-          "feed_buffer_reply": 3871
+          "feed_buffer": 3569,
+          "feed_buffer_reply": 3874
         },
-        "distinct_referring_accounts": 1926,
+        "distinct_referring_accounts": 1928,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3053,7 +3053,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5996",
+            "distinct_urls:6002",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3061,7 +3061,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1926",
+            "referring_accounts:1928",
             "origin_types:2"
           ]
         },
@@ -3091,10 +3091,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5996",
+            "distinct_urls:6002",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1926",
+            "referring_accounts:1928",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3137,9 +3137,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-06-24T10:30:00.000Z",
+      "last_seen_at": "2026-06-24T18:59:30.000Z",
       "discovery": {
-        "distinct_urls": 431,
+        "distinct_urls": 432,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -3149,7 +3149,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 401,
-          "feed_buffer": 59
+          "feed_buffer": 60
         },
         "distinct_referring_accounts": 278,
         "sample_referring_accounts": [
@@ -3189,7 +3189,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:431",
+            "distinct_urls:432",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3227,7 +3227,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:431",
+            "distinct_urls:432",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:278",
@@ -4066,7 +4066,7 @@
           "https://www.reuters.com/site-search/?query=Evidence-based%20claims%2C%20transparent%20sourcing%2C%20honest%20uncertainty%2C%20good-faith%20argu%20Truth%20and%20Evidence%20in%20Public%20Discourse"
         ],
         "origin_counts": {
-          "reading_queue": 2
+          "reading_queue": 3
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -4320,7 +4320,7 @@
       "first_seen_at": "2026-05-09T01:05:59.567Z",
       "last_seen_at": "2026-06-24T20:41:00Z",
       "discovery": {
-        "distinct_urls": 26,
+        "distinct_urls": 28,
         "example_urls": [
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
           "https://newsinfo.inquirer.net/2251519/chr-carries-out-motu-proprio-probe-into-tacloban-cavite-school-incidents",
@@ -4329,8 +4329,8 @@
           "https://newsinfo.inquirer.net/2249755/drilon-warns-vs-second-envelope-crisis-in-vp-trial"
         ],
         "origin_counts": {
-          "ontology_evidence": 13,
-          "journals": 61
+          "ontology_evidence": 14,
+          "journals": 63
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -4363,7 +4363,7 @@
         "breadth": {
           "score": 0.6449999999999999,
           "basis": [
-            "distinct_urls:26",
+            "distinct_urls:28",
             "distinct_axes:3",
             "origin_types:2"
           ]
@@ -4401,7 +4401,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:26",
+            "distinct_urls:28",
             "distinct_axes:3",
             "origin_types:2",
             "referring_accounts:0",
@@ -9495,7 +9495,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T20:18:02.647Z",
+        "fetched_at": "2026-06-24T20:34:29.586Z",
         "homepage_url": "https://spacex.com/",
         "example_url": "https://shop.spacex.com/products/spacex-mission-ready-sunglasses?variant=44537843744847&utm_source=twitter&utm_medium=product_sync&utm_campaign=twitter_44537843744847&twclid=298d45vmtw4pu78lan6k2cs4ha",
         "homepage_status": 200,
@@ -23338,6 +23338,130 @@
       }
     },
     {
+      "domain": "arstechnica.com",
+      "entity": "Arstechnica",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-24T20:02:00Z",
+      "last_seen_at": "2026-06-24T20:02:00Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://arstechnica.com/security/2026/06/24/dashlane-explains-how-attackers-managed-to-download-encrypted-password-vaults/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_ai_societal_impact_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.37046874999999996,
+          "confidence": 0.06135,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.52,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:13",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-24T21:02:28.601Z",
+        "homepage_url": "https://arstechnica.com/",
+        "example_url": "https://arstechnica.com/security/2026/06/24/dashlane-explains-how-attackers-managed-to-download-encrypted-password-vaults/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://arstechnica.com/",
+        "example_final_url": "https://arstechnica.com/security/2026/06/dashlane-explains-how-attackers-managed-to-download-encrypted-password-vaults/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 8,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 13,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "abscbn.news",
       "entity": "Abscbn News",
       "kind": "unknown",
@@ -28396,7 +28520,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T18:48:00.357Z",
+        "fetched_at": "2026-06-24T19:04:28.091Z",
         "homepage_url": "https://coderabbit.ai/",
         "example_url": "https://www.coderabbit.ai/agent?utm_source=twitter&utm_medium=cpc&utm_campaign=brandawareness_slack&twclid=25ohyy1nnhx1vb6p888i79f380",
         "homepage_status": 200,
@@ -30853,7 +30977,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T18:48:00.604Z",
+        "fetched_at": "2026-06-24T19:04:28.452Z",
         "homepage_url": "https://monadicdna.com/",
         "example_url": "https://explorer.monadicdna.com/?twclid=23v8cbj938nxfoq8gmro6dqa1l",
         "homepage_status": 200,
@@ -31099,7 +31223,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T18:48:01.689Z",
+        "fetched_at": "2026-06-24T19:04:29.496Z",
         "homepage_url": "https://alphacapital.pro/",
         "example_url": "https://alphacapital.pro/pages/performance/?utm_source=twitter&utm_medium=ad1&utm_campaign=ac&twclid=2b8weeqkz95cs1xc59f8v2j7ob",
         "homepage_status": 200,
@@ -31222,7 +31346,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T18:48:01.962Z",
+        "fetched_at": "2026-06-24T19:04:29.753Z",
         "homepage_url": "https://willowvoice.com/",
         "example_url": "https://willowvoice.com/developers?twclid=2ebuy7l735ljqyo9xotbgwpmp0",
         "homepage_status": 200,
@@ -32452,7 +32576,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T19:16:03.631Z",
+        "fetched_at": "2026-06-24T19:32:29.370Z",
         "homepage_url": "https://genesissystems.com/",
         "example_url": "https://www.genesissystems.com/contact?utm_source=x&utm_campaign=genericwebtrafficdavead4-4-26&twclid=2av31c1xlvmnruxepagyndsvf6",
         "homepage_status": 200,
@@ -33313,7 +33437,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T19:16:03.966Z",
+        "fetched_at": "2026-06-24T19:32:29.624Z",
         "homepage_url": "https://hexclad.com/",
         "example_url": "https://hexclad.com/pages/12-pc-landing-page?utm_source=twitter&utm_medium=paid&utm_campaign=HEX+01+%7C+Q2+26%27+Chargeable+%7C+4.6.26&utm_term=US+-+M%2FF+-+21-65%2B+-+Interest-Based+-+4.6.26&utm_content=HEX%23763_V3&twclid=2bnrkgftya8pykff4uwp59b29d",
         "homepage_status": 200,
@@ -35928,6 +36052,129 @@
       }
     },
     {
+      "domain": "statefarm.com",
+      "entity": "Statefarm",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-08T06:20:09.579Z",
+      "last_seen_at": "2026-06-24T21:01:22.291Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://www.statefarm.com/lp/getstatefarm?cmpid=soc%3Aomd&camp=100000904&site=x&plac=200000904&crea=300000904&twclid=24cmx2d7zq9uhrq1lzj54oo09o",
+          "https://www.statefarm.com/lp/getstatefarm?cmpid=soc%3Aomd&camp=100000904&site=x&plac=200000904&crea=300000904&twclid=2c93uzz0mn7l827rcdb1nlhhp4"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "statefarm"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.11833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.19583333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-24T21:02:29.148Z",
+        "homepage_url": "https://statefarm.com/",
+        "example_url": "https://www.statefarm.com/lp/getstatefarm?cmpid=soc%3Aomd&camp=100000904&site=x&plac=200000904&crea=300000904&twclid=24cmx2d7zq9uhrq1lzj54oo09o",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.statefarm.com/",
+        "example_final_url": "https://www.statefarm.com/lp/getstatefarm?cmpid=soc%3Aomd&camp=100000904&site=x&plac=200000904&crea=300000904&twclid=24cmx2d7zq9uhrq1lzj54oo09o",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "kiierr.com",
       "entity": "Kiierr",
       "kind": "unknown",
@@ -36019,7 +36266,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T19:16:05.478Z",
+        "fetched_at": "2026-06-24T19:32:31.003Z",
         "homepage_url": "https://kiierr.com/",
         "example_url": "https://kiierr.com/regrow-your-hair-new/?twclid=23i2gackvanp24oqqrs1z7o7zb",
         "homepage_status": 200,
@@ -41878,7 +42125,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T19:16:06.015Z",
+        "fetched_at": "2026-06-24T19:32:31.572Z",
         "homepage_url": "https://lately.com/",
         "example_url": "http://www.lately.com/?twclid=26st81se5sstdkz28lll98t6pl",
         "homepage_status": 200,
@@ -42000,7 +42247,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T20:18:03.232Z",
+        "fetched_at": "2026-06-24T20:34:30.169Z",
         "homepage_url": "https://deepgram.com/",
         "example_url": "https://deepgram.com/state-of-voice-ai-report?utm_source=twitter&utm_medium=paidsocial&utm_campaign=Twitter_ACQ_Q42025_Evergreen_Prospecting&utm_content=state-of-voice&twclid=22an8eeru83cxpws6fqbuga3v2",
         "homepage_status": 200,
@@ -42122,7 +42369,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T20:18:03.537Z",
+        "fetched_at": "2026-06-24T20:34:30.429Z",
         "homepage_url": "https://topstocks.com/",
         "example_url": "https://topstocks.com/cvkd?twclid=2br9vd88ywgw104idmz125ag0u",
         "homepage_status": 200,
@@ -42732,7 +42979,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T20:18:04.312Z",
+        "fetched_at": "2026-06-24T20:34:31.037Z",
         "homepage_url": "https://gothamist.com/",
         "example_url": "https://gothamist.com/news/mamdani-administrations-new-72nd-street-bike-lane-would-link-upper-east-and-west-sides&utm_id=571007&sfmc_id=79023345&utm_content=2026415&nypr_member=True",
         "homepage_status": 200,
@@ -42854,7 +43101,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T20:46:03.366Z",
+        "fetched_at": "2026-06-24T21:02:30.022Z",
         "homepage_url": "https://fullpath.com/",
         "example_url": "https://www.fullpath.com/ai-powered-text-message-marketing-for-car-dealers/?twclid=21jxitvmgt9jsjh3rm5bmiedxu",
         "homepage_status": 200,
@@ -42976,7 +43223,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T20:46:03.657Z",
+        "fetched_at": "2026-06-24T21:02:30.393Z",
         "homepage_url": "https://johnkennedy.com/",
         "example_url": "https://support.johnkennedy.com/just-a-little-quiz/?red=cbdb1d6f-e5fe-4aa4-a295-1dbdd471cee6&utm_source=X&utm_medium=Paid&utm_campaign=Quiz&twclid=27n7ucaicrd2diuikk5gsjxiza",
         "homepage_status": 200,
@@ -60636,83 +60883,6 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "altfragrances"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "statefarm.com",
-      "entity": "Statefarm",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-08T06:20:09.579Z",
-      "last_seen_at": "2026-06-08T06:20:09.579Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://www.statefarm.com/lp/getstatefarm?cmpid=soc%3Aomd&camp=100000904&site=x&plac=200000904&crea=300000904&twclid=24cmx2d7zq9uhrq1lzj54oo09o"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "statefarm"
         ],
         "distinct_axes": []
       },

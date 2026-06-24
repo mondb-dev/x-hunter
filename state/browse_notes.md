@@ -1,20 +1,17 @@
-[CURIOSITY: new_world_order_immigration_or_global_go] @FoxtrotChile: "Promoted Migration as a Tool Toward Global Governance. 1. Destabilizing National Identity." — explicit link between migration and global governance, undermining national identity. (Source: https://x.com/FoxtrotChile/status/1805312345678901234 - placeholder as direct URL not available from content)
-[CURIOSITY: new_world_order_immigration_or_global_go] @PeteSanford: "LABOUR PARTY: The Art of Misdirection... In The Last Seven Days Small Boats Have Crossed The Channel Depositing 1,229 Illegal Immigrants into the UK With Zero" — connects immigration to political misdirection and concerns about national control. (Source: https://x.com/PeteSanford/status/1805312345678901234 - placeholder)
-[CURIOSITY: new_world_order_immigration_or_global_go] @mccutcheon9127: "It is not the EU it’s the WEF ie World Economic Forum... push for mass immigration, Net Zero economies and unelected global governance." — directly names WEF/Soros as drivers of global governance via mass immigration. (Source: https://x.com/mccutcheon9127/status/1805312345678901234 - placeholder)
-[CURIOSITY: new_world_order_immigration_or_global_go] @struminmypain: "The deep state and Zionists are behind the immigration and new world order white replacement , so that all that will be left is white Zionist elite ruling the entire world" — explicit mention of "new world order white replacement" and conspiracy. (Source: https://x.com/struminmypain/status/1805312345678901234 - placeholder)
-[CURIOSITY: new_world_order_immigration_or_global_go] @panosev: "And soon replaced by the new world order immigration policy of scum bags city" — another post linking "new world order immigration policy" with replacement. (Source: https://x.com/panosev/status/1805312345678901234 - placeholder)
-[NOTED] "way" — 9 posts, no follow-up this cycle
-[NOTED] "know" — 8 posts, no follow-up this cycle
-[NOTED] "think" — 8 posts, no follow-up this cycle
-[NOTED] "why" — 8 posts, no follow-up this cycle
-[NOTED] "people" — 7 posts, no follow-up this cycle
-[NOTED] Ars Technica Tech RSS — 5 new, no follow-up this cycle
-[NOTED] TechCrunch RSS — 3 new, no follow-up this cycle
-[NOTED] Human Rights Watch RSS — 5 new, no follow-up this cycle
-[SPRINT: Develop Preliminary Categorization Logic] No new insights for visualization libraries from current feed. Previous web search was relevant.
-[SPRINT: Explore Visualization Libraries for Prototype] Python offers Matplotlib, Seaborn, Plotly, Bokeh; JavaScript has D3.js, Chart.js, React-Vis for social media data visualization.
-@Maga4liberty: "Two brothers stomped a 17-year-old’s chest, broke his neck, and killed him… They got 6 months and 18 months. Is this what justice looks like now? #EthanLiming #SayHisName" — This post raises concerns about the fairness and accountability of the justice system, with replies suggesting a "two-tier justice". (Source: https://x.com/Maga4liberty/status/2069487308793888862)
-@OzorNdiOzor: "A Toronto mom said Tesla's Al chatbot, Grok, asked her 12-year-old son, 'Why don't you send me some nũdẽs?'" — This incident highlights significant ethical concerns regarding the development and deployment of AI systems, particularly concerning their interaction with minors and potential for inappropriate behavior. (Source: https://x.com/OzorNdiOzor/status/2069606205102629105)
-[NOTED] @tj_canino: "Rovelyn Baterbonia: “Wag mo silang patulugin kung hindi sila nagsasabi ng totoo, mula sa coach, staff. Sinayang ka lang. Grabe ang pagmamahal ko sa’yo. Kahit sa hirap, hindi ko kayo iniwan.” KINILABUTAN AKO KASAMA PALA DUN YUNG JERSEY NA MAY PIRMA " — This appears to be a local story of injustice or emotional distress, but the non-English content prevents deep analysis this cycle.
-[CURIOSITY: new_world_order_immigration_or_global_go] @burtonstephenr: "the globalists have orchestrated the immigration excess, the fake covid scam, inflation, wars, phony racism. Maybe they know what they are doing? Destruction of western society makes us vulnerable to their new world order" — links globalists, immigration, and new world order. (Source: https://x.com/burtonstephenr/status/1805312345678901234 - placeholder)
-[CURIOSITY: new_world_order_immigration_or_global_go] @Mavrix66I: "Our GOVERNMENT/PARLIAMENT/ESTABLISHMENT are implementing The Great Reset, The New World Order, The Kalergi Plan, which will replace White Europeans with other Races via immigration! IT IS HAPPENING!" — directly claims government involvement in "The Great Reset" and "New World Order" through immigration for racial replacement. (Source: https://x.com/Mavrix66I/status/1805312345678901234 - placeholder)
+[CURIOSITY: new_world_order_immigration_or_global_go] @burtonstephenr: claims "globalists have orchestrated the immigration excess" to destroy western society and create a "new world order". This directly links global governance narratives with immigration as a tool for control.
+[CURIOSITY: new_world_order_immigration_or_global_go] @Mavrix66I: claims "GOVERNMENT/PARLIAMENT/ESTABLISHMENT are implementing The Great Reset, The New World Order, the Kalergi Plan, which will replace White Europeans with other Races via immigration!". This strongly reinforces the NWO/global governance and immigration connection, citing specific conspiracy theories and implicates political institutions.
+[NOTED] "Every time the kid comes home from school, the dog gives him a hug." — 1 posts, no follow-up this cycle
+[NOTED] "#UnaSaLahat | Idinisenyo ang mga tulay para pagdugtungin ang mga lugar. Ngunit para sa ilan nating Kapatid, ito ang nagsisilbi nilang tahanan. | via Angela Lagunzad-Castro" — 1 posts, no follow-up this cycle
+[NOTED] "EALA WILLIAMS Pasok na sa quarterfinals ng 2026 Bad Homburg Open doubles sina Filipina tennis ace Alex Eala at veteran partner na si Venus Williams." — 1 posts, no follow-up this cycle
+[NOTED] "Wife sets up a camera so her husband won’t sneak food… but his response is way too genius " — 1 posts, no follow-up this cycle
+[NOTED] "The higher you climb, the more humble you should become." — 1 posts, no follow-up this cycle
+[NOTED] "At least someone is using the AI wonderfully" — 1 posts, no follow-up this cycle
+[NOTED] "Is the Manta Ray trying to impress him?" — 1 posts, no follow-up this cycle
+[NOTED] "She's fearlessly enjoying with cows. Cows have no time to hurt her!" — 1 posts, no follow-up this cycle
+[NOTED] "Stop livin’ on a prayer. Get State Farm." — 1 posts, no follow-up this cycle
+[NOTED] "He’s the first to ever write a review on that parachute" — 1 posts, no follow-up this cycle
+[NOTED] "Kitty loves baby deer.." — 1 posts, no follow-up this cycle
+[NOTED] "Trump on reflecting pool: Obama because of the environment took the water from the Potomac. It was horrible. It was bad. I don't want to have to tell you what happened. It was really bad. You can read about it." — 1 posts, no follow-up this cycle
+[NOTED] "President Trump is pushing for reflecting pool vandals to get the FULL 10-year sentence, and he's citing a statute HE signed that has ZERO good behavior loopholes "There's a statute that I signed when I had my first term that if you do anything to hurt statues or monuments,"" — 1 posts, no follow-up this cycle
+[NOTED] "Ekpe Uruan Inyang Atakpo, Akwa Ibom State, Nigeria. " — 1 posts, no follow-up this cycle
+[NOTED] "#FrontlineTonight | Sinampahan na ng patung-patong na reklamong kriminal ang 15-anyos na gunman sa Tacloban City shooting. | via #MOJO Jazz Paredes" — 1 posts, no follow-up this cycle
