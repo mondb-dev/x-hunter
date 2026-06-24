@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-24T21:02:27.962Z",
+  "generated_at": "2026-06-24T23:32:29.817Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-24T21:02:30.393Z",
+  "profiled_at": "2026-06-24T23:32:32.896Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -527,7 +527,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-06-24T03:05:43.210Z",
       "discovery": {
-        "distinct_urls": 58,
+        "distinct_urls": 60,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/global-development/2026/jun/23/uk-ties-uae-mass-atrocities-sudan-mps-select-committee-nathaniel-raymond",
@@ -537,7 +537,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 56,
+          "reading_queue": 58,
           "journals": 9
         },
         "distinct_referring_accounts": 0,
@@ -573,7 +573,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:58",
+            "distinct_urls:60",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -612,7 +612,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:58",
+            "distinct_urls:60",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -2218,6 +2218,139 @@
       }
     },
     {
+      "domain": "amnesty.org",
+      "entity": "Amnesty",
+      "kind": "unknown",
+      "first_seen_at": "2026-03-31T01:46:38.493Z",
+      "last_seen_at": "2026-06-23T16:06:21.811Z",
+      "discovery": {
+        "distinct_urls": 11,
+        "example_urls": [
+          "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
+          "https://www.amnesty.org/en/latest/news/2026/06/car-bozize/",
+          "https://www.amnesty.org/en/latest/news/2026/06/cuba-a-cuatro-anos-de-una-condena-injusta-artistas-afrocubanos-siguen-encarcelados-por-expresars/",
+          "https://www.amnesty.org/en/latest/campaigns/2026/06/how-do-us-third-country-removals-work-and-are-they-legal/",
+          "https://www.amnesty.org/en/latest/news/2026/06/lebanon-israel-radically-expands-use-of-unlawful-mass-evacuation-orders-and-commits-war-crime-of-unlawful-transfer/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 7,
+          "reading_queue": 1,
+          "journals": 5
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_authoritarian_self_determination_v1",
+          "axis_human_rights_exploitation_v1",
+          "axis_national_sovereignty_v_intl_law_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.7341666666666666,
+          "basis": [
+            "distinct_urls:11",
+            "distinct_axes:4",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.26249999999999996,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.52,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:30",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.5152083333333333,
+          "confidence": 0.4253,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:11",
+            "distinct_axes:4",
+            "origin_types:3",
+            "referring_accounts:0",
+            "origin_types:3",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-23T22:04:08.898Z",
+        "homepage_url": "https://amnesty.org/",
+        "example_url": "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.amnesty.org/en/",
+        "example_final_url": "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 7,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 30,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "bit.ly",
       "entity": "Bit Ly",
       "kind": "unknown",
@@ -2319,7 +2452,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T23:18:05.103Z",
+        "fetched_at": "2026-06-24T23:32:30.439Z",
         "homepage_url": "https://bit.ly/",
         "example_url": "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q",
         "homepage_status": 200,
@@ -3001,9 +3134,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-24T18:30:00.000Z",
+      "last_seen_at": "2026-06-24T21:40:00.000Z",
       "discovery": {
-        "distinct_urls": 6002,
+        "distinct_urls": 6012,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3012,10 +3145,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3569,
-          "feed_buffer_reply": 3874
+          "feed_buffer": 3575,
+          "feed_buffer_reply": 3878
         },
-        "distinct_referring_accounts": 1928,
+        "distinct_referring_accounts": 1930,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3053,7 +3186,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:6002",
+            "distinct_urls:6012",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3061,7 +3194,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1928",
+            "referring_accounts:1930",
             "origin_types:2"
           ]
         },
@@ -3091,10 +3224,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:6002",
+            "distinct_urls:6012",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1928",
+            "referring_accounts:1930",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3137,9 +3270,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-06-24T18:59:30.000Z",
+      "last_seen_at": "2026-06-24T19:20:00.000Z",
       "discovery": {
-        "distinct_urls": 432,
+        "distinct_urls": 434,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -3148,10 +3281,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 401,
+          "feed_buffer_reply": 403,
           "feed_buffer": 60
         },
-        "distinct_referring_accounts": 278,
+        "distinct_referring_accounts": 279,
         "sample_referring_accounts": [
           "100ohiostate",
           "2by32",
@@ -3189,7 +3322,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:432",
+            "distinct_urls:434",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3197,7 +3330,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:278",
+            "referring_accounts:279",
             "origin_types:2"
           ]
         },
@@ -3227,10 +3360,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:432",
+            "distinct_urls:434",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:278",
+            "referring_accounts:279",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3535,138 +3668,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "amnesty.org",
-      "entity": "Amnesty",
-      "kind": "unknown",
-      "first_seen_at": "2026-03-31T01:46:38.493Z",
-      "last_seen_at": "2026-06-23T16:06:21.811Z",
-      "discovery": {
-        "distinct_urls": 10,
-        "example_urls": [
-          "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
-          "https://www.amnesty.org/en/latest/news/2026/06/car-bozize/",
-          "https://www.amnesty.org/en/latest/news/2026/06/cuba-a-cuatro-anos-de-una-condena-injusta-artistas-afrocubanos-siguen-encarcelados-por-expresars/",
-          "https://www.amnesty.org/en/latest/campaigns/2026/06/how-do-us-third-country-removals-work-and-are-they-legal/",
-          "https://www.amnesty.org/en/latest/news/2026/06/lebanon-israel-radically-expands-use-of-unlawful-mass-evacuation-orders-and-commits-war-crime-of-unlawful-transfer/"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 7,
-          "journals": 5
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_authoritarian_self_determination_v1",
-          "axis_human_rights_exploitation_v1",
-          "axis_national_sovereignty_v_intl_law_v1",
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.645,
-          "basis": [
-            "distinct_urls:10",
-            "distinct_axes:4",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.52,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:30",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.4875,
-          "confidence": 0.3762,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:10",
-            "distinct_axes:4",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-23T22:04:08.898Z",
-        "homepage_url": "https://amnesty.org/",
-        "example_url": "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.amnesty.org/en/",
-        "example_final_url": "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 7,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 30,
           "opinion_marker": false
         }
       }
@@ -4023,7 +4024,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T21:48:04.150Z",
+        "fetched_at": "2026-06-24T22:04:29.874Z",
         "homepage_url": "https://starlink.com/",
         "example_url": "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
         "homepage_status": 200,
@@ -4147,7 +4148,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T21:48:04.477Z",
+        "fetched_at": "2026-06-24T22:04:30.346Z",
         "homepage_url": "https://reuters.com/",
         "example_url": "https://www.reuters.com/site-search/?query=Evidence-based%20claims%2C%20transparent%20sourcing%2C%20honest%20uncertainty%2C%20good-faith%20argu%20Truth%20and%20Evidence%20in%20Public%20Discourse",
         "homepage_status": 401,
@@ -5950,7 +5951,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T21:48:04.911Z",
+        "fetched_at": "2026-06-24T22:04:30.737Z",
         "homepage_url": "https://bk.com/",
         "example_url": "https://www.bk.com/menu/section/fb06fabe-a285-4fb4-994a-c617a1547ddb?utm_source=X&utm_medium=Social-Social&utm_campaign=Peppercorn-Awareness&utm_content=Peppercorn-IMG-Warning&twclid=24j7ivpacvxqbg2t5it24skrl9",
         "homepage_status": 200,
@@ -6331,7 +6332,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T21:48:05.473Z",
+        "fetched_at": "2026-06-24T22:04:31.310Z",
         "homepage_url": "https://mottandbow.com/",
         "example_url": "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
         "homepage_status": 200,
@@ -6840,7 +6841,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T23:18:05.662Z",
+        "fetched_at": "2026-06-24T23:32:31.043Z",
         "homepage_url": "https://metaphysicalarticles.org/",
         "example_url": "https://www.metaphysicalarticles.org/2025/12/ufos-uap-space-people-disclosure.html?twclid=25s2j2s4i47jn3wcdf6ujpfrmp",
         "homepage_status": 200,
@@ -7857,7 +7858,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T23:18:07.464Z",
+        "fetched_at": "2026-06-24T23:32:32.390Z",
         "homepage_url": "https://byteplus.com/",
         "example_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
         "homepage_status": 200,
@@ -20928,7 +20929,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T23:18:08.261Z",
+        "fetched_at": "2026-06-24T23:32:32.896Z",
         "homepage_url": "https://lenovo.com/",
         "example_url": "https://www.lenovo.com/fifa?twclid=28bun2tvvdii9atmnb69jedydn",
         "homepage_status": 403,
@@ -23399,6 +23400,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.52,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:13",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.37046874999999996,
           "confidence": 0.06135,
@@ -23412,20 +23427,6 @@
             "referring_accounts:0",
             "origin_types:1",
             "track_record_unavailable"
-          ]
-        },
-        "profile": {
-          "score": 0.52,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:13",
-            "opinion_marker:false"
           ]
         }
       },
@@ -28119,13 +28120,13 @@
           ]
         },
         "profile": {
-          "score": 0.36,
-          "confidence": 0.65,
+          "score": 0.22,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:true",
-            "about:true",
+            "about:false",
             "contact:true",
             "corrections:false",
             "outbound_links:0",
@@ -28148,7 +28149,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T22:16:05.340Z",
+        "fetched_at": "2026-06-24T22:32:30.082Z",
         "homepage_url": "https://puffco.com/",
         "example_url": "https://www.puffco.com/products/pivot?variant=41821292986427&utm_source=x&utm_medium=image&utm_campaign=pivotperformance&twclid=22js3uwacrdv5fujiqoibvb4yl",
         "homepage_status": 200,
@@ -28161,10 +28162,10 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": true,
-          "has_about_link": true,
+          "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 7,
+          "outbound_links_count": 6,
           "opinion_marker": false
         },
         "example": {
@@ -36113,20 +36114,6 @@
             "no_resolved_claims_observed"
           ]
         },
-        "overall": {
-          "score": 0.3536197916666667,
-          "confidence": 0.10997499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        },
         "profile": {
           "score": 0.1,
           "confidence": 0.55,
@@ -36139,6 +36126,20 @@
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.3536197916666667,
+          "confidence": 0.10997499999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:1",
+            "origin_types:1",
+            "track_record_unavailable"
           ]
         }
       },
@@ -43345,7 +43346,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T20:46:04.429Z",
+        "fetched_at": "2026-06-24T22:32:30.969Z",
         "homepage_url": "https://gunowners.org/",
         "example_url": "https://www.gunowners.org/?twclid=25jr1t1tq8terhv5da5ta78vcm",
         "homepage_status": 200,
@@ -43589,7 +43590,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T20:46:05.177Z",
+        "fetched_at": "2026-06-24T22:32:31.558Z",
         "homepage_url": "https://freshstartinfo.org/",
         "example_url": "https://apply.freshstartinfo.org/?utm_source=twitter&utm_medium=paid_social&utm_campaign=FSI_Social_X_Deadline_Broad&utm_content=FSI_X_Deadline_Image_USCapNews_04172026&source=TW&brand=FSI&camp_id=41209135&adset_id=54646468&creative_id=2045223212514979923&twcrid=2045223210636251136&twclid=2fc79anpvgomecghgv84o862",
         "homepage_status": 200,
@@ -43711,7 +43712,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T22:16:05.530Z",
+        "fetched_at": "2026-06-24T22:32:31.720Z",
         "homepage_url": "https://hamradioprep.com/",
         "example_url": "https://hamradioprep.com/?twclid=232p2wfbs7v1e5zxq4p7bhczux",
         "homepage_status": 403,
@@ -43833,7 +43834,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T22:16:06.357Z",
+        "fetched_at": "2026-06-24T23:04:32.708Z",
         "homepage_url": "https://scsp.ai/",
         "example_url": "https://expo.scsp.ai/attend-aiexpo/?utm_medium=paid_social&utm_source=x&utm_campaign=aiexpo26&twclid=2ds8dmcipu3juam31i83nrm7k6",
         "homepage_status": 200,
@@ -43955,7 +43956,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T22:16:08.012Z",
+        "fetched_at": "2026-06-24T23:04:34.111Z",
         "homepage_url": "https://defianceetfs.com/",
         "example_url": "https://www.defianceetfs.com/qtum/?utm_source=x&utm_medium=paid_social&utm_campaign=qtum&utm_term=qtum-v2-1&twclid=283g0r804olumr11o83bl4ufd1",
         "homepage_status": 200,
@@ -54081,7 +54082,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T05:26:10.001Z",
+        "fetched_at": "2026-06-24T23:04:34.559Z",
         "homepage_url": "https://serus.ai/",
         "example_url": "https://www.serus.ai/?twclid=29v4lxmzvo39j1dtelbj405bc3",
         "homepage_status": 200,
@@ -54203,7 +54204,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T05:56:22.876Z",
+        "fetched_at": "2026-06-24T23:04:35.291Z",
         "homepage_url": "https://xreplyai.com/",
         "example_url": "https://xreplyai.com/lp/ai-reply?utm_source=x&utm_medium=paid&utm_campaign=sales_ai-reply&utm_content=reply-time&twclid=25ltv9snjvnawlmhjivxk1op2j",
         "homepage_status": 200,

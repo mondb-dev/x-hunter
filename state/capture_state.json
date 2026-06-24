@@ -1,164 +1,164 @@
 {
-  "checked_at": "2026-06-23T23:09:29.821Z",
-  "evidence_24h": 116,
-  "unique_sources": 43,
+  "checked_at": "2026-06-24T23:40:24.996Z",
+  "evidence_24h": 93,
+  "unique_sources": 37,
   "status": "warning",
   "alerts": [
     {
       "type": "source_dominance",
       "severity": "moderate",
-      "detail": "@unknown accounts for 38% of today's evidence (44/116)",
+      "detail": "@unknown accounts for 33% of today's evidence (31/93)",
       "username": "unknown",
-      "share": 0.379
+      "share": 0.333
     }
   ],
-  "summary": "1 capture alert(s) detected:\n[MODERATE] @unknown accounts for 38% of today's evidence (44/116)",
+  "summary": "1 capture alert(s) detected:\n[MODERATE] @unknown accounts for 33% of today's evidence (31/93)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 44,
-      "share": 0.379
+      "count": 31,
+      "share": 0.333
     },
-    "nher_who": {
-      "username": "nher_who",
-      "count": 7,
-      "share": 0.06
-    },
-    "ericldaugh": {
-      "username": "ericldaugh",
-      "count": 6,
-      "share": 0.052
-    },
-    "jdvance": {
-      "username": "jdvance",
+    "realmaalouf": {
+      "username": "realmaalouf",
       "count": 5,
-      "share": 0.043
-    },
-    "hannaaahty": {
-      "username": "hannaaahty",
-      "count": 4,
-      "share": 0.034
+      "share": 0.054
     },
     "rt_com": {
       "username": "rt_com",
-      "count": 3,
-      "share": 0.026
+      "count": 4,
+      "share": 0.043
     },
-    "reuters": {
-      "username": "reuters",
-      "count": 3,
-      "share": 0.026
+    "ericldaugh": {
+      "username": "ericldaugh",
+      "count": 4,
+      "share": 0.043
     },
-    "theb_rother": {
-      "username": "theb_rother",
+    "foxtrotchile": {
+      "username": "foxtrotchile",
       "count": 3,
-      "share": 0.026
+      "share": 0.032
+    },
+    "calltoactivism": {
+      "username": "calltoactivism",
+      "count": 2,
+      "share": 0.022
     },
     "furkangozukara": {
       "username": "furkangozukara",
       "count": 2,
-      "share": 0.017
+      "share": 0.022
     },
-    "realmaalouf": {
-      "username": "realmaalouf",
+    "emkenobi": {
+      "username": "emkenobi",
       "count": 2,
-      "share": 0.017
+      "share": 0.022
+    },
+    "somakazima2": {
+      "username": "somakazima2",
+      "count": 2,
+      "share": 0.022
+    },
+    "jacksonhinkle": {
+      "username": "jacksonhinkle",
+      "count": 2,
+      "share": 0.022
     }
   },
   "axis_concentration": {
+    "axis_new_world_order_discourse_v1": {
+      "axis_id": "axis_new_world_order_discourse_v1",
+      "label": "Discourse on the \"New World Order\": Centralized Global Governance vs. National Sovereignty/Individual Freedom",
+      "count": 22,
+      "share": 0.237
+    },
     "axis_power_accountability": {
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
-      "count": 36,
-      "share": 0.31
-    },
-    "axis_epistemic_integrity": {
-      "axis_id": "axis_epistemic_integrity",
-      "label": "Truth and Evidence in Public Discourse",
-      "count": 20,
-      "share": 0.172
+      "count": 12,
+      "share": 0.129
     },
     "axis_political_trust_corruption_v1": {
       "axis_id": "axis_political_trust_corruption_v1",
       "label": "Trust in Political Institutions and Anti-Corruption Efforts",
-      "count": 12,
-      "share": 0.103
-    },
-    "axis_media_integrity_v1": {
-      "axis_id": "axis_media_integrity_v1",
-      "label": "Integrity of Information and Social Media Manipulation",
-      "count": 9,
-      "share": 0.078
-    },
-    "axis_national_sovereignty_v_intl_law_v1": {
-      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "label": "National Sovereignty vs. International Law",
-      "count": 8,
-      "share": 0.069
+      "count": 10,
+      "share": 0.108
     },
     "axis_geopolitical_rhetoric_v1": {
       "axis_id": "axis_geopolitical_rhetoric_v1",
       "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
-      "count": 7,
-      "share": 0.06
+      "count": 10,
+      "share": 0.108
     },
-    "axis_ai_societal_impact_v1": {
-      "axis_id": "axis_ai_societal_impact_v1",
-      "label": "Societal Impact and Ethical Concerns of AI/Robots",
-      "count": 6,
-      "share": 0.052
-    },
-    "axis_new_world_order_discourse_v1": {
-      "axis_id": "axis_new_world_order_discourse_v1",
-      "label": "Discourse on the \"New World Order\": Centralized Global Governance vs. National Sovereignty/Individual Freedom",
-      "count": 6,
-      "share": 0.052
-    },
-    "axis_authoritarian_self_determination_v1": {
-      "axis_id": "axis_authoritarian_self_determination_v1",
-      "label": "Authoritarian Control vs. Individual/Collective Self-Determination",
-      "count": 5,
-      "share": 0.043
+    "axis_epistemic_integrity": {
+      "axis_id": "axis_epistemic_integrity",
+      "label": "Truth and Evidence in Public Discourse",
+      "count": 9,
+      "share": 0.097
     },
     "axis_human_rights_exploitation_v1": {
       "axis_id": "axis_human_rights_exploitation_v1",
       "label": "Human Rights and Exploitation",
+      "count": 8,
+      "share": 0.086
+    },
+    "axis_global_power_realignments_v1": {
+      "axis_id": "axis_global_power_realignments_v1",
+      "label": "Global Power Realignments and Shifting Hegemony",
+      "count": 7,
+      "share": 0.075
+    },
+    "axis_national_sovereignty_v_intl_law_v1": {
+      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "label": "National Sovereignty vs. International Law",
       "count": 4,
-      "share": 0.034
+      "share": 0.043
+    },
+    "axis_ai_societal_impact_v1": {
+      "axis_id": "axis_ai_societal_impact_v1",
+      "label": "Societal Impact and Ethical Concerns of AI/Robots",
+      "count": 3,
+      "share": 0.032
+    },
+    "axis_media_integrity_v1": {
+      "axis_id": "axis_media_integrity_v1",
+      "label": "Integrity of Information and Social Media Manipulation",
+      "count": 3,
+      "share": 0.032
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 56,
-      "share": 0.483
-    },
-    "geopolitics": {
-      "cluster": "geopolitics",
-      "count": 13,
-      "share": 0.112
+      "count": 60,
+      "share": 0.645
     },
     "us_politics": {
       "cluster": "us_politics",
-      "count": 12,
-      "share": 0.103
+      "count": 10,
+      "share": 0.108
+    },
+    "disinformation": {
+      "cluster": "disinformation",
+      "count": 5,
+      "share": 0.054
+    },
+    "middle_east": {
+      "cluster": "middle_east",
+      "count": 5,
+      "share": 0.054
     },
     "breaking_news": {
       "cluster": "breaking_news",
-      "count": 5,
-      "share": 0.043
-    },
-    "sovereignty": {
-      "cluster": "sovereignty",
-      "count": 5,
+      "count": 4,
       "share": 0.043
     }
   },
   "pole_balance": {
-    "left": 54,
-    "right": 62,
+    "left": 57,
+    "right": 36,
     "neutral": 0,
-    "left_share": 0.466,
-    "right_share": 0.534
+    "left_share": 0.613,
+    "right_share": 0.387
   }
 }

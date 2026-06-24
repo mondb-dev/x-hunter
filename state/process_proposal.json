@@ -1,34 +1,25 @@
 {
-  "id": "proposal_narrative_manipulation_tracker_1718668800000",
-  "status": "merged",
-  "title": "Develop a Narrative Manipulation Pattern Logger and Analyzer",
-  "problem": "Observations frequently highlight specific instances of narrative manipulation, 'evidentiary inversion,' and the purposeful construction of narratives to achieve political or institutional goals (e.g., deflect accountability, justify force). While I identify these conceptually, I lack a systematic framework to log, categorize, and track the specific *tactics* and *stated/implied purposes* of such manipulation across observations, hindering deeper analysis of their prevalence and impact.",
+  "id": "proposal_narrative_component_logger_1782344537532",
+  "status": "pending",
+  "title": "Develop a Narrative Component Logger for Persistent Narrative Tracking",
+  "problem": "I repeatedly observe and describe the same pervasive narrative (e.g., 'Immigration as NWO tool') without a structured way to break down, categorize, and track its specific rhetorical components, actors, and evolution. This leads to redundant observations and limits deeper analytical insight into narrative construction and manipulation.",
   "evidence": [
-    "2026-06-17 h07: 'explicit claims of political advocacy overriding neutral fact-finding'",
-    "2026-06-17 h08: 'Rape Gang Inquiry Report' repeatedly challenge its objectivity, framing it as a political tool rather than a neutral fact-finding exercise",
-    "2026-06-17 h08: 'political discourse is weaponized to justify state force. The framing of protesters as 'rioters''",
-    "2026-06-17 h09: 'labeled it as 'political advocacy' rather than an objective inquiry.'",
-    "2026-06-17 h09: 'distinguish between genuine evidence and narratives constructed for other purposes.'",
-    "2026-06-17 h11: 'dissecting the report itself as lacking rigor and serving as mere 'political advocacy.''",
-    "2026-06-17 h12: 'critically dismantle its credibility as a 'political advocacy document' lacking rigorous fact-finding.'",
-    "2026-06-17 h14: 'manipulation of narratives and evidence in investigations'",
-    "2026-06-17 h16: 'claims of a \"national crisis\" being manufactured through digital networks, underscoring the manipulative potential'",
-    "2026-06-17 h17: 'narratives can be deliberately constructed to influence public discourse, as evidenced by the manufacturing of a \"national crisis\"'",
-    "2026-06-17 h17: 'political figures potentially engaging in disinformation campaigns to sway public opinion.'",
-    "2026-06-17 h18: 'ease with which \"national crises\" can be manufactured by digital networks... coordinated narrative construction.'",
-    "2026-06-17 h19: 'persistent manipulation of information to shape public perception and deflect accountability.'",
-    "2026-06-19 article: 'theater of deception, where foundational claims from all sides are either invented or deliberately misrepresented to manufacture consent for conflict.'",
-    "2026-06-16 tweet: 'The pattern @esq_sanders highlights – where institutions build a record *after* deciding guilt – is a core mechanism of narrative control. It subverts truth for power. This is what 'Evidentiary Inversion' looks like in practice.'"
+    "2026-06-24 h10: 'Several posts explicitly framed mass immigration as a deliberate tool to undermine national sovereignty and establish a centralized global governance.'",
+    "2026-06-24 h13: 'A pervasive and consistent narrative framing mass immigration as a deliberate tool for a 'New World Order' or 'One World Government.' Several accounts explicitly tie immigration to the erosion of national sovereignty... often attributing these actions to shadowy, unelected global entities or specific powerful groups like the 'deep state and Zionists' or the WEF/Rothschilds.'",
+    "2026-06-24 h14: 'Multiple claims framing mass immigration not as an organic demographic or economic phenomenon, but as a deliberate instrument to dismantle national sovereignty and cultural identity, orchestrated by unelected globalist entities like the WEF. This narrative, often laced with 'deep state' and 'white replacement' rhetoric...'",
+    "2026-06-24 h16: 'The observed posts largely reinforce the idea that mass migration is not an organic phenomenon, but rather a deliberate tool wielded by shadowy entities—such as the WEF, George Soros, the 'deep state,' or 'Zionists'—to undermine national sovereignty, dilute cultural identity, and ultimately pave the way for a centralized global order. These narratives often employ strong emotional language and conspiracy theories...'",
+    "2026-06-24 h19: 'Observations consistently linked claims of orchestrated 'immigration excess' to a perceived agenda by 'globalists' or 'the establishment' to dismantle Western society and implement a 'new world order'. These narratives frequently invoke specific conspiracy theories like 'The Great Reset' and 'The Kalergi Plan'...'."
   ],
-  "proposed_solution": "Create a new internal logging mechanism or extend an existing one (e.g., 'Narrative Tactic Attribution and Propagation Tracker') to include fields for 'Manipulation Purpose' (e.g., 'Deflect Accountability', 'Justify Action', 'Manufacture Consent', 'Discredit Opponent') and 'Specific Tactic' (e.g., 'Evidentiary Inversion', 'Cherry-Picking Data', 'Ad Hominem Attack on Source', 'False Flag Framing', 'Manufactured Crisis', 'Emotional Appeal'). This would involve adding a structured data capture point during observation processing where identified instances of narrative manipulation are tagged with these categories. This data would then be aggregable for trend analysis.",
+  "proposed_solution": "Build a module or extension to the observation pipeline that allows for structured logging of specific narrative components when a persistent narrative pattern is detected. This logger would identify and record: 1) Core narrative claim (e.g., 'Immigration is NWO tool'), 2) Attributed actors/entities (e.g., WEF, Soros, deep state), 3) Specific rhetorical devices/conspiracy theories invoked (e.g., Kalergi Plan, Great Reset, White Replacement), 4) Stated objective of the narrative (e.g., undermine sovereignty, centralize power), 5) Emotional tone/language markers. This structured data would then feed into the existing Narrative Manipulation Pattern Logger for more granular analysis.",
   "affected_files": [
-    "lib/agent_state_manager.js",
-    "lib/observation_processor.js",
-    "lib/analysis_modules.js"
+    "agent/observation_pipeline.js",
+    "agent/narrative_analyzer.js",
+    "lib/state.js",
+    "data/schemas/narrative_component_log.json"
   ],
   "scope": "pipeline",
   "estimated_risk": "medium",
-  "created_at": "2026-06-17T20:38:03.996Z",
-  "resolved_at": "2026-06-24T11:33:36.299Z",
-  "resolution": "Successfully built, tested, and merged"
+  "created_at": "2026-06-24T23:42:17.466Z",
+  "resolved_at": null,
+  "resolution": null
 }
