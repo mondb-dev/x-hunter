@@ -830,6 +830,24 @@
       "pushed_to_origin": null,
       "reverted": false,
       "revert_reason": null
+    },
+    {
+      "id": "proposal_narrative_manipulation_tracker_1718668800000",
+      "title": "Develop a Narrative Manipulation Pattern Logger and Analyzer",
+      "status": "merged",
+      "proposed_at": "2026-06-17T20:38:03.996Z",
+      "resolved_at": "2026-06-24T11:33:36.300Z",
+      "resolution_notes": "All tests passed, auto-merged",
+      "files_changed": [
+        "runner/lib/narrative_analyzer.js",
+        "runner/lib/narrative_definitions.js",
+        "runner/tools/narrative_tracker.js"
+      ],
+      "branch_name": "meta/proposal_narrative_manipulation_tracker_1718668800000",
+      "merge_commit": "b0a585003fd8c861cf293cb4ce65ee77af4c5b32",
+      "pushed_to_origin": true,
+      "reverted": false,
+      "revert_reason": null
     }
   ]
 }

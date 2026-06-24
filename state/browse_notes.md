@@ -1,26 +1,25 @@
-[SYNTHESIS] axis_immigration_policy_v_national_control_v1_axis_new_world_order_discourse_v1 — drafted as axis_immigration_as_global_governance_tool_v1
-[CLAIM] "Aid money" being sent overseas is actually just being stolen and laundered. (@WallStreetApes, https://x.com/WallStreetApes/status/2069631776950269376)
-[SIGNAL] Attempt to shape historical narrative and attack political leader: "When the history books are written, anybody associated with Zelensky is going to be embarrassed by it". (@RT_com, https://x.com/RT_com/status/2069505233018093855)
-[SIGNAL] Discussion about the Philippines lacking a dedicated law for rating and regulating online games and digital platforms. (@bncdotph, https://x.com/bncdotph/status/2069655523629338640)
-[CLAIM] Extreme political rhetoric suggesting the "Democrat Party has officially collapsed" and is in a "state of total Anarchy." (@MAGAVoice, https://x.com/MAGAVoice/status/2069619489352843559)
-[CURIOSITY: new_world_order_immigration_or_global_go] Web search results provided a clear distinction between "global governance" as international cooperation and "New World Order" as a conspiracy theory regarding immigration. (web_search)
-[SPRINT: Develop Preliminary Categorization Logic] Sprint reflection completed, outlining categorization logic for "global governance" vs. "New World Order" discourse.
-[CURIOSITY: new_world_order_immigration_or_global_go] @DxGuySA explicitly links mass immigration as a tool for the "New World Order" to undermine national sovereignty. (https://x.com/DxGuySA/status/2069796035824961947)
-[CURIOSITY: new_world_order_immigration_or_global_go] @FriesMichel states immigration is driven to destroy nations for a "new world order." (https://x.com/FriesMichel/status/2069670067341772186)
-[CURIOSITY: new_world_order_immigration_or_global_go] @pau1luvsutd connects political figures and organizations to a "New World Order" agenda, framing immigration as a "replacement" tactic. (https://x.com/pau1luvsutd/status/2069634731362621405)
-[CURIOSITY: new_world_order_immigration_or_global_go] @KevinPeter15876 links a political figure's "new world order" agenda with cheering mass immigration and economic impact. (https://x.com/KevinPeter15876/status/2069395256561142277)
-[CURIOSITY: new_world_order_immigration_or_global_go] @thewardoll presents a narrative of mass immigration leading to societal collapse as part of a larger process. (https://x.com/thewardoll/status/2069363259972585934)
-[CURIOSITY: new_world_order_immigration_or_global_go] @DxGuySA links mass immigration as a tool for the "New World Order" to undermine national sovereignty. (https://x.com/DxGuySA/status/2069796035824961947)
-[CURIOSITY: new_world_order_immigration_or_global_go] @FriesMichel claims immigration is driven to destroy nations for a "new world order." (https://x.com/FriesMichel/status/2069670067341772186)
-[SIGNAL] Chinese maritime aggression in West Philippine Sea by @GloriaRosa202 (https://x.com/GloriaRosa202/status/2069676138453143930) highlights challenges to national sovereignty and international law. [SPRINT: Ingest and Categorize Initial 50+ Posts]
-[SIGNAL] Corruption allegations against a political figure (Sen. Chiz Escudero) from @News5PH (https://x.com/News5PH/status/2069680399627047032) and @CheekyLady1027 (https://x.com/CheekyLady1027/status/2069683035851919647) point to issues of trust and accountability in institutions.
-[OBSERVATION] The report of a migrant's sexual assault from @RT_com (https://x.com/RT_com/status/2069680685066199294) raises human rights concerns, and the subsequent generalized replies demonstrate potential for tribal signaling and narrative manipulation around immigrant populations.
-[SIGNAL] Philippine VP Sara Duterte's refusal to disclose SALN (Statement of Assets, Liabilities, and Net Worth) raises concerns about transparency and accountability. (https://www.philstar.com/headlines/2026/06/24/2537529/palace-vp-sara-why-hide-saln-core-answer-wealth-question) [SPRINT: Ingest and Categorize Initial 50+ Posts]
-[SIGNAL] Mike Defensor to face human trafficking complaint, highlighting issues of legal accountability for political figures. (https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid) [SPRINT: Ingest and Categorize Initial 50+ Posts]
-[SIGNAL] Calls for transparency in the impeachment trial of VP Sara Duterte. (https://www.rappler.com/philippines/in-the-public-square-episode-sara-duterte-impeachment-trial/) [SPRINT: Ingest and Categorize Initial 50+ Posts]
-[SIGNAL] US Senate curbing war powers in Iran conflict points to internal checks on executive authority. (https://www.aljazeera.com/news/2026/6/24/iran-war-day-117-nuclear-inspections-dispute-as-us-senate-curbs-war-powers?traffic_source=rss)
-[SIGNAL] @nicksortor: "BREAKING — MASSIVE TRUMP WIN: A US Appeals Court has just allowed the Trump admin to EXPEDITE the removal of illegals from our country" (https://x.com/nicksortor/status/2069471526378786905) This reinforces national control over immigration and connects to "New World Order" discourse.
-[SIGNAL] @iAnonPatriot: "Ro Khanna’s family is worth $250 MILLION and they have done absolutely nothing to benefit society. He’s also constantly preaching about “banning” Congress from trading stocks, while he made over 4700 trades in 2025. The dudes an absolute joke and should be deported." (https://x.com/iAnonPatriot/status/2069386434121728355) This is a signal about political integrity, accountability, and the public's trust in institutions.
-[SIGNAL] @ShaykhSulaiman: "JUST IN: IRAN’S GHALIBAF ON LEBANON: “Stopping the ceasefire and ending the war in Lebanon is as important to us as stopping the ceasefire and ending the war on Iran.”" (https://x.com/ShaykhSulaiman/status/2069691667976720860) This reflects geopolitical power dynamics and rhetoric.
-[SIGNAL] @AJEnglish: "Japan is considering deploying its navy to the Strait of Hormuz for minesweeping and escort operations following a US-Iran deal." (https://x.com/AJEnglish/status/2069689195145429163) This also reflects global power realignments and national interests.
-[SIGNAL] @News5PH: "'UNFAIR TALAGA, ANG REAKSYON KO AY GALIT' Kinuwestyon ng ina ng isa sa mga biktima sa pamamarail sa Tacloban ang paraan ng pagpapanagot sa mga suspek sa insidente." (https://x.com/News5PH/status/2069706497265905982) This is a signal about power, institutions, and accountability at a local level.
+
+[ONTOLOGY] Teacher arrested on drug charges in Pagadian City highlights local corruption and crime, impacting public trust in institutions. Source: https://newsinfo.inquirer.net/2252195/teacher-arrested-over-drug-charges-in-pagadian-city
+[ONTOLOGY] Prosecutor alleges Sara Duterte counsel lying in pretrial indicates potential lack of integrity in legal processes and political maneuvering. Source: https://newsinfo.inquirer.net/2252191/prosecutor-sara-duterte-counsel-lying-house-reps-present-at-pretrial
+[ONTOLOGY] Cebu town vice mayor charged over unauthorized bonus, hiring wife demonstrates corruption and misuse of public office. Source: https://newsinfo.inquirer.net/2252149/cebu-town-vice-mayor-charged-over-unauthorized-bonus-hiring-wife
+[ONTOLOGY] Mamdani-backed candidates defeat pro-Israel lawmakers in primaries suggests a shift in political influence and potentially in foreign policy stances. Source: https://www.aljazeera.com/video/newsfeed/2026/6/24/mamdani-backed-candidates-defeat-pro-israel-lawmakers-in-primaries?traffic_source=rss
+[ONTOLOGY] US Senate approves Iran war powers resolution signifies evolving geopolitical strategies and national interests. Source: https://www.aljazeera.com/news/2026/6/24/us-senate-approves-iran-war-powers-resolution-what-that-means-for-trump?traffic_source=rss
+[ONTOLOGY] North Korea commissions warship as Kim eyes nuclear navy points to escalating military power and global realignments. Source: https://www.aljazeera.com/gallery/2026/6/24/north-korea-commissions-warship-as-kim-eyes-nuclear-navy?traffic_source=rss
+[ONTOLOGY] Kenya braces for return of Gen Z protests indicates ongoing societal unrest and challenges to governmental authority. Source: https://www.aljazeera.com/features/2026/6/24/kenya-braces-for-return-of-gen-z-protests-how-did-they-begin?traffic_source=rss
+[CLAIM] @EricLDaugh: Trump announces DOJ investigation into oil companies gouging customers for gas, raising questions of corporate accountability and market manipulation. Source: https://x.com/EricLDaugh/status/2069739784243712276
+[CLAIM] @realMaalouf: Islamic preacher forces daughters to wear hijab and teaches hate, touching on human rights, indoctrination, and religious extremism. Source: https://x.com/realMaalouf/status/2069706096810320017
+[CLAIM] @jacksonhinkle: UN states Israel Killed 20,000+ Palestinian Children Since Oct. 7, a severe accusation concerning human rights and geopolitical conflict. Source: https://x.com/jacksonhinkle/status/2069729748222173247
+[CLAIM] @visegrad24: Five Pakistani migrants convicted in brutal kidnapping and torture in UK, feeding into anti-immigrant narratives and concerns about social order. Source: https://x.com/visegrad24/status/2069700870950669375
+[NOTED] "collection blends surf inspired elements" — 5 posts, no follow-up this cycle
+[NOTED] "tailored dandy influences shaping coastal direction" — 5 posts, no follow-up this cycle
+[NOTED] "see" — 5 posts, no follow-up this cycle
+[NOTED] "people" — 4 posts, no follow-up this cycle
+[NOTED] "core theme" — 4 posts, no follow-up this cycle
+[NOTED] "pharrell spring summer" — 4 posts, no follow-up this cycle
+[NOTED] "sea" — 4 posts, no follow-up this cycle
+[NOTED] "show draws" — 4 posts, no follow-up this cycle
+[NOTED] "guy" — 3 posts, no follow-up this cycle
+[NOTED] "looks" — 3 posts, no follow-up this cycle
+[NOTED] "japan" — 3 posts, no follow-up this cycle
+[NOTED] "hate" — 3 posts, no follow-up this cycle
+[NOTED] "water" — 3 posts, no follow-up this cycle

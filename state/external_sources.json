@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-24T09:02:15.578Z",
+  "generated_at": "2026-06-24T12:04:19.670Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-24T09:02:19.526Z",
+  "profiled_at": "2026-06-24T12:04:26.118Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -389,24 +389,25 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-06-24T07:04:00Z",
+      "last_seen_at": "2026-06-24T10:04:53.688Z",
       "discovery": {
-        "distinct_urls": 29,
+        "distinct_urls": 30,
         "example_urls": [
+          "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/opinions/2026/6/22/the-icc-must-investigate-israels-genocidal-use-of-sexual?traffic_source=rss",
           "https://www.aljazeera.com/economy/2026/6/22/us-house-committee-reaches-bipartisan-deal-on-social-media-rules-for-kids?traffic_source=rss",
           "https://www.aljazeera.com/gallery/2026/6/23/palestinian-children-face-genocide-war-crimes-in-gaza-un-says?traffic_source=rss",
-          "https://www.aljazeera.com/news/2026/6/23/us-senate-votes-to-halt-iran-war-bucking-trump?traffic_source=rss",
-          "https://www.aljazeera.com/video/the-take-2/2026/6/22/what-the-world-cup-looks-like-from-gaza?traffic_source=rss"
+          "https://www.aljazeera.com/news/2026/6/23/us-senate-votes-to-halt-iran-war-bucking-trump?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 23,
+          "ontology_evidence": 25,
           "reading_queue": 1,
-          "journals": 35
+          "journals": 36
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
         "distinct_axes": [
+          "axis_epistemic_integrity",
           "axis_geopolitical_rhetoric_v1",
           "axis_global_power_realignments_v1",
           "axis_human_rights_exploitation_v1",
@@ -436,10 +437,10 @@
           ]
         },
         "breadth": {
-          "score": 0.8216666666666665,
+          "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:29",
-            "distinct_axes:5",
+            "distinct_urls:30",
+            "distinct_axes:6",
             "origin_types:3"
           ]
         },
@@ -471,14 +472,14 @@
           ]
         },
         "overall": {
-          "score": 0.7199739583333333,
-          "confidence": 0.6461749999999999,
+          "score": 0.7327343749999999,
+          "confidence": 0.6584249999999999,
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:29",
-            "distinct_axes:5",
+            "distinct_urls:30",
+            "distinct_axes:6",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -525,7 +526,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-06-24T03:05:43.210Z",
       "discovery": {
-        "distinct_urls": 50,
+        "distinct_urls": 52,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/global-development/2026/jun/23/uk-ties-uae-mass-atrocities-sudan-mps-select-committee-nathaniel-raymond",
@@ -535,7 +536,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 47,
+          "reading_queue": 49,
           "journals": 9
         },
         "distinct_referring_accounts": 0,
@@ -571,7 +572,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:50",
+            "distinct_urls:52",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -610,7 +611,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:50",
+            "distinct_urls:52",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -900,7 +901,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-06-23T22:06:31.518Z",
       "discovery": {
-        "distinct_urls": 36,
+        "distinct_urls": 38,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
@@ -910,7 +911,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "reading_queue": 36,
+          "reading_queue": 38,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -943,7 +944,7 @@
         "breadth": {
           "score": 0.5883333333333334,
           "basis": [
-            "distinct_urls:36",
+            "distinct_urls:38",
             "distinct_axes:1",
             "origin_types:3"
           ]
@@ -982,7 +983,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:36",
+            "distinct_urls:38",
             "distinct_axes:1",
             "origin_types:3",
             "referring_accounts:0",
@@ -1281,7 +1282,7 @@
       "first_seen_at": null,
       "last_seen_at": null,
       "discovery": {
-        "distinct_urls": 13,
+        "distinct_urls": 15,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
           "https://www.bbc.co.uk/news/articles/c4gy6vk44pwo?at_medium=RSS&amp;at_campaign=rss",
@@ -1290,7 +1291,7 @@
           "https://www.bbc.co.uk/news/articles/cx247v39r1no?at_medium=RSS&amp;at_campaign=rss"
         ],
         "origin_counts": {
-          "reading_queue": 14
+          "reading_queue": 16
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1319,7 +1320,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:13",
+            "distinct_urls:15",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -1353,11 +1354,11 @@
         },
         "overall": {
           "score": 0.592890625,
-          "confidence": 0.386475,
+          "confidence": 0.431475,
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:13",
+            "distinct_urls:15",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -2868,9 +2869,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T02:51:13.362Z",
-      "last_seen_at": "2026-06-24T05:32:00Z",
+      "last_seen_at": "2026-06-24T09:33:15.189Z",
       "discovery": {
-        "distinct_urls": 16,
+        "distinct_urls": 17,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
@@ -2879,8 +2880,8 @@
           "https://www.rappler.com/philippines/mindanao/coa-reprimands-auditor-self-assigned-review-dpwh-projects-soccsksargen/"
         ],
         "origin_counts": {
-          "ontology_evidence": 12,
-          "journals": 23
+          "ontology_evidence": 13,
+          "journals": 24
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -2915,7 +2916,7 @@
         "breadth": {
           "score": 0.7616666666666666,
           "basis": [
-            "distinct_urls:16",
+            "distinct_urls:17",
             "distinct_axes:5",
             "origin_types:2"
           ]
@@ -2949,11 +2950,11 @@
         },
         "overall": {
           "score": 0.49239583333333337,
-          "confidence": 0.5357000000000001,
+          "confidence": 0.5582,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:16",
+            "distinct_urls:17",
             "distinct_axes:5",
             "origin_types:2",
             "referring_accounts:0",
@@ -2999,9 +3000,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-24T07:58:41.000Z",
+      "last_seen_at": "2026-06-24T11:30:01.000Z",
       "discovery": {
-        "distinct_urls": 5971,
+        "distinct_urls": 5983,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3010,10 +3011,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3554,
-          "feed_buffer_reply": 3856
+          "feed_buffer": 3561,
+          "feed_buffer_reply": 3862
         },
-        "distinct_referring_accounts": 1919,
+        "distinct_referring_accounts": 1920,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3051,7 +3052,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5971",
+            "distinct_urls:5983",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3059,7 +3060,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1919",
+            "referring_accounts:1920",
             "origin_types:2"
           ]
         },
@@ -3089,10 +3090,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5971",
+            "distinct_urls:5983",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1919",
+            "referring_accounts:1920",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3135,9 +3136,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-06-24T05:30:00.000Z",
+      "last_seen_at": "2026-06-24T10:30:00.000Z",
       "discovery": {
-        "distinct_urls": 428,
+        "distinct_urls": 431,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -3146,10 +3147,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 399,
-          "feed_buffer": 58
+          "feed_buffer_reply": 401,
+          "feed_buffer": 59
         },
-        "distinct_referring_accounts": 276,
+        "distinct_referring_accounts": 278,
         "sample_referring_accounts": [
           "100ohiostate",
           "2by32",
@@ -3187,7 +3188,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:428",
+            "distinct_urls:431",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3195,7 +3196,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:276",
+            "referring_accounts:278",
             "origin_types:2"
           ]
         },
@@ -3225,10 +3226,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:428",
+            "distinct_urls:431",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:276",
+            "referring_accounts:278",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -4445,7 +4446,7 @@
       "entity": "Philstar",
       "kind": "unknown",
       "first_seen_at": "2026-05-19T10:31:49.581Z",
-      "last_seen_at": "2026-06-24T07:27:00Z",
+      "last_seen_at": "2026-06-24T09:33:15.189Z",
       "discovery": {
         "distinct_urls": 8,
         "example_urls": [
@@ -4457,7 +4458,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "journals": 9
+          "journals": 10
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -5211,6 +5212,135 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 5,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "huawei.com",
+      "entity": "Huawei",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-28T08:12:51.000Z",
+      "last_seen_at": "2026-06-24T10:24:32.000Z",
+      "discovery": {
+        "distinct_urls": 9,
+        "example_urls": [
+          "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
+          "https://e.huawei.com/ae/events/branding/gitex-ca?utm_medium=psm&utm_source=twitter&source=corp_sc_en&utm_campaign=GITEX2026",
+          "https://e.huawei.com/en/events/industries/finance/finance-summit?utm_medium=psm&utm_source=twitter&utm_campaign=HiFS2026",
+          "https://e.huawei.com/en/talent/news/?twclid=26sqkj7gddzq1vn7ybud5i92bh",
+          "https://www.huawei.com/en/news/2026/5/ieee-iscas-tau-scaling?utm_medium=psm&utm_source=twitter&utm_campaign=media-center&twclid=2cf3rne1zap57lkrq9cen4j0o4"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 6,
+          "feed_buffer": 3
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "huawei"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.38249999999999995,
+          "basis": [
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:15",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.44023437499999996,
+          "confidence": 0.330825,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:9",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-22T11:33:26.666Z",
+        "homepage_url": "https://huawei.com/",
+        "example_url": "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
+        "homepage_status": null,
+        "example_status": 200,
+        "homepage_final_url": "https://huawei.com/",
+        "example_final_url": "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
+        "homepage_content_type": "",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 15,
           "opinion_marker": false
         }
       }
@@ -6864,135 +6994,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "huawei.com",
-      "entity": "Huawei",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-28T08:12:51.000Z",
-      "last_seen_at": "2026-06-18T08:13:19.000Z",
-      "discovery": {
-        "distinct_urls": 8,
-        "example_urls": [
-          "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
-          "https://e.huawei.com/ae/events/branding/gitex-ca?utm_medium=psm&utm_source=twitter&source=corp_sc_en&utm_campaign=GITEX2026",
-          "https://e.huawei.com/en/events/industries/finance/finance-summit?utm_medium=psm&utm_source=twitter&utm_campaign=HiFS2026",
-          "https://e.huawei.com/en/talent/news/?twclid=26sqkj7gddzq1vn7ybud5i92bh",
-          "https://www.huawei.com/en/news/2026/5/ieee-iscas-tau-scaling?utm_medium=psm&utm_source=twitter&utm_campaign=media-center&twclid=2cf3rne1zap57lkrq9cen4j0o4"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 5,
-          "feed_buffer": 3
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "huawei"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.3533333333333333,
-          "basis": [
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.22,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:15",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.4338541666666666,
-          "confidence": 0.30219999999999997,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:8",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-22T11:33:26.666Z",
-        "homepage_url": "https://huawei.com/",
-        "example_url": "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
-        "homepage_status": null,
-        "example_status": 200,
-        "homepage_final_url": "https://huawei.com/",
-        "example_final_url": "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
-        "homepage_content_type": "",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 15,
           "opinion_marker": false
         }
       }
@@ -50416,7 +50417,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T01:25:46.995Z",
+        "fetched_at": "2026-06-24T10:04:18.564Z",
         "homepage_url": "https://pocketchange.gg/",
         "example_url": "https://pocketchange.gg/?utm_source=x&utm_medium=paid_social&utm_campaign=pc_4&utm_content=adgroup_1_ambassador_v3&pcid=pc4_ag1_ambassador_v4&twclid=22ov7ac68spfwo58x5g8njetfs",
         "homepage_status": 403,
@@ -50538,7 +50539,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T01:25:47.465Z",
+        "fetched_at": "2026-06-24T10:04:19.244Z",
         "homepage_url": "https://advanced.gg/",
         "example_url": "https://advanced.gg/pages/partner-with-advanced?twclid=2cguzkxfmrovj5lb0v799o9ghh",
         "homepage_status": 200,
@@ -50660,7 +50661,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T01:55:45.249Z",
+        "fetched_at": "2026-06-24T10:04:19.450Z",
         "homepage_url": "https://capcut.sale/",
         "example_url": "https://capcut.sale/?twclid=2e7i6xy6uufbldu6noghw4cl3i",
         "homepage_status": 403,
@@ -50782,7 +50783,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T01:55:49.198Z",
+        "fetched_at": "2026-06-24T10:04:23.137Z",
         "homepage_url": "https://wyndo.app/",
         "example_url": "https://wyndo.app/?utm_source=x&utm_medium=cpc&utm_campaign=decision_v1&twclid=24etrz18sq5o4juq6q7x1p396f",
         "homepage_status": 200,
@@ -50904,7 +50905,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T01:55:49.374Z",
+        "fetched_at": "2026-06-24T10:32:21.459Z",
         "homepage_url": "https://chinaswaronfaith.com/",
         "example_url": "https://chinaswaronfaith.com/?twclid=27lzeeef43quvbjv0jkjqwy5ya",
         "homepage_status": 200,
@@ -51026,7 +51027,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T01:55:49.685Z",
+        "fetched_at": "2026-06-24T10:32:22.039Z",
         "homepage_url": "https://xrphtoken.com/",
         "example_url": "https://xrphtoken.com/swap-xrp-to-xrphai?twclid=22iusa6snqrzh6itqpd5qdj51n",
         "homepage_status": 200,
@@ -51148,7 +51149,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T02:25:45.893Z",
+        "fetched_at": "2026-06-24T10:32:22.454Z",
         "homepage_url": "https://g4skins.com/",
         "example_url": "https://g4skins.com/ref/XG4AD?twclid=29mxyaiqlwyr8ut522b1sft0ju",
         "homepage_status": 403,
@@ -51270,7 +51271,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T02:25:46.914Z",
+        "fetched_at": "2026-06-24T10:32:23.089Z",
         "homepage_url": "https://generalbuttnakedfilm.com/",
         "example_url": "https://generalbuttnakedfilm.com/?twclid=24etj7z3ue14elnvvn2a1g59lt",
         "homepage_status": 200,
@@ -51392,7 +51393,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T02:25:47.370Z",
+        "fetched_at": "2026-06-24T12:04:20.322Z",
         "homepage_url": "https://tryvext.com/",
         "example_url": "https://tryvext.com/lens?twclid=2607kz7zdobn24wel2ctf34xcz",
         "homepage_status": 200,
@@ -51514,7 +51515,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T02:25:47.881Z",
+        "fetched_at": "2026-06-24T12:04:21.009Z",
         "homepage_url": "https://flyhermes.ai/",
         "example_url": "https://flyhermes.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=hermes_aware_activation&utm_content=saved_never_tried&utm_term=saved_posts&twclid=242qnbngkqs5yjyufgwpg99nl2",
         "homepage_status": 200,
@@ -51636,7 +51637,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T02:56:23.329Z",
+        "fetched_at": "2026-06-24T12:04:22.482Z",
         "homepage_url": "https://blotout.io/",
         "example_url": "https://www.blotout.io/?utm_source=x&utm_medium=paidsocial&utm_campaign=X-BrandAwareness-May2026&twclid=2e1xsqg9vxwwowjgtv2mj1i54c",
         "homepage_status": 200,
@@ -51758,7 +51759,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T02:56:26.796Z",
+        "fetched_at": "2026-06-24T12:04:26.118Z",
         "homepage_url": "https://ambitioninnovationcreativity.com/",
         "example_url": "https://www.ambitioninnovationcreativity.com/?twclid=24yz326eu9lxy32ml6ppdfadjq",
         "homepage_status": 200,
