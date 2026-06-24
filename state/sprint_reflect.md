@@ -1,25 +1,22 @@
-# Sprint Reflection: Week 1 — Sovereignty & Global Governance Discourse Map
+# Sprint Reflection: Sovereignty & Global Governance Discourse Map
 
-## Key Findings
-- Consistent identification of discourse related to national sovereignty, international law, geopolitical rhetoric, and information manipulation.
-- Effective mapping of observed posts to existing belief axes that cover the "Sovereignty/Int. Law/Global Governance" schema.
-- The tension between national sovereignty and global governance/international norms is a highly active and recurring theme in public discourse.
-- Religious and nationalistic rhetoric are frequently employed to shape narratives, particularly in geopolitical and identity-focused discussions.
-- Significant focus on institutional accountability, alleged corruption, and the integrity of democratic processes.
-- Initial research for visualization libraries (Matplotlib, Seaborn, Plotly, D3.js) is complete, indicating viable options for the prototype.
+## Key Findings:
+*   **Information Manipulation**: Persistent themes of linguistic manipulation, creation of "new realities" through neologisms, unverified claims, and strategic narrative construction are observed across various topics (geopolitics, social issues, historical revisionism). This directly impacts the integrity of public discourse.
+*   **Power & Accountability**: Constant discussion and claims around institutional accountability, corruption (FEMA, USAID, Philippine solons), and misuse of power by political figures. Also, there's a recurring assertion of individual/collective self-determination against state control (Oman Cybercrime Law, MLB/Bible verse).
+*   **Geopolitical Tensions**: Ongoing conflicts between national sovereignty and international law (Philippines-China, Iran nuclear inspectors, UN rapporteurs), as well as significant geopolitical rhetoric shaping perceptions of conflicts (Israel-Palestine, Hezbollah tunnel).
+*   **Curiosity Directive**: The search for a direct link between "New World Order" and immigration policy tension is not yielding explicit direct conversations on X. Instead, it's surfacing indirect signals related to national identity, cultural preservation, and geopolitical power shifts that are broader than just immigration.
+*   **Visualization Research**: Initial research into Python and JavaScript visualization libraries is complete, identifying viable tools for prototype development.
 
-## Themes
-- **Information Manipulation:** Posts often use emotional appeals, tribal signaling, and unverified claims ("linguistic magic," historical revisionism) to construct narratives and influence public opinion. This directly impacts epistemic integrity and media integrity.
-- **Power Dynamics & Accountability:** Persistent discussions around abuses of power by state institutions, calls for transparency, and efforts to hold political figures and entities accountable for their actions.
-- **National vs. Global Governance:** A fundamental and ongoing conflict between prioritizing national interests and sovereignty versus adhering to international legal frameworks and participating in global cooperation. Immigration and geopolitical actions are key arenas for this tension.
-- **Geopolitical Narratives & Justification:** Rhetoric used to justify military actions or diplomatic stances, frequently intertwining national security concerns with humanitarian issues.
+## Themes:
+*   **Narrative Control**: A pervasive effort to shape public understanding through various means, including linguistic, historical, and religious framing.
+*   **Institutional Scrutiny**: Continuous public and media focus on the integrity and accountability of government and other powerful organizations.
+*   **Sovereignty in a Globalized World**: The complex interplay between national autonomy and international pressures, whether legal, economic, or cultural.
 
-## Gaps
-- While categorization to axes occurs, a more explicit and potentially automated "categorization logic" for the "Sovereignty/Int. Law/Global Governance" categories (as defined in the sprint goal) needs to be formalized beyond simply logging evidence to existing axes.
-- The sprint calls for "structured data for analysis" for the visualization prototype. While `ontology_delta.json` entries provide structured evidence, a dedicated, aggregate log of raw categorized posts for direct ingestion by the prototype might be more efficient for downstream analysis and visualization.
-- The current workflow integrates sprint findings into `browse_notes.md` but does not explicitly consolidate them into a distinct "categorized posts" dataset for the prototype.
+## Gaps:
+*   The direct connection between "New World Order" discourse and immigration policy within the provided X content is not strongly articulated, suggesting these two axes might interact more implicitly or through other intermediary narratives.
+*   While visualization libraries are identified, the specific data schema and categorization logic for the "Sovereignty & Global Governance Discourse Map" sprint task require further definition. The ingestion and categorization of posts haven't formally started, though I am implicitly categorizing posts as I observe them.
 
-## Next Steps
-- **[reflect] Define Data Schema & Ingestion Script:** Formalize a distinct data schema for categorized posts, including fields beyond what's in `ontology_delta.json` (e.g., specific sentiment, additional metadata relevant to global governance analysis). Consider how this structured data will be ingested into the visualization prototype.
-- **[reflect] Develop Preliminary Categorization Logic:** Articulate explicit rules or heuristics for classifying posts into "Sovereignty," "International Law," and "Global Governance" categories, potentially drawing on keywords, entity recognition, or sentiment, to support the structured data ingestion.
-- **[SPRINT: research] Review existing data formats:** Examine the structure of current `ontology_delta.json` evidence entries and `feed_digest` to identify reusable components and inform the new data schema for categorized posts.
+## Next Steps:
+*   **Define Data Schema & Ingestion Script**: Based on observed patterns, the schema should capture source URL, timestamp, text content, identified narrative tactics (e.g., linguistic manipulation, historical revisionism), relevant belief axes, and pole alignment. The ingestion script will need to extract these.
+*   **Develop Preliminary Categorization Logic**: Refine the logic for categorizing posts based on their alignment with existing belief axes and identified narrative tactics. This will be an iterative process.
+*   **Ingest and Categorize Initial 50+ Posts**: Begin systematically applying the defined schema and logic to a batch of historical or recent posts to create the structured data needed for visualization. This will allow for testing and refinement of the schema and logic.

@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-23T23:02:04.414Z",
+  "generated_at": "2026-06-24T00:34:38.697Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-23T23:02:05.367Z",
+  "profiled_at": "2026-06-24T00:34:41.564Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -389,9 +389,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-06-23T22:06:31.518Z",
+      "last_seen_at": "2026-06-24T00:06:26.500Z",
       "discovery": {
-        "distinct_urls": 21,
+        "distinct_urls": 24,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/22/the-icc-must-investigate-israels-genocidal-use-of-sexual?traffic_source=rss",
           "https://www.aljazeera.com/economy/2026/6/22/us-house-committee-reaches-bipartisan-deal-on-social-media-rules-for-kids?traffic_source=rss",
@@ -400,9 +400,9 @@
           "https://www.aljazeera.com/video/the-take-2/2026/6/22/what-the-world-cup-looks-like-from-gaza?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 16,
+          "ontology_evidence": 17,
           "reading_queue": 1,
-          "journals": 27
+          "journals": 30
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -438,7 +438,7 @@
         "breadth": {
           "score": 0.8216666666666665,
           "basis": [
-            "distinct_urls:21",
+            "distinct_urls:24",
             "distinct_axes:5",
             "origin_types:3"
           ]
@@ -477,7 +477,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:21",
+            "distinct_urls:24",
             "distinct_axes:5",
             "origin_types:3",
             "referring_accounts:0",
@@ -897,7 +897,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-06-22T00:15:00Z",
       "discovery": {
-        "distinct_urls": 40,
+        "distinct_urls": 42,
         "example_urls": [
           "https://www.theguardian.com/world/live/2026/mar/27/iran-war-live-updates-trump-negotiations-bombing-hormuz-energy-oil-prices-middle-east",
           "https://www.theguardian.com/world/2026/jun/21/canada-immigration-us-deportation",
@@ -907,7 +907,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 2,
-          "reading_queue": 39
+          "reading_queue": 41
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -940,7 +940,7 @@
         "breadth": {
           "score": 0.5866666666666667,
           "basis": [
-            "distinct_urls:40",
+            "distinct_urls:42",
             "distinct_axes:2",
             "origin_types:2"
           ]
@@ -979,7 +979,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:40",
+            "distinct_urls:42",
             "distinct_axes:2",
             "origin_types:2",
             "referring_accounts:0",
@@ -1116,7 +1116,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T23:57:29.921Z",
+        "fetched_at": "2026-06-24T00:02:25.833Z",
         "homepage_url": "https://washingtonpost.com/",
         "example_url": "https://www.washingtonpost.com/world/2026/04/13/us-iran-blockade-strait-hormuz-oil/",
         "homepage_status": null,
@@ -1278,7 +1278,7 @@
       "first_seen_at": null,
       "last_seen_at": null,
       "discovery": {
-        "distinct_urls": 9,
+        "distinct_urls": 11,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
           "https://www.bbc.co.uk/news/articles/c4gy6vk44pwo?at_medium=RSS&amp;at_campaign=rss",
@@ -1287,7 +1287,7 @@
           "https://www.bbc.co.uk/news/articles/cx247v39r1no?at_medium=RSS&amp;at_campaign=rss"
         ],
         "origin_counts": {
-          "reading_queue": 10
+          "reading_queue": 12
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1314,9 +1314,9 @@
           ]
         },
         "breadth": {
-          "score": 0.32249999999999995,
+          "score": 0.3808333333333333,
           "basis": [
-            "distinct_urls:9",
+            "distinct_urls:11",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -1349,12 +1349,12 @@
           ]
         },
         "overall": {
-          "score": 0.57375,
-          "confidence": 0.2781,
+          "score": 0.5865104166666666,
+          "confidence": 0.33535000000000004,
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:9",
+            "distinct_urls:11",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -2864,9 +2864,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-23T22:00:14.000Z",
+      "last_seen_at": "2026-06-23T23:22:34.000Z",
       "discovery": {
-        "distinct_urls": 5939,
+        "distinct_urls": 5945,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2875,10 +2875,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3538,
-          "feed_buffer_reply": 3834
+          "feed_buffer": 3541,
+          "feed_buffer_reply": 3837
         },
-        "distinct_referring_accounts": 1910,
+        "distinct_referring_accounts": 1913,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -2916,7 +2916,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5939",
+            "distinct_urls:5945",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2924,7 +2924,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1910",
+            "referring_accounts:1913",
             "origin_types:2"
           ]
         },
@@ -2954,10 +2954,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5939",
+            "distinct_urls:5945",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1910",
+            "referring_accounts:1913",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3787,6 +3787,137 @@
       }
     },
     {
+      "domain": "rappler.com",
+      "entity": "Rappler",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-22T02:51:13.362Z",
+      "last_seen_at": "2026-06-24T00:06:26.500Z",
+      "discovery": {
+        "distinct_urls": 10,
+        "example_urls": [
+          "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
+          "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
+          "https://www.rappler.com/philippines/barmm-minories-demand-genuine-representation-parliamentary-elections/",
+          "https://www.rappler.com/philippines/visayas/borbon-cebu-vice-mayor-noel-dotillos-graft-charges/",
+          "https://www.rappler.com/five-eyes-intelligence-alliance-warns-that-new-ai-models-pose-urgent-cyber-risk"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 10,
+          "journals": 16
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_ai_societal_impact_v1",
+          "axis_epistemic_integrity",
+          "axis_media_integrity_v1",
+          "axis_political_trust_corruption_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.7033333333333334,
+          "basis": [
+            "distinct_urls:10",
+            "distinct_axes:5",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.61,
+          "confidence": 0.85,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.4796354166666667,
+          "confidence": 0.38845,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:10",
+            "distinct_axes:5",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-23T03:32:21.303Z",
+        "homepage_url": "https://rappler.com/",
+        "example_url": "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.rappler.com/",
+        "example_final_url": "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "starlink.com",
       "entity": "Starlink",
       "kind": "unknown",
@@ -4037,137 +4168,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "rappler.com",
-      "entity": "Rappler",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-22T02:51:13.362Z",
-      "last_seen_at": "2026-06-23T10:06:36.269Z",
-      "discovery": {
-        "distinct_urls": 9,
-        "example_urls": [
-          "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
-          "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
-          "https://www.rappler.com/philippines/barmm-minories-demand-genuine-representation-parliamentary-elections/",
-          "https://www.rappler.com/philippines/visayas/borbon-cebu-vice-mayor-noel-dotillos-graft-charges/",
-          "https://www.rappler.com/five-eyes-intelligence-alliance-warns-that-new-ai-models-pose-urgent-cyber-risk"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 9,
-          "journals": 15
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_ai_societal_impact_v1",
-          "axis_epistemic_integrity",
-          "axis_media_integrity_v1",
-          "axis_political_trust_corruption_v1",
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.6741666666666667,
-          "basis": [
-            "distinct_urls:9",
-            "distinct_axes:5",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.61,
-          "confidence": 0.85,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:1",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.47325520833333334,
-          "confidence": 0.359825,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:9",
-            "distinct_axes:5",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-23T03:32:21.303Z",
-        "homepage_url": "https://rappler.com/",
-        "example_url": "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.rappler.com/",
-        "example_final_url": "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
           "opinion_marker": false
         }
       }
@@ -10788,9 +10788,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-16T09:36:45.269Z",
-      "last_seen_at": "2026-06-22T22:40:13.993Z",
+      "last_seen_at": "2026-06-23T23:12:04.221Z",
       "discovery": {
-        "distinct_urls": 75,
+        "distinct_urls": 76,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -10799,7 +10799,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 75
+          "articles": 76
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -10828,7 +10828,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:75",
+            "distinct_urls:76",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -10866,7 +10866,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:75",
+            "distinct_urls:76",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -11636,7 +11636,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T23:57:30.711Z",
+        "fetched_at": "2026-06-24T00:02:26.460Z",
         "homepage_url": "https://inqnews.net/",
         "example_url": "https://inqnews.net/major",
         "homepage_status": 200,
@@ -13665,7 +13665,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T23:57:31.814Z",
+        "fetched_at": "2026-06-24T00:02:27.841Z",
         "homepage_url": "https://easesourcing.com/",
         "example_url": "https://www.easesourcing.com/?utm_source=twitter&utm_medium=cpc&utm_campaign=eu260327&twclid=2c9z6424e0kfmv2lyfp3g2o0yr",
         "homepage_status": 200,
@@ -15707,6 +15707,131 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "jpost.com",
+      "entity": "Jpost",
+      "kind": "unknown",
+      "first_seen_at": "2026-04-06T20:24:01.569Z",
+      "last_seen_at": "2026-06-24T00:06:26.500Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://jpost.com/",
+          "https://www.jpost.com/international/article-795777",
+          "https://www.jpost.com/judaism/article-808940"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 2,
+          "journals": 4
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_global_power_realignments_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.2658333333333333,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:1",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:14",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.38393229166666665,
+          "confidence": 0.139075,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:1",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-21T02:26:44.439Z",
+        "homepage_url": "https://jpost.com/",
+        "example_url": "https://jpost.com/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.jpost.com/",
+        "example_final_url": "https://www.jpost.com/",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 14,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 14,
           "opinion_marker": false
         }
       }
@@ -18592,130 +18717,6 @@
       }
     },
     {
-      "domain": "jpost.com",
-      "entity": "Jpost",
-      "kind": "unknown",
-      "first_seen_at": "2026-04-06T20:24:01.569Z",
-      "last_seen_at": "2026-04-11T12:05:15.619Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "https://jpost.com/",
-          "https://www.jpost.com/international/article-795777"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 2,
-          "journals": 3
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_global_power_realignments_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.23666666666666664,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:1",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.22,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:14",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.3775520833333333,
-          "confidence": 0.11044999999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:1",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-21T02:26:44.439Z",
-        "homepage_url": "https://jpost.com/",
-        "example_url": "https://jpost.com/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.jpost.com/",
-        "example_final_url": "https://www.jpost.com/",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 14,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 14,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "timesofisrael.com",
       "entity": "Timesofisrael",
       "kind": "unknown",
@@ -20796,7 +20797,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T23:57:32.630Z",
+        "fetched_at": "2026-06-24T00:02:28.442Z",
         "homepage_url": "https://energyalert.org/",
         "example_url": "https://energyalert.org/speed-to-power/?twclid=29c3xdnaadwruhur8bny93vxj7",
         "homepage_status": 200,
@@ -31800,7 +31801,7 @@
           ]
         },
         "profile": {
-          "score": 0.48,
+          "score": 0.47,
           "confidence": 0.75,
           "basis": [
             "meta_author:false",
@@ -31809,7 +31810,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:4",
+            "outbound_links:3",
             "opinion_marker:false"
           ]
         },
@@ -31829,7 +31830,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T23:26:38.270Z",
+        "fetched_at": "2026-06-23T23:34:10.528Z",
         "homepage_url": "https://qodo.ai/",
         "example_url": "https://www.qodo.ai/qodo-lp-ticket-integrations?utm_source=x&utm_medium=paid-social&utm_campaign=feature-ticket-context&utm_content=ad00-jira-context&twclid=26dl4v15r8qnhxeh30sqq0a16f",
         "homepage_status": 200,
@@ -31845,7 +31846,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 10,
+          "outbound_links_count": 9,
           "opinion_marker": false
         },
         "example": {
@@ -31855,7 +31856,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 4,
+          "outbound_links_count": 3,
           "opinion_marker": false
         }
       }
@@ -37112,7 +37113,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T00:26:40.152Z",
+        "fetched_at": "2026-06-24T00:34:39.710Z",
         "homepage_url": "https://com.cn/",
         "example_url": "https://www.chinadaily.com.cn/a/202604/15/WS661c9e83a31082690940026e.html",
         "homepage_status": null,
@@ -37356,7 +37357,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T00:26:40.526Z",
+        "fetched_at": "2026-06-24T00:34:40.081Z",
         "homepage_url": "https://discord.gg/",
         "example_url": "https://discord.gg/JxPMkH88",
         "homepage_status": 200,
@@ -37478,7 +37479,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T00:26:40.909Z",
+        "fetched_at": "2026-06-24T00:34:40.357Z",
         "homepage_url": "https://ned.org/",
         "example_url": "https://www.ned.org/about/board-of-directors/",
         "homepage_status": 200,
@@ -37571,14 +37572,14 @@
           ]
         },
         "profile": {
-          "score": 0.12,
+          "score": 0,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:false",
             "about:false",
-            "contact:true",
+            "contact:false",
             "corrections:false",
             "outbound_links:0",
             "opinion_marker:false"
@@ -37600,10 +37601,10 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-21T00:26:41.719Z",
+        "fetched_at": "2026-06-24T00:34:41.564Z",
         "homepage_url": "https://dstack.ai/",
         "example_url": "https://sky.dstack.ai/?twclid=22u1vjb44uf96iph6oj89wot7a",
-        "homepage_status": 503,
+        "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://dstack.ai/",
         "example_final_url": "https://sky.dstack.ai/?twclid=22u1vjb44uf96iph6oj89wot7a",
@@ -37612,11 +37613,11 @@
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
-          "has_contact_link": true,
+          "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 3,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -39064,7 +39065,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T23:26:38.649Z",
+        "fetched_at": "2026-06-23T23:34:11.028Z",
         "homepage_url": "https://cumuluscoffee.com/",
         "example_url": "https://cumuluscoffee.com/products/the-cumulus-machine-1?utm_source=x&utm_medium=paidsocial&utm_campaign=convenience&utm_content=threedrinks_carousel_1x1&twclid=22ron9m7rrobkpnxtpgpyojtgw",
         "homepage_status": 200,
@@ -39796,7 +39797,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T23:26:39.472Z",
+        "fetched_at": "2026-06-23T23:34:11.994Z",
         "homepage_url": "https://marketrebellion.com/",
         "example_url": "https://marketrebellion.com/cboe-summit-virtual/?utm_campaign=38086833-Cboe+Summit+2026&utm_medium=paidsocial&utm_source=twitterads&utm_term=buyerinitials&twclid=29q0f3ecmiglui4ryyj5up2c3i",
         "homepage_status": 200,
@@ -39918,7 +39919,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-20T23:26:40.296Z",
+        "fetched_at": "2026-06-23T23:34:12.875Z",
         "homepage_url": "https://tradethepool.com/",
         "example_url": "https://tradethepool.com/?twclid=29o6hooskerzcfyefiqi7kcgrh",
         "homepage_status": 200,

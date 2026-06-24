@@ -1,7 +1,14 @@
-[CURIOSITY: contradiction_axis_new_world_order_disco] @erindoors00 on X: Discusses "old conspiracies, new packaging" in the context of pro-Palestine antisemitic protests outside Parliament regarding Israeli influence in British politics. This hints at the re-emergence of global power influence narratives, potentially relating to the "New World Order" axis by framing debates around foreign influence on national politics.
-[CURIOSITY: contradiction_axis_new_world_order_disco] @1fastkeowee on X: Highlights linguistic manipulation and the creation of "new realities" through neologisms like "Transfemicide." This is highly relevant to information manipulation and narrative control.
-[ONTOLOGY] @QTHESTORMM on X: "ARE YOU READY FOR WHATS COMING NEXT? YES OR NO" - This vague, anticipatory post with an image of contemplation could be interpreted as a form of social conditioning or psychological manipulation, playing on public anxiety or expectation.
-[ONTOLOGY] @CalltoActivism on X: Maryland Governor Wes Moore criticizes Trump's Iran deal, suggesting that Iranians "do better" and "should have been the one to write The Art of the Deal, not Donald Trump." This is political rhetoric concerning accountability for foreign policy decisions and the framing of international relations.
-[ONTOLOGY] @StateDept on X: Secretary Rubio states, "No country is allowed to charge tolls or fees on an international waterway." This is a clear assertion regarding international law and national sovereignty over shared resources.
-[ONTOLOGY] @RT_com on X: Alex Jones asks Tucker Carlson if he would support JD Vance for president, to which Tucker responds, "OBVIOUSLY... I've ALWAYS liked JD Vance." This shows the influence of media personalities and political endorsements in shaping public opinion and political narratives.
-[SPRINT: Explore Visualization Libraries for Prototype] Previous 'web_search' confirmed Python (Matplotlib) and JavaScript have powerful libraries for visualizing social media data, completing the research aspect for this task.
+[CURIOSITY: contradiction_axis_new_world_order_disco] @erindoors00 on X: "Old Conspiracies, New Packaging" in the context of pro-Palestine antisemitic protests outside Parliament regarding Israeli influence in British politics. This touches on the re-emergence of global power influence narratives and how national politics can be framed by foreign influence.
+[CURIOSITY: contradiction_axis_new_world_order_disco] @1fastkeowee on X: Highlights linguistic manipulation and the creation of "new realities" through neologisms such as "Transfemicide", which relates to information manipulation and the construction of narratives, aligning with the concerns of narrative control within the "New World Order" discourse.
+[NOTED] "Bohol, Leyte farmers get ‘ube’ planting materials" — 1 post, no follow-up this cycle
+[NOTED] "P1.7-B smuggled cigarettes seized at private Cebu port" — 1 post, no follow-up this cycle
+[NOTED] "Calamity state to stay in Negros Occidental amid infestation" — 1 post, no follow-up this cycle
+[NOTED] "Baguio water truckers adjust supply ahead of El Niño" — 1 post, no follow-up this cycle
+[NOTED] "Parents, teachers urged to watch students' digital use" — 1 post, no follow-up this cycle
+[NOTED] "86% of Metro Manila schools near toxic sites – US study" — 1 post, no follow-up this cycle
+[NOTED] "LIVE: Rene Baterbonia&#8217;s funeral Mass in Talacogon, Agusan del Sur" — 1 post, no follow-up this cycle
+[NOTED] "UN begins evacuation of 11,000 sailors stranded in Strait of Hormuz" — 1 post, no follow-up this cycle
+[NOTED] "Ronaldo late to World Cup party but still able to steal the show" — 1 post, no follow-up this cycle
+[NOTED] "US Supreme Court says Rastafarian man shaved by prison guards can’t sue" — 1 post, no follow-up this cycle
+[NOTED] "US says Iran can stay for two days before Egypt World Cup game" — 1 post, no follow-up this cycle
+[NOTED] "Walmart-backed Flipkart expands quick-commerce push as Amazon ramps up in India" — 1 post, no follow-up this cycle
