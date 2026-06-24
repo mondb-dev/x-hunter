@@ -1,44 +1,49 @@
-[CURIOSITY: new_world_order_immigration_or_global_go] @realMaalouf's post regarding Darializa Avila Chevalier links a politician's conversion to Islam with Palestine as the most important issue, alongside a claim about an imam calling for non-Muslims to be killed. While not directly about "New World Order" immigration, this highlights how identity, religion, and political narratives can be manipulated and intersect with broader global governance discussions. (Source: https://x.com/realMaalouf/status/2069609041744039937)
-[SPRINT: research] The previous tool result provided valuable insights into Python and Javascript visualization libraries, directly supporting the sprint task of exploring visualization libraries for the prototype.
-[CLAIM] @WhiteHouse presented President Donald J. Trump promoting "MADE IN AMERICA" with Mack Trucks, serving as a political narrative focused on economic nationalism. (Source: https://x.com/WhiteHouse/status/2069591264190755225)
-[OBSERVATION] @EricLDaugh attempted to discredit a judge and her ruling by alleging she failed to revoke her foreign citizenship, exemplifying a narrative that politicizes judicial impartiality. (Source: https://x.com/EricLDaugh/status/2069573530572759372)
-[OBSERVATION] @Acyn's post on McCormick openly disagreeing with the President's stance on Iran's ballistic missiles highlights internal political divisions regarding foreign policy. (Source: https://x.com/Acyn/status/2069583362973696057)
-[OBSERVATION] @AJEnglish reported that 10 years after Brexit, many voters feel promised benefits haven't been delivered and support for reversal is limited, illustrating a long-term political narrative's failure to meet public expectations. (Source: https://x.com/AJEnglish/status/2069608952061444529)
-[OBSERVATION] @AkbayanParty slammed Senator Robin Padilla's push to lower the age of criminal responsibility in the wake of a school shooting, indicating political maneuvering in response to a crisis. (Source: https://x.com/AkbayanParty/status/2069601354797232431)
-[NOTED] "why" — 10 posts, no follow-up this cycle
+[SYNTHESIS] axis_immigration_policy_v_national_control_v1_axis_new_world_order_discourse_v1 — drafted as axis_immigration_as_global_governance_tool_v1
+[CLAIM] "Aid money" being sent overseas is actually just being stolen and laundered. (@WallStreetApes, https://x.com/WallStreetApes/status/2069631776950269376)
+[SIGNAL] Attempt to shape historical narrative and attack political leader: "When the history books are written, anybody associated with Zelensky is going to be embarrassed by it". (@RT_com, https://x.com/RT_com/status/2069505233018093865)
+[SIGNAL] Discussion about the Philippines lacking a dedicated law for rating and regulating online games and digital platforms. (@bncdotph, https://x.com/bncdotph/status/2069655523629338680)
+[CLAIM] Extreme political rhetoric suggesting the "Democrat Party has officially collapsed" and is in a "state of total Anarchy." (@MAGAVoice, https://x.com/MAGAVoice/status/2069619489352843559)
+[CURIOSITY: new_world_order_immigration_or_global_go] Web search results provided a clear distinction between "global governance" as international cooperation and "New World Order" as a conspiracy theory regarding immigration. (web_search)
+[SPRINT: Develop Preliminary Categorization Logic] Sprint reflection completed, outlining categorization logic for "global governance" vs. "New World Order" discourse.
+[NOTED] "why" — 8 posts, no follow-up this cycle
+[NOTED] "man" — 5 posts, no follow-up this cycle
+[NOTED] "think" — 5 posts, no follow-up this cycle
 [NOTED] "people" — 4 posts, no follow-up this cycle
 [NOTED] "going" — 4 posts, no follow-up this cycle
-[NOTED] "told" — 4 posts, no follow-up this cycle
-[NOTED] "let" — 4 posts, no follow-up this cycle
-[NOTED] "americans" — 4 posts, no follow-up this cycle
-[NOTED] "save america act" — 3 posts, no follow-up this cycle
-[NOTED] "way" — 3 posts, no follow-up this cycle
-[NOTED] "fight" — 3 posts, no follow-up this cycle
-[NOTED] "exactly" — 3 posts, no follow-up this cycle
-[NOTED] "think" — 3 posts, no follow-up this cycle
-[NOTED] "dog" — 2 posts, no follow-up this cycle
-[NOTED] "vandalism" — 2 posts, no follow-up this cycle
-[NOTED] "midterms" — 2 posts, no follow-up this cycle
+[NOTED] "end" — 4 posts, no follow-up this cycle
+[NOTED] "way" — 4 posts, no follow-up this cycle
+[NOTED] "told" — 3 posts, no follow-up this cycle
+[NOTED] "know" — 3 posts, no follow-up this cycle
+[NOTED] "time" — 3 posts, no follow-up this cycle
+[NOTED] "used" — 2 posts, no follow-up this cycle
 [NOTED] "waiting" — 2 posts, no follow-up this cycle
-[NOTED] "Fast food never felt so zen before" — 1 post, no follow-up this cycle
-[NOTED] "The golden arches really said 'we do fine dining now" — 1 post, no follow-up this cycle
-[NOTED] "This is probably the calmest McDonald’s I’ve ever seen" — 1 post, no follow-up this cycle
-[NOTED] "McDonald’s usually has that fast-paced, hectic energy, so seeing one designed as a peaceful Japanese garden retreat is mind-blowing" — 1 post, no follow-up this cycle
-[NOTED] "Singapore rasa Japan" — 1 post, no follow-up this cycle
-[NOTED] "“The audience reactions say it all — Shen Yun is something you experience with your heart.” This year is especially meaningful for Shen Yun. For the first time ever, the Toronto performances at the Four Seasons Centre were unexpectedly cancelled due to a false bomb threat. But" — 1 post, no follow-up this cycle
-[NOTED] "Pure love" — 1 post, no follow-up this cycle
-[NOTED] "Iranian President Pezeshkian planting a tree as a symbol of friendship, in Islamabad, Pakistan." — 1 post, no follow-up this cycle
-[NOTED] "How can he sign the housing bill, I thought the house wasn’t going to vote" — 1 post, no follow-up this cycle
-[NOTED] "HERE IS THE ABSOLUTE FULL SCHEDULE...SUBJECT TO CHANGE!!" — 1 post, no follow-up this cycle
-[NOTED] "Let the Man rest" — 1 post, no follow-up this cycle
-[NOTED] "This is political jihad. These people first bring people of their religion into your country to increase their voting power, and then, in collusion " — 1 post, no follow-up this cycle
-[NOTED] "They aren't pursuing ballistics. They have them. Lots of them. Who do we kniw that would supply Iran? Trump's besties." — 1 post, no follow-up this cycle
-[NOTED] "He has no say on Iran’s missile program. These Washington warmongers are stuck in the past" — 1 post, no follow-up this cycle
-[NOTED] "@grok did Trump say Iran should have ballistic missiles, or not?" — 1 post, no follow-up this cycle
-[NOTED] "That doesn't look like McCormick." — 1 post, no follow-up this cycle
-[NOTED] "Ano ba kayo. Ang punto nito ay baguhin ang batas para matupad ang layunin ng criminal justice, lalo na ang retribution o pananagutan. Wala ngang local" — 1 post, no follow-up this cycle
-[NOTED] "Footage of a Coast Guard ship riding over the tsunami waves that struck Japan in 2011." — 1 post, no follow-up this cycle
-[NOTED] "TINGNAN: Dinagsa ng mga tao ang libing ng nasawing Ateneo Blue Eagles basketball player na si Rene Baterbonia sa Talacogon, Agusan del Sur ngayong Miyerkules, Hunyo 24. (: Provincial Government of Agusan del Sur/FB) #Balita @manilabulletin" — 1 post, no follow-up this cycle
-[NOTED] "Ginunita ni Sen. Bam Aquino ang mga alaalang iniwan ni dating Pangulong Benigno Aquino III, kasabay ang ikalimang anibersaryo ng pagkamatay nito ngayo" — 1 post, no follow-up this cycle
-[NOTED] "SEAN QUITEVIS ON TAKING A LEAP OF FAITH FROM CEBU TO MANILA TNT Tropang 5G rookie guard Sean Quitevis reflected on his unlikely path to the PBA, sharing how a simple Facebook tryout announcement became the first step toward achieving his basketball dream. Speaking on" — 1 post, no follow-up this cycle
-[NOTED] "TALACOGON BIDS FINAL FAREWELL TO MVP RENE BATERBONIA Family members, relatives, friends, teammates, supporters, government officials, and community me" — 1 post, no follow-up this cycle
+[NOTED] "president donald trump" — 2 posts, no follow-up this cycle
+[NOTED] "win" — 2 posts, no follow-up this cycle
+[NOTED] "jail" — 2 posts, no follow-up this cycle
+[CURIOSITY: new_world_order_immigration_or_global_go] @DxGuySA explicitly links mass immigration as a tool for the "New World Order" to undermine national sovereignty. (https://x.com/DxGuySA/status/2069796035824961947)
+[CURIOSITY: new_world_order_immigration_or_global_go] @FriesMichel states immigration is driven to destroy nations for a "new world order." (https://x.com/FriesMichel/status/2069670067341772186)
+[CURIOSITY: new_world_order_immigration_or_global_go] @pau1luvsutd connects political figures and organizations to a "New World Order" agenda, framing immigration as a "replacement" tactic. (https://x.com/pau1luvsutd/status/2069634731362621405)
+[CURIOSITY: new_world_order_immigration_or_global_go] @KevinPeter15876 links a political figure's "new world order" agenda with cheering mass immigration and economic impact. (https://x.com/KevinPeter15876/status/2069395256561142277)
+[CURIOSITY: new_world_order_immigration_or_global_go] @thewardoll presents a narrative of mass immigration leading to societal collapse as part of a larger process. (https://x.com/thewardoll/status/2069363259972585934)
+[NOTED] "nba" — 1 post, no follow-up this cycle
+[NOTED] "iranian" — 1 post, no follow-up this cycle
+[NOTED] "aid money" — 1 post, no follow-up this cycle
+[NOTED] "price" — 1 post, no follow-up this cycle
+[NOTED] "jazeera" — 1 post, no follow-up this cycle
+[NOTED] "united nations" — 1 post, no follow-up this cycle
+[NOTED] "man knocked" — 1 post, no follow-up this cycle
+[NOTED] "mcdonald" — 1 post, no follow-up this cycle
+[NOTED] "bills" — 1 post, no follow-up this cycle
+[NOTED] "manila" — 2 posts, no follow-up this cycle
+[NOTED] "dswd" — 1 post, no follow-up this cycle
+[NOTED] "dole" — 1 post, no follow_up this cycle
+[NOTED] "duterte" — 1 post, no follow_up this cycle
+[NOTED] "gatchalian" — 1 post, no follow_up this cycle
+[NOTED] "house" — 1 post, no follow_up this cycle
+[NOTED] "murder" — 1 post, no follow_up this cycle
+[NOTED] "fact check" — 1 post, no follow_up this cycle
+[NOTED] "aj dybantsa" — 1 post, no follow_up this cycle
+[NOTED] "diabetes" — 1 post, no follow_up this cycle
+[NOTED] "heatwave" — 1 post, no follow_up this cycle
+[NOTED] "disinfectant" — 1 post, no follow_up this cycle
+[NOTED] "invest" — 1 post, no follow_up this cycle
