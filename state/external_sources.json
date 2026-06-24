@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-24T06:34:44.996Z",
+  "generated_at": "2026-06-24T09:02:15.578Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-24T06:34:49.297Z",
+  "profiled_at": "2026-06-24T09:02:19.526Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -389,9 +389,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-06-24T05:32:00Z",
+      "last_seen_at": "2026-06-24T07:04:00Z",
       "discovery": {
-        "distinct_urls": 28,
+        "distinct_urls": 29,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/22/the-icc-must-investigate-israels-genocidal-use-of-sexual?traffic_source=rss",
           "https://www.aljazeera.com/economy/2026/6/22/us-house-committee-reaches-bipartisan-deal-on-social-media-rules-for-kids?traffic_source=rss",
@@ -400,7 +400,7 @@
           "https://www.aljazeera.com/video/the-take-2/2026/6/22/what-the-world-cup-looks-like-from-gaza?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 22,
+          "ontology_evidence": 23,
           "reading_queue": 1,
           "journals": 35
         },
@@ -438,7 +438,7 @@
         "breadth": {
           "score": 0.8216666666666665,
           "basis": [
-            "distinct_urls:28",
+            "distinct_urls:29",
             "distinct_axes:5",
             "origin_types:3"
           ]
@@ -477,7 +477,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:28",
+            "distinct_urls:29",
             "distinct_axes:5",
             "origin_types:3",
             "referring_accounts:0",
@@ -525,7 +525,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-06-24T03:05:43.210Z",
       "discovery": {
-        "distinct_urls": 49,
+        "distinct_urls": 50,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/global-development/2026/jun/23/uk-ties-uae-mass-atrocities-sudan-mps-select-committee-nathaniel-raymond",
@@ -535,7 +535,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 46,
+          "reading_queue": 47,
           "journals": 9
         },
         "distinct_referring_accounts": 0,
@@ -571,7 +571,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:49",
+            "distinct_urls:50",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -610,7 +610,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:49",
+            "distinct_urls:50",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -1281,7 +1281,7 @@
       "first_seen_at": null,
       "last_seen_at": null,
       "discovery": {
-        "distinct_urls": 12,
+        "distinct_urls": 13,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
           "https://www.bbc.co.uk/news/articles/c4gy6vk44pwo?at_medium=RSS&amp;at_campaign=rss",
@@ -1290,7 +1290,7 @@
           "https://www.bbc.co.uk/news/articles/cx247v39r1no?at_medium=RSS&amp;at_campaign=rss"
         ],
         "origin_counts": {
-          "reading_queue": 13
+          "reading_queue": 14
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1319,7 +1319,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:12",
+            "distinct_urls:13",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -1353,11 +1353,11 @@
         },
         "overall": {
           "score": 0.592890625,
-          "confidence": 0.363975,
+          "confidence": 0.386475,
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:12",
+            "distinct_urls:13",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -2999,9 +2999,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-24T05:30:00.000Z",
+      "last_seen_at": "2026-06-24T07:58:41.000Z",
       "discovery": {
-        "distinct_urls": 5958,
+        "distinct_urls": 5971,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3010,10 +3010,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3549,
-          "feed_buffer_reply": 3848
+          "feed_buffer": 3554,
+          "feed_buffer_reply": 3856
         },
-        "distinct_referring_accounts": 1915,
+        "distinct_referring_accounts": 1919,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3051,7 +3051,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5958",
+            "distinct_urls:5971",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3059,7 +3059,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1915",
+            "referring_accounts:1919",
             "origin_types:2"
           ]
         },
@@ -3089,10 +3089,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5958",
+            "distinct_urls:5971",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1915",
+            "referring_accounts:1919",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3135,9 +3135,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-06-23T19:19:22.000Z",
+      "last_seen_at": "2026-06-24T05:30:00.000Z",
       "discovery": {
-        "distinct_urls": 427,
+        "distinct_urls": 428,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -3147,7 +3147,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 399,
-          "feed_buffer": 57
+          "feed_buffer": 58
         },
         "distinct_referring_accounts": 276,
         "sample_referring_accounts": [
@@ -3187,7 +3187,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:427",
+            "distinct_urls:428",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3225,7 +3225,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:427",
+            "distinct_urls:428",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:276",
@@ -4436,6 +4436,137 @@
           "has_contact_link": false,
           "has_corrections_link": true,
           "outbound_links_count": 20,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "philstar.com",
+      "entity": "Philstar",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-19T10:31:49.581Z",
+      "last_seen_at": "2026-06-24T07:27:00Z",
+      "discovery": {
+        "distinct_urls": 8,
+        "example_urls": [
+          "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
+          "https://www.philstar.com/headlines/2026/06/24/2537509/ched-tells-ateneo-explain-drowning-baterbonia-adili-or-face-sanctions",
+          "https://www.philstar.com/headlines/2026/06/24/2537413/sandigan-blocks-ex-dpwh-execs-attempt-stall-case",
+          "https://www.philstar.com/headlines/2026/06/24/2537529/palace-vp-sara-why-hide-saln-core-answer-wealth-question",
+          "https://www.philstar.com/headlines/2026/06/24/2537409/philippines-china-arbitral-award-final-and-binding"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 6,
+          "journals": 9
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_national_sovereignty_v_intl_law_v1",
+          "axis_political_trust_corruption_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.5283333333333333,
+          "basis": [
+            "distinct_urls:8",
+            "distinct_axes:3",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.58,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:42",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.4619791666666666,
+          "confidence": 0.3067,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:8",
+            "distinct_axes:3",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-23T00:01:47.366Z",
+        "homepage_url": "https://philstar.com/",
+        "example_url": "https://philstar.com/headlines/2026/05/19/2528923/fleeing-bato-says-hes-willing-be-jaile",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.philstar.com/",
+        "example_final_url": "https://www.philstar.com/headlines/2026/05/19/2528923/fleeing-bato-says-hes-willing-be-jailed-if-duterte",
+        "homepage_content_type": "text/html; charset=utf8",
+        "example_content_type": "text/html; charset=utf8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 75,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 42,
           "opinion_marker": false
         }
       }
@@ -7116,136 +7247,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "philstar.com",
-      "entity": "Philstar",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-19T10:31:49.581Z",
-      "last_seen_at": "2026-06-23T19:01:00Z",
-      "discovery": {
-        "distinct_urls": 5,
-        "example_urls": [
-          "https://www.philstar.com/headlines/2026/06/24/2537413/sandigan-blocks-ex-dpwh-execs-attempt-stall-case",
-          "https://www.philstar.com/headlines/2026/06/24/2537409/philippines-china-arbitral-award-final-and-binding",
-          "https://philstar.com/headlines/2026/05/19/2528923/fleeing-bato-says-hes-willing-be-jaile",
-          "https://philstar.com/headlines/2026",
-          "https://www.philstar.com/headlines/2026/06/24/2537408/government-studying-supplemental-budget-request-congress"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 3,
-          "journals": 9
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_national_sovereignty_v_intl_law_v1",
-          "axis_political_trust_corruption_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.3825,
-          "basis": [
-            "distinct_urls:5",
-            "distinct_axes:2",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.58,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:42",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.430078125,
-          "confidence": 0.208575,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:5",
-            "distinct_axes:2",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-23T00:01:47.366Z",
-        "homepage_url": "https://philstar.com/",
-        "example_url": "https://philstar.com/headlines/2026/05/19/2528923/fleeing-bato-says-hes-willing-be-jaile",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.philstar.com/",
-        "example_final_url": "https://www.philstar.com/headlines/2026/05/19/2528923/fleeing-bato-says-hes-willing-be-jailed-if-duterte",
-        "homepage_content_type": "text/html; charset=utf8",
-        "example_content_type": "text/html; charset=utf8",
-        "homepage": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 75,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 42,
           "opinion_marker": false
         }
       }
@@ -48463,7 +48464,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T18:55:40.343Z",
+        "fetched_at": "2026-06-24T07:02:23.938Z",
         "homepage_url": "https://afrlhorizons.com/",
         "example_url": "http://www.afrlhorizons.com/Briefs/Jun04/DE0401.html",
         "homepage_status": 200,
@@ -48585,7 +48586,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T18:55:40.688Z",
+        "fetched_at": "2026-06-24T07:02:24.275Z",
         "homepage_url": "https://macsolution.online/",
         "example_url": "https://macsolution.online/?twclid=2c8ez919zmxlkfof9vt4rcyhz5",
         "homepage_status": 200,
@@ -48707,7 +48708,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T18:55:40.997Z",
+        "fetched_at": "2026-06-24T07:02:24.526Z",
         "homepage_url": "https://riyadhair.com/",
         "example_url": "https://www.riyadhair.com/en/experience/cabin",
         "homepage_status": 403,
@@ -48829,7 +48830,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T19:55:40.760Z",
+        "fetched_at": "2026-06-24T07:02:26.585Z",
         "homepage_url": "https://netflix.com/",
         "example_url": "https://www.netflix.com/title/82194570?twclid=288robac53sjknqkogkgmxy2as",
         "homepage_status": 200,
@@ -48951,7 +48952,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T19:55:42.264Z",
+        "fetched_at": "2026-06-24T07:32:24.328Z",
         "homepage_url": "https://surveymonkey.com/",
         "example_url": "https://www.surveymonkey.com/r/RXMZYPF?twclid=252z7ijl13qn2so8u4p821ogkx",
         "homepage_status": 200,
@@ -49073,7 +49074,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T19:55:44.145Z",
+        "fetched_at": "2026-06-24T07:32:26.139Z",
         "homepage_url": "https://energyx.com/",
         "example_url": "https://invest.energyx.com/?utm_source=twitter&utm_medium=paid-social&utm_campaign=twitterretargeting-41265666-DMR_EnergyX_Twitter_RTG_US_ABO_AutBid_Funded_RegA_id4007_BAU-New&utm_content=54718817-042826_HiFi-Commodity-Culture_Video_US_FullFunnel_18%20_All_All_AutBid_Funded_x%20&utm_term=2048902573357244715-042826_HiFi-Commodity-Culture_V46-M46-LearnMore_Rotation_Video_LearnMore_LP-Invest_x&twclid=25e388zosvb4kqbie3xren0lwt",
         "homepage_status": 200,
@@ -49195,7 +49196,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T20:25:39.432Z",
+        "fetched_at": "2026-06-24T07:32:26.656Z",
         "homepage_url": "https://a24films.com/",
         "example_url": "https://app.a24films.com/ticketing/backrooms/522?twclid=24mghux79f287c9u7b5rd948i5",
         "homepage_status": 200,
@@ -49317,7 +49318,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T20:25:39.833Z",
+        "fetched_at": "2026-06-24T07:32:26.971Z",
         "homepage_url": "https://inthegrey.film/",
         "example_url": "https://inthegrey.film/?twclid=27f088zf1o715tosep9p3mwxjy",
         "homepage_status": 200,
@@ -49439,7 +49440,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T20:25:40.195Z",
+        "fetched_at": "2026-06-24T08:34:16.835Z",
         "homepage_url": "https://freeflickfootball.com/",
         "example_url": "https://www.freeflickfootball.com/?twclid=25ot3m51mdmkvdjc3db1ukp3j7",
         "homepage_status": 200,
@@ -49561,7 +49562,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T20:26:00.198Z",
+        "fetched_at": "2026-06-24T08:34:36.840Z",
         "homepage_url": "https://ai-scanclaw.org/",
         "example_url": "https://ai-scanclaw.org/?twclid=2eknfzk2d9zgxwrsorj3rgjr03",
         "homepage_status": null,
@@ -49683,7 +49684,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T21:55:42.969Z",
+        "fetched_at": "2026-06-24T08:34:37.897Z",
         "homepage_url": "https://fors.market/",
         "example_url": "https://app.fors.market/?twclid=2a9nuy5568hqmlaww5o5fyl72t",
         "homepage_status": 200,
@@ -49805,7 +49806,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T21:55:43.372Z",
+        "fetched_at": "2026-06-24T08:34:38.305Z",
         "homepage_url": "https://predle.com/",
         "example_url": "https://predle.com/?twclid=281545wq7xlj7icbrjtgmt469e",
         "homepage_status": 200,
@@ -49927,7 +49928,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T21:55:44.537Z",
+        "fetched_at": "2026-06-24T09:02:16.918Z",
         "homepage_url": "https://republicen.org/",
         "example_url": "https://republicen.org/petition-x?twclid=2euy6ki9rbdehj6wv2ogyto6xe",
         "homepage_status": 200,
@@ -50049,7 +50050,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T23:25:46.122Z",
+        "fetched_at": "2026-06-24T09:02:17.321Z",
         "homepage_url": "https://coinversa.ai/",
         "example_url": "https://developers.coinversa.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=developer_api&utm_content=mcp_native&twclid=2124p9kgv52anecn3ksmek81n4",
         "homepage_status": 200,
@@ -50171,7 +50172,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-18T23:25:46.892Z",
+        "fetched_at": "2026-06-24T09:02:17.951Z",
         "homepage_url": "https://onrender.com/",
         "example_url": "https://editedmusic.onrender.com/?twclid=2d55shf5rbth87uf35vrsj5s7v",
         "homepage_status": 200,
@@ -50293,7 +50294,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T01:25:46.833Z",
+        "fetched_at": "2026-06-24T09:02:19.526Z",
         "homepage_url": "https://nintendo.com/",
         "example_url": "https://nintendo.com/us/store/products/nero-and-sci-integral-edition-switch?utm_source=X&utm_campaign=PreorderDesktop&utm_medium=ads&utm_content=Math_Variant_2&twclid=22ctbnud22bkdyu2z78mundbwr",
         "homepage_status": 200,

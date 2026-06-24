@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T06:35:45.883Z",
+  "generated_at": "2026-06-24T08:47:40.027Z",
   "windows": [
     "1d",
     "3d",
@@ -9,7 +9,28 @@
   "axes": {
     "axis_epistemic_integrity": {
       "current": {
-        "score": 0.4706,
+        "score": 0.4709,
+        "confidence": 0.98
+      },
+      "1d": {
+        "score_delta": -0.0005,
+        "conf_delta": 0,
+        "direction": "→"
+      },
+      "3d": {
+        "score_delta": 0.0052,
+        "conf_delta": 0,
+        "direction": "→"
+      },
+      "7d": {
+        "score_delta": 0.007,
+        "conf_delta": 0,
+        "direction": "→"
+      }
+    },
+    "axis_power_accountability": {
+      "current": {
+        "score": -0.1,
         "confidence": 0.98
       },
       "1d": {
@@ -18,33 +39,12 @@
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0049,
+        "score_delta": 0.0022,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0067,
-        "conf_delta": 0,
-        "direction": "→"
-      }
-    },
-    "axis_power_accountability": {
-      "current": {
-        "score": -0.0991,
-        "confidence": 0.98
-      },
-      "1d": {
-        "score_delta": 0.0001,
-        "conf_delta": 0,
-        "direction": "→"
-      },
-      "3d": {
-        "score_delta": 0.0031,
-        "conf_delta": 0,
-        "direction": "→"
-      },
-      "7d": {
-        "score_delta": 0.0013,
+        "score_delta": 0.0004,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -93,21 +93,21 @@
     },
     "axis_political_trust_corruption_v1": {
       "current": {
-        "score": -0.3971,
+        "score": -0.3977,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0012,
+        "score_delta": 0.0006,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": 0.0019,
+        "score_delta": 0.0013,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0077,
+        "score_delta": -0.0083,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -156,21 +156,21 @@
     },
     "axis_media_integrity_v1": {
       "current": {
-        "score": 0.5856,
+        "score": 0.5863,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0012,
-        "conf_delta": 0,
-        "direction": "→"
-      },
-      "3d": {
         "score_delta": 0.0019,
         "conf_delta": 0,
         "direction": "→"
       },
+      "3d": {
+        "score_delta": 0.0026,
+        "conf_delta": 0,
+        "direction": "→"
+      },
       "7d": {
-        "score_delta": 0.0029,
+        "score_delta": 0.0036,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -345,21 +345,21 @@
     },
     "axis_national_sovereignty_v_intl_law_v1": {
       "current": {
-        "score": 0.4139,
+        "score": 0.4131,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": 0.0012,
+        "score_delta": 0.0004,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0058,
+        "score_delta": -0.0066,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.013,
+        "score_delta": -0.0138,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -471,21 +471,21 @@
     },
     "axis_human_rights_exploitation_v1": {
       "current": {
-        "score": -0.4249,
+        "score": -0.4144,
         "confidence": 0.98
       },
       "1d": {
-        "score_delta": -0.0057,
+        "score_delta": 0.0048,
         "conf_delta": 0,
         "direction": "→"
       },
       "3d": {
-        "score_delta": -0.0236,
+        "score_delta": -0.0131,
         "conf_delta": 0,
-        "direction": "↘"
+        "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0307,
+        "score_delta": -0.0202,
         "conf_delta": 0,
         "direction": "↘"
       }
@@ -858,6 +858,15 @@
       "7d": null
     },
     "axis_immigration_as_global_governance_tool_v1": {
+      "current": {
+        "score": 0,
+        "confidence": 0
+      },
+      "1d": null,
+      "3d": null,
+      "7d": null
+    },
+    "axis_weaponization_of_migration_narratives_v1": {
       "current": {
         "score": 0,
         "confidence": 0
