@@ -1,25 +1,4 @@
-
-[ONTOLOGY] Teacher arrested on drug charges in Pagadian City highlights local corruption and crime, impacting public trust in institutions. Source: https://newsinfo.inquirer.net/2252195/teacher-arrested-over-drug-charges-in-pagadian-city
-[ONTOLOGY] Prosecutor alleges Sara Duterte counsel lying in pretrial indicates potential lack of integrity in legal processes and political maneuvering. Source: https://newsinfo.inquirer.net/2252191/prosecutor-sara-duterte-counsel-lying-house-reps-present-at-pretrial
-[ONTOLOGY] Cebu town vice mayor charged over unauthorized bonus, hiring wife demonstrates corruption and misuse of public office. Source: https://newsinfo.inquirer.net/2252149/cebu-town-vice-mayor-charged-over-unauthorized-bonus-hiring-wife
-[ONTOLOGY] Mamdani-backed candidates defeat pro-Israel lawmakers in primaries suggests a shift in political influence and potentially in foreign policy stances. Source: https://www.aljazeera.com/video/newsfeed/2026/6/24/mamdani-backed-candidates-defeat-pro-israel-lawmakers-in-primaries?traffic_source=rss
-[ONTOLOGY] US Senate approves Iran war powers resolution signifies evolving geopolitical strategies and national interests. Source: https://www.aljazeera.com/news/2026/6/24/us-senate-approves-iran-war-powers-resolution-what-that-means-for-trump?traffic_source=rss
-[ONTOLOGY] North Korea commissions warship as Kim eyes nuclear navy points to escalating military power and global realignments. Source: https://www.aljazeera.com/gallery/2026/6/24/north-korea-commissions-warship-as-kim-eyes-nuclear-navy?traffic_source=rss
-[ONTOLOGY] Kenya braces for return of Gen Z protests indicates ongoing societal unrest and challenges to governmental authority. Source: https://www.aljazeera.com/features/2026/6/24/kenya-braces-for-return-of-gen-z-protests-how-did-they-begin?traffic_source=rss
-[CLAIM] @EricLDaugh: Trump announces DOJ investigation into oil companies gouging customers for gas, raising questions of corporate accountability and market manipulation. Source: https://x.com/EricLDaugh/status/2069739784243712276
-[CLAIM] @realMaalouf: Islamic preacher forces daughters to wear hijab and teaches hate, touching on human rights, indoctrination, and religious extremism. Source: https://x.com/realMaalouf/status/2069706096810320017
-[CLAIM] @jacksonhinkle: UN states Israel Killed 20,000+ Palestinian Children Since Oct. 7, a severe accusation concerning human rights and geopolitical conflict. Source: https://x.com/jacksonhinkle/status/2069729748222173247
-[CLAIM] @visegrad24: Five Pakistani migrants convicted in brutal kidnapping and torture in UK, feeding into anti-immigrant narratives and concerns about social order. Source: https://x.com/visegrad24/status/2069700870950669375
-[NOTED] "collection blends surf inspired elements" — 5 posts, no follow-up this cycle
-[NOTED] "tailored dandy influences shaping coastal direction" — 5 posts, no follow-up this cycle
-[NOTED] "see" — 5 posts, no follow-up this cycle
-[NOTED] "people" — 4 posts, no follow-up this cycle
-[NOTED] "core theme" — 4 posts, no follow-up this cycle
-[NOTED] "pharrell spring summer" — 4 posts, no follow-up this cycle
-[NOTED] "sea" — 4 posts, no follow-up this cycle
-[NOTED] "show draws" — 4 posts, no follow-up this cycle
-[NOTED] "guy" — 3 posts, no follow-up this cycle
-[NOTED] "looks" — 3 posts, no follow-up this cycle
-[NOTED] "japan" — 3 posts, no follow-up this cycle
-[NOTED] "hate" — 3 posts, no follow-up this cycle
-[NOTED] "water" — 3 posts, no follow-up this cycle
+[CURIOSITY: new_world_order_immigration_or_global_go] [SPRINT: Develop Preliminary Categorization Logic] @FoxtrotChile: "Promoted Migration as a Tool Toward Global Governance 1. Destabilizing National Identity The nation-state is built around shared language, culture, and historical continuity. Mass immigration—especially when encouraged in a short time frame—can introduce cultural" - This tweet directly links migration to global governance and destabilization of national identity, aligning with "New World Order" discourse.
+[CURIOSITY: new_world_order_immigration_or_global_go] [SPRINT: Develop Preliminary Categorization Logic] @mccutcheon9127 (Isabel Firman): "It is not the EU it’s the WEF ie World Economic Forum. Starmer. Macron, Albanese and Carney are deciples of George Sorus and his push for mass immigration, Net Zero economies and unelected global governance. Hooefully Canada wakes up soon and ousts Carney." - This post explicitly links mass immigration to "unelected global governance" and the World Economic Forum (WEF), naming political figures.
+[CURIOSITY: new_world_order_immigration_or_global_go] [SPRINT: Develop Preliminary Categorization Logic] @struminmypain (Joanne): "The deep state and Zionists are behind the immigration and new world order white replacement, so that all that will be left is white Zionist elite ruling the entire world". - This illustrates the "New World Order" narrative, linking it to immigration and "white replacement" theories.
+[CURIOSITY: new_world_order_immigration_or_global_go] [SPRINT: Develop Preliminary Categorization Logic] @DxGuySA: "The New World Order or One World Government means that nations give up their democracies, sovereignty and independence, and are ruled by unelected officials at the UN who won't be accountable to the people. Mass immigration is one of the tools used to achieve the evil agenda." - This clearly articulates the "New World Order" narrative, stating mass immigration as a tool for global governance and loss of national sovereignty.

@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-24T12:04:19.670Z",
+  "generated_at": "2026-06-24T15:02:22.197Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-24T12:04:26.118Z",
+  "profiled_at": "2026-06-24T15:02:54.378Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -389,9 +389,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-06-24T10:04:53.688Z",
+      "last_seen_at": "2026-06-24T14:35:36.945Z",
       "discovery": {
-        "distinct_urls": 30,
+        "distinct_urls": 36,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/opinions/2026/6/22/the-icc-must-investigate-israels-genocidal-use-of-sexual?traffic_source=rss",
@@ -400,13 +400,14 @@
           "https://www.aljazeera.com/news/2026/6/23/us-senate-votes-to-halt-iran-war-bucking-trump?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 25,
+          "ontology_evidence": 30,
           "reading_queue": 1,
-          "journals": 36
+          "journals": 49
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
         "distinct_axes": [
+          "axis_authoritarian_self_determination_v1",
           "axis_epistemic_integrity",
           "axis_geopolitical_rhetoric_v1",
           "axis_global_power_realignments_v1",
@@ -439,8 +440,8 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:30",
-            "distinct_axes:6",
+            "distinct_urls:36",
+            "distinct_axes:7",
             "origin_types:3"
           ]
         },
@@ -478,8 +479,8 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:30",
-            "distinct_axes:6",
+            "distinct_urls:36",
+            "distinct_axes:7",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -526,7 +527,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-06-24T03:05:43.210Z",
       "discovery": {
-        "distinct_urls": 52,
+        "distinct_urls": 54,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/global-development/2026/jun/23/uk-ties-uae-mass-atrocities-sudan-mps-select-committee-nathaniel-raymond",
@@ -536,7 +537,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 49,
+          "reading_queue": 51,
           "journals": 9
         },
         "distinct_referring_accounts": 0,
@@ -572,7 +573,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:52",
+            "distinct_urls:54",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -611,7 +612,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:52",
+            "distinct_urls:54",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -901,7 +902,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-06-23T22:06:31.518Z",
       "discovery": {
-        "distinct_urls": 38,
+        "distinct_urls": 39,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
@@ -911,7 +912,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "reading_queue": 38,
+          "reading_queue": 39,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -944,7 +945,7 @@
         "breadth": {
           "score": 0.5883333333333334,
           "basis": [
-            "distinct_urls:38",
+            "distinct_urls:39",
             "distinct_axes:1",
             "origin_types:3"
           ]
@@ -983,7 +984,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:38",
+            "distinct_urls:39",
             "distinct_axes:1",
             "origin_types:3",
             "referring_accounts:0",
@@ -1282,7 +1283,7 @@
       "first_seen_at": null,
       "last_seen_at": null,
       "discovery": {
-        "distinct_urls": 15,
+        "distinct_urls": 17,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
           "https://www.bbc.co.uk/news/articles/c4gy6vk44pwo?at_medium=RSS&amp;at_campaign=rss",
@@ -1291,7 +1292,7 @@
           "https://www.bbc.co.uk/news/articles/cx247v39r1no?at_medium=RSS&amp;at_campaign=rss"
         ],
         "origin_counts": {
-          "reading_queue": 16
+          "reading_queue": 18
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1320,7 +1321,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:15",
+            "distinct_urls:17",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -1354,11 +1355,11 @@
         },
         "overall": {
           "score": 0.592890625,
-          "confidence": 0.431475,
+          "confidence": 0.476475,
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:15",
+            "distinct_urls:17",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -3000,9 +3001,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-24T11:30:01.000Z",
+      "last_seen_at": "2026-06-24T14:08:02.000Z",
       "discovery": {
-        "distinct_urls": 5983,
+        "distinct_urls": 5990,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3011,10 +3012,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3561,
-          "feed_buffer_reply": 3862
+          "feed_buffer": 3562,
+          "feed_buffer_reply": 3869
         },
-        "distinct_referring_accounts": 1920,
+        "distinct_referring_accounts": 1923,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3052,7 +3053,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:5983",
+            "distinct_urls:5990",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3060,7 +3061,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1920",
+            "referring_accounts:1923",
             "origin_types:2"
           ]
         },
@@ -3090,10 +3091,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:5983",
+            "distinct_urls:5990",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1920",
+            "referring_accounts:1923",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -4317,9 +4318,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T01:05:59.567Z",
-      "last_seen_at": "2026-06-24T03:05:43.210Z",
+      "last_seen_at": "2026-06-24T20:41:00Z",
       "discovery": {
-        "distinct_urls": 21,
+        "distinct_urls": 26,
         "example_urls": [
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
           "https://newsinfo.inquirer.net/2251519/chr-carries-out-motu-proprio-probe-into-tacloban-cavite-school-incidents",
@@ -4328,8 +4329,8 @@
           "https://newsinfo.inquirer.net/2249755/drilon-warns-vs-second-envelope-crisis-in-vp-trial"
         ],
         "origin_counts": {
-          "ontology_evidence": 11,
-          "journals": 49
+          "ontology_evidence": 13,
+          "journals": 61
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -4362,7 +4363,7 @@
         "breadth": {
           "score": 0.6449999999999999,
           "basis": [
-            "distinct_urls:21",
+            "distinct_urls:26",
             "distinct_axes:3",
             "origin_types:2"
           ]
@@ -4400,7 +4401,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:21",
+            "distinct_urls:26",
             "distinct_axes:3",
             "origin_types:2",
             "referring_accounts:0",
@@ -6362,6 +6363,133 @@
       }
     },
     {
+      "domain": "smart.link",
+      "entity": "Smart Link",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-07T06:11:24.204Z",
+      "last_seen_at": "2026-06-24T13:15:00.000Z",
+      "discovery": {
+        "distinct_urls": 14,
+        "example_urls": [
+          "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
+          "https://smart.link/sdh2x9q4dptrg?twclid=24aw0ljxdznhulueu1l8o9x2fi",
+          "https://smart.link/ogdqjam4y4mcs?twclid=2dtao7qsbh0cu3icl0wn64ffvg",
+          "https://smart.link/q693v84a2mlhw?twclid=2du2cpv4hg5bnvla5csn2ws1uc",
+          "https://smart.link/d48st4cf87ymx?twclid=22gw0y3bgoat1tou4y8uestgbv"
+        ],
+        "origin_counts": {
+          "feed_buffer": 2,
+          "feed_buffer_reply": 12
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "mcdonalds"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.47,
+          "basis": [
+            "distinct_urls:14",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.22,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:15",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.43875,
+          "confidence": 0.4617,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:14",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-23T04:31:48.939Z",
+        "homepage_url": "https://smart.link/",
+        "example_url": "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://smart.link/",
+        "example_final_url": "https://www.mcdonalds.com/us/en-us/download-app.html",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 15,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "combos.fun",
       "entity": "Combos Fun",
       "kind": "unknown",
@@ -6611,133 +6739,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "smart.link",
-      "entity": "Smart Link",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-07T06:11:24.204Z",
-      "last_seen_at": "2026-06-23T00:19:14.000Z",
-      "discovery": {
-        "distinct_urls": 12,
-        "example_urls": [
-          "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
-          "https://smart.link/sdh2x9q4dptrg?twclid=24aw0ljxdznhulueu1l8o9x2fi",
-          "https://smart.link/ogdqjam4y4mcs?twclid=2dtao7qsbh0cu3icl0wn64ffvg",
-          "https://smart.link/q693v84a2mlhw?twclid=2du2cpv4hg5bnvla5csn2ws1uc",
-          "https://smart.link/d48st4cf87ymx?twclid=22gw0y3bgoat1tou4y8uestgbv"
-        ],
-        "origin_counts": {
-          "feed_buffer": 2,
-          "feed_buffer_reply": 10
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "mcdonalds"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.47,
-          "basis": [
-            "distinct_urls:12",
-            "distinct_axes:0",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.2833333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.22,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:15",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.43875,
-          "confidence": 0.4167,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:12",
-            "distinct_axes:0",
-            "origin_types:2",
-            "referring_accounts:1",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-23T04:31:48.939Z",
-        "homepage_url": "https://smart.link/",
-        "example_url": "https://smart.link/sdh2x9q4dptrg?twclid=29tfuqwoatuv70nv93xhcyx2vj",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://smart.link/",
-        "example_final_url": "https://www.mcdonalds.com/us/en-us/download-app.html",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html;charset=utf-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 15,
           "opinion_marker": false
         }
       }
@@ -51881,7 +51882,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T03:25:48.536Z",
+        "fetched_at": "2026-06-24T13:04:21.757Z",
         "homepage_url": "https://prepbaseballreport.com/",
         "example_url": "https://www.prepbaseballreport.com/news/PBR/2026-mlb-draft--may-s-mock-draft?twclid=2cyi2ntexpjfc305c11uqpetzv",
         "homepage_status": 200,
@@ -52003,7 +52004,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T03:25:49.041Z",
+        "fetched_at": "2026-06-24T13:04:22.450Z",
         "homepage_url": "https://wassonwatch.com/",
         "example_url": "https://wassonwatch.com/collections/dive-watch?twclid=26v12ucn89idkiyhci0ifq1yab",
         "homepage_status": 200,
@@ -52125,7 +52126,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T03:25:50.290Z",
+        "fetched_at": "2026-06-24T13:04:23.685Z",
         "homepage_url": "https://tradermap.io/",
         "example_url": "https://tradermap.io/?twclid=26qi3vq4he7bubu0mglff7omyp",
         "homepage_status": 200,
@@ -52247,7 +52248,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T03:55:47.598Z",
+        "fetched_at": "2026-06-24T13:04:23.927Z",
         "homepage_url": "https://inava.app/",
         "example_url": "https://inava.app/?twclid=243bsx8r3ac4fbmfxdly6aai27",
         "homepage_status": 200,
@@ -52369,7 +52370,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T03:55:48.709Z",
+        "fetched_at": "2026-06-24T13:32:22.836Z",
         "homepage_url": "https://tiktok.com/",
         "example_url": "https://vt.tiktok.com/ZSxJweKEd/?utm_source=twitter&utm_medium=cpm&utm_campaign=TKTK-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_2&twclid=23n0m2swszeni1novs209rbrem",
         "homepage_status": 200,
@@ -52491,7 +52492,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T03:55:49.173Z",
+        "fetched_at": "2026-06-24T13:32:23.086Z",
         "homepage_url": "https://getpanther.app/",
         "example_url": "https://getpanther.app/?twclid=26h62erx6tykyojys89pvt8fo8",
         "homepage_status": 200,
@@ -52613,7 +52614,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T03:55:49.801Z",
+        "fetched_at": "2026-06-24T13:32:23.356Z",
         "homepage_url": "https://komainu.com/",
         "example_url": "https://komainu.com/?twclid=22k5rqzblo2zbz5qc726rygwvt",
         "homepage_status": 200,
@@ -52706,7 +52707,7 @@
           ]
         },
         "profile": {
-          "score": 0.18,
+          "score": 0.16,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -52715,7 +52716,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:8",
+            "outbound_links:6",
             "opinion_marker:false"
           ]
         },
@@ -52735,7 +52736,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T04:25:48.232Z",
+        "fetched_at": "2026-06-24T13:32:24.113Z",
         "homepage_url": "https://littlebird.ai/",
         "example_url": "https://littlebird.ai/?comet_source=x&comet_ad_group=%7B%7BADD_AD_GROUP_ID%7D%7D&comet_ad_id=%7B%7BADD_TWEET_ID%7D%7D&twclid=26bi4ynfufglyu7bgr2y6t05vz",
         "homepage_status": 200,
@@ -52751,7 +52752,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 8,
+          "outbound_links_count": 6,
           "opinion_marker": false
         },
         "example": {
@@ -52761,7 +52762,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 8,
+          "outbound_links_count": 6,
           "opinion_marker": false
         }
       }
@@ -52857,7 +52858,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T04:25:49.104Z",
+        "fetched_at": "2026-06-24T14:34:25.128Z",
         "homepage_url": "https://co.jp/",
         "example_url": "https://audition-en.anycolor.co.jp/?twclid=2bmm2ufti869142c85xr0ucr6a",
         "homepage_status": null,
@@ -52979,7 +52980,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T04:25:49.678Z",
+        "fetched_at": "2026-06-24T14:34:25.695Z",
         "homepage_url": "https://restorefast.com/",
         "example_url": "https://restorefast.com/?twclid=2a98h9j80p6kqmb4rxmmie8d30",
         "homepage_status": 200,
@@ -53101,7 +53102,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T04:25:49.770Z",
+        "fetched_at": "2026-06-24T14:34:25.735Z",
         "homepage_url": "https://vide/",
         "example_url": "https://vide/",
         "homepage_status": null,
@@ -53223,7 +53224,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T04:55:49.055Z",
+        "fetched_at": "2026-06-24T14:34:27.231Z",
         "homepage_url": "https://bill.com/",
         "example_url": "https://www.bill.com/ap-offers/demo-gift-card?utm_source=x&utm_medium=paid-social&utm_campaign=acc-pro-demo-acct-cas-keywords-t-x-pilot-amazon-gc-100promo-lgf&utm_content=amazon100-white&twclid=22wgublmb7t4pg4b6gr53tztt9",
         "homepage_status": 200,
@@ -53345,7 +53346,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T04:55:49.369Z",
+        "fetched_at": "2026-06-24T15:02:22.752Z",
         "homepage_url": "https://propscore.co/",
         "example_url": "https://propscore.co/?utm_source=x&utm_medium=paid_social&utm_campaign=propscore_compare&twclid=2ev7lrftqjnv4rqcllrjuddo5t",
         "homepage_status": 200,
@@ -53467,7 +53468,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T04:55:50.915Z",
+        "fetched_at": "2026-06-24T15:02:24.218Z",
         "homepage_url": "https://superai.com/",
         "example_url": "https://www.superai.com/?twclid=2coiqjyj72q0i963w4vk0ao6bg",
         "homepage_status": 200,
@@ -53589,7 +53590,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T04:56:10.918Z",
+        "fetched_at": "2026-06-24T15:02:44.221Z",
         "homepage_url": "https://46.224/",
         "example_url": "https://0.0.46.224/",
         "homepage_status": null,
@@ -53711,7 +53712,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-19T05:26:09.529Z",
+        "fetched_at": "2026-06-24T15:02:54.378Z",
         "homepage_url": "https://factorialenergy.com/",
         "example_url": "https://ir.factorialenergy.com/?twclid=23qvp1zi8fliwejp1g90xrmxci",
         "homepage_status": 200,
