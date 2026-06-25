@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-25T15:04:48.491Z",
+  "generated_at": "2026-06-25T18:04:51.325Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-25T15:04:52.645Z",
+  "profiled_at": "2026-06-25T18:04:54.783Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -389,9 +389,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-06-25T12:40:00Z",
+      "last_seen_at": "2026-06-25T17:37:24.669Z",
       "discovery": {
-        "distinct_urls": 42,
+        "distinct_urls": 43,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/opinions/2026/6/22/the-icc-must-investigate-israels-genocidal-use-of-sexual?traffic_source=rss",
@@ -402,7 +402,7 @@
         "origin_counts": {
           "ontology_evidence": 34,
           "reading_queue": 2,
-          "journals": 56
+          "journals": 57
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -440,7 +440,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:42",
+            "distinct_urls:43",
             "distinct_axes:7",
             "origin_types:3"
           ]
@@ -479,7 +479,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:42",
+            "distinct_urls:43",
             "distinct_axes:7",
             "origin_types:3",
             "referring_accounts:0",
@@ -527,7 +527,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-06-25T04:04:15.575Z",
       "discovery": {
-        "distinct_urls": 72,
+        "distinct_urls": 74,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/global-development/2026/jun/23/uk-ties-uae-mass-atrocities-sudan-mps-select-committee-nathaniel-raymond",
@@ -537,7 +537,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 70,
+          "reading_queue": 72,
           "journals": 10
         },
         "distinct_referring_accounts": 0,
@@ -573,7 +573,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:72",
+            "distinct_urls:74",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -612,7 +612,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:72",
+            "distinct_urls:74",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -902,7 +902,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-06-23T22:06:31.518Z",
       "discovery": {
-        "distinct_urls": 52,
+        "distinct_urls": 54,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
@@ -912,7 +912,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "reading_queue": 53,
+          "reading_queue": 55,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -945,7 +945,7 @@
         "breadth": {
           "score": 0.5883333333333334,
           "basis": [
-            "distinct_urls:52",
+            "distinct_urls:54",
             "distinct_axes:1",
             "origin_types:3"
           ]
@@ -984,7 +984,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:52",
+            "distinct_urls:54",
             "distinct_axes:1",
             "origin_types:3",
             "referring_accounts:0",
@@ -1159,7 +1159,7 @@
       "first_seen_at": null,
       "last_seen_at": null,
       "discovery": {
-        "distinct_urls": 24,
+        "distinct_urls": 25,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
           "https://www.bbc.co.uk/news/articles/c4gy6vk44pwo?at_medium=RSS&amp;at_campaign=rss",
@@ -1168,7 +1168,7 @@
           "https://www.bbc.co.uk/news/articles/cx247v39r1no?at_medium=RSS&amp;at_campaign=rss"
         ],
         "origin_counts": {
-          "reading_queue": 25
+          "reading_queue": 26
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1197,7 +1197,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:24",
+            "distinct_urls:25",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -1235,7 +1235,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:24",
+            "distinct_urls:25",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -2222,20 +2222,20 @@
       "entity": "Amnesty",
       "kind": "unknown",
       "first_seen_at": "2026-03-31T01:46:38.493Z",
-      "last_seen_at": "2026-06-25T05:05:48.474Z",
+      "last_seen_at": "2026-06-25T16:08:02.629Z",
       "discovery": {
-        "distinct_urls": 12,
+        "distinct_urls": 14,
         "example_urls": [
           "https://www.amnesty.org/en/latest/news/2026/06/burkina-serge-oulon/",
           "https://www.amnesty.org/en/latest/news/2026/06/car-bozize/",
           "https://www.amnesty.org/en/latest/news/2026/06/cuba-a-cuatro-anos-de-una-condena-injusta-artistas-afrocubanos-siguen-encarcelados-por-expresars/",
-          "https://www.amnesty.org/en/latest/campaigns/2026/06/how-do-us-third-country-removals-work-and-are-they-legal/",
-          "https://www.amnesty.org/en/latest/news/2026/06/lebanon-israel-radically-expands-use-of-unlawful-mass-evacuation-orders-and-commits-war-crime-of-unlawful-transfer/"
+          "https://www.amnesty.org/en/latest/news/2026/06/russia-authorities-continue-to-crackdown-on-dissent-with-harsh-prison-sentence-for-opposition-politician-maksim-kruglov/",
+          "https://www.amnesty.org/en/latest/campaigns/2026/06/how-do-us-third-country-removals-work-and-are-they-legal/"
         ],
         "origin_counts": {
-          "ontology_evidence": 8,
-          "reading_queue": 1,
-          "journals": 6
+          "ontology_evidence": 10,
+          "reading_queue": 2,
+          "journals": 8
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -2270,7 +2270,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:12",
+            "distinct_urls:14",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -2304,12 +2304,12 @@
         },
         "overall": {
           "score": 0.5215885416666666,
-          "confidence": 0.45392499999999997,
+          "confidence": 0.49892499999999995,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:12",
+            "distinct_urls:14",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -3134,9 +3134,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-25T13:49:44.000Z",
+      "last_seen_at": "2026-06-25T16:43:00.000Z",
       "discovery": {
-        "distinct_urls": 6051,
+        "distinct_urls": 6063,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3145,10 +3145,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3587,
-          "feed_buffer_reply": 3912
+          "feed_buffer": 3593,
+          "feed_buffer_reply": 3920
         },
-        "distinct_referring_accounts": 1947,
+        "distinct_referring_accounts": 1955,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3157,9 +3157,9 @@
           "16campaignbites",
           "1glenco",
           "1uscon",
+          "1yuriyouri",
           "22three7eleven",
-          "2helenabasket",
-          "306agent"
+          "2helenabasket"
         ],
         "distinct_axes": []
       },
@@ -3186,7 +3186,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:6051",
+            "distinct_urls:6063",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3194,7 +3194,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1947",
+            "referring_accounts:1955",
             "origin_types:2"
           ]
         },
@@ -3224,10 +3224,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:6051",
+            "distinct_urls:6063",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1947",
+            "referring_accounts:1955",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -4575,6 +4575,136 @@
       }
     },
     {
+      "domain": "techcrunch.com",
+      "entity": "Techcrunch",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-22T20:36:06.591Z",
+      "last_seen_at": "2026-06-25T17:37:24.669Z",
+      "discovery": {
+        "distinct_urls": 10,
+        "example_urls": [
+          "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
+          "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
+          "https://techcrunch.com/2026/06/23/meta-debuts-new-cheaper-smart-glasses-under-its-own-brand/",
+          "https://techcrunch.com/2026/06/23/meta-debuts-new-cheaper-smart_glasses-under-its-own-brand/",
+          "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 5,
+          "journals": 14
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_ai_societal_impact_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.5283333333333333,
+          "basis": [
+            "distinct_urls:10",
+            "distinct_axes:2",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.57,
+          "confidence": 0.75,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:11",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.4619791666666666,
+          "confidence": 0.3517,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:10",
+            "distinct_axes:2",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-23T00:01:45.208Z",
+        "homepage_url": "https://techcrunch.com/",
+        "example_url": "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://techcrunch.com/",
+        "example_final_url": "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 3,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 11,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "youtu.be",
       "entity": "Youtu Be",
       "kind": "unknown",
@@ -4831,136 +4961,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "techcrunch.com",
-      "entity": "Techcrunch",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-22T20:36:06.591Z",
-      "last_seen_at": "2026-06-23T22:06:31.518Z",
-      "discovery": {
-        "distinct_urls": 9,
-        "example_urls": [
-          "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
-          "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
-          "https://techcrunch.com/2026/06/23/meta-debuts-new-cheaper-smart-glasses-under-its-own-brand/",
-          "https://techcrunch.com/2026/06/23/meta-debuts-new-cheaper-smart_glasses-under-its-own-brand/",
-          "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 5,
-          "journals": 13
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_ai_societal_impact_v1",
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.4991666666666666,
-          "basis": [
-            "distinct_urls:9",
-            "distinct_axes:2",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.57,
-          "confidence": 0.75,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:11",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.45559895833333336,
-          "confidence": 0.323075,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:9",
-            "distinct_axes:2",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-23T00:01:45.208Z",
-        "homepage_url": "https://techcrunch.com/",
-        "example_url": "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://techcrunch.com/",
-        "example_final_url": "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 3,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 11,
           "opinion_marker": false
         }
       }
@@ -6205,7 +6205,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T16:03:32.672Z",
+        "fetched_at": "2026-06-25T16:04:53.096Z",
         "homepage_url": "https://wsj.com/",
         "example_url": "https://www.wsj.com/video/three-things-to-consider-before-buying-an-electric-vehicle/BF3DA411-C296-4CB8-A22D-BE3A2E943ACB?mod=WSJvidctr_watchnow_pos2%3FUCID%3DWSJ_SMD_TWT_BRA_BND_MBC_NAP_NAP_EVS_NAP&twclid=2227k5fcsvy3eazrqjlp63r0go",
         "homepage_status": 401,
@@ -7732,7 +7732,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T16:03:33.344Z",
+        "fetched_at": "2026-06-25T16:04:53.895Z",
         "homepage_url": "https://sofi.com/",
         "example_url": "https://sofi.com/crypto?twclid=2ykrysimqbgqvsp6rfph8v1n3",
         "homepage_status": 403,
@@ -11771,7 +11771,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T17:33:51.852Z",
+        "fetched_at": "2026-06-25T17:35:12.439Z",
         "homepage_url": "https://newsmax.com/",
         "example_url": "https://www.newsmax.com/ruddy/chris-ruddy-scott-bessent-donald-trump/2026/01/19/id/1242743/?twclid=26mj7qjkmqd4eerrni08qzffox",
         "homepage_status": null,
@@ -12153,7 +12153,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T17:33:52.993Z",
+        "fetched_at": "2026-06-25T17:35:13.462Z",
         "homepage_url": "https://mikmak.ai/",
         "example_url": "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2dqu9rpgpoqo0mblvt9uebl5t7",
         "homepage_status": 200,
@@ -14212,7 +14212,7 @@
       "entity": "Redstate",
       "kind": "unknown",
       "first_seen_at": "2026-06-25T13:32:00Z",
-      "last_seen_at": "2026-06-25T13:37:21.953Z",
+      "last_seen_at": "2026-06-25T15:33:58.575Z",
       "discovery": {
         "distinct_urls": 1,
         "example_urls": [
@@ -14220,7 +14220,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "journals": 1
+          "journals": 2
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -14270,6 +14270,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.36,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:12",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.39179687500000004,
           "confidence": 0.081825,
@@ -14283,20 +14297,6 @@
             "referring_accounts:0",
             "origin_types:2",
             "track_record_unavailable"
-          ]
-        },
-        "profile": {
-          "score": 0.36,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:12",
-            "opinion_marker:false"
           ]
         }
       },
@@ -15183,7 +15183,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T15:01:34.375Z",
+        "fetched_at": "2026-06-25T16:04:54.093Z",
         "homepage_url": "https://raybrowser.com/",
         "example_url": "https://raybrowser.com/?twclid=2f1xntsosgc648xbloi17s8fyh",
         "homepage_status": 200,
@@ -15309,7 +15309,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T16:03:33.914Z",
+        "fetched_at": "2026-06-25T16:04:54.818Z",
         "homepage_url": "https://propfirm.compare/",
         "example_url": "https://propfirm.compare/loyalty-program?twclid=2d4zyj9jmkiff93u6ux1kjpg32",
         "homepage_status": 200,
@@ -15435,7 +15435,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T16:03:34.014Z",
+        "fetched_at": "2026-06-25T16:34:51.923Z",
         "homepage_url": "https://x.ai/",
         "example_url": "https://x.ai/news/grok-voice-think-fast-1?utm_source=x&utm_medium=paid&utm_campaign=us_web_x_ua_grok_20260509_voice-api_purchase&utm_content=us_web_x_ron_ron_x_1865_ads-test&utm_term=en_voice-agent-thinkfast_img_ac_x_x_x_learnmore&twclid=2dnuv3islky6synxbuj0of9m5k",
         "homepage_status": 403,
@@ -15561,7 +15561,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T16:31:35.887Z",
+        "fetched_at": "2026-06-25T16:34:52.201Z",
         "homepage_url": "https://savagex.com/",
         "example_url": "https://www.savagex.com/dmg/839F22?utm_medium=paid_social_media&utm_source=twitter&utm_campaign=twitter_campaign_id_55&utm_content=twitter_adgroup_id_55A&utm_term=twitter_ad_id_55AD&twclid=2d2ns712d2nwvwxmok1hbdjanj",
         "homepage_status": 403,
@@ -15687,7 +15687,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T16:31:36.085Z",
+        "fetched_at": "2026-06-25T16:34:52.371Z",
         "homepage_url": "https://myreply.app/",
         "example_url": "https://myreply.app/?utm_source=x&utm_medium=cpc&utm_campaign=raycast_lookalike&utm_content=gmail-reply&twclid=29xpa88z92949xba2t1n28a3y0",
         "homepage_status": 200,
@@ -16812,7 +16812,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T17:33:53.349Z",
+        "fetched_at": "2026-06-25T17:35:13.814Z",
         "homepage_url": "https://suno.com/",
         "example_url": "https://suno.com/?wpsrc=Twitter&utm_source=Twitter&utm_medium=cpc&twclid=262jn9t05wzgtlibjiyo9sypsn",
         "homepage_status": 200,
@@ -16937,7 +16937,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T16:31:36.668Z",
+        "fetched_at": "2026-06-25T16:34:52.953Z",
         "homepage_url": "https://kurate.org/",
         "example_url": "https://kurate.org/?twclid=297nodwqt8tc962gjnxn3ym0jb",
         "homepage_status": 200,
@@ -17440,7 +17440,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T16:31:37.712Z",
+        "fetched_at": "2026-06-25T17:35:14.623Z",
         "homepage_url": "https://grayzonewarfare.com/",
         "example_url": "https://www.grayzonewarfare.com/?twclid=230bsti1ugak1ht0ipkmwplfde",
         "homepage_status": 200,
@@ -17566,7 +17566,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T17:33:54.341Z",
+        "fetched_at": "2026-06-25T18:04:52.784Z",
         "homepage_url": "https://bron.org/",
         "example_url": "https://go.bron.org/analytics?twclid=21xfmrfi5gvde5oc65teiw0ea1",
         "homepage_status": 200,
@@ -17692,7 +17692,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T18:01:35.831Z",
+        "fetched_at": "2026-06-25T18:04:53.387Z",
         "homepage_url": "https://getpolyscope.com/",
         "example_url": "https://getpolyscope.com/?twclid=23d1n8q57spajkavshlbwt8gzs",
         "homepage_status": 200,
@@ -17818,7 +17818,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T18:01:36.086Z",
+        "fetched_at": "2026-06-25T18:04:53.661Z",
         "homepage_url": "https://simple.life/",
         "example_url": "https://simple.life/survey/tai-chi-walking?utm_source=twitter&utm_medium=cpc&utm_campaign=MB%3AOS_Web_All_Main_Purchase_Auto_US_w%2Fo_30.04.26_TaiChiWalkingGS_NewAds_9x16_Broad_25_CPM&twclid=29t6xjk72sn6e9tdvqx781kng4",
         "homepage_status": 200,
@@ -18070,7 +18070,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T18:01:37.256Z",
+        "fetched_at": "2026-06-25T18:04:54.783Z",
         "homepage_url": "https://seotrends.pro/",
         "example_url": "https://www.seotrends.pro/register?ref=promo&twclid=2boi27d8dao8t8jau1ht2f5vjk",
         "homepage_status": 200,
@@ -18086,7 +18086,7 @@
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 4,
+          "outbound_links_count": 7,
           "opinion_marker": false
         },
         "example": {
@@ -22974,7 +22974,7 @@
       "entity": "Hindustantimes",
       "kind": "unknown",
       "first_seen_at": "2026-06-25T13:32:00Z",
-      "last_seen_at": "2026-06-25T13:37:21.953Z",
+      "last_seen_at": "2026-06-25T15:33:58.575Z",
       "discovery": {
         "distinct_urls": 1,
         "example_urls": [
@@ -22982,7 +22982,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "journals": 2
+          "journals": 3
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
