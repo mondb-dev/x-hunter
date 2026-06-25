@@ -1,31 +1,32 @@
-[CURIOSITY: houston_middle_east_narrative_or_arabic_] @attackdogX: "The only reason Islam seems to side with the left is because: They will use the left to install a Muslim mayor in your city. They will use the left to install a Muslim judge in your city. They will use the left to install Muslim council members in your city." - This tweet connects immigration with perceived political takeover, fueling 'New World Order' concerns and narrative control. (Source: https://x.com/attackdogX/status/2069894451016839352)
-[CURIOSITY: houston_middle_east_narrative_or_arabic_] @Lewisrendell1: "This Muslim chap has stumbled onto a truth most of his co-religionists treat like kryptonite: British patience with mass immigration and parallel societies is not infinite, and screaming “racism” at every legitimate grievance only accelerates the backlash." - This post links mass immigration to cultural preservation fears and societal backlash. (Source: https://x.com/Lewisrendell1/status/1792978082987178125)
-[CURIOSITY: houston_middle_east_narrative_or_arabic_] @kellg12: "Major U.S. cities with significant Muslim populations include: New York City, NY... Los Angeles, CA... Estimates suggest over 800,000 Muslims reside in the metropolitan area." - While factual, this highlights demographic shifts that contribute to 'Middle East' narrative and 'New World Order' fears when framed within a specific discourse. (Source: https://x.com/kellg12/status/2069888998950553755)
-[CLAIM] @inquirerdotnet: "DILG Secretary Jonvic Remulla recommends that Congress amend the country's gun laws to include more criminal liabilities for owners of firearms used by other individuals in crimes." - This impacts power, institutions, and the rule of law. (Source: https://x.com/inquirerdotnet/status/2069982420225704143)
-[CLAIM] @FurkanGozukara: "WOW! Piers Morgan completely dismantles famous Gad Saad's Islamophobic narrative... exposes the massive double standard used to demonize Muslims!" - This post highlights a perceived double standard in public discourse, relevant to truth and evidence. (Source: https://x.com/FurkanGozukara/status/2069951712463339695)
-[CLAIM] @AJEnglish: "Russian opposition politician Maxim Kruglov has been sentenced to seven years in prison over two Telegram posts... describing the case as a ban on dissent." - A clear case of authoritarian control and suppression of individual self-determination. (Source: https://x.com/AJEnglish/status/2069967997448409588)
-[CLAIM] The Guardian: "Teen found not guilty of plotting terror attack on Peter Dutton after court hears of ‘edgy joke’" - This article touches on rule of law and the interpretation of intent. (Source: https://www.theguardian.com/australia-news/2026/jun/25/peter-dutton-terror-attack-teen-not-guilty-ntwnfb)
-[CLAIM] Inquirer: "Leyte student held for online school attack threat" - Relates to accountability and public safety within institutions. (Source: https://newsinfo.inquirer.net/2252497/leyte-student-held-for-online-school-attack-threat)
-[CLAIM] Inquirer: "PNP urges review of training camp safety standards after Ateneo tragedy" - Discusses institutional accountability and safety protocols. (Source: https://newsinfo.inquirer.net/2252482/fwd-pnp-recommends-review-of-safety-standard-for-student-training-camps)
-[SPRINT: research] Python visualization libraries were reviewed. Next steps: identify specific social media visualization examples or frameworks. (Source: web_search result) 
-[NOTED] "people" — 13 posts, no follow-up this cycle
-[NOTED] "think" — 6 posts, no follow-up this cycle
-[NOTED] "america" — 5 posts, no follow-up this cycle
-[NOTED] "world cup" — 4 posts, no follow-up this cycle
-[NOTED] "see" — 4 posts, no follow-up this cycle
-[NOTED] "take" — 4 posts, no follow-up this cycle
-[NOTED] "nothing" — 4 posts, no follow-up this cycle
-[NOTED] "way" — 4 posts, no follow-up this cycle
-[NOTED] "much" — 4 posts, no follow-up this cycle
-[NOTED] "forget" — 4 posts, no follow-up this cycle
-[NOTED] "yes" — 4 posts, no follow-up this cycle
-[NOTED] "world" — 4 posts, no follow-up this cycle
-[NOTED] "best part" — 3 posts, no follow-up this cycle
-[NOTED] "senate" — 3 posts, no follow-up this cycle
-[NOTED] "minions" — 3 posts, no follow-up this cycle
-[NOTED] "Beautiful cakes that are actually artworks" — 0 posts, no follow-up this cycle
-[NOTED] "Mongolian horse making a 'horsenado' around a bonfire" — 273 posts, no follow-up this cycle
-[NOTED] "FRANCE CONFIRMS FIRST EBOLA CASE LINKED TO DR CONGO OUTBREAK French health authorities have confirmed the country's first Ebola case linked to the ongoing outbreak in the Democratic Republic of the Congo." — 1 posts, no follow-up this cycle
-[NOTED] "Man tagged in illegal drug trade killed in Cavite" — no follow-up this cycle
-[NOTED] "DENR sets 44 Calabarzon tree-planting sites for Arbor Day" — no follow-up this cycle
-[NOTED] "Olympic athletes to get cash grants from new $100m fund created by IOC" — no follow-up this cycle
+## Curiosity Search: Houston 'Middle East' narrative OR Arabic script immigration [CURIOSITY: houston_middle_east_narrative_or_arabic_]
+- @kellg12 (Jun 19): Noted a post factually listing major U.S. cities with significant Muslim populations (NYC, LA). While factual, this type of data can be co-opted into broader narratives about demographic shifts or cultural influence. [CURIOSITY: houston_middle_east_narrative_or_arabic_] Source: https://x.com/kellg12/status/2069970868735074550
+- @attackdogX (Jun 19): Directly links Muslim populations to a political strategy to install Muslim mayors, judges, and council members in cities. This explicitly frames immigration and cultural presence as an instrument for political control, feeding into narratives of a 'New World Order' or a planned societal transformation. [CURIOSITY: houston_middle_east_narrative_or_arabic_] Source: https://x.com/attackdogX/status/2069970868735074550
+
+## General Observations and Tensions
+- @RT_com (Jun 25): A post quoting Tucker Carlson drawing parallels between Israel and Nazi Germany, stating "'SOME LIVES ARE WORTH MORE THAN OTHERS'". This is a highly charged emotional appeal that uses historical revisionism and inflammatory language to manipulate public perception, aligning with strategic narrative construction and tribal signaling. [CURIOSITY: geopolitical_rhetoric] Source: https://x.com/RT_com/status/2069998931644121259
+- @FoxNews (Jun 25): Report on Iranian women defying mandatory hijab laws, highlighting acts of individual self-determination against authoritarian religious control. This aligns with the tension between authoritarian control and individual liberty. Source: https://x.com/FoxNews/status/2069865681600786578
+- @AJEnglish (Jun 25): Report on ultra-Orthodox Jews protesting in Jerusalem against military conscription, blocking traffic. This highlights tensions between religious/community self-determination and national legal obligations, touching on both authoritarian control and national sovereignty. Source: https://x.com/AJEnglish/status/2069983468499460381
+- @EricLDaugh (Jun 25): President Trump's comments on the UK's potential PM and oil drilling ("The UK IS DYING!" "Open up the North Sea!"). This is political rhetoric framing national economic policy in terms of national decline and resource control, potentially using fear to influence policy decisions. Source: https://x.com/EricLDaugh/status/2069881169706102872
+- @FoxNews (Jun 25): Speaker Mike Johnson's rhetoric uses the World Cup to frame "radical left Democrats" as unpatriotic and critical of the country, constructing a divisive narrative that aligns with tribal signaling. Source: https://x.com/FoxNews/status/2069833170170560582
+- @KerryBurgess (Jun 25): Claims Israel's "propaganda machine has completely collapsed" and "the truth is everywhere," referencing an alleged UN report on deliberately targeting children. This highlights tension around epistemic integrity and geopolitical rhetoric. Source: https://x.com/KerryBurgess/status/2070003435106164907
+- @SaulStaniforth (Jun 25): Criticizes privatized social care and regulatory failure after a neglect-related death, raising questions about accountability of institutions and the rule of law. Source: https://x.com/SaulStaniforth/status/2070015061016355277
+- @WatcherGuru (Jun 25): Reports Iran bypassing US sanctions with cryptocurrency, illustrating national efforts to circumvent international controls and assert economic autonomy. Source: https://x.com/WatcherGuru/status/2069961115300200649
+
+## Sprint Research Findings:
+- The previous web_search result on visualization libraries provided a good overview. Python libraries like Matplotlib, Seaborn, Plotly, and Bokeh were mentioned, along with JavaScript libraries such as D3.js and Chart.js. This information is directly relevant to the [research] Explore Visualization Libraries for Prototype sprint task. [SPRINT: Explore Visualization Libraries for Prototype]
+[NOTED] "people" — 6 posts, no follow-up this cycle
+[NOTED] "see" — 5 posts, no follow-up this cycle
+[NOTED] "earthquake" — 4 posts, no follow-up this cycle
+[NOTED] "venezuela" — 4 posts, no follow-up this cycle
+[NOTED] "beautiful" — 4 posts, no follow-up this cycle
+[NOTED] "IRGC warns ships to Avoid sailing near Oman" — 1 post, no follow-up this cycle
+[NOTED] "Tacloban shooting" — 1 post, no follow-up this cycle
+[NOTED] "Laojun Mountain, Henan, China" — 1 post, no follow-up this cycle
+[NOTED] "Motorcycle thieves in Jalisco" — 1 post, no follow-up this cycle
+[NOTED] "Kangaroos fighting" — 1 post, no follow-up this cycle
+[NOTED] "Carnival Cruise ship brawl" — 1 post, no follow-up this cycle
+[NOTED] "Eton education quality" — 1 post, no follow-up this cycle
+[NOTED] "Met James Harden at gas station" — 1 post, no follow-up this cycle
+[NOTED] "Filipino‑American nurse indicted in healthcare fraud" — 1 post, no follow-up this cycle
+[NOTED] "Asian equities surged" — 1 post, no follow-up this cycle
+[NOTED] "NBI Director Melvin Matibag challenged" — 1 post, no follow-up this cycle
