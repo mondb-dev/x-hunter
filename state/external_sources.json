@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-25T12:02:44.073Z",
+  "generated_at": "2026-06-25T15:04:48.491Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-25T12:02:48.059Z",
+  "profiled_at": "2026-06-25T15:04:52.645Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -389,9 +389,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-06-25T11:35:51.983Z",
+      "last_seen_at": "2026-06-25T12:40:00Z",
       "discovery": {
-        "distinct_urls": 40,
+        "distinct_urls": 42,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/opinions/2026/6/22/the-icc-must-investigate-israels-genocidal-use-of-sexual?traffic_source=rss",
@@ -400,7 +400,7 @@
           "https://www.aljazeera.com/news/2026/6/23/us-senate-votes-to-halt-iran-war-bucking-trump?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 32,
+          "ontology_evidence": 34,
           "reading_queue": 2,
           "journals": 56
         },
@@ -440,7 +440,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:40",
+            "distinct_urls:42",
             "distinct_axes:7",
             "origin_types:3"
           ]
@@ -479,7 +479,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:40",
+            "distinct_urls:42",
             "distinct_axes:7",
             "origin_types:3",
             "referring_accounts:0",
@@ -527,7 +527,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-06-25T04:04:15.575Z",
       "discovery": {
-        "distinct_urls": 70,
+        "distinct_urls": 72,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/global-development/2026/jun/23/uk-ties-uae-mass-atrocities-sudan-mps-select-committee-nathaniel-raymond",
@@ -537,7 +537,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 68,
+          "reading_queue": 70,
           "journals": 10
         },
         "distinct_referring_accounts": 0,
@@ -573,7 +573,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:70",
+            "distinct_urls:72",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -612,7 +612,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:70",
+            "distinct_urls:72",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -902,7 +902,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-06-23T22:06:31.518Z",
       "discovery": {
-        "distinct_urls": 50,
+        "distinct_urls": 52,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
@@ -912,7 +912,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "reading_queue": 51,
+          "reading_queue": 53,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -945,7 +945,7 @@
         "breadth": {
           "score": 0.5883333333333334,
           "basis": [
-            "distinct_urls:50",
+            "distinct_urls:52",
             "distinct_axes:1",
             "origin_types:3"
           ]
@@ -984,7 +984,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:50",
+            "distinct_urls:52",
             "distinct_axes:1",
             "origin_types:3",
             "referring_accounts:0",
@@ -1159,7 +1159,7 @@
       "first_seen_at": null,
       "last_seen_at": null,
       "discovery": {
-        "distinct_urls": 22,
+        "distinct_urls": 24,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
           "https://www.bbc.co.uk/news/articles/c4gy6vk44pwo?at_medium=RSS&amp;at_campaign=rss",
@@ -1168,7 +1168,7 @@
           "https://www.bbc.co.uk/news/articles/cx247v39r1no?at_medium=RSS&amp;at_campaign=rss"
         ],
         "origin_counts": {
-          "reading_queue": 23
+          "reading_queue": 25
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1197,7 +1197,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:22",
+            "distinct_urls:24",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -1235,7 +1235,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:22",
+            "distinct_urls:24",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -3003,18 +3003,18 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T02:51:13.362Z",
-      "last_seen_at": "2026-06-25T11:35:51.983Z",
+      "last_seen_at": "2026-06-25T11:58:00Z",
       "discovery": {
-        "distinct_urls": 19,
+        "distinct_urls": 20,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/philippines/barmm-minorities-demand-genuine-representation-parliamentary-elections/",
           "https://www.rappler.com/philippines/barmm-minories-demand-genuine-representation-parliamentary-elections/",
-          "https://www.rappler.com/philippines/visayas/borbon-cebu-vice-mayor-noel-dotillos-graft-charges/",
-          "https://www.rappler.com/philippines/mindanao/coa-reprimands-auditor-self-assigned-review-dpwh-projects-soccsksargen/"
+          "https://www.rappler.com/philippines/sara-duterte-impeachment-moves-trial-pre-trial-conference-conclusion/",
+          "https://www.rappler.com/philippines/visayas/borbon-cebu-vice-mayor-noel-dotillos-graft-charges/"
         ],
         "origin_counts": {
-          "ontology_evidence": 14,
+          "ontology_evidence": 15,
           "journals": 27
         },
         "distinct_referring_accounts": 0,
@@ -3050,7 +3050,7 @@
         "breadth": {
           "score": 0.7616666666666666,
           "basis": [
-            "distinct_urls:19",
+            "distinct_urls:20",
             "distinct_axes:5",
             "origin_types:2"
           ]
@@ -3084,11 +3084,11 @@
         },
         "overall": {
           "score": 0.49239583333333337,
-          "confidence": 0.6032,
+          "confidence": 0.6256999999999999,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:19",
+            "distinct_urls:20",
             "distinct_axes:5",
             "origin_types:2",
             "referring_accounts:0",
@@ -3134,9 +3134,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-25T11:04:16.000Z",
+      "last_seen_at": "2026-06-25T13:49:44.000Z",
       "discovery": {
-        "distinct_urls": 6047,
+        "distinct_urls": 6051,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3145,10 +3145,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3585,
-          "feed_buffer_reply": 3910
+          "feed_buffer": 3587,
+          "feed_buffer_reply": 3912
         },
-        "distinct_referring_accounts": 1946,
+        "distinct_referring_accounts": 1947,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3186,7 +3186,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:6047",
+            "distinct_urls:6051",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3194,7 +3194,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1946",
+            "referring_accounts:1947",
             "origin_types:2"
           ]
         },
@@ -3224,10 +3224,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:6047",
+            "distinct_urls:6051",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1946",
+            "referring_accounts:1947",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3270,9 +3270,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-06-25T11:07:01.000Z",
+      "last_seen_at": "2026-06-25T11:27:26.000Z",
       "discovery": {
-        "distinct_urls": 436,
+        "distinct_urls": 437,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -3281,10 +3281,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 403,
+          "feed_buffer_reply": 404,
           "feed_buffer": 62
         },
-        "distinct_referring_accounts": 279,
+        "distinct_referring_accounts": 280,
         "sample_referring_accounts": [
           "100ohiostate",
           "2by32",
@@ -3322,7 +3322,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:436",
+            "distinct_urls:437",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3330,7 +3330,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:279",
+            "referring_accounts:280",
             "origin_types:2"
           ]
         },
@@ -3360,10 +3360,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:436",
+            "distinct_urls:437",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:279",
+            "referring_accounts:280",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3506,7 +3506,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T13:03:31.360Z",
+        "fetched_at": "2026-06-25T13:04:48.007Z",
         "homepage_url": "https://steampowered.com/",
         "example_url": "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
         "homepage_status": 200,
@@ -7351,7 +7351,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T13:03:32.031Z",
+        "fetched_at": "2026-06-25T13:04:48.607Z",
         "homepage_url": "https://tinyurl.com/",
         "example_url": "https://tinyurl.com/yc8xxez5?twclid=2dnd76jy9k71tnu9ve267e0uz7",
         "homepage_status": 200,
@@ -8992,7 +8992,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T13:03:32.352Z",
+        "fetched_at": "2026-06-25T13:04:48.886Z",
         "homepage_url": "https://heylemon.ai/",
         "example_url": "https://heylemon.ai/?utm_source=paid_X_all1&twclid=2bprvotipsebt2ywwd413k1c6r",
         "homepage_status": 200,
@@ -9118,7 +9118,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T13:03:32.728Z",
+        "fetched_at": "2026-06-25T13:04:49.290Z",
         "homepage_url": "https://wavedash.com/",
         "example_url": "https://wavedash.com/?twclid=29k171tm7pjzrxbob4j7cmjl3o",
         "homepage_status": 200,
@@ -9622,7 +9622,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T13:31:33.886Z",
+        "fetched_at": "2026-06-25T13:34:55.289Z",
         "homepage_url": "https://teslahubs.com/",
         "example_url": "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
         "homepage_status": 200,
@@ -9874,7 +9874,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T13:31:34.182Z",
+        "fetched_at": "2026-06-25T13:34:55.618Z",
         "homepage_url": "https://h-tech.space/",
         "example_url": "https://teamlore.h-tech.space/?twclid=21cpesmzgsrh5ius8yd25zbe9t",
         "homepage_status": null,
@@ -10002,13 +10002,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T13:31:36.540Z",
+        "fetched_at": "2026-06-25T13:34:57.799Z",
         "homepage_url": "https://onelink.me/",
         "example_url": "https://vix.onelink.me/Z4oU/hyuh928w?twclid=24s36ffdjwv85ew8o2yfteqmxu",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.appsflyer.com/products/deep-linking/",
-        "example_final_url": "https://vix.com/es-es/deportes?af_ad=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&shortlink=hyuh928w&af_adset=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&source_caller=ui&twclid=24s36ffdjwv85ew8o2yfteqmxu&c=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&pid=Twitter_Paid&af_xp=social&af_dp=vixapp%3A%2F%2Fes-es%2Fdeportes",
+        "example_final_url": "https://vix.com/es-es/deportes?af_ad=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&af_xp=social&twclid=24s36ffdjwv85ew8o2yfteqmxu&af_dp=vixapp%3A%2F%2Fes-es%2Fdeportes&shortlink=hyuh928w&af_adset=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&source_caller=ui&pid=Twitter_Paid&c=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026",
         "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -10382,7 +10382,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T13:31:37.953Z",
+        "fetched_at": "2026-06-25T13:34:59.185Z",
         "homepage_url": "https://kubit.ai/",
         "example_url": "https://kubit.ai/agent-analytics-landing/?utm_source=x_ads&utm_medium=paid_social&utm_campaign=claude_group&twclid=2eb9hv62es2e93pzc1qorbclgf",
         "homepage_status": 200,
@@ -11391,7 +11391,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T14:33:33.505Z",
+        "fetched_at": "2026-06-25T14:34:53.732Z",
         "homepage_url": "https://merck.com/",
         "example_url": "https://www.merck.com/stories/were-pursuing-innovative-science-with-antibody-drug-conjugate-adc-research/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=na_NA_VID_18s&twclid=2ashs3kuiq7isb412ax3cbgusn",
         "homepage_status": 200,
@@ -11517,7 +11517,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T14:33:33.732Z",
+        "fetched_at": "2026-06-25T14:34:53.944Z",
         "homepage_url": "https://fabletics.com/",
         "example_url": "https://www.fabletics.com/dmg/926C08?utm_medium=paid_social_media&utm_source=twitter&utm_campaign=twitter_campaign_id_FLM56&utm_content=twitter_adgroup_id_FLM56-1&utm_term=twitter_ad_id_FLM56-1-11&twclid=21tkc8gfxmeyk2zkude4aqtxx0",
         "homepage_status": 403,
@@ -12531,7 +12531,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T14:33:34.610Z",
+        "fetched_at": "2026-06-25T14:34:54.957Z",
         "homepage_url": "https://darkhours-thegame.com/",
         "example_url": "https://www.darkhours-thegame.com/xbox?utm_source=twitter&utm_campaign=XboxLaunch&utm_medium=pc&utm_content=Diftborn&utm_term=us&twclid=271vf2o4bu11vai5qyjclxea1r",
         "homepage_status": 200,
@@ -12657,7 +12657,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T14:33:35.518Z",
+        "fetched_at": "2026-06-25T14:34:56.202Z",
         "homepage_url": "https://zavu.dev/",
         "example_url": "https://www.zavu.dev/?twclid=28xrbkfqjxo8t4gl13yvgj5wa8",
         "homepage_status": 200,
@@ -13799,7 +13799,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T15:01:31.111Z",
+        "fetched_at": "2026-06-25T15:04:49.485Z",
         "homepage_url": "https://artyfacts.ai/",
         "example_url": "https://www.artyfacts.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=waitlist_traffic&utm_content=capture_demo&utm_term=variantA&twclid=2e7ew786ao2fxw0qm1wxfdqe3b",
         "homepage_status": 200,
@@ -13925,7 +13925,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T15:01:31.688Z",
+        "fetched_at": "2026-06-25T15:04:50.112Z",
         "homepage_url": "https://subspace.build/",
         "example_url": "https://subspace.build/?utm_source=x&utm_campaign=memory_card_trick&twclid=26pw69bugqoexf6jq5nzgivo8r",
         "homepage_status": 200,
@@ -14208,6 +14208,131 @@
       }
     },
     {
+      "domain": "redstate.com",
+      "entity": "Redstate",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-25T13:32:00Z",
+      "last_seen_at": "2026-06-25T13:37:21.953Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://redstate.com/mike_miller/2026/06/25/ro-khanna-clashes-with-maria-bartiromo-over-the-save-america-act-calls-it-voter-suppression-n2088497"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 1,
+          "journals": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_new_world_order_discourse_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.2075,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.39179687500000004,
+          "confidence": 0.081825,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.36,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:12",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-25T15:04:50.381Z",
+        "homepage_url": "https://redstate.com/",
+        "example_url": "https://redstate.com/mike_miller/2026/06/25/ro-khanna-clashes-with-maria-bartiromo-over-the-save-america-act-calls-it-voter-suppression-n2088497",
+        "homepage_status": 200,
+        "example_status": 404,
+        "homepage_final_url": "https://redstate.com/",
+        "example_final_url": "https://redstate.com/mike_miller/2026/06/25/ro-khanna-clashes-with-maria-bartiromo-over-the-save-america-act-calls-it-voter-suppression-n2088497",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 15,
+          "opinion_marker": true
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 12,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "dlvr.it",
       "entity": "Dlvr It",
       "kind": "unknown",
@@ -14302,7 +14427,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T15:01:33.757Z",
+        "fetched_at": "2026-06-25T15:04:52.645Z",
         "homepage_url": "https://dlvr.it/",
         "example_url": "http://dlvr.it/TRwWsL",
         "homepage_status": 200,
@@ -22841,6 +22966,84 @@
           "has_corrections_link": false,
           "outbound_links_count": 6,
           "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "hindustantimes.com",
+      "entity": "Hindustantimes",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-25T13:32:00Z",
+      "last_seen_at": "2026-06-25T13:37:21.953Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.hindustantimes.com/cities/lucknow-news/saffron-cash-for-crores-probe-into-ram-mandir-donation-scam-widens-to-employees-150-sevadars-under-scanner-101718873733575.html"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 1,
+          "journals": 2
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_political_trust_corruption_v1"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.2075,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.371171875,
+          "confidence": 0.081825,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:1",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
         }
       }
     },
