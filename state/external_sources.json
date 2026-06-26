@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-26T00:05:02.043Z",
+  "generated_at": "2026-06-26T00:35:31.589Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-26T00:05:06.200Z",
+  "profiled_at": "2026-06-26T00:35:34.579Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -527,7 +527,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-06-25T04:04:15.575Z",
       "discovery": {
-        "distinct_urls": 78,
+        "distinct_urls": 79,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/global-development/2026/jun/23/uk-ties-uae-mass-atrocities-sudan-mps-select-committee-nathaniel-raymond",
@@ -537,7 +537,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 76,
+          "reading_queue": 77,
           "journals": 10
         },
         "distinct_referring_accounts": 0,
@@ -573,7 +573,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:78",
+            "distinct_urls:79",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -612,7 +612,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:78",
+            "distinct_urls:79",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -1159,7 +1159,7 @@
       "first_seen_at": null,
       "last_seen_at": null,
       "discovery": {
-        "distinct_urls": 28,
+        "distinct_urls": 29,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
           "https://www.bbc.co.uk/news/articles/c4gy6vk44pwo?at_medium=RSS&amp;at_campaign=rss",
@@ -1168,7 +1168,7 @@
           "https://www.bbc.co.uk/news/articles/cx247v39r1no?at_medium=RSS&amp;at_campaign=rss"
         ],
         "origin_counts": {
-          "reading_queue": 29
+          "reading_queue": 30
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1197,7 +1197,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:28",
+            "distinct_urls:29",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -1235,7 +1235,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:28",
+            "distinct_urls:29",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -3134,9 +3134,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-25T22:42:15.000Z",
+      "last_seen_at": "2026-06-26T00:03:49.000Z",
       "discovery": {
-        "distinct_urls": 6072,
+        "distinct_urls": 6075,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3145,10 +3145,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3596,
-          "feed_buffer_reply": 3926
+          "feed_buffer": 3597,
+          "feed_buffer_reply": 3928
         },
-        "distinct_referring_accounts": 1959,
+        "distinct_referring_accounts": 1960,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3186,7 +3186,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:6072",
+            "distinct_urls:6075",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3194,7 +3194,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1959",
+            "referring_accounts:1960",
             "origin_types:2"
           ]
         },
@@ -3224,10 +3224,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:6072",
+            "distinct_urls:6075",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1959",
+            "referring_accounts:1960",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -10796,9 +10796,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-16T09:36:45.269Z",
-      "last_seen_at": "2026-06-24T23:42:17.389Z",
+      "last_seen_at": "2026-06-26T00:17:11.636Z",
       "discovery": {
-        "distinct_urls": 77,
+        "distinct_urls": 78,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -10807,7 +10807,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 77
+          "articles": 78
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -10836,7 +10836,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:77",
+            "distinct_urls:78",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -10874,7 +10874,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:77",
+            "distinct_urls:78",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -13421,7 +13421,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-23T00:34:15.894Z",
+        "fetched_at": "2026-06-26T00:35:32.173Z",
         "homepage_url": "https://celsius.com/",
         "example_url": "https://www.celsius.com/buy-locate/?utm_medium=paidsocial&utm_campaign=pillars&utm_content=musicfestival&twclid=2ejkfis7fdkuksuqyzg68f5wfq",
         "homepage_status": 200,
@@ -25420,7 +25420,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-23T00:34:16.114Z",
+        "fetched_at": "2026-06-26T00:35:32.398Z",
         "homepage_url": "https://doordash.com/",
         "example_url": "https://www.doordash.com/browse/list/7e5f3a06-8f84-4d8f-b1f9-dd2f7871459a?twclid=2expxmm8nilk7hhcpg2qwpcu7n",
         "homepage_status": 403,
@@ -26290,7 +26290,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-23T00:01:47.629Z",
+        "fetched_at": "2026-06-26T00:35:33.856Z",
         "homepage_url": "https://cuervo.com/",
         "example_url": "https://cuervo.com/?twclid=2cw6oebezormtkrlgtaweck05m",
         "homepage_status": 200,
@@ -26414,7 +26414,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-23T00:01:48.025Z",
+        "fetched_at": "2026-06-26T00:35:34.579Z",
         "homepage_url": "https://americanexpress.com/",
         "example_url": "https://www.americanexpress.com/en-us/benefits/membership/experiences/nba/?extlink=dw-us-GABM-PLATSOC_CH_sm-CU_us-BU_GABM-REF_TST_EEP_URL_g_psoc&cpid_g_psoc=&twclid=2dpgv5hu2sysfpt5ld9o2y2ukf",
         "homepage_status": 200,
