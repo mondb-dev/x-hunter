@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-25T21:04:54.211Z",
+  "generated_at": "2026-06-26T00:05:02.043Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-25T21:04:59.031Z",
+  "profiled_at": "2026-06-26T00:05:06.200Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -389,9 +389,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-06-25T20:36:43.706Z",
+      "last_seen_at": "2026-06-25T21:32:00Z",
       "discovery": {
-        "distinct_urls": 46,
+        "distinct_urls": 47,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/opinions/2026/6/22/the-icc-must-investigate-israels-genocidal-use-of-sexual?traffic_source=rss",
@@ -400,9 +400,9 @@
           "https://www.aljazeera.com/news/2026/6/23/us-senate-votes-to-halt-iran-war-bucking-trump?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 36,
+          "ontology_evidence": 39,
           "reading_queue": 2,
-          "journals": 63
+          "journals": 66
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -440,7 +440,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:46",
+            "distinct_urls:47",
             "distinct_axes:7",
             "origin_types:3"
           ]
@@ -479,7 +479,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:46",
+            "distinct_urls:47",
             "distinct_axes:7",
             "origin_types:3",
             "referring_accounts:0",
@@ -527,7 +527,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-06-25T04:04:15.575Z",
       "discovery": {
-        "distinct_urls": 76,
+        "distinct_urls": 78,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/global-development/2026/jun/23/uk-ties-uae-mass-atrocities-sudan-mps-select-committee-nathaniel-raymond",
@@ -537,7 +537,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 74,
+          "reading_queue": 76,
           "journals": 10
         },
         "distinct_referring_accounts": 0,
@@ -573,7 +573,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:76",
+            "distinct_urls:78",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -612,7 +612,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:76",
+            "distinct_urls:78",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -902,7 +902,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-06-23T22:06:31.518Z",
       "discovery": {
-        "distinct_urls": 56,
+        "distinct_urls": 58,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon",
@@ -912,7 +912,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 1,
-          "reading_queue": 57,
+          "reading_queue": 59,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -945,7 +945,7 @@
         "breadth": {
           "score": 0.5883333333333334,
           "basis": [
-            "distinct_urls:56",
+            "distinct_urls:58",
             "distinct_axes:1",
             "origin_types:3"
           ]
@@ -984,7 +984,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:56",
+            "distinct_urls:58",
             "distinct_axes:1",
             "origin_types:3",
             "referring_accounts:0",
@@ -1159,7 +1159,7 @@
       "first_seen_at": null,
       "last_seen_at": null,
       "discovery": {
-        "distinct_urls": 26,
+        "distinct_urls": 28,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/c5yz3lv015qo?at_medium=RSS&amp;at_campaign=rss",
           "https://www.bbc.co.uk/news/articles/c4gy6vk44pwo?at_medium=RSS&amp;at_campaign=rss",
@@ -1168,7 +1168,7 @@
           "https://www.bbc.co.uk/news/articles/cx247v39r1no?at_medium=RSS&amp;at_campaign=rss"
         ],
         "origin_counts": {
-          "reading_queue": 27
+          "reading_queue": 29
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1197,7 +1197,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:26",
+            "distinct_urls:28",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -1235,7 +1235,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:26",
+            "distinct_urls:28",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -2712,7 +2712,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T22:03:39.912Z",
+        "fetched_at": "2026-06-25T22:05:01.399Z",
         "homepage_url": "https://brobible.com/",
         "example_url": "https://brobible.com/culture/paige-ostroushko-savanah-hernandez-anti-ice-protest-arrest/",
         "homepage_status": 200,
@@ -3134,9 +3134,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-25T20:30:00.000Z",
+      "last_seen_at": "2026-06-25T22:42:15.000Z",
       "discovery": {
-        "distinct_urls": 6069,
+        "distinct_urls": 6072,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3145,10 +3145,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3595,
-          "feed_buffer_reply": 3924
+          "feed_buffer": 3596,
+          "feed_buffer_reply": 3926
         },
-        "distinct_referring_accounts": 1957,
+        "distinct_referring_accounts": 1959,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3186,7 +3186,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:6069",
+            "distinct_urls:6072",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3194,7 +3194,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1957",
+            "referring_accounts:1959",
             "origin_types:2"
           ]
         },
@@ -3224,10 +3224,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:6069",
+            "distinct_urls:6072",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1957",
+            "referring_accounts:1959",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3270,9 +3270,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-06-25T19:45:00.000Z",
+      "last_seen_at": "2026-06-25T22:42:15.000Z",
       "discovery": {
-        "distinct_urls": 439,
+        "distinct_urls": 440,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -3281,10 +3281,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 406,
+          "feed_buffer_reply": 407,
           "feed_buffer": 62
         },
-        "distinct_referring_accounts": 282,
+        "distinct_referring_accounts": 283,
         "sample_referring_accounts": [
           "100ohiostate",
           "2by32",
@@ -3294,8 +3294,8 @@
           "55sweetthing",
           "60milliards",
           "_just__jj",
-          "acdiamond0123",
-          "afk500595388855"
+          "abrahamunity17q",
+          "acdiamond0123"
         ],
         "distinct_axes": []
       },
@@ -3322,7 +3322,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:439",
+            "distinct_urls:440",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3330,7 +3330,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:282",
+            "referring_accounts:283",
             "origin_types:2"
           ]
         },
@@ -3360,10 +3360,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:439",
+            "distinct_urls:440",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:282",
+            "referring_accounts:283",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -4184,19 +4184,19 @@
       "entity": "Techcrunch",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T20:36:06.591Z",
-      "last_seen_at": "2026-06-25T20:36:43.706Z",
+      "last_seen_at": "2026-06-25T21:32:00Z",
       "discovery": {
         "distinct_urls": 11,
         "example_urls": [
           "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
+          "https://techcrunch.com/2026/06/25/notion-mail-shuts-down-amid-agent-takeover/",
           "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
           "https://techcrunch.com/2026/06/23/meta-debuts-new-cheaper-smart-glasses-under-its-own-brand/",
-          "https://techcrunch.com/2026/06/23/meta-debuts-new-cheaper-smart_glasses-under-its-own-brand/",
-          "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/"
+          "https://techcrunch.com/2026/06/23/meta-debuts-new-cheaper-smart_glasses-under-its-own-brand/"
         ],
         "origin_counts": {
-          "ontology_evidence": 6,
-          "journals": 16
+          "ontology_evidence": 7,
+          "journals": 17
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -4278,7 +4278,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-23T00:01:45.208Z",
+        "fetched_at": "2026-06-26T00:05:02.472Z",
         "homepage_url": "https://techcrunch.com/",
         "example_url": "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
         "homepage_status": 200,
@@ -4388,7 +4388,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:42",
+            "outbound_links:38",
             "opinion_marker:false"
           ]
         },
@@ -4409,13 +4409,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-23T00:01:47.366Z",
+        "fetched_at": "2026-06-26T00:05:05.482Z",
         "homepage_url": "https://philstar.com/",
-        "example_url": "https://philstar.com/headlines/2026/05/19/2528923/fleeing-bato-says-hes-willing-be-jaile",
+        "example_url": "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.philstar.com/",
-        "example_final_url": "https://www.philstar.com/headlines/2026/05/19/2528923/fleeing-bato-says-hes-willing-be-jailed-if-duterte",
+        "example_final_url": "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
         "homepage_content_type": "text/html; charset=utf8",
         "example_content_type": "text/html; charset=utf8",
         "homepage": {
@@ -4425,7 +4425,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 75,
+          "outbound_links_count": 72,
           "opinion_marker": false
         },
         "example": {
@@ -4435,7 +4435,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 42,
+          "outbound_links_count": 38,
           "opinion_marker": false
         }
       }
@@ -4776,13 +4776,13 @@
           ]
         },
         "profile": {
-          "score": 0.14,
-          "confidence": 0.65,
+          "score": 0,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:false",
-            "about:true",
+            "about:false",
             "contact:false",
             "corrections:false",
             "outbound_links:0",
@@ -4805,7 +4805,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T22:03:41.142Z",
+        "fetched_at": "2026-06-25T22:05:03.055Z",
         "homepage_url": "https://youtu.be/",
         "example_url": "https://youtu.be/m7jAReMF2c8?si=AtT5ue3VPnmZq5V6",
         "homepage_status": 200,
@@ -4818,10 +4818,10 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": true,
-          "has_about_link": true,
+          "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 9,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -5443,7 +5443,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T22:03:41.376Z",
+        "fetched_at": "2026-06-25T22:05:03.275Z",
         "homepage_url": "https://ro.co/",
         "example_url": "https://ro.co/lp/weight-loss/quiz/?utm_medium=paid_social&utm_source=Twitter&utm_campaign=41158458&utm_term=54579155&utm_content=Ad2&twclid=2bv3rduaz2ypp78vahy5e6wspd",
         "homepage_status": 200,
@@ -9244,7 +9244,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T22:03:41.889Z",
+        "fetched_at": "2026-06-25T22:05:03.777Z",
         "homepage_url": "https://babbily.com/",
         "example_url": "https://platform.babbily.com/?twclid=28ntbg85b8teebnlu9ilz4yxht",
         "homepage_status": 200,
@@ -10634,7 +10634,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T23:33:40.171Z",
+        "fetched_at": "2026-06-25T23:35:04.537Z",
         "homepage_url": "https://makofy.com/",
         "example_url": "https://makofy.com/openclaw?twclid=217okoej56crajhkd22b6nsfzf",
         "homepage_status": 200,
@@ -21432,7 +21432,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T22:31:42.947Z",
+        "fetched_at": "2026-06-25T22:34:57.130Z",
         "homepage_url": "https://usekeel.io/",
         "example_url": "https://usekeel.io/run?twclid=2bgfmx5me1bzmqklq02dv94p1e",
         "homepage_status": 200,
@@ -22062,7 +22062,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T21:01:46.723Z",
+        "fetched_at": "2026-06-25T22:34:57.501Z",
         "homepage_url": "https://propercloth.com/",
         "example_url": "https://propercloth.com/dress-shirts/jackson-blue-red-and-yellow-country-plaid-580653.html?utm_source=X&twclid=2auvzg6t8okkwlcwbl0m6jjjpm&utm_content=TWITTER_TIMELINE&utm_campaign=41332274&utm_medium=paidsocial&utm_term=twitter",
         "homepage_status": 200,
@@ -22188,7 +22188,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T23:33:40.516Z",
+        "fetched_at": "2026-06-25T23:35:04.919Z",
         "homepage_url": "https://robinhood.com/",
         "example_url": "https://robinhood.com/us/en/about/crypto/?twclid=29pd7fgrhb1gsdhy8smyxe6kbg",
         "homepage_status": 200,
@@ -22314,7 +22314,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T22:31:43.908Z",
+        "fetched_at": "2026-06-25T22:34:58.991Z",
         "homepage_url": "https://novelmint.ai/",
         "example_url": "https://novelmint.ai/?twclid=24swsjnpk4f6tjvwc81a9jb0ee",
         "homepage_status": 200,
@@ -22815,7 +22815,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T22:31:44.407Z",
+        "fetched_at": "2026-06-25T22:34:59.456Z",
         "homepage_url": "https://straitstimes.com/",
         "example_url": "https://straitstimes.com/",
         "homepage_status": 200,
@@ -22938,7 +22938,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T22:31:45.871Z",
+        "fetched_at": "2026-06-25T23:04:58.498Z",
         "homepage_url": "https://thesandersfirmpc.com/",
         "example_url": "https://thesandersfirmpc.com/evidentiary-inversion-when-internal-investigations-manufacture-misconduct/",
         "homepage_status": 200,
@@ -23031,6 +23031,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.4,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:23",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.371171875,
           "confidence": 0.081825,
@@ -23044,6 +23058,37 @@
             "origin_types:2",
             "track_record_unavailable"
           ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-25T23:05:00.251Z",
+        "homepage_url": "https://hindustantimes.com/",
+        "example_url": "https://www.hindustantimes.com/cities/lucknow-news/saffron-cash-for-crores-probe-into-ram-mandir-donation-scam-widens-to-employees-150-sevadars-under-scanner-101718873733575.html",
+        "homepage_status": 200,
+        "example_status": 404,
+        "homepage_final_url": "https://www.hindustantimes.com/",
+        "example_final_url": "https://www.hindustantimes.com/cities/lucknow-news/saffron-cash-for-crores-probe-into-ram-mandir-donation-scam-widens-to-employees-150-sevadars-under-scanner-101718873733575.html",
+        "homepage_content_type": "text/html;charset=UTF-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 4,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 23,
+          "opinion_marker": false
         }
       }
     },
@@ -23386,7 +23431,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T23:33:41.458Z",
+        "fetched_at": "2026-06-25T23:35:05.412Z",
         "homepage_url": "https://x.xom/",
         "example_url": "https://x.xom/EricLDaugh/status/2049914155461652916",
         "homepage_status": null,
@@ -24130,7 +24175,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T23:01:43.229Z",
+        "fetched_at": "2026-06-25T23:05:01.033Z",
         "homepage_url": "https://scienceandculture.com/",
         "example_url": "https://scienceandculture.com/2026/04/cosmic-orphans-no-more-stephen-meyer-on-the-meaning-of-the-artemis-ii-mission/?twclid=2rnhdm9vyiuko1egq7pyr6uby",
         "homepage_status": 200,
@@ -24254,7 +24299,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T23:01:44.056Z",
+        "fetched_at": "2026-06-25T23:05:01.910Z",
         "homepage_url": "https://19fortyfive.com/",
         "example_url": "https://www.19fortyfive.com/2026/04/we-touched-the-super-guppy-nasas-whale-shaped-cargo-plane-has-a-25-foot-wide-internal-diameter-swallowed-apollo-rocket-stages-whole-and-only-one-still-flies/?twclid=23xrrcgqxanqbvkiqbsyzs1ox8",
         "homepage_status": 200,
@@ -24378,7 +24423,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T23:01:44.416Z",
+        "fetched_at": "2026-06-25T23:35:05.575Z",
         "homepage_url": "https://usatoday.com/",
         "example_url": "https://www.usatoday.com/story/sponsor-story/collegium-pharmaceutical/2026/05/05/paris-hilton-on-adhd-advocacy-and-support-in-the-workplace/89244166007/?twclid=28p40ybg70zs0nzujyc1b1b5mt",
         "homepage_status": 200,
@@ -24502,7 +24547,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T23:01:44.728Z",
+        "fetched_at": "2026-06-26T00:05:05.749Z",
         "homepage_url": "https://axios.com/",
         "example_url": "https://www.axios.com/2026/04/21/axios-event-future-of-health-summit-2026?twclid=26ijftyq8roj3woqxoi4hprufc",
         "homepage_status": 403,
@@ -25250,7 +25295,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-22T23:33:41.359Z",
+        "fetched_at": "2026-06-26T00:05:06.200Z",
         "homepage_url": "https://tcgsherpa.com/",
         "example_url": "https://www.tcgsherpa.com/?utm_source=x&utm_medium=paid_social&utm_campaign=tcg-sherpa-launch-apr26&utm_content=What_Does_static&twclid=2c6bdjexgck8vqk1pzn57lvtb7",
         "homepage_status": 200,

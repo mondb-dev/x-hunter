@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-26T00:14:27.075Z",
+  "generated_at": "2026-06-26T00:15:57.817Z",
   "stats": {
-    "total": 790,
-    "supported": 147,
-    "refuted": 103,
+    "total": 793,
+    "supported": 148,
+    "refuted": 104,
     "contested": 16,
-    "unverified": 153,
-    "expired": 371
+    "unverified": 155,
+    "expired": 370
   },
   "claims": [
     {
@@ -1983,6 +1983,37 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "live_f3c2aa168a",
+      "claim_text": "Donald Trump's new major immigration policy change requires all immigrants in the US on temporary visas (students, H-1B workers, tourists) who want to apply for a green card to leave the US.",
+      "status": "supported",
+      "confidence_score": 0.69,
+      "display_score": 0.424,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.9,
+        "evidence_quality": 0.9,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_immigration_policy_v_national_control_v1",
+      "verification_count": 1,
+      "verified_at": "2026-06-26T00:15:57.770Z",
+      "created_at": "2026-06-26T00:15:57.769Z",
+      "original_source": "Courthouse News Service",
+      "claim_date": "2026-05-22",
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim is framed accurately, reflecting the core change in immigration policy announced by the Trump administration. The sources confirm the policy's intent to require most temporary visa holders to leave the U.S. to apply for green cards.",
+      "web_search_summary": "The Trump administration has announced a new immigration policy requiring most individuals on temporary visas (students, H-1B workers, tourists) who wish to apply for a green card to leave the U.S. and apply from their home countries. This change significantly alters the long-standing practice of ",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "claim_57",
       "claim_text": "US imposed naval blockade on Iranian ports on April 13, 2026.",
       "status": "supported",
@@ -2561,6 +2592,74 @@
       ],
       "framing_analysis": "The claim is framed as a direct accusation of Iran using a specific Chinese satellite for military strikes. The framing is valid as it presents a clear, verifiable assertion, though it relies heavily on a single primary source (Financial Times) and its interpretation of leaked documents.",
       "web_search_summary": "Multiple reports, primarily citing a Financial Times investigation based on leaked Iranian military documents, indicate that Iran acquired a Chinese-built spy satellite, TEE-01B, in late 2024. This satellite was reportedly used to monitor US military bases in the Middle East before and after drone and missile strikes in March 2026. However, China's Foreign Ministry has denied these reports, calling them untrue.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_e0e3ec29f5",
+      "claim_text": "Most Indians in Taiwan are higher-education students.",
+      "status": "supported",
+      "confidence_score": 0.67,
+      "display_score": 0.451,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0.9,
+        "evidence_quality": 0.9,
+        "cross_source": 0.5,
+        "web_search": 0.8
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_immigration_policy_v_national_control_v1",
+      "verification_count": 10,
+      "verified_at": "2026-06-26T00:15:51.661Z",
+      "created_at": "2026-05-23T08:17:41.388Z",
+      "original_source": "Not specified in the prompt, appears to be a general claim.",
+      "claim_date": null,
+      "supporting_sources": [
+        {
+          "name": "Study International",
+          "excerpt": "Currently, Indian students are ranked as the top 10 groups of international students in Taiwan. The majority of them are pursuing a master's or PhD, said Chen.",
+          "url": null
+        },
+        {
+          "name": "Collzy",
+          "excerpt": "Indians have been the fastest-growing group among the international students and are ranked as the top 10 groups of international students in Taiwan, a majority of them pursuing a Master's or PhD degree.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEY7lUKU1hXhZlX3UJV0lLqwRjjb2gevE-9QAL4WzBXOYHdLuOnheBHbrxLLCECHubqodCGnfckAigia8pwoUv5XMQINYh9lmcIX3givT837WbjasAh1Y83BYxvo81X7Xh0daLAHLqzKdFyjw47Mu_b233ySLbcf-X0FJmelNm3IQU5IIClzbj7tzbgSCUYL258QA=="
+        },
+        {
+          "name": "Taipei Times",
+          "excerpt": "About 3,000 Indians are studying in Taiwan, while more than 500 have been awarded government scholarships in the past decade, the center said.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGx1y4piyA09h2XrXcVHcUwjmxIefaC5V0Wm7jiIDJiyVPw4sxSh2AXKe1byJOxk7aXTuntGUmKcWdxuU0YoGZHc0fChnMALcw3U2TWYBbJMpZgAfEVLf2sJtXyjg85CW44RNNWuDnWhp_o49mRwoRxWcWnLB4C2jVPNX0_OoiXSQ=="
+        },
+        {
+          "name": "Taiwan News",
+          "excerpt": "As of the end of last year, there were only 5,320 Indian residents in Taiwan, of whom around 3000 are students.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGoPxX_DuOKoTtx6ymLSMmL_QCQx8fwMpyESPRmmsXCfzwJZtauhINgKxweg3EsApjzJeBPyQk7yubanDcxfv2CgcifwT01OApNTEysTbxlkE6GQXGtlH9aAoBA-nY5vwW4_e7i"
+        }
+      ],
+      "dissenting_sources": [
+        {
+          "name": "Grokipedia",
+          "excerpt": "As of the end of 2023, the Indian resident population in Taiwan stood at approximately 5,320 individuals... as of 2023, the non-student Indian population is estimated at around 2,800, many in professional roles.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVzxxaydw3SG9m4IeF8-ERFY7Bl3GvWo478MkMB_jaHGoGiSB6iqYscHGQpGbmKtscieIvwDRcJkzEdG7GnRCYKmvRXi-11Rs4OCZUQQ8P7gkIO_L-d3ji4B0mPjSrVgmyESVr1-v6"
+        },
+        {
+          "name": "Wikipedia",
+          "excerpt": "As of April 2013, there are about 1,900 Indian residents in Taiwan.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmUj20DR_aEOXxk0h5llJgZoFT92MPISqGHBxutqBNg7YabnLd1dgLgPP3_NMz5ktY8OY0vvnb_8YJWFEb77pBq2NQ3_WP8A9g1JbEtGIBVZtE9zgtGF7DSqCYxvon_zyENkG--wtBjl8="
+        },
+        {
+          "name": "Wikipedia",
+          "excerpt": "Indians have been coming to Taiwan since the 1980s — mainly businessmen, jewelers, and scientists.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmUj20DR_aEOXxk0h5llJgZoFT92MPISqGHBxutqBNg7YabnLd1dgLgPP3_NMz5ktY8OY0vvnb_8YJWFEb77pBq2NQ3_WP8A9g1JbEtGIBVZtE9zgtGF7DSqCYxvon_zyENkG--wtBjl8="
+        }
+      ],
+      "framing_analysis": "The claim is framed as a factual statement about the demographic composition of Indians in Taiwan. While it highlights a significant group, it overstates their proportion, making it misleading.",
+      "web_search_summary": "While the number of Indian students in Taiwan has significantly increased and they constitute a notable portion of the Indian population there, it is not accurate to claim that *most* Indians in Taiwan are higher-education students. Recent data indicates that students make up a substantial part, but not a majority, of the total Indian resident population, with a significant number also being professionals and other expatriates.",
       "investigation_depth": "quick"
     },
     {
@@ -5803,49 +5902,6 @@
       "investigation_depth": "quick"
     },
     {
-      "claim_id": "live_e0e3ec29f5",
-      "claim_text": "Most Indians in Taiwan are higher-education students.",
-      "status": "supported",
-      "confidence_score": 0.635,
-      "display_score": 0.441,
-      "scoring_breakdown": {
-        "source_tier": 0.5,
-        "newsguard": 0.5,
-        "corroboration": 0.8,
-        "evidence_quality": 0.8,
-        "cross_source": 0.5,
-        "web_search": 0.8
-      },
-      "source_handle": null,
-      "source_tier": null,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_immigration_policy_v_national_control_v1",
-      "verification_count": 9,
-      "verified_at": "2026-06-12T18:08:44.870Z",
-      "created_at": "2026-05-23T08:17:41.388Z",
-      "original_source": "Unknown",
-      "claim_date": null,
-      "supporting_sources": [
-        {
-          "name": "Study International",
-          "excerpt": "The majority of them are pursuing a master's or PhD, said Chen.",
-          "url": null
-        }
-      ],
-      "dissenting_sources": [
-        {
-          "name": "Taiwan News",
-          "excerpt": "As of the end of last year, there were only 5,320 Indian residents in Taiwan, of whom around 3000 are students.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCK_4RWco-4qC1jsb8uTZVeTuDeyraQpTA-gJNZizWBgAxBgx-lbMafU9UXOkWSxKGyCQkKuSRnX5-KyLFdHuDoJqQLbypzs6hEVLulSobgMATaeNBl5lQM07Oprt3Ue1BaNLu"
-        }
-      ],
-      "framing_analysis": "The claim is framed as a factual statement about the demographic composition of Indians in Taiwan. The available information allows for a nuanced evaluation, indicating that while students are a very significant group, they may not constitute a strict majority depending on the exact figures and reporting dates.",
-      "web_search_summary": "While there's a significant and growing number of Indian students in Taiwan, recent data suggests that students do not constitute the majority of all Indians residing there. As of late 2023, approximately 3,000 out of 5,320 Indian residents were students, indicating that students make up a large portion, but not more than half, of the total Indian population. However, other sources from 2023 estimate the non-student Indian population at around 2,800, which would make students the majority.",
-      "investigation_depth": "quick"
-    },
-    {
       "claim_id": "live_cc94c86378",
       "claim_text": "The mainstream media isn’t going to show you this. Before Iran played against New Zealand in the World Cup game last night, FIFA displayed the Iranian regime flag on the field, and it was met with resounding boos. Fans in the stands were waving the pre-regime flag.  Wild.",
       "status": "supported",
@@ -7201,46 +7257,51 @@
       "tweet_url": null,
       "category": null,
       "related_axis_id": "axis_immigration_policy_v_national_control_v1",
-      "verification_count": 5,
-      "verified_at": "2026-06-12T18:07:00.560Z",
+      "verification_count": 6,
+      "verified_at": "2026-06-26T00:15:41.282Z",
       "created_at": "2026-05-23T08:16:30.640Z",
       "original_source": "Not specified in the prompt",
       "claim_date": null,
       "supporting_sources": [
         {
-          "name": "Polskie Radio",
-          "excerpt": "In October 2024, Poland's Border Guard, with Europol's assistance, detained 11 individuals suspected of organizing illegal migration from Russia and Belarus to Western Europe.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGCBDniKi4-1m8pL0xsrLHYVr-34VQ_swlde1dzbOwmUAM2aPjTsWNuCrbnp3VcO7nvOrX8fWgtmUhkd6auQjNDF9Ym_ahbsZvkt7viD8ozlZx0KLklfZG7J4YcD3-0RUEwP0fQMA-5IxXjlnOFdWt-HDi3qA8OnZ0dOhKdOz5oBvT4e-Y9KEf9p1Ax4pIg_ovIcXC93RCvwSOqbrtKrB2ftAC7sQR1KKIQdgDRE2DIIg="
-        },
-        {
-          "name": "Europol",
-          "excerpt": "In July 2020, Polish authorities, supported by Europol, arrested 8 individuals from an organized crime group that had smuggled over 150 migrants into Poland en route to Western Europe.",
-          "url": null
-        },
-        {
-          "name": "Caliber.Az",
-          "excerpt": "In February 2026, Poland's Border Guard arrested eight individuals suspected of involvement in a human trafficking group that exploited approximately 2,000 foreign nationals for forced labor.",
-          "url": null
+          "name": "TVP World",
+          "excerpt": "Polish authorities say they have dealt a significant blow to a football hooligan-linked international crime network that played a role in smuggling people from the Middle East to Europe.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEd1WMdqrak9R4brZXtkSlycaRdNZNxxzB4dXjSFNjhKxtfu37P2I1tf117XbUJvb7LzAkapn-oknc2qb8M1kcUVpVXCjMJK3caTuW7okEQxq5_V1J6VsBGcEISvEk2_50bsWoBO4gHZFX8ud3NxX84ZLJYnU_R3xmubs2xsUcAsZ5bbSz55UF_37EuI62hivvrSiS86-fANv2BV20="
         },
         {
           "name": "EU NEIGHBOURS east",
-          "excerpt": "In October 2024, the Polish Border Guard, supported by Europol, targeted a large criminal network smuggling migrants from Belarus and Russia into the EU, leading to 11 arrests.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDQxClbMY5s8t3sMHpljlrnSqDRl1W82yWlMXNjEcr5gM8aDAI_IQvO3BGwHJxc0Zyowm-P7Z_ckl5i_kCiVESnGVVFZRfYli-WfdDSsaxIrigOFoygf0q1TKquRSY9ejYpR9-Cr-Ul50S2ZZRHolD3DTFd3AzHmKNkMGBRoFH8HhDcLIgMoOCKIhGk6yiZCNNRBewp5cNue6nf5YjKImaFXcFMMYqNxt_FYIGCbpIDLzSbreCjVCJal_Oplf4jmvAWNyedOBoK4wA2oaGpo8mYvpFRGrQGQ6oySw="
+          "excerpt": "The Polish Border Guard, supported by Europol, has successfully targeted a large criminal network smuggling migrants from Belarus and Russia into the EU.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgFGeKub2qoPMBpVHJJfParypmXBB8l3J0Gvve8UkHZmOET7R2OULmGn_zbgYwDq6n_nG-ZeSMB6_xD6o1PabP3WgU87_m-iwWnGb6DnXNrdQQiMnHRcTl3BbtQiey3DTAifvNvnLmwkiz-JUVaUvARP6hEiCmOJCs6_5kni-KYaxdEyU6WtAs1ZCqLcdsryNtSUdbBuRsMJwsBWs7k7drpR3x6IlA-fAahSiUQP65YxOtGRLOBZUscsSVBBTdl9FBJjgoXolMu0qMkYZkEhLGK4EgVS3CHA6PR8M="
         },
         {
-          "name": "Reform.news",
-          "excerpt": "In June 2026, Polish Border Guards arrested a 27-year-old Polish citizen involved in organizing illegal migration across the border with Belarus.",
+          "name": "Europol",
+          "excerpt": "On 18 November 2019, the Polish Border Guard (Straż Graniczna) under the supervision of the regional prosecutor' s office and supported by Europol, dismantled an organised crime group involved in migrant smuggling and facilitation of irregular migration.",
           "url": null
         },
         {
-          "name": "TVP World",
-          "excerpt": "In March 2026, authorities in Poland detained two border guards and seven others as part of an investigation into a human trafficking ring.",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHY9movd84EOxTV0JVSH3RWlgK9IsjRkuUTpBkAgLaxQOEO2dlNr57IIrWrjMNHQPy5OJkN0B9pzTSxKtY75TKhhWS-z5lSRTYA9NrEO93EFajgqbHaTECNtZz02dU2aDBOs4_5BIlNDsO9MLyKnYN6jUcBLxtCOhOMP4P9SBWzQyrf1R11HyD0IDw="
+          "name": "HSToday",
+          "excerpt": "On July 17, Europol revealed that a series of raids resulted in the arrests of members of an organized crime group believed to have smuggled migrants into Poland.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_9f2Y0npamEnEpqp47SO6aHGEtk3FU6I3kiXPnzhFbpSYJAO49k9iCCL3gQMzgDh14n64NG0FCK52okxElQPZ-DKsfc-ezCX1E-SMmNzRLNUxuimQ_fIgzkDyiA28Z4TD7qf8J0fjSx8sAQEX3FIXl68XEj35ITmOzfdTThfGzRoQzG08GHUxe4-Sly0K7HCwMF6DyDlm-DfSUU6sV6awVvZh0RRo1I9kurDBWyELyXC1j-mu"
+        },
+        {
+          "name": "Polskie Radio",
+          "excerpt": "Poland's Border Guard, with assistance from Europe's Europol police agency, has detained 11 individuals suspected of organizing illegal migration from Russia and Belarus to Western Europe.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIOrDuWXDXlHm-lgHZCbesCR8aGid6-ffr1IqlR4KTqiuvlnrxvLVIfvgARwHT7Q_HBjPH-7booGOlVUNbCzdhieEC_E4ep0t9BzvpI_ueP181LPYwldBxLjEhIPRMCQ4CGtxC-jxfHAd1CXGVuBsvPHMfk40ROlNStut5Y674CUDMpKDheQmnzZ3KUPDZdKoddqroVDx-KzRS0Mcgn-kTpqeYPlC4gGcteJ_9xIaJzgI="
+        },
+        {
+          "name": "Reform.news",
+          "excerpt": "Polish Border Guards detained a 27-year-old Polish citizen. He was involved in organizing illegal migration across the border with Belarus.",
+          "url": null
+        },
+        {
+          "name": "Sebastian D. Hunter — Belief Journal",
+          "excerpt": "From Poland, reports emerged on May 19 of Border Guards raiding human smugglers who are actively funneling migrants into Europe.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5C5vPFLRW0PifoH5Bpoid2hrvSkGXWCsSHUlQwxFdvaZxiKMGU0gHCzx6G-p8IaFr__bJxoVbmJT2OUIRVxp_QWrNHt68y-4MgAr1v715XxSKG30rZrY2xjvv-gH_Y6PyR9zIc1hk"
         }
       ],
       "dissenting_sources": [],
       "framing_analysis": "The claim is framed factually and accurately, as evidence directly supports the assertion that Polish Border Guards are actively involved in combating human smuggling.",
-      "web_search_summary": "The Polish Border Guard actively conducts operations and raids against human smugglers involved in bringing illegal migrants into Europe. Recent reports indicate numerous arrests of individuals and dismantling of criminal networks engaged in such activities. These efforts often involve cooperation with international agencies like Europol.",
+      "web_search_summary": "The Polish Border Guard actively conducts operations and raids against human smugglers involved in bringing illegal migrants into Europe. Recent reports indicate numerous arrests of individuals and dismantling of criminal networks engaged in such activities, often in cooperation with international agencies like Europol. These efforts have led to the apprehension of smugglers facilitating migration from various regions, including the Middle East, Belarus, and Russia.",
       "investigation_depth": "quick"
     },
     {
@@ -13107,6 +13168,53 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "live_dbcba4385b",
+      "claim_text": "Japan is implementing 'sushi rapping deportations' for illegal immigrants.",
+      "status": "refuted",
+      "confidence_score": 0.45,
+      "display_score": 0.352,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": -1
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_immigration_policy_v_national_control_v1",
+      "verification_count": 1,
+      "verified_at": "2026-06-26T00:15:29.613Z",
+      "created_at": "2026-06-26T00:15:29.612Z",
+      "original_source": "Social media users, particularly on platforms like TikTok, are identified as the originators of this claim, often accompanied by misleading videos.",
+      "claim_date": "2026-02-10",
+      "supporting_sources": [],
+      "dissenting_sources": [
+        {
+          "name": "Japan Fact-Check Center (JFC)",
+          "excerpt": "Videos claiming that the Japanese government wraps troublesome foreign tourists or undocumented immigrants in a sheet like a sushi roll and deports them have spread both domestically and internationally. While it is true that police use a \"protective sheet,\" there is no restriction on the nationality of those it may be used on, and it is not used for the purpose of deporting foreign nationals.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHVTSskIlmhf1u8WziFmgmeaeu14MjPw8Mxqdo_c8xLbQorNcze2lLqz5KugQKAGZTVRs-xH6uvDLH6KoBMZWJoSiaLSE4zn2J4x9MKufuz9Q0NF-g2zYm7CVoWGccXnBBsTuxCkx4MMltieyGKd5KdC1EKIoBZnvy7rMzxLLzvDmnfraVl8Du5iRcjmAQtRIGJ5JAiVVbcs3iqbmoa_A0ek73o_fBQGO1EkTSSfFEuVQlpi8Hn0B1UtYljIBJNt1LJgTkqwhP58AqgSIQwYaymbNBdRdhno16QJAFdsZhD98kBYkUoLFortKmH6Kaq1sXQuuc="
+        },
+        {
+          "name": "PRNigeria",
+          "excerpt": "The object seen in the viral video is a “protection sheet,” used by Japanese police for safety, not a sack for deportation. It is a technology that was designed to tame violent people and drunkards.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKWaAffDPOZmC57rb0b3o-nWlCTFmRbG0uCAQ7Cqvedk1SzS4q_tGPmAJ1H5KokwTvhExUYWWCkJVpzy21M6tOWczpOAhenwxCnZVr9GHO8CQBnOoGHLoItpq-884fL-L3cZZzCKUGAQnQq9TCgZpQ3jNx1fDv7g=="
+        },
+        {
+          "name": "YouTube (channel: Japan Eliminates Illegal Immigrants)",
+          "excerpt": "...this footage. shows Japanese. police using a standard hogo sheet or sumaki restraint on an intoxicated. disruptive person not the deportion of illegal immigrants.",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHT_JXWcj9WhSaQ7iCCsieGMwnnjJ3-ObIaM9zQc_dwqCN_J7km5_HccEdubpB6-MZKqFyYxT_WSnRgP_Ivty0hA9MTSYsjvyAneVF5OMgt4QLgA1gJ5zFDt6ozC-eO7YJRkteWbQ=="
+        }
+      ],
+      "framing_analysis": "The claim is framed misleadingly by using sensationalist language ('sushi rapping deportations') and misrepresenting standard police procedures as a new, unusual, and punitive immigration policy. This framing appears designed to provoke strong reactions and spread misinformation.",
+      "web_search_summary": "The claim that Japan is implementing 'sushi rapping deportations' for illegal immigrants is inaccurate. This claim originated from viral videos showing Japanese police using a 'protective sheet' to restrain disruptive individuals, which was then falsely associated with deportation and given the misleading name 'sushi wrapping' or 'sushification'. Japanese authorities have clarified that this protective sheet is a standard safety measure used regardless of nationality and is not related to deportation procedures.",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "claim_61",
       "claim_text": "Netanyahu blamed Iran for a bee swarm in Israel, implying 'Khamas bees' as a form of disinformation.",
       "status": "refuted",
@@ -16446,6 +16554,78 @@
       "investigation_depth": "quick"
     },
     {
+      "claim_id": "live_7774643c60",
+      "claim_text": "A political candidate in Kaohsiung, Taiwan, vows to ban Indians from immigrating to his country.",
+      "status": "unverified",
+      "confidence_score": 0.45,
+      "display_score": 0.435,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 1
+      },
+      "source_handle": null,
+      "source_tier": 5,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_immigration_policy_v_national_control_v1",
+      "verification_count": 58,
+      "verified_at": "2026-06-26T00:15:46.657Z",
+      "created_at": "2026-05-23T08:17:06.964Z",
+      "original_source": "Ian Miles Cheong (via X)",
+      "claim_date": "2026-05",
+      "supporting_sources": [
+        {
+          "name": "Asia News Network",
+          "excerpt": "A political row in Taiwan over Indian migrant workers has snowballed into a wider debate on racism, election politics and the island's ties with India after a local candidate campaigned on a promise to “ban Indians”.",
+          "url": null
+        },
+        {
+          "name": "The Times of India",
+          "excerpt": "Amid a larger protest against the hiring of Indian workers, a political campaign poster in Taiwan has fuelled the fire online. In a clip going viral on social media, a political candidate Lee Hung-yi, running for Kaohsiung City Council put up a controversial billboard on Shanming Road in the city's Siaogang District.",
+          "url": null
+        },
+        {
+          "name": "India News",
+          "excerpt": "Recently, Lee Hung-yi, a candidate running for Kaohsiung City Council, put up a billboard in the city's Siaogang district that had a picture of a man with a turban and an inverted flag of India, promising to ban Indian immigration into the country.",
+          "url": null
+        },
+        {
+          "name": "Taipei Times",
+          "excerpt": "A local borough warden running for the Kaohsiung City Council has come under fire over a billboard showing a “no” symbol over images of an Indian flag and a turbaned man, which he said was intended to oppose a policy to admit migrant workers from India.",
+          "url": null
+        },
+        {
+          "name": "Focus Taiwan",
+          "excerpt": "A local ward chief running for the city council in Kaohsiung has come under fire over a billboard showing \"no symbols\" over images of an Indian flag and a turbaned man, which he said was intended to oppose a policy to admit migrant workers from India.",
+          "url": null
+        },
+        {
+          "name": "The Online Citizen",
+          "excerpt": "A Taiwan People's Party-affiliated Kaohsiung city council candidate has drawn widespread condemnation after a campaign billboard depicted a turbaned man and an inverted Indian flag under a prohibition sign, while also displaying a rival party's emblem.",
+          "url": null
+        },
+        {
+          "name": "The Economic Times",
+          "excerpt": "A political candidate in Taiwan Lee Hung-Yi has ignited a social media firestorm with a billboard opposing Indian immigration and the flag. The controversial advertisement features a turbaned man and a 'no entry' sign.",
+          "url": null
+        },
+        {
+          "name": "YouTube",
+          "excerpt": "a local candidate in southern Taiwan he's put up a no Indian style campaign poster it features a crossed out image of a turban. man next to what appears to be an Indian flag the image is on your screens. right now the poster has shocked many in Taiwan's Indian. community.",
+          "url": null
+        }
+      ],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim accurately reflects the actions and stated intentions of the political candidate, Lee Hung-yi. While some sources note that the broader issue is tied to election politics and a debate over migrant worker policy, the claim itself focuses on the candidate's specific vow, which is supported by evidence of his campaign materials and statements.",
+      "web_search_summary": "A political candidate in Kaohsiung, Taiwan, Lee Hung-yi, has vowed to ban Indians from immigrating to Taiwan. He displayed a billboard with a prohibition symbol over the Indian flag and a turbaned man, sparking outrage and accusations of racism. While he claims to only oppose the policy of admitting Indian migrant workers, not migrant workers in general, his campaign has been widely condemned.",
+      "investigation_depth": "quick"
+    },
+    {
       "claim_id": "live_8b185aee47",
       "claim_text": "China’s real estate market crashed to a 20-year low.",
       "status": "unverified",
@@ -16781,6 +16961,37 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim is framed validly in its reference to the New York Times estimate. However, the second part of the claim, regarding a panelist's statement about Trump making more money in the last year than in the rest of his life, is presented as a direct quote but lacks specific attribution or direct confirmation in the search results.",
       "web_search_summary": "A New York Times editorial board analysis estimated that Donald Trump profited at least $1.4 billion from the presidency, primarily through business ventures, cryptocurrency, and settlements. While the claim about the $1.4 billion profit is supported by the New York Times, the assertion that a panelist said Trump made more money in the last year than in the rest of his life combined is not directly confirmed by the provided search results. However, other sources indicate a significant increase in his net worth in the past year, with some suggesting his wealth has more than doubled.",
+      "investigation_depth": "quick"
+    },
+    {
+      "claim_id": "live_b212faef55",
+      "claim_text": "Japan is tracking down, rolling up, and shipping out illegal immigrants at record speed.",
+      "status": "unverified",
+      "confidence_score": 0.4,
+      "display_score": 0.337,
+      "scoring_breakdown": {
+        "source_tier": 0.5,
+        "newsguard": 0.5,
+        "corroboration": 0,
+        "evidence_quality": 0.5,
+        "cross_source": 0.5,
+        "web_search": 0.5
+      },
+      "source_handle": null,
+      "source_tier": null,
+      "evidence_urls": [],
+      "tweet_url": null,
+      "category": null,
+      "related_axis_id": "axis_immigration_policy_v_national_control_v1",
+      "verification_count": 1,
+      "verified_at": "2026-06-26T00:15:35.327Z",
+      "created_at": "2026-06-26T00:15:35.327Z",
+      "original_source": "Unknown",
+      "claim_date": null,
+      "supporting_sources": [],
+      "dissenting_sources": [],
+      "framing_analysis": "The claim uses highly charged and informal language such as \"tracking down,\" \"rolling up,\" and \"shipping out,\" which suggests a sensationalized and potentially misleading framing. The phrase \"record speed\" further amplifies this, implying an unprecedented and aggressive campaign without providing factual basis.",
+      "web_search_summary": "There is no current information to support the claim that Japan is tracking down, rolling up, and shipping out illegal immigrants at \"record speed.\" While Japan does have an immigration policy that includes deportation of undocumented foreign nationals, the available search results do not indicate any recent or ongoing campaign at a \"record speed\" as described in the claim. The term \"record speed\" in the search results is generally used in other contexts, such as scientific advancements or legislative processes, not in relation to Japanese immigration enforcement. Some sources discuss Japan's immigration policy changes to accept more foreign workers and refugees, alongside measures for deportation of \"undesirable foreigners.\"",
       "investigation_depth": "quick"
     },
     {
@@ -38885,73 +39096,6 @@
       "dissenting_sources": [],
       "framing_analysis": "The claim is framed to strongly support former President Trump's actions regarding Iran, portraying them as divinely guided and essential for regional security. It uses strong, alarmist language (",
       "web_search_summary": "Pastor Robert Jeffress claimed that former President Trump stated Iran was ",
-      "investigation_depth": "quick"
-    },
-    {
-      "claim_id": "live_7774643c60",
-      "claim_text": "A political candidate in Kaohsiung, Taiwan, vows to ban Indians from immigrating to his country.",
-      "status": "expired",
-      "confidence_score": 0.285,
-      "display_score": 0.386,
-      "scoring_breakdown": {
-        "source_tier": 0.2,
-        "newsguard": 0.5,
-        "corroboration": 0,
-        "evidence_quality": 0,
-        "cross_source": 1,
-        "web_search": 0.5
-      },
-      "source_handle": null,
-      "source_tier": 5,
-      "evidence_urls": [],
-      "tweet_url": null,
-      "category": null,
-      "related_axis_id": "axis_immigration_policy_v_national_control_v1",
-      "verification_count": 57,
-      "verified_at": "2026-06-07T16:00:40.779Z",
-      "created_at": "2026-05-23T08:17:06.964Z",
-      "original_source": "Lee Hung-yi (Kaohsiung political candidate)",
-      "claim_date": "2026-05-01",
-      "supporting_sources": [
-        {
-          "name": "Asia News Network",
-          "excerpt": "A political row in Taiwan over Indian migrant workers has snowballed into a wider debate on racism, election politics and the island's ties with India after a local candidate campaigned on a promise to “ban Indians”.",
-          "url": null
-        },
-        {
-          "name": "The Statesman",
-          "excerpt": "Amid concerns over a political campaign against migrant workers from India, Taiwan has regretted and condemned the prejudiced stance while emphasising its commitment to introducing more Indian migrant workers.",
-          "url": null
-        },
-        {
-          "name": "The Times of India",
-          "excerpt": "In a clip going viral on social media, a political candidate Lee Hung-yi, running for Kaohsiung City Council put up a controversial billboard on Shanming Road in the city's Siaogang District.",
-          "url": null
-        },
-        {
-          "name": "Focus Taiwan",
-          "excerpt": "A local ward chief running for the city council in Kaohsiung has come under fire over a billboard showing \"no symbols\" over images of an Indian flag and a turbaned man, which he said was intended to oppose a policy to admit migrant workers from India.",
-          "url": null
-        },
-        {
-          "name": "Taipei Times",
-          "excerpt": "A local borough warden running for the Kaohsiung City Council has come under fire over a billboard showing a “no” symbol over images of an Indian flag and a turbaned man, which he said was intended to oppose a policy to admit migrant workers from India.",
-          "url": null
-        },
-        {
-          "name": "NDTV",
-          "excerpt": "A local candidate in Taiwan has put up a 'No Indians' campaign poster which shows a crossed-out image of a turbaned man next to what appears an Indian flag.",
-          "url": null
-        },
-        {
-          "name": "The Economic Times",
-          "excerpt": "A political candidate in Taiwan Lee Hung-Yi has ignited a social media firestorm with a billboard opposing Indian immigration and the flag.",
-          "url": null
-        }
-      ],
-      "dissenting_sources": [],
-      "framing_analysis": "The claim accurately reflects the actions and stated intentions of the political candidate. The framing is valid as it directly quotes or paraphrases the candidate's public stance and campaign materials.",
-      "web_search_summary": "A political candidate in Kaohsiung, Taiwan, Lee Hung-yi, has vowed to ban Indians from immigrating to his country. He displayed a billboard with prohibition symbols over the Indian flag and a turbaned man, explicitly stating his opposition to Taiwan's plan to admit migrant workers from India. This action has sparked outrage and condemnation from various sources, including Taiwanese officials and Indian residents.",
       "investigation_depth": "quick"
     },
     {
