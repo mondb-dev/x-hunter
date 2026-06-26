@@ -1,47 +1,39 @@
-## Deep Dive: @attackdogX Profile Exploration
-The initial search for "@attackdogX Islam left install Muslim mayor judge council members" returned no results. Navigated directly to @attackdogX's profile to understand their broader narrative.
-
-Found several posts that exemplify weaponized demographics and narrative control, consistent with prior observations. These posts utilize dehumanizing language, xenophobia, and allegories to frame immigrants and political opponents negatively, aligning with the pattern of strategic narrative construction and emotional manipulation.
-
-*   @attackdogX (Pinned Post): "Fat Third world bitches crossing our border & popping out anchor babies like:" - Dehumanizing language and framing immigration as a threat by weaponizing demographics. [ONTOLOGY: axis_weaponized_demographics_narrative_control_v1] [CURIOSITY: attackdogx_islam_left_install_muslim_may]
-*   @attackdogX: "Liberal women are quick to call Trump a pedo & they are very vocal about all the disgusting things that should be done to him, but the second an African migrant is caught jerking off on a beach in front of children in Europe- who rushes to defend him as parents are beating the shit out of him?? A Liberal woman, of course". - Uses xenophobia and sexual panic to construct a narrative around migrants and political opponents, demonizing liberals. [ONTOLOGY: axis_weaponized_demographics_narrative_control_v1] [CURIOSITY: attackdogx_islam_left_install_muslim_may]
-*   @attackdogX: "Imagine you invite someone into your home. You give them food, shelter, a bed. They have access to all the amenities. You buy them clothes. They need to wash their clothes, so they use your washer, your water, your dryer. They catch the flu, so you take them to the doctor." - Uses an allegory to frame immigrants as ungrateful and burdensome, contributing to anti-immigrant narratives. [ONTOLOGY: axis_weaponized_demographics_narrative_control_v1] [CURIOSITY: attackdogx_islam_left_install_muslim_may]
-
-## Key Tensions and Signals (from Feed Digest and Browse Notes):
-
-*   @gmanews (Ateneo hazing): "The DILG recommends charges against resigned Ateneo men's basketball head coach Tab Baldwin and 10 others for violating the Anti-Hazing Act in connection with the fatal drownings of players Rene Baterbonia and Divine Adili." - This highlights abuse of power and institutional accountability. [ONTOLOGY: axis_power_accountability] (Source: https://x.com/gmanews/status/2070402420879056965)
-*   RSS:Rappler (Sarah Discaya deepfake): "FACT CHECK: Sarah Discaya ‘confession’ on stealing public funds is a deepfake" - This is a direct example of information manipulation and the creation of false narratives to influence public perception, directly impacting the integrity of information. [ONTOLOGY: axis_media_integrity_v1] (Source: https://www.rappler.com/newsbreak/fact-check/sarah-discaya-deepfake-confession-stealing-public-funds/)
-*   @SprinterPress (Strait of Hormuz traffic): "According to MarineTraffic data, traffic through the Strait of Hormuz more than doubled on June 24, when 70 ships passed through the waterway. This increase is the result of progress in demining and increased use of the Omani shipping corridor." - Geopolitical significance, trade routes, relevant to global power realignments. [ONTOLOGY: axis_global_power_realignments_v1] [SPRINT: Sovereignty & Global Governance Discourse Map] (Source: https://x.com/SprinterPress/status/2070367555487748478)
-*   @ShaykhSulaiman (ISRAEL STRIKE NABATIEH): "ISRAEL STRIKE NABATIEH, SOUTHERN LEBANON" - This is a geopolitical event with immediate humanitarian implications and strong narrative framing from the replies. [ONTOLOGY: axis_geopolitical_rhetoric_v1] (Source: https://x.com/ShaykhSulaiman/status/2070396668625739861)
-*   @Eng_china5 (Jesse Owens): "Jesse Owens debunked Hitler's theory of racial superiority in 1936, but his greatest battle was in his native America. The irony: In Nazi Germany, Owens could dine with white Germans and stay in their hotels. The shame: When he returned to New York to celebrate his victory," - This is a historical framing of racial inequality and hypocrisy, relevant to power abuse and societal narratives. [ONTOLOGY: axis_epistemic_integrity] (Source: https://x.com/Eng_china5/status/2070407950359773403)
-*   Web Search Result (Visualization Libraries for Prototype): "Both Python and JavaScript offer powerful libraries for visualizing social media data. The best choice depends on your specific needs, such as the complexity of the visualization, interactivity requirements, and your existing tech stack." - This research is directly relevant to the sprint task of exploring visualization libraries. [SPRINT: Explore Visualization Libraries for Prototype]
-*   RSS:Inquirer (Solon: Everyone deserves to know Piattos real identity): "Everyone, regardless of political leanings, deserves to know the real identity of Mary Grace Piattos, a recipient of confidential funds (CF) from the Office of the Vice President" - This relates to transparency and accountability in political institutions. [ONTOLOGY: axis_political_trust_corruption_v1] (Source: https://newsinfo.inquirer.net/2253369/solon-everyone-deserves-to-know-piattos-real-identity)
-*   RSS:Rappler (CIDG files anti-hazing complaint vs Tab Baldwin): "CIDG files anti-hazing complaint vs Tab Baldwin, 10 others over Ateneo players’ deaths" - This reinforces the previous note about Ateneo hazing and highlights institutional accountability. [ONTOLOGY: axis_power_accountability] (Source: https://www.rappler.com/sports/uaap/cidg-files-anti-hazing-complaint-tab-baldwin-others-ateneo-players-deaths/)
-*   RSS:Al Jazeera (Iran war day 119: Israel hits Lebanon): "Iran war day 119: Israel hits Lebanon as IAEA says it will return to Iran" - This reinforces the previous note about Israel/Lebanon and concerns about geopolitical rhetoric. [ONTOLOGY: axis_geopolitical_rhetoric_v1] (Source: https://www.aljazeera.com/news/2026/6/26/iran-war-day-119-israel-hits-lebanon-as-iaea-says-it-will-return-to-iran?traffic_source=rss)
-
-## Noted Clusters:
-[NOTED] "animals love" — 3 posts, no follow-up this cycle
-[NOTED] "Penasaran kalian asalnya darimana aja? Tapi jawabnya pake makanan khas daerah kalian" — 1 posts, no follow-up this cycle
-[NOTED] "Mind blowing study reveals the universe will end much sooner than expected!" — 1 posts, no follow-up this cycle
-[NOTED] "South Korea's KOSPI stock market halted after 8% crash, triggering circuit breaker." — 1 posts, no follow-up this cycle
-[NOTED] "The orange brain cell is rebooting." — 1 posts, no follow-up this cycle
-[NOTED] "He Was Forced To Surrender His Dog - Then Spent 10 Months Fighting To Get Him Back." — 1 posts, no follow-up this cycle
-[NOTED] "235+ KILLED after DEVASTATING 7.5 VENEZUELAN EARTHQUAKE" — 1 posts, no follow-up this cycle
-[NOTED] "THEY KICKED SCOTT PRESLER OUT BUT USED HIS PHOTO…" — 1 posts, no follow-up this cycle
-[NOTED] "Sprinting to make it to the next stop." — 1 posts, no follow-up this cycle
-[NOTED] "Could you be more on the money?" — 1 posts, no follow-up this cycle
-[NOTED] "Phivolcs detects an earthquake swarm off Bolinao, Pangasinan" — 1 posts, no follow-up this cycle
-[NOTED] "Remulla: Support for UP has nothing to do with Ateneo probe" — 1 posts, no follow-up this cycle
-[NOTED] "Pagasa sees more than 60% chance of El Niño intensifying in August" — 1 posts, no follow-up this cycle
-[NOTED] "GoreBox developer rejects Senate invitation to Tacloban school shooting probe" — 1 posts, no follow-up this cycle
-[NOTED] "Parents, schools – you may be punished too for children’s offenses" — 1 posts, no follow-up this cycle
-[NOTED] "True Value brings New York-inspired deals with ‘Red, White & True Sale’ this July" — 1 posts, no follow-up this cycle
-[NOTED] "Microsoft lets Windows 10 users have extended security updates till October 2027" — 1 posts, no follow-up this cycle
-[NOTED] "TikTok, YouTube deactivate 4.7 million child accounts in Indonesia following government curbs" — 1 posts, no follow-up this cycle
-[NOTED] "Neighbours aid rescue effort as Venezuela quake death toll hits 235" — 1 posts, no follow-up this cycle
-## Feed Digest Interesting Posts:
-[ONTOLOGY: axis_epistemic_integrity] @OliLondonTV [v6.6 T5 N4.4] "Trump says he doesn’t “know anything” the UK’s potential new PM Andy Burnham; calls him “Mayor of a Town.” “I hear he is extremely liberal.”" - Political framing and dismissive rhetoric. (Source: https://x.com/OliLondonTV/status/2070385620422406572)
-[ONTOLOGY: axis_national_sovereignty_v_intl_law_v1] @NguyenHo1096438 [v1.7 T4 N4.4] "China is a bully. China is a threat to sovereignty." - Geopolitical tension, threat to national sovereignty. (Source: https://x.com/NguyenHo1096438/status/2070106954387931571)
-[ONTOLOGY: axis_political_trust_corruption_v1] @inquirerdotnet [v0.3 T6 N4.4] "The Office of the Ombudsman has directed Senators Alan Peter Cayetano and Robin Padilla, as well as suspended Senate sergeant-at-arms (SAA) Ma O. Aplasca, to answer the complaint against them in connection with Sen. Ronald “Bato” Dela Rosa’s escape from the Senate premises last" - Institutional accountability, potential obstruction of justice. (Source: https://x.com/inquirerdotnet/status/2070153915526521146)
-[ONTOLOGY: axis_political_moral_conduct_v1] @Nher_who [v40.7 T5 N4.4] "He remained silent when 21 students died due to the NEET paper leak But he is quick to wish Dharmendra Pradhan on his Birthday Clearly showing the dead students their place." - Political integrity, perceived indifference to human cost. (Source: https://x.com/Nher_who/status/2070423463970664724)
-[ONTOLOGY: axis_collective_voice] @KerryBurgess [v4.4 T4 N4.3] "It's time for the political establishment and the Epstein class to get the hell out of the way. And I'll bet the Russians and the Ukrainians could get along just fine if politicians and weapons manufacturers stayed the hell out of it..." - Anti-establishment sentiment, questioning power structures that perpetuate conflict. (Source: https://x.com/KerryBurgess/status/2070409043110187145)
+[CURIOSITY: attackdogx_islam_left_install_muslim_may] @attackdogX (1h ago) uses inflammatory language regarding "Liberals" not understanding "temporary" and "woman" in relation to immigrants (Haitians & Syrians), feeding anti-immigrant sentiment. URL: https://x.com/attackdogX
+[CURIOSITY: attackdogx_islam_left_install_muslim_may] @attackdogX (10h ago) manipulates outrage by contrasting criticisms of Trump with a defense of an "African migrant" caught in an indecent act, furthering xenophobic narratives and discrediting political opponents. URL: https://x.com/attackdogX
+[CURIOSITY: attackdogx_islam_left_install_muslim_may] @attackdogX (pinned, Apr 2) uses dehumanizing language ("Fat Third world bitches") to describe immigrants crossing the border and "popping out anchor babies," reinforcing xenophobic narratives. URL: https://x.com/attackdogX
+[SPRINT: research] Previous web search result on Python and JavaScript visualization libraries (Matplotlib) is relevant for exploring visualization options for the "Sovereignty & Global Governance Discourse Map" sprint. This information helps with the 'Explore Visualization Libraries for Prototype' task.
+[ONTOLOGY] RFK Jr. flu shot claim debuked: A user debunked RFK Jr.'s claim about flu shots increasing non-flu infections, stating it misinterprets viral interference theory and is contrary to clinical data, reinforcing the importance of evidence-based claims in public health discourse. Source: https://x.com/nature_lifee/status/2070434440019685002
+[ONTOLOGY] Political donation and tribal signaling: A tweet highlighted political donations from George Soros and Ben Horowitz, noting both are Jewish, which appears to be a subtle attempt at tribal signaling and narrative manipulation by linking financial influence to ethnic identity. Source: https://x.com/Megatron_ron/status/2070468493896781876
+[ONTOLOGY] Iran's control over Strait of Hormuz: Iran's Deputy MF stated that countries establishing shipping lanes through the Strait of Hormuz will lack security without Tehran's approval, highlighting geopolitical tensions and a nation prioritizing its perceived strategic control. Source: https://x.com/IranObserver0/status/2070474897638203811
+[ONTOLOGY] Critique of mainstream media conditioning: A post claimed mainstream media conditions individuals to believe one side has a monopoly on human rights and progress, illustrated by a comparison of US homelessness to China's housing efforts, indicating a critique of narrative control and selective reporting. Source: https://x.com/Its_ereko/status/2070466823850545395
+[ONTOLOGY] Political accountability and policy impact: A user expressed frustration over Mark Rutte, a former Dutch PM who cut defense spending, now being part of a system where European citizens bear the cost, highlighting concerns about political accountability and transparency. Source: https://x.com/ricwe123/status/2070469505533251889
+[SYNTHESIS] axis_sovereignty_erosion_narrative_v1 — drafted as axis_sovereignty_erosion_narrative_v1
+[NOTED] "people" — 9 posts, no follow-up this cycle
+[NOTED] "know" — 7 posts, no follow-up this cycle
+[NOTED] "done" — 4 posts, no follow-up this cycle
+[NOTED] "way" — 4 posts, no follow-up this cycle
+[NOTED] "why" — 4 posts, no follow-up this cycle
+[NOTED] "love" — 3 posts, no follow-up this cycle
+[NOTED] "shit" — 3 posts, no follow-up this cycle
+[NOTED] "right" — 3 posts, no follow-up this cycle
+[NOTED] "heatwave" — 3 posts, no follow-up this cycle
+[NOTED] "drone warriors" — 3 posts, no follow-up this cycle
+[NOTED] "name" — 3 posts, no follow-up this cycle
+[NOTED] "give" — 3 posts, no follow-up this cycle
+[NOTED] "iran" — 3 posts, no follow_up this cycle
+[NOTED] "crazy" — 3 posts, no follow_up this cycle
+[NOTED] "world" — 3 posts, no follow_up this cycle
+[NOTED] "Tacloban City" - N posts, no follow-up this cycle
+[NOTED] "DepEd wants tighter security measure in schools after Tacloban shooting" - N posts, no follow-up this cycle
+[NOTED] "Padilla eyes automatic reservist registration amid security risks" - N posts, no follow-up this cycle
+[NOTED] "Cops recover knife, revolver from Grade 8, Grade 10 students in Aparri" - N posts, no follow-up this cycle
+[NOTED] "DBM proposes P7.2-trillion national budget for 2027" - N posts, no follow-up this cycle
+[NOTED] "Who makes hotel stays memorable? HSMA opens nominations for 12th Virtus Awards" - N posts, no follow-up this cycle
+[NOTED] "The Dawn’s 40-year legacy: Unmatched groove, infectious live energy" - N posts, no follow-up this cycle
+[NOTED] "Bangko Sentral gives banks relief on paper losses. But does this just push risk out of sight?" - N posts, no follow-up this cycle
+[NOTED] "‘GoreBox’ questioning should be free of assumption that violent games cause violent acts" - N posts, no follow-up this cycle
+[NOTED] "IAEA demands verification of Iran nuclear ambitions amid ‘statement war’" - N posts, no follow-up this cycle
+[NOTED] "Who has profited most from the war on Iran?" - N posts, no follow-up this cycle
+[NOTED] "Baby pulled alive from rubble after Venezuela earthquake" - N posts, no follow_up this cycle
+[NOTED] "Russia reports downing 660 Ukrainian drones, denies seeking Belarus war aid" - N posts, no follow_up this cycle
+[NOTED] "FIFA World Cup: Friday schedule, predictions, standings, knockout race" - N posts, no follow_up this cycle
