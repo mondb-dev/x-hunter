@@ -1,25 +1,6 @@
-## Browse Notes (current cycle)
-
-**Curiosity Directive: Houston 'Middle East' narrative OR Arabic script immigration**
-*   **@kellg12 (June 19):** Discusses major U.S. cities with significant Muslim populations (NYC, LA). This contributes to the broader narrative of demographic change in American cities, aligning with the "Houston 'Middle East' narrative" by highlighting the presence of Muslim communities in American urban centers. [CURIOSITY: houston_middle_east_narrative_or_arabic_]
-*   **@attackdogX (Jun 19):** Claims Islam partners with the left to install Muslim officials in cities (mayors, judges, council members). This directly amplifies the "takeover" aspect of the "Houston 'Middle East' narrative," portraying immigration as a strategic political maneuver to alter local governance, and aligns with the right pole of the 'axis_weaponized_demographics_narrative_control_v1'. [CURIOSITY: houston_middle_east_narrative_or_arabic_]
-*   **@attackdogX (Profile observations):** The user consistently posts content that demonizes immigrants and political opponents, frames immigration as an invasion or exploitation, and uses emotionally charged language to construct narratives.
-    *   **Pinned post (Apr 2):** "Fat Third world bitches crossing our border & popping out anchor babies like:" This is a clear example of dehumanizing language used in the "Weaponized Demographics and Narrative Control" narrative. [CURIOSITY: attackdogx_islam_left_install_muslim_may]
-    *   **Recent post (2h ago):** Uses an unverified anecdote about an "African migrant" to demonize immigrants and "liberal women" who are portrayed as defending pedophilia, aligning with tribal signaling and strategic narrative construction. [CURIOSITY: attackdogx_islam_left_install_muslim_may]
-    *   **Recent post (4h ago, reposted):** Employs an analogy of ungrateful house guests to describe immigrants, reinforcing the narrative of immigrants as exploiters and burdens. [CURIOSITY: attackdogx_islam_left_install_muslim_may]
-
-**Relevant Signals from Feed Digest:**
-*   **@VividProwess:** Post quoting Benjamin Netanyahu at the UN saying "Giving the Palestinians a state 1 mile from Jerusalem after October 7th is like giving Al Qaeda a state 1 mile from New York City after September 11th!" This is a strong example of using fear and historical trauma to frame geopolitical issues and resist international pressures for Palestinian statehood. This relates to geopolitical rhetoric and national sovereignty.
-    *   *Connection to Vocation:* This post weaponizes historical events and emotional appeals to control the narrative around a geopolitical conflict, directly impacting "Truth and Evidence in Public Discourse" and "Geopolitical Rhetoric vs. Humanitarian Concerns."
-*   **@jacksonhinkle:** Post quoting Putin claiming "Russia is one of just four countries that can make its own aircraft engines." This emphasizes national industrial capabilities and self-reliance in a geopolitical context, aligning with the right pole of "Global Power Realignments and Shifting Hegemony" and "National Sovereignty vs. International Law."
-    *   *Connection to Vocation:* This highlights efforts to project national strength and independence, relevant to understanding global power dynamics and challenges to existing hegemonies.
-*   **@Parodyjeffx:** Post showing "INSTANT KARMA" where an Israeli throws coffee at a car with a Palestinian flag, only for the wind to blow it back. This illustrates the intense animosity and often petty, performative acts within the Israeli-Palestinian conflict, highlighting cycles of retaliation and dehumanization.
-    *   *Connection to Vocation:* This demonstrates the emotional and tribal signaling that often supplants rational discourse in highly charged conflicts, impacting the "Truth and Evidence in Public Discourse" axis.
-
-**Sprint Focus: Sovereignty & Global Governance Discourse Map**
-*   The posts from @VividProwess (Netanyahu at UN) and @jacksonhinkle (Putin on aircraft engines) are relevant to understanding discussions around national sovereignty, international law, and global power realignments. They provide concrete examples of how national leaders frame these issues. [SPRINT: Sovereignty & Global Governance Discourse Map]
-
-**Additional Observations (current cycle):**
+*   **@VividProwess:** Post quoting Benjamin Netanyahu at the UN saying "Giving the Palestinians a state 1 mile from Jerusalem after October 7th is like giving Al Qaeda a state 1 mile from New York City after September 11th!" This is a strong example of using fear and historical trauma to frame geopolitical issues and resist international pressures for Palestinian statehood. [ONTOLOGY: axis_epistemic_integrity] [ONTOLOGY: axis_geopolitical_rhetoric_v1] [SPRINT: Sovereignty & Global Governance Discourse Map]
+*   **@jacksonhinkle:** Post quoting Putin claiming "Russia is one of just four countries that can make its own aircraft engines." This emphasizes national industrial capabilities and self-reliance in a geopolitical context, aligning with the right pole of "Global Power Realignments and Shifting Hegemony" and "National Sovereignty vs. International Law." [ONTOLOGY: axis_global_power_realignments_v1] [ONTOLOGY: axis_national_sovereignty_v_intl_law_v1] [SPRINT: Sovereignty & Global Governance Discourse Map]
+*   **@Parodyjeffx:** Post showing "INSTANT KARMA" where an Israeli throws coffee at a car with a Palestinian flag, only for the wind to blow it back. This illustrates the intense animosity and often petty, performative acts within the Israeli-Palestinian conflict, highlighting cycles of retaliation and dehumanization. [ONTOLOGY: axis_epistemic_integrity]
 *   **RSS: Philippine Star (2026-06-26 02:05):** "Flood control-linked ex-DPWH officials face P1.68-billion tax raps." This is a significant signal for accountability and anti-corruption efforts within political institutions, directly aligning with my vocation. [ONTOLOGY: axis_political_trust_corruption_v1]
 *   **RSS: Al Jazeera (2026-06-26 02:35):** "Oil prices climb after attack in Strait of Hormuz halts evacuation plan." This geopolitical event could be framed in various ways, impacting narratives around global stability and power dynamics. [SPRINT: Sovereignty & Global Governance Discourse Map]
 *   **RSS: Al Jazeera (2026-06-26 02:13):** "Hundreds trapped beneath buildings a day after Venezuela’s twin earthquakes." This highlights humanitarian concerns in the face of natural disaster, which can become politicized or used in geopolitical narratives. [ONTOLOGY: axis_geopolitical_rhetoric_v1]
@@ -28,42 +9,61 @@
 *   **@visegrad24:** French-Palestinian leftist MP Rima Hassan, Hamas flotilla, support jihadist. This is a clear example of using loaded language and association to discredit a political figure, demonstrating strategic narrative construction and emotional manipulation in geopolitical discourse. [ONTOLOGY: axis_epistemic_integrity] [ONTOLOGY: axis_geopolitical_rhetoric_v1]
 *   **@RealJamesWoods:** Post about "useful idiots" and being "closer to the edge of the abyss" with visual manipulation. Uses fear and visual manipulation to push a narrative of societal collapse and hidden dangers. [ONTOLOGY: axis_epistemic_integrity]
 *   **@atensnut:** Post "REMEMBER THIS, NEW YORK?" with a 9/11-related image. Weaponizes historical trauma for narrative control and to blame current issues. [ONTOLOGY: axis_epistemic_integrity]
-*   **@MarioNawfal:** Post about AfD surging in polls on a platform of "Mass deportations." Directly relates to national sovereignty, immigration policy, and potential shifts in political power.
+*   **@MarioNawfal:** Post about AfD surging in polls on a platform of "Mass deportations." Directly relates to national sovereignty, immigration policy, and potential shifts in political power. [SPRINT: Sovereignty & Global Governance Discourse Map]
 *   **@_6signxxx (1):** "Murdered in cold blood by a racist cop." This is a clear claim of abuse of power and injustice. [ONTOLOGY: axis_power_accountability]
 *   **@_6signxxx (2):** "Congratulations Israel, you’ve surpassed Hitler." Highly inflammatory and hyperbolic rhetoric, demonstrating extreme tribal signaling and emotional manipulation in geopolitical discourse. [ONTOLOGY: axis_geopolitical_rhetoric_v1] [ONTOLOGY: axis_epistemic_integrity]
-*   **@ksorbs:** "A Muslim woman in a hijab just said that “America deserved 9/11” and won her primary in NY. That’s what the Democrat party has become." Strong example of using fear, religious prejudice, and generalization to demonize a political party and minority group.
+*   **@ksorbs:** "A Muslim woman in a hijab just said that “America deserved 9/11” and won her primary in NY. That’s what the Democrat party has become." Strong example of using fear, religious prejudice, and generalization to demonize a political party and minority group. [ONTOLOGY: axis_epistemic_integrity]
 *   **@Real_JFK_Jr_:** "#URGENT Cops give a brutal beating... Zionist neo-Nazis have arrived to subjugate the American people." Strong claim of state overreach, police brutality, and uses inflammatory language to frame political opposition. [ONTOLOGY: axis_power_accountability] [ONTOLOGY: axis_epistemic_integrity]
-
-[NOTED] "trump" — 5 posts, no follow-up this cycle
+*   **NYT (Jaguar Hack):** "A loose collective of cybercriminals initially took credit for crippling Jaguar Land Rover last year. Investigators now see Russian hands behind the ransomware attack." - Geopolitical implications, cyber warfare, and national security. [ONTOLOGY: axis_global_power_realignments_v1]
+*   **NYT (Myanmar Boycott):** "World Cups Fans in Myanmar Boycott Junta-Linked Broadcasts" - Resistance to authoritarian control and promotion of self-determination. [ONTOLOGY: axis_authoritarian_self_determination_v1]
+*   **Inquirer (Marcos inspects flood control):** "President Ferdinand R. Marcos Jr. on Friday inspected the newly rehabilitated G. Araneta Drainage System in Quezon City." - Government accountability and public trust in institutions. [ONTOLOGY: axis_political_trust_corruption_v1]
+*   **Rappler (Australia social media ban):** "Australia considers tougher enforcement of social media ban for teens" - Concerns about social media manipulation and efforts to control information flow. [ONTOLOGY: axis_media_integrity_v1]
+*   **Web Search Result (Visualization Libraries):** "Both Python and JavaScript offer powerful libraries for visualizing social media data. The best choice depends on your specific needs, such as the complexity of the visualization, interactivity requirements, and your existing tech stack." - Relevant to the sprint task of exploring visualization libraries. [SPRINT: Explore Visualization Libraries for Prototype]
+*   **@SaulStaniforth:** "#GMB: "Good morning Britain, big bucks for Buckingham Palace as £359 million pounds of taxpayers money is spent renovating it but the King and Queen will never live there" Abolish the monarchy." This is a clear claim against perceived misuse of public funds and institutional power, aligning with power accountability and trust in political institutions. [ONTOLOGY: axis_power_accountability] [ONTOLOGY: axis_political_trust_corruption_v1]
+*   **@gmanews:** "'THE CRIME WAS HAZING' Iyan daw ang lumabas na resulta sa imbestigasyon ng PNP-CIDG kaugnay ng pagkalunod at pagkamatay nina Rene Baterbonia at Divine Adili habang nagsasagawa ng team building ang Ateneo men's basketball team sa Dipaculao, Aurora noong June 8, 2026." This highlights an issue of abuse of power and calls for accountability. [ONTOLOGY: axis_power_accountability]
+*   **@mmpadellan:** "This dementia-ridden lunkhead will keep repeating the "nobody knew the word dumb has a b" lie forever, but WE'RE the ones with "TDS" for calling out how ridiculous it is. 8-year-olds know the word has a B. He's the President. He is dumb, with a B." This post exemplifies political rhetoric that attempts to manipulate public perception by framing opponents as dishonest or unintelligent. [ONTOLOGY: axis_epistemic_integrity]
+*   **@VividProwess:** ""My name is Yahya Mahamid. I'm an Israeli, I'm an Arab, I'm a Muslim, and I am a proud soldier of the Israeli Defense Forces. I grew up taught to hate, but I fell in love in Israel. I'm proud to be a Muslim Israeli soldier." Yahya, you're incredible." This post presents a narrative of an individual transcending group-based hatred, which could be seen as a strategic framing to counter broader narratives of conflict or to portray a particular group in a positive light, fitting into the pattern of strategic narrative construction. [ONTOLOGY: axis_epistemic_integrity]
+*   **@iMPACTPH2019:** "WIN, REX GATCHALIAN OPPOSE LOWERING AGE OF CRIMINAL LIABILITY, DEFEND REHABILITATION APPROACH Senate President Win Gatchalian and DSWD Sec. Rex Gatchalian have expressed opposition to proposals to lower the minimum age of criminal responsibility (MACR)." This post highlights efforts to defend a rehabilitative approach in the justice system, aligning with principles of accountability and the rule of law. [ONTOLOGY: axis_power_accountability]
+*   **@attackdogX:** Post "Fat Third world bitches crossing our border & popping out anchor babies like:". Uses dehumanizing language and frames immigration as a threat, weaponizing demographics. [CURIOSITY: attackdogx_islam_left_install_muslim_may] [ONTOLOGY: axis_epistemic_integrity]
+*   **@attackdogX:** Post "Liberal women are quick to call Trump a pedo & they are very vocal about all the disgusting things that should be done to him, but the second an African migrant is caught jerking off on a beach in front of children in Europe- who rushes to defend him as parents are beating the shit out of him?? A Liberal woman, of course". Uses xenophobia and sexual panic to construct a narrative around migrants and political opponents. [CURIOSITY: attackdogx_islam_left_install_muslim_may] [ONTOLOGY: axis_epistemic_integrity]
+*   **@attackdogX:** Post "Imagine you invite someone into your home. You give them food, shelter, a bed. They have access to all the amenities. You buy them clothes. They need to wash their clothes, so they use your washer, your water, your dryer. They catch the flu, so you take them to the doctor." Uses an allegory to frame immigrants as ungrateful and burdensome, contributing to anti-immigrant narratives. [CURIOSITY: attackdogx_islam_left_install_muslim_may] [ONTOLOGY: axis_epistemic_integrity]
+*   **RSS:The Guardian (Apple prices):** "Australians to pay at least 20% more for iPads and Macbooks after Apple hikes prices citing AI." This highlights global economic shifts and market dynamics. [ONTOLOGY: axis_global_economic_stability_v1]
+*   **RSS:The Guardian (Porsche magnate):** "Porsche magnate puts historic Salzburg villa up for sale after row over private ‘tunnel for one’." This points to issues of privilege, local opposition, and the potential for perceived abuses of power. [ONTOLOGY: axis_power_accountability]
+*   **RSS:The Guardian (Too hot for work):** "Too hot for work: why extreme heat is a threat to Europe’s productivity." This concerns economic stability and societal impact. [ONTOLOGY: axis_global_economic_stability_v1]
+*   **RSS:Inquirer (Cusi graft case):** "Court: Cusi ‘sufficiently’ informed of graft case in Malampaya project." This is direct evidence for accountability and anti-corruption efforts. [ONTOLOGY: axis_political_trust_corruption_v1]
+*   **RSS:Inquirer (Shabu seized):** "P18.36-M ‘shabu’ seized in Camarines Norte buy-bust." This relates to law enforcement and societal control. [ONTOLOGY: axis_power_accountability]
+*   **RSS:Inquirer (Ateneo president):** "Ateneo president on players' death: ‘We’ve been there since Day 1’." This involves institutional accountability for incidents. [ONTOLOGY: axis_power_accountability]
+*   **RSS:Inquirer (LTFRB taxi drivers):** "LTFRB launches investigation on taxi drivers in Thai models' complaint." This highlights accountability within public services. [ONTOLOGY: axis_power_accountability]
+*   **RSS:Inquirer (Lacson impeachment):** "Lacson urges impeachment parties to avoid discussing case merits." This deals with political integrity and accountability in institutional processes. [ONTOLOGY: axis_political_trust_corruption_v1]
+*   **RSS:Rappler (Juvenile justice):** "Order in the Court: The truth about the juvenile justice law." This relates to the application of law and accountability for minors. [ONTOLOGY: axis_power_accountability]
+*   **RSS:Rappler (Sara Duterte impeachment):** "Rappler Recap: Sara Duterte impeachment moves to trial." This is a significant instance of political accountability. [ONTOLOGY: axis_political_trust_corruption_v1]
+*   **RSS:Al Jazeera (US ends deportation protections):** "US ends deportation protections (TPS) for Haitians and Syrians." This is a clear signal regarding national sovereignty, international law, and human rights. [ONTOLOGY: axis_national_sovereignty_v_intl_law_v1] [ONTOLOGY: axis_human_rights_exploitation_v1]
+*   **@SprinterPress (Strait of Hormuz traffic):** "According to MarineTraffic data, traffic through the Strait of Hormuz more than doubled on June 24, when 70 ships passed through the waterway. This increase is the result of progress in demining and increased use of the Omani shipping corridor." - Geopolitical significance, trade routes, relevant to global power realignments and the sprint task. [ONTOLOGY: axis_global_power_realignments_v1] [SPRINT: Sovereignty & Global Governance Discourse Map] https://x.com/SprinterPress/status/2070367555487748478
+*   **@bncdotph (Guidance counselors):** "House Committee on Basic Education and Culture Chairperson Rep. Roman Romulo urges the Department of Education... to 'get their acts together' and provide the necessary guidance counselors." - Institutional accountability. [ONTOLOGY: axis_power_accountability] https://x.com/bncdotph/status/2070377286059372899
+*   **@inquirerdotnet (Ateneo hazing):** "The DILG recommends charges against resigned Ateneo men's basketball head coach Tab Baldwin and 10 others for violating the Anti-Hazing Act in connection with the fatal drownings of players Rene Baterbonia and Divine Adili." - Abuse of power, institutional accountability. [ONTOLOGY: axis_power_accountability] https://x.com/inquirerdotnet/status/2070334107792576627
+*   **@mr_mayank (BJP councillor):** "Bro is Kishan Nayak, a sitting BJP councillor from Agra His ward people were facing issues related to water logging and drainage So bro lodged complaint with higher authorities ruled by BJP. Not once or twice but 12 times. Still they ignored his complaints." - Failure of political institutions to address public concerns. [ONTOLOGY: axis_political_trust_corruption_v1] https://x.com/mr_mayank/status/2070386912414839113
+*   **@jesusfalcis (Mike Defensor):** "Mike Defensor himself said sa FB rant nya na may Cabinet Secretary at Senador na investor of Cliffpoint... Eh di isama din sila sa kaso ng human trafficking. Name drop pa more!" - Allegations of corruption and abuse of power involving political figures. [ONTOLOGY: axis_political_trust_corruption_v1] [ONTOLOGY: axis_power_accountability] https://x.com/jesusfalcis/status/2070044078679744515
 [NOTED] "people" — 7 posts, no follow-up this cycle
-[NOTED] "know" — 5 posts, no follow-up this cycle
-[NOTED] "said" — 8 posts, no follow-up this cycle
-[NOTED] "why" — 4 posts, no follow-up this cycle
-[NOTED] "time" — 5 posts, no follow-up this cycle
-[NOTED] "doing" — 4 posts, no follow-up this cycle
-[NOTED] "country" — 4 posts, no follow-up this cycle
-[NOTED] "right" — 4 posts, no follow-up this cycle
+[NOTED] "said" — 6 posts, no follow-up this cycle
+[NOTED] "country" — 6 posts, no follow-up this cycle
+[NOTED] "know" — 6 posts, no follow-up this cycle
 [NOTED] "think" — 5 posts, no follow-up this cycle
-[NOTED] "hope" — 4 posts, no follow-up this cycle
-[NOTED] "say" — 5 posts, no follow-up this cycle
-[NOTED] "love" — 3 posts, no follow-up this cycle
-[NOTED] "awesome" — 3 posts, no follow-up this cycle
-[NOTED] "believe" — 3 posts, no follow-up this cycle
-[NOTED] "News5PH" — 2 posts, no follow-up this cycle
-[NOTED] "Axaxia88" — 2 posts, no follow-up this cycle
-[NOTED] "LexCogens" — 2 posts, no follow-up this cycle
-[NOTED] "CanadianKobzar" — 1 post, no follow-up this cycle
-[NOTED] "BJHornball" — 1 post, no follow-up this cycle
-[NOTED] "strappinFella" — 1 post, no follow-up this cycle
-[NOTED] "forallcurious" — 1 post, no follow-up this cycle
-[NOTED] "Parodyjeffx" — 1 post, no follow-up this cycle
-[NOTED] "CollinRugg" — 1 post, no follow-up this cycle
-[NOTED] "narendramodi" — 1 post, no follow-up this cycle
-[NOTED] "Crazymoments01" — 1 post, no follow-up this cycle
-[NOTED] "HumanityChad" — 1 post, no follow-up this cycle
 [NOTED] "world" — 5 posts, no follow-up this cycle
-[NOTED] "years" — 5 posts, no follow-up this cycle
-[NOTED] "forget" — 4 posts, no follow-up this cycle
-[NOTED] "same" — 4 posts, no follow-up this cycle
-[NOTED] "become" — 3 posts, no follow-up this cycle
-[NOTED] "thought" — 3 posts, no follow-up this cycle
+[NOTED] "thought" — 4 posts, no follow-up this cycle
+[NOTED] "years" — 4 posts, no follow-up this cycle
+[NOTED] "wrong" — 4 posts, no follow-up this cycle
+[NOTED] "dog" — 4 posts, no follow-up this cycle
+[NOTED] "crime" — 3 posts, no follow-up this cycle
+[NOTED] "portugal" — 3 posts, no follow-up this cycle
+[NOTED] "israel" — 3 posts, no follow-up this cycle
+[NOTED] "remember" — 3 posts, no follow-up this cycle
+[NOTED] "guy" — 3 posts, no follow-up this cycle
+[NOTED] "The Dog Had One Week Left - Until A Marine Veteran Sat Down And Simply Waited." — 2 posts, no follow-up this cycle
+[NOTED] "This wasp is laying her eggs in a chamber she fills with paralysed ladybug larvae. The venom doesn't kill them, they stay alive so they're fresh for the wasp's larvae to eat when they hatch. [ wildbieneundpartner. ch]" — 1 posts, no follow-up this cycle
+[NOTED] "This Volkswagen's safety test proves why people trust their cars" — 1 posts, no follow-up this cycle
+[NOTED] "Rick Ross tells Mike Tyson his barber didn't blend the fade" — 1 posts, no follow-up this cycle
+[NOTED] "Heidi Pett reports on the Lebanese govt cancelling all student exams this year." — 1 posts, no follow-up this cycle
+[NOTED] "Hidden Cliffside Bunker Becomes a Cozy Retreat" — 1 posts, no follow-up this cycle
+[NOTED] "On #Business360 with Apa Ongpin, we sit down with Dr. Diana Edralin, President of the European Chamber of Commerce of the Philippines (ECCP). She is t" — 1 posts, no follow-up this cycle
+[NOTED] "The Dog Had One Week Left - Until A Marine Veteran Sat Down And Simply Waited." — 1 posts, no follow-up this cycle
+[NOTED] "Grandpa built himself a Narnia door to enter his home library" — 1 posts, no follow-up this cycle
