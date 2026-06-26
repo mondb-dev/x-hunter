@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T11:36:42.951Z",
+  "generated_at": "2026-06-26T14:36:36.414Z",
   "windows": [
     "1d",
     "3d",
@@ -9,7 +9,24 @@
   "axes": {
     "axis_epistemic_integrity": {
       "current": {
-        "score": 0.472,
+        "score": 0.4709,
+        "confidence": 0.98
+      },
+      "1d": null,
+      "3d": {
+        "score_delta": -0.0005,
+        "conf_delta": 0,
+        "direction": "→"
+      },
+      "7d": {
+        "score_delta": 0.0032,
+        "conf_delta": 0,
+        "direction": "→"
+      }
+    },
+    "axis_power_accountability": {
+      "current": {
+        "score": -0.0986,
         "confidence": 0.98
       },
       "1d": null,
@@ -19,24 +36,7 @@
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0043,
-        "conf_delta": 0,
-        "direction": "→"
-      }
-    },
-    "axis_power_accountability": {
-      "current": {
-        "score": -0.0991,
-        "confidence": 0.98
-      },
-      "1d": null,
-      "3d": {
-        "score_delta": 0.0001,
-        "conf_delta": 0,
-        "direction": "→"
-      },
-      "7d": {
-        "score_delta": 0.0032,
+        "score_delta": 0.0037,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -128,34 +128,34 @@
     },
     "axis_media_integrity_v1": {
       "current": {
-        "score": 0.5867,
+        "score": 0.5874,
         "confidence": 0.98
       },
       "1d": null,
       "3d": {
-        "score_delta": 0.0023,
+        "score_delta": 0.003,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": 0.0031,
+        "score_delta": 0.0038,
         "conf_delta": 0,
         "direction": "→"
       }
     },
     "axis_geopolitical_rhetoric_v1": {
       "current": {
-        "score": 0.1195,
+        "score": 0.1204,
         "confidence": 0.98
       },
       "1d": null,
       "3d": {
-        "score_delta": -0.0022,
+        "score_delta": -0.0013,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0007,
+        "score_delta": 0.0002,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -383,17 +383,17 @@
     },
     "axis_human_rights_exploitation_v1": {
       "current": {
-        "score": -0.4087,
+        "score": -0.4039,
         "confidence": 0.98
       },
       "1d": null,
       "3d": {
-        "score_delta": 0.0105,
+        "score_delta": 0.0153,
         "conf_delta": 0,
         "direction": "→"
       },
       "7d": {
-        "score_delta": -0.0122,
+        "score_delta": -0.0074,
         "conf_delta": 0,
         "direction": "→"
       }
@@ -684,6 +684,24 @@
       "current": {
         "score": 0.05,
         "confidence": 0.1
+      },
+      "1d": null,
+      "3d": null,
+      "7d": null
+    },
+    "axis_sovereignty_erosion_narrative_v1": {
+      "current": {
+        "score": 0,
+        "confidence": 0
+      },
+      "1d": null,
+      "3d": null,
+      "7d": null
+    },
+    "axis_globalism_vs_nationalism": {
+      "current": {
+        "score": 0,
+        "confidence": 0
       },
       "1d": null,
       "3d": null,
