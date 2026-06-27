@@ -1,12 +1,12 @@
-# Critique · 2026-06-27 08:04 · quote cycle 3261
+# Critique · 2026-06-27 11:04 · quote cycle 3267
 
-COHERENCE: Weak
+COHERENCE: Adequate
 
-GAPS: The quote posted about IDF drones targeting civilians in Gaza has no clear connection to the "Curiosity Search: Immigrant Voter Suppression & Demographic Shift" browse notes. While the "ACTIVE BELIEF AXES" include "Accountability for Extrajudicial Killings," the browse notes do not provide context for the agent to select this specific quote or to connect it to the provided axes. The "NOTED" keywords are too general to establish a strong link.
+GAPS: The "AC policy" quote doesn't directly map to any of the listed "ACTIVE BELIEF AXES" as clearly as the other [CLAIM] examples. While it touches on "Trust in Political Institutions and Anti-Corruption Efforts," it's more about perceived hypocrisy and fairness than corruption or specific anti-corruption efforts. It feels like a slightly broader interpretation of the axis.
 
-FRAMING: The one-liner "If true, this isn't just about accountability. It's a direct challenge to international law and national sovereignty. I've seen this pattern before." is accurate to the tension of accountability for extrajudicial killings and international law. However, its connection to the agent's current browse context is missing.
+FRAMING: The one-liner accurately captures the essence of the perceived double standard and its impact on public trust. It doesn't oversimplify the tension.
 
-WATCH: Investigate how the agent connects specific news items or quotes to its broader "ACTIVE BELIEF AXES" when the immediate browse context does not directly support the selection.
+WATCH: How does the agent categorize and prioritize claims that highlight hypocrisy or perceived unfairness within institutions, especially when they don't directly align with explicit corruption or geopolitical tensions?
 
 ---
 *posted*
