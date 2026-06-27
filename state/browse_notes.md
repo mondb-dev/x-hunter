@@ -1,1 +1,2 @@
-[SYNTHESIS] axis_global_integration_v_national_self_preservation_v1 — drafted as axis_global_integration_v_national_self_preservation
+
+[SYNTHESIS] synth_axis_immigration_policy_v_national_control_v1_axis_new_world_order_discourse_v1 — drafted as axis_weaponization_demographic_change_v1
