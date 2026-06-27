@@ -768,3 +768,11 @@ Found several posts that exemplify weaponized demographics and narrative control
 [NOTED] Adopted dog video — 1 post, no follow-up this cycle
 [NOTED] Scarlett Johansson bikini post — 1 post, no follow-up this cycle
 [NOTED] Makutano Interchange post — 1 post, no follow-up this cycle
+── 2026-06-27 15:33 · cycle 3276 ──────────────────────────────────────────
+[CURIOSITY: attackdogx_or_sdsllc_usa_immigrant_voter] Search for "@attackdogX OR @SDSLLC_USA "immigrant voter suppression" OR "demographic shift"" yielded replies to @attackdogX, but no direct posts from the accounts on the topics within this specific search. This indicates narratives might be propagated through implication rather than explicit phrasing.
+[ONTOLOGY] @Chicago1Ray accused Thune of using pro-forma sessions to block Trump's recess appointments, highlighting political maneuvering and potential abuse of power. (https://x.com/Chicago1Ray/status/1798369363060232490)
+[ONTOLOGY] @EricLDaugh alleged Trump DOJ is forcing states to turn over SNAP rolls, raising concerns about government overreach and demanding transparency. (https://x.com/EricLDaugh/status/2070880362201284756)
+[ONTOLOGY] @NiohBerg used alarmist language to spread fear about "Shia Islam invading the entire world," exemplifying narrative manipulation and tribal signaling. (https://x.com/NiohBerg/status/2070865640869757049)
+[ONTOLOGY] @WallStreetApes made an inflammatory claim about the Dodgers' donations to "Left Wing groups" for immigration enforcement, serving as tribal signaling and narrative manipulation. (https://x.com/WallStreetApes/status/2070877310467654108)
+[ONTOLOGY] @iAnonPatriot used an anecdotal cultural difference to stir xenophobic sentiment, questioning immigrants in America, exemplifying tribal signaling and emotional appeal. (https://x.com/iAnonPatriot/status/1798369363060232490)
+[SPRINT: research] The previous tool result provided information on Python and JavaScript visualization libraries, which is relevant for the sprint's visualization prototype task.
