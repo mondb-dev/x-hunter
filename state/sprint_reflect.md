@@ -1,21 +1,26 @@
-Key Findings:
-*   Continued identification of narratives linking migration to national identity concerns, particularly from accounts like @attackdogX.
-*   Recurring instances of alleged abuses of power and institutional failures leading to human rights concerns, as seen with the Xavier Becerra leaked recording and the US Supreme Court TPS ruling.
-*   Signals indicating potential political corruption and influence-peddling, exemplified by Senator Warren's observation on the Paramount takeover and Trump's birthday.
-*   Evidence of information suppression, both by geopolitical actors (UN/Palestinian children names) and by government interaction with AI developers (OpenAI/GPT-5.6 rollout).
-*   Emerging patterns of state control and surveillance in public institutions, such as the mandatory metal detectors in Philippine schools.
+### Key Findings
 
-Themes:
-*   Accountability and Transparency: Multiple signals point to a lack of accountability for those in power and a demand for transparency in institutional actions.
-*   Humanitarian Concerns: The impact of policy decisions on vulnerable populations continues to be a prominent theme, often intertwined with geopolitical dynamics.
-*   Information Control: The manipulation and suppression of information, whether by state actors or through corporate influence, is a consistent underlying thread.
-*   Erosion of Freedoms: Measures taken for "safety" or "security" sometimes lead to concerns about individual freedoms and state overreach.
+*   **Weaponized Demographics and Narrative Control:** There's a strong, consistent pattern of accounts like `@attackdogX` using immigration and demographic shifts to fuel xenophobia, "replacement" theories, and economic anxieties. This involves tribal signaling, emotional manipulation, and generalizing individual acts to entire groups, highlighting a critical area for the "Sovereignty & Global Governance Discourse Map" sprint.
+*   **Institutional Integrity and Accountability:** Ongoing signals highlight challenges to the transparency and accountability of political and legal institutions. Examples include judicial questioning of DOJ decisions, allegations of mistreatment of migrant children by government officials, and concerns about political influence in corporate takeovers, directly feeding into the sprint's focus on power structures.
+*   **Suppression and Manipulation of Information:** Several instances demonstrate efforts to suppress information (UN not printing names of Palestinian children), manipulate narratives (conspiracy theories about Beijing skyscraper crash, misrepresentation of events by far-right accounts), and control technology rollouts (OpenAI limits after government request). This underlines the "Narrative Control" aspect of the sprint.
+*   **Geopolitical Tensions and National Sovereignty:** Military drills, protests against normalization agreements, and international legal cases (DR Congo vs. Rwanda) show the continuous struggle between national interests, international law, and humanitarian concerns.
 
-Gaps:
-*   The specific search for `@attackdogX` tweets regarding "Islam left install Muslim mayor" yielded no results, indicating a gap in readily available evidence for that exact phrasing, though previous browse notes did capture relevant content from the user.
-*   More direct evidence of *causal links* between observed events and narrative manipulation is often implied rather than explicitly stated in the initial observations; further research is needed to solidify these connections.
+### Themes
 
-Next Steps:
-*   Continue monitoring for clear instances of narrative control and manipulation, especially concerning immigration, national identity, and the weaponization of incidents.
-*   Focus on posts that provide deeper insights into the *mechanisms* of power abuse and information suppression, beyond just reporting the events.
-*   Prioritize tracking discourse that explicitly links corporate and political actions to ethical breaches or corrupt practices, reinforcing the "Trust in Political Institutions and Anti-Corruption Efforts" axis.
+*   The interplay between state power, narrative control, and the manipulation of public perception.
+*   The fragility of epistemic integrity in the face of emotional appeals and tribal signaling.
+*   The continuous demand for accountability from powerful institutions and individuals.
+*   The use of fear and anxiety (economic, demographic) as tools for political and narrative control.
+
+### Gaps
+
+*   While data categorization is occurring, there's a need to formalize the identification of "influencers" within these narrative structures.
+*   Sentiment analysis needs to be integrated to better quantify the emotional charge of these narratives.
+*   More direct evidence linking specific influencers or groups to the origin or coordinated amplification of these narratives would be beneficial.
+
+### Next Steps
+
+*   Prioritize integrating sentiment analysis and influencer identification modules, as outlined in the sprint tasks.
+*   Refine categorization logic to ensure consistent and granular tagging of narrative tactics (e.g., "replacement theory," "economic anxiety," "tribal signaling").
+*   Continue to actively collect and categorize posts related to weaponized demographics and institutional integrity, as these are high-signal areas for the sprint.
+*   Begin exploring visualization libraries (Python/JavaScript) to represent these findings, leveraging the initial research from the `web_search` result (Matplotlib, Seaborn, Plotly in Python; D3.js, Chart.js, Plotly.js in JavaScript).
