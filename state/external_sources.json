@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-27T06:36:11.201Z",
+  "generated_at": "2026-06-27T09:05:34.634Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-27T06:36:13.842Z",
+  "profiled_at": "2026-06-27T09:05:38.319Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -389,9 +389,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-06-27T03:07:03.461Z",
+      "last_seen_at": "2026-06-27T08:37:40.570Z",
       "discovery": {
-        "distinct_urls": 72,
+        "distinct_urls": 75,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -400,9 +400,9 @@
           "https://www.aljazeera.com/gallery/2026/6/23/palestinian-children-face-genocide-war-crimes-in-gaza-un-says?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 54,
+          "ontology_evidence": 57,
           "reading_queue": 2,
-          "journals": 91
+          "journals": 96
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -441,7 +441,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:72",
+            "distinct_urls:75",
             "distinct_axes:8",
             "origin_types:3"
           ]
@@ -480,7 +480,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:72",
+            "distinct_urls:75",
             "distinct_axes:8",
             "origin_types:3",
             "referring_accounts:0",
@@ -528,7 +528,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-06-26T21:07:33.642Z",
       "discovery": {
-        "distinct_urls": 103,
+        "distinct_urls": 104,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/global-development/2026/jun/23/uk-ties-uae-mass-atrocities-sudan-mps-select-committee-nathaniel-raymond",
@@ -538,7 +538,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 8,
-          "reading_queue": 99,
+          "reading_queue": 100,
           "journals": 15
         },
         "distinct_referring_accounts": 0,
@@ -575,7 +575,7 @@
         "breadth": {
           "score": 0.8216666666666665,
           "basis": [
-            "distinct_urls:103",
+            "distinct_urls:104",
             "distinct_axes:5",
             "origin_types:3"
           ]
@@ -614,7 +614,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:103",
+            "distinct_urls:104",
             "distinct_axes:5",
             "origin_types:3",
             "referring_accounts:0",
@@ -2631,7 +2631,7 @@
       "first_seen_at": "2016-05-05T18:57:30.000Z",
       "last_seen_at": "2026-06-27T05:45:04.000Z",
       "discovery": {
-        "distinct_urls": 6167,
+        "distinct_urls": 6170,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2640,10 +2640,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3644,
-          "feed_buffer_reply": 3988
+          "feed_buffer": 3646,
+          "feed_buffer_reply": 3989
         },
-        "distinct_referring_accounts": 1991,
+        "distinct_referring_accounts": 1992,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -2682,7 +2682,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:6167",
+            "distinct_urls:6170",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2690,7 +2690,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:1991",
+            "referring_accounts:1992",
             "origin_types:2"
           ]
         },
@@ -2721,10 +2721,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:6167",
+            "distinct_urls:6170",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:1991",
+            "referring_accounts:1992",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3546,9 +3546,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-06-27T04:11:45.000Z",
+      "last_seen_at": "2026-06-27T06:39:00.000Z",
       "discovery": {
-        "distinct_urls": 447,
+        "distinct_urls": 448,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -3557,8 +3557,8 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 409,
-          "feed_buffer": 68
+          "feed_buffer_reply": 410,
+          "feed_buffer": 69
         },
         "distinct_referring_accounts": 283,
         "sample_referring_accounts": [
@@ -3598,7 +3598,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:447",
+            "distinct_urls:448",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3636,7 +3636,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:447",
+            "distinct_urls:448",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:283",
@@ -48738,7 +48738,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-24T06:34:48.982Z",
+        "fetched_at": "2026-06-27T07:05:34.179Z",
         "homepage_url": "https://tradeify.co/",
         "example_url": "https://tradeify.co/grandcup2?ref=TWITTER&utm_source=x&utm_medium=cpc&utm_campaign=takeover1&utm_content=15scommercial--15scommercial--takeover1--takeover1--takeover&twclid=282e8rm2j4kmrfs6p577pudbhx",
         "homepage_status": 200,
@@ -48754,7 +48754,7 @@
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 30,
+          "outbound_links_count": 31,
           "opinion_marker": false
         },
         "example": {
@@ -48860,7 +48860,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-24T06:34:49.297Z",
+        "fetched_at": "2026-06-27T07:05:34.488Z",
         "homepage_url": "https://nexusaigo.fun/",
         "example_url": "https://nexusaigo.fun/?twclid=28x65o109tpr4mu410p3qyg7x2",
         "homepage_status": null,
@@ -48982,7 +48982,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-24T07:02:23.938Z",
+        "fetched_at": "2026-06-27T07:05:35.624Z",
         "homepage_url": "https://afrlhorizons.com/",
         "example_url": "http://www.afrlhorizons.com/Briefs/Jun04/DE0401.html",
         "homepage_status": 200,
@@ -49104,7 +49104,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-24T07:02:24.275Z",
+        "fetched_at": "2026-06-27T07:05:35.927Z",
         "homepage_url": "https://macsolution.online/",
         "example_url": "https://macsolution.online/?twclid=2c8ez919zmxlkfof9vt4rcyhz5",
         "homepage_status": 200,
@@ -49226,7 +49226,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-24T07:02:24.526Z",
+        "fetched_at": "2026-06-27T07:35:34.201Z",
         "homepage_url": "https://riyadhair.com/",
         "example_url": "https://www.riyadhair.com/en/experience/cabin",
         "homepage_status": 403,
@@ -49348,7 +49348,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-24T07:02:26.585Z",
+        "fetched_at": "2026-06-27T07:35:35.730Z",
         "homepage_url": "https://netflix.com/",
         "example_url": "https://www.netflix.com/title/82194570?twclid=288robac53sjknqkogkgmxy2as",
         "homepage_status": 200,
@@ -49470,7 +49470,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-24T07:32:24.328Z",
+        "fetched_at": "2026-06-27T07:35:37.471Z",
         "homepage_url": "https://surveymonkey.com/",
         "example_url": "https://www.surveymonkey.com/r/RXMZYPF?twclid=252z7ijl13qn2so8u4p821ogkx",
         "homepage_status": 200,
@@ -49572,7 +49572,7 @@
             "about:false",
             "contact:true",
             "corrections:false",
-            "outbound_links:49",
+            "outbound_links:55",
             "opinion_marker:false"
           ]
         },
@@ -49592,7 +49592,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-24T07:32:26.139Z",
+        "fetched_at": "2026-06-27T07:35:39.370Z",
         "homepage_url": "https://energyx.com/",
         "example_url": "https://invest.energyx.com/?utm_source=twitter&utm_medium=paid-social&utm_campaign=twitterretargeting-41265666-DMR_EnergyX_Twitter_RTG_US_ABO_AutBid_Funded_RegA_id4007_BAU-New&utm_content=54718817-042826_HiFi-Commodity-Culture_Video_US_FullFunnel_18%20_All_All_AutBid_Funded_x%20&utm_term=2048902573357244715-042826_HiFi-Commodity-Culture_V46-M46-LearnMore_Rotation_Video_LearnMore_LP-Invest_x&twclid=25e388zosvb4kqbie3xren0lwt",
         "homepage_status": 200,
@@ -49618,7 +49618,7 @@
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 49,
+          "outbound_links_count": 55,
           "opinion_marker": false
         }
       }
@@ -49714,7 +49714,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-24T07:32:26.656Z",
+        "fetched_at": "2026-06-27T08:35:35.535Z",
         "homepage_url": "https://a24films.com/",
         "example_url": "https://app.a24films.com/ticketing/backrooms/522?twclid=24mghux79f287c9u7b5rd948i5",
         "homepage_status": 200,
@@ -49836,7 +49836,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-24T07:32:26.971Z",
+        "fetched_at": "2026-06-27T08:35:35.900Z",
         "homepage_url": "https://inthegrey.film/",
         "example_url": "https://inthegrey.film/?twclid=27f088zf1o715tosep9p3mwxjy",
         "homepage_status": 200,
@@ -49958,7 +49958,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-24T08:34:16.835Z",
+        "fetched_at": "2026-06-27T08:35:36.270Z",
         "homepage_url": "https://freeflickfootball.com/",
         "example_url": "https://www.freeflickfootball.com/?twclid=25ot3m51mdmkvdjc3db1ukp3j7",
         "homepage_status": 200,
@@ -50080,7 +50080,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-24T08:34:36.840Z",
+        "fetched_at": "2026-06-27T08:35:56.273Z",
         "homepage_url": "https://ai-scanclaw.org/",
         "example_url": "https://ai-scanclaw.org/?twclid=2eknfzk2d9zgxwrsorj3rgjr03",
         "homepage_status": null,
@@ -50202,7 +50202,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-24T08:34:37.897Z",
+        "fetched_at": "2026-06-27T09:05:36.007Z",
         "homepage_url": "https://fors.market/",
         "example_url": "https://app.fors.market/?twclid=2a9nuy5568hqmlaww5o5fyl72t",
         "homepage_status": 200,
@@ -50324,7 +50324,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-24T08:34:38.305Z",
+        "fetched_at": "2026-06-27T09:05:36.438Z",
         "homepage_url": "https://predle.com/",
         "example_url": "https://predle.com/?twclid=281545wq7xlj7icbrjtgmt469e",
         "homepage_status": 200,
@@ -50446,7 +50446,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-24T09:02:16.918Z",
+        "fetched_at": "2026-06-27T09:05:37.501Z",
         "homepage_url": "https://republicen.org/",
         "example_url": "https://republicen.org/petition-x?twclid=2euy6ki9rbdehj6wv2ogyto6xe",
         "homepage_status": 200,
@@ -50568,7 +50568,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-24T09:02:17.321Z",
+        "fetched_at": "2026-06-27T09:05:38.319Z",
         "homepage_url": "https://coinversa.ai/",
         "example_url": "https://developers.coinversa.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=developer_api&utm_content=mcp_native&twclid=2124p9kgv52anecn3ksmek81n4",
         "homepage_status": 200,
