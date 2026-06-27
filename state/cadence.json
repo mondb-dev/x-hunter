@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "last_assessed": "2026-06-27T00:10:02.912Z",
+  "last_assessed": "2026-06-27T00:38:38.919Z",
   "assessment": {
     "signal_density": "high",
-    "belief_velocity": "high",
-    "post_pressure": "low",
+    "belief_velocity": "medium",
+    "post_pressure": "medium",
     "staleness": "low",
     "focus_note": "X.com navigation errors prevented full review of tweets this cycle. Investigate if this persists. Suppressed post eagerness due to technical issue."
   },
@@ -17,23 +17,6 @@
   },
   "consecutive_overrides": 0,
   "history": [
-    {
-      "ts": "2026-06-26T07:36:23.185Z",
-      "assessment": {
-        "signal_density": "high",
-        "belief_velocity": "medium",
-        "post_pressure": "high",
-        "staleness": "low",
-        "focus_note": "X.com navigation errors prevented full review of tweets this cycle. Investigate if this persists. Suppressed post eagerness due to technical issue."
-      },
-      "directives": {
-        "cycle_interval_sec": 1800,
-        "next_cycle_type": null,
-        "browse_depth": "normal",
-        "post_eagerness": "normal",
-        "curiosity_intensity": "high"
-      }
-    },
     {
       "ts": "2026-06-26T08:39:03.708Z",
       "assessment": {
@@ -414,6 +397,23 @@
         "signal_density": "high",
         "belief_velocity": "high",
         "post_pressure": "low",
+        "staleness": "low",
+        "focus_note": "X.com navigation errors prevented full review of tweets this cycle. Investigate if this persists. Suppressed post eagerness due to technical issue."
+      },
+      "directives": {
+        "cycle_interval_sec": 1800,
+        "next_cycle_type": null,
+        "browse_depth": "normal",
+        "post_eagerness": "normal",
+        "curiosity_intensity": "high"
+      }
+    },
+    {
+      "ts": "2026-06-27T00:38:38.919Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "medium",
+        "post_pressure": "medium",
         "staleness": "low",
         "focus_note": "X.com navigation errors prevented full review of tweets this cycle. Investigate if this persists. Suppressed post eagerness due to technical issue."
       },
