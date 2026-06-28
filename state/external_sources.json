@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-28T00:36:24.379Z",
+  "generated_at": "2026-06-28T01:05:52.543Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-28T00:36:31.094Z",
+  "profiled_at": "2026-06-28T01:05:59.462Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -69,14 +69,14 @@
           ]
         },
         "profile": {
-          "score": 0.64,
-          "confidence": 0.65,
+          "score": 0.38,
+          "confidence": 0.55,
           "basis": [
             "meta_author:false",
             "published_time:false",
             "canonical:true",
-            "about:true",
-            "contact:true",
+            "about:false",
+            "contact:false",
             "corrections:true",
             "outbound_links:18",
             "opinion_marker:false"
@@ -100,23 +100,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T01:02:33.468Z",
+        "fetched_at": "2026-06-28T01:05:56.574Z",
         "homepage_url": "https://ojp.gov/",
         "example_url": "https://bjs.ojp.gov/library/publications/violent-victimization-race-or-hispanic-origin-2008-2012",
-        "homepage_status": 200,
+        "homepage_status": null,
         "example_status": 404,
-        "homepage_final_url": "https://www.ojp.gov/",
+        "homepage_final_url": "https://ojp.gov/",
         "example_final_url": "https://bjs.ojp.gov/library/publications/violent-victimization-race-or-hispanic-origin-2008-2012",
-        "homepage_content_type": "text/html; charset=UTF-8",
+        "homepage_content_type": "",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": true,
-          "has_corrections_link": true,
-          "outbound_links_count": 20,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
           "opinion_marker": false
         },
         "example": {
@@ -528,7 +528,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-06-27T23:07:10.155Z",
       "discovery": {
-        "distinct_urls": 116,
+        "distinct_urls": 117,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/global-development/2026/jun/23/uk-ties-uae-mass-atrocities-sudan-mps-select-committee-nathaniel-raymond",
@@ -538,7 +538,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 9,
-          "reading_queue": 112,
+          "reading_queue": 113,
           "journals": 17
         },
         "distinct_referring_accounts": 0,
@@ -575,7 +575,7 @@
         "breadth": {
           "score": 0.8216666666666665,
           "basis": [
-            "distinct_urls:116",
+            "distinct_urls:117",
             "distinct_axes:5",
             "origin_types:3"
           ]
@@ -614,7 +614,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:116",
+            "distinct_urls:117",
             "distinct_axes:5",
             "origin_types:3",
             "referring_accounts:0",
@@ -2764,7 +2764,7 @@
       "first_seen_at": "2016-05-05T18:57:30.000Z",
       "last_seen_at": "2026-06-27T23:51:48.000Z",
       "discovery": {
-        "distinct_urls": 6202,
+        "distinct_urls": 6205,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2773,8 +2773,8 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3664,
-          "feed_buffer_reply": 4009
+          "feed_buffer": 3666,
+          "feed_buffer_reply": 4011
         },
         "distinct_referring_accounts": 2004,
         "sample_referring_accounts": [
@@ -2815,7 +2815,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:6202",
+            "distinct_urls:6205",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2854,7 +2854,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:6202",
+            "distinct_urls:6205",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2004",
@@ -4300,7 +4300,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T01:02:35.978Z",
+        "fetched_at": "2026-06-28T01:05:58.427Z",
         "homepage_url": "https://inquirer.net/",
         "example_url": "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
         "homepage_status": 200,
@@ -14698,7 +14698,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T01:02:36.408Z",
+        "fetched_at": "2026-06-28T01:05:59.050Z",
         "homepage_url": "https://absinthe.network/",
         "example_url": "https://boost.absinthe.network/8hhp-sfkk/home?utm_source=x&utm_medium=cpc&utm_campaign=Absinthe&utm_id=sero&utm_content=Mar26&twclid=25502jccgfzmkpf20p6sbvaj8t",
         "homepage_status": 200,
@@ -21547,7 +21547,7 @@
           ]
         },
         "profile": {
-          "score": 0.15999999999999998,
+          "score": 0.16999999999999998,
           "confidence": 0.55,
           "basis": [
             "meta_author:false",
@@ -21556,7 +21556,7 @@
             "about:false",
             "contact:true",
             "corrections:false",
-            "outbound_links:4",
+            "outbound_links:5",
             "opinion_marker:false"
           ]
         },
@@ -21576,7 +21576,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T01:02:36.946Z",
+        "fetched_at": "2026-06-28T01:05:59.462Z",
         "homepage_url": "https://moxt.ai/",
         "example_url": "https://moxt.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=x-brand-build-your-ai-team&utm_content=video-49s&utm_term=en-desktop&twclid=24fse5wprkux1ktw6we6w27x5c",
         "homepage_status": 200,
@@ -21592,7 +21592,7 @@
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 4,
+          "outbound_links_count": 5,
           "opinion_marker": false
         },
         "example": {
@@ -21602,7 +21602,7 @@
           "has_about_link": false,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 4,
+          "outbound_links_count": 5,
           "opinion_marker": false
         }
       }

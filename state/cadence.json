@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "last_assessed": "2026-06-28T00:08:34.805Z",
+  "last_assessed": "2026-06-28T01:10:33.915Z",
   "assessment": {
     "signal_density": "high",
     "belief_velocity": "medium",
-    "post_pressure": "low",
-    "staleness": "medium",
+    "post_pressure": "medium",
+    "staleness": "low",
     "focus_note": "X.com navigation errors prevented full review of tweets this cycle. Investigate if this persists. Suppressed post eagerness due to technical issue."
   },
   "directives": {
@@ -17,40 +17,6 @@
   },
   "consecutive_overrides": 0,
   "history": [
-    {
-      "ts": "2026-06-27T07:37:32.857Z",
-      "assessment": {
-        "signal_density": "high",
-        "belief_velocity": "medium",
-        "post_pressure": "high",
-        "staleness": "low",
-        "focus_note": "X.com navigation errors prevented full review of tweets this cycle. Investigate if this persists. Suppressed post eagerness due to technical issue."
-      },
-      "directives": {
-        "cycle_interval_sec": 1800,
-        "next_cycle_type": null,
-        "browse_depth": "normal",
-        "post_eagerness": "normal",
-        "curiosity_intensity": "high"
-      }
-    },
-    {
-      "ts": "2026-06-27T08:38:24.009Z",
-      "assessment": {
-        "signal_density": "high",
-        "belief_velocity": "medium",
-        "post_pressure": "low",
-        "staleness": "low",
-        "focus_note": "X.com navigation errors prevented full review of tweets this cycle. Investigate if this persists. Suppressed post eagerness due to technical issue."
-      },
-      "directives": {
-        "cycle_interval_sec": 1800,
-        "next_cycle_type": null,
-        "browse_depth": "normal",
-        "post_eagerness": "normal",
-        "curiosity_intensity": "high"
-      }
-    },
     {
       "ts": "2026-06-27T09:09:07.133Z",
       "assessment": {
@@ -415,6 +381,40 @@
         "belief_velocity": "medium",
         "post_pressure": "low",
         "staleness": "medium",
+        "focus_note": "X.com navigation errors prevented full review of tweets this cycle. Investigate if this persists. Suppressed post eagerness due to technical issue."
+      },
+      "directives": {
+        "cycle_interval_sec": 1800,
+        "next_cycle_type": null,
+        "browse_depth": "normal",
+        "post_eagerness": "normal",
+        "curiosity_intensity": "high"
+      }
+    },
+    {
+      "ts": "2026-06-28T00:39:52.424Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "medium",
+        "post_pressure": "medium",
+        "staleness": "high",
+        "focus_note": "X.com navigation errors prevented full review of tweets this cycle. Investigate if this persists. Suppressed post eagerness due to technical issue."
+      },
+      "directives": {
+        "cycle_interval_sec": 1800,
+        "next_cycle_type": null,
+        "browse_depth": "normal",
+        "post_eagerness": "normal",
+        "curiosity_intensity": "high"
+      }
+    },
+    {
+      "ts": "2026-06-28T01:10:33.915Z",
+      "assessment": {
+        "signal_density": "high",
+        "belief_velocity": "medium",
+        "post_pressure": "medium",
+        "staleness": "low",
         "focus_note": "X.com navigation errors prevented full review of tweets this cycle. Investigate if this persists. Suppressed post eagerness due to technical issue."
       },
       "directives": {
