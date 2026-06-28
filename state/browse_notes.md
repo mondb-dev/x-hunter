@@ -1,2 +1,2 @@
 
-[SYNTHESIS] synth_axis_national_identity_sovereignty_nexus_v1 — drafted as axis_national_identity_sovereignty_nexus_v1
+[SYNTHESIS] axis_immigration_policy_v_national_control_v1, axis_new_world_order_discourse_v1, axis_global_economic_stability_v1 — drafted as axis_sovereignty_autonomy_globalization
