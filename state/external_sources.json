@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-28T12:06:07.055Z",
+  "generated_at": "2026-06-28T15:06:14.840Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-28T12:06:10.483Z",
+  "profiled_at": "2026-06-28T15:06:18.458Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -389,20 +389,20 @@
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-06-28T11:37:40.126Z",
+      "last_seen_at": "2026-06-28T14:37:12.803Z",
       "discovery": {
-        "distinct_urls": 128,
+        "distinct_urls": 133,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
+          "https://www.theguardian.com/uk-news/2026/jun/28/complaints-iopc-met-police-mohamed-al-fayed-harrods",
           "https://www.theguardian.com/australia-news/2026/jun/28/pro-one-nation-facebook-groups-foreign-meme-factories-monetised-content-ntwnfb",
-          "https://www.theguardian.com/global-development/2026/jun/23/uk-ties-uae-mass-atrocities-sudan-mps-select-committee-nathaniel-raymond",
-          "https://www.theguardian.com/global-development/2026/jun/18/taliban-ban-smartphones-officials-shown-destroying-devices"
+          "https://www.theguardian.com/global-development/2026/jun/23/uk-ties-uae-mass-atrocities-sudan-mps-select-committee-nathaniel-raymond"
         ],
         "origin_counts": {
-          "ontology_evidence": 12,
-          "reading_queue": 121,
-          "journals": 26
+          "ontology_evidence": 14,
+          "reading_queue": 123,
+          "journals": 32
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -440,7 +440,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:128",
+            "distinct_urls:133",
             "distinct_axes:7",
             "origin_types:3"
           ]
@@ -479,7 +479,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:128",
+            "distinct_urls:133",
             "distinct_axes:7",
             "origin_types:3",
             "referring_accounts:0",
@@ -525,9 +525,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-06-28T11:37:40.126Z",
+      "last_seen_at": "2026-06-28T14:37:12.803Z",
       "discovery": {
-        "distinct_urls": 86,
+        "distinct_urls": 90,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -536,9 +536,9 @@
           "https://www.aljazeera.com/gallery/2026/6/23/palestinian-children-face-genocide-war-crimes-in-gaza-un-says?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 62,
+          "ontology_evidence": 64,
           "reading_queue": 3,
-          "journals": 121
+          "journals": 127
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -577,7 +577,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:86",
+            "distinct_urls:90",
             "distinct_axes:8",
             "origin_types:3"
           ]
@@ -616,7 +616,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:86",
+            "distinct_urls:90",
             "distinct_axes:8",
             "origin_types:3",
             "referring_accounts:0",
@@ -906,7 +906,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-06-28T10:06:45.706Z",
       "discovery": {
-        "distinct_urls": 92,
+        "distinct_urls": 94,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -916,7 +916,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 5,
-          "reading_queue": 90,
+          "reading_queue": 92,
           "journals": 8
         },
         "distinct_referring_accounts": 0,
@@ -951,7 +951,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:92",
+            "distinct_urls:94",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -990,7 +990,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:92",
+            "distinct_urls:94",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -1038,7 +1038,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-06-28T03:12:48.203Z",
       "discovery": {
-        "distinct_urls": 57,
+        "distinct_urls": 58,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1048,7 +1048,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 4,
-          "reading_queue": 56,
+          "reading_queue": 57,
           "journals": 7
         },
         "distinct_referring_accounts": 0,
@@ -1082,7 +1082,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:57",
+            "distinct_urls:58",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -1120,7 +1120,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:57",
+            "distinct_urls:58",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -2765,9 +2765,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-28T11:36:27.000Z",
+      "last_seen_at": "2026-06-28T13:34:05.000Z",
       "discovery": {
-        "distinct_urls": 6237,
+        "distinct_urls": 6242,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2777,9 +2777,9 @@
         ],
         "origin_counts": {
           "feed_buffer": 3680,
-          "feed_buffer_reply": 4039
+          "feed_buffer_reply": 4044
         },
-        "distinct_referring_accounts": 2017,
+        "distinct_referring_accounts": 2021,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -2818,7 +2818,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:6237",
+            "distinct_urls:6242",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2826,7 +2826,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:2017",
+            "referring_accounts:2021",
             "origin_types:2"
           ]
         },
@@ -2857,10 +2857,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:6237",
+            "distinct_urls:6242",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:2017",
+            "referring_accounts:2021",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3786,7 +3786,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T13:04:48.007Z",
+        "fetched_at": "2026-06-28T13:06:17.037Z",
         "homepage_url": "https://steampowered.com/",
         "example_url": "https://store.steampowered.com/app/1315180?twclid=2cb8mho5n4udnkq1fnm1yi4kkh",
         "homepage_status": 200,
@@ -7371,7 +7371,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T13:04:48.607Z",
+        "fetched_at": "2026-06-28T13:06:17.622Z",
         "homepage_url": "https://tinyurl.com/",
         "example_url": "https://tinyurl.com/yc8xxez5?twclid=2dnd76jy9k71tnu9ve267e0uz7",
         "homepage_status": 200,
@@ -9012,7 +9012,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T13:04:48.886Z",
+        "fetched_at": "2026-06-28T13:06:17.969Z",
         "homepage_url": "https://heylemon.ai/",
         "example_url": "https://heylemon.ai/?utm_source=paid_X_all1&twclid=2bprvotipsebt2ywwd413k1c6r",
         "homepage_status": 200,
@@ -9138,7 +9138,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T13:04:49.290Z",
+        "fetched_at": "2026-06-28T13:06:18.339Z",
         "homepage_url": "https://wavedash.com/",
         "example_url": "https://wavedash.com/?twclid=29k171tm7pjzrxbob4j7cmjl3o",
         "homepage_status": 200,
@@ -9642,7 +9642,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T13:34:55.289Z",
+        "fetched_at": "2026-06-28T13:36:09.979Z",
         "homepage_url": "https://teslahubs.com/",
         "example_url": "https://teslahubs.com/products/teslahubs-proguard-advanced-noise-reduction-weatherproofing-kit?tw_source=twitter&tw_campaign=May_2_ProGuard_Sales__Men_25_34_Web_02_05_2026&utm_term=Static_PG_img_224_1.1&twclid=22spdhzoczolm0ipnjon5bt2pn",
         "homepage_status": 200,
@@ -9894,7 +9894,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T13:34:55.618Z",
+        "fetched_at": "2026-06-28T13:36:10.276Z",
         "homepage_url": "https://h-tech.space/",
         "example_url": "https://teamlore.h-tech.space/?twclid=21cpesmzgsrh5ius8yd25zbe9t",
         "homepage_status": null,
@@ -10022,13 +10022,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T13:34:57.799Z",
+        "fetched_at": "2026-06-28T13:36:12.701Z",
         "homepage_url": "https://onelink.me/",
         "example_url": "https://vix.onelink.me/Z4oU/hyuh928w?twclid=24s36ffdjwv85ew8o2yfteqmxu",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://www.appsflyer.com/products/deep-linking/",
-        "example_final_url": "https://vix.com/es-es/deportes?af_ad=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&af_xp=social&twclid=24s36ffdjwv85ew8o2yfteqmxu&af_dp=vixapp%3A%2F%2Fes-es%2Fdeportes&shortlink=hyuh928w&af_adset=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&source_caller=ui&pid=Twitter_Paid&c=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026",
+        "example_final_url": "https://vix.com/es-es/deportes?shortlink=hyuh928w&pid=Twitter_Paid&c=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&af_xp=social&af_dp=vixapp%3A%2F%2Fes-es%2Fdeportes&source_caller=ui&twclid=24s36ffdjwv85ew8o2yfteqmxu&af_adset=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026&af_ad=US_SVOD_Web-Mob_Awa_Prosp_PSO_TW-Reach_WEB-MOBILE_Broad_Series-RiquisimosPorCiertoMayo2026",
         "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -10530,7 +10530,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T13:34:59.185Z",
+        "fetched_at": "2026-06-28T13:36:14.137Z",
         "homepage_url": "https://kubit.ai/",
         "example_url": "https://kubit.ai/agent-analytics-landing/?utm_source=x_ads&utm_medium=paid_social&utm_campaign=claude_group&twclid=2eb9hv62es2e93pzc1qorbclgf",
         "homepage_status": 200,
@@ -11445,6 +11445,134 @@
       }
     },
     {
+      "domain": "mikmak.ai",
+      "entity": "Mikmak Ai",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-06T07:01:01.304Z",
+      "last_seen_at": "2026-06-28T14:31:25.168Z",
+      "discovery": {
+        "distinct_urls": 7,
+        "example_urls": [
+          "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2dqu9rpgpoqo0mblvt9uebl5t7",
+          "https://shop.mikmak.ai/social/698bfbf209bd0c170611db64?utm_source=Twitter&utm_medium=Paid_Social&utm_campaign=PortfolioSummer&utm_term=Interests&utm_content=XPromotedAds&utm_placement=Promoted&utm_marketing_tactic=Awareness&twclid=2erpk724xjmjvqlajzay0lf0vc",
+          "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2ekbffb914a13rdlkfjn34v588",
+          "https://shop.mikmak.ai/social/6993fdf4abb9fa11bfdf75d6?utm_source=Twitter&utm_medium=Paid_Social&utm_campaign=PortfolioSummer&utm_term=Interests&utm_content=XPromotedAds&utm_placement=Promoted&utm_marketing_tactic=Awareness&twclid=2eca1gcsc8vrpfekntz0wze58a",
+          "https://shop.mikmak.ai/social/682d49d718a5080f422dda78?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FW-&utm_content=hlm-flavors-love-island-hero_jar-and-squeezes_spicy_fried-chicken-sandwich_bsay_na_16x9_twpr_30s_shnw_en_stp_mikmak_dark_na_sta-base_042_na_na_0565-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-broad&utm_placementid=P3G43FW&utm_variant=brandsay&twclid=26fysp8f210m5spgj4dyl0vww3"
+        ],
+        "origin_counts": {
+          "feed_buffer": 7
+        },
+        "distinct_referring_accounts": 3,
+        "sample_referring_accounts": [
+          "enews",
+          "kraftheinzbrand",
+          "loveislandusa"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.26416666666666666,
+          "basis": [
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.4125,
+          "basis": [
+            "referring_accounts:3",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.15000000000000002,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.4058333333333333,
+          "confidence": 0.3176,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:7",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:3",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-25T17:35:13.462Z",
+        "homepage_url": "https://mikmak.ai/",
+        "example_url": "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2dqu9rpgpoqo0mblvt9uebl5t7",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.mikmak.com/",
+        "example_final_url": "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2dqu9rpgpoqo0mblvt9uebl5t7",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 49,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "merck.com",
       "entity": "Merck",
       "kind": "unknown",
@@ -11539,7 +11667,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T14:34:53.732Z",
+        "fetched_at": "2026-06-28T14:36:13.432Z",
         "homepage_url": "https://merck.com/",
         "example_url": "https://www.merck.com/stories/were-pursuing-innovative-science-with-antibody-drug-conjugate-adc-research/?utm_source=twitter&utm_medium=paid-social&utm_campaign=US_NON_oncoalwayson_OT_AW_202604&utm_content=na_NA_VID_18s&twclid=2ashs3kuiq7isb412ax3cbgusn",
         "homepage_status": 200,
@@ -11665,7 +11793,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T14:34:53.944Z",
+        "fetched_at": "2026-06-28T14:36:13.671Z",
         "homepage_url": "https://fabletics.com/",
         "example_url": "https://www.fabletics.com/dmg/926C08?utm_medium=paid_social_media&utm_source=twitter&utm_campaign=twitter_campaign_id_FLM56&utm_content=twitter_adgroup_id_FLM56-1&utm_term=twitter_ad_id_FLM56-1-11&twclid=21tkc8gfxmeyk2zkude4aqtxx0",
         "homepage_status": 403,
@@ -12205,134 +12333,6 @@
       }
     },
     {
-      "domain": "mikmak.ai",
-      "entity": "Mikmak Ai",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-06T07:01:01.304Z",
-      "last_seen_at": "2026-06-23T12:01:20.710Z",
-      "discovery": {
-        "distinct_urls": 6,
-        "example_urls": [
-          "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2dqu9rpgpoqo0mblvt9uebl5t7",
-          "https://shop.mikmak.ai/social/698bfbf209bd0c170611db64?utm_source=Twitter&utm_medium=Paid_Social&utm_campaign=PortfolioSummer&utm_term=Interests&utm_content=XPromotedAds&utm_placement=Promoted&utm_marketing_tactic=Awareness&twclid=2erpk724xjmjvqlajzay0lf0vc",
-          "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2ekbffb914a13rdlkfjn34v588",
-          "https://shop.mikmak.ai/social/6993fdf4abb9fa11bfdf75d6?utm_source=Twitter&utm_medium=Paid_Social&utm_campaign=PortfolioSummer&utm_term=Interests&utm_content=XPromotedAds&utm_placement=Promoted&utm_marketing_tactic=Awareness&twclid=2eca1gcsc8vrpfekntz0wze58a",
-          "https://shop.mikmak.ai/social/682d49d718a5080f422dda78?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FW-&utm_content=hlm-flavors-love-island-hero_jar-and-squeezes_spicy_fried-chicken-sandwich_bsay_na_16x9_twpr_30s_shnw_en_stp_mikmak_dark_na_sta-base_042_na_na_0565-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-broad&utm_placementid=P3G43FW&utm_variant=brandsay&twclid=26fysp8f210m5spgj4dyl0vww3"
-        ],
-        "origin_counts": {
-          "feed_buffer": 6
-        },
-        "distinct_referring_accounts": 3,
-        "sample_referring_accounts": [
-          "enews",
-          "kraftheinzbrand",
-          "loveislandusa"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.235,
-          "basis": [
-            "distinct_urls:6",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.4125,
-          "basis": [
-            "referring_accounts:3",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.15000000000000002,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:1",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.399453125,
-          "confidence": 0.288975,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:6",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:3",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-25T17:35:13.462Z",
-        "homepage_url": "https://mikmak.ai/",
-        "example_url": "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2dqu9rpgpoqo0mblvt9uebl5t7",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.mikmak.com/",
-        "example_final_url": "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2dqu9rpgpoqo0mblvt9uebl5t7",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 49,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
       "domain": "scitools.com",
       "entity": "Scitools",
       "kind": "unknown",
@@ -12679,7 +12679,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T14:34:54.957Z",
+        "fetched_at": "2026-06-28T14:36:14.681Z",
         "homepage_url": "https://darkhours-thegame.com/",
         "example_url": "https://www.darkhours-thegame.com/xbox?utm_source=twitter&utm_campaign=XboxLaunch&utm_medium=pc&utm_content=Diftborn&utm_term=us&twclid=271vf2o4bu11vai5qyjclxea1r",
         "homepage_status": 200,
@@ -12805,7 +12805,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T14:34:56.202Z",
+        "fetched_at": "2026-06-28T14:36:15.753Z",
         "homepage_url": "https://zavu.dev/",
         "example_url": "https://www.zavu.dev/?twclid=28xrbkfqjxo8t4gl13yvgj5wa8",
         "homepage_status": 200,
@@ -13947,7 +13947,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T15:04:49.485Z",
+        "fetched_at": "2026-06-28T15:06:15.861Z",
         "homepage_url": "https://artyfacts.ai/",
         "example_url": "https://www.artyfacts.ai/?utm_source=x&utm_medium=paid_social&utm_campaign=waitlist_traffic&utm_content=capture_demo&utm_term=variantA&twclid=2e7ew786ao2fxw0qm1wxfdqe3b",
         "homepage_status": 200,
@@ -14073,7 +14073,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T15:04:50.112Z",
+        "fetched_at": "2026-06-28T15:06:16.361Z",
         "homepage_url": "https://subspace.build/",
         "example_url": "https://subspace.build/?utm_source=x&utm_campaign=memory_card_trick&twclid=26pw69bugqoexf6jq5nzgivo8r",
         "homepage_status": 200,
@@ -14449,7 +14449,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T15:04:50.381Z",
+        "fetched_at": "2026-06-28T15:06:16.654Z",
         "homepage_url": "https://redstate.com/",
         "example_url": "https://redstate.com/mike_miller/2026/06/25/ro-khanna-clashes-with-maria-bartiromo-over-the-save-america-act-calls-it-voter-suppression-n2088497",
         "homepage_status": 200,
@@ -14575,7 +14575,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T15:04:52.645Z",
+        "fetched_at": "2026-06-28T15:06:18.458Z",
         "homepage_url": "https://dlvr.it/",
         "example_url": "http://dlvr.it/TRwWsL",
         "homepage_status": 200,
