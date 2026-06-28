@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-28T09:06:08.403Z",
+  "generated_at": "2026-06-28T12:06:07.055Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-28T09:06:21.017Z",
+  "profiled_at": "2026-06-28T12:06:10.483Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -353,7 +353,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T10:04:45.151Z",
+        "fetched_at": "2026-06-28T10:06:07.112Z",
         "homepage_url": "https://justice.gov/",
         "example_url": "https://www.justice.gov/usao-ri/pr/two-business-executives-plead-guilty-tech-support-fraud-scheme?twclid=29h44gflnugo1w0tbpbxpo8m7s",
         "homepage_status": 200,
@@ -389,20 +389,20 @@
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-06-28T08:37:06.953Z",
+      "last_seen_at": "2026-06-28T11:37:40.126Z",
       "discovery": {
-        "distinct_urls": 124,
+        "distinct_urls": 128,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
+          "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
           "https://www.theguardian.com/australia-news/2026/jun/28/pro-one-nation-facebook-groups-foreign-meme-factories-monetised-content-ntwnfb",
           "https://www.theguardian.com/global-development/2026/jun/23/uk-ties-uae-mass-atrocities-sudan-mps-select-committee-nathaniel-raymond",
-          "https://www.theguardian.com/global-development/2026/jun/18/taliban-ban-smartphones-officials-shown-destroying-devices",
-          "https://www.theguardian.com/technology/2026/jun/26/apple-ipad-macbook-price-rise-australia"
+          "https://www.theguardian.com/global-development/2026/jun/18/taliban-ban-smartphones-officials-shown-destroying-devices"
         ],
         "origin_counts": {
-          "ontology_evidence": 11,
-          "reading_queue": 119,
-          "journals": 22
+          "ontology_evidence": 12,
+          "reading_queue": 121,
+          "journals": 26
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -440,7 +440,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:124",
+            "distinct_urls:128",
             "distinct_axes:7",
             "origin_types:3"
           ]
@@ -479,7 +479,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:124",
+            "distinct_urls:128",
             "distinct_axes:7",
             "origin_types:3",
             "referring_accounts:0",
@@ -525,9 +525,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-06-27T23:07:10.155Z",
+      "last_seen_at": "2026-06-28T11:37:40.126Z",
       "discovery": {
-        "distinct_urls": 83,
+        "distinct_urls": 86,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -536,9 +536,9 @@
           "https://www.aljazeera.com/gallery/2026/6/23/palestinian-children-face-genocide-war-crimes-in-gaza-un-says?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 60,
+          "ontology_evidence": 62,
           "reading_queue": 3,
-          "journals": 114
+          "journals": 121
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -577,7 +577,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:83",
+            "distinct_urls:86",
             "distinct_axes:8",
             "origin_types:3"
           ]
@@ -616,7 +616,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:83",
+            "distinct_urls:86",
             "distinct_axes:8",
             "origin_types:3",
             "referring_accounts:0",
@@ -868,7 +868,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T10:04:45.411Z",
+        "fetched_at": "2026-06-28T10:06:07.476Z",
         "homepage_url": "https://trumprx.gov/",
         "example_url": "http://trumprx.gov/",
         "homepage_status": 200,
@@ -904,20 +904,20 @@
       "entity": "Nytimes",
       "kind": "news",
       "first_seen_at": "2026-06-22T00:15:00Z",
-      "last_seen_at": "2026-06-28T03:12:48.203Z",
+      "last_seen_at": "2026-06-28T10:06:45.706Z",
       "discovery": {
-        "distinct_urls": 89,
+        "distinct_urls": 92,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
+          "https://www.nytimes.com/2026/06/28/world/americas/venezuela-quake-relief-rodriguez.html",
           "https://www.nytimes.com/2026/06/26/world/asia/world-cup-myanmar-junta.html",
-          "https://www.nytimes.com/2026/06/26/world/americas/scenes-of-collapse-the-emergency-at-venezuelas-hospitals.html",
-          "https://www.nytimes.com/live/2026/06/21/world/iran-us-trump-lebanon"
+          "https://www.nytimes.com/2026/06/26/world/americas/scenes-of-collapse-the-emergency-at-venezuelas-hospitals.html"
         ],
         "origin_counts": {
-          "ontology_evidence": 4,
-          "reading_queue": 88,
-          "journals": 6
+          "ontology_evidence": 5,
+          "reading_queue": 90,
+          "journals": 8
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -951,7 +951,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:89",
+            "distinct_urls:92",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -990,7 +990,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:89",
+            "distinct_urls:92",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -1038,7 +1038,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-06-28T03:12:48.203Z",
       "discovery": {
-        "distinct_urls": 55,
+        "distinct_urls": 57,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1048,7 +1048,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 4,
-          "reading_queue": 54,
+          "reading_queue": 56,
           "journals": 7
         },
         "distinct_referring_accounts": 0,
@@ -1082,7 +1082,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:55",
+            "distinct_urls:57",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -1120,7 +1120,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:55",
+            "distinct_urls:57",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -2198,7 +2198,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T10:04:46.003Z",
+        "fetched_at": "2026-06-28T10:06:07.911Z",
         "homepage_url": "https://youtube.com/",
         "example_url": "https://www.youtube.com/watch?v=s31Wd_dF5hI",
         "homepage_status": 200,
@@ -2367,9 +2367,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T02:51:13.362Z",
-      "last_seen_at": "2026-06-28T08:37:06.953Z",
+      "last_seen_at": "2026-06-28T10:06:45.706Z",
       "discovery": {
-        "distinct_urls": 27,
+        "distinct_urls": 28,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -2379,7 +2379,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 20,
-          "journals": 42,
+          "journals": 44,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2415,7 +2415,7 @@
         "breadth": {
           "score": 0.8216666666666665,
           "basis": [
-            "distinct_urls:27",
+            "distinct_urls:28",
             "distinct_axes:5",
             "origin_types:3"
           ]
@@ -2453,7 +2453,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:27",
+            "distinct_urls:28",
             "distinct_axes:5",
             "origin_types:3",
             "referring_accounts:0",
@@ -2765,9 +2765,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-28T08:42:00.000Z",
+      "last_seen_at": "2026-06-28T11:36:27.000Z",
       "discovery": {
-        "distinct_urls": 6231,
+        "distinct_urls": 6237,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2776,10 +2776,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3677,
-          "feed_buffer_reply": 4033
+          "feed_buffer": 3680,
+          "feed_buffer_reply": 4039
         },
-        "distinct_referring_accounts": 2015,
+        "distinct_referring_accounts": 2017,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -2818,7 +2818,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:6231",
+            "distinct_urls:6237",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2826,7 +2826,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:2015",
+            "referring_accounts:2017",
             "origin_types:2"
           ]
         },
@@ -2857,10 +2857,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:6231",
+            "distinct_urls:6237",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:2015",
+            "referring_accounts:2017",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3000,7 +3000,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T10:04:46.703Z",
+        "fetched_at": "2026-06-28T10:06:08.458Z",
         "homepage_url": "https://reut.rs/",
         "example_url": "https://reut.rs/42N9gxi",
         "homepage_status": 401,
@@ -3036,9 +3036,9 @@
       "entity": "Philstar",
       "kind": "unknown",
       "first_seen_at": "2026-05-19T10:31:49.581Z",
-      "last_seen_at": "2026-06-28T08:37:06.953Z",
+      "last_seen_at": "2026-06-28T10:06:45.706Z",
       "discovery": {
-        "distinct_urls": 24,
+        "distinct_urls": 25,
         "example_urls": [
           "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
           "https://www.philstar.com/headlines/2026/06/24/2537509/ched-tells-ateneo-explain-drowning-baterbonia-adili-or-face-sanctions",
@@ -3047,8 +3047,8 @@
           "https://www.philstar.com/headlines/2026/06/28/2538295/icc-freezes-money-seized-duterte"
         ],
         "origin_counts": {
-          "ontology_evidence": 18,
-          "journals": 29
+          "ontology_evidence": 19,
+          "journals": 30
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3083,7 +3083,7 @@
         "breadth": {
           "score": 0.7033333333333333,
           "basis": [
-            "distinct_urls:24",
+            "distinct_urls:25",
             "distinct_axes:4",
             "origin_types:2"
           ]
@@ -3122,7 +3122,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:24",
+            "distinct_urls:25",
             "distinct_axes:4",
             "origin_types:2",
             "referring_accounts:0",
@@ -3550,9 +3550,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-06-28T01:07:07.000Z",
+      "last_seen_at": "2026-06-28T10:16:58.000Z",
       "discovery": {
-        "distinct_urls": 458,
+        "distinct_urls": 459,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -3561,10 +3561,10 @@
           "https://grok.com/imagine/post/3289422f-50b2-4655-8527-e2b1c950ce5e"
         ],
         "origin_counts": {
-          "feed_buffer_reply": 415,
+          "feed_buffer_reply": 416,
           "feed_buffer": 75
         },
-        "distinct_referring_accounts": 286,
+        "distinct_referring_accounts": 287,
         "sample_referring_accounts": [
           "100ohiostate",
           "1livinginca",
@@ -3602,7 +3602,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:458",
+            "distinct_urls:459",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3610,7 +3610,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:286",
+            "referring_accounts:287",
             "origin_types:2"
           ]
         },
@@ -3640,10 +3640,10 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:458",
+            "distinct_urls:459",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:286",
+            "referring_accounts:287",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -4209,9 +4209,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T01:05:59.567Z",
-      "last_seen_at": "2026-06-28T06:07:21.569Z",
+      "last_seen_at": "2026-06-28T11:37:40.126Z",
       "discovery": {
-        "distinct_urls": 47,
+        "distinct_urls": 48,
         "example_urls": [
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
           "https://newsinfo.inquirer.net/2251519/chr-carries-out-motu-proprio-probe-into-tacloban-cavite-school-incidents",
@@ -4221,7 +4221,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 25,
-          "journals": 92
+          "journals": 93
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -4255,7 +4255,7 @@
         "breadth": {
           "score": 0.7033333333333333,
           "basis": [
-            "distinct_urls:47",
+            "distinct_urls:48",
             "distinct_axes:4",
             "origin_types:2"
           ]
@@ -4293,7 +4293,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:47",
+            "distinct_urls:48",
             "distinct_axes:4",
             "origin_types:2",
             "referring_accounts:0",
@@ -4693,7 +4693,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T10:32:42.758Z",
+        "fetched_at": "2026-06-28T10:36:06.158Z",
         "homepage_url": "https://relaylab.us/",
         "example_url": "https://relaylab.us/?twclid=26u9kccij1307faosstalj2w2",
         "homepage_status": 200,
@@ -5336,7 +5336,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T11:34:50.293Z",
+        "fetched_at": "2026-06-28T11:36:08.709Z",
         "homepage_url": "https://huawei.com/",
         "example_url": "https://www.huawei.com/en/media-center/transform/24/06-jason-lee?utm_medium=psm&utm_source=twitter&utm_campaign=Transform",
         "homepage_status": null,
@@ -6098,7 +6098,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T10:32:43.510Z",
+        "fetched_at": "2026-06-28T10:36:06.776Z",
         "homepage_url": "https://hyperagent.com/",
         "example_url": "https://www.hyperagent.com/?promo=FIRST1000&utm_source=twitter&utm_medium=paidsocial&utm_campaign=hyperagent_conversions&utm_content=ag3_fleet&utm_term=ag3_ai_dev_followers&utm_id=recNjFFq2Yg5747V4&twclid=2dzs7nc78iuf64njs9fxab27tl",
         "homepage_status": 200,
@@ -6606,7 +6606,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T10:32:43.617Z",
+        "fetched_at": "2026-06-28T10:36:06.895Z",
         "homepage_url": "https://combos.fun/",
         "example_url": "https://combos.fun/?utm_source=X&utm_campaign=promote%3Dcar2&twclid=2aswwo64b7owkoq09axl1gyba6",
         "homepage_status": 403,
@@ -7087,7 +7087,7 @@
           ]
         },
         "profile": {
-          "score": 0.27,
+          "score": 0.26,
           "confidence": 0.65,
           "basis": [
             "meta_author:false",
@@ -7096,7 +7096,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:1",
+            "outbound_links:0",
             "opinion_marker:false"
           ]
         },
@@ -7116,15 +7116,15 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T10:32:44.518Z",
+        "fetched_at": "2026-06-28T10:36:07.593Z",
         "homepage_url": "https://falconx.io/",
         "example_url": "https://focal.falconx.io/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
         "homepage_status": 200,
-        "example_status": 502,
+        "example_status": 200,
         "homepage_final_url": "https://www.falconx.io/",
         "example_final_url": "https://askfocal.com/workflows/discovery/crypto?utm_source=x&utm_medium=ads&utm_campaign=discover&utm_id=discover&twclid=24ydefk7qg32l97smp6icteh83",
         "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
@@ -7142,7 +7142,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 1,
+          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -7498,7 +7498,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T11:34:50.427Z",
+        "fetched_at": "2026-06-28T11:36:08.834Z",
         "homepage_url": "https://avenorigin.com/",
         "example_url": "https://avenorigin.com/?x=twg11&tw=rcafs&tw_click=tw-rcafs-rcafv&twclid=27a9svqvmxrds3k2j1qq8l2dy6",
         "homepage_status": null,
@@ -8130,13 +8130,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T11:34:51.652Z",
+        "fetched_at": "2026-06-28T11:36:11.043Z",
         "homepage_url": "https://poly.market/",
         "example_url": "https://poly.market/X0q565H?twclid=24x365380zub6d85j7s6xd212w",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://polymarket.com/",
-        "example_final_url": "https://polymarket.com/event/bnb-updown-5m-1782386100",
+        "example_final_url": "https://polymarket.com/event/bnb-updown-5m-1782642600",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -8508,7 +8508,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T11:34:51.915Z",
+        "fetched_at": "2026-06-28T11:36:11.441Z",
         "homepage_url": "https://omgskills.com/",
         "example_url": "https://omgskills.com/?twclid=2ewu2vd054idb44rsf4bgvksa8",
         "homepage_status": 200,
@@ -8760,7 +8760,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T12:02:44.682Z",
+        "fetched_at": "2026-06-28T12:06:07.622Z",
         "homepage_url": "https://guardianbikes.com/",
         "example_url": "https://guardianbikes.com/products/balance-bike?variant=41102033158237&utm_source=twitter&twclid=2dhmyi0k26r61jxbnc07720qis&utm_content=dpa_carousel&utm_campaign=X_2026_DPA_Remarketing_Campaign+&utm_medium=cpc",
         "homepage_status": 200,
@@ -8886,7 +8886,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T12:02:45.270Z",
+        "fetched_at": "2026-06-28T12:06:08.172Z",
         "homepage_url": "https://lovart.ai/",
         "example_url": "https://www.lovart.ai/?sourceId=910062&sourceid=910062&utm_source=twitter&utm_medium=paid_social&utm_campaign=Lovart_910062_Meta_US_AIModel_ag_260416_lead&twclid=2a5k8izlnshoxgoxi52b1tnd45",
         "homepage_status": 200,
@@ -16335,7 +16335,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T12:02:45.759Z",
+        "fetched_at": "2026-06-28T12:06:08.563Z",
         "homepage_url": "https://mprnews.org/",
         "example_url": "https://www.mprnews.org/story/2023/12/19/minnesota-medicaid-fraud-prevention",
         "homepage_status": 200,
@@ -22713,7 +22713,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T12:02:48.059Z",
+        "fetched_at": "2026-06-28T12:06:10.483Z",
         "homepage_url": "https://instacart.com/",
         "example_url": "https://www.instacart.com/store/brands/budweiser?ic_source=social&ic_campaignid=2026&twclid=2dlv3d1a0x9ht77bw7gqwrn3ou",
         "homepage_status": 200,
@@ -29621,6 +29621,20 @@
             "no_resolved_claims_observed"
           ]
         },
+        "profile": {
+          "score": 0.2,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:10",
+            "opinion_marker:false"
+          ]
+        },
         "overall": {
           "score": 0.35770833333333335,
           "confidence": 0.0491,
@@ -29634,20 +29648,6 @@
             "referring_accounts:0",
             "origin_types:1",
             "track_record_unavailable"
-          ]
-        },
-        "profile": {
-          "score": 0.2,
-          "confidence": 0.55,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:true",
-            "about:false",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:10",
-            "opinion_marker:false"
           ]
         }
       },
@@ -37181,6 +37181,128 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 5,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "aje.news",
+      "entity": "Aje News",
+      "kind": "unknown",
+      "first_seen_at": "2026-03-22T23:29:14.824Z",
+      "last_seen_at": "2026-06-28T09:35:26.960Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "http://aje.news/hp81ag",
+          "http://aje.news/w7b54q",
+          "http://aje.news/6bpplk"
+        ],
+        "origin_counts": {
+          "journals": 3
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.1475,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.72,
+          "confidence": 0.85,
+          "basis": [
+            "meta_author:true",
+            "published_time:true",
+            "canonical:true",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:26",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.34984375,
+          "confidence": 0.10635,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-05-31T08:49:39.596Z",
+        "homepage_url": "https://aje.news/",
+        "example_url": "http://aje.news/hp81ag",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://login.bl.ink/login?state=hKFo2SBNSjVPaDMzeTNOVEVTOU9wYkVIRWVZa3pzNEF3R3dwaKFupWxvZ2luo3RpZNkgY3NnR1ZLQ0o5ZVNrTGJOanQwYjJFWjJkVnFDZ3FlRUqjY2lk2SBURWV3Rm1nOVI4Vjl2TDdYakhYOVhZM0x0eDRJdVZaMA&client=TEewFmg9R8V9vL7XjHX9XY3Ltx4IuVZ0&protocol=oauth2&scope=openid%20profile%20name%20email%20email_verified&audience=https%3A%2F%2Faj%2Fapi%2Fv3%2F&response_mode=query&response_type=code&redirect_uri=https%3A%2F%2Faj.bl.ink%2Fauthenticated&host=aj.bl.ink&reset_password_link=aj.bl.ink%2Freset_password&show_reset_password=false&logo_uri=https%3A%2F%2Fblink-logos.s3.amazonaws.com%2Faj.bl.ink.png&nonce=fd58f9327c250ec44ce318d560589bf8",
+        "example_final_url": "https://www.aljazeera.com/news/liveblog/2026/3/22/iran-war-live-trump-threatens-attacks-on-power-plants-over-hormuz-strait?update=4424917",
+        "homepage_content_type": "text/html; charset=utf-8",
+        "example_content_type": "text/html; charset=utf-8",
+        "homepage": {
+          "has_meta_author": true,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 19,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": true,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 26,
           "opinion_marker": false
         }
       }
@@ -62954,127 +63076,6 @@
             "origin_types:1",
             "track_record_unavailable"
           ]
-        }
-      }
-    },
-    {
-      "domain": "aje.news",
-      "entity": "Aje News",
-      "kind": "unknown",
-      "first_seen_at": "2026-03-22T23:29:14.824Z",
-      "last_seen_at": "2026-04-20T02:23:59.003Z",
-      "discovery": {
-        "distinct_urls": 2,
-        "example_urls": [
-          "http://aje.news/hp81ag",
-          "http://aje.news/w7b54q"
-        ],
-        "origin_counts": {
-          "journals": 2
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.11833333333333332,
-          "basis": [
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.72,
-          "confidence": 0.85,
-          "basis": [
-            "meta_author:true",
-            "published_time:true",
-            "canonical:true",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:26",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.34346354166666665,
-          "confidence": 0.07772499999999999,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:2",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-05-31T08:49:39.596Z",
-        "homepage_url": "https://aje.news/",
-        "example_url": "http://aje.news/hp81ag",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://login.bl.ink/login?state=hKFo2SBNSjVPaDMzeTNOVEVTOU9wYkVIRWVZa3pzNEF3R3dwaKFupWxvZ2luo3RpZNkgY3NnR1ZLQ0o5ZVNrTGJOanQwYjJFWjJkVnFDZ3FlRUqjY2lk2SBURWV3Rm1nOVI4Vjl2TDdYakhYOVhZM0x0eDRJdVZaMA&client=TEewFmg9R8V9vL7XjHX9XY3Ltx4IuVZ0&protocol=oauth2&scope=openid%20profile%20name%20email%20email_verified&audience=https%3A%2F%2Faj%2Fapi%2Fv3%2F&response_mode=query&response_type=code&redirect_uri=https%3A%2F%2Faj.bl.ink%2Fauthenticated&host=aj.bl.ink&reset_password_link=aj.bl.ink%2Freset_password&show_reset_password=false&logo_uri=https%3A%2F%2Fblink-logos.s3.amazonaws.com%2Faj.bl.ink.png&nonce=fd58f9327c250ec44ce318d560589bf8",
-        "example_final_url": "https://www.aljazeera.com/news/liveblog/2026/3/22/iran-war-live-trump-threatens-attacks-on-power-plants-over-hormuz-strait?update=4424917",
-        "homepage_content_type": "text/html; charset=utf-8",
-        "example_content_type": "text/html; charset=utf-8",
-        "homepage": {
-          "has_meta_author": true,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 19,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": true,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 26,
-          "opinion_marker": false
         }
       }
     },
