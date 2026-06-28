@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-28T06:36:32.959Z",
+  "generated_at": "2026-06-28T09:06:08.403Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-28T06:36:39.157Z",
+  "profiled_at": "2026-06-28T09:06:21.017Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -389,9 +389,9 @@
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-06-28T06:07:21.569Z",
+      "last_seen_at": "2026-06-28T08:37:06.953Z",
       "discovery": {
-        "distinct_urls": 121,
+        "distinct_urls": 124,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/australia-news/2026/jun/28/pro-one-nation-facebook-groups-foreign-meme-factories-monetised-content-ntwnfb",
@@ -401,8 +401,8 @@
         ],
         "origin_counts": {
           "ontology_evidence": 11,
-          "reading_queue": 117,
-          "journals": 21
+          "reading_queue": 119,
+          "journals": 22
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -440,7 +440,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:121",
+            "distinct_urls:124",
             "distinct_axes:7",
             "origin_types:3"
           ]
@@ -479,7 +479,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:121",
+            "distinct_urls:124",
             "distinct_axes:7",
             "origin_types:3",
             "referring_accounts:0",
@@ -2367,9 +2367,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T02:51:13.362Z",
-      "last_seen_at": "2026-06-27T10:08:07.295Z",
+      "last_seen_at": "2026-06-28T08:37:06.953Z",
       "discovery": {
-        "distinct_urls": 26,
+        "distinct_urls": 27,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -2378,8 +2378,8 @@
           "https://www.rappler.com/philippines/sara-duterte-impeachment-moves-trial-pre-trial-conference-conclusion/"
         ],
         "origin_counts": {
-          "ontology_evidence": 19,
-          "journals": 40,
+          "ontology_evidence": 20,
+          "journals": 42,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2415,7 +2415,7 @@
         "breadth": {
           "score": 0.8216666666666665,
           "basis": [
-            "distinct_urls:26",
+            "distinct_urls:27",
             "distinct_axes:5",
             "origin_types:3"
           ]
@@ -2453,7 +2453,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:26",
+            "distinct_urls:27",
             "distinct_axes:5",
             "origin_types:3",
             "referring_accounts:0",
@@ -2765,9 +2765,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-28T03:19:59.000Z",
+      "last_seen_at": "2026-06-28T08:42:00.000Z",
       "discovery": {
-        "distinct_urls": 6217,
+        "distinct_urls": 6231,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -2776,10 +2776,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3671,
-          "feed_buffer_reply": 4022
+          "feed_buffer": 3677,
+          "feed_buffer_reply": 4033
         },
-        "distinct_referring_accounts": 2011,
+        "distinct_referring_accounts": 2015,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -2818,7 +2818,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:6217",
+            "distinct_urls:6231",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -2826,7 +2826,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:2011",
+            "referring_accounts:2015",
             "origin_types:2"
           ]
         },
@@ -2857,10 +2857,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:6217",
+            "distinct_urls:6231",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:2011",
+            "referring_accounts:2015",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3036,9 +3036,9 @@
       "entity": "Philstar",
       "kind": "unknown",
       "first_seen_at": "2026-05-19T10:31:49.581Z",
-      "last_seen_at": "2026-06-28T06:07:21.569Z",
+      "last_seen_at": "2026-06-28T08:37:06.953Z",
       "discovery": {
-        "distinct_urls": 23,
+        "distinct_urls": 24,
         "example_urls": [
           "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
           "https://www.philstar.com/headlines/2026/06/24/2537509/ched-tells-ateneo-explain-drowning-baterbonia-adili-or-face-sanctions",
@@ -3048,7 +3048,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 18,
-          "journals": 27
+          "journals": 29
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -3083,7 +3083,7 @@
         "breadth": {
           "score": 0.7033333333333333,
           "basis": [
-            "distinct_urls:23",
+            "distinct_urls:24",
             "distinct_axes:4",
             "origin_types:2"
           ]
@@ -3122,7 +3122,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:23",
+            "distinct_urls:24",
             "distinct_axes:4",
             "origin_types:2",
             "referring_accounts:0",
@@ -4729,9 +4729,9 @@
       "entity": "Youtu Be",
       "kind": "unknown",
       "first_seen_at": "2026-04-23T05:18:01.000Z",
-      "last_seen_at": "2026-06-20T08:28:53.305Z",
+      "last_seen_at": "2026-06-28T07:06:56.784Z",
       "discovery": {
-        "distinct_urls": 7,
+        "distinct_urls": 8,
         "example_urls": [
           "https://youtu.be/m7jAReMF2c8?si=AtT5ue3VPnmZq5V6",
           "https://youtu.be/JCrEvr1IIkg",
@@ -4742,7 +4742,7 @@
         "origin_counts": {
           "ontology_evidence": 1,
           "feed_buffer_reply": 4,
-          "journals": 12
+          "journals": 13
         },
         "distinct_referring_accounts": 3,
         "sample_referring_accounts": [
@@ -4775,9 +4775,9 @@
           ]
         },
         "breadth": {
-          "score": 0.4425,
+          "score": 0.4716666666666666,
           "basis": [
-            "distinct_urls:7",
+            "distinct_urls:8",
             "distinct_axes:1",
             "origin_types:3"
           ]
@@ -4810,12 +4810,12 @@
           ]
         },
         "overall": {
-          "score": 0.46125,
-          "confidence": 0.3708,
+          "score": 0.46763020833333335,
+          "confidence": 0.399425,
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:7",
+            "distinct_urls:8",
             "distinct_axes:1",
             "origin_types:3",
             "referring_accounts:3",
@@ -29557,6 +29557,128 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "guardian.com",
+      "entity": "Guardian",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-28T08:37:06.953Z",
+      "last_seen_at": "2026-06-28T08:37:06.953Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://www.guardian.com/business/2026/jun/28/ocado-boss-tim-steiner-payouts"
+        ],
+        "origin_counts": {
+          "journals": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.35770833333333335,
+          "confidence": 0.0491,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.2,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:10",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-28T09:06:18.831Z",
+        "homepage_url": "https://guardian.com/",
+        "example_url": "https://www.guardian.com/business/2026/jun/28/ocado-boss-tim-steiner-payouts",
+        "homepage_status": null,
+        "example_status": 404,
+        "homepage_final_url": "https://guardian.com/",
+        "example_final_url": "https://www.guardian.com/business/2026/jun/28/ocado-boss-tim-steiner-payouts",
+        "homepage_content_type": "",
+        "example_content_type": "text/html;charset=utf-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 10,
           "opinion_marker": false
         }
       }
@@ -54600,7 +54722,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T07:04:58.737Z",
+        "fetched_at": "2026-06-28T07:06:03.298Z",
         "homepage_url": "https://lentrox.com/",
         "example_url": "https://lentrox.com/?x=cpmau1&tw=rcgk3&tw_click=tw-rcgk3-rcgkc&twclid=23mto8x2s1tqm6nmtxdbnlji40",
         "homepage_status": null,
@@ -54722,7 +54844,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T07:04:59.870Z",
+        "fetched_at": "2026-06-28T07:06:04.692Z",
         "homepage_url": "https://fastloanadvance.com/",
         "example_url": "https://loans.fastloanadvance.com/?aid=505508&acid=1&subid=%7B%5Bad_group_id%7D%7D&twclid=24pt75umwn8h0pynsled729e1a",
         "homepage_status": 200,
@@ -54844,7 +54966,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T07:05:01.250Z",
+        "fetched_at": "2026-06-28T07:06:06.122Z",
         "homepage_url": "https://axlabs.com/",
         "example_url": "https://go.axlabs.com/gitmyabi-pioneers?twclid=2748j7ycvef789xq3ta5i8cygh",
         "homepage_status": 200,
@@ -54966,7 +55088,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T07:05:10.433Z",
+        "fetched_at": "2026-06-28T07:06:08.217Z",
         "homepage_url": "https://utspaycashback.com/",
         "example_url": "https://www.utspaycashback.com/?twclid=2650deq3k4trsekhk3xdbpt9o7",
         "homepage_status": 200,
@@ -55088,7 +55210,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T07:32:39.147Z",
+        "fetched_at": "2026-06-28T07:36:04.253Z",
         "homepage_url": "https://play-asia.com/",
         "example_url": "https://www.play-asia.com/en/shikhondo-blue-pieta/13/70jxj9?ref=soc_x_di_ad_ga_shikh&twclid=216zt9553f8jvl6p2avsi94wxs",
         "homepage_status": 403,
@@ -55210,7 +55332,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T07:32:39.685Z",
+        "fetched_at": "2026-06-28T07:36:04.781Z",
         "homepage_url": "https://minervaconsole.com/",
         "example_url": "https://minervaconsole.com/?twclid=2ct1cd0vbj3x45kyvn9m9mhpuy",
         "homepage_status": 200,
@@ -55332,7 +55454,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T07:32:39.867Z",
+        "fetched_at": "2026-06-28T07:36:05.020Z",
         "homepage_url": "https://avianca.com/",
         "example_url": "https://www.avianca.com/pt/ofertas-destinos/voos-promocionais/?poscode=BR&utm_source=twitter&utm_medium=adb&utm_campaign=sam_br_20260514_conmebol_twitter_cpm_marca_adb&utm_term=sam_br_inter_marca_twitter_cpm_20260514_conmebol_adb&utm_content=prt_sam_br_inter_marca_vid_twitter_cpm_20260514_conmebol_adb_conmebol_grupos&twclid=26t4yexldc4l4dfzzbbn09ndbc",
         "homepage_status": 403,
@@ -55454,7 +55576,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T07:32:41.080Z",
+        "fetched_at": "2026-06-28T07:36:05.603Z",
         "homepage_url": "https://restraineddepth.com/",
         "example_url": "https://restraineddepth.com/es/?twclid=21w3hhon812ejdm3d28l4smhwe",
         "homepage_status": 200,
@@ -55576,7 +55698,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T08:34:43.242Z",
+        "fetched_at": "2026-06-28T08:36:03.443Z",
         "homepage_url": "https://nexuscosmicus.com/",
         "example_url": "https://nexuscosmicus.com/defensa-planetaria-realidad-o-ficcion/?twclid=217bgg9bi9kconn0kz0gg2l3fi",
         "homepage_status": 200,
@@ -55698,7 +55820,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T08:34:44.451Z",
+        "fetched_at": "2026-06-28T08:36:04.819Z",
         "homepage_url": "https://multilogin.com/",
         "example_url": "https://multilogin.com/multilogin-mobile-and-browser-account-management-platform-40?utm_source=x&utm_medium=cpc&utm_campaign=promo_website_pp_visitors_new_image_4&twclid=21lxefwjki4pcdp60wvaq4xwr3",
         "homepage_status": 200,
@@ -55820,13 +55942,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T08:34:45.133Z",
+        "fetched_at": "2026-06-28T08:36:05.168Z",
         "homepage_url": "https://oasis.net/",
         "example_url": "https://oasis.net/challenge-hub?utm_source=x&utm_medium=cpc&utm_campaign=appointment&twclid=25t72d003voplz0wvurf04c2e2",
         "homepage_status": 200,
         "example_status": 200,
         "homepage_final_url": "https://oasis.net/",
-        "example_final_url": "https://oasis.net/challenge-hub?utm_source=x&utm_medium=cpc&utm_campaign=appointment&twclid=25t72d003voplz0wvurf04c2e2",
+        "example_final_url": "https://oasis.net/portal",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -55942,13 +56064,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T08:34:46.289Z",
+        "fetched_at": "2026-06-28T08:36:05.922Z",
         "homepage_url": "https://dsctrk.com/",
         "example_url": "https://link.dsctrk.com/b0da2fef-6ac6-48b3-87f4-efc0c56a8b6f?adv=adv1x&twclid=2aw1bxup4osgqhqh8esj1ex79g",
         "homepage_status": null,
         "example_status": 200,
         "homepage_final_url": "https://dsctrk.com/",
-        "example_final_url": "https://healthylifestyle101.com/usa-vsl-gh-h2-002-vt?modal=yes&cpid=b0da2fef-6ac6-48b3-87f4-efc0c56a8b6f&mcid=2aw1bxup4osgqhqh8esj1ex79g&vcid=w9scbcd4a57atgcj38p5011q&cep=gc_rEZpj3Fxx0TrB7lDaYmdQVanBqRm3aN2Vyyft-l1dnieZKTLy1_lpMhQF_f6CnF5TUSOFY9xGIK2Gel-8bVDT0ktqfmqjDjBAG9Ogn9bXLL6sNn0JlWaPH0-C8IzDMRfPGTOzrnmPaXB9_qcNxVKapa0jdoMMW-vWRWv6WlaGGAS9CNYbdUoChKICxJGMDsmBbLPwsOxmjBXo7H1rizV6L4HNK9QDsBTa8k3EPspRXWrKn5qCT8bqlC4hX9ZI6P5aJv66CODLp-1JGdwBzLQ2BtnfxJi_yUPkdnk_0wS-HE9XGRjps8_jQ1T2zBFiMde-2-IRe5DmCpyXY40sVB6fy_Mwu_LFefRUU2UtmK1kSBmZHLwYsgi5ae59nyJiIHYUGhmJSLpnLuqj6qRM7LZcvTrhNhxzSaFVIVmEfnWnckrW2YC7oy9tvdU_D93SoDJqUiZyJmvaMwYAqx3Csg&lptoken=173082f837b1826385ba&adv=adv1x&twclid=2aw1bxup4osgqhqh8esj1ex79g",
+        "example_final_url": "https://healthylifestyle101.com/usa-vsl-gh-h2-002-vt?modal=yes&cpid=b0da2fef-6ac6-48b3-87f4-efc0c56a8b6f&mcid=2aw1bxup4osgqhqh8esj1ex79g&vcid=wqsmd96sh8a4aoej3gg86s3p&cep=L0BJ9g139aN4HeTayiA4adJLdOr5GFc7md8_P9xn-xr1fAjF7lQjzsF6byD1qZegJHKtO06wfmyOH0Q9IlevDhw0LE0Mb359388K01iDSMT5iiy0Ca5AhqkJq6jynZR9KmVmfSYzyIuKvuUkrmd03XPGScWjYxy0OKSu7tIXD6wae5_8sra_hpVCWrS72szEL28--LOAZofMoFlaFiLgINUvdr-V6LpVfejdJoPqGH5ByNWT-73cv5AEgYvTnaonIIHdD36jn5SnXIheWaCkxCNTQgqxmgOWHlJNRgd-HfaLb96tyLfdfVd-1pJd4F6BS0n3FX2XuK58XC0yA4pVRn6K9TdoAkU91DzS-3xG5B1ItF5sEB-05_gbC0Bo7HNYlmLPS3BmRhp7qqcpxm9JRnUtOzCLK7vyqKSVBzJ49rj0O8OmCAHx-OWvGszpb4hB7ph-1h_LtlDeEqmFGDH4Gg&lptoken=17ce82f7637075ce65d3&adv=adv1x&twclid=2aw1bxup4osgqhqh8esj1ex79g",
         "homepage_content_type": "",
         "example_content_type": "text/html",
         "homepage": {
@@ -56064,7 +56186,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T09:02:41.872Z",
+        "fetched_at": "2026-06-28T09:06:19.499Z",
         "homepage_url": "https://tracebit.com/",
         "example_url": "https://community.tracebit.com/supplychainattacks?utm_source=x&utm_medium=paid_social&utm_campaign=supply_chain_ce&utm_content=x_ad_1&twclid=24rad2yo4ut9ws5v7xoqlbgytb",
         "homepage_status": 200,
@@ -56186,7 +56308,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T09:02:43.422Z",
+        "fetched_at": "2026-06-28T09:06:20.801Z",
         "homepage_url": "https://airbyte.com/",
         "example_url": "https://airbyte.com/?utm_source=xads&utm_medium=ppc&utm_campaign=xa_us_aw_social_prospecting_ai_static&utm_content=context_layer&twclid=25eb8dc5nfnts5isczvrqu9xtu",
         "homepage_status": 200,
@@ -56308,7 +56430,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-25T09:02:43.720Z",
+        "fetched_at": "2026-06-28T09:06:21.017Z",
         "homepage_url": "https://bradfordexchange.com/",
         "example_url": "https://www.bradfordexchange.com/products/924258_.html?utm_source=NCB&utm_medium=Twitter&utm_campaign=BEX_CVR_%C2%A0HarryPotter&utm_term=54717141&tw_source=Twitter&tw_campaign=41264089&tw_adsetid=54717141&twclid=2c9wk0mwgaqqlwwt4efcvihqlq",
         "homepage_status": 403,

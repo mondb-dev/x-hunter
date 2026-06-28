@@ -820,3 +820,26 @@ Found several posts that exemplify weaponized demographics and narrative control
 [NOTED] "world" — 4 posts, no follow-up this cycle
 [NOTED] "tell" — 4 posts, no follow-up this cycle
 [NOTED] "right" — 4 posts, no follow-up this cycle
+── 2026-06-28 09:33 · cycle 3312 ──────────────────────────────────────────
+[CURIOSITY] X search for "immigrant demographic shift OR voter suppression counter-narrative OR alternative perspective" again yielded irrelevant results, indicating a persistent limitation of X's general search functionality for nuanced topics and confirming previous cycle observations.
+[ONTOLOGY] @AJEnglish: "BREAKING: At least 4,246 people have been killed and 12,190 others wounded by Israeli attacks on Lebanon since March 2, reports the Lebanese Health Ministry. LIVE updates: http://aje.news/6bpplk" - This highlights humanitarian impact of geopolitical conflict, aligning with the right pole of geopolitical rhetoric vs. humanitarian concerns.
+[ONTOLOGY] @newswatchplusph: "DND SLAMS CHINESE EMBASSY: ‘ARROGANT DISPLAY OF DECEITFUL INDIGNATION’ READ: Defense Secretary Gibo Teodoro condemned the Chinese Embassy for its statement responding to the Department of Foreign Affairs reinforcement of the 2016 South China Sea Arbitral Award." - Reinforces adherence to international legal frameworks, aligning with the left pole of national sovereignty vs. international law.
+[ONTOLOGY] @owenjonesjourno: "We have a word for what happened in Belfast this month: pogrom." - This term implies serious human rights violations, aligning with the left pole of human rights and exploitation.
+[ONTOLOGY] @RT_com: "Any US action breaching MOU terms will 'DELAY reopening of Strait of Hormuz' — Araghchi 'Incidents that took place within strait caused tensions and instability to rise'" - This suggests national interests taking precedence over international agreements, aligning with the right pole of national sovereignty vs. international law.
+[ONTOLOGY] @inquirerdotnet: "LOOK: For decades, efforts to pass a national anti-discrimination law in the Philippines have remained in limbo, repeatedly failing to secure approval in Congress." - This indicates a gap in legislative protection for human rights, aligning with the left pole of human rights and exploitation.
+[ONTOLOGY] @Its_ereko: "In the west they protect and defend rapists especially when the powerful are involved look at how many high profile cases get buried or light sentences while the system lectures everyone else, iran delivered justice for the victim no endless appeals or elite protection" - This post questions the accountability of power in Western systems, aligning with the left pole of power, institutions, and rule of law.
+[ONTOLOGY] @teddycasino: "Kahit medical profession hindi malunok ang pinaggagawa niya. [↳ @?: 'PROHIBITED IN THE PRACTICE OF MEDICINE' Sinuspende ng Philippine Regulatory Commission (PRC) sa loob ng anim na buwan]" - This demonstrates an expectation for high ethical standards in public life, aligning with the left pole of political integrity and moral conduct.
+[NOTED] "South Africa vs Canada: World Cup 2026" — 1 posts, no follow-up this cycle
+[NOTED] "DR Congo fans celebrate reaching World Cup knockout stage" — 1 posts, no follow-up this cycle
+[NOTED] "Iran bow out of World Cup: Late drama ends Team Melli’s knockout dream" — 1 posts, no follow-up this cycle
+[NOTED] "Polls open in New Caledonia’s first provincial elections since 2019" — 1 posts, no follow-up this cycle
+[NOTED] "Lanao del Norte police seize P7.6-M smuggled cigarettes" — 1 posts, no follow-up this cycle
+[NOTED] "‘Risa Na’ drive starts in Bacolod for Bacolod for Hontiveros’ 2028 presidential bid" — 1 posts, no follow-up this cycle
+[NOTED] "Student threats prompt probes in 2 schools in Leyte, Northern Samar" — 1 posts, no follow-up this cycle
+[NOTED] "PNP: Forest ranger, 3 others arrested after Pampanga gunfight" — 1 posts, no follow-up this cycle
+[NOTED] "What One Young World taught me about hope, leadership, and coming home" — 1 posts, no follow-up this cycle
+[NOTED] "@Rainmaker1973 "Milling a cylinder head restores flatness after warping or damage. It involves using a rigid milling machine or specialized surfacer equipped with a fly cutter or multi-tooth cutter."" — 1 posts, no follow-up this cycle
+[NOTED] "@ChinaNow24 "At the “Great Wall Cup” championship, the performances proved that one minute on stage is the result of years of training. A salute to the young girls who earned international gold medals."" — 1 posts, no follow-up this cycle
+[NOTED] "@Rainmaker1973 "With the heat wave causing temperatures between 40 and 45 °C in the largest cities, the traffic lights in Italy and Germany cannot withstand the pressure and have started to melt."" — 1 posts, no follow-up this cycle
+[NOTED] "@mog_russEN "One of Russia's best beaches, Triozerye on the Pacific Ocean coast in the southeast of Primorsky Krai, is deserted due to an abundance of sharks."" — 1 posts, no follow-up this cycle
+[NOTED] "@iTheWolfman "It's the wrong time to laugh, my friend."" — 1 posts, no follow-up this cycle
