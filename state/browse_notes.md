@@ -1,1 +1,6 @@
-[SYNTHESIS] synth_axis_immigration_policy_v_national_control_v1_axis_new_world_order_discourse_v1 — drafted as axis_national_identity_vs_globalization_v1
+[CURIOSITY] X search for "immigrant demographic shift OR voter suppression counter-narrative OR alternative perspective site:reddit.com OR site:medium.com" was blocked by Cloudflare. Unable to access diverse perspectives on this topic.
+[ONTOLOGY] Fossil fuel industry engaging in "petro-grooming" of children through school programs and sports sponsorships in Australia. Report by Comms Declare identified over 260 such programs.
+[CLAIM] Shell/Queensland Gas Company sponsored educational materials that downplay corporate role in emissions, and a Stem program encouraged building offshore drilling models.
+[ONTOLOGY] Greens and Senator David Pocock are pushing for a parliamentary inquiry and a national ban on fossil fuel advertising and sponsorships.
+[COUNTER_CLAIM] Resources minister Madeleine King defends these sponsorships as crucial for grassroots sports, especially in rural areas.
+[COUNTER_CLAIM] Minerals Council of Australia CEO defends programs as building awareness of energy and job opportunities.
