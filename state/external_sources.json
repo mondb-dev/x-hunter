@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-29T06:37:04.569Z",
+  "generated_at": "2026-06-29T09:06:34.192Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-29T06:37:08.413Z",
+  "profiled_at": "2026-06-29T09:06:39.993Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -389,9 +389,9 @@
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-06-29T06:04:00Z",
+      "last_seen_at": "2026-06-29T06:38:00.449Z",
       "discovery": {
-        "distinct_urls": 152,
+        "distinct_urls": 154,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -400,9 +400,9 @@
           "https://www.theguardian.com/uk-news/2026/jun/29/pause-hs2-reset-until-you-are-confident-it-can-be-delivered-nao-tells-ministers"
         ],
         "origin_counts": {
-          "ontology_evidence": 20,
-          "reading_queue": 134,
-          "journals": 44
+          "ontology_evidence": 21,
+          "reading_queue": 136,
+          "journals": 45
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -442,7 +442,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:152",
+            "distinct_urls:154",
             "distinct_axes:9",
             "origin_types:3"
           ]
@@ -481,7 +481,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:152",
+            "distinct_urls:154",
             "distinct_axes:9",
             "origin_types:3",
             "referring_accounts:0",
@@ -491,7 +491,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-26T08:35:12.716Z",
+        "fetched_at": "2026-06-29T08:36:39.481Z",
         "homepage_url": "https://theguardian.com/",
         "example_url": "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
         "homepage_status": 200,
@@ -882,23 +882,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-26T08:35:13.106Z",
+        "fetched_at": "2026-06-29T08:36:39.798Z",
         "homepage_url": "https://house.gov/",
         "example_url": "https://www.house.gov/",
-        "homepage_status": null,
+        "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://house.gov/",
+        "homepage_final_url": "https://www.house.gov/",
         "example_final_url": "https://www.house.gov/",
-        "homepage_content_type": "",
+        "homepage_content_type": "text/html; charset=UTF-8",
         "example_content_type": "text/html; charset=UTF-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 33,
           "opinion_marker": false
         },
         "example": {
@@ -1041,7 +1041,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-06-28T03:12:48.203Z",
       "discovery": {
-        "distinct_urls": 62,
+        "distinct_urls": 63,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1051,7 +1051,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 4,
-          "reading_queue": 61,
+          "reading_queue": 62,
           "journals": 7
         },
         "distinct_referring_accounts": 0,
@@ -1085,7 +1085,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:62",
+            "distinct_urls:63",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -1123,7 +1123,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:62",
+            "distinct_urls:63",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -1801,7 +1801,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-26T08:35:13.324Z",
+        "fetched_at": "2026-06-29T08:36:40.058Z",
         "homepage_url": "https://apnews.com/",
         "example_url": "https://apnews.com/hub/iran",
         "homepage_status": 200,
@@ -2105,9 +2105,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T02:51:13.362Z",
-      "last_seen_at": "2026-06-29T05:34:00Z",
+      "last_seen_at": "2026-06-29T08:38:49.519Z",
       "discovery": {
-        "distinct_urls": 34,
+        "distinct_urls": 38,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -2116,8 +2116,8 @@
           "https://www.rappler.com/philippines/sara-duterte-impeachment-moves-trial-pre-trial-conference-conclusion/"
         ],
         "origin_counts": {
-          "ontology_evidence": 25,
-          "journals": 51,
+          "ontology_evidence": 26,
+          "journals": 55,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2154,7 +2154,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:34",
+            "distinct_urls:38",
             "distinct_axes:6",
             "origin_types:3"
           ]
@@ -2192,7 +2192,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:34",
+            "distinct_urls:38",
             "distinct_axes:6",
             "origin_types:3",
             "referring_accounts:0",
@@ -2505,9 +2505,9 @@
       "entity": "Philstar",
       "kind": "unknown",
       "first_seen_at": "2026-05-19T10:31:49.581Z",
-      "last_seen_at": "2026-06-29T05:34:00Z",
+      "last_seen_at": "2026-06-29T08:38:49.519Z",
       "discovery": {
-        "distinct_urls": 31,
+        "distinct_urls": 34,
         "example_urls": [
           "https://www.philstar.com/headlines/2026/06/24/2537506/mike-defensor-face-trafficking-complaint-over-pasig-ktv-bar-raid",
           "https://www.philstar.com/headlines/2026/06/24/2537509/ched-tells-ateneo-explain-drowning-baterbonia-adili-or-face-sanctions",
@@ -2516,8 +2516,8 @@
           "https://www.philstar.com/headlines/2026/06/28/2538295/icc-freezes-money-seized-duterte"
         ],
         "origin_counts": {
-          "ontology_evidence": 24,
-          "journals": 41
+          "ontology_evidence": 27,
+          "journals": 42
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -2553,7 +2553,7 @@
         "breadth": {
           "score": 0.7616666666666666,
           "basis": [
-            "distinct_urls:31",
+            "distinct_urls:34",
             "distinct_axes:5",
             "origin_types:2"
           ]
@@ -2592,7 +2592,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:31",
+            "distinct_urls:34",
             "distinct_axes:5",
             "origin_types:2",
             "referring_accounts:0",
@@ -3006,7 +3006,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-26T08:35:13.734Z",
+        "fetched_at": "2026-06-29T08:36:40.456Z",
         "homepage_url": "https://t.co/",
         "example_url": "https://t.co/pJSE124ec4",
         "homepage_status": 200,
@@ -4216,9 +4216,9 @@
       "entity": "Inquirer",
       "kind": "unknown",
       "first_seen_at": "2026-05-09T01:05:59.567Z",
-      "last_seen_at": "2026-06-29T05:55:00Z",
+      "last_seen_at": "2026-06-29T07:08:09.539Z",
       "discovery": {
-        "distinct_urls": 54,
+        "distinct_urls": 55,
         "example_urls": [
           "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
           "https://newsinfo.inquirer.net/2251519/chr-carries-out-motu-proprio-probe-into-tacloban-cavite-school-incidents",
@@ -4227,8 +4227,8 @@
           "https://newsinfo.inquirer.net/2252742/fwd-defense-lawyer-poa-says-being-listed-as-the-prosecs-witness-not-a-problem"
         ],
         "origin_counts": {
-          "ontology_evidence": 29,
-          "journals": 100
+          "ontology_evidence": 30,
+          "journals": 101
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -4262,7 +4262,7 @@
         "breadth": {
           "score": 0.7033333333333333,
           "basis": [
-            "distinct_urls:54",
+            "distinct_urls:55",
             "distinct_axes:4",
             "origin_types:2"
           ]
@@ -4300,7 +4300,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:54",
+            "distinct_urls:55",
             "distinct_axes:4",
             "origin_types:2",
             "referring_accounts:0",
@@ -24827,7 +24827,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-26T09:05:11.742Z",
+        "fetched_at": "2026-06-29T09:06:35.542Z",
         "homepage_url": "https://trendmicro.com/",
         "example_url": "https://newsroom.trendmicro.com/2026-03-23-Trend-Micros-Enterprise-Business-is-now-TrendAI-TM?utm_source=twitter_paid&utm_medium=social&utm_campaign=ent_corporate_aw_gl_int_rebrand&utm_content=carouse&twclid=2cmz9tfo72r6gek4sy5lql8osu",
         "homepage_status": 200,
@@ -25701,7 +25701,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-26T09:05:13.447Z",
+        "fetched_at": "2026-06-29T09:06:36.595Z",
         "homepage_url": "https://angel.com/",
         "example_url": "https://www.angel.com/tickets/young-washington?twclid=27mi12v89i7upcqxfvv5wwjfcz",
         "homepage_status": 200,
@@ -29049,19 +29049,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-26T09:05:14.467Z",
+        "fetched_at": "2026-06-29T09:06:39.901Z",
         "homepage_url": "https://dell.com/",
         "example_url": "https://www.dell.com/en-us/shop/dell-laptops/xps-14-laptop/spd/xps-da14260-laptop?twclid=2b95mzwodix16nm7kii2sz7zvh",
-        "homepage_status": 200,
+        "homepage_status": null,
         "example_status": 200,
-        "homepage_final_url": "https://www.dell.com/en-us",
+        "homepage_final_url": "https://dell.com/",
         "example_final_url": "https://www.dell.com/en-us/shop/dell-laptops/xps-14-laptop/spd/xps-da14260-laptop?twclid=2b95mzwodix16nm7kii2sz7zvh",
-        "homepage_content_type": "text/html; charset=utf-8",
+        "homepage_content_type": "",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": true,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -29537,7 +29537,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-26T09:05:14.620Z",
+        "fetched_at": "2026-06-29T09:06:39.993Z",
         "homepage_url": "https://x.m/",
         "example_url": "https://x.m/mjfree/status/2067065470641983623",
         "homepage_status": null,
@@ -34456,7 +34456,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-26T07:05:11.117Z",
+        "fetched_at": "2026-06-29T07:06:39.689Z",
         "homepage_url": "https://peacocktv.com/",
         "example_url": "https://www.peacocktv.com/sports/nba?cid=2604sptnp1rsfnbsppdsocial307218&utm_campaign=2604sptnp1rsf&utm_source=nbcs_tw_tw&utm_medium=pd_social_awa_sclpst&utm_term=na_na&utm_content=na&twclid=2befc20y7q2m509tapnzd2kkq0",
         "homepage_status": 200,
@@ -34579,7 +34579,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-26T07:05:12.199Z",
+        "fetched_at": "2026-06-29T07:06:40.099Z",
         "homepage_url": "https://delltechnologies.com/",
         "example_url": "https://www.delltechnologies.com/en-us/dt/corporate/newsroom/announcements/detailpage.press-releases~usa~2026~05~dell-technologies-closes-the-gap-between-ai-ambition-and-ai-outcomes.htm?twclid=29cpu05ap6qcdleom7dgr5tatw",
         "homepage_status": 404,
@@ -34702,7 +34702,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-26T07:05:12.766Z",
+        "fetched_at": "2026-06-29T07:06:40.668Z",
         "homepage_url": "https://burga.us/",
         "example_url": "https://burga.us/?utm_source=twitter&utm_medium=paid&utm_campaign=US+-+TOF+%7C+ABO+%7C+1+DC+%7C+Broad+%7C+Evergreen+Ultimate+Winners+%7C+AI+%7C+2026.05.05+%7C+%24200&utm_term=Batch+%231+%7C+2026.05.05&utm_content=Marius+225v3&twclid=252b1spdlruezd1plpkesujsz5",
         "homepage_status": 200,
@@ -34825,7 +34825,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-26T07:05:13.359Z",
+        "fetched_at": "2026-06-29T07:06:41.437Z",
         "homepage_url": "https://dito.ph/",
         "example_url": "https://dito.ph/sandali?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_1&twclid=2estlcww980yee2hzsu5vdedbn",
         "homepage_status": 200,
@@ -34948,7 +34948,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-26T07:35:08.580Z",
+        "fetched_at": "2026-06-29T07:36:37.499Z",
         "homepage_url": "https://trenchers.ai/",
         "example_url": "https://trenchers.ai/?twclid=2di75phbt55c7y0zfq5ihrqinv",
         "homepage_status": 200,
@@ -35071,7 +35071,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-26T07:35:08.941Z",
+        "fetched_at": "2026-06-29T07:36:37.874Z",
         "homepage_url": "https://ohmycex.com/",
         "example_url": "https://ohmycex.com/?twclid=29oy2ts1zwr94hy6ispo25ixt1",
         "homepage_status": 521,
@@ -35194,7 +35194,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-26T07:35:12.711Z",
+        "fetched_at": "2026-06-29T07:36:38.462Z",
         "homepage_url": "https://hypernative.io/",
         "example_url": "https://www.hypernative.io/events-webinars/the-security-blindspot-the-problem-of-drainers-poisoners?utm_campaign=66726114-X-Ads-Cold-Reach&utm_source=twitter&utm_medium=paidsocial&utm_content=Webinar_Video_Type-drainers-intro_Download&twclid=22xu4h6p87fy3sh5d2hyd5fv7h",
         "homepage_status": 200,
@@ -35317,7 +35317,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-26T07:35:14.301Z",
+        "fetched_at": "2026-06-29T07:36:40.294Z",
         "homepage_url": "https://fortunashield.com/",
         "example_url": "https://fortunashield.com/?twclid=26a0c9wof4ax97jupe8vqekr9u",
         "homepage_status": 200,
