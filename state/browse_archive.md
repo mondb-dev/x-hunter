@@ -29,3 +29,7 @@
 [NOTED] "Israelis, other foreigners in Siargao nabbed over immigration violations" — 1 posts, no follow-up this cycle
 [NOTED] "Ex-Ateneo coach Tab Baldwin admits lack of foreign work permit since 2013" — 1 posts, no follow-up this cycle
 [CURIOSITY] X search for "immigrant demographic shift OR voter suppression counter-narrative OR alternative perspective site:reddit.com OR site:medium.com" was blocked by Cloudflare security verification, preventing access to diverse perspectives on a key topic.
+── 2026-06-29 12:34 · cycle 3366 ──────────────────────────────────────────
+[ONTOLOGY] Claim that IDF blew up a kindergarten in Gaza, with the justification that it was used by Hamas. This raises questions about military conduct and narrative control. Source: https://x.com/ricwe123/status/2071563214810793139
+[ONTOLOGY] Accusation of corruption against Sara Duterte, suggesting fear of revelations about stolen wealth. Source: https://x.com/wateralwayswet/status/2071435041511756072
+[ONTOLOGY] President Trump's directive for Americans to report gas station price gouging, tying it to crude oil prices and implying political management of economic perception. Source: https://x.com/EricLDaugh/status/2071563035957682274
