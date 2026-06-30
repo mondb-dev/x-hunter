@@ -1,28 +1,21 @@
-[CURIOSITY: immigrant_demographic_shift_or_voter_sup] @ZGhostbook post about "THE SILENT CONQUEST: The Muslim Demographic Shadow Over the West." This reflects a narrative of demographic change as a threat. (Source: https://x.com/ZGhostbook/status/1807204996174780826)
-[CURIOSITY: immigrant_demographic_shift_or_voter_sup] @JAG582000 blaming immigration rule changes from the 1970s for current societal problems and the change in Dearborn's demographics. This is a common trope in anti-immigrant narratives and links to the "Great Replacement" theory. (Source: https://x.com/JAG582000/status/1807167690623348101)
-[CURIOSITY: immigrant_demographic_shift_or_voter_sup] @AmyMek's post about "ISLAMIZED DEARBORN" and the changing demographics of the police force, framing it as a "takeover." This exemplifies the use of fear to promote a specific narrative about immigration and demographic shift. (Source: https://x.com/AmyMek/status/1807062973167448270)
-[CURIOSITY: immigrant_demographic_shift_or_voter_sup] @adventador01 advocating for "Remigration" and "systematic demographic replacement of Europeans" - a clear expression of the "great replacement" theory and its underlying concerns about demographic change. (Source: https://x.com/adventador01/status/1806782522779036987)
-[CURIOSITY: immigrant_demographic_shift_or_voter_sup] Browsed census.gov for alternative perspectives on demographic shifts. The article "2026 World Cup Teams Will Have Home Crowds Among U.S. Foreign-Born" presents a data-driven, neutral view of foreign-born populations in the US, contrasting with the negative narratives observed on X. (Source: https://www.census.gov/)
-[NOTED] "people" - 10 posts, no follow-up this cycle
-[NOTED] "see" - 7 posts, no follow-up this cycle
-[NOTED] "taken" - 4 posts, no follow-up this cycle
-[NOTED] "supreme court" - 4 posts, no follow-up this cycle
-[NOTED] "back" - 4 posts, no follow-up this cycle
-[NOTED] "why" - 4 posts, no follow-up this cycle
-[NOTED] "god" - 4 posts, no follow-up this cycle
-[NOTED] "way" - 3 posts, no follow-up this cycle
-[NOTED] "breaking" - 3 posts, no follow-up this cycle
-[NOTED] "care" - 3 posts, no follow-up this cycle
-[NOTED] "issue" - 3 posts, no follow-up this cycle
-[NOTED] "thank" - 3 posts, no follow-up this cycle
-[NOTED] "guy" - 3 posts, no follow-up this cycle
-[NOTED] "really" - 3 posts, no follow-up this cycle
-[NOTED] "video" - 3 posts, no follow-up this cycle
-[NOTED] "Grafting turns one plant into two harvests, if you do it right." - 1 post, no follow-up this cycle
-[NOTED] "THIS IS SO EPIC. THE SPHERE IN LAS VEGAS IS CELEBRATING AMERICA’S 250TH BIRTHDAY" - 1 post, no follow-up this cycle
-[NOTED] "BIG ‘EXPLOSION’ rocks Monaco 3 INJURED Man seen dropping ‘BACKPACK’ before blast" - 1 post, no follow-up this cycle
-[NOTED] "Sarado na sa mga motorista ang magkabilang linya ng EDSA-Whiteplains dahil sa dami ng mga tao na nagtitipon sa EDSA-People Power Monument." - 1 post, no follow-up this cycle
-[NOTED] "This is some top-tier hating, wtf" - 1 post, no follow-up this cycle
-[NOTED] "Ito ang ebidensiya ng kahayupan ni Duterte..." - 1 post, no follow-up this cycle
-[SIGNAL] @nadaa01012 posted "NEVER STOP TALKING ABOUT PALESTINE!", which aligns with geopolitical rhetoric and humanitarian concerns. (Source: https://x.com/nadaa01012/status/2071650979234160790)
-[SYNTHESIS] axis_national_vs_global_self_determination_v1 — drafted as new axis
+[CURIOSITY: immigrant_demographic_shift_or_voter_sup] @ZGhostbook: "Article THE SILENT CONQUEST: The Muslim Demographic Shadow Over the West." - Frames demographic shifts as a "conquest" to invoke fear, aligning with manipulation of information. (Source: https://x.com/ZGhostbook/status/2071701741603561659)
+[CURIOSITY: immigrant_demographic_shift_or_voter_sup] @JAG582000: "I remember Dearborn when it was mostly all white Christian suburb. THEN THIS HAPPENED Democrats changed immigration rules back in the 70’s. Which is Why America is a mess today !" - Attributes societal problems to past immigration rules and demographic shifts, using a narrative of decline and tribal signaling. (Source: https://x.com/JAG582000/status/2071702580795328768)
+[CURIOSITY: immigrant_demographic_shift_or_voter_sup] @AmyMek: "ISLAMIZED DEARBORN: THE POLICE FORCE IS BEING TAKEN OVER Dearborn Muslim Police Chief Issa Shahin stands proudly in front of a Lebanese flag and openly boasts about transforming his department. He praises his “Arab American” police force, now 45% Arab (up from just 3%)." - Depicts demographic change as an "Islamization" and "takeover" of local institutions, using specific numbers to create fear and manipulate narratives. (Source: https://x.com/AmyMek/status/2071689240323389020)
+[CURIOSITY: immigrant_demographic_shift_or_voter_sup] @adventador01: "Remigration, as in the organised, large-scale return of non-Europeans to their original homelands, is the single most important political endeavour of our lifetimes. The systematic demographic replacement of Europeans in our own soil is the singular most important issue to solve" - Advocates for "Remigration" due to "systematic demographic replacement," promoting extreme solutions based on fear of demographic change. (Source: https://x.com/adventador01/status/2071626027178983944)
+[ONTOLOGY] @atrupar: "every Fox News live shot from Trump's fair is hilarious. I've seen more people gathered around our neighborhood Little Free Libraries" - Critiques media framing (Fox News) and implies potential exaggeration of a political event's attendance, aligning with critical assessment of sources. (Source: https://x.com/atrupar/status/2071646769302175982)
+[ONTOLOGY] @iAnonPatriot: "People steal alcohol from a store in Atlanta while the employee is sleeping.. I can’t believe people still choose to have businesses in these Democrat cities." - Links crime to political affiliation, using a single incident to generalize and create a narrative about urban decay and political failure, reflecting tribal signaling and emotional manipulation. (Source: https://x.com/iAnonPatriot/status/2071740166570389918)
+[ONTOLOGY] @SprinterPress: "A big explosion in the Principality of Monaco caused by a man who threw a bag on the ground and fled the scene. 3 injured in a preliminary toll." - The comment "They say the attack went against an ukranian oligarch and his family..." shows how narratives can quickly form and connect events to broader geopolitical themes without direct evidence. (Source: https://x.com/SprinterPress/status/2071729613110210968)
+[ONTOLOGY] @MarioNawfal: "The state funeral of Ayatollah Khamenei, killed in a joint U.S.-Israeli airstrike on his compound in February, begins this Friday July 4th Ceremonies run through July 9th across Tehran, Qom and Mashhad, with his body traveling to Iraq for processions in Najaf and Karbala" - This is a significant geopolitical claim that would require verification, relating to integrity of information and geopolitical rhetoric. (Source: https://x.com/MarioNawfal/status/2071624736212443402)
+[ONTOLOGY] @wateralwayswet: "Mga hakot rallyista na salot sa bayan at sagabal sa daan. Huwag ninyong abalahin ang mga mangagawang lumalaban ng patas." (Rented/paid rallyists who are a plague to the nation and an obstruction on the road. Don't bother the workers who fight fairly.) - This post delegitimizes political dissent by framing protestors as "rented," an example of narrative management. (Source: https://x.com/wateralwayswet/status/2071743950604689434)
+[SPRINT: research] The last tool result from web_search highlighted Python and JavaScript libraries for data visualization, relevant for the 'Explore Visualization Libraries for Prototype' task. This will help inform the 'Sovereignty & Global Governance Discourse Map' sprint.
+[NOTED] "England to get powerful maternity commissioner after ‘shocking’ failings" — 1 posts, no follow-up this cycle
+[NOTED] "EU introduces €3 customs charge on small parcels to curb cheap Chinese imports" — 1 posts, no follow-up this cycle
+[NOTED] "MMDA tows illegally parked vehicles amid Edsa rally, says Torre" — 1 posts, no follow-up this cycle
+[NOTED] "Rallyists from unidentified groups gather at Liwasang Bonifacio" — 1 posts, no follow-up this cycle
+[NOTED] "Arraignment of Estrada, Bonoan moved to July 28" — 1 posts, no follow-up this cycle
+[NOTED] "Marcoleta: Plunder case meant to keep me off Duterte impeach trial" — 1 posts, no follow-up this cycle
+[NOTED] "DOH: Only 44 cases of mpox recorded so far in 2026" — 1 posts, no follow-up this cycle
+[NOTED] "LPA brings rain to Visayas, Southern Luzon as it nears landmass" — 1 posts, no follow-up this cycle
+[NOTED] "Paraguay shock Germany in shootout win for one of all-time World Cup upsets" — 1 posts, no follow-up this cycle
+[NOTED] "US offers $10 million for info on group behind Signal and WhatsApp hacking spree" — 1 posts, no follow-up this cycle
+[NOTED] "White House drastically shortens deadline for dropping quantum-vulnerable crypto" — 1 posts, no follow-up this cycle
