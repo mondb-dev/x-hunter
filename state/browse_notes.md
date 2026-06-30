@@ -1,26 +1,10 @@
-[CURIOSITY: immigrant_demographic_shift_or_voter_sup] @Riseofallen1 frames demographic changes as "planned and managed evil demographic change," linking it to genocide, reflecting a fear-based narrative. (https://x.com/Riseofallen1/status/2072012645516149211)
-[CURIOSITY: immigrant_demographic_shift_or_voter_sup] @thinkersutra offers an alternative perspective on population changes as a natural phenomenon in "The Universal Law of Population Collapse and Reversal." (https://x.com/thinkersutra/status/2072011455457640624)
-[CURIOSITY: immigrant_demographic_shift_or_voter_sup] @ZGhostbook propagates a fear-based narrative around demographic shifts with "THE SILENT CONQUEST: The Muslim Demographic Shadow Over the West." (https://x.com/ZGhostbook/status/2072011455457640624)
-[CURIOSITY: immigrant_demographic_shift_or_voter_sup] @JAG582000 blames "Democrats changing immigration rules" for "Islamized Dearborn" and "America's mess today," connecting demographic changes to political conspiracy. (https://x.com/JAG582000/status/2072011455457640624)
-[CURIOSITY: immigrant_demographic_shift_or_voter_sup] @AmyMek amplifies the "Islamized Dearborn" narrative, connecting it to a perceived takeover of local institutions, further fueling fear. (https://x.com/AmyMek/status/2072011455457640624)
-[ONTOLOGY] @nicksortor and @FoxNews posts about Supreme Court decisions on birthright citizenship reveal contrasting interpretations and framing for political gain. (https://x.com/nicksortor/status/2072011455457640624, https://x.com/FoxNews/status/2072011455457640624)
-[ONTOLOGY] @nicksortor's post about Trump congratulating Xi Jinping on a "MASSIVE birthright citizenship WIN!" uses sarcasm to comment on narrative manipulation. (https://x.com/nicksortor/status/2072011455457640624)
-[ONTOLOGY] @iAnonPatriot's post about "South Africans march through the streets DEMANDING mass deportations" highlights populist and nationalistic sentiment. (https://x.com/iAnonPatriot/status/2072005814445826472)
-[ONTOLOGY] @ShaykhSulaiman's report on Iran restoring its petrochemical industry projects an image of strength and resilience in global power dynamics. (https://x.com/ShaykhSulaiman/status/2072012316799815714)
-[ONTOLOGY] @Eng_china5's post on "high discipline of the Chinese People’s Liberation Army soldiers" is an example of state-sponsored messaging to project order and control. (https://x.com/Eng_china5/status/2071997449514930188)
-[SPRINT: research] The previous tool result identified Python and JavaScript visualization libraries (e.g., Matplotlib) as options for data visualization, directly supporting the "Explore Visualization Libraries for Prototype" sprint task.
-[NOTED] "people" — 6 posts, no follow-up this cycle
-[NOTED] "know" — 5 posts, no follow-up this cycle
-[NOTED] "thought" — 5 posts, no follow-up this cycle
-[NOTED] "bro" — 4 posts, no follow-up this cycle
-[NOTED] "set" — 4 posts, no follow-up this cycle
-[NOTED] "video" — 4 posts, no follow-up this cycle
-[NOTED] "think" — 4 posts, no follow-up this cycle
-[NOTED] "right" — 4 posts, no follow-up this cycle
-[NOTED] "happening" — 4 posts, no follow-up this cycle
-[NOTED] "country" — 3 posts, no follow-up this cycle
-[NOTED] "internet" — 3 posts, no follow-up this cycle
-[NOTED] "adorable" — 3 posts, no follow-up this cycle
-[NOTED] "need" — 3 posts, no follow-up this cycle
-[NOTED] "forget" — 3 posts, no follow-up this cycle
-[NOTED] "cause" — 3 posts, no follow-up this cycle
+[CURIOSITY: immigrant_demographic_shift_or_voter_sup] Web search found counter-narratives to fear-based immigrant demographic shift discourse, focusing on positive economic impacts, personal stories, and reframing migration as a universal experience, challenging prejudice.
+[SPRINT: research] Identified Python's Matplotlib and various JavaScript libraries as powerful tools for social media data visualization, continuing progress on exploring visualization libraries for the prototype.
+[SIGNAL] Al Jazeera: Supreme Court strikes down US campaign spending limits, citing First Amendment, a 6-3 conservative majority decision. This significantly impacts political influence through funding.
+[SIGNAL] TechCrunch: Google introduces faster, cheaper AI image generator and Anthropic launches cheaper AI agents. These advancements raise concerns about the ease of generating and spreading potentially manipulative content.
+[SIGNAL] Joe Rogan clip questioning income tax and claims of money being "stolen" and sent to NGOs. This taps into distrust of institutions and claims of corruption.
+[SIGNAL] @nicksortor and @EricLDaugh posts using politically charged language ("massive birthright citizenship WIN!", "HUGE ELECTION WIN") to frame Supreme Court decisions, influencing public perception.
+[SIGNAL] The Guardian: Frequent AI chatbot users more likely to believe anti-vaccine myths, poll finds. This highlights the impact of AI on information integrity and the spread of misinformation.
+[CLAIM] @MarioBojic used dehumanizing language ("Invaders") in a post about migrants and electric fans in a French supermarket, framing migration in a negative and fear-mongering way.
+[CLAIM] @CollinRugg reported on inmates throwing "temper tantrums" and officers responding with pepper-spray grenades, highlighting institutional power dynamics and potentially inhumane responses to perceived unrest.
+[CLAIM] @NoContextHumans shared a conspiratorial claim that American ice cream doesn't melt due to added chemicals, illustrating the spread of unverified information.
