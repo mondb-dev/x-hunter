@@ -1,68 +1,68 @@
 {
-  "checked_at": "2026-06-29T01:42:46.217Z",
-  "evidence_24h": 87,
-  "unique_sources": 36,
-  "status": "warning",
+  "checked_at": "2026-06-30T02:15:27.764Z",
+  "evidence_24h": 68,
+  "unique_sources": 17,
+  "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
-      "severity": "moderate",
-      "detail": "@unknown accounts for 39% of today's evidence (34/87)",
+      "severity": "high",
+      "detail": "@unknown accounts for 65% of today's evidence (44/68)",
       "username": "unknown",
-      "share": 0.391
+      "share": 0.647
     }
   ],
-  "summary": "1 capture alert(s) detected:\n[MODERATE] @unknown accounts for 39% of today's evidence (34/87)",
+  "summary": "1 capture alert(s) detected:\n[HIGH] @unknown accounts for 65% of today's evidence (44/68)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 34,
-      "share": 0.391
+      "count": 44,
+      "share": 0.647
+    },
+    "zghostbook": {
+      "username": "zghostbook",
+      "count": 3,
+      "share": 0.044
+    },
+    "amymek": {
+      "username": "amymek",
+      "count": 3,
+      "share": 0.044
+    },
+    "adventador01": {
+      "username": "adventador01",
+      "count": 3,
+      "share": 0.044
+    },
+    "jag582000": {
+      "username": "jag582000",
+      "count": 2,
+      "share": 0.029
+    },
+    "ajenglish": {
+      "username": "ajenglish",
+      "count": 2,
+      "share": 0.029
+    },
+    "elonmusk": {
+      "username": "elonmusk",
+      "count": 1,
+      "share": 0.015
+    },
+    "atrupar": {
+      "username": "atrupar",
+      "count": 1,
+      "share": 0.015
+    },
+    "ianonpatriot": {
+      "username": "ianonpatriot",
+      "count": 1,
+      "share": 0.015
     },
     "marionawfal": {
       "username": "marionawfal",
-      "count": 5,
-      "share": 0.057
-    },
-    "magavoice": {
-      "username": "magavoice",
-      "count": 3,
-      "share": 0.034
-    },
-    "rt_com": {
-      "username": "rt_com",
-      "count": 3,
-      "share": 0.034
-    },
-    "ericldaugh": {
-      "username": "ericldaugh",
-      "count": 2,
-      "share": 0.023
-    },
-    "realmaalouf": {
-      "username": "realmaalouf",
-      "count": 2,
-      "share": 0.023
-    },
-    "wallstreetapes": {
-      "username": "wallstreetapes",
-      "count": 2,
-      "share": 0.023
-    },
-    "vividprowess": {
-      "username": "vividprowess",
-      "count": 2,
-      "share": 0.023
-    },
-    "landpalestine": {
-      "username": "landpalestine",
-      "count": 2,
-      "share": 0.023
-    },
-    "allenanalysis": {
-      "username": "allenanalysis",
-      "count": 2,
-      "share": 0.023
+      "count": 1,
+      "share": 0.015
     }
   },
   "axis_concentration": {
@@ -70,95 +70,95 @@
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
       "count": 19,
-      "share": 0.218
-    },
-    "axis_political_trust_corruption_v1": {
-      "axis_id": "axis_political_trust_corruption_v1",
-      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
-      "count": 11,
-      "share": 0.126
-    },
-    "axis_national_sovereignty_v_intl_law_v1": {
-      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "label": "National Sovereignty vs. International Law",
-      "count": 11,
-      "share": 0.126
+      "share": 0.279
     },
     "axis_epistemic_integrity": {
       "axis_id": "axis_epistemic_integrity",
       "label": "Truth and Evidence in Public Discourse",
-      "count": 10,
-      "share": 0.115
-    },
-    "axis_global_power_realignments_v1": {
-      "axis_id": "axis_global_power_realignments_v1",
-      "label": "Global Power Realignments and Shifting Hegemony",
-      "count": 10,
-      "share": 0.115
-    },
-    "axis_geopolitical_rhetoric_v1": {
-      "axis_id": "axis_geopolitical_rhetoric_v1",
-      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
-      "count": 9,
-      "share": 0.103
+      "count": 11,
+      "share": 0.162
     },
     "axis_human_rights_exploitation_v1": {
       "axis_id": "axis_human_rights_exploitation_v1",
       "label": "Human Rights and Exploitation",
-      "count": 6,
-      "share": 0.069
-    },
-    "axis_authoritarian_self_determination_v1": {
-      "axis_id": "axis_authoritarian_self_determination_v1",
-      "label": "Authoritarian Control vs. Individual/Collective Self-Determination",
-      "count": 5,
-      "share": 0.057
+      "count": 7,
+      "share": 0.103
     },
     "axis_media_integrity_v1": {
       "axis_id": "axis_media_integrity_v1",
       "label": "Integrity of Information and Social Media Manipulation",
-      "count": 2,
-      "share": 0.023
+      "count": 6,
+      "share": 0.088
     },
-    "axis_global_economic_stability_v1": {
-      "axis_id": "axis_global_economic_stability_v1",
-      "label": "Global Economic Stability and Market Volatility",
+    "axis_authoritarian_self_determination_v1": {
+      "axis_id": "axis_authoritarian_self_determination_v1",
+      "label": "Authoritarian Control vs. Individual/Collective Self-Determination",
+      "count": 4,
+      "share": 0.059
+    },
+    "axis_new_world_order_discourse_v1": {
+      "axis_id": "axis_new_world_order_discourse_v1",
+      "label": "Discourse on the \"New World Order\": Centralized Global Governance vs. National Sovereignty/Individual Freedom",
+      "count": 4,
+      "share": 0.059
+    },
+    "axis_political_trust_corruption_v1": {
+      "axis_id": "axis_political_trust_corruption_v1",
+      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
+      "count": 3,
+      "share": 0.044
+    },
+    "axis_geopolitical_rhetoric_v1": {
+      "axis_id": "axis_geopolitical_rhetoric_v1",
+      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
+      "count": 3,
+      "share": 0.044
+    },
+    "axis_national_sovereignty_v_intl_law_v1": {
+      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
+      "label": "National Sovereignty vs. International Law",
+      "count": 3,
+      "share": 0.044
+    },
+    "axis_collective_voice": {
+      "axis_id": "axis_collective_voice",
+      "label": "Authentic Participation vs. Managed Consent",
       "count": 2,
-      "share": 0.023
+      "share": 0.029
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 42,
-      "share": 0.483
+      "count": 54,
+      "share": 0.794
+    },
+    "conspiracy": {
+      "cluster": "conspiracy",
+      "count": 4,
+      "share": 0.059
     },
     "breaking_news": {
       "cluster": "breaking_news",
-      "count": 13,
-      "share": 0.149
-    },
-    "geopolitics": {
-      "cluster": "geopolitics",
-      "count": 10,
-      "share": 0.115
-    },
-    "us_politics": {
-      "cluster": "us_politics",
-      "count": 7,
-      "share": 0.08
-    },
-    "middle_east": {
-      "cluster": "middle_east",
       "count": 3,
-      "share": 0.034
+      "share": 0.044
+    },
+    "accountability_journalism": {
+      "cluster": "accountability_journalism",
+      "count": 2,
+      "share": 0.029
+    },
+    "tech_ai": {
+      "cluster": "tech_ai",
+      "count": 1,
+      "share": 0.015
     }
   },
   "pole_balance": {
-    "left": 42,
-    "right": 45,
+    "left": 37,
+    "right": 31,
     "neutral": 0,
-    "left_share": 0.483,
-    "right_share": 0.517
+    "left_share": 0.544,
+    "right_share": 0.456
   }
 }

@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-30T00:37:24.232Z",
+  "generated_at": "2026-06-30T02:06:53.439Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-30T00:37:29.595Z",
+  "profiled_at": "2026-06-30T02:06:55.200Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -391,7 +391,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-06-29T06:38:00.449Z",
       "discovery": {
-        "distinct_urls": 165,
+        "distinct_urls": 167,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -401,7 +401,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 21,
-          "reading_queue": 147,
+          "reading_queue": 149,
           "journals": 45
         },
         "distinct_referring_accounts": 0,
@@ -442,7 +442,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:165",
+            "distinct_urls:167",
             "distinct_axes:9",
             "origin_types:3"
           ]
@@ -481,7 +481,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:165",
+            "distinct_urls:167",
             "distinct_axes:9",
             "origin_types:3",
             "referring_accounts:0",
@@ -1164,7 +1164,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-06-28T03:12:48.203Z",
       "discovery": {
-        "distinct_urls": 70,
+        "distinct_urls": 72,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1174,7 +1174,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 4,
-          "reading_queue": 70,
+          "reading_queue": 72,
           "journals": 7
         },
         "distinct_referring_accounts": 0,
@@ -1208,7 +1208,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:70",
+            "distinct_urls:72",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -1246,7 +1246,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:70",
+            "distinct_urls:72",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -3027,9 +3027,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-29T23:46:01.000Z",
+      "last_seen_at": "2026-06-30T01:13:49.000Z",
       "discovery": {
-        "distinct_urls": 6309,
+        "distinct_urls": 6318,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3038,8 +3038,8 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3715,
-          "feed_buffer_reply": 4094
+          "feed_buffer": 3721,
+          "feed_buffer_reply": 4099
         },
         "distinct_referring_accounts": 2042,
         "sample_referring_accounts": [
@@ -3080,7 +3080,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:6309",
+            "distinct_urls:6318",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3119,7 +3119,7 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:6309",
+            "distinct_urls:6318",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:2042",
@@ -3680,9 +3680,9 @@
       "entity": "Grok",
       "kind": "unknown",
       "first_seen_at": "2026-04-03T01:20:27.000Z",
-      "last_seen_at": "2026-06-29T21:38:00.000Z",
+      "last_seen_at": "2026-06-30T00:36:48.000Z",
       "discovery": {
-        "distinct_urls": 465,
+        "distinct_urls": 466,
         "example_urls": [
           "https://grok.com/imagine/post/9b92ff60-ec59-45db-8a35-8e1b743e5339",
           "https://grok.com/imagine/post/42c16172-4296-42be-b3d0-aa45ad7b6b97",
@@ -3692,7 +3692,7 @@
         ],
         "origin_counts": {
           "feed_buffer_reply": 422,
-          "feed_buffer": 75
+          "feed_buffer": 76
         },
         "distinct_referring_accounts": 291,
         "sample_referring_accounts": [
@@ -3732,7 +3732,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:465",
+            "distinct_urls:466",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3770,7 +3770,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:465",
+            "distinct_urls:466",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:291",
@@ -12557,7 +12557,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-27T01:05:27.394Z",
+        "fetched_at": "2026-06-30T01:06:53.011Z",
         "homepage_url": "https://scitools.com/",
         "example_url": "https://scitools.com/codecheck?xad=codecheck&twclid=23owlb2i7ei44kgcykku0zs4en",
         "homepage_status": 200,
@@ -16590,7 +16590,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-27T01:05:29.649Z",
+        "fetched_at": "2026-06-30T01:06:56.442Z",
         "homepage_url": "https://aikido.dev/",
         "example_url": "https://www.aikido.dev/attack/infinite?utm_source=twitter&utm_medium=paidsocial&utm_campaign=US_tofu&utm_content=2026-02-26-Mack-Infinte-2-A&twclid=28a2h7kzzful35m0kfwtl23x0c",
         "homepage_status": 200,
@@ -18474,7 +18474,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-27T01:05:30.218Z",
+        "fetched_at": "2026-06-30T01:06:57.536Z",
         "homepage_url": "https://alppouch.com/",
         "example_url": "https://alppouch.com/products/drifters-lemon-raspberry-nicotine-pouches?variant=45695862079684&utm_source=twitter&twclid=2f0tn2lk34ykymzkyz3xx7lfzj&tw_adsetid=55002677&tw_campaign=41318448&utm_content=dpa-carousel-drifters&utm_campaign=cs-dpa-carousel-sales-alp-pouch&utm_medium=paid_social&tw_source=twitter&utm_term=55002677",
         "homepage_status": 200,
@@ -19845,7 +19845,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-27T01:35:29.035Z",
+        "fetched_at": "2026-06-30T01:36:54.521Z",
         "homepage_url": "https://onkodex.com/",
         "example_url": "https://onkodex.com/join/?twclid=21aq9xwo1p6ea49gu5skcha56k",
         "homepage_status": 200,
@@ -25949,7 +25949,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-27T02:05:28.158Z",
+        "fetched_at": "2026-06-30T02:06:53.907Z",
         "homepage_url": "https://gopuff.com/",
         "example_url": "https://www.gopuff.com/go/ai?twclid=2df5moz835ertdpa0tqci700x9",
         "homepage_status": 403,
@@ -26301,7 +26301,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:19",
+            "outbound_links:18",
             "opinion_marker:false"
           ]
         },
@@ -26321,7 +26321,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-27T01:05:31.132Z",
+        "fetched_at": "2026-06-30T01:06:57.936Z",
         "homepage_url": "https://fandango.com/",
         "example_url": "https://www.fandango.com/lee-cronins-the-mummy-2026-244052/movie-overview?twclid=2buocyfoltepc4nr5ab0l6j90t",
         "homepage_status": 200,
@@ -26337,7 +26337,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 25,
+          "outbound_links_count": 23,
           "opinion_marker": false
         },
         "example": {
@@ -26347,7 +26347,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 19,
+          "outbound_links_count": 18,
           "opinion_marker": false
         }
       }
@@ -31012,7 +31012,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-27T01:35:49.039Z",
+        "fetched_at": "2026-06-30T01:37:14.526Z",
         "homepage_url": "https://kfc.com/",
         "example_url": "https://www.kfc.com/menu?utm_source=twitter&utm_medium=social&utm_campaign=kfcvaluefeast&utm_creative=9box&twclid=250lznofqwrkd2iq53t7qffgxo",
         "homepage_status": null,
@@ -38748,7 +38748,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-27T01:35:51.698Z",
+        "fetched_at": "2026-06-30T01:37:17.136Z",
         "homepage_url": "https://nextinvestors.com/",
         "example_url": "https://nextinvestors.com/articles/rml-tungsten-price-running-high-grade-tungsten-sitting-in-stockpiles-plus-gold-drilling-in-may/?twclid=29vvkujdwopqjncmmhre6nbvtf",
         "homepage_status": 200,
@@ -38870,7 +38870,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-27T01:35:52.908Z",
+        "fetched_at": "2026-06-30T01:37:18.376Z",
         "homepage_url": "https://quorum.us/",
         "example_url": "https://cpmadvocacy.quorum.us/campaign/158654/?utm_source=x&utm_medium=paid_social&utm_campaign=iowa_prediction_markets&twclid=2n7g30ite25eujoe3z8invqck",
         "homepage_status": 200,
@@ -39846,7 +39846,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-26T23:35:28.750Z",
+        "fetched_at": "2026-06-30T02:06:54.142Z",
         "homepage_url": "https://fooletfs.com/",
         "example_url": "https://fooletfs.com/our-funds/mfig?utm_source=x&utm_medium=paid_social&utm_campaign=mfig&utm_term=mfig-orange-v1&twclid=29gqh1517fetrd30y8lm22lkth",
         "homepage_status": 200,
@@ -39968,7 +39968,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-26T23:35:28.926Z",
+        "fetched_at": "2026-06-30T02:06:54.304Z",
         "homepage_url": "https://soaratlas.com/",
         "example_url": "https://soaratlas.com/?twclid=2eza3sd4va29a55s5jzj2vre23",
         "homepage_status": 403,
@@ -40090,7 +40090,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-26T23:35:29.418Z",
+        "fetched_at": "2026-06-30T02:06:55.200Z",
         "homepage_url": "https://cumuluscoffee.com/",
         "example_url": "https://cumuluscoffee.com/products/the-cumulus-machine-1?utm_source=x&utm_medium=paidsocial&utm_campaign=convenience&utm_content=threedrinks_carousel_1x1&twclid=22ron9m7rrobkpnxtpgpyojtgw",
         "homepage_status": 200,
