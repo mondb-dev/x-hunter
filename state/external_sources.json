@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-30T02:06:53.439Z",
+  "generated_at": "2026-06-30T03:37:38.908Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-06-30T02:06:55.200Z",
+  "profiled_at": "2026-06-30T03:37:49.764Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -389,19 +389,19 @@
       "entity": "Theguardian",
       "kind": "news",
       "first_seen_at": "2026-03-27T23:17:00Z",
-      "last_seen_at": "2026-06-29T06:38:00.449Z",
+      "last_seen_at": "2026-06-30T03:04:00Z",
       "discovery": {
-        "distinct_urls": 167,
+        "distinct_urls": 168,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
           "https://www.theguardian.com/uk-news/2026/jun/28/complaints-iopc-met-police-mohamed-al-fayed-harrods",
           "https://www.theguardian.com/world/2026/jun/25/constitutional-coup-zimbabwe-senate-approves-presidential-term",
-          "https://www.theguardian.com/uk-news/2026/jun/29/pause-hs2-reset-until-you-are-confident-it-can-be-delivered-nao-tells-ministers"
+          "https://www.theguardian.com/global-development/2026/jun/26/woman-sadia-moalim-ali-three-year-jail-sentence-somalia-online-comments-governement"
         ],
         "origin_counts": {
-          "ontology_evidence": 21,
-          "reading_queue": 149,
+          "ontology_evidence": 22,
+          "reading_queue": 150,
           "journals": 45
         },
         "distinct_referring_accounts": 0,
@@ -442,7 +442,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:167",
+            "distinct_urls:168",
             "distinct_axes:9",
             "origin_types:3"
           ]
@@ -481,7 +481,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:167",
+            "distinct_urls:168",
             "distinct_axes:9",
             "origin_types:3",
             "referring_accounts:0",
@@ -527,9 +527,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-06-29T23:10:04.200Z",
+      "last_seen_at": "2026-06-30T03:04:00Z",
       "discovery": {
-        "distinct_urls": 116,
+        "distinct_urls": 117,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -538,7 +538,7 @@
           "https://www.aljazeera.com/economy/2026/6/22/us-house-committee-reaches-bipartisan-deal-on-social-media-rules-for-kids?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 78,
+          "ontology_evidence": 79,
           "reading_queue": 3,
           "journals": 170
         },
@@ -579,7 +579,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:116",
+            "distinct_urls:117",
             "distinct_axes:8",
             "origin_types:3"
           ]
@@ -618,7 +618,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:116",
+            "distinct_urls:117",
             "distinct_axes:8",
             "origin_types:3",
             "referring_accounts:0",
@@ -1545,7 +1545,7 @@
       "first_seen_at": "2026-04-01T05:04:23.454Z",
       "last_seen_at": "2026-06-29T04:34:00Z",
       "discovery": {
-        "distinct_urls": 198,
+        "distinct_urls": 201,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
@@ -1556,7 +1556,7 @@
         "origin_counts": {
           "ontology_evidence": 140,
           "claim_tracker": 15,
-          "reading_queue": 9,
+          "reading_queue": 12,
           "feed_buffer_reply": 27,
           "feed_buffer": 2,
           "journals": 68
@@ -1616,7 +1616,7 @@
         "breadth": {
           "score": 1,
           "basis": [
-            "distinct_urls:198",
+            "distinct_urls:201",
             "distinct_axes:20",
             "origin_types:6"
           ]
@@ -1657,7 +1657,7 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:198",
+            "distinct_urls:201",
             "distinct_axes:20",
             "origin_types:6",
             "referring_accounts:5",
@@ -2228,9 +2228,9 @@
       "entity": "Rappler",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T02:51:13.362Z",
-      "last_seen_at": "2026-06-29T15:08:24.376Z",
+      "last_seen_at": "2026-06-30T02:09:47.174Z",
       "discovery": {
-        "distinct_urls": 45,
+        "distinct_urls": 46,
         "example_urls": [
           "https://www.rappler.com/fact-check-no-arrest-warrant-issued-vs-marcoleta",
           "https://www.rappler.com/technology/decoded-tacloban-school-shooting-disinformation-kiko-barzaga-discussions-juvenile-justice-law/",
@@ -2240,7 +2240,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 30,
-          "journals": 65,
+          "journals": 66,
           "articles": 1
         },
         "distinct_referring_accounts": 0,
@@ -2277,7 +2277,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:45",
+            "distinct_urls:46",
             "distinct_axes:6",
             "origin_types:3"
           ]
@@ -2315,7 +2315,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:45",
+            "distinct_urls:46",
             "distinct_axes:6",
             "origin_types:3",
             "referring_accounts:0",
@@ -3027,9 +3027,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-06-30T01:13:49.000Z",
+      "last_seen_at": "2026-06-30T02:46:22.000Z",
       "discovery": {
-        "distinct_urls": 6318,
+        "distinct_urls": 6327,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3038,10 +3038,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3721,
-          "feed_buffer_reply": 4099
+          "feed_buffer": 3727,
+          "feed_buffer_reply": 4105
         },
-        "distinct_referring_accounts": 2042,
+        "distinct_referring_accounts": 2047,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3080,7 +3080,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:6318",
+            "distinct_urls:6327",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3088,7 +3088,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:2042",
+            "referring_accounts:2047",
             "origin_types:2"
           ]
         },
@@ -3119,10 +3119,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:6318",
+            "distinct_urls:6327",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:2042",
+            "referring_accounts:2047",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3152,6 +3152,138 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "inquirer.net",
+      "entity": "Inquirer",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-09T01:05:59.567Z",
+      "last_seen_at": "2026-06-30T03:04:00Z",
+      "discovery": {
+        "distinct_urls": 62,
+        "example_urls": [
+          "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
+          "https://newsinfo.inquirer.net/2251519/chr-carries-out-motu-proprio-probe-into-tacloban-cavite-school-incidents",
+          "https://newsinfo.inquirer.net/2251594/army-instructor-probing-for-allegedly-assaulting-national-guard-trainees",
+          "https://newsinfo.inquirer.net/2251702/chr-seeks-swift-passage-of-bills-creating-detention-monitoring-body",
+          "https://newsinfo.inquirer.net/2252742/fwd-defense-lawyer-poa-says-being-listed-as-the-prosecs-witness-not-a-problem"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 34,
+          "journals": 105
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_authoritarian_self_determination_v1",
+          "axis_collective_voice",
+          "axis_media_integrity_v1",
+          "axis_national_sovereignty_v_intl_law_v1",
+          "axis_political_trust_corruption_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.82,
+          "basis": [
+            "distinct_urls:62",
+            "distinct_axes:6",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.14,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.50515625,
+          "confidence": 0.63795,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:62",
+            "distinct_axes:6",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-28T01:05:58.427Z",
+        "homepage_url": "https://inquirer.net/",
+        "example_url": "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
+        "homepage_status": 200,
+        "example_status": 404,
+        "homepage_final_url": "https://www.inquirer.net/",
+        "example_final_url": "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 17,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -3952,9 +4084,9 @@
       "entity": "Doubleclick",
       "kind": "unknown",
       "first_seen_at": "2026-04-14T11:38:54.154Z",
-      "last_seen_at": "2026-06-26T21:21:24.449Z",
+      "last_seen_at": "2026-06-30T03:31:29.786Z",
       "discovery": {
-        "distinct_urls": 31,
+        "distinct_urls": 32,
         "example_urls": [
           "https://ad.doubleclick.net/ddm/trackclk/N117602.5126432X/B34540950.438517562;dc_trk_aid=631787244;dc_trk_cid=249093288;dc_dbm_token=$%7BDC_DBM_TOKEN%7D;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D;gpp=$%7BGPP_STRING_755%7D;gpp_sid=$%7BGPP_SID%7D;ltd=;dc_tdv=1?twclid=292cdwzoayexun1iu6o4fsk10z",
           "https://ad.doubleclick.net/ddm/trackclk/N424004.2061500TWITTER-OFFICIAL/B34815449.442181294;dc_trk_aid=635540198;dc_trk_cid=163408886?twclid=229wqdp9n1aljc0uj6dfw6r91e",
@@ -3963,7 +4095,7 @@
           "https://ad.doubleclick.net/ddm/trackclk/N1153793.2061500TWITTER-OFFICIAL/B35592624.443721335;dc_trk_aid=637029215;dc_trk_cid=252638233?twclid=2azp958vdx3j3lfhljr3wb4etv"
         ],
         "origin_counts": {
-          "feed_buffer": 26,
+          "feed_buffer": 27,
           "feed_buffer_reply": 5
         },
         "distinct_referring_accounts": 9,
@@ -4003,7 +4135,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:31",
+            "distinct_urls:32",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -4041,7 +4173,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:31",
+            "distinct_urls:32",
             "distinct_axes:0",
             "origin_types:2",
             "referring_accounts:9",
@@ -4177,7 +4309,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-27T02:35:29.355Z",
+        "fetched_at": "2026-06-30T02:36:58.888Z",
         "homepage_url": "https://newsguardtech.com/",
         "example_url": "https://www.newsguardtech.com/",
         "homepage_status": 200,
@@ -4330,136 +4462,6 @@
           "has_contact_link": true,
           "has_corrections_link": false,
           "outbound_links_count": 1,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "inquirer.net",
-      "entity": "Inquirer",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-09T01:05:59.567Z",
-      "last_seen_at": "2026-06-29T23:10:04.200Z",
-      "discovery": {
-        "distinct_urls": 58,
-        "example_urls": [
-          "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
-          "https://newsinfo.inquirer.net/2251519/chr-carries-out-motu-proprio-probe-into-tacloban-cavite-school-incidents",
-          "https://newsinfo.inquirer.net/2251594/army-instructor-probing-for-allegedly-assaulting-national-guard-trainees",
-          "https://newsinfo.inquirer.net/2251702/chr-seeks-swift-passage-of-bills-creating-detention-monitoring-body",
-          "https://newsinfo.inquirer.net/2252742/fwd-defense-lawyer-poa-says-being-listed-as-the-prosecs-witness-not-a-problem"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 31,
-          "journals": 104
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_media_integrity_v1",
-          "axis_national_sovereignty_v_intl_law_v1",
-          "axis_political_trust_corruption_v1",
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.7033333333333333,
-          "basis": [
-            "distinct_urls:58",
-            "distinct_axes:4",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.14,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.47963541666666665,
-          "confidence": 0.61345,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:58",
-            "distinct_axes:4",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-28T01:05:58.427Z",
-        "homepage_url": "https://inquirer.net/",
-        "example_url": "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
-        "homepage_status": 200,
-        "example_status": 404,
-        "homepage_final_url": "https://www.inquirer.net/",
-        "example_final_url": "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 17,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
           "opinion_marker": false
         }
       }
@@ -5847,7 +5849,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-27T02:35:29.695Z",
+        "fetched_at": "2026-06-30T02:36:59.223Z",
         "homepage_url": "https://jamf.com/",
         "example_url": "https://www.jamf.com/blog/mac-management-security-trends-enterprise-it-2025/?utm_source=twitter&utm_medium=sponsored-social&utm_campaign=am_icf_smas_mms_banner_icp&utm_content=20260213_com_ent-midmkt_p_jmac_blog_6679_SIT&twclid=26vc3aicbe9m10pi19ume82b0z",
         "homepage_status": 200,
@@ -7119,7 +7121,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-27T03:05:29.813Z",
+        "fetched_at": "2026-06-30T03:07:03.350Z",
         "homepage_url": "https://amazon.com/",
         "example_url": "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44/ref_=dvm_us_c_soc_THBY_tw_rb?twclid=2e4zyrzur7iapo7e8zxfmiz1fu",
         "homepage_status": 200,
@@ -8386,7 +8388,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-27T03:36:07.040Z",
+        "fetched_at": "2026-06-30T03:37:41.529Z",
         "homepage_url": "https://nizima-action.com/",
         "example_url": "https://site.nizima-action.com/en/?twclid=2diqibk9zmfi9zdpw7jnuyzo3e",
         "homepage_status": 200,
@@ -11074,9 +11076,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-16T09:36:45.269Z",
-      "last_seen_at": "2026-06-29T01:44:37.429Z",
+      "last_seen_at": "2026-06-30T02:17:53.689Z",
       "discovery": {
-        "distinct_urls": 81,
+        "distinct_urls": 82,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -11085,7 +11087,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 81
+          "articles": 82
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -11114,7 +11116,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:81",
+            "distinct_urls:82",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -11152,7 +11154,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:81",
+            "distinct_urls:82",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -15335,7 +15337,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-27T02:35:30.343Z",
+        "fetched_at": "2026-06-30T02:36:59.719Z",
         "homepage_url": "https://patsnap.com/",
         "example_url": "https://eureka.patsnap.com/mse-landing?from=mktcampaign_mse_ads_x_formuvideo-asia2en2&twclid=29qq6c80v43jc7y7o992xnzaaf",
         "homepage_status": 200,
@@ -16216,7 +16218,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-27T02:35:30.544Z",
+        "fetched_at": "2026-06-30T02:36:59.849Z",
         "homepage_url": "https://jpost.com/",
         "example_url": "https://jpost.com/",
         "homepage_status": 200,
@@ -28800,7 +28802,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-27T03:36:07.943Z",
+        "fetched_at": "2026-06-30T03:37:42.657Z",
         "homepage_url": "https://bitdefender.com/",
         "example_url": "https://www.bitdefender.com/en-us/blog/labs/inside-the-apac-malvertising-ecosystem?cid=soc%7Cc%7Ctw%7Ch4slab&twclid=24ele6gmae6psqawfai2l9njkb",
         "homepage_status": 200,
@@ -30151,7 +30153,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-27T03:36:13.768Z",
+        "fetched_at": "2026-06-30T03:37:49.565Z",
         "homepage_url": "https://arkayzeroproof.com/",
         "example_url": "https://arkayzeroproof.com/invest-in-arkay/?twclid=2an9mhmxuedo5myzer72kvy89c",
         "homepage_status": 200,
@@ -31135,7 +31137,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-27T03:05:30.316Z",
+        "fetched_at": "2026-06-30T03:07:03.777Z",
         "homepage_url": "https://3c.wiki/",
         "example_url": "https://3c.wiki/3PtZuMY?twclid=2bz0sgqd5e9nj510697vwg5ap7",
         "homepage_status": 200,
@@ -40212,7 +40214,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-27T02:05:29.101Z",
+        "fetched_at": "2026-06-30T03:07:04.933Z",
         "homepage_url": "https://insuranceleadsguide.com/",
         "example_url": "https://insuranceleadsguide.com/insurance-leads/insurance-agency-marketing-tools/?twclid=286vjil8sq5bkkcyaaco0b55aj",
         "homepage_status": 200,
@@ -40334,7 +40336,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-27T02:05:29.414Z",
+        "fetched_at": "2026-06-30T03:07:05.420Z",
         "homepage_url": "https://orangestandard.com/",
         "example_url": "https://orangestandard.com/?utm_source=Twitter&utm_medium=Tweet&utm_campaign=btcaccts&twclid=221wvicldxi1mxr7dfi4dgcd74",
         "homepage_status": 200,
@@ -40456,7 +40458,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-27T03:05:30.514Z",
+        "fetched_at": "2026-06-30T03:37:49.764Z",
         "homepage_url": "https://lambda.ai/",
         "example_url": "https://lambda.ai/?utm_source=twitter&utm_medium=paid-social&utm_campaign=2025-11-brand-remarketing&utm_content=2025-11_relaunch_superintelligence-cloud_copy3&twclid=2dr7wza1m47cxuzjqoi0dg5olo",
         "homepage_status": 200,
