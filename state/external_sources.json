@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-01T02:37:23.034Z",
+  "generated_at": "2026-07-01T03:38:01.698Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-01T02:37:25.864Z",
+  "profiled_at": "2026-07-01T03:38:05.742Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -629,7 +629,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-28T03:36:37.247Z",
+        "fetched_at": "2026-07-01T03:38:02.656Z",
         "homepage_url": "https://aljazeera.com/",
         "example_url": "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
         "homepage_status": 200,
@@ -1546,7 +1546,7 @@
       "first_seen_at": "2026-04-01T05:04:23.454Z",
       "last_seen_at": "2026-06-30T11:34:00Z",
       "discovery": {
-        "distinct_urls": 202,
+        "distinct_urls": 205,
         "example_urls": [
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8zTjzNOXrSBZwvSTLobfen2T2Mfxyn8MYVxW4sIU6cWottxkV4pJs_p6fwS7LJGs_vuED8LS-hCfYDaWBVPP6g5GilaCYMrJml-ow5K6SCv_H_b1Dl2x1bJE8PTS68J1lar6YIqGro0gdLxt0MIOMv-l1vVmmO0WJQtLSOEieMA6I7dl7eRgRC0BRXQWnC1DBXjH9CBNLq5ag1EbSnkyImyoNmXyv0qV7VQUvoAHc5OC2odagG5YXdhPj4Im_aZZUwd8=",
           "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJNqE08-Q7Tqg05X_ofoDNtZLKVJsHf6UdRREA1OxztC8CDB6FsNjQuBV136gJb2Y9QXrXsx7zbeEa5BUqoJBYqmssKHmfzwTgOysIjMJg6Joojzce5N3TRuitNQcNaKb2hCiLA==",
@@ -1557,7 +1557,7 @@
         "origin_counts": {
           "ontology_evidence": 141,
           "claim_tracker": 15,
-          "reading_queue": 12,
+          "reading_queue": 15,
           "feed_buffer_reply": 27,
           "feed_buffer": 2,
           "journals": 68
@@ -1617,7 +1617,7 @@
         "breadth": {
           "score": 1,
           "basis": [
-            "distinct_urls:202",
+            "distinct_urls:205",
             "distinct_axes:20",
             "origin_types:6"
           ]
@@ -1658,7 +1658,7 @@
           "basis": [
             "unknown_domain_pattern",
             "search_results_seen",
-            "distinct_urls:202",
+            "distinct_urls:205",
             "distinct_axes:20",
             "origin_types:6",
             "referring_accounts:5",
@@ -2210,6 +2210,139 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "inquirer.net",
+      "entity": "Inquirer",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-09T01:05:59.567Z",
+      "last_seen_at": "2026-07-01T02:45:10.689Z",
+      "discovery": {
+        "distinct_urls": 73,
+        "example_urls": [
+          "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
+          "https://newsinfo.inquirer.net/2251519/chr-carries-out-motu-proprio-probe-into-tacloban-cavite-school-incidents",
+          "https://newsinfo.inquirer.net/2251594/army-instructor-probing-for-allegedly-assaulting-national-guard-trainees",
+          "https://newsinfo.inquirer.net/2251702/chr-seeks-swift-passage-of-bills-creating-detention-monitoring-body",
+          "https://newsinfo.inquirer.net/2252742/fwd-defense-lawyer-poa-says-being-listed-as-the-prosecs-witness-not-a-problem"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 41,
+          "journals": 128,
+          "articles": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_authoritarian_self_determination_v1",
+          "axis_collective_voice",
+          "axis_media_integrity_v1",
+          "axis_national_sovereignty_v_intl_law_v1",
+          "axis_political_trust_corruption_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.8799999999999999,
+          "basis": [
+            "distinct_urls:73",
+            "distinct_axes:6",
+            "origin_types:3"
+          ]
+        },
+        "corroboration": {
+          "score": 0.26249999999999996,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:3"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.14,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.526484375,
+          "confidence": 0.6584249999999999,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:73",
+            "distinct_axes:6",
+            "origin_types:3",
+            "referring_accounts:0",
+            "origin_types:3",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-01T01:07:24.648Z",
+        "homepage_url": "https://inquirer.net/",
+        "example_url": "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
+        "homepage_status": 200,
+        "example_status": 404,
+        "homepage_final_url": "https://www.inquirer.net/",
+        "example_final_url": "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 17,
           "opinion_marker": false
         },
         "example": {
@@ -3029,9 +3162,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-01T02:13:49.000Z",
+      "last_seen_at": "2026-07-01T03:00:01.000Z",
       "discovery": {
-        "distinct_urls": 6405,
+        "distinct_urls": 6406,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3040,10 +3173,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3775,
-          "feed_buffer_reply": 4156
+          "feed_buffer": 3777,
+          "feed_buffer_reply": 4159
         },
-        "distinct_referring_accounts": 2059,
+        "distinct_referring_accounts": 2060,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3082,7 +3215,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:6405",
+            "distinct_urls:6406",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3090,7 +3223,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:2059",
+            "referring_accounts:2060",
             "origin_types:2"
           ]
         },
@@ -3121,10 +3254,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:6405",
+            "distinct_urls:6406",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:2059",
+            "referring_accounts:2060",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3154,138 +3287,6 @@
           "has_meta_author": false,
           "has_published_time": false,
           "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "inquirer.net",
-      "entity": "Inquirer",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-09T01:05:59.567Z",
-      "last_seen_at": "2026-07-01T01:08:41.521Z",
-      "discovery": {
-        "distinct_urls": 73,
-        "example_urls": [
-          "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
-          "https://newsinfo.inquirer.net/2251519/chr-carries-out-motu-proprio-probe-into-tacloban-cavite-school-incidents",
-          "https://newsinfo.inquirer.net/2251594/army-instructor-probing-for-allegedly-assaulting-national-guard-trainees",
-          "https://newsinfo.inquirer.net/2251702/chr-seeks-swift-passage-of-bills-creating-detention-monitoring-body",
-          "https://newsinfo.inquirer.net/2252742/fwd-defense-lawyer-poa-says-being-listed-as-the-prosecs-witness-not-a-problem"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 41,
-          "journals": 128
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_authoritarian_self_determination_v1",
-          "axis_collective_voice",
-          "axis_media_integrity_v1",
-          "axis_national_sovereignty_v_intl_law_v1",
-          "axis_political_trust_corruption_v1",
-          "axis_power_accountability"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.82,
-          "basis": [
-            "distinct_urls:73",
-            "distinct_axes:6",
-            "origin_types:2"
-          ]
-        },
-        "corroboration": {
-          "score": 0.175,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:2"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.14,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:0",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.50515625,
-          "confidence": 0.63795,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:73",
-            "distinct_axes:6",
-            "origin_types:2",
-            "referring_accounts:0",
-            "origin_types:2",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-01T01:07:24.648Z",
-        "homepage_url": "https://inquirer.net/",
-        "example_url": "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
-        "homepage_status": 200,
-        "example_status": 404,
-        "homepage_final_url": "https://www.inquirer.net/",
-        "example_final_url": "https://www.inquirer.net/capiz-broadcaster-shooting-probe-widens-as-cops-form-task-force",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 17,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -11078,9 +11079,9 @@
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-16T09:36:45.269Z",
-      "last_seen_at": "2026-06-30T02:17:53.689Z",
+      "last_seen_at": "2026-07-01T02:45:10.689Z",
       "discovery": {
-        "distinct_urls": 82,
+        "distinct_urls": 83,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -11089,7 +11090,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 82
+          "articles": 83
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -11118,7 +11119,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:82",
+            "distinct_urls:83",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -11156,7 +11157,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:82",
+            "distinct_urls:83",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -25451,7 +25452,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-28T03:36:38.623Z",
+        "fetched_at": "2026-07-01T03:38:04.061Z",
         "homepage_url": "https://tickerscores.ai/",
         "example_url": "https://tickerscores.ai/?twclid=29mi9nru582fdb9vf7t1d5r9yf",
         "homepage_status": 200,
@@ -32123,7 +32124,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-28T03:36:40.176Z",
+        "fetched_at": "2026-07-01T03:38:05.528Z",
         "homepage_url": "https://any.run/",
         "example_url": "https://any.run/cybersecurity-blog/anyrun-macos-sandbox/?utm_source=twitter&utm_medium=post&utm_campaign=macos_ad&utm_content=linktoblog&utm_term=300326&twclid=23x4x734jui85kqg60evobo3x3",
         "homepage_status": 200,
@@ -46196,7 +46197,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-28T03:05:59.366Z",
+        "fetched_at": "2026-07-01T03:07:23.801Z",
         "homepage_url": "https://etsy.com/",
         "example_url": "https://www.etsy.com/uk/listing/1660419760/personalised-bag-of-reasons-why-i-love?ref=shop_home_feat_2&sr_prefetch=1&pf_from=shop_home&pro=1&sts=1&logging_key=554a7bcb2c808ecf99a9e3d68872b5af4ecb1d3f%3A1660419760&twclid=2e5zgu06991vkl8s62fs0146ic",
         "homepage_status": 403,
@@ -46318,7 +46319,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-28T03:05:59.976Z",
+        "fetched_at": "2026-07-01T03:07:24.347Z",
         "homepage_url": "https://sling.com/",
         "example_url": "https://www.sling.com/sports/basketball?sc=1&utm_medium=social&utm_source=x&utm_campaign=2026_q2_sling_gm_x_soc_postseason_sales&utm_content=2026_Q2_Sling_GM_X_SOC_Basketball_NBAPlayoffsv1S&twclid=2e7arnq15un6t71smhb72lns3b",
         "homepage_status": 200,
@@ -46440,7 +46441,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-28T03:06:00.230Z",
+        "fetched_at": "2026-07-01T03:07:24.616Z",
         "homepage_url": "https://nationwide.com/",
         "example_url": "https://nationwide.com/?twclid=294pdnbf5jdk527ocpc06sbbq6",
         "homepage_status": 403,
@@ -46562,7 +46563,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-28T03:06:00.496Z",
+        "fetched_at": "2026-07-01T03:07:24.882Z",
         "homepage_url": "https://lusha.com/",
         "example_url": "https://www.lusha.com/lp/revops-lp/?utm_source=X&utm_campaign=_sg__builders__all_cpc&utm_medium=cpc&twclid=2bltl6th8k2jdcashy0xeb7fqp",
         "homepage_status": 403,
@@ -46684,7 +46685,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-28T03:36:40.468Z",
+        "fetched_at": "2026-07-01T03:38:05.742Z",
         "homepage_url": "https://bitcoinmagazine.com/",
         "example_url": "https://bitcoinmagazine.com/sponsored/how-does-borrowing-against-bitcoin-actually-work?twclid=2a0s8fadkcmnax1qcvr537zyb6",
         "homepage_status": 200,
@@ -46700,7 +46701,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 19,
+          "outbound_links_count": 18,
           "opinion_marker": false
         },
         "example": {
