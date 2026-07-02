@@ -236,9 +236,13 @@ function updateTrackerClaim(claimId, newStatus, notes) {
 
 const { filterStableUrls } = require('./lib/verification_export');
 
-function persistResult({ claim, result, handle, oldStatus }) {
+function persistResult({ claim, result, sourceData, handle, oldStatus }) {
   const searchData = claim._searchData;
   const statusChanged = result.suggested_status !== oldStatus;
+  // Resolve the authoritative tier the same way the scorer does (claim_scorer.js:256):
+  // sourceData.credibility_tier wins over the raw claim tier. Without this the column
+  // stays NULL for live/tracker claims even though the scorer knew the tier.
+  const resolvedTier = (sourceData && sourceData.credibility_tier) || claim.source_tier || null;
 
   vdb.upsertVerification({
     claim_id:           claim.claim_id,
@@ -250,7 +254,7 @@ function persistResult({ claim, result, handle, oldStatus }) {
     web_search_summary: searchData?.summary || null,
     evidence_urls:      filterStableUrls(searchData?.evidence_urls).length ? filterStableUrls(searchData?.evidence_urls) : null,
     source_handle:      handle || claim.source_handle || null,
-    source_tier:        claim.source_tier || null,
+    source_tier:        resolvedTier,
     related_axis_id:    claim.related_axis_id || null,
     category:           claim.category || null,
     original_source:    searchData?.original_source || null,
