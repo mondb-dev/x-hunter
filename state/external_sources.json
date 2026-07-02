@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-02T06:38:27.506Z",
+  "generated_at": "2026-07-02T09:07:58.655Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-02T06:38:31.340Z",
+  "profiled_at": "2026-07-02T09:08:02.905Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -391,7 +391,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-01T07:09:22.096Z",
       "discovery": {
-        "distinct_urls": 208,
+        "distinct_urls": 210,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -401,7 +401,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 24,
-          "reading_queue": 189,
+          "reading_queue": 191,
           "journals": 51
         },
         "distinct_referring_accounts": 0,
@@ -442,7 +442,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:208",
+            "distinct_urls:210",
             "distinct_axes:9",
             "origin_types:3"
           ]
@@ -481,7 +481,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:208",
+            "distinct_urls:210",
             "distinct_axes:9",
             "origin_types:3",
             "referring_accounts:0",
@@ -491,7 +491,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T08:36:39.481Z",
+        "fetched_at": "2026-07-02T08:37:59.419Z",
         "homepage_url": "https://theguardian.com/",
         "example_url": "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
         "homepage_status": 200,
@@ -790,7 +790,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-06-28T20:38:18.866Z",
       "discovery": {
-        "distinct_urls": 133,
+        "distinct_urls": 134,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -800,7 +800,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 131,
+          "reading_queue": 132,
           "journals": 10
         },
         "distinct_referring_accounts": 0,
@@ -836,7 +836,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:133",
+            "distinct_urls:134",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -875,7 +875,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:133",
+            "distinct_urls:134",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -1006,7 +1006,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T08:36:39.798Z",
+        "fetched_at": "2026-07-02T08:37:59.683Z",
         "homepage_url": "https://house.gov/",
         "example_url": "https://www.house.gov/",
         "homepage_status": 200,
@@ -1925,7 +1925,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T08:36:40.058Z",
+        "fetched_at": "2026-07-02T08:37:59.928Z",
         "homepage_url": "https://apnews.com/",
         "example_url": "https://apnews.com/hub/iran",
         "homepage_status": 200,
@@ -3162,9 +3162,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-02T06:20:00.000Z",
+      "last_seen_at": "2026-07-02T09:00:07.000Z",
       "discovery": {
-        "distinct_urls": 6489,
+        "distinct_urls": 6510,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3173,10 +3173,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3821,
-          "feed_buffer_reply": 4210
+          "feed_buffer": 3832,
+          "feed_buffer_reply": 4225
         },
-        "distinct_referring_accounts": 2073,
+        "distinct_referring_accounts": 2078,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3215,7 +3215,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:6489",
+            "distinct_urls:6510",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3223,7 +3223,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:2073",
+            "referring_accounts:2078",
             "origin_types:2"
           ]
         },
@@ -3254,21 +3254,21 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:6489",
+            "distinct_urls:6510",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:2073",
+            "referring_accounts:2078",
             "origin_types:2",
             "track_record_unavailable"
           ]
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T08:36:40.456Z",
+        "fetched_at": "2026-07-02T08:38:04.464Z",
         "homepage_url": "https://t.co/",
         "example_url": "https://t.co/pJSE124ec4",
         "homepage_status": 200,
-        "example_status": 200,
+        "example_status": 403,
         "homepage_final_url": "https://t.co/",
         "example_final_url": "https://twitter.com/SageTeamjewels/status/2038670431050252616/photo/1",
         "homepage_content_type": "text/html; charset=utf-8",
@@ -7919,6 +7919,135 @@
       }
     },
     {
+      "domain": "mikmak.ai",
+      "entity": "Mikmak Ai",
+      "kind": "unknown",
+      "first_seen_at": "2026-05-06T07:01:01.304Z",
+      "last_seen_at": "2026-07-02T06:51:30.403Z",
+      "discovery": {
+        "distinct_urls": 8,
+        "example_urls": [
+          "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2dqu9rpgpoqo0mblvt9uebl5t7",
+          "https://shop.mikmak.ai/social/698bfbf209bd0c170611db64?utm_source=Twitter&utm_medium=Paid_Social&utm_campaign=PortfolioSummer&utm_term=Interests&utm_content=XPromotedAds&utm_placement=Promoted&utm_marketing_tactic=Awareness&twclid=2erpk724xjmjvqlajzay0lf0vc",
+          "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2ekbffb914a13rdlkfjn34v588",
+          "https://shop.mikmak.ai/social/6993fdf4abb9fa11bfdf75d6?utm_source=Twitter&utm_medium=Paid_Social&utm_campaign=PortfolioSummer&utm_term=Interests&utm_content=XPromotedAds&utm_placement=Promoted&utm_marketing_tactic=Awareness&twclid=2eca1gcsc8vrpfekntz0wze58a",
+          "https://shop.mikmak.ai/social/682d49d718a5080f422dda78?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FW-&utm_content=hlm-flavors-love-island-hero_jar-and-squeezes_spicy_fried-chicken-sandwich_bsay_na_16x9_twpr_30s_shnw_en_stp_mikmak_dark_na_sta-base_042_na_na_0565-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-broad&utm_placementid=P3G43FW&utm_variant=brandsay&twclid=26fysp8f210m5spgj4dyl0vww3"
+        ],
+        "origin_counts": {
+          "feed_buffer": 8
+        },
+        "distinct_referring_accounts": 4,
+        "sample_referring_accounts": [
+          "enews",
+          "gma",
+          "kraftheinzbrand",
+          "loveislandusa"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.29333333333333333,
+          "basis": [
+            "distinct_urls:8",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.5208333333333334,
+          "basis": [
+            "referring_accounts:4",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.15000000000000002,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:false",
+            "about:true",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:1",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.42236979166666666,
+          "confidence": 0.378475,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:8",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:4",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-01T17:37:44.778Z",
+        "homepage_url": "https://mikmak.ai/",
+        "example_url": "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2dqu9rpgpoqo0mblvt9uebl5t7",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://www.mikmak.com/",
+        "example_final_url": "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2dqu9rpgpoqo0mblvt9uebl5t7",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": true,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 49,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": false,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 1,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "byteplus.com",
       "entity": "Byteplus",
       "kind": "unknown",
@@ -11702,134 +11831,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 15,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "mikmak.ai",
-      "entity": "Mikmak Ai",
-      "kind": "unknown",
-      "first_seen_at": "2026-05-06T07:01:01.304Z",
-      "last_seen_at": "2026-06-28T14:31:25.168Z",
-      "discovery": {
-        "distinct_urls": 7,
-        "example_urls": [
-          "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2dqu9rpgpoqo0mblvt9uebl5t7",
-          "https://shop.mikmak.ai/social/698bfbf209bd0c170611db64?utm_source=Twitter&utm_medium=Paid_Social&utm_campaign=PortfolioSummer&utm_term=Interests&utm_content=XPromotedAds&utm_placement=Promoted&utm_marketing_tactic=Awareness&twclid=2erpk724xjmjvqlajzay0lf0vc",
-          "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2ekbffb914a13rdlkfjn34v588",
-          "https://shop.mikmak.ai/social/6993fdf4abb9fa11bfdf75d6?utm_source=Twitter&utm_medium=Paid_Social&utm_campaign=PortfolioSummer&utm_term=Interests&utm_content=XPromotedAds&utm_placement=Promoted&utm_marketing_tactic=Awareness&twclid=2eca1gcsc8vrpfekntz0wze58a",
-          "https://shop.mikmak.ai/social/682d49d718a5080f422dda78?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FW-&utm_content=hlm-flavors-love-island-hero_jar-and-squeezes_spicy_fried-chicken-sandwich_bsay_na_16x9_twpr_30s_shnw_en_stp_mikmak_dark_na_sta-base_042_na_na_0565-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-broad&utm_placementid=P3G43FW&utm_variant=brandsay&twclid=26fysp8f210m5spgj4dyl0vww3"
-        ],
-        "origin_counts": {
-          "feed_buffer": 7
-        },
-        "distinct_referring_accounts": 3,
-        "sample_referring_accounts": [
-          "enews",
-          "kraftheinzbrand",
-          "loveislandusa"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.26416666666666666,
-          "basis": [
-            "distinct_urls:7",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.4125,
-          "basis": [
-            "referring_accounts:3",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.15000000000000002,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:false",
-            "canonical:false",
-            "about:true",
-            "contact:false",
-            "corrections:false",
-            "outbound_links:1",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.4058333333333333,
-          "confidence": 0.3176,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:7",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:3",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-07-01T17:37:44.778Z",
-        "homepage_url": "https://mikmak.ai/",
-        "example_url": "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2dqu9rpgpoqo0mblvt9uebl5t7",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://www.mikmak.com/",
-        "example_final_url": "https://shop.mikmak.ai/social/69d80508c17cd48204adad0b?utm_source=twitter&utm_medium=paid_social&utm_campaign=une_hl_685&utm_term=P3G43FN-&utm_content=hlm-feel-the-flavor-overall-x_jar-and-squeezes_na_spicy_bsay_na_1x1_twpr_none_shnw_en_stp_mikmak_dark_na_sta-base_004_na_na_0565-demo-broad&utm_placement=amplify_preroll&utm_marketing_tactic=Consideration&utm_format=0565-demo-broad&utm_placementid=P3G43FN&utm_variant=brandsay&twclid=2dqu9rpgpoqo0mblvt9uebl5t7",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": true,
-          "has_about_link": true,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 49,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": false,
-          "has_canonical": false,
-          "has_about_link": false,
-          "has_contact_link": false,
-          "has_corrections_link": false,
-          "outbound_links_count": 1,
           "opinion_marker": false
         }
       }
@@ -21494,6 +21495,130 @@
       }
     },
     {
+      "domain": "govee.com",
+      "entity": "Govee",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-01T09:41:30.292Z",
+      "last_seen_at": "2026-07-01T16:22:37.000Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://us.govee.com/pages/govee-houseofthedragon?utm_source=twitter&utm_medium=paid_social&utm_campaign=hotd&utm_term=cpe&twclid=29b1vkgpwftpnrvrqi4d3zdxhg",
+          "https://us.govee.com/pages/govee-houseofthedragon?utm_source=twitter&utm_medium=paid_social&utm_campaign=hotd&utm_term=cpe&twclid=2eq86fm04ia0tvo59d3bhaen4e"
+        ],
+        "origin_counts": {
+          "feed_buffer": 1,
+          "feed_buffer_reply": 1
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "goveeofficial"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.17833333333333332,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.37494791666666666,
+          "confidence": 0.13045,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:2",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        },
+        "profile": {
+          "score": 0.1,
+          "confidence": 0.55,
+          "basis": [
+            "meta_author:false",
+            "published_time:false",
+            "canonical:true",
+            "about:false",
+            "contact:false",
+            "corrections:false",
+            "outbound_links:0",
+            "opinion_marker:false"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-07-02T09:07:59.709Z",
+        "homepage_url": "https://govee.com/",
+        "example_url": "https://us.govee.com/pages/govee-houseofthedragon?utm_source=twitter&utm_medium=paid_social&utm_campaign=hotd&utm_term=cpe&twclid=29b1vkgpwftpnrvrqi4d3zdxhg",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://us.govee.com/",
+        "example_final_url": "https://us.govee.com/pages/govee-houseofthedragon?utm_source=twitter&utm_medium=paid_social&utm_campaign=hotd&utm_term=cpe&twclid=29b1vkgpwftpnrvrqi4d3zdxhg",
+        "homepage_content_type": "text/html",
+        "example_content_type": "text/html",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": false,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": false,
+          "has_corrections_link": false,
+          "outbound_links_count": 0,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "varrd.com",
       "entity": "Varrd",
       "kind": "unknown",
@@ -25078,7 +25203,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T09:06:35.542Z",
+        "fetched_at": "2026-07-02T09:08:01.114Z",
         "homepage_url": "https://trendmicro.com/",
         "example_url": "https://newsroom.trendmicro.com/2026-03-23-Trend-Micros-Enterprise-Business-is-now-TrendAI-TM?utm_source=twitter_paid&utm_medium=social&utm_campaign=ent_corporate_aw_gl_int_rebrand&utm_content=carouse&twclid=2cmz9tfo72r6gek4sy5lql8osu",
         "homepage_status": 200,
@@ -25094,7 +25219,7 @@
           "has_about_link": true,
           "has_contact_link": true,
           "has_corrections_link": false,
-          "outbound_links_count": 14,
+          "outbound_links_count": 13,
           "opinion_marker": false
         },
         "example": {
@@ -25952,7 +26077,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T09:06:36.595Z",
+        "fetched_at": "2026-07-02T09:08:02.192Z",
         "homepage_url": "https://angel.com/",
         "example_url": "https://www.angel.com/tickets/young-washington?twclid=27mi12v89i7upcqxfvv5wwjfcz",
         "homepage_status": 200,
@@ -29424,19 +29549,19 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T09:06:39.901Z",
+        "fetched_at": "2026-07-02T09:08:02.905Z",
         "homepage_url": "https://dell.com/",
         "example_url": "https://www.dell.com/en-us/shop/dell-laptops/xps-14-laptop/spd/xps-da14260-laptop?twclid=2b95mzwodix16nm7kii2sz7zvh",
-        "homepage_status": null,
+        "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://dell.com/",
+        "homepage_final_url": "https://www.dell.com/en-us",
         "example_final_url": "https://www.dell.com/en-us/shop/dell-laptops/xps-14-laptop/spd/xps-da14260-laptop?twclid=2b95mzwodix16nm7kii2sz7zvh",
-        "homepage_content_type": "",
+        "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
@@ -34461,7 +34586,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T06:06:32.778Z",
+        "fetched_at": "2026-07-02T07:07:58.068Z",
         "homepage_url": "https://bruntworkwear.com/",
         "example_url": "https://bruntworkwear.com/collections/fathers-day?utm_source=twitter&utm_medium=cpc&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&hpt_source=twitter&hpt_campaign_id=%7B%7Bcampaign_id%7D%7D&hpt_adgroup_id=%7B%7Badgroup_id%7D%7D&hpt_ad_id=%7B%7Bad_id%7D%7D&twclid=27cbkia972xnwru1wrcn3n1z0q",
         "homepage_status": 200,
@@ -34584,23 +34709,23 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T06:37:07.238Z",
+        "fetched_at": "2026-07-02T07:07:58.478Z",
         "homepage_url": "https://paramountplus.com/",
         "example_url": "https://www.paramountplus.com/shows/dutton-ranch/?ftag=PPM-07-10cbi9g&twclid=2dm265hhtvlky8rqv8df36ol4k",
-        "homepage_status": null,
+        "homepage_status": 200,
         "example_status": 500,
-        "homepage_final_url": "https://paramountplus.com/",
+        "homepage_final_url": "https://www.paramountplus.com/",
         "example_final_url": "https://www.paramountplus.com/shows/dutton-ranch/?ftag=PPM-07-10cbi9g&twclid=2dm265hhtvlky8rqv8df36ol4k",
-        "homepage_content_type": "",
+        "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
           "has_meta_author": false,
           "has_published_time": false,
-          "has_canonical": false,
+          "has_canonical": true,
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 0,
+          "outbound_links_count": 12,
           "opinion_marker": false
         },
         "example": {
@@ -34707,7 +34832,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T06:37:07.587Z",
+        "fetched_at": "2026-07-02T07:07:58.864Z",
         "homepage_url": "https://layerproof.app/",
         "example_url": "https://layerproof.app/?twclid=29okmi15onkidmv5cn3td30tzd",
         "homepage_status": 200,
@@ -34830,7 +34955,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T06:37:08.413Z",
+        "fetched_at": "2026-07-02T07:07:59.694Z",
         "homepage_url": "https://openevidence.com/",
         "example_url": "https://www.openevidence.com/announcements/openevidence-and-society-of-surgical-oncology-announce-strategic-partnership-to-advance-surgical-cancer-care-and-launch-sso-innovator-grant?twclid=27t9tuhebi4a7qdj9mza3igdkn",
         "homepage_status": 403,
@@ -34953,7 +35078,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T07:06:39.689Z",
+        "fetched_at": "2026-07-02T07:38:00.154Z",
         "homepage_url": "https://peacocktv.com/",
         "example_url": "https://www.peacocktv.com/sports/nba?cid=2604sptnp1rsfnbsppdsocial307218&utm_campaign=2604sptnp1rsf&utm_source=nbcs_tw_tw&utm_medium=pd_social_awa_sclpst&utm_term=na_na&utm_content=na&twclid=2befc20y7q2m509tapnzd2kkq0",
         "homepage_status": 200,
@@ -35076,7 +35201,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T07:06:40.099Z",
+        "fetched_at": "2026-07-02T07:38:00.704Z",
         "homepage_url": "https://delltechnologies.com/",
         "example_url": "https://www.delltechnologies.com/en-us/dt/corporate/newsroom/announcements/detailpage.press-releases~usa~2026~05~dell-technologies-closes-the-gap-between-ai-ambition-and-ai-outcomes.htm?twclid=29cpu05ap6qcdleom7dgr5tatw",
         "homepage_status": 404,
@@ -35199,7 +35324,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T07:06:40.668Z",
+        "fetched_at": "2026-07-02T07:38:02.699Z",
         "homepage_url": "https://burga.us/",
         "example_url": "https://burga.us/?utm_source=twitter&utm_medium=paid&utm_campaign=US+-+TOF+%7C+ABO+%7C+1+DC+%7C+Broad+%7C+Evergreen+Ultimate+Winners+%7C+AI+%7C+2026.05.05+%7C+%24200&utm_term=Batch+%231+%7C+2026.05.05&utm_content=Marius+225v3&twclid=252b1spdlruezd1plpkesujsz5",
         "homepage_status": 200,
@@ -35322,7 +35447,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T07:06:41.437Z",
+        "fetched_at": "2026-07-02T07:38:03.532Z",
         "homepage_url": "https://dito.ph/",
         "example_url": "https://dito.ph/sandali?utm_source=twitter&utm_medium=cpm&utm_campaign=DOTC-DM-AWAR-DM-COJ-MAY-INT&utm_id=2026DM&utm_term=COJFEST&utm_content=promoted_post_1&twclid=2estlcww980yee2hzsu5vdedbn",
         "homepage_status": 200,
@@ -63721,83 +63846,6 @@
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
           "huawei"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
-      "domain": "govee.com",
-      "entity": "Govee",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-01T09:41:30.292Z",
-      "last_seen_at": "2026-07-01T09:41:30.292Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://us.govee.com/pages/govee-houseofthedragon?utm_source=twitter&utm_medium=paid_social&utm_campaign=hotd&utm_term=cpe&twclid=29b1vkgpwftpnrvrqi4d3zdxhg"
-        ],
-        "origin_counts": {
-          "feed_buffer": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "goveeofficial"
         ],
         "distinct_axes": []
       },
