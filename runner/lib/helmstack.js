@@ -49,6 +49,11 @@ function getCookies(id)      { return request("GET", `/api/tabs/${id}/cookies`);
 function setCookie(id, c)    { return request("POST", `/api/tabs/${id}/cookies`, c); }
 function screenshot(id)      { return request("GET", `/api/tabs/${id}/screenshot`); }
 function insertText(id, text){ return request("POST", `/api/tabs/${id}/insert-text`, { text }); }
+function pressKey(id, opts)  { return request("POST", `/api/tabs/${id}/key`, opts); }
+/** Cmd/Meta+Enter — submits LinkedIn/X composers regardless of frame origin. */
+function metaEnter(id)       { return pressKey(id, { key: "Enter", code: "Enter", keyCode: 13, modifiers: 4 }); }
+/** Real left mouse click at viewport CSS coords (reaches cross-origin iframes). */
+function clickAt(id, x, y)   { return request("POST", `/api/tabs/${id}/click`, { x, y }); }
 function approvals()         { return request("GET", "/api/approvals"); }
 function approve(approvalId) { return request("POST", `/api/approvals/${approvalId}/approve`, {}); }
 
@@ -111,6 +116,6 @@ module.exports = {
   request, health,
   listTabs, openTab, navigate, tabUrl, ensureXTab,
   evaluate, evalFn, pollFn, waitReady,
-  getCookies, setCookie, screenshot, insertText,
+  getCookies, setCookie, screenshot, insertText, pressKey, metaEnter, clickAt,
   approvals, approve,
 };

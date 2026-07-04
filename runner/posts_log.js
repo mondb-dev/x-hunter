@@ -166,7 +166,41 @@ function logSignal({ content, tweet_url, date, cycle, spike_count, strength, axe
   console.log(`[posts_log] logged signal (${spike_count} axes, ${strength})`);
 }
 
-module.exports = { logTweet, logQuote, logArticle, logSignal, logVerification };
+/**
+ * Append a LinkedIn activity entry (post / comment / like).
+ *
+ * type: 'linkedin_post' | 'linkedin_comment' | 'linkedin_like'
+ * Dedups on (type + content) for posts/comments, and on (type + target_url)
+ * for likes, so re-runs within a session don't double-log.
+ */
+function logLinkedIn({ type, content, url, target_author, target_url, date, cycle }) {
+  const log = readLog();
+  const kind = type || "linkedin_post";
+  const dup = log.posts.find(p =>
+    p.type === kind &&
+    (kind === "linkedin_like"
+      ? p.target_url === target_url
+      : p.content === content)
+  );
+  if (dup) {
+    if (!dup.url && url) { dup.url = url; writeLog(log); }
+    return;
+  }
+  log.posts.push({
+    type: kind,
+    content: content || "",
+    url: url || "",
+    target_author: target_author || null,
+    target_url: target_url || null,
+    date: date || new Date().toISOString().slice(0, 10),
+    cycle: cycle || null,
+    posted_at: new Date().toISOString(),
+  });
+  writeLog(log);
+  console.log(`[posts_log] logged ${kind}${content ? ` (${content.length} chars)` : ""}`);
+}
+
+module.exports = { logTweet, logQuote, logArticle, logSignal, logVerification, logLinkedIn };
 
 /**
  * Append a verification post entry (watch signal or resolution).
