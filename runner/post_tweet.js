@@ -33,6 +33,16 @@ const RESULT_FILE = path.join(ROOT, "state", "tweet_result.txt");
 const ATTEMPT_FILE = path.join(ROOT, "state", "tweet_attempt.json");
 const CYCLE = Number.parseInt(process.env.CYCLE_NUMBER || "", 10) || null;
 
+// POST_BACKEND=helmstack routes posting through the HelmStack browser
+// substrate (HTTP API on :7070) instead of the legacy Chrome CDP profile.
+if ((process.env.POST_BACKEND || "").toLowerCase() === "helmstack") {
+  require("./lib/post_x_helmstack")
+    .runTweet({ draftFile: DRAFT_FILE, resultFile: RESULT_FILE, attemptFile: ATTEMPT_FILE, cycle: CYCLE })
+    .then(code => process.exit(code))
+    .catch(err => { console.error(`[post_tweet] helmstack backend error: ${err.message}`); process.exit(1); });
+  return;
+}
+
 // X.com selectors (as of 2025)
 const COMPOSE_BOX   = '[data-testid="tweetTextarea_0"]';
 const POST_BUTTON   = '[data-testid="tweetButton"], [data-testid="tweetButtonInline"]';
