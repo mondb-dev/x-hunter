@@ -1,164 +1,59 @@
 {
-  "checked_at": "2026-07-02T03:10:34.261Z",
-  "evidence_24h": 78,
-  "unique_sources": 26,
-  "status": "warning",
+  "checked_at": "2026-07-04T02:38:42.437Z",
+  "evidence_24h": 1,
+  "unique_sources": 1,
+  "status": "captured",
   "alerts": [
     {
       "type": "source_dominance",
-      "severity": "moderate",
-      "detail": "@unknown accounts for 32% of today's evidence (25/78)",
+      "severity": "high",
+      "detail": "@unknown accounts for 100% of today's evidence (1/1)",
       "username": "unknown",
-      "share": 0.321
+      "share": 1
+    },
+    {
+      "type": "pole_skew",
+      "severity": "high",
+      "detail": "100% of evidence pushes \"left\" — risk of one-sided belief drift",
+      "dominant_pole": "left",
+      "share": 1
+    },
+    {
+      "type": "axis_concentration",
+      "severity": "high",
+      "detail": "\"Power, Institutions, and Rule of Law\" received 100% of today's evidence (1/1)",
+      "axis_id": "axis_power_accountability",
+      "share": 1
     }
   ],
-  "summary": "1 capture alert(s) detected:\n[MODERATE] @unknown accounts for 32% of today's evidence (25/78)",
+  "summary": "3 capture alert(s) detected:\n[HIGH] @unknown accounts for 100% of today's evidence (1/1)\n[HIGH] 100% of evidence pushes \"left\" — risk of one-sided belief drift\n[HIGH] \"Power, Institutions, and Rule of Law\" received 100% of today's evidence (1/1)",
   "source_concentration": {
     "unknown": {
       "username": "unknown",
-      "count": 25,
-      "share": 0.321
-    },
-    "longgroyper": {
-      "username": "longgroyper",
-      "count": 7,
-      "share": 0.09
-    },
-    "jackmateoai": {
-      "username": "jackmateoai",
-      "count": 6,
-      "share": 0.077
-    },
-    "ericldaugh": {
-      "username": "ericldaugh",
-      "count": 5,
-      "share": 0.064
-    },
-    "foxnews": {
-      "username": "foxnews",
-      "count": 4,
-      "share": 0.051
-    },
-    "bskimike22802": {
-      "username": "bskimike22802",
-      "count": 3,
-      "share": 0.038
-    },
-    "nicksortor": {
-      "username": "nicksortor",
-      "count": 3,
-      "share": 0.038
-    },
-    "ricwe123": {
-      "username": "ricwe123",
-      "count": 3,
-      "share": 0.038
-    },
-    "ianonpatriot": {
-      "username": "ianonpatriot",
-      "count": 2,
-      "share": 0.026
-    },
-    "realmaalouf": {
-      "username": "realmaalouf",
-      "count": 2,
-      "share": 0.026
+      "count": 1,
+      "share": 1
     }
   },
   "axis_concentration": {
-    "axis_epistemic_integrity": {
-      "axis_id": "axis_epistemic_integrity",
-      "label": "Truth and Evidence in Public Discourse",
-      "count": 35,
-      "share": 0.449
-    },
-    "axis_geopolitical_rhetoric_v1": {
-      "axis_id": "axis_geopolitical_rhetoric_v1",
-      "label": "Geopolitical Rhetoric vs. Humanitarian Concerns",
-      "count": 10,
-      "share": 0.128
-    },
     "axis_power_accountability": {
       "axis_id": "axis_power_accountability",
       "label": "Power, Institutions, and Rule of Law",
-      "count": 9,
-      "share": 0.115
-    },
-    "axis_political_trust_corruption_v1": {
-      "axis_id": "axis_political_trust_corruption_v1",
-      "label": "Trust in Political Institutions and Anti-Corruption Efforts",
-      "count": 8,
-      "share": 0.103
-    },
-    "axis_human_rights_exploitation_v1": {
-      "axis_id": "axis_human_rights_exploitation_v1",
-      "label": "Human Rights and Exploitation",
-      "count": 5,
-      "share": 0.064
-    },
-    "axis_national_sovereignty_v_intl_law_v1": {
-      "axis_id": "axis_national_sovereignty_v_intl_law_v1",
-      "label": "National Sovereignty vs. International Law",
-      "count": 4,
-      "share": 0.051
-    },
-    "axis_media_integrity_v1": {
-      "axis_id": "axis_media_integrity_v1",
-      "label": "Integrity of Information and Social Media Manipulation",
-      "count": 2,
-      "share": 0.026
-    },
-    "axis_global_power_realignments_v1": {
-      "axis_id": "axis_global_power_realignments_v1",
-      "label": "Global Power Realignments and Shifting Hegemony",
-      "count": 2,
-      "share": 0.026
-    },
-    "axis_collective_voice": {
-      "axis_id": "axis_collective_voice",
-      "label": "Authentic Participation vs. Managed Consent",
       "count": 1,
-      "share": 0.013
-    },
-    "axis_authoritarian_self_determination_v1": {
-      "axis_id": "axis_authoritarian_self_determination_v1",
-      "label": "Authoritarian Control vs. Individual/Collective Self-Determination",
-      "count": 1,
-      "share": 0.013
+      "share": 1
     }
   },
   "cluster_concentration": {
     "unknown": {
       "cluster": "unknown",
-      "count": 46,
-      "share": 0.59
-    },
-    "us_politics": {
-      "cluster": "us_politics",
-      "count": 12,
-      "share": 0.154
-    },
-    "middle_east": {
-      "cluster": "middle_east",
-      "count": 5,
-      "share": 0.064
-    },
-    "geopolitics": {
-      "cluster": "geopolitics",
-      "count": 5,
-      "share": 0.064
-    },
-    "sovereignty": {
-      "cluster": "sovereignty",
-      "count": 3,
-      "share": 0.038
+      "count": 1,
+      "share": 1
     }
   },
   "pole_balance": {
-    "left": 28,
-    "right": 50,
+    "left": 1,
+    "right": 0,
     "neutral": 0,
-    "left_share": 0.359,
-    "right_share": 0.641
+    "left_share": 1,
+    "right_share": 0
   }
 }

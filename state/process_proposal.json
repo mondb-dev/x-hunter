@@ -1,25 +1,22 @@
 {
-  "id": "proposal_narrative_component_logger_1782344537532",
-  "status": "merged",
-  "title": "Develop a Narrative Component Logger for Persistent Narrative Tracking",
-  "problem": "I repeatedly observe and describe the same pervasive narrative (e.g., 'Immigration as NWO tool') without a structured way to break down, categorize, and track its specific rhetorical components, actors, and evolution. This leads to redundant observations and limits deeper analytical insight into narrative construction and manipulation.",
+  "id": "proposal_framework_for_monitoring_narrative_patterns_20260704",
+  "status": "pending",
+  "title": "Framework for Monitoring and Analyzing Narrative Patterns",
+  "problem": "The recurring theme of narrative manipulation, particularly strategic framing and emotional resonance, remains a persistent challenge. Current tools allow analysis but lack systematic tracking and validation.",
   "evidence": [
-    "2026-06-24 h10: 'Several posts explicitly framed mass immigration as a deliberate tool to undermine national sovereignty and establish a centralized global governance.'",
-    "2026-06-24 h13: 'A pervasive and consistent narrative framing mass immigration as a deliberate tool for a 'New World Order' or 'One World Government.' Several accounts explicitly tie immigration to the erosion of national sovereignty... often attributing these actions to shadowy, unelected global entities or specific powerful groups like the 'deep state and Zionists' or the WEF/Rothschilds.'",
-    "2026-06-24 h14: 'Multiple claims framing mass immigration not as an organic demographic or economic phenomenon, but as a deliberate instrument to dismantle national sovereignty and cultural identity, orchestrated by unelected globalist entities like the WEF. This narrative, often laced with 'deep state' and 'white replacement' rhetoric...'",
-    "2026-06-24 h16: 'The observed posts largely reinforce the idea that mass migration is not an organic phenomenon, but rather a deliberate tool wielded by shadowy entities—such as the WEF, George Soros, the 'deep state,' or 'Zionists'—to undermine national sovereignty, dilute cultural identity, and ultimately pave the way for a centralized global order. These narratives often employ strong emotional language and conspiracy theories...'",
-    "2026-06-24 h19: 'Observations consistently linked claims of orchestrated 'immigration excess' to a perceived agenda by 'globalists' or 'the establishment' to dismantle Western society and implement a 'new world order'. These narratives frequently invoke specific conspiracy theories like 'The Great Reset' and 'The Kalergi Plan'...'."
+    "2026-07-01 h14: 'renewed focus on birth tourism by government officials and media outlets'",
+    "2026-07-01 h18: 'pervasive pattern of strategic narrative construction and institutional disregard for democratic processes'",
+    "Recent articles such as the one predicting increased fear-based narratives"
   ],
-  "proposed_solution": "Build a module or extension to the observation pipeline that allows for structured logging of specific narrative components when a persistent narrative pattern is detected. This logger would identify and record: 1) Core narrative claim (e.g., 'Immigration is NWO tool'), 2) Attributed actors/entities (e.g., WEF, Soros, deep state), 3) Specific rhetorical devices/conspiracy theories invoked (e.g., Kalergi Plan, Great Reset, White Replacement), 4) Stated objective of the narrative (e.g., undermine sovereignty, centralize power), 5) Emotional tone/language markers. This structured data would then feed into the existing Narrative Manipulation Pattern Logger for more granular analysis.",
+  "proposed_solution": "Develop a module to systematically categorize, track, and validate recurring narrative patterns. This module will include features like keyword monitoring, trend analysis, and validation against neutral data sources.",
   "affected_files": [
-    "agent/observation_pipeline.js",
-    "agent/narrative_analyzer.js",
-    "lib/state.js",
-    "data/schemas/narrative_component_log.json"
+    "lib/agent_tools.js",
+    "builder_pipeline.js",
+    "modules/pattern_monitoring.ts"
   ],
-  "scope": "pipeline",
-  "estimated_risk": "medium",
-  "created_at": "2026-06-24T23:42:17.466Z",
-  "resolved_at": "2026-07-01T11:36:57.577Z",
-  "resolution": "Successfully built, tested, and merged"
+  "scope": "protocol|pipeline",
+  "estimated_risk": "low",
+  "created_at": "2026-07-04T02:47:05.247Z",
+  "resolved_at": null,
+  "resolution": null
 }
