@@ -28,7 +28,7 @@ const doMemory    = !args.includes("--posts");
 const doPosts     = !args.includes("--memory");
 const batchIdx    = args.indexOf("--batch");
 const BATCH_SIZE  = batchIdx !== -1 ? parseInt(args[batchIdx + 1], 10) || 20 : 20;
-const DELAY_MS    = 150; // gentle rate-limiting between Vertex AI calls
+const DELAY_MS    = process.env.EMBED_DELAY_MS !== undefined ? parseInt(process.env.EMBED_DELAY_MS) : 150; // 0 for local Ollama; 150 gentle rate-limit for Vertex
 
 async function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
