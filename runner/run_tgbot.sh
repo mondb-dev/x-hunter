@@ -3,7 +3,7 @@
 # launchd (unlike systemd) has no EnvironmentFile, and telegram_bot.js's config.js
 # does not self-load dotenv, so we source .env here before exec'ing node.
 set -euo pipefail
-PROJECT_ROOT="/Users/mondb/Documents/Projects/hunter"
+PROJECT_ROOT="/Users/mondb/hunter"
 cd "$PROJECT_ROOT"
 if [ -f "$PROJECT_ROOT/.env" ]; then
   set -a && source "$PROJECT_ROOT/.env" && set +a

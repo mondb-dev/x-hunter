@@ -8,7 +8,7 @@
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/mondb/Documents/Projects/hunter/runner/run_tgbot.sh</string>
+        <string>/Users/mondb/hunter/runner/run_tgbot.sh</string>
     </array>
 
     <key>EnvironmentVariables</key>
@@ -20,7 +20,7 @@
     </dict>
 
     <key>WorkingDirectory</key>
-    <string>/Users/mondb/Documents/Projects/hunter</string>
+    <string>/Users/mondb/hunter</string>
 
     <key>RunAtLoad</key>
     <true/>
@@ -32,9 +32,9 @@
     <integer>10</integer>
 
     <key>StandardOutPath</key>
-    <string>/Users/mondb/Documents/Projects/hunter/runner/telegram_bot.log</string>
+    <string>/Users/mondb/hunter/runner/telegram_bot.log</string>
 
     <key>StandardErrorPath</key>
-    <string>/Users/mondb/Documents/Projects/hunter/runner/telegram_bot.log</string>
+    <string>/Users/mondb/hunter/runner/telegram_bot.log</string>
 </dict>
 </plist>
