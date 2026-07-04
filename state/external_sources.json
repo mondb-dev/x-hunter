@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-04T02:25:18.879Z",
+  "generated_at": "2026-07-04T05:38:57.955Z",
   "method": "mechanical_registry_v1",
-  "profiled_at": "2026-07-04T02:25:26.005Z",
+  "profiled_at": "2026-07-04T05:39:03.682Z",
   "sources": [
     {
       "domain": "ojp.gov",
@@ -17,7 +17,7 @@
         ],
         "origin_counts": {
           "claim_tracker": 1,
-          "reading_queue": 4
+          "reading_queue": 5
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -391,7 +391,7 @@
       "first_seen_at": "2026-03-27T23:17:00Z",
       "last_seen_at": "2026-07-02T08:04:42.453Z",
       "discovery": {
-        "distinct_urls": 216,
+        "distinct_urls": 218,
         "example_urls": [
           "https://www.theguardian.com/us-news/2026/jun/23/trump-immigration-courthouse-arrest-policy",
           "https://www.theguardian.com/us-news/2026/jun/28/ice-minnesota-defending-democracy",
@@ -401,7 +401,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 24,
-          "reading_queue": 197,
+          "reading_queue": 200,
           "journals": 51
         },
         "distinct_referring_accounts": 0,
@@ -442,7 +442,7 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:216",
+            "distinct_urls:218",
             "distinct_axes:9",
             "origin_types:3"
           ]
@@ -481,7 +481,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:216",
+            "distinct_urls:218",
             "distinct_axes:9",
             "origin_types:3",
             "referring_accounts:0",
@@ -527,9 +527,9 @@
       "entity": "Aljazeera",
       "kind": "news",
       "first_seen_at": "2026-06-22T02:45:00Z",
-      "last_seen_at": "2026-07-02T08:04:42.455Z",
+      "last_seen_at": "2026-07-04T05:07:49.589Z",
       "discovery": {
-        "distinct_urls": 146,
+        "distinct_urls": 148,
         "example_urls": [
           "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
           "https://www.aljazeera.com/video/newsfeed/2026/6/27/newly-released-video-exposes-henry-nowak-killers-lies?traffic_source=rss",
@@ -538,9 +538,9 @@
           "https://www.aljazeera.com/video/newsfeed/2026/7/1/why-is-maga-in-meltdown-over-the-supreme-court-birthright-ruling-2?traffic_source=rss"
         ],
         "origin_counts": {
-          "ontology_evidence": 101,
-          "reading_queue": 4,
-          "journals": 216
+          "ontology_evidence": 102,
+          "reading_queue": 5,
+          "journals": 220
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -553,6 +553,7 @@
           "axis_national_sovereignty_v_intl_law_v1",
           "axis_political_trust_corruption_v1",
           "axis_power_accountability",
+          "axis_public_trust_safety_crisis_v1",
           "axis_religion_politics_war_v1"
         ]
       },
@@ -580,8 +581,8 @@
         "breadth": {
           "score": 0.8799999999999999,
           "basis": [
-            "distinct_urls:146",
-            "distinct_axes:9",
+            "distinct_urls:148",
+            "distinct_axes:10",
             "origin_types:3"
           ]
         },
@@ -619,8 +620,8 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:146",
-            "distinct_axes:9",
+            "distinct_urls:148",
+            "distinct_axes:10",
             "origin_types:3",
             "referring_accounts:0",
             "origin_types:3",
@@ -629,7 +630,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T03:38:02.656Z",
+        "fetched_at": "2026-07-04T04:04:43.616Z",
         "homepage_url": "https://aljazeera.com/",
         "example_url": "https://www.aljazeera.com/opinions/2026/6/24/south-africas-crises-will-not-be-solved-by-blaming-migrants",
         "homepage_status": 200,
@@ -790,7 +791,7 @@
       "first_seen_at": "2026-06-22T00:15:00Z",
       "last_seen_at": "2026-07-01T06:14:34.244Z",
       "discovery": {
-        "distinct_urls": 140,
+        "distinct_urls": 142,
         "example_urls": [
           "https://www.nytimes.com/2026/06/19/world/canada/frank-stronach-trial-guilty-sex-charges.html",
           "https://www.nytimes.com/2026/06/27/world/americas/mexican-officials-us-informants.html",
@@ -800,7 +801,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 6,
-          "reading_queue": 138,
+          "reading_queue": 141,
           "journals": 10
         },
         "distinct_referring_accounts": 0,
@@ -836,7 +837,7 @@
         "breadth": {
           "score": 0.7633333333333332,
           "basis": [
-            "distinct_urls:140",
+            "distinct_urls:142",
             "distinct_axes:4",
             "origin_types:3"
           ]
@@ -875,7 +876,7 @@
           "basis": [
             "newsroom_domain_pattern",
             "article_path_seen",
-            "distinct_urls:140",
+            "distinct_urls:142",
             "distinct_axes:4",
             "origin_types:3",
             "referring_accounts:0",
@@ -928,7 +929,7 @@
           "https://www.house.gov/"
         ],
         "origin_counts": {
-          "reading_queue": 4,
+          "reading_queue": 5,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -1049,7 +1050,7 @@
           "http://trumprx.gov/"
         ],
         "origin_counts": {
-          "reading_queue": 4,
+          "reading_queue": 5,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -1165,7 +1166,7 @@
       "first_seen_at": "2026-06-26T07:05:00Z",
       "last_seen_at": "2026-07-01T06:14:34.242Z",
       "discovery": {
-        "distinct_urls": 102,
+        "distinct_urls": 104,
         "example_urls": [
           "https://www.bbc.co.uk/news/articles/cn8qxz6qypyo",
           "https://www.bbc.co.uk/news/articles/cn075j04pnyo?at_medium=RSS&amp;at_campaign=rss",
@@ -1175,7 +1176,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 4,
-          "reading_queue": 103,
+          "reading_queue": 105,
           "journals": 7
         },
         "distinct_referring_accounts": 0,
@@ -1209,7 +1210,7 @@
         "breadth": {
           "score": 0.7049999999999998,
           "basis": [
-            "distinct_urls:102",
+            "distinct_urls:104",
             "distinct_axes:3",
             "origin_types:3"
           ]
@@ -1247,7 +1248,7 @@
           "method": "mechanical_v1",
           "basis": [
             "newsroom_domain_pattern",
-            "distinct_urls:102",
+            "distinct_urls:104",
             "distinct_axes:3",
             "origin_types:3",
             "referring_accounts:0",
@@ -1301,7 +1302,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 3,
-          "reading_queue": 4
+          "reading_queue": 5
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1431,7 +1432,7 @@
           "https://www.bbc.com/news/articles/cp3xqkxp3x5o?at_medium=RSS&amp;at_campaign=rss"
         ],
         "origin_counts": {
-          "reading_queue": 22
+          "reading_queue": 23
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -1847,7 +1848,7 @@
           "https://apnews.com/hub/iran"
         ],
         "origin_counts": {
-          "reading_queue": 4,
+          "reading_queue": 5,
           "journals": 1
         },
         "distinct_referring_accounts": 0,
@@ -2896,9 +2897,9 @@
       "entity": "Techcrunch",
       "kind": "unknown",
       "first_seen_at": "2026-06-22T23:31:00Z",
-      "last_seen_at": "2026-07-01T06:14:34.252Z",
+      "last_seen_at": "2026-07-04T03:37:49.630Z",
       "discovery": {
-        "distinct_urls": 24,
+        "distinct_urls": 25,
         "example_urls": [
           "https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/",
           "https://techcrunch.com/2026/06/25/notion-mail-shuts-down-amid-agent-takeover/",
@@ -2908,7 +2909,7 @@
         ],
         "origin_counts": {
           "ontology_evidence": 13,
-          "journals": 29
+          "journals": 31
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -2944,7 +2945,7 @@
         "breadth": {
           "score": 0.7616666666666666,
           "basis": [
-            "distinct_urls:24",
+            "distinct_urls:25",
             "distinct_axes:5",
             "origin_types:2"
           ]
@@ -2983,7 +2984,7 @@
           "basis": [
             "unknown_domain_pattern",
             "article_path_seen",
-            "distinct_urls:24",
+            "distinct_urls:25",
             "distinct_axes:5",
             "origin_types:2",
             "referring_accounts:0",
@@ -3106,7 +3107,7 @@
             "about:true",
             "contact:true",
             "corrections:false",
-            "outbound_links:27",
+            "outbound_links:28",
             "opinion_marker:false"
           ]
         },
@@ -3126,7 +3127,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T23:37:24.357Z",
+        "fetched_at": "2026-07-04T03:34:43.788Z",
         "homepage_url": "https://bit.ly/",
         "example_url": "https://bit.ly/4rFUGm4?twclid=2cxu7o43bx4p37y7v84zudvy2q",
         "homepage_status": 200,
@@ -3152,7 +3153,7 @@
           "has_about_link": true,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 27,
+          "outbound_links_count": 28,
           "opinion_marker": false
         }
       }
@@ -3162,9 +3163,9 @@
       "entity": "T Co",
       "kind": "unknown",
       "first_seen_at": "2016-05-05T18:57:30.000Z",
-      "last_seen_at": "2026-07-03T12:18:32.000Z",
+      "last_seen_at": "2026-07-04T03:57:05.000Z",
       "discovery": {
-        "distinct_urls": 6527,
+        "distinct_urls": 6536,
         "example_urls": [
           "https://t.co/pJSE124ec4",
           "https://t.co/Soz8BXPWaa",
@@ -3173,10 +3174,10 @@
           "https://t.co/cYaqYDRp08"
         ],
         "origin_counts": {
-          "feed_buffer": 3842,
-          "feed_buffer_reply": 4233
+          "feed_buffer": 3844,
+          "feed_buffer_reply": 4240
         },
-        "distinct_referring_accounts": 2082,
+        "distinct_referring_accounts": 2087,
         "sample_referring_accounts": [
           "0808iveta",
           "09abracadabra",
@@ -3215,7 +3216,7 @@
         "breadth": {
           "score": 0.47,
           "basis": [
-            "distinct_urls:6527",
+            "distinct_urls:6536",
             "distinct_axes:0",
             "origin_types:2"
           ]
@@ -3223,7 +3224,7 @@
         "corroboration": {
           "score": 0.825,
           "basis": [
-            "referring_accounts:2082",
+            "referring_accounts:2087",
             "origin_types:2"
           ]
         },
@@ -3254,10 +3255,10 @@
           "basis": [
             "unknown_domain_pattern",
             "doi_or_identifier_path_seen",
-            "distinct_urls:6527",
+            "distinct_urls:6536",
             "distinct_axes:0",
             "origin_types:2",
-            "referring_accounts:2082",
+            "referring_accounts:2087",
             "origin_types:2",
             "track_record_unavailable"
           ]
@@ -3629,7 +3630,7 @@
             "about:false",
             "contact:false",
             "corrections:false",
-            "outbound_links:62",
+            "outbound_links:61",
             "opinion_marker:false"
           ]
         },
@@ -3651,7 +3652,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T16:36:51.125Z",
+        "fetched_at": "2026-07-04T03:34:44.152Z",
         "homepage_url": "https://epochtimes.com/",
         "example_url": "https://www.epochtimes.com/",
         "homepage_status": 200,
@@ -3667,7 +3668,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 62,
+          "outbound_links_count": 61,
           "opinion_marker": false
         },
         "example": {
@@ -3677,7 +3678,7 @@
           "has_about_link": false,
           "has_contact_link": false,
           "has_corrections_link": false,
-          "outbound_links_count": 62,
+          "outbound_links_count": 61,
           "opinion_marker": false
         }
       }
@@ -3779,7 +3780,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T00:07:20.334Z",
+        "fetched_at": "2026-07-04T03:34:44.794Z",
         "homepage_url": "https://idf.il/",
         "example_url": "https://www.idf.il/en/articles/2026/04/16/idf-finds-weapons-in-school-in-bint-jbeil-lebanon/",
         "homepage_status": null,
@@ -4312,7 +4313,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T02:36:58.888Z",
+        "fetched_at": "2026-07-04T03:34:47.628Z",
         "homepage_url": "https://newsguardtech.com/",
         "example_url": "https://www.newsguardtech.com/",
         "homepage_status": 200,
@@ -4438,7 +4439,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T17:36:52.711Z",
+        "fetched_at": "2026-07-04T04:04:45.115Z",
         "homepage_url": "https://snopes.com/",
         "example_url": "https://snopes.com/fact-check/strait-of-hormuz-oil-shorts-trump/",
         "homepage_status": 200,
@@ -4569,7 +4570,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T22:07:18.626Z",
+        "fetched_at": "2026-07-04T04:04:45.573Z",
         "homepage_url": "https://starlink.com/",
         "example_url": "https://www.starlink.com/us/residential?referral=RC-DF-9543787-19448-67&utm_medium=paid&utm_campaign=awr_us_soc_twt_ptg_cau&utm_content=awr_us_soc_twt_ptg_cau_res_gvp_v4s_stc_en-us_sdb-bluesky-uptime&twclid=2cg62b1u0oqrypdim5oir1767e",
         "homepage_status": 200,
@@ -4612,7 +4613,7 @@
           "https://www.reuters.com/site-search/?query=Evidence-based%20claims%2C%20transparent%20sourcing%2C%20honest%20uncertainty%2C%20good-faith%20argu%20Truth%20and%20Evidence%20in%20Public%20Discourse"
         ],
         "origin_counts": {
-          "reading_queue": 5
+          "reading_queue": 6
         },
         "distinct_referring_accounts": 1,
         "sample_referring_accounts": [
@@ -4693,7 +4694,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T22:07:19.009Z",
+        "fetched_at": "2026-07-04T04:04:46.873Z",
         "homepage_url": "https://reuters.com/",
         "example_url": "https://www.reuters.com/site-search/?query=Evidence-based%20claims%2C%20transparent%20sourcing%2C%20honest%20uncertainty%2C%20good-faith%20argu%20Truth%20and%20Evidence%20in%20Public%20Discourse",
         "homepage_status": 401,
@@ -5342,7 +5343,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T16:07:12.552Z",
+        "fetched_at": "2026-07-04T05:04:45.305Z",
         "homepage_url": "https://substack.com/",
         "example_url": "https://aniobrien.substack.com/p/white-working-class-girls-sacrificed",
         "homepage_status": 200,
@@ -5725,7 +5726,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T17:36:54.289Z",
+        "fetched_at": "2026-07-04T05:04:47.253Z",
         "homepage_url": "https://athena.com/",
         "example_url": "https://www.athena.com/cl/x?utm_source=twitter&utm_medium=paid_social&utm_campaign=%7B%7Bcampaign_name%7D%7D&utm_term=%7B%7Badgroup_name%7D%7D&utm_content=%7B%7Bad_name%7D%7D&twclid=27k7ut43wxglvx2o2e2nj7pszs",
         "homepage_status": 200,
@@ -5852,7 +5853,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T02:36:59.223Z",
+        "fetched_at": "2026-07-04T05:04:49.305Z",
         "homepage_url": "https://jamf.com/",
         "example_url": "https://www.jamf.com/blog/mac-management-security-trends-enterprise-it-2025/?utm_source=twitter&utm_medium=sponsored-social&utm_campaign=am_icf_smas_mms_banner_icp&utm_content=20260213_com_ent-midmkt_p_jmac_blog_6679_SIT&twclid=26vc3aicbe9m10pi19ume82b0z",
         "homepage_status": 200,
@@ -5979,7 +5980,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T19:06:47.175Z",
+        "fetched_at": "2026-07-04T05:04:49.797Z",
         "homepage_url": "https://app.link/",
         "example_url": "https://chipotle.app.link/rTJVnvMgW1b?%243p=a_twitter&twclid=26fm1l3fbt5tx0wzqe3pjv9fkn",
         "homepage_status": 404,
@@ -6106,7 +6107,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T22:07:19.520Z",
+        "fetched_at": "2026-07-04T05:34:45.666Z",
         "homepage_url": "https://bk.com/",
         "example_url": "https://www.bk.com/menu/section/fb06fabe-a285-4fb4-994a-c617a1547ddb?utm_source=X&utm_medium=Social-Social&utm_campaign=Peppercorn-Awareness&utm_content=Peppercorn-IMG-Warning&twclid=24j7ivpacvxqbg2t5it24skrl9",
         "homepage_status": 200,
@@ -6487,13 +6488,13 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T22:07:20.567Z",
+        "fetched_at": "2026-07-04T05:34:48.857Z",
         "homepage_url": "https://mottandbow.com/",
         "example_url": "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://www.mottandbow.com/",
-        "example_final_url": "https://www.mottandbow.com/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
+        "homepage_final_url": "https://www.mottandbow.com/en-ph",
+        "example_final_url": "https://www.mottandbow.com/en-ph/collections/mens-denim2-onlyjeansworthbuying?utm_source=twitter&utm_medium=twitter&utm_campaign=%28M%29+Denim+-+USA+-+Prospecting+-+ABO+8+-+2026+VAIO+%5Bcashback%5D&utm_term=%28M%29+Denim+-+USA+-+Broad+1+-+Auto+%5BAll%5D&utm_content=img-md-neeta-buttshot-highquality-D943-V1-B-h27-p2-LP_MDOJ-c%2FNone-irl&twclid=2cc4cnrb0o1hpyal9rg55w07zo",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
         "homepage": {
@@ -6868,12 +6869,12 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T14:36:41.918Z",
+        "fetched_at": "2026-07-04T05:34:51.890Z",
         "homepage_url": "https://valvolineglobal.com/",
         "example_url": "https://www.valvolineglobal.com/en/fifa-national-sweeps/?utm_source=X&utm_medium=paidsocial&utm_campaign=WC26_GM_US_AWE&utm_content=wcsimplified&twclid=299i90helnojknptru820mqim9",
         "homepage_status": 200,
         "example_status": 200,
-        "homepage_final_url": "https://www.valvolineglobal.com/en/",
+        "homepage_final_url": "https://www.valvolineglobal.com/",
         "example_final_url": "https://www.valvolineglobal.com/en/fifa-national-sweeps/?utm_source=X&utm_medium=paidsocial&utm_campaign=WC26_GM_US_AWE&utm_content=wcsimplified&twclid=299i90helnojknptru820mqim9",
         "homepage_content_type": "text/html; charset=utf-8",
         "example_content_type": "text/html; charset=utf-8",
@@ -6996,7 +6997,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T23:37:24.937Z",
+        "fetched_at": "2026-07-04T05:34:53.534Z",
         "homepage_url": "https://metaphysicalarticles.org/",
         "example_url": "https://www.metaphysicalarticles.org/2025/12/ufos-uap-space-people-disclosure.html?twclid=25s2j2s4i47jn3wcdf6ujpfrmp",
         "homepage_status": 200,
@@ -7124,7 +7125,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T03:07:03.350Z",
+        "fetched_at": "2026-07-04T05:39:00.969Z",
         "homepage_url": "https://amazon.com/",
         "example_url": "https://www.amazon.com/The-Boys-Season-5/dp/B0FX3G8F44/ref_=dvm_us_c_soc_THBY_tw_rb?twclid=2e4zyrzur7iapo7e8zxfmiz1fu",
         "homepage_status": 200,
@@ -7378,7 +7379,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-29T14:36:42.057Z",
+        "fetched_at": "2026-07-04T05:39:02.020Z",
         "homepage_url": "https://fundrise.com/",
         "example_url": "https://fundrise.com/vcx?utm_source=twitter&utm_campaign=vcxsky&twclid=286j5mjx6wqmg12vs5jto11lrf",
         "homepage_status": 405,
@@ -7760,7 +7761,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-07-01T01:37:22.939Z",
+        "fetched_at": "2026-07-04T05:39:02.817Z",
         "homepage_url": "https://xhawk.ai/",
         "example_url": "https://xhawk.ai/?twclid=218eppqu7okpx25fant8nuhrp1",
         "homepage_status": 200,
@@ -8269,7 +8270,7 @@
         }
       },
       "profile": {
-        "fetched_at": "2026-06-30T23:37:26.853Z",
+        "fetched_at": "2026-07-04T05:39:03.682Z",
         "homepage_url": "https://byteplus.com/",
         "example_url": "https://www.byteplus.com/en/contact-us/ai-cloud-products?utm_source=x&utm_medium=cpc&utm_campaign=leads_submit_eu_english_20260415_celene&utm_term=20260415_image_leads&utm_content=tecdo&twclid=24somkg02k4fm60up4bq87nhwy",
         "homepage_status": 200,
@@ -11331,13 +11332,140 @@
       }
     },
     {
+      "domain": "arstechnica.com",
+      "entity": "Arstechnica",
+      "kind": "unknown",
+      "first_seen_at": "2026-06-24T20:02:00Z",
+      "last_seen_at": "2026-07-04T03:37:49.659Z",
+      "discovery": {
+        "distinct_urls": 2,
+        "example_urls": [
+          "https://arstechnica.com/security/2026/06/users-cry-foul-after-amd-stripped-memory-crypto-from-its-consumer-cpus/",
+          "https://arstechnica.com/security/2026/06/24/dashlane-explains-how-attackers-managed-to-download-encrypted-password-vaults/"
+        ],
+        "origin_counts": {
+          "ontology_evidence": 2,
+          "journals": 2
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": [
+          "axis_ai_societal_impact_v1",
+          "axis_power_accountability"
+        ]
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": true,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.48,
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen"
+          ]
+        },
+        "breadth": {
+          "score": 0.295,
+          "basis": [
+            "distinct_urls:2",
+            "distinct_axes:2",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.175,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "profile": {
+          "score": 0.52,
+          "confidence": 0.65,
+          "basis": [
+            "meta_author:false",
+            "published_time:true",
+            "canonical:true",
+            "about:false",
+            "contact:true",
+            "corrections:false",
+            "outbound_links:13",
+            "opinion_marker:false"
+          ]
+        },
+        "overall": {
+          "score": 0.41093749999999996,
+          "confidence": 0.1227,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "article_path_seen",
+            "distinct_urls:2",
+            "distinct_axes:2",
+            "origin_types:2",
+            "referring_accounts:0",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
+        }
+      },
+      "profile": {
+        "fetched_at": "2026-06-30T21:07:16.983Z",
+        "homepage_url": "https://arstechnica.com/",
+        "example_url": "https://arstechnica.com/security/2026/06/24/dashlane-explains-how-attackers-managed-to-download-encrypted-password-vaults/",
+        "homepage_status": 200,
+        "example_status": 200,
+        "homepage_final_url": "https://arstechnica.com/",
+        "example_final_url": "https://arstechnica.com/security/2026/06/dashlane-explains-how-attackers-managed-to-download-encrypted-password-vaults/",
+        "homepage_content_type": "text/html; charset=UTF-8",
+        "example_content_type": "text/html; charset=UTF-8",
+        "homepage": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 8,
+          "opinion_marker": false
+        },
+        "example": {
+          "has_meta_author": false,
+          "has_published_time": true,
+          "has_canonical": true,
+          "has_about_link": false,
+          "has_contact_link": true,
+          "has_corrections_link": false,
+          "outbound_links_count": 13,
+          "opinion_marker": false
+        }
+      }
+    },
+    {
       "domain": "moltbook.com",
       "entity": "Moltbook",
       "kind": "unknown",
       "first_seen_at": "2026-03-07T00:29:35.326Z",
-      "last_seen_at": "2026-07-01T06:14:34.211Z",
+      "last_seen_at": "2026-07-04T02:47:05.196Z",
       "discovery": {
-        "distinct_urls": 83,
+        "distinct_urls": 84,
         "example_urls": [
           "https://www.moltbook.com/post/29d49c40-bc59-4a1a-b875-3d3d41ec469e",
           "https://www.moltbook.com/post/3694a386-c24e-4744-8c06-2fc74c73c559",
@@ -11346,7 +11474,7 @@
           "https://www.moltbook.com/post/c6a71bf0-72ab-4867-820a-6b306bae0cea"
         ],
         "origin_counts": {
-          "articles": 83
+          "articles": 84
         },
         "distinct_referring_accounts": 0,
         "sample_referring_accounts": [],
@@ -11375,7 +11503,7 @@
         "breadth": {
           "score": 0.41,
           "basis": [
-            "distinct_urls:83",
+            "distinct_urls:84",
             "distinct_axes:0",
             "origin_types:1"
           ]
@@ -11413,7 +11541,7 @@
           "method": "mechanical_v1",
           "basis": [
             "unknown_domain_pattern",
-            "distinct_urls:83",
+            "distinct_urls:84",
             "distinct_axes:0",
             "origin_types:1",
             "referring_accounts:0",
@@ -17374,6 +17502,86 @@
           "has_corrections_link": false,
           "outbound_links_count": 0,
           "opinion_marker": false
+        }
+      }
+    },
+    {
+      "domain": "bet88.ph",
+      "entity": "Bet88 Ph",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-03T16:00:02.000Z",
+      "last_seen_at": "2026-07-04T05:03:21.437Z",
+      "discovery": {
+        "distinct_urls": 3,
+        "example_urls": [
+          "https://bet88.ph/en/?type=registration&modal=user&ref=xa027&twclid=27gurqyk8ekpo92oqcm3aeuing",
+          "https://bet88.ph/en/?type=registration&modal=user&ref=xa023&twclid=25wrsnnpnc7378nutxmyo1v6kj",
+          "https://bet88.ph/en/?type=registration&modal=user&ref=xa021&twclid=2arxttwqhjqdg7ax5tp1p5kvqy"
+        ],
+        "origin_counts": {
+          "feed_buffer_reply": 1,
+          "feed_buffer": 2
+        },
+        "distinct_referring_accounts": 1,
+        "sample_referring_accounts": [
+          "bet88ph"
+        ],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.2075,
+          "basis": [
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:2"
+          ]
+        },
+        "corroboration": {
+          "score": 0.2833333333333333,
+          "basis": [
+            "referring_accounts:1",
+            "origin_types:2"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.381328125,
+          "confidence": 0.15907500000000002,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:3",
+            "distinct_axes:0",
+            "origin_types:2",
+            "referring_accounts:1",
+            "origin_types:2",
+            "track_record_unavailable"
+          ]
         }
       }
     },
@@ -24114,130 +24322,6 @@
           "has_contact_link": false,
           "has_corrections_link": false,
           "outbound_links_count": 0,
-          "opinion_marker": false
-        }
-      }
-    },
-    {
-      "domain": "arstechnica.com",
-      "entity": "Arstechnica",
-      "kind": "unknown",
-      "first_seen_at": "2026-06-24T20:02:00Z",
-      "last_seen_at": "2026-06-24T20:02:00Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://arstechnica.com/security/2026/06/24/dashlane-explains-how-attackers-managed-to-download-encrypted-password-vaults/"
-        ],
-        "origin_counts": {
-          "ontology_evidence": 1
-        },
-        "distinct_referring_accounts": 0,
-        "sample_referring_accounts": [],
-        "distinct_axes": [
-          "axis_ai_societal_impact_v1"
-        ]
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": true,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.48,
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen"
-          ]
-        },
-        "breadth": {
-          "score": 0.1475,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:1",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.0875,
-          "basis": [
-            "referring_accounts:0",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "profile": {
-          "score": 0.52,
-          "confidence": 0.65,
-          "basis": [
-            "meta_author:false",
-            "published_time:true",
-            "canonical:true",
-            "about:false",
-            "contact:true",
-            "corrections:false",
-            "outbound_links:13",
-            "opinion_marker:false"
-          ]
-        },
-        "overall": {
-          "score": 0.37046874999999996,
-          "confidence": 0.06135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "article_path_seen",
-            "distinct_urls:1",
-            "distinct_axes:1",
-            "origin_types:1",
-            "referring_accounts:0",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      },
-      "profile": {
-        "fetched_at": "2026-06-30T21:07:16.983Z",
-        "homepage_url": "https://arstechnica.com/",
-        "example_url": "https://arstechnica.com/security/2026/06/24/dashlane-explains-how-attackers-managed-to-download-encrypted-password-vaults/",
-        "homepage_status": 200,
-        "example_status": 200,
-        "homepage_final_url": "https://arstechnica.com/",
-        "example_final_url": "https://arstechnica.com/security/2026/06/dashlane-explains-how-attackers-managed-to-download-encrypted-password-vaults/",
-        "homepage_content_type": "text/html; charset=UTF-8",
-        "example_content_type": "text/html; charset=UTF-8",
-        "homepage": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 8,
-          "opinion_marker": false
-        },
-        "example": {
-          "has_meta_author": false,
-          "has_published_time": true,
-          "has_canonical": true,
-          "has_about_link": false,
-          "has_contact_link": true,
-          "has_corrections_link": false,
-          "outbound_links_count": 13,
           "opinion_marker": false
         }
       }
@@ -63985,83 +64069,6 @@
       }
     },
     {
-      "domain": "bet88.ph",
-      "entity": "Bet88 Ph",
-      "kind": "unknown",
-      "first_seen_at": "2026-07-03T16:00:02.000Z",
-      "last_seen_at": "2026-07-03T16:00:02.000Z",
-      "discovery": {
-        "distinct_urls": 1,
-        "example_urls": [
-          "https://bet88.ph/en/?type=registration&modal=user&ref=xa027&twclid=27gurqyk8ekpo92oqcm3aeuing"
-        ],
-        "origin_counts": {
-          "feed_buffer_reply": 1
-        },
-        "distinct_referring_accounts": 1,
-        "sample_referring_accounts": [
-          "bet88ph"
-        ],
-        "distinct_axes": []
-      },
-      "claims": {
-        "total": 0,
-        "supported": 0,
-        "refuted": 0,
-        "contested": 0,
-        "unverified": 0,
-        "resolved_count": 0
-      },
-      "structural_features": {
-        "has_search_paths": false,
-        "has_article_paths": false,
-        "has_doi_paths": false
-      },
-      "ratings": {
-        "provenance": {
-          "score": 0.45,
-          "basis": [
-            "unknown_domain_pattern"
-          ]
-        },
-        "breadth": {
-          "score": 0.08916666666666666,
-          "basis": [
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1"
-          ]
-        },
-        "corroboration": {
-          "score": 0.19583333333333333,
-          "basis": [
-            "referring_accounts:1",
-            "origin_types:1"
-          ]
-        },
-        "track_record": {
-          "score": null,
-          "basis": [
-            "no_resolved_claims_observed"
-          ]
-        },
-        "overall": {
-          "score": 0.3472395833333333,
-          "confidence": 0.08135,
-          "method": "mechanical_v1",
-          "basis": [
-            "unknown_domain_pattern",
-            "distinct_urls:1",
-            "distinct_axes:0",
-            "origin_types:1",
-            "referring_accounts:1",
-            "origin_types:1",
-            "track_record_unavailable"
-          ]
-        }
-      }
-    },
-    {
       "domain": "iranintl.com",
       "entity": "Iranintl",
       "kind": "unknown",
@@ -68483,6 +68490,81 @@
         "distinct_urls": 1,
         "example_urls": [
           "https://sebastianhunter.hunter.fun/arweave/PD9Tbhac1DBXjeNXyMfTy-mQAq4MHSuqD7AkrMtKsEE"
+        ],
+        "origin_counts": {
+          "articles": 1
+        },
+        "distinct_referring_accounts": 0,
+        "sample_referring_accounts": [],
+        "distinct_axes": []
+      },
+      "claims": {
+        "total": 0,
+        "supported": 0,
+        "refuted": 0,
+        "contested": 0,
+        "unverified": 0,
+        "resolved_count": 0
+      },
+      "structural_features": {
+        "has_search_paths": false,
+        "has_article_paths": false,
+        "has_doi_paths": false
+      },
+      "ratings": {
+        "provenance": {
+          "score": 0.45,
+          "basis": [
+            "unknown_domain_pattern"
+          ]
+        },
+        "breadth": {
+          "score": 0.08916666666666666,
+          "basis": [
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1"
+          ]
+        },
+        "corroboration": {
+          "score": 0.0875,
+          "basis": [
+            "referring_accounts:0",
+            "origin_types:1"
+          ]
+        },
+        "track_record": {
+          "score": null,
+          "basis": [
+            "no_resolved_claims_observed"
+          ]
+        },
+        "overall": {
+          "score": 0.3370833333333333,
+          "confidence": 0.0491,
+          "method": "mechanical_v1",
+          "basis": [
+            "unknown_domain_pattern",
+            "distinct_urls:1",
+            "distinct_axes:0",
+            "origin_types:1",
+            "referring_accounts:0",
+            "origin_types:1",
+            "track_record_unavailable"
+          ]
+        }
+      }
+    },
+    {
+      "domain": "lens_url",
+      "entity": "Lens_url",
+      "kind": "unknown",
+      "first_seen_at": "2026-07-04T02:47:05.196Z",
+      "last_seen_at": "2026-07-04T02:47:05.196Z",
+      "discovery": {
+        "distinct_urls": 1,
+        "example_urls": [
+          "https://lens_url/"
         ],
         "origin_counts": {
           "articles": 1
