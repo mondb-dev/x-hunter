@@ -48,6 +48,7 @@ function navigate(id, url)   { return request("POST", `/api/tabs/${id}/navigate`
 function getCookies(id)      { return request("GET", `/api/tabs/${id}/cookies`); }
 function setCookie(id, c)    { return request("POST", `/api/tabs/${id}/cookies`, c); }
 function screenshot(id)      { return request("GET", `/api/tabs/${id}/screenshot`); }
+function insertText(id, text){ return request("POST", `/api/tabs/${id}/insert-text`, { text }); }
 function approvals()         { return request("GET", "/api/approvals"); }
 function approve(approvalId) { return request("POST", `/api/approvals/${approvalId}/approve`, {}); }
 
@@ -110,6 +111,6 @@ module.exports = {
   request, health,
   listTabs, openTab, navigate, tabUrl, ensureXTab,
   evaluate, evalFn, pollFn, waitReady,
-  getCookies, setCookie, screenshot,
+  getCookies, setCookie, screenshot, insertText,
   approvals, approve,
 };

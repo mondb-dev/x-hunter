@@ -116,26 +116,42 @@ async function confirmFromProfile(tabId, tag, expectedText, attempts = 6, delayM
 
 /**
  * Insert text into the X composer and verify it matches EXACTLY.
- * One retry (re-clear + re-insert). Returns true on verified insert.
+ *
+ * Attempt 1 uses HelmStack's insert-text endpoint (CDP Input.insertText —
+ * browser-level events the React composer state tracks). Attempt 2 falls back
+ * to in-page execCommand for older HelmStack builds without the endpoint.
+ * Returns true on verified insert.
  */
 async function insertVerified(tabId, tag, text) {
   await hs.evalFn(tabId, pageClickFocus, COMPOSE_BOX);
   await humanDelay(2_000, 4_000); // let the React editor initialise before insert
 
   for (let attempt = 1; attempt <= 2; attempt++) {
-    await hs.evalFn(tabId, pageInsertText, text, COMPOSE_BOX);
+    // Clear any leftover draft so text is not spliced into stale content
+    await hs.evalFn(tabId, function (sel) {
+      const el = document.querySelector(sel);
+      if (el) { el.focus(); document.execCommand("selectAll"); document.execCommand("delete"); }
+      return !!el;
+    }, COMPOSE_BOX);
+    await sleep(400);
+
+    if (attempt === 1) {
+      try {
+        await hs.insertText(tabId, text);
+      } catch (err) {
+        console.log(`[${tag}] insert-text endpoint unavailable (${err.message}) — using execCommand`);
+        await hs.evalFn(tabId, pageInsertText, text, COMPOSE_BOX);
+      }
+    } else {
+      await hs.evalFn(tabId, pageInsertText, text, COMPOSE_BOX);
+    }
     await sleep(1_500);
+
     const inserted = await hs.evalFn(tabId, pageComposerText, COMPOSE_BOX);
     console.log(`[${tag}] text verification (attempt ${attempt}): ${inserted.length}/${text.length} chars`);
     if (inserted === text.trim()) return true;
     if (attempt === 1) {
       console.log(`[${tag}] text mismatch — clearing and retrying`);
-      await hs.evalFn(tabId, function (sel) {
-        const el = document.querySelector(sel);
-        if (el) { el.focus(); document.execCommand("selectAll"); document.execCommand("delete"); }
-        return el ? el.innerText.trim().length : -1;
-      }, COMPOSE_BOX);
-      await sleep(1_000);
       await hs.evalFn(tabId, pageClickFocus, COMPOSE_BOX);
       await sleep(1_000);
     }
