@@ -134,6 +134,10 @@ async function insertVerified(tabId, tag, text) {
       return !!el;
     }, COMPOSE_BOX);
     await sleep(400);
+    // Re-focus after the clear: Input.insertText targets the focused element,
+    // and selectAll/delete can leave the editor without a live selection
+    await hs.evalFn(tabId, pageClickFocus, COMPOSE_BOX);
+    await sleep(300);
 
     if (attempt === 1) {
       try {
