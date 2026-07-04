@@ -15,6 +15,7 @@ const { execSync, spawn } = require('child_process');
 
 const config = require('./lib/config');
 const { agentRunSync: agentRun } = require('./lib/gemini_agent');
+const { useLocal } = require('./local_llm');
 const BROWSE_MODEL = process.env.BROWSE_MODEL || 'gpt-4o-mini';
 const POST_MODEL   = process.env.OLLAMA_MODEL  || 'gpt-5';
 const META_MODEL   = process.env.META_MODEL    || 'gpt-5.5';
@@ -675,12 +676,22 @@ function runOneCycle() {
     }
     const journalBefore = journalInGit(today, hour);
 
-    const browseExit = agentRun({ agent: 'x-hunter', message: prompt, thinking: 'low', verbose: 'on', model: BROWSE_MODEL });
+    let browseExit;
+    if (useLocal()) {
+      // Option A: single-pass local browse — one LLM call instead of the 40-turn
+      // agentic loop (feasible on local models / modest hardware). Writes the
+      // journal + ontology_delta directly; postBrowse merges the delta as usual.
+      runScriptLog(path.join(PROJECT_ROOT, 'runner/single_pass_browse.js'),
+        `--today ${today} --hour ${hour} --day ${dayNumber}`);
+      browseExit = fileExists(journalPath) ? 0 : 1;
+    } else {
+      browseExit = agentRun({ agent: 'x-hunter', message: prompt, thinking: 'low', verbose: 'on', model: BROWSE_MODEL });
+    }
     metrics.agentExitCodes.push(browseExit);
 
-    // Retry if journal missing
+    // Retry if journal missing (agentic path only — single-pass logs its own outcome)
     const journalAfter = journalInGit(today, hour);
-    if (!journalAfter && !journalBefore && !fileExists(journalPath)) {
+    if (!useLocal() && !journalAfter && !journalBefore && !fileExists(journalPath)) {
       log('browse journal missing after agent run — retrying once (no thinking)');
       sleepSec(5);
       const retryExit = agentRun({ agent: 'x-hunter', message: prompt, verbose: 'on', model: BROWSE_MODEL });

@@ -12,6 +12,7 @@
 
 const https = require("https");
 const { getAccessToken, getProjectConfig } = require("./gcp_auth");
+const { useLocal, localChat } = require("./local_llm");
 
 /**
  * callVertex(prompt, maxTokens, options)
@@ -23,6 +24,15 @@ const { getAccessToken, getProjectConfig } = require("./gcp_auth");
  * options.thinkingBudget - if set and > 0, sets thinking token budget
  */
 async function callVertex(prompt, maxTokens = 2000, options = {}) {
+  // Local backend: route the entire non-agent brain to Ollama when OLLAMA_BASE_URL
+  // points at a local server. Interface is unchanged for all ~35 callers.
+  if (useLocal()) {
+    return localChat(prompt, {
+      maxTokens,
+      temperature: options.temperature ?? 0.7,
+    });
+  }
+
   const token    = await getAccessToken();
   const { project, location } = getProjectConfig();
   const model    = options.model || "gemini-2.5-flash";

@@ -18,6 +18,7 @@
 "use strict";
 
 const { getAccessToken, getProjectConfig } = require("./gcp_auth");
+const { useLocal, localChat, localEmbed } = require("./local_llm");
 
 const GENERATE_MODEL = "gemini-2.5-flash";
 const EMBED_MODEL    = "text-embedding-004";
@@ -38,6 +39,10 @@ async function generate(prompt, opts = {}) {
     maxTokens   = 350,
     timeoutMs   = 60_000,
   } = opts;
+
+  if (useLocal()) {
+    return localChat(prompt, { maxTokens, temperature, timeoutMs });
+  }
 
   const token = await getAccessToken();
   const { project, location } = getProjectConfig();
@@ -93,6 +98,10 @@ async function generate(prompt, opts = {}) {
  */
 async function embed(text) {
   if (!text || typeof text !== "string") return null;
+
+  if (useLocal()) {
+    return localEmbed(text);
+  }
 
   let token;
   try {

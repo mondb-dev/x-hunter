@@ -30,6 +30,8 @@ function log(msg) { console.log(`[web_search] ${msg}`); }
  * @returns {Promise<SearchResult|null>}
  */
 async function webSearchVerify(claimText) {
+  const { useLocal } = require('../../local_llm');
+  if (useLocal()) return webSearchVerifyLocal(claimText);
   try {
     const { getTokenForKey, getProjectConfig } = require('../../gcp_auth');
     const builderKey = process.env.BUILDER_CREDENTIALS;
@@ -173,6 +175,82 @@ async function webSearchVerify(claimText) {
     }
   } catch (err) {
     log(`error: ${err.message}`);
+    return null;
+  }
+}
+
+/**
+ * Fully-local claim verification: browser search (agent's Chrome) + local LLM
+ * summarization. evidence_urls come from the real search results, not the LLM.
+ */
+async function webSearchVerifyLocal(claimText) {
+  try {
+    const { browserSearch } = require('../../lib/browser_search');
+    const { callVertex } = require('../../vertex'); // routes to local Ollama under useLocal()
+
+    const results = await browserSearch(claimText, { maxResults: 6 });
+    const empty = {
+      web_search_result: 'no_results', summary: 'No web results found.',
+      evidence_urls: [], evidence_domains: [], original_source: null, claim_date: null,
+      supporting_sources: [], dissenting_sources: [], framing_analysis: null,
+    };
+    if (!results.length) return empty;
+
+    const evidence_urls = results.map(r => r.url).slice(0, 5);
+    const evidence_domains = results
+      .map(r => { try { return new URL(r.url).hostname.replace(/^www\./, ''); } catch { return null; } })
+      .filter(Boolean).slice(0, 5);
+
+    const context = results.map((r, i) => `[${i + 1}] ${r.title}\n${r.url}\n${r.snippet}`).join('\n\n');
+    const prompt = [
+      'You are a fact-checker. Using ONLY the search results below, evaluate the claim.',
+      '',
+      `CLAIM: "${claimText}"`,
+      '',
+      'SEARCH RESULTS:',
+      context,
+      '',
+      'Respond with ONLY a JSON object (no markdown fences, no extra text):',
+      '{"verdict":"confirmed|refuted|partial|inconclusive|no_results",',
+      '"summary":"2-3 sentence findings",',
+      '"supporting_sources":[{"name":"Outlet/org name","excerpt":"1 sentence of what they reported"}],',
+      '"dissenting_sources":[{"name":"Outlet/org name","excerpt":"1 sentence of what they reported"}],',
+      '"original_source":"who first reported this claim",',
+      '"claim_date":"YYYY-MM-DD or YYYY-MM if known, else empty",',
+      '"framing_analysis":"Is the claim framed validly or misleadingly? 1-2 sentences."}',
+    ].join('\n');
+
+    const text = await callVertex(prompt, 1000, { temperature: 0.1 });
+
+    let parsed = {};
+    try {
+      let clean = text.replace(/```json\s*\n?/gi, '').replace(/```\s*/g, '').trim();
+      const m = clean.match(/\{[\s\S]*\}/);
+      if (m) clean = m[0];
+      parsed = JSON.parse(clean);
+    } catch { log('local verify: JSON parse failed, using summary fallback'); }
+
+    const verdictMap = {
+      confirmed: 'confirmed', refuted: 'refuted', partial: 'partial',
+      inconclusive: 'inconclusive', no_results: 'no_results',
+    };
+    const norm = (raw) => Array.isArray(raw)
+      ? raw.map(s => typeof s === 'string' ? { name: s, excerpt: '', url: null } : { name: s.name || '', excerpt: s.excerpt || s.stance || '', url: null }).filter(s => s.name)
+      : [];
+
+    return {
+      web_search_result:  verdictMap[parsed.verdict] || 'inconclusive',
+      summary:            parsed.summary || (text || '').slice(0, 500),
+      evidence_urls,
+      evidence_domains,
+      original_source:    parsed.original_source || null,
+      claim_date:         parsed.claim_date || null,
+      supporting_sources: norm(parsed.supporting_sources),
+      dissenting_sources: norm(parsed.dissenting_sources),
+      framing_analysis:   parsed.framing_analysis || null,
+    };
+  } catch (err) {
+    log(`local verify error: ${err.message}`);
     return null;
   }
 }

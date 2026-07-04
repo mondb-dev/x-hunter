@@ -11,6 +11,8 @@
 const fs = require('fs');
 const path = require('path');
 const config = require('./config');
+const { useLocal } = require('../local_llm');
+const { browserSearch } = require('./browser_search');
 
 const PROJECT_ROOT = config.PROJECT_ROOT;
 
@@ -420,6 +422,19 @@ const TOOL_EXECUTORS = {
     const { query } = args;
     if (!query) return 'Error: query is required';
     log(`web_search → ${query}`);
+
+    // Fully-local path: search via the agent's own Chrome (no Vertex grounding).
+    if (useLocal()) {
+      try {
+        const results = await browserSearch(query, { maxResults: 6 });
+        if (!results.length) return `No web results found for "${query}". The tool IS available — try a different query.`;
+        return `Web search results for "${query}":\n\n` +
+          results.map((r, i) => `${i + 1}. ${r.title}\n   ${r.url}\n   ${r.snippet}`).join('\n\n');
+      } catch (err) {
+        return `web_search error: ${err.message}. The tool IS available — this was a transient error.`;
+      }
+    }
+
     // Use Vertex AI grounding with Google Search
     try {
       const { getAccessToken, getProjectConfig } = require('../gcp_auth');

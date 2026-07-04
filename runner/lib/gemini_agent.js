@@ -106,7 +106,7 @@ async function callOllama({ messages, tools, model }) {
 
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
     const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 180_000);
+    const timer = setTimeout(() => controller.abort(), parseInt(process.env.LLM_CALL_TIMEOUT_MS) || 180_000);
 
     try {
       // Vertex OpenAI-compatible endpoint already includes the full path up to /openapi
