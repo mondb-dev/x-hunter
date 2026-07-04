@@ -47,7 +47,8 @@ const sleep = (ms) => new Promise(r => setTimeout(r, ms));
         httpOnly: c.httpOnly,
         secure: c.secure,
         sameSite: c.sameSite,
-        ...(c.expires && c.expires > 0 ? { expires: c.expires } : {}),
+        // puppeteer reports expires in epoch seconds; HelmStack expects ms
+        ...(c.expires && c.expires > 0 ? { expires: c.expires * 1000 } : {}),
       });
       ok++;
     } catch (err) {
