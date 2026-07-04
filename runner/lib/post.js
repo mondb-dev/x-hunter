@@ -220,10 +220,9 @@ function postRegularTweet({ today, hour, cycle }) {
     }
 
     log('Posting tweet via browser CDP...');
-    let attempt = runNodeDetailed('post_tweet.js', '', { CYCLE_NUMBER: String(cycle || '') });
+    const attempt = runNodeDetailed('post_tweet.js', '', { CYCLE_NUMBER: String(cycle || '') });
     if (!attempt.ok) {
-      log(`browser CDP failed (${attempt.error}) — falling back to API`);
-      attempt = runNodeDetailed('post_tweet_api.js', '', { CYCLE_NUMBER: String(cycle || '') });
+      log(`browser CDP failed (${attempt.error})`);
     }
     logScriptOutput(attempt.output);
 
@@ -307,10 +306,9 @@ function postQuoteTweet({ cycle }) {
     }
 
     log('Posting quote-tweet via browser CDP...');
-    let attempt = runNodeDetailed('post_quote.js', '', { CYCLE_NUMBER: String(cycle || '') });
+    const attempt = runNodeDetailed('post_quote.js', '', { CYCLE_NUMBER: String(cycle || '') });
     if (!attempt.ok) {
-      log(`browser CDP failed (${attempt.error}) — falling back to API`);
-      attempt = runNodeDetailed('post_quote_api.js', '', { CYCLE_NUMBER: String(cycle || '') });
+      log(`browser CDP failed (${attempt.error})`);
     }
     logScriptOutput(attempt.output);
 
@@ -383,10 +381,7 @@ function postLinkTweet({ resultFile, maxTitleChars = 255 }) {
   let posted = false;
   for (let attempt = 1; attempt <= 2; attempt++) {
     try {
-      try { runNode('post_tweet.js'); } catch (browserErr) {
-        log(`link tweet browser attempt ${attempt} failed — falling back to API`);
-        runNode('post_tweet_api.js');
-      }
+      runNode('post_tweet.js');
       try { fs.unlinkSync(resultPath); } catch {}
       posted = true;
       break;
@@ -448,10 +443,7 @@ function postSimpleTweet({ resultFile, sourceFile, maxTitleChars = 240, gap = 0 
 
     let rc = 1;
     try {
-      try { runNode('post_tweet.js'); } catch (browserErr) {
-        log(`browser CDP failed — falling back to API`);
-        runNode('post_tweet_api.js');
-      }
+      runNode('post_tweet.js');
       rc = 0;
     } catch (e) {
       rc = e.status || 1;
@@ -478,8 +470,7 @@ function postSimpleTweet({ resultFile, sourceFile, maxTitleChars = 240, gap = 0 
 
     const sourceResult = runNodeDetailed('post_tweet.js');
     if (!sourceResult.ok) {
-      log(`browser CDP failed (${sourceResult.error}) — falling back to API`);
-      runNodeSafe('post_tweet_api.js');
+      log(`browser CDP failed (${sourceResult.error})`);
     }
     try { fs.unlinkSync(sourcePath); } catch {}
     log('tweet posted');
@@ -531,8 +522,7 @@ function postSignalTweet({ today, hour }) {
   log('Posting signal tweet via browser CDP...');
   const signalResult = runNodeDetailed('post_tweet.js');
   if (!signalResult.ok) {
-    log(`browser CDP failed (${signalResult.error}) — falling back to API`);
-    runNodeSafe('post_tweet_api.js');
+    log(`browser CDP failed (${signalResult.error})`);
   }
 
   const resultPath = path.join(config.STATE_DIR, 'tweet_result.txt');
@@ -627,8 +617,7 @@ function postVerificationTweet({ today, hour }) {
   log('Posting verification tweet via browser CDP...');
   const postResult = runNodeDetailed('post_tweet.js');
   if (!postResult.ok) {
-    log(`browser CDP failed (${postResult.error}) — falling back to API`);
-    runNodeSafe('post_tweet_api.js');
+    log(`browser CDP failed (${postResult.error})`);
   }
 
   const resultPath = path.join(config.STATE_DIR, 'tweet_result.txt');
@@ -722,8 +711,7 @@ function postPredictionTweet({ today, hour }) {
   log('Posting prediction tweet via browser CDP...');
   const result = runNodeDetailed('post_tweet.js');
   if (!result.ok) {
-    log(`browser CDP failed (${result.error}) — falling back to API`);
-    runNodeSafe('post_tweet_api.js');
+    log(`browser CDP failed (${result.error})`);
   }
 
   const resultPath = path.join(config.STATE_DIR, 'tweet_result.txt');
@@ -782,8 +770,7 @@ function postLandmarkSpecialTweet({ today, hour }) {
   log('Posting landmark special tweet via browser CDP...');
   const result = runNodeDetailed('post_tweet.js');
   if (!result.ok) {
-    log(`browser CDP failed (${result.error}) — falling back to API`);
-    runNodeSafe('post_tweet_api.js');
+    log(`browser CDP failed (${result.error})`);
   }
 
   const resultPath = path.join(config.STATE_DIR, 'tweet_result.txt');

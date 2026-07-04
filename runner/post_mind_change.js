@@ -179,14 +179,9 @@ function postTweet(text) {
   try {
     execSync(`node "${path.join(ROOT, "runner/post_tweet.js")}"`, { cwd: ROOT, stdio: "ignore", timeout: 60_000 });
     return true;
-  } catch {
-    try {
-      execSync(`node "${path.join(ROOT, "runner/post_tweet_api.js")}"`, { cwd: ROOT, stdio: "ignore", timeout: 60_000 });
-      return true;
-    } catch (e) {
-      console.error(`[post_mind_change] tweet failed: ${e.message}`);
-      return false;
-    }
+  } catch (e) {
+    console.error(`[post_mind_change] tweet failed: ${e.message}`);
+    return false;
   }
 }
 
