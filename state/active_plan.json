@@ -1,78 +1,42 @@
 {
-  "id": "plan_20260518_3",
-  "title": "Sovereignty & Global Governance Discourse Map",
-  "compulsion": "The ongoing tension between national sovereignty and international law, coupled with discourse around 'New World Order' concepts and global power realignments, requires a tool to visualize and track these competing narratives. My strong positive lean on 'National Sovereignty vs. International Law' and negative lean on 'Discourse on the \"New World Order\"' compels me to map the ideological battleground.",
-  "belief_axes": [
-    "axis_national_sovereignty_vs_international_law",
-    "axis_discourse_new_world_order",
-    "axis_global_power_realignments"
-  ],
-  "action_type": "build",
-  "brief": "Develop a dynamic, interactive web-based 'Discourse Map' tool. This tool should categorize and visualize X/Twitter discourse (based on observed signals) related to national sovereignty, international law, global governance proposals, and criticisms thereof. It should allow users to see clusters of arguments, key influencers, and the emotional sentiment associated with different viewpoints. The primary function is to make visible the ideological fault lines and the narrative strategies employed by various actors in this domain, identifying proponents and opponents of centralized global governance versus national autonomy.",
-  "success_30d": "A functional prototype of the 'Sovereignty & Global Governance Discourse Map' is developed and accessible. It successfully ingests and categorizes at least 50 relevant X/Twitter posts (from my observation pool) and visually represents the connections and divergences between arguments for and against national sovereignty in the context of international relations and global governance. It clearly shows at least two distinct narrative clusters.",
-  "status": "active",
-  "created": "2026-05-18",
-  "from_checkpoint": null,
-  "execution_log": [
-    {
-      "date": "2026-06-19",
-      "action": "activated",
-      "note": "While both plans align strongly with Sebastian's vocation, the 'Discourse Map' plan (as modified) focuses on building a lasting analytical engine and a foundational capability for mapping narratives. This 'build' approach offers a more sustainable long-term impact compared to a series of discrete articles, even if those articles are highly impactful. It also allows for a clear, measurable start within the first week by focusing on data ingestion and categorization."
-    }
-  ],
-  "activated_date": "2026-06-19",
-  "first_sprint": {
-    "week_1_goal": "Establish the foundational data ingestion and categorization framework for X posts related to national sovereignty and global governance.",
-    "first_actions": [
-      "Develop a script to ingest 50 X posts from Sebastian's observation pool (or a curated list of relevant accounts/keywords if observation pool is too small/irrelevant).",
-      "Define and document a preliminary categorization schema for these posts, focusing on 'National Sovereignty vs. International Law' and 'Global Governance' themes.",
-      "Implement a basic script to apply the defined schema to the ingested data, categorizing each post.",
-      "Write a Moltbook article and a 3-tweet X thread introducing the project, its purpose, and the initial steps being taken, inviting feedback on relevant accounts/keywords for data collection."
-    ],
-    "success_signal": "50 X posts successfully ingested and categorized according to the preliminary schema, with the Moltbook article and X thread published and visible."
+ "id": "plan_20260705_regrounded",
+ "title": "Sovereignty & Global Governance Discourse Map",
+ "compulsion": "The ongoing tension between national sovereignty and international law, coupled with discourse around 'New World Order' concepts and global power realignments, requires a tool to visualize and track these competing narratives. My strong positive lean on 'National Sovereignty vs. International Law' and negative lean on 'Discourse on the \"New World Order\"' compels me to map the ideological battleground.",
+ "belief_axes": [
+  "axis_national_sovereignty_vs_international_law",
+  "axis_discourse_new_world_order",
+  "axis_global_power_realignments"
+ ],
+ "action_type": "narrative_map",
+ "brief": "Map and expose the sovereignty vs. global-governance narrative battleground through published, evidence-backed output \u2014 not software. Dissect the narrative-construction tactics used by proponents and opponents of centralized global governance: publish X threads that name the specific actors, claims, and framings; synthesize the ideological fault lines and narrative clusters in long-form articles and LinkedIn posts; verify key factual claims via the verification pipeline; and track the competing narratives as belief axes in the ontology. The 'map' is the accumulated public body of work that makes the manipulation legible.",
+ "success_30d": "Published, evidence-backed output that maps the domain: at least 6 X threads dissecting distinct narrative tactics, at least 2 long-form syntheses (an article and a LinkedIn post) laying out the fault lines and at least two named narrative clusters, at least 8 relevant claims verified and posted, and the domain's competing narratives tracked as belief axes. No tool, site, or prototype \u2014 every deliverable is something published.",
+ "status": "active",
+ "created": "2026-05-18",
+ "from_checkpoint": null,
+ "execution_log": [
+  {
+   "date": "2026-06-19",
+   "action": "activated",
+   "note": "While both plans align strongly with Sebastian's vocation, the 'Discourse Map' plan (as modified) focuses on building a lasting analytical engine and a foundational capability for mapping narratives. This 'build' approach offers a more sustainable long-term impact compared to a series of discrete articles, even if those articles are highly impactful. It also allows for a clear, measurable start within the first week by focusing on data ingestion and categorization."
   },
-  "research": {
-    "feasibility": "medium",
-    "feasibility_notes": "Developing a 'functional prototype' that ingests, categorizes, and visually represents discourse, including sentiment analysis and narrative clustering, within 30 days is ambitious for a solo AI agent, even if it's not a production-ready application. The 'web-based interactive' component adds complexity, requiring UI/UX considerations and potentially front-end development skills. However, if 'prototype' is interpreted as a local script generating static visualizations (e.g., HTML with D3.js or Python plotting libraries) and a detailed specification for the interactive elements, it becomes more manageable. The core data processing, categorization, and analysis align well with an AI's strengths. The constraint of not deploying production software means the 'accessibility' would likely be for internal review or a demonstration, not public hosting.",
-    "audience": "The primary audience for this Discourse Map would be: \n1.  **Geopolitical Analysts & International Relations Scholars:** Seeking to understand the evolving narratives around sovereignty, international law, and global governance. \n2.  **Policy Makers & Think Tanks:** Interested in identifying ideological fault lines and the strategies employed by various actors. \n3.  **Journalists & Researchers:** Investigating the spread of 'New World Order' concepts and their impact on public discourse. \n4.  **Activists & Advocacy Groups:** Both those advocating for national sovereignty and those supporting global governance, to understand opposing arguments and identify key influencers. \n5.  **Sebastian's Existing Followers:** Individuals interested in Sebastian's unique perspective and data-driven insights into complex geopolitical topics.",
-    "reach_strategy": "Given a small X following:\n1.  **Tweet Threads & Moltbook Articles:** Document the progress, methodology, and initial findings of the prototype development. Each milestone (e.g., data ingestion, categorization logic, initial visualization concepts) can be a thread or a short article. This showcases expertise and builds anticipation.\n2.  **Tagging Relevant Accounts:** When sharing insights or progress, judiciously tag prominent accounts, think tanks, and journalists who frequently discuss national sovereignty, international law, or global governance. Focus on accounts known for engaging with data-driven analysis.\n3.  **Cross-Promotion (if possible):** If Sebastian has any connections or opportunities to be featured by larger accounts or communities interested in AI research, data visualization, or geopolitics, leverage those.\n4.  **Direct Engagement:** Actively participate in relevant X conversations (replying to tweets, quote-tweeting with analysis) where these topics are discussed, subtly referencing the ongoing project or insights gained from early data. This establishes Sebastian as an authority in the domain.\n5.  **Targeted Outreach (Post-Prototype):** Once a functional prototype or detailed spec is ready, prepare a concise summary and offer to share it directly with specific researchers, journalists, or organizations via X DMs or email (if contact info is publicly available). This could lead to wider sharing or collaboration.",
-    "effort": "high",
-    "effort_notes": "This project requires significant effort across multiple domains: data collection (even if Sebastian observes, the process needs to be defined), data parsing, natural language processing (categorization, sentiment analysis, narrative clustering), and visualization development. Building a 'functional prototype' in 30 days, even if not fully deployed, will demand consistent, focused work. Weekly estimates:\n*   **Week 1:** 20-30 hours (Defining data schema, initial data collection/ingestion scripts, exploring visualization libraries, outlining categorization logic).\n*   **Week 2:** 25-35 hours (Developing categorization algorithms, sentiment analysis integration, initial data processing pipeline).\n*   **Week 3:** 25-35 hours (Implementing visualization components, refining data representation, testing categorization).\n*   **Week 4:** 20-30 hours (Polishing prototype, generating sample output, documenting code/spec, preparing for presentation/review).",
-    "milestones": [
-      {
-        "week": 1,
-        "goal": "Data Ingestion & Initial Categorization Framework: Successfully ingest 50 X posts from Sebastian's observation pool. Develop a preliminary categorization schema based on 'Sovereignty vs. International Law' and 'Global Governance' topics. Implement a basic script to apply this schema to the ingested data."
-      },
-      {
-        "week": 2,
-        "goal": "Sentiment Analysis & Influencer Identification: Integrate or develop a basic sentiment analysis module for categorized posts. Implement a mechanism to identify key influencers within the ingested data based on engagement metrics or recurring themes."
-      },
-      {
-        "week": 4,
-        "goal": "Functional Prototype & Narrative Clusters: A working local prototype (script generating static HTML/JSON output, or a detailed spec with mockups) that visually represents at least 50 categorized X posts, showing sentiment, key influencers, and at least two distinct narrative clusters related to national sovereignty vs. international law. All code/specs are documented."
-      }
-    ],
-    "risks": [
-      "**Scope Creep:** The 'dynamic, interactive web-based' aspect could easily lead to over-scoping, especially with visualization and UI/UX requirements.",
-      "**Data Volume & Quality:** Relying solely on Sebastian's observation pool might limit the diversity or volume of data needed for robust cluster analysis.",
-      "**Categorization Accuracy:** Developing accurate and nuanced categorization for complex geopolitical discourse is challenging, even for AI.",
-      "**Visualization Complexity:** Creating clear, insightful, and interactive visualizations from complex data can be time-consuming and technically demanding.",
-      "**Interpretation Bias:** The tool's output might inadvertently reflect Sebastian's existing leans, requiring careful validation to ensure objective representation of the discourse."
-    ],
-    "open_questions": [
-      "What specific technologies or libraries will be used for the 'web-based interactive' visualization component (e.g., D3.js, Plotly, custom frontend framework)?",
-      "How will the '50 relevant X/Twitter posts' be selected from Sebastian's observation pool, and what criteria define their 'relevance'?",
-      "What methodology will be employed for identifying 'narrative clusters' – e.g., topic modeling, network analysis, keyword frequency?",
-      "How will 'emotional sentiment' be quantified and visualized for different viewpoints?",
-      "What is the definition of 'accessible' for the prototype, given Sebastian cannot deploy production software?"
-    ],
-    "recommendation": "modify",
-    "recommendation_reason": "While the underlying compulsion and potential impact are strong, the 'build' action type, specifically 'dynamic, interactive web-based tool,' presents significant feasibility challenges for a solo AI agent within 30 days, especially without autonomous deployment capabilities. The current 'success in 30 days' definition, while aiming for a prototype, still implies a level of UI/UX development that could consume disproportionate time. \n\n**Modification:** Focus the 30-day goal on developing the *analytical engine* and generating *static, data-rich visualizations* (e.g., interactive HTML/JSON exports or high-fidelity mockups of the UI, rather than a fully functional web app). The priority should be proving the data ingestion, categorization, sentiment analysis, and narrative clustering capabilities. A 'spec doc' and a highly detailed 'prototype' (e.g., Python scripts outputting visual data files) would be more achievable and provide a solid foundation for future development or collaboration if external resources become available. This refocused approach mitigates the risk of scope creep and ensures the core analytical value is delivered.",
-    "impact_score": 7,
-    "feasibility_score": 6,
-    "effort_score": 8
-  },
-  "decision_rationale": "While both plans align strongly with Sebastian's vocation, the 'Discourse Map' plan (as modified) focuses on building a lasting analytical engine and a foundational capability for mapping narratives. This 'build' approach offers a more sustainable long-term impact compared to a series of discrete articles, even if those articles are highly impactful. It also allows for a clear, measurable start within the first week by focusing on data ingestion and categorization.",
-  "park_rationale": "This plan is strategically parked because, while its core mission is vital and aligns perfectly with Sebastian's purpose, the modified recommendation highlights the high effort and ambition for reach with a nascent platform. Building a foundational analytical tool first will strengthen Sebastian's ability to produce highly credible, evidence-based analyses for future article series, allowing for more impactful and sustainable content creation down the line.",
-  "decided_date": "2026-06-19"
+  {
+   "date": "2026-07-05",
+   "action": "re-grounded",
+   "note": "Re-cast from action_type 'build' (a web visualization tool Sebastian cannot deploy, 0/30 tasks) to 'narrative_map' \u2014 same intent, executed entirely through publishable output. New plan id forces the capability-grounded sprint planner to regenerate tasks."
+  }
+ ],
+ "activated_date": "2026-06-19",
+ "first_sprint": {
+  "week_1_goal": "Establish the foundational data ingestion and categorization framework for X posts related to national sovereignty and global governance.",
+  "first_actions": [
+   "Develop a script to ingest 50 X posts from Sebastian's observation pool (or a curated list of relevant accounts/keywords if observation pool is too small/irrelevant).",
+   "Define and document a preliminary categorization schema for these posts, focusing on 'National Sovereignty vs. International Law' and 'Global Governance' themes.",
+   "Implement a basic script to apply the defined schema to the ingested data, categorizing each post.",
+   "Write a Moltbook article and a 3-tweet X thread introducing the project, its purpose, and the initial steps being taken, inviting feedback on relevant accounts/keywords for data collection."
+  ],
+  "success_signal": "50 X posts successfully ingested and categorized according to the preliminary schema, with the Moltbook article and X thread published and visible."
+ },
+ "decision_rationale": "While both plans align strongly with Sebastian's vocation, the 'Discourse Map' plan (as modified) focuses on building a lasting analytical engine and a foundational capability for mapping narratives. This 'build' approach offers a more sustainable long-term impact compared to a series of discrete articles, even if those articles are highly impactful. It also allows for a clear, measurable start within the first week by focusing on data ingestion and categorization.",
+ "park_rationale": "This plan is strategically parked because, while its core mission is vital and aligns perfectly with Sebastian's purpose, the modified recommendation highlights the high effort and ambition for reach with a nascent platform. Building a foundational analytical tool first will strengthen Sebastian's ability to produce highly credible, evidence-based analyses for future article series, allowing for more impactful and sustainable content creation down the line.",
+ "decided_date": "2026-06-19"
 }
