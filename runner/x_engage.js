@@ -111,8 +111,27 @@ function makeScorer(keywords) {
   };
 }
 
-// ── On-voice reply generation (Gemini + fact-check) ──────────────────────────
+// ── On-voice reply generation (verify-gate + local LLM + fact-check) ─────────
 async function generateReply(post) {
+  // Verify the target post's central claim before engaging (ported from the
+  // legacy proactive_reply CDP path). Skip posts whose claim can't be
+  // supported — avoids replying into unverifiable/hallucination-prone territory.
+  // Only runs for the ≤maxReplies candidate(s), so at most one verify call/run.
+  const claim = (post.text || "").trim();
+  if (claim.length > 30) {
+    try {
+      const { verifyClaim } = require("./lib/verify_claim");
+      const v = verifyClaim({ claim, handle: post.handle, url: post.url });
+      if (v) {
+        log(`verify @${post.handle}: ${v.verdict_label || v.status} (${((v.confidence || 0) * 100).toFixed(0)}%)`);
+        if (v.status === "unverified" && (v.confidence || 0) < 0.4) {
+          log(`skipping @${post.handle} — claim too weak to engage`);
+          return null;
+        }
+      }
+    } catch (e) { log(`verify failed (${e.message}) — proceeding`); }
+  }
+
   const { callVertex } = require("./vertex");
   let persona = "";
   try {

@@ -291,11 +291,16 @@ function postBrowse({ cycle, today, hour }) {
     runScript(path.join(PROJECT_ROOT, 'scraper/reply.js'));
   }
 
-  // ── 8.5. Proactive reply (after each BROWSE — check x_control, uses its own cap/gap) ─
-  if (isXSuppressed('reply')) {
-    log('proactive reply suppressed (x_control)');
-  } else {
-    runScript(path.join(PROJECT_ROOT, 'runner/proactive_reply.js'));
+  // ── 8.5. Proactive reply (LEGACY CDP path — retired) ─────────────────────────
+  // Replies now run through HelmStack via x_engage.js (see runSocialPipeline),
+  // which is more reliable than the raw puppeteer-CDP connect that kept hitting
+  // "Network.enable timed out". Kept behind an opt-in flag as a fallback only.
+  if (process.env.PROACTIVE_REPLY_CDP === '1') {
+    if (isXSuppressed('reply')) {
+      log('proactive reply suppressed (x_control)');
+    } else {
+      runScript(path.join(PROJECT_ROOT, 'runner/proactive_reply.js'));
+    }
   }
 
     // ── 9. Vercel deploy (if changes were committed) ───────────

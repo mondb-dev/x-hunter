@@ -189,10 +189,12 @@ const HOUR = 60 * 60 * 1000;
 function runSocialPipeline() {
   if (!process.env.HELMSTACK_AUTH_TOKEN) return; // module not configured
 
-  // X likes (replies stay with proactive_reply, so cap replies at 0 here)
+  // X engagement (likes + replies) — replies migrated here from the legacy CDP
+  // proactive_reply path onto HelmStack (stable HTTP API, no Network.enable
+  // timeouts). Reply drafts are verify-gated + fact-checked in x_engage.
   if (dueForRun('x_engage', 3 * HOUR)) {
-    log('social: X engagement (likes)');
-    runScriptLog(path.join(PROJECT_ROOT, 'runner/x_engage.js'), '', { X_MAX_REPLIES: '0' });
+    log('social: X engagement (likes + replies)');
+    runScriptLog(path.join(PROJECT_ROOT, 'runner/x_engage.js'), '', { X_MAX_REPLIES: '1' });
   }
 
   // LinkedIn engagement (like + comment)
