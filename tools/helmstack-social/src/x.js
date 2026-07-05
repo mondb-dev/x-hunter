@@ -309,6 +309,116 @@ class X {
     return parsed.filter((p) => (p.handle || "").toLowerCase() !== this.handle.toLowerCase());
   }
 
+  /**
+   * Full-fidelity article extractor — ported from scraper/collect.js `extractPosts`
+   * so the scraper collector can run over HelmStack instead of raw CDP. Runs the
+   * DOM scrape in-page via evalFn and returns the parsed array. Unlike
+   * scrapeTimeline() it does NOT filter the bot's own handle (the collector's
+   * sanitize/seen layers handle that) and returns the rich field set the
+   * collector's scoring/DB/digest depend on.
+   *
+   * @returns {Promise<Array<{id,username,displayName,text,quotedText,quotedUsername,ts,likes,rts,replies,mediaType,mediaUrl,externalUrls}>>}
+   */
+  async _scrapeArticles(max) {
+    const raw = await this.c.evalFn(this.tab, (max) => {
+      const results = [];
+      const articles = document.querySelectorAll('article[data-testid="tweet"]');
+      for (const art of articles) {
+        if (results.length >= max) break;
+        try {
+          const link = art.querySelector('a[href*="/status/"]');
+          if (!link) continue;
+          const match = link.href.match(/\/status\/(\d+)/);
+          if (!match) continue;
+          const id = match[1];
+
+          const userEl = art.querySelector('[data-testid="User-Name"]');
+          const usernameEl = userEl ? userEl.querySelector('a[href^="/"]') : null;
+          const username = usernameEl && usernameEl.href ? usernameEl.href.split("/").pop() : "";
+          const displayName = (userEl && userEl.querySelector("span") ? userEl.querySelector("span").innerText : "") || username;
+
+          const textEls = art.querySelectorAll('[data-testid="tweetText"]');
+          const text = (textEls[0] ? textEls[0].innerText : "") || "";
+          const quotedText = textEls[1] ? (textEls[1].innerText || "").trim() : "";
+          const allUserEls = art.querySelectorAll('[data-testid="User-Name"]');
+          const quotedUserEl = allUserEls[1] || null;
+          const qUEl = quotedUserEl ? quotedUserEl.querySelector('a[href^="/"]') : null;
+          const quotedUsername = qUEl && qUEl.href ? qUEl.href.split("/").pop() : "";
+
+          const externalUrls = [];
+          const anchors = art.querySelectorAll("a[href]");
+          for (const anchor of anchors) {
+            const href = anchor.href || "";
+            try {
+              const parsed = new URL(href);
+              const host = parsed.hostname.replace(/^www\./, "").toLowerCase();
+              if (host === "x.com" || host === "twitter.com") continue;
+              if (!/^https?:$/.test(parsed.protocol)) continue;
+              externalUrls.push(parsed.toString());
+            } catch (_) {}
+          }
+
+          const timeEl = art.querySelector("time");
+          const ts = timeEl ? new Date(timeEl.getAttribute("datetime")).getTime() : Date.now();
+
+          const likeEl = art.querySelector('[data-testid="like"]');
+          const rtEl = art.querySelector('[data-testid="retweet"]');
+          const replyEl = art.querySelector('[data-testid="reply"]');
+          const likes = (likeEl ? likeEl.innerText : "") || "0";
+          const rts = (rtEl ? rtEl.innerText : "") || "0";
+          const replies = (replyEl ? replyEl.innerText : "") || "0";
+
+          const imgEl = art.querySelector('[data-testid="tweetPhoto"] img');
+          const videoEl = art.querySelector('[data-testid="videoPlayer"]')
+            || art.querySelector('[data-testid="videoComponent"]')
+            || art.querySelector("video");
+          const mediaType = videoEl ? "video" : (imgEl ? "image" : "none");
+          let mediaUrl = "";
+          if (imgEl && imgEl.src) mediaUrl = imgEl.src;
+          else {
+            const posterEl = art.querySelector("video[poster]");
+            if (posterEl) mediaUrl = posterEl.getAttribute("poster") || "";
+          }
+
+          results.push({ id, username, displayName, text, quotedText, quotedUsername, ts, likes, rts, replies, mediaType, mediaUrl, externalUrls });
+        } catch (_) {}
+      }
+      return JSON.stringify(results);
+    }, max);
+    try { return JSON.parse(raw || "[]"); } catch { return []; }
+  }
+
+  /** Home timeline, full fields. */
+  async scrapeTimelineFull({ limit = 30, scrolls = 3 } = {}) {
+    await this.gotoHome();
+    for (let i = 0; i < scrolls; i++) {
+      await this.c.evaluate(this.tab, "window.scrollBy(0, 1200)").catch(() => {});
+      await sleep(1200);
+    }
+    return this._scrapeArticles(limit);
+  }
+
+  /** Top replies under a tweet permalink (drops the root tweet). */
+  async scrapeThreadReplies(tweetUrl, { limit = 10 } = {}) {
+    await this.c.navigate(this.tab, tweetUrl);
+    await this.c.waitReady(this.tab, { tag: "x", attempts: 10 }).catch(() => {});
+    await sleep(1500);
+    const all = await this._scrapeArticles(limit + 3);
+    return all.slice(1); // caller filters/sorts/slices
+  }
+
+  /** Mentions from the notifications page. */
+  async scrapeMentions({ limit = 20 } = {}) {
+    await this.c.navigate(this.tab, "https://x.com/notifications/mentions");
+    await this.c.waitReady(this.tab, { tag: "x", attempts: 10 }).catch(() => {});
+    await sleep(2000);
+    const url = await this.c.tabUrl(this.tab).catch(() => "");
+    if (url && !/notifications/.test(url)) return [];
+    await this.c.evaluate(this.tab, "window.scrollBy(0, 800)").catch(() => {});
+    await sleep(1000);
+    return this._scrapeArticles(limit);
+  }
+
   /** Like a scraped tweet by index. Returns true if it registered. */
   async likeByIdx(idx, { dryRun = false } = {}) {
     if (dryRun) return true;

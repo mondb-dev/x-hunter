@@ -33,7 +33,8 @@
 const dotenv = (() => {
   try { return require("dotenv"); } catch { return null; }
 })();
-const { connectBrowser } = require("../runner/cdp");
+const https     = require("https");
+const { HelmStackClient, X } = require("../tools/helmstack-social/src");
 const fs        = require("fs");
 const path      = require("path");
 const db        = require("./db");
@@ -395,55 +396,42 @@ function enrichExternalUrls(post) {
 }
 
 /**
- * Capture a screenshot of the first media element (image or video thumbnail)
- * inside a tweet article, returned as a base64-encoded PNG.
+ * Fetch a tweet's media image as base64. Replaces the old element-level
+ * puppeteer screenshot (no HelmStack analogue) — the scraper now extracts the
+ * media <img> src / video poster URL in-page and downloads it directly. X media
+ * (pbs.twimg.com) is public and needs no auth.
  *
- * @param {import("puppeteer-core").Page} page
- * @param {string} postId - tweet status ID
+ * @param {string} url - image/poster URL from scrapeArticles
  * @returns {Promise<{base64: string, mimeType: string}|null>}
  */
-async function captureMediaScreenshot(page, postId) {
-  try {
-    // Find the specific article containing this post
-    const elHandle = await page.evaluateHandle((id) => {
-      const arts = document.querySelectorAll('article[data-testid="tweet"]');
-      for (const art of arts) {
-        const link = art.querySelector('a[href*="/status/"]');
-        if (link && link.href.includes(`/status/${id}`)) {
-          // Prefer image inside tweetPhoto, then video thumbnail, then videoPlayer
-          return art.querySelector('[data-testid="tweetPhoto"] img')
-              || art.querySelector('video')
-              || art.querySelector('[data-testid="videoPlayer"]')
-              || null;
-        }
-      }
-      return null;
-    }, postId);
-
-    const el = elHandle.asElement();
-    if (!el) {
-      await elHandle.dispose();
-      return null;
-    }
-
-    const b64 = await el.screenshot({ encoding: "base64", type: "png" });
-    await elHandle.dispose();
-    return b64 ? { base64: b64, mimeType: "image/png" } : null;
-  } catch (err) {
-    console.warn(`[scraper] media screenshot failed for ${postId}: ${err.message}`);
-    return null;
-  }
+function fetchImageBase64(url) {
+  return new Promise((resolve) => {
+    if (!url || !/^https:\/\//.test(url)) return resolve(null);
+    try {
+      const req = https.get(url, { timeout: 8_000 }, (res) => {
+        if (res.statusCode !== 200) { res.resume(); return resolve(null); }
+        const mimeType = String(res.headers["content-type"] || "image/jpeg").split(";")[0];
+        if (!/^image\//.test(mimeType)) { res.resume(); return resolve(null); }
+        const chunks = [];
+        let size = 0;
+        res.on("data", (c) => {
+          size += c.length;
+          if (size > 5_000_000) { req.destroy(); resolve(null); }
+          else chunks.push(c);
+        });
+        res.on("end", () => resolve({ base64: Buffer.concat(chunks).toString("base64"), mimeType }));
+      });
+      req.on("error", () => resolve(null));
+      req.on("timeout", () => { req.destroy(); resolve(null); });
+    } catch { resolve(null); }
+  });
 }
 
-async function fetchReplies(page, tweetUrl, topN) {
+async function fetchReplies(x, tweetUrl, topN) {
   try {
-    await page.goto(tweetUrl, { waitUntil: "domcontentloaded", timeout: 30_000 });
-    await page.waitForSelector('article[data-testid="tweet"]', { timeout: 8_000 });
-    await new Promise(r => setTimeout(r, 1_500));
-    const all = await extractPosts(page);
+    const all = await x.scrapeThreadReplies(tweetUrl, { limit: topN + 3 });
     return all
-      .slice(1)
-      .filter(p => p.text.length > 0)
+      .filter(p => p.text && p.text.length > 0)
       .map(enrichExternalUrls)
       .sort((a, b) =>
         (parseCount(b.likes) + parseCount(b.rts)) -
@@ -556,36 +544,16 @@ function formatClusteredDigest(selected, clusters, now, options = {}) {
   return lines.join("\n");
 }
 
-// ── Notifications / mentions scraper ─────────────────────────────────────────
-// Opens a FRESH page for the notification check — the collect page can get
-// detached by cleanup_tabs.js running in parallel before this point.
-async function scrapeNotifications(browser) {
+// ── Notifications / mentions scraper (HelmStack) ─────────────────────────────
+async function scrapeNotifications(x) {
   console.log("[scraper] checking notifications/mentions...");
-
-  let notifPage = null;
   try {
-    notifPage = await browser.newPage();
-    await notifPage.goto("https://x.com/notifications/mentions", { waitUntil: "domcontentloaded", timeout: 30_000 });
-    await new Promise(r => setTimeout(r, 2_500));
-
-    // Confirm we landed on the right page
-    const landedUrl = notifPage.url();
-    if (!landedUrl.includes("notifications")) {
-      console.warn(`[scraper] notifications: unexpected URL ${landedUrl} — skipping`);
-      return;
-    }
-
-    await notifPage.evaluate(() => window.scrollBy(0, 800));
-    await new Promise(r => setTimeout(r, 1_000));
-
-    const mentions = await extractPosts(notifPage);
+    const mentions = await x.scrapeMentions({ limit: 20 });
     console.log(`[scraper] notifications: found ${mentions.length} items on mentions page`);
     const queued = appendMentionsToReplyQueue(mentions);
     console.log(`[scraper] notifications: queued ${queued} new mention(s)`);
   } catch (err) {
     console.error(`[scraper] notifications scrape failed: ${err.message}`);
-  } finally {
-    if (notifPage) await notifPage.close().catch(() => {});
   }
 }
 
@@ -611,38 +579,31 @@ async function scrapeNotificationsApi() {
   const seenData   = loadJson(SEEN_IDS, { ids: [] });
   const seenSet    = new Set(seenData.ids);
 
-  let browser = null;
-  let page = null;
+  let x = null;
   let raw = [];
   let collectSourceNote = null;
   let browserReady = false;
 
   try {
-    browser = await connectBrowser();
-    page = await browser.newPage();
-    await page.goto("https://x.com/home", { waitUntil: "domcontentloaded", timeout: 30_000 });
-    await new Promise(r => setTimeout(r, 2_000));
-    if (isLoginRedirectUrl(page.url())) {
-      throw new Error(`x login redirect at ${page.url()}`);
+    x = new X(new HelmStackClient(), {
+      ownHandle: (process.env.X_USERNAME || "SebastianHunts"),
+      log: (m) => console.log(`[scraper] ${m}`),
+    });
+    await x.ensureTab();
+    if (!(await x.sessionOk())) {
+      throw new Error("X session not present in HelmStack (auth_token/ct0 missing)");
     }
-    await page.waitForSelector('article[data-testid="tweet"]', { timeout: 12_000 });
-    for (let i = 0; i < 3; i++) {
-      await page.evaluate(() => window.scrollBy(0, 1200));
-      await new Promise(r => setTimeout(r, 1_200));
-    }
-    raw = await extractPosts(page);
+    raw = await x.scrapeTimelineFull({ limit: 60, scrolls: 3 });
     browserReady = true;
     console.log(`[scraper] extracted ${raw.length} raw posts`);
   } catch (err) {
-    collectSourceNote = "X API fallback — reverse-chron timeline because browser auth is unavailable";
+    collectSourceNote = "X API fallback — reverse-chron timeline because HelmStack browser is unavailable";
     console.warn(`[scraper] browser collect unavailable: ${err.message}`);
     try {
       raw = await fetchApiHomeTimelinePosts(60);
       console.log(`[scraper] extracted ${raw.length} posts via X API fallback`);
     } catch (apiErr) {
       console.error(`[scraper] API fallback failed: ${apiErr.message}`);
-      if (page) await page.close().catch(() => {});
-      if (browser) browser.disconnect();
       process.exit(1);
     }
   }
@@ -693,12 +654,12 @@ async function scrapeNotificationsApi() {
   console.log(`[scraper] selected ${selected.length} posts (top by velocity+trust+alignment+novelty) [limit=${topPosts}]`);
 
   // ── Phase 5b: Capture media screenshots (before reply-fetch navigates away) ─
-  const mediaPosts = selected.filter(p => p.mediaType && p.mediaType !== "none");
+  const mediaPosts = selected.filter(p => p.mediaType && p.mediaType !== "none" && p.mediaUrl);
   const capturedMedia = [];  // {postId, base64, mimeType, context, mediaType}
   if (browserReady && mediaPosts.length > 0) {
-    console.log(`[scraper] ${mediaPosts.length} posts with media — capturing screenshots...`);
+    console.log(`[scraper] ${mediaPosts.length} posts with media — downloading images...`);
     for (const post of mediaPosts.slice(0, 10)) {
-      const shot = await captureMediaScreenshot(page, post.id);
+      const shot = await fetchImageBase64(post.mediaUrl);
       if (shot) {
         capturedMedia.push({
           postId:    post.id,
@@ -758,7 +719,7 @@ async function scrapeNotificationsApi() {
     let replies = [];
     try {
       replies = browserReady
-        ? await fetchReplies(page, `https://x.com/${post.username}/status/${post.id}`, TOP_REPLIES)
+        ? await fetchReplies(x, `https://x.com/${post.username}/status/${post.id}`, TOP_REPLIES)
         : await fetchApiReplies(post, TOP_REPLIES);
     } catch (err) {
       console.warn(`[scraper] reply fetch failed for ${post.id}: ${err.message}`);
@@ -936,7 +897,7 @@ async function scrapeNotificationsApi() {
 
   // ── Phase 12: Scrape notifications / mentions ─────────────────────────────
   if (browserReady) {
-    await scrapeNotifications(browser);
+    await scrapeNotifications(x);
   } else {
     await scrapeNotificationsApi();
   }
@@ -969,7 +930,5 @@ async function scrapeNotificationsApi() {
     }
   } catch {}
 
-    if (page) await page.close().catch(() => {});
-  if (browser) browser.disconnect();
   process.exit(0);
 })();
