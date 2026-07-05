@@ -3,12 +3,12 @@
  * runner/linkedin_draft.js — generate a LinkedIn post draft for Sebastian.
  *
  * LinkedIn posting needs a content source (unlike tweets, which the TWEET cycle
- * writes). This synthesises one long-form LinkedIn post from Sebastian's recent
- * X posts + the latest journal reflection, in his voice, and writes it to
- * state/linkedin_draft.txt for linkedin_post.js to publish.
+ * writes). This pulls a collective content pack across ALL of Sebastian's signals
+ * (journal, X posts, engagements, articles, collected news, live X timeline, live
+ * LinkedIn feed, live web search — see lib/content_sources.js) and synthesises ONE
+ * long-form LinkedIn post using a LinkedIn-specific placement strategy.
  *
- * Skips (exit 0, no write) if a pending draft already exists — never clobbers an
- * unposted draft.
+ * Skips (exit 0, no write) if a pending draft already exists.
  */
 
 "use strict";
@@ -16,28 +16,23 @@
 const fs = require("fs");
 const path = require("path");
 const config = require("./lib/config");
+const { buildContentPack } = require("./lib/content_sources");
 
 const ROOT = path.resolve(__dirname, "..");
 const DRAFT = path.join(config.STATE_DIR, "linkedin_draft.txt");
 const VOCATION = path.join(ROOT, "vocation.md");
 const log = (m) => console.log(`[linkedin_draft] ${m}`);
 
-function latestJournalText() {
-  try {
-    const files = fs.readdirSync(config.JOURNALS_DIR).filter((f) => f.endsWith(".html")).sort();
-    if (!files.length) return "";
-    const html = fs.readFileSync(path.join(config.JOURNALS_DIR, files[files.length - 1]), "utf-8");
-    return html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim().slice(0, 2000);
-  } catch { return ""; }
-}
-
-function recentTweets(n = 6) {
-  try {
-    const d = JSON.parse(fs.readFileSync(config.POSTS_LOG_PATH, "utf-8"));
-    const posts = (Array.isArray(d) ? d : d.posts || []).filter((p) => ["tweet", "quote", "prediction"].includes(p.type));
-    return posts.slice(-n).map((p) => `- ${(p.content || "").replace(/\n/g, " ").slice(0, 200)}`).join("\n");
-  } catch { return ""; }
-}
+// LinkedIn is a professional network, not X. The placement strategy shapes the
+// same underlying vocation into content that lands with LinkedIn's audience
+// (media, policy, comms, tech, information-integrity professionals).
+const LINKEDIN_STRATEGY = `LINKEDIN PLACEMENT STRATEGY — how to shape this content for LinkedIn (NOT X):
+- Audience: professionals in media, policy, communications, technology, and information integrity. They reward analysis and credibility, not hot takes.
+- Pick ONE theme that recurs across the source material below (cross-source grounding beats a single feed). Prefer a theme where the journal, engagements, and live feeds point the same way.
+- Frame it as a SYSTEMIC insight, not a reaction: connect a specific, current example (name the actor, the claim, the number, the event — from the sources) to the broader mechanism of strategic narrative construction / manufactured consent. Move from the concrete instance to the pattern.
+- Offer something useful: a lens, a distinction, or a question a professional could apply to their own field. Sebastian's value is making manipulation legible, not scoring points.
+- Format: first person, 150-350 words, 2-4 short plain paragraphs. Measured and analytical in tone.
+- NO hashtags, NO emojis, NO thread markers ("1/n", "🧵"), NO X-style punchy one-liners. Open with the insight (no "Excited to share"), close with a genuine question that invites professional discussion.`;
 
 (async () => {
   if (fs.existsSync(DRAFT)) {
@@ -47,33 +42,33 @@ function recentTweets(n = 6) {
 
   let vocation = "";
   try { vocation = fs.readFileSync(VOCATION, "utf-8").slice(0, 1500); } catch {}
-  const journal = latestJournalText();
-  const tweets = recentTweets();
-  if (!journal && !tweets) { log("no source material — skipping"); process.exit(0); }
+
+  // Live sources (X timeline, LinkedIn feed, web search) need HelmStack; best-effort.
+  let client = null;
+  try {
+    const { HelmStackClient } = require("../tools/helmstack-social/src");
+    if (process.env.HELMSTACK_AUTH_TOKEN) client = new HelmStackClient();
+  } catch {}
+
+  const pack = await buildContentPack({ client });
+  const nSources = Object.values(pack.sources).filter(Boolean).length;
+  log(`content pack: ${nSources} live/file source(s), theme seed "${pack.query}"`);
+  if (!pack.text.trim()) { log("no source material — skipping"); process.exit(0); }
 
   const { callVertex } = require("./vertex");
   const prompt =
 `You are Sebastian Hunter writing a LinkedIn post. Your vocation and voice:
 ${vocation}
 
-Your recent observations (latest journal reflection):
-"""
-${journal}
-"""
+${LINKEDIN_STRATEGY}
 
-Your recent X posts:
-${tweets}
+SOURCE MATERIAL (draw the theme from across these — cite specifics):
+${pack.text}
 
-Write ONE original LinkedIn post that develops a single idea from the material above
-into long-form. LinkedIn norms: professional, first person, 150-350 words, plain
-paragraphs (no hashtags, no emojis, no "thread"/"1/n"). Name specific tensions,
-actors, or claims — no vague gesturing at "narratives" or "the truth". Open with the
-idea, not throat-clearing. End with a question or a sharp line that invites discussion.
-
-Return ONLY the post text.`;
+Write ONE original LinkedIn post following the strategy above. Return ONLY the post text.`;
 
   try {
-    const raw = await callVertex(prompt, 900, { model: "gemini-2.5-flash", thinkingBudget: 0 });
+    const raw = await callVertex(prompt, 1000, { model: "gemini-2.5-flash", thinkingBudget: 0 });
     const text = (raw || "").trim().replace(/^["']|["']$/g, "");
     if (!text || text.length < 120) { log("generation too short — skipping"); process.exit(0); }
     fs.writeFileSync(DRAFT, text);
